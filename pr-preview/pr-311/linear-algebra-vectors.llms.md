@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 15:23:10 (PDT)
+Last modified: 2026-10-15 18:40:39 (PDT)
 
 ## 1 Vectors
 
@@ -41,7 +41,7 @@ Last modified: 2026-10-15 15:23:10 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (The set \\\mathbb{R}^p\\)** For a positive [integer](notation.llms.md#def-integers) \\p\\, \\\mathbb{R}^p\\ is the set of all [column vectors](#def-column-vector) of length \\p\\ whose entries are [real numbers](notation.llms.md#def-real-numbers).
+> **Definition 2 (The set \\\mathbb{R}^p\\)** For a positive [integer](number-systems.llms.md#def-integers) \\p\\, \\\mathbb{R}^p\\ is the set of all [column vectors](#def-column-vector) of length \\p\\ whose entries are [real numbers](number-systems.llms.md#def-real-numbers).
 
 > **NOTE:**
 >
@@ -49,7 +49,7 @@ Last modified: 2026-10-15 15:23:10 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Scalar)** In linear algebra, a **scalar** is a single [real number](notation.llms.md#def-real-numbers), as opposed to a vector or a matrix, which holds several numbers.
+> **Definition 3 (Scalar)** In linear algebra, a **scalar** is a single [real number](number-systems.llms.md#def-real-numbers), as opposed to a vector or a matrix, which holds several numbers.
 
 > **NOTE:**
 >

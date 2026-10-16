@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 15:23:10 (PDT)
+Last modified: 2026-10-15 18:40:39 (PDT)
 
 > **NOTE:**
 >
@@ -30,11 +30,11 @@ Last modified: 2026-10-15 15:23:10 (PDT)
 
 > **NOTE:**
 >
-> **Example 2 (Even die rolls in set-builder notation)** \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \text{ is even}\right\\\mathclose{} = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is the set of [even](notation.llms.md#def-even-odd) rolls, and \\\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}\\ is the set of positive [real numbers](notation.llms.md#def-real-numbers).
+> **Example 2 (Even die rolls in set-builder notation)** \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \text{ is even}\right\\\mathclose{} = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is the set of [even](number-systems.llms.md#def-even-odd) rolls, and \\\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}\\ is the set of positive [real numbers](number-systems.llms.md#def-real-numbers).
 
 > **NOTE:**
 >
-> **Definition 3 (Interval)** For [real numbers](notation.llms.md#def-real-numbers) \\a \le b\\, the **intervals** with **endpoints** \\a\\ and \\b\\ are the closed interval ([Definition 4](#def-closed-interval)), the open interval ([Definition 5](#def-open-interval)), and the half-open intervals ([Definition 6](#def-half-open-interval)). The unbounded intervals ([Definition 7](#def-unbounded-interval)) have at most one endpoint.
+> **Definition 3 (Interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **intervals** with **endpoints** \\a\\ and \\b\\ are the closed interval ([Definition 4](#def-closed-interval)), the open interval ([Definition 5](#def-open-interval)), and the half-open intervals ([Definition 6](#def-half-open-interval)). The unbounded intervals ([Definition 7](#def-unbounded-interval)) have at most one endpoint.
 >
 > A square bracket means the endpoint belongs to the interval, and a parenthesis means it does not. The symbols \\\infty\\ and \\-\infty\\ are not real numbers, so they always get a parenthesis.
 

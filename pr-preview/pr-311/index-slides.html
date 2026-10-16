@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 15:23:10 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 18:40:39 (PDT)</p>
 </section>
 <section id="welcome" class="slide level2 unnumbered">
 <h2>Welcome</h2>
@@ -303,14 +303,15 @@
 <p><span class="citation" data-cites="cheng2025math">Cheng (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
 <p>These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:</p>
 <ul>
-<li><a href="./notation.html">Notation</a>: common symbols, natural numbers, the percent sign, and indicator functions</li>
+<li><a href="./notation.html">Notation</a>: common symbols and indicator functions</li>
+<li><a href="./number-systems.html">Number Systems</a>: the integers, natural numbers, even and odd numbers, and the rational, real, and irrational numbers</li>
 <li><a href="./sets-functions.html">Sets and Functions</a>, on three pages:
 <ul>
 <li><a href="./sets.html">Sets</a>: sets, subsets and supersets, the empty set, unions, intersections, and set differences, and the extended non-negative real numbers</li>
 <li><a href="./functions.html">Functions</a>: functions with their domains, codomains, and images, sequences, and countable sets</li>
 <li><a href="./expressions-algorithms.html">Expressions and Algorithms</a>: expressions, parse trees, and algorithms</li>
 </ul></li>
-<li><a href="./algebra.html">Algebra</a>: equalities and <a href="./proof-writing.html#def-inequality">inequalities</a>, infimum and supremum, sums, products, quotients, exponentials and logarithms</li>
+<li><a href="./algebra.html">Algebra</a>: equalities and <a href="./proof-writing.html#def-inequality">inequalities</a>, infimum and supremum, percent, sums, products, quotients, exponentials and logarithms</li>
 <li><a href="./measures.html">Measures</a>: <span class="math inline">\(\sigma\)</span>-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure</li>
 <li><a href="./calculus.html">Calculus</a>: derivative rules, antiderivatives, regularity conditions (the <a href="./calculus-integration.html#def-continuous">continuity</a>, <a href="./calculus-derivatives.html#def-differentiable">differentiability</a>, and <a href="./calculus-integration.html#def-integrable">integrability</a> that results assume), the Fundamental Theorem of Calculus, and double integrals</li>
 <li><a href="./linear-algebra.html">Linear Algebra</a>: vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix</li>
@@ -351,48 +352,52 @@
 <td><code>mds/_notation.qmd</code></td>
 </tr>
 <tr class="even">
+<td><a href="./number-systems.html">Number Systems</a></td>
+<td><code>mds/_number-systems.qmd</code></td>
+</tr>
+<tr class="odd">
 <td><a href="./sets.html">Sets</a></td>
 <td><code>mds/_sets.qmd</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="./functions.html">Functions</a></td>
 <td><code>mds/_functions.qmd</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="./expressions-algorithms.html">Expressions and Algorithms</a></td>
 <td><code>mds/_expressions-algorithms.qmd</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="./algebra.html">Algebra</a></td>
 <td><code>mds/_algebra.qmd</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="./measures.html">Measures</a></td>
 <td><code>mds/_measures.qmd</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="./calculus.html">Calculus</a></td>
 <td><code>mds/_calc-derivatives.qmd</code>, <code>mds/_calc-integrals.qmd</code>, and the double-integral subfiles <code>mds/_subfiles/_*fubini*.qmd</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="./linear-algebra.html">Linear Algebra</a></td>
 <td><code>mds/_subfiles/_sec_linear_algebra.qmd</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="./vector-calculus.html">Vector Calculus</a></td>
 <td><code>mds/_subfiles/_sec_vector_calc.qmd</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="./optimization.html">Optimization</a></td>
 <td><code>mds/_subfiles/_sec_optimization.qmd</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="./proof-writing.html">Proof Writing</a></td>
 <td><code>mds/_proof-writing.qmd</code></td>
 </tr>
 </tbody>
 </table>
-<p><code>_notation.qmd</code>, <code>_sets.qmd</code>, <code>_functions.qmd</code>, <code>_expressions-algorithms.qmd</code>, <code>_algebra.qmd</code>, <code>_measures.qmd</code>, and <code>_subfiles/_sec_linear_algebra.qmd</code> include <code>latex-macros/macros.qmd</code> themselves; a host page that includes any of the other fragments must include <code>latex-macros/macros.qmd</code> first, as the pages of this site do.</p>
+<p><code>_notation.qmd</code>, <code>_number-systems.qmd</code>, <code>_sets.qmd</code>, <code>_functions.qmd</code>, <code>_expressions-algorithms.qmd</code>, <code>_algebra.qmd</code>, <code>_measures.qmd</code>, and <code>_subfiles/_sec_linear_algebra.qmd</code> include <code>latex-macros/macros.qmd</code> themselves; a host page that includes any of the other fragments must include <code>latex-macros/macros.qmd</code> first, as the pages of this site do.</p>
 <p>Quarto resolves <code>@id</code> cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, <code>[text](notation.qmd#id)</code>.</p>
 </section>
 <section id="references" class="slide level2 unnumbered smaller scrollable">

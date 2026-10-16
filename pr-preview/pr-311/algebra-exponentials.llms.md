@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 15:23:10 (PDT)
+Last modified: 2026-10-15 18:40:39 (PDT)
 
 ## 1 Polynomials
 
@@ -222,7 +222,7 @@ Last modified: 2026-10-15 15:23:10 (PDT)
 
 > **NOTE:**
 >
-> **Example 11 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](notation.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ (see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
+> **Example 11 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](number-systems.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ (see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
 
 > **NOTE:**
 >
@@ -271,7 +271,7 @@ Last modified: 2026-10-15 15:23:10 (PDT)
 > **Definition 21 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 20](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
 >
 > - For a real number \\c \> 0\\, \\0^c \stackrel{\text{def}}{=}0\\. For a natural number \\c\\, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
-> - For \\b \< 0\\, \\b^c\\ is defined only when \\c\\ is an [integer](notation.llms.md#def-integers), by [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for \\b \< 0\\ and a non-integer \\c\\, \\b^c\\ is undefined.
+> - For \\b \< 0\\, \\b^c\\ is defined only when \\c\\ is an [integer](number-systems.llms.md#def-integers), by [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for \\b \< 0\\ and a non-integer \\c\\, \\b^c\\ is undefined.
 
 > **NOTE:**
 >

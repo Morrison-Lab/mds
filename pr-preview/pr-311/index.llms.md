@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 15:23:10 (PDT)
+Last modified: 2026-10-15 18:40:39 (PDT)
 
 ## Welcome
 
@@ -14,12 +14,13 @@ Cheng ([2025](#ref-cheng2025math))
 
 These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:
 
-- [Notation](notation.llms.md): common symbols, natural numbers, the percent sign, and indicator functions
+- [Notation](notation.llms.md): common symbols and indicator functions
+- [Number Systems](number-systems.llms.md): the integers, natural numbers, even and odd numbers, and the rational, real, and irrational numbers
 - [Sets and Functions](sets-functions.llms.md), on three pages:
   - [Sets](sets.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, and the extended non-negative real numbers
   - [Functions](functions.llms.md): functions with their domains, codomains, and images, sequences, and countable sets
   - [Expressions and Algorithms](expressions-algorithms.llms.md): expressions, parse trees, and algorithms
-- [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, sums, products, quotients, exponentials and logarithms
+- [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, exponentials and logarithms
 - [Measures](measures.llms.md): \\\sigma\\-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
@@ -52,6 +53,7 @@ Each page is a thin wrapper around one or more fragments:
 | Page | Fragment(s) to include |
 |----|----|
 | [Notation](notation.llms.md) | `mds/_notation.qmd` |
+| [Number Systems](number-systems.llms.md) | `mds/_number-systems.qmd` |
 | [Sets](sets.llms.md) | `mds/_sets.qmd` |
 | [Functions](functions.llms.md) | `mds/_functions.qmd` |
 | [Expressions and Algorithms](expressions-algorithms.llms.md) | `mds/_expressions-algorithms.qmd` |
@@ -63,7 +65,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Optimization](optimization.llms.md) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.llms.md) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
+`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
 
 Quarto resolves `@id` cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, `[text](notation.qmd#id)`.
 

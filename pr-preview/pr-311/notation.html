@@ -90,7 +90,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./sets-functions.html" rel="next">
+<link href="./number-systems.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -229,26 +229,6 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-prp.callout {
   border-left-color: #827717;
 }
@@ -259,15 +239,25 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-cor.callout {
+  border-left-color: #00838F;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -279,6 +269,36 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-fig.callout {
   border-left-color: #757575;
 }
@@ -287,6 +307,26 @@ div.callout-fig.callout-style-default .callout-header {
 }
 div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-tbl.callout {
+  border-left-color: #757575;
+}
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
@@ -299,55 +339,15 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -567,6 +567,10 @@ window.Quarto = {
     <a class="nav-link active" href="./notation.html" aria-current="page"> 
 <span class="menu-text">Notation</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./number-systems.html"> 
+<span class="menu-text">Number Systems</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sets-and-functions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Sets and Functions</span>
@@ -753,6 +757,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./notation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Notation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./number-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Number Systems</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -960,21 +970,18 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-writing-math-quarto" id="toc-sec-writing-math-quarto" class="nav-link active" data-scroll-target="#sec-writing-math-quarto"><span class="header-section-number">1</span> Writing math in Quarto</a></li>
-  <li><a href="#sec-notation-naturals" id="toc-sec-notation-naturals" class="nav-link" data-scroll-target="#sec-notation-naturals"><span class="header-section-number">2</span> Natural numbers</a></li>
-  <li><a href="#sec-notation-reals" id="toc-sec-notation-reals" class="nav-link" data-scroll-target="#sec-notation-reals"><span class="header-section-number">3</span> Rational, real, and irrational numbers</a></li>
-  <li><a href="#percent-sign" id="toc-percent-sign" class="nav-link" data-scroll-target="#percent-sign"><span class="header-section-number">4</span> Percent sign (“%”)</a></li>
-  <li><a href="#sec-indicator-functions" id="toc-sec-indicator-functions" class="nav-link" data-scroll-target="#sec-indicator-functions"><span class="header-section-number">5</span> Indicator functions</a>
+  <li><a href="#sec-indicator-functions" id="toc-sec-indicator-functions" class="nav-link" data-scroll-target="#sec-indicator-functions"><span class="header-section-number">2</span> Indicator functions</a>
   <ul class="collapse">
-  <li><a href="#two-primary-notational-paradigms-set-vs.-predicate-notation" id="toc-two-primary-notational-paradigms-set-vs.-predicate-notation" class="nav-link" data-scroll-target="#two-primary-notational-paradigms-set-vs.-predicate-notation"><span class="header-section-number">5.1</span> Two primary notational paradigms: set vs.&nbsp;predicate notation</a></li>
-  <li><a href="#iverson-bracket-notation" id="toc-iverson-bracket-notation" class="nav-link" data-scroll-target="#iverson-bracket-notation"><span class="header-section-number">5.2</span> Iverson bracket notation</a></li>
-  <li><a href="#strengths-and-limitations-of-the-iverson-bracket" id="toc-strengths-and-limitations-of-the-iverson-bracket" class="nav-link" data-scroll-target="#strengths-and-limitations-of-the-iverson-bracket"><span class="header-section-number">5.3</span> Strengths and limitations of the Iverson bracket</a></li>
-  <li><a href="#summary-of-indicator-notations" id="toc-summary-of-indicator-notations" class="nav-link" data-scroll-target="#summary-of-indicator-notations"><span class="header-section-number">5.4</span> Summary of indicator notations</a></li>
-  <li><a href="#conventions-in-this-book" id="toc-conventions-in-this-book" class="nav-link" data-scroll-target="#conventions-in-this-book"><span class="header-section-number">5.5</span> Conventions in this book</a></li>
-  <li><a href="#key-algebraic-properties" id="toc-key-algebraic-properties" class="nav-link" data-scroll-target="#key-algebraic-properties"><span class="header-section-number">5.6</span> Key algebraic properties</a></li>
+  <li><a href="#two-primary-notational-paradigms-set-vs.-predicate-notation" id="toc-two-primary-notational-paradigms-set-vs.-predicate-notation" class="nav-link" data-scroll-target="#two-primary-notational-paradigms-set-vs.-predicate-notation"><span class="header-section-number">2.1</span> Two primary notational paradigms: set vs.&nbsp;predicate notation</a></li>
+  <li><a href="#iverson-bracket-notation" id="toc-iverson-bracket-notation" class="nav-link" data-scroll-target="#iverson-bracket-notation"><span class="header-section-number">2.2</span> Iverson bracket notation</a></li>
+  <li><a href="#strengths-and-limitations-of-the-iverson-bracket" id="toc-strengths-and-limitations-of-the-iverson-bracket" class="nav-link" data-scroll-target="#strengths-and-limitations-of-the-iverson-bracket"><span class="header-section-number">2.3</span> Strengths and limitations of the Iverson bracket</a></li>
+  <li><a href="#summary-of-indicator-notations" id="toc-summary-of-indicator-notations" class="nav-link" data-scroll-target="#summary-of-indicator-notations"><span class="header-section-number">2.4</span> Summary of indicator notations</a></li>
+  <li><a href="#conventions-in-this-book" id="toc-conventions-in-this-book" class="nav-link" data-scroll-target="#conventions-in-this-book"><span class="header-section-number">2.5</span> Conventions in this book</a></li>
+  <li><a href="#key-algebraic-properties" id="toc-key-algebraic-properties" class="nav-link" data-scroll-target="#key-algebraic-properties"><span class="header-section-number">2.6</span> Key algebraic properties</a></li>
   </ul></li>
-  <li><a href="#sec-notational-shorthands" id="toc-sec-notational-shorthands" class="nav-link" data-scroll-target="#sec-notational-shorthands"><span class="header-section-number">6</span> Notational shorthands</a></li>
-  <li><a href="#why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" id="toc-why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="nav-link" data-scroll-target="#why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized"><span class="header-section-number">7</span> Why is notation in probability and statistics so inconsistent and disorganized?</a></li>
-  <li><a href="#sec-further-reading" id="toc-sec-further-reading" class="nav-link" data-scroll-target="#sec-further-reading"><span class="header-section-number">8</span> Further reading</a></li>
+  <li><a href="#sec-notational-shorthands" id="toc-sec-notational-shorthands" class="nav-link" data-scroll-target="#sec-notational-shorthands"><span class="header-section-number">3</span> Notational shorthands</a></li>
+  <li><a href="#why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" id="toc-why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="nav-link" data-scroll-target="#why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized"><span class="header-section-number">4</span> Why is notation in probability and statistics so inconsistent and disorganized?</a></li>
+  <li><a href="#sec-further-reading" id="toc-sec-further-reading" class="nav-link" data-scroll-target="#sec-further-reading"><span class="header-section-number">5</span> Further reading</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/notation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/notation.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="notation-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="notation-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="notation.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
@@ -983,7 +990,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content"><!-- qwt-page-banners -->
 <div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>, <a href="algebra-sums.html">Convexity, Infimum and Sums</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives and Taylor Series</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus.html">Calculus</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="index.html">Math for Data Science</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Column Space, Null Space and Rank-Nullity</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="vector-calculus.html">Vector Calculus</a>
+        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>, <a href="algebra-sums.html">Convexity, Infimum and Sums</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives and Taylor Series</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus.html">Calculus</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="index.html">Math for Data Science</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Column Space, Null Space and Rank-Nullity</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="vector-calculus.html">Vector Calculus</a>
         <br>
         <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
     </p>
@@ -1024,7 +1031,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-15 15:23:10 (PDT)</p>
+      <p class="date">Last modified: 2026-10-15 18:40:39 (PDT)</p>
     </div>
   </div>
   
@@ -1037,12 +1044,13 @@ window.Quarto = {
 
 
 <script>
-// Definitions about proofs and logic moved to the Proof Writing page
+// Definitions about proofs and logic moved to the Proof Writing page,
+// and those about number systems to the Number Systems page
 // (https://github.com/Morrison-Lab/mds/issues/258).
 // Send an old notation.html#id link to the page that now holds the item.
 // The ids are those of the subfiles moved on 2026-10-13; maps old id -> new path.
 (function () {
-  var map = {"def-converse":"proof-writing.html#def-converse","def-counterexample":"proof-writing.html#def-counterexample","def-derivation":"proof-writing.html#def-derivation","def-inequality":"proof-writing.html#def-inequality","def-logical-connective":"proof-writing.html#def-logical-connective","def-logical-entailment":"proof-writing.html#def-logical-entailment","def-necessary-sufficient":"proof-writing.html#def-necessary-sufficient","def-predicate":"proof-writing.html#def-predicate","def-proof":"proof-writing.html#def-proof","def-proof-by-contradiction":"proof-writing.html#def-proof-by-contradiction","def-proposition":"proof-writing.html#def-proposition","def-quantifier":"proof-writing.html#def-quantifier","def-theorem":"proof-writing.html#def-theorem","exm-converse":"proof-writing.html#exm-converse","exm-counterexample":"proof-writing.html#exm-counterexample","exm-derivation":"proof-writing.html#exm-derivation","exm-derivation-chain":"proof-writing.html#exm-derivation-chain","exm-inequality":"proof-writing.html#exm-inequality","exm-logical-connective":"proof-writing.html#exm-logical-connective","exm-logical-entailment":"proof-writing.html#exm-logical-entailment","exm-necessary-sufficient":"proof-writing.html#exm-necessary-sufficient","exm-predicate":"proof-writing.html#exm-predicate","exm-proof":"proof-writing.html#exm-proof","exm-proof-by-contradiction":"proof-writing.html#exm-proof-by-contradiction","exm-proof-by-contradiction-truth-table":"proof-writing.html#exm-proof-by-contradiction-truth-table","exm-proposition":"proof-writing.html#exm-proposition","exm-quantifier":"proof-writing.html#exm-quantifier","exm-theorem":"proof-writing.html#exm-theorem","proofs":"proof-writing.html#sec-proof-definitions","rem-proposition-as-result":"proof-writing.html#rem-proposition-as-result","thm-derivation-chain":"proof-writing.html#thm-derivation-chain","thm-proof-by-contradiction":"proof-writing.html#thm-proof-by-contradiction"};
+  var map = {"def-percent":"algebra-basics.html#def-percent","exm-percent":"algebra-basics.html#exm-percent","percent-sign":"algebra-basics.html#sec-percent","def-converse":"proof-writing.html#def-converse","def-counterexample":"proof-writing.html#def-counterexample","def-derivation":"proof-writing.html#def-derivation","def-inequality":"proof-writing.html#def-inequality","def-logical-connective":"proof-writing.html#def-logical-connective","def-logical-entailment":"proof-writing.html#def-logical-entailment","def-necessary-sufficient":"proof-writing.html#def-necessary-sufficient","def-predicate":"proof-writing.html#def-predicate","def-proof":"proof-writing.html#def-proof","def-proof-by-contradiction":"proof-writing.html#def-proof-by-contradiction","def-proposition":"proof-writing.html#def-proposition","def-quantifier":"proof-writing.html#def-quantifier","def-theorem":"proof-writing.html#def-theorem","exm-converse":"proof-writing.html#exm-converse","exm-counterexample":"proof-writing.html#exm-counterexample","exm-derivation":"proof-writing.html#exm-derivation","exm-derivation-chain":"proof-writing.html#exm-derivation-chain","exm-inequality":"proof-writing.html#exm-inequality","exm-logical-connective":"proof-writing.html#exm-logical-connective","exm-logical-entailment":"proof-writing.html#exm-logical-entailment","exm-necessary-sufficient":"proof-writing.html#exm-necessary-sufficient","exm-predicate":"proof-writing.html#exm-predicate","exm-proof":"proof-writing.html#exm-proof","exm-proof-by-contradiction":"proof-writing.html#exm-proof-by-contradiction","exm-proof-by-contradiction-truth-table":"proof-writing.html#exm-proof-by-contradiction-truth-table","exm-proposition":"proof-writing.html#exm-proposition","exm-quantifier":"proof-writing.html#exm-quantifier","exm-theorem":"proof-writing.html#exm-theorem","proofs":"proof-writing.html#sec-proof-definitions","rem-proposition-as-result":"proof-writing.html#rem-proposition-as-result","thm-derivation-chain":"proof-writing.html#thm-derivation-chain","thm-proof-by-contradiction":"proof-writing.html#thm-proof-by-contradiction","def-even-odd":"number-systems.html#def-even-odd","def-integers":"number-systems.html#def-integers","def-irrational-numbers":"number-systems.html#def-irrational-numbers","def-natural-numbers":"number-systems.html#def-natural-numbers","def-negative-integer":"number-systems.html#def-negative-integer","def-nonnegative-integers":"number-systems.html#def-nonnegative-integers","def-odd":"number-systems.html#def-odd","def-positive-integer":"number-systems.html#def-positive-integer","def-rational-numbers":"number-systems.html#def-rational-numbers","def-real-numbers":"number-systems.html#def-real-numbers","exm-even-odd":"number-systems.html#exm-even-odd","exm-integers":"number-systems.html#exm-integers","exm-irrational-numbers":"number-systems.html#exm-irrational-numbers","exm-natural-numbers":"number-systems.html#exm-natural-numbers","exm-rational-numbers":"number-systems.html#exm-rational-numbers","exm-real-numbers":"number-systems.html#exm-real-numbers","exr-naturals-below-three":"number-systems.html#exr-naturals-below-three","rem-real-numbers-working-definition":"number-systems.html#rem-real-numbers-working-definition","sec-notation-naturals":"number-systems.html#sec-notation-naturals","sec-notation-reals":"number-systems.html#sec-notation-reals","sol-naturals-below-three":"number-systems.html#sol-naturals-below-three"};
   var id;
   try {
     id = decodeURIComponent(location.hash.slice(1));
@@ -1155,17 +1163,17 @@ Table&nbsp;1: Notation used in this book
 </tr>
 <tr class="even">
 <td><span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span></td>
-<td>floor of <span class="math inline">\(x\)</span>: largest <a href="#def-integers">integer</a> less than or equal to <span class="math inline">\(x\)</span></td>
+<td>floor of <span class="math inline">\(x\)</span>: largest <a href="./number-systems.html#def-integers">integer</a> less than or equal to <span class="math inline">\(x\)</span></td>
 <td><code>\lfloor x \rfloor</code></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(\mathopen{}\left\lceil x\right\rceil\mathclose{}\)</span></td>
-<td>ceiling of <span class="math inline">\(x\)</span>: smallest <a href="#def-integers">integer</a> greater than or equal to <span class="math inline">\(x\)</span></td>
+<td>ceiling of <span class="math inline">\(x\)</span>: smallest <a href="./number-systems.html#def-integers">integer</a> greater than or equal to <span class="math inline">\(x\)</span></td>
 <td><code>\lceil x \rceil</code></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(\mathbb{1}_{A}(x)\)</span>, <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span></td>
-<td>indicator function (<a href="#sec-indicator-functions" class="quarto-xref">Section&nbsp;5</a>): <span class="math inline">\(1\)</span> if condition holds, <span class="math inline">\(0\)</span> otherwise</td>
+<td>indicator function (<a href="#sec-indicator-functions" class="quarto-xref">Section&nbsp;2</a>): <span class="math inline">\(1\)</span> if condition holds, <span class="math inline">\(0\)</span> otherwise</td>
 <td><code>\indic{A}(x)</code>, <code>\indicp{P}</code></td>
 </tr>
 </tbody>
@@ -1181,495 +1189,30 @@ Table&nbsp;1: Notation used in this book
 <h2 data-number="1" class="anchored" data-anchor-id="sec-writing-math-quarto"><span class="header-section-number">1</span> Writing math in Quarto</h2>
 <p>The third column of <a href="#tbl-notation-collected" class="quarto-xref">Table&nbsp;1</a> gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in <code>$x^2$</code>, and displayed equations between double dollar signs, as in <code>$$x^2$$</code>. The <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">equations section of Quarto’s Markdown guide</a> shows the details. These notes also use shorthand macros, such as <code>\floor{x}</code> for <span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span>, defined in the <code>latex-macros</code> submodule’s <code>macros.qmd</code>.</p>
 </section>
-<section id="sec-notation-naturals" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-notation-naturals"><span class="header-section-number">2</span> Natural numbers</h2>
-<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-naturals-below-three" class="quarto-xref">Exercise&nbsp;1</a> (Which numbers are natural?)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exr-naturals-below-three" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Which numbers are natural?)</strong></span> List the elements of the set <span class="math inline">\(\mathopen{}\left\{n \in \mathbb{N}: n &lt; 3\right\}\mathclose{}\)</span>. Is your answer the same in every textbook?</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-naturals-below-three" class="quarto-xref">Solution&nbsp;1</a>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div id="sol-naturals-below-three" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span>The answer depends on whether the source counts <span class="math inline">\(0\)</span> as a natural number:</p>
-<ul>
-<li>if <span class="math inline">\(\mathbb{N}\)</span> starts at <span class="math inline">\(0\)</span>, the set is <span class="math inline">\(\mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>;</li>
-<li>if <span class="math inline">\(\mathbb{N}\)</span> starts at <span class="math inline">\(1\)</span>, the set is <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span>.</li>
-</ul>
-<p>Both conventions are in common use, so the answer is not the same in every textbook.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a> (Integers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-integers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Integers)</strong></span> The <strong>integers</strong> are the whole numbers, together with their negatives and <span class="math inline">\(0\)</span>:</p>
-<p><span class="math display">\[\mathbb{Z} \stackrel{\text{def}}{=}\mathopen{}\left\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
-<p>An <strong>integer</strong> is an element of <span class="math inline">\(\mathbb{Z}\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-positive-integer" class="quarto-xref">Definition&nbsp;2</a> (Positive integers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-positive-integer" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Positive integers)</strong></span> The integers (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) greater than <span class="math inline">\(0\)</span> are the <strong>positive integers</strong>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-negative-integer" class="quarto-xref">Definition&nbsp;3</a> (Negative integers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-negative-integer" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Negative integers)</strong></span> The integers (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) less than <span class="math inline">\(0\)</span> are the <strong>negative integers</strong>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-integers" class="quarto-xref">Example&nbsp;1</a> (Integers and non-integers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-integers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Integers and non-integers)</strong></span> &nbsp;</p>
-<ul>
-<li><span class="math inline">\(-7\)</span>, <span class="math inline">\(0\)</span>, and <span class="math inline">\(12\)</span> are integers.</li>
-<li><span class="math inline">\(\frac{1}{2}\)</span> and <span class="math inline">\(-2.5\)</span> are not integers.</li>
-<li><span class="math inline">\(\frac{6}{3}\)</span> is an integer, because <span class="math inline">\(\frac{6}{3} = 2\)</span>.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-even-odd" class="quarto-xref">Definition&nbsp;4</a> (Even integer)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-even-odd" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Even integer)</strong></span> An integer (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(n\)</span> is <strong>even</strong> if <span class="math inline">\(n = 2k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-odd" class="quarto-xref">Definition&nbsp;5</a> (Odd integer)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-odd" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Odd integer)</strong></span> An integer (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(n\)</span> is <strong>odd</strong> if <span class="math inline">\(n = 2k + 1\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-even-odd" class="quarto-xref">Example&nbsp;2</a> (Even and odd integers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-even-odd" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Even and odd integers)</strong></span> &nbsp;</p>
-<ul>
-<li><span class="math inline">\(6\)</span> is even, because <span class="math inline">\(6 = 2 \cdot 3\)</span>.</li>
-<li><span class="math inline">\(0\)</span> is even, because <span class="math inline">\(0 = 2 \cdot 0\)</span>.</li>
-<li><span class="math inline">\(-3\)</span> is odd, because <span class="math inline">\(-3 = 2 \cdot(-2) + 1\)</span>.</li>
-<li><span class="math inline">\(7\)</span> is odd, because <span class="math inline">\(7 = 2 \cdot 3 + 1\)</span>.</li>
-<li><span class="math inline">\(2.5\)</span> is neither even nor odd, because it is not an integer.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-natural-numbers" class="quarto-xref">Definition&nbsp;6</a> (Natural numbers (our convention))
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-natural-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Natural numbers (our convention))</strong></span> In these notes, the <strong>natural numbers</strong> are the positive integers (<a href="#def-positive-integer" class="quarto-xref">Definition&nbsp;2</a>):</p>
-<p><span class="math display">\[\mathbb{N}\stackrel{\text{def}}{=}\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-nonnegative-integers" class="quarto-xref">Definition&nbsp;7</a> (Non-negative integers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-nonnegative-integers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Non-negative integers)</strong></span> The <strong>non-negative integers</strong> are the natural numbers (<a href="#def-natural-numbers" class="quarto-xref">Definition&nbsp;6</a>) together with <span class="math inline">\(0\)</span>:</p>
-<p><span class="math display">\[\mathbb{N}_0 \stackrel{\text{def}}{=}\mathopen{}\left\{0, 1, 2, 3, \ldots\right\}\mathclose{} = \mathbb{N}\cup \mathopen{}\left\{0\right\}\mathclose{}\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-natural-numbers" class="quarto-xref">Example&nbsp;3</a> (Natural numbers in a data analysis)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-natural-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Natural numbers in a data analysis)</strong></span> &nbsp;</p>
-<ul>
-<li>Observation indices start at <span class="math inline">\(1\)</span>, so we write <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
-<li>A count outcome, such as the number of hospital visits in a year, can be <span class="math inline">\(0\)</span>, so the set of values it can take is <span class="math inline">\(\mathbb{N}_0\)</span>, not <span class="math inline">\(\mathbb{N}\)</span>.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Other conventions for the natural numbers
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Other sources may define <span class="math inline">\(\mathbb{N}\)</span> differently, so check each source’s definition before reading its formulas:</p>
-<ul>
-<li>Many sources include <span class="math inline">\(0\)</span> in <span class="math inline">\(\mathbb{N}\)</span>. The international standard ISO 80000-2 defines <span class="math inline">\(\mathbb{N}\)</span> to include <span class="math inline">\(0\)</span>, continuing the earlier standard ISO 31-11 (1978).</li>
-<li>Other sources start <span class="math inline">\(\mathbb{N}\)</span> at <span class="math inline">\(1\)</span>, as these notes do.</li>
-<li>To remove the ambiguity, some sources write <span class="math inline">\(\mathbb{N}_1\)</span> or <span class="math inline">\(\mathbb{Z}^+\)</span> for <span class="math inline">\(\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\)</span>, and <span class="math inline">\(\mathbb{N}_0\)</span> or <span class="math inline">\(\mathbb{Z}^{0+}\)</span> for <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>.</li>
-<li>The words vary too. “Positive integers” (<span class="math inline">\(\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\)</span>) and “non-negative integers” (<span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>) are unambiguous. “Whole numbers” usually includes <span class="math inline">\(0\)</span>, but can also mean all of the integers, negative ones included. “Counting numbers” usually starts at <span class="math inline">\(1\)</span>, but some sources include <span class="math inline">\(0\)</span>.</li>
-<li>Some older texts write <span class="math inline">\(J\)</span> for the natural numbers.</li>
-</ul>
-<p>When a formula’s meaning depends on whether <span class="math inline">\(0\)</span> is included, we write the set out explicitly, for example <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> or <span class="math inline">\(\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>.</p>
-<p>Source: <a href="https://en.wikipedia.org/w/index.php?title=Natural_number&amp;oldid=1375965996">Wikipedia, “Natural number”, “Terminology and notation” and “Zero as natural number”</a>, which cites ISO 80000-2:2019 and the textbooks using each notation.</p>
-</div>
-</div>
-</section>
-<section id="sec-notation-reals" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="sec-notation-reals"><span class="header-section-number">3</span> Rational, real, and irrational numbers</h2>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-rational-numbers" class="quarto-xref">Definition&nbsp;8</a> (Rational numbers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-rational-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Rational numbers)</strong></span> A <strong>rational number</strong> is a number that can be written as a fraction <span class="math inline">\(\frac{a}{b}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(b \ne 0\)</span>. The set of rational numbers is written <span class="math inline">\(\mathbb{Q}\)</span>:</p>
-<p><span class="math display">\[\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\{\frac{a}{b} : a \in \mathbb{Z},\ b \in \mathbb{Z},\ b \ne 0\right\}\mathclose{}\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-rational-numbers" class="quarto-xref">Example&nbsp;4</a> (Rational numbers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-rational-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (Rational numbers)</strong></span> &nbsp;</p>
-<ul>
-<li><span class="math inline">\(\frac{3}{4}\)</span> is rational, with <span class="math inline">\(a = 3\)</span> and <span class="math inline">\(b = 4\)</span>.</li>
-<li><span class="math inline">\(0.75\)</span> is rational, because <span class="math inline">\(0.75 = \frac{3}{4}\)</span>.</li>
-<li>Every integer is rational: for example, <span class="math inline">\(-5 = \frac{-5}{1}\)</span>.</li>
-<li><span class="math inline">\(0.333\ldots\)</span>, with the <span class="math inline">\(3\)</span>s repeating forever, is rational, because <span class="math inline">\(0.333\ldots = \frac{1}{3}\)</span>.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-real-numbers" class="quarto-xref">Definition&nbsp;9</a> (Real numbers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-real-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Real numbers)</strong></span> A <strong>real number</strong> is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written <span class="math inline">\(\mathbb{R}\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Remark</span><a href="#rem-real-numbers-working-definition" class="quarto-xref">Remark&nbsp;1</a> (A working definition)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="rem-real-numbers-working-definition" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (A working definition). </span><a href="#def-real-numbers" class="quarto-xref">Definition&nbsp;9</a> is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. <span class="citation" data-cites="rudin1976principles">Rudin (<a href="#ref-rudin1976principles" role="doc-biblioref">1976</a>, Appendix to Chapter 1)</span> constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, <span class="math inline">\(0.999\ldots\)</span> and <span class="math inline">\(1.000\ldots\)</span> are the same real number, <span class="math inline">\(1\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-real-numbers" class="quarto-xref">Example&nbsp;5</a> (Real numbers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-real-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (Real numbers)</strong></span> &nbsp;</p>
-<ul>
-<li><span class="math inline">\(3\)</span>, <span class="math inline">\(-0.5\)</span>, and <span class="math inline">\(\frac{1}{3} = 0.333\ldots\)</span> are real numbers.</li>
-<li><span class="math inline">\(\pi = 3.14159\ldots\)</span> is a real number.</li>
-<li>Every rational number (<a href="#def-rational-numbers" class="quarto-xref">Definition&nbsp;8</a>) is a real number, so <span class="math inline">\(\mathbb{N}\subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\)</span>.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-irrational-numbers" class="quarto-xref">Definition&nbsp;10</a> (Irrational numbers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-irrational-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Irrational numbers)</strong></span> An <strong>irrational number</strong> is a real number (<a href="#def-real-numbers" class="quarto-xref">Definition&nbsp;9</a>) that is not rational (<a href="#def-rational-numbers" class="quarto-xref">Definition&nbsp;8</a>).</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-irrational-numbers" class="quarto-xref">Example&nbsp;6</a> (Irrational numbers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-irrational-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Irrational numbers)</strong></span> &nbsp;</p>
-<ul>
-<li><span class="math inline">\(\sqrt{2} = 1.41421\ldots\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a> of <span class="math inline">\(2\)</span>, is irrational: no fraction of integers <span class="math inline">\(\frac{a}{b}\)</span> squares to <span class="math inline">\(2\)</span> (see <a href="https://en.wikipedia.org/wiki/Square_root_of_2">Wikipedia: Square root of 2</a>).</li>
-<li><span class="math inline">\(\pi = 3.14159\ldots\)</span> is irrational (see <a href="https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational">Wikipedia: Proof that <span class="math inline">\(\pi\)</span> is irrational</a>).</li>
-<li><span class="math inline">\(1.5\)</span> is not irrational, because <span class="math inline">\(1.5 = \frac{3}{2}\)</span> is rational.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="percent-sign" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="percent-sign"><span class="header-section-number">4</span> Percent sign (“%”)</h2>
-<p>The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” (cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Percentage" class="uri">https://en.wikipedia.org/wiki/Percentage</a>).</p>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-percent" class="quarto-xref">Definition&nbsp;11</a> (Percent)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-percent" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Percent)</strong></span> For a real number <span class="math inline">\(x\)</span>, “<span class="math inline">\(x\)</span> <strong>percent</strong>”, written <span class="math inline">\(x\%\)</span>, means <span class="math inline">\(x / 100\)</span>:</p>
-<p><span class="math display">\[
-x\% \stackrel{\text{def}}{=}\frac{x}{100}
-\]</span></p>
-<p>The percent sign “%” is a shorthand for “<span class="math inline">\(/100\)</span>”.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-percent" class="quarto-xref">Example&nbsp;7</a> (Ten percent is one tenth)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-percent" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Ten percent is one tenth)</strong></span> Contrary to what you may have learned previously, the equality <span class="math inline">\(10\% = 0.1\)</span> is true and correct, just as <span class="math inline">\(10 \text{kg} = 10,000 \text{g}\)</span> is true and correct:</p>
-<p><span class="math display">\[
-\begin{aligned}
-10\% &amp;= \frac{10}{100}
-&amp;&amp; \text{(definition of percent)}
-\\ &amp;= 0.1
-&amp;&amp; \text{(divide)}
-\end{aligned}
-\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<p>You are welcome to switch between decimal and percent notation freely; just make sure you execute it correctly.</p>
-</section>
-<section id="sec-indicator-functions" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="sec-indicator-functions"><span class="header-section-number">5</span> Indicator functions</h2>
+<section id="sec-indicator-functions" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-indicator-functions"><span class="header-section-number">2</span> Indicator functions</h2>
 <p>An <strong>indicator function</strong> is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:</p>
 <ul>
-<li>binary variables, which take only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> (<a href="#def-binary-variable" class="quarto-xref">Definition&nbsp;14</a>);</li>
+<li>binary variables, which take only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> (<a href="#def-binary-variable" class="quarto-xref">Definition&nbsp;3</a>);</li>
 <li>event and censoring indicators in survival analysis, the study of the time until an event such as death, where an observation is censored when follow-up ends before its event is seen;</li>
 <li>membership in subpopulations;</li>
 <li>domain restrictions in integrals and sums.</li>
 </ul>
 <p>Despite their conceptual simplicity, notation for indicator functions varies substantially across textbooks, research papers, and subfields. This section summarizes the principal notational conventions.</p>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;12</a> (Indicator function (set indicator))
+<span class="screen-reader-only">Def</span><a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;1</a> (Indicator function (set indicator))
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-indicator-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Indicator function (set indicator))</strong></span> For any subset <span class="math inline">\(A \subseteq \Omega\)</span> of a universal set <span class="math inline">\(\Omega\)</span>, the <strong>indicator function</strong> of <span class="math inline">\(A\)</span>, or <strong>set indicator</strong>, is the function <span class="math inline">\(\mathbb{1}_{A} : \Omega\to \{0, 1\}\)</span> defined by:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Indicator function (set indicator))</strong></span> For any subset <span class="math inline">\(A \subseteq \Omega\)</span> of a universal set <span class="math inline">\(\Omega\)</span>, the <strong>indicator function</strong> of <span class="math inline">\(A\)</span>, or <strong>set indicator</strong>, is the function <span class="math inline">\(\mathbb{1}_{A} : \Omega\to \{0, 1\}\)</span> defined by:</p>
 <p><span class="math display">\[
 \mathbb{1}_{A}(x) \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; x \in A \\
@@ -1681,19 +1224,19 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-predicate-indicator" class="quarto-xref">Definition&nbsp;13</a> (Predicate indicator)
+<span class="screen-reader-only">Def</span><a href="#def-predicate-indicator" class="quarto-xref">Definition&nbsp;2</a> (Predicate indicator)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse show">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-predicate-indicator" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Predicate indicator)</strong></span> For any logical proposition or predicate <span class="math inline">\(P\)</span>, the <strong>indicator</strong> of <span class="math inline">\(P\)</span>, or <strong>predicate indicator</strong>, takes the value <span class="math inline">\(1\)</span> when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(0\)</span> when <span class="math inline">\(P\)</span> is false:</p>
+<p><span class="theorem-title"><strong>Definition 2 (Predicate indicator)</strong></span> For any logical proposition or predicate <span class="math inline">\(P\)</span>, the <strong>indicator</strong> of <span class="math inline">\(P\)</span>, or <strong>predicate indicator</strong>, takes the value <span class="math inline">\(1\)</span> when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(0\)</span> when <span class="math inline">\(P\)</span> is false:</p>
 <p><span class="math display">\[
 \mathbb{1}\mathopen{}\left(P\right)\mathclose{} \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; \text{if } P \text{ is true} \\
@@ -1705,19 +1248,19 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-indicator-numerical" class="quarto-xref">Example&nbsp;8</a> (Evaluating set and predicate indicators)
+<span class="screen-reader-only">Exm</span><a href="#exm-indicator-numerical" class="quarto-xref">Example&nbsp;1</a> (Evaluating set and predicate indicators)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-indicator-numerical" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Evaluating set and predicate indicators)</strong></span> Consider the real line <span class="math inline">\(\Omega= \mathbb{R}\)</span>, the set of nonnegative numbers <span class="math inline">\(A = [0, \infty)\)</span>, and a continuous <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(Y\)</span> (defined in the Morrison Lab’s probability notes).</p>
+<p><span class="theorem-title"><strong>Example 1 (Evaluating set and predicate indicators)</strong></span> Consider the real line <span class="math inline">\(\Omega= \mathbb{R}\)</span>, the set of nonnegative numbers <span class="math inline">\(A = [0, \infty)\)</span>, and a continuous <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(Y\)</span> (defined in the Morrison Lab’s probability notes).</p>
 <ol type="1">
 <li>Set indicator <span class="math inline">\(\mathbb{1}_{A}(x)\)</span>:
 <ul>
@@ -1735,95 +1278,95 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-binary-variable" class="quarto-xref">Definition&nbsp;14</a> (Binary variable)
+<span class="screen-reader-only">Def</span><a href="#def-binary-variable" class="quarto-xref">Definition&nbsp;3</a> (Binary variable)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-binary-variable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Binary variable)</strong></span> A <strong>binary variable</strong> is a variable that takes only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Binary variable)</strong></span> A <strong>binary variable</strong> is a variable that takes only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-binary-variable" class="quarto-xref">Example&nbsp;9</a> (A binary variable is an indicator)
+<span class="screen-reader-only">Exm</span><a href="#exm-binary-variable" class="quarto-xref">Example&nbsp;2</a> (A binary variable is an indicator)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse show">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-binary-variable" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (A binary variable is an indicator)</strong></span> In a study of <span class="math inline">\(n\)</span> people, let <span class="math inline">\(s_i = 1\)</span> if person <span class="math inline">\(i\)</span> smokes and <span class="math inline">\(s_i = 0\)</span> otherwise, for <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>. Then <span class="math inline">\(s_i\)</span> is a binary variable (<a href="#def-binary-variable" class="quarto-xref">Definition&nbsp;14</a>). It is also the predicate indicator (<a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;12</a>) of the proposition “person <span class="math inline">\(i\)</span> smokes”: <span class="math inline">\(s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 2 (A binary variable is an indicator)</strong></span> In a study of <span class="math inline">\(n\)</span> people, let <span class="math inline">\(s_i = 1\)</span> if person <span class="math inline">\(i\)</span> smokes and <span class="math inline">\(s_i = 0\)</span> otherwise, for <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>. Then <span class="math inline">\(s_i\)</span> is a binary variable (<a href="#def-binary-variable" class="quarto-xref">Definition&nbsp;3</a>). It is also the predicate indicator (<a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) of the proposition “person <span class="math inline">\(i\)</span> smokes”: <span class="math inline">\(s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\)</span>.</p>
 <p>In the same way, every indicator is a binary variable, and every binary variable <span class="math inline">\(X\)</span> is the indicator of its own value being <span class="math inline">\(1\)</span>: <span class="math inline">\(X = \mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}\)</span>, since both sides are <span class="math inline">\(1\)</span> when <span class="math inline">\(X = 1\)</span> and <span class="math inline">\(0\)</span> when <span class="math inline">\(X = 0\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<section id="two-primary-notational-paradigms-set-vs.-predicate-notation" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="two-primary-notational-paradigms-set-vs.-predicate-notation"><span class="header-section-number">5.1</span> Two primary notational paradigms: set vs.&nbsp;predicate notation</h3>
+<section id="two-primary-notational-paradigms-set-vs.-predicate-notation" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="two-primary-notational-paradigms-set-vs.-predicate-notation"><span class="header-section-number">2.1</span> Two primary notational paradigms: set vs.&nbsp;predicate notation</h3>
 <p>The vast majority of indicator notations belong to one of two families: set notation or predicate notation.</p>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-set-predicate-notation" class="quarto-xref">Definition&nbsp;15</a> (Set notation for indicators)
+<span class="screen-reader-only">Def</span><a href="#def-set-predicate-notation" class="quarto-xref">Definition&nbsp;4</a> (Set notation for indicators)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-set-predicate-notation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Set notation for indicators)</strong></span> An indicator (<a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;12</a>) is written in <strong>set notation</strong> when the set <span class="math inline">\(A\)</span> appears as a subscript, as in <span class="math inline">\(\mathbb{1}_{A}(x)\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Set notation for indicators)</strong></span> An indicator (<a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) is written in <strong>set notation</strong> when the set <span class="math inline">\(A\)</span> appears as a subscript, as in <span class="math inline">\(\mathbb{1}_{A}(x)\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-predicate-notation" class="quarto-xref">Definition&nbsp;16</a> (Predicate notation for indicators)
+<span class="screen-reader-only">Def</span><a href="#def-predicate-notation" class="quarto-xref">Definition&nbsp;5</a> (Predicate notation for indicators)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse show">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-predicate-notation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Predicate notation for indicators)</strong></span> An indicator (<a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;12</a>) is written in <strong>predicate notation</strong> when a proposition or predicate <span class="math inline">\(P\)</span> (<a href="./proof-writing.html#def-predicate">definition</a>) appears as its argument, as in <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 5 (Predicate notation for indicators)</strong></span> An indicator (<a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) is written in <strong>predicate notation</strong> when a proposition or predicate <span class="math inline">\(P\)</span> (<a href="./proof-writing.html#def-predicate">definition</a>) appears as its argument, as in <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-set-predicate-notation" class="quarto-xref">Example&nbsp;10</a> (One indicator in both notations)
+<span class="screen-reader-only">Exm</span><a href="#exm-set-predicate-notation" class="quarto-xref">Example&nbsp;3</a> (One indicator in both notations)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse show">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-set-predicate-notation" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (One indicator in both notations)</strong></span> Let <span class="math inline">\(A = [0, \infty)\)</span>, the nonnegative real numbers. The indicator of <span class="math inline">\(A\)</span> is <span class="math inline">\(\mathbb{1}_{A}(x)\)</span> in set notation, and <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\)</span> in predicate notation (<a href="#def-set-predicate-notation" class="quarto-xref">Definition&nbsp;15</a>, <a href="#def-predicate-notation" class="quarto-xref">Definition&nbsp;16</a>). At <span class="math inline">\(x = 3.5\)</span>, all three equal <span class="math inline">\(1\)</span>; at <span class="math inline">\(x = -2.1\)</span>, all three equal <span class="math inline">\(0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 3 (One indicator in both notations)</strong></span> Let <span class="math inline">\(A = [0, \infty)\)</span>, the nonnegative real numbers. The indicator of <span class="math inline">\(A\)</span> is <span class="math inline">\(\mathbb{1}_{A}(x)\)</span> in set notation, and <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\)</span> in predicate notation (<a href="#def-set-predicate-notation" class="quarto-xref">Definition&nbsp;4</a>, <a href="#def-predicate-notation" class="quarto-xref">Definition&nbsp;5</a>). At <span class="math inline">\(x = 3.5\)</span>, all three equal <span class="math inline">\(1\)</span>; at <span class="math inline">\(x = -2.1\)</span>, all three equal <span class="math inline">\(0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1859,37 +1402,37 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 \mathbf{1}_A(x) = \mathbb{I}(x \in A)
 \]</span></p>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-support" class="quarto-xref">Definition&nbsp;17</a> (Support of a distribution)
+<span class="screen-reader-only">Def</span><a href="#def-support" class="quarto-xref">Definition&nbsp;6</a> (Support of a distribution)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse show">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-support" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Support of a distribution)</strong></span> The <strong>support</strong> of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.</p>
+<p><span class="theorem-title"><strong>Definition 6 (Support of a distribution)</strong></span> The <strong>support</strong> of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-support" class="quarto-xref">Example&nbsp;11</a> (Supports of two count distributions)
+<span class="screen-reader-only">Exm</span><a href="#exm-support" class="quarto-xref">Example&nbsp;4</a> (Supports of two count distributions)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse show">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-support" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (Supports of two count distributions)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 4 (Supports of two count distributions)</strong></span> &nbsp;</p>
 <ul>
 <li>A fair six-sided die gives each of <span class="math inline">\(1, 2, \ldots, 6\)</span> probability <span class="math inline">\(\tfrac{1}{6} &gt; 0\)</span> and every other value probability <span class="math inline">\(0\)</span>, so its support is <span class="math inline">\(\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>.</li>
 <li>A count that can be <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and so on, each with positive probability, such as the number of hospital visits in a year, has support <span class="math inline">\(\mathbb{N}_0 = \mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>.</li>
@@ -1898,26 +1441,26 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 </div>
 </div>
 </div>
-<p>Set notation is more natural when the underlying set <span class="math inline">\(A\)</span> has a standard name (such as the support of a distribution (<a href="#def-support" class="quarto-xref">Definition&nbsp;17</a>), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as <span class="math inline">\(\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\)</span>.</p>
+<p>Set notation is more natural when the underlying set <span class="math inline">\(A\)</span> has a standard name (such as the support of a distribution (<a href="#def-support" class="quarto-xref">Definition&nbsp;6</a>), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as <span class="math inline">\(\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\)</span>.</p>
 </section>
 </section>
-<section id="iverson-bracket-notation" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="iverson-bracket-notation"><span class="header-section-number">5.2</span> Iverson bracket notation</h3>
+<section id="iverson-bracket-notation" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="iverson-bracket-notation"><span class="header-section-number">2.2</span> Iverson bracket notation</h3>
 <p>In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the <a href="https://en.wikipedia.org/wiki/Iverson_bracket">Iverson bracket</a>.</p>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-iverson-bracket" class="quarto-xref">Definition&nbsp;18</a> (Iverson bracket)
+<span class="screen-reader-only">Def</span><a href="#def-iverson-bracket" class="quarto-xref">Definition&nbsp;7</a> (Iverson bracket)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse show">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-iverson-bracket" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Iverson bracket)</strong></span> For any logical proposition <span class="math inline">\(P\)</span>, the <strong>Iverson bracket</strong> of <span class="math inline">\(P\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 7 (Iverson bracket)</strong></span> For any logical proposition <span class="math inline">\(P\)</span>, the <strong>Iverson bracket</strong> of <span class="math inline">\(P\)</span> is</p>
 <p><span class="math display">\[
 [P] \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; \text{if } P \text{ is true} \\
@@ -1929,19 +1472,19 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-iverson-bracket" class="quarto-xref">Example&nbsp;12</a> (Evaluating Iverson brackets)
+<span class="screen-reader-only">Exm</span><a href="#exm-iverson-bracket" class="quarto-xref">Example&nbsp;5</a> (Evaluating Iverson brackets)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-34" class="callout-34-contents callout-collapse collapse show">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-iverson-bracket" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (Evaluating Iverson brackets)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 5 (Evaluating Iverson brackets)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\([3 &gt; 2] = 1\)</span>, because <span class="math inline">\(3 &gt; 2\)</span> is true.</li>
 <li><span class="math inline">\([2 &gt; 3] = 0\)</span>, because <span class="math inline">\(2 &gt; 3\)</span> is false.</li>
@@ -1952,19 +1495,19 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Remark</span><a href="#rem-iverson-indicator" class="quarto-xref">Remark&nbsp;2</a> (The Iverson bracket is the predicate indicator)
+<span class="screen-reader-only">Remark</span><a href="#rem-iverson-indicator" class="quarto-xref">Remark&nbsp;1</a> (The Iverson bracket is the predicate indicator)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-35" class="callout-35-contents callout-collapse collapse show">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-iverson-indicator" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (The Iverson bracket is the predicate indicator). </span>The Iverson bracket <span class="math inline">\([P]\)</span> is the predicate indicator <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> (<a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;12</a>) in different notation. Under this notation, set membership is written <span class="math inline">\([x \in A]\)</span>, so <span class="math inline">\([x \in A] = \mathbb{1}_{A}(x)\)</span>. For example, the values in <a href="#exm-indicator-numerical" class="quarto-xref">Example&nbsp;8</a> become</p>
+<p><span class="proof-title"><em>Remark 1</em> (The Iverson bracket is the predicate indicator). </span>The Iverson bracket <span class="math inline">\([P]\)</span> is the predicate indicator <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> (<a href="#def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) in different notation. Under this notation, set membership is written <span class="math inline">\([x \in A]\)</span>, so <span class="math inline">\([x \in A] = \mathbb{1}_{A}(x)\)</span>. For example, the values in <a href="#exm-indicator-numerical" class="quarto-xref">Example&nbsp;1</a> become</p>
 <p><span class="math display">\[
 \begin{aligned}
 [7.2 &gt; 5] &amp;= \mathbb{1}\mathopen{}\left(7.2 &gt; 5\right)\mathclose{} \\
@@ -1983,39 +1526,39 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-kronecker-delta" class="quarto-xref">Definition&nbsp;19</a> (Kronecker delta)
+<span class="screen-reader-only">Def</span><a href="#def-kronecker-delta" class="quarto-xref">Definition&nbsp;8</a> (Kronecker delta)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-36" class="callout-36-contents callout-collapse collapse show">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-kronecker-delta" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Kronecker delta)</strong></span> For integers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, the <strong>Kronecker delta</strong> is</p>
+<p><span class="theorem-title"><strong>Definition 8 (Kronecker delta)</strong></span> For integers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, the <strong>Kronecker delta</strong> is</p>
 <p><span class="math display">\[\delta_{ij} \stackrel{\text{def}}{=}[i = j]\]</span></p>
-<p>that is, <span class="math inline">\(\delta_{ij} = 1\)</span> when <span class="math inline">\(i = j\)</span> and <span class="math inline">\(\delta_{ij} = 0\)</span> when <span class="math inline">\(i \neq j\)</span> (<a href="#def-iverson-bracket" class="quarto-xref">Definition&nbsp;18</a>).</p>
+<p>that is, <span class="math inline">\(\delta_{ij} = 1\)</span> when <span class="math inline">\(i = j\)</span> and <span class="math inline">\(\delta_{ij} = 0\)</span> when <span class="math inline">\(i \neq j\)</span> (<a href="#def-iverson-bracket" class="quarto-xref">Definition&nbsp;7</a>).</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-kronecker-delta" class="quarto-xref">Example&nbsp;13</a> (Evaluating the Kronecker delta)
+<span class="screen-reader-only">Exm</span><a href="#exm-kronecker-delta" class="quarto-xref">Example&nbsp;6</a> (Evaluating the Kronecker delta)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-37" class="callout-37-contents callout-collapse collapse show">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-kronecker-delta" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (Evaluating the Kronecker delta)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 6 (Evaluating the Kronecker delta)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math display">\[
 \begin{aligned}
@@ -2047,8 +1590,8 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 </div>
 </div>
 </section>
-<section id="strengths-and-limitations-of-the-iverson-bracket" class="level3" data-number="5.3">
-<h3 data-number="5.3" class="anchored" data-anchor-id="strengths-and-limitations-of-the-iverson-bracket"><span class="header-section-number">5.3</span> Strengths and limitations of the Iverson bracket</h3>
+<section id="strengths-and-limitations-of-the-iverson-bracket" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="strengths-and-limitations-of-the-iverson-bracket"><span class="header-section-number">2.3</span> Strengths and limitations of the Iverson bracket</h3>
 <p>The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if <span class="math inline">\(U\)</span> is a <a href="./functions.html#def-finite-set">finite set</a> that contains <span class="math inline">\(A\)</span>, then:</p>
 <p><span class="math display">\[
 \sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]
@@ -2056,8 +1599,8 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <p>With <span class="math inline">\(A = \mathopen{}\left\{2, 4\right\}\mathclose{}\)</span>, <span class="math inline">\(f(x) = x\)</span>, and <span class="math inline">\(U = \mathopen{}\left\{1, 2, 3, 4, 5\right\}\mathclose{}\)</span>, both sides equal <span class="math inline">\(2 + 4 = 6\)</span>.</p>
 <p>However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote <a href="./sets.html#def-closed-interval">closed intervals</a> <span class="math inline">\([a, b]\)</span>, <a href="https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation">conditional expectations</a> <span class="math inline">\(\operatorname{E}[Y \mid X]\)</span> (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses <span class="math inline">\(\mathbb{1}\)</span> or <span class="math inline">\(I\)</span> rather than the bare Iverson bracket.</p>
 </section>
-<section id="summary-of-indicator-notations" class="level3" data-number="5.4">
-<h3 data-number="5.4" class="anchored" data-anchor-id="summary-of-indicator-notations"><span class="header-section-number">5.4</span> Summary of indicator notations</h3>
+<section id="summary-of-indicator-notations" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="summary-of-indicator-notations"><span class="header-section-number">2.4</span> Summary of indicator notations</h3>
 <p><a href="#tbl-indicator-notations" class="quarto-xref">Table&nbsp;2</a> compares the major notations encountered across the literature.</p>
 <div class="callout callout-style-simple callout-tbl no-icon">
 <div class="callout-body d-flex">
@@ -2132,8 +1675,8 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 </div>
 </section>
-<section id="conventions-in-this-book" class="level3" data-number="5.5">
-<h3 data-number="5.5" class="anchored" data-anchor-id="conventions-in-this-book"><span class="header-section-number">5.5</span> Conventions in this book</h3>
+<section id="conventions-in-this-book" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="conventions-in-this-book"><span class="header-section-number">2.5</span> Conventions in this book</h3>
 <p>In these notes, we standardize on blackboard bold <span class="math inline">\(\mathbb{1}\)</span> via the macros defined in <code>latex-macros/macros.qmd</code>:</p>
 <ul>
 <li><code>\indic{A}</code> produces <span class="math inline">\(\mathbb{1}_{A}\)</span> (set subscript)</li>
@@ -2143,41 +1686,41 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </ul>
 <p>Blackboard bold <span class="math inline">\(\mathbb{1}\)</span> is preferred because it avoids all common collisions: it is visually distinct from the scalar <span class="math inline">\(1\)</span>, the identity matrix <span class="math inline">\(I\)</span>, and the observed and expected Fisher information matrices (<span class="math inline">\(I\)</span>, <span class="math inline">\(\mathcal{I}\)</span>).</p>
 </section>
-<section id="key-algebraic-properties" class="level3" data-number="5.6">
-<h3 data-number="5.6" class="anchored" data-anchor-id="key-algebraic-properties"><span class="header-section-number">5.6</span> Key algebraic properties</h3>
+<section id="key-algebraic-properties" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="key-algebraic-properties"><span class="header-section-number">2.6</span> Key algebraic properties</h3>
 <p>Indicator functions translate the logical connectives (<a href="./proof-writing.html#def-logical-connective">definition</a>) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:</p>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-idempotent" class="quarto-xref">Definition&nbsp;20</a> (Idempotent)
+<span class="screen-reader-only">Def</span><a href="#def-idempotent" class="quarto-xref">Definition&nbsp;9</a> (Idempotent)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-38" class="callout-38-contents callout-collapse collapse show">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-idempotent" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Idempotent)</strong></span> A number <span class="math inline">\(a\)</span> is <strong>idempotent</strong> if <span class="math inline">\(a \cdot a = a\)</span>. A function <span class="math inline">\(f\)</span> with real values is <strong>idempotent</strong> if <span class="math inline">\(f(x) \cdot f(x) = f(x)\)</span> for every <span class="math inline">\(x\)</span> in its <a href="./functions.html#def-domain">domain</a>.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Idempotent)</strong></span> A number <span class="math inline">\(a\)</span> is <strong>idempotent</strong> if <span class="math inline">\(a \cdot a = a\)</span>. A function <span class="math inline">\(f\)</span> with real values is <strong>idempotent</strong> if <span class="math inline">\(f(x) \cdot f(x) = f(x)\)</span> for every <span class="math inline">\(x\)</span> in its <a href="./functions.html#def-domain">domain</a>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-idempotent-indicator" class="quarto-xref">Example&nbsp;14</a> (Idempotent numbers and indicators)
+<span class="screen-reader-only">Exm</span><a href="#exm-idempotent-indicator" class="quarto-xref">Example&nbsp;7</a> (Idempotent numbers and indicators)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-39" class="callout-39-contents callout-collapse collapse show">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-idempotent-indicator" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (Idempotent numbers and indicators)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 7 (Idempotent numbers and indicators)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> are idempotent: <span class="math inline">\(0 \cdot 0 = 0\)</span> and <span class="math inline">\(1 \cdot 1 = 1\)</span>.</p></li>
 <li><p><span class="math inline">\(2\)</span> is not idempotent: <span class="math inline">\(2 \cdot 2 = 4 \neq 2\)</span>.</p></li>
@@ -2200,7 +1743,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <li><p><strong>Intersection (“and”):</strong> <span class="math inline">\(\mathbb{1}_{A \cap B}(x) = \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
 <li><p><strong>Union (“or”):</strong> <span class="math inline">\(\mathbb{1}_{A \cup B}(x) = \mathbb{1}_{A}(x) + \mathbb{1}_{B}(x) - \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
 <li><p><strong>Complement (“not”):</strong> <span class="math inline">\(\mathbb{1}_{A^c}(x) = 1 - \mathbb{1}_{A}(x)\)</span></p></li>
-<li><p><strong>Idempotence (<a href="#def-idempotent" class="quarto-xref">Definition&nbsp;20</a>):</strong> <span class="math inline">\((\mathbb{1}_{A}(x))^2 = \mathbb{1}_{A}(x)\)</span></p></li>
+<li><p><strong>Idempotence (<a href="#def-idempotent" class="quarto-xref">Definition&nbsp;9</a>):</strong> <span class="math inline">\((\mathbb{1}_{A}(x))^2 = \mathbb{1}_{A}(x)\)</span></p></li>
 <li><p><strong>Expectation gives probability:</strong> When <span class="math inline">\(\Omega\)</span> is a <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space">sample space</a> and <span class="math inline">\(A\)</span> is an <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-event">event</a>, the <a href="https://morrison-lab.github.io/pds/expectation.html#def-expectation">expectation</a> of its indicator is the <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probability</a> of the event (all four terms are defined in the Morrison Lab’s probability notes):</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -2218,76 +1761,76 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </ul>
 </section>
 </section>
-<section id="sec-notational-shorthands" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="sec-notational-shorthands"><span class="header-section-number">6</span> Notational shorthands</h2>
+<section id="sec-notational-shorthands" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-notational-shorthands"><span class="header-section-number">3</span> Notational shorthands</h2>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-lower-upper-limits" class="quarto-xref">Definition&nbsp;21</a> (Lower limit of a sum or integral)
+<span class="screen-reader-only">Def</span><a href="#def-lower-upper-limits" class="quarto-xref">Definition&nbsp;10</a> (Lower limit of a sum or integral)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-40" class="callout-40-contents callout-collapse collapse show">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-lower-upper-limits" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Lower limit of a sum or integral)</strong></span> In a <a href="./algebra-sums.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration. In both, the lower limit is written below the symbol.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Lower limit of a sum or integral)</strong></span> In a <a href="./algebra-sums.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration. In both, the lower limit is written below the symbol.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-upper-limit" class="quarto-xref">Definition&nbsp;22</a> (Upper limit of a sum or integral)
+<span class="screen-reader-only">Def</span><a href="#def-upper-limit" class="quarto-xref">Definition&nbsp;11</a> (Upper limit of a sum or integral)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-41" class="callout-41-contents callout-collapse collapse show">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-upper-limit" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Upper limit of a sum or integral)</strong></span> In a <a href="./algebra-sums.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is the last value of the index <span class="math inline">\(i\)</span>. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is the right end of the interval of integration. In both, the upper limit is written above the symbol.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Upper limit of a sum or integral)</strong></span> In a <a href="./algebra-sums.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is the last value of the index <span class="math inline">\(i\)</span>. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is the right end of the interval of integration. In both, the upper limit is written above the symbol.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-limits-of-integration" class="quarto-xref">Definition&nbsp;23</a> (Limits of integration)
+<span class="screen-reader-only">Def</span><a href="#def-limits-of-integration" class="quarto-xref">Definition&nbsp;12</a> (Limits of integration)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-42" class="callout-42-contents callout-collapse collapse show">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-limits-of-integration" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Limits of integration)</strong></span> In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the lower limit (<a href="#def-lower-upper-limits" class="quarto-xref">Definition&nbsp;21</a>) <span class="math inline">\(a\)</span> and the upper limit (<a href="#def-upper-limit" class="quarto-xref">Definition&nbsp;22</a>) <span class="math inline">\(b\)</span> together are the <strong>limits of integration</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 12 (Limits of integration)</strong></span> In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the lower limit (<a href="#def-lower-upper-limits" class="quarto-xref">Definition&nbsp;10</a>) <span class="math inline">\(a\)</span> and the upper limit (<a href="#def-upper-limit" class="quarto-xref">Definition&nbsp;11</a>) <span class="math inline">\(b\)</span> together are the <strong>limits of integration</strong>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-lower-upper-limits" class="quarto-xref">Example&nbsp;15</a> (Reading off limits)
+<span class="screen-reader-only">Exm</span><a href="#exm-lower-upper-limits" class="quarto-xref">Example&nbsp;8</a> (Reading off limits)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-43" class="callout-43-contents callout-collapse collapse show">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-lower-upper-limits" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (Reading off limits)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 8 (Reading off limits)</strong></span> &nbsp;</p>
 <ul>
 <li>In <span class="math inline">\(\sum_{i=2}^{5} i^2\)</span>, the lower limit is <span class="math inline">\(2\)</span> and the upper limit is <span class="math inline">\(5\)</span>, so the sum is <span class="math inline">\(2^2 + 3^2 + 4^2 + 5^2 = 54\)</span>.</li>
 <li>In <span class="math inline">\(\int_0^3 x\,dx\)</span>, the lower limit is <span class="math inline">\(0\)</span> and the upper limit is <span class="math inline">\(3\)</span>.</li>
@@ -2297,55 +1840,55 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Remark</span><a href="#rem-limits-two-meanings" class="quarto-xref">Remark&nbsp;3</a> (Two meanings of “limit”)
+<span class="screen-reader-only">Remark</span><a href="#rem-limits-two-meanings" class="quarto-xref">Remark&nbsp;2</a> (Two meanings of “limit”)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-44" class="callout-44-contents callout-collapse collapse show">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-limits-two-meanings" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#def-lower-upper-limits" class="quarto-xref">Definition&nbsp;21</a>, <a href="#def-upper-limit" class="quarto-xref">Definition&nbsp;22</a>) are not limits in the calculus sense, such as the <a href="./calculus-derivatives.html#def-limit">limit of a function</a> or the <a href="./algebra-exponentials.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</p>
+<p><span class="proof-title"><em>Remark 2</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#def-lower-upper-limits" class="quarto-xref">Definition&nbsp;10</a>, <a href="#def-upper-limit" class="quarto-xref">Definition&nbsp;11</a>) are not limits in the calculus sense, such as the <a href="./calculus-derivatives.html#def-limit">limit of a function</a> or the <a href="./algebra-exponentials.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-notational-shorthand" class="quarto-xref">Definition&nbsp;24</a> (Notational shorthand)
+<span class="screen-reader-only">Def</span><a href="#def-notational-shorthand" class="quarto-xref">Definition&nbsp;13</a> (Notational shorthand)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-45" class="callout-45-contents callout-collapse collapse show">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-notational-shorthand" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 24 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-full-form" class="quarto-xref">Definition&nbsp;25</a> (Full form)
+<span class="screen-reader-only">Def</span><a href="#def-full-form" class="quarto-xref">Definition&nbsp;14</a> (Full form)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-46" class="callout-46-contents callout-collapse collapse show">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-full-form" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 25 (Full form)</strong></span> The <strong>full form</strong> of a notational shorthand (<a href="#def-notational-shorthand" class="quarto-xref">Definition&nbsp;24</a>) is the expression with every part written out.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Full form)</strong></span> The <strong>full form</strong> of a notational shorthand (<a href="#def-notational-shorthand" class="quarto-xref">Definition&nbsp;13</a>) is the expression with every part written out.</p>
 </div>
 </div>
 </div>
@@ -2369,19 +1912,19 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-range-of-variable" class="quarto-xref">Definition&nbsp;26</a> (Range of a variable)
+<span class="screen-reader-only">Def</span><a href="#def-range-of-variable" class="quarto-xref">Definition&nbsp;15</a> (Range of a variable)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-48" class="callout-48-contents callout-collapse collapse show">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-range-of-variable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 26 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
+<p><span class="theorem-title"><strong>Definition 15 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
 </div>
 </div>
 </div>
@@ -2473,37 +2016,37 @@ Table&nbsp;3: Common notational shorthands and their full forms
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Remark</span><a href="#rem-indefinite-integral-not-shorthand" class="quarto-xref">Remark&nbsp;4</a> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings)
+<span class="screen-reader-only">Remark</span><a href="#rem-indefinite-integral-not-shorthand" class="quarto-xref">Remark&nbsp;3</a> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-49" class="callout-49-contents callout-collapse collapse show">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-indefinite-integral-not-shorthand" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings). </span>In calculus, <span class="math inline">\(\int f(x)\,dx\)</span> with no limits is not a shorthand: it is the <a href="./calculus-integration.html#def-indefinite-integral">indefinite integral</a> of <span class="math inline">\(f\)</span>, a family of functions rather than a number. Some sources, especially in probability, also write <span class="math inline">\(\int f(x)\,dx\)</span> for the number <span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span>. Writing the limits out tells the reader which of the two is meant.</p>
+<p><span class="proof-title"><em>Remark 3</em> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings). </span>In calculus, <span class="math inline">\(\int f(x)\,dx\)</span> with no limits is not a shorthand: it is the <a href="./calculus-integration.html#def-indefinite-integral">indefinite integral</a> of <span class="math inline">\(f\)</span>, a family of functions rather than a number. Some sources, especially in probability, also write <span class="math inline">\(\int f(x)\,dx\)</span> for the number <span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span>. Writing the limits out tells the reader which of the two is meant.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-expand-index-shorthand" class="quarto-xref">Example&nbsp;16</a> (Writing out an index shorthand)
+<span class="screen-reader-only">Exm</span><a href="#exm-expand-index-shorthand" class="quarto-xref">Example&nbsp;9</a> (Writing out an index shorthand)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-50" class="callout-50-contents callout-collapse collapse show">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-expand-index-shorthand" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Writing out an index shorthand)</strong></span> Let <span class="math inline">\(n = 3\)</span> and <span class="math inline">\((x_1, x_2, x_3) = (2, 5, 1)\)</span>. A source that writes <span class="math inline">\(\sum_{i} x_i\)</span> means <span class="math inline">\(\sum_{i=1}^{3} x_i\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 9 (Writing out an index shorthand)</strong></span> Let <span class="math inline">\(n = 3\)</span> and <span class="math inline">\((x_1, x_2, x_3) = (2, 5, 1)\)</span>. A source that writes <span class="math inline">\(\sum_{i} x_i\)</span> means <span class="math inline">\(\sum_{i=1}^{3} x_i\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \sum_{i=1}^{3} x_i
@@ -2520,13 +2063,13 @@ Table&nbsp;3: Common notational shorthands and their full forms
 </div>
 </div>
 </section>
-<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized"><span class="header-section-number">7</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
+<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized"><span class="header-section-number">4</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
 <p>In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.</p>
 <p>It’s worth noting that calculus was formalized in the <a href="https://en.wikipedia.org/wiki/Leibniz%27s_notation">1600s</a>, elementary algebra was formalized around <a href="https://en.wikipedia.org/wiki/Al-Jabr">820</a>, and arithmetic <a href="https://en.wikipedia.org/wiki/Arithmetic#History">even earlier</a>. And calculus still has <a href="https://en.wikipedia.org/wiki/Notation_for_differentiation">several competing notation systems</a>. In contrast, the field of statistics only emerged in the <a href="https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics">late 1800s and early 1900s</a>, so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 <span class="citation" data-cites="nelder1972generalized">(<a href="#ref-nelder1972generalized" role="doc-biblioref">Nelder and Wedderburn 1972</a>)</span>, which is very recent in terms of the <a href="https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions">pace of scientific development</a>.</p>
 </section>
-<section id="sec-further-reading" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="sec-further-reading"><span class="header-section-number">8</span> Further reading</h2>
+<section id="sec-further-reading" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sec-further-reading"><span class="header-section-number">5</span> Further reading</h2>
 <p>For the logical symbols and proof conventions used in these notes (whose definitions are on the <a href="./proof-writing.html#sec-proof-definitions">Proof Writing</a> page):</p>
 <ul>
 <li><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#ref-velleman2019prove" role="doc-biblioref">2019</a>)</span> explains how mathematical statements are built from logical connectives (<a href="./proof-writing.html#def-logical-connective">definition</a>) and quantifiers (<a href="./proof-writing.html#def-quantifier">definition</a>), and how to read and write them.</li>
@@ -2542,9 +2085,6 @@ Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. <em>Language, Proo
 </div>
 <div id="ref-nelder1972generalized" class="csl-entry" role="listitem">
 Nelder, John Ashworth, and Robert WM Wedderburn. 1972. <span>“Generalized Linear Models.”</span> <em>Journal of the Royal Statistical Society Series A: Statistics in Society</em> 135 (3): 370–84. <a href="https://doi.org/10.2307/2344614">https://doi.org/10.2307/2344614</a>.
-</div>
-<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
-Rudin, Walter. 1976. <em>Principles of Mathematical Analysis</em>. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
 </div>
 <div id="ref-velleman2019prove" class="csl-entry" role="listitem">
 Velleman, Daniel J. 2019. <em>How to Prove It: A Structured Approach</em>. 3rd ed. Cambridge University Press. <a href="https://doi.org/10.1017/9781108539890">https://doi.org/10.1017/9781108539890</a>.
@@ -3468,8 +3008,8 @@ document.querySelectorAll("main table").forEach(function (t) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./sets-functions.html" class="pagination-link" aria-label="Sets and Functions">
-        <span class="nav-page-text">Sets and Functions</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./number-systems.html" class="pagination-link" aria-label="Number Systems">
+        <span class="nav-page-text">Number Systems</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -3487,49 +3027,50 @@ document.querySelectorAll("main table").forEach(function (t) {
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script&gt;</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="in">// Definitions about proofs and logic moved to the Proof Writing page</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="in">// (https://github.com/Morrison-Lab/mds/issues/258).</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">// Send an old notation.html#id link to the page that now holds the item.</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="in">// The ids are those of the subfiles moved on 2026-10-13; maps old id -&gt; new path.</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="in">(function () {</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="in">  var map = {"def-converse":"proof-writing.html#def-converse","def-counterexample":"proof-writing.html#def-counterexample","def-derivation":"proof-writing.html#def-derivation","def-inequality":"proof-writing.html#def-inequality","def-logical-connective":"proof-writing.html#def-logical-connective","def-logical-entailment":"proof-writing.html#def-logical-entailment","def-necessary-sufficient":"proof-writing.html#def-necessary-sufficient","def-predicate":"proof-writing.html#def-predicate","def-proof":"proof-writing.html#def-proof","def-proof-by-contradiction":"proof-writing.html#def-proof-by-contradiction","def-proposition":"proof-writing.html#def-proposition","def-quantifier":"proof-writing.html#def-quantifier","def-theorem":"proof-writing.html#def-theorem","exm-converse":"proof-writing.html#exm-converse","exm-counterexample":"proof-writing.html#exm-counterexample","exm-derivation":"proof-writing.html#exm-derivation","exm-derivation-chain":"proof-writing.html#exm-derivation-chain","exm-inequality":"proof-writing.html#exm-inequality","exm-logical-connective":"proof-writing.html#exm-logical-connective","exm-logical-entailment":"proof-writing.html#exm-logical-entailment","exm-necessary-sufficient":"proof-writing.html#exm-necessary-sufficient","exm-predicate":"proof-writing.html#exm-predicate","exm-proof":"proof-writing.html#exm-proof","exm-proof-by-contradiction":"proof-writing.html#exm-proof-by-contradiction","exm-proof-by-contradiction-truth-table":"proof-writing.html#exm-proof-by-contradiction-truth-table","exm-proposition":"proof-writing.html#exm-proposition","exm-quantifier":"proof-writing.html#exm-quantifier","exm-theorem":"proof-writing.html#exm-theorem","proofs":"proof-writing.html#sec-proof-definitions","rem-proposition-as-result":"proof-writing.html#rem-proposition-as-result","thm-derivation-chain":"proof-writing.html#thm-derivation-chain","thm-proof-by-contradiction":"proof-writing.html#thm-proof-by-contradiction"};</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="in">  var id;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="in">  try {</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="in">    id = decodeURIComponent(location.hash.slice(1));</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="in">  } catch (e) {</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="in">    return;</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="in">  if (!Object.prototype.hasOwnProperty.call(map, id)) return;</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="in">  var target = map[id];</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="in">  var cut = target.indexOf("#");</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="in">  var base = location.pathname.replace(/[^\/]*$/, "");</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="in">  location.replace(base + target.slice(0, cut) + location.search + target.slice(cut));</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="in">})();</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/script&gt;</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_notation.qmd &gt;}}</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading {#sec-further-reading}</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>For the logical symbols and proof conventions used in these notes</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>(whose definitions are on the <span class="co">[</span><span class="ot">Proof Writing</span><span class="co">](proof-writing.qmd#sec-proof-definitions)</span> page):</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@velleman2019prove</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  explains how mathematical statements are built from</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  logical connectives (<span class="co">[</span><span class="ot">definition</span><span class="co">](proof-writing.qmd#def-logical-connective)</span>) and quantifiers (<span class="co">[</span><span class="ot">definition</span><span class="co">](proof-writing.qmd#def-quantifier)</span>),</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  and how to read and write them.</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@barkerplummer2011language</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  covers the same symbols as a formal language,</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  with propositional logic (the logic of connectives)</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  and first-order logic (which adds quantifiers).</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>For set and function notation, see the <span class="co">[</span><span class="ot">Sets</span><span class="co">](sets.qmd)</span>, <span class="co">[</span><span class="ot">Functions</span><span class="co">](functions.qmd)</span>, and <span class="co">[</span><span class="ot">Expressions and Algorithms</span><span class="co">](expressions-algorithms.qmd)</span> pages.</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="in">// Definitions about proofs and logic moved to the Proof Writing page,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="in">// and those about number systems to the Number Systems page</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">// (https://github.com/Morrison-Lab/mds/issues/258).</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="in">// Send an old notation.html#id link to the page that now holds the item.</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="in">// The ids are those of the subfiles moved on 2026-10-13; maps old id -&gt; new path.</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="in">(function () {</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="in">  var map = {"def-percent":"algebra-basics.html#def-percent","exm-percent":"algebra-basics.html#exm-percent","percent-sign":"algebra-basics.html#sec-percent","def-converse":"proof-writing.html#def-converse","def-counterexample":"proof-writing.html#def-counterexample","def-derivation":"proof-writing.html#def-derivation","def-inequality":"proof-writing.html#def-inequality","def-logical-connective":"proof-writing.html#def-logical-connective","def-logical-entailment":"proof-writing.html#def-logical-entailment","def-necessary-sufficient":"proof-writing.html#def-necessary-sufficient","def-predicate":"proof-writing.html#def-predicate","def-proof":"proof-writing.html#def-proof","def-proof-by-contradiction":"proof-writing.html#def-proof-by-contradiction","def-proposition":"proof-writing.html#def-proposition","def-quantifier":"proof-writing.html#def-quantifier","def-theorem":"proof-writing.html#def-theorem","exm-converse":"proof-writing.html#exm-converse","exm-counterexample":"proof-writing.html#exm-counterexample","exm-derivation":"proof-writing.html#exm-derivation","exm-derivation-chain":"proof-writing.html#exm-derivation-chain","exm-inequality":"proof-writing.html#exm-inequality","exm-logical-connective":"proof-writing.html#exm-logical-connective","exm-logical-entailment":"proof-writing.html#exm-logical-entailment","exm-necessary-sufficient":"proof-writing.html#exm-necessary-sufficient","exm-predicate":"proof-writing.html#exm-predicate","exm-proof":"proof-writing.html#exm-proof","exm-proof-by-contradiction":"proof-writing.html#exm-proof-by-contradiction","exm-proof-by-contradiction-truth-table":"proof-writing.html#exm-proof-by-contradiction-truth-table","exm-proposition":"proof-writing.html#exm-proposition","exm-quantifier":"proof-writing.html#exm-quantifier","exm-theorem":"proof-writing.html#exm-theorem","proofs":"proof-writing.html#sec-proof-definitions","rem-proposition-as-result":"proof-writing.html#rem-proposition-as-result","thm-derivation-chain":"proof-writing.html#thm-derivation-chain","thm-proof-by-contradiction":"proof-writing.html#thm-proof-by-contradiction","def-even-odd":"number-systems.html#def-even-odd","def-integers":"number-systems.html#def-integers","def-irrational-numbers":"number-systems.html#def-irrational-numbers","def-natural-numbers":"number-systems.html#def-natural-numbers","def-negative-integer":"number-systems.html#def-negative-integer","def-nonnegative-integers":"number-systems.html#def-nonnegative-integers","def-odd":"number-systems.html#def-odd","def-positive-integer":"number-systems.html#def-positive-integer","def-rational-numbers":"number-systems.html#def-rational-numbers","def-real-numbers":"number-systems.html#def-real-numbers","exm-even-odd":"number-systems.html#exm-even-odd","exm-integers":"number-systems.html#exm-integers","exm-irrational-numbers":"number-systems.html#exm-irrational-numbers","exm-natural-numbers":"number-systems.html#exm-natural-numbers","exm-rational-numbers":"number-systems.html#exm-rational-numbers","exm-real-numbers":"number-systems.html#exm-real-numbers","exr-naturals-below-three":"number-systems.html#exr-naturals-below-three","rem-real-numbers-working-definition":"number-systems.html#rem-real-numbers-working-definition","sec-notation-naturals":"number-systems.html#sec-notation-naturals","sec-notation-reals":"number-systems.html#sec-notation-reals","sol-naturals-below-three":"number-systems.html#sol-naturals-below-three"};</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="in">  var id;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="in">  try {</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="in">    id = decodeURIComponent(location.hash.slice(1));</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="in">  } catch (e) {</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="in">    return;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="in">  if (!Object.prototype.hasOwnProperty.call(map, id)) return;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="in">  var target = map[id];</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="in">  var cut = target.indexOf("#");</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="in">  var base = location.pathname.replace(/[^\/]*$/, "");</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="in">  location.replace(base + target.slice(0, cut) + location.search + target.slice(cut));</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="in">})();</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/script&gt;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_notation.qmd &gt;}}</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading {#sec-further-reading}</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>For the logical symbols and proof conventions used in these notes</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>(whose definitions are on the <span class="co">[</span><span class="ot">Proof Writing</span><span class="co">](proof-writing.qmd#sec-proof-definitions)</span> page):</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@velleman2019prove</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  explains how mathematical statements are built from</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  logical connectives (<span class="co">[</span><span class="ot">definition</span><span class="co">](proof-writing.qmd#def-logical-connective)</span>) and quantifiers (<span class="co">[</span><span class="ot">definition</span><span class="co">](proof-writing.qmd#def-quantifier)</span>),</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  and how to read and write them.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@barkerplummer2011language</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  covers the same symbols as a formal language,</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  with propositional logic (the logic of connectives)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  and first-order logic (which adds quantifiers).</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>For set and function notation, see the <span class="co">[</span><span class="ot">Sets</span><span class="co">](sets.qmd)</span>, <span class="co">[</span><span class="ot">Functions</span><span class="co">](functions.qmd)</span>, and <span class="co">[</span><span class="ot">Expressions and Algorithms</span><span class="co">](expressions-algorithms.qmd)</span> pages.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

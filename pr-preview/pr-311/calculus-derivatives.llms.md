@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 15:23:10 (PDT)
+Last modified: 2026-10-15 18:40:39 (PDT)
 
 ## 1 Derivatives
 
@@ -22,7 +22,7 @@ Last modified: 2026-10-15 15:23:10 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Limit of a function at a point)** Let \\f\\ be a [function](functions.llms.md#def-function) defined at every point of an [open interval](sets.llms.md#def-open-interval) around \\c\\, except possibly at \\c\\ itself, and let \\L\\ be a [real number](notation.llms.md#def-real-numbers). The **limit** of \\f(x)\\ as \\x\\ approaches \\c\\ is \\L\\, written \\\lim\_{x \to c} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that
+> **Definition 1 (Limit of a function at a point)** Let \\f\\ be a [function](functions.llms.md#def-function) defined at every point of an [open interval](sets.llms.md#def-open-interval) around \\c\\, except possibly at \\c\\ itself, and let \\L\\ be a [real number](number-systems.llms.md#def-real-numbers). The **limit** of \\f(x)\\ as \\x\\ approaches \\c\\ is \\L\\, written \\\lim\_{x \to c} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that
 >
 > \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } x \text{ with } 0 \< \mathopen{}\left\|x - c\right\|\mathclose{} \< \delta.\\
 >
@@ -205,7 +205,7 @@ Last modified: 2026-10-15 15:23:10 (PDT)
 >
 > \\\frac{\partial}{\partial x}x^q = qx^{q-1}\\
 >
-> When \\q\\ is a positive [integer](notation.llms.md#def-integers), the same formula holds for every real \\x\\.
+> When \\q\\ is a positive [integer](number-systems.llms.md#def-integers), the same formula holds for every real \\x\\.
 
 > **TIP:**
 >

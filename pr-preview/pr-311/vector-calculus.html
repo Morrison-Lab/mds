@@ -218,35 +218,15 @@ cookieconsent.run({
 </script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-tbl.callout {
   border-left-color: #757575;
@@ -268,35 +248,15 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -318,6 +278,16 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -328,15 +298,45 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-fig.callout {
+  border-left-color: #757575;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -547,6 +547,10 @@ window.Quarto = {
     <a class="nav-link active" href="./notation.html" aria-current="page"> 
 <span class="menu-text">Notation</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./number-systems.html"> 
+<span class="menu-text">Number Systems</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sets-and-functions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Sets and Functions</span>
@@ -727,6 +731,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./notation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Notation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./number-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Number Systems</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -941,7 +951,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content"><!-- qwt-page-banners -->
 <div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>, <a href="algebra-sums.html">Convexity, Infimum and Sums</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives and Taylor Series</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus.html">Calculus</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="index.html">Math for Data Science</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Column Space, Null Space and Rank-Nullity</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="vector-calculus.html">Vector Calculus</a>
+        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>, <a href="algebra-sums.html">Convexity, Infimum and Sums</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives and Taylor Series</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus.html">Calculus</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="index.html">Math for Data Science</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Column Space, Null Space and Rank-Nullity</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="vector-calculus.html">Vector Calculus</a>
         <br>
         <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
     </p>
@@ -953,19 +963,6 @@ window.Quarto = {
         <strong>📋 Other Formats:</strong> <a href="vector-calculus-tracked-changes.docx" download>📝 MS Word (tracked changes)</a> | <a href="vector-calculus-slides.html">🎞️ Slides</a>
     </p>
 </div>
-
-<!-- gha-preview-page-banner:start -->
-<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
-    <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~3% of content changed).
-        <br>
-        <strong>🎨 Highlighting Legend:</strong> 
-        <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
-        <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 3px; border-radius: 2px;">added text (green)</mark> shows new content, and 
-        <mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 3px; border-radius: 2px;">new sections (blue)</mark> highlight entirely new paragraphs.
-    </p>
-</div>
-<!-- gha-preview-page-banner:end -->
 <header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Vector Calculus</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
@@ -978,7 +975,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-15 15:23:10 (PDT)</p>
+      <p class="date">Last modified: 2026-10-15 18:40:39 (PDT)</p>
     </div>
   </div>
   
@@ -1957,7 +1954,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 \mathopen{}\left[\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\right]\mathclose{}_{ij} \stackrel{\text{def}}{=}\frac{\partial}{\partial \beta_{i}} y_j,
 \qquad i = 1, \ldots, p, \quad j = 1, \ldots, q.
 \]</span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Both</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\frac{\partial}{\partial \tilde{\beta}} \tilde{y}\)</mark></span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">and</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> denote this </mark><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(p \times q\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> matrix.</mark></p>
+<p>Both <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} \tilde{y}\)</span> and <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\)</span> denote this <span class="math inline">\(p \times q\)</span> matrix.</p>
 </div>
 </div>
 </div>
@@ -1975,7 +1972,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <div id="callout-30" class="callout-30-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-denominator-layout" class="theorem definition">
-<p><span class="theorem-title"><strong><mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition 7 (Denominator layout)</mark></strong></span><mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 2px; border-radius: 2px;"> </mark>Writing derivatives <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">as</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">in </mark><a href="#def-vector-valued-derivative" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;6</mark></a> is the <strong>denominator layout</strong>, which these notes use throughout: rows index the entries of <span class="math inline">\(\tilde{\beta}\)</span> (the denominator) and columns index the entries of <span class="math inline">\(\tilde{y}\)</span> (the numerator), so column <span class="math inline">\(j\)</span> is the vector derivative <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} y_j\)</span> (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>).</p>
+<p><span class="theorem-title"><strong>Definition 7 (Denominator layout)</strong></span> Writing derivatives as in <a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a> is the <strong>denominator layout</strong>, which these notes use throughout: rows index the entries of <span class="math inline">\(\tilde{\beta}\)</span> (the denominator) and columns index the entries of <span class="math inline">\(\tilde{y}\)</span> (the numerator), so column <span class="math inline">\(j\)</span> is the vector derivative <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} y_j\)</span> (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>).</p>
 </div>
 </div>
 </div>
@@ -2024,7 +2021,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <div id="callout-32" class="callout-32-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-jacobian-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">8</mark> (Jacobian matrix)</strong></span> Let</p>
+<p><span class="theorem-title"><strong>Definition 8 (Jacobian matrix)</strong></span> Let</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{y}&amp;= \tilde{y}(\tilde{\beta}) \\
@@ -2049,7 +2046,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <div id="callout-33" class="callout-33-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-numerator-layout" class="theorem definition">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Definition 9 (Numerator layout)</strong></span> Writing derivatives as in <a href="#def-jacobian-matrix" class="quarto-xref">Definition&nbsp;8</a>, with rows indexing the entries of <span class="math inline">\(\tilde{y}\)</span> (the numerator) and columns indexing the entries of <span class="math inline">\(\tilde{\beta}\)</span> (the denominator), is the <strong>numerator layout</strong>.</mark></p>
+<p><span class="theorem-title"><strong>Definition 9 (Numerator layout)</strong></span> Writing derivatives as in <a href="#def-jacobian-matrix" class="quarto-xref">Definition&nbsp;8</a>, with rows indexing the entries of <span class="math inline">\(\tilde{y}\)</span> (the numerator) and columns indexing the entries of <span class="math inline">\(\tilde{\beta}\)</span> (the denominator), is the <strong>numerator layout</strong>.</p>
 </div>
 </div>
 </div>
@@ -2098,7 +2095,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <div id="callout-35" class="callout-35-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-numerator-layout" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Numerator layout). </span>Some sources use the numerator layout <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-numerator-layout" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;9</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> throughout, so that their derivative of a vector-valued function is the Jacobian matrix, the transpose of the derivative used in these notes. In numerator layout, the derivative of a scalar-valued function is a row vector: the row-vector derivative (<a href="#def-row-vector-derivative" class="quarto-xref">Definition&nbsp;5</a>). Check a source’s layout before combining its formulas with these.</p>
+<p><span class="proof-title"><em>Remark 3</em> (Numerator layout). </span>Some sources use the numerator layout (<a href="#def-numerator-layout" class="quarto-xref">Definition&nbsp;9</a>) throughout, so that their derivative of a vector-valued function is the Jacobian matrix, the transpose of the derivative used in these notes. In numerator layout, the derivative of a scalar-valued function is a row vector: the row-vector derivative (<a href="#def-row-vector-derivative" class="quarto-xref">Definition&nbsp;5</a>). Check a source’s layout before combining its formulas with these.</p>
 </div>
 </div>
 </div>
@@ -2116,7 +2113,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <div id="callout-36" class="callout-36-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-constant-wrt-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">10</mark> (Constant)</strong></span> A <span class="math inline">\(q \times 1\)</span> vector <span class="math inline">\(\tilde{x}\)</span> is <strong>constant with respect to</strong> the <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{\beta}\)</span> if its derivative (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>) is zero:</p>
+<p><span class="theorem-title"><strong>Definition 10 (Constant)</strong></span> A <span class="math inline">\(q \times 1\)</span> vector <span class="math inline">\(\tilde{x}\)</span> is <strong>constant with respect to</strong> the <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{\beta}\)</span> if its derivative (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>) is zero:</p>
 <p><span class="math display">\[
 \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}_{p \times q}
 = \underbrace{\mathbf{0}}_{p \times q}
@@ -2158,7 +2155,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 &amp;= \underbrace{\mathbf{0}}_{2 \times 2}
 \end{aligned}
 \]</span></p>
-<p>Every entry is the derivative of a constant, so <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top} = \underbrace{\mathbf{0}}_{2 \times 2}\)</span> and <span class="math inline">\(\tilde{x}\)</span> is constant with respect to <span class="math inline">\(\tilde{\beta}\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-constant-wrt-vector" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;10</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark></p>
+<p>Every entry is the derivative of a constant, so <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top} = \underbrace{\mathbf{0}}_{2 \times 2}\)</span> and <span class="math inline">\(\tilde{x}\)</span> is constant with respect to <span class="math inline">\(\tilde{\beta}\)</span> (<a href="#def-constant-wrt-vector" class="quarto-xref">Definition&nbsp;10</a>).</p>
 </div>
 </div>
 </div>
@@ -2756,13 +2753,13 @@ x_{p}
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Using <a href="#thm-deriv-lincom" class="quarto-xref">Theorem&nbsp;3</a>:</strong></p>
 <p>Since <span class="math inline">\({\tilde{x}}^{\top}\tilde{\beta}= \tilde{x}\cdot \tilde{\beta}\)</span> (see <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a>), and <span class="math inline">\(\tilde{x}\)</span> is constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>:</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta})
 &amp;= \frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta}) \\
 &amp;= \tilde{x}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>by <a href="#thm-deriv-lincom" class="quarto-xref">Theorem&nbsp;3</a>.</p>
 </div>
 </div>
@@ -2783,14 +2780,14 @@ x_{p}
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Using <a href="#thm-deriv-matrix-vector" class="quarto-xref">Theorem&nbsp;6</a>:</strong></p>
 <p>Since <span class="math inline">\(\tilde{x}\)</span> is constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>, <span class="math inline">\(\mathbf{A} = {\tilde{x}}^{\top}\)</span> is a constant <span class="math inline">\(1 \times p\)</span> matrix. Applying <a href="#thm-deriv-matrix-vector" class="quarto-xref">Theorem&nbsp;6</a> with <span class="math inline">\(\tilde{v} = \tilde{\beta}\)</span> (so <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}= \mathbf{I}\)</span>):</p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="math display">\[
+<p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta})
 &amp;= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}\right)\mathclose{} {({\tilde{x}}^{\top})}^{\top} \\
 &amp;= \mathbf{I} \cdot \tilde{x}\\
 &amp;= \tilde{x}
 \end{aligned}
-\]</span></mark></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -3095,7 +3092,7 @@ x_{p}
 <div id="callout-72" class="callout-72-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-residual" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">11</mark> (Residual vector and residuals)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be an <span class="math inline">\(n \times p\)</span> matrix, <span class="math inline">\(\tilde{y}\in \mathbb{R}^n\)</span>, and <span class="math inline">\(\tilde{\beta}\in \mathbb{R}^p\)</span>. The <strong>residual vector</strong> of <span class="math inline">\(\tilde{\beta}\)</span> is <span class="math inline">\(\tilde{\varepsilon}(\tilde{\beta}) \stackrel{\text{def}}{=}\tilde{y}- \mathbf{X}\tilde{\beta}\)</span>, and its entries <span class="math inline">\(\varepsilon_i = y_i - (\mathbf{X}\tilde{\beta})_i\)</span> are the <strong>residuals</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Residual vector and residuals)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be an <span class="math inline">\(n \times p\)</span> matrix, <span class="math inline">\(\tilde{y}\in \mathbb{R}^n\)</span>, and <span class="math inline">\(\tilde{\beta}\in \mathbb{R}^p\)</span>. The <strong>residual vector</strong> of <span class="math inline">\(\tilde{\beta}\)</span> is <span class="math inline">\(\tilde{\varepsilon}(\tilde{\beta}) \stackrel{\text{def}}{=}\tilde{y}- \mathbf{X}\tilde{\beta}\)</span>, and its entries <span class="math inline">\(\varepsilon_i = y_i - (\mathbf{X}\tilde{\beta})_i\)</span> are the <strong>residuals</strong>.</p>
 </div>
 </div>
 </div>
@@ -3113,7 +3110,7 @@ x_{p}
 <div id="callout-73" class="callout-73-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-squared-error" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">12</mark> (Squared <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">error)</mark></strong></span> In the setting of <a href="#def-residual" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;11</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> the square <span class="math inline">\(\varepsilon_i^2\)</span> is the <span class="math inline">\(i\)</span>th <strong>squared <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">error</mark></strong><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark></p>
+<p><span class="theorem-title"><strong>Definition 12 (Squared error)</strong></span> In the setting of <a href="#def-residual" class="quarto-xref">Definition&nbsp;11</a>, the square <span class="math inline">\(\varepsilon_i^2\)</span> is the <span class="math inline">\(i\)</span>th <strong>squared error</strong>.</p>
 </div>
 </div>
 </div>
@@ -3131,7 +3128,7 @@ x_{p}
 <div id="callout-74" class="callout-74-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-residual-sum-of-squares" class="theorem definition">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Definition 13 (Residual sum of squares)</strong></span> In the setting of <a href="#def-residual" class="quarto-xref">Definition&nbsp;11</a>, the sum of the squared errors (<a href="#def-squared-error" class="quarto-xref">Definition&nbsp;12</a>)</mark></p>
+<p><span class="theorem-title"><strong>Definition 13 (Residual sum of squares)</strong></span> In the setting of <a href="#def-residual" class="quarto-xref">Definition&nbsp;11</a>, the sum of the squared errors (<a href="#def-squared-error" class="quarto-xref">Definition&nbsp;12</a>)</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{\varepsilon}\cdot \tilde{\varepsilon}
@@ -3157,7 +3154,7 @@ x_{p}
 <div id="callout-75" class="callout-75-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-residual-least-squares" class="proof remark">
-<p><span class="proof-title"><em>Remark 8</em> (Least squares solutions minimize the residual sum of squares). </span>A <a href="./linear-algebra-projections.html#def-least-squares">least squares solution</a> of <span class="math inline">\(\mathbf{X}\tilde{\beta}= \tilde{y}\)</span> makes <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\)</span> as small as possible, and so makes the residual sum of squares <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-residual-sum-of-squares" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;13</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> as small as possible too.</p>
+<p><span class="proof-title"><em>Remark 8</em> (Least squares solutions minimize the residual sum of squares). </span>A <a href="./linear-algebra-projections.html#def-least-squares">least squares solution</a> of <span class="math inline">\(\mathbf{X}\tilde{\beta}= \tilde{y}\)</span> makes <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\)</span> as small as possible, and so makes the residual sum of squares (<a href="#def-residual-sum-of-squares" class="quarto-xref">Definition&nbsp;13</a>) as small as possible too.</p>
 </div>
 </div>
 </div>
@@ -3201,7 +3198,7 @@ x_{p}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on gradients of sums and means of squared errors <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-residual-sum-of-squares" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;13</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">):</mark></p>
+<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on gradients of sums and means of squared errors (<a href="#def-residual-sum-of-squares" class="quarto-xref">Definition&nbsp;13</a>):</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=rhn7ie7JBdA&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Quadratic Cost</a></li>
 <li><a href="https://www.youtube.com/watch?v=KLXP2RL0-Vg&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Mean Squared Error</a></li>
@@ -3246,7 +3243,7 @@ x_{p}
 <div class="callout-body-container callout-body">
 <div id="rem-chain-vec-order" class="proof remark">
 <p><span class="proof-title"><em>Remark 9</em> (The order of the factors matters). </span>The vector chain rule (<a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;9</a>) is like the univariate <a href="./calculus-derivatives.html#thm-chain-rule">chain rule</a>, but the order matters now: <span class="math inline">\(\frac{\partial \tilde{y}}{\partial \tilde{x}}\)</span> is <span class="math inline">\(p \times q\)</span> and <span class="math inline">\(\frac{\partial z}{\partial \tilde{y}}\)</span> is <span class="math inline">\(q \times 1\)</span>, so the product <span class="math inline">\(\frac{\partial z}{\partial \tilde{y}} \frac{\partial \tilde{y}}{\partial \tilde{x}}\)</span> in the other order is not even defined unless <span class="math inline">\(p = 1\)</span>.</p>
-<p>The version presented here is for the gradient (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>), a column vector. The total derivative (<a href="#def-row-vector-derivative" class="quarto-xref">Definition&nbsp;5</a>), a row vector, is the transpose of the gradient (<a href="#thm-row-deriv-tp-col-deriv" class="quarto-xref">Theorem&nbsp;2</a>), and transposing both sides gives <span class="math inline">\({\mathopen{}\left(\frac{\partial z}{\partial \tilde{x}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \tilde{y}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\)</span>, with the factors in the reverse order; there <span class="math inline">\({\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\)</span> is the Jacobian matrix of <span class="math inline">\(\tilde{y}\)</span> as a function of <span class="math inline">\(\tilde{x}\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-jacobian-matrix" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;8</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark></p>
+<p>The version presented here is for the gradient (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>), a column vector. The total derivative (<a href="#def-row-vector-derivative" class="quarto-xref">Definition&nbsp;5</a>), a row vector, is the transpose of the gradient (<a href="#thm-row-deriv-tp-col-deriv" class="quarto-xref">Theorem&nbsp;2</a>), and transposing both sides gives <span class="math inline">\({\mathopen{}\left(\frac{\partial z}{\partial \tilde{x}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \tilde{y}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\)</span>, with the factors in the reverse order; there <span class="math inline">\({\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\)</span> is the Jacobian matrix of <span class="math inline">\(\tilde{y}\)</span> as a function of <span class="math inline">\(\tilde{x}\)</span> (<a href="#def-jacobian-matrix" class="quarto-xref">Definition&nbsp;8</a>).</p>
 </div>
 </div>
 </div>
@@ -3396,7 +3393,7 @@ z &amp;= f(\tilde{\varepsilon}) \\
 <div id="callout-83" class="callout-83-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-chain-qf-residuals" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Derivative of the residual sum of squares)</strong></span> Let <span class="math inline">\(\tilde{y}\)</span> (<span class="math inline">\(n \times 1\)</span>) and <span class="math inline">\(\mathbf{X}\)</span> (<span class="math inline">\(n \times p\)</span>) be constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>, and let <span class="math inline">\(\tilde{\varepsilon}(\tilde{\beta}) = \tilde{y}- \mathbf{X}\tilde{\beta}\)</span> be the residual vector <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-residual" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;11</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark> By <a href="#thm-deriv-linear-map" class="quarto-xref">Theorem&nbsp;5</a>, <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}}(\mathbf{X}\tilde{\beta}) = {\mathbf{X}}^{\top}\)</span>, and <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}}\tilde{y}= \mathbf{0}_{p \times n}\)</span> because <span class="math inline">\(\tilde{y}\)</span> is constant, so <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}= -{\mathbf{X}}^{\top}\)</span> (<span class="math inline">\(p \times n\)</span>). By <a href="#cor-chain-qf" class="quarto-xref">Corollary&nbsp;4</a>:</p>
+<p><span class="theorem-title"><strong>Example 20 (Derivative of the residual sum of squares)</strong></span> Let <span class="math inline">\(\tilde{y}\)</span> (<span class="math inline">\(n \times 1\)</span>) and <span class="math inline">\(\mathbf{X}\)</span> (<span class="math inline">\(n \times p\)</span>) be constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>, and let <span class="math inline">\(\tilde{\varepsilon}(\tilde{\beta}) = \tilde{y}- \mathbf{X}\tilde{\beta}\)</span> be the residual vector (<a href="#def-residual" class="quarto-xref">Definition&nbsp;11</a>). By <a href="#thm-deriv-linear-map" class="quarto-xref">Theorem&nbsp;5</a>, <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}}(\mathbf{X}\tilde{\beta}) = {\mathbf{X}}^{\top}\)</span>, and <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}}\tilde{y}= \mathbf{0}_{p \times n}\)</span> because <span class="math inline">\(\tilde{y}\)</span> is constant, so <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}= -{\mathbf{X}}^{\top}\)</span> (<span class="math inline">\(p \times n\)</span>). By <a href="#cor-chain-qf" class="quarto-xref">Corollary&nbsp;4</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\tilde{\varepsilon}\cdot \tilde{\varepsilon}\right)\mathclose{}
@@ -3442,7 +3439,7 @@ z &amp;= f(\tilde{\varepsilon}) \\
 <div id="callout-85" class="callout-85-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-matrix-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">14</mark> (Matrix derivative (gradient))</strong></span> For a scalar-valued function <span class="math inline">\(f(\mathbf{X})\)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span>, the <strong>matrix derivative</strong> is the <span class="math inline">\(m \times n\)</span> matrix whose <span class="math inline">\((i,j)\)</span> entry is the partial derivative of <span class="math inline">\(f\)</span> with respect to the <span class="math inline">\((i,j)\)</span> entry of <span class="math inline">\(\mathbf{X}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 14 (Matrix derivative (gradient))</strong></span> For a scalar-valued function <span class="math inline">\(f(\mathbf{X})\)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span>, the <strong>matrix derivative</strong> is the <span class="math inline">\(m \times n\)</span> matrix whose <span class="math inline">\((i,j)\)</span> entry is the partial derivative of <span class="math inline">\(f\)</span> with respect to the <span class="math inline">\((i,j)\)</span> entry of <span class="math inline">\(\mathbf{X}\)</span>:</p>
 <p><span class="math display">\[
 \mathopen{}\left[\frac{\partial}{\partial \mathbf{X}} f\right]\mathclose{}_{ij} = \frac{\partial}{\partial X_{ij}} f
 \]</span></p>
@@ -3549,7 +3546,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-89" class="callout-89-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-matrix-product-tensor" class="proof remark">
-<p><span class="proof-title"><em>Remark 10</em> (Why the theorem uses the trace). </span>The trace makes <span class="math inline">\(\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\)</span> a scalar, so its matrix derivative <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-matrix-derivative" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;14</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> is again an <span class="math inline">\(m \times n\)</span> matrix. The matrix product <span class="math inline">\(\mathbf{A} \mathbf{X} \mathbf{B}\)</span> itself (without the trace) is an <span class="math inline">\(r \times r\)</span> matrix, and each of its <span class="math inline">\(r^2\)</span> entries has a partial derivative with respect to each of the <span class="math inline">\(m n\)</span> entries of <span class="math inline">\(\mathbf{X}\)</span>. Those <span class="math inline">\(r^2 m n\)</span> partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar <span class="math inline">\(\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\)</span>.</p>
+<p><span class="proof-title"><em>Remark 10</em> (Why the theorem uses the trace). </span>The trace makes <span class="math inline">\(\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\)</span> a scalar, so its matrix derivative (<a href="#def-matrix-derivative" class="quarto-xref">Definition&nbsp;14</a>) is again an <span class="math inline">\(m \times n\)</span> matrix. The matrix product <span class="math inline">\(\mathbf{A} \mathbf{X} \mathbf{B}\)</span> itself (without the trace) is an <span class="math inline">\(r \times r\)</span> matrix, and each of its <span class="math inline">\(r^2\)</span> entries has a partial derivative with respect to each of the <span class="math inline">\(m n\)</span> entries of <span class="math inline">\(\mathbf{X}\)</span>. Those <span class="math inline">\(r^2 m n\)</span> partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar <span class="math inline">\(\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\)</span>.</p>
 <p>For example, with</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -3639,7 +3636,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 \end{aligned}
 \]</span></p>
 <p>What is unusual is that the gradient came out <strong>constant</strong>: it does not mention <span class="math inline">\(W\)</span> at all. The constant answer is not a quirk of this particular <span class="math inline">\(A\)</span>. <span class="math inline">\(g\)</span> is a linear function of <span class="math inline">\(W\)</span>, and the gradient of a linear function is constant everywhere, for the same reason the derivative of <span class="math inline">\(f(w) = cw\)</span> is <span class="math inline">\(c\)</span> no matter where it is evaluated.</p>
-<p>A constant gradient is the easy case, and it is not the case we usually face. Most functions we minimize are curved — the residual sum of squares of a linear model <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-residual-sum-of-squares" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;13</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> is the standard example — so their gradient changes from point to point and the downhill direction has to be worked out afresh at every step.</p>
+<p>A constant gradient is the easy case, and it is not the case we usually face. Most functions we minimize are curved — the residual sum of squares of a linear model (<a href="#def-residual-sum-of-squares" class="quarto-xref">Definition&nbsp;13</a>) is the standard example — so their gradient changes from point to point and the downhill direction has to be worked out afresh at every step.</p>
 </div>
 </div>
 </div>
@@ -3697,7 +3694,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-95" class="callout-95-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-ball" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">15</mark> (Open <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">ball)</mark></strong></span> Let <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> and <span class="math inline">\(r &gt; 0\)</span>. The <strong>open ball</strong> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\tilde{x}\)</span> is the set <span class="math inline">\(\mathopen{}\left\{\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; r\right\}\mathclose{}\)</span>, of points whose distance from <span class="math inline">\(\tilde{x}\)</span> (the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a> of the difference) is less than <span class="math inline">\(r\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 15 (Open ball)</strong></span> Let <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> and <span class="math inline">\(r &gt; 0\)</span>. The <strong>open ball</strong> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\tilde{x}\)</span> is the set <span class="math inline">\(\mathopen{}\left\{\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; r\right\}\mathclose{}\)</span>, of points whose distance from <span class="math inline">\(\tilde{x}\)</span> (the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a> of the difference) is less than <span class="math inline">\(r\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3715,7 +3712,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-96" class="callout-96-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-closed-ball" class="theorem definition">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Definition 16 (Closed ball)</strong></span> For <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(r\)</span> as in <a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>, the <strong>closed ball</strong> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\tilde{x}\)</span> is <span class="math inline">\(\mathopen{}\left\{\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\}\mathclose{}\)</span>.</mark></p>
+<p><span class="theorem-title"><strong>Definition 16 (Closed ball)</strong></span> For <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(r\)</span> as in <a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>, the <strong>closed ball</strong> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\tilde{x}\)</span> is <span class="math inline">\(\mathopen{}\left\{\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\}\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3733,7 +3730,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-97" class="callout-97-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-unit-ball" class="theorem definition">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Definition 17 (Unit ball)</strong></span> The open and closed balls (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>, <a href="#def-closed-ball" class="quarto-xref">Definition&nbsp;16</a>) of radius <span class="math inline">\(1\)</span> around <span class="math inline">\(\tilde{0}\)</span> are the open and closed <strong>unit balls</strong>.</mark></p>
+<p><span class="theorem-title"><strong>Definition 17 (Unit ball)</strong></span> The open and closed balls (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>, <a href="#def-closed-ball" class="quarto-xref">Definition&nbsp;16</a>) of radius <span class="math inline">\(1\)</span> around <span class="math inline">\(\tilde{0}\)</span> are the open and closed <strong>unit balls</strong>.</p>
 </div>
 </div>
 </div>
@@ -3793,7 +3790,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-99" class="callout-99-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-second-partial-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">18</mark> (Second partial derivative)</strong></span> Let <span class="math inline">\(f\)</span> be a scalar-valued function of a <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{x}\)</span>, and let <span class="math inline">\(i, j \in \mathopen{}\left\{1, \ldots, p\right\}\mathclose{}\)</span>. Suppose the partial derivative <span class="math inline">\(\frac{\partial}{\partial x_j} f\)</span> (<a href="#def-partial-derivative" class="quarto-xref">Definition&nbsp;1</a>) exists at every point of an open ball around <span class="math inline">\(\tilde{x}\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-ball" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;15</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark> The <strong>second partial derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span>, first with respect to <span class="math inline">\(x_j\)</span> and then with respect to <span class="math inline">\(x_i\)</span>, is</p>
+<p><span class="theorem-title"><strong>Definition 18 (Second partial derivative)</strong></span> Let <span class="math inline">\(f\)</span> be a scalar-valued function of a <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{x}\)</span>, and let <span class="math inline">\(i, j \in \mathopen{}\left\{1, \ldots, p\right\}\mathclose{}\)</span>. Suppose the partial derivative <span class="math inline">\(\frac{\partial}{\partial x_j} f\)</span> (<a href="#def-partial-derivative" class="quarto-xref">Definition&nbsp;1</a>) exists at every point of an open ball around <span class="math inline">\(\tilde{x}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>). The <strong>second partial derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span>, first with respect to <span class="math inline">\(x_j\)</span> and then with respect to <span class="math inline">\(x_i\)</span>, is</p>
 <p><span class="math display">\[
 \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{},
 \]</span></p>
@@ -3860,7 +3857,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-101" class="callout-101-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-mixed-partial-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">19</mark> (Mixed partial derivative)</strong></span> When <span class="math inline">\(i \ne j\)</span>, the second partial derivative of <a href="#def-second-partial-derivative" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;18</mark></a> is a <strong>mixed partial derivative</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 19 (Mixed partial derivative)</strong></span> When <span class="math inline">\(i \ne j\)</span>, the second partial derivative of <a href="#def-second-partial-derivative" class="quarto-xref">Definition&nbsp;18</a> is a <strong>mixed partial derivative</strong>.</p>
 </div>
 </div>
 </div>
@@ -3878,7 +3875,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-102" class="callout-102-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-hessian" class="theorem definition">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Definition 20 (Hessian matrix)</strong></span> Let <span class="math inline">\(f\)</span> be a scalar-valued function of a <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{x}\)</span> whose first partial derivatives exist on an open ball around <span class="math inline">\(\tilde{x}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>) and whose second partial derivatives (<a href="#def-second-partial-derivative" class="quarto-xref">Definition&nbsp;18</a>) exist at <span class="math inline">\(\tilde{x}\)</span>. The <strong>Hessian matrix</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span> is the derivative (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>) of the transposed gradient <span class="math inline">\({\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\)</span> (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>):</mark></p>
+<p><span class="theorem-title"><strong>Definition 20 (Hessian matrix)</strong></span> Let <span class="math inline">\(f\)</span> be a scalar-valued function of a <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{x}\)</span> whose first partial derivatives exist on an open ball around <span class="math inline">\(\tilde{x}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>) and whose second partial derivatives (<a href="#def-second-partial-derivative" class="quarto-xref">Definition&nbsp;18</a>) exist at <span class="math inline">\(\tilde{x}\)</span>. The <strong>Hessian matrix</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span> is the derivative (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>) of the transposed gradient <span class="math inline">\({\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\)</span> (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>):</p>
 <p><span id="eq-hessian"><span class="math display">\[
 \underbrace{\mathbf{H}_f(\tilde{x})}_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}.
 \tag{4}\]</span></span></p>
@@ -3953,7 +3950,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-105" class="callout-105-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-hessian-forms" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 12 (Other ways to write the Hessian, and its entries)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(\tilde{x}\)</span> be as in <a href="#def-hessian" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;20</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark></p>
+<p><span class="theorem-title"><strong>Theorem 12 (Other ways to write the Hessian, and its entries)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(\tilde{x}\)</span> be as in <a href="#def-hessian" class="quarto-xref">Definition&nbsp;20</a>.</p>
 <ol type="1">
 <li>
 <p>The Hessian can be written with the row-vector derivative (<a href="#def-row-vector-derivative" class="quarto-xref">Definition&nbsp;5</a>) of <span class="math inline">\(f\)</span>:</p>
@@ -4090,7 +4087,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-109" class="callout-109-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-continuous-several" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">21</mark> (Continuity<mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 2px; border-radius: 2px;"> at a point</mark> in several variables)</strong></span> A function <span class="math inline">\(f\)</span> from <span class="math inline">\(\mathbb{R}^p\)</span> to <span class="math inline">\(\mathbb{R}^q\)</span> is <strong>continuous at</strong> <span class="math inline">\(\tilde{x}\)</span> if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} &lt; \varepsilon\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; \delta\)</span>. For <span class="math inline">\(q = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left|f(\tilde{y}) - f(\tilde{x})\right|\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Continuity at a point in several variables)</strong></span> A function <span class="math inline">\(f\)</span> from <span class="math inline">\(\mathbb{R}^p\)</span> to <span class="math inline">\(\mathbb{R}^q\)</span> is <strong>continuous at</strong> <span class="math inline">\(\tilde{x}\)</span> if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} &lt; \varepsilon\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; \delta\)</span>. For <span class="math inline">\(q = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left|f(\tilde{y}) - f(\tilde{x})\right|\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4108,7 +4105,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-110" class="callout-110-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-continuous-on" class="theorem definition">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Definition 22 (Continuity on a set in several variables)</strong></span> A function <span class="math inline">\(f\)</span> from <span class="math inline">\(\mathbb{R}^p\)</span> to <span class="math inline">\(\mathbb{R}^q\)</span> is <strong>continuous on</strong> a set if it is continuous at every point of the set (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;21</a>).</mark></p>
+<p><span class="theorem-title"><strong>Definition 22 (Continuity on a set in several variables)</strong></span> A function <span class="math inline">\(f\)</span> from <span class="math inline">\(\mathbb{R}^p\)</span> to <span class="math inline">\(\mathbb{R}^q\)</span> is <strong>continuous on</strong> a set if it is continuous at every point of the set (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;21</a>).</p>
 </div>
 </div>
 </div>
@@ -4166,7 +4163,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="thm-continuous-several" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 13 (Continuity in one variable, and sums, multiples and compositions)</strong></span> &nbsp;</p>
 <ol type="1">
-<li>For <span class="math inline">\(p = q = 1\)</span>, a function <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x\)</span> in the sense of <a href="#def-continuous-several" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;21</mark></a> exactly when <span class="math inline">\(\lim_{y \to x} f(y) = f(x)\)</span> (<a href="./calculus-derivatives.html#def-limit">limit</a>), which is the usual <a href="./calculus-integration.html#def-continuous">continuity</a> at <span class="math inline">\(x\)</span>.</li>
+<li>For <span class="math inline">\(p = q = 1\)</span>, a function <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x\)</span> in the sense of <a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;21</a> exactly when <span class="math inline">\(\lim_{y \to x} f(y) = f(x)\)</span> (<a href="./calculus-derivatives.html#def-limit">limit</a>), which is the usual <a href="./calculus-integration.html#def-continuous">continuity</a> at <span class="math inline">\(x\)</span>.</li>
 <li>If <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}^q\)</span> is continuous at <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(g : \mathbb{R}^q \to \mathbb{R}^r\)</span> is continuous at <span class="math inline">\(f(\tilde{x})\)</span>, then the <a href="./functions.html#def-composition">composition</a> <span class="math inline">\(g \circ f\)</span> is continuous at <span class="math inline">\(\tilde{x}\)</span>.</li>
 <li>If <span class="math inline">\(f, g : \mathbb{R}^p \to \mathbb{R}\)</span> are continuous at <span class="math inline">\(\tilde{x}\)</span>, then <span class="math inline">\(f + g\)</span> is continuous at <span class="math inline">\(\tilde{x}\)</span>.</li>
 <li>If <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> is continuous at <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>, then <span class="math inline">\(c f\)</span> is continuous at <span class="math inline">\(\tilde{x}\)</span>.</li>
@@ -4190,7 +4187,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\varepsilon&gt; 0\)</span> be given.</p>
-<p><strong>Part 1.</strong> For <span class="math inline">\(p = q = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert f(y) - f(x)\right\rVert\mathclose{} = \mathopen{}\left|f(y) - f(x)\right|\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\lVert y - x\right\rVert\mathclose{} = \mathopen{}\left|y - x\right|\mathclose{}\)</span>. <a href="#def-continuous-several" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;21</mark></a> then asks for a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left|f(y) - f(x)\right|\mathclose{} &lt; \varepsilon\)</span> whenever <span class="math inline">\(\mathopen{}\left|y - x\right|\mathclose{} &lt; \delta\)</span>. The <a href="./calculus-derivatives.html#def-limit">limit definition</a> with <span class="math inline">\(L = f(x)\)</span> asks for the same inequality, but only whenever <span class="math inline">\(0 &lt; \mathopen{}\left|y - x\right|\mathclose{} &lt; \delta\)</span>. The two agree, because at <span class="math inline">\(y = x\)</span> the inequality <span class="math inline">\(\mathopen{}\left|f(x) - f(x)\right|\mathclose{} = 0 &lt; \varepsilon\)</span> holds for every <span class="math inline">\(\delta\)</span>.</p>
+<p><strong>Part 1.</strong> For <span class="math inline">\(p = q = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert f(y) - f(x)\right\rVert\mathclose{} = \mathopen{}\left|f(y) - f(x)\right|\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\lVert y - x\right\rVert\mathclose{} = \mathopen{}\left|y - x\right|\mathclose{}\)</span>. <a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;21</a> then asks for a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left|f(y) - f(x)\right|\mathclose{} &lt; \varepsilon\)</span> whenever <span class="math inline">\(\mathopen{}\left|y - x\right|\mathclose{} &lt; \delta\)</span>. The <a href="./calculus-derivatives.html#def-limit">limit definition</a> with <span class="math inline">\(L = f(x)\)</span> asks for the same inequality, but only whenever <span class="math inline">\(0 &lt; \mathopen{}\left|y - x\right|\mathclose{} &lt; \delta\)</span>. The two agree, because at <span class="math inline">\(y = x\)</span> the inequality <span class="math inline">\(\mathopen{}\left|f(x) - f(x)\right|\mathclose{} = 0 &lt; \varepsilon\)</span> holds for every <span class="math inline">\(\delta\)</span>.</p>
 <p><strong>Part 2.</strong> Because <span class="math inline">\(g\)</span> is continuous at <span class="math inline">\(f(\tilde{x})\)</span>, there is a <span class="math inline">\(\delta_g &gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left\lVert g(\tilde{z}) - g(f(\tilde{x}))\right\rVert\mathclose{} &lt; \varepsilon\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} &lt; \delta_g\)</span>. Because <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(\tilde{x}\)</span>, applied with <span class="math inline">\(\delta_g\)</span> in the role of <span class="math inline">\(\varepsilon\)</span>, there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} &lt; \delta_g\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; \delta\)</span>. So if <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; \delta\)</span>, then <span class="math inline">\(\tilde{z} = f(\tilde{y})\)</span> has <span class="math inline">\(\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} &lt; \delta_g\)</span>, and therefore <span class="math inline">\(\mathopen{}\left\lVert g(f(\tilde{y})) - g(f(\tilde{x}))\right\rVert\mathclose{} &lt; \varepsilon\)</span>.</p>
 <p><strong>Part 3.</strong> Because <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are continuous at <span class="math inline">\(\tilde{x}\)</span>, there are <span class="math inline">\(\delta_f &gt; 0\)</span> and <span class="math inline">\(\delta_g &gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left|f(\tilde{y}) - f(\tilde{x})\right|\mathclose{} &lt; \varepsilon/ 2\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; \delta_f\)</span>, and <span class="math inline">\(\mathopen{}\left|g(\tilde{y}) - g(\tilde{x})\right|\mathclose{} &lt; \varepsilon/ 2\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; \delta_g\)</span>. Let <span class="math inline">\(\delta\stackrel{\text{def}}{=}\min\mathopen{}\left\{\delta_f, \delta_g\right\}\mathclose{}\)</span>. If <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; \delta\)</span>, then</p>
 <p><span class="math display">\[
@@ -4329,7 +4326,7 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 \end{aligned}
 \]</span></p>
 <p>and the limit as <span class="math inline">\(h \to 0\)</span> is <span class="math inline">\(0\)</span>: <span class="math inline">\(\frac{\partial}{\partial x_1} f(\tilde{0}) = 0\)</span> (<a href="#def-partial-derivative" class="quarto-xref">Definition&nbsp;1</a>). The same steps with <span class="math inline">\(f(0, h) = 0\)</span> give <span class="math inline">\(\frac{\partial}{\partial x_2} f(\tilde{0}) = 0\)</span>.</p>
-<p><strong>But <span class="math inline">\(f\)</span> is not continuous at <span class="math inline">\(\tilde{0}\)</span></strong> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-continuous-several" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;21</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark> Take <span class="math inline">\(\varepsilon= \tfrac{1}{4}\)</span> and any <span class="math inline">\(\delta&gt; 0\)</span>, and let <span class="math inline">\(t = \delta/ 2\)</span> and <span class="math inline">\(\tilde{y}= {(t, t)}^{\top}\)</span>. Then</p>
+<p><strong>But <span class="math inline">\(f\)</span> is not continuous at <span class="math inline">\(\tilde{0}\)</span></strong> (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;21</a>). Take <span class="math inline">\(\varepsilon= \tfrac{1}{4}\)</span> and any <span class="math inline">\(\delta&gt; 0\)</span>, and let <span class="math inline">\(t = \delta/ 2\)</span> and <span class="math inline">\(\tilde{y}= {(t, t)}^{\top}\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left\lVert\tilde{y}- \tilde{0}\right\rVert\mathclose{} &amp;= \sqrt{t^2 + t^2} \\
@@ -4371,7 +4368,7 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 <div id="callout-116" class="callout-116-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-hessian-symmetric" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (Symmetry of the Hessian)</strong></span> If the second partial derivatives of <span class="math inline">\(f\)</span> exist and are continuous <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-continuous-several" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;21</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> on an open ball around <span class="math inline">\(\tilde{x}\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-ball" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;15</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">),</mark> then <span class="math inline">\(\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\)</span> for all <span class="math inline">\(i, j\)</span>, so <span class="math inline">\(\mathbf{H}_f(\tilde{x})\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-hessian" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;20</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> is symmetric (<a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric matrix</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 14 (Symmetry of the Hessian)</strong></span> If the second partial derivatives of <span class="math inline">\(f\)</span> exist and are continuous (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;21</a>) on an open ball around <span class="math inline">\(\tilde{x}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>), then <span class="math inline">\(\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\)</span> for all <span class="math inline">\(i, j\)</span>, so <span class="math inline">\(\mathbf{H}_f(\tilde{x})\)</span> (<a href="#def-hessian" class="quarto-xref">Definition&nbsp;20</a>) is symmetric (<a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric matrix</a>).</p>
 </div>
 </div>
 </div>
@@ -4430,7 +4427,7 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 &amp;= 0,
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\)</span> holds at <span class="math inline">\(x_2 = 0\)</span> too. In the same way, with the roles of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> swapped, <span class="math inline">\(f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\)</span> for every <span class="math inline">\(x_1\)</span>. So at <span class="math inline">\(\tilde{0}\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-hessian" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;20</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark></p>
+<p>so <span class="math inline">\(\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\)</span> holds at <span class="math inline">\(x_2 = 0\)</span> too. In the same way, with the roles of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> swapped, <span class="math inline">\(f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\)</span> for every <span class="math inline">\(x_1\)</span>. So at <span class="math inline">\(\tilde{0}\)</span> (<a href="#def-hessian" class="quarto-xref">Definition&nbsp;20</a>)</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left[\mathbf{H}_f(\tilde{0})\right]\mathclose{}_{21}
@@ -4479,7 +4476,7 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 <div id="callout-120" class="callout-120-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
 \begin{aligned}
 \mathbf{H}_f(\tilde{x})
 &amp;= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top}
@@ -4497,7 +4494,7 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 &amp;= 2 \mathbf{S}.
 &amp;&amp; \text{(} \mathbf{S} \text{ is symmetric)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -4515,7 +4512,7 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 <div id="callout-121" class="callout-121-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-hessian-quadratic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 33 (The Hessian of a <span class="math inline">\(2 \times 2\)</span> quadratic form)</strong></span> For <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> as in <a href="#exm-deriv-quadratic-form" class="quarto-xref">Example&nbsp;16</a>, <a href="#thm-hessian-quadratic" class="quarto-xref">Theorem&nbsp;15</a> gives <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \begin{bmatrix} 6 &amp; 2 \\ 2 &amp; 4 \end{bmatrix}\)</span>. Directly, the gradient found there, with <span class="math inline">\(\beta_{i}\)</span> renamed <span class="math inline">\(x_i\)</span>, is <span class="math inline">\({(6 x_1 + 2 x_2,\ 2 x_1 + 4 x_2)}^{\top}\)</span>, and differentiating its entries by <span class="math inline">\(x_1\)</span> and by <span class="math inline">\(x_2\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-hessian" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;20</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> gives</p>
+<p><span class="theorem-title"><strong>Example 33 (The Hessian of a <span class="math inline">\(2 \times 2\)</span> quadratic form)</strong></span> For <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> as in <a href="#exm-deriv-quadratic-form" class="quarto-xref">Example&nbsp;16</a>, <a href="#thm-hessian-quadratic" class="quarto-xref">Theorem&nbsp;15</a> gives <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \begin{bmatrix} 6 &amp; 2 \\ 2 &amp; 4 \end{bmatrix}\)</span>. Directly, the gradient found there, with <span class="math inline">\(\beta_{i}\)</span> renamed <span class="math inline">\(x_i\)</span>, is <span class="math inline">\({(6 x_1 + 2 x_2,\ 2 x_1 + 4 x_2)}^{\top}\)</span>, and differentiating its entries by <span class="math inline">\(x_1\)</span> and by <span class="math inline">\(x_2\)</span> (<a href="#def-hessian" class="quarto-xref">Definition&nbsp;20</a>) gives</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{H}_f(\tilde{x})
