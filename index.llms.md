@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 17:47:31 (PDT)
+Last modified: 2026-10-15 18:37:38 (PDT)
 
 ## Welcome
 
@@ -14,10 +14,10 @@ Cheng ([2025](#ref-cheng2025math))
 
 These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:
 
-- [Notation](notation.llms.md): common symbols, the percent sign, and indicator functions
+- [Notation](notation.llms.md): common symbols and indicator functions
 - [Number Systems](number-systems.llms.md): the integers, natural numbers, even and odd numbers, and the rational, real, and irrational numbers
 - [Sets and Functions](sets-functions.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, countable sets, functions with their domains, codomains, and images, and the extended non-negative real numbers
-- [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, sums, products, quotients, exponentials and logarithms
+- [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, exponentials and logarithms
 - [Measures](measures.llms.md): \\\sigma\\-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
