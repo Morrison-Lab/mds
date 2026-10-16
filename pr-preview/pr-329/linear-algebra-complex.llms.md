@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-16 02:50:49 (PDT)
+Last modified: 2026-10-16 04:03:03 (PDT)
 
 ## 1 Complex vectors and matrices
 
@@ -18,7 +18,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Example 1 (A complex vector and its conjugate)** \\ \underbrace{\tilde{z}}\_{3 \times 1} = \begin{bmatrix} 1 + i \\ 2 \\ -3\\i \end{bmatrix} \in \mathbb{C}^3, \qquad \underbrace{\overline{\tilde{z}}}\_{3 \times 1} = \begin{bmatrix} 1 - i \\ 2 \\ 3\\i \end{bmatrix}. \\
+> **Example 1 (A complex vector and its conjugate)** \\ \underbrace{\underset{\sim}{z}}\_{3 \times 1} = \begin{bmatrix} 1 + i \\ 2 \\ -3\\i \end{bmatrix} \in \mathbb{C}^3, \qquad \underbrace{\overline{\underset{\sim}{z}}}\_{3 \times 1} = \begin{bmatrix} 1 - i \\ 2 \\ 3\\i \end{bmatrix}. \\
 >
 > The real entry \\2\\ is its own conjugate. Every real vector is also a complex vector, since each real number \\a\\ is the complex number \\a + 0\\i\\, so \\\mathbb{R}^p\\ is a subset of \\\mathbb{C}^p\\.
 
@@ -34,7 +34,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (Notation for the conjugate transpose). The operation is denoted variously across mathematics and physics: \\\mathbf{A}^\*\\ in pure mathematics (Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231)), \\\mathbf{A}^{\dagger}\\ (“\\A\\-dagger”) in physics and quantum mechanics, and \\\mathbf{A}^{\mathsf{H}}\\ in engineering, numerical linear algebra, and statistics. These notes write \\\mathbf{A}^{\mathsf{H}}\\ because \\^\*\\ is reserved for optimal points (as in \\\tilde{x}^\*\\) and \\^{\dagger}\\ frequently denotes the Moore-Penrose pseudoinverse in the broader literature.
+> *Remark 1* (Notation for the conjugate transpose). The operation is denoted variously across mathematics and physics: \\\mathbf{A}^\*\\ in pure mathematics (Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231)), \\\mathbf{A}^{\dagger}\\ (“\\A\\-dagger”) in physics and quantum mechanics, and \\\mathbf{A}^{\mathsf{H}}\\ in engineering, numerical linear algebra, and statistics. These notes write \\\mathbf{A}^{\mathsf{H}}\\ because \\^\*\\ is reserved for optimal points (as in \\\underset{\sim}{x}^\*\\) and \\^{\dagger}\\ frequently denotes the Moore-Penrose pseudoinverse in the broader literature.
 >
 > The Hermitian adjoint matrix should not be confused with the classical *adjugate matrix* (the transpose of the matrix of cofactors), which older texts occasionally referred to as the “adjoint.”
 
@@ -56,7 +56,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Conjugate transpose of a complex vector). The conjugate transpose of a column vector \\\tilde{z} \in \mathbb{C}^p\\ is the \\1 \times p\\ row vector \\\tilde{z}^{\mathsf{H}} = \[\overline{z_1},\\ \ldots,\\ \overline{z_p}\]\\.
+> *Remark 2* (Conjugate transpose of a complex vector). The conjugate transpose of a column vector \\\underset{\sim}{z} \in \mathbb{C}^p\\ is the \\1 \times p\\ row vector \\\underset{\sim}{z}^{\mathsf{H}} = \[\overline{z_1},\\ \ldots,\\ \overline{z_p}\]\\.
 
 > **NOTE:**
 >
@@ -101,33 +101,33 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 2 (The adjoint property for inner products)** Let \\\mathbf{A}\\ be an \\m \times n\\ complex matrix. Under the standard inner product on complex Euclidean space, \\\mathopen{}\left\langle \tilde{u}, \tilde{v}\right\rangle\mathclose{} \stackrel{\text{def}}{=}\tilde{u}^{\mathsf{H}}\tilde{v}\\,
+> **Theorem 2 (The adjoint property for inner products)** Let \\\mathbf{A}\\ be an \\m \times n\\ complex matrix. Under the standard inner product on complex Euclidean space, \\\mathopen{}\left\langle \underset{\sim}{u}, \underset{\sim}{v}\right\rangle\mathclose{} \stackrel{\text{def}}{=}\underset{\sim}{u}^{\mathsf{H}}\underset{\sim}{v}\\,
 >
-> \\\mathopen{}\left\langle \mathbf{A}\tilde{u}, \tilde{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v}\right\rangle\mathclose{} \quad \text{for all } \tilde{u} \in \mathbb{C}^n \text{ and } \tilde{v} \in \mathbb{C}^m.\\
+> \\\mathopen{}\left\langle \mathbf{A}\underset{\sim}{u}, \underset{\sim}{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \underset{\sim}{u}, \mathbf{A}^{\mathsf{H}}\underset{\sim}{v}\right\rangle\mathclose{} \quad \text{for all } \underset{\sim}{u} \in \mathbb{C}^n \text{ and } \underset{\sim}{v} \in \mathbb{C}^m.\\
 
 > **NOTE:**
 >
 > *Proof*. By the definition of the standard complex inner product and the product rule for the Hermitian adjoint ([Theorem 1](#thm-hermitian-adjoint-properties)):
 >
-> \\ \begin{aligned} \mathopen{}\left\langle \mathbf{A}\tilde{u}, \tilde{v}\right\rangle\mathclose{} &= (\mathbf{A}\tilde{u})^{\mathsf{H}}\tilde{v} && \text{(definition of standard inner product)} \\ &= (\tilde{u}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\tilde{v} && \text{(}\href{#thm-hermitian-adjoint-properties}{\text{Theorem~1}}\text{, reversal of products)} \\ &= \tilde{u}^{\mathsf{H}}(\mathbf{A}^{\mathsf{H}}\tilde{v}) && \text{(associativity of matrix multiplication)} \\ &= \mathopen{}\left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v}\right\rangle\mathclose{} && \text{(definition of standard inner product)}. \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \mathbf{A}\underset{\sim}{u}, \underset{\sim}{v}\right\rangle\mathclose{} &= (\mathbf{A}\underset{\sim}{u})^{\mathsf{H}}\underset{\sim}{v} && \text{(definition of standard inner product)} \\ &= (\underset{\sim}{u}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\underset{\sim}{v} && \text{(}\href{#thm-hermitian-adjoint-properties}{\text{Theorem~1}}\text{, reversal of products)} \\ &= \underset{\sim}{u}^{\mathsf{H}}(\mathbf{A}^{\mathsf{H}}\underset{\sim}{v}) && \text{(associativity of matrix multiplication)} \\ &= \mathopen{}\left\langle \underset{\sim}{u}, \mathbf{A}^{\mathsf{H}}\underset{\sim}{v}\right\rangle\mathclose{} && \text{(definition of standard inner product)}. \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 3* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\mathopen{}\left\langle T\tilde{u}, \tilde{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{u}, T^\*\tilde{v}\right\rangle\mathclose{}\\ (Axler ([2024](#ref-axler2024linear), Definition 7.1, p. 226)). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler ([2024](#ref-axler2024linear), Proposition 7.9, p. 231)).
+> *Remark 3* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\mathopen{}\left\langle T\underset{\sim}{u}, \underset{\sim}{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \underset{\sim}{u}, T^\*\underset{\sim}{v}\right\rangle\mathclose{}\\ (Axler ([2024](#ref-axler2024linear), Definition 7.1, p. 226)). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler ([2024](#ref-axler2024linear), Proposition 7.9, p. 231)).
 
 > **NOTE:**
 >
-> **Theorem 3 (\\\tilde{z}^{\mathsf{H}}\tilde{z}\\ is a sum of squared absolute values)** For every \\\tilde{z} \in \mathbb{C}^p\\,
+> **Theorem 3 (\\\underset{\sim}{z}^{\mathsf{H}}\underset{\sim}{z}\\ is a sum of squared absolute values)** For every \\\underset{\sim}{z} \in \mathbb{C}^p\\,
 >
-> \\\underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times p}\\\underbrace{\tilde{z}}\_{p \times 1} = \sum\_{j=1}^p\mathopen{}\left\|z_j\right\|\mathclose{}^2,\\
+> \\\underbrace{\underset{\sim}{z}^{\mathsf{H}}}\_{1 \times p}\\\underbrace{\underset{\sim}{z}}\_{p \times 1} = \sum\_{j=1}^p\mathopen{}\left\|z_j\right\|\mathclose{}^2,\\
 >
-> which is a nonnegative real number, and is \\0\\ only when \\\tilde{z} = \tilde{0}\_{p \times 1}\\.
+> which is a nonnegative real number, and is \\0\\ only when \\\underset{\sim}{z} = \underset{\sim}{0}\_{p \times 1}\\.
 
 > **NOTE:**
 >
 > *Proof*. The last step uses the [identity for a complex number times its conjugate](algebra-complex.llms.md#thm-conj-product).
 >
-> \\ \begin{aligned} \tilde{z}^{\mathsf{H}}\tilde{z} &= \sum\_{j=1}^p\overline{z_j}\\z_j && \text{(}\href{#def-conjugate-transpose}{\text{Definition~4}}\text{, and the row-times-column product)} \\ &= \sum\_{j=1}^pz_j\\\overline{z_j} && \text{(complex multiplication is commutative)} \\ &= \sum\_{j=1}^p\mathopen{}\left\|z_j\right\|\mathclose{}^2 && \text{(a number times its conjugate)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{z}^{\mathsf{H}}\underset{\sim}{z} &= \sum\_{j=1}^p\overline{z_j}\\z_j && \text{(}\href{#def-conjugate-transpose}{\text{Definition~4}}\text{, and the row-times-column product)} \\ &= \sum\_{j=1}^pz_j\\\overline{z_j} && \text{(complex multiplication is commutative)} \\ &= \sum\_{j=1}^p\mathopen{}\left\|z_j\right\|\mathclose{}^2 && \text{(a number times its conjugate)} \end{aligned} \\
 >
 > By the definition of the [absolute value](algebra-complex.llms.md#def-complex-modulus), each \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = (\operatorname{Re} z_j)^2 + (\operatorname{Im} z_j)^2\\ is a nonnegative real number, so their sum is too. A sum of nonnegative numbers is \\0\\ only when every term is \\0\\, and \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = 0\\ only when
 >
@@ -137,9 +137,9 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Example 3 (Computing \\\tilde{z}^{\mathsf{H}}\tilde{z}\\)** Let \\\tilde{z} = {(1 + i, 2)}^{\top}\\. By [Theorem 3](#thm-zhz-sum-squares),
+> **Example 3 (Computing \\\underset{\sim}{z}^{\mathsf{H}}\underset{\sim}{z}\\)** Let \\\underset{\sim}{z} = {(1 + i, 2)}^{\top}\\. By [Theorem 3](#thm-zhz-sum-squares),
 >
-> \\ \begin{aligned} \underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= \mathopen{}\left\|1 + i\right\|\mathclose{}^2 + \mathopen{}\left\|2\right\|\mathclose{}^2 && \text{(}\href{#thm-zhz-sum-squares}{\text{Theorem~3}}\text{)} \\ &= (1^2 + 1^2) + (2^2 + 0^2) && \text{(definition of the absolute value, squared)} \\ &= 2 + 4 && \text{(add inside each group)} \\ &= 6 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\underset{\sim}{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\underset{\sim}{z}}\_{2 \times 1} &= \mathopen{}\left\|1 + i\right\|\mathclose{}^2 + \mathopen{}\left\|2\right\|\mathclose{}^2 && \text{(}\href{#thm-zhz-sum-squares}{\text{Theorem~3}}\text{)} \\ &= (1^2 + 1^2) + (2^2 + 0^2) && \text{(definition of the absolute value, squared)} \\ &= 2 + 4 && \text{(add inside each group)} \\ &= 6 && \text{(add)} \end{aligned} \\
 >
 > Multiplying out directly gives the same number: \\\overline{2} \cdot 2 = 4\\, and
 >
@@ -147,13 +147,13 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Example 4 (Why complex vectors use the conjugate transpose)** For a real vector \\\tilde{x}\\, \\{\tilde{x}}^{\top}\tilde{x}= \sum\_{j=1}^px_j^2\\ is \\0\\ only when \\\tilde{x}\\ is the zero vector. The same formula fails for complex vectors. Let \\\tilde{z} = {(1, i)}^{\top}\\. Then
+> **Example 4 (Why complex vectors use the conjugate transpose)** For a real vector \\\underset{\sim}{x}\\, \\{\underset{\sim}{x}}^{\top}\underset{\sim}{x}= \sum\_{j=1}^px_j^2\\ is \\0\\ only when \\\underset{\sim}{x}\\ is the zero vector. The same formula fails for complex vectors. Let \\\underset{\sim}{z} = {(1, i)}^{\top}\\. Then
 >
-> \\ \begin{aligned} \underbrace{{\tilde{z}}^{\top}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= 1 \cdot 1 + i \cdot i && \text{(multiply entry by entry and add)} \\ &= 1 + i^2 && \text{(multiply)} \\ &= 0 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{{\underset{\sim}{z}}^{\top}}\_{1 \times 2}\\\underbrace{\underset{\sim}{z}}\_{2 \times 1} &= 1 \cdot 1 + i \cdot i && \text{(multiply entry by entry and add)} \\ &= 1 + i^2 && \text{(multiply)} \\ &= 0 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
 >
-> although \\\tilde{z} \neq \tilde{0}\_{2 \times 1}\\. Using the conjugate transpose instead,
+> although \\\underset{\sim}{z} \neq \underset{\sim}{0}\_{2 \times 1}\\. Using the conjugate transpose instead,
 >
-> \\ \begin{aligned} \underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= \overline{1} \cdot 1 + \overline{i} \cdot i && \text{(}\href{#def-conjugate-transpose}{\text{Definition~4}}\text{)} \\ &= 1 + (-i) \cdot i && \text{(conjugate each entry)} \\ &= 1 - i^2 && \text{(multiply)} \\ &= 2 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\underset{\sim}{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\underset{\sim}{z}}\_{2 \times 1} &= \overline{1} \cdot 1 + \overline{i} \cdot i && \text{(}\href{#def-conjugate-transpose}{\text{Definition~4}}\text{)} \\ &= 1 + (-i) \cdot i && \text{(conjugate each entry)} \\ &= 1 - i^2 && \text{(multiply)} \\ &= 2 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
 >
 > which is positive, as [Theorem 3](#thm-zhz-sum-squares) guarantees.
 
@@ -165,7 +165,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Why “self-adjoint”). The term *self-adjoint* comes directly from [Theorem 2](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\\mathopen{}\left\langle \mathbf{A}\tilde{u}, \tilde{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{u}, \mathbf{A}\tilde{v}\right\rangle\mathclose{}\\ for all \\\tilde{u}, \tilde{v} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
+> *Remark 4* (Why “self-adjoint”). The term *self-adjoint* comes directly from [Theorem 2](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\\mathopen{}\left\langle \mathbf{A}\underset{\sim}{u}, \underset{\sim}{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \underset{\sim}{u}, \mathbf{A}\underset{\sim}{v}\right\rangle\mathclose{}\\ for all \\\underset{\sim}{u}, \underset{\sim}{v} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
 
 > **NOTE:**
 >

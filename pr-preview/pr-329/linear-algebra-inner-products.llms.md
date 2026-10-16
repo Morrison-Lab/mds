@@ -4,35 +4,35 @@ Code
 
 Published
 
-Last modified: 2026-10-16 02:50:49 (PDT)
+Last modified: 2026-10-16 04:03:03 (PDT)
 
 ## 1 Inner products
 
 > **NOTE:**
 >
-> **Definition 1 (Inner product)** An **inner product** on \\\mathbb{R}^p\\ is a function that assigns to each ordered pair of vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ a real number \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\\, and that has the following four properties for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and all real numbers \\a, b\\:
+> **Definition 1 (Inner product)** An **inner product** on \\\mathbb{R}^p\\ is a function that assigns to each ordered pair of vectors \\\underset{\sim}{x}, \underset{\sim}{y}\in \mathbb{R}^p\\ a real number \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\\, and that has the following four properties for all \\\underset{\sim}{x}, \underset{\sim}{y}, \underset{\sim}{z} \in \mathbb{R}^p\\ and all real numbers \\a, b\\:
 >
-> - **positivity**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} \ge 0\\;
-> - **definiteness**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} = 0\\ if and only if \\\tilde{x}= \tilde{0}\_{p \times 1}\\;
-> - **linearity in the first slot**: \\\mathopen{}\left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z}\right\rangle\mathclose{} = a\\\mathopen{}\left\langle \tilde{x}, \tilde{z}\right\rangle\mathclose{} + b\\\mathopen{}\left\langle \tilde{y}, \tilde{z}\right\rangle\mathclose{}\\;
-> - **symmetry**: \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{y}, \tilde{x}\right\rangle\mathclose{}\\.
+> - **positivity**: \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{x}\right\rangle\mathclose{} \ge 0\\;
+> - **definiteness**: \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{x}\right\rangle\mathclose{} = 0\\ if and only if \\\underset{\sim}{x}= \underset{\sim}{0}\_{p \times 1}\\;
+> - **linearity in the first slot**: \\\mathopen{}\left\langle a\\\underset{\sim}{x}+ b\\\underset{\sim}{y}, \underset{\sim}{z}\right\rangle\mathclose{} = a\\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{z}\right\rangle\mathclose{} + b\\\mathopen{}\left\langle \underset{\sim}{y}, \underset{\sim}{z}\right\rangle\mathclose{}\\;
+> - **symmetry**: \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{} = \mathopen{}\left\langle \underset{\sim}{y}, \underset{\sim}{x}\right\rangle\mathclose{}\\.
 
 > **NOTE:**
 >
-> *Remark 1* (The definition in other sources). Axler ([2024](#ref-axler2024linear), Definition 6.2, p. 183) states the same definition for any vector space over the real or complex numbers. Axler splits linearity in the first slot into additivity and homogeneity, and his last property is *conjugate* symmetry, \\\mathopen{}\left\langle \tilde{u}, \tilde{v}\right\rangle\mathclose{} = \overline{\mathopen{}\left\langle \tilde{v}, \tilde{u}\right\rangle\mathclose{}}\\, which for real numbers is the same as symmetry. Symmetry and linearity in the first slot together give linearity in the second slot.
+> *Remark 1* (The definition in other sources). Axler ([2024](#ref-axler2024linear), Definition 6.2, p. 183) states the same definition for any vector space over the real or complex numbers. Axler splits linearity in the first slot into additivity and homogeneity, and his last property is *conjugate* symmetry, \\\mathopen{}\left\langle \underset{\sim}{u}, \underset{\sim}{v}\right\rangle\mathclose{} = \overline{\mathopen{}\left\langle \underset{\sim}{v}, \underset{\sim}{u}\right\rangle\mathclose{}}\\, which for real numbers is the same as symmetry. Symmetry and linearity in the first slot together give linearity in the second slot.
 
 > **NOTE:**
 >
 > **Example 1 (The dot product is an inner product)** The dot product (1) is an inner product on \\\mathbb{R}^p\\, called the **Euclidean** or **standard** inner product. Each of the four properties in [Definition 1](#def-inner-product) holds:
 >
-> - **positivity**: \\\tilde{x}\cdot \tilde{x}= \sum\_{i=1}^px_i^2\\ is a sum of squares, so it is at least \\0\\;
-> - **definiteness**: a sum of squares is \\0\\ exactly when every term is \\0\\, so \\\tilde{x}\cdot \tilde{x}= 0\\ exactly when every \\x_i = 0\\, that is, when \\\tilde{x}= \tilde{0}\_{p \times 1}\\;
+> - **positivity**: \\\underset{\sim}{x}\cdot \underset{\sim}{x}= \sum\_{i=1}^px_i^2\\ is a sum of squares, so it is at least \\0\\;
+> - **definiteness**: a sum of squares is \\0\\ exactly when every term is \\0\\, so \\\underset{\sim}{x}\cdot \underset{\sim}{x}= 0\\ exactly when every \\x_i = 0\\, that is, when \\\underset{\sim}{x}= \underset{\sim}{0}\_{p \times 1}\\;
 > - **linearity in the first slot**: this property is the first-slot half of [Theorem 5 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-dot-linear);
 > - **symmetry**: this property is [Theorem 1 in Vectors](linear-algebra-vectors.llms.md#thm-lincom-symmetric).
 >
-> For instance, with \\\tilde{x}= (1, -2, 2)\\,
+> For instance, with \\\underset{\sim}{x}= (1, -2, 2)\\,
 >
-> \\ \begin{aligned} \tilde{x}\cdot \tilde{x} &= 1 \cdot 1 + (-2) \cdot(-2) + 2 \cdot 2 && \text{(definition of the dot product)} \\ &= 1 + 4 + 4 && \text{(multiply)} \\ &= 9 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{x}\cdot \underset{\sim}{x} &= 1 \cdot 1 + (-2) \cdot(-2) + 2 \cdot 2 && \text{(definition of the dot product)} \\ &= 1 + 4 + 4 && \text{(multiply)} \\ &= 9 && \text{(add)} \end{aligned} \\
 >
 > which is positive, as positivity and definiteness require of a nonzero vector.
 
@@ -42,7 +42,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Example 2 (Real coordinate space as an inner product space)** The Euclidean space \\\mathbb{R}^p\\ equipped with the standard dot product (1), that is, the pair \\(\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\\ with \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = \tilde{x}\cdot \tilde{y}\\, is an inner product space, because the dot product satisfies the four inner product axioms ([Example 1](#exm-dot-product-inner-product)). For \\p = 2\\, any vector \\\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\\ has squared norm \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} = x_1^2 + x_2^2 \ge 0\\, which is zero if and only if
+> **Example 2 (Real coordinate space as an inner product space)** The Euclidean space \\\mathbb{R}^p\\ equipped with the standard dot product (1), that is, the pair \\(\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\\ with \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{} = \underset{\sim}{x}\cdot \underset{\sim}{y}\\, is an inner product space, because the dot product satisfies the four inner product axioms ([Example 1](#exm-dot-product-inner-product)). For \\p = 2\\, any vector \\\underset{\sim}{x}= (x_1, x_2) \in \mathbb{R}^2\\ has squared norm \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{x}\right\rangle\mathclose{} = x_1^2 + x_2^2 \ge 0\\, which is zero if and only if
 >
 > \\ \begin{aligned} x_1 &= x_2 \\ &= 0. \end{aligned} \\
 >
@@ -50,78 +50,78 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Example 3 (A weighted inner product)** Let \\\tilde{c} = (c_1, \ldots, c_p)\\ be a vector of positive numbers, and define
+> **Example 3 (A weighted inner product)** Let \\\underset{\sim}{c} = (c_1, \ldots, c_p)\\ be a vector of positive numbers, and define
 >
-> \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\tilde{c}} \stackrel{\text{def}}{=}\sum\_{i=1}^pc_i\\x_i y_i.\\
+> \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\underset{\sim}{c}} \stackrel{\text{def}}{=}\sum\_{i=1}^pc_i\\x_i y_i.\\
 >
 > This function is also an inner product on \\\mathbb{R}^p\\ ([Axler 2024](#ref-axler2024linear), Example 6.3(b), p. 184):
 >
-> - **positivity**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}\_{\tilde{c}} = \sum\_{i=1}^pc_i\\x_i^2\\, and each term \\c_i\\x_i^2\\ is a positive number times a square, so the sum is at least \\0\\;
-> - **definiteness**: a sum of nonnegative terms is \\0\\ exactly when every term is \\0\\, and \\c_i\\x_i^2 = 0\\ exactly when \\x_i = 0\\, because \\c_i \> 0\\; so \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}\_{\tilde{c}} = 0\\ exactly when \\\tilde{x}= \tilde{0}\_{p \times 1}\\;
+> - **positivity**: \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{x}\right\rangle\mathclose{}\_{\underset{\sim}{c}} = \sum\_{i=1}^pc_i\\x_i^2\\, and each term \\c_i\\x_i^2\\ is a positive number times a square, so the sum is at least \\0\\;
+> - **definiteness**: a sum of nonnegative terms is \\0\\ exactly when every term is \\0\\, and \\c_i\\x_i^2 = 0\\ exactly when \\x_i = 0\\, because \\c_i \> 0\\; so \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{x}\right\rangle\mathclose{}\_{\underset{\sim}{c}} = 0\\ exactly when \\\underset{\sim}{x}= \underset{\sim}{0}\_{p \times 1}\\;
 > - **linearity in the first slot**: see the derivation after this list;
-> - **symmetry**: \\c_i\\x_i y_i = c_i\\y_i x_i\\ for each \\i\\, so \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\tilde{c}} = \mathopen{}\left\langle \tilde{y}, \tilde{x}\right\rangle\mathclose{}\_{\tilde{c}}\\.
+> - **symmetry**: \\c_i\\x_i y_i = c_i\\y_i x_i\\ for each \\i\\, so \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\underset{\sim}{c}} = \mathopen{}\left\langle \underset{\sim}{y}, \underset{\sim}{x}\right\rangle\mathclose{}\_{\underset{\sim}{c}}\\.
 >
-> For linearity in the first slot, take \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\:
+> For linearity in the first slot, take \\\underset{\sim}{x}, \underset{\sim}{y}, \underset{\sim}{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\:
 >
-> \\ \begin{aligned} \mathopen{}\left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z}\right\rangle\mathclose{}\_{\tilde{c}} &= \sum\_{i=1}^pc_i\\(a\\\tilde{x}+ b\\\tilde{y})\_i\\z_i && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}} \text{)} \\ &= \sum\_{i=1}^pc_i\\(a x_i + b y_i)\\z_i && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\mathopen{}\left(a\\c_i x_i z_i + b\\c_i y_i z_i\right)\mathclose{} && \text{(distribute, and commute the factors in each product)} \\ &= \sum\_{i=1}^pa\\c_i x_i z_i + \sum\_{i=1}^pb\\c_i y_i z_i && \text{(split the finite sum)} \\ &= a \sum\_{i=1}^pc_i x_i z_i + b \sum\_{i=1}^pc_i y_i z_i && \text{(factor } a \text{ and } b \text{ out of the sums)} \\ &= a\\\mathopen{}\left\langle \tilde{x}, \tilde{z}\right\rangle\mathclose{}\_{\tilde{c}} + b\\\mathopen{}\left\langle \tilde{y}, \tilde{z}\right\rangle\mathclose{}\_{\tilde{c}} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}} \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle a\\\underset{\sim}{x}+ b\\\underset{\sim}{y}, \underset{\sim}{z}\right\rangle\mathclose{}\_{\underset{\sim}{c}} &= \sum\_{i=1}^pc_i\\(a\\\underset{\sim}{x}+ b\\\underset{\sim}{y})\_i\\z_i && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\underset{\sim}{c}} \text{)} \\ &= \sum\_{i=1}^pc_i\\(a x_i + b y_i)\\z_i && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\mathopen{}\left(a\\c_i x_i z_i + b\\c_i y_i z_i\right)\mathclose{} && \text{(distribute, and commute the factors in each product)} \\ &= \sum\_{i=1}^pa\\c_i x_i z_i + \sum\_{i=1}^pb\\c_i y_i z_i && \text{(split the finite sum)} \\ &= a \sum\_{i=1}^pc_i x_i z_i + b \sum\_{i=1}^pc_i y_i z_i && \text{(factor } a \text{ and } b \text{ out of the sums)} \\ &= a\\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{z}\right\rangle\mathclose{}\_{\underset{\sim}{c}} + b\\\mathopen{}\left\langle \underset{\sim}{y}, \underset{\sim}{z}\right\rangle\mathclose{}\_{\underset{\sim}{c}} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\underset{\sim}{c}} \text{)} \end{aligned} \\
 >
-> Different inner products can give different numbers for the same pair of vectors. With \\p = 2\\, \\\tilde{c} = (2, 1)\\, \\\tilde{x}= (1, 3)\\ and \\\tilde{y}= (4, -1)\\:
+> Different inner products can give different numbers for the same pair of vectors. With \\p = 2\\, \\\underset{\sim}{c} = (2, 1)\\, \\\underset{\sim}{x}= (1, 3)\\ and \\\underset{\sim}{y}= (4, -1)\\:
 >
-> \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\tilde{c}} &= 2 \cdot 1 \cdot 4 + 1 \cdot 3 \cdot(-1) && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}} \text{)} \\ &= 8 - 3 && \text{(multiply)} \\ &= 5 && \text{(subtract)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\underset{\sim}{c}} &= 2 \cdot 1 \cdot 4 + 1 \cdot 3 \cdot(-1) && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\underset{\sim}{c}} \text{)} \\ &= 8 - 3 && \text{(multiply)} \\ &= 5 && \text{(subtract)} \end{aligned} \\
 >
 > while the dot product of the same vectors is
 >
-> \\ \begin{aligned} \tilde{x}\cdot \tilde{y} &= 1 \cdot 4 + 3 \cdot(-1) && \text{(definition of the dot product)} \\ &= 4 - 3 && \text{(multiply)} \\ &= 1 && \text{(subtract)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{x}\cdot \underset{\sim}{y} &= 1 \cdot 4 + 3 \cdot(-1) && \text{(definition of the dot product)} \\ &= 4 - 3 && \text{(multiply)} \\ &= 1 && \text{(subtract)} \end{aligned} \\
 
 > **NOTE:**
 >
 > **Example 4 (Functions that are not inner products)** Each of these functions on \\\mathbb{R}^2\\ has some of the properties in [Definition 1](#def-inner-product), but not all four:
 >
-> - \\f(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}x_1 y_1 - x_2 y_2\\ is symmetric, because \\x_i y_i = y_i x_i\\, and linear in the first slot, because it is a linear combination of \\x_1\\ and \\x_2\\ with coefficients \\y_1\\ and \\-y_2\\. It fails positivity: for \\\tilde{x}= (0, 1)\\,
+> - \\f(\underset{\sim}{x}, \underset{\sim}{y}) \stackrel{\text{def}}{=}x_1 y_1 - x_2 y_2\\ is symmetric, because \\x_i y_i = y_i x_i\\, and linear in the first slot, because it is a linear combination of \\x_1\\ and \\x_2\\ with coefficients \\y_1\\ and \\-y_2\\. It fails positivity: for \\\underset{\sim}{x}= (0, 1)\\,
 >
->   \\ \begin{aligned} f(\tilde{x}, \tilde{x}) &= 0 \cdot 0 - 1 \cdot 1 \\ &= -1 \\ &\< 0. \end{aligned} \\
+>   \\ \begin{aligned} f(\underset{\sim}{x}, \underset{\sim}{x}) &= 0 \cdot 0 - 1 \cdot 1 \\ &= -1 \\ &\< 0. \end{aligned} \\
 >
->   It also fails definiteness: for \\\tilde{x}= (1, 1)\\,
+>   It also fails definiteness: for \\\underset{\sim}{x}= (1, 1)\\,
 >
->   \\ \begin{aligned} f(\tilde{x}, \tilde{x}) &= 1 \cdot 1 - 1 \cdot 1 \\ &= 0 \end{aligned} \\
+>   \\ \begin{aligned} f(\underset{\sim}{x}, \underset{\sim}{x}) &= 1 \cdot 1 - 1 \cdot 1 \\ &= 0 \end{aligned} \\
 >
->   although \\\tilde{x}\neq \tilde{0}\_{2 \times 1}\\.
+>   although \\\underset{\sim}{x}\neq \underset{\sim}{0}\_{2 \times 1}\\.
 >
-> - \\g(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}x_1 y_1\\ is symmetric and linear in the first slot, for the same reasons as \\f\\, and has positivity, because \\g(\tilde{x}, \tilde{x}) = x_1^2 \ge 0\\. It fails definiteness: for \\\tilde{x}= (0, 1)\\,
+> - \\g(\underset{\sim}{x}, \underset{\sim}{y}) \stackrel{\text{def}}{=}x_1 y_1\\ is symmetric and linear in the first slot, for the same reasons as \\f\\, and has positivity, because \\g(\underset{\sim}{x}, \underset{\sim}{x}) = x_1^2 \ge 0\\. It fails definiteness: for \\\underset{\sim}{x}= (0, 1)\\,
 >
->   \\ \begin{aligned} g(\tilde{x}, \tilde{x}) &= 0 \cdot 0 \\ &= 0 \end{aligned} \\
+>   \\ \begin{aligned} g(\underset{\sim}{x}, \underset{\sim}{x}) &= 0 \cdot 0 \\ &= 0 \end{aligned} \\
 >
->   although \\\tilde{x}\neq \tilde{0}\_{2 \times 1}\\.
+>   although \\\underset{\sim}{x}\neq \underset{\sim}{0}\_{2 \times 1}\\.
 >
-> - \\h(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\mathopen{}\left\|x_1 y_1\right\|\mathclose{} + \mathopen{}\left\|x_2 y_2\right\|\mathclose{}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra-basics.llms.md#def-absolute-value), is symmetric, because \\\mathopen{}\left\|x_i y_i\right\|\mathclose{} = \mathopen{}\left\|y_i x_i\right\|\mathclose{}\\, and has positivity and definiteness, because \\h(\tilde{x}, \tilde{x}) = x_1^2 + x_2^2\\ is a sum of squares. It is not linear in the first slot: take
+> - \\h(\underset{\sim}{x}, \underset{\sim}{y}) \stackrel{\text{def}}{=}\mathopen{}\left\|x_1 y_1\right\|\mathclose{} + \mathopen{}\left\|x_2 y_2\right\|\mathclose{}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra-basics.llms.md#def-absolute-value), is symmetric, because \\\mathopen{}\left\|x_i y_i\right\|\mathclose{} = \mathopen{}\left\|y_i x_i\right\|\mathclose{}\\, and has positivity and definiteness, because \\h(\underset{\sim}{x}, \underset{\sim}{x}) = x_1^2 + x_2^2\\ is a sum of squares. It is not linear in the first slot: take
 >
->   \\ \begin{aligned} \tilde{x}&= \tilde{y}\\ &= (1, 0), \end{aligned} \\
+>   \\ \begin{aligned} \underset{\sim}{x}&= \underset{\sim}{y}\\ &= (1, 0), \end{aligned} \\
 >
 >   \\a = -1\\ and \\b = 0\\; then
 >
->   \\ \begin{aligned} h(a\\\tilde{x}, \tilde{y}) &= \mathopen{}\left\|(-1) \cdot 1\right\|\mathclose{} + \mathopen{}\left\|0 \cdot 0\right\|\mathclose{} \\ &= 1, \end{aligned} \\
+>   \\ \begin{aligned} h(a\\\underset{\sim}{x}, \underset{\sim}{y}) &= \mathopen{}\left\|(-1) \cdot 1\right\|\mathclose{} + \mathopen{}\left\|0 \cdot 0\right\|\mathclose{} \\ &= 1, \end{aligned} \\
 >
 >   while
 >
->   \\ \begin{aligned} a\\h(\tilde{x}, \tilde{y}) &= (-1) \cdot(\mathopen{}\left\|1 \cdot 1\right\|\mathclose{} + \mathopen{}\left\|0 \cdot 0\right\|\mathclose{}) \\ &= -1. \end{aligned} \\
+>   \\ \begin{aligned} a\\h(\underset{\sim}{x}, \underset{\sim}{y}) &= (-1) \cdot(\mathopen{}\left\|1 \cdot 1\right\|\mathclose{} + \mathopen{}\left\|0 \cdot 0\right\|\mathclose{}) \\ &= -1. \end{aligned} \\
 
 > **NOTE:**
 >
-> **Definition 3 (Orthogonality in an inner product space)** In an inner product space ([Definition 2](#def-inner-product-space)) with inner product \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\, two vectors \\\tilde{x}\\ and \\\tilde{y}\\ are **orthogonal with respect to** \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\, written \\\tilde{x}\perp \tilde{y}\\, if
+> **Definition 3 (Orthogonality in an inner product space)** In an inner product space ([Definition 2](#def-inner-product-space)) with inner product \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\, two vectors \\\underset{\sim}{x}\\ and \\\underset{\sim}{y}\\ are **orthogonal with respect to** \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\, written \\\underset{\sim}{x}\perp \underset{\sim}{y}\\, if
 >
-> \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = 0\\
+> \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{} = 0\\
 >
 > ([Banerjee and Roy 2014](#ref-banerjee2014linear), Definition 7.3, p. 181).
 
 > **NOTE:**
 >
-> **Example 5 (Orthogonality depends on the inner product)** Take the weighted inner product of [Example 3](#exm-weighted-inner-product) with \\\tilde{c} = (2, 1)\\, and let \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (1, -1)\\. Then
+> **Example 5 (Orthogonality depends on the inner product)** Take the weighted inner product of [Example 3](#exm-weighted-inner-product) with \\\underset{\sim}{c} = (2, 1)\\, and let \\\underset{\sim}{x}= (1, 2)\\ and \\\underset{\sim}{y}= (1, -1)\\. Then
 >
-> \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\tilde{c}} &= 2 \cdot 1 \cdot 1 + 1 \cdot 2 \cdot(-1) && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}} \text{)} \\ &= 2 - 2 && \text{(multiply)} \\ &= 0, && \text{(subtract)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\underset{\sim}{c}} &= 2 \cdot 1 \cdot 1 + 1 \cdot 2 \cdot(-1) && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\underset{\sim}{c}} \text{)} \\ &= 2 - 2 && \text{(multiply)} \\ &= 0, && \text{(subtract)} \end{aligned} \\
 >
-> so \\\tilde{x}\\ and \\\tilde{y}\\ are orthogonal with respect to \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}}\\. They are not orthogonal with respect to the dot product, since
+> so \\\underset{\sim}{x}\\ and \\\underset{\sim}{y}\\ are orthogonal with respect to \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\underset{\sim}{c}}\\. They are not orthogonal with respect to the dot product, since
 >
-> \\ \begin{aligned} \tilde{x}\cdot \tilde{y}&= 1 \cdot 1 + 2 \cdot(-1) \\ &= -1 \\ &\ne 0. \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{x}\cdot \underset{\sim}{y}&= 1 \cdot 1 + 2 \cdot(-1) \\ &= -1 \\ &\ne 0. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -135,54 +135,54 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 1 (Basic properties of the Euclidean norm)** For any \\\tilde{x} \in \mathbb{R}^p\\ and any number \\c\\:
+> **Theorem 1 (Basic properties of the Euclidean norm)** For any \\\underset{\sim}{x} \in \mathbb{R}^p\\ and any number \\c\\:
 >
-> 1.  \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \ge 0\\, and \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 0\\ if and only if \\\tilde{x} = \tilde{0}\\;
-> 2.  \\\mathopen{}\left\lVert c\\\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\.
+> 1.  \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} \ge 0\\, and \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} = 0\\ if and only if \\\underset{\sim}{x} = \underset{\sim}{0}\\;
+> 2.  \\\mathopen{}\left\lVert c\\\underset{\sim}{x}\right\rVert\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\.
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \sqrt{x_1^2 + \cdots + x_p^2}\\ ([Equation 2 in Vectors](linear-algebra-vectors.llms.md#eq-l2-norm)) is the square root of a sum of squares, so it is at least \\0\\. It is \\0\\ exactly when \\x_1^2 + \cdots + x_p^2 = 0\\, and a sum of squares is \\0\\ exactly when every term is \\0\\, that is, when every \\x_i = 0\\: if some \\x_i \ne 0\\, its square is positive and the sum is positive, and if every \\x_i = 0\\, the sum is \\0\\.
+> *Proof*. **Part 1.** \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} = \sqrt{x_1^2 + \cdots + x_p^2}\\ ([Equation 2 in Vectors](linear-algebra-vectors.llms.md#eq-l2-norm)) is the square root of a sum of squares, so it is at least \\0\\. It is \\0\\ exactly when \\x_1^2 + \cdots + x_p^2 = 0\\, and a sum of squares is \\0\\ exactly when every term is \\0\\, that is, when every \\x_i = 0\\: if some \\x_i \ne 0\\, its square is positive and the sum is positive, and if every \\x_i = 0\\, the sum is \\0\\.
 >
 > **Part 2.**
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert c\\\tilde{x}\right\rVert\mathclose{} &= \sqrt{\sum\_{i=1}^p(c\\x_i)^2} && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, and }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{)} \\ &= \sqrt{\sum\_{i=1}^pc^2 x_i^2} && \text{(} (c\\x_i)^2 = c^2 x_i^2 \text{)} \\ &= \sqrt{c^2 \sum\_{i=1}^px_i^2} && \text{(factor } c^2 \text{ out of the sum)} \\ &= \sqrt{c^2}\\\sqrt{\sum\_{i=1}^px_i^2} && \text{(the square root of a product of nonnegative numbers)} \\ &= \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}. && \text{(} \sqrt{c^2} = \mathopen{}\left\|c\right\|\mathclose{} \text{, and }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert c\\\underset{\sim}{x}\right\rVert\mathclose{} &= \sqrt{\sum\_{i=1}^p(c\\x_i)^2} && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, and }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{)} \\ &= \sqrt{\sum\_{i=1}^pc^2 x_i^2} && \text{(} (c\\x_i)^2 = c^2 x_i^2 \text{)} \\ &= \sqrt{c^2 \sum\_{i=1}^px_i^2} && \text{(factor } c^2 \text{ out of the sum)} \\ &= \sqrt{c^2}\\\sqrt{\sum\_{i=1}^px_i^2} && \text{(the square root of a product of nonnegative numbers)} \\ &= \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}. && \text{(} \sqrt{c^2} = \mathopen{}\left\|c\right\|\mathclose{} \text{, and }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 6 (Scaling a vector scales its length)** For \\\tilde{x} = (3, 4)\\, \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 5\\ ([Example 11 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm)). Then \\-2\\\tilde{x} = (-6, -8)\\ has norm
+> **Example 6 (Scaling a vector scales its length)** For \\\underset{\sim}{x} = (3, 4)\\, \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} = 5\\ ([Example 11 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm)). Then \\-2\\\underset{\sim}{x} = (-6, -8)\\ has norm
 >
 > \\ \begin{aligned} \sqrt{36 + 64} &= 10 \\ &= \mathopen{}\left\|-2\right\|\mathclose{} \cdot 5, \end{aligned} \\
 >
 > as part 2 says. Dividing by the norm gives a vector of length \\1\\:
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tfrac{1}{5}\\\tilde{x}\right\rVert\mathclose{} &= \tfrac{1}{5} \cdot 5 \\ &= 1, \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\tfrac{1}{5}\\\underset{\sim}{x}\right\rVert\mathclose{} &= \tfrac{1}{5} \cdot 5 \\ &= 1, \end{aligned} \\
 >
-> and \\\tfrac{1}{5}\\\tilde{x} = (0.6, 0.8)\\ is the unit vector in [Example 11 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm).
+> and \\\tfrac{1}{5}\\\underset{\sim}{x} = (0.6, 0.8)\\ is the unit vector in [Example 11 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm).
 
 > **NOTE:**
 >
-> **Theorem 2 (The squared norm of a sum)** For any \\\tilde{x}, \tilde{y} \in \mathbb{R}^p\\,
+> **Theorem 2 (The squared norm of a sum)** For any \\\underset{\sim}{x}, \underset{\sim}{y} \in \mathbb{R}^p\\,
 >
-> \\ \mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2. \\
+> \\ \mathopen{}\left\lVert\underset{\sim}{x} + \underset{\sim}{y}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\(\underset{\sim}{x} \cdot \underset{\sim}{y}) + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2. \\
 >
-> In particular, if \\\tilde{x} \perp \tilde{y}\\ ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)), then \\\mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2\\ (the **Pythagorean theorem**).
+> In particular, if \\\underset{\sim}{x} \perp \underset{\sim}{y}\\ ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)), then \\\mathopen{}\left\lVert\underset{\sim}{x} + \underset{\sim}{y}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2\\ (the **Pythagorean theorem**).
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 &= (\tilde{x} + \tilde{y}) \cdot (\tilde{x} + \tilde{y}) && \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)} \\ &= \tilde{x} \cdot (\tilde{x} + \tilde{y}) + \tilde{y} \cdot (\tilde{x} + \tilde{y}) && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, first slot, } a \text{ and } b \text{ both equal to } 1 \text{)} \\ &= \tilde{x} \cdot \tilde{x} + \tilde{x} \cdot \tilde{y} + \tilde{y} \cdot \tilde{x} + \tilde{y} \cdot \tilde{y} && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, second slot, } a \text{ and } b \text{ both equal to } 1 \text{, twice)} \\ &= \tilde{x} \cdot \tilde{x} + \tilde{x} \cdot \tilde{y} + \tilde{x} \cdot \tilde{y} + \tilde{y} \cdot \tilde{y} && \text{(}\href{linear-algebra-vectors.qmd#thm-lincom-symmetric}{\text{Theorem~1 in Vectors}}\text{)} \\ &= \tilde{x} \cdot \tilde{x} + 2\\(\tilde{x} \cdot \tilde{y}) + \tilde{y} \cdot \tilde{y} && \text{(combine like terms)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2. && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x} + \underset{\sim}{y}\right\rVert\mathclose{}^2 &= (\underset{\sim}{x} + \underset{\sim}{y}) \cdot (\underset{\sim}{x} + \underset{\sim}{y}) && \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)} \\ &= \underset{\sim}{x} \cdot (\underset{\sim}{x} + \underset{\sim}{y}) + \underset{\sim}{y} \cdot (\underset{\sim}{x} + \underset{\sim}{y}) && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, first slot, } a \text{ and } b \text{ both equal to } 1 \text{)} \\ &= \underset{\sim}{x} \cdot \underset{\sim}{x} + \underset{\sim}{x} \cdot \underset{\sim}{y} + \underset{\sim}{y} \cdot \underset{\sim}{x} + \underset{\sim}{y} \cdot \underset{\sim}{y} && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, second slot, } a \text{ and } b \text{ both equal to } 1 \text{, twice)} \\ &= \underset{\sim}{x} \cdot \underset{\sim}{x} + \underset{\sim}{x} \cdot \underset{\sim}{y} + \underset{\sim}{x} \cdot \underset{\sim}{y} + \underset{\sim}{y} \cdot \underset{\sim}{y} && \text{(}\href{linear-algebra-vectors.qmd#thm-lincom-symmetric}{\text{Theorem~1 in Vectors}}\text{)} \\ &= \underset{\sim}{x} \cdot \underset{\sim}{x} + 2\\(\underset{\sim}{x} \cdot \underset{\sim}{y}) + \underset{\sim}{y} \cdot \underset{\sim}{y} && \text{(combine like terms)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\(\underset{\sim}{x} \cdot \underset{\sim}{y}) + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2. && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)} \end{aligned} \\
 >
-> If \\\tilde{x} \perp \tilde{y}\\, then \\\tilde{x} \cdot \tilde{y} = 0\\, and the middle term drops out.
+> If \\\underset{\sim}{x} \perp \underset{\sim}{y}\\, then \\\underset{\sim}{x} \cdot \underset{\sim}{y} = 0\\, and the middle term drops out.
 
 > **NOTE:**
 >
-> **Example 7 (Checking the expansion)** For \\\tilde{x} = (3, 0)\\ and \\\tilde{y} = (1, 4)\\: \\\tilde{x} + \tilde{y} = (4, 4)\\, so
+> **Example 7 (Checking the expansion)** For \\\underset{\sim}{x} = (3, 0)\\ and \\\underset{\sim}{y} = (1, 4)\\: \\\underset{\sim}{x} + \underset{\sim}{y} = (4, 4)\\, so
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 &= 16 + 16 \\ &= 32, \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x} + \underset{\sim}{y}\right\rVert\mathclose{}^2 &= 16 + 16 \\ &= 32, \end{aligned} \\
 >
 > and
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 &= 9 + 2 \cdot 3 + 17 \\ &= 32. \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\(\underset{\sim}{x} \cdot \underset{\sim}{y}) + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 &= 9 + 2 \cdot 3 + 17 \\ &= 32. \end{aligned} \\
 >
 > For the orthogonal vectors \\(3, 0)\\ and \\(0, 4)\\,
 >
@@ -192,41 +192,41 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 3 (Cauchy-Schwarz inequality)** For any \\\tilde{x}, \tilde{y} \in \mathbb{R}^p\\,
+> **Theorem 3 (Cauchy-Schwarz inequality)** For any \\\underset{\sim}{x}, \underset{\sim}{y} \in \mathbb{R}^p\\,
 >
-> \\ \mathopen{}\left\|\tilde{x} \cdot \tilde{y}\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}, \\
+> \\ \mathopen{}\left\|\underset{\sim}{x} \cdot \underset{\sim}{y}\right\|\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}, \\
 >
-> with equality exactly when \\\tilde{x}\\ and \\\tilde{y}\\ are linearly dependent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
+> with equality exactly when \\\underset{\sim}{x}\\ and \\\underset{\sim}{y}\\ are linearly dependent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
 
 > **NOTE:**
 >
-> *Proof*. **If \\\tilde{y} = \tilde{0}\\.** Then
+> *Proof*. **If \\\underset{\sim}{y} = \underset{\sim}{0}\\.** Then
 >
-> \\ \begin{aligned} \tilde{x} \cdot \tilde{0}&= \sum_i x_i \cdot 0 \\ &= 0 \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{x} \cdot \underset{\sim}{0}&= \sum_i x_i \cdot 0 \\ &= 0 \end{aligned} \\
 >
-> 1.  and \\\mathopen{}\left\lVert\tilde{0}\right\rVert\mathclose{} = 0\\ ([Theorem 1](#thm-norm-properties), part 1), so both sides are \\0\\ and equality holds; and \\\tilde{x}, \tilde{y}\\ are linearly dependent, because \\0\\\tilde{x} + 1\\\tilde{y} = \tilde{0}\\.
+> 1.  and \\\mathopen{}\left\lVert\underset{\sim}{0}\right\rVert\mathclose{} = 0\\ ([Theorem 1](#thm-norm-properties), part 1), so both sides are \\0\\ and equality holds; and \\\underset{\sim}{x}, \underset{\sim}{y}\\ are linearly dependent, because \\0\\\underset{\sim}{x} + 1\\\underset{\sim}{y} = \underset{\sim}{0}\\.
 >
-> **If \\\tilde{y} \ne \tilde{0}\\.** Then \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} \> 0\\ ([Theorem 1](#thm-norm-properties), part 1). Let \\t \stackrel{\text{def}}{=}(\tilde{x} \cdot \tilde{y}) / \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2\\. Then
+> **If \\\underset{\sim}{y} \ne \underset{\sim}{0}\\.** Then \\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} \> 0\\ ([Theorem 1](#thm-norm-properties), part 1). Let \\t \stackrel{\text{def}}{=}(\underset{\sim}{x} \cdot \underset{\sim}{y}) / \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2\\. Then
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x} - t\\\tilde{y}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert\tilde{x} + (-1)\\(t\\\tilde{y})\right\rVert\mathclose{}^2 && \text{(} \tilde{x} - \tilde{v} = \tilde{x} + (-1)\\\tilde{v} \text{)} \\ &= \mathopen{}\left\lVert\tilde{x} + (-t)\\\tilde{y}\right\rVert\mathclose{}^2 && \text{(} (-1)\\(t\\\tilde{y}) = (-t)\\\tilde{y} \text{, entrywise)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\\mathopen{}\left(\tilde{x} \cdot ((-t)\\\tilde{y})\right)\mathclose{} + \mathopen{}\left\lVert(-t)\\\tilde{y}\right\rVert\mathclose{}^2 && \text{(}\href{#thm-norm-sum-square}{\text{Theorem~2}}\text{)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(-t)\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\lVert(-t)\\\tilde{y}\right\rVert\mathclose{}^2 && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, special case } b = 0 \text{)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(-t)\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left(\mathopen{}\left\|-t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\right)\mathclose{}^2 && \text{(}\href{#thm-norm-properties}{\text{Theorem~1}}\text{, part 2)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(-t)\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\|-t\right\|\mathclose{}^2\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(} (ab)^2 = a^2 b^2 \text{)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 - 2t\\(\tilde{x} \cdot \tilde{y}) + t^2\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(} 2\\(-t) = -2t \text{ and } \mathopen{}\left\|-t\right\|\mathclose{}^2 = t^2 \text{)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 - 2\\\frac{(\tilde{x} \cdot \tilde{y})^2}{\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2} + \frac{(\tilde{x} \cdot \tilde{y})^2}{\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^4}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(substitute } t \text{)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 - 2\\\frac{(\tilde{x} \cdot \tilde{y})^2}{\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2} + \frac{(\tilde{x} \cdot \tilde{y})^2}{\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2} && \text{(cancel one factor } \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 \text{)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 - \frac{(\tilde{x} \cdot \tilde{y})^2}{\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2}. && \text{(combine the last two terms)} \end{aligned} \tag{1}\\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x} - t\\\underset{\sim}{y}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert\underset{\sim}{x} + (-1)\\(t\\\underset{\sim}{y})\right\rVert\mathclose{}^2 && \text{(} \underset{\sim}{x} - \underset{\sim}{v} = \underset{\sim}{x} + (-1)\\\underset{\sim}{v} \text{)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x} + (-t)\\\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(} (-1)\\(t\\\underset{\sim}{y}) = (-t)\\\underset{\sim}{y} \text{, entrywise)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\\mathopen{}\left(\underset{\sim}{x} \cdot ((-t)\\\underset{\sim}{y})\right)\mathclose{} + \mathopen{}\left\lVert(-t)\\\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(}\href{#thm-norm-sum-square}{\text{Theorem~2}}\text{)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\(-t)\\(\underset{\sim}{x} \cdot \underset{\sim}{y}) + \mathopen{}\left\lVert(-t)\\\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, special case } b = 0 \text{)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\(-t)\\(\underset{\sim}{x} \cdot \underset{\sim}{y}) + \mathopen{}\left(\mathopen{}\left\|-t\right\|\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\right)\mathclose{}^2 && \text{(}\href{#thm-norm-properties}{\text{Theorem~1}}\text{, part 2)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\(-t)\\(\underset{\sim}{x} \cdot \underset{\sim}{y}) + \mathopen{}\left\|-t\right\|\mathclose{}^2\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(} (ab)^2 = a^2 b^2 \text{)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 - 2t\\(\underset{\sim}{x} \cdot \underset{\sim}{y}) + t^2\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(} 2\\(-t) = -2t \text{ and } \mathopen{}\left\|-t\right\|\mathclose{}^2 = t^2 \text{)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 - 2\\\frac{(\underset{\sim}{x} \cdot \underset{\sim}{y})^2}{\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2} + \frac{(\underset{\sim}{x} \cdot \underset{\sim}{y})^2}{\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^4}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(substitute } t \text{)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 - 2\\\frac{(\underset{\sim}{x} \cdot \underset{\sim}{y})^2}{\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2} + \frac{(\underset{\sim}{x} \cdot \underset{\sim}{y})^2}{\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2} && \text{(cancel one factor } \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 \text{)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 - \frac{(\underset{\sim}{x} \cdot \underset{\sim}{y})^2}{\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2}. && \text{(combine the last two terms)} \end{aligned} \tag{1}\\
 >
 > The left side is at least \\0\\ ([Theorem 1](#thm-norm-properties), part 1), so
 >
-> \\ \begin{aligned} 0 &\le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 - \frac{(\tilde{x} \cdot \tilde{y})^2}{\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2} && \text{(}\href{#eq-cauchy-schwarz-chain}{\text{Equation~1}}\text{)} \\ \frac{(\tilde{x} \cdot \tilde{y})^2}{\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2} &\le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 && \text{(add } (\tilde{x} \cdot \tilde{y})^2 / \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 \text{ to both sides)} \\ (\tilde{x} \cdot \tilde{y})^2 &\le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2, && \text{(multiply both sides by } \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 \> 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} 0 &\le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 - \frac{(\underset{\sim}{x} \cdot \underset{\sim}{y})^2}{\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2} && \text{(}\href{#eq-cauchy-schwarz-chain}{\text{Equation~1}}\text{)} \\ \frac{(\underset{\sim}{x} \cdot \underset{\sim}{y})^2}{\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2} &\le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 && \text{(add } (\underset{\sim}{x} \cdot \underset{\sim}{y})^2 / \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 \text{ to both sides)} \\ (\underset{\sim}{x} \cdot \underset{\sim}{y})^2 &\le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2, && \text{(multiply both sides by } \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 \> 0 \text{)} \end{aligned} \\
 >
-> and taking nonnegative square roots of both sides, which preserves the inequality, gives \\\mathopen{}\left\|\tilde{x} \cdot \tilde{y}\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\\.
+> and taking nonnegative square roots of both sides, which preserves the inequality, gives \\\mathopen{}\left\|\underset{\sim}{x} \cdot \underset{\sim}{y}\right\|\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\\.
 >
-> **When equality holds (\\\tilde{y} \ne \tilde{0}\\).** Both sides of the inequality are nonnegative, so equality holds exactly when \\(\tilde{x} \cdot \tilde{y})^2 = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2\\, that is (dividing by \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 \> 0\\ and rearranging), when \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 - (\tilde{x} \cdot \tilde{y})^2 / \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 = 0\\. By [Equation 1](#eq-cauchy-schwarz-chain), that quantity is \\\mathopen{}\left\lVert\tilde{x} - t\\\tilde{y}\right\rVert\mathclose{}^2\\, so equality holds exactly when \\\tilde{x} - t\\\tilde{y} = \tilde{0}\\ ([Theorem 1](#thm-norm-properties), part 1), that is, when \\\tilde{x} = t\\\tilde{y}\\.
+> **When equality holds (\\\underset{\sim}{y} \ne \underset{\sim}{0}\\).** Both sides of the inequality are nonnegative, so equality holds exactly when \\(\underset{\sim}{x} \cdot \underset{\sim}{y})^2 = \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2\\, that is (dividing by \\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 \> 0\\ and rearranging), when \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 - (\underset{\sim}{x} \cdot \underset{\sim}{y})^2 / \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 = 0\\. By [Equation 1](#eq-cauchy-schwarz-chain), that quantity is \\\mathopen{}\left\lVert\underset{\sim}{x} - t\\\underset{\sim}{y}\right\rVert\mathclose{}^2\\, so equality holds exactly when \\\underset{\sim}{x} - t\\\underset{\sim}{y} = \underset{\sim}{0}\\ ([Theorem 1](#thm-norm-properties), part 1), that is, when \\\underset{\sim}{x} = t\\\underset{\sim}{y}\\.
 >
-> - If \\\tilde{x} = t\\\tilde{y}\\, then \\1\\\tilde{x} + (-t)\\\tilde{y} = \tilde{0}\\, so the two vectors are linearly dependent.
+> - If \\\underset{\sim}{x} = t\\\underset{\sim}{y}\\, then \\1\\\underset{\sim}{x} + (-t)\\\underset{\sim}{y} = \underset{\sim}{0}\\, so the two vectors are linearly dependent.
 >
-> - Conversely, suppose \\a\\\tilde{x} + b\\\tilde{y} = \tilde{0}\\ with \\a, b\\ not both \\0\\. Then \\a \ne 0\\: otherwise \\b \ne 0\\ and \\b\\\tilde{y} = \tilde{0}\\, so
+> - Conversely, suppose \\a\\\underset{\sim}{x} + b\\\underset{\sim}{y} = \underset{\sim}{0}\\ with \\a, b\\ not both \\0\\. Then \\a \ne 0\\: otherwise \\b \ne 0\\ and \\b\\\underset{\sim}{y} = \underset{\sim}{0}\\, so
 >
->   \\ \begin{aligned} \tilde{y} &= \tfrac{1}{b}\\(b\\\tilde{y}) \\ &= \tilde{0}, \end{aligned} \\
+>   \\ \begin{aligned} \underset{\sim}{y} &= \tfrac{1}{b}\\(b\\\underset{\sim}{y}) \\ &= \underset{\sim}{0}, \end{aligned} \\
 >
->   contrary to assumption. Subtracting \\b\\\tilde{y}\\ from both sides gives \\a\\\tilde{x} = -b\\\tilde{y}\\, and multiplying by \\\tfrac{1}{a}\\ gives \\\tilde{x} = s\\\tilde{y}\\ with \\s = -b/a\\. Then
+>   contrary to assumption. Subtracting \\b\\\underset{\sim}{y}\\ from both sides gives \\a\\\underset{\sim}{x} = -b\\\underset{\sim}{y}\\, and multiplying by \\\tfrac{1}{a}\\ gives \\\underset{\sim}{x} = s\\\underset{\sim}{y}\\ with \\s = -b/a\\. Then
 >
->   \\ \begin{aligned} \mathopen{}\left\|\tilde{x} \cdot \tilde{y}\right\|\mathclose{} &= \mathopen{}\left\|(s\\\tilde{y}) \cdot \tilde{y}\right\|\mathclose{} && \text{(substitute } \tilde{x} = s\\\tilde{y} \text{)} \\ &= \mathopen{}\left\|s\\(\tilde{y} \cdot \tilde{y})\right\|\mathclose{} && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, special case } b = 0 \text{, first slot)} \\ &= \mathopen{}\left\|s\right\|\mathclose{}\\\mathopen{}\left\|\tilde{y} \cdot \tilde{y}\right\|\mathclose{} && \text{(} \mathopen{}\left\|ab\right\|\mathclose{} = \mathopen{}\left\|a\right\|\mathclose{}\\\mathopen{}\left\|b\right\|\mathclose{} \text{)} \\ &= \mathopen{}\left\|s\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(} \tilde{y} \cdot \tilde{y} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 \ge 0 \text{, }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)} \\ &= \mathopen{}\left(\mathopen{}\left\|s\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\right)\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} && \text{(regroup)} \\ &= \mathopen{}\left\lVert s\\\tilde{y}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} && \text{(}\href{#thm-norm-properties}{\text{Theorem~1}}\text{, part 2)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}, && \text{(} s\\\tilde{y} = \tilde{x} \text{)} \end{aligned} \\
+>   \\ \begin{aligned} \mathopen{}\left\|\underset{\sim}{x} \cdot \underset{\sim}{y}\right\|\mathclose{} &= \mathopen{}\left\|(s\\\underset{\sim}{y}) \cdot \underset{\sim}{y}\right\|\mathclose{} && \text{(substitute } \underset{\sim}{x} = s\\\underset{\sim}{y} \text{)} \\ &= \mathopen{}\left\|s\\(\underset{\sim}{y} \cdot \underset{\sim}{y})\right\|\mathclose{} && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, special case } b = 0 \text{, first slot)} \\ &= \mathopen{}\left\|s\right\|\mathclose{}\\\mathopen{}\left\|\underset{\sim}{y} \cdot \underset{\sim}{y}\right\|\mathclose{} && \text{(} \mathopen{}\left\|ab\right\|\mathclose{} = \mathopen{}\left\|a\right\|\mathclose{}\\\mathopen{}\left\|b\right\|\mathclose{} \text{)} \\ &= \mathopen{}\left\|s\right\|\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(} \underset{\sim}{y} \cdot \underset{\sim}{y} = \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 \ge 0 \text{, }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)} \\ &= \mathopen{}\left(\mathopen{}\left\|s\right\|\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\right)\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} && \text{(regroup)} \\ &= \mathopen{}\left\lVert s\\\underset{\sim}{y}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} && \text{(}\href{#thm-norm-properties}{\text{Theorem~1}}\text{, part 2)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}, && \text{(} s\\\underset{\sim}{y} = \underset{\sim}{x} \text{)} \end{aligned} \\
 >
 >   so equality holds.
 
@@ -234,49 +234,49 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 >
 > **Example 8 (A strict case and an equality case)**  
 >
-> - For \\\tilde{x} = (1, 2)\\ and \\\tilde{y} = (3, 4)\\:
+> - For \\\underset{\sim}{x} = (1, 2)\\ and \\\underset{\sim}{y} = (3, 4)\\:
 >
->   \\ \begin{aligned} \tilde{x} \cdot \tilde{y} &= 3 + 8 \\ &= 11, \end{aligned} \\
+>   \\ \begin{aligned} \underset{\sim}{x} \cdot \underset{\sim}{y} &= 3 + 8 \\ &= 11, \end{aligned} \\
 >
->   while \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = \sqrt{5} \cdot 5 \approx 11.18\\. The inequality is strict, and the vectors are linearly independent: \\(3, 4)\\ is not a multiple of \\(1, 2)\\, since \\3 \cdot 2 \ne 4\\.
+>   while \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} = \sqrt{5} \cdot 5 \approx 11.18\\. The inequality is strict, and the vectors are linearly independent: \\(3, 4)\\ is not a multiple of \\(1, 2)\\, since \\3 \cdot 2 \ne 4\\.
 >
-> - For \\\tilde{x} = (1, 2)\\ and
+> - For \\\underset{\sim}{x} = (1, 2)\\ and
 >
->   \\ \begin{aligned} \tilde{y} &= (2, 4) \\ &= 2\\\tilde{x}: \end{aligned} \\
+>   \\ \begin{aligned} \underset{\sim}{y} &= (2, 4) \\ &= 2\\\underset{\sim}{x}: \end{aligned} \\
 >
->   \\ \begin{aligned} \tilde{x} \cdot \tilde{y} &= 2 + 8 \\ &= 10 \end{aligned} \\
+>   \\ \begin{aligned} \underset{\sim}{x} \cdot \underset{\sim}{y} &= 2 + 8 \\ &= 10 \end{aligned} \\
 >
 >   and
 >
->   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} &= \sqrt{5}\\\sqrt{20} \\ &= \sqrt{100} \\ &= 10, \end{aligned} \\
+>   \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} &= \sqrt{5}\\\sqrt{20} \\ &= \sqrt{100} \\ &= 10, \end{aligned} \\
 >
 >   so equality holds.
 
 > **NOTE:**
 >
-> **Theorem 4 (Triangle inequality)** For any \\\tilde{x}, \tilde{y} \in \mathbb{R}^p\\,
+> **Theorem 4 (Triangle inequality)** For any \\\underset{\sim}{x}, \underset{\sim}{y} \in \mathbb{R}^p\\,
 >
-> \\ \mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}. \\
+> \\ \mathopen{}\left\lVert\underset{\sim}{x} + \underset{\sim}{y}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}. \\
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(}\href{#thm-norm-sum-square}{\text{Theorem~2}}\text{)} \\ &\le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\\mathopen{}\left\|\tilde{x} \cdot \tilde{y}\right\|\mathclose{} + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(a number is at most its absolute value)} \\ &\le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(}\href{#thm-cauchy-schwarz}{\text{Theorem~3}}\text{)} \\ &= \mathopen{}\left(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\right)\mathclose{}^2. && \text{(expand the square)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x} + \underset{\sim}{y}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\(\underset{\sim}{x} \cdot \underset{\sim}{y}) + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(}\href{#thm-norm-sum-square}{\text{Theorem~2}}\text{)} \\ &\le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\\mathopen{}\left\|\underset{\sim}{x} \cdot \underset{\sim}{y}\right\|\mathclose{} + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(a number is at most its absolute value)} \\ &\le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 + 2\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}^2 && \text{(}\href{#thm-cauchy-schwarz}{\text{Theorem~3}}\text{)} \\ &= \mathopen{}\left(\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\right)\mathclose{}^2. && \text{(expand the square)} \end{aligned} \\
 >
-> Both \\\mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}\\ and \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\\ are nonnegative ([Theorem 1](#thm-norm-properties)), and for nonnegative numbers \\a^2 \le b^2\\ implies \\a \le b\\.
+> Both \\\mathopen{}\left\lVert\underset{\sim}{x} + \underset{\sim}{y}\right\rVert\mathclose{}\\ and \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\\ are nonnegative ([Theorem 1](#thm-norm-properties)), and for nonnegative numbers \\a^2 \le b^2\\ implies \\a \le b\\.
 
 > **NOTE:**
 >
 > **Example 9 (A strict case and an equality case)**  
 >
-> - For \\\tilde{x} = (3, 0)\\ and \\\tilde{y} = (0, 4)\\:
+> - For \\\underset{\sim}{x} = (3, 0)\\ and \\\underset{\sim}{y} = (0, 4)\\:
 >
->   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{} &= \mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} \\ &= 5, \end{aligned} \\
+>   \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x} + \underset{\sim}{y}\right\rVert\mathclose{} &= \mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} \\ &= 5, \end{aligned} \\
 >
 >   while
 >
->   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} &= 3 + 4 \\ &= 7. \end{aligned} \\
+>   \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} &= 3 + 4 \\ &= 7. \end{aligned} \\
 >
-> - For \\\tilde{x} = (1, 0)\\ and \\\tilde{y} = (2, 0)\\, which point the same way:
+> - For \\\underset{\sim}{x} = (1, 0)\\ and \\\underset{\sim}{y} = (2, 0)\\, which point the same way:
 >
 >   \\ \begin{aligned} \mathopen{}\left\lVert(3, 0)\right\rVert\mathclose{} &= 3 \\ &= 1 + 2, \end{aligned} \\
 >
@@ -284,11 +284,11 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Norm (normed vector space, normed space))** A **norm** on a real vector space \\V\\ is a function \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{} : V \to \[0, \infty)\\ that assigns to each vector \\\tilde{x}\in V\\ a nonnegative real number \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\, and satisfies the following three axioms for all \\\tilde{x}, \tilde{y}\in V\\ and all scalars \\c \in \mathbb{R}\\:
+> **Definition 4 (Norm (normed vector space, normed space))** A **norm** on a real vector space \\V\\ is a function \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{} : V \to \[0, \infty)\\ that assigns to each vector \\\underset{\sim}{x}\in V\\ a nonnegative real number \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\, and satisfies the following three axioms for all \\\underset{\sim}{x}, \underset{\sim}{y}\in V\\ and all scalars \\c \in \mathbb{R}\\:
 >
-> 1.  **Positivity and definiteness**: \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \ge 0\\, and \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 0\\ if and only if \\\tilde{x}= \tilde{0}\\;
-> 2.  **Absolute homogeneity**: \\\mathopen{}\left\lVert c\\\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\;
-> 3.  **Subadditivity (triangle inequality)**: \\\mathopen{}\left\lVert\tilde{x}+ \tilde{y}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\\.
+> 1.  **Positivity and definiteness**: \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} \ge 0\\, and \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} = 0\\ if and only if \\\underset{\sim}{x}= \underset{\sim}{0}\\;
+> 2.  **Absolute homogeneity**: \\\mathopen{}\left\lVert c\\\underset{\sim}{x}\right\rVert\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\;
+> 3.  **Subadditivity (triangle inequality)**: \\\mathopen{}\left\lVert\underset{\sim}{x}+ \underset{\sim}{y}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\\.
 >
 > A vector space equipped with a norm is called a **normed vector space** (or **normed space**).
 
@@ -299,39 +299,39 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 > - Positivity and absolute homogeneity hold by [Theorem 1](#thm-norm-properties).
 > - The triangle inequality holds by [Theorem 4](#thm-triangle-inequality).
 >
-> Every inner product space \\(\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\\ ([Definition 2](#def-inner-product-space)) naturally defines an induced norm \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}}\\, which satisfies all three norm axioms.
+> Every inner product space \\(\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\\ ([Definition 2](#def-inner-product-space)) naturally defines an induced norm \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{x}\right\rangle\mathclose{}}\\, which satisfies all three norm axioms.
 
 > **NOTE:**
 >
-> **Definition 5 (Vector \\p\\-norm (\\\ell_p\\ norm, \\\ell_1\\ norm, taxicab norm, Manhattan norm, \\\ell_2\\ norm, infinity norm))** For a vector \\\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\ and any real number \\k \ge 1\\, the **vector \\p\\-norm** (or **\\\ell_p\\ norm**, traditionally named with parameter \\p\\ but denoted here with exponent \\k\\ to avoid clashing with the ambient vector dimension \\p\\) is:
+> **Definition 5 (Vector \\p\\-norm (\\\ell_p\\ norm, \\\ell_1\\ norm, taxicab norm, Manhattan norm, \\\ell_2\\ norm, infinity norm))** For a vector \\\underset{\sim}{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\ and any real number \\k \ge 1\\, the **vector \\p\\-norm** (or **\\\ell_p\\ norm**, traditionally named with parameter \\p\\ but denoted here with exponent \\k\\ to avoid clashing with the ambient vector dimension \\p\\) is:
 >
-> \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k}. \\
+> \\ \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k}. \\
 >
 > The cases \\k = 1\\ and \\k = 2\\ are named the **\\\ell_1\\ norm** (also the **taxicab norm** or **Manhattan norm**) and the **\\\ell_2\\ norm**.
 
 > **NOTE:**
 >
-> **Example 11 (Calculating \\\ell_1\\, \\\ell_2\\, and \\\ell\_\infty\\ norms)** For \\\tilde{x}= (3, -4) \in \mathbb{R}^2\\:
+> **Example 11 (Calculating \\\ell_1\\, \\\ell_2\\, and \\\ell\_\infty\\ norms)** For \\\underset{\sim}{x}= (3, -4) \in \mathbb{R}^2\\:
 >
 > - \\\ell_1\\ norm:
 >
->   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1 &= \mathopen{}\left\|3\right\|\mathclose{} + \mathopen{}\left\|-4\right\|\mathclose{} \\ &= 3 + 4 \\ &= 7. \end{aligned} \\
+>   \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_1 &= \mathopen{}\left\|3\right\|\mathclose{} + \mathopen{}\left\|-4\right\|\mathclose{} \\ &= 3 + 4 \\ &= 7. \end{aligned} \\
 >
 > - \\\ell_2\\ norm:
 >
->   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 &= \sqrt{3^2 + (-4)^2} \\ &= \sqrt{9 + 16} \\ &= \sqrt{25} \\ &= 5. \end{aligned} \\
+>   \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_2 &= \sqrt{3^2 + (-4)^2} \\ &= \sqrt{9 + 16} \\ &= \sqrt{25} \\ &= 5. \end{aligned} \\
 >
 > - \\\ell\_\infty\\ norm:
 >
->   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty &= \max(\mathopen{}\left\|3\right\|\mathclose{}, \mathopen{}\left\|-4\right\|\mathclose{}) \\ &= 4. \end{aligned} \\
+>   \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_\infty &= \max(\mathopen{}\left\|3\right\|\mathclose{}, \mathopen{}\left\|-4\right\|\mathclose{}) \\ &= 4. \end{aligned} \\
 >
-> Notice that \\4 \le 5 \le 7\\. For any vector \\\tilde{x}\in \mathbb{R}^p\\, the norms satisfy the chain of inequalities:
+> Notice that \\4 \le 5 \le 7\\. For any vector \\\underset{\sim}{x}\in \mathbb{R}^p\\, the norms satisfy the chain of inequalities:
 >
-> \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1 \le \sqrt{p}\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 \le p\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty. \\
+> \\ \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_\infty \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_2 \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_1 \le \sqrt{p}\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_2 \le p\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_\infty. \\
 
 > **NOTE:**
 >
-> *Remark 3* (Unit balls and regularization in machine learning). The unit ball in \\\mathbb{R}^2\\ under the \\\ell_p\\ norm is the set \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^2 : \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \le 1\right\\\mathclose{}\\:
+> *Remark 3* (Unit balls and regularization in machine learning). The unit ball in \\\mathbb{R}^2\\ under the \\\ell_p\\ norm is the set \\\mathopen{}\left\\\underset{\sim}{x}\in \mathbb{R}^2 : \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k \le 1\right\\\mathclose{}\\:
 >
 > - For \\k = 1\\, the unit ball is a diamond (cross-polytope) with sharp vertices along the coordinate axes \\(\pm 1, 0)\\ and \\(0, \pm 1)\\.
 > - For \\k = 2\\, the unit ball is the smooth round Euclidean unit disk.
@@ -341,63 +341,63 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Infinity norm (\\\ell\_\infty\\ norm, maximum norm, Chebyshev norm))** For a vector \\\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\, the **infinity norm** (also the **\\\ell\_\infty\\ norm**, **maximum norm**, or **Chebyshev norm**) is defined separately from the \\p\\-norms ([Definition 5](#def-vector-p-norm)) by
+> **Definition 6 (Infinity norm (\\\ell\_\infty\\ norm, maximum norm, Chebyshev norm))** For a vector \\\underset{\sim}{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\, the **infinity norm** (also the **\\\ell\_\infty\\ norm**, **maximum norm**, or **Chebyshev norm**) is defined separately from the \\p\\-norms ([Definition 5](#def-vector-p-norm)) by
 >
-> \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\max\_{1 \le i \le p} \mathopen{}\left\|x_i\right\|\mathclose{}. \\
+> \\ \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\max\_{1 \le i \le p} \mathopen{}\left\|x_i\right\|\mathclose{}. \\
 
 > **NOTE:**
 >
-> **Theorem 5 (The \\\ell_1\\, \\\ell_2\\ and infinity norms, and the norm axioms)** Let \\\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\.
+> **Theorem 5 (The \\\ell_1\\, \\\ell_2\\ and infinity norms, and the norm axioms)** Let \\\underset{\sim}{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\.
 >
-> 1.  \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1 = \sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}\\, and \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 = \sqrt{\sum\_{i=1}^px_i^2}\\, which is the Euclidean norm ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)).
-> 2.  \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty = \lim\_{k \to \infty} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k\\.
+> 1.  \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_1 = \sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}\\, and \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_2 = \sqrt{\sum\_{i=1}^px_i^2}\\, which is the Euclidean norm ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)).
+> 2.  \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_\infty = \lim\_{k \to \infty} \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k\\.
 > 3.  For every real number \\k \ge 1\\, and for \\k = \infty\\, \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\_k\\ is a norm on \\\mathbb{R}^p\\ ([Definition 4](#def-norm)).
 
 > **NOTE:**
 >
 > *Proof*. **Part 1.** Setting \\k = 1\\ in [Definition 5](#def-vector-p-norm) gives \\\mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}\right)\mathclose{}^{1/1} = \sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}\\. Setting \\k = 2\\ gives \\\mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^2\right)\mathclose{}^{1/2}\\, and \\\mathopen{}\left\|x_i\right\|\mathclose{}^2 = x_i^2\\ for every real number \\x_i\\.
 >
-> **Part 2.** If \\\tilde{x}= \tilde{0}\\, every \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k\\ is \\0\\, and so is \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty\\. Otherwise, let \\M \stackrel{\text{def}}{=}\max_i \mathopen{}\left\|x_i\right\|\mathclose{} \> 0\\, and pick \\j\\ with \\\mathopen{}\left\|x_j\right\|\mathclose{} = M\\. Every term of \\\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\\ is at most \\M^k\\, and the \\j\\th term equals \\M^k\\, so
+> **Part 2.** If \\\underset{\sim}{x}= \underset{\sim}{0}\\, every \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k\\ is \\0\\, and so is \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_\infty\\. Otherwise, let \\M \stackrel{\text{def}}{=}\max_i \mathopen{}\left\|x_i\right\|\mathclose{} \> 0\\, and pick \\j\\ with \\\mathopen{}\left\|x_j\right\|\mathclose{} = M\\. Every term of \\\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\\ is at most \\M^k\\, and the \\j\\th term equals \\M^k\\, so
 >
 > \\ M^k \le \sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k \le p\\M^k. \\
 >
 > Taking the \\1/k\\ power, which preserves order on \\\[0, \infty)\\, gives
 >
-> \\ M \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \le p^{1/k} M. \\
+> \\ M \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k \le p^{1/k} M. \\
 >
-> As \\k \to \infty\\, \\p^{1/k} = \operatorname{exp}\mathopen{}\left\\\frac{\ln p}{k}\right\\\mathclose{} \to 1\\, so \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k\\ is squeezed between \\M\\ and a quantity that tends to \\M\\. Thus \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \to M = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty\\.
+> As \\k \to \infty\\, \\p^{1/k} = \operatorname{exp}\mathopen{}\left\\\frac{\ln p}{k}\right\\\mathclose{} \to 1\\, so \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k\\ is squeezed between \\M\\ and a quantity that tends to \\M\\. Thus \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k \to M = \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_\infty\\.
 >
 > **Part 3, finite \\k\\.**
 >
-> - *Positivity and definiteness.* Each term \\\mathopen{}\left\|x_i\right\|\mathclose{}^k\\ is at least \\0\\, so \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \ge 0\\. The sum \\\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\\ is \\0\\ exactly when every term is \\0\\, that is, when \\\tilde{x}= \tilde{0}\\.
+> - *Positivity and definiteness.* Each term \\\mathopen{}\left\|x_i\right\|\mathclose{}^k\\ is at least \\0\\, so \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k \ge 0\\. The sum \\\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\\ is \\0\\ exactly when every term is \\0\\, that is, when \\\underset{\sim}{x}= \underset{\sim}{0}\\.
 >
 > - *Absolute homogeneity.* For a number \\c\\,
 >
->   \\ \begin{aligned} \mathopen{}\left\lVert c\\\tilde{x}\right\rVert\mathclose{}\_k &= \mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|c\\x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k} && \text{(definition)} \\ &= \mathopen{}\left(\mathopen{}\left\|c\right\|\mathclose{}^k \sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k} && \text{(} \mathopen{}\left\|c\\x_i\right\|\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\|x_i\right\|\mathclose{} \text{, and factor out } \mathopen{}\left\|c\right\|\mathclose{}^k \text{)} \\ &= \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k. && \text{(take the } 1/k \text{ power of each factor)} \end{aligned} \\
+>   \\ \begin{aligned} \mathopen{}\left\lVert c\\\underset{\sim}{x}\right\rVert\mathclose{}\_k &= \mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|c\\x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k} && \text{(definition)} \\ &= \mathopen{}\left(\mathopen{}\left\|c\right\|\mathclose{}^k \sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k} && \text{(} \mathopen{}\left\|c\\x_i\right\|\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\|x_i\right\|\mathclose{} \text{, and factor out } \mathopen{}\left\|c\right\|\mathclose{}^k \text{)} \\ &= \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k. && \text{(take the } 1/k \text{ power of each factor)} \end{aligned} \\
 >
-> - *Triangle inequality.* Let \\\tilde{y}\in \mathbb{R}^p\\. If \\\tilde{x}= \tilde{0}\\ or \\\tilde{y}= \tilde{0}\\, both sides of \\\mathopen{}\left\lVert\tilde{x}+ \tilde{y}\right\rVert\mathclose{}\_k \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\_k\\ are equal. Otherwise, let \\a \stackrel{\text{def}}{=}\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \> 0\\, \\b \stackrel{\text{def}}{=}\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\_k \> 0\\, \\\lambda \stackrel{\text{def}}{=}\frac{a}{a + b}\\, \\\tilde{u} \stackrel{\text{def}}{=}\tilde{x}/ a\\ and \\\tilde{v} \stackrel{\text{def}}{=}\tilde{y}/ b\\. By absolute homogeneity, \\\mathopen{}\left\lVert\tilde{u}\right\rVert\mathclose{}\_k = \mathopen{}\left\lVert\tilde{v}\right\rVert\mathclose{}\_k = 1\\, and
+> - *Triangle inequality.* Let \\\underset{\sim}{y}\in \mathbb{R}^p\\. If \\\underset{\sim}{x}= \underset{\sim}{0}\\ or \\\underset{\sim}{y}= \underset{\sim}{0}\\, both sides of \\\mathopen{}\left\lVert\underset{\sim}{x}+ \underset{\sim}{y}\right\rVert\mathclose{}\_k \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\_k\\ are equal. Otherwise, let \\a \stackrel{\text{def}}{=}\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k \> 0\\, \\b \stackrel{\text{def}}{=}\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\_k \> 0\\, \\\lambda \stackrel{\text{def}}{=}\frac{a}{a + b}\\, \\\underset{\sim}{u} \stackrel{\text{def}}{=}\underset{\sim}{x}/ a\\ and \\\underset{\sim}{v} \stackrel{\text{def}}{=}\underset{\sim}{y}/ b\\. By absolute homogeneity, \\\mathopen{}\left\lVert\underset{\sim}{u}\right\rVert\mathclose{}\_k = \mathopen{}\left\lVert\underset{\sim}{v}\right\rVert\mathclose{}\_k = 1\\, and
 >
->   \\ \frac{\tilde{x}+ \tilde{y}}{a + b} = \lambda\\\tilde{u} + (1 - \lambda)\\\tilde{v}. \\
+>   \\ \frac{\underset{\sim}{x}+ \underset{\sim}{y}}{a + b} = \lambda\\\underset{\sim}{u} + (1 - \lambda)\\\underset{\sim}{v}. \\
 >
 >   The function \\s \mapsto s^k\\ is non-decreasing and convex on \\\[0, \infty)\\ (its second derivative \\k (k - 1) s^{k - 2}\\ is nonnegative). So for each coordinate \\i\\,
 >
 >   \\ \begin{aligned} \mathopen{}\left\|\lambda u_i + (1 - \lambda) v_i\right\|\mathclose{}^k &\le \mathopen{}\left(\lambda \mathopen{}\left\|u_i\right\|\mathclose{} + (1 - \lambda) \mathopen{}\left\|v_i\right\|\mathclose{}\right)\mathclose{}^k && \text{(triangle inequality for numbers; } s^k \text{ is non-decreasing)} \\ &\le \lambda \mathopen{}\left\|u_i\right\|\mathclose{}^k + (1 - \lambda) \mathopen{}\left\|v_i\right\|\mathclose{}^k. && \text{(} s^k \text{ is convex)} \end{aligned} \\
 >
->   Summing over \\i\\, and using \\\sum\_{i=1}^p\mathopen{}\left\|u_i\right\|\mathclose{}^k = \mathopen{}\left\lVert\tilde{u}\right\rVert\mathclose{}\_k^k = 1\\ and likewise for \\\tilde{v}\\,
+>   Summing over \\i\\, and using \\\sum\_{i=1}^p\mathopen{}\left\|u_i\right\|\mathclose{}^k = \mathopen{}\left\lVert\underset{\sim}{u}\right\rVert\mathclose{}\_k^k = 1\\ and likewise for \\\underset{\sim}{v}\\,
 >
->   \\ \mathopen{}\left\lVert\lambda\\\tilde{u} + (1 - \lambda)\\\tilde{v}\right\rVert\mathclose{}\_k^k \le \lambda + (1 - \lambda) = 1. \\
+>   \\ \mathopen{}\left\lVert\lambda\\\underset{\sim}{u} + (1 - \lambda)\\\underset{\sim}{v}\right\rVert\mathclose{}\_k^k \le \lambda + (1 - \lambda) = 1. \\
 >
->   So \\\mathopen{}\left\lVert\tilde{x}+ \tilde{y}\right\rVert\mathclose{}\_k / (a + b) \le 1\\ by absolute homogeneity, that is, \\\mathopen{}\left\lVert\tilde{x}+ \tilde{y}\right\rVert\mathclose{}\_k \le a + b\\.
+>   So \\\mathopen{}\left\lVert\underset{\sim}{x}+ \underset{\sim}{y}\right\rVert\mathclose{}\_k / (a + b) \le 1\\ by absolute homogeneity, that is, \\\mathopen{}\left\lVert\underset{\sim}{x}+ \underset{\sim}{y}\right\rVert\mathclose{}\_k \le a + b\\.
 >
-> **Part 3, \\k = \infty\\.** Every \\\mathopen{}\left\|x_i\right\|\mathclose{}\\ is at least \\0\\, and the largest of them is \\0\\ exactly when \\\tilde{x}= \tilde{0}\\. For a number \\c\\, \\\max_i \mathopen{}\left\|c\\x_i\right\|\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{} \max_i \mathopen{}\left\|x_i\right\|\mathclose{}\\. For each \\i\\,
+> **Part 3, \\k = \infty\\.** Every \\\mathopen{}\left\|x_i\right\|\mathclose{}\\ is at least \\0\\, and the largest of them is \\0\\ exactly when \\\underset{\sim}{x}= \underset{\sim}{0}\\. For a number \\c\\, \\\max_i \mathopen{}\left\|c\\x_i\right\|\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{} \max_i \mathopen{}\left\|x_i\right\|\mathclose{}\\. For each \\i\\,
 >
-> \\ \begin{aligned} \mathopen{}\left\|x_i + y_i\right\|\mathclose{} &\le \mathopen{}\left\|x_i\right\|\mathclose{} + \mathopen{}\left\|y_i\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\_\infty, && \text{(each is at most the maximum)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\|x_i + y_i\right\|\mathclose{} &\le \mathopen{}\left\|x_i\right\|\mathclose{} + \mathopen{}\left\|y_i\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_\infty + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\_\infty, && \text{(each is at most the maximum)} \end{aligned} \\
 >
-> and taking the maximum over \\i\\ on the left gives \\\mathopen{}\left\lVert\tilde{x}+ \tilde{y}\right\rVert\mathclose{}\_\infty \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\_\infty\\.
+> and taking the maximum over \\i\\ on the left gives \\\mathopen{}\left\lVert\underset{\sim}{x}+ \underset{\sim}{y}\right\rVert\mathclose{}\_\infty \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_\infty + \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\_\infty\\.
 
 > **NOTE:**
 >
-> **Example 12 (The \\\ell_k\\ norm approaches the maximum norm as \\k\\ grows)** Take \\\tilde{x}= (3, -4)\\ and \\\tilde{y}= (-1, 5)\\ in \\\mathbb{R}^2\\. The code computes \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k\\ for several values of \\k\\, including \\k = \infty\\ as the maximum, and checks the triangle inequality for \\\tilde{x}\\ and \\\tilde{y}\\ at each of them.
+> **Example 12 (The \\\ell_k\\ norm approaches the maximum norm as \\k\\ grows)** Take \\\underset{\sim}{x}= (3, -4)\\ and \\\underset{\sim}{y}= (-1, 5)\\ in \\\mathbb{R}^2\\. The code computes \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_k\\ for several values of \\k\\, including \\k = \infty\\ as the maximum, and checks the triangle inequality for \\\underset{\sim}{x}\\ and \\\underset{\sim}{y}\\ at each of them.
 >
 > ``` downlit
 > lk_norm <- function(x, k) {
@@ -419,9 +419,9 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Angle between two vectors)** The **angle** between two nonzero vectors \\\tilde{x}, \tilde{y} \in \mathbb{R}^p\\ is the unique number \\\theta\in \[0, \pi\]\\ whose cosine ([Definition 3 in Trigonometry](algebra-trigonometry.llms.md#def-cosine-sine)) satisfies
+> **Definition 7 (Angle between two vectors)** The **angle** between two nonzero vectors \\\underset{\sim}{x}, \underset{\sim}{y} \in \mathbb{R}^p\\ is the unique number \\\theta\in \[0, \pi\]\\ whose cosine ([Definition 3 in Trigonometry](algebra-trigonometry.llms.md#def-cosine-sine)) satisfies
 >
-> \\ \cos\theta= \frac{\tilde{x} \cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
+> \\ \cos\theta= \frac{\underset{\sim}{x} \cdot \underset{\sim}{y}}{\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}}. \\
 
 > **NOTE:**
 >
@@ -429,15 +429,15 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Corollary 1 (A right angle means orthogonal)** For nonzero vectors \\\tilde{x}, \tilde{y} \in \mathbb{R}^p\\ with angle \\\theta\\ ([Definition 7](#def-angle)),
+> **Corollary 1 (A right angle means orthogonal)** For nonzero vectors \\\underset{\sim}{x}, \underset{\sim}{y} \in \mathbb{R}^p\\ with angle \\\theta\\ ([Definition 7](#def-angle)),
 >
-> \\ \theta= \frac{\pi}{2} \quad\Longleftrightarrow\quad \tilde{x} \cdot \tilde{y} = 0, \\
+> \\ \theta= \frac{\pi}{2} \quad\Longleftrightarrow\quad \underset{\sim}{x} \cdot \underset{\sim}{y} = 0, \\
 >
 > so for nonzero vectors, orthogonal ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) means at a right angle.
 
 > **NOTE:**
 >
-> *Proof*. Since \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} \> 0\\ ([Theorem 1](#thm-norm-properties)), \\\cos\theta= 0\\ exactly when \\\tilde{x} \cdot \tilde{y} = 0\\. On \\\[0, \pi\]\\, \\\cos\\ vanishes only at \\\pi/2\\.
+> *Proof*. Since \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} \> 0\\ ([Theorem 1](#thm-norm-properties)), \\\cos\theta= 0\\ exactly when \\\underset{\sim}{x} \cdot \underset{\sim}{y} = 0\\. On \\\[0, \pi\]\\, \\\cos\\ vanishes only at \\\pi/2\\.
 
 > **NOTE:**
 >
@@ -457,83 +457,83 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 >
 >   so \\\theta= \pi\\.
 >
-> - \\(1, 0)\\ and \\\tilde{0}\\: there is no angle, because the ratio would divide by \\\mathopen{}\left\lVert\tilde{0}\right\rVert\mathclose{} = 0\\.
+> - \\(1, 0)\\ and \\\underset{\sim}{0}\\: there is no angle, because the ratio would divide by \\\mathopen{}\left\lVert\underset{\sim}{0}\right\rVert\mathclose{} = 0\\.
 
 > **NOTE:**
 >
-> **Definition 8 (Cosine similarity)** The **cosine similarity** between two nonzero vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ is their dot product divided by the product of their lengths:
+> **Definition 8 (Cosine similarity)** The **cosine similarity** between two nonzero vectors \\\underset{\sim}{x}, \underset{\sim}{y}\in \mathbb{R}^p\\ is their dot product divided by the product of their lengths:
 >
-> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\tilde{x}\cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
+> \\ \operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) \stackrel{\text{def}}{=}\frac{\underset{\sim}{x}\cdot \underset{\sim}{y}}{\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}}. \\
 
 > **NOTE:**
 >
 > **Example 14 (Cosine similarity of parallel, orthogonal, and arbitrary vectors)** For vectors in \\\mathbb{R}^2\\:
 >
-> - Parallel vectors \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (2, 4)\\:
+> - Parallel vectors \\\underset{\sim}{x}= (1, 2)\\ and \\\underset{\sim}{y}= (2, 4)\\:
 >
->   \\ \begin{aligned} \operatorname{cossim}(\tilde{x}, \tilde{y}) &= \frac{2 + 8}{\sqrt{5}\\\sqrt{20}} \\ &= \frac{10}{10} \\ &= 1. \end{aligned} \\
+>   \\ \begin{aligned} \operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) &= \frac{2 + 8}{\sqrt{5}\\\sqrt{20}} \\ &= \frac{10}{10} \\ &= 1. \end{aligned} \\
 >
-> - Orthogonal vectors \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (-2, 1)\\:
+> - Orthogonal vectors \\\underset{\sim}{x}= (1, 2)\\ and \\\underset{\sim}{y}= (-2, 1)\\:
 >
->   \\ \begin{aligned} \operatorname{cossim}(\tilde{x}, \tilde{y}) &= \frac{-2 + 2}{\sqrt{5}\\\sqrt{5}} \\ &= \frac{0}{5} \\ &= 0. \end{aligned} \\
+>   \\ \begin{aligned} \operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) &= \frac{-2 + 2}{\sqrt{5}\\\sqrt{5}} \\ &= \frac{0}{5} \\ &= 0. \end{aligned} \\
 >
-> - Arbitrary vectors \\\tilde{x}= (1, 0)\\ and \\\tilde{y}= (1, 1)\\:
+> - Arbitrary vectors \\\underset{\sim}{x}= (1, 0)\\ and \\\underset{\sim}{y}= (1, 1)\\:
 >
->   \\ \begin{aligned} \operatorname{cossim}(\tilde{x}, \tilde{y}) &= \frac{1 \cdot 1 + 0 \cdot 1}{1 \cdot\sqrt{2}} \\ &= \frac{1}{\sqrt{2}}. \end{aligned} \\
+>   \\ \begin{aligned} \operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) &= \frac{1 \cdot 1 + 0 \cdot 1}{1 \cdot\sqrt{2}} \\ &= \frac{1}{\sqrt{2}}. \end{aligned} \\
 >
-> When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\\.
+> When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) = \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Corollary 2 (Cosine similarity is the cosine of the angle)** For nonzero vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ with angle \\\theta\\ between them ([Definition 7](#def-angle)),
+> **Corollary 2 (Cosine similarity is the cosine of the angle)** For nonzero vectors \\\underset{\sim}{x}, \underset{\sim}{y}\in \mathbb{R}^p\\ with angle \\\theta\\ between them ([Definition 7](#def-angle)),
 >
-> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \cos\theta. \\
+> \\ \operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) = \cos\theta. \\
 
 > **NOTE:**
 >
-> *Proof*. The ratio that [Definition 7](#def-angle) sets equal to \\\cos\theta\\ is the ratio that [Definition 8](#def-cosine-similarity) defines as \\\operatorname{cossim}(\tilde{x}, \tilde{y})\\.
+> *Proof*. The ratio that [Definition 7](#def-angle) sets equal to \\\cos\theta\\ is the ratio that [Definition 8](#def-cosine-similarity) defines as \\\operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y})\\.
 
 > **NOTE:**
 >
 > **Definition 9 (Cosine similarity in an inner product space)** In a general real inner product space ([Definition 2](#def-inner-product-space)) with inner product \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\ and induced norm \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\, the **cosine similarity** is
 >
-> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
+> \\ \operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) \stackrel{\text{def}}{=}\frac{\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}}{\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}}. \\
 
 > **NOTE:**
 >
-> **Corollary 3 (Cosine similarity of unit vectors is their inner product)** In a real inner product space ([Definition 2](#def-inner-product-space)), for all vectors \\\tilde{x}\\ and \\\tilde{y}\\ with \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\,
+> **Corollary 3 (Cosine similarity of unit vectors is their inner product)** In a real inner product space ([Definition 2](#def-inner-product-space)), for all vectors \\\underset{\sim}{x}\\ and \\\underset{\sim}{y}\\ with \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} = 1\\,
 >
-> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}. \\
+> \\ \operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) = \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}. \\
 
 > **NOTE:**
 >
 > *Proof*. Both norms in the denominator of [Definition 9](#def-cosine-similarity-inner-product-space) equal \\1\\, so
 >
-> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}}{1 \cdot 1} = \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}. \\
+> \\ \operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) = \frac{\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}}{1 \cdot 1} = \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}. \\
 
 > **NOTE:**
 >
-> **Theorem 6 (Pearson correlation is the cosine similarity of the centered vectors)** Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^n\\ be two vectors that are not constant, with means \\\bar{x} = \frac{1}{n}\sum\_{i=1}^nx_i\\ and \\\bar{y} = \frac{1}{n}\sum\_{i=1}^ny_i\\. Write \\\tilde{\tilde{x}} = \tilde{x}- \bar{x}\\\tilde{1}\\ and \\\tilde{\tilde{y}} = \tilde{y}- \bar{y}\\\tilde{1}\\ for the **centered** vectors, whose means are zero. Then the [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) \\r\\ of the \\n\\ pairs \\(x_i, y_i)\\ is the cosine similarity ([Definition 8](#def-cosine-similarity)) of the centered vectors:
+> **Theorem 6 (Pearson correlation is the cosine similarity of the centered vectors)** Let \\\underset{\sim}{x}, \underset{\sim}{y}\in \mathbb{R}^n\\ be two vectors that are not constant, with means \\\bar{x} = \frac{1}{n}\sum\_{i=1}^nx_i\\ and \\\bar{y} = \frac{1}{n}\sum\_{i=1}^ny_i\\. Write \\{\underset{\sim}{x}}^{\mathrm{c}} = \underset{\sim}{x}- \bar{x}\\\underset{\sim}{1}\\ and \\{\underset{\sim}{y}}^{\mathrm{c}} = \underset{\sim}{y}- \bar{y}\\\underset{\sim}{1}\\ for the **centered** vectors, whose means are zero. Then the [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) \\r\\ of the \\n\\ pairs \\(x_i, y_i)\\ is the cosine similarity ([Definition 8](#def-cosine-similarity)) of the centered vectors:
 >
-> \\ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}). \\
+> \\ r = \operatorname{cossim}({\underset{\sim}{x}}^{\mathrm{c}}, {\underset{\sim}{y}}^{\mathrm{c}}). \\
 
 > **NOTE:**
 >
-> *Proof*. Entry \\i\\ of \\\tilde{\tilde{x}}\\ is \\x_i - \bar{x}\\, and entry \\i\\ of \\\tilde{\tilde{y}}\\ is \\y_i - \bar{y}\\. Neither centered vector is zero, because neither \\\tilde{x}\\ nor \\\tilde{y}\\ is constant, so the cosine similarity is defined. The three pieces of the cosine similarity are
+> *Proof*. Entry \\i\\ of \\{\underset{\sim}{x}}^{\mathrm{c}}\\ is \\x_i - \bar{x}\\, and entry \\i\\ of \\{\underset{\sim}{y}}^{\mathrm{c}}\\ is \\y_i - \bar{y}\\. Neither centered vector is zero, because neither \\\underset{\sim}{x}\\ nor \\\underset{\sim}{y}\\ is constant, so the cosine similarity is defined. The three pieces of the cosine similarity are
 >
-> \\ \begin{aligned} \tilde{\tilde{x}} \cdot \tilde{\tilde{y}} &= \sum\_{i=1}^n(x_i - \bar{x})(y_i - \bar{y}), \\ \mathopen{}\left\lVert\tilde{\tilde{x}}\right\rVert\mathclose{} &= \sqrt{\sum\_{i=1}^n(x_i - \bar{x})^2}, \\ \mathopen{}\left\lVert\tilde{\tilde{y}}\right\rVert\mathclose{} &= \sqrt{\sum\_{i=1}^n(y_i - \bar{y})^2}, \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\mathrm{c}} \cdot {\underset{\sim}{y}}^{\mathrm{c}} &= \sum\_{i=1}^n(x_i - \bar{x})(y_i - \bar{y}), \\ \mathopen{}\left\lVert{\underset{\sim}{x}}^{\mathrm{c}}\right\rVert\mathclose{} &= \sqrt{\sum\_{i=1}^n(x_i - \bar{x})^2}, \\ \mathopen{}\left\lVert{\underset{\sim}{y}}^{\mathrm{c}}\right\rVert\mathclose{} &= \sqrt{\sum\_{i=1}^n(y_i - \bar{y})^2}, \end{aligned} \\
 >
 > by the definitions of the dot product and the Euclidean norm. Dividing the first by the product of the other two gives the formula for \\r\\.
 
 > **NOTE:**
 >
-> **Example 15 (Centering changes the cosine similarity)** Take \\\tilde{x}= (1, 2, 3)\\ and \\\tilde{y}= (1, 3, 2)\\. Their means are \\\bar{x} = \bar{y} = 2\\, so \\\tilde{\tilde{x}} = (-1, 0, 1)\\ and \\\tilde{\tilde{y}} = (-1, 1, 0)\\. Then
+> **Example 15 (Centering changes the cosine similarity)** Take \\\underset{\sim}{x}= (1, 2, 3)\\ and \\\underset{\sim}{y}= (1, 3, 2)\\. Their means are \\\bar{x} = \bar{y} = 2\\, so \\{\underset{\sim}{x}}^{\mathrm{c}} = (-1, 0, 1)\\ and \\{\underset{\sim}{y}}^{\mathrm{c}} = (-1, 1, 0)\\. Then
 >
-> \\ \begin{aligned} \tilde{\tilde{x}} \cdot \tilde{\tilde{y}} &= 1 + 0 + 0 = 1, \\ \mathopen{}\left\lVert\tilde{\tilde{x}}\right\rVert\mathclose{} &= \mathopen{}\left\lVert\tilde{\tilde{y}}\right\rVert\mathclose{} = \sqrt{2}, \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\mathrm{c}} \cdot {\underset{\sim}{y}}^{\mathrm{c}} &= 1 + 0 + 0 = 1, \\ \mathopen{}\left\lVert{\underset{\sim}{x}}^{\mathrm{c}}\right\rVert\mathclose{} &= \mathopen{}\left\lVert{\underset{\sim}{y}}^{\mathrm{c}}\right\rVert\mathclose{} = \sqrt{2}, \end{aligned} \\
 >
-> so \\r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}) = 1 / 2\\.
+> so \\r = \operatorname{cossim}({\underset{\sim}{x}}^{\mathrm{c}}, {\underset{\sim}{y}}^{\mathrm{c}}) = 1 / 2\\.
 >
-> Without centering, \\\tilde{x}\cdot \tilde{y}= 1 + 6 + 6 = 13\\ and \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = \sqrt{14}\\, so \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = 13 / 14\\. The uncentered value is close to \\1\\ mostly because both vectors have positive entries and the same mean, not because they move together.
+> Without centering, \\\underset{\sim}{x}\cdot \underset{\sim}{y}= 1 + 6 + 6 = 13\\ and \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} = \sqrt{14}\\, so \\\operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) = 13 / 14\\. The uncentered value is close to \\1\\ mostly because both vectors have positive entries and the same mean, not because they move together.
 
 ## 3 Orthonormal bases and Gram-Schmidt
 
@@ -543,33 +543,33 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 7 (The dot product of a vector with a linear combination)** For vectors \\\tilde{x}, \tilde{u}\_1, \ldots, \tilde{u}\_k \in \mathbb{R}^p\\ and numbers \\c_1, \ldots, c_k\\, with \\k \ge 1\\,
+> **Theorem 7 (The dot product of a vector with a linear combination)** For vectors \\\underset{\sim}{x}, \underset{\sim}{u}\_1, \ldots, \underset{\sim}{u}\_k \in \mathbb{R}^p\\ and numbers \\c_1, \ldots, c_k\\, with \\k \ge 1\\,
 >
-> \\ \tilde{x} \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{u}\_j\right)\mathclose{} = \sum\_{j=1}^{k} c_j\\(\tilde{x} \cdot \tilde{u}\_j). \\
+> \\ \underset{\sim}{x} \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \underset{\sim}{u}\_j\right)\mathclose{} = \sum\_{j=1}^{k} c_j\\(\underset{\sim}{x} \cdot \underset{\sim}{u}\_j). \\
 
 > **NOTE:**
 >
-> *Proof*. Write \\u\_{ji}\\ for entry \\i\\ of \\\tilde{u}\_j\\. Then
+> *Proof*. Write \\u\_{ji}\\ for entry \\i\\ of \\\underset{\sim}{u}\_j\\. Then
 >
-> \\ \begin{aligned} \tilde{x} \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{u}\_j\right)\mathclose{} &= \sum\_{i=1}^px_i \sum\_{j=1}^{k} c_j u\_{ji} && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{, }\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~9 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^{k} x_i c_j u\_{ji} && \text{(distribute each } x_i \text{ over the inner sum)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^px_i c_j u\_{ji} && \text{(swap the order of the finite sums)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^pc_j x_i u\_{ji} && \text{(commute the factors in each product)} \\ &= \sum\_{j=1}^{k} c_j \sum\_{i=1}^px_i u\_{ji} && \text{(factor } c_j \text{ out of the inner sum)} \\ &= \sum\_{j=1}^{k} c_j\\(\tilde{x} \cdot \tilde{u}\_j). && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{x} \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \underset{\sim}{u}\_j\right)\mathclose{} &= \sum\_{i=1}^px_i \sum\_{j=1}^{k} c_j u\_{ji} && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{, }\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~9 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^{k} x_i c_j u\_{ji} && \text{(distribute each } x_i \text{ over the inner sum)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^px_i c_j u\_{ji} && \text{(swap the order of the finite sums)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^pc_j x_i u\_{ji} && \text{(commute the factors in each product)} \\ &= \sum\_{j=1}^{k} c_j \sum\_{i=1}^px_i u\_{ji} && \text{(factor } c_j \text{ out of the inner sum)} \\ &= \sum\_{j=1}^{k} c_j\\(\underset{\sim}{x} \cdot \underset{\sim}{u}\_j). && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 16 (Dotting with a combination of three vectors)** Let \\\tilde{x} = (1, 2, 3)\\ and take the combination \\2\\(1, 0, 0) - (0, 1, 0) + 4\\(0, 0, 1) = (2, -1, 4)\\. Directly,
+> **Example 16 (Dotting with a combination of three vectors)** Let \\\underset{\sim}{x} = (1, 2, 3)\\ and take the combination \\2\\(1, 0, 0) - (0, 1, 0) + 4\\(0, 0, 1) = (2, -1, 4)\\. Directly,
 >
-> \\ \begin{aligned} \tilde{x} \cdot (2, -1, 4) &= 2 - 2 + 12 \\ &= 12. \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{x} \cdot (2, -1, 4) &= 2 - 2 + 12 \\ &= 12. \end{aligned} \\
 >
 > By [Theorem 7](#thm-dot-linear-sum), \\2 \cdot 1 - 1 \cdot 2 + 4 \cdot 3 = 12\\, the same number.
 
 > **NOTE:**
 >
-> **Theorem 8 (Orthonormal vectors are linearly independent)** If \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), then they are linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
+> **Theorem 8 (Orthonormal vectors are linearly independent)** If \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_k\\ are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), then they are linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
 
 > **NOTE:**
 >
-> *Proof*. Suppose \\\sum\_{j=1}^{k} c_j \tilde{q}\_j = \tilde{0}\\, and fix any \\i\\ between \\1\\ and \\k\\. Then
+> *Proof*. Suppose \\\sum\_{j=1}^{k} c_j \underset{\sim}{q}\_j = \underset{\sim}{0}\\, and fix any \\i\\ between \\1\\ and \\k\\. Then
 >
-> \\ \begin{aligned} 0 &= \tilde{q}\_i \cdot \tilde{0} && \text{(every term of the dot product is } 0 \text{)} \\ &= \tilde{q}\_i \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{q}\_j\right)\mathclose{} && \text{(substitute the supposed equation)} \\ &= \sum\_{j=1}^{k} c_j\\(\tilde{q}\_i \cdot \tilde{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= c_i. && \text{(} \tilde{q}\_i \cdot \tilde{q}\_j \text{ is } 1 \text{ if } j = i \text{ and } 0 \text{ otherwise)} \end{aligned} \\
+> \\ \begin{aligned} 0 &= \underset{\sim}{q}\_i \cdot \underset{\sim}{0} && \text{(every term of the dot product is } 0 \text{)} \\ &= \underset{\sim}{q}\_i \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \underset{\sim}{q}\_j\right)\mathclose{} && \text{(substitute the supposed equation)} \\ &= \sum\_{j=1}^{k} c_j\\(\underset{\sim}{q}\_i \cdot \underset{\sim}{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= c_i. && \text{(} \underset{\sim}{q}\_i \cdot \underset{\sim}{q}\_j \text{ is } 1 \text{ if } j = i \text{ and } 0 \text{ otherwise)} \end{aligned} \\
 >
 > So every \\c_i = 0\\.
 
@@ -577,19 +577,19 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 >
 > **Example 17 (Three orthonormal vectors in \\\mathbb{R}^3\\)** Let
 >
-> \\ \tilde{q}\_1 = (0, 0, 1), \quad \tilde{q}\_2 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0), \quad \tilde{q}\_3 = \tfrac{1}{\sqrt{2}}\\(1, -1, 0). \\
+> \\ \underset{\sim}{q}\_1 = (0, 0, 1), \quad \underset{\sim}{q}\_2 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0), \quad \underset{\sim}{q}\_3 = \tfrac{1}{\sqrt{2}}\\(1, -1, 0). \\
 >
 > Each has norm \\1\\:
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{q}\_2\right\rVert\mathclose{}^2 &= \tfrac{1}{2}\\(1 + 1 + 0) \\ &= 1, \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{q}\_2\right\rVert\mathclose{}^2 &= \tfrac{1}{2}\\(1 + 1 + 0) \\ &= 1, \end{aligned} \\
 >
-> and likewise for the others. They are mutually orthogonal: \\\tilde{q}\_1 \cdot \tilde{q}\_2 = 0\\ and \\\tilde{q}\_1 \cdot \tilde{q}\_3 = 0\\, because \\\tilde{q}\_1\\ has its only nonzero entry where the others have \\0\\, and
+> and likewise for the others. They are mutually orthogonal: \\\underset{\sim}{q}\_1 \cdot \underset{\sim}{q}\_2 = 0\\ and \\\underset{\sim}{q}\_1 \cdot \underset{\sim}{q}\_3 = 0\\, because \\\underset{\sim}{q}\_1\\ has its only nonzero entry where the others have \\0\\, and
 >
-> \\ \begin{aligned} \tilde{q}\_2 \cdot \tilde{q}\_3 &= \tfrac{1}{2}\\(1 - 1 + 0) \\ &= 0. \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_2 \cdot \underset{\sim}{q}\_3 &= \tfrac{1}{2}\\(1 - 1 + 0) \\ &= 0. \end{aligned} \\
 >
-> So by [Theorem 8](#thm-orthonormal-independent) they are linearly independent, with no need to solve \\c_1 \tilde{q}\_1 + c_2 \tilde{q}\_2 + c_3 \tilde{q}\_3 = \tilde{0}\\.
+> So by [Theorem 8](#thm-orthonormal-independent) they are linearly independent, with no need to solve \\c_1 \underset{\sim}{q}\_1 + c_2 \underset{\sim}{q}\_2 + c_3 \underset{\sim}{q}\_3 = \underset{\sim}{0}\\.
 >
-> The converse fails: \\(1, 0)\\ and \\(1, 1)\\ are linearly independent, since \\c_1 (1, 0) + c_2 (1, 1) = (c_1 + c_2, c_2)\\ is \\\tilde{0}\\ only if \\c_2 = 0\\ and then \\c_1 = 0\\, but they are not orthonormal, since \\(1, 0) \cdot (1, 1) = 1 \ne 0\\.
+> The converse fails: \\(1, 0)\\ and \\(1, 1)\\ are linearly independent, since \\c_1 (1, 0) + c_2 (1, 1) = (c_1 + c_2, c_2)\\ is \\\underset{\sim}{0}\\ only if \\c_2 = 0\\ and then \\c_1 = 0\\, but they are not orthonormal, since \\(1, 0) \cdot (1, 1) = 1 \ne 0\\.
 
 > **NOTE:**
 >
@@ -599,9 +599,9 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 >
 > **Example 18 (Orthonormal bases of \\\mathbb{R}^3\\)**  
 >
-> - The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \tilde{e}\_3\\ are orthonormal
+> - The indicator vectors \\\underset{\sim}{e}\_1, \underset{\sim}{e}\_2, \underset{\sim}{e}\_3\\ are orthonormal
 >   2.  and a basis of \\\mathbb{R}^3\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
-> - The vectors \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ of [Example 17](#exm-orthonormal-independent) are orthonormal and linearly independent, so they are a basis of their span ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)), which therefore has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and is all of \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). So they are an orthonormal basis of \\\mathbb{R}^3\\ too.
+> - The vectors \\\underset{\sim}{q}\_1, \underset{\sim}{q}\_2, \underset{\sim}{q}\_3\\ of [Example 17](#exm-orthonormal-independent) are orthonormal and linearly independent, so they are a basis of their span ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)), which therefore has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and is all of \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). So they are an orthonormal basis of \\\mathbb{R}^3\\ too.
 
 > **NOTE:**
 >
@@ -612,130 +612,130 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 9 (Coordinates in an orthonormal basis are dot products)** If \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ is an orthonormal basis of a subspace \\\mathcal{S}\\ ([Definition 10](#def-orthonormal-basis)), then every \\\tilde{x} \in \mathcal{S}\\ satisfies
+> **Theorem 9 (Coordinates in an orthonormal basis are dot products)** If \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_k\\ is an orthonormal basis of a subspace \\\mathcal{S}\\ ([Definition 10](#def-orthonormal-basis)), then every \\\underset{\sim}{x} \in \mathcal{S}\\ satisfies
 >
-> \\ \tilde{x} = \sum\_{i=1}^{k} (\tilde{q}\_i \cdot \tilde{x})\\\tilde{q}\_i. \\
+> \\ \underset{\sim}{x} = \sum\_{i=1}^{k} (\underset{\sim}{q}\_i \cdot \underset{\sim}{x})\\\underset{\sim}{q}\_i. \\
 
 > **NOTE:**
 >
-> *Proof*. The basis spans \\\mathcal{S}\\, so \\\tilde{x} = \sum\_{j=1}^{k} c_j \tilde{q}\_j\\ for some numbers \\c_j\\. For each \\i\\,
+> *Proof*. The basis spans \\\mathcal{S}\\, so \\\underset{\sim}{x} = \sum\_{j=1}^{k} c_j \underset{\sim}{q}\_j\\ for some numbers \\c_j\\. For each \\i\\,
 >
-> \\ \begin{aligned} \tilde{q}\_i \cdot \tilde{x} &= \tilde{q}\_i \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{q}\_j\right)\mathclose{} && \text{(substitute)} \\ &= \sum\_{j=1}^{k} c_j\\(\tilde{q}\_i \cdot \tilde{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= c_i, && \text{(}\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~19 in Vectors}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_i \cdot \underset{\sim}{x} &= \underset{\sim}{q}\_i \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \underset{\sim}{q}\_j\right)\mathclose{} && \text{(substitute)} \\ &= \sum\_{j=1}^{k} c_j\\(\underset{\sim}{q}\_i \cdot \underset{\sim}{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= c_i, && \text{(}\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~19 in Vectors}}\text{)} \end{aligned} \\
 >
-> so each coefficient \\c_i\\ is \\\tilde{q}\_i \cdot \tilde{x}\\.
+> so each coefficient \\c_i\\ is \\\underset{\sim}{q}\_i \cdot \underset{\sim}{x}\\.
 
 > **NOTE:**
 >
-> **Example 20 (Expanding a vector in an orthonormal basis)** With the orthonormal basis \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ of \\\mathbb{R}^3\\ from [Example 18](#exm-orthonormal-basis) and \\\tilde{x} = (1, 2, 3)\\: \\\tilde{q}\_1 \cdot \tilde{x} = 3\\,
+> **Example 20 (Expanding a vector in an orthonormal basis)** With the orthonormal basis \\\underset{\sim}{q}\_1, \underset{\sim}{q}\_2, \underset{\sim}{q}\_3\\ of \\\mathbb{R}^3\\ from [Example 18](#exm-orthonormal-basis) and \\\underset{\sim}{x} = (1, 2, 3)\\: \\\underset{\sim}{q}\_1 \cdot \underset{\sim}{x} = 3\\,
 >
-> \\ \begin{aligned} \tilde{q}\_2 \cdot \tilde{x} &= \tfrac{1}{\sqrt{2}}\\(1 + 2) \\ &= \tfrac{3}{\sqrt{2}} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_2 \cdot \underset{\sim}{x} &= \tfrac{1}{\sqrt{2}}\\(1 + 2) \\ &= \tfrac{3}{\sqrt{2}} \end{aligned} \\
 >
 > and
 >
-> \\ \begin{aligned} \tilde{q}\_3 \cdot \tilde{x} &= \tfrac{1}{\sqrt{2}}\\(1 - 2) \\ &= -\tfrac{1}{\sqrt{2}}. \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_3 \cdot \underset{\sim}{x} &= \tfrac{1}{\sqrt{2}}\\(1 - 2) \\ &= -\tfrac{1}{\sqrt{2}}. \end{aligned} \\
 >
 > Then
 >
-> \\ \begin{aligned} \sum\_{i=1}^{3} (\tilde{q}\_i \cdot \tilde{x})\\\tilde{q}\_i &= 3\\(0, 0, 1) + \tfrac{3}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, -1, 0) && \text{(substitute)} \\ &= (0, 0, 3) + \mathopen{}\left(\tfrac{3}{2}, \tfrac{3}{2}, 0\right)\mathclose{} + \mathopen{}\left(-\tfrac{1}{2}, \tfrac{1}{2}, 0\right)\mathclose{} && \text{(multiply out each term)} \\ &= (1, 2, 3), && \text{(add entrywise)} \end{aligned} \\
+> \\ \begin{aligned} \sum\_{i=1}^{3} (\underset{\sim}{q}\_i \cdot \underset{\sim}{x})\\\underset{\sim}{q}\_i &= 3\\(0, 0, 1) + \tfrac{3}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, -1, 0) && \text{(substitute)} \\ &= (0, 0, 3) + \mathopen{}\left(\tfrac{3}{2}, \tfrac{3}{2}, 0\right)\mathclose{} + \mathopen{}\left(-\tfrac{1}{2}, \tfrac{1}{2}, 0\right)\mathclose{} && \text{(multiply out each term)} \\ &= (1, 2, 3), && \text{(add entrywise)} \end{aligned} \\
 >
-> which is \\\tilde{x}\\, as [Theorem 9](#thm-orthonormal-expansion) says.
+> which is \\\underset{\sim}{x}\\, as [Theorem 9](#thm-orthonormal-expansion) says.
 
 > **NOTE:**
 >
-> **Definition 11 (Gram-Schmidt process)** The **Gram-Schmidt process** takes vectors \\\tilde{a}\_1, \ldots, \tilde{a}\_k \in \mathbb{R}^p\\ and, for \\i = 1, 2, \ldots, k\\ in turn:
+> **Definition 11 (Gram-Schmidt process)** The **Gram-Schmidt process** takes vectors \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k \in \mathbb{R}^p\\ and, for \\i = 1, 2, \ldots, k\\ in turn:
 >
-> 1.  **Orthogonalize:** \\\tilde{\tilde{q}}\_i \stackrel{\text{def}}{=}\tilde{a}\_i - \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j\\ (for \\i = 1\\ the sum is empty, so \\\tilde{\tilde{q}}\_1 = \tilde{a}\_1\\);
-> 2.  **Test:** if \\\tilde{\tilde{q}}\_i = \tilde{0}\\, stop;
-> 3.  **Normalize:** \\\tilde{q}\_i \stackrel{\text{def}}{=}\tilde{\tilde{q}}\_i / \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\.
+> 1.  **Orthogonalize:** \\\underset{\sim}{q}'\_i \stackrel{\text{def}}{=}\underset{\sim}{a}\_i - \sum\_{j=1}^{i-1} (\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i)\\\underset{\sim}{q}\_j\\ (for \\i = 1\\ the sum is empty, so \\\underset{\sim}{q}'\_1 = \underset{\sim}{a}\_1\\);
+> 2.  **Test:** if \\\underset{\sim}{q}'\_i = \underset{\sim}{0}\\, stop;
+> 3.  **Normalize:** \\\underset{\sim}{q}\_i \stackrel{\text{def}}{=}\underset{\sim}{q}'\_i / \mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{}\\.
 >
-> The output is the list \\\tilde{q}\_1, \tilde{q}\_2, \ldots\\ produced before the process stops, or all \\k\\ of them if it never stops.
+> The output is the list \\\underset{\sim}{q}\_1, \underset{\sim}{q}\_2, \ldots\\ produced before the process stops, or all \\k\\ of them if it never stops.
 
 > **NOTE:**
 >
-> **Example 21 (Two steps of Gram-Schmidt in \\\mathbb{R}^3\\)** Let \\\tilde{a}\_1 = (1, 1, 0)\\ and \\\tilde{a}\_2 = (1, 0, 1)\\.
+> **Example 21 (Two steps of Gram-Schmidt in \\\mathbb{R}^3\\)** Let \\\underset{\sim}{a}\_1 = (1, 1, 0)\\ and \\\underset{\sim}{a}\_2 = (1, 0, 1)\\.
 >
-> - **Step 1.** \\\tilde{\tilde{q}}\_1 = (1, 1, 0)\\, with norm \\\sqrt{2}\\, so \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\.
+> - **Step 1.** \\\underset{\sim}{q}'\_1 = (1, 1, 0)\\, with norm \\\sqrt{2}\\, so \\\underset{\sim}{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\.
 >
 > - **Step 2.**
 >
->   \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{a}\_2 &= \tfrac{1}{\sqrt{2}}\\(1 + 0 + 0) \\ &= \tfrac{1}{\sqrt{2}}, \end{aligned} \\
+>   \\ \begin{aligned} \underset{\sim}{q}\_1 \cdot \underset{\sim}{a}\_2 &= \tfrac{1}{\sqrt{2}}\\(1 + 0 + 0) \\ &= \tfrac{1}{\sqrt{2}}, \end{aligned} \\
 >
 >   so
 >
->   \\ \begin{aligned} \tilde{\tilde{q}}\_2 &= (1, 0, 1) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) && \text{(orthogonalize)} \\ &= (1, 0, 1) - \mathopen{}\left(\tfrac{1}{2}, \tfrac{1}{2}, 0\right)\mathclose{} && \text{(multiply out)} \\ &= \mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 1\right)\mathclose{}, && \text{(subtract entrywise)} \end{aligned} \\
+>   \\ \begin{aligned} \underset{\sim}{q}'\_2 &= (1, 0, 1) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) && \text{(orthogonalize)} \\ &= (1, 0, 1) - \mathopen{}\left(\tfrac{1}{2}, \tfrac{1}{2}, 0\right)\mathclose{} && \text{(multiply out)} \\ &= \mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 1\right)\mathclose{}, && \text{(subtract entrywise)} \end{aligned} \\
 >
 >   with norm \\\sqrt{\tfrac{1}{4} + \tfrac{1}{4} + 1} = \sqrt{\tfrac{3}{2}}\\, so
 >
->   \\ \begin{aligned} \tilde{q}\_2 &= \sqrt{\tfrac{2}{3}}\\\mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 1\right)\mathclose{} \\ &= \tfrac{1}{\sqrt{6}}\\(1, -1, 2). \end{aligned} \\
+>   \\ \begin{aligned} \underset{\sim}{q}\_2 &= \sqrt{\tfrac{2}{3}}\\\mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 1\right)\mathclose{} \\ &= \tfrac{1}{\sqrt{6}}\\(1, -1, 2). \end{aligned} \\
 >
 > As a check,
 >
-> \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{q}\_2 &= \tfrac{1}{\sqrt{12}}\\(1 - 1 + 0) \\ &= 0. \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_1 \cdot \underset{\sim}{q}\_2 &= \tfrac{1}{\sqrt{12}}\\(1 - 1 + 0) \\ &= 0. \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 22 (Gram-Schmidt stops on dependent vectors)** Let \\\tilde{a}\_1 = (1, 2)\\ and \\\tilde{a}\_2 = (2, 4)\\. Step 1 gives \\\tilde{q}\_1 = \tfrac{1}{\sqrt{5}}\\(1, 2)\\. In step 2,
+> **Example 22 (Gram-Schmidt stops on dependent vectors)** Let \\\underset{\sim}{a}\_1 = (1, 2)\\ and \\\underset{\sim}{a}\_2 = (2, 4)\\. Step 1 gives \\\underset{\sim}{q}\_1 = \tfrac{1}{\sqrt{5}}\\(1, 2)\\. In step 2,
 >
-> \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{a}\_2 &= \tfrac{1}{\sqrt{5}}\\(2 + 8) \\ &= \tfrac{10}{\sqrt{5}}, \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_1 \cdot \underset{\sim}{a}\_2 &= \tfrac{1}{\sqrt{5}}\\(2 + 8) \\ &= \tfrac{10}{\sqrt{5}}, \end{aligned} \\
 >
 > and
 >
-> \\ \begin{aligned} \tilde{\tilde{q}}\_2 &= (2, 4) - \tfrac{10}{\sqrt{5}} \cdot\tfrac{1}{\sqrt{5}}\\(1, 2) \\ &= (2, 4) - 2\\(1, 2) \\ &= \tilde{0}, \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}'\_2 &= (2, 4) - \tfrac{10}{\sqrt{5}} \cdot\tfrac{1}{\sqrt{5}}\\(1, 2) \\ &= (2, 4) - 2\\(1, 2) \\ &= \underset{\sim}{0}, \end{aligned} \\
 >
-> so the process stops: \\\tilde{a}\_2\\ is a multiple of \\\tilde{a}\_1\\.
+> so the process stops: \\\underset{\sim}{a}\_2\\ is a multiple of \\\underset{\sim}{a}\_1\\.
 
 > **NOTE:**
 >
-> **Theorem 10 (What Gram-Schmidt produces)** Run the Gram-Schmidt process ([Definition 11](#def-gram-schmidt)) on \\\tilde{a}\_1, \ldots, \tilde{a}\_k \in \mathbb{R}^p\\.
+> **Theorem 10 (What Gram-Schmidt produces)** Run the Gram-Schmidt process ([Definition 11](#def-gram-schmidt)) on \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k \in \mathbb{R}^p\\.
 >
-> 1.  If it has produced \\\tilde{q}\_1, \ldots, \tilde{q}\_i\\ without stopping, then \\\tilde{q}\_1, \ldots, \tilde{q}\_i\\ are orthonormal and \\\operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_i\right\\\mathclose{} = \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_i\right\\\mathclose{}\\.
-> 2.  If it reaches step \\i\\ (that is, it did not stop at steps \\1, \ldots, i - 1\\), it stops there exactly when \\\tilde{a}\_i \in \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_{i-1}\right\\\mathclose{}\\.
-> 3.  It completes all \\k\\ steps exactly when \\\tilde{a}\_1, \ldots, \tilde{a}\_k\\ are linearly independent; then \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ is an orthonormal basis of \\\operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_k\right\\\mathclose{}\\ ([Definition 10](#def-orthonormal-basis)).
+> 1.  If it has produced \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_i\\ without stopping, then \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_i\\ are orthonormal and \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_i\right\\\mathclose{} = \operatorname{span}\mathopen{}\left\\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_i\right\\\mathclose{}\\.
+> 2.  If it reaches step \\i\\ (that is, it did not stop at steps \\1, \ldots, i - 1\\), it stops there exactly when \\\underset{\sim}{a}\_i \in \operatorname{span}\mathopen{}\left\\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_{i-1}\right\\\mathclose{}\\.
+> 3.  It completes all \\k\\ steps exactly when \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k\\ are linearly independent; then \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_k\\ is an orthonormal basis of \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k\right\\\mathclose{}\\ ([Definition 10](#def-orthonormal-basis)).
 
 > **NOTE:**
 >
-> *Proof*. **Parts 1 and 2, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i\\.** Before step \\1\\, the list of \\\tilde{q}\\’s is empty, which is orthonormal, and both spans are \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)). Suppose part 1 holds after step \\i - 1\\, and write
+> *Proof*. **Parts 1 and 2, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i\\.** Before step \\1\\, the list of \\\underset{\sim}{q}\\’s is empty, which is orthonormal, and both spans are \\\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)). Suppose part 1 holds after step \\i - 1\\, and write
 >
-> \\ \begin{aligned} \mathcal{S}\_{i-1} &= \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_{i-1}\right\\\mathclose{} \\ &= \operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\right\\\mathclose{}. \end{aligned} \\
+> \\ \begin{aligned} \mathcal{S}\_{i-1} &= \operatorname{span}\mathopen{}\left\\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_{i-1}\right\\\mathclose{} \\ &= \operatorname{span}\mathopen{}\left\\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_{i-1}\right\\\mathclose{}. \end{aligned} \\
 >
-> The orthonormal vectors \\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\\ are linearly independent ([Theorem 8](#thm-orthonormal-independent)) and span \\\mathcal{S}\_{i-1}\\, so they are an orthonormal basis of it.
+> The orthonormal vectors \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_{i-1}\\ are linearly independent ([Theorem 8](#thm-orthonormal-independent)) and span \\\mathcal{S}\_{i-1}\\, so they are an orthonormal basis of it.
 >
-> *\\\tilde{\tilde{q}}\_i\\ is orthogonal to the earlier \\\tilde{q}\\’s.* For each \\l \< i\\,
+> *\\\underset{\sim}{q}'\_i\\ is orthogonal to the earlier \\\underset{\sim}{q}\\’s.* For each \\l \< i\\,
 >
-> \\ \begin{aligned} \tilde{q}\_l \cdot \tilde{\tilde{q}}\_i &= \tilde{q}\_l \cdot \mathopen{}\left(1\\\tilde{a}\_i + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\\tilde{q}\_j\right)\mathclose{} && \text{(}\href{#def-gram-schmidt}{\text{Definition~11}}\text{, as a linear combination)} \\ &= 1\\(\tilde{q}\_l \cdot \tilde{a}\_i) + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(} 1\\z = z \text{, and pull the minus signs out of the sum)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \tilde{q}\_l \cdot \tilde{a}\_i && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~19 in Vectors}}\text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_l \cdot \underset{\sim}{q}'\_i &= \underset{\sim}{q}\_l \cdot \mathopen{}\left(1\\\underset{\sim}{a}\_i + \sum\_{j=1}^{i-1} \mathopen{}\left(-\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i\right)\mathclose{}\\\underset{\sim}{q}\_j\right)\mathclose{} && \text{(}\href{#def-gram-schmidt}{\text{Definition~11}}\text{, as a linear combination)} \\ &= 1\\(\underset{\sim}{q}\_l \cdot \underset{\sim}{a}\_i) + \sum\_{j=1}^{i-1} \mathopen{}\left(-\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i\right)\mathclose{}\\(\underset{\sim}{q}\_l \cdot \underset{\sim}{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= \underset{\sim}{q}\_l \cdot \underset{\sim}{a}\_i - \sum\_{j=1}^{i-1} (\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i)\\(\underset{\sim}{q}\_l \cdot \underset{\sim}{q}\_j) && \text{(} 1\\z = z \text{, and pull the minus signs out of the sum)} \\ &= \underset{\sim}{q}\_l \cdot \underset{\sim}{a}\_i - \underset{\sim}{q}\_l \cdot \underset{\sim}{a}\_i && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~19 in Vectors}}\text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
 >
-> *Part 2 at step \\i\\.* If \\\tilde{\tilde{q}}\_i = \tilde{0}\\, then \\\tilde{a}\_i = \sum\_{j\<i} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j \in \mathcal{S}\_{i-1}\\. Conversely, if \\\tilde{a}\_i \in \mathcal{S}\_{i-1}\\, then \\\tilde{a}\_i = \sum\_{j\<i} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j\\ ([Theorem 9](#thm-orthonormal-expansion)), so \\\tilde{\tilde{q}}\_i = \tilde{0}\\.
+> *Part 2 at step \\i\\.* If \\\underset{\sim}{q}'\_i = \underset{\sim}{0}\\, then \\\underset{\sim}{a}\_i = \sum\_{j\<i} (\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i)\\\underset{\sim}{q}\_j \in \mathcal{S}\_{i-1}\\. Conversely, if \\\underset{\sim}{a}\_i \in \mathcal{S}\_{i-1}\\, then \\\underset{\sim}{a}\_i = \sum\_{j\<i} (\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i)\\\underset{\sim}{q}\_j\\ ([Theorem 9](#thm-orthonormal-expansion)), so \\\underset{\sim}{q}'\_i = \underset{\sim}{0}\\.
 >
-> *Part 1 at step \\i\\, if the process does not stop.* Then \\\tilde{\tilde{q}}\_i \ne \tilde{0}\\, so \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{} \> 0\\, and \\\tilde{q}\_i = \tilde{\tilde{q}}\_i / \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\ has norm \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{} / \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{} = 1\\ ([Theorem 1](#thm-norm-properties)) and for \\l \< i\\
+> *Part 1 at step \\i\\, if the process does not stop.* Then \\\underset{\sim}{q}'\_i \ne \underset{\sim}{0}\\, so \\\mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{} \> 0\\, and \\\underset{\sim}{q}\_i = \underset{\sim}{q}'\_i / \mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{}\\ has norm \\\mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{} / \mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{} = 1\\ ([Theorem 1](#thm-norm-properties)) and for \\l \< i\\
 >
-> \\ \begin{aligned} \tilde{q}\_l \cdot \tilde{q}\_i &= \frac{1}{\mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}}\\(\tilde{q}\_l \cdot \tilde{\tilde{q}}\_i) && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, special case } b = 0 \text{)} \\ &= 0, && \text{(} \tilde{\tilde{q}}\_i \text{ is orthogonal to } \tilde{q}\_l \text{)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_l \cdot \underset{\sim}{q}\_i &= \frac{1}{\mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{}}\\(\underset{\sim}{q}\_l \cdot \underset{\sim}{q}'\_i) && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, special case } b = 0 \text{)} \\ &= 0, && \text{(} \underset{\sim}{q}'\_i \text{ is orthogonal to } \underset{\sim}{q}\_l \text{)} \end{aligned} \\
 >
-> and \\\tilde{q}\_i \cdot \tilde{q}\_l = 0\\ too ([Theorem 1 in Vectors](linear-algebra-vectors.llms.md#thm-lincom-symmetric)). So \\\tilde{q}\_1, \ldots, \tilde{q}\_i\\ are orthonormal. For the spans:
+> and \\\underset{\sim}{q}\_i \cdot \underset{\sim}{q}\_l = 0\\ too ([Theorem 1 in Vectors](linear-algebra-vectors.llms.md#thm-lincom-symmetric)). So \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_i\\ are orthonormal. For the spans:
 >
-> - \\\tilde{a}\_i = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j\<i} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j\\ is in \\\operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_i\right\\\mathclose{}\\, and so is each of \\\tilde{a}\_1, \ldots, \tilde{a}\_{i-1}\\, which lie in \\\mathcal{S}\_{i-1} = \operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\right\\\mathclose{} \subseteq \operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_i\right\\\mathclose{}\\.
-> - \\\tilde{q}\_i = \mathopen{}\left(\tilde{a}\_i - \sum\_{j\<i} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j\right)\mathclose{} / \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\ is in \\\operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_i\right\\\mathclose{}\\, because each \\\tilde{q}\_j\\ with \\j \< i\\ lies in \\\mathcal{S}\_{i-1}\\; and so is each of \\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\\.
+> - \\\underset{\sim}{a}\_i = \mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{}\\\underset{\sim}{q}\_i + \sum\_{j\<i} (\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i)\\\underset{\sim}{q}\_j\\ is in \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_i\right\\\mathclose{}\\, and so is each of \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_{i-1}\\, which lie in \\\mathcal{S}\_{i-1} = \operatorname{span}\mathopen{}\left\\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_{i-1}\right\\\mathclose{} \subseteq \operatorname{span}\mathopen{}\left\\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_i\right\\\mathclose{}\\.
+> - \\\underset{\sim}{q}\_i = \mathopen{}\left(\underset{\sim}{a}\_i - \sum\_{j\<i} (\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i)\\\underset{\sim}{q}\_j\right)\mathclose{} / \mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{}\\ is in \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_i\right\\\mathclose{}\\, because each \\\underset{\sim}{q}\_j\\ with \\j \< i\\ lies in \\\mathcal{S}\_{i-1}\\; and so is each of \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_{i-1}\\.
 >
 > A span is a subspace ([Theorem 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-span-subspace)), so it contains every linear combination of vectors in it; each span therefore contains the other, and they are equal.
 >
-> **Part 3.** If the process completes, then \\\tilde{a}\_1 \notin \operatorname{span}\\ of the empty list, and for each \\i \ge 2\\, \\\tilde{a}\_i \notin \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_{i-1}\right\\\mathclose{}\\ (part 2). Applying [Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span) \\k\\ times, starting from the empty list, shows that \\\tilde{a}\_1, \ldots, \tilde{a}\_k\\ are linearly independent. Conversely, if they are linearly independent, no \\\tilde{a}\_i\\ is a linear combination \\\sum\_{j\<i} c_j \tilde{a}\_j\\ of the earlier ones, because then \\\sum\_{j\<i} c_j \tilde{a}\_j - \tilde{a}\_i = \tilde{0}\\ would be a combination with a nonzero coefficient; so by part 2 the process never stops. When it completes, \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ are orthonormal, hence linearly independent ([Theorem 8](#thm-orthonormal-independent)), and span \\\operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_k\right\\\mathclose{}\\ (part 1), so they are an orthonormal basis of it.
+> **Part 3.** If the process completes, then \\\underset{\sim}{a}\_1 \notin \operatorname{span}\\ of the empty list, and for each \\i \ge 2\\, \\\underset{\sim}{a}\_i \notin \operatorname{span}\mathopen{}\left\\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_{i-1}\right\\\mathclose{}\\ (part 2). Applying [Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span) \\k\\ times, starting from the empty list, shows that \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k\\ are linearly independent. Conversely, if they are linearly independent, no \\\underset{\sim}{a}\_i\\ is a linear combination \\\sum\_{j\<i} c_j \underset{\sim}{a}\_j\\ of the earlier ones, because then \\\sum\_{j\<i} c_j \underset{\sim}{a}\_j - \underset{\sim}{a}\_i = \underset{\sim}{0}\\ would be a combination with a nonzero coefficient; so by part 2 the process never stops. When it completes, \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_k\\ are orthonormal, hence linearly independent ([Theorem 8](#thm-orthonormal-independent)), and span \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k\right\\\mathclose{}\\ (part 1), so they are an orthonormal basis of it.
 
 > **NOTE:**
 >
-> **Example 23 (Finishing an orthonormal basis of \\\mathbb{R}^3\\)** Continue [Example 21](#exm-gram-schmidt) with \\\tilde{a}\_3 = (0, 1, 1)\\. \\\tilde{q}\_1 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{2}}\\ and
+> **Example 23 (Finishing an orthonormal basis of \\\mathbb{R}^3\\)** Continue [Example 21](#exm-gram-schmidt) with \\\underset{\sim}{a}\_3 = (0, 1, 1)\\. \\\underset{\sim}{q}\_1 \cdot \underset{\sim}{a}\_3 = \tfrac{1}{\sqrt{2}}\\ and
 >
-> \\ \begin{aligned} \tilde{q}\_2 \cdot \tilde{a}\_3 &= \tfrac{1}{\sqrt{6}}\\(0 - 1 + 2) \\ &= \tfrac{1}{\sqrt{6}}, \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_2 \cdot \underset{\sim}{a}\_3 &= \tfrac{1}{\sqrt{6}}\\(0 - 1 + 2) \\ &= \tfrac{1}{\sqrt{6}}, \end{aligned} \\
 >
 > so
 >
-> \\ \begin{aligned} \tilde{\tilde{q}}\_3 &= (0, 1, 1) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) - \tfrac{1}{\sqrt{6}} \cdot\tfrac{1}{\sqrt{6}}\\(1, -1, 2) && \text{(orthogonalize)} \\ &= (0, 1, 1) - \tfrac{1}{2}\\(1, 1, 0) - \tfrac{1}{6}\\(1, -1, 2) && \text{(multiply the scalars)} \\ &= \mathopen{}\left(0 - \tfrac{1}{2} - \tfrac{1}{6},\\ 1 - \tfrac{1}{2} + \tfrac{1}{6},\\ 1 - 0 - \tfrac{2}{6}\right)\mathclose{} && \text{(subtract entrywise)} \\ &= \mathopen{}\left(-\tfrac{2}{3}, \tfrac{2}{3}, \tfrac{2}{3}\right)\mathclose{}, && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}'\_3 &= (0, 1, 1) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) - \tfrac{1}{\sqrt{6}} \cdot\tfrac{1}{\sqrt{6}}\\(1, -1, 2) && \text{(orthogonalize)} \\ &= (0, 1, 1) - \tfrac{1}{2}\\(1, 1, 0) - \tfrac{1}{6}\\(1, -1, 2) && \text{(multiply the scalars)} \\ &= \mathopen{}\left(0 - \tfrac{1}{2} - \tfrac{1}{6},\\ 1 - \tfrac{1}{2} + \tfrac{1}{6},\\ 1 - 0 - \tfrac{2}{6}\right)\mathclose{} && \text{(subtract entrywise)} \\ &= \mathopen{}\left(-\tfrac{2}{3}, \tfrac{2}{3}, \tfrac{2}{3}\right)\mathclose{}, && \text{(arithmetic)} \end{aligned} \\
 >
-> with norm \\\sqrt{3 \cdot\tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}\\, so \\\tilde{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\. The process did not stop, so by [Theorem 10](#thm-gram-schmidt) \\\tilde{a}\_1, \tilde{a}\_2, \tilde{a}\_3\\ are linearly independent and \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ is an orthonormal basis of their span. That span therefore has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), so it is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). As a check,
+> with norm \\\sqrt{3 \cdot\tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}\\, so \\\underset{\sim}{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\. The process did not stop, so by [Theorem 10](#thm-gram-schmidt) \\\underset{\sim}{a}\_1, \underset{\sim}{a}\_2, \underset{\sim}{a}\_3\\ are linearly independent and \\\underset{\sim}{q}\_1, \underset{\sim}{q}\_2, \underset{\sim}{q}\_3\\ is an orthonormal basis of their span. That span therefore has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), so it is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). As a check,
 >
-> \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{q}\_3 &= \tfrac{1}{\sqrt{6}}\\(-1 + 1 + 0) \\ &= 0 \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_1 \cdot \underset{\sim}{q}\_3 &= \tfrac{1}{\sqrt{6}}\\(-1 + 1 + 0) \\ &= 0 \end{aligned} \\
 >
 > and
 >
-> \\ \begin{aligned} \tilde{q}\_2 \cdot \tilde{q}\_3 &= \tfrac{1}{\sqrt{18}}\\(-1 - 1 + 2) \\ &= 0. \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_2 \cdot \underset{\sim}{q}\_3 &= \tfrac{1}{\sqrt{18}}\\(-1 - 1 + 2) \\ &= 0. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -743,31 +743,31 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Let \\\tilde{u}\_1, \ldots, \tilde{u}\_r \in \mathcal{S}\\ be orthonormal. They are linearly independent ([Theorem 8](#thm-orthonormal-independent)), so they extend to a basis \\\tilde{u}\_1, \ldots, \tilde{u}\_r, \tilde{a}\_{r+1}, \ldots, \tilde{a}\_d\\ of \\\mathcal{S}\\ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)). Run the Gram-Schmidt process on this basis. It is linearly independent, so the process completes, and the output is an orthonormal basis of its span, which is \\\mathcal{S}\\ ([Theorem 10](#thm-gram-schmidt), part 3).
+> *Proof*. Let \\\underset{\sim}{u}\_1, \ldots, \underset{\sim}{u}\_r \in \mathcal{S}\\ be orthonormal. They are linearly independent ([Theorem 8](#thm-orthonormal-independent)), so they extend to a basis \\\underset{\sim}{u}\_1, \ldots, \underset{\sim}{u}\_r, \underset{\sim}{a}\_{r+1}, \ldots, \underset{\sim}{a}\_d\\ of \\\mathcal{S}\\ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)). Run the Gram-Schmidt process on this basis. It is linearly independent, so the process completes, and the output is an orthonormal basis of its span, which is \\\mathcal{S}\\ ([Theorem 10](#thm-gram-schmidt), part 3).
 >
-> The first \\r\\ outputs are \\\tilde{u}\_1, \ldots, \tilde{u}\_r\\ themselves, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i \le r\\. Suppose the outputs before step \\i\\ are \\\tilde{u}\_1, \ldots, \tilde{u}\_{i-1}\\ (for \\i = 1\\ there are none, and the sum below is empty). Then
+> The first \\r\\ outputs are \\\underset{\sim}{u}\_1, \ldots, \underset{\sim}{u}\_r\\ themselves, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i \le r\\. Suppose the outputs before step \\i\\ are \\\underset{\sim}{u}\_1, \ldots, \underset{\sim}{u}\_{i-1}\\ (for \\i = 1\\ there are none, and the sum below is empty). Then
 >
-> \\ \begin{aligned} \tilde{\tilde{q}}\_i &= \tilde{u}\_i - \sum\_{j\<i} (\tilde{u}\_j \cdot \tilde{u}\_i)\\\tilde{u}\_j \\ &= \tilde{u}\_i, \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}'\_i &= \underset{\sim}{u}\_i - \sum\_{j\<i} (\underset{\sim}{u}\_j \cdot \underset{\sim}{u}\_i)\\\underset{\sim}{u}\_j \\ &= \underset{\sim}{u}\_i, \end{aligned} \\
 >
-> because each \\\tilde{u}\_j \cdot \tilde{u}\_i = 0\\; \\\tilde{\tilde{q}}\_i = \tilde{u}\_i \ne \tilde{0}\\, because \\\mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} = 1\\, so the process does not stop; and
+> because each \\\underset{\sim}{u}\_j \cdot \underset{\sim}{u}\_i = 0\\; \\\underset{\sim}{q}'\_i = \underset{\sim}{u}\_i \ne \underset{\sim}{0}\\, because \\\mathopen{}\left\lVert\underset{\sim}{u}\_i\right\rVert\mathclose{} = 1\\, so the process does not stop; and
 >
-> \\ \begin{aligned} \tilde{q}\_i &= \tilde{u}\_i / \mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} \\ &= \tilde{u}\_i. \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_i &= \underset{\sim}{u}\_i / \mathopen{}\left\lVert\underset{\sim}{u}\_i\right\rVert\mathclose{} \\ &= \underset{\sim}{u}\_i. \end{aligned} \\
 >
 > So the orthonormal basis contains the starting list.
 
 > **NOTE:**
 >
-> **Example 24 (Extending one unit vector to an orthonormal basis of \\\mathbb{R}^3\\)** Start from the unit vector \\\tilde{u}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\. Extend it to a basis of \\\mathbb{R}^3\\ as in [Example 18 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-extend-basis), starting from the empty list: \\\tilde{u}\_1\\ is not in the span of the empty list, \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, because \\\mathopen{}\left\lVert\tilde{u}\_1\right\rVert\mathclose{} = 1\\; \\(1, 0, 0)\\ is not in \\\operatorname{span}\mathopen{}\left\\\tilde{u}\_1\right\\\mathclose{}\\, because every multiple of \\\tilde{u}\_1\\ has equal first and second entries, and \\(0, 0, 1)\\ is not in \\\operatorname{span}\mathopen{}\left\\\tilde{u}\_1, (1, 0, 0)\right\\\mathclose{}\\, because every combination of those two vectors has third entry \\0\\. So \\\tilde{u}\_1, (1, 0, 0), (0, 0, 1)\\ are linearly independent ([Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span)), and three linearly independent vectors in \\\mathbb{R}^3\\ are a basis of it (they are a basis of their span, which has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and so is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension))). Gram-Schmidt on \\\tilde{u}\_1, (1, 0, 0), (0, 0, 1)\\:
+> **Example 24 (Extending one unit vector to an orthonormal basis of \\\mathbb{R}^3\\)** Start from the unit vector \\\underset{\sim}{u}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\. Extend it to a basis of \\\mathbb{R}^3\\ as in [Example 18 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-extend-basis), starting from the empty list: \\\underset{\sim}{u}\_1\\ is not in the span of the empty list, \\\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\, because \\\mathopen{}\left\lVert\underset{\sim}{u}\_1\right\rVert\mathclose{} = 1\\; \\(1, 0, 0)\\ is not in \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{u}\_1\right\\\mathclose{}\\, because every multiple of \\\underset{\sim}{u}\_1\\ has equal first and second entries, and \\(0, 0, 1)\\ is not in \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{u}\_1, (1, 0, 0)\right\\\mathclose{}\\, because every combination of those two vectors has third entry \\0\\. So \\\underset{\sim}{u}\_1, (1, 0, 0), (0, 0, 1)\\ are linearly independent ([Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span)), and three linearly independent vectors in \\\mathbb{R}^3\\ are a basis of it (they are a basis of their span, which has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and so is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension))). Gram-Schmidt on \\\underset{\sim}{u}\_1, (1, 0, 0), (0, 0, 1)\\:
 >
-> 1.  \\\tilde{q}\_1 = \tilde{u}\_1\\.
+> 1.  \\\underset{\sim}{q}\_1 = \underset{\sim}{u}\_1\\.
 >
-> 2.  \\\tilde{q}\_1 \cdot (1, 0, 0) = \tfrac{1}{\sqrt{2}}\\, so
+> 2.  \\\underset{\sim}{q}\_1 \cdot (1, 0, 0) = \tfrac{1}{\sqrt{2}}\\, so
 >
->     \\ \begin{aligned} \tilde{\tilde{q}}\_2 &= (1, 0, 0) - \tfrac{1}{2}\\(1, 1, 0) \\ &= \mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 0\right)\mathclose{}, \end{aligned} \\
+>     \\ \begin{aligned} \underset{\sim}{q}'\_2 &= (1, 0, 0) - \tfrac{1}{2}\\(1, 1, 0) \\ &= \mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 0\right)\mathclose{}, \end{aligned} \\
 >
->     with norm \\\tfrac{1}{\sqrt{2}}\\, and \\\tilde{q}\_2 = \tfrac{1}{\sqrt{2}}\\(1, -1, 0)\\.
+>     with norm \\\tfrac{1}{\sqrt{2}}\\, and \\\underset{\sim}{q}\_2 = \tfrac{1}{\sqrt{2}}\\(1, -1, 0)\\.
 >
-> 3.  \\(0, 0, 1)\\ is orthogonal to \\\tilde{q}\_1\\ and \\\tilde{q}\_2\\, so \\\tilde{\tilde{q}}\_3 = (0, 0, 1)\\, which already has norm \\1\\, and \\\tilde{q}\_3 = (0, 0, 1)\\.
+> 3.  \\(0, 0, 1)\\ is orthogonal to \\\underset{\sim}{q}\_1\\ and \\\underset{\sim}{q}\_2\\, so \\\underset{\sim}{q}'\_3 = (0, 0, 1)\\, which already has norm \\1\\, and \\\underset{\sim}{q}\_3 = (0, 0, 1)\\.
 >
 > The result is the orthonormal basis of [Example 18](#exm-orthonormal-basis), in a different order.
 
@@ -775,47 +775,47 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Outer product)** The **outer product** of a vector \\\tilde{u}\\ of length \\m\\ and a vector \\\tilde{v}\\ of length \\n\\ is the \\m \times n\\ matrix product ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) \\\tilde{u}\\{\tilde{v}}^{\top}\\ of the column vector \\\tilde{u}\\ with the row vector \\{\tilde{v}}^{\top}\\. Its entries are
+> **Definition 12 (Outer product)** The **outer product** of a vector \\\underset{\sim}{u}\\ of length \\m\\ and a vector \\\underset{\sim}{v}\\ of length \\n\\ is the \\m \times n\\ matrix product ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) \\\underset{\sim}{u}\\{\underset{\sim}{v}}^{\top}\\ of the column vector \\\underset{\sim}{u}\\ with the row vector \\{\underset{\sim}{v}}^{\top}\\. Its entries are
 >
-> \\ \mathopen{}\left(\underbrace{\tilde{u}}\_{m \times 1}\\\underbrace{{\tilde{v}}^{\top}}\_{1 \times n}\right)\mathclose{}\_{ij} = u_i v_j \qquad \text{(definition of matrix multiplication; the sum has one term)} \\
+> \\ \mathopen{}\left(\underbrace{\underset{\sim}{u}}\_{m \times 1}\\\underbrace{{\underset{\sim}{v}}^{\top}}\_{1 \times n}\right)\mathclose{}\_{ij} = u_i v_j \qquad \text{(definition of matrix multiplication; the sum has one term)} \\
 
 > **NOTE:**
 >
-> **Example 25 (An outer product)** For \\\tilde{u} = (1, 2, 3)\\ and \\\tilde{v} = (4, 5)\\:
+> **Example 25 (An outer product)** For \\\underset{\sim}{u} = (1, 2, 3)\\ and \\\underset{\sim}{v} = (4, 5)\\:
 >
-> \\ \begin{aligned} \tilde{u}\\{\tilde{v}}^{\top} &= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \begin{bmatrix} 4 & 5 \end{bmatrix} && \text{(definition of the outer product)} \\ &= \begin{bmatrix} 1 \cdot 4 & 1 \cdot 5 \\ 2 \cdot 4 & 2 \cdot 5 \\ 3 \cdot 4 & 3 \cdot 5 \end{bmatrix} && \text{(entry } (i, j) \text{ is } u_i v_j \text{)} \\ &= \begin{bmatrix} 4 & 5 \\ 8 & 10 \\ 12 & 15 \end{bmatrix} && \text{(multiply)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{u}\\{\underset{\sim}{v}}^{\top} &= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \begin{bmatrix} 4 & 5 \end{bmatrix} && \text{(definition of the outer product)} \\ &= \begin{bmatrix} 1 \cdot 4 & 1 \cdot 5 \\ 2 \cdot 4 & 2 \cdot 5 \\ 3 \cdot 4 & 3 \cdot 5 \end{bmatrix} && \text{(entry } (i, j) \text{ is } u_i v_j \text{)} \\ &= \begin{bmatrix} 4 & 5 \\ 8 & 10 \\ 12 & 15 \end{bmatrix} && \text{(multiply)} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 5* (Outer product and dot product). The dot product \\{\tilde{u}}^{\top}\tilde{v}\\ ([Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product \\\tilde{u}\\{\tilde{v}}^{\top}\\ takes vectors of any two lengths and gives a matrix ([Banerjee and Roy 2014, chap. 1](#ref-banerjee2014linear), p. 11).
+> *Remark 5* (Outer product and dot product). The dot product \\{\underset{\sim}{u}}^{\top}\underset{\sim}{v}\\ ([Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product \\\underset{\sim}{u}\\{\underset{\sim}{v}}^{\top}\\ takes vectors of any two lengths and gives a matrix ([Banerjee and Roy 2014, chap. 1](#ref-banerjee2014linear), p. 11).
 >
-> For example, \\\tilde{u} = (1, 2, 3)\\ and \\\tilde{v} = (4, 5)\\ in [Example 25](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a \\3 \times 2\\ matrix. For \\\tilde{a} = (1, 2)\\ and \\\tilde{b} = (3, 4)\\, which have the same length, both products exist:
+> For example, \\\underset{\sim}{u} = (1, 2, 3)\\ and \\\underset{\sim}{v} = (4, 5)\\ in [Example 25](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a \\3 \times 2\\ matrix. For \\\underset{\sim}{a} = (1, 2)\\ and \\\underset{\sim}{b} = (3, 4)\\, which have the same length, both products exist:
 >
-> \\ \begin{aligned} {\tilde{a}}^{\top}\tilde{b} &= 1 \cdot 3 + 2 \cdot 4 \\ &= 11 \\ \tilde{a}\\{\tilde{b}}^{\top} &= \begin{bmatrix} 1 \cdot 3 & 1 \cdot 4 \\ 2 \cdot 3 & 2 \cdot 4 \end{bmatrix} \\ &= \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix} \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{a}}^{\top}\underset{\sim}{b} &= 1 \cdot 3 + 2 \cdot 4 \\ &= 11 \\ \underset{\sim}{a}\\{\underset{\sim}{b}}^{\top} &= \begin{bmatrix} 1 \cdot 3 & 1 \cdot 4 \\ 2 \cdot 3 & 2 \cdot 4 \end{bmatrix} \\ &= \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Theorem 11 (An outer product has rank one)** If \\\tilde{u}\\ is a nonzero vector of length \\m\\ and \\\tilde{v}\\ is a nonzero vector of length \\n\\, then \\\operatorname{rank}(\tilde{u}\\{\tilde{v}}^{\top}) = 1\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)).
+> **Theorem 11 (An outer product has rank one)** If \\\underset{\sim}{u}\\ is a nonzero vector of length \\m\\ and \\\underset{\sim}{v}\\ is a nonzero vector of length \\n\\, then \\\operatorname{rank}(\underset{\sim}{u}\\{\underset{\sim}{v}}^{\top}) = 1\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)).
 
 > **NOTE:**
 >
-> *Proof*. Column \\j\\ of \\\tilde{u}\\{\tilde{v}}^{\top}\\ has entries \\u_1 v_j, \ldots, u_m v_j\\, so it is the vector \\v_j \tilde{u}\\.
+> *Proof*. Column \\j\\ of \\\underset{\sim}{u}\\{\underset{\sim}{v}}^{\top}\\ has entries \\u_1 v_j, \ldots, u_m v_j\\, so it is the vector \\v_j \underset{\sim}{u}\\.
 >
-> **The rank is at least one.** Because \\\tilde{v} \neq \tilde{0}\\, some entry \\v_j\\ is nonzero. Then column \\j\\, \\v_j \tilde{u}\\, is a nonzero vector, and a single nonzero vector is linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)): \\c\\(v_j \tilde{u}) = \tilde{0}\\ forces \\c = 0\\.
+> **The rank is at least one.** Because \\\underset{\sim}{v} \neq \underset{\sim}{0}\\, some entry \\v_j\\ is nonzero. Then column \\j\\, \\v_j \underset{\sim}{u}\\, is a nonzero vector, and a single nonzero vector is linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)): \\c\\(v_j \underset{\sim}{u}) = \underset{\sim}{0}\\ forces \\c = 0\\.
 >
 > **The rank is at most one.** Take any two columns \\j \neq k\\. If
 >
 > \\ \begin{aligned} v_j &= v_k \\ &= 0, \end{aligned} \\
 >
-> both columns are \\\tilde{0}\\, and \\1 \cdot(v_j \tilde{u}) + 1 \cdot(v_k \tilde{u}) = \tilde{0}\\. Otherwise, use the coefficients \\c_j = v_k\\ and \\c_k = -v_j\\, which are not both zero:
+> both columns are \\\underset{\sim}{0}\\, and \\1 \cdot(v_j \underset{\sim}{u}) + 1 \cdot(v_k \underset{\sim}{u}) = \underset{\sim}{0}\\. Otherwise, use the coefficients \\c_j = v_k\\ and \\c_k = -v_j\\, which are not both zero:
 >
-> \\ \begin{aligned} v_k\\(v_j \tilde{u}) - v_j\\(v_k \tilde{u}) &= (v_k v_j - v_j v_k)\\\tilde{u} && \text{(collect the scalar multiples of } \tilde{u} \text{)} \\ &= 0 \cdot\tilde{u} && \text{(multiplication of numbers is commutative)} \\ &= \tilde{0} && \text{(a zero multiple of a vector is } \tilde{0}\text{)} \end{aligned} \\
+> \\ \begin{aligned} v_k\\(v_j \underset{\sim}{u}) - v_j\\(v_k \underset{\sim}{u}) &= (v_k v_j - v_j v_k)\\\underset{\sim}{u} && \text{(collect the scalar multiples of } \underset{\sim}{u} \text{)} \\ &= 0 \cdot\underset{\sim}{u} && \text{(multiplication of numbers is commutative)} \\ &= \underset{\sim}{0} && \text{(a zero multiple of a vector is } \underset{\sim}{0}\text{)} \end{aligned} \\
 >
-> Either way, every pair of columns has a combination with coefficients that are not all zero and that equals \\\tilde{0}\\. Now take any set of two or more columns. It contains a pair \\j \neq k\\. Use that pair’s coefficients for columns \\j\\ and \\k\\, and the coefficient \\0\\ for every other column in the set. This combination equals \\\tilde{0}\\, and its coefficients are not all zero, so the set is not linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)). The largest linearly independent set of columns therefore has one column.
+> Either way, every pair of columns has a combination with coefficients that are not all zero and that equals \\\underset{\sim}{0}\\. Now take any set of two or more columns. It contains a pair \\j \neq k\\. Use that pair’s coefficients for columns \\j\\ and \\k\\, and the coefficient \\0\\ for every other column in the set. This combination equals \\\underset{\sim}{0}\\, and its coefficients are not all zero, so the set is not linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)). The largest linearly independent set of columns therefore has one column.
 
 > **NOTE:**
 >
-> **Example 26 (The rank of an outer product)** In [Example 25](#exm-outer-product), the second column \\(5, 10, 15)\\ of \\\tilde{u}\\{\tilde{v}}^{\top}\\ is \\\frac{5}{4}\\ times the first column \\(4, 8, 12)\\, because the columns are \\v_1 \tilde{u} = 4\tilde{u}\\ and \\v_2 \tilde{u} = 5\tilde{u}\\. So the two columns are not linearly independent, and the \\3 \times 2\\ matrix has rank \\1\\.
+> **Example 26 (The rank of an outer product)** In [Example 25](#exm-outer-product), the second column \\(5, 10, 15)\\ of \\\underset{\sim}{u}\\{\underset{\sim}{v}}^{\top}\\ is \\\frac{5}{4}\\ times the first column \\(4, 8, 12)\\, because the columns are \\v_1 \underset{\sim}{u} = 4\underset{\sim}{u}\\ and \\v_2 \underset{\sim}{u} = 5\underset{\sim}{u}\\. So the two columns are not linearly independent, and the \\3 \times 2\\ matrix has rank \\1\\.
 
 Back to top
 

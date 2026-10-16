@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-16 02:50:49 (PDT)
+Last modified: 2026-10-16 04:03:03 (PDT)
 
 ## 1 Derivatives
 
@@ -22,7 +22,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Limit of a function at a point)** Let \\f\\ be a [function](sets-functions.llms.md#def-function) defined at every point of an [open interval](sets-functions.llms.md#def-open-interval) around \\c\\, except possibly at \\c\\ itself, and let \\L\\ be a [real number](notation.llms.md#def-real-numbers). The **limit** of \\f(x)\\ as \\x\\ approaches \\c\\ is \\L\\, written \\\lim\_{x \to c} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that
+> **Definition 1 (Limit of a function at a point)** Let \\f\\ be a [function](functions.llms.md#def-function) defined at every point of an [open interval](sets.llms.md#def-open-interval) around \\c\\, except possibly at \\c\\ itself, and let \\L\\ be a [real number](number-systems.llms.md#def-real-numbers). The **limit** of \\f(x)\\ as \\x\\ approaches \\c\\ is \\L\\, written \\\lim\_{x \to c} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that
 >
 > \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } x \text{ with } 0 \< \mathopen{}\left\|x - c\right\|\mathclose{} \< \delta.\\
 >
@@ -165,7 +165,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Second derivative)** Let \\f\\ be a real-valued function of one variable whose derivative \\f'\\ ([Definition 7](#def-derivative)) exists at every point of an [open interval](sets-functions.llms.md#def-open-interval) containing \\c\\. If \\f'\\ is differentiable ([Definition 6](#def-differentiable)) at \\c\\, its derivative there, written \\f''(c)\\ or \\\frac{d ^2 f}{d x^2}\\, is the **second derivative** of \\f\\ at \\c\\.
+> **Definition 13 (Second derivative)** Let \\f\\ be a real-valued function of one variable whose derivative \\f'\\ ([Definition 7](#def-derivative)) exists at every point of an [open interval](sets.llms.md#def-open-interval) containing \\c\\. If \\f'\\ is differentiable ([Definition 6](#def-differentiable)) at \\c\\, its derivative there, written \\f''(c)\\ or \\\frac{d ^2 f}{d x^2}\\, is the **second derivative** of \\f\\ at \\c\\.
 
 > **NOTE:**
 >
@@ -205,7 +205,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 >
 > \\\frac{\partial}{\partial x}x^q = qx^{q-1}\\
 >
-> When \\q\\ is a positive [integer](notation.llms.md#def-integers), the same formula holds for every real \\x\\.
+> When \\q\\ is a positive [integer](number-systems.llms.md#def-integers), the same formula holds for every real \\x\\.
 
 > **TIP:**
 >
@@ -425,7 +425,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 >
 > \\\begin{aligned} \frac{d a}{d c} &= \frac{d a}{d b} \frac{d b}{d c} \\ &= \frac{d b}{d c} \frac{d a}{d b} \end{aligned} \\
 >
-> or in Lagrange’s notation ([Definition 7](#def-derivative)), if \\g\\ is differentiable at \\x\\ and \\f\\ is differentiable at \\g(x)\\, then for the [composition](sets-functions.llms.md#def-composition) \\f \circ g\\, with inner function \\g\\ and outer function \\f\\:
+> or in Lagrange’s notation ([Definition 7](#def-derivative)), if \\g\\ is differentiable at \\x\\ and \\f\\ is differentiable at \\g(x)\\, then for the [composition](functions.llms.md#def-composition) \\f \circ g\\, with inner function \\g\\ and outer function \\f\\:
 >
 > \\(f(g(x)))' = g'(x) f'(g(x))\\
 
@@ -592,7 +592,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 > - the logarithm \\\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}\\, where \\f(x) \> 0\\;
 > - the derivatives \\f'(x)\\, \\f''(x)\\, and so on, as far as they are informative;
 > - the [logarithmic derivative](#def-logarithmic-derivative) \\\frac{f'(x)}{f(x)}\\;
-> - the inverse function \\f^{-1}\\ ([definition](sets-functions.llms.md#def-inverse-function)), which exists on the range of \\f\\ when \\f\\ is one-to-one, and otherwise only after restricting the domain of \\f\\;
+> - the inverse function \\f^{-1}\\ ([definition](functions.llms.md#def-inverse-function)), which exists on the range of \\f\\ when \\f\\ is one-to-one, and otherwise only after restricting the domain of \\f\\;
 > - the complement \\1 - f(x)\\, which is informative when \\f\\ takes values in \\\[0, 1\]\\, as a probability does;
 > - the reciprocal \\\frac{1}{f(x)}\\, where \\f(x) \neq 0\\ (not to be confused with \\f^{-1}\\);
 > - an antiderivative of \\f\\, a function \\F\\ with \\F' = f\\ ([integration](calculus-integration.llms.md#sec-integration));
@@ -693,7 +693,7 @@ Last modified: 2026-10-16 02:50:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 6](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
+> **Definition 16 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 6](#def-differentiable)). The **tangent line** to the [graph](functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
 >
 > \\x \mapsto f(c) + f'(c)\\(x - c),\\
 >
@@ -868,7 +868,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 19 (Critical point)** Let \\f\\ be a function defined on an [open interval](sets-functions.llms.md#def-open-interval) containing \\c\\. The point \\c\\ is a **critical point** of \\f\\ if either \\f'(c) = 0\\ or \\f\\ is not differentiable at \\c\\ ([Definition 6](#def-differentiable)).
+> **Definition 19 (Critical point)** Let \\f\\ be a function defined on an [open interval](sets.llms.md#def-open-interval) containing \\c\\. The point \\c\\ is a **critical point** of \\f\\ if either \\f'(c) = 0\\ or \\f\\ is not differentiable at \\c\\ ([Definition 6](#def-differentiable)).
 
 > **NOTE:**
 >
