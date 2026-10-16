@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:56:10 (PDT)
+Last modified: 2026-10-15 20:42:14 (PDT)
 
 ## 1 Complex vectors and matrices
 
@@ -101,19 +101,19 @@ Last modified: 2026-10-15 13:56:10 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 2 (The adjoint property for inner products)** Let \\\mathbf{A}\\ be an \\m \times n\\ complex matrix. Under the standard inner product on complex Euclidean space, \\\left\langle \tilde{u}, \tilde{v} \right\rangle \stackrel{\text{def}}{=}\tilde{u}^{\mathsf{H}}\tilde{v}\\,
+> **Theorem 2 (The adjoint property for inner products)** Let \\\mathbf{A}\\ be an \\m \times n\\ complex matrix. Under the standard inner product on complex Euclidean space, \\\mathopen{}\left\langle \tilde{u}, \tilde{v}\right\rangle\mathclose{} \stackrel{\text{def}}{=}\tilde{u}^{\mathsf{H}}\tilde{v}\\,
 >
-> \\\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v} \right\rangle \quad \text{for all } \tilde{u} \in \mathbb{C}^n \text{ and } \tilde{v} \in \mathbb{C}^m.\\
+> \\\mathopen{}\left\langle \mathbf{A}\tilde{u}, \tilde{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v}\right\rangle\mathclose{} \quad \text{for all } \tilde{u} \in \mathbb{C}^n \text{ and } \tilde{v} \in \mathbb{C}^m.\\
 
 > **NOTE:**
 >
 > *Proof*. By the definition of the standard complex inner product and the product rule for the Hermitian adjoint ([Theorem 1](#thm-hermitian-adjoint-properties)):
 >
-> \\ \begin{aligned} \left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle &= (\mathbf{A}\tilde{u})^{\mathsf{H}}\tilde{v} && \text{(definition of standard inner product)} \\ &= (\tilde{u}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\tilde{v} && \text{(}\href{#thm-hermitian-adjoint-properties}{\text{Theorem~1}}\text{, reversal of products)} \\ &= \tilde{u}^{\mathsf{H}}(\mathbf{A}^{\mathsf{H}}\tilde{v}) && \text{(associativity of matrix multiplication)} \\ &= \left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v} \right\rangle && \text{(definition of standard inner product)}. \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \mathbf{A}\tilde{u}, \tilde{v}\right\rangle\mathclose{} &= (\mathbf{A}\tilde{u})^{\mathsf{H}}\tilde{v} && \text{(definition of standard inner product)} \\ &= (\tilde{u}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\tilde{v} && \text{(}\href{#thm-hermitian-adjoint-properties}{\text{Theorem~1}}\text{, reversal of products)} \\ &= \tilde{u}^{\mathsf{H}}(\mathbf{A}^{\mathsf{H}}\tilde{v}) && \text{(associativity of matrix multiplication)} \\ &= \mathopen{}\left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v}\right\rangle\mathclose{} && \text{(definition of standard inner product)}. \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 3* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\left\langle T\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, T^\*\tilde{v} \right\rangle\\ (Axler ([2024](#ref-axler2024linear), Definition 7.1, p. 226)). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler ([2024](#ref-axler2024linear), Proposition 7.9, p. 231)).
+> *Remark 3* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\mathopen{}\left\langle T\tilde{u}, \tilde{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{u}, T^\*\tilde{v}\right\rangle\mathclose{}\\ (Axler ([2024](#ref-axler2024linear), Definition 7.1, p. 226)). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler ([2024](#ref-axler2024linear), Proposition 7.9, p. 231)).
 
 > **NOTE:**
 >
@@ -165,7 +165,7 @@ Last modified: 2026-10-15 13:56:10 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Why “self-adjoint”). The term *self-adjoint* comes directly from [Theorem 2](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, \mathbf{A}\tilde{v} \right\rangle\\ for all \\\tilde{u}, \tilde{v} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
+> *Remark 4* (Why “self-adjoint”). The term *self-adjoint* comes directly from [Theorem 2](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\\mathopen{}\left\langle \mathbf{A}\tilde{u}, \tilde{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{u}, \mathbf{A}\tilde{v}\right\rangle\mathclose{}\\ for all \\\tilde{u}, \tilde{v} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
 
 > **NOTE:**
 >

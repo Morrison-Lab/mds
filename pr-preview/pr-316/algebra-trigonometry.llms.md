@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:56:10 (PDT)
+Last modified: 2026-10-15 20:42:14 (PDT)
 
 ## 1 Cosine and sine
 
