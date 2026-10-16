@@ -31,10 +31,7 @@ organized by topic:
 - [Number Systems](number-systems.qmd):
   the integers, natural numbers, even and odd numbers,
   and the rational, real, and irrational numbers
-- [Indicator Functions](indicator-functions.qmd):
-  set and predicate indicators, the Iverson bracket, the Kronecker delta,
-  and their algebraic properties
-- [Sets and Functions](sets-functions.qmd), on three pages:
+- [Sets and Functions](sets-functions.qmd), on four pages:
   - [Sets](sets.qmd):
     sets, subsets and supersets, the empty set,
     unions, intersections, and set differences,
@@ -43,6 +40,9 @@ organized by topic:
     functions with their domains, codomains, and images, sequences, and countable sets
   - [Expressions and Algorithms](expressions-algorithms.qmd):
     expressions, parse trees, and algorithms
+  - [Indicator Functions](indicator-functions.qmd):
+    set and predicate indicators, the Iverson bracket, the Kronecker delta,
+    and their algebraic properties
 - [Algebra](algebra.qmd):
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
   percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
@@ -127,10 +127,10 @@ Each page is a thin wrapper around one or more fragments:
 |------|------------------------|
 | [Notation](notation.qmd) | `mds/_notation.qmd` |
 | [Number Systems](number-systems.qmd) | `mds/_number-systems.qmd` |
-| [Indicator Functions](indicator-functions.qmd) | `mds/_indicator-functions.qmd` |
 | [Sets](sets.qmd) | `mds/_sets.qmd` |
 | [Functions](functions.qmd) | `mds/_functions.qmd` |
 | [Expressions and Algorithms](expressions-algorithms.qmd) | `mds/_expressions-algorithms.qmd` |
+| [Indicator Functions](indicator-functions.qmd) | `mds/_indicator-functions.qmd` |
 | [Algebra](algebra.qmd) | `mds/_algebra.qmd` |
 | [Measures](measures.qmd) | `mds/_measures.qmd` |
 | [Calculus](calculus.qmd) | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
@@ -139,7 +139,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Optimization](optimization.qmd) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_number-systems.qmd`, `_indicator-functions.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
+`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
 a host page that includes any of the other fragments
 must include `latex-macros/macros.qmd` first,
 as the pages of this site do.
