@@ -86,17 +86,10 @@ and you will meet the same objects written the other way around.
 
 : Subscripts and parentheses in these notes, and the alternatives {#tbl-subscript-parentheses}
 
-The notation for a stochastic process uses both slots at once.
-
-::: {#def-stochastic-process}
-
-#### Stochastic process
-
-A **stochastic process** is a family of random variables $X_t$,
+The notation for a [stochastic process](https://morrison-lab.github.io/pds/notation.html#def-stochastic-process)
+uses both slots at once.
+A stochastic process is a family of random variables $X_t$,
 one for each index $t$ in some index set, such as time.
-
-:::
-
 The index goes in the subscript, because it picks a member of the family.
 Each $X_t$ is itself a function of the random outcome $\omega$,
 so the outcome goes in the parentheses: $X_t(\omega)$.
