@@ -4,31 +4,31 @@ Code
 
 Published
 
-Last modified: 2026-10-16 02:45:37 (PDT)
+Last modified: 2026-10-16 03:50:53 (PDT)
 
 ## 1 Design Matrix
 
 > **NOTE:**
 >
-> **Definition 1 (Design matrix (model matrix))** In a regression model with \\n\\ observations and \\p\\ predictors, the **design matrix** (or **model matrix**) \\\mathbf{X}\\ is the \\n \times p\\ matrix whose \\i\\-th row is the covariate vector \\{\tilde{x}\_i}^{\top}\\ for observation \\i\\:
+> **Definition 1 (Design matrix (model matrix))** In a regression model with \\n\\ observations and \\p\\ predictors, the **design matrix** (or **model matrix**) \\\mathbf{X}\\ is the \\n \times p\\ matrix whose \\i\\-th row is the covariate vector \\{\underset{\sim}{x}\_i}^{\top}\\ for observation \\i\\:
 >
-> \\ \begin{aligned} \mathbf{X} &= \begin{bmatrix} {\tilde{x}\_1}^{\top} \\ {\tilde{x}\_2}^{\top} \\ \vdots \\ {\tilde{x}\_n}^{\top} \end{bmatrix} \\ &= \begin{bmatrix} x\_{11} & x\_{12} & \cdots & x\_{1p} \\ x\_{21} & x\_{22} & \cdots & x\_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ x\_{n1} & x\_{n2} & \cdots & x\_{np} \end{bmatrix} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{X} &= \begin{bmatrix} {\underset{\sim}{x}\_1}^{\top} \\ {\underset{\sim}{x}\_2}^{\top} \\ \vdots \\ {\underset{\sim}{x}\_n}^{\top} \end{bmatrix} \\ &= \begin{bmatrix} x\_{11} & x\_{12} & \cdots & x\_{1p} \\ x\_{21} & x\_{22} & \cdots & x\_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ x\_{n1} & x\_{n2} & \cdots & x\_{np} \end{bmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 1* (Products with the design matrix). The product \\\mathbf{X}\tilde{\beta}\\ collects the values \\{\tilde{x}\_i}^{\top}\tilde{\beta}\\ for all \\n\\ observations into a single \\n \times 1\\ vector:
+> *Remark 1* (Products with the design matrix). The product \\\mathbf{X}\underset{\sim}{\beta}\\ collects the values \\{\underset{\sim}{x}\_i}^{\top}\underset{\sim}{\beta}\\ for all \\n\\ observations into a single \\n \times 1\\ vector:
 >
-> \\ \mathbf{X}\tilde{\beta}= \begin{bmatrix} {\tilde{x}\_1}^{\top}\tilde{\beta}\\ \vdots \\ {\tilde{x}\_n}^{\top}\tilde{\beta} \end{bmatrix} \\
+> \\ \mathbf{X}\underset{\sim}{\beta}= \begin{bmatrix} {\underset{\sim}{x}\_1}^{\top}\underset{\sim}{\beta}\\ \vdots \\ {\underset{\sim}{x}\_n}^{\top}\underset{\sim}{\beta} \end{bmatrix} \\
 >
-> For example, take the rank-\\2\\ matrix from [Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank) as \\\mathbf{X}\\, with \\n = 3\\ observations and \\p = 2\\ columns: an intercept column and one covariate. With \\\tilde{\beta}= (1, 2)\\,
+> For example, take the rank-\\2\\ matrix from [Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank) as \\\mathbf{X}\\, with \\n = 3\\ observations and \\p = 2\\ columns: an intercept column and one covariate. With \\\underset{\sim}{\beta}= (1, 2)\\,
 >
-> \\ \begin{aligned} \mathbf{X}\tilde{\beta} &= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix} \begin{bmatrix} 1 \\ 2 \end{bmatrix} \\ &= \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix}. \end{aligned} \\
+> \\ \begin{aligned} \mathbf{X}\underset{\sim}{\beta} &= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix} \begin{bmatrix} 1 \\ 2 \end{bmatrix} \\ &= \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix}. \end{aligned} \\
 >
 > The matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ is \\p \times p\\ and symmetric, since
 >
 > \\ \begin{aligned} {({\mathbf{X}}^{\top}\mathbf{X})}^{\top} &= {\mathbf{X}}^{\top}\\{({\mathbf{X}}^{\top})}^{\top} \\ &= {\mathbf{X}}^{\top}\mathbf{X} \end{aligned} \\
 >
-> ([Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product)). When \\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible, it appears in the least squares solution ([Definition 10](#def-least-squares), defined later in this chapter) \\\hat{\tilde{\beta}}= ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\\.
+> ([Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product)). When \\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible, it appears in the least squares solution ([Definition 10](#def-least-squares), defined later in this chapter) \\\hat{\underset{\sim}{\beta}}= ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\underset{\sim}{y}\\.
 
 > **NOTE:**
 >
@@ -36,11 +36,11 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Let \\\tilde{c}\\ be a vector of length \\p\\ with \\{\mathbf{X}}^{\top}\mathbf{X}\tilde{c} = \tilde{0}\\. Then
+> *Proof*. Let \\\underset{\sim}{c}\\ be a vector of length \\p\\ with \\{\mathbf{X}}^{\top}\mathbf{X}\underset{\sim}{c} = \underset{\sim}{0}\\. Then
 >
-> \\ \begin{aligned} 0 &= {\tilde{c}}^{\top}\\{\mathbf{X}}^{\top}\mathbf{X}\tilde{c} && \text{(multiply } {\mathbf{X}}^{\top}\mathbf{X}\tilde{c} = \tilde{0}\text{ on the left by } {\tilde{c}}^{\top} \text{)} \\ &= {\mathopen{}\left(\mathbf{X}\tilde{c}\right)\mathclose{}}^{\top}\mathopen{}\left(\mathbf{X}\tilde{c}\right)\mathclose{} && \text{(transpose of a product)} \\ &= \mathopen{}\left\lVert\mathbf{X}\tilde{c}\right\rVert\mathclose{}^2 && \text{(definition of the Euclidean norm)} \end{aligned} \\
+> \\ \begin{aligned} 0 &= {\underset{\sim}{c}}^{\top}\\{\mathbf{X}}^{\top}\mathbf{X}\underset{\sim}{c} && \text{(multiply } {\mathbf{X}}^{\top}\mathbf{X}\underset{\sim}{c} = \underset{\sim}{0}\text{ on the left by } {\underset{\sim}{c}}^{\top} \text{)} \\ &= {\mathopen{}\left(\mathbf{X}\underset{\sim}{c}\right)\mathclose{}}^{\top}\mathopen{}\left(\mathbf{X}\underset{\sim}{c}\right)\mathclose{} && \text{(transpose of a product)} \\ &= \mathopen{}\left\lVert\mathbf{X}\underset{\sim}{c}\right\rVert\mathclose{}^2 && \text{(definition of the Euclidean norm)} \end{aligned} \\
 >
-> so \\\mathbf{X}\tilde{c} = \tilde{0}\\. Because \\\mathbf{X}\tilde{c} = c_1 (\text{column } 1) + \cdots + c_p (\text{column } p)\\ and the columns of \\\mathbf{X}\\ are linearly independent, \\\tilde{c} = \tilde{0}\\. So the only solution of \\{\mathbf{X}}^{\top}\mathbf{X}\tilde{c} = \tilde{0}\\ is \\\tilde{c} = \tilde{0}\\, which says that the columns of the square matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ are linearly independent, and a square matrix with linearly independent columns is invertible ([Banerjee and Roy 2014](#ref-banerjee2014linear), Corollary 5.7, p. 143).
+> so \\\mathbf{X}\underset{\sim}{c} = \underset{\sim}{0}\\. Because \\\mathbf{X}\underset{\sim}{c} = c_1 (\text{column } 1) + \cdots + c_p (\text{column } p)\\ and the columns of \\\mathbf{X}\\ are linearly independent, \\\underset{\sim}{c} = \underset{\sim}{0}\\. So the only solution of \\{\mathbf{X}}^{\top}\mathbf{X}\underset{\sim}{c} = \underset{\sim}{0}\\ is \\\underset{\sim}{c} = \underset{\sim}{0}\\, which says that the columns of the square matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ are linearly independent, and a square matrix with linearly independent columns is invertible ([Banerjee and Roy 2014](#ref-banerjee2014linear), Corollary 5.7, p. 143).
 
 > **NOTE:**
 >
@@ -64,7 +64,7 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 >
 > \\ \begin{aligned} \mathbf{H} &= \begin{bmatrix} 1 \\ 1 \end{bmatrix} \cdot\frac{1}{2} \cdot\begin{bmatrix} 1 & 1 \end{bmatrix} \\ &= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}. \end{aligned} \\
 >
-> Then \\\mathbf{H}\tilde{y}= (\bar{y}, \bar{y})\\, where \\\bar{y} = (y_1 + y_2)/2\\: the fitted values of an intercept-only model are the [sample mean](linear-algebra-vectors.llms.md#def-mean).
+> Then \\\mathbf{H}\underset{\sim}{y}= (\bar{y}, \bar{y})\\, where \\\bar{y} = (y_1 + y_2)/2\\: the fitted values of an intercept-only model are the [sample mean](linear-algebra-vectors.llms.md#def-mean).
 
 > **NOTE:**
 >
@@ -94,9 +94,9 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 >
 > *Remark 2* (Why it is called the hat matrix). The hat matrix gives the fitted values of the least squares solution ([Definition 10](#def-least-squares), defined later in this chapter):
 >
-> \\ \begin{aligned} \hat{\tilde{y}} &= \mathbf{X}\hat{\tilde{\beta}}\\ &= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\\ &= \mathbf{H}\tilde{y}. \end{aligned} \\
+> \\ \begin{aligned} \hat{\underset{\sim}{y}} &= \mathbf{X}\hat{\underset{\sim}{\beta}}\\ &= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\underset{\sim}{y}\\ &= \mathbf{H}\underset{\sim}{y}. \end{aligned} \\
 >
-> Multiplying by \\\mathbf{H}\\ “puts a hat” on \\\tilde{y}\\, which is where the name comes from. In [Example 2](#exm-hat-matrix), \\\mathbf{H}\\ puts a hat on \\\tilde{y}\\ by replacing each \\y_i\\ with the sample mean \\\bar{y}\\.
+> Multiplying by \\\mathbf{H}\\ “puts a hat” on \\\underset{\sim}{y}\\, which is where the name comes from. In [Example 2](#exm-hat-matrix), \\\mathbf{H}\\ puts a hat on \\\underset{\sim}{y}\\ by replacing each \\y_i\\ with the sample mean \\\bar{y}\\.
 
 ### 1.1 Orthogonal projection onto a subspace
 
@@ -106,11 +106,11 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Orthogonal projection onto a subspace)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ and \\\tilde{y} \in \mathbb{R}^p\\. By [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\tilde{y} = \tilde{u} + \tilde{v}\\ for exactly one \\\tilde{u} \in \mathcal{S}\\ and \\\tilde{v} \in \mathcal{S}^\perp\\. The vector \\\tilde{u}\\ is the **orthogonal projection** of \\\tilde{y}\\ onto \\\mathcal{S}\\. It is the projection of \\\tilde{y}\\ onto \\\mathcal{S}\\ along \\\mathcal{S}^\perp\\ ([Definition 4 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#def-projection)).
+> **Definition 3 (Orthogonal projection onto a subspace)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ and \\\underset{\sim}{y} \in \mathbb{R}^p\\. By [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\underset{\sim}{y} = \underset{\sim}{u} + \underset{\sim}{v}\\ for exactly one \\\underset{\sim}{u} \in \mathcal{S}\\ and \\\underset{\sim}{v} \in \mathcal{S}^\perp\\. The vector \\\underset{\sim}{u}\\ is the **orthogonal projection** of \\\underset{\sim}{y}\\ onto \\\mathcal{S}\\. It is the projection of \\\underset{\sim}{y}\\ onto \\\mathcal{S}\\ along \\\mathcal{S}^\perp\\ ([Definition 4 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#def-projection)).
 
 > **NOTE:**
 >
-> **Example 4 (Projecting onto a line in \\\mathbb{R}^3\\)** In [Example 15 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#exm-orthogonal-direct-sum), \\\tilde{y} = (3, 1, 2)\\ splits as \\(2, 2, 0) + (1, -1, 2)\\, with \\(2, 2, 0) \in \mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ and \\(1, -1, 2) \in \mathcal{S}^\perp\\. So the orthogonal projection of \\(3, 1, 2)\\ onto \\\mathcal{S}\\ is \\(2, 2, 0)\\. A vector already in \\\mathcal{S}\\, such as \\(5, 5, 0)\\, is its own projection, since \\(5, 5, 0) = (5, 5, 0) + \tilde{0}\\ and \\\tilde{0}\in \mathcal{S}^\perp\\ ([Theorem 6 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-complement-subspace), [Theorem 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-zero)); a vector of \\\mathcal{S}^\perp\\, such as \\(1, -1, 2)\\, projects to \\\tilde{0}\\, since \\(1, -1, 2) = \tilde{0}+ (1, -1, 2)\\ and \\\tilde{0}\in \mathcal{S}\\ ([Theorem 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-zero)).
+> **Example 4 (Projecting onto a line in \\\mathbb{R}^3\\)** In [Example 15 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#exm-orthogonal-direct-sum), \\\underset{\sim}{y} = (3, 1, 2)\\ splits as \\(2, 2, 0) + (1, -1, 2)\\, with \\(2, 2, 0) \in \mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ and \\(1, -1, 2) \in \mathcal{S}^\perp\\. So the orthogonal projection of \\(3, 1, 2)\\ onto \\\mathcal{S}\\ is \\(2, 2, 0)\\. A vector already in \\\mathcal{S}\\, such as \\(5, 5, 0)\\, is its own projection, since \\(5, 5, 0) = (5, 5, 0) + \underset{\sim}{0}\\ and \\\underset{\sim}{0}\in \mathcal{S}^\perp\\ ([Theorem 6 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-complement-subspace), [Theorem 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-zero)); a vector of \\\mathcal{S}^\perp\\, such as \\(1, -1, 2)\\, projects to \\\underset{\sim}{0}\\, since \\(1, -1, 2) = \underset{\sim}{0}+ (1, -1, 2)\\ and \\\underset{\sim}{0}\in \mathcal{S}\\ ([Theorem 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-zero)).
 
 > **NOTE:**
 >
@@ -118,53 +118,53 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 3 (The orthogonal projection is the closest point)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\, let \\\tilde{y} \in \mathbb{R}^p\\, and let \\\tilde{u}\\ be the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\ ([Definition 3](#def-orthogonal-projection)). Then for every \\\tilde{w} \in \mathcal{S}\\,
+> **Theorem 3 (The orthogonal projection is the closest point)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\, let \\\underset{\sim}{y} \in \mathbb{R}^p\\, and let \\\underset{\sim}{u}\\ be the orthogonal projection of \\\underset{\sim}{y}\\ onto \\\mathcal{S}\\ ([Definition 3](#def-orthogonal-projection)). Then for every \\\underset{\sim}{w} \in \mathcal{S}\\,
 >
-> \\ \mathopen{}\left\lVert\tilde{y} - \tilde{u}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\tilde{y} - \tilde{w}\right\rVert\mathclose{}, \\
+> \\ \mathopen{}\left\lVert\underset{\sim}{y} - \underset{\sim}{u}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{y} - \underset{\sim}{w}\right\rVert\mathclose{}, \\
 >
-> with equality only when \\\tilde{w} = \tilde{u}\\.
+> with equality only when \\\underset{\sim}{w} = \underset{\sim}{u}\\.
 
 > **NOTE:**
 >
-> *Proof*. By [Definition 3](#def-orthogonal-projection), \\\tilde{y} - \tilde{u} \in \mathcal{S}^\perp\\. Both \\\tilde{u}\\ and \\\tilde{w}\\ are in \\\mathcal{S}\\, so \\\tilde{u} - \tilde{w} = \tilde{u} + (-1)\\\tilde{w} \in \mathcal{S}\\ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)), and therefore \\(\tilde{y} - \tilde{u}) \perp (\tilde{u} - \tilde{w})\\ ([Definition 5 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#def-orthogonal-complement)). Then
+> *Proof*. By [Definition 3](#def-orthogonal-projection), \\\underset{\sim}{y} - \underset{\sim}{u} \in \mathcal{S}^\perp\\. Both \\\underset{\sim}{u}\\ and \\\underset{\sim}{w}\\ are in \\\mathcal{S}\\, so \\\underset{\sim}{u} - \underset{\sim}{w} = \underset{\sim}{u} + (-1)\\\underset{\sim}{w} \in \mathcal{S}\\ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)), and therefore \\(\underset{\sim}{y} - \underset{\sim}{u}) \perp (\underset{\sim}{u} - \underset{\sim}{w})\\ ([Definition 5 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#def-orthogonal-complement)). Then
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{y} - \tilde{w}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert(\tilde{y} - \tilde{u}) + (\tilde{u} - \tilde{w})\right\rVert\mathclose{}^2 && \text{(add and subtract } \tilde{u} \text{)} \\ &= \mathopen{}\left\lVert\tilde{y} - \tilde{u}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 && \text{(Pythagorean theorem, }\href{linear-algebra-inner-products.qmd#thm-norm-sum-square}{\text{Theorem~2 in Inner Products and Orthogonality}}\text{)} \\ &\ge \mathopen{}\left\lVert\tilde{y} - \tilde{u}\right\rVert\mathclose{}^2, && \text{(} \mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 \ge 0 \text{, }\href{linear-algebra-inner-products.qmd#thm-norm-properties}{\text{Theorem~1 in Inner Products and Orthogonality}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{y} - \underset{\sim}{w}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert(\underset{\sim}{y} - \underset{\sim}{u}) + (\underset{\sim}{u} - \underset{\sim}{w})\right\rVert\mathclose{}^2 && \text{(add and subtract } \underset{\sim}{u} \text{)} \\ &= \mathopen{}\left\lVert\underset{\sim}{y} - \underset{\sim}{u}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\underset{\sim}{u} - \underset{\sim}{w}\right\rVert\mathclose{}^2 && \text{(Pythagorean theorem, }\href{linear-algebra-inner-products.qmd#thm-norm-sum-square}{\text{Theorem~2 in Inner Products and Orthogonality}}\text{)} \\ &\ge \mathopen{}\left\lVert\underset{\sim}{y} - \underset{\sim}{u}\right\rVert\mathclose{}^2, && \text{(} \mathopen{}\left\lVert\underset{\sim}{u} - \underset{\sim}{w}\right\rVert\mathclose{}^2 \ge 0 \text{, }\href{linear-algebra-inner-products.qmd#thm-norm-properties}{\text{Theorem~1 in Inner Products and Orthogonality}}\text{)} \end{aligned} \\
 >
-> with equality exactly when \\\mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{} = 0\\, that is, when \\\tilde{w} = \tilde{u}\\ ([Theorem 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-norm-properties), part 1). Taking nonnegative square roots preserves the inequality.
+> with equality exactly when \\\mathopen{}\left\lVert\underset{\sim}{u} - \underset{\sim}{w}\right\rVert\mathclose{} = 0\\, that is, when \\\underset{\sim}{w} = \underset{\sim}{u}\\ ([Theorem 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-norm-properties), part 1). Taking nonnegative square roots preserves the inequality.
 
 > **NOTE:**
 >
-> **Example 6 (No point of the line is closer)** In [Example 4](#exm-orthogonal-projection), \\\tilde{y} = (3, 1, 2)\\ has projection \\\tilde{u} = (2, 2, 0)\\ onto \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, at distance \\\mathopen{}\left\lVert(1, -1, 2)\right\rVert\mathclose{} = \sqrt{6}\\. Another point of \\\mathcal{S}\\, such as \\\tilde{w} = (3, 3, 0)\\, is farther:
+> **Example 6 (No point of the line is closer)** In [Example 4](#exm-orthogonal-projection), \\\underset{\sim}{y} = (3, 1, 2)\\ has projection \\\underset{\sim}{u} = (2, 2, 0)\\ onto \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, at distance \\\mathopen{}\left\lVert(1, -1, 2)\right\rVert\mathclose{} = \sqrt{6}\\. Another point of \\\mathcal{S}\\, such as \\\underset{\sim}{w} = (3, 3, 0)\\, is farther:
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{y} - \tilde{w}\right\rVert\mathclose{} &= \mathopen{}\left\lVert(0, -2, 2)\right\rVert\mathclose{} \\ &= \sqrt{8} \\ &\> \sqrt{6}, \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{y} - \underset{\sim}{w}\right\rVert\mathclose{} &= \mathopen{}\left\lVert(0, -2, 2)\right\rVert\mathclose{} \\ &= \sqrt{8} \\ &\> \sqrt{6}, \end{aligned} \\
 >
 > and the difference of squares is
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert(-1, -1, 0)\right\rVert\mathclose{}^2 \\ &= 2 \\ &= 8 - 6, \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{u} - \underset{\sim}{w}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert(-1, -1, 0)\right\rVert\mathclose{}^2 \\ &= 2 \\ &= 8 - 6, \end{aligned} \\
 >
-> by the Pythagorean theorem ([Theorem 2 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-norm-sum-square)), since \\\tilde{y} - \tilde{u} \in \mathcal{S}^\perp\\ and \\\tilde{u} - \tilde{w} \in \mathcal{S}\\.
+> by the Pythagorean theorem ([Theorem 2 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-norm-sum-square)), since \\\underset{\sim}{y} - \underset{\sim}{u} \in \mathcal{S}^\perp\\ and \\\underset{\sim}{u} - \underset{\sim}{w} \in \mathcal{S}\\.
 
 > **NOTE:**
 >
-> **Theorem 4 (Projecting with an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ with \\\dim(\mathcal{S}) = r \ge 1\\, and let \\\mathbf{Q}\\ be the \\p \times r\\ matrix whose columns \\\tilde{q}\_1, \ldots, \tilde{q}\_r\\ are an orthonormal basis of \\\mathcal{S}\\ ([Definition 10 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-orthonormal-basis), [Corollary 4 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-orthonormal-basis-exists)). Then for every \\\tilde{y} \in \mathbb{R}^p\\, \\\mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\, and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ is an orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
+> **Theorem 4 (Projecting with an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ with \\\dim(\mathcal{S}) = r \ge 1\\, and let \\\mathbf{Q}\\ be the \\p \times r\\ matrix whose columns \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_r\\ are an orthonormal basis of \\\mathcal{S}\\ ([Definition 10 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-orthonormal-basis), [Corollary 4 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-orthonormal-basis-exists)). Then for every \\\underset{\sim}{y} \in \mathbb{R}^p\\, \\\mathbf{Q} {\mathbf{Q}}^{\top} \underset{\sim}{y}\\ is the orthogonal projection of \\\underset{\sim}{y}\\ onto \\\mathcal{S}\\, and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ is an orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
 
 > **NOTE:**
 >
-> *Proof*. **\\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\.** Write \\q\_{ki}\\ for entry \\k\\ of \\\tilde{q}\_i\\, which is entry \\(k, i)\\ of \\\mathbf{Q}\\. Then
+> *Proof*. **\\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\.** Write \\q\_{ki}\\ for entry \\k\\ of \\\underset{\sim}{q}\_i\\, which is entry \\(k, i)\\ of \\\mathbf{Q}\\. Then
 >
-> \\ \begin{aligned} ({\mathbf{Q}}^{\top} \mathbf{Q})\_{ij} &= \sum\_{k=1}^{p} ({\mathbf{Q}}^{\top})\_{ik}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \\ &= \sum\_{k=1}^{p} q\_{ki}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= \tilde{q}\_i \cdot \tilde{q}\_j, && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} ({\mathbf{Q}}^{\top} \mathbf{Q})\_{ij} &= \sum\_{k=1}^{p} ({\mathbf{Q}}^{\top})\_{ik}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \\ &= \sum\_{k=1}^{p} q\_{ki}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= \underset{\sim}{q}\_i \cdot \underset{\sim}{q}\_j, && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \end{aligned} \\
 >
 > which is \\1\\ if \\i = j\\ and \\0\\ otherwise ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\ ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
 >
-> **The split.** Let \\\tilde{u} = \mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}\\ and \\\tilde{v} = \tilde{y} - \tilde{u}\\, so \\\tilde{y} = \tilde{u} + \tilde{v}\\. \\\tilde{u} = \mathbf{Q}\\({\mathbf{Q}}^{\top} \tilde{y})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)) is in \\\mathcal{C}(\mathbf{Q})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), which is \\\operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_r\right\\\mathclose{} = \mathcal{S}\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)). For \\\tilde{v}\\,
+> **The split.** Let \\\underset{\sim}{u} = \mathbf{Q} {\mathbf{Q}}^{\top} \underset{\sim}{y}\\ and \\\underset{\sim}{v} = \underset{\sim}{y} - \underset{\sim}{u}\\, so \\\underset{\sim}{y} = \underset{\sim}{u} + \underset{\sim}{v}\\. \\\underset{\sim}{u} = \mathbf{Q}\\({\mathbf{Q}}^{\top} \underset{\sim}{y})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)) is in \\\mathcal{C}(\mathbf{Q})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), which is \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_r\right\\\mathclose{} = \mathcal{S}\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)). For \\\underset{\sim}{v}\\,
 >
-> \\ \begin{aligned} {\mathbf{Q}}^{\top} \tilde{v} &= {\mathbf{Q}}^{\top}\\(\tilde{y} - \mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}) && \text{(substitute)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - {\mathbf{Q}}^{\top}\\(\mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}) && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - ({\mathbf{Q}}^{\top} \mathbf{Q})\\{\mathbf{Q}}^{\top} \tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - \mathbf{I}\_r\\{\mathbf{Q}}^{\top} \tilde{y} && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r \text{, from the first part of the proof)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - {\mathbf{Q}}^{\top} \tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= \tilde{0}\_r, && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} {\mathbf{Q}}^{\top} \underset{\sim}{v} &= {\mathbf{Q}}^{\top}\\(\underset{\sim}{y} - \mathbf{Q} {\mathbf{Q}}^{\top} \underset{\sim}{y}) && \text{(substitute)} \\ &= {\mathbf{Q}}^{\top} \underset{\sim}{y} - {\mathbf{Q}}^{\top}\\(\mathbf{Q} {\mathbf{Q}}^{\top} \underset{\sim}{y}) && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= {\mathbf{Q}}^{\top} \underset{\sim}{y} - ({\mathbf{Q}}^{\top} \mathbf{Q})\\{\mathbf{Q}}^{\top} \underset{\sim}{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {\mathbf{Q}}^{\top} \underset{\sim}{y} - \mathbf{I}\_r\\{\mathbf{Q}}^{\top} \underset{\sim}{y} && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r \text{, from the first part of the proof)} \\ &= {\mathbf{Q}}^{\top} \underset{\sim}{y} - {\mathbf{Q}}^{\top} \underset{\sim}{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= \underset{\sim}{0}\_r, && \text{(arithmetic)} \end{aligned} \\
 >
-> so \\\tilde{v} \in \mathcal{N}({\mathbf{Q}}^{\top})\\, and
+> so \\\underset{\sim}{v} \in \mathcal{N}({\mathbf{Q}}^{\top})\\, and
 >
 > \\ \begin{aligned} \mathcal{N}({\mathbf{Q}}^{\top}) &= \mathcal{C}(\mathbf{Q})^\perp \\ &= \mathcal{S}^\perp \end{aligned} \\
 >
-> ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)). By the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\tilde{u}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\.
+> ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)). By the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\underset{\sim}{u}\\ is the orthogonal projection of \\\underset{\sim}{y}\\ onto \\\mathcal{S}\\.
 >
 > **\\\mathbf{Q} {\mathbf{Q}}^{\top}\\ is symmetric and idempotent.**
 >
@@ -176,40 +176,40 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> **Example 7 (The projection matrix onto a line)** For \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, the single vector \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\ is an orthonormal basis: it spans \\\mathcal{S}\\, it is nonzero and so linearly independent, and
+> **Example 7 (The projection matrix onto a line)** For \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, the single vector \\\underset{\sim}{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\ is an orthonormal basis: it spans \\\mathcal{S}\\, it is nonzero and so linearly independent, and
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{q}\_1\right\rVert\mathclose{} &= \sqrt{\tfrac{1}{2} + \tfrac{1}{2} + 0} \\ &= 1. \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{q}\_1\right\rVert\mathclose{} &= \sqrt{\tfrac{1}{2} + \tfrac{1}{2} + 0} \\ &= 1. \end{aligned} \\
 >
-> With \\\mathbf{Q} = \[\tilde{q}\_1\]\\,
+> With \\\mathbf{Q} = \[\underset{\sim}{q}\_1\]\\,
 >
 > \\ \begin{aligned} \mathbf{Q} {\mathbf{Q}}^{\top} &= \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 1 & 0 \end{bmatrix} \\ &= \begin{bmatrix} \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 \end{bmatrix}. \end{aligned} \\
 >
-> Applied to \\\tilde{y} = (3, 1, 2)\\, it gives \\\mathopen{}\left(\tfrac{3 + 1}{2}, \tfrac{3 + 1}{2}, 0\right)\mathclose{} = (2, 2, 0)\\, the projection found in [Example 4](#exm-orthogonal-projection).
+> Applied to \\\underset{\sim}{y} = (3, 1, 2)\\, it gives \\\mathopen{}\left(\tfrac{3 + 1}{2}, \tfrac{3 + 1}{2}, 0\right)\mathclose{} = (2, 2, 0)\\, the projection found in [Example 4](#exm-orthogonal-projection).
 
 > **NOTE:**
 >
 > **Theorem 5 (A projection matrix projects onto its column space, and is the only one that does)**  
 >
-> 1.  If \\\mathbf{P}\\ is a \\p \times p\\ orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)), then for every \\\tilde{y} \in \mathbb{R}^p\\, \\\mathbf{P} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{P})\\ ([Definition 3](#def-orthogonal-projection)).
-> 2.  If \\\mathbf{P}\_1\\ and \\\mathbf{P}\_2\\ are \\p \times p\\ matrices such that, for every \\\tilde{y}\\, both \\\mathbf{P}\_1 \tilde{y}\\ and \\\mathbf{P}\_2 \tilde{y}\\ are the orthogonal projection of \\\tilde{y}\\ onto the same subspace \\\mathcal{S}\\, then \\\mathbf{P}\_1 = \mathbf{P}\_2\\.
+> 1.  If \\\mathbf{P}\\ is a \\p \times p\\ orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)), then for every \\\underset{\sim}{y} \in \mathbb{R}^p\\, \\\mathbf{P} \underset{\sim}{y}\\ is the orthogonal projection of \\\underset{\sim}{y}\\ onto \\\mathcal{C}(\mathbf{P})\\ ([Definition 3](#def-orthogonal-projection)).
+> 2.  If \\\mathbf{P}\_1\\ and \\\mathbf{P}\_2\\ are \\p \times p\\ matrices such that, for every \\\underset{\sim}{y}\\, both \\\mathbf{P}\_1 \underset{\sim}{y}\\ and \\\mathbf{P}\_2 \underset{\sim}{y}\\ are the orthogonal projection of \\\underset{\sim}{y}\\ onto the same subspace \\\mathcal{S}\\, then \\\mathbf{P}\_1 = \mathbf{P}\_2\\.
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** Write \\\tilde{y} = \mathbf{P} \tilde{y} + (\tilde{y} - \mathbf{P} \tilde{y})\\. The first term is in \\\mathcal{C}(\mathbf{P})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)). For the second,
+> *Proof*. **Part 1.** Write \\\underset{\sim}{y} = \mathbf{P} \underset{\sim}{y} + (\underset{\sim}{y} - \mathbf{P} \underset{\sim}{y})\\. The first term is in \\\mathcal{C}(\mathbf{P})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)). For the second,
 >
-> \\ \begin{aligned} \mathbf{P}\\(\tilde{y} - \mathbf{P} \tilde{y}) &= \mathbf{P} \tilde{y} - \mathbf{P}\\(\mathbf{P} \tilde{y}) && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \mathbf{P} \tilde{y} - (\mathbf{P} \mathbf{P})\\\tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{P} \tilde{y} - \mathbf{P}^2 \tilde{y} && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices and Decompositions}}\text{)} \\ &= \mathbf{P} \tilde{y} - \mathbf{P} \tilde{y} && \text{(} \mathbf{P} \text{ is idempotent)} \\ &= \tilde{0}\_p, && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{P}\\(\underset{\sim}{y} - \mathbf{P} \underset{\sim}{y}) &= \mathbf{P} \underset{\sim}{y} - \mathbf{P}\\(\mathbf{P} \underset{\sim}{y}) && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \mathbf{P} \underset{\sim}{y} - (\mathbf{P} \mathbf{P})\\\underset{\sim}{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{P} \underset{\sim}{y} - \mathbf{P}^2 \underset{\sim}{y} && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices and Decompositions}}\text{)} \\ &= \mathbf{P} \underset{\sim}{y} - \mathbf{P} \underset{\sim}{y} && \text{(} \mathbf{P} \text{ is idempotent)} \\ &= \underset{\sim}{0}\_p, && \text{(arithmetic)} \end{aligned} \\
 >
-> so \\\tilde{y} - \mathbf{P} \tilde{y} \in \mathcal{N}(\mathbf{P})\\. Since \\\mathbf{P} = {\mathbf{P}}^{\top}\\,
+> so \\\underset{\sim}{y} - \mathbf{P} \underset{\sim}{y} \in \mathcal{N}(\mathbf{P})\\. Since \\\mathbf{P} = {\mathbf{P}}^{\top}\\,
 >
 > \\ \begin{aligned} \mathcal{N}(\mathbf{P}) &= \mathcal{N}({\mathbf{P}}^{\top}) \\ &= \mathcal{C}(\mathbf{P})^\perp \end{aligned} \\
 >
-> ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)). By the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\mathbf{P} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{P})\\.
+> ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)). By the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\mathbf{P} \underset{\sim}{y}\\ is the orthogonal projection of \\\underset{\sim}{y}\\ onto \\\mathcal{C}(\mathbf{P})\\.
 >
-> **Part 2.** The orthogonal projection of a vector onto \\\mathcal{S}\\ is unique ([Definition 3](#def-orthogonal-projection)), so \\\mathbf{P}\_1 \tilde{e}\_j = \mathbf{P}\_2 \tilde{e}\_j\\ for each indicator vector \\\tilde{e}\_j\\ ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). \\\mathbf{P}\_1 \tilde{e}\_j\\ is column \\j\\ of \\\mathbf{P}\_1\\: by [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns) it is the combination of the columns of \\\mathbf{P}\_1\\ with coefficients the entries of \\\tilde{e}\_j\\, which are \\1\\ in place \\j\\ and \\0\\ elsewhere ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). Likewise for \\\mathbf{P}\_2\\, so the two matrices have the same columns.
+> **Part 2.** The orthogonal projection of a vector onto \\\mathcal{S}\\ is unique ([Definition 3](#def-orthogonal-projection)), so \\\mathbf{P}\_1 \underset{\sim}{e}\_j = \mathbf{P}\_2 \underset{\sim}{e}\_j\\ for each indicator vector \\\underset{\sim}{e}\_j\\ ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). \\\mathbf{P}\_1 \underset{\sim}{e}\_j\\ is column \\j\\ of \\\mathbf{P}\_1\\: by [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns) it is the combination of the columns of \\\mathbf{P}\_1\\ with coefficients the entries of \\\underset{\sim}{e}\_j\\, which are \\1\\ in place \\j\\ and \\0\\ elsewhere ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). Likewise for \\\mathbf{P}\_2\\, so the two matrices have the same columns.
 
 > **NOTE:**
 >
-> **Example 8 (Two routes to the same projection matrix)** The matrix \\\mathbf{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ of [Example 10 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-projection-matrix) is an orthogonal projection matrix, and its column space is \\\operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\, the horizontal axis. By part 1, \\\mathbf{P}(v_1, v_2) = (v_1, 0)\\ is the orthogonal projection onto that axis: the remainder \\(0, v_2)\\ is orthogonal to \\(1, 0)\\. The vector \\\tilde{q}\_1 = (1, 0)\\ has length \\1\\ and spans the axis, so it is an orthonormal basis of it, and with \\\mathbf{B} = \[\tilde{q}\_1\]\\,
+> **Example 8 (Two routes to the same projection matrix)** The matrix \\\mathbf{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ of [Example 10 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-projection-matrix) is an orthogonal projection matrix, and its column space is \\\operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\, the horizontal axis. By part 1, \\\mathbf{P}(v_1, v_2) = (v_1, 0)\\ is the orthogonal projection onto that axis: the remainder \\(0, v_2)\\ is orthogonal to \\(1, 0)\\. The vector \\\underset{\sim}{q}\_1 = (1, 0)\\ has length \\1\\ and spans the axis, so it is an orthonormal basis of it, and with \\\mathbf{B} = \[\underset{\sim}{q}\_1\]\\,
 >
 > \\ \begin{aligned} \mathbf{B} {\mathbf{B}}^{\top} &= \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} \\ &= \mathbf{P}, \end{aligned} \\
 >
@@ -219,33 +219,33 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 6 (The hat matrix projects onto the column space of the design matrix)** If \\\mathbf{X}\\ is an \\n \times p\\ design matrix with \\\operatorname{rank}(\mathbf{X}) = p\\, then for every \\\tilde{y}\in \mathbb{R}^n\\, \\\mathbf{H} \tilde{y}\\ ([Definition 2](#def-hat-matrix)) is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{X})\\. So \\\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\\ for any \\n \times p\\ matrix \\\mathbf{Q}\\ whose columns are an orthonormal basis of \\\mathcal{C}(\mathbf{X})\\.
+> **Theorem 6 (The hat matrix projects onto the column space of the design matrix)** If \\\mathbf{X}\\ is an \\n \times p\\ design matrix with \\\operatorname{rank}(\mathbf{X}) = p\\, then for every \\\underset{\sim}{y}\in \mathbb{R}^n\\, \\\mathbf{H} \underset{\sim}{y}\\ ([Definition 2](#def-hat-matrix)) is the orthogonal projection of \\\underset{\sim}{y}\\ onto \\\mathcal{C}(\mathbf{X})\\. So \\\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\\ for any \\n \times p\\ matrix \\\mathbf{Q}\\ whose columns are an orthonormal basis of \\\mathcal{C}(\mathbf{X})\\.
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{H}\\ is an orthogonal projection matrix ([Theorem 2](#thm-hat-matrix)), so \\\mathbf{H} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{H})\\ ([Theorem 5](#thm-projection-matrix-projects), part 1). It remains to show \\\mathcal{C}(\mathbf{H}) = \mathcal{C}(\mathbf{X})\\.
+> *Proof*. \\\mathbf{H}\\ is an orthogonal projection matrix ([Theorem 2](#thm-hat-matrix)), so \\\mathbf{H} \underset{\sim}{y}\\ is the orthogonal projection of \\\underset{\sim}{y}\\ onto \\\mathcal{C}(\mathbf{H})\\ ([Theorem 5](#thm-projection-matrix-projects), part 1). It remains to show \\\mathcal{C}(\mathbf{H}) = \mathcal{C}(\mathbf{X})\\.
 >
-> **\\\mathcal{C}(\mathbf{H}) \subseteq \mathcal{C}(\mathbf{X})\\.** \\\mathbf{H} \tilde{z} = \mathbf{X}\\\mathopen{}\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1} {\mathbf{X}}^{\top} \tilde{z}\right)\mathclose{}\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{X})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)).
+> **\\\mathcal{C}(\mathbf{H}) \subseteq \mathcal{C}(\mathbf{X})\\.** \\\mathbf{H} \underset{\sim}{z} = \mathbf{X}\\\mathopen{}\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1} {\mathbf{X}}^{\top} \underset{\sim}{z}\right)\mathclose{}\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{X})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)).
 >
 > **\\\mathcal{C}(\mathbf{X}) \subseteq \mathcal{C}(\mathbf{H})\\.** First,
 >
 > \\ \begin{aligned} \mathbf{H} \mathbf{X} &= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1} {\mathbf{X}}^{\top} \mathbf{X} && \text{(}\href{#def-hat-matrix}{\text{Definition~2}}\text{)} \\ &= \mathbf{X}\\\mathopen{}\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1} ({\mathbf{X}}^{\top}\mathbf{X})\right)\mathclose{} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{X}\\\mathbf{I}\_p && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)} \\ &= \mathbf{X}. && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \end{aligned} \\
 >
-> So for every \\\tilde{b} \in \mathbb{R}^p\\, \\\mathbf{X}\tilde{b} = (\mathbf{H} \mathbf{X})\\\tilde{b}\\, since \\\mathbf{H} \mathbf{X}= \mathbf{X}\\, and \\(\mathbf{H} \mathbf{X})\\\tilde{b} = \mathbf{H}\\(\mathbf{X}\tilde{b})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{H})\\.
+> So for every \\\underset{\sim}{b} \in \mathbb{R}^p\\, \\\mathbf{X}\underset{\sim}{b} = (\mathbf{H} \mathbf{X})\\\underset{\sim}{b}\\, since \\\mathbf{H} \mathbf{X}= \mathbf{X}\\, and \\(\mathbf{H} \mathbf{X})\\\underset{\sim}{b} = \mathbf{H}\\(\mathbf{X}\underset{\sim}{b})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{H})\\.
 >
 > \\\mathcal{C}(\mathbf{X})\\ has dimension \\p \ge 1\\ ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), so an orthonormal basis of it has \\p\\ vectors ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ also gives the orthogonal projection onto \\\mathcal{C}(\mathbf{X})\\ ([Theorem 4](#thm-projector-onb), with \\n\\ in place of \\p\\ and \\r = p\\). By [Theorem 5](#thm-projection-matrix-projects), part 2, \\\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\\.
 
 > **NOTE:**
 >
-> **Example 9 (The intercept-only hat matrix, from an orthonormal basis)** For the intercept-only design \\\mathbf{X}= \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ of [Example 2](#exm-hat-matrix), \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, with orthonormal basis \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1)\\, since
+> **Example 9 (The intercept-only hat matrix, from an orthonormal basis)** For the intercept-only design \\\mathbf{X}= \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ of [Example 2](#exm-hat-matrix), \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, with orthonormal basis \\\underset{\sim}{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1)\\, since
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{q}\_1\right\rVert\mathclose{} &= \sqrt{\tfrac{1}{2} + \tfrac{1}{2}} \\ &= 1. \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{q}\_1\right\rVert\mathclose{} &= \sqrt{\tfrac{1}{2} + \tfrac{1}{2}} \\ &= 1. \end{aligned} \\
 >
-> With \\\mathbf{Q} = \[\tilde{q}\_1\]\\,
+> With \\\mathbf{Q} = \[\underset{\sim}{q}\_1\]\\,
 >
 > \\ \begin{aligned} \mathbf{Q} {\mathbf{Q}}^{\top} &= \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 1 \end{bmatrix} \\ &= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}, \end{aligned} \\
 >
-> the hat matrix found in [Example 2](#exm-hat-matrix). The fitted values \\(\bar{y}, \bar{y})\\ are the closest point to \\\tilde{y}\\ on the line of constant vectors ([Theorem 3](#thm-closest-point)), and the residuals \\(y_1 - \bar{y}, y_2 - \bar{y})\\ are orthogonal to \\(1, 1)\\:
+> the hat matrix found in [Example 2](#exm-hat-matrix). The fitted values \\(\bar{y}, \bar{y})\\ are the closest point to \\\underset{\sim}{y}\\ on the line of constant vectors ([Theorem 3](#thm-closest-point)), and the residuals \\(y_1 - \bar{y}, y_2 - \bar{y})\\ are orthogonal to \\(1, 1)\\:
 >
 > \\ \begin{aligned} (1, 1) \cdot (y_1 - \bar{y}, y_2 - \bar{y}) &= y_1 + y_2 - 2\bar{y} \\ &= 0, \end{aligned} \\
 >
@@ -323,17 +323,17 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 9 (A generalized inverse solves every solvable system)** Let \\\mathbf{A}\\ be \\m \times n\\, let \\\mathbf{G}\\ be a generalized inverse of \\\mathbf{A}\\ ([Definition 4](#def-generalized-inverse)), and let \\\tilde{b} \in \mathbb{R}^m\\. If \\\mathbf{A} \tilde{x} = \tilde{b}\\ has a solution, then \\\mathbf{G} \tilde{b}\\ is a solution.
+> **Theorem 9 (A generalized inverse solves every solvable system)** Let \\\mathbf{A}\\ be \\m \times n\\, let \\\mathbf{G}\\ be a generalized inverse of \\\mathbf{A}\\ ([Definition 4](#def-generalized-inverse)), and let \\\underset{\sim}{b} \in \mathbb{R}^m\\. If \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\ has a solution, then \\\mathbf{G} \underset{\sim}{b}\\ is a solution.
 
 > **NOTE:**
 >
-> *Proof*. Let \\\tilde{x}\_0\\ be a solution, so \\\mathbf{A} \tilde{x}\_0 = \tilde{b}\\. Then
+> *Proof*. Let \\\underset{\sim}{x}\_0\\ be a solution, so \\\mathbf{A} \underset{\sim}{x}\_0 = \underset{\sim}{b}\\. Then
 >
-> \\ \begin{aligned} \mathbf{A}\\(\mathbf{G} \tilde{b}) &= \mathbf{A} \mathbf{G}\\(\mathbf{A} \tilde{x}\_0) && \text{(substitute } \tilde{b} = \mathbf{A} \tilde{x}\_0 \text{)} \\ &= (\mathbf{A} \mathbf{G} \mathbf{A})\\\tilde{x}\_0 && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{A} \tilde{x}\_0 && \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)} \\ &= \tilde{b}. && \text{(} \tilde{x}\_0 \text{ is a solution)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{A}\\(\mathbf{G} \underset{\sim}{b}) &= \mathbf{A} \mathbf{G}\\(\mathbf{A} \underset{\sim}{x}\_0) && \text{(substitute } \underset{\sim}{b} = \mathbf{A} \underset{\sim}{x}\_0 \text{)} \\ &= (\mathbf{A} \mathbf{G} \mathbf{A})\\\underset{\sim}{x}\_0 && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{A} \underset{\sim}{x}\_0 && \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)} \\ &= \underset{\sim}{b}. && \text{(} \underset{\sim}{x}\_0 \text{ is a solution)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 13 (Solving with a generalized inverse)** With \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and its generalized inverse \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\ ([Example 11](#exm-generalized-inverse)), the system \\\mathbf{A} \tilde{x} = (2, 0)\\ has the solution \\(2, 0)\\, and \\\mathbf{G}\\(2, 0) = (2, 14)\\ is a solution too: \\\mathbf{A}\\(2, 14) = (2, 0)\\. The system \\\mathbf{A} \tilde{x} = (2, 1)\\ has no solution, since the second entry of \\\mathbf{A} \tilde{x}\\ is always \\0\\; there \\\mathbf{G}\\(2, 1) = (7, 14)\\ gives \\\mathbf{A}\\(7, 14) = (7, 0) \ne (2, 1)\\.
+> **Example 13 (Solving with a generalized inverse)** With \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and its generalized inverse \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\ ([Example 11](#exm-generalized-inverse)), the system \\\mathbf{A} \underset{\sim}{x} = (2, 0)\\ has the solution \\(2, 0)\\, and \\\mathbf{G}\\(2, 0) = (2, 14)\\ is a solution too: \\\mathbf{A}\\(2, 14) = (2, 0)\\. The system \\\mathbf{A} \underset{\sim}{x} = (2, 1)\\ has no solution, since the second entry of \\\mathbf{A} \underset{\sim}{x}\\ is always \\0\\; there \\\mathbf{G}\\(2, 1) = (7, 14)\\ gives \\\mathbf{A}\\(7, 14) = (7, 0) \ne (2, 1)\\.
 
 > **NOTE:**
 >
@@ -419,7 +419,7 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. **The two cases cover every matrix.** If \\\mathbf{A} \ne \mathbf{0}\_{m \times n}\\, it has a nonzero column, which is linearly independent on its own (\\c\\\tilde{v} = \tilde{0}\\ with \\\tilde{v} \ne \tilde{0}\\ forces \\c = 0\\), so \\\operatorname{rank}(\mathbf{A}) \ge 1\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)).
+> *Proof*. **The two cases cover every matrix.** If \\\mathbf{A} \ne \mathbf{0}\_{m \times n}\\, it has a nonzero column, which is linearly independent on its own (\\c\\\underset{\sim}{v} = \underset{\sim}{0}\\ with \\\underset{\sim}{v} \ne \underset{\sim}{0}\\ forces \\c = 0\\), so \\\operatorname{rank}(\mathbf{A}) \ge 1\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)).
 >
 > **The zero matrix.** With \\\mathbf{A} = \mathbf{0}\_{m \times n}\\ and \\\mathbf{G} = \mathbf{0}\_{n \times m}\\, every product in conditions 1 to 4 is a zero matrix, and a zero matrix equals its own transpose, so all four conditions hold.
 >
@@ -479,49 +479,49 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Consistent linear system)** A linear system ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) \\\mathbf{A} \tilde{x} = \tilde{b}\\, with \\\mathbf{A}\\ an \\m \times n\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\, is **consistent** if it has at least one solution \\\tilde{x} \in \mathbb{R}^n\\, and **inconsistent** otherwise.
+> **Definition 6 (Consistent linear system)** A linear system ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\, with \\\mathbf{A}\\ an \\m \times n\\ matrix and \\\underset{\sim}{b} \in \mathbb{R}^m\\, is **consistent** if it has at least one solution \\\underset{\sim}{x} \in \mathbb{R}^n\\, and **inconsistent** otherwise.
 
 > **NOTE:**
 >
 > **Example 18 (A consistent system and an inconsistent one)** With \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{A}\\(x_1, x_2) = (x_1, 0)\\ ([Definition 13 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)).
 >
-> - \\\mathbf{A} \tilde{x} = (2, 0)\\ is consistent: \\\tilde{x} = (2, 0)\\ is a solution.
-> - \\\mathbf{A} \tilde{x} = (2, 1)\\ is inconsistent: the second entry of \\\mathbf{A} \tilde{x}\\ is always \\0\\, never \\1\\.
+> - \\\mathbf{A} \underset{\sim}{x} = (2, 0)\\ is consistent: \\\underset{\sim}{x} = (2, 0)\\ is a solution.
+> - \\\mathbf{A} \underset{\sim}{x} = (2, 1)\\ is inconsistent: the second entry of \\\mathbf{A} \underset{\sim}{x}\\ is always \\0\\, never \\1\\.
 
 > **NOTE:**
 >
-> **Theorem 13 (When a linear system has a solution)** Let \\\mathbf{A}\\ be \\m \times n\\, let \\\tilde{b} \in \mathbb{R}^m\\, and let \\\mathbf{G}\\ be any generalized inverse of \\\mathbf{A}\\ ([Definition 4](#def-generalized-inverse)). The following statements are equivalent:
+> **Theorem 13 (When a linear system has a solution)** Let \\\mathbf{A}\\ be \\m \times n\\, let \\\underset{\sim}{b} \in \mathbb{R}^m\\, and let \\\mathbf{G}\\ be any generalized inverse of \\\mathbf{A}\\ ([Definition 4](#def-generalized-inverse)). The following statements are equivalent:
 >
-> 1.  \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent ([Definition 6](#def-consistent-system));
-> 2.  \\\tilde{b} \in \mathcal{C}(\mathbf{A})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space));
-> 3.  \\\mathbf{A} \mathbf{G} \tilde{b} = \tilde{b}\\.
+> 1.  \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\ is consistent ([Definition 6](#def-consistent-system));
+> 2.  \\\underset{\sim}{b} \in \mathcal{C}(\mathbf{A})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space));
+> 3.  \\\mathbf{A} \mathbf{G} \underset{\sim}{b} = \underset{\sim}{b}\\.
 
 > **NOTE:**
 >
-> *Proof*. **1 and 2 are equivalent.** Statement 1 says \\\tilde{b} = \mathbf{A} \tilde{x}\\ for some \\\tilde{x}\\ ([Definition 6](#def-consistent-system)), and \\\mathcal{C}(\mathbf{A})\\ is the set of vectors \\\mathbf{A} \tilde{x}\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), so \\\tilde{b}\\ is in it exactly when \\\tilde{b} = \mathbf{A} \tilde{x}\\ for some \\\tilde{x}\\.
+> *Proof*. **1 and 2 are equivalent.** Statement 1 says \\\underset{\sim}{b} = \mathbf{A} \underset{\sim}{x}\\ for some \\\underset{\sim}{x}\\ ([Definition 6](#def-consistent-system)), and \\\mathcal{C}(\mathbf{A})\\ is the set of vectors \\\mathbf{A} \underset{\sim}{x}\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), so \\\underset{\sim}{b}\\ is in it exactly when \\\underset{\sim}{b} = \mathbf{A} \underset{\sim}{x}\\ for some \\\underset{\sim}{x}\\.
 >
-> **1 implies 3.** By [Theorem 9](#thm-generalized-inverse-solves), \\\mathbf{G} \tilde{b}\\ is a solution, so \\\mathbf{A}\\(\mathbf{G} \tilde{b}) = \tilde{b}\\, which is statement 3 ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)).
+> **1 implies 3.** By [Theorem 9](#thm-generalized-inverse-solves), \\\mathbf{G} \underset{\sim}{b}\\ is a solution, so \\\mathbf{A}\\(\mathbf{G} \underset{\sim}{b}) = \underset{\sim}{b}\\, which is statement 3 ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)).
 >
-> **3 implies 1.** If \\\mathbf{A} \mathbf{G} \tilde{b} = \tilde{b}\\, then \\\tilde{x} = \mathbf{G} \tilde{b}\\ is a solution, since \\\mathbf{A}\\(\mathbf{G} \tilde{b}) = (\mathbf{A} \mathbf{G})\\\tilde{b}\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)).
+> **3 implies 1.** If \\\mathbf{A} \mathbf{G} \underset{\sim}{b} = \underset{\sim}{b}\\, then \\\underset{\sim}{x} = \mathbf{G} \underset{\sim}{b}\\ is a solution, since \\\mathbf{A}\\(\mathbf{G} \underset{\sim}{b}) = (\mathbf{A} \mathbf{G})\\\underset{\sim}{b}\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)).
 
 > **NOTE:**
 >
 > **Example 19 (Testing consistency with a generalized inverse)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and the generalized inverse \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\, \\\mathbf{A} \mathbf{G} = \begin{bmatrix} 1 & 5 \\ 0 & 0 \end{bmatrix}\\.
 >
-> - \\\tilde{b} = (2, 0)\\:
+> - \\\underset{\sim}{b} = (2, 0)\\:
 >
->   \\ \begin{aligned} \mathbf{A} \mathbf{G} \tilde{b} &= (2, 0) \\ &= \tilde{b}, \end{aligned} \\
+>   \\ \begin{aligned} \mathbf{A} \mathbf{G} \underset{\sim}{b} &= (2, 0) \\ &= \underset{\sim}{b}, \end{aligned} \\
 >
 >   so the system is consistent.
 >
-> - \\\tilde{b} = (2, 1)\\: \\\mathbf{A} \mathbf{G} \tilde{b} = (7, 0) \ne \tilde{b}\\, so it is not, as [Example 13](#exm-generalized-inverse-solves) found directly.
+> - \\\underset{\sim}{b} = (2, 1)\\: \\\mathbf{A} \mathbf{G} \underset{\sim}{b} = (7, 0) \ne \underset{\sim}{b}\\, so it is not, as [Example 13](#exm-generalized-inverse-solves) found directly.
 
 > **NOTE:**
 >
 > **Theorem 14 (All solutions of a linear system)** Let \\\mathbf{A}\\ be \\m \times n\\ with a generalized inverse \\\mathbf{G}\\ ([Definition 4](#def-generalized-inverse)).
 >
-> 1.  \\\mathcal{N}(\mathbf{A}) = \mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\: \\\tilde{x}\\ solves \\\mathbf{A} \tilde{x} = \tilde{0}\_m\\ exactly when \\\tilde{x} = (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{q}\\ for some \\\tilde{q} \in \mathbb{R}^n\\.
-> 2.  If \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent ([Definition 6](#def-consistent-system)), then \\\tilde{x}\\ is a solution exactly when \\ \tilde{x} = \mathbf{G} \tilde{b} + (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{q} \quad \text{for some } \tilde{q} \in \mathbb{R}^n: \\ one particular solution plus a vector of \\\mathcal{N}(\mathbf{A})\\.
+> 1.  \\\mathcal{N}(\mathbf{A}) = \mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\: \\\underset{\sim}{x}\\ solves \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{0}\_m\\ exactly when \\\underset{\sim}{x} = (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\underset{\sim}{q}\\ for some \\\underset{\sim}{q} \in \mathbb{R}^n\\.
+> 2.  If \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\ is consistent ([Definition 6](#def-consistent-system)), then \\\underset{\sim}{x}\\ is a solution exactly when \\ \underset{\sim}{x} = \mathbf{G} \underset{\sim}{b} + (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\underset{\sim}{q} \quad \text{for some } \underset{\sim}{q} \in \mathbb{R}^n: \\ one particular solution plus a vector of \\\mathcal{N}(\mathbf{A})\\.
 
 > **NOTE:**
 >
@@ -529,23 +529,23 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 >
 > \\ \begin{aligned} \mathbf{A}\\(\mathbf{I}\_n - \mathbf{G} \mathbf{A}) &= \mathbf{A} \mathbf{I}\_n - \mathbf{A}\\(\mathbf{G} \mathbf{A}) && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~7}}\text{)} \\ &= \mathbf{A} \mathbf{I}\_n - \mathbf{A} \mathbf{G} \mathbf{A} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{A} - \mathbf{A} \mathbf{G} \mathbf{A} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= \mathbf{A} - \mathbf{A} && \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)} \\ &= \mathbf{0}\_{m \times n}, && \text{(arithmetic)} \end{aligned} \\
 >
-> so \\\mathbf{A}\\(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{q} = \tilde{0}\_m\\ for every \\\tilde{q}\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), and \\\mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A}) \subseteq \mathcal{N}(\mathbf{A})\\. Conversely, if \\\mathbf{A} \tilde{x} = \tilde{0}\_m\\, then
+> so \\\mathbf{A}\\(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\underset{\sim}{q} = \underset{\sim}{0}\_m\\ for every \\\underset{\sim}{q}\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), and \\\mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A}) \subseteq \mathcal{N}(\mathbf{A})\\. Conversely, if \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{0}\_m\\, then
 >
-> \\ \begin{aligned} (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{x} &= \mathbf{I}\_n \tilde{x} - (\mathbf{G} \mathbf{A})\\\tilde{x} && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~7}}\text{, with } \tilde{x} \text{ as the last factor)} \\ &= \tilde{x} - (\mathbf{G} \mathbf{A})\\\tilde{x} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= \tilde{x} - \mathbf{G}\\(\mathbf{A} \tilde{x}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \tilde{x} - \mathbf{G}\\\tilde{0}\_m && \text{(} \mathbf{A} \tilde{x} = \tilde{0}\_m \text{)} \\ &= \tilde{x}, && \text{(} \mathbf{G}\\\tilde{0}\_m = \tilde{0}\_n \text{)} \end{aligned} \\
+> \\ \begin{aligned} (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\underset{\sim}{x} &= \mathbf{I}\_n \underset{\sim}{x} - (\mathbf{G} \mathbf{A})\\\underset{\sim}{x} && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~7}}\text{, with } \underset{\sim}{x} \text{ as the last factor)} \\ &= \underset{\sim}{x} - (\mathbf{G} \mathbf{A})\\\underset{\sim}{x} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= \underset{\sim}{x} - \mathbf{G}\\(\mathbf{A} \underset{\sim}{x}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \underset{\sim}{x} - \mathbf{G}\\\underset{\sim}{0}\_m && \text{(} \mathbf{A} \underset{\sim}{x} = \underset{\sim}{0}\_m \text{)} \\ &= \underset{\sim}{x}, && \text{(} \mathbf{G}\\\underset{\sim}{0}\_m = \underset{\sim}{0}\_n \text{)} \end{aligned} \\
 >
-> so \\\tilde{x}\\ is in \\\mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\, with \\\tilde{q} = \tilde{x}\\.
+> so \\\underset{\sim}{x}\\ is in \\\mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\, with \\\underset{\sim}{q} = \underset{\sim}{x}\\.
 >
-> **Part 2.** \\\mathbf{G} \tilde{b}\\ is a solution ([Theorem 9](#thm-generalized-inverse-solves)). For any \\\tilde{x}\\,
+> **Part 2.** \\\mathbf{G} \underset{\sim}{b}\\ is a solution ([Theorem 9](#thm-generalized-inverse-solves)). For any \\\underset{\sim}{x}\\,
 >
-> \\ \begin{aligned} \mathbf{A}\\(\tilde{x} - \mathbf{G} \tilde{b}) &= \mathbf{A} \tilde{x} - \mathbf{A}\\(\mathbf{G} \tilde{b}) && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \mathbf{A} \tilde{x} - \mathbf{A} \mathbf{G} \tilde{b} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{A} \tilde{x} - \tilde{b}, && \text{(}\href{#thm-consistency}{\text{Theorem~13}}\text{, statement 3)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{A}\\(\underset{\sim}{x} - \mathbf{G} \underset{\sim}{b}) &= \mathbf{A} \underset{\sim}{x} - \mathbf{A}\\(\mathbf{G} \underset{\sim}{b}) && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \mathbf{A} \underset{\sim}{x} - \mathbf{A} \mathbf{G} \underset{\sim}{b} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{A} \underset{\sim}{x} - \underset{\sim}{b}, && \text{(}\href{#thm-consistency}{\text{Theorem~13}}\text{, statement 3)} \end{aligned} \\
 >
-> so \\\tilde{x}\\ solves \\\mathbf{A} \tilde{x} = \tilde{b}\\ exactly when \\\tilde{x} - \mathbf{G} \tilde{b} \in \mathcal{N}(\mathbf{A})\\, that is, by part 1, exactly when \\\tilde{x} - \mathbf{G} \tilde{b} = (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{q}\\ for some \\\tilde{q}\\.
+> so \\\underset{\sim}{x}\\ solves \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\ exactly when \\\underset{\sim}{x} - \mathbf{G} \underset{\sim}{b} \in \mathcal{N}(\mathbf{A})\\, that is, by part 1, exactly when \\\underset{\sim}{x} - \mathbf{G} \underset{\sim}{b} = (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\underset{\sim}{q}\\ for some \\\underset{\sim}{q}\\.
 
 > **NOTE:**
 >
-> **Example 20 (All solutions of a consistent system)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\ and \\\tilde{b} = (2, 0)\\: \\\mathbf{G} \tilde{b} = (2, 14)\\, \\\mathbf{G} \mathbf{A} = \begin{bmatrix} 1 & 0 \\ 7 & 0 \end{bmatrix}\\, and \\\mathbf{I}\_2 - \mathbf{G} \mathbf{A} = \begin{bmatrix} 0 & 0 \\ -7 & 1 \end{bmatrix}\\, so
+> **Example 20 (All solutions of a consistent system)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\ and \\\underset{\sim}{b} = (2, 0)\\: \\\mathbf{G} \underset{\sim}{b} = (2, 14)\\, \\\mathbf{G} \mathbf{A} = \begin{bmatrix} 1 & 0 \\ 7 & 0 \end{bmatrix}\\, and \\\mathbf{I}\_2 - \mathbf{G} \mathbf{A} = \begin{bmatrix} 0 & 0 \\ -7 & 1 \end{bmatrix}\\, so
 >
-> \\ \tilde{x} = (2, 14) + (0, -7 q_1 + q_2), \qquad q_1, q_2 \in \mathbb{R}. \\
+> \\ \underset{\sim}{x} = (2, 14) + (0, -7 q_1 + q_2), \qquad q_1, q_2 \in \mathbb{R}. \\
 >
 > Since \\-7 q_1 + q_2\\ can be any number, the solutions are exactly the vectors \\(2, t)\\, \\t \in \mathbb{R}\\, which is what
 >
@@ -557,14 +557,14 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 >
 > **Corollary 1 (Solvable for every right-hand side, and solvable uniquely)** Let \\\mathbf{A}\\ be \\m \times n\\.
 >
-> 1.  \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent for every \\\tilde{b} \in \mathbb{R}^m\\ exactly when \\\operatorname{rank}(\mathbf{A}) = m\\.
-> 2.  A consistent system \\\mathbf{A} \tilde{x} = \tilde{b}\\ has exactly one solution exactly when \\\operatorname{rank}(\mathbf{A}) = n\\.
+> 1.  \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\ is consistent for every \\\underset{\sim}{b} \in \mathbb{R}^m\\ exactly when \\\operatorname{rank}(\mathbf{A}) = m\\.
+> 2.  A consistent system \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\ has exactly one solution exactly when \\\operatorname{rank}(\mathbf{A}) = n\\.
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** By [Theorem 13](#thm-consistency), the system is consistent for every \\\tilde{b}\\ exactly when \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\. \\\mathcal{C}(\mathbf{A})\\ is a subspace of \\\mathbb{R}^m\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with dimension \\\operatorname{rank}(\mathbf{A})\\ ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), and \\\dim(\mathbb{R}^m) = m\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). If the dimension is \\m\\, then \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)); if \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\, the dimension is \\m\\.
+> *Proof*. **Part 1.** By [Theorem 13](#thm-consistency), the system is consistent for every \\\underset{\sim}{b}\\ exactly when \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\. \\\mathcal{C}(\mathbf{A})\\ is a subspace of \\\mathbb{R}^m\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with dimension \\\operatorname{rank}(\mathbf{A})\\ ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), and \\\dim(\mathbb{R}^m) = m\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). If the dimension is \\m\\, then \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)); if \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\, the dimension is \\m\\.
 >
-> **Part 2.** By [Theorem 14](#thm-solution-set), the solutions are a particular solution plus the vectors of \\\mathcal{N}(\mathbf{A})\\, so there is exactly one solution exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, that is, when \\\operatorname{nullity}(\mathbf{A}) = 0\\ (a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, by [Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension) and [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span); and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\, by [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). By [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), that is when \\\operatorname{rank}(\mathbf{A}) = n\\.
+> **Part 2.** By [Theorem 14](#thm-solution-set), the solutions are a particular solution plus the vectors of \\\mathcal{N}(\mathbf{A})\\, so there is exactly one solution exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\underset{\sim}{0}\_n\right\\\mathclose{}\\, that is, when \\\operatorname{nullity}(\mathbf{A}) = 0\\ (a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\, by [Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension) and [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span); and \\\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\ has dimension \\0\\, by [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). By [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), that is when \\\operatorname{rank}(\mathbf{A}) = n\\.
 
 > **NOTE:**
 >
@@ -574,31 +574,31 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 >
 > - The \\3 \times 2\\ matrix \\\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ of [Example 1](#exm-gram-invertible) has rank \\2 = n\\, so a consistent system has one solution, but \\2 \< 3 = m\\, so some systems are inconsistent: \\(1, 0, 0) \notin \mathcal{C}(\mathbf{X})\\, because \\a\\(1, 1, 1) + b\\(1, 2, 3)\\ has equal differences between consecutive entries, and \\(1, 0, 0)\\ does not.
 >
-> - An invertible \\p \times p\\ matrix \\\mathbf{A}\\ has rank \\p\\: if \\\mathbf{A} \tilde{x} = \tilde{0}\\ then
+> - An invertible \\p \times p\\ matrix \\\mathbf{A}\\ has rank \\p\\: if \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{0}\\ then
 >
->   \\ \begin{aligned} \tilde{x} &= \mathbf{A}^{-1} \mathbf{A} \tilde{x} \\ &= \tilde{0}, \end{aligned} \\
+>   \\ \begin{aligned} \underset{\sim}{x} &= \mathbf{A}^{-1} \mathbf{A} \underset{\sim}{x} \\ &= \underset{\sim}{0}, \end{aligned} \\
 >
->   so its nullity is \\0\\ and its rank is \\p\\ ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)). So every system with it is consistent (part 1, with \\p = m\\) and has exactly one solution (part 2, with \\p = n\\), namely \\\mathbf{A}^{-1} \tilde{b}\\, since \\\mathbf{A}\\(\mathbf{A}^{-1} \tilde{b}) = \tilde{b}\\.
+>   so its nullity is \\0\\ and its rank is \\p\\ ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)). So every system with it is consistent (part 1, with \\p = m\\) and has exactly one solution (part 2, with \\p = n\\), namely \\\mathbf{A}^{-1} \underset{\sim}{b}\\, since \\\mathbf{A}\\(\mathbf{A}^{-1} \underset{\sim}{b}) = \underset{\sim}{b}\\.
 
 > **NOTE:**
 >
-> **Theorem 15 (The projection onto a column space, with any generalized inverse)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix of any rank, and let \\\mathbf{G}\\ be any generalized inverse of \\{\mathbf{X}}^{\top} \mathbf{X}\\ ([Definition 4](#def-generalized-inverse)). Then for every \\\tilde{y}\in \mathbb{R}^n\\, \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{X})\\ ([Definition 3](#def-orthogonal-projection)). So the matrix \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ is the same for every choice of \\\mathbf{G}\\, and when \\\operatorname{rank}(\mathbf{X}) = p\\ it is the hat matrix \\\mathbf{H}\\ ([Definition 2](#def-hat-matrix)).
+> **Theorem 15 (The projection onto a column space, with any generalized inverse)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix of any rank, and let \\\mathbf{G}\\ be any generalized inverse of \\{\mathbf{X}}^{\top} \mathbf{X}\\ ([Definition 4](#def-generalized-inverse)). Then for every \\\underset{\sim}{y}\in \mathbb{R}^n\\, \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \underset{\sim}{y}\\ is the orthogonal projection of \\\underset{\sim}{y}\\ onto \\\mathcal{C}(\mathbf{X})\\ ([Definition 3](#def-orthogonal-projection)). So the matrix \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ is the same for every choice of \\\mathbf{G}\\, and when \\\operatorname{rank}(\mathbf{X}) = p\\ it is the hat matrix \\\mathbf{H}\\ ([Definition 2](#def-hat-matrix)).
 
 > **NOTE:**
 >
-> *Proof*. **\\{\mathbf{X}}^{\top} \tilde{y}\\ is in \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X})\\.** \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) \subseteq \mathcal{C}({\mathbf{X}}^{\top})\\, since \\({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} = {\mathbf{X}}^{\top}\\(\mathbf{X}\tilde{z})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)). Both are subspaces of \\\mathbb{R}^p\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with the same dimension: \\\operatorname{rank}({\mathbf{X}}^{\top} \mathbf{X}) = \operatorname{rank}({\mathbf{X}}^{\top})\\ ([Theorem 10 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-transpose), [Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)). So \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) = \mathcal{C}({\mathbf{X}}^{\top})\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)), and since \\{\mathbf{X}}^{\top} \tilde{y}\in \mathcal{C}({\mathbf{X}}^{\top})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), \\{\mathbf{X}}^{\top} \tilde{y}= {\mathbf{X}}^{\top} \mathbf{X}\tilde{z}\\ for some \\\tilde{z} \in \mathbb{R}^p\\.
+> *Proof*. **\\{\mathbf{X}}^{\top} \underset{\sim}{y}\\ is in \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X})\\.** \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) \subseteq \mathcal{C}({\mathbf{X}}^{\top})\\, since \\({\mathbf{X}}^{\top} \mathbf{X})\\\underset{\sim}{z} = {\mathbf{X}}^{\top}\\(\mathbf{X}\underset{\sim}{z})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)). Both are subspaces of \\\mathbb{R}^p\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with the same dimension: \\\operatorname{rank}({\mathbf{X}}^{\top} \mathbf{X}) = \operatorname{rank}({\mathbf{X}}^{\top})\\ ([Theorem 10 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-transpose), [Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)). So \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) = \mathcal{C}({\mathbf{X}}^{\top})\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)), and since \\{\mathbf{X}}^{\top} \underset{\sim}{y}\in \mathcal{C}({\mathbf{X}}^{\top})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), \\{\mathbf{X}}^{\top} \underset{\sim}{y}= {\mathbf{X}}^{\top} \mathbf{X}\underset{\sim}{z}\\ for some \\\underset{\sim}{z} \in \mathbb{R}^p\\.
 >
 > **The split.** Let
 >
-> \\ \begin{aligned} \tilde{u} &= \mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}\\ &= \mathbf{X}\\(\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}) \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{u} &= \mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \underset{\sim}{y}\\ &= \mathbf{X}\\(\mathbf{G} {\mathbf{X}}^{\top} \underset{\sim}{y}) \end{aligned} \\
 >
-> ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{X})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)). For \\\tilde{y}- \tilde{u}\\,
+> ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{X})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)). For \\\underset{\sim}{y}- \underset{\sim}{u}\\,
 >
-> \\ \begin{aligned} {\mathbf{X}}^{\top}\\(\tilde{y}- \tilde{u}) &= {\mathbf{X}}^{\top} \tilde{y}- {\mathbf{X}}^{\top}\\\tilde{u} && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- {\mathbf{X}}^{\top}\\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}) && \text{(substitute } \tilde{u} \text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \tilde{y}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} && \text{(first step)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- \mathopen{}\left(({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X})\right)\mathclose{}\\\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} && \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- {\mathbf{X}}^{\top} \tilde{y} && \text{(first step)} \\ &= \tilde{0}\_p, && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} {\mathbf{X}}^{\top}\\(\underset{\sim}{y}- \underset{\sim}{u}) &= {\mathbf{X}}^{\top} \underset{\sim}{y}- {\mathbf{X}}^{\top}\\\underset{\sim}{u} && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= {\mathbf{X}}^{\top} \underset{\sim}{y}- {\mathbf{X}}^{\top}\\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \underset{\sim}{y}) && \text{(substitute } \underset{\sim}{u} \text{)} \\ &= {\mathbf{X}}^{\top} \underset{\sim}{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \underset{\sim}{y}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {\mathbf{X}}^{\top} \underset{\sim}{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X})\\\underset{\sim}{z} && \text{(first step)} \\ &= {\mathbf{X}}^{\top} \underset{\sim}{y}- \mathopen{}\left(({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X})\right)\mathclose{}\\\underset{\sim}{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {\mathbf{X}}^{\top} \underset{\sim}{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\underset{\sim}{z} && \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)} \\ &= {\mathbf{X}}^{\top} \underset{\sim}{y}- {\mathbf{X}}^{\top} \underset{\sim}{y} && \text{(first step)} \\ &= \underset{\sim}{0}\_p, && \text{(arithmetic)} \end{aligned} \\
 >
-> so \\\tilde{y}- \tilde{u} \in \mathcal{N}({\mathbf{X}}^{\top}) = \mathcal{C}(\mathbf{X})^\perp\\ ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)). By the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\tilde{u}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{X})\\.
+> so \\\underset{\sim}{y}- \underset{\sim}{u} \in \mathcal{N}({\mathbf{X}}^{\top}) = \mathcal{C}(\mathbf{X})^\perp\\ ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)). By the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\underset{\sim}{u}\\ is the orthogonal projection of \\\underset{\sim}{y}\\ onto \\\mathcal{C}(\mathbf{X})\\.
 >
-> **Same matrix.** Every choice of \\\mathbf{G}\\ gives a matrix that projects every \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{X})\\, so all choices give the same matrix ([Theorem 5](#thm-projection-matrix-projects), part 2). When \\\operatorname{rank}(\mathbf{X}) = p\\, \\({\mathbf{X}}^{\top} \mathbf{X})^{-1}\\ is one choice ([Theorem 1](#thm-gram-invertible), [Theorem 8](#thm-generalized-inverse-invertible)), and it gives \\\mathbf{H}\\.
+> **Same matrix.** Every choice of \\\mathbf{G}\\ gives a matrix that projects every \\\underset{\sim}{y}\\ onto \\\mathcal{C}(\mathbf{X})\\, so all choices give the same matrix ([Theorem 5](#thm-projection-matrix-projects), part 2). When \\\operatorname{rank}(\mathbf{X}) = p\\, \\({\mathbf{X}}^{\top} \mathbf{X})^{-1}\\ is one choice ([Theorem 1](#thm-gram-invertible), [Theorem 8](#thm-generalized-inverse-invertible)), and it gives \\\mathbf{H}\\.
 
 > **NOTE:**
 >
@@ -641,15 +641,15 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 16 (Solving a triangular system by substitution)** Let \\\mathbf{U}\\ be an \\n \times n\\ upper triangular matrix ([Definition 7](#def-triangular-matrix)) whose diagonal entries \\u\_{11}, \ldots, u\_{nn}\\ are all nonzero. For every \\\tilde{b} \in \mathbb{R}^n\\, the system \\\mathbf{U} \tilde{x} = \tilde{b}\\ has exactly one solution, given for \\i = n, n - 1, \ldots, 1\\ in turn by
+> **Theorem 16 (Solving a triangular system by substitution)** Let \\\mathbf{U}\\ be an \\n \times n\\ upper triangular matrix ([Definition 7](#def-triangular-matrix)) whose diagonal entries \\u\_{11}, \ldots, u\_{nn}\\ are all nonzero. For every \\\underset{\sim}{b} \in \mathbb{R}^n\\, the system \\\mathbf{U} \underset{\sim}{x} = \underset{\sim}{b}\\ has exactly one solution, given for \\i = n, n - 1, \ldots, 1\\ in turn by
 >
 > \\ x_i = \frac{1}{u\_{ii}} \mathopen{}\left(b_i - \sum\_{j=i+1}^{n} u\_{ij}\\x_j\right)\mathclose{} \\
 >
-> (**back substitution**). Likewise, if \\\mathbf{L}\\ is lower triangular with nonzero diagonal, \\\mathbf{L} \tilde{y} = \tilde{b}\\ has exactly one solution, given for \\i = 1, \ldots, n\\ by \\y_i = \frac{1}{\ell\_{ii}} \mathopen{}\left(b_i - \sum\_{j=1}^{i-1} \ell\_{ij}\\y_j\right)\mathclose{}\\ (**forward substitution**).
+> (**back substitution**). Likewise, if \\\mathbf{L}\\ is lower triangular with nonzero diagonal, \\\mathbf{L} \underset{\sim}{y} = \underset{\sim}{b}\\ has exactly one solution, given for \\i = 1, \ldots, n\\ by \\y_i = \frac{1}{\ell\_{ii}} \mathopen{}\left(b_i - \sum\_{j=1}^{i-1} \ell\_{ij}\\y_j\right)\mathclose{}\\ (**forward substitution**).
 
 > **NOTE:**
 >
-> *Proof*. Row \\i\\ of \\\mathbf{U} \tilde{x} = \tilde{b}\\ reads
+> *Proof*. Row \\i\\ of \\\mathbf{U} \underset{\sim}{x} = \underset{\sim}{b}\\ reads
 >
 > \\ \begin{aligned} b_i &= \sum\_{j=1}^nu\_{ij}\\x_j && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= \sum\_{j=i}^{n} u\_{ij}\\x_j && \text{(} u\_{ij} = 0 \text{ for } j \< i \text{)} \\ &= u\_{ii}\\x_i + \sum\_{j=i+1}^{n} u\_{ij}\\x_j. && \text{(split off the } j = i \text{ term)} \end{aligned} \\
 >
@@ -657,11 +657,11 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 >
 > \\ \begin{aligned} u\_{ii}\\x_i &= b_i - \sum\_{j=i+1}^{n} u\_{ij}\\x_j && \text{(subtract the sum from both sides)} \\ x_i &= \frac{1}{u\_{ii}} \mathopen{}\left(b_i - \sum\_{j=i+1}^{n} u\_{ij}\\x_j\right)\mathclose{}. && \text{(divide by } u\_{ii} \ne 0 \text{)} \end{aligned} \\
 >
-> Row \\n\\ involves only \\x_n\\, so it fixes \\x_n\\; once \\x\_{i+1}, \ldots, x_n\\ are fixed, row \\i\\ fixes \\x_i\\. So the rows, taken from the last to the first, hold exactly when \\\tilde{x}\\ is the vector the formula builds: there is one solution, and only one. For \\\mathbf{L}\\, row \\i\\ reads \\\sum\_{j=1}^{i-1} \ell\_{ij}\\y_j + \ell\_{ii}\\y_i = b_i\\, and the same argument runs from the first row to the last.
+> Row \\n\\ involves only \\x_n\\, so it fixes \\x_n\\; once \\x\_{i+1}, \ldots, x_n\\ are fixed, row \\i\\ fixes \\x_i\\. So the rows, taken from the last to the first, hold exactly when \\\underset{\sim}{x}\\ is the vector the formula builds: there is one solution, and only one. For \\\mathbf{L}\\, row \\i\\ reads \\\sum\_{j=1}^{i-1} \ell\_{ij}\\y_j + \ell\_{ii}\\y_i = b_i\\, and the same argument runs from the first row to the last.
 
 > **NOTE:**
 >
-> **Example 24 (Back substitution on a \\3 \times 3\\ system)** Solve \\\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix} \tilde{x} = \begin{bmatrix} 8 \\ 1 \\ 1 \end{bmatrix}\\:
+> **Example 24 (Back substitution on a \\3 \times 3\\ system)** Solve \\\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix} \underset{\sim}{x} = \begin{bmatrix} 8 \\ 1 \\ 1 \end{bmatrix}\\:
 >
 > 1.  \\ \begin{aligned} x_3 &= \frac{1}{-1} \cdot 1 \\ &= -1; \end{aligned} \\
 >
@@ -669,7 +669,7 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 >
 > 3.  \\ \begin{aligned} x_1 &= \frac{1}{2} \mathopen{}\left(8 - 1 \cdot 3 - (-1)(-1)\right)\mathclose{} \\ &= \frac{1}{2} \cdot 4 \\ &= 2. \end{aligned} \\
 >
-> So \\\tilde{x} = (2, 3, -1)\\. Without a nonzero diagonal the method fails: \\\begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix} \tilde{x} = (1, 1)\\ has no solution, since its second row reads \\0 = 1\\.
+> So \\\underset{\sim}{x} = (2, 3, -1)\\. Without a nonzero diagonal the method fails: \\\begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix} \underset{\sim}{x} = (1, 1)\\ has no solution, since its second row reads \\0 = 1\\.
 
 > **NOTE:**
 >
@@ -681,128 +681,128 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. The \\n\\ columns \\\tilde{a}\_1, \ldots, \tilde{a}\_n\\ of \\\mathbf{A}\\ are linearly independent ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), so the Gram-Schmidt process ([Definition 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-gram-schmidt)) runs all \\n\\ steps and gives orthonormal \\\tilde{q}\_1, \ldots, \tilde{q}\_n\\ ([Theorem 10 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt), parts 1 and 3); let \\\mathbf{Q}\\ have these columns. At step \\i\\, \\\tilde{\tilde{q}}\_i \ne \tilde{0}\\, and rearranging the orthogonalize step,
+> *Proof*. The \\n\\ columns \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_n\\ of \\\mathbf{A}\\ are linearly independent ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), so the Gram-Schmidt process ([Definition 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-gram-schmidt)) runs all \\n\\ steps and gives orthonormal \\\underset{\sim}{q}\_1, \ldots, \underset{\sim}{q}\_n\\ ([Theorem 10 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt), parts 1 and 3); let \\\mathbf{Q}\\ have these columns. At step \\i\\, \\\underset{\sim}{q}'\_i \ne \underset{\sim}{0}\\, and rearranging the orthogonalize step,
 >
-> \\ \begin{aligned} \tilde{a}\_i &= \tilde{\tilde{q}}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j && \text{(add the sum to both sides of the orthogonalize step)} \\ &= \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j. && \text{(normalize step: } \tilde{\tilde{q}}\_i = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i \text{)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{a}\_i &= \underset{\sim}{q}'\_i + \sum\_{j=1}^{i-1} (\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i)\\\underset{\sim}{q}\_j && \text{(add the sum to both sides of the orthogonalize step)} \\ &= \mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{}\\\underset{\sim}{q}\_i + \sum\_{j=1}^{i-1} (\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i)\\\underset{\sim}{q}\_j. && \text{(normalize step: } \underset{\sim}{q}'\_i = \mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{}\\\underset{\sim}{q}\_i \text{)} \end{aligned} \\
 >
-> Let \\\mathbf{R}\\ be the \\n \times n\\ matrix with \\r\_{ji} = \tilde{q}\_j \cdot \tilde{a}\_i\\ for \\j \< i\\, \\r\_{ii} = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{} \> 0\\, and \\r\_{ji} = 0\\ for \\j \> i\\; it is upper triangular with positive diagonal. Column \\i\\ of \\\mathbf{Q} \mathbf{R}\\ is \\\mathbf{Q}\\ times column \\i\\ of \\\mathbf{R}\\ ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)), and
+> Let \\\mathbf{R}\\ be the \\n \times n\\ matrix with \\r\_{ji} = \underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i\\ for \\j \< i\\, \\r\_{ii} = \mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{} \> 0\\, and \\r\_{ji} = 0\\ for \\j \> i\\; it is upper triangular with positive diagonal. Column \\i\\ of \\\mathbf{Q} \mathbf{R}\\ is \\\mathbf{Q}\\ times column \\i\\ of \\\mathbf{R}\\ ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)), and
 >
-> \\ \begin{aligned} \mathbf{Q}\\(r\_{1i}, \ldots, r\_{ni}) &= \sum\_{j=1}^nr\_{ji}\\\tilde{q}\_j && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-columns}{\text{Theorem~3 in Subspaces and Rank}}\text{)} \\ &= \sum\_{j=1}^{i} r\_{ji}\\\tilde{q}\_j && \text{(} r\_{ji} = 0 \text{ for } j \> i \text{)} \\ &= r\_{ii}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} r\_{ji}\\\tilde{q}\_j && \text{(split off the } j = i \text{ term)} \\ &= \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j && \text{(the entries of } \mathbf{R} \text{)} \\ &= \tilde{a}\_i. && \text{(the display)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{Q}\\(r\_{1i}, \ldots, r\_{ni}) &= \sum\_{j=1}^nr\_{ji}\\\underset{\sim}{q}\_j && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-columns}{\text{Theorem~3 in Subspaces and Rank}}\text{)} \\ &= \sum\_{j=1}^{i} r\_{ji}\\\underset{\sim}{q}\_j && \text{(} r\_{ji} = 0 \text{ for } j \> i \text{)} \\ &= r\_{ii}\\\underset{\sim}{q}\_i + \sum\_{j=1}^{i-1} r\_{ji}\\\underset{\sim}{q}\_j && \text{(split off the } j = i \text{ term)} \\ &= \mathopen{}\left\lVert\underset{\sim}{q}'\_i\right\rVert\mathclose{}\\\underset{\sim}{q}\_i + \sum\_{j=1}^{i-1} (\underset{\sim}{q}\_j \cdot \underset{\sim}{a}\_i)\\\underset{\sim}{q}\_j && \text{(the entries of } \mathbf{R} \text{)} \\ &= \underset{\sim}{a}\_i. && \text{(the display)} \end{aligned} \\
 >
 > So \\\mathbf{Q} \mathbf{R} = \mathbf{A}\\.
 
 > **NOTE:**
 >
-> **Example 25 (A QR factorization from Gram-Schmidt)** For \\\mathbf{A}\\ with columns \\\tilde{a}\_1 = (1, 1, 0)\\, \\\tilde{a}\_2 = (1, 0, 1)\\, \\\tilde{a}\_3 = (0, 1, 1)\\, [Example 21 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-gram-schmidt) and [Example 23 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-thm-gram-schmidt) found \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\, \\\tilde{q}\_2 = \tfrac{1}{\sqrt{6}}\\(1, -1, 2)\\, \\\tilde{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\, with \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_1\right\rVert\mathclose{} = \sqrt{2}\\, \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_2\right\rVert\mathclose{} = \sqrt{3/2}\\, \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_3\right\rVert\mathclose{} = 2/\sqrt{3}\\,
+> **Example 25 (A QR factorization from Gram-Schmidt)** For \\\mathbf{A}\\ with columns \\\underset{\sim}{a}\_1 = (1, 1, 0)\\, \\\underset{\sim}{a}\_2 = (1, 0, 1)\\, \\\underset{\sim}{a}\_3 = (0, 1, 1)\\, [Example 21 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-gram-schmidt) and [Example 23 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-thm-gram-schmidt) found \\\underset{\sim}{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\, \\\underset{\sim}{q}\_2 = \tfrac{1}{\sqrt{6}}\\(1, -1, 2)\\, \\\underset{\sim}{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\, with \\\mathopen{}\left\lVert\underset{\sim}{q}'\_1\right\rVert\mathclose{} = \sqrt{2}\\, \\\mathopen{}\left\lVert\underset{\sim}{q}'\_2\right\rVert\mathclose{} = \sqrt{3/2}\\, \\\mathopen{}\left\lVert\underset{\sim}{q}'\_3\right\rVert\mathclose{} = 2/\sqrt{3}\\,
 >
-> \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{a}\_2 &= \tilde{q}\_1 \cdot \tilde{a}\_3 \\ &= \tfrac{1}{\sqrt{2}} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_1 \cdot \underset{\sim}{a}\_2 &= \underset{\sim}{q}\_1 \cdot \underset{\sim}{a}\_3 \\ &= \tfrac{1}{\sqrt{2}} \end{aligned} \\
 >
-> and \\\tilde{q}\_2 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{6}}\\. So
+> and \\\underset{\sim}{q}\_2 \cdot \underset{\sim}{a}\_3 = \tfrac{1}{\sqrt{6}}\\. So
 >
 > \\ \mathbf{R} = \begin{bmatrix} \sqrt{2} & \tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}} \\ 0 & \sqrt{3/2} & \tfrac{1}{\sqrt{6}} \\ 0 & 0 & \tfrac{2}{\sqrt{3}} \end{bmatrix}. \\
 >
 > As a check on the second column,
 >
-> \\ \begin{aligned} \tfrac{1}{\sqrt{2}}\\\tilde{q}\_1 + \sqrt{3/2}\\\tilde{q}\_2 &= \tfrac{1}{2}\\(1, 1, 0) + \tfrac{1}{2}\\(1, -1, 2) \\ &= (1, 0, 1) \\ &= \tilde{a}\_2. \end{aligned} \\
+> \\ \begin{aligned} \tfrac{1}{\sqrt{2}}\\\underset{\sim}{q}\_1 + \sqrt{3/2}\\\underset{\sim}{q}\_2 &= \tfrac{1}{2}\\(1, 1, 0) + \tfrac{1}{2}\\(1, -1, 2) \\ &= (1, 0, 1) \\ &= \underset{\sim}{a}\_2. \end{aligned} \\
 
 > **NOTE:**
 >
-> **Definition 10 (Least squares solution)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\tilde{b} \in \mathbb{R}^m\\. A **least squares solution** of \\\mathbf{A} \tilde{x} = \tilde{b}\\ is a vector \\\hat{\tilde{x}} \in \mathbb{R}^n\\ such that
+> **Definition 10 (Least squares solution)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\underset{\sim}{b} \in \mathbb{R}^m\\. A **least squares solution** of \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\ is a vector \\\hat{\underset{\sim}{x}} \in \mathbb{R}^n\\ such that
 >
-> \\ \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \hat{\tilde{x}}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \tilde{x}\right\rVert\mathclose{} \quad \text{for every } \tilde{x} \in \mathbb{R}^n. \\
+> \\ \mathopen{}\left\lVert\underset{\sim}{b} - \mathbf{A} \hat{\underset{\sim}{x}}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{b} - \mathbf{A} \underset{\sim}{x}\right\rVert\mathclose{} \quad \text{for every } \underset{\sim}{x} \in \mathbb{R}^n. \\
 
 > **NOTE:**
 >
-> **Example 26 (Fitting a constant)** Let \\\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ and \\\tilde{b} = (1, 3)\\. The system \\x\\(1, 1) = (1, 3)\\ is inconsistent ([Definition 6](#def-consistent-system)): its first entry needs \\x = 1\\ and its second needs \\x = 3\\. For any number \\x\\,
+> **Example 26 (Fitting a constant)** Let \\\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ and \\\underset{\sim}{b} = (1, 3)\\. The system \\x\\(1, 1) = (1, 3)\\ is inconsistent ([Definition 6](#def-consistent-system)): its first entry needs \\x = 1\\ and its second needs \\x = 3\\. For any number \\x\\,
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{b} - \mathbf{A} x\right\rVert\mathclose{}^2 &= (1 - x)^2 + (3 - x)^2 \\ &= 2\\(x - 2)^2 + 2, \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{b} - \mathbf{A} x\right\rVert\mathclose{}^2 &= (1 - x)^2 + (3 - x)^2 \\ &= 2\\(x - 2)^2 + 2, \end{aligned} \\
 >
 > which is smallest at \\x = 2\\, so \\\hat{x} = 2\\ is the least squares solution. The value \\x = 1\\ is not one: it gives \\0 + 4 = 4 \> 2\\. The normal equations read \\2x = 4\\, and their solution is \\x = 2\\ too.
 
 > **NOTE:**
 >
-> **Definition 11 (Normal equations)** For \\\mathbf{A}\\ and \\\tilde{b}\\ as in [Definition 10](#def-least-squares), the equations \\{\mathbf{A}}^{\top} \mathbf{A} \tilde{x} = {\mathbf{A}}^{\top} \tilde{b}\\ are the **normal equations**.
+> **Definition 11 (Normal equations)** For \\\mathbf{A}\\ and \\\underset{\sim}{b}\\ as in [Definition 10](#def-least-squares), the equations \\{\mathbf{A}}^{\top} \mathbf{A} \underset{\sim}{x} = {\mathbf{A}}^{\top} \underset{\sim}{b}\\ are the **normal equations**.
 
 > **NOTE:**
 >
-> **Theorem 18 (Least squares solutions solve the normal equations)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\tilde{b} \in \mathbb{R}^m\\.
+> **Theorem 18 (Least squares solutions solve the normal equations)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\underset{\sim}{b} \in \mathbb{R}^m\\.
 >
-> 1.  \\\hat{\tilde{x}}\\ is a least squares solution ([Definition 10](#def-least-squares)) exactly when it solves the normal equations \\{\mathbf{A}}^{\top} \mathbf{A} \hat{\tilde{x}} = {\mathbf{A}}^{\top} \tilde{b}\\.
+> 1.  \\\hat{\underset{\sim}{x}}\\ is a least squares solution ([Definition 10](#def-least-squares)) exactly when it solves the normal equations \\{\mathbf{A}}^{\top} \mathbf{A} \hat{\underset{\sim}{x}} = {\mathbf{A}}^{\top} \underset{\sim}{b}\\.
 > 2.  The normal equations are consistent ([Definition 6](#def-consistent-system)).
-> 3.  Every least squares solution gives the same fitted vector \\\mathbf{A} \hat{\tilde{x}}\\: the orthogonal projection of \\\tilde{b}\\ onto \\\mathcal{C}(\mathbf{A})\\ ([Definition 3](#def-orthogonal-projection)).
-> 4.  The least squares solution is unique exactly when \\\operatorname{rank}(\mathbf{A}) = n\\, and then \\\hat{\tilde{x}} = ({\mathbf{A}}^{\top} \mathbf{A})^{-1} {\mathbf{A}}^{\top} \tilde{b}\\.
+> 3.  Every least squares solution gives the same fitted vector \\\mathbf{A} \hat{\underset{\sim}{x}}\\: the orthogonal projection of \\\underset{\sim}{b}\\ onto \\\mathcal{C}(\mathbf{A})\\ ([Definition 3](#def-orthogonal-projection)).
+> 4.  The least squares solution is unique exactly when \\\operatorname{rank}(\mathbf{A}) = n\\, and then \\\hat{\underset{\sim}{x}} = ({\mathbf{A}}^{\top} \mathbf{A})^{-1} {\mathbf{A}}^{\top} \underset{\sim}{b}\\.
 
 > **NOTE:**
 >
-> *Proof*. Let \\\tilde{u}\\ be the orthogonal projection of \\\tilde{b}\\ onto \\\mathcal{C}(\mathbf{A})\\. The vectors \\\mathbf{A} \tilde{x}\\, as \\\tilde{x}\\ ranges over \\\mathbb{R}^n\\, are exactly the points of \\\mathcal{C}(\mathbf{A})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)). **Least squares solutions are the solutions of \\\mathbf{A} \tilde{x} = \tilde{u}\\.** If \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\, then for every \\\tilde{x}\\, \\\mathbf{A} \tilde{x} \in \mathcal{C}(\mathbf{A})\\, so \\\mathopen{}\left\lVert\tilde{b} - \mathbf{A} \hat{\tilde{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{b} - \tilde{u}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \tilde{x}\right\rVert\mathclose{}\\ ([Theorem 3](#thm-closest-point)), and \\\hat{\tilde{x}}\\ is a least squares solution. Conversely, let \\\hat{\tilde{x}}\\ be a least squares solution. \\\tilde{u} \in \mathcal{C}(\mathbf{A})\\, so \\\tilde{u} = \mathbf{A} \tilde{x}\_0\\ for some \\\tilde{x}\_0\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), and
+> *Proof*. Let \\\underset{\sim}{u}\\ be the orthogonal projection of \\\underset{\sim}{b}\\ onto \\\mathcal{C}(\mathbf{A})\\. The vectors \\\mathbf{A} \underset{\sim}{x}\\, as \\\underset{\sim}{x}\\ ranges over \\\mathbb{R}^n\\, are exactly the points of \\\mathcal{C}(\mathbf{A})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)). **Least squares solutions are the solutions of \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{u}\\.** If \\\mathbf{A} \hat{\underset{\sim}{x}} = \underset{\sim}{u}\\, then for every \\\underset{\sim}{x}\\, \\\mathbf{A} \underset{\sim}{x} \in \mathcal{C}(\mathbf{A})\\, so \\\mathopen{}\left\lVert\underset{\sim}{b} - \mathbf{A} \hat{\underset{\sim}{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\underset{\sim}{b} - \underset{\sim}{u}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{b} - \mathbf{A} \underset{\sim}{x}\right\rVert\mathclose{}\\ ([Theorem 3](#thm-closest-point)), and \\\hat{\underset{\sim}{x}}\\ is a least squares solution. Conversely, let \\\hat{\underset{\sim}{x}}\\ be a least squares solution. \\\underset{\sim}{u} \in \mathcal{C}(\mathbf{A})\\, so \\\underset{\sim}{u} = \mathbf{A} \underset{\sim}{x}\_0\\ for some \\\underset{\sim}{x}\_0\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), and
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \hat{\tilde{x}}\right\rVert\mathclose{} &\le \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \tilde{x}\_0\right\rVert\mathclose{} && \text{(}\href{#def-least-squares}{\text{Definition~10}}\text{)} \\ &= \mathopen{}\left\lVert\tilde{b} - \tilde{u}\right\rVert\mathclose{} && \text{(} \tilde{u} = \mathbf{A} \tilde{x}\_0 \text{)} \\ &\le \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \hat{\tilde{x}}\right\rVert\mathclose{}, && \text{(}\href{#thm-closest-point}{\text{Theorem~3}}\text{, with } \tilde{w} = \mathbf{A} \hat{\tilde{x}} \in \mathcal{C}(\mathbf{A}) \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{b} - \mathbf{A} \hat{\underset{\sim}{x}}\right\rVert\mathclose{} &\le \mathopen{}\left\lVert\underset{\sim}{b} - \mathbf{A} \underset{\sim}{x}\_0\right\rVert\mathclose{} && \text{(}\href{#def-least-squares}{\text{Definition~10}}\text{)} \\ &= \mathopen{}\left\lVert\underset{\sim}{b} - \underset{\sim}{u}\right\rVert\mathclose{} && \text{(} \underset{\sim}{u} = \mathbf{A} \underset{\sim}{x}\_0 \text{)} \\ &\le \mathopen{}\left\lVert\underset{\sim}{b} - \mathbf{A} \hat{\underset{\sim}{x}}\right\rVert\mathclose{}, && \text{(}\href{#thm-closest-point}{\text{Theorem~3}}\text{, with } \underset{\sim}{w} = \mathbf{A} \hat{\underset{\sim}{x}} \in \mathcal{C}(\mathbf{A}) \text{)} \end{aligned} \\
 >
-> so the last inequality is an equality, and the equality case of [Theorem 3](#thm-closest-point) gives \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\.
+> so the last inequality is an equality, and the equality case of [Theorem 3](#thm-closest-point) gives \\\mathbf{A} \hat{\underset{\sim}{x}} = \underset{\sim}{u}\\.
 >
-> **Parts 1 and 3.** \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\ holds exactly when \\\tilde{b} - \mathbf{A} \hat{\tilde{x}} \in \mathcal{C}(\mathbf{A})^\perp\\: if \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\, then \\\tilde{b} - \tilde{u} \in \mathcal{C}(\mathbf{A})^\perp\\ ([Definition 3](#def-orthogonal-projection)); conversely, if \\\tilde{b} - \mathbf{A} \hat{\tilde{x}} \in \mathcal{C}(\mathbf{A})^\perp\\, then \\\tilde{b} = \mathbf{A} \hat{\tilde{x}} + (\tilde{b} - \mathbf{A} \hat{\tilde{x}})\\ is a split into \\\mathcal{C}(\mathbf{A})\\ and \\\mathcal{C}(\mathbf{A})^\perp\\, so \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\ by the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum). And \\\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top})\\ ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)), where
+> **Parts 1 and 3.** \\\mathbf{A} \hat{\underset{\sim}{x}} = \underset{\sim}{u}\\ holds exactly when \\\underset{\sim}{b} - \mathbf{A} \hat{\underset{\sim}{x}} \in \mathcal{C}(\mathbf{A})^\perp\\: if \\\mathbf{A} \hat{\underset{\sim}{x}} = \underset{\sim}{u}\\, then \\\underset{\sim}{b} - \underset{\sim}{u} \in \mathcal{C}(\mathbf{A})^\perp\\ ([Definition 3](#def-orthogonal-projection)); conversely, if \\\underset{\sim}{b} - \mathbf{A} \hat{\underset{\sim}{x}} \in \mathcal{C}(\mathbf{A})^\perp\\, then \\\underset{\sim}{b} = \mathbf{A} \hat{\underset{\sim}{x}} + (\underset{\sim}{b} - \mathbf{A} \hat{\underset{\sim}{x}})\\ is a split into \\\mathcal{C}(\mathbf{A})\\ and \\\mathcal{C}(\mathbf{A})^\perp\\, so \\\mathbf{A} \hat{\underset{\sim}{x}} = \underset{\sim}{u}\\ by the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum). And \\\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top})\\ ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)), where
 >
-> \\ \begin{aligned} {\mathbf{A}}^{\top}\\(\tilde{b} - \mathbf{A} \hat{\tilde{x}}) &= {\mathbf{A}}^{\top} \tilde{b} - {\mathbf{A}}^{\top}\\(\mathbf{A} \hat{\tilde{x}}) && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~7}}\text{)} \\ &= {\mathbf{A}}^{\top} \tilde{b} - {\mathbf{A}}^{\top} \mathbf{A} \hat{\tilde{x}}, && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} {\mathbf{A}}^{\top}\\(\underset{\sim}{b} - \mathbf{A} \hat{\underset{\sim}{x}}) &= {\mathbf{A}}^{\top} \underset{\sim}{b} - {\mathbf{A}}^{\top}\\(\mathbf{A} \hat{\underset{\sim}{x}}) && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~7}}\text{)} \\ &= {\mathbf{A}}^{\top} \underset{\sim}{b} - {\mathbf{A}}^{\top} \mathbf{A} \hat{\underset{\sim}{x}}, && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \end{aligned} \\
 >
-> which is \\\tilde{0}\_n\\ exactly when the normal equations hold.
+> which is \\\underset{\sim}{0}\_n\\ exactly when the normal equations hold.
 >
-> **Part 2.** The vector \\\tilde{x}\_0\\ above satisfies \\\mathbf{A} \tilde{x}\_0 = \tilde{u}\\, so it is a least squares solution, and it solves the normal equations by part 1.
+> **Part 2.** The vector \\\underset{\sim}{x}\_0\\ above satisfies \\\mathbf{A} \underset{\sim}{x}\_0 = \underset{\sim}{u}\\, so it is a least squares solution, and it solves the normal equations by part 1.
 >
-> **Part 4.** The least squares solutions are exactly the solutions of \\\mathbf{A} \tilde{x} = \tilde{u}\\, a consistent system, so there is exactly one when \\\operatorname{rank}(\mathbf{A}) = n\\ and more than one otherwise ([Corollary 1](#cor-solution-unique)). When \\\operatorname{rank}(\mathbf{A}) = n\\, \\{\mathbf{A}}^{\top} \mathbf{A}\\ is invertible ([Theorem 1](#thm-gram-invertible)), and with \\\mathbf{M} \stackrel{\text{def}}{=}{\mathbf{A}}^{\top} \mathbf{A}\\,
+> **Part 4.** The least squares solutions are exactly the solutions of \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{u}\\, a consistent system, so there is exactly one when \\\operatorname{rank}(\mathbf{A}) = n\\ and more than one otherwise ([Corollary 1](#cor-solution-unique)). When \\\operatorname{rank}(\mathbf{A}) = n\\, \\{\mathbf{A}}^{\top} \mathbf{A}\\ is invertible ([Theorem 1](#thm-gram-invertible)), and with \\\mathbf{M} \stackrel{\text{def}}{=}{\mathbf{A}}^{\top} \mathbf{A}\\,
 >
-> \\ \begin{aligned} \hat{\tilde{x}} &= \mathbf{I}\_n\\\hat{\tilde{x}} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= (\mathbf{M}^{-1} \mathbf{M})\\\hat{\tilde{x}} && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)} \\ &= \mathbf{M}^{-1}\\(\mathbf{M} \hat{\tilde{x}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{M}^{-1}\\{\mathbf{A}}^{\top} \tilde{b}. && \text{(the normal equations)} \end{aligned} \\
+> \\ \begin{aligned} \hat{\underset{\sim}{x}} &= \mathbf{I}\_n\\\hat{\underset{\sim}{x}} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= (\mathbf{M}^{-1} \mathbf{M})\\\hat{\underset{\sim}{x}} && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)} \\ &= \mathbf{M}^{-1}\\(\mathbf{M} \hat{\underset{\sim}{x}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{M}^{-1}\\{\mathbf{A}}^{\top} \underset{\sim}{b}. && \text{(the normal equations)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 27 (A least squares line)** Fit \\y = x_1 + x_2\\t\\ to the points \\(t, y) = (1, 1), (2, 2), (3, 2)\\: \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ (the \\\mathbf{X}\\ of [Example 1](#exm-gram-invertible)) and \\\tilde{b} = (1, 2, 2)\\. \\\mathbf{A}\\ has rank \\2\\ ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)), so the solution is unique (part 4). \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}\\ has inverse \\\frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix}\\ ([Example 1](#exm-gram-invertible)), and
+> **Example 27 (A least squares line)** Fit \\y = x_1 + x_2\\t\\ to the points \\(t, y) = (1, 1), (2, 2), (3, 2)\\: \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ (the \\\mathbf{X}\\ of [Example 1](#exm-gram-invertible)) and \\\underset{\sim}{b} = (1, 2, 2)\\. \\\mathbf{A}\\ has rank \\2\\ ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)), so the solution is unique (part 4). \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}\\ has inverse \\\frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix}\\ ([Example 1](#exm-gram-invertible)), and
 >
-> \\ \begin{aligned} {\mathbf{A}}^{\top} \tilde{b} &= (1 + 2 + 2,\\ 1 + 4 + 6) \\ &= (5, 11), \end{aligned} \\
+> \\ \begin{aligned} {\mathbf{A}}^{\top} \underset{\sim}{b} &= (1 + 2 + 2,\\ 1 + 4 + 6) \\ &= (5, 11), \end{aligned} \\
 >
 > so
 >
-> \\ \begin{aligned} \hat{\tilde{x}} &= \frac{1}{6} \mathopen{}\left(14 \cdot 5 - 6 \cdot 11,\\ -6 \cdot 5 + 3 \cdot 11\right)\mathclose{} \\ &= \frac{1}{6}\\(4, 3) \\ &= \mathopen{}\left(\tfrac{2}{3}, \tfrac{1}{2}\right)\mathclose{}. \end{aligned} \\
+> \\ \begin{aligned} \hat{\underset{\sim}{x}} &= \frac{1}{6} \mathopen{}\left(14 \cdot 5 - 6 \cdot 11,\\ -6 \cdot 5 + 3 \cdot 11\right)\mathclose{} \\ &= \frac{1}{6}\\(4, 3) \\ &= \mathopen{}\left(\tfrac{2}{3}, \tfrac{1}{2}\right)\mathclose{}. \end{aligned} \\
 >
-> The fitted values are \\\mathbf{A} \hat{\tilde{x}} = \mathopen{}\left(\tfrac{7}{6}, \tfrac{5}{3}, \tfrac{13}{6}\right)\mathclose{}\\, and the residuals \\\tilde{b} - \mathbf{A} \hat{\tilde{x}} = \mathopen{}\left(-\tfrac{1}{6}, \tfrac{1}{3}, -\tfrac{1}{6}\right)\mathclose{}\\ are orthogonal to both columns of \\\mathbf{A}\\: \\-\tfrac{1}{6} + \tfrac{1}{3} - \tfrac{1}{6} = 0\\ and \\-\tfrac{1}{6} + \tfrac{2}{3} - \tfrac{1}{2} = 0\\.
+> The fitted values are \\\mathbf{A} \hat{\underset{\sim}{x}} = \mathopen{}\left(\tfrac{7}{6}, \tfrac{5}{3}, \tfrac{13}{6}\right)\mathclose{}\\, and the residuals \\\underset{\sim}{b} - \mathbf{A} \hat{\underset{\sim}{x}} = \mathopen{}\left(-\tfrac{1}{6}, \tfrac{1}{3}, -\tfrac{1}{6}\right)\mathclose{}\\ are orthogonal to both columns of \\\mathbf{A}\\: \\-\tfrac{1}{6} + \tfrac{1}{3} - \tfrac{1}{6} = 0\\ and \\-\tfrac{1}{6} + \tfrac{2}{3} - \tfrac{1}{2} = 0\\.
 
 > **NOTE:**
 >
-> **Example 28 (Many least squares solutions, one fitted vector)** With the rank-\\1\\ matrix \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}\\ ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)) and \\\tilde{b} = (1, 2, 2)\\, \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix}\\ and \\{\mathbf{A}}^{\top} \tilde{b} = (5, 10)\\, so both normal equations say \\3 x_1 + 6 x_2 = 5\\, that is, \\x_1 + 2 x_2 = \tfrac{5}{3}\\. There are infinitely many least squares solutions, such as \\(\tfrac{5}{3}, 0)\\ and \\(0, \tfrac{5}{6})\\, as part 4 predicts for \\\operatorname{rank}(\mathbf{A}) = 1 \< 2\\; but every one gives the same fitted vector
+> **Example 28 (Many least squares solutions, one fitted vector)** With the rank-\\1\\ matrix \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}\\ ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)) and \\\underset{\sim}{b} = (1, 2, 2)\\, \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix}\\ and \\{\mathbf{A}}^{\top} \underset{\sim}{b} = (5, 10)\\, so both normal equations say \\3 x_1 + 6 x_2 = 5\\, that is, \\x_1 + 2 x_2 = \tfrac{5}{3}\\. There are infinitely many least squares solutions, such as \\(\tfrac{5}{3}, 0)\\ and \\(0, \tfrac{5}{6})\\, as part 4 predicts for \\\operatorname{rank}(\mathbf{A}) = 1 \< 2\\; but every one gives the same fitted vector
 >
-> \\ \begin{aligned} \mathbf{A} \hat{\tilde{x}} &= (x_1 + 2 x_2)\\(1, 1, 1) \\ &= \tfrac{5}{3}\\(1, 1, 1), \end{aligned} \\
+> \\ \begin{aligned} \mathbf{A} \hat{\underset{\sim}{x}} &= (x_1 + 2 x_2)\\(1, 1, 1) \\ &= \tfrac{5}{3}\\(1, 1, 1), \end{aligned} \\
 >
 > as part 3 says.
 
 > **NOTE:**
 >
-> **Theorem 19 (Solving least squares by QR)** Let \\\mathbf{A}\\ be \\m \times n\\ with \\\operatorname{rank}(\mathbf{A}) = n\\, with QR factorization \\\mathbf{A} = \mathbf{Q} \mathbf{R}\\ ([Theorem 17](#thm-qr)), and let \\\tilde{b} \in \mathbb{R}^m\\. The least squares solution ([Definition 10](#def-least-squares)) is the unique solution of
+> **Theorem 19 (Solving least squares by QR)** Let \\\mathbf{A}\\ be \\m \times n\\ with \\\operatorname{rank}(\mathbf{A}) = n\\, with QR factorization \\\mathbf{A} = \mathbf{Q} \mathbf{R}\\ ([Theorem 17](#thm-qr)), and let \\\underset{\sim}{b} \in \mathbb{R}^m\\. The least squares solution ([Definition 10](#def-least-squares)) is the unique solution of
 >
-> \\ \underbrace{\mathbf{R}}\_{n \times n}\\\hat{\tilde{x}} = \underbrace{{\mathbf{Q}}^{\top}}\_{n \times m}\\\tilde{b}, \\
+> \\ \underbrace{\mathbf{R}}\_{n \times n}\\\hat{\underset{\sim}{x}} = \underbrace{{\mathbf{Q}}^{\top}}\_{n \times m}\\\underset{\sim}{b}, \\
 >
-> which back substitution computes ([Theorem 16](#thm-back-substitution)). When \\m = n\\, it is the unique solution of \\\mathbf{A} \tilde{x} = \tilde{b}\\.
+> which back substitution computes ([Theorem 16](#thm-back-substitution)). When \\m = n\\, it is the unique solution of \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\.
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{R}\\ is upper triangular with positive diagonal, so \\\mathbf{R} \tilde{x} = {\mathbf{Q}}^{\top} \tilde{b}\\ has exactly one solution \\\hat{\tilde{x}}\\ ([Theorem 16](#thm-back-substitution)). \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n\\, as in the proof of [Theorem 4](#thm-projector-onb). Then
+> *Proof*. \\\mathbf{R}\\ is upper triangular with positive diagonal, so \\\mathbf{R} \underset{\sim}{x} = {\mathbf{Q}}^{\top} \underset{\sim}{b}\\ has exactly one solution \\\hat{\underset{\sim}{x}}\\ ([Theorem 16](#thm-back-substitution)). \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n\\, as in the proof of [Theorem 4](#thm-projector-onb). Then
 >
-> \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} \hat{\tilde{x}} &= {(\mathbf{Q} \mathbf{R})}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\tilde{x}} && \text{(substitute } \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \\ &= {\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\tilde{x}} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \mathbf{Q})\\(\mathbf{R} \hat{\tilde{x}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {\mathbf{R}}^{\top}\\\mathbf{I}\_n\\(\mathbf{R} \hat{\tilde{x}}) && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n \text{)} \\ &= {\mathbf{R}}^{\top}\\(\mathbf{R} \hat{\tilde{x}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \tilde{b}) && \text{(} \mathbf{R} \hat{\tilde{x}} = {\mathbf{Q}}^{\top} \tilde{b} \text{)} \\ &= ({\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top})\\\tilde{b} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {(\mathbf{Q} \mathbf{R})}^{\top}\\\tilde{b} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)} \\ &= {\mathbf{A}}^{\top} \tilde{b}, && \text{(} \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \end{aligned} \\
+> \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} \hat{\underset{\sim}{x}} &= {(\mathbf{Q} \mathbf{R})}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\underset{\sim}{x}} && \text{(substitute } \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \\ &= {\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\underset{\sim}{x}} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \mathbf{Q})\\(\mathbf{R} \hat{\underset{\sim}{x}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {\mathbf{R}}^{\top}\\\mathbf{I}\_n\\(\mathbf{R} \hat{\underset{\sim}{x}}) && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n \text{)} \\ &= {\mathbf{R}}^{\top}\\(\mathbf{R} \hat{\underset{\sim}{x}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \underset{\sim}{b}) && \text{(} \mathbf{R} \hat{\underset{\sim}{x}} = {\mathbf{Q}}^{\top} \underset{\sim}{b} \text{)} \\ &= ({\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top})\\\underset{\sim}{b} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {(\mathbf{Q} \mathbf{R})}^{\top}\\\underset{\sim}{b} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)} \\ &= {\mathbf{A}}^{\top} \underset{\sim}{b}, && \text{(} \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \end{aligned} \\
 >
-> so \\\hat{\tilde{x}}\\ solves the normal equations and is the least squares solution ([Theorem 18](#thm-normal-equations)), which is unique because \\\operatorname{rank}(\mathbf{A}) = n\\. When \\m = n\\,
+> so \\\hat{\underset{\sim}{x}}\\ solves the normal equations and is the least squares solution ([Theorem 18](#thm-normal-equations)), which is unique because \\\operatorname{rank}(\mathbf{A}) = n\\. When \\m = n\\,
 >
 > \\ \begin{aligned} \operatorname{rank}(\mathbf{A}) &= n \\ &= m, \end{aligned} \\
 >
-> so \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent for every \\\tilde{b}\\ ([Corollary 1](#cor-solution-unique), part 1), so its solution leaves residual \\\tilde{0}\\, is a least squares solution, and is therefore \\\hat{\tilde{x}}\\.
+> so \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\ is consistent for every \\\underset{\sim}{b}\\ ([Corollary 1](#cor-solution-unique), part 1), so its solution leaves residual \\\underset{\sim}{0}\\, is a least squares solution, and is therefore \\\hat{\underset{\sim}{x}}\\.
 
 > **NOTE:**
 >
-> **Example 29 (The least squares line by QR)** For \\\mathbf{A}\\ and \\\tilde{b}\\ of [Example 27](#exm-normal-equations), Gram-Schmidt gives \\\tilde{q}\_1 = \tfrac{1}{\sqrt{3}}\\(1, 1, 1)\\; then
+> **Example 29 (The least squares line by QR)** For \\\mathbf{A}\\ and \\\underset{\sim}{b}\\ of [Example 27](#exm-normal-equations), Gram-Schmidt gives \\\underset{\sim}{q}\_1 = \tfrac{1}{\sqrt{3}}\\(1, 1, 1)\\; then
 >
-> \\ \begin{aligned} \tilde{q}\_1 \cdot (1, 2, 3) &= \tfrac{6}{\sqrt{3}} \\ &= 2\sqrt{3}, \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}\_1 \cdot (1, 2, 3) &= \tfrac{6}{\sqrt{3}} \\ &= 2\sqrt{3}, \end{aligned} \\
 >
-> \\ \begin{aligned} \tilde{\tilde{q}}\_2 &= (1, 2, 3) - 2\\(1, 1, 1) \\ &= (-1, 0, 1) \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{q}'\_2 &= (1, 2, 3) - 2\\(1, 1, 1) \\ &= (-1, 0, 1) \end{aligned} \\
 >
-> with norm \\\sqrt{2}\\, and \\\tilde{q}\_2 = \tfrac{1}{\sqrt{2}}\\(-1, 0, 1)\\. So
+> with norm \\\sqrt{2}\\, and \\\underset{\sim}{q}\_2 = \tfrac{1}{\sqrt{2}}\\(-1, 0, 1)\\. So
 >
-> \\ \begin{aligned} \mathbf{R} &= \begin{bmatrix} \sqrt{3} & 2\sqrt{3} \\ 0 & \sqrt{2} \end{bmatrix}, \\ {\mathbf{Q}}^{\top} \tilde{b} &= \mathopen{}\left(\tfrac{1 + 2 + 2}{\sqrt{3}},\\ \tfrac{-1 + 0 + 2}{\sqrt{2}}\right)\mathclose{} \\ &= \mathopen{}\left(\tfrac{5}{\sqrt{3}}, \tfrac{1}{\sqrt{2}}\right)\mathclose{}. \end{aligned} \\
+> \\ \begin{aligned} \mathbf{R} &= \begin{bmatrix} \sqrt{3} & 2\sqrt{3} \\ 0 & \sqrt{2} \end{bmatrix}, \\ {\mathbf{Q}}^{\top} \underset{\sim}{b} &= \mathopen{}\left(\tfrac{1 + 2 + 2}{\sqrt{3}},\\ \tfrac{-1 + 0 + 2}{\sqrt{2}}\right)\mathclose{} \\ &= \mathopen{}\left(\tfrac{5}{\sqrt{3}}, \tfrac{1}{\sqrt{2}}\right)\mathclose{}. \end{aligned} \\
 >
 > Back substitution gives
 >
@@ -832,29 +832,29 @@ Last modified: 2026-10-16 02:45:37 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 20 (Solving a system with an LU factorization)** If \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ is an LU factorization ([Definition 12](#def-lu)) and the diagonal entries of \\\mathbf{U}\\ are all nonzero, then for every \\\tilde{b} \in \mathbb{R}^n\\ the system \\\mathbf{A} \tilde{x} = \tilde{b}\\ has exactly one solution: solve \\\mathbf{L} \tilde{y} = \tilde{b}\\ by forward substitution, then \\\mathbf{U} \tilde{x} = \tilde{y}\\ by back substitution ([Theorem 16](#thm-back-substitution)).
+> **Theorem 20 (Solving a system with an LU factorization)** If \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ is an LU factorization ([Definition 12](#def-lu)) and the diagonal entries of \\\mathbf{U}\\ are all nonzero, then for every \\\underset{\sim}{b} \in \mathbb{R}^n\\ the system \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\ has exactly one solution: solve \\\mathbf{L} \underset{\sim}{y} = \underset{\sim}{b}\\ by forward substitution, then \\\mathbf{U} \underset{\sim}{x} = \underset{\sim}{y}\\ by back substitution ([Theorem 16](#thm-back-substitution)).
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{L}\\ has diagonal entries \\1\\ and \\\mathbf{U}\\ has nonzero ones, so each of the two triangular systems has exactly one solution ([Theorem 16](#thm-back-substitution)). If \\\tilde{y}\\ and \\\tilde{x}\\ are those solutions, then
+> *Proof*. \\\mathbf{L}\\ has diagonal entries \\1\\ and \\\mathbf{U}\\ has nonzero ones, so each of the two triangular systems has exactly one solution ([Theorem 16](#thm-back-substitution)). If \\\underset{\sim}{y}\\ and \\\underset{\sim}{x}\\ are those solutions, then
 >
-> \\ \begin{aligned} \mathbf{A} \tilde{x} &= \mathbf{L}\\(\mathbf{U} \tilde{x}) \\ &= \mathbf{L} \tilde{y} \\ &= \tilde{b} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{A} \underset{\sim}{x} &= \mathbf{L}\\(\mathbf{U} \underset{\sim}{x}) \\ &= \mathbf{L} \underset{\sim}{y} \\ &= \underset{\sim}{b} \end{aligned} \\
 >
-> ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), so \\\tilde{x}\\ is a solution. Conversely, if \\\mathbf{A} \tilde{x} = \tilde{b}\\, then \\\tilde{y} \stackrel{\text{def}}{=}\mathbf{U} \tilde{x}\\ satisfies
+> ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), so \\\underset{\sim}{x}\\ is a solution. Conversely, if \\\mathbf{A} \underset{\sim}{x} = \underset{\sim}{b}\\, then \\\underset{\sim}{y} \stackrel{\text{def}}{=}\mathbf{U} \underset{\sim}{x}\\ satisfies
 >
-> \\ \begin{aligned} \mathbf{L} \tilde{y} &= \mathbf{L}\\(\mathbf{U} \tilde{x}) \\ &= (\mathbf{L} \mathbf{U})\\\tilde{x} \\ &= \mathbf{A} \tilde{x} \\ &= \tilde{b} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{L} \underset{\sim}{y} &= \mathbf{L}\\(\mathbf{U} \underset{\sim}{x}) \\ &= (\mathbf{L} \mathbf{U})\\\underset{\sim}{x} \\ &= \mathbf{A} \underset{\sim}{x} \\ &= \underset{\sim}{b} \end{aligned} \\
 >
-> ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), so \\\tilde{y}\\ is the unique solution of that system, and \\\tilde{x}\\ is then the unique solution of \\\mathbf{U} \tilde{x} = \tilde{y}\\.
+> ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), so \\\underset{\sim}{y}\\ is the unique solution of that system, and \\\underset{\sim}{x}\\ is then the unique solution of \\\mathbf{U} \underset{\sim}{x} = \underset{\sim}{y}\\.
 
 > **NOTE:**
 >
-> **Example 32 (Two triangular solves)** With \\\mathbf{L}\\ and \\\mathbf{U}\\ of [Example 30](#exm-lu), solve \\\mathbf{A} \tilde{x} = (8, -11, -3)\\. Forward substitution on \\\mathbf{L} \tilde{y} = (8, -11, -3)\\ gives \\y_1 = 8\\,
+> **Example 32 (Two triangular solves)** With \\\mathbf{L}\\ and \\\mathbf{U}\\ of [Example 30](#exm-lu), solve \\\mathbf{A} \underset{\sim}{x} = (8, -11, -3)\\. Forward substitution on \\\mathbf{L} \underset{\sim}{y} = (8, -11, -3)\\ gives \\y_1 = 8\\,
 >
 > \\ \begin{aligned} y_2 &= -11 + \tfrac{3}{2} \cdot 8 \\ &= 1, \end{aligned} \\
 >
 > \\ \begin{aligned} y_3 &= -3 + 8 - 4 \cdot 1 \\ &= 1. \end{aligned} \\
 >
-> Back substitution on \\\mathbf{U} \tilde{x} = (8, 1, 1)\\ is [Example 24](#exm-back-substitution), which gives \\\tilde{x} = (2, 3, -1)\\. As a check,
+> Back substitution on \\\mathbf{U} \underset{\sim}{x} = (8, 1, 1)\\ is [Example 24](#exm-back-substitution), which gives \\\underset{\sim}{x} = (2, 3, -1)\\. As a check,
 >
 > \\ \begin{aligned} \mathbf{A}\\(2, 3, -1) &= (4 + 3 + 1,\\ -6 - 3 - 2,\\ -4 + 3 - 2) \\ &= (8, -11, -3). \end{aligned} \\
 

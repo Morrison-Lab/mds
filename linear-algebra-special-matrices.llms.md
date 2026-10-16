@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-16 02:45:37 (PDT)
+Last modified: 2026-10-16 03:50:53 (PDT)
 
 ## 1 Special Matrices
 
@@ -44,7 +44,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 1* (Symmetric matrices in statistics). Covariance matrices are symmetric: entry \\(i, j)\\ of the covariance matrix of a random vector \\\tilde{Y}\\ is \\\operatorname{Cov}\mathopen{}\left(Y_i, Y_j\right)\mathclose{}\\, and \\\operatorname{Cov}\mathopen{}\left(Y_i, Y_j\right)\mathclose{} = \operatorname{Cov}\mathopen{}\left(Y_j, Y_i\right)\mathclose{}\\. For example, if \\\operatorname{Var}\mathopen{}\left(Y_1\right)\mathclose{} = 4\\, \\\operatorname{Var}\mathopen{}\left(Y_2\right)\mathclose{} = 9\\, and \\\operatorname{Cov}\mathopen{}\left(Y_1, Y_2\right)\mathclose{} = 1\\, the covariance matrix of \\(Y_1, Y_2)\\ is
+> *Remark 1* (Symmetric matrices in statistics). Covariance matrices are symmetric: entry \\(i, j)\\ of the covariance matrix of a random vector \\\underset{\sim}{Y}\\ is \\\operatorname{Cov}\mathopen{}\left(Y_i, Y_j\right)\mathclose{}\\, and \\\operatorname{Cov}\mathopen{}\left(Y_i, Y_j\right)\mathclose{} = \operatorname{Cov}\mathopen{}\left(Y_j, Y_i\right)\mathclose{}\\. For example, if \\\operatorname{Var}\mathopen{}\left(Y_1\right)\mathclose{} = 4\\, \\\operatorname{Var}\mathopen{}\left(Y_2\right)\mathclose{} = 9\\, and \\\operatorname{Cov}\mathopen{}\left(Y_1, Y_2\right)\mathclose{} = 1\\, the covariance matrix of \\(Y_1, Y_2)\\ is
 >
 > \\ \begin{bmatrix} 4 & 1 \\ 1 & 9 \end{bmatrix}. \\
 
@@ -230,17 +230,17 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 4 (Projection matrices produce orthogonal decompositions)** If \\\mathbf{P}\\ is a \\p \times p\\ orthogonal projection matrix ([Definition 8](#def-projection-matrix)) and \\\tilde{v}\\ is any vector of length \\p\\, then the two components of the decomposition
+> **Theorem 4 (Projection matrices produce orthogonal decompositions)** If \\\mathbf{P}\\ is a \\p \times p\\ orthogonal projection matrix ([Definition 8](#def-projection-matrix)) and \\\underset{\sim}{v}\\ is any vector of length \\p\\, then the two components of the decomposition
 >
-> \\\tilde{v} = \underbrace{\mathbf{P}\tilde{v}}\_{\text{projected}} + \underbrace{(\mathbf{I}\_p - \mathbf{P})\tilde{v}}\_{\text{residual}}\\
+> \\\underset{\sim}{v} = \underbrace{\mathbf{P}\underset{\sim}{v}}\_{\text{projected}} + \underbrace{(\mathbf{I}\_p - \mathbf{P})\underset{\sim}{v}}\_{\text{residual}}\\
 >
 > are orthogonal:
 >
-> \\\mathbf{P}\tilde{v} \\\perp\\ (\mathbf{I}\_p - \mathbf{P})\tilde{v}\\
+> \\\mathbf{P}\underset{\sim}{v} \\\perp\\ (\mathbf{I}\_p - \mathbf{P})\underset{\sim}{v}\\
 
 > **NOTE:**
 >
-> *Proof*. \\\begin{aligned} {(\mathbf{P}\tilde{v})}^{\top}\\(\mathbf{I} - \mathbf{P})\tilde{v} &= {\tilde{v}}^{\top}\\{\mathbf{P}}^{\top}\\(\mathbf{I} - \mathbf{P})\tilde{v} \\ &= {\tilde{v}}^{\top}\\\mathbf{P}\\(\mathbf{I} - \mathbf{P})\tilde{v} \\ &= {\tilde{v}}^{\top}\\(\mathbf{P} - \mathbf{P}^2)\tilde{v} \\ &= {\tilde{v}}^{\top}\\(\mathbf{P} - \mathbf{P})\tilde{v} \\ &= {\tilde{v}}^{\top}\\\mathbf{0}\\\tilde{v} \\ &= 0 \end{aligned}\\
+> *Proof*. \\\begin{aligned} {(\mathbf{P}\underset{\sim}{v})}^{\top}\\(\mathbf{I} - \mathbf{P})\underset{\sim}{v} &= {\underset{\sim}{v}}^{\top}\\{\mathbf{P}}^{\top}\\(\mathbf{I} - \mathbf{P})\underset{\sim}{v} \\ &= {\underset{\sim}{v}}^{\top}\\\mathbf{P}\\(\mathbf{I} - \mathbf{P})\underset{\sim}{v} \\ &= {\underset{\sim}{v}}^{\top}\\(\mathbf{P} - \mathbf{P}^2)\underset{\sim}{v} \\ &= {\underset{\sim}{v}}^{\top}\\(\mathbf{P} - \mathbf{P})\underset{\sim}{v} \\ &= {\underset{\sim}{v}}^{\top}\\\mathbf{0}\\\underset{\sim}{v} \\ &= 0 \end{aligned}\\
 >
 > where the second line uses symmetry (\\{\mathbf{P}}^{\top} = \mathbf{P}\\) and the fourth line uses idempotency (\\\mathbf{P}^2 = \mathbf{P}\\).
 
@@ -280,25 +280,25 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 5 (Orthogonal matrices preserve length)** If \\\mathbf{Q}\\ is a \\p \times p\\ orthogonal matrix ([Definition 10](#def-orthogonal-matrix)) and \\\tilde{x}\\ is a vector of length \\p\\, then
+> **Theorem 5 (Orthogonal matrices preserve length)** If \\\mathbf{Q}\\ is a \\p \times p\\ orthogonal matrix ([Definition 10](#def-orthogonal-matrix)) and \\\underset{\sim}{x}\\ is a vector of length \\p\\, then
 >
-> \\ \mathopen{}\left\lVert\mathbf{Q}\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \\
+> \\ \mathopen{}\left\lVert\mathbf{Q}\underset{\sim}{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} \\
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{Q}\tilde{x}\right\rVert\mathclose{}^2 &= (\mathbf{Q}\tilde{x}) \cdot (\mathbf{Q}\tilde{x}) && \text{(definition of the Euclidean norm)} \\ &= {(\mathbf{Q}\tilde{x})}^{\top}\\(\mathbf{Q}\tilde{x}) && \text{(dot product as a matrix product)} \\ &= {\tilde{x}}^{\top}\\{\mathbf{Q}}^{\top}\\(\mathbf{Q}\tilde{x}) && \text{(transpose of a product)} \\ &= {\tilde{x}}^{\top}\\({\mathbf{Q}}^{\top}\mathbf{Q})\\\tilde{x} && \text{(regroup; matrix multiplication is associative)} \\ &= {\tilde{x}}^{\top}\\\mathbf{I}\_p\\\tilde{x} && \text{(definition of an orthogonal matrix)} \\ &= {\tilde{x}}^{\top}\\\tilde{x} && \text{(identity matrix)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 && \text{(definition of the Euclidean norm)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{Q}\underset{\sim}{x}\right\rVert\mathclose{}^2 &= (\mathbf{Q}\underset{\sim}{x}) \cdot (\mathbf{Q}\underset{\sim}{x}) && \text{(definition of the Euclidean norm)} \\ &= {(\mathbf{Q}\underset{\sim}{x})}^{\top}\\(\mathbf{Q}\underset{\sim}{x}) && \text{(dot product as a matrix product)} \\ &= {\underset{\sim}{x}}^{\top}\\{\mathbf{Q}}^{\top}\\(\mathbf{Q}\underset{\sim}{x}) && \text{(transpose of a product)} \\ &= {\underset{\sim}{x}}^{\top}\\({\mathbf{Q}}^{\top}\mathbf{Q})\\\underset{\sim}{x} && \text{(regroup; matrix multiplication is associative)} \\ &= {\underset{\sim}{x}}^{\top}\\\mathbf{I}\_p\\\underset{\sim}{x} && \text{(definition of an orthogonal matrix)} \\ &= {\underset{\sim}{x}}^{\top}\\\underset{\sim}{x} && \text{(identity matrix)} \\ &= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2 && \text{(definition of the Euclidean norm)} \end{aligned} \\
 >
-> Both norms are nonnegative square roots, so equal squares give \\\mathopen{}\left\lVert\mathbf{Q}\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\. The second step is [Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul), the third is [Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), and the fourth is [Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc).
+> Both norms are nonnegative square roots, so equal squares give \\\mathopen{}\left\lVert\mathbf{Q}\underset{\sim}{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\. The second step is [Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul), the third is [Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), and the fourth is [Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc).
 
 > **NOTE:**
 >
-> **Example 13 (Rotating a vector keeps its length)** With \\\mathbf{Q}\\ from [Example 11](#exm-orthogonal-matrix) and \\\tilde{x}= (3, 4)\\ from [Example 11 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm):
+> **Example 13 (Rotating a vector keeps its length)** With \\\mathbf{Q}\\ from [Example 11](#exm-orthogonal-matrix) and \\\underset{\sim}{x}= (3, 4)\\ from [Example 11 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm):
 >
-> \\ \begin{aligned} \mathbf{Q}\tilde{x} &= \begin{bmatrix} 0.6 \cdot 3 - 0.8 \cdot 4 \\ 0.8 \cdot 3 + 0.6 \cdot 4 \end{bmatrix} && \text{(definition of matrix-vector multiplication)} \\ &= \begin{bmatrix} 1.8 - 3.2 \\ 2.4 + 2.4 \end{bmatrix} && \text{(multiply)} \\ &= \begin{bmatrix} -1.4 \\ 4.8 \end{bmatrix} && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{Q}\underset{\sim}{x} &= \begin{bmatrix} 0.6 \cdot 3 - 0.8 \cdot 4 \\ 0.8 \cdot 3 + 0.6 \cdot 4 \end{bmatrix} && \text{(definition of matrix-vector multiplication)} \\ &= \begin{bmatrix} 1.8 - 3.2 \\ 2.4 + 2.4 \end{bmatrix} && \text{(multiply)} \\ &= \begin{bmatrix} -1.4 \\ 4.8 \end{bmatrix} && \text{(add)} \end{aligned} \\
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{Q}\tilde{x}\right\rVert\mathclose{} &= \sqrt{(-1.4)^2 + 4.8^2} && \text{(definition of the norm)} \\ &= \sqrt{1.96 + 23.04} && \text{(square)} \\ &= \sqrt{25} && \text{(add)} \\ &= 5 && \text{(take the square root)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{Q}\underset{\sim}{x}\right\rVert\mathclose{} &= \sqrt{(-1.4)^2 + 4.8^2} && \text{(definition of the norm)} \\ &= \sqrt{1.96 + 23.04} && \text{(square)} \\ &= \sqrt{25} && \text{(add)} \\ &= 5 && \text{(take the square root)} \end{aligned} \\
 >
-> which is \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 5\\.
+> which is \\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} = 5\\.
 
 ## 2 Quadratic Forms
 
@@ -306,46 +306,46 @@ Some special matrices appeared earlier:
 >
 > **Definition 11 (Quadratic form)** A **quadratic form** is a mathematical expression of the structure
 >
-> \\{\tilde{x}}^{\top}\\ \mathbf{S}\\ \tilde{x}\\
+> \\{\underset{\sim}{x}}^{\top}\\ \mathbf{S}\\ \underset{\sim}{x}\\
 >
-> where \\\tilde{x}\\ is a \\p \times 1\\ vector and \\\mathbf{S}\\ is a \\p \times p\\ matrix.
+> where \\\underset{\sim}{x}\\ is a \\p \times 1\\ vector and \\\mathbf{S}\\ is a \\p \times p\\ matrix.
 
 > **NOTE:**
 >
-> *Remark 6* (Quadratic forms in statistics). A quadratic form extends the scalar expression \\c x^2\\ to vectors: with \\p = 1\\ and \\\mathbf{S} = \[c\]\\, \\{\tilde{x}}^{\top}\\\mathbf{S}\\\tilde{x}= c x^2\\. With \\p = 2\\,
+> *Remark 6* (Quadratic forms in statistics). A quadratic form extends the scalar expression \\c x^2\\ to vectors: with \\p = 1\\ and \\\mathbf{S} = \[c\]\\, \\{\underset{\sim}{x}}^{\top}\\\mathbf{S}\\\underset{\sim}{x}= c x^2\\. With \\p = 2\\,
 >
-> \\ {\tilde{x}}^{\top} \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix} \tilde{x} = x_1^2 + 2 x_1 x_2 + 3 x_2^2, \\
+> \\ {\underset{\sim}{x}}^{\top} \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix} \underset{\sim}{x} = x_1^2 + 2 x_1 x_2 + 3 x_2^2, \\
 >
-> which is \\1 + 4 + 12 = 17\\ at \\\tilde{x}= (1, 2)\\.
+> which is \\1 + 4 + 12 = 17\\ at \\\underset{\sim}{x}= (1, 2)\\.
 >
 > Quadratic forms occur often in statistics:
 >
 > - The residual sum of squares in linear regression (see [Vector Calculus](vector-calculus.llms.md)) is a quadratic form.
-> - The variance of a linear combination of estimates (see [Inference about Gaussian Linear Regression Models](https://morrison-lab.github.io/rme/chapters/Linear-models-overview.html#sec-infer-LMs)) is a quadratic form: \\\operatorname{Var}\mathopen{}\left(\tilde{x} \cdot \hat{\tilde{\beta}}\right)\mathclose{} = {\tilde{x}}^{\top}\\\operatorname{Var}\mathopen{}\left(\hat{\tilde{\beta}}\right)\mathclose{}\\\tilde{x}\\.
+> - The variance of a linear combination of estimates (see [Inference about Gaussian Linear Regression Models](https://morrison-lab.github.io/rme/chapters/Linear-models-overview.html#sec-infer-LMs)) is a quadratic form: \\\operatorname{Var}\mathopen{}\left(\underset{\sim}{x} \cdot \hat{\underset{\sim}{\beta}}\right)\mathclose{} = {\underset{\sim}{x}}^{\top}\\\operatorname{Var}\mathopen{}\left(\hat{\underset{\sim}{\beta}}\right)\mathclose{}\\\underset{\sim}{x}\\.
 
 > **NOTE:**
 >
-> **Theorem 6 (A quadratic form is additive in its matrix)** If \\\mathbf{A}\\ and \\\mathbf{B}\\ are \\p \times p\\ matrices, \\c\\ is a number and \\\tilde{x}\\ is a vector of length \\p\\, then
+> **Theorem 6 (A quadratic form is additive in its matrix)** If \\\mathbf{A}\\ and \\\mathbf{B}\\ are \\p \times p\\ matrices, \\c\\ is a number and \\\underset{\sim}{x}\\ is a vector of length \\p\\, then
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}(\mathbf{A} + \mathbf{B})\tilde{x}&= {\tilde{x}}^{\top} \mathbf{A} \tilde{x} + {\tilde{x}}^{\top} \mathbf{B} \tilde{x}, \\ {\tilde{x}}^{\top}(c\\\mathbf{A})\tilde{x}&= c\\{\tilde{x}}^{\top} \mathbf{A} \tilde{x}. \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top}(\mathbf{A} + \mathbf{B})\underset{\sim}{x}&= {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} + {\underset{\sim}{x}}^{\top} \mathbf{B} \underset{\sim}{x}, \\ {\underset{\sim}{x}}^{\top}(c\\\mathbf{A})\underset{\sim}{x}&= c\\{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x}. \end{aligned} \\
 >
-> So for a fixed \\\tilde{x}\\, the map \\\mathbf{S} \mapsto {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ is linear in \\\mathbf{S}\\.
+> So for a fixed \\\underset{\sim}{x}\\, the map \\\mathbf{S} \mapsto {\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x}\\ is linear in \\\mathbf{S}\\.
 
 > **NOTE:**
 >
 > *Proof*. By the distributive law ([Theorem 6 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib)), applied on the left and then on the right,
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}(\mathbf{A} + \mathbf{B})\tilde{x} &= \mathopen{}\left({\tilde{x}}^{\top}\mathbf{A} + {\tilde{x}}^{\top}\mathbf{B}\right)\mathclose{}\tilde{x} && \text{(distribute } {\tilde{x}}^{\top} \text{ over the sum)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{x} + {\tilde{x}}^{\top} \mathbf{B} \tilde{x} && \text{(distribute } \tilde{x}\text{ over the sum)} \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top}(\mathbf{A} + \mathbf{B})\underset{\sim}{x} &= \mathopen{}\left({\underset{\sim}{x}}^{\top}\mathbf{A} + {\underset{\sim}{x}}^{\top}\mathbf{B}\right)\mathclose{}\underset{\sim}{x} && \text{(distribute } {\underset{\sim}{x}}^{\top} \text{ over the sum)} \\ &= {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} + {\underset{\sim}{x}}^{\top} \mathbf{B} \underset{\sim}{x} && \text{(distribute } \underset{\sim}{x}\text{ over the sum)} \end{aligned} \\
 >
-> For the scalar, a number can be moved out of any product, so \\{\tilde{x}}^{\top}(c\\\mathbf{A})\tilde{x}= c\\{\tilde{x}}^{\top} \mathbf{A} \tilde{x}\\.
+> For the scalar, a number can be moved out of any product, so \\{\underset{\sim}{x}}^{\top}(c\\\mathbf{A})\underset{\sim}{x}= c\\{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x}\\.
 
 > **NOTE:**
 >
-> **Example 14 (Combining two quadratic forms into one)** Take \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}\\, \\\mathbf{B} = \mathbf{I}\\ and \\\tilde{x}= (1, 2)\\. Then
+> **Example 14 (Combining two quadratic forms into one)** Take \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}\\, \\\mathbf{B} = \mathbf{I}\\ and \\\underset{\sim}{x}= (1, 2)\\. Then
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{A} \tilde{x} &= 1 + 4 + 12 = 17, \\ {\tilde{x}}^{\top} \mathbf{I} \tilde{x} &= 1 + 4 = 5, \\ {\tilde{x}}^{\top}(\mathbf{A} + \mathbf{I})\tilde{x} &= {\tilde{x}}^{\top}\begin{bmatrix} 2 & 2 \\ 0 & 4 \end{bmatrix}\tilde{x}\\ &= 2 + 4 + 16 \\ &= 22, \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} &= 1 + 4 + 12 = 17, \\ {\underset{\sim}{x}}^{\top} \mathbf{I} \underset{\sim}{x} &= 1 + 4 = 5, \\ {\underset{\sim}{x}}^{\top}(\mathbf{A} + \mathbf{I})\underset{\sim}{x} &= {\underset{\sim}{x}}^{\top}\begin{bmatrix} 2 & 2 \\ 0 & 4 \end{bmatrix}\underset{\sim}{x}\\ &= 2 + 4 + 16 \\ &= 22, \end{aligned} \\
 >
-> which equals \\17 + 5\\. In particular, \\{\tilde{x}}^{\top}(\mathbf{A} + c\\\mathbf{I})\tilde{x}= {\tilde{x}}^{\top} \mathbf{A} \tilde{x} + c\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2\\ for every number \\c\\, because \\{\tilde{x}}^{\top} \mathbf{I} \tilde{x} = {\tilde{x}}^{\top}\tilde{x}= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2\\. This is how two quadratic terms in the same vector combine into a single quadratic form.
+> which equals \\17 + 5\\. In particular, \\{\underset{\sim}{x}}^{\top}(\mathbf{A} + c\\\mathbf{I})\underset{\sim}{x}= {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} + c\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2\\ for every number \\c\\, because \\{\underset{\sim}{x}}^{\top} \mathbf{I} \underset{\sim}{x} = {\underset{\sim}{x}}^{\top}\underset{\sim}{x}= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}^2\\. This is how two quadratic terms in the same vector combine into a single quadratic form.
 
 > **NOTE:**
 >
@@ -363,31 +363,31 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 7 (A quadratic form depends only on the symmetric part)** If \\\mathbf{S}\\ is a \\p \times p\\ matrix and \\\tilde{x}\\ is a vector of length \\p\\, then
+> **Theorem 7 (A quadratic form depends only on the symmetric part)** If \\\mathbf{S}\\ is a \\p \times p\\ matrix and \\\underset{\sim}{x}\\ is a vector of length \\p\\, then
 >
-> \\ {\tilde{x}}^{\top} \mathbf{S} \tilde{x} = {\tilde{x}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\tilde{x}. \\
+> \\ {\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x} = {\underset{\sim}{x}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\underset{\sim}{x}. \\
 >
 > So the value of a quadratic form depends only on the symmetric part ([Definition 12](#def-symmetric-part)) of \\\mathbf{S}\\.
 
 > **NOTE:**
 >
-> *Proof*. The quadratic form \\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ is a \\1 \times 1\\ matrix, so it equals its own transpose:
+> *Proof*. The quadratic form \\{\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x}\\ is a \\1 \times 1\\ matrix, so it equals its own transpose:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{S} \tilde{x} &= {\mathopen{}\left({\tilde{x}}^{\top} \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(a } 1 \times 1 \text{ matrix is symmetric)} \\ &= {\tilde{x}}^{\top}\\{\mathbf{S}}^{\top}\\{\mathopen{}\left({\tilde{x}}^{\top}\right)\mathclose{}}^{\top} && \text{(transpose of a product, twice)} \\ &= {\tilde{x}}^{\top}\\{\mathbf{S}}^{\top}\\\tilde{x} && \text{(transposing twice changes nothing)} \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x} &= {\mathopen{}\left({\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x}\right)\mathclose{}}^{\top} && \text{(a } 1 \times 1 \text{ matrix is symmetric)} \\ &= {\underset{\sim}{x}}^{\top}\\{\mathbf{S}}^{\top}\\{\mathopen{}\left({\underset{\sim}{x}}^{\top}\right)\mathclose{}}^{\top} && \text{(transpose of a product, twice)} \\ &= {\underset{\sim}{x}}^{\top}\\{\mathbf{S}}^{\top}\\\underset{\sim}{x} && \text{(transposing twice changes nothing)} \end{aligned} \\
 >
-> Averaging the two expressions for \\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\:
+> Averaging the two expressions for \\{\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x}\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{S} \tilde{x} &= \frac{1}{2}\mathopen{}\left({\tilde{x}}^{\top} \mathbf{S} \tilde{x} + {\tilde{x}}^{\top}\\{\mathbf{S}}^{\top}\\\tilde{x}\right)\mathclose{} && \text{(average of two equal numbers)} \\ &= \frac{1}{2}\\{\tilde{x}}^{\top}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}\tilde{x} && \text{(distributive law)} \\ &= {\tilde{x}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\tilde{x} && \text{(move the scalar } \tfrac{1}{2} \text{ inside)} \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x} &= \frac{1}{2}\mathopen{}\left({\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x} + {\underset{\sim}{x}}^{\top}\\{\mathbf{S}}^{\top}\\\underset{\sim}{x}\right)\mathclose{} && \text{(average of two equal numbers)} \\ &= \frac{1}{2}\\{\underset{\sim}{x}}^{\top}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}\underset{\sim}{x} && \text{(distributive law)} \\ &= {\underset{\sim}{x}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\underset{\sim}{x} && \text{(move the scalar } \tfrac{1}{2} \text{ inside)} \end{aligned} \\
 >
 > The distributive step is [Theorem 6 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib), and the transpose step is [Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product).
 
 > **NOTE:**
 >
-> **Example 16 (Replacing a matrix by its symmetric part)** With \\\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}\\ from [Example 15](#exm-symmetric-part) and \\\tilde{x}= (1, 1)\\:
+> **Example 16 (Replacing a matrix by its symmetric part)** With \\\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}\\ from [Example 15](#exm-symmetric-part) and \\\underset{\sim}{x}= (1, 1)\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{S} \tilde{x} &= 1 + 2 + 0 + 3 \\ &= 6 \\ {\tilde{x}}^{\top}\begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix}\tilde{x} &= 1 + 1 + 1 + 3 \\ &= 6 \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x} &= 1 + 2 + 0 + 3 \\ &= 6 \\ {\underset{\sim}{x}}^{\top}\begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix}\underset{\sim}{x} &= 1 + 1 + 1 + 3 \\ &= 6 \end{aligned} \\
 >
-> Both quadratic forms equal the sum of their matrix’s entries, because every entry of \\\tilde{x}\\ is \\1\\.
+> Both quadratic forms equal the sum of their matrix’s entries, because every entry of \\\underset{\sim}{x}\\ is \\1\\.
 
 ## 3 Trace and Matrix Inner Product
 
@@ -523,21 +523,21 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Theorem 10 (The squared Frobenius norm adds up the squared column norms)** If \\\mathbf{A}\\ is an \\n \times p\\ matrix with columns \\\tilde{a}\_1, \ldots, \tilde{a}\_p\\, then
+> **Theorem 10 (The squared Frobenius norm adds up the squared column norms)** If \\\mathbf{A}\\ is an \\n \times p\\ matrix with columns \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_p\\, then
 >
-> \\ \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{j=1}^p\mathopen{}\left\lVert\tilde{a}\_j\right\rVert\mathclose{}^2. \\
+> \\ \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{j=1}^p\mathopen{}\left\lVert\underset{\sim}{a}\_j\right\rVert\mathclose{}^2. \\
 
 > **NOTE:**
 >
-> *Proof*. Entry \\i\\ of \\\tilde{a}\_j\\ is \\a\_{ij}\\, so
+> *Proof*. Entry \\i\\ of \\\underset{\sim}{a}\_j\\ is \\a\_{ij}\\, so
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 &= \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2 && \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~9}}\text{)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^na\_{ij}^2 && \text{(swap the order of two finite sums)} \\ &= \sum\_{j=1}^p\mathopen{}\left\lVert\tilde{a}\_j\right\rVert\mathclose{}^2 && \text{(}\href{linear-algebra-vectors.qmd#def-euclidean-norm}{\text{Definition~16 in Vectors}}\text{, applied to each column)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 &= \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2 && \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~9}}\text{)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^na\_{ij}^2 && \text{(swap the order of two finite sums)} \\ &= \sum\_{j=1}^p\mathopen{}\left\lVert\underset{\sim}{a}\_j\right\rVert\mathclose{}^2 && \text{(}\href{linear-algebra-vectors.qmd#def-euclidean-norm}{\text{Definition~16 in Vectors}}\text{, applied to each column)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 21 (The Frobenius norm of a \\2 \times 2\\ matrix, column by column)** The matrix \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\\ in [Example 20](#exm-frobenius-norm) has columns \\\tilde{a}\_1 = (1, 3)\\ and \\\tilde{a}\_2 = (2, 4)\\, so
+> **Example 21 (The Frobenius norm of a \\2 \times 2\\ matrix, column by column)** The matrix \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\\ in [Example 20](#exm-frobenius-norm) has columns \\\underset{\sim}{a}\_1 = (1, 3)\\ and \\\underset{\sim}{a}\_2 = (2, 4)\\, so
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 &= \mathopen{}\left\lVert\tilde{a}\_1\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\tilde{a}\_2\right\rVert\mathclose{}^2 && \text{(}\href{#thm-frobenius-norm-columns}{\text{Theorem~10}}\text{)} \\ &= (1^2 + 3^2) + (2^2 + 4^2) && \text{(definition of the norm)} \\ &= 10 + 20 && \text{(square and add)} \\ &= 30 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 &= \mathopen{}\left\lVert\underset{\sim}{a}\_1\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\underset{\sim}{a}\_2\right\rVert\mathclose{}^2 && \text{(}\href{#thm-frobenius-norm-columns}{\text{Theorem~10}}\text{)} \\ &= (1^2 + 3^2) + (2^2 + 4^2) && \text{(definition of the norm)} \\ &= 10 + 20 && \text{(square and add)} \\ &= 30 && \text{(add)} \end{aligned} \\
 >
 > which matches \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F = \sqrt{30}\\ from [Example 20](#exm-frobenius-norm).
 
@@ -545,13 +545,13 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 16 (Eigenvalue)** Let \\\mathbf{A}\\ be a \\p \times p\\ matrix. A real number \\\lambda\\ is an **eigenvalue** of \\\mathbf{A}\\ if some real vector \\\tilde{v} \neq \tilde{0}\\ of length \\p\\ satisfies
+> **Definition 16 (Eigenvalue)** Let \\\mathbf{A}\\ be a \\p \times p\\ matrix. A real number \\\lambda\\ is an **eigenvalue** of \\\mathbf{A}\\ if some real vector \\\underset{\sim}{v} \neq \underset{\sim}{0}\\ of length \\p\\ satisfies
 >
-> \\ \underbrace{\mathbf{A}}\_{p \times p}\\\underbrace{\tilde{v}}\_{p \times 1} = \lambda\\\underbrace{\tilde{v}}\_{p \times 1} \\
+> \\ \underbrace{\mathbf{A}}\_{p \times p}\\\underbrace{\underset{\sim}{v}}\_{p \times 1} = \lambda\\\underbrace{\underset{\sim}{v}}\_{p \times 1} \\
 
 > **NOTE:**
 >
-> **Definition 17 (Eigenvector)** In [Definition 16](#def-eigenvalue), any such \\\tilde{v}\\ is an **eigenvector** of \\\mathbf{A}\\ for \\\lambda\\.
+> **Definition 17 (Eigenvector)** In [Definition 16](#def-eigenvalue), any such \\\underset{\sim}{v}\\ is an **eigenvector** of \\\mathbf{A}\\ for \\\lambda\\.
 
 > **NOTE:**
 >
@@ -567,9 +567,9 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 10* (Multiples of an eigenvector). Multiplying by \\\mathbf{A}\\ rescales an eigenvector by \\\lambda\\ and does not change the line it lies on. Any nonzero multiple \\c\\\tilde{v}\\ of an eigenvector is also an eigenvector for the same \\\lambda\\:
+> *Remark 10* (Multiples of an eigenvector). Multiplying by \\\mathbf{A}\\ rescales an eigenvector by \\\lambda\\ and does not change the line it lies on. Any nonzero multiple \\c\\\underset{\sim}{v}\\ of an eigenvector is also an eigenvector for the same \\\lambda\\:
 >
-> \\ \begin{aligned} \mathbf{A}(c\\\tilde{v}) &= c\\\mathbf{A}\tilde{v} && \text{(move the scalar } c \text{ to the front)} \\ &= c\\\lambda\tilde{v} && \text{(} \tilde{v} \text{ is an eigenvector for } \lambda\text{)} \\ &= \lambda\\(c\\\tilde{v}) && \text{(multiplication of numbers is commutative)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{A}(c\\\underset{\sim}{v}) &= c\\\mathbf{A}\underset{\sim}{v} && \text{(move the scalar } c \text{ to the front)} \\ &= c\\\lambda\underset{\sim}{v} && \text{(} \underset{\sim}{v} \text{ is an eigenvector for } \lambda\text{)} \\ &= \lambda\\(c\\\underset{\sim}{v}) && \text{(multiplication of numbers is commutative)} \end{aligned} \\
 >
 > For example, in [Example 22](#exm-eigenvalue), \\2\\(1, 1) = (2, 2)\\ is also an eigenvector for the eigenvalue \\3\\:
 >
@@ -585,13 +585,13 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 11* (Real and complex eigenvalues). These notes take \\\lambda\\ and \\\tilde{v}\\ to be real. Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Definition 11.1, pp. 312-313) also allows [complex](algebra-complex.llms.md#def-complex-number) eigenvalues and eigenvectors, because some real matrices, such as a rotation by \\90\\ degrees, have no real eigenvalues ([Banerjee and Roy 2014, chap. 11](#ref-banerjee2014linear), Example 11.2, p. 312).
+> *Remark 11* (Real and complex eigenvalues). These notes take \\\lambda\\ and \\\underset{\sim}{v}\\ to be real. Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Definition 11.1, pp. 312-313) also allows [complex](algebra-complex.llms.md#def-complex-number) eigenvalues and eigenvectors, because some real matrices, such as a rotation by \\90\\ degrees, have no real eigenvalues ([Banerjee and Roy 2014, chap. 11](#ref-banerjee2014linear), Example 11.2, p. 312).
 >
-> For example, \\\mathbf{R} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}\\ rotates each vector in the plane counterclockwise by \\90\\ degrees: \\\mathbf{R}\\(v_1, v_2) = (-v_2, v_1)\\. Suppose \\\mathbf{R}\tilde{v} = \lambda\tilde{v}\\ for a real number \\\lambda\\. Matching entries gives \\-v_2 = \lambda v_1\\ and \\v_1 = \lambda v_2\\. Substituting the second equation into the first gives \\-v_2 = \lambda^2 v_2\\, so \\(1 + \lambda^2)\\ v_2 = 0\\. Since \\1 + \lambda^2 \> 0\\, \\v_2 = 0\\, and then
+> For example, \\\mathbf{R} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}\\ rotates each vector in the plane counterclockwise by \\90\\ degrees: \\\mathbf{R}\\(v_1, v_2) = (-v_2, v_1)\\. Suppose \\\mathbf{R}\underset{\sim}{v} = \lambda\underset{\sim}{v}\\ for a real number \\\lambda\\. Matching entries gives \\-v_2 = \lambda v_1\\ and \\v_1 = \lambda v_2\\. Substituting the second equation into the first gives \\-v_2 = \lambda^2 v_2\\, so \\(1 + \lambda^2)\\ v_2 = 0\\. Since \\1 + \lambda^2 \> 0\\, \\v_2 = 0\\, and then
 >
 > \\ \begin{aligned} v_1 &= \lambda v_2 \\ &= 0. \end{aligned} \\
 >
-> So the only solution is \\\tilde{v} = \tilde{0}\\, and \\\mathbf{R}\\ has no real eigenvalue.
+> So the only solution is \\\underset{\sim}{v} = \underset{\sim}{0}\\, and \\\mathbf{R}\\ has no real eigenvalue.
 
 > **TIP:**
 >
@@ -705,19 +705,19 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > \\ \mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix} \qquad \mathbf{U} = \begin{bmatrix} \frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\ 0 & 1 & 0 \\ \frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}} \end{bmatrix} \qquad \mathbf{D} = \begin{bmatrix} 2 & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{bmatrix} \qquad \mathbf{V} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \\
 >
-> \\\mathbf{V}\\ is the orthogonal matrix \\\mathbf{Q}\\ from [Example 24](#exm-spectral). \\\mathbf{U}\\ is orthogonal too. Entry \\(i, j)\\ of \\{\mathbf{U}}^{\top}\mathbf{U}\\ is the dot product of columns \\i\\ and \\j\\ of \\\mathbf{U}\\, and those columns are \\\tilde{u}\_1 = (\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}})\\, \\\tilde{u}\_2 = (0, 1, 0)\\ and \\\tilde{u}\_3 = (\frac{1}{\sqrt{2}}, 0, -\frac{1}{\sqrt{2}})\\:
+> \\\mathbf{V}\\ is the orthogonal matrix \\\mathbf{Q}\\ from [Example 24](#exm-spectral). \\\mathbf{U}\\ is orthogonal too. Entry \\(i, j)\\ of \\{\mathbf{U}}^{\top}\mathbf{U}\\ is the dot product of columns \\i\\ and \\j\\ of \\\mathbf{U}\\, and those columns are \\\underset{\sim}{u}\_1 = (\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}})\\, \\\underset{\sim}{u}\_2 = (0, 1, 0)\\ and \\\underset{\sim}{u}\_3 = (\frac{1}{\sqrt{2}}, 0, -\frac{1}{\sqrt{2}})\\:
 >
-> \\ \begin{aligned} \tilde{u}\_1 \cdot \tilde{u}\_1 &= \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}} + 0 \cdot 0 + \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}} && \text{(definition of the dot product)} \\ &= \tfrac{1}{2} + 0 + \tfrac{1}{2} && \text{(multiply)} \\ &= 1 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{u}\_1 \cdot \underset{\sim}{u}\_1 &= \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}} + 0 \cdot 0 + \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}} && \text{(definition of the dot product)} \\ &= \tfrac{1}{2} + 0 + \tfrac{1}{2} && \text{(multiply)} \\ &= 1 && \text{(add)} \end{aligned} \\
 >
-> \\ \begin{aligned} \tilde{u}\_2 \cdot \tilde{u}\_2 &= 0 \cdot 0 + 1 \cdot 1 + 0 \cdot 0 && \text{(definition of the dot product)} \\ &= 0 + 1 + 0 && \text{(multiply)} \\ &= 1 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{u}\_2 \cdot \underset{\sim}{u}\_2 &= 0 \cdot 0 + 1 \cdot 1 + 0 \cdot 0 && \text{(definition of the dot product)} \\ &= 0 + 1 + 0 && \text{(multiply)} \\ &= 1 && \text{(add)} \end{aligned} \\
 >
-> \\ \begin{aligned} \tilde{u}\_3 \cdot \tilde{u}\_3 &= \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}} + 0 \cdot 0 + \mathopen{}\left(-\tfrac{1}{\sqrt{2}}\right)\mathclose{} \cdot\mathopen{}\left(-\tfrac{1}{\sqrt{2}}\right)\mathclose{} && \text{(definition of the dot product)} \\ &= \tfrac{1}{2} + 0 + \tfrac{1}{2} && \text{(multiply)} \\ &= 1 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{u}\_3 \cdot \underset{\sim}{u}\_3 &= \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}} + 0 \cdot 0 + \mathopen{}\left(-\tfrac{1}{\sqrt{2}}\right)\mathclose{} \cdot\mathopen{}\left(-\tfrac{1}{\sqrt{2}}\right)\mathclose{} && \text{(definition of the dot product)} \\ &= \tfrac{1}{2} + 0 + \tfrac{1}{2} && \text{(multiply)} \\ &= 1 && \text{(add)} \end{aligned} \\
 >
-> \\ \begin{aligned} \tilde{u}\_1 \cdot \tilde{u}\_2 &= \tfrac{1}{\sqrt{2}} \cdot 0 + 0 \cdot 1 + \tfrac{1}{\sqrt{2}} \cdot 0 && \text{(definition of the dot product)} \\ &= 0 + 0 + 0 && \text{(multiply)} \\ &= 0 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{u}\_1 \cdot \underset{\sim}{u}\_2 &= \tfrac{1}{\sqrt{2}} \cdot 0 + 0 \cdot 1 + \tfrac{1}{\sqrt{2}} \cdot 0 && \text{(definition of the dot product)} \\ &= 0 + 0 + 0 && \text{(multiply)} \\ &= 0 && \text{(add)} \end{aligned} \\
 >
-> \\ \begin{aligned} \tilde{u}\_1 \cdot \tilde{u}\_3 &= \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}} + 0 \cdot 0 + \tfrac{1}{\sqrt{2}} \cdot\mathopen{}\left(-\tfrac{1}{\sqrt{2}}\right)\mathclose{} && \text{(definition of the dot product)} \\ &= \tfrac{1}{2} + 0 - \tfrac{1}{2} && \text{(multiply)} \\ &= 0 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{u}\_1 \cdot \underset{\sim}{u}\_3 &= \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}} + 0 \cdot 0 + \tfrac{1}{\sqrt{2}} \cdot\mathopen{}\left(-\tfrac{1}{\sqrt{2}}\right)\mathclose{} && \text{(definition of the dot product)} \\ &= \tfrac{1}{2} + 0 - \tfrac{1}{2} && \text{(multiply)} \\ &= 0 && \text{(add)} \end{aligned} \\
 >
-> \\ \begin{aligned} \tilde{u}\_2 \cdot \tilde{u}\_3 &= 0 \cdot\tfrac{1}{\sqrt{2}} + 1 \cdot 0 + 0 \cdot\mathopen{}\left(-\tfrac{1}{\sqrt{2}}\right)\mathclose{} && \text{(definition of the dot product)} \\ &= 0 + 0 + 0 && \text{(multiply)} \\ &= 0 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{u}\_2 \cdot \underset{\sim}{u}\_3 &= 0 \cdot\tfrac{1}{\sqrt{2}} + 1 \cdot 0 + 0 \cdot\mathopen{}\left(-\tfrac{1}{\sqrt{2}}\right)\mathclose{} && \text{(definition of the dot product)} \\ &= 0 + 0 + 0 && \text{(multiply)} \\ &= 0 && \text{(add)} \end{aligned} \\
 >
 > The dot product is symmetric, so these six values fill in all nine entries, and \\{\mathbf{U}}^{\top}\mathbf{U} = \mathbf{I}\_3\\.
 >
@@ -789,11 +789,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > For \\i \> r\\, every term is \\0\\, so \\\lambda_i = 0\\.
 >
-> **The eigenvectors.** Write \\\tilde{v}\_i\\ for column \\i\\ of \\\mathbf{V}\\, and \\\tilde{e}\_i\\ for the indicator vector ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) of length \\p\\. Column \\i\\ of \\{\mathbf{V}}^{\top}\mathbf{V} = \mathbf{I}\_p\\ says \\{\mathbf{V}}^{\top}\tilde{v}\_i = \tilde{e}\_i\\. Then
+> **The eigenvectors.** Write \\\underset{\sim}{v}\_i\\ for column \\i\\ of \\\mathbf{V}\\, and \\\underset{\sim}{e}\_i\\ for the indicator vector ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) of length \\p\\. Column \\i\\ of \\{\mathbf{V}}^{\top}\mathbf{V} = \mathbf{I}\_p\\ says \\{\mathbf{V}}^{\top}\underset{\sim}{v}\_i = \underset{\sim}{e}\_i\\. Then
 >
-> \\ \begin{aligned} {\mathbf{A}}^{\top}\mathbf{A}\\\tilde{v}\_i &= \mathbf{V}\mathbf{\Lambda}\\{\mathbf{V}}^{\top}\tilde{v}\_i && \text{(the factorization)} \\ &= \mathbf{V}\mathbf{\Lambda}\\\tilde{e}\_i && \text{(} {\mathbf{V}}^{\top}\tilde{v}\_i = \tilde{e}\_i \text{)} \\ &= \mathbf{V}\\(\lambda_i\\\tilde{e}\_i) && \text{(column } i \text{ of the diagonal matrix } \mathbf{\Lambda} \text{)} \\ &= \lambda_i\\\mathbf{V}\tilde{e}\_i && \text{(move the scalar } \lambda_i \text{ to the front)} \\ &= \lambda_i\\\tilde{v}\_i && \text{(} \mathbf{V}\tilde{e}\_i \text{ is column } i \text{ of } \mathbf{V} \text{)} \end{aligned} \\
+> \\ \begin{aligned} {\mathbf{A}}^{\top}\mathbf{A}\\\underset{\sim}{v}\_i &= \mathbf{V}\mathbf{\Lambda}\\{\mathbf{V}}^{\top}\underset{\sim}{v}\_i && \text{(the factorization)} \\ &= \mathbf{V}\mathbf{\Lambda}\\\underset{\sim}{e}\_i && \text{(} {\mathbf{V}}^{\top}\underset{\sim}{v}\_i = \underset{\sim}{e}\_i \text{)} \\ &= \mathbf{V}\\(\lambda_i\\\underset{\sim}{e}\_i) && \text{(column } i \text{ of the diagonal matrix } \mathbf{\Lambda} \text{)} \\ &= \lambda_i\\\mathbf{V}\underset{\sim}{e}\_i && \text{(move the scalar } \lambda_i \text{ to the front)} \\ &= \lambda_i\\\underset{\sim}{v}\_i && \text{(} \mathbf{V}\underset{\sim}{e}\_i \text{ is column } i \text{ of } \mathbf{V} \text{)} \end{aligned} \\
 >
-> and \\\tilde{v}\_i \neq \tilde{0}\\ because it has norm \\1\\.
+> and \\\underset{\sim}{v}\_i \neq \underset{\sim}{0}\\ because it has norm \\1\\.
 
 > **NOTE:**
 >
@@ -822,13 +822,13 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 > **Definition 21 (Positive semidefinite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive semidefinite** if it satisfies both conditions:
 >
 > - \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ is non-negative: \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \ge 0\\ for every vector \\\tilde{x}\\ of length \\p\\.
+> - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ is non-negative: \\{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} \ge 0\\ for every vector \\\underset{\sim}{x}\\ of length \\p\\.
 
 > **NOTE:**
 >
-> **Example 27 (A positive semidefinite matrix)** Let \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, which is symmetric. For any \\\tilde{x}= (x_1, x_2)\\:
+> **Example 27 (A positive semidefinite matrix)** Let \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, which is symmetric. For any \\\underset{\sim}{x}= (x_1, x_2)\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{B} \tilde{x} &= x_1^2 + x_1 x_2 + x_2 x_1 + x_2^2 && \text{(multiply out the quadratic form)} \\ &= (x_1 + x_2)^2 && \text{(complete the square)} \\ &\ge 0 && \text{(a square is non-negative)} \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{B} \underset{\sim}{x} &= x_1^2 + x_1 x_2 + x_2 x_1 + x_2^2 && \text{(multiply out the quadratic form)} \\ &= (x_1 + x_2)^2 && \text{(complete the square)} \\ &\ge 0 && \text{(a square is non-negative)} \end{aligned} \\
 >
 > So \\\mathbf{B}\\ is positive semidefinite.
 
@@ -837,35 +837,35 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 > **Definition 22 (Positive definite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive definite** if it satisfies both conditions:
 >
 > - \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ at a nonzero vector is positive: \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for every vector \\\tilde{x}\neq \tilde{0}\\ of length \\p\\.
+> - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ at a nonzero vector is positive: \\{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} \> 0\\ for every vector \\\underset{\sim}{x}\neq \underset{\sim}{0}\\ of length \\p\\.
 
 > **NOTE:**
 >
 > **Example 28 (Positive definite, semidefinite, and neither)**  
 >
-> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top} \mathbf{I}\_p \tilde{x} = \sum\_{i=1}^px_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
+> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: \\{\underset{\sim}{x}}^{\top} \mathbf{I}\_p \underset{\sim}{x} = \sum\_{i=1}^px_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
 >
-> - \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ from [Example 27](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at \\\tilde{x}= (1, -1) \neq \tilde{0}\\,
+> - \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ from [Example 27](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at \\\underset{\sim}{x}= (1, -1) \neq \underset{\sim}{0}\\,
 >
->   \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{B} \tilde{x} &= (1 - 1)^2 \\ &= 0. \end{aligned} \\
+>   \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{B} \underset{\sim}{x} &= (1 - 1)^2 \\ &= 0. \end{aligned} \\
 >
-> - \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ is symmetric but not positive semidefinite: at \\\tilde{x}= (1, -1)\\,
+> - \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ is symmetric but not positive semidefinite: at \\\underset{\sim}{x}= (1, -1)\\,
 >
->   \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{D} \tilde{x} &= 1 - 2 - 2 + 1 \\ &= -2 \\ &\< 0. \end{aligned} \\
+>   \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{D} \underset{\sim}{x} &= 1 - 2 - 2 + 1 \\ &= -2 \\ &\< 0. \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 18* (Why the definition requires symmetry). A positive definite matrix is positive semidefinite ([Definition 21](#def-positive-semidefinite)): \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for every \\\tilde{x}\neq \tilde{0}\\, and \\{\tilde{0}}^{\top}\mathbf{A}\tilde{0}= 0\\. For example, \\\mathbf{I}\_p\\ in [Example 28](#exm-positive-definite) is both.
+> *Remark 18* (Why the definition requires symmetry). A positive definite matrix is positive semidefinite ([Definition 21](#def-positive-semidefinite)): \\{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} \> 0\\ for every \\\underset{\sim}{x}\neq \underset{\sim}{0}\\, and \\{\underset{\sim}{0}}^{\top}\mathbf{A}\underset{\sim}{0}= 0\\. For example, \\\mathbf{I}\_p\\ in [Example 28](#exm-positive-definite) is both.
 >
-> Some sources drop the symmetry condition from both definitions. These notes keep it, because without it a matrix can pass the quadratic-form condition and still have no real eigenvalues ([Definition 16](#def-eigenvalue)). For example, \\\mathbf{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}\\ is not symmetric, and for any \\\tilde{x}= (x_1, x_2)\\:
+> Some sources drop the symmetry condition from both definitions. These notes keep it, because without it a matrix can pass the quadratic-form condition and still have no real eigenvalues ([Definition 16](#def-eigenvalue)). For example, \\\mathbf{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}\\ is not symmetric, and for any \\\underset{\sim}{x}= (x_1, x_2)\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{C} \tilde{x} &= x_1 (x_1 + x_2) + x_2 (-x_1 + x_2) && \text{(multiply out the quadratic form)} \\ &= x_1^2 + x_1 x_2 - x_2 x_1 + x_2^2 && \text{(distribute)} \\ &= x_1^2 + x_2^2 && \text{(the middle terms cancel)} \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{C} \underset{\sim}{x} &= x_1 (x_1 + x_2) + x_2 (-x_1 + x_2) && \text{(multiply out the quadratic form)} \\ &= x_1^2 + x_1 x_2 - x_2 x_1 + x_2^2 && \text{(distribute)} \\ &= x_1^2 + x_2^2 && \text{(the middle terms cancel)} \end{aligned} \\
 >
-> which is positive for every \\\tilde{x}\neq \tilde{0}\\. But suppose \\\mathbf{C}\tilde{v} = \lambda\tilde{v}\\ for a real number \\\lambda\\. Matching entries gives \\v_1 + v_2 = \lambda v_1\\ and \\-v_1 + v_2 = \lambda v_2\\, so \\v_2 = (\lambda- 1)\\ v_1\\ and \\-v_1 = (\lambda- 1)\\ v_2\\. Substituting the first into the second gives \\-v_1 = (\lambda- 1)^2 v_1\\, so \\\mathopen{}\left(1 + (\lambda- 1)^2\right)\mathclose{} v_1 = 0\\. Since \\1 + (\lambda- 1)^2 \> 0\\, \\v_1 = 0\\, and then
+> which is positive for every \\\underset{\sim}{x}\neq \underset{\sim}{0}\\. But suppose \\\mathbf{C}\underset{\sim}{v} = \lambda\underset{\sim}{v}\\ for a real number \\\lambda\\. Matching entries gives \\v_1 + v_2 = \lambda v_1\\ and \\-v_1 + v_2 = \lambda v_2\\, so \\v_2 = (\lambda- 1)\\ v_1\\ and \\-v_1 = (\lambda- 1)\\ v_2\\. Substituting the first into the second gives \\-v_1 = (\lambda- 1)^2 v_1\\, so \\\mathopen{}\left(1 + (\lambda- 1)^2\right)\mathclose{} v_1 = 0\\. Since \\1 + (\lambda- 1)^2 \> 0\\, \\v_1 = 0\\, and then
 >
 > \\ \begin{aligned} v_2 &= (\lambda- 1)\\ v_1 \\ &= 0. \end{aligned} \\
 >
-> So no real \\\lambda\\ has an eigenvector \\\tilde{v} \neq \tilde{0}\\.
+> So no real \\\lambda\\ has an eigenvector \\\underset{\sim}{v} \neq \underset{\sim}{0}\\.
 
 See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
@@ -878,15 +878,15 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> *Proof*. For any vector \\\tilde{x}\\ of length \\p\\, let \\\tilde{y} = {\mathbf{Q}}^{\top}\tilde{x}\\. Then:
+> *Proof*. For any vector \\\underset{\sim}{x}\\ of length \\p\\, let \\\underset{\sim}{y} = {\mathbf{Q}}^{\top}\underset{\sim}{x}\\. Then:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{A} \tilde{x} &= {\tilde{x}}^{\top}\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\tilde{x} && \text{(substitute the eigendecomposition)} \\ &= {\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{}}^{\top}\mathbf{\Lambda}\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{} && \text{(transpose of a product)} \\ &= {\tilde{y}}^{\top}\mathbf{\Lambda}\tilde{y} && \text{(definition of } \tilde{y} \text{)} \\ &= \sum\_{i=1}^p\lambda_i y_i^2 && \text{(} \mathbf{\Lambda} \text{ is diagonal)} \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} &= {\underset{\sim}{x}}^{\top}\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\underset{\sim}{x} && \text{(substitute the eigendecomposition)} \\ &= {\mathopen{}\left({\mathbf{Q}}^{\top}\underset{\sim}{x}\right)\mathclose{}}^{\top}\mathbf{\Lambda}\mathopen{}\left({\mathbf{Q}}^{\top}\underset{\sim}{x}\right)\mathclose{} && \text{(transpose of a product)} \\ &= {\underset{\sim}{y}}^{\top}\mathbf{\Lambda}\underset{\sim}{y} && \text{(definition of } \underset{\sim}{y} \text{)} \\ &= \sum\_{i=1}^p\lambda_i y_i^2 && \text{(} \mathbf{\Lambda} \text{ is diagonal)} \end{aligned} \\
 >
-> The second step is [Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product). Also, \\\tilde{x}= \tilde{0}\\ exactly when \\\tilde{y} = \tilde{0}\\: \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ for an orthogonal matrix ([Definition 10](#def-orthogonal-matrix)), so \\\tilde{x}= \mathbf{Q}\tilde{y}\\.
+> The second step is [Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product). Also, \\\underset{\sim}{x}= \underset{\sim}{0}\\ exactly when \\\underset{\sim}{y} = \underset{\sim}{0}\\: \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ for an orthogonal matrix ([Definition 10](#def-orthogonal-matrix)), so \\\underset{\sim}{x}= \mathbf{Q}\underset{\sim}{y}\\.
 >
-> *If every \\\lambda_i \ge 0\\*, then every term \\\lambda_i y_i^2 \ge 0\\, so \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \ge 0\\. *If every \\\lambda_i \> 0\\* and \\\tilde{x}\neq \tilde{0}\\, then some \\y_i \neq 0\\, so at least one term is positive and the rest are non-negative, and \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\.
+> *If every \\\lambda_i \ge 0\\*, then every term \\\lambda_i y_i^2 \ge 0\\, so \\{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} \ge 0\\. *If every \\\lambda_i \> 0\\* and \\\underset{\sim}{x}\neq \underset{\sim}{0}\\, then some \\y_i \neq 0\\, so at least one term is positive and the rest are non-negative, and \\{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} \> 0\\.
 >
-> *Conversely*, take \\\tilde{x}= \tilde{q}\_i\\, column \\i\\ of \\\mathbf{Q}\\, which is not \\\tilde{0}\\ because it has norm 1. Then \\\tilde{y} = {\mathbf{Q}}^{\top}\tilde{q}\_i\\ is column \\i\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\, so \\y_i = 1\\ and every other entry of \\\tilde{y}\\ is \\0\\, and the display gives \\{\tilde{q}\_i}^{\top}\mathbf{A}\tilde{q}\_i = \lambda_i\\. So if \\\mathbf{A}\\ is positive semidefinite, \\\lambda_i \ge 0\\, and if \\\mathbf{A}\\ is positive definite, \\\lambda_i \> 0\\.
+> *Conversely*, take \\\underset{\sim}{x}= \underset{\sim}{q}\_i\\, column \\i\\ of \\\mathbf{Q}\\, which is not \\\underset{\sim}{0}\\ because it has norm 1. Then \\\underset{\sim}{y} = {\mathbf{Q}}^{\top}\underset{\sim}{q}\_i\\ is column \\i\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\, so \\y_i = 1\\ and every other entry of \\\underset{\sim}{y}\\ is \\0\\, and the display gives \\{\underset{\sim}{q}\_i}^{\top}\mathbf{A}\underset{\sim}{q}\_i = \lambda_i\\. So if \\\mathbf{A}\\ is positive semidefinite, \\\lambda_i \ge 0\\, and if \\\mathbf{A}\\ is positive definite, \\\lambda_i \> 0\\.
 
 > **NOTE:**
 >
@@ -915,9 +915,9 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > The same steps, with \\\mathbf{\Lambda}^{-1}\\ and \\\mathbf{\Lambda}\\ swapped, give \\\mathbf{B}\mathbf{A} = \mathbf{I}\_p\\, so \\\mathbf{B} = \mathbf{A}^{-1}\\ ([Definition 5](#def-matrix-inverse)). The steps with \\\mathbf{Q}\\ use [Definition 10](#def-orthogonal-matrix), whose remark records that \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ too, and the identity step uses [Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-identity).
 >
-> \\\mathbf{A}^{-1}\\ is symmetric by [Corollary 1](#cor-inverse-symmetric). For \\\tilde{x}\neq \tilde{0}\\, let \\\tilde{y} = {\mathbf{Q}}^{\top}\tilde{x}\\, which is not \\\tilde{0}\\ because \\\tilde{x}= \mathbf{Q}\tilde{y}\\. As in the proof of [Theorem 14](#thm-definite-eigenvalues):
+> \\\mathbf{A}^{-1}\\ is symmetric by [Corollary 1](#cor-inverse-symmetric). For \\\underset{\sim}{x}\neq \underset{\sim}{0}\\, let \\\underset{\sim}{y} = {\mathbf{Q}}^{\top}\underset{\sim}{x}\\, which is not \\\underset{\sim}{0}\\ because \\\underset{\sim}{x}= \mathbf{Q}\underset{\sim}{y}\\. As in the proof of [Theorem 14](#thm-definite-eigenvalues):
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{A}^{-1}\tilde{x} &= {\tilde{y}}^{\top}\mathbf{\Lambda}^{-1}\tilde{y} && \text{(substitute } \mathbf{A}^{-1} = \mathbf{Q}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} \text{)} \\ &= \sum\_{i=1}^p\frac{y_i^2}{\lambda_i} && \text{(} \mathbf{\Lambda}^{-1} \text{ is diagonal)} \\ &\> 0 && \text{(each } \lambda_i \> 0 \text{, and some } y_i \neq 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top}\mathbf{A}^{-1}\underset{\sim}{x} &= {\underset{\sim}{y}}^{\top}\mathbf{\Lambda}^{-1}\underset{\sim}{y} && \text{(substitute } \mathbf{A}^{-1} = \mathbf{Q}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} \text{)} \\ &= \sum\_{i=1}^p\frac{y_i^2}{\lambda_i} && \text{(} \mathbf{\Lambda}^{-1} \text{ is diagonal)} \\ &\> 0 && \text{(each } \lambda_i \> 0 \text{, and some } y_i \neq 0 \text{)} \end{aligned} \\
 >
 > So \\\mathbf{A}^{-1}\\ is positive definite.
 
@@ -933,11 +933,11 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Definition 23 (Paraboloid)** A **paraboloid** in \\\mathbb{R}^{p+1}\\ is the graph \\\mathopen{}\left\\(\tilde{x}, f(\tilde{x})) \mid \tilde{x}\in \mathbb{R}^p\right\\\mathclose{}\\ of a function
+> **Definition 23 (Paraboloid)** A **paraboloid** in \\\mathbb{R}^{p+1}\\ is the graph \\\mathopen{}\left\\(\underset{\sim}{x}, f(\underset{\sim}{x})) \mid \underset{\sim}{x}\in \mathbb{R}^p\right\\\mathclose{}\\ of a function
 >
-> \\ f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x} + \tilde{b} \cdot \tilde{x} + c, \\
+> \\ f(\underset{\sim}{x}) = {\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x} + \underset{\sim}{b} \cdot \underset{\sim}{x} + c, \\
 >
-> where \\\mathbf{S}\\ is a nonzero symmetric \\p \times p\\ matrix ([Definition 3](#def-symmetric-matrix)), \\\tilde{b} \in \mathbb{R}^p\\, and \\c \in \mathbb{R}\\. The first term is a quadratic form ([Definition 11](#def-quadratic-form)).
+> where \\\mathbf{S}\\ is a nonzero symmetric \\p \times p\\ matrix ([Definition 3](#def-symmetric-matrix)), \\\underset{\sim}{b} \in \mathbb{R}^p\\, and \\c \in \mathbb{R}\\. The first term is a quadratic form ([Definition 11](#def-quadratic-form)).
 
 > **NOTE:**
 >
@@ -945,11 +945,11 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Example 31 (A bowl with its lowest point at the origin)** Take \\p = 2\\, \\\mathbf{S} = \mathbf{I}\_2\\, \\\tilde{b} = \tilde{0}\_{2 \times 1}\\ and \\c = 0\\. Then \\\mathbf{S}\\ is positive definite ([Example 28](#exm-positive-definite)), so the graph of
+> **Example 31 (A bowl with its lowest point at the origin)** Take \\p = 2\\, \\\mathbf{S} = \mathbf{I}\_2\\, \\\underset{\sim}{b} = \underset{\sim}{0}\_{2 \times 1}\\ and \\c = 0\\. Then \\\mathbf{S}\\ is positive definite ([Example 28](#exm-positive-definite)), so the graph of
 >
-> \\ \begin{aligned} f(\tilde{x}) &= {\tilde{x}}^{\top} \mathbf{I}\_2 \tilde{x} \\ &= x_1^2 + x_2^2 \end{aligned} \\
+> \\ \begin{aligned} f(\underset{\sim}{x}) &= {\underset{\sim}{x}}^{\top} \mathbf{I}\_2 \underset{\sim}{x} \\ &= x_1^2 + x_2^2 \end{aligned} \\
 >
-> is an elliptic paraboloid. At \\\tilde{x}= \tilde{0}\\, \\f(\tilde{x}) = 0\\; at \\\tilde{x}= (1, 1)\\, \\f(\tilde{x}) = 2\\; and \\f(\tilde{x}) \> 0\\ at every \\\tilde{x}\neq \tilde{0}\\, so the origin is the only lowest point of the bowl. [Figure 1](#fig-paraboloid) shows the surface.
+> is an elliptic paraboloid. At \\\underset{\sim}{x}= \underset{\sim}{0}\\, \\f(\underset{\sim}{x}) = 0\\; at \\\underset{\sim}{x}= (1, 1)\\, \\f(\underset{\sim}{x}) = 2\\; and \\f(\underset{\sim}{x}) \> 0\\ at every \\\underset{\sim}{x}\neq \underset{\sim}{0}\\, so the origin is the only lowest point of the bowl. [Figure 1](#fig-paraboloid) shows the surface.
 >
 > > **NOTE:**
 > >
@@ -972,9 +972,9 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Definition 25 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 22](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for all nonzero \\\tilde{x}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ by
+> **Definition 25 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 22](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} \> 0\\ for all nonzero \\\underset{\sim}{x}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\underset{\sim}{x}, \underset{\sim}{y}\in \mathbb{R}^p\\ by
 >
-> \\ \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} \stackrel{\text{def}}{=}{\tilde{x}}^{\top} \mathbf{A} \tilde{y}. \\
+> \\ \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\mathbf{A}} \stackrel{\text{def}}{=}{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{y}. \\
 
 > **NOTE:**
 >
@@ -982,62 +982,62 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > \\ \mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}. \\
 >
-> For any nonzero vector \\\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\\:
+> For any nonzero vector \\\underset{\sim}{x}= (x_1, x_2) \in \mathbb{R}^2\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{A} \tilde{x} &= 2 x_1^2 + 2 x_1 x_2 + 2 x_2^2 && \text{(expand the quadratic form)} \\ &= (x_1 + x_2)^2 + x_1^2 + x_2^2 && \text{(complete the square)} \end{aligned} \\
+> \\ \begin{aligned} {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} &= 2 x_1^2 + 2 x_1 x_2 + 2 x_2^2 && \text{(expand the quadratic form)} \\ &= (x_1 + x_2)^2 + x_1^2 + x_2^2 && \text{(complete the square)} \end{aligned} \\
 >
-> which is strictly positive because \\x_1^2 + x_2^2 \> 0\\ when \\\tilde{x}\neq \tilde{0}\\. Thus \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite)).
+> which is strictly positive because \\x_1^2 + x_2^2 \> 0\\ when \\\underset{\sim}{x}\neq \underset{\sim}{0}\\. Thus \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite)).
 >
-> For vectors \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (3, -1)\\, their inner product induced by \\\mathbf{A}\\ is:
+> For vectors \\\underset{\sim}{x}= (1, 2)\\ and \\\underset{\sim}{y}= (3, -1)\\, their inner product induced by \\\mathbf{A}\\ is:
 >
-> \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 3 \\ -1 \end{bmatrix} && \text{(substitute vectors and matrix)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 3 + 1 \cdot(-1) \\ 1 \cdot 3 + 2 \cdot(-1) \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix} && \text{(multiply and add)} \\ &= 1 \cdot 5 + 2 \cdot 1 && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= 7. && \text{(multiply and add)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\mathbf{A}} &= {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{y} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 3 \\ -1 \end{bmatrix} && \text{(substitute vectors and matrix)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 3 + 1 \cdot(-1) \\ 1 \cdot 3 + 2 \cdot(-1) \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix} && \text{(multiply and add)} \\ &= 1 \cdot 5 + 2 \cdot 1 && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= 7. && \text{(multiply and add)} \end{aligned} \\
 >
 > In contrast, the standard dot product yields:
 >
-> \\ \begin{aligned} \tilde{x}\cdot \tilde{y} &= 1 \cdot 3 + 2 \cdot(-1) \\ &= 1. \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{x}\cdot \underset{\sim}{y} &= 1 \cdot 3 + 2 \cdot(-1) \\ &= 1. \end{aligned} \\
 >
 > The off-diagonal entries
 >
 > \\ \begin{aligned} A\_{12} &= A\_{21} \\ &= 1 \end{aligned} \\
 >
-> couple the coordinate directions, altering lengths and angles from their Euclidean values. When \\\mathbf{A} = \mathbf{I}\_p\\, the matrix-induced inner product recovers the standard dot product \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{I}\_p} = \tilde{x}\cdot \tilde{y}\\.
+> couple the coordinate directions, altering lengths and angles from their Euclidean values. When \\\mathbf{A} = \mathbf{I}\_p\\, the matrix-induced inner product recovers the standard dot product \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\mathbf{I}\_p} = \underset{\sim}{x}\cdot \underset{\sim}{y}\\.
 
 > **NOTE:**
 >
-> **Theorem 16 (Properties of the matrix-induced inner product)** For every \\p \times p\\ symmetric positive definite matrix \\\mathbf{A}\\, the function \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} = {\tilde{x}}^{\top} \mathbf{A} \tilde{y}\\ satisfies the four inner product axioms ([Definition 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product)): positivity, definiteness, linearity in the first slot, and symmetry. Thus \\(\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}})\\ is an inner product space ([Definition 2 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product-space)).
+> **Theorem 16 (Properties of the matrix-induced inner product)** For every \\p \times p\\ symmetric positive definite matrix \\\mathbf{A}\\, the function \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\mathbf{A}} = {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{y}\\ satisfies the four inner product axioms ([Definition 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product)): positivity, definiteness, linearity in the first slot, and symmetry. Thus \\(\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}})\\ is an inner product space ([Definition 2 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product-space)).
 >
 > Taking \\\mathbf{A} = \mathbf{I}\_p\\ recovers the standard dot product ([Example 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-dot-product-inner-product)), while taking \\\mathbf{A} = \operatorname{diag}(c_1, \ldots, c_p)\\ recovers the weighted inner product ([Example 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-weighted-inner-product)).
 >
-> Conversely, every inner product on \\\mathbb{R}^p\\ has this form for a unique symmetric positive definite matrix \\\mathbf{A}\\, whose \\(i, j)\\ entry is \\A\_{ij} = \mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{}\\, where \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ are the standard basis vectors ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)).
+> Conversely, every inner product on \\\mathbb{R}^p\\ has this form for a unique symmetric positive definite matrix \\\mathbf{A}\\, whose \\(i, j)\\ entry is \\A\_{ij} = \mathopen{}\left\langle \underset{\sim}{e}\_i, \underset{\sim}{e}\_j\right\rangle\mathclose{}\\, where \\\underset{\sim}{e}\_1, \ldots, \underset{\sim}{e}\_p\\ are the standard basis vectors ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)).
 
 > **NOTE:**
 >
 > *Proof*.
 >
-> - **positivity**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}\_{\mathbf{A}} = {\tilde{x}}^{\top} \mathbf{A} \tilde{x} \ge 0\\ for all \\\tilde{x}\in \mathbb{R}^p\\, because \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite));
-> - **definiteness**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}\_{\mathbf{A}} = 0\\ if and only if \\\tilde{x}= \tilde{0}\_{p \times 1}\\, by definition of a positive definite matrix ([Definition 22](#def-positive-definite));
-> - **linearity in the first slot**: for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\, \\ \begin{aligned} \mathopen{}\left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z}\right\rangle\mathclose{}\_{\mathbf{A}} &= {(a\\\tilde{x}+ b\\\tilde{y})}^{\top}\\\mathbf{A}\tilde{z} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \\ &= (a\\{\tilde{x}}^{\top} + b\\{\tilde{y}}^{\top})\\\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~15 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= a\\{\tilde{x}}^{\top}\mathbf{A}\tilde{z} + b\\{\tilde{y}}^{\top}\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)} \\ &= a\\\mathopen{}\left\langle \tilde{x}, \tilde{z}\right\rangle\mathclose{}\_{\mathbf{A}} + b\\\mathopen{}\left\langle \tilde{y}, \tilde{z}\right\rangle\mathclose{}\_{\mathbf{A}} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \end{aligned} \\
-> - **symmetry**: because \\{\tilde{y}}^{\top}\mathbf{A}\tilde{x}\\ is a \\1 \times 1\\ scalar and \\\mathbf{A}\\ is symmetric (\\{\mathbf{A}}^{\top} = \mathbf{A}\\), \\ \begin{aligned} \mathopen{}\left\langle \tilde{y}, \tilde{x}\right\rangle\mathclose{}\_{\mathbf{A}} &= {\tilde{y}}^{\top}\mathbf{A}\tilde{x} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \\ &= {\mathopen{}\left({\tilde{y}}^{\top}\mathbf{A}\tilde{x}\right)\mathclose{}}^{\top} && \text{(a scalar equals its transpose)} \\ &= {\tilde{x}}^{\top}{\mathbf{A}}^{\top}\tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, twice)} \\ &= {\tilde{x}}^{\top}\mathbf{A}\tilde{y} && \text{(\$\mathbf{A}\$ is symmetric)} \\ &= \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \end{aligned} \\
+> - **positivity**: \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{x}\right\rangle\mathclose{}\_{\mathbf{A}} = {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} \ge 0\\ for all \\\underset{\sim}{x}\in \mathbb{R}^p\\, because \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite));
+> - **definiteness**: \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{x}\right\rangle\mathclose{}\_{\mathbf{A}} = 0\\ if and only if \\\underset{\sim}{x}= \underset{\sim}{0}\_{p \times 1}\\, by definition of a positive definite matrix ([Definition 22](#def-positive-definite));
+> - **linearity in the first slot**: for all \\\underset{\sim}{x}, \underset{\sim}{y}, \underset{\sim}{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\, \\ \begin{aligned} \mathopen{}\left\langle a\\\underset{\sim}{x}+ b\\\underset{\sim}{y}, \underset{\sim}{z}\right\rangle\mathclose{}\_{\mathbf{A}} &= {(a\\\underset{\sim}{x}+ b\\\underset{\sim}{y})}^{\top}\\\mathbf{A}\underset{\sim}{z} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \\ &= (a\\{\underset{\sim}{x}}^{\top} + b\\{\underset{\sim}{y}}^{\top})\\\mathbf{A}\underset{\sim}{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~15 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= a\\{\underset{\sim}{x}}^{\top}\mathbf{A}\underset{\sim}{z} + b\\{\underset{\sim}{y}}^{\top}\mathbf{A}\underset{\sim}{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)} \\ &= a\\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{z}\right\rangle\mathclose{}\_{\mathbf{A}} + b\\\mathopen{}\left\langle \underset{\sim}{y}, \underset{\sim}{z}\right\rangle\mathclose{}\_{\mathbf{A}} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \end{aligned} \\
+> - **symmetry**: because \\{\underset{\sim}{y}}^{\top}\mathbf{A}\underset{\sim}{x}\\ is a \\1 \times 1\\ scalar and \\\mathbf{A}\\ is symmetric (\\{\mathbf{A}}^{\top} = \mathbf{A}\\), \\ \begin{aligned} \mathopen{}\left\langle \underset{\sim}{y}, \underset{\sim}{x}\right\rangle\mathclose{}\_{\mathbf{A}} &= {\underset{\sim}{y}}^{\top}\mathbf{A}\underset{\sim}{x} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \\ &= {\mathopen{}\left({\underset{\sim}{y}}^{\top}\mathbf{A}\underset{\sim}{x}\right)\mathclose{}}^{\top} && \text{(a scalar equals its transpose)} \\ &= {\underset{\sim}{x}}^{\top}{\mathbf{A}}^{\top}\underset{\sim}{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, twice)} \\ &= {\underset{\sim}{x}}^{\top}\mathbf{A}\underset{\sim}{y} && \text{(\$\mathbf{A}\$ is symmetric)} \\ &= \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\mathbf{A}} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \end{aligned} \\
 >
-> For the converse, let \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\tilde{x}= \sum\_{i=1}^px_i\\\tilde{e}\_i\\ and \\\tilde{y}= \sum\_{j=1}^py_j\\\tilde{e}\_j\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis), [Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). By linearity in both slots ([Remark 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#rem-inner-product-other-sources)):
+> For the converse, let \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\underset{\sim}{x}, \underset{\sim}{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\underset{\sim}{x}= \sum\_{i=1}^px_i\\\underset{\sim}{e}\_i\\ and \\\underset{\sim}{y}= \sum\_{j=1}^py_j\\\underset{\sim}{e}\_j\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis), [Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). By linearity in both slots ([Remark 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#rem-inner-product-other-sources)):
 >
-> \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} &= \mathopen{}\left\langle \sum\_{i=1}^px_i\\\tilde{e}\_i, \sum\_{j=1}^py_j\\\tilde{e}\_j\right\rangle\mathclose{} && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^px_i y_j\\\mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{} && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^px_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{} \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{} &= \mathopen{}\left\langle \sum\_{i=1}^px_i\\\underset{\sim}{e}\_i, \sum\_{j=1}^py_j\\\underset{\sim}{e}\_j\right\rangle\mathclose{} && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^px_i y_j\\\mathopen{}\left\langle \underset{\sim}{e}\_i, \underset{\sim}{e}\_j\right\rangle\mathclose{} && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^px_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\mathopen{}\left\langle \underset{\sim}{e}\_i, \underset{\sim}{e}\_j\right\rangle\mathclose{} \text{)} \\ &= {\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{y}. && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \end{aligned} \\
 >
 > Symmetry of \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\ ensures
 >
-> \\ \begin{aligned} A\_{ji} &= \mathopen{}\left\langle \tilde{e}\_j, \tilde{e}\_i\right\rangle\mathclose{} \\ &= \mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{} \\ &= A\_{ij}, \end{aligned} \\
+> \\ \begin{aligned} A\_{ji} &= \mathopen{}\left\langle \underset{\sim}{e}\_j, \underset{\sim}{e}\_i\right\rangle\mathclose{} \\ &= \mathopen{}\left\langle \underset{\sim}{e}\_i, \underset{\sim}{e}\_j\right\rangle\mathclose{} \\ &= A\_{ij}, \end{aligned} \\
 >
-> so \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)). For any \\\tilde{x}\neq \tilde{0}\\, \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} = \mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite)).
+> so \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)). For any \\\underset{\sim}{x}\neq \underset{\sim}{0}\\, \\{\underset{\sim}{x}}^{\top} \mathbf{A} \underset{\sim}{x} = \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{x}\right\rangle\mathclose{} \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite)).
 >
-> For uniqueness, if another matrix \\\mathbf{B}\\ satisfies \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = {\tilde{x}}^{\top}\mathbf{B}\tilde{y}\\ for all \\\tilde{x}, \tilde{y}\\, evaluating at \\\tilde{x}= \tilde{e}\_i\\ and \\\tilde{y}= \tilde{e}\_j\\ gives
+> For uniqueness, if another matrix \\\mathbf{B}\\ satisfies \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{} = {\underset{\sim}{x}}^{\top}\mathbf{B}\underset{\sim}{y}\\ for all \\\underset{\sim}{x}, \underset{\sim}{y}\\, evaluating at \\\underset{\sim}{x}= \underset{\sim}{e}\_i\\ and \\\underset{\sim}{y}= \underset{\sim}{e}\_j\\ gives
 >
-> \\ \begin{aligned} B\_{ij} &= {\tilde{e}\_i}^{\top}\mathbf{B}\tilde{e}\_j \\ &= \mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{} \\ &= A\_{ij}, \end{aligned} \\
+> \\ \begin{aligned} B\_{ij} &= {\underset{\sim}{e}\_i}^{\top}\mathbf{B}\underset{\sim}{e}\_j \\ &= \mathopen{}\left\langle \underset{\sim}{e}\_i, \underset{\sim}{e}\_j\right\rangle\mathclose{} \\ &= A\_{ij}, \end{aligned} \\
 >
 > so \\\mathbf{B} = \mathbf{A}\\.
 
 > **NOTE:**
 >
-> **Example 33 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ from [Example 32](#exm-matrix-induced-inner-product), the vectors \\\tilde{x}= (1, 2)\\, \\\tilde{y}= (3, -1)\\ and \\\tilde{z} = (0, 4)\\, and the numbers \\a = 2\\ and \\b = -3\\. The code computes both sides of each axiom in [Theorem 16](#thm-matrix-induced-inner-product), and then the numbers \\\mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{}\_{\mathbf{A}}\\ for the standard basis vectors.
+> **Example 33 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ from [Example 32](#exm-matrix-induced-inner-product), the vectors \\\underset{\sim}{x}= (1, 2)\\, \\\underset{\sim}{y}= (3, -1)\\ and \\\underset{\sim}{z} = (0, 4)\\, and the numbers \\a = 2\\ and \\b = -3\\. The code computes both sides of each axiom in [Theorem 16](#thm-matrix-induced-inner-product), and then the numbers \\\mathopen{}\left\langle \underset{\sim}{e}\_i, \underset{\sim}{e}\_j\right\rangle\mathclose{}\_{\mathbf{A}}\\ for the standard basis vectors.
 >
 > ``` downlit
 > A <- matrix(c(2, 1, 1, 2), nrow = 2)
@@ -1067,7 +1067,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 > #> [2,]    1    2
 > ```
 >
-> The inner product of \\\tilde{x}\\ with itself is 14, which is positive. The two orders give the same number, 7 and 7. Both sides of the linearity axiom equal 28. The matrix of numbers \\\mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{}\_{\mathbf{A}}\\ is equal to \\\mathbf{A}\\, as the converse in [Theorem 16](#thm-matrix-induced-inner-product) says.
+> The inner product of \\\underset{\sim}{x}\\ with itself is 14, which is positive. The two orders give the same number, 7 and 7. Both sides of the linearity axiom equal 28. The matrix of numbers \\\mathopen{}\left\langle \underset{\sim}{e}\_i, \underset{\sim}{e}\_j\right\rangle\mathclose{}\_{\mathbf{A}}\\ is equal to \\\mathbf{A}\\, as the converse in [Theorem 16](#thm-matrix-induced-inner-product) says.
 
 > **NOTE:**
 >
@@ -1083,25 +1083,25 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Theorem 17 (A matrix-induced inner product is a dot product of transformed vectors)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix, and let \\\mathbf{W}\\ be any \\p \times p\\ matrix with \\\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}\\. Then for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\, the \\\mathbf{A}\\-inner product ([Definition 25](#def-matrix-induced-inner-product)) satisfies
+> **Theorem 17 (A matrix-induced inner product is a dot product of transformed vectors)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix, and let \\\mathbf{W}\\ be any \\p \times p\\ matrix with \\\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}\\. Then for all \\\underset{\sim}{x}, \underset{\sim}{y}\in \mathbb{R}^p\\, the \\\mathbf{A}\\-inner product ([Definition 25](#def-matrix-induced-inner-product)) satisfies
 >
-> \\ \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} = (\mathbf{W}\tilde{x}) \cdot (\mathbf{W}\tilde{y}). \\
+> \\ \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\mathbf{A}} = (\mathbf{W}\underset{\sim}{x}) \cdot (\mathbf{W}\underset{\sim}{y}). \\
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} &= {\tilde{x}}^{\top} {\mathbf{W}}^{\top}\mathbf{W} \tilde{y}\\ &= {(\mathbf{W}\tilde{x})}^{\top} (\mathbf{W}\tilde{y}) \\ &= (\mathbf{W}\tilde{x}) \cdot (\mathbf{W}\tilde{y}). \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\mathbf{A}} &= {\underset{\sim}{x}}^{\top} {\mathbf{W}}^{\top}\mathbf{W} \underset{\sim}{y}\\ &= {(\mathbf{W}\underset{\sim}{x})}^{\top} (\mathbf{W}\underset{\sim}{y}) \\ &= (\mathbf{W}\underset{\sim}{x}) \cdot (\mathbf{W}\underset{\sim}{y}). \end{aligned} \\
 
 > **NOTE:**
 >
 > *Remark 19* (Inner product spaces in machine learning). In machine learning and statistics, choosing or learning an inner product space tailors geometric notions of distance, angle, and projection to the structure of the data:
 >
-> 1.  **Mahalanobis metric and whitening**: Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences. If data features have a symmetric positive definite covariance matrix \\\mathbf{\Sigma}\\ ([Definition 22](#def-positive-definite)), the precision matrix \\\mathbf{A} = \mathbf{\Sigma}^{-1}\\ ([Theorem 15](#thm-pd-inverse)) defines the Mahalanobis inner product \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{\Sigma}^{-1}} = {\tilde{x}}^{\top} \mathbf{\Sigma}^{-1} \tilde{y}\\. The induced distance \\d\_{\mathbf{\Sigma}^{-1}}(\tilde{x}, \tilde{y}) = \sqrt{{(\tilde{x}- \tilde{y})}^{\top}\mathbf{\Sigma}^{-1}(\tilde{x}- \tilde{y})}\\ measures statistical distance normalized by variance along each principal direction. Factoring \\\mathbf{\Sigma}^{-1} = {\mathbf{W}}^{\top}\mathbf{W}\\ (via Cholesky or spectral decomposition, [Corollary 2](#cor-pd-transpose-product)), this inner product is the Euclidean dot product of the whitened vectors \\\mathbf{W}\tilde{x}\\ and \\\mathbf{W}\tilde{y}\\ ([Theorem 17](#thm-whitening-inner-product)).
+> 1.  **Mahalanobis metric and whitening**: Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences. If data features have a symmetric positive definite covariance matrix \\\mathbf{\Sigma}\\ ([Definition 22](#def-positive-definite)), the precision matrix \\\mathbf{A} = \mathbf{\Sigma}^{-1}\\ ([Theorem 15](#thm-pd-inverse)) defines the Mahalanobis inner product \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\_{\mathbf{\Sigma}^{-1}} = {\underset{\sim}{x}}^{\top} \mathbf{\Sigma}^{-1} \underset{\sim}{y}\\. The induced distance \\d\_{\mathbf{\Sigma}^{-1}}(\underset{\sim}{x}, \underset{\sim}{y}) = \sqrt{{(\underset{\sim}{x}- \underset{\sim}{y})}^{\top}\mathbf{\Sigma}^{-1}(\underset{\sim}{x}- \underset{\sim}{y})}\\ measures statistical distance normalized by variance along each principal direction. Factoring \\\mathbf{\Sigma}^{-1} = {\mathbf{W}}^{\top}\mathbf{W}\\ (via Cholesky or spectral decomposition, [Corollary 2](#cor-pd-transpose-product)), this inner product is the Euclidean dot product of the whitened vectors \\\mathbf{W}\underset{\sim}{x}\\ and \\\mathbf{W}\underset{\sim}{y}\\ ([Theorem 17](#thm-whitening-inner-product)).
 >
-> 2.  **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**: Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products \\\mathopen{}\left\langle \tilde{x}\_i, \tilde{x}\_j\right\rangle\mathclose{}\\. By mapping data into a higher- or infinite-dimensional inner product space via a feature map \\\phi: \mathbb{R}^p \to \mathcal{H}\\, the kernel trick replaces the computation of \\\phi(\tilde{x}\_i)\\ with an evaluation of a positive definite kernel function: \\ k(\tilde{x}\_i, \tilde{x}\_j) \stackrel{\text{def}}{=}\mathopen{}\left\langle \phi(\tilde{x}\_i), \phi(\tilde{x}\_j)\right\rangle\mathclose{}\_{\mathcal{H}}. \\ Mercer’s theorem guarantees that every symmetric positive definite kernel function implicitly defines a valid inner product space \\\mathcal{H}\\ (a reproducing kernel Hilbert space) without requiring explicit coordinate representations.
+> 2.  **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**: Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products \\\mathopen{}\left\langle \underset{\sim}{x}\_i, \underset{\sim}{x}\_j\right\rangle\mathclose{}\\. By mapping data into a higher- or infinite-dimensional inner product space via a feature map \\\phi: \mathbb{R}^p \to \mathcal{H}\\, the kernel trick replaces the computation of \\\phi(\underset{\sim}{x}\_i)\\ with an evaluation of a positive definite kernel function: \\ k(\underset{\sim}{x}\_i, \underset{\sim}{x}\_j) \stackrel{\text{def}}{=}\mathopen{}\left\langle \phi(\underset{\sim}{x}\_i), \phi(\underset{\sim}{x}\_j)\right\rangle\mathclose{}\_{\mathcal{H}}. \\ Mercer’s theorem guarantees that every symmetric positive definite kernel function implicitly defines a valid inner product space \\\mathcal{H}\\ (a reproducing kernel Hilbert space) without requiring explicit coordinate representations.
 >
-> 3.  **Embeddings and cosine similarity**: In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations. The angle between embeddings captures semantic similarity through cosine similarity ([Definition 9 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-cosine-similarity-inner-product-space)): \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\ When embedding vectors are normalized to unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals the inner product \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\\ ([Corollary 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-cosine-similarity-unit-vectors)). Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products \\\tilde{q} \cdot \tilde{k} / \sqrt{d_k}\\.
+> 3.  **Embeddings and cosine similarity**: In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations. The angle between embeddings captures semantic similarity through cosine similarity ([Definition 9 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-cosine-similarity-inner-product-space)): \\ \operatorname{cossim}(\underset{\sim}{x}, \underset{\sim}{y}) = \frac{\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}}{\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}}. \\ When embedding vectors are normalized to unit Euclidean norm (\\\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals the inner product \\\mathopen{}\left\langle \underset{\sim}{x}, \underset{\sim}{y}\right\rangle\mathclose{}\\ ([Corollary 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-cosine-similarity-unit-vectors)). Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products \\\underset{\sim}{q} \cdot \underset{\sim}{k} / \sqrt{d_k}\\.
 >
-> 4.  **Weighted and generalized least squares**: In linear regression \\\tilde{y}\approx \mathbf{X}\tilde{\beta}\\, when observation errors have unequal variances or known correlations with positive definite covariance matrix \\\mathbf{\Omega}\\, ordinary least squares is inefficient. Generalized least squares minimizes the residual norm in the inner product space induced by \\\mathbf{W} = \mathbf{\Omega}^{-1}\\: \\ \min\_{\tilde{\beta}} \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\_{\mathbf{W}}^2 = \min\_{\tilde{\beta}} \mathopen{}\left\langle \tilde{y}- \mathbf{X}\tilde{\beta}, \tilde{y}- \mathbf{X}\tilde{\beta}\right\rangle\mathclose{}\_{\mathbf{W}}. \\
+> 4.  **Weighted and generalized least squares**: In linear regression \\\underset{\sim}{y}\approx \mathbf{X}\underset{\sim}{\beta}\\, when observation errors have unequal variances or known correlations with positive definite covariance matrix \\\mathbf{\Omega}\\, ordinary least squares is inefficient. Generalized least squares minimizes the residual norm in the inner product space induced by \\\mathbf{W} = \mathbf{\Omega}^{-1}\\: \\ \min\_{\underset{\sim}{\beta}} \mathopen{}\left\lVert\underset{\sim}{y}- \mathbf{X}\underset{\sim}{\beta}\right\rVert\mathclose{}\_{\mathbf{W}}^2 = \min\_{\underset{\sim}{\beta}} \mathopen{}\left\langle \underset{\sim}{y}- \mathbf{X}\underset{\sim}{\beta}, \underset{\sim}{y}- \mathbf{X}\underset{\sim}{\beta}\right\rangle\mathclose{}\_{\mathbf{W}}. \\
 
 ## 6 Determinants
 

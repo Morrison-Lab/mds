@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-16 02:45:37 (PDT)</p>
+  <p class="date">Last modified: 2026-10-16 03:50:53 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -557,11 +557,11 @@ not taken from that page.
 <section class="slide level2">
 
 <div id="exm-dot-product-matmul" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Dot product as matrix multiplication)</strong></span> The dot product of two column vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{\beta}\)</span> can be written as a matrix product of the row vector <span class="math inline">\({\tilde{x}}^{\top}\)</span> with the column vector <span class="math inline">\(\tilde{\beta}\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 6 (Dot product as matrix multiplication)</strong></span> The dot product of two column vectors <span class="math inline">\(\underset{\sim}{x}\)</span> and <span class="math inline">\(\underset{\sim}{\beta}\)</span> can be written as a matrix product of the row vector <span class="math inline">\({\underset{\sim}{x}}^{\top}\)</span> with the column vector <span class="math inline">\(\underset{\sim}{\beta}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{x}\cdot \tilde{\beta}
-&amp;= {\tilde{x}}^{\top}\, \tilde{\beta}
+\underset{\sim}{x}\cdot \underset{\sim}{\beta}
+&amp;= {\underset{\sim}{x}}^{\top}\, \underset{\sim}{\beta}
 \\ &amp;= [x_1,\; x_2,\; \ldots,\; x_p]
 \begin{bmatrix}
 \beta_{1} \\
@@ -619,13 +619,13 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2 scrollable">
 
 <div id="exr-shape-rule" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Which of these products are defined?)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be <span class="math inline">\(4 \times 3\)</span>, let <span class="math inline">\(\mathbf{B}\)</span> be <span class="math inline">\(3 \times 2\)</span>, and let <span class="math inline">\(\tilde{x}\in \mathbb{R}^3\)</span>. For each expression, say whether it is defined, and if so give the shape of the result:</p>
+<p><span class="theorem-title"><strong>Exercise 1 (Which of these products are defined?)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be <span class="math inline">\(4 \times 3\)</span>, let <span class="math inline">\(\mathbf{B}\)</span> be <span class="math inline">\(3 \times 2\)</span>, and let <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^3\)</span>. For each expression, say whether it is defined, and if so give the shape of the result:</p>
 <ol type="1">
 <li><span class="math inline">\(\mathbf{A}\mathbf{B}\)</span></li>
 <li><span class="math inline">\(\mathbf{B}\mathbf{A}\)</span></li>
-<li><span class="math inline">\(\mathbf{A} \tilde{x}\)</span></li>
-<li><span class="math inline">\(\tilde{x}^{\top} \tilde{x}\)</span></li>
-<li><span class="math inline">\(\tilde{x}\tilde{x}^{\top}\)</span></li>
+<li><span class="math inline">\(\mathbf{A} \underset{\sim}{x}\)</span></li>
+<li><span class="math inline">\(\underset{\sim}{x}^{\top} \underset{\sim}{x}\)</span></li>
+<li><span class="math inline">\(\underset{\sim}{x}\underset{\sim}{x}^{\top}\)</span></li>
 </ol>
 </div>
 <div id="sol-shape-rule" class="proof solution">
@@ -633,9 +633,9 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <ol type="1">
 <li><span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>: <span class="math inline">\((4 \times 3)(3 \times 2)\)</span>. The inner pair is <span class="math inline">\(3\)</span> and <span class="math inline">\(3\)</span>, so it is defined, and the result is <span class="math inline">\(4 \times 2\)</span>.</li>
 <li><span class="math inline">\(\mathbf{B}\mathbf{A}\)</span>: <span class="math inline">\((3 \times 2)(4 \times 3)\)</span>. The inner pair is <span class="math inline">\(2\)</span> and <span class="math inline">\(4\)</span>, which do not match, so it is <strong>not defined</strong>. Matrix multiplication is not commutative, and this is the blunt form of that: swapping the order can leave an expression that means nothing.</li>
-<li><span class="math inline">\(\mathbf{A} \tilde{x}\)</span>: <span class="math inline">\((4 \times 3)(3 \times 1)\)</span>, defined, result <span class="math inline">\(4 \times 1\)</span> — a vector in <span class="math inline">\(\mathbb{R}^4\)</span>.</li>
-<li><span class="math inline">\(\tilde{x}^{\top} \tilde{x}\)</span>: <span class="math inline">\((1 \times 3)(3 \times 1)\)</span>, defined, result <span class="math inline">\(1 \times 1\)</span> — a single number. The product is the inner product of <a href="./linear-algebra-vectors.html#eq-inner-product">Equation&nbsp;1 in Vectors</a>.</li>
-<li><span class="math inline">\(\tilde{x}\tilde{x}^{\top}\)</span>: <span class="math inline">\((3 \times 1)(1 \times 3)\)</span>, defined, result <span class="math inline">\(3 \times 3\)</span> — a matrix.</li>
+<li><span class="math inline">\(\mathbf{A} \underset{\sim}{x}\)</span>: <span class="math inline">\((4 \times 3)(3 \times 1)\)</span>, defined, result <span class="math inline">\(4 \times 1\)</span> — a vector in <span class="math inline">\(\mathbb{R}^4\)</span>.</li>
+<li><span class="math inline">\(\underset{\sim}{x}^{\top} \underset{\sim}{x}\)</span>: <span class="math inline">\((1 \times 3)(3 \times 1)\)</span>, defined, result <span class="math inline">\(1 \times 1\)</span> — a single number. The product is the inner product of <a href="./linear-algebra-vectors.html#eq-inner-product">Equation&nbsp;1 in Vectors</a>.</li>
+<li><span class="math inline">\(\underset{\sim}{x}\underset{\sim}{x}^{\top}\)</span>: <span class="math inline">\((3 \times 1)(1 \times 3)\)</span>, defined, result <span class="math inline">\(3 \times 3\)</span> — a matrix.</li>
 </ol>
 <p>The last two use the same two vectors and differ only in order, and they return objects of different kinds. Reading a transpose as decoration rather than as a shape change is the commonest way to lose track of an expression.</p>
 </div>
@@ -720,14 +720,14 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 </div>
 <h3 id="matrix-vector-multiplication">Matrix-vector multiplication</h3>
 <div id="def-matvec-mult" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Matrix-vector multiplication)</strong></span> The <strong>matrix-vector product</strong> of an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(p \times 1\)</span> column vector <span class="math inline">\(\tilde{x}\)</span> is the <span class="math inline">\(m \times 1\)</span> column vector <span class="math inline">\(\mathbf{A}\tilde{x}\)</span> with entries:</p>
-<p><span class="math display">\[(\mathbf{A}\tilde{x})_i = \sum_{j=1}^pa_{ij}\, x_j\]</span></p>
+<p><span class="theorem-title"><strong>Definition 13 (Matrix-vector multiplication)</strong></span> The <strong>matrix-vector product</strong> of an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(p \times 1\)</span> column vector <span class="math inline">\(\underset{\sim}{x}\)</span> is the <span class="math inline">\(m \times 1\)</span> column vector <span class="math inline">\(\mathbf{A}\underset{\sim}{x}\)</span> with entries:</p>
+<p><span class="math display">\[(\mathbf{A}\underset{\sim}{x})_i = \sum_{j=1}^pa_{ij}\, x_j\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-matvec-row-dot-products" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Each entry is a dot product). </span>Matrix-vector multiplication extends the dot product (<a href="./linear-algebra-vectors.html#def-dot-product">Definition&nbsp;8 in Vectors</a>): entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\tilde{x}\)</span> is the dot product of row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(\tilde{x}\)</span>. For example,</p>
+<p><span class="proof-title"><em>Remark 4</em> (Each entry is a dot product). </span>Matrix-vector multiplication extends the dot product (<a href="./linear-algebra-vectors.html#def-dot-product">Definition&nbsp;8 in Vectors</a>): entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\underset{\sim}{x}\)</span> is the dot product of row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(\underset{\sim}{x}\)</span>. For example,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
@@ -743,13 +743,13 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2">
 
 <div id="def-linear-system" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Linear system (system of linear equations))</strong></span> A <strong>linear system</strong> (or <strong>system of linear equations</strong>) with <span class="math inline">\(m\)</span> equations in <span class="math inline">\(n\)</span> unknowns is an equation <span class="math inline">\(\mathbf{A} \tilde{x}= \tilde{b}\)</span> in which the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and the vector <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span> are given. A <strong>solution</strong> of the system is a vector <span class="math inline">\(\tilde{x}\in \mathbb{R}^n\)</span> for which <span class="math inline">\(\mathbf{A} \tilde{x}= \tilde{b}\)</span> holds.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Linear system (system of linear equations))</strong></span> A <strong>linear system</strong> (or <strong>system of linear equations</strong>) with <span class="math inline">\(m\)</span> equations in <span class="math inline">\(n\)</span> unknowns is an equation <span class="math inline">\(\mathbf{A} \underset{\sim}{x}= \underset{\sim}{b}\)</span> in which the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and the vector <span class="math inline">\(\underset{\sim}{b} \in \mathbb{R}^m\)</span> are given. A <strong>solution</strong> of the system is a vector <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^n\)</span> for which <span class="math inline">\(\mathbf{A} \underset{\sim}{x}= \underset{\sim}{b}\)</span> holds.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
 
 <div id="exm-linear-system" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (Two equations in two unknowns)</strong></span> By <a href="#/def-matvec-mult" class="quarto-xref">Definition&nbsp;13</a>, row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A} \tilde{x}= \tilde{b}\)</span> is the equation <span class="math inline">\(a_{i1} x_1 + \cdots + a_{in} x_n = b_i\)</span>. So the two equations <span class="math inline">\(x_1 + 2 x_2 = 5\)</span> and <span class="math inline">\(3 x_1 + 4 x_2 = 6\)</span> form the linear system <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \tilde{x}= \begin{bmatrix} 5 \\ 6 \end{bmatrix}\)</span>. The vector <span class="math inline">\(\tilde{x}= (-4, 4.5)\)</span> is a solution:</p>
+<p><span class="theorem-title"><strong>Example 10 (Two equations in two unknowns)</strong></span> By <a href="#/def-matvec-mult" class="quarto-xref">Definition&nbsp;13</a>, row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A} \underset{\sim}{x}= \underset{\sim}{b}\)</span> is the equation <span class="math inline">\(a_{i1} x_1 + \cdots + a_{in} x_n = b_i\)</span>. So the two equations <span class="math inline">\(x_1 + 2 x_2 = 5\)</span> and <span class="math inline">\(3 x_1 + 4 x_2 = 6\)</span> form the linear system <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \underset{\sim}{x}= \begin{bmatrix} 5 \\ 6 \end{bmatrix}\)</span>. The vector <span class="math inline">\(\underset{\sim}{x}= (-4, 4.5)\)</span> is a solution:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
@@ -768,10 +768,10 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 </div>
 <h3 id="linear-and-affine-maps">Linear and affine maps</h3>
 <div id="def-linear-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Linear map (linear transformation, linear function))</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it preserves vector addition and scalar multiplication: for all <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 15 (Linear map (linear transformation, linear function))</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it preserves vector addition and scalar multiplication: for all <span class="math inline">\(\underset{\sim}{x}, \underset{\sim}{y}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
 <ol type="1">
-<li><span class="math inline">\(f(\tilde{x}+ \tilde{y}) = f(\tilde{x}) + f(\tilde{y})\)</span> (<em>additivity</em>)</li>
-<li><span class="math inline">\(f(c\tilde{x}) = c f(\tilde{x})\)</span> (<em>homogeneity</em>)</li>
+<li><span class="math inline">\(f(\underset{\sim}{x}+ \underset{\sim}{y}) = f(\underset{\sim}{x}) + f(\underset{\sim}{y})\)</span> (<em>additivity</em>)</li>
+<li><span class="math inline">\(f(c\underset{\sim}{x}) = c f(\underset{\sim}{x})\)</span> (<em>homogeneity</em>)</li>
 </ol>
 </div>
 </section>
@@ -780,18 +780,18 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="exm-linear-map" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (A linear map, and two functions that are not)</strong></span> &nbsp;</p>
 <ul>
-<li><p><span class="math inline">\(f(\tilde{x}) = (2 x_1,\ x_1 + x_2)\)</span> on <span class="math inline">\(\mathbb{R}^2\)</span> is linear. For <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^2\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>:</p>
+<li><p><span class="math inline">\(f(\underset{\sim}{x}) = (2 x_1,\ x_1 + x_2)\)</span> on <span class="math inline">\(\mathbb{R}^2\)</span> is linear. For <span class="math inline">\(\underset{\sim}{x}, \underset{\sim}{y}\in \mathbb{R}^2\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{x}+ \tilde{y}) &amp;= (2 (x_1 + y_1),\ (x_1 + y_1) + (x_2 + y_2)) \\
-&amp;= f(\tilde{x}) + f(\tilde{y})
+f(\underset{\sim}{x}+ \underset{\sim}{y}) &amp;= (2 (x_1 + y_1),\ (x_1 + y_1) + (x_2 + y_2)) \\
+&amp;= f(\underset{\sim}{x}) + f(\underset{\sim}{y})
 \end{aligned}
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(c \tilde{x}) &amp;= (2 c x_1,\ c x_1 + c x_2) \\
-&amp;= c f(\tilde{x}).
+f(c \underset{\sim}{x}) &amp;= (2 c x_1,\ c x_1 + c x_2) \\
+&amp;= c f(\underset{\sim}{x}).
 \end{aligned}
 \]</span></p></li>
 <li><p><span class="math inline">\(g(x) = x + 1\)</span> on <span class="math inline">\(\mathbb{R}\)</span> is not linear: additivity fails, since <span class="math inline">\(g(0 + 0) = 1\)</span> but <span class="math inline">\(g(0) + g(0) = 2\)</span>.</p></li>
@@ -808,25 +808,25 @@ f(c \tilde{x}) &amp;= (2 c x_1,\ c x_1 + c x_2) \\
 <section class="slide level2">
 
 <div id="exm-linear-operator" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (A linear operator, and a linear map that is not one)</strong></span> The map <span class="math inline">\(f(\tilde{x}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}^2\)</span>, so it is a linear operator on <span class="math inline">\(\mathbb{R}^2\)</span>. The linear map <span class="math inline">\(g(\tilde{x}) = x_1 + x_2\)</span> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, so it is linear but not an operator: its outputs have length <span class="math inline">\(1\)</span>, not <span class="math inline">\(2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 12 (A linear operator, and a linear map that is not one)</strong></span> The map <span class="math inline">\(f(\underset{\sim}{x}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}^2\)</span>, so it is a linear operator on <span class="math inline">\(\mathbb{R}^2\)</span>. The linear map <span class="math inline">\(g(\underset{\sim}{x}) = x_1 + x_2\)</span> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, so it is linear but not an operator: its outputs have length <span class="math inline">\(1\)</span>, not <span class="math inline">\(2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="thm-linear-map-zero" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (A linear map sends zero to zero)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then <span class="math inline">\(f(\tilde{0}) = \tilde{0}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 8 (A linear map sends zero to zero)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then <span class="math inline">\(f(\underset{\sim}{0}) = \underset{\sim}{0}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>On the left, <span class="math inline">\(\tilde{0}\)</span> is the zero vector of length <span class="math inline">\(p\)</span>; on the right, it is the zero vector of length <span class="math inline">\(m\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>On the left, <span class="math inline">\(\underset{\sim}{0}\)</span> is the zero vector of length <span class="math inline">\(p\)</span>; on the right, it is the zero vector of length <span class="math inline">\(m\)</span>.</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{0})
-&amp;= f(0 \cdot\tilde{0})
-&amp;&amp; \text{(every entry of } 0 \cdot\tilde{0}\text{ is } 0 \cdot 0 = 0 \text{; }\href{#def-scalar-mult}{\text{Definition~6}}\text{)}
-\\&amp;= 0 \cdot f(\tilde{0})
-&amp;&amp; \text{(homogeneity, with } c = 0 \text{ and } \tilde{x}= \tilde{0}\text{)}
-\\&amp;= \tilde{0}
-&amp;&amp; \text{(every entry of } 0 \cdot f(\tilde{0}) \text{ is } 0 \text{; }\href{#def-scalar-mult}{\text{Definition~6}}\text{)}
+f(\underset{\sim}{0})
+&amp;= f(0 \cdot\underset{\sim}{0})
+&amp;&amp; \text{(every entry of } 0 \cdot\underset{\sim}{0}\text{ is } 0 \cdot 0 = 0 \text{; }\href{#def-scalar-mult}{\text{Definition~6}}\text{)}
+\\&amp;= 0 \cdot f(\underset{\sim}{0})
+&amp;&amp; \text{(homogeneity, with } c = 0 \text{ and } \underset{\sim}{x}= \underset{\sim}{0}\text{)}
+\\&amp;= \underset{\sim}{0}
+&amp;&amp; \text{(every entry of } 0 \cdot f(\underset{\sim}{0}) \text{ is } 0 \text{; }\href{#def-scalar-mult}{\text{Definition~6}}\text{)}
 \end{aligned}
 \]</span></p>
 </div>
@@ -835,20 +835,20 @@ f(\tilde{0})
 
 <div id="exm-linear-map-zero" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Ruling out linearity at zero)</strong></span> In <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a>, <span class="math inline">\(g(x) = x + 1\)</span> has <span class="math inline">\(g(0) = 1 \neq 0\)</span>, so by <a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a> it is not linear, without checking additivity or homogeneity.</p>
-<p>Sending <span class="math inline">\(\tilde{0}\)</span> to <span class="math inline">\(\tilde{0}\)</span> is necessary but not sufficient: <span class="math inline">\(h(x) = x^2\)</span> in the same example has <span class="math inline">\(h(0) = 0\)</span> and is still not linear.</p>
+<p>Sending <span class="math inline">\(\underset{\sim}{0}\)</span> to <span class="math inline">\(\underset{\sim}{0}\)</span> is necessary but not sufficient: <span class="math inline">\(h(x) = x^2\)</span> in the same example has <span class="math inline">\(h(0) = 0\)</span> and is still not linear.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="thm-matrix-map-linear" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (Multiplying by a matrix is a linear map)</strong></span> For any <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the function <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> defined by <span class="math inline">\(f(\tilde{x}) = \mathbf{A}\tilde{x}\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 9 (Multiplying by a matrix is a linear map)</strong></span> For any <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the function <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> defined by <span class="math inline">\(f(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>).</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Both conditions are checked one entry at a time. For each <span class="math inline">\(i \in \{1, \ldots, m\}\)</span>, additivity:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathopen{}\left(\mathbf{A}(\tilde{x}+ \tilde{y})\right)\mathclose{}_i
-&amp;= \sum_{j=1}^pa_{ij} (\tilde{x}+ \tilde{y})_j
+\mathopen{}\left(\mathbf{A}(\underset{\sim}{x}+ \underset{\sim}{y})\right)\mathclose{}_i
+&amp;= \sum_{j=1}^pa_{ij} (\underset{\sim}{x}+ \underset{\sim}{y})_j
 &amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)}
 \\&amp;= \sum_{j=1}^pa_{ij} (x_j + y_j)
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
@@ -856,17 +856,17 @@ f(\tilde{0})
 &amp;&amp; \text{(multiplication distributes over addition)}
 \\&amp;= \sum_{j=1}^pa_{ij} x_j + \sum_{j=1}^pa_{ij} y_j
 &amp;&amp; \text{(a sum of sums splits)}
-\\&amp;= (\mathbf{A}\tilde{x})_i + (\mathbf{A}\tilde{y})_i
+\\&amp;= (\mathbf{A}\underset{\sim}{x})_i + (\mathbf{A}\underset{\sim}{y})_i
 &amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)}
-\\&amp;= (\mathbf{A}\tilde{x}+ \mathbf{A}\tilde{y})_i
+\\&amp;= (\mathbf{A}\underset{\sim}{x}+ \mathbf{A}\underset{\sim}{y})_i
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>and homogeneity:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathopen{}\left(\mathbf{A}(c\tilde{x})\right)\mathclose{}_i
-&amp;= \sum_{j=1}^pa_{ij} (c\tilde{x})_j
+\mathopen{}\left(\mathbf{A}(c\underset{\sim}{x})\right)\mathclose{}_i
+&amp;= \sum_{j=1}^pa_{ij} (c\underset{\sim}{x})_j
 &amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)}
 \\&amp;= \sum_{j=1}^pa_{ij}\, c\, x_j
 &amp;&amp; \text{(}\href{#def-scalar-mult}{\text{Definition~6}}\text{)}
@@ -874,9 +874,9 @@ f(\tilde{0})
 &amp;&amp; \text{(products are symmetric)}
 \\&amp;= c \sum_{j=1}^pa_{ij} x_j
 &amp;&amp; \text{(a constant factor comes out of a sum)}
-\\&amp;= c\, (\mathbf{A}\tilde{x})_i
+\\&amp;= c\, (\mathbf{A}\underset{\sim}{x})_i
 &amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)}
-\\&amp;= (c\, \mathbf{A}\tilde{x})_i
+\\&amp;= (c\, \mathbf{A}\underset{\sim}{x})_i
 &amp;&amp; \text{(}\href{#def-scalar-mult}{\text{Definition~6}}\text{)}
 \end{aligned}
 \]</span></p>
@@ -886,24 +886,24 @@ f(\tilde{0})
 <section class="slide level2">
 
 <div id="thm-linear-map-lincom" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (A linear map preserves linear combinations)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then for any vectors <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k \in \mathbb{R}^p\)</span> and any coefficients <span class="math inline">\(c_1, \ldots, c_k \in \mathbb{R}\)</span>:</p>
-<p><span class="math display">\[f\mathopen{}\left(\sum_{j=1}^{k} c_j \tilde{v}_j\right)\mathclose{} = \sum_{j=1}^{k} c_j f(\tilde{v}_j)\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 10 (A linear map preserves linear combinations)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then for any vectors <span class="math inline">\(\underset{\sim}{v}_1, \ldots, \underset{\sim}{v}_k \in \mathbb{R}^p\)</span> and any coefficients <span class="math inline">\(c_1, \ldots, c_k \in \mathbb{R}\)</span>:</p>
+<p><span class="math display">\[f\mathopen{}\left(\sum_{j=1}^{k} c_j \underset{\sim}{v}_j\right)\mathclose{} = \sum_{j=1}^{k} c_j f(\underset{\sim}{v}_j)\]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>By <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(k\)</span>. For <span class="math inline">\(k = 1\)</span>, the claim <span class="math inline">\(f(c_1 \tilde{v}_1) = c_1 f(\tilde{v}_1)\)</span> is homogeneity.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>By <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(k\)</span>. For <span class="math inline">\(k = 1\)</span>, the claim <span class="math inline">\(f(c_1 \underset{\sim}{v}_1) = c_1 f(\underset{\sim}{v}_1)\)</span> is homogeneity.</p>
 <p>Suppose the claim holds for <span class="math inline">\(k\)</span> vectors. Then for <span class="math inline">\(k + 1\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \tilde{v}_j\right)\mathclose{}
-&amp;= f\mathopen{}\left(\sum_{j=1}^{k} c_j \tilde{v}_j + c_{k+1} \tilde{v}_{k+1}\right)\mathclose{}
+f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \underset{\sim}{v}_j\right)\mathclose{}
+&amp;= f\mathopen{}\left(\sum_{j=1}^{k} c_j \underset{\sim}{v}_j + c_{k+1} \underset{\sim}{v}_{k+1}\right)\mathclose{}
 &amp;&amp; \text{(split off the last term)}
-\\&amp;= f\mathopen{}\left(\sum_{j=1}^{k} c_j \tilde{v}_j\right)\mathclose{} + f(c_{k+1} \tilde{v}_{k+1})
+\\&amp;= f\mathopen{}\left(\sum_{j=1}^{k} c_j \underset{\sim}{v}_j\right)\mathclose{} + f(c_{k+1} \underset{\sim}{v}_{k+1})
 &amp;&amp; \text{(additivity)}
-\\&amp;= \sum_{j=1}^{k} c_j f(\tilde{v}_j) + f(c_{k+1} \tilde{v}_{k+1})
+\\&amp;= \sum_{j=1}^{k} c_j f(\underset{\sim}{v}_j) + f(c_{k+1} \underset{\sim}{v}_{k+1})
 &amp;&amp; \text{(induction hypothesis)}
-\\&amp;= \sum_{j=1}^{k} c_j f(\tilde{v}_j) + c_{k+1} f(\tilde{v}_{k+1})
+\\&amp;= \sum_{j=1}^{k} c_j f(\underset{\sim}{v}_j) + c_{k+1} f(\underset{\sim}{v}_{k+1})
 &amp;&amp; \text{(homogeneity)}
-\\&amp;= \sum_{j=1}^{k+1} c_j f(\tilde{v}_j)
+\\&amp;= \sum_{j=1}^{k+1} c_j f(\underset{\sim}{v}_j)
 &amp;&amp; \text{(join the last term back on)}
 \end{aligned}
 \]</span></p>
@@ -913,41 +913,41 @@ f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \tilde{v}_j\right)\mathclose{}
 
 <div id="thm-linear-map-matrix" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 11 (Every linear map is multiplication by a matrix)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then there is exactly one <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> such that</p>
-<p><span class="math display">\[f(\tilde{x}) = \mathbf{A}\tilde{x}\quad \text{for all } \tilde{x}\in \mathbb{R}^p\]</span></p>
-<p>Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(f(\tilde{e}_j)\)</span>, the value of <span class="math inline">\(f\)</span> at the <span class="math inline">\(j\)</span>th indicator vector (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;14 in Vectors</a>); that is, <span class="math inline">\(a_{ij} = \mathopen{}\left(f(\tilde{e}_j)\right)\mathclose{}_i\)</span>.</p>
+<p><span class="math display">\[f(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}\quad \text{for all } \underset{\sim}{x}\in \mathbb{R}^p\]</span></p>
+<p>Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(f(\underset{\sim}{e}_j)\)</span>, the value of <span class="math inline">\(f\)</span> at the <span class="math inline">\(j\)</span>th indicator vector (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;14 in Vectors</a>); that is, <span class="math inline">\(a_{ij} = \mathopen{}\left(f(\underset{\sim}{e}_j)\right)\mathclose{}_i\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>Existence.</strong> Let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(m \times p\)</span> matrix with <span class="math inline">\(a_{ij} = \mathopen{}\left(f(\tilde{e}_j)\right)\mathclose{}_i\)</span>. For any <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span>,</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Existence.</strong> Let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(m \times p\)</span> matrix with <span class="math inline">\(a_{ij} = \mathopen{}\left(f(\underset{\sim}{e}_j)\right)\mathclose{}_i\)</span>. For any <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^p\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{x})
-&amp;= f\mathopen{}\left(\sum_{j=1}^px_j \tilde{e}_j\right)\mathclose{}
+f(\underset{\sim}{x})
+&amp;= f\mathopen{}\left(\sum_{j=1}^px_j \underset{\sim}{e}_j\right)\mathclose{}
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#thm-standard-basis-expansion}{\text{Theorem~3 in Vectors}}\text{)}
-\\&amp;= \sum_{j=1}^px_j f(\tilde{e}_j)
+\\&amp;= \sum_{j=1}^px_j f(\underset{\sim}{e}_j)
 &amp;&amp; \text{(}\href{#thm-linear-map-lincom}{\text{Theorem~10}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>and entry <span class="math inline">\(i\)</span> of that sum is</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathopen{}\left(\sum_{j=1}^px_j f(\tilde{e}_j)\right)\mathclose{}_i
-&amp;= \sum_{j=1}^px_j \mathopen{}\left(f(\tilde{e}_j)\right)\mathclose{}_i
+\mathopen{}\left(\sum_{j=1}^px_j f(\underset{\sim}{e}_j)\right)\mathclose{}_i
+&amp;= \sum_{j=1}^px_j \mathopen{}\left(f(\underset{\sim}{e}_j)\right)\mathclose{}_i
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~9 in Vectors}}\text{, entry by entry)}
 \\&amp;= \sum_{j=1}^px_j a_{ij}
 &amp;&amp; \text{(definition of } \mathbf{A} \text{)}
 \\&amp;= \sum_{j=1}^pa_{ij} x_j
 &amp;&amp; \text{(products are symmetric)}
-\\&amp;= (\mathbf{A}\tilde{x})_i
+\\&amp;= (\mathbf{A}\underset{\sim}{x})_i
 &amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)}
 \end{aligned}
 \]</span></p>
-<p><strong>Uniqueness.</strong> Suppose <span class="math inline">\(\mathbf{B}\)</span> is any <span class="math inline">\(m \times p\)</span> matrix with <span class="math inline">\(f(\tilde{x}) = \mathbf{B}\tilde{x}\)</span> for all <span class="math inline">\(\tilde{x}\)</span>. Taking <span class="math inline">\(\tilde{x}= \tilde{e}_j\)</span>, for each <span class="math inline">\(i\)</span>:</p>
+<p><strong>Uniqueness.</strong> Suppose <span class="math inline">\(\mathbf{B}\)</span> is any <span class="math inline">\(m \times p\)</span> matrix with <span class="math inline">\(f(\underset{\sim}{x}) = \mathbf{B}\underset{\sim}{x}\)</span> for all <span class="math inline">\(\underset{\sim}{x}\)</span>. Taking <span class="math inline">\(\underset{\sim}{x}= \underset{\sim}{e}_j\)</span>, for each <span class="math inline">\(i\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathopen{}\left(f(\tilde{e}_j)\right)\mathclose{}_i
-&amp;= (\mathbf{B}\tilde{e}_j)_i
+\mathopen{}\left(f(\underset{\sim}{e}_j)\right)\mathclose{}_i
+&amp;= (\mathbf{B}\underset{\sim}{e}_j)_i
 &amp;&amp; \text{(assumption on } \mathbf{B} \text{)}
-\\&amp;= \sum_{k=1}^{p} b_{ik} (\tilde{e}_j)_k
+\\&amp;= \sum_{k=1}^{p} b_{ik} (\underset{\sim}{e}_j)_k
 &amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)}
 \\&amp;= b_{ij} \cdot 1 + \sum_{k \neq j} b_{ik} \cdot 0
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-indicator-vector}{\text{Definition~14 in Vectors}}\text{, splitting off the } k = j \text{ term)}
@@ -960,7 +960,7 @@ f(\tilde{x})
 <p>So</p>
 <p><span class="math display">\[
 \begin{aligned}
-b_{ij} &amp;= \mathopen{}\left(f(\tilde{e}_j)\right)\mathclose{}_i \\
+b_{ij} &amp;= \mathopen{}\left(f(\underset{\sim}{e}_j)\right)\mathclose{}_i \\
 &amp;= a_{ij}
 \end{aligned}
 \]</span></p>
@@ -970,17 +970,17 @@ b_{ij} &amp;= \mathopen{}\left(f(\tilde{e}_j)\right)\mathclose{}_i \\
 <section class="slide level2">
 
 <div id="def-matrix-of-linear-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Matrix of a linear map)</strong></span> The <strong>matrix of</strong> a linear map <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is the unique <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\tilde{x}) = \mathbf{A}\tilde{x}\)</span> for all <span class="math inline">\(\tilde{x}\)</span> (<a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>). Its column <span class="math inline">\(j\)</span> is <span class="math inline">\(f(\tilde{e}_j)\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Matrix of a linear map)</strong></span> The <strong>matrix of</strong> a linear map <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is the unique <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}\)</span> for all <span class="math inline">\(\underset{\sim}{x}\)</span> (<a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>). Its column <span class="math inline">\(j\)</span> is <span class="math inline">\(f(\underset{\sim}{e}_j)\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-linear-map-matrix" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (Finding the matrix of a linear map)</strong></span> For <span class="math inline">\(f(\tilde{x}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a>, the values of <span class="math inline">\(f\)</span> at the indicator vectors are</p>
+<p><span class="theorem-title"><strong>Example 14 (Finding the matrix of a linear map)</strong></span> For <span class="math inline">\(f(\underset{\sim}{x}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a>, the values of <span class="math inline">\(f\)</span> at the indicator vectors are</p>
 <p><span class="math display">\[
-f(\tilde{e}_1) = f\mathopen{}\left(\begin{bmatrix}1 \\ 0\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 1 \\ 1 + 0\end{bmatrix} = \begin{bmatrix}2 \\ 1\end{bmatrix},
+f(\underset{\sim}{e}_1) = f\mathopen{}\left(\begin{bmatrix}1 \\ 0\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 1 \\ 1 + 0\end{bmatrix} = \begin{bmatrix}2 \\ 1\end{bmatrix},
 \qquad
-f(\tilde{e}_2) = f\mathopen{}\left(\begin{bmatrix}0 \\ 1\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 0 \\ 0 + 1\end{bmatrix} = \begin{bmatrix}0 \\ 1\end{bmatrix}
+f(\underset{\sim}{e}_2) = f\mathopen{}\left(\begin{bmatrix}0 \\ 1\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 0 \\ 0 + 1\end{bmatrix} = \begin{bmatrix}0 \\ 1\end{bmatrix}
 \]</span></p>
 <p>and these are the columns of the matrix of <span class="math inline">\(f\)</span> (<a href="#/def-matrix-of-linear-map" class="quarto-xref">Definition&nbsp;17</a>): <span class="math inline">\(\mathbf{A} = \begin{bmatrix}2 &amp; 0 \\ 1 &amp; 1\end{bmatrix}\)</span>.</p>
 </div>
@@ -988,49 +988,49 @@ f(\tilde{e}_2) = f\mathopen{}\left(\begin{bmatrix}0 \\ 1\end{bmatrix}\right)\mat
 <section class="slide level2">
 
 <div id="cor-linear-scalar" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 1 (Linear functions from vectors to numbers)</strong></span> A function <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}\)</span> is linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>) if and only if there is a vector <span class="math inline">\(\tilde{w} \in \mathbb{R}^p\)</span> such that</p>
-<p><span class="math display">\[f(\tilde{x}) = \tilde{w} \cdot \tilde{x} \quad \text{for all } \tilde{x}\in \mathbb{R}^p\]</span></p>
-<p>and then <span class="math inline">\(w_j = f(\tilde{e}_j)\)</span> for each <span class="math inline">\(j\)</span>.</p>
+<p><span class="theorem-title"><strong>Corollary 1 (Linear functions from vectors to numbers)</strong></span> A function <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}\)</span> is linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>) if and only if there is a vector <span class="math inline">\(\underset{\sim}{w} \in \mathbb{R}^p\)</span> such that</p>
+<p><span class="math display">\[f(\underset{\sim}{x}) = \underset{\sim}{w} \cdot \underset{\sim}{x} \quad \text{for all } \underset{\sim}{x}\in \mathbb{R}^p\]</span></p>
+<p>and then <span class="math inline">\(w_j = f(\underset{\sim}{e}_j)\)</span> for each <span class="math inline">\(j\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>If <span class="math inline">\(f\)</span> is linear.</strong> <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a> with <span class="math inline">\(m = 1\)</span> gives a <span class="math inline">\(1 \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\tilde{x}) = \mathbf{A}\tilde{x}\)</span> and <span class="math inline">\(a_{1j} = f(\tilde{e}_j)\)</span>. Let <span class="math inline">\(\tilde{w}\)</span> be the vector with <span class="math inline">\(w_j = a_{1j}\)</span>, so that <span class="math inline">\(\mathbf{A} = \tilde{w}^{\top}\)</span>. Then</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>If <span class="math inline">\(f\)</span> is linear.</strong> <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a> with <span class="math inline">\(m = 1\)</span> gives a <span class="math inline">\(1 \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}\)</span> and <span class="math inline">\(a_{1j} = f(\underset{\sim}{e}_j)\)</span>. Let <span class="math inline">\(\underset{\sim}{w}\)</span> be the vector with <span class="math inline">\(w_j = a_{1j}\)</span>, so that <span class="math inline">\(\mathbf{A} = \underset{\sim}{w}^{\top}\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{x})
-&amp;= \mathbf{A}\tilde{x}
+f(\underset{\sim}{x})
+&amp;= \mathbf{A}\underset{\sim}{x}
 &amp;&amp; \text{(}\href{#thm-linear-map-matrix}{\text{Theorem~11}}\text{)}
-\\&amp;= \tilde{w} \cdot \tilde{x}
-&amp;&amp; (\mathbf{A} = \tilde{w}^{\top})
+\\&amp;= \underset{\sim}{w} \cdot \underset{\sim}{x}
+&amp;&amp; (\mathbf{A} = \underset{\sim}{w}^{\top})
 \end{aligned}
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
 \begin{aligned}
 w_j &amp;= a_{1j} \\
-&amp;= f(\tilde{e}_j).
+&amp;= f(\underset{\sim}{e}_j).
 \end{aligned}
 \]</span></p>
-<p><strong>If <span class="math inline">\(f(\tilde{x}) = \tilde{w}^{\top} \tilde{x}\)</span>.</strong> Here <span class="math inline">\(\tilde{w}^{\top}\)</span> is a <span class="math inline">\(1 \times p\)</span> matrix, so <span class="math inline">\(f\)</span> is linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>.</p>
+<p><strong>If <span class="math inline">\(f(\underset{\sim}{x}) = \underset{\sim}{w}^{\top} \underset{\sim}{x}\)</span>.</strong> Here <span class="math inline">\(\underset{\sim}{w}^{\top}\)</span> is a <span class="math inline">\(1 \times p\)</span> matrix, so <span class="math inline">\(f\)</span> is linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-linear-scalar" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (A linear function from <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>)</strong></span> <span class="math inline">\(f(\tilde{x}) = 3 x_1 + 5 x_2\)</span> is <span class="math inline">\(\tilde{w} \cdot \tilde{x}\)</span> with <span class="math inline">\(\tilde{w} = {(3, 5)}^{\top}\)</span>, so it is linear by <a href="#/cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>. The entries of <span class="math inline">\(\tilde{w}\)</span> are the values at the indicator vectors:</p>
+<p><span class="theorem-title"><strong>Example 15 (A linear function from <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>)</strong></span> <span class="math inline">\(f(\underset{\sim}{x}) = 3 x_1 + 5 x_2\)</span> is <span class="math inline">\(\underset{\sim}{w} \cdot \underset{\sim}{x}\)</span> with <span class="math inline">\(\underset{\sim}{w} = {(3, 5)}^{\top}\)</span>, so it is linear by <a href="#/cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>. The entries of <span class="math inline">\(\underset{\sim}{w}\)</span> are the values at the indicator vectors:</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{e}_1) &amp;= 3 \cdot 1 + 5 \cdot 0 \\
+f(\underset{\sim}{e}_1) &amp;= 3 \cdot 1 + 5 \cdot 0 \\
 &amp;= 3
 \end{aligned}
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{e}_2) &amp;= 3 \cdot 0 + 5 \cdot 1 \\
+f(\underset{\sim}{e}_2) &amp;= 3 \cdot 0 + 5 \cdot 1 \\
 &amp;= 5.
 \end{aligned}
 \]</span></p>
-<p><span class="math inline">\(g(\tilde{x}) = 3 x_1 + 5 x_2 + 1\)</span> is not linear, because <span class="math inline">\(g(\tilde{0}) = 1 \neq 0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>).</p>
+<p><span class="math inline">\(g(\underset{\sim}{x}) = 3 x_1 + 5 x_2 + 1\)</span> is not linear, because <span class="math inline">\(g(\underset{\sim}{0}) = 1 \neq 0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>).</p>
 </div>
 <div title="Videos">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1055,18 +1055,18 @@ f(\tilde{e}_2) &amp;= 3 \cdot 0 + 5 \cdot 1 \\
 <section class="slide level2">
 
 <div id="def-translation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Translation)</strong></span> For a fixed vector <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span>, the <strong>translation</strong> by <span class="math inline">\(\tilde{b}\)</span> is the function <span class="math inline">\(t_{\tilde{b}} : \mathbb{R}^m \to \mathbb{R}^m\)</span> defined by</p>
-<p><span class="math display">\[t_{\tilde{b}}(\tilde{y}) = \tilde{y}+ \tilde{b}\]</span></p>
+<p><span class="theorem-title"><strong>Definition 18 (Translation)</strong></span> For a fixed vector <span class="math inline">\(\underset{\sim}{b} \in \mathbb{R}^m\)</span>, the <strong>translation</strong> by <span class="math inline">\(\underset{\sim}{b}\)</span> is the function <span class="math inline">\(t_{\underset{\sim}{b}} : \mathbb{R}^m \to \mathbb{R}^m\)</span> defined by</p>
+<p><span class="math display">\[t_{\underset{\sim}{b}}(\underset{\sim}{y}) = \underset{\sim}{y}+ \underset{\sim}{b}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-translation" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Translating two points)</strong></span> The translation by <span class="math inline">\(\tilde{b} = {(1, -2)}^{\top}\)</span> sends</p>
+<p><span class="theorem-title"><strong>Example 16 (Translating two points)</strong></span> The translation by <span class="math inline">\(\underset{\sim}{b} = {(1, -2)}^{\top}\)</span> sends</p>
 <p><span class="math display">\[
-t_{\tilde{b}}\mathopen{}\left(\begin{bmatrix}0 \\ 0\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}0 + 1 \\ 0 + (-2)\end{bmatrix} = \begin{bmatrix}1 \\ -2\end{bmatrix},
+t_{\underset{\sim}{b}}\mathopen{}\left(\begin{bmatrix}0 \\ 0\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}0 + 1 \\ 0 + (-2)\end{bmatrix} = \begin{bmatrix}1 \\ -2\end{bmatrix},
 \qquad
-t_{\tilde{b}}\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}3 + 1 \\ 4 + (-2)\end{bmatrix} = \begin{bmatrix}4 \\ 2\end{bmatrix}
+t_{\underset{\sim}{b}}\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}3 + 1 \\ 4 + (-2)\end{bmatrix} = \begin{bmatrix}4 \\ 2\end{bmatrix}
 \]</span></p>
 <p>Both points move one unit right and two units down.</p>
 </div>
@@ -1074,18 +1074,18 @@ t_{\tilde{b}}\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclos
 <section class="slide level2">
 
 <div id="rem-translation-moves-every-point" class="proof remark">
-<p><span class="proof-title"><em>Remark 5</em> (A translation moves every point by the same vector). </span>A translation by <span class="math inline">\(\tilde{b}\)</span> moves every point by the same vector <span class="math inline">\(\tilde{b}\)</span>.</p>
+<p><span class="proof-title"><em>Remark 5</em> (A translation moves every point by the same vector). </span>A translation by <span class="math inline">\(\underset{\sim}{b}\)</span> moves every point by the same vector <span class="math inline">\(\underset{\sim}{b}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-affine-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Affine map (affine transformation, affine function))</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is an <strong>affine map</strong> (also called an <strong>affine transformation</strong> or <strong>affine function</strong>) if it is a matrix product followed by a translation (<a href="#/def-translation" class="quarto-xref">Definition&nbsp;18</a>) (a <a href="./functions.html#def-composition">composition</a>, with the matrix product as the inner function): there are an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a vector <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span> such that</p>
+<p><span class="theorem-title"><strong>Definition 19 (Affine map (affine transformation, affine function))</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is an <strong>affine map</strong> (also called an <strong>affine transformation</strong> or <strong>affine function</strong>) if it is a matrix product followed by a translation (<a href="#/def-translation" class="quarto-xref">Definition&nbsp;18</a>) (a <a href="./functions.html#def-composition">composition</a>, with the matrix product as the inner function): there are an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a vector <span class="math inline">\(\underset{\sim}{b} \in \mathbb{R}^m\)</span> such that</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{x})
-&amp;= t_{\tilde{b}}(\mathbf{A} \tilde{x}) \\
-&amp;= \mathbf{A} \tilde{x}+ \tilde{b} \quad \text{for all } \tilde{x}\in \mathbb{R}^p
+f(\underset{\sim}{x})
+&amp;= t_{\underset{\sim}{b}}(\mathbf{A} \underset{\sim}{x}) \\
+&amp;= \mathbf{A} \underset{\sim}{x}+ \underset{\sim}{b} \quad \text{for all } \underset{\sim}{x}\in \mathbb{R}^p
 \end{aligned}
 \]</span></p>
 </div>
@@ -1093,24 +1093,24 @@ f(\tilde{x})
 <section class="slide level2">
 
 <div id="def-affine-offset" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Offset (intercept, bias) of an affine map)</strong></span> In <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>, the vector <span class="math inline">\(\tilde{b}\)</span> is called the <strong>offset</strong> of <span class="math inline">\(f\)</span> (statistics also calls it the <strong>intercept</strong>, and machine learning the <strong>bias</strong>).</p>
+<p><span class="theorem-title"><strong>Definition 20 (Offset (intercept, bias) of an affine map)</strong></span> In <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>, the vector <span class="math inline">\(\underset{\sim}{b}\)</span> is called the <strong>offset</strong> of <span class="math inline">\(f\)</span> (statistics also calls it the <strong>intercept</strong>, and machine learning the <strong>bias</strong>).</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-affine-map-real-valued" class="proof remark">
-<p><span class="proof-title"><em>Remark 6</em> (Real-valued affine maps). </span>For a real-valued function (<a href="./linear-algebra-vectors.html#def-real-vector-valued">Definition&nbsp;4 in Vectors</a>, <span class="math inline">\(m = 1\)</span>), <span class="math inline">\(\mathbf{A}\)</span> is a single row, written <span class="math inline">\(\tilde{w}^{\top}\)</span>, and <span class="math inline">\(\tilde{b}\)</span> is a single number <span class="math inline">\(b\)</span>, so an affine function is a linear function <span class="math inline">\(\tilde{w} \cdot \tilde{x}\)</span> (<a href="#/cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>) plus an offset:</p>
-<p><span id="eq-linear-scalar"><span class="math display">\[f(\tilde{x}) = \tilde{w} \cdot \tilde{x} + b, \qquad \tilde{w} \in \mathbb{R}^p, \quad b \in \mathbb{R} \tag{1}\]</span></span></p>
+<p><span class="proof-title"><em>Remark 6</em> (Real-valued affine maps). </span>For a real-valued function (<a href="./linear-algebra-vectors.html#def-real-vector-valued">Definition&nbsp;4 in Vectors</a>, <span class="math inline">\(m = 1\)</span>), <span class="math inline">\(\mathbf{A}\)</span> is a single row, written <span class="math inline">\(\underset{\sim}{w}^{\top}\)</span>, and <span class="math inline">\(\underset{\sim}{b}\)</span> is a single number <span class="math inline">\(b\)</span>, so an affine function is a linear function <span class="math inline">\(\underset{\sim}{w} \cdot \underset{\sim}{x}\)</span> (<a href="#/cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>) plus an offset:</p>
+<p><span id="eq-linear-scalar"><span class="math display">\[f(\underset{\sim}{x}) = \underset{\sim}{w} \cdot \underset{\sim}{x} + b, \qquad \underset{\sim}{w} \in \mathbb{R}^p, \quad b \in \mathbb{R} \tag{1}\]</span></span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-augmented-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Augmented vector)</strong></span> The <strong>augmented vector</strong> of <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> is the vector <span class="math inline">\(\tilde{\tilde{x}} \in \mathbb{R}^{p+1}\)</span> formed by placing a <span class="math inline">\(1\)</span> above the entries of <span class="math inline">\(\tilde{x}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 21 (Augmented vector)</strong></span> The <strong>augmented vector</strong> of <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^p\)</span> is the vector <span class="math inline">\({\underset{\sim}{x}}^{\mathrm{aug}} \in \mathbb{R}^{p+1}\)</span> formed by placing a <span class="math inline">\(1\)</span> above the entries of <span class="math inline">\(\underset{\sim}{x}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{\tilde{x}}
-&amp;= \begin{bmatrix}1 \\ \tilde{x}\end{bmatrix} \\
+{\underset{\sim}{x}}^{\mathrm{aug}}
+&amp;= \begin{bmatrix}1 \\ \underset{\sim}{x}\end{bmatrix} \\
 &amp;= {(1, x_1, \ldots, x_p)}^{\top}
 \end{aligned}
 \]</span></p>
@@ -1119,13 +1119,13 @@ f(\tilde{x})
 <section class="slide level2">
 
 <div id="exm-augmented-vector" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (An affine function as a dot product with an augmented vector)</strong></span> For <span class="math inline">\(\tilde{x}= {(2, 5)}^{\top}\)</span>, the augmented vector is <span class="math inline">\(\tilde{\tilde{x}} = {(1, 2, 5)}^{\top}\)</span>. With <span class="math inline">\(\tilde{w} = {(3, -1)}^{\top}\)</span> and <span class="math inline">\(b = 4\)</span>, the affine function <span class="math inline">\(\tilde{w} \cdot \tilde{x} + b\)</span> (<a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a>) equals the dot product of <span class="math inline">\({(b, w_1, w_2)}^{\top} = {(4, 3, -1)}^{\top}\)</span> with <span class="math inline">\(\tilde{\tilde{x}}\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 17 (An affine function as a dot product with an augmented vector)</strong></span> For <span class="math inline">\(\underset{\sim}{x}= {(2, 5)}^{\top}\)</span>, the augmented vector is <span class="math inline">\({\underset{\sim}{x}}^{\mathrm{aug}} = {(1, 2, 5)}^{\top}\)</span>. With <span class="math inline">\(\underset{\sim}{w} = {(3, -1)}^{\top}\)</span> and <span class="math inline">\(b = 4\)</span>, the affine function <span class="math inline">\(\underset{\sim}{w} \cdot \underset{\sim}{x} + b\)</span> (<a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a>) equals the dot product of <span class="math inline">\({(b, w_1, w_2)}^{\top} = {(4, 3, -1)}^{\top}\)</span> with <span class="math inline">\({\underset{\sim}{x}}^{\mathrm{aug}}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{w} \cdot \tilde{x} + b
+\underset{\sim}{w} \cdot \underset{\sim}{x} + b
 &amp;= 3 \cdot 2 + (-1) \cdot 5 + 4 \\
 &amp;= 5, \\
-{(4, 3, -1)}^{\top} \cdot \tilde{\tilde{x}}
+{(4, 3, -1)}^{\top} \cdot {\underset{\sim}{x}}^{\mathrm{aug}}
 &amp;= 4 \cdot 1 + 3 \cdot 2 + (-1) \cdot 5 \\
 &amp;= 5
 \end{aligned}
@@ -1135,13 +1135,13 @@ f(\tilde{x})
 <section class="slide level2">
 
 <div id="thm-affine-map-zero" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 12 (An affine map sends zero to its offset)</strong></span> An affine map <span class="math inline">\(f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{b}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) satisfies <span class="math inline">\(f(\tilde{0}) = \tilde{b}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 12 (An affine map sends zero to its offset)</strong></span> An affine map <span class="math inline">\(f(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}+ \underset{\sim}{b}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) satisfies <span class="math inline">\(f(\underset{\sim}{0}) = \underset{\sim}{b}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>First, <span class="math inline">\(\mathbf{A}\tilde{0}= \tilde{0}\)</span>: for each <span class="math inline">\(i\)</span>,</p>
+<p><span class="proof-title"><em>Proof</em>. </span>First, <span class="math inline">\(\mathbf{A}\underset{\sim}{0}= \underset{\sim}{0}\)</span>: for each <span class="math inline">\(i\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
-(\mathbf{A}\tilde{0})_i
+(\mathbf{A}\underset{\sim}{0})_i
 &amp;= \sum_{j=1}^pa_{ij} \cdot 0
 &amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)}
 \\&amp;= \sum_{j=1}^p0
@@ -1153,13 +1153,13 @@ f(\tilde{x})
 <p>Then</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{0})
-&amp;= \mathbf{A}\tilde{0}+ \tilde{b}
+f(\underset{\sim}{0})
+&amp;= \mathbf{A}\underset{\sim}{0}+ \underset{\sim}{b}
 &amp;&amp; \text{(}\href{#def-affine-map}{\text{Definition~19}}\text{)}
-\\&amp;= \tilde{0}+ \tilde{b}
-&amp;&amp; (\mathbf{A}\tilde{0}= \tilde{0})
-\\&amp;= \tilde{b}
-&amp;&amp; \text{(adding } \tilde{0}\text{ changes no entry; }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
+\\&amp;= \underset{\sim}{0}+ \underset{\sim}{b}
+&amp;&amp; (\mathbf{A}\underset{\sim}{0}= \underset{\sim}{0})
+\\&amp;= \underset{\sim}{b}
+&amp;&amp; \text{(adding } \underset{\sim}{0}\text{ changes no entry; }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
 \end{aligned}
 \]</span></p>
 </div>
@@ -1167,69 +1167,69 @@ f(\tilde{0})
 <section class="slide level2">
 
 <div id="thm-affine-linear-iff" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 13 (An affine map is linear exactly when its offset is zero)</strong></span> An affine map <span class="math inline">\(f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{b}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) is linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>) if and only if <span class="math inline">\(\tilde{b} = \tilde{0}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 13 (An affine map is linear exactly when its offset is zero)</strong></span> An affine map <span class="math inline">\(f(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}+ \underset{\sim}{b}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) is linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>) if and only if <span class="math inline">\(\underset{\sim}{b} = \underset{\sim}{0}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(\tilde{b} = \tilde{0}\)</span>, then</p>
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(\underset{\sim}{b} = \underset{\sim}{0}\)</span>, then</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{x}) &amp;= \mathbf{A}\tilde{x}+ \tilde{0}\\
-&amp;= \mathbf{A}\tilde{x},
+f(\underset{\sim}{x}) &amp;= \mathbf{A}\underset{\sim}{x}+ \underset{\sim}{0}\\
+&amp;= \mathbf{A}\underset{\sim}{x},
 \end{aligned}
 \]</span></p>
-<p>which is linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>. Conversely, if <span class="math inline">\(f\)</span> is linear, then <span class="math inline">\(f(\tilde{0}) = \tilde{0}\)</span> by <a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>, and <span class="math inline">\(f(\tilde{0}) = \tilde{b}\)</span> by <a href="#/thm-affine-map-zero" class="quarto-xref">Theorem&nbsp;12</a>, so <span class="math inline">\(\tilde{b} = \tilde{0}\)</span>.</p>
+<p>which is linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>. Conversely, if <span class="math inline">\(f\)</span> is linear, then <span class="math inline">\(f(\underset{\sim}{0}) = \underset{\sim}{0}\)</span> by <a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>, and <span class="math inline">\(f(\underset{\sim}{0}) = \underset{\sim}{b}\)</span> by <a href="#/thm-affine-map-zero" class="quarto-xref">Theorem&nbsp;12</a>, so <span class="math inline">\(\underset{\sim}{b} = \underset{\sim}{0}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-affine-linear-iff" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (Two affine maps with the same matrix)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix}2 &amp; 0 \\ 1 &amp; 1\end{bmatrix}\)</span>, the matrix of the linear map in <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a>. <span class="math inline">\(f(\tilde{x}) = \mathbf{A}\tilde{x}\)</span> has offset <span class="math inline">\(\tilde{0}\)</span>, so it is linear. <span class="math inline">\(g(\tilde{x}) = \mathbf{A}\tilde{x}+ \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span> has offset <span class="math inline">\(\begin{bmatrix}1 \\ 0\end{bmatrix} \neq \tilde{0}\)</span>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;13</a> it is not linear: indeed <span class="math inline">\(g(\tilde{0}) = \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span>, not <span class="math inline">\(\tilde{0}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 18 (Two affine maps with the same matrix)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix}2 &amp; 0 \\ 1 &amp; 1\end{bmatrix}\)</span>, the matrix of the linear map in <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a>. <span class="math inline">\(f(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}\)</span> has offset <span class="math inline">\(\underset{\sim}{0}\)</span>, so it is linear. <span class="math inline">\(g(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}+ \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span> has offset <span class="math inline">\(\begin{bmatrix}1 \\ 0\end{bmatrix} \neq \underset{\sim}{0}\)</span>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;13</a> it is not linear: indeed <span class="math inline">\(g(\underset{\sim}{0}) = \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span>, not <span class="math inline">\(\underset{\sim}{0}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="cor-linear-is-affine" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 2 (Every linear map is affine)</strong></span> Every linear map <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}^m\)</span> (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>) is an affine map (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) with offset <span class="math inline">\(\tilde{0}\)</span>.</p>
+<p><span class="theorem-title"><strong>Corollary 2 (Every linear map is affine)</strong></span> Every linear map <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}^m\)</span> (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>) is an affine map (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) with offset <span class="math inline">\(\underset{\sim}{0}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(f\)</span> is linear, <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a> gives a matrix <span class="math inline">\(\mathbf{A}\)</span> with</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{x}) &amp;= \mathbf{A}\tilde{x}\\
-&amp;= \mathbf{A}\tilde{x}+ \tilde{0},
+f(\underset{\sim}{x}) &amp;= \mathbf{A}\underset{\sim}{x}\\
+&amp;= \mathbf{A}\underset{\sim}{x}+ \underset{\sim}{0},
 \end{aligned}
 \]</span></p>
-<p>which is <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a> with <span class="math inline">\(\tilde{b} = \tilde{0}\)</span>.</p>
+<p>which is <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a> with <span class="math inline">\(\underset{\sim}{b} = \underset{\sim}{0}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="thm-affine-map-unique" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (An affine map determines its matrix and offset)</strong></span> If <span class="math inline">\(f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{b}\)</span> and <span class="math inline">\(f(\tilde{x}) = \mathbf{A}'\tilde{x}+ \tilde{b}'\)</span> for all <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>), then <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span> and <span class="math inline">\(\tilde{b}' = \tilde{b}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 14 (An affine map determines its matrix and offset)</strong></span> If <span class="math inline">\(f(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}+ \underset{\sim}{b}\)</span> and <span class="math inline">\(f(\underset{\sim}{x}) = \mathbf{A}'\underset{\sim}{x}+ \underset{\sim}{b}'\)</span> for all <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^p\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>), then <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span> and <span class="math inline">\(\underset{\sim}{b}' = \underset{\sim}{b}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>By <a href="#/thm-affine-map-zero" class="quarto-xref">Theorem&nbsp;12</a>, applied to each formula,</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{b} &amp;= f(\tilde{0}) \\
-&amp;= \tilde{b}'.
+\underset{\sim}{b} &amp;= f(\underset{\sim}{0}) \\
+&amp;= \underset{\sim}{b}'.
 \end{aligned}
 \]</span></p>
 <p>Then</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathbf{A}\tilde{x}&amp;= f(\tilde{x}) - \tilde{b} \\
-&amp;= \mathbf{A}'\tilde{x}
+\mathbf{A}\underset{\sim}{x}&amp;= f(\underset{\sim}{x}) - \underset{\sim}{b} \\
+&amp;= \mathbf{A}'\underset{\sim}{x}
 \end{aligned}
 \]</span></p>
-<p>for all <span class="math inline">\(\tilde{x}\)</span>, so <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{A}'\)</span> are both matrices (<a href="#/def-matrix-of-linear-map" class="quarto-xref">Definition&nbsp;17</a>) of the linear map <span class="math inline">\(\tilde{x}\mapsto f(\tilde{x}) - \tilde{b}\)</span> (linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>), and the uniqueness in <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a> gives <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span>.</p>
+<p>for all <span class="math inline">\(\underset{\sim}{x}\)</span>, so <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{A}'\)</span> are both matrices (<a href="#/def-matrix-of-linear-map" class="quarto-xref">Definition&nbsp;17</a>) of the linear map <span class="math inline">\(\underset{\sim}{x}\mapsto f(\underset{\sim}{x}) - \underset{\sim}{b}\)</span> (linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>), and the uniqueness in <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a> gives <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-linear-affine-terminology" class="proof remark">
 <p><span class="proof-title"><em>Remark 7</em> (“Linear” in this site, and in machine learning and statistics). </span>This site uses “linear” only in the sense of <a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;13</a> a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as <a href="./algebra-exponentials.html#def-affine-function">affine</a> <span class="math inline">\(a x + b\)</span> versus <a href="./algebra-exponentials.html#def-linear-function">linear</a> <span class="math inline">\(a x\)</span> on the algebra page. (The algebra page writes these as <span class="math inline">\(m x + b\)</span> and <span class="math inline">\(m x\)</span>; here <span class="math inline">\(m\)</span> already names the number of outputs.)</p>
-<p>Machine learning and statistics often call any function of the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> “linear”, as in a <em>linear model</em> in statistics or a <em>linear layer</em> in a neural network, and call the offset <span class="math inline">\(b\)</span> the bias (machine learning) or the intercept (statistics), as <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a> notes. A model with an intercept is affine in <span class="math inline">\(\tilde{x}\)</span> but linear in its coefficients <span class="math inline">\((b, \tilde{w})\)</span>, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: <span class="math inline">\(w_1 x + w_2 x^2 + b\)</span> is not affine in <span class="math inline">\(x\)</span>, but it is linear in <span class="math inline">\((b, w_1, w_2)\)</span>. Separately, the affine function <span class="math inline">\(\tilde{w} \cdot \tilde{x} + b\)</span> is a linear function of the augmented vector <span class="math inline">\(\tilde{\tilde{x}}\)</span> (<a href="#/def-augmented-vector" class="quarto-xref">Definition&nbsp;21</a>), with <span class="math inline">\(b\)</span> as the coefficient on its first entry.</p>
+<p>Machine learning and statistics often call any function of the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> “linear”, as in a <em>linear model</em> in statistics or a <em>linear layer</em> in a neural network, and call the offset <span class="math inline">\(b\)</span> the bias (machine learning) or the intercept (statistics), as <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a> notes. A model with an intercept is affine in <span class="math inline">\(\underset{\sim}{x}\)</span> but linear in its coefficients <span class="math inline">\((b, \underset{\sim}{w})\)</span>, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: <span class="math inline">\(w_1 x + w_2 x^2 + b\)</span> is not affine in <span class="math inline">\(x\)</span>, but it is linear in <span class="math inline">\((b, w_1, w_2)\)</span>. Separately, the affine function <span class="math inline">\(\underset{\sim}{w} \cdot \underset{\sim}{x} + b\)</span> is a linear function of the augmented vector <span class="math inline">\({\underset{\sim}{x}}^{\mathrm{aug}}\)</span> (<a href="#/def-augmented-vector" class="quarto-xref">Definition&nbsp;21</a>), with <span class="math inline">\(b\)</span> as the coefficient on its first entry.</p>
 </div>
 <div title="Further reading">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1242,7 +1242,7 @@ f(\tilde{x}) &amp;= \mathbf{A}\tilde{x}\\
 </div>
 <div class="callout-content">
 <ul>
-<li><span class="citation" data-cites="zhou2024matrix">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>, sections 6 (“Linear functions and operators”; see <a href="#/def-linear-operator" class="quarto-xref">Definition&nbsp;16</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\tilde{x}+ \tilde{b}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha\tilde{x}+ \beta\tilde{y}) = \alpha f(\tilde{x}) + \beta f(\tilde{y})\)</span> whenever <span class="math inline">\(\alpha+ \beta= 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\tilde{x}+ \tilde{b}\)</span>, so the two definitions agree.</li>
+<li><span class="citation" data-cites="zhou2024matrix">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>, sections 6 (“Linear functions and operators”; see <a href="#/def-linear-operator" class="quarto-xref">Definition&nbsp;16</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\underset{\sim}{x}+ \underset{\sim}{b}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha\underset{\sim}{x}+ \beta\underset{\sim}{y}) = \alpha f(\underset{\sim}{x}) + \beta f(\underset{\sim}{y})\)</span> whenever <span class="math inline">\(\alpha+ \beta= 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\underset{\sim}{x}+ \underset{\sim}{b}\)</span>, so the two definitions agree.</li>
 <li><span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>, chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the <a href="./calculus-derivatives.html#def-linear-approximation">first-order Taylor approximation</a> as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.</li>
 </ul>
 </div>
@@ -1253,15 +1253,15 @@ f(\tilde{x}) &amp;= \mathbf{A}\tilde{x}\\
 <section class="slide level2">
 
 <div id="def-hyperplane" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Hyperplane)</strong></span> A <strong>hyperplane</strong> in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of points <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> satisfying</p>
-<p><span class="math display">\[\tilde{w} \cdot \tilde{x} + b = 0\]</span></p>
-<p>for some vector <span class="math inline">\(\tilde{w} \in \mathbb{R}^p \setminus \{\tilde{0}\}\)</span> and number <span class="math inline">\(b \in \mathbb{R}\)</span>. The number <span class="math inline">\(b\)</span> is the offset of the hyperplane.</p>
+<p><span class="theorem-title"><strong>Definition 22 (Hyperplane)</strong></span> A <strong>hyperplane</strong> in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of points <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^p\)</span> satisfying</p>
+<p><span class="math display">\[\underset{\sim}{w} \cdot \underset{\sim}{x} + b = 0\]</span></p>
+<p>for some vector <span class="math inline">\(\underset{\sim}{w} \in \mathbb{R}^p \setminus \{\underset{\sim}{0}\}\)</span> and number <span class="math inline">\(b \in \mathbb{R}\)</span>. The number <span class="math inline">\(b\)</span> is the offset of the hyperplane.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-normal-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Normal vector of a hyperplane)</strong></span> In <a href="#/def-hyperplane" class="quarto-xref">Definition&nbsp;22</a>, the vector <span class="math inline">\(\tilde{w}\)</span> is a <strong>normal vector</strong> of the hyperplane.</p>
+<p><span class="theorem-title"><strong>Definition 23 (Normal vector of a hyperplane)</strong></span> In <a href="#/def-hyperplane" class="quarto-xref">Definition&nbsp;22</a>, the vector <span class="math inline">\(\underset{\sim}{w}\)</span> is a <strong>normal vector</strong> of the hyperplane.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1269,8 +1269,8 @@ f(\tilde{x}) &amp;= \mathbf{A}\tilde{x}\\
 <div id="exm-hyperplane" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (A line in <span class="math inline">\(\mathbb{R}^2\)</span>, and why the normal vector must be nonzero)</strong></span> &nbsp;</p>
 <ul>
-<li>With <span class="math inline">\(\tilde{w} = (1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, the hyperplane in <span class="math inline">\(\mathbb{R}^2\)</span> is the line <span class="math inline">\(x_1 + x_2 - 1 = 0\)</span>. The point <span class="math inline">\((1, 0)\)</span> is on it, since <span class="math inline">\(1 + 0 - 1 = 0\)</span>; the point <span class="math inline">\((1, 1)\)</span> is not, since <span class="math inline">\(1 + 1 - 1 = 1 &gt; 0\)</span>, so it lies in the half-space where <span class="math inline">\(\tilde{w} \cdot \tilde{x} + b &gt; 0\)</span>.</li>
-<li>With <span class="math inline">\(\tilde{w} = \tilde{0}\)</span>, the equation reads <span class="math inline">\(b = 0\)</span>: if <span class="math inline">\(b \ne 0\)</span> no point satisfies it, and if <span class="math inline">\(b = 0\)</span> every point does, so the set is empty or all of <span class="math inline">\(\mathbb{R}^2\)</span>, not a line. That degenerate case is why the definition requires <span class="math inline">\(\tilde{w} \ne \tilde{0}\)</span>.</li>
+<li>With <span class="math inline">\(\underset{\sim}{w} = (1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, the hyperplane in <span class="math inline">\(\mathbb{R}^2\)</span> is the line <span class="math inline">\(x_1 + x_2 - 1 = 0\)</span>. The point <span class="math inline">\((1, 0)\)</span> is on it, since <span class="math inline">\(1 + 0 - 1 = 0\)</span>; the point <span class="math inline">\((1, 1)\)</span> is not, since <span class="math inline">\(1 + 1 - 1 = 1 &gt; 0\)</span>, so it lies in the half-space where <span class="math inline">\(\underset{\sim}{w} \cdot \underset{\sim}{x} + b &gt; 0\)</span>.</li>
+<li>With <span class="math inline">\(\underset{\sim}{w} = \underset{\sim}{0}\)</span>, the equation reads <span class="math inline">\(b = 0\)</span>: if <span class="math inline">\(b \ne 0\)</span> no point satisfies it, and if <span class="math inline">\(b = 0\)</span> every point does, so the set is empty or all of <span class="math inline">\(\mathbb{R}^2\)</span>, not a line. That degenerate case is why the definition requires <span class="math inline">\(\underset{\sim}{w} \ne \underset{\sim}{0}\)</span>.</li>
 </ul>
 </div>
 </section>
@@ -1467,17 +1467,17 @@ Figure&nbsp;1: The <a href="./functions.html#def-graph">graph</a> of <span class
 </table>
 <p>The rule in use is</p>
 <p><span class="math display">\[\text{score} = 0.4\,x_1 + 0.2\,x_2 + 1.5\,x_3 - 30\]</span></p>
-<p>Write this rule in the form of <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a>, naming <span class="math inline">\(\tilde{w}\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(p\)</span> explicitly, and give the score for a patient aged <span class="math inline">\(50\)</span> with blood pressure <span class="math inline">\(130\)</span> and BMI <span class="math inline">\(28\)</span>.</p>
+<p>Write this rule in the form of <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a>, naming <span class="math inline">\(\underset{\sim}{w}\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(p\)</span> explicitly, and give the score for a patient aged <span class="math inline">\(50\)</span> with blood pressure <span class="math inline">\(130\)</span> and BMI <span class="math inline">\(28\)</span>.</p>
 </div>
 <div id="sol-write-in-matrix-form" class="proof solution">
 <p><span class="proof-title"><em>Solution 2</em>. </span>Read the coefficients straight off the rule. There are three inputs, so <span class="math inline">\(p = 3\)</span>:</p>
-<p><span class="math display">\[\tilde{w} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
+<p><span class="math display">\[\underset{\sim}{w} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 \qquad b = -30\]</span></p>
-<p>and the rule is <span class="math inline">\(f(\tilde{x}) = \tilde{w}^{\top} \tilde{x}+ b\)</span>. For the patient,</p>
-<p><span class="math display">\[\tilde{x}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\]</span></p>
+<p>and the rule is <span class="math inline">\(f(\underset{\sim}{x}) = \underset{\sim}{w}^{\top} \underset{\sim}{x}+ b\)</span>. For the patient,</p>
+<p><span class="math display">\[\underset{\sim}{x}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{w}^{\top} \tilde{x}
+\underset{\sim}{w}^{\top} \underset{\sim}{x}
 &amp;= (0.4)(50) + (0.2)(130) + (1.5)(28) \\
 &amp;= 20 + 26 + 42 \\
 &amp;= 88
@@ -1485,7 +1485,7 @@ Figure&nbsp;1: The <a href="./functions.html#def-graph">graph</a> of <span class
 \]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
-f(\tilde{x})
+f(\underset{\sim}{x})
 &amp;= 88 - 30 \\
 &amp;= 58
 \end{aligned}
@@ -1496,33 +1496,33 @@ f(\tilde{x})
 <section class="slide level2 scrollable">
 
 <div id="exr-which-are-linear" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Which of these are affine in <span class="math inline">\(\tilde{w}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\tilde{w} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are affine (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>), that is, have the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an inner product plus an offset — and which of those are also linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>).</p>
+<p><span class="theorem-title"><strong>Exercise 3 (Which of these are affine in <span class="math inline">\(\underset{\sim}{w}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\underset{\sim}{w} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\underset{\sim}{x}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are affine (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>), that is, have the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an inner product plus an offset — and which of those are also linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>).</p>
 <ol type="1">
-<li><span class="math inline">\(\tilde{w}^{\top} \tilde{x}\)</span></li>
-<li><span class="math inline">\(\tilde{w}^{\top} \tilde{x}- y\)</span></li>
-<li><span class="math inline">\((\tilde{w}^{\top} \tilde{x}- y)^2\)</span></li>
-<li><span class="math inline">\(\mathopen{}\left\lVert\tilde{w}\right\rVert\mathclose{}_2^2\)</span></li>
+<li><span class="math inline">\(\underset{\sim}{w}^{\top} \underset{\sim}{x}\)</span></li>
+<li><span class="math inline">\(\underset{\sim}{w}^{\top} \underset{\sim}{x}- y\)</span></li>
+<li><span class="math inline">\((\underset{\sim}{w}^{\top} \underset{\sim}{x}- y)^2\)</span></li>
+<li><span class="math inline">\(\mathopen{}\left\lVert\underset{\sim}{w}\right\rVert\mathclose{}_2^2\)</span></li>
 <li><span class="math inline">\(w_1 x_1 + 3\)</span></li>
 </ol>
 </div>
 <div id="sol-which-are-linear" class="proof solution">
 <p><span class="proof-title"><em>Solution 3</em>. </span></p>
 <ol type="1">
-<li><strong>Affine, and linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with <span class="math inline">\(b = 0\)</span>, which is a linear map by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>: the matrix <span class="math inline">\({\tilde{x}}^{\top}\)</span> times <span class="math inline">\(\tilde{w}\)</span>.</li>
-<li><strong>Affine.</strong> Still an inner product plus an offset; here the offset is <span class="math inline">\(b = -y\)</span>, which is a constant because <span class="math inline">\(y\)</span> is held fixed. It is linear only when <span class="math inline">\(y = 0\)</span>: otherwise <span class="math inline">\(\tilde{w} = \tilde{0}\)</span> gives <span class="math inline">\(-y \ne 0\)</span>, and a linear map sends <span class="math inline">\(\tilde{0}\)</span> to <span class="math inline">\(0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>).</li>
-<li><strong>Not affine.</strong> Squaring is not an inner product plus an offset. This expression is the squared error of one observation, and its curvature in <span class="math inline">\(\tilde{w}\)</span> is exactly why fitting a model is an optimization problem rather than a lookup.</li>
-<li><strong>Not affine.</strong> By <a href="./linear-algebra-vectors.html#eq-l2-norm">Equation&nbsp;2 in Vectors</a> this is <span class="math inline">\(\tilde{w}^{\top} \tilde{w}\)</span>, which has <span class="math inline">\(\tilde{w}\)</span> in both slots at once. Hold either slot fixed and it is linear in the other; as a function of the single variable <span class="math inline">\(\tilde{w}\)</span> it is quadratic.</li>
-<li><strong>Affine, not linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with coefficient vector <span class="math inline">\(\tilde{a}= (x_1, 0, \dots, 0)^{\top}\)</span> and <span class="math inline">\(b = 3\)</span>; at <span class="math inline">\(\tilde{w} = \tilde{0}\)</span> it equals <span class="math inline">\(3 \ne 0\)</span>, so it is not linear (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>). The data <span class="math inline">\(\tilde{x}\)</span> is untouched — <span class="math inline">\(\tilde{a}\)</span> is a new vector built from its first entry.</li>
+<li><strong>Affine, and linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with <span class="math inline">\(b = 0\)</span>, which is a linear map by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>: the matrix <span class="math inline">\({\underset{\sim}{x}}^{\top}\)</span> times <span class="math inline">\(\underset{\sim}{w}\)</span>.</li>
+<li><strong>Affine.</strong> Still an inner product plus an offset; here the offset is <span class="math inline">\(b = -y\)</span>, which is a constant because <span class="math inline">\(y\)</span> is held fixed. It is linear only when <span class="math inline">\(y = 0\)</span>: otherwise <span class="math inline">\(\underset{\sim}{w} = \underset{\sim}{0}\)</span> gives <span class="math inline">\(-y \ne 0\)</span>, and a linear map sends <span class="math inline">\(\underset{\sim}{0}\)</span> to <span class="math inline">\(0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>).</li>
+<li><strong>Not affine.</strong> Squaring is not an inner product plus an offset. This expression is the squared error of one observation, and its curvature in <span class="math inline">\(\underset{\sim}{w}\)</span> is exactly why fitting a model is an optimization problem rather than a lookup.</li>
+<li><strong>Not affine.</strong> By <a href="./linear-algebra-vectors.html#eq-l2-norm">Equation&nbsp;2 in Vectors</a> this is <span class="math inline">\(\underset{\sim}{w}^{\top} \underset{\sim}{w}\)</span>, which has <span class="math inline">\(\underset{\sim}{w}\)</span> in both slots at once. Hold either slot fixed and it is linear in the other; as a function of the single variable <span class="math inline">\(\underset{\sim}{w}\)</span> it is quadratic.</li>
+<li><strong>Affine, not linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with coefficient vector <span class="math inline">\(\underset{\sim}{a}= (x_1, 0, \dots, 0)^{\top}\)</span> and <span class="math inline">\(b = 3\)</span>; at <span class="math inline">\(\underset{\sim}{w} = \underset{\sim}{0}\)</span> it equals <span class="math inline">\(3 \ne 0\)</span>, so it is not linear (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>). The data <span class="math inline">\(\underset{\sim}{x}\)</span> is untouched — <span class="math inline">\(\underset{\sim}{a}\)</span> is a new vector built from its first entry.</li>
 </ol>
-<p>Items 1, 2 and 5 are affine and items 3 and 4 are not, which is the split that matters: a <em>model</em> can be affine in its weights while the <em>quantity we minimize</em> is not. Squared error and the norm penalty are both curved in <span class="math inline">\(\tilde{w}\)</span>, and that curvature is what makes fitting an optimization problem at all: there is always a downhill direction to follow. Curvature alone does not promise a <em>single</em> answer. The squared error of one observation is completely flat along a whole line of weight vectors, every one of which fits that observation exactly, and pinning down one of them is part of what the norm penalty is added for in week 3.</p>
+<p>Items 1, 2 and 5 are affine and items 3 and 4 are not, which is the split that matters: a <em>model</em> can be affine in its weights while the <em>quantity we minimize</em> is not. Squared error and the norm penalty are both curved in <span class="math inline">\(\underset{\sim}{w}\)</span>, and that curvature is what makes fitting an optimization problem at all: there is always a downhill direction to follow. Curvature alone does not promise a <em>single</em> answer. The squared error of one observation is completely flat along a whole line of weight vectors, every one of which fits that observation exactly, and pinning down one of them is part of what the norm penalty is added for in week 3.</p>
 </div>
 <h3 id="transposes-of-sums-and-products">Transposes of sums and products</h3>
 <!-- heading shares the slide; do not re-flag -->
 <div id="thm-transpose-sum" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 15 (Transpose of a sum)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
 <p><span class="math display">\[{(\mathbf{A} + \mathbf{B})}^{\top} = {\mathbf{A}}^{\top} + {\mathbf{B}}^{\top}\]</span></p>
-<p>In particular, for column vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> of the same length:</p>
-<p><span class="math display">\[{(\tilde{x}+ \tilde{y})}^{\top} = {\tilde{x}}^{\top} + {\tilde{y}}^{\top}\]</span></p>
+<p>In particular, for column vectors <span class="math inline">\(\underset{\sim}{x}\)</span> and <span class="math inline">\(\underset{\sim}{y}\)</span> of the same length:</p>
+<p><span class="math display">\[{(\underset{\sim}{x}+ \underset{\sim}{y})}^{\top} = {\underset{\sim}{x}}^{\top} + {\underset{\sim}{y}}^{\top}\]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Entry <span class="math inline">\((i, j)\)</span> of each side:</p>
@@ -1599,25 +1599,25 @@ f(\tilde{x})
 <section class="slide level2">
 
 <div id="thm-scalar-transpose" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 17 (A <span class="math inline">\(1 \times 1\)</span> product equals its own transpose)</strong></span> If <span class="math inline">\(\tilde{u}\)</span> and <span class="math inline">\(\tilde{v}\)</span> are vectors of length <span class="math inline">\(p\)</span> and <span class="math inline">\(\mathbf{M}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix, then <span class="math inline">\({\tilde{u}}^{\top}\mathbf{M}\tilde{v}\)</span> is a number, and</p>
+<p><span class="theorem-title"><strong>Theorem 17 (A <span class="math inline">\(1 \times 1\)</span> product equals its own transpose)</strong></span> If <span class="math inline">\(\underset{\sim}{u}\)</span> and <span class="math inline">\(\underset{\sim}{v}\)</span> are vectors of length <span class="math inline">\(p\)</span> and <span class="math inline">\(\mathbf{M}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix, then <span class="math inline">\({\underset{\sim}{u}}^{\top}\mathbf{M}\underset{\sim}{v}\)</span> is a number, and</p>
 <p><span class="math display">\[
-{\tilde{u}}^{\top}\mathbf{M}\tilde{v}
-= {\tilde{v}}^{\top}\,{\mathbf{M}}^{\top}\,\tilde{u}.
+{\underset{\sim}{u}}^{\top}\mathbf{M}\underset{\sim}{v}
+= {\underset{\sim}{v}}^{\top}\,{\mathbf{M}}^{\top}\,\underset{\sim}{u}.
 \]</span></p>
-<p>In particular, <span class="math inline">\({\tilde{u}}^{\top}\tilde{v} = {\tilde{v}}^{\top}\tilde{u}\)</span>.</p>
+<p>In particular, <span class="math inline">\({\underset{\sim}{u}}^{\top}\underset{\sim}{v} = {\underset{\sim}{v}}^{\top}\underset{\sim}{u}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>The product <span class="math inline">\({\tilde{u}}^{\top}\mathbf{M}\tilde{v}\)</span> is a <span class="math inline">\((1 \times p)(p \times p)(p \times 1)\)</span> product, so it is a <span class="math inline">\(1 \times 1\)</span> matrix. The transpose of a <span class="math inline">\(1 \times 1\)</span> matrix is itself, so</p>
+<p><span class="proof-title"><em>Proof</em>. </span>The product <span class="math inline">\({\underset{\sim}{u}}^{\top}\mathbf{M}\underset{\sim}{v}\)</span> is a <span class="math inline">\((1 \times p)(p \times p)(p \times 1)\)</span> product, so it is a <span class="math inline">\(1 \times 1\)</span> matrix. The transpose of a <span class="math inline">\(1 \times 1\)</span> matrix is itself, so</p>
 <p><span class="math display">\[
 \begin{aligned}
-{\tilde{u}}^{\top}\mathbf{M}\tilde{v}
-&amp;= {\mathopen{}\left({\tilde{u}}^{\top}\mathbf{M}\tilde{v}\right)\mathclose{}}^{\top}
+{\underset{\sim}{u}}^{\top}\mathbf{M}\underset{\sim}{v}
+&amp;= {\mathopen{}\left({\underset{\sim}{u}}^{\top}\mathbf{M}\underset{\sim}{v}\right)\mathclose{}}^{\top}
 &amp;&amp; \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
 \\
-&amp;= {\tilde{v}}^{\top}\,{\mathbf{M}}^{\top}\,{\mathopen{}\left({\tilde{u}}^{\top}\right)\mathclose{}}^{\top}
+&amp;= {\underset{\sim}{v}}^{\top}\,{\mathbf{M}}^{\top}\,{\mathopen{}\left({\underset{\sim}{u}}^{\top}\right)\mathclose{}}^{\top}
 &amp;&amp; \text{(transpose of a product, twice)}
 \\
-&amp;= {\tilde{v}}^{\top}\,{\mathbf{M}}^{\top}\,\tilde{u}
+&amp;= {\underset{\sim}{v}}^{\top}\,{\mathbf{M}}^{\top}\,\underset{\sim}{u}
 &amp;&amp; \text{(transposing twice changes nothing)}
 \end{aligned}
 \]</span></p>
@@ -1627,15 +1627,15 @@ f(\tilde{x})
 <section class="slide level2 smaller scrollable" id="references">
 
 <div id="exm-scalar-transpose" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Two ways to write the same number)</strong></span> Take <span class="math inline">\(\tilde{u} = (1, 2)\)</span>, <span class="math inline">\(\tilde{v} = (3, -1)\)</span> and <span class="math inline">\(\mathbf{M} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>. Then <span class="math inline">\(\mathbf{M}\tilde{v} = (1, -3)\)</span>, so</p>
+<p><span class="theorem-title"><strong>Example 20 (Two ways to write the same number)</strong></span> Take <span class="math inline">\(\underset{\sim}{u} = (1, 2)\)</span>, <span class="math inline">\(\underset{\sim}{v} = (3, -1)\)</span> and <span class="math inline">\(\mathbf{M} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>. Then <span class="math inline">\(\mathbf{M}\underset{\sim}{v} = (1, -3)\)</span>, so</p>
 <p><span class="math display">\[
-{\tilde{u}}^{\top}\mathbf{M}\tilde{v} = 1 \cdot 1 + 2 \cdot (-3) = -5.
+{\underset{\sim}{u}}^{\top}\mathbf{M}\underset{\sim}{v} = 1 \cdot 1 + 2 \cdot (-3) = -5.
 \]</span></p>
-<p>Also <span class="math inline">\({\mathbf{M}}^{\top} = \begin{bmatrix} 1 &amp; 0 \\ 2 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{M}}^{\top}\tilde{u} = (1, 8)\)</span>, so</p>
+<p>Also <span class="math inline">\({\mathbf{M}}^{\top} = \begin{bmatrix} 1 &amp; 0 \\ 2 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{M}}^{\top}\underset{\sim}{u} = (1, 8)\)</span>, so</p>
 <p><span class="math display">\[
-{\tilde{v}}^{\top}\,{\mathbf{M}}^{\top}\,\tilde{u} = 3 \cdot 1 + (-1) \cdot 8 = -5.
+{\underset{\sim}{v}}^{\top}\,{\mathbf{M}}^{\top}\,\underset{\sim}{u} = 3 \cdot 1 + (-1) \cdot 8 = -5.
 \]</span></p>
-<p>The two products are equal, as the theorem says. In least squares, this is why the two cross terms of <span class="math inline">\({(\mathbf{X}\tilde{\beta}- \tilde{y})}^{\top}(\mathbf{X}\tilde{\beta}- \tilde{y})\)</span> are equal and can be combined.</p>
+<p>The two products are equal, as the theorem says. In least squares, this is why the two cross terms of <span class="math inline">\({(\mathbf{X}\underset{\sim}{\beta}- \underset{\sim}{y})}^{\top}(\mathbf{X}\underset{\sim}{\beta}- \underset{\sim}{y})\)</span> are equal and can be combined.</p>
 </div>
 
 

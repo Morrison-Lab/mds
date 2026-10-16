@@ -14,25 +14,25 @@ Code
 
 Published
 
-Last modified: 2026-10-16 02:45:37 (PDT)
+Last modified: 2026-10-16 03:50:53 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
 This section covers [derivatives](calculus-derivatives.llms.md#def-derivative) of functions of vectors and matrices. Its linear algebra prerequisites, such as vectors, matrices, transposes, dot products, and quadratic forms, are covered in [Linear Algebra](linear-algebra.llms.md).
 
-Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [column vector](linear-algebra-vectors.llms.md#def-column-vector) and [dot product](linear-algebra-vectors.llms.md#def-dot-product)).
+Let \\\underset{\sim}{x}\\ and \\\underset{\sim}{\beta}\\ be column vectors of length \\p\\ (see [column vector](linear-algebra-vectors.llms.md#def-column-vector) and [dot product](linear-algebra-vectors.llms.md#def-dot-product)).
 
 > **NOTE:**
 >
-> **Definition 1 (Partial derivative)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and \\\tilde{x}= {(x_1, \ldots, x_p)}^{\top} \in \mathbb{R}^p\\. The **partial derivative** of \\f\\ with respect to \\x_j\\ at \\\tilde{x}\\ is
+> **Definition 1 (Partial derivative)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and \\\underset{\sim}{x}= {(x_1, \ldots, x_p)}^{\top} \in \mathbb{R}^p\\. The **partial derivative** of \\f\\ with respect to \\x_j\\ at \\\underset{\sim}{x}\\ is
 >
-> \\ \frac{\partial}{\partial x_j} f(\tilde{x}) \stackrel{\text{def}}{=} \lim\_{h \to 0} \frac{f(x_1, \ldots, x_j + h, \ldots, x_p) - f(x_1, \ldots, x_p)}{h}, \\
+> \\ \frac{\partial}{\partial x_j} f(\underset{\sim}{x}) \stackrel{\text{def}}{=} \lim\_{h \to 0} \frac{f(x_1, \ldots, x_j + h, \ldots, x_p) - f(x_1, \ldots, x_p)}{h}, \\
 >
 > when this [limit](calculus-derivatives.llms.md#def-limit) exists. It is the [derivative](calculus-derivatives.llms.md#def-derivative) at \\x_j\\ of the one-variable function \\t \mapsto f(x_1, \ldots, t, \ldots, x_p)\\, which varies the \\j\\th coordinate and holds the other coordinates fixed.
 
 > **NOTE:**
 >
-> **Example 1 (Partial derivatives of \\x_1^2 x_2 + 3 x_2\\)** Let \\f(x_1, x_2) = x_1^2 x_2 + 3 x_2\\. At \\\tilde{x}= {(1, 2)}^{\top}\\,
+> **Example 1 (Partial derivatives of \\x_1^2 x_2 + 3 x_2\\)** Let \\f(x_1, x_2) = x_1^2 x_2 + 3 x_2\\. At \\\underset{\sim}{x}= {(1, 2)}^{\top}\\,
 >
 > \\ \begin{aligned} f(1, 2) &= 1 \cdot 2 + 6 \\ &= 8, \end{aligned} \\
 >
@@ -40,7 +40,7 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > \\ \begin{aligned} \frac{f(1 + h, 2) - f(1, 2)}{h} &= \frac{(1 + h)^2 \cdot 2 + 6 - 8}{h} && \text{(substitute into } f \text{)} \\ &= \frac{(1 + h)^2 \cdot 2 - 2}{h} && \text{(} 6 - 8 = -2 \text{)} \\ &= \frac{(1 + 2h + h^2) \cdot 2 - 2}{h} && \text{(expand } (1 + h)^2 \text{)} \\ &= \frac{2 + 4h + 2h^2 - 2}{h} && \text{(distributive law)} \\ &= \frac{4h + 2h^2 + 2 - 2}{h} && \text{(reorder the terms)} \\ &= \frac{4h + 2h^2}{h} && \text{(} 2 - 2 = 0 \text{)} \\ &= 4 + 2h, && \text{(divide by } h \ne 0 \text{)} \end{aligned} \\
 >
-> which tends to \\4\\ as \\h \to 0\\, so \\\frac{\partial}{\partial x_1} f(1, 2) = 4\\. Holding \\x_2\\ fixed and differentiating in \\x_1\\ gives the same answer: \\\frac{\partial}{\partial x_1} f(\tilde{x}) = 2 x_1 x_2\\, which is \\2 \cdot 1 \cdot 2 = 4\\ at \\{(1, 2)}^{\top}\\. Holding \\x_1\\ fixed instead gives \\\frac{\partial}{\partial x_2} f(\tilde{x}) = x_1^2 + 3\\, which is \\1 + 3 = 4\\ at \\{(1, 2)}^{\top}\\.
+> which tends to \\4\\ as \\h \to 0\\, so \\\frac{\partial}{\partial x_1} f(1, 2) = 4\\. Holding \\x_2\\ fixed and differentiating in \\x_1\\ gives the same answer: \\\frac{\partial}{\partial x_1} f(\underset{\sim}{x}) = 2 x_1 x_2\\, which is \\2 \cdot 1 \cdot 2 = 4\\ at \\{(1, 2)}^{\top}\\. Holding \\x_1\\ fixed instead gives \\\frac{\partial}{\partial x_2} f(\underset{\sim}{x}) = x_1^2 + 3\\, which is \\1 + 3 = 4\\ at \\{(1, 2)}^{\top}\\.
 
 > **NOTE:**
 >
@@ -139,19 +139,19 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 
 > **NOTE:**
 >
-> **Definition 2 (Vector derivative (gradient))** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = \tilde{x} \cdot \tilde{\beta}\\, then its **vector derivative** is the column vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
+> **Definition 2 (Vector derivative (gradient))** If \\f(\underset{\sim}{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\underset{\sim}{\beta}\\, such as \\f(\underset{\sim}{\beta}) = \underset{\sim}{x} \cdot \underset{\sim}{\beta}\\, then its **vector derivative** is the column vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
 >
-> \\ \frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta}) = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}f(\tilde{\beta}) \\ \frac{\partial}{\partial \beta\_{2}}f(\tilde{\beta}) \\ \vdots \\ \frac{\partial}{\partial \beta\_{p}}f(\tilde{\beta}) \end{bmatrix} \\
+> \\ \frac{\partial}{\partial \underset{\sim}{\beta}} f(\underset{\sim}{\beta}) = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}f(\underset{\sim}{\beta}) \\ \frac{\partial}{\partial \beta\_{2}}f(\underset{\sim}{\beta}) \\ \vdots \\ \frac{\partial}{\partial \beta\_{p}}f(\underset{\sim}{\beta}) \end{bmatrix} \\
 >
-> The vector derivative is also called the **gradient** of \\f\\ with respect to \\\tilde{\beta}\\, written \\\nabla\_{\tilde{\beta}} f(\tilde{\beta})\\.
+> The vector derivative is also called the **gradient** of \\f\\ with respect to \\\underset{\sim}{\beta}\\, written \\\nabla\_{\underset{\sim}{\beta}} f(\underset{\sim}{\beta})\\.
 
 > **NOTE:**
 >
-> **Example 2 (A vector derivative)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ and \\f(\tilde{\beta}) = 3 \beta\_{1} + 5 \beta\_{2}^2\\. Then
+> **Example 2 (A vector derivative)** Let \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ and \\f(\underset{\sim}{\beta}) = 3 \beta\_{1} + 5 \beta\_{2}^2\\. Then
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})}\_{2 \times 1} &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} (3 \beta\_{1} + 5 \beta\_{2}^2) \\ \frac{\partial}{\partial \beta\_{2}} (3 \beta\_{1} + 5 \beta\_{2}^2) \end{bmatrix} \\ &= \begin{bmatrix} 3 \\ 10 \beta\_{2} \end{bmatrix}, \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} f(\underset{\sim}{\beta})}\_{2 \times 1} &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} (3 \beta\_{1} + 5 \beta\_{2}^2) \\ \frac{\partial}{\partial \beta\_{2}} (3 \beta\_{1} + 5 \beta\_{2}^2) \end{bmatrix} \\ &= \begin{bmatrix} 3 \\ 10 \beta\_{2} \end{bmatrix}, \end{aligned} \\
 >
-> and at \\\tilde{\beta}= {(1, 2)}^{\top}\\ the vector derivative is \\{(3, 20)}^{\top}\\.
+> and at \\\underset{\sim}{\beta}= {(1, 2)}^{\top}\\ the vector derivative is \\{(3, 20)}^{\top}\\.
 
 > **TIP:**
 >
@@ -185,26 +185,26 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 
 > **NOTE:**
 >
-> **Definition 3 (Direction)** A **direction** in \\\mathbb{R}^p\\ is given by a nonzero vector \\\tilde{d} \in \mathbb{R}^p\\: moving from a point \\\tilde{x}\\ in the direction \\\tilde{d}\\ means moving to the points \\\tilde{x}+ t \tilde{d}\\ with \\t \> 0\\. For any \\c \> 0\\, \\c \tilde{d}\\ reaches the same points (with \\t / c\\ in place of \\t\\), so \\\tilde{d}\\ and \\c \tilde{d}\\ give the same direction.
+> **Definition 3 (Direction)** A **direction** in \\\mathbb{R}^p\\ is given by a nonzero vector \\\underset{\sim}{d} \in \mathbb{R}^p\\: moving from a point \\\underset{\sim}{x}\\ in the direction \\\underset{\sim}{d}\\ means moving to the points \\\underset{\sim}{x}+ t \underset{\sim}{d}\\ with \\t \> 0\\. For any \\c \> 0\\, \\c \underset{\sim}{d}\\ reaches the same points (with \\t / c\\ in place of \\t\\), so \\\underset{\sim}{d}\\ and \\c \underset{\sim}{d}\\ give the same direction.
 
 > **NOTE:**
 >
-> **Example 3 (Moving from \\{(2, -1)}^{\top}\\ in the direction \\{(1, 1)}^{\top}\\)** From \\\tilde{x}= {(2, -1)}^{\top}\\, moving in the direction \\\tilde{d} = {(1, 1)}^{\top}\\ reaches the points \\\tilde{x}+ t \tilde{d} = {(2 + t,\\ -1 + t)}^{\top}\\ for \\t \> 0\\, such as \\{(3, 0)}^{\top}\\ at \\t = 1\\. The vector \\{(2, 2)}^{\top}\\ gives the same direction: it reaches \\{(3, 0)}^{\top}\\ at \\t = \tfrac{1}{2}\\. The vector \\{(-1, -1)}^{\top}\\ gives the opposite direction, reaching points such as \\{(1, -2)}^{\top}\\.
+> **Example 3 (Moving from \\{(2, -1)}^{\top}\\ in the direction \\{(1, 1)}^{\top}\\)** From \\\underset{\sim}{x}= {(2, -1)}^{\top}\\, moving in the direction \\\underset{\sim}{d} = {(1, 1)}^{\top}\\ reaches the points \\\underset{\sim}{x}+ t \underset{\sim}{d} = {(2 + t,\\ -1 + t)}^{\top}\\ for \\t \> 0\\, such as \\{(3, 0)}^{\top}\\ at \\t = 1\\. The vector \\{(2, 2)}^{\top}\\ gives the same direction: it reaches \\{(3, 0)}^{\top}\\ at \\t = \tfrac{1}{2}\\. The vector \\{(-1, -1)}^{\top}\\ gives the opposite direction, reaching points such as \\{(1, -2)}^{\top}\\.
 
 > **NOTE:**
 >
 > **Definition 4 (Level set (level curve, contour))** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and let \\c\\ be a real number. The **level set** of \\f\\ at \\c\\ is
 >
-> \\ \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : f(\tilde{x}) = c\right\\\mathclose{}, \\
+> \\ \mathopen{}\left\\\underset{\sim}{x}\in \mathbb{R}^p : f(\underset{\sim}{x}) = c\right\\\mathclose{}, \\
 >
 > the set of points where \\f\\ takes the value \\c\\. For \\p = 2\\, a level set is often a curve in the plane, called a **level curve** (or **contour**) of \\f\\.
 
 > **NOTE:**
 >
-> **Example 4 (Level sets of \\x_1^2 + x_2^2\\)** Let \\f(\tilde{x}) = x_1^2 + x_2^2\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\.
+> **Example 4 (Level sets of \\x_1^2 + x_2^2\\)** Let \\f(\underset{\sim}{x}) = x_1^2 + x_2^2\\ for \\\underset{\sim}{x}= {(x_1, x_2)}^{\top}\\.
 >
-> - The level set at \\1\\ is the circle of radius \\1\\ around \\\tilde{0}\\. For example, \\{(0.6, 0.8)}^{\top}\\ is on it, since \\0.36 + 0.64 = 1\\, and \\{(1, 1)}^{\top}\\ is not, since \\1 + 1 = 2\\.
-> - The level set at \\0\\ is the single point \\\tilde{0}\\.
+> - The level set at \\1\\ is the circle of radius \\1\\ around \\\underset{\sim}{0}\\. For example, \\{(0.6, 0.8)}^{\top}\\ is on it, since \\0.36 + 0.64 = 1\\, and \\{(1, 1)}^{\top}\\ is not, since \\1 + 1 = 2\\.
+> - The level set at \\0\\ is the single point \\\underset{\sim}{0}\\.
 > - The level set at \\-1\\ is empty, since \\x_1^2 + x_2^2 \ge 0\\.
 
 Show R code
@@ -312,11 +312,11 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > **Exercise 5 (Take a gradient by hand)** Let \\f : \mathbb{R}^2 \to \mathbb{R}\\ be
 >
-> \\f(\tilde{w}) = 3 w_1 w_2 + w_2^3 - 5 w_1\\
+> \\f(\underset{\sim}{w}) = 3 w_1 w_2 + w_2^3 - 5 w_1\\
 >
 > 1.  Compute \\\partial f / \partial w_1\\ ([Definition 1](#def-partial-derivative)), treating \\w_2\\ as a constant.
 > 2.  Compute \\\partial f / \partial w_2\\, treating \\w_1\\ as a constant.
-> 3.  Assemble \\\nabla\_{\tilde{w}} f\\ and evaluate it at \\\tilde{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^{\top}\\.
+> 3.  Assemble \\\nabla\_{\underset{\sim}{w}} f\\ and evaluate it at \\\underset{\sim}{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^{\top}\\.
 > 4.  Check the shape of your answer against [Table 1](#tbl-gradient-shape).
 
 > **NOTE:**
@@ -331,55 +331,55 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > **3.** Stack the two, in the order the coordinates are numbered:
 >
-> \\\nabla\_{\tilde{w}} f(\tilde{w}) = \begin{bmatrix} 3w_2 - 5 \\ 3w_1 + 3w_2^2 \end{bmatrix}\\
+> \\\nabla\_{\underset{\sim}{w}} f(\underset{\sim}{w}) = \begin{bmatrix} 3w_2 - 5 \\ 3w_1 + 3w_2^2 \end{bmatrix}\\
 >
-> The gradient is a vector-valued *function* of \\\tilde{w}\\, not a single vector. At \\\tilde{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^{\top}\\,
+> The gradient is a vector-valued *function* of \\\underset{\sim}{w}\\, not a single vector. At \\\underset{\sim}{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^{\top}\\,
 >
-> \\ \begin{aligned} \nabla\_{\tilde{w}} f &= \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix} \\ &= \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix} \\ &= \begin{bmatrix} -8 \\ 9 \end{bmatrix} \end{aligned} \\
+> \\ \begin{aligned} \nabla\_{\underset{\sim}{w}} f &= \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix} \\ &= \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix} \\ &= \begin{bmatrix} -8 \\ 9 \end{bmatrix} \end{aligned} \\
 >
 > **4.** The input was a vector in \\\mathbb{R}^2\\ and so is the answer, as [Table 1](#tbl-gradient-shape) requires. Note the signs: from this point, increasing \\w_1\\ *decreases* \\f\\ while increasing \\w_2\\ increases it, so the uphill direction is neither axis.
 
 > **NOTE:**
 >
-> **Definition 5 (Row-vector derivative (total derivative))** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = \tilde{x} \cdot \tilde{\beta}\\, then its **row-vector derivative** is the row vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
+> **Definition 5 (Row-vector derivative (total derivative))** If \\f(\underset{\sim}{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\underset{\sim}{\beta}\\, such as \\f(\underset{\sim}{\beta}) = \underset{\sim}{x} \cdot \underset{\sim}{\beta}\\, then its **row-vector derivative** is the row vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
 >
-> \\ \frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}f(\tilde{\beta}) & \frac{\partial}{\partial \beta\_{2}}f(\tilde{\beta}) & \cdots & \frac{\partial}{\partial \beta\_{p}}f(\tilde{\beta}) \end{bmatrix} \tag{1}\\
+> \\ \frac{\partial f(\underset{\sim}{\beta})}{\partial {\underset{\sim}{\beta}}^{\top}} = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}f(\underset{\sim}{\beta}) & \frac{\partial}{\partial \beta\_{2}}f(\underset{\sim}{\beta}) & \cdots & \frac{\partial}{\partial \beta\_{p}}f(\underset{\sim}{\beta}) \end{bmatrix} \tag{1}\\
 >
 > The row-vector derivative is also called the **total derivative** of \\f\\, the name used when the derivative of a scalar-valued function is written as a row vector.
 
 > **NOTE:**
 >
-> *Remark 1* (Other notation for the row-vector derivative). Some sources write the same row vector as \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f(\tilde{\beta})\\, with the operator on the left, read as each operator \\\frac{\partial}{\partial \beta\_{i}}\\ applied to \\f\\ rather than as a matrix product (see [Remark 2](#rem-row-derivative-shape)).
+> *Remark 1* (Other notation for the row-vector derivative). Some sources write the same row vector as \\\frac{\partial}{\partial {\underset{\sim}{\beta}}^{\top}} f(\underset{\sim}{\beta})\\, with the operator on the left, read as each operator \\\frac{\partial}{\partial \beta\_{i}}\\ applied to \\f\\ rather than as a matrix product (see [Remark 2](#rem-row-derivative-shape)).
 
 > **NOTE:**
 >
-> *Remark 2* (Which side the operator goes on). Read \\\frac{\partial}{\partial \tilde{\beta}}\\ as a \\p \times 1\\ column vector of operators with entries \\\frac{\partial}{\partial \beta\_{1}}, \ldots, \frac{\partial}{\partial \beta\_{p}}\\, and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}}\\ as the \\1 \times p\\ row vector of operators with the same entries. Writing either one next to \\f\\ can be read in two ways:
+> *Remark 2* (Which side the operator goes on). Read \\\frac{\partial}{\partial \underset{\sim}{\beta}}\\ as a \\p \times 1\\ column vector of operators with entries \\\frac{\partial}{\partial \beta\_{1}}, \ldots, \frac{\partial}{\partial \beta\_{p}}\\, and \\\frac{\partial}{\partial {\underset{\sim}{\beta}}^{\top}}\\ as the \\1 \times p\\ row vector of operators with the same entries. Writing either one next to \\f\\ can be read in two ways:
 >
-> - **As a matrix product,** with \\f\\ a \\1 \times 1\\ matrix, under the shape rule of [matrix multiplication](linear-algebra-matrices.llms.md#def-matrix-mult). The column-vector operator works on the left: \\\frac{\partial}{\partial \tilde{\beta}} f\\ is \\(p \times 1)(1 \times 1)\\, a \\p \times 1\\ column vector ([Definition 2](#def-vector-derivative)). The row-vector operator does not: \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ is \\(1 \times p)(1 \times 1)\\, whose inner dimensions \\p\\ and \\1\\ do not match when \\p \> 1\\. For the shape rule to give the \\1 \times p\\ row vector, the operator would have to go on the right of \\f\\, as in \\(1 \times 1)(1 \times p)\\, which changes its meaning (see below).
-> - **As a scalar multiple,** with \\f\\ a scalar, the way \\c \tilde{x}\\ is read in [scalar multiplication](linear-algebra-matrices.llms.md#def-scalar-mult), which has no shape rule: each entry of the operator vector is applied to \\f\\. Then both \\\frac{\partial}{\partial \tilde{\beta}} f\\ and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ work with the operator on the left.
+> - **As a matrix product,** with \\f\\ a \\1 \times 1\\ matrix, under the shape rule of [matrix multiplication](linear-algebra-matrices.llms.md#def-matrix-mult). The column-vector operator works on the left: \\\frac{\partial}{\partial \underset{\sim}{\beta}} f\\ is \\(p \times 1)(1 \times 1)\\, a \\p \times 1\\ column vector ([Definition 2](#def-vector-derivative)). The row-vector operator does not: \\\frac{\partial}{\partial {\underset{\sim}{\beta}}^{\top}} f\\ is \\(1 \times p)(1 \times 1)\\, whose inner dimensions \\p\\ and \\1\\ do not match when \\p \> 1\\. For the shape rule to give the \\1 \times p\\ row vector, the operator would have to go on the right of \\f\\, as in \\(1 \times 1)(1 \times p)\\, which changes its meaning (see below).
+> - **As a scalar multiple,** with \\f\\ a scalar, the way \\c \underset{\sim}{x}\\ is read in [scalar multiplication](linear-algebra-matrices.llms.md#def-scalar-mult), which has no shape rule: each entry of the operator vector is applied to \\f\\. Then both \\\frac{\partial}{\partial \underset{\sim}{\beta}} f\\ and \\\frac{\partial}{\partial {\underset{\sim}{\beta}}^{\top}} f\\ work with the operator on the left.
 >
-> The fraction \\\frac{\partial f}{\partial {\tilde{\beta}}^{\top}}\\ of [Equation 1](#eq-row-vector-derivative) means the same thing under both readings: the transpose in the denominator says the result is a row vector, without making the derivative a product.
+> The fraction \\\frac{\partial f}{\partial {\underset{\sim}{\beta}}^{\top}}\\ of [Equation 1](#eq-row-vector-derivative) means the same thing under both readings: the transpose in the denominator says the result is a row vector, without making the derivative a product.
 >
 > Treating the operators as vectors is sound for checking shapes, but “multiplying” an operator by a function means applying the operator to it, so two rules of ordinary matrix algebra do not carry over: scalars commute with matrices, and products can be regrouped.
 >
-> - **Scalars do not commute with operators.** \\\frac{\partial}{\partial \beta\_{i}} f\\ is a function, but \\f \frac{\partial}{\partial \beta\_{i}}\\ is still an unapplied operator, waiting for something to act on. So, unlike \\c \tilde{x}= \tilde{x}c\\, the operator cannot move to the other side of \\f\\ without changing the meaning. Putting the row-vector operator on the right of \\f\\ gives the row-vector derivative only under the convention that it acts on the factor to its left.
-> - **Products cannot be regrouped.** An operator acts on the whole product to its right, so by the [product rule](calculus-derivatives.llms.md#thm-product-rule), \\\frac{\partial}{\partial \beta\_{i}} (f g) \ne \mathopen{}\left(\frac{\partial}{\partial \beta\_{i}} f\right)\mathclose{} g\\ in general. For example, with \\f(\tilde{\beta}) = \beta\_{1}\\, \\\frac{\partial}{\partial \beta\_{1}} (f f) = 2 \beta\_{1}\\ but \\\mathopen{}\left(\frac{\partial}{\partial \beta\_{1}} f\right)\mathclose{} f = \beta\_{1}\\.
+> - **Scalars do not commute with operators.** \\\frac{\partial}{\partial \beta\_{i}} f\\ is a function, but \\f \frac{\partial}{\partial \beta\_{i}}\\ is still an unapplied operator, waiting for something to act on. So, unlike \\c \underset{\sim}{x}= \underset{\sim}{x}c\\, the operator cannot move to the other side of \\f\\ without changing the meaning. Putting the row-vector operator on the right of \\f\\ gives the row-vector derivative only under the convention that it acts on the factor to its left.
+> - **Products cannot be regrouped.** An operator acts on the whole product to its right, so by the [product rule](calculus-derivatives.llms.md#thm-product-rule), \\\frac{\partial}{\partial \beta\_{i}} (f g) \ne \mathopen{}\left(\frac{\partial}{\partial \beta\_{i}} f\right)\mathclose{} g\\ in general. For example, with \\f(\underset{\sim}{\beta}) = \beta\_{1}\\, \\\frac{\partial}{\partial \beta\_{1}} (f f) = 2 \beta\_{1}\\ but \\\mathopen{}\left(\frac{\partial}{\partial \beta\_{1}} f\right)\mathclose{} f = \beta\_{1}\\.
 
 > **NOTE:**
 >
-> **Theorem 2 (Row and column derivatives are transposes)** \\\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = {\mathopen{}\left(\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}}\right)\mathclose{}}^{\top} \tag{2}\\
+> **Theorem 2 (Row and column derivatives are transposes)** \\\frac{\partial f(\underset{\sim}{\beta})}{\partial {\underset{\sim}{\beta}}^{\top}} = {\mathopen{}\left(\frac{\partial f(\underset{\sim}{\beta})}{\partial \underset{\sim}{\beta}}\right)\mathclose{}}^{\top} \tag{2}\\
 >
-> \\\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}} = {\mathopen{}\left(\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}}\right)\mathclose{}}^{\top} \tag{3}\\
+> \\\frac{\partial f(\underset{\sim}{\beta})}{\partial \underset{\sim}{\beta}} = {\mathopen{}\left(\frac{\partial f(\underset{\sim}{\beta})}{\partial {\underset{\sim}{\beta}}^{\top}}\right)\mathclose{}}^{\top} \tag{3}\\
 
 > **NOTE:**
 >
-> *Proof*. By [Definition 2](#def-vector-derivative) and [Definition 5](#def-row-vector-derivative), entry \\j\\ of both \\\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}}\\ and \\\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}}\\ is \\\frac{\partial}{\partial \beta\_{j}} f(\tilde{\beta})\\; the first is a \\p \times 1\\ column vector and the second a \\1 \times p\\ row vector with the same entries in the same order, so each is the transpose of the other.
+> *Proof*. By [Definition 2](#def-vector-derivative) and [Definition 5](#def-row-vector-derivative), entry \\j\\ of both \\\frac{\partial f(\underset{\sim}{\beta})}{\partial \underset{\sim}{\beta}}\\ and \\\frac{\partial f(\underset{\sim}{\beta})}{\partial {\underset{\sim}{\beta}}^{\top}}\\ is \\\frac{\partial}{\partial \beta\_{j}} f(\underset{\sim}{\beta})\\; the first is a \\p \times 1\\ column vector and the second a \\1 \times p\\ row vector with the same entries in the same order, so each is the transpose of the other.
 
 > **NOTE:**
 >
-> **Example 5 (Row and column derivatives of a linear function)** For \\f(\tilde{\beta}) = 3\beta\_{1} + 5\beta\_{2}\\:
+> **Example 5 (Row and column derivatives of a linear function)** For \\f(\underset{\sim}{\beta}) = 3\beta\_{1} + 5\beta\_{2}\\:
 >
-> \\ \frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}} = \begin{bmatrix}3 \\ 5\end{bmatrix}, \qquad \frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = \begin{bmatrix}3 & 5\end{bmatrix}, \\
+> \\ \frac{\partial f(\underset{\sim}{\beta})}{\partial \underset{\sim}{\beta}} = \begin{bmatrix}3 \\ 5\end{bmatrix}, \qquad \frac{\partial f(\underset{\sim}{\beta})}{\partial {\underset{\sim}{\beta}}^{\top}} = \begin{bmatrix}3 & 5\end{bmatrix}, \\
 >
 > and each is the transpose of the other.
 
@@ -387,39 +387,39 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > **Definition 6 (Derivative of a vector-valued function)** If
 >
-> \\ \begin{aligned} \tilde{y}&= \tilde{y}(\tilde{\beta}) \\ &= {(y_1, \ldots, y_q)}^{\top} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{y}&= \underset{\sim}{y}(\underset{\sim}{\beta}) \\ &= {(y_1, \ldots, y_q)}^{\top} \end{aligned} \\
 >
-> is a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\, its **derivative with respect to** \\\tilde{\beta}\\ is the \\p \times q\\ matrix whose \\(i, j)\\ entry is
+> is a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\underset{\sim}{\beta}\\, its **derivative with respect to** \\\underset{\sim}{\beta}\\ is the \\p \times q\\ matrix whose \\(i, j)\\ entry is
 >
-> \\ \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\right\]\mathclose{}\_{ij} \stackrel{\text{def}}{=}\frac{\partial}{\partial \beta\_{i}} y_j, \qquad i = 1, \ldots, p, \quad j = 1, \ldots, q. \\
+> \\ \mathopen{}\left\[\frac{\partial}{\partial \underset{\sim}{\beta}} {\underset{\sim}{y}}^{\top}\right\]\mathclose{}\_{ij} \stackrel{\text{def}}{=}\frac{\partial}{\partial \beta\_{i}} y_j, \qquad i = 1, \ldots, p, \quad j = 1, \ldots, q. \\
 >
-> Both \\\frac{\partial}{\partial \tilde{\beta}} \tilde{y}\\ and \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\\ denote this \\p \times q\\ matrix.
+> Both \\\frac{\partial}{\partial \underset{\sim}{\beta}} \underset{\sim}{y}\\ and \\\frac{\partial}{\partial \underset{\sim}{\beta}} {\underset{\sim}{y}}^{\top}\\ denote this \\p \times q\\ matrix.
 
 > **NOTE:**
 >
-> **Definition 7 (Denominator layout)** Writing derivatives as in [Definition 6](#def-vector-valued-derivative) is the **denominator layout**, which these notes use throughout: rows index the entries of \\\tilde{\beta}\\ (the denominator) and columns index the entries of \\\tilde{y}\\ (the numerator), so column \\j\\ is the vector derivative \\\frac{\partial}{\partial \tilde{\beta}} y_j\\ ([Definition 2](#def-vector-derivative)).
+> **Definition 7 (Denominator layout)** Writing derivatives as in [Definition 6](#def-vector-valued-derivative) is the **denominator layout**, which these notes use throughout: rows index the entries of \\\underset{\sim}{\beta}\\ (the denominator) and columns index the entries of \\\underset{\sim}{y}\\ (the numerator), so column \\j\\ is the vector derivative \\\frac{\partial}{\partial \underset{\sim}{\beta}} y_j\\ ([Definition 2](#def-vector-derivative)).
 
 > **NOTE:**
 >
-> **Example 6 (Differentiating a \\3 \times 1\\ function of a \\2 \times 1\\ vector)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ (\\p = 2\\) and \\\tilde{y}(\tilde{\beta}) = {(\beta\_{1}^2,\\ \beta\_{1}\beta\_{2},\\ 3\beta\_{2})}^{\top}\\ (\\q = 3\\). Then
+> **Example 6 (Differentiating a \\3 \times 1\\ function of a \\2 \times 1\\ vector)** Let \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ (\\p = 2\\) and \\\underset{\sim}{y}(\underset{\sim}{\beta}) = {(\beta\_{1}^2,\\ \beta\_{1}\beta\_{2},\\ 3\beta\_{2})}^{\top}\\ (\\q = 3\\). Then
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}}\_{2 \times 3} &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} \beta\_{1}^2 & \frac{\partial}{\partial \beta\_{1}} \beta\_{1}\beta\_{2} & \frac{\partial}{\partial \beta\_{1}} 3\beta\_{2} \\ \frac{\partial}{\partial \beta\_{2}} \beta\_{1}^2 & \frac{\partial}{\partial \beta\_{2}} \beta\_{1}\beta\_{2} & \frac{\partial}{\partial \beta\_{2}} 3\beta\_{2} \end{bmatrix} \\ &= \begin{bmatrix} 2\beta\_{1} & \beta\_{2} & 0 \\ 0 & \beta\_{1} & 3 \end{bmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} {\underset{\sim}{y}}^{\top}}\_{2 \times 3} &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} \beta\_{1}^2 & \frac{\partial}{\partial \beta\_{1}} \beta\_{1}\beta\_{2} & \frac{\partial}{\partial \beta\_{1}} 3\beta\_{2} \\ \frac{\partial}{\partial \beta\_{2}} \beta\_{1}^2 & \frac{\partial}{\partial \beta\_{2}} \beta\_{1}\beta\_{2} & \frac{\partial}{\partial \beta\_{2}} 3\beta\_{2} \end{bmatrix} \\ &= \begin{bmatrix} 2\beta\_{1} & \beta\_{2} & 0 \\ 0 & \beta\_{1} & 3 \end{bmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
 > **Definition 8 (Jacobian matrix)** Let
 >
-> \\ \begin{aligned} \tilde{y}&= \tilde{y}(\tilde{\beta}) \\ &= {(y_1, \ldots, y_q)}^{\top} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{y}&= \underset{\sim}{y}(\underset{\sim}{\beta}) \\ &= {(y_1, \ldots, y_q)}^{\top} \end{aligned} \\
 >
-> be a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\. The **Jacobian matrix** of \\\tilde{y}\\ is the \\q \times p\\ matrix whose \\(j, i)\\ entry is \\\frac{\partial}{\partial \beta\_{i}} y_j\\, for \\j = 1, \ldots, q\\ and \\i = 1, \ldots, p\\. It is the transpose of the derivative \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\\ of [Definition 6](#def-vector-valued-derivative).
+> be a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\underset{\sim}{\beta}\\. The **Jacobian matrix** of \\\underset{\sim}{y}\\ is the \\q \times p\\ matrix whose \\(j, i)\\ entry is \\\frac{\partial}{\partial \beta\_{i}} y_j\\, for \\j = 1, \ldots, q\\ and \\i = 1, \ldots, p\\. It is the transpose of the derivative \\\frac{\partial}{\partial \underset{\sim}{\beta}} {\underset{\sim}{y}}^{\top}\\ of [Definition 6](#def-vector-valued-derivative).
 
 > **NOTE:**
 >
-> **Definition 9 (Numerator layout)** Writing derivatives as in [Definition 8](#def-jacobian-matrix), with rows indexing the entries of \\\tilde{y}\\ (the numerator) and columns indexing the entries of \\\tilde{\beta}\\ (the denominator), is the **numerator layout**.
+> **Definition 9 (Numerator layout)** Writing derivatives as in [Definition 8](#def-jacobian-matrix), with rows indexing the entries of \\\underset{\sim}{y}\\ (the numerator) and columns indexing the entries of \\\underset{\sim}{\beta}\\ (the denominator), is the **numerator layout**.
 
 > **NOTE:**
 >
-> **Example 7 (The Jacobian matrix of a \\3 \times 1\\ function of a \\2 \times 1\\ vector)** For \\\tilde{y}(\tilde{\beta}) = {(\beta\_{1}^2,\\ \beta\_{1}\beta\_{2},\\ 3\beta\_{2})}^{\top}\\ of [Example 6](#exm-vector-valued-derivative), the Jacobian matrix is the \\3 \times 2\\ matrix
+> **Example 7 (The Jacobian matrix of a \\3 \times 1\\ function of a \\2 \times 1\\ vector)** For \\\underset{\sim}{y}(\underset{\sim}{\beta}) = {(\beta\_{1}^2,\\ \beta\_{1}\beta\_{2},\\ 3\beta\_{2})}^{\top}\\ of [Example 6](#exm-vector-valued-derivative), the Jacobian matrix is the \\3 \times 2\\ matrix
 >
 > \\ \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} \beta\_{1}^2 & \frac{\partial}{\partial \beta\_{2}} \beta\_{1}^2 \\ \frac{\partial}{\partial \beta\_{1}} \beta\_{1}\beta\_{2} & \frac{\partial}{\partial \beta\_{2}} \beta\_{1}\beta\_{2} \\ \frac{\partial}{\partial \beta\_{1}} 3\beta\_{2} & \frac{\partial}{\partial \beta\_{2}} 3\beta\_{2} \end{bmatrix} = \begin{bmatrix} 2\beta\_{1} & 0 \\ \beta\_{2} & \beta\_{1} \\ 0 & 3 \end{bmatrix}, \\
 >
@@ -431,25 +431,25 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Definition 10 (Constant)** A \\q \times 1\\ vector \\\tilde{x}\\ is **constant with respect to** the \\p \times 1\\ vector \\\tilde{\beta}\\ if its derivative ([Definition 6](#def-vector-valued-derivative)) is zero:
+> **Definition 10 (Constant)** A \\q \times 1\\ vector \\\underset{\sim}{x}\\ is **constant with respect to** the \\p \times 1\\ vector \\\underset{\sim}{\beta}\\ if its derivative ([Definition 6](#def-vector-valued-derivative)) is zero:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{p \times q} = \underbrace{\mathbf{0}}\_{p \times q} \\
+> \\ \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} {\underset{\sim}{x}}^{\top}}\_{p \times q} = \underbrace{\mathbf{0}}\_{p \times q} \\
 
 > **NOTE:**
 >
-> **Example 8 (A constant vector)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ and \\\tilde{x}= {(3, 5)}^{\top}\\, so \\x_1 = 3\\ and \\x_2 = 5\\ do not depend on \\\tilde{\beta}\\. Expanding \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}\\ into its matrix of scalar partial derivatives ([Definition 6](#def-vector-valued-derivative)) and evaluating each entry:
+> **Example 8 (A constant vector)** Let \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ and \\\underset{\sim}{x}= {(3, 5)}^{\top}\\, so \\x_1 = 3\\ and \\x_2 = 5\\ do not depend on \\\underset{\sim}{\beta}\\. Expanding \\\frac{\partial}{\partial \underset{\sim}{\beta}} {\underset{\sim}{x}}^{\top}\\ into its matrix of scalar partial derivatives ([Definition 6](#def-vector-valued-derivative)) and evaluating each entry:
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{2 \times 2} &= \frac{\partial}{\partial \tilde{\beta}} \begin{bmatrix}x_1 & x_2\end{bmatrix} \\ &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} x_1 & \frac{\partial}{\partial \beta\_{1}} x_2 \\ \frac{\partial}{\partial \beta\_{2}} x_1 & \frac{\partial}{\partial \beta\_{2}} x_2 \end{bmatrix} \\ &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} 3 & \frac{\partial}{\partial \beta\_{1}} 5 \\ \frac{\partial}{\partial \beta\_{2}} 3 & \frac{\partial}{\partial \beta\_{2}} 5 \end{bmatrix} \\ &= \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix} \\ &= \underbrace{\mathbf{0}}\_{2 \times 2} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} {\underset{\sim}{x}}^{\top}}\_{2 \times 2} &= \frac{\partial}{\partial \underset{\sim}{\beta}} \begin{bmatrix}x_1 & x_2\end{bmatrix} \\ &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} x_1 & \frac{\partial}{\partial \beta\_{1}} x_2 \\ \frac{\partial}{\partial \beta\_{2}} x_1 & \frac{\partial}{\partial \beta\_{2}} x_2 \end{bmatrix} \\ &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} 3 & \frac{\partial}{\partial \beta\_{1}} 5 \\ \frac{\partial}{\partial \beta\_{2}} 3 & \frac{\partial}{\partial \beta\_{2}} 5 \end{bmatrix} \\ &= \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix} \\ &= \underbrace{\mathbf{0}}\_{2 \times 2} \end{aligned} \\
 >
-> Every entry is the derivative of a constant, so \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top} = \underbrace{\mathbf{0}}\_{2 \times 2}\\ and \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\ ([Definition 10](#def-constant-wrt-vector)).
+> Every entry is the derivative of a constant, so \\\frac{\partial}{\partial \underset{\sim}{\beta}} {\underset{\sim}{x}}^{\top} = \underbrace{\mathbf{0}}\_{2 \times 2}\\ and \\\underset{\sim}{x}\\ is constant with respect to \\\underset{\sim}{\beta}\\ ([Definition 10](#def-constant-wrt-vector)).
 
 > **NOTE:**
 >
-> **Example 9 (A vector that is not constant)** With the same \\\tilde{\beta}\\, let \\\tilde{x}= {(\beta\_{1}, 3)}^{\top}\\. Then
+> **Example 9 (A vector that is not constant)** With the same \\\underset{\sim}{\beta}\\, let \\\underset{\sim}{x}= {(\beta\_{1}, 3)}^{\top}\\. Then
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{2 \times 2} &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} \beta\_{1} & \frac{\partial}{\partial \beta\_{1}} 3 \\ \frac{\partial}{\partial \beta\_{2}} \beta\_{1} & \frac{\partial}{\partial \beta\_{2}} 3 \end{bmatrix} \\ &= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} {\underset{\sim}{x}}^{\top}}\_{2 \times 2} &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} \beta\_{1} & \frac{\partial}{\partial \beta\_{1}} 3 \\ \frac{\partial}{\partial \beta\_{2}} \beta\_{1} & \frac{\partial}{\partial \beta\_{2}} 3 \end{bmatrix} \\ &= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \end{aligned} \\
 >
-> which is not \\\underbrace{\mathbf{0}}\_{2 \times 2}\\, so this \\\tilde{x}\\ is not constant with respect to \\\tilde{\beta}\\: its first entry changes when \\\beta\_{1}\\ does.
+> which is not \\\underbrace{\mathbf{0}}\_{2 \times 2}\\, so this \\\underset{\sim}{x}\\ is not constant with respect to \\\underset{\sim}{\beta}\\: its first entry changes when \\\beta\_{1}\\ does.
 
 > **NOTE:**
 >
@@ -471,129 +471,129 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 3 (Derivative of a dot product)** If \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\, then:
+> **Theorem 3 (Derivative of a dot product)** If \\\underset{\sim}{x}\\ is constant with respect to \\\underset{\sim}{\beta}\\, then:
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{x}\cdot \tilde{\beta})}\_{p \times 1} &= \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta}\cdot \tilde{x})}\_{p \times 1} \\ &= \underbrace{\tilde{x}}\_{p \times 1} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} (\underset{\sim}{x}\cdot \underset{\sim}{\beta})}\_{p \times 1} &= \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} (\underset{\sim}{\beta}\cdot \underset{\sim}{x})}\_{p \times 1} \\ &= \underbrace{\underset{\sim}{x}}\_{p \times 1} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}} (\tilde{x}\cdot \tilde{\beta}) &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}(x_1\beta\_{1}+x_2\beta\_{2} +...+x_p \beta\_{p} ) \\ \frac{\partial}{\partial \beta\_{2}}(x_1\beta\_{1}+x_2\beta\_{2} +...+x_p \beta\_{p} ) \\ \vdots \\ \frac{\partial}{\partial \beta\_{p}}(x_1\beta\_{1}+x_2\beta\_{2} +...+x_p \beta\_{p} ) \end{bmatrix} \\ &= \begin{bmatrix} x\_{1} \\ x\_{2} \\ \vdots \\ x\_{p} \end{bmatrix} \\ &= \tilde{x} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \frac{\partial}{\partial \underset{\sim}{\beta}} (\underset{\sim}{x}\cdot \underset{\sim}{\beta}) &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}(x_1\beta\_{1}+x_2\beta\_{2} +...+x_p \beta\_{p} ) \\ \frac{\partial}{\partial \beta\_{2}}(x_1\beta\_{1}+x_2\beta\_{2} +...+x_p \beta\_{p} ) \\ \vdots \\ \frac{\partial}{\partial \beta\_{p}}(x_1\beta\_{1}+x_2\beta\_{2} +...+x_p \beta\_{p} ) \end{bmatrix} \\ &= \begin{bmatrix} x\_{1} \\ x\_{2} \\ \vdots \\ x\_{p} \end{bmatrix} \\ &= \underset{\sim}{x} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 10 (Derivative of a dot product)** Let \\\tilde{x}= {(3, 5)}^{\top}\\ (constant with respect to \\\tilde{\beta}\\; see [Example 8](#exm-constant-wrt-vector)) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\tilde{x}\cdot \tilde{\beta}= 3\beta\_{1} + 5\beta\_{2}\\, and by [Theorem 3](#thm-deriv-lincom):
+> **Example 10 (Derivative of a dot product)** Let \\\underset{\sim}{x}= {(3, 5)}^{\top}\\ (constant with respect to \\\underset{\sim}{\beta}\\; see [Example 8](#exm-constant-wrt-vector)) and \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\underset{\sim}{x}\cdot \underset{\sim}{\beta}= 3\beta\_{1} + 5\beta\_{2}\\, and by [Theorem 3](#thm-deriv-lincom):
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta})}\_{2 \times 1} &= \underbrace{\tilde{x}}\_{2 \times 1} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}(\underset{\sim}{x}\cdot \underset{\sim}{\beta})}\_{2 \times 1} &= \underbrace{\underset{\sim}{x}}\_{2 \times 1} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
 >
 > Verifying entry-wise:
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}(3\beta\_{1} + 5\beta\_{2}) &= \begin{pmatrix} \frac{\partial}{\partial \beta\_{1}}(3\beta\_{1} + 5\beta\_{2}) \\ \frac{\partial}{\partial \beta\_{2}}(3\beta\_{1} + 5\beta\_{2}) \end{pmatrix} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \underset{\sim}{\beta}}(3\beta\_{1} + 5\beta\_{2}) &= \begin{pmatrix} \frac{\partial}{\partial \beta\_{1}}(3\beta\_{1} + 5\beta\_{2}) \\ \frac{\partial}{\partial \beta\_{2}}(3\beta\_{1} + 5\beta\_{2}) \end{pmatrix} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
 >
 > Both methods agree.
 
 > **NOTE:**
 >
-> **Theorem 4 (Product rule for dot-products)** If \\\tilde{a} = \tilde{a}(\tilde{x})\\ and \\\tilde{b} = \tilde{b}(\tilde{x})\\ are differentiable \\p \times 1\\ vector functions of \\\tilde{x}\\, then:
+> **Theorem 4 (Product rule for dot-products)** If \\\underset{\sim}{a} = \underset{\sim}{a}(\underset{\sim}{x})\\ and \\\underset{\sim}{b} = \underset{\sim}{b}(\underset{\sim}{x})\\ are differentiable \\p \times 1\\ vector functions of \\\underset{\sim}{x}\\, then:
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \underbrace{\tilde{x}}\_{p \times 1}} \underbrace{\tilde{a}}\_{p \times 1} \cdot \underbrace{\tilde{b}}\_{p \times 1} &= \mathopen{}\left( \frac{\partial}{\partial \underbrace{\tilde{x}}\_{p \times 1}} \underbrace{{\tilde{a}}^{\top}}\_{1 \times p} \right)\mathclose{} \underbrace{\tilde{b}}\_{p \times 1} + \mathopen{}\left( \frac{\partial}{\partial \underbrace{\tilde{x}}\_{p \times 1}} \underbrace{{\tilde{b}}^{\top}}\_{1 \times p} \right)\mathclose{} \underbrace{\tilde{a}}\_{p \times 1} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \underbrace{\underset{\sim}{x}}\_{p \times 1}} \underbrace{\underset{\sim}{a}}\_{p \times 1} \cdot \underbrace{\underset{\sim}{b}}\_{p \times 1} &= \mathopen{}\left( \frac{\partial}{\partial \underbrace{\underset{\sim}{x}}\_{p \times 1}} \underbrace{{\underset{\sim}{a}}^{\top}}\_{1 \times p} \right)\mathclose{} \underbrace{\underset{\sim}{b}}\_{p \times 1} + \mathopen{}\left( \frac{\partial}{\partial \underbrace{\underset{\sim}{x}}\_{p \times 1}} \underbrace{{\underset{\sim}{b}}^{\top}}\_{1 \times p} \right)\mathclose{} \underbrace{\underset{\sim}{a}}\_{p \times 1} \end{aligned} \\
 
 > **NOTE:**
 >
 > *Proof*. Entry-wise, for \\i = 1, \ldots, p\\:
 >
-> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{x}} (\tilde{a} \cdot \tilde{b})\right\]\mathclose{}\_i &= \frac{\partial}{\partial x_i} \sum\_{k=1}^{p} a_k b_k \\ &= \sum\_{k=1}^{p} \mathopen{}\left(b_k \frac{\partial}{\partial x_i} a_k + a_k \frac{\partial}{\partial x_i} b_k\right)\mathclose{} \\ &= \mathopen{}\left\[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{a}}^{\top}\right)\mathclose{}\tilde{b}\right\]\mathclose{}\_i + \mathopen{}\left\[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{b}}^{\top}\right)\mathclose{}\tilde{a}\right\]\mathclose{}\_i \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \underset{\sim}{x}} (\underset{\sim}{a} \cdot \underset{\sim}{b})\right\]\mathclose{}\_i &= \frac{\partial}{\partial x_i} \sum\_{k=1}^{p} a_k b_k \\ &= \sum\_{k=1}^{p} \mathopen{}\left(b_k \frac{\partial}{\partial x_i} a_k + a_k \frac{\partial}{\partial x_i} b_k\right)\mathclose{} \\ &= \mathopen{}\left\[\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{x}} {\underset{\sim}{a}}^{\top}\right)\mathclose{}\underset{\sim}{b}\right\]\mathclose{}\_i + \mathopen{}\left\[\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{x}} {\underset{\sim}{b}}^{\top}\right)\mathclose{}\underset{\sim}{a}\right\]\mathclose{}\_i \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 11 (Example of the dot-product rule)** Apply [Theorem 4](#thm-deriv-dot-product) with the vector \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ in the role of \\\tilde{x}\\. Let \\\tilde{a}(\tilde{\beta}) = {(\beta\_{1}, \beta\_{1}\beta\_{2})}^{\top}\\ and \\\tilde{b}(\tilde{\beta}) = {(\beta\_{2}, \beta\_{1})}^{\top}\\. Then:
+> **Example 11 (Example of the dot-product rule)** Apply [Theorem 4](#thm-deriv-dot-product) with the vector \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ in the role of \\\underset{\sim}{x}\\. Let \\\underset{\sim}{a}(\underset{\sim}{\beta}) = {(\beta\_{1}, \beta\_{1}\beta\_{2})}^{\top}\\ and \\\underset{\sim}{b}(\underset{\sim}{\beta}) = {(\beta\_{2}, \beta\_{1})}^{\top}\\. Then:
 >
-> \\ \begin{aligned} \tilde{a} \cdot \tilde{b} &= \beta\_{1} \cdot \beta\_{2} + \beta\_{1}\beta\_{2} \cdot \beta\_{1} \\ &= \beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{a} \cdot \underset{\sim}{b} &= \beta\_{1} \cdot \beta\_{2} + \beta\_{1}\beta\_{2} \cdot \beta\_{1} \\ &= \beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2} \end{aligned} \\
 >
 > By direct calculation:
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{a} \cdot \tilde{b})}\_{2 \times 1} &= \frac{\partial}{\partial \tilde{\beta}}(\beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2}) \\ &= \begin{pmatrix} \beta\_{2} + 2\beta\_{1}\beta\_{2} \\ \beta\_{1} + \beta\_{1}^2 \end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}(\underset{\sim}{a} \cdot \underset{\sim}{b})}\_{2 \times 1} &= \frac{\partial}{\partial \underset{\sim}{\beta}}(\beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2}) \\ &= \begin{pmatrix} \beta\_{2} + 2\beta\_{1}\beta\_{2} \\ \beta\_{1} + \beta\_{1}^2 \end{pmatrix} \end{aligned} \\
 >
-> By the product rule ([Theorem 4](#thm-deriv-dot-product)), using \\\underbrace{\frac{\partial}{\partial \tilde{\beta}}{\tilde{a}}^{\top}}\_{2 \times 2} = \begin{pmatrix}1 & \beta\_{2} \\ 0 & \beta\_{1}\end{pmatrix}\\ and \\\underbrace{\frac{\partial}{\partial \tilde{\beta}}{\tilde{b}}^{\top}}\_{2 \times 2} = \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\\:
+> By the product rule ([Theorem 4](#thm-deriv-dot-product)), using \\\underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}{\underset{\sim}{a}}^{\top}}\_{2 \times 2} = \begin{pmatrix}1 & \beta\_{2} \\ 0 & \beta\_{1}\end{pmatrix}\\ and \\\underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}{\underset{\sim}{b}}^{\top}}\_{2 \times 2} = \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\\:
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{a} \cdot \tilde{b})}\_{2 \times 1} &= \underbrace{\begin{pmatrix}1 & \beta\_{2} \\ 0 & \beta\_{1}\end{pmatrix}}\_{2 \times 2} \underbrace{\begin{pmatrix}\beta\_{2} \\ \beta\_{1}\end{pmatrix}}\_{2 \times 1} + \underbrace{\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}}\_{2 \times 2} \underbrace{\begin{pmatrix}\beta\_{1} \\ \beta\_{1}\beta\_{2}\end{pmatrix}}\_{2 \times 1} \\ &= \begin{pmatrix}\beta\_{2} + \beta\_{1}\beta\_{2} \\ \beta\_{1}^2\end{pmatrix} + \begin{pmatrix}\beta\_{1}\beta\_{2} \\ \beta\_{1}\end{pmatrix} \\ &= \begin{pmatrix}\beta\_{2} + 2\beta\_{1}\beta\_{2} \\ \beta\_{1}^2 + \beta\_{1}\end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}(\underset{\sim}{a} \cdot \underset{\sim}{b})}\_{2 \times 1} &= \underbrace{\begin{pmatrix}1 & \beta\_{2} \\ 0 & \beta\_{1}\end{pmatrix}}\_{2 \times 2} \underbrace{\begin{pmatrix}\beta\_{2} \\ \beta\_{1}\end{pmatrix}}\_{2 \times 1} + \underbrace{\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}}\_{2 \times 2} \underbrace{\begin{pmatrix}\beta\_{1} \\ \beta\_{1}\beta\_{2}\end{pmatrix}}\_{2 \times 1} \\ &= \begin{pmatrix}\beta\_{2} + \beta\_{1}\beta\_{2} \\ \beta\_{1}^2\end{pmatrix} + \begin{pmatrix}\beta\_{1}\beta\_{2} \\ \beta\_{1}\end{pmatrix} \\ &= \begin{pmatrix}\beta\_{2} + 2\beta\_{1}\beta\_{2} \\ \beta\_{1}^2 + \beta\_{1}\end{pmatrix} \end{aligned} \\
 >
 > Both methods agree.
 
 > **NOTE:**
 >
-> **Theorem 5 (Derivative of a linear map)** If \\\mathbf{A}\\ is an \\m \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
+> **Theorem 5 (Derivative of a linear map)** If \\\mathbf{A}\\ is an \\m \times p\\ matrix that is constant with respect to \\\underset{\sim}{\beta}\\, then:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta})}\_{p \times m} = \underbrace{{\mathbf{A}}^{\top}}\_{p \times m} \\
+> \\ \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} (\mathbf{A}\underset{\sim}{\beta})}\_{p \times m} = \underbrace{{\mathbf{A}}^{\top}}\_{p \times m} \\
 
 > **NOTE:**
 >
-> *Proof*. For entry \\(i,j)\\, where row \\i\\ indexes the denominator \\\tilde{\beta}\\ (see [Definition 6](#def-vector-valued-derivative)) and column \\j\\ indexes the numerator \\\mathbf{A}\tilde{\beta}\\:
+> *Proof*. For entry \\(i,j)\\, where row \\i\\ indexes the denominator \\\underset{\sim}{\beta}\\ (see [Definition 6](#def-vector-valued-derivative)) and column \\j\\ indexes the numerator \\\mathbf{A}\underset{\sim}{\beta}\\:
 >
-> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta})\right\]\mathclose{}\_{ij} &= \frac{\partial}{\partial \beta\_{i}} (\mathbf{A}\tilde{\beta})\_j \\ &= \frac{\partial}{\partial \beta\_{i}} \sum\_{k=1}^{p} a\_{jk} \beta\_{k} \\ &= a\_{ji} \\ &= \mathopen{}\left\[{\mathbf{A}}^{\top}\right\]\mathclose{}\_{ij} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \underset{\sim}{\beta}} (\mathbf{A}\underset{\sim}{\beta})\right\]\mathclose{}\_{ij} &= \frac{\partial}{\partial \beta\_{i}} (\mathbf{A}\underset{\sim}{\beta})\_j \\ &= \frac{\partial}{\partial \beta\_{i}} \sum\_{k=1}^{p} a\_{jk} \beta\_{k} \\ &= a\_{ji} \\ &= \mathopen{}\left\[{\mathbf{A}}^{\top}\right\]\mathclose{}\_{ij} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 12 (Derivative of a linear map)** Let \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ (\\1 \times 2\\) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\mathbf{A}\tilde{\beta}= 2\beta\_{1} + 3\beta\_{2}\\, and by [Theorem 5](#thm-deriv-linear-map):
+> **Example 12 (Derivative of a linear map)** Let \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ (\\1 \times 2\\) and \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\mathbf{A}\underset{\sim}{\beta}= 2\beta\_{1} + 3\beta\_{2}\\, and by [Theorem 5](#thm-deriv-linear-map):
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\mathbf{A}\tilde{\beta})}\_{2 \times 1} &= \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 1} \\ &= \begin{pmatrix} 2 \\ 3 \end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}(\mathbf{A}\underset{\sim}{\beta})}\_{2 \times 1} &= \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 1} \\ &= \begin{pmatrix} 2 \\ 3 \end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Theorem 6 (Vector-derivative of a matrix-vector product)** If \\\mathbf{A}\\ is an \\m \times q\\ matrix that is constant with respect to \\\tilde{\beta}\\, and \\\tilde{v} = \tilde{v}(\tilde{\beta})\\ is a \\q \times 1\\ vector that depends on the \\p \times 1\\ vector \\\tilde{\beta}\\, then:
+> **Theorem 6 (Vector-derivative of a matrix-vector product)** If \\\mathbf{A}\\ is an \\m \times q\\ matrix that is constant with respect to \\\underset{\sim}{\beta}\\, and \\\underset{\sim}{v} = \underset{\sim}{v}(\underset{\sim}{\beta})\\ is a \\q \times 1\\ vector that depends on the \\p \times 1\\ vector \\\underset{\sim}{\beta}\\, then:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{v})}\_{p \times m} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{}}\_{p \times q} \underbrace{{\mathbf{A}}^{\top}}\_{q \times m} \\
+> \\ \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} (\mathbf{A}\underset{\sim}{v})}\_{p \times m} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}} \underset{\sim}{v}\right)\mathclose{}}\_{p \times q} \underbrace{{\mathbf{A}}^{\top}}\_{q \times m} \\
 
 > **NOTE:**
 >
-> *Proof*. For entry \\(i,j)\\, where row \\i\\ indexes the denominator \\\tilde{\beta}\\ and column \\j\\ indexes the numerator \\\mathbf{A}\tilde{v}\\ (see [Definition 6](#def-vector-valued-derivative)):
+> *Proof*. For entry \\(i,j)\\, where row \\i\\ indexes the denominator \\\underset{\sim}{\beta}\\ and column \\j\\ indexes the numerator \\\mathbf{A}\underset{\sim}{v}\\ (see [Definition 6](#def-vector-valued-derivative)):
 >
-> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{v})\right\]\mathclose{}\_{ij} &= \frac{\partial}{\partial \beta\_{i}} (\mathbf{A}\tilde{v})\_j \\ &= \frac{\partial}{\partial \beta\_{i}} \sum\_{k=1}^{q} a\_{jk} v_k \\ &= \sum\_{k=1}^{q} a\_{jk} \frac{\partial}{\partial \beta\_{i}} v_k \\ &= \sum\_{k=1}^{q} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right\]\mathclose{}\_{ik} \mathopen{}\left\[{\mathbf{A}}^{\top}\right\]\mathclose{}\_{kj} \\ &= \mathopen{}\left\[\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {\mathbf{A}}^{\top}\right\]\mathclose{}\_{ij} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \underset{\sim}{\beta}} (\mathbf{A}\underset{\sim}{v})\right\]\mathclose{}\_{ij} &= \frac{\partial}{\partial \beta\_{i}} (\mathbf{A}\underset{\sim}{v})\_j \\ &= \frac{\partial}{\partial \beta\_{i}} \sum\_{k=1}^{q} a\_{jk} v_k \\ &= \sum\_{k=1}^{q} a\_{jk} \frac{\partial}{\partial \beta\_{i}} v_k \\ &= \sum\_{k=1}^{q} \mathopen{}\left\[\frac{\partial}{\partial \underset{\sim}{\beta}} \underset{\sim}{v}\right\]\mathclose{}\_{ik} \mathopen{}\left\[{\mathbf{A}}^{\top}\right\]\mathclose{}\_{kj} \\ &= \mathopen{}\left\[\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}} \underset{\sim}{v}\right)\mathclose{} {\mathbf{A}}^{\top}\right\]\mathclose{}\_{ij} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 13 (Vector-derivative of a matrix-vector product)** Let \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ (\\1 \times 2\\, constant) and \\\tilde{v}(\tilde{\beta}) = {(\beta\_{1}^2, \beta\_{2}^2)}^{\top}\\. Then \\\mathbf{A}\tilde{v} = 2\beta\_{1}^2 + 3\beta\_{2}^2\\. By [Theorem 6](#thm-deriv-matrix-vector):
+> **Example 13 (Vector-derivative of a matrix-vector product)** Let \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ (\\1 \times 2\\, constant) and \\\underset{\sim}{v}(\underset{\sim}{\beta}) = {(\beta\_{1}^2, \beta\_{2}^2)}^{\top}\\. Then \\\mathbf{A}\underset{\sim}{v} = 2\beta\_{1}^2 + 3\beta\_{2}^2\\. By [Theorem 6](#thm-deriv-matrix-vector):
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\mathbf{A}\tilde{v})}\_{2 \times 1} &= \begin{pmatrix} 2\beta\_{1} & 0 \\ 0 & 2\beta\_{2} \end{pmatrix} \begin{pmatrix} 2 \\ 3 \end{pmatrix} \\ &= \begin{pmatrix} 4\beta\_{1} \\ 6\beta\_{2} \end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}(\mathbf{A}\underset{\sim}{v})}\_{2 \times 1} &= \begin{pmatrix} 2\beta\_{1} & 0 \\ 0 & 2\beta\_{2} \end{pmatrix} \begin{pmatrix} 2 \\ 3 \end{pmatrix} \\ &= \begin{pmatrix} 4\beta\_{1} \\ 6\beta\_{2} \end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 4* (The derivative of a linear map as a special case). This result generalizes [Theorem 5](#thm-deriv-linear-map), which is the special case \\\tilde{v} = \tilde{\beta}\\ (so that \\q = p\\, \\\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}\_p\\, and \\\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}\_p {\mathbf{A}}^{\top}\\, which is \\{\mathbf{A}}^{\top}\\). For example, [Example 12](#exm-deriv-linear-map) is the case \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ and
+> *Remark 4* (The derivative of a linear map as a special case). This result generalizes [Theorem 5](#thm-deriv-linear-map), which is the special case \\\underset{\sim}{v} = \underset{\sim}{\beta}\\ (so that \\q = p\\, \\\frac{\partial}{\partial \underset{\sim}{\beta}} \underset{\sim}{\beta}= \mathbf{I}\_p\\, and \\\frac{\partial}{\partial \underset{\sim}{\beta}} (\mathbf{A}\underset{\sim}{\beta}) = \mathbf{I}\_p {\mathbf{A}}^{\top}\\, which is \\{\mathbf{A}}^{\top}\\). For example, [Example 12](#exm-deriv-linear-map) is the case \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ and
 >
-> \\ \begin{aligned} \tilde{v} &= \tilde{\beta}\\ &= {(\beta\_{1}, \beta\_{2})}^{\top}, \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{v} &= \underset{\sim}{\beta}\\ &= {(\beta\_{1}, \beta\_{2})}^{\top}, \end{aligned} \\
 >
 > where this result gives \\\mathbf{I}\_2 {\mathbf{A}}^{\top} = {(2, 3)}^{\top}\\.
 
 > **NOTE:**
 >
-> **Theorem 7 (Vector-derivative of a product of matrices)** If \\\mathbf{A}\\ (\\k \times m\\) and \\\mathbf{B}\\ (\\m \times q\\) are constant with respect to \\\tilde{\beta}\\, and \\\tilde{v} = \tilde{v}(\tilde{\beta})\\ is a \\q \times 1\\ vector that depends on the \\p \times 1\\ vector \\\tilde{\beta}\\, then:
+> **Theorem 7 (Vector-derivative of a product of matrices)** If \\\mathbf{A}\\ (\\k \times m\\) and \\\mathbf{B}\\ (\\m \times q\\) are constant with respect to \\\underset{\sim}{\beta}\\, and \\\underset{\sim}{v} = \underset{\sim}{v}(\underset{\sim}{\beta})\\ is a \\q \times 1\\ vector that depends on the \\p \times 1\\ vector \\\underset{\sim}{\beta}\\, then:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A} \mathbf{B} \tilde{v})}\_{p \times k} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{}}\_{p \times q} \underbrace{{\mathbf{B}}^{\top}}\_{q \times m} \underbrace{{\mathbf{A}}^{\top}}\_{m \times k} \\
+> \\ \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} (\mathbf{A} \mathbf{B} \underset{\sim}{v})}\_{p \times k} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}} \underset{\sim}{v}\right)\mathclose{}}\_{p \times q} \underbrace{{\mathbf{B}}^{\top}}\_{q \times m} \underbrace{{\mathbf{A}}^{\top}}\_{m \times k} \\
 
 > **NOTE:**
 >
 > *Proof*. Apply [Theorem 6](#thm-deriv-matrix-vector) with the constant \\k \times q\\ matrix \\\mathbf{A}\mathbf{B}\\, then use the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product):
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}} (\mathbf{A} \mathbf{B} \tilde{v}) &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {(\mathbf{A}\mathbf{B})}^{\top} && \text{(derivative of a matrix-vector product)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {\mathbf{B}}^{\top}\\{\mathbf{A}}^{\top} && \text{(transpose of a product)} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \underset{\sim}{\beta}} (\mathbf{A} \mathbf{B} \underset{\sim}{v}) &= \mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}} \underset{\sim}{v}\right)\mathclose{} {(\mathbf{A}\mathbf{B})}^{\top} && \text{(derivative of a matrix-vector product)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}} \underset{\sim}{v}\right)\mathclose{} {\mathbf{B}}^{\top}\\{\mathbf{A}}^{\top} && \text{(transpose of a product)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 14** Let \\\mathbf{A} = \begin{pmatrix}1 & 0\end{pmatrix}\\ (\\1 \times 2\\), \\\mathbf{B} = \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix}\\ (\\2 \times 2\\), and \\\tilde{v}(\tilde{\beta}) = \tilde{\beta}\\ where \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\mathbf{A}\mathbf{B}\tilde{v} = 2\beta\_{1}\\, and:
+> **Example 14** Let \\\mathbf{A} = \begin{pmatrix}1 & 0\end{pmatrix}\\ (\\1 \times 2\\), \\\mathbf{B} = \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix}\\ (\\2 \times 2\\), and \\\underset{\sim}{v}(\underset{\sim}{\beta}) = \underset{\sim}{\beta}\\ where \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\mathbf{A}\mathbf{B}\underset{\sim}{v} = 2\beta\_{1}\\, and:
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\mathbf{A}\mathbf{B}\tilde{v})}\_{2 \times 1} &= \underbrace{\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}\right)\mathclose{}}\_{2 \times 2} \underbrace{{\mathbf{B}}^{\top}}\_{2 \times 2} \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 1} \\ &= \mathbf{I}\_2 \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} \begin{pmatrix}1 \\ 0\end{pmatrix} \\ &= \begin{pmatrix}2 \\ 0\end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}(\mathbf{A}\mathbf{B}\underset{\sim}{v})}\_{2 \times 1} &= \underbrace{\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}}\underset{\sim}{\beta}\right)\mathclose{}}\_{2 \times 2} \underbrace{{\mathbf{B}}^{\top}}\_{2 \times 2} \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 1} \\ &= \mathbf{I}\_2 \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} \begin{pmatrix}1 \\ 0\end{pmatrix} \\ &= \begin{pmatrix}2 \\ 0\end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Corollary 1 (Derivative of a dot product, transpose-product form)** If \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\, then:
+> **Corollary 1 (Derivative of a dot product, transpose-product form)** If \\\underset{\sim}{x}\\ is constant with respect to \\\underset{\sim}{\beta}\\, then:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\underbrace{{\tilde{x}}^{\top}}\_{1 \times p} \underbrace{\tilde{\beta}}\_{p \times 1})}\_{p \times 1} = \underbrace{\tilde{x}}\_{p \times 1} \\
+> \\ \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} (\underbrace{{\underset{\sim}{x}}^{\top}}\_{1 \times p} \underbrace{\underset{\sim}{\beta}}\_{p \times 1})}\_{p \times 1} = \underbrace{\underset{\sim}{x}}\_{p \times 1} \\
 
 > **NOTE:**
 >
 > *Proof*. **Using [Theorem 3](#thm-deriv-lincom):**
 >
-> Since \\{\tilde{x}}^{\top}\tilde{\beta}= \tilde{x}\cdot \tilde{\beta}\\ (see [dot product](linear-algebra-vectors.llms.md#def-dot-product)), and \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\:
+> Since \\{\underset{\sim}{x}}^{\top}\underset{\sim}{\beta}= \underset{\sim}{x}\cdot \underset{\sim}{\beta}\\ (see [dot product](linear-algebra-vectors.llms.md#def-dot-product)), and \\\underset{\sim}{x}\\ is constant with respect to \\\underset{\sim}{\beta}\\:
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta}) &= \frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta}) \\ &= \tilde{x} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \underset{\sim}{\beta}}({\underset{\sim}{x}}^{\top}\underset{\sim}{\beta}) &= \frac{\partial}{\partial \underset{\sim}{\beta}}(\underset{\sim}{x}\cdot \underset{\sim}{\beta}) \\ &= \underset{\sim}{x} \end{aligned} \\
 >
 > by [Theorem 3](#thm-deriv-lincom).
 
@@ -601,51 +601,51 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > *Proof*. **Using [Theorem 6](#thm-deriv-matrix-vector):**
 >
-> Since \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\, \\\mathbf{A} = {\tilde{x}}^{\top}\\ is a constant \\1 \times p\\ matrix. Applying [Theorem 6](#thm-deriv-matrix-vector) with \\\tilde{v} = \tilde{\beta}\\ (so \\\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}= \mathbf{I}\\):
+> Since \\\underset{\sim}{x}\\ is constant with respect to \\\underset{\sim}{\beta}\\, \\\mathbf{A} = {\underset{\sim}{x}}^{\top}\\ is a constant \\1 \times p\\ matrix. Applying [Theorem 6](#thm-deriv-matrix-vector) with \\\underset{\sim}{v} = \underset{\sim}{\beta}\\ (so \\\frac{\partial}{\partial \underset{\sim}{\beta}}\underset{\sim}{\beta}= \mathbf{I}\\):
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta}) &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}\right)\mathclose{} {({\tilde{x}}^{\top})}^{\top} \\ &= \mathbf{I} \cdot \tilde{x}\\ &= \tilde{x} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \underset{\sim}{\beta}}({\underset{\sim}{x}}^{\top}\underset{\sim}{\beta}) &= \mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}}\underset{\sim}{\beta}\right)\mathclose{} {({\underset{\sim}{x}}^{\top})}^{\top} \\ &= \mathbf{I} \cdot \underset{\sim}{x}\\ &= \underset{\sim}{x} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 15 (Derivative of a transpose product)** Let \\\tilde{x}= {(3, 5)}^{\top}\\ and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\{\tilde{x}}^{\top}\tilde{\beta}= 3\beta\_{1} + 5\beta\_{2}\\, and by [Corollary 1](#cor-deriv-lincom-tp):
+> **Example 15 (Derivative of a transpose product)** Let \\\underset{\sim}{x}= {(3, 5)}^{\top}\\ and \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\{\underset{\sim}{x}}^{\top}\underset{\sim}{\beta}= 3\beta\_{1} + 5\beta\_{2}\\, and by [Corollary 1](#cor-deriv-lincom-tp):
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\underbrace{{\tilde{x}}^{\top}}\_{1 \times 2}\underbrace{\tilde{\beta}}\_{2 \times 1}\right)\mathclose{}}\_{2 \times 1} &= \underbrace{\tilde{x}}\_{2 \times 1} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}\mathopen{}\left(\underbrace{{\underset{\sim}{x}}^{\top}}\_{1 \times 2}\underbrace{\underset{\sim}{\beta}}\_{2 \times 1}\right)\mathclose{}}\_{2 \times 1} &= \underbrace{\underset{\sim}{x}}\_{2 \times 1} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 5* (The coefficient gets transposed). This vector derivative formula looks a lot like non-vector calculus, except that you have to transpose the coefficient: in scalar calculus \\\frac{\partial}{\partial x}(cx) = c\\, but here the coefficient \\{\tilde{x}}^{\top}\\ (a row vector) becomes \\\tilde{x}\\ (a column vector) in the result. For example, with \\\tilde{x}= {(2, -1)}^{\top}\\, \\{\tilde{x}}^{\top}\tilde{\beta}= 2\beta\_{1} - \beta\_{2}\\, whose vector derivative is the column vector \\{(2, -1)}^{\top} = \tilde{x}\\, not the row vector \\{\tilde{x}}^{\top} = (2, -1)\\.
+> *Remark 5* (The coefficient gets transposed). This vector derivative formula looks a lot like non-vector calculus, except that you have to transpose the coefficient: in scalar calculus \\\frac{\partial}{\partial x}(cx) = c\\, but here the coefficient \\{\underset{\sim}{x}}^{\top}\\ (a row vector) becomes \\\underset{\sim}{x}\\ (a column vector) in the result. For example, with \\\underset{\sim}{x}= {(2, -1)}^{\top}\\, \\{\underset{\sim}{x}}^{\top}\underset{\sim}{\beta}= 2\beta\_{1} - \beta\_{2}\\, whose vector derivative is the column vector \\{(2, -1)}^{\top} = \underset{\sim}{x}\\, not the row vector \\{\underset{\sim}{x}}^{\top} = (2, -1)\\.
 
 > **NOTE:**
 >
-> **Theorem 8 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form)), if \\\mathbf{S}\\ is a \\p \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
+> **Theorem 8 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form)), if \\\mathbf{S}\\ is a \\p \times p\\ matrix that is constant with respect to \\\underset{\sim}{\beta}\\, then:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{p \times 1} = \underbrace{(\mathbf{S} + {\mathbf{S}}^{\top}) \tilde{\beta}}\_{p \times 1}. \\
+> \\ \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} ({\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta})}\_{p \times 1} = \underbrace{(\mathbf{S} + {\mathbf{S}}^{\top}) \underset{\sim}{\beta}}\_{p \times 1}. \\
 
 > **NOTE:**
 >
-> *Proof*. Expanding entry-wise, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta} = \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k}\\. Differentiating component-wise with respect to \\\beta\_{i}\\ for \\i = 1, \ldots, p\\:
+> *Proof*. Expanding entry-wise, \\{\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta} = \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k}\\. Differentiating component-wise with respect to \\\beta\_{i}\\ for \\i = 1, \ldots, p\\:
 >
-> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})\right\]\mathclose{}\_i &= \frac{\partial}{\partial \beta\_{i}} \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k} && \text{(expand quadratic form)} \\ &= \sum\_{k=1}^{p} s\_{ik} \beta\_{k} + \sum\_{j=1}^ps\_{ji} \beta\_{j} && \text{(product rule for } \beta\_{i} \beta\_{k} \text{)} \\ &= \[\mathbf{S}\tilde{\beta}\]\_i + \[{\mathbf{S}}^{\top}\tilde{\beta}\]\_i && \text{(matrix-vector multiplication definition)} \\ &= \[(\mathbf{S} + {\mathbf{S}}^{\top})\tilde{\beta}\]\_i && \text{(linearity of matrix multiplication)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \underset{\sim}{\beta}}({\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta})\right\]\mathclose{}\_i &= \frac{\partial}{\partial \beta\_{i}} \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k} && \text{(expand quadratic form)} \\ &= \sum\_{k=1}^{p} s\_{ik} \beta\_{k} + \sum\_{j=1}^ps\_{ji} \beta\_{j} && \text{(product rule for } \beta\_{i} \beta\_{k} \text{)} \\ &= \[\mathbf{S}\underset{\sim}{\beta}\]\_i + \[{\mathbf{S}}^{\top}\underset{\sim}{\beta}\]\_i && \text{(matrix-vector multiplication definition)} \\ &= \[(\mathbf{S} + {\mathbf{S}}^{\top})\underset{\sim}{\beta}\]\_i && \text{(linearity of matrix multiplication)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Corollary 2 (Derivative of a quadratic form with a symmetric matrix)** If, in addition, \\\mathbf{S}\\ is symmetric (and, as in [Theorem 8](#thm-quadratic-form), \\p \times p\\ and constant with respect to \\\tilde{\beta}\\), then
+> **Corollary 2 (Derivative of a quadratic form with a symmetric matrix)** If, in addition, \\\mathbf{S}\\ is symmetric (and, as in [Theorem 8](#thm-quadratic-form), \\p \times p\\ and constant with respect to \\\underset{\sim}{\beta}\\), then
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{p \times 1} = \underbrace{2 \mathbf{S} \tilde{\beta}}\_{p \times 1}. \\
+> \\ \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} ({\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta})}\_{p \times 1} = \underbrace{2 \mathbf{S} \underset{\sim}{\beta}}\_{p \times 1}. \\
 
 > **NOTE:**
 >
-> *Proof*. If \\\mathbf{S} = {\mathbf{S}}^{\top}\\, then \\\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}\\, so [Theorem 8](#thm-quadratic-form) gives \\\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}) = 2\mathbf{S}\tilde{\beta}\\.
+> *Proof*. If \\\mathbf{S} = {\mathbf{S}}^{\top}\\, then \\\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}\\, so [Theorem 8](#thm-quadratic-form) gives \\\frac{\partial}{\partial \underset{\sim}{\beta}}({\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta}) = 2\mathbf{S}\underset{\sim}{\beta}\\.
 
 > **NOTE:**
 >
-> *Remark 6* (Like the derivative of \\cx^2\\). This operation is like taking the derivative of \\cx^2\\ with respect to \\x\\ in non-vector calculus: \\\frac{\partial}{\partial x} (cx^2) = 2cx\\, and [Corollary 2](#cor-quadratic-form-symmetric) says \\\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}) = 2 \mathbf{S} \tilde{\beta}\\. For example, with \\p = 1\\, \\\mathbf{S} = (3)\\, and \\\tilde{\beta}= (\beta\_{1})\\, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta} = 3\beta\_{1}^2\\, and its derivative is \\6\beta\_{1} = 2 \mathbf{S} \tilde{\beta}\\.
+> *Remark 6* (Like the derivative of \\cx^2\\). This operation is like taking the derivative of \\cx^2\\ with respect to \\x\\ in non-vector calculus: \\\frac{\partial}{\partial x} (cx^2) = 2cx\\, and [Corollary 2](#cor-quadratic-form-symmetric) says \\\frac{\partial}{\partial \underset{\sim}{\beta}} ({\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta}) = 2 \mathbf{S} \underset{\sim}{\beta}\\. For example, with \\p = 1\\, \\\mathbf{S} = (3)\\, and \\\underset{\sim}{\beta}= (\beta\_{1})\\, \\{\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta} = 3\beta\_{1}^2\\, and its derivative is \\6\beta\_{1} = 2 \mathbf{S} \underset{\sim}{\beta}\\.
 
 > **NOTE:**
 >
-> **Example 16 (Derivative of a quadratic form)** Let \\\mathbf{S} = \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix}\\ (\\2 \times 2\\, symmetric and constant) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta} = 3\beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 2\beta\_{2}^2\\. By [Corollary 2](#cor-quadratic-form-symmetric):
+> **Example 16 (Derivative of a quadratic form)** Let \\\mathbf{S} = \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix}\\ (\\2 \times 2\\, symmetric and constant) and \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\{\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta} = 3\beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 2\beta\_{2}^2\\. By [Corollary 2](#cor-quadratic-form-symmetric):
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{2 \times 1} &= 2 \mathbf{S} \tilde{\beta}\\ &= 2 \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} \\ &= \begin{pmatrix} 6\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 4\beta\_{2} \end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}({\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta})}\_{2 \times 1} &= 2 \mathbf{S} \underset{\sim}{\beta}\\ &= 2 \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} \\ &= \begin{pmatrix} 6\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 4\beta\_{2} \end{pmatrix} \end{aligned} \\
 >
 > Differentiating component-wise directly:
 >
@@ -655,35 +655,35 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > For a matrix that is not symmetric, such as \\\mathbf{S} = \begin{pmatrix} 1 & 2 \\ 0 & 3 \end{pmatrix}\\, [Theorem 8](#thm-quadratic-form) gives
 >
-> \\ \begin{aligned} (\mathbf{S} + {\mathbf{S}}^{\top}) \tilde{\beta} &= \begin{pmatrix} 2 & 2 \\ 2 & 6 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} \\ &= \begin{pmatrix} 2\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 6\beta\_{2} \end{pmatrix}, \end{aligned} \\
+> \\ \begin{aligned} (\mathbf{S} + {\mathbf{S}}^{\top}) \underset{\sim}{\beta} &= \begin{pmatrix} 2 & 2 \\ 2 & 6 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} \\ &= \begin{pmatrix} 2\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 6\beta\_{2} \end{pmatrix}, \end{aligned} \\
 >
-> which matches differentiating \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta} = \beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 3\beta\_{2}^2\\ directly.
+> which matches differentiating \\{\underset{\sim}{\beta}}^{\top} \mathbf{S} \underset{\sim}{\beta} = \beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 3\beta\_{2}^2\\ directly.
 
 > **NOTE:**
 >
-> **Corollary 3 (Derivative of a simple quadratic form)** \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta} \cdot \tilde{\beta})}\_{p \times 1} = \underbrace{2\tilde{\beta}}\_{p \times 1} \\
+> **Corollary 3 (Derivative of a simple quadratic form)** \\ \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}} (\underset{\sim}{\beta} \cdot \underset{\sim}{\beta})}\_{p \times 1} = \underbrace{2\underset{\sim}{\beta}}\_{p \times 1} \\
 
 > **NOTE:**
 >
-> *Proof*. Applying [Corollary 2](#cor-quadratic-form-symmetric) with \\\mathbf{S} = \mathbf{I}\_{p \times p}\\ (which is symmetric and constant with respect to \\\tilde{\beta}\\):
+> *Proof*. Applying [Corollary 2](#cor-quadratic-form-symmetric) with \\\mathbf{S} = \mathbf{I}\_{p \times p}\\ (which is symmetric and constant with respect to \\\underset{\sim}{\beta}\\):
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}(\tilde{\beta} \cdot \tilde{\beta}) &= \frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{I}\_{p \times p} \tilde{\beta}) && \text{(rewrite with identity matrix)} \\ &= 2\mathbf{I}\_{p \times p}\tilde{\beta} && \text{(derivative of a quadratic form, with } \mathbf{S} = \mathbf{I}\_{p \times p} \text{)} \\ &= 2\tilde{\beta} && \text{(identity matrix property)} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \underset{\sim}{\beta}}(\underset{\sim}{\beta} \cdot \underset{\sim}{\beta}) &= \frac{\partial}{\partial \underset{\sim}{\beta}}({\underset{\sim}{\beta}}^{\top} \mathbf{I}\_{p \times p} \underset{\sim}{\beta}) && \text{(rewrite with identity matrix)} \\ &= 2\mathbf{I}\_{p \times p}\underset{\sim}{\beta} && \text{(derivative of a quadratic form, with } \mathbf{S} = \mathbf{I}\_{p \times p} \text{)} \\ &= 2\underset{\sim}{\beta} && \text{(identity matrix property)} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 7* (Like the derivative of \\x^2\\). This vector derivative is like taking the derivative of \\x^2\\: in scalar calculus \\\frac{\partial}{\partial x} x^2 = 2x\\, and [Corollary 3](#cor-deriv-normsq) says \\\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta} \cdot \tilde{\beta}) = 2\tilde{\beta}\\. For example, with \\p = 1\\ and \\\tilde{\beta}= (\beta\_{1})\\, \\\tilde{\beta} \cdot \tilde{\beta} = \beta\_{1}^2\\, and its derivative is \\2\beta\_{1} = 2\tilde{\beta}\\.
+> *Remark 7* (Like the derivative of \\x^2\\). This vector derivative is like taking the derivative of \\x^2\\: in scalar calculus \\\frac{\partial}{\partial x} x^2 = 2x\\, and [Corollary 3](#cor-deriv-normsq) says \\\frac{\partial}{\partial \underset{\sim}{\beta}} (\underset{\sim}{\beta} \cdot \underset{\sim}{\beta}) = 2\underset{\sim}{\beta}\\. For example, with \\p = 1\\ and \\\underset{\sim}{\beta}= (\beta\_{1})\\, \\\underset{\sim}{\beta} \cdot \underset{\sim}{\beta} = \beta\_{1}^2\\, and its derivative is \\2\beta\_{1} = 2\underset{\sim}{\beta}\\.
 
 > **NOTE:**
 >
-> **Example 17 (Derivative of a sum of squares)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\, so \\\tilde{\beta} \cdot \tilde{\beta} = \beta\_{1}^2 + \beta\_{2}^2\\. By [Corollary 3](#cor-deriv-normsq):
+> **Example 17 (Derivative of a sum of squares)** Let \\\underset{\sim}{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\, so \\\underset{\sim}{\beta} \cdot \underset{\sim}{\beta} = \beta\_{1}^2 + \beta\_{2}^2\\. By [Corollary 3](#cor-deriv-normsq):
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{\beta} \cdot \tilde{\beta})}\_{2 \times 1} &= 2\tilde{\beta}\\ &= \begin{pmatrix} 2\beta\_{1} \\ 2\beta\_{2} \end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}(\underset{\sim}{\beta} \cdot \underset{\sim}{\beta})}\_{2 \times 1} &= 2\underset{\sim}{\beta}\\ &= \begin{pmatrix} 2\beta\_{1} \\ 2\beta\_{2} \end{pmatrix} \end{aligned} \\
 >
 > Direct partial differentiation yields the same column vector.
 
 > **NOTE:**
 >
-> **Definition 11 (Residual vector and residuals)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix, \\\tilde{y}\in \mathbb{R}^n\\, and \\\tilde{\beta}\in \mathbb{R}^p\\. The **residual vector** of \\\tilde{\beta}\\ is \\\tilde{\varepsilon}(\tilde{\beta}) \stackrel{\text{def}}{=}\tilde{y}- \mathbf{X}\tilde{\beta}\\, and its entries \\\varepsilon_i = y_i - (\mathbf{X}\tilde{\beta})\_i\\ are the **residuals**.
+> **Definition 11 (Residual vector and residuals)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix, \\\underset{\sim}{y}\in \mathbb{R}^n\\, and \\\underset{\sim}{\beta}\in \mathbb{R}^p\\. The **residual vector** of \\\underset{\sim}{\beta}\\ is \\\underset{\sim}{\varepsilon}(\underset{\sim}{\beta}) \stackrel{\text{def}}{=}\underset{\sim}{y}- \mathbf{X}\underset{\sim}{\beta}\\, and its entries \\\varepsilon_i = y_i - (\mathbf{X}\underset{\sim}{\beta})\_i\\ are the **residuals**.
 
 > **NOTE:**
 >
@@ -693,21 +693,21 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > **Definition 13 (Residual sum of squares)** In the setting of [Definition 11](#def-residual), the sum of the squared errors ([Definition 12](#def-squared-error))
 >
-> \\ \begin{aligned} \tilde{\varepsilon}\cdot \tilde{\varepsilon} &= \sum\_{i=1}^n\tilde{\varepsilon}\_i^2 \\ &= \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2 \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{\varepsilon}\cdot \underset{\sim}{\varepsilon} &= \sum\_{i=1}^n\underset{\sim}{\varepsilon}\_i^2 \\ &= \mathopen{}\left\lVert\underset{\sim}{y}- \mathbf{X}\underset{\sim}{\beta}\right\rVert\mathclose{}^2 \end{aligned} \\
 >
 > is the **residual sum of squares**.
 
 > **NOTE:**
 >
-> *Remark 8* (Least squares solutions minimize the residual sum of squares). A [least squares solution](linear-algebra-projections.llms.md#def-least-squares) of \\\mathbf{X}\tilde{\beta}= \tilde{y}\\ makes \\\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\\ as small as possible, and so makes the residual sum of squares ([Definition 13](#def-residual-sum-of-squares)) as small as possible too.
+> *Remark 8* (Least squares solutions minimize the residual sum of squares). A [least squares solution](linear-algebra-projections.llms.md#def-least-squares) of \\\mathbf{X}\underset{\sim}{\beta}= \underset{\sim}{y}\\ makes \\\mathopen{}\left\lVert\underset{\sim}{y}- \mathbf{X}\underset{\sim}{\beta}\right\rVert\mathclose{}\\ as small as possible, and so makes the residual sum of squares ([Definition 13](#def-residual-sum-of-squares)) as small as possible too.
 
 > **NOTE:**
 >
-> **Example 18 (Residuals of a constant fit)** Let \\\mathbf{X}= {(1, 1)}^{\top}\\ (\\n = 2\\, \\p = 1\\) and \\\tilde{y}= {(1, 3)}^{\top}\\. For \\\tilde{\beta}= (2)\\, \\\mathbf{X}\tilde{\beta}= {(2, 2)}^{\top}\\, so
+> **Example 18 (Residuals of a constant fit)** Let \\\mathbf{X}= {(1, 1)}^{\top}\\ (\\n = 2\\, \\p = 1\\) and \\\underset{\sim}{y}= {(1, 3)}^{\top}\\. For \\\underset{\sim}{\beta}= (2)\\, \\\mathbf{X}\underset{\sim}{\beta}= {(2, 2)}^{\top}\\, so
 >
-> \\ \begin{aligned} \tilde{\varepsilon}(\tilde{\beta}) &= {(1, 3)}^{\top} - {(2, 2)}^{\top} && \text{(definition of the residual vector)} \\ &= {(-1, 1)}^{\top}, && \text{(subtract entry by entry)} \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{\varepsilon}(\underset{\sim}{\beta}) &= {(1, 3)}^{\top} - {(2, 2)}^{\top} && \text{(definition of the residual vector)} \\ &= {(-1, 1)}^{\top}, && \text{(subtract entry by entry)} \end{aligned} \\
 >
-> the squared errors are \\(-1)^2 = 1\\ and \\1^2 = 1\\, and the residual sum of squares is \\1 + 1 = 2\\. For \\\tilde{\beta}= (1)\\ the residuals are \\0\\ and \\2\\, and the residual sum of squares is \\0 + 4 = 4\\.
+> the squared errors are \\(-1)^2 = 1\\ and \\1^2 = 1\\, and the residual sum of squares is \\1 + 1 = 2\\. For \\\underset{\sim}{\beta}= (1)\\ the residuals are \\0\\ and \\2\\, and the residual sum of squares is \\0 + 4 = 4\\.
 
 > **TIP:**
 >
@@ -718,31 +718,31 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 9 (Vector chain rule)** Let \\\tilde{x}\\ be a \\p \times 1\\ vector, let \\\tilde{y}= \tilde{g}(\tilde{x})\\ be a \\q \times 1\\ vector-valued function of \\\tilde{x}\\, and let \\z = f(\tilde{y})\\ be a scalar-valued function of \\\tilde{y}\\, where \\\tilde{g}\\ and \\f\\ have continuous partial derivatives. Then \\z = f(\tilde{g}(\tilde{x}))\\, as a function of \\\tilde{x}\\, satisfies
+> **Theorem 9 (Vector chain rule)** Let \\\underset{\sim}{x}\\ be a \\p \times 1\\ vector, let \\\underset{\sim}{y}= \underset{\sim}{g}(\underset{\sim}{x})\\ be a \\q \times 1\\ vector-valued function of \\\underset{\sim}{x}\\, and let \\z = f(\underset{\sim}{y})\\ be a scalar-valued function of \\\underset{\sim}{y}\\, where \\\underset{\sim}{g}\\ and \\f\\ have continuous partial derivatives. Then \\z = f(\underset{\sim}{g}(\underset{\sim}{x}))\\, as a function of \\\underset{\sim}{x}\\, satisfies
 >
-> \\ \underbrace{\frac{\partial z}{\partial \tilde{x}}}\_{p \times 1} = \underbrace{\frac{\partial \tilde{y}}{\partial \tilde{x}}}\_{p \times q} \underbrace{\frac{\partial z}{\partial \tilde{y}}}\_{q \times 1} \\
+> \\ \underbrace{\frac{\partial z}{\partial \underset{\sim}{x}}}\_{p \times 1} = \underbrace{\frac{\partial \underset{\sim}{y}}{\partial \underset{\sim}{x}}}\_{p \times q} \underbrace{\frac{\partial z}{\partial \underset{\sim}{y}}}\_{q \times 1} \\
 >
-> where \\\frac{\partial \tilde{y}}{\partial \tilde{x}}\\ is the derivative of [Definition 6](#def-vector-valued-derivative) and \\\frac{\partial z}{\partial \tilde{x}}\\ and \\\frac{\partial z}{\partial \tilde{y}}\\ are vector derivatives ([Definition 2](#def-vector-derivative)).
+> where \\\frac{\partial \underset{\sim}{y}}{\partial \underset{\sim}{x}}\\ is the derivative of [Definition 6](#def-vector-valued-derivative) and \\\frac{\partial z}{\partial \underset{\sim}{x}}\\ and \\\frac{\partial z}{\partial \underset{\sim}{y}}\\ are vector derivatives ([Definition 2](#def-vector-derivative)).
 
 > **NOTE:**
 >
-> *Remark 9* (The order of the factors matters). The vector chain rule ([Theorem 9](#thm-chain-vec)) is like the univariate [chain rule](calculus-derivatives.llms.md#thm-chain-rule), but the order matters now: \\\frac{\partial \tilde{y}}{\partial \tilde{x}}\\ is \\p \times q\\ and \\\frac{\partial z}{\partial \tilde{y}}\\ is \\q \times 1\\, so the product \\\frac{\partial z}{\partial \tilde{y}} \frac{\partial \tilde{y}}{\partial \tilde{x}}\\ in the other order is not even defined unless \\p = 1\\.
+> *Remark 9* (The order of the factors matters). The vector chain rule ([Theorem 9](#thm-chain-vec)) is like the univariate [chain rule](calculus-derivatives.llms.md#thm-chain-rule), but the order matters now: \\\frac{\partial \underset{\sim}{y}}{\partial \underset{\sim}{x}}\\ is \\p \times q\\ and \\\frac{\partial z}{\partial \underset{\sim}{y}}\\ is \\q \times 1\\, so the product \\\frac{\partial z}{\partial \underset{\sim}{y}} \frac{\partial \underset{\sim}{y}}{\partial \underset{\sim}{x}}\\ in the other order is not even defined unless \\p = 1\\.
 >
-> The version presented here is for the gradient ([Definition 2](#def-vector-derivative)), a column vector. The total derivative ([Definition 5](#def-row-vector-derivative)), a row vector, is the transpose of the gradient ([Theorem 2](#thm-row-deriv-tp-col-deriv)), and transposing both sides gives \\{\mathopen{}\left(\frac{\partial z}{\partial \tilde{x}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \tilde{y}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\\, with the factors in the reverse order; there \\{\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\\ is the Jacobian matrix of \\\tilde{y}\\ as a function of \\\tilde{x}\\ ([Definition 8](#def-jacobian-matrix)).
+> The version presented here is for the gradient ([Definition 2](#def-vector-derivative)), a column vector. The total derivative ([Definition 5](#def-row-vector-derivative)), a row vector, is the transpose of the gradient ([Theorem 2](#thm-row-deriv-tp-col-deriv)), and transposing both sides gives \\{\mathopen{}\left(\frac{\partial z}{\partial \underset{\sim}{x}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \underset{\sim}{y}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \underset{\sim}{y}}{\partial \underset{\sim}{x}}\right)\mathclose{}}^{\top}\\, with the factors in the reverse order; there \\{\mathopen{}\left(\frac{\partial \underset{\sim}{y}}{\partial \underset{\sim}{x}}\right)\mathclose{}}^{\top}\\ is the Jacobian matrix of \\\underset{\sim}{y}\\ as a function of \\\underset{\sim}{x}\\ ([Definition 8](#def-jacobian-matrix)).
 
 > **NOTE:**
 >
-> **Example 19 (Applying the vector chain rule)** Let \\\tilde{x}= {(x_1, x_2)}^{\top}\\,
+> **Example 19 (Applying the vector chain rule)** Let \\\underset{\sim}{x}= {(x_1, x_2)}^{\top}\\,
 >
-> \\ \begin{aligned} \tilde{y}&= \tilde{g}(\tilde{x}) \\ &= {(x_1 + x_2,\\ x_1 x_2)}^{\top}, \end{aligned} \\
+> \\ \begin{aligned} \underset{\sim}{y}&= \underset{\sim}{g}(\underset{\sim}{x}) \\ &= {(x_1 + x_2,\\ x_1 x_2)}^{\top}, \end{aligned} \\
 >
 > and
 >
-> \\ \begin{aligned} z &= f(\tilde{y}) \\ &= y_1^2 + y_2. \end{aligned} \\
+> \\ \begin{aligned} z &= f(\underset{\sim}{y}) \\ &= y_1^2 + y_2. \end{aligned} \\
 >
 > Then
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial z}{\partial \tilde{x}}}\_{2 \times 1} &= \underbrace{\frac{\partial \tilde{y}}{\partial \tilde{x}}}\_{2 \times 2} \underbrace{\frac{\partial z}{\partial \tilde{y}}}\_{2 \times 1} && \text{(vector chain rule)} \\ &= \begin{bmatrix} 1 & x_2 \\ 1 & x_1 \end{bmatrix} \begin{bmatrix} 2y_1 \\ 1 \end{bmatrix} && \text{(differentiate } \tilde{g} \text{ and } f \text{)} \\ &= \begin{bmatrix} 2(x_1 + x_2) + x_2 \\ 2(x_1 + x_2) + x_1 \end{bmatrix} && \text{(multiply, and substitute } y_1 = x_1 + x_2 \text{)} \\ &= \begin{bmatrix} 2x_1 + 3x_2 \\ 3x_1 + 2x_2 \end{bmatrix} && \text{(collect terms)} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial z}{\partial \underset{\sim}{x}}}\_{2 \times 1} &= \underbrace{\frac{\partial \underset{\sim}{y}}{\partial \underset{\sim}{x}}}\_{2 \times 2} \underbrace{\frac{\partial z}{\partial \underset{\sim}{y}}}\_{2 \times 1} && \text{(vector chain rule)} \\ &= \begin{bmatrix} 1 & x_2 \\ 1 & x_1 \end{bmatrix} \begin{bmatrix} 2y_1 \\ 1 \end{bmatrix} && \text{(differentiate } \underset{\sim}{g} \text{ and } f \text{)} \\ &= \begin{bmatrix} 2(x_1 + x_2) + x_2 \\ 2(x_1 + x_2) + x_1 \end{bmatrix} && \text{(multiply, and substitute } y_1 = x_1 + x_2 \text{)} \\ &= \begin{bmatrix} 2x_1 + 3x_2 \\ 3x_1 + 2x_2 \end{bmatrix} && \text{(collect terms)} \end{aligned} \\
 >
 > This matches differentiating \\z\\ directly:
 >
@@ -754,27 +754,27 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Corollary 4 (Vector chain rule for quadratic forms)** If \\\tilde{\varepsilon}= \tilde{\varepsilon}(\tilde{\beta})\\ is an \\n \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\, with continuous partial derivatives, then
+> **Corollary 4 (Vector chain rule for quadratic forms)** If \\\underset{\sim}{\varepsilon}= \underset{\sim}{\varepsilon}(\underset{\sim}{\beta})\\ is an \\n \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\underset{\sim}{\beta}\\, with continuous partial derivatives, then
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}{\mathopen{}\left(\tilde{\varepsilon}(\tilde{\beta})\cdot \tilde{\varepsilon}(\tilde{\beta})\right)\mathclose{}}}\_{p \times 1} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}(\tilde{\beta})\right)\mathclose{}}\_{p \times n} \underbrace{\mathopen{}\left(2 \tilde{\varepsilon}(\tilde{\beta})\right)\mathclose{}}\_{n \times 1} \\
+> \\ \underbrace{\frac{\partial}{\partial \underset{\sim}{\beta}}{\mathopen{}\left(\underset{\sim}{\varepsilon}(\underset{\sim}{\beta})\cdot \underset{\sim}{\varepsilon}(\underset{\sim}{\beta})\right)\mathclose{}}}\_{p \times 1} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}}\underset{\sim}{\varepsilon}(\underset{\sim}{\beta})\right)\mathclose{}}\_{p \times n} \underbrace{\mathopen{}\left(2 \underset{\sim}{\varepsilon}(\underset{\sim}{\beta})\right)\mathclose{}}\_{n \times 1} \\
 
 > **NOTE:**
 >
-> *Proof*. Apply [Theorem 9](#thm-chain-vec) with \\\tilde{x}= \tilde{\beta}\\, \\\tilde{y}= \tilde{\varepsilon}\\, \\q = n\\, and
+> *Proof*. Apply [Theorem 9](#thm-chain-vec) with \\\underset{\sim}{x}= \underset{\sim}{\beta}\\, \\\underset{\sim}{y}= \underset{\sim}{\varepsilon}\\, \\q = n\\, and
 >
-> \\ \begin{aligned} z &= f(\tilde{\varepsilon}) \\ &= \tilde{\varepsilon}\cdot \tilde{\varepsilon}\\ &= {\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}: \end{aligned} \\
+> \\ \begin{aligned} z &= f(\underset{\sim}{\varepsilon}) \\ &= \underset{\sim}{\varepsilon}\cdot \underset{\sim}{\varepsilon}\\ &= {\underset{\sim}{\varepsilon}}^{\top}\underset{\sim}{\varepsilon}: \end{aligned} \\
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\tilde{\varepsilon}\cdot \tilde{\varepsilon}\right)\mathclose{} &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}\right)\mathclose{} \frac{\partial}{\partial \tilde{\varepsilon}}\mathopen{}\left({\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}\right)\mathclose{} && \text{(vector chain rule)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}\right)\mathclose{} \mathopen{}\left(2\tilde{\varepsilon}\right)\mathclose{} && \text{(derivative of a simple quadratic form, in } \tilde{\varepsilon}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \underset{\sim}{\beta}}\mathopen{}\left(\underset{\sim}{\varepsilon}\cdot \underset{\sim}{\varepsilon}\right)\mathclose{} &= \mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}}\underset{\sim}{\varepsilon}\right)\mathclose{} \frac{\partial}{\partial \underset{\sim}{\varepsilon}}\mathopen{}\left({\underset{\sim}{\varepsilon}}^{\top}\underset{\sim}{\varepsilon}\right)\mathclose{} && \text{(vector chain rule)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{\beta}}\underset{\sim}{\varepsilon}\right)\mathclose{} \mathopen{}\left(2\underset{\sim}{\varepsilon}\right)\mathclose{} && \text{(derivative of a simple quadratic form, in } \underset{\sim}{\varepsilon}\text{)} \end{aligned} \\
 >
-> The second step is [Corollary 3](#cor-deriv-normsq), applied to the \\n \times 1\\ vector \\\tilde{\varepsilon}\\ in place of \\\tilde{\beta}\\.
+> The second step is [Corollary 3](#cor-deriv-normsq), applied to the \\n \times 1\\ vector \\\underset{\sim}{\varepsilon}\\ in place of \\\underset{\sim}{\beta}\\.
 
 > **NOTE:**
 >
-> **Example 20 (Derivative of the residual sum of squares)** Let \\\tilde{y}\\ (\\n \times 1\\) and \\\mathbf{X}\\ (\\n \times p\\) be constant with respect to \\\tilde{\beta}\\, and let \\\tilde{\varepsilon}(\tilde{\beta}) = \tilde{y}- \mathbf{X}\tilde{\beta}\\ be the residual vector ([Definition 11](#def-residual)). By [Theorem 5](#thm-deriv-linear-map), \\\frac{\partial}{\partial \tilde{\beta}}(\mathbf{X}\tilde{\beta}) = {\mathbf{X}}^{\top}\\, and \\\frac{\partial}{\partial \tilde{\beta}}\tilde{y}= \mathbf{0}\_{p \times n}\\ because \\\tilde{y}\\ is constant, so \\\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}= -{\mathbf{X}}^{\top}\\ (\\p \times n\\). By [Corollary 4](#cor-chain-qf):
+> **Example 20 (Derivative of the residual sum of squares)** Let \\\underset{\sim}{y}\\ (\\n \times 1\\) and \\\mathbf{X}\\ (\\n \times p\\) be constant with respect to \\\underset{\sim}{\beta}\\, and let \\\underset{\sim}{\varepsilon}(\underset{\sim}{\beta}) = \underset{\sim}{y}- \mathbf{X}\underset{\sim}{\beta}\\ be the residual vector ([Definition 11](#def-residual)). By [Theorem 5](#thm-deriv-linear-map), \\\frac{\partial}{\partial \underset{\sim}{\beta}}(\mathbf{X}\underset{\sim}{\beta}) = {\mathbf{X}}^{\top}\\, and \\\frac{\partial}{\partial \underset{\sim}{\beta}}\underset{\sim}{y}= \mathbf{0}\_{p \times n}\\ because \\\underset{\sim}{y}\\ is constant, so \\\frac{\partial}{\partial \underset{\sim}{\beta}}\underset{\sim}{\varepsilon}= -{\mathbf{X}}^{\top}\\ (\\p \times n\\). By [Corollary 4](#cor-chain-qf):
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\tilde{\varepsilon}\cdot \tilde{\varepsilon}\right)\mathclose{} &= \mathopen{}\left(-{\mathbf{X}}^{\top}\right)\mathclose{} \mathopen{}\left(2\tilde{\varepsilon}\right)\mathclose{} && \text{(vector chain rule for quadratic forms)} \\ &= -2\\{\mathbf{X}}^{\top}\mathopen{}\left(\tilde{y}- \mathbf{X}\tilde{\beta}\right)\mathclose{} && \text{(substitute } \tilde{\varepsilon}= \tilde{y}- \mathbf{X}\tilde{\beta}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \underset{\sim}{\beta}}\mathopen{}\left(\underset{\sim}{\varepsilon}\cdot \underset{\sim}{\varepsilon}\right)\mathclose{} &= \mathopen{}\left(-{\mathbf{X}}^{\top}\right)\mathclose{} \mathopen{}\left(2\underset{\sim}{\varepsilon}\right)\mathclose{} && \text{(vector chain rule for quadratic forms)} \\ &= -2\\{\mathbf{X}}^{\top}\mathopen{}\left(\underset{\sim}{y}- \mathbf{X}\underset{\sim}{\beta}\right)\mathclose{} && \text{(substitute } \underset{\sim}{\varepsilon}= \underset{\sim}{y}- \mathbf{X}\underset{\sim}{\beta}\text{)} \end{aligned} \\
 >
-> Setting this \\p \times 1\\ vector to \\\tilde{0}\\ gives the normal equations \\{\mathbf{X}}^{\top}\mathbf{X}\tilde{\beta}= {\mathbf{X}}^{\top}\tilde{y}\\ of least squares.
+> Setting this \\p \times 1\\ vector to \\\underset{\sim}{0}\\ gives the normal equations \\{\mathbf{X}}^{\top}\mathbf{X}\underset{\sim}{\beta}= {\mathbf{X}}^{\top}\underset{\sim}{y}\\ of least squares.
 
 > **TIP:**
 >
@@ -875,15 +875,15 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 15 (Open ball)** Let \\\tilde{x}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** of radius \\r\\ around \\\tilde{x}\\ is the set \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\tilde{x}\\ (the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the difference) is less than \\r\\.
+> **Definition 15 (Open ball)** Let \\\underset{\sim}{x}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** of radius \\r\\ around \\\underset{\sim}{x}\\ is the set \\\mathopen{}\left\\\underset{\sim}{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\underset{\sim}{x}\\ (the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the difference) is less than \\r\\.
 
 > **NOTE:**
 >
-> **Definition 16 (Closed ball)** For \\\tilde{x}\\ and \\r\\ as in [Definition 15](#def-ball), the **closed ball** of radius \\r\\ around \\\tilde{x}\\ is \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\.
+> **Definition 16 (Closed ball)** For \\\underset{\sim}{x}\\ and \\r\\ as in [Definition 15](#def-ball), the **closed ball** of radius \\r\\ around \\\underset{\sim}{x}\\ is \\\mathopen{}\left\\\underset{\sim}{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Definition 17 (Unit ball)** The open and closed balls ([Definition 15](#def-ball), [Definition 16](#def-closed-ball)) of radius \\1\\ around \\\tilde{0}\\ are the open and closed **unit balls**.
+> **Definition 17 (Unit ball)** The open and closed balls ([Definition 15](#def-ball), [Definition 16](#def-closed-ball)) of radius \\1\\ around \\\underset{\sim}{0}\\ are the open and closed **unit balls**.
 
 > **NOTE:**
 >
@@ -905,23 +905,23 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 18 (Second partial derivative)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\, and let \\i, j \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\. Suppose the partial derivative \\\frac{\partial}{\partial x_j} f\\ ([Definition 1](#def-partial-derivative)) exists at every point of an open ball around \\\tilde{x}\\ ([Definition 15](#def-ball)). The **second partial derivative** of \\f\\ at \\\tilde{x}\\, first with respect to \\x_j\\ and then with respect to \\x_i\\, is
+> **Definition 18 (Second partial derivative)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\underset{\sim}{x}\\, and let \\i, j \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\. Suppose the partial derivative \\\frac{\partial}{\partial x_j} f\\ ([Definition 1](#def-partial-derivative)) exists at every point of an open ball around \\\underset{\sim}{x}\\ ([Definition 15](#def-ball)). The **second partial derivative** of \\f\\ at \\\underset{\sim}{x}\\, first with respect to \\x_j\\ and then with respect to \\x_i\\, is
 >
-> \\ \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}, \\
+> \\ \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\underset{\sim}{x})\right)\mathclose{}, \\
 >
 > the partial derivative with respect to \\x_i\\ of the function \\\frac{\partial}{\partial x_j} f\\, when it exists.
 
 > **NOTE:**
 >
-> **Example 24 (Second partial derivatives of \\x_1^2 x_2 + 3 x_2\\)** For \\f(\tilde{x}) = x_1^2 x_2 + 3 x_2\\ of [Example 1](#exm-partial-derivative), \\\frac{\partial}{\partial x_1} f(\tilde{x}) = 2 x_1 x_2\\ and \\\frac{\partial}{\partial x_2} f(\tilde{x}) = x_1^2 + 3\\. Differentiating each of these again:
+> **Example 24 (Second partial derivatives of \\x_1^2 x_2 + 3 x_2\\)** For \\f(\underset{\sim}{x}) = x_1^2 x_2 + 3 x_2\\ of [Example 1](#exm-partial-derivative), \\\frac{\partial}{\partial x_1} f(\underset{\sim}{x}) = 2 x_1 x_2\\ and \\\frac{\partial}{\partial x_2} f(\underset{\sim}{x}) = x_1^2 + 3\\. Differentiating each of these again:
 >
-> - \\ \begin{aligned} \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} &= \frac{\partial}{\partial x_1} (2 x_1 x_2) \\ &= 2 x_2; \end{aligned} \\
+> - \\ \begin{aligned} \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\underset{\sim}{x})\right)\mathclose{} &= \frac{\partial}{\partial x_1} (2 x_1 x_2) \\ &= 2 x_2; \end{aligned} \\
 >
-> - \\ \begin{aligned} \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} &= \frac{\partial}{\partial x_2} (2 x_1 x_2) \\ &= 2 x_1; \end{aligned} \\
+> - \\ \begin{aligned} \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\underset{\sim}{x})\right)\mathclose{} &= \frac{\partial}{\partial x_2} (2 x_1 x_2) \\ &= 2 x_1; \end{aligned} \\
 >
-> - \\ \begin{aligned} \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} &= \frac{\partial}{\partial x_1} (x_1^2 + 3) \\ &= 2 x_1; \end{aligned} \\
+> - \\ \begin{aligned} \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\underset{\sim}{x})\right)\mathclose{} &= \frac{\partial}{\partial x_1} (x_1^2 + 3) \\ &= 2 x_1; \end{aligned} \\
 >
-> - \\ \begin{aligned} \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} &= \frac{\partial}{\partial x_2} (x_1^2 + 3) \\ &= 0. \end{aligned} \\
+> - \\ \begin{aligned} \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\underset{\sim}{x})\right)\mathclose{} &= \frac{\partial}{\partial x_2} (x_1^2 + 3) \\ &= 0. \end{aligned} \\
 >
 > The two mixed partial derivatives are both \\2 x_1\\.
 
@@ -931,49 +931,49 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 20 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\ whose first partial derivatives exist on an open ball around \\\tilde{x}\\ ([Definition 15](#def-ball)) and whose second partial derivatives ([Definition 18](#def-second-partial-derivative)) exist at \\\tilde{x}\\. The **Hessian matrix** of \\f\\ at \\\tilde{x}\\ is the derivative ([Definition 6](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
+> **Definition 20 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\underset{\sim}{x}\\ whose first partial derivatives exist on an open ball around \\\underset{\sim}{x}\\ ([Definition 15](#def-ball)) and whose second partial derivatives ([Definition 18](#def-second-partial-derivative)) exist at \\\underset{\sim}{x}\\. The **Hessian matrix** of \\f\\ at \\\underset{\sim}{x}\\ is the derivative ([Definition 6](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{x}} f(\underset{\sim}{x})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
 >
-> \\ \underbrace{\mathbf{H}\_f(\tilde{x})}\_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}. \tag{4}\\
+> \\ \underbrace{\mathbf{H}\_f(\underset{\sim}{x})}\_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \underset{\sim}{x}} {\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{x}} f(\underset{\sim}{x})\right)\mathclose{}}^{\top}. \tag{4}\\
 
 > **NOTE:**
 >
-> **Example 25 (A Hessian matrix)** Let \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\e\\ is [Euler’s number](algebra-exponentials.llms.md#def-euler-number), and write \\u = 2x_1 + x_2\\. By the [chain rule](calculus-derivatives.llms.md#thm-chain-rule), \\\frac{\partial}{\partial x_1} e^{u} = 2 e^{u}\\ and \\\frac{\partial}{\partial x_2} e^{u} = e^{u}\\, so
+> **Example 25 (A Hessian matrix)** Let \\f(\underset{\sim}{x}) = e^{2x_1 + x_2} - x_1\\ for \\\underset{\sim}{x}= {(x_1, x_2)}^{\top}\\, where \\e\\ is [Euler’s number](algebra-exponentials.llms.md#def-euler-number), and write \\u = 2x_1 + x_2\\. By the [chain rule](calculus-derivatives.llms.md#thm-chain-rule), \\\frac{\partial}{\partial x_1} e^{u} = 2 e^{u}\\ and \\\frac{\partial}{\partial x_2} e^{u} = e^{u}\\, so
 >
-> \\ \frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \begin{bmatrix} 2 e^{u} - 1 \\ e^{u} \end{bmatrix}. \\
+> \\ \frac{\partial}{\partial \underset{\sim}{x}} f(\underset{\sim}{x}) = \begin{bmatrix} 2 e^{u} - 1 \\ e^{u} \end{bmatrix}. \\
 >
 > Differentiating each entry again,
 >
-> \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \begin{bmatrix} \frac{\partial}{\partial x_1} (2 e^{u} - 1) & \frac{\partial}{\partial x_1} e^{u} \\ \frac{\partial}{\partial x_2} (2 e^{u} - 1) & \frac{\partial}{\partial x_2} e^{u} \end{bmatrix} \\ &= \begin{bmatrix} 4 e^{u} & 2 e^{u} \\ 2 e^{u} & e^{u} \end{bmatrix}, \end{aligned} \\
+> \\ \begin{aligned} \mathbf{H}\_f(\underset{\sim}{x}) &= \begin{bmatrix} \frac{\partial}{\partial x_1} (2 e^{u} - 1) & \frac{\partial}{\partial x_1} e^{u} \\ \frac{\partial}{\partial x_2} (2 e^{u} - 1) & \frac{\partial}{\partial x_2} e^{u} \end{bmatrix} \\ &= \begin{bmatrix} 4 e^{u} & 2 e^{u} \\ 2 e^{u} & e^{u} \end{bmatrix}, \end{aligned} \\
 >
-> and at \\\tilde{x}= \tilde{0}\\, where \\u = 0\\, \\\mathbf{H}\_f(\tilde{0}) = \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}\\.
+> and at \\\underset{\sim}{x}= \underset{\sim}{0}\\, where \\u = 0\\, \\\mathbf{H}\_f(\underset{\sim}{0}) = \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}\\.
 
 > **NOTE:**
 >
-> **Example 26 (A function with a gradient but no Hessian at a point)** Let \\f(\tilde{x}) = x_1 \mathopen{}\left\|x_1\right\|\mathclose{}\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra-basics.llms.md#def-absolute-value). For \\x_1 \> 0\\, \\f = x_1^2\\ and \\\frac{\partial}{\partial x_1} f = 2 x_1\\; for \\x_1 \< 0\\, \\f = -x_1^2\\ and \\\frac{\partial}{\partial x_1} f = -2 x_1\\; and at \\x_1 = 0\\ the [difference quotient](calculus-derivatives.llms.md#def-difference-quotient) is \\h \mathopen{}\left\|h\right\|\mathclose{} / h = \mathopen{}\left\|h\right\|\mathclose{} \to 0\\. So the gradient exists everywhere: it is \\{(2 \mathopen{}\left\|x_1\right\|\mathclose{},\\ 0)}^{\top}\\. But \\2 \mathopen{}\left\|x_1\right\|\mathclose{}\\ has no derivative in \\x_1\\ at \\x_1 = 0\\ (its difference quotient \\2 \mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\2\\ for \\h \> 0\\ and \\-2\\ for \\h \< 0\\), so \\\mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{11}\\, and with it the Hessian, does not exist at any \\\tilde{x}\\ with \\x_1 = 0\\.
+> **Example 26 (A function with a gradient but no Hessian at a point)** Let \\f(\underset{\sim}{x}) = x_1 \mathopen{}\left\|x_1\right\|\mathclose{}\\ for \\\underset{\sim}{x}= {(x_1, x_2)}^{\top}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra-basics.llms.md#def-absolute-value). For \\x_1 \> 0\\, \\f = x_1^2\\ and \\\frac{\partial}{\partial x_1} f = 2 x_1\\; for \\x_1 \< 0\\, \\f = -x_1^2\\ and \\\frac{\partial}{\partial x_1} f = -2 x_1\\; and at \\x_1 = 0\\ the [difference quotient](calculus-derivatives.llms.md#def-difference-quotient) is \\h \mathopen{}\left\|h\right\|\mathclose{} / h = \mathopen{}\left\|h\right\|\mathclose{} \to 0\\. So the gradient exists everywhere: it is \\{(2 \mathopen{}\left\|x_1\right\|\mathclose{},\\ 0)}^{\top}\\. But \\2 \mathopen{}\left\|x_1\right\|\mathclose{}\\ has no derivative in \\x_1\\ at \\x_1 = 0\\ (its difference quotient \\2 \mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\2\\ for \\h \> 0\\ and \\-2\\ for \\h \< 0\\), so \\\mathopen{}\left\[\mathbf{H}\_f(\underset{\sim}{x})\right\]\mathclose{}\_{11}\\, and with it the Hessian, does not exist at any \\\underset{\sim}{x}\\ with \\x_1 = 0\\.
 
 > **NOTE:**
 >
-> **Theorem 12 (Other ways to write the Hessian, and its entries)** Let \\f\\ and \\\tilde{x}\\ be as in [Definition 20](#def-hessian).
+> **Theorem 12 (Other ways to write the Hessian, and its entries)** Let \\f\\ and \\\underset{\sim}{x}\\ be as in [Definition 20](#def-hessian).
 >
 > 1.  The Hessian can be written with the row-vector derivative ([Definition 5](#def-row-vector-derivative)) of \\f\\:
 >
->     \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} \mathopen{}\left(\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\right)\mathclose{} \\ &= \frac{\partial^2 f(\tilde{x})}{\partial \tilde{x} \partial {\tilde{x}}^{\top}}. \end{aligned} \tag{5}\\
+>     \\ \begin{aligned} \mathbf{H}\_f(\underset{\sim}{x}) &= \frac{\partial}{\partial \underset{\sim}{x}} \mathopen{}\left(\frac{\partial f(\underset{\sim}{x})}{\partial {\underset{\sim}{x}}^{\top}}\right)\mathclose{} \\ &= \frac{\partial^2 f(\underset{\sim}{x})}{\partial \underset{\sim}{x} \partial {\underset{\sim}{x}}^{\top}}. \end{aligned} \tag{5}\\
 >
 > 2.  The \\(i, j)\\ entry of the Hessian is
 >
->     \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{ij} = \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}. \tag{6}\\
+>     \\ \mathopen{}\left\[\mathbf{H}\_f(\underset{\sim}{x})\right\]\mathclose{}\_{ij} = \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\underset{\sim}{x})\right)\mathclose{}. \tag{6}\\
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** By [Theorem 2](#thm-row-deriv-tp-col-deriv), the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ equals the row-vector derivative \\\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\\. Substituting it into [Equation 4](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the shape rule of matrix multiplication ([Remark 2](#rem-row-derivative-shape)): the \\p \times 1\\ column-vector operator \\\frac{\partial}{\partial \tilde{x}}\\ stands on the left of a \\1 \times p\\ row vector, giving a \\p \times p\\ matrix.
+> *Proof*. **Part 1.** By [Theorem 2](#thm-row-deriv-tp-col-deriv), the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{x}} f(\underset{\sim}{x})\right)\mathclose{}}^{\top}\\ equals the row-vector derivative \\\frac{\partial f(\underset{\sim}{x})}{\partial {\underset{\sim}{x}}^{\top}}\\. Substituting it into [Equation 4](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the shape rule of matrix multiplication ([Remark 2](#rem-row-derivative-shape)): the \\p \times 1\\ column-vector operator \\\frac{\partial}{\partial \underset{\sim}{x}}\\ stands on the left of a \\1 \times p\\ row vector, giving a \\p \times p\\ matrix.
 >
-> **Part 2.** Let \\y_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\tilde{x})\\ be entry \\j\\ of the gradient. By [Definition 6](#def-vector-valued-derivative), the \\(i, j)\\ entry of the derivative of the vector \\\tilde{y}= (y_1, \ldots, y_p)\\ with respect to \\\tilde{x}\\ is
+> **Part 2.** Let \\y_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\underset{\sim}{x})\\ be entry \\j\\ of the gradient. By [Definition 6](#def-vector-valued-derivative), the \\(i, j)\\ entry of the derivative of the vector \\\underset{\sim}{y}= (y_1, \ldots, y_p)\\ with respect to \\\underset{\sim}{x}\\ is
 >
-> \\ \begin{aligned} \mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{ij} &= \mathopen{}\left\[\frac{\partial}{\partial \tilde{x}} {\tilde{y}}^{\top}\right\]\mathclose{}\_{ij} && \text{(}\href{#eq-hessian}{\text{Equation~4}}\text{, with } \tilde{y}\text{ the gradient)} \\ &= \frac{\partial}{\partial x_i} y_j && \text{(}\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}. && \text{(} y_j = \frac{\partial}{\partial x_j} f(\tilde{x}) \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\mathbf{H}\_f(\underset{\sim}{x})\right\]\mathclose{}\_{ij} &= \mathopen{}\left\[\frac{\partial}{\partial \underset{\sim}{x}} {\underset{\sim}{y}}^{\top}\right\]\mathclose{}\_{ij} && \text{(}\href{#eq-hessian}{\text{Equation~4}}\text{, with } \underset{\sim}{y}\text{ the gradient)} \\ &= \frac{\partial}{\partial x_i} y_j && \text{(}\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\underset{\sim}{x})\right)\mathclose{}. && \text{(} y_j = \frac{\partial}{\partial x_j} f(\underset{\sim}{x}) \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 27 (Computing the Hessian entry by entry, and checking it by finite differences)** Take \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ from [Example 25](#exm-hessian). By [Equation 6](#eq-hessian-entry), entry \\(i, j)\\ of the Hessian is the derivative with respect to \\x_i\\ of the derivative with respect to \\x_j\\. The code differentiates `f` symbolically in that order with [`D()`](https://rdrr.io/r/stats/deriv.html), evaluates the four entries at \\\tilde{x}= (0.5, -1)\\, and compares them with central differences of the gradient.
+> **Example 27 (Computing the Hessian entry by entry, and checking it by finite differences)** Take \\f(\underset{\sim}{x}) = e^{2x_1 + x_2} - x_1\\ from [Example 25](#exm-hessian). By [Equation 6](#eq-hessian-entry), entry \\(i, j)\\ of the Hessian is the derivative with respect to \\x_i\\ of the derivative with respect to \\x_j\\. The code differentiates `f` symbolically in that order with [`D()`](https://rdrr.io/r/stats/deriv.html), evaluates the four entries at \\\underset{\sim}{x}= (0.5, -1)\\, and compares them with central differences of the gradient.
 >
 > ``` downlit
 > f_expr <- quote(exp(2 * x1 + x2) - x1)
@@ -1020,7 +1020,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 21 (Continuity at a point in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\.
+> **Definition 21 (Continuity at a point in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\underset{\sim}{x}\\ if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \< \delta\\. For \\q = 1\\, \\\mathopen{}\left\lVert f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right\|\mathclose{}\\.
 
 > **NOTE:**
 >
@@ -1030,22 +1030,22 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > **Example 28 (A continuous function, and a discontinuous one)**  
 >
-> - \\f(\tilde{x}) = x_1 + x_2\\ is continuous at every \\\tilde{x}\\. Each \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}\\, since the squared length is a sum of nonnegative squares, so
+> - \\f(\underset{\sim}{x}) = x_1 + x_2\\ is continuous at every \\\underset{\sim}{x}\\. Each \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{}\\, since the squared length is a sum of nonnegative squares, so
 >
->   \\ \begin{aligned} \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} &= \mathopen{}\left\|(y_1 - x_1) + (y_2 - x_2)\right\|\mathclose{} && \text{(subtract)} \\ &\le \mathopen{}\left\|y_1 - x_1\right\|\mathclose{} + \mathopen{}\left\|y_2 - x_2\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le 2\\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}, && \text{(each term is at most } \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \text{)} \end{aligned} \\
+>   \\ \begin{aligned} \mathopen{}\left\|f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right\|\mathclose{} &= \mathopen{}\left\|(y_1 - x_1) + (y_2 - x_2)\right\|\mathclose{} && \text{(subtract)} \\ &\le \mathopen{}\left\|y_1 - x_1\right\|\mathclose{} + \mathopen{}\left\|y_2 - x_2\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le 2\\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{}, && \text{(each term is at most } \mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \text{)} \end{aligned} \\
 >
->   which is less than \\\varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta= \varepsilon/ 2\\.
+>   which is less than \\\varepsilon\\ whenever \\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \< \delta= \varepsilon/ 2\\.
 >
-> - \\f(\tilde{x}) = 1\\ if \\x_1 \> 0\\ and \\f(\tilde{x}) = 0\\ otherwise is not continuous at \\\tilde{0}\\: for \\\varepsilon= \tfrac{1}{2}\\ and any \\\delta\> 0\\, the point \\\tilde{y}= {(\delta/ 2, 0)}^{\top}\\ has \\\mathopen{}\left\lVert\tilde{y}- \tilde{0}\right\rVert\mathclose{} = \delta/ 2 \< \delta\\ but \\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{0})\right\|\mathclose{} = 1 \> \tfrac{1}{2}\\.
+> - \\f(\underset{\sim}{x}) = 1\\ if \\x_1 \> 0\\ and \\f(\underset{\sim}{x}) = 0\\ otherwise is not continuous at \\\underset{\sim}{0}\\: for \\\varepsilon= \tfrac{1}{2}\\ and any \\\delta\> 0\\, the point \\\underset{\sim}{y}= {(\delta/ 2, 0)}^{\top}\\ has \\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{0}\right\rVert\mathclose{} = \delta/ 2 \< \delta\\ but \\\mathopen{}\left\|f(\underset{\sim}{y}) - f(\underset{\sim}{0})\right\|\mathclose{} = 1 \> \tfrac{1}{2}\\.
 
 > **NOTE:**
 >
 > **Theorem 13 (Continuity in one variable, and sums, multiples and compositions)**  
 >
 > 1.  For \\p = q = 1\\, a function \\f\\ is continuous at \\x\\ in the sense of [Definition 21](#def-continuous-several) exactly when \\\lim\_{y \to x} f(y) = f(x)\\ ([limit](calculus-derivatives.llms.md#def-limit)), which is the usual [continuity](calculus-integration.llms.md#def-continuous) at \\x\\.
-> 2.  If \\f : \mathbb{R}^p \to \mathbb{R}^q\\ is continuous at \\\tilde{x}\\ and \\g : \mathbb{R}^q \to \mathbb{R}^r\\ is continuous at \\f(\tilde{x})\\, then the [composition](sets-functions.llms.md#def-composition) \\g \circ f\\ is continuous at \\\tilde{x}\\.
-> 3.  If \\f, g : \mathbb{R}^p \to \mathbb{R}\\ are continuous at \\\tilde{x}\\, then \\f + g\\ is continuous at \\\tilde{x}\\.
-> 4.  If \\f : \mathbb{R}^p \to \mathbb{R}\\ is continuous at \\\tilde{x}\\ and \\c \in \mathbb{R}\\, then \\c f\\ is continuous at \\\tilde{x}\\.
+> 2.  If \\f : \mathbb{R}^p \to \mathbb{R}^q\\ is continuous at \\\underset{\sim}{x}\\ and \\g : \mathbb{R}^q \to \mathbb{R}^r\\ is continuous at \\f(\underset{\sim}{x})\\, then the [composition](functions.llms.md#def-composition) \\g \circ f\\ is continuous at \\\underset{\sim}{x}\\.
+> 3.  If \\f, g : \mathbb{R}^p \to \mathbb{R}\\ are continuous at \\\underset{\sim}{x}\\, then \\f + g\\ is continuous at \\\underset{\sim}{x}\\.
+> 4.  If \\f : \mathbb{R}^p \to \mathbb{R}\\ is continuous at \\\underset{\sim}{x}\\ and \\c \in \mathbb{R}\\, then \\c f\\ is continuous at \\\underset{\sim}{x}\\.
 >
 > If the hypotheses of part 2, 3 or 4 hold at every point of a set, the conclusion holds at every point of that set.
 
@@ -1055,25 +1055,25 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > **Part 1.** For \\p = q = 1\\, \\\mathopen{}\left\lVert f(y) - f(x)\right\rVert\mathclose{} = \mathopen{}\left\|f(y) - f(x)\right\|\mathclose{}\\ and \\\mathopen{}\left\lVert y - x\right\rVert\mathclose{} = \mathopen{}\left\|y - x\right\|\mathclose{}\\. [Definition 21](#def-continuous-several) then asks for a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(y) - f(x)\right\|\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The [limit definition](calculus-derivatives.llms.md#def-limit) with \\L = f(x)\\ asks for the same inequality, but only whenever \\0 \< \mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The two agree, because at \\y = x\\ the inequality \\\mathopen{}\left\|f(x) - f(x)\right\|\mathclose{} = 0 \< \varepsilon\\ holds for every \\\delta\\.
 >
-> **Part 2.** Because \\g\\ is continuous at \\f(\tilde{x})\\, there is a \\\delta_g \> 0\\ such that \\\mathopen{}\left\lVert g(\tilde{z}) - g(f(\tilde{x}))\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\. Because \\f\\ is continuous at \\\tilde{x}\\, applied with \\\delta_g\\ in the role of \\\varepsilon\\, there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. So if \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\, then \\\tilde{z} = f(\tilde{y})\\ has \\\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\, and therefore \\\mathopen{}\left\lVert g(f(\tilde{y})) - g(f(\tilde{x}))\right\rVert\mathclose{} \< \varepsilon\\.
+> **Part 2.** Because \\g\\ is continuous at \\f(\underset{\sim}{x})\\, there is a \\\delta_g \> 0\\ such that \\\mathopen{}\left\lVert g(\underset{\sim}{z}) - g(f(\underset{\sim}{x}))\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\underset{\sim}{z} - f(\underset{\sim}{x})\right\rVert\mathclose{} \< \delta_g\\. Because \\f\\ is continuous at \\\underset{\sim}{x}\\, applied with \\\delta_g\\ in the role of \\\varepsilon\\, there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right\rVert\mathclose{} \< \delta_g\\ whenever \\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \< \delta\\. So if \\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \< \delta\\, then \\\underset{\sim}{z} = f(\underset{\sim}{y})\\ has \\\mathopen{}\left\lVert\underset{\sim}{z} - f(\underset{\sim}{x})\right\rVert\mathclose{} \< \delta_g\\, and therefore \\\mathopen{}\left\lVert g(f(\underset{\sim}{y})) - g(f(\underset{\sim}{x}))\right\rVert\mathclose{} \< \varepsilon\\.
 >
-> **Part 3.** Because \\f\\ and \\g\\ are continuous at \\\tilde{x}\\, there are \\\delta_f \> 0\\ and \\\delta_g \> 0\\ such that \\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} \< \varepsilon/ 2\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta_f\\, and \\\mathopen{}\left\|g(\tilde{y}) - g(\tilde{x})\right\|\mathclose{} \< \varepsilon/ 2\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta_g\\. Let \\\delta\stackrel{\text{def}}{=}\min\mathopen{}\left\\\delta_f, \delta_g\right\\\mathclose{}\\. If \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\, then
+> **Part 3.** Because \\f\\ and \\g\\ are continuous at \\\underset{\sim}{x}\\, there are \\\delta_f \> 0\\ and \\\delta_g \> 0\\ such that \\\mathopen{}\left\|f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right\|\mathclose{} \< \varepsilon/ 2\\ whenever \\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \< \delta_f\\, and \\\mathopen{}\left\|g(\underset{\sim}{y}) - g(\underset{\sim}{x})\right\|\mathclose{} \< \varepsilon/ 2\\ whenever \\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \< \delta_g\\. Let \\\delta\stackrel{\text{def}}{=}\min\mathopen{}\left\\\delta_f, \delta_g\right\\\mathclose{}\\. If \\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \< \delta\\, then
 >
-> \\ \begin{aligned} \mathopen{}\left\|(f + g)(\tilde{y}) - (f + g)(\tilde{x})\right\|\mathclose{} &= \mathopen{}\left\|\mathopen{}\left(f(\tilde{y}) - f(\tilde{x})\right)\mathclose{} + \mathopen{}\left(g(\tilde{y}) - g(\tilde{x})\right)\mathclose{}\right\|\mathclose{} && \text{(regroup)} \\ &\le \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} + \mathopen{}\left\|g(\tilde{y}) - g(\tilde{x})\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\< \frac{\varepsilon}{2} + \frac{\varepsilon}{2} && \text{(choice of } \delta\text{)} \\ &= \varepsilon. && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\|(f + g)(\underset{\sim}{y}) - (f + g)(\underset{\sim}{x})\right\|\mathclose{} &= \mathopen{}\left\|\mathopen{}\left(f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right)\mathclose{} + \mathopen{}\left(g(\underset{\sim}{y}) - g(\underset{\sim}{x})\right)\mathclose{}\right\|\mathclose{} && \text{(regroup)} \\ &\le \mathopen{}\left\|f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right\|\mathclose{} + \mathopen{}\left\|g(\underset{\sim}{y}) - g(\underset{\sim}{x})\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\< \frac{\varepsilon}{2} + \frac{\varepsilon}{2} && \text{(choice of } \delta\text{)} \\ &= \varepsilon. && \text{(add)} \end{aligned} \\
 >
-> **Part 4.** Because \\f\\ is continuous at \\\tilde{x}\\, there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} \< \varepsilon/ (\mathopen{}\left\|c\right\|\mathclose{} + 1)\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. For such \\\tilde{y}\\,
+> **Part 4.** Because \\f\\ is continuous at \\\underset{\sim}{x}\\, there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right\|\mathclose{} \< \varepsilon/ (\mathopen{}\left\|c\right\|\mathclose{} + 1)\\ whenever \\\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} \< \delta\\. For such \\\underset{\sim}{y}\\,
 >
-> \\ \begin{aligned} \mathopen{}\left\|c f(\tilde{y}) - c f(\tilde{x})\right\|\mathclose{} &= \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} && \text{(factor out } c \text{)} \\ &\le \mathopen{}\left\|c\right\|\mathclose{}\\\frac{\varepsilon}{\mathopen{}\left\|c\right\|\mathclose{} + 1} && \text{(choice of } \delta\text{)} \\ &\< \varepsilon. && \text{(} \mathopen{}\left\|c\right\|\mathclose{} \< \mathopen{}\left\|c\right\|\mathclose{} + 1 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\|c f(\underset{\sim}{y}) - c f(\underset{\sim}{x})\right\|\mathclose{} &= \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\|f(\underset{\sim}{y}) - f(\underset{\sim}{x})\right\|\mathclose{} && \text{(factor out } c \text{)} \\ &\le \mathopen{}\left\|c\right\|\mathclose{}\\\frac{\varepsilon}{\mathopen{}\left\|c\right\|\mathclose{} + 1} && \text{(choice of } \delta\text{)} \\ &\< \varepsilon. && \text{(} \mathopen{}\left\|c\right\|\mathclose{} \< \mathopen{}\left\|c\right\|\mathclose{} + 1 \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 29 (Choosing \\\delta\\ for a sum, a multiple and a composition)** Let \\f(\tilde{x}) = x_1\\ and \\g(\tilde{x}) = x_2\\ on \\\mathbb{R}^2\\, and \\h(t) = 3t\\ on \\\mathbb{R}\\. Since \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}\\, the functions \\f\\ and \\g\\ are continuous with \\\delta= \varepsilon\\, and \\h\\ is continuous with \\\delta= \varepsilon/ 3\\, because \\\mathopen{}\left\|h(s) - h(t)\right\|\mathclose{} = 3\\\mathopen{}\left\|s - t\right\|\mathclose{}\\. Take \\\tilde{x}= (1, 2)\\ and \\\varepsilon= 0.1\\. The proof of [Theorem 13](#thm-continuous-several) gives these values of \\\delta\\:
+> **Example 29 (Choosing \\\delta\\ for a sum, a multiple and a composition)** Let \\f(\underset{\sim}{x}) = x_1\\ and \\g(\underset{\sim}{x}) = x_2\\ on \\\mathbb{R}^2\\, and \\h(t) = 3t\\ on \\\mathbb{R}\\. Since \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{}\\, the functions \\f\\ and \\g\\ are continuous with \\\delta= \varepsilon\\, and \\h\\ is continuous with \\\delta= \varepsilon/ 3\\, because \\\mathopen{}\left\|h(s) - h(t)\right\|\mathclose{} = 3\\\mathopen{}\left\|s - t\right\|\mathclose{}\\. Take \\\underset{\sim}{x}= (1, 2)\\ and \\\varepsilon= 0.1\\. The proof of [Theorem 13](#thm-continuous-several) gives these values of \\\delta\\:
 >
 > - for \\f + g\\ (part 3), \\\delta= \min\mathopen{}\left\\\varepsilon/ 2, \varepsilon/ 2\right\\\mathclose{}\\;
 > - for \\3 f\\ (part 4), \\\delta= \varepsilon/ (3 + 1)\\;
 > - for \\h \circ (f + g)\\ (part 2), the outer value \\\delta_h = \varepsilon/ 3\\ plays the role of \\\varepsilon\\ for \\f + g\\, so \\\delta= \delta_h / 2\\.
 >
-> The code draws many points \\\tilde{y}\\ at distance less than \\\delta\\ from \\\tilde{x}\\ and finds the largest change in each function.
+> The code draws many points \\\underset{\sim}{y}\\ at distance less than \\\delta\\ from \\\underset{\sim}{x}\\ and finds the largest change in each function.
 >
 > ``` downlit
 > set.seed(571)
@@ -1112,9 +1112,9 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > **Example 30 (Partial derivatives can exist where a function is not continuous)** Let \\f : \mathbb{R}^2 \to \mathbb{R}\\ be
 >
-> \\ f(\tilde{x}) = \begin{cases} \dfrac{x_1 x_2}{x_1^2 + x_2^2} & \text{if } \tilde{x}\ne \tilde{0}, \\ 0 & \text{if } \tilde{x}= \tilde{0}. \end{cases} \\
+> \\ f(\underset{\sim}{x}) = \begin{cases} \dfrac{x_1 x_2}{x_1^2 + x_2^2} & \text{if } \underset{\sim}{x}\ne \underset{\sim}{0}, \\ 0 & \text{if } \underset{\sim}{x}= \underset{\sim}{0}. \end{cases} \\
 >
-> **Both partial derivatives exist at \\\tilde{0}\\.** For \\h \ne 0\\,
+> **Both partial derivatives exist at \\\underset{\sim}{0}\\.** For \\h \ne 0\\,
 >
 > \\ \begin{aligned} f(h, 0) &= \frac{h \cdot 0}{h^2 + 0} \\ &= 0, \end{aligned} \\
 >
@@ -1122,59 +1122,59 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > \\ \begin{aligned} \frac{f(0 + h, 0) - f(0, 0)}{h} &= \frac{0 - 0}{h} && \text{(} f(h, 0) = 0 \text{ and } f(0, 0) = 0 \text{)} \\ &= 0, && \text{(} 0 / h = 0 \text{ for } h \ne 0 \text{)} \end{aligned} \\
 >
-> and the limit as \\h \to 0\\ is \\0\\: \\\frac{\partial}{\partial x_1} f(\tilde{0}) = 0\\ ([Definition 1](#def-partial-derivative)). The same steps with \\f(0, h) = 0\\ give \\\frac{\partial}{\partial x_2} f(\tilde{0}) = 0\\.
+> and the limit as \\h \to 0\\ is \\0\\: \\\frac{\partial}{\partial x_1} f(\underset{\sim}{0}) = 0\\ ([Definition 1](#def-partial-derivative)). The same steps with \\f(0, h) = 0\\ give \\\frac{\partial}{\partial x_2} f(\underset{\sim}{0}) = 0\\.
 >
-> **But \\f\\ is not continuous at \\\tilde{0}\\** ([Definition 21](#def-continuous-several)). Take \\\varepsilon= \tfrac{1}{4}\\ and any \\\delta\> 0\\, and let \\t = \delta/ 2\\ and \\\tilde{y}= {(t, t)}^{\top}\\. Then
+> **But \\f\\ is not continuous at \\\underset{\sim}{0}\\** ([Definition 21](#def-continuous-several)). Take \\\varepsilon= \tfrac{1}{4}\\ and any \\\delta\> 0\\, and let \\t = \delta/ 2\\ and \\\underset{\sim}{y}= {(t, t)}^{\top}\\. Then
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{y}- \tilde{0}\right\rVert\mathclose{} &= \sqrt{t^2 + t^2} \\ &= t \sqrt{2} \\ &= \delta/ \sqrt{2} \\ &\< \delta, \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{0}\right\rVert\mathclose{} &= \sqrt{t^2 + t^2} \\ &= t \sqrt{2} \\ &= \delta/ \sqrt{2} \\ &\< \delta, \end{aligned} \\
 >
 > but
 >
-> \\ \begin{aligned} \mathopen{}\left\|f(\tilde{y}) - f(\tilde{0})\right\|\mathclose{} &= \mathopen{}\left\|\frac{t \cdot t}{t^2 + t^2} - 0\right\|\mathclose{} && \text{(} \tilde{y}\ne \tilde{0}\text{, since } t \> 0 \text{)} \\ &= \frac{t^2}{2 t^2} && \text{(} t^2 + t^2 = 2 t^2 \text{)} \\ &= \tfrac{1}{2}, && \text{(cancel } t^2 \> 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\|f(\underset{\sim}{y}) - f(\underset{\sim}{0})\right\|\mathclose{} &= \mathopen{}\left\|\frac{t \cdot t}{t^2 + t^2} - 0\right\|\mathclose{} && \text{(} \underset{\sim}{y}\ne \underset{\sim}{0}\text{, since } t \> 0 \text{)} \\ &= \frac{t^2}{2 t^2} && \text{(} t^2 + t^2 = 2 t^2 \text{)} \\ &= \tfrac{1}{2}, && \text{(cancel } t^2 \> 0 \text{)} \end{aligned} \\
 >
 > which is more than \\\varepsilon= \tfrac{1}{4}\\.
 >
-> The partial derivatives only look along the two coordinate axes, where \\f\\ is \\0\\; along the line \\x_1 = x_2\\, \\f\\ is \\\tfrac{1}{2}\\ everywhere except at \\\tilde{0}\\. So partial derivatives existing at a point says little about how \\f\\ behaves near it.
+> The partial derivatives only look along the two coordinate axes, where \\f\\ is \\0\\; along the line \\x_1 = x_2\\, \\f\\ is \\\tfrac{1}{2}\\ everywhere except at \\\underset{\sim}{0}\\. So partial derivatives existing at a point says little about how \\f\\ behaves near it.
 
 > **NOTE:**
 >
-> **Theorem 14 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 21](#def-continuous-several)) on an open ball around \\\tilde{x}\\ ([Definition 15](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 20](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
+> **Theorem 14 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 21](#def-continuous-several)) on an open ball around \\\underset{\sim}{x}\\ ([Definition 15](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\underset{\sim}{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\underset{\sim}{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\underset{\sim}{x})\\ ([Definition 20](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
 
 The proof applies the one-variable mean value theorem twice, which these notes do not develop; see ([Rudin 1976](#ref-rudin1976principles), Theorem 9.41), which is stated for two variables: apply it to \\f\\ as a function of \\x_i\\ and \\x_j\\, with the other coordinates held fixed.
 
 > **NOTE:**
 >
-> **Example 31 (Mixed partial derivatives agree)** In [Example 25](#exm-hessian), the \\(1, 2)\\ and \\(2, 1)\\ entries of \\\mathbf{H}\_f(\tilde{x})\\ are both \\2 e^{2x_1 + x_2}\\.
+> **Example 31 (Mixed partial derivatives agree)** In [Example 25](#exm-hessian), the \\(1, 2)\\ and \\(2, 1)\\ entries of \\\mathbf{H}\_f(\underset{\sim}{x})\\ are both \\2 e^{2x_1 + x_2}\\.
 
 > **NOTE:**
 >
-> **Example 32 (Without continuity, the mixed partials can differ)** Let \\f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}\\ for \\\tilde{x}\ne \tilde{0}\\, and \\f(\tilde{0}) = 0\\. For \\x_2 \ne 0\\, the partial derivative ([Definition 1](#def-partial-derivative)) in \\x_1\\ at \\(0, x_2)\\ is
+> **Example 32 (Without continuity, the mixed partials can differ)** Let \\f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}\\ for \\\underset{\sim}{x}\ne \underset{\sim}{0}\\, and \\f(\underset{\sim}{0}) = 0\\. For \\x_2 \ne 0\\, the partial derivative ([Definition 1](#def-partial-derivative)) in \\x_1\\ at \\(0, x_2)\\ is
 >
 > \\ \begin{aligned} \frac{\partial}{\partial x_1} f(0, x_2) &= \lim\_{h \to 0} \frac{f(h, x_2) - f(0, x_2)}{h} && \text{(definition of the partial derivative, }\href{#def-partial-derivative}{\text{Definition~1}}\text{)} \\ &= \lim\_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2} && \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)} \\ &= \frac{x_2 \cdot (-x_2^2)}{x_2^2} \\ &= -x_2, && \text{(the quotient is continuous at } h = 0 \text{)} \end{aligned} \\
 >
 > and
 >
-> \\ \begin{aligned} \frac{\partial}{\partial x_1} f(\tilde{0}) &= \lim\_{h \to 0} (0 - 0)/h \\ &= 0, \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial x_1} f(\underset{\sim}{0}) &= \lim\_{h \to 0} (0 - 0)/h \\ &= 0, \end{aligned} \\
 >
-> so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\tilde{0}\\ ([Definition 20](#def-hessian))
+> so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\underset{\sim}{0}\\ ([Definition 20](#def-hessian))
 >
-> \\ \begin{aligned} \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{21} &= \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f\right)\mathclose{} \\ &= \frac{d }{d x_2} (-x_2) \\ &= -1, \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{12} &= \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f\right)\mathclose{} \\ &= \frac{d }{d x_1} x_1 \\ &= 1: \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\mathbf{H}\_f(\underset{\sim}{0})\right\]\mathclose{}\_{21} &= \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f\right)\mathclose{} \\ &= \frac{d }{d x_2} (-x_2) \\ &= -1, \\ \mathopen{}\left\[\mathbf{H}\_f(\underset{\sim}{0})\right\]\mathclose{}\_{12} &= \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f\right)\mathclose{} \\ &= \frac{d }{d x_1} x_1 \\ &= 1: \end{aligned} \\
 >
-> the Hessian at \\\tilde{0}\\ is not symmetric. By [Theorem 14](#thm-hessian-symmetric), then, the second partial derivatives of this \\f\\ cannot all be continuous near \\\tilde{0}\\.
+> the Hessian at \\\underset{\sim}{0}\\ is not symmetric. By [Theorem 14](#thm-hessian-symmetric), then, the second partial derivatives of this \\f\\ cannot all be continuous near \\\underset{\sim}{0}\\.
 
 > **NOTE:**
 >
-> **Theorem 15 (Hessian of a quadratic form)** If \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{x}\\, then \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ has \\\mathbf{H}\_f(\tilde{x}) = 2 \mathbf{S}\\ for every \\\tilde{x}\\.
+> **Theorem 15 (Hessian of a quadratic form)** If \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\underset{\sim}{x}\\, then \\f(\underset{\sim}{x}) = {\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x}\\ has \\\mathbf{H}\_f(\underset{\sim}{x}) = 2 \mathbf{S}\\ for every \\\underset{\sim}{x}\\.
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~20}}\text{)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(}\href{#cor-quadratic-form-symmetric}{\text{Corollary~2}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~6}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~4}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\underset{\sim}{x}) &= \frac{\partial}{\partial \underset{\sim}{x}} {\mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{x}} ({\underset{\sim}{x}}^{\top} \mathbf{S} \underset{\sim}{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~20}}\text{)} \\ &= \frac{\partial}{\partial \underset{\sim}{x}} {\mathopen{}\left(2 \mathbf{S} \underset{\sim}{x}\right)\mathclose{}}^{\top} && \text{(}\href{#cor-quadratic-form-symmetric}{\text{Corollary~2}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \underset{\sim}{x}} \underset{\sim}{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~6}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \underset{\sim}{v} = \underset{\sim}{x}\text{; } \frac{\partial}{\partial \underset{\sim}{x}} {(2 \mathbf{S} \underset{\sim}{x})}^{\top} = \frac{\partial}{\partial \underset{\sim}{x}} (2 \mathbf{S} \underset{\sim}{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \underset{\sim}{x}} \underset{\sim}{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~4}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 33 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 16](#exm-deriv-quadratic-form), [Theorem 15](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta\_{i}\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 20](#def-hessian)) gives
+> **Example 33 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 16](#exm-deriv-quadratic-form), [Theorem 15](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\underset{\sim}{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta\_{i}\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 20](#def-hessian)) gives
 >
-> \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \begin{bmatrix} \frac{\partial}{\partial x_1} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_1} (2 x_1 + 4 x_2) \\ \frac{\partial}{\partial x_2} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_2} (2 x_1 + 4 x_2) \end{bmatrix} \\ &= \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}. \end{aligned} \\
+> \\ \begin{aligned} \mathbf{H}\_f(\underset{\sim}{x}) &= \begin{bmatrix} \frac{\partial}{\partial x_1} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_1} (2 x_1 + 4 x_2) \\ \frac{\partial}{\partial x_2} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_2} (2 x_1 + 4 x_2) \end{bmatrix} \\ &= \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}. \end{aligned} \\
 
 ## 3 Further reading
 

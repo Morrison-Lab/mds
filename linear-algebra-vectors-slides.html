@@ -352,13 +352,13 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-16 02:45:37 (PDT)</p>
+  <p class="date">Last modified: 2026-10-16 03:50:53 (PDT)</p>
 </section><section class="slide level2"></section><section id="vectors" class="slide level2 scrollable" data-number="1"><h2>
 <span class="header-section-number">1</span> Vectors</h2>
 <div id="exr-list-as-vector" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Store a data point as one object)</strong></span> A house has a floor area of <span class="math inline">\(120\)</span> square meters, <span class="math inline">\(3\)</span> bedrooms, and an age of <span class="math inline">\(15\)</span> years.</p>
 <ol type="1">
-<li>Write these three numbers as a single vertical list <span class="math inline">\(\tilde{x}\)</span>, in the order given, and call its entries <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span> and <span class="math inline">\(x_3\)</span>. What is <span class="math inline">\(x_2\)</span>?</li>
+<li>Write these three numbers as a single vertical list <span class="math inline">\(\underset{\sim}{x}\)</span>, in the order given, and call its entries <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span> and <span class="math inline">\(x_3\)</span>. What is <span class="math inline">\(x_2\)</span>?</li>
 <li>Does the list <span class="math inline">\((3, 120, 15)\)</span> describe the same house?</li>
 </ol>
 </div>
@@ -368,7 +368,7 @@
 <li>
 <p>Stacking the three numbers in order gives</p>
 <p><span class="math display">\[
-\tilde{x}=
+\underset{\sim}{x}=
 \begin{bmatrix}
 120 \\
 3 \\
@@ -383,7 +383,7 @@
 </section><section class="slide level2"><div id="def-column-vector" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Column vector)</strong></span> A <strong>column vector</strong> of length <span class="math inline">\(p\)</span> is an ordered list of <span class="math inline">\(p\)</span> numbers, written vertically:</p>
 <p><span class="math display">\[
-\tilde{x}=
+\underset{\sim}{x}=
 \begin{bmatrix}
 x_{1} \\
 x_{2} \\
@@ -393,9 +393,9 @@ x_{p}
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-column-vector-convention" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Vectors are columns by default). </span>In these notes, as in most statistics textbooks, a vector is a column vector unless stated otherwise. A vector written inline as a list in parentheses is still a column vector: for example, <span class="math inline">\(\tilde{x}= (2, -1, 5)\)</span> means</p>
+<p><span class="proof-title"><em>Remark 1</em> (Vectors are columns by default). </span>In these notes, as in most statistics textbooks, a vector is a column vector unless stated otherwise. A vector written inline as a list in parentheses is still a column vector: for example, <span class="math inline">\(\underset{\sim}{x}= (2, -1, 5)\)</span> means</p>
 <p><span class="math display">\[
-\tilde{x}=
+\underset{\sim}{x}=
 \begin{bmatrix}
 2 \\
 -1 \\
@@ -404,25 +404,25 @@ x_{p}
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-real-coordinate-space" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (The set <span class="math inline">\(\mathbb{R}^p\)</span>)</strong></span> For a positive <a href="./notation.html#def-integers">integer</a> <span class="math inline">\(p\)</span>, <span class="math inline">\(\mathbb{R}^p\)</span> is the set of all <a href="#/def-column-vector">column vectors</a> of length <span class="math inline">\(p\)</span> whose entries are <a href="./notation.html#def-real-numbers">real numbers</a>.</p>
+<p><span class="theorem-title"><strong>Definition 2 (The set <span class="math inline">\(\mathbb{R}^p\)</span>)</strong></span> For a positive <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(p\)</span>, <span class="math inline">\(\mathbb{R}^p\)</span> is the set of all <a href="#/def-column-vector">column vectors</a> of length <span class="math inline">\(p\)</span> whose entries are <a href="./number-systems.html#def-real-numbers">real numbers</a>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-real-coordinate-space-notation" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (Reading <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span>). </span>Writing <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> says, in one symbol, that <span class="math inline">\(\tilde{x}\)</span> is a column vector with <span class="math inline">\(p\)</span> real entries. For example, <span class="math inline">\((1, -2, 0.5) \in \mathbb{R}^3\)</span>. The vector <span class="math inline">\((1, 2)\)</span> is not in <span class="math inline">\(\mathbb{R}^3\)</span>, because it has only <span class="math inline">\(2\)</span> entries; it is in <span class="math inline">\(\mathbb{R}^2\)</span>. In <a href="#/exr-list-as-vector" class="quarto-xref">Exercise&nbsp;1</a>, <span class="math inline">\(\tilde{x}\in \mathbb{R}^3\)</span>.</p>
+<p><span class="proof-title"><em>Remark 2</em> (Reading <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^p\)</span>). </span>Writing <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^p\)</span> says, in one symbol, that <span class="math inline">\(\underset{\sim}{x}\)</span> is a column vector with <span class="math inline">\(p\)</span> real entries. For example, <span class="math inline">\((1, -2, 0.5) \in \mathbb{R}^3\)</span>. The vector <span class="math inline">\((1, 2)\)</span> is not in <span class="math inline">\(\mathbb{R}^3\)</span>, because it has only <span class="math inline">\(2\)</span> entries; it is in <span class="math inline">\(\mathbb{R}^2\)</span>. In <a href="#/exr-list-as-vector" class="quarto-xref">Exercise&nbsp;1</a>, <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^3\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-scalar" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Scalar)</strong></span> In linear algebra, a <strong>scalar</strong> is a single <a href="./notation.html#def-real-numbers">real number</a>, as opposed to a vector or a matrix, which holds several numbers.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Scalar)</strong></span> In linear algebra, a <strong>scalar</strong> is a single <a href="./number-systems.html#def-real-numbers">real number</a>, as opposed to a vector or a matrix, which holds several numbers.</p>
 </div>
 </section><section class="slide level2"><div id="exm-scalar" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Scalars and a vector)</strong></span> The numbers <span class="math inline">\(5\)</span> and <span class="math inline">\(-0.2\)</span> are scalars. The column vector <span class="math inline">\((5, -0.2)\)</span> is not a scalar: it has <span class="math inline">\(2\)</span> entries, so it is in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a>), and each of its <span class="math inline">\(2\)</span> entries is a scalar.</p>
 </div>
 </section><section class="slide level2"><div id="def-real-vector-valued" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Real-valued (scalar-valued) function)</strong></span> A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f : A \to \mathbb{R}\)</span>, whose values are numbers, is <strong>real-valued</strong> (also called <strong>scalar-valued</strong>, since its values are <a href="#/def-scalar">scalars</a>).</p>
+<p><span class="theorem-title"><strong>Definition 4 (Real-valued (scalar-valued) function)</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f : A \to \mathbb{R}\)</span>, whose values are numbers, is <strong>real-valued</strong> (also called <strong>scalar-valued</strong>, since its values are <a href="#/def-scalar">scalars</a>).</p>
 </div>
 </section><section class="slide level2"><div id="def-vector-valued" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Vector-valued function)</strong></span> A function <span class="math inline">\(f : A \to \mathbb{R}^m\)</span>, whose values are vectors (<a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a>), is <strong>vector-valued</strong>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-real-vector-valued" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (A real-valued and a vector-valued function)</strong></span> On <span class="math inline">\(\mathbb{R}^2\)</span>, <span class="math inline">\(f(\tilde{x}) = x_1 + x_2\)</span> is real-valued and <span class="math inline">\(g(\tilde{x}) = \begin{bmatrix}x_1 + x_2 \\ x_1 - x_2\end{bmatrix}\)</span> is vector-valued:</p>
+<p><span class="theorem-title"><strong>Example 2 (A real-valued and a vector-valued function)</strong></span> On <span class="math inline">\(\mathbb{R}^2\)</span>, <span class="math inline">\(f(\underset{\sim}{x}) = x_1 + x_2\)</span> is real-valued and <span class="math inline">\(g(\underset{\sim}{x}) = \begin{bmatrix}x_1 + x_2 \\ x_1 - x_2\end{bmatrix}\)</span> is vector-valued:</p>
 <p><span class="math display">\[
 f\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = 3 + 4 = 7,
 \qquad
@@ -430,9 +430,9 @@ g\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-transpose" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Transpose)</strong></span> The <strong>transpose</strong> of a column vector <span class="math inline">\(\tilde{x}\)</span> is the row vector with the same <a href="./sets-functions.html#def-sequence">sequence</a> of entries, written horizontally:</p>
+<p><span class="theorem-title"><strong>Definition 6 (Transpose)</strong></span> The <strong>transpose</strong> of a column vector <span class="math inline">\(\underset{\sim}{x}\)</span> is the row vector with the same <a href="./functions.html#def-sequence">sequence</a> of entries, written horizontally:</p>
 <p><span class="math display">\[
-{\tilde{x}}^{\top} \equiv \tilde{x}' \equiv [x_1,\; x_2,\; \ldots,\; x_p]
+{\underset{\sim}{x}}^{\top} \equiv \underset{\sim}{x}' \equiv [x_1,\; x_2,\; \ldots,\; x_p]
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-transpose-column-vector" class="theorem example">
@@ -443,8 +443,8 @@ g\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-vector-addition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Vector addition)</strong></span> The <strong>sum</strong> of two column vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> of the same length <span class="math inline">\(p\)</span> is the column vector <span class="math inline">\(\tilde{x}+ \tilde{y}\)</span> of length <span class="math inline">\(p\)</span> obtained by adding entry by entry:</p>
-<p><span class="math display">\[(\tilde{x}+ \tilde{y})_i \stackrel{\text{def}}{=}x_i + y_i, \quad i = 1, \ldots, p\]</span></p>
+<p><span class="theorem-title"><strong>Definition 7 (Vector addition)</strong></span> The <strong>sum</strong> of two column vectors <span class="math inline">\(\underset{\sim}{x}\)</span> and <span class="math inline">\(\underset{\sim}{y}\)</span> of the same length <span class="math inline">\(p\)</span> is the column vector <span class="math inline">\(\underset{\sim}{x}+ \underset{\sim}{y}\)</span> of length <span class="math inline">\(p\)</span> obtained by adding entry by entry:</p>
+<p><span class="math display">\[(\underset{\sim}{x}+ \underset{\sim}{y})_i \stackrel{\text{def}}{=}x_i + y_i, \quad i = 1, \ldots, p\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-vector-addition" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (Adding two vectors)</strong></span> <span class="math display">\[
@@ -460,8 +460,8 @@ g\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-dot-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Dot product)</strong></span> For any two real-valued vectors <span class="math inline">\(\tilde{x}= (x_1, \ldots, x_p)\)</span> and <span class="math inline">\(\tilde{y}= (y_1, \ldots, y_p)\)</span> of the same length <span class="math inline">\(p\)</span>, the <strong>dot product</strong> of <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> is:</p>
-<p><span id="eq-inner-product"><span class="math display">\[\tilde{x}\cdot \tilde{y}= \tilde{x}^{\top} \tilde{y}\stackrel{\text{def}}{=}\sum_{i=1}^px_i y_i \tag{1}\]</span></span></p>
+<p><span class="theorem-title"><strong>Definition 8 (Dot product)</strong></span> For any two real-valued vectors <span class="math inline">\(\underset{\sim}{x}= (x_1, \ldots, x_p)\)</span> and <span class="math inline">\(\underset{\sim}{y}= (y_1, \ldots, y_p)\)</span> of the same length <span class="math inline">\(p\)</span>, the <strong>dot product</strong> of <span class="math inline">\(\underset{\sim}{x}\)</span> and <span class="math inline">\(\underset{\sim}{y}\)</span> is:</p>
+<p><span id="eq-inner-product"><span class="math display">\[\underset{\sim}{x}\cdot \underset{\sim}{y}= \underset{\sim}{x}^{\top} \underset{\sim}{y}\stackrel{\text{def}}{=}\sum_{i=1}^px_i y_i \tag{1}\]</span></span></p>
 </div>
 <aside class="notes"><p>See also the definitions in:</p>
 <ul>
@@ -483,10 +483,10 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
           overflow: hidden!important;
           display:block!important;
       }</style></aside></section><section class="slide level2"><div id="exm-dot-product" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (A dot product)</strong></span> For <span class="math inline">\(\tilde{x}= (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{y}= (4, 5, 6)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 5 (A dot product)</strong></span> For <span class="math inline">\(\underset{\sim}{x}= (1, 2, 3)\)</span> and <span class="math inline">\(\underset{\sim}{y}= (4, 5, 6)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{x}\cdot \tilde{y}
+\underset{\sim}{x}\cdot \underset{\sim}{y}
 &amp;= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6
 &amp;&amp; \text{(definition of the dot product)}
 \\
@@ -501,7 +501,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 </section><section class="slide level2"><div id="def-linear-combination" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Linear combination)</strong></span> A <strong>linear combination</strong> of the numbers <span class="math inline">\(a_1, \ldots, a_k\)</span> with coefficients <span class="math inline">\(c_1, \ldots, c_k\)</span> (<a href="#/def-lincom-coefficient" class="quarto-xref">Definition&nbsp;10</a>) is the weighted sum</p>
 <p><span class="math display">\[c_1 a_1 + \cdots + c_k a_k = \sum_{i=1}^{k} c_i a_i\]</span></p>
-<p>A linear combination of vectors <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k\)</span> of the same length is defined entry by entry: entry <span class="math inline">\(j\)</span> of <span class="math inline">\(\sum_{i=1}^{k} c_i \tilde{v}_i\)</span> is the linear combination of the <span class="math inline">\(j\)</span>th entries of <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k\)</span> with the same coefficients.</p>
+<p>A linear combination of vectors <span class="math inline">\(\underset{\sim}{v}_1, \ldots, \underset{\sim}{v}_k\)</span> of the same length is defined entry by entry: entry <span class="math inline">\(j\)</span> of <span class="math inline">\(\sum_{i=1}^{k} c_i \underset{\sim}{v}_i\)</span> is the linear combination of the <span class="math inline">\(j\)</span>th entries of <span class="math inline">\(\underset{\sim}{v}_1, \ldots, \underset{\sim}{v}_k\)</span> with the same coefficients.</p>
 </div>
 </section><section class="slide level2"><div id="def-lincom-coefficient" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10 (Coefficients of a linear combination)</strong></span> The numbers <span class="math inline">\(c_1, \ldots, c_k\)</span> in a linear combination (<a href="#/def-linear-combination" class="quarto-xref">Definition&nbsp;9</a>) <span class="math inline">\(\sum_{i=1}^{k} c_i a_i\)</span> are its <strong>coefficients</strong>.</p>
@@ -513,33 +513,33 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p><span class="theorem-title"><strong>Example 7 (A linear combination of two vectors)</strong></span> The linear combination of <span class="math inline">\({(1, 0)}^{\top}\)</span> and <span class="math inline">\({(0, 1)}^{\top}\)</span> with coefficients <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> is <span class="math inline">\({(2 \cdot 1 + 3 \cdot 0,\ 2 \cdot 0 + 3 \cdot 1)}^{\top} = {(2, 3)}^{\top}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-dot-product-lincom" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (The dot product is a linear combination). </span>The dot product <span class="math inline">\(\tilde{x}\cdot \tilde{y}\)</span> is a linear combination (<a href="#/def-linear-combination" class="quarto-xref">Definition&nbsp;9</a>) of the entries of <span class="math inline">\(\tilde{y}\)</span>, with coefficients <span class="math inline">\(x_1, \ldots, x_p\)</span>. In <a href="#/exm-dot-product" class="quarto-xref">Example&nbsp;5</a>, <span class="math inline">\(\tilde{x}\cdot \tilde{y}= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6\)</span> is the linear combination of <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span>, and <span class="math inline">\(6\)</span> with coefficients <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(3\)</span>.</p>
+<p><span class="proof-title"><em>Remark 3</em> (The dot product is a linear combination). </span>The dot product <span class="math inline">\(\underset{\sim}{x}\cdot \underset{\sim}{y}\)</span> is a linear combination (<a href="#/def-linear-combination" class="quarto-xref">Definition&nbsp;9</a>) of the entries of <span class="math inline">\(\underset{\sim}{y}\)</span>, with coefficients <span class="math inline">\(x_1, \ldots, x_p\)</span>. In <a href="#/exm-dot-product" class="quarto-xref">Example&nbsp;5</a>, <span class="math inline">\(\underset{\sim}{x}\cdot \underset{\sim}{y}= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6\)</span> is the linear combination of <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span>, and <span class="math inline">\(6\)</span> with coefficients <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(3\)</span>.</p>
 <p>The dot product is also the standard <em>inner product</em> on <span class="math inline">\(\mathbb{R}^p\)</span>; “inner product” is the general notion (<a href="./linear-algebra-inner-products.html#def-inner-product">Definition&nbsp;1 in Inner Products and Orthogonality</a>, later in these notes), of which the dot product is one example.</p>
 </div>
 </section><section class="slide level2"><div id="thm-lincom-symmetric" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Dot product is symmetric)</strong></span> The dot product is symmetric:</p>
-<p><span class="math display">\[\tilde{x}\cdot \tilde{y}= \tilde{y}\cdot \tilde{x}\]</span></p>
+<p><span class="math display">\[\underset{\sim}{x}\cdot \underset{\sim}{y}= \underset{\sim}{y}\cdot \underset{\sim}{x}\]</span></p>
 </div>
 </section><section class="slide level2"><div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
 \begin{aligned}
-\tilde{x}\cdot \tilde{y}
+\underset{\sim}{x}\cdot \underset{\sim}{y}
 &amp;= \sum_{i=1}^px_i y_i
 &amp;&amp; \text{(definition of the dot product)}
 \\
 &amp;= \sum_{i=1}^py_i x_i
 &amp;&amp; \text{(products of numbers are symmetric)}
 \\
-&amp;= \tilde{y}\cdot \tilde{x}
+&amp;= \underset{\sim}{y}\cdot \underset{\sim}{x}
 &amp;&amp; \text{(definition of the dot product)}
 \end{aligned}
 \]</span></p>
 </div>
 <h3 id="special-vectors">Special vectors</h3>
 <div id="def-zero-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Zero vector)</strong></span> The <strong>zero vector</strong> <span class="math inline">\(\tilde{0}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to zero:</p>
+<p><span class="theorem-title"><strong>Definition 11 (Zero vector)</strong></span> The <strong>zero vector</strong> <span class="math inline">\(\underset{\sim}{0}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to zero:</p>
 <p><span class="math display">\[
-\tilde{0}=
+\underset{\sim}{0}=
 \begin{bmatrix}
 0 \\
 0 \\
@@ -549,7 +549,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-zero-vector-identity" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (The zero vector is the additive identity). </span>Adding the zero vector to a vector leaves it unchanged (<a href="#/def-vector-addition" class="quarto-xref">Definition&nbsp;7</a>): <span class="math inline">\(\tilde{x}+ \tilde{0}= \tilde{x}\)</span> for any vector <span class="math inline">\(\tilde{x}\)</span> of the same length, so <span class="math inline">\(\tilde{0}\)</span> is the <a href="./algebra-sums.html#def-identity-element">identity element</a> for vector addition. For example,</p>
+<p><span class="proof-title"><em>Remark 4</em> (The zero vector is the additive identity). </span>Adding the zero vector to a vector leaves it unchanged (<a href="#/def-vector-addition" class="quarto-xref">Definition&nbsp;7</a>): <span class="math inline">\(\underset{\sim}{x}+ \underset{\sim}{0}= \underset{\sim}{x}\)</span> for any vector <span class="math inline">\(\underset{\sim}{x}\)</span> of the same length, so <span class="math inline">\(\underset{\sim}{0}\)</span> is the <a href="./algebra-sums.html#def-identity-element">identity element</a> for vector addition. For example,</p>
 <p><span class="math display">\[
 \begin{aligned}
 (2, -1) + (0, 0) &amp;= (2 + 0, -1 + 0) \\
@@ -581,9 +581,9 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p><span class="proof-title"><em>Remark 5</em> (The sample mean estimates the population mean). </span>When the numbers are observed data values, <span class="math inline">\(\bar{y}\)</span> is also called the sample mean, an estimator of the <a href="https://morrison-lab.github.io/pds/expectation.html#def-expectation">population mean</a>.</p>
 </div>
 </section><section class="slide level2"><div id="def-ones-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Ones vector)</strong></span> The <strong>ones vector</strong> <span class="math inline">\(\tilde{1}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to one:</p>
+<p><span class="theorem-title"><strong>Definition 13 (Ones vector)</strong></span> The <strong>ones vector</strong> <span class="math inline">\(\underset{\sim}{1}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to one:</p>
 <p><span class="math display">\[
-\tilde{1} =
+\underset{\sim}{1} =
 \begin{bmatrix}
 1 \\
 1 \\
@@ -593,32 +593,32 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-ones-vector-sum" class="proof remark">
-<p><span class="proof-title"><em>Remark 6</em> (The ones vector sums the entries). </span>The dot product (<a href="#/def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) of <span class="math inline">\(\tilde{1}\)</span> with <span class="math inline">\(\tilde{x}\)</span> is the sum of the entries of <span class="math inline">\(\tilde{x}\)</span>:</p>
+<p><span class="proof-title"><em>Remark 6</em> (The ones vector sums the entries). </span>The dot product (<a href="#/def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) of <span class="math inline">\(\underset{\sim}{1}\)</span> with <span class="math inline">\(\underset{\sim}{x}\)</span> is the sum of the entries of <span class="math inline">\(\underset{\sim}{x}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{1} \cdot \tilde{x}&amp;= \sum_{i=1}^p1 \cdot x_i \\
+\underset{\sim}{1} \cdot \underset{\sim}{x}&amp;= \sum_{i=1}^p1 \cdot x_i \\
 &amp;= \sum_{i=1}^px_i.
 \end{aligned}
 \]</span></p>
-<p>For example, for <span class="math inline">\(\tilde{x}= (2, -1, 5)\)</span>,</p>
+<p>For example, for <span class="math inline">\(\underset{\sim}{x}= (2, -1, 5)\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{1} \cdot \tilde{x}&amp;= 2 + (-1) + 5 \\
+\underset{\sim}{1} \cdot \underset{\sim}{x}&amp;= 2 + (-1) + 5 \\
 &amp;= 6,
 \end{aligned}
 \]</span></p>
 <p>and dividing by the length <span class="math inline">\(p = 3\)</span> gives the <a href="#/def-mean">mean</a> of the entries, <span class="math inline">\(6 / 3 = 2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-indicator-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Indicator vector (standard basis vector))</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <strong>standard basis vector</strong>) <span class="math inline">\(\tilde{e}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
+<p><span class="theorem-title"><strong>Definition 14 (Indicator vector (standard basis vector))</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <strong>standard basis vector</strong>) <span class="math inline">\(\underset{\sim}{e}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
 <p><span class="math display">\[
-(\tilde{e}_j)_i =
+(\underset{\sim}{e}_j)_i =
 \begin{cases}
 1 &amp; \text{if } i = j \\
 0 &amp; \text{if } i \neq j
 \end{cases}
 \qquad
-\tilde{e}_j =
+\underset{\sim}{e}_j =
 \begin{bmatrix}
 0 \\
 \vdots \\
@@ -632,40 +632,40 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-indicator-vector-weighted-sums" class="proof remark">
-<p><span class="proof-title"><em>Remark 7</em> (Indicator vectors build every vector). </span>For <span class="math inline">\(p = 3\)</span>, the indicator vectors are <span class="math inline">\(\tilde{e}_1 = (1, 0, 0)\)</span>, <span class="math inline">\(\tilde{e}_2 = (0, 1, 0)\)</span>, and <span class="math inline">\(\tilde{e}_3 = (0, 0, 1)\)</span>. Every vector of length <span class="math inline">\(3\)</span> is a weighted sum <span class="math inline">\(c_1\tilde{e}_1 + c_2\tilde{e}_2 + c_3\tilde{e}_3\)</span> of them, with weights equal to its entries; for example, <span class="math inline">\((2, -1, 5) = 2\tilde{e}_1 - 1\tilde{e}_2 + 5\tilde{e}_3\)</span>. No other weights work: entry <span class="math inline">\(j\)</span> of <span class="math inline">\(c_1\tilde{e}_1 + c_2\tilde{e}_2 + c_3\tilde{e}_3\)</span> is <span class="math inline">\(c_j\)</span>, so each weight <span class="math inline">\(c_j\)</span> must equal entry <span class="math inline">\(j\)</span> of the vector.</p>
+<p><span class="proof-title"><em>Remark 7</em> (Indicator vectors build every vector). </span>For <span class="math inline">\(p = 3\)</span>, the indicator vectors are <span class="math inline">\(\underset{\sim}{e}_1 = (1, 0, 0)\)</span>, <span class="math inline">\(\underset{\sim}{e}_2 = (0, 1, 0)\)</span>, and <span class="math inline">\(\underset{\sim}{e}_3 = (0, 0, 1)\)</span>. Every vector of length <span class="math inline">\(3\)</span> is a weighted sum <span class="math inline">\(c_1\underset{\sim}{e}_1 + c_2\underset{\sim}{e}_2 + c_3\underset{\sim}{e}_3\)</span> of them, with weights equal to its entries; for example, <span class="math inline">\((2, -1, 5) = 2\underset{\sim}{e}_1 - 1\underset{\sim}{e}_2 + 5\underset{\sim}{e}_3\)</span>. No other weights work: entry <span class="math inline">\(j\)</span> of <span class="math inline">\(c_1\underset{\sim}{e}_1 + c_2\underset{\sim}{e}_2 + c_3\underset{\sim}{e}_3\)</span> is <span class="math inline">\(c_j\)</span>, so each weight <span class="math inline">\(c_j\)</span> must equal entry <span class="math inline">\(j\)</span> of the vector.</p>
 </div>
 </section><section class="slide level2"><div id="thm-indicator-selection" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (Indicator vectors select entries)</strong></span> For any vector <span class="math inline">\(\tilde{x}\)</span> of length <span class="math inline">\(p\)</span> and any <span class="math inline">\(j \in \{1, \ldots, p\}\)</span>:</p>
-<p><span class="math display">\[\tilde{e}_j \cdot \tilde{x}= x_j\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 2 (Indicator vectors select entries)</strong></span> For any vector <span class="math inline">\(\underset{\sim}{x}\)</span> of length <span class="math inline">\(p\)</span> and any <span class="math inline">\(j \in \{1, \ldots, p\}\)</span>:</p>
+<p><span class="math display">\[\underset{\sim}{e}_j \cdot \underset{\sim}{x}= x_j\]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Writing the dot product componentwise:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{e}_j \cdot \tilde{x}
-&amp;= \sum_{i=1}^p(\tilde{e}_j)_i\, x_i
+\underset{\sim}{e}_j \cdot \underset{\sim}{x}
+&amp;= \sum_{i=1}^p(\underset{\sim}{e}_j)_i\, x_i
 &amp;&amp; \text{(definition of the dot product)}
 \\&amp;= \sum_{i=1}^p
    \begin{cases}
    1 \cdot x_i &amp; \text{if } i = j \\
    0 \cdot x_i &amp; \text{if } i \neq j
    \end{cases}
-&amp;&amp; \text{(definition of } \tilde{e}_j \text{)}
+&amp;&amp; \text{(definition of } \underset{\sim}{e}_j \text{)}
 \\&amp;= x_j
 &amp;&amp; \text{(only the } i = j \text{ term is nonzero)}
 \end{aligned}
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-standard-basis-expansion" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (A vector is a linear combination of indicator vectors)</strong></span> Every vector <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> is the linear combination (<a href="#/def-linear-combination" class="quarto-xref">Definition&nbsp;9</a>) of the indicator vectors <span class="math inline">\(\tilde{e}_1, \ldots, \tilde{e}_p\)</span> (<a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;14</a>) with coefficients <span class="math inline">\(x_1, \ldots, x_p\)</span>:</p>
-<p><span class="math display">\[\tilde{x}= \sum_{j=1}^px_j \tilde{e}_j\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 3 (A vector is a linear combination of indicator vectors)</strong></span> Every vector <span class="math inline">\(\underset{\sim}{x}\in \mathbb{R}^p\)</span> is the linear combination (<a href="#/def-linear-combination" class="quarto-xref">Definition&nbsp;9</a>) of the indicator vectors <span class="math inline">\(\underset{\sim}{e}_1, \ldots, \underset{\sim}{e}_p\)</span> (<a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;14</a>) with coefficients <span class="math inline">\(x_1, \ldots, x_p\)</span>:</p>
+<p><span class="math display">\[\underset{\sim}{x}= \sum_{j=1}^px_j \underset{\sim}{e}_j\]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Compare the two sides entry by entry. For each <span class="math inline">\(i \in \{1, \ldots, p\}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathopen{}\left(\sum_{j=1}^px_j \tilde{e}_j\right)\mathclose{}_i
-&amp;= \sum_{j=1}^px_j (\tilde{e}_j)_i
+\mathopen{}\left(\sum_{j=1}^px_j \underset{\sim}{e}_j\right)\mathclose{}_i
+&amp;= \sum_{j=1}^px_j (\underset{\sim}{e}_j)_i
 &amp;&amp; \text{(}\href{#def-linear-combination}{\text{Definition~9}}\text{, entry by entry)}
 \\&amp;= \sum_{j=1}^p
    \begin{cases}
@@ -687,14 +687,14 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \begin{aligned}
 \begin{bmatrix}4 \\ -1 \\ 2\end{bmatrix}
 &amp;= 4 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + (-1) \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 2 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \\
-&amp;= 4 \tilde{e}_1 - \tilde{e}_2 + 2 \tilde{e}_3
+&amp;= 4 \underset{\sim}{e}_1 - \underset{\sim}{e}_2 + 2 \underset{\sim}{e}_3
 \end{aligned}
 \]</span></p>
 </div>
 <h3 id="orthogonality">Orthogonality</h3>
 <div id="def-orthogonal-vectors" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> of the same length are <strong>orthogonal</strong> (written <span class="math inline">\(\tilde{x}\perp \tilde{y}\)</span>) if their dot product (<a href="#/def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) is zero:</p>
-<p><span class="math display">\[\tilde{x}\perp \tilde{y}\iff \tilde{x}\cdot \tilde{y}= 0\]</span></p>
+<p><span class="theorem-title"><strong>Definition 15 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\underset{\sim}{x}\)</span> and <span class="math inline">\(\underset{\sim}{y}\)</span> of the same length are <strong>orthogonal</strong> (written <span class="math inline">\(\underset{\sim}{x}\perp \underset{\sim}{y}\)</span>) if their dot product (<a href="#/def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) is zero:</p>
+<p><span class="math display">\[\underset{\sim}{x}\perp \underset{\sim}{y}\iff \underset{\sim}{x}\cdot \underset{\sim}{y}= 0\]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-orthogonal-perpendicular" class="proof remark">
 <p><span class="proof-title"><em>Remark 8</em> (Orthogonal means perpendicular). </span>Orthogonality extends the geometric idea of perpendicular lines to vectors with any number of entries. In the plane, <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((-2, 1)\)</span> are perpendicular, and their dot product is <span class="math inline">\(1 \cdot(-2) + 2 \cdot 1 = 0\)</span>. The same test works in <span class="math inline">\(\mathbb{R}^3\)</span>, where pictures are harder to draw:</p>
@@ -717,15 +717,15 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p>so <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((1, 1)\)</span> are not orthogonal.</p>
 </div>
 </section><section class="slide level2"><div id="def-euclidean-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Euclidean norm (length, <span class="math inline">\(L_2\)</span> norm))</strong></span> The <strong>Euclidean norm</strong> (or <strong>length</strong>, also called the <strong><span class="math inline">\(L_2\)</span> norm</strong> and written <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}_2\)</span>) of a vector <span class="math inline">\(\tilde{x}\)</span> of length <span class="math inline">\(p\)</span> is</p>
-<p><span id="eq-l2-norm"><span class="math display">\[\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\tilde{x}\cdot \tilde{x}} = \sqrt{\sum_{i=1}^px_i^2} \tag{2}\]</span></span></p>
+<p><span class="theorem-title"><strong>Definition 16 (Euclidean norm (length, <span class="math inline">\(L_2\)</span> norm))</strong></span> The <strong>Euclidean norm</strong> (or <strong>length</strong>, also called the <strong><span class="math inline">\(L_2\)</span> norm</strong> and written <span class="math inline">\(\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}_2\)</span>) of a vector <span class="math inline">\(\underset{\sim}{x}\)</span> of length <span class="math inline">\(p\)</span> is</p>
+<p><span id="eq-l2-norm"><span class="math display">\[\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\underset{\sim}{x}\cdot \underset{\sim}{x}} = \sqrt{\sum_{i=1}^px_i^2} \tag{2}\]</span></span></p>
 <p>where <span class="math inline">\(\sqrt{\cdot}\)</span> is the <a href="./algebra-basics.html#def-square-root">square root</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-euclidean-norm" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (The length of a vector)</strong></span> For <span class="math inline">\(\tilde{x}= (3, 4)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 11 (The length of a vector)</strong></span> For <span class="math inline">\(\underset{\sim}{x}= (3, 4)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}
+\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}
 &amp;= \sqrt{3^2 + 4^2}
 &amp;&amp; \text{(definition of the norm)}
 \\
@@ -741,10 +741,10 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p><span class="theorem-title"><strong>Definition 17 (Unit vector)</strong></span> A <strong>unit vector</strong> is a vector whose Euclidean norm (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;16</a>) is <span class="math inline">\(1\)</span>. A unit vector is said to have <em>unit length</em>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-unit-vector" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (A unit vector and a vector that is not one)</strong></span> For <span class="math inline">\(\tilde{x}= (0.6, 0.8)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 12 (A unit vector and a vector that is not one)</strong></span> For <span class="math inline">\(\underset{\sim}{x}= (0.6, 0.8)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}
+\mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}
 &amp;= \sqrt{0.6^2 + 0.8^2}
 &amp;&amp; \text{(definition of the norm)}
 \\
@@ -768,11 +768,11 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exr-euclidean-distance" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (How far apart are two points?)</strong></span> Let <span class="math inline">\(\tilde{x}= (1, 2)\)</span> and <span class="math inline">\(\tilde{y}= (4, 6)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 2 (How far apart are two points?)</strong></span> Let <span class="math inline">\(\underset{\sim}{x}= (1, 2)\)</span> and <span class="math inline">\(\underset{\sim}{y}= (4, 6)\)</span>.</p>
 <ol type="1">
-<li>Compute the vector <span class="math inline">\(\tilde{x}- \tilde{y}\)</span>.</li>
-<li>Compute the length of <span class="math inline">\(\tilde{x}- \tilde{y}\)</span>, using the <a href="#/def-euclidean-norm">Euclidean norm</a>.</li>
-<li>Is the result the same if you compute the length of <span class="math inline">\(\tilde{y}- \tilde{x}\)</span> instead?</li>
+<li>Compute the vector <span class="math inline">\(\underset{\sim}{x}- \underset{\sim}{y}\)</span>.</li>
+<li>Compute the length of <span class="math inline">\(\underset{\sim}{x}- \underset{\sim}{y}\)</span>, using the <a href="#/def-euclidean-norm">Euclidean norm</a>.</li>
+<li>Is the result the same if you compute the length of <span class="math inline">\(\underset{\sim}{y}- \underset{\sim}{x}\)</span> instead?</li>
 </ol>
 </div>
 </section><section class="slide level2 scrollable"><div id="sol-euclidean-distance" class="proof solution">
@@ -780,22 +780,22 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <ol type="1">
 <li><p><span class="math display">\[
 \begin{aligned}
-\tilde{x}- \tilde{y}&amp;= (1 - 4, 2 - 6) \\
+\underset{\sim}{x}- \underset{\sim}{y}&amp;= (1 - 4, 2 - 6) \\
 &amp;= (-3, -4).
 \end{aligned}
 \]</span></p></li>
 <li><p><span class="math display">\[
 \begin{aligned}
-\mathopen{}\left\lVert\tilde{x}- \tilde{y}\right\rVert\mathclose{} &amp;= \sqrt{(-3)^2 + (-4)^2} \\
+\mathopen{}\left\lVert\underset{\sim}{x}- \underset{\sim}{y}\right\rVert\mathclose{} &amp;= \sqrt{(-3)^2 + (-4)^2} \\
 &amp;= \sqrt{25} \\
 &amp;= 5.
 \end{aligned}
 \]</span></p></li>
 <li>
-<p><span class="math inline">\(\tilde{y}- \tilde{x}= (3, 4)\)</span>, and</p>
+<p><span class="math inline">\(\underset{\sim}{y}- \underset{\sim}{x}= (3, 4)\)</span>, and</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &amp;= \sqrt{3^2 + 4^2} \\
+\mathopen{}\left\lVert\underset{\sim}{y}- \underset{\sim}{x}\right\rVert\mathclose{} &amp;= \sqrt{3^2 + 4^2} \\
 &amp;= 5.
 \end{aligned}
 \]</span></p>
@@ -810,46 +810,46 @@ from the origin to the point identified by x".
 The distance between two arbitrary points, as the norm of their difference,
 is the standard extension of that statement and is not stated on that page.
 --><div id="def-euclidean-distance" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Euclidean distance)</strong></span> The <strong>Euclidean distance</strong> between two vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> of length <span class="math inline">\(p\)</span> is the <a href="#/def-euclidean-norm">Euclidean norm</a> of their difference:</p>
-<p><span id="eq-euclidean-distance"><span class="math display">\[d(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\tilde{x}- \tilde{y}\right\rVert\mathclose{} = \sqrt{\sum_{i=1}^p(x_i - y_i)^2} \tag{3}\]</span></span></p>
+<p><span class="theorem-title"><strong>Definition 18 (Euclidean distance)</strong></span> The <strong>Euclidean distance</strong> between two vectors <span class="math inline">\(\underset{\sim}{x}\)</span> and <span class="math inline">\(\underset{\sim}{y}\)</span> of length <span class="math inline">\(p\)</span> is the <a href="#/def-euclidean-norm">Euclidean norm</a> of their difference:</p>
+<p><span id="eq-euclidean-distance"><span class="math display">\[d(\underset{\sim}{x}, \underset{\sim}{y}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\underset{\sim}{x}- \underset{\sim}{y}\right\rVert\mathclose{} = \sqrt{\sum_{i=1}^p(x_i - y_i)^2} \tag{3}\]</span></span></p>
 </div>
 </section><section class="slide level2"><div id="rem-distance-from-origin" class="proof remark">
-<p><span class="proof-title"><em>Remark 9</em> (Distance from the origin). </span>The distance from the origin <span class="math inline">\(\tilde{0}\)</span> to a vector <span class="math inline">\(\tilde{x}\)</span> is the norm of <span class="math inline">\(\tilde{x}\)</span>:</p>
+<p><span class="proof-title"><em>Remark 9</em> (Distance from the origin). </span>The distance from the origin <span class="math inline">\(\underset{\sim}{0}\)</span> to a vector <span class="math inline">\(\underset{\sim}{x}\)</span> is the norm of <span class="math inline">\(\underset{\sim}{x}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-d(\tilde{x}, \tilde{0}) &amp;= \mathopen{}\left\lVert\tilde{x}- \tilde{0}\right\rVert\mathclose{} \\
-&amp;= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}
+d(\underset{\sim}{x}, \underset{\sim}{0}) &amp;= \mathopen{}\left\lVert\underset{\sim}{x}- \underset{\sim}{0}\right\rVert\mathclose{} \\
+&amp;= \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}
 \end{aligned}
 \]</span></p>
 <p><span class="citation" data-cites="goodfellow2016deep">(<a href="#/references" role="doc-biblioref" onclick="">Goodfellow et al. 2016, 39</a>)</span>.</p>
-<p>For example, the distance from <span class="math inline">\(\tilde{0}\)</span> to <span class="math inline">\((3, 4)\)</span> is <span class="math inline">\(\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\)</span>, as in <a href="#/exm-euclidean-norm" class="quarto-xref">Example&nbsp;11</a>.</p>
+<p>For example, the distance from <span class="math inline">\(\underset{\sim}{0}\)</span> to <span class="math inline">\((3, 4)\)</span> is <span class="math inline">\(\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\)</span>, as in <a href="#/exm-euclidean-norm" class="quarto-xref">Example&nbsp;11</a>.</p>
 </div>
 </section><section class="slide level2"><div id="def-orthonormal-vectors" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Orthonormal vectors)</strong></span> A set of vectors <span class="math inline">\(\{\tilde{x}_1, \tilde{x}_2, \ldots, \tilde{x}_k\}\)</span> is <strong>orthonormal</strong> if the vectors are mutually orthogonal (<a href="#/def-orthogonal-vectors" class="quarto-xref">Definition&nbsp;15</a>) and each has norm <span class="math inline">\(1\)</span> (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;16</a>), that is, <a href="#/def-unit-vector">unit length</a>:</p>
-<p><span class="math display">\[\tilde{x}_i \cdot \tilde{x}_j =
+<p><span class="theorem-title"><strong>Definition 19 (Orthonormal vectors)</strong></span> A set of vectors <span class="math inline">\(\{\underset{\sim}{x}_1, \underset{\sim}{x}_2, \ldots, \underset{\sim}{x}_k\}\)</span> is <strong>orthonormal</strong> if the vectors are mutually orthogonal (<a href="#/def-orthogonal-vectors" class="quarto-xref">Definition&nbsp;15</a>) and each has norm <span class="math inline">\(1\)</span> (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;16</a>), that is, <a href="#/def-unit-vector">unit length</a>:</p>
+<p><span class="math display">\[\underset{\sim}{x}_i \cdot \underset{\sim}{x}_j =
 \begin{cases}
 1 &amp; \text{if } i = j \\
 0 &amp; \text{if } i \neq j
 \end{cases}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-indicator-orthonormal" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (Indicator vectors are orthonormal)</strong></span> The indicator vectors <span class="math inline">\(\tilde{e}_1, \tilde{e}_2, \ldots, \tilde{e}_p\)</span> (<a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;14</a>) form an orthonormal set. By <a href="#/thm-indicator-selection" class="quarto-xref">Theorem&nbsp;2</a>, <span class="math inline">\(\tilde{e}_i \cdot \tilde{e}_j\)</span> is entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\tilde{e}_j\)</span>, which is <span class="math inline">\(1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> if <span class="math inline">\(i \neq j\)</span>. For <span class="math inline">\(p = 2\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 13 (Indicator vectors are orthonormal)</strong></span> The indicator vectors <span class="math inline">\(\underset{\sim}{e}_1, \underset{\sim}{e}_2, \ldots, \underset{\sim}{e}_p\)</span> (<a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;14</a>) form an orthonormal set. By <a href="#/thm-indicator-selection" class="quarto-xref">Theorem&nbsp;2</a>, <span class="math inline">\(\underset{\sim}{e}_i \cdot \underset{\sim}{e}_j\)</span> is entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\underset{\sim}{e}_j\)</span>, which is <span class="math inline">\(1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> if <span class="math inline">\(i \neq j\)</span>. For <span class="math inline">\(p = 2\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{e}_1 \cdot \tilde{e}_1 &amp;= 1 \cdot 1 + 0 \cdot 0 \\
+\underset{\sim}{e}_1 \cdot \underset{\sim}{e}_1 &amp;= 1 \cdot 1 + 0 \cdot 0 \\
 &amp;= 1,
 \end{aligned}
 \]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{e}_2 \cdot \tilde{e}_2 &amp;= 0 \cdot 0 + 1 \cdot 1 \\
+\underset{\sim}{e}_2 \cdot \underset{\sim}{e}_2 &amp;= 0 \cdot 0 + 1 \cdot 1 \\
 &amp;= 1,
 \end{aligned}
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{e}_1 \cdot \tilde{e}_2 &amp;= 1 \cdot 0 + 0 \cdot 1 \\
+\underset{\sim}{e}_1 \cdot \underset{\sim}{e}_2 &amp;= 1 \cdot 0 + 0 \cdot 1 \\
 &amp;= 0.
 \end{aligned}
 \]</span></p>
@@ -872,32 +872,32 @@ d(\tilde{x}, \tilde{0}) &amp;= \mathopen{}\left\lVert\tilde{x}- \tilde{0}\right\
 </div>
 </section><section class="slide level2"><div id="exr-inner-product" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3 (Compute an inner product and a norm)</strong></span> Let</p>
-<p><span class="math display">\[\tilde{a}= \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix},
+<p><span class="math display">\[\underset{\sim}{a}= \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix},
 \qquad
-\tilde{b} = \begin{bmatrix} 0 \\ 4 \\ -2 \end{bmatrix}\]</span></p>
-<p>Compute <span class="math inline">\(\tilde{a}^{\top} \tilde{b}\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}_2\)</span>.</p>
+\underset{\sim}{b} = \begin{bmatrix} 0 \\ 4 \\ -2 \end{bmatrix}\]</span></p>
+<p>Compute <span class="math inline">\(\underset{\sim}{a}^{\top} \underset{\sim}{b}\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\underset{\sim}{a}\right\rVert\mathclose{}_2\)</span>.</p>
 </div>
 <div id="sol-inner-product" class="proof solution">
 <p><span class="proof-title"><em>Solution 3</em>. </span>Multiply entry by entry and add:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{a} \cdot \tilde{b}
+\underset{\sim}{a} \cdot \underset{\sim}{b}
 &amp;=(3)(0) + (-1)(4) + (2)(-2) \\
 &amp;= 0 - 4 - 4 \\
 &amp;= -8
 \end{aligned}
 \]</span></p>
-<p>For the norm, take the inner product of <span class="math inline">\(\tilde{a}\)</span> with itself first:</p>
+<p>For the norm, take the inner product of <span class="math inline">\(\underset{\sim}{a}\)</span> with itself first:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{a} \cdot \tilde{a}
+\underset{\sim}{a} \cdot \underset{\sim}{a}
 &amp;= 3^2 + (-1)^2 + 2^2 \\
 &amp;= 9 + 1 + 4 \\
 &amp;= 14
 \end{aligned}
 \]</span></p>
 <p>so</p>
-<p><span class="math display">\[\mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}_2 = \sqrt{14} \approx 3.742\]</span></p>
+<p><span class="math display">\[\mathopen{}\left\lVert\underset{\sim}{a}\right\rVert\mathclose{}_2 = \sqrt{14} \approx 3.742\]</span></p>
 <p>The inner product came out negative while the norm cannot: a norm is a square root of a sum of squares, so it is never below zero.</p>
 <p>Python has both operations built in, and R builds them from <code>sum</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-label="1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
