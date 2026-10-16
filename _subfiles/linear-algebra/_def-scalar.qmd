@@ -1,7 +1,7 @@
 :::{#def-scalar}
 #### Scalar
 
-In linear algebra, a **scalar** is a single [real number](notation.qmd#def-real-numbers),
+In linear algebra, a **scalar** is a single [real number](number-systems.qmd#def-real-numbers),
 as opposed to a vector or a matrix, which holds several numbers.
 
 :::

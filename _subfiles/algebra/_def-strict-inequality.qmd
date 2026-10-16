@@ -1,7 +1,7 @@
 :::{#def-strict-inequality}
 #### Strict inequalities
 
-For [real numbers](notation.qmd#def-real-numbers) $a$ and $b$,
+For [real numbers](number-systems.qmd#def-real-numbers) $a$ and $b$,
 $a < b$ ("$a$ is less than $b$")
 and $a > b$ ("$a$ is greater than $b$")
 are **strict inequalities**.
@@ -13,7 +13,7 @@ are **strict inequalities**.
 :::{#def-non-strict-inequality}
 #### Non-strict inequalities
 
-For [real numbers](notation.qmd#def-real-numbers) $a$ and $b$,
+For [real numbers](number-systems.qmd#def-real-numbers) $a$ and $b$,
 the **non-strict inequalities** also allow equality,
 unlike the strict inequalities (@def-strict-inequality):
 

@@ -4,7 +4,7 @@
 "$2 + 3 = 5$" is a proposition (@def-proposition) that has a proof,
 the computation of $2 + 3$,
 so it is a result.
-"$7$ is [even](notation.qmd#def-even-odd)" is a proposition that is false,
+"$7$ is [even](number-systems.qmd#def-even-odd)" is a proposition that is false,
 so it has no proof and is not a result.
 
 :::
