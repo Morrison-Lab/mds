@@ -102,7 +102,7 @@ the derivative of the [power](algebra.qmd#def-real-power) $x^q$ is:
 
 $$\deriv{x}x^q = qx^{q-1}$$
 
-When $q$ is a positive [integer](notation.qmd#def-integers),
+When $q$ is a positive [integer](number-systems.qmd#def-integers),
 the same formula holds for every real $x$.
 
 :::
@@ -235,7 +235,7 @@ $$
 or in Lagrange's notation (@def-derivative),
 if $g$ is differentiable at $x$
 and $f$ is differentiable at $g(x)$,
-then for the [composition](sets-functions.qmd#def-composition) $f \circ g$,
+then for the [composition](functions.qmd#def-composition) $f \circ g$,
 with inner function $g$ and outer function $f$:
 
 $$(f(g(x)))' = g'(x) f'(g(x))$$

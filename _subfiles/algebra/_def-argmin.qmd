@@ -1,7 +1,7 @@
 :::{#def-argmin}
 #### Argmin
 
-Let $f : A \to \reals$ be a [function](sets-functions.qmd#def-function).
+Let $f : A \to \reals$ be a [function](functions.qmd#def-function).
 The **argmin** of $f$ over $A$
 is the set of inputs where $f$ takes its smallest value:
 
@@ -19,7 +19,7 @@ we write $\hat{x} = \argmin_{x \in A} f(x)$.
 
 The smallest value itself is $\min f(A)$,
 the minimum (@def-minimum)
-of the [image](sets-functions.qmd#def-image) of $f$,
+of the [image](functions.qmd#def-image) of $f$,
 and the argmin is where that value is attained.
 For example, let $f(x) = x^2$ on $A = \cb{-1, 0, 2}$.
 The image is $f(A) = \cb{1, 0, 4}$,

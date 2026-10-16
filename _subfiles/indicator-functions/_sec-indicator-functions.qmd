@@ -285,7 +285,7 @@ The primary advantage of the Iverson bracket is algebraic conciseness:
 it turns a sum or integral over a subset
 into a sum or integral over a larger, fixed set.
 For example,
-if $U$ is a [finite set](sets-functions.qmd#def-finite-set) that contains $A$, then:
+if $U$ is a [finite set](functions.qmd#def-finite-set) that contains $A$, then:
 
 $$
 \sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]
@@ -297,7 +297,7 @@ both sides equal $2 + 4 = 6$.
 However,
 in statistics and epidemiology,
 square brackets are already heavily overloaded:
-they denote [closed intervals](sets-functions.qmd#def-closed-interval) $[a, b]$,
+they denote [closed intervals](sets.qmd#def-closed-interval) $[a, b]$,
 [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation)
 $\Expp[Y \mid X]$ (defined in the probability notes),
 and matrix delimiters.
@@ -352,7 +352,7 @@ One of the identities below uses idempotence:
 {{< slidebreak >}}
 
 For subsets $A$ and $B$ of $\universe$,
-with [complement](sets-functions.qmd#def-complement) $A^c \eqdef \universe \setminus A$,
+with [complement](sets.qmd#def-complement) $A^c \eqdef \universe \setminus A$,
 and for every $x \in \universe$:
 
 - **Intersection ("and"):**

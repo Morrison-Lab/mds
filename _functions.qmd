@@ -1,0 +1,122 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+Random variables, densities, and measures are functions.
+This page collects the definitions of functions, sequences, and countable sets
+that the Morrison Lab's probability and statistics notes build on.
+The functions here go between the sets defined on the [Sets](sets.qmd) page.
+
+:::
+
+## Functions
+
+{{< include mds/_subfiles/functions/_def-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-relation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-domain.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-codomain.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-image.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-domain-codomain-image.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-graph.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-graph.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_rem-graph-real-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_rem-function-as-set-of-pairs.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-composition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-composition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-inverse-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-inverse-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-elementwise-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-elementwise-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_rem-elementwise-function-notation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-finite-sequence.qmd >}}
+
+## Countable sets
+
+{{< include mds/_subfiles/functions/_def-finite-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-finite-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-infinite-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-countable-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-countably-infinite.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-countable-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_thm-interval-uncountable.qmd >}}

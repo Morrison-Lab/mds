@@ -1,7 +1,7 @@
 :::{#def-vector-sequence-limit}
 #### Convergence of a sequence of vectors
 
-A [sequence](sets-functions.qmd#def-sequence) $\vx^{(0)}, \vx^{(1)}, \ldots$ in $\reals^p$
+A [sequence](functions.qmd#def-sequence) $\vx^{(0)}, \vx^{(1)}, \ldots$ in $\reals^p$
 **converges** to $\vx^* \in \reals^p$
 if the sequence of distances $\norm{\vx^{(t)} - \vx^*}$
 [converges](algebra.qmd#def-convergent-sequence) to $0$.

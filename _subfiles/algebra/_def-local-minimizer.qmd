@@ -2,7 +2,7 @@
 #### Local minimizer
 
 Let $A \subseteq \reals^p$
-and let $f : A \to \reals$ be a [function](sets-functions.qmd#def-function).
+and let $f : A \to \reals$ be a [function](functions.qmd#def-function).
 A point $x^* \in A$ is a **local minimizer** of $f$
 if there is a number $\tolin > 0$
 such that $f(x^*) \le f(x)$

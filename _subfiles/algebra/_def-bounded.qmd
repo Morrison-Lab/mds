@@ -24,9 +24,9 @@ if $\lbound \le a$ for all $a \in A$.
 #### Bounded above
 
 A set $A \subseteq \reals$ is **bounded above** if it has an upper bound (@def-upper-bound).
-A real-valued [function](sets-functions.qmd#def-function) is
+A real-valued [function](functions.qmd#def-function) is
 bounded above
-if its [image](sets-functions.qmd#def-image) is.
+if its [image](functions.qmd#def-image) is.
 
 :::
 
@@ -36,9 +36,9 @@ if its [image](sets-functions.qmd#def-image) is.
 #### Bounded below
 
 A set $A \subseteq \reals$ is **bounded below** if it has a lower bound (@def-lower-bound).
-A real-valued [function](sets-functions.qmd#def-function) is
+A real-valued [function](functions.qmd#def-function) is
 bounded below
-if its [image](sets-functions.qmd#def-image) is.
+if its [image](functions.qmd#def-image) is.
 
 :::
 
@@ -49,8 +49,8 @@ if its [image](sets-functions.qmd#def-image) is.
 
 A set $A \subseteq \reals$ is **bounded**
 if it is both bounded above (@def-bounded-above) and bounded below (@def-bounded-below).
-A real-valued [function](sets-functions.qmd#def-function) is
+A real-valued [function](functions.qmd#def-function) is
 bounded
-if its [image](sets-functions.qmd#def-image) is.
+if its [image](functions.qmd#def-image) is.
 
 :::

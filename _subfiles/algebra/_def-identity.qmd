@@ -3,6 +3,6 @@
 
 An **identity** is an equation between two expressions
 that holds for every value of its variables
-in a stated set, such as the [real numbers](notation.qmd#def-real-numbers).
+in a stated set, such as the [real numbers](number-systems.qmd#def-real-numbers).
 
 :::

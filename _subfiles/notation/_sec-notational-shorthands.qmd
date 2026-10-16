@@ -72,12 +72,12 @@ if $x$ is the number of heads in two tosses of a coin,
 then $\rangef{x} = \cb{0, 1, 2}$.
 A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$
 (defined in the Morrison Lab's probability notes)
-is a [function](sets-functions.qmd#def-function),
+is a [function](functions.qmd#def-function),
 and the set of values $X$ can take, $\rangef{X}$,
-is the [image](sets-functions.qmd#def-image) of $X$.
+is the [image](functions.qmd#def-image) of $X$.
 These notes use "range" only for variables:
 for a function, "range" can mean either the image or the codomain
-([Image and range](sets-functions.qmd#rem-image-range)).
+([Image and range](functions.qmd#rem-image-range)).
 In statistics, "the range" of a dataset can also mean
 its largest value minus its smallest value;
 $\rangef{x}$ is a set, not that difference.
@@ -91,7 +91,7 @@ In the table,
 $\dsn{x}$ and $\dsn{a}$ are $n$ numbers,
 $b_{ij}$ is the entry in row $i$ and column $j$ of an $m \times n$ array,
 $k$ is an integer with $1 \le k \le n$,
-$f$ is a [function](sets-functions.qmd#def-function)
+$f$ is a [function](functions.qmd#def-function)
 from $\reals$ to $\reals$,
 and, in the first row, $\rangef{x}$ is a finite set.
 

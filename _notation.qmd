@@ -21,8 +21,8 @@ and the alternatives you may meet in other sources.
 | $\ind$      | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)         | `\perp\!\!\!\perp`
 | $\tf$       | [therefore](proof-writing.qmd#def-logical-entailment), thus       | `\therefore`
 | $\eta$      | [linear predictor][eta] of a generalized linear model[^4] | `\eta`
-| $\floor{x}$ | floor of $x$: largest [integer](#def-integers) less than or equal to $x$ | `\lfloor x \rfloor`
-| $\ceil{x}$  | ceiling of $x$: smallest [integer](#def-integers) greater than or equal to $x$ | `\lceil x \rceil`
+| $\floor{x}$ | floor of $x$: largest [integer](number-systems.qmd#def-integers) less than or equal to $x$ | `\lfloor x \rfloor`
+| $\ceil{x}$  | ceiling of $x$: smallest [integer](number-systems.qmd#def-integers) greater than or equal to $x$ | `\lceil x \rceil`
 | $\indic{A}(x)$, $\indicp{P}$ | indicator function ([definition](indicator-functions.qmd#def-indicator-function)): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 : Notation used in this book {#tbl-notation-collected}
@@ -55,88 +55,6 @@ shows the details.
 These notes also use shorthand macros,
 such as `\floor{x}` for $\floor{x}$,
 defined in the `latex-macros` submodule's `macros.qmd`.
-
-## Natural numbers {#sec-notation-naturals}
-
-{{< include mds/_subfiles/notation/_exr-naturals-below-three.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_sol-naturals-below-three.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-integers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-integers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-even-odd.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-even-odd.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-natural-numbers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-nonnegative-integers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-natural-numbers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_note-natural-numbers-other-conventions.qmd >}}
-
-## Rational, real, and irrational numbers {#sec-notation-reals}
-
-{{< include mds/_subfiles/notation/_def-rational-numbers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-rational-numbers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-real-numbers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-real-numbers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-irrational-numbers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-irrational-numbers.qmd >}}
-
-## Percent sign ("%")
-
-The word "percent" comes from the Latin "per centum";
-"centum" is Latin for 100,
-so "percent" means "per hundred"
-(cf. <https://en.wikipedia.org/wiki/Percentage>).
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-percent.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-percent.qmd >}}
-
-You are welcome to switch between decimal and percent notation freely;
-just make sure you execute it correctly.
 
 ## Notational shorthands {#sec-notational-shorthands}
 

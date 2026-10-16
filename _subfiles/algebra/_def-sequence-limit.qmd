@@ -1,7 +1,7 @@
 :::{#def-sequence-limit}
 #### Limit of a sequence
 
-A real number $L$ is the **limit** of a [sequence](sets-functions.qmd#def-sequence) $(a_n)$ of real numbers,
+A real number $L$ is the **limit** of a [sequence](functions.qmd#def-sequence) $(a_n)$ of real numbers,
 written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$,
 if for every $\tolout > 0$ there is a natural number $N$ such that
 
