@@ -1,0 +1,21 @@
+:::{#def-sine}
+#### Sine
+
+For a real number $\angpar$, the second coordinate of the point reached from $(1, 0)$
+by moving a distance $\abs{\angpar}$ along the unit circle (@def-cosine)
+is the **sine** of $\angpar$, written $\sin\angpar$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-sine}
+#### Sines of some angles
+
+- $\angpar = 0$ stays at $(1, 0)$, so $\sin 0 = 0$.
+- $\angpar = \pi$ goes half way around the circle, to $(-1, 0)$, so $\sin\pi = 0$.
+- $\angpar = \pi/2$ goes a quarter of the way round, to $(0, 1)$, so $\sin(\pi/2) = 1$.
+- $\angpar = \pi/4$ reaches the point with $x_1 = x_2 = \tfrac{1}{\sqrt{2}}$ (@exm-cosine),
+  so $\sin(\pi/4) = \tfrac{1}{\sqrt{2}}$.
+
+:::

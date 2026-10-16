@@ -1,6 +1,18 @@
 ## Cosine and sine {#sec-cosine-sine}
 
-{{< include mds/_subfiles/algebra/_def-cosine-sine.qmd >}}
+{{< include mds/_subfiles/algebra/_def-unit-circle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-pi.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-cosine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-sine.qmd >}}
 
 {{< slidebreak >}}
 
