@@ -25,10 +25,10 @@ which are what a host site includes:
 |------|------------------------|
 | [Notation](notation.qmd) | `mds/_notation.qmd` |
 | [Number Systems](number-systems.qmd) | `mds/_number-systems.qmd` |
-| [Indicator Functions](indicator-functions.qmd) | `mds/_indicator-functions.qmd` |
 | [Sets](sets.qmd) | `mds/_sets.qmd` |
 | [Functions](functions.qmd) | `mds/_functions.qmd` |
 | [Expressions and Algorithms](expressions-algorithms.qmd) | `mds/_expressions-algorithms.qmd` |
+| [Indicator Functions](indicator-functions.qmd) | `mds/_indicator-functions.qmd` |
 | [Algebra](algebra.qmd) | `mds/_algebra.qmd` |
 | [Measures](measures.qmd) | `mds/_measures.qmd` |
 | [Calculus](calculus.qmd) | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
