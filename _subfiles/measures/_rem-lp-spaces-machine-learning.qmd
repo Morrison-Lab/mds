@@ -20,14 +20,14 @@ In probability, statistics, and machine learning, $L^p$ spaces structure the geo
    The completeness of $L^2$ makes it a Hilbert space.
    In regression, the conditional expectation $\E{Y \mid X}$ is the orthogonal projection of $Y \in L^2$
    onto the closed subspace of $L^2$ functions measurable with respect to $X$,
-   minimizing the expected mean squared error $\norm{Y - g(X)}_2^2$.
+   minimizing the population mean squared error (pMSE) $\norm{Y - g(X)}_2^2$.
 
 3. **Loss functions, estimation, and robustness**:
    The choice of $p$ in $L^p$ norms defines loss functions for optimization and regression:
 
-   - **$L^2$ loss (mean squared error)**:
+   - **$L^2$ loss (population mean squared error (pMSE), or sample mean squared error (sMSE) on a sample)**:
      penalizes large errors quadratically, yielding the conditional mean; sensitive to outliers.
-   - **$L^1$ loss (mean absolute error)**:
+   - **$L^1$ loss (population mean absolute error (pMAE), or sample mean absolute error (sMAE) on a sample)**:
      penalizes errors linearly, yielding the conditional median; robust to heavy tails and outliers.
    - **$L^\infty$ loss (Chebyshev criterion)**:
      minimizes the worst-case maximum error across all instances.
