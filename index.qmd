@@ -139,7 +139,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Optimization](optimization.qmd) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_number-systems.qmd`, `_indicator-functions.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
+`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
 a host page that includes any of the other fragments
 must include `latex-macros/macros.qmd` first,
 as the pages of this site do.
