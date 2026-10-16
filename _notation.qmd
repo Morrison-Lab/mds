@@ -23,7 +23,7 @@ and the alternatives you may meet in other sources.
 | $\eta$      | [linear predictor][eta] of a generalized linear model[^4] | `\eta`
 | $\floor{x}$ | floor of $x$: largest [integer](number-systems.qmd#def-integers) less than or equal to $x$ | `\lfloor x \rfloor`
 | $\ceil{x}$  | ceiling of $x$: smallest [integer](number-systems.qmd#def-integers) greater than or equal to $x$ | `\lceil x \rceil`
-| $\indic{A}(x)$, $\indicp{P}$ | indicator function (@sec-indicator-functions): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
+| $\indic{A}(x)$, $\indicp{P}$ | indicator function ([definition](indicator-functions.qmd#def-indicator-function)): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 : Notation used in this book {#tbl-notation-collected}
 
@@ -55,10 +55,6 @@ shows the details.
 These notes also use shorthand macros,
 such as `\floor{x}` for $\floor{x}$,
 defined in the `latex-macros` submodule's `macros.qmd`.
-
-## Indicator functions {#sec-indicator-functions}
-
-{{< include mds/_subfiles/notation/_sec-indicator-functions.qmd >}}
 
 ## Why is notation in probability and statistics so inconsistent and disorganized?
 

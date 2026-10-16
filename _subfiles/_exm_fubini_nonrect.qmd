@@ -20,7 +20,7 @@ this expectation is the double integral of $g$ over the unit square:
 
 $$\E{g(X, Y)} = \iint_{[0, 1]^2} g(x, y)\,dA.$$
 
-The [indicator](notation.qmd#def-indicator-function) factor $\indicp{y \le x}$ equals $1$ on the triangular
+The [indicator](indicator-functions.qmd#def-indicator-function) factor $\indicp{y \le x}$ equals $1$ on the triangular
 region where $y \le x$ and $0$ elsewhere,
 so only that region,
 namely $D = \{(x, y) : x \in [0, 1],\; y \in [0, x]\}$

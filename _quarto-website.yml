@@ -39,6 +39,8 @@ website:
         href: notation.qmd
       - text: "Number Systems"
         href: number-systems.qmd
+      - text: "Indicator Functions"
+        href: indicator-functions.qmd
       - text: "Sets and Functions"
         menu:
           - sets.qmd
@@ -100,6 +102,7 @@ website:
         href: index.qmd
       - notation.qmd
       - number-systems.qmd
+      - indicator-functions.qmd
       - section: "Sets and Functions"
         href: sets-functions.qmd
         contents:
