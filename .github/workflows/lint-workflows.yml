@@ -6,7 +6,9 @@
 # workflows as of this file's introduction, so a new finding means a new
 # problem rather than a backlog. `.github/zizmor.yml` accepts tag pins (and
 # `.github/dependabot.yml` keeps them current) while still flagging a branch
-# pin such as `@main`.
+# pin such as `@main`. `.github/actionlint.yaml` ignores the `models` permission
+# scope that `summary.yml` needs, which actionlint does not know yet (without the
+# file, actionlint reports it).
 name: Lint Workflows
 
 on:
