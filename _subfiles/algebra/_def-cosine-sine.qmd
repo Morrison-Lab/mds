@@ -1,4 +1,4 @@
-:::{#def-cosine}
+:::{#def-cosine-sine}
 #### Cosine
 
 For a real number $\angpar$, start at the point $(1, 0)$ of the unit circle (@def-unit-circle)
@@ -10,7 +10,7 @@ The first coordinate of the point reached is the **cosine** of $\angpar$, writte
 
 {{< slidebreak >}}
 
-:::{#exm-cosine}
+:::{#exm-cosine-sine}
 #### Cosines of some angles
 
 - $\angpar = 0$ stays at $(1, 0)$, so $\cos 0 = 1$.

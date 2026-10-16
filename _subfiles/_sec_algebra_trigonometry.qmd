@@ -8,7 +8,7 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/algebra/_def-cosine.qmd >}}
+{{< include mds/_subfiles/algebra/_def-cosine-sine.qmd >}}
 
 {{< slidebreak >}}
 
