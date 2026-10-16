@@ -1,0 +1,12 @@
+:::{#def-operator}
+#### Operator
+
+An **operator** is a [function](#def-function)
+whose [arguments](#def-argument) and [values](#def-value)
+are both functions or both vectors.
+
+Some authors call every function an operator,
+and others reserve the word for functions whose domain and codomain are the same set,
+as in the [linear operator](linear-algebra-vectors.qmd#def-linear-operator).
+
+:::
