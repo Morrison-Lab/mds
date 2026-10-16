@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 16:26:25 (PDT)
+Last modified: 2026-10-15 17:47:31 (PDT)
 
 > **NOTE:**
 >
@@ -44,7 +44,7 @@ Last modified: 2026-10-15 16:26:25 (PDT)
 >
 > **Example 3 (Closed and not closed)**  
 >
-> - The [even](notation.llms.md#def-even-odd) integers are closed under addition: for example, \\2 + 4 = 6\\ is even, and \\2m + 2n = 2(m + n)\\ is even for all integers \\m\\ and \\n\\.
+> - The [even](number-systems.llms.md#def-even-odd) integers are closed under addition: for example, \\2 + 4 = 6\\ is even, and \\2m + 2n = 2(m + n)\\ is even for all integers \\m\\ and \\n\\.
 > - The odd integers are not closed under addition: \\1\\ and \\3\\ are odd, but \\1 + 3 = 4\\ is even.
 > - A [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\ on a set \\S\\ is closed under complements in \\S\\ and under unions of sequences of its sets, because [Definition 1](#def-sigma-algebra) requires both. The collection in [Example 2](#exm-not-sigma-algebra) is not closed under complements.
 
@@ -124,7 +124,7 @@ Last modified: 2026-10-15 16:26:25 (PDT)
 >
 > - Every interval, such as \\\[0, 1\]\\, \\(2, 5)\\, or \\\[0, \infty)\\, is a Borel set.
 > - A single point \\\mathopen{}\left\\a\right\\\mathclose{} = \[a, a\]\\ is an interval, so it is a Borel set.
-> - The [integers](notation.llms.md#def-integers) are a Borel set: they are the union of the sequence of single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([countable and uncountable sets](sets-functions.llms.md#exm-countable-set) lists them this way), and \\\mathcal{B}\\ contains that union by [Definition 1](#def-sigma-algebra).
+> - The [integers](number-systems.llms.md#def-integers) are a Borel set: they are the union of the sequence of single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([countable and uncountable sets](sets-functions.llms.md#exm-countable-set) lists them this way), and \\\mathcal{B}\\ contains that union by [Definition 1](#def-sigma-algebra).
 > - The complement \\\mathbb{R}\setminus \[0, 1\]\\ is a Borel set, because \\\mathcal{B}\\ contains the complement of each of its sets.
 
 ## 2 Pairwise disjoint sets
@@ -202,7 +202,7 @@ Last modified: 2026-10-15 16:26:25 (PDT)
 >
 > \\ \begin{aligned} s\_{n+1} &= s_n + a\_{n+1} && \text{(definition of } s\_{n+1} \text{)} \\ &\ge s_n && \text{(} a\_{n+1} \ge 0 \text{)} \end{aligned} \\
 >
-> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](notation.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
+> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](number-systems.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
 
 ## 4 Additivity
 
@@ -345,7 +345,7 @@ Last modified: 2026-10-15 16:26:25 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on the [non-negative integers](notation.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees:
+> **Example 17 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on the [non-negative integers](number-systems.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees:
 >
 > \\ \begin{aligned} \sum\_{k=0}^{\infty} \mu(\mathopen{}\left\\2k\right\\\mathclose{}) &= 1 + 1 + \cdots \\ &= \infty. \end{aligned} \\
 
@@ -503,7 +503,7 @@ Last modified: 2026-10-15 16:26:25 (PDT)
 
 > **NOTE:**
 >
-> *Remark 8* (Mutually exclusive events). In probability, [pairwise disjoint](#def-pairwise-disjoint) [events](#def-probability-measure) are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](notation.llms.md#def-even-odd)”, \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, and “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, are mutually exclusive: no roll is both even and odd.
+> *Remark 8* (Mutually exclusive events). In probability, [pairwise disjoint](#def-pairwise-disjoint) [events](#def-probability-measure) are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](number-systems.llms.md#def-even-odd)”, \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, and “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, are mutually exclusive: no roll is both even and odd.
 
 ## 7 Measurable functions and integrals
 

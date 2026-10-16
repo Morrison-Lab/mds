@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 16:26:25 (PDT)
+Last modified: 2026-10-15 17:47:31 (PDT)
 
 ## Welcome
 
@@ -14,7 +14,8 @@ Cheng ([2025](#ref-cheng2025math))
 
 These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:
 
-- [Notation](notation.llms.md): common symbols, natural numbers, the percent sign, and indicator functions
+- [Notation](notation.llms.md): common symbols, the percent sign, and indicator functions
+- [Number Systems](number-systems.llms.md): the integers, natural numbers, even and odd numbers, and the rational, real, and irrational numbers
 - [Sets and Functions](sets-functions.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, countable sets, functions with their domains, codomains, and images, and the extended non-negative real numbers
 - [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, sums, products, quotients, exponentials and logarithms
 - [Measures](measures.llms.md): \\\sigma\\-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure
@@ -49,6 +50,7 @@ Each page is a thin wrapper around one or more fragments:
 | Page | Fragment(s) to include |
 |----|----|
 | [Notation](notation.llms.md) | `mds/_notation.qmd` |
+| [Number Systems](number-systems.llms.md) | `mds/_number-systems.qmd` |
 | [Sets and Functions](sets-functions.llms.md) | `mds/_sets-functions.qmd` |
 | [Algebra](algebra.llms.md) | `mds/_algebra.qmd` |
 | [Measures](measures.llms.md) | `mds/_measures.qmd` |
@@ -58,7 +60,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Optimization](optimization.llms.md) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.llms.md) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
+`_notation.qmd`, `_number-systems.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
 
 Quarto resolves `@id` cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, `[text](notation.qmd#id)`.
 

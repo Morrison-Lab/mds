@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 16:26:25 (PDT)
+Last modified: 2026-10-15 17:47:31 (PDT)
 
 ## 1 Equalities
 
@@ -31,7 +31,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 2 (Identity)** An **identity** is an equation between two expressions that holds for every value of its variables in a stated set, such as the [real numbers](notation.llms.md#def-real-numbers).
+> **Definition 2 (Identity)** An **identity** is an equation between two expressions that holds for every value of its variables in a stated set, such as the [real numbers](number-systems.llms.md#def-real-numbers).
 
 > **NOTE:**
 >
@@ -44,11 +44,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 3 (Strict inequalities)** For [real numbers](notation.llms.md#def-real-numbers) \\a\\ and \\b\\, \\a \< b\\ (“\\a\\ is less than \\b\\”) and \\a \> b\\ (“\\a\\ is greater than \\b\\”) are **strict inequalities**.
+> **Definition 3 (Strict inequalities)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a\\ and \\b\\, \\a \< b\\ (“\\a\\ is less than \\b\\”) and \\a \> b\\ (“\\a\\ is greater than \\b\\”) are **strict inequalities**.
 
 > **NOTE:**
 >
-> **Definition 4 (Non-strict inequalities)** For [real numbers](notation.llms.md#def-real-numbers) \\a\\ and \\b\\, the **non-strict inequalities** also allow equality, unlike the strict inequalities ([Definition 3](#def-strict-inequality)):
+> **Definition 4 (Non-strict inequalities)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a\\ and \\b\\, the **non-strict inequalities** also allow equality, unlike the strict inequalities ([Definition 3](#def-strict-inequality)):
 >
 > - \\a \le b\\ means \\a \< b\\ or \\a = b\\;
 > - \\a \ge b\\ means \\a \> b\\ or \\a = b\\.
@@ -81,7 +81,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 5 (Power)** Let \\a\\ be a real number and \\n\\ a [natural number](notation.llms.md#def-natural-numbers). The \\n\\th **power** of \\a\\ is the product of \\n\\ copies of \\a\\:
+> **Definition 5 (Power)** Let \\a\\ be a real number and \\n\\ a [natural number](number-systems.llms.md#def-natural-numbers). The \\n\\th **power** of \\a\\ is the product of \\n\\ copies of \\a\\:
 >
 > \\a^n \stackrel{\text{def}}{=}\underbrace{a \cdot a \cdot\cdots \cdot a}\_{n \text{ factors}}\\
 
@@ -119,7 +119,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 9 (Powers with exponent zero or a negative integer)** For the exponent \\0\\ and negative [integer](notation.llms.md#def-integers) exponents:
+> **Definition 9 (Powers with exponent zero or a negative integer)** For the exponent \\0\\ and negative [integer](number-systems.llms.md#def-integers) exponents:
 >
 > - \\a^0 \stackrel{\text{def}}{=}1\\, including \\0^0 = 1\\ by convention;
 > - \\a^{-n} \stackrel{\text{def}}{=}\frac{1}{a^n}\\, when \\a \ne 0\\.

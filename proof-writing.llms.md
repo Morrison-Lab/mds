@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 16:26:25 (PDT)
+Last modified: 2026-10-15 17:47:31 (PDT)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -19,7 +19,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 > **Example 1 (Propositions, and a sentence that is not one)**  
 >
 > - “\\2 + 3 = 5\\” is a proposition, and it is true.
-> - “\\7\\ is [even](notation.llms.md#def-even-odd)” is a proposition, and it is false.
+> - “\\7\\ is [even](number-systems.llms.md#def-even-odd)” is a proposition, and it is false.
 > - “\\x \> 2\\” is not a proposition on its own: it is true when \\x = 3\\ and false when \\x = 1\\, so it has no truth value until \\x\\ is given a value.
 
 > **NOTE:**
@@ -90,12 +90,12 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 >
 > **Example 7 (“If and only if” with equal and different truth values)** Take \\x = 4\\.
 >
-> - “\\x\\ is [even](notation.llms.md#def-even-odd) \\\Leftrightarrow x \> 3\\” is true: \\4\\ is even and \\4 \> 3\\, so both sides are true.
+> - “\\x\\ is [even](number-systems.llms.md#def-even-odd) \\\Leftrightarrow x \> 3\\” is true: \\4\\ is even and \\4 \> 3\\, so both sides are true.
 > - “\\x \> 3 \Leftrightarrow x \> 5\\” is false: \\4 \> 3\\ is true, but \\4 \> 5\\ is false.
 
 > **NOTE:**
 >
-> **Example 8 (Truth values of connectives)** Let \\P\\ be “\\2 + 3 = 5\\”, which is true, and let \\Q\\ be “\\7\\ is [even](notation.llms.md#def-even-odd)”, which is false.
+> **Example 8 (Truth values of connectives)** Let \\P\\ be “\\2 + 3 = 5\\”, which is true, and let \\Q\\ be “\\7\\ is [even](number-systems.llms.md#def-even-odd)”, which is false.
 >
 > - \\\neg Q\\, “\\7\\ is not even”, is true, because \\Q\\ is false.
 > - \\P \land Q\\ is false, because \\Q\\ is false.
@@ -114,7 +114,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Example 9 (A universally quantified proposition)** Let \\P(x)\\ be the predicate “\\x\\ is [even](notation.llms.md#def-even-odd)”.
+> **Example 9 (A universally quantified proposition)** Let \\P(x)\\ be the predicate “\\x\\ is [even](number-systems.llms.md#def-even-odd)”.
 >
 > - “\\\forall x \in \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, P(x)\\” is true, because \\2\\, \\4\\, and \\6\\ are all even.
 > - “\\\forall x \in \mathopen{}\left\\2, 3, 4\right\\\mathclose{}, P(x)\\” is false, because \\P(3)\\ is false.
@@ -125,14 +125,14 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Example 10 (An existentially quantified proposition)** Let \\P(x)\\ be the predicate “\\x\\ is [even](notation.llms.md#def-even-odd)”.
+> **Example 10 (An existentially quantified proposition)** Let \\P(x)\\ be the predicate “\\x\\ is [even](number-systems.llms.md#def-even-odd)”.
 >
 > - “\\\exists x \in \mathopen{}\left\\1, 2, 3\right\\\mathclose{}, P(x)\\” is true, because \\P(2)\\ is true.
 > - “\\\exists x \in \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, P(x)\\” is false, because none of \\1\\, \\3\\, and \\5\\ is even.
 
 > **NOTE:**
 >
-> **Example 11 (Quantified propositions)** Let \\P(x)\\ be the predicate “\\x \> 2\\”, for [integers](notation.llms.md#def-integers) \\x\\.
+> **Example 11 (Quantified propositions)** Let \\P(x)\\ be the predicate “\\x \> 2\\”, for [integers](number-systems.llms.md#def-integers) \\x\\.
 >
 > - “\\\exists x \in \mathopen{}\left\\1, 2, 3\right\\\mathclose{}, P(x)\\” is true, because \\P(3)\\ is true.
 > - “\\\forall x \in \mathopen{}\left\\1, 2, 3\right\\\mathclose{}, P(x)\\” is false, because \\P(1)\\ is false.
@@ -140,7 +140,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 12 (Inequality)** An **inequality** is a proposition ([Definition 1](#def-proposition)) or a predicate ([Definition 2](#def-predicate)) that compares two expressions \\a\\ and \\b\\ whose values are [real numbers](notation.llms.md#def-real-numbers), in one of the forms:
+> **Definition 12 (Inequality)** An **inequality** is a proposition ([Definition 1](#def-proposition)) or a predicate ([Definition 2](#def-predicate)) that compares two expressions \\a\\ and \\b\\ whose values are [real numbers](number-systems.llms.md#def-real-numbers), in one of the forms:
 >
 > - \\a \< b\\ (“\\a\\ is less than \\b\\”);
 > - \\a \le b\\ (“\\a\\ is less than or equal to \\b\\”);
@@ -162,7 +162,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Example 13 (Entailment, and its failure)** Let \\x\\ be an [integer](notation.llms.md#def-integers).
+> **Example 13 (Entailment, and its failure)** Let \\x\\ be an [integer](number-systems.llms.md#def-integers).
 >
 > - “\\x = 2\\” entails “\\x^2 = 4\\”: the only value that makes “\\x = 2\\” true is \\x = 2\\, and \\2^2 = 4\\.
 > - “\\x \> 3\\” and “\\x \< 5\\” together entail “\\x = 4\\”: \\4\\ is the only integer greater than \\3\\ and less than \\5\\.
@@ -189,11 +189,11 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Example 14 (The sum of two even integers is even)** Let \\a\\ and \\b\\ be even integers ([definition](notation.llms.md#def-even-odd)). Then \\a = 2j\\ and \\b = 2k\\ for some integers \\j\\ and \\k\\, and
+> **Example 14 (The sum of two even integers is even)** Let \\a\\ and \\b\\ be even integers ([definition](number-systems.llms.md#def-even-odd)). Then \\a = 2j\\ and \\b = 2k\\ for some integers \\j\\ and \\k\\, and
 >
 > \\ \begin{aligned} a + b &= 2j + 2k && \text{(substitute } a = 2j \text{ and } b = 2k \text{)} \\ &= 2(j + k) && \text{(distributive law)} \end{aligned} \\
 >
-> The second line uses the [distributive law](algebra-sums.llms.md#def-distributive). Since \\j + k\\ is an integer, \\a + b\\ is even ([definition](notation.llms.md#def-even-odd)). For example,
+> The second line uses the [distributive law](algebra-sums.llms.md#def-distributive). Since \\j + k\\ is an integer, \\a + b\\ is even ([definition](number-systems.llms.md#def-even-odd)). For example,
 >
 > \\ \begin{aligned} 4 + 10 &= 2 \cdot 2 + 2 \cdot 5 \\ &= 2 \cdot 7 \\ &= 14. \end{aligned} \\
 
@@ -275,7 +275,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Example 17 (A proposition that is a result, and one that is not)** “\\2 + 3 = 5\\” is a proposition ([Definition 1](#def-proposition)) that has a proof, the computation of \\2 + 3\\, so it is a result. “\\7\\ is [even](notation.llms.md#def-even-odd)” is a proposition that is false, so it has no proof and is not a result.
+> **Example 17 (A proposition that is a result, and one that is not)** “\\2 + 3 = 5\\” is a proposition ([Definition 1](#def-proposition)) that has a proof, the computation of \\2 + 3\\, so it is a result. “\\7\\ is [even](number-systems.llms.md#def-even-odd)” is a proposition that is false, so it has no proof and is not a result.
 
 > **NOTE:**
 >
@@ -370,7 +370,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Example 26 (No integer is both even and odd)** Suppose, for contradiction, that some integer \\n\\ is both even and odd ([definition](notation.llms.md#def-even-odd)). Then \\n = 2j\\ and \\n = 2k + 1\\ for some integers \\j\\ and \\k\\, and
+> **Example 26 (No integer is both even and odd)** Suppose, for contradiction, that some integer \\n\\ is both even and odd ([definition](number-systems.llms.md#def-even-odd)). Then \\n = 2j\\ and \\n = 2k + 1\\ for some integers \\j\\ and \\k\\, and
 >
 > \\ \begin{aligned} 2j &= 2k + 1 && \text{(both equal } n \text{)} \\ 2j - 2k &= 1 && \text{(subtract } 2k \text{ from both sides)} \\ 2(j - k) &= 1 && \text{(distributive law)} \\ j - k &= \tfrac{1}{2} && \text{(divide both sides by } 2 \text{)} \end{aligned} \\
 >
@@ -425,7 +425,7 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 
 > **NOTE:**
 >
-> **Example 28 (The square of an odd integer is odd)** Claim: if \\n\\ is an [odd](notation.llms.md#def-odd) integer, then \\n^2\\ is odd.
+> **Example 28 (The square of an odd integer is odd)** Claim: if \\n\\ is an [odd](number-systems.llms.md#def-odd) integer, then \\n^2\\ is odd.
 >
 > Since \\n\\ is odd, there is an integer \\k\\ with \\n = 2k + 1\\. Then
 >
@@ -451,11 +451,11 @@ When you read someone else’s proof, you want to be able to follow every step w
 
 ## 6 Proof by induction
 
-Many proofs in these notes show that a statement holds for every [natural number](notation.llms.md#def-natural-numbers) \\n\\, or for every integer \\n\\ from some starting value on. Checking the statement one \\n\\ at a time would never finish; induction proves it for all of them with two arguments.
+Many proofs in these notes show that a statement holds for every [natural number](number-systems.llms.md#def-natural-numbers) \\n\\, or for every integer \\n\\ from some starting value on. Checking the statement one \\n\\ at a time would never finish; induction proves it for all of them with two arguments.
 
 > **NOTE:**
 >
-> **Definition 27 (Proof by induction)** Let \\n_0\\ be an [integer](notation.llms.md#def-integers), and let \\P(n)\\ be a [predicate](proof-writing.llms.md#def-predicate) about the integers \\n \ge n_0\\. A **proof by induction** on \\n\\ shows that \\P(n)\\ holds for every integer \\n \ge n_0\\ by showing two things:
+> **Definition 27 (Proof by induction)** Let \\n_0\\ be an [integer](number-systems.llms.md#def-integers), and let \\P(n)\\ be a [predicate](proof-writing.llms.md#def-predicate) about the integers \\n \ge n_0\\. A **proof by induction** on \\n\\ shows that \\P(n)\\ holds for every integer \\n \ge n_0\\ by showing two things:
 >
 > 1.  **Base case:** \\P(n_0)\\ holds.
 > 2.  **Inductive step:** for every integer \\n \> n_0\\, if \\P(n - 1)\\ holds, then \\P(n)\\ holds.
