@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 15:19:18 (PDT)
+Last modified: 2026-10-15 16:26:25 (PDT)
 
 > **NOTE:**
 >
@@ -22,7 +22,7 @@ Last modified: 2026-10-15 15:19:18 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (\\\sigma\\-field). Other sources call a \\\sigma\\-algebra a **\\\sigma\\-field** (see [Wikipedia: \\\sigma\\-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)). For example, Billingsley ([1995](#ref-billingsley1995probability)) uses “\\\sigma\\-field”. The two names mean the same thing. Casella and Berger call it a **Borel field** ([Casella and Berger 2002](#ref-CaseBerg01), Def. 1.2.1). That is a different use of “Borel” from the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) on \\\mathbb{R}\\, which is one particular \\\sigma\\-algebra.
+> *Remark 1* (\\\sigma\\-field). Other sources call a \\\sigma\\-algebra a **\\\sigma\\-field** ([Billingsley 1995](#ref-billingsley1995probability)) or a **Borel field** ([Casella and Berger 2002](#ref-CaseBerg01), Def. 1.2.1) (see [Wikipedia: \\\sigma\\-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)). The names mean the same thing. The “Borel” in “Borel field” is a different use of “Borel” from the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) on \\\mathbb{R}\\, which is one particular \\\sigma\\-algebra.
 
 > **NOTE:**
 >
