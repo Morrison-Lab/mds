@@ -1,0 +1,26 @@
+# Thin caller of Morrison-Lab/gha's reusable semantic-line-break check, as in lds and rme.
+#
+# Flags newly added prose lines that pack more than one sentence onto one
+# source line. It is diff-scoped (it reads only the lines a PR adds), so existing
+# prose is not reflagged. There is no `push` or `workflow_dispatch` trigger:
+# neither has a PR base to diff against.
+#
+# Blocking (Ezra, 2026-09-26): findings produce CI errors, not warnings.
+name: Check new markdown lines for missing semantic breaks
+
+on:
+  pull_request:
+
+jobs:
+  check:
+    permissions:
+      contents: read
+    uses: Morrison-Lab/gha/.github/workflows/check-new-line-breaks.yml@v3
+    with:
+      # Space-separated git pathspecs. The upstream default is `*.md` alone;
+      # this site's prose lives in `.qmd`.
+      globs: '*.md *.qmd'
+      # `_extensions/` holds vendored Quarto extensions.
+      # `**`, not `*`: gha's matcher stops a single `*` at a `/`.
+      paths-ignore: '_extensions/**'
+      fail: true
