@@ -8,8 +8,9 @@
 - The [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)
   sends each random variable, which is a function,
   to a real number, its population mean.
+- Summing the entries sends each vector $\vx \in \reals^n$ to the number $\sum_{i=1}^n x_i$.
 
-Each takes a function as its argument and returns a number,
+Each takes a function or a vector as its argument and returns a number,
 so each is a functional.
 The derivative operator in @exm-operator is not a functional,
 because its values are functions, not numbers.
