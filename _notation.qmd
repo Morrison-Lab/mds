@@ -58,10 +58,6 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 ## Subscripts and parentheses {#sec-subscripts-parentheses}
 
-Subscripts and parentheses both attach extra information to a symbol,
-and sources divide the work between them differently.
-Both are easiest to describe using the idea of an indexed family.
-
 ::: {#def-indexed-family}
 
 #### Indexed family
@@ -84,11 +80,17 @@ are an indexed family of functions.
 
 :::
 
+::: {#rem-subscript-parentheses-convention}
+
+#### Our convention for subscripts and parentheses
+
+Subscripts and parentheses both attach extra information to a symbol,
+and sources divide the work between them differently.
 These notes follow two rules of thumb:
 
 - A subscript names which member of an [indexed family](#def-indexed-family) we mean.
   It holds an index, such as the $i$ in $x_i$,
-  or a parameter that picks one function or distribution out of a family,
+  or a parameter that picks one function or distribution out of the family,
   such as the $\theta$ in $f_\theta$.
 - Parentheses hold the input a function is evaluated at,
   as in $f(x)$.
@@ -97,6 +99,8 @@ Under these rules, $f_\theta(x)$ reads "the member of the family labeled $\theta
 Nothing forces this split.
 It is a convention for keeping a formula readable,
 and you will meet the same objects written the other way around.
+
+:::
 
 | object | our form | other forms you may meet |
 |---|---|---|
@@ -110,6 +114,10 @@ and you will meet the same objects written the other way around.
 
 : Subscripts and parentheses in these notes, and the alternatives {#tbl-subscript-parentheses}
 
+::: {#rem-process-notation}
+
+#### Subscripts and parentheses for a stochastic process
+
 The notation for a [stochastic process](https://morrison-lab.github.io/pds/notation.html#def-stochastic-process)
 uses both slots at once.
 A stochastic process is an [indexed family](#def-indexed-family) of [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X_t$,
@@ -120,6 +128,8 @@ that is, an element of the [sample space](https://morrison-lab.github.io/pds/pro
 so the outcome goes in the parentheses: $X_t(\omega)$.
 Fixing $\omega$ and letting $t$ vary traces out one path of the process.
 Many sources drop $\omega$ and write $X_t$, or write $X(t)$ when $t$ is continuous.
+
+:::
 
 ::: {#exm-process-notation}
 
@@ -134,11 +144,17 @@ with both arguments in parentheses.
 
 :::
 
+::: {#rem-reading-other-sources}
+
+#### Reading another source's subscripts and parentheses
+
 When you read a formula from another source,
 first work out what each subscript and each argument is doing:
-labeling a member of a family, or being the input of a function.
+labeling a member of an [indexed family](#def-indexed-family), or being the input of a function.
 That tells you which convention the source follows,
 whatever its layout.
+
+:::
 
 ## Why is notation in probability and statistics so inconsistent and disorganized?
 
