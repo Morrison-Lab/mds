@@ -56,10 +56,6 @@ These notes also use shorthand macros,
 such as `\floor{x}` for $\floor{x}$,
 defined in the `latex-macros` submodule's `macros.qmd`.
 
-## Notational shorthands {#sec-notational-shorthands}
-
-{{< include mds/_subfiles/notation/_sec-notational-shorthands.qmd >}}
-
 ## Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, 

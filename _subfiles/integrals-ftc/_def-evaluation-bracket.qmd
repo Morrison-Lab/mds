@@ -8,6 +8,6 @@ $$\sb{F(t)}_{t=a}^{t=b} \eqdef F(b) - F(a).$$
 
 When the variable is clear from the context, it is written $\sb{F(t)}_a^b$.
 Computing $F(b) - F(a)$ from the bracket is called **evaluating at the limits**
-(the [limits of integration](notation.qmd#def-limits-of-integration) $a$ and $b$).
+(the [limits of integration](algebra.qmd#def-limits-of-integration) $a$ and $b$).
 
 :::

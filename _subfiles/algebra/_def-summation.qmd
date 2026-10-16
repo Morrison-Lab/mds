@@ -10,7 +10,7 @@ $$
 $$
 
 The numbers $m$ and $n$ are its lower and upper limits,
-defined in the [notation for limits of a sum](notation.qmd#def-lower-upper-limits).
+defined in the [notation for limits of a sum](algebra.qmd#def-lower-upper-limits).
 
 :::
 

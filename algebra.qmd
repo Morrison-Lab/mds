@@ -17,7 +17,7 @@ The algebra notes are split across these pages:
   minima and maxima, and global and local minimizers.
 - [Convexity, Infimum and Sums](algebra-sums.qmd):
   convex functions, the infimum and supremum,
-  sums, products and quotients, and summation notation.
+  sums, products and quotients, summation notation, limits of sums, and notational shorthands.
 - [Polynomials, Exponentials and Logarithms](algebra-exponentials.qmd):
   polynomials, affine and linear functions of one variable,
   limits of sequences, exponentials and logarithms.

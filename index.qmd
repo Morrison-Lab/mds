@@ -45,7 +45,7 @@ organized by topic:
     expressions, parse trees, and algorithms
 - [Algebra](algebra.qmd):
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
-  percent, sums, products, quotients, exponentials and logarithms
+  percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Measures](measures.qmd):
   $\sigma$-algebras, pairwise disjoint sets, finite and countable additivity,
   measures, and the counting measure
