@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-16 05:24:53 (PDT)
+Last modified: 2026-10-16 06:27:40 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -20,7 +20,7 @@ Mathematical notation is not standardized. This section states the conventions t
 > | \\\mid\\ | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|` |
 > | \\\sum\\ | [sum](algebra-sums.llms.md#sec-summation) | `\sum` |
 > | \\\prod\\ | product | `\prod` |
-> | \\\mu\\ | mean, \\\operatorname{E}\[X\]\\, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ | `\mu` |
+> | \\\mu\\ | population mean, \\\operatorname{E}\[X\]\\, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ | `\mu` |
 > | \\\operatorname{E}\\ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
 > | \\x^{\top}\\ | transpose of \\x\\ | `x\'` |
 > | \\'\\ | transpose or [derivative](calculus-derivatives.llms.md#def-derivative)[^1] | `'` |
@@ -68,4 +68,4 @@ Back to top
 
 [^1]: depending on whether it is applied to a matrix or a function
 
-[^2]: A generalized linear model (GLM) is a regression model in which a chosen function \\g\\, the link function, of the mean \\\mu\\ of the outcome equals the linear predictor \\\eta = x^{\top} \beta\\, a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of the predictor values \\x\\ with coefficients \\\beta\\: \\g(\mu) = \eta\\.
+[^2]: A generalized linear model (GLM) is a regression model in which a chosen function \\g\\, the link function, of the population mean \\\mu\\ of the outcome equals the linear predictor \\\eta = x^{\top} \beta\\, a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of the predictor values \\x\\ with coefficients \\\beta\\: \\g(\mu) = \eta\\.
