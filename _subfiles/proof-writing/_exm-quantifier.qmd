@@ -1,7 +1,7 @@
 :::{#exm-quantifier}
 #### Quantified propositions
 
-Let $P(x)$ be the predicate "$x > 2$", for [integers](notation.qmd#def-integers) $x$.
+Let $P(x)$ be the predicate "$x > 2$", for [integers](number-systems.qmd#def-integers) $x$.
 
 - "$\exists x \in \cb{1, 2, 3}, P(x)$" is true, because $P(3)$ is true.
 - "$\forall x \in \cb{1, 2, 3}, P(x)$" is false, because $P(1)$ is false.

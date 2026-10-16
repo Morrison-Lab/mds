@@ -20,6 +20,7 @@ or more fragments, which are what a host site includes:
 | Page                                                     | Fragment(s) to include                                                                                                 |
 |----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | [Notation](notation.qmd)                                 | `mds/_notation.qmd`                                                                                                    |
+| [Number Systems](number-systems.qmd)                     | `mds/_number-systems.qmd`                                                                                              |
 | [Sets](sets.qmd)                                         | `mds/_sets.qmd`                                                                                                        |
 | [Functions](functions.qmd)                               | `mds/_functions.qmd`                                                                                                   |
 | [Expressions and Algorithms](expressions-algorithms.qmd) | `mds/_expressions-algorithms.qmd`                                                                                      |
@@ -34,7 +35,7 @@ or more fragments, which are what a host site includes:
 `mds/_sets-functions.qmd` still includes the three fragments of the old
 Sets and Functions page, one after another (the sections follow the
 three new pages, not the interleaved order of the old page).
-`_notation.qmd`, `_sets.qmd`, `_functions.qmd`,
+`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`,
 `_expressions-algorithms.qmd`, `_algebra.qmd`, and `_measures.qmd`
 include `latex-macros/macros.qmd` themselves; a host page that includes
 any of the other fragments must include `latex-macros/macros.qmd` first,

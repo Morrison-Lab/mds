@@ -326,7 +326,7 @@ which does.
 :::{#exm-direct-proof}
 #### The square of an odd integer is odd
 
-Claim: if $n$ is an [odd](notation.qmd#def-odd) integer,
+Claim: if $n$ is an [odd](number-systems.qmd#def-odd) integer,
 then $n^2$ is odd.
 
 Since $n$ is odd,
@@ -391,7 +391,7 @@ Write your own proofs to meet that same standard.
 ## Proof by induction {#sec-proof-by-induction}
 
 Many proofs in these notes show that a statement holds
-for every [natural number](notation.qmd#def-natural-numbers) $n$,
+for every [natural number](number-systems.qmd#def-natural-numbers) $n$,
 or for every integer $n$ from some starting value on.
 Checking the statement one $n$ at a time would never finish;
 induction proves it for all of them with two arguments.

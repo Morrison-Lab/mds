@@ -4,7 +4,7 @@
 Let $f$ be a [function](functions.qmd#def-function)
 defined at every point of an [open interval](sets.qmd#def-open-interval) around $c$,
 except possibly at $c$ itself,
-and let $L$ be a [real number](notation.qmd#def-real-numbers).
+and let $L$ be a [real number](number-systems.qmd#def-real-numbers).
 The **limit** of $f(x)$ as $x$ approaches $c$ is $L$,
 written $\lim_{x \to c} f(x) = L$,
 if for every $\tolout > 0$ there is a $\tolin > 0$ such that
