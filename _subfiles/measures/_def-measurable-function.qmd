@@ -2,7 +2,7 @@
 #### Measurable function
 
 Let $(S, \salg)$ be a [measurable space](#def-measurable-space).
-A [function](sets-functions.qmd#def-function) $f : S \to \reals$
+A [function](functions.qmd#def-function) $f : S \to \reals$
 is **measurable** (with respect to $\salg$)
 if, for every real number $c$,
 the set of elements where $f$ is at most $c$ is measurable:

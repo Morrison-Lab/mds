@@ -2,7 +2,7 @@
 #### What a function is fundamentally
 
 @def-function defines what a function *does*: it assigns an output to each input.
-In formal set theory, what a function *is* is described in terms of [ordered pairs](#def-ordered-pair)
+In formal set theory, what a function *is* is described in terms of [ordered pairs](sets.qmd#def-ordered-pair)
 and its graph (@def-graph):
 the set of pairs $G = \set{(a, f(a)) : a \in A} \subseteq A \times B$.
 Authors define a function formally in one of two ways:

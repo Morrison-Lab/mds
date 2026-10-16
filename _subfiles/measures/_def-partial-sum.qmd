@@ -1,8 +1,8 @@
 :::{#def-partial-sum}
 #### Partial sum
 
-Let $a_1, a_2, \ldots$ be a [sequence](sets-functions.qmd#def-sequence)
-of real numbers or of [extended non-negative reals](sets-functions.qmd#def-extended-nonneg-reals).
+Let $a_1, a_2, \ldots$ be a [sequence](functions.qmd#def-sequence)
+of real numbers or of [extended non-negative reals](sets.qmd#def-extended-nonneg-reals).
 For each $n \in \Nat$, its $n$th **partial sum**
 is the [sum](algebra.qmd#def-summation) of its first $n$ terms:
 

@@ -1,7 +1,7 @@
 :::{#exm-logical-entailment}
 #### Entailment, and its failure
 
-Let $x$ be an [integer](notation.qmd#def-integers).
+Let $x$ be an [integer](number-systems.qmd#def-integers).
 
 - "$x = 2$" entails "$x^2 = 4$":
   the only value that makes "$x = 2$" true is $x = 2$,

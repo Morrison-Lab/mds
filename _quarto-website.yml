@@ -37,8 +37,13 @@ website:
     left:
       - text: "Notation"
         href: notation.qmd
+      - text: "Number Systems"
+        href: number-systems.qmd
       - text: "Sets and Functions"
-        href: sets-functions.qmd
+        menu:
+          - sets.qmd
+          - functions.qmd
+          - expressions-algorithms.qmd
       - text: "Algebra"
         menu:
           - text: "Overview"
@@ -94,7 +99,13 @@ website:
       - text: "Home"
         href: index.qmd
       - notation.qmd
-      - sets-functions.qmd
+      - number-systems.qmd
+      - section: "Sets and Functions"
+        href: sets-functions.qmd
+        contents:
+          - sets.qmd
+          - functions.qmd
+          - expressions-algorithms.qmd
       - section: "Algebra"
         href: algebra.qmd
         contents:

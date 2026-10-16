@@ -13,7 +13,7 @@ The interval $[0, 1]$ is not [countable](#def-countable-set).
 The standard [proof](proof-writing.qmd#def-proof) is Cantor's diagonal argument:
 given any sequence of numbers in $[0, 1]$,
 it builds a number in $[0, 1]$ whose
-[decimal expansion](notation.qmd#def-real-numbers)
+[decimal expansion](number-systems.qmd#def-real-numbers)
 differs from the $n$th number's in the $n$th digit
 (its $n$th decimal place, one of $0, 1, \ldots, 9$),
 so the sequence misses it

@@ -2,7 +2,7 @@
 #### Sequence
 
 A **sequence** in a set $S$ is a [function](#def-function) $a : \Nat \to S$
-from the [natural numbers](notation.qmd#def-natural-numbers) to $S$.
+from the [natural numbers](number-systems.qmd#def-natural-numbers) to $S$.
 Its value $a(n)$ is written $a_n$,
 and the sequence is written $(a_n)$ or $a_1, a_2, a_3, \ldots$.
 

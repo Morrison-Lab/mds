@@ -1,7 +1,7 @@
 :::{#def-linear-map}
 #### Linear map (linear transformation, linear function)
 
-A [function](sets-functions.qmd#def-function) $f: \reals^p \to \reals^m$ is a **linear map**
+A [function](functions.qmd#def-function) $f: \reals^p \to \reals^m$ is a **linear map**
 (also called a **linear transformation** or **linear function**)
 if it preserves vector addition and scalar multiplication:
 for all $\vx, \vy \in \reals^p$ and $c \in \reals$,

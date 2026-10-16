@@ -1,7 +1,7 @@
 :::{#def-argmax}
 #### Argmax
 
-Let $f : A \to \reals$ be a [function](sets-functions.qmd#def-function).
+Let $f : A \to \reals$ be a [function](functions.qmd#def-function).
 The **argmax** of $f$ over $A$
 is the set of inputs where $f$ takes its largest value:
 
@@ -24,6 +24,6 @@ we write $\hat{x} = \argmax_{x \in A} f(x)$.
 - Let $f(x) = x$ on $[0, 1)$.
   As in @exm-maximum, for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value,
   so no input attains a largest value, and $\argmax_{x \in [0, 1)} f(x)$ is the
-  [empty set](sets-functions.qmd#def-empty-set).
+  [empty set](sets.qmd#def-empty-set).
 
 :::
