@@ -27,7 +27,7 @@ Some key results are listed here,
 organized by topic:
 
 - [Notation](notation.qmd):
-  common symbols, the percent sign,
+  common symbols
   and indicator functions
 - [Number Systems](number-systems.qmd):
   the integers, natural numbers, even and odd numbers,
@@ -39,7 +39,7 @@ organized by topic:
   and the extended non-negative real numbers
 - [Algebra](algebra.qmd):
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
-  sums, products, quotients, exponentials and logarithms
+  percent, sums, products, quotients, exponentials and logarithms
 - [Measures](measures.qmd):
   $\sigma$-algebras, pairwise disjoint sets, finite and countable additivity,
   measures, and the counting measure
