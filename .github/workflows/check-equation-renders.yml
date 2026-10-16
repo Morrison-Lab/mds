@@ -1,0 +1,25 @@
+# Third leg of the PR-preview family, delegated to the reusable workflow in
+# Morrison-Lab/gha. Downloads the build artifact and crawls it with a headless
+# browser to catch equations MathJax cannot render.
+#
+# MathJax typesets client-side: a malformed expression produces a red error box
+# in the browser and nothing in the Quarto or pandoc build log, so a render can
+# be green over a broken equation. These pages are math-heavy, so the crawl
+# runs on every preview build.
+#
+# NOTE: the `workflows:` value below MUST match the `name:` of the build
+# workflow (preview.yml).
+name: Quarto Check Equation Renders
+
+on:  # zizmor: ignore[dangerous-triggers]
+  workflow_run:
+    workflows: ["Quarto Preview Build"]
+    types: [completed]
+
+jobs:
+  check:
+    if: github.event.workflow_run.conclusion == 'success'
+    permissions:
+      contents: read
+      actions: read  # needed to download the build artifact
+    uses: Morrison-Lab/gha/.github/workflows/check-equation-renders.yml@v2
