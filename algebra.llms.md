@@ -4,12 +4,12 @@ Code
 
 Published
 
-Last modified: 2026-10-15 19:41:40 (PDT)
+Last modified: 2026-10-15 20:43:22 (PDT)
 
 The algebra notes are split across these pages:
 
 - [Equalities, Inequalities and Minimizers](algebra-basics.llms.md): equalities, inequalities, powers, square roots and absolute values, minima and maxima, and global and local minimizers.
-- [Convexity, Infimum and Sums](algebra-sums.llms.md): convex functions, the infimum and supremum, sums, products and quotients, and summation notation.
+- [Convexity, Infimum and Sums](algebra-sums.llms.md): convex functions, the infimum and supremum, sums, products and quotients, summation notation, limits of sums, and notational shorthands.
 - [Polynomials, Exponentials and Logarithms](algebra-exponentials.llms.md): polynomials, affine and linear functions of one variable, limits of sequences, exponentials and logarithms.
 - [Trigonometry](algebra-trigonometry.llms.md): cosine and sine on the unit circle, and the identities later pages use.
 - [Complex Numbers](algebra-complex.llms.md): complex numbers and their arithmetic.

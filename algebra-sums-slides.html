@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 19:41:40 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 20:43:22 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -1042,7 +1042,7 @@ w_1 &amp;= w_2 \\
 <p><span class="math display">\[
 \sum_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a_{m+1} + \cdots + a_n
 \]</span></p>
-<p>The numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are its lower and upper limits, defined in the <a href="./notation.html#def-lower-upper-limits">notation for limits of a sum</a>.</p>
+<p>The numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are its lower and upper limits, defined in the <a href="#/def-lower-upper-limits">notation for limits of a sum</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1209,7 +1209,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="rem-sum-without-set" class="proof remark">
-<p><span class="proof-title"><em>Remark 8</em> (Leaving the set out). </span>Some authors leave the set out and write <span class="math inline">\(\sum_{x} f(x)\)</span>. This shorthand means the sum over every value <span class="math inline">\(x\)</span> can take, <span class="math inline">\(\sum_{x \in \mathcal{R}(x)} f(x)\)</span>, where <span class="math inline">\(\mathcal{R}(x)\)</span> is the <a href="./notation.html#def-range-of-variable">range</a> of <span class="math inline">\(x\)</span>. For example, if <span class="math inline">\(x\)</span> is the outcome of one roll of a six-sided die, <span class="math inline">\(\sum_{x} f(x)\)</span> means <span class="math inline">\(\sum_{x \in \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}} f(x)\)</span>. In these notes, we write the set out in full (see <a href="./notation.html#sec-notational-shorthands">Notational shorthands</a>).</p>
+<p><span class="proof-title"><em>Remark 8</em> (Leaving the set out). </span>Some authors leave the set out and write <span class="math inline">\(\sum_{x} f(x)\)</span>. This shorthand means the sum over every value <span class="math inline">\(x\)</span> can take, <span class="math inline">\(\sum_{x \in \mathcal{R}(x)} f(x)\)</span>, where <span class="math inline">\(\mathcal{R}(x)\)</span> is the <a href="#/def-range-of-variable">range</a> of <span class="math inline">\(x\)</span>. For example, if <span class="math inline">\(x\)</span> is the outcome of one roll of a six-sided die, <span class="math inline">\(\sum_{x} f(x)\)</span> means <span class="math inline">\(\sum_{x \in \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}} f(x)\)</span>. In these notes, we write the set out in full (see <a href="#/sec-notational-shorthands">Limits of sums and notational shorthands</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1382,9 +1382,185 @@ w_1 &amp;= w_2 \\
 </ul>
 </div>
 </section>
-<section class="slide level2 smaller scrollable" id="references">
+<section class="slide level2">
 
 <p>Additional reference for elementary algebra: <a href="https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition" class="uri">https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition</a></p>
+</section>
+<section id="sec-notational-shorthands" class="slide level2" data-number="9">
+<h2><span class="header-section-number">9</span> Limits of sums and notational shorthands</h2>
+<div id="def-lower-upper-limits" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 33 (Lower limit of a sum or integral)</strong></span> In a <a href="#/def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration. In both, the lower limit is written below the symbol.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-upper-limit" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 34 (Upper limit of a sum or integral)</strong></span> In a <a href="#/def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is the last value of the index <span class="math inline">\(i\)</span>. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is the right end of the interval of integration. In both, the upper limit is written above the symbol.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-limits-of-integration" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 35 (Limits of integration)</strong></span> In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the lower limit (<a href="#/def-lower-upper-limits" class="quarto-xref">Definition&nbsp;33</a>) <span class="math inline">\(a\)</span> and the upper limit (<a href="#/def-upper-limit" class="quarto-xref">Definition&nbsp;34</a>) <span class="math inline">\(b\)</span> together are the <strong>limits of integration</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-lower-upper-limits" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25 (Reading off limits)</strong></span> &nbsp;</p>
+<ul>
+<li>In <span class="math inline">\(\sum_{i=2}^{5} i^2\)</span>, the lower limit is <span class="math inline">\(2\)</span> and the upper limit is <span class="math inline">\(5\)</span>, so the sum is <span class="math inline">\(2^2 + 3^2 + 4^2 + 5^2 = 54\)</span>.</li>
+<li>In <span class="math inline">\(\int_0^3 x\,dx\)</span>, the lower limit is <span class="math inline">\(0\)</span> and the upper limit is <span class="math inline">\(3\)</span>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-limits-two-meanings" class="proof remark">
+<p><span class="proof-title"><em>Remark 9</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#/def-lower-upper-limits" class="quarto-xref">Definition&nbsp;33</a>, <a href="#/def-upper-limit" class="quarto-xref">Definition&nbsp;34</a>) are not limits in the calculus sense, such as the <a href="./calculus-derivatives.html#def-limit">limit of a function</a> or the <a href="./algebra-exponentials.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-notational-shorthand" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 36 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-full-form" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 37 (Full form)</strong></span> The <strong>full form</strong> of a notational shorthand (<a href="#/def-notational-shorthand" class="quarto-xref">Definition&nbsp;36</a>) is the expression with every part written out.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>These notes write the full form</strong></p>
+</div>
+<div class="callout-content">
+<p>In these notes, we avoid notational shorthands in permanent writing and write the full form of each expression, even where a shorthand would be shorter. A reader who supplies the missing part of a shorthand from a different context than the writer intended reads a different expression than the one the writer meant. Handwritten board work is often less complete, but it should still write out ranges and limits where it can.</p>
+<p>We make one exception: writing two factors side by side means multiplying them, as in <span class="math inline">\(2x\)</span> for <span class="math inline">\(2 \cdot x\)</span> and <span class="math inline">\(ab\)</span> for <span class="math inline">\(a \cdot b\)</span>. We still write the multiplication sign when the side-by-side form could be misread:</p>
+<ul>
+<li><span class="math inline">\(2 \cdot 3\)</span>, not <span class="math inline">\(23\)</span>, which reads as twenty-three;</li>
+<li><span class="math inline">\(a \cdot(b + c)\)</span> when <span class="math inline">\(a\)</span> could be a function, since <span class="math inline">\(a(b + c)\)</span> could mean <span class="math inline">\(a\)</span> evaluated at <span class="math inline">\(b + c\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-range-of-variable" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 38 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
+</div>
+<p>For example, if <span class="math inline">\(x\)</span> is the number of heads in two tosses of a coin, then <span class="math inline">\(\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>. A <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(X\)</span> (defined in the Morrison Lab’s probability notes) is a <a href="./functions.html#def-function">function</a>, and the set of values <span class="math inline">\(X\)</span> can take, <span class="math inline">\(\mathcal{R}(X)\)</span>, is the <a href="./functions.html#def-image">image</a> of <span class="math inline">\(X\)</span>. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain (<a href="./functions.html#rem-image-range">Image and range</a>). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; <span class="math inline">\(\mathcal{R}(x)\)</span> is a set, not that difference.</p>
+</section>
+<section class="slide level2">
+
+<p><a href="#/tbl-notational-shorthands" class="quarto-xref">Table&nbsp;1</a> lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, <span class="math inline">\(x_1, \ldots, x_n\)</span> and <span class="math inline">\(a_1, \ldots, a_n\)</span> are <span class="math inline">\(n\)</span> numbers, <span class="math inline">\(b_{ij}\)</span> is the entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> of an <span class="math inline">\(m \times n\)</span> array, <span class="math inline">\(k\)</span> is an integer with <span class="math inline">\(1 \le k \le n\)</span>, <span class="math inline">\(f\)</span> is a <a href="./functions.html#def-function">function</a> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, and, in the first row, <span class="math inline">\(\mathcal{R}(x)\)</span> is a finite set.</p>
+<div id="tbl-notational-shorthands" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notational-shorthands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Common notational shorthands and their full forms
+</figcaption>
+<div aria-describedby="tbl-notational-shorthands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Shorthand</th>
+<th style="text-align: left;">Full form</th>
+<th style="text-align: left;">Part left out</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\sum_{x} f(x)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{x \in \mathcal{R}(x)} f(x)\)</span></td>
+<td style="text-align: left;">the set the sum runs over (<a href="#/def-sum-over-set">sum over a finite set</a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\sum_{i} x_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{i=1}^nx_i\)</span></td>
+<td style="text-align: left;">the lower and upper limits of the index (<a href="#/def-summation">summation notation</a>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\sum x_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{i=1}^nx_i\)</span></td>
+<td style="text-align: left;">the index and its lower and upper limits</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\prod_{i} x_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\prod_{i=1}^nx_i\)</span></td>
+<td style="text-align: left;">the lower and upper limits of the index</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\prod x_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\prod_{i=1}^nx_i\)</span></td>
+<td style="text-align: left;">the index and its lower and upper limits</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\sum_{i, j} b_{ij}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{i=1}^{m} \sum_{j=1}^nb_{ij}\)</span></td>
+<td style="text-align: left;">the limits of both indices</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\sum_{i \neq k} a_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{} \setminus \mathopen{}\left\{k\right\}\mathclose{}} a_i\)</span></td>
+<td style="text-align: left;">the set <span class="math inline">\(\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span> of indices that <span class="math inline">\(k\)</span> is removed from</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\int f(x)\,dx\)</span>, used for a number</td>
+<td style="text-align: left;"><span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span></td>
+<td style="text-align: left;">the limits of integration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\int f\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span></td>
+<td style="text-align: left;">the limits, the variable of integration, and the differential <span class="math inline">\(dx\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(x_{1:n}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\((x_1, x_2, \ldots, x_n)\)</span></td>
+<td style="text-align: left;">the explicit list of entries</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">“the function <span class="math inline">\(x^2\)</span>”</td>
+<td style="text-align: left;">“the function <span class="math inline">\(f : \mathbb{R}\to \mathbb{R}\)</span> with <span class="math inline">\(f(x) = x^2\)</span>”</td>
+<td style="text-align: left;">the function’s name, domain, and codomain</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-indefinite-integral-not-shorthand" class="proof remark">
+<p><span class="proof-title"><em>Remark 10</em> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings). </span>In calculus, <span class="math inline">\(\int f(x)\,dx\)</span> with no limits is not a shorthand: it is the <a href="./calculus-integration.html#def-indefinite-integral">indefinite integral</a> of <span class="math inline">\(f\)</span>, a family of functions rather than a number. Some sources, especially in probability, also write <span class="math inline">\(\int f(x)\,dx\)</span> for the number <span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span>. Writing the limits out tells the reader which of the two is meant.</p>
+</div>
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<div id="exm-expand-index-shorthand" class="theorem example">
+<p><span class="theorem-title"><strong>Example 26 (Writing out an index shorthand)</strong></span> Let <span class="math inline">\(n = 3\)</span> and <span class="math inline">\((x_1, x_2, x_3) = (2, 5, 1)\)</span>. A source that writes <span class="math inline">\(\sum_{i} x_i\)</span> means <span class="math inline">\(\sum_{i=1}^{3} x_i\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^{3} x_i
+&amp;= x_1 + x_2 + x_3
+&amp;&amp; \text{(definition of summation notation)} \\
+&amp;= 2 + 5 + 1
+&amp;&amp; \text{(substitute the values)} \\
+&amp;= 8
+&amp;&amp; \text{(add)}
+\end{aligned}
+\]</span></p>
+</div>
 
 
 <script>

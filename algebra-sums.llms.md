@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 19:41:40 (PDT)
+Last modified: 2026-10-15 20:43:22 (PDT)
 
 ## 1 Convex functions
 
@@ -468,7 +468,7 @@ Last modified: 2026-10-15 19:41:40 (PDT)
 >
 > \\ \sum\_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a\_{m+1} + \cdots + a_n \\
 >
-> The numbers \\m\\ and \\n\\ are its lower and upper limits, defined in the [notation for limits of a sum](notation.llms.md#def-lower-upper-limits).
+> The numbers \\m\\ and \\n\\ are its lower and upper limits, defined in the [notation for limits of a sum](#def-lower-upper-limits).
 
 > **NOTE:**
 >
@@ -564,7 +564,7 @@ Last modified: 2026-10-15 19:41:40 (PDT)
 
 > **NOTE:**
 >
-> *Remark 8* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take, \\\sum\_{x \in \mathcal{R}(x)} f(x)\\, where \\\mathcal{R}(x)\\ is the [range](notation.llms.md#def-range-of-variable) of \\x\\. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full (see [Notational shorthands](notation.llms.md#sec-notational-shorthands)).
+> *Remark 8* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take, \\\sum\_{x \in \mathcal{R}(x)} f(x)\\, where \\\mathcal{R}(x)\\ is the [range](#def-range-of-variable) of \\x\\. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full (see [Limits of sums and notational shorthands](#sec-notational-shorthands)).
 
 > **NOTE:**
 >
@@ -665,6 +665,84 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 >   which is \\2\\ at \\x = 1\\ and \\\tfrac{3}{2}\\ at \\x = 2\\.
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
+
+## 9 Limits of sums and notational shorthands
+
+> **NOTE:**
+>
+> **Definition 33 (Lower limit of a sum or integral)** In a [sum](#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration. In both, the lower limit is written below the symbol.
+
+> **NOTE:**
+>
+> **Definition 34 (Upper limit of a sum or integral)** In a [sum](#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **upper limit** \\n\\ is the last value of the index \\i\\. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **upper limit** \\b\\ is the right end of the interval of integration. In both, the upper limit is written above the symbol.
+
+> **NOTE:**
+>
+> **Definition 35 (Limits of integration)** In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the lower limit ([Definition 33](#def-lower-upper-limits)) \\a\\ and the upper limit ([Definition 34](#def-upper-limit)) \\b\\ together are the **limits of integration**.
+
+> **NOTE:**
+>
+> **Example 25 (Reading off limits)**  
+>
+> - In \\\sum\_{i=2}^{5} i^2\\, the lower limit is \\2\\ and the upper limit is \\5\\, so the sum is \\2^2 + 3^2 + 4^2 + 5^2 = 54\\.
+> - In \\\int_0^3 x\\dx\\, the lower limit is \\0\\ and the upper limit is \\3\\.
+
+> **NOTE:**
+>
+> *Remark 9* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 33](#def-lower-upper-limits), [Definition 34](#def-upper-limit)) are not limits in the calculus sense, such as the [limit of a function](calculus-derivatives.llms.md#def-limit) or the [limit of a sequence](algebra-exponentials.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
+
+> **NOTE:**
+>
+> **Definition 36 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.
+
+> **NOTE:**
+>
+> **Definition 37 (Full form)** The **full form** of a notational shorthand ([Definition 36](#def-notational-shorthand)) is the expression with every part written out.
+
+> **NOTE:**
+>
+> In these notes, we avoid notational shorthands in permanent writing and write the full form of each expression, even where a shorthand would be shorter. A reader who supplies the missing part of a shorthand from a different context than the writer intended reads a different expression than the one the writer meant. Handwritten board work is often less complete, but it should still write out ranges and limits where it can.
+>
+> We make one exception: writing two factors side by side means multiplying them, as in \\2x\\ for \\2 \cdot x\\ and \\ab\\ for \\a \cdot b\\. We still write the multiplication sign when the side-by-side form could be misread:
+>
+> - \\2 \cdot 3\\, not \\23\\, which reads as twenty-three;
+> - \\a \cdot(b + c)\\ when \\a\\ could be a function, since \\a(b + c)\\ could mean \\a\\ evaluated at \\b + c\\.
+
+> **NOTE:**
+>
+> **Definition 38 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
+
+For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ (defined in the Morrison Lab’s probability notes) is a [function](functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
+
+[Table 1](#tbl-notational-shorthands) lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
+
+> **NOTE:**
+>
+> | Shorthand | Full form | Part left out |
+> |:---|:---|:---|
+> | \\\sum\_{x} f(x)\\ | \\\sum\_{x \in \mathcal{R}(x)} f(x)\\ | the set the sum runs over ([sum over a finite set](#def-sum-over-set)) |
+> | \\\sum\_{i} x_i\\ | \\\sum\_{i=1}^nx_i\\ | the lower and upper limits of the index ([summation notation](#def-summation)) |
+> | \\\sum x_i\\ | \\\sum\_{i=1}^nx_i\\ | the index and its lower and upper limits |
+> | \\\prod\_{i} x_i\\ | \\\prod\_{i=1}^nx_i\\ | the lower and upper limits of the index |
+> | \\\prod x_i\\ | \\\prod\_{i=1}^nx_i\\ | the index and its lower and upper limits |
+> | \\\sum\_{i, j} b\_{ij}\\ | \\\sum\_{i=1}^{m} \sum\_{j=1}^nb\_{ij}\\ | the limits of both indices |
+> | \\\sum\_{i \neq k} a_i\\ | \\\sum\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{} \setminus \mathopen{}\left\\k\right\\\mathclose{}} a_i\\ | the set \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ of indices that \\k\\ is removed from |
+> | \\\int f(x)\\dx\\, used for a number | \\\int\_{-\infty}^{\infty} f(x)\\dx\\ | the limits of integration |
+> | \\\int f\\ | \\\int\_{-\infty}^{\infty} f(x)\\dx\\ | the limits, the variable of integration, and the differential \\dx\\ |
+> | \\x\_{1:n}\\ | \\(x_1, x_2, \ldots, x_n)\\ | the explicit list of entries |
+> | “the function \\x^2\\” | “the function \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = x^2\\” | the function’s name, domain, and codomain |
+>
+> Table 1: Common notational shorthands and their full forms
+
+> **NOTE:**
+>
+> *Remark 10* (\\\int f(x)\\dx\\ has two readings). In calculus, \\\int f(x)\\dx\\ with no limits is not a shorthand: it is the [indefinite integral](calculus-integration.llms.md#def-indefinite-integral) of \\f\\, a family of functions rather than a number. Some sources, especially in probability, also write \\\int f(x)\\dx\\ for the number \\\int\_{-\infty}^{\infty} f(x)\\dx\\. Writing the limits out tells the reader which of the two is meant.
+
+> **NOTE:**
+>
+> **Example 26 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
+>
+> \\ \begin{aligned} \sum\_{i=1}^{3} x_i &= x_1 + x_2 + x_3 && \text{(definition of summation notation)} \\ &= 2 + 5 + 1 && \text{(substitute the values)} \\ &= 8 && \text{(add)} \end{aligned} \\
 
 Back to top
 

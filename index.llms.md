@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 19:41:40 (PDT)
+Last modified: 2026-10-15 20:43:22 (PDT)
 
 ## Welcome
 
@@ -20,7 +20,7 @@ These notes collect the mathematics that data science courses assume: mathematic
   - [Sets](sets.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, and the extended non-negative real numbers
   - [Functions](functions.llms.md): functions with their domains, codomains, and images, sequences, and countable sets
   - [Expressions and Algorithms](expressions-algorithms.llms.md): expressions, parse trees, and algorithms
-- [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, exponentials and logarithms
+- [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Measures](measures.llms.md): \\\sigma\\-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
