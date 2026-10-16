@@ -63,6 +63,13 @@ A theorem-type div states one result.
 Keep the old id on the original term, since other pages link to it (Ezra, 2026-10-12).
 The wording is canonical in psw's [Writing for teaching](https://morrison-lab.github.io/psw/chapters/teaching.html).
 
+## Useful resources go in every repo that covers their topic
+
+A course, book or video that covers a topic mds teaches goes in the Further reading section of the matching page,
+even when lds already lists it in a directory (Ezra, 2026-10-15).
+Link the resource, and adapt it with attribution only where its license allows adapting.
+See [`track-useful-resources`](https://github.com/Morrison-Lab/ai-config/blob/main/shared/workflow/track-useful-resources.md).
+
 ## Code Chunks
 
 ### Code Folding
