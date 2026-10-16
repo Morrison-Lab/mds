@@ -44,8 +44,7 @@ website:
           - sets.qmd
           - functions.qmd
           - expressions-algorithms.qmd
-      - text: "Indicator Functions"
-        href: indicator-functions.qmd
+          - indicator-functions.qmd
       - text: "Algebra"
         menu:
           - text: "Overview"
@@ -108,7 +107,7 @@ website:
           - sets.qmd
           - functions.qmd
           - expressions-algorithms.qmd
-      - indicator-functions.qmd
+          - indicator-functions.qmd
       - section: "Algebra"
         href: algebra.qmd
         contents:
