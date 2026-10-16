@@ -1,0 +1,26 @@
+# Thin caller of Morrison-Lab/gha's reusable AI-tell scanner, as in lds and rme.
+#
+# A density check on the prose a PR adds, as a second pair of eyes on top of
+# review. Warn-only: the tell list includes words that are legitimate technical
+# terms, and density is measured per 1,000 words, so one such word in a short
+# diff can clear the threshold on arithmetic alone.
+name: Check AI Tells
+
+on:
+  pull_request:
+    paths:
+      - '**.md'
+      - '**.qmd'
+  workflow_dispatch:
+
+jobs:
+  check-ai-tells:
+    permissions:
+      contents: read
+    uses: Morrison-Lab/gha/.github/workflows/check-ai-tells.yml@v2
+    with:
+      # Scan only the lines this PR adds. Empty on `workflow_dispatch`, which
+      # scans the whole tree.
+      base-ref: ${{ github.event.pull_request.base.sha }}
+      paths-ignore: '_extensions/**'
+      fail: false
