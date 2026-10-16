@@ -1,0 +1,18 @@
+:::{#def-unit-circle}
+#### Unit circle
+
+The **unit circle** is the set of points $(x_1, x_2)$ in the plane with $x_1^2 + x_2^2 = 1$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-unit-circle}
+#### Points on the unit circle
+
+- $(1, 0)$ is on the unit circle, because $1^2 + 0^2 = 1$.
+- $(0, -1)$ is on the unit circle, because $0^2 + (-1)^2 = 1$.
+- $(\tfrac{3}{5}, \tfrac{4}{5})$ is on the unit circle, because $\tfrac{9}{25} + \tfrac{16}{25} = 1$.
+- $(1, 1)$ is not on the unit circle, because $1^2 + 1^2 = 2 \ne 1$.
+
+:::
