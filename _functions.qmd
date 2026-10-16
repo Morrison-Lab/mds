@@ -59,6 +59,10 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_rem-image-range.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_exm-domain-codomain-image.qmd >}}
 
 {{< slidebreak >}}
