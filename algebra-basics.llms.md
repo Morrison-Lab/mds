@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 18:37:38 (PDT)
+Last modified: 2026-10-15 19:41:40 (PDT)
 
 ## 1 Equalities
 
@@ -12,7 +12,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 1 (Transitive relation)** Let \\\sim\\ be a [relation](sets-functions.llms.md#def-relation) on a set \\S\\. The relation \\\sim\\ is **transitive** if, for all \\a, b, c \in S\\, \\a \sim b\\ and \\b \sim c\\ together imply \\a \sim c\\.
+> **Definition 1 (Transitive relation)** Let \\\sim\\ be a [relation](functions.llms.md#def-relation) on a set \\S\\. The relation \\\sim\\ is **transitive** if, for all \\a, b, c \in S\\, \\a \sim b\\ and \\b \sim c\\ together imply \\a \sim c\\.
 
 > **NOTE:**
 >
@@ -218,7 +218,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> *Remark 3* (Not every set has a minimum). The set \\\mathopen{}\left\\3, 1, 4\right\\\mathclose{}\\ has minimum \\1\\, and the [interval](sets-functions.llms.md#def-interval) \\\[0, 1\]\\ has minimum \\0\\. The interval \\(0, 1\]\\ has no minimum: every element \\a\\ of it has a smaller element, \\a/2\\, also in it.
+> *Remark 3* (Not every set has a minimum). The set \\\mathopen{}\left\\3, 1, 4\right\\\mathclose{}\\ has minimum \\1\\, and the [interval](sets.llms.md#def-interval) \\\[0, 1\]\\ has minimum \\0\\. The interval \\(0, 1\]\\ has no minimum: every element \\a\\ of it has a smaller element, \\a/2\\, also in it.
 
 > **NOTE:**
 >
@@ -233,7 +233,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 15 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its smallest value:
+> **Definition 15 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its smallest value:
 >
 > \\\arg \min\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(x) \le f(a)\right\\\mathclose{}\\
 >
@@ -241,13 +241,13 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> *Remark 4* (Smallest value versus where it occurs). The smallest value itself is \\\min f(A)\\, the minimum ([Definition 13](#def-minimum)) of the [image](sets-functions.llms.md#def-image) of \\f\\, and the argmin is where that value is attained. For example, let \\f(x) = x^2\\ on \\A = \mathopen{}\left\\-1, 0, 2\right\\\mathclose{}\\. The image is \\f(A) = \mathopen{}\left\\1, 0, 4\right\\\mathclose{}\\, so the smallest value is \\\min f(A) = 0\\, and \\\arg \min\_{x \in A} f(x) = \mathopen{}\left\\0\right\\\mathclose{}\\.
+> *Remark 4* (Smallest value versus where it occurs). The smallest value itself is \\\min f(A)\\, the minimum ([Definition 13](#def-minimum)) of the [image](functions.llms.md#def-image) of \\f\\, and the argmin is where that value is attained. For example, let \\f(x) = x^2\\ on \\A = \mathopen{}\left\\-1, 0, 2\right\\\mathclose{}\\. The image is \\f(A) = \mathopen{}\left\\1, 0, 4\right\\\mathclose{}\\, so the smallest value is \\\min f(A) = 0\\, and \\\arg \min\_{x \in A} f(x) = \mathopen{}\left\\0\right\\\mathclose{}\\.
 >
 > The argmin is empty when \\f\\ has no smallest value, for example \\f(x) = x\\ on \\(0, 1\]\\.
 
 > **NOTE:**
 >
-> **Definition 16 (Argmax)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmax** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its largest value:
+> **Definition 16 (Argmax)** Let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). The **argmax** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its largest value:
 >
 > \\\arg \max\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(a) \le f(x)\right\\\mathclose{}\\
 >
@@ -258,7 +258,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 > **Example 9 (An argmax with two points, and an empty one)**  
 >
 > - Let \\g(x) = x^2\\ on \\A = \mathopen{}\left\\-2, 0, 1, 2\right\\\mathclose{}\\. The values are \\g(-2) = 4\\, \\g(0) = 0\\, \\g(1) = 1\\ and \\g(2) = 4\\, so the largest value is \\4\\ and \\\arg \max\_{x \in A} g(x) = \mathopen{}\left\\-2, 2\right\\\mathclose{}\\. This argmax has two elements, so it is not written as a single \\\hat{x}\\.
-> - Let \\f(x) = x\\ on \\\[0, 1)\\. As in [Example 8](#exm-maximum), for every input \\x\\ the input \\\tfrac{x + 1}{2}\\ has a larger value, so no input attains a largest value, and \\\arg \max\_{x \in \[0, 1)} f(x)\\ is the [empty set](sets-functions.llms.md#def-empty-set).
+> - Let \\f(x) = x\\ on \\\[0, 1)\\. As in [Example 8](#exm-maximum), for every input \\x\\ the input \\\tfrac{x + 1}{2}\\ has a larger value, so no input attains a largest value, and \\\arg \max\_{x \in \[0, 1)} f(x)\\ is the [empty set](sets.llms.md#def-empty-set).
 
 ## 6 Global and local minimizers
 
@@ -297,7 +297,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 17 (Global minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **global minimizer** of \\f\\ over \\A\\ if \\f(x^\*) \le f(x)\\ for all \\x \in A\\.
+> **Definition 17 (Global minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). A point \\x^\* \in A\\ is a **global minimizer** of \\f\\ over \\A\\ if \\f(x^\*) \le f(x)\\ for all \\x \in A\\.
 
 > **NOTE:**
 >
@@ -305,7 +305,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 18 (Local minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **local minimizer** of \\f\\ if there is a number \\\delta\> 0\\ such that \\f(x^\*) \le f(x)\\ for all \\x \in A\\ with \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\, where \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
+> **Definition 18 (Local minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). A point \\x^\* \in A\\ is a **local minimizer** of \\f\\ if there is a number \\\delta\> 0\\ such that \\f(x^\*) \le f(x)\\ for all \\x \in A\\ with \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\, where \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
 
 > **NOTE:**
 >

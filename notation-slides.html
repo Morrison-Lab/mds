@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 18:37:38 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 19:41:40 (PDT)</p>
 </section>
 <section class="slide level2 scrollable">
 
@@ -647,12 +647,12 @@ Table&nbsp;1: Notation used in this book
 </ul>
 </div>
 <h3 id="strengths-and-limitations-of-the-iverson-bracket">Strengths and limitations of the Iverson bracket</h3>
-<p>The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if <span class="math inline">\(U\)</span> is a <a href="./sets-functions.html#def-finite-set">finite set</a> that contains <span class="math inline">\(A\)</span>, then:</p>
+<p>The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if <span class="math inline">\(U\)</span> is a <a href="./functions.html#def-finite-set">finite set</a> that contains <span class="math inline">\(A\)</span>, then:</p>
 <p><span class="math display">\[
 \sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]
 \]</span></p>
 <p>With <span class="math inline">\(A = \mathopen{}\left\{2, 4\right\}\mathclose{}\)</span>, <span class="math inline">\(f(x) = x\)</span>, and <span class="math inline">\(U = \mathopen{}\left\{1, 2, 3, 4, 5\right\}\mathclose{}\)</span>, both sides equal <span class="math inline">\(2 + 4 = 6\)</span>.</p>
-<p>However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote <a href="./sets-functions.html#def-closed-interval">closed intervals</a> <span class="math inline">\([a, b]\)</span>, <a href="https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation">conditional expectations</a> <span class="math inline">\(\operatorname{E}[Y \mid X]\)</span> (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses <span class="math inline">\(\mathbb{1}\)</span> or <span class="math inline">\(I\)</span> rather than the bare Iverson bracket.</p>
+<p>However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote <a href="./sets.html#def-closed-interval">closed intervals</a> <span class="math inline">\([a, b]\)</span>, <a href="https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation">conditional expectations</a> <span class="math inline">\(\operatorname{E}[Y \mid X]\)</span> (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses <span class="math inline">\(\mathbb{1}\)</span> or <span class="math inline">\(I\)</span> rather than the bare Iverson bracket.</p>
 <h3 id="summary-of-indicator-notations">Summary of indicator notations</h3>
 <p><a href="#/tbl-indicator-notations" class="quarto-xref">Table&nbsp;2</a> compares the major notations encountered across the literature.</p>
 <div id="tbl-indicator-notations" class="quarto-float quarto-figure quarto-figure-center">
@@ -730,7 +730,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <h3 id="key-algebraic-properties">Key algebraic properties</h3>
 <p>Indicator functions translate the logical connectives (<a href="./proof-writing.html#def-logical-connective">definition</a>) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:</p>
 <div id="def-idempotent" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Idempotent)</strong></span> A number <span class="math inline">\(a\)</span> is <strong>idempotent</strong> if <span class="math inline">\(a \cdot a = a\)</span>. A function <span class="math inline">\(f\)</span> with real values is <strong>idempotent</strong> if <span class="math inline">\(f(x) \cdot f(x) = f(x)\)</span> for every <span class="math inline">\(x\)</span> in its <a href="./sets-functions.html#def-domain">domain</a>.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Idempotent)</strong></span> A number <span class="math inline">\(a\)</span> is <strong>idempotent</strong> if <span class="math inline">\(a \cdot a = a\)</span>. A function <span class="math inline">\(f\)</span> with real values is <strong>idempotent</strong> if <span class="math inline">\(f(x) \cdot f(x) = f(x)\)</span> for every <span class="math inline">\(x\)</span> in its <a href="./functions.html#def-domain">domain</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -754,7 +754,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </section>
 <section class="slide level2">
 
-<p>For subsets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> of <span class="math inline">\(\Omega\)</span>, with <a href="./sets-functions.html#def-complement">complement</a> <span class="math inline">\(A^c \stackrel{\text{def}}{=}\Omega\setminus A\)</span>, and for every <span class="math inline">\(x \in \Omega\)</span>:</p>
+<p>For subsets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> of <span class="math inline">\(\Omega\)</span>, with <a href="./sets.html#def-complement">complement</a> <span class="math inline">\(A^c \stackrel{\text{def}}{=}\Omega\setminus A\)</span>, and for every <span class="math inline">\(x \in \Omega\)</span>:</p>
 <ul>
 <li><p><strong>Intersection (“and”):</strong> <span class="math inline">\(\mathbb{1}_{A \cap B}(x) = \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
 <li><p><strong>Union (“or”):</strong> <span class="math inline">\(\mathbb{1}_{A \cup B}(x) = \mathbb{1}_{A}(x) + \mathbb{1}_{B}(x) - \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
@@ -848,11 +848,11 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <div id="def-range-of-variable" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
 </div>
-<p>For example, if <span class="math inline">\(x\)</span> is the number of heads in two tosses of a coin, then <span class="math inline">\(\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>. A <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(X\)</span> (defined in the Morrison Lab’s probability notes) is a <a href="./sets-functions.html#def-function">function</a>, and the set of values <span class="math inline">\(X\)</span> can take, <span class="math inline">\(\mathcal{R}(X)\)</span>, is the <a href="./sets-functions.html#def-image">image</a> of <span class="math inline">\(X\)</span>. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain (<a href="./sets-functions.html#rem-image-range">Image and range</a>). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; <span class="math inline">\(\mathcal{R}(x)\)</span> is a set, not that difference.</p>
+<p>For example, if <span class="math inline">\(x\)</span> is the number of heads in two tosses of a coin, then <span class="math inline">\(\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>. A <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(X\)</span> (defined in the Morrison Lab’s probability notes) is a <a href="./functions.html#def-function">function</a>, and the set of values <span class="math inline">\(X\)</span> can take, <span class="math inline">\(\mathcal{R}(X)\)</span>, is the <a href="./functions.html#def-image">image</a> of <span class="math inline">\(X\)</span>. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain (<a href="./functions.html#rem-image-range">Image and range</a>). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; <span class="math inline">\(\mathcal{R}(x)\)</span> is a set, not that difference.</p>
 </section>
 <section class="slide level2">
 
-<p><a href="#/tbl-notational-shorthands" class="quarto-xref">Table&nbsp;3</a> lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, <span class="math inline">\(x_1, \ldots, x_n\)</span> and <span class="math inline">\(a_1, \ldots, a_n\)</span> are <span class="math inline">\(n\)</span> numbers, <span class="math inline">\(b_{ij}\)</span> is the entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> of an <span class="math inline">\(m \times n\)</span> array, <span class="math inline">\(k\)</span> is an integer with <span class="math inline">\(1 \le k \le n\)</span>, <span class="math inline">\(f\)</span> is a <a href="./sets-functions.html#def-function">function</a> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, and, in the first row, <span class="math inline">\(\mathcal{R}(x)\)</span> is a finite set.</p>
+<p><a href="#/tbl-notational-shorthands" class="quarto-xref">Table&nbsp;3</a> lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, <span class="math inline">\(x_1, \ldots, x_n\)</span> and <span class="math inline">\(a_1, \ldots, a_n\)</span> are <span class="math inline">\(n\)</span> numbers, <span class="math inline">\(b_{ij}\)</span> is the entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> of an <span class="math inline">\(m \times n\)</span> array, <span class="math inline">\(k\)</span> is an integer with <span class="math inline">\(1 \le k \le n\)</span>, <span class="math inline">\(f\)</span> is a <a href="./functions.html#def-function">function</a> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, and, in the first row, <span class="math inline">\(\mathcal{R}(x)\)</span> is a finite set.</p>
 <div id="tbl-notational-shorthands" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notational-shorthands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -964,7 +964,7 @@ Table&nbsp;3: Common notational shorthands and their full forms
 <li><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> explains how mathematical statements are built from logical connectives (<a href="./proof-writing.html#def-logical-connective">definition</a>) and quantifiers (<a href="./proof-writing.html#def-quantifier">definition</a>), and how to read and write them.</li>
 <li><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> covers the same symbols as a formal language, with propositional logic (the logic of connectives) and first-order logic (which adds quantifiers).</li>
 </ul>
-<p>For set and function notation, see the <a href="./sets-functions.html">Sets and Functions</a> page.</p>
+<p>For set and function notation, see the <a href="./sets.html">Sets</a>, <a href="./functions.html">Functions</a>, and <a href="./expressions-algorithms.html">Expressions and Algorithms</a> pages.</p>
 </section>
 <section id="references" class="slide level2 unnumbered smaller scrollable">
 <h2>References</h2>

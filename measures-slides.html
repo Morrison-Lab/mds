@@ -293,22 +293,22 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 18:37:38 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 19:41:40 (PDT)</p>
 </section>
 <section class="slide level2">
 
 <div class="proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>A measure assigns a size to each set in a <a href="./sets-functions.html#def-collection">collection of sets</a>: how many elements it has, how long it is, or how likely it is. This page builds measures from <span class="math inline">\(\sigma\)</span>-algebras and additivity, using the <a href="./sets-functions.html">sets and functions</a> page’s definitions. One kind of measure, the probability measure (<a href="#/def-probability-measure" class="quarto-xref">Definition&nbsp;22</a>), is the starting point of the Morrison Lab’s probability notes (<a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probability measure</a>).</p>
+<p><span class="proof-title"><em>Remark</em>. </span>A measure assigns a size to each set in a <a href="./sets.html#def-collection">collection of sets</a>: how many elements it has, how long it is, or how likely it is. This page builds measures from <span class="math inline">\(\sigma\)</span>-algebras and additivity, using the definitions on the <a href="./sets.html">Sets</a> and <a href="./functions.html">Functions</a> pages. One kind of measure, the probability measure (<a href="#/def-probability-measure" class="quarto-xref">Definition&nbsp;22</a>), is the starting point of the Morrison Lab’s probability notes (<a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probability measure</a>).</p>
 </div>
 </section>
 <section id="sigma-algebras" class="slide level2" data-number="1">
 <h2><span class="header-section-number">1</span> <span class="math inline">\(\sigma\)</span>-algebras</h2>
 <div id="def-sigma-algebra" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (<span class="math inline">\(\sigma\)</span>-algebra)</strong></span> A <strong><span class="math inline">\(\sigma\)</span>-algebra</strong> on a set <span class="math inline">\(S\)</span> is a <a href="./sets-functions.html#def-collection">collection</a> <span class="math inline">\(\mathcal{S}\)</span> of <a href="./sets-functions.html#def-subset">subsets</a> of <span class="math inline">\(S\)</span> that satisfies:</p>
+<p><span class="theorem-title"><strong>Definition 1 (<span class="math inline">\(\sigma\)</span>-algebra)</strong></span> A <strong><span class="math inline">\(\sigma\)</span>-algebra</strong> on a set <span class="math inline">\(S\)</span> is a <a href="./sets.html#def-collection">collection</a> <span class="math inline">\(\mathcal{S}\)</span> of <a href="./sets.html#def-subset">subsets</a> of <span class="math inline">\(S\)</span> that satisfies:</p>
 <ul>
 <li><span class="math inline">\(\mathcal{S}\)</span> contains <span class="math inline">\(S\)</span> itself.</li>
-<li>For each set <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, <span class="math inline">\(\mathcal{S}\)</span> contains its <a href="./sets-functions.html#def-complement">complement</a> <span class="math inline">\(S \setminus A\)</span>.</li>
-<li>For each <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\(A_1, A_2, \ldots\)</span> of sets in <span class="math inline">\(\mathcal{S}\)</span>, <span class="math inline">\(\mathcal{S}\)</span> contains their union <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span>.</li>
+<li>For each set <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, <span class="math inline">\(\mathcal{S}\)</span> contains its <a href="./sets.html#def-complement">complement</a> <span class="math inline">\(S \setminus A\)</span>.</li>
+<li>For each <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(A_1, A_2, \ldots\)</span> of sets in <span class="math inline">\(\mathcal{S}\)</span>, <span class="math inline">\(\mathcal{S}\)</span> contains their union <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span>.</li>
 </ul>
 </div>
 </section>
@@ -321,7 +321,7 @@
 <section class="slide level2">
 
 <div id="exm-sigma-algebra" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (<span class="math inline">\(\sigma\)</span>-algebras for die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the collection of all subsets of <span class="math inline">\(D\)</span> is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D\)</span>, since complements and unions of subsets of <span class="math inline">\(D\)</span> are again subsets of <span class="math inline">\(D\)</span>. So is the smaller collection</p>
+<p><span class="theorem-title"><strong>Example 1 (<span class="math inline">\(\sigma\)</span>-algebras for die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets.html#exm-set">sets of die rolls</a>), the collection of all subsets of <span class="math inline">\(D\)</span> is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D\)</span>, since complements and unions of subsets of <span class="math inline">\(D\)</span> are again subsets of <span class="math inline">\(D\)</span>. So is the smaller collection</p>
 <p><span class="math display">\[\mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\]</span></p>
 <p>which contains <span class="math inline">\(D\)</span>, the complement of each of its sets, and every union of its sets: for example, <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \cup \mathopen{}\left\{1, 3, 5\right\}\mathclose{} = D\)</span>.</p>
 </div>
@@ -354,8 +354,8 @@
 <div id="thm-sigma-algebra-closure" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Closure properties of a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> If <span class="math inline">\(\mathcal{S}\)</span> is a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>, then <span class="math inline">\(\mathcal{S}\)</span> contains:</p>
 <ul>
-<li>the <a href="./sets-functions.html#def-empty-set">empty set</a> <span class="math inline">\(\emptyset\)</span>;</li>
-<li>the union <span class="math inline">\(A_1 \cup \cdots \cup A_n\)</span> of any <a href="./sets-functions.html#def-finite-set">finitely many</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathcal{S}\)</span>;</li>
+<li>the <a href="./sets.html#def-empty-set">empty set</a> <span class="math inline">\(\emptyset\)</span>;</li>
+<li>the union <span class="math inline">\(A_1 \cup \cdots \cup A_n\)</span> of any <a href="./functions.html#def-finite-set">finitely many</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathcal{S}\)</span>;</li>
 <li>the intersection <span class="math inline">\(\bigcap_{i=1}^{\infty} A_i\)</span> of any sequence <span class="math inline">\(A_1, A_2, \ldots\)</span> of sets in <span class="math inline">\(\mathcal{S}\)</span>.</li>
 </ul>
 <p>So <span class="math inline">\(\mathcal{S}\)</span> is <a href="#/def-closed-under">closed under</a> finite unions and under intersections of sequences of its sets.</p>
@@ -381,7 +381,7 @@ A_1 \cup \cdots \cup A_n
 \end{aligned}
 \]</span></p>
 <p>and <span class="math inline">\(\mathcal{S}\)</span> contains <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> by the union rule of <a href="#/def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a>.</p>
-<p><em>Countable intersections.</em> Each <span class="math inline">\(A_i\)</span> is a subset of <span class="math inline">\(S\)</span>, so an element of <span class="math inline">\(S\)</span> is outside <span class="math inline">\(S \setminus A_i\)</span> exactly when it is in <span class="math inline">\(A_i\)</span>; that is, <span class="math inline">\(S \setminus (S \setminus A_i) = A_i\)</span>. So, by <a href="./sets-functions.html#thm-de-morgan">De Morgan’s laws</a>:</p>
+<p><em>Countable intersections.</em> Each <span class="math inline">\(A_i\)</span> is a subset of <span class="math inline">\(S\)</span>, so an element of <span class="math inline">\(S\)</span> is outside <span class="math inline">\(S \setminus A_i\)</span> exactly when it is in <span class="math inline">\(A_i\)</span>; that is, <span class="math inline">\(S \setminus (S \setminus A_i) = A_i\)</span>. So, by <a href="./sets.html#thm-de-morgan">De Morgan’s laws</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
@@ -411,7 +411,7 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 <section class="slide level2">
 
 <div id="thm-sigma-algebra-intersection" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (An intersection of <span class="math inline">\(\sigma\)</span>-algebras is a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\(\mathcal{S}_j\)</span> be a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span> for each <span class="math inline">\(j\)</span> in a nonempty set of indices <span class="math inline">\(J\)</span>. Then their <a href="./sets-functions.html#def-intersection">intersection</a> <span class="math inline">\(\bigcap_{j \in J} \mathcal{S}_j\)</span>, the collection of subsets of <span class="math inline">\(S\)</span> that are in every <span class="math inline">\(\mathcal{S}_j\)</span>, is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 3 (An intersection of <span class="math inline">\(\sigma\)</span>-algebras is a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\(\mathcal{S}_j\)</span> be a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span> for each <span class="math inline">\(j\)</span> in a nonempty set of indices <span class="math inline">\(J\)</span>. Then their <a href="./sets.html#def-intersection">intersection</a> <span class="math inline">\(\bigcap_{j \in J} \mathcal{S}_j\)</span>, the collection of subsets of <span class="math inline">\(S\)</span> that are in every <span class="math inline">\(\mathcal{S}_j\)</span>, is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Each condition of <a href="#/def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a> holds:</p>
@@ -425,7 +425,7 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 <section class="slide level2">
 
 <div id="def-generated-sigma-algebra" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (<span class="math inline">\(\sigma\)</span>-algebra generated by a collection)</strong></span> Let <span class="math inline">\(\mathcal{C}\)</span> be a <a href="./sets-functions.html#def-collection">collection</a> of subsets of a set <span class="math inline">\(S\)</span>. The <strong><span class="math inline">\(\sigma\)</span>-algebra generated by</strong> <span class="math inline">\(\mathcal{C}\)</span>, written <span class="math inline">\(\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\)</span>, is the intersection of all the <span class="math inline">\(\sigma\)</span>-algebras on <span class="math inline">\(S\)</span> that contain every set in <span class="math inline">\(\mathcal{C}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 3 (<span class="math inline">\(\sigma\)</span>-algebra generated by a collection)</strong></span> Let <span class="math inline">\(\mathcal{C}\)</span> be a <a href="./sets.html#def-collection">collection</a> of subsets of a set <span class="math inline">\(S\)</span>. The <strong><span class="math inline">\(\sigma\)</span>-algebra generated by</strong> <span class="math inline">\(\mathcal{C}\)</span>, written <span class="math inline">\(\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\)</span>, is the intersection of all the <span class="math inline">\(\sigma\)</span>-algebras on <span class="math inline">\(S\)</span> that contain every set in <span class="math inline">\(\mathcal{C}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -443,7 +443,7 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 <section class="slide level2">
 
 <div id="def-borel-sigma-algebra" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Borel <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> The <strong>Borel <span class="math inline">\(\sigma\)</span>-algebra</strong> on <span class="math inline">\(\mathbb{R}\)</span>, written <span class="math inline">\(\mathcal{B}\)</span>, is the <span class="math inline">\(\sigma\)</span>-algebra generated by (<a href="#/def-generated-sigma-algebra" class="quarto-xref">Definition&nbsp;3</a>) the collection of all <a href="./sets-functions.html#def-interval">intervals</a>. Its sets are called <strong>Borel sets</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Borel <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> The <strong>Borel <span class="math inline">\(\sigma\)</span>-algebra</strong> on <span class="math inline">\(\mathbb{R}\)</span>, written <span class="math inline">\(\mathcal{B}\)</span>, is the <span class="math inline">\(\sigma\)</span>-algebra generated by (<a href="#/def-generated-sigma-algebra" class="quarto-xref">Definition&nbsp;3</a>) the collection of all <a href="./sets.html#def-interval">intervals</a>. Its sets are called <strong>Borel sets</strong>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -453,7 +453,7 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 <ul>
 <li>Every interval, such as <span class="math inline">\([0, 1]\)</span>, <span class="math inline">\((2, 5)\)</span>, or <span class="math inline">\([0, \infty)\)</span>, is a Borel set.</li>
 <li>A single point <span class="math inline">\(\mathopen{}\left\{a\right\}\mathclose{} = [a, a]\)</span> is an interval, so it is a Borel set.</li>
-<li>The <a href="./number-systems.html#def-integers">integers</a> are a Borel set: they are the union of the sequence of single points <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{1\right\}\mathclose{}, \mathopen{}\left\{-1\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{-2\right\}\mathclose{}, \ldots\)</span> (<a href="./sets-functions.html#exm-countable-set">countable and uncountable sets</a> lists them this way), and <span class="math inline">\(\mathcal{B}\)</span> contains that union by <a href="#/def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a>.</li>
+<li>The <a href="./number-systems.html#def-integers">integers</a> are a Borel set: they are the union of the sequence of single points <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{1\right\}\mathclose{}, \mathopen{}\left\{-1\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{-2\right\}\mathclose{}, \ldots\)</span> (<a href="./functions.html#exm-countable-set">countable and uncountable sets</a> lists them this way), and <span class="math inline">\(\mathcal{B}\)</span> contains that union by <a href="#/def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a>.</li>
 <li>The complement <span class="math inline">\(\mathbb{R}\setminus [0, 1]\)</span> is a Borel set, because <span class="math inline">\(\mathcal{B}\)</span> contains the complement of each of its sets.</li>
 </ul>
 </div>
@@ -468,13 +468,13 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 <section class="slide level2">
 
 <div id="exm-pairwise-disjoint" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
+<p><span class="theorem-title"><strong>Example 6 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets.html#exm-set">sets of die rolls</a>), the sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
 </div>
 </section>
 <section id="infinite-sums" class="slide level2" data-number="3">
 <h2><span class="header-section-number">3</span> Infinite sums</h2>
 <div id="def-non-decreasing" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Non-decreasing sequence)</strong></span> A <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\(a_1, a_2, \ldots\)</span> of real numbers or of <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a> is <strong>non-decreasing</strong> if each term is at least as large as the one before it:</p>
+<p><span class="theorem-title"><strong>Definition 6 (Non-decreasing sequence)</strong></span> A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(a_1, a_2, \ldots\)</span> of real numbers or of <a href="./sets.html#def-extended-nonneg-reals">extended non-negative reals</a> is <strong>non-decreasing</strong> if each term is at least as large as the one before it:</p>
 <p><span class="math display">\[a_n \le a_{n+1} \quad \text{for every } n \in \mathbb{N}\]</span></p>
 </div>
 </section>
@@ -499,7 +499,7 @@ a_2 &amp;= \frac{1}{2} \\
 <section class="slide level2">
 
 <div id="def-partial-sum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Partial sum)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a <a href="./sets-functions.html#def-sequence">sequence</a> of real numbers or of <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a>. For each <span class="math inline">\(n \in \mathbb{N}\)</span>, its <span class="math inline">\(n\)</span>th <strong>partial sum</strong> is the <a href="./algebra-sums.html#def-summation">sum</a> of its first <span class="math inline">\(n\)</span> terms:</p>
+<p><span class="theorem-title"><strong>Definition 7 (Partial sum)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a <a href="./functions.html#def-sequence">sequence</a> of real numbers or of <a href="./sets.html#def-extended-nonneg-reals">extended non-negative reals</a>. For each <span class="math inline">\(n \in \mathbb{N}\)</span>, its <span class="math inline">\(n\)</span>th <strong>partial sum</strong> is the <a href="./algebra-sums.html#def-summation">sum</a> of its first <span class="math inline">\(n\)</span> terms:</p>
 <p><span class="math display">\[s_n \stackrel{\text{def}}{=}\sum_{i=1}^na_i = a_1 + \cdots + a_n\]</span></p>
 </div>
 </section>
@@ -563,14 +563,14 @@ s_{n+1}
 <section id="additivity" class="slide level2" data-number="4">
 <h2><span class="header-section-number">4</span> Additivity</h2>
 <div id="def-finite-additivity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Finite additivity)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(\mu: \mathcal{S}\to [0, \infty]\)</span>, with values in the <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a>, is <strong>finitely additive</strong> if, for every finite collection of <a href="#/def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, the value of their union is the sum of their values:</p>
+<p><span class="theorem-title"><strong>Definition 9 (Finite additivity)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A <a href="./functions.html#def-function">function</a> <span class="math inline">\(\mu: \mathcal{S}\to [0, \infty]\)</span>, with values in the <a href="./sets.html#def-extended-nonneg-reals">extended non-negative reals</a>, is <strong>finitely additive</strong> if, for every finite collection of <a href="#/def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, the value of their union is the sum of their values:</p>
 <p><span class="math display">\[\mu(A_1 \cup \cdots \cup A_n) = \sum_{i=1}^n\mu(A_i)\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-finite-additivity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span> (<a href="./sets-functions.html#def-cardinality">cardinality</a>), for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint (<a href="#/exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;6</a>), and:</p>
+<p><span class="theorem-title"><strong>Example 10 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span> (<a href="./functions.html#def-cardinality">cardinality</a>), for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint (<a href="#/exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;6</a>), and:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mu(\mathopen{}\left\{1, 2\right\}\mathclose{} \cup \mathopen{}\left\{5, 6\right\}\mathclose{})
@@ -664,7 +664,7 @@ s_{n+1}
 <section class="slide level2">
 
 <div id="exm-empty-set-infinity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
+<p><span class="theorem-title"><strong>Example 14 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mu\mathopen{}\left(\bigcup_{i=1}^{\infty} A_i\right)\mathclose{}
@@ -869,7 +869,7 @@ A_{n+1} &amp;= A_{n+2} \\
 <section class="slide level2">
 
 <div id="def-lebesgue-measure" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Lebesgue measure)</strong></span> <strong>Lebesgue measure</strong> on <span class="math inline">\(\mathbb{R}\)</span> is the <a href="#/def-measure">measure</a> <span class="math inline">\(\lambda\)</span> on the <a href="#/def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{B}\)</span> that assigns each <a href="./sets-functions.html#def-interval">interval</a> its length: for real numbers <span class="math inline">\(a \le b\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 16 (Lebesgue measure)</strong></span> <strong>Lebesgue measure</strong> on <span class="math inline">\(\mathbb{R}\)</span> is the <a href="#/def-measure">measure</a> <span class="math inline">\(\lambda\)</span> on the <a href="#/def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{B}\)</span> that assigns each <a href="./sets.html#def-interval">interval</a> its length: for real numbers <span class="math inline">\(a \le b\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \lambda([a, b])
@@ -934,7 +934,7 @@ A_{n+1} &amp;= A_{n+2} \\
 <section class="slide level2">
 
 <div id="rem-measure-size" class="proof remark">
-<p><span class="proof-title"><em>Remark 7</em> (Measures generalize size). </span>A <a href="#/def-measure">measure</a> generalizes size: it can measure how many elements a set has, as in <a href="#/def-counting-measure" class="quarto-xref">Definition&nbsp;12</a>, or how long a set of real numbers is, as Lebesgue measure (<a href="#/def-lebesgue-measure" class="quarto-xref">Definition&nbsp;16</a>) does, assigning each <a href="./sets-functions.html#def-interval">interval</a> <span class="math inline">\([a, b]\)</span> its length <span class="math inline">\(b - a\)</span>. For example, the counting measure on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> gives <span class="math inline">\(\mathopen{}\left\{2, 3, 4, 5\right\}\mathclose{}\)</span> the value <span class="math inline">\(4\)</span>, while the Lebesgue measure of the interval <span class="math inline">\([2, 5]\)</span> is <span class="math inline">\(5 - 2 = 3\)</span>. Both can serve as the measures <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span> in the <a href="./calculus-double-integrals.html#thm-tonelli-measure">Tonelli</a> and <a href="./calculus-double-integrals.html#thm-fubini-measure">Fubini</a> theorems.</p>
+<p><span class="proof-title"><em>Remark 7</em> (Measures generalize size). </span>A <a href="#/def-measure">measure</a> generalizes size: it can measure how many elements a set has, as in <a href="#/def-counting-measure" class="quarto-xref">Definition&nbsp;12</a>, or how long a set of real numbers is, as Lebesgue measure (<a href="#/def-lebesgue-measure" class="quarto-xref">Definition&nbsp;16</a>) does, assigning each <a href="./sets.html#def-interval">interval</a> <span class="math inline">\([a, b]\)</span> its length <span class="math inline">\(b - a\)</span>. For example, the counting measure on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> gives <span class="math inline">\(\mathopen{}\left\{2, 3, 4, 5\right\}\mathclose{}\)</span> the value <span class="math inline">\(4\)</span>, while the Lebesgue measure of the interval <span class="math inline">\([2, 5]\)</span> is <span class="math inline">\(5 - 2 = 3\)</span>. Both can serve as the measures <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span> in the <a href="./calculus-double-integrals.html#thm-tonelli-measure">Tonelli</a> and <a href="./calculus-double-integrals.html#thm-fubini-measure">Fubini</a> theorems.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -956,7 +956,7 @@ A_{n+1} &amp;= A_{n+2} \\
 <section class="slide level2">
 
 <div id="def-almost-everywhere" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Almost everywhere (<span class="math inline">\(\mu\)</span>-almost everywhere, <span class="math inline">\(\mu\)</span>-a.e.))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#/def-measure-space">measure space</a>. A statement about the elements of <span class="math inline">\(S\)</span> holds <strong><span class="math inline">\(\mu\)</span>-almost everywhere</strong> (written <strong><span class="math inline">\(\mu\)</span>-a.e.</strong>, or <strong>almost everywhere</strong> when <span class="math inline">\(\mu\)</span> is clear from context) if the set of elements for which it fails is a <a href="./sets-functions.html#def-subset">subset</a> of a set of <a href="#/def-measure-zero">measure zero</a>.</p>
+<p><span class="theorem-title"><strong>Definition 19 (Almost everywhere (<span class="math inline">\(\mu\)</span>-almost everywhere, <span class="math inline">\(\mu\)</span>-a.e.))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#/def-measure-space">measure space</a>. A statement about the elements of <span class="math inline">\(S\)</span> holds <strong><span class="math inline">\(\mu\)</span>-almost everywhere</strong> (written <strong><span class="math inline">\(\mu\)</span>-a.e.</strong>, or <strong>almost everywhere</strong> when <span class="math inline">\(\mu\)</span> is clear from context) if the set of elements for which it fails is a <a href="./sets.html#def-subset">subset</a> of a set of <a href="#/def-measure-zero">measure zero</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1069,7 +1069,7 @@ A_2 &amp;= A_3 \\
 <section id="measurable-functions-and-integrals" class="slide level2" data-number="7">
 <h2><span class="header-section-number">7</span> Measurable functions and integrals</h2>
 <div id="def-measurable-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 27 (Measurable function)</strong></span> Let <span class="math inline">\((S, \mathcal{S})\)</span> be a <a href="#/def-measurable-space">measurable space</a>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>measurable</strong> (with respect to <span class="math inline">\(\mathcal{S}\)</span>) if, for every real number <span class="math inline">\(c\)</span>, the set of elements where <span class="math inline">\(f\)</span> is at most <span class="math inline">\(c\)</span> is measurable:</p>
+<p><span class="theorem-title"><strong>Definition 27 (Measurable function)</strong></span> Let <span class="math inline">\((S, \mathcal{S})\)</span> be a <a href="#/def-measurable-space">measurable space</a>. A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>measurable</strong> (with respect to <span class="math inline">\(\mathcal{S}\)</span>) if, for every real number <span class="math inline">\(c\)</span>, the set of elements where <span class="math inline">\(f\)</span> is at most <span class="math inline">\(c\)</span> is measurable:</p>
 <p><span class="math display">\[\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{} \in \mathcal{S}\]</span></p>
 </div>
 </section>
@@ -1362,7 +1362,7 @@ p &amp;= q \\
 <section id="product-measures" class="slide level2" data-number="9">
 <h2><span class="header-section-number">9</span> Product measures</h2>
 <div id="def-measurable-rectangle" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 35 (Measurable rectangle)</strong></span> Let <span class="math inline">\((S, \mathcal{S})\)</span> and <span class="math inline">\((T, \mathcal{T})\)</span> be <a href="#/def-measurable-space">measurable spaces</a>. A <strong>measurable rectangle</strong> is a <a href="./sets-functions.html#def-cartesian-product">Cartesian product</a> <span class="math inline">\(A \times B\)</span> with <span class="math inline">\(A \in \mathcal{S}\)</span> and <span class="math inline">\(B \in \mathcal{T}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 35 (Measurable rectangle)</strong></span> Let <span class="math inline">\((S, \mathcal{S})\)</span> and <span class="math inline">\((T, \mathcal{T})\)</span> be <a href="#/def-measurable-space">measurable spaces</a>. A <strong>measurable rectangle</strong> is a <a href="./sets.html#def-cartesian-product">Cartesian product</a> <span class="math inline">\(A \times B\)</span> with <span class="math inline">\(A \in \mathcal{S}\)</span> and <span class="math inline">\(B \in \mathcal{T}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">

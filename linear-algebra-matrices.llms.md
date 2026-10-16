@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 18:37:38 (PDT)
+Last modified: 2026-10-15 19:41:40 (PDT)
 
 ## 1 Matrices
 
@@ -261,7 +261,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Linear map (linear transformation, linear function))** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a **linear map** (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ and \\c \in \mathbb{R}\\,
+> **Definition 15 (Linear map (linear transformation, linear function))** A [function](functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a **linear map** (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ and \\c \in \mathbb{R}\\,
 >
 > 1.  \\f(\tilde{x}+ \tilde{y}) = f(\tilde{x}) + f(\tilde{y})\\ (*additivity*)
 > 2.  \\f(c\tilde{x}) = c f(\tilde{x})\\ (*homogeneity*)
@@ -435,7 +435,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Affine map (affine transformation, affine function))** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 18](#def-translation)) (a [composition](sets-functions.llms.md#def-composition), with the matrix product as the inner function): there are an \\m \times p\\ matrix \\\mathbf{A}\\ and a vector \\\tilde{b} \in \mathbb{R}^m\\ such that
+> **Definition 19 (Affine map (affine transformation, affine function))** A [function](functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 18](#def-translation)) (a [composition](functions.llms.md#def-composition), with the matrix product as the inner function): there are an \\m \times p\\ matrix \\\mathbf{A}\\ and a vector \\\tilde{b} \in \mathbb{R}^m\\ such that
 >
 > \\ \begin{aligned} f(\tilde{x}) &= t\_{\tilde{b}}(\mathbf{A} \tilde{x}) \\ &= \mathbf{A} \tilde{x}+ \tilde{b} \quad \text{for all } \tilde{x}\in \mathbb{R}^p \end{aligned} \\
 
@@ -651,7 +651,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 > })
 > ```
 >
-> Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimensions and from above.
+> Figure 1: The [graph](functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimensions and from above.
 
 > **NOTE:**
 >

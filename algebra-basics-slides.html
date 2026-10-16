@@ -274,7 +274,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 18:37:38 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 19:41:40 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -296,7 +296,7 @@
           display:block!important;
       }</style></aside>
 <div id="def-transitive" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Transitive relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="./sets-functions.html#def-relation">relation</a> on a set <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>transitive</strong> if, for all <span class="math inline">\(a, b, c \in S\)</span>, <span class="math inline">\(a \sim b\)</span> and <span class="math inline">\(b \sim c\)</span> together imply <span class="math inline">\(a \sim c\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Transitive relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="./functions.html#def-relation">relation</a> on a set <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>transitive</strong> if, for all <span class="math inline">\(a, b, c \in S\)</span>, <span class="math inline">\(a \sim b\)</span> and <span class="math inline">\(b \sim c\)</span> together imply <span class="math inline">\(a \sim c\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -614,7 +614,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <section class="slide level2">
 
 <div id="rem-minimum-may-not-exist" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Not every set has a minimum). </span>The set <span class="math inline">\(\mathopen{}\left\{3, 1, 4\right\}\mathclose{}\)</span> has minimum <span class="math inline">\(1\)</span>, and the <a href="./sets-functions.html#def-interval">interval</a> <span class="math inline">\([0, 1]\)</span> has minimum <span class="math inline">\(0\)</span>. The interval <span class="math inline">\((0, 1]\)</span> has no minimum: every element <span class="math inline">\(a\)</span> of it has a smaller element, <span class="math inline">\(a/2\)</span>, also in it.</p>
+<p><span class="proof-title"><em>Remark 3</em> (Not every set has a minimum). </span>The set <span class="math inline">\(\mathopen{}\left\{3, 1, 4\right\}\mathclose{}\)</span> has minimum <span class="math inline">\(1\)</span>, and the <a href="./sets.html#def-interval">interval</a> <span class="math inline">\([0, 1]\)</span> has minimum <span class="math inline">\(0\)</span>. The interval <span class="math inline">\((0, 1]\)</span> has no minimum: every element <span class="math inline">\(a\)</span> of it has a smaller element, <span class="math inline">\(a/2\)</span>, also in it.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -636,7 +636,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <section class="slide level2">
 
 <div id="def-argmin" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Argmin)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. The <strong>argmin</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its smallest value:</p>
+<p><span class="theorem-title"><strong>Definition 15 (Argmin)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. The <strong>argmin</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its smallest value:</p>
 <p><span class="math display">\[\arg \min_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(x) \le f(a)\right\}\mathclose{}\]</span></p>
 <p>When this set has exactly one element <span class="math inline">\(\hat{x}\)</span>, we write <span class="math inline">\(\hat{x} = \arg \min_{x \in A} f(x)\)</span>.</p>
 </div>
@@ -644,14 +644,14 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <section class="slide level2">
 
 <div id="rem-argmin-vs-minimum" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Smallest value versus where it occurs). </span>The smallest value itself is <span class="math inline">\(\min f(A)\)</span>, the minimum (<a href="#/def-minimum" class="quarto-xref">Definition&nbsp;13</a>) of the <a href="./sets-functions.html#def-image">image</a> of <span class="math inline">\(f\)</span>, and the argmin is where that value is attained. For example, let <span class="math inline">\(f(x) = x^2\)</span> on <span class="math inline">\(A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}\)</span>. The image is <span class="math inline">\(f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}\)</span>, so the smallest value is <span class="math inline">\(\min f(A) = 0\)</span>, and <span class="math inline">\(\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}\)</span>.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Smallest value versus where it occurs). </span>The smallest value itself is <span class="math inline">\(\min f(A)\)</span>, the minimum (<a href="#/def-minimum" class="quarto-xref">Definition&nbsp;13</a>) of the <a href="./functions.html#def-image">image</a> of <span class="math inline">\(f\)</span>, and the argmin is where that value is attained. For example, let <span class="math inline">\(f(x) = x^2\)</span> on <span class="math inline">\(A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}\)</span>. The image is <span class="math inline">\(f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}\)</span>, so the smallest value is <span class="math inline">\(\min f(A) = 0\)</span>, and <span class="math inline">\(\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}\)</span>.</p>
 <p>The argmin is empty when <span class="math inline">\(f\)</span> has no smallest value, for example <span class="math inline">\(f(x) = x\)</span> on <span class="math inline">\((0, 1]\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-argmax" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Argmax)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. The <strong>argmax</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its largest value:</p>
+<p><span class="theorem-title"><strong>Definition 16 (Argmax)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. The <strong>argmax</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its largest value:</p>
 <p><span class="math display">\[\arg \max_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(a) \le f(x)\right\}\mathclose{}\]</span></p>
 <p>When this set has exactly one element <span class="math inline">\(\hat{x}\)</span>, we write <span class="math inline">\(\hat{x} = \arg \max_{x \in A} f(x)\)</span>.</p>
 </div>
@@ -662,7 +662,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <p><span class="theorem-title"><strong>Example 9 (An argmax with two points, and an empty one)</strong></span> &nbsp;</p>
 <ul>
 <li>Let <span class="math inline">\(g(x) = x^2\)</span> on <span class="math inline">\(A = \mathopen{}\left\{-2, 0, 1, 2\right\}\mathclose{}\)</span>. The values are <span class="math inline">\(g(-2) = 4\)</span>, <span class="math inline">\(g(0) = 0\)</span>, <span class="math inline">\(g(1) = 1\)</span> and <span class="math inline">\(g(2) = 4\)</span>, so the largest value is <span class="math inline">\(4\)</span> and <span class="math inline">\(\arg \max_{x \in A} g(x) = \mathopen{}\left\{-2, 2\right\}\mathclose{}\)</span>. This argmax has two elements, so it is not written as a single <span class="math inline">\(\hat{x}\)</span>.</li>
-<li>Let <span class="math inline">\(f(x) = x\)</span> on <span class="math inline">\([0, 1)\)</span>. As in <a href="#/exm-maximum" class="quarto-xref">Example&nbsp;8</a>, for every input <span class="math inline">\(x\)</span> the input <span class="math inline">\(\tfrac{x + 1}{2}\)</span> has a larger value, so no input attains a largest value, and <span class="math inline">\(\arg \max_{x \in [0, 1)} f(x)\)</span> is the <a href="./sets-functions.html#def-empty-set">empty set</a>.</li>
+<li>Let <span class="math inline">\(f(x) = x\)</span> on <span class="math inline">\([0, 1)\)</span>. As in <a href="#/exm-maximum" class="quarto-xref">Example&nbsp;8</a>, for every input <span class="math inline">\(x\)</span> the input <span class="math inline">\(\tfrac{x + 1}{2}\)</span> has a larger value, so no input attains a largest value, and <span class="math inline">\(\arg \max_{x \in [0, 1)} f(x)\)</span> is the <a href="./sets.html#def-empty-set">empty set</a>.</li>
 </ul>
 </div>
 </section>
@@ -730,7 +730,7 @@ f(-n) &amp;= -n^3 + 3n \\
 <section class="slide level2">
 
 <div id="def-global-minimizer" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Global minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>global minimizer</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> if <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Global minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>global minimizer</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> if <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -742,7 +742,7 @@ f(-n) &amp;= -n^3 + 3n \\
 <section class="slide level2">
 
 <div id="def-local-minimizer" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Local minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>local minimizer</strong> of <span class="math inline">\(f\)</span> if there is a number <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span> with <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span>, where <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span> is the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a>.</p>
+<p><span class="theorem-title"><strong>Definition 18 (Local minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>local minimizer</strong> of <span class="math inline">\(f\)</span> if there is a number <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span> with <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span>, where <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span> is the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a>.</p>
 </div>
 </section>
 <section class="slide level2">

@@ -4,21 +4,21 @@ Code
 
 Published
 
-Last modified: 2026-10-15 18:37:38 (PDT)
+Last modified: 2026-10-15 19:41:40 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. A measure assigns a size to each set in a [collection of sets](sets-functions.llms.md#def-collection): how many elements it has, how long it is, or how likely it is. This page builds measures from \\\sigma\\-algebras and additivity, using the [sets and functions](sets-functions.llms.md) page’s definitions. One kind of measure, the probability measure ([Definition 22](#def-probability-measure)), is the starting point of the Morrison Lab’s probability notes ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
+> *Remark*. A measure assigns a size to each set in a [collection of sets](sets.llms.md#def-collection): how many elements it has, how long it is, or how likely it is. This page builds measures from \\\sigma\\-algebras and additivity, using the definitions on the [Sets](sets.llms.md) and [Functions](functions.llms.md) pages. One kind of measure, the probability measure ([Definition 22](#def-probability-measure)), is the starting point of the Morrison Lab’s probability notes ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
 
 ## 1 \\\sigma\\-algebras
 
 > **NOTE:**
 >
-> **Definition 1 (\\\sigma\\-algebra)** A **\\\sigma\\-algebra** on a set \\S\\ is a [collection](sets-functions.llms.md#def-collection) \\\mathcal{S}\\ of [subsets](sets-functions.llms.md#def-subset) of \\S\\ that satisfies:
+> **Definition 1 (\\\sigma\\-algebra)** A **\\\sigma\\-algebra** on a set \\S\\ is a [collection](sets.llms.md#def-collection) \\\mathcal{S}\\ of [subsets](sets.llms.md#def-subset) of \\S\\ that satisfies:
 >
 > - \\\mathcal{S}\\ contains \\S\\ itself.
-> - For each set \\A\\ in \\\mathcal{S}\\, \\\mathcal{S}\\ contains its [complement](sets-functions.llms.md#def-complement) \\S \setminus A\\.
-> - For each [sequence](sets-functions.llms.md#def-sequence) \\A_1, A_2, \ldots\\ of sets in \\\mathcal{S}\\, \\\mathcal{S}\\ contains their union \\\bigcup\_{i=1}^{\infty} A_i\\.
+> - For each set \\A\\ in \\\mathcal{S}\\, \\\mathcal{S}\\ contains its [complement](sets.llms.md#def-complement) \\S \setminus A\\.
+> - For each [sequence](functions.llms.md#def-sequence) \\A_1, A_2, \ldots\\ of sets in \\\mathcal{S}\\, \\\mathcal{S}\\ contains their union \\\bigcup\_{i=1}^{\infty} A_i\\.
 
 > **NOTE:**
 >
@@ -26,7 +26,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Example 1 (\\\sigma\\-algebras for die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), the collection of all subsets of \\D\\ is a \\\sigma\\-algebra on \\D\\, since complements and unions of subsets of \\D\\ are again subsets of \\D\\. So is the smaller collection
+> **Example 1 (\\\sigma\\-algebras for die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets.llms.md#exm-set)), the collection of all subsets of \\D\\ is a \\\sigma\\-algebra on \\D\\, since complements and unions of subsets of \\D\\ are again subsets of \\D\\. So is the smaller collection
 >
 > \\\mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{}\\
 >
@@ -52,8 +52,8 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 >
 > **Theorem 1 (Closure properties of a \\\sigma\\-algebra)** If \\\mathcal{S}\\ is a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\, then \\\mathcal{S}\\ contains:
 >
-> - the [empty set](sets-functions.llms.md#def-empty-set) \\\emptyset\\;
-> - the union \\A_1 \cup \cdots \cup A_n\\ of any [finitely many](sets-functions.llms.md#def-finite-set) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\;
+> - the [empty set](sets.llms.md#def-empty-set) \\\emptyset\\;
+> - the union \\A_1 \cup \cdots \cup A_n\\ of any [finitely many](functions.llms.md#def-finite-set) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\;
 > - the intersection \\\bigcap\_{i=1}^{\infty} A_i\\ of any sequence \\A_1, A_2, \ldots\\ of sets in \\\mathcal{S}\\.
 >
 > So \\\mathcal{S}\\ is [closed under](#def-closed-under) finite unions and under intersections of sequences of its sets.
@@ -72,7 +72,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 >
 > and \\\mathcal{S}\\ contains \\\bigcup\_{i=1}^{\infty} A_i\\ by the union rule of [Definition 1](#def-sigma-algebra).
 >
-> *Countable intersections.* Each \\A_i\\ is a subset of \\S\\, so an element of \\S\\ is outside \\S \setminus A_i\\ exactly when it is in \\A_i\\; that is, \\S \setminus (S \setminus A_i) = A_i\\. So, by [De Morgan’s laws](sets-functions.llms.md#thm-de-morgan):
+> *Countable intersections.* Each \\A_i\\ is a subset of \\S\\, so an element of \\S\\ is outside \\S \setminus A_i\\ exactly when it is in \\A_i\\; that is, \\S \setminus (S \setminus A_i) = A_i\\. So, by [De Morgan’s laws](sets.llms.md#thm-de-morgan):
 >
 > \\ \begin{aligned} S \setminus \bigcup\_{i=1}^{\infty} (S \setminus A_i) &= \bigcap\_{i=1}^{\infty} \mathopen{}\left(S \setminus (S \setminus A_i)\right)\mathclose{} && \text{(De Morgan's laws)} \\ &= \bigcap\_{i=1}^{\infty} A_i && \text{(} S \setminus (S \setminus A_i) = A_i \text{)} \end{aligned} \\
 >
@@ -92,7 +92,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 3 (An intersection of \\\sigma\\-algebras is a \\\sigma\\-algebra)** Let \\\mathcal{S}\_j\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\ for each \\j\\ in a nonempty set of indices \\J\\. Then their [intersection](sets-functions.llms.md#def-intersection) \\\bigcap\_{j \in J} \mathcal{S}\_j\\, the collection of subsets of \\S\\ that are in every \\\mathcal{S}\_j\\, is a \\\sigma\\-algebra on \\S\\.
+> **Theorem 3 (An intersection of \\\sigma\\-algebras is a \\\sigma\\-algebra)** Let \\\mathcal{S}\_j\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\ for each \\j\\ in a nonempty set of indices \\J\\. Then their [intersection](sets.llms.md#def-intersection) \\\bigcap\_{j \in J} \mathcal{S}\_j\\, the collection of subsets of \\S\\ that are in every \\\mathcal{S}\_j\\, is a \\\sigma\\-algebra on \\S\\.
 
 > **NOTE:**
 >
@@ -104,7 +104,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (\\\sigma\\-algebra generated by a collection)** Let \\\mathcal{C}\\ be a [collection](sets-functions.llms.md#def-collection) of subsets of a set \\S\\. The **\\\sigma\\-algebra generated by** \\\mathcal{C}\\, written \\\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\\, is the intersection of all the \\\sigma\\-algebras on \\S\\ that contain every set in \\\mathcal{C}\\.
+> **Definition 3 (\\\sigma\\-algebra generated by a collection)** Let \\\mathcal{C}\\ be a [collection](sets.llms.md#def-collection) of subsets of a set \\S\\. The **\\\sigma\\-algebra generated by** \\\mathcal{C}\\, written \\\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\\, is the intersection of all the \\\sigma\\-algebras on \\S\\ that contain every set in \\\mathcal{C}\\.
 
 > **NOTE:**
 >
@@ -116,7 +116,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Borel \\\sigma\\-algebra)** The **Borel \\\sigma\\-algebra** on \\\mathbb{R}\\, written \\\mathcal{B}\\, is the \\\sigma\\-algebra generated by ([Definition 3](#def-generated-sigma-algebra)) the collection of all [intervals](sets-functions.llms.md#def-interval). Its sets are called **Borel sets**.
+> **Definition 4 (Borel \\\sigma\\-algebra)** The **Borel \\\sigma\\-algebra** on \\\mathbb{R}\\, written \\\mathcal{B}\\, is the \\\sigma\\-algebra generated by ([Definition 3](#def-generated-sigma-algebra)) the collection of all [intervals](sets.llms.md#def-interval). Its sets are called **Borel sets**.
 
 > **NOTE:**
 >
@@ -124,7 +124,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 >
 > - Every interval, such as \\\[0, 1\]\\, \\(2, 5)\\, or \\\[0, \infty)\\, is a Borel set.
 > - A single point \\\mathopen{}\left\\a\right\\\mathclose{} = \[a, a\]\\ is an interval, so it is a Borel set.
-> - The [integers](number-systems.llms.md#def-integers) are a Borel set: they are the union of the sequence of single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([countable and uncountable sets](sets-functions.llms.md#exm-countable-set) lists them this way), and \\\mathcal{B}\\ contains that union by [Definition 1](#def-sigma-algebra).
+> - The [integers](number-systems.llms.md#def-integers) are a Borel set: they are the union of the sequence of single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([countable and uncountable sets](functions.llms.md#exm-countable-set) lists them this way), and \\\mathcal{B}\\ contains that union by [Definition 1](#def-sigma-algebra).
 > - The complement \\\mathbb{R}\setminus \[0, 1\]\\ is a Borel set, because \\\mathcal{B}\\ contains the complement of each of its sets.
 
 ## 2 Pairwise disjoint sets
@@ -137,13 +137,13 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Example 6 (Low and high die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), the sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint: no roll is in both. The sets \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ are not, because \\2\\ is in both.
+> **Example 6 (Low and high die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets.llms.md#exm-set)), the sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint: no roll is in both. The sets \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ are not, because \\2\\ is in both.
 
 ## 3 Infinite sums
 
 > **NOTE:**
 >
-> **Definition 6 (Non-decreasing sequence)** A [sequence](sets-functions.llms.md#def-sequence) \\a_1, a_2, \ldots\\ of real numbers or of [extended non-negative reals](sets-functions.llms.md#def-extended-nonneg-reals) is **non-decreasing** if each term is at least as large as the one before it:
+> **Definition 6 (Non-decreasing sequence)** A [sequence](functions.llms.md#def-sequence) \\a_1, a_2, \ldots\\ of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals) is **non-decreasing** if each term is at least as large as the one before it:
 >
 > \\a_n \le a\_{n+1} \quad \text{for every } n \in \mathbb{N}\\
 
@@ -161,7 +161,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Partial sum)** Let \\a_1, a_2, \ldots\\ be a [sequence](sets-functions.llms.md#def-sequence) of real numbers or of [extended non-negative reals](sets-functions.llms.md#def-extended-nonneg-reals). For each \\n \in \mathbb{N}\\, its \\n\\th **partial sum** is the [sum](algebra-sums.llms.md#def-summation) of its first \\n\\ terms:
+> **Definition 7 (Partial sum)** Let \\a_1, a_2, \ldots\\ be a [sequence](functions.llms.md#def-sequence) of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals). For each \\n \in \mathbb{N}\\, its \\n\\th **partial sum** is the [sum](algebra-sums.llms.md#def-summation) of its first \\n\\ terms:
 >
 > \\s_n \stackrel{\text{def}}{=}\sum\_{i=1}^na_i = a_1 + \cdots + a_n\\
 
@@ -208,13 +208,13 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Finite additivity)** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A [function](sets-functions.llms.md#def-function) \\\mu: \mathcal{S}\to \[0, \infty\]\\, with values in the [extended non-negative reals](sets-functions.llms.md#def-extended-nonneg-reals), is **finitely additive** if, for every finite collection of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
+> **Definition 9 (Finite additivity)** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A [function](functions.llms.md#def-function) \\\mu: \mathcal{S}\to \[0, \infty\]\\, with values in the [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals), is **finitely additive** if, for every finite collection of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
 >
 > \\\mu(A_1 \cup \cdots \cup A_n) = \sum\_{i=1}^n\mu(A_i)\\
 
 > **NOTE:**
 >
-> **Example 10 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](sets-functions.llms.md#def-cardinality)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 6](#exm-pairwise-disjoint)), and:
+> **Example 10 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](functions.llms.md#def-cardinality)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 6](#exm-pairwise-disjoint)), and:
 >
 > \\ \begin{aligned} \mu(\mathopen{}\left\\1, 2\right\\\mathclose{} \cup \mathopen{}\left\\5, 6\right\\\mathclose{}) &= \mu(\mathopen{}\left\\1, 2, 5, 6\right\\\mathclose{}) && \text{(take the union)} \\ &= 4 && \text{(count the elements)} \\ &= 2 + 2 && \text{(write 4 as a sum)} \\ &= \mu(\mathopen{}\left\\1, 2\right\\\mathclose{}) + \mu(\mathopen{}\left\\5, 6\right\\\mathclose{}) && \text{(count each set's elements)} \end{aligned} \\
 >
@@ -262,7 +262,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Example 14 (A countably additive function with \\\mu(\emptyset) = \infty\\)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\infty\\ for every set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)), including \\A = \emptyset\\. For any sequence of pairwise disjoint sets \\A_1, A_2, \ldots\\, the left-hand side of the countable additivity equation is:
+> **Example 14 (A countably additive function with \\\mu(\emptyset) = \infty\\)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\infty\\ for every set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)), including \\A = \emptyset\\. For any sequence of pairwise disjoint sets \\A_1, A_2, \ldots\\, the left-hand side of the countable additivity equation is:
 >
 > \\ \begin{aligned} \mu\mathopen{}\left(\bigcup\_{i=1}^{\infty} A_i\right)\mathclose{} &= \infty && \text{(definition of } \mu\text{)} \end{aligned} \\
 >
@@ -374,7 +374,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Lebesgue measure)** **Lebesgue measure** on \\\mathbb{R}\\ is the [measure](#def-measure) \\\lambda\\ on the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) \\\mathcal{B}\\ that assigns each [interval](sets-functions.llms.md#def-interval) its length: for real numbers \\a \le b\\,
+> **Definition 16 (Lebesgue measure)** **Lebesgue measure** on \\\mathbb{R}\\ is the [measure](#def-measure) \\\lambda\\ on the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) \\\mathcal{B}\\ that assigns each [interval](sets.llms.md#def-interval) its length: for real numbers \\a \le b\\,
 >
 > \\ \begin{aligned} \lambda(\[a, b\]) &= \lambda((a, b)) \\ &= \lambda(\[a, b)) \\ &= \lambda((a, b\]) \\ &\stackrel{\text{def}}{=}b - a, \end{aligned} \\
 >
@@ -410,7 +410,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 16](#def-lebesgue-measure)) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Tonelli](calculus-double-integrals.llms.md#thm-tonelli-measure) and [Fubini](calculus-double-integrals.llms.md#thm-fubini-measure) theorems.
+> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 16](#def-lebesgue-measure)) does, assigning each [interval](sets.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Tonelli](calculus-double-integrals.llms.md#thm-tonelli-measure) and [Fubini](calculus-double-integrals.llms.md#thm-fubini-measure) theorems.
 
 > **NOTE:**
 >
@@ -425,7 +425,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Almost everywhere (\\\mu\\-almost everywhere, \\\mu\\-a.e.))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets-functions.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
+> **Definition 19 (Almost everywhere (\\\mu\\-almost everywhere, \\\mu\\-a.e.))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
 
 > **NOTE:**
 >
@@ -509,7 +509,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 27 (Measurable function)** Let \\(S, \mathcal{S})\\ be a [measurable space](#def-measurable-space). A [function](sets-functions.llms.md#def-function) \\f : S \to \mathbb{R}\\ is **measurable** (with respect to \\\mathcal{S}\\) if, for every real number \\c\\, the set of elements where \\f\\ is at most \\c\\ is measurable:
+> **Definition 27 (Measurable function)** Let \\(S, \mathcal{S})\\ be a [measurable space](#def-measurable-space). A [function](functions.llms.md#def-function) \\f : S \to \mathbb{R}\\ is **measurable** (with respect to \\\mathcal{S}\\) if, for every real number \\c\\, the set of elements where \\f\\ is at most \\c\\ is measurable:
 >
 > \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathcal{S}\\
 
@@ -707,7 +707,7 @@ Last modified: 2026-10-15 18:37:38 (PDT)
 
 > **NOTE:**
 >
-> **Definition 35 (Measurable rectangle)** Let \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ be [measurable spaces](#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets-functions.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathcal{S}\\ and \\B \in \mathcal{T}\\.
+> **Definition 35 (Measurable rectangle)** Let \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ be [measurable spaces](#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathcal{S}\\ and \\B \in \mathcal{T}\\.
 
 > **NOTE:**
 >
