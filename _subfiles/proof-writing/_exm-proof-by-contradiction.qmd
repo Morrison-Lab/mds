@@ -1,7 +1,7 @@
 :::{#exm-proof-by-contradiction}
 #### No integer is both even and odd
 
-Suppose, for contradiction, that some integer $n$ is both even and odd ([definition](notation.qmd#def-even-odd)).
+Suppose, for contradiction, that some integer $n$ is both even and odd ([definition](number-systems.qmd#def-even-odd)).
 Then $n = 2j$ and $n = 2k + 1$ for some integers $j$ and $k$, and
 
 $$
