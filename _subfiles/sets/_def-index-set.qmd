@@ -1,0 +1,8 @@
+::: {#def-index-set}
+
+#### Index set
+
+An **index set** is a set whose elements are used to label objects.
+Each element of the index set is called an index.
+
+:::

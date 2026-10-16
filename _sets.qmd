@@ -95,6 +95,22 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< include mds/_subfiles/sets/_exm-collection.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_def-index-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-index-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_def-indexed-family.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-indexed-family.qmd >}}
+
 ## Combining sets
 
 {{< include mds/_subfiles/sets/_def-union.qmd >}}

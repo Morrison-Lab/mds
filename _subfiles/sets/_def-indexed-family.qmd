@@ -1,0 +1,9 @@
+::: {#def-indexed-family}
+
+#### Indexed family
+
+An **indexed family** is a collection of objects,
+one for each element of a given [index set](#def-index-set).
+The object for the index $i$ is written $a_i$.
+
+:::
