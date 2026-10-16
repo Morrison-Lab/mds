@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 23:56:47 (PDT)
+Last modified: 2026-10-16 01:00:03 (PDT)
 
 ## 1 Double Integrals
 
