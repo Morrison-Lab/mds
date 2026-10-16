@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 20:43:22 (PDT)
+Last modified: 2026-10-15 21:43:14 (PDT)
 
 ## 1 Matrices
 
@@ -221,7 +221,7 @@ Last modified: 2026-10-15 20:43:22 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (The identity matrix and the Kronecker delta). The entries of the identity matrix are given by the [Kronecker delta](notation.llms.md#def-kronecker-delta): \\(\mathbf{I}\_p)\_{ij} = \delta\_{ij}\\.
+> *Remark 3* (The identity matrix and the Kronecker delta). The entries of the identity matrix are given by the [Kronecker delta](indicator-functions.llms.md#def-kronecker-delta): \\(\mathbf{I}\_p)\_{ij} = \delta\_{ij}\\.
 
 > **NOTE:**
 >
