@@ -3,28 +3,28 @@
 
 Let $\vx, \vy \in \reals^n$ be two vectors that are not constant,
 with means $\bar{x} = \frac{1}{n}\sumin x_i$ and $\bar{y} = \frac{1}{n}\sumin y_i$.
-Write $\tilde{\vx} = \vx - \bar{x}\,\vone$ and $\tilde{\vy} = \vy - \bar{y}\,\vone$
+Write $\cent{\vx} = \vx - \bar{x}\,\vone$ and $\cent{\vy} = \vy - \bar{y}\,\vone$
 for the **centered** vectors, whose means are zero.
 Then the [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) $r$
 of the $n$ pairs $(x_i, y_i)$ is the cosine similarity (@def-cosine-similarity) of the centered vectors:
 
 $$
-r = \cossim(\tilde{\vx}, \tilde{\vy}).
+r = \cossim(\cent{\vx}, \cent{\vy}).
 $$
 
 :::
 
 ::: proof
 
-Entry $i$ of $\tilde{\vx}$ is $x_i - \bar{x}$, and entry $i$ of $\tilde{\vy}$ is $y_i - \bar{y}$.
+Entry $i$ of $\cent{\vx}$ is $x_i - \bar{x}$, and entry $i$ of $\cent{\vy}$ is $y_i - \bar{y}$.
 Neither centered vector is zero, because neither $\vx$ nor $\vy$ is constant, so the cosine similarity is defined.
 The three pieces of the cosine similarity are
 
 $$
 \ba
-\tilde{\vx} \cdot \tilde{\vy} &= \sumin (x_i - \bar{x})(y_i - \bar{y}), \\
-\norm{\tilde{\vx}} &= \sqrt{\sumin (x_i - \bar{x})^2}, \\
-\norm{\tilde{\vy}} &= \sqrt{\sumin (y_i - \bar{y})^2},
+\cent{\vx} \cdot \cent{\vy} &= \sumin (x_i - \bar{x})(y_i - \bar{y}), \\
+\norm{\cent{\vx}} &= \sqrt{\sumin (x_i - \bar{x})^2}, \\
+\norm{\cent{\vy}} &= \sqrt{\sumin (y_i - \bar{y})^2},
 \ea
 $$
 
@@ -39,17 +39,17 @@ Dividing the first by the product of the other two gives the formula for $r$.
 #### Centering changes the cosine similarity
 
 Take $\vx = (1, 2, 3)$ and $\vy = (1, 3, 2)$.
-Their means are $\bar{x} = \bar{y} = 2$, so $\tilde{\vx} = (-1, 0, 1)$ and $\tilde{\vy} = (-1, 1, 0)$.
+Their means are $\bar{x} = \bar{y} = 2$, so $\cent{\vx} = (-1, 0, 1)$ and $\cent{\vy} = (-1, 1, 0)$.
 Then
 
 $$
 \ba
-\tilde{\vx} \cdot \tilde{\vy} &= 1 + 0 + 0 = 1, \\
-\norm{\tilde{\vx}} &= \norm{\tilde{\vy}} = \sqrt{2},
+\cent{\vx} \cdot \cent{\vy} &= 1 + 0 + 0 = 1, \\
+\norm{\cent{\vx}} &= \norm{\cent{\vy}} = \sqrt{2},
 \ea
 $$
 
-so $r = \cossim(\tilde{\vx}, \tilde{\vy}) = 1 / 2$.
+so $r = \cossim(\cent{\vx}, \cent{\vy}) = 1 / 2$.
 
 Without centering, $\vx \cdot \vy = 1 + 6 + 6 = 13$ and $\norm{\vx} = \norm{\vy} = \sqrt{14}$,
 so $\cossim(\vx, \vy) = 13 / 14$.

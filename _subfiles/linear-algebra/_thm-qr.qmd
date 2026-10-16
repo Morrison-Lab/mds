@@ -20,22 +20,22 @@ The $n$ columns $\vecf{a}_1, \ldots, \vecf{a}_n$ of $\matr{A}$ are linearly inde
 so the Gram-Schmidt process (@def-gram-schmidt) runs all $n$ steps
 and gives orthonormal $\vecf{q}_1, \ldots, \vecf{q}_n$ (@thm-gram-schmidt, parts 1 and 3);
 let $\matr{Q}$ have these columns.
-At step $i$, $\tilde{\vecf{q}}_i \ne \vzero$, and rearranging the orthogonalize step,
+At step $i$, $\vecf{q}'_i \ne \vzero$, and rearranging the orthogonalize step,
 
 $$
 \ba
 \vecf{a}_i
-&= \tilde{\vecf{q}}_i + \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
+&= \vecf{q}'_i + \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
 && \text{(add the sum to both sides of the orthogonalize step)}
 \\
-&= \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j.
-&& \text{(normalize step: } \tilde{\vecf{q}}_i = \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i \text{)}
+&= \norm{\vecf{q}'_i}\,\vecf{q}_i + \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j.
+&& \text{(normalize step: } \vecf{q}'_i = \norm{\vecf{q}'_i}\,\vecf{q}_i \text{)}
 \ea
 $$
 
 Let $\matr{R}$ be the $n \times n$ matrix with
 $r_{ji} = \vecf{q}_j \cdot \vecf{a}_i$ for $j < i$,
-$r_{ii} = \norm{\tilde{\vecf{q}}_i} > 0$,
+$r_{ii} = \norm{\vecf{q}'_i} > 0$,
 and $r_{ji} = 0$ for $j > i$;
 it is upper triangular with positive diagonal.
 Column $i$ of $\matr{Q} \matr{R}$ is $\matr{Q}$ times column $i$ of $\matr{R}$ (@def-matrix-mult), and
@@ -52,7 +52,7 @@ $$
 &= r_{ii}\,\vecf{q}_i + \sumto{j}{i-1} r_{ji}\,\vecf{q}_j
 && \text{(split off the } j = i \text{ term)}
 \\
-&= \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
+&= \norm{\vecf{q}'_i}\,\vecf{q}_i + \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
 && \text{(the entries of } \matr{R} \text{)}
 \\
 &= \vecf{a}_i.
@@ -74,8 +74,8 @@ For $\matr{A}$ with columns $\vecf{a}_1 = (1, 1, 0)$, $\vecf{a}_2 = (1, 0, 1)$, 
 $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$,
 $\vecf{q}_2 = \tfrac{1}{\sqrt{6}}\,(1, -1, 2)$,
 $\vecf{q}_3 = \tfrac{1}{\sqrt{3}}\,(-1, 1, 1)$,
-with $\norm{\tilde{\vecf{q}}_1} = \sqrt{2}$, $\norm{\tilde{\vecf{q}}_2} = \sqrt{3/2}$,
-$\norm{\tilde{\vecf{q}}_3} = 2/\sqrt{3}$,
+with $\norm{\vecf{q}'_1} = \sqrt{2}$, $\norm{\vecf{q}'_2} = \sqrt{3/2}$,
+$\norm{\vecf{q}'_3} = 2/\sqrt{3}$,
 
 $$
 \begin{aligned}
