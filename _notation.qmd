@@ -58,13 +58,30 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 ## Subscripts and parentheses {#sec-subscripts-parentheses}
 
+::: {#def-index-set}
+
+#### Index set
+
+An **index set** is a set whose elements are used to label objects.
+Each element of the index set is called an index.
+
+:::
+
+::: {#exm-index-set}
+
+#### Index sets
+
+The set $\{1, \ldots, n\}$ labels the entries of a vector with $n$ entries.
+The set of nonnegative real numbers can label moments in time.
+
+:::
+
 ::: {#def-indexed-family}
 
 #### Indexed family
 
 An **indexed family** is a collection of objects,
-one for each element of a given set,
-called the **index set**.
+one for each element of a given [index set](#def-index-set).
 The object for the index $i$ is written $a_i$.
 
 :::
@@ -121,7 +138,7 @@ and you will meet the same objects written the other way around.
 The notation for a [stochastic process](https://morrison-lab.github.io/pds/notation.html#def-stochastic-process)
 uses both slots at once.
 A stochastic process is an [indexed family](#def-indexed-family) of [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X_t$,
-one for each index $t$ in some index set, such as time.
+one for each index $t$ in some [index set](#def-index-set), such as time.
 The index goes in the subscript, because it picks a member of the family.
 Each $X_t$ is itself a function of the outcome $\omega$ of a random experiment,
 that is, an element of the [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space),
