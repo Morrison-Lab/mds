@@ -1,7 +1,7 @@
 :::{#exm-empty-set-infinity}
 #### A countably additive function with $\measure(\emptyset) = \infty$
 
-For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets-functions.qmd#exm-set)),
+For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets.qmd#exm-set)),
 let $\measure(A) \eqdef \infty$
 for every set $A$ in the $\sigma$-algebra of all subsets of $D$
 (@exm-sigma-algebra),

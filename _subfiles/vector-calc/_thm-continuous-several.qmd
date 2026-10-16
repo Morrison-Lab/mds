@@ -5,7 +5,7 @@
    exactly when $\lim_{y \to x} f(y) = f(x)$ ([limit](calculus.qmd#def-limit)),
    which is the usual [continuity](calculus.qmd#def-continuous) at $x$.
 2. If $f : \reals^p \to \reals^q$ is continuous at $\vx$ and $g : \reals^q \to \reals^r$ is continuous at $f(\vx)$,
-   then the [composition](sets-functions.qmd#def-composition) $g \circ f$ is continuous at $\vx$.
+   then the [composition](functions.qmd#def-composition) $g \circ f$ is continuous at $\vx$.
 3. If $f, g : \reals^p \to \reals$ are continuous at $\vx$, then $f + g$ is continuous at $\vx$.
 4. If $f : \reals^p \to \reals$ is continuous at $\vx$ and $c \in \reals$, then $c f$ is continuous at $\vx$.
 

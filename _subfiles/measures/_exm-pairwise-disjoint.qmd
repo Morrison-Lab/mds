@@ -1,7 +1,7 @@
 :::{#exm-pairwise-disjoint}
 #### Low and high die rolls
 
-For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets-functions.qmd#exm-set)),
+For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets.qmd#exm-set)),
 the sets $\set{1, 2}$ and $\set{5, 6}$ are pairwise disjoint:
 no roll is in both.
 The sets $\set{2, 4, 6}$ and $\set{1, 2}$ are not,

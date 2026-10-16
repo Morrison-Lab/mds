@@ -2,7 +2,7 @@
 #### Measurable rectangle
 
 Let $(S, \salg)$ and $(T, \salgT)$ be [measurable spaces](#def-measurable-space).
-A **measurable rectangle** is a [Cartesian product](sets-functions.qmd#def-cartesian-product)
+A **measurable rectangle** is a [Cartesian product](sets.qmd#def-cartesian-product)
 $A \times B$ with $A \in \salg$ and $B \in \salgT$.
 
 :::

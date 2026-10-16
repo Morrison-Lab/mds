@@ -3,7 +3,7 @@
 
 A function $f$ is **differentiable on** an interval
 if it is differentiable (@def-differentiable) at every point of the interval
-other than its [endpoints](sets-functions.qmd#def-interval),
+other than its [endpoints](sets.qmd#def-interval),
 and, at each endpoint that belongs to the interval,
 it has the one-sided derivative (@def-one-sided-derivative) from inside the interval:
 the right-hand derivative at the left endpoint

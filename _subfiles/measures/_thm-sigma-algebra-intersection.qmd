@@ -3,7 +3,7 @@
 
 Let $\salg_j$ be a [$\sigma$-algebra](#def-sigma-algebra) on a set $S$
 for each $j$ in a nonempty set of indices $J$.
-Then their [intersection](sets-functions.qmd#def-intersection)
+Then their [intersection](sets.qmd#def-intersection)
 $\bigcap_{j \in J} \salg_j$,
 the collection of subsets of $S$ that are in every $\salg_j$,
 is a $\sigma$-algebra on $S$.

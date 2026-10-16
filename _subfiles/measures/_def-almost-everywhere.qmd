@@ -7,6 +7,6 @@ A statement about the elements of $S$ holds
 (written **$\measure$-a.e.**,
 or **almost everywhere** when $\measure$ is clear from context)
 if the set of elements for which it fails
-is a [subset](sets-functions.qmd#def-subset) of a set of [measure zero](#def-measure-zero).
+is a [subset](sets.qmd#def-subset) of a set of [measure zero](#def-measure-zero).
 
 :::

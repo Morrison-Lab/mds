@@ -1,7 +1,7 @@
 :::{#def-diverges-to-infinity}
 #### Divergence of a sequence to infinity
 
-A [sequence](sets-functions.qmd#def-sequence) $(a_n)$ of real numbers **diverges to $\infty$**, written $\lim_{n \to \infty} a_n = \infty$,
+A [sequence](functions.qmd#def-sequence) $(a_n)$ of real numbers **diverges to $\infty$**, written $\lim_{n \to \infty} a_n = \infty$,
 if for every real number $M$ there is a natural number $N$
 such that $a_n > M$ for every $n \ge N$.
 
