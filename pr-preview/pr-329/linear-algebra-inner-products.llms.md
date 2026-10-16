@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-16 00:45:25 (PDT)
+Last modified: 2026-10-16 01:54:17 (PDT)
 
 ## 1 Inner products
 
@@ -419,7 +419,7 @@ Last modified: 2026-10-16 00:45:25 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Angle between two vectors)** The **angle** between two nonzero vectors \\\tilde{x}, \tilde{y} \in \mathbb{R}^p\\ is the unique number \\\theta\in \[0, \pi\]\\ whose cosine ([Definition 1 in Trigonometry](algebra-trigonometry.llms.md#def-cosine-sine)) satisfies
+> **Definition 7 (Angle between two vectors)** The **angle** between two nonzero vectors \\\tilde{x}, \tilde{y} \in \mathbb{R}^p\\ is the unique number \\\theta\in \[0, \pi\]\\ whose cosine ([Definition 3 in Trigonometry](algebra-trigonometry.llms.md#def-cosine-sine)) satisfies
 >
 > \\ \cos\theta= \frac{\tilde{x} \cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
 

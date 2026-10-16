@@ -4,29 +4,58 @@ Code
 
 Published
 
-Last modified: 2026-10-16 00:45:25 (PDT)
+Last modified: 2026-10-16 01:54:17 (PDT)
 
 ## 1 Cosine and sine
 
 > **NOTE:**
 >
-> **Definition 1 (Cosine and sine)** The *unit circle* is the set of points \\(x_1, x_2)\\ in the plane with \\x_1^2 + x_2^2 = 1\\, and \\\pi \approx 3.14159\\ is half of its circumference. For a real number \\\theta\\, start at the point \\(1, 0)\\ and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The point reached is \\(\cos\theta, \sin\theta)\\: its first coordinate is the **cosine** of \\\theta\\, and its second coordinate is the **sine** of \\\theta\\.
+> **Definition 1 (Unit circle)** The **unit circle** is the set of points \\(x_1, x_2)\\ in the plane with \\x_1^2 + x_2^2 = 1\\.
 
 > **NOTE:**
 >
-> **Example 1 (Cosines and sines of some angles)**  
+> **Example 1 (Points on the unit circle)**  
 >
-> - \\\theta= 0\\ stays at \\(1, 0)\\, so \\\cos 0 = 1\\ and \\\sin 0 = 0\\.
+> - \\(1, 0)\\ is on the unit circle, because \\1^2 + 0^2 = 1\\.
+> - \\(0, -1)\\ is on the unit circle, because \\0^2 + (-1)^2 = 1\\.
+> - \\(\tfrac{3}{5}, \tfrac{4}{5})\\ is on the unit circle, because \\\tfrac{9}{25} + \tfrac{16}{25} = 1\\.
+> - \\(1, 1)\\ is not on the unit circle, because \\1^2 + 1^2 = 2 \ne 1\\.
+
+> **NOTE:**
 >
-> - \\\theta= \pi\\ goes half way around the circle, to \\(-1, 0)\\, so \\\cos\pi = -1\\ and \\\sin\pi = 0\\.
+> **Definition 2 (The number \\\pi\\)** The number \\\pi \approx 3.14159\\ is half of the circumference of the unit circle ([Definition 1](#def-unit-circle)).
+
+> **NOTE:**
 >
-> - \\\theta= \pi/2\\ goes a quarter of the way round, to \\(0, 1)\\, so \\\cos(\pi/2) = 0\\ and \\\sin(\pi/2) = 1\\.
+> **Example 2 (Distances around the unit circle)** The whole unit circle has circumference \\2\pi\\. Moving from \\(1, 0)\\ to \\(-1, 0)\\ along the upper half of the circle covers a distance of \\\pi\\, and moving from \\(1, 0)\\ to \\(0, 1)\\ covers a quarter of the circle, a distance of \\\pi/2\\.
+
+> **NOTE:**
 >
-> - \\\theta= \pi/4\\ goes an eighth of the way round, to the point of the circle with \\x_1 = x_2 \> 0\\. There \\x_1^2 + x_1^2 = 1\\, so \\x_1^2 = \tfrac{1}{2}\\ and \\x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071\\:
+> **Definition 3 (Cosine)** For a real number \\\theta\\, start at the point \\(1, 0)\\ of the unit circle ([Definition 1](#def-unit-circle)) and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The first coordinate of the point reached is the **cosine** of \\\theta\\, written \\\cos\theta\\.
+
+> **NOTE:**
 >
->   \\ \begin{aligned} \cos(\pi/4) &= \sin(\pi/4) \\ &= \tfrac{1}{\sqrt{2}}. \end{aligned} \\
+> **Example 3 (Cosines of some angles)**  
+>
+> - \\\theta= 0\\ stays at \\(1, 0)\\, so \\\cos 0 = 1\\.
+> - \\\theta= \pi\\ goes half way around the circle, to \\(-1, 0)\\, so \\\cos\pi = -1\\.
+> - \\\theta= \pi/2\\ goes a quarter of the way round, to \\(0, 1)\\, so \\\cos(\pi/2) = 0\\.
+> - \\\theta= \pi/4\\ goes an eighth of the way round, to the point of the circle with \\x_1 = x_2 \> 0\\. There \\x_1^2 + x_1^2 = 1\\, so \\x_1^2 = \tfrac{1}{2}\\ and \\\cos(\pi/4) = x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071\\.
 >
 > Angles are also measured in *degrees*, with a full turn of \\2\pi\\ equal to \\360\\ degrees, so \\\pi/2\\ is \\90\\ degrees and \\\pi/4\\ is \\45\\ degrees.
+
+> **NOTE:**
+>
+> **Definition 4 (Sine)** For a real number \\\theta\\, the second coordinate of the point reached from \\(1, 0)\\ by moving a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle ([Definition 3](#def-cosine-sine)) is the **sine** of \\\theta\\, written \\\sin\theta\\.
+
+> **NOTE:**
+>
+> **Example 4 (Sines of some angles)**  
+>
+> - \\\theta= 0\\ stays at \\(1, 0)\\, so \\\sin 0 = 0\\.
+> - \\\theta= \pi\\ goes half way around the circle, to \\(-1, 0)\\, so \\\sin\pi = 0\\.
+> - \\\theta= \pi/2\\ goes a quarter of the way round, to \\(0, 1)\\, so \\\sin(\pi/2) = 1\\.
+> - \\\theta= \pi/4\\ reaches the point with \\x_1 = x_2 = \tfrac{1}{\sqrt{2}}\\ ([Example 3](#exm-cosine-sine)), so \\\sin(\pi/4) = \tfrac{1}{\sqrt{2}}\\.
 
 > **NOTE:**
 >
@@ -36,11 +65,11 @@ Last modified: 2026-10-16 00:45:25 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. The point \\(\cos\theta, \sin\theta)\\ lies on the unit circle ([Definition 1](#def-cosine-sine)), so its coordinates satisfy \\x_1^2 + x_2^2 = 1\\.
+> *Proof*. The point \\(\cos\theta, \sin\theta)\\ lies on the unit circle ([Definition 1](#def-unit-circle)), so its coordinates satisfy \\x_1^2 + x_2^2 = 1\\.
 
 > **NOTE:**
 >
-> **Example 2 (The unit circle and the angle \\\pi/3\\)** Take \\\theta= \pi/3\\, one sixth of the way round the circle. [Figure 1](#fig-cosine-sine-unit-circle) shows the point reached, \\(\cos\theta, \sin\theta)\\, and its two coordinates. The point is a vertex of a regular hexagon inscribed in the unit circle, whose sides have the same length as its radius, so the point is at distance \\1\\ from \\(1, 0)\\. Writing \\(x_1, x_2) = (\cos\theta, \sin\theta)\\,
+> **Example 5 (The unit circle and the angle \\\pi/3\\)** Take \\\theta= \pi/3\\, one sixth of the way round the circle. [Figure 1](#fig-cosine-sine-unit-circle) shows the point reached, \\(\cos\theta, \sin\theta)\\, and its two coordinates. The point is a vertex of a regular hexagon inscribed in the unit circle, whose sides have the same length as its radius, so the point is at distance \\1\\ from \\(1, 0)\\. Writing \\(x_1, x_2) = (\cos\theta, \sin\theta)\\,
 >
 > \\ \begin{aligned} 1 &= (x_1 - 1)^2 + x_2^2 \\ &= x_1^2 + x_2^2 - 2 x_1 + 1 \\ &= 2 - 2 x_1, \end{aligned} \\
 >
