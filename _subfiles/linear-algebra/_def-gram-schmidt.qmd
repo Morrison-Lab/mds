@@ -5,10 +5,10 @@ The **Gram-Schmidt process** takes vectors $\vecf{a}_1, \ldots, \vecf{a}_k \in \
 and, for $i = 1, 2, \ldots, k$ in turn:
 
 1. **Orthogonalize:**
-   $\tilde{\vecf{q}}_i \eqdef \vecf{a}_i - \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
-   (for $i = 1$ the sum is empty, so $\tilde{\vecf{q}}_1 = \vecf{a}_1$);
-2. **Test:** if $\tilde{\vecf{q}}_i = \vzero$, stop;
-3. **Normalize:** $\vecf{q}_i \eqdef \tilde{\vecf{q}}_i / \norm{\tilde{\vecf{q}}_i}$.
+   $\vecf{q}'_i \eqdef \vecf{a}_i - \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
+   (for $i = 1$ the sum is empty, so $\vecf{q}'_1 = \vecf{a}_1$);
+2. **Test:** if $\vecf{q}'_i = \vzero$, stop;
+3. **Normalize:** $\vecf{q}_i \eqdef \vecf{q}'_i / \norm{\vecf{q}'_i}$.
 
 The output is the list $\vecf{q}_1, \vecf{q}_2, \ldots$ produced before the process stops,
 or all $k$ of them if it never stops.
@@ -23,7 +23,7 @@ or all $k$ of them if it never stops.
 Let $\vecf{a}_1 = (1, 1, 0)$ and $\vecf{a}_2 = (1, 0, 1)$.
 
 - **Step 1.**
-  $\tilde{\vecf{q}}_1 = (1, 1, 0)$, with norm $\sqrt{2}$,
+  $\vecf{q}'_1 = (1, 1, 0)$, with norm $\sqrt{2}$,
   so $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$.
 - **Step 2.**
 
@@ -38,7 +38,7 @@ Let $\vecf{a}_1 = (1, 1, 0)$ and $\vecf{a}_2 = (1, 0, 1)$.
 
   $$
   \ba
-  \tilde{\vecf{q}}_2
+  \vecf{q}'_2
   &= (1, 0, 1) - \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}}\,(1, 1, 0)
   && \text{(orthogonalize)}
   \\
@@ -91,7 +91,7 @@ and
 
 $$
 \begin{aligned}
-\tilde{\vecf{q}}_2
+\vecf{q}'_2
 &= (2, 4) - \tfrac{10}{\sqrt{5}} \cd \tfrac{1}{\sqrt{5}}\,(1, 2) \\
 &= (2, 4) - 2\,(1, 2) \\
 &= \vzero,
