@@ -19,6 +19,22 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_def-argument.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-argument.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-value.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-value.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-relation.qmd >}}
 
 {{< slidebreak >}}
@@ -32,6 +48,14 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/functions/_def-image.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-range.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-range.qmd >}}
 
 {{< slidebreak >}}
 
