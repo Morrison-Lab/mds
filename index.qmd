@@ -31,7 +31,7 @@ organized by topic:
 - [Number Systems](number-systems.qmd):
   the integers, natural numbers, even and odd numbers,
   and the rational, real, and irrational numbers
-- [Sets and Functions](sets-functions.qmd), on three pages:
+- [Sets and Functions](sets-functions.qmd), on four pages:
   - [Sets](sets.qmd):
     sets, subsets and supersets, the empty set,
     unions, intersections, and set differences,
@@ -40,9 +40,9 @@ organized by topic:
     functions with their domains, codomains, and images, sequences, and countable sets
   - [Expressions and Algorithms](expressions-algorithms.qmd):
     expressions, parse trees, and algorithms
-- [Indicator Functions](indicator-functions.qmd):
-  set and predicate indicators, the Iverson bracket, the Kronecker delta,
-  and their algebraic properties
+  - [Indicator Functions](indicator-functions.qmd):
+    set and predicate indicators, the Iverson bracket, the Kronecker delta,
+    and their algebraic properties
 - [Algebra](algebra.qmd):
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
   percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
