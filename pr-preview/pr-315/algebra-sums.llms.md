@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 14:00:34 (PDT)
+Last modified: 2026-10-15 19:42:35 (PDT)
 
 ## 1 Convex functions
 
@@ -44,11 +44,11 @@ Last modified: 2026-10-15 14:00:34 (PDT)
 
 > **NOTE:**
 >
-> **Example 1 (A line segment in \\\mathbb{R}\\)** For \\p = 1\\, \\x = 0\\ and \\y = 4\\, the line segment from \\x\\ to \\y\\ is the [interval](sets-functions.llms.md#def-interval) \\\[0, 4\]\\. The value \\t = \tfrac{1}{4}\\ gives the point \\\tfrac{1}{4} \cdot 0 + \tfrac{3}{4} \cdot 4 = 3\\.
+> **Example 1 (A line segment in \\\mathbb{R}\\)** For \\p = 1\\, \\x = 0\\ and \\y = 4\\, the line segment from \\x\\ to \\y\\ is the [interval](sets.llms.md#def-interval) \\\[0, 4\]\\. The value \\t = \tfrac{1}{4}\\ gives the point \\\tfrac{1}{4} \cdot 0 + \tfrac{3}{4} \cdot 4 = 3\\.
 
 > **NOTE:**
 >
-> **Definition 2 (Chord)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function), and let \\x, y \in \mathbb{R}^p\\. The **chord** of \\f\\ from \\x\\ to \\y\\ is the line segment ([Definition 1](#def-line-segment)) in \\\mathbb{R}^{p+1}\\ from the point \\(x, f(x))\\ to the point \\(y, f(y))\\ of the [graph](sets-functions.llms.md#def-graph) of \\f\\: \\ \mathopen{}\left\\\mathopen{}\left(t x + (1 - t) y,\\ t f(x) + (1 - t) f(y)\right)\mathclose{} : t \in \[0, 1\]\right\\\mathclose{}. \\ Above the point \\t x + (1 - t) y\\, the chord has height \\t f(x) + (1 - t) f(y)\\.
+> **Definition 2 (Chord)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [function](functions.llms.md#def-function), and let \\x, y \in \mathbb{R}^p\\. The **chord** of \\f\\ from \\x\\ to \\y\\ is the line segment ([Definition 1](#def-line-segment)) in \\\mathbb{R}^{p+1}\\ from the point \\(x, f(x))\\ to the point \\(y, f(y))\\ of the [graph](functions.llms.md#def-graph) of \\f\\: \\ \mathopen{}\left\\\mathopen{}\left(t x + (1 - t) y,\\ t f(x) + (1 - t) f(y)\right)\mathclose{} : t \in \[0, 1\]\right\\\mathclose{}. \\ Above the point \\t x + (1 - t) y\\, the chord has height \\t f(x) + (1 - t) f(y)\\.
 
 > **NOTE:**
 >
@@ -56,11 +56,11 @@ Last modified: 2026-10-15 14:00:34 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Convex function)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). \\f\\ is **convex** if \\ f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y) \\ for all \\x, y \in \mathbb{R}^p\\ and all \\t \in \[0, 1\]\\.
+> **Definition 3 (Convex function)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). \\f\\ is **convex** if \\ f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y) \\ for all \\x, y \in \mathbb{R}^p\\ and all \\t \in \[0, 1\]\\.
 
 > **NOTE:**
 >
-> *Remark 1* (Chords lie on or above the graph). The point \\t x + (1 - t) y\\ lies on the [line segment](#def-line-segment) from \\x\\ to \\y\\, and the right-hand side is the height above that point of the [chord](#def-chord) of \\f\\ from \\x\\ to \\y\\. So \\f\\ is convex when every chord lies on or above the [graph](sets-functions.llms.md#def-graph).
+> *Remark 1* (Chords lie on or above the graph). The point \\t x + (1 - t) y\\ lies on the [line segment](#def-line-segment) from \\x\\ to \\y\\, and the right-hand side is the height above that point of the [chord](#def-chord) of \\f\\ from \\x\\ to \\y\\. So \\f\\ is convex when every chord lies on or above the [graph](functions.llms.md#def-graph).
 >
 > For example, take \\f(x) = x^2\\, \\x = -1\\, \\y = 3\\, and \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-1) + \tfrac{1}{2} \cdot 3 = 1\\, where the graph has height \\f(1) = 1\\ and the chord has height
 >
@@ -96,7 +96,7 @@ Last modified: 2026-10-15 14:00:34 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 17 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 16 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
+> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 18 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 17 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
 >
 > Let \\t = \min\mathopen{}\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\mathclose{}\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta/ 2 \< \delta\\.
 >
@@ -144,15 +144,15 @@ Last modified: 2026-10-15 14:00:34 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Bounded above)** A set \\A \subseteq \mathbb{R}\\ is **bounded above** if it has an upper bound ([Definition 4](#def-upper-bound)). A real-valued [function](sets-functions.llms.md#def-function) is bounded above if its [image](sets-functions.llms.md#def-image) is.
+> **Definition 6 (Bounded above)** A set \\A \subseteq \mathbb{R}\\ is **bounded above** if it has an upper bound ([Definition 4](#def-upper-bound)). A real-valued [function](functions.llms.md#def-function) is bounded above if its [image](functions.llms.md#def-image) is.
 
 > **NOTE:**
 >
-> **Definition 7 (Bounded below)** A set \\A \subseteq \mathbb{R}\\ is **bounded below** if it has a lower bound ([Definition 5](#def-lower-bound)). A real-valued [function](sets-functions.llms.md#def-function) is bounded below if its [image](sets-functions.llms.md#def-image) is.
+> **Definition 7 (Bounded below)** A set \\A \subseteq \mathbb{R}\\ is **bounded below** if it has a lower bound ([Definition 5](#def-lower-bound)). A real-valued [function](functions.llms.md#def-function) is bounded below if its [image](functions.llms.md#def-image) is.
 
 > **NOTE:**
 >
-> **Definition 8 (Bounded)** A set \\A \subseteq \mathbb{R}\\ is **bounded** if it is both bounded above ([Definition 6](#def-bounded-above)) and bounded below ([Definition 7](#def-bounded-below)). A real-valued [function](sets-functions.llms.md#def-function) is bounded if its [image](sets-functions.llms.md#def-image) is.
+> **Definition 8 (Bounded)** A set \\A \subseteq \mathbb{R}\\ is **bounded** if it is both bounded above ([Definition 6](#def-bounded-above)) and bounded below ([Definition 7](#def-bounded-below)). A real-valued [function](functions.llms.md#def-function) is bounded if its [image](functions.llms.md#def-image) is.
 
 > **NOTE:**
 >
@@ -550,7 +550,7 @@ Last modified: 2026-10-15 14:00:34 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a [finite](sets-functions.llms.md#def-finite-set) [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
+> **Definition 22 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a [finite](functions.llms.md#def-finite-set) [set](sets.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
 >
 > \\ \sum\_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k) \\
 >
@@ -712,9 +712,9 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > **Definition 38 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
 
-For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ (defined in the Morrison Lab’s probability notes) is a [function](sets-functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](sets-functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](sets-functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
+For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ (defined in the Morrison Lab’s probability notes) is a [function](functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
 
-[Table 1](#tbl-notational-shorthands) lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](sets-functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
+[Table 1](#tbl-notational-shorthands) lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
 
 > **NOTE:**
 >

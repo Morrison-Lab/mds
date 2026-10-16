@@ -356,12 +356,12 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 14:00:34 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 19:42:35 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-derivatives" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Derivatives</h2>
 <h3 id="sec-limits-derivatives">Limits and derivatives</h3>
 <div id="def-limit" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Limit of a function at a point)</strong></span> Let <span class="math inline">\(f\)</span> be a <a href="./sets-functions.html#def-function">function</a> defined at every point of an <a href="./sets-functions.html#def-interval">open interval</a> around <span class="math inline">\(c\)</span>, except possibly at <span class="math inline">\(c\)</span> itself, and let <span class="math inline">\(L\)</span> be a <a href="./notation.html#def-real-numbers">real number</a>. The <strong>limit</strong> of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>, written <span class="math inline">\(\lim_{x \to c} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that</p>
+<p><span class="theorem-title"><strong>Definition 1 (Limit of a function at a point)</strong></span> Let <span class="math inline">\(f\)</span> be a <a href="./functions.html#def-function">function</a> defined at every point of an <a href="./sets.html#def-open-interval">open interval</a> around <span class="math inline">\(c\)</span>, except possibly at <span class="math inline">\(c\)</span> itself, and let <span class="math inline">\(L\)</span> be a <a href="./number-systems.html#def-real-numbers">real number</a>. The <strong>limit</strong> of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>, written <span class="math inline">\(\lim_{x \to c} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that</p>
 <p><span class="math display">\[\mathopen{}\left|f(x) - L\right|\mathclose{} &lt; \varepsilon\quad \text{for every } x \text{ with } 0 &lt; \mathopen{}\left|x - c\right|\mathclose{} &lt; \delta.\]</span></p>
 <p>Here <span class="math inline">\(\mathopen{}\left|\cdot\right|\mathclose{}\)</span> is the <a href="./algebra-basics.html#def-absolute-value">absolute value</a>. When such a real number <span class="math inline">\(L\)</span> exists, the limit <strong>exists</strong>; otherwise, the limit does not exist. The value <span class="math inline">\(f(c)\)</span>, if it is defined, plays no role.</p>
 </div>
@@ -395,13 +395,14 @@
 \end{aligned}
 \]</span></p>
 </div>
+</section><section class="slide level2"><div id="def-right-hand-limit" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Right-hand limit)</strong></span> Let <span class="math inline">\(f\)</span> be a function and <span class="math inline">\(L\)</span> a real number. The <strong>right-hand limit</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>, written <span class="math inline">\(\lim_{x \to c^+} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left|f(x) - L\right|\mathclose{} &lt; \varepsilon\)</span> for every <span class="math inline">\(x\)</span> with <span class="math inline">\(c &lt; x &lt; c + \delta\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="def-left-hand-limit" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Left-hand limit)</strong></span> Let <span class="math inline">\(f\)</span> be a function and <span class="math inline">\(L\)</span> a real number. The <strong>left-hand limit</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>, written <span class="math inline">\(\lim_{x \to c^-} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left|f(x) - L\right|\mathclose{} &lt; \varepsilon\)</span> for every <span class="math inline">\(x\)</span> with <span class="math inline">\(c - \delta&lt; x &lt; c\)</span>.</p>
+</div>
 </section><section class="slide level2"><div id="def-one-sided-limit" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (One-sided limits)</strong></span> Let <span class="math inline">\(f\)</span> be a function and <span class="math inline">\(L\)</span> a real number.</p>
-<ul>
-<li>The <strong>right-hand limit</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>, written <span class="math inline">\(\lim_{x \to c^+} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left|f(x) - L\right|\mathclose{} &lt; \varepsilon\)</span> for every <span class="math inline">\(x\)</span> with <span class="math inline">\(c &lt; x &lt; c + \delta\)</span>.</li>
-<li>The <strong>left-hand limit</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>, written <span class="math inline">\(\lim_{x \to c^-} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left|f(x) - L\right|\mathclose{} &lt; \varepsilon\)</span> for every <span class="math inline">\(x\)</span> with <span class="math inline">\(c - \delta&lt; x &lt; c\)</span>.</li>
-</ul>
-<p>These are the <strong>one-sided limits</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (One-sided limits)</strong></span> Let <span class="math inline">\(f\)</span> be a function. The right-hand limit (<a href="#/def-right-hand-limit" class="quarto-xref">Definition&nbsp;2</a>) and the left-hand limit (<a href="#/def-left-hand-limit" class="quarto-xref">Definition&nbsp;3</a>) of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> are the <strong>one-sided limits</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-one-sided-limit" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (One-sided limits of a step function)</strong></span> Let <span class="math inline">\(H(x) = 1\)</span> for <span class="math inline">\(x \ge 0\)</span> and <span class="math inline">\(H(x) = 0\)</span> for <span class="math inline">\(x &lt; 0\)</span>.</p>
@@ -414,7 +415,7 @@
 <p>The one-sided limits differ, since <span class="math inline">\(1 \ne 0\)</span>, so <span class="math inline">\(\lim_{x \to 0} H(x)\)</span> does not exist.</p>
 </div>
 </section><section class="slide level2"><div id="rem-one-sided-limit-and-limit" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (A limit exists exactly when both one-sided limits exist and are equal). </span>The limit <span class="math inline">\(\lim_{x \to c} f(x)\)</span> (<a href="#/def-limit" class="quarto-xref">Definition&nbsp;1</a>) exists exactly when both one-sided limits (<a href="#/def-one-sided-limit" class="quarto-xref">Definition&nbsp;2</a>) exist and are equal, and then all three are equal.</p>
+<p><span class="proof-title"><em>Remark 1</em> (A limit exists exactly when both one-sided limits exist and are equal). </span>The limit <span class="math inline">\(\lim_{x \to c} f(x)\)</span> (<a href="#/def-limit" class="quarto-xref">Definition&nbsp;1</a>) exists exactly when both one-sided limits (<a href="#/def-one-sided-limit" class="quarto-xref">Definition&nbsp;4</a>) exist and are equal, and then all three are equal.</p>
 </div>
 </section><section class="slide level2"><div title="Videos">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -439,11 +440,11 @@
 </div>
 </div>
 </section><section class="slide level2"><div id="def-difference-quotient" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Difference quotient)</strong></span> Let <span class="math inline">\(f\)</span> be a real-valued function of one variable, defined at <span class="math inline">\(c\)</span> and at <span class="math inline">\(c + h\)</span>, with <span class="math inline">\(h \ne 0\)</span>. The <strong>difference quotient</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> with increment <span class="math inline">\(h\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 5 (Difference quotient)</strong></span> Let <span class="math inline">\(f\)</span> be a real-valued function of one variable, defined at <span class="math inline">\(c\)</span> and at <span class="math inline">\(c + h\)</span>, with <span class="math inline">\(h \ne 0\)</span>. The <strong>difference quotient</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> with increment <span class="math inline">\(h\)</span> is</p>
 <p><span class="math display">\[
 \frac{f(c + h) - f(c)}{h},
 \]</span></p>
-<p>the <a href="./algebra-exponentials.html#def-affine-function">slope</a> of the line through the points <span class="math inline">\((c, f(c))\)</span> and <span class="math inline">\((c + h, f(c + h))\)</span>.</p>
+<p>the <a href="./algebra-exponentials.html#def-slope">slope</a> of the line through the points <span class="math inline">\((c, f(c))\)</span> and <span class="math inline">\((c + h, f(c + h))\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-difference-quotient" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (The difference quotient of <span class="math inline">\(x^2\)</span> at <span class="math inline">\(1\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(c = 1\)</span>, and <span class="math inline">\(h \ne 0\)</span>,</p>
@@ -472,9 +473,9 @@
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-differentiable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Differentiable function)</strong></span> A function <span class="math inline">\(f\)</span> is <strong>differentiable at</strong> <span class="math inline">\(x = c\)</span> if the limit (<a href="#/def-limit" class="quarto-xref">Definition&nbsp;1</a>) of the difference quotient (<a href="#/def-difference-quotient" class="quarto-xref">Definition&nbsp;3</a>) as <span class="math inline">\(h \to 0\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 6 (Differentiable function)</strong></span> A function <span class="math inline">\(f\)</span> is <strong>differentiable at</strong> <span class="math inline">\(x = c\)</span> if the limit (<a href="#/def-limit" class="quarto-xref">Definition&nbsp;1</a>) of the difference quotient (<a href="#/def-difference-quotient" class="quarto-xref">Definition&nbsp;5</a>) as <span class="math inline">\(h \to 0\)</span>,</p>
 <p><span class="math display">\[f'(c) \stackrel{\text{def}}{=}\lim_{h \to 0} \frac{f(c + h) - f(c)}{h},\]</span></p>
-<p>exists and is finite. The number <span class="math inline">\(f'(c)\)</span> is the derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;5</a>).</p>
+<p>exists and is finite. The number <span class="math inline">\(f'(c)\)</span> is the derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;7</a>).</p>
 <p><span class="citation" data-cites="larsonCalc11e">(<a href="#/references" role="doc-biblioref" onclick="">Larson and Edwards 2018, sec. 2.1</a>, p.&nbsp;100)</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-differentiable" class="theorem example">
@@ -513,18 +514,25 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Derivative)</strong></span> If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>), the number <span class="math inline">\(f'(c)\)</span> is the <strong>derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>. The <strong>derivative</strong> of <span class="math inline">\(f\)</span> is the function <span class="math inline">\(f'\)</span> whose value at each <span class="math inline">\(x\)</span> where <span class="math inline">\(f\)</span> is differentiable is <span class="math inline">\(f'(x)\)</span>. Writing the derivative with a prime, as <span class="math inline">\(f'\)</span> or <span class="math inline">\(f'(x)\)</span>, is <strong>Lagrange’s notation</strong>. The derivative of <span class="math inline">\(f\)</span> is also written <span class="math inline">\(\frac{d f}{d x}\)</span> or <span class="math inline">\(\frac{d }{d x} f(x)\)</span>, which is <strong>Leibniz notation</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 7 (Derivative)</strong></span> If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;6</a>), the number <span class="math inline">\(f'(c)\)</span> is the <strong>derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>. The <strong>derivative</strong> of <span class="math inline">\(f\)</span> is the function <span class="math inline">\(f'\)</span> whose value at each <span class="math inline">\(x\)</span> where <span class="math inline">\(f\)</span> is differentiable is <span class="math inline">\(f'(x)\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="def-lagrange-notation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Lagrange’s notation)</strong></span> Writing the derivative (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;7</a>) with a prime, as <span class="math inline">\(f'\)</span> or <span class="math inline">\(f'(x)\)</span>, is <strong>Lagrange’s notation</strong>.</p>
+</div>
+</section><section class="slide level2"><div id="def-leibniz-notation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Leibniz notation)</strong></span> The derivative of <span class="math inline">\(f\)</span> (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;7</a>) is also written <span class="math inline">\(\frac{d f}{d x}\)</span> or <span class="math inline">\(\frac{d }{d x} f(x)\)</span>, which is <strong>Leibniz notation</strong>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-derivative" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (The derivative of <span class="math inline">\(x^2\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, the computation in <a href="#/exm-differentiable" class="quarto-xref">Example&nbsp;4</a>, with <span class="math inline">\(3\)</span> replaced by any real number <span class="math inline">\(c\)</span>, gives <span class="math inline">\(\frac{f(c + h) - f(c)}{h} = 2c + h\)</span>, which tends to <span class="math inline">\(2c\)</span> as <span class="math inline">\(h \to 0\)</span>. So the derivative of <span class="math inline">\(f\)</span> is <span class="math inline">\(f'(x) = 2x\)</span>. For example, <span class="math inline">\(f'(3) = 6\)</span> and <span class="math inline">\(f'(-1) = -2\)</span>.</p>
 </div>
+</section><section class="slide level2"><div id="def-right-hand-derivative" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Right-hand derivative)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined at <span class="math inline">\(c\)</span>. The <strong>right-hand derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the right-hand limit (<a href="#/def-right-hand-limit" class="quarto-xref">Definition&nbsp;2</a>) <span class="math inline">\(\lim_{h \to 0^+} \frac{f(c + h) - f(c)}{h}\)</span> of the difference quotient (<a href="#/def-difference-quotient" class="quarto-xref">Definition&nbsp;5</a>), when that limit exists and is finite.</p>
+</div>
+</section><section class="slide level2"><div id="def-left-hand-derivative" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Left-hand derivative)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined at <span class="math inline">\(c\)</span>. The <strong>left-hand derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the left-hand limit (<a href="#/def-left-hand-limit" class="quarto-xref">Definition&nbsp;3</a>) <span class="math inline">\(\lim_{h \to 0^-} \frac{f(c + h) - f(c)}{h}\)</span>, when that limit exists and is finite.</p>
+</div>
 </section><section class="slide level2"><div id="def-one-sided-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (One-sided derivatives)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined at <span class="math inline">\(c\)</span>.</p>
-<ul>
-<li>The <strong>right-hand derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the right-hand limit (<a href="#/def-one-sided-limit" class="quarto-xref">Definition&nbsp;2</a>) <span class="math inline">\(\lim_{h \to 0^+} \frac{f(c + h) - f(c)}{h}\)</span> of the difference quotient (<a href="#/def-difference-quotient" class="quarto-xref">Definition&nbsp;3</a>), when that limit exists and is finite.</li>
-<li>The <strong>left-hand derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the left-hand limit <span class="math inline">\(\lim_{h \to 0^-} \frac{f(c + h) - f(c)}{h}\)</span>, when that limit exists and is finite.</li>
-</ul>
-<p>These are the <strong>one-sided derivatives</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 12 (One-sided derivatives)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined at <span class="math inline">\(c\)</span>. The right-hand derivative (<a href="#/def-right-hand-derivative" class="quarto-xref">Definition&nbsp;10</a>) and the left-hand derivative (<a href="#/def-left-hand-derivative" class="quarto-xref">Definition&nbsp;11</a>) of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> are the <strong>one-sided derivatives</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-one-sided-derivative" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (One-sided derivatives of <span class="math inline">\(\mathopen{}\left|x\right|\mathclose{}\)</span> at <span class="math inline">\(0\)</span>)</strong></span> Let <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\mathclose{}\)</span>, the <a href="./algebra-basics.html#def-absolute-value">absolute value</a>, and <span class="math inline">\(c = 0\)</span>.</p>
@@ -553,7 +561,7 @@
 <p>For example, <span class="math inline">\(h = 0.5\)</span> gives <span class="math inline">\(\tfrac{0.5}{0.5} = 1\)</span>, and <span class="math inline">\(h = -0.5\)</span> gives <span class="math inline">\(\tfrac{0.5}{-0.5} = -1\)</span>. The one-sided derivatives differ, since <span class="math inline">\(1 \ne -1\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-second-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Second derivative)</strong></span> Let <span class="math inline">\(f\)</span> be a real-valued function of one variable whose derivative <span class="math inline">\(f'\)</span> (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;5</a>) exists at every point of an <a href="./sets-functions.html#def-interval">open interval</a> containing <span class="math inline">\(c\)</span>. If <span class="math inline">\(f'\)</span> is differentiable (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>) at <span class="math inline">\(c\)</span>, its derivative there, written <span class="math inline">\(f''(c)\)</span> or <span class="math inline">\(\frac{d ^2 f}{d x^2}\)</span>, is the <strong>second derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Second derivative)</strong></span> Let <span class="math inline">\(f\)</span> be a real-valued function of one variable whose derivative <span class="math inline">\(f'\)</span> (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;7</a>) exists at every point of an <a href="./sets.html#def-open-interval">open interval</a> containing <span class="math inline">\(c\)</span>. If <span class="math inline">\(f'\)</span> is differentiable (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;6</a>) at <span class="math inline">\(c\)</span>, its derivative there, written <span class="math inline">\(f''(c)\)</span> or <span class="math inline">\(\frac{d ^2 f}{d x^2}\)</span>, is the <strong>second derivative</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-second-derivative" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (The second derivative of <span class="math inline">\(x^3\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^3\)</span>, the power rule (<a href="#/thm-deriv-polynomial" class="quarto-xref">Theorem&nbsp;3</a>) gives <span class="math inline">\(f'(x) = 3x^2\)</span> at every <span class="math inline">\(x\)</span>, and differentiating again, with the constant multiple rule (<a href="#/thm-deriv-const-factor" class="quarto-xref">Theorem&nbsp;2</a>), gives</p>
@@ -612,7 +620,7 @@ f''(x) &amp;= 3 \cdot 2x \\
 </section><section class="slide level2"><div id="thm-deriv-polynomial" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Power rule)</strong></span> For every real number <span class="math inline">\(q\)</span> and every <span class="math inline">\(x &gt; 0\)</span>, the derivative of the <a href="./algebra-exponentials.html#def-real-power">power</a> <span class="math inline">\(x^q\)</span> is:</p>
 <p><span class="math display">\[\frac{\partial}{\partial x}x^q = qx^{q-1}\]</span></p>
-<p>When <span class="math inline">\(q\)</span> is a positive <a href="./notation.html#def-integers">integer</a>, the same formula holds for every real <span class="math inline">\(x\)</span>.</p>
+<p>When <span class="math inline">\(q\)</span> is a positive <a href="./number-systems.html#def-integers">integer</a>, the same formula holds for every real <span class="math inline">\(x\)</span>.</p>
 </div>
 </section><section class="slide level2"><div title="Videos">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -881,7 +889,7 @@ f'(x)
 &amp;= \frac{d b}{d c} \frac{d a}{d b}
 \end{aligned}
 \]</span></p>
-<p>or in Lagrange’s notation (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;5</a>), if <span class="math inline">\(g\)</span> is differentiable at <span class="math inline">\(x\)</span> and <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(g(x)\)</span>, then for the <a href="./sets-functions.html#def-composition">composition</a> <span class="math inline">\(f \circ g\)</span>, with inner function <span class="math inline">\(g\)</span> and outer function <span class="math inline">\(f\)</span>:</p>
+<p>or in Lagrange’s notation (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;7</a>), if <span class="math inline">\(g\)</span> is differentiable at <span class="math inline">\(x\)</span> and <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(g(x)\)</span>, then for the <a href="./functions.html#def-composition">composition</a> <span class="math inline">\(f \circ g\)</span>, with inner function <span class="math inline">\(g\)</span> and outer function <span class="math inline">\(f\)</span>:</p>
 <p><span class="math display">\[(f(g(x)))' = g'(x) f'(g(x))\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-gaussian-kernel" class="theorem exercise">
@@ -899,13 +907,20 @@ f'(x)
 \end{aligned}
 \]</span></p>
 </div>
+</section><section class="slide level2"><div id="thm-deriv-gaussian-kernel" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 11 (Derivative of the standard Gaussian kernel)</strong></span> For <span class="math inline">\(f(x) = \operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\)</span> and every <span class="math inline">\(x \in \mathbb{R}\)</span>,</p>
+<p><span class="math display">\[f'(x) = -x\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-deriv-gaussian-kernel" class="quarto-xref">Exercise&nbsp;7</a>, worked in <a href="#/sol-miller-deriv-gaussian-kernel" class="quarto-xref">Solution&nbsp;7</a>.</p>
+</div>
 </section><section class="slide level2"><div id="exr-miller-deriv-second-gaussian-kernel" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 8 (Second derivative of the Gaussian kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.6.</p>
 <p>Find the second derivative of</p>
 <p><span class="math display">\[f(x) = \operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\]</span></p>
 </div>
 <div id="sol-miller-deriv-second-gaussian-kernel" class="proof solution">
-<p><span class="proof-title"><em>Solution 8</em>. </span>From <a href="#/exr-miller-deriv-gaussian-kernel" class="quarto-xref">Exercise&nbsp;7</a>, the first derivative is <span class="math inline">\(f'(x) = -x\operatorname{exp}\mathopen{}\left\{-x^2/2\right\}\mathclose{}\)</span>. Apply the product rule (<a href="#/thm-product-rule" class="quarto-xref">Theorem&nbsp;8</a>) to <span class="math inline">\(u(x) = -x\)</span> and <span class="math inline">\(v(x) = \operatorname{exp}\mathopen{}\left\{-x^2/2\right\}\mathclose{}\)</span>:</p>
+<p><span class="proof-title"><em>Solution 8</em>. </span>From <a href="#/thm-deriv-gaussian-kernel" class="quarto-xref">Theorem&nbsp;11</a>, the first derivative is <span class="math inline">\(f'(x) = -x\operatorname{exp}\mathopen{}\left\{-x^2/2\right\}\mathclose{}\)</span>. Apply the product rule (<a href="#/thm-product-rule" class="quarto-xref">Theorem&nbsp;8</a>) to <span class="math inline">\(u(x) = -x\)</span> and <span class="math inline">\(v(x) = \operatorname{exp}\mathopen{}\left\{-x^2/2\right\}\mathclose{}\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
 u'(x) &amp;= -1
 \\
@@ -919,6 +934,13 @@ f''(x) &amp;= u'(x)v(x) + u(x)v'(x)
 \\
 &amp;= (x^2 - 1)\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}
 \end{aligned}\]</span></p>
+</div>
+</section><section class="slide level2"><div id="thm-deriv-second-gaussian-kernel" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 12 (Second derivative of the standard Gaussian kernel)</strong></span> For <span class="math inline">\(f(x) = \operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\)</span> and every <span class="math inline">\(x \in \mathbb{R}\)</span>,</p>
+<p><span class="math display">\[f''(x) = (x^2 - 1)\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-deriv-second-gaussian-kernel" class="quarto-xref">Exercise&nbsp;8</a>, worked in <a href="#/sol-miller-deriv-second-gaussian-kernel" class="quarto-xref">Solution&nbsp;8</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-product-chain-composite" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 9 (Combining product and chain rules)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.7.</p>
@@ -1049,13 +1071,16 @@ f''(x)
 \]</span></p>
 </div>
 <h3 id="sec-function-profile">Studying a new function</h3>
-<div id="def-function-profile" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Profile of a function)</strong></span> The <strong>profile</strong> of a function <span class="math inline">\(f\)</span> of a real variable is the list of related functions and values to work out when meeting <span class="math inline">\(f\)</span> for the first time:</p>
+<div id="def-logarithmic-derivative" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Logarithmic derivative)</strong></span> The <strong>logarithmic derivative</strong> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span> of a function <span class="math inline">\(f\)</span> of a real variable equals <span class="math inline">\(\frac{d }{d x}\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}\)</span> by <a href="#/cor-deriv-log-chain" class="quarto-xref">Corollary&nbsp;1</a> and measures the rate of change of <span class="math inline">\(f\)</span> relative to its size; it needs <span class="math inline">\(f(x) &gt; 0\)</span>, and for <span class="math inline">\(f(x) &lt; 0\)</span> the same expression is the derivative of <span class="math inline">\(\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="def-function-profile" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 (Profile of a function)</strong></span> The <strong>profile</strong> of a function <span class="math inline">\(f\)</span> of a real variable is the list of related functions and values to work out when meeting <span class="math inline">\(f\)</span> for the first time:</p>
 <ul>
 <li>the logarithm <span class="math inline">\(\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}\)</span>, where <span class="math inline">\(f(x) &gt; 0\)</span>;</li>
 <li>the derivatives <span class="math inline">\(f'(x)\)</span>, <span class="math inline">\(f''(x)\)</span>, and so on, as far as they are informative;</li>
-<li>the <strong>logarithmic derivative</strong> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span>, which equals <span class="math inline">\(\frac{d }{d x}\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}\)</span> by <a href="#/cor-deriv-log-chain" class="quarto-xref">Corollary&nbsp;1</a> and measures the rate of change of <span class="math inline">\(f\)</span> relative to its size; it needs <span class="math inline">\(f(x) &gt; 0\)</span>, and for <span class="math inline">\(f(x) &lt; 0\)</span> the same expression is the derivative of <span class="math inline">\(\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}\)</span>;</li>
-<li>the inverse function <span class="math inline">\(f^{-1}\)</span> (<a href="./sets-functions.html#def-inverse-function">definition</a>), which exists on the range of <span class="math inline">\(f\)</span> when <span class="math inline">\(f\)</span> is one-to-one, and otherwise only after restricting the domain of <span class="math inline">\(f\)</span>;</li>
+<li>the <a href="#/def-logarithmic-derivative">logarithmic derivative</a> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span>;</li>
+<li>the inverse function <span class="math inline">\(f^{-1}\)</span> (<a href="./functions.html#def-inverse-function">definition</a>), which exists on the range of <span class="math inline">\(f\)</span> when <span class="math inline">\(f\)</span> is one-to-one, and otherwise only after restricting the domain of <span class="math inline">\(f\)</span>;</li>
 <li>the complement <span class="math inline">\(1 - f(x)\)</span>, which is informative when <span class="math inline">\(f\)</span> takes values in <span class="math inline">\([0, 1]\)</span>, as a probability does;</li>
 <li>the reciprocal <span class="math inline">\(\frac{1}{f(x)}\)</span>, where <span class="math inline">\(f(x) \neq 0\)</span> (not to be confused with <span class="math inline">\(f^{-1}\)</span>);</li>
 <li>an antiderivative of <span class="math inline">\(f\)</span>, a function <span class="math inline">\(F\)</span> with <span class="math inline">\(F' = f\)</span> (<a href="./calculus-integration.html#sec-integration">integration</a>);</li>
@@ -1068,7 +1093,7 @@ f''(x)
 <p><span class="math display">\[
 f(x) = \frac{1}{1 + e^{-x}}.
 \]</span></p>
-<p>The profile in <a href="#/def-function-profile" class="quarto-xref">Definition&nbsp;8</a> of <span class="math inline">\(f\)</span> is as follows. Write <span class="math inline">\(E = e^{-x}\)</span>, so that <span class="math inline">\(f = \frac{1}{1 + E}\)</span> and <span class="math inline">\(1 - f = \frac{E}{1 + E}\)</span>.</p>
+<p>The profile in <a href="#/def-function-profile" class="quarto-xref">Definition&nbsp;15</a> of <span class="math inline">\(f\)</span> is as follows. Write <span class="math inline">\(E = e^{-x}\)</span>, so that <span class="math inline">\(f = \frac{1}{1 + E}\)</span> and <span class="math inline">\(1 - f = \frac{E}{1 + E}\)</span>.</p>
 <ul>
 <li><p><strong>Logarithm:</strong> <span class="math inline">\(\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{} = -\operatorname{log}\mathopen{}\left\{1 + e^{-x}\right\}\mathclose{}\)</span>, defined for every real <span class="math inline">\(x\)</span> because <span class="math inline">\(f(x) &gt; 0\)</span>.</p></li>
 <li>
@@ -1162,9 +1187,9 @@ Figure&nbsp;1: The logistic function, its derivative and its logarithm
 </div>
 </section><section class="slide level2"><h3 id="sec-tangent-lines">Tangent lines</h3>
 <div id="def-tangent-line" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Tangent line)</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>). The <strong>tangent line</strong> to the <a href="./sets-functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the graph of the <a href="./algebra-exponentials.html#def-affine-function">affine function</a></p>
+<p><span class="theorem-title"><strong>Definition 16 (Tangent line)</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;6</a>). The <strong>tangent line</strong> to the <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the graph of the <a href="./algebra-exponentials.html#def-affine-function">affine function</a></p>
 <p><span class="math display">\[x \mapsto f(c) + f'(c)\,(x - c),\]</span></p>
-<p>the line through the point <span class="math inline">\((c, f(c))\)</span> with <a href="./algebra-exponentials.html#def-affine-function">slope</a> <span class="math inline">\(f'(c)\)</span>. The slope <span class="math inline">\(f'(c)\)</span> is also called the <strong>tangent slope</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
+<p>the line through the point <span class="math inline">\((c, f(c))\)</span> with <a href="./algebra-exponentials.html#def-slope">slope</a> <span class="math inline">\(f'(c)\)</span>. The slope <span class="math inline">\(f'(c)\)</span> is also called the <strong>tangent slope</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-tangent-line" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (The tangent line to <span class="math inline">\(x^2\)</span> at <span class="math inline">\(1\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(c = 1\)</span>, <span class="math inline">\(f(1) = 1\)</span> and <span class="math inline">\(f'(1) = 2\)</span> (<a href="#/exm-derivative" class="quarto-xref">Example&nbsp;5</a>), so the tangent line is the graph of</p>
@@ -1184,12 +1209,12 @@ x
 <p>For a differentiable function <span class="math inline">\(f\)</span> and a small step <span class="math inline">\(\varepsilon\)</span>,</p>
 <p><span id="eq-linear-approx"><span class="math display">\[f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}\]</span></span></p>
 </section><section class="slide level2"><div id="def-linear-approximation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Linear approximation (first-order Taylor approximation))</strong></span> For a function <span class="math inline">\(f\)</span> that is differentiable at <span class="math inline">\(w\)</span>, the <strong>linear approximation</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(w\)</span> (also called the <strong>first-order Taylor approximation</strong>) is the function of the step <span class="math inline">\(\varepsilon\)</span></p>
+<p><span class="theorem-title"><strong>Definition 17 (Linear approximation (first-order Taylor approximation))</strong></span> For a function <span class="math inline">\(f\)</span> that is differentiable at <span class="math inline">\(w\)</span>, the <strong>linear approximation</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(w\)</span> (also called the <strong>first-order Taylor approximation</strong>) is the function of the step <span class="math inline">\(\varepsilon\)</span></p>
 <p><span class="math display">\[\hat{f}_w(\varepsilon) = f(w) + \varepsilon\,\frac{d }{d w}f(w)\]</span></p>
 <p>so <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> says <span class="math inline">\(f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)\)</span> for small <span class="math inline">\(\varepsilon\)</span>. <a href="#/fig-linear-approx" class="quarto-xref">Figure&nbsp;2</a> illustrates this approximation interactively for a quadratic function.</p>
 </div>
 </section><section class="slide level2"><div id="rem-linear-approx-affine" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (The “linear” approximation is affine). </span>The linear approximation <span class="math inline">\(\hat{f}_w\)</span> (<a href="#/def-linear-approximation" class="quarto-xref">Definition&nbsp;10</a>) is an <a href="./algebra-exponentials.html#def-affine-function">affine function</a> of the step <span class="math inline">\(\varepsilon\)</span>: its slope is <span class="math inline">\(\frac{d }{d w}f(w)\)</span> and its intercept is <span class="math inline">\(f(w)\)</span>. It is <a href="./algebra-exponentials.html#def-linear-function">linear</a> in <span class="math inline">\(\varepsilon\)</span> only when <span class="math inline">\(f(w) = 0\)</span>. The name “linear approximation” uses “linear” in the looser sense of elementary algebra (<a href="./algebra-exponentials.html#rem-linear-function-terminology">remark</a>). <span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>, section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.</p>
+<p><span class="proof-title"><em>Remark 2</em> (The “linear” approximation is affine). </span>The linear approximation <span class="math inline">\(\hat{f}_w\)</span> (<a href="#/def-linear-approximation" class="quarto-xref">Definition&nbsp;17</a>) is an <a href="./algebra-exponentials.html#def-affine-function">affine function</a> of the step <span class="math inline">\(\varepsilon\)</span>: its slope is <span class="math inline">\(\frac{d }{d w}f(w)\)</span> and its intercept is <span class="math inline">\(f(w)\)</span>. It is <a href="./algebra-exponentials.html#def-linear-function">linear</a> in <span class="math inline">\(\varepsilon\)</span> only when <span class="math inline">\(f(w) = 0\)</span>. The name “linear approximation” uses “linear” in the looser sense of elementary algebra (<a href="./algebra-exponentials.html#rem-linear-function-terminology">remark</a>). <span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>, section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.</p>
 </div>
 </section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="2" data-source-offset="-72"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1;"><span id="cb3-2"><a aria-label="2"></a>tanF <span class="op">=</span> (w) <span class="kw">=&gt;</span> w <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span> <span class="op">*</span> w <span class="op">+</span> <span class="dv">7</span></span>
 <span id="cb3-3"><a aria-label="3"></a>tanDf <span class="op">=</span> (w) <span class="kw">=&gt;</span> <span class="dv">2</span> <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span></span>
@@ -1292,7 +1317,7 @@ Figure&nbsp;2: The linear approximation <a href="#/eq-linear-approx" class="quar
 </div>
 </div>
 </div>
-<p>The dashed blue line is the tangent line (<a href="#/def-tangent-line" class="quarto-xref">Definition&nbsp;9</a>) at <span class="math inline">\(w\)</span>; the red segment is the error of the prediction.</p>
+<p>The dashed blue line is the tangent line (<a href="#/def-tangent-line" class="quarto-xref">Definition&nbsp;16</a>) at <span class="math inline">\(w\)</span>; the red segment is the error of the prediction.</p>
 </div></div>
 </div>
 </figure>
@@ -1330,7 +1355,7 @@ f'(\pi/4) &amp;= 4 - \sqrt{2}\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose
 </div>
 </section><section class="slide level2"><h3 id="sec-critical-points">Critical points and optimization</h3>
 <div id="def-flat-point" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Flat point (stationary point))</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>). If <span class="math inline">\(f'(c) = 0\)</span>, then <span class="math inline">\(c\)</span> is a <strong>flat point</strong> of <span class="math inline">\(f\)</span> (also called a <strong>stationary point</strong>).</p>
+<p><span class="theorem-title"><strong>Definition 18 (Flat point (stationary point))</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;6</a>). If <span class="math inline">\(f'(c) = 0\)</span>, then <span class="math inline">\(c\)</span> is a <strong>flat point</strong> of <span class="math inline">\(f\)</span> (also called a <strong>stationary point</strong>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-flat-point" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (Flat points, and a point that is not one)</strong></span> &nbsp;</p>
@@ -1386,12 +1411,12 @@ f(1.01)
 <p>a change of <span class="math inline">\(-0.0199\)</span>. The prediction is off by <span class="math inline">\(0.0001\)</span>, which is <span class="math inline">\(\varepsilon^2\)</span>: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of <a href="./optimization.html#def-gradient-descent">gradient descent</a>, the step-by-step method of fitting models defined on the optimization page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.</p>
 </div>
 </section><section class="slide level2"><div id="def-critical-point" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Critical point)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined on an <a href="./sets-functions.html#def-interval">open interval</a> containing <span class="math inline">\(c\)</span>. The point <span class="math inline">\(c\)</span> is a <strong>critical point</strong> of <span class="math inline">\(f\)</span> if either <span class="math inline">\(f'(c) = 0\)</span> or <span class="math inline">\(f\)</span> is not differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>).</p>
+<p><span class="theorem-title"><strong>Definition 19 (Critical point)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined on an <a href="./sets.html#def-open-interval">open interval</a> containing <span class="math inline">\(c\)</span>. The point <span class="math inline">\(c\)</span> is a <strong>critical point</strong> of <span class="math inline">\(f\)</span> if either <span class="math inline">\(f'(c) = 0\)</span> or <span class="math inline">\(f\)</span> is not differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;6</a>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-critical-point" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (Critical points that are and are not flat points)</strong></span> &nbsp;</p>
 <ul>
-<li><p><span class="math inline">\(g(w) = \mathopen{}\left|w\right|\mathclose{}\)</span> has no derivative at <span class="math inline">\(w = 0\)</span>: its one-sided derivatives there are <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span> (<a href="#/exm-one-sided-derivative" class="quarto-xref">Example&nbsp;6</a>), so the difference quotient <span class="math inline">\(\tfrac{\mathopen{}\left|h\right|\mathclose{} - 0}{h}\)</span> has no limit as <span class="math inline">\(h \to 0\)</span> (<a href="#/def-one-sided-limit" class="quarto-xref">Definition&nbsp;2</a>). So <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> but not a flat point.</p></li>
+<li><p><span class="math inline">\(g(w) = \mathopen{}\left|w\right|\mathclose{}\)</span> has no derivative at <span class="math inline">\(w = 0\)</span>: its one-sided derivatives there are <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span> (<a href="#/exm-one-sided-derivative" class="quarto-xref">Example&nbsp;6</a>), so the difference quotient <span class="math inline">\(\tfrac{\mathopen{}\left|h\right|\mathclose{} - 0}{h}\)</span> has no limit as <span class="math inline">\(h \to 0\)</span> (<a href="#/def-one-sided-limit" class="quarto-xref">Definition&nbsp;4</a>). So <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> but not a flat point.</p></li>
 <li>
 <p><span class="math inline">\(f(w) = w^3\)</span> has</p>
 <p><span class="math display">\[
@@ -1406,7 +1431,7 @@ f'(0) &amp;= 3 \cdot 0^2 \\
 </ul>
 </div>
 </section><section class="slide level2"><div id="thm-flat-point-critical" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 11 (Every flat point is a critical point)</strong></span> If <span class="math inline">\(c\)</span> is a flat point of <span class="math inline">\(f\)</span> (<a href="#/def-flat-point" class="quarto-xref">Definition&nbsp;11</a>), then <span class="math inline">\(c\)</span> is a critical point of <span class="math inline">\(f\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;12</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 13 (Every flat point is a critical point)</strong></span> If <span class="math inline">\(c\)</span> is a flat point of <span class="math inline">\(f\)</span> (<a href="#/def-flat-point" class="quarto-xref">Definition&nbsp;18</a>), then <span class="math inline">\(c\)</span> is a critical point of <span class="math inline">\(f\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;19</a>).</p>
 </div>
 </section><section class="slide level2"></section><section class="slide level2"><div id="exm-flat-point-critical" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (The flat points of a cubic, and a critical point that is not flat)</strong></span> For <span class="math inline">\(f(w) = w^3 - 3w\)</span>, the derivative is <span class="math inline">\(f'(w) = 3w^2 - 3\)</span>. The code differentiates <span class="math inline">\(f\)</span> with <code><a href="https://rdrr.io/r/stats/deriv.html">D()</a></code> and evaluates <span class="math inline">\(f'\)</span> at several points. For <span class="math inline">\(g(w) = \mathopen{}\left|w\right|\mathclose{}\)</span>, it computes the difference quotients at <span class="math inline">\(0\)</span> from both sides.</p>
@@ -1429,7 +1454,7 @@ f'(0) &amp;= 3 \cdot 0^2 \\
 <span id="cb8-5"><a aria-label="5"></a>quotients</span>
 <span id="cb8-6"><a aria-label="6"></a><span class="co">#&gt; [1] -1  1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>The derivative is <span class="math inline">\(0\)</span> at 2 of the 5 points, namely <span class="math inline">\(w = -1\)</span> and <span class="math inline">\(w = 1\)</span>. These are flat points of <span class="math inline">\(f\)</span>, so by <a href="#/thm-flat-point-critical" class="quarto-xref">Theorem&nbsp;11</a> they are critical points. The difference quotients of <span class="math inline">\(g\)</span> at <span class="math inline">\(0\)</span> are -1 from the left and 1 from the right, so <span class="math inline">\(g\)</span> has no derivative at <span class="math inline">\(0\)</span>. Thus <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;12</a>), but not a flat point.</p>
+<p>The derivative is <span class="math inline">\(0\)</span> at 2 of the 5 points, namely <span class="math inline">\(w = -1\)</span> and <span class="math inline">\(w = 1\)</span>. These are flat points of <span class="math inline">\(f\)</span>, so by <a href="#/thm-flat-point-critical" class="quarto-xref">Theorem&nbsp;13</a> they are critical points. The difference quotients of <span class="math inline">\(g\)</span> at <span class="math inline">\(0\)</span> are -1 from the left and 1 from the right, so <span class="math inline">\(g\)</span> has no derivative at <span class="math inline">\(0\)</span>. Thus <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;19</a>), but not a flat point.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-opt-gamma-kernel" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 15 (Maximizing a gamma-family kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.10.</p>
@@ -1501,7 +1526,7 @@ f''(1/2) &amp;= 24(1/2) - 6 \\
 </div>
 </section><section class="slide level2"><h3 id="sec-taylor-series">Taylor series</h3>
 <div id="def-taylor-polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Taylor polynomial)</strong></span> Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> of degree <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 20 (Taylor polynomial)</strong></span> Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> of degree <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
 <p><span id="eq-taylor-poly-def"><span class="math display">\[
 \begin{aligned}
 P_n(x)
@@ -1530,10 +1555,10 @@ P_n(x)
 <p><span class="math display">\[e^x = \sum_{k=0}^\infty \frac{x^k}{k!}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-maclaurin-polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Maclaurin polynomial)</strong></span> When <span class="math inline">\(x_0 = 0\)</span>, the Taylor polynomial <span class="math inline">\(P_n(x)\)</span> (<a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;13</a>) is called the <strong>Maclaurin polynomial</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Maclaurin polynomial)</strong></span> When <span class="math inline">\(x_0 = 0\)</span>, the Taylor polynomial <span class="math inline">\(P_n(x)\)</span> (<a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;20</a>) is called the <strong>Maclaurin polynomial</strong>.</p>
 </div>
 </section><section class="slide level2"><div id="def-taylor-series" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Taylor series)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(x_0\)</span> be as in <a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;13</a>. When <span class="math inline">\(f\)</span> is infinitely differentiable and the series converges to <span class="math inline">\(f(x)\)</span> on an open interval containing <span class="math inline">\(x_0\)</span>, the infinite sum <span class="math inline">\(\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\)</span> is the <strong>Taylor series</strong> of <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 22 (Taylor series)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(x_0\)</span> be as in <a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;20</a>. When <span class="math inline">\(f\)</span> is infinitely differentiable and the series converges to <span class="math inline">\(f(x)\)</span> on an open interval containing <span class="math inline">\(x_0\)</span>, the infinite sum <span class="math inline">\(\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\)</span> is the <strong>Taylor series</strong> of <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div title="Video">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1548,7 +1573,7 @@ P_n(x)
 <p>Chapter 11 of the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"><em>Essence of calculus</em></a> series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:</p>
 <ul>
 <li>
-<a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor series</a> shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations (<a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;13</a>).</li>
+<a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor series</a> shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations (<a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;20</a>).</li>
 </ul>
 </div>
 </div>
@@ -1746,6 +1771,13 @@ P_5(x)
 <p>Up to degree 3, the odd powers vanish by symmetry, so:</p>
 <p><span class="math display">\[P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\]</span></p>
 </div>
+</section><section class="slide level2"><div id="thm-taylor-normal-density" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 14 (Maclaurin polynomial of the standard normal density)</strong></span> The Maclaurin polynomial (<a href="#/def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;21</a>) of degree 3 of the standard normal density <span class="math inline">\(\phi(x) = \frac{1}{\sqrt{2\pi}}\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\)</span> is</p>
+<p><span class="math display">\[P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-taylor-normal-density" class="quarto-xref">Exercise&nbsp;23</a>, worked in <a href="#/sol-miller-taylor-normal-density" class="quarto-xref">Solution&nbsp;23</a>.</p>
+</div>
 </section><section class="slide level2"><div id="exr-miller-taylor-sqrt" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 24 (Taylor expansion of the square root)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.23.</p>
 <p>Find the first three terms (up to degree 2) of the Taylor series for</p>
@@ -1853,6 +1885,13 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 <p>The Taylor polynomial of degree 3 is:</p>
 <p><span class="math display">\[P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}\]</span></p>
 </div>
+</section><section class="slide level2"><div id="thm-taylor-log-one-plus-x" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 15 (Maclaurin polynomial of <span class="math inline">\(\log(1 + x)\)</span>)</strong></span> The Maclaurin polynomial (<a href="#/def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;21</a>) of degree 3 of <span class="math inline">\(f(x) = \log(1 + x)\)</span> is</p>
+<p><span class="math display">\[P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-taylor-log-one-plus-x" class="quarto-xref">Exercise&nbsp;27</a>, worked in <a href="#/sol-miller-taylor-log-one-plus-x" class="quarto-xref">Solution&nbsp;27</a>.</p>
+</div>
 </section><section class="slide level2"><div id="exr-miller-taylor-log-one-minus-x" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 28 (Maclaurin series of <span class="math inline">\(\log(1 - x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.27.</p>
 <p>Find the terms up to degree 3 of the Taylor series for</p>
@@ -1860,7 +1899,7 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
 </div>
 <div id="sol-miller-taylor-log-one-minus-x" class="proof solution">
-<p><span class="proof-title"><em>Solution 28</em>. </span>Substitute <span class="math inline">\(u = -x\)</span> into the expansion for <span class="math inline">\(\log(1 + u)\)</span> from <a href="#/exr-miller-taylor-log-one-plus-x" class="quarto-xref">Exercise&nbsp;27</a>:</p>
+<p><span class="proof-title"><em>Solution 28</em>. </span>Substitute <span class="math inline">\(u = -x\)</span> into the expansion for <span class="math inline">\(\log(1 + u)\)</span> from <a href="#/thm-taylor-log-one-plus-x" class="quarto-xref">Theorem&nbsp;15</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \log(1 - x)
@@ -1868,6 +1907,13 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 &amp;= -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots
 \end{aligned}
 \]</span></p>
+</div>
+</section><section class="slide level2"><div id="thm-taylor-log-one-minus-x" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 16 (Maclaurin polynomial of <span class="math inline">\(\log(1 - x)\)</span>)</strong></span> The Maclaurin polynomial (<a href="#/def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;21</a>) of degree 3 of <span class="math inline">\(f(x) = \log(1 - x)\)</span> is</p>
+<p><span class="math display">\[P_3(x) = -x - \frac{x^2}{2} - \frac{x^3}{3}\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-taylor-log-one-minus-x" class="quarto-xref">Exercise&nbsp;28</a>, worked in <a href="#/sol-miller-taylor-log-one-minus-x" class="quarto-xref">Solution&nbsp;28</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-taylor-log-product-exp" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 29 (Taylor series of <span class="math inline">\(\log((1 - x)e^x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.28.</p>
@@ -1884,7 +1930,7 @@ f(x)
 &amp;= \log(1 - x) + x
 \end{aligned}
 \]</span></p>
-<p>Substitute the series for <span class="math inline">\(\log(1 - x)\)</span> from <a href="#/exr-miller-taylor-log-one-minus-x" class="quarto-xref">Exercise&nbsp;28</a>:</p>
+<p>Substitute the series for <span class="math inline">\(\log(1 - x)\)</span> from <a href="#/thm-taylor-log-one-minus-x" class="quarto-xref">Theorem&nbsp;16</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(x)
