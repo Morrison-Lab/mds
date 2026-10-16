@@ -36,12 +36,12 @@ The orthonormal vectors $\vecf{q}_1, \ldots, \vecf{q}_{i-1}$ are linearly indepe
 (@thm-orthonormal-independent) and span $\mathcal{S}_{i-1}$,
 so they are an orthonormal basis of it.
 
-*$\tilde{\vecf{q}}_i$ is orthogonal to the earlier $\vecf{q}$'s.*
+*$\vecf{q}'_i$ is orthogonal to the earlier $\vecf{q}$'s.*
 For each $l < i$,
 
 $$
 \ba
-\vecf{q}_l \cdot \tilde{\vecf{q}}_i
+\vecf{q}_l \cdot \vecf{q}'_i
 &= \vecf{q}_l \cdot \paren{1\,\vecf{a}_i + \sumto{j}{i-1} \paren{-\vecf{q}_j \cdot \vecf{a}_i}\,\vecf{q}_j}
 && \text{(@def-gram-schmidt, as a linear combination)}
 \\
@@ -60,26 +60,26 @@ $$
 $$
 
 *Part 2 at step $i$.*
-If $\tilde{\vecf{q}}_i = \vzero$, then
+If $\vecf{q}'_i = \vzero$, then
 $\vecf{a}_i = \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j \in \mathcal{S}_{i-1}$.
 Conversely, if $\vecf{a}_i \in \mathcal{S}_{i-1}$, then
 $\vecf{a}_i = \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
-(@thm-orthonormal-expansion), so $\tilde{\vecf{q}}_i = \vzero$.
+(@thm-orthonormal-expansion), so $\vecf{q}'_i = \vzero$.
 
 *Part 1 at step $i$, if the process does not stop.*
-Then $\tilde{\vecf{q}}_i \ne \vzero$, so $\norm{\tilde{\vecf{q}}_i} > 0$,
-and $\vecf{q}_i = \tilde{\vecf{q}}_i / \norm{\tilde{\vecf{q}}_i}$ has
-norm $\norm{\tilde{\vecf{q}}_i} / \norm{\tilde{\vecf{q}}_i} = 1$ (@thm-norm-properties)
+Then $\vecf{q}'_i \ne \vzero$, so $\norm{\vecf{q}'_i} > 0$,
+and $\vecf{q}_i = \vecf{q}'_i / \norm{\vecf{q}'_i}$ has
+norm $\norm{\vecf{q}'_i} / \norm{\vecf{q}'_i} = 1$ (@thm-norm-properties)
 and for $l < i$
 
 $$
 \ba
 \vecf{q}_l \cdot \vecf{q}_i
-&= \frac{1}{\norm{\tilde{\vecf{q}}_i}}\,(\vecf{q}_l \cdot \tilde{\vecf{q}}_i)
+&= \frac{1}{\norm{\vecf{q}'_i}}\,(\vecf{q}_l \cdot \vecf{q}'_i)
 && \text{(@thm-dot-linear, special case } b = 0 \text{)}
 \\
 &= 0,
-&& \text{(} \tilde{\vecf{q}}_i \text{ is orthogonal to } \vecf{q}_l \text{)}
+&& \text{(} \vecf{q}'_i \text{ is orthogonal to } \vecf{q}_l \text{)}
 \ea
 $$
 
@@ -87,12 +87,12 @@ and $\vecf{q}_i \cdot \vecf{q}_l = 0$ too (@thm-lincom-symmetric).
 So $\vecf{q}_1, \ldots, \vecf{q}_i$ are orthonormal.
 For the spans:
 
-- $\vecf{a}_i = \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
+- $\vecf{a}_i = \norm{\vecf{q}'_i}\,\vecf{q}_i + \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
   is in $\operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_i}$,
   and so is each of $\vecf{a}_1, \ldots, \vecf{a}_{i-1}$, which lie in
   $\mathcal{S}_{i-1} = \operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_{i-1}}
   \subseteq \operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_i}$.
-- $\vecf{q}_i = \paren{\vecf{a}_i - \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j} / \norm{\tilde{\vecf{q}}_i}$
+- $\vecf{q}_i = \paren{\vecf{a}_i - \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j} / \norm{\vecf{q}'_i}$
   is in $\operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_i}$,
   because each $\vecf{q}_j$ with $j < i$ lies in $\mathcal{S}_{i-1}$;
   and so is each of $\vecf{q}_1, \ldots, \vecf{q}_{i-1}$.
@@ -138,7 +138,7 @@ so
 
 $$
 \ba
-\tilde{\vecf{q}}_3
+\vecf{q}'_3
 &= (0, 1, 1) - \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}}\,(1, 1, 0) - \tfrac{1}{\sqrt{6}} \cd \tfrac{1}{\sqrt{6}}\,(1, -1, 2)
 && \text{(orthogonalize)}
 \\
