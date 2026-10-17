@@ -1,6 +1,7 @@
 :::{#def-saddle-point}
 #### Saddle point
 
+Let $f : \reals^p \to \reals$.
 A [stationary point](#def-stationary-point) of $f$ that is
 neither a [local minimizer](algebra.qmd#def-local-minimizer)
 nor a [local maximizer](#def-local-maximizer) of $f$
