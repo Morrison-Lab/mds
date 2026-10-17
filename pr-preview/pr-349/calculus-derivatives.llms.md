@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 04:02:11 (PDT)
+Last modified: 2026-10-17 05:12:24 (PDT)
 
 ## 1 Derivatives
 
@@ -592,7 +592,7 @@ Last modified: 2026-10-17 04:02:11 (PDT)
 > - the logarithm \\\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}\\, where \\f(x) \> 0\\;
 > - the derivatives \\f'(x)\\, \\f''(x)\\, and so on, as far as they are informative;
 > - the [logarithmic derivative](#def-logarithmic-derivative) \\\frac{f'(x)}{f(x)}\\;
-> - the inverse function \\f^{-1}\\ ([definition](functions.llms.md#def-inverse-function)), which exists on the range of \\f\\ when \\f\\ is one-to-one, and otherwise only after restricting the domain of \\f\\;
+> - the inverse function \\f^{-1}\\ ([definition](functions.llms.md#def-inverse-function)), which exists on the [image](functions.llms.md#def-image) of \\f\\ when \\f\\ is one-to-one, and otherwise only after restricting the domain of \\f\\;
 > - the complement \\1 - f(x)\\, which is informative when \\f\\ takes values in \\\[0, 1\]\\, as a probability does;
 > - the reciprocal \\\frac{1}{f(x)}\\, where \\f(x) \neq 0\\ (not to be confused with \\f^{-1}\\);
 > - an antiderivative of \\f\\, a function \\F\\ with \\F' = f\\ ([integration](calculus-integration.llms.md#sec-integration));

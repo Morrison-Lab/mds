@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 04:02:11 (PDT)
+Last modified: 2026-10-17 05:12:24 (PDT)
 
 > **NOTE:**
 >
@@ -173,17 +173,17 @@ Last modified: 2026-10-17 04:02:11 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\underset{\sim}{x}= {\mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\underset{\sim}{x}\\, written \\f^{\odot}(\underset{\sim}{x})\\, is the vector of the values of \\f\\ at the entries of \\\underset{\sim}{x}\\:
+> **Definition 14 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= {\mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\, written \\f^{\odot}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\, is the vector of the values of \\f\\ at the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\:
 >
-> \\ f^{\odot}(\underset{\sim}{x}) = {\mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}}^{\top}. \\
+> \\ f^{\odot}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = {\mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}}^{\top}. \\
 >
 > It is a function \\f^{\odot} : A^n \to B^n\\, where \\A^n\\ is the \\n\\-fold Cartesian product of \\A\\ with itself ([definition](sets.llms.md#def-cartesian-product)).
 
 > **NOTE:**
 >
-> **Example 10 (The exponential and logistic functions applied to a vector)** Let \\\underset{\sim}{x}= {\mathopen{}\left(-1, 0, 2\right)\mathclose{}}^{\top}\\. With \\\operatorname{exp}(t) = e^t\\ and the logistic function \\\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\\,
+> **Example 10 (The exponential and logistic functions applied to a vector)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= {\mathopen{}\left(-1, 0, 2\right)\mathclose{}}^{\top}\\. With \\\operatorname{exp}(t) = e^t\\ and the logistic function \\\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\\,
 >
-> \\ \begin{aligned} \operatorname{exp}^{\odot}(\underset{\sim}{x}) &= {\mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}}^{\top}, \\ \operatorname{expit}^{\odot}(\underset{\sim}{x}) &= {\mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}}^{\top}. \end{aligned} \\
+> \\ \begin{aligned} \operatorname{exp}^{\odot}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) &= {\mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}}^{\top}, \\ \operatorname{expit}^{\odot}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) &= {\mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}}^{\top}. \end{aligned} \\
 >
 > The code evaluates both, using R’s [`exp()`](https://rdrr.io/r/base/Log.html) and [`plogis()`](https://rdrr.io/r/stats/Logistic.html), which apply to a vector entry by entry.
 >
@@ -197,14 +197,14 @@ Last modified: 2026-10-17 04:02:11 (PDT)
 > #> [1] 0.2689414 0.5000000 0.8807971
 > ```
 >
-> So \\\operatorname{exp}^{\odot}(\underset{\sim}{x}) \approx\\ (0.3679, 1, 7.3891) and \\\operatorname{expit}^{\odot}(\underset{\sim}{x}) \approx\\ (0.2689, 0.5, 0.8808). Each entry of the output depends only on the entry of \\\underset{\sim}{x}\\ in the same position.
+> So \\\operatorname{exp}^{\odot}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \approx\\ (0.3679, 1, 7.3891) and \\\operatorname{expit}^{\odot}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \approx\\ (0.2689, 0.5, 0.8808). Each entry of the output depends only on the entry of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ in the same position.
 
 > **NOTE:**
 >
 > *Remark 5* (Notation and software for elementwise application).
 >
-> - The superscript \\\odot\\ keeps \\f^{\odot}\\ apart from \\f\\ itself. Where a function \\f\\ takes a whole vector as its argument, as in the multivariable calculus of [vector calculus](vector-calculus.llms.md), \\f(\underset{\sim}{x})\\ means \\f\\ evaluated at the vector, which is generally not the vector of its values at the entries.
-> - If \\f\\ has parameters, as in \\f\_{\underset{\sim}{\beta}}\\, the same parameters are used at every entry.
+> - The superscript \\\odot\\ keeps \\f^{\odot}\\ apart from \\f\\ itself. Where a function \\f\\ takes a whole vector as its argument, as in the multivariable calculus of [vector calculus](vector-calculus.llms.md), \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ means \\f\\ evaluated at the vector, which is generally not the vector of its values at the entries.
+> - If \\f\\ has parameters, as in \\f\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}}\\, the same parameters are used at every entry.
 > - Software usually applies a scalar function to a vector this way, without a special symbol: R and NumPy evaluate `exp(x)` entry by entry. The matrix exponential of a square matrix is a different function from \\\operatorname{exp}^{\odot}\\.
 
 > **NOTE:**
@@ -230,7 +230,7 @@ Last modified: 2026-10-17 04:02:11 (PDT)
 > - Evaluation at \\0\\ sends each function \\f : \mathbb{R}\to \mathbb{R}\\ to the number \\f(0)\\.
 > - The definite integral sends each continuous function \\f : \[0, 1\] \to \mathbb{R}\\ to the number \\\int_0^1 f(x)\\dx\\. For \\f(x) = x^2\\, the value is \\\frac{1}{3}\\.
 > - The [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) sends each random variable, which is a function, to a real number, its population mean.
-> - Summing the entries sends each vector \\\underset{\sim}{x}\in \mathbb{R}^n\\ to the number \\\sum\_{i=1}^n x_i\\.
+> - Summing the entries sends each vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^n\\ to the number \\\sum\_{i=1}^n x_i\\.
 >
 > Each takes a function or a vector as its argument and returns a number, so each is a functional. The derivative operator in [Example 11](#exm-operator) is not a functional, because its values are functions, not numbers.
 
