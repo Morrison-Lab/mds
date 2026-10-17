@@ -29,3 +29,20 @@ format:
 -   @wikipedia_linear_map --- linear maps and their matrices
 
 -   @wikipedia_hyperplane --- hyperplanes and their equations
+
+-   @wikipedia_main_diagonal --- the main diagonal of a matrix
+
+-   @wikipedia_matrix_addition --- matrix addition
+
+-   @wikipedia_normal_geometry --- normal vectors to curves and surfaces
+
+-   @wikipedia_scalar_multiplication --- scalar multiplication
+
+-   @wikipedia_square_matrix --- square matrices
+
+-   @wikipedia_tensor --- tensors and their arrays of components
+
+-   @wikipedia_translation_geometry --- translations in geometry
+
+-   @wikipedia_zero_matrix --- zero matrices
+
