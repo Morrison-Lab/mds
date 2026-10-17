@@ -4,6 +4,7 @@
 Let $S$ be a set, let $I$ be a nonempty set of indices,
 and let $A_i$ be a [subset](#def-subset) of $S$ for each $i \in I$.
 Then the complement of a union is the intersection of the complements,
+[@wikipedia_de_morgans_laws]
 and the complement of an intersection is the union of the complements:
 
 $$

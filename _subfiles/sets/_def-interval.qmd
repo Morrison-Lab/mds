@@ -2,7 +2,9 @@
 #### Interval
 
 For [real numbers](number-systems.qmd#def-real-numbers) $a \le b$,
-the **intervals** with **endpoints** $a$ and $b$ are
+the **intervals**
+[@wikipedia_interval_mathematics]
+with **endpoints** $a$ and $b$ are
 the closed interval (@def-closed-interval),
 the open interval (@def-open-interval),
 and the half-open intervals (@def-half-open-interval).

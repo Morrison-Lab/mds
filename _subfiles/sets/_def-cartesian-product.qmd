@@ -1,7 +1,9 @@
 :::{#def-cartesian-product}
 #### Cartesian product
 
-The **Cartesian product** of sets $A$ and $B$,
+The **Cartesian product**
+[@wikipedia_cartesian_product]
+of sets $A$ and $B$,
 written $A \times B$,
 is the set of ordered pairs whose first entry is in $A$
 and whose second entry is in $B$:

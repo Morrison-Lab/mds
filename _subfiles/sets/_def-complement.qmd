@@ -2,7 +2,9 @@
 #### Complement
 
 Let $A$ be a [subset](#def-subset) of a set $S$.
-The **complement** of $A$ in $S$
+The **complement**
+[@wikipedia_complement_set_theory]
+of $A$ in $S$
 is the set difference (@def-set-difference) $S \setminus A$:
 the elements of $S$ that are not in $A$.
 When the set $S$ is clear from context,

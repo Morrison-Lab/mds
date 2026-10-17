@@ -2,7 +2,9 @@
 
 #### Indexed family
 
-An **indexed family** is a collection of objects,
+An **indexed family**
+[@wikipedia_indexed_family]
+is a collection of objects,
 one for each element of a given [index set](#def-index-set).
 The object for the index $i$ is written $a_i$.
 

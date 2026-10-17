@@ -1,7 +1,9 @@
 :::{#def-union}
 #### Union
 
-The **union** of sets $A$ and $B$,
+The **union**
+[@wikipedia_union_set_theory]
+of sets $A$ and $B$,
 written $A \cup B$,
 is the set of elements that are in $A$, in $B$, or in both:
 
