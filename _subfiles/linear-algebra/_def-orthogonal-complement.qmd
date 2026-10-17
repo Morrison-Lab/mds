@@ -1,7 +1,9 @@
 :::{#def-orthogonal-complement}
 #### Orthogonal complement
 
-The **orthogonal complement** of a set $\mathcal{X}$ of vectors in $\reals^p$
+The **orthogonal complement**
+[@wikipedia_orthogonal_complement]
+of a set $\mathcal{X}$ of vectors in $\reals^p$
 is the set of vectors orthogonal (@def-orthogonal-vectors)
 to every vector of $\mathcal{X}$:
 

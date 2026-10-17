@@ -7,7 +7,9 @@ and let $\vecf{y} \in \reals^p$.
 By @thm-direct-sum-equiv,
 $\vecf{y} = \vecf{u} + \vecf{v}$
 for exactly one $\vecf{u} \in \mathcal{S}$ and $\vecf{v} \in \mathcal{T}$.
-The vector $\vecf{u}$ is the **projection** of $\vecf{y}$ onto $\mathcal{S}$ along $\mathcal{T}$
+The vector $\vecf{u}$ is the **projection**
+[@wikipedia_projection_linear_algebra]
+of $\vecf{y}$ onto $\mathcal{S}$ along $\mathcal{T}$
 [@banerjee2014linear, Definition 6.3, p. 163].
 
 :::

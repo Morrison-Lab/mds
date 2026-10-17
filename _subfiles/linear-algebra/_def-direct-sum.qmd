@@ -20,7 +20,9 @@ $$
 #### Direct sum
 
 If $\mathcal{S}_1$ and $\mathcal{S}_2$ are complementary in $\mathcal{V}$ (@def-complementary-subspaces),
-then $\mathcal{V}$ is the **direct sum** of $\mathcal{S}_1$ and $\mathcal{S}_2$,
+then $\mathcal{V}$ is the **direct sum**
+[@wikipedia_direct_sum]
+of $\mathcal{S}_1$ and $\mathcal{S}_2$,
 written $\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2$.
 
 :::
