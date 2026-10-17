@@ -2,7 +2,8 @@
 #### Maximum
 
 Let $A \subseteq \reals$.
-A number $M$ is the **maximum** of $A$,
+A number $M$ is the **maximum** of $A$
+[@wikipedia_maxima_and_minima],
 written $\max A$,
 if $M \in A$ and $a \le M$ for all $a \in A$.
 

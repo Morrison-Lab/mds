@@ -3,6 +3,7 @@
 
 Let $f : A \to \reals$ be a [function](functions.qmd#def-function).
 The **argmin** of $f$ over $A$
+[@wikipedia_arg_max]
 is the set of inputs where $f$ takes its smallest value:
 
 $$\argmin_{x \in A} f(x) \eqdef \cb{x \in A : \all a \in A,\ f(x) \le f(a)}$$

@@ -1,7 +1,9 @@
 :::{#def-identity}
 #### Identity
 
-An **identity** is an equation between two expressions
+An **identity**
+[@wikipedia_identity_mathematics]
+is an equation between two expressions
 that holds for every value of its variables
 in a stated set, such as the [real numbers](number-systems.qmd#def-real-numbers).
 

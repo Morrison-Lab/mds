@@ -89,7 +89,7 @@
 The word "percent" comes from the Latin "per centum";
 "centum" is Latin for 100,
 so "percent" means "per hundred"
-(cf. <https://en.wikipedia.org/wiki/Percentage>).
+[@wikipedia_percentage].
 
 {{< slidebreak >}}
 

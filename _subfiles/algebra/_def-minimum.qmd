@@ -2,7 +2,8 @@
 #### Minimum
 
 Let $A \subseteq \reals$.
-A number $m$ is the **minimum** of $A$,
+A number $m$ is the **minimum** of $A$
+[@wikipedia_maxima_and_minima],
 written $\min A$,
 if $m \in A$ and $m \le a$ for all $a \in A$.
 
