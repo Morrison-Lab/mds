@@ -48,6 +48,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-centered-data-rank.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-affine-subspace.qmd >}}
 
 {{< slidebreak >}}
