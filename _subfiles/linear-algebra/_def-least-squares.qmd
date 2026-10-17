@@ -2,7 +2,9 @@
 #### Least squares solution
 
 Let $\matr{A}$ be $m \times n$ and $\vecf{b} \in \reals^m$.
-A **least squares solution** of $\matr{A} \vecf{x} = \vecf{b}$
+A **least squares solution**
+[@wikipedia_least_squares]
+of $\matr{A} \vecf{x} = \vecf{b}$
 is a vector $\hat{\vecf{x}} \in \reals^n$ such that
 
 $$

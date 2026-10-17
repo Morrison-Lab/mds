@@ -60,7 +60,9 @@ and multiplying the two out gives $\matr{I}_2$.
 
 For an $n \times p$ design matrix $\mX$ (@def-design-matrix)
 with $\operatorname{rank}(\mX) = p$,
-the **hat matrix** is the $n \times n$ matrix
+the **hat matrix**
+[@wikipedia_projection_matrix]
+is the $n \times n$ matrix
 
 $$
 \underbrace{\matr{H}}_{n \times n}

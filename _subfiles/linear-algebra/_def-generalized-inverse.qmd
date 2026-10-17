@@ -1,7 +1,9 @@
 :::{#def-generalized-inverse}
 #### Generalized inverse
 
-A **generalized inverse** of an $m \times n$ matrix $\matr{A}$
+A **generalized inverse**
+[@wikipedia_generalized_inverse]
+of an $m \times n$ matrix $\matr{A}$
 is an $n \times m$ matrix $\matr{G}$ such that
 
 $$
