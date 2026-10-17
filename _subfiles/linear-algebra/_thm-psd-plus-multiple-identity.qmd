@@ -1,0 +1,49 @@
+:::{#thm-psd-plus-multiple-identity}
+#### Adding a positive multiple of the identity makes a matrix positive definite
+
+Let $\matr{A}$ be a $p \times p$ positive semidefinite matrix (@def-positive-semidefinite)
+and let $\combwt > 0$.
+Then $\matr{A} + \combwt \matr{I}_p$ is positive definite (@def-positive-definite),
+so it is invertible (@thm-pd-invertible).
+
+:::
+
+::: proof
+
+$\matr{A} + \combwt \matr{I}_p$ is symmetric:
+its transpose is $\tp{\matr{A}} + \combwt \matr{I}_p = \matr{A} + \combwt \matr{I}_p$
+(@thm-transpose-sum, @def-scalar-mult, @def-matrix-transpose).
+For $\vx \ne \vzero_p$,
+
+$$
+\ba
+\tp{\vx}\,(\matr{A} + \combwt \matr{I}_p)\,\vx
+&= \qform{\matr{A}}{\vx} + \combwt\,\tp{\vx}\,\matr{I}_p\,\vx
+&& \text{(@thm-matmul-distrib, @thm-scalar-matmul)}
+\\
+&= \qform{\matr{A}}{\vx} + \combwt\,\norm{\vx}^2
+&& \text{(@thm-identity, @eq-l2-norm, squared)}
+\\
+&> 0.
+&& \text{(} \qform{\matr{A}}{\vx} \ge 0, \; \combwt > 0, \; \vx \ne \vzero_p \text{)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-psd-plus-multiple-identity}
+#### Repairing a singular matrix
+
+$\matr{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ of @exm-positive-semidefinite is positive semidefinite and singular:
+$\matr{B} (1, -1) = \vzero_2$.
+With $\combwt = 1$,
+
+$$
+\matr{B} + \matr{I}_2 = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix},
+$$
+
+which is positive definite and invertible by @exm-pd-invertible.
+
+:::

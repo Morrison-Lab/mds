@@ -1,0 +1,45 @@
+:::{#cor-gram-invertible-iff}
+#### $\tp{\mX}\mX$ is invertible exactly when $\mX$ has full column rank
+
+For an $n \times p$ matrix $\mX$, the $p \times p$ matrix $\tp{\mX}\mX$ is invertible (@def-invertible-matrix)
+exactly when $\operatorname{rank}(\mX) = p$ (@def-full-column-rank).
+
+:::
+
+::: proof
+
+The following statements are equivalent:
+
+$$
+\ba
+\tp{\mX}\mX \text{ is invertible}
+&\iff \mathcal{N}(\tp{\mX}\mX) = \cb{\vzero_p}
+&& \text{(@thm-invertible-rank)}
+\\
+&\iff \mathcal{N}(\mX) = \cb{\vzero_p}
+&& \text{(@thm-null-gram)}
+\\
+&\iff \mX \text{ has full column rank.}
+&& \text{(@thm-independent-null-space)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-gram-invertible-iff}
+#### A design matrix with a repeated column
+
+$\mX = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}$ of @exm-rank has rank $1 < 2$.
+Its cross-product matrix is
+
+$$
+\tp{\mX}\mX = \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix},
+$$
+
+which is singular: $(2, -1)$ is in its null space,
+because $\mX (2, -1) = \vzero_3$ (@exm-independent-null-space).
+For the full-column-rank matrix of @exm-gram-invertible, $\tp{\mX}\mX$ is invertible.
+
+:::
