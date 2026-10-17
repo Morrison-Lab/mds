@@ -1,7 +1,9 @@
 :::{#def-square-matrix}
 #### Square matrix
 
-A matrix is **square** if it has the same number of rows as columns.
+A matrix is **square**
+[@wikipedia_square_matrix]
+if it has the same number of rows as columns.
 
 :::
 

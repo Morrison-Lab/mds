@@ -2,7 +2,9 @@
 #### Translation
 
 For a fixed vector $\vec{b} \in \reals^m$,
-the **translation** by $\vec{b}$ is the function
+the **translation**
+[@wikipedia_translation_geometry]
+by $\vec{b}$ is the function
 $t_{\vec{b}} : \reals^m \to \reals^m$ defined by
 
 $$t_{\vec{b}}(\vy) = \vy + \vec{b}$$

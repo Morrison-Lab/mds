@@ -1,7 +1,9 @@
 :::{#def-identity-matrix}
 #### Identity matrix
 
-The $p \times p$ **identity matrix** $\matr{I}_p$
+The $p \times p$ **identity matrix**
+[@wikipedia_identity_matrix]
+$\matr{I}_p$
 (or $\matr{I}$ when the size is clear from context)
 has ones on the [main diagonal](#def-main-diagonal) and zeros elsewhere:
 

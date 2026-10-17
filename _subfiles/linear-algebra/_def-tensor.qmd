@@ -9,7 +9,9 @@ not taken from that page.
 :::{#def-tensor}
 #### Tensor
 
-A **tensor** of order $k \ge 1$ is an array of numbers
+A **tensor**
+[@wikipedia_tensor]
+of order $k \ge 1$ is an array of numbers
 with $k$ indices,
 $$
 \mathcal{A} = \paren{a_{i_1 i_2 \cdots i_k}},

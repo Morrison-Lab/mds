@@ -1,7 +1,9 @@
 :::{#def-hyperplane}
 #### Hyperplane
 
-A **hyperplane** in $\reals^p$ is the set of points $\vx \in \reals^p$ satisfying
+A **hyperplane**
+[@wikipedia_hyperplane]
+in $\reals^p$ is the set of points $\vx \in \reals^p$ satisfying
 
 $$\dprod{\vec{w}}{\vx} + b = 0$$
 
@@ -15,7 +17,9 @@ The number $b$ is the offset of the hyperplane.
 :::{#def-normal-vector}
 #### Normal vector of a hyperplane
 
-In @def-hyperplane, the vector $\vec{w}$ is a **normal vector** of the hyperplane.
+In @def-hyperplane, the vector $\vec{w}$ is a **normal vector**
+[@wikipedia_normal_geometry]
+of the hyperplane.
 
 :::
 

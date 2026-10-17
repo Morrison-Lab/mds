@@ -1,7 +1,9 @@
 :::{#def-matrix}
 #### Matrix
 
-A **matrix** of dimensions $m \times n$
+A **matrix**
+[@wikipedia_matrix_mathematics]
+of dimensions $m \times n$
 is a rectangular array of $m \cdot n$ numbers,
 arranged in $m$ rows and $n$ columns:
 
