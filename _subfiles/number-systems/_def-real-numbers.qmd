@@ -1,7 +1,9 @@
 :::{#def-real-numbers}
 #### Real numbers
 
-A **real number** is a number that can be written as a decimal expansion:
+A **real number**
+[@wikipedia_real_number]
+is a number that can be written as a decimal expansion:
 an integer part, followed by a decimal point
 and a finite or infinite list of decimal places after it.
 Equivalently, the real numbers are the points on the number line.
