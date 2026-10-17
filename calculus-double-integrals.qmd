@@ -20,6 +20,6 @@ format:
 
 -   @wikipedia_iterated_integral --- iterated integrals and the order of integration
 
--   @wp:fubini ---Fubini's theorem, in the Riemann and Lebesgue settings
+-   @wp:fubini --- Fubini's theorem, in the Riemann and Lebesgue settings
 
 -   @wikipedia_tonelli_s_theorem --- Tonelli's theorem for non-negative functions
