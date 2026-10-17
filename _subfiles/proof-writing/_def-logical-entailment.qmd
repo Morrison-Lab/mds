@@ -3,7 +3,9 @@
 
 Propositions or predicates $\dsn{P}$
 (@def-proposition, @def-predicate)
-**logically entail** a proposition or predicate $Q$
+**logically entail**
+[@wikipedia_logical_consequence]
+a proposition or predicate $Q$
 when every choice of values for their variables
 that makes all of $\dsn{P}$ true
 also makes $Q$ true.

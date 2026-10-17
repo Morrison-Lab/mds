@@ -1,7 +1,9 @@
 :::{#def-counterexample}
 #### Counterexample
 
-A **counterexample** to a proposition of the form
+A **counterexample**
+[@wikipedia_counterexample]
+to a proposition of the form
 "for every $x$ in $A$, $P(x)$",
 where $P(x)$ is a predicate (@def-predicate),
 is an element $x$ of $A$ for which $P(x)$ is false.

@@ -308,7 +308,9 @@ $\Var{X} = \E{X^2} - \sqf{\E{X}}$
 :::{#def-direct-proof}
 #### Direct proof
 
-A **direct proof** of a proposition $Q$
+A **direct proof**
+[@wikipedia_direct_proof]
+of a proposition $Q$
 starts from the assumptions that $Q$ is stated under, if any,
 and reaches $Q$ through a chain of steps,
 each of which applies a definition,
@@ -413,7 +415,9 @@ The following example uses [summation notation](algebra.qmd#def-summation).
 :::{#def-propositional-logic}
 #### Propositional logic
 
-**Propositional logic** is the study of
+**Propositional logic**
+[@wikipedia_propositional_calculus]
+is the study of
 [logical entailment](#def-logical-entailment)
 among [propositions](#def-proposition)
 built from basic propositions $P, Q, R, \ldots$
@@ -445,7 +449,9 @@ so $P$ and $P \Rightarrow Q$ logically entail $Q$.
 :::{#def-first-order-logic}
 #### First-order logic
 
-**First-order logic** extends propositional logic (@def-propositional-logic)
+**First-order logic**
+[@wikipedia_first_order_logic]
+extends propositional logic (@def-propositional-logic)
 by also allowing:
 
 - variables $x, y, \ldots$ that stand for elements of a set;
@@ -480,7 +486,9 @@ because it has no way to refer to the elements of $S$.
 :::{#def-formal-proof}
 #### Formal proof
 
-A **formal proof** is a [proof](#def-proof)
+A **formal proof**
+[@wikipedia_formal_proof]
+is a [proof](#def-proof)
 written in propositional logic (@def-propositional-logic)
 or first-order logic (@def-first-order-logic)
 in which each step is an assumption
