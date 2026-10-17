@@ -1,7 +1,9 @@
 :::{#def-unit-circle}
 #### Unit circle
 
-The **unit circle** is the set of points $(x_1, x_2)$ in the plane with $x_1^2 + x_2^2 = 1$.
+The **unit circle**
+[@wikipedia_unit_circle]
+is the set of points $(x_1, x_2)$ in the plane with $x_1^2 + x_2^2 = 1$.
 
 :::
 

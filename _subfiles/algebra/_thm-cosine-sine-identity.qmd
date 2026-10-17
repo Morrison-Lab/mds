@@ -1,7 +1,8 @@
 :::{#thm-cosine-sine-identity}
 #### The Pythagorean identity
 
-For every real number $\angpar$,
+For every real number $\angpar$
+[@wikipedia_pythagorean_trigonometric_identity],
 
 $$
 \cos^2\angpar + \sin^2\angpar = 1.

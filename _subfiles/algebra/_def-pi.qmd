@@ -1,7 +1,9 @@
 :::{#def-pi}
 #### The number $\pi$
 
-The number $\pi \approx 3.14159$ is half of the circumference of the unit circle (@def-unit-circle).
+The number $\pi \approx 3.14159$
+[@wikipedia_pi]
+is half of the circumference of the unit circle (@def-unit-circle).
 
 :::
 
