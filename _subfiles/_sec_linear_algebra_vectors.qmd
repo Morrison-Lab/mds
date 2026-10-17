@@ -12,6 +12,8 @@
 
 {{< include mds/_subfiles/linear-algebra/_note-def-column-vector.qmd >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-vector-mark-placement.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-real-coordinate-space.qmd >}}
