@@ -3,7 +3,8 @@
 
 Restricted to positive integers,
 the following results are
-[Tarski's eleven "high school" identities](https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem):
+Tarski's eleven "high school" identities
+[@wikipedia_tarskis_high_school_algebra_problem]:
 
 - sums are symmetric and associative
   (@thm-sum-symmetric, @thm-sum-assoc);

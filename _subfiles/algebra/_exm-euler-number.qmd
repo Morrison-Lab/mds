@@ -6,6 +6,6 @@ $e = 2.71828\ldots$ is an
 so no fraction equals it exactly.
 The fraction $\frac{19}{7} = 2.714\ldots$ is close,
 but $\frac{19}{7} \ne e$
-(see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
+[@wikipedia_e_mathematical_constant].
 
 :::

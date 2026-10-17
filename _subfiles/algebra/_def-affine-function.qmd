@@ -2,7 +2,9 @@
 #### Affine function of one variable
 
 A [function](functions.qmd#def-function) $f: \reals \to \reals$
-is **affine** if there are numbers $m$ and $b$ such that
+is **affine**
+[@wikipedia_affine_transformation]
+if there are numbers $m$ and $b$ such that
 
 $$f(x) = m x + b \quad \text{for all } x \in \reals$$
 
@@ -14,7 +16,8 @@ $$f(x) = m x + b \quad \text{for all } x \in \reals$$
 #### Slope
 
 In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
-$m$ is called the **slope** of $f$.
+$m$ is called the **slope** of $f$
+[@wikipedia_slope].
 
 :::
 

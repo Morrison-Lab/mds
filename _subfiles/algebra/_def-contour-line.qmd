@@ -3,7 +3,9 @@
 
 For a function $g$ of two real variables $b$ and $c$
 and a number $k$,
-the **contour line** of $g$ at height $k$
+the **contour line**
+[@wikipedia_contour_line]
+of $g$ at height $k$
 is the set of points where $g$ equals $k$:
 
 $$\cb{(b, c) : g(b, c) = k}$$

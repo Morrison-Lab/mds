@@ -6,7 +6,9 @@ print page number not verified).
 :::{#def-polynomial}
 #### Polynomial
 
-A **polynomial** (in one variable $x$) is a
+A **polynomial** (in one variable $x$)
+[@wikipedia_polynomial]
+is a
 [function](functions.qmd#def-function) $f : \reals \to \reals$
 that can be written as
 $$
