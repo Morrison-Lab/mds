@@ -1,7 +1,9 @@
 :::{#def-expression}
 #### Expression
 
-An **expression** is a string of symbols, built from constants, variables,
+An **expression**
+[@wikipedia_expression_mathematics]
+is a string of symbols, built from constants, variables,
 operations and function names according to the rules of the notation.
 When its variables are read as inputs,
 an expression *denotes* a [function](functions.qmd#def-function):
