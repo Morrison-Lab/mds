@@ -1,7 +1,9 @@
 :::{#def-proof}
 #### Proof
 
-A **proof** of a proposition (@def-proposition)
+A **proof**
+[@wikipedia_mathematical_proof]
+of a proposition (@def-proposition)
 is a finite list of statements that ends with that proposition,
 in which each statement is
 

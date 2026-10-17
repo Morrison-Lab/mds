@@ -2,6 +2,8 @@
 #### Sufficient condition
 
 When the proposition "if $P$, then $Q$" is true,
-$P$ is a **sufficient condition** for $Q$.
+$P$ is a **sufficient condition**
+[@wikipedia_necessity_and_sufficiency]
+for $Q$.
 
 :::

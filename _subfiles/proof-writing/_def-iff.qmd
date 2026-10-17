@@ -1,7 +1,9 @@
 :::{#def-iff}
 #### If and only if
 
-The logical connective (@def-logical-connective) **if and only if** is written $P \Leftrightarrow Q$ ("$P$ if and only if $Q$");
+The logical connective (@def-logical-connective) **if and only if** is written
+[@wikipedia_logical_biconditional]
+$P \Leftrightarrow Q$ ("$P$ if and only if $Q$");
 it is true when $P$ and $Q$ have the same truth value,
 and false otherwise.
 
