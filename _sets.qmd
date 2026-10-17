@@ -97,6 +97,14 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/sets/_def-label.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-label.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/sets/_def-index-set.qmd >}}
 
 {{< slidebreak >}}
