@@ -4,9 +4,12 @@
 #### Why the vector mark sits under the symbol
 
 In these notes, the mark that shows a symbol is a vector is a tilde under the letter, as in $\vx$.
-Many books instead put a bold face or an arrow over the letter.
-We put the mark underneath for two reasons.
+Many books instead use a bold letter or an arrow over the letter.
+We chose a mark underneath for three reasons.
 
+-   Bold letters are hard to write by hand.
+    In class we work problems on a board, and a bold letter cannot be copied neatly with chalk or a marker.
+    A small tilde under a letter is quick to write, so the board and the notes look the same.
 -   The space above a letter is already used.
     In statistics, a hat over a symbol means "estimated value".
     A vector mark above the letter would have to share that space with the hat, and the two marks would be crowded together.
