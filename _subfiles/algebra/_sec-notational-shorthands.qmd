@@ -77,7 +77,7 @@ and the set of values $X$ can take, $\rangef{X}$,
 is the [image](functions.qmd#def-image) of $X$.
 These notes use "range" only for variables:
 for a function, "range" can mean either the image or the codomain
-([Image and range](functions.qmd#rem-image-range)).
+([Range](functions.qmd#def-range)).
 In statistics, "the range" of a dataset can also mean
 its largest value minus its smallest value;
 $\rangef{x}$ is a set, not that difference.
