@@ -4,7 +4,8 @@
 For a real number $\angpar$, start at the point $(1, 0)$ of the unit circle (@def-unit-circle)
 and move a distance $\abs{\angpar}$ along the circle,
 counterclockwise if $\angpar \ge 0$ and clockwise if $\angpar < 0$.
-The first coordinate of the point reached is the **cosine** of $\angpar$, written $\cos\angpar$.
+The first coordinate of the point reached is the **cosine** of $\angpar$
+[@wikipedia_sine_and_cosine], written $\cos\angpar$.
 
 :::
 
