@@ -31,3 +31,14 @@ format:
 -   @wikipedia_logarithm --- logarithms and their laws
 
 -   @wikipedia_natural_logarithm --- the natural logarithm
+
+-   @wikipedia_affine_transformation --- affine transformations and affine functions
+
+-   @wikipedia_contour_line --- contour lines and level sets
+
+-   @wikipedia_e_mathematical_constant --- the number e and its properties
+
+-   @wikipedia_parabola --- parabolas and their properties
+
+-   @wikipedia_tarskis_high_school_algebra_problem --- Tarski's high school algebra problem
+
