@@ -2,6 +2,7 @@
 #### Finite set
 
 A set $A$ is **finite**
+[@wikipedia_finite_set]
 if it is empty,
 or if, for some natural number $n$,
 its elements can be listed as a finite sequence (@def-finite-sequence) $\dsn{a}$
@@ -15,7 +16,9 @@ in which each element of $A$ appears exactly once.
 #### Cardinality
 
 For a finite set $A$ (@def-finite-set), the number $n$ in such a list
-is the **cardinality** of $A$, its number of elements,
+is the **cardinality**
+[@wikipedia_cardinality]
+of $A$, its number of elements,
 written $\abs{A}$;
 the empty set has cardinality $\abs{\emptyset} = 0$.
 
