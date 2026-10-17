@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-16 10:58:47 (PDT)
+Last modified: 2026-10-16 18:32:13 (PDT)
 
 > **NOTE:**
 >
@@ -16,9 +16,6 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 >
 > **Definition 1 (Function (map, mapping, transformation))** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\.
 >
-> - The element \\a \in A\\ is called the **argument** (or **input**) to \\f\\.
-> - The assigned element \\f(a) \in B\\ is called the **value** (or **output**) of \\f\\ at \\a\\.
->
 > A function is also called a **map** (or **mapping**) or a **transformation**; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.
 
 > **NOTE:**
@@ -27,23 +24,39 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Relation)** A **relation** \\\sim\\ on a set \\S\\ is a rule that, for each [ordered pair](sets.llms.md#def-ordered-pair) of elements \\a, b \in S\\, says whether \\a \sim b\\ holds (“\\a\\ is related to \\b\\”).
+> **Definition 2 (Argument (input))** An **argument** (or **input**) of a [function](#def-function) \\f : A \to B\\ is an element \\a \in A\\ that \\f\\ is applied to.
 
 > **NOTE:**
 >
-> **Example 2 (Relations on the real numbers)** \\=\\, \\\<\\ and \\\le\\ are relations on \\\mathbb{R}\\. For \\\<\\, the pair \\(2, 5)\\ is related, since \\2 \< 5\\, but the pair \\(5, 2)\\ is not, since \\5 \< 2\\ is false: the order of the pair matters.
+> **Example 2 (Arguments of doubling a die roll)** For the function \\f(a) = 2a\\ in [Example 1](#exm-function), the roll \\3\\ is an argument of \\f\\, because \\f\\ can be applied to it. The number \\7\\ is not an argument of \\f\\, because it is not an element of \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Definition 3 (Domain)** The **domain** of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
+> **Definition 3 (Value (output))** The **value** (or **output**) of a [function](#def-function) \\f : A \to B\\ at an [argument](#def-argument) \\a \in A\\ is the element \\f(a) \in B\\ that \\f\\ assigns to \\a\\.
 
 > **NOTE:**
 >
-> **Definition 4 (Codomain)** The **codomain** of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
+> **Example 3 (Values of doubling a die roll)** For the function \\f(a) = 2a\\ in [Example 1](#exm-function), the value of \\f\\ at the argument \\3\\ is \\f(3) = 6\\, and the value at the argument \\5\\ is \\f(5) = 10\\.
 
 > **NOTE:**
 >
-> **Definition 5 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
+> **Definition 4 (Relation)** A **relation** \\\sim\\ on a set \\S\\ is a rule that, for each [ordered pair](sets.llms.md#def-ordered-pair) of elements \\a, b \in S\\, says whether \\a \sim b\\ holds (“\\a\\ is related to \\b\\”).
+
+> **NOTE:**
+>
+> **Example 4 (Relations on the real numbers)** \\=\\, \\\<\\ and \\\le\\ are relations on \\\mathbb{R}\\. For \\\<\\, the pair \\(2, 5)\\ is related, since \\2 \< 5\\, but the pair \\(5, 2)\\ is not, since \\5 \< 2\\ is false: the order of the pair matters.
+
+> **NOTE:**
+>
+> **Definition 5 (Domain)** The **domain** of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
+
+> **NOTE:**
+>
+> **Definition 6 (Codomain)** The **codomain** of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
+
+> **NOTE:**
+>
+> **Definition 7 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
 >
 > \\f(A) \stackrel{\text{def}}{=}\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}\\
 >
@@ -51,13 +64,24 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (Image and range). Many sources call the image the **range**, but others use “range” for the codomain, so these notes avoid “range” for functions in general (see [Wikipedia: Range of a function](https://en.wikipedia.org/wiki/Range_of_a_function)). For example, for \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(a) = a^2\\, “the range of \\f\\” could mean the image \\\[0, \infty)\\ or the codomain \\\mathbb{R}\\.
+> **Definition 8 (Range)** The word **range** of a [function](#def-function) \\f : A \to B\\ has two conflicting meanings, and sources use one or the other:
 >
-> The image is always a subset of the codomain, because every value \\f(a)\\ lies in \\B\\.
+> - the [image](#def-image) of \\f\\, the set \\f(A)\\ of values that \\f\\ actually takes;
+> - the [codomain](#def-codomain) of \\f\\, the set \\B\\ that its values are required to lie in.
+>
+> To avoid the ambiguity, these notes write “image” or “codomain” instead, and recommend that you do too (see [Wikipedia: Range of a function](https://en.wikipedia.org/wiki/Range_of_a_function)).
 
 > **NOTE:**
 >
-> **Example 3 (Domain, codomain, and image of the doubled die roll)** For the function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = 2a\\ from [Example 1](#exm-function):
+> **Example 5 (Two ranges of a squaring function)** For \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(a) = a^2\\, “the range of \\f\\” could mean the image \\\[0, \infty)\\ or the codomain \\\mathbb{R}\\. The image is always a subset of the codomain, because every value \\f(a)\\ lies in the codomain.
+
+> **NOTE:**
+>
+> *Remark 1* (Image and range). Many sources call the [image](#def-image) the “range”, but others use “range” for the [codomain](#def-codomain). [Definition 8](#def-range) gives the two meanings and the terms these notes use instead.
+
+> **NOTE:**
+>
+> **Example 6 (Domain, codomain, and image of the doubled die roll)** For the function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = 2a\\ from [Example 1](#exm-function):
 >
 > - the domain is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\;
 > - the codomain is \\\mathbb{R}\\;
@@ -67,13 +91,13 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Graph of a function)** The **graph** of a [function](#def-function) \\f : A \to B\\ is the set of [ordered pairs](sets.llms.md#def-ordered-pair) \\(a, f(a))\\, one for each element \\a\\ of its domain:
+> **Definition 9 (Graph of a function)** The **graph** of a [function](#def-function) \\f : A \to B\\ is the set of [ordered pairs](sets.llms.md#def-ordered-pair) \\(a, f(a))\\, one for each element \\a\\ of its domain:
 >
 > \\\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Example 4 (The graph of a function on three points)** Let \\f : \mathopen{}\left\\-1, 0, 2\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = a^2\\. Then \\f(-1) = 1\\, \\f(0) = 0\\, and \\f(2) = 4\\, so the graph of \\f\\ is \\\mathopen{}\left\\(-1, 1), (0, 0), (2, 4)\right\\\mathclose{}\\. The pair \\(1, 1)\\ is not in the graph, because \\1\\ is not in the domain of \\f\\.
+> **Example 7 (The graph of a function on three points)** Let \\f : \mathopen{}\left\\-1, 0, 2\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = a^2\\. Then \\f(-1) = 1\\, \\f(0) = 0\\, and \\f(2) = 4\\, so the graph of \\f\\ is \\\mathopen{}\left\\(-1, 1), (0, 0), (2, 4)\right\\\mathclose{}\\. The pair \\(1, 1)\\ is not in the graph, because \\1\\ is not in the domain of \\f\\.
 
 > **NOTE:**
 >
@@ -81,7 +105,7 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (What a function is fundamentally). [Definition 1](#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](sets.llms.md#def-ordered-pair) and its graph ([Definition 6](#def-graph)): the set of pairs \\G = \mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{} \subseteq A \times B\\. Authors define a function formally in one of two ways:
+> *Remark 3* (What a function is fundamentally). [Definition 1](#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](sets.llms.md#def-ordered-pair) and its graph ([Definition 9](#def-graph)): the set of pairs \\G = \mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{} \subseteq A \times B\\. Authors define a function formally in one of two ways:
 >
 > 1.  **As its graph** ([Halmos 1974, sec. 8](#ref-halmos1974naive), p. 30): a function is a subset of \\A \times B\\ containing exactly one pair \\(a, b)\\ for each \\a \in A\\, where \\b = f(a)\\, and the statement \\f(a) = b\\ is notation for \\(a, b) \in f\\. Under this convention, the codomain \\B\\ is specified alongside the graph in the declaration \\f : A \to B\\.
 > 2.  **As a triple \\(A, B, G)\\**: the function consists of the domain \\A\\, the codomain \\B\\, and the graph \\G \subseteq A \times B\\. This explicit packaging retains the codomain \\B\\ as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into \\\mathbb{R}\\ versus into integers).
@@ -98,21 +122,21 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](#def-function). The **composition** of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
+> **Definition 10 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](#def-function). The **composition** of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
 >
 > \\(f \circ g)(a) \stackrel{\text{def}}{=}f(g(a)) \quad \text{for each } a \in A.\\
 
 > **NOTE:**
 >
-> **Definition 8 (Inner function)** In a composition \\f \circ g\\ ([Definition 7](#def-composition)), \\g\\ is the **inner function**, applied first.
+> **Definition 11 (Inner function)** In a composition \\f \circ g\\ ([Definition 10](#def-composition)), \\g\\ is the **inner function**, applied first.
 
 > **NOTE:**
 >
-> **Definition 9 (Outer function)** In a composition \\f \circ g\\ ([Definition 7](#def-composition)), \\f\\ is the **outer function**, applied to the result.
+> **Definition 12 (Outer function)** In a composition \\f \circ g\\ ([Definition 10](#def-composition)), \\f\\ is the **outer function**, applied to the result.
 
 > **NOTE:**
 >
-> **Example 5 (The order of composition matters)** Let \\g : \mathbb{R}\to \mathbb{R}\\ with \\g(x) = x + 1\\, and \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = x^2\\.
+> **Example 8 (The order of composition matters)** Let \\g : \mathbb{R}\to \mathbb{R}\\ with \\g(x) = x + 1\\, and \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = x^2\\.
 >
 > - \\ \begin{aligned} (f \circ g)(2) &= f(g(2)) \\ &= f(3) \\ &= 9: \end{aligned} \\
 >
@@ -126,7 +150,7 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Inverse function)** Let \\f : A \to B\\ be a [function](#def-function). A function \\g : B \to A\\ is the **inverse function** of \\f\\, written \\f^{-1}\\, if both
+> **Definition 13 (Inverse function)** Let \\f : A \to B\\ be a [function](#def-function). A function \\g : B \to A\\ is the **inverse function** of \\f\\, written \\f^{-1}\\, if both
 >
 > - \\g(f(a)) = a\\ for every \\a \in A\\, and
 > - \\f(g(b)) = b\\ for every \\b \in B\\.
@@ -139,7 +163,7 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Example 6 (An invertible function, and one that is not)**  
+> **Example 9 (An invertible function, and one that is not)**  
 >
 > - Let \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = 2x + 1\\. Its inverse function is \\f^{-1}(y) = \frac{y - 1}{2}\\. For example, \\f(3) = 7\\ and
 >
@@ -149,7 +173,7 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\underset{\sim}{x}= {\mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\underset{\sim}{x}\\, written \\f^{\odot}(\underset{\sim}{x})\\, is the vector of the values of \\f\\ at the entries of \\\underset{\sim}{x}\\:
+> **Definition 14 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\underset{\sim}{x}= {\mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\underset{\sim}{x}\\, written \\f^{\odot}(\underset{\sim}{x})\\, is the vector of the values of \\f\\ at the entries of \\\underset{\sim}{x}\\:
 >
 > \\ f^{\odot}(\underset{\sim}{x}) = {\mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}}^{\top}. \\
 >
@@ -157,7 +181,7 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Example 7 (The exponential and logistic functions applied to a vector)** Let \\\underset{\sim}{x}= {\mathopen{}\left(-1, 0, 2\right)\mathclose{}}^{\top}\\. With \\\operatorname{exp}(t) = e^t\\ and the logistic function \\\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\\,
+> **Example 10 (The exponential and logistic functions applied to a vector)** Let \\\underset{\sim}{x}= {\mathopen{}\left(-1, 0, 2\right)\mathclose{}}^{\top}\\. With \\\operatorname{exp}(t) = e^t\\ and the logistic function \\\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\\,
 >
 > \\ \begin{aligned} \operatorname{exp}^{\odot}(\underset{\sim}{x}) &= {\mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}}^{\top}, \\ \operatorname{expit}^{\odot}(\underset{\sim}{x}) &= {\mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}}^{\top}. \end{aligned} \\
 >
@@ -185,15 +209,15 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](number-systems.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+> **Definition 15 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](number-systems.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
 
 > **NOTE:**
 >
-> **Definition 13 (Term of a sequence)** The value \\a_n\\ of a sequence \\(a_n)\\ ([Definition 12](#def-sequence)) is called its \\n\\th **term**.
+> **Definition 16 (Term of a sequence)** The value \\a_n\\ of a sequence \\(a_n)\\ ([Definition 15](#def-sequence)) is called its \\n\\th **term**.
 
 > **NOTE:**
 >
-> **Example 8 (Sequences)**  
+> **Example 11 (Sequences)**  
 >
 > - \\a_n = \frac{1}{n}\\ is the sequence \\1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots\\; its third term is \\a_3 = \frac{1}{3}\\.
 > - \\b_n = (-1)^n\\ is the sequence \\-1, 1, -1, 1, \ldots\\: a sequence can repeat values.
@@ -201,17 +225,17 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
+> **Definition 17 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
 
 ## 2 Countable sets
 
 > **NOTE:**
 >
-> **Definition 15 (Finite set)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 14](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once.
+> **Definition 18 (Finite set)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 17](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once.
 
 > **NOTE:**
 >
-> **Definition 16 (Cardinality)** For a finite set \\A\\ ([Definition 15](#def-finite-set)), the number \\n\\ in such a list is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
+> **Definition 19 (Cardinality)** For a finite set \\A\\ ([Definition 18](#def-finite-set)), the number \\n\\ in such a list is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
 
 > **NOTE:**
 >
@@ -219,7 +243,7 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Example 9 (Finite and infinite sets)**  
+> **Example 12 (Finite and infinite sets)**  
 >
 > - \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is finite, with \\\mathopen{}\left\|\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\|\mathclose{} = 3\\.
 > - \\\mathopen{}\left\\1, 1, 2\right\\\mathclose{} = \mathopen{}\left\\1, 2\right\\\mathclose{}\\, so \\\mathopen{}\left\|\mathopen{}\left\\1, 1, 2\right\\\mathclose{}\right\|\mathclose{} = 2\\: a repeated listing does not count twice.
@@ -228,19 +252,19 @@ Last modified: 2026-10-16 10:58:47 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Infinite set)** A set that is not finite ([Definition 15](#def-finite-set)) is **infinite**.
+> **Definition 20 (Infinite set)** A set that is not finite ([Definition 18](#def-finite-set)) is **infinite**.
 
 > **NOTE:**
 >
-> **Definition 18 (Countable set)** A set is **countable** if it is finite ([Definition 15](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 12](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
+> **Definition 21 (Countable set)** A set is **countable** if it is finite ([Definition 18](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 15](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
 
 > **NOTE:**
 >
-> **Definition 19 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
+> **Definition 22 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
 
 > **NOTE:**
 >
-> **Example 10 (Countable and uncountable sets)**  
+> **Example 13 (Countable and uncountable sets)**  
 >
 > - \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ is countable, because it is finite.
 > - The [non-negative integers](number-systems.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
