@@ -31,3 +31,6 @@ format:
 -   @wikipedia_triangular_matrix --- triangular matrices and back substitution
 
 -   @wikipedia_lu_decomposition --- the LU decomposition
+
+-   @wikipedia_consistent_and_inconsistent_equations --- consistent and inconsistent systems of equations
+
