@@ -1,7 +1,9 @@
 :::{#def-complex-conjugate}
 #### Complex conjugate
 
-The **complex conjugate** of a complex number $z = a + b\,i$ (@def-complex-number) is
+The **complex conjugate**
+[@wikipedia_complex_conjugate]
+of a complex number $z = a + b\,i$ (@def-complex-number) is
 
 $$\overline{z} \eqdef a - b\,i.$$
 
