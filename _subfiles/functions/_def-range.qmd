@@ -9,6 +9,6 @@ and sources use one or the other:
 
 To avoid the ambiguity, these notes write "image" or "codomain" instead,
 and recommend that you do too
-(see [Wikipedia: Range of a function](https://en.wikipedia.org/wiki/Range_of_a_function)).
+[@wikipedia_range_of_a_function].
 
 :::

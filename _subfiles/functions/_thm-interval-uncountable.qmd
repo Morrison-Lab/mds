@@ -17,7 +17,7 @@ it builds a number in $[0, 1]$ whose
 differs from the $n$th number's in the $n$th digit
 (its $n$th decimal place, one of $0, 1, \ldots, 9$),
 so the sequence misses it
-(see [Wikipedia: Cantor's diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)).
+[@wikipedia_cantors_diagonal_argument].
 One way to choose the $n$th digit is to use $5$,
 unless the $n$th number's $n$th digit is $5$, in which case use $4$.
 For example, if the sequence starts $0.1234\ldots$, $0.3579\ldots$, $0.2468\ldots$,

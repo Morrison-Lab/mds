@@ -12,6 +12,42 @@ format:
 
 {{< include mds/_functions.qmd >}}
 
+## Further reading {.unnumbered}
+
+-   @wikipedia_function_mathematics --- functions, their domains, codomains and images
+
+-   @wikipedia_binary_relation --- binary relations and their properties
+
+-   @wikipedia_domain_of_a_function --- the domain of a function
+
+-   @wikipedia_codomain --- codomains
+
+-   @wikipedia_image_mathematics --- images of functions and sets
+
+-   @wikipedia_range_of_a_function --- the two meanings of the range
+
+-   @wikipedia_graph_of_a_function --- graphs of functions
+
+-   @wikipedia_function_composition --- composition of functions
+
+-   @wikipedia_inverse_function --- inverse functions
+
+-   @wikipedia_operator_mathematics --- operators
+
+-   @wikipedia_functional_mathematics --- functionals
+
+-   @wikipedia_sequence --- sequences and their limits
+
+-   @wikipedia_finite_set --- finite sets
+
+-   @wikipedia_cardinality --- cardinality and its infinite cases
+
+-   @wikipedia_infinite_set --- infinite sets
+
+-   @wikipedia_countable_set --- countable sets, with examples
+
+-   @wikipedia_cantors_diagonal_argument --- Cantor's diagonal argument
+
 ## References {.unnumbered}
 
 ::: {#refs}

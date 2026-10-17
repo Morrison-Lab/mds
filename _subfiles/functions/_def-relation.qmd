@@ -1,7 +1,9 @@
 :::{#def-relation}
 #### Relation
 
-A **relation** $\sim$ on a set $S$ is a rule that,
+A **relation** $\sim$ on a set $S$
+[@wikipedia_binary_relation]
+is a rule that,
 for each [ordered pair](sets.qmd#def-ordered-pair) of elements $a, b \in S$,
 says whether $a \sim b$ holds ("$a$ is related to $b$").
 

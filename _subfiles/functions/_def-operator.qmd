@@ -1,7 +1,9 @@
 :::{#def-operator}
 #### Operator
 
-An **operator** is a [function](#def-function)
+An **operator**
+[@wikipedia_operator_mathematics]
+is a [function](#def-function)
 whose [arguments](#def-argument) and [values](#def-value)
 are both functions or both vectors.
 

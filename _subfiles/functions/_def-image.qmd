@@ -1,7 +1,9 @@
 :::{#def-image}
 #### Image
 
-The **image** of a [function](#def-function) $f : A \to B$
+The **image**
+[@wikipedia_image_mathematics]
+of a [function](#def-function) $f : A \to B$
 is the set of values that $f$ actually takes:
 
 $$f(A) \eqdef \set{f(a) : a \in A}$$
