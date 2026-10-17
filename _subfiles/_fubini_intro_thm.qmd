@@ -116,7 +116,7 @@ $$
 #### Fubini's theorem (Riemann version)
 
 Let $f$ be **continuous** on a plane region $R \subseteq \reals^2$
-[@wikipedia_fubinis_theorem].
+[@wp:fubini].
 
 1. **Vertically simple region.**
    If $R$ is defined by $a \le x \le b$ and $g_1(x) \le y \le g_2(x)$,
