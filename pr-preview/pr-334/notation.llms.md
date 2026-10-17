@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-16 22:37:53 (PDT)
+Last modified: 2026-10-17 00:42:20 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -66,11 +66,11 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 
 > **NOTE:**
 >
-> *Remark 2* (Subscripts and parentheses for a stochastic process). The notation for a [stochastic process](https://morrison-lab.github.io/pds/notation.html#def-stochastic-process) uses both slots at once. A stochastic process is an [indexed family](sets.llms.md#def-indexed-family) of [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X_t\\, one for each index \\t\\ in some [index set](sets.llms.md#def-index-set), such as time. The index goes in the subscript, because it picks a member of the family. Each \\X_t\\ is itself a [function](functions.llms.md#def-function) of the [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-random-experiment) \\\omega\\ of a [random experiment](https://morrison-lab.github.io/pds/probability-basics.html#def-random-experiment), that is, an element of the [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space), so the outcome goes in the parentheses: \\X_t(\omega)\\. Fixing \\\omega\\ and letting \\t\\ vary traces out one path of the process. Many sources drop \\\omega\\ and write \\X_t\\, or write \\X(t)\\ when \\t\\ is continuous.
+> *Remark 2* (Subscripts and parentheses for a stochastic process). The notation for a [stochastic process](https://morrison-lab.github.io/pds/notation.html#def-stochastic-process) uses both slots at once. A stochastic process is an [indexed family](sets.llms.md#def-indexed-family) of [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X_t\\, one for each index \\t\\ in some [index set](sets.llms.md#def-index-set), such as time. The index goes in the subscript, because it picks a member of the family. Each \\X_t\\ is itself a [function](functions.llms.md#def-function) of the [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) \\\omega\\ of a [random experiment](https://morrison-lab.github.io/pds/probability-basics.html#def-random-experiment), that is, an element of the [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space), so the outcome goes in the parentheses: \\X_t(\omega)\\. Fixing \\\omega\\ and letting \\t\\ vary traces out one path of the process. Many sources drop \\\omega\\ and write \\X_t\\, or write \\X(t)\\ when \\t\\ is continuous.
 
 > **NOTE:**
 >
-> **Example 1 (Reading \\X_t(\omega)\\)** Let \\X_t\\ be the position of a particle at time \\t \ge 0\\. Then \\X_3\\ is the random position at time 3, and \\X_3(\omega)\\ is its value when the experiment’s [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-random-experiment) is \\\omega\\. Holding \\\omega\\ fixed and letting \\t\\ vary gives the particle’s whole path for that outcome. A source that writes \\X(t, \omega)\\ means the same thing, with both arguments in parentheses.
+> **Example 1 (Reading \\X_t(\omega)\\)** Let \\X_t\\ be the position of a particle at time \\t \ge 0\\. Then \\X_3\\ is the random position at time 3, and \\X_3(\omega)\\ is its value when the experiment’s [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) is \\\omega\\. Holding \\\omega\\ fixed and letting \\t\\ vary gives the particle’s whole path for that outcome. A source that writes \\X(t, \omega)\\ means the same thing, with both arguments in parentheses.
 
 > **NOTE:**
 >
