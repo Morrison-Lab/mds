@@ -2,6 +2,7 @@
 #### Similar matrices
 
 Two $p \times p$ matrices $\matr{A}$ and $\matr{B}$ are **similar**
+[@wikipedia_matrix_similarity]
 if $\matr{B} = \matr{P}^{-1} \matr{A} \matr{P}$
 for some invertible $p \times p$ matrix $\matr{P}$ (@def-invertible-matrix).
 

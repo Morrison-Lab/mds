@@ -5,7 +5,9 @@ A $p \times p$ matrix $\matr{A}$ is positive definite (@def-positive-definite)
 exactly when $\matr{A} = \matr{L} \tp{\matr{L}}$
 for some lower triangular $\matr{L}$ (@def-lower-triangular-matrix) with positive diagonal entries.
 For a positive definite $\matr{A}$ that $\matr{L}$ is unique;
-it is the **Cholesky factor** of $\matr{A}$.
+it is the **Cholesky factor**
+[@wikipedia_cholesky_decomposition]
+of $\matr{A}$.
 
 :::
 

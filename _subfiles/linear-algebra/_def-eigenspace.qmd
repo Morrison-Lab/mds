@@ -2,7 +2,9 @@
 #### Eigenspace
 
 Let $\eigval$ be an eigenvalue of a $p \times p$ matrix $\matr{A}$ (@def-eigenvalue).
-The **eigenspace** of $\eigval$ is
+The **eigenspace**
+[@wikipedia_eigenvalues_and_eigenvectors]
+of $\eigval$ is
 $\mathcal{E}_\eigval \eqdef \mathcal{N}(\matr{A} - \eigval\,\matr{I}_p)$.
 It is a subspace of $\reals^p$ (@thm-null-space-subspace).
 

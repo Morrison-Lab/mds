@@ -15,7 +15,8 @@ $\matr{B}$ ($k \times (n - l)$) those with $i \le k$ and $j > l$,
 $\matr{C}$ ($(m - k) \times l$) those with $i > k$ and $j \le l$,
 and $\matr{D}$ ($(m - k) \times (n - l)$) those with $i > k$ and $j > l$,
 each in its original order.
-A matrix written this way is a **block matrix**.
+A matrix written this way is a **block matrix**
+[@wikipedia_block_matrix].
 
 :::
 
