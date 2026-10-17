@@ -1,7 +1,9 @@
 :::{#def-antiderivative}
 #### Antiderivative
 
-A function $F$ is an **antiderivative** of $f$ on an interval $I$ if:
+A function $F$ is an **antiderivative** of $f$ on an interval $I$
+[@wikipedia_antiderivative]
+if:
 
 $$\deriv{x} F(x) = f(x), \quad \forall x \in I$$
 

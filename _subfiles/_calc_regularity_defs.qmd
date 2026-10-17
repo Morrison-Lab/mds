@@ -33,7 +33,9 @@ and the left-hand derivative at the right endpoint.
 :::{#def-continuous}
 #### Continuous function
 
-A function $f$ is **continuous at** $x = c$ if all three conditions hold:
+A function $f$ is **continuous at** $x = c$
+[@wikipedia_continuous_function]
+if all three conditions hold:
 
 1. $f(c)$ is defined,
 2. $\lim_{x \to c} f(x)$ exists, and
@@ -174,6 +176,7 @@ so condition 3 fails and $f$ is not continuous on $[0, 1]$.
 #### Partition of an interval
 
 A **partition** $\mathcal{P}$ of a closed interval $[a, b]$
+[@wikipedia_partition_of_an_interval]
 is a finite list of points
 
 $$
@@ -258,6 +261,7 @@ Let $f$ be a [bounded](algebra.qmd#def-bounded) function on $[a, b]$.
 For each partition $\mathcal{P}$ of $[a, b]$ (@def-partition),
 choose a sample point $x_i^*$ in each subinterval $[x_{i-1}, x_i]$.
 The **Riemann integral** of $f$ over $[a, b]$
+[@wikipedia_riemann_integral]
 (also called the **definite integral** of $f$ from $a$ to $b$)
 is the limit of the Riemann sums (@def-riemann-sum) as the mesh (@def-mesh) shrinks to zero:
 

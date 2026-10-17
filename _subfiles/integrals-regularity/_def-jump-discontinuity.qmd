@@ -2,6 +2,7 @@
 #### Jump discontinuity
 
 A function $f$ has a **jump discontinuity** at $c$
+[@wikipedia_classification_of_discontinuities]
 if both one-sided limits (@def-one-sided-limit)
 $\lim_{x \to c^-} f(x)$ and $\lim_{x \to c^+} f(x)$ exist
 but are not equal.

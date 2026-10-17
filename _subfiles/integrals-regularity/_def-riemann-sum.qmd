@@ -28,7 +28,9 @@ $$
 
 of $[a, b]$ (@def-partition),
 and choose a sample point $x_i^*$ (@def-sample-point) in each subinterval $[x_{i-1}, x_i]$.
-The **Riemann sum** of $f$ for $\mathcal{P}$ and these sample points is
+The **Riemann sum** of $f$ for $\mathcal{P}$
+[@wikipedia_riemann_sum]
+and these sample points is
 
 $$\sumin f(x_i^*)\,\change x_i,$$
 

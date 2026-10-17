@@ -1,7 +1,9 @@
 :::{#def-indefinite-integral}
 #### Indefinite integral
 
-The **indefinite integral** of $f$ is the family of all antiderivatives
+The **indefinite integral** of $f$
+[@wikipedia_antiderivative]
+is the family of all antiderivatives
 (@def-antiderivative) of $f$:
 
 $$\int f(x)\,dx = F(x) + C$$
