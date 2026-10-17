@@ -8,7 +8,9 @@ is the standard extension of that statement and is not stated on that page.
 :::{#def-euclidean-distance}
 #### Euclidean distance
 
-The **Euclidean distance** between two vectors $\vx$ and $\vy$ of length $p$
+The **Euclidean distance**
+[@wikipedia_euclidean_distance]
+between two vectors $\vx$ and $\vy$ of length $p$
 is the [Euclidean norm](#def-euclidean-norm) of their difference:
 
 $$d(\vx, \vy) \eqdef \norm{\vx - \vy} = \sqrt{\sumip (x_i - y_i)^2}$$ {#eq-euclidean-distance}

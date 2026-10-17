@@ -2,6 +2,7 @@
 #### Orthogonal vectors
 
 Two vectors $\vx$ and $\vy$ of the same length are **orthogonal**
+[@wikipedia_orthogonality]
 (written $\vx \perp \vy$) if their dot product (@def-dot-product) is zero:
 
 $$\vx \perp \vy \iff \vx \cdot \vy = 0$$

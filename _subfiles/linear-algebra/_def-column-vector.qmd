@@ -1,7 +1,9 @@
 :::{#def-column-vector}
 #### Column vector
 
-A **column vector** of length $p$ is an ordered list of $p$ [real numbers](number-systems.qmd#def-real-numbers),
+A **column vector**
+[@wikipedia_row_and_column_vectors]
+of length $p$ is an ordered list of $p$ [real numbers](number-systems.qmd#def-real-numbers),
 written vertically as a $p \times 1$ array:
 
 $$

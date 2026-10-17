@@ -13,3 +13,21 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_vectors.qmd >}}
+
+## Further reading {.unnumbered}
+
+-   @wikipedia_row_and_column_vectors --- row and column vectors
+
+-   @wikipedia_euclidean_vector --- vectors in Euclidean space, with their length and direction
+
+-   @wikipedia_scalar_mathematics --- scalars
+
+-   @wikipedia_arithmetic_mean --- the arithmetic mean and other averages
+
+-   @wikipedia_orthogonality --- orthogonality in mathematics
+
+-   @wikipedia_unit_vector --- unit vectors
+
+-   @wikipedia_euclidean_distance --- Euclidean distance
+
+-   @wikipedia_standard_basis --- the standard basis
