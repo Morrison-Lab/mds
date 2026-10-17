@@ -31,3 +31,6 @@ format:
 -   @wikipedia_maxima_and_minima --- minima and maxima, local and global
 
 -   @wikipedia_arg_max --- the argmax and argmin
+
+-   @wikipedia_identity_mathematics --- identities, equalities that hold for all values of their variables
+
