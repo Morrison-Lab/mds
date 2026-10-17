@@ -1,7 +1,9 @@
 :::{#def-norm}
 #### Norm (normed vector space, normed space)
 
-A **norm** on a real vector space $V$ is a function $\norm{\cdot} : V \to [0, \infty)$
+A **norm**
+[@wikipedia_norm_mathematics]
+on a real vector space $V$ is a function $\norm{\cdot} : V \to [0, \infty)$
 that assigns to each vector $\vx \in V$ a nonnegative real number $\norm{\vx}$,
 and satisfies the following three axioms for all $\vx, \vy \in V$ and all scalars $c \in \reals$:
 

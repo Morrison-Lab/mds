@@ -1,7 +1,9 @@
 :::{#def-orthonormal-basis}
 #### Orthonormal basis
 
-An **orthonormal basis** of a subspace $\mathcal{S}$ of $\reals^p$
+An **orthonormal basis**
+[@wikipedia_orthonormal_basis]
+of a subspace $\mathcal{S}$ of $\reals^p$
 is a basis of $\mathcal{S}$ (@def-basis)
 whose vectors are orthonormal (@def-orthonormal-vectors).
 
