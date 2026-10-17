@@ -2,6 +2,7 @@
 #### Skew-Hermitian matrix (anti-Hermitian matrix)
 
 A square complex matrix $\matr{A} \in \mathbb{C}^{n \times n}$ is **skew-Hermitian**
+[@wikipedia_skew_hermitian_matrix]
 (or **anti-Hermitian**)
 if it equals the negative of its conjugate transpose (@def-conjugate-transpose):
 
