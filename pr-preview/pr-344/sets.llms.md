@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 03:11:51 (PDT)
+Last modified: 2026-10-17 04:23:40 (PDT)
 
 > **NOTE:**
 >
@@ -163,43 +163,67 @@ Last modified: 2026-10-17 03:11:51 (PDT)
 >
 > It has four elements, each of them a set. The collection \\\mathopen{}\left\\\emptyset\right\\\mathclose{}\\ has one element, the empty set, so it is not equal to \\\emptyset\\, which has none.
 
+> **NOTE:**
+>
+> **Definition 15 (Label)** A **label** is a name or symbol attached to an object, so that we can refer to the object and tell it apart from other objects.
+
+> **NOTE:**
+>
+> **Example 9 (Labels)** The numbers \\1, 2, 3\\ can label three students in a class list. Then “student 2” refers to one particular student. The letters \\A\\ and \\B\\ can label two sets.
+
+> **NOTE:**
+>
+> **Definition 16 (Index set)** An **index set** is a set whose elements are used as [labels](#def-label) for objects. Each element of the index set is called an index.
+
+> **NOTE:**
+>
+> **Example 10 (Index sets)** The set \\\\1, \ldots, n\\\\ labels the entries of a vector with \\n\\ entries. The set of nonnegative real numbers can label moments in time.
+
+> **NOTE:**
+>
+> **Definition 17 (Indexed family)** An **indexed family** is a collection of objects, one for each element of a given [index set](#def-index-set). The object for the index \\i\\ is written \\a_i\\.
+
+> **NOTE:**
+>
+> **Example 11 (Indexed families)** The entries \\x_1, \ldots, x_n\\ of a vector are an indexed family of numbers, with index set \\\\1, \ldots, n\\\\. The functions \\f\_\theta\\, one for each parameter value \\\theta\\ in a parameter set, are an indexed family of functions.
+
 ## 2 Combining sets
 
 > **NOTE:**
 >
-> **Definition 15 (Union)** The **union** of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
+> **Definition 18 (Union)** The **union** of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
 >
 > \\A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ or } x \in B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 16 (Union of a family of sets)** Let \\I\\ be a set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **union** of the sets \\A_i\\, written \\\bigcup\_{i \in I} A_i\\, is the set of elements that are in at least one \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcup\_{i=1}^{n} A_i\\ or \\A_1 \cup \cdots \cup A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcup\_{i=1}^{\infty} A_i\\.
+> **Definition 19 (Union of a family of sets)** Let \\I\\ be a set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **union** of the sets \\A_i\\, written \\\bigcup\_{i \in I} A_i\\, is the set of elements that are in at least one \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcup\_{i=1}^{n} A_i\\ or \\A_1 \cup \cdots \cup A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcup\_{i=1}^{\infty} A_i\\.
 
 > **NOTE:**
 >
-> **Definition 17 (Intersection)** The **intersection** of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
+> **Definition 20 (Intersection)** The **intersection** of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
 >
 > \\A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ and } x \in B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 18 (Intersection of a family of sets)** Let \\I\\ be a nonempty set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **intersection** of the sets \\A_i\\, written \\\bigcap\_{i \in I} A_i\\, is the set of elements that are in every \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcap\_{i=1}^{n} A_i\\ or \\A_1 \cap \cdots \cap A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcap\_{i=1}^{\infty} A_i\\.
+> **Definition 21 (Intersection of a family of sets)** Let \\I\\ be a nonempty set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **intersection** of the sets \\A_i\\, written \\\bigcap\_{i \in I} A_i\\, is the set of elements that are in every \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcap\_{i=1}^{n} A_i\\ or \\A_1 \cap \cdots \cap A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcap\_{i=1}^{\infty} A_i\\.
 
 > **NOTE:**
 >
-> **Definition 19 (Set difference)** The **set difference** of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
+> **Definition 22 (Set difference)** The **set difference** of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
 >
 > \\A \setminus B \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : x \notin B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 20 (Complement)** Let \\A\\ be a [subset](#def-subset) of a set \\S\\. The **complement** of \\A\\ in \\S\\ is the set difference ([Definition 19](#def-set-difference)) \\S \setminus A\\: the elements of \\S\\ that are not in \\A\\. When the set \\S\\ is clear from context, the complement of \\A\\ is written \\A^c\\:
+> **Definition 23 (Complement)** Let \\A\\ be a [subset](#def-subset) of a set \\S\\. The **complement** of \\A\\ in \\S\\ is the set difference ([Definition 22](#def-set-difference)) \\S \setminus A\\: the elements of \\S\\ that are not in \\A\\. When the set \\S\\ is clear from context, the complement of \\A\\ is written \\A^c\\:
 >
 > \\A^c \stackrel{\text{def}}{=}S \setminus A = \mathopen{}\left\\x \in S : x \notin A\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Example 9 (Complements of sets of die rolls)** Let \\S = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ be the possible rolls of a die.
+> **Example 12 (Complements of sets of die rolls)** Let \\S = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ be the possible rolls of a die.
 >
 > - The complement of the even rolls \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is \\A^c = \mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, the odd rolls.
 > - The complement of \\S\\ itself is \\S^c = \emptyset\\, and the complement of \\\emptyset\\ is \\\emptyset^c = S\\.
@@ -208,7 +232,7 @@ Last modified: 2026-10-17 03:11:51 (PDT)
 
 > **NOTE:**
 >
-> **Example 10 (Combining sets of die rolls)** Let \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ (the even rolls) and \\B = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ (the rolls of at most 3). Then:
+> **Example 13 (Combining sets of die rolls)** Let \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ (the even rolls) and \\B = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ (the rolls of at most 3). Then:
 >
 > - \\A \cup B = \mathopen{}\left\\1, 2, 3, 4, 6\right\\\mathclose{}\\, the rolls that are even or at most 3;
 > - \\A \cap B = \mathopen{}\left\\2\right\\\mathclose{}\\, the only roll that is both;
@@ -217,7 +241,7 @@ Last modified: 2026-10-17 03:11:51 (PDT)
 
 > **NOTE:**
 >
-> **Example 11 (Unions and intersections of many sets)**  
+> **Example 14 (Unions and intersections of many sets)**  
 >
 > - \\ \begin{aligned} \bigcup\_{i=1}^{3} \mathopen{}\left\\i, i + 1\right\\\mathclose{} &= \mathopen{}\left\\1, 2\right\\\mathclose{} \cup \mathopen{}\left\\2, 3\right\\\mathclose{} \cup \mathopen{}\left\\3, 4\right\\\mathclose{} \\ &= \mathopen{}\left\\1, 2, 3, 4\right\\\mathclose{}. \end{aligned} \\
 >
@@ -231,21 +255,21 @@ Last modified: 2026-10-17 03:11:51 (PDT)
 >
 > \\ \begin{aligned} S \setminus \bigcup\_{i \in I} A_i &= \bigcap\_{i \in I} (S \setminus A_i) \\ S \setminus \bigcap\_{i \in I} A_i &= \bigcup\_{i \in I} (S \setminus A_i) \end{aligned} \\
 >
-> With the complement notation of [Definition 20](#def-complement), these read \\\mathopen{}\left(\bigcup\_{i \in I} A_i\right)\mathclose{}^c = \bigcap\_{i \in I} A_i^c\\ and \\\mathopen{}\left(\bigcap\_{i \in I} A_i\right)\mathclose{}^c = \bigcup\_{i \in I} A_i^c\\.
+> With the complement notation of [Definition 23](#def-complement), these read \\\mathopen{}\left(\bigcup\_{i \in I} A_i\right)\mathclose{}^c = \bigcap\_{i \in I} A_i^c\\ and \\\mathopen{}\left(\bigcap\_{i \in I} A_i\right)\mathclose{}^c = \bigcup\_{i \in I} A_i^c\\.
 
 > **NOTE:**
 >
 > *Proof*. Two sets are equal when they have the same elements ([Definition 1](#def-set)), so it is enough to show that an element \\x\\ is in the left-hand side [if and only if](proof-writing.llms.md#def-necessary-sufficient) (\\\iff\\) it is in the right-hand side. For the first law:
 >
-> \\ \begin{aligned} x \in S \setminus \bigcup\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcup\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~19}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for every } i \in I && \text{(}\href{#def-union}{\text{Definition~15}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for every } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~19}}\text{)} \\ &\iff x \in \bigcap\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-intersection}{\text{Definition~17}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} x \in S \setminus \bigcup\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcup\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~22}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for every } i \in I && \text{(}\href{#def-union}{\text{Definition~18}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for every } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~22}}\text{)} \\ &\iff x \in \bigcap\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-intersection}{\text{Definition~20}}\text{)} \end{aligned} \\
 >
 > For the second law:
 >
-> \\ \begin{aligned} x \in S \setminus \bigcap\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcap\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~19}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for some } i \in I && \text{(}\href{#def-intersection}{\text{Definition~17}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for some } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~19}}\text{)} \\ &\iff x \in \bigcup\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-union}{\text{Definition~15}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} x \in S \setminus \bigcap\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcap\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~22}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for some } i \in I && \text{(}\href{#def-intersection}{\text{Definition~20}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for some } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~22}}\text{)} \\ &\iff x \in \bigcup\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-union}{\text{Definition~18}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 12 (De Morgan’s laws for die rolls)** In \\S = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, let \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\B = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\, as in [Example 10](#exm-set-operations), so \\A^c = \mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\ and \\B^c = \mathopen{}\left\\4, 5, 6\right\\\mathclose{}\\.
+> **Example 15 (De Morgan’s laws for die rolls)** In \\S = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, let \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\B = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\, as in [Example 13](#exm-set-operations), so \\A^c = \mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\ and \\B^c = \mathopen{}\left\\4, 5, 6\right\\\mathclose{}\\.
 >
 > - \\ \begin{aligned} (A \cup B)^c &= \mathopen{}\left\\1, 2, 3, 4, 6\right\\\mathclose{}^c \\ &= \mathopen{}\left\\5\right\\\mathclose{}, \end{aligned} \\
 >
@@ -261,17 +285,17 @@ Last modified: 2026-10-17 03:11:51 (PDT)
 
 > **NOTE:**
 >
-> **Definition 21 (Ordered pair)** An **ordered pair** \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
+> **Definition 24 (Ordered pair)** An **ordered pair** \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
 
 > **NOTE:**
 >
-> **Definition 22 (Cartesian product)** The **Cartesian product** of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
+> **Definition 25 (Cartesian product)** The **Cartesian product** of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
 >
 > \\A \times B \stackrel{\text{def}}{=}\mathopen{}\left\\(a, b) : a \in A \text{ and } b \in B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Example 13 (Cartesian products)**  
+> **Example 16 (Cartesian products)**  
 >
 > - \\\mathopen{}\left\\1, 2\right\\\mathclose{} \times \mathopen{}\left\\5, 6\right\\\mathclose{} = \mathopen{}\left\\(1, 5), (1, 6), (2, 5), (2, 6)\right\\\mathclose{}\\. The pair \\(5, 1)\\ is not in it, because its first entry, \\5\\, is not in \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\; so \\(1, 5) \ne (5, 1)\\.
 > - The results of rolling a die twice form \\\mathopen{}\left\\1, \ldots, 6\right\\\mathclose{} \times \mathopen{}\left\\1, \ldots, 6\right\\\mathclose{}\\, which has \\6 \cdot 6 = 36\\ elements, such as \\(3, 5)\\: a 3 on the first roll and a 5 on the second.
@@ -281,7 +305,7 @@ Last modified: 2026-10-17 03:11:51 (PDT)
 
 > **NOTE:**
 >
-> **Definition 23 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 26 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
 >
@@ -297,7 +321,7 @@ Last modified: 2026-10-17 03:11:51 (PDT)
 
 > **NOTE:**
 >
-> **Example 14 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
+> **Example 17 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
 
 ## 4 Further reading
 

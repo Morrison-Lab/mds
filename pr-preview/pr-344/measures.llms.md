@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 03:11:51 (PDT)
+Last modified: 2026-10-17 04:23:40 (PDT)
 
 > **NOTE:**
 >
@@ -677,7 +677,7 @@ Last modified: 2026-10-17 03:11:51 (PDT)
 >
 > **Example 30 (Applying Holder’s inequality to finite sums and expectations)**  
 >
-> 1.  **Finite vectors (Cauchy-Schwarz and taxicab bounds)**: Equipping a finite set with the [counting measure](#def-counting-measure), Holder’s inequality for conjugate exponents \\p, q\\ gives: \\ \sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|x_i\right\|\mathclose{}^p\right)\mathclose{}^{1/p} \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|y_i\right\|\mathclose{}^q\right)\mathclose{}^{1/q}. \\ Setting \\p = 1\\, \\q = \infty\\ gives \\\sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left\lVert\underset{\sim}{x}\right\rVert\mathclose{}\_1\\\mathopen{}\left\lVert\underset{\sim}{y}\right\rVert\mathclose{}\_\infty\\. Setting
+> 1.  **Finite vectors (Cauchy-Schwarz and taxicab bounds)**: Equipping a finite set with the [counting measure](#def-counting-measure), Holder’s inequality for conjugate exponents \\p, q\\ gives: \\ \sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|x_i\right\|\mathclose{}^p\right)\mathclose{}^{1/p} \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|y_i\right\|\mathclose{}^q\right)\mathclose{}^{1/q}. \\ Setting \\p = 1\\, \\q = \infty\\ gives \\\sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\_1\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}\_\infty\\. Setting
 >
 >     \\ \begin{aligned} p &= q \\ &= 2 \end{aligned} \\
 >
