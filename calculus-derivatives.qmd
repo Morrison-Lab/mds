@@ -37,3 +37,8 @@ format:
 -   @wikipedia_linear_approximation --- linear approximation and the tangent line
 
 -   @wikipedia_stationary_point --- stationary points and how to classify them
+
+-   @wikipedia_difference_quotient --- the difference quotient
+
+-   @wikipedia_notation_for_differentiation --- Leibniz, Lagrange and Newton notation for derivatives
+
