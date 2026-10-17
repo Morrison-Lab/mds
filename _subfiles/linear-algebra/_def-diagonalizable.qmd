@@ -2,6 +2,7 @@
 #### Diagonalizable matrix
 
 A $p \times p$ matrix $\matr{A}$ is **diagonalizable**
+[@wikipedia_diagonalizable_matrix]
 if $\matr{A} = \matr{X} \matr{\Eigvals} \matr{X}^{-1}$
 for some invertible $p \times p$ matrix $\matr{X}$ and diagonal $p \times p$ matrix $\matr{\Eigvals}$
 (@def-diagonal-matrix);

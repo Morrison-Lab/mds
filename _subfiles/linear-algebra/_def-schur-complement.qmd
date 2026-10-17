@@ -4,7 +4,9 @@
 For a block matrix
 $\matr{X} = \begin{bmatrix} \matr{A} & \matr{B} \\ \tp{\matr{B}} & \matr{C} \end{bmatrix}$
 as in @thm-block-quadratic with $\matr{A}$ invertible,
-the **Schur complement** of $\matr{A}$ in $\matr{X}$ is the $m \times m$ matrix
+the **Schur complement**
+[@wikipedia_schur_complement]
+of $\matr{A}$ in $\matr{X}$ is the $m \times m$ matrix
 $\matr{S} = \matr{C} - \tp{\matr{B}} \matr{A}^{-1} \matr{B}$ defined in @thm-block-quadratic.
 
 :::
