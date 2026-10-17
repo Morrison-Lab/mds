@@ -15,7 +15,8 @@ follow from a stated theorem rather than from an aside.
 :::{#def-double-integral}
 #### Double integral
 
-Let $f$ be a bounded function on a closed, bounded plane region $R \subseteq \reals^2$.
+Let $f$ be a bounded function on a closed, bounded plane region $R \subseteq \reals^2$
+[@wikipedia_multiple_integral].
 Cover $R$ with a grid of rectangles,
 keep the $n$ rectangles that lie entirely inside $R$,
 with areas $\change A_1, \ldots, \change A_n$,
@@ -58,7 +59,8 @@ $$
 :::{#def-iterated-integral}
 #### Iterated integral
 
-An **iterated integral** is an integral of an integral:
+An **iterated integral** is an integral of an integral
+[@wikipedia_iterated_integral]:
 
 $$
 \int_a^b \int_{g_1(x)}^{g_2(x)} f(x, y)\,dy\,dx
@@ -113,7 +115,8 @@ $$
 
 #### Fubini's theorem (Riemann version)
 
-Let $f$ be **continuous** on a plane region $R \subseteq \reals^2$.
+Let $f$ be **continuous** on a plane region $R \subseteq \reals^2$
+[@wp:fubini].
 
 1. **Vertically simple region.**
    If $R$ is defined by $a \le x \le b$ and $g_1(x) \le y \le g_2(x)$,
