@@ -1,7 +1,9 @@
 :::{#def-determinant}
 #### Determinant
 
-The **determinant** of a $p \times p$ matrix $\matr{A}$
+The **determinant**
+[@wikipedia_determinant]
+of a $p \times p$ matrix $\matr{A}$
 with entries $a_{ij}$,
 written $\det(\matr{A})$ or $\abs{\matr{A}}$,
 is the number defined recursively in $p$:
@@ -82,5 +84,5 @@ is the value $a d - b c$ from @exm-determinant.
 :::
 
 ::: notes
-See also <https://en.wikipedia.org/wiki/Determinant>.
+See also [@wikipedia_determinant].
 :::

@@ -1,7 +1,9 @@
 :::{#def-frobenius-norm}
 #### Frobenius norm
 
-The **Frobenius norm** of an $n \times p$ matrix $\matr{A}$ is
+The **Frobenius norm**
+[@wikipedia_frobenius_norm]
+of an $n \times p$ matrix $\matr{A}$ is
 
 $$
 \norm{\matr{A}}_F \eqdef \sqrt{\iprod{\matr{A}}{\matr{A}}}

@@ -1,7 +1,9 @@
 :::{#def-paraboloid}
 #### Paraboloid
 
-A **paraboloid** in $\reals^{p+1}$ is the graph
+A **paraboloid**
+[@wikipedia_paraboloid]
+in $\reals^{p+1}$ is the graph
 $\set{(\vx, f(\vx)) \mid \vx \in \reals^p}$
 of a function
 

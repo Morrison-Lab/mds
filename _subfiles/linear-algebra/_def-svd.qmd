@@ -3,7 +3,9 @@
 
 Let $\matr{A}$ be an $n \times p$ matrix with real entries
 and $\operatorname{rank}(\matr{A}) = r$.
-A **singular value decomposition** (SVD) of $\matr{A}$
+A **singular value decomposition**
+[@wikipedia_singular_value_decomposition]
+(SVD) of $\matr{A}$
 is a factorization $\matr{A} = \matr{U}\matr{D}\tp{\matr{V}}$
 with $\matr{U}$, $\matr{D}$ and $\matr{V}$ as in @thm-svd.
 

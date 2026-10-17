@@ -2,7 +2,8 @@
 #### Eigendecomposition (spectral decomposition)
 
 Let $\matr{A}$ be a $p \times p$ symmetric matrix with real entries.
-An **eigendecomposition**, or **spectral decomposition**, of $\matr{A}$
+An **eigendecomposition**
+[@wikipedia_eigendecomposition_of_a_matrix], or **spectral decomposition**, of $\matr{A}$
 is a factorization
 
 $$
