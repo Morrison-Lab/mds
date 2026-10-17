@@ -1,7 +1,9 @@
 :::{#def-mean}
 #### Mean (average, sample mean)
 
-The **mean** (or **average**) of $n$ numbers $\dsn{y}$ is
+The **mean**
+[@wikipedia_arithmetic_mean]
+(or **average**) of $n$ numbers $\dsn{y}$ is
 their [sum](algebra.qmd#def-summation) divided by how many there are:
 
 $$\bar{y} \eqdef \avgin y_i$$

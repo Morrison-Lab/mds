@@ -1,7 +1,9 @@
 :::{#def-unit-vector}
 #### Unit vector
 
-A **unit vector** is a vector whose Euclidean norm (@def-euclidean-norm) is $1$.
+A **unit vector**
+[@wikipedia_unit_vector]
+is a vector whose Euclidean norm (@def-euclidean-norm) is $1$.
 A unit vector is said to have *unit length*.
 
 :::
