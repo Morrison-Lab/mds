@@ -1,0 +1,81 @@
+:::{#thm-invertible-cancel}
+#### An invertible factor can be cancelled
+
+Let $\matr{A}$ be an invertible $p \times p$ matrix (@def-invertible-matrix),
+and let $\matr{B}$ and $\matr{C}$ be $p \times n$ matrices.
+If $\matr{A}\matr{B} = \matr{A}\matr{C}$, then $\matr{B} = \matr{C}$.
+
+:::
+
+::: proof
+
+$$
+\ba
+\matr{B}
+&= \matr{I}_p\,\matr{B}
+&& \text{(@thm-identity)}
+\\
+&= (\matr{A}^{-1}\matr{A})\,\matr{B}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{A}^{-1}(\matr{A}\matr{B})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{A}^{-1}(\matr{A}\matr{C})
+&& \text{(} \matr{A}\matr{B} = \matr{A}\matr{C} \text{)}
+\\
+&= (\matr{A}^{-1}\matr{A})\,\matr{C}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{I}_p\,\matr{C}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{C}.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+$\square$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#cor-invertible-cancel-right}
+#### An invertible factor can be cancelled on the right
+
+Let $\matr{A}$ be an invertible $p \times p$ matrix,
+and let $\matr{B}$ and $\matr{C}$ be $n \times p$ matrices.
+If $\matr{B}\matr{A} = \matr{C}\matr{A}$, then $\matr{B} = \matr{C}$.
+
+The proof of @thm-invertible-cancel works with every product reversed:
+multiply both sides on the right by $\matr{A}^{-1}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-invertible-cancel}
+#### Solving for a matrix by cancelling an invertible factor
+
+Let $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$,
+which is invertible with
+$\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$
+(@exm-invertible-matrix).
+If $\matr{A}\matr{B} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}$
+for a $2 \times 1$ matrix $\matr{B}$,
+then multiplying both sides on the left by $\matr{A}^{-1}$,
+as in the proof of @thm-invertible-cancel,
+
+$$
+\begin{aligned}
+\matr{B}
+&= \matr{A}^{-1} \begin{bmatrix} 3 \\ 1 \end{bmatrix} \\
+&= \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+\end{aligned}
+$$
+
+Check:
+$\matr{A} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 + 1 \\ 0 + 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}$.
+
+:::

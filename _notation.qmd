@@ -56,6 +56,26 @@ These notes also use shorthand macros,
 such as `\floor{x}` for $\floor{x}$,
 defined in the `latex-macros` submodule's `macros.qmd`.
 
+## Subscripts and parentheses {#sec-subscripts-parentheses}
+
+{{< include mds/_subfiles/notation/_rem-subscript-parentheses-convention.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_tbl-subscript-parentheses.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_rem-process-notation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-process-notation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_rem-reading-other-sources.qmd >}}
+
 ## Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, 
