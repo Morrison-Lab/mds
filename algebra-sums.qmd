@@ -33,3 +33,10 @@ format:
 -   @wikipedia_associative_property --- associative operations, with examples
 
 -   @wikipedia_distributive_property --- the distributive law
+
+-   @wikipedia_chord_geometry --- chords of a curve
+
+-   @wikipedia_identity_element --- identity elements of a binary operation
+
+-   @wikipedia_like_terms --- like terms and how to combine them
+
