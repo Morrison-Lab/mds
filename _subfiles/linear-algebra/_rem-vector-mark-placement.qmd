@@ -5,29 +5,9 @@
 
 In these notes, the mark that shows a symbol is a vector is a tilde under the letter, as in $\vx$.
 Many books instead use a bold letter or an arrow over the letter.
-We chose a mark underneath for three reasons.
-
--   Bold letters are hard to write by hand.
-    In class we work problems on a board, and a bold letter cannot be copied neatly with chalk or a marker.
-    A small tilde under a letter is quick to write, so the board and the notes look the same.
--   The space above a letter is already used.
-    In statistics, a hat over a symbol means "estimated value".
-    A vector mark above the letter would have to share that space with the hat, and the two marks would be crowded together.
--   A mark below the letter never moves when we add a hat.
-    The vector mark stays below and the estimate mark stays above, so each mark can be read on its own.
-
-If you read other sources, expect to see bold letters ($\mathbf{x}$) or arrows ($\overrightarrow{x}$) instead.
-All of these notations mean the same thing.
-
-:::
-
-:::{#exm-estimated-vector-notation}
-#### An estimated vector
-
-Suppose a regression model has a coefficient vector $\vbeta$ with $p$ entries.
-Its estimate from data is written $\hvb$, with the hat above the symbol and the vector mark below it.
-The same symbol, $\hvb$, is read as "the estimated vector $\vbeta$".
-Its $j$-th entry is the estimate of the $j$-th coefficient.
-That entry is a single number, so it needs no vector mark, only the hat.
+We chose a mark underneath because bold letters are hard to write by hand on a board,
+and because the space above a letter is already used by the hat that marks an estimated value, as in $\hvb$.
+The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-vector-mark)
+gives the full reasons and an example of an estimated vector.
 
 :::
