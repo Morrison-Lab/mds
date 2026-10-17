@@ -1,7 +1,9 @@
 :::{#def-intersection}
 #### Intersection
 
-The **intersection** of sets $A$ and $B$,
+The **intersection**
+[@wikipedia_intersection_set_theory]
+of sets $A$ and $B$,
 written $A \cap B$,
 is the set of elements that are in both $A$ and $B$:
 

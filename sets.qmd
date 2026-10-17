@@ -14,7 +14,7 @@ format:
 
 ## Further reading {#sec-further-reading}
 
-These books treat sets and the logic behind them in more depth.
+These books and articles treat sets and the logic behind them in more depth.
 
 - @devlin1993joy
   is an undergraduate introduction to axiomatic set theory.
@@ -30,6 +30,38 @@ These books treat sets and the logic behind them in more depth.
 - @barkerplummer2011language
   teaches propositional and first-order logic,
   the language behind statements such as "for every set $A$ there exists...".
+
+-   @wikipedia_set_mathematics --- sets, with the naive and axiomatic views
+
+-   @wikipedia_set_builder_notation --- set-builder notation
+
+-   @wikipedia_interval_mathematics --- intervals and their endpoints
+
+-   @wikipedia_subset --- subsets and the symbol conventions
+
+-   @wikipedia_empty_set --- the empty set
+
+-   @wikipedia_vacuous_truth --- vacuous truth
+
+-   @wikipedia_family_of_sets --- families of sets
+
+-   @wikipedia_index_set --- index sets
+
+-   @wikipedia_indexed_family --- indexed families
+
+-   @wikipedia_union_set_theory --- unions of sets
+
+-   @wikipedia_intersection_set_theory --- intersections of sets
+
+-   @wikipedia_complement_set_theory --- complements and set differences
+
+-   @wikipedia_de_morgans_laws --- De Morgan's laws
+
+-   @wikipedia_ordered_pair --- ordered pairs
+
+-   @wikipedia_cartesian_product --- Cartesian products
+
+-   @wikipedia_extended_real_number_line --- the extended real number line
 
 ## References {.unnumbered}
 

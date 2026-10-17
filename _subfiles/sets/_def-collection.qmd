@@ -3,6 +3,7 @@
 
 A **collection of sets**
 (also called a **family of sets**)
+[@wikipedia_family_of_sets]
 is a set whose elements are themselves sets.
 
 :::
