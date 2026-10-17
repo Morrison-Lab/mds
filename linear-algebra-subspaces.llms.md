@@ -4,15 +4,15 @@ Code
 
 Published
 
-Last modified: 2026-10-17 03:46:15 (PDT)
+Last modified: 2026-10-17 04:46:25 (PDT)
 
 ## 1 Rank
 
 > **NOTE:**
 >
-> **Definition 1 (Linearly independent vectors)** Vectors \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\\ of the same length \\p\\ are **linearly independent** if the only numbers \\c_1, \ldots, c_k\\ with
+> **Definition 1 (Linearly independent vectors)** Vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\ of the same length \\p\\ are **linearly independent** if the only numbers \\c_1, \ldots, c_k\\ with
 >
-> \\c_1 \underset{\sim}{v}\_1 + \cdots + c_k \underset{\sim}{v}\_k = \underset{\sim}{0}\\
+> \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\
 >
 > are
 >
@@ -24,8 +24,8 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 >
 > **Example 1 (Independent and dependent pairs of vectors)**  
 >
-> - \\\underset{\sim}{v}\_1 = (1, 0)\\ and \\\underset{\sim}{v}\_2 = (1, 1)\\ are linearly independent: \\c_1 \underset{\sim}{v}\_1 + c_2 \underset{\sim}{v}\_2 = (c_1 + c_2, c_2)\\, which is \\\underset{\sim}{0}\\ only if \\c_2 = 0\\ and then \\c_1 = 0\\.
-> - \\\underset{\sim}{v}\_1 = (1, 2)\\ and \\\underset{\sim}{v}\_2 = (2, 4)\\ are not: \\2 \underset{\sim}{v}\_1 - \underset{\sim}{v}\_2 = \underset{\sim}{0}\\.
+> - \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 = (1, 0)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_2 = (1, 1)\\ are linearly independent: \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + c_2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_2 = (c_1 + c_2, c_2)\\, which is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ only if \\c_2 = 0\\ and then \\c_1 = 0\\.
+> - \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 = (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_2 = (2, 4)\\ are not: \\2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_2 = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\.
 
 > **NOTE:**
 >
@@ -33,7 +33,7 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> **Example 2 (The rank of two \\3 \times 2\\ matrices)** The matrix \\\begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ has rank \\2\\: if \\c_1 (1, 1, 1) + c_2 (1, 2, 3) = \underset{\sim}{0}\\, then subtracting the first entry from the second gives \\c_2 = 0\\, and then \\c_1 = 0\\.
+> **Example 2 (The rank of two \\3 \times 2\\ matrices)** The matrix \\\begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ has rank \\2\\: if \\c_1 (1, 1, 1) + c_2 (1, 2, 3) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, then subtracting the first entry from the second gives \\c_2 = 0\\, and then \\c_1 = 0\\.
 >
 > The matrix \\\begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}\\ has rank \\1\\: its second column is twice its first, so the two columns are not linearly independent, but the first column on its own is.
 
@@ -45,7 +45,7 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 >
 > *Remark 1* (Full column rank needs at least as many rows as columns). In [Example 2](#exm-rank), the first matrix has full column rank: its rank is \\2\\, and it has \\2\\ columns. The second does not, because its rank is \\1\\.
 >
-> An \\n \times p\\ matrix can have full column rank only when \\p \le n\\, because more than \\n\\ vectors of length \\n\\ are never linearly independent. For example, the \\2 \times 3\\ matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ has \\3\\ columns of length \\2\\, and \\1 \cdot(1, 0) + 1 \cdot(0, 1) - 1 \cdot(1, 1) = \underset{\sim}{0}\\, with coefficients that are not all zero. So its \\3\\ columns are not linearly independent, and its rank is less than \\3\\.
+> An \\n \times p\\ matrix can have full column rank only when \\p \le n\\, because more than \\n\\ vectors of length \\n\\ are never linearly independent. For example, the \\2 \times 3\\ matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ has \\3\\ columns of length \\2\\, and \\1 \cdot(1, 0) + 1 \cdot(0, 1) - 1 \cdot(1, 1) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, with coefficients that are not all zero. So its \\3\\ columns are not linearly independent, and its rank is less than \\3\\.
 
 ## 2 Subspaces
 
@@ -65,8 +65,8 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 >
 > **Definition 4 (Subspace (linear subspace, vector space, linear space))** A set \\\mathcal{S}\\ of vectors in \\\mathbb{R}^p\\ is a **subspace** of \\\mathbb{R}^p\\ if it is not empty and it is closed under vector addition and scalar multiplication:
 >
-> 1.  if \\\underset{\sim}{u} \in \mathcal{S}\\ and \\\underset{\sim}{v} \in \mathcal{S}\\, then \\\underset{\sim}{u} + \underset{\sim}{v} \in \mathcal{S}\\;
-> 2.  if \\\underset{\sim}{u} \in \mathcal{S}\\ and \\c \in \mathbb{R}\\, then \\c \underset{\sim}{u} \in \mathcal{S}\\.
+> 1.  if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{S}\\, then \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{S}\\;
+> 2.  if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\c \in \mathbb{R}\\, then \\c \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\.
 >
 > A subspace is also called a **linear subspace**, a **vector space**, or a **linear space**.
 
@@ -77,7 +77,7 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 > - **Addition:** \\a\\(1, 2) + b\\(1, 2) = (a + b)\\(1, 2)\\, which is in \\\mathcal{S}\\.
 > - **Scalar multiplication:** \\c\\\mathopen{}\left(a\\(1, 2)\right)\mathclose{} = (ca)\\(1, 2)\\, which is in \\\mathcal{S}\\.
 >
-> So \\\mathcal{S}\\ is a subspace of \\\mathbb{R}^2\\. Two other subspaces of \\\mathbb{R}^p\\ are the set \\\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\ that holds only the zero vector, and \\\mathbb{R}^p\\ itself.
+> So \\\mathcal{S}\\ is a subspace of \\\mathbb{R}^2\\. Two other subspaces of \\\mathbb{R}^p\\ are the set \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\ that holds only the zero vector, and \\\mathbb{R}^p\\ itself.
 
 > **NOTE:**
 >
@@ -85,27 +85,27 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 1 (Every subspace contains the zero vector)** If \\\mathcal{S}\\ is a subspace of \\\mathbb{R}^p\\ ([Definition 4](#def-subspace)), then \\\underset{\sim}{0}\in \mathcal{S}\\.
+> **Theorem 1 (Every subspace contains the zero vector)** If \\\mathcal{S}\\ is a subspace of \\\mathbb{R}^p\\ ([Definition 4](#def-subspace)), then \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\in \mathcal{S}\\.
 
 > **NOTE:**
 >
-> *Proof*. A subspace is not empty, so it contains some vector \\\underset{\sim}{u}\\. Closure under scalar multiplication with \\c = 0\\ puts \\0 \cdot\underset{\sim}{u}\\ in \\\mathcal{S}\\, and \\0 \cdot\underset{\sim}{u} = \underset{\sim}{0}\\.
+> *Proof*. A subspace is not empty, so it contains some vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\. Closure under scalar multiplication with \\c = 0\\ puts \\0 \cdot\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ in \\\mathcal{S}\\, and \\0 \cdot\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\.
 
 > **NOTE:**
 >
-> **Example 5 (Using the zero vector to rule out a subspace)** The plane \\\mathopen{}\left\\(x, y, z) : x + y + z = 1\right\\\mathclose{}\\ in \\\mathbb{R}^3\\ does not contain \\\underset{\sim}{0}= (0, 0, 0)\\, because \\0 + 0 + 0 = 0 \neq 1\\. So, by [Theorem 1](#thm-subspace-zero), it is not a subspace. The line \\\mathcal{T}\\ in [Example 4](#exm-not-subspace) fails the same test: \\(0, 0)\\ is not in \\\mathcal{T}\\, because its second entry is not \\1\\.
+> **Example 5 (Using the zero vector to rule out a subspace)** The plane \\\mathopen{}\left\\(x, y, z) : x + y + z = 1\right\\\mathclose{}\\ in \\\mathbb{R}^3\\ does not contain \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}= (0, 0, 0)\\, because \\0 + 0 + 0 = 0 \neq 1\\. So, by [Theorem 1](#thm-subspace-zero), it is not a subspace. The line \\\mathcal{T}\\ in [Example 4](#exm-not-subspace) fails the same test: \\(0, 0)\\ is not in \\\mathcal{T}\\, because its second entry is not \\1\\.
 >
-> Containing \\\underset{\sim}{0}\\ is necessary but not sufficient. The union of the two coordinate axes in \\\mathbb{R}^2\\, \\\mathopen{}\left\\(x, 0) : x \in \mathbb{R}\right\\\mathclose{} \cup \mathopen{}\left\\(0, y) : y \in \mathbb{R}\right\\\mathclose{}\\, contains \\\underset{\sim}{0}\\, but \\(1, 0) + (0, 1) = (1, 1)\\ lies on neither axis, so the union is not closed under addition and is not a subspace.
+> Containing \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ is necessary but not sufficient. The union of the two coordinate axes in \\\mathbb{R}^2\\, \\\mathopen{}\left\\(x, 0) : x \in \mathbb{R}\right\\\mathclose{} \cup \mathopen{}\left\\(0, y) : y \in \mathbb{R}\right\\\mathclose{}\\, contains \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, but \\(1, 0) + (0, 1) = (1, 1)\\ lies on neither axis, so the union is not closed under addition and is not a subspace.
 
 > **NOTE:**
 >
-> **Definition 5 (Span)** The **span** of vectors \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k \in \mathbb{R}^p\\ is the set of all their linear combinations:
+> **Definition 5 (Span)** The **span** of vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k \in \mathbb{R}^p\\ is the set of all their linear combinations:
 >
-> \\ \operatorname{span}\mathopen{}\left\\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\right\\\mathclose{} \stackrel{\text{def}}{=} \mathopen{}\left\\c_1 \underset{\sim}{v}\_1 + \cdots + c_k \underset{\sim}{v}\_k : c_1, \ldots, c_k \in \mathbb{R}\right\\\mathclose{}. \\
+> \\ \operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\right\\\mathclose{} \stackrel{\text{def}}{=} \mathopen{}\left\\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k : c_1, \ldots, c_k \in \mathbb{R}\right\\\mathclose{}. \\
 >
-> The vectors \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\\ **span** a set \\\mathcal{S}\\ if their span equals \\\mathcal{S}\\.
+> The vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\ **span** a set \\\mathcal{S}\\ if their span equals \\\mathcal{S}\\.
 >
-> By convention, the span of the empty list (\\k = 0\\) is \\\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\, and the empty list counts as linearly independent ([Definition 1](#def-linearly-independent)), since it has no coefficients that could fail to be zero.
+> By convention, the span of the empty list (\\k = 0\\) is \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\, and the empty list counts as linearly independent ([Definition 1](#def-linearly-independent)), since it has no coefficients that could fail to be zero.
 
 > **NOTE:**
 >
@@ -116,21 +116,21 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 2 (A span is a subspace)** For any vectors \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k \in \mathbb{R}^p\\, \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\right\\\mathclose{}\\ ([Definition 5](#def-span)) is a subspace of \\\mathbb{R}^p\\ ([Definition 4](#def-subspace)).
+> **Theorem 2 (A span is a subspace)** For any vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k \in \mathbb{R}^p\\, \\\operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\right\\\mathclose{}\\ ([Definition 5](#def-span)) is a subspace of \\\mathbb{R}^p\\ ([Definition 4](#def-subspace)).
 
 > **NOTE:**
 >
-> *Proof*. The span is not empty: it contains \\0 \cdot\underset{\sim}{v}\_1 + \cdots + 0 \cdot\underset{\sim}{v}\_k = \underset{\sim}{0}\\.
+> *Proof*. The span is not empty: it contains \\0 \cdot\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + 0 \cdot\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\.
 >
-> **Addition.** Take two vectors in the span, \\\underset{\sim}{u} = a_1 \underset{\sim}{v}\_1 + \cdots + a_k \underset{\sim}{v}\_k\\ and \\\underset{\sim}{w} = b_1 \underset{\sim}{v}\_1 + \cdots + b_k \underset{\sim}{v}\_k\\. Then
+> **Addition.** Take two vectors in the span, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = a_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + a_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = b_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + b_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\. Then
 >
-> \\ \begin{aligned} \underset{\sim}{u} + \underset{\sim}{w} &= (a_1 \underset{\sim}{v}\_1 + \cdots + a_k \underset{\sim}{v}\_k) + (b_1 \underset{\sim}{v}\_1 + \cdots + b_k \underset{\sim}{v}\_k) && \text{(substitute the two combinations)} \\ &= (a_1 + b_1)\\\underset{\sim}{v}\_1 + \cdots + (a_k + b_k)\\\underset{\sim}{v}\_k && \text{(regroup, and distribute each } \underset{\sim}{v}\_i \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} &= (a_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + a_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k) + (b_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + b_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k) && \text{(substitute the two combinations)} \\ &= (a_1 + b_1)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + (a_k + b_k)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k && \text{(regroup, and distribute each } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_i \text{)} \end{aligned} \\
 >
-> which is a linear combination of \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\\, so it is in the span.
+> which is a linear combination of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\, so it is in the span.
 >
 > **Scalar multiplication.** For \\c \in \mathbb{R}\\,
 >
-> \\ \begin{aligned} c\\\underset{\sim}{u} &= c\\(a_1 \underset{\sim}{v}\_1 + \cdots + a_k \underset{\sim}{v}\_k) && \text{(substitute the combination)} \\ &= (c a_1)\\\underset{\sim}{v}\_1 + \cdots + (c a_k)\\\underset{\sim}{v}\_k && \text{(distribute } c \text{ over the sum)} \end{aligned} \\
+> \\ \begin{aligned} c\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} &= c\\(a_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + a_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k) && \text{(substitute the combination)} \\ &= (c a_1)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + (c a_k)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k && \text{(distribute } c \text{ over the sum)} \end{aligned} \\
 >
 > which is again in the span.
 
@@ -140,15 +140,15 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 3 (A matrix-vector product combines the columns)** If \\\mathbf{A}\\ is an \\m \times n\\ matrix with columns \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_n\\ and \\\underset{\sim}{x} \in \mathbb{R}^n\\, then
+> **Theorem 3 (A matrix-vector product combines the columns)** If \\\mathbf{A}\\ is an \\m \times n\\ matrix with columns \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_n\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^n\\, then
 >
-> \\ \mathbf{A} \underset{\sim}{x} = x_1 \underset{\sim}{a}\_1 + \cdots + x_n \underset{\sim}{a}\_n. \\
+> \\ \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = x_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + x_n \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_n. \\
 
 > **NOTE:**
 >
-> *Proof*. Compare entry \\i\\ of the two sides, for each \\i = 1, \ldots, m\\. Entry \\i\\ of \\\underset{\sim}{a}\_j\\ is \\a\_{ij}\\, so
+> *Proof*. Compare entry \\i\\ of the two sides, for each \\i = 1, \ldots, m\\. Entry \\i\\ of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j\\ is \\a\_{ij}\\, so
 >
-> \\ \begin{aligned} (\mathbf{A} \underset{\sim}{x})\_i &= a\_{i1} x_1 + \cdots + a\_{in} x_n && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= x_1 a\_{i1} + \cdots + x_n a\_{in} && \text{(multiplication of numbers is commutative)} \\ &= (x_1 \underset{\sim}{a}\_1 + \cdots + x_n \underset{\sim}{a}\_n)\_i && \text{(entry } i \text{ of each } x_j \underset{\sim}{a}\_j \text{ is } x_j a\_{ij} \text{)} \end{aligned} \\
+> \\ \begin{aligned} (\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\_i &= a\_{i1} x_1 + \cdots + a\_{in} x_n && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= x_1 a\_{i1} + \cdots + x_n a\_{in} && \text{(multiplication of numbers is commutative)} \\ &= (x_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + x_n \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_n)\_i && \text{(entry } i \text{ of each } x_j \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j \text{ is } x_j a\_{ij} \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -158,45 +158,45 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 4 (A matrix maps a combination to the same combination of images)** If \\\mathbf{A}\\ is an \\m \times n\\ matrix, \\\underset{\sim}{z}\_1, \ldots, \underset{\sim}{z}\_k \in \mathbb{R}^n\\ and \\c_1, \ldots, c_k \in \mathbb{R}\\, then
+> **Theorem 4 (A matrix maps a combination to the same combination of images)** If \\\mathbf{A}\\ is an \\m \times n\\ matrix, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_k \in \mathbb{R}^n\\ and \\c_1, \ldots, c_k \in \mathbb{R}\\, then
 >
-> \\ \mathbf{A}\\(c_1 \underset{\sim}{z}\_1 + \cdots + c_k \underset{\sim}{z}\_k) = c_1\\\mathbf{A} \underset{\sim}{z}\_1 + \cdots + c_k\\\mathbf{A} \underset{\sim}{z}\_k. \\
+> \\ \mathbf{A}\\(c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_k) = c_1\\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_1 + \cdots + c_k\\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_k. \\
 
 > **NOTE:**
 >
-> *Proof*. The function \\\underset{\sim}{x}\mapsto \mathbf{A}\underset{\sim}{x}\\ is a linear map by [Theorem 9 in Matrices](linear-algebra-matrices.llms.md#thm-matrix-map-linear), and a linear map preserves linear combinations by [Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-linear-map-lincom). Applying that theorem with \\f(\underset{\sim}{x}) = \mathbf{A}\underset{\sim}{x}\\ and \\\underset{\sim}{v}\_i = \underset{\sim}{z}\_i\\ gives the identity.
+> *Proof*. The function \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\mapsto \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is a linear map by [Theorem 9 in Matrices](linear-algebra-matrices.llms.md#thm-matrix-map-linear), and a linear map preserves linear combinations by [Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-linear-map-lincom). Applying that theorem with \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_i = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_i\\ gives the identity.
 
 > **NOTE:**
 >
-> **Example 9 (Applying a matrix to a combination)** Let \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\\, \\\underset{\sim}{z}\_1 = (1, 0)\\ and \\\underset{\sim}{z}\_2 = (0, 1)\\. Then \\\mathbf{A} \underset{\sim}{z}\_1 = (1, 3)\\ and \\\mathbf{A} \underset{\sim}{z}\_2 = (2, 4)\\, and for the combination \\2 \underset{\sim}{z}\_1 - \underset{\sim}{z}\_2 = (2, -1)\\:
+> **Example 9 (Applying a matrix to a combination)** Let \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_1 = (1, 0)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_2 = (0, 1)\\. Then \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_1 = (1, 3)\\ and \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_2 = (2, 4)\\, and for the combination \\2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_1 - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_2 = (2, -1)\\:
 >
 > \\ \begin{aligned} \mathbf{A}\\(2, -1) &= (1 \cdot 2 + 2 \cdot(-1),\\ 3 \cdot 2 + 4 \cdot(-1)) && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= (0, 2) && \text{(arithmetic)} \\ &= 2\\(1, 3) - (2, 4), && \text{(arithmetic)} \end{aligned} \\
 >
-> which is \\2\\\mathbf{A} \underset{\sim}{z}\_1 - \mathbf{A} \underset{\sim}{z}\_2\\, as [Theorem 4](#thm-matvec-linear) says.
+> which is \\2\\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_1 - \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\_2\\, as [Theorem 4](#thm-matvec-linear) says.
 
 > **NOTE:**
 >
-> **Theorem 5 (More than \\p\\ vectors in \\\mathbb{R}^p\\ are linearly dependent)** If \\k \> p\\, then any \\k\\ vectors \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k \in \mathbb{R}^p\\ are not linearly independent ([Definition 1](#def-linearly-independent)): some numbers \\c_1, \ldots, c_k\\, not all zero, satisfy \\c_1 \underset{\sim}{v}\_1 + \cdots + c_k \underset{\sim}{v}\_k = \underset{\sim}{0}\_p\\.
+> **Theorem 5 (More than \\p\\ vectors in \\\mathbb{R}^p\\ are linearly dependent)** If \\k \> p\\, then any \\k\\ vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k \in \mathbb{R}^p\\ are not linearly independent ([Definition 1](#def-linearly-independent)): some numbers \\c_1, \ldots, c_k\\, not all zero, satisfy \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\.
 
 > **NOTE:**
 >
 > *Proof*. [Induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\.
 >
-> **Base case, \\p = 1\\.** Each \\\underset{\sim}{v}\_i\\ is a single number \\v_i\\, and \\k \ge 2\\. If \\v_1 = 0\\, take \\c_1 = 1\\ and every other \\c_i = 0\\. Otherwise take \\c_1 = v_2\\, \\c_2 = -v_1\\ and every other \\c_i = 0\\; then \\c_2 \neq 0\\, and \\v_2 v_1 - v_1 v_2 = 0\\.
+> **Base case, \\p = 1\\.** Each \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_i\\ is a single number \\v_i\\, and \\k \ge 2\\. If \\v_1 = 0\\, take \\c_1 = 1\\ and every other \\c_i = 0\\. Otherwise take \\c_1 = v_2\\, \\c_2 = -v_1\\ and every other \\c_i = 0\\; then \\c_2 \neq 0\\, and \\v_2 v_1 - v_1 v_2 = 0\\.
 >
-> **Inductive step.** Let \\p \ge 2\\, assume the [theorem](proof-writing.llms.md#def-theorem) holds for vectors in \\\mathbb{R}^{p-1}\\, and take \\k \> p\\ vectors in \\\mathbb{R}^p\\. Write \\v\_{i,p}\\ for the last entry of \\\underset{\sim}{v}\_i\\.
+> **Inductive step.** Let \\p \ge 2\\, assume the [theorem](proof-writing.llms.md#def-theorem) holds for vectors in \\\mathbb{R}^{p-1}\\, and take \\k \> p\\ vectors in \\\mathbb{R}^p\\. Write \\v\_{i,p}\\ for the last entry of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_i\\.
 >
-> *Case 1: every \\v\_{i,p} = 0\\.* Deleting the last entry gives \\k \> p - 1\\ vectors in \\\mathbb{R}^{p-1}\\, which by the inductive hypothesis have a combination with coefficients not all zero that equals \\\underset{\sim}{0}\_{p-1}\\. The same coefficients combine the original vectors to \\\underset{\sim}{0}\_p\\, since every last entry is \\0\\.
+> *Case 1: every \\v\_{i,p} = 0\\.* Deleting the last entry gives \\k \> p - 1\\ vectors in \\\mathbb{R}^{p-1}\\, which by the inductive hypothesis have a combination with coefficients not all zero that equals \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{p-1}\\. The same coefficients combine the original vectors to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\, since every last entry is \\0\\.
 >
 > *Case 2: some \\v\_{i,p} \neq 0\\.* Renumber the vectors so that \\v\_{k,p} \neq 0\\, and for \\i = 1, \ldots, k-1\\ let
 >
-> \\ \underset{\sim}{w}\_i \stackrel{\text{def}}{=}\underset{\sim}{v}\_i - \frac{v\_{i,p}}{v\_{k,p}}\\\underset{\sim}{v}\_k. \\
+> \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\_i \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_i - \frac{v\_{i,p}}{v\_{k,p}}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k. \\
 >
-> The last entry of \\\underset{\sim}{w}\_i\\ is \\v\_{i,p} - \frac{v\_{i,p}}{v\_{k,p}}\\v\_{k,p} = 0\\. Deleting that zero last entry gives \\k - 1 \> p - 1\\ vectors in \\\mathbb{R}^{p-1}\\, so by the inductive hypothesis there are numbers \\c_1, \ldots, c\_{k-1}\\, not all zero, whose combination of the shortened vectors is \\\underset{\sim}{0}\_{p-1}\\. Putting the zero last entries back gives \\c_1 \underset{\sim}{w}\_1 + \cdots + c\_{k-1} \underset{\sim}{w}\_{k-1} = \underset{\sim}{0}\_p\\. Then
+> The last entry of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\_i\\ is \\v\_{i,p} - \frac{v\_{i,p}}{v\_{k,p}}\\v\_{k,p} = 0\\. Deleting that zero last entry gives \\k - 1 \> p - 1\\ vectors in \\\mathbb{R}^{p-1}\\, so by the inductive hypothesis there are numbers \\c_1, \ldots, c\_{k-1}\\, not all zero, whose combination of the shortened vectors is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{p-1}\\. Putting the zero last entries back gives \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\_1 + \cdots + c\_{k-1} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\_{k-1} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\. Then
 >
-> \\ \begin{aligned} \underset{\sim}{0}\_p &= c_1 \underset{\sim}{w}\_1 + \cdots + c\_{k-1} \underset{\sim}{w}\_{k-1} && \text{(choice of } c_1, \ldots, c\_{k-1} \text{)} \\ &= \sum\_{i=1}^{k-1} c_i \mathopen{}\left(\underset{\sim}{v}\_i - \frac{v\_{i,p}}{v\_{k,p}}\\\underset{\sim}{v}\_k\right)\mathclose{} && \text{(definition of } \underset{\sim}{w}\_i \text{)} \\ &= \sum\_{i=1}^{k-1} c_i \underset{\sim}{v}\_i - \sum\_{i=1}^{k-1} \frac{c_i v\_{i,p}}{v\_{k,p}}\\\underset{\sim}{v}\_k && \text{(distribute each } c_i \text{, and split the sum)} \\ &= c_1 \underset{\sim}{v}\_1 + \cdots + c\_{k-1} \underset{\sim}{v}\_{k-1} - \mathopen{}\left(\sum\_{i=1}^{k-1} \frac{c_i v\_{i,p}}{v\_{k,p}}\right)\mathclose{}\\\underset{\sim}{v}\_k, && \text{(factor } \underset{\sim}{v}\_k \text{ out of the second sum)} \end{aligned} \\
+> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p &= c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\_1 + \cdots + c\_{k-1} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\_{k-1} && \text{(choice of } c_1, \ldots, c\_{k-1} \text{)} \\ &= \sum\_{i=1}^{k-1} c_i \mathopen{}\left(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_i - \frac{v\_{i,p}}{v\_{k,p}}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\right)\mathclose{} && \text{(definition of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\_i \text{)} \\ &= \sum\_{i=1}^{k-1} c_i \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_i - \sum\_{i=1}^{k-1} \frac{c_i v\_{i,p}}{v\_{k,p}}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k && \text{(distribute each } c_i \text{, and split the sum)} \\ &= c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + c\_{k-1} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_{k-1} - \mathopen{}\left(\sum\_{i=1}^{k-1} \frac{c_i v\_{i,p}}{v\_{k,p}}\right)\mathclose{}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k, && \text{(factor } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k \text{ out of the second sum)} \end{aligned} \\
 >
-> a combination of \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\\ equal to \\\underset{\sim}{0}\_p\\ whose first \\k - 1\\ coefficients are not all zero.
+> a combination of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\ equal to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\ whose first \\k - 1\\ coefficients are not all zero.
 
 > **NOTE:**
 >
@@ -217,12 +217,12 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 >
 > **Example 12 (Lists that are not bases of \\\mathbb{R}^2\\)**  
 >
-> - \\(1, 0)\\ and \\(2, 0)\\ are not a basis of \\\mathbb{R}^2\\. They are not linearly independent, since \\2\\(1, 0) - (2, 0) = \underset{\sim}{0}\\, and they do not span \\\mathbb{R}^2\\: every combination \\c_1 (1, 0) + c_2 (2, 0)\\ has second entry \\0\\, so \\(0, 1)\\ is not in their span.
-> - \\(1, 0)\\, \\(0, 1)\\ and \\(1, 1)\\ span \\\mathbb{R}^2\\, but they are not a basis: \\(1, 0) + (0, 1) - (1, 1) = \underset{\sim}{0}\\, so they are not linearly independent.
+> - \\(1, 0)\\ and \\(2, 0)\\ are not a basis of \\\mathbb{R}^2\\. They are not linearly independent, since \\2\\(1, 0) - (2, 0) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, and they do not span \\\mathbb{R}^2\\: every combination \\c_1 (1, 0) + c_2 (2, 0)\\ has second entry \\0\\, so \\(0, 1)\\ is not in their span.
+> - \\(1, 0)\\, \\(0, 1)\\ and \\(1, 1)\\ span \\\mathbb{R}^2\\, but they are not a basis: \\(1, 0) + (0, 1) - (1, 1) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, so they are not linearly independent.
 
 > **NOTE:**
 >
-> **Theorem 6 (Coefficients in a basis are unique)** If \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k\\ is a basis of a subspace \\\mathcal{S}\\ ([Definition 6](#def-basis)), then every \\\underset{\sim}{x} \in \mathcal{S}\\ is a linear combination \\\underset{\sim}{x} = c_1 \underset{\sim}{a}\_1 + \cdots + c_k \underset{\sim}{a}\_k\\ for exactly one list of numbers \\c_1, \ldots, c_k\\.
+> **Theorem 6 (Coefficients in a basis are unique)** If \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\ is a basis of a subspace \\\mathcal{S}\\ ([Definition 6](#def-basis)), then every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathcal{S}\\ is a linear combination \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\ for exactly one list of numbers \\c_1, \ldots, c_k\\.
 
 > **NOTE:**
 >
@@ -230,13 +230,13 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 >
 > Suppose two lists both work:
 >
-> \\ \begin{aligned} c_1 \underset{\sim}{a}\_1 + \cdots + c_k \underset{\sim}{a}\_k &= \underset{\sim}{x} \\ &= d_1 \underset{\sim}{a}\_1 + \cdots + d_k \underset{\sim}{a}\_k. \end{aligned} \\
+> \\ \begin{aligned} c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \\ &= d_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + d_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k. \end{aligned} \\
 >
 > Subtracting the right side from the left side gives
 >
-> \\ \begin{aligned} \underset{\sim}{0} &= (c_1 \underset{\sim}{a}\_1 + \cdots + c_k \underset{\sim}{a}\_k) - (d_1 \underset{\sim}{a}\_1 + \cdots + d_k \underset{\sim}{a}\_k) && \text{(both combinations equal } \underset{\sim}{x} \text{)} \\ &= (c_1 - d_1)\\\underset{\sim}{a}\_1 + \cdots + (c_k - d_k)\\\underset{\sim}{a}\_k && \text{(regroup, and distribute each } \underset{\sim}{a}\_i \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}} &= (c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k) - (d_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + d_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k) && \text{(both combinations equal } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \text{)} \\ &= (c_1 - d_1)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + (c_k - d_k)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k && \text{(regroup, and distribute each } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i \text{)} \end{aligned} \\
 >
-> Because \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k\\ are linearly independent ([Definition 1](#def-linearly-independent)), every coefficient \\c_i - d_i\\ is \\0\\, so \\c_i = d_i\\ for each \\i\\.
+> Because \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\ are linearly independent ([Definition 1](#def-linearly-independent)), every coefficient \\c_i - d_i\\ is \\0\\, so \\c_i = d_i\\ for each \\i\\.
 
 > **NOTE:**
 >
@@ -252,11 +252,11 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Coordinates in a basis)** Let \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k\\ be a basis of a subspace \\\mathcal{S}\\ ([Definition 6](#def-basis)), and let \\\underset{\sim}{x} \in \mathcal{S}\\. The **coordinates** of \\\underset{\sim}{x}\\ in this basis are the numbers \\c_1, \ldots, c_k\\ with \\\underset{\sim}{x} = c_1 \underset{\sim}{a}\_1 + \cdots + c_k \underset{\sim}{a}\_k\\. By [Theorem 6](#thm-basis-unique) there is exactly one such list of numbers.
+> **Definition 7 (Coordinates in a basis)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\ be a basis of a subspace \\\mathcal{S}\\ ([Definition 6](#def-basis)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathcal{S}\\. The **coordinates** of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ in this basis are the numbers \\c_1, \ldots, c_k\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\. By [Theorem 6](#thm-basis-unique) there is exactly one such list of numbers.
 
 > **NOTE:**
 >
-> **Definition 8 (Coordinate vector)** With \\\underset{\sim}{x}\\ and its coordinates \\c_1, \ldots, c_k\\ as in [Definition 7](#def-coordinates), \\(c_1, \ldots, c_k) \in \mathbb{R}^k\\ is the **coordinate vector** of \\\underset{\sim}{x}\\.
+> **Definition 8 (Coordinate vector)** With \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and its coordinates \\c_1, \ldots, c_k\\ as in [Definition 7](#def-coordinates), \\(c_1, \ldots, c_k) \in \mathbb{R}^k\\ is the **coordinate vector** of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\.
 
 > **NOTE:**
 >
@@ -268,19 +268,19 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 7 (All bases of a subspace have the same number of vectors)** If \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k\\ and \\\underset{\sim}{b}\_1, \ldots, \underset{\sim}{b}\_l\\ are both bases of a subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ ([Definition 6](#def-basis)), then \\k = l\\.
+> **Theorem 7 (All bases of a subspace have the same number of vectors)** If \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\_l\\ are both bases of a subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ ([Definition 6](#def-basis)), then \\k = l\\.
 
 > **NOTE:**
 >
-> *Proof*. Let \\\mathbf{A}\\ be the \\p \times k\\ matrix with columns \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_k\\, and \\\mathbf{B}\\ the \\p \times l\\ matrix with columns \\\underset{\sim}{b}\_1, \ldots, \underset{\sim}{b}\_l\\.
+> *Proof*. Let \\\mathbf{A}\\ be the \\p \times k\\ matrix with columns \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\, and \\\mathbf{B}\\ the \\p \times l\\ matrix with columns \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\_l\\.
 >
-> **Write \\\mathbf{A}\\ in terms of \\\mathbf{B}\\.** Each \\\underset{\sim}{a}\_j\\ is in \\\mathcal{S}\\, and the \\\underset{\sim}{b}\\’s span \\\mathcal{S}\\ ([Definition 5](#def-span)), so \\\underset{\sim}{a}\_j = \mathbf{B} \underset{\sim}{c}\_j\\ for some \\\underset{\sim}{c}\_j \in \mathbb{R}^l\\ ([Definition 13 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). Let \\\mathbf{C}\\ be the \\l \times k\\ matrix with columns \\\underset{\sim}{c}\_1, \ldots, \underset{\sim}{c}\_k\\. Then \\\underbrace{\mathbf{A}}\_{p \times k} = \underbrace{\mathbf{B}}\_{p \times l}\\\underbrace{\mathbf{C}}\_{l \times k}\\, because column \\j\\ of \\\mathbf{B} \mathbf{C}\\ is \\\mathbf{B} \underset{\sim}{c}\_j\\.
+> **Write \\\mathbf{A}\\ in terms of \\\mathbf{B}\\.** Each \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j\\ is in \\\mathcal{S}\\, and the \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\’s span \\\mathcal{S}\\ ([Definition 5](#def-span)), so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j = \mathbf{B} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_j\\ for some \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_j \in \mathbb{R}^l\\ ([Definition 13 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). Let \\\mathbf{C}\\ be the \\l \times k\\ matrix with columns \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_k\\. Then \\\underbrace{\mathbf{A}}\_{p \times k} = \underbrace{\mathbf{B}}\_{p \times l}\\\underbrace{\mathbf{C}}\_{l \times k}\\, because column \\j\\ of \\\mathbf{B} \mathbf{C}\\ is \\\mathbf{B} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_j\\.
 >
-> **The columns of \\\mathbf{C}\\ are linearly independent.** Suppose \\\mathbf{C} \underset{\sim}{x} = \underset{\sim}{0}\\ for some \\\underset{\sim}{x} \in \mathbb{R}^k\\. Then
+> **The columns of \\\mathbf{C}\\ are linearly independent.** Suppose \\\mathbf{C} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ for some \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^k\\. Then
 >
-> \\ \begin{aligned} \mathbf{A} \underset{\sim}{x} &= (\mathbf{B} \mathbf{C})\\\underset{\sim}{x} && \text{(substitute } \mathbf{A} = \mathbf{B} \mathbf{C} \text{)} \\ &= \mathbf{B}\\(\mathbf{C} \underset{\sim}{x}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{B}\\\underset{\sim}{0} && \text{(substitute } \mathbf{C} \underset{\sim}{x} = \underset{\sim}{0}\text{)} \\ &= \underset{\sim}{0} && \text{(a matrix times the zero vector is } \underset{\sim}{0}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} &= (\mathbf{B} \mathbf{C})\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} && \text{(substitute } \mathbf{A} = \mathbf{B} \mathbf{C} \text{)} \\ &= \mathbf{B}\\(\mathbf{C} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{B}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}} && \text{(substitute } \mathbf{C} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\text{)} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}} && \text{(a matrix times the zero vector is } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\text{)} \end{aligned} \\
 >
-> \\\mathbf{A} \underset{\sim}{x}\\ is the combination \\x_1 \underset{\sim}{a}\_1 + \cdots + x_k \underset{\sim}{a}\_k\\ ([Theorem 3](#thm-matvec-columns)), and the \\\underset{\sim}{a}\\’s are linearly independent ([Definition 1](#def-linearly-independent)), so \\\underset{\sim}{x} = \underset{\sim}{0}\\. So the only combination of the columns of \\\mathbf{C}\\ that equals \\\underset{\sim}{0}\\ has all coefficients \\0\\.
+> \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is the combination \\x_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + x_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\ ([Theorem 3](#thm-matvec-columns)), and the \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\\’s are linearly independent ([Definition 1](#def-linearly-independent)), so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\. So the only combination of the columns of \\\mathbf{C}\\ that equals \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ has all coefficients \\0\\.
 >
 > **Count.** \\\mathbf{C}\\ has \\k\\ linearly independent columns of length \\l\\. More than \\l\\ vectors in \\\mathbb{R}^l\\ are never linearly independent ([Theorem 5](#thm-many-vectors-dependent)), so \\k \le l\\. Exchanging the roles of the two bases gives \\l \le k\\, so \\k = l\\.
 
@@ -290,48 +290,48 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Dimension)** The **dimension** of a subspace \\\mathcal{S}\\, written \\\dim(\mathcal{S})\\, is the number of vectors in any basis of \\\mathcal{S}\\ ([Definition 6](#def-basis)). [Theorem 7](#thm-basis-size) makes this number well defined. By convention, the empty list is the basis of \\\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\, so \\\dim(\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}) = 0\\.
+> **Definition 9 (Dimension)** The **dimension** of a subspace \\\mathcal{S}\\, written \\\dim(\mathcal{S})\\, is the number of vectors in any basis of \\\mathcal{S}\\ ([Definition 6](#def-basis)). [Theorem 7](#thm-basis-size) makes this number well defined. By convention, the empty list is the basis of \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\, so \\\dim(\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}) = 0\\.
 
 > **NOTE:**
 >
 > **Example 16 (The dimensions of some subspaces)**  
 >
-> - \\\dim(\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}) = 0\\, by the convention in [Definition 9](#def-dimension).
-> - \\\dim(\mathbb{R}^2) = 2\\, by [Example 11](#exm-basis). More generally, \\\dim(\mathbb{R}^p) = p\\: the indicator vectors \\\underset{\sim}{e}\_1, \ldots, \underset{\sim}{e}\_p\\ ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) are linearly independent, since \\c_1 \underset{\sim}{e}\_1 + \cdots + c_p \underset{\sim}{e}\_p = (c_1, \ldots, c_p)\\, which is \\\underset{\sim}{0}\_p\\ only if every \\c_i = 0\\; and they span \\\mathbb{R}^p\\, since any \\\underset{\sim}{x} = x_1 \underset{\sim}{e}\_1 + \cdots + x_p \underset{\sim}{e}\_p\\.
+> - \\\dim(\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}) = 0\\, by the convention in [Definition 9](#def-dimension).
+> - \\\dim(\mathbb{R}^2) = 2\\, by [Example 11](#exm-basis). More generally, \\\dim(\mathbb{R}^p) = p\\: the indicator vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\ ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) are linearly independent, since \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + \cdots + c_p \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p = (c_1, \ldots, c_p)\\, which is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\ only if every \\c_i = 0\\; and they span \\\mathbb{R}^p\\, since any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = x_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + \cdots + x_p \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\.
 > - The line in [Example 3](#exm-subspace) has dimension \\1\\: the single vector \\(1, 2)\\ is linearly independent and spans the line.
 > - The plane \\z = 0\\ in [Example 6](#exm-span) has dimension \\2\\, with basis \\(1, 0, 0), (0, 1, 0)\\.
 
 > **NOTE:**
 >
-> **Theorem 8 (Adding a vector outside the span keeps a list independent)** If \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\\ are linearly independent ([Definition 1](#def-linearly-independent)) and \\\underset{\sim}{w}\\ is not in \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\right\\\mathclose{}\\ ([Definition 5](#def-span)), then \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k, \underset{\sim}{w}\\ are linearly independent.
+> **Theorem 8 (Adding a vector outside the span keeps a list independent)** If \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\ are linearly independent ([Definition 1](#def-linearly-independent)) and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ is not in \\\operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\right\\\mathclose{}\\ ([Definition 5](#def-span)), then \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ are linearly independent.
 
 > **NOTE:**
 >
-> *Proof*. Suppose \\c_1 \underset{\sim}{v}\_1 + \cdots + c_k \underset{\sim}{v}\_k + d\\\underset{\sim}{w} = \underset{\sim}{0}\\.
+> *Proof*. Suppose \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k + d\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\.
 >
 > **The coefficient \\d\\ is \\0\\.** If \\d \neq 0\\, then
 >
-> \\ \begin{aligned} \underset{\sim}{w} &= \frac{1}{d}\\\mathopen{}\left(d\\\underset{\sim}{w}\right)\mathclose{} && \text{(} d \neq 0 \text{)} \\ &= \frac{1}{d}\\\mathopen{}\left(-c_1 \underset{\sim}{v}\_1 - \cdots - c_k \underset{\sim}{v}\_k\right)\mathclose{} && \text{(solve the supposed equation for } d\\\underset{\sim}{w} \text{)} \\ &= \mathopen{}\left(-\frac{c_1}{d}\right)\mathclose{}\\\underset{\sim}{v}\_1 + \cdots + \mathopen{}\left(-\frac{c_k}{d}\right)\mathclose{}\\\underset{\sim}{v}\_k, && \text{(distribute } \tfrac{1}{d} \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} &= \frac{1}{d}\\\mathopen{}\left(d\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\right)\mathclose{} && \text{(} d \neq 0 \text{)} \\ &= \frac{1}{d}\\\mathopen{}\left(-c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 - \cdots - c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\right)\mathclose{} && \text{(solve the supposed equation for } d\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \text{)} \\ &= \mathopen{}\left(-\frac{c_1}{d}\right)\mathclose{}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + \mathopen{}\left(-\frac{c_k}{d}\right)\mathclose{}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k, && \text{(distribute } \tfrac{1}{d} \text{)} \end{aligned} \\
 >
-> which puts \\\underset{\sim}{w}\\ in \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\right\\\mathclose{}\\, contrary to the assumption.
+> which puts \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ in \\\operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\right\\\mathclose{}\\, contrary to the assumption.
 >
-> **The other coefficients are \\0\\.** With \\d = 0\\, the equation reads \\c_1 \underset{\sim}{v}\_1 + \cdots + c_k \underset{\sim}{v}\_k = \underset{\sim}{0}\\, so every \\c_i = 0\\, because \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k\\ are linearly independent.
+> **The other coefficients are \\0\\.** With \\d = 0\\, the equation reads \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, so every \\c_i = 0\\, because \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\ are linearly independent.
 
 > **NOTE:**
 >
-> **Example 17 (Adding \\(0, 0, 1)\\ to two independent vectors in \\\mathbb{R}^3\\)** The vectors \\(1, 0, 0)\\ and \\(0, 1, 0)\\ are linearly independent, and their span is the plane \\z = 0\\ ([Example 6](#exm-span)). The vector \\(0, 0, 1)\\ has third entry \\1\\, so it is not in that plane, and by [Theorem 8](#thm-add-outside-span) the three vectors \\(1, 0, 0)\\, \\(0, 1, 0)\\, \\(0, 0, 1)\\ are linearly independent. Adding \\(1, 1, 0)\\ instead would not work: \\(1, 1, 0)\\ is in the span, and \\(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \underset{\sim}{0}\\.
+> **Example 17 (Adding \\(0, 0, 1)\\ to two independent vectors in \\\mathbb{R}^3\\)** The vectors \\(1, 0, 0)\\ and \\(0, 1, 0)\\ are linearly independent, and their span is the plane \\z = 0\\ ([Example 6](#exm-span)). The vector \\(0, 0, 1)\\ has third entry \\1\\, so it is not in that plane, and by [Theorem 8](#thm-add-outside-span) the three vectors \\(1, 0, 0)\\, \\(0, 1, 0)\\, \\(0, 0, 1)\\ are linearly independent. Adding \\(1, 1, 0)\\ instead would not work: \\(1, 1, 0)\\ is in the span, and \\(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\.
 
 > **NOTE:**
 >
-> **Theorem 9 (An independent list extends to a basis)** If \\\mathcal{S}\\ is a subspace of \\\mathbb{R}^p\\ ([Definition 4](#def-subspace)) and \\\underset{\sim}{v}\_1, \ldots, \underset{\sim}{v}\_k \in \mathcal{S}\\ are linearly independent ([Definition 1](#def-linearly-independent)), then adding vectors of \\\mathcal{S}\\ to the list gives a basis of \\\mathcal{S}\\ ([Definition 6](#def-basis)). Starting from the empty list shows that every subspace has a basis.
+> **Theorem 9 (An independent list extends to a basis)** If \\\mathcal{S}\\ is a subspace of \\\mathbb{R}^p\\ ([Definition 4](#def-subspace)) and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k \in \mathcal{S}\\ are linearly independent ([Definition 1](#def-linearly-independent)), then adding vectors of \\\mathcal{S}\\ to the list gives a basis of \\\mathcal{S}\\ ([Definition 6](#def-basis)). Starting from the empty list shows that every subspace has a basis.
 
 > **NOTE:**
 >
-> *Proof*. Repeat the following step. If the current list spans \\\mathcal{S}\\, stop: it is linearly independent and spans \\\mathcal{S}\\, so it is a basis. Otherwise, some \\\underset{\sim}{w} \in \mathcal{S}\\ is not in the span of the current list; add \\\underset{\sim}{w}\\ to the list, which stays linearly independent by [Theorem 8](#thm-add-outside-span).
+> *Proof*. Repeat the following step. If the current list spans \\\mathcal{S}\\, stop: it is linearly independent and spans \\\mathcal{S}\\, so it is a basis. Otherwise, some \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \in \mathcal{S}\\ is not in the span of the current list; add \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ to the list, which stays linearly independent by [Theorem 8](#thm-add-outside-span).
 >
 > Every list produced is a linearly independent list of vectors in \\\mathbb{R}^p\\, so it has at most \\p\\ vectors ([Theorem 5](#thm-many-vectors-dependent)). Each step adds one vector, so the process stops after at most \\p - k\\ steps, and when it stops the list is a basis of \\\mathcal{S}\\.
 >
-> For the empty list, which is linearly independent and spans \\\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\ by the conventions in [Definition 5](#def-span), the first step asks whether \\\mathcal{S} = \mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\: if so, the empty list is already a basis; if not, the process adds vectors as described.
+> For the empty list, which is linearly independent and spans \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\ by the conventions in [Definition 5](#def-span), the first step asks whether \\\mathcal{S} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\: if so, the empty list is already a basis; if not, the process adds vectors as described.
 
 > **NOTE:**
 >
@@ -352,17 +352,17 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** If \\d = 0\\, then \\\mathcal{S} = \mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\, so every vector in a nonempty list from \\\mathcal{S}\\ is \\\underset{\sim}{0}\\, and \\1 \cdot\underset{\sim}{0}= \underset{\sim}{0}\\ shows the list is not linearly independent; only the empty list, with \\0 = d\\ vectors, is. Now let \\d \ge 1\\, and let \\\underset{\sim}{a}\_1, \ldots, \underset{\sim}{a}\_d\\ be a basis of \\\mathcal{S}\\, and let \\\underset{\sim}{u}\_1, \ldots, \underset{\sim}{u}\_k \in \mathcal{S}\\ be linearly independent. Each \\\underset{\sim}{u}\_j\\ is in \\\mathcal{S}\\, so \\\underset{\sim}{u}\_j = c\_{1j} \underset{\sim}{a}\_1 + \cdots + c\_{dj} \underset{\sim}{a}\_d\\ for some coordinate vector \\\underset{\sim}{c}\_j = (c\_{1j}, \ldots, c\_{dj}) \in \mathbb{R}^d\\. Suppose \\k \> d\\. Then \\\underset{\sim}{c}\_1, \ldots, \underset{\sim}{c}\_k\\ are \\k \> d\\ vectors in \\\mathbb{R}^d\\, so some \\x_1, \ldots, x_k\\, not all zero, satisfy \\x_1 \underset{\sim}{c}\_1 + \cdots + x_k \underset{\sim}{c}\_k = \underset{\sim}{0}\_d\\ ([Theorem 5](#thm-many-vectors-dependent)); entry \\i\\ of that equation says \\\sum\_{j=1}^{k} x_j c\_{ij} = 0\\. Then
+> *Proof*. **Part 1.** If \\d = 0\\, then \\\mathcal{S} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\, so every vector in a nonempty list from \\\mathcal{S}\\ is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, and \\1 \cdot\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ shows the list is not linearly independent; only the empty list, with \\0 = d\\ vectors, is. Now let \\d \ge 1\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_d\\ be a basis of \\\mathcal{S}\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_k \in \mathcal{S}\\ be linearly independent. Each \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_j\\ is in \\\mathcal{S}\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_j = c\_{1j} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + c\_{dj} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_d\\ for some coordinate vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_j = (c\_{1j}, \ldots, c\_{dj}) \in \mathbb{R}^d\\. Suppose \\k \> d\\. Then \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_k\\ are \\k \> d\\ vectors in \\\mathbb{R}^d\\, so some \\x_1, \ldots, x_k\\, not all zero, satisfy \\x_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_1 + \cdots + x_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_k = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_d\\ ([Theorem 5](#thm-many-vectors-dependent)); entry \\i\\ of that equation says \\\sum\_{j=1}^{k} x_j c\_{ij} = 0\\. Then
 >
-> \\ \begin{aligned} \sum\_{j=1}^{k} x_j \underset{\sim}{u}\_j &= \sum\_{j=1}^{k} x_j \sum\_{i=1}^{d} c\_{ij} \underset{\sim}{a}\_i && \text{(substitute each } \underset{\sim}{u}\_j \text{)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^{d} x_j c\_{ij}\\\underset{\sim}{a}\_i && \text{(distribute each } x_j \text{ over the inner sum)} \\ &= \sum\_{i=1}^{d} \sum\_{j=1}^{k} x_j c\_{ij}\\\underset{\sim}{a}\_i && \text{(swap the order of the finite sums)} \\ &= \sum\_{i=1}^{d} \mathopen{}\left(\sum\_{j=1}^{k} x_j c\_{ij}\right)\mathclose{}\\\underset{\sim}{a}\_i && \text{(factor } \underset{\sim}{a}\_i \text{ out of the inner sum)} \\ &= \sum\_{i=1}^{d} 0 \cdot\underset{\sim}{a}\_i && \text{(entry } i \text{ of } \textstyle\sum_j x_j \underset{\sim}{c}\_j = \underset{\sim}{0}\_d \text{)} \\ &= \underset{\sim}{0}\_p, && \text{(a zero multiple of a vector is } \underset{\sim}{0}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \sum\_{j=1}^{k} x_j \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_j &= \sum\_{j=1}^{k} x_j \sum\_{i=1}^{d} c\_{ij} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i && \text{(substitute each } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_j \text{)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^{d} x_j c\_{ij}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i && \text{(distribute each } x_j \text{ over the inner sum)} \\ &= \sum\_{i=1}^{d} \sum\_{j=1}^{k} x_j c\_{ij}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i && \text{(swap the order of the finite sums)} \\ &= \sum\_{i=1}^{d} \mathopen{}\left(\sum\_{j=1}^{k} x_j c\_{ij}\right)\mathclose{}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i && \text{(factor } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i \text{ out of the inner sum)} \\ &= \sum\_{i=1}^{d} 0 \cdot\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i && \text{(entry } i \text{ of } \textstyle\sum_j x_j \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_j = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_d \text{)} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p, && \text{(a zero multiple of a vector is } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\text{)} \end{aligned} \\
 >
-> a combination of \\\underset{\sim}{u}\_1, \ldots, \underset{\sim}{u}\_k\\ with coefficients not all zero that equals \\\underset{\sim}{0}\_p\\. That contradicts their linear independence, so \\k \le d\\.
+> a combination of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_k\\ with coefficients not all zero that equals \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\. That contradicts their linear independence, so \\k \le d\\.
 >
 > **Part 2.** \\\mathcal{T}\\ has a basis ([Theorem 9](#thm-extend-basis)) with \\\dim(\mathcal{T})\\ vectors. Those vectors are linearly independent and lie in \\\mathcal{S}\\, so by Part 1 there are at most \\\dim(\mathcal{S})\\ of them.
 
 > **NOTE:**
 >
-> **Example 19 (Subspaces of a plane have dimension at most two)** The plane \\\mathcal{S} = \mathopen{}\left\\(x, y, 0) : x, y \in \mathbb{R}\right\\\mathclose{}\\ in \\\mathbb{R}^3\\ has dimension \\2\\ ([Example 16](#exm-dimension)). By [Theorem 10](#thm-dim-bound), no three vectors with third entry \\0\\ are linearly independent; for instance, \\(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \underset{\sim}{0}\\. The line \\\mathcal{T} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ lies in \\\mathcal{S}\\, and
+> **Example 19 (Subspaces of a plane have dimension at most two)** The plane \\\mathcal{S} = \mathopen{}\left\\(x, y, 0) : x, y \in \mathbb{R}\right\\\mathclose{}\\ in \\\mathbb{R}^3\\ has dimension \\2\\ ([Example 16](#exm-dimension)). By [Theorem 10](#thm-dim-bound), no three vectors with third entry \\0\\ are linearly independent; for instance, \\(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\. The line \\\mathcal{T} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ lies in \\\mathcal{S}\\, and
 >
 > \\ \begin{aligned} \dim(\mathcal{T}) &= 1 \\ &\le 2 \\ &= \dim(\mathcal{S}). \end{aligned} \\
 
@@ -372,11 +372,11 @@ Last modified: 2026-10-17 03:46:15 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Let \\d = \dim(\mathcal{S})\\, and let \\\underset{\sim}{t}\_1, \ldots, \underset{\sim}{t}\_d\\ be a basis of \\\mathcal{T}\\ ([Theorem 9](#thm-extend-basis)); it has \\d\\ vectors because \\\dim(\mathcal{T}) = d\\. (When \\d = 0\\ it is the empty list, whose span is \\\mathopen{}\left\\\underset{\sim}{0}\right\\\mathclose{}\\ by the convention in [Definition 5](#def-span), and the argument is unchanged.) Suppose some \\\underset{\sim}{s} \in \mathcal{S}\\ is not in \\\operatorname{span}\mathopen{}\left\\\underset{\sim}{t}\_1, \ldots, \underset{\sim}{t}\_d\right\\\mathclose{} = \mathcal{T}\\. Then \\\underset{\sim}{t}\_1, \ldots, \underset{\sim}{t}\_d, \underset{\sim}{s}\\ are linearly independent ([Theorem 8](#thm-add-outside-span)), and they are \\d + 1\\ vectors of \\\mathcal{S}\\, which contradicts part 1 of [Theorem 10](#thm-dim-bound). So every vector of \\\mathcal{S}\\ is in \\\mathcal{T}\\, that is, \\\mathcal{S} \subseteq \mathcal{T}\\. Together with \\\mathcal{T} \subseteq \mathcal{S}\\, this inclusion gives \\\mathcal{T} = \mathcal{S}\\.
+> *Proof*. Let \\d = \dim(\mathcal{S})\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{t}}\vphantom{t}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{t}}\vphantom{t}}\_d\\ be a basis of \\\mathcal{T}\\ ([Theorem 9](#thm-extend-basis)); it has \\d\\ vectors because \\\dim(\mathcal{T}) = d\\. (When \\d = 0\\ it is the empty list, whose span is \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\ by the convention in [Definition 5](#def-span), and the argument is unchanged.) Suppose some \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \in \mathcal{S}\\ is not in \\\operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{t}}\vphantom{t}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{t}}\vphantom{t}}\_d\right\\\mathclose{} = \mathcal{T}\\. Then \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{t}}\vphantom{t}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{t}}\vphantom{t}}\_d, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\ are linearly independent ([Theorem 8](#thm-add-outside-span)), and they are \\d + 1\\ vectors of \\\mathcal{S}\\, which contradicts part 1 of [Theorem 10](#thm-dim-bound). So every vector of \\\mathcal{S}\\ is in \\\mathcal{T}\\, that is, \\\mathcal{S} \subseteq \mathcal{T}\\. Together with \\\mathcal{T} \subseteq \mathcal{S}\\, this inclusion gives \\\mathcal{T} = \mathcal{S}\\.
 
 > **NOTE:**
 >
-> **Example 20 (Two independent vectors in a plane span it)** Let \\\mathcal{S} = \mathopen{}\left\\(x, y, 0) : x, y \in \mathbb{R}\right\\\mathclose{}\\, the plane \\z = 0\\, which has dimension \\2\\ ([Example 16](#exm-dimension)), and let \\\mathcal{T} = \operatorname{span}\mathopen{}\left\\(1, 0, 0), (1, 1, 0)\right\\\mathclose{}\\. Both vectors have third entry \\0\\, so \\\mathcal{T} \subseteq \mathcal{S}\\. They are linearly independent: \\c_1 (1, 0, 0) + c_2 (1, 1, 0) = (c_1 + c_2, c_2, 0)\\, which is \\\underset{\sim}{0}\\ only if \\c_2 = 0\\ and then \\c_1 = 0\\. So \\\dim(\mathcal{T}) = 2\\, and [Theorem 11](#thm-subspace-equal-dim) gives \\\mathcal{T} = \mathcal{S}\\ without solving for any coefficients. As a check, \\(x, y, 0) = (x - y)\\(1, 0, 0) + y\\(1, 1, 0)\\.
+> **Example 20 (Two independent vectors in a plane span it)** Let \\\mathcal{S} = \mathopen{}\left\\(x, y, 0) : x, y \in \mathbb{R}\right\\\mathclose{}\\, the plane \\z = 0\\, which has dimension \\2\\ ([Example 16](#exm-dimension)), and let \\\mathcal{T} = \operatorname{span}\mathopen{}\left\\(1, 0, 0), (1, 1, 0)\right\\\mathclose{}\\. Both vectors have third entry \\0\\, so \\\mathcal{T} \subseteq \mathcal{S}\\. They are linearly independent: \\c_1 (1, 0, 0) + c_2 (1, 1, 0) = (c_1 + c_2, c_2, 0)\\, which is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ only if \\c_2 = 0\\ and then \\c_1 = 0\\. So \\\dim(\mathcal{T}) = 2\\, and [Theorem 11](#thm-subspace-equal-dim) gives \\\mathcal{T} = \mathcal{S}\\ without solving for any coefficients. As a check, \\(x, y, 0) = (x - y)\\(1, 0, 0) + y\\(1, 1, 0)\\.
 
 > **NOTE:**
 >
