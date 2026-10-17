@@ -1,0 +1,22 @@
+:::{#def-backtracking-line-search}
+#### Backtracking line search
+
+Let $s_0 > 0$ be an initial step length, $\beta \in (0, 1)$ a shrink factor, and $c \in (0, 1)$.
+**Backtracking line search** is the [line search](#def-line-search)
+that chooses $s^{(t)}$ to be the largest of $s_0, \beta s_0, \beta^2 s_0, \ldots$
+that satisfies the [Armijo condition](#def-armijo-condition) with constant $c$ at $\vx^{(t)}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-backtracking-line-search}
+#### Backtracking on a parabola
+
+For $f(x) = x^2$ at $x = 2$ with $c = 1/4$, the Armijo condition holds exactly when $s \le 3/4$ (@exm-armijo-condition).
+With $s_0 = 1$ and $\beta = 1/2$, the trial step lengths are $1, 1/2, 1/4, \ldots$.
+The first, $s = 1$, exceeds $3/4$ and is rejected.
+The second, $s = 1/2$, is at most $3/4$ and is accepted.
+So backtracking chooses $s^{(0)} = 1/2$, after two evaluations of $f$.
+
+:::
