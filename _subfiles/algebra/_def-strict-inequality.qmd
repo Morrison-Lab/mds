@@ -4,7 +4,8 @@
 For [real numbers](number-systems.qmd#def-real-numbers) $a$ and $b$,
 $a < b$ ("$a$ is less than $b$")
 and $a > b$ ("$a$ is greater than $b$")
-are **strict inequalities**.
+are **strict inequalities**
+[@wikipedia_inequality_mathematics].
 
 :::
 

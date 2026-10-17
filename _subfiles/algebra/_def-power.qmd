@@ -3,7 +3,8 @@
 
 Let $a$ be a real number and $n$ a
 [natural number](number-systems.qmd#def-natural-numbers).
-The $n$th **power** of $a$ is the product of $n$ copies of $a$:
+The $n$th **power** of $a$ is the product of $n$ copies of $a$
+[@wikipedia_exponentiation]:
 
 $$a^n \eqdef \underbrace{a \cd a \cd \cdots \cd a}_{n \text{ factors}}$$
 

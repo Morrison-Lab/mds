@@ -2,7 +2,8 @@
 #### Square root
 
 For a real number $a \ge 0$,
-the **square root** of $a$, written $\sqrt{a}$,
+the **square root** of $a$, written $\sqrt{a}$
+[@wikipedia_square_root],
 is the non-negative real number whose square (@def-power) is $a$.
 
 :::

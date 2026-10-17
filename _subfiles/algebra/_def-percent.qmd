@@ -2,7 +2,8 @@
 #### Percent
 
 For a real number $x$,
-"$x$ **percent**", written $x\%$, means $x / 100$:
+"$x$ **percent**", written $x\%$, means $x / 100$
+[@wikipedia_percentage]:
 
 $$
 x\% \eqdef \frac{x}{100}

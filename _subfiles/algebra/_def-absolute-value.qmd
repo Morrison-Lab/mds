@@ -1,7 +1,9 @@
 :::{#def-absolute-value}
 #### Absolute value of a real number
 
-The **absolute value** of a real number $a$ is
+The **absolute value** of a real number $a$
+[@wikipedia_absolute_value]
+is
 
 $$
 \abs{a} \eqdef \begin{cases}
