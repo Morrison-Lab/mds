@@ -1,0 +1,49 @@
+:::{#def-saddle-point}
+#### Saddle point
+
+A [stationary point](#def-stationary-point) of $f$ that is
+neither a [local minimizer](algebra.qmd#def-local-minimizer)
+nor a [local maximizer](#def-local-maximizer) of $f$
+is a **saddle point** of $f$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-saddle-point}
+#### A saddle point
+
+Let $f(\vx) = x_1^2 - x_2^2$.
+Its gradient is $\tp{(2 x_1,\ -2 x_2)}$, which is $\vzero_{2 \times 1}$ only at $\vx = \vzero_{2 \times 1}$,
+so $\vzero_{2 \times 1}$ is a stationary point.
+For every $t \ne 0$,
+
+$$
+\ba
+f(t, 0)
+&= t^2
+&& \text{(substitute)}
+\\
+&> 0
+&& \text{(} t \ne 0 \text{)}
+\\
+&= f(\vzero_{2 \times 1}),
+&& \text{(substitute)}
+\\
+f(0, t)
+&= -t^2
+&& \text{(substitute)}
+\\
+&< 0
+&& \text{(} t \ne 0 \text{)}
+\\
+&= f(\vzero_{2 \times 1}).
+&& \text{(substitute)}
+\ea
+$$
+
+So every ball around $\vzero_{2 \times 1}$ contains a point with a larger value of $f$ and a point with a smaller one.
+Hence $\vzero_{2 \times 1}$ is neither a local minimizer nor a local maximizer,
+and it is a saddle point.
+
+:::

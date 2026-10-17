@@ -1,0 +1,41 @@
+:::{#def-armijo-condition}
+#### Armijo condition
+
+Let $f : \reals^p \to \reals$ have first partial derivatives,
+let $\vx \in \reals^p$, and let $\vecf{g} \eqdef \deriv{\vx} f(\vx)$.
+A step length $s > 0$ satisfies the **Armijo condition** with constant $c \in (0, 1)$ at $\vx$ if
+
+$$
+f(\vx - s \vecf{g}) \le f(\vx) - c\, s\, \norm{\vecf{g}}^2.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-armijo-condition}
+#### The Armijo condition on a parabola
+
+Let $f(x) = x^2$ and $x = 2$, so $g = f'(2) = 4$ and $\norm{g}^2 = 16$.
+With $c = 1/4$, the condition on a step length $s > 0$ is
+
+$$
+\ba
+(2 - 4s)^2 &\le 4 - 4s
+&& \text{(} f(2 - 4s) \le f(2) - c\, s\, \norm{g}^2 \text{)}
+\\
+4 - 16 s + 16 s^2 &\le 4 - 4s
+&& \text{(expand the square)}
+\\
+16 s^2 &\le 12 s
+&& \text{(add } 16 s - 4 \text{ to both sides)}
+\\
+s &\le 3/4.
+&& \text{(divide by } 16 s > 0 \text{)}
+\ea
+$$
+
+So $s = 1/2$ satisfies the condition: $f(0) = 0 \le 4 - 2 = 2$.
+And $s = 1$ does not: $f(-2) = 4 > 4 - 4 = 0$.
+
+:::

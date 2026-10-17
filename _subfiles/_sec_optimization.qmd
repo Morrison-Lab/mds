@@ -40,6 +40,14 @@
 
 {{< include mds/_subfiles/vector-calc/_thm-second-order-condition.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-local-maximizer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-saddle-point.qmd >}}
+
 ## Convexity in several variables {#sec-convexity-vector}
 
 {{< include mds/_subfiles/vector-calc/_prose-convexity-attribution.qmd >}}
@@ -183,3 +191,11 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_exm-gd-zigzag.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-armijo-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-backtracking-line-search.qmd >}}

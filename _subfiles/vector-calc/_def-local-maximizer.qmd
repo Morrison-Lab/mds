@@ -1,0 +1,36 @@
+:::{#def-local-maximizer}
+#### Local maximizer
+
+Let $f : \reals^p \to \reals$.
+A point $\vx^* \in \reals^p$ is a **local maximizer** of $f$
+if there is a number $\tolin > 0$
+such that $f(\vx^*) \ge f(\vx)$
+for all $\vx \in \reals^p$ with $\norm{\vx - \vx^*} < \tolin$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-local-maximizer}
+#### A local maximizer
+
+Let $f(x) = 1 - x^2$.
+For every $x \in \reals$,
+
+$$
+\ba
+f(0) - f(x)
+&= 1 - (1 - x^2)
+&& \text{(substitute)}
+\\
+&= x^2
+&& \text{(simplify)}
+\\
+&\ge 0,
+&& \text{(a square)}
+\ea
+$$
+
+so $f(0) \ge f(x)$ for all $x$, and $0$ is a local maximizer of $f$ with any $\tolin > 0$.
+
+:::
