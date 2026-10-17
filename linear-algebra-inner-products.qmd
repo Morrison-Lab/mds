@@ -33,3 +33,8 @@ format:
 -   @wikipedia_gram_schmidt_process --- the Gram-Schmidt process, with an algorithm
 
 -   @wikipedia_outer_product --- the outer product and its rank
+
+-   @wikipedia_pythagorean_theorem --- the Pythagorean theorem and its generalizations
+
+-   @wikipedia_uniform_norm --- the uniform (infinity) norm
+
