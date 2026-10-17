@@ -1,7 +1,9 @@
 :::{#def-subspace}
 #### Subspace (linear subspace, vector space, linear space)
 
-A set $\mathcal{S}$ of vectors in $\reals^p$ is a **subspace** of $\reals^p$
+A set $\mathcal{S}$ of vectors in $\reals^p$ is a **subspace**
+[@wikipedia_linear_subspace]
+of $\reals^p$
 if it is not empty
 and it is closed under vector addition and scalar multiplication:
 

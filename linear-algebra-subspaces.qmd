@@ -13,3 +13,17 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_subspaces.qmd >}}
+
+## Further reading {.unnumbered}
+
+-   @wikipedia_linear_independence --- linear independence and dependence, with examples
+
+-   @wikipedia_linear_span --- the span of a set of vectors
+
+-   @wikipedia_linear_subspace --- linear subspaces
+
+-   @wikipedia_basis_linear_algebra --- bases and dimension
+
+-   @wikipedia_coordinate_vector --- coordinates relative to a basis
+
+-   @wikipedia_rank_linear_algebra --- the rank of a matrix

@@ -1,7 +1,9 @@
 :::{#def-basis}
 #### Basis
 
-A **basis** of a subspace $\mathcal{S}$ (@def-subspace)
+A **basis**
+[@wikipedia_basis_linear_algebra]
+of a subspace $\mathcal{S}$ (@def-subspace)
 is a list of vectors that are linearly independent (@def-linearly-independent)
 and span $\mathcal{S}$ (@def-span).
 

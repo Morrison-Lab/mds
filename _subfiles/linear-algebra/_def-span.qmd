@@ -1,7 +1,9 @@
 :::{#def-span}
 #### Span
 
-The **span** of vectors $\vecf{v}_1, \ldots, \vecf{v}_k \in \reals^p$
+The **span**
+[@wikipedia_linear_span]
+of vectors $\vecf{v}_1, \ldots, \vecf{v}_k \in \reals^p$
 is the set of all their linear combinations:
 
 $$
