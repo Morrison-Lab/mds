@@ -1,7 +1,9 @@
 :::{#def-counting-measure}
 #### Counting measure
 
-The **counting measure** on a set $S$
+The **counting measure**
+[@wikipedia_counting_measure]
+on a set $S$
 is the [measure](#def-measure) on the
 [$\sigma$-algebra of all subsets of $S$](#thm-power-set-sigma-algebra)
 that assigns each finite set its number of elements,

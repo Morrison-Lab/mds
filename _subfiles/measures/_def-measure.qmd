@@ -1,7 +1,9 @@
 :::{#def-measure}
 #### Measure
 
-A **measure** on a set $S$ with a [$\sigma$-algebra](#def-sigma-algebra) $\salg$
+A **measure** on a set $S$
+[@wikipedia_measure_mathematics]
+with a [$\sigma$-algebra](#def-sigma-algebra) $\salg$
 is a function $\measure : \salg \to [0, \infty]$
 that satisfies:
 

@@ -2,7 +2,9 @@
 #### Finite measure
 
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
-The measure $\measure$ is **finite** if $\measure(S) < \infty$.
+The measure $\measure$ is **finite** if
+[@wikipedia_finite_measure]
+$\measure(S) < \infty$.
 
 :::
 
@@ -12,7 +14,9 @@ The measure $\measure$ is **finite** if $\measure(S) < \infty$.
 #### $\sigma$-finite measure
 
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
-The measure $\measure$ is **$\sigma$-finite** if $S$ is the union $\bigcup_{i=1}^{\infty} A_i$
+The measure $\measure$ is **$\sigma$-finite**
+[@wikipedia_sigma_finite_measure]
+if $S$ is the union $\bigcup_{i=1}^{\infty} A_i$
 of a sequence of sets $A_1, A_2, \ldots$ in $\salg$
 with $\measure(A_i) < \infty$ for every $i$.
 

@@ -4,6 +4,7 @@
 Let $\salg$ be a [$\sigma$-algebra](#def-sigma-algebra) on a set $S$.
 A function $\measure : \salg \to [0, \infty]$
 is **countably additive**
+[@wikipedia_sigma_additive_set_function]
 (also called **$\sigma$-additive**)
 if, for every sequence of
 [pairwise disjoint](#def-pairwise-disjoint) sets $A_1, A_2, \ldots$ in $\salg$,

@@ -6,6 +6,7 @@ A statement about the elements of $S$ holds
 **$\measure$-almost everywhere**
 (written **$\measure$-a.e.**,
 or **almost everywhere** when $\measure$ is clear from context)
+[@wikipedia_almost_everywhere]
 if the set of elements for which it fails
 is a [subset](sets.qmd#def-subset) of a set of [measure zero](#def-measure-zero).
 

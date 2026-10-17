@@ -1,7 +1,9 @@
 :::{#def-probability-measure}
 #### Probability measure
 
-A **probability measure** on a [measurable space](#def-measurable-space) $(\samplespace, \events)$
+A **probability measure**
+[@wikipedia_probability_measure]
+on a [measurable space](#def-measurable-space) $(\samplespace, \events)$
 is a [measure](#def-measure) $\P$ on $\events$
 that gives the whole set $\samplespace$ the value $1$:
 
