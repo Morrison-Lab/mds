@@ -1,7 +1,9 @@
 :::{#def-parabola}
 #### Parabola
 
-A **parabola** is the [graph](functions.qmd#def-graph)
+A **parabola**
+[@wikipedia_parabola]
+is the [graph](functions.qmd#def-graph)
 of a quadratic polynomial (@def-quadratic-polynomial).
 
 :::

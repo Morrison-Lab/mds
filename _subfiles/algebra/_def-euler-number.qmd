@@ -1,7 +1,9 @@
 :::{#def-euler-number}
 #### Euler's number
 
-**Euler's number** is
+**Euler's number**
+[@wikipedia_e_mathematical_constant]
+is
 
 $$e \eqdef \expf{1} = 2.71828\ldots$$
 

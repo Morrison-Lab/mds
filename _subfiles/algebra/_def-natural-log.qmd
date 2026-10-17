@@ -2,7 +2,8 @@
 #### Natural logarithm
 
 For a real number $a > 0$,
-the **natural logarithm** of $a$, written $\logf{a}$,
+the **natural logarithm** of $a$, written $\logf{a}$
+[@wikipedia_natural_logarithm],
 is the real number $y$ with $\expf{y} = a$.
 The exponential function takes each positive value at exactly one input,
 so there is exactly one such $y$,
