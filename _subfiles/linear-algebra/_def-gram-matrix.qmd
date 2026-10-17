@@ -1,7 +1,9 @@
 :::{#def-gram-matrix}
 #### Gram matrix
 
-The **Gram matrix** of an $m \times n$ matrix $\matr{A}$
+The **Gram matrix**
+[@wikipedia_gram_matrix]
+of an $m \times n$ matrix $\matr{A}$
 is the $n \times n$ matrix $\tp{\matr{A}} \matr{A}$,
 the [cross-product matrix](#def-cross-product-matrix) of $\matr{A}$ with itself.
 

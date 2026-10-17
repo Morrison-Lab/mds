@@ -1,7 +1,9 @@
 :::{#def-nullity}
 #### Nullity
 
-The **nullity** of a matrix $\matr{A}$ is
+The **nullity**
+[@wikipedia_rank_nullity_theorem]
+of a matrix $\matr{A}$ is
 the dimension of its null space (@def-null-space):
 
 $$

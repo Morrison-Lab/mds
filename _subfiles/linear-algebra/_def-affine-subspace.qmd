@@ -1,7 +1,9 @@
 :::{#def-affine-subspace}
 #### Affine subspace
 
-An **affine subspace** of $\reals^p$ is a set of the form
+An **affine subspace**
+[@wikipedia_affine_space]
+of $\reals^p$ is a set of the form
 
 $$
 \cb{\vecf{x}_0 + \vecf{s} : \vecf{s} \in \mathcal{S}}

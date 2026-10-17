@@ -1,7 +1,9 @@
 :::{#def-column-space}
 #### Column space (range, image)
 
-The **column space** of an $m \times n$ matrix $\matr{A}$ is
+The **column space**
+[@wikipedia_row_and_column_spaces]
+of an $m \times n$ matrix $\matr{A}$ is
 
 $$
 \mathcal{C}(\matr{A})
