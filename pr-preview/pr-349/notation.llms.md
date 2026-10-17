@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 02:44:23 (PDT)
+Last modified: 2026-10-17 04:02:11 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -39,13 +39,50 @@ The links for conditioning, random variables, expectation, and independence go t
 
 The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in `$x^2$`, and displayed equations between double dollar signs, as in `$$x^2$$`. The [equations section of Quarto’s Markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#equations) shows the details. These notes also use shorthand macros, such as `\floor{x}` for \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\, defined in the `latex-macros` submodule’s `macros.qmd`.
 
-## 2 Why is notation in probability and statistics so inconsistent and disorganized?
+## 2 Subscripts and parentheses
+
+> **NOTE:**
+>
+> *Remark 1* (Our convention for subscripts and parentheses). Subscripts and parentheses both attach extra information to a symbol, and sources divide the work between them differently. These notes follow two rules of thumb:
+>
+> - A subscript names which member of an [indexed family](sets.llms.md#def-indexed-family) we mean. It holds an index, such as the \\i\\ in \\x_i\\, or a parameter that picks one [function](functions.llms.md#def-function) or distribution out of the family, such as the \\\theta\\ in \\f\_\theta\\.
+> - Parentheses hold the input a function is evaluated at, as in \\f(x)\\.
+>
+> Under these rules, \\f\_\theta(x)\\ reads “the member of the family labeled \\\theta\\, evaluated at \\x\\”. Nothing forces this split. It is a convention for keeping a formula readable, and you will meet the same objects written the other way around.
+
+> **NOTE:**
+>
+> | object | our form | other forms you may meet |
+> |----|----|----|
+> | entry of a vector or matrix | \\x_i\\, \\A\_{ij}\\ | \\x(i)\\, \\A(i, j)\\, and `A[i, j]` in code |
+> | term of a [sequence](functions.llms.md#def-sequence) | \\a_n\\ | \\a(n)\\ |
+> | function with a parameter | \\f\_\theta(x)\\ | \\f(x; \theta)\\, \\f(x \mid \theta)\\, \\f(x, \theta)\\ |
+> | probability under a parameter | \\\Pr\_\theta(A)\\ | \\\Pr(A; \theta)\\, \\\Pr(A \mid \theta)\\ |
+> | derivative of order \\k\\ | \\f^{(k)}(x)\\ | \\f^{\[k\]}(x)\\, \\\mathrm{D}^k f(x)\\ |
+> | order statistic | \\X\_{(i)}\\ | \\X\_{i:n}\\ |
+> | sample index | \\x_i\\ | \\x^{(i)}\\ |
+>
+> Table 2: Subscripts and parentheses in these notes, and the alternatives
+
+> **NOTE:**
+>
+> *Remark 2* (Subscripts and parentheses for a stochastic process). The notation for a [stochastic process](https://morrison-lab.github.io/pds/notation.html#def-stochastic-process) uses both slots at once. A stochastic process is an [indexed family](sets.llms.md#def-indexed-family) of [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X_t\\, one for each index \\t\\ in some [index set](sets.llms.md#def-index-set), such as time. The index goes in the subscript, because it picks a member of the family. Each \\X_t\\ is itself a [function](functions.llms.md#def-function) of the [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) \\\omega\\ of a [random experiment](https://morrison-lab.github.io/pds/probability-basics.html#def-random-experiment), that is, an element of the [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space), so the outcome goes in the parentheses: \\X_t(\omega)\\. Fixing \\\omega\\ and letting \\t\\ vary traces out one path of the process. Many sources drop \\\omega\\ and write \\X_t\\, or write \\X(t)\\ when \\t\\ is continuous.
+
+> **NOTE:**
+>
+> **Example 1 (Reading \\X_t(\omega)\\)** Let \\X_t\\ be the position of a particle at time \\t \ge 0\\. Then \\X_3\\ is the random position at time 3, and \\X_3(\omega)\\ is its value when the experiment’s [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) is \\\omega\\. Holding \\\omega\\ fixed and letting \\t\\ vary gives the particle’s whole path for that outcome. A source that writes \\X(t, \omega)\\ means the same thing, with both arguments in parentheses.
+
+> **NOTE:**
+>
+> *Remark 3* (Reading another source’s subscripts and parentheses). When you read a formula from another source, first work out what each subscript and each argument is doing: labeling a member of an [indexed family](sets.llms.md#def-indexed-family), or being the input of a [function](functions.llms.md#def-function). That tells you which convention the source follows, whatever its layout.
+
+## 3 Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.
 
 It’s worth noting that calculus was formalized in the [1600s](https://en.wikipedia.org/wiki/Leibniz%27s_notation), elementary algebra was formalized around [820](https://en.wikipedia.org/wiki/Al-Jabr), and arithmetic [even earlier](https://en.wikipedia.org/wiki/Arithmetic#History). And calculus still has [several competing notation systems](https://en.wikipedia.org/wiki/Notation_for_differentiation). In contrast, the field of statistics only emerged in the [late 1800s and early 1900s](https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics), so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 ([Nelder and Wedderburn 1972](#ref-nelder1972generalized)), which is very recent in terms of the [pace of scientific development](https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions).
 
-## 3 Further reading
+## 4 Further reading
 
 For the logical symbols and proof conventions used in these notes (whose definitions are on the [Proof Writing](proof-writing.llms.md#sec-proof-definitions) page):
 

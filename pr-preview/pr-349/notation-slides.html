@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-17 02:44:23 (PDT)</p>
+  <p class="date">Last modified: 2026-10-17 04:02:11 (PDT)</p>
 </section>
 <section class="slide level2 scrollable">
 
@@ -435,13 +435,100 @@ Table&nbsp;1: Notation used in this book
 <h2><span class="header-section-number">1</span> Writing math in Quarto</h2>
 <p>The third column of <a href="#/tbl-notation-collected" class="quarto-xref">Table&nbsp;1</a> gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in <code>$x^2$</code>, and displayed equations between double dollar signs, as in <code>$$x^2$$</code>. The <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">equations section of Quarto’s Markdown guide</a> shows the details. These notes also use shorthand macros, such as <code>\floor{x}</code> for <span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span>, defined in the <code>latex-macros</code> submodule’s <code>macros.qmd</code>.</p>
 </section>
-<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="slide level2" data-number="2">
-<h2><span class="header-section-number">2</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
+<section id="sec-subscripts-parentheses" class="slide level2" data-number="2">
+<h2><span class="header-section-number">2</span> Subscripts and parentheses</h2>
+<div id="rem-subscript-parentheses-convention" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (Our convention for subscripts and parentheses). </span>Subscripts and parentheses both attach extra information to a symbol, and sources divide the work between them differently. These notes follow two rules of thumb:</p>
+<ul>
+<li>A subscript names which member of an <a href="./sets.html#def-indexed-family">indexed family</a> we mean. It holds an index, such as the <span class="math inline">\(i\)</span> in <span class="math inline">\(x_i\)</span>, or a parameter that picks one <a href="./functions.html#def-function">function</a> or distribution out of the family, such as the <span class="math inline">\(\theta\)</span> in <span class="math inline">\(f_\theta\)</span>.</li>
+<li>Parentheses hold the input a function is evaluated at, as in <span class="math inline">\(f(x)\)</span>.</li>
+</ul>
+<p>Under these rules, <span class="math inline">\(f_\theta(x)\)</span> reads “the member of the family labeled <span class="math inline">\(\theta\)</span>, evaluated at <span class="math inline">\(x\)</span>”. Nothing forces this split. It is a convention for keeping a formula readable, and you will meet the same objects written the other way around.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="tbl-subscript-parentheses" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-subscript-parentheses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Subscripts and parentheses in these notes, and the alternatives
+</figcaption>
+<div aria-describedby="tbl-subscript-parentheses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>object</th>
+<th>our form</th>
+<th>other forms you may meet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>entry of a vector or matrix</td>
+<td><span class="math inline">\(x_i\)</span>, <span class="math inline">\(A_{ij}\)</span></td>
+<td><span class="math inline">\(x(i)\)</span>, <span class="math inline">\(A(i, j)\)</span>, and <code>A[i, j]</code> in code</td>
+</tr>
+<tr class="even">
+<td>term of a <a href="./functions.html#def-sequence">sequence</a></td>
+<td><span class="math inline">\(a_n\)</span></td>
+<td><span class="math inline">\(a(n)\)</span></td>
+</tr>
+<tr class="odd">
+<td>function with a parameter</td>
+<td><span class="math inline">\(f_\theta(x)\)</span></td>
+<td><span class="math inline">\(f(x; \theta)\)</span>, <span class="math inline">\(f(x \mid \theta)\)</span>, <span class="math inline">\(f(x, \theta)\)</span></td>
+</tr>
+<tr class="even">
+<td>probability under a parameter</td>
+<td><span class="math inline">\(\Pr_\theta(A)\)</span></td>
+<td><span class="math inline">\(\Pr(A; \theta)\)</span>, <span class="math inline">\(\Pr(A \mid \theta)\)</span></td>
+</tr>
+<tr class="odd">
+<td>derivative of order <span class="math inline">\(k\)</span></td>
+<td><span class="math inline">\(f^{(k)}(x)\)</span></td>
+<td><span class="math inline">\(f^{[k]}(x)\)</span>, <span class="math inline">\(\mathrm{D}^k f(x)\)</span></td>
+</tr>
+<tr class="even">
+<td>order statistic</td>
+<td><span class="math inline">\(X_{(i)}\)</span></td>
+<td><span class="math inline">\(X_{i:n}\)</span></td>
+</tr>
+<tr class="odd">
+<td>sample index</td>
+<td><span class="math inline">\(x_i\)</span></td>
+<td><span class="math inline">\(x^{(i)}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-process-notation" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (Subscripts and parentheses for a stochastic process). </span>The notation for a <a href="https://morrison-lab.github.io/pds/notation.html#def-stochastic-process">stochastic process</a> uses both slots at once. A stochastic process is an <a href="./sets.html#def-indexed-family">indexed family</a> of <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variables</a> <span class="math inline">\(X_t\)</span>, one for each index <span class="math inline">\(t\)</span> in some <a href="./sets.html#def-index-set">index set</a>, such as time. The index goes in the subscript, because it picks a member of the family. Each <span class="math inline">\(X_t\)</span> is itself a <a href="./functions.html#def-function">function</a> of the <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome">outcome</a> <span class="math inline">\(\omega\)</span> of a <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-random-experiment">random experiment</a>, that is, an element of the <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space">sample space</a>, so the outcome goes in the parentheses: <span class="math inline">\(X_t(\omega)\)</span>. Fixing <span class="math inline">\(\omega\)</span> and letting <span class="math inline">\(t\)</span> vary traces out one path of the process. Many sources drop <span class="math inline">\(\omega\)</span> and write <span class="math inline">\(X_t\)</span>, or write <span class="math inline">\(X(t)\)</span> when <span class="math inline">\(t\)</span> is continuous.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-process-notation" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Reading <span class="math inline">\(X_t(\omega)\)</span>)</strong></span> Let <span class="math inline">\(X_t\)</span> be the position of a particle at time <span class="math inline">\(t \ge 0\)</span>. Then <span class="math inline">\(X_3\)</span> is the random position at time 3, and <span class="math inline">\(X_3(\omega)\)</span> is its value when the experiment’s <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome">outcome</a> is <span class="math inline">\(\omega\)</span>. Holding <span class="math inline">\(\omega\)</span> fixed and letting <span class="math inline">\(t\)</span> vary gives the particle’s whole path for that outcome. A source that writes <span class="math inline">\(X(t, \omega)\)</span> means the same thing, with both arguments in parentheses.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-reading-other-sources" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (Reading another source’s subscripts and parentheses). </span>When you read a formula from another source, first work out what each subscript and each argument is doing: labeling a member of an <a href="./sets.html#def-indexed-family">indexed family</a>, or being the input of a <a href="./functions.html#def-function">function</a>. That tells you which convention the source follows, whatever its layout.</p>
+</div>
+</section>
+<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="slide level2" data-number="3">
+<h2><span class="header-section-number">3</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
 <p>In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.</p>
 <p>It’s worth noting that calculus was formalized in the <a href="https://en.wikipedia.org/wiki/Leibniz%27s_notation">1600s</a>, elementary algebra was formalized around <a href="https://en.wikipedia.org/wiki/Al-Jabr">820</a>, and arithmetic <a href="https://en.wikipedia.org/wiki/Arithmetic#History">even earlier</a>. And calculus still has <a href="https://en.wikipedia.org/wiki/Notation_for_differentiation">several competing notation systems</a>. In contrast, the field of statistics only emerged in the <a href="https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics">late 1800s and early 1900s</a>, so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 <span class="citation" data-cites="nelder1972generalized">(<a href="#/references" role="doc-biblioref" onclick="">Nelder and Wedderburn 1972</a>)</span>, which is very recent in terms of the <a href="https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions">pace of scientific development</a>.</p>
 </section>
-<section id="sec-further-reading" class="slide level2" data-number="3">
-<h2><span class="header-section-number">3</span> Further reading</h2>
+<section id="sec-further-reading" class="slide level2" data-number="4">
+<h2><span class="header-section-number">4</span> Further reading</h2>
 <p>For the logical symbols and proof conventions used in these notes (whose definitions are on the <a href="./proof-writing.html#sec-proof-definitions">Proof Writing</a> page):</p>
 <ul>
 <li><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> explains how mathematical statements are built from logical connectives (<a href="./proof-writing.html#def-logical-connective">definition</a>) and quantifiers (<a href="./proof-writing.html#def-quantifier">definition</a>), and how to read and write them.</li>
