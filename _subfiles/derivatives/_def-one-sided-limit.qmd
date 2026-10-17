@@ -2,7 +2,8 @@
 #### Right-hand limit
 
 Let $f$ be a function and $L$ a real number.
-The **right-hand limit** of $f$ at $c$ is $L$,
+The **right-hand limit** of $f$ at $c$ is $L$
+[@wikipedia_one_sided_limit],
 written $\lim_{x \to c^+} f(x) = L$,
 if for every $\tolout > 0$ there is a $\tolin > 0$ such that
 $\abs{f(x) - L} < \tolout$ for every $x$ with $c < x < c + \tolin$.
@@ -15,7 +16,8 @@ $\abs{f(x) - L} < \tolout$ for every $x$ with $c < x < c + \tolin$.
 #### Left-hand limit
 
 Let $f$ be a function and $L$ a real number.
-The **left-hand limit** of $f$ at $c$ is $L$,
+The **left-hand limit** of $f$ at $c$ is $L$
+[@wikipedia_one_sided_limit],
 written $\lim_{x \to c^-} f(x) = L$,
 if for every $\tolout > 0$ there is a $\tolin > 0$ such that
 $\abs{f(x) - L} < \tolout$ for every $x$ with $c - \tolin < x < c$.

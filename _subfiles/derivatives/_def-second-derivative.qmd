@@ -6,6 +6,7 @@ whose derivative $f'$ (@def-derivative) exists
 at every point of an [open interval](sets.qmd#def-open-interval) containing $c$.
 If $f'$ is differentiable (@def-differentiable) at $c$,
 its derivative there, written $f''(c)$ or $\dif{^2 f}{x^2}$,
-is the **second derivative** of $f$ at $c$.
+is the **second derivative** of $f$ at $c$
+[@wikipedia_second_derivative].
 
 :::

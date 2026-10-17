@@ -2,6 +2,7 @@
 #### Differentiable function
 
 A function $f$ is **differentiable at** $x = c$
+[@wikipedia_differentiable_function]
 if the limit (@def-limit) of the difference quotient (@def-difference-quotient) as $h \to 0$,
 
 $$f'(c) \eqdef \lim_{h \to 0} \frac{f(c + h) - f(c)}{h},$$

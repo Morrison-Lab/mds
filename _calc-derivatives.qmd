@@ -97,7 +97,8 @@ $$\deriv{x}ay = a \derivf{y}{x}$$
 :::{#thm-deriv-polynomial}
 #### Power rule
 
-For every real number $q$ and every $x > 0$,
+For every real number $q$ and every $x > 0$
+[@wikipedia_power_rule],
 the derivative of the [power](algebra.qmd#def-real-power) $x^q$ is:
 
 $$\deriv{x}x^q = qx^{q-1}$$
@@ -179,7 +180,8 @@ $$\deriv{x}\cos x = -\sin x$$
 :::{#thm-product-rule}
 #### Product rule
 
-If $a$ and $b$ are differentiable functions of $x$, then
+If $a$ and $b$ are differentiable functions of $x$
+[@wikipedia_product_rule], then
 
 $$(ab)' = ab' + ba'$$
 :::
@@ -202,6 +204,7 @@ $$(ab)' = ab' + ba'$$
 #### Quotient rule
 
 If $a$ and $b$ are differentiable functions of $x$
+[@wikipedia_quotient_rule]
 and $b \neq 0$, then
 
 $$(a/b)' = a'/b - (a/b^2)b'$$
@@ -220,7 +223,8 @@ $$(a/b)' = a'/b - (a/b^2)b'$$
 :::{#thm-chain-rule}
 #### Chain rule
 
-If $a$ is a differentiable function of $b$,
+If $a$ is a differentiable function of $b$
+[@wikipedia_chain_rule],
 and $b$ is a differentiable function of $c$,
 then $a$ is a differentiable function of $c$, and
 
@@ -342,6 +346,7 @@ $$f(w + \smallconst) \approx f(w) + \smallconst\,\dif{}{w}f(w)$$ {#eq-linear-app
 
 For a function $f$ that is differentiable at $w$,
 the **linear approximation** of $f$ at $w$
+[@wikipedia_linear_approximation]
 (also called the **first-order Taylor approximation**)
 is the function of the step $\smallconst$
 
@@ -384,7 +389,8 @@ as an affine function for functions of several variables as well.
 #### Flat point (stationary point)
 
 Let $f$ be differentiable at $c$ (@def-differentiable).
-If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary point**).
+If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary point**)
+[@wikipedia_stationary_point].
 :::
 
 {{< slidebreak >}}
