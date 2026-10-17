@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-17 00:42:20 (PDT)</p>
+  <p class="date">Last modified: 2026-10-17 02:08:29 (PDT)</p>
 </section>
 <section class="slide level2 scrollable">
 
@@ -445,6 +445,9 @@ Table&nbsp;1: Notation used in this book
 </ul>
 <p>Under these rules, <span class="math inline">\(f_\theta(x)\)</span> reads “the member of the family labeled <span class="math inline">\(\theta\)</span>, evaluated at <span class="math inline">\(x\)</span>”. Nothing forces this split. It is a convention for keeping a formula readable, and you will meet the same objects written the other way around.</p>
 </div>
+</section>
+<section class="slide level2">
+
 <div id="tbl-subscript-parentheses" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-subscript-parentheses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -500,12 +503,21 @@ Table&nbsp;2: Subscripts and parentheses in these notes, and the alternatives
 </div>
 </figure>
 </div>
+</section>
+<section class="slide level2">
+
 <div id="rem-process-notation" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (Subscripts and parentheses for a stochastic process). </span>The notation for a <a href="https://morrison-lab.github.io/pds/notation.html#def-stochastic-process">stochastic process</a> uses both slots at once. A stochastic process is an <a href="./sets.html#def-indexed-family">indexed family</a> of <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variables</a> <span class="math inline">\(X_t\)</span>, one for each index <span class="math inline">\(t\)</span> in some <a href="./sets.html#def-index-set">index set</a>, such as time. The index goes in the subscript, because it picks a member of the family. Each <span class="math inline">\(X_t\)</span> is itself a <a href="./functions.html#def-function">function</a> of the <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome">outcome</a> <span class="math inline">\(\omega\)</span> of a <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-random-experiment">random experiment</a>, that is, an element of the <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space">sample space</a>, so the outcome goes in the parentheses: <span class="math inline">\(X_t(\omega)\)</span>. Fixing <span class="math inline">\(\omega\)</span> and letting <span class="math inline">\(t\)</span> vary traces out one path of the process. Many sources drop <span class="math inline">\(\omega\)</span> and write <span class="math inline">\(X_t\)</span>, or write <span class="math inline">\(X(t)\)</span> when <span class="math inline">\(t\)</span> is continuous.</p>
 </div>
+</section>
+<section class="slide level2">
+
 <div id="exm-process-notation" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Reading <span class="math inline">\(X_t(\omega)\)</span>)</strong></span> Let <span class="math inline">\(X_t\)</span> be the position of a particle at time <span class="math inline">\(t \ge 0\)</span>. Then <span class="math inline">\(X_3\)</span> is the random position at time 3, and <span class="math inline">\(X_3(\omega)\)</span> is its value when the experiment’s <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome">outcome</a> is <span class="math inline">\(\omega\)</span>. Holding <span class="math inline">\(\omega\)</span> fixed and letting <span class="math inline">\(t\)</span> vary gives the particle’s whole path for that outcome. A source that writes <span class="math inline">\(X(t, \omega)\)</span> means the same thing, with both arguments in parentheses.</p>
 </div>
+</section>
+<section class="slide level2">
+
 <div id="rem-reading-other-sources" class="proof remark">
 <p><span class="proof-title"><em>Remark 3</em> (Reading another source’s subscripts and parentheses). </span>When you read a formula from another source, first work out what each subscript and each argument is doing: labeling a member of an <a href="./sets.html#def-indexed-family">indexed family</a>, or being the input of a <a href="./functions.html#def-function">function</a>. That tells you which convention the source follows, whatever its layout.</p>
 </div>

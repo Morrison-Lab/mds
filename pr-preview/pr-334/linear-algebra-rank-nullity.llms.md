@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 00:42:20 (PDT)
+Last modified: 2026-10-17 02:08:29 (PDT)
 
 ## 1 Column space and null space
 
