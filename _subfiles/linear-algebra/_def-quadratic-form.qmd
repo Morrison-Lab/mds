@@ -1,7 +1,9 @@
 :::{#def-quadratic-form}
 #### Quadratic form
 
-A **quadratic form** is a mathematical expression of the structure
+A **quadratic form**
+[@wikipedia_quadratic_form]
+is a mathematical expression of the structure
 
 $$\tp{\vx}\, \matr{S}\, \vx$$
 

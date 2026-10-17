@@ -2,6 +2,7 @@
 #### Diagonal matrix
 
 A square matrix $\matr{D}$ is a **diagonal matrix**
+[@wikipedia_diagonal_matrix]
 if all off-diagonal entries are zero:
 $d_{ij} = 0$ whenever $i \neq j$:
 

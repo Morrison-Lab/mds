@@ -1,7 +1,9 @@
 :::{#def-idempotent-matrix}
 #### Idempotent matrix
 
-A square matrix $\matr{A}$ is **idempotent** if
+A square matrix $\matr{A}$ is **idempotent**
+[@wikipedia_idempotent_matrix]
+if
 
 $$\matr{A}^2 = \matr{A}$$
 

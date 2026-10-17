@@ -13,3 +13,27 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_special_matrices.qmd >}}
+
+## Further reading {.unnumbered}
+
+-   @wikipedia_symmetric_matrix --- symmetric matrices and their spectral properties
+
+-   @wikipedia_diagonal_matrix --- diagonal matrices
+
+-   @wikipedia_invertible_matrix --- invertible matrices and how to invert them
+
+-   @wikipedia_orthogonal_matrix --- orthogonal matrices
+
+-   @wikipedia_idempotent_matrix --- idempotent matrices
+
+-   @wikipedia_trace_linear_algebra --- the trace and its properties
+
+-   @wikipedia_determinant --- the determinant, its properties and computation
+
+-   @wikipedia_quadratic_form --- quadratic forms
+
+-   @wikipedia_definite_matrix --- positive-definite and positive-semidefinite matrices
+
+-   @wikipedia_eigendecomposition_of_a_matrix --- the eigendecomposition
+
+-   @wikipedia_singular_value_decomposition --- the singular value decomposition and its uses

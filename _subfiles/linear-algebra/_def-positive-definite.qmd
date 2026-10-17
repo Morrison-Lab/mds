@@ -2,6 +2,7 @@
 #### Positive definite matrix
 
 A $p \times p$ matrix $\matr{A}$ is **positive definite**
+[@wikipedia_definite_matrix]
 if it satisfies both conditions:
 
 - $\matr{A}$ is symmetric (@def-symmetric-matrix).
@@ -100,5 +101,5 @@ So no real $\eigval$ has an eigenvector $\vecf{v} \neq \vzero$.
 :::
 
 ::: notes
-See also <https://en.wikipedia.org/wiki/Definite_matrix>.
+See also [@wikipedia_definite_matrix].
 :::

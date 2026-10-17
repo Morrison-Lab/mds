@@ -72,5 +72,5 @@ see @banerjee2014linear.
 :::
 
 ::: notes
-See also <https://en.wikipedia.org/wiki/Determinant>.
+See also [@wikipedia_determinant].
 :::

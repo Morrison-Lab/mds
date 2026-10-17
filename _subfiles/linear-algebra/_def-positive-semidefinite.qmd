@@ -2,6 +2,7 @@
 #### Positive semidefinite matrix
 
 A $p \times p$ matrix $\matr{A}$ is **positive semidefinite**
+[@wikipedia_definite_matrix]
 if it satisfies both conditions:
 
 - $\matr{A}$ is symmetric (@def-symmetric-matrix).

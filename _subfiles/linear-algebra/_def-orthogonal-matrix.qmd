@@ -1,7 +1,9 @@
 :::{#def-orthogonal-matrix}
 #### Orthogonal matrix
 
-A $p \times p$ matrix $\matr{Q}$ is **orthogonal** if
+A $p \times p$ matrix $\matr{Q}$ is **orthogonal**
+[@wikipedia_orthogonal_matrix]
+if
 
 $$
 \underbrace{\tp{\matr{Q}}}_{p \times p}\,\underbrace{\matr{Q}}_{p \times p} = \matr{I}_p
