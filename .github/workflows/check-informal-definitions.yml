@@ -27,5 +27,4 @@ jobs:
       # which checks the whole tree.
       diff-scoped: true
       base-ref: ${{ github.event.pull_request.base.sha || github.event.before }}
-      paths-ignore: '_extensions/**'
       fail: false
