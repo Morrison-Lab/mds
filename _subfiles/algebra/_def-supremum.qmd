@@ -3,7 +3,8 @@
 
 Let $A \subseteq \reals$ be nonempty
 and bounded above (@def-bounded-above).
-The **supremum** of $A$,
+The **supremum** of $A$
+[@wikipedia_infimum_and_supremum],
 written $\sup A$,
 is the smallest real number $t$ satisfying $a \le t$ for all $a \in A$:
 

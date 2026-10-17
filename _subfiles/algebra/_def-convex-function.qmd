@@ -9,7 +9,9 @@ section 4.3, p. 93, describes convex functions through the Hessian instead.
 #### Convex function
 
 Let $f : \reals^p \to \reals$ be a [function](functions.qmd#def-function).
-$f$ is **convex** if
+$f$ is **convex**
+[@wikipedia_convex_function]
+if
 $$
 f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y)
 $$

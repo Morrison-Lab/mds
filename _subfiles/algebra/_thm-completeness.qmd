@@ -1,7 +1,8 @@
 :::{#thm-completeness}
 #### Completeness of the real numbers
 
-Let $A \subseteq \reals$ be nonempty.
+Let $A \subseteq \reals$ be nonempty
+[@wikipedia_least_upper_bound_property].
 
 - If $A$ is [bounded above](#def-bounded-above),
   the set of upper bounds of $A$ has a [minimum](#def-minimum).
