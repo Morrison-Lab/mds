@@ -1,7 +1,9 @@
 :::{#def-inner-product}
 #### Inner product
 
-An **inner product** on $\reals^p$ is a function
+An **inner product**
+[@wikipedia_inner_product_space]
+on $\reals^p$ is a function
 that assigns to each ordered pair of vectors $\vx, \vy \in \reals^p$
 a real number $\iprod{\vx}{\vy}$,
 and that has the following four properties

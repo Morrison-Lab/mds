@@ -2,7 +2,9 @@
 #### Vector $p$-norm ($\ell_p$ norm, $\ell_1$ norm, taxicab norm, Manhattan norm, $\ell_2$ norm, infinity norm)
 
 For a vector $\vx = (x_1, \ldots, x_p) \in \reals^p$ and any real number $k \ge 1$,
-the **vector $p$-norm** (or **$\ell_p$ norm**, traditionally named with parameter $p$ but denoted here with exponent $k$ to avoid clashing with the ambient vector dimension $p$) is:
+the **vector $p$-norm**
+[@wikipedia_lp_space]
+(or **$\ell_p$ norm**, traditionally named with parameter $p$ but denoted here with exponent $k$ to avoid clashing with the ambient vector dimension $p$) is:
 
 $$
 \norm{\vx}_k \eqdef \paren{\sumip \abs{x_i}^k}^{1/k}.

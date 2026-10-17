@@ -1,7 +1,9 @@
 :::{#def-inner-product-space}
 #### Inner product space
 
-A **real inner product space** is a pair $(V, \iprod{\cdot}{\cdot})$
+A **real inner product space**
+[@wikipedia_inner_product_space]
+is a pair $(V, \iprod{\cdot}{\cdot})$
 of a real vector space $V$ and an inner product $\iprod{\cdot}{\cdot}$ on it,
 a function with the four properties of @def-inner-product.
 We say that $V$ is **equipped with** that inner product:

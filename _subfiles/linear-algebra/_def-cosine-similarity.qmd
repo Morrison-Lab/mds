@@ -1,7 +1,9 @@
 :::{#def-cosine-similarity}
 #### Cosine similarity
 
-The **cosine similarity** between two nonzero vectors $\vx, \vy \in \reals^p$ is
+The **cosine similarity**
+[@wikipedia_cosine_similarity]
+between two nonzero vectors $\vx, \vy \in \reals^p$ is
 their dot product divided by the product of their lengths:
 
 $$

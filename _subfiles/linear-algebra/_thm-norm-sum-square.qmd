@@ -10,7 +10,8 @@ $$
 
 In particular, if $\vecf{x} \perp \vecf{y}$ (@def-orthogonal-vectors), then
 $\norm{\vecf{x} + \vecf{y}}^2 = \norm{\vecf{x}}^2 + \norm{\vecf{y}}^2$
-(the **Pythagorean theorem**).
+(the **Pythagorean theorem**)
+[@wikipedia_pythagorean_theorem].
 
 :::
 

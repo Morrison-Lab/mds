@@ -1,7 +1,9 @@
 :::{#def-gram-schmidt}
 #### Gram-Schmidt process
 
-The **Gram-Schmidt process** takes vectors $\vecf{a}_1, \ldots, \vecf{a}_k \in \reals^p$
+The **Gram-Schmidt process**
+[@wikipedia_gram_schmidt_process]
+takes vectors $\vecf{a}_1, \ldots, \vecf{a}_k \in \reals^p$
 and, for $i = 1, 2, \ldots, k$ in turn:
 
 1. **Orthogonalize:**

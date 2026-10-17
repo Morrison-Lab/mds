@@ -1,7 +1,9 @@
 :::{#def-outer-product}
 #### Outer product
 
-The **outer product** of a vector $\vecf{u}$ of length $m$
+The **outer product**
+[@wikipedia_outer_product]
+of a vector $\vecf{u}$ of length $m$
 and a vector $\vecf{v}$ of length $n$
 is the $m \times n$ matrix product (@def-matrix-mult) $\vecf{u}\,\tp{\vecf{v}}$
 of the column vector $\vecf{u}$ with the row vector $\tp{\vecf{v}}$.
