@@ -1,0 +1,30 @@
+# Thin caller of Morrison-Lab/gha's reusable informal-definition checker.
+#
+# Its no-link-in-definition finding flags a definition div that links no other
+# term. That is a rough proxy for the lab's rule that terms are defined and
+# linked at first use: it does not check first use itself, which is
+# Morrison-Lab/gha#1078. Warn-only until that check ships, and then this
+# caller should switch to it.
+#
+# Tracked in https://github.com/Morrison-Lab/mds/issues/340.
+name: Check Informal Definitions
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - '**.qmd'
+  workflow_dispatch:
+
+jobs:
+  check-informal-definitions:
+    permissions:
+      contents: read
+    uses: Morrison-Lab/gha/.github/workflows/check-informal-definitions.yml@main
+    with:
+      # Check only the lines the change adds. Empty on `workflow_dispatch`,
+      # which checks the whole tree.
+      diff-scoped: true
+      base-ref: ${{ github.event.pull_request.base.sha || github.event.before }}
+      fail: false
