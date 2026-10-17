@@ -2,6 +2,7 @@
 #### Like terms
 
 Two [terms](#def-term) of a sum are **like terms**
+[@wikipedia_like_terms]
 if they are the same product of variables, each to the same power,
 possibly multiplied by different constants:
 $c_1 m$ and $c_2 m$,

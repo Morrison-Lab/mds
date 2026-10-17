@@ -3,6 +3,7 @@
 
 An operation $\star$ on a set $S$ (@def-identity-element)
 is **commutative**
+[@wikipedia_commutative_property]
 if $a \star b = b \star a$ for all $a, b \in S$:
 the order of the two inputs does not matter.
 Some sources, including the titles of @thm-sum-symmetric and @thm-prod-symmetric,

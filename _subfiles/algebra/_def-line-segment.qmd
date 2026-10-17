@@ -2,7 +2,9 @@
 #### Line segment
 
 Let $x, y \in \reals^p$.
-The **line segment** from $x$ to $y$ is the set of points
+The **line segment** from $x$ to $y$
+[@wikipedia_line_segment]
+is the set of points
 $$
 \cb{t x + (1 - t) y : t \in [0, 1]}.
 $$
