@@ -23,3 +23,33 @@ jobs:
       contents: read
       actions: read  # needed to download the build artifact
     uses: Morrison-Lab/gha/.github/workflows/check-equation-renders.yml@v2
+
+  # workflow_run checks attach to the default branch, not the PR head, so a
+  # branch ruleset can never see the `check` job above. Mirror its outcome
+  # onto the PR head commit as a commit status that the ruleset can require.
+  report:
+    needs: check
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      statuses: write
+    steps:
+      - name: Report status on the PR head commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          BUILD: ${{ github.event.workflow_run.conclusion }}
+          CHECK: ${{ needs.check.result }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          # `check` is skipped when the build did not succeed or produced no
+          # artifact; that is not an equation failure.
+          if [ "$CHECK" = success ] || { [ "$CHECK" = skipped ] && [ "$BUILD" != failure ]; }; then
+            state=success
+          else
+            state=failure
+          fi
+          gh api -X POST "repos/${{ github.repository }}/statuses/$HEAD_SHA" \
+            -f state="$state" -f context="equation-renders" \
+            -f description="Equation render check: $CHECK (build: $BUILD)" \
+            -f target_url="$RUN_URL"
