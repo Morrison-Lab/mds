@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-16 18:32:13 (PDT)
+Last modified: 2026-10-16 19:32:00 (PDT)
 
 > **NOTE:**
 >
@@ -209,15 +209,42 @@ Last modified: 2026-10-16 18:32:13 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](number-systems.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+> **Definition 15 (Operator)** An **operator** is a [function](#def-function) whose [arguments](#def-argument) and [values](#def-value) are both functions or both vectors.
 
 > **NOTE:**
 >
-> **Definition 16 (Term of a sequence)** The value \\a_n\\ of a sequence \\(a_n)\\ ([Definition 15](#def-sequence)) is called its \\n\\th **term**.
+> **Example 11 (The derivative as an operator)** Let \\D\\ send each differentiable function \\f : \mathbb{R}\to \mathbb{R}\\ to its derivative function \\D f = f'\\. Then \\D\\ is an operator, because its arguments and its values are functions. For example, \\D\\ sends \\f(x) = x^2\\ to the function \\(D f)(x) = 2x\\.
 
 > **NOTE:**
 >
-> **Example 11 (Sequences)**  
+> *Remark 6* (Other uses of “operator”). Some authors call every function an operator, and others reserve the word for functions whose domain and codomain are the same set, as in the [linear operator](linear-algebra-matrices.llms.md#def-linear-operator).
+
+> **NOTE:**
+>
+> **Definition 16 (Functional)** A **functional** is a [function](#def-function) whose [arguments](#def-argument) are functions or vectors and whose [values](#def-value) are real numbers.
+
+> **NOTE:**
+>
+> **Example 12 (Evaluation, integration and expectation as functionals)**  
+>
+> - Evaluation at \\0\\ sends each function \\f : \mathbb{R}\to \mathbb{R}\\ to the number \\f(0)\\.
+> - The definite integral sends each continuous function \\f : \[0, 1\] \to \mathbb{R}\\ to the number \\\int_0^1 f(x)\\dx\\. For \\f(x) = x^2\\, the value is \\\frac{1}{3}\\.
+> - The [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) sends each random variable, which is a function, to a real number, its population mean.
+> - Summing the entries sends each vector \\\underset{\sim}{x}\in \mathbb{R}^n\\ to the number \\\sum\_{i=1}^n x_i\\.
+>
+> Each takes a function or a vector as its argument and returns a number, so each is a functional. The derivative operator in [Example 11](#exm-operator) is not a functional, because its values are functions, not numbers.
+
+> **NOTE:**
+>
+> **Definition 17 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](number-systems.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+
+> **NOTE:**
+>
+> **Definition 18 (Term of a sequence)** The value \\a_n\\ of a sequence \\(a_n)\\ ([Definition 17](#def-sequence)) is called its \\n\\th **term**.
+
+> **NOTE:**
+>
+> **Example 13 (Sequences)**  
 >
 > - \\a_n = \frac{1}{n}\\ is the sequence \\1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots\\; its third term is \\a_3 = \frac{1}{3}\\.
 > - \\b_n = (-1)^n\\ is the sequence \\-1, 1, -1, 1, \ldots\\: a sequence can repeat values.
@@ -225,25 +252,25 @@ Last modified: 2026-10-16 18:32:13 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
+> **Definition 19 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
 
 ## 2 Countable sets
 
 > **NOTE:**
 >
-> **Definition 18 (Finite set)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 17](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once.
+> **Definition 20 (Finite set)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 19](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once.
 
 > **NOTE:**
 >
-> **Definition 19 (Cardinality)** For a finite set \\A\\ ([Definition 18](#def-finite-set)), the number \\n\\ in such a list is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
+> **Definition 21 (Cardinality)** For a finite set \\A\\ ([Definition 20](#def-finite-set)), the number \\n\\ in such a list is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
 
 > **NOTE:**
 >
-> *Remark 6* (Two meanings of \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\). Applied to a set, the bars \\\mathopen{}\left\|A\right\|\mathclose{}\\ mean the cardinality of \\A\\. Applied to a number, \\\mathopen{}\left\|x\right\|\mathclose{}\\ means its [absolute value](algebra-basics.llms.md#def-absolute-value), or its [modulus](algebra-complex.llms.md#def-complex-modulus) when \\x\\ is complex. For example, \\\mathopen{}\left\|\mathopen{}\left\\-3\right\\\mathclose{}\right\|\mathclose{} = 1\\, but \\\mathopen{}\left\|-3\right\|\mathclose{} = 3\\.
+> *Remark 7* (Two meanings of \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\). Applied to a set, the bars \\\mathopen{}\left\|A\right\|\mathclose{}\\ mean the cardinality of \\A\\. Applied to a number, \\\mathopen{}\left\|x\right\|\mathclose{}\\ means its [absolute value](algebra-basics.llms.md#def-absolute-value), or its [modulus](algebra-complex.llms.md#def-complex-modulus) when \\x\\ is complex. For example, \\\mathopen{}\left\|\mathopen{}\left\\-3\right\\\mathclose{}\right\|\mathclose{} = 1\\, but \\\mathopen{}\left\|-3\right\|\mathclose{} = 3\\.
 
 > **NOTE:**
 >
-> **Example 12 (Finite and infinite sets)**  
+> **Example 14 (Finite and infinite sets)**  
 >
 > - \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is finite, with \\\mathopen{}\left\|\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\|\mathclose{} = 3\\.
 > - \\\mathopen{}\left\\1, 1, 2\right\\\mathclose{} = \mathopen{}\left\\1, 2\right\\\mathclose{}\\, so \\\mathopen{}\left\|\mathopen{}\left\\1, 1, 2\right\\\mathclose{}\right\|\mathclose{} = 2\\: a repeated listing does not count twice.
@@ -252,19 +279,19 @@ Last modified: 2026-10-16 18:32:13 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Infinite set)** A set that is not finite ([Definition 18](#def-finite-set)) is **infinite**.
+> **Definition 22 (Infinite set)** A set that is not finite ([Definition 20](#def-finite-set)) is **infinite**.
 
 > **NOTE:**
 >
-> **Definition 21 (Countable set)** A set is **countable** if it is finite ([Definition 18](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 15](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
+> **Definition 23 (Countable set)** A set is **countable** if it is finite ([Definition 20](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 17](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
 
 > **NOTE:**
 >
-> **Definition 22 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
+> **Definition 24 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
 
 > **NOTE:**
 >
-> **Example 13 (Countable and uncountable sets)**  
+> **Example 15 (Countable and uncountable sets)**  
 >
 > - \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ is countable, because it is finite.
 > - The [non-negative integers](number-systems.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
@@ -276,7 +303,7 @@ Last modified: 2026-10-16 18:32:13 (PDT)
 
 > **NOTE:**
 >
-> *Remark 7* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it (see [Wikipedia: Cantor’s diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
+> *Remark 8* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it (see [Wikipedia: Cantor’s diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
 
 ## References
 
