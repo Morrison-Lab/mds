@@ -111,6 +111,26 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_def-operator.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-operator.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_rem-operator.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-functional.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-functional.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-sequence.qmd >}}
 
 {{< slidebreak >}}
