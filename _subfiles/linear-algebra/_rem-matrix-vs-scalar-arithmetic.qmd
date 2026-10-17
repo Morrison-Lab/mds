@@ -1,0 +1,25 @@
+:::{#rem-matrix-vs-scalar-arithmetic}
+#### Matrix arithmetic compared with scalar arithmetic
+
+**Sums and differences.**
+Matrix addition has every property that addition of numbers has:
+it is commutative (@thm-matadd-commutative),
+associative (@thm-matadd-assoc),
+has the zero matrix as its identity (@thm-matadd-identity),
+and gives each matrix a negative (@thm-matadd-inverse).
+The only new condition is that $\matr{A} + \matr{B}$ is defined only when $\matr{A}$ and $\matr{B}$ have the same dimensions.
+
+**Products.**
+Matrix multiplication keeps three properties of multiplication of numbers:
+it is associative (@thm-matmul-assoc),
+it is distributive over addition (@thm-matmul-distrib),
+and it has an identity, $\matr{I}_p$ (@thm-identity).
+It differs from multiplication of numbers in four ways:
+
+- $\matr{A}\matr{B}$ is defined only when the number of columns of $\matr{A}$ equals the number of rows of $\matr{B}$ (@def-matrix-mult).
+- It is not commutative: $\matr{A}\matr{B} \neq \matr{B}\matr{A}$ in general (@rem-matmul-not-commutative).
+- A nonzero square matrix need not have an inverse (@exm-invertible-matrix).
+- $\matr{A}\matr{B} = \matr{0}$ can hold with $\matr{A} \neq \matr{0}$ and $\matr{B} \neq \matr{0}$ (@exm-matmul-zero-divisors),
+  so a factor cannot be cancelled from $\matr{A}\matr{B} = \matr{A}\matr{C}$ unless it is invertible (@thm-invertible-cancel).
+
+:::
