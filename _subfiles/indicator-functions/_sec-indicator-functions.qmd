@@ -28,6 +28,7 @@ This section summarizes the principal notational conventions.
 
 For any subset $A \subseteq \universe$ of a universal set $\universe$,
 the **indicator function** of $A$,
+[@wikipedia_indicator_function]
 or **set indicator**,
 is the function
 $\indic{A} : \universe \to \{0, 1\}$ defined by:
@@ -167,7 +168,8 @@ such as $\indicp{0 \le t \le u}$.
 In 1962,
 Kenneth Iverson introduced a compact notation in the programming language APL,
 later popularized in mathematics and computer science by Donald Knuth:
-the [Iverson bracket](https://en.wikipedia.org/wiki/Iverson_bracket).
+the Iverson bracket
+[@wikipedia_iverson_bracket].
 
 {{< slidebreak >}}
 
@@ -176,6 +178,7 @@ the [Iverson bracket](https://en.wikipedia.org/wiki/Iverson_bracket).
 
 For any logical proposition $P$,
 the **Iverson bracket** of $P$ is
+[@wikipedia_iverson_bracket]
 
 $$
 [P] \eqdef \begin{cases}
@@ -234,6 +237,7 @@ $$
 
 For integers $i$ and $j$,
 the **Kronecker delta** is
+[@wikipedia_kronecker_delta]
 
 $$\kron_{ij} \eqdef [i = j]$$
 

@@ -2,6 +2,7 @@
 #### Support of a distribution
 
 The **support** of a discrete distribution
+[@wikipedia_support_measure_theory]
 is the set of values it gives positive probability.
 The support of a continuous distribution
 is the set of values where its density is positive.
