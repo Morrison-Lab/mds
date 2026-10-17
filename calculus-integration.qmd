@@ -13,3 +13,21 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_calculus_integration.qmd >}}
+
+## Further reading {.unnumbered}
+
+-   @wikipedia_antiderivative --- antiderivatives and indefinite integrals
+
+-   @wikipedia_continuous_function --- continuous functions, with the epsilon-delta definition
+
+-   @wikipedia_classification_of_discontinuities --- jump, removable and essential discontinuities
+
+-   @wikipedia_partition_of_an_interval --- partitions of an interval
+
+-   @wikipedia_riemann_sum --- Riemann sums and their types
+
+-   @wikipedia_riemann_integral --- the Riemann integral and which functions have one
+
+-   @wikipedia_fundamental_theorem_of_calculus --- the two parts of the fundamental theorem
+
+-   @wikipedia_integration_by_substitution --- change of variable in an integral
