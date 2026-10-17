@@ -4,8 +4,6 @@
 Let $\matr{A}$ be an invertible $p \times p$ matrix (@def-invertible-matrix),
 and let $\matr{B}$ and $\matr{C}$ be $p \times n$ matrices.
 If $\matr{A}\matr{B} = \matr{A}\matr{C}$, then $\matr{B} = \matr{C}$.
-Likewise, for $n \times p$ matrices $\matr{B}$ and $\matr{C}$,
-if $\matr{B}\matr{A} = \matr{C}\matr{A}$, then $\matr{B} = \matr{C}$.
 
 :::
 
@@ -37,8 +35,21 @@ $$
 \ea
 $$
 
-The second statement follows the same way,
-multiplying by $\matr{A}^{-1}$ on the right.
+$\square$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#cor-invertible-cancel-right}
+#### An invertible factor can be cancelled on the right
+
+Let $\matr{A}$ be an invertible $p \times p$ matrix,
+and let $\matr{B}$ and $\matr{C}$ be $n \times p$ matrices.
+If $\matr{B}\matr{A} = \matr{C}\matr{A}$, then $\matr{B} = \matr{C}$.
+
+The proof of @thm-invertible-cancel works with every product reversed:
+multiply both sides on the right by $\matr{A}^{-1}$.
 
 :::
 
@@ -53,7 +64,8 @@ $\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$
 (@exm-invertible-matrix).
 If $\matr{A}\matr{B} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}$
 for a $2 \times 1$ matrix $\matr{B}$,
-then by @thm-invertible-cancel
+then multiplying both sides on the left by $\matr{A}^{-1}$,
+as in the proof of @thm-invertible-cancel,
 
 $$
 \begin{aligned}
