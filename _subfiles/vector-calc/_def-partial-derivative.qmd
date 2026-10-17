@@ -2,7 +2,9 @@
 #### Partial derivative
 
 Let $f : \reals^p \to \reals$ and $\vx = \tp{(x_1, \ldots, x_p)} \in \reals^p$.
-The **partial derivative** of $f$ with respect to $x_j$ at $\vx$ is
+The **partial derivative**
+[@wikipedia_partial_derivative]
+of $f$ with respect to $x_j$ at $\vx$ is
 
 $$
 \deriv{x_j} f(\vx) \eqdef

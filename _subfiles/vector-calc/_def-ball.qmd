@@ -2,7 +2,9 @@
 #### Open ball
 
 Let $\vx \in \reals^p$ and $r > 0$.
-The **open ball** of radius $r$ around $\vx$ is the set
+The **open ball**
+[@wikipedia_ball_mathematics]
+of radius $r$ around $\vx$ is the set
 $\cb{\vy \in \reals^p : \norm{\vy - \vx} < r}$,
 of points whose distance from $\vx$
 (the [Euclidean norm](linear-algebra.qmd#def-euclidean-norm) of the difference)
