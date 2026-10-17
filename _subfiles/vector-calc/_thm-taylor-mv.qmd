@@ -5,6 +5,7 @@ Let $f : \reals^p \to \reals$ have first and second partial derivatives
 that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-on)),
 and let $\vecf{z}, \vecf{h} \in \reals^p$.
 Then there is a $\midpt \in (0, 1)$ with
+[@wikipedia_taylors_theorem]
 
 $$
 f(\vecf{z} + \vecf{h})

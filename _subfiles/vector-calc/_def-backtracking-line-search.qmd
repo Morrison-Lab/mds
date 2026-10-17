@@ -2,7 +2,9 @@
 #### Backtracking line search
 
 Let $s_0 > 0$ be an initial step length, $\beta \in (0, 1)$ a shrink factor, and $c \in (0, 1)$.
-**Backtracking line search** is the [line search](#def-line-search)
+**Backtracking line search**
+[@wikipedia_backtracking_line_search]
+is the [line search](#def-line-search)
 that chooses $s^{(t)}$ to be the largest of $s_0, \beta s_0, \beta^2 s_0, \ldots$
 that satisfies the [Armijo condition](#def-armijo-condition) with constant $c$ at $\vx^{(t)}$.
 

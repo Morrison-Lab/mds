@@ -5,6 +5,7 @@ Let $g$ be a [real](number-systems.qmd#def-real-numbers)-valued function on an [
 and let $g$ be [differentiable](calculus.qmd#def-differentiable) at $c$.
 If $c$ is a [local minimizer](algebra.qmd#def-local-minimizer) of $g$,
 then $g'(c) = 0$.
+[@wikipedia_fermats_theorem_stationary_points]
 
 :::
 

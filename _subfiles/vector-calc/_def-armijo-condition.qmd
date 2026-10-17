@@ -3,7 +3,9 @@
 
 Let $f : \reals^p \to \reals$ have first partial derivatives,
 let $\vx \in \reals^p$, and let $\vecf{g} \eqdef \deriv{\vx} f(\vx)$.
-A step length $s > 0$ satisfies the **Armijo condition** with constant $c \in (0, 1)$ at $\vx$ if
+A step length $s > 0$ satisfies the **Armijo condition**
+[@wikipedia_backtracking_line_search]
+with constant $c \in (0, 1)$ at $\vx$ if
 
 $$
 f(\vx - s \vecf{g}) \le f(\vx) - c\, s\, \norm{\vecf{g}}^2.

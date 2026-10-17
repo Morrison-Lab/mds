@@ -3,6 +3,7 @@
 
 In a problem that looks for a best point among some allowed points of $\reals^p$,
 the set $F \subseteq \reals^p$ of allowed points is the **feasible set**,
+[@wikipedia_feasible_region]
 and its points are feasible.
 
 :::
@@ -65,7 +66,9 @@ a [global minimizer](algebra.qmd#def-global-minimizer) of $f$ with its domain re
 #### Minimization problem
 
 With $f$ and $F$ as in @def-objective-function,
-the **minimization problem** is to find a minimizer of $f$ over $F$ (@def-minimizer-over-feasible-set).
+the **minimization problem**
+[@wikipedia_mathematical_optimization]
+is to find a minimizer of $f$ over $F$ (@def-minimizer-over-feasible-set).
 When $F$ is given by constraints (@def-constraints),
 the problem is to minimize $f$ subject to them.
 
