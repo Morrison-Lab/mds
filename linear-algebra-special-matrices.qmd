@@ -37,3 +37,8 @@ format:
 -   @wikipedia_eigendecomposition_of_a_matrix --- the eigendecomposition
 
 -   @wikipedia_singular_value_decomposition --- the singular value decomposition and its uses
+
+-   @wikipedia_frobenius_norm --- the Frobenius norm of a matrix
+
+-   @wikipedia_paraboloid --- paraboloids and their level sets
+
