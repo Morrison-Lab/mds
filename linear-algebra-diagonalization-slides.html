@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-17 06:29:34 (PDT)</p>
+  <p class="date">Last modified: 2026-10-17 07:35:34 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -1146,6 +1146,111 @@ c_1 &amp;= c_2 \\
 </section>
 <section class="slide level2">
 
+<div id="thm-pd-invertible" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 12 (A positive definite matrix is invertible)</strong></span> Every positive definite matrix (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>) is invertible (<a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\mathbf{A}\)</span> be a <span class="math inline">\(p \times p\)</span> positive definite matrix, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> be a vector of length <span class="math inline">\(p\)</span> with <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+&amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
+&amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-quadratic-form}{\text{Definition~11 in Special Matrices and Decompositions}}\text{)}
+\\
+&amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p
+&amp;&amp; \text{(} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p \text{)}
+\\
+&amp;= 0.
+&amp;&amp; \text{(every term of the inner product is } 0 \text{)}
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>, then <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} &gt; 0\)</span> because <span class="math inline">\(\mathbf{A}\)</span> is positive definite, which contradicts <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 0\)</span>. So <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>, the null space <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> is <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\right\}\mathclose{}\)</span>, and <span class="math inline">\(\mathbf{A}\)</span> is invertible by <a href="#/thm-invertible-rank" class="quarto-xref">Theorem&nbsp;1</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-pd-invertible" class="theorem example">
+<p><span class="theorem-title"><strong>Example 17 (Positive definite matrices are invertible; the converse fails)</strong></span> <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> is positive definite, since</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+&amp;= 2 x_1^2 + 2 x_1 x_2 + 2 x_2^2
+&amp;&amp; \text{(multiply out)}
+\\
+&amp;= x_1^2 + x_2^2 + (x_1 + x_2)^2,
+&amp;&amp; \text{(expand the square)}
+\end{aligned}
+\]</span></p>
+<p>which is <span class="math inline">\(0\)</span> only when <span class="math inline">\(x_1 = x_2 = 0\)</span>. It is invertible, with <span class="math inline">\({\mathopen{}\left(\mathbf{A}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} 2 &amp; -1 \\ -1 &amp; 2 \end{bmatrix}\)</span>.</p>
+<p>The converse fails. <span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;30 in Special Matrices and Decompositions</a> is not positive definite, yet it is invertible: <span class="math inline">\({\mathopen{}\left(\mathbf{D}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} -1 &amp; 2 \\ 2 &amp; -1 \end{bmatrix}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-psd-plus-multiple-identity" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 13 (Adding a positive multiple of the identity makes a matrix positive definite)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be a <span class="math inline">\(p \times p\)</span> positive semidefinite matrix (<a href="./linear-algebra-special-matrices.html#def-positive-semidefinite">Definition&nbsp;21 in Special Matrices and Decompositions</a>) and let <span class="math inline">\(\alpha&gt; 0\)</span>. Then <span class="math inline">\(\mathbf{A} + \alpha\mathbf{I}_p\)</span> is positive definite (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>), so it is invertible (<a href="#/thm-pd-invertible" class="quarto-xref">Theorem&nbsp;12</a>).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{A} + \alpha\mathbf{I}_p\)</span> is symmetric: its transpose is <span class="math inline">\({\mathbf{A}}^{\top} + \alpha\mathbf{I}_p = \mathbf{A} + \alpha\mathbf{I}_p\)</span> (<a href="./linear-algebra-matrices.html#thm-transpose-sum">Theorem&nbsp;15 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-scalar-mult">Definition&nbsp;6 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,(\mathbf{A} + \alpha\mathbf{I}_p)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+&amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \alpha\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,\mathbf{I}_p\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{, }\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{)}
+\\
+&amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \alpha\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
+\\
+&amp;&gt; 0.
+&amp;&amp; \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0, \; \alpha&gt; 0, \; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p \text{)}
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-psd-plus-multiple-identity" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18 (Repairing a singular matrix)</strong></span> <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-semidefinite">Example&nbsp;29 in Special Matrices and Decompositions</a> is positive semidefinite and singular: <span class="math inline">\(\mathbf{B} (1, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>. With <span class="math inline">\(\alpha= 1\)</span>,</p>
+<p><span class="math display">\[
+\mathbf{B} + \mathbf{I}_2 = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix},
+\]</span></p>
+<p>which is positive definite and invertible by <a href="#/exm-pd-invertible" class="quarto-xref">Example&nbsp;17</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="cor-gram-invertible-iff" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2 (<span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible exactly when <span class="math inline">\(\mathbf{X}\)</span> has full column rank)</strong></span> For an <span class="math inline">\(n \times p\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span>, the <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible (<a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = p\)</span> (<a href="./linear-algebra-subspaces.html#def-full-column-rank">Definition&nbsp;3 in Subspaces and Rank</a>).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The following statements are equivalent:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathbf{X}}^{\top}\mathbf{X}\text{ is invertible}
+&amp;\iff \mathcal{N}({\mathbf{X}}^{\top}\mathbf{X}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\right\}\mathclose{}
+&amp;&amp; \text{(}\href{#thm-invertible-rank}{\text{Theorem~1}}\text{)}
+\\
+&amp;\iff \mathcal{N}(\mathbf{X}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\right\}\mathclose{}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-null-gram}{\text{Theorem~6 in Column Space, Null Space and Rank-Nullity}}\text{)}
+\\
+&amp;\iff \mathbf{X}\text{ has full column rank.}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-independent-null-space}{\text{Theorem~3 in Column Space, Null Space and Rank-Nullity}}\text{)}
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-gram-invertible-iff" class="theorem example">
+<p><span class="theorem-title"><strong>Example 19 (A design matrix with a repeated column)</strong></span> <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 &amp; 2 \\ 1 &amp; 2 \\ 1 &amp; 2 \end{bmatrix}\)</span> of <a href="./linear-algebra-subspaces.html#exm-rank">Example&nbsp;2 in Subspaces and Rank</a> has rank <span class="math inline">\(1 &lt; 2\)</span>. Its cross-product matrix is</p>
+<p><span class="math display">\[
+{\mathbf{X}}^{\top}\mathbf{X}= \begin{bmatrix} 3 &amp; 6 \\ 6 &amp; 12 \end{bmatrix},
+\]</span></p>
+<p>which is singular: <span class="math inline">\((2, -1)\)</span> is in its null space, because <span class="math inline">\(\mathbf{X}(2, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-independent-null-space">Example&nbsp;5 in Column Space, Null Space and Rank-Nullity</a>). For the full-column-rank matrix of <a href="./linear-algebra-projections.html#exm-gram-invertible">Example&nbsp;1 in Projections and Linear Systems</a>, <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-block-matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Block matrix)</strong></span> Split the rows of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span> into the first <span class="math inline">\(k\)</span> and the last <span class="math inline">\(m - k\)</span>, and its columns into the first <span class="math inline">\(l\)</span> and the last <span class="math inline">\(n - l\)</span>, with <span class="math inline">\(1 \le k &lt; m\)</span> and <span class="math inline">\(1 \le l &lt; n\)</span>. This cuts <span class="math inline">\(\mathbf{X}\)</span> into four smaller matrices, its <strong>blocks</strong>:</p>
 <p><span class="math display">\[
@@ -1157,7 +1262,7 @@ c_1 &amp;= c_2 \\
 <section class="slide level2">
 
 <div id="exm-block-matrix" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (Cutting a <span class="math inline">\(3 \times 3\)</span> matrix into blocks)</strong></span> With</p>
+<p><span class="theorem-title"><strong>Example 20 (Cutting a <span class="math inline">\(3 \times 3\)</span> matrix into blocks)</strong></span> With</p>
 <p><span class="math display">\[
 \begin{aligned}
 k &amp;= l \\
@@ -1202,7 +1307,7 @@ k &amp;= l \\
 <section class="slide level2">
 
 <div id="thm-pd-submatrix" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 12 (Leading blocks of a positive definite matrix are positive definite)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be a <span class="math inline">\(p \times p\)</span> positive definite matrix (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>), and for <span class="math inline">\(1 \le k \le p\)</span> let <span class="math inline">\(\mathbf{X}_k\)</span> be its leading <span class="math inline">\(k \times k\)</span> block (<a href="#/def-block-matrix" class="quarto-xref">Definition&nbsp;5</a>), with entries <span class="math inline">\(x_{ij}\)</span> for <span class="math inline">\(i, j \le k\)</span>. Then <span class="math inline">\(\mathbf{X}_k\)</span> is positive definite. Also, every diagonal entry of a positive definite matrix is positive.</p>
+<p><span class="theorem-title"><strong>Theorem 14 (Leading blocks of a positive definite matrix are positive definite)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be a <span class="math inline">\(p \times p\)</span> positive definite matrix (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>), and for <span class="math inline">\(1 \le k \le p\)</span> let <span class="math inline">\(\mathbf{X}_k\)</span> be its leading <span class="math inline">\(k \times k\)</span> block (<a href="#/def-block-matrix" class="quarto-xref">Definition&nbsp;5</a>), with entries <span class="math inline">\(x_{ij}\)</span> for <span class="math inline">\(i, j \le k\)</span>. Then <span class="math inline">\(\mathbf{X}_k\)</span> is positive definite. Also, every diagonal entry of a positive definite matrix is positive.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{X}_k\)</span> is symmetric, because <span class="math inline">\(\mathbf{X}\)</span> is. For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathbb{R}^k\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (u_1, \ldots, u_k, 0, \ldots, 0) \in \mathbb{R}^p\)</span>, which is nonzero, with entries <span class="math inline">\(y_i = u_i\)</span> for <span class="math inline">\(i \le k\)</span> and <span class="math inline">\(y_i = 0\)</span> for <span class="math inline">\(i &gt; k\)</span>. Then</p>
@@ -1244,7 +1349,7 @@ k &amp;= l \\
 <section class="slide level2">
 
 <div id="exm-pd-submatrix" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (A quick necessary test)</strong></span> <span class="math inline">\(\begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> is positive definite (<a href="#/exm-pd-operations" class="quarto-xref">Example&nbsp;16</a>), and its diagonal entries <span class="math inline">\(2, 2\)</span> and its <span class="math inline">\(1 \times 1\)</span> leading block <span class="math inline">\([2]\)</span> are positive. The test can only rule matrices out: <span class="math inline">\(-\mathbf{I}_2\)</span> has negative diagonal entries, so it is not positive definite, even though</p>
+<p><span class="theorem-title"><strong>Example 21 (A quick necessary test)</strong></span> <span class="math inline">\(\begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> is positive definite (<a href="#/exm-pd-operations" class="quarto-xref">Example&nbsp;16</a>), and its diagonal entries <span class="math inline">\(2, 2\)</span> and its <span class="math inline">\(1 \times 1\)</span> leading block <span class="math inline">\([2]\)</span> are positive. The test can only rule matrices out: <span class="math inline">\(-\mathbf{I}_2\)</span> has negative diagonal entries, so it is not positive definite, even though</p>
 <p><span class="math display">\[
 \begin{aligned}
 \det(-\mathbf{I}_2) &amp;= (-1)(-1) - 0 \\
@@ -1258,7 +1363,7 @@ k &amp;= l \\
 <section class="slide level2">
 
 <div id="thm-block-quadratic" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 13 (The quadratic form of a block matrix)</strong></span> Let <span class="math inline">\(k, m \ge 1\)</span>, let <span class="math inline">\(\mathbf{A}\)</span> be a symmetric <span class="math inline">\(k \times k\)</span> matrix, <span class="math inline">\(\mathbf{B}\)</span> a <span class="math inline">\(k \times m\)</span> matrix and <span class="math inline">\(\mathbf{C}\)</span> a symmetric <span class="math inline">\(m \times m\)</span> matrix, and let <span class="math inline">\(\mathbf{X}\)</span> be the <span class="math inline">\((k + m) \times (k + m)\)</span> block matrix (<a href="#/def-block-matrix" class="quarto-xref">Definition&nbsp;5</a>)</p>
+<p><span class="theorem-title"><strong>Theorem 15 (The quadratic form of a block matrix)</strong></span> Let <span class="math inline">\(k, m \ge 1\)</span>, let <span class="math inline">\(\mathbf{A}\)</span> be a symmetric <span class="math inline">\(k \times k\)</span> matrix, <span class="math inline">\(\mathbf{B}\)</span> a <span class="math inline">\(k \times m\)</span> matrix and <span class="math inline">\(\mathbf{C}\)</span> a symmetric <span class="math inline">\(m \times m\)</span> matrix, and let <span class="math inline">\(\mathbf{X}\)</span> be the <span class="math inline">\((k + m) \times (k + m)\)</span> block matrix (<a href="#/def-block-matrix" class="quarto-xref">Definition&nbsp;5</a>)</p>
 <p><span class="math display">\[
 \mathbf{X} = \begin{bmatrix} \underbrace{\mathbf{A}}_{k \times k} &amp; \underbrace{\mathbf{B}}_{k \times m} \\ \underbrace{{\mathbf{B}}^{\top}}_{m \times k} &amp; \underbrace{\mathbf{C}}_{m \times m} \end{bmatrix},
 \]</span></p>
@@ -1364,7 +1469,7 @@ x_{k+i, j} &amp;= b_{ji} \\
 <section class="slide level2">
 
 <div id="exm-block-quadratic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (The <span class="math inline">\(2 \times 2\)</span> case)</strong></span> For <span class="math inline">\(\mathbf{X} = \begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span> (<span class="math inline">\(k = 1\)</span> and <span class="math inline">\(m = 1\)</span>) and <span class="math inline">\(a \ne 0\)</span>, the theorem reads</p>
+<p><span class="theorem-title"><strong>Example 22 (The <span class="math inline">\(2 \times 2\)</span> case)</strong></span> For <span class="math inline">\(\mathbf{X} = \begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span> (<span class="math inline">\(k = 1\)</span> and <span class="math inline">\(m = 1\)</span>) and <span class="math inline">\(a \ne 0\)</span>, the theorem reads</p>
 <p><span class="math display">\[
 a u^2 + 2buw + cw^2 = a\,\mathopen{}\left(u + \tfrac{b}{a}\,w\right)\mathclose{}^2 + \mathopen{}\left(c - \tfrac{b^2}{a}\right)\mathclose{}\,w^2,
 \]</span></p>
@@ -1388,13 +1493,13 @@ a &amp;= c \\
 <section class="slide level2">
 
 <div id="def-schur-complement" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Schur complement)</strong></span> For a block matrix <span class="math inline">\(\mathbf{X} = \begin{bmatrix} \mathbf{A} &amp; \mathbf{B} \\ {\mathbf{B}}^{\top} &amp; \mathbf{C} \end{bmatrix}\)</span> as in <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a> with <span class="math inline">\(\mathbf{A}\)</span> invertible, the <strong>Schur complement</strong> of <span class="math inline">\(\mathbf{A}\)</span> in <span class="math inline">\(\mathbf{X}\)</span> is the <span class="math inline">\(m \times m\)</span> matrix <span class="math inline">\(\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> defined in <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a>.</p>
+<p><span class="theorem-title"><strong>Definition 7 (Schur complement)</strong></span> For a block matrix <span class="math inline">\(\mathbf{X} = \begin{bmatrix} \mathbf{A} &amp; \mathbf{B} \\ {\mathbf{B}}^{\top} &amp; \mathbf{C} \end{bmatrix}\)</span> as in <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a> with <span class="math inline">\(\mathbf{A}\)</span> invertible, the <strong>Schur complement</strong> of <span class="math inline">\(\mathbf{A}\)</span> in <span class="math inline">\(\mathbf{X}\)</span> is the <span class="math inline">\(m \times m\)</span> matrix <span class="math inline">\(\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> defined in <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-schur-complement" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Schur complements of <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 23 (Schur complements of <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> &nbsp;</p>
 <ul>
 <li><p>For <span class="math inline">\(\begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}\)</span> with <span class="math inline">\(\mathbf{A} = [5]\)</span>:</p>
 <p><span class="math display">\[
@@ -1419,26 +1524,26 @@ a &amp;= c \\
 <section class="slide level2">
 
 <div id="thm-schur-test" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (Schur complement test)</strong></span> Let <span class="math inline">\(\mathbf{X} = \begin{bmatrix} \mathbf{A} &amp; \mathbf{B} \\ {\mathbf{B}}^{\top} &amp; \mathbf{C} \end{bmatrix}\)</span> be as in <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a>. Then <span class="math inline">\(\mathbf{X}\)</span> is positive definite (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\mathbf{A}\)</span> is positive definite and its Schur complement <span class="math inline">\(\mathbf{S}\)</span> (<a href="#/def-schur-complement" class="quarto-xref">Definition&nbsp;7</a>) is positive definite.</p>
+<p><span class="theorem-title"><strong>Theorem 16 (Schur complement test)</strong></span> Let <span class="math inline">\(\mathbf{X} = \begin{bmatrix} \mathbf{A} &amp; \mathbf{B} \\ {\mathbf{B}}^{\top} &amp; \mathbf{C} \end{bmatrix}\)</span> be as in <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a>. Then <span class="math inline">\(\mathbf{X}\)</span> is positive definite (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\mathbf{A}\)</span> is positive definite and its Schur complement <span class="math inline">\(\mathbf{S}\)</span> (<a href="#/def-schur-complement" class="quarto-xref">Definition&nbsp;7</a>) is positive definite.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\(\mathbf{A}\)</span> is positive definite, so invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">Theorem&nbsp;16 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{S}\)</span> is defined. <span class="math inline">\(\mathbf{X}\)</span> is symmetric. Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>. By <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a>, <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, and both terms are at least <span class="math inline">\(0\)</span>. If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, the second term is positive. If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>, so the first term is positive. Either way <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &gt; 0\)</span>.</p>
-<p><strong>Only if.</strong> <span class="math inline">\(\mathbf{A}\)</span> is the top-left <span class="math inline">\(k \times k\)</span> block of <span class="math inline">\(\mathbf{X}\)</span>, so it is positive definite (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;12</a>), and invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">Theorem&nbsp;16 in Special Matrices and Decompositions</a>). <span class="math inline">\(\mathbf{S}\)</span> is symmetric:</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\(\mathbf{A}\)</span> is positive definite, so invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">Theorem&nbsp;16 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{S}\)</span> is defined. <span class="math inline">\(\mathbf{X}\)</span> is symmetric. Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>. By <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a>, <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, and both terms are at least <span class="math inline">\(0\)</span>. If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, the second term is positive. If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>, so the first term is positive. Either way <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &gt; 0\)</span>.</p>
+<p><strong>Only if.</strong> <span class="math inline">\(\mathbf{A}\)</span> is the top-left <span class="math inline">\(k \times k\)</span> block of <span class="math inline">\(\mathbf{X}\)</span>, so it is positive definite (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;14</a>), and invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">Theorem&nbsp;16 in Special Matrices and Decompositions</a>). <span class="math inline">\(\mathbf{S}\)</span> is symmetric:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {({\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B})}^{\top} &amp;= {\mathbf{B}}^{\top}\,{(\mathbf{A}^{-1})}^{\top}\,\mathbf{B} \\
 &amp;= {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a> for <span class="math inline">\({({\mathbf{B}}^{\top})}^{\top} = \mathbf{B}\)</span>, <a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{C}\)</span> is symmetric, so <span class="math inline">\(\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> is symmetric (the transpose of a difference is the difference of the transposes, entry by entry, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = -\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>; then <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &gt; 0\)</span> (<a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a>).</p>
+<p>(<a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a> for <span class="math inline">\({({\mathbf{B}}^{\top})}^{\top} = \mathbf{B}\)</span>, <a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{C}\)</span> is symmetric, so <span class="math inline">\(\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> is symmetric (the transpose of a difference is the difference of the transposes, entry by entry, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = -\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>; then <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &gt; 0\)</span> (<a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a>).</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-schur-test" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (Testing <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> A symmetric <span class="math inline">\(\begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span> is positive definite exactly when <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(c - \tfrac{b^2}{a} &gt; 0\)</span>, that is, <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(ac &gt; b^2\)</span> (a <span class="math inline">\(1 \times 1\)</span> matrix <span class="math inline">\([s]\)</span> is positive definite exactly when <span class="math inline">\(s &gt; 0\)</span>, since <span class="math inline">\({x}^{\top} s x = s x^2\)</span>).</p>
+<p><span class="theorem-title"><strong>Example 24 (Testing <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> A symmetric <span class="math inline">\(\begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span> is positive definite exactly when <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(c - \tfrac{b^2}{a} &gt; 0\)</span>, that is, <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(ac &gt; b^2\)</span> (a <span class="math inline">\(1 \times 1\)</span> matrix <span class="math inline">\([s]\)</span> is positive definite exactly when <span class="math inline">\(s &gt; 0\)</span>, since <span class="math inline">\({x}^{\top} s x = s x^2\)</span>).</p>
 <ul>
-<li><span class="math inline">\(\begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}\)</span>: <span class="math inline">\(5 &gt; 0\)</span> and <span class="math inline">\(\tfrac{9}{5} &gt; 0\)</span> (<a href="#/exm-schur-complement" class="quarto-xref">Example&nbsp;20</a>), so it is positive definite.</li>
+<li><span class="math inline">\(\begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}\)</span>: <span class="math inline">\(5 &gt; 0\)</span> and <span class="math inline">\(\tfrac{9}{5} &gt; 0\)</span> (<a href="#/exm-schur-complement" class="quarto-xref">Example&nbsp;23</a>), so it is positive definite.</li>
 <li><span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span>: <span class="math inline">\(1 &gt; 0\)</span> but <span class="math inline">\(\mathbf{S} = -3\)</span>, so it is not, as <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;30 in Special Matrices and Decompositions</a> found directly.</li>
 </ul>
 </div>
@@ -1446,11 +1551,11 @@ a &amp;= c \\
 <section class="slide level2">
 
 <div id="thm-cholesky" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 15 (Cholesky factorization)</strong></span> A <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is positive definite (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\)</span> for some lower triangular <span class="math inline">\(\mathbf{L}\)</span> (<a href="./linear-algebra-projections.html#def-lower-triangular-matrix">Definition&nbsp;8 in Projections and Linear Systems</a>) with positive diagonal entries. For a positive definite <span class="math inline">\(\mathbf{A}\)</span> that <span class="math inline">\(\mathbf{L}\)</span> is unique; it is the <strong>Cholesky factor</strong> of <span class="math inline">\(\mathbf{A}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 17 (Cholesky factorization)</strong></span> A <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is positive definite (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\)</span> for some lower triangular <span class="math inline">\(\mathbf{L}\)</span> (<a href="./linear-algebra-projections.html#def-lower-triangular-matrix">Definition&nbsp;8 in Projections and Linear Systems</a>) with positive diagonal entries. For a positive definite <span class="math inline">\(\mathbf{A}\)</span> that <span class="math inline">\(\mathbf{L}\)</span> is unique; it is the <strong>Cholesky factor</strong> of <span class="math inline">\(\mathbf{A}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\({\mathbf{L}}^{\top}\)</span> is upper triangular with positive diagonal (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>), so <span class="math inline">\({\mathbf{L}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> (<a href="./linear-algebra-projections.html#thm-back-substitution">Theorem&nbsp;16 in Projections and Linear Systems</a>), and the columns of <span class="math inline">\({\mathbf{L}}^{\top}\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#thm-matvec-columns">Theorem&nbsp;3 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>). So <span class="math inline">\(\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\,{\mathbf{L}}^{\top}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>) is positive definite (<a href="#/thm-pd-gram" class="quarto-xref">Theorem&nbsp;10</a>, part 2).</p>
-<p><strong>Only if, with uniqueness, by <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(p\)</span>.</strong> For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathbf{A} = [a]\)</span> with <span class="math inline">\(a &gt; 0\)</span> (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;12</a>), and <span class="math inline">\([c]\,[c] = [a]\)</span> with <span class="math inline">\(c &gt; 0\)</span> holds exactly for <span class="math inline">\(c = \sqrt{a}\)</span>. For <span class="math inline">\(p &gt; 1\)</span>, assume every <span class="math inline">\((p - 1) \times (p - 1)\)</span> positive definite matrix has exactly one such factor, and split off the first row and column. <span class="math inline">\(\mathbf{A}\)</span> is symmetric, so its first row is the transpose of its first column:</p>
+<p><strong>Only if, with uniqueness, by <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(p\)</span>.</strong> For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathbf{A} = [a]\)</span> with <span class="math inline">\(a &gt; 0\)</span> (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;14</a>), and <span class="math inline">\([c]\,[c] = [a]\)</span> with <span class="math inline">\(c &gt; 0\)</span> holds exactly for <span class="math inline">\(c = \sqrt{a}\)</span>. For <span class="math inline">\(p &gt; 1\)</span>, assume every <span class="math inline">\((p - 1) \times (p - 1)\)</span> positive definite matrix has exactly one such factor, and split off the first row and column. <span class="math inline">\(\mathbf{A}\)</span> is symmetric, so its first row is the transpose of its first column:</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} a_{11} &amp; {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top} \\ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} &amp; \mathbf{A}_{22} \end{bmatrix},
 \qquad
@@ -1486,7 +1591,7 @@ a &amp;= c \\
 \ell_{11}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}, \qquad
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}}^{\top} + \mathbf{L}_{22} {\mathbf{L}_{22}}^{\top} = \mathbf{A}_{22}.
 \]</span></p>
-<p><span class="math inline">\(a_{11} &gt; 0\)</span> (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;12</a>), so the first equation with <span class="math inline">\(\ell_{11} &gt; 0\)</span> forces <span class="math inline">\(\ell_{11} = \sqrt{a_{11}}\)</span>; the second then forces <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} = \tfrac{1}{\ell_{11}}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>; and the third becomes</p>
+<p><span class="math inline">\(a_{11} &gt; 0\)</span> (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;14</a>), so the first equation with <span class="math inline">\(\ell_{11} &gt; 0\)</span> forces <span class="math inline">\(\ell_{11} = \sqrt{a_{11}}\)</span>; the second then forces <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} = \tfrac{1}{\ell_{11}}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>; and the third becomes</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{L}_{22} {\mathbf{L}_{22}}^{\top}
@@ -1510,13 +1615,13 @@ a &amp;= c \\
 &amp;= \tfrac{1}{a_{11}}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-projections.html#thm-scalar-matmul">Theorem&nbsp;7 in Projections and Linear Systems</a>), and the right side is the Schur complement of <span class="math inline">\([a_{11}]\)</span> in <span class="math inline">\(\mathbf{A}\)</span>. It is positive definite by <a href="#/thm-schur-test" class="quarto-xref">Theorem&nbsp;14</a> (with <span class="math inline">\(k = 1\)</span>; <span class="math inline">\(\mathbf{A}_{22}\)</span> is symmetric because <span class="math inline">\(\mathbf{A}\)</span> is). By the induction hypothesis it has exactly one factor <span class="math inline">\(\mathbf{L}_{22}\)</span> of the required kind. So <span class="math inline">\(\mathbf{L}\)</span> exists and is unique.</p>
+<p>(<a href="./linear-algebra-projections.html#thm-scalar-matmul">Theorem&nbsp;7 in Projections and Linear Systems</a>), and the right side is the Schur complement of <span class="math inline">\([a_{11}]\)</span> in <span class="math inline">\(\mathbf{A}\)</span>. It is positive definite by <a href="#/thm-schur-test" class="quarto-xref">Theorem&nbsp;16</a> (with <span class="math inline">\(k = 1\)</span>; <span class="math inline">\(\mathbf{A}_{22}\)</span> is symmetric because <span class="math inline">\(\mathbf{A}\)</span> is). By the induction hypothesis it has exactly one factor <span class="math inline">\(\mathbf{L}_{22}\)</span> of the required kind. So <span class="math inline">\(\mathbf{L}\)</span> exists and is unique.</p>
 </div>
 </section>
 <section class="slide level2 smaller scrollable" id="references">
 
 <div id="exm-cholesky" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22 (Two Cholesky factors)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 25 (Two Cholesky factors)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(\mathbf{A} = \begin{bmatrix} 4 &amp; 2 \\ 2 &amp; 5 \end{bmatrix}\)</span>:</p>
 <p><span class="math display">\[
@@ -1552,7 +1657,7 @@ a &amp;= c \\
 &amp;= \tfrac{9}{5},
 \end{aligned}
 \]</span></p>
-<p>the Schur complement of <a href="#/exm-schur-complement" class="quarto-xref">Example&nbsp;20</a>, so <span class="math inline">\(\ell_{22} = \tfrac{3}{\sqrt{5}}\)</span>.</p></li>
+<p>the Schur complement of <a href="#/exm-schur-complement" class="quarto-xref">Example&nbsp;23</a>, so <span class="math inline">\(\ell_{22} = \tfrac{3}{\sqrt{5}}\)</span>.</p></li>
 <li><p>For <span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> the method breaks down:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1560,7 +1665,7 @@ a &amp;= c \\
 &amp;= -3
 \end{aligned}
 \]</span></p>
-<p>has no real solution, matching the failure of the Schur complement test (<a href="#/exm-schur-test" class="quarto-xref">Example&nbsp;21</a>).</p></li>
+<p>has no real solution, matching the failure of the Schur complement test (<a href="#/exm-schur-test" class="quarto-xref">Example&nbsp;24</a>).</p></li>
 </ul>
 </div>
 
