@@ -1,7 +1,8 @@
 :::{#def-complex-modulus}
 #### Absolute value (modulus) of a complex number
 
-The **absolute value**, or **modulus**, of a complex number $z = a + b\,i$ (@def-complex-number) is
+The **absolute value**, or **modulus**
+[@wikipedia_complex_number], of a complex number $z = a + b\,i$ (@def-complex-number) is
 
 $$\abs{z} \eqdef \sqrt{a^2 + b^2}.$$
 

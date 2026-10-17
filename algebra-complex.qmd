@@ -13,3 +13,11 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_algebra_complex.qmd >}}
+
+## Further reading {.unnumbered}
+
+-   @wikipedia_imaginary_unit --- the imaginary unit and its powers
+
+-   @wikipedia_complex_number --- complex numbers, with their arithmetic, conjugate and modulus
+
+-   @wikipedia_complex_conjugate --- the complex conjugate and its properties

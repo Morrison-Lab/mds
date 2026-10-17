@@ -1,7 +1,8 @@
 :::{#def-imaginary-unit}
 #### Imaginary unit
 
-The **imaginary unit** $i$ is a number whose square is $-1$:
+The **imaginary unit** $i$ is a number whose square is $-1$
+[@wikipedia_imaginary_unit]:
 
 $$i^2 \eqdef -1.$$
 

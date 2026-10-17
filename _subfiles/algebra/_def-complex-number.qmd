@@ -1,7 +1,9 @@
 :::{#def-complex-number}
 #### Complex number
 
-A **complex number** is a number of the form
+A **complex number**
+[@wikipedia_complex_number]
+is a number of the form
 
 $$z = a + b\,i,$$
 
