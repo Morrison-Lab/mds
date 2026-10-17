@@ -1,7 +1,9 @@
 :::{#def-rank}
 #### Rank
 
-The **rank** of a matrix $\matr{A}$, written $\operatorname{rank}(\matr{A})$,
+The **rank**
+[@wikipedia_rank_linear_algebra]
+of a matrix $\matr{A}$, written $\operatorname{rank}(\matr{A})$,
 is the largest number of columns of $\matr{A}$
 that are linearly independent (@def-linearly-independent).
 

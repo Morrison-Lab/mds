@@ -2,7 +2,9 @@
 #### Linearly independent vectors
 
 Vectors $\vecf{v}_1, \ldots, \vecf{v}_k$ of the same length $p$
-are **linearly independent** if the only numbers $c_1, \ldots, c_k$ with
+are **linearly independent**
+[@wikipedia_linear_independence]
+if the only numbers $c_1, \ldots, c_k$ with
 
 $$c_1 \vecf{v}_1 + \cdots + c_k \vecf{v}_k = \vzero$$
 
