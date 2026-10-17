@@ -13,3 +13,11 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_complex.qmd >}}
+
+## Further reading {.unnumbered}
+
+-   @wikipedia_conjugate_transpose --- the conjugate transpose and its properties
+
+-   @wikipedia_hermitian_matrix --- Hermitian matrices, with examples and the spectral theorem
+
+-   @wikipedia_skew_hermitian_matrix --- skew-Hermitian matrices
