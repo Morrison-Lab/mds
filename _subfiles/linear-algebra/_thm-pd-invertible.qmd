@@ -35,7 +35,7 @@ and $\matr{A}$ is invertible by @thm-invertible-rank.
 {{< slidebreak >}}
 
 :::{#exm-pd-invertible}
-#### An invertible matrix that is not positive definite
+#### Positive definite matrices are invertible; the converse fails
 
 $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is positive definite, since
 
