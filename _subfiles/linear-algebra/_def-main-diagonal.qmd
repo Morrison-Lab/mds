@@ -1,7 +1,9 @@
 :::{#def-main-diagonal}
 #### Main diagonal
 
-The **main diagonal** of an $m \times n$ matrix $\matr{A}$
+The **main diagonal**
+[@wikipedia_main_diagonal]
+of an $m \times n$ matrix $\matr{A}$
 is the list of its entries $a_{11}, a_{22}, \ldots, a_{kk}$,
 where $k$ is the smaller of $m$ and $n$.
 

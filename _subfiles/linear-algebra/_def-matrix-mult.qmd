@@ -1,7 +1,9 @@
 :::{#def-matrix-mult}
 #### Matrix multiplication
 
-The **product** of an $m \times k$ matrix $\matr{A}$
+The **product**
+[@wikipedia_matrix_multiplication]
+of an $m \times k$ matrix $\matr{A}$
 and a $k \times n$ matrix $\matr{B}$
 is the $m \times n$ matrix $\matr{C} = \matr{A}\matr{B}$ with entries:
 
