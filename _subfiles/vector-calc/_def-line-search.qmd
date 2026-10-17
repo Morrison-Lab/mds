@@ -2,7 +2,9 @@
 #### Line search
 
 In gradient descent (@def-gradient-descent),
-a **line search** is a rule that chooses the step length $s^{(t)}$
+a **line search**
+[@wikipedia_line_search]
+is a rule that chooses the step length $s^{(t)}$
 by examining the values of $f$ along the line
 $\cb{\vx^{(t)} - s\,\deriv{\vx} f(\vx^{(t)}) : s > 0}$.
 

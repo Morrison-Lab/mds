@@ -2,6 +2,7 @@
 #### Quadratic convergence
 
 A [sequence](functions.qmd#def-sequence) $\vx^{(0)}, \vx^{(1)}, \ldots$ in $\reals^p$ that converges (@def-vector-sequence-limit) to $\vx^*$ **converges quadratically**
+[@wikipedia_rate_of_convergence]
 if there is a constant $C$ with
 
 $$

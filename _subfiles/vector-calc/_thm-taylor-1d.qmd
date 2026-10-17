@@ -5,6 +5,7 @@ Let $a < b$, and let $g$ be a real-valued function on $[a, b]$
 whose derivative $g'$ is [continuous](calculus.qmd#def-continuous) on $[a, b]$
 and whose [second derivative](calculus.qmd#def-second-derivative) $g''$ exists at every point of $(a, b)$.
 Then there is a $\midpt \in (a, b)$ with
+[@wikipedia_taylors_theorem]
 
 $$
 g(b) = g(a) + g'(a)\,(b - a) + \frac{1}{2}\,g''(\midpt)\,(b - a)^2.

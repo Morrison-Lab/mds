@@ -1,7 +1,9 @@
 :::{#def-convex-set}
 #### Convex set
 
-A set $K \subseteq \reals^p$ is **convex** if for all $\vx, \vy \in K$ and all $t \in [0, 1]$,
+A set $K \subseteq \reals^p$ is **convex** if
+[@wikipedia_convex_set]
+for all $\vx, \vy \in K$ and all $t \in [0, 1]$,
 the point $t \vx + (1 - t) \vy$ is in $K$:
 $K$ contains the whole line segment between any two of its points.
 

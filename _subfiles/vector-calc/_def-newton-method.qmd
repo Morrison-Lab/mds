@@ -3,7 +3,9 @@
 
 Let $f : \reals^p \to \reals$ have first and second partial derivatives,
 and let $\vx^{(0)}$ be a starting point.
-**Newton's method** computes, for $t = 0, 1, 2, \ldots$, as long as $\matr{H}_f(\vx^{(t)})$ is invertible,
+**Newton's method**
+[@wikipedia_newtons_method_in_optimization]
+computes, for $t = 0, 1, 2, \ldots$, as long as $\matr{H}_f(\vx^{(t)})$ is invertible,
 
 $$
 \vx^{(t+1)} \eqdef \vx^{(t)} - \sb{\matr{H}_f(\vx^{(t)})}^{-1} \deriv{\vx} f(\vx^{(t)}).

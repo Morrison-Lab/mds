@@ -5,7 +5,8 @@ Let $f : \reals^p \to \reals$.
 A [stationary point](#def-stationary-point) of $f$ that is
 neither a [local minimizer](algebra.qmd#def-local-minimizer)
 nor a [local maximizer](#def-local-maximizer) of $f$
-is a **saddle point** of $f$.
+is a **saddle point** of $f$
+[@wikipedia_saddle_point].
 
 :::
 
