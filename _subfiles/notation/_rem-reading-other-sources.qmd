@@ -1,0 +1,11 @@
+::: {#rem-reading-other-sources}
+
+#### Reading another source's subscripts and parentheses
+
+When you read a formula from another source,
+first work out what each subscript and each argument is doing:
+labeling a member of an [indexed family](sets.qmd#def-indexed-family), or being the input of a [function](functions.qmd#def-function).
+That tells you which convention the source follows,
+whatever its layout.
+
+:::
