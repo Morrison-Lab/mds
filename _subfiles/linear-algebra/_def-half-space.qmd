@@ -2,7 +2,9 @@
 #### Open half-space
 
 Let $\mathcal{H} = \cb{\vx \in \reals^p : \dprod{\vec{w}}{\vx} + b = 0}$ be a hyperplane (@def-hyperplane).
-The two **open half-spaces** of $\mathcal{H}$ are
+The two **open half-spaces**
+[@wikipedia_half_space_geometry]
+of $\mathcal{H}$ are
 
 $$
 \mathcal{H}^+ \eqdef \cb{\vx \in \reals^p : \dprod{\vec{w}}{\vx} + b > 0}
