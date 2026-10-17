@@ -1,7 +1,9 @@
 :::{#def-moore-penrose}
 #### Moore-Penrose inverse
 
-A **Moore-Penrose inverse** of an $m \times n$ matrix $\matr{A}$
+A **Moore-Penrose inverse**
+[@wikipedia_moore_penrose_inverse]
+of an $m \times n$ matrix $\matr{A}$
 is an $n \times m$ matrix $\matr{G}$ satisfying all four conditions
 
 1. $\matr{A} \matr{G} \matr{A} = \matr{A}$;

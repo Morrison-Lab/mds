@@ -1,7 +1,9 @@
 :::{#def-triangular-matrix}
 #### Upper triangular matrix
 
-A square matrix $\matr{U}$ is **upper triangular** if every entry below the diagonal is $0$:
+A square matrix $\matr{U}$ is **upper triangular**
+[@wikipedia_triangular_matrix]
+if every entry below the diagonal is $0$:
 $u_{ij} = 0$ whenever $i > j$.
 
 :::
