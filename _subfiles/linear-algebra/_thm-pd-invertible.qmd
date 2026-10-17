@@ -1,0 +1,61 @@
+:::{#thm-pd-invertible}
+#### A positive definite matrix is invertible
+
+Every positive definite matrix (@def-positive-definite) is invertible (@def-invertible-matrix).
+
+:::
+
+::: proof
+
+Let $\matr{A}$ be a $p \times p$ positive definite matrix,
+and let $\vx$ be a vector of length $p$ with $\matr{A} \vx = \vzero_p$.
+Then
+
+$$
+\ba
+\qform{\matr{A}}{\vx}
+&= \tp{\vx}\,(\matr{A} \vx)
+&& \text{(@def-quadratic-form)}
+\\
+&= \tp{\vx}\,\vzero_p
+&& \text{(} \matr{A} \vx = \vzero_p \text{)}
+\\
+&= 0.
+&& \text{(every term of the inner product is } 0 \text{)}
+\ea
+$$
+
+If $\vx \ne \vzero_p$, then $\qform{\matr{A}}{\vx} > 0$ because $\matr{A}$ is positive definite,
+which contradicts $\qform{\matr{A}}{\vx} = 0$.
+So $\vx = \vzero_p$, the null space $\mathcal{N}(\matr{A})$ is $\cb{\vzero_p}$,
+and $\matr{A}$ is invertible by @thm-invertible-rank.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-pd-invertible}
+#### An invertible matrix that is not positive definite
+
+$\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is positive definite, since
+
+$$
+\ba
+\qform{\matr{A}}{\vx}
+&= 2 x_1^2 + 2 x_1 x_2 + 2 x_2^2
+&& \text{(multiply out)}
+\\
+&= x_1^2 + x_2^2 + (x_1 + x_2)^2,
+&& \text{(expand the square)}
+\ea
+$$
+
+which is $0$ only when $x_1 = x_2 = 0$.
+It is invertible, with $\inv{\matr{A}} = \frac{1}{3}\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}$.
+
+The converse fails.
+$\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of @exm-positive-definite is not positive definite,
+yet it is invertible:
+$\inv{\matr{D}} = \frac{1}{3}\begin{bmatrix} -1 & 2 \\ 2 & -1 \end{bmatrix}$.
+
+:::
