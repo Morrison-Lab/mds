@@ -1,7 +1,9 @@
 :::{#def-integers}
 #### Integers
 
-The **integers** are the whole numbers,
+The **integers**
+[@wikipedia_integer]
+are the whole numbers,
 together with their negatives and $0$:
 
 $$\mathbb{Z} \eqdef \cb{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots}$$

@@ -11,3 +11,21 @@ format:
 ---
 
 {{< include mds/_number-systems.qmd >}}
+
+## Further reading {.unnumbered}
+
+-   @wikipedia_integer --- the integers
+
+-   @wikipedia_parity_mathematics --- even and odd numbers
+
+-   @wikipedia_natural_number --- the natural numbers and their conventions
+
+-   @wikipedia_rational_number --- the rational numbers
+
+-   @wikipedia_real_number --- the real numbers and their constructions
+
+-   @wikipedia_irrational_number --- irrational numbers
+
+-   @wikipedia_square_root_of_2 --- the square root of 2
+
+-   @wikipedia_proof_that_pi_is_irrational --- proofs that pi is irrational
