@@ -4,7 +4,9 @@
 Let $f$ be a scalar-valued function of a $p \times 1$ vector $\vx$
 whose first partial derivatives exist on an open ball around $\vx$ (@def-ball)
 and whose second partial derivatives (@def-second-partial-derivative) exist at $\vx$.
-The **Hessian matrix** of $f$ at $\vx$ is the derivative (@def-vector-valued-derivative)
+The **Hessian matrix**
+[@wikipedia_hessian_matrix]
+of $f$ at $\vx$ is the derivative (@def-vector-valued-derivative)
 of the transposed gradient $\tp{\paren{\deriv{\vx} f(\vx)}}$ (@def-vector-derivative):
 
 $$

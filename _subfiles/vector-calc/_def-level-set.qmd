@@ -2,7 +2,9 @@
 #### Level set (level curve, contour)
 
 Let $f : \reals^p \to \reals$ and let $c$ be a real number.
-The **level set** of $f$ at $c$ is
+The **level set**
+[@wikipedia_level_set]
+of $f$ at $c$ is
 
 $$
 \cb{\vx \in \reals^p : f(\vx) = c},

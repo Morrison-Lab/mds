@@ -15,7 +15,9 @@ $$
 }
 $$
 
-The vector derivative is also called the **gradient** of $f$ with respect to $\vcoef$,
+The vector derivative is also called the **gradient**
+[@wp:gradient]
+of $f$ with respect to $\vcoef$,
 written $\nabla_{\vcoef} f(\vcoef)$.
 :::
 

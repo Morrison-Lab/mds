@@ -3,7 +3,8 @@
 
 Let $\mX$ be an $n \times p$ matrix, $\vy \in \reals^n$, and $\vcoef \in \reals^p$.
 The **residual vector** of $\vcoef$ is $\vlsresid(\vcoef) \eqdef \vy - \mX\vcoef$,
-and its entries $\lsresid_i = y_i - (\mX\vcoef)_i$ are the **residuals**.
+and its entries $\lsresid_i = y_i - (\mX\vcoef)_i$ are the **residuals**
+[@wikipedia_errors_and_residuals].
 
 :::
 
@@ -33,7 +34,8 @@ $$
 \end{aligned}
 $$
 
-is the **residual sum of squares**.
+is the **residual sum of squares**
+[@wikipedia_residual_sum_of_squares].
 
 :::
 

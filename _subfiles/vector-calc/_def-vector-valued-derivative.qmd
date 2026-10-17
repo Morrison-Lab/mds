@@ -29,7 +29,8 @@ Both $\deriv{\vcoef} \vy$ and $\deriv{\vcoef} \tp{\vy}$ denote this $p \times q$
 :::{#def-denominator-layout}
 #### Denominator layout
 
-Writing derivatives as in @def-vector-valued-derivative is the **denominator layout**,
+Writing derivatives as in @def-vector-valued-derivative is the **denominator layout**
+[@wikipedia_matrix_calculus],
 which these notes use throughout:
 rows index the entries of $\vcoef$ (the denominator)
 and columns index the entries of $\vy$ (the numerator),

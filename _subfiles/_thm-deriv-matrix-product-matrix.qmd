@@ -4,7 +4,9 @@
 
 For a scalar-valued function $f(\matr{X})$
 of an $m \times n$ matrix $\matr{X}$,
-the **matrix derivative** is the $m \times n$ matrix
+the **matrix derivative**
+[@wikipedia_matrix_calculus]
+is the $m \times n$ matrix
 whose $(i,j)$ entry is the partial derivative of $f$
 with respect to the $(i,j)$ entry of $\matr{X}$:
 
