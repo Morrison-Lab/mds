@@ -1,0 +1,125 @@
+:::{#thm-centered-data-rank}
+#### A centered data matrix has rank at most $n - 1$
+
+Let $\mX$ be an $n \times p$ matrix with rows $\tp{\vecf{x}_1}, \ldots, \tp{\vecf{x}_n}$,
+let $\bar{\vecf{x}} = \frac{1}{n}\sum_{i=1}^n \vecf{x}_i$ be the mean of the rows,
+and let $\mX_c = \mX - \v1\,\tp{\bar{\vecf{x}}}$ be the matrix whose row $i$ is $\tp{(\vecf{x}_i - \bar{\vecf{x}})}$,
+where $\v1$ is the ones vector of length $n$ (@def-ones-vector).
+Then $\operatorname{rank}(\mX_c) \le n - 1$.
+
+:::
+
+::: proof
+
+The entries of each column of $\mX_c$ sum to zero:
+
+$$
+\ba
+\tp{\v1}\mX_c
+&= \tp{\v1}\mX - \paren{\tp{\v1}\v1}\tp{\bar{\vecf{x}}}
+&& \text{(@thm-matmul-distrib)}
+\\
+&= \sum_{i=1}^n \tp{\vecf{x}_i} - n\,\tp{\bar{\vecf{x}}}
+&& \text{(} \tp{\v1}\v1 = n \text{)}
+\\
+&= n\,\tp{\bar{\vecf{x}}} - n\,\tp{\bar{\vecf{x}}}
+&& \text{(definition of } \bar{\vecf{x}} \text{)}
+\\
+&= \tp{\vzero_p}.
+\ea
+$$
+
+Transposing, $\tp{\mX_c}\v1 = \vzero_p$.
+The ones vector is nonzero, so it is in the null space of the $p \times n$ matrix $\tp{\mX_c}$,
+and $\operatorname{nullity}(\tp{\mX_c}) \ge 1$.
+By @thm-rank-nullity, applied to the $n$ columns of $\tp{\mX_c}$,
+
+$$
+\ba
+\operatorname{rank}(\mX_c)
+&= \operatorname{rank}(\tp{\mX_c})
+&& \text{(@thm-rank-transpose)}
+\\
+&= n - \operatorname{nullity}(\tp{\mX_c})
+&& \text{(@thm-rank-nullity)}
+\\
+&\le n - 1.
+&& \text{(} \operatorname{nullity}(\tp{\mX_c}) \ge 1 \text{)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-centered-data-rank}
+#### Two points in three dimensions
+
+$\mX = \begin{bmatrix} 1 & 2 & 3 \\ 3 & 2 & 1 \end{bmatrix}$ has $\bar{\vecf{x}} = (2, 2, 2)$, so
+
+$$
+\mX_c = \begin{bmatrix} -1 & 0 & 1 \\ 1 & 0 & -1 \end{bmatrix}.
+$$
+
+The second row is $-1$ times the first, so $\operatorname{rank}(\mX_c) = 1 = n - 1$,
+and the column sums are zero: $\tp{\v1}\mX_c = \tp{\vzero_3}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#cor-sample-covariance-singular}
+#### A sample covariance matrix from $n \le p$ points is singular
+
+With $\mX_c$ as in @thm-centered-data-rank, the sample covariance matrix
+
+$$
+\matr{S} = \frac{1}{n - 1}\,\tp{\mX_c}\mX_c
+$$
+
+is $p \times p$ with $\operatorname{rank}(\matr{S}) \le n - 1$.
+So if $n \le p$, then $\matr{S}$ is not invertible.
+
+:::
+
+::: proof
+
+$$
+\ba
+\operatorname{rank}(\matr{S})
+&= \operatorname{rank}(\tp{\mX_c}\mX_c)
+&& \text{(multiplying by } \tfrac{1}{n-1} \ne 0 \text{ does not change the rank)}
+\\
+&= \operatorname{rank}(\mX_c)
+&& \text{(@thm-rank-transpose)}
+\\
+&\le n - 1.
+&& \text{(@thm-centered-data-rank)}
+\ea
+$$
+
+If $n \le p$, then $\operatorname{rank}(\matr{S}) \le n - 1 < p$,
+so $\matr{S}$ does not have full column rank,
+and it is not invertible by @thm-invertible-rank.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-sample-covariance-singular}
+#### As many points as dimensions
+
+The $n = 3$ points $(1, 0, 0)$, $(0, 1, 0)$ and $(0, 0, 1)$ in $p = 3$ dimensions have $\bar{\vecf{x}} = \frac{1}{3}(1, 1, 1)$, so
+
+$$
+\mX_c = \matr{I}_3 - \tfrac{1}{3}\,\v1\tp{\v1},
+\qquad
+\matr{S} = \tfrac{1}{2}\,\mX_c
+= \tfrac{1}{6}\begin{bmatrix} 2 & -1 & -1 \\ -1 & 2 & -1 \\ -1 & -1 & 2 \end{bmatrix},
+$$
+
+using $\tp{\mX_c}\mX_c = \mX_c$ (the centering matrix is a symmetric projection).
+Then $\matr{S}\,\v1 = \vzero_3$ and $\operatorname{rank}(\matr{S}) = 2 = n - 1 < 3$.
+With one more point than dimensions ($n = p + 1$), the rank bound allows $\matr{S}$ to have full rank $p$.
+
+:::
