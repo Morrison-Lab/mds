@@ -1,0 +1,13 @@
+{{< slidebreak >}}
+
+:::{#rem-vector-mark-placement}
+#### Why the vector mark sits under the symbol
+
+In these notes, the mark that shows a symbol is a vector is a tilde under the letter, as in $\vx$.
+Many books instead use a bold letter or an arrow over the letter.
+We chose a mark underneath because bold letters are hard to write by hand on a board,
+and because the space above a letter is already used by the hat that marks an estimated value, as in $\hvb$.
+The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-vector-mark)
+gives the full reasons and an example of an estimated vector.
+
+:::
