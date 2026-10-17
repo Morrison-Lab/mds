@@ -3,6 +3,7 @@
 
 For a probability measure $\P$ (@def-probability-measure) on a [measurable space](#def-measurable-space) $(\samplespace, \events)$,
 $(\samplespace, \events, \P)$ is a **probability space**.
+[@wikipedia_probability_space]
 
 :::
 
@@ -13,6 +14,7 @@ $(\samplespace, \events, \P)$ is a **probability space**.
 
 In a probability space $(\samplespace, \events, \P)$ (@def-probability-space),
 $\samplespace$ is its **sample space**.
+[@wikipedia_sample_space]
 
 :::
 
@@ -23,6 +25,7 @@ $\samplespace$ is its **sample space**.
 
 In a probability space $(\samplespace, \events, \P)$ (@def-probability-space),
 the elements of the sample space $\samplespace$ (@def-sample-space) are **outcomes**.
+[@wikipedia_outcome_probability]
 
 :::
 
@@ -33,5 +36,6 @@ the elements of the sample space $\samplespace$ (@def-sample-space) are **outcom
 
 In a probability space $(\samplespace, \events, \P)$ (@def-probability-space),
 the sets in $\events$ are **events**.
+[@wikipedia_event_probability_theory]
 
 :::

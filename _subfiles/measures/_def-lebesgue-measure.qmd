@@ -2,6 +2,7 @@
 #### Lebesgue measure
 
 **Lebesgue measure** on $\reals$
+[@wikipedia_lebesgue_measure]
 is the [measure](#def-measure) $\lebesgue$
 on the [Borel $\sigma$-algebra](#def-borel-sigma-algebra) $\borel$
 that assigns each [interval](sets.qmd#def-interval) its length:
@@ -28,8 +29,8 @@ and $\lebesgue(I) \eqdef \infty$ for each unbounded interval $I$.
 
 Exactly one measure on $\borel$ assigns every interval its length;
 constructing it takes more measure theory than these notes cover
-(see [Wikipedia: Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure),
+[@wikipedia_lebesgue_measure],
 which also extends $\lebesgue$ to a larger $\sigma$-algebra,
-the Lebesgue-measurable sets, with the same values on Borel sets).
+the Lebesgue-measurable sets, with the same values on Borel sets.
 
 :::

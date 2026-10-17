@@ -4,6 +4,7 @@
 Let $a_1, a_2, \ldots$ be a sequence in $[0, \infty]$,
 with partial sums $s_n$ (@def-partial-sum).
 The **infinite sum** (also called a **series**)
+[@wikipedia_series_mathematics]
 $\sumto{i}{\infty} a_i$ is the limit of the partial sums:
 
 $$\sumto{i}{\infty} a_i \eqdef \lim_{n \to \infty} s_n$$

@@ -1,7 +1,9 @@
 :::{#def-measurable-space}
 #### Measurable space
 
-A **measurable space** $(S, \salg)$
+A **measurable space**
+[@wikipedia_measurable_space]
+$(S, \salg)$
 is a set $S$ together with a [$\sigma$-algebra](#def-sigma-algebra) $\salg$ on $S$.
 
 :::

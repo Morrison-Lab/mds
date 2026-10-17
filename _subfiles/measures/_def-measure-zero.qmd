@@ -3,6 +3,7 @@
 
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
 A set $A \in \salg$ has **measure zero**
+[@wikipedia_null_set]
 (also called a **null set** for $\measure$)
 if $\measure(A) = 0$.
 

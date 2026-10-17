@@ -1,7 +1,9 @@
 :::{#def-sigma-algebra}
 #### $\sigma$-algebra
 
-A **$\sigma$-algebra** on a set $S$
+A **$\sigma$-algebra**
+[@wikipedia_sigma_algebra]
+on a set $S$
 is a [collection](sets.qmd#def-collection) $\salg$ of [subsets](sets.qmd#def-subset) of $S$
 that satisfies:
 
@@ -20,7 +22,7 @@ that satisfies:
 
 Other sources call a $\sigma$-algebra a **$\sigma$-field** [@billingsley1995probability]
 or a **Borel field** [@CaseBerg01, Def. 1.2.1]
-(see [Wikipedia: $\sigma$-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)).
+[@wikipedia_sigma_algebra].
 The names mean the same thing.
 The "Borel" in "Borel field" is a different use of "Borel" from the
 [Borel $\sigma$-algebra](#def-borel-sigma-algebra) on $\reals$,
