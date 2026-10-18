@@ -60,6 +60,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-matmul-product-of-sums.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-matmul-product-of-sums.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_exr-shape-rule.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_sol-shape-rule.qmd >}}
