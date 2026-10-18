@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
@@ -328,44 +328,9 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 These books and articles treat sets and the logic behind them in more depth.
 
 - Devlin [\[17\]](#ref-devlin1993joy) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions in these notes.
-
 - Halmos [\[18\]](#ref-halmos1974naive) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.
-
 - Enderton [\[19\]](#ref-enderton2001logic) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.
-
 - Barker-Plummer et al. [\[20\]](#ref-barkerplummer2011language) teaches propositional and first-order logic, the language behind statements such as “for every set \\A\\ there exists…”.
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_set_mathematics) — sets, with the naive and axiomatic views
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_set_builder_notation) — set-builder notation
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_interval_mathematics) — intervals and their endpoints
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_subset) — subsets and the symbol conventions
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_empty_set) — the empty set
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_vacuous_truth) — vacuous truth
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_family_of_sets) — families of sets
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_index_set) — index sets
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_indexed_family) — indexed families
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_union_set_theory) — unions of sets
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_intersection_set_theory) — intersections of sets
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_complement_set_theory) — complements and set differences
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_de_morgans_laws) — De Morgan’s laws
-
-- Wikipedia contributors [\[14\]](#ref-wikipedia_ordered_pair) — ordered pairs
-
-- Wikipedia contributors [\[15\]](#ref-wikipedia_cartesian_product) — Cartesian products
-
-- Wikipedia contributors [\[16\]](#ref-wikipedia_extended_real_number_line) — the extended real number line
 
 ## References
 

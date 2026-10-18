@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Column space and null space
 
@@ -683,20 +683,6 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 > **NOTE:**
 >
 > **Example 25 (Building a rank factorization from a basis)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\(1, 3)\\ spans \\\mathcal{C}(\mathbf{A})\\ ([Example 2](#exm-column-space-span)), and it is linearly independent because it is nonzero (\\c\\(1, 3) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_2\\ forces \\c = 0\\), so it is a basis of \\\mathcal{C}(\mathbf{A})\\. The columns of \\\mathbf{A}\\ are \\(1, 3) = 1 \cdot(1, 3)\\, \\(-2, -6) = -2 \cdot(1, 3)\\ and \\(-2, -6) = -2 \cdot(1, 3)\\, so the construction in [Theorem 15](#thm-rank-factorization) gives \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\ and \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\, the factorization in [Example 24](#exm-rank-factorization).
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_row_and_column_spaces) — the row space, column space and null space
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_rank_nullity_theorem) — the rank-nullity theorem and its proofs
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_gram_matrix) — Gram matrices and their properties
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_affine_space) — affine spaces and subspaces
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_half_space_geometry) — half-spaces
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_rank_factorization) — rank factorizations
 
 Back to top
 

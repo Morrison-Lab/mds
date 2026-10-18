@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Integration
 
@@ -498,7 +498,7 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 >
 > > **NOTE:**
 > >
-> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 13](#def-integrable)) and continuous at \\x\\ (see [Definition 4](#def-continuous)), even if \\f\\ has jump discontinuities ([Definition 6](#def-jump-discontinuity)) elsewhere [\[8\]](#ref-rudin1976principles), Theorem 6.20, p. 133.
+> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 13](#def-integrable)) and continuous at \\x\\ (see [Definition 4](#def-continuous)), even if \\f\\ has jump discontinuities ([Definition 6](#def-jump-discontinuity)) elsewhere [\[8\]](#ref-rudin1976principles), Theorem 6.20, p. 133. This result is the first part of the fundamental theorem of calculus [\[9\]](#ref-wikipedia_fundamental_theorem_of_calculus).
 >
 > [\[2\]](#ref-larsonCalc11e), Theorem 4.11, p. 288
 
@@ -516,7 +516,7 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 >
 > \\\int_a^x \frac{d F}{d t}\\dt = F(x) - F(a)\\
 >
-> [\[9, Ch. 18\]](#ref-calclifesaver), [\[2\]](#ref-larsonCalc11e), Theorem 4.9, p. 282
+> [\[10, Ch. 18\]](#ref-calclifesaver), [\[2\]](#ref-larsonCalc11e), Theorem 4.9, p. 282
 
 The two parts of the FTC together express that **differentiation and integration are inverse operations**:
 
@@ -545,7 +545,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 1 (Definite integral of a polynomial)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.31.
+> **Exercise 1 (Definite integral of a polynomial)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.31.
 >
 > Evaluate the integral:
 >
@@ -559,7 +559,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 2 (Integral of a perfect square)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.32.
+> **Exercise 2 (Integral of a perfect square)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.32.
 >
 > Evaluate the integral:
 >
@@ -579,7 +579,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 3 (Integral of a composite power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.33.
+> **Exercise 3 (Integral of a composite power)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.33.
 >
 > Evaluate the integral:
 >
@@ -599,7 +599,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 4 (Integral of odd trigonometric functions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.34.
+> **Exercise 4 (Integral of odd trigonometric functions)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.34.
 >
 > Evaluate the integral:
 >
@@ -621,7 +621,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 5 (Separating even and odd parts of a polynomial)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.35.
+> **Exercise 5 (Separating even and odd parts of a polynomial)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.35.
 >
 > Evaluate the integral:
 >
@@ -639,7 +639,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 6 (Substitution leading to a natural logarithm)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.36.
+> **Exercise 6 (Substitution leading to a natural logarithm)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.36.
 >
 > Evaluate the integral:
 >
@@ -667,7 +667,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 7 (Substitution with a polynomial power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.37.
+> **Exercise 7 (Substitution with a polynomial power)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.37.
 >
 > Evaluate the integral:
 >
@@ -693,7 +693,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 8 (Substitution with a trigonometric integrand)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.38.
+> **Exercise 8 (Substitution with a trigonometric integrand)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.38.
 >
 > Evaluate the integral:
 >
@@ -717,7 +717,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 9 (Integration by parts with an exponential factor)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.40.
+> **Exercise 9 (Integration by parts with an exponential factor)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.40.
 >
 > Evaluate the integral:
 >
@@ -817,7 +817,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > **Example 23 (CDF and PDF of the exponential distribution)** In what follows, \\f\\ denotes the PDF and \\F\\ the CDF — the same letters as the antiderivative pair in [Definition 1](#def-antiderivative), because the FTC will show \\F\\ is exactly an antiderivative of \\f\\.
 >
-> Let \\T\\ be a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) with the [exponential distribution](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) with rate \\{\lambda}\> 0\\. Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is [\[11, Sec. II\]](#ref-kleinbaum2012survival), p. 295, “Survival and Hazard Functions for Selected Distributions”:
+> Let \\T\\ be a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) with the [exponential distribution](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) with rate \\{\lambda}\> 0\\. Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is [\[12, Sec. II\]](#ref-kleinbaum2012survival), p. 295, “Survival and Hazard Functions for Selected Distributions”:
 >
 > \\f(t) = {\lambda}\text{e}^{-{\lambda}t}, \quad t \ge 0\\
 >
@@ -890,7 +890,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 10 (Improper Gaussian-kernel integral)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.39.
+> **Exercise 10 (Improper Gaussian-kernel integral)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.39.
 >
 > Evaluate the improper integral:
 >
@@ -913,7 +913,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 11 (Convolution of two uniform densities)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.41.
+> **Exercise 11 (Convolution of two uniform densities)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.41.
 >
 > Let \\f(x) = \mathbb{1}\_{\[0, 1\]}(x)\\ be the indicator of the unit interval:
 >
@@ -974,24 +974,6 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > - [Definite Integrals](https://www.youtube.com/watch?v=lhtoBu51N7k&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Definite Integral Exercise](https://www.youtube.com/watch?v=kSZWX3j2u2U&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_antiderivative) — antiderivatives and indefinite integrals
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_continuous_function) — continuous functions, with the epsilon-delta definition
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_classification_of_discontinuities) — jump, removable and essential discontinuities
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_partition_of_an_interval) — partitions of an interval
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_riemann_sum) — Riemann sums and their types
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_riemann_integral) — the Riemann integral and which functions have one
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_fundamental_theorem_of_calculus) — the two parts of the fundamental theorem
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_integration_by_substitution) — change of variable in an integral
-
 Back to top
 
 ## References
@@ -1030,20 +1012,16 @@ W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series
 
 \[9\]
 
-A. D. Banner, *The calculus lifesaver : All the tools you need to excel at calculus*. in A princeton lifesaver study guide. Princeton, New Jersey: Princeton University Press, 2007. Available: <https://press.princeton.edu/books/paperback/9780691130880/the-calculus-lifesaver>
+Wikipedia contributors, “Fundamental theorem of calculus — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus>
 
 \[10\]
 
-S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Available: <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>
+A. D. Banner, *The calculus lifesaver : All the tools you need to excel at calculus*. in A princeton lifesaver study guide. Princeton, New Jersey: Princeton University Press, 2007. Available: <https://press.princeton.edu/books/paperback/9780691130880/the-calculus-lifesaver>
 
 \[11\]
 
-D. G. Kleinbaum and M. Klein, *Survival analysis: A self-learning text*, 3rd ed. Springer, 2012. doi: [10.1007/978-1-4419-6646-9](https://doi.org/10.1007/978-1-4419-6646-9).
+S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Available: <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>
 
 \[12\]
 
-Wikipedia contributors, “Fundamental theorem of calculus — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus>
-
-\[13\]
-
-Wikipedia contributors, “Integration by substitution — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Integration_by_substitution>
+D. G. Kleinbaum and M. Klein, *Survival analysis: A self-learning text*, 3rd ed. Springer, 2012. doi: [10.1007/978-1-4419-6646-9](https://doi.org/10.1007/978-1-4419-6646-9).

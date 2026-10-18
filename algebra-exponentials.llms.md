@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Polynomials
 
@@ -115,7 +115,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Linear function of one variable)** A function \\f: \mathbb{R}\to \mathbb{R}\\ is **linear** if it is affine ([Definition 9](#def-affine-function)) with intercept \\0\\; that is, if there is a number \\m\\ such that
+> **Definition 12 (Linear function of one variable)** A function \\f: \mathbb{R}\to \mathbb{R}\\ is **linear** [\[6\]](#ref-wikipedia_linear_function) if it is affine ([Definition 9](#def-affine-function)) with intercept \\0\\; that is, if there is a number \\m\\ such that
 >
 > \\f(x) = m x \quad \text{for all } x \in \mathbb{R}\\
 
@@ -163,7 +163,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Limit of a sequence)** A real number \\L\\ is the **limit** of a [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers [\[6\]](#ref-wikipedia_limit_of_a_sequence), written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
+> **Definition 13 (Limit of a sequence)** A real number \\L\\ is the **limit** of a [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers [\[7\]](#ref-wikipedia_limit_of_a_sequence), written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
 >
 > \\\mathopen{}\left\|a_n - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } n \ge N.\\
 
@@ -195,7 +195,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Exponential function)** The **exponential function** [\[7\]](#ref-wikipedia_exponential_function) \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
+> **Definition 17 (Exponential function)** The **exponential function** [\[8\]](#ref-wikipedia_exponential_function) \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
 >
 > \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
@@ -216,21 +216,21 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Euler’s number)** **Euler’s number** [\[8\]](#ref-wikipedia_e_mathematical_constant) is
+> **Definition 18 (Euler’s number)** **Euler’s number** [\[9\]](#ref-wikipedia_e_mathematical_constant) is
 >
 > \\e \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\
 
 > **NOTE:**
 >
-> **Example 11 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](number-systems.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ [\[8\]](#ref-wikipedia_e_mathematical_constant).
+> **Example 11 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](number-systems.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ [\[9\]](#ref-wikipedia_e_mathematical_constant).
 
 > **NOTE:**
 >
-> **Definition 19 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\ [\[9\]](#ref-wikipedia_natural_logarithm), is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 17](#def-exponential-function)).
+> **Definition 19 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\ [\[10\]](#ref-wikipedia_natural_logarithm), is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 17](#def-exponential-function)).
 
 > **NOTE:**
 >
-> *Remark 3* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 18](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+> *Remark 3* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 18](#def-euler-number)) [\[11\]](#ref-wikipedia_logarithm). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
 
 > **NOTE:**
 >
@@ -402,7 +402,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[10\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
+> *Remark 4* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[12\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
 >
 > - sums are symmetric and associative ([Theorem 5 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-symmetric), [Theorem 6 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-assoc));
 > - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 7 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-one), [Theorem 8 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-symmetric), [Theorem 9 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-assoc), [Theorem 11 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-distr));
@@ -414,7 +414,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** [\[11\]](#ref-wikipedia_contour_line) of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
+> **Definition 22 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** [\[13\]](#ref-wikipedia_contour_line) of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
 >
 > \\\mathopen{}\left\\(b, c) : g(b, c) = k\right\\\mathclose{}\\
 
@@ -661,34 +661,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 >
 > *Proof*. This is the solution to [Exercise 3](#exr-double-exponential), worked in [Solution 3](#sol-double-exponential).
 
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_polynomial) — polynomials, their degree and their roots
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_quadratic_function) — quadratic functions and their graphs
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_linear_function) — linear and affine functions of one variable
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_slope) — the slope of a line
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_limit_of_a_sequence) — limits of sequences, with examples
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_exponential_function) — the exponential function and its properties
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_logarithm) — logarithms and their laws
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_natural_logarithm) — the natural logarithm
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_affine_transformation) — affine transformations and affine functions
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_contour_line) — contour lines and level sets
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_e_mathematical_constant) — the number e and its properties
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_parabola) — parabolas and their properties
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_tarskis_high_school_algebra_problem) — Tarski’s high school algebra problem
-
 Back to top
 
 ## References
@@ -715,32 +687,32 @@ Wikipedia contributors, “Slope — Wikipedia, the free encyclopedia.” 2026. 
 
 \[6\]
 
-Wikipedia contributors, “Limit of a sequence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Limit_of_a_sequence>
+Wikipedia contributors, “Linear function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_function>
 
 \[7\]
 
-Wikipedia contributors, “Exponential function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Exponential_function>
+Wikipedia contributors, “Limit of a sequence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Limit_of_a_sequence>
 
 \[8\]
 
-Wikipedia contributors, “E (mathematical constant) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/E_(mathematical_constant)>
+Wikipedia contributors, “Exponential function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Exponential_function>
 
 \[9\]
 
-Wikipedia contributors, “Natural logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Natural_logarithm>
+Wikipedia contributors, “E (mathematical constant) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/E_(mathematical_constant)>
 
 \[10\]
 
-Wikipedia contributors, “Tarski’s high school algebra problem — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem>
+Wikipedia contributors, “Natural logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Natural_logarithm>
 
 \[11\]
 
-Wikipedia contributors, “Contour line — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Contour_line>
+Wikipedia contributors, “Logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logarithm>
 
 \[12\]
 
-Wikipedia contributors, “Linear function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_function>
+Wikipedia contributors, “Tarski’s high school algebra problem — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem>
 
 \[13\]
 
-Wikipedia contributors, “Logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logarithm>
+Wikipedia contributors, “Contour line — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Contour_line>

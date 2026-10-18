@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -537,58 +537,7 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 ## 8 Further reading
 
 - Velleman [\[26\]](#ref-velleman2019prove) is a structured introduction to proof techniques such as [direct proof](#def-direct-proof), [proof by contradiction](proof-writing.llms.md#def-proof-by-contradiction), and induction.
-
 - Barker-Plummer et al. [\[27\]](#ref-barkerplummer2011language) treats proofs as [formal proofs](#def-formal-proof) in [propositional logic](#def-propositional-logic) and [first-order logic](#def-first-order-logic).
-
-- Wikipedia contributors [\[21\]](#ref-wikipedia_direct_proof) — direct proofs
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_mathematical_proof) — proofs, with the main techniques
-
-- Wikipedia contributors [\[20\]](#ref-wikipedia_proof_by_contradiction) — proof by contradiction
-
-- Wikipedia contributors [\[22\]](#ref-wikipedia_mathematical_induction) — mathematical induction
-
-- Wikipedia contributors [\[17\]](#ref-wikipedia_counterexample) — counterexamples
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_proposition) — propositions
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_predicate_mathematical_logic) — predicates
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_logical_connective) — logical connectives
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_negation) — negation
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_logical_conjunction) — logical conjunction
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_logical_disjunction) — logical disjunction
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_material_conditional) — the material conditional
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_logical_biconditional) — the biconditional
-
-- Wikipedia contributors [\[18\]](#ref-wikipedia_converse_logic) — converses
-
-- Wikipedia contributors [\[19\]](#ref-wikipedia_necessity_and_sufficiency) — necessary and sufficient conditions
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_quantifier_logic) — quantifiers
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_universal_quantification) — universal quantification
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_existential_quantification) — existential quantification
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_logical_consequence) — logical consequence
-
-- Wikipedia contributors [\[23\]](#ref-wikipedia_propositional_calculus) — propositional logic
-
-- Wikipedia contributors [\[24\]](#ref-wikipedia_first_order_logic) — first-order logic
-
-- Wikipedia contributors [\[25\]](#ref-wikipedia_formal_proof) — formal proofs
-
-- Wikipedia contributors [\[14\]](#ref-wikipedia_theorem) — theorems
-
-- Wikipedia contributors [\[15\]](#ref-wikipedia_lemma_mathematics) — lemmas
-
-- Wikipedia contributors [\[16\]](#ref-wikipedia_corollary) — corollaries
 
 Free course materials on formal logic:
 

@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Derivatives
 
@@ -1369,34 +1369,6 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 > *Solution 31*. Substitute \\u = 2x\\ into the Maclaurin series \\\log(1 + u) = u - \frac{u^2}{2} + \dots\\:
 >
 > \\ \begin{aligned} \log(1 + 2x) &= (2x) - \frac{(2x)^2}{2} + \dots \\ &= 2x - 2x^2 + \dots \end{aligned} \\
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_limit_of_a_function) — limits of functions, with the epsilon-delta definition
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_one_sided_limit) — one-sided limits
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_derivative) — the derivative, its notation and its history
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_differentiable_function) — differentiable functions and their classes
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_power_rule) — the power rule and its proofs
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_product_rule) — the product rule and its generalizations
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_quotient_rule) — the quotient rule
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_chain_rule) — the chain rule, in one and several variables
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_second_derivative) — the second derivative and concavity
-
-- Wikipedia contributors [\[14\]](#ref-wikipedia_linear_approximation) — linear approximation and the tangent line
-
-- Wikipedia contributors [\[16\]](#ref-wikipedia_stationary_point) — stationary points and how to classify them
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_difference_quotient) — the difference quotient
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_notation_for_differentiation) — Leibniz, Lagrange and Newton notation for derivatives
 
 Back to top
 

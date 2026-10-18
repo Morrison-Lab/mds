@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Equalities
 
@@ -324,26 +324,6 @@ You are welcome to switch between decimal and percent notation freely; just make
 > and \\t^2 (t - 3) \< 0\\ whenever \\t \ne 0\\ and \\t \< 3\\. So whatever \\\delta\> 0\\ is, the point \\x = -1 + t\\ with \\t = \min\mathopen{}\left\\\delta/ 2, 1\right\\\mathclose{}\\ satisfies \\\mathopen{}\left\|x - (-1)\right\|\mathclose{} \< \delta\\ and \\f(x) \< f(-1)\\. For example,
 >
 > \\ \begin{aligned} f(-0.9) &= -0.729 + 2.7 \\ &= 1.971 \\ &\< 2. \end{aligned} \\
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_transitive_relation) — transitive relations, with examples
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_inequality_mathematics) — strict and non-strict inequalities and their properties
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_exponentiation) — powers with integer, rational and real exponents
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_square_root) — square roots and their properties
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_absolute_value) — the absolute value and its generalizations
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_percentage) — percentages, with worked examples
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_maxima_and_minima) — minima and maxima, local and global
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_arg_max) — the argmax and argmin
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_identity_mathematics) — identities, equalities that hold for all values of their variables
 
 Back to top
 

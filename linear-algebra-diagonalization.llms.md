@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Similarity and diagonalization
 
@@ -700,20 +700,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 >   \\ \begin{aligned} \ell\_{22}^2 &= 1 - 4 \\ &= -3 \end{aligned} \\
 >
 >   has no real solution, matching the failure of the Schur complement test ([Example 24](#exm-schur-test)).
-
-## Further reading
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_eigenvalues_and_eigenvectors) — eigenvalues, eigenvectors and eigenspaces, with examples
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_matrix_similarity) — similar matrices and what they share
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_diagonalizable_matrix) — when a matrix is diagonalizable, and how to diagonalize it
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_block_matrix) — block matrices and block operations
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_schur_complement) — the Schur complement and its uses
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_cholesky_decomposition) — the Cholesky decomposition and how to compute it
 
 Back to top
 

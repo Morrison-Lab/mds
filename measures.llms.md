@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
@@ -747,54 +747,8 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 ## 10 Further reading
 
 - Billingsley [\[2\]](#ref-billingsley1995probability) develops measure theory and builds probability on it. Its early chapters define \\\sigma\\-algebras, measures, and their basic properties.
-
 - Folland [\[25\]](#ref-folland1999real) is a graduate text on measure and integration; its first chapters treat \\\sigma\\-algebras and measures.
-
 - Gut [\[26\]](#ref-gut2013) is a graduate course in probability that opens with a chapter on introductory measure theory.
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_sigma_algebra) — \\\sigma\\-algebras and their generators
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_closure_mathematics) — closure under an operation
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_borel_set) — Borel sets
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_disjoint_sets) — disjoint sets
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_series_mathematics) — series and partial sums
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_monotone_convergence_theorem) — the monotone convergence theorem
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_sigma_additive_set_function) — additive and \\\sigma\\-additive set functions
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_measure_mathematics) — measures, with examples
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_counting_measure) — counting measure
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_measurable_space) — measurable spaces
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_lebesgue_measure) — Lebesgue measure and its construction
-
-- Wikipedia contributors [\[14\]](#ref-wikipedia_null_set) — null sets
-
-- Wikipedia contributors [\[15\]](#ref-wikipedia_almost_everywhere) — properties that hold almost everywhere
-
-- Wikipedia contributors [\[16\]](#ref-wikipedia_finite_measure) — finite measures
-
-- Wikipedia contributors [\[17\]](#ref-wikipedia_sigma_finite_measure) — \\\sigma\\-finite measures
-
-- Wikipedia contributors [\[18\]](#ref-wikipedia_probability_measure) — probability measures
-
-- Wikipedia contributors [\[19\]](#ref-wikipedia_probability_space) — probability spaces
-
-- Wikipedia contributors [\[20\]](#ref-wikipedia_sample_space) — sample spaces
-
-- Wikipedia contributors [\[22\]](#ref-wikipedia_event_probability_theory) — events
-
-- Wikipedia contributors [\[21\]](#ref-wikipedia_outcome_probability) — outcomes
-
-- Wikipedia contributors [\[23\]](#ref-wikipedia_measurable_function) — measurable functions
-
-- Wikipedia contributors [\[24\]](#ref-wikipedia_lebesgue_integration) — the Lebesgue integral
 
 ## References
 

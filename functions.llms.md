@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
@@ -304,42 +304,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 > **NOTE:**
 >
 > *Remark 8* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it [\[18\]](#ref-wikipedia_cantors_diagonal_argument). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_function_mathematics) — functions, their domains, codomains and images
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_binary_relation) — binary relations and their properties
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_domain_of_a_function) — the domain of a function
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_codomain) — codomains
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_image_mathematics) — images of functions and sets
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_range_of_a_function) — the two meanings of the range
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_graph_of_a_function) — graphs of functions
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_function_composition) — composition of functions
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_inverse_function) — inverse functions
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_operator_mathematics) — operators
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_functional_mathematics) — functionals
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_sequence) — sequences and their limits
-
-- Wikipedia contributors [\[14\]](#ref-wikipedia_finite_set) — finite sets
-
-- Wikipedia contributors [\[15\]](#ref-wikipedia_cardinality) — cardinality and its infinite cases
-
-- Wikipedia contributors [\[16\]](#ref-wikipedia_infinite_set) — infinite sets
-
-- Wikipedia contributors [\[17\]](#ref-wikipedia_countable_set) — countable sets, with examples
-
-- Wikipedia contributors [\[18\]](#ref-wikipedia_cantors_diagonal_argument) — Cantor’s diagonal argument
 
 ## References
 

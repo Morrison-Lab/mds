@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Design Matrix
 
@@ -857,26 +857,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 > Back substitution on \\\mathbf{U} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (8, 1, 1)\\ is [Example 24](#exm-back-substitution), which gives \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (2, 3, -1)\\. As a check,
 >
 > \\ \begin{aligned} \mathbf{A}\\(2, 3, -1) &= (4 + 3 + 1,\\ -6 - 3 - 2,\\ -4 + 3 - 2) \\ &= (8, -11, -3). \end{aligned} \\
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_design_matrix) — design matrices in regression
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_projection_matrix) — the projection (hat) matrix
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_generalized_inverse) — generalized inverses and their types
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_moore_penrose_inverse) — the Moore-Penrose inverse and its properties
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_least_squares) — least squares, with its history and variants
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_normal_equations) — the normal equations
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_triangular_matrix) — triangular matrices and back substitution
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_lu_decomposition) — the LU decomposition
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_consistent_and_inconsistent_equations) — consistent and inconsistent systems of equations
 
 Back to top
 

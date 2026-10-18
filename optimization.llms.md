@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Optimality conditions in several variables
 
@@ -1120,42 +1120,9 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 ## 5 Further reading
 
 - Boyd and Vandenberghe [\[18\]](#ref-boyd2004convex) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
-
 - Nocedal and Wright [\[19\]](#ref-nocedal2006numerical) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
-
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)](https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html)
-
 - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_fermats_theorem_stationary_points) — Fermat’s theorem on stationary points
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_taylors_theorem) — Taylor’s theorem and its remainders
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_saddle_point) — saddle points
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_convex_set) — convex sets
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_epigraph_mathematics) — epigraphs
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_tangent_space) — tangent spaces and planes
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_feasible_region) — feasible regions
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_mathematical_optimization) — mathematical optimization
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_lagrange_multiplier) — Lagrange multipliers
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_iterative_method) — iterative methods
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_newtons_method_in_optimization) — Newton’s method in optimization
-
-- Wikipedia contributors [\[14\]](#ref-wikipedia_rate_of_convergence) — rates of convergence
-
-- Wikipedia contributors [\[15\]](#ref-wikipedia_gradient_descent) — gradient descent
-
-- Wikipedia contributors [\[16\]](#ref-wikipedia_line_search) — line search
-
-- Wikipedia contributors [\[17\]](#ref-wikipedia_backtracking_line_search) — backtracking line search and the Armijo condition
 
 ## References
 

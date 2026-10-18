@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Indicator functions
 
@@ -236,18 +236,6 @@ This [identity](algebra-basics.llms.md#def-identity) turns probabilities into ex
 - empirical proportions;
 - estimators of survival curves, the probability of no event by each time;
 - regression models for binary outcomes.
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_indicator_function) — indicator functions and their uses
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_iverson_bracket) — the Iverson bracket
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_kronecker_delta) — the Kronecker delta
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_support_measure_theory) — the support of a function or measure
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_idempotence) — idempotent operations and functions
 
 Back to top
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Vectors
 
@@ -407,24 +407,6 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > **TIP:**
 >
 > Hutchinson’s [Linear Function Basics](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics) (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)) and [level sets](vector-calculus.llms.md#def-level-set) [\[12\]](#ref-hutchinson_wwu_ml_videos). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_row_and_column_vectors) — row and column vectors
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_euclidean_vector) — vectors in Euclidean space, with their length and direction
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_scalar_mathematics) — scalars
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_arithmetic_mean) — the arithmetic mean and other averages
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_orthogonality) — orthogonality in mathematics
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_unit_vector) — unit vectors
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_euclidean_distance) — Euclidean distance
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_standard_basis) — the standard basis
 
 Back to top
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Inner products
 
@@ -196,7 +196,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 >
 > \\ \mathopen{}\left\|\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}, \\
 >
-> with equality exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ are linearly dependent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
+> with equality exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ are linearly dependent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)) [\[6\]](#ref-wikipedia_cauchy_schwarz_inequality).
 
 > **NOTE:**
 >
@@ -284,11 +284,11 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Norm (normed vector space, normed space))** A **norm** [\[6\]](#ref-wikipedia_norm_mathematics) on a real vector space \\V\\ is a function \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{} : V \to \[0, \infty)\\ that assigns to each vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in V\\ a nonnegative real number \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\, and satisfies the following three axioms for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in V\\ and all scalars \\c \in \mathbb{R}\\:
+> **Definition 4 (Norm (normed vector space, normed space))** A **norm** [\[7\]](#ref-wikipedia_norm_mathematics) on a real vector space \\V\\ is a function \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{} : V \to \[0, \infty)\\ that assigns to each vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in V\\ a nonnegative real number \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\, and satisfies the following three axioms for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in V\\ and all scalars \\c \in \mathbb{R}\\:
 >
 > 1.  **Positivity and definiteness**: \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \ge 0\\, and \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = 0\\ if and only if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\;
 > 2.  **Absolute homogeneity**: \\\mathopen{}\left\lVert c\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\;
-> 3.  **Subadditivity (triangle inequality)**: \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} + \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}\\.
+> 3.  **Subadditivity (triangle inequality)**: \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} + \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}\\ [\[8\]](#ref-wikipedia_triangle_inequality).
 >
 > A vector space equipped with a norm is called a **normed vector space** (or **normed space**).
 
@@ -303,7 +303,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Vector \\p\\-norm (\\\ell_p\\ norm, \\\ell_1\\ norm, taxicab norm, Manhattan norm, \\\ell_2\\ norm, infinity norm))** For a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\ and any real number \\k \ge 1\\, the **vector \\p\\-norm** [\[7\]](#ref-wikipedia_lp_space) (or **\\\ell_p\\ norm**, traditionally named with parameter \\p\\ but denoted here with exponent \\k\\ to avoid clashing with the ambient vector dimension \\p\\) is:
+> **Definition 5 (Vector \\p\\-norm (\\\ell_p\\ norm, \\\ell_1\\ norm, taxicab norm, Manhattan norm, \\\ell_2\\ norm, infinity norm))** For a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\ and any real number \\k \ge 1\\, the **vector \\p\\-norm** [\[9\]](#ref-wikipedia_lp_space) (or **\\\ell_p\\ norm**, traditionally named with parameter \\p\\ but denoted here with exponent \\k\\ to avoid clashing with the ambient vector dimension \\p\\) is:
 >
 > \\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k}. \\
 >
@@ -341,7 +341,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Infinity norm (\\\ell\_\infty\\ norm, maximum norm, Chebyshev norm))** For a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\, the **infinity norm** [\[8\]](#ref-wikipedia_uniform_norm) (also the **\\\ell\_\infty\\ norm**, **maximum norm**, or **Chebyshev norm**) is defined separately from the \\p\\-norms ([Definition 5](#def-vector-p-norm)) by
+> **Definition 6 (Infinity norm (\\\ell\_\infty\\ norm, maximum norm, Chebyshev norm))** For a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\, the **infinity norm** [\[10\]](#ref-wikipedia_uniform_norm) (also the **\\\ell\_\infty\\ norm**, **maximum norm**, or **Chebyshev norm**) is defined separately from the \\p\\-norms ([Definition 5](#def-vector-p-norm)) by
 >
 > \\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\max\_{1 \le i \le p} \mathopen{}\left\|x_i\right\|\mathclose{}. \\
 
@@ -461,7 +461,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Cosine similarity)** The **cosine similarity** [\[9\]](#ref-wikipedia_cosine_similarity) between two nonzero vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ is their dot product divided by the product of their lengths:
+> **Definition 8 (Cosine similarity)** The **cosine similarity** [\[11\]](#ref-wikipedia_cosine_similarity) between two nonzero vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ is their dot product divided by the product of their lengths:
 >
 > \\ \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\frac{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}{\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}}. \\
 
@@ -593,7 +593,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Orthonormal basis)** An **orthonormal basis** [\[10\]](#ref-wikipedia_orthonormal_basis) of a subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ is a basis of \\\mathcal{S}\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
+> **Definition 10 (Orthonormal basis)** An **orthonormal basis** [\[12\]](#ref-wikipedia_orthonormal_basis) of a subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ is a basis of \\\mathcal{S}\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
 
 > **NOTE:**
 >
@@ -642,7 +642,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Gram-Schmidt process)** The **Gram-Schmidt process** [\[11\]](#ref-wikipedia_gram_schmidt_process) takes vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k \in \mathbb{R}^p\\ and, for \\i = 1, 2, \ldots, k\\ in turn:
+> **Definition 11 (Gram-Schmidt process)** The **Gram-Schmidt process** [\[13\]](#ref-wikipedia_gram_schmidt_process) takes vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k \in \mathbb{R}^p\\ and, for \\i = 1, 2, \ldots, k\\ in turn:
 >
 > 1.  **Orthogonalize:** \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_i \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i - \sum\_{j=1}^{i-1} (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_j \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_j\\ (for \\i = 1\\ the sum is empty, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_1 = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1\\);
 > 2.  **Test:** if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_i = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, stop;
@@ -775,7 +775,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Outer product)** The **outer product** [\[12\]](#ref-wikipedia_outer_product) of a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ of length \\m\\ and a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ of length \\n\\ is the \\m \times n\\ matrix product ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ of the column vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ with the row vector \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\. Its entries are
+> **Definition 12 (Outer product)** The **outer product** [\[14\]](#ref-wikipedia_outer_product) of a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ of length \\m\\ and a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ of length \\n\\ is the \\m \times n\\ matrix product ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ of the column vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ with the row vector \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\. Its entries are
 >
 > \\ \mathopen{}\left(\underbrace{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}}\_{m \times 1}\\\underbrace{{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}}\_{1 \times n}\right)\mathclose{}\_{ij} = u_i v_j \qquad \text{(definition of matrix multiplication; the sum has one term)} \\
 
@@ -817,30 +817,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 >
 > **Example 26 (The rank of an outer product)** In [Example 25](#exm-outer-product), the second column \\(5, 10, 15)\\ of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ is \\\frac{5}{4}\\ times the first column \\(4, 8, 12)\\, because the columns are \\v_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 4\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ and \\v_2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 5\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\. So the two columns are not linearly independent, and the \\3 \times 2\\ matrix has rank \\1\\.
 
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_inner_product_space) — inner product spaces, with examples
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_norm_mathematics) — norms on vector spaces
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_lp_space) — p-norms and the spaces they define
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_cauchy_schwarz_inequality) — the Cauchy-Schwarz inequality and its proofs
-
-- Wikipedia contributors [\[14\]](#ref-wikipedia_triangle_inequality) — the triangle inequality
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_cosine_similarity) — cosine similarity and its uses
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_orthonormal_basis) — orthonormal bases
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_gram_schmidt_process) — the Gram-Schmidt process, with an algorithm
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_outer_product) — the outer product and its rank
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_pythagorean_theorem) — the Pythagorean theorem and its generalizations
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_uniform_norm) — the uniform (infinity) norm
-
 Back to top
 
 ## References
@@ -867,36 +843,36 @@ Wikipedia contributors, “Pythagorean theorem — Wikipedia, the free encyclope
 
 \[6\]
 
-Wikipedia contributors, “Norm (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Norm_(mathematics)>
+Wikipedia contributors, “Cauchy–schwarz inequality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality>
 
 \[7\]
 
-Wikipedia contributors, “Lp space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Lp_space>
+Wikipedia contributors, “Norm (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Norm_(mathematics)>
 
 \[8\]
 
-Wikipedia contributors, “Uniform norm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Uniform_norm>
+Wikipedia contributors, “Triangle inequality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Triangle_inequality>
 
 \[9\]
 
-Wikipedia contributors, “Cosine similarity — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cosine_similarity>
+Wikipedia contributors, “Lp space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Lp_space>
 
 \[10\]
 
-Wikipedia contributors, “Orthonormal basis — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Orthonormal_basis>
+Wikipedia contributors, “Uniform norm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Uniform_norm>
 
 \[11\]
 
-Wikipedia contributors, “Gram–schmidt process — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process>
+Wikipedia contributors, “Cosine similarity — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cosine_similarity>
 
 \[12\]
 
-Wikipedia contributors, “Outer product — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Outer_product>
+Wikipedia contributors, “Orthonormal basis — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Orthonormal_basis>
 
 \[13\]
 
-Wikipedia contributors, “Cauchy–schwarz inequality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality>
+Wikipedia contributors, “Gram–schmidt process — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process>
 
 \[14\]
 
-Wikipedia contributors, “Triangle inequality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Triangle_inequality>
+Wikipedia contributors, “Outer product — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Outer_product>

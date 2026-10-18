@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Cosine and sine
 
@@ -46,7 +46,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Sine)** For a real number \\\theta\\, the second coordinate of the point reached from \\(1, 0)\\ by moving a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle ([Definition 3](#def-cosine-sine)) is the **sine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\sin\theta\\.
+> **Definition 4 (Sine)** For a real number \\\theta\\, the second coordinate of the point reached from \\(1, 0)\\ by moving a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle ([Definition 3](#def-cosine-sine)) is the **sine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\sin\theta\\. The sine is one of the trigonometric functions [\[4\]](#ref-wikipedia_trigonometric_functions).
 
 > **NOTE:**
 >
@@ -59,7 +59,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 1 (The Pythagorean identity)** For every real number \\\theta\\ [\[4\]](#ref-wikipedia_pythagorean_trigonometric_identity),
+> **Theorem 1 (The Pythagorean identity)** For every real number \\\theta\\ [\[5\]](#ref-wikipedia_pythagorean_trigonometric_identity),
 >
 > \\ \cos^2\theta+ \sin^2\theta= 1. \\
 
@@ -139,18 +139,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 >
 > *Proof*. For \\\theta\in \[0, \pi\]\\, the point \\(\cos\theta, \sin\theta)\\ is at distance \\\theta\\ along the circle from \\(1, 0)\\, counterclockwise, so it lies on the upper half of the unit circle, \\\mathopen{}\left\\(x_1, x_2) : x_1^2 + x_2^2 = 1,\\ x_2 \ge 0\right\\\mathclose{}\\, which gives \\\sin\theta\ge 0\\. Different values of \\\theta\\ in \\\[0, \pi\]\\ are different distances along that half circle, so they give different points. Two different points of the upper half have different first coordinates, because \\x_2 = \sqrt{1 - x_1^2}\\ is determined by \\x_1\\. So \\\cos\\ is one-to-one on \\\[0, \pi\]\\. Every \\x_1 \in \[-1, 1\]\\ is the first coordinate of the point \\(x_1, \sqrt{1 - x_1^2})\\ of the upper half, and the distance along the half circle from \\(1, 0)\\ to that point is some \\\theta\in \[0, \pi\]\\, so \\\cos\\ takes every value in \\\[-1, 1\]\\. Finally, move along the upper half circle from \\(1, 0)\\ to \\(-1, 0)\\ as \\\theta\\ increases from \\0\\ to \\\pi\\. The first coordinate never takes the same value twice, so it never turns back. It starts at \\\cos 0 = 1\\ and ends at \\\cos\pi = -1\\, so it only decreases.
 
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_unit_circle) — the unit circle and its uses in trigonometry
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_pi) — the number pi, its definition and history
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_sine_and_cosine) — sine and cosine, with their properties and graphs
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_pythagorean_trigonometric_identity) — the identity and its proofs
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_trigonometric_functions) — all six trigonometric functions
-
 Back to top
 
 ## References
@@ -169,8 +157,8 @@ Wikipedia contributors, “Sine and cosine — Wikipedia, the free encyclopedia.
 
 \[4\]
 
-Wikipedia contributors, “Pythagorean trigonometric identity — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Pythagorean_trigonometric_identity>
+Wikipedia contributors, “Trigonometric functions — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Trigonometric_functions>
 
 \[5\]
 
-Wikipedia contributors, “Trigonometric functions — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Trigonometric_functions>
+Wikipedia contributors, “Pythagorean trigonometric identity — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Pythagorean_trigonometric_identity>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
@@ -144,24 +144,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 > - \\\sqrt{2} = 1.41421\ldots\\, the [square root](algebra-basics.llms.md#def-square-root) of \\2\\, is irrational: no fraction of integers \\\frac{a}{b}\\ squares to \\2\\ [\[8\]](#ref-wikipedia_square_root_of_2).
 > - \\\pi = 3.14159\ldots\\ is irrational [\[9\]](#ref-wikipedia_proof_that_pi_is_irrational).
 > - \\1.5\\ is not irrational, because \\1.5 = \frac{3}{2}\\ is rational.
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_integer) — the integers
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_parity_mathematics) — even and odd numbers
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_natural_number) — the natural numbers and their conventions
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_rational_number) — the rational numbers
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_real_number) — the real numbers and their constructions
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_irrational_number) — irrational numbers
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_square_root_of_2) — the square root of 2
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_proof_that_pi_is_irrational) — proofs that pi is irrational
 
 Back to top
 

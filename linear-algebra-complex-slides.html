@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
+  <p class="date">Last modified: 2026-10-18 13:21:32 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -332,7 +332,7 @@
 <section class="slide level2">
 
 <div id="def-conjugate-transpose" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))</strong></span> The <strong>conjugate transpose</strong> <span class="citation" data-cites="wikipedia_conjugate_transpose"><a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> (also called the <strong>Hermitian adjoint</strong>, <strong>Hermitian conjugate</strong>, or <strong>transjugate</strong>) of an <span class="math inline">\(m \times n\)</span> complex matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> obtained by transposing <span class="math inline">\(\mathbf{A}\)</span> and then taking the complex conjugate of each entry:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))</strong></span> The <strong>conjugate transpose</strong> <span class="citation" data-cites="wikipedia_conjugate_transpose"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> (also called the <strong>Hermitian adjoint</strong>, <strong>Hermitian conjugate</strong>, or <strong>transjugate</strong>) of an <span class="math inline">\(m \times n\)</span> complex matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> obtained by transposing <span class="math inline">\(\mathbf{A}\)</span> and then taking the complex conjugate of each entry:</p>
 <p><span class="math display">\[(\mathbf{A}^{\mathsf{H}})_{jk} \stackrel{\text{def}}{=}\overline{a_{kj}}
 \quad \text{for } j \in \{1, \ldots, n\},\ k \in \{1, \ldots, m\}.\]</span></p>
 </div>
@@ -340,7 +340,7 @@
 <section class="slide level2">
 
 <div id="rem-conjugate-transpose-notation" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Notation for the conjugate transpose). </span>The operation is denoted variously across mathematics and physics: <span class="math inline">\(\mathbf{A}^*\)</span> in pure mathematics (<span class="citation" data-cites="axler2024linear">Axler <a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a>, Definition 7.7, p.&nbsp;231</span>), <span class="math inline">\(\mathbf{A}^{\dagger}\)</span> (“<span class="math inline">\(A\)</span>-dagger”) in physics and quantum mechanics, and <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> in engineering, numerical linear algebra, and statistics. These notes write <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> because <span class="math inline">\(^*\)</span> is reserved for optimal points (as in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\)</span>) and <span class="math inline">\(^{\dagger}\)</span> frequently denotes the Moore-Penrose pseudoinverse in the broader literature.</p>
+<p><span class="proof-title"><em>Remark 1</em> (Notation for the conjugate transpose). </span>The operation is denoted variously across mathematics and physics: <span class="math inline">\(\mathbf{A}^*\)</span> in pure mathematics (<span class="citation" data-cites="axler2024linear">Axler <a href="#/references" role="doc-biblioref" onclick="">[2]</a>, Definition 7.7, p.&nbsp;231</span>), <span class="math inline">\(\mathbf{A}^{\dagger}\)</span> (“<span class="math inline">\(A\)</span>-dagger”) in physics and quantum mechanics, and <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> in engineering, numerical linear algebra, and statistics. These notes write <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> because <span class="math inline">\(^*\)</span> is reserved for optimal points (as in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\)</span>) and <span class="math inline">\(^{\dagger}\)</span> frequently denotes the Moore-Penrose pseudoinverse in the broader literature.</p>
 <p>The Hermitian adjoint matrix should not be confused with the classical <em>adjugate matrix</em> (the transpose of the matrix of cofactors), which older texts occasionally referred to as the “adjoint.”</p>
 </div>
 </section>
@@ -496,7 +496,7 @@
 <section class="slide level2">
 
 <div id="rem-adjoint-name" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Where the name “adjoint” comes from). </span>This identity is the origin of the name <strong>adjoint</strong>: in functional analysis and operator theory, the <em>adjoint</em> of a linear map <span class="math inline">\(T: V \to W\)</span> between inner product spaces is defined as the unique operator <span class="math inline">\(T^*: W \to V\)</span> satisfying <span class="math inline">\(\mathopen{}\left\langle T\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rangle\mathclose{} = \mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, T^*\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rangle\mathclose{}\)</span> (<span class="citation" data-cites="axler2024linear">Axler <a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a>, Definition 7.1, p.&nbsp;226</span>). When <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator <span class="math inline">\(T^*\)</span> is precisely the Hermitian adjoint matrix <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> (<span class="citation" data-cites="axler2024linear">Axler <a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a>, Proposition 7.9, p.&nbsp;231</span>).</p>
+<p><span class="proof-title"><em>Remark 3</em> (Where the name “adjoint” comes from). </span>This identity is the origin of the name <strong>adjoint</strong>: in functional analysis and operator theory, the <em>adjoint</em> of a linear map <span class="math inline">\(T: V \to W\)</span> between inner product spaces is defined as the unique operator <span class="math inline">\(T^*: W \to V\)</span> satisfying <span class="math inline">\(\mathopen{}\left\langle T\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rangle\mathclose{} = \mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, T^*\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rangle\mathclose{}\)</span> (<span class="citation" data-cites="axler2024linear">Axler <a href="#/references" role="doc-biblioref" onclick="">[2]</a>, Definition 7.1, p.&nbsp;226</span>). When <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator <span class="math inline">\(T^*\)</span> is precisely the Hermitian adjoint matrix <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> (<span class="citation" data-cites="axler2024linear">Axler <a href="#/references" role="doc-biblioref" onclick="">[2]</a>, Proposition 7.9, p.&nbsp;231</span>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -610,7 +610,7 @@
 <section class="slide level2">
 
 <div id="def-hermitian-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Hermitian matrix (self-adjoint matrix))</strong></span> A square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> is <strong>Hermitian</strong> <span class="citation" data-cites="wikipedia_hermitian_matrix"><a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a></span> (or <strong>self-adjoint</strong>) if it equals its conjugate transpose (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;4</a>):</p>
+<p><span class="theorem-title"><strong>Definition 5 (Hermitian matrix (self-adjoint matrix))</strong></span> A square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> is <strong>Hermitian</strong> <span class="citation" data-cites="wikipedia_hermitian_matrix"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> (or <strong>self-adjoint</strong>) if it equals its conjugate transpose (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;4</a>):</p>
 <p><span class="math display">\[\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\]</span></p>
 </div>
 </section>
@@ -658,7 +658,7 @@ i &amp; 0
 <section class="slide level2">
 
 <div id="def-skew-hermitian-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Skew-Hermitian matrix (anti-Hermitian matrix))</strong></span> A square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> is <strong>skew-Hermitian</strong> <span class="citation" data-cites="wikipedia_skew_hermitian_matrix"><a href="#/further-reading" role="doc-biblioref" onclick="">[4]</a></span> (or <strong>anti-Hermitian</strong>) if it equals the negative of its conjugate transpose (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;4</a>):</p>
+<p><span class="theorem-title"><strong>Definition 6 (Skew-Hermitian matrix (anti-Hermitian matrix))</strong></span> A square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> is <strong>skew-Hermitian</strong> <span class="citation" data-cites="wikipedia_skew_hermitian_matrix"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> (or <strong>anti-Hermitian</strong>) if it equals the negative of its conjugate transpose (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;4</a>):</p>
 <p><span class="math display">\[\mathbf{A}^{\mathsf{H}} = -\mathbf{A}.\]</span></p>
 </div>
 </section>
@@ -724,7 +724,7 @@ a_{jj} + \overline{a_{jj}} &amp;= 2\operatorname{Re}(a_{jj}) \\
 \mathbf{S} = \frac{\mathbf{A} - \mathbf{A}^{\mathsf{H}}}{2}.\]</span></p>
 </div>
 </section>
-<section class="slide level2">
+<section class="slide level2 smaller scrollable" id="references">
 
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Existence</strong>: Define <span class="math inline">\(\mathbf{H} = \frac{1}{2}(\mathbf{A} + \mathbf{A}^{\mathsf{H}})\)</span> and <span class="math inline">\(\mathbf{S} = \frac{1}{2}(\mathbf{A} - \mathbf{A}^{\mathsf{H}})\)</span>. Their sum is:</p>
@@ -777,14 +777,6 @@ a_{jj} + \overline{a_{jj}} &amp;= 2\operatorname{Re}(a_{jj}) \\
 \end{aligned}
 \]</span></p>
 </div>
-</section>
-<section id="further-reading" class="slide level2 unnumbered smaller scrollable">
-<h2>Further reading</h2>
-<ul>
-<li><p><span class="citation" data-cites="wikipedia_conjugate_transpose">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> — the conjugate transpose and its properties</p></li>
-<li><p><span class="citation" data-cites="wikipedia_hermitian_matrix">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a></span> — Hermitian matrices, with examples and the spectral theorem</p></li>
-<li><p><span class="citation" data-cites="wikipedia_skew_hermitian_matrix">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[4]</a></span> — skew-Hermitian matrices</p></li>
-</ul>
 
 
 <script>

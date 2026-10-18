@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
@@ -73,14 +73,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 > **NOTE:**
 >
 > **Example 4 (A minimizer with no known formula)** The minimizer \\\arg \min\_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\\ is well defined, because \\x - \cos x\\ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_expression_mathematics) — expressions, with examples
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_parse_tree) — parse trees
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_algorithm) — algorithms, their history and analysis
 
 Back to top
 

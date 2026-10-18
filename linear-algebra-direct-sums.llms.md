@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Sums and direct sums
 
@@ -505,16 +505,8 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 > \\ \begin{aligned} 0 &= (1, -2, -2) \cdot \mathopen{}\left((1, 0, 0) - t\\(1, -2, -2)\right)\mathclose{} && \text{(orthogonality)} \\ &= (1, -2, -2) \cdot \mathopen{}\left(1 \cdot(1, 0, 0) + (-t)\\(1, -2, -2)\right)\mathclose{} && \text{(write the difference as a linear combination)} \\ &= 1 \cdot\mathopen{}\left((1, -2, -2) \cdot (1, 0, 0)\right)\mathclose{} + (-t)\\\mathopen{}\left((1, -2, -2) \cdot (1, -2, -2)\right)\mathclose{} && \text{(}\href{#thm-dot-linear}{\text{Theorem~5}}\text{)} \\ &= 1 \cdot 1 + (-t) \cdot 9 && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \\ &= 1 - 9t, && \text{(arithmetic)} \end{aligned} \\
 >
 > so \\t = \frac{1}{9}\\. The row-space part is \\\mathopen{}\left(\frac{1}{9}, -\frac{2}{9}, -\frac{2}{9}\right)\mathclose{}\\ and the null-space part is \\\mathopen{}\left(\frac{8}{9}, \frac{2}{9}, \frac{2}{9}\right)\mathclose{}\\; as a check, row 1 of \\\mathbf{A}\\ gives \\\frac{8}{9} - 2 \cdot\frac{2}{9} - 2 \cdot\frac{2}{9} = 0\\, and row 2 is \\3\\ times row 1, so \\\mathbf{A}\\ sends the null-space part to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_2\\.
-
-## Further reading
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_direct_sum) — direct sums of vector spaces and modules
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_projection_linear_algebra) — projections, with their matrices and properties
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_orthogonal_complement) — orthogonal complements and their properties
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_fundamental_theorem_of_linear_algebra) — the four fundamental subspaces
+>
+> These four statements are the fundamental theorem of linear algebra [\[6\]](#ref-wikipedia_fundamental_theorem_of_linear_algebra).
 
 Back to top
 

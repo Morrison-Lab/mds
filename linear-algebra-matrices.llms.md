@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Matrices
 
@@ -776,38 +776,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 > \\ {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\{\mathbf{M}}^{\top}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 3 \cdot 1 + (-1) \cdot 8 = -5. \\
 >
 > The two products are equal, as the theorem says. In least squares, this is why the two cross terms of \\{(\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})}^{\top}(\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ are equal and can be combined.
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_matrix_mathematics) — matrices, with their operations and applications
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_matrix_multiplication) — the matrix product and its properties
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_transpose) — the transpose of a matrix
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_identity_matrix) — the identity matrix
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_system_of_linear_equations) — linear systems and how to solve them
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_linear_map) — linear maps and their matrices
-
-- Wikipedia contributors [\[16\]](#ref-wikipedia_hyperplane) — hyperplanes and their equations
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_main_diagonal) — the main diagonal of a matrix
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_matrix_addition) — matrix addition
-
-- Wikipedia contributors [\[17\]](#ref-wikipedia_normal_geometry) — normal vectors to curves and surfaces
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_scalar_multiplication) — scalar multiplication
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_square_matrix) — square matrices
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_tensor) — tensors and their arrays of components
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_translation_geometry) — translations in geometry
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_zero_matrix) — zero matrices
 
 Back to top
 

@@ -4,21 +4,21 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Double Integrals
 
-The **Fubini–Tonelli theorem** states conditions under which the order of integration in a double integral can be exchanged. We state them in two settings: the Riemann version ([Theorem 1](#thm-fubini)) is what applied courses usually use for double integrals of continuous functions on simple regions; the [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measure-theoretic versions ([Theorem 4](#thm-tonelli-measure) and [Theorem 5](#thm-fubini-measure)) are included to make the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science* follow from a stated theorem rather than from an aside.
+The **Fubini–Tonelli theorem** states conditions under which the order of integration in a double integral can be exchanged [\[1\]](#ref-wikipedia_tonelli_s_theorem). We state them in two settings: the Riemann version ([Theorem 1](#thm-fubini)) is what applied courses usually use for double integrals of continuous functions on simple regions; the [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measure-theoretic versions ([Theorem 4](#thm-tonelli-measure) and [Theorem 5](#thm-fubini-measure)) are included to make the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science* follow from a stated theorem rather than from an aside.
 
 > **NOTE:**
 >
-> **Definition 1 (Double integral)** Let \\f\\ be a bounded function on a closed, bounded plane region \\R \subseteq \mathbb{R}^2\\ [\[1\]](#ref-wikipedia_multiple_integral). Cover \\R\\ with a grid of rectangles, keep the \\n\\ rectangles that lie entirely inside \\R\\, with areas \\\Delta A_1, \ldots, \Delta A_n\\, and choose a point \\(x_i, y_i)\\ in the \\i\\-th rectangle. The **double integral** of \\f\\ over \\R\\ is
+> **Definition 1 (Double integral)** Let \\f\\ be a bounded function on a closed, bounded plane region \\R \subseteq \mathbb{R}^2\\ [\[2\]](#ref-wikipedia_multiple_integral). Cover \\R\\ with a grid of rectangles, keep the \\n\\ rectangles that lie entirely inside \\R\\, with areas \\\Delta A_1, \ldots, \Delta A_n\\, and choose a point \\(x_i, y_i)\\ in the \\i\\-th rectangle. The **double integral** of \\f\\ over \\R\\ is
 >
 > \\\iint_R f(x, y)\\dA \stackrel{\text{def}}{=}\lim\_{\mathopen{}\left\lVert\Delta\right\rVert\mathclose{} \to 0} \sum\_{i=1}^nf(x_i, y_i)\\\Delta A_i,\\
 >
 > where \\\mathopen{}\left\lVert\Delta\right\rVert\mathclose{}\\ is the length of the longest diagonal among the \\n\\ rectangles, when that limit exists and has the same value for every choice of grids and of the points \\(x_i, y_i)\\. The symbol \\dA\\ stands for an element of area.
 >
-> [\[2, Sec. 14.2\]](#ref-larsonCalc11e)
+> [\[3, Sec. 14.2\]](#ref-larsonCalc11e)
 
 > **NOTE:**
 >
@@ -28,7 +28,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Definition 2 (Iterated integral)** An **iterated integral** is an integral of an integral [\[3\]](#ref-wikipedia_iterated_integral):
+> **Definition 2 (Iterated integral)** An **iterated integral** is an integral of an integral [\[4\]](#ref-wikipedia_iterated_integral):
 >
 > \\ \int_a^b \int\_{g_1(x)}^{g_2(x)} f(x, y)\\dy\\dx \stackrel{\text{def}}{=}\int_a^b \mathopen{}\left(\int\_{g_1(x)}^{g_2(x)} f(x, y)\\dy\right)\mathclose{}\\dx \\
 >
@@ -42,7 +42,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Theorem 1 (Fubini’s theorem (Riemann version))** Let \\f\\ be **continuous** on a plane region \\R \subseteq \mathbb{R}^2\\ [\[4\]](#ref-wp:fubini).
+> **Theorem 1 (Fubini’s theorem (Riemann version))** Let \\f\\ be **continuous** on a plane region \\R \subseteq \mathbb{R}^2\\ [\[5\]](#ref-wp:fubini).
 >
 > 1.  **Vertically simple region.** If \\R\\ is defined by \\a \le x \le b\\ and \\g_1(x) \le y \le g_2(x)\\, where \\g_1\\ and \\g_2\\ are continuous on \\\[a, b\]\\, then
 >
@@ -54,11 +54,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > When \\R\\ can be described both ways, the two iterated integrals are equal — so the order of integration can be exchanged.
 >
-> [\[2\]](#ref-larsonCalc11e), Theorem 14.2, p. 982
+> [\[3\]](#ref-larsonCalc11e), Theorem 14.2, p. 982
 
 > **NOTE:**
 >
-> **Example 3 (Changing the order of integration for a non-rectangular region)** Adapted from [\[2, Sec. 14.2\]](#ref-larsonCalc11e), Example 4, pp. 984–985.
+> **Example 3 (Changing the order of integration for a non-rectangular region)** Adapted from [\[3, Sec. 14.2\]](#ref-larsonCalc11e), Example 4, pp. 984–985.
 >
 > Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Uniform}(0, 1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-uniform) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\\[0, 1\]^2\\. Define the function \\g(x, y) = \text{e}^{-x^2}\\\mathbb{1}\mathopen{}\left(y \le x\right)\mathclose{}\\, where \\e\\ is [Euler’s number](algebra-exponentials.llms.md#def-euler-number), and compute its [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\.
 >
@@ -154,7 +154,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 1 (Double integral over a triangular region)** Adapted from Miller [\[5\]](#ref-problifesavercalc), Question 1.1.50.
+> **Exercise 1 (Double integral over a triangular region)** Adapted from Miller [\[6\]](#ref-problifesavercalc), Question 1.1.50.
 >
 > Evaluate the integral:
 >
@@ -180,7 +180,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 2 (Switching order of integration on a non-rectangular region)** Adapted from Miller [\[5\]](#ref-problifesavercalc), Question 1.1.51.
+> **Exercise 2 (Switching order of integration on a non-rectangular region)** Adapted from Miller [\[6\]](#ref-problifesavercalc), Question 1.1.51.
 >
 > Express the integral:
 >
@@ -236,7 +236,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > **Why [Theorem 1](#thm-fubini)’s condition fails:** [Theorem 1](#thm-fubini) requires \\f\\ to be **continuous** on \\R\\. The denominator \\(x^2 + y^2)^2\\ vanishes at the origin \\(0, 0) \in R\\, so \\f\\ is *not even defined* there — let alone continuous — and the theorem does not apply.
 >
-> [\[4\]](#ref-wp:fubini)
+> [\[5\]](#ref-wp:fubini)
 >
 > [Figure 3](#fig-fubini-fail) shows the surface. The failure comes from the origin, where \\f\\ is undefined and unbounded.
 >
@@ -280,7 +280,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > \\ \begin{aligned} \int_a^b \mathopen{}\left(\int_c^d f(x, y)\\dy\right)\mathclose{}\\dx &= \int_c^d \mathopen{}\left(\int_a^b f(x, y)\\dx\right)\mathclose{}\\dy\\ &= \iint\_{\[a,b\]\times\[c,d\]} f(x, y)\\dA. \end{aligned} \\
 >
-> [\[2\]](#ref-larsonCalc11e), Theorem 14.2, p. 982
+> [\[3\]](#ref-larsonCalc11e), Theorem 14.2, p. 982
 
 > **NOTE:**
 >
@@ -288,7 +288,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 5 (Evaluating a double integral on a rectangle)** Structure adapted from [\[2, Sec. 14.2\]](#ref-larsonCalc11e), Example 2, pp. 982–983; the integrand \\x^2 + y^2\\ is original, chosen so the integral equals \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\ for \\g(x, y) = x^2 + y^2\\.
+> **Example 5 (Evaluating a double integral on a rectangle)** Structure adapted from [\[3, Sec. 14.2\]](#ref-larsonCalc11e), Example 2, pp. 982–983; the integrand \\x^2 + y^2\\ is original, chosen so the integral equals \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\ for \\g(x, y) = x^2 + y^2\\.
 >
 > Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Uniform}(0, 1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-uniform) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\R = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, 1\]\\\\ ([Figure 4](#fig-fubini-rect-region)). Define the function \\g(x, y) = x^2 + y^2\\, and compute its [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\.
 >
@@ -365,7 +365,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 3 (Double integral of a polynomial over a rectangle)** Adapted from Miller [\[5\]](#ref-problifesavercalc), Question 1.1.47.
+> **Exercise 3 (Double integral of a polynomial over a rectangle)** Adapted from Miller [\[6\]](#ref-problifesavercalc), Question 1.1.47.
 >
 > Evaluate the double integral:
 >
@@ -385,7 +385,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 4 (Choosing the order of integration)** Adapted from Miller [\[5\]](#ref-problifesavercalc), Question 1.1.48.
+> **Exercise 4 (Choosing the order of integration)** Adapted from Miller [\[6\]](#ref-problifesavercalc), Question 1.1.48.
 >
 > Evaluate the double integral:
 >
@@ -403,7 +403,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 5 (Product of single integrals for separable functions)** Adapted from Miller [\[5\]](#ref-problifesavercalc), Question 1.1.49.
+> **Exercise 5 (Product of single integrals for separable functions)** Adapted from Miller [\[6\]](#ref-problifesavercalc), Question 1.1.49.
 >
 > Let \\m, n \> 0\\. Evaluate:
 >
@@ -437,7 +437,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 6 (Double integral with polynomial and radical terms)** Adapted from Miller [\[5\]](#ref-problifesavercalc), Question 1.1.52.
+> **Exercise 6 (Double integral with polynomial and radical terms)** Adapted from Miller [\[6\]](#ref-problifesavercalc), Question 1.1.52.
 >
 > Evaluate the double integral:
 >
@@ -455,7 +455,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 7 (Double integral of an affine function)** Adapted from Miller [\[5\]](#ref-problifesavercalc), Question 1.1.53.
+> **Exercise 7 (Double integral of an affine function)** Adapted from Miller [\[6\]](#ref-problifesavercalc), Question 1.1.53.
 >
 > Let \\a, b, c\\ be constants. Evaluate:
 >
@@ -469,7 +469,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 8 (A double integral with a parameter)** Adapted from Miller [\[5\]](#ref-problifesavercalc), Question 1.1.54.
+> **Exercise 8 (A double integral with a parameter)** Adapted from Miller [\[6\]](#ref-problifesavercalc), Question 1.1.54.
 >
 > Evaluate the double integral
 >
@@ -525,7 +525,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > \\ \begin{aligned} \int\_{\Omega_1 \times \Omega_2} f\\d(\mu_1 \otimes \mu_2) &= \int\_{\Omega_1} \mathopen{}\left(\int\_{\Omega_2} f(\omega_1, \omega_2)\\d\mu_2(\omega_2)\right)\mathclose{}\\d\mu_1(\omega_1)\\ &= \int\_{\Omega_2} \mathopen{}\left(\int\_{\Omega_1} f(\omega_1, \omega_2)\\d\mu_1(\omega_1)\right)\mathclose{}\\d\mu_2(\omega_2). \end{aligned} \\
 >
-> [\[6\]](#ref-billingsley1995probability), Theorem 18.3, [\[7\]](#ref-gut2013), Theorem 9.1, p. 65, [\[4\]](#ref-wp:fubini)
+> [\[7\]](#ref-billingsley1995probability), Theorem 18.3, [\[8\]](#ref-gut2013), Theorem 9.1, p. 65, [\[5\]](#ref-wp:fubini)
 
 > **NOTE:**
 >
@@ -533,7 +533,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > \\ \begin{aligned} \int\_{\Omega_1 \times \Omega_2} f\\d(\mu_1 \otimes \mu_2) &= \int\_{\Omega_1} \mathopen{}\left(\int\_{\Omega_2} f(\omega_1, \omega_2)\\d\mu_2(\omega_2)\right)\mathclose{}\\d\mu_1(\omega_1)\\ &= \int\_{\Omega_2} \mathopen{}\left(\int\_{\Omega_1} f(\omega_1, \omega_2)\\d\mu_1(\omega_1)\right)\mathclose{}\\d\mu_2(\omega_2). \end{aligned} \\
 >
-> [\[6\]](#ref-billingsley1995probability), Theorem 18.3, [\[7\]](#ref-gut2013), Theorem 9.1, p. 65, [\[4\]](#ref-wp:fubini), [\[8\]](#ref-fubini1907)
+> [\[7\]](#ref-billingsley1995probability), Theorem 18.3, [\[8\]](#ref-gut2013), Theorem 9.1, p. 65, [\[5\]](#ref-wp:fubini), [\[9\]](#ref-fubini1907)
 
 > **NOTE:**
 >
@@ -571,17 +571,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > since \\\int_0^{\varepsilon} dr/r\\ diverges. Therefore \\\iint_R \|f\|\\dA = \infty\\, and the hypothesis of [Theorem 5](#thm-fubini-measure) is not satisfied. (The hypothesis of [Theorem 4](#thm-tonelli-measure) also fails: \\f\\ takes both positive and negative values, so it is not nonnegative a.e.) The unequal iterated integrals from [Example 4](#exm-fubini-fail) are thus consistent with both theorems: neither one applies.
 >
-> [\[4\]](#ref-wp:fubini)
+> [\[5\]](#ref-wp:fubini)
 
 ## Further reading
 
-- Wikipedia contributors [\[1\]](#ref-wikipedia_multiple_integral) — double and multiple integrals, with examples
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_iterated_integral) — iterated integrals and the order of integration
-
-- Wikipedia contributors [\[4\]](#ref-wp:fubini) — Fubini’s theorem, in the Riemann and Lebesgue settings
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_tonelli_s_theorem) — Tonelli’s theorem for non-negative functions
+- Wikipedia contributors [\[5\]](#ref-wp:fubini) — Fubini’s theorem, in the Riemann and Lebesgue settings
 
 Back to top
 
@@ -589,36 +583,36 @@ Back to top
 
 \[1\]
 
-Wikipedia contributors, “Multiple integral — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Multiple_integral>
+Wikipedia contributors, “Tonelli’s theorem (functional analysis) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tonelli%27s_theorem_%28functional_analysis%29>
 
 \[2\]
 
-R. Larson and B. H. Edwards, *Calculus*, 11th ed. Boston, MA: Cengage Learning, 2018. Available: <https://www.cengage.com/c/calculus-11e-larson/>
+Wikipedia contributors, “Multiple integral — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Multiple_integral>
 
 \[3\]
 
-Wikipedia contributors, “Iterated integral — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Iterated_integral>
+R. Larson and B. H. Edwards, *Calculus*, 11th ed. Boston, MA: Cengage Learning, 2018. Available: <https://www.cengage.com/c/calculus-11e-larson/>
 
 \[4\]
 
-Wikipedia contributors, “Fubini’s theorem — Wikipedia, the free encyclopedia.” 2024. Available: <https://en.wikipedia.org/wiki/Fubini%27s_theorem>
+Wikipedia contributors, “Iterated integral — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Iterated_integral>
 
 \[5\]
 
-S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Available: <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>
+Wikipedia contributors, “Fubini’s theorem — Wikipedia, the free encyclopedia.” 2024. Available: <https://en.wikipedia.org/wiki/Fubini%27s_theorem>
 
 \[6\]
 
-P. Billingsley, *Probability and measure*, 3rd ed. in Wiley series in probability and mathematical statistics. New York: Wiley, 1995.
+S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Available: <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>
 
 \[7\]
 
-A. Gut, *Probability: A graduate course*, 2nd ed. in Springer texts in statistics. New York: Springer, 2013. doi: [10.1007/978-1-4614-4708-5](https://doi.org/10.1007/978-1-4614-4708-5).
+P. Billingsley, *Probability and measure*, 3rd ed. in Wiley series in probability and mathematical statistics. New York: Wiley, 1995.
 
 \[8\]
 
-G. Fubini, “Sugli integrali multipli,” *Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Fisiche, Matematiche e Naturali*, vol. 16, pp. 608–614, 1907.
+A. Gut, *Probability: A graduate course*, 2nd ed. in Springer texts in statistics. New York: Springer, 2013. doi: [10.1007/978-1-4614-4708-5](https://doi.org/10.1007/978-1-4614-4708-5).
 
 \[9\]
 
-Wikipedia contributors, “Tonelli’s theorem (functional analysis) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tonelli%27s_theorem_%28functional_analysis%29>
+G. Fubini, “Sugli integrali multipli,” *Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Fisiche, Matematiche e Naturali*, vol. 16, pp. 608–614, 1907.

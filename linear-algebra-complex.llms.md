@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Complex vectors and matrices
 
@@ -246,14 +246,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 > Subtracting the two equations gives \\\mathbf{A} - \mathbf{A}^{\mathsf{H}} = 2\mathbf{S}'\\, so
 >
 > \\ \begin{aligned} \mathbf{S}' &= \frac{1}{2}(\mathbf{A} - \mathbf{A}^{\mathsf{H}}) \\ &= \mathbf{S}. \end{aligned} \\
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_conjugate_transpose) — the conjugate transpose and its properties
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_hermitian_matrix) — Hermitian matrices, with examples and the spectral theorem
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_skew_hermitian_matrix) — skew-Hermitian matrices
 
 Back to top
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Special Matrices
 
@@ -1268,34 +1268,6 @@ See also [\[14\]](#ref-wikipedia_determinant).
 > \\ \begin{aligned} \det(\mathbf{A}) &= 3 \cdot 1 \\ &= 3, \end{aligned} \\
 >
 > matching \\2 \cdot 2 - 1 \cdot 1 = 3\\ from [Example 36](#exm-determinant).
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_symmetric_matrix) — symmetric matrices and their spectral properties
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_diagonal_matrix) — diagonal matrices
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_invertible_matrix) — invertible matrices and how to invert them
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_orthogonal_matrix) — orthogonal matrices
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_idempotent_matrix) — idempotent matrices
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_trace_linear_algebra) — the trace and its properties
-
-- Wikipedia contributors [\[14\]](#ref-wikipedia_determinant) — the determinant, its properties and computation
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_quadratic_form) — quadratic forms
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_definite_matrix) — positive-definite and positive-semidefinite matrices
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_eigendecomposition_of_a_matrix) — the eigendecomposition
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_singular_value_decomposition) — the singular value decomposition and its uses
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_frobenius_norm) — the Frobenius norm of a matrix
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_paraboloid) — paraboloids and their level sets
 
 Back to top
 

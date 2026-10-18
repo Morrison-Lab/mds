@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Convex functions
 
@@ -104,7 +104,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 2 (Jensen’s inequality for a weighted average)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [convex function](#def-convex-function). Let \\x_1, \ldots, x_n \in \mathbb{R}^p\\, and let \\w_1, \ldots, w_n \ge 0\\ be weights with \\\sum\_{i=1}^nw_i = 1\\. Then \\ f\mathopen{}\left(\sum\_{i=1}^nw_i x_i\right)\mathclose{} \le \sum\_{i=1}^nw_i f(x_i). \\
+> **Theorem 2 (Jensen’s inequality for a weighted average)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [convex function](#def-convex-function) [\[4\]](#ref-wikipedia_jensens_inequality). Let \\x_1, \ldots, x_n \in \mathbb{R}^p\\, and let \\w_1, \ldots, w_n \ge 0\\ be weights with \\\sum\_{i=1}^nw_i = 1\\. Then \\ f\mathopen{}\left(\sum\_{i=1}^nw_i x_i\right)\mathclose{} \le \sum\_{i=1}^nw_i f(x_i). \\
 
 > **NOTE:**
 >
@@ -136,11 +136,11 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Upper bound)** Let \\A \subseteq \mathbb{R}\\. A real number \\u\\ is an **upper bound** for \\A\\ [\[4\]](#ref-wikipedia_upper_and_lower_bounds) if \\a \le u\\ for all \\a \in A\\.
+> **Definition 4 (Upper bound)** Let \\A \subseteq \mathbb{R}\\. A real number \\u\\ is an **upper bound** for \\A\\ [\[5\]](#ref-wikipedia_upper_and_lower_bounds) if \\a \le u\\ for all \\a \in A\\.
 
 > **NOTE:**
 >
-> **Definition 5 (Lower bound)** Let \\A \subseteq \mathbb{R}\\. A real number \\\ell\\ is a **lower bound** for \\A\\ [\[4\]](#ref-wikipedia_upper_and_lower_bounds) if \\\ell\le a\\ for all \\a \in A\\.
+> **Definition 5 (Lower bound)** Let \\A \subseteq \mathbb{R}\\. A real number \\\ell\\ is a **lower bound** for \\A\\ [\[5\]](#ref-wikipedia_upper_and_lower_bounds) if \\\ell\le a\\ for all \\a \in A\\.
 
 > **NOTE:**
 >
@@ -163,14 +163,14 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 3 (Completeness of the real numbers)** Let \\A \subseteq \mathbb{R}\\ be nonempty [\[5\]](#ref-wikipedia_least_upper_bound_property).
+> **Theorem 3 (Completeness of the real numbers)** Let \\A \subseteq \mathbb{R}\\ be nonempty [\[6\]](#ref-wikipedia_least_upper_bound_property).
 >
 > - If \\A\\ is [bounded above](#def-bounded-above), the set of upper bounds of \\A\\ has a [minimum](algebra-basics.llms.md#def-minimum).
 > - If \\A\\ is bounded below, the set of lower bounds of \\A\\ has a [maximum](algebra-basics.llms.md#def-maximum).
 
 > **NOTE:**
 >
-> *Proof*. The first statement is the least-upper-bound property of \\\mathbb{R}\\ [\[6\]](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8. For the second, let \\-A = \mathopen{}\left\\-a : a \in A\right\\\mathclose{}\\. Negating both sides of an inequality reverses it ([Theorem 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#thm-neg-ineq)), so \\\ell\\ is a lower bound of \\A\\ exactly when \\-\ell\\ is an upper bound of \\-A\\. The set \\-A\\ is nonempty and bounded above, so by the first statement its upper bounds have a minimum \\u\\, and then \\-u\\ is the largest lower bound of \\A\\.
+> *Proof*. The first statement is the least-upper-bound property of \\\mathbb{R}\\ [\[7\]](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8. For the second, let \\-A = \mathopen{}\left\\-a : a \in A\right\\\mathclose{}\\. Negating both sides of an inequality reverses it ([Theorem 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#thm-neg-ineq)), so \\\ell\\ is a lower bound of \\A\\ exactly when \\-\ell\\ is an upper bound of \\-A\\. The set \\-A\\ is nonempty and bounded above, so by the first statement its upper bounds have a minimum \\u\\, and then \\-u\\ is the largest lower bound of \\A\\.
 
 > **NOTE:**
 >
@@ -178,7 +178,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below ([Definition 7](#def-bounded-below)). The **infimum** of \\A\\ [\[7\]](#ref-wikipedia_infimum_and_supremum), written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
+> **Definition 9 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below ([Definition 7](#def-bounded-below)). The **infimum** of \\A\\ [\[8\]](#ref-wikipedia_infimum_and_supremum), written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
 >
 > \\\inf A \stackrel{\text{def}}{=}\max\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ t \le a\right\\\mathclose{}\\
 >
@@ -214,7 +214,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above ([Definition 6](#def-bounded-above)). The **supremum** of \\A\\ [\[7\]](#ref-wikipedia_infimum_and_supremum), written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
+> **Definition 10 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above ([Definition 6](#def-bounded-above)). The **supremum** of \\A\\ [\[8\]](#ref-wikipedia_infimum_and_supremum), written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
 >
 > \\\sup A \stackrel{\text{def}}{=}\min\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ a \le t\right\\\mathclose{}\\
 >
@@ -253,7 +253,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Identity element)** Let \\S\\ be a set, such as the real numbers \\\mathbb{R}\\, and let \\\star\\ be an operation that combines two elements \\a\\ and \\b\\ of \\S\\ into an element \\a \star b\\ of \\S\\, such as addition (\\a + b\\) or multiplication (\\a \times b\\) of real numbers. An element \\u\\ of \\S\\ is an **identity element** for \\\star\\ [\[8\]](#ref-wikipedia_identity_element) if \\a \star u = a\\ and \\u \star a = a\\ for every \\a \in S\\.
+> **Definition 12 (Identity element)** Let \\S\\ be a set, such as the real numbers \\\mathbb{R}\\, and let \\\star\\ be an operation that combines two elements \\a\\ and \\b\\ of \\S\\ into an element \\a \star b\\ of \\S\\, such as addition (\\a + b\\) or multiplication (\\a \times b\\) of real numbers. An element \\u\\ of \\S\\ is an **identity element** for \\\star\\ [\[9\]](#ref-wikipedia_identity_element) if \\a \star u = a\\ and \\u \star a = a\\ for every \\a \in S\\.
 
 > **NOTE:**
 >
@@ -265,7 +265,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Commutative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 12](#def-identity-element)) is **commutative** [\[9\]](#ref-wikipedia_commutative_property) if \\a \star b = b \star a\\ for all \\a, b \in S\\: the order of the two inputs does not matter. Some sources, including the titles of [Theorem 5](#thm-sum-symmetric) and [Theorem 8](#thm-prod-symmetric), call a commutative operation **symmetric**.
+> **Definition 13 (Commutative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 12](#def-identity-element)) is **commutative** [\[10\]](#ref-wikipedia_commutative_property) if \\a \star b = b \star a\\ for all \\a, b \in S\\: the order of the two inputs does not matter. Some sources, including the titles of [Theorem 5](#thm-sum-symmetric) and [Theorem 8](#thm-prod-symmetric), call a commutative operation **symmetric**.
 
 > **NOTE:**
 >
@@ -279,7 +279,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Associative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 12](#def-identity-element)) is **associative** [\[10\]](#ref-wikipedia_associative_property) if \\(a \star b) \star c = a \star (b \star c)\\ for all \\a, b, c \in S\\: which pair is combined first does not matter.
+> **Definition 14 (Associative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 12](#def-identity-element)) is **associative** [\[11\]](#ref-wikipedia_associative_property) if \\(a \star b) \star c = a \star (b \star c)\\ for all \\a, b, c \in S\\: which pair is combined first does not matter.
 
 > **NOTE:**
 >
@@ -367,7 +367,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Distributive law)** The **distributive law** [\[11\]](#ref-wikipedia_distributive_property) is the statement that multiplication distributes over addition ([Definition 15](#def-distributes-over)): \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 11](#thm-mult-distr)). We then say multiplication is **distributive**.
+> **Definition 16 (Distributive law)** The **distributive law** [\[12\]](#ref-wikipedia_distributive_property) is the statement that multiplication distributes over addition ([Definition 15](#def-distributes-over)): \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 11](#thm-mult-distr)). We then say multiplication is **distributive**.
 
 > **NOTE:**
 >
@@ -383,7 +383,7 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Like terms)** Two [terms](#def-term) of a sum are **like terms** [\[12\]](#ref-wikipedia_like_terms) if they are the same product of variables, each to the same power, possibly multiplied by different constants: \\c_1 m\\ and \\c_2 m\\, where \\c_1\\ and \\c_2\\ are constants and \\m\\ is that product.
+> **Definition 17 (Like terms)** Two [terms](#def-term) of a sum are **like terms** [\[13\]](#ref-wikipedia_like_terms) if they are the same product of variables, each to the same power, possibly multiplied by different constants: \\c_1 m\\ and \\c_2 m\\, where \\c_1\\ and \\c_2\\ are constants and \\m\\ is that product.
 
 > **NOTE:**
 >
@@ -744,32 +744,6 @@ For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\ma
 >
 > \\ \begin{aligned} \sum\_{i=1}^{3} x_i &= x_1 + x_2 + x_3 && \text{(definition of summation notation)} \\ &= 2 + 5 + 1 && \text{(substitute the values)} \\ &= 8 && \text{(add)} \end{aligned} \\
 
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_line_segment) — line segments in the plane and in space
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_convex_function) — convex functions, their properties and examples
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_jensens_inequality) — Jensen’s inequality, with its probabilistic form
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_upper_and_lower_bounds) — upper and lower bounds of a set
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_infimum_and_supremum) — the infimum and supremum, with examples
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_least_upper_bound_property) — the completeness of the real numbers
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_commutative_property) — commutative operations, with examples
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_associative_property) — associative operations, with examples
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_distributive_property) — the distributive law
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_chord_geometry) — chords of a curve
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_identity_element) — identity elements of a binary operation
-
-- Wikipedia contributors [\[12\]](#ref-wikipedia_like_terms) — like terms and how to combine them
-
 Back to top
 
 ## References
@@ -788,40 +762,40 @@ Wikipedia contributors, “Convex function — Wikipedia, the free encyclopedia.
 
 \[4\]
 
-Wikipedia contributors, “Upper and lower bounds — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Upper_and_lower_bounds>
+Wikipedia contributors, “Jensen’s inequality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Jensen%27s_inequality>
 
 \[5\]
 
-Wikipedia contributors, “Least-upper-bound property — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Least-upper-bound_property>
+Wikipedia contributors, “Upper and lower bounds — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Upper_and_lower_bounds>
 
 \[6\]
 
-W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.
+Wikipedia contributors, “Least-upper-bound property — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Least-upper-bound_property>
 
 \[7\]
 
-Wikipedia contributors, “Infimum and supremum — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Infimum_and_supremum>
+W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.
 
 \[8\]
 
-Wikipedia contributors, “Identity element — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Identity_element>
+Wikipedia contributors, “Infimum and supremum — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Infimum_and_supremum>
 
 \[9\]
 
-Wikipedia contributors, “Commutative property — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Commutative_property>
+Wikipedia contributors, “Identity element — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Identity_element>
 
 \[10\]
 
-Wikipedia contributors, “Associative property — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Associative_property>
+Wikipedia contributors, “Commutative property — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Commutative_property>
 
 \[11\]
 
-Wikipedia contributors, “Distributive property — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Distributive_property>
+Wikipedia contributors, “Associative property — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Associative_property>
 
 \[12\]
 
-Wikipedia contributors, “Like terms — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Like_terms>
+Wikipedia contributors, “Distributive property — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Distributive_property>
 
 \[13\]
 
-Wikipedia contributors, “Jensen’s inequality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Jensen%27s_inequality>
+Wikipedia contributors, “Like terms — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Like_terms>

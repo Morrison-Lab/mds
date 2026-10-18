@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Complex numbers
 
@@ -232,14 +232,6 @@ Axler [\[2\]](#ref-axler2024linear), result 4.4, p. 121 lists this identity amo
 > **Example 9 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} &(3 + 4\\i)(3 - 4\\i) \\ &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~1}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
 >
 > which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 8](#exm-complex-modulus), as [Theorem 4](#thm-conj-product) says.
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_imaginary_unit) — the imaginary unit and its powers
-
-- Wikipedia contributors [\[3\]](#ref-wikipedia_complex_number) — complex numbers, with their arithmetic, conjugate and modulus
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_complex_conjugate) — the complex conjugate and its properties
 
 Back to top
 

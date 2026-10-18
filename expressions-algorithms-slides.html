@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
+  <p class="date">Last modified: 2026-10-18 13:21:32 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -305,7 +305,7 @@
 <section id="expressions" class="slide level2" data-number="1">
 <h2><span class="header-section-number">1</span> Expressions</h2>
 <div id="def-expression" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Expression)</strong></span> An <strong>expression</strong> <span class="citation" data-cites="wikipedia_expression_mathematics"><a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression <em>denotes</em> a <a href="./functions.html#def-function">function</a>: it fixes the output for each input.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Expression)</strong></span> An <strong>expression</strong> <span class="citation" data-cites="wikipedia_expression_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression <em>denotes</em> a <a href="./functions.html#def-function">function</a>: it fixes the output for each input.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -318,7 +318,7 @@
 <section class="slide level2">
 
 <div id="def-parse-tree" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Parse tree)</strong></span> The <strong>parse tree</strong> <span class="citation" data-cites="wikipedia_parse_tree"><a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a></span> of an <a href="#/def-expression">expression</a> is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Parse tree)</strong></span> The <strong>parse tree</strong> <span class="citation" data-cites="wikipedia_parse_tree"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> of an <a href="#/def-expression">expression</a> is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -353,7 +353,7 @@
 <section id="algorithms" class="slide level2" data-number="2">
 <h2><span class="header-section-number">2</span> Algorithms</h2>
 <div id="def-algorithm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Algorithm)</strong></span> An <strong>algorithm</strong> <span class="citation" data-cites="wikipedia_algorithm"><a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a></span> is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm <em>computes</em> a <a href="./functions.html#def-function">function</a>: for each input it returns the function’s value at that input.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Algorithm)</strong></span> An <strong>algorithm</strong> <span class="citation" data-cites="wikipedia_algorithm"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm <em>computes</em> a <a href="./functions.html#def-function">function</a>: for each input it returns the function’s value at that input.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -380,19 +380,11 @@
 <p><span class="proof-title"><em>Remark 3</em> (Values with no known algorithm). </span>Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an <span class="math inline">\(\arg \min\)</span> over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.</p>
 </div>
 </section>
-<section class="slide level2">
+<section class="slide level2 smaller scrollable" id="references">
 
 <div id="exm-no-known-algorithm" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (A minimizer with no known formula)</strong></span> The minimizer <span class="math inline">\(\arg \min_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\)</span> is well defined, because <span class="math inline">\(x - \cos x\)</span> is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.</p>
 </div>
-</section>
-<section id="further-reading" class="slide level2 unnumbered smaller scrollable">
-<h2>Further reading</h2>
-<ul>
-<li><p><span class="citation" data-cites="wikipedia_expression_mathematics">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> — expressions, with examples</p></li>
-<li><p><span class="citation" data-cites="wikipedia_parse_tree">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a></span> — parse trees</p></li>
-<li><p><span class="citation" data-cites="wikipedia_algorithm">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a></span> — algorithms, their history and analysis</p></li>
-</ul>
 
 
 <script>

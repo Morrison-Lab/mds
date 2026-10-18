@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 ## 1 Rank
 
@@ -381,20 +381,6 @@ Last modified: 2026-10-18 11:27:44 (PDT)
 > **NOTE:**
 >
 > **Example 21 (Equal dimensions without containment)** The lines \\\operatorname{span}\mathopen{}\left\\(1, 0, 0)\right\\\mathclose{}\\ and \\\operatorname{span}\mathopen{}\left\\(0, 1, 0)\right\\\mathclose{}\\ in \\\mathbb{R}^3\\ both have dimension \\1\\, but they are not equal: \\(1, 0, 0)\\ is in the first and not the second. [Theorem 11](#thm-subspace-equal-dim) does not apply, because neither line contains the other.
-
-## Further reading
-
-- Wikipedia contributors [\[1\]](#ref-wikipedia_linear_independence) — linear independence and dependence, with examples
-
-- Wikipedia contributors [\[5\]](#ref-wikipedia_linear_span) — the span of a set of vectors
-
-- Wikipedia contributors [\[4\]](#ref-wikipedia_linear_subspace) — linear subspaces
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_basis_linear_algebra) — bases and dimension
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_coordinate_vector) — coordinates relative to a basis
-
-- Wikipedia contributors [\[2\]](#ref-wikipedia_rank_linear_algebra) — the rank of a matrix
 
 Back to top
 

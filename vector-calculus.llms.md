@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 11:27:44 (PDT)
+Last modified: 2026-10-18 13:21:32 (PDT)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -1184,27 +1184,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 - Miller [\[3\]](#ref-problifesavercalc) The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.
 
-- Wikipedia contributors [\[2\]](#ref-wikipedia_partial_derivative) — partial derivatives
-
 - Wikipedia contributors [\[4\]](#ref-wp:gradient) — the gradient
-
-- Wikipedia contributors [\[6\]](#ref-wikipedia_level_set) — level sets
-
-- Wikipedia contributors [\[7\]](#ref-wikipedia_total_derivative) — the total derivative
-
-- Wikipedia contributors [\[9\]](#ref-wikipedia_jacobian_matrix_and_determinant) — the Jacobian matrix
-
-- Wikipedia contributors [\[8\]](#ref-wikipedia_matrix_calculus) — matrix calculus and the numerator and denominator layouts
-
-- Wikipedia contributors [\[10\]](#ref-wikipedia_errors_and_residuals) — residuals and errors
-
-- Wikipedia contributors [\[11\]](#ref-wikipedia_residual_sum_of_squares) — the residual sum of squares
-
-- Wikipedia contributors [\[13\]](#ref-wikipedia_ball_mathematics) — open and closed balls
-
-- Wikipedia contributors [\[14\]](#ref-wikipedia_hessian_matrix) — the Hessian matrix
-
-- Wikipedia contributors [\[15\]](#ref-wikipedia_symmetry_of_second_derivatives) — the symmetry of mixed second partial derivatives
 
 See also the [Linear Algebra and Vector Calculus further reading](#sec-additional-resources).
 
