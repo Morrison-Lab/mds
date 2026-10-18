@@ -19,7 +19,7 @@ $$
 The [cosine similarity](#def-cosine-similarity) is defined, because both vectors are nonzero (@thm-norm-properties).
 By @thm-cauchy-schwarz, it lies in $[-1, 1]$,
 which is where $\arccos$ is defined (@def-arccosine).
-So $\angpar \in [0, \pi]$ and $\cos\angpar = \cossim(\vecf{x}, \vecf{y})$.
+So $\angpar \in [0, \pi]$, with $\cos\angpar = \cossim(\vecf{x}, \vecf{y})$.
 
 :::
 
