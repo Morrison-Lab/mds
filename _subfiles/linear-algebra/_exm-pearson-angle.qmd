@@ -1,0 +1,13 @@
+:::{#exm-pearson-angle}
+#### A correlation of one half is an angle of sixty degrees
+
+In @exm-pearson-cosine-centered, $r = 1/2$ for $\vx = (1, 2, 3)$ and $\vy = (1, 3, 2)$.
+By @cor-pearson-angle, the angle $\angpar$ between $\cent{\vx} = (-1, 0, 1)$ and $\cent{\vy} = (-1, 1, 0)$ satisfies
+
+$$
+\cos\angpar = \frac{1}{2},
+$$
+
+so $\angpar = \pi/3$.
+
+:::
