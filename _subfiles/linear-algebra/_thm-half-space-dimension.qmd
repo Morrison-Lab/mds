@@ -27,7 +27,8 @@ So $D(\mathcal{H}) = \mathcal{H}_0$, which has dimension $p - 1$ by @thm-hyperpl
 
 **Part 2.**
 Every difference is in $\reals^p$, so $D(\mathcal{H}^+) \subseteq \reals^p$.
-For the other direction, take any $\vx_0 \in \mathcal{H}$ and any $\vecf{v} \in \reals^p$.
+For the other direction, take any $\vx_0 \in \mathcal{H}$.
+Take any $\vecf{v} \in \reals^p$.
 For a number $t > 0$ to be chosen, let $\vx_t \eqdef \vx_0 + t\,\vec{w}$.
 Then
 
