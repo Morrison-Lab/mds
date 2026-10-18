@@ -19,7 +19,7 @@ $$
 The [cosine similarity](#def-cosine-similarity) is defined, because both vectors are nonzero (@thm-norm-properties).
 By @thm-cauchy-schwarz, it lies in $[-1, 1]$.
 On $[0, \pi]$, $\cos$ is decreasing from $1$ to $-1$.
-It takes each value in $[-1, 1]$ exactly once (@thm-cosine-bijection),
+It hits each point of $[-1, 1]$ exactly once (@thm-cosine-bijection),
 so there is exactly one such $\angpar$.
 
 :::
