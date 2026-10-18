@@ -1,0 +1,8 @@
+:::{#exm-arccosine}
+#### Three arccosines
+
+- $\arccos 1 = 0$, because $\cos 0 = 1$.
+- $\arccos 0 = \pi/2$, because $\cos(\pi/2) = 0$.
+- $\arccos(-1) = \pi$, because $\cos\pi = -1$.
+
+:::

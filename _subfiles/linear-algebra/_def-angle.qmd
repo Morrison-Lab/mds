@@ -2,11 +2,11 @@
 #### Angle between two vectors
 
 The **angle** between two nonzero vectors $\vecf{x}, \vecf{y} \in \reals^p$
-is the unique [real number](number-systems.qmd#def-real-numbers) $\angpar \in [0, \pi]$ whose cosine (@def-cosine-sine) is
-the [cosine similarity](#def-cosine-similarity) of the two vectors:
+is the [arccosine](algebra-trigonometry.qmd#def-arccosine)
+of their [cosine similarity](#def-cosine-similarity):
 
 $$
-\cos\angpar = \cossim(\vecf{x}, \vecf{y}).
+\angpar \eqdef \arccos\paren{\cossim(\vecf{x}, \vecf{y})}.
 $$
 
 :::
@@ -17,10 +17,9 @@ $$
 #### Why the angle is well defined
 
 The [cosine similarity](#def-cosine-similarity) is defined, because both vectors are nonzero (@thm-norm-properties).
-By @thm-cauchy-schwarz, it lies in $[-1, 1]$.
-On $[0, \pi]$, $\cos$ is decreasing from $1$ to $-1$.
-It hits each point of $[-1, 1]$ exactly once (@thm-cosine-bijection),
-so there is exactly one such $\angpar$.
+By @thm-cauchy-schwarz, it lies in $[-1, 1]$,
+which is where $\arccos$ is defined (@def-arccosine).
+So $\angpar \in [0, \pi]$ and $\cos\angpar = \cossim(\vecf{x}, \vecf{y})$.
 
 :::
 
@@ -46,7 +45,7 @@ so for nonzero vectors, orthogonal (@def-orthogonal-vectors) means at a right an
 Since $\norm{\vecf{x}}\,\norm{\vecf{y}} > 0$ (@thm-norm-properties),
 $\cossim(\vecf{x}, \vecf{y}) = 0$ exactly when $\vecf{x} \cdot \vecf{y} = 0$
 (@def-cosine-similarity),
-so $\cos\angpar = 0$ exactly when $\vecf{x} \cdot \vecf{y} = 0$.
+so $\cos\angpar = 0$ exactly when $\vecf{x} \cdot \vecf{y} = 0$ (@rem-angle-well-defined).
 On $[0, \pi]$, $\cos$ vanishes only at $\pi/2$.
 
 :::

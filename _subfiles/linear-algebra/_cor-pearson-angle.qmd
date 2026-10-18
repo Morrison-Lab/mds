@@ -15,6 +15,7 @@ $$
 ::: proof
 
 By @thm-pearson-cosine-centered, $r = \cossim(\cent{\vx}, \cent{\vy})$.
-By @def-angle, $\cos\angpar = \cossim(\cent{\vx}, \cent{\vy})$.
+By @def-angle, $\angpar = \arccos\paren{\cossim(\cent{\vx}, \cent{\vy})}$,
+so $\cos\angpar = \cossim(\cent{\vx}, \cent{\vy})$ (@rem-angle-well-defined).
 
 :::

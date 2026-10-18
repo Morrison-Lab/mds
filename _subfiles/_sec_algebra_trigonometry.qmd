@@ -25,3 +25,11 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-cosine-bijection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-arccosine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-arccosine.qmd >}}
