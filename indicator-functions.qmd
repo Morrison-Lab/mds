@@ -13,13 +13,3 @@ format:
 {{< include mds/_indicator-functions.qmd >}}
 
 ## Further reading {.unnumbered}
-
--   @wikipedia_indicator_function --- indicator functions and their uses
-
--   @wikipedia_iverson_bracket --- the Iverson bracket
-
--   @wikipedia_kronecker_delta --- the Kronecker delta
-
--   @wikipedia_support_measure_theory --- the support of a function or measure
-
--   @wikipedia_idempotence --- idempotent operations and functions

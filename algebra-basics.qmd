@@ -15,22 +15,3 @@ format:
 {{< include mds/_subfiles/_sec_algebra_basics.qmd >}}
 
 ## Further reading {.unnumbered}
-
--   @wikipedia_transitive_relation --- transitive relations, with examples
-
--   @wikipedia_inequality_mathematics --- strict and non-strict inequalities and their properties
-
--   @wikipedia_exponentiation --- powers with integer, rational and real exponents
-
--   @wikipedia_square_root --- square roots and their properties
-
--   @wikipedia_absolute_value --- the absolute value and its generalizations
-
--   @wikipedia_percentage --- percentages, with worked examples
-
--   @wikipedia_maxima_and_minima --- minima and maxima, local and global
-
--   @wikipedia_arg_max --- the argmax and argmin
-
--   @wikipedia_identity_mathematics --- identities, equalities that hold for all values of their variables
-

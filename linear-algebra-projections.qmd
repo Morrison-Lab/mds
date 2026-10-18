@@ -15,22 +15,3 @@ format:
 {{< include mds/_subfiles/_sec_linear_algebra_projections.qmd >}}
 
 ## Further reading {.unnumbered}
-
--   @wikipedia_design_matrix --- design matrices in regression
-
--   @wikipedia_projection_matrix --- the projection (hat) matrix
-
--   @wikipedia_generalized_inverse --- generalized inverses and their types
-
--   @wikipedia_moore_penrose_inverse --- the Moore-Penrose inverse and its properties
-
--   @wikipedia_least_squares --- least squares, with its history and variants
-
--   @wikipedia_normal_equations --- the normal equations
-
--   @wikipedia_triangular_matrix --- triangular matrices and back substitution
-
--   @wikipedia_lu_decomposition --- the LU decomposition
-
--   @wikipedia_consistent_and_inconsistent_equations --- consistent and inconsistent systems of equations
-

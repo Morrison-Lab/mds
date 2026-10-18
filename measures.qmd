@@ -24,50 +24,6 @@ format:
   is a graduate course in probability
   that opens with a chapter on introductory measure theory.
 
--   @wikipedia_sigma_algebra --- $\sigma$-algebras and their generators
-
--   @wikipedia_closure_mathematics --- closure under an operation
-
--   @wikipedia_borel_set --- Borel sets
-
--   @wikipedia_disjoint_sets --- disjoint sets
-
--   @wikipedia_series_mathematics --- series and partial sums
-
--   @wikipedia_monotone_convergence_theorem --- the monotone convergence theorem
-
--   @wikipedia_sigma_additive_set_function --- additive and $\sigma$-additive set functions
-
--   @wikipedia_measure_mathematics --- measures, with examples
-
--   @wikipedia_counting_measure --- counting measure
-
--   @wikipedia_measurable_space --- measurable spaces
-
--   @wikipedia_lebesgue_measure --- Lebesgue measure and its construction
-
--   @wikipedia_null_set --- null sets
-
--   @wikipedia_almost_everywhere --- properties that hold almost everywhere
-
--   @wikipedia_finite_measure --- finite measures
-
--   @wikipedia_sigma_finite_measure --- $\sigma$-finite measures
-
--   @wikipedia_probability_measure --- probability measures
-
--   @wikipedia_probability_space --- probability spaces
-
--   @wikipedia_sample_space --- sample spaces
-
--   @wikipedia_event_probability_theory --- events
-
--   @wikipedia_outcome_probability --- outcomes
-
--   @wikipedia_measurable_function --- measurable functions
-
--   @wikipedia_lebesgue_integration --- the Lebesgue integral
-
 ## References {.unnumbered}
 
 ::: {#refs}

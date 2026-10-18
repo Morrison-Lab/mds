@@ -15,13 +15,3 @@ format:
 {{< include mds/_subfiles/_sec_algebra_trigonometry.qmd >}}
 
 ## Further reading {.unnumbered}
-
--   @wikipedia_unit_circle --- the unit circle and its uses in trigonometry
-
--   @wikipedia_pi --- the number pi, its definition and history
-
--   @wikipedia_sine_and_cosine --- sine and cosine, with their properties and graphs
-
--   @wikipedia_pythagorean_trigonometric_identity --- the identity and its proofs
-
--   @wikipedia_trigonometric_functions --- all six trigonometric functions

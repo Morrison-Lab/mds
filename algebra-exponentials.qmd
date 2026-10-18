@@ -15,30 +15,3 @@ format:
 {{< include mds/_subfiles/_sec_algebra_exponentials.qmd >}}
 
 ## Further reading {.unnumbered}
-
--   @wikipedia_polynomial --- polynomials, their degree and their roots
-
--   @wikipedia_quadratic_function --- quadratic functions and their graphs
-
--   @wikipedia_linear_function --- linear and affine functions of one variable
-
--   @wikipedia_slope --- the slope of a line
-
--   @wikipedia_limit_of_a_sequence --- limits of sequences, with examples
-
--   @wikipedia_exponential_function --- the exponential function and its properties
-
--   @wikipedia_logarithm --- logarithms and their laws
-
--   @wikipedia_natural_logarithm --- the natural logarithm
-
--   @wikipedia_affine_transformation --- affine transformations and affine functions
-
--   @wikipedia_contour_line --- contour lines and level sets
-
--   @wikipedia_e_mathematical_constant --- the number e and its properties
-
--   @wikipedia_parabola --- parabolas and their properties
-
--   @wikipedia_tarskis_high_school_algebra_problem --- Tarski's high school algebra problem
-

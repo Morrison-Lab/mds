@@ -15,26 +15,3 @@ format:
 {{< include mds/_subfiles/_sec_linear_algebra_inner_products.qmd >}}
 
 ## Further reading {.unnumbered}
-
--   @wikipedia_inner_product_space --- inner product spaces, with examples
-
--   @wikipedia_norm_mathematics --- norms on vector spaces
-
--   @wikipedia_lp_space --- p-norms and the spaces they define
-
--   @wikipedia_cauchy_schwarz_inequality --- the Cauchy-Schwarz inequality and its proofs
-
--   @wikipedia_triangle_inequality --- the triangle inequality
-
--   @wikipedia_cosine_similarity --- cosine similarity and its uses
-
--   @wikipedia_orthonormal_basis --- orthonormal bases
-
--   @wikipedia_gram_schmidt_process --- the Gram-Schmidt process, with an algorithm
-
--   @wikipedia_outer_product --- the outer product and its rank
-
--   @wikipedia_pythagorean_theorem --- the Pythagorean theorem and its generalizations
-
--   @wikipedia_uniform_norm --- the uniform (infinity) norm
-

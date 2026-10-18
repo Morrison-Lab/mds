@@ -13,9 +13,3 @@ format:
 {{< include mds/_expressions-algorithms.qmd >}}
 
 ## Further reading {.unnumbered}
-
--   @wikipedia_expression_mathematics --- expressions, with examples
-
--   @wikipedia_parse_tree --- parse trees
-
--   @wikipedia_algorithm --- algorithms, their history and analysis

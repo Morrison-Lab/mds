@@ -15,11 +15,3 @@ format:
 {{< include mds/_subfiles/_sec_linear_algebra_direct_sums.qmd >}}
 
 ## Further reading {.unnumbered}
-
--   @wikipedia_direct_sum --- direct sums of vector spaces and modules
-
--   @wikipedia_projection_linear_algebra --- projections, with their matrices and properties
-
--   @wikipedia_orthogonal_complement --- orthogonal complements and their properties
-
--   @wikipedia_fundamental_theorem_of_linear_algebra --- the four fundamental subspaces
