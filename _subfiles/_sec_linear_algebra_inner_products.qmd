@@ -68,13 +68,11 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_def-angle.qmd >}}
+{{< include mds/_subfiles/linear-algebra/_def-cosine-similarity.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_def-cosine-similarity.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_cor-cosine-similarity-angle.qmd >}}
+{{< include mds/_subfiles/linear-algebra/_def-angle.qmd >}}
 
 {{< slidebreak >}}
 

@@ -2,10 +2,11 @@
 #### Angle between two vectors
 
 The **angle** between two nonzero vectors $\vecf{x}, \vecf{y} \in \reals^p$
-is the unique number $\angpar \in [0, \pi]$ whose cosine (@def-cosine-sine) satisfies
+is the unique number $\angpar \in [0, \pi]$ whose cosine (@def-cosine-sine) is
+the cosine similarity of the two vectors (@def-cosine-similarity):
 
 $$
-\cos\angpar = \frac{\vecf{x} \cdot \vecf{y}}{\norm{\vecf{x}}\,\norm{\vecf{y}}}.
+\cos\angpar = \cossim(\vecf{x}, \vecf{y}).
 $$
 
 :::
@@ -15,8 +16,8 @@ $$
 :::{#rem-angle-well-defined}
 #### Why the angle is well defined
 
-The denominator is positive, because both vectors are nonzero (@thm-norm-properties),
-and by @thm-cauchy-schwarz the ratio lies between $-1$ and $1$.
+The cosine similarity is defined, because both vectors are nonzero (@thm-norm-properties),
+and by @thm-cauchy-schwarz it lies between $-1$ and $1$.
 On $[0, \pi]$, $\cos$ is decreasing from $1$ to $-1$
 and takes each value in $[-1, 1]$ exactly once (@thm-cosine-bijection),
 so there is exactly one such $\angpar$.
@@ -43,7 +44,9 @@ so for nonzero vectors, orthogonal (@def-orthogonal-vectors) means at a right an
 ::: proof
 
 Since $\norm{\vecf{x}}\,\norm{\vecf{y}} > 0$ (@thm-norm-properties),
-$\cos\angpar = 0$ exactly when $\vecf{x} \cdot \vecf{y} = 0$.
+$\cossim(\vecf{x}, \vecf{y}) = 0$ exactly when $\vecf{x} \cdot \vecf{y} = 0$
+(@def-cosine-similarity),
+so $\cos\angpar = 0$ exactly when $\vecf{x} \cdot \vecf{y} = 0$.
 On $[0, \pi]$, $\cos$ vanishes only at $\pi/2$.
 
 :::
