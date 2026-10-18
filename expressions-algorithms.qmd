@@ -11,5 +11,3 @@ format:
 ---
 
 {{< include mds/_expressions-algorithms.qmd >}}
-
-## Further reading {.unnumbered}

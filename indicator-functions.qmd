@@ -11,5 +11,3 @@ format:
 ---
 
 {{< include mds/_indicator-functions.qmd >}}
-
-## Further reading {.unnumbered}

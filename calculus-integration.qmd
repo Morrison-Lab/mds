@@ -13,5 +13,3 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_calculus_integration.qmd >}}
-
-## Further reading {.unnumbered}

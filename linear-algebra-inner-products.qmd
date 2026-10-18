@@ -13,5 +13,3 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_inner_products.qmd >}}
-
-## Further reading {.unnumbered}
