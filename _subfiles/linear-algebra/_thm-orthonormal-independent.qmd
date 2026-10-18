@@ -9,7 +9,7 @@ then they are linearly independent (@def-linearly-independent).
 ::: proof
 
 Suppose $\sumto{j}{k} c_j \vecf{q}_j = \vzero$,
-and fix any $i$ between $1$ and $k$. Then
+and take any $i$ between $1$ and $k$. Then
 
 $$
 \ba

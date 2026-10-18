@@ -20,14 +20,14 @@ The same holds for $\mathcal{H}^-$.
 Let $\vx, \vy \in \mathcal{H}$.
 By @thm-hyperplane-subspace part 3, $\vec{w} \cdot (\vy - \vx) = 0$,
 so $\vy - \vx \in \mathcal{H}_0 = \cb{\vecf{s} : \dprod{\vec{w}}{\vecf{s}} = 0}$.
-Conversely, fix any $\vx_0 \in \mathcal{H}$ (it exists by @thm-hyperplane-subspace part 2).
+Conversely, take any $\vx_0 \in \mathcal{H}$ (it exists by @thm-hyperplane-subspace part 2).
 For any $\vecf{s} \in \mathcal{H}_0$, the point $\vx_0 + \vecf{s}$ is in $\mathcal{H}$ by the same part,
 and $(\vx_0 + \vecf{s}) - \vx_0 = \vecf{s}$.
 So $D(\mathcal{H}) = \mathcal{H}_0$, which has dimension $p - 1$ by @thm-hyperplane-subspace part 1.
 
 **Part 2.**
 Every difference is in $\reals^p$, so $D(\mathcal{H}^+) \subseteq \reals^p$.
-For the other direction, fix any $\vx_0 \in \mathcal{H}$ and any $\vecf{v} \in \reals^p$.
+For the other direction, take any $\vx_0 \in \mathcal{H}$ and any $\vecf{v} \in \reals^p$.
 For a number $t > 0$ to be chosen, let $\vx_t \eqdef \vx_0 + t\,\vec{w}$.
 Then
 
