@@ -1,0 +1,32 @@
+:::{#thm-matmul-product-of-sums}
+#### Product of two sums of matrices
+
+For $m \times k$ matrices $\matr{A}$ and $\matr{B}$
+and $k \times n$ matrices $\matr{C}$ and $\matr{D}$,
+
+$$
+(\matr{A} + \matr{B})(\matr{C} + \matr{D})
+= \matr{A}\matr{C} + \matr{A}\matr{D} + \matr{B}\matr{C} + \matr{B}\matr{D}.
+$$
+
+Each product keeps its factors in the order they appear on the left,
+because matrix multiplication is not commutative.
+So $\matr{A}\matr{D}$ and $\matr{B}\matr{C}$ are not combined into $2\matr{A}\matr{D}$ or similar.
+
+:::
+
+::: proof
+
+$$
+\ba
+(\matr{A} + \matr{B})(\matr{C} + \matr{D})
+&= (\matr{A} + \matr{B})\matr{C} + (\matr{A} + \matr{B})\matr{D}
+&& \text{(@thm-matmul-distrib, from the left)}
+\\ &= \matr{A}\matr{C} + \matr{B}\matr{C} + \matr{A}\matr{D} + \matr{B}\matr{D}
+&& \text{(@thm-matmul-distrib, from the right, twice)}
+\\ &= \matr{A}\matr{C} + \matr{A}\matr{D} + \matr{B}\matr{C} + \matr{B}\matr{D}
+&& \text{(matrix addition is commutative)}
+\ea
+$$
+
+:::
