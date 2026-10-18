@@ -14,8 +14,7 @@ These notes follow two rules of thumb:
   as in $f(x)$.
 
 Under these rules, $f_\theta(x)$ reads "the member of the family labeled $\theta$, evaluated at $x$".
-Nothing forces this split.
-It is a convention for keeping a formula readable,
-and you will meet the same objects written the other way around.
+The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-subscripts-parentheses)
+gives the reason for this split and explains how to read a source that divides the work differently.
 
 :::
