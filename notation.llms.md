@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 15:54:57 (PDT)
+Last modified: 2026-10-17 22:01:17 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -48,7 +48,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 > - A subscript names which member of an [indexed family](sets.llms.md#def-indexed-family) we mean. It holds an index, such as the \\i\\ in \\x_i\\, or a parameter that picks one [function](functions.llms.md#def-function) or distribution out of the family, such as the \\\theta\\ in \\f\_\theta\\.
 > - Parentheses hold the input a function is evaluated at, as in \\f(x)\\.
 >
-> Under these rules, \\f\_\theta(x)\\ reads “the member of the family labeled \\\theta\\, evaluated at \\x\\”. Nothing forces this split. It is a convention for keeping a formula readable, and you will meet the same objects written the other way around.
+> Under these rules, \\f\_\theta(x)\\ reads “the member of the family labeled \\\theta\\, evaluated at \\x\\”. The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-subscripts-parentheses) gives the reason for this split and explains how to read a source that divides the work differently.
 
 > **NOTE:**
 >
@@ -66,15 +66,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 
 > **NOTE:**
 >
-> *Remark 2* (Subscripts and parentheses for a stochastic process). The notation for a [stochastic process](https://morrison-lab.github.io/pds/notation.html#def-stochastic-process) uses both slots at once. A stochastic process is an [indexed family](sets.llms.md#def-indexed-family) of [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X_t\\, one for each index \\t\\ in some [index set](sets.llms.md#def-index-set), such as time. The index goes in the subscript, because it picks a member of the family. Each \\X_t\\ is itself a [function](functions.llms.md#def-function) of the [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) \\\omega\\ of a [random experiment](https://morrison-lab.github.io/pds/probability-basics.html#def-random-experiment), that is, an element of the [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space), so the outcome goes in the parentheses: \\X_t(\omega)\\. Fixing \\\omega\\ and letting \\t\\ vary traces out one path of the process. Many sources drop \\\omega\\ and write \\X_t\\, or write \\X(t)\\ when \\t\\ is continuous.
-
-> **NOTE:**
->
 > **Example 1 (Reading \\X_t(\omega)\\)** Let \\X_t\\ be the position of a particle at time \\t \ge 0\\. Then \\X_3\\ is the random position at time 3, and \\X_3(\omega)\\ is its value when the experiment’s [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) is \\\omega\\. Holding \\\omega\\ fixed and letting \\t\\ vary gives the particle’s whole path for that outcome. A source that writes \\X(t, \omega)\\ means the same thing, with both arguments in parentheses.
-
-> **NOTE:**
->
-> *Remark 3* (Reading another source’s subscripts and parentheses). When you read a formula from another source, first work out what each subscript and each argument is doing: labeling a member of an [indexed family](sets.llms.md#def-indexed-family), or being the input of a [function](functions.llms.md#def-function). That tells you which convention the source follows, whatever its layout.
 
 ## 3 Why is notation in probability and statistics so inconsistent and disorganized?
 
