@@ -2,6 +2,7 @@ profile:
   default: website
 
 bibliography: references.bib
+csl: latex-macros/citations/numeric-author.csl
 
 editor_options:
   chunk_output_type: console
@@ -25,6 +26,7 @@ filters:
   - revealjs-html-links.lua
   - page-xrefs.lua
   - math-xrefs.lua
+  - latex-macros/citations/numeric-citations.lua
 
 # The pages of a chapter split across several pages, for page-xrefs.lua,
 # which resolves @id references from one of them to another, and sends
