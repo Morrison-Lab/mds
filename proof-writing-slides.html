@@ -106,6 +106,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -352,12 +353,12 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+  <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
 </section><section class="slide level2"><p>This page collects general advice on how to write <a href="#/def-proof">proofs</a> and <a href="#/def-derivation">derivations</a>. The goal of a proof is not just to convince yourself that a <a href="#/def-result">result</a> is true; it is to convince a <em>reader</em>, and to show them <em>why</em> it is true. Each principle on this page serves that goal. The symbols for <a href="#/def-logical-entailment">logical entailment</a> are listed under <a href="#/sec-proof-definitions">Definitions for proofs</a> below.</p>
 </section><section id="sec-proof-definitions" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Definitions for proofs</h2>
 <div id="def-proposition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Proposition (statement))</strong></span> A <strong>proposition</strong> <span class="citation" data-cites="wikipedia_proposition">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026u</a>)</span>, or <strong>statement</strong>, is a declarative sentence that is either true or false.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Proposition (statement))</strong></span> A <strong>proposition</strong> <span class="citation" data-cites="wikipedia_proposition"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, or <strong>statement</strong>, is a declarative sentence that is either true or false.</p>
 </div>
 </section><section class="slide level2"><div id="exm-proposition" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Propositions, and a sentence that is not one)</strong></span> &nbsp;</p>
@@ -368,7 +369,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-predicate" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Predicate)</strong></span> A <strong>predicate</strong> <span class="citation" data-cites="wikipedia_predicate_mathematical_logic">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026s</a>)</span> <span class="math inline">\(P(x)\)</span> is a declarative sentence about a variable <span class="math inline">\(x\)</span> that becomes a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) whenever a value is substituted for <span class="math inline">\(x\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Predicate)</strong></span> A <strong>predicate</strong> <span class="citation" data-cites="wikipedia_predicate_mathematical_logic"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> <span class="math inline">\(P(x)\)</span> is a declarative sentence about a variable <span class="math inline">\(x\)</span> that becomes a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) whenever a value is substituted for <span class="math inline">\(x\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-predicate" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (A predicate)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x &gt; 2\)</span>”, for real numbers <span class="math inline">\(x\)</span>.</p>
@@ -380,10 +381,10 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-logical-connective" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Logical connective)</strong></span> A <strong>logical connective</strong> <span class="citation" data-cites="wikipedia_logical_connective">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026k</a>)</span> builds a new proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) from one or two propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, with a truth value that depends only on the truth values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. These notes use five, defined next: not (<a href="#/def-not" class="quarto-xref">Definition&nbsp;4</a>), and (<a href="#/def-and" class="quarto-xref">Definition&nbsp;5</a>), or (<a href="#/def-or" class="quarto-xref">Definition&nbsp;6</a>), implies (<a href="#/def-implies" class="quarto-xref">Definition&nbsp;7</a>), and if and only if (<a href="#/def-iff" class="quarto-xref">Definition&nbsp;8</a>).</p>
+<p><span class="theorem-title"><strong>Definition 3 (Logical connective)</strong></span> A <strong>logical connective</strong> <span class="citation" data-cites="wikipedia_logical_connective"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> builds a new proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) from one or two propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, with a truth value that depends only on the truth values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. These notes use five, defined next: not (<a href="#/def-not" class="quarto-xref">Definition&nbsp;4</a>), and (<a href="#/def-and" class="quarto-xref">Definition&nbsp;5</a>), or (<a href="#/def-or" class="quarto-xref">Definition&nbsp;6</a>), implies (<a href="#/def-implies" class="quarto-xref">Definition&nbsp;7</a>), and if and only if (<a href="#/def-iff" class="quarto-xref">Definition&nbsp;8</a>).</p>
 </div>
 </section><section class="slide level2"><div id="def-not" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Not)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>not</strong> <span class="citation" data-cites="wikipedia_negation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026r</a>)</span> is written <span class="math inline">\(\neg P\)</span> (“not <span class="math inline">\(P\)</span>”); it is true when <span class="math inline">\(P\)</span> is false, and false when <span class="math inline">\(P\)</span> is true.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Not)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>not</strong> <span class="citation" data-cites="wikipedia_negation"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> is written <span class="math inline">\(\neg P\)</span> (“not <span class="math inline">\(P\)</span>”); it is true when <span class="math inline">\(P\)</span> is false, and false when <span class="math inline">\(P\)</span> is true.</p>
 </div>
 </section><section class="slide level2"><div id="exm-not" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (Negating a true and a false proposition)</strong></span> Let <span class="math inline">\(P\)</span> be “<span class="math inline">\(5 &gt; 3\)</span>”, which is true, and let <span class="math inline">\(Q\)</span> be “<span class="math inline">\(2 &gt; 3\)</span>”, which is false.</p>
@@ -395,7 +396,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-and" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (And)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>and</strong> is written <span class="citation" data-cites="wikipedia_logical_conjunction">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026j</a>)</span> <span class="math inline">\(P \land Q\)</span> (“<span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>”); it is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are both true, and false otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 5 (And)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>and</strong> is written <span class="citation" data-cites="wikipedia_logical_conjunction"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span> <span class="math inline">\(P \land Q\)</span> (“<span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>”); it is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are both true, and false otherwise.</p>
 </div>
 </section><section class="slide level2"><div id="exm-and" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (Two propositions joined by “and”)</strong></span> Let <span class="math inline">\(P\)</span> be “<span class="math inline">\(3 &lt; 5\)</span>”, which is true, let <span class="math inline">\(Q\)</span> be “<span class="math inline">\(5 &lt; 4\)</span>”, which is false, and let <span class="math inline">\(R\)</span> be “<span class="math inline">\(5 &lt; 7\)</span>”, which is true.</p>
@@ -407,7 +408,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-or" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Or)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>or</strong> is written <span class="citation" data-cites="wikipedia_logical_disjunction">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026m</a>)</span> <span class="math inline">\(P \lor Q\)</span> (“<span class="math inline">\(P\)</span> or <span class="math inline">\(Q\)</span>”); it is true when at least one of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> is true, and false when both are false.</p>
+<p><span class="theorem-title"><strong>Definition 6 (Or)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>or</strong> is written <span class="citation" data-cites="wikipedia_logical_disjunction"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span> <span class="math inline">\(P \lor Q\)</span> (“<span class="math inline">\(P\)</span> or <span class="math inline">\(Q\)</span>”); it is true when at least one of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> is true, and false when both are false.</p>
 </div>
 </section><section class="slide level2"><div id="exm-or" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Two propositions joined by “or”)</strong></span> Let <span class="math inline">\(P\)</span> be “<span class="math inline">\(3 &lt; 2\)</span>”, which is false, let <span class="math inline">\(Q\)</span> be “<span class="math inline">\(5 &lt; 7\)</span>”, which is true, and let <span class="math inline">\(R\)</span> be “<span class="math inline">\(5 &lt; 4\)</span>”, which is false.</p>
@@ -419,7 +420,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-implies" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Implies)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>implies</strong> is written <span class="citation" data-cites="wikipedia_material_conditional">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026n</a>)</span> <span class="math inline">\(P \Rightarrow Q\)</span> (“if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>”, or “<span class="math inline">\(P\)</span> implies <span class="math inline">\(Q\)</span>”); it is false when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false, and true otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 7 (Implies)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>implies</strong> is written <span class="citation" data-cites="wikipedia_material_conditional"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> <span class="math inline">\(P \Rightarrow Q\)</span> (“if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>”, or “<span class="math inline">\(P\)</span> implies <span class="math inline">\(Q\)</span>”); it is false when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false, and true otherwise.</p>
 </div>
 </section><section class="slide level2"><div id="exm-implies" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Implications with a true and a false premise)</strong></span> Take <span class="math inline">\(x = 3\)</span>.</p>
@@ -433,7 +434,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-iff" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (If and only if)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>if and only if</strong> is written <span class="citation" data-cites="wikipedia_logical_biconditional">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> <span class="math inline">\(P \Leftrightarrow Q\)</span> (“<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”); it is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> have the same truth value, and false otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 8 (If and only if)</strong></span> The logical connective (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>if and only if</strong> is written <span class="citation" data-cites="wikipedia_logical_biconditional"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> <span class="math inline">\(P \Leftrightarrow Q\)</span> (“<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”); it is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> have the same truth value, and false otherwise.</p>
 </div>
 </section><section class="slide level2"><div id="exm-iff" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (“If and only if” with equal and different truth values)</strong></span> Take <span class="math inline">\(x = 4\)</span>.</p>
@@ -460,10 +461,10 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-quantifier" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Quantifier)</strong></span> A <strong>quantifier</strong> <span class="citation" data-cites="wikipedia_quantifier_logic">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026w</a>)</span> turns a predicate <span class="math inline">\(P(x)\)</span> (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) about the elements <span class="math inline">\(x\)</span> of a set <span class="math inline">\(S\)</span> into a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>). There are two: the universal quantifier (<a href="#/def-universal-quantifier" class="quarto-xref">Definition&nbsp;10</a>) and the existential quantifier (<a href="#/def-existential-quantifier" class="quarto-xref">Definition&nbsp;11</a>).</p>
+<p><span class="theorem-title"><strong>Definition 9 (Quantifier)</strong></span> A <strong>quantifier</strong> <span class="citation" data-cites="wikipedia_quantifier_logic"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> turns a predicate <span class="math inline">\(P(x)\)</span> (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) about the elements <span class="math inline">\(x\)</span> of a set <span class="math inline">\(S\)</span> into a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>). There are two: the universal quantifier (<a href="#/def-universal-quantifier" class="quarto-xref">Definition&nbsp;10</a>) and the existential quantifier (<a href="#/def-existential-quantifier" class="quarto-xref">Definition&nbsp;11</a>).</p>
 </div>
 </section><section class="slide level2"><div id="def-universal-quantifier" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Universal quantifier)</strong></span> The <strong>universal quantifier</strong> <span class="citation" data-cites="wikipedia_universal_quantification">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026y</a>)</span> “for all” is a quantifier (<a href="#/def-quantifier" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\(\forall x \in S, P(x)\)</span> (“for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>, <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Universal quantifier)</strong></span> The <strong>universal quantifier</strong> <span class="citation" data-cites="wikipedia_universal_quantification"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span> “for all” is a quantifier (<a href="#/def-quantifier" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\(\forall x \in S, P(x)\)</span> (“for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>, <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
 </div>
 </section><section class="slide level2"><div id="exm-universal-quantifier" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (A universally quantified proposition)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x\)</span> is <a href="./number-systems.html#def-even-odd">even</a>”.</p>
@@ -473,7 +474,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-existential-quantifier" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Existential quantifier)</strong></span> The <strong>existential quantifier</strong> <span class="citation" data-cites="wikipedia_existential_quantification">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> “there exists” is a quantifier (<a href="#/def-quantifier" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\(\exists x \in S, P(x)\)</span> (“there is an <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span> such that <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for at least one element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Existential quantifier)</strong></span> The <strong>existential quantifier</strong> <span class="citation" data-cites="wikipedia_existential_quantification"><a href="#/references" role="doc-biblioref" onclick="">[11]</a></span> “there exists” is a quantifier (<a href="#/def-quantifier" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\(\exists x \in S, P(x)\)</span> (“there is an <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span> such that <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for at least one element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
 </div>
 </section><section class="slide level2"><div id="exm-existential-quantifier" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (An existentially quantified proposition)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x\)</span> is <a href="./number-systems.html#def-even-odd">even</a>”.</p>
@@ -513,7 +514,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-logical-entailment" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Logical entailment (logical consequence, deductive consequence))</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>, <a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) <strong>logically entail</strong> <span class="citation" data-cites="wikipedia_logical_consequence">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026l</a>)</span> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Logical entailment (logical consequence, deductive consequence))</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>, <a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) <strong>logically entail</strong> <span class="citation" data-cites="wikipedia_logical_consequence"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-logical-entailment" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Entailment, and its failure)</strong></span> Let <span class="math inline">\(x\)</span> be an <a href="./number-systems.html#def-integers">integer</a>.</p>
@@ -535,7 +536,7 @@
 <p>to denote logical entailment (<a href="#/def-logical-entailment" class="quarto-xref">Definition&nbsp;13</a>). <span class="math inline">\(\Rightarrow\)</span> also writes the connective “implies” (<a href="#/def-implies" class="quarto-xref">Definition&nbsp;7</a>); <span class="math inline">\(P\)</span> entails <span class="math inline">\(Q\)</span> exactly when <span class="math inline">\(P \Rightarrow Q\)</span> is true for every choice of values for the variables in <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>.</p>
 <p>Let’s save <span class="math inline">\(\rightarrow\)</span> (<code>\rightarrow</code>) for <a href="./algebra-exponentials.html#def-convergent-sequence">convergence</a> results.</p>
 </section><section class="slide level2"><div id="def-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Proof)</strong></span> A <strong>proof</strong> <span class="citation" data-cites="wikipedia_mathematical_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026p</a>)</span> of a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
+<p><span class="theorem-title"><strong>Definition 14 (Proof)</strong></span> A <strong>proof</strong> <span class="citation" data-cites="wikipedia_mathematical_proof"><a href="#/references" role="doc-biblioref" onclick="">[13]</a></span> of a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
 <ul>
 <li>an assumption,</li>
 <li>a definition,</li>
@@ -643,19 +644,19 @@ a + b
 <p><span class="proof-title"><em>Remark 1</em> (“Proposition” as a kind of result). </span>Some sources also call a result of moderate importance a “proposition”. In these notes, “proposition” always means a sentence that is true or false (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>), whether or not it has been proved.</p>
 </div>
 </section><section class="slide level2"><div id="def-theorem" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Theorem)</strong></span> A <strong>theorem</strong> <span class="citation" data-cites="wikipedia_theorem">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026x</a>)</span> is a result (<a href="#/def-result" class="quarto-xref">Definition&nbsp;16</a>) of interest in its own right.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Theorem)</strong></span> A <strong>theorem</strong> <span class="citation" data-cites="wikipedia_theorem"><a href="#/references" role="doc-biblioref" onclick="">[14]</a></span> is a result (<a href="#/def-result" class="quarto-xref">Definition&nbsp;16</a>) of interest in its own right.</p>
 </div>
 </section><section class="slide level2"><div id="exm-theorem-sum-evens" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (A theorem)</strong></span> “The sum of two even integers is even” is a result: <a href="#/exm-proof" class="quarto-xref">Example&nbsp;14</a> proves it. It is of interest in its own right, since it applies whenever two even integers are added, as in <span class="math inline">\(2 + 4 = 6\)</span>, so it is a theorem.</p>
 </div>
 </section><section class="slide level2"><div id="def-lemma" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Lemma)</strong></span> A <strong>lemma</strong> <span class="citation" data-cites="wikipedia_lemma_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026h</a>)</span> is a result (<a href="#/def-result" class="quarto-xref">Definition&nbsp;16</a>) proved mainly as a step in the proof of another result.</p>
+<p><span class="theorem-title"><strong>Definition 18 (Lemma)</strong></span> A <strong>lemma</strong> <span class="citation" data-cites="wikipedia_lemma_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[15]</a></span> is a result (<a href="#/def-result" class="quarto-xref">Definition&nbsp;16</a>) proved mainly as a step in the proof of another result.</p>
 </div>
 </section><section class="slide level2"><div id="exm-lemma" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (A lemma in the proof of a larger result)</strong></span> To show that the sum of four even integers <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span>, and <span class="math inline">\(d\)</span> is even, write <span class="math inline">\(a + b + c + d = (a + b) + (c + d)\)</span>. By the result of <a href="#/exm-proof" class="quarto-xref">Example&nbsp;14</a>, <span class="math inline">\(a + b\)</span> and <span class="math inline">\(c + d\)</span> are even, and applying that result again to these two sums shows that their sum is even. Here that result is proved mainly as a step in the proof of another result, so it serves as a lemma. For example, <span class="math inline">\(2 + 4 + 6 + 8 = (2 + 4) + (6 + 8) = 6 + 14 = 20\)</span>, which is even.</p>
 </div>
 </section><section class="slide level2"><div id="def-corollary" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Corollary)</strong></span> A <strong>corollary</strong> <span class="citation" data-cites="wikipedia_corollary">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> is a result (<a href="#/def-result" class="quarto-xref">Definition&nbsp;16</a>) that follows from a theorem with little extra work.</p>
+<p><span class="theorem-title"><strong>Definition 19 (Corollary)</strong></span> A <strong>corollary</strong> <span class="citation" data-cites="wikipedia_corollary"><a href="#/references" role="doc-biblioref" onclick="">[16]</a></span> is a result (<a href="#/def-result" class="quarto-xref">Definition&nbsp;16</a>) that follows from a theorem with little extra work.</p>
 </div>
 </section><section class="slide level2"><div id="exm-theorem" class="theorem example">
 <p><span class="theorem-title"><strong>Example 20 (A corollary of a result)</strong></span> <a href="#/exm-proof" class="quarto-xref">Example&nbsp;14</a> proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> is even, because <span class="math inline">\(a + b + c = (a + b) + c\)</span>, <span class="math inline">\(a + b\)</span> is even by that result, and applying the result again to the even integers <span class="math inline">\(a + b\)</span> and <span class="math inline">\(c\)</span> shows that <span class="math inline">\((a + b) + c\)</span> is even. For example,</p>
@@ -669,13 +670,13 @@ a + b
 <p>which is even.</p>
 </div>
 </section><section class="slide level2"><div id="def-counterexample" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Counterexample)</strong></span> A <strong>counterexample</strong> <span class="citation" data-cites="wikipedia_counterexample">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> to a proposition of the form “for every <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, <span class="math inline">\(P(x)\)</span>”, where <span class="math inline">\(P(x)\)</span> is a predicate (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>), is an element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is false. A single counterexample shows that the proposition is false.</p>
+<p><span class="theorem-title"><strong>Definition 20 (Counterexample)</strong></span> A <strong>counterexample</strong> <span class="citation" data-cites="wikipedia_counterexample"><a href="#/references" role="doc-biblioref" onclick="">[17]</a></span> to a proposition of the form “for every <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, <span class="math inline">\(P(x)\)</span>”, where <span class="math inline">\(P(x)\)</span> is a predicate (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>), is an element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is false. A single counterexample shows that the proposition is false.</p>
 </div>
 </section><section class="slide level2"><div id="exm-counterexample" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (A counterexample)</strong></span> The proposition “for every integer <span class="math inline">\(n\)</span>, <span class="math inline">\(n + n &gt; n\)</span>” is false. The integer <span class="math inline">\(n = 0\)</span> is a counterexample: <span class="math inline">\(0 + 0 = 0\)</span>, and <span class="math inline">\(0 &gt; 0\)</span> is false. The proposition is true for some integers, such as <span class="math inline">\(n = 3\)</span>, since <span class="math inline">\(3 + 3 = 6 &gt; 3\)</span>, but one counterexample is enough to make it false.</p>
 </div>
 </section><section class="slide level2"><div id="def-converse" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Converse)</strong></span> The <strong>converse</strong> <span class="citation" data-cites="wikipedia_converse_logic">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span> of the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is the proposition “if <span class="math inline">\(Q\)</span>, then <span class="math inline">\(P\)</span>”.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Converse)</strong></span> The <strong>converse</strong> <span class="citation" data-cites="wikipedia_converse_logic"><a href="#/references" role="doc-biblioref" onclick="">[18]</a></span> of the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is the proposition “if <span class="math inline">\(Q\)</span>, then <span class="math inline">\(P\)</span>”.</p>
 </div>
 </section><section class="slide level2"><div id="exm-converse" class="theorem example">
 <p><span class="theorem-title"><strong>Example 22 (A true proposition with a false converse)</strong></span> For an integer <span class="math inline">\(n\)</span>, call <span class="math inline">\(n\)</span> a multiple of <span class="math inline">\(4\)</span> if <span class="math inline">\(n = 4k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
@@ -695,19 +696,19 @@ n &amp;= 4k \\
 <p>So a proposition can be true while its converse is false.</p>
 </div>
 </section><section class="slide level2"><div id="def-sufficient-condition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Sufficient condition)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(P\)</span> is a <strong>sufficient condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026q</a>)</span> for <span class="math inline">\(Q\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 22 (Sufficient condition)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(P\)</span> is a <strong>sufficient condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency"><a href="#/references" role="doc-biblioref" onclick="">[19]</a></span> for <span class="math inline">\(Q\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-sufficient-condition" class="theorem example">
 <p><span class="theorem-title"><strong>Example 23 (A sufficient condition)</strong></span> For a real number <span class="math inline">\(x\)</span>, “if <span class="math inline">\(x &gt; 5\)</span>, then <span class="math inline">\(x &gt; 2\)</span>” is true, because a number greater than <span class="math inline">\(5\)</span> is greater than <span class="math inline">\(2\)</span>. So <span class="math inline">\(x &gt; 5\)</span> is a sufficient condition for <span class="math inline">\(x &gt; 2\)</span>: knowing that <span class="math inline">\(x = 6\)</span> satisfies <span class="math inline">\(x &gt; 5\)</span> is enough to conclude that <span class="math inline">\(6 &gt; 2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-necessary-condition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Necessary condition)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(Q\)</span> is a <strong>necessary condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026q</a>)</span> for <span class="math inline">\(P\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 23 (Necessary condition)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(Q\)</span> is a <strong>necessary condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency"><a href="#/references" role="doc-biblioref" onclick="">[19]</a></span> for <span class="math inline">\(P\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-necessary-condition" class="theorem example">
 <p><span class="theorem-title"><strong>Example 24 (A necessary condition)</strong></span> For an integer <span class="math inline">\(n\)</span>, “if <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(6\)</span>, then <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(3\)</span>” is true, because <span class="math inline">\(6k = 3 \cdot(2k)\)</span> for every integer <span class="math inline">\(k\)</span>. So being a multiple of <span class="math inline">\(3\)</span> is a necessary condition for being a multiple of <span class="math inline">\(6\)</span>: <span class="math inline">\(12 = 6 \cdot 2\)</span> is a multiple of <span class="math inline">\(6\)</span>, and it is also a multiple of <span class="math inline">\(3\)</span>, since <span class="math inline">\(12 = 3 \cdot 4\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-necessary-sufficient" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 24 (Necessary and sufficient condition)</strong></span> When both “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” and its converse (<a href="#/def-converse" class="quarto-xref">Definition&nbsp;21</a>) are true, <span class="math inline">\(P\)</span> is a <strong>necessary and sufficient condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026q</a>)</span> for <span class="math inline">\(Q\)</span> (<a href="#/def-sufficient-condition" class="quarto-xref">Definition&nbsp;22</a>, <a href="#/def-necessary-condition" class="quarto-xref">Definition&nbsp;23</a>), written “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</p>
+<p><span class="theorem-title"><strong>Definition 24 (Necessary and sufficient condition)</strong></span> When both “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” and its converse (<a href="#/def-converse" class="quarto-xref">Definition&nbsp;21</a>) are true, <span class="math inline">\(P\)</span> is a <strong>necessary and sufficient condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency"><a href="#/references" role="doc-biblioref" onclick="">[19]</a></span> for <span class="math inline">\(Q\)</span> (<a href="#/def-sufficient-condition" class="quarto-xref">Definition&nbsp;22</a>, <a href="#/def-necessary-condition" class="quarto-xref">Definition&nbsp;23</a>), written “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</p>
 </div>
 </section><section class="slide level2"><div id="exm-necessary-sufficient" class="theorem example">
 <p><span class="theorem-title"><strong>Example 25 (Necessary but not sufficient)</strong></span> In <a href="#/exm-converse" class="quarto-xref">Example&nbsp;22</a>, “if <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>, then <span class="math inline">\(n\)</span> is even” is true, so:</p>
@@ -718,7 +719,7 @@ n &amp;= 4k \\
 <p>Being even is not a sufficient condition for being a multiple of <span class="math inline">\(4\)</span>: <span class="math inline">\(n = 2\)</span> is even, but not a multiple of <span class="math inline">\(4\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-proof-by-contradiction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 25 (Proof by contradiction)</strong></span> A <strong>proof by contradiction</strong> <span class="citation" data-cites="wikipedia_proof_by_contradiction">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026t</a>)</span> of a proposition <span class="math inline">\(P\)</span> assumes that <span class="math inline">\(P\)</span> is false, and derives from that assumption a proposition that is known to be false.</p>
+<p><span class="theorem-title"><strong>Definition 25 (Proof by contradiction)</strong></span> A <strong>proof by contradiction</strong> <span class="citation" data-cites="wikipedia_proof_by_contradiction"><a href="#/references" role="doc-biblioref" onclick="">[20]</a></span> of a proposition <span class="math inline">\(P\)</span> assumes that <span class="math inline">\(P\)</span> is false, and derives from that assumption a proposition that is known to be false.</p>
 </div>
 </section><section class="slide level2"><div id="exm-proof-by-contradiction" class="theorem example">
 <p><span class="theorem-title"><strong>Example 26 (No integer is both even and odd)</strong></span> Suppose, for contradiction, that some integer <span class="math inline">\(n\)</span> is both even and odd (<a href="./number-systems.html#def-even-odd">definition</a>). Then <span class="math inline">\(n = 2j\)</span> and <span class="math inline">\(n = 2k + 1\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
@@ -798,7 +799,7 @@ j - k &amp;= \tfrac{1}{2}
 </section><section id="sec-direct-proof" class="slide level2" data-number="4"><h2>
 <span class="header-section-number">4</span> Direct proof</h2>
 <div id="def-direct-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 26 (Direct proof)</strong></span> A <strong>direct proof</strong> <span class="citation" data-cites="wikipedia_direct_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of a proposition <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="#/def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
+<p><span class="theorem-title"><strong>Definition 26 (Direct proof)</strong></span> A <strong>direct proof</strong> <span class="citation" data-cites="wikipedia_direct_proof"><a href="#/references" role="doc-biblioref" onclick="">[21]</a></span> of a proposition <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="#/def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
 </div>
 </section><section class="slide level2"><div id="exm-direct-proof" class="theorem example">
 <p><span class="theorem-title"><strong>Example 28 (The square of an odd integer is odd)</strong></span> Claim: if <span class="math inline">\(n\)</span> is an <a href="./number-systems.html#def-odd">odd</a> integer, then <span class="math inline">\(n^2\)</span> is odd.</p>
@@ -841,7 +842,7 @@ n^2 &amp;= 49 \\
 <span class="header-section-number">6</span> Proof by induction</h2>
 <p>Many proofs in these notes show that a statement holds for every <a href="./number-systems.html#def-natural-numbers">natural number</a> <span class="math inline">\(n\)</span>, or for every integer <span class="math inline">\(n\)</span> from some starting value on. Checking the statement one <span class="math inline">\(n\)</span> at a time would never finish; induction proves it for all of them with two arguments.</p>
 <div id="def-proof-by-induction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 27 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./number-systems.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> <span class="citation" data-cites="wikipedia_mathematical_induction">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026o</a>)</span> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
+<p><span class="theorem-title"><strong>Definition 27 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./number-systems.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> <span class="citation" data-cites="wikipedia_mathematical_induction"><a href="#/references" role="doc-biblioref" onclick="">[22]</a></span> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
 <ol type="1">
 <li>
 <strong>Base case:</strong> <span class="math inline">\(P(n_0)\)</span> holds.</li>
@@ -928,13 +929,13 @@ n^2 &amp;= 49 \\
 </section><section id="sec-formal-logic" class="slide level2" data-number="7"><h2>
 <span class="header-section-number">7</span> Formal logic</h2>
 <div id="def-propositional-logic" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 28 (Propositional logic)</strong></span> <strong>Propositional logic</strong> <span class="citation" data-cites="wikipedia_propositional_calculus">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026v</a>)</span> is the study of <a href="#/def-logical-entailment">logical entailment</a> among <a href="#/def-proposition">propositions</a> built from basic propositions <span class="math inline">\(P, Q, R, \ldots\)</span> using only the <a href="#/def-logical-connective">logical connectives</a>. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.</p>
+<p><span class="theorem-title"><strong>Definition 28 (Propositional logic)</strong></span> <strong>Propositional logic</strong> <span class="citation" data-cites="wikipedia_propositional_calculus"><a href="#/references" role="doc-biblioref" onclick="">[23]</a></span> is the study of <a href="#/def-logical-entailment">logical entailment</a> among <a href="#/def-proposition">propositions</a> built from basic propositions <span class="math inline">\(P, Q, R, \ldots\)</span> using only the <a href="#/def-logical-connective">logical connectives</a>. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.</p>
 </div>
 </section><section class="slide level2"><div id="exm-propositional-logic" class="theorem example">
 <p><span class="theorem-title"><strong>Example 30 (<span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> entail <span class="math inline">\(Q\)</span>)</strong></span> Suppose <span class="math inline">\(P\)</span> is true and <span class="math inline">\(P \Rightarrow Q\)</span> is true. If <span class="math inline">\(Q\)</span> were false, then <span class="math inline">\(P \Rightarrow Q\)</span> would have a true <span class="math inline">\(P\)</span> and a false <span class="math inline">\(Q\)</span>, so <span class="math inline">\(P \Rightarrow Q\)</span> would be false, which contradicts the assumption. So <span class="math inline">\(Q\)</span> is true. This holds whatever <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> say, so <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> logically entail <span class="math inline">\(Q\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-first-order-logic" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 29 (First-order logic)</strong></span> <strong>First-order logic</strong> <span class="citation" data-cites="wikipedia_first_order_logic">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span> extends propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;28</a>) by also allowing:</p>
+<p><span class="theorem-title"><strong>Definition 29 (First-order logic)</strong></span> <strong>First-order logic</strong> <span class="citation" data-cites="wikipedia_first_order_logic"><a href="#/references" role="doc-biblioref" onclick="">[24]</a></span> extends propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;28</a>) by also allowing:</p>
 <ul>
 <li>variables <span class="math inline">\(x, y, \ldots\)</span> that stand for elements of a set;</li>
 <li>
@@ -950,7 +951,7 @@ n^2 &amp;= 49 \\
 <p><span class="theorem-title"><strong>Example 31 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a predicate about the elements of a set <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The propositions <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> logically entail <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. Propositional logic alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-formal-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 30 (Formal proof)</strong></span> A <strong>formal proof</strong> <span class="citation" data-cites="wikipedia_formal_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026g</a>)</span> is a <a href="#/def-proof">proof</a> written in propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;28</a>) or first-order logic (<a href="#/def-first-order-logic" class="quarto-xref">Definition&nbsp;29</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.</p>
+<p><span class="theorem-title"><strong>Definition 30 (Formal proof)</strong></span> A <strong>formal proof</strong> <span class="citation" data-cites="wikipedia_formal_proof"><a href="#/references" role="doc-biblioref" onclick="">[25]</a></span> is a <a href="#/def-proof">proof</a> written in propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;28</a>) or first-order logic (<a href="#/def-first-order-logic" class="quarto-xref">Definition&nbsp;29</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exm-formal-proof" class="theorem example">
 <p><span class="theorem-title"><strong>Example 32 (A three-step formal proof)</strong></span> Suppose the allowed rules include “from <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>, conclude <span class="math inline">\(Q\)</span>”. Then this is a formal proof of <span class="math inline">\(Q\)</span> from the assumptions <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>:</p>
@@ -966,33 +967,33 @@ n^2 &amp;= 49 \\
 </section><section id="sec-further-reading" class="slide level2" data-number="8"><h2>
 <span class="header-section-number">8</span> Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> is a structured introduction to proof techniques such as <a href="#/def-direct-proof">direct proof</a>, <a href="./proof-writing.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</p></li>
-<li><p><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> treats proofs as <a href="#/def-formal-proof">formal proofs</a> in <a href="#/def-propositional-logic">propositional logic</a> and <a href="#/def-first-order-logic">first-order logic</a>.</p></li>
-<li><p><span class="citation" data-cites="wikipedia_direct_proof">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026d</a>)</span> — direct proofs</p></li>
-<li><p><span class="citation" data-cites="wikipedia_mathematical_proof">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026p</a>)</span> — proofs, with the main techniques</p></li>
-<li><p><span class="citation" data-cites="wikipedia_proof_by_contradiction">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026t</a>)</span> — proof by contradiction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_mathematical_induction">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026o</a>)</span> — mathematical induction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_counterexample">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026c</a>)</span> — counterexamples</p></li>
-<li><p><span class="citation" data-cites="wikipedia_proposition">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026u</a>)</span> — propositions</p></li>
-<li><p><span class="citation" data-cites="wikipedia_predicate_mathematical_logic">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026s</a>)</span> — predicates</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_connective">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026k</a>)</span> — logical connectives</p></li>
-<li><p><span class="citation" data-cites="wikipedia_negation">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026r</a>)</span> — negation</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_conjunction">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026j</a>)</span> — logical conjunction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_disjunction">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026m</a>)</span> — logical disjunction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_material_conditional">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026n</a>)</span> — the material conditional</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_biconditional">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026i</a>)</span> — the biconditional</p></li>
-<li><p><span class="citation" data-cites="wikipedia_converse_logic">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026a</a>)</span> — converses</p></li>
-<li><p><span class="citation" data-cites="wikipedia_necessity_and_sufficiency">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026q</a>)</span> — necessary and sufficient conditions</p></li>
-<li><p><span class="citation" data-cites="wikipedia_quantifier_logic">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026w</a>)</span> — quantifiers</p></li>
-<li><p><span class="citation" data-cites="wikipedia_universal_quantification">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026y</a>)</span> — universal quantification</p></li>
-<li><p><span class="citation" data-cites="wikipedia_existential_quantification">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026e</a>)</span> — existential quantification</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_consequence">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026l</a>)</span> — logical consequence</p></li>
-<li><p><span class="citation" data-cites="wikipedia_propositional_calculus">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026v</a>)</span> — propositional logic</p></li>
-<li><p><span class="citation" data-cites="wikipedia_first_order_logic">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026f</a>)</span> — first-order logic</p></li>
-<li><p><span class="citation" data-cites="wikipedia_formal_proof">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026g</a>)</span> — formal proofs</p></li>
-<li><p><span class="citation" data-cites="wikipedia_theorem">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026x</a>)</span> — theorems</p></li>
-<li><p><span class="citation" data-cites="wikipedia_lemma_mathematics">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026h</a>)</span> — lemmas</p></li>
-<li><p><span class="citation" data-cites="wikipedia_corollary">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026b</a>)</span> — corollaries</p></li>
+<li><p><span class="citation" data-cites="velleman2019prove">Velleman <a href="#/references" role="doc-biblioref" onclick="">[26]</a></span> is a structured introduction to proof techniques such as <a href="#/def-direct-proof">direct proof</a>, <a href="./proof-writing.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</p></li>
+<li><p><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. <a href="#/references" role="doc-biblioref" onclick="">[27]</a></span> treats proofs as <a href="#/def-formal-proof">formal proofs</a> in <a href="#/def-propositional-logic">propositional logic</a> and <a href="#/def-first-order-logic">first-order logic</a>.</p></li>
+<li><p><span class="citation" data-cites="wikipedia_direct_proof">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[21]</a></span> — direct proofs</p></li>
+<li><p><span class="citation" data-cites="wikipedia_mathematical_proof">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[13]</a></span> — proofs, with the main techniques</p></li>
+<li><p><span class="citation" data-cites="wikipedia_proof_by_contradiction">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[20]</a></span> — proof by contradiction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_mathematical_induction">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[22]</a></span> — mathematical induction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_counterexample">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[17]</a></span> — counterexamples</p></li>
+<li><p><span class="citation" data-cites="wikipedia_proposition">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> — propositions</p></li>
+<li><p><span class="citation" data-cites="wikipedia_predicate_mathematical_logic">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> — predicates</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_connective">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> — logical connectives</p></li>
+<li><p><span class="citation" data-cites="wikipedia_negation">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> — negation</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_conjunction">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[5]</a></span> — logical conjunction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_disjunction">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[6]</a></span> — logical disjunction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_material_conditional">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> — the material conditional</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_biconditional">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> — the biconditional</p></li>
+<li><p><span class="citation" data-cites="wikipedia_converse_logic">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[18]</a></span> — converses</p></li>
+<li><p><span class="citation" data-cites="wikipedia_necessity_and_sufficiency">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[19]</a></span> — necessary and sufficient conditions</p></li>
+<li><p><span class="citation" data-cites="wikipedia_quantifier_logic">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> — quantifiers</p></li>
+<li><p><span class="citation" data-cites="wikipedia_universal_quantification">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span> — universal quantification</p></li>
+<li><p><span class="citation" data-cites="wikipedia_existential_quantification">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span> — existential quantification</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_consequence">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[12]</a></span> — logical consequence</p></li>
+<li><p><span class="citation" data-cites="wikipedia_propositional_calculus">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[23]</a></span> — propositional logic</p></li>
+<li><p><span class="citation" data-cites="wikipedia_first_order_logic">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[24]</a></span> — first-order logic</p></li>
+<li><p><span class="citation" data-cites="wikipedia_formal_proof">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[25]</a></span> — formal proofs</p></li>
+<li><p><span class="citation" data-cites="wikipedia_theorem">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[14]</a></span> — theorems</p></li>
+<li><p><span class="citation" data-cites="wikipedia_lemma_mathematics">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[15]</a></span> — lemmas</p></li>
+<li><p><span class="citation" data-cites="wikipedia_corollary">Wikipedia contributors <a href="#/references" role="doc-biblioref" onclick="">[16]</a></span> — corollaries</p></li>
 </ul>
 <p>Free course materials on formal logic:</p>
 <ul>
@@ -1000,87 +1001,140 @@ n^2 &amp;= 49 \\
 <li>John Wilcox’s <a href="https://www.johnwilcox.org/logic.html">logic handouts</a> supplement the same Stanford course, with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.</li>
 <li>Eric Pacuit’s <a href="https://cs.stanford.edu/~epacuit/classes/phil151winter09.html">Phil 151: First Order Logic</a> (Stanford, Winter 2009) posts a syllabus, a modal logic study guide and problem sets.</li>
 </ul></section><section id="references" class="slide level2 unnumbered smaller scrollable"><h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-barkerplummer2011language" class="csl-entry" role="listitem">
-Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. <em>Language, Proof and Logic</em>. 2nd ed. CSLI Publications. <a href="https://www.amazon.com/dp/1575866323">https://www.amazon.com/dp/1575866323</a>.
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-wikipedia_proposition" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Proposition — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Proposition">https://en.wikipedia.org/wiki/Proposition</a>
 </div>
-<div id="ref-velleman2019prove" class="csl-entry" role="listitem">
-Velleman, Daniel J. 2019. <em>How to Prove It: A Structured Approach</em>. 3rd ed. Cambridge University Press. <a href="https://doi.org/10.1017/9781108539890">https://doi.org/10.1017/9781108539890</a>.
-</div>
-<div id="ref-wikipedia_converse_logic" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Converse (Logic) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Converse_(logic)">https://en.wikipedia.org/wiki/Converse_(logic)</a>.
-</div>
-<div id="ref-wikipedia_corollary" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Corollary — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Corollary">https://en.wikipedia.org/wiki/Corollary</a>.
-</div>
-<div id="ref-wikipedia_counterexample" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Counterexample — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Counterexample">https://en.wikipedia.org/wiki/Counterexample</a>.
-</div>
-<div id="ref-wikipedia_direct_proof" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Direct Proof — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Direct_proof">https://en.wikipedia.org/wiki/Direct_proof</a>.
-</div>
-<div id="ref-wikipedia_existential_quantification" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Existential Quantification — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Existential_quantification">https://en.wikipedia.org/wiki/Existential_quantification</a>.
-</div>
-<div id="ref-wikipedia_first_order_logic" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>First-Order Logic — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/First-order_logic">https://en.wikipedia.org/wiki/First-order_logic</a>.
-</div>
-<div id="ref-wikipedia_formal_proof" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Formal Proof — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Formal_proof">https://en.wikipedia.org/wiki/Formal_proof</a>.
-</div>
-<div id="ref-wikipedia_lemma_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Lemma (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Lemma_(mathematics)">https://en.wikipedia.org/wiki/Lemma_(mathematics)</a>.
-</div>
-<div id="ref-wikipedia_logical_biconditional" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026i. <em>Logical Biconditional — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_biconditional">https://en.wikipedia.org/wiki/Logical_biconditional</a>.
-</div>
-<div id="ref-wikipedia_logical_conjunction" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026j. <em>Logical Conjunction — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_conjunction">https://en.wikipedia.org/wiki/Logical_conjunction</a>.
-</div>
-<div id="ref-wikipedia_logical_connective" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026k. <em>Logical Connective — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_connective">https://en.wikipedia.org/wiki/Logical_connective</a>.
-</div>
-<div id="ref-wikipedia_logical_consequence" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026l. <em>Logical Consequence — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_consequence">https://en.wikipedia.org/wiki/Logical_consequence</a>.
-</div>
-<div id="ref-wikipedia_logical_disjunction" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026m. <em>Logical Disjunction — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_disjunction">https://en.wikipedia.org/wiki/Logical_disjunction</a>.
-</div>
-<div id="ref-wikipedia_material_conditional" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026n. <em>Material Conditional — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Material_conditional">https://en.wikipedia.org/wiki/Material_conditional</a>.
-</div>
-<div id="ref-wikipedia_mathematical_induction" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026o. <em>Mathematical Induction — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Mathematical_induction">https://en.wikipedia.org/wiki/Mathematical_induction</a>.
-</div>
-<div id="ref-wikipedia_mathematical_proof" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026p. <em>Mathematical Proof — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Mathematical_proof">https://en.wikipedia.org/wiki/Mathematical_proof</a>.
-</div>
-<div id="ref-wikipedia_necessity_and_sufficiency" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026q. <em>Necessity and Sufficiency — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Necessity_and_sufficiency">https://en.wikipedia.org/wiki/Necessity_and_sufficiency</a>.
-</div>
-<div id="ref-wikipedia_negation" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026r. <em>Negation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Negation">https://en.wikipedia.org/wiki/Negation</a>.
 </div>
 <div id="ref-wikipedia_predicate_mathematical_logic" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026s. <em>Predicate (Mathematical Logic) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)">https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)</a>.
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Predicate (mathematical logic) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)">https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)</a>
 </div>
-<div id="ref-wikipedia_proof_by_contradiction" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026t. <em>Proof by Contradiction — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Proof_by_contradiction">https://en.wikipedia.org/wiki/Proof_by_contradiction</a>.
 </div>
-<div id="ref-wikipedia_proposition" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026u. <em>Proposition — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Proposition">https://en.wikipedia.org/wiki/Proposition</a>.
+<div id="ref-wikipedia_logical_connective" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical connective — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_connective">https://en.wikipedia.org/wiki/Logical_connective</a>
 </div>
-<div id="ref-wikipedia_propositional_calculus" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026v. <em>Propositional Calculus — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Propositional_calculus">https://en.wikipedia.org/wiki/Propositional_calculus</a>.
+</div>
+<div id="ref-wikipedia_negation" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Negation — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Negation">https://en.wikipedia.org/wiki/Negation</a>
+</div>
+</div>
+<div id="ref-wikipedia_logical_conjunction" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical conjunction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_conjunction">https://en.wikipedia.org/wiki/Logical_conjunction</a>
+</div>
+</div>
+<div id="ref-wikipedia_logical_disjunction" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical disjunction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_disjunction">https://en.wikipedia.org/wiki/Logical_disjunction</a>
+</div>
+</div>
+<div id="ref-wikipedia_material_conditional" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Material conditional — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Material_conditional">https://en.wikipedia.org/wiki/Material_conditional</a>
+</div>
+</div>
+<div id="ref-wikipedia_logical_biconditional" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical biconditional — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_biconditional">https://en.wikipedia.org/wiki/Logical_biconditional</a>
+</div>
 </div>
 <div id="ref-wikipedia_quantifier_logic" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026w. <em>Quantifier (Logic) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Quantifier_(logic)">https://en.wikipedia.org/wiki/Quantifier_(logic)</a>.
+<div class="csl-left-margin">[9] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Quantifier (logic) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Quantifier_(logic)">https://en.wikipedia.org/wiki/Quantifier_(logic)</a>
 </div>
-<div id="ref-wikipedia_theorem" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026x. <em>Theorem — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Theorem">https://en.wikipedia.org/wiki/Theorem</a>.
 </div>
 <div id="ref-wikipedia_universal_quantification" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026y. <em>Universal Quantification — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Universal_quantification">https://en.wikipedia.org/wiki/Universal_quantification</a>.
+<div class="csl-left-margin">[10] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Universal quantification — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Universal_quantification">https://en.wikipedia.org/wiki/Universal_quantification</a>
+</div>
+</div>
+<div id="ref-wikipedia_existential_quantification" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Existential quantification — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Existential_quantification">https://en.wikipedia.org/wiki/Existential_quantification</a>
+</div>
+</div>
+<div id="ref-wikipedia_logical_consequence" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical consequence — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_consequence">https://en.wikipedia.org/wiki/Logical_consequence</a>
+</div>
+</div>
+<div id="ref-wikipedia_mathematical_proof" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Mathematical proof — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Mathematical_proof">https://en.wikipedia.org/wiki/Mathematical_proof</a>
+</div>
+</div>
+<div id="ref-wikipedia_theorem" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Theorem — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Theorem">https://en.wikipedia.org/wiki/Theorem</a>
+</div>
+</div>
+<div id="ref-wikipedia_lemma_mathematics" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Lemma (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Lemma_(mathematics)">https://en.wikipedia.org/wiki/Lemma_(mathematics)</a>
+</div>
+</div>
+<div id="ref-wikipedia_corollary" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Corollary — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Corollary">https://en.wikipedia.org/wiki/Corollary</a>
+</div>
+</div>
+<div id="ref-wikipedia_counterexample" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Counterexample — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Counterexample">https://en.wikipedia.org/wiki/Counterexample</a>
+</div>
+</div>
+<div id="ref-wikipedia_converse_logic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[18] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Converse (logic) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Converse_(logic)">https://en.wikipedia.org/wiki/Converse_(logic)</a>
+</div>
+</div>
+<div id="ref-wikipedia_necessity_and_sufficiency" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[19] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Necessity and sufficiency — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Necessity_and_sufficiency">https://en.wikipedia.org/wiki/Necessity_and_sufficiency</a>
+</div>
+</div>
+<div id="ref-wikipedia_proof_by_contradiction" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[20] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Proof by contradiction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Proof_by_contradiction">https://en.wikipedia.org/wiki/Proof_by_contradiction</a>
+</div>
+</div>
+<div id="ref-wikipedia_direct_proof" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[21] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Direct proof — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Direct_proof">https://en.wikipedia.org/wiki/Direct_proof</a>
+</div>
+</div>
+<div id="ref-wikipedia_mathematical_induction" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[22] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Mathematical induction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Mathematical_induction">https://en.wikipedia.org/wiki/Mathematical_induction</a>
+</div>
+</div>
+<div id="ref-wikipedia_propositional_calculus" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[23] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Propositional calculus — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Propositional_calculus">https://en.wikipedia.org/wiki/Propositional_calculus</a>
+</div>
+</div>
+<div id="ref-wikipedia_first_order_logic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[24] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“First-order logic — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/First-order_logic">https://en.wikipedia.org/wiki/First-order_logic</a>
+</div>
+</div>
+<div id="ref-wikipedia_formal_proof" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[25] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Formal proof — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Formal_proof">https://en.wikipedia.org/wiki/Formal_proof</a>
+</div>
+</div>
+<div id="ref-velleman2019prove" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[26] </div>
+<div class="csl-right-inline">D. J. Velleman, <em>How to prove it: A structured approach</em>, 3rd ed. Cambridge University Press, 2019. doi: <a href="https://doi.org/10.1017/9781108539890">10.1017/9781108539890</a>.</div>
+</div>
+<div id="ref-barkerplummer2011language" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[27] </div>
+<div class="csl-right-inline">D. Barker-Plummer, J. Barwise, and J. Etchemendy, <em>Language, proof and logic</em>, 2nd ed. Stanford, CA: CSLI Publications, 2011. Available: <a href="https://www.amazon.com/dp/1575866323">https://www.amazon.com/dp/1575866323</a>
+</div>
 </div>
 </div>
 

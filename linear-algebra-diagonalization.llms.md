@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Similarity and diagonalization
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024a](#ref-zhou2024eig)), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). These notes take eigenvalues to be real numbers ([Definition 16 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)), so the source’s complex eigenvalues are left out, and eigenvalues are characterized through null spaces rather than through the characteristic polynomial. Only the source’s material on similarity, diagonalization and the basic eigenvalue properties is adapted; its characteristic polynomial and algebraic multiplicity, its trace and determinant identities, and its section on symmetric matrices (covered by [Theorem 12 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral)) are left out, and its result that eigenvalues of orthogonal matrices have modulus \\1\\ appears here in the real form \\\pm 1\\. The source’s two-vector argument that eigenvectors for distinct eigenvalues are independent is extended here to any number of eigenvectors.
+> This section is adapted from Zhou [\[1\]](#ref-zhou2024eig), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). These notes take eigenvalues to be real numbers ([Definition 16 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)), so the source’s complex eigenvalues are left out, and eigenvalues are characterized through null spaces rather than through the characteristic polynomial. Only the source’s material on similarity, diagonalization and the basic eigenvalue properties is adapted; its characteristic polynomial and algebraic multiplicity, its trace and determinant identities, and its section on symmetric matrices (covered by [Theorem 12 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral)) are left out, and its result that eigenvalues of orthogonal matrices have modulus \\1\\ appears here in the real form \\\pm 1\\. The source’s two-vector argument that eigenvectors for distinct eigenvalues are independent is extended here to any number of eigenvectors.
 
 > **NOTE:**
 >
@@ -39,7 +39,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Eigenspace)** Let \\\lambda\\ be an eigenvalue of a \\p \times p\\ matrix \\\mathbf{A}\\ ([Definition 16 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)). The **eigenspace** ([Wikipedia contributors 2026d](#ref-wikipedia_eigenvalues_and_eigenvectors)) of \\\lambda\\ is \\\mathcal{E}\_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\\\mathbf{I}\_p)\\. It is a subspace of \\\mathbb{R}^p\\ ([Theorem 2 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-null-space-subspace)).
+> **Definition 1 (Eigenspace)** Let \\\lambda\\ be an eigenvalue of a \\p \times p\\ matrix \\\mathbf{A}\\ ([Definition 16 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)). The **eigenspace** [\[2\]](#ref-wikipedia_eigenvalues_and_eigenvectors) of \\\lambda\\ is \\\mathcal{E}\_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\\\mathbf{I}\_p)\\. It is a subspace of \\\mathbb{R}^p\\ ([Theorem 2 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-null-space-subspace)).
 
 > **NOTE:**
 >
@@ -187,7 +187,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Similar matrices)** Two \\p \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ are **similar** ([Wikipedia contributors 2026e](#ref-wikipedia_matrix_similarity)) if \\\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\\ for some invertible \\p \times p\\ matrix \\\mathbf{P}\\ ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
+> **Definition 3 (Similar matrices)** Two \\p \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ are **similar** [\[3\]](#ref-wikipedia_matrix_similarity) if \\\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\\ for some invertible \\p \times p\\ matrix \\\mathbf{P}\\ ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
 
 > **NOTE:**
 >
@@ -273,7 +273,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Diagonalizable matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **diagonalizable** ([Wikipedia contributors 2026c](#ref-wikipedia_diagonalizable_matrix)) if \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\ for some invertible \\p \times p\\ matrix \\\mathbf{X}\\ and diagonal \\p \times p\\ matrix \\\mathbf{\Lambda}\\ ([Definition 4 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)); by [Remark 1](#rem-similar-both-ways), that is the same as \\\mathbf{\Lambda} = \mathbf{X}^{-1} \mathbf{A} \mathbf{X}\\, so a diagonalizable matrix is one similar to a diagonal matrix ([Definition 3](#def-similar)).
+> **Definition 4 (Diagonalizable matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **diagonalizable** [\[4\]](#ref-wikipedia_diagonalizable_matrix) if \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\ for some invertible \\p \times p\\ matrix \\\mathbf{X}\\ and diagonal \\p \times p\\ matrix \\\mathbf{\Lambda}\\ ([Definition 4 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)); by [Remark 1](#rem-similar-both-ways), that is the same as \\\mathbf{\Lambda} = \mathbf{X}^{-1} \mathbf{A} \mathbf{X}\\, so a diagonalizable matrix is one similar to a diagonal matrix ([Definition 3](#def-similar)).
 
 > **NOTE:**
 >
@@ -353,7 +353,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024b](#ref-zhou2024pd)), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already ([Theorem 15 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-definite-eigenvalues)). These parts of the source are left out:
+> This section is adapted from Zhou [\[5\]](#ref-zhou2024pd), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already ([Theorem 15 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-definite-eigenvalues)). These parts of the source are left out:
 >
 > - its covariance test, which needs probability
 > - its material on minimization
@@ -498,7 +498,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 >
 > \\ \mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D} \end{bmatrix}, \\
 >
-> where \\\mathbf{A}\\ (\\k \times l\\) holds the entries \\x\_{ij}\\ with \\i \le k\\ and \\j \le l\\, \\\mathbf{B}\\ (\\k \times (n - l)\\) those with \\i \le k\\ and \\j \> l\\, \\\mathbf{C}\\ (\\(m - k) \times l\\) those with \\i \> k\\ and \\j \le l\\, and \\\mathbf{D}\\ (\\(m - k) \times (n - l)\\) those with \\i \> k\\ and \\j \> l\\, each in its original order. A matrix written this way is a **block matrix** ([Wikipedia contributors 2026a](#ref-wikipedia_block_matrix)).
+> where \\\mathbf{A}\\ (\\k \times l\\) holds the entries \\x\_{ij}\\ with \\i \le k\\ and \\j \le l\\, \\\mathbf{B}\\ (\\k \times (n - l)\\) those with \\i \le k\\ and \\j \> l\\, \\\mathbf{C}\\ (\\(m - k) \times l\\) those with \\i \> k\\ and \\j \le l\\, and \\\mathbf{D}\\ (\\(m - k) \times (n - l)\\) those with \\i \> k\\ and \\j \> l\\, each in its original order. A matrix written this way is a **block matrix** [\[6\]](#ref-wikipedia_block_matrix).
 
 > **NOTE:**
 >
@@ -600,7 +600,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Schur complement)** For a block matrix \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ as in [Theorem 15](#thm-block-quadratic) with \\\mathbf{A}\\ invertible, the **Schur complement** ([Wikipedia contributors 2026f](#ref-wikipedia_schur_complement)) of \\\mathbf{A}\\ in \\\mathbf{X}\\ is the \\m \times m\\ matrix \\\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\\ defined in [Theorem 15](#thm-block-quadratic).
+> **Definition 7 (Schur complement)** For a block matrix \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ as in [Theorem 15](#thm-block-quadratic) with \\\mathbf{A}\\ invertible, the **Schur complement** [\[7\]](#ref-wikipedia_schur_complement) of \\\mathbf{A}\\ in \\\mathbf{X}\\ is the \\m \times m\\ matrix \\\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\\ defined in [Theorem 15](#thm-block-quadratic).
 
 > **NOTE:**
 >
@@ -641,7 +641,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 17 (Cholesky factorization)** A \\p \times p\\ matrix \\\mathbf{A}\\ is positive definite ([Definition 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\\ for some lower triangular \\\mathbf{L}\\ ([Definition 8 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-lower-triangular-matrix)) with positive diagonal entries. For a positive definite \\\mathbf{A}\\ that \\\mathbf{L}\\ is unique; it is the **Cholesky factor** ([Wikipedia contributors 2026b](#ref-wikipedia_cholesky_decomposition)) of \\\mathbf{A}\\.
+> **Theorem 17 (Cholesky factorization)** A \\p \times p\\ matrix \\\mathbf{A}\\ is positive definite ([Definition 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\\ for some lower triangular \\\mathbf{L}\\ ([Definition 8 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-lower-triangular-matrix)) with positive diagonal entries. For a positive definite \\\mathbf{A}\\ that \\\mathbf{L}\\ is unique; it is the **Cholesky factor** [\[8\]](#ref-wikipedia_cholesky_decomposition) of \\\mathbf{A}\\.
 
 > **NOTE:**
 >
@@ -703,34 +703,50 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 ## Further reading
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_eigenvalues_and_eigenvectors)) — eigenvalues, eigenvectors and eigenspaces, with examples
+- Wikipedia contributors [\[2\]](#ref-wikipedia_eigenvalues_and_eigenvectors) — eigenvalues, eigenvectors and eigenspaces, with examples
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_matrix_similarity)) — similar matrices and what they share
+- Wikipedia contributors [\[3\]](#ref-wikipedia_matrix_similarity) — similar matrices and what they share
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_diagonalizable_matrix)) — when a matrix is diagonalizable, and how to diagonalize it
+- Wikipedia contributors [\[4\]](#ref-wikipedia_diagonalizable_matrix) — when a matrix is diagonalizable, and how to diagonalize it
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_block_matrix)) — block matrices and block operations
+- Wikipedia contributors [\[6\]](#ref-wikipedia_block_matrix) — block matrices and block operations
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_schur_complement)) — the Schur complement and its uses
+- Wikipedia contributors [\[7\]](#ref-wikipedia_schur_complement) — the Schur complement and its uses
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_cholesky_decomposition)) — the Cholesky decomposition and how to compute it
+- Wikipedia contributors [\[8\]](#ref-wikipedia_cholesky_decomposition) — the Cholesky decomposition and how to compute it
 
 Back to top
 
 ## References
 
-Wikipedia contributors. 2026a. *Block Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Block_matrix>.
+\[1\]
 
-Wikipedia contributors. 2026b. *Cholesky Decomposition — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Cholesky_decomposition>.
+H. Zhou, “Eigen-decomposition.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/10-eig/10-eig.html>
 
-Wikipedia contributors. 2026c. *Diagonalizable Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Diagonalizable_matrix>.
+\[2\]
 
-Wikipedia contributors. 2026d. *Eigenvalues and Eigenvectors — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors>.
+Wikipedia contributors, “Eigenvalues and eigenvectors — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors>
 
-Wikipedia contributors. 2026e. *Matrix Similarity — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Matrix_similarity>.
+\[3\]
 
-Wikipedia contributors. 2026f. *Schur Complement — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Schur_complement>.
+Wikipedia contributors, “Matrix similarity — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Matrix_similarity>
 
-Zhou, Hua. 2024a. *Eigen-Decomposition*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/10-eig/10-eig.html>.
+\[4\]
 
-Zhou, Hua. 2024b. *Symmetric Positive Definite Matrices*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/11-pd/11-pd.html>.
+Wikipedia contributors, “Diagonalizable matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Diagonalizable_matrix>
+
+\[5\]
+
+H. Zhou, “Symmetric positive definite matrices.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/11-pd/11-pd.html>
+
+\[6\]
+
+Wikipedia contributors, “Block matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Block_matrix>
+
+\[7\]
+
+Wikipedia contributors, “Schur complement — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Schur_complement>
+
+\[8\]
+
+Wikipedia contributors, “Cholesky decomposition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cholesky_decomposition>

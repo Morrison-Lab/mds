@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -12,7 +12,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 1 (Proposition (statement))** A **proposition** ([Wikipedia contributors 2026u](#ref-wikipedia_proposition)), or **statement**, is a declarative sentence that is either true or false.
+> **Definition 1 (Proposition (statement))** A **proposition** [\[1\]](#ref-wikipedia_proposition), or **statement**, is a declarative sentence that is either true or false.
 
 > **NOTE:**
 >
@@ -24,7 +24,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 2 (Predicate)** A **predicate** ([Wikipedia contributors 2026s](#ref-wikipedia_predicate_mathematical_logic)) \\P(x)\\ is a declarative sentence about a variable \\x\\ that becomes a proposition ([Definition 1](#def-proposition)) whenever a value is substituted for \\x\\.
+> **Definition 2 (Predicate)** A **predicate** [\[2\]](#ref-wikipedia_predicate_mathematical_logic) \\P(x)\\ is a declarative sentence about a variable \\x\\ that becomes a proposition ([Definition 1](#def-proposition)) whenever a value is substituted for \\x\\.
 
 > **NOTE:**
 >
@@ -35,11 +35,11 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 3 (Logical connective)** A **logical connective** ([Wikipedia contributors 2026k](#ref-wikipedia_logical_connective)) builds a new proposition ([Definition 1](#def-proposition)) from one or two propositions \\P\\ and \\Q\\, with a truth value that depends only on the truth values of \\P\\ and \\Q\\. These notes use five, defined next: not ([Definition 4](#def-not)), and ([Definition 5](#def-and)), or ([Definition 6](#def-or)), implies ([Definition 7](#def-implies)), and if and only if ([Definition 8](#def-iff)).
+> **Definition 3 (Logical connective)** A **logical connective** [\[3\]](#ref-wikipedia_logical_connective) builds a new proposition ([Definition 1](#def-proposition)) from one or two propositions \\P\\ and \\Q\\, with a truth value that depends only on the truth values of \\P\\ and \\Q\\. These notes use five, defined next: not ([Definition 4](#def-not)), and ([Definition 5](#def-and)), or ([Definition 6](#def-or)), implies ([Definition 7](#def-implies)), and if and only if ([Definition 8](#def-iff)).
 
 > **NOTE:**
 >
-> **Definition 4 (Not)** The logical connective ([Definition 3](#def-logical-connective)) **not** ([Wikipedia contributors 2026r](#ref-wikipedia_negation)) is written \\\neg P\\ (“not \\P\\”); it is true when \\P\\ is false, and false when \\P\\ is true.
+> **Definition 4 (Not)** The logical connective ([Definition 3](#def-logical-connective)) **not** [\[4\]](#ref-wikipedia_negation) is written \\\neg P\\ (“not \\P\\”); it is true when \\P\\ is false, and false when \\P\\ is true.
 
 > **NOTE:**
 >
@@ -50,7 +50,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 5 (And)** The logical connective ([Definition 3](#def-logical-connective)) **and** is written ([Wikipedia contributors 2026j](#ref-wikipedia_logical_conjunction)) \\P \land Q\\ (“\\P\\ and \\Q\\”); it is true when \\P\\ and \\Q\\ are both true, and false otherwise.
+> **Definition 5 (And)** The logical connective ([Definition 3](#def-logical-connective)) **and** is written [\[5\]](#ref-wikipedia_logical_conjunction) \\P \land Q\\ (“\\P\\ and \\Q\\”); it is true when \\P\\ and \\Q\\ are both true, and false otherwise.
 
 > **NOTE:**
 >
@@ -61,7 +61,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 6 (Or)** The logical connective ([Definition 3](#def-logical-connective)) **or** is written ([Wikipedia contributors 2026m](#ref-wikipedia_logical_disjunction)) \\P \lor Q\\ (“\\P\\ or \\Q\\”); it is true when at least one of \\P\\ and \\Q\\ is true, and false when both are false.
+> **Definition 6 (Or)** The logical connective ([Definition 3](#def-logical-connective)) **or** is written [\[6\]](#ref-wikipedia_logical_disjunction) \\P \lor Q\\ (“\\P\\ or \\Q\\”); it is true when at least one of \\P\\ and \\Q\\ is true, and false when both are false.
 
 > **NOTE:**
 >
@@ -72,7 +72,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 7 (Implies)** The logical connective ([Definition 3](#def-logical-connective)) **implies** is written ([Wikipedia contributors 2026n](#ref-wikipedia_material_conditional)) \\P \Rightarrow Q\\ (“if \\P\\, then \\Q\\”, or “\\P\\ implies \\Q\\”); it is false when \\P\\ is true and \\Q\\ is false, and true otherwise.
+> **Definition 7 (Implies)** The logical connective ([Definition 3](#def-logical-connective)) **implies** is written [\[7\]](#ref-wikipedia_material_conditional) \\P \Rightarrow Q\\ (“if \\P\\, then \\Q\\”, or “\\P\\ implies \\Q\\”); it is false when \\P\\ is true and \\Q\\ is false, and true otherwise.
 
 > **NOTE:**
 >
@@ -84,7 +84,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 8 (If and only if)** The logical connective ([Definition 3](#def-logical-connective)) **if and only if** is written ([Wikipedia contributors 2026i](#ref-wikipedia_logical_biconditional)) \\P \Leftrightarrow Q\\ (“\\P\\ if and only if \\Q\\”); it is true when \\P\\ and \\Q\\ have the same truth value, and false otherwise.
+> **Definition 8 (If and only if)** The logical connective ([Definition 3](#def-logical-connective)) **if and only if** is written [\[8\]](#ref-wikipedia_logical_biconditional) \\P \Leftrightarrow Q\\ (“\\P\\ if and only if \\Q\\”); it is true when \\P\\ and \\Q\\ have the same truth value, and false otherwise.
 
 > **NOTE:**
 >
@@ -106,11 +106,11 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 9 (Quantifier)** A **quantifier** ([Wikipedia contributors 2026w](#ref-wikipedia_quantifier_logic)) turns a predicate \\P(x)\\ ([Definition 2](#def-predicate)) about the elements \\x\\ of a set \\S\\ into a proposition ([Definition 1](#def-proposition)). There are two: the universal quantifier ([Definition 10](#def-universal-quantifier)) and the existential quantifier ([Definition 11](#def-existential-quantifier)).
+> **Definition 9 (Quantifier)** A **quantifier** [\[9\]](#ref-wikipedia_quantifier_logic) turns a predicate \\P(x)\\ ([Definition 2](#def-predicate)) about the elements \\x\\ of a set \\S\\ into a proposition ([Definition 1](#def-proposition)). There are two: the universal quantifier ([Definition 10](#def-universal-quantifier)) and the existential quantifier ([Definition 11](#def-existential-quantifier)).
 
 > **NOTE:**
 >
-> **Definition 10 (Universal quantifier)** The **universal quantifier** ([Wikipedia contributors 2026y](#ref-wikipedia_universal_quantification)) “for all” is a quantifier ([Definition 9](#def-quantifier)): \\\forall x \in S, P(x)\\ (“for every \\x\\ in \\S\\, \\P(x)\\”) is true when \\P(x)\\ is true for every element \\x\\ of \\S\\, and false otherwise.
+> **Definition 10 (Universal quantifier)** The **universal quantifier** [\[10\]](#ref-wikipedia_universal_quantification) “for all” is a quantifier ([Definition 9](#def-quantifier)): \\\forall x \in S, P(x)\\ (“for every \\x\\ in \\S\\, \\P(x)\\”) is true when \\P(x)\\ is true for every element \\x\\ of \\S\\, and false otherwise.
 
 > **NOTE:**
 >
@@ -121,7 +121,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 11 (Existential quantifier)** The **existential quantifier** ([Wikipedia contributors 2026e](#ref-wikipedia_existential_quantification)) “there exists” is a quantifier ([Definition 9](#def-quantifier)): \\\exists x \in S, P(x)\\ (“there is an \\x\\ in \\S\\ such that \\P(x)\\”) is true when \\P(x)\\ is true for at least one element \\x\\ of \\S\\, and false otherwise.
+> **Definition 11 (Existential quantifier)** The **existential quantifier** [\[11\]](#ref-wikipedia_existential_quantification) “there exists” is a quantifier ([Definition 9](#def-quantifier)): \\\exists x \in S, P(x)\\ (“there is an \\x\\ in \\S\\ such that \\P(x)\\”) is true when \\P(x)\\ is true for at least one element \\x\\ of \\S\\, and false otherwise.
 
 > **NOTE:**
 >
@@ -158,7 +158,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 13 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates \\P_1, \ldots, P_n\\ ([Definition 1](#def-proposition), [Definition 2](#def-predicate)) **logically entail** ([Wikipedia contributors 2026l](#ref-wikipedia_logical_consequence)) a proposition or predicate \\Q\\ when every choice of values for their variables that makes all of \\P_1, \ldots, P_n\\ true also makes \\Q\\ true. Then \\Q\\ is a **logical consequence**, or **deductive consequence**, of \\P_1, \ldots, P_n\\.
+> **Definition 13 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates \\P_1, \ldots, P_n\\ ([Definition 1](#def-proposition), [Definition 2](#def-predicate)) **logically entail** [\[12\]](#ref-wikipedia_logical_consequence) a proposition or predicate \\Q\\ when every choice of values for their variables that makes all of \\P_1, \ldots, P_n\\ true also makes \\Q\\ true. Then \\Q\\ is a **logical consequence**, or **deductive consequence**, of \\P_1, \ldots, P_n\\.
 
 > **NOTE:**
 >
@@ -180,7 +180,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 14 (Proof)** A **proof** ([Wikipedia contributors 2026p](#ref-wikipedia_mathematical_proof)) of a proposition ([Definition 1](#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
+> **Definition 14 (Proof)** A **proof** [\[13\]](#ref-wikipedia_mathematical_proof) of a proposition ([Definition 1](#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
 >
 > - an assumption,
 > - a definition,
@@ -283,7 +283,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 17 (Theorem)** A **theorem** ([Wikipedia contributors 2026x](#ref-wikipedia_theorem)) is a result ([Definition 16](#def-result)) of interest in its own right.
+> **Definition 17 (Theorem)** A **theorem** [\[14\]](#ref-wikipedia_theorem) is a result ([Definition 16](#def-result)) of interest in its own right.
 
 > **NOTE:**
 >
@@ -291,7 +291,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 18 (Lemma)** A **lemma** ([Wikipedia contributors 2026h](#ref-wikipedia_lemma_mathematics)) is a result ([Definition 16](#def-result)) proved mainly as a step in the proof of another result.
+> **Definition 18 (Lemma)** A **lemma** [\[15\]](#ref-wikipedia_lemma_mathematics) is a result ([Definition 16](#def-result)) proved mainly as a step in the proof of another result.
 
 > **NOTE:**
 >
@@ -299,7 +299,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 19 (Corollary)** A **corollary** ([Wikipedia contributors 2026b](#ref-wikipedia_corollary)) is a result ([Definition 16](#def-result)) that follows from a theorem with little extra work.
+> **Definition 19 (Corollary)** A **corollary** [\[16\]](#ref-wikipedia_corollary) is a result ([Definition 16](#def-result)) that follows from a theorem with little extra work.
 
 > **NOTE:**
 >
@@ -311,7 +311,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 20 (Counterexample)** A **counterexample** ([Wikipedia contributors 2026c](#ref-wikipedia_counterexample)) to a proposition of the form “for every \\x\\ in \\A\\, \\P(x)\\”, where \\P(x)\\ is a predicate ([Definition 2](#def-predicate)), is an element \\x\\ of \\A\\ for which \\P(x)\\ is false. A single counterexample shows that the proposition is false.
+> **Definition 20 (Counterexample)** A **counterexample** [\[17\]](#ref-wikipedia_counterexample) to a proposition of the form “for every \\x\\ in \\A\\, \\P(x)\\”, where \\P(x)\\ is a predicate ([Definition 2](#def-predicate)), is an element \\x\\ of \\A\\ for which \\P(x)\\ is false. A single counterexample shows that the proposition is false.
 
 > **NOTE:**
 >
@@ -319,7 +319,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 21 (Converse)** The **converse** ([Wikipedia contributors 2026a](#ref-wikipedia_converse_logic)) of the proposition “if \\P\\, then \\Q\\” is the proposition “if \\Q\\, then \\P\\”.
+> **Definition 21 (Converse)** The **converse** [\[18\]](#ref-wikipedia_converse_logic) of the proposition “if \\P\\, then \\Q\\” is the proposition “if \\Q\\, then \\P\\”.
 
 > **NOTE:**
 >
@@ -337,7 +337,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 22 (Sufficient condition)** When the proposition “if \\P\\, then \\Q\\” is true, \\P\\ is a **sufficient condition** ([Wikipedia contributors 2026q](#ref-wikipedia_necessity_and_sufficiency)) for \\Q\\.
+> **Definition 22 (Sufficient condition)** When the proposition “if \\P\\, then \\Q\\” is true, \\P\\ is a **sufficient condition** [\[19\]](#ref-wikipedia_necessity_and_sufficiency) for \\Q\\.
 
 > **NOTE:**
 >
@@ -345,7 +345,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 23 (Necessary condition)** When the proposition “if \\P\\, then \\Q\\” is true, \\Q\\ is a **necessary condition** ([Wikipedia contributors 2026q](#ref-wikipedia_necessity_and_sufficiency)) for \\P\\.
+> **Definition 23 (Necessary condition)** When the proposition “if \\P\\, then \\Q\\” is true, \\Q\\ is a **necessary condition** [\[19\]](#ref-wikipedia_necessity_and_sufficiency) for \\P\\.
 
 > **NOTE:**
 >
@@ -353,7 +353,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 24 (Necessary and sufficient condition)** When both “if \\P\\, then \\Q\\” and its converse ([Definition 21](#def-converse)) are true, \\P\\ is a **necessary and sufficient condition** ([Wikipedia contributors 2026q](#ref-wikipedia_necessity_and_sufficiency)) for \\Q\\ ([Definition 22](#def-sufficient-condition), [Definition 23](#def-necessary-condition)), written “\\P\\ if and only if \\Q\\”.
+> **Definition 24 (Necessary and sufficient condition)** When both “if \\P\\, then \\Q\\” and its converse ([Definition 21](#def-converse)) are true, \\P\\ is a **necessary and sufficient condition** [\[19\]](#ref-wikipedia_necessity_and_sufficiency) for \\Q\\ ([Definition 22](#def-sufficient-condition), [Definition 23](#def-necessary-condition)), written “\\P\\ if and only if \\Q\\”.
 
 > **NOTE:**
 >
@@ -366,7 +366,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 25 (Proof by contradiction)** A **proof by contradiction** ([Wikipedia contributors 2026t](#ref-wikipedia_proof_by_contradiction)) of a proposition \\P\\ assumes that \\P\\ is false, and derives from that assumption a proposition that is known to be false.
+> **Definition 25 (Proof by contradiction)** A **proof by contradiction** [\[20\]](#ref-wikipedia_proof_by_contradiction) of a proposition \\P\\ assumes that \\P\\ is false, and derives from that assumption a proposition that is known to be false.
 
 > **NOTE:**
 >
@@ -421,7 +421,7 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 
 > **NOTE:**
 >
-> **Definition 26 (Direct proof)** A **direct proof** ([Wikipedia contributors 2026d](#ref-wikipedia_direct_proof)) of a proposition \\Q\\ starts from the assumptions that \\Q\\ is stated under, if any, and reaches \\Q\\ through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that \\Q\\ is false; compare [proof by contradiction](#def-proof-by-contradiction), which does.
+> **Definition 26 (Direct proof)** A **direct proof** [\[21\]](#ref-wikipedia_direct_proof) of a proposition \\Q\\ starts from the assumptions that \\Q\\ is stated under, if any, and reaches \\Q\\ through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that \\Q\\ is false; compare [proof by contradiction](#def-proof-by-contradiction), which does.
 
 > **NOTE:**
 >
@@ -455,7 +455,7 @@ Many proofs in these notes show that a statement holds for every [natural number
 
 > **NOTE:**
 >
-> **Definition 27 (Proof by induction)** Let \\n_0\\ be an [integer](number-systems.llms.md#def-integers), and let \\P(n)\\ be a [predicate](proof-writing.llms.md#def-predicate) about the integers \\n \ge n_0\\. A **proof by induction** ([Wikipedia contributors 2026o](#ref-wikipedia_mathematical_induction)) on \\n\\ shows that \\P(n)\\ holds for every integer \\n \ge n_0\\ by showing two things:
+> **Definition 27 (Proof by induction)** Let \\n_0\\ be an [integer](number-systems.llms.md#def-integers), and let \\P(n)\\ be a [predicate](proof-writing.llms.md#def-predicate) about the integers \\n \ge n_0\\. A **proof by induction** [\[22\]](#ref-wikipedia_mathematical_induction) on \\n\\ shows that \\P(n)\\ holds for every integer \\n \ge n_0\\ by showing two things:
 >
 > 1.  **Base case:** \\P(n_0)\\ holds.
 > 2.  **Inductive step:** for every integer \\n \> n_0\\, if \\P(n - 1)\\ holds, then \\P(n)\\ holds.
@@ -502,7 +502,7 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 > **NOTE:**
 >
-> **Definition 28 (Propositional logic)** **Propositional logic** ([Wikipedia contributors 2026v](#ref-wikipedia_propositional_calculus)) is the study of [logical entailment](#def-logical-entailment) among [propositions](#def-proposition) built from basic propositions \\P, Q, R, \ldots\\ using only the [logical connectives](#def-logical-connective). Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.
+> **Definition 28 (Propositional logic)** **Propositional logic** [\[23\]](#ref-wikipedia_propositional_calculus) is the study of [logical entailment](#def-logical-entailment) among [propositions](#def-proposition) built from basic propositions \\P, Q, R, \ldots\\ using only the [logical connectives](#def-logical-connective). Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.
 
 > **NOTE:**
 >
@@ -510,7 +510,7 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 > **NOTE:**
 >
-> **Definition 29 (First-order logic)** **First-order logic** ([Wikipedia contributors 2026f](#ref-wikipedia_first_order_logic)) extends propositional logic ([Definition 28](#def-propositional-logic)) by also allowing:
+> **Definition 29 (First-order logic)** **First-order logic** [\[24\]](#ref-wikipedia_first_order_logic) extends propositional logic ([Definition 28](#def-propositional-logic)) by also allowing:
 >
 > - variables \\x, y, \ldots\\ that stand for elements of a set;
 > - [predicates](#def-predicate) of one or more of those variables, such as \\P(x)\\ or \\x \< y\\;
@@ -524,7 +524,7 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 > **NOTE:**
 >
-> **Definition 30 (Formal proof)** A **formal proof** ([Wikipedia contributors 2026g](#ref-wikipedia_formal_proof)) is a [proof](#def-proof) written in propositional logic ([Definition 28](#def-propositional-logic)) or first-order logic ([Definition 29](#def-first-order-logic)) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.
+> **Definition 30 (Formal proof)** A **formal proof** [\[25\]](#ref-wikipedia_formal_proof) is a [proof](#def-proof) written in propositional logic ([Definition 28](#def-propositional-logic)) or first-order logic ([Definition 29](#def-first-order-logic)) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.
 
 > **NOTE:**
 >
@@ -536,59 +536,59 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 ## 8 Further reading
 
-- Velleman ([2019](#ref-velleman2019prove)) is a structured introduction to proof techniques such as [direct proof](#def-direct-proof), [proof by contradiction](proof-writing.llms.md#def-proof-by-contradiction), and induction.
+- Velleman [\[26\]](#ref-velleman2019prove) is a structured introduction to proof techniques such as [direct proof](#def-direct-proof), [proof by contradiction](proof-writing.llms.md#def-proof-by-contradiction), and induction.
 
-- Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) treats proofs as [formal proofs](#def-formal-proof) in [propositional logic](#def-propositional-logic) and [first-order logic](#def-first-order-logic).
+- Barker-Plummer et al. [\[27\]](#ref-barkerplummer2011language) treats proofs as [formal proofs](#def-formal-proof) in [propositional logic](#def-propositional-logic) and [first-order logic](#def-first-order-logic).
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_direct_proof)) — direct proofs
+- Wikipedia contributors [\[21\]](#ref-wikipedia_direct_proof) — direct proofs
 
-- Wikipedia contributors ([2026p](#ref-wikipedia_mathematical_proof)) — proofs, with the main techniques
+- Wikipedia contributors [\[13\]](#ref-wikipedia_mathematical_proof) — proofs, with the main techniques
 
-- Wikipedia contributors ([2026t](#ref-wikipedia_proof_by_contradiction)) — proof by contradiction
+- Wikipedia contributors [\[20\]](#ref-wikipedia_proof_by_contradiction) — proof by contradiction
 
-- Wikipedia contributors ([2026o](#ref-wikipedia_mathematical_induction)) — mathematical induction
+- Wikipedia contributors [\[22\]](#ref-wikipedia_mathematical_induction) — mathematical induction
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_counterexample)) — counterexamples
+- Wikipedia contributors [\[17\]](#ref-wikipedia_counterexample) — counterexamples
 
-- Wikipedia contributors ([2026u](#ref-wikipedia_proposition)) — propositions
+- Wikipedia contributors [\[1\]](#ref-wikipedia_proposition) — propositions
 
-- Wikipedia contributors ([2026s](#ref-wikipedia_predicate_mathematical_logic)) — predicates
+- Wikipedia contributors [\[2\]](#ref-wikipedia_predicate_mathematical_logic) — predicates
 
-- Wikipedia contributors ([2026k](#ref-wikipedia_logical_connective)) — logical connectives
+- Wikipedia contributors [\[3\]](#ref-wikipedia_logical_connective) — logical connectives
 
-- Wikipedia contributors ([2026r](#ref-wikipedia_negation)) — negation
+- Wikipedia contributors [\[4\]](#ref-wikipedia_negation) — negation
 
-- Wikipedia contributors ([2026j](#ref-wikipedia_logical_conjunction)) — logical conjunction
+- Wikipedia contributors [\[5\]](#ref-wikipedia_logical_conjunction) — logical conjunction
 
-- Wikipedia contributors ([2026m](#ref-wikipedia_logical_disjunction)) — logical disjunction
+- Wikipedia contributors [\[6\]](#ref-wikipedia_logical_disjunction) — logical disjunction
 
-- Wikipedia contributors ([2026n](#ref-wikipedia_material_conditional)) — the material conditional
+- Wikipedia contributors [\[7\]](#ref-wikipedia_material_conditional) — the material conditional
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_logical_biconditional)) — the biconditional
+- Wikipedia contributors [\[8\]](#ref-wikipedia_logical_biconditional) — the biconditional
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_converse_logic)) — converses
+- Wikipedia contributors [\[18\]](#ref-wikipedia_converse_logic) — converses
 
-- Wikipedia contributors ([2026q](#ref-wikipedia_necessity_and_sufficiency)) — necessary and sufficient conditions
+- Wikipedia contributors [\[19\]](#ref-wikipedia_necessity_and_sufficiency) — necessary and sufficient conditions
 
-- Wikipedia contributors ([2026w](#ref-wikipedia_quantifier_logic)) — quantifiers
+- Wikipedia contributors [\[9\]](#ref-wikipedia_quantifier_logic) — quantifiers
 
-- Wikipedia contributors ([2026y](#ref-wikipedia_universal_quantification)) — universal quantification
+- Wikipedia contributors [\[10\]](#ref-wikipedia_universal_quantification) — universal quantification
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_existential_quantification)) — existential quantification
+- Wikipedia contributors [\[11\]](#ref-wikipedia_existential_quantification) — existential quantification
 
-- Wikipedia contributors ([2026l](#ref-wikipedia_logical_consequence)) — logical consequence
+- Wikipedia contributors [\[12\]](#ref-wikipedia_logical_consequence) — logical consequence
 
-- Wikipedia contributors ([2026v](#ref-wikipedia_propositional_calculus)) — propositional logic
+- Wikipedia contributors [\[23\]](#ref-wikipedia_propositional_calculus) — propositional logic
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_first_order_logic)) — first-order logic
+- Wikipedia contributors [\[24\]](#ref-wikipedia_first_order_logic) — first-order logic
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_formal_proof)) — formal proofs
+- Wikipedia contributors [\[25\]](#ref-wikipedia_formal_proof) — formal proofs
 
-- Wikipedia contributors ([2026x](#ref-wikipedia_theorem)) — theorems
+- Wikipedia contributors [\[14\]](#ref-wikipedia_theorem) — theorems
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_lemma_mathematics)) — lemmas
+- Wikipedia contributors [\[15\]](#ref-wikipedia_lemma_mathematics) — lemmas
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_corollary)) — corollaries
+- Wikipedia contributors [\[16\]](#ref-wikipedia_corollary) — corollaries
 
 Free course materials on formal logic:
 
@@ -598,58 +598,112 @@ Free course materials on formal logic:
 
 ## References
 
-Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. *Language, Proof and Logic*. 2nd ed. CSLI Publications. <https://www.amazon.com/dp/1575866323>.
+\[1\]
 
-Velleman, Daniel J. 2019. *How to Prove It: A Structured Approach*. 3rd ed. Cambridge University Press. <https://doi.org/10.1017/9781108539890>.
+Wikipedia contributors, “Proposition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Proposition>
 
-Wikipedia contributors. 2026a. *Converse (Logic) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Converse_(logic)>.
+\[2\]
 
-Wikipedia contributors. 2026b. *Corollary — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Corollary>.
+Wikipedia contributors, “Predicate (mathematical logic) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)>
 
-Wikipedia contributors. 2026c. *Counterexample — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Counterexample>.
+\[3\]
 
-Wikipedia contributors. 2026d. *Direct Proof — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Direct_proof>.
+Wikipedia contributors, “Logical connective — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logical_connective>
 
-Wikipedia contributors. 2026e. *Existential Quantification — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Existential_quantification>.
+\[4\]
 
-Wikipedia contributors. 2026f. *First-Order Logic — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/First-order_logic>.
+Wikipedia contributors, “Negation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Negation>
 
-Wikipedia contributors. 2026g. *Formal Proof — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Formal_proof>.
+\[5\]
 
-Wikipedia contributors. 2026h. *Lemma (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Lemma_(mathematics)>.
+Wikipedia contributors, “Logical conjunction — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logical_conjunction>
 
-Wikipedia contributors. 2026i. *Logical Biconditional — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Logical_biconditional>.
+\[6\]
 
-Wikipedia contributors. 2026j. *Logical Conjunction — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Logical_conjunction>.
+Wikipedia contributors, “Logical disjunction — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logical_disjunction>
 
-Wikipedia contributors. 2026k. *Logical Connective — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Logical_connective>.
+\[7\]
 
-Wikipedia contributors. 2026l. *Logical Consequence — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Logical_consequence>.
+Wikipedia contributors, “Material conditional — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Material_conditional>
 
-Wikipedia contributors. 2026m. *Logical Disjunction — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Logical_disjunction>.
+\[8\]
 
-Wikipedia contributors. 2026n. *Material Conditional — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Material_conditional>.
+Wikipedia contributors, “Logical biconditional — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logical_biconditional>
 
-Wikipedia contributors. 2026o. *Mathematical Induction — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Mathematical_induction>.
+\[9\]
 
-Wikipedia contributors. 2026p. *Mathematical Proof — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Mathematical_proof>.
+Wikipedia contributors, “Quantifier (logic) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quantifier_(logic)>
 
-Wikipedia contributors. 2026q. *Necessity and Sufficiency — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Necessity_and_sufficiency>.
+\[10\]
 
-Wikipedia contributors. 2026r. *Negation — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Negation>.
+Wikipedia contributors, “Universal quantification — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Universal_quantification>
 
-Wikipedia contributors. 2026s. *Predicate (Mathematical Logic) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)>.
+\[11\]
 
-Wikipedia contributors. 2026t. *Proof by Contradiction — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Proof_by_contradiction>.
+Wikipedia contributors, “Existential quantification — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Existential_quantification>
 
-Wikipedia contributors. 2026u. *Proposition — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Proposition>.
+\[12\]
 
-Wikipedia contributors. 2026v. *Propositional Calculus — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Propositional_calculus>.
+Wikipedia contributors, “Logical consequence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logical_consequence>
 
-Wikipedia contributors. 2026w. *Quantifier (Logic) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Quantifier_(logic)>.
+\[13\]
 
-Wikipedia contributors. 2026x. *Theorem — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Theorem>.
+Wikipedia contributors, “Mathematical proof — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Mathematical_proof>
 
-Wikipedia contributors. 2026y. *Universal Quantification — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Universal_quantification>.
+\[14\]
+
+Wikipedia contributors, “Theorem — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Theorem>
+
+\[15\]
+
+Wikipedia contributors, “Lemma (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Lemma_(mathematics)>
+
+\[16\]
+
+Wikipedia contributors, “Corollary — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Corollary>
+
+\[17\]
+
+Wikipedia contributors, “Counterexample — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Counterexample>
+
+\[18\]
+
+Wikipedia contributors, “Converse (logic) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Converse_(logic)>
+
+\[19\]
+
+Wikipedia contributors, “Necessity and sufficiency — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Necessity_and_sufficiency>
+
+\[20\]
+
+Wikipedia contributors, “Proof by contradiction — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Proof_by_contradiction>
+
+\[21\]
+
+Wikipedia contributors, “Direct proof — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Direct_proof>
+
+\[22\]
+
+Wikipedia contributors, “Mathematical induction — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Mathematical_induction>
+
+\[23\]
+
+Wikipedia contributors, “Propositional calculus — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Propositional_calculus>
+
+\[24\]
+
+Wikipedia contributors, “First-order logic — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/First-order_logic>
+
+\[25\]
+
+Wikipedia contributors, “Formal proof — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Formal_proof>
+
+\[26\]
+
+D. J. Velleman, *How to prove it: A structured approach*, 3rd ed. Cambridge University Press, 2019. doi: [10.1017/9781108539890](https://doi.org/10.1017/9781108539890).
+
+\[27\]
+
+D. Barker-Plummer, J. Barwise, and J. Etchemendy, *Language, proof and logic*, 2nd ed. Stanford, CA: CSLI Publications, 2011. Available: <https://www.amazon.com/dp/1575866323>
 
 Back to top

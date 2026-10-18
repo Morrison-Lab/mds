@@ -106,6 +106,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -352,7 +353,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+  <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
 </section><section class="slide level2"></section><section id="vectors" class="slide level2 scrollable" data-number="1"><h2>
 <span class="header-section-number">1</span> Vectors</h2>
 <div id="exr-list-as-vector" class="theorem exercise">
@@ -381,7 +382,7 @@
 </ol>
 </div>
 </section><section class="slide level2"><div id="def-column-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Column vector)</strong></span> A <strong>column vector</strong> <span class="citation" data-cites="wikipedia_row_and_column_vectors">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> of length <span class="math inline">\(p\)</span> is an ordered list of <span class="math inline">\(p\)</span> <a href="./number-systems.html#def-real-numbers">real numbers</a>, written vertically as a <span class="math inline">\(p \times 1\)</span> array:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Column vector)</strong></span> A <strong>column vector</strong> <span class="citation" data-cites="wikipedia_row_and_column_vectors"><a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> of length <span class="math inline">\(p\)</span> is an ordered list of <span class="math inline">\(p\)</span> <a href="./number-systems.html#def-real-numbers">real numbers</a>, written vertically as a <span class="math inline">\(p \times 1\)</span> array:</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}=
 \begin{bmatrix}
@@ -413,7 +414,7 @@ x_{p}
 <p><span class="proof-title"><em>Remark 3</em> (Reading <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>). </span>Writing <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> says, in one symbol, that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a column vector with <span class="math inline">\(p\)</span> real entries. For example, <span class="math inline">\((1, -2, 0.5) \in \mathbb{R}^3\)</span>. The vector <span class="math inline">\((1, 2)\)</span> is not in <span class="math inline">\(\mathbb{R}^3\)</span>, because it has only <span class="math inline">\(2\)</span> entries; it is in <span class="math inline">\(\mathbb{R}^2\)</span>. In <a href="#/exr-list-as-vector" class="quarto-xref">Exercise&nbsp;1</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-scalar" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Scalar)</strong></span> In linear algebra, a <strong>scalar</strong> <span class="citation" data-cites="wikipedia_scalar_mathematics">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span> is a single <a href="./number-systems.html#def-real-numbers">real number</a>, as opposed to a vector or a matrix, which holds several numbers.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Scalar)</strong></span> In linear algebra, a <strong>scalar</strong> <span class="citation" data-cites="wikipedia_scalar_mathematics"><a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a></span> is a single <a href="./number-systems.html#def-real-numbers">real number</a>, as opposed to a vector or a matrix, which holds several numbers.</p>
 </div>
 </section><section class="slide level2"><div id="exm-scalar" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Scalars and a vector)</strong></span> The numbers <span class="math inline">\(5\)</span> and <span class="math inline">\(-0.2\)</span> are scalars. The column vector <span class="math inline">\((5, -0.2)\)</span> is not a scalar: it has <span class="math inline">\(2\)</span> entries, so it is in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a>), and each of its <span class="math inline">\(2\)</span> entries is a scalar.</p>
@@ -468,8 +469,8 @@ g\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin
 </div>
 <aside class="notes"><p>See also the definitions in:</p>
 <ul>
-<li><p><span class="citation" data-cites="dobson4e">Dobson and Barnett (<a href="#/further-reading" role="doc-biblioref" onclick="">2018</a>)</span>, Section 1.3 (equation 1.1, page 7)</p></li>
-<li><p><span class="citation" data-cites="mosaiccalc">Kaplan (<a href="#/further-reading" role="doc-biblioref" onclick="">2022</a>)</span>, chapter on vectors <!-- The chapter link (Textbook/Linear-combinations/28-Vectors.html) returned
+<li><p><span class="citation" data-cites="dobson4e">Dobson and Barnett <a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a></span>, Section 1.3 (equation 1.1, page 7)</p></li>
+<li><p><span class="citation" data-cites="mosaiccalc">Kaplan <a href="#/further-reading" role="doc-biblioref" onclick="">[4]</a></span>, chapter on vectors <!-- The chapter link (Textbook/Linear-combinations/28-Vectors.html) returned
 404 in CI on 2026-09-25, and www.mosaic-web.org is unreachable from agent
 sessions, so the current URL is unverified; restore a deep link once found. --></p></li>
 <li><p><a href="https://en.wikipedia.org/wiki/Linear_combination">wikipedia</a></p></li>
@@ -561,7 +562,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-mean" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Mean (average, sample mean))</strong></span> The <strong>mean</strong> <span class="citation" data-cites="wikipedia_arithmetic_mean">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span> (or <strong>average</strong>) of <span class="math inline">\(n\)</span> numbers <span class="math inline">\(y_1, \ldots, y_n\)</span> is their <a href="./algebra-sums.html#def-summation">sum</a> divided by how many there are:</p>
+<p><span class="theorem-title"><strong>Definition 12 (Mean (average, sample mean))</strong></span> The <strong>mean</strong> <span class="citation" data-cites="wikipedia_arithmetic_mean"><a href="#/further-reading" role="doc-biblioref" onclick="">[5]</a></span> (or <strong>average</strong>) of <span class="math inline">\(n\)</span> numbers <span class="math inline">\(y_1, \ldots, y_n\)</span> is their <a href="./algebra-sums.html#def-summation">sum</a> divided by how many there are:</p>
 <p><span class="math display">\[\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum_{i=1}^ny_i\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-mean" class="theorem example">
@@ -613,7 +614,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p>and dividing by the length <span class="math inline">\(p = 3\)</span> gives the <a href="#/def-mean">mean</a> of the entries, <span class="math inline">\(6 / 3 = 2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-indicator-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Indicator vector (standard basis vector))</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <strong>standard basis vector</strong> <span class="citation" data-cites="wikipedia_standard_basis">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026g</a>)</span> ) <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
+<p><span class="theorem-title"><strong>Definition 14 (Indicator vector (standard basis vector))</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <strong>standard basis vector</strong> <span class="citation" data-cites="wikipedia_standard_basis"><a href="#/further-reading" role="doc-biblioref" onclick="">[6]</a></span> ) <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
 <p><span class="math display">\[
 (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)_i =
 \begin{cases}
@@ -696,7 +697,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 </div>
 <h3 id="orthogonality">Orthogonality</h3>
 <div id="def-orthogonal-vectors" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of the same length are <strong>orthogonal</strong> <span class="citation" data-cites="wikipedia_orthogonality">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> (written <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>) if their dot product (<a href="#/def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) is zero:</p>
+<p><span class="theorem-title"><strong>Definition 15 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of the same length are <strong>orthogonal</strong> <span class="citation" data-cites="wikipedia_orthogonality"><a href="#/further-reading" role="doc-biblioref" onclick="">[7]</a></span> (written <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>) if their dot product (<a href="#/def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) is zero:</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\iff \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 0\]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-orthogonal-perpendicular" class="proof remark">
@@ -720,7 +721,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p>so <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((1, 1)\)</span> are not orthogonal.</p>
 </div>
 </section><section class="slide level2"><div id="def-euclidean-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Euclidean norm (length, <span class="math inline">\(L_2\)</span> norm))</strong></span> The <strong>Euclidean norm</strong> <span class="citation" data-cites="wikipedia_euclidean_vector">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> (or <strong>length</strong>, also called the <strong><span class="math inline">\(L_2\)</span> norm</strong> and written <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2\)</span>) of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> of length <span class="math inline">\(p\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 16 (Euclidean norm (length, <span class="math inline">\(L_2\)</span> norm))</strong></span> The <strong>Euclidean norm</strong> <span class="citation" data-cites="wikipedia_euclidean_vector"><a href="#/further-reading" role="doc-biblioref" onclick="">[8]</a></span> (or <strong>length</strong>, also called the <strong><span class="math inline">\(L_2\)</span> norm</strong> and written <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2\)</span>) of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> of length <span class="math inline">\(p\)</span> is</p>
 <p><span id="eq-l2-norm"><span class="math display">\[\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \sqrt{\sum_{i=1}^px_i^2} \tag{2}\]</span></span></p>
 <p>where <span class="math inline">\(\sqrt{\cdot}\)</span> is the <a href="./algebra-basics.html#def-square-root">square root</a>.</p>
 </div>
@@ -741,7 +742,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p>The vector <span class="math inline">\((0.6, 0.8)\)</span> has norm <span class="math inline">\(\sqrt{0.36 + 0.64} = 1\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-unit-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Unit vector)</strong></span> A <strong>unit vector</strong> <span class="citation" data-cites="wikipedia_unit_vector">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026h</a>)</span> is a vector whose Euclidean norm (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;16</a>) is <span class="math inline">\(1\)</span>. A unit vector is said to have <em>unit length</em>.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Unit vector)</strong></span> A <strong>unit vector</strong> <span class="citation" data-cites="wikipedia_unit_vector"><a href="#/further-reading" role="doc-biblioref" onclick="">[9]</a></span> is a vector whose Euclidean norm (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;16</a>) is <span class="math inline">\(1\)</span>. A unit vector is said to have <em>unit length</em>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-unit-vector" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (A unit vector and a vector that is not one)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0.6, 0.8)\)</span>:</p>
@@ -813,7 +814,7 @@ from the origin to the point identified by x".
 The distance between two arbitrary points, as the norm of their difference,
 is the standard extension of that statement and is not stated on that page.
 --><div id="def-euclidean-distance" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Euclidean distance)</strong></span> The <strong>Euclidean distance</strong> <span class="citation" data-cites="wikipedia_euclidean_distance">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> between two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of length <span class="math inline">\(p\)</span> is the <a href="#/def-euclidean-norm">Euclidean norm</a> of their difference:</p>
+<p><span class="theorem-title"><strong>Definition 18 (Euclidean distance)</strong></span> The <strong>Euclidean distance</strong> <span class="citation" data-cites="wikipedia_euclidean_distance"><a href="#/further-reading" role="doc-biblioref" onclick="">[10]</a></span> between two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of length <span class="math inline">\(p\)</span> is the <a href="#/def-euclidean-norm">Euclidean norm</a> of their difference:</p>
 <p><span id="eq-euclidean-distance"><span class="math display">\[d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = \sqrt{\sum_{i=1}^p(x_i - y_i)^2} \tag{3}\]</span></span></p>
 </div>
 </section><section class="slide level2"><div id="rem-distance-from-origin" class="proof remark">
@@ -824,7 +825,7 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}
 \end{aligned}
 \]</span></p>
-<p><span class="citation" data-cites="goodfellow2016deep">(<a href="#/further-reading" role="doc-biblioref" onclick="">Goodfellow et al. 2016, 39</a>)</span>.</p>
+<p><span class="citation" data-cites="goodfellow2016deep"><a href="#/further-reading" role="doc-biblioref" onclick="">[11, p. 39]</a></span>.</p>
 <p>For example, the distance from <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\((3, 4)\)</span> is <span class="math inline">\(\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\)</span>, as in <a href="#/exm-euclidean-norm" class="quarto-xref">Example&nbsp;11</a>.</p>
 </div>
 </section><section class="slide level2"><div id="def-orthonormal-vectors" class="theorem definition">
@@ -928,21 +929,21 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <p><strong>Video lecture</strong></p>
 </div>
 <div class="callout-content">
-<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics">Linear Function Basics</a> (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>) and <a href="./vector-calculus.html#def-level-set">level sets</a> <span class="citation" data-cites="hutchinson_wwu_ml_videos">(<a href="#/further-reading" role="doc-biblioref" onclick="">Hutchinson, n.d.</a>)</span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
+<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics">Linear Function Basics</a> (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>) and <a href="./vector-calculus.html#def-level-set">level sets</a> <span class="citation" data-cites="hutchinson_wwu_ml_videos"><a href="#/further-reading" role="doc-biblioref" onclick="">[12]</a></span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
 </div>
 </div>
 </div>
 </div>
 </section><section id="further-reading" class="slide level2 unnumbered smaller scrollable"><h2>Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="wikipedia_row_and_column_vectors">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026e</a>)</span> — row and column vectors</p></li>
-<li><p><span class="citation" data-cites="wikipedia_euclidean_vector">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026c</a>)</span> — vectors in Euclidean space, with their length and direction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_scalar_mathematics">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026f</a>)</span> — scalars</p></li>
-<li><p><span class="citation" data-cites="wikipedia_arithmetic_mean">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026a</a>)</span> — the arithmetic mean and other averages</p></li>
-<li><p><span class="citation" data-cites="wikipedia_orthogonality">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026d</a>)</span> — orthogonality in mathematics</p></li>
-<li><p><span class="citation" data-cites="wikipedia_unit_vector">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026h</a>)</span> — unit vectors</p></li>
-<li><p><span class="citation" data-cites="wikipedia_euclidean_distance">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026b</a>)</span> — Euclidean distance</p></li>
-<li><p><span class="citation" data-cites="wikipedia_standard_basis">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026g</a>)</span> — the standard basis</p></li>
+<li><p><span class="citation" data-cites="wikipedia_row_and_column_vectors">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> — row and column vectors</p></li>
+<li><p><span class="citation" data-cites="wikipedia_euclidean_vector">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[8]</a></span> — vectors in Euclidean space, with their length and direction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_scalar_mathematics">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a></span> — scalars</p></li>
+<li><p><span class="citation" data-cites="wikipedia_arithmetic_mean">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[5]</a></span> — the arithmetic mean and other averages</p></li>
+<li><p><span class="citation" data-cites="wikipedia_orthogonality">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[7]</a></span> — orthogonality in mathematics</p></li>
+<li><p><span class="citation" data-cites="wikipedia_unit_vector">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[9]</a></span> — unit vectors</p></li>
+<li><p><span class="citation" data-cites="wikipedia_euclidean_distance">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[10]</a></span> — Euclidean distance</p></li>
+<li><p><span class="citation" data-cites="wikipedia_standard_basis">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[6]</a></span> — the standard basis</p></li>
 </ul>
 
 
@@ -1132,42 +1133,65 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
     initRevealJsHtmlLink();
   }
 })();
-</script><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-dobson4e" class="csl-entry" role="listitem">
-Dobson, Annette J, and Adrian G Barnett. 2018. <em>An Introduction to Generalized Linear Models</em>. 4th ed. CRC press. <a href="https://doi.org/10.1201/9781315182780">https://doi.org/10.1201/9781315182780</a>.
-</div>
-<div id="ref-goodfellow2016deep" class="csl-entry" role="listitem">
-Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. <em>Deep Learning</em>. MIT Press. <a href="https://www.deeplearningbook.org/">https://www.deeplearningbook.org/</a>.
-</div>
-<div id="ref-hutchinson_wwu_ml_videos" class="csl-entry" role="listitem">
-Hutchinson, Brian. n.d. <em><span>DATA</span> 471/571 (Machine Learning) and <span>CSCI</span> 481/581 (Deep Learning) Video Lectures</em>. Western Washington University. Accessed September 28, 2026. <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/">https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/</a>.
-</div>
-<div id="ref-mosaiccalc" class="csl-entry" role="listitem">
-Kaplan, Daniel. 2022. <em>MOSAIC Calculus</em>. Www.mosaic-web.org. <a href="https://www.mosaic-web.org">www.mosaic-web.org</a>.
-</div>
-<div id="ref-wikipedia_arithmetic_mean" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Arithmetic Mean — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Arithmetic_mean">https://en.wikipedia.org/wiki/Arithmetic_mean</a>.
-</div>
-<div id="ref-wikipedia_euclidean_distance" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Euclidean Distance — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Euclidean_distance">https://en.wikipedia.org/wiki/Euclidean_distance</a>.
-</div>
-<div id="ref-wikipedia_euclidean_vector" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Euclidean Vector — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Euclidean_vector">https://en.wikipedia.org/wiki/Euclidean_vector</a>.
-</div>
-<div id="ref-wikipedia_orthogonality" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Orthogonality — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Orthogonality">https://en.wikipedia.org/wiki/Orthogonality</a>.
-</div>
+</script><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-wikipedia_row_and_column_vectors" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Row and Column Vectors — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Row_and_column_vectors">https://en.wikipedia.org/wiki/Row_and_column_vectors</a>.
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Row and column vectors — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Row_and_column_vectors">https://en.wikipedia.org/wiki/Row_and_column_vectors</a>
+</div>
 </div>
 <div id="ref-wikipedia_scalar_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>Scalar (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Scalar_(mathematics)">https://en.wikipedia.org/wiki/Scalar_(mathematics)</a>.
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Scalar (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Scalar_(mathematics)">https://en.wikipedia.org/wiki/Scalar_(mathematics)</a>
+</div>
+</div>
+<div id="ref-dobson4e" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">A. J. Dobson and A. G. Barnett, <em>An introduction to generalized linear models</em>, 4th ed. CRC press, 2018. doi: <a href="https://doi.org/10.1201/9781315182780">10.1201/9781315182780</a>.</div>
+</div>
+<div id="ref-mosaiccalc" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">D. Kaplan, <em>MOSAIC calculus</em>. www.mosaic-web.org, 2022. Available: <a href="https://www.mosaic-web.org">www.mosaic-web.org</a>
+</div>
+</div>
+<div id="ref-wikipedia_arithmetic_mean" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Arithmetic mean — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Arithmetic_mean">https://en.wikipedia.org/wiki/Arithmetic_mean</a>
+</div>
 </div>
 <div id="ref-wikipedia_standard_basis" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Standard Basis — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Standard_basis">https://en.wikipedia.org/wiki/Standard_basis</a>.
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Standard basis — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Standard_basis">https://en.wikipedia.org/wiki/Standard_basis</a>
+</div>
+</div>
+<div id="ref-wikipedia_orthogonality" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Orthogonality — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Orthogonality">https://en.wikipedia.org/wiki/Orthogonality</a>
+</div>
+</div>
+<div id="ref-wikipedia_euclidean_vector" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Euclidean vector — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Euclidean_vector">https://en.wikipedia.org/wiki/Euclidean_vector</a>
+</div>
 </div>
 <div id="ref-wikipedia_unit_vector" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Unit Vector — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Unit_vector">https://en.wikipedia.org/wiki/Unit_vector</a>.
+<div class="csl-left-margin">[9] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Unit vector — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Unit_vector">https://en.wikipedia.org/wiki/Unit_vector</a>
+</div>
+</div>
+<div id="ref-wikipedia_euclidean_distance" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Euclidean distance — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Euclidean_distance">https://en.wikipedia.org/wiki/Euclidean_distance</a>
+</div>
+</div>
+<div id="ref-goodfellow2016deep" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div>
+<div class="csl-right-inline">I. Goodfellow, Y. Bengio, and A. Courville, <em>Deep learning</em>. MIT Press, 2016. Available: <a href="https://www.deeplearningbook.org/">https://www.deeplearningbook.org/</a>
+</div>
+</div>
+<div id="ref-hutchinson_wwu_ml_videos" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div>
+<div class="csl-right-inline">B. Hutchinson, <span>“<span>DATA</span> 471/571 (machine learning) and <span>CSCI</span> 481/581 (deep learning) video lectures.”</span> Western Washington University. Accessed: Sep. 28, 2026. [Online]. Available: <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/">https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/</a>
+</div>
 </div>
 </div>
 </section>

@@ -62,6 +62,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -217,55 +218,15 @@ cookieconsent.run({
 })();
 </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -277,15 +238,35 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-tbl.callout {
+  border-left-color: #757575;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exr.callout {
   border-left-color: #FFA500;
@@ -297,25 +278,45 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-remark.callout {
-  border-left-color: #AD1457;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-tbl.callout {
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
   border-left-color: #757575;
 }
-div.callout-tbl.callout-style-default .callout-header {
+div.callout-fig.callout-style-default .callout-header {
   background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -327,15 +328,15 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -973,7 +974,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+      <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
     </div>
   </div>
   
@@ -1052,7 +1053,7 @@ window.Quarto = {
 <div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-column-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Column vector)</strong></span> A <strong>column vector</strong> <span class="citation" data-cites="wikipedia_row_and_column_vectors">(<a href="#ref-wikipedia_row_and_column_vectors" role="doc-biblioref">Wikipedia contributors 2026e</a>)</span> of length <span class="math inline">\(p\)</span> is an ordered list of <span class="math inline">\(p\)</span> <a href="./number-systems.html#def-real-numbers">real numbers</a>, written vertically as a <span class="math inline">\(p \times 1\)</span> array:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Column vector)</strong></span> A <strong>column vector</strong> <span class="citation" data-cites="wikipedia_row_and_column_vectors"><a href="#ref-wikipedia_row_and_column_vectors" role="doc-biblioref">[1]</a></span> of length <span class="math inline">\(p\)</span> is an ordered list of <span class="math inline">\(p\)</span> <a href="./number-systems.html#def-real-numbers">real numbers</a>, written vertically as a <span class="math inline">\(p \times 1\)</span> array:</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}=
 \begin{bmatrix}
@@ -1159,7 +1160,7 @@ x_{p}
 <div id="callout-8" class="callout-8-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-scalar" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Scalar)</strong></span> In linear algebra, a <strong>scalar</strong> <span class="citation" data-cites="wikipedia_scalar_mathematics">(<a href="#ref-wikipedia_scalar_mathematics" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span> is a single <a href="./number-systems.html#def-real-numbers">real number</a>, as opposed to a vector or a matrix, which holds several numbers.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Scalar)</strong></span> In linear algebra, a <strong>scalar</strong> <span class="citation" data-cites="wikipedia_scalar_mathematics"><a href="#ref-wikipedia_scalar_mathematics" role="doc-biblioref">[2]</a></span> is a single <a href="./number-systems.html#def-real-numbers">real number</a>, as opposed to a vector or a matrix, which holds several numbers.</p>
 </div>
 </div>
 </div>
@@ -1353,8 +1354,8 @@ g\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin
 <div class="notes">
 <p>See also the definitions in:</p>
 <ul>
-<li><p><span class="citation" data-cites="dobson4e">Dobson and Barnett (<a href="#ref-dobson4e" role="doc-biblioref">2018</a>)</span>, Section 1.3 (equation 1.1, page 7)</p></li>
-<li><p><span class="citation" data-cites="mosaiccalc">Kaplan (<a href="#ref-mosaiccalc" role="doc-biblioref">2022</a>)</span>, chapter on vectors <!-- The chapter link (Textbook/Linear-combinations/28-Vectors.html) returned
+<li><p><span class="citation" data-cites="dobson4e">Dobson and Barnett <a href="#ref-dobson4e" role="doc-biblioref">[3]</a></span>, Section 1.3 (equation 1.1, page 7)</p></li>
+<li><p><span class="citation" data-cites="mosaiccalc">Kaplan <a href="#ref-mosaiccalc" role="doc-biblioref">[4]</a></span>, chapter on vectors <!-- The chapter link (Textbook/Linear-combinations/28-Vectors.html) returned
 404 in CI on 2026-09-25, and www.mosaic-web.org is unreachable from agent
 sessions, so the current URL is unverified; restore a deep link once found. --></p></li>
 <li><p><a href="https://en.wikipedia.org/wiki/Linear_combination">wikipedia</a></p></li>
@@ -1600,7 +1601,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <div id="callout-28" class="callout-28-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-mean" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Mean (average, sample mean))</strong></span> The <strong>mean</strong> <span class="citation" data-cites="wikipedia_arithmetic_mean">(<a href="#ref-wikipedia_arithmetic_mean" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> (or <strong>average</strong>) of <span class="math inline">\(n\)</span> numbers <span class="math inline">\(y_1, \ldots, y_n\)</span> is their <a href="./algebra-sums.html#def-summation">sum</a> divided by how many there are:</p>
+<p><span class="theorem-title"><strong>Definition 12 (Mean (average, sample mean))</strong></span> The <strong>mean</strong> <span class="citation" data-cites="wikipedia_arithmetic_mean"><a href="#ref-wikipedia_arithmetic_mean" role="doc-biblioref">[5]</a></span> (or <strong>average</strong>) of <span class="math inline">\(n\)</span> numbers <span class="math inline">\(y_1, \ldots, y_n\)</span> is their <a href="./algebra-sums.html#def-summation">sum</a> divided by how many there are:</p>
 <p><span class="math display">\[\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum_{i=1}^ny_i\]</span></p>
 </div>
 </div>
@@ -1727,7 +1728,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <div id="callout-33" class="callout-33-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-indicator-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Indicator vector (standard basis vector))</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <strong>standard basis vector</strong> <span class="citation" data-cites="wikipedia_standard_basis">(<a href="#ref-wikipedia_standard_basis" role="doc-biblioref">Wikipedia contributors 2026g</a>)</span> ) <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
+<p><span class="theorem-title"><strong>Definition 14 (Indicator vector (standard basis vector))</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <strong>standard basis vector</strong> <span class="citation" data-cites="wikipedia_standard_basis"><a href="#ref-wikipedia_standard_basis" role="doc-biblioref">[6]</a></span> ) <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
 <p><span class="math display">\[
 (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)_i =
 \begin{cases}
@@ -1916,7 +1917,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <div id="callout-40" class="callout-40-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-orthogonal-vectors" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of the same length are <strong>orthogonal</strong> <span class="citation" data-cites="wikipedia_orthogonality">(<a href="#ref-wikipedia_orthogonality" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> (written <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>) if their dot product (<a href="#def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) is zero:</p>
+<p><span class="theorem-title"><strong>Definition 15 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of the same length are <strong>orthogonal</strong> <span class="citation" data-cites="wikipedia_orthogonality"><a href="#ref-wikipedia_orthogonality" role="doc-biblioref">[7]</a></span> (written <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>) if their dot product (<a href="#def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) is zero:</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\iff \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 0\]</span></p>
 </div>
 </div>
@@ -1985,7 +1986,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <div id="callout-43" class="callout-43-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-euclidean-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Euclidean norm (length, <span class="math inline">\(L_2\)</span> norm))</strong></span> The <strong>Euclidean norm</strong> <span class="citation" data-cites="wikipedia_euclidean_vector">(<a href="#ref-wikipedia_euclidean_vector" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span> (or <strong>length</strong>, also called the <strong><span class="math inline">\(L_2\)</span> norm</strong> and written <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2\)</span>) of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> of length <span class="math inline">\(p\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 16 (Euclidean norm (length, <span class="math inline">\(L_2\)</span> norm))</strong></span> The <strong>Euclidean norm</strong> <span class="citation" data-cites="wikipedia_euclidean_vector"><a href="#ref-wikipedia_euclidean_vector" role="doc-biblioref">[8]</a></span> (or <strong>length</strong>, also called the <strong><span class="math inline">\(L_2\)</span> norm</strong> and written <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2\)</span>) of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> of length <span class="math inline">\(p\)</span> is</p>
 <p><span id="eq-l2-norm"><span class="math display">\[\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \sqrt{\sum_{i=1}^px_i^2} \tag{2}\]</span></span></p>
 <p>where <span class="math inline">\(\sqrt{\cdot}\)</span> is the <a href="./algebra-basics.html#def-square-root">square root</a>.</p>
 </div>
@@ -2036,7 +2037,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <div id="callout-45" class="callout-45-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-unit-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Unit vector)</strong></span> A <strong>unit vector</strong> <span class="citation" data-cites="wikipedia_unit_vector">(<a href="#ref-wikipedia_unit_vector" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span> is a vector whose Euclidean norm (<a href="#def-euclidean-norm" class="quarto-xref">Definition&nbsp;16</a>) is <span class="math inline">\(1\)</span>. A unit vector is said to have <em>unit length</em>.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Unit vector)</strong></span> A <strong>unit vector</strong> <span class="citation" data-cites="wikipedia_unit_vector"><a href="#ref-wikipedia_unit_vector" role="doc-biblioref">[9]</a></span> is a vector whose Euclidean norm (<a href="#def-euclidean-norm" class="quarto-xref">Definition&nbsp;16</a>) is <span class="math inline">\(1\)</span>. A unit vector is said to have <em>unit length</em>.</p>
 </div>
 </div>
 </div>
@@ -2169,7 +2170,7 @@ is the standard extension of that statement and is not stated on that page.
 <div id="callout-49" class="callout-49-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-euclidean-distance" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Euclidean distance)</strong></span> The <strong>Euclidean distance</strong> <span class="citation" data-cites="wikipedia_euclidean_distance">(<a href="#ref-wikipedia_euclidean_distance" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> between two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of length <span class="math inline">\(p\)</span> is the <a href="#def-euclidean-norm">Euclidean norm</a> of their difference:</p>
+<p><span class="theorem-title"><strong>Definition 18 (Euclidean distance)</strong></span> The <strong>Euclidean distance</strong> <span class="citation" data-cites="wikipedia_euclidean_distance"><a href="#ref-wikipedia_euclidean_distance" role="doc-biblioref">[10]</a></span> between two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of length <span class="math inline">\(p\)</span> is the <a href="#def-euclidean-norm">Euclidean norm</a> of their difference:</p>
 <p><span id="eq-euclidean-distance"><span class="math display">\[d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = \sqrt{\sum_{i=1}^p(x_i - y_i)^2} \tag{3}\]</span></span></p>
 </div>
 </div>
@@ -2195,7 +2196,7 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}
 \end{aligned}
 \]</span></p>
-<p><span class="citation" data-cites="goodfellow2016deep">(<a href="#ref-goodfellow2016deep" role="doc-biblioref">Goodfellow et al. 2016, 39</a>)</span>.</p>
+<p><span class="citation" data-cites="goodfellow2016deep"><a href="#ref-goodfellow2016deep" role="doc-biblioref">[11, p. 39]</a></span>.</p>
 <p>For example, the distance from <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\((3, 4)\)</span> is <span class="math inline">\(\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\)</span>, as in <a href="#exm-euclidean-norm" class="quarto-xref">Example&nbsp;11</a>.</p>
 </div>
 </div>
@@ -2377,19 +2378,19 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics">Linear Function Basics</a> (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>) and <a href="./vector-calculus.html#def-level-set">level sets</a> <span class="citation" data-cites="hutchinson_wwu_ml_videos">(<a href="#ref-hutchinson_wwu_ml_videos" role="doc-biblioref">Hutchinson, n.d.</a>)</span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
+<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics">Linear Function Basics</a> (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>) and <a href="./vector-calculus.html#def-level-set">level sets</a> <span class="citation" data-cites="hutchinson_wwu_ml_videos"><a href="#ref-hutchinson_wwu_ml_videos" role="doc-biblioref">[12]</a></span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
 </div>
 </div>
 </section></section><section id="further-reading" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="further-reading">Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="wikipedia_row_and_column_vectors">Wikipedia contributors (<a href="#ref-wikipedia_row_and_column_vectors" role="doc-biblioref">2026e</a>)</span> — row and column vectors</p></li>
-<li><p><span class="citation" data-cites="wikipedia_euclidean_vector">Wikipedia contributors (<a href="#ref-wikipedia_euclidean_vector" role="doc-biblioref">2026c</a>)</span> — vectors in Euclidean space, with their length and direction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_scalar_mathematics">Wikipedia contributors (<a href="#ref-wikipedia_scalar_mathematics" role="doc-biblioref">2026f</a>)</span> — scalars</p></li>
-<li><p><span class="citation" data-cites="wikipedia_arithmetic_mean">Wikipedia contributors (<a href="#ref-wikipedia_arithmetic_mean" role="doc-biblioref">2026a</a>)</span> — the arithmetic mean and other averages</p></li>
-<li><p><span class="citation" data-cites="wikipedia_orthogonality">Wikipedia contributors (<a href="#ref-wikipedia_orthogonality" role="doc-biblioref">2026d</a>)</span> — orthogonality in mathematics</p></li>
-<li><p><span class="citation" data-cites="wikipedia_unit_vector">Wikipedia contributors (<a href="#ref-wikipedia_unit_vector" role="doc-biblioref">2026h</a>)</span> — unit vectors</p></li>
-<li><p><span class="citation" data-cites="wikipedia_euclidean_distance">Wikipedia contributors (<a href="#ref-wikipedia_euclidean_distance" role="doc-biblioref">2026b</a>)</span> — Euclidean distance</p></li>
-<li><p><span class="citation" data-cites="wikipedia_standard_basis">Wikipedia contributors (<a href="#ref-wikipedia_standard_basis" role="doc-biblioref">2026g</a>)</span> — the standard basis</p></li>
+<li><p><span class="citation" data-cites="wikipedia_row_and_column_vectors">Wikipedia contributors <a href="#ref-wikipedia_row_and_column_vectors" role="doc-biblioref">[1]</a></span> — row and column vectors</p></li>
+<li><p><span class="citation" data-cites="wikipedia_euclidean_vector">Wikipedia contributors <a href="#ref-wikipedia_euclidean_vector" role="doc-biblioref">[8]</a></span> — vectors in Euclidean space, with their length and direction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_scalar_mathematics">Wikipedia contributors <a href="#ref-wikipedia_scalar_mathematics" role="doc-biblioref">[2]</a></span> — scalars</p></li>
+<li><p><span class="citation" data-cites="wikipedia_arithmetic_mean">Wikipedia contributors <a href="#ref-wikipedia_arithmetic_mean" role="doc-biblioref">[5]</a></span> — the arithmetic mean and other averages</p></li>
+<li><p><span class="citation" data-cites="wikipedia_orthogonality">Wikipedia contributors <a href="#ref-wikipedia_orthogonality" role="doc-biblioref">[7]</a></span> — orthogonality in mathematics</p></li>
+<li><p><span class="citation" data-cites="wikipedia_unit_vector">Wikipedia contributors <a href="#ref-wikipedia_unit_vector" role="doc-biblioref">[9]</a></span> — unit vectors</p></li>
+<li><p><span class="citation" data-cites="wikipedia_euclidean_distance">Wikipedia contributors <a href="#ref-wikipedia_euclidean_distance" role="doc-biblioref">[10]</a></span> — Euclidean distance</p></li>
+<li><p><span class="citation" data-cites="wikipedia_standard_basis">Wikipedia contributors <a href="#ref-wikipedia_standard_basis" role="doc-biblioref">[6]</a></span> — the standard basis</p></li>
 </ul>
 
 
@@ -2644,42 +2645,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("load", alignEquationAnchorsWithDefault);
 </script>
-</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-dobson4e" class="csl-entry" role="listitem">
-Dobson, Annette J, and Adrian G Barnett. 2018. <em>An Introduction to Generalized Linear Models</em>. 4th ed. CRC press. <a href="https://doi.org/10.1201/9781315182780">https://doi.org/10.1201/9781315182780</a>.
-</div>
-<div id="ref-goodfellow2016deep" class="csl-entry" role="listitem">
-Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. <em>Deep Learning</em>. MIT Press. <a href="https://www.deeplearningbook.org/">https://www.deeplearningbook.org/</a>.
-</div>
-<div id="ref-hutchinson_wwu_ml_videos" class="csl-entry" role="listitem">
-Hutchinson, Brian. n.d. <em><span>DATA</span> 471/571 (Machine Learning) and <span>CSCI</span> 481/581 (Deep Learning) Video Lectures</em>. Western Washington University. Accessed September 28, 2026. <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/">https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/</a>.
-</div>
-<div id="ref-mosaiccalc" class="csl-entry" role="listitem">
-Kaplan, Daniel. 2022. <em>MOSAIC Calculus</em>. Www.mosaic-web.org. <a href="https://www.mosaic-web.org">www.mosaic-web.org</a>.
-</div>
-<div id="ref-wikipedia_arithmetic_mean" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Arithmetic Mean — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Arithmetic_mean">https://en.wikipedia.org/wiki/Arithmetic_mean</a>.
-</div>
-<div id="ref-wikipedia_euclidean_distance" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Euclidean Distance — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Euclidean_distance">https://en.wikipedia.org/wiki/Euclidean_distance</a>.
-</div>
-<div id="ref-wikipedia_euclidean_vector" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Euclidean Vector — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Euclidean_vector">https://en.wikipedia.org/wiki/Euclidean_vector</a>.
-</div>
-<div id="ref-wikipedia_orthogonality" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Orthogonality — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Orthogonality">https://en.wikipedia.org/wiki/Orthogonality</a>.
-</div>
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-wikipedia_row_and_column_vectors" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Row and Column Vectors — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Row_and_column_vectors">https://en.wikipedia.org/wiki/Row_and_column_vectors</a>.
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Row and column vectors — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Row_and_column_vectors">https://en.wikipedia.org/wiki/Row_and_column_vectors</a>
+</div>
 </div>
 <div id="ref-wikipedia_scalar_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>Scalar (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Scalar_(mathematics)">https://en.wikipedia.org/wiki/Scalar_(mathematics)</a>.
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Scalar (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Scalar_(mathematics)">https://en.wikipedia.org/wiki/Scalar_(mathematics)</a>
+</div>
+</div>
+<div id="ref-dobson4e" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">A. J. Dobson and A. G. Barnett, <em>An introduction to generalized linear models</em>, 4th ed. CRC press, 2018. doi: <a href="https://doi.org/10.1201/9781315182780">10.1201/9781315182780</a>.</div>
+</div>
+<div id="ref-mosaiccalc" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">D. Kaplan, <em>MOSAIC calculus</em>. www.mosaic-web.org, 2022. Available: <a href="https://www.mosaic-web.org">www.mosaic-web.org</a>
+</div>
+</div>
+<div id="ref-wikipedia_arithmetic_mean" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Arithmetic mean — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Arithmetic_mean">https://en.wikipedia.org/wiki/Arithmetic_mean</a>
+</div>
 </div>
 <div id="ref-wikipedia_standard_basis" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Standard Basis — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Standard_basis">https://en.wikipedia.org/wiki/Standard_basis</a>.
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Standard basis — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Standard_basis">https://en.wikipedia.org/wiki/Standard_basis</a>
+</div>
+</div>
+<div id="ref-wikipedia_orthogonality" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Orthogonality — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Orthogonality">https://en.wikipedia.org/wiki/Orthogonality</a>
+</div>
+</div>
+<div id="ref-wikipedia_euclidean_vector" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Euclidean vector — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Euclidean_vector">https://en.wikipedia.org/wiki/Euclidean_vector</a>
+</div>
 </div>
 <div id="ref-wikipedia_unit_vector" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Unit Vector — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Unit_vector">https://en.wikipedia.org/wiki/Unit_vector</a>.
+<div class="csl-left-margin">[9] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Unit vector — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Unit_vector">https://en.wikipedia.org/wiki/Unit_vector</a>
+</div>
+</div>
+<div id="ref-wikipedia_euclidean_distance" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Euclidean distance — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Euclidean_distance">https://en.wikipedia.org/wiki/Euclidean_distance</a>
+</div>
+</div>
+<div id="ref-goodfellow2016deep" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div>
+<div class="csl-right-inline">I. Goodfellow, Y. Bengio, and A. Courville, <em>Deep learning</em>. MIT Press, 2016. Available: <a href="https://www.deeplearningbook.org/">https://www.deeplearningbook.org/</a>
+</div>
+</div>
+<div id="ref-hutchinson_wwu_ml_videos" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div>
+<div class="csl-right-inline">B. Hutchinson, <span>“<span>DATA</span> 471/571 (machine learning) and <span>CSCI</span> 481/581 (deep learning) video lectures.”</span> Western Washington University. Accessed: Sep. 28, 2026. [Online]. Available: <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/">https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/</a>
+</div>
 </div>
 </div></section></div></main><!-- /main --><!--
 Page-navigation helpers for the HTML format, included after the body of every

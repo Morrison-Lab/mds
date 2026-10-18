@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Derivatives
 
@@ -22,7 +22,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Limit of a function at a point)** Let \\f\\ be a [function](functions.llms.md#def-function) defined at every point of an [open interval](sets.llms.md#def-open-interval) around \\c\\, except possibly at \\c\\ itself, and let \\L\\ be a [real number](number-systems.llms.md#def-real-numbers). The **limit** of \\f(x)\\ as \\x\\ approaches \\c\\ is \\L\\ ([Wikipedia contributors 2026e](#ref-wikipedia_limit_of_a_function)), written \\\lim\_{x \to c} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that
+> **Definition 1 (Limit of a function at a point)** Let \\f\\ be a [function](functions.llms.md#def-function) defined at every point of an [open interval](sets.llms.md#def-open-interval) around \\c\\, except possibly at \\c\\ itself, and let \\L\\ be a [real number](number-systems.llms.md#def-real-numbers). The **limit** of \\f(x)\\ as \\x\\ approaches \\c\\ is \\L\\ [\[1\]](#ref-wikipedia_limit_of_a_function), written \\\lim\_{x \to c} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that
 >
 > \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } x \text{ with } 0 \< \mathopen{}\left\|x - c\right\|\mathclose{} \< \delta.\\
 >
@@ -40,11 +40,11 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Right-hand limit)** Let \\f\\ be a function and \\L\\ a real number. The **right-hand limit** of \\f\\ at \\c\\ is \\L\\ ([Wikipedia contributors 2026h](#ref-wikipedia_one_sided_limit)), written \\\lim\_{x \to c^+} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c \< x \< c + \delta\\.
+> **Definition 2 (Right-hand limit)** Let \\f\\ be a function and \\L\\ a real number. The **right-hand limit** of \\f\\ at \\c\\ is \\L\\ [\[2\]](#ref-wikipedia_one_sided_limit), written \\\lim\_{x \to c^+} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c \< x \< c + \delta\\.
 
 > **NOTE:**
 >
-> **Definition 3 (Left-hand limit)** Let \\f\\ be a function and \\L\\ a real number. The **left-hand limit** of \\f\\ at \\c\\ is \\L\\ ([Wikipedia contributors 2026h](#ref-wikipedia_one_sided_limit)), written \\\lim\_{x \to c^-} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c - \delta\< x \< c\\.
+> **Definition 3 (Left-hand limit)** Let \\f\\ be a function and \\L\\ a real number. The **left-hand limit** of \\f\\ at \\c\\ is \\L\\ [\[2\]](#ref-wikipedia_one_sided_limit), written \\\lim\_{x \to c^-} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c - \delta\< x \< c\\.
 
 > **NOTE:**
 >
@@ -75,7 +75,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Difference quotient)** Let \\f\\ be a real-valued function of one variable, defined at \\c\\ and at \\c + h\\, with \\h \ne 0\\. The **difference quotient** of \\f\\ at \\c\\ with increment \\h\\ is ([Wikipedia contributors 2026c](#ref-wikipedia_difference_quotient))
+> **Definition 5 (Difference quotient)** Let \\f\\ be a real-valued function of one variable, defined at \\c\\ and at \\c + h\\, with \\h \ne 0\\. The **difference quotient** of \\f\\ at \\c\\ with increment \\h\\ is [\[3\]](#ref-wikipedia_difference_quotient)
 >
 > \\ \frac{f(c + h) - f(c)}{h}, \\
 >
@@ -93,13 +93,13 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Differentiable function)** A function \\f\\ is **differentiable at** \\x = c\\ ([Wikipedia contributors 2026d](#ref-wikipedia_differentiable_function)) if the limit ([Definition 1](#def-limit)) of the difference quotient ([Definition 5](#def-difference-quotient)) as \\h \to 0\\,
+> **Definition 6 (Differentiable function)** A function \\f\\ is **differentiable at** \\x = c\\ [\[4\]](#ref-wikipedia_differentiable_function) if the limit ([Definition 1](#def-limit)) of the difference quotient ([Definition 5](#def-difference-quotient)) as \\h \to 0\\,
 >
 > \\f'(c) \stackrel{\text{def}}{=}\lim\_{h \to 0} \frac{f(c + h) - f(c)}{h},\\
 >
 > exists and is finite. The number \\f'(c)\\ is the derivative of \\f\\ at \\c\\ ([Definition 7](#def-derivative)).
 >
-> ([Larson and Edwards 2018, sec. 2.1](#ref-larsonCalc11e), p. 100)
+> [\[5, Sec. 2.1\]](#ref-larsonCalc11e), p. 100
 
 > **NOTE:**
 >
@@ -119,15 +119,15 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Derivative)** If \\f\\ is differentiable at \\c\\ ([Definition 6](#def-differentiable)), the number \\f'(c)\\ is the **derivative** of \\f\\ at \\c\\ ([Wikipedia contributors 2026b](#ref-wikipedia_derivative)). The **derivative** of \\f\\ is the function \\f'\\ whose value at each \\x\\ where \\f\\ is differentiable is \\f'(x)\\.
+> **Definition 7 (Derivative)** If \\f\\ is differentiable at \\c\\ ([Definition 6](#def-differentiable)), the number \\f'(c)\\ is the **derivative** of \\f\\ at \\c\\ [\[6\]](#ref-wikipedia_derivative). The **derivative** of \\f\\ is the function \\f'\\ whose value at each \\x\\ where \\f\\ is differentiable is \\f'(x)\\.
 
 > **NOTE:**
 >
-> **Definition 8 (Lagrange’s notation)** Writing the derivative ([Definition 7](#def-derivative)) with a prime, as \\f'\\ or \\f'(x)\\, is **Lagrange’s notation** ([Wikipedia contributors 2026g](#ref-wikipedia_notation_for_differentiation)).
+> **Definition 8 (Lagrange’s notation)** Writing the derivative ([Definition 7](#def-derivative)) with a prime, as \\f'\\ or \\f'(x)\\, is **Lagrange’s notation** [\[7\]](#ref-wikipedia_notation_for_differentiation).
 
 > **NOTE:**
 >
-> **Definition 9 (Leibniz notation)** The derivative of \\f\\ ([Definition 7](#def-derivative)) is also written \\\frac{d f}{d x}\\ or \\\frac{d }{d x} f(x)\\, which is **Leibniz notation** ([Wikipedia contributors 2026g](#ref-wikipedia_notation_for_differentiation)).
+> **Definition 9 (Leibniz notation)** The derivative of \\f\\ ([Definition 7](#def-derivative)) is also written \\\frac{d f}{d x}\\ or \\\frac{d }{d x} f(x)\\, which is **Leibniz notation** [\[7\]](#ref-wikipedia_notation_for_differentiation).
 
 > **NOTE:**
 >
@@ -165,7 +165,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Second derivative)** Let \\f\\ be a real-valued function of one variable whose derivative \\f'\\ ([Definition 7](#def-derivative)) exists at every point of an [open interval](sets.llms.md#def-open-interval) containing \\c\\. If \\f'\\ is differentiable ([Definition 6](#def-differentiable)) at \\c\\, its derivative there, written \\f''(c)\\ or \\\frac{d ^2 f}{d x^2}\\, is the **second derivative** of \\f\\ at \\c\\ ([Wikipedia contributors 2026l](#ref-wikipedia_second_derivative)).
+> **Definition 13 (Second derivative)** Let \\f\\ be a real-valued function of one variable whose derivative \\f'\\ ([Definition 7](#def-derivative)) exists at every point of an [open interval](sets.llms.md#def-open-interval) containing \\c\\. If \\f'\\ is differentiable ([Definition 6](#def-differentiable)) at \\c\\, its derivative there, written \\f''(c)\\ or \\\frac{d ^2 f}{d x^2}\\, is the **second derivative** of \\f\\ at \\c\\ [\[8\]](#ref-wikipedia_second_derivative).
 
 > **NOTE:**
 >
@@ -201,7 +201,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 3 (Power rule)** For every real number \\q\\ and every \\x \> 0\\ ([Wikipedia contributors 2026i](#ref-wikipedia_power_rule)), the derivative of the [power](algebra-exponentials.llms.md#def-real-power) \\x^q\\ is:
+> **Theorem 3 (Power rule)** For every real number \\q\\ and every \\x \> 0\\ [\[9\]](#ref-wikipedia_power_rule), the derivative of the [power](algebra-exponentials.llms.md#def-real-power) \\x^q\\ is:
 >
 > \\\frac{\partial}{\partial x}x^q = qx^{q-1}\\
 >
@@ -217,7 +217,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 1 (Derivative of polynomial and power functions)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.1.
+> **Exercise 1 (Derivative of polynomial and power functions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.1.
 >
 > Find the derivative of
 >
@@ -235,7 +235,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 2 (Finding points with a prescribed slope)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.14.
+> **Exercise 2 (Finding points with a prescribed slope)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.14.
 >
 > Let \\f(x) = \frac{1}{3}x^3 + x^2 - x - 1\\. Find all points on the graph of \\f\\ where the slope is:
 >
@@ -285,7 +285,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 3 (Derivative after logarithmic simplification)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.4.
+> **Exercise 3 (Derivative after logarithmic simplification)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.4.
 >
 > Find the derivative of
 >
@@ -329,7 +329,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 8 (Product rule)** If \\a\\ and \\b\\ are differentiable functions of \\x\\ ([Wikipedia contributors 2026j](#ref-wikipedia_product_rule)), then
+> **Theorem 8 (Product rule)** If \\a\\ and \\b\\ are differentiable functions of \\x\\ [\[11\]](#ref-wikipedia_product_rule), then
 >
 > \\(ab)' = ab' + ba'\\
 
@@ -341,7 +341,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 4 (Derivative of a product)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.2.
+> **Exercise 4 (Derivative of a product)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.2.
 >
 > Find the derivative of
 >
@@ -363,7 +363,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 5 (Second derivative of a product)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.15.
+> **Exercise 5 (Second derivative of a product)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.15.
 >
 > Find the second derivative of
 >
@@ -385,7 +385,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 9 (Quotient rule)** If \\a\\ and \\b\\ are differentiable functions of \\x\\ ([Wikipedia contributors 2026k](#ref-wikipedia_quotient_rule)) and \\b \neq 0\\, then
+> **Theorem 9 (Quotient rule)** If \\a\\ and \\b\\ are differentiable functions of \\x\\ [\[12\]](#ref-wikipedia_quotient_rule) and \\b \neq 0\\, then
 >
 > \\(a/b)' = a'/b - (a/b^2)b'\\
 
@@ -397,7 +397,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 6 (Derivative of a rational function)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.12.
+> **Exercise 6 (Derivative of a rational function)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.12.
 >
 > Find the derivative of
 >
@@ -421,7 +421,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 10 (Chain rule)** If \\a\\ is a differentiable function of \\b\\ ([Wikipedia contributors 2026a](#ref-wikipedia_chain_rule)), and \\b\\ is a differentiable function of \\c\\, then \\a\\ is a differentiable function of \\c\\, and
+> **Theorem 10 (Chain rule)** If \\a\\ is a differentiable function of \\b\\ [\[13\]](#ref-wikipedia_chain_rule), and \\b\\ is a differentiable function of \\c\\, then \\a\\ is a differentiable function of \\c\\, and
 >
 > \\\begin{aligned} \frac{d a}{d c} &= \frac{d a}{d b} \frac{d b}{d c} \\ &= \frac{d b}{d c} \frac{d a}{d b} \end{aligned} \\
 >
@@ -431,7 +431,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 7 (Derivative of the standard Gaussian kernel)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.5.
+> **Exercise 7 (Derivative of the standard Gaussian kernel)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.5.
 >
 > Find the derivative of
 >
@@ -455,7 +455,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 8 (Second derivative of the Gaussian kernel)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.6.
+> **Exercise 8 (Second derivative of the Gaussian kernel)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.6.
 >
 > Find the second derivative of
 >
@@ -483,7 +483,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 9 (Combining product and chain rules)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.7.
+> **Exercise 9 (Combining product and chain rules)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.7.
 >
 > Find the derivative of
 >
@@ -505,7 +505,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 10 (Generalized power rule)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.13.
+> **Exercise 10 (Generalized power rule)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.13.
 >
 > Find the derivative of
 >
@@ -543,7 +543,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 11 (Chain rule with logarithm)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.3.
+> **Exercise 11 (Chain rule with logarithm)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.3.
 >
 > Find the derivative of
 >
@@ -561,7 +561,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 12 (Second derivative with an added constant)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.9.
+> **Exercise 12 (Second derivative with an added constant)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.9.
 >
 > Find the second derivative of
 >
@@ -715,7 +715,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 17 (Linear approximation (first-order Taylor approximation))** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ ([Wikipedia contributors 2026f](#ref-wikipedia_linear_approximation)) (also called the **first-order Taylor approximation**) is the function of the step \\\varepsilon\\
+> **Definition 17 (Linear approximation (first-order Taylor approximation))** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ [\[14\]](#ref-wikipedia_linear_approximation) (also called the **first-order Taylor approximation**) is the function of the step \\\varepsilon\\
 >
 > \\\hat{f}\_w(\varepsilon) = f(w) + \varepsilon\\\frac{d }{d w}f(w)\\
 >
@@ -723,7 +723,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Remark 2* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step \\\varepsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra-exponentials.llms.md#def-linear-function) in \\\varepsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
+> *Remark 2* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step \\\varepsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra-exponentials.llms.md#def-linear-function) in \\\varepsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
 
 > **NOTE:**
 >
@@ -787,7 +787,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 13 (Tangent line approximation)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.8.
+> **Exercise 13 (Tangent line approximation)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.8.
 >
 > Let \\f(x) = 4x + \sqrt{2}\cos x\\.
 >
@@ -823,7 +823,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 18 (Flat point (stationary point))** Let \\f\\ be differentiable at \\c\\ ([Definition 6](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a **stationary point**) ([Wikipedia contributors 2026m](#ref-wikipedia_stationary_point)).
+> **Definition 18 (Flat point (stationary point))** Let \\f\\ be differentiable at \\c\\ ([Definition 6](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a **stationary point**) [\[16\]](#ref-wikipedia_stationary_point).
 
 > **NOTE:**
 >
@@ -916,7 +916,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 15 (Maximizing a gamma-family kernel)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.10.
+> **Exercise 15 (Maximizing a gamma-family kernel)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.10.
 >
 > Find the maximum value of
 >
@@ -946,7 +946,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 16 (Classifying critical points with the second derivative test)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.11.
+> **Exercise 16 (Classifying critical points with the second derivative test)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.11.
 >
 > Find the critical points of
 >
@@ -1016,7 +1016,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 17 (Taylor polynomial of a polynomial at the origin)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.16.
+> **Exercise 17 (Taylor polynomial of a polynomial at the origin)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.16.
 >
 > Find the first five terms (up to degree 4) of the Taylor series for
 >
@@ -1038,7 +1038,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 18 (Taylor expansion of a polynomial at a nonzero point)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.17.
+> **Exercise 18 (Taylor expansion of a polynomial at a nonzero point)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.17.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
 >
@@ -1074,7 +1074,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 19 (Taylor expansion of a scaled cosine)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.18.
+> **Exercise 19 (Taylor expansion of a scaled cosine)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.18.
 >
 > Find the terms up to degree 4 in the Taylor series for
 >
@@ -1096,7 +1096,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 20 (Taylor series of a power of a function)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.19.
+> **Exercise 20 (Taylor series of a power of a function)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.19.
 >
 > Find the terms up to degree 4 in the Taylor series for
 >
@@ -1116,7 +1116,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 21 (Linear Taylor polynomial of the exponential)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.20.
+> **Exercise 21 (Linear Taylor polynomial of the exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.20.
 >
 > Find the first two terms (degree 1) of the Taylor series for
 >
@@ -1142,7 +1142,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 22 (Taylor series of a composite exponential)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.21.
+> **Exercise 22 (Taylor series of a composite exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.21.
 >
 > Find the first six terms (up to degree 5) of the Taylor series for
 >
@@ -1162,7 +1162,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 23 (Taylor expansion of the normal density)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.22.
+> **Exercise 23 (Taylor expansion of the normal density)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.22.
 >
 > Find the terms up to degree 3 of the Taylor series for the standard normal density
 >
@@ -1196,7 +1196,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 24 (Taylor expansion of the square root)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.23.
+> **Exercise 24 (Taylor expansion of the square root)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.23.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
 >
@@ -1216,7 +1216,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 25 (Taylor expansion of a fractional power)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.24.
+> **Exercise 25 (Taylor expansion of a fractional power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.24.
 >
 > Find the first three terms of the Taylor series for
 >
@@ -1236,7 +1236,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 26 (Taylor expansion of \\x \log x\\)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.25.
+> **Exercise 26 (Taylor expansion of \\x \log x\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.25.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
 >
@@ -1256,7 +1256,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 27 (Maclaurin series of \\\log(1 + x)\\)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.26.
+> **Exercise 27 (Maclaurin series of \\\log(1 + x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.26.
 >
 > Find the first three terms of the Taylor series for
 >
@@ -1286,7 +1286,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 28 (Maclaurin series of \\\log(1 - x)\\)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.27.
+> **Exercise 28 (Maclaurin series of \\\log(1 - x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.27.
 >
 > Find the terms up to degree 3 of the Taylor series for
 >
@@ -1312,7 +1312,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 29 (Taylor series of \\\log((1 - x)e^x)\\)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.28.
+> **Exercise 29 (Taylor series of \\\log((1 - x)e^x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.28.
 >
 > Find the first two non-zero terms of the Taylor series for
 >
@@ -1336,7 +1336,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 30 (Taylor series of a product of known expansions)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.29.
+> **Exercise 30 (Taylor series of a product of known expansions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.29.
 >
 > Find the terms up to degree 2 of the Taylor series for
 >
@@ -1356,7 +1356,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 31 (Taylor series of \\\log(1 + 2x)\\)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.30.
+> **Exercise 31 (Taylor series of \\\log(1 + 2x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.30.
 >
 > Find the first two non-zero terms of the Taylor series for
 >
@@ -1372,64 +1372,96 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 ## Further reading
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_limit_of_a_function)) — limits of functions, with the epsilon-delta definition
+- Wikipedia contributors [\[1\]](#ref-wikipedia_limit_of_a_function) — limits of functions, with the epsilon-delta definition
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_one_sided_limit)) — one-sided limits
+- Wikipedia contributors [\[2\]](#ref-wikipedia_one_sided_limit) — one-sided limits
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_derivative)) — the derivative, its notation and its history
+- Wikipedia contributors [\[6\]](#ref-wikipedia_derivative) — the derivative, its notation and its history
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_differentiable_function)) — differentiable functions and their classes
+- Wikipedia contributors [\[4\]](#ref-wikipedia_differentiable_function) — differentiable functions and their classes
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_power_rule)) — the power rule and its proofs
+- Wikipedia contributors [\[9\]](#ref-wikipedia_power_rule) — the power rule and its proofs
 
-- Wikipedia contributors ([2026j](#ref-wikipedia_product_rule)) — the product rule and its generalizations
+- Wikipedia contributors [\[11\]](#ref-wikipedia_product_rule) — the product rule and its generalizations
 
-- Wikipedia contributors ([2026k](#ref-wikipedia_quotient_rule)) — the quotient rule
+- Wikipedia contributors [\[12\]](#ref-wikipedia_quotient_rule) — the quotient rule
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_chain_rule)) — the chain rule, in one and several variables
+- Wikipedia contributors [\[13\]](#ref-wikipedia_chain_rule) — the chain rule, in one and several variables
 
-- Wikipedia contributors ([2026l](#ref-wikipedia_second_derivative)) — the second derivative and concavity
+- Wikipedia contributors [\[8\]](#ref-wikipedia_second_derivative) — the second derivative and concavity
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_linear_approximation)) — linear approximation and the tangent line
+- Wikipedia contributors [\[14\]](#ref-wikipedia_linear_approximation) — linear approximation and the tangent line
 
-- Wikipedia contributors ([2026m](#ref-wikipedia_stationary_point)) — stationary points and how to classify them
+- Wikipedia contributors [\[16\]](#ref-wikipedia_stationary_point) — stationary points and how to classify them
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_difference_quotient)) — the difference quotient
+- Wikipedia contributors [\[3\]](#ref-wikipedia_difference_quotient) — the difference quotient
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_notation_for_differentiation)) — Leibniz, Lagrange and Newton notation for derivatives
+- Wikipedia contributors [\[7\]](#ref-wikipedia_notation_for_differentiation) — Leibniz, Lagrange and Newton notation for derivatives
 
 Back to top
 
 ## References
 
-Boyd, Stephen, and Lieven Vandenberghe. 2018. *Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares*. Cambridge University Press. <https://doi.org/10.1017/9781108583664>.
+\[1\]
 
-Larson, Ron, and Bruce H. Edwards. 2018. *Calculus*. 11th ed. Cengage Learning. <https://www.cengage.com/c/calculus-11e-larson/>.
+Wikipedia contributors, “Limit of a function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Limit_of_a_function>
 
-Miller, Steven J. 2016. *The Probability Lifesaver: Calculus Review Problems*. <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>.
+\[2\]
 
-Wikipedia contributors. 2026a. *Chain Rule — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Chain_rule>.
+Wikipedia contributors, “One-sided limit — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/One-sided_limit>
 
-Wikipedia contributors. 2026b. *Derivative — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Derivative>.
+\[3\]
 
-Wikipedia contributors. 2026c. *Difference Quotient — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Difference_quotient>.
+Wikipedia contributors, “Difference quotient — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Difference_quotient>
 
-Wikipedia contributors. 2026d. *Differentiable Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Differentiable_function>.
+\[4\]
 
-Wikipedia contributors. 2026e. *Limit of a Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Limit_of_a_function>.
+Wikipedia contributors, “Differentiable function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Differentiable_function>
 
-Wikipedia contributors. 2026f. *Linear Approximation — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Linear_approximation>.
+\[5\]
 
-Wikipedia contributors. 2026g. *Notation for Differentiation — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Notation_for_differentiation>.
+R. Larson and B. H. Edwards, *Calculus*, 11th ed. Boston, MA: Cengage Learning, 2018. Available: <https://www.cengage.com/c/calculus-11e-larson/>
 
-Wikipedia contributors. 2026h. *One-Sided Limit — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/One-sided_limit>.
+\[6\]
 
-Wikipedia contributors. 2026i. *Power Rule — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Power_rule>.
+Wikipedia contributors, “Derivative — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Derivative>
 
-Wikipedia contributors. 2026j. *Product Rule — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Product_rule>.
+\[7\]
 
-Wikipedia contributors. 2026k. *Quotient Rule — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Quotient_rule>.
+Wikipedia contributors, “Notation for differentiation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Notation_for_differentiation>
 
-Wikipedia contributors. 2026l. *Second Derivative — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Second_derivative>.
+\[8\]
 
-Wikipedia contributors. 2026m. *Stationary Point — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Stationary_point>.
+Wikipedia contributors, “Second derivative — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Second_derivative>
+
+\[9\]
+
+Wikipedia contributors, “Power rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Power_rule>
+
+\[10\]
+
+S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Available: <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>
+
+\[11\]
+
+Wikipedia contributors, “Product rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Product_rule>
+
+\[12\]
+
+Wikipedia contributors, “Quotient rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quotient_rule>
+
+\[13\]
+
+Wikipedia contributors, “Chain rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Chain_rule>
+
+\[14\]
+
+Wikipedia contributors, “Linear approximation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_approximation>
+
+\[15\]
+
+S. Boyd and L. Vandenberghe, *Introduction to applied linear algebra: Vectors, matrices, and least squares*. Cambridge University Press, 2018. doi: [10.1017/9781108583664](https://doi.org/10.1017/9781108583664).
+
+\[16\]
+
+Wikipedia contributors, “Stationary point — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Stationary_point>

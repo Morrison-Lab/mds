@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Rank
 
 > **NOTE:**
 >
-> **Definition 1 (Linearly independent vectors)** Vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\ of the same length \\p\\ are **linearly independent** ([Wikipedia contributors 2026c](#ref-wikipedia_linear_independence)) if the only numbers \\c_1, \ldots, c_k\\ with
+> **Definition 1 (Linearly independent vectors)** Vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\\ of the same length \\p\\ are **linearly independent** [\[1\]](#ref-wikipedia_linear_independence) if the only numbers \\c_1, \ldots, c_k\\ with
 >
 > \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\
 >
@@ -29,7 +29,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Rank)** The **rank** ([Wikipedia contributors 2026f](#ref-wikipedia_rank_linear_algebra)) of a matrix \\\mathbf{A}\\, written \\\operatorname{rank}(\mathbf{A})\\, is the largest number of columns of \\\mathbf{A}\\ that are linearly independent ([Definition 1](#def-linearly-independent)).
+> **Definition 2 (Rank)** The **rank** [\[2\]](#ref-wikipedia_rank_linear_algebra) of a matrix \\\mathbf{A}\\, written \\\operatorname{rank}(\mathbf{A})\\, is the largest number of columns of \\\mathbf{A}\\ that are linearly independent ([Definition 1](#def-linearly-independent)).
 
 > **NOTE:**
 >
@@ -51,7 +51,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024](#ref-zhou2024vecsp)), used under the MIT License. The license text is:
+> This section is adapted from Zhou [\[3\]](#ref-zhou2024vecsp), used under the MIT License. The license text is:
 >
 > > Copyright (c) 2024 ucla-biostat-216
 > >
@@ -63,7 +63,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Subspace (linear subspace, vector space, linear space))** A set \\\mathcal{S}\\ of vectors in \\\mathbb{R}^p\\ is a **subspace** ([Wikipedia contributors 2026e](#ref-wikipedia_linear_subspace)) of \\\mathbb{R}^p\\ if it is not empty and it is closed under vector addition and scalar multiplication:
+> **Definition 4 (Subspace (linear subspace, vector space, linear space))** A set \\\mathcal{S}\\ of vectors in \\\mathbb{R}^p\\ is a **subspace** [\[4\]](#ref-wikipedia_linear_subspace) of \\\mathbb{R}^p\\ if it is not empty and it is closed under vector addition and scalar multiplication:
 >
 > 1.  if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{S}\\, then \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{S}\\;
 > 2.  if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\c \in \mathbb{R}\\, then \\c \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\.
@@ -99,7 +99,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Span)** The **span** ([Wikipedia contributors 2026d](#ref-wikipedia_linear_span)) of vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k \in \mathbb{R}^p\\ is the set of all their linear combinations:
+> **Definition 5 (Span)** The **span** [\[5\]](#ref-wikipedia_linear_span) of vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k \in \mathbb{R}^p\\ is the set of all their linear combinations:
 >
 > \\ \operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k\right\\\mathclose{} \stackrel{\text{def}}{=} \mathopen{}\left\\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_k : c_1, \ldots, c_k \in \mathbb{R}\right\\\mathclose{}. \\
 >
@@ -204,7 +204,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Basis)** A **basis** ([Wikipedia contributors 2026a](#ref-wikipedia_basis_linear_algebra)) of a subspace \\\mathcal{S}\\ ([Definition 4](#def-subspace)) is a list of vectors that are linearly independent ([Definition 1](#def-linearly-independent)) and span \\\mathcal{S}\\ ([Definition 5](#def-span)).
+> **Definition 6 (Basis)** A **basis** [\[6\]](#ref-wikipedia_basis_linear_algebra) of a subspace \\\mathcal{S}\\ ([Definition 4](#def-subspace)) is a list of vectors that are linearly independent ([Definition 1](#def-linearly-independent)) and span \\\mathcal{S}\\ ([Definition 5](#def-span)).
 
 > **NOTE:**
 >
@@ -252,7 +252,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Coordinates in a basis)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\ be a basis of a subspace \\\mathcal{S}\\ ([Definition 6](#def-basis)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathcal{S}\\. The **coordinates** ([Wikipedia contributors 2026b](#ref-wikipedia_coordinate_vector)) of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ in this basis are the numbers \\c_1, \ldots, c_k\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\. By [Theorem 6](#thm-basis-unique) there is exactly one such list of numbers.
+> **Definition 7 (Coordinates in a basis)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\ be a basis of a subspace \\\mathcal{S}\\ ([Definition 6](#def-basis)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathcal{S}\\. The **coordinates** [\[7\]](#ref-wikipedia_coordinate_vector) of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ in this basis are the numbers \\c_1, \ldots, c_k\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 + \cdots + c_k \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_k\\. By [Theorem 6](#thm-basis-unique) there is exactly one such list of numbers.
 
 > **NOTE:**
 >
@@ -384,32 +384,46 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 ## Further reading
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_linear_independence)) — linear independence and dependence, with examples
+- Wikipedia contributors [\[1\]](#ref-wikipedia_linear_independence) — linear independence and dependence, with examples
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_linear_span)) — the span of a set of vectors
+- Wikipedia contributors [\[5\]](#ref-wikipedia_linear_span) — the span of a set of vectors
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_linear_subspace)) — linear subspaces
+- Wikipedia contributors [\[4\]](#ref-wikipedia_linear_subspace) — linear subspaces
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_basis_linear_algebra)) — bases and dimension
+- Wikipedia contributors [\[6\]](#ref-wikipedia_basis_linear_algebra) — bases and dimension
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_coordinate_vector)) — coordinates relative to a basis
+- Wikipedia contributors [\[7\]](#ref-wikipedia_coordinate_vector) — coordinates relative to a basis
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_rank_linear_algebra)) — the rank of a matrix
+- Wikipedia contributors [\[2\]](#ref-wikipedia_rank_linear_algebra) — the rank of a matrix
 
 Back to top
 
 ## References
 
-Wikipedia contributors. 2026a. *Basis (Linear Algebra) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Basis_(linear_algebra)>.
+\[1\]
 
-Wikipedia contributors. 2026b. *Coordinate Vector — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Coordinate_vector>.
+Wikipedia contributors, “Linear independence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_independence>
 
-Wikipedia contributors. 2026c. *Linear Independence — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Linear_independence>.
+\[2\]
 
-Wikipedia contributors. 2026d. *Linear Span — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Linear_span>.
+Wikipedia contributors, “Rank (linear algebra) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Rank_(linear_algebra)>
 
-Wikipedia contributors. 2026e. *Linear Subspace — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Linear_subspace>.
+\[3\]
 
-Wikipedia contributors. 2026f. *Rank (Linear Algebra) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Rank_(linear_algebra)>.
+H. Zhou, “Vector space.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html>
 
-Zhou, Hua. 2024. *Vector Space*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html>.
+\[4\]
+
+Wikipedia contributors, “Linear subspace — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_subspace>
+
+\[5\]
+
+Wikipedia contributors, “Linear span — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_span>
+
+\[6\]
+
+Wikipedia contributors, “Basis (linear algebra) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Basis_(linear_algebra)>
+
+\[7\]
+
+Wikipedia contributors, “Coordinate vector — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Coordinate_vector>

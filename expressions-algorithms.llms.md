@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
@@ -14,7 +14,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Expression)** An **expression** ([Wikipedia contributors 2026b](#ref-wikipedia_expression_mathematics)) is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression *denotes* a [function](functions.llms.md#def-function): it fixes the output for each input.
+> **Definition 1 (Expression)** An **expression** [\[1\]](#ref-wikipedia_expression_mathematics) is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression *denotes* a [function](functions.llms.md#def-function): it fixes the output for each input.
 
 > **NOTE:**
 >
@@ -24,7 +24,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Parse tree)** The **parse tree** ([Wikipedia contributors 2026c](#ref-wikipedia_parse_tree)) of an [expression](#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
+> **Definition 2 (Parse tree)** The **parse tree** [\[2\]](#ref-wikipedia_parse_tree) of an [expression](#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
 
 > **NOTE:**
 >
@@ -50,7 +50,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Algorithm)** An **algorithm** ([Wikipedia contributors 2026a](#ref-wikipedia_algorithm)) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm *computes* a [function](functions.llms.md#def-function): for each input it returns the function’s value at that input.
+> **Definition 3 (Algorithm)** An **algorithm** [\[3\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm *computes* a [function](functions.llms.md#def-function): for each input it returns the function’s value at that input.
 
 > **NOTE:**
 >
@@ -76,18 +76,24 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 ## Further reading
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_expression_mathematics)) — expressions, with examples
+- Wikipedia contributors [\[1\]](#ref-wikipedia_expression_mathematics) — expressions, with examples
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_parse_tree)) — parse trees
+- Wikipedia contributors [\[2\]](#ref-wikipedia_parse_tree) — parse trees
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_algorithm)) — algorithms, their history and analysis
+- Wikipedia contributors [\[3\]](#ref-wikipedia_algorithm) — algorithms, their history and analysis
 
 Back to top
 
 ## References
 
-Wikipedia contributors. 2026a. *Algorithm — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Algorithm>.
+\[1\]
 
-Wikipedia contributors. 2026b. *Expression (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Expression_(mathematics)>.
+Wikipedia contributors, “Expression (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Expression_(mathematics)>
 
-Wikipedia contributors. 2026c. *Parse Tree — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Parse_tree>.
+\[2\]
+
+Wikipedia contributors, “Parse tree — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Parse_tree>
+
+\[3\]
+
+Wikipedia contributors, “Algorithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Algorithm>

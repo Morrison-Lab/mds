@@ -62,6 +62,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -218,66 +219,6 @@ cookieconsent.run({
 </script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -298,6 +239,16 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-lem.callout {
   border-left-color: #1565C0;
 }
@@ -307,6 +258,26 @@ div.callout-lem.callout-style-default .callout-header {
 div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cnj.callout {
   border-left-color: #558B2F;
@@ -318,6 +289,16 @@ div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-prp.callout {
   border-left-color: #827717;
 }
@@ -328,15 +309,35 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-fig.callout {
+  border-left-color: #757575;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-tbl.callout {
+  border-left-color: #757575;
+}
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -970,7 +971,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+      <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
     </div>
   </div>
   
@@ -979,7 +980,7 @@ window.Quarto = {
   
 
 
-</header><p>(adapted from <span class="citation" data-cites="fieller2018basics">Fieller (<a href="#ref-fieller2018basics" role="doc-biblioref">2016</a>)</span>, <a href="https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&amp;refId=c310b723-786a-4f33-ae56-720a6cccd3a1">Section 7.2</a>)</p>
+</header><p>(adapted from <span class="citation" data-cites="fieller2018basics">Fieller <a href="#ref-fieller2018basics" role="doc-biblioref">[1]</a></span>, <a href="https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&amp;refId=c310b723-786a-4f33-ae56-720a6cccd3a1">Section 7.2</a>)</p>
 <p>This section covers <a href="./calculus-derivatives.html#def-derivative">derivatives</a> of functions of vectors and matrices. Its linear algebra prerequisites, such as vectors, matrices, transposes, dot products, and quadratic forms, are covered in <a href="./linear-algebra.html">Linear Algebra</a>.</p>
 <p>Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> be column vectors of length <span class="math inline">\(p\)</span> (see <a href="./linear-algebra-vectors.html#def-column-vector">column vector</a> and <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a>).</p>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
@@ -995,7 +996,7 @@ window.Quarto = {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-partial-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Partial derivative)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(x_1, \ldots, x_p)}^{\top} \in \mathbb{R}^p\)</span>. The <strong>partial derivative</strong> <span class="citation" data-cites="wikipedia_partial_derivative">(<a href="#ref-wikipedia_partial_derivative" role="doc-biblioref">Wikipedia contributors 2026g</a>)</span> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x_j\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 1 (Partial derivative)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(x_1, \ldots, x_p)}^{\top} \in \mathbb{R}^p\)</span>. The <strong>partial derivative</strong> <span class="citation" data-cites="wikipedia_partial_derivative"><a href="#ref-wikipedia_partial_derivative" role="doc-biblioref">[2]</a></span> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x_j\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is</p>
 <p><span class="math display">\[
 \frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \stackrel{\text{def}}{=}
 \lim_{h \to 0} \frac{f(x_1, \ldots, x_j + h, \ldots, x_p) - f(x_1, \ldots, x_p)}{h},
@@ -1069,7 +1070,7 @@ f(1, 2) &amp;= 1 \cdot 2 + 6 \\
 <div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-pderiv-basic" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (First-order partial derivatives)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.42.</p>
+<p><span class="theorem-title"><strong>Exercise 1 (First-order partial derivatives)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[3]</a></span>, Question 1.1.42.</p>
 <p>Let <span class="math inline">\(f(x, y) = x^2 y + e^x + \sin(xy)\)</span>. Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span>.</p>
 </div>
 </div>
@@ -1115,7 +1116,7 @@ f(1, 2) &amp;= 1 \cdot 2 + 6 \\
 <div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-pderiv-normal-parameters" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (Partial derivatives of the normal density with respect to parameters)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.43.</p>
+<p><span class="theorem-title"><strong>Exercise 2 (Partial derivatives of the normal density with respect to parameters)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[3]</a></span>, Question 1.1.43.</p>
 <p>Let</p>
 <p><span class="math display">\[f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{}\]</span></p>
 <p>Find <span class="math inline">\(\frac{\partial f}{\partial \mu}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial \sigma}\)</span>.</p>
@@ -1216,7 +1217,7 @@ f(1, 2) &amp;= 1 \cdot 2 + 6 \\
 <div id="callout-9" class="callout-9-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-pderiv-exp-quadratic" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Partial derivatives with exponential of quadratic form)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.44.</p>
+<p><span class="theorem-title"><strong>Exercise 3 (Partial derivatives with exponential of quadratic form)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[3]</a></span>, Question 1.1.44.</p>
 <p>Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for</p>
 <p><span class="math display">\[f(x, y) = x\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\]</span></p>
 </div>
@@ -1269,7 +1270,7 @@ f(1, 2) &amp;= 1 \cdot 2 + 6 \\
 <div id="callout-11" class="callout-11-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-pderiv-symmetric" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4 (Using symmetry to compute partial derivatives)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.45.</p>
+<p><span class="theorem-title"><strong>Exercise 4 (Using symmetry to compute partial derivatives)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[3]</a></span>, Question 1.1.45.</p>
 <p>Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for</p>
 <p><span class="math display">\[f(x, y) = e^{xy} - \log(x^2 + y^2)\]</span></p>
 <p>on <span class="math inline">\(\mathbb{R}^2 \setminus \{(0, 0)\}\)</span>.</p>
@@ -1322,7 +1323,7 @@ f(1, 2) &amp;= 1 \cdot 2 + 6 \\
 \frac{\partial}{\partial \beta_{p}}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})
 \end{bmatrix}
 \]</span></p>
-<p>The vector derivative is also called the <strong>gradient</strong> <span class="citation" data-cites="wp:gradient">(<a href="#ref-wp:gradient" role="doc-biblioref">Wikipedia contributors, n.d.</a>)</span> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>, written <span class="math inline">\(\nabla_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})\)</span>.</p>
+<p>The vector derivative is also called the <strong>gradient</strong> <span class="citation" data-cites="wp:gradient"><a href="#ref-wp:gradient" role="doc-biblioref">[4]</a></span> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>, written <span class="math inline">\(\nabla_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1366,7 +1367,7 @@ f(1, 2) &amp;= 1 \cdot 2 + 6 \\
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients">Gradients Refresher</a> (17 min) covers gradients and partial derivatives, the ideas behind this section <span class="citation" data-cites="hutchinson_wwu_ml_videos">(<a href="#ref-hutchinson_wwu_ml_videos" role="doc-biblioref">Hutchinson, n.d.</a>)</span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
+<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients">Gradients Refresher</a> (17 min) covers gradients and partial derivatives, the ideas behind this section <span class="citation" data-cites="hutchinson_wwu_ml_videos"><a href="#ref-hutchinson_wwu_ml_videos" role="doc-biblioref">[5]</a></span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Videos">
@@ -1487,7 +1488,7 @@ Table&nbsp;1: The shape of a gradient follows the shape of what it differentiate
 <div id="callout-19" class="callout-19-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-level-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Level set (level curve, contour))</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> and let <span class="math inline">\(c\)</span> be a real number. The <strong>level set</strong> <span class="citation" data-cites="wikipedia_level_set">(<a href="#ref-wikipedia_level_set" role="doc-biblioref">Wikipedia contributors 2026e</a>)</span> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 4 (Level set (level curve, contour))</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> and let <span class="math inline">\(c\)</span> be a real number. The <strong>level set</strong> <span class="citation" data-cites="wikipedia_level_set"><a href="#ref-wikipedia_level_set" role="doc-biblioref">[6]</a></span> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is</p>
 <p><span class="math display">\[
 \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c\right\}\mathclose{},
 \]</span></p>
@@ -1808,7 +1809,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 \frac{\partial}{\partial \beta_{p}}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})
 \end{bmatrix}
 \tag{1}\]</span></span></p>
-<p>The row-vector derivative is also called the <strong>total derivative</strong> <span class="citation" data-cites="wikipedia_total_derivative">(<a href="#ref-wikipedia_total_derivative" role="doc-biblioref">Wikipedia contributors 2026j</a>)</span> of <span class="math inline">\(f\)</span>, the name used when the derivative of a scalar-valued function is written as a row vector.</p>
+<p>The row-vector derivative is also called the <strong>total derivative</strong> <span class="citation" data-cites="wikipedia_total_derivative"><a href="#ref-wikipedia_total_derivative" role="doc-biblioref">[7]</a></span> of <span class="math inline">\(f\)</span>, the name used when the derivative of a scalar-valued function is written as a row vector.</p>
 </div>
 </div>
 </div>
@@ -1967,7 +1968,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <div id="callout-30" class="callout-30-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-denominator-layout" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Denominator layout)</strong></span> Writing derivatives as in <a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a> is the <strong>denominator layout</strong> <span class="citation" data-cites="wikipedia_matrix_calculus">(<a href="#ref-wikipedia_matrix_calculus" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span>, which these notes use throughout: rows index the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> (the denominator) and columns index the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> (the numerator), so column <span class="math inline">\(j\)</span> is the vector derivative <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} y_j\)</span> (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>).</p>
+<p><span class="theorem-title"><strong>Definition 7 (Denominator layout)</strong></span> Writing derivatives as in <a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a> is the <strong>denominator layout</strong> <span class="citation" data-cites="wikipedia_matrix_calculus"><a href="#ref-wikipedia_matrix_calculus" role="doc-biblioref">[8]</a></span>, which these notes use throughout: rows index the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> (the denominator) and columns index the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> (the numerator), so column <span class="math inline">\(j\)</span> is the vector derivative <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} y_j\)</span> (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>).</p>
 </div>
 </div>
 </div>
@@ -2023,7 +2024,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 &amp;= {(y_1, \ldots, y_q)}^{\top}
 \end{aligned}
 \]</span></p>
-<p>be a <span class="math inline">\(q \times 1\)</span> vector-valued function of the <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>. The <strong>Jacobian matrix</strong> <span class="citation" data-cites="wikipedia_jacobian_matrix_and_determinant">(<a href="#ref-wikipedia_jacobian_matrix_and_determinant" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is the <span class="math inline">\(q \times p\)</span> matrix whose <span class="math inline">\((j, i)\)</span> entry is <span class="math inline">\(\frac{\partial}{\partial \beta_{i}} y_j\)</span>, for <span class="math inline">\(j = 1, \ldots, q\)</span> and <span class="math inline">\(i = 1, \ldots, p\)</span>. It is the transpose of the derivative <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\)</span> of <a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>.</p>
+<p>be a <span class="math inline">\(q \times 1\)</span> vector-valued function of the <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>. The <strong>Jacobian matrix</strong> <span class="citation" data-cites="wikipedia_jacobian_matrix_and_determinant"><a href="#ref-wikipedia_jacobian_matrix_and_determinant" role="doc-biblioref">[9]</a></span> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is the <span class="math inline">\(q \times p\)</span> matrix whose <span class="math inline">\((j, i)\)</span> entry is <span class="math inline">\(\frac{\partial}{\partial \beta_{i}} y_j\)</span>, for <span class="math inline">\(j = 1, \ldots, q\)</span> and <span class="math inline">\(i = 1, \ldots, p\)</span>. It is the transpose of the derivative <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\)</span> of <a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>.</p>
 </div>
 </div>
 </div>
@@ -2041,7 +2042,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <div id="callout-33" class="callout-33-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-numerator-layout" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Numerator layout)</strong></span> Writing derivatives as in <a href="#def-jacobian-matrix" class="quarto-xref">Definition&nbsp;8</a>, with rows indexing the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> (the numerator) and columns indexing the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> (the denominator), is the <strong>numerator layout</strong> <span class="citation" data-cites="wikipedia_matrix_calculus">(<a href="#ref-wikipedia_matrix_calculus" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Numerator layout)</strong></span> Writing derivatives as in <a href="#def-jacobian-matrix" class="quarto-xref">Definition&nbsp;8</a>, with rows indexing the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> (the numerator) and columns indexing the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> (the denominator), is the <strong>numerator layout</strong> <span class="citation" data-cites="wikipedia_matrix_calculus"><a href="#ref-wikipedia_matrix_calculus" role="doc-biblioref">[8]</a></span>.</p>
 </div>
 </div>
 </div>
@@ -2200,7 +2201,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <div id="callout-39" class="callout-39-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-pderiv-independent-variable" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6 (Partial derivative with respect to an unreferenced variable)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.46.</p>
+<p><span class="theorem-title"><strong>Exercise 6 (Partial derivative with respect to an unreferenced variable)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[3]</a></span>, Question 1.1.46.</p>
 <p>Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for</p>
 <p><span class="math display">\[f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)\]</span></p>
 </div>
@@ -3087,7 +3088,7 @@ x_{p}
 <div id="callout-72" class="callout-72-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-residual" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Residual vector and residuals)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be an <span class="math inline">\(n \times p\)</span> matrix, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^n\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\in \mathbb{R}^p\)</span>. The <strong>residual vector</strong> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>, and its entries <span class="math inline">\(\varepsilon_i = y_i - (\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})_i\)</span> are the <strong>residuals</strong> <span class="citation" data-cites="wikipedia_errors_and_residuals">(<a href="#ref-wikipedia_errors_and_residuals" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Residual vector and residuals)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be an <span class="math inline">\(n \times p\)</span> matrix, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^n\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\in \mathbb{R}^p\)</span>. The <strong>residual vector</strong> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>, and its entries <span class="math inline">\(\varepsilon_i = y_i - (\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})_i\)</span> are the <strong>residuals</strong> <span class="citation" data-cites="wikipedia_errors_and_residuals"><a href="#ref-wikipedia_errors_and_residuals" role="doc-biblioref">[10]</a></span>.</p>
 </div>
 </div>
 </div>
@@ -3131,7 +3132,7 @@ x_{p}
 &amp;= \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}^2
 \end{aligned}
 \]</span></p>
-<p>is the <strong>residual sum of squares</strong> <span class="citation" data-cites="wikipedia_residual_sum_of_squares">(<a href="#ref-wikipedia_residual_sum_of_squares" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span>.</p>
+<p>is the <strong>residual sum of squares</strong> <span class="citation" data-cites="wikipedia_residual_sum_of_squares"><a href="#ref-wikipedia_residual_sum_of_squares" role="doc-biblioref">[11]</a></span>.</p>
 </div>
 </div>
 </div>
@@ -3314,7 +3315,7 @@ z &amp;= (x_1 + x_2)^2 + x_1 x_2 \\
 </div>
 </div>
 <div class="notes">
-<p>See <span class="citation" data-cites="felippa_ifem_matrix_calculus">Felippa (<a href="#ref-felippa_ifem_matrix_calculus" role="doc-biblioref">n.d.</a>)</span>, and <span class="citation" data-cites="wp:gradient">Wikipedia contributors (<a href="#ref-wp:gradient" role="doc-biblioref">n.d.</a>)</span>, section “Relationship with Frechet derivative”.</p>
+<p>See <span class="citation" data-cites="felippa_ifem_matrix_calculus">Felippa <a href="#ref-felippa_ifem_matrix_calculus" role="doc-biblioref">[12]</a></span>, and <span class="citation" data-cites="wp:gradient">Wikipedia contributors <a href="#ref-wp:gradient" role="doc-biblioref">[4]</a></span>, section “Relationship with Frechet derivative”.</p>
 </div>
 <div class="callouty-titled callout callout-style-default callout-cor callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-81-contents" aria-controls="callout-81" aria-expanded="true" aria-label="Toggle callout">
@@ -3434,7 +3435,7 @@ z &amp;= f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\va
 <div id="callout-85" class="callout-85-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-matrix-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Matrix derivative (gradient))</strong></span> For a scalar-valued function <span class="math inline">\(f(\mathbf{X})\)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span>, the <strong>matrix derivative</strong> <span class="citation" data-cites="wikipedia_matrix_calculus">(<a href="#ref-wikipedia_matrix_calculus" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span> is the <span class="math inline">\(m \times n\)</span> matrix whose <span class="math inline">\((i,j)\)</span> entry is the partial derivative of <span class="math inline">\(f\)</span> with respect to the <span class="math inline">\((i,j)\)</span> entry of <span class="math inline">\(\mathbf{X}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 14 (Matrix derivative (gradient))</strong></span> For a scalar-valued function <span class="math inline">\(f(\mathbf{X})\)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span>, the <strong>matrix derivative</strong> <span class="citation" data-cites="wikipedia_matrix_calculus"><a href="#ref-wikipedia_matrix_calculus" role="doc-biblioref">[8]</a></span> is the <span class="math inline">\(m \times n\)</span> matrix whose <span class="math inline">\((i,j)\)</span> entry is the partial derivative of <span class="math inline">\(f\)</span> with respect to the <span class="math inline">\((i,j)\)</span> entry of <span class="math inline">\(\mathbf{X}\)</span>:</p>
 <p><span class="math display">\[
 \mathopen{}\left[\frac{\partial}{\partial \mathbf{X}} f\right]\mathclose{}_{ij} = \frac{\partial}{\partial X_{ij}} f
 \]</span></p>
@@ -3689,7 +3690,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-95" class="callout-95-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-ball" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Open ball)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(r &gt; 0\)</span>. The <strong>open ball</strong> <span class="citation" data-cites="wikipedia_ball_mathematics">(<a href="#ref-wikipedia_ball_mathematics" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the set <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p : \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} &lt; r\right\}\mathclose{}\)</span>, of points whose distance from <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a> of the difference) is less than <span class="math inline">\(r\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 15 (Open ball)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(r &gt; 0\)</span>. The <strong>open ball</strong> <span class="citation" data-cites="wikipedia_ball_mathematics"><a href="#ref-wikipedia_ball_mathematics" role="doc-biblioref">[13]</a></span> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the set <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p : \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} &lt; r\right\}\mathclose{}\)</span>, of points whose distance from <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a> of the difference) is less than <span class="math inline">\(r\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3870,7 +3871,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <div id="callout-102" class="callout-102-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-hessian" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Hessian matrix)</strong></span> Let <span class="math inline">\(f\)</span> be a scalar-valued function of a <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> whose first partial derivatives exist on an open ball around <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>) and whose second partial derivatives (<a href="#def-second-partial-derivative" class="quarto-xref">Definition&nbsp;18</a>) exist at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. The <strong>Hessian matrix</strong> <span class="citation" data-cites="wikipedia_hessian_matrix">(<a href="#ref-wikipedia_hessian_matrix" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the derivative (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>) of the transposed gradient <span class="math inline">\({\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}\)</span> (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>):</p>
+<p><span class="theorem-title"><strong>Definition 20 (Hessian matrix)</strong></span> Let <span class="math inline">\(f\)</span> be a scalar-valued function of a <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> whose first partial derivatives exist on an open ball around <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>) and whose second partial derivatives (<a href="#def-second-partial-derivative" class="quarto-xref">Definition&nbsp;18</a>) exist at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. The <strong>Hessian matrix</strong> <span class="citation" data-cites="wikipedia_hessian_matrix"><a href="#ref-wikipedia_hessian_matrix" role="doc-biblioref">[14]</a></span> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the derivative (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>) of the transposed gradient <span class="math inline">\({\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}\)</span> (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>):</p>
 <p><span id="eq-hessian"><span class="math display">\[
 \underbrace{\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}.
 \tag{4}\]</span></span></p>
@@ -4363,12 +4364,12 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 <div id="callout-116" class="callout-116-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-hessian-symmetric" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (Symmetry of the Hessian)</strong></span> If the second partial derivatives of <span class="math inline">\(f\)</span> exist and are continuous (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;21</a>) on an open ball around <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>), then <span class="math inline">\(\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}\)</span> for all <span class="math inline">\(i, j\)</span> <span class="citation" data-cites="wikipedia_symmetry_of_second_derivatives">(<a href="#ref-wikipedia_symmetry_of_second_derivatives" role="doc-biblioref">Wikipedia contributors 2026i</a>)</span>, so <span class="math inline">\(\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> (<a href="#def-hessian" class="quarto-xref">Definition&nbsp;20</a>) is symmetric (<a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric matrix</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 14 (Symmetry of the Hessian)</strong></span> If the second partial derivatives of <span class="math inline">\(f\)</span> exist and are continuous (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;21</a>) on an open ball around <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;15</a>), then <span class="math inline">\(\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}\)</span> for all <span class="math inline">\(i, j\)</span> <span class="citation" data-cites="wikipedia_symmetry_of_second_derivatives"><a href="#ref-wikipedia_symmetry_of_second_derivatives" role="doc-biblioref">[15]</a></span>, so <span class="math inline">\(\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> (<a href="#def-hessian" class="quarto-xref">Definition&nbsp;20</a>) is symmetric (<a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric matrix</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<p>The proof applies the one-variable mean value theorem twice, which these notes do not develop; see <span class="citation" data-cites="rudin1976principles">(<a href="#ref-rudin1976principles" role="doc-biblioref">Rudin 1976</a>, Theorem 9.41)</span>, which is stated for two variables: apply it to <span class="math inline">\(f\)</span> as a function of <span class="math inline">\(x_i\)</span> and <span class="math inline">\(x_j\)</span>, with the other coordinates held fixed.</p>
+<p>The proof applies the one-variable mean value theorem twice, which these notes do not develop; see <span class="citation" data-cites="rudin1976principles"><a href="#ref-rudin1976principles" role="doc-biblioref">[16]</a>, Theorem 9.41</span>, which is stated for two variables: apply it to <span class="math inline">\(f\)</span> as a function of <span class="math inline">\(x_i\)</span> and <span class="math inline">\(x_j\)</span>, with the other coordinates held fixed.</p>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-117-contents" aria-controls="callout-117" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -4525,20 +4526,20 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 </section><section id="sec-additional-resources" class="level2" data-number="3"><h2 data-number="3" class="anchored" data-anchor-id="sec-additional-resources">
 <span class="header-section-number">3</span> Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="marsden2013vector">Marsden and Tromba (<a href="#ref-marsden2013vector" role="doc-biblioref">2013</a>)</span> is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.</p></li>
-<li><p><span class="citation" data-cites="petersen2012matrix">Petersen and Pedersen (<a href="#ref-petersen2012matrix" role="doc-biblioref">2012</a>)</span> is a free desk reference that collects matrix identities. Its chapter on derivatives lists derivatives of vector and matrix expressions, such as the linear and quadratic forms on this page.</p></li>
-<li><p><span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span> The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.</p></li>
-<li><p><span class="citation" data-cites="wikipedia_partial_derivative">Wikipedia contributors (<a href="#ref-wikipedia_partial_derivative" role="doc-biblioref">2026g</a>)</span> — partial derivatives</p></li>
-<li><p><span class="citation" data-cites="wp:gradient">Wikipedia contributors (<a href="#ref-wp:gradient" role="doc-biblioref">n.d.</a>)</span> — the gradient</p></li>
-<li><p><span class="citation" data-cites="wikipedia_level_set">Wikipedia contributors (<a href="#ref-wikipedia_level_set" role="doc-biblioref">2026e</a>)</span> — level sets</p></li>
-<li><p><span class="citation" data-cites="wikipedia_total_derivative">Wikipedia contributors (<a href="#ref-wikipedia_total_derivative" role="doc-biblioref">2026j</a>)</span> — the total derivative</p></li>
-<li><p><span class="citation" data-cites="wikipedia_jacobian_matrix_and_determinant">Wikipedia contributors (<a href="#ref-wikipedia_jacobian_matrix_and_determinant" role="doc-biblioref">2026d</a>)</span> — the Jacobian matrix</p></li>
-<li><p><span class="citation" data-cites="wikipedia_matrix_calculus">Wikipedia contributors (<a href="#ref-wikipedia_matrix_calculus" role="doc-biblioref">2026f</a>)</span> — matrix calculus and the numerator and denominator layouts</p></li>
-<li><p><span class="citation" data-cites="wikipedia_errors_and_residuals">Wikipedia contributors (<a href="#ref-wikipedia_errors_and_residuals" role="doc-biblioref">2026b</a>)</span> — residuals and errors</p></li>
-<li><p><span class="citation" data-cites="wikipedia_residual_sum_of_squares">Wikipedia contributors (<a href="#ref-wikipedia_residual_sum_of_squares" role="doc-biblioref">2026h</a>)</span> — the residual sum of squares</p></li>
-<li><p><span class="citation" data-cites="wikipedia_ball_mathematics">Wikipedia contributors (<a href="#ref-wikipedia_ball_mathematics" role="doc-biblioref">2026a</a>)</span> — open and closed balls</p></li>
-<li><p><span class="citation" data-cites="wikipedia_hessian_matrix">Wikipedia contributors (<a href="#ref-wikipedia_hessian_matrix" role="doc-biblioref">2026c</a>)</span> — the Hessian matrix</p></li>
-<li><p><span class="citation" data-cites="wikipedia_symmetry_of_second_derivatives">Wikipedia contributors (<a href="#ref-wikipedia_symmetry_of_second_derivatives" role="doc-biblioref">2026i</a>)</span> — the symmetry of mixed second partial derivatives</p></li>
+<li><p><span class="citation" data-cites="marsden2013vector">Marsden and Tromba <a href="#ref-marsden2013vector" role="doc-biblioref">[17]</a></span> is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.</p></li>
+<li><p><span class="citation" data-cites="petersen2012matrix">Petersen and Pedersen <a href="#ref-petersen2012matrix" role="doc-biblioref">[18]</a></span> is a free desk reference that collects matrix identities. Its chapter on derivatives lists derivatives of vector and matrix expressions, such as the linear and quadratic forms on this page.</p></li>
+<li><p><span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[3]</a></span> The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.</p></li>
+<li><p><span class="citation" data-cites="wikipedia_partial_derivative">Wikipedia contributors <a href="#ref-wikipedia_partial_derivative" role="doc-biblioref">[2]</a></span> — partial derivatives</p></li>
+<li><p><span class="citation" data-cites="wp:gradient">Wikipedia contributors <a href="#ref-wp:gradient" role="doc-biblioref">[4]</a></span> — the gradient</p></li>
+<li><p><span class="citation" data-cites="wikipedia_level_set">Wikipedia contributors <a href="#ref-wikipedia_level_set" role="doc-biblioref">[6]</a></span> — level sets</p></li>
+<li><p><span class="citation" data-cites="wikipedia_total_derivative">Wikipedia contributors <a href="#ref-wikipedia_total_derivative" role="doc-biblioref">[7]</a></span> — the total derivative</p></li>
+<li><p><span class="citation" data-cites="wikipedia_jacobian_matrix_and_determinant">Wikipedia contributors <a href="#ref-wikipedia_jacobian_matrix_and_determinant" role="doc-biblioref">[9]</a></span> — the Jacobian matrix</p></li>
+<li><p><span class="citation" data-cites="wikipedia_matrix_calculus">Wikipedia contributors <a href="#ref-wikipedia_matrix_calculus" role="doc-biblioref">[8]</a></span> — matrix calculus and the numerator and denominator layouts</p></li>
+<li><p><span class="citation" data-cites="wikipedia_errors_and_residuals">Wikipedia contributors <a href="#ref-wikipedia_errors_and_residuals" role="doc-biblioref">[10]</a></span> — residuals and errors</p></li>
+<li><p><span class="citation" data-cites="wikipedia_residual_sum_of_squares">Wikipedia contributors <a href="#ref-wikipedia_residual_sum_of_squares" role="doc-biblioref">[11]</a></span> — the residual sum of squares</p></li>
+<li><p><span class="citation" data-cites="wikipedia_ball_mathematics">Wikipedia contributors <a href="#ref-wikipedia_ball_mathematics" role="doc-biblioref">[13]</a></span> — open and closed balls</p></li>
+<li><p><span class="citation" data-cites="wikipedia_hessian_matrix">Wikipedia contributors <a href="#ref-wikipedia_hessian_matrix" role="doc-biblioref">[14]</a></span> — the Hessian matrix</p></li>
+<li><p><span class="citation" data-cites="wikipedia_symmetry_of_second_derivatives">Wikipedia contributors <a href="#ref-wikipedia_symmetry_of_second_derivatives" role="doc-biblioref">[15]</a></span> — the symmetry of mixed second partial derivatives</p></li>
 </ul>
 <p>See also the <a href="#sec-additional-resources">Linear Algebra and Vector Calculus further reading</a>.</p>
 <ul>
@@ -4548,60 +4549,94 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 <li>
 <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">Neural Networks</a> is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.</li>
 </ul></section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-felippa_ifem_matrix_calculus" class="csl-entry" role="listitem">
-Felippa, Carlos A. n.d. <em>Matrix Calculus</em>. Appendix F of Introduction to Finite Element Methods, course notes, University of Colorado Boulder. Accessed October 6, 2026. <a href="https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf">https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf</a>.
-</div>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-fieller2018basics" class="csl-entry" role="listitem">
-Fieller, Nick. 2016. <em>Basics of Matrix Algebra for Statistics with <span>R</span></em>. Chapman; Hall/CRC. <a href="https://doi.org/10.1201/9781315370200">https://doi.org/10.1201/9781315370200</a>.
-</div>
-<div id="ref-hutchinson_wwu_ml_videos" class="csl-entry" role="listitem">
-Hutchinson, Brian. n.d. <em><span>DATA</span> 471/571 (Machine Learning) and <span>CSCI</span> 481/581 (Deep Learning) Video Lectures</em>. Western Washington University. Accessed September 28, 2026. <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/">https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/</a>.
-</div>
-<div id="ref-marsden2013vector" class="csl-entry" role="listitem">
-Marsden, Jerrold E., and Anthony Tromba. 2013. <em>Vector Calculus</em>. 6th ed. Macmillan Learning. <a href="https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089">https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089</a>.
-</div>
-<div id="ref-problifesavercalc" class="csl-entry" role="listitem">
-Miller, Steven J. 2016. <em>The Probability Lifesaver: Calculus Review Problems</em>. <a href="https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf">https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf</a>.
-</div>
-<div id="ref-petersen2012matrix" class="csl-entry" role="listitem">
-Petersen, Kaare Brandt, and Michael Syskind Pedersen. 2012. <em>The Matrix Cookbook</em>. Technical University of Denmark. <a href="https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf">https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf</a>.
-</div>
-<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
-Rudin, Walter. 1976. <em>Principles of Mathematical Analysis</em>. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
-</div>
-<div id="ref-wikipedia_ball_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Ball (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Ball_(mathematics)">https://en.wikipedia.org/wiki/Ball_(mathematics)</a>.
-</div>
-<div id="ref-wikipedia_errors_and_residuals" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Errors and Residuals — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Errors_and_residuals">https://en.wikipedia.org/wiki/Errors_and_residuals</a>.
-</div>
-<div id="ref-wikipedia_hessian_matrix" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Hessian Matrix — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Hessian_matrix">https://en.wikipedia.org/wiki/Hessian_matrix</a>.
-</div>
-<div id="ref-wikipedia_jacobian_matrix_and_determinant" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Jacobian Matrix and Determinant — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant">https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant</a>.
-</div>
-<div id="ref-wikipedia_level_set" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Level Set — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Level_set">https://en.wikipedia.org/wiki/Level_set</a>.
-</div>
-<div id="ref-wikipedia_matrix_calculus" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>Matrix Calculus — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Matrix_calculus">https://en.wikipedia.org/wiki/Matrix_calculus</a>.
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">N. Fieller, <em>Basics of matrix algebra for statistics with <span>R</span></em>. Chapman; Hall/CRC, 2016. doi: <a href="https://doi.org/10.1201/9781315370200">10.1201/9781315370200</a>.</div>
 </div>
 <div id="ref-wikipedia_partial_derivative" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Partial Derivative — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Partial_derivative">https://en.wikipedia.org/wiki/Partial_derivative</a>.
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Partial derivative — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Partial_derivative">https://en.wikipedia.org/wiki/Partial_derivative</a>
 </div>
-<div id="ref-wikipedia_residual_sum_of_squares" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Residual Sum of Squares — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Residual_sum_of_squares">https://en.wikipedia.org/wiki/Residual_sum_of_squares</a>.
 </div>
-<div id="ref-wikipedia_symmetry_of_second_derivatives" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026i. <em>Symmetry of Second Derivatives — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives">https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives</a>.
+<div id="ref-problifesavercalc" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">S. J. Miller, <em>The probability lifesaver: Calculus review problems</em>. 2016. Available: <a href="https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf">https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf</a>
 </div>
-<div id="ref-wikipedia_total_derivative" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026j. <em>Total Derivative — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Total_derivative">https://en.wikipedia.org/wiki/Total_derivative</a>.
 </div>
 <div id="ref-wp:gradient" class="csl-entry" role="listitem">
-Wikipedia contributors. n.d. <em>Gradient — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Gradient">https://en.wikipedia.org/wiki/Gradient</a>.
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Gradient — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> Available: <a href="https://en.wikipedia.org/wiki/Gradient">https://en.wikipedia.org/wiki/Gradient</a>
+</div>
+</div>
+<div id="ref-hutchinson_wwu_ml_videos" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">B. Hutchinson, <span>“<span>DATA</span> 471/571 (machine learning) and <span>CSCI</span> 481/581 (deep learning) video lectures.”</span> Western Washington University. Accessed: Sep. 28, 2026. [Online]. Available: <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/">https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/</a>
+</div>
+</div>
+<div id="ref-wikipedia_level_set" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Level set — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Level_set">https://en.wikipedia.org/wiki/Level_set</a>
+</div>
+</div>
+<div id="ref-wikipedia_total_derivative" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Total derivative — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Total_derivative">https://en.wikipedia.org/wiki/Total_derivative</a>
+</div>
+</div>
+<div id="ref-wikipedia_matrix_calculus" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Matrix calculus — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Matrix_calculus">https://en.wikipedia.org/wiki/Matrix_calculus</a>
+</div>
+</div>
+<div id="ref-wikipedia_jacobian_matrix_and_determinant" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Jacobian matrix and determinant — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant">https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant</a>
+</div>
+</div>
+<div id="ref-wikipedia_errors_and_residuals" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Errors and residuals — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Errors_and_residuals">https://en.wikipedia.org/wiki/Errors_and_residuals</a>
+</div>
+</div>
+<div id="ref-wikipedia_residual_sum_of_squares" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Residual sum of squares — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Residual_sum_of_squares">https://en.wikipedia.org/wiki/Residual_sum_of_squares</a>
+</div>
+</div>
+<div id="ref-felippa_ifem_matrix_calculus" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div>
+<div class="csl-right-inline">C. A. Felippa, <span>“Matrix calculus.”</span> Appendix F of Introduction to Finite Element Methods, course notes, University of Colorado Boulder. Accessed: Oct. 06, 2026. [Online]. Available: <a href="https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf">https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf</a>
+</div>
+</div>
+<div id="ref-wikipedia_ball_mathematics" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Ball (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Ball_(mathematics)">https://en.wikipedia.org/wiki/Ball_(mathematics)</a>
+</div>
+</div>
+<div id="ref-wikipedia_hessian_matrix" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Hessian matrix — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Hessian_matrix">https://en.wikipedia.org/wiki/Hessian_matrix</a>
+</div>
+</div>
+<div id="ref-wikipedia_symmetry_of_second_derivatives" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Symmetry of second derivatives — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives">https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives</a>
+</div>
+</div>
+<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div>
+<div class="csl-right-inline">W. Rudin, <em>Principles of mathematical analysis</em>, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.</div>
+</div>
+<div id="ref-marsden2013vector" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div>
+<div class="csl-right-inline">J. E. Marsden and A. Tromba, <em>Vector calculus</em>, 6th ed. Macmillan Learning, 2013. Available: <a href="https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089">https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089</a>
+</div>
+</div>
+<div id="ref-petersen2012matrix" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[18] </div>
+<div class="csl-right-inline">K. B. Petersen and M. S. Pedersen, <span>“The matrix cookbook,”</span> Technical University of Denmark, Nov. 2012. Available: <a href="https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf">https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf</a>
+</div>
 </div>
 </div>
 

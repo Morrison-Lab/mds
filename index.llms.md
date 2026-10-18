@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## Welcome
 
 > Math is not just a way of calculating numerical answers; it is a way of thinking, using clear definitions for concepts and rigorous logic to organize our thoughts and back up our assertions.
 
-Cheng ([2025](#ref-cheng2025math))
+Cheng [\[1\]](#ref-cheng2025math)
 
 These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:
 
@@ -73,6 +73,8 @@ Quarto resolves `@id` cross-references only within one rendered page, so a host 
 
 ## References
 
-Cheng, Eugenia. 2025. “Opinion \| How Math Turned Me from a D.E.I. Skeptic to a Supporter.” *The New York Times*. <https://www.nytimes.com/2025/09/05/opinion/math-dei.html>.
+\[1\]
+
+E. Cheng, “Opinion \| how math turned me from a D.E.I. Skeptic to a supporter,” *The New York Times*, 2025, Accessed: Sep. 05, 2025. \[Online\]. Available: <https://www.nytimes.com/2025/09/05/opinion/math-dei.html>
 
 Back to top

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Integration
 
@@ -21,23 +21,23 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 1 (Antiderivative)** A function \\F\\ is an **antiderivative** of \\f\\ on an interval \\I\\ ([Wikipedia contributors 2026a](#ref-wikipedia_antiderivative)) if:
+> **Definition 1 (Antiderivative)** A function \\F\\ is an **antiderivative** of \\f\\ on an interval \\I\\ [\[1\]](#ref-wikipedia_antiderivative) if:
 >
 > \\\frac{\partial}{\partial x} F(x) = f(x), \quad \forall x \in I\\
 >
 > Finding an antiderivative of \\f\\ is called **antidifferentiation**, or **antidifferentiating** \\f\\.
 >
-> ([Larson and Edwards 2018, sec. 4.1](#ref-larsonCalc11e), pp. 248–249)
+> [\[2, Sec. 4.1\]](#ref-larsonCalc11e), pp. 248–249
 
 > **NOTE:**
 >
-> **Definition 2 (Indefinite integral)** The **indefinite integral** of \\f\\ ([Wikipedia contributors 2026a](#ref-wikipedia_antiderivative)) is the family of all antiderivatives ([Definition 1](#def-antiderivative)) of \\f\\:
+> **Definition 2 (Indefinite integral)** The **indefinite integral** of \\f\\ [\[1\]](#ref-wikipedia_antiderivative) is the family of all antiderivatives ([Definition 1](#def-antiderivative)) of \\f\\:
 >
 > \\\int f(x)\\dx = F(x) + C\\
 >
 > where \\F\\ is any one antiderivative of \\f\\ and \\C\\ is an arbitrary constant of integration.
 >
-> ([Larson and Edwards 2018, sec. 4.1](#ref-larsonCalc11e), pp. 248–249)
+> [\[2, Sec. 4.1\]](#ref-larsonCalc11e), pp. 248–249
 
 > **NOTE:**
 >
@@ -106,7 +106,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > | \\c \cdot f(x)\\ | \\c \cdot F(x)\\ | — |
 > | \\f(x) + g(x)\\ | \\F(x) + G(x)\\ | — |
 >
-> The first two rows, the trigonometric rows (\\\sin x\\, \\\cos x\\), and the bottom two rows (linearity) are from ([Larson and Edwards 2018, sec. 4.1](#ref-larsonCalc11e), p. 250 “Basic Integration Rules”); \\1/x\\ is from ([Larson and Edwards 2018, sec. 5.2](#ref-larsonCalc11e), Theorem 5.5, p. 324); \\\text{e}^{x}\\ and \\\text{e}^{cx}\\ are from ([Larson and Edwards 2018, sec. 5.4](#ref-larsonCalc11e), Theorem 5.12, p. 346).
+> The first two rows, the trigonometric rows (\\\sin x\\, \\\cos x\\), and the bottom two rows (linearity) are from [\[2, Sec. 4.1\]](#ref-larsonCalc11e), p. 250 “Basic Integration Rules”; \\1/x\\ is from [\[2, Sec. 5.2\]](#ref-larsonCalc11e), Theorem 5.5, p. 324; \\\text{e}^{x}\\ and \\\text{e}^{cx}\\ are from [\[2, Sec. 5.4\]](#ref-larsonCalc11e), Theorem 5.12, p. 346.
 
 > **NOTE:**
 >
@@ -133,7 +133,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Definition 3 (Differentiable on an interval)** A function \\f\\ is **differentiable on** an interval if it is differentiable ([Definition 6 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-differentiable)) at every point of the interval other than its [endpoints](sets.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 12 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
 >
-> ([Larson and Edwards 2018, sec. 2.1](#ref-larsonCalc11e), p. 100)
+> [\[2, Sec. 2.1\]](#ref-larsonCalc11e), p. 100
 
 > **NOTE:**
 >
@@ -144,19 +144,19 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 4 (Continuous function)** A function \\f\\ is **continuous at** \\x = c\\ ([Wikipedia contributors 2026c](#ref-wikipedia_continuous_function)) if all three conditions hold:
+> **Definition 4 (Continuous function)** A function \\f\\ is **continuous at** \\x = c\\ [\[3\]](#ref-wikipedia_continuous_function) if all three conditions hold:
 >
 > 1.  \\f(c)\\ is defined,
 > 2.  \\\lim\_{x \to c} f(x)\\ exists, and
 > 3.  \\\lim\_{x \to c} f(x) = f(c)\\.
 >
-> ([Larson and Edwards 2018, sec. 1.4](#ref-larsonCalc11e), p. 73)
+> [\[2, Sec. 1.4\]](#ref-larsonCalc11e), p. 73
 
 > **NOTE:**
 >
 > **Definition 5 (Discontinuous function)** If any of the three conditions of [Definition 4](#def-continuous) fails, \\f\\ is **discontinuous** at \\c\\.
 >
-> ([Larson and Edwards 2018, sec. 1.4](#ref-larsonCalc11e), p. 73)
+> [\[2, Sec. 1.4\]](#ref-larsonCalc11e), p. 73
 
 > **NOTE:**
 >
@@ -178,7 +178,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 6 (Jump discontinuity)** A function \\f\\ has a **jump discontinuity** at \\c\\ ([Wikipedia contributors 2026b](#ref-wikipedia_classification_of_discontinuities)) if both one-sided limits ([Definition 4 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-limit)) \\\lim\_{x \to c^-} f(x)\\ and \\\lim\_{x \to c^+} f(x)\\ exist but are not equal. Then \\\lim\_{x \to c} f(x)\\ does not exist, so \\f\\ is discontinuous at \\c\\ ([Definition 5](#def-discontinuous)).
+> **Definition 6 (Jump discontinuity)** A function \\f\\ has a **jump discontinuity** at \\c\\ [\[4\]](#ref-wikipedia_classification_of_discontinuities) if both one-sided limits ([Definition 4 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-limit)) \\\lim\_{x \to c^-} f(x)\\ and \\\lim\_{x \to c^+} f(x)\\ exist but are not equal. Then \\\lim\_{x \to c} f(x)\\ does not exist, so \\f\\ is discontinuous at \\c\\ ([Definition 5](#def-discontinuous)).
 
 > **NOTE:**
 >
@@ -195,7 +195,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > 2.  \\\lim\_{x \to a^+} f(x) = f(a)\\, and
 > 3.  \\\lim\_{x \to b^-} f(x) = f(b)\\.
 >
-> ([Larson and Edwards 2018, sec. 1.4](#ref-larsonCalc11e), p. 73)
+> [\[2, Sec. 1.4\]](#ref-larsonCalc11e), p. 73
 
 > **NOTE:**
 >
@@ -219,13 +219,13 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 8 (Partition of an interval)** A **partition** \\\mathcal{P}\\ of a closed interval \\\[a, b\]\\ ([Wikipedia contributors 2026f](#ref-wikipedia_partition_of_an_interval)) is a finite list of points
+> **Definition 8 (Partition of an interval)** A **partition** \\\mathcal{P}\\ of a closed interval \\\[a, b\]\\ [\[5\]](#ref-wikipedia_partition_of_an_interval) is a finite list of points
 >
 > \\ \begin{aligned} a &= x_0 \\ &\< x_1 \\ &\< \cdots \\ &\< x_n \\ &= b. \end{aligned} \\
 >
 > It splits \\\[a, b\]\\ into the \\n\\ subintervals \\\[x\_{i-1}, x_i\]\\, of widths \\\Delta x_i \stackrel{\text{def}}{=}x_i - x\_{i-1}\\.
 >
-> ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e))
+> [\[2, Sec. 4.3\]](#ref-larsonCalc11e)
 
 > **NOTE:**
 >
@@ -246,7 +246,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > where \\n\\ is the number of subintervals of \\\mathcal{P}\\.
 >
-> ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e))
+> [\[2, Sec. 4.3\]](#ref-larsonCalc11e)
 
 > **NOTE:**
 >
@@ -256,7 +256,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Definition 10 (Sample point)** For a partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 8](#def-partition)), choose a **sample point** \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\.
 >
-> ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e))
+> [\[2, Sec. 4.3\]](#ref-larsonCalc11e)
 
 > **NOTE:**
 >
@@ -264,13 +264,13 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > \\ \begin{aligned} a &= x_0 \\ &\< x_1 \\ &\< \cdots \\ &\< x_n \\ &= b \end{aligned} \\
 >
-> of \\\[a, b\]\\ ([Definition 8](#def-partition)), and choose a sample point \\x_i^\*\\ ([Definition 10](#def-sample-point)) in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann sum** of \\f\\ for \\\mathcal{P}\\ ([Wikipedia contributors 2026h](#ref-wikipedia_riemann_sum)) and these sample points is
+> of \\\[a, b\]\\ ([Definition 8](#def-partition)), and choose a sample point \\x_i^\*\\ ([Definition 10](#def-sample-point)) in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann sum** of \\f\\ for \\\mathcal{P}\\ [\[6\]](#ref-wikipedia_riemann_sum) and these sample points is
 >
 > \\\sum\_{i=1}^nf(x_i^\*)\\\Delta x_i,\\
 >
 > where \\\Delta x_i = x_i - x\_{i-1}\\.
 >
-> ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e))
+> [\[2, Sec. 4.3\]](#ref-larsonCalc11e)
 
 > **NOTE:**
 >
@@ -280,19 +280,19 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 12 (Riemann integral (definite integral))** Let \\f\\ be a [bounded](algebra-sums.llms.md#def-bounded) function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 8](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ ([Wikipedia contributors 2026g](#ref-wikipedia_riemann_integral)) (also called the **definite integral** of \\f\\ from \\a\\ to \\b\\) is the limit of the Riemann sums ([Definition 11](#def-riemann-sum)) as the mesh ([Definition 9](#def-mesh)) shrinks to zero:
+> **Definition 12 (Riemann integral (definite integral))** Let \\f\\ be a [bounded](algebra-sums.llms.md#def-bounded) function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 8](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ [\[7\]](#ref-wikipedia_riemann_integral) (also called the **definite integral** of \\f\\ from \\a\\ to \\b\\) is the limit of the Riemann sums ([Definition 11](#def-riemann-sum)) as the mesh ([Definition 9](#def-mesh)) shrinks to zero:
 >
 > \\\int_a^b f(x)\\dx \stackrel{\text{def}}{=}\lim\_{\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{} \to 0} \sum\_{i=1}^nf(x_i^\*)\\\Delta x_i,\\
 >
 > when that limit exists and has the same value for every choice of the partitions and of the sample points \\x_i^\*\\.
 >
-> ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e), p. 272)
+> [\[2, Sec. 4.3\]](#ref-larsonCalc11e), p. 272
 
 > **NOTE:**
 >
 > **Definition 13 (Riemann integrable)** A bounded function \\f\\ is **Riemann integrable on** \\\[a, b\]\\ if the Riemann sums ([Definition 11](#def-riemann-sum)) \\\sum\_{i=1}^nf(x_i^\*)\\\Delta x_i\\, over partitions \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 8](#def-partition)) with a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\, approach a real-number limit as the mesh \\\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{}\\ ([Definition 9](#def-mesh)) shrinks to zero, and that limit is the same for every choice of the partitions and of the sample points.
 >
-> ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e), p. 272)
+> [\[2, Sec. 4.3\]](#ref-larsonCalc11e), p. 272
 
 > **NOTE:**
 >
@@ -342,7 +342,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > **Theorem 2 (Differentiability implies continuity)** If \\f\\ is differentiable at \\x = c\\, then \\f\\ is continuous at \\x = c\\.
 >
-> ([Larson and Edwards 2018](#ref-larsonCalc11e), Theorem 2.1, p. 106)
+> [\[2\]](#ref-larsonCalc11e), Theorem 2.1, p. 106
 
 > **NOTE:**
 >
@@ -386,7 +386,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > **Theorem 3 (Continuity implies integrability)** If \\f\\ is continuous on the closed interval \\\[a, b\]\\, then \\f\\ is integrable on \\\[a, b\]\\ (i.e., the Riemann integral \\\int_a^b f(x)\\dx\\ exists and is finite).
 >
-> ([Larson and Edwards 2018](#ref-larsonCalc11e), Theorem 4.4, p. 272)
+> [\[2\]](#ref-larsonCalc11e), Theorem 4.4, p. 272
 
 > **NOTE:**
 >
@@ -498,9 +498,9 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 >
 > > **NOTE:**
 > >
-> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 13](#def-integrable)) and continuous at \\x\\ (see [Definition 4](#def-continuous)), even if \\f\\ has jump discontinuities ([Definition 6](#def-jump-discontinuity)) elsewhere ([Rudin 1976](#ref-rudin1976principles), Theorem 6.20, p. 133).
+> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 13](#def-integrable)) and continuous at \\x\\ (see [Definition 4](#def-continuous)), even if \\f\\ has jump discontinuities ([Definition 6](#def-jump-discontinuity)) elsewhere [\[8\]](#ref-rudin1976principles), Theorem 6.20, p. 133.
 >
-> ([Larson and Edwards 2018](#ref-larsonCalc11e), Theorem 4.11, p. 288)
+> [\[2\]](#ref-larsonCalc11e), Theorem 4.11, p. 288
 
 > **NOTE:**
 >
@@ -516,7 +516,7 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 >
 > \\\int_a^x \frac{d F}{d t}\\dt = F(x) - F(a)\\
 >
-> ([Banner 2007, chap. 18](#ref-calclifesaver); [Larson and Edwards 2018](#ref-larsonCalc11e), Theorem 4.9, p. 282)
+> [\[9, Ch. 18\]](#ref-calclifesaver), [\[2\]](#ref-larsonCalc11e), Theorem 4.9, p. 282
 
 The two parts of the FTC together express that **differentiation and integration are inverse operations**:
 
@@ -545,7 +545,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 1 (Definite integral of a polynomial)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.31.
+> **Exercise 1 (Definite integral of a polynomial)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.31.
 >
 > Evaluate the integral:
 >
@@ -559,7 +559,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 2 (Integral of a perfect square)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.32.
+> **Exercise 2 (Integral of a perfect square)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.32.
 >
 > Evaluate the integral:
 >
@@ -579,7 +579,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 3 (Integral of a composite power)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.33.
+> **Exercise 3 (Integral of a composite power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.33.
 >
 > Evaluate the integral:
 >
@@ -599,7 +599,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 4 (Integral of odd trigonometric functions)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.34.
+> **Exercise 4 (Integral of odd trigonometric functions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.34.
 >
 > Evaluate the integral:
 >
@@ -621,7 +621,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 5 (Separating even and odd parts of a polynomial)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.35.
+> **Exercise 5 (Separating even and odd parts of a polynomial)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.35.
 >
 > Evaluate the integral:
 >
@@ -639,7 +639,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 6 (Substitution leading to a natural logarithm)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.36.
+> **Exercise 6 (Substitution leading to a natural logarithm)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.36.
 >
 > Evaluate the integral:
 >
@@ -667,7 +667,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 7 (Substitution with a polynomial power)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.37.
+> **Exercise 7 (Substitution with a polynomial power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.37.
 >
 > Evaluate the integral:
 >
@@ -693,7 +693,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 8 (Substitution with a trigonometric integrand)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.38.
+> **Exercise 8 (Substitution with a trigonometric integrand)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.38.
 >
 > Evaluate the integral:
 >
@@ -717,7 +717,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 9 (Integration by parts with an exponential factor)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.40.
+> **Exercise 9 (Integration by parts with an exponential factor)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.40.
 >
 > Evaluate the integral:
 >
@@ -817,7 +817,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > **Example 23 (CDF and PDF of the exponential distribution)** In what follows, \\f\\ denotes the PDF and \\F\\ the CDF — the same letters as the antiderivative pair in [Definition 1](#def-antiderivative), because the FTC will show \\F\\ is exactly an antiderivative of \\f\\.
 >
-> Let \\T\\ be a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) with the [exponential distribution](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) with rate \\{\lambda}\> 0\\. Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is ([Kleinbaum and Klein 2012, sec. II](#ref-kleinbaum2012survival), p. 295, “Survival and Hazard Functions for Selected Distributions”):
+> Let \\T\\ be a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) with the [exponential distribution](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) with rate \\{\lambda}\> 0\\. Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is [\[11, Sec. II\]](#ref-kleinbaum2012survival), p. 295, “Survival and Hazard Functions for Selected Distributions”:
 >
 > \\f(t) = {\lambda}\text{e}^{-{\lambda}t}, \quad t \ge 0\\
 >
@@ -890,7 +890,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 10 (Improper Gaussian-kernel integral)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.39.
+> **Exercise 10 (Improper Gaussian-kernel integral)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.39.
 >
 > Evaluate the improper integral:
 >
@@ -913,7 +913,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 11 (Convolution of two uniform densities)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.41.
+> **Exercise 11 (Convolution of two uniform densities)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.41.
 >
 > Let \\f(x) = \mathbb{1}\_{\[0, 1\]}(x)\\ be the indicator of the unit interval:
 >
@@ -976,48 +976,74 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 ## Further reading
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_antiderivative)) — antiderivatives and indefinite integrals
+- Wikipedia contributors [\[1\]](#ref-wikipedia_antiderivative) — antiderivatives and indefinite integrals
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_continuous_function)) — continuous functions, with the epsilon-delta definition
+- Wikipedia contributors [\[3\]](#ref-wikipedia_continuous_function) — continuous functions, with the epsilon-delta definition
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_classification_of_discontinuities)) — jump, removable and essential discontinuities
+- Wikipedia contributors [\[4\]](#ref-wikipedia_classification_of_discontinuities) — jump, removable and essential discontinuities
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_partition_of_an_interval)) — partitions of an interval
+- Wikipedia contributors [\[5\]](#ref-wikipedia_partition_of_an_interval) — partitions of an interval
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_riemann_sum)) — Riemann sums and their types
+- Wikipedia contributors [\[6\]](#ref-wikipedia_riemann_sum) — Riemann sums and their types
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_riemann_integral)) — the Riemann integral and which functions have one
+- Wikipedia contributors [\[7\]](#ref-wikipedia_riemann_integral) — the Riemann integral and which functions have one
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_fundamental_theorem_of_calculus)) — the two parts of the fundamental theorem
+- Wikipedia contributors [\[12\]](#ref-wikipedia_fundamental_theorem_of_calculus) — the two parts of the fundamental theorem
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_integration_by_substitution)) — change of variable in an integral
+- Wikipedia contributors [\[13\]](#ref-wikipedia_integration_by_substitution) — change of variable in an integral
 
 Back to top
 
 ## References
 
-Banner, Adrian D. 2007. *The Calculus Lifesaver : All the Tools You Need to Excel at Calculus*. A Princeton Lifesaver Study Guide. Princeton University Press. <https://press.princeton.edu/books/paperback/9780691130880/the-calculus-lifesaver>.
+\[1\]
 
-Kleinbaum, David G, and Mitchel Klein. 2012. *Survival Analysis: A Self-Learning Text*. 3rd ed. Springer. <https://doi.org/10.1007/978-1-4419-6646-9>.
+Wikipedia contributors, “Antiderivative — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Antiderivative>
 
-Larson, Ron, and Bruce H. Edwards. 2018. *Calculus*. 11th ed. Cengage Learning. <https://www.cengage.com/c/calculus-11e-larson/>.
+\[2\]
 
-Miller, Steven J. 2016. *The Probability Lifesaver: Calculus Review Problems*. <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>.
+R. Larson and B. H. Edwards, *Calculus*, 11th ed. Boston, MA: Cengage Learning, 2018. Available: <https://www.cengage.com/c/calculus-11e-larson/>
 
-Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
+\[3\]
 
-Wikipedia contributors. 2026a. *Antiderivative — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Antiderivative>.
+Wikipedia contributors, “Continuous function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Continuous_function>
 
-Wikipedia contributors. 2026b. *Classification of Discontinuities — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Classification_of_discontinuities>.
+\[4\]
 
-Wikipedia contributors. 2026c. *Continuous Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Continuous_function>.
+Wikipedia contributors, “Classification of discontinuities — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Classification_of_discontinuities>
 
-Wikipedia contributors. 2026d. *Fundamental Theorem of Calculus — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus>.
+\[5\]
 
-Wikipedia contributors. 2026e. *Integration by Substitution — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Integration_by_substitution>.
+Wikipedia contributors, “Partition of an interval — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Partition_of_an_interval>
 
-Wikipedia contributors. 2026f. *Partition of an Interval — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Partition_of_an_interval>.
+\[6\]
 
-Wikipedia contributors. 2026g. *Riemann Integral — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Riemann_integral>.
+Wikipedia contributors, “Riemann sum — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Riemann_sum>
 
-Wikipedia contributors. 2026h. *Riemann Sum — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Riemann_sum>.
+\[7\]
+
+Wikipedia contributors, “Riemann integral — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Riemann_integral>
+
+\[8\]
+
+W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.
+
+\[9\]
+
+A. D. Banner, *The calculus lifesaver : All the tools you need to excel at calculus*. in A princeton lifesaver study guide. Princeton, New Jersey: Princeton University Press, 2007. Available: <https://press.princeton.edu/books/paperback/9780691130880/the-calculus-lifesaver>
+
+\[10\]
+
+S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Available: <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>
+
+\[11\]
+
+D. G. Kleinbaum and M. Klein, *Survival analysis: A self-learning text*, 3rd ed. Springer, 2012. doi: [10.1007/978-1-4419-6646-9](https://doi.org/10.1007/978-1-4419-6646-9).
+
+\[12\]
+
+Wikipedia contributors, “Fundamental theorem of calculus — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus>
+
+\[13\]
+
+Wikipedia contributors, “Integration by substitution — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Integration_by_substitution>

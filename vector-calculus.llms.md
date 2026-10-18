@@ -14,9 +14,9 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
-(adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
+(adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
 This section covers [derivatives](calculus-derivatives.llms.md#def-derivative) of functions of vectors and matrices. Its linear algebra prerequisites, such as vectors, matrices, transposes, dot products, and quadratic forms, are covered in [Linear Algebra](linear-algebra.llms.md).
 
@@ -24,7 +24,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 
 > **NOTE:**
 >
-> **Definition 1 (Partial derivative)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= {(x_1, \ldots, x_p)}^{\top} \in \mathbb{R}^p\\. The **partial derivative** ([Wikipedia contributors 2026g](#ref-wikipedia_partial_derivative)) of \\f\\ with respect to \\x_j\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is
+> **Definition 1 (Partial derivative)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= {(x_1, \ldots, x_p)}^{\top} \in \mathbb{R}^p\\. The **partial derivative** [\[2\]](#ref-wikipedia_partial_derivative) of \\f\\ with respect to \\x_j\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is
 >
 > \\ \frac{\partial}{\partial x_j} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \stackrel{\text{def}}{=} \lim\_{h \to 0} \frac{f(x_1, \ldots, x_j + h, \ldots, x_p) - f(x_1, \ldots, x_p)}{h}, \\
 >
@@ -44,7 +44,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 
 > **NOTE:**
 >
-> **Exercise 1 (First-order partial derivatives)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.42.
+> **Exercise 1 (First-order partial derivatives)** Adapted from Miller [\[3\]](#ref-problifesavercalc), Question 1.1.42.
 >
 > Let \\f(x, y) = x^2 y + e^x + \sin(xy)\\. Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\.
 
@@ -60,7 +60,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 
 > **NOTE:**
 >
-> **Exercise 2 (Partial derivatives of the normal density with respect to parameters)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.43.
+> **Exercise 2 (Partial derivatives of the normal density with respect to parameters)** Adapted from Miller [\[3\]](#ref-problifesavercalc), Question 1.1.43.
 >
 > Let
 >
@@ -99,7 +99,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 
 > **NOTE:**
 >
-> **Exercise 3 (Partial derivatives with exponential of quadratic form)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.44.
+> **Exercise 3 (Partial derivatives with exponential of quadratic form)** Adapted from Miller [\[3\]](#ref-problifesavercalc), Question 1.1.44.
 >
 > Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
@@ -117,7 +117,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 
 > **NOTE:**
 >
-> **Exercise 4 (Using symmetry to compute partial derivatives)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.45.
+> **Exercise 4 (Using symmetry to compute partial derivatives)** Adapted from Miller [\[3\]](#ref-problifesavercalc), Question 1.1.45.
 >
 > Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
@@ -143,7 +143,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 >
 > \\ \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) \\ \frac{\partial}{\partial \beta\_{2}}f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) \\ \vdots \\ \frac{\partial}{\partial \beta\_{p}}f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) \end{bmatrix} \\
 >
-> The vector derivative is also called the **gradient** ([Wikipedia contributors, n.d.](#ref-wp:gradient)) of \\f\\ with respect to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, written \\\nabla\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}})\\.
+> The vector derivative is also called the **gradient** [\[4\]](#ref-wp:gradient) of \\f\\ with respect to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, written \\\nabla\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}})\\.
 
 > **NOTE:**
 >
@@ -155,7 +155,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 
 > **TIP:**
 >
-> Hutchinson’s [Gradients Refresher](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients) (17 min) covers gradients and partial derivatives, the ideas behind this section ([Hutchinson, n.d.](#ref-hutchinson_wwu_ml_videos)). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
+> Hutchinson’s [Gradients Refresher](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients) (17 min) covers gradients and partial derivatives, the ideas behind this section [\[5\]](#ref-hutchinson_wwu_ml_videos). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
 
 > **TIP:**
 >
@@ -193,7 +193,7 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 
 > **NOTE:**
 >
-> **Definition 4 (Level set (level curve, contour))** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and let \\c\\ be a real number. The **level set** ([Wikipedia contributors 2026e](#ref-wikipedia_level_set)) of \\f\\ at \\c\\ is
+> **Definition 4 (Level set (level curve, contour))** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and let \\c\\ be a real number. The **level set** [\[6\]](#ref-wikipedia_level_set) of \\f\\ at \\c\\ is
 >
 > \\ \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p : f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = c\right\\\mathclose{}, \\
 >
@@ -345,7 +345,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > \\ \frac{\partial f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}})}{\partial {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}}^{\top}} = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) & \frac{\partial}{\partial \beta\_{2}}f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) & \cdots & \frac{\partial}{\partial \beta\_{p}}f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) \end{bmatrix} \tag{1}\\
 >
-> The row-vector derivative is also called the **total derivative** ([Wikipedia contributors 2026j](#ref-wikipedia_total_derivative)) of \\f\\, the name used when the derivative of a scalar-valued function is written as a row vector.
+> The row-vector derivative is also called the **total derivative** [\[7\]](#ref-wikipedia_total_derivative) of \\f\\, the name used when the derivative of a scalar-valued function is written as a row vector.
 
 > **NOTE:**
 >
@@ -397,7 +397,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Definition 7 (Denominator layout)** Writing derivatives as in [Definition 6](#def-vector-valued-derivative) is the **denominator layout** ([Wikipedia contributors 2026f](#ref-wikipedia_matrix_calculus)), which these notes use throughout: rows index the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ (the denominator) and columns index the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ (the numerator), so column \\j\\ is the vector derivative \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}} y_j\\ ([Definition 2](#def-vector-derivative)).
+> **Definition 7 (Denominator layout)** Writing derivatives as in [Definition 6](#def-vector-valued-derivative) is the **denominator layout** [\[8\]](#ref-wikipedia_matrix_calculus), which these notes use throughout: rows index the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ (the denominator) and columns index the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ (the numerator), so column \\j\\ is the vector derivative \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}} y_j\\ ([Definition 2](#def-vector-derivative)).
 
 > **NOTE:**
 >
@@ -411,11 +411,11 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}&= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) \\ &= {(y_1, \ldots, y_q)}^{\top} \end{aligned} \\
 >
-> be a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\. The **Jacobian matrix** ([Wikipedia contributors 2026d](#ref-wikipedia_jacobian_matrix_and_determinant)) of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ is the \\q \times p\\ matrix whose \\(j, i)\\ entry is \\\frac{\partial}{\partial \beta\_{i}} y_j\\, for \\j = 1, \ldots, q\\ and \\i = 1, \ldots, p\\. It is the transpose of the derivative \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\top}\\ of [Definition 6](#def-vector-valued-derivative).
+> be a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\. The **Jacobian matrix** [\[9\]](#ref-wikipedia_jacobian_matrix_and_determinant) of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ is the \\q \times p\\ matrix whose \\(j, i)\\ entry is \\\frac{\partial}{\partial \beta\_{i}} y_j\\, for \\j = 1, \ldots, q\\ and \\i = 1, \ldots, p\\. It is the transpose of the derivative \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\top}\\ of [Definition 6](#def-vector-valued-derivative).
 
 > **NOTE:**
 >
-> **Definition 9 (Numerator layout)** Writing derivatives as in [Definition 8](#def-jacobian-matrix), with rows indexing the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ (the numerator) and columns indexing the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ (the denominator), is the **numerator layout** ([Wikipedia contributors 2026f](#ref-wikipedia_matrix_calculus)).
+> **Definition 9 (Numerator layout)** Writing derivatives as in [Definition 8](#def-jacobian-matrix), with rows indexing the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ (the numerator) and columns indexing the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ (the denominator), is the **numerator layout** [\[8\]](#ref-wikipedia_matrix_calculus).
 
 > **NOTE:**
 >
@@ -453,7 +453,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Exercise 6 (Partial derivative with respect to an unreferenced variable)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.46.
+> **Exercise 6 (Partial derivative with respect to an unreferenced variable)** Adapted from Miller [\[3\]](#ref-problifesavercalc), Question 1.1.46.
 >
 > Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
@@ -683,7 +683,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Definition 11 (Residual vector and residuals)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^n\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\in \mathbb{R}^p\\. The **residual vector** of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\varepsilon}}\vphantom{\varepsilon}}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, and its entries \\\varepsilon_i = y_i - (\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}})\_i\\ are the **residuals** ([Wikipedia contributors 2026b](#ref-wikipedia_errors_and_residuals)).
+> **Definition 11 (Residual vector and residuals)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^n\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\in \mathbb{R}^p\\. The **residual vector** of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\varepsilon}}\vphantom{\varepsilon}}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}) \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, and its entries \\\varepsilon_i = y_i - (\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}})\_i\\ are the **residuals** [\[10\]](#ref-wikipedia_errors_and_residuals).
 
 > **NOTE:**
 >
@@ -695,7 +695,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\varepsilon}}\vphantom{\varepsilon}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\varepsilon}}\vphantom{\varepsilon}} &= \sum\_{i=1}^n\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\varepsilon}}\vphantom{\varepsilon}}\_i^2 \\ &= \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}^2 \end{aligned} \\
 >
-> is the **residual sum of squares** ([Wikipedia contributors 2026h](#ref-wikipedia_residual_sum_of_squares)).
+> is the **residual sum of squares** [\[11\]](#ref-wikipedia_residual_sum_of_squares).
 
 > **NOTE:**
 >
@@ -750,7 +750,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > so \\\frac{\partial}{\partial x_1} z = 2x_1 + 3x_2\\ and \\\frac{\partial}{\partial x_2} z = 3x_1 + 2x_2\\. The product in the other order, a \\2 \times 1\\ matrix times a \\2 \times 2\\ matrix, is not defined. The total derivative is the transpose, the row vector \\(2x_1 + 3x_2,\\ 3x_1 + 2x_2)\\.
 
-See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contributors ([n.d.](#ref-wp:gradient)), section “Relationship with Frechet derivative”.
+See Felippa [\[12\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contributors [\[4\]](#ref-wp:gradient), section “Relationship with Frechet derivative”.
 
 > **NOTE:**
 >
@@ -785,7 +785,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 14 (Matrix derivative (gradient))** For a scalar-valued function \\f(\mathbf{X})\\ of an \\m \times n\\ matrix \\\mathbf{X}\\, the **matrix derivative** ([Wikipedia contributors 2026f](#ref-wikipedia_matrix_calculus)) is the \\m \times n\\ matrix whose \\(i,j)\\ entry is the partial derivative of \\f\\ with respect to the \\(i,j)\\ entry of \\\mathbf{X}\\:
+> **Definition 14 (Matrix derivative (gradient))** For a scalar-valued function \\f(\mathbf{X})\\ of an \\m \times n\\ matrix \\\mathbf{X}\\, the **matrix derivative** [\[8\]](#ref-wikipedia_matrix_calculus) is the \\m \times n\\ matrix whose \\(i,j)\\ entry is the partial derivative of \\f\\ with respect to the \\(i,j)\\ entry of \\\mathbf{X}\\:
 >
 > \\ \mathopen{}\left\[\frac{\partial}{\partial \mathbf{X}} f\right\]\mathclose{}\_{ij} = \frac{\partial}{\partial X\_{ij}} f \\
 >
@@ -875,7 +875,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 15 (Open ball)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** ([Wikipedia contributors 2026a](#ref-wikipedia_ball_mathematics)) of radius \\r\\ around \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is the set \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p : \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ (the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the difference) is less than \\r\\.
+> **Definition 15 (Open ball)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** [\[13\]](#ref-wikipedia_ball_mathematics) of radius \\r\\ around \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is the set \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p : \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ (the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the difference) is less than \\r\\.
 
 > **NOTE:**
 >
@@ -931,7 +931,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 20 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ whose first partial derivatives exist on an open ball around \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ ([Definition 15](#def-ball)) and whose second partial derivatives ([Definition 18](#def-second-partial-derivative)) exist at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\. The **Hessian matrix** ([Wikipedia contributors 2026c](#ref-wikipedia_hessian_matrix)) of \\f\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is the derivative ([Definition 6](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
+> **Definition 20 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ whose first partial derivatives exist on an open ball around \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ ([Definition 15](#def-ball)) and whose second partial derivatives ([Definition 18](#def-second-partial-derivative)) exist at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\. The **Hessian matrix** [\[14\]](#ref-wikipedia_hessian_matrix) of \\f\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is the derivative ([Definition 6](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
 >
 > \\ \underbrace{\mathbf{H}\_f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})}\_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}. \tag{4}\\
 
@@ -1138,9 +1138,9 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 14 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 21](#def-continuous-several)) on an open ball around \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ ([Definition 15](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right)\mathclose{}\\ for all \\i, j\\ ([Wikipedia contributors 2026i](#ref-wikipedia_symmetry_of_second_derivatives)), so \\\mathbf{H}\_f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ ([Definition 20](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
+> **Theorem 14 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 21](#def-continuous-several)) on an open ball around \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ ([Definition 15](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right)\mathclose{}\\ for all \\i, j\\ [\[15\]](#ref-wikipedia_symmetry_of_second_derivatives), so \\\mathbf{H}\_f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ ([Definition 20](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
 
-The proof applies the one-variable mean value theorem twice, which these notes do not develop; see ([Rudin 1976](#ref-rudin1976principles), Theorem 9.41), which is stated for two variables: apply it to \\f\\ as a function of \\x_i\\ and \\x_j\\, with the other coordinates held fixed.
+The proof applies the one-variable mean value theorem twice, which these notes do not develop; see [\[16\]](#ref-rudin1976principles), Theorem 9.41, which is stated for two variables: apply it to \\f\\ as a function of \\x_i\\ and \\x_j\\, with the other coordinates held fixed.
 
 > **NOTE:**
 >
@@ -1178,33 +1178,33 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 ## 3 Further reading
 
-- Marsden and Tromba ([2013](#ref-marsden2013vector)) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.
+- Marsden and Tromba [\[17\]](#ref-marsden2013vector) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.
 
-- Petersen and Pedersen ([2012](#ref-petersen2012matrix)) is a free desk reference that collects matrix identities. Its chapter on derivatives lists derivatives of vector and matrix expressions, such as the linear and quadratic forms on this page.
+- Petersen and Pedersen [\[18\]](#ref-petersen2012matrix) is a free desk reference that collects matrix identities. Its chapter on derivatives lists derivatives of vector and matrix expressions, such as the linear and quadratic forms on this page.
 
-- Miller ([2016](#ref-problifesavercalc)) The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.
+- Miller [\[3\]](#ref-problifesavercalc) The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_partial_derivative)) — partial derivatives
+- Wikipedia contributors [\[2\]](#ref-wikipedia_partial_derivative) — partial derivatives
 
-- Wikipedia contributors ([n.d.](#ref-wp:gradient)) — the gradient
+- Wikipedia contributors [\[4\]](#ref-wp:gradient) — the gradient
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_level_set)) — level sets
+- Wikipedia contributors [\[6\]](#ref-wikipedia_level_set) — level sets
 
-- Wikipedia contributors ([2026j](#ref-wikipedia_total_derivative)) — the total derivative
+- Wikipedia contributors [\[7\]](#ref-wikipedia_total_derivative) — the total derivative
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_jacobian_matrix_and_determinant)) — the Jacobian matrix
+- Wikipedia contributors [\[9\]](#ref-wikipedia_jacobian_matrix_and_determinant) — the Jacobian matrix
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_matrix_calculus)) — matrix calculus and the numerator and denominator layouts
+- Wikipedia contributors [\[8\]](#ref-wikipedia_matrix_calculus) — matrix calculus and the numerator and denominator layouts
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_errors_and_residuals)) — residuals and errors
+- Wikipedia contributors [\[10\]](#ref-wikipedia_errors_and_residuals) — residuals and errors
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_residual_sum_of_squares)) — the residual sum of squares
+- Wikipedia contributors [\[11\]](#ref-wikipedia_residual_sum_of_squares) — the residual sum of squares
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_ball_mathematics)) — open and closed balls
+- Wikipedia contributors [\[13\]](#ref-wikipedia_ball_mathematics) — open and closed balls
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_hessian_matrix)) — the Hessian matrix
+- Wikipedia contributors [\[14\]](#ref-wikipedia_hessian_matrix) — the Hessian matrix
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_symmetry_of_second_derivatives)) — the symmetry of mixed second partial derivatives
+- Wikipedia contributors [\[15\]](#ref-wikipedia_symmetry_of_second_derivatives) — the symmetry of mixed second partial derivatives
 
 See also the [Linear Algebra and Vector Calculus further reading](#sec-additional-resources).
 
@@ -1213,40 +1213,76 @@ See also the [Linear Algebra and Vector Calculus further reading](#sec-additiona
 
 ## References
 
-Felippa, Carlos A. n.d. *Matrix Calculus*. Appendix F of Introduction to Finite Element Methods, course notes, University of Colorado Boulder. Accessed October 6, 2026. <https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf>.
+\[1\]
 
-Fieller, Nick. 2016. *Basics of Matrix Algebra for Statistics with R*. Chapman; Hall/CRC. <https://doi.org/10.1201/9781315370200>.
+N. Fieller, *Basics of matrix algebra for statistics with R*. Chapman; Hall/CRC, 2016. doi: [10.1201/9781315370200](https://doi.org/10.1201/9781315370200).
 
-Hutchinson, Brian. n.d. *DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures*. Western Washington University. Accessed September 28, 2026. <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>.
+\[2\]
 
-Marsden, Jerrold E., and Anthony Tromba. 2013. *Vector Calculus*. 6th ed. Macmillan Learning. <https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089>.
+Wikipedia contributors, “Partial derivative — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Partial_derivative>
 
-Miller, Steven J. 2016. *The Probability Lifesaver: Calculus Review Problems*. <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>.
+\[3\]
 
-Petersen, Kaare Brandt, and Michael Syskind Pedersen. 2012. *The Matrix Cookbook*. Technical University of Denmark. <https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf>.
+S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Available: <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>
 
-Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
+\[4\]
 
-Wikipedia contributors. 2026a. *Ball (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Ball_(mathematics)>.
+Wikipedia contributors, “Gradient — Wikipedia, the free encyclopedia.” Available: <https://en.wikipedia.org/wiki/Gradient>
 
-Wikipedia contributors. 2026b. *Errors and Residuals — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Errors_and_residuals>.
+\[5\]
 
-Wikipedia contributors. 2026c. *Hessian Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Hessian_matrix>.
+B. Hutchinson, “DATA 471/571 (machine learning) and CSCI 481/581 (deep learning) video lectures.” Western Washington University. Accessed: Sep. 28, 2026. \[Online\]. Available: <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>
 
-Wikipedia contributors. 2026d. *Jacobian Matrix and Determinant — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant>.
+\[6\]
 
-Wikipedia contributors. 2026e. *Level Set — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Level_set>.
+Wikipedia contributors, “Level set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Level_set>
 
-Wikipedia contributors. 2026f. *Matrix Calculus — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Matrix_calculus>.
+\[7\]
 
-Wikipedia contributors. 2026g. *Partial Derivative — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Partial_derivative>.
+Wikipedia contributors, “Total derivative — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Total_derivative>
 
-Wikipedia contributors. 2026h. *Residual Sum of Squares — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Residual_sum_of_squares>.
+\[8\]
 
-Wikipedia contributors. 2026i. *Symmetry of Second Derivatives — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives>.
+Wikipedia contributors, “Matrix calculus — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Matrix_calculus>
 
-Wikipedia contributors. 2026j. *Total Derivative — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Total_derivative>.
+\[9\]
 
-Wikipedia contributors. n.d. *Gradient — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Gradient>.
+Wikipedia contributors, “Jacobian matrix and determinant — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant>
+
+\[10\]
+
+Wikipedia contributors, “Errors and residuals — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Errors_and_residuals>
+
+\[11\]
+
+Wikipedia contributors, “Residual sum of squares — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Residual_sum_of_squares>
+
+\[12\]
+
+C. A. Felippa, “Matrix calculus.” Appendix F of Introduction to Finite Element Methods, course notes, University of Colorado Boulder. Accessed: Oct. 06, 2026. \[Online\]. Available: <https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf>
+
+\[13\]
+
+Wikipedia contributors, “Ball (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Ball_(mathematics)>
+
+\[14\]
+
+Wikipedia contributors, “Hessian matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Hessian_matrix>
+
+\[15\]
+
+Wikipedia contributors, “Symmetry of second derivatives — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives>
+
+\[16\]
+
+W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.
+
+\[17\]
+
+J. E. Marsden and A. Tromba, *Vector calculus*, 6th ed. Macmillan Learning, 2013. Available: <https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089>
+
+\[18\]
+
+K. B. Petersen and M. S. Pedersen, “The matrix cookbook,” Technical University of Denmark, Nov. 2012. Available: <https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf>
 
 Back to top

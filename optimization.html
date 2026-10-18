@@ -62,6 +62,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -217,75 +218,15 @@ cookieconsent.run({
 })();
 </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cnj.callout {
   border-left-color: #558B2F;
@@ -297,25 +238,35 @@ div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-tbl.callout {
+  border-left-color: #757575;
+}
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -327,15 +278,65 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-remark.callout {
-  border-left-color: #AD1457;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -971,7 +972,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+      <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
     </div>
   </div>
   
@@ -994,7 +995,7 @@ window.Quarto = {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This section is adapted from the multivariate calculus and optimality-condition parts of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Linear Algebra</a>). The source states the second-order Taylor approximation and the optimality conditions without <a href="./proof-writing.html#def-proof">proof</a>; here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\)</span>. The source calls points with zero gradient critical points; here they are stationary points, because the <a href="./calculus-derivatives.html#def-critical-point">calculus notes</a> give “critical point” a wider meaning. These parts of the source are not part of this section:</p>
+<p>This section is adapted from the multivariate calculus and optimality-condition parts of <span class="citation" data-cites="zhou2024optim">Zhou <a href="#ref-zhou2024optim" role="doc-biblioref">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Linear Algebra</a>). The source states the second-order Taylor approximation and the optimality conditions without <a href="./proof-writing.html#def-proof">proof</a>; here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\)</span>. The source calls points with zero gradient critical points; here they are stationary points, because the <a href="./calculus-derivatives.html#def-critical-point">calculus notes</a> give “critical point” a wider meaning. These parts of the source are not part of this section:</p>
 <ul>
 <li>its one-variable Taylor example and its plots</li>
 <li>matrix calculus</li>
@@ -1019,7 +1020,7 @@ window.Quarto = {
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-fermat" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (A minimizer has derivative zero)</strong></span> Let <span class="math inline">\(g\)</span> be a <a href="./number-systems.html#def-real-numbers">real</a>-valued function on an <a href="./sets.html#def-open-interval">open interval</a> containing <span class="math inline">\(c\)</span>, and let <span class="math inline">\(g\)</span> be <a href="./calculus-derivatives.html#def-differentiable">differentiable</a> at <span class="math inline">\(c\)</span>. If <span class="math inline">\(c\)</span> is a <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a> of <span class="math inline">\(g\)</span>, then <span class="math inline">\(g'(c) = 0\)</span>. <span class="citation" data-cites="wikipedia_fermats_theorem_stationary_points">(<a href="#ref-wikipedia_fermats_theorem_stationary_points" role="doc-biblioref">Wikipedia contributors 2026e</a>)</span></p>
+<p><span class="theorem-title"><strong>Theorem 1 (A minimizer has derivative zero)</strong></span> Let <span class="math inline">\(g\)</span> be a <a href="./number-systems.html#def-real-numbers">real</a>-valued function on an <a href="./sets.html#def-open-interval">open interval</a> containing <span class="math inline">\(c\)</span>, and let <span class="math inline">\(g\)</span> be <a href="./calculus-derivatives.html#def-differentiable">differentiable</a> at <span class="math inline">\(c\)</span>. If <span class="math inline">\(c\)</span> is a <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a> of <span class="math inline">\(g\)</span>, then <span class="math inline">\(g'(c) = 0\)</span>. <span class="citation" data-cites="wikipedia_fermats_theorem_stationary_points"><a href="#ref-wikipedia_fermats_theorem_stationary_points" role="doc-biblioref">[2]</a></span></p>
 </div>
 </div>
 </div>
@@ -1370,7 +1371,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vpha
 <div id="callout-12" class="callout-12-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-taylor-1d" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (Taylor’s theorem with a second-order remainder)</strong></span> Let <span class="math inline">\(a &lt; b\)</span>, and let <span class="math inline">\(g\)</span> be a real-valued function on <span class="math inline">\([a, b]\)</span> whose derivative <span class="math inline">\(g'\)</span> is <a href="./calculus-integration.html#def-continuous">continuous</a> on <span class="math inline">\([a, b]\)</span> and whose <a href="./calculus-derivatives.html#def-second-derivative">second derivative</a> <span class="math inline">\(g''\)</span> exists at every point of <span class="math inline">\((a, b)\)</span>. Then there is a <span class="math inline">\(\tau\in (a, b)\)</span> with <span class="citation" data-cites="wikipedia_taylors_theorem">(<a href="#ref-wikipedia_taylors_theorem" role="doc-biblioref">Wikipedia contributors 2026o</a>)</span></p>
+<p><span class="theorem-title"><strong>Theorem 3 (Taylor’s theorem with a second-order remainder)</strong></span> Let <span class="math inline">\(a &lt; b\)</span>, and let <span class="math inline">\(g\)</span> be a real-valued function on <span class="math inline">\([a, b]\)</span> whose derivative <span class="math inline">\(g'\)</span> is <a href="./calculus-integration.html#def-continuous">continuous</a> on <span class="math inline">\([a, b]\)</span> and whose <a href="./calculus-derivatives.html#def-second-derivative">second derivative</a> <span class="math inline">\(g''\)</span> exists at every point of <span class="math inline">\((a, b)\)</span>. Then there is a <span class="math inline">\(\tau\in (a, b)\)</span> with <span class="citation" data-cites="wikipedia_taylors_theorem"><a href="#ref-wikipedia_taylors_theorem" role="doc-biblioref">[3]</a></span></p>
 <p><span class="math display">\[
 g(b) = g(a) + g'(a)\,(b - a) + \frac{1}{2}\,g''(\tau)\,(b - a)^2.
 \]</span></p>
@@ -1378,7 +1379,7 @@ g(b) = g(a) + g'(a)\,(b - a) + \frac{1}{2}\,g''(\tau)\,(b - a)^2.
 </div>
 </div>
 </div>
-<p>This theorem is the case <span class="math inline">\(n = 2\)</span> of <span class="citation" data-cites="rudin1976principles">(<a href="#ref-rudin1976principles" role="doc-biblioref">Rudin 1976</a>, Theorem 5.15)</span>; its proof uses the mean value theorem, which these notes do not develop.</p>
+<p>This theorem is the case <span class="math inline">\(n = 2\)</span> of <span class="citation" data-cites="rudin1976principles"><a href="#ref-rudin1976principles" role="doc-biblioref">[4]</a>, Theorem 5.15</span>; its proof uses the mean value theorem, which these notes do not develop.</p>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1425,7 +1426,7 @@ e^{\tau} &amp;= 2 (e - 2) \\
 <div id="callout-14" class="callout-14-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-taylor-mv" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (Second-order Taylor theorem in several variables)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first and second partial derivatives that are continuous on <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./vector-calculus.html#def-continuous-on">continuity</a>), and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \in \mathbb{R}^p\)</span>. Then there is a <span class="math inline">\(\tau\in (0, 1)\)</span> with <span class="citation" data-cites="wikipedia_taylors_theorem">(<a href="#ref-wikipedia_taylors_theorem" role="doc-biblioref">Wikipedia contributors 2026o</a>)</span></p>
+<p><span class="theorem-title"><strong>Theorem 4 (Second-order Taylor theorem in several variables)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first and second partial derivatives that are continuous on <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./vector-calculus.html#def-continuous-on">continuity</a>), and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \in \mathbb{R}^p\)</span>. Then there is a <span class="math inline">\(\tau\in (0, 1)\)</span> with <span class="citation" data-cites="wikipedia_taylors_theorem"><a href="#ref-wikipedia_taylors_theorem" role="doc-biblioref">[3]</a></span></p>
 <p><span class="math display">\[
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})
 = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}})
@@ -1970,7 +1971,7 @@ f(0) - f(x)
 <div id="callout-31" class="callout-31-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-saddle-point" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Saddle point)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span>. A <a href="#def-stationary-point">stationary point</a> of <span class="math inline">\(f\)</span> that is neither a <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a> nor a <a href="#def-local-maximizer">local maximizer</a> of <span class="math inline">\(f\)</span> is a <strong>saddle point</strong> of <span class="math inline">\(f\)</span> <span class="citation" data-cites="wikipedia_saddle_point">(<a href="#ref-wikipedia_saddle_point" role="doc-biblioref">Wikipedia contributors 2026m</a>)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Saddle point)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span>. A <a href="#def-stationary-point">stationary point</a> of <span class="math inline">\(f\)</span> that is neither a <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a> nor a <a href="#def-local-maximizer">local maximizer</a> of <span class="math inline">\(f\)</span> is a <strong>saddle point</strong> of <span class="math inline">\(f\)</span> <span class="citation" data-cites="wikipedia_saddle_point"><a href="#ref-wikipedia_saddle_point" role="doc-biblioref">[5]</a></span>.</p>
 </div>
 </div>
 </div>
@@ -2031,7 +2032,7 @@ f(0, t)
 </div>
 <div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This section is adapted from the convexity part of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Linear Algebra</a>). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of <a href="#sec-optimality-vector" class="quarto-xref">Section&nbsp;1</a>. The source defines both concave and strictly concave as “<span class="math inline">\(-f\)</span> is strictly convex”; here <span class="math inline">\(f\)</span> is concave when <span class="math inline">\(-f\)</span> is convex. These parts of the source are not part of this section:</p>
+<p>This section is adapted from the convexity part of <span class="citation" data-cites="zhou2024optim">Zhou <a href="#ref-zhou2024optim" role="doc-biblioref">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Linear Algebra</a>). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of <a href="#sec-optimality-vector" class="quarto-xref">Section&nbsp;1</a>. The source defines both concave and strictly concave as “<span class="math inline">\(-f\)</span> is strictly convex”; here <span class="math inline">\(f\)</span> is concave when <span class="math inline">\(-f\)</span> is convex. These parts of the source are not part of this section:</p>
 <ul>
 <li>its catalogs of convex sets and convex functions, including the positive semidefinite matrices and <span class="math inline">\(-\log \det\)</span>
 </li>
@@ -2054,7 +2055,7 @@ f(0, t)
 <div id="callout-34" class="callout-34-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-convex-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Convex set)</strong></span> A set <span class="math inline">\(K \subseteq \mathbb{R}^p\)</span> is <strong>convex</strong> if <span class="citation" data-cites="wikipedia_convex_set">(<a href="#ref-wikipedia_convex_set" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in K\)</span> and all <span class="math inline">\(t \in [0, 1]\)</span>, the point <span class="math inline">\(t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(K\)</span>: <span class="math inline">\(K\)</span> contains the whole line segment between any two of its points.</p>
+<p><span class="theorem-title"><strong>Definition 5 (Convex set)</strong></span> A set <span class="math inline">\(K \subseteq \mathbb{R}^p\)</span> is <strong>convex</strong> if <span class="citation" data-cites="wikipedia_convex_set"><a href="#ref-wikipedia_convex_set" role="doc-biblioref">[6]</a></span> for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in K\)</span> and all <span class="math inline">\(t \in [0, 1]\)</span>, the point <span class="math inline">\(t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(K\)</span>: <span class="math inline">\(K\)</span> contains the whole line segment between any two of its points.</p>
 </div>
 </div>
 </div>
@@ -2408,7 +2409,7 @@ g(1) &amp;= \min\mathopen{}\left\{1, 1\right\}\mathclose{} \\
 <div id="callout-49" class="callout-49-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-epigraph" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Epigraph)</strong></span> The <strong>epigraph</strong> <span class="citation" data-cites="wikipedia_epigraph_mathematics">(<a href="#ref-wikipedia_epigraph_mathematics" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span> of <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> is the set of points on or over its <a href="./functions.html#def-graph">graph</a>,</p>
+<p><span class="theorem-title"><strong>Definition 10 (Epigraph)</strong></span> The <strong>epigraph</strong> <span class="citation" data-cites="wikipedia_epigraph_mathematics"><a href="#ref-wikipedia_epigraph_mathematics" role="doc-biblioref">[7]</a></span> of <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> is the set of points on or over its <a href="./functions.html#def-graph">graph</a>,</p>
 <p><span class="math display">\[
 \operatorname{epi} f \stackrel{\text{def}}{=}\mathopen{}\left\{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, s) : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p,\ s \in \mathbb{R},\ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \le s\right\}\mathclose{}.
 \]</span></p>
@@ -2522,7 +2523,7 @@ f(t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 <div id="callout-54" class="callout-54-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-tangent-plane" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Tangent plane)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have a gradient at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> (<a href="./vector-calculus.html#def-vector-derivative">gradient</a>). The <strong>tangent plane</strong> <span class="citation" data-cites="wikipedia_tangent_space">(<a href="#ref-wikipedia_tangent_space" role="doc-biblioref">Wikipedia contributors 2026n</a>)</span> to the <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is the graph of the function</p>
+<p><span class="theorem-title"><strong>Definition 11 (Tangent plane)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have a gradient at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> (<a href="./vector-calculus.html#def-vector-derivative">gradient</a>). The <strong>tangent plane</strong> <span class="citation" data-cites="wikipedia_tangent_space"><a href="#ref-wikipedia_tangent_space" role="doc-biblioref">[8]</a></span> to the <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is the graph of the function</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right)\mathclose{}}^{\top} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}),
 \]</span></p>
@@ -2957,7 +2958,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div id="callout-67" class="callout-67-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This section is adapted from the Lagrange-multiplier part of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Linear Algebra</a>). The source solves the stationarity equations of the Lagrangian and reports the solution; here the solution is also proved to be the unique minimizer, directly from the positive definiteness of the matrices involved. The source assumes only that <span class="math inline">\(\mathbf{S}\)</span> is positive definite; the added hypothesis that the columns of <span class="math inline">\(\mathbf{A}\)</span> are linearly independent makes <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> invertible. The source’s example with general coefficients <span class="math inline">\(a_1, a_2, b\)</span> is specialized here to <span class="math inline">\(3, 4, 5\)</span>. These parts of the source are not part of this section:</p>
+<p>This section is adapted from the Lagrange-multiplier part of <span class="citation" data-cites="zhou2024optim">Zhou <a href="#ref-zhou2024optim" role="doc-biblioref">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Linear Algebra</a>). The source solves the stationarity equations of the Lagrangian and reports the solution; here the solution is also proved to be the unique minimizer, directly from the positive definiteness of the matrices involved. The source assumes only that <span class="math inline">\(\mathbf{S}\)</span> is positive definite; the added hypothesis that the columns of <span class="math inline">\(\mathbf{A}\)</span> are linearly independent makes <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> invertible. The source’s example with general coefficients <span class="math inline">\(a_1, a_2, b\)</span> is specialized here to <span class="math inline">\(3, 4, 5\)</span>. These parts of the source are not part of this section:</p>
 <ul>
 <li>the Lagrange multiplier method for constraints that are not linear, or objectives that are not quadratic, including its multinomial maximum likelihood example</li>
 <li>the eigenvalues of the block matrix of the stationarity equations, and the convexity of the Lagrangian in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and its concavity in the multipliers</li>
@@ -2979,7 +2980,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div id="callout-68" class="callout-68-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-feasible-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Feasible set)</strong></span> In a problem that looks for a best point among some allowed points of <span class="math inline">\(\mathbb{R}^p\)</span>, the set <span class="math inline">\(F \subseteq \mathbb{R}^p\)</span> of allowed points is the <strong>feasible set</strong>, <span class="citation" data-cites="wikipedia_feasible_region">(<a href="#ref-wikipedia_feasible_region" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> and its points are feasible.</p>
+<p><span class="theorem-title"><strong>Definition 12 (Feasible set)</strong></span> In a problem that looks for a best point among some allowed points of <span class="math inline">\(\mathbb{R}^p\)</span>, the set <span class="math inline">\(F \subseteq \mathbb{R}^p\)</span> of allowed points is the <strong>feasible set</strong>, <span class="citation" data-cites="wikipedia_feasible_region"><a href="#ref-wikipedia_feasible_region" role="doc-biblioref">[9]</a></span> and its points are feasible.</p>
 </div>
 </div>
 </div>
@@ -3076,7 +3077,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div id="callout-73" class="callout-73-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-minimization-problem" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Minimization problem)</strong></span> With <span class="math inline">\(f\)</span> and <span class="math inline">\(F\)</span> as in <a href="#def-objective-function" class="quarto-xref">Definition&nbsp;14</a>, the <strong>minimization problem</strong> <span class="citation" data-cites="wikipedia_mathematical_optimization">(<a href="#ref-wikipedia_mathematical_optimization" role="doc-biblioref">Wikipedia contributors 2026j</a>)</span> is to find a minimizer of <span class="math inline">\(f\)</span> over <span class="math inline">\(F\)</span> (<a href="#def-minimizer-over-feasible-set" class="quarto-xref">Definition&nbsp;15</a>). When <span class="math inline">\(F\)</span> is given by constraints (<a href="#def-constraints" class="quarto-xref">Definition&nbsp;13</a>), the problem is to minimize <span class="math inline">\(f\)</span> subject to them.</p>
+<p><span class="theorem-title"><strong>Definition 16 (Minimization problem)</strong></span> With <span class="math inline">\(f\)</span> and <span class="math inline">\(F\)</span> as in <a href="#def-objective-function" class="quarto-xref">Definition&nbsp;14</a>, the <strong>minimization problem</strong> <span class="citation" data-cites="wikipedia_mathematical_optimization"><a href="#ref-wikipedia_mathematical_optimization" role="doc-biblioref">[10]</a></span> is to find a minimizer of <span class="math inline">\(f\)</span> over <span class="math inline">\(F\)</span> (<a href="#def-minimizer-over-feasible-set" class="quarto-xref">Definition&nbsp;15</a>). When <span class="math inline">\(F\)</span> is given by constraints (<a href="#def-constraints" class="quarto-xref">Definition&nbsp;13</a>), the problem is to minimize <span class="math inline">\(f\)</span> subject to them.</p>
 </div>
 </div>
 </div>
@@ -3120,7 +3121,7 @@ f(1, 0.5) &amp;= 1 + 0.25 \\
 <div id="callout-75" class="callout-75-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-lagrangian" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Lagrangian)</strong></span> For the problem of minimizing <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> subject to <span class="math inline">\({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, with <span class="math inline">\(\mathbf{A}\)</span> a <span class="math inline">\(p \times m\)</span> matrix and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, the <strong>Lagrangian</strong> <span class="citation" data-cites="wikipedia_lagrange_multiplier">(<a href="#ref-wikipedia_lagrange_multiplier" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span> is the function of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}\in \mathbb{R}^m\)</span></p>
+<p><span class="theorem-title"><strong>Definition 17 (Lagrangian)</strong></span> For the problem of minimizing <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> subject to <span class="math inline">\({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, with <span class="math inline">\(\mathbf{A}\)</span> a <span class="math inline">\(p \times m\)</span> matrix and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, the <strong>Lagrangian</strong> <span class="citation" data-cites="wikipedia_lagrange_multiplier"><a href="#ref-wikipedia_lagrange_multiplier" role="doc-biblioref">[11]</a></span> is the function of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}\in \mathbb{R}^m\)</span></p>
 <p><span class="math display">\[
 L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}}^{\top} \mathopen{}\left({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\right)\mathclose{}.
 \]</span></p>
@@ -3141,7 +3142,7 @@ L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div id="callout-76" class="callout-76-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-lagrange-multipliers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Lagrange multipliers)</strong></span> In the Lagrangian <span class="math inline">\(L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})\)</span> (<a href="#def-lagrangian" class="quarto-xref">Definition&nbsp;17</a>), the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}\)</span> are the <strong>Lagrange multipliers</strong> <span class="citation" data-cites="wikipedia_lagrange_multiplier">(<a href="#ref-wikipedia_lagrange_multiplier" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span>, one per constraint.</p>
+<p><span class="theorem-title"><strong>Definition 18 (Lagrange multipliers)</strong></span> In the Lagrangian <span class="math inline">\(L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})\)</span> (<a href="#def-lagrangian" class="quarto-xref">Definition&nbsp;17</a>), the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}\)</span> are the <strong>Lagrange multipliers</strong> <span class="citation" data-cites="wikipedia_lagrange_multiplier"><a href="#ref-wikipedia_lagrange_multiplier" role="doc-biblioref">[11]</a></span>, one per constraint.</p>
 </div>
 </div>
 </div>
@@ -3613,7 +3614,7 @@ f^*(b) &amp;= \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^
 </div>
 <div id="callout-87" class="callout-87-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This section is adapted from the Newton-Raphson and gradient descent parts of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Linear Algebra</a>). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is <span class="math inline">\(\tfrac{1}{2}(b^2 + b)\)</span>, not <span class="math inline">\(\tfrac{1}{2}(1 + b^2)\)</span> as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}\)</span> has <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}\)</span> on its right side where <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> is meant. These parts of the source are not part of this section:</p>
+<p>This section is adapted from the Newton-Raphson and gradient descent parts of <span class="citation" data-cites="zhou2024optim">Zhou <a href="#ref-zhou2024optim" role="doc-biblioref">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Linear Algebra</a>). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is <span class="math inline">\(\tfrac{1}{2}(b^2 + b)\)</span>, not <span class="math inline">\(\tfrac{1}{2}(1 + b^2)\)</span> as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}\)</span> has <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}\)</span> on its right side where <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> is meant. These parts of the source are not part of this section:</p>
 <ul>
 <li>the quadratic convergence theorem for Newton’s method in general, and its remedies for instability (a positive definite substitute for the Hessian, and shortening the Newton step by a search along its direction)</li>
 <li>its remark that Hessians are expensive to compute</li>
@@ -3638,7 +3639,7 @@ f^*(b) &amp;= \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^
 <div id="callout-88" class="callout-88-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-iterative-method" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Iterative method)</strong></span> An <strong>iterative method</strong> <span class="citation" data-cites="wikipedia_iterative_method">(<a href="#ref-wikipedia_iterative_method" role="doc-biblioref">Wikipedia contributors 2026g</a>)</span> starts from a point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> and computes <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)}\)</span> from <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}\)</span> by a fixed rule, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 20 (Iterative method)</strong></span> An <strong>iterative method</strong> <span class="citation" data-cites="wikipedia_iterative_method"><a href="#ref-wikipedia_iterative_method" role="doc-biblioref">[12]</a></span> starts from a point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> and computes <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)}\)</span> from <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}\)</span> by a fixed rule, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3739,7 +3740,7 @@ f^*(b) &amp;= \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^
 <div id="callout-93" class="callout-93-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-newton-method" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 24 (Newton’s method for minimization)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first and second partial derivatives, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> be a starting point. <strong>Newton’s method</strong> <span class="citation" data-cites="wikipedia_newtons_method_in_optimization">(<a href="#ref-wikipedia_newtons_method_in_optimization" role="doc-biblioref">Wikipedia contributors 2026k</a>)</span> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>, as long as <span class="math inline">\(\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\)</span> is invertible,</p>
+<p><span class="theorem-title"><strong>Definition 24 (Newton’s method for minimization)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first and second partial derivatives, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> be a starting point. <strong>Newton’s method</strong> <span class="citation" data-cites="wikipedia_newtons_method_in_optimization"><a href="#ref-wikipedia_newtons_method_in_optimization" role="doc-biblioref">[13]</a></span> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>, as long as <span class="math inline">\(\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\)</span> is invertible,</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - \mathopen{}\left[\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\right]\mathclose{}^{-1} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}).
 \]</span></p>
@@ -4003,7 +4004,7 @@ q(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vph
 <div id="callout-102" class="callout-102-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-quadratic-convergence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 27 (Quadratic convergence)</strong></span> A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> that converges (<a href="#def-vector-sequence-limit" class="quarto-xref">Definition&nbsp;23</a>) to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\)</span> <strong>converges quadratically</strong> <span class="citation" data-cites="wikipedia_rate_of_convergence">(<a href="#ref-wikipedia_rate_of_convergence" role="doc-biblioref">Wikipedia contributors 2026l</a>)</span> if there is a constant <span class="math inline">\(C\)</span> with</p>
+<p><span class="theorem-title"><strong>Definition 27 (Quadratic convergence)</strong></span> A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> that converges (<a href="#def-vector-sequence-limit" class="quarto-xref">Definition&nbsp;23</a>) to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\)</span> <strong>converges quadratically</strong> <span class="citation" data-cites="wikipedia_rate_of_convergence"><a href="#ref-wikipedia_rate_of_convergence" role="doc-biblioref">[14]</a></span> if there is a constant <span class="math inline">\(C\)</span> with</p>
 <p><span class="math display">\[
 \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} \le C\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{}^2
 \qquad \text{for every } t.
@@ -4057,7 +4058,7 @@ x^{(t+1)} - 2
 &amp;&amp; \text{(the numerator is a perfect square)}
 \end{aligned}
 \]</span></p>
-<p>So near <span class="math inline">\(2\)</span> the error is roughly squared and divided by <span class="math inline">\(4\)</span> at each step: the errors are <span class="math inline">\(0.05\)</span>, then <span class="math inline">\(0.00061\)</span>, then <span class="math inline">\(0.000000093\)</span>, and <span class="math inline">\(0.05^2 / (2 \cdot 2.05) \approx 0.00061\)</span>. The iterates converge quadratically (<a href="#def-quadratic-convergence" class="quarto-xref">Definition&nbsp;27</a>): <span class="math inline">\(C = \tfrac{1}{2}\)</span> works for every <span class="math inline">\(x^{(t)} \ge 1\)</span>, since then <span class="math inline">\(\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\)</span>, and every iterate from <span class="math inline">\(2.5\)</span> is at least <span class="math inline">\(2\)</span>, since the identity makes <span class="math inline">\(x^{(t+1)} - 2 \ge 0\)</span> whenever <span class="math inline">\(x^{(t)} &gt; 0\)</span>. <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span> states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.</p>
+<p>So near <span class="math inline">\(2\)</span> the error is roughly squared and divided by <span class="math inline">\(4\)</span> at each step: the errors are <span class="math inline">\(0.05\)</span>, then <span class="math inline">\(0.00061\)</span>, then <span class="math inline">\(0.000000093\)</span>, and <span class="math inline">\(0.05^2 / (2 \cdot 2.05) \approx 0.00061\)</span>. The iterates converge quadratically (<a href="#def-quadratic-convergence" class="quarto-xref">Definition&nbsp;27</a>): <span class="math inline">\(C = \tfrac{1}{2}\)</span> works for every <span class="math inline">\(x^{(t)} \ge 1\)</span>, since then <span class="math inline">\(\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\)</span>, and every iterate from <span class="math inline">\(2.5\)</span> is at least <span class="math inline">\(2\)</span>, since the identity makes <span class="math inline">\(x^{(t+1)} - 2 \ge 0\)</span> whenever <span class="math inline">\(x^{(t)} &gt; 0\)</span>. <span class="citation" data-cites="zhou2024optim">Zhou <a href="#ref-zhou2024optim" role="doc-biblioref">[1]</a></span> states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.</p>
 </div>
 </div>
 </div>
@@ -4178,7 +4179,7 @@ x^{(t+1)} - 2
 <div id="callout-109" class="callout-109-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-gradient-descent" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 28 (Gradient descent)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> be a starting point, and let <span class="math inline">\(s^{(0)}, s^{(1)}, \ldots\)</span> be positive <strong>step lengths</strong>. <strong>Gradient descent</strong> <span class="citation" data-cites="wikipedia_gradient_descent">(<a href="#ref-wikipedia_gradient_descent" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 28 (Gradient descent)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> be a starting point, and let <span class="math inline">\(s^{(0)}, s^{(1)}, \ldots\)</span> be positive <strong>step lengths</strong>. <strong>Gradient descent</strong> <span class="citation" data-cites="wikipedia_gradient_descent"><a href="#ref-wikipedia_gradient_descent" role="doc-biblioref">[15]</a></span> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>,</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - s^{(t)}\,\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}).
 \]</span></p>
@@ -4247,7 +4248,7 @@ x^{(t+1)} &amp;= x^{(t)} - 2 s\,x^{(t)} \\
 <div id="callout-112" class="callout-112-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-line-search" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 29 (Line search)</strong></span> In gradient descent (<a href="#def-gradient-descent" class="quarto-xref">Definition&nbsp;28</a>), a <strong>line search</strong> <span class="citation" data-cites="wikipedia_line_search">(<a href="#ref-wikipedia_line_search" role="doc-biblioref">Wikipedia contributors 2026i</a>)</span> is a rule that chooses the step length <span class="math inline">\(s^{(t)}\)</span> by examining the values of <span class="math inline">\(f\)</span> along the line <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - s\,\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}) : s &gt; 0\right\}\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 29 (Line search)</strong></span> In gradient descent (<a href="#def-gradient-descent" class="quarto-xref">Definition&nbsp;28</a>), a <strong>line search</strong> <span class="citation" data-cites="wikipedia_line_search"><a href="#ref-wikipedia_line_search" role="doc-biblioref">[16]</a></span> is a rule that chooses the step length <span class="math inline">\(s^{(t)}\)</span> by examining the values of <span class="math inline">\(f\)</span> along the line <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - s\,\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}) : s &gt; 0\right\}\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4530,7 +4531,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div id="callout-121" class="callout-121-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-armijo-condition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 32 (Armijo condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span>. A step length <span class="math inline">\(s &gt; 0\)</span> satisfies the <strong>Armijo condition</strong> <span class="citation" data-cites="wikipedia_backtracking_line_search">(<a href="#ref-wikipedia_backtracking_line_search" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> with constant <span class="math inline">\(c \in (0, 1)\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> if</p>
+<p><span class="theorem-title"><strong>Definition 32 (Armijo condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span>. A step length <span class="math inline">\(s &gt; 0\)</span> satisfies the <strong>Armijo condition</strong> <span class="citation" data-cites="wikipedia_backtracking_line_search"><a href="#ref-wikipedia_backtracking_line_search" role="doc-biblioref">[17]</a></span> with constant <span class="math inline">\(c \in (0, 1)\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> if</p>
 <p><span class="math display">\[
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) \le f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - c\, s\, \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}\right\rVert\mathclose{}^2.
 \]</span></p>
@@ -4585,7 +4586,7 @@ s &amp;\le 3/4.
 <div id="callout-123" class="callout-123-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-backtracking-line-search" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 33 (Backtracking line search)</strong></span> Let <span class="math inline">\(s_0 &gt; 0\)</span> be an initial step length, <span class="math inline">\(\beta \in (0, 1)\)</span> a shrink factor, and <span class="math inline">\(c \in (0, 1)\)</span>. <strong>Backtracking line search</strong> <span class="citation" data-cites="wikipedia_backtracking_line_search">(<a href="#ref-wikipedia_backtracking_line_search" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> is the <a href="#def-line-search">line search</a> that chooses <span class="math inline">\(s^{(t)}\)</span> to be the largest of <span class="math inline">\(s_0, \beta s_0, \beta^2 s_0, \ldots\)</span> that satisfies the <a href="#def-armijo-condition">Armijo condition</a> with constant <span class="math inline">\(c\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 33 (Backtracking line search)</strong></span> Let <span class="math inline">\(s_0 &gt; 0\)</span> be an initial step length, <span class="math inline">\(\beta \in (0, 1)\)</span> a shrink factor, and <span class="math inline">\(c \in (0, 1)\)</span>. <strong>Backtracking line search</strong> <span class="citation" data-cites="wikipedia_backtracking_line_search"><a href="#ref-wikipedia_backtracking_line_search" role="doc-biblioref">[17]</a></span> is the <a href="#def-line-search">line search</a> that chooses <span class="math inline">\(s^{(t)}\)</span> to be the largest of <span class="math inline">\(s_0, \beta s_0, \beta^2 s_0, \ldots\)</span> that satisfies the <a href="#def-armijo-condition">Armijo condition</a> with constant <span class="math inline">\(c\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4611,83 +4612,118 @@ s &amp;\le 3/4.
 </section><section id="sec-additional-resources" class="level2" data-number="5"><h2 data-number="5" class="anchored" data-anchor-id="sec-additional-resources">
 <span class="header-section-number">5</span> Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="boyd2004convex">Boyd and Vandenberghe (<a href="#ref-boyd2004convex" role="doc-biblioref">2004</a>)</span> is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.</p></li>
-<li><p><span class="citation" data-cites="nocedal2006numerical">Nocedal and Wright (<a href="#ref-nocedal2006numerical" role="doc-biblioref">2006</a>)</span> is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.</p></li>
+<li><p><span class="citation" data-cites="boyd2004convex">Boyd and Vandenberghe <a href="#ref-boyd2004convex" role="doc-biblioref">[18]</a></span> is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.</p></li>
+<li><p><span class="citation" data-cites="nocedal2006numerical">Nocedal and Wright <a href="#ref-nocedal2006numerical" role="doc-biblioref">[19]</a></span> is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.</p></li>
 <li><p><a href="https://hua-zhou.github.io/">Hua Zhou</a>’s <a href="https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html">lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)</a></p></li>
 <li><p><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">Neural Networks</a> is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.</p></li>
-<li><p><span class="citation" data-cites="wikipedia_fermats_theorem_stationary_points">Wikipedia contributors (<a href="#ref-wikipedia_fermats_theorem_stationary_points" role="doc-biblioref">2026e</a>)</span> — Fermat’s theorem on stationary points</p></li>
-<li><p><span class="citation" data-cites="wikipedia_taylors_theorem">Wikipedia contributors (<a href="#ref-wikipedia_taylors_theorem" role="doc-biblioref">2026o</a>)</span> — Taylor’s theorem and its remainders</p></li>
-<li><p><span class="citation" data-cites="wikipedia_saddle_point">Wikipedia contributors (<a href="#ref-wikipedia_saddle_point" role="doc-biblioref">2026m</a>)</span> — saddle points</p></li>
-<li><p><span class="citation" data-cites="wikipedia_convex_set">Wikipedia contributors (<a href="#ref-wikipedia_convex_set" role="doc-biblioref">2026b</a>)</span> — convex sets</p></li>
-<li><p><span class="citation" data-cites="wikipedia_epigraph_mathematics">Wikipedia contributors (<a href="#ref-wikipedia_epigraph_mathematics" role="doc-biblioref">2026c</a>)</span> — epigraphs</p></li>
-<li><p><span class="citation" data-cites="wikipedia_tangent_space">Wikipedia contributors (<a href="#ref-wikipedia_tangent_space" role="doc-biblioref">2026n</a>)</span> — tangent spaces and planes</p></li>
-<li><p><span class="citation" data-cites="wikipedia_feasible_region">Wikipedia contributors (<a href="#ref-wikipedia_feasible_region" role="doc-biblioref">2026d</a>)</span> — feasible regions</p></li>
-<li><p><span class="citation" data-cites="wikipedia_mathematical_optimization">Wikipedia contributors (<a href="#ref-wikipedia_mathematical_optimization" role="doc-biblioref">2026j</a>)</span> — mathematical optimization</p></li>
-<li><p><span class="citation" data-cites="wikipedia_lagrange_multiplier">Wikipedia contributors (<a href="#ref-wikipedia_lagrange_multiplier" role="doc-biblioref">2026h</a>)</span> — Lagrange multipliers</p></li>
-<li><p><span class="citation" data-cites="wikipedia_iterative_method">Wikipedia contributors (<a href="#ref-wikipedia_iterative_method" role="doc-biblioref">2026g</a>)</span> — iterative methods</p></li>
-<li><p><span class="citation" data-cites="wikipedia_newtons_method_in_optimization">Wikipedia contributors (<a href="#ref-wikipedia_newtons_method_in_optimization" role="doc-biblioref">2026k</a>)</span> — Newton’s method in optimization</p></li>
-<li><p><span class="citation" data-cites="wikipedia_rate_of_convergence">Wikipedia contributors (<a href="#ref-wikipedia_rate_of_convergence" role="doc-biblioref">2026l</a>)</span> — rates of convergence</p></li>
-<li><p><span class="citation" data-cites="wikipedia_gradient_descent">Wikipedia contributors (<a href="#ref-wikipedia_gradient_descent" role="doc-biblioref">2026f</a>)</span> — gradient descent</p></li>
-<li><p><span class="citation" data-cites="wikipedia_line_search">Wikipedia contributors (<a href="#ref-wikipedia_line_search" role="doc-biblioref">2026i</a>)</span> — line search</p></li>
-<li><p><span class="citation" data-cites="wikipedia_backtracking_line_search">Wikipedia contributors (<a href="#ref-wikipedia_backtracking_line_search" role="doc-biblioref">2026a</a>)</span> — backtracking line search and the Armijo condition</p></li>
+<li><p><span class="citation" data-cites="wikipedia_fermats_theorem_stationary_points">Wikipedia contributors <a href="#ref-wikipedia_fermats_theorem_stationary_points" role="doc-biblioref">[2]</a></span> — Fermat’s theorem on stationary points</p></li>
+<li><p><span class="citation" data-cites="wikipedia_taylors_theorem">Wikipedia contributors <a href="#ref-wikipedia_taylors_theorem" role="doc-biblioref">[3]</a></span> — Taylor’s theorem and its remainders</p></li>
+<li><p><span class="citation" data-cites="wikipedia_saddle_point">Wikipedia contributors <a href="#ref-wikipedia_saddle_point" role="doc-biblioref">[5]</a></span> — saddle points</p></li>
+<li><p><span class="citation" data-cites="wikipedia_convex_set">Wikipedia contributors <a href="#ref-wikipedia_convex_set" role="doc-biblioref">[6]</a></span> — convex sets</p></li>
+<li><p><span class="citation" data-cites="wikipedia_epigraph_mathematics">Wikipedia contributors <a href="#ref-wikipedia_epigraph_mathematics" role="doc-biblioref">[7]</a></span> — epigraphs</p></li>
+<li><p><span class="citation" data-cites="wikipedia_tangent_space">Wikipedia contributors <a href="#ref-wikipedia_tangent_space" role="doc-biblioref">[8]</a></span> — tangent spaces and planes</p></li>
+<li><p><span class="citation" data-cites="wikipedia_feasible_region">Wikipedia contributors <a href="#ref-wikipedia_feasible_region" role="doc-biblioref">[9]</a></span> — feasible regions</p></li>
+<li><p><span class="citation" data-cites="wikipedia_mathematical_optimization">Wikipedia contributors <a href="#ref-wikipedia_mathematical_optimization" role="doc-biblioref">[10]</a></span> — mathematical optimization</p></li>
+<li><p><span class="citation" data-cites="wikipedia_lagrange_multiplier">Wikipedia contributors <a href="#ref-wikipedia_lagrange_multiplier" role="doc-biblioref">[11]</a></span> — Lagrange multipliers</p></li>
+<li><p><span class="citation" data-cites="wikipedia_iterative_method">Wikipedia contributors <a href="#ref-wikipedia_iterative_method" role="doc-biblioref">[12]</a></span> — iterative methods</p></li>
+<li><p><span class="citation" data-cites="wikipedia_newtons_method_in_optimization">Wikipedia contributors <a href="#ref-wikipedia_newtons_method_in_optimization" role="doc-biblioref">[13]</a></span> — Newton’s method in optimization</p></li>
+<li><p><span class="citation" data-cites="wikipedia_rate_of_convergence">Wikipedia contributors <a href="#ref-wikipedia_rate_of_convergence" role="doc-biblioref">[14]</a></span> — rates of convergence</p></li>
+<li><p><span class="citation" data-cites="wikipedia_gradient_descent">Wikipedia contributors <a href="#ref-wikipedia_gradient_descent" role="doc-biblioref">[15]</a></span> — gradient descent</p></li>
+<li><p><span class="citation" data-cites="wikipedia_line_search">Wikipedia contributors <a href="#ref-wikipedia_line_search" role="doc-biblioref">[16]</a></span> — line search</p></li>
+<li><p><span class="citation" data-cites="wikipedia_backtracking_line_search">Wikipedia contributors <a href="#ref-wikipedia_backtracking_line_search" role="doc-biblioref">[17]</a></span> — backtracking line search and the Armijo condition</p></li>
 </ul></section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-boyd2004convex" class="csl-entry" role="listitem">
-Boyd, Stephen, and Lieven Vandenberghe. 2004. <em>Convex Optimization</em>. Cambridge University Press. <a href="https://doi.org/10.1017/CBO9780511804441">https://doi.org/10.1017/CBO9780511804441</a>.
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-zhou2024optim" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">H. Zhou, <span>“Optimization and multivariate calculus.”</span> Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. [Online]. Available: <a href="https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html">https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html</a>
 </div>
-<div id="ref-nocedal2006numerical" class="csl-entry" role="listitem">
-Nocedal, Jorge, and Stephen J. Wright. 2006. <em>Numerical Optimization</em>. 2nd ed. Springer Series in Operations Research and Financial Engineering. Springer. <a href="https://doi.org/10.1007/978-0-387-40065-5">https://doi.org/10.1007/978-0-387-40065-5</a>.
-</div>
-<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
-Rudin, Walter. 1976. <em>Principles of Mathematical Analysis</em>. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
-</div>
-<div id="ref-wikipedia_backtracking_line_search" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Backtracking Line Search — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Backtracking_line_search">https://en.wikipedia.org/wiki/Backtracking_line_search</a>.
-</div>
-<div id="ref-wikipedia_convex_set" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Convex Set — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Convex_set">https://en.wikipedia.org/wiki/Convex_set</a>.
-</div>
-<div id="ref-wikipedia_epigraph_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Epigraph (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Epigraph_(mathematics)">https://en.wikipedia.org/wiki/Epigraph_(mathematics)</a>.
-</div>
-<div id="ref-wikipedia_feasible_region" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Feasible Region — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Feasible_region">https://en.wikipedia.org/wiki/Feasible_region</a>.
 </div>
 <div id="ref-wikipedia_fermats_theorem_stationary_points" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Fermat’s Theorem (Stationary Points) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)">https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)</a>.
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Fermat’s theorem (stationary points) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)">https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)</a>
 </div>
-<div id="ref-wikipedia_gradient_descent" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>Gradient Descent — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Gradient_descent">https://en.wikipedia.org/wiki/Gradient_descent</a>.
-</div>
-<div id="ref-wikipedia_iterative_method" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Iterative Method — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Iterative_method">https://en.wikipedia.org/wiki/Iterative_method</a>.
-</div>
-<div id="ref-wikipedia_lagrange_multiplier" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Lagrange Multiplier — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Lagrange_multiplier">https://en.wikipedia.org/wiki/Lagrange_multiplier</a>.
-</div>
-<div id="ref-wikipedia_line_search" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026i. <em>Line Search — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Line_search">https://en.wikipedia.org/wiki/Line_search</a>.
-</div>
-<div id="ref-wikipedia_mathematical_optimization" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026j. <em>Mathematical Optimization — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Mathematical_optimization">https://en.wikipedia.org/wiki/Mathematical_optimization</a>.
-</div>
-<div id="ref-wikipedia_newtons_method_in_optimization" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026k. <em>Newton’s Method in Optimization — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization">https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization</a>.
-</div>
-<div id="ref-wikipedia_rate_of_convergence" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026l. <em>Rate of Convergence — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Rate_of_convergence">https://en.wikipedia.org/wiki/Rate_of_convergence</a>.
-</div>
-<div id="ref-wikipedia_saddle_point" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026m. <em>Saddle Point — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Saddle_point">https://en.wikipedia.org/wiki/Saddle_point</a>.
-</div>
-<div id="ref-wikipedia_tangent_space" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026n. <em>Tangent Space — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Tangent_space">https://en.wikipedia.org/wiki/Tangent_space</a>.
 </div>
 <div id="ref-wikipedia_taylors_theorem" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026o. <em>Taylor’s Theorem — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Taylor%27s_theorem">https://en.wikipedia.org/wiki/Taylor%27s_theorem</a>.
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Taylor’s theorem — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Taylor%27s_theorem">https://en.wikipedia.org/wiki/Taylor%27s_theorem</a>
 </div>
-<div id="ref-zhou2024optim" class="csl-entry" role="listitem">
-Zhou, Hua. 2024. <em>Optimization and Multivariate Calculus</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html">https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html</a>.
+</div>
+<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">W. Rudin, <em>Principles of mathematical analysis</em>, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.</div>
+</div>
+<div id="ref-wikipedia_saddle_point" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Saddle point — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Saddle_point">https://en.wikipedia.org/wiki/Saddle_point</a>
+</div>
+</div>
+<div id="ref-wikipedia_convex_set" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Convex set — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Convex_set">https://en.wikipedia.org/wiki/Convex_set</a>
+</div>
+</div>
+<div id="ref-wikipedia_epigraph_mathematics" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Epigraph (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Epigraph_(mathematics)">https://en.wikipedia.org/wiki/Epigraph_(mathematics)</a>
+</div>
+</div>
+<div id="ref-wikipedia_tangent_space" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Tangent space — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Tangent_space">https://en.wikipedia.org/wiki/Tangent_space</a>
+</div>
+</div>
+<div id="ref-wikipedia_feasible_region" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Feasible region — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Feasible_region">https://en.wikipedia.org/wiki/Feasible_region</a>
+</div>
+</div>
+<div id="ref-wikipedia_mathematical_optimization" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Mathematical optimization — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Mathematical_optimization">https://en.wikipedia.org/wiki/Mathematical_optimization</a>
+</div>
+</div>
+<div id="ref-wikipedia_lagrange_multiplier" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Lagrange multiplier — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Lagrange_multiplier">https://en.wikipedia.org/wiki/Lagrange_multiplier</a>
+</div>
+</div>
+<div id="ref-wikipedia_iterative_method" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Iterative method — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Iterative_method">https://en.wikipedia.org/wiki/Iterative_method</a>
+</div>
+</div>
+<div id="ref-wikipedia_newtons_method_in_optimization" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Newton’s method in optimization — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization">https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization</a>
+</div>
+</div>
+<div id="ref-wikipedia_rate_of_convergence" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Rate of convergence — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Rate_of_convergence">https://en.wikipedia.org/wiki/Rate_of_convergence</a>
+</div>
+</div>
+<div id="ref-wikipedia_gradient_descent" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Gradient descent — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Gradient_descent">https://en.wikipedia.org/wiki/Gradient_descent</a>
+</div>
+</div>
+<div id="ref-wikipedia_line_search" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Line search — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Line_search">https://en.wikipedia.org/wiki/Line_search</a>
+</div>
+</div>
+<div id="ref-wikipedia_backtracking_line_search" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Backtracking line search — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Backtracking_line_search">https://en.wikipedia.org/wiki/Backtracking_line_search</a>
+</div>
+</div>
+<div id="ref-boyd2004convex" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[18] </div>
+<div class="csl-right-inline">S. Boyd and L. Vandenberghe, <em>Convex optimization</em>. Cambridge University Press, 2004. doi: <a href="https://doi.org/10.1017/CBO9780511804441">10.1017/CBO9780511804441</a>.</div>
+</div>
+<div id="ref-nocedal2006numerical" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[19] </div>
+<div class="csl-right-inline">J. Nocedal and S. J. Wright, <em>Numerical optimization</em>, 2nd ed. in Springer series in operations research and financial engineering. Springer, 2006. doi: <a href="https://doi.org/10.1007/978-0-387-40065-5">10.1007/978-0-387-40065-5</a>.</div>
 </div>
 </div>
 

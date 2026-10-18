@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Optimality conditions in several variables
 
 > **NOTE:**
 >
-> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](proof-writing.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus-derivatives.llms.md#def-critical-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
+> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](proof-writing.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus-derivatives.llms.md#def-critical-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
 >
 > - its one-variable Taylor example and its plots
 > - matrix calculus
@@ -22,7 +22,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Theorem 1 (A minimizer has derivative zero)** Let \\g\\ be a [real](number-systems.llms.md#def-real-numbers)-valued function on an [open interval](sets.llms.md#def-open-interval) containing \\c\\, and let \\g\\ be [differentiable](calculus-derivatives.llms.md#def-differentiable) at \\c\\. If \\c\\ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) of \\g\\, then \\g'(c) = 0\\. ([Wikipedia contributors 2026e](#ref-wikipedia_fermats_theorem_stationary_points))
+> **Theorem 1 (A minimizer has derivative zero)** Let \\g\\ be a [real](number-systems.llms.md#def-real-numbers)-valued function on an [open interval](sets.llms.md#def-open-interval) containing \\c\\, and let \\g\\ be [differentiable](calculus-derivatives.llms.md#def-differentiable) at \\c\\. If \\c\\ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) of \\g\\, then \\g'(c) = 0\\. [\[2\]](#ref-wikipedia_fermats_theorem_stationary_points)
 
 > **NOTE:**
 >
@@ -196,11 +196,11 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Theorem 3 (Taylor’s theorem with a second-order remainder)** Let \\a \< b\\, and let \\g\\ be a real-valued function on \\\[a, b\]\\ whose derivative \\g'\\ is [continuous](calculus-integration.llms.md#def-continuous) on \\\[a, b\]\\ and whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) \\g''\\ exists at every point of \\(a, b)\\. Then there is a \\\tau\in (a, b)\\ with ([Wikipedia contributors 2026o](#ref-wikipedia_taylors_theorem))
+> **Theorem 3 (Taylor’s theorem with a second-order remainder)** Let \\a \< b\\, and let \\g\\ be a real-valued function on \\\[a, b\]\\ whose derivative \\g'\\ is [continuous](calculus-integration.llms.md#def-continuous) on \\\[a, b\]\\ and whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) \\g''\\ exists at every point of \\(a, b)\\. Then there is a \\\tau\in (a, b)\\ with [\[3\]](#ref-wikipedia_taylors_theorem)
 >
 > \\ g(b) = g(a) + g'(a)\\(b - a) + \frac{1}{2}\\g''(\tau)\\(b - a)^2. \\
 
-This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), Theorem 5.15); its proof uses the mean value theorem, which these notes do not develop.
+This theorem is the case \\n = 2\\ of [\[4\]](#ref-rudin1976principles), Theorem 5.15; its proof uses the mean value theorem, which these notes do not develop.
 
 > **NOTE:**
 >
@@ -216,7 +216,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Theorem 4 (Second-order Taylor theorem in several variables)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([continuity](vector-calculus.llms.md#def-continuous-on)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}} \in \mathbb{R}^p\\. Then there is a \\\tau\in (0, 1)\\ with ([Wikipedia contributors 2026o](#ref-wikipedia_taylors_theorem))
+> **Theorem 4 (Second-order Taylor theorem in several variables)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([continuity](vector-calculus.llms.md#def-continuous-on)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}} \in \mathbb{R}^p\\. Then there is a \\\tau\in (0, 1)\\ with [\[3\]](#ref-wikipedia_taylors_theorem)
 >
 > \\ f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}}) = f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}})\right)\mathclose{}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}} + \frac{1}{2}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}}}^{\top}\\\mathbf{H}\_f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}} + \tau\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}})\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}}. \\
 
@@ -362,7 +362,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 4 (Saddle point)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. A [stationary point](#def-stationary-point) of \\f\\ that is neither a [local minimizer](algebra-basics.llms.md#def-local-minimizer) nor a [local maximizer](#def-local-maximizer) of \\f\\ is a **saddle point** of \\f\\ ([Wikipedia contributors 2026m](#ref-wikipedia_saddle_point)).
+> **Definition 4 (Saddle point)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. A [stationary point](#def-stationary-point) of \\f\\ that is neither a [local minimizer](algebra-basics.llms.md#def-local-minimizer) nor a [local maximizer](#def-local-maximizer) of \\f\\ is a **saddle point** of \\f\\ [\[5\]](#ref-wikipedia_saddle_point).
 
 > **NOTE:**
 >
@@ -376,7 +376,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> This section is adapted from the convexity part of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of [Section 1](#sec-optimality-vector). The source defines both concave and strictly concave as “\\-f\\ is strictly convex”; here \\f\\ is concave when \\-f\\ is convex. These parts of the source are not part of this section:
+> This section is adapted from the convexity part of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of [Section 1](#sec-optimality-vector). The source defines both concave and strictly concave as “\\-f\\ is strictly convex”; here \\f\\ is concave when \\-f\\ is convex. These parts of the source are not part of this section:
 >
 > - its catalogs of convex sets and convex functions, including the positive semidefinite matrices and \\-\log \det\\
 > - intersections of infinitely many convex sets, and suprema of infinitely many convex functions
@@ -384,7 +384,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 5 (Convex set)** A set \\K \subseteq \mathbb{R}^p\\ is **convex** if ([Wikipedia contributors 2026b](#ref-wikipedia_convex_set)) for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in K\\ and all \\t \in \[0, 1\]\\, the point \\t \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ is in \\K\\: \\K\\ contains the whole line segment between any two of its points.
+> **Definition 5 (Convex set)** A set \\K \subseteq \mathbb{R}^p\\ is **convex** if [\[6\]](#ref-wikipedia_convex_set) for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in K\\ and all \\t \in \[0, 1\]\\, the point \\t \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ is in \\K\\: \\K\\ contains the whole line segment between any two of its points.
 
 > **NOTE:**
 >
@@ -478,7 +478,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 10 (Epigraph)** The **epigraph** ([Wikipedia contributors 2026c](#ref-wikipedia_epigraph_mathematics)) of \\f : \mathbb{R}^p \to \mathbb{R}\\ is the set of points on or over its [graph](functions.llms.md#def-graph),
+> **Definition 10 (Epigraph)** The **epigraph** [\[7\]](#ref-wikipedia_epigraph_mathematics) of \\f : \mathbb{R}^p \to \mathbb{R}\\ is the set of points on or over its [graph](functions.llms.md#def-graph),
 >
 > \\ \operatorname{epi} f \stackrel{\text{def}}{=}\mathopen{}\left\\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, s) : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p,\\ s \in \mathbb{R},\\ f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \le s\right\\\mathclose{}. \\
 >
@@ -515,7 +515,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 11 (Tangent plane)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ ([gradient](vector-calculus.llms.md#def-vector-derivative)). The **tangent plane** ([Wikipedia contributors 2026n](#ref-wikipedia_tangent_space)) to the [graph](functions.llms.md#def-graph) of \\f\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ is the graph of the function
+> **Definition 11 (Tangent plane)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ ([gradient](vector-calculus.llms.md#def-vector-derivative)). The **tangent plane** [\[8\]](#ref-wikipedia_tangent_space) to the [graph](functions.llms.md#def-graph) of \\f\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ is the graph of the function
 >
 > \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\right)\mathclose{}}^{\top} (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}), \\
 >
@@ -648,7 +648,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> This section is adapted from the Lagrange-multiplier part of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source solves the stationarity equations of the Lagrangian and reports the solution; here the solution is also proved to be the unique minimizer, directly from the positive definiteness of the matrices involved. The source assumes only that \\\mathbf{S}\\ is positive definite; the added hypothesis that the columns of \\\mathbf{A}\\ are linearly independent makes \\{\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\\ invertible. The source’s example with general coefficients \\a_1, a_2, b\\ is specialized here to \\3, 4, 5\\. These parts of the source are not part of this section:
+> This section is adapted from the Lagrange-multiplier part of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source solves the stationarity equations of the Lagrangian and reports the solution; here the solution is also proved to be the unique minimizer, directly from the positive definiteness of the matrices involved. The source assumes only that \\\mathbf{S}\\ is positive definite; the added hypothesis that the columns of \\\mathbf{A}\\ are linearly independent makes \\{\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\\ invertible. The source’s example with general coefficients \\a_1, a_2, b\\ is specialized here to \\3, 4, 5\\. These parts of the source are not part of this section:
 >
 > - the Lagrange multiplier method for constraints that are not linear, or objectives that are not quadratic, including its multinomial maximum likelihood example
 > - the eigenvalues of the block matrix of the stationarity equations, and the convexity of the Lagrangian in \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and its concavity in the multipliers
@@ -656,7 +656,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 12 (Feasible set)** In a problem that looks for a best point among some allowed points of \\\mathbb{R}^p\\, the set \\F \subseteq \mathbb{R}^p\\ of allowed points is the **feasible set**, ([Wikipedia contributors 2026d](#ref-wikipedia_feasible_region)) and its points are feasible.
+> **Definition 12 (Feasible set)** In a problem that looks for a best point among some allowed points of \\\mathbb{R}^p\\, the set \\F \subseteq \mathbb{R}^p\\ of allowed points is the **feasible set**, [\[9\]](#ref-wikipedia_feasible_region) and its points are feasible.
 
 > **NOTE:**
 >
@@ -680,7 +680,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 16 (Minimization problem)** With \\f\\ and \\F\\ as in [Definition 14](#def-objective-function), the **minimization problem** ([Wikipedia contributors 2026j](#ref-wikipedia_mathematical_optimization)) is to find a minimizer of \\f\\ over \\F\\ ([Definition 15](#def-minimizer-over-feasible-set)). When \\F\\ is given by constraints ([Definition 13](#def-constraints)), the problem is to minimize \\f\\ subject to them.
+> **Definition 16 (Minimization problem)** With \\f\\ and \\F\\ as in [Definition 14](#def-objective-function), the **minimization problem** [\[10\]](#ref-wikipedia_mathematical_optimization) is to find a minimizer of \\f\\ over \\F\\ ([Definition 15](#def-minimizer-over-feasible-set)). When \\F\\ is given by constraints ([Definition 13](#def-constraints)), the problem is to minimize \\f\\ subject to them.
 
 > **NOTE:**
 >
@@ -694,13 +694,13 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 17 (Lagrangian)** For the problem of minimizing \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ subject to \\{\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, with \\\mathbf{A}\\ a \\p \times m\\ matrix and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\, the **Lagrangian** ([Wikipedia contributors 2026h](#ref-wikipedia_lagrange_multiplier)) is the function of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\lambda}}\vphantom{\lambda}}\in \mathbb{R}^m\\
+> **Definition 17 (Lagrangian)** For the problem of minimizing \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ subject to \\{\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, with \\\mathbf{A}\\ a \\p \times m\\ matrix and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\, the **Lagrangian** [\[11\]](#ref-wikipedia_lagrange_multiplier) is the function of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\lambda}}\vphantom{\lambda}}\in \mathbb{R}^m\\
 >
 > \\ L(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\lambda}}\vphantom{\lambda}}) \stackrel{\text{def}}{=}f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) + {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\lambda}}\vphantom{\lambda}}}^{\top} \mathopen{}\left({\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right)\mathclose{}. \\
 
 > **NOTE:**
 >
-> **Definition 18 (Lagrange multipliers)** In the Lagrangian \\L(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\lambda}}\vphantom{\lambda}})\\ ([Definition 17](#def-lagrangian)), the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\lambda}}\vphantom{\lambda}}\\ are the **Lagrange multipliers** ([Wikipedia contributors 2026h](#ref-wikipedia_lagrange_multiplier)), one per constraint.
+> **Definition 18 (Lagrange multipliers)** In the Lagrangian \\L(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\lambda}}\vphantom{\lambda}})\\ ([Definition 17](#def-lagrangian)), the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\lambda}}\vphantom{\lambda}}\\ are the **Lagrange multipliers** [\[11\]](#ref-wikipedia_lagrange_multiplier), one per constraint.
 
 > **NOTE:**
 >
@@ -836,7 +836,7 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> This section is adapted from the Newton-Raphson and gradient descent parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is \\\tfrac{1}{2}(b^2 + b)\\, not \\\tfrac{1}{2}(1 + b^2)\\ as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)}\\ has \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)}\\ on its right side where \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ is meant. These parts of the source are not part of this section:
+> This section is adapted from the Newton-Raphson and gradient descent parts of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is \\\tfrac{1}{2}(b^2 + b)\\, not \\\tfrac{1}{2}(1 + b^2)\\ as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)}\\ has \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)}\\ on its right side where \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ is meant. These parts of the source are not part of this section:
 >
 > - the quadratic convergence theorem for Newton’s method in general, and its remedies for instability (a positive definite substitute for the Hessian, and shortening the Newton step by a search along its direction)
 > - its remark that Hessians are expensive to compute
@@ -847,7 +847,7 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 20 (Iterative method)** An **iterative method** ([Wikipedia contributors 2026g](#ref-wikipedia_iterative_method)) starts from a point \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ and computes \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t+1)}\\ from \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}\\ by a fixed rule, for \\t = 0, 1, 2, \ldots\\.
+> **Definition 20 (Iterative method)** An **iterative method** [\[12\]](#ref-wikipedia_iterative_method) starts from a point \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ and computes \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t+1)}\\ from \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}\\ by a fixed rule, for \\t = 0, 1, 2, \ldots\\.
 
 > **NOTE:**
 >
@@ -871,7 +871,7 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 24 (Newton’s method for minimization)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point. **Newton’s method** ([Wikipedia contributors 2026k](#ref-wikipedia_newtons_method_in_optimization)) computes, for \\t = 0, 1, 2, \ldots\\, as long as \\\mathbf{H}\_f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)})\\ is invertible,
+> **Definition 24 (Newton’s method for minimization)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point. **Newton’s method** [\[13\]](#ref-wikipedia_newtons_method_in_optimization) computes, for \\t = 0, 1, 2, \ldots\\, as long as \\\mathbf{H}\_f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)})\\ is invertible,
 >
 > \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t+1)} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)} - \mathopen{}\left\[\mathbf{H}\_f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)})\right\]\mathclose{}^{-1} \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}). \\
 
@@ -951,7 +951,7 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 27 (Quadratic convergence)** A [sequence](functions.llms.md#def-sequence) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ that converges ([Definition 23](#def-vector-sequence-limit)) to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\\ **converges quadratically** ([Wikipedia contributors 2026l](#ref-wikipedia_rate_of_convergence)) if there is a constant \\C\\ with
+> **Definition 27 (Quadratic convergence)** A [sequence](functions.llms.md#def-sequence) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ that converges ([Definition 23](#def-vector-sequence-limit)) to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\\ **converges quadratically** [\[14\]](#ref-wikipedia_rate_of_convergence) if there is a constant \\C\\ with
 >
 > \\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t+1)} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\right\rVert\mathclose{} \le C\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\right\rVert\mathclose{}^2 \qquad \text{for every } t. \\
 
@@ -965,7 +965,7 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 >
 > \\ \begin{aligned} x^{(t+1)} - 2 &= \frac{1}{2} \mathopen{}\left(x^{(t)} + \frac{4}{x^{(t)}}\right)\mathclose{} - 2 && \text{(the iteration)} \\ &= \frac{(x^{(t)})^2 + 4 - 4 x^{(t)}}{2 x^{(t)}} && \text{(common denominator)} \\ &= \frac{(x^{(t)} - 2)^2}{2 x^{(t)}}. && \text{(the numerator is a perfect square)} \end{aligned} \\
 >
-> So near \\2\\ the error is roughly squared and divided by \\4\\ at each step: the errors are \\0.05\\, then \\0.00061\\, then \\0.000000093\\, and \\0.05^2 / (2 \cdot 2.05) \approx 0.00061\\. The iterates converge quadratically ([Definition 27](#def-quadratic-convergence)): \\C = \tfrac{1}{2}\\ works for every \\x^{(t)} \ge 1\\, since then \\\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\\, and every iterate from \\2.5\\ is at least \\2\\, since the identity makes \\x^{(t+1)} - 2 \ge 0\\ whenever \\x^{(t)} \> 0\\. Zhou ([2024](#ref-zhou2024optim)) states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.
+> So near \\2\\ the error is roughly squared and divided by \\4\\ at each step: the errors are \\0.05\\, then \\0.00061\\, then \\0.000000093\\, and \\0.05^2 / (2 \cdot 2.05) \approx 0.00061\\. The iterates converge quadratically ([Definition 27](#def-quadratic-convergence)): \\C = \tfrac{1}{2}\\ works for every \\x^{(t)} \ge 1\\, since then \\\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\\, and every iterate from \\2.5\\ is at least \\2\\, since the identity makes \\x^{(t+1)} - 2 \ge 0\\ whenever \\x^{(t)} \> 0\\. Zhou [\[1\]](#ref-zhou2024optim) states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.
 
 > **NOTE:**
 >
@@ -997,7 +997,7 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 28 (Gradient descent)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point, and let \\s^{(0)}, s^{(1)}, \ldots\\ be positive **step lengths**. **Gradient descent** ([Wikipedia contributors 2026f](#ref-wikipedia_gradient_descent)) computes, for \\t = 0, 1, 2, \ldots\\,
+> **Definition 28 (Gradient descent)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point, and let \\s^{(0)}, s^{(1)}, \ldots\\ be positive **step lengths**. **Gradient descent** [\[15\]](#ref-wikipedia_gradient_descent) computes, for \\t = 0, 1, 2, \ldots\\,
 >
 > \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t+1)} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)} - s^{(t)}\\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}). \\
 
@@ -1019,7 +1019,7 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 29 (Line search)** In gradient descent ([Definition 28](#def-gradient-descent)), a **line search** ([Wikipedia contributors 2026i](#ref-wikipedia_line_search)) is a rule that chooses the step length \\s^{(t)}\\ by examining the values of \\f\\ along the line \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)} - s\\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}) : s \> 0\right\\\mathclose{}\\.
+> **Definition 29 (Line search)** In gradient descent ([Definition 28](#def-gradient-descent)), a **line search** [\[16\]](#ref-wikipedia_line_search) is a rule that chooses the step length \\s^{(t)}\\ by examining the values of \\f\\ along the line \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)} - s\\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}) : s \> 0\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
@@ -1097,7 +1097,7 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 32 (Armijo condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\. A step length \\s \> 0\\ satisfies the **Armijo condition** ([Wikipedia contributors 2026a](#ref-wikipedia_backtracking_line_search)) with constant \\c \in (0, 1)\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ if
+> **Definition 32 (Armijo condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\. A step length \\s \> 0\\ satisfies the **Armijo condition** [\[17\]](#ref-wikipedia_backtracking_line_search) with constant \\c \in (0, 1)\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ if
 >
 > \\ f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- s \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}) \le f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) - c\\ s\\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}\right\rVert\mathclose{}^2. \\
 
@@ -1111,7 +1111,7 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 33 (Backtracking line search)** Let \\s_0 \> 0\\ be an initial step length, \\\beta \in (0, 1)\\ a shrink factor, and \\c \in (0, 1)\\. **Backtracking line search** ([Wikipedia contributors 2026a](#ref-wikipedia_backtracking_line_search)) is the [line search](#def-line-search) that chooses \\s^{(t)}\\ to be the largest of \\s_0, \beta s_0, \beta^2 s_0, \ldots\\ that satisfies the [Armijo condition](#def-armijo-condition) with constant \\c\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}\\.
+> **Definition 33 (Backtracking line search)** Let \\s_0 \> 0\\ be an initial step length, \\\beta \in (0, 1)\\ a shrink factor, and \\c \in (0, 1)\\. **Backtracking line search** [\[17\]](#ref-wikipedia_backtracking_line_search) is the [line search](#def-line-search) that chooses \\s^{(t)}\\ to be the largest of \\s_0, \beta s_0, \beta^2 s_0, \ldots\\ that satisfies the [Armijo condition](#def-armijo-condition) with constant \\c\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}\\.
 
 > **NOTE:**
 >
@@ -1119,82 +1119,120 @@ Here the objective ([Definition 14](#def-objective-function)) is a quadratic \\
 
 ## 5 Further reading
 
-- Boyd and Vandenberghe ([2004](#ref-boyd2004convex)) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
+- Boyd and Vandenberghe [\[18\]](#ref-boyd2004convex) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
 
-- Nocedal and Wright ([2006](#ref-nocedal2006numerical)) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
+- Nocedal and Wright [\[19\]](#ref-nocedal2006numerical) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
 
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)](https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html)
 
 - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_fermats_theorem_stationary_points)) — Fermat’s theorem on stationary points
+- Wikipedia contributors [\[2\]](#ref-wikipedia_fermats_theorem_stationary_points) — Fermat’s theorem on stationary points
 
-- Wikipedia contributors ([2026o](#ref-wikipedia_taylors_theorem)) — Taylor’s theorem and its remainders
+- Wikipedia contributors [\[3\]](#ref-wikipedia_taylors_theorem) — Taylor’s theorem and its remainders
 
-- Wikipedia contributors ([2026m](#ref-wikipedia_saddle_point)) — saddle points
+- Wikipedia contributors [\[5\]](#ref-wikipedia_saddle_point) — saddle points
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_convex_set)) — convex sets
+- Wikipedia contributors [\[6\]](#ref-wikipedia_convex_set) — convex sets
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_epigraph_mathematics)) — epigraphs
+- Wikipedia contributors [\[7\]](#ref-wikipedia_epigraph_mathematics) — epigraphs
 
-- Wikipedia contributors ([2026n](#ref-wikipedia_tangent_space)) — tangent spaces and planes
+- Wikipedia contributors [\[8\]](#ref-wikipedia_tangent_space) — tangent spaces and planes
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_feasible_region)) — feasible regions
+- Wikipedia contributors [\[9\]](#ref-wikipedia_feasible_region) — feasible regions
 
-- Wikipedia contributors ([2026j](#ref-wikipedia_mathematical_optimization)) — mathematical optimization
+- Wikipedia contributors [\[10\]](#ref-wikipedia_mathematical_optimization) — mathematical optimization
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_lagrange_multiplier)) — Lagrange multipliers
+- Wikipedia contributors [\[11\]](#ref-wikipedia_lagrange_multiplier) — Lagrange multipliers
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_iterative_method)) — iterative methods
+- Wikipedia contributors [\[12\]](#ref-wikipedia_iterative_method) — iterative methods
 
-- Wikipedia contributors ([2026k](#ref-wikipedia_newtons_method_in_optimization)) — Newton’s method in optimization
+- Wikipedia contributors [\[13\]](#ref-wikipedia_newtons_method_in_optimization) — Newton’s method in optimization
 
-- Wikipedia contributors ([2026l](#ref-wikipedia_rate_of_convergence)) — rates of convergence
+- Wikipedia contributors [\[14\]](#ref-wikipedia_rate_of_convergence) — rates of convergence
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_gradient_descent)) — gradient descent
+- Wikipedia contributors [\[15\]](#ref-wikipedia_gradient_descent) — gradient descent
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_line_search)) — line search
+- Wikipedia contributors [\[16\]](#ref-wikipedia_line_search) — line search
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_backtracking_line_search)) — backtracking line search and the Armijo condition
+- Wikipedia contributors [\[17\]](#ref-wikipedia_backtracking_line_search) — backtracking line search and the Armijo condition
 
 ## References
 
-Boyd, Stephen, and Lieven Vandenberghe. 2004. *Convex Optimization*. Cambridge University Press. <https://doi.org/10.1017/CBO9780511804441>.
+\[1\]
 
-Nocedal, Jorge, and Stephen J. Wright. 2006. *Numerical Optimization*. 2nd ed. Springer Series in Operations Research and Financial Engineering. Springer. <https://doi.org/10.1007/978-0-387-40065-5>.
+H. Zhou, “Optimization and multivariate calculus.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html>
 
-Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
+\[2\]
 
-Wikipedia contributors. 2026a. *Backtracking Line Search — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Backtracking_line_search>.
+Wikipedia contributors, “Fermat’s theorem (stationary points) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)>
 
-Wikipedia contributors. 2026b. *Convex Set — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Convex_set>.
+\[3\]
 
-Wikipedia contributors. 2026c. *Epigraph (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Epigraph_(mathematics)>.
+Wikipedia contributors, “Taylor’s theorem — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Taylor%27s_theorem>
 
-Wikipedia contributors. 2026d. *Feasible Region — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Feasible_region>.
+\[4\]
 
-Wikipedia contributors. 2026e. *Fermat’s Theorem (Stationary Points) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)>.
+W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.
 
-Wikipedia contributors. 2026f. *Gradient Descent — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Gradient_descent>.
+\[5\]
 
-Wikipedia contributors. 2026g. *Iterative Method — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Iterative_method>.
+Wikipedia contributors, “Saddle point — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Saddle_point>
 
-Wikipedia contributors. 2026h. *Lagrange Multiplier — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Lagrange_multiplier>.
+\[6\]
 
-Wikipedia contributors. 2026i. *Line Search — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Line_search>.
+Wikipedia contributors, “Convex set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Convex_set>
 
-Wikipedia contributors. 2026j. *Mathematical Optimization — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Mathematical_optimization>.
+\[7\]
 
-Wikipedia contributors. 2026k. *Newton’s Method in Optimization — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization>.
+Wikipedia contributors, “Epigraph (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Epigraph_(mathematics)>
 
-Wikipedia contributors. 2026l. *Rate of Convergence — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Rate_of_convergence>.
+\[8\]
 
-Wikipedia contributors. 2026m. *Saddle Point — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Saddle_point>.
+Wikipedia contributors, “Tangent space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tangent_space>
 
-Wikipedia contributors. 2026n. *Tangent Space — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Tangent_space>.
+\[9\]
 
-Wikipedia contributors. 2026o. *Taylor’s Theorem — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Taylor%27s_theorem>.
+Wikipedia contributors, “Feasible region — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Feasible_region>
 
-Zhou, Hua. 2024. *Optimization and Multivariate Calculus*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html>.
+\[10\]
+
+Wikipedia contributors, “Mathematical optimization — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Mathematical_optimization>
+
+\[11\]
+
+Wikipedia contributors, “Lagrange multiplier — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Lagrange_multiplier>
+
+\[12\]
+
+Wikipedia contributors, “Iterative method — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Iterative_method>
+
+\[13\]
+
+Wikipedia contributors, “Newton’s method in optimization — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization>
+
+\[14\]
+
+Wikipedia contributors, “Rate of convergence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Rate_of_convergence>
+
+\[15\]
+
+Wikipedia contributors, “Gradient descent — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Gradient_descent>
+
+\[16\]
+
+Wikipedia contributors, “Line search — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Line_search>
+
+\[17\]
+
+Wikipedia contributors, “Backtracking line search — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Backtracking_line_search>
+
+\[18\]
+
+S. Boyd and L. Vandenberghe, *Convex optimization*. Cambridge University Press, 2004. doi: [10.1017/CBO9780511804441](https://doi.org/10.1017/CBO9780511804441).
+
+\[19\]
+
+J. Nocedal and S. J. Wright, *Numerical optimization*, 2nd ed. in Springer series in operations research and financial engineering. Springer, 2006. doi: [10.1007/978-0-387-40065-5](https://doi.org/10.1007/978-0-387-40065-5).
 
 Back to top

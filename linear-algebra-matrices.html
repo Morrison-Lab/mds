@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -231,15 +232,15 @@ cookieconsent.run({
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <style>
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -251,15 +252,25 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-tbl.callout {
+  border-left-color: #757575;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -271,26 +282,6 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
 }
@@ -301,25 +292,25 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -331,6 +322,16 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -341,15 +342,15 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-fig.callout {
-  border-left-color: #757575;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -1013,7 +1014,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+      <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
     </div>
   </div>
   
@@ -1040,7 +1041,7 @@ window.Quarto = {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Matrix)</strong></span> A <strong>matrix</strong> <span class="citation" data-cites="wikipedia_matrix_mathematics">(<a href="#ref-wikipedia_matrix_mathematics" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span> of dimensions <span class="math inline">\(m \times n\)</span> is a rectangular array of <span class="math inline">\(m \cdot n\)</span> numbers, arranged in <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Matrix)</strong></span> A <strong>matrix</strong> <span class="citation" data-cites="wikipedia_matrix_mathematics"><a href="#ref-wikipedia_matrix_mathematics" role="doc-biblioref">[1]</a></span> of dimensions <span class="math inline">\(m \times n\)</span> is a rectangular array of <span class="math inline">\(m \cdot n\)</span> numbers, arranged in <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns:</p>
 <p><span class="math display">\[
 \mathbf{A} =
 \begin{bmatrix}
@@ -1102,7 +1103,7 @@ not taken from that page.
 <div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-tensor" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Tensor)</strong></span> A <strong>tensor</strong> <span class="citation" data-cites="wikipedia_tensor">(<a href="#ref-wikipedia_tensor" role="doc-biblioref">Wikipedia contributors 2026l</a>)</span> of order <span class="math inline">\(k \ge 1\)</span> is an array of numbers with <span class="math inline">\(k\)</span> indices, <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 2 (Tensor)</strong></span> A <strong>tensor</strong> <span class="citation" data-cites="wikipedia_tensor"><a href="#ref-wikipedia_tensor" role="doc-biblioref">[2]</a></span> of order <span class="math inline">\(k \ge 1\)</span> is an array of numbers with <span class="math inline">\(k\)</span> indices, <span class="math display">\[
 \mathcal{A} = \mathopen{}\left(a_{i_1 i_2 \cdots i_k}\right)\mathclose{},
 \quad i_1 = 1, \ldots, n_1, \ \ldots, \ i_k = 1, \ldots, n_k,
 \]</span> and its dimensions are <span class="math inline">\(n_1 \times n_2 \times \cdots \times n_k\)</span>.</p>
@@ -1143,7 +1144,7 @@ not taken from that page.
 <div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-matrix-transpose" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Matrix transpose)</strong></span> The <strong>transpose</strong> <span class="citation" data-cites="wikipedia_transpose">(<a href="#ref-wikipedia_transpose" role="doc-biblioref">Wikipedia contributors 2026n</a>)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span> obtained by swapping the rows and columns of <span class="math inline">\(\mathbf{A}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 3 (Matrix transpose)</strong></span> The <strong>transpose</strong> <span class="citation" data-cites="wikipedia_transpose"><a href="#ref-wikipedia_transpose" role="doc-biblioref">[3]</a></span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span> obtained by swapping the rows and columns of <span class="math inline">\(\mathbf{A}\)</span>:</p>
 <p><span class="math display">\[({\mathbf{A}}^{\top})_{ij} = a_{ji}\]</span></p>
 </div>
 </div>
@@ -1188,7 +1189,7 @@ not taken from that page.
 <div id="callout-7" class="callout-7-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-zero-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Zero matrix)</strong></span> The <span class="math inline">\(m \times n\)</span> <strong>zero matrix</strong> <span class="citation" data-cites="wikipedia_zero_matrix">(<a href="#ref-wikipedia_zero_matrix" role="doc-biblioref">Wikipedia contributors 2026o</a>)</span> <span class="math inline">\(\mathbf{0}_{m \times n}\)</span> (or <span class="math inline">\(\mathbf{0}\)</span> when dimensions are clear from context) has all entries equal to zero:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Zero matrix)</strong></span> The <span class="math inline">\(m \times n\)</span> <strong>zero matrix</strong> <span class="citation" data-cites="wikipedia_zero_matrix"><a href="#ref-wikipedia_zero_matrix" role="doc-biblioref">[4]</a></span> <span class="math inline">\(\mathbf{0}_{m \times n}\)</span> (or <span class="math inline">\(\mathbf{0}\)</span> when dimensions are clear from context) has all entries equal to zero:</p>
 <p><span class="math display">\[
 \mathbf{0}_{m \times n} =
 \begin{bmatrix}
@@ -1238,7 +1239,7 @@ not taken from that page.
 <div id="callout-9" class="callout-9-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-matrix-addition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Matrix addition)</strong></span> Two matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> of the same dimensions <span class="math inline">\(m \times n\)</span> can be added element-wise; their <strong>matrix sum</strong> <span class="citation" data-cites="wikipedia_matrix_addition">(<a href="#ref-wikipedia_matrix_addition" role="doc-biblioref">Wikipedia contributors 2026e</a>)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 5 (Matrix addition)</strong></span> Two matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> of the same dimensions <span class="math inline">\(m \times n\)</span> can be added element-wise; their <strong>matrix sum</strong> <span class="citation" data-cites="wikipedia_matrix_addition"><a href="#ref-wikipedia_matrix_addition" role="doc-biblioref">[5]</a></span> is:</p>
 <p><span class="math display">\[(\mathbf{A} + \mathbf{B})_{ij} = a_{ij} + b_{ij}\]</span></p>
 </div>
 </div>
@@ -1365,7 +1366,7 @@ not taken from that page.
 <div id="callout-15" class="callout-15-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-scalar-mult" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Scalar multiplication)</strong></span> The <strong>scalar multiple</strong> <span class="citation" data-cites="wikipedia_scalar_multiplication">(<a href="#ref-wikipedia_scalar_multiplication" role="doc-biblioref">Wikipedia contributors 2026i</a>)</span> of a matrix <span class="math inline">\(\mathbf{A}\)</span> by a scalar <span class="math inline">\(c\)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 6 (Scalar multiplication)</strong></span> The <strong>scalar multiple</strong> <span class="citation" data-cites="wikipedia_scalar_multiplication"><a href="#ref-wikipedia_scalar_multiplication" role="doc-biblioref">[6]</a></span> of a matrix <span class="math inline">\(\mathbf{A}\)</span> by a scalar <span class="math inline">\(c\)</span> is:</p>
 <p><span class="math display">\[(c\mathbf{A})_{ij} = c \cdot a_{ij}\]</span></p>
 </div>
 </div>
@@ -1411,7 +1412,7 @@ not taken from that page.
 <div id="callout-17" class="callout-17-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-matrix-mult" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Matrix multiplication)</strong></span> The <strong>product</strong> <span class="citation" data-cites="wikipedia_matrix_multiplication">(<a href="#ref-wikipedia_matrix_multiplication" role="doc-biblioref">Wikipedia contributors 2026g</a>)</span> of an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> is the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{C} = \mathbf{A}\mathbf{B}\)</span> with entries:</p>
+<p><span class="theorem-title"><strong>Definition 7 (Matrix multiplication)</strong></span> The <strong>product</strong> <span class="citation" data-cites="wikipedia_matrix_multiplication"><a href="#ref-wikipedia_matrix_multiplication" role="doc-biblioref">[7]</a></span> of an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> is the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{C} = \mathbf{A}\mathbf{B}\)</span> with entries:</p>
 <p><span class="math display">\[c_{ij} = \sum_{s=1}^{k} a_{is}\, b_{sj}\]</span></p>
 </div>
 </div>
@@ -1629,7 +1630,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="callout-25" class="callout-25-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-square-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Square matrix)</strong></span> A matrix is <strong>square</strong> <span class="citation" data-cites="wikipedia_square_matrix">(<a href="#ref-wikipedia_square_matrix" role="doc-biblioref">Wikipedia contributors 2026j</a>)</span> if it has the same number of rows as columns.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Square matrix)</strong></span> A matrix is <strong>square</strong> <span class="citation" data-cites="wikipedia_square_matrix"><a href="#ref-wikipedia_square_matrix" role="doc-biblioref">[8]</a></span> if it has the same number of rows as columns.</p>
 </div>
 </div>
 </div>
@@ -1665,7 +1666,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="callout-27" class="callout-27-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-main-diagonal" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Main diagonal)</strong></span> The <strong>main diagonal</strong> <span class="citation" data-cites="wikipedia_main_diagonal">(<a href="#ref-wikipedia_main_diagonal" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the list of its entries <span class="math inline">\(a_{11}, a_{22}, \ldots, a_{kk}\)</span>, where <span class="math inline">\(k\)</span> is the smaller of <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Main diagonal)</strong></span> The <strong>main diagonal</strong> <span class="citation" data-cites="wikipedia_main_diagonal"><a href="#ref-wikipedia_main_diagonal" role="doc-biblioref">[9]</a></span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the list of its entries <span class="math inline">\(a_{11}, a_{22}, \ldots, a_{kk}\)</span>, where <span class="math inline">\(k\)</span> is the smaller of <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1741,7 +1742,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="callout-31" class="callout-31-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-identity-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Identity matrix)</strong></span> The <span class="math inline">\(p \times p\)</span> <strong>identity matrix</strong> <span class="citation" data-cites="wikipedia_identity_matrix">(<a href="#ref-wikipedia_identity_matrix" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> <span class="math inline">\(\mathbf{I}_p\)</span> (or <span class="math inline">\(\mathbf{I}\)</span> when the size is clear from context) has ones on the <a href="#def-main-diagonal">main diagonal</a> and zeros elsewhere:</p>
+<p><span class="theorem-title"><strong>Definition 12 (Identity matrix)</strong></span> The <span class="math inline">\(p \times p\)</span> <strong>identity matrix</strong> <span class="citation" data-cites="wikipedia_identity_matrix"><a href="#ref-wikipedia_identity_matrix" role="doc-biblioref">[10]</a></span> <span class="math inline">\(\mathbf{I}_p\)</span> (or <span class="math inline">\(\mathbf{I}\)</span> when the size is clear from context) has ones on the <a href="#def-main-diagonal">main diagonal</a> and zeros elsewhere:</p>
 <p><span class="math display">\[
 (\mathbf{I}_p)_{ij} =
 \begin{cases}
@@ -1883,7 +1884,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="callout-37" class="callout-37-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-linear-system" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Linear system (system of linear equations))</strong></span> A <strong>linear system</strong> <span class="citation" data-cites="wikipedia_system_of_linear_equations">(<a href="#ref-wikipedia_system_of_linear_equations" role="doc-biblioref">Wikipedia contributors 2026k</a>)</span> (or <strong>system of linear equations</strong>) with <span class="math inline">\(m\)</span> equations in <span class="math inline">\(n\)</span> unknowns is an equation <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> in which the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span> are given. A <strong>solution</strong> of the system is a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^n\)</span> for which <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> holds.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Linear system (system of linear equations))</strong></span> A <strong>linear system</strong> <span class="citation" data-cites="wikipedia_system_of_linear_equations"><a href="#ref-wikipedia_system_of_linear_equations" role="doc-biblioref">[11]</a></span> (or <strong>system of linear equations</strong>) with <span class="math inline">\(m\)</span> equations in <span class="math inline">\(n\)</span> unknowns is an equation <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> in which the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span> are given. A <strong>solution</strong> of the system is a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^n\)</span> for which <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> holds.</p>
 </div>
 </div>
 </div>
@@ -1937,7 +1938,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="callout-39" class="callout-39-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-linear-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Linear map (linear transformation, linear function))</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> <span class="citation" data-cites="wikipedia_linear_map">(<a href="#ref-wikipedia_linear_map" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it preserves vector addition and scalar multiplication: for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 15 (Linear map (linear transformation, linear function))</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> <span class="citation" data-cites="wikipedia_linear_map"><a href="#ref-wikipedia_linear_map" role="doc-biblioref">[12]</a></span> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it preserves vector addition and scalar multiplication: for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
 <ol type="1">
 <li><span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> (<em>additivity</em>)</li>
 <li><span class="math inline">\(f(c\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> (<em>homogeneity</em>)</li>
@@ -2453,7 +2454,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 <div id="callout-58" class="callout-58-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-translation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Translation)</strong></span> For a fixed vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, the <strong>translation</strong> <span class="citation" data-cites="wikipedia_translation_geometry">(<a href="#ref-wikipedia_translation_geometry" role="doc-biblioref">Wikipedia contributors 2026m</a>)</span> by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is the function <span class="math inline">\(t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} : \mathbb{R}^m \to \mathbb{R}^m\)</span> defined by</p>
+<p><span class="theorem-title"><strong>Definition 18 (Translation)</strong></span> For a fixed vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, the <strong>translation</strong> <span class="citation" data-cites="wikipedia_translation_geometry"><a href="#ref-wikipedia_translation_geometry" role="doc-biblioref">[13]</a></span> by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is the function <span class="math inline">\(t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} : \mathbb{R}^m \to \mathbb{R}^m\)</span> defined by</p>
 <p><span class="math display">\[t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\]</span></p>
 </div>
 </div>
@@ -2859,8 +2860,8 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><span class="citation" data-cites="zhou2024matrix">Zhou (<a href="#ref-zhou2024matrix" role="doc-biblioref">2024</a>)</span>, sections 6 (“Linear functions and operators”; see <a href="#def-linear-operator" class="quarto-xref">Definition&nbsp;16</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \beta\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> whenever <span class="math inline">\(\alpha+ \beta= 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so the two definitions agree.</li>
-<li><span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe (<a href="#ref-boyd2018vmls" role="doc-biblioref">2018</a>)</span>, chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the <a href="./calculus-derivatives.html#def-linear-approximation">first-order Taylor approximation</a> as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.</li>
+<li><span class="citation" data-cites="zhou2024matrix">Zhou <a href="#ref-zhou2024matrix" role="doc-biblioref">[14]</a></span>, sections 6 (“Linear functions and operators”; see <a href="#def-linear-operator" class="quarto-xref">Definition&nbsp;16</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \beta\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> whenever <span class="math inline">\(\alpha+ \beta= 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so the two definitions agree.</li>
+<li><span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe <a href="#ref-boyd2018vmls" role="doc-biblioref">[15]</a></span>, chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the <a href="./calculus-derivatives.html#def-linear-approximation">first-order Taylor approximation</a> as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.</li>
 </ul>
 </div>
 </div>
@@ -2877,7 +2878,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div id="callout-77" class="callout-77-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-hyperplane" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Hyperplane)</strong></span> A <strong>hyperplane</strong> <span class="citation" data-cites="wikipedia_hyperplane">(<a href="#ref-wikipedia_hyperplane" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> satisfying</p>
+<p><span class="theorem-title"><strong>Definition 22 (Hyperplane)</strong></span> A <strong>hyperplane</strong> <span class="citation" data-cites="wikipedia_hyperplane"><a href="#ref-wikipedia_hyperplane" role="doc-biblioref">[16]</a></span> in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> satisfying</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\]</span></p>
 <p>for some vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p \setminus \{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\}\)</span> and number <span class="math inline">\(b \in \mathbb{R}\)</span>. The number <span class="math inline">\(b\)</span> is the offset of the hyperplane.</p>
 </div>
@@ -2897,7 +2898,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div id="callout-78" class="callout-78-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-normal-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Normal vector of a hyperplane)</strong></span> In <a href="#def-hyperplane" class="quarto-xref">Definition&nbsp;22</a>, the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is a <strong>normal vector</strong> <span class="citation" data-cites="wikipedia_normal_geometry">(<a href="#ref-wikipedia_normal_geometry" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span> of the hyperplane.</p>
+<p><span class="theorem-title"><strong>Definition 23 (Normal vector of a hyperplane)</strong></span> In <a href="#def-hyperplane" class="quarto-xref">Definition&nbsp;22</a>, the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is a <strong>normal vector</strong> <span class="citation" data-cites="wikipedia_normal_geometry"><a href="#ref-wikipedia_normal_geometry" role="doc-biblioref">[17]</a></span> of the hyperplane.</p>
 </div>
 </div>
 </div>
@@ -3464,21 +3465,21 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section id="further-reading" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="further-reading">Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="wikipedia_matrix_mathematics">Wikipedia contributors (<a href="#ref-wikipedia_matrix_mathematics" role="doc-biblioref">2026f</a>)</span> — matrices, with their operations and applications</p></li>
-<li><p><span class="citation" data-cites="wikipedia_matrix_multiplication">Wikipedia contributors (<a href="#ref-wikipedia_matrix_multiplication" role="doc-biblioref">2026g</a>)</span> — the matrix product and its properties</p></li>
-<li><p><span class="citation" data-cites="wikipedia_transpose">Wikipedia contributors (<a href="#ref-wikipedia_transpose" role="doc-biblioref">2026n</a>)</span> — the transpose of a matrix</p></li>
-<li><p><span class="citation" data-cites="wikipedia_identity_matrix">Wikipedia contributors (<a href="#ref-wikipedia_identity_matrix" role="doc-biblioref">2026b</a>)</span> — the identity matrix</p></li>
-<li><p><span class="citation" data-cites="wikipedia_system_of_linear_equations">Wikipedia contributors (<a href="#ref-wikipedia_system_of_linear_equations" role="doc-biblioref">2026k</a>)</span> — linear systems and how to solve them</p></li>
-<li><p><span class="citation" data-cites="wikipedia_linear_map">Wikipedia contributors (<a href="#ref-wikipedia_linear_map" role="doc-biblioref">2026c</a>)</span> — linear maps and their matrices</p></li>
-<li><p><span class="citation" data-cites="wikipedia_hyperplane">Wikipedia contributors (<a href="#ref-wikipedia_hyperplane" role="doc-biblioref">2026a</a>)</span> — hyperplanes and their equations</p></li>
-<li><p><span class="citation" data-cites="wikipedia_main_diagonal">Wikipedia contributors (<a href="#ref-wikipedia_main_diagonal" role="doc-biblioref">2026d</a>)</span> — the main diagonal of a matrix</p></li>
-<li><p><span class="citation" data-cites="wikipedia_matrix_addition">Wikipedia contributors (<a href="#ref-wikipedia_matrix_addition" role="doc-biblioref">2026e</a>)</span> — matrix addition</p></li>
-<li><p><span class="citation" data-cites="wikipedia_normal_geometry">Wikipedia contributors (<a href="#ref-wikipedia_normal_geometry" role="doc-biblioref">2026h</a>)</span> — normal vectors to curves and surfaces</p></li>
-<li><p><span class="citation" data-cites="wikipedia_scalar_multiplication">Wikipedia contributors (<a href="#ref-wikipedia_scalar_multiplication" role="doc-biblioref">2026i</a>)</span> — scalar multiplication</p></li>
-<li><p><span class="citation" data-cites="wikipedia_square_matrix">Wikipedia contributors (<a href="#ref-wikipedia_square_matrix" role="doc-biblioref">2026j</a>)</span> — square matrices</p></li>
-<li><p><span class="citation" data-cites="wikipedia_tensor">Wikipedia contributors (<a href="#ref-wikipedia_tensor" role="doc-biblioref">2026l</a>)</span> — tensors and their arrays of components</p></li>
-<li><p><span class="citation" data-cites="wikipedia_translation_geometry">Wikipedia contributors (<a href="#ref-wikipedia_translation_geometry" role="doc-biblioref">2026m</a>)</span> — translations in geometry</p></li>
-<li><p><span class="citation" data-cites="wikipedia_zero_matrix">Wikipedia contributors (<a href="#ref-wikipedia_zero_matrix" role="doc-biblioref">2026o</a>)</span> — zero matrices</p></li>
+<li><p><span class="citation" data-cites="wikipedia_matrix_mathematics">Wikipedia contributors <a href="#ref-wikipedia_matrix_mathematics" role="doc-biblioref">[1]</a></span> — matrices, with their operations and applications</p></li>
+<li><p><span class="citation" data-cites="wikipedia_matrix_multiplication">Wikipedia contributors <a href="#ref-wikipedia_matrix_multiplication" role="doc-biblioref">[7]</a></span> — the matrix product and its properties</p></li>
+<li><p><span class="citation" data-cites="wikipedia_transpose">Wikipedia contributors <a href="#ref-wikipedia_transpose" role="doc-biblioref">[3]</a></span> — the transpose of a matrix</p></li>
+<li><p><span class="citation" data-cites="wikipedia_identity_matrix">Wikipedia contributors <a href="#ref-wikipedia_identity_matrix" role="doc-biblioref">[10]</a></span> — the identity matrix</p></li>
+<li><p><span class="citation" data-cites="wikipedia_system_of_linear_equations">Wikipedia contributors <a href="#ref-wikipedia_system_of_linear_equations" role="doc-biblioref">[11]</a></span> — linear systems and how to solve them</p></li>
+<li><p><span class="citation" data-cites="wikipedia_linear_map">Wikipedia contributors <a href="#ref-wikipedia_linear_map" role="doc-biblioref">[12]</a></span> — linear maps and their matrices</p></li>
+<li><p><span class="citation" data-cites="wikipedia_hyperplane">Wikipedia contributors <a href="#ref-wikipedia_hyperplane" role="doc-biblioref">[16]</a></span> — hyperplanes and their equations</p></li>
+<li><p><span class="citation" data-cites="wikipedia_main_diagonal">Wikipedia contributors <a href="#ref-wikipedia_main_diagonal" role="doc-biblioref">[9]</a></span> — the main diagonal of a matrix</p></li>
+<li><p><span class="citation" data-cites="wikipedia_matrix_addition">Wikipedia contributors <a href="#ref-wikipedia_matrix_addition" role="doc-biblioref">[5]</a></span> — matrix addition</p></li>
+<li><p><span class="citation" data-cites="wikipedia_normal_geometry">Wikipedia contributors <a href="#ref-wikipedia_normal_geometry" role="doc-biblioref">[17]</a></span> — normal vectors to curves and surfaces</p></li>
+<li><p><span class="citation" data-cites="wikipedia_scalar_multiplication">Wikipedia contributors <a href="#ref-wikipedia_scalar_multiplication" role="doc-biblioref">[6]</a></span> — scalar multiplication</p></li>
+<li><p><span class="citation" data-cites="wikipedia_square_matrix">Wikipedia contributors <a href="#ref-wikipedia_square_matrix" role="doc-biblioref">[8]</a></span> — square matrices</p></li>
+<li><p><span class="citation" data-cites="wikipedia_tensor">Wikipedia contributors <a href="#ref-wikipedia_tensor" role="doc-biblioref">[2]</a></span> — tensors and their arrays of components</p></li>
+<li><p><span class="citation" data-cites="wikipedia_translation_geometry">Wikipedia contributors <a href="#ref-wikipedia_translation_geometry" role="doc-biblioref">[13]</a></span> — translations in geometry</p></li>
+<li><p><span class="citation" data-cites="wikipedia_zero_matrix">Wikipedia contributors <a href="#ref-wikipedia_zero_matrix" role="doc-biblioref">[4]</a></span> — zero matrices</p></li>
 </ul>
 
 
@@ -3739,57 +3740,57 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-boyd2018vmls" class="csl-entry" role="listitem">
-Boyd, Stephen, and Lieven Vandenberghe. 2018. <em>Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares</em>. Cambridge University Press. <a href="https://doi.org/10.1017/9781108583664">https://doi.org/10.1017/9781108583664</a>.
-</div>
-<div id="ref-wikipedia_hyperplane" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Hyperplane — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Hyperplane">https://en.wikipedia.org/wiki/Hyperplane</a>.
-</div>
-<div id="ref-wikipedia_identity_matrix" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Identity Matrix — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Identity_matrix">https://en.wikipedia.org/wiki/Identity_matrix</a>.
-</div>
-<div id="ref-wikipedia_linear_map" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Linear Map — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Linear_map">https://en.wikipedia.org/wiki/Linear_map</a>.
-</div>
-<div id="ref-wikipedia_main_diagonal" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Main Diagonal — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Main_diagonal">https://en.wikipedia.org/wiki/Main_diagonal</a>.
-</div>
-<div id="ref-wikipedia_matrix_addition" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Matrix Addition — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Matrix_addition">https://en.wikipedia.org/wiki/Matrix_addition</a>.
-</div>
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-wikipedia_matrix_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>Matrix (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">https://en.wikipedia.org/wiki/Matrix_(mathematics)</a>.
-</div>
-<div id="ref-wikipedia_matrix_multiplication" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Matrix Multiplication — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Matrix_multiplication">https://en.wikipedia.org/wiki/Matrix_multiplication</a>.
-</div>
-<div id="ref-wikipedia_normal_geometry" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Normal (Geometry) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">https://en.wikipedia.org/wiki/Normal_(geometry)</a>.
-</div>
-<div id="ref-wikipedia_scalar_multiplication" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026i. <em>Scalar Multiplication — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Scalar_multiplication">https://en.wikipedia.org/wiki/Scalar_multiplication</a>.
-</div>
-<div id="ref-wikipedia_square_matrix" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026j. <em>Square Matrix — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Square_matrix">https://en.wikipedia.org/wiki/Square_matrix</a>.
-</div>
-<div id="ref-wikipedia_system_of_linear_equations" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026k. <em>System of Linear Equations — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/System_of_linear_equations">https://en.wikipedia.org/wiki/System_of_linear_equations</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Matrix (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">https://en.wikipedia.org/wiki/Matrix_(mathematics)</a></div>
 </div>
 <div id="ref-wikipedia_tensor" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026l. <em>Tensor — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Tensor">https://en.wikipedia.org/wiki/Tensor</a>.
-</div>
-<div id="ref-wikipedia_translation_geometry" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026m. <em>Translation (Geometry) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Translation_(geometry)">https://en.wikipedia.org/wiki/Translation_(geometry)</a>.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Tensor — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Tensor">https://en.wikipedia.org/wiki/Tensor</a></div>
 </div>
 <div id="ref-wikipedia_transpose" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026n. <em>Transpose — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Transpose">https://en.wikipedia.org/wiki/Transpose</a>.
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Transpose — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Transpose">https://en.wikipedia.org/wiki/Transpose</a></div>
 </div>
 <div id="ref-wikipedia_zero_matrix" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026o. <em>Zero Matrix — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Zero_matrix">https://en.wikipedia.org/wiki/Zero_matrix</a>.
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Zero matrix — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Zero_matrix">https://en.wikipedia.org/wiki/Zero_matrix</a></div>
+</div>
+<div id="ref-wikipedia_matrix_addition" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Matrix addition — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Matrix_addition">https://en.wikipedia.org/wiki/Matrix_addition</a></div>
+</div>
+<div id="ref-wikipedia_scalar_multiplication" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Scalar multiplication — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Scalar_multiplication">https://en.wikipedia.org/wiki/Scalar_multiplication</a></div>
+</div>
+<div id="ref-wikipedia_matrix_multiplication" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Matrix multiplication — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Matrix_multiplication">https://en.wikipedia.org/wiki/Matrix_multiplication</a></div>
+</div>
+<div id="ref-wikipedia_square_matrix" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Square matrix — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Square_matrix">https://en.wikipedia.org/wiki/Square_matrix</a></div>
+</div>
+<div id="ref-wikipedia_main_diagonal" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Main diagonal — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Main_diagonal">https://en.wikipedia.org/wiki/Main_diagonal</a></div>
+</div>
+<div id="ref-wikipedia_identity_matrix" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Identity matrix — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Identity_matrix">https://en.wikipedia.org/wiki/Identity_matrix</a></div>
+</div>
+<div id="ref-wikipedia_system_of_linear_equations" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">Wikipedia contributors, <span>“System of linear equations — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/System_of_linear_equations">https://en.wikipedia.org/wiki/System_of_linear_equations</a></div>
+</div>
+<div id="ref-wikipedia_linear_map" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Linear map — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Linear_map">https://en.wikipedia.org/wiki/Linear_map</a></div>
+</div>
+<div id="ref-wikipedia_translation_geometry" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Translation (geometry) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Translation_(geometry)">https://en.wikipedia.org/wiki/Translation_(geometry)</a></div>
 </div>
 <div id="ref-zhou2024matrix" class="csl-entry" role="listitem">
-Zhou, Hua. 2024. <em>Matrices</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html">https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html</a>.
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">H. Zhou, <span>“Matrices.”</span> Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. [Online]. Available: <a href="https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html">https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html</a></div>
+</div>
+<div id="ref-boyd2018vmls" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">S. Boyd and L. Vandenberghe, <em>Introduction to applied linear algebra: Vectors, matrices, and least squares</em>. Cambridge University Press, 2018. doi: <a href="https://doi.org/10.1017/9781108583664">10.1017/9781108583664</a>.</div>
+</div>
+<div id="ref-wikipedia_hyperplane" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Hyperplane — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Hyperplane">https://en.wikipedia.org/wiki/Hyperplane</a></div>
+</div>
+<div id="ref-wikipedia_normal_geometry" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Normal (geometry) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">https://en.wikipedia.org/wiki/Normal_(geometry)</a></div>
 </div>
 </div></section></div></main> <!-- /main -->
 <!--

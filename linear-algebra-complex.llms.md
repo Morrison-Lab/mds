@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Complex vectors and matrices
 
@@ -28,13 +28,13 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))** The **conjugate transpose** ([Wikipedia contributors 2026a](#ref-wikipedia_conjugate_transpose)) (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
+> **Definition 4 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))** The **conjugate transpose** [\[1\]](#ref-wikipedia_conjugate_transpose) (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
 >
 > \\(\mathbf{A}^{\mathsf{H}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{kj}} \quad \text{for } j \in \\1, \ldots, n\\,\\ k \in \\1, \ldots, m\\.\\
 
 > **NOTE:**
 >
-> *Remark 1* (Notation for the conjugate transpose). The operation is denoted variously across mathematics and physics: \\\mathbf{A}^\*\\ in pure mathematics (Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231)), \\\mathbf{A}^{\dagger}\\ (“\\A\\-dagger”) in physics and quantum mechanics, and \\\mathbf{A}^{\mathsf{H}}\\ in engineering, numerical linear algebra, and statistics. These notes write \\\mathbf{A}^{\mathsf{H}}\\ because \\^\*\\ is reserved for optimal points (as in \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\\) and \\^{\dagger}\\ frequently denotes the Moore-Penrose pseudoinverse in the broader literature.
+> *Remark 1* (Notation for the conjugate transpose). The operation is denoted variously across mathematics and physics: \\\mathbf{A}^\*\\ in pure mathematics (Axler [\[2\]](#ref-axler2024linear), Definition 7.7, p. 231), \\\mathbf{A}^{\dagger}\\ (“\\A\\-dagger”) in physics and quantum mechanics, and \\\mathbf{A}^{\mathsf{H}}\\ in engineering, numerical linear algebra, and statistics. These notes write \\\mathbf{A}^{\mathsf{H}}\\ because \\^\*\\ is reserved for optimal points (as in \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\\) and \\^{\dagger}\\ frequently denotes the Moore-Penrose pseudoinverse in the broader literature.
 >
 > The Hermitian adjoint matrix should not be confused with the classical *adjugate matrix* (the transpose of the matrix of cofactors), which older texts occasionally referred to as the “adjoint.”
 
@@ -113,7 +113,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\mathopen{}\left\langle T\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{} = \mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, T^\*\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}\\ (Axler ([2024](#ref-axler2024linear), Definition 7.1, p. 226)). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler ([2024](#ref-axler2024linear), Proposition 7.9, p. 231)).
+> *Remark 3* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\mathopen{}\left\langle T\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{} = \mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, T^\*\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}\\ (Axler [\[2\]](#ref-axler2024linear), Definition 7.1, p. 226). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler [\[2\]](#ref-axler2024linear), Proposition 7.9, p. 231).
 
 > **NOTE:**
 >
@@ -159,7 +159,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Hermitian matrix (self-adjoint matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** ([Wikipedia contributors 2026b](#ref-wikipedia_hermitian_matrix)) (or **self-adjoint**) if it equals its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
+> **Definition 5 (Hermitian matrix (self-adjoint matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** [\[3\]](#ref-wikipedia_hermitian_matrix) (or **self-adjoint**) if it equals its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\\
 
@@ -185,7 +185,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Skew-Hermitian matrix (anti-Hermitian matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** ([Wikipedia contributors 2026c](#ref-wikipedia_skew_hermitian_matrix)) (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
+> **Definition 6 (Skew-Hermitian matrix (anti-Hermitian matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** [\[4\]](#ref-wikipedia_skew_hermitian_matrix) (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = -\mathbf{A}.\\
 
@@ -249,20 +249,28 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 ## Further reading
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_conjugate_transpose)) — the conjugate transpose and its properties
+- Wikipedia contributors [\[1\]](#ref-wikipedia_conjugate_transpose) — the conjugate transpose and its properties
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_hermitian_matrix)) — Hermitian matrices, with examples and the spectral theorem
+- Wikipedia contributors [\[3\]](#ref-wikipedia_hermitian_matrix) — Hermitian matrices, with examples and the spectral theorem
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_skew_hermitian_matrix)) — skew-Hermitian matrices
+- Wikipedia contributors [\[4\]](#ref-wikipedia_skew_hermitian_matrix) — skew-Hermitian matrices
 
 Back to top
 
 ## References
 
-Axler, Sheldon. 2024. *Linear Algebra Done Right*. 4th ed. Undergraduate Texts in Mathematics. Springer. <https://doi.org/10.1007/978-3-031-41026-0>.
+\[1\]
 
-Wikipedia contributors. 2026a. *Conjugate Transpose — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Conjugate_transpose>.
+Wikipedia contributors, “Conjugate transpose — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Conjugate_transpose>
 
-Wikipedia contributors. 2026b. *Hermitian Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Hermitian_matrix>.
+\[2\]
 
-Wikipedia contributors. 2026c. *Skew-Hermitian Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Skew-Hermitian_matrix>.
+S. Axler, *Linear algebra done right*, 4th ed. in Undergraduate texts in mathematics. Springer, 2024. doi: [10.1007/978-3-031-41026-0](https://doi.org/10.1007/978-3-031-41026-0).
+
+\[3\]
+
+Wikipedia contributors, “Hermitian matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Hermitian_matrix>
+
+\[4\]
+
+Wikipedia contributors, “Skew-hermitian matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Skew-Hermitian_matrix>

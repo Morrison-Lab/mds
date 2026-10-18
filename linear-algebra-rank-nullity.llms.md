@@ -14,13 +14,13 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Column space and null space
 
 > **NOTE:**
 >
-> **Definition 1 (Column space (range, image))** The **column space** ([Wikipedia contributors 2026f](#ref-wikipedia_row_and_column_spaces)) of an \\m \times n\\ matrix \\\mathbf{A}\\ is
+> **Definition 1 (Column space (range, image))** The **column space** [\[1\]](#ref-wikipedia_row_and_column_spaces) of an \\m \times n\\ matrix \\\mathbf{A}\\ is
 >
 > \\ \mathcal{C}(\mathbf{A}) \stackrel{\text{def}}{=} \mathopen{}\left\\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^n\right\\\mathclose{}, \\
 >
@@ -168,7 +168,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Definition 6 (Gram matrix)** The **Gram matrix** ([Wikipedia contributors 2026b](#ref-wikipedia_gram_matrix)) of an \\m \times n\\ matrix \\\mathbf{A}\\ is the \\n \times n\\ matrix \\{\mathbf{A}}^{\top} \mathbf{A}\\, the [cross-product matrix](#def-cross-product-matrix) of \\\mathbf{A}\\ with itself.
+> **Definition 6 (Gram matrix)** The **Gram matrix** [\[2\]](#ref-wikipedia_gram_matrix) of an \\m \times n\\ matrix \\\mathbf{A}\\ is the \\n \times n\\ matrix \\{\mathbf{A}}^{\top} \mathbf{A}\\, the [cross-product matrix](#def-cross-product-matrix) of \\\mathbf{A}\\ with itself.
 
 > **NOTE:**
 >
@@ -240,7 +240,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024](#ref-zhou2024rank)), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)).
+> This section is adapted from Zhou [\[3\]](#ref-zhou2024rank), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)).
 
 > **NOTE:**
 >
@@ -264,7 +264,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Definition 7 (Nullity)** The **nullity** ([Wikipedia contributors 2026e](#ref-wikipedia_rank_nullity_theorem)) of a matrix \\\mathbf{A}\\ is the dimension of its null space ([Definition 3](#def-null-space)):
+> **Definition 7 (Nullity)** The **nullity** [\[4\]](#ref-wikipedia_rank_nullity_theorem) of a matrix \\\mathbf{A}\\ is the dimension of its null space ([Definition 3](#def-null-space)):
 >
 > \\ \operatorname{nullity}(\mathbf{A}) \stackrel{\text{def}}{=}\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{}. \\
 
@@ -418,7 +418,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Definition 8 (Affine subspace)** An **affine subspace** ([Wikipedia contributors 2026a](#ref-wikipedia_affine_space)) of \\\mathbb{R}^p\\ is a set of the form
+> **Definition 8 (Affine subspace)** An **affine subspace** [\[5\]](#ref-wikipedia_affine_space) of \\\mathbb{R}^p\\ is a set of the form
 >
 > \\ \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \in \mathcal{S}\right\\\mathclose{} \\
 >
@@ -539,7 +539,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Definition 9 (Open half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** ([Wikipedia contributors 2026c](#ref-wikipedia_half_space_geometry)) of \\\mathcal{H}\\ are
+> **Definition 9 (Open half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** [\[6\]](#ref-wikipedia_half_space_geometry) of \\\mathcal{H}\\ are
 >
 > \\ \mathcal{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b \> 0\right\\\mathclose{} \quad \text{and} \quad \mathcal{H}^- \stackrel{\text{def}}{=}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b \< 0\right\\\mathclose{}. \tag{1}\\
 
@@ -656,7 +656,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Definition 11 (Rank factorization)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A **rank factorization** ([Wikipedia contributors 2026d](#ref-wikipedia_rank_factorization)) of \\\mathbf{A}\\ is a product
+> **Definition 11 (Rank factorization)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A **rank factorization** [\[7\]](#ref-wikipedia_rank_factorization) of \\\mathbf{A}\\ is a product
 >
 > \\ \underbrace{\mathbf{A}}\_{m \times n} = \underbrace{\mathbf{C}}\_{m \times r}\\\underbrace{\mathbf{R}}\_{r \times n}. \\
 
@@ -686,32 +686,46 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 ## Further reading
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_row_and_column_spaces)) — the row space, column space and null space
+- Wikipedia contributors [\[1\]](#ref-wikipedia_row_and_column_spaces) — the row space, column space and null space
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_rank_nullity_theorem)) — the rank-nullity theorem and its proofs
+- Wikipedia contributors [\[4\]](#ref-wikipedia_rank_nullity_theorem) — the rank-nullity theorem and its proofs
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_gram_matrix)) — Gram matrices and their properties
+- Wikipedia contributors [\[2\]](#ref-wikipedia_gram_matrix) — Gram matrices and their properties
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_affine_space)) — affine spaces and subspaces
+- Wikipedia contributors [\[5\]](#ref-wikipedia_affine_space) — affine spaces and subspaces
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_half_space_geometry)) — half-spaces
+- Wikipedia contributors [\[6\]](#ref-wikipedia_half_space_geometry) — half-spaces
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_rank_factorization)) — rank factorizations
+- Wikipedia contributors [\[7\]](#ref-wikipedia_rank_factorization) — rank factorizations
 
 Back to top
 
 ## References
 
-Wikipedia contributors. 2026a. *Affine Space — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Affine_space>.
+\[1\]
 
-Wikipedia contributors. 2026b. *Gram Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Gram_matrix>.
+Wikipedia contributors, “Row and column spaces — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Row_and_column_spaces>
 
-Wikipedia contributors. 2026c. *Half-Space (Geometry) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Half-space_(geometry)>.
+\[2\]
 
-Wikipedia contributors. 2026d. *Rank Factorization — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Rank_factorization>.
+Wikipedia contributors, “Gram matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Gram_matrix>
 
-Wikipedia contributors. 2026e. *Rank–Nullity Theorem — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem>.
+\[3\]
 
-Wikipedia contributors. 2026f. *Row and Column Spaces — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Row_and_column_spaces>.
+H. Zhou, “Rank and nullity.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/05-rank/05-rank.html>
 
-Zhou, Hua. 2024. *Rank and Nullity*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/05-rank/05-rank.html>.
+\[4\]
+
+Wikipedia contributors, “Rank–nullity theorem — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem>
+
+\[5\]
+
+Wikipedia contributors, “Affine space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Affine_space>
+
+\[6\]
+
+Wikipedia contributors, “Half-space (geometry) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Half-space_(geometry)>
+
+\[7\]
+
+Wikipedia contributors, “Rank factorization — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Rank_factorization>

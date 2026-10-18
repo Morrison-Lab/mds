@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Matrices
 
 > **NOTE:**
 >
-> **Definition 1 (Matrix)** A **matrix** ([Wikipedia contributors 2026f](#ref-wikipedia_matrix_mathematics)) of dimensions \\m \times n\\ is a rectangular array of \\m \cdot n\\ numbers, arranged in \\m\\ rows and \\n\\ columns:
+> **Definition 1 (Matrix)** A **matrix** [\[1\]](#ref-wikipedia_matrix_mathematics) of dimensions \\m \times n\\ is a rectangular array of \\m \cdot n\\ numbers, arranged in \\m\\ rows and \\n\\ columns:
 >
 > \\ \mathbf{A} = \begin{bmatrix} a\_{11} & a\_{12} & \cdots & a\_{1n} \\ a\_{21} & a\_{22} & \cdots & a\_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a\_{m1} & a\_{m2} & \cdots & a\_{mn} \end{bmatrix} \\
 
@@ -26,7 +26,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Tensor)** A **tensor** ([Wikipedia contributors 2026l](#ref-wikipedia_tensor)) of order \\k \ge 1\\ is an array of numbers with \\k\\ indices, \\ \mathcal{A} = \mathopen{}\left(a\_{i_1 i_2 \cdots i_k}\right)\mathclose{}, \quad i_1 = 1, \ldots, n_1, \\ \ldots, \\ i_k = 1, \ldots, n_k, \\ and its dimensions are \\n_1 \times n_2 \times \cdots \times n_k\\.
+> **Definition 2 (Tensor)** A **tensor** [\[2\]](#ref-wikipedia_tensor) of order \\k \ge 1\\ is an array of numbers with \\k\\ indices, \\ \mathcal{A} = \mathopen{}\left(a\_{i_1 i_2 \cdots i_k}\right)\mathclose{}, \quad i_1 = 1, \ldots, n_1, \\ \ldots, \\ i_k = 1, \ldots, n_k, \\ and its dimensions are \\n_1 \times n_2 \times \cdots \times n_k\\.
 
 > **NOTE:**
 >
@@ -36,7 +36,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Matrix transpose)** The **transpose** ([Wikipedia contributors 2026n](#ref-wikipedia_transpose)) of an \\m \times n\\ matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\{\mathbf{A}}^{\top}\\ obtained by swapping the rows and columns of \\\mathbf{A}\\:
+> **Definition 3 (Matrix transpose)** The **transpose** [\[3\]](#ref-wikipedia_transpose) of an \\m \times n\\ matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\{\mathbf{A}}^{\top}\\ obtained by swapping the rows and columns of \\\mathbf{A}\\:
 >
 > \\({\mathbf{A}}^{\top})\_{ij} = a\_{ji}\\
 
@@ -52,7 +52,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Zero matrix)** The \\m \times n\\ **zero matrix** ([Wikipedia contributors 2026o](#ref-wikipedia_zero_matrix)) \\\mathbf{0}\_{m \times n}\\ (or \\\mathbf{0}\\ when dimensions are clear from context) has all entries equal to zero:
+> **Definition 4 (Zero matrix)** The \\m \times n\\ **zero matrix** [\[4\]](#ref-wikipedia_zero_matrix) \\\mathbf{0}\_{m \times n}\\ (or \\\mathbf{0}\\ when dimensions are clear from context) has all entries equal to zero:
 >
 > \\ \mathbf{0}\_{m \times n} = \begin{bmatrix} 0 & 0 & \cdots & 0 \\ 0 & 0 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 0 \end{bmatrix} \\
 
@@ -64,7 +64,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Matrix addition)** Two matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ of the same dimensions \\m \times n\\ can be added element-wise; their **matrix sum** ([Wikipedia contributors 2026e](#ref-wikipedia_matrix_addition)) is:
+> **Definition 5 (Matrix addition)** Two matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ of the same dimensions \\m \times n\\ can be added element-wise; their **matrix sum** [\[5\]](#ref-wikipedia_matrix_addition) is:
 >
 > \\(\mathbf{A} + \mathbf{B})\_{ij} = a\_{ij} + b\_{ij}\\
 
@@ -102,7 +102,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Scalar multiplication)** The **scalar multiple** ([Wikipedia contributors 2026i](#ref-wikipedia_scalar_multiplication)) of a matrix \\\mathbf{A}\\ by a scalar \\c\\ is:
+> **Definition 6 (Scalar multiplication)** The **scalar multiple** [\[6\]](#ref-wikipedia_scalar_multiplication) of a matrix \\\mathbf{A}\\ by a scalar \\c\\ is:
 >
 > \\(c\mathbf{A})\_{ij} = c \cdot a\_{ij}\\
 
@@ -114,7 +114,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Matrix multiplication)** The **product** ([Wikipedia contributors 2026g](#ref-wikipedia_matrix_multiplication)) of an \\m \times k\\ matrix \\\mathbf{A}\\ and a \\k \times n\\ matrix \\\mathbf{B}\\ is the \\m \times n\\ matrix \\\mathbf{C} = \mathbf{A}\mathbf{B}\\ with entries:
+> **Definition 7 (Matrix multiplication)** The **product** [\[7\]](#ref-wikipedia_matrix_multiplication) of an \\m \times k\\ matrix \\\mathbf{A}\\ and a \\k \times n\\ matrix \\\mathbf{B}\\ is the \\m \times n\\ matrix \\\mathbf{C} = \mathbf{A}\mathbf{B}\\ with entries:
 >
 > \\c\_{ij} = \sum\_{s=1}^{k} a\_{is}\\ b\_{sj}\\
 
@@ -182,7 +182,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Square matrix)** A matrix is **square** ([Wikipedia contributors 2026j](#ref-wikipedia_square_matrix)) if it has the same number of rows as columns.
+> **Definition 8 (Square matrix)** A matrix is **square** [\[8\]](#ref-wikipedia_square_matrix) if it has the same number of rows as columns.
 
 > **NOTE:**
 >
@@ -190,7 +190,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Main diagonal)** The **main diagonal** ([Wikipedia contributors 2026d](#ref-wikipedia_main_diagonal)) of an \\m \times n\\ matrix \\\mathbf{A}\\ is the list of its entries \\a\_{11}, a\_{22}, \ldots, a\_{kk}\\, where \\k\\ is the smaller of \\m\\ and \\n\\.
+> **Definition 9 (Main diagonal)** The **main diagonal** [\[9\]](#ref-wikipedia_main_diagonal) of an \\m \times n\\ matrix \\\mathbf{A}\\ is the list of its entries \\a\_{11}, a\_{22}, \ldots, a\_{kk}\\, where \\k\\ is the smaller of \\m\\ and \\n\\.
 
 > **NOTE:**
 >
@@ -209,7 +209,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Identity matrix)** The \\p \times p\\ **identity matrix** ([Wikipedia contributors 2026b](#ref-wikipedia_identity_matrix)) \\\mathbf{I}\_p\\ (or \\\mathbf{I}\\ when the size is clear from context) has ones on the [main diagonal](#def-main-diagonal) and zeros elsewhere:
+> **Definition 12 (Identity matrix)** The \\p \times p\\ **identity matrix** [\[10\]](#ref-wikipedia_identity_matrix) \\\mathbf{I}\_p\\ (or \\\mathbf{I}\\ when the size is clear from context) has ones on the [main diagonal](#def-main-diagonal) and zeros elsewhere:
 >
 > \\ (\mathbf{I}\_p)\_{ij} = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases} \qquad \mathbf{I}\_p = \begin{bmatrix} 1 & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{bmatrix} \\
 
@@ -247,7 +247,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Linear system (system of linear equations))** A **linear system** ([Wikipedia contributors 2026k](#ref-wikipedia_system_of_linear_equations)) (or **system of linear equations**) with \\m\\ equations in \\n\\ unknowns is an equation \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ in which the \\m \times n\\ matrix \\\mathbf{A}\\ and the vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\ are given. A **solution** of the system is a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^n\\ for which \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ holds.
+> **Definition 14 (Linear system (system of linear equations))** A **linear system** [\[11\]](#ref-wikipedia_system_of_linear_equations) (or **system of linear equations**) with \\m\\ equations in \\n\\ unknowns is an equation \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ in which the \\m \times n\\ matrix \\\mathbf{A}\\ and the vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\ are given. A **solution** of the system is a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^n\\ for which \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ holds.
 
 > **NOTE:**
 >
@@ -261,7 +261,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Linear map (linear transformation, linear function))** A [function](functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a **linear map** ([Wikipedia contributors 2026c](#ref-wikipedia_linear_map)) (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ and \\c \in \mathbb{R}\\,
+> **Definition 15 (Linear map (linear transformation, linear function))** A [function](functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a **linear map** [\[12\]](#ref-wikipedia_linear_map) (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ and \\c \in \mathbb{R}\\,
 >
 > 1.  \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) + f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ (*additivity*)
 > 2.  \\f(c\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = c f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ (*homogeneity*)
@@ -417,7 +417,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Translation)** For a fixed vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\, the **translation** ([Wikipedia contributors 2026m](#ref-wikipedia_translation_geometry)) by \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ is the function \\t\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}} : \mathbb{R}^m \to \mathbb{R}^m\\ defined by
+> **Definition 18 (Translation)** For a fixed vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\, the **translation** [\[13\]](#ref-wikipedia_translation_geometry) by \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ is the function \\t\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}} : \mathbb{R}^m \to \mathbb{R}^m\\ defined by
 >
 > \\t\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}+ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\
 
@@ -527,12 +527,12 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **TIP:**
 >
-> - Zhou ([2024](#ref-zhou2024matrix)), sections 6 (“Linear functions and operators”; see [Definition 16](#def-linear-operator)) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as [Theorem 11](#thm-linear-map-matrix), and that every affine function has the form \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\. It defines “affine” differently, by \\f(\alpha\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ \beta\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ whenever \\\alpha+ \beta= 1\\, and shows that this condition holds exactly for the maps \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so the two definitions agree.
-> - Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the [first-order Taylor approximation](calculus-derivatives.llms.md#def-linear-approximation) as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.
+> - Zhou [\[14\]](#ref-zhou2024matrix), sections 6 (“Linear functions and operators”; see [Definition 16](#def-linear-operator)) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as [Theorem 11](#thm-linear-map-matrix), and that every affine function has the form \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\. It defines “affine” differently, by \\f(\alpha\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ \beta\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ whenever \\\alpha+ \beta= 1\\, and shows that this condition holds exactly for the maps \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so the two definitions agree.
+> - Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the [first-order Taylor approximation](calculus-derivatives.llms.md#def-linear-approximation) as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.
 
 > **NOTE:**
 >
-> **Definition 22 (Hyperplane)** A **hyperplane** ([Wikipedia contributors 2026a](#ref-wikipedia_hyperplane)) in \\\mathbb{R}^p\\ is the set of points \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ satisfying
+> **Definition 22 (Hyperplane)** A **hyperplane** [\[16\]](#ref-wikipedia_hyperplane) in \\\mathbb{R}^p\\ is the set of points \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ satisfying
 >
 > \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b = 0\\
 >
@@ -540,7 +540,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 23 (Normal vector of a hyperplane)** In [Definition 22](#def-hyperplane), the vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ is a **normal vector** ([Wikipedia contributors 2026h](#ref-wikipedia_normal_geometry)) of the hyperplane.
+> **Definition 23 (Normal vector of a hyperplane)** In [Definition 22](#def-hyperplane), the vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ is a **normal vector** [\[17\]](#ref-wikipedia_normal_geometry) of the hyperplane.
 
 > **NOTE:**
 >
@@ -779,70 +779,104 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 ## Further reading
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_matrix_mathematics)) — matrices, with their operations and applications
+- Wikipedia contributors [\[1\]](#ref-wikipedia_matrix_mathematics) — matrices, with their operations and applications
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_matrix_multiplication)) — the matrix product and its properties
+- Wikipedia contributors [\[7\]](#ref-wikipedia_matrix_multiplication) — the matrix product and its properties
 
-- Wikipedia contributors ([2026n](#ref-wikipedia_transpose)) — the transpose of a matrix
+- Wikipedia contributors [\[3\]](#ref-wikipedia_transpose) — the transpose of a matrix
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_identity_matrix)) — the identity matrix
+- Wikipedia contributors [\[10\]](#ref-wikipedia_identity_matrix) — the identity matrix
 
-- Wikipedia contributors ([2026k](#ref-wikipedia_system_of_linear_equations)) — linear systems and how to solve them
+- Wikipedia contributors [\[11\]](#ref-wikipedia_system_of_linear_equations) — linear systems and how to solve them
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_linear_map)) — linear maps and their matrices
+- Wikipedia contributors [\[12\]](#ref-wikipedia_linear_map) — linear maps and their matrices
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_hyperplane)) — hyperplanes and their equations
+- Wikipedia contributors [\[16\]](#ref-wikipedia_hyperplane) — hyperplanes and their equations
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_main_diagonal)) — the main diagonal of a matrix
+- Wikipedia contributors [\[9\]](#ref-wikipedia_main_diagonal) — the main diagonal of a matrix
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_matrix_addition)) — matrix addition
+- Wikipedia contributors [\[5\]](#ref-wikipedia_matrix_addition) — matrix addition
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_normal_geometry)) — normal vectors to curves and surfaces
+- Wikipedia contributors [\[17\]](#ref-wikipedia_normal_geometry) — normal vectors to curves and surfaces
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_scalar_multiplication)) — scalar multiplication
+- Wikipedia contributors [\[6\]](#ref-wikipedia_scalar_multiplication) — scalar multiplication
 
-- Wikipedia contributors ([2026j](#ref-wikipedia_square_matrix)) — square matrices
+- Wikipedia contributors [\[8\]](#ref-wikipedia_square_matrix) — square matrices
 
-- Wikipedia contributors ([2026l](#ref-wikipedia_tensor)) — tensors and their arrays of components
+- Wikipedia contributors [\[2\]](#ref-wikipedia_tensor) — tensors and their arrays of components
 
-- Wikipedia contributors ([2026m](#ref-wikipedia_translation_geometry)) — translations in geometry
+- Wikipedia contributors [\[13\]](#ref-wikipedia_translation_geometry) — translations in geometry
 
-- Wikipedia contributors ([2026o](#ref-wikipedia_zero_matrix)) — zero matrices
+- Wikipedia contributors [\[4\]](#ref-wikipedia_zero_matrix) — zero matrices
 
 Back to top
 
 ## References
 
-Boyd, Stephen, and Lieven Vandenberghe. 2018. *Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares*. Cambridge University Press. <https://doi.org/10.1017/9781108583664>.
+\[1\]
 
-Wikipedia contributors. 2026a. *Hyperplane — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Hyperplane>.
+Wikipedia contributors, “Matrix (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Matrix_(mathematics)>
 
-Wikipedia contributors. 2026b. *Identity Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Identity_matrix>.
+\[2\]
 
-Wikipedia contributors. 2026c. *Linear Map — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Linear_map>.
+Wikipedia contributors, “Tensor — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tensor>
 
-Wikipedia contributors. 2026d. *Main Diagonal — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Main_diagonal>.
+\[3\]
 
-Wikipedia contributors. 2026e. *Matrix Addition — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Matrix_addition>.
+Wikipedia contributors, “Transpose — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Transpose>
 
-Wikipedia contributors. 2026f. *Matrix (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Matrix_(mathematics)>.
+\[4\]
 
-Wikipedia contributors. 2026g. *Matrix Multiplication — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Matrix_multiplication>.
+Wikipedia contributors, “Zero matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Zero_matrix>
 
-Wikipedia contributors. 2026h. *Normal (Geometry) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Normal_(geometry)>.
+\[5\]
 
-Wikipedia contributors. 2026i. *Scalar Multiplication — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Scalar_multiplication>.
+Wikipedia contributors, “Matrix addition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Matrix_addition>
 
-Wikipedia contributors. 2026j. *Square Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Square_matrix>.
+\[6\]
 
-Wikipedia contributors. 2026k. *System of Linear Equations — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/System_of_linear_equations>.
+Wikipedia contributors, “Scalar multiplication — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Scalar_multiplication>
 
-Wikipedia contributors. 2026l. *Tensor — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Tensor>.
+\[7\]
 
-Wikipedia contributors. 2026m. *Translation (Geometry) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Translation_(geometry)>.
+Wikipedia contributors, “Matrix multiplication — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Matrix_multiplication>
 
-Wikipedia contributors. 2026n. *Transpose — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Transpose>.
+\[8\]
 
-Wikipedia contributors. 2026o. *Zero Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Zero_matrix>.
+Wikipedia contributors, “Square matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Square_matrix>
 
-Zhou, Hua. 2024. *Matrices*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html>.
+\[9\]
+
+Wikipedia contributors, “Main diagonal — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Main_diagonal>
+
+\[10\]
+
+Wikipedia contributors, “Identity matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Identity_matrix>
+
+\[11\]
+
+Wikipedia contributors, “System of linear equations — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/System_of_linear_equations>
+
+\[12\]
+
+Wikipedia contributors, “Linear map — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_map>
+
+\[13\]
+
+Wikipedia contributors, “Translation (geometry) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Translation_(geometry)>
+
+\[14\]
+
+H. Zhou, “Matrices.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html>
+
+\[15\]
+
+S. Boyd and L. Vandenberghe, *Introduction to applied linear algebra: Vectors, matrices, and least squares*. Cambridge University Press, 2018. doi: [10.1017/9781108583664](https://doi.org/10.1017/9781108583664).
+
+\[16\]
+
+Wikipedia contributors, “Hyperplane — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Hyperplane>
+
+\[17\]
+
+Wikipedia contributors, “Normal (geometry) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Normal_(geometry)>

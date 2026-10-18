@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Special Matrices
 
@@ -40,7 +40,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 3 (Symmetric matrix)** A square matrix \\\mathbf{A}\\ is **symmetric** ([Wikipedia contributors 2026l](#ref-wikipedia_symmetric_matrix)) if \\{\mathbf{A}}^{\top} = \mathbf{A}\\, i.e., \\a\_{ij} = a\_{ji}\\ for all \\i\\ and \\j\\.
+> **Definition 3 (Symmetric matrix)** A square matrix \\\mathbf{A}\\ is **symmetric** [\[1\]](#ref-wikipedia_symmetric_matrix) if \\{\mathbf{A}}^{\top} = \mathbf{A}\\, i.e., \\a\_{ij} = a\_{ji}\\ for all \\i\\ and \\j\\.
 
 > **NOTE:**
 >
@@ -56,7 +56,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 4 (Diagonal matrix)** A square matrix \\\mathbf{D}\\ is a **diagonal matrix** ([Wikipedia contributors 2026c](#ref-wikipedia_diagonal_matrix)) if all off-diagonal entries are zero: \\d\_{ij} = 0\\ whenever \\i \neq j\\:
+> **Definition 4 (Diagonal matrix)** A square matrix \\\mathbf{D}\\ is a **diagonal matrix** [\[2\]](#ref-wikipedia_diagonal_matrix) if all off-diagonal entries are zero: \\d\_{ij} = 0\\ whenever \\i \neq j\\:
 >
 > \\ \mathbf{D} = \begin{bmatrix} d_1 & 0 & \cdots & 0 \\ 0 & d_2 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & d_p \end{bmatrix} \\
 
@@ -80,7 +80,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 6 (Invertible matrix (non-singular matrix))** A \\p \times p\\ matrix \\\mathbf{A}\\ is **invertible** ([Wikipedia contributors 2026g](#ref-wikipedia_invertible_matrix)) (or **non-singular**) if some \\p \times p\\ matrix \\\mathbf{B}\\ satisfies
+> **Definition 6 (Invertible matrix (non-singular matrix))** A \\p \times p\\ matrix \\\mathbf{A}\\ is **invertible** [\[3\]](#ref-wikipedia_invertible_matrix) (or **non-singular**) if some \\p \times p\\ matrix \\\mathbf{B}\\ satisfies
 >
 > \\ \begin{aligned} \mathbf{A}\mathbf{B} &= \mathbf{B}\mathbf{A} \\ &= \mathbf{I}\_p, \end{aligned} \\
 >
@@ -221,7 +221,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 7 (Idempotent matrix)** A square matrix \\\mathbf{A}\\ is **idempotent** ([Wikipedia contributors 2026f](#ref-wikipedia_idempotent_matrix)) if
+> **Definition 7 (Idempotent matrix)** A square matrix \\\mathbf{A}\\ is **idempotent** [\[4\]](#ref-wikipedia_idempotent_matrix) if
 >
 > \\\mathbf{A}^2 = \mathbf{A}\\
 
@@ -295,7 +295,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 10 (Orthogonal matrix)** A \\p \times p\\ matrix \\\mathbf{Q}\\ is **orthogonal** ([Wikipedia contributors 2026h](#ref-wikipedia_orthogonal_matrix)) if
+> **Definition 10 (Orthogonal matrix)** A \\p \times p\\ matrix \\\mathbf{Q}\\ is **orthogonal** [\[5\]](#ref-wikipedia_orthogonal_matrix) if
 >
 > \\ \underbrace{{\mathbf{Q}}^{\top}}\_{p \times p}\\\underbrace{\mathbf{Q}}\_{p \times p} = \mathbf{I}\_p \\
 
@@ -305,7 +305,7 @@ Some special matrices appeared earlier:
 >
 > \\ \mathbf{Q} = \begin{bmatrix} 0.6 & -0.8 \\ 0.8 & 0.6 \end{bmatrix} \\
 >
-> rotates each vector in the plane counterclockwise by the angle \\\theta\\ with \\\cos\theta= 0.6\\ and \\\sin\theta= 0.8\\ (about \\53\\ degrees) ([Banerjee and Roy 2014, chap. 8](#ref-banerjee2014linear), Example 8.1, p. 207). It is orthogonal:
+> rotates each vector in the plane counterclockwise by the angle \\\theta\\ with \\\cos\theta= 0.6\\ and \\\sin\theta= 0.8\\ (about \\53\\ degrees) [\[6, Ch. 8\]](#ref-banerjee2014linear), Example 8.1, p. 207. It is orthogonal:
 >
 > \\ \begin{aligned} {\mathbf{Q}}^{\top}\mathbf{Q} &= \begin{bmatrix} 0.6 & 0.8 \\ -0.8 & 0.6 \end{bmatrix} \begin{bmatrix} 0.6 & -0.8 \\ 0.8 & 0.6 \end{bmatrix} && \text{(definition of the transpose)} \\ &= \begin{bmatrix} 0.36 + 0.64 & -0.48 + 0.48 \\ -0.48 + 0.48 & 0.64 + 0.36 \end{bmatrix} && \text{(definition of matrix multiplication)} \\ &= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} && \text{(add)} \end{aligned} \\
 
@@ -319,7 +319,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 6* (The columns of an orthogonal matrix are orthonormal). Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of column \\i\\ and column \\j\\ of \\\mathbf{Q}\\, so \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ says that the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). For a square matrix, \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ also implies \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\, so \\\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}\\ ([Definition 5](#def-matrix-inverse)) ([Banerjee and Roy 2014, chap. 8](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209).
+> *Remark 6* (The columns of an orthogonal matrix are orthonormal). Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of column \\i\\ and column \\j\\ of \\\mathbf{Q}\\, so \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ says that the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). For a square matrix, \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ also implies \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\, so \\\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}\\ ([Definition 5](#def-matrix-inverse)) [\[6, Ch. 8\]](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209.
 >
 > For example, the columns of \\\mathbf{Q}\\ in [Example 13](#exm-orthogonal-matrix) are \\(0.6, 0.8)\\ and \\(-0.8, 0.6)\\. The diagonal entries \\0.36 + 0.64 = 1\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ are their squared norms, and the off-diagonal entries \\-0.48 + 0.48 = 0\\ are their dot product. Multiplying in the other order also gives \\\mathbf{I}\_2\\:
 >
@@ -353,7 +353,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 11 (Quadratic form)** A **quadratic form** ([Wikipedia contributors 2026j](#ref-wikipedia_quadratic_form)) is a mathematical expression of the structure
+> **Definition 11 (Quadratic form)** A **quadratic form** [\[7\]](#ref-wikipedia_quadratic_form) is a mathematical expression of the structure
 >
 > \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top}\\ \mathbf{S}\\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\
 >
@@ -442,7 +442,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 13 (Trace)** The **trace** ([Wikipedia contributors 2026m](#ref-wikipedia_trace_linear_algebra)) of a \\p \times p\\ matrix \\\mathbf{M}\\ is the sum of its diagonal entries:
+> **Definition 13 (Trace)** The **trace** [\[8\]](#ref-wikipedia_trace_linear_algebra) of a \\p \times p\\ matrix \\\mathbf{M}\\ is the sum of its diagonal entries:
 >
 > \\\operatorname{tr}(\mathbf{M}) \stackrel{\text{def}}{=}\sum\_{i=1}^pM\_{ii}\\
 
@@ -482,7 +482,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 8* (Moving a factor of a triple product). Let \\\mathbf{A}\\ be \\m \times n\\, \\\mathbf{B}\\ be \\n \times k\\, and \\\mathbf{C}\\ be \\k \times m\\, so that \\\mathbf{A}\mathbf{B}\\ is \\m \times k\\ and \\\mathbf{A}\mathbf{B}\mathbf{C}\\ is square. Applying [Theorem 9](#thm-trace-cyclic) to the \\m \times k\\ matrix \\\mathbf{A}\mathbf{B}\\ and the \\k \times m\\ matrix \\\mathbf{C}\\ moves the last factor of the triple product to the front ([Banerjee and Roy 2014, chap. 1](#ref-banerjee2014linear), Theorem 1.5 and eq. 1.17, p. 19):
+> *Remark 8* (Moving a factor of a triple product). Let \\\mathbf{A}\\ be \\m \times n\\, \\\mathbf{B}\\ be \\n \times k\\, and \\\mathbf{C}\\ be \\k \times m\\, so that \\\mathbf{A}\mathbf{B}\\ is \\m \times k\\ and \\\mathbf{A}\mathbf{B}\mathbf{C}\\ is square. Applying [Theorem 9](#thm-trace-cyclic) to the \\m \times k\\ matrix \\\mathbf{A}\mathbf{B}\\ and the \\k \times m\\ matrix \\\mathbf{C}\\ moves the last factor of the triple product to the front [\[6, Ch. 1\]](#ref-banerjee2014linear), Theorem 1.5 and eq. 1.17, p. 19:
 >
 > \\ \begin{aligned} \operatorname{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) &= \operatorname{tr}\mathopen{}\left((\mathbf{A}\mathbf{B})\\\mathbf{C}\right)\mathclose{} && \text{(matrix multiplication is associative)} \\ &= \operatorname{tr}\mathopen{}\left(\mathbf{C}\\(\mathbf{A}\mathbf{B})\right)\mathclose{} && \text{(the theorem, applied to the two factors } \mathbf{A}\mathbf{B} \text{ and } \mathbf{C} \text{)} \\ &= \operatorname{tr}(\mathbf{C}\mathbf{A}\mathbf{B}) && \text{(matrix multiplication is associative)} \end{aligned} \\
 >
@@ -512,7 +512,7 @@ Some special matrices appeared earlier:
 >
 > \\ \mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{} \stackrel{\text{def}}{=} \operatorname{tr}\mathopen{}\left(\underbrace{{\mathbf{A}}^{\top}\mathbf{B}}\_{p \times p}\right)\mathclose{} \\
 
-Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) defines the same inner product on \\n \times p\\ matrices with the trace.
+Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 defines the same inner product on \\n \times p\\ matrices with the trace.
 
 > **NOTE:**
 >
@@ -548,7 +548,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 15 (Frobenius norm)** The **Frobenius norm** ([Wikipedia contributors 2026e](#ref-wikipedia_frobenius_norm)) of an \\n \times p\\ matrix \\\mathbf{A}\\ is
+> **Definition 15 (Frobenius norm)** The **Frobenius norm** [\[9\]](#ref-wikipedia_frobenius_norm) of an \\n \times p\\ matrix \\\mathbf{A}\\ is
 >
 > \\ \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F \stackrel{\text{def}}{=}\sqrt{\mathopen{}\left\langle \mathbf{A}, \mathbf{A}\right\rangle\mathclose{}} \\
 >
@@ -564,7 +564,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 10* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 10](#thm-matrix-inner-product-entries), \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2\\, a sum of squares, so the square root is always defined. \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\ is the Euclidean norm ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of \\\mathbf{A}\\, listed as one vector of length \\np\\ ([Banerjee and Roy 2014, chap. 15](#ref-banerjee2014linear), Definition 15.4, p. 492).
+> *Remark 10* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 10](#thm-matrix-inner-product-entries), \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2\\, a sum of squares, so the square root is always defined. \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\ is the Euclidean norm ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of \\\mathbf{A}\\, listed as one vector of length \\np\\ [\[6, Ch. 15\]](#ref-banerjee2014linear), Definition 15.4, p. 492.
 >
 > For example, listing the entries of \\\mathbf{A}\\ in [Example 22](#exm-frobenius-norm) row by row gives the vector \\(1, 2, 3, 4)\\ of length \\2 \cdot 2 = 4\\, and
 >
@@ -634,7 +634,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 12* (Real and complex eigenvalues). These notes take \\\lambda\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ to be real. Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Definition 11.1, pp. 312-313) also allows [complex](algebra-complex.llms.md#def-complex-number) eigenvalues and eigenvectors, because some real matrices, such as a rotation by \\90\\ degrees, have no real eigenvalues ([Banerjee and Roy 2014, chap. 11](#ref-banerjee2014linear), Example 11.2, p. 312).
+> *Remark 12* (Real and complex eigenvalues). These notes take \\\lambda\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ to be real. Banerjee and Roy [\[6, Ch. 11\]](#ref-banerjee2014linear), Definition 11.1, pp. 312-313 also allows [complex](algebra-complex.llms.md#def-complex-number) eigenvalues and eigenvectors, because some real matrices, such as a rotation by \\90\\ degrees, have no real eigenvalues [\[6, Ch. 11\]](#ref-banerjee2014linear), Example 11.2, p. 312.
 >
 > For example, \\\mathbf{R} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}\\ rotates each vector in the plane counterclockwise by \\90\\ degrees: \\\mathbf{R}\\(v_1, v_2) = (-v_2, v_1)\\. Suppose \\\mathbf{R}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = \lambda\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ for a real number \\\lambda\\. Matching entries gives \\-v_2 = \lambda v_1\\ and \\v_1 = \lambda v_2\\. Substituting the second equation into the first gives \\-v_2 = \lambda^2 v_2\\, so \\(1 + \lambda^2)\\ v_2 = 0\\. Since \\1 + \lambda^2 \> 0\\, \\v_2 = 0\\, and then
 >
@@ -658,7 +658,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 13* (An equivalent form of the spectral theorem). The proof, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\, is outside the scope of these notes; see Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Theorem 11.27, p. 349), which states the result in the equivalent form \\{\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}\\. The two forms are equivalent because
+> *Remark 13* (An equivalent form of the spectral theorem). The proof, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\, is outside the scope of these notes; see Banerjee and Roy [\[6, Ch. 11\]](#ref-banerjee2014linear), Theorem 11.27, p. 349, which states the result in the equivalent form \\{\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}\\. The two forms are equivalent because
 >
 > \\ \begin{aligned} {\mathbf{Q}}^{\top}\mathbf{Q} &= \mathbf{Q}{\mathbf{Q}}^{\top} \\ &= \mathbf{I}\_p \end{aligned} \\
 >
@@ -678,7 +678,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 18 (Eigendecomposition (spectral decomposition))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries. An **eigendecomposition** ([Wikipedia contributors 2026d](#ref-wikipedia_eigendecomposition_of_a_matrix)), or **spectral decomposition**, of \\\mathbf{A}\\ is a factorization
+> **Definition 18 (Eigendecomposition (spectral decomposition))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries. An **eigendecomposition** [\[10\]](#ref-wikipedia_eigendecomposition_of_a_matrix), or **spectral decomposition**, of \\\mathbf{A}\\ is a factorization
 >
 > \\ \mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top} \\
 >
@@ -728,7 +728,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 15* (The SVD applies to every real matrix). The proof is outside the scope of these notes; see Banerjee and Roy ([2014, chap. 12](#ref-banerjee2014linear), Theorem 12.1, p. 373). Unlike the spectral theorem ([Theorem 12](#thm-spectral)), [Theorem 13](#thm-svd) applies to every real matrix, including one that is not square or not symmetric.
+> *Remark 15* (The SVD applies to every real matrix). The proof is outside the scope of these notes; see Banerjee and Roy [\[6, Ch. 12\]](#ref-banerjee2014linear), Theorem 12.1, p. 373. Unlike the spectral theorem ([Theorem 12](#thm-spectral)), [Theorem 13](#thm-svd) applies to every real matrix, including one that is not square or not symmetric.
 >
 > For example, the \\1 \times 2\\ matrix \\\mathbf{A} = \begin{bmatrix} 1 & 1 \end{bmatrix}\\ is not square, so [Theorem 12](#thm-spectral) does not apply to it. It has rank \\1\\, and [Theorem 13](#thm-svd) holds with \\\mathbf{U} = \begin{bmatrix} 1 \end{bmatrix}\\, \\\mathbf{D} = \begin{bmatrix} \sqrt{2} & 0 \end{bmatrix}\\, and \\\mathbf{V}\\ the orthogonal matrix \\\mathbf{Q}\\ from [Example 26](#exm-spectral), which is symmetric, so \\{\mathbf{V}}^{\top} = \mathbf{V}\\:
 >
@@ -742,7 +742,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 19 (Singular value decomposition)** Let \\\mathbf{A}\\ be an \\n \times p\\ matrix with real entries and \\\operatorname{rank}(\mathbf{A}) = r\\. A **singular value decomposition** ([Wikipedia contributors 2026k](#ref-wikipedia_singular_value_decomposition)) (SVD) of \\\mathbf{A}\\ is a factorization \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ with \\\mathbf{U}\\, \\\mathbf{D}\\ and \\\mathbf{V}\\ as in [Theorem 13](#thm-svd).
+> **Definition 19 (Singular value decomposition)** Let \\\mathbf{A}\\ be an \\n \times p\\ matrix with real entries and \\\operatorname{rank}(\mathbf{A}) = r\\. A **singular value decomposition** [\[11\]](#ref-wikipedia_singular_value_decomposition) (SVD) of \\\mathbf{A}\\ is a factorization \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ with \\\mathbf{U}\\, \\\mathbf{D}\\ and \\\mathbf{V}\\ as in [Theorem 13](#thm-svd).
 
 > **NOTE:**
 >
@@ -782,7 +782,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 16* (An SVD is not unique). An SVD is not unique ([Banerjee and Roy 2014, chap. 12](#ref-banerjee2014linear), Examples 12.2 and 12.3, p. 378). For any \\i \le r\\, multiplying column \\i\\ of both \\\mathbf{U}\\ and \\\mathbf{V}\\ by \\-1\\ gives another one. The singular values do not depend on which SVD is chosen ([Banerjee and Roy 2014, chap. 12](#ref-banerjee2014linear), pp. 371 and 378).
+> *Remark 16* (An SVD is not unique). An SVD is not unique [\[6, Ch. 12\]](#ref-banerjee2014linear), Examples 12.2 and 12.3, p. 378. For any \\i \le r\\, multiplying column \\i\\ of both \\\mathbf{U}\\ and \\\mathbf{V}\\ by \\-1\\ gives another one. The singular values do not depend on which SVD is chosen [\[6, Ch. 12\]](#ref-banerjee2014linear), pp. 371 and 378.
 >
 > For example, in [Example 27](#exm-svd), multiplying the first columns of \\\mathbf{U}\\ and \\\mathbf{V}\\ by \\-1\\ gives
 >
@@ -860,7 +860,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 18* (Building an SVD from an eigendecomposition). [Theorem 14](#thm-svd-evd) matches Banerjee and Roy ([2014, chap. 12](#ref-banerjee2014linear), pp. 372-373), which works in the other direction: it constructs an SVD from a spectral decomposition of \\{\mathbf{A}}^{\top}\mathbf{A}\\ and sets \\\sigma_i = \sqrt{\lambda_i}\\.
+> *Remark 18* (Building an SVD from an eigendecomposition). [Theorem 14](#thm-svd-evd) matches Banerjee and Roy [\[6, Ch. 12\]](#ref-banerjee2014linear), pp. 372-373, which works in the other direction: it constructs an SVD from a spectral decomposition of \\{\mathbf{A}}^{\top}\mathbf{A}\\ and sets \\\sigma_i = \sqrt{\lambda_i}\\.
 >
 > For example, in [Example 28](#exm-svd-evd) the eigenvalues of \\{\mathbf{A}}^{\top}\mathbf{A}\\ are \\4\\ and \\2\\, and \\\sqrt{4} = 2\\ and \\\sqrt{2}\\ are the singular values \\\sigma_1\\ and \\\sigma_2\\ of \\\mathbf{A}\\ from [Example 27](#exm-svd).
 
@@ -868,7 +868,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 21 (Positive semidefinite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive semidefinite** ([Wikipedia contributors 2026a](#ref-wikipedia_definite_matrix)) if it satisfies both conditions:
+> **Definition 21 (Positive semidefinite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive semidefinite** [\[12\]](#ref-wikipedia_definite_matrix) if it satisfies both conditions:
 >
 > - \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)).
 > - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ is non-negative: \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \ge 0\\ for every vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ of length \\p\\.
@@ -883,7 +883,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 22 (Positive definite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive definite** ([Wikipedia contributors 2026a](#ref-wikipedia_definite_matrix)) if it satisfies both conditions:
+> **Definition 22 (Positive definite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive definite** [\[12\]](#ref-wikipedia_definite_matrix) if it satisfies both conditions:
 >
 > - \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)).
 > - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ at a nonzero vector is positive: \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \> 0\\ for every vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\neq \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ of length \\p\\.
@@ -916,7 +916,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > So no real \\\lambda\\ has an eigenvector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \neq \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\.
 
-See also ([Wikipedia contributors 2026a](#ref-wikipedia_definite_matrix)).
+See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
@@ -982,7 +982,7 @@ See also ([Wikipedia contributors 2026a](#ref-wikipedia_definite_matrix)).
 
 > **NOTE:**
 >
-> **Definition 23 (Paraboloid)** A **paraboloid** ([Wikipedia contributors 2026i](#ref-wikipedia_paraboloid)) in \\\mathbb{R}^{p+1}\\ is the graph \\\mathopen{}\left\\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})) \mid \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\right\\\mathclose{}\\ of a function
+> **Definition 23 (Paraboloid)** A **paraboloid** [\[13\]](#ref-wikipedia_paraboloid) in \\\mathbb{R}^{p+1}\\ is the graph \\\mathopen{}\left\\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})) \mid \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\right\\\mathclose{}\\ of a function
 >
 > \\ f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + c, \\
 >
@@ -1156,7 +1156,7 @@ See also ([Wikipedia contributors 2026a](#ref-wikipedia_definite_matrix)).
 
 > **NOTE:**
 >
-> **Definition 26 (Determinant)** The **determinant** ([Wikipedia contributors 2026b](#ref-wikipedia_determinant)) of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
+> **Definition 26 (Determinant)** The **determinant** [\[14\]](#ref-wikipedia_determinant) of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
 >
 > - For \\p = 1\\, \\\det(\mathbf{A}) = a\_{11}\\.
 > - For \\p \ge 2\\, \\ \det(\mathbf{A}) = \sum\_{j=1}^p(-1)^{1+j}\\ a\_{1j} \det\mathopen{}\left(\mathbf{A}\_{(1j)}\right)\mathclose{}, \\ where \\\mathbf{A}\_{(1j)}\\ is the \\(p-1) \times (p-1)\\ matrix left after deleting row \\1\\ and column \\j\\ of \\\mathbf{A}\\.
@@ -1173,13 +1173,13 @@ See also ([Wikipedia contributors 2026a](#ref-wikipedia_definite_matrix)).
 
 > **NOTE:**
 >
-> *Remark 21* (Cofactor expansion). The recursive formula in [Definition 26](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree ([Banerjee and Roy 2014](#ref-banerjee2014linear)).
+> *Remark 21* (Cofactor expansion). The recursive formula in [Definition 26](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree [\[6\]](#ref-banerjee2014linear).
 >
 > Each ordering picks one entry from each row, from the column that the ordering assigns to that row, and multiplies them. Its sign is \\+1\\ if the ordering takes an even number of swaps of two columns to reach from \\(1, 2, \ldots, p)\\, and \\-1\\ if it takes an odd number.
 >
 > For \\p = 2\\, the columns have two orderings. The ordering \\(1, 2)\\ keeps each column in place, picks the entries \\a\_{11}\\ and \\a\_{22}\\, and has sign \\+1\\. The ordering \\(2, 1)\\ swaps the two columns, picks the entries \\a\_{12}\\ and \\a\_{21}\\, and has sign \\-1\\. The sum \\a\_{11} a\_{22} - a\_{12} a\_{21}\\ is the value \\a d - b c\\ from [Example 36](#exm-determinant).
 
-See also ([Wikipedia contributors 2026b](#ref-wikipedia_determinant)).
+See also [\[14\]](#ref-wikipedia_determinant).
 
 > **TIP:**
 >
@@ -1231,9 +1231,9 @@ See also ([Wikipedia contributors 2026b](#ref-wikipedia_determinant)).
 
 > **NOTE:**
 >
-> *Remark 22* (An example is not a proof). [Example 38](#exm-det-product) checks [Theorem 20](#thm-det-product) for one pair of \\2 \times 2\\ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy ([2014](#ref-banerjee2014linear)).
+> *Remark 22* (An example is not a proof). [Example 38](#exm-det-product) checks [Theorem 20](#thm-det-product) for one pair of \\2 \times 2\\ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy [\[6\]](#ref-banerjee2014linear).
 
-See also ([Wikipedia contributors 2026b](#ref-wikipedia_determinant)).
+See also [\[14\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
@@ -1271,60 +1271,88 @@ See also ([Wikipedia contributors 2026b](#ref-wikipedia_determinant)).
 
 ## Further reading
 
-- Wikipedia contributors ([2026l](#ref-wikipedia_symmetric_matrix)) — symmetric matrices and their spectral properties
+- Wikipedia contributors [\[1\]](#ref-wikipedia_symmetric_matrix) — symmetric matrices and their spectral properties
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_diagonal_matrix)) — diagonal matrices
+- Wikipedia contributors [\[2\]](#ref-wikipedia_diagonal_matrix) — diagonal matrices
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_invertible_matrix)) — invertible matrices and how to invert them
+- Wikipedia contributors [\[3\]](#ref-wikipedia_invertible_matrix) — invertible matrices and how to invert them
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_orthogonal_matrix)) — orthogonal matrices
+- Wikipedia contributors [\[5\]](#ref-wikipedia_orthogonal_matrix) — orthogonal matrices
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_idempotent_matrix)) — idempotent matrices
+- Wikipedia contributors [\[4\]](#ref-wikipedia_idempotent_matrix) — idempotent matrices
 
-- Wikipedia contributors ([2026m](#ref-wikipedia_trace_linear_algebra)) — the trace and its properties
+- Wikipedia contributors [\[8\]](#ref-wikipedia_trace_linear_algebra) — the trace and its properties
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_determinant)) — the determinant, its properties and computation
+- Wikipedia contributors [\[14\]](#ref-wikipedia_determinant) — the determinant, its properties and computation
 
-- Wikipedia contributors ([2026j](#ref-wikipedia_quadratic_form)) — quadratic forms
+- Wikipedia contributors [\[7\]](#ref-wikipedia_quadratic_form) — quadratic forms
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_definite_matrix)) — positive-definite and positive-semidefinite matrices
+- Wikipedia contributors [\[12\]](#ref-wikipedia_definite_matrix) — positive-definite and positive-semidefinite matrices
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_eigendecomposition_of_a_matrix)) — the eigendecomposition
+- Wikipedia contributors [\[10\]](#ref-wikipedia_eigendecomposition_of_a_matrix) — the eigendecomposition
 
-- Wikipedia contributors ([2026k](#ref-wikipedia_singular_value_decomposition)) — the singular value decomposition and its uses
+- Wikipedia contributors [\[11\]](#ref-wikipedia_singular_value_decomposition) — the singular value decomposition and its uses
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_frobenius_norm)) — the Frobenius norm of a matrix
+- Wikipedia contributors [\[9\]](#ref-wikipedia_frobenius_norm) — the Frobenius norm of a matrix
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_paraboloid)) — paraboloids and their level sets
+- Wikipedia contributors [\[13\]](#ref-wikipedia_paraboloid) — paraboloids and their level sets
 
 Back to top
 
 ## References
 
-Banerjee, Sudipto, and Anindya Roy. 2014. *Linear Algebra and Matrix Analysis for Statistics*. Vol. 181. Crc Press Boca Raton. <https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388>.
+\[1\]
 
-Wikipedia contributors. 2026a. *Definite Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Definite_matrix>.
+Wikipedia contributors, “Symmetric matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Symmetric_matrix>
 
-Wikipedia contributors. 2026b. *Determinant — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Determinant>.
+\[2\]
 
-Wikipedia contributors. 2026c. *Diagonal Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Diagonal_matrix>.
+Wikipedia contributors, “Diagonal matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Diagonal_matrix>
 
-Wikipedia contributors. 2026d. *Eigendecomposition of a Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix>.
+\[3\]
 
-Wikipedia contributors. 2026e. *Frobenius Norm — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Frobenius_norm>.
+Wikipedia contributors, “Invertible matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Invertible_matrix>
 
-Wikipedia contributors. 2026f. *Idempotent Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Idempotent_matrix>.
+\[4\]
 
-Wikipedia contributors. 2026g. *Invertible Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Invertible_matrix>.
+Wikipedia contributors, “Idempotent matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Idempotent_matrix>
 
-Wikipedia contributors. 2026h. *Orthogonal Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Orthogonal_matrix>.
+\[5\]
 
-Wikipedia contributors. 2026i. *Paraboloid — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Paraboloid>.
+Wikipedia contributors, “Orthogonal matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Orthogonal_matrix>
 
-Wikipedia contributors. 2026j. *Quadratic Form — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Quadratic_form>.
+\[6\]
 
-Wikipedia contributors. 2026k. *Singular Value Decomposition — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Singular_value_decomposition>.
+S. Banerjee and A. Roy, *Linear algebra and matrix analysis for statistics*, vol. 181. Crc Press Boca Raton, 2014. Available: <https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388>
 
-Wikipedia contributors. 2026l. *Symmetric Matrix — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Symmetric_matrix>.
+\[7\]
 
-Wikipedia contributors. 2026m. *Trace (Linear Algebra) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Trace_(linear_algebra)>.
+Wikipedia contributors, “Quadratic form — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quadratic_form>
+
+\[8\]
+
+Wikipedia contributors, “Trace (linear algebra) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Trace_(linear_algebra)>
+
+\[9\]
+
+Wikipedia contributors, “Frobenius norm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Frobenius_norm>
+
+\[10\]
+
+Wikipedia contributors, “Eigendecomposition of a matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix>
+
+\[11\]
+
+Wikipedia contributors, “Singular value decomposition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Singular_value_decomposition>
+
+\[12\]
+
+Wikipedia contributors, “Definite matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Definite_matrix>
+
+\[13\]
+
+Wikipedia contributors, “Paraboloid — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Paraboloid>
+
+\[14\]
+
+Wikipedia contributors, “Determinant — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Determinant>

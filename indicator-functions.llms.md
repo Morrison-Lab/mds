@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Indicator functions
 
@@ -19,7 +19,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Definition 1 (Indicator function (set indicator))** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\, ([Wikipedia contributors 2026b](#ref-wikipedia_indicator_function)) or **set indicator**, is the function \\\mathbb{1}\_{A} : \Omega\to \\0, 1\\\\ defined by:
+> **Definition 1 (Indicator function (set indicator))** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\, [\[1\]](#ref-wikipedia_indicator_function) or **set indicator**, is the function \\\mathbb{1}\_{A} : \Omega\to \\0, 1\\\\ defined by:
 >
 > \\ \mathbb{1}\_{A}(x) \stackrel{\text{def}}{=}\begin{cases} 1, & x \in A \\ 0, & x \notin A \end{cases} \\
 
@@ -98,7 +98,7 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 
 > **NOTE:**
 >
-> **Definition 6 (Support of a distribution)** The **support** of a discrete distribution ([Wikipedia contributors 2026e](#ref-wikipedia_support_measure_theory)) is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.
+> **Definition 6 (Support of a distribution)** The **support** of a discrete distribution [\[2\]](#ref-wikipedia_support_measure_theory) is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.
 
 > **NOTE:**
 >
@@ -111,11 +111,11 @@ Set notation is more natural when the underlying set \\A\\ has a standard name (
 
 ### 1.2 Iverson bracket notation
 
-In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the Iverson bracket ([Wikipedia contributors 2026c](#ref-wikipedia_iverson_bracket)).
+In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the Iverson bracket [\[3\]](#ref-wikipedia_iverson_bracket).
 
 > **NOTE:**
 >
-> **Definition 7 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is ([Wikipedia contributors 2026c](#ref-wikipedia_iverson_bracket))
+> **Definition 7 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is [\[3\]](#ref-wikipedia_iverson_bracket)
 >
 > \\ \[P\] \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
@@ -139,7 +139,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> **Definition 8 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is ([Wikipedia contributors 2026d](#ref-wikipedia_kronecker_delta))
+> **Definition 8 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is [\[4\]](#ref-wikipedia_kronecker_delta)
 >
 > \\\delta\_{ij} \stackrel{\text{def}}{=}\[i = j\]\\
 >
@@ -201,7 +201,7 @@ Indicator functions translate the logical connectives ([definition](proof-writin
 
 > **NOTE:**
 >
-> **Definition 9 (Idempotent)** A number \\a\\ is **idempotent** ([Wikipedia contributors 2026a](#ref-wikipedia_idempotence)) if \\a \cdot a = a\\. A function \\f\\ with real values is **idempotent** if \\f(x) \cdot f(x) = f(x)\\ for every \\x\\ in its [domain](functions.llms.md#def-domain).
+> **Definition 9 (Idempotent)** A number \\a\\ is **idempotent** [\[5\]](#ref-wikipedia_idempotence) if \\a \cdot a = a\\. A function \\f\\ with real values is **idempotent** if \\f(x) \cdot f(x) = f(x)\\ for every \\x\\ in its [domain](functions.llms.md#def-domain).
 
 > **NOTE:**
 >
@@ -239,26 +239,36 @@ This [identity](algebra-basics.llms.md#def-identity) turns probabilities into ex
 
 ## Further reading
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_indicator_function)) — indicator functions and their uses
+- Wikipedia contributors [\[1\]](#ref-wikipedia_indicator_function) — indicator functions and their uses
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_iverson_bracket)) — the Iverson bracket
+- Wikipedia contributors [\[3\]](#ref-wikipedia_iverson_bracket) — the Iverson bracket
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_kronecker_delta)) — the Kronecker delta
+- Wikipedia contributors [\[4\]](#ref-wikipedia_kronecker_delta) — the Kronecker delta
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_support_measure_theory)) — the support of a function or measure
+- Wikipedia contributors [\[2\]](#ref-wikipedia_support_measure_theory) — the support of a function or measure
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_idempotence)) — idempotent operations and functions
+- Wikipedia contributors [\[5\]](#ref-wikipedia_idempotence) — idempotent operations and functions
 
 Back to top
 
 ## References
 
-Wikipedia contributors. 2026a. *Idempotence — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Idempotence>.
+\[1\]
 
-Wikipedia contributors. 2026b. *Indicator Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Indicator_function>.
+Wikipedia contributors, “Indicator function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Indicator_function>
 
-Wikipedia contributors. 2026c. *Iverson Bracket — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Iverson_bracket>.
+\[2\]
 
-Wikipedia contributors. 2026d. *Kronecker Delta — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Kronecker_delta>.
+Wikipedia contributors, “Support (measure theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Support_(measure_theory)>
 
-Wikipedia contributors. 2026e. *Support (Measure Theory) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Support_(measure_theory)>.
+\[3\]
+
+Wikipedia contributors, “Iverson bracket — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Iverson_bracket>
+
+\[4\]
+
+Wikipedia contributors, “Kronecker delta — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Kronecker_delta>
+
+\[5\]
+
+Wikipedia contributors, “Idempotence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Idempotence>

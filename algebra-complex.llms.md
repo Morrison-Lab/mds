@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Complex numbers
 
 > **NOTE:**
 >
-> **Definition 1 (Imaginary unit)** The **imaginary unit** \\i\\ is a number whose square is \\-1\\ ([Wikipedia contributors 2026c](#ref-wikipedia_imaginary_unit)):
+> **Definition 1 (Imaginary unit)** The **imaginary unit** \\i\\ is a number whose square is \\-1\\ [\[1\]](#ref-wikipedia_imaginary_unit):
 >
 > \\i^2 \stackrel{\text{def}}{=}-1.\\
 >
@@ -20,7 +20,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 > - sums and products with \\i\\ are [associative](algebra-sums.llms.md#def-associative);
 > - multiplication [distributes](algebra-sums.llms.md#def-distributive) over addition.
 
-Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigorous: it defines a complex number as an ordered pair \\(a, b)\\ of real numbers, written \\a + bi\\, defines addition and multiplication of such pairs, writes \\0 + 1i\\ as \\i\\, and leaves it to the reader to verify that \\i^2 = -1\\.
+Axler [\[2\]](#ref-axler2024linear), Definition 1.1, p. 2 makes this idea rigorous: it defines a complex number as an ordered pair \\(a, b)\\ of real numbers, written \\a + bi\\, defines addition and multiplication of such pairs, writes \\0 + 1i\\ as \\i\\, and leaves it to the reader to verify that \\i^2 = -1\\.
 
 > **NOTE:**
 >
@@ -74,7 +74,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
-> **Definition 2 (Complex number)** A **complex number** ([Wikipedia contributors 2026b](#ref-wikipedia_complex_number)) is a number of the form
+> **Definition 2 (Complex number)** A **complex number** [\[3\]](#ref-wikipedia_complex_number) is a number of the form
 >
 > \\z = a + b\\i,\\
 >
@@ -92,7 +92,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 >
 > **Definition 5 (Equal complex numbers)** Two complex numbers ([Definition 2](#def-complex-number)) are **equal** exactly when their real parts ([Definition 3](#def-real-part)) are equal and their imaginary parts ([Definition 4](#def-imaginary-part)) are equal.
 
-Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}\\ as the set of ordered pairs \\(a, b)\\ of real numbers, written \\a + bi\\, and Axler ([2024](#ref-axler2024linear), Definition 4.1, p. 120) defines the real and imaginary parts.
+Axler [\[2\]](#ref-axler2024linear), Definition 1.1, p. 2 defines \\\mathbb{C}\\ as the set of ordered pairs \\(a, b)\\ of real numbers, written \\a + bi\\, and Axler [\[2\]](#ref-axler2024linear), Definition 4.1, p. 120 defines the real and imaginary parts.
 
 > **NOTE:**
 >
@@ -147,7 +147,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 >
 > \\ \begin{aligned} (a + b\\i)(c + d\\i) &= ac + ad\\i + bc\\i + bd\\i^2 && \text{(distribute)} \\ &= ac + ad\\i + bc\\i - bd && \text{(}\href{#def-imaginary-unit}{\text{Definition~1}}\text{)} \\ &= (ac - bd) + (ad + bc)\\i && \text{(group the real terms and the terms with } i \text{)} \end{aligned} \\
 
-Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) takes these two formulas as the definitions of addition and multiplication.
+Axler [\[2\]](#ref-axler2024linear), Definition 1.1, p. 2 takes these two formulas as the definitions of addition and multiplication.
 
 > **NOTE:**
 >
@@ -169,11 +169,11 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) takes these two form
 
 > **NOTE:**
 >
-> **Definition 6 (Complex conjugate)** The **complex conjugate** ([Wikipedia contributors 2026a](#ref-wikipedia_complex_conjugate)) of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
+> **Definition 6 (Complex conjugate)** The **complex conjugate** [\[4\]](#ref-wikipedia_complex_conjugate) of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
 >
 > \\\overline{z} \stackrel{\text{def}}{=}a - b\\i.\\
 
-Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same definition, as \\\overline{z} = \operatorname{Re} z - (\operatorname{Im} z)\\i\\.
+Axler [\[2\]](#ref-axler2024linear), Definition 4.2, p. 120 gives the same definition, as \\\overline{z} = \operatorname{Re} z - (\operatorname{Im} z)\\i\\.
 
 > **NOTE:**
 >
@@ -189,11 +189,11 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Definition 7 (Absolute value (modulus) of a complex number)** The **absolute value**, or **modulus** ([Wikipedia contributors 2026b](#ref-wikipedia_complex_number)), of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
+> **Definition 7 (Absolute value (modulus) of a complex number)** The **absolute value**, or **modulus** [\[3\]](#ref-wikipedia_complex_number), of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
 >
 > \\\mathopen{}\left\|z\right\|\mathclose{} \stackrel{\text{def}}{=}\sqrt{a^2 + b^2}.\\
 
-Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same definition.
+Axler [\[2\]](#ref-axler2024linear), Definition 4.2, p. 120 gives the same definition.
 
 > **NOTE:**
 >
@@ -225,7 +225,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 >
 > \\ \begin{aligned} z\\\overline{z} &= (a + b\\i)(a - b\\i) && \text{(}\href{#def-complex-conjugate}{\text{Definition~6}}\text{)} \\ &= a^2 - ab\\i + ab\\i - b^2\\i^2 && \text{(distribute)} \\ &= a^2 - b^2\\i^2 && \text{(cancel } ab\\i \text{)} \\ &= a^2 + b^2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~1}}\text{)} \\ &= \mathopen{}\left\|z\right\|\mathclose{}^2 && \text{(}\href{#def-complex-modulus}{\text{Definition~7}}\text{)} \end{aligned} \\
 
-Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity among the properties of complex numbers.
+Axler [\[2\]](#ref-axler2024linear), result 4.4, p. 121 lists this identity among the properties of complex numbers.
 
 > **NOTE:**
 >
@@ -235,20 +235,28 @@ Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity am
 
 ## Further reading
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_imaginary_unit)) — the imaginary unit and its powers
+- Wikipedia contributors [\[1\]](#ref-wikipedia_imaginary_unit) — the imaginary unit and its powers
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_complex_number)) — complex numbers, with their arithmetic, conjugate and modulus
+- Wikipedia contributors [\[3\]](#ref-wikipedia_complex_number) — complex numbers, with their arithmetic, conjugate and modulus
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_complex_conjugate)) — the complex conjugate and its properties
+- Wikipedia contributors [\[4\]](#ref-wikipedia_complex_conjugate) — the complex conjugate and its properties
 
 Back to top
 
 ## References
 
-Axler, Sheldon. 2024. *Linear Algebra Done Right*. 4th ed. Undergraduate Texts in Mathematics. Springer. <https://doi.org/10.1007/978-3-031-41026-0>.
+\[1\]
 
-Wikipedia contributors. 2026a. *Complex Conjugate — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Complex_conjugate>.
+Wikipedia contributors, “Imaginary unit — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Imaginary_unit>
 
-Wikipedia contributors. 2026b. *Complex Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Complex_number>.
+\[2\]
 
-Wikipedia contributors. 2026c. *Imaginary Unit — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Imaginary_unit>.
+S. Axler, *Linear algebra done right*, 4th ed. in Undergraduate texts in mathematics. Springer, 2024. doi: [10.1007/978-3-031-41026-0](https://doi.org/10.1007/978-3-031-41026-0).
+
+\[3\]
+
+Wikipedia contributors, “Complex number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Complex_number>
+
+\[4\]
+
+Wikipedia contributors, “Complex conjugate — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Complex_conjugate>

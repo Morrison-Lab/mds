@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Vectors
 
@@ -29,7 +29,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Column vector)** A **column vector** ([Wikipedia contributors 2026e](#ref-wikipedia_row_and_column_vectors)) of length \\p\\ is an ordered list of \\p\\ [real numbers](number-systems.llms.md#def-real-numbers), written vertically as a \\p \times 1\\ array:
+> **Definition 1 (Column vector)** A **column vector** [\[1\]](#ref-wikipedia_row_and_column_vectors) of length \\p\\ is an ordered list of \\p\\ [real numbers](number-systems.llms.md#def-real-numbers), written vertically as a \\p \times 1\\ array:
 >
 > \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \begin{bmatrix} x\_{1} \\ x\_{2} \\ \vdots \\ x\_{p} \end{bmatrix} \\
 
@@ -53,7 +53,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Scalar)** In linear algebra, a **scalar** ([Wikipedia contributors 2026f](#ref-wikipedia_scalar_mathematics)) is a single [real number](number-systems.llms.md#def-real-numbers), as opposed to a vector or a matrix, which holds several numbers.
+> **Definition 3 (Scalar)** In linear algebra, a **scalar** [\[2\]](#ref-wikipedia_scalar_mathematics) is a single [real number](number-systems.llms.md#def-real-numbers), as opposed to a vector or a matrix, which holds several numbers.
 
 > **NOTE:**
 >
@@ -103,9 +103,9 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 See also the definitions in:
 
-- Dobson and Barnett ([2018](#ref-dobson4e)), Section 1.3 (equation 1.1, page 7)
+- Dobson and Barnett [\[3\]](#ref-dobson4e), Section 1.3 (equation 1.1, page 7)
 
-- Kaplan ([2022](#ref-mosaiccalc)), chapter on vectors
+- Kaplan [\[4\]](#ref-mosaiccalc), chapter on vectors
 
 - [wikipedia](https://en.wikipedia.org/wiki/Linear_combination)
 
@@ -169,7 +169,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 12 (Mean (average, sample mean))** The **mean** ([Wikipedia contributors 2026a](#ref-wikipedia_arithmetic_mean)) (or **average**) of \\n\\ numbers \\y_1, \ldots, y_n\\ is their [sum](algebra-sums.llms.md#def-summation) divided by how many there are:
+> **Definition 12 (Mean (average, sample mean))** The **mean** [\[5\]](#ref-wikipedia_arithmetic_mean) (or **average**) of \\n\\ numbers \\y_1, \ldots, y_n\\ is their [sum](algebra-sums.llms.md#def-summation) divided by how many there are:
 >
 > \\\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum\_{i=1}^ny_i\\
 
@@ -203,7 +203,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 14 (Indicator vector (standard basis vector))** The \\j\\-th **indicator vector** (or **standard basis vector** ([Wikipedia contributors 2026g](#ref-wikipedia_standard_basis)) ) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ of length \\p\\ has a \\1\\ in position \\j\\ and \\0\\s elsewhere:
+> **Definition 14 (Indicator vector (standard basis vector))** The \\j\\-th **indicator vector** (or **standard basis vector** [\[6\]](#ref-wikipedia_standard_basis) ) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ of length \\p\\ has a \\1\\ in position \\j\\ and \\0\\s elsewhere:
 >
 > \\ (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j)\_i = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases} \qquad \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j = \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix} \leftarrow \text{position } j \\
 
@@ -243,7 +243,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 15 (Orthogonal vectors)** Two vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ of the same length are **orthogonal** ([Wikipedia contributors 2026d](#ref-wikipedia_orthogonality)) (written \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\perp \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\) if their dot product ([Definition 8](#def-dot-product)) is zero:
+> **Definition 15 (Orthogonal vectors)** Two vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ of the same length are **orthogonal** [\[7\]](#ref-wikipedia_orthogonality) (written \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\perp \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\) if their dot product ([Definition 8](#def-dot-product)) is zero:
 >
 > \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\perp \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\iff \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= 0\\
 
@@ -263,7 +263,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 16 (Euclidean norm (length, \\L_2\\ norm))** The **Euclidean norm** ([Wikipedia contributors 2026c](#ref-wikipedia_euclidean_vector)) (or **length**, also called the **\\L_2\\ norm** and written \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\_2\\) of a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ of length \\p\\ is
+> **Definition 16 (Euclidean norm (length, \\L_2\\ norm))** The **Euclidean norm** [\[8\]](#ref-wikipedia_euclidean_vector) (or **length**, also called the **\\L_2\\ norm** and written \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\_2\\) of a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ of length \\p\\ is
 >
 > \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} = \sqrt{\sum\_{i=1}^px_i^2} \tag{2}\\
 >
@@ -279,7 +279,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 17 (Unit vector)** A **unit vector** ([Wikipedia contributors 2026h](#ref-wikipedia_unit_vector)) is a vector whose Euclidean norm ([Definition 16](#def-euclidean-norm)) is \\1\\. A unit vector is said to have *unit length*.
+> **Definition 17 (Unit vector)** A **unit vector** [\[9\]](#ref-wikipedia_unit_vector) is a vector whose Euclidean norm ([Definition 16](#def-euclidean-norm)) is \\1\\. A unit vector is said to have *unit length*.
 
 > **NOTE:**
 >
@@ -315,7 +315,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 18 (Euclidean distance)** The **Euclidean distance** ([Wikipedia contributors 2026b](#ref-wikipedia_euclidean_distance)) between two vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ of length \\p\\ is the [Euclidean norm](#def-euclidean-norm) of their difference:
+> **Definition 18 (Euclidean distance)** The **Euclidean distance** [\[10\]](#ref-wikipedia_euclidean_distance) between two vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ of length \\p\\ is the [Euclidean norm](#def-euclidean-norm) of their difference:
 >
 > \\d(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = \sqrt{\sum\_{i=1}^p(x_i - y_i)^2} \tag{3}\\
 
@@ -325,7 +325,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > \\ \begin{aligned} d(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}) &= \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\rVert\mathclose{} \\ &= \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \end{aligned} \\
 >
-> ([Goodfellow et al. 2016, 39](#ref-goodfellow2016deep)).
+> [\[11, p. 39\]](#ref-goodfellow2016deep).
 >
 > For example, the distance from \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ to \\(3, 4)\\ is \\\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\\, as in [Example 11](#exm-euclidean-norm).
 
@@ -406,50 +406,74 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **TIP:**
 >
-> Hutchinson’s [Linear Function Basics](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics) (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)) and [level sets](vector-calculus.llms.md#def-level-set) ([Hutchinson, n.d.](#ref-hutchinson_wwu_ml_videos)). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
+> Hutchinson’s [Linear Function Basics](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics) (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)) and [level sets](vector-calculus.llms.md#def-level-set) [\[12\]](#ref-hutchinson_wwu_ml_videos). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
 
 ## Further reading
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_row_and_column_vectors)) — row and column vectors
+- Wikipedia contributors [\[1\]](#ref-wikipedia_row_and_column_vectors) — row and column vectors
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_euclidean_vector)) — vectors in Euclidean space, with their length and direction
+- Wikipedia contributors [\[8\]](#ref-wikipedia_euclidean_vector) — vectors in Euclidean space, with their length and direction
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_scalar_mathematics)) — scalars
+- Wikipedia contributors [\[2\]](#ref-wikipedia_scalar_mathematics) — scalars
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_arithmetic_mean)) — the arithmetic mean and other averages
+- Wikipedia contributors [\[5\]](#ref-wikipedia_arithmetic_mean) — the arithmetic mean and other averages
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_orthogonality)) — orthogonality in mathematics
+- Wikipedia contributors [\[7\]](#ref-wikipedia_orthogonality) — orthogonality in mathematics
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_unit_vector)) — unit vectors
+- Wikipedia contributors [\[9\]](#ref-wikipedia_unit_vector) — unit vectors
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_euclidean_distance)) — Euclidean distance
+- Wikipedia contributors [\[10\]](#ref-wikipedia_euclidean_distance) — Euclidean distance
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_standard_basis)) — the standard basis
+- Wikipedia contributors [\[6\]](#ref-wikipedia_standard_basis) — the standard basis
 
 Back to top
 
 ## References
 
-Dobson, Annette J, and Adrian G Barnett. 2018. *An Introduction to Generalized Linear Models*. 4th ed. CRC press. <https://doi.org/10.1201/9781315182780>.
+\[1\]
 
-Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. *Deep Learning*. MIT Press. <https://www.deeplearningbook.org/>.
+Wikipedia contributors, “Row and column vectors — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Row_and_column_vectors>
 
-Hutchinson, Brian. n.d. *DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures*. Western Washington University. Accessed September 28, 2026. <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>.
+\[2\]
 
-Kaplan, Daniel. 2022. *MOSAIC Calculus*. Www.mosaic-web.org. [www.mosaic-web.org](https://www.mosaic-web.org).
+Wikipedia contributors, “Scalar (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Scalar_(mathematics)>
 
-Wikipedia contributors. 2026a. *Arithmetic Mean — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Arithmetic_mean>.
+\[3\]
 
-Wikipedia contributors. 2026b. *Euclidean Distance — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Euclidean_distance>.
+A. J. Dobson and A. G. Barnett, *An introduction to generalized linear models*, 4th ed. CRC press, 2018. doi: [10.1201/9781315182780](https://doi.org/10.1201/9781315182780).
 
-Wikipedia contributors. 2026c. *Euclidean Vector — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Euclidean_vector>.
+\[4\]
 
-Wikipedia contributors. 2026d. *Orthogonality — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Orthogonality>.
+D. Kaplan, *MOSAIC calculus*. www.mosaic-web.org, 2022. Available: [www.mosaic-web.org](https://www.mosaic-web.org)
 
-Wikipedia contributors. 2026e. *Row and Column Vectors — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Row_and_column_vectors>.
+\[5\]
 
-Wikipedia contributors. 2026f. *Scalar (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Scalar_(mathematics)>.
+Wikipedia contributors, “Arithmetic mean — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Arithmetic_mean>
 
-Wikipedia contributors. 2026g. *Standard Basis — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Standard_basis>.
+\[6\]
 
-Wikipedia contributors. 2026h. *Unit Vector — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Unit_vector>.
+Wikipedia contributors, “Standard basis — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Standard_basis>
+
+\[7\]
+
+Wikipedia contributors, “Orthogonality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Orthogonality>
+
+\[8\]
+
+Wikipedia contributors, “Euclidean vector — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Euclidean_vector>
+
+\[9\]
+
+Wikipedia contributors, “Unit vector — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Unit_vector>
+
+\[10\]
+
+Wikipedia contributors, “Euclidean distance — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Euclidean_distance>
+
+\[11\]
+
+I. Goodfellow, Y. Bengio, and A. Courville, *Deep learning*. MIT Press, 2016. Available: <https://www.deeplearningbook.org/>
+
+\[12\]
+
+B. Hutchinson, “DATA 471/571 (machine learning) and CSCI 481/581 (deep learning) video lectures.” Western Washington University. Accessed: Sep. 28, 2026. \[Online\]. Available: <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>

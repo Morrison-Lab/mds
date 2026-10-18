@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Sums and direct sums
 
 > **NOTE:**
 >
-> This section, [Section 2](#sec-orthogonal-complements) and [Section 3](#sec-fundamental-theorem) are adapted from Zhou ([2024](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)) instead.
+> This section, [Section 2](#sec-orthogonal-complements) and [Section 3](#sec-fundamental-theorem) are adapted from Zhou [\[1\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)) instead.
 
 > **NOTE:**
 >
@@ -154,7 +154,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Direct sum)** If \\\mathcal{S}\_1\\ and \\\mathcal{S}\_2\\ are complementary in \\\mathcal{V}\\ ([Definition 2](#def-complementary-subspaces)), then \\\mathcal{V}\\ is the **direct sum** ([Wikipedia contributors 2026a](#ref-wikipedia_direct_sum)) of \\\mathcal{S}\_1\\ and \\\mathcal{S}\_2\\, written \\\mathcal{V} = \mathcal{S}\_1 \oplus \mathcal{S}\_2\\.
+> **Definition 3 (Direct sum)** If \\\mathcal{S}\_1\\ and \\\mathcal{S}\_2\\ are complementary in \\\mathcal{V}\\ ([Definition 2](#def-complementary-subspaces)), then \\\mathcal{V}\\ is the **direct sum** [\[2\]](#ref-wikipedia_direct_sum) of \\\mathcal{S}\_1\\ and \\\mathcal{S}\_2\\, written \\\mathcal{V} = \mathcal{S}\_1 \oplus \mathcal{S}\_2\\.
 
 > **NOTE:**
 >
@@ -223,7 +223,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Projection onto a subspace along a complement)** Let \\\mathcal{S}\\ and \\\mathcal{T}\\ be subspaces of \\\mathbb{R}^p\\ with \\\mathbb{R}^p = \mathcal{S} \oplus \mathcal{T}\\ ([Definition 3](#def-direct-sum)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \in \mathbb{R}^p\\. By [Theorem 4](#thm-direct-sum-equiv), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ for exactly one \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{T}\\. The vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ is the **projection** ([Wikipedia contributors 2026d](#ref-wikipedia_projection_linear_algebra)) of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ onto \\\mathcal{S}\\ along \\\mathcal{T}\\ ([Banerjee and Roy 2014](#ref-banerjee2014linear), Definition 6.3, p. 163).
+> **Definition 4 (Projection onto a subspace along a complement)** Let \\\mathcal{S}\\ and \\\mathcal{T}\\ be subspaces of \\\mathbb{R}^p\\ with \\\mathbb{R}^p = \mathcal{S} \oplus \mathcal{T}\\ ([Definition 3](#def-direct-sum)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \in \mathbb{R}^p\\. By [Theorem 4](#thm-direct-sum-equiv), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ for exactly one \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{T}\\. The vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ is the **projection** [\[3\]](#ref-wikipedia_projection_linear_algebra) of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ onto \\\mathcal{S}\\ along \\\mathcal{T}\\ [\[4\]](#ref-banerjee2014linear), Definition 6.3, p. 163.
 
 > **NOTE:**
 >
@@ -280,7 +280,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Orthogonal complement)** The **orthogonal complement** ([Wikipedia contributors 2026c](#ref-wikipedia_orthogonal_complement)) of a set \\\mathcal{X}\\ of vectors in \\\mathbb{R}^p\\ is the set of vectors orthogonal ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) to every vector of \\\mathcal{X}\\:
+> **Definition 5 (Orthogonal complement)** The **orthogonal complement** [\[5\]](#ref-wikipedia_orthogonal_complement) of a set \\\mathcal{X}\\ of vectors in \\\mathbb{R}^p\\ is the set of vectors orthogonal ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) to every vector of \\\mathcal{X}\\:
 >
 > \\ \mathcal{X}^\perp \stackrel{\text{def}}{=} \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathbb{R}^p : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 0 \text{ for all } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathcal{X}\right\\\mathclose{}. \\
 >
@@ -508,26 +508,38 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 ## Further reading
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_direct_sum)) — direct sums of vector spaces and modules
+- Wikipedia contributors [\[2\]](#ref-wikipedia_direct_sum) — direct sums of vector spaces and modules
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_projection_linear_algebra)) — projections, with their matrices and properties
+- Wikipedia contributors [\[3\]](#ref-wikipedia_projection_linear_algebra) — projections, with their matrices and properties
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_orthogonal_complement)) — orthogonal complements and their properties
+- Wikipedia contributors [\[5\]](#ref-wikipedia_orthogonal_complement) — orthogonal complements and their properties
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_fundamental_theorem_of_linear_algebra)) — the four fundamental subspaces
+- Wikipedia contributors [\[6\]](#ref-wikipedia_fundamental_theorem_of_linear_algebra) — the four fundamental subspaces
 
 Back to top
 
 ## References
 
-Banerjee, Sudipto, and Anindya Roy. 2014. *Linear Algebra and Matrix Analysis for Statistics*. Vol. 181. Crc Press Boca Raton. <https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388>.
+\[1\]
 
-Wikipedia contributors. 2026a. *Direct Sum — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Direct_sum>.
+H. Zhou, “Orthogonal projections.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html>
 
-Wikipedia contributors. 2026b. *Fundamental Theorem of Linear Algebra — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Fundamental_theorem_of_linear_algebra>.
+\[2\]
 
-Wikipedia contributors. 2026c. *Orthogonal Complement — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Orthogonal_complement>.
+Wikipedia contributors, “Direct sum — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Direct_sum>
 
-Wikipedia contributors. 2026d. *Projection (Linear Algebra) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Projection_(linear_algebra)>.
+\[3\]
 
-Zhou, Hua. 2024. *Orthogonal Projections*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html>.
+Wikipedia contributors, “Projection (linear algebra) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Projection_(linear_algebra)>
+
+\[4\]
+
+S. Banerjee and A. Roy, *Linear algebra and matrix analysis for statistics*, vol. 181. Crc Press Boca Raton, 2014. Available: <https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388>
+
+\[5\]
+
+Wikipedia contributors, “Orthogonal complement — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Orthogonal_complement>
+
+\[6\]
+
+Wikipedia contributors, “Fundamental theorem of linear algebra — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Fundamental_theorem_of_linear_algebra>

@@ -40,6 +40,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -293,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+  <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -310,7 +311,7 @@
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section, <a href="#/sec-orthogonal-complements" class="quarto-xref">Section&nbsp;2</a> and <a href="#/sec-fundamental-theorem" class="quarto-xref">Section&nbsp;3</a> are adapted from <span class="citation" data-cites="zhou2024orthproj">Zhou (<a href="#/further-reading" role="doc-biblioref" onclick="">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source proves that a subspace and its orthogonal complement together make up <span class="math inline">\(\mathbb{R}^p\)</span> by extending an orthonormal basis; the proof here uses the rank-nullity theorem (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>) instead.</p>
+<p>This section, <a href="#/sec-orthogonal-complements" class="quarto-xref">Section&nbsp;2</a> and <a href="#/sec-fundamental-theorem" class="quarto-xref">Section&nbsp;3</a> are adapted from <span class="citation" data-cites="zhou2024orthproj">Zhou <a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source proves that a subspace and its orthogonal complement together make up <span class="math inline">\(\mathbb{R}^p\)</span> by extending an orthonormal basis; the proof here uses the rank-nullity theorem (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>) instead.</p>
 </div>
 </div>
 </div>
@@ -536,7 +537,7 @@ a &amp;= b \\
 <section class="slide level2">
 
 <div id="def-direct-sum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Direct sum)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are complementary in <span class="math inline">\(\mathcal{V}\)</span> (<a href="#/def-complementary-subspaces" class="quarto-xref">Definition&nbsp;2</a>), then <span class="math inline">\(\mathcal{V}\)</span> is the <strong>direct sum</strong> <span class="citation" data-cites="wikipedia_direct_sum">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span> of <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span>, written <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Direct sum)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are complementary in <span class="math inline">\(\mathcal{V}\)</span> (<a href="#/def-complementary-subspaces" class="quarto-xref">Definition&nbsp;2</a>), then <span class="math inline">\(\mathcal{V}\)</span> is the <strong>direct sum</strong> <span class="citation" data-cites="wikipedia_direct_sum"><a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a></span> of <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span>, written <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -637,7 +638,7 @@ a &amp;= b \\
 <section class="slide level2">
 
 <div id="def-projection" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Projection onto a subspace along a complement)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{T}\)</span> (<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;3</a>), and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p\)</span>. By <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> for exactly one <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{T}\)</span>. The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is the <strong>projection</strong> <span class="citation" data-cites="wikipedia_projection_linear_algebra">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span> <span class="citation" data-cites="banerjee2014linear">(<a href="#/further-reading" role="doc-biblioref" onclick="">Banerjee and Roy 2014</a>, Definition 6.3, p.&nbsp;163)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Projection onto a subspace along a complement)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{T}\)</span> (<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;3</a>), and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p\)</span>. By <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> for exactly one <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{T}\)</span>. The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is the <strong>projection</strong> <span class="citation" data-cites="wikipedia_projection_linear_algebra"><a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a></span> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span> <span class="citation" data-cites="banerjee2014linear"><a href="#/further-reading" role="doc-biblioref" onclick="">[4]</a>, Definition 6.3, p.&nbsp;163</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -746,7 +747,7 @@ a\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 <section class="slide level2">
 
 <div id="def-orthogonal-complement" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Orthogonal complement)</strong></span> The <strong>orthogonal complement</strong> <span class="citation" data-cites="wikipedia_orthogonal_complement">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> of a set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of vectors orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;15 in Vectors</a>) to every vector of <span class="math inline">\(\mathcal{X}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 5 (Orthogonal complement)</strong></span> The <strong>orthogonal complement</strong> <span class="citation" data-cites="wikipedia_orthogonal_complement"><a href="#/further-reading" role="doc-biblioref" onclick="">[5]</a></span> of a set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of vectors orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;15 in Vectors</a>) to every vector of <span class="math inline">\(\mathcal{X}\)</span>:</p>
 <p><span class="math display">\[
 \mathcal{X}^\perp
 \stackrel{\text{def}}{=}
@@ -1179,10 +1180,10 @@ a &amp;= c \\
 <section id="further-reading" class="slide level2 unnumbered smaller scrollable">
 <h2>Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="wikipedia_direct_sum">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026a</a>)</span> — direct sums of vector spaces and modules</p></li>
-<li><p><span class="citation" data-cites="wikipedia_projection_linear_algebra">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026d</a>)</span> — projections, with their matrices and properties</p></li>
-<li><p><span class="citation" data-cites="wikipedia_orthogonal_complement">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026c</a>)</span> — orthogonal complements and their properties</p></li>
-<li><p><span class="citation" data-cites="wikipedia_fundamental_theorem_of_linear_algebra">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026b</a>)</span> — the four fundamental subspaces</p></li>
+<li><p><span class="citation" data-cites="wikipedia_direct_sum">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a></span> — direct sums of vector spaces and modules</p></li>
+<li><p><span class="citation" data-cites="wikipedia_projection_linear_algebra">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a></span> — projections, with their matrices and properties</p></li>
+<li><p><span class="citation" data-cites="wikipedia_orthogonal_complement">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[5]</a></span> — orthogonal complements and their properties</p></li>
+<li><p><span class="citation" data-cites="wikipedia_fundamental_theorem_of_linear_algebra">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[6]</a></span> — the four fundamental subspaces</p></li>
 </ul>
 
 
@@ -1376,24 +1377,24 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 })();
 </script>
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-banerjee2014linear" class="csl-entry" role="listitem">
-Banerjee, Sudipto, and Anindya Roy. 2014. <em>Linear Algebra and Matrix Analysis for Statistics</em>. Vol. 181. Crc Press Boca Raton. <a href="https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388">https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388</a>.
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-zhou2024orthproj" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">H. Zhou, <span>“Orthogonal projections.”</span> Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. [Online]. Available: <a href="https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html">https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html</a></div>
 </div>
 <div id="ref-wikipedia_direct_sum" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Direct Sum — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Direct_sum">https://en.wikipedia.org/wiki/Direct_sum</a>.
-</div>
-<div id="ref-wikipedia_fundamental_theorem_of_linear_algebra" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Fundamental Theorem of Linear Algebra — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_linear_algebra">https://en.wikipedia.org/wiki/Fundamental_theorem_of_linear_algebra</a>.
-</div>
-<div id="ref-wikipedia_orthogonal_complement" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Orthogonal Complement — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Orthogonal_complement">https://en.wikipedia.org/wiki/Orthogonal_complement</a>.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Direct sum — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Direct_sum">https://en.wikipedia.org/wiki/Direct_sum</a></div>
 </div>
 <div id="ref-wikipedia_projection_linear_algebra" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Projection (Linear Algebra) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Projection_(linear_algebra)">https://en.wikipedia.org/wiki/Projection_(linear_algebra)</a>.
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Projection (linear algebra) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Projection_(linear_algebra)">https://en.wikipedia.org/wiki/Projection_(linear_algebra)</a></div>
 </div>
-<div id="ref-zhou2024orthproj" class="csl-entry" role="listitem">
-Zhou, Hua. 2024. <em>Orthogonal Projections</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html">https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html</a>.
+<div id="ref-banerjee2014linear" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">S. Banerjee and A. Roy, <em>Linear algebra and matrix analysis for statistics</em>, vol. 181. Crc Press Boca Raton, 2014. Available: <a href="https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388">https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388</a></div>
+</div>
+<div id="ref-wikipedia_orthogonal_complement" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Orthogonal complement — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Orthogonal_complement">https://en.wikipedia.org/wiki/Orthogonal_complement</a></div>
+</div>
+<div id="ref-wikipedia_fundamental_theorem_of_linear_algebra" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Fundamental theorem of linear algebra — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_linear_algebra">https://en.wikipedia.org/wiki/Fundamental_theorem_of_linear_algebra</a></div>
 </div>
 </div>
 </section>

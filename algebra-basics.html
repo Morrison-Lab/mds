@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -229,56 +230,6 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-prp.callout {
   border-left-color: #827717;
 }
@@ -288,16 +239,6 @@ div.callout-prp.callout-style-default .callout-header {
 div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -309,6 +250,16 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -318,6 +269,16 @@ div.callout-def.callout-style-default .callout-header {
 div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -329,6 +290,26 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
 }
@@ -339,15 +320,35 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-tbl.callout {
+  border-left-color: #757575;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -1006,7 +1007,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+      <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
     </div>
   </div>
   
@@ -1036,7 +1037,7 @@ window.Quarto = {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-transitive" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Transitive relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="./functions.html#def-relation">relation</a> on a set <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>transitive</strong> <span class="citation" data-cites="wikipedia_transitive_relation">(<a href="#ref-wikipedia_transitive_relation" role="doc-biblioref">Wikipedia contributors 2026i</a>)</span> if, for all <span class="math inline">\(a, b, c \in S\)</span>, <span class="math inline">\(a \sim b\)</span> and <span class="math inline">\(b \sim c\)</span> together imply <span class="math inline">\(a \sim c\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Transitive relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="./functions.html#def-relation">relation</a> on a set <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>transitive</strong> <span class="citation" data-cites="wikipedia_transitive_relation"><a href="#ref-wikipedia_transitive_relation" role="doc-biblioref">[1]</a></span> if, for all <span class="math inline">\(a, b, c \in S\)</span>, <span class="math inline">\(a \sim b\)</span> and <span class="math inline">\(b \sim c\)</span> together imply <span class="math inline">\(a \sim c\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1112,7 +1113,7 @@ window.Quarto = {
 <div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-identity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Identity)</strong></span> An <strong>identity</strong> <span class="citation" data-cites="wikipedia_identity_mathematics">(<a href="#ref-wikipedia_identity_mathematics" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> is an equation between two expressions that holds for every value of its variables in a stated set, such as the <a href="./number-systems.html#def-real-numbers">real numbers</a>.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Identity)</strong></span> An <strong>identity</strong> <span class="citation" data-cites="wikipedia_identity_mathematics"><a href="#ref-wikipedia_identity_mathematics" role="doc-biblioref">[2]</a></span> is an equation between two expressions that holds for every value of its variables in a stated set, such as the <a href="./number-systems.html#def-real-numbers">real numbers</a>.</p>
 </div>
 </div>
 </div>
@@ -1155,7 +1156,7 @@ window.Quarto = {
 <div id="callout-7" class="callout-7-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-strict-inequality" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Strict inequalities)</strong></span> For <a href="./number-systems.html#def-real-numbers">real numbers</a> <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, <span class="math inline">\(a &lt; b\)</span> (“<span class="math inline">\(a\)</span> is less than <span class="math inline">\(b\)</span>”) and <span class="math inline">\(a &gt; b\)</span> (“<span class="math inline">\(a\)</span> is greater than <span class="math inline">\(b\)</span>”) are <strong>strict inequalities</strong> <span class="citation" data-cites="wikipedia_inequality_mathematics">(<a href="#ref-wikipedia_inequality_mathematics" role="doc-biblioref">Wikipedia contributors 2026e</a>)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Strict inequalities)</strong></span> For <a href="./number-systems.html#def-real-numbers">real numbers</a> <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, <span class="math inline">\(a &lt; b\)</span> (“<span class="math inline">\(a\)</span> is less than <span class="math inline">\(b\)</span>”) and <span class="math inline">\(a &gt; b\)</span> (“<span class="math inline">\(a\)</span> is greater than <span class="math inline">\(b\)</span>”) are <strong>strict inequalities</strong> <span class="citation" data-cites="wikipedia_inequality_mathematics"><a href="#ref-wikipedia_inequality_mathematics" role="doc-biblioref">[3]</a></span>.</p>
 </div>
 </div>
 </div>
@@ -1293,7 +1294,7 @@ window.Quarto = {
 <div id="callout-14" class="callout-14-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-power" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Power)</strong></span> Let <span class="math inline">\(a\)</span> be a real number and <span class="math inline">\(n\)</span> a <a href="./number-systems.html#def-natural-numbers">natural number</a>. The <span class="math inline">\(n\)</span>th <strong>power</strong> of <span class="math inline">\(a\)</span> is the product of <span class="math inline">\(n\)</span> copies of <span class="math inline">\(a\)</span> <span class="citation" data-cites="wikipedia_exponentiation">(<a href="#ref-wikipedia_exponentiation" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 5 (Power)</strong></span> Let <span class="math inline">\(a\)</span> be a real number and <span class="math inline">\(n\)</span> a <a href="./number-systems.html#def-natural-numbers">natural number</a>. The <span class="math inline">\(n\)</span>th <strong>power</strong> of <span class="math inline">\(a\)</span> is the product of <span class="math inline">\(n\)</span> copies of <span class="math inline">\(a\)</span> <span class="citation" data-cites="wikipedia_exponentiation"><a href="#ref-wikipedia_exponentiation" role="doc-biblioref">[4]</a></span>:</p>
 <p><span class="math display">\[a^n \stackrel{\text{def}}{=}\underbrace{a \cdot a \cdot\cdots \cdot a}_{n \text{ factors}}\]</span></p>
 </div>
 </div>
@@ -1454,7 +1455,7 @@ window.Quarto = {
 <div id="callout-21" class="callout-21-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-square-root" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Square root)</strong></span> For a real number <span class="math inline">\(a \ge 0\)</span>, the <strong>square root</strong> of <span class="math inline">\(a\)</span>, written <span class="math inline">\(\sqrt{a}\)</span> <span class="citation" data-cites="wikipedia_square_root">(<a href="#ref-wikipedia_square_root" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span>, is the non-negative real number whose square (<a href="#def-power" class="quarto-xref">Definition&nbsp;5</a>) is <span class="math inline">\(a\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Square root)</strong></span> For a real number <span class="math inline">\(a \ge 0\)</span>, the <strong>square root</strong> of <span class="math inline">\(a\)</span>, written <span class="math inline">\(\sqrt{a}\)</span> <span class="citation" data-cites="wikipedia_square_root"><a href="#ref-wikipedia_square_root" role="doc-biblioref">[5]</a></span>, is the non-negative real number whose square (<a href="#def-power" class="quarto-xref">Definition&nbsp;5</a>) is <span class="math inline">\(a\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1496,7 +1497,7 @@ window.Quarto = {
 <div id="callout-23" class="callout-23-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-absolute-value" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Absolute value of a real number)</strong></span> The <strong>absolute value</strong> of a real number <span class="math inline">\(a\)</span> <span class="citation" data-cites="wikipedia_absolute_value">(<a href="#ref-wikipedia_absolute_value" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 11 (Absolute value of a real number)</strong></span> The <strong>absolute value</strong> of a real number <span class="math inline">\(a\)</span> <span class="citation" data-cites="wikipedia_absolute_value"><a href="#ref-wikipedia_absolute_value" role="doc-biblioref">[6]</a></span> is</p>
 <p><span class="math display">\[
 \mathopen{}\left|a\right|\mathclose{} \stackrel{\text{def}}{=}\begin{cases}
 a, &amp; a \ge 0 \\
@@ -1566,7 +1567,7 @@ a, &amp; a \ge 0 \\
 </section>
 <section id="sec-percent" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="sec-percent"><span class="header-section-number">4</span> Percent</h2>
-<p>The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” <span class="citation" data-cites="wikipedia_percentage">(<a href="#ref-wikipedia_percentage" role="doc-biblioref">Wikipedia contributors 2026g</a>)</span>.</p>
+<p>The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” <span class="citation" data-cites="wikipedia_percentage"><a href="#ref-wikipedia_percentage" role="doc-biblioref">[7]</a></span>.</p>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1580,7 +1581,7 @@ a, &amp; a \ge 0 \\
 <div id="callout-26" class="callout-26-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-percent" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Percent)</strong></span> For a real number <span class="math inline">\(x\)</span>, “<span class="math inline">\(x\)</span> <strong>percent</strong>”, written <span class="math inline">\(x\%\)</span>, means <span class="math inline">\(x / 100\)</span> <span class="citation" data-cites="wikipedia_percentage">(<a href="#ref-wikipedia_percentage" role="doc-biblioref">Wikipedia contributors 2026g</a>)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 12 (Percent)</strong></span> For a real number <span class="math inline">\(x\)</span>, “<span class="math inline">\(x\)</span> <strong>percent</strong>”, written <span class="math inline">\(x\%\)</span>, means <span class="math inline">\(x / 100\)</span> <span class="citation" data-cites="wikipedia_percentage"><a href="#ref-wikipedia_percentage" role="doc-biblioref">[7]</a></span>:</p>
 <p><span class="math display">\[
 x\% \stackrel{\text{def}}{=}\frac{x}{100}
 \]</span></p>
@@ -1697,7 +1698,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <div id="callout-30" class="callout-30-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-minimum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Minimum)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A number <span class="math inline">\(m\)</span> is the <strong>minimum</strong> of <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_maxima_and_minima">(<a href="#ref-wikipedia_maxima_and_minima" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span>, written <span class="math inline">\(\min A\)</span>, if <span class="math inline">\(m \in A\)</span> and <span class="math inline">\(m \le a\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Minimum)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A number <span class="math inline">\(m\)</span> is the <strong>minimum</strong> of <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_maxima_and_minima"><a href="#ref-wikipedia_maxima_and_minima" role="doc-biblioref">[8]</a></span>, written <span class="math inline">\(\min A\)</span>, if <span class="math inline">\(m \in A\)</span> and <span class="math inline">\(m \le a\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1733,7 +1734,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <div id="callout-32" class="callout-32-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-maximum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Maximum)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A number <span class="math inline">\(M\)</span> is the <strong>maximum</strong> of <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_maxima_and_minima">(<a href="#ref-wikipedia_maxima_and_minima" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span>, written <span class="math inline">\(\max A\)</span>, if <span class="math inline">\(M \in A\)</span> and <span class="math inline">\(a \le M\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Maximum)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A number <span class="math inline">\(M\)</span> is the <strong>maximum</strong> of <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_maxima_and_minima"><a href="#ref-wikipedia_maxima_and_minima" role="doc-biblioref">[8]</a></span>, written <span class="math inline">\(\max A\)</span>, if <span class="math inline">\(M \in A\)</span> and <span class="math inline">\(a \le M\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1773,7 +1774,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <div id="callout-34" class="callout-34-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-argmin" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Argmin)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. The <strong>argmin</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_arg_max">(<a href="#ref-wikipedia_arg_max" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its smallest value:</p>
+<p><span class="theorem-title"><strong>Definition 15 (Argmin)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. The <strong>argmin</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_arg_max"><a href="#ref-wikipedia_arg_max" role="doc-biblioref">[9]</a></span> is the set of inputs where <span class="math inline">\(f\)</span> takes its smallest value:</p>
 <p><span class="math display">\[\arg \min_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(x) \le f(a)\right\}\mathclose{}\]</span></p>
 <p>When this set has exactly one element <span class="math inline">\(\hat{x}\)</span>, we write <span class="math inline">\(\hat{x} = \arg \min_{x \in A} f(x)\)</span>.</p>
 </div>
@@ -1812,7 +1813,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <div id="callout-36" class="callout-36-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-argmax" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Argmax)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. The <strong>argmax</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_arg_max">(<a href="#ref-wikipedia_arg_max" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its largest value:</p>
+<p><span class="theorem-title"><strong>Definition 16 (Argmax)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. The <strong>argmax</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_arg_max"><a href="#ref-wikipedia_arg_max" role="doc-biblioref">[9]</a></span> is the set of inputs where <span class="math inline">\(f\)</span> takes its largest value:</p>
 <p><span class="math display">\[\arg \max_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(a) \le f(x)\right\}\mathclose{}\]</span></p>
 <p>When this set has exactly one element <span class="math inline">\(\hat{x}\)</span>, we write <span class="math inline">\(\hat{x} = \arg \max_{x \in A} f(x)\)</span>.</p>
 </div>
@@ -2047,15 +2048,15 @@ f(-0.9) &amp;= -0.729 + 2.7 \\
 <section id="further-reading" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="further-reading">Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="wikipedia_transitive_relation">Wikipedia contributors (<a href="#ref-wikipedia_transitive_relation" role="doc-biblioref">2026i</a>)</span> — transitive relations, with examples</p></li>
-<li><p><span class="citation" data-cites="wikipedia_inequality_mathematics">Wikipedia contributors (<a href="#ref-wikipedia_inequality_mathematics" role="doc-biblioref">2026e</a>)</span> — strict and non-strict inequalities and their properties</p></li>
-<li><p><span class="citation" data-cites="wikipedia_exponentiation">Wikipedia contributors (<a href="#ref-wikipedia_exponentiation" role="doc-biblioref">2026c</a>)</span> — powers with integer, rational and real exponents</p></li>
-<li><p><span class="citation" data-cites="wikipedia_square_root">Wikipedia contributors (<a href="#ref-wikipedia_square_root" role="doc-biblioref">2026h</a>)</span> — square roots and their properties</p></li>
-<li><p><span class="citation" data-cites="wikipedia_absolute_value">Wikipedia contributors (<a href="#ref-wikipedia_absolute_value" role="doc-biblioref">2026a</a>)</span> — the absolute value and its generalizations</p></li>
-<li><p><span class="citation" data-cites="wikipedia_percentage">Wikipedia contributors (<a href="#ref-wikipedia_percentage" role="doc-biblioref">2026g</a>)</span> — percentages, with worked examples</p></li>
-<li><p><span class="citation" data-cites="wikipedia_maxima_and_minima">Wikipedia contributors (<a href="#ref-wikipedia_maxima_and_minima" role="doc-biblioref">2026f</a>)</span> — minima and maxima, local and global</p></li>
-<li><p><span class="citation" data-cites="wikipedia_arg_max">Wikipedia contributors (<a href="#ref-wikipedia_arg_max" role="doc-biblioref">2026b</a>)</span> — the argmax and argmin</p></li>
-<li><p><span class="citation" data-cites="wikipedia_identity_mathematics">Wikipedia contributors (<a href="#ref-wikipedia_identity_mathematics" role="doc-biblioref">2026d</a>)</span> — identities, equalities that hold for all values of their variables</p></li>
+<li><p><span class="citation" data-cites="wikipedia_transitive_relation">Wikipedia contributors <a href="#ref-wikipedia_transitive_relation" role="doc-biblioref">[1]</a></span> — transitive relations, with examples</p></li>
+<li><p><span class="citation" data-cites="wikipedia_inequality_mathematics">Wikipedia contributors <a href="#ref-wikipedia_inequality_mathematics" role="doc-biblioref">[3]</a></span> — strict and non-strict inequalities and their properties</p></li>
+<li><p><span class="citation" data-cites="wikipedia_exponentiation">Wikipedia contributors <a href="#ref-wikipedia_exponentiation" role="doc-biblioref">[4]</a></span> — powers with integer, rational and real exponents</p></li>
+<li><p><span class="citation" data-cites="wikipedia_square_root">Wikipedia contributors <a href="#ref-wikipedia_square_root" role="doc-biblioref">[5]</a></span> — square roots and their properties</p></li>
+<li><p><span class="citation" data-cites="wikipedia_absolute_value">Wikipedia contributors <a href="#ref-wikipedia_absolute_value" role="doc-biblioref">[6]</a></span> — the absolute value and its generalizations</p></li>
+<li><p><span class="citation" data-cites="wikipedia_percentage">Wikipedia contributors <a href="#ref-wikipedia_percentage" role="doc-biblioref">[7]</a></span> — percentages, with worked examples</p></li>
+<li><p><span class="citation" data-cites="wikipedia_maxima_and_minima">Wikipedia contributors <a href="#ref-wikipedia_maxima_and_minima" role="doc-biblioref">[8]</a></span> — minima and maxima, local and global</p></li>
+<li><p><span class="citation" data-cites="wikipedia_arg_max">Wikipedia contributors <a href="#ref-wikipedia_arg_max" role="doc-biblioref">[9]</a></span> — the argmax and argmin</p></li>
+<li><p><span class="citation" data-cites="wikipedia_identity_mathematics">Wikipedia contributors <a href="#ref-wikipedia_identity_mathematics" role="doc-biblioref">[2]</a></span> — identities, equalities that hold for all values of their variables</p></li>
 </ul>
 
 
@@ -2316,33 +2317,33 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-wikipedia_absolute_value" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Absolute Value — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Absolute_value">https://en.wikipedia.org/wiki/Absolute_value</a>.
-</div>
-<div id="ref-wikipedia_arg_max" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Arg Max — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Arg_max">https://en.wikipedia.org/wiki/Arg_max</a>.
-</div>
-<div id="ref-wikipedia_exponentiation" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Exponentiation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Exponentiation">https://en.wikipedia.org/wiki/Exponentiation</a>.
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-wikipedia_transitive_relation" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Transitive relation — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Transitive_relation">https://en.wikipedia.org/wiki/Transitive_relation</a></div>
 </div>
 <div id="ref-wikipedia_identity_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Identity (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Identity_(mathematics)">https://en.wikipedia.org/wiki/Identity_(mathematics)</a>.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Identity (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Identity_(mathematics)">https://en.wikipedia.org/wiki/Identity_(mathematics)</a></div>
 </div>
 <div id="ref-wikipedia_inequality_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Inequality (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Inequality_(mathematics)">https://en.wikipedia.org/wiki/Inequality_(mathematics)</a>.
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Inequality (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Inequality_(mathematics)">https://en.wikipedia.org/wiki/Inequality_(mathematics)</a></div>
 </div>
-<div id="ref-wikipedia_maxima_and_minima" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>Maxima and Minima — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Maxima_and_minima">https://en.wikipedia.org/wiki/Maxima_and_minima</a>.
-</div>
-<div id="ref-wikipedia_percentage" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Percentage — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Percentage">https://en.wikipedia.org/wiki/Percentage</a>.
+<div id="ref-wikipedia_exponentiation" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Exponentiation — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Exponentiation">https://en.wikipedia.org/wiki/Exponentiation</a></div>
 </div>
 <div id="ref-wikipedia_square_root" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Square Root — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Square_root">https://en.wikipedia.org/wiki/Square_root</a>.
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Square root — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Square_root">https://en.wikipedia.org/wiki/Square_root</a></div>
 </div>
-<div id="ref-wikipedia_transitive_relation" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026i. <em>Transitive Relation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Transitive_relation">https://en.wikipedia.org/wiki/Transitive_relation</a>.
+<div id="ref-wikipedia_absolute_value" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Absolute value — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Absolute_value">https://en.wikipedia.org/wiki/Absolute_value</a></div>
+</div>
+<div id="ref-wikipedia_percentage" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Percentage — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Percentage">https://en.wikipedia.org/wiki/Percentage</a></div>
+</div>
+<div id="ref-wikipedia_maxima_and_minima" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Maxima and minima — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Maxima_and_minima">https://en.wikipedia.org/wiki/Maxima_and_minima</a></div>
+</div>
+<div id="ref-wikipedia_arg_max" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Arg max — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Arg_max">https://en.wikipedia.org/wiki/Arg_max</a></div>
 </div>
 </div></section></div></main> <!-- /main -->
 <!--

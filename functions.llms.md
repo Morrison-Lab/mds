@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
@@ -14,7 +14,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Function (map, mapping, transformation))** A **function** \\f\\ from a set \\A\\ to a set \\B\\, ([Wikipedia contributors 2026i](#ref-wikipedia_function_mathematics)) written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\.
+> **Definition 1 (Function (map, mapping, transformation))** A **function** \\f\\ from a set \\A\\ to a set \\B\\, [\[1\]](#ref-wikipedia_function_mathematics) written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\.
 >
 > A function is also called a **map** (or **mapping**) or a **transformation**; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.
 
@@ -40,7 +40,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Relation)** A **relation** \\\sim\\ on a set \\S\\ ([Wikipedia contributors 2026a](#ref-wikipedia_binary_relation)) is a rule that, for each [ordered pair](sets.llms.md#def-ordered-pair) of elements \\a, b \in S\\, says whether \\a \sim b\\ holds (“\\a\\ is related to \\b\\”).
+> **Definition 4 (Relation)** A **relation** \\\sim\\ on a set \\S\\ [\[2\]](#ref-wikipedia_binary_relation) is a rule that, for each [ordered pair](sets.llms.md#def-ordered-pair) of elements \\a, b \in S\\, says whether \\a \sim b\\ holds (“\\a\\ is related to \\b\\”).
 
 > **NOTE:**
 >
@@ -48,15 +48,15 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Domain)** The **domain** ([Wikipedia contributors 2026f](#ref-wikipedia_domain_of_a_function)) of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
+> **Definition 5 (Domain)** The **domain** [\[3\]](#ref-wikipedia_domain_of_a_function) of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
 
 > **NOTE:**
 >
-> **Definition 6 (Codomain)** The **codomain** ([Wikipedia contributors 2026d](#ref-wikipedia_codomain)) of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
+> **Definition 6 (Codomain)** The **codomain** [\[4\]](#ref-wikipedia_codomain) of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
 
 > **NOTE:**
 >
-> **Definition 7 (Image)** The **image** ([Wikipedia contributors 2026l](#ref-wikipedia_image_mathematics)) of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
+> **Definition 7 (Image)** The **image** [\[5\]](#ref-wikipedia_image_mathematics) of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
 >
 > \\f(A) \stackrel{\text{def}}{=}\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}\\
 >
@@ -69,7 +69,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 > - the [image](#def-image) of \\f\\, the set \\f(A)\\ of values that \\f\\ actually takes;
 > - the [codomain](#def-codomain) of \\f\\, the set \\B\\ that its values are required to lie in.
 >
-> To avoid the ambiguity, these notes write “image” or “codomain” instead, and recommend that you do too ([Wikipedia contributors 2026p](#ref-wikipedia_range_of_a_function)).
+> To avoid the ambiguity, these notes write “image” or “codomain” instead, and recommend that you do too [\[6\]](#ref-wikipedia_range_of_a_function).
 
 > **NOTE:**
 >
@@ -91,7 +91,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Graph of a function)** The **graph** ([Wikipedia contributors 2026k](#ref-wikipedia_graph_of_a_function)) of a [function](#def-function) \\f : A \to B\\ is the set of [ordered pairs](sets.llms.md#def-ordered-pair) \\(a, f(a))\\, one for each element \\a\\ of its domain:
+> **Definition 9 (Graph of a function)** The **graph** [\[7\]](#ref-wikipedia_graph_of_a_function) of a [function](#def-function) \\f : A \to B\\ is the set of [ordered pairs](sets.llms.md#def-ordered-pair) \\(a, f(a))\\, one for each element \\a\\ of its domain:
 >
 > \\\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}\\
 
@@ -107,7 +107,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 >
 > *Remark 3* (What a function is fundamentally). [Definition 1](#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](sets.llms.md#def-ordered-pair) and its graph ([Definition 9](#def-graph)): the set of pairs \\G = \mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{} \subseteq A \times B\\. Authors define a function formally in one of two ways:
 >
-> 1.  **As its graph** ([Halmos 1974, sec. 8](#ref-halmos1974naive), p. 30): a function is a subset of \\A \times B\\ containing exactly one pair \\(a, b)\\ for each \\a \in A\\, where \\b = f(a)\\, and the statement \\f(a) = b\\ is notation for \\(a, b) \in f\\. Under this convention, the codomain \\B\\ is specified alongside the graph in the declaration \\f : A \to B\\.
+> 1.  **As its graph** [\[8, Sec. 8\]](#ref-halmos1974naive), p. 30: a function is a subset of \\A \times B\\ containing exactly one pair \\(a, b)\\ for each \\a \in A\\, where \\b = f(a)\\, and the statement \\f(a) = b\\ is notation for \\(a, b) \in f\\. Under this convention, the codomain \\B\\ is specified alongside the graph in the declaration \\f : A \to B\\.
 > 2.  **As a triple \\(A, B, G)\\**: the function consists of the domain \\A\\, the codomain \\B\\, and the graph \\G \subseteq A \times B\\. This explicit packaging retains the codomain \\B\\ as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into \\\mathbb{R}\\ versus into integers).
 >
 > For example, the die-doubling function in [Example 1](#exm-function) has the graph of six ordered pairs \\\mathopen{}\left\\(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\\\mathclose{}\\.
@@ -122,7 +122,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](#def-function). The **composition** ([Wikipedia contributors 2026h](#ref-wikipedia_function_composition)) of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
+> **Definition 10 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](#def-function). The **composition** [\[9\]](#ref-wikipedia_function_composition) of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
 >
 > \\(f \circ g)(a) \stackrel{\text{def}}{=}f(g(a)) \quad \text{for each } a \in A.\\
 
@@ -150,7 +150,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Inverse function)** Let \\f : A \to B\\ be a [function](#def-function). A function \\g : B \to A\\ is the **inverse function** ([Wikipedia contributors 2026n](#ref-wikipedia_inverse_function)) of \\f\\, written \\f^{-1}\\, if both
+> **Definition 13 (Inverse function)** Let \\f : A \to B\\ be a [function](#def-function). A function \\g : B \to A\\ is the **inverse function** [\[10\]](#ref-wikipedia_inverse_function) of \\f\\, written \\f^{-1}\\, if both
 >
 > - \\g(f(a)) = a\\ for every \\a \in A\\, and
 > - \\f(g(b)) = b\\ for every \\b \in B\\.
@@ -209,7 +209,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Operator)** An **operator** ([Wikipedia contributors 2026o](#ref-wikipedia_operator_mathematics)) is a [function](#def-function) whose [arguments](#def-argument) and [values](#def-value) are both functions or both vectors.
+> **Definition 15 (Operator)** An **operator** [\[11\]](#ref-wikipedia_operator_mathematics) is a [function](#def-function) whose [arguments](#def-argument) and [values](#def-value) are both functions or both vectors.
 
 > **NOTE:**
 >
@@ -221,7 +221,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Functional)** A **functional** ([Wikipedia contributors 2026j](#ref-wikipedia_functional_mathematics)) is a [function](#def-function) whose [arguments](#def-argument) are functions or vectors and whose [values](#def-value) are real numbers.
+> **Definition 16 (Functional)** A **functional** [\[12\]](#ref-wikipedia_functional_mathematics) is a [function](#def-function) whose [arguments](#def-argument) are functions or vectors and whose [values](#def-value) are real numbers.
 
 > **NOTE:**
 >
@@ -236,7 +236,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Sequence)** A **sequence** in a set \\S\\ ([Wikipedia contributors 2026q](#ref-wikipedia_sequence)) is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](number-systems.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+> **Definition 17 (Sequence)** A **sequence** in a set \\S\\ [\[13\]](#ref-wikipedia_sequence) is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](number-systems.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
 
 > **NOTE:**
 >
@@ -258,11 +258,11 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Finite set)** A set \\A\\ is **finite** ([Wikipedia contributors 2026g](#ref-wikipedia_finite_set)) if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 19](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once.
+> **Definition 20 (Finite set)** A set \\A\\ is **finite** [\[14\]](#ref-wikipedia_finite_set) if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 19](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once.
 
 > **NOTE:**
 >
-> **Definition 21 (Cardinality)** For a finite set \\A\\ ([Definition 20](#def-finite-set)), the number \\n\\ in such a list is the **cardinality** ([Wikipedia contributors 2026c](#ref-wikipedia_cardinality)) of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
+> **Definition 21 (Cardinality)** For a finite set \\A\\ ([Definition 20](#def-finite-set)), the number \\n\\ in such a list is the **cardinality** [\[15\]](#ref-wikipedia_cardinality) of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
 
 > **NOTE:**
 >
@@ -279,11 +279,11 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Infinite set)** A set that is not finite ([Definition 20](#def-finite-set)) is **infinite** ([Wikipedia contributors 2026m](#ref-wikipedia_infinite_set)).
+> **Definition 22 (Infinite set)** A set that is not finite ([Definition 20](#def-finite-set)) is **infinite** [\[16\]](#ref-wikipedia_infinite_set).
 
 > **NOTE:**
 >
-> **Definition 23 (Countable set)** A set is **countable** ([Wikipedia contributors 2026e](#ref-wikipedia_countable_set)) if it is finite ([Definition 20](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 17](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
+> **Definition 23 (Countable set)** A set is **countable** [\[17\]](#ref-wikipedia_countable_set) if it is finite ([Definition 20](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 17](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
 
 > **NOTE:**
 >
@@ -303,80 +303,116 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> *Remark 8* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it ([Wikipedia contributors 2026b](#ref-wikipedia_cantors_diagonal_argument)). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
+> *Remark 8* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it [\[18\]](#ref-wikipedia_cantors_diagonal_argument). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
 
 ## Further reading
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_function_mathematics)) — functions, their domains, codomains and images
+- Wikipedia contributors [\[1\]](#ref-wikipedia_function_mathematics) — functions, their domains, codomains and images
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_binary_relation)) — binary relations and their properties
+- Wikipedia contributors [\[2\]](#ref-wikipedia_binary_relation) — binary relations and their properties
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_domain_of_a_function)) — the domain of a function
+- Wikipedia contributors [\[3\]](#ref-wikipedia_domain_of_a_function) — the domain of a function
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_codomain)) — codomains
+- Wikipedia contributors [\[4\]](#ref-wikipedia_codomain) — codomains
 
-- Wikipedia contributors ([2026l](#ref-wikipedia_image_mathematics)) — images of functions and sets
+- Wikipedia contributors [\[5\]](#ref-wikipedia_image_mathematics) — images of functions and sets
 
-- Wikipedia contributors ([2026p](#ref-wikipedia_range_of_a_function)) — the two meanings of the range
+- Wikipedia contributors [\[6\]](#ref-wikipedia_range_of_a_function) — the two meanings of the range
 
-- Wikipedia contributors ([2026k](#ref-wikipedia_graph_of_a_function)) — graphs of functions
+- Wikipedia contributors [\[7\]](#ref-wikipedia_graph_of_a_function) — graphs of functions
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_function_composition)) — composition of functions
+- Wikipedia contributors [\[9\]](#ref-wikipedia_function_composition) — composition of functions
 
-- Wikipedia contributors ([2026n](#ref-wikipedia_inverse_function)) — inverse functions
+- Wikipedia contributors [\[10\]](#ref-wikipedia_inverse_function) — inverse functions
 
-- Wikipedia contributors ([2026o](#ref-wikipedia_operator_mathematics)) — operators
+- Wikipedia contributors [\[11\]](#ref-wikipedia_operator_mathematics) — operators
 
-- Wikipedia contributors ([2026j](#ref-wikipedia_functional_mathematics)) — functionals
+- Wikipedia contributors [\[12\]](#ref-wikipedia_functional_mathematics) — functionals
 
-- Wikipedia contributors ([2026q](#ref-wikipedia_sequence)) — sequences and their limits
+- Wikipedia contributors [\[13\]](#ref-wikipedia_sequence) — sequences and their limits
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_finite_set)) — finite sets
+- Wikipedia contributors [\[14\]](#ref-wikipedia_finite_set) — finite sets
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_cardinality)) — cardinality and its infinite cases
+- Wikipedia contributors [\[15\]](#ref-wikipedia_cardinality) — cardinality and its infinite cases
 
-- Wikipedia contributors ([2026m](#ref-wikipedia_infinite_set)) — infinite sets
+- Wikipedia contributors [\[16\]](#ref-wikipedia_infinite_set) — infinite sets
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_countable_set)) — countable sets, with examples
+- Wikipedia contributors [\[17\]](#ref-wikipedia_countable_set) — countable sets, with examples
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_cantors_diagonal_argument)) — Cantor’s diagonal argument
+- Wikipedia contributors [\[18\]](#ref-wikipedia_cantors_diagonal_argument) — Cantor’s diagonal argument
 
 ## References
 
-Halmos, Paul R. 1974. *Naive Set Theory*. Undergraduate Texts in Mathematics. Springer. <https://doi.org/10.1007/978-1-4757-1645-0>.
+\[1\]
 
-Wikipedia contributors. 2026a. *Binary Relation — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Binary_relation>.
+Wikipedia contributors, “Function (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Function_(mathematics)>
 
-Wikipedia contributors. 2026b. *Cantor’s Diagonal Argument — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument>.
+\[2\]
 
-Wikipedia contributors. 2026c. *Cardinality — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Cardinality>.
+Wikipedia contributors, “Binary relation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Binary_relation>
 
-Wikipedia contributors. 2026d. *Codomain — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Codomain>.
+\[3\]
 
-Wikipedia contributors. 2026e. *Countable Set — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Countable_set>.
+Wikipedia contributors, “Domain of a function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Domain_of_a_function>
 
-Wikipedia contributors. 2026f. *Domain of a Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Domain_of_a_function>.
+\[4\]
 
-Wikipedia contributors. 2026g. *Finite Set — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Finite_set>.
+Wikipedia contributors, “Codomain — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Codomain>
 
-Wikipedia contributors. 2026h. *Function Composition — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Function_composition>.
+\[5\]
 
-Wikipedia contributors. 2026i. *Function (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Function_(mathematics)>.
+Wikipedia contributors, “Image (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Image_(mathematics)>
 
-Wikipedia contributors. 2026j. *Functional (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Functional_(mathematics)>.
+\[6\]
 
-Wikipedia contributors. 2026k. *Graph of a Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Graph_of_a_function>.
+Wikipedia contributors, “Range of a function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Range_of_a_function>
 
-Wikipedia contributors. 2026l. *Image (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Image_(mathematics)>.
+\[7\]
 
-Wikipedia contributors. 2026m. *Infinite Set — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Infinite_set>.
+Wikipedia contributors, “Graph of a function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Graph_of_a_function>
 
-Wikipedia contributors. 2026n. *Inverse Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Inverse_function>.
+\[8\]
 
-Wikipedia contributors. 2026o. *Operator (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Operator_(mathematics)>.
+P. R. Halmos, *Naive set theory*. in Undergraduate texts in mathematics. New York: Springer, 1974. doi: [10.1007/978-1-4757-1645-0](https://doi.org/10.1007/978-1-4757-1645-0).
 
-Wikipedia contributors. 2026p. *Range of a Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Range_of_a_function>.
+\[9\]
 
-Wikipedia contributors. 2026q. *Sequence — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Sequence>.
+Wikipedia contributors, “Function composition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Function_composition>
+
+\[10\]
+
+Wikipedia contributors, “Inverse function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Inverse_function>
+
+\[11\]
+
+Wikipedia contributors, “Operator (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Operator_(mathematics)>
+
+\[12\]
+
+Wikipedia contributors, “Functional (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Functional_(mathematics)>
+
+\[13\]
+
+Wikipedia contributors, “Sequence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Sequence>
+
+\[14\]
+
+Wikipedia contributors, “Finite set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Finite_set>
+
+\[15\]
+
+Wikipedia contributors, “Cardinality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cardinality>
+
+\[16\]
+
+Wikipedia contributors, “Infinite set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Infinite_set>
+
+\[17\]
+
+Wikipedia contributors, “Countable set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Countable_set>
+
+\[18\]
+
+Wikipedia contributors, “Cantor’s diagonal argument — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument>
 
 Back to top

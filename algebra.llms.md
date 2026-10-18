@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 The algebra notes are split across these pages:
 
@@ -18,13 +18,17 @@ A link to a section, theorem or definition on this page from before the split go
 
 ## 1 Further reading
 
-- Abramson et al. ([2021](#ref-abramson2021algebra)) is a free online textbook on algebra and trigonometry. It covers equations, inequalities, polynomials, exponentials, logarithms, and trigonometry, which overlap with the algebra in these notes.
-- Rudin ([1976](#ref-rudin1976principles)) develops the real numbers, including the least upper bound property behind the infimum and supremum.
+- Abramson et al. [\[1\]](#ref-abramson2021algebra) is a free online textbook on algebra and trigonometry. It covers equations, inequalities, polynomials, exponentials, logarithms, and trigonometry, which overlap with the algebra in these notes.
+- Rudin [\[2\]](#ref-rudin1976principles) develops the real numbers, including the least upper bound property behind the infimum and supremum.
 
 ## References
 
-Abramson, Jay et al. 2021. *Algebra and Trigonometry*. 2nd ed. OpenStax. <https://openstax.org/books/algebra-and-trigonometry-2e/pages/preface>.
+\[1\]
 
-Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
+J. Abramson *et al.*, *Algebra and trigonometry*, 2nd ed. OpenStax, 2021. Available: <https://openstax.org/books/algebra-and-trigonometry-2e/pages/preface>
+
+\[2\]
+
+W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.
 
 Back to top

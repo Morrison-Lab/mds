@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -229,16 +230,6 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -248,56 +239,6 @@ div.callout-solution.callout-style-default .callout-header {
 div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -319,15 +260,35 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-fig.callout {
   border-left-color: #757575;
@@ -339,6 +300,36 @@ div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-remark.callout {
   border-left-color: #AD1457;
 }
@@ -348,6 +339,16 @@ div.callout-remark.callout-style-default .callout-header {
 div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-tbl.callout {
+  border-left-color: #757575;
+}
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -1002,7 +1003,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+      <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
     </div>
   </div>
   
@@ -1088,7 +1089,7 @@ window.Quarto = {
 <div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-integers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Integers)</strong></span> The <strong>integers</strong> <span class="citation" data-cites="wikipedia_integer">(<a href="#ref-wikipedia_integer" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> are the whole numbers, together with their negatives and <span class="math inline">\(0\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Integers)</strong></span> The <strong>integers</strong> <span class="citation" data-cites="wikipedia_integer"><a href="#ref-wikipedia_integer" role="doc-biblioref">[1]</a></span> are the whole numbers, together with their negatives and <span class="math inline">\(0\)</span>:</p>
 <p><span class="math display">\[\mathbb{Z} \stackrel{\text{def}}{=}\mathopen{}\left\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
 <p>An <strong>integer</strong> is an element of <span class="math inline">\(\mathbb{Z}\)</span>.</p>
 </div>
@@ -1167,7 +1168,7 @@ window.Quarto = {
 <div id="callout-8" class="callout-8-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-even-odd" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Even integer)</strong></span> An integer (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(n\)</span> is <strong>even</strong> <span class="citation" data-cites="wikipedia_parity_mathematics">(<a href="#ref-wikipedia_parity_mathematics" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> if <span class="math inline">\(n = 2k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Even integer)</strong></span> An integer (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(n\)</span> is <strong>even</strong> <span class="citation" data-cites="wikipedia_parity_mathematics"><a href="#ref-wikipedia_parity_mathematics" role="doc-biblioref">[2]</a></span> if <span class="math inline">\(n = 2k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1185,7 +1186,7 @@ window.Quarto = {
 <div id="callout-9" class="callout-9-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-odd" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Odd integer)</strong></span> An integer (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(n\)</span> is <strong>odd</strong> <span class="citation" data-cites="wikipedia_parity_mathematics">(<a href="#ref-wikipedia_parity_mathematics" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> if <span class="math inline">\(n = 2k + 1\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 5 (Odd integer)</strong></span> An integer (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(n\)</span> is <strong>odd</strong> <span class="citation" data-cites="wikipedia_parity_mathematics"><a href="#ref-wikipedia_parity_mathematics" role="doc-biblioref">[2]</a></span> if <span class="math inline">\(n = 2k + 1\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1228,7 +1229,7 @@ window.Quarto = {
 <div id="callout-11" class="callout-11-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-natural-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Natural numbers (our convention))</strong></span> In these notes, the <strong>natural numbers</strong> <span class="citation" data-cites="wikipedia_natural_number">(<a href="#ref-wikipedia_natural_number" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span> are the positive integers (<a href="#def-positive-integer" class="quarto-xref">Definition&nbsp;2</a>):</p>
+<p><span class="theorem-title"><strong>Definition 6 (Natural numbers (our convention))</strong></span> In these notes, the <strong>natural numbers</strong> <span class="citation" data-cites="wikipedia_natural_number"><a href="#ref-wikipedia_natural_number" role="doc-biblioref">[3]</a></span> are the positive integers (<a href="#def-positive-integer" class="quarto-xref">Definition&nbsp;2</a>):</p>
 <p><span class="math display">\[\mathbb{N}\stackrel{\text{def}}{=}\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
 </div>
 </div>
@@ -1313,7 +1314,7 @@ window.Quarto = {
 <div id="callout-15" class="callout-15-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-rational-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Rational numbers)</strong></span> A <strong>rational number</strong> <span class="citation" data-cites="wikipedia_rational_number">(<a href="#ref-wikipedia_rational_number" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span> is a number that can be written as a fraction <span class="math inline">\(\frac{a}{b}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(b \ne 0\)</span>. The set of rational numbers is written <span class="math inline">\(\mathbb{Q}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 8 (Rational numbers)</strong></span> A <strong>rational number</strong> <span class="citation" data-cites="wikipedia_rational_number"><a href="#ref-wikipedia_rational_number" role="doc-biblioref">[4]</a></span> is a number that can be written as a fraction <span class="math inline">\(\frac{a}{b}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers (<a href="#def-integers" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(b \ne 0\)</span>. The set of rational numbers is written <span class="math inline">\(\mathbb{Q}\)</span>:</p>
 <p><span class="math display">\[\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\{\frac{a}{b} : a \in \mathbb{Z},\ b \in \mathbb{Z},\ b \ne 0\right\}\mathclose{}\]</span></p>
 </div>
 </div>
@@ -1356,7 +1357,7 @@ window.Quarto = {
 <div id="callout-17" class="callout-17-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-real-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Real numbers)</strong></span> A <strong>real number</strong> <span class="citation" data-cites="wikipedia_real_number">(<a href="#ref-wikipedia_real_number" role="doc-biblioref">Wikipedia contributors 2026g</a>)</span> is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Real numbers)</strong></span> A <strong>real number</strong> <span class="citation" data-cites="wikipedia_real_number"><a href="#ref-wikipedia_real_number" role="doc-biblioref">[5]</a></span> is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written <span class="math inline">\(\mathbb{R}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1374,7 +1375,7 @@ window.Quarto = {
 <div id="callout-18" class="callout-18-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-real-numbers-working-definition" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (A working definition). </span><a href="#def-real-numbers" class="quarto-xref">Definition&nbsp;9</a> is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. <span class="citation" data-cites="rudin1976principles">Rudin (<a href="#ref-rudin1976principles" role="doc-biblioref">1976</a>, Appendix to Chapter 1)</span> constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, <span class="math inline">\(0.999\ldots\)</span> and <span class="math inline">\(1.000\ldots\)</span> are the same real number, <span class="math inline">\(1\)</span>.</p>
+<p><span class="proof-title"><em>Remark 1</em> (A working definition). </span><a href="#def-real-numbers" class="quarto-xref">Definition&nbsp;9</a> is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. <span class="citation" data-cites="rudin1976principles">Rudin <a href="#ref-rudin1976principles" role="doc-biblioref">[6]</a>, Appendix to Chapter 1</span> constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, <span class="math inline">\(0.999\ldots\)</span> and <span class="math inline">\(1.000\ldots\)</span> are the same real number, <span class="math inline">\(1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1415,7 +1416,7 @@ window.Quarto = {
 <div id="callout-20" class="callout-20-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-irrational-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Irrational numbers)</strong></span> An <strong>irrational number</strong> <span class="citation" data-cites="wikipedia_irrational_number">(<a href="#ref-wikipedia_irrational_number" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> is a real number (<a href="#def-real-numbers" class="quarto-xref">Definition&nbsp;9</a>) that is not rational (<a href="#def-rational-numbers" class="quarto-xref">Definition&nbsp;8</a>).</p>
+<p><span class="theorem-title"><strong>Definition 10 (Irrational numbers)</strong></span> An <strong>irrational number</strong> <span class="citation" data-cites="wikipedia_irrational_number"><a href="#ref-wikipedia_irrational_number" role="doc-biblioref">[7]</a></span> is a real number (<a href="#def-real-numbers" class="quarto-xref">Definition&nbsp;9</a>) that is not rational (<a href="#def-rational-numbers" class="quarto-xref">Definition&nbsp;8</a>).</p>
 </div>
 </div>
 </div>
@@ -1435,8 +1436,8 @@ window.Quarto = {
 <div id="exm-irrational-numbers" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Irrational numbers)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(\sqrt{2} = 1.41421\ldots\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a> of <span class="math inline">\(2\)</span>, is irrational: no fraction of integers <span class="math inline">\(\frac{a}{b}\)</span> squares to <span class="math inline">\(2\)</span> <span class="citation" data-cites="wikipedia_square_root_of_2">(<a href="#ref-wikipedia_square_root_of_2" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span>.</li>
-<li><span class="math inline">\(\pi = 3.14159\ldots\)</span> is irrational <span class="citation" data-cites="wikipedia_proof_that_pi_is_irrational">(<a href="#ref-wikipedia_proof_that_pi_is_irrational" role="doc-biblioref">Wikipedia contributors 2026e</a>)</span>.</li>
+<li><span class="math inline">\(\sqrt{2} = 1.41421\ldots\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a> of <span class="math inline">\(2\)</span>, is irrational: no fraction of integers <span class="math inline">\(\frac{a}{b}\)</span> squares to <span class="math inline">\(2\)</span> <span class="citation" data-cites="wikipedia_square_root_of_2"><a href="#ref-wikipedia_square_root_of_2" role="doc-biblioref">[8]</a></span>.</li>
+<li><span class="math inline">\(\pi = 3.14159\ldots\)</span> is irrational <span class="citation" data-cites="wikipedia_proof_that_pi_is_irrational"><a href="#ref-wikipedia_proof_that_pi_is_irrational" role="doc-biblioref">[9]</a></span>.</li>
 <li><span class="math inline">\(1.5\)</span> is not irrational, because <span class="math inline">\(1.5 = \frac{3}{2}\)</span> is rational.</li>
 </ul>
 </div>
@@ -1447,14 +1448,14 @@ window.Quarto = {
 <section id="further-reading" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="further-reading">Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="wikipedia_integer">Wikipedia contributors (<a href="#ref-wikipedia_integer" role="doc-biblioref">2026a</a>)</span> — the integers</p></li>
-<li><p><span class="citation" data-cites="wikipedia_parity_mathematics">Wikipedia contributors (<a href="#ref-wikipedia_parity_mathematics" role="doc-biblioref">2026d</a>)</span> — even and odd numbers</p></li>
-<li><p><span class="citation" data-cites="wikipedia_natural_number">Wikipedia contributors (<a href="#ref-wikipedia_natural_number" role="doc-biblioref">2026c</a>)</span> — the natural numbers and their conventions</p></li>
-<li><p><span class="citation" data-cites="wikipedia_rational_number">Wikipedia contributors (<a href="#ref-wikipedia_rational_number" role="doc-biblioref">2026f</a>)</span> — the rational numbers</p></li>
-<li><p><span class="citation" data-cites="wikipedia_real_number">Wikipedia contributors (<a href="#ref-wikipedia_real_number" role="doc-biblioref">2026g</a>)</span> — the real numbers and their constructions</p></li>
-<li><p><span class="citation" data-cites="wikipedia_irrational_number">Wikipedia contributors (<a href="#ref-wikipedia_irrational_number" role="doc-biblioref">2026b</a>)</span> — irrational numbers</p></li>
-<li><p><span class="citation" data-cites="wikipedia_square_root_of_2">Wikipedia contributors (<a href="#ref-wikipedia_square_root_of_2" role="doc-biblioref">2026h</a>)</span> — the square root of 2</p></li>
-<li><p><span class="citation" data-cites="wikipedia_proof_that_pi_is_irrational">Wikipedia contributors (<a href="#ref-wikipedia_proof_that_pi_is_irrational" role="doc-biblioref">2026e</a>)</span> — proofs that pi is irrational</p></li>
+<li><p><span class="citation" data-cites="wikipedia_integer">Wikipedia contributors <a href="#ref-wikipedia_integer" role="doc-biblioref">[1]</a></span> — the integers</p></li>
+<li><p><span class="citation" data-cites="wikipedia_parity_mathematics">Wikipedia contributors <a href="#ref-wikipedia_parity_mathematics" role="doc-biblioref">[2]</a></span> — even and odd numbers</p></li>
+<li><p><span class="citation" data-cites="wikipedia_natural_number">Wikipedia contributors <a href="#ref-wikipedia_natural_number" role="doc-biblioref">[3]</a></span> — the natural numbers and their conventions</p></li>
+<li><p><span class="citation" data-cites="wikipedia_rational_number">Wikipedia contributors <a href="#ref-wikipedia_rational_number" role="doc-biblioref">[4]</a></span> — the rational numbers</p></li>
+<li><p><span class="citation" data-cites="wikipedia_real_number">Wikipedia contributors <a href="#ref-wikipedia_real_number" role="doc-biblioref">[5]</a></span> — the real numbers and their constructions</p></li>
+<li><p><span class="citation" data-cites="wikipedia_irrational_number">Wikipedia contributors <a href="#ref-wikipedia_irrational_number" role="doc-biblioref">[7]</a></span> — irrational numbers</p></li>
+<li><p><span class="citation" data-cites="wikipedia_square_root_of_2">Wikipedia contributors <a href="#ref-wikipedia_square_root_of_2" role="doc-biblioref">[8]</a></span> — the square root of 2</p></li>
+<li><p><span class="citation" data-cites="wikipedia_proof_that_pi_is_irrational">Wikipedia contributors <a href="#ref-wikipedia_proof_that_pi_is_irrational" role="doc-biblioref">[9]</a></span> — proofs that pi is irrational</p></li>
 </ul>
 
 
@@ -1715,33 +1716,33 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
-Rudin, Walter. 1976. <em>Principles of Mathematical Analysis</em>. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
-</div>
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-wikipedia_integer" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Integer — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Integer">https://en.wikipedia.org/wiki/Integer</a>.
-</div>
-<div id="ref-wikipedia_irrational_number" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Irrational Number — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Irrational_number">https://en.wikipedia.org/wiki/Irrational_number</a>.
-</div>
-<div id="ref-wikipedia_natural_number" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Natural Number — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Natural_number">https://en.wikipedia.org/wiki/Natural_number</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Integer — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Integer">https://en.wikipedia.org/wiki/Integer</a></div>
 </div>
 <div id="ref-wikipedia_parity_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Parity (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Parity_(mathematics)">https://en.wikipedia.org/wiki/Parity_(mathematics)</a>.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Parity (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Parity_(mathematics)">https://en.wikipedia.org/wiki/Parity_(mathematics)</a></div>
 </div>
-<div id="ref-wikipedia_proof_that_pi_is_irrational" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Proof That Pi Is Irrational — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational">https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational</a>.
+<div id="ref-wikipedia_natural_number" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Natural number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Natural_number">https://en.wikipedia.org/wiki/Natural_number</a></div>
 </div>
 <div id="ref-wikipedia_rational_number" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>Rational Number — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Rational_number">https://en.wikipedia.org/wiki/Rational_number</a>.
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Rational number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Rational_number">https://en.wikipedia.org/wiki/Rational_number</a></div>
 </div>
 <div id="ref-wikipedia_real_number" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Real Number — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Real_number">https://en.wikipedia.org/wiki/Real_number</a>.
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Real number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Real_number">https://en.wikipedia.org/wiki/Real_number</a></div>
+</div>
+<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">W. Rudin, <em>Principles of mathematical analysis</em>, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.</div>
+</div>
+<div id="ref-wikipedia_irrational_number" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Irrational number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Irrational_number">https://en.wikipedia.org/wiki/Irrational_number</a></div>
 </div>
 <div id="ref-wikipedia_square_root_of_2" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Square Root of 2 — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Square_root_of_2">https://en.wikipedia.org/wiki/Square_root_of_2</a>.
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Square root of 2 — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Square_root_of_2">https://en.wikipedia.org/wiki/Square_root_of_2</a></div>
+</div>
+<div id="ref-wikipedia_proof_that_pi_is_irrational" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Proof that pi is irrational — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational">https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational</a></div>
 </div>
 </div></section></div></main> <!-- /main -->
 <!--

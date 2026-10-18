@@ -62,6 +62,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -216,35 +217,25 @@ cookieconsent.run({
 })();
 </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-fig.callout {
-  border-left-color: #757575;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -266,6 +257,36 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-tbl.callout {
   border-left-color: #757575;
 }
@@ -275,36 +296,6 @@ div.callout-tbl.callout-style-default .callout-header {
 div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -316,15 +307,15 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-fig.callout {
+  border-left-color: #757575;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -335,6 +326,16 @@ div.callout-lem.callout-style-default .callout-header {
 div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -973,7 +974,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+      <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
     </div>
   </div>
   
@@ -998,7 +999,7 @@ window.Quarto = {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-proposition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Proposition (statement))</strong></span> A <strong>proposition</strong> <span class="citation" data-cites="wikipedia_proposition">(<a href="#ref-wikipedia_proposition" role="doc-biblioref">Wikipedia contributors 2026u</a>)</span>, or <strong>statement</strong>, is a declarative sentence that is either true or false.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Proposition (statement))</strong></span> A <strong>proposition</strong> <span class="citation" data-cites="wikipedia_proposition"><a href="#ref-wikipedia_proposition" role="doc-biblioref">[1]</a></span>, or <strong>statement</strong>, is a declarative sentence that is either true or false.</p>
 </div>
 </div>
 </div>
@@ -1039,7 +1040,7 @@ window.Quarto = {
 <div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-predicate" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Predicate)</strong></span> A <strong>predicate</strong> <span class="citation" data-cites="wikipedia_predicate_mathematical_logic">(<a href="#ref-wikipedia_predicate_mathematical_logic" role="doc-biblioref">Wikipedia contributors 2026s</a>)</span> <span class="math inline">\(P(x)\)</span> is a declarative sentence about a variable <span class="math inline">\(x\)</span> that becomes a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) whenever a value is substituted for <span class="math inline">\(x\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Predicate)</strong></span> A <strong>predicate</strong> <span class="citation" data-cites="wikipedia_predicate_mathematical_logic"><a href="#ref-wikipedia_predicate_mathematical_logic" role="doc-biblioref">[2]</a></span> <span class="math inline">\(P(x)\)</span> is a declarative sentence about a variable <span class="math inline">\(x\)</span> that becomes a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) whenever a value is substituted for <span class="math inline">\(x\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1081,7 +1082,7 @@ window.Quarto = {
 <div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-logical-connective" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Logical connective)</strong></span> A <strong>logical connective</strong> <span class="citation" data-cites="wikipedia_logical_connective">(<a href="#ref-wikipedia_logical_connective" role="doc-biblioref">Wikipedia contributors 2026k</a>)</span> builds a new proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) from one or two propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, with a truth value that depends only on the truth values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. These notes use five, defined next: not (<a href="#def-not" class="quarto-xref">Definition&nbsp;4</a>), and (<a href="#def-and" class="quarto-xref">Definition&nbsp;5</a>), or (<a href="#def-or" class="quarto-xref">Definition&nbsp;6</a>), implies (<a href="#def-implies" class="quarto-xref">Definition&nbsp;7</a>), and if and only if (<a href="#def-iff" class="quarto-xref">Definition&nbsp;8</a>).</p>
+<p><span class="theorem-title"><strong>Definition 3 (Logical connective)</strong></span> A <strong>logical connective</strong> <span class="citation" data-cites="wikipedia_logical_connective"><a href="#ref-wikipedia_logical_connective" role="doc-biblioref">[3]</a></span> builds a new proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) from one or two propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, with a truth value that depends only on the truth values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. These notes use five, defined next: not (<a href="#def-not" class="quarto-xref">Definition&nbsp;4</a>), and (<a href="#def-and" class="quarto-xref">Definition&nbsp;5</a>), or (<a href="#def-or" class="quarto-xref">Definition&nbsp;6</a>), implies (<a href="#def-implies" class="quarto-xref">Definition&nbsp;7</a>), and if and only if (<a href="#def-iff" class="quarto-xref">Definition&nbsp;8</a>).</p>
 </div>
 </div>
 </div>
@@ -1099,7 +1100,7 @@ window.Quarto = {
 <div id="callout-6" class="callout-6-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-not" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Not)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>not</strong> <span class="citation" data-cites="wikipedia_negation">(<a href="#ref-wikipedia_negation" role="doc-biblioref">Wikipedia contributors 2026r</a>)</span> is written <span class="math inline">\(\neg P\)</span> (“not <span class="math inline">\(P\)</span>”); it is true when <span class="math inline">\(P\)</span> is false, and false when <span class="math inline">\(P\)</span> is true.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Not)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>not</strong> <span class="citation" data-cites="wikipedia_negation"><a href="#ref-wikipedia_negation" role="doc-biblioref">[4]</a></span> is written <span class="math inline">\(\neg P\)</span> (“not <span class="math inline">\(P\)</span>”); it is true when <span class="math inline">\(P\)</span> is false, and false when <span class="math inline">\(P\)</span> is true.</p>
 </div>
 </div>
 </div>
@@ -1141,7 +1142,7 @@ window.Quarto = {
 <div id="callout-8" class="callout-8-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-and" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (And)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>and</strong> is written <span class="citation" data-cites="wikipedia_logical_conjunction">(<a href="#ref-wikipedia_logical_conjunction" role="doc-biblioref">Wikipedia contributors 2026j</a>)</span> <span class="math inline">\(P \land Q\)</span> (“<span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>”); it is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are both true, and false otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 5 (And)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>and</strong> is written <span class="citation" data-cites="wikipedia_logical_conjunction"><a href="#ref-wikipedia_logical_conjunction" role="doc-biblioref">[5]</a></span> <span class="math inline">\(P \land Q\)</span> (“<span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>”); it is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are both true, and false otherwise.</p>
 </div>
 </div>
 </div>
@@ -1183,7 +1184,7 @@ window.Quarto = {
 <div id="callout-10" class="callout-10-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-or" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Or)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>or</strong> is written <span class="citation" data-cites="wikipedia_logical_disjunction">(<a href="#ref-wikipedia_logical_disjunction" role="doc-biblioref">Wikipedia contributors 2026m</a>)</span> <span class="math inline">\(P \lor Q\)</span> (“<span class="math inline">\(P\)</span> or <span class="math inline">\(Q\)</span>”); it is true when at least one of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> is true, and false when both are false.</p>
+<p><span class="theorem-title"><strong>Definition 6 (Or)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>or</strong> is written <span class="citation" data-cites="wikipedia_logical_disjunction"><a href="#ref-wikipedia_logical_disjunction" role="doc-biblioref">[6]</a></span> <span class="math inline">\(P \lor Q\)</span> (“<span class="math inline">\(P\)</span> or <span class="math inline">\(Q\)</span>”); it is true when at least one of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> is true, and false when both are false.</p>
 </div>
 </div>
 </div>
@@ -1225,7 +1226,7 @@ window.Quarto = {
 <div id="callout-12" class="callout-12-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-implies" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Implies)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>implies</strong> is written <span class="citation" data-cites="wikipedia_material_conditional">(<a href="#ref-wikipedia_material_conditional" role="doc-biblioref">Wikipedia contributors 2026n</a>)</span> <span class="math inline">\(P \Rightarrow Q\)</span> (“if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>”, or “<span class="math inline">\(P\)</span> implies <span class="math inline">\(Q\)</span>”); it is false when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false, and true otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 7 (Implies)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>implies</strong> is written <span class="citation" data-cites="wikipedia_material_conditional"><a href="#ref-wikipedia_material_conditional" role="doc-biblioref">[7]</a></span> <span class="math inline">\(P \Rightarrow Q\)</span> (“if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>”, or “<span class="math inline">\(P\)</span> implies <span class="math inline">\(Q\)</span>”); it is false when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false, and true otherwise.</p>
 </div>
 </div>
 </div>
@@ -1269,7 +1270,7 @@ window.Quarto = {
 <div id="callout-14" class="callout-14-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-iff" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (If and only if)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>if and only if</strong> is written <span class="citation" data-cites="wikipedia_logical_biconditional">(<a href="#ref-wikipedia_logical_biconditional" role="doc-biblioref">Wikipedia contributors 2026i</a>)</span> <span class="math inline">\(P \Leftrightarrow Q\)</span> (“<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”); it is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> have the same truth value, and false otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 8 (If and only if)</strong></span> The logical connective (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>) <strong>if and only if</strong> is written <span class="citation" data-cites="wikipedia_logical_biconditional"><a href="#ref-wikipedia_logical_biconditional" role="doc-biblioref">[8]</a></span> <span class="math inline">\(P \Leftrightarrow Q\)</span> (“<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”); it is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> have the same truth value, and false otherwise.</p>
 </div>
 </div>
 </div>
@@ -1341,7 +1342,7 @@ window.Quarto = {
 <div id="callout-17" class="callout-17-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-quantifier" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Quantifier)</strong></span> A <strong>quantifier</strong> <span class="citation" data-cites="wikipedia_quantifier_logic">(<a href="#ref-wikipedia_quantifier_logic" role="doc-biblioref">Wikipedia contributors 2026w</a>)</span> turns a predicate <span class="math inline">\(P(x)\)</span> (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) about the elements <span class="math inline">\(x\)</span> of a set <span class="math inline">\(S\)</span> into a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>). There are two: the universal quantifier (<a href="#def-universal-quantifier" class="quarto-xref">Definition&nbsp;10</a>) and the existential quantifier (<a href="#def-existential-quantifier" class="quarto-xref">Definition&nbsp;11</a>).</p>
+<p><span class="theorem-title"><strong>Definition 9 (Quantifier)</strong></span> A <strong>quantifier</strong> <span class="citation" data-cites="wikipedia_quantifier_logic"><a href="#ref-wikipedia_quantifier_logic" role="doc-biblioref">[9]</a></span> turns a predicate <span class="math inline">\(P(x)\)</span> (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) about the elements <span class="math inline">\(x\)</span> of a set <span class="math inline">\(S\)</span> into a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>). There are two: the universal quantifier (<a href="#def-universal-quantifier" class="quarto-xref">Definition&nbsp;10</a>) and the existential quantifier (<a href="#def-existential-quantifier" class="quarto-xref">Definition&nbsp;11</a>).</p>
 </div>
 </div>
 </div>
@@ -1359,7 +1360,7 @@ window.Quarto = {
 <div id="callout-18" class="callout-18-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-universal-quantifier" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Universal quantifier)</strong></span> The <strong>universal quantifier</strong> <span class="citation" data-cites="wikipedia_universal_quantification">(<a href="#ref-wikipedia_universal_quantification" role="doc-biblioref">Wikipedia contributors 2026y</a>)</span> “for all” is a quantifier (<a href="#def-quantifier" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\(\forall x \in S, P(x)\)</span> (“for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>, <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Universal quantifier)</strong></span> The <strong>universal quantifier</strong> <span class="citation" data-cites="wikipedia_universal_quantification"><a href="#ref-wikipedia_universal_quantification" role="doc-biblioref">[10]</a></span> “for all” is a quantifier (<a href="#def-quantifier" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\(\forall x \in S, P(x)\)</span> (“for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>, <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
 </div>
 </div>
 </div>
@@ -1399,7 +1400,7 @@ window.Quarto = {
 <div id="callout-20" class="callout-20-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-existential-quantifier" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Existential quantifier)</strong></span> The <strong>existential quantifier</strong> <span class="citation" data-cites="wikipedia_existential_quantification">(<a href="#ref-wikipedia_existential_quantification" role="doc-biblioref">Wikipedia contributors 2026e</a>)</span> “there exists” is a quantifier (<a href="#def-quantifier" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\(\exists x \in S, P(x)\)</span> (“there is an <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span> such that <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for at least one element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Existential quantifier)</strong></span> The <strong>existential quantifier</strong> <span class="citation" data-cites="wikipedia_existential_quantification"><a href="#ref-wikipedia_existential_quantification" role="doc-biblioref">[11]</a></span> “there exists” is a quantifier (<a href="#def-quantifier" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\(\exists x \in S, P(x)\)</span> (“there is an <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span> such that <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for at least one element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
 </div>
 </div>
 </div>
@@ -1514,7 +1515,7 @@ window.Quarto = {
 <div id="callout-25" class="callout-25-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-logical-entailment" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Logical entailment (logical consequence, deductive consequence))</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>, <a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) <strong>logically entail</strong> <span class="citation" data-cites="wikipedia_logical_consequence">(<a href="#ref-wikipedia_logical_consequence" role="doc-biblioref">Wikipedia contributors 2026l</a>)</span> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Logical entailment (logical consequence, deductive consequence))</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>, <a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) <strong>logically entail</strong> <span class="citation" data-cites="wikipedia_logical_consequence"><a href="#ref-wikipedia_logical_consequence" role="doc-biblioref">[12]</a></span> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1566,7 +1567,7 @@ window.Quarto = {
 <div id="callout-27" class="callout-27-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Proof)</strong></span> A <strong>proof</strong> <span class="citation" data-cites="wikipedia_mathematical_proof">(<a href="#ref-wikipedia_mathematical_proof" role="doc-biblioref">Wikipedia contributors 2026p</a>)</span> of a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
+<p><span class="theorem-title"><strong>Definition 14 (Proof)</strong></span> A <strong>proof</strong> <span class="citation" data-cites="wikipedia_mathematical_proof"><a href="#ref-wikipedia_mathematical_proof" role="doc-biblioref">[13]</a></span> of a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
 <ul>
 <li>an assumption,</li>
 <li>a definition,</li>
@@ -1841,7 +1842,7 @@ a + b
 <div id="callout-37" class="callout-37-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-theorem" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Theorem)</strong></span> A <strong>theorem</strong> <span class="citation" data-cites="wikipedia_theorem">(<a href="#ref-wikipedia_theorem" role="doc-biblioref">Wikipedia contributors 2026x</a>)</span> is a result (<a href="#def-result" class="quarto-xref">Definition&nbsp;16</a>) of interest in its own right.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Theorem)</strong></span> A <strong>theorem</strong> <span class="citation" data-cites="wikipedia_theorem"><a href="#ref-wikipedia_theorem" role="doc-biblioref">[14]</a></span> is a result (<a href="#def-result" class="quarto-xref">Definition&nbsp;16</a>) of interest in its own right.</p>
 </div>
 </div>
 </div>
@@ -1877,7 +1878,7 @@ a + b
 <div id="callout-39" class="callout-39-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-lemma" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Lemma)</strong></span> A <strong>lemma</strong> <span class="citation" data-cites="wikipedia_lemma_mathematics">(<a href="#ref-wikipedia_lemma_mathematics" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span> is a result (<a href="#def-result" class="quarto-xref">Definition&nbsp;16</a>) proved mainly as a step in the proof of another result.</p>
+<p><span class="theorem-title"><strong>Definition 18 (Lemma)</strong></span> A <strong>lemma</strong> <span class="citation" data-cites="wikipedia_lemma_mathematics"><a href="#ref-wikipedia_lemma_mathematics" role="doc-biblioref">[15]</a></span> is a result (<a href="#def-result" class="quarto-xref">Definition&nbsp;16</a>) proved mainly as a step in the proof of another result.</p>
 </div>
 </div>
 </div>
@@ -1913,7 +1914,7 @@ a + b
 <div id="callout-41" class="callout-41-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-corollary" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Corollary)</strong></span> A <strong>corollary</strong> <span class="citation" data-cites="wikipedia_corollary">(<a href="#ref-wikipedia_corollary" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> is a result (<a href="#def-result" class="quarto-xref">Definition&nbsp;16</a>) that follows from a theorem with little extra work.</p>
+<p><span class="theorem-title"><strong>Definition 19 (Corollary)</strong></span> A <strong>corollary</strong> <span class="citation" data-cites="wikipedia_corollary"><a href="#ref-wikipedia_corollary" role="doc-biblioref">[16]</a></span> is a result (<a href="#def-result" class="quarto-xref">Definition&nbsp;16</a>) that follows from a theorem with little extra work.</p>
 </div>
 </div>
 </div>
@@ -1957,7 +1958,7 @@ a + b
 <div id="callout-43" class="callout-43-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-counterexample" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Counterexample)</strong></span> A <strong>counterexample</strong> <span class="citation" data-cites="wikipedia_counterexample">(<a href="#ref-wikipedia_counterexample" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span> to a proposition of the form “for every <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, <span class="math inline">\(P(x)\)</span>”, where <span class="math inline">\(P(x)\)</span> is a predicate (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>), is an element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is false. A single counterexample shows that the proposition is false.</p>
+<p><span class="theorem-title"><strong>Definition 20 (Counterexample)</strong></span> A <strong>counterexample</strong> <span class="citation" data-cites="wikipedia_counterexample"><a href="#ref-wikipedia_counterexample" role="doc-biblioref">[17]</a></span> to a proposition of the form “for every <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, <span class="math inline">\(P(x)\)</span>”, where <span class="math inline">\(P(x)\)</span> is a predicate (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>), is an element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is false. A single counterexample shows that the proposition is false.</p>
 </div>
 </div>
 </div>
@@ -1993,7 +1994,7 @@ a + b
 <div id="callout-45" class="callout-45-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-converse" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Converse)</strong></span> The <strong>converse</strong> <span class="citation" data-cites="wikipedia_converse_logic">(<a href="#ref-wikipedia_converse_logic" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> of the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is the proposition “if <span class="math inline">\(Q\)</span>, then <span class="math inline">\(P\)</span>”.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Converse)</strong></span> The <strong>converse</strong> <span class="citation" data-cites="wikipedia_converse_logic"><a href="#ref-wikipedia_converse_logic" role="doc-biblioref">[18]</a></span> of the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is the proposition “if <span class="math inline">\(Q\)</span>, then <span class="math inline">\(P\)</span>”.</p>
 </div>
 </div>
 </div>
@@ -2043,7 +2044,7 @@ n &amp;= 4k \\
 <div id="callout-47" class="callout-47-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-sufficient-condition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Sufficient condition)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(P\)</span> is a <strong>sufficient condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency">(<a href="#ref-wikipedia_necessity_and_sufficiency" role="doc-biblioref">Wikipedia contributors 2026q</a>)</span> for <span class="math inline">\(Q\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 22 (Sufficient condition)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(P\)</span> is a <strong>sufficient condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency"><a href="#ref-wikipedia_necessity_and_sufficiency" role="doc-biblioref">[19]</a></span> for <span class="math inline">\(Q\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2079,7 +2080,7 @@ n &amp;= 4k \\
 <div id="callout-49" class="callout-49-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-necessary-condition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Necessary condition)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(Q\)</span> is a <strong>necessary condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency">(<a href="#ref-wikipedia_necessity_and_sufficiency" role="doc-biblioref">Wikipedia contributors 2026q</a>)</span> for <span class="math inline">\(P\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 23 (Necessary condition)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(Q\)</span> is a <strong>necessary condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency"><a href="#ref-wikipedia_necessity_and_sufficiency" role="doc-biblioref">[19]</a></span> for <span class="math inline">\(P\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2115,7 +2116,7 @@ n &amp;= 4k \\
 <div id="callout-51" class="callout-51-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-necessary-sufficient" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 24 (Necessary and sufficient condition)</strong></span> When both “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” and its converse (<a href="#def-converse" class="quarto-xref">Definition&nbsp;21</a>) are true, <span class="math inline">\(P\)</span> is a <strong>necessary and sufficient condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency">(<a href="#ref-wikipedia_necessity_and_sufficiency" role="doc-biblioref">Wikipedia contributors 2026q</a>)</span> for <span class="math inline">\(Q\)</span> (<a href="#def-sufficient-condition" class="quarto-xref">Definition&nbsp;22</a>, <a href="#def-necessary-condition" class="quarto-xref">Definition&nbsp;23</a>), written “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</p>
+<p><span class="theorem-title"><strong>Definition 24 (Necessary and sufficient condition)</strong></span> When both “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” and its converse (<a href="#def-converse" class="quarto-xref">Definition&nbsp;21</a>) are true, <span class="math inline">\(P\)</span> is a <strong>necessary and sufficient condition</strong> <span class="citation" data-cites="wikipedia_necessity_and_sufficiency"><a href="#ref-wikipedia_necessity_and_sufficiency" role="doc-biblioref">[19]</a></span> for <span class="math inline">\(Q\)</span> (<a href="#def-sufficient-condition" class="quarto-xref">Definition&nbsp;22</a>, <a href="#def-necessary-condition" class="quarto-xref">Definition&nbsp;23</a>), written “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</p>
 </div>
 </div>
 </div>
@@ -2156,7 +2157,7 @@ n &amp;= 4k \\
 <div id="callout-53" class="callout-53-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-proof-by-contradiction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 25 (Proof by contradiction)</strong></span> A <strong>proof by contradiction</strong> <span class="citation" data-cites="wikipedia_proof_by_contradiction">(<a href="#ref-wikipedia_proof_by_contradiction" role="doc-biblioref">Wikipedia contributors 2026t</a>)</span> of a proposition <span class="math inline">\(P\)</span> assumes that <span class="math inline">\(P\)</span> is false, and derives from that assumption a proposition that is known to be false.</p>
+<p><span class="theorem-title"><strong>Definition 25 (Proof by contradiction)</strong></span> A <strong>proof by contradiction</strong> <span class="citation" data-cites="wikipedia_proof_by_contradiction"><a href="#ref-wikipedia_proof_by_contradiction" role="doc-biblioref">[20]</a></span> of a proposition <span class="math inline">\(P\)</span> assumes that <span class="math inline">\(P\)</span> is false, and derives from that assumption a proposition that is known to be false.</p>
 </div>
 </div>
 </div>
@@ -2314,7 +2315,7 @@ j - k &amp;= \tfrac{1}{2}
 <div id="callout-58" class="callout-58-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-direct-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 26 (Direct proof)</strong></span> A <strong>direct proof</strong> <span class="citation" data-cites="wikipedia_direct_proof">(<a href="#ref-wikipedia_direct_proof" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> of a proposition <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="#def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
+<p><span class="theorem-title"><strong>Definition 26 (Direct proof)</strong></span> A <strong>direct proof</strong> <span class="citation" data-cites="wikipedia_direct_proof"><a href="#ref-wikipedia_direct_proof" role="doc-biblioref">[21]</a></span> of a proposition <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="#def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
 </div>
 </div>
 </div>
@@ -2387,7 +2388,7 @@ n^2 &amp;= 49 \\
 <div id="callout-60" class="callout-60-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-proof-by-induction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 27 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./number-systems.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> <span class="citation" data-cites="wikipedia_mathematical_induction">(<a href="#ref-wikipedia_mathematical_induction" role="doc-biblioref">Wikipedia contributors 2026o</a>)</span> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
+<p><span class="theorem-title"><strong>Definition 27 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./number-systems.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> <span class="citation" data-cites="wikipedia_mathematical_induction"><a href="#ref-wikipedia_mathematical_induction" role="doc-biblioref">[22]</a></span> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
 <ol type="1">
 <li>
 <strong>Base case:</strong> <span class="math inline">\(P(n_0)\)</span> holds.</li>
@@ -2519,7 +2520,7 @@ n^2 &amp;= 49 \\
 <div id="callout-63" class="callout-63-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-propositional-logic" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 28 (Propositional logic)</strong></span> <strong>Propositional logic</strong> <span class="citation" data-cites="wikipedia_propositional_calculus">(<a href="#ref-wikipedia_propositional_calculus" role="doc-biblioref">Wikipedia contributors 2026v</a>)</span> is the study of <a href="#def-logical-entailment">logical entailment</a> among <a href="#def-proposition">propositions</a> built from basic propositions <span class="math inline">\(P, Q, R, \ldots\)</span> using only the <a href="#def-logical-connective">logical connectives</a>. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.</p>
+<p><span class="theorem-title"><strong>Definition 28 (Propositional logic)</strong></span> <strong>Propositional logic</strong> <span class="citation" data-cites="wikipedia_propositional_calculus"><a href="#ref-wikipedia_propositional_calculus" role="doc-biblioref">[23]</a></span> is the study of <a href="#def-logical-entailment">logical entailment</a> among <a href="#def-proposition">propositions</a> built from basic propositions <span class="math inline">\(P, Q, R, \ldots\)</span> using only the <a href="#def-logical-connective">logical connectives</a>. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.</p>
 </div>
 </div>
 </div>
@@ -2555,7 +2556,7 @@ n^2 &amp;= 49 \\
 <div id="callout-65" class="callout-65-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-first-order-logic" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 29 (First-order logic)</strong></span> <strong>First-order logic</strong> <span class="citation" data-cites="wikipedia_first_order_logic">(<a href="#ref-wikipedia_first_order_logic" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span> extends propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;28</a>) by also allowing:</p>
+<p><span class="theorem-title"><strong>Definition 29 (First-order logic)</strong></span> <strong>First-order logic</strong> <span class="citation" data-cites="wikipedia_first_order_logic"><a href="#ref-wikipedia_first_order_logic" role="doc-biblioref">[24]</a></span> extends propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;28</a>) by also allowing:</p>
 <ul>
 <li>variables <span class="math inline">\(x, y, \ldots\)</span> that stand for elements of a set;</li>
 <li>
@@ -2601,7 +2602,7 @@ n^2 &amp;= 49 \\
 <div id="callout-67" class="callout-67-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-formal-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 30 (Formal proof)</strong></span> A <strong>formal proof</strong> <span class="citation" data-cites="wikipedia_formal_proof">(<a href="#ref-wikipedia_formal_proof" role="doc-biblioref">Wikipedia contributors 2026g</a>)</span> is a <a href="#def-proof">proof</a> written in propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;28</a>) or first-order logic (<a href="#def-first-order-logic" class="quarto-xref">Definition&nbsp;29</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.</p>
+<p><span class="theorem-title"><strong>Definition 30 (Formal proof)</strong></span> A <strong>formal proof</strong> <span class="citation" data-cites="wikipedia_formal_proof"><a href="#ref-wikipedia_formal_proof" role="doc-biblioref">[25]</a></span> is a <a href="#def-proof">proof</a> written in propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;28</a>) or first-order logic (<a href="#def-first-order-logic" class="quarto-xref">Definition&nbsp;29</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.</p>
 </div>
 </div>
 </div>
@@ -2635,33 +2636,33 @@ n^2 &amp;= 49 \\
 </section><section id="sec-further-reading" class="level2" data-number="8"><h2 data-number="8" class="anchored" data-anchor-id="sec-further-reading">
 <span class="header-section-number">8</span> Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#ref-velleman2019prove" role="doc-biblioref">2019</a>)</span> is a structured introduction to proof techniques such as <a href="#def-direct-proof">direct proof</a>, <a href="./proof-writing.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</p></li>
-<li><p><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#ref-barkerplummer2011language" role="doc-biblioref">2011</a>)</span> treats proofs as <a href="#def-formal-proof">formal proofs</a> in <a href="#def-propositional-logic">propositional logic</a> and <a href="#def-first-order-logic">first-order logic</a>.</p></li>
-<li><p><span class="citation" data-cites="wikipedia_direct_proof">Wikipedia contributors (<a href="#ref-wikipedia_direct_proof" role="doc-biblioref">2026d</a>)</span> — direct proofs</p></li>
-<li><p><span class="citation" data-cites="wikipedia_mathematical_proof">Wikipedia contributors (<a href="#ref-wikipedia_mathematical_proof" role="doc-biblioref">2026p</a>)</span> — proofs, with the main techniques</p></li>
-<li><p><span class="citation" data-cites="wikipedia_proof_by_contradiction">Wikipedia contributors (<a href="#ref-wikipedia_proof_by_contradiction" role="doc-biblioref">2026t</a>)</span> — proof by contradiction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_mathematical_induction">Wikipedia contributors (<a href="#ref-wikipedia_mathematical_induction" role="doc-biblioref">2026o</a>)</span> — mathematical induction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_counterexample">Wikipedia contributors (<a href="#ref-wikipedia_counterexample" role="doc-biblioref">2026c</a>)</span> — counterexamples</p></li>
-<li><p><span class="citation" data-cites="wikipedia_proposition">Wikipedia contributors (<a href="#ref-wikipedia_proposition" role="doc-biblioref">2026u</a>)</span> — propositions</p></li>
-<li><p><span class="citation" data-cites="wikipedia_predicate_mathematical_logic">Wikipedia contributors (<a href="#ref-wikipedia_predicate_mathematical_logic" role="doc-biblioref">2026s</a>)</span> — predicates</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_connective">Wikipedia contributors (<a href="#ref-wikipedia_logical_connective" role="doc-biblioref">2026k</a>)</span> — logical connectives</p></li>
-<li><p><span class="citation" data-cites="wikipedia_negation">Wikipedia contributors (<a href="#ref-wikipedia_negation" role="doc-biblioref">2026r</a>)</span> — negation</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_conjunction">Wikipedia contributors (<a href="#ref-wikipedia_logical_conjunction" role="doc-biblioref">2026j</a>)</span> — logical conjunction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_disjunction">Wikipedia contributors (<a href="#ref-wikipedia_logical_disjunction" role="doc-biblioref">2026m</a>)</span> — logical disjunction</p></li>
-<li><p><span class="citation" data-cites="wikipedia_material_conditional">Wikipedia contributors (<a href="#ref-wikipedia_material_conditional" role="doc-biblioref">2026n</a>)</span> — the material conditional</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_biconditional">Wikipedia contributors (<a href="#ref-wikipedia_logical_biconditional" role="doc-biblioref">2026i</a>)</span> — the biconditional</p></li>
-<li><p><span class="citation" data-cites="wikipedia_converse_logic">Wikipedia contributors (<a href="#ref-wikipedia_converse_logic" role="doc-biblioref">2026a</a>)</span> — converses</p></li>
-<li><p><span class="citation" data-cites="wikipedia_necessity_and_sufficiency">Wikipedia contributors (<a href="#ref-wikipedia_necessity_and_sufficiency" role="doc-biblioref">2026q</a>)</span> — necessary and sufficient conditions</p></li>
-<li><p><span class="citation" data-cites="wikipedia_quantifier_logic">Wikipedia contributors (<a href="#ref-wikipedia_quantifier_logic" role="doc-biblioref">2026w</a>)</span> — quantifiers</p></li>
-<li><p><span class="citation" data-cites="wikipedia_universal_quantification">Wikipedia contributors (<a href="#ref-wikipedia_universal_quantification" role="doc-biblioref">2026y</a>)</span> — universal quantification</p></li>
-<li><p><span class="citation" data-cites="wikipedia_existential_quantification">Wikipedia contributors (<a href="#ref-wikipedia_existential_quantification" role="doc-biblioref">2026e</a>)</span> — existential quantification</p></li>
-<li><p><span class="citation" data-cites="wikipedia_logical_consequence">Wikipedia contributors (<a href="#ref-wikipedia_logical_consequence" role="doc-biblioref">2026l</a>)</span> — logical consequence</p></li>
-<li><p><span class="citation" data-cites="wikipedia_propositional_calculus">Wikipedia contributors (<a href="#ref-wikipedia_propositional_calculus" role="doc-biblioref">2026v</a>)</span> — propositional logic</p></li>
-<li><p><span class="citation" data-cites="wikipedia_first_order_logic">Wikipedia contributors (<a href="#ref-wikipedia_first_order_logic" role="doc-biblioref">2026f</a>)</span> — first-order logic</p></li>
-<li><p><span class="citation" data-cites="wikipedia_formal_proof">Wikipedia contributors (<a href="#ref-wikipedia_formal_proof" role="doc-biblioref">2026g</a>)</span> — formal proofs</p></li>
-<li><p><span class="citation" data-cites="wikipedia_theorem">Wikipedia contributors (<a href="#ref-wikipedia_theorem" role="doc-biblioref">2026x</a>)</span> — theorems</p></li>
-<li><p><span class="citation" data-cites="wikipedia_lemma_mathematics">Wikipedia contributors (<a href="#ref-wikipedia_lemma_mathematics" role="doc-biblioref">2026h</a>)</span> — lemmas</p></li>
-<li><p><span class="citation" data-cites="wikipedia_corollary">Wikipedia contributors (<a href="#ref-wikipedia_corollary" role="doc-biblioref">2026b</a>)</span> — corollaries</p></li>
+<li><p><span class="citation" data-cites="velleman2019prove">Velleman <a href="#ref-velleman2019prove" role="doc-biblioref">[26]</a></span> is a structured introduction to proof techniques such as <a href="#def-direct-proof">direct proof</a>, <a href="./proof-writing.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</p></li>
+<li><p><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. <a href="#ref-barkerplummer2011language" role="doc-biblioref">[27]</a></span> treats proofs as <a href="#def-formal-proof">formal proofs</a> in <a href="#def-propositional-logic">propositional logic</a> and <a href="#def-first-order-logic">first-order logic</a>.</p></li>
+<li><p><span class="citation" data-cites="wikipedia_direct_proof">Wikipedia contributors <a href="#ref-wikipedia_direct_proof" role="doc-biblioref">[21]</a></span> — direct proofs</p></li>
+<li><p><span class="citation" data-cites="wikipedia_mathematical_proof">Wikipedia contributors <a href="#ref-wikipedia_mathematical_proof" role="doc-biblioref">[13]</a></span> — proofs, with the main techniques</p></li>
+<li><p><span class="citation" data-cites="wikipedia_proof_by_contradiction">Wikipedia contributors <a href="#ref-wikipedia_proof_by_contradiction" role="doc-biblioref">[20]</a></span> — proof by contradiction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_mathematical_induction">Wikipedia contributors <a href="#ref-wikipedia_mathematical_induction" role="doc-biblioref">[22]</a></span> — mathematical induction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_counterexample">Wikipedia contributors <a href="#ref-wikipedia_counterexample" role="doc-biblioref">[17]</a></span> — counterexamples</p></li>
+<li><p><span class="citation" data-cites="wikipedia_proposition">Wikipedia contributors <a href="#ref-wikipedia_proposition" role="doc-biblioref">[1]</a></span> — propositions</p></li>
+<li><p><span class="citation" data-cites="wikipedia_predicate_mathematical_logic">Wikipedia contributors <a href="#ref-wikipedia_predicate_mathematical_logic" role="doc-biblioref">[2]</a></span> — predicates</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_connective">Wikipedia contributors <a href="#ref-wikipedia_logical_connective" role="doc-biblioref">[3]</a></span> — logical connectives</p></li>
+<li><p><span class="citation" data-cites="wikipedia_negation">Wikipedia contributors <a href="#ref-wikipedia_negation" role="doc-biblioref">[4]</a></span> — negation</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_conjunction">Wikipedia contributors <a href="#ref-wikipedia_logical_conjunction" role="doc-biblioref">[5]</a></span> — logical conjunction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_disjunction">Wikipedia contributors <a href="#ref-wikipedia_logical_disjunction" role="doc-biblioref">[6]</a></span> — logical disjunction</p></li>
+<li><p><span class="citation" data-cites="wikipedia_material_conditional">Wikipedia contributors <a href="#ref-wikipedia_material_conditional" role="doc-biblioref">[7]</a></span> — the material conditional</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_biconditional">Wikipedia contributors <a href="#ref-wikipedia_logical_biconditional" role="doc-biblioref">[8]</a></span> — the biconditional</p></li>
+<li><p><span class="citation" data-cites="wikipedia_converse_logic">Wikipedia contributors <a href="#ref-wikipedia_converse_logic" role="doc-biblioref">[18]</a></span> — converses</p></li>
+<li><p><span class="citation" data-cites="wikipedia_necessity_and_sufficiency">Wikipedia contributors <a href="#ref-wikipedia_necessity_and_sufficiency" role="doc-biblioref">[19]</a></span> — necessary and sufficient conditions</p></li>
+<li><p><span class="citation" data-cites="wikipedia_quantifier_logic">Wikipedia contributors <a href="#ref-wikipedia_quantifier_logic" role="doc-biblioref">[9]</a></span> — quantifiers</p></li>
+<li><p><span class="citation" data-cites="wikipedia_universal_quantification">Wikipedia contributors <a href="#ref-wikipedia_universal_quantification" role="doc-biblioref">[10]</a></span> — universal quantification</p></li>
+<li><p><span class="citation" data-cites="wikipedia_existential_quantification">Wikipedia contributors <a href="#ref-wikipedia_existential_quantification" role="doc-biblioref">[11]</a></span> — existential quantification</p></li>
+<li><p><span class="citation" data-cites="wikipedia_logical_consequence">Wikipedia contributors <a href="#ref-wikipedia_logical_consequence" role="doc-biblioref">[12]</a></span> — logical consequence</p></li>
+<li><p><span class="citation" data-cites="wikipedia_propositional_calculus">Wikipedia contributors <a href="#ref-wikipedia_propositional_calculus" role="doc-biblioref">[23]</a></span> — propositional logic</p></li>
+<li><p><span class="citation" data-cites="wikipedia_first_order_logic">Wikipedia contributors <a href="#ref-wikipedia_first_order_logic" role="doc-biblioref">[24]</a></span> — first-order logic</p></li>
+<li><p><span class="citation" data-cites="wikipedia_formal_proof">Wikipedia contributors <a href="#ref-wikipedia_formal_proof" role="doc-biblioref">[25]</a></span> — formal proofs</p></li>
+<li><p><span class="citation" data-cites="wikipedia_theorem">Wikipedia contributors <a href="#ref-wikipedia_theorem" role="doc-biblioref">[14]</a></span> — theorems</p></li>
+<li><p><span class="citation" data-cites="wikipedia_lemma_mathematics">Wikipedia contributors <a href="#ref-wikipedia_lemma_mathematics" role="doc-biblioref">[15]</a></span> — lemmas</p></li>
+<li><p><span class="citation" data-cites="wikipedia_corollary">Wikipedia contributors <a href="#ref-wikipedia_corollary" role="doc-biblioref">[16]</a></span> — corollaries</p></li>
 </ul>
 <p>Free course materials on formal logic:</p>
 <ul>
@@ -2669,87 +2670,140 @@ n^2 &amp;= 49 \\
 <li>John Wilcox’s <a href="https://www.johnwilcox.org/logic.html">logic handouts</a> supplement the same Stanford course, with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.</li>
 <li>Eric Pacuit’s <a href="https://cs.stanford.edu/~epacuit/classes/phil151winter09.html">Phil 151: First Order Logic</a> (Stanford, Winter 2009) posts a syllabus, a modal logic study guide and problem sets.</li>
 </ul></section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-barkerplummer2011language" class="csl-entry" role="listitem">
-Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. <em>Language, Proof and Logic</em>. 2nd ed. CSLI Publications. <a href="https://www.amazon.com/dp/1575866323">https://www.amazon.com/dp/1575866323</a>.
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-wikipedia_proposition" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Proposition — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Proposition">https://en.wikipedia.org/wiki/Proposition</a>
 </div>
-<div id="ref-velleman2019prove" class="csl-entry" role="listitem">
-Velleman, Daniel J. 2019. <em>How to Prove It: A Structured Approach</em>. 3rd ed. Cambridge University Press. <a href="https://doi.org/10.1017/9781108539890">https://doi.org/10.1017/9781108539890</a>.
-</div>
-<div id="ref-wikipedia_converse_logic" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Converse (Logic) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Converse_(logic)">https://en.wikipedia.org/wiki/Converse_(logic)</a>.
-</div>
-<div id="ref-wikipedia_corollary" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Corollary — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Corollary">https://en.wikipedia.org/wiki/Corollary</a>.
-</div>
-<div id="ref-wikipedia_counterexample" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Counterexample — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Counterexample">https://en.wikipedia.org/wiki/Counterexample</a>.
-</div>
-<div id="ref-wikipedia_direct_proof" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Direct Proof — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Direct_proof">https://en.wikipedia.org/wiki/Direct_proof</a>.
-</div>
-<div id="ref-wikipedia_existential_quantification" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Existential Quantification — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Existential_quantification">https://en.wikipedia.org/wiki/Existential_quantification</a>.
-</div>
-<div id="ref-wikipedia_first_order_logic" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>First-Order Logic — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/First-order_logic">https://en.wikipedia.org/wiki/First-order_logic</a>.
-</div>
-<div id="ref-wikipedia_formal_proof" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Formal Proof — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Formal_proof">https://en.wikipedia.org/wiki/Formal_proof</a>.
-</div>
-<div id="ref-wikipedia_lemma_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Lemma (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Lemma_(mathematics)">https://en.wikipedia.org/wiki/Lemma_(mathematics)</a>.
-</div>
-<div id="ref-wikipedia_logical_biconditional" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026i. <em>Logical Biconditional — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_biconditional">https://en.wikipedia.org/wiki/Logical_biconditional</a>.
-</div>
-<div id="ref-wikipedia_logical_conjunction" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026j. <em>Logical Conjunction — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_conjunction">https://en.wikipedia.org/wiki/Logical_conjunction</a>.
-</div>
-<div id="ref-wikipedia_logical_connective" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026k. <em>Logical Connective — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_connective">https://en.wikipedia.org/wiki/Logical_connective</a>.
-</div>
-<div id="ref-wikipedia_logical_consequence" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026l. <em>Logical Consequence — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_consequence">https://en.wikipedia.org/wiki/Logical_consequence</a>.
-</div>
-<div id="ref-wikipedia_logical_disjunction" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026m. <em>Logical Disjunction — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_disjunction">https://en.wikipedia.org/wiki/Logical_disjunction</a>.
-</div>
-<div id="ref-wikipedia_material_conditional" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026n. <em>Material Conditional — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Material_conditional">https://en.wikipedia.org/wiki/Material_conditional</a>.
-</div>
-<div id="ref-wikipedia_mathematical_induction" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026o. <em>Mathematical Induction — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Mathematical_induction">https://en.wikipedia.org/wiki/Mathematical_induction</a>.
-</div>
-<div id="ref-wikipedia_mathematical_proof" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026p. <em>Mathematical Proof — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Mathematical_proof">https://en.wikipedia.org/wiki/Mathematical_proof</a>.
-</div>
-<div id="ref-wikipedia_necessity_and_sufficiency" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026q. <em>Necessity and Sufficiency — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Necessity_and_sufficiency">https://en.wikipedia.org/wiki/Necessity_and_sufficiency</a>.
-</div>
-<div id="ref-wikipedia_negation" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026r. <em>Negation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Negation">https://en.wikipedia.org/wiki/Negation</a>.
 </div>
 <div id="ref-wikipedia_predicate_mathematical_logic" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026s. <em>Predicate (Mathematical Logic) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)">https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)</a>.
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Predicate (mathematical logic) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)">https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)</a>
 </div>
-<div id="ref-wikipedia_proof_by_contradiction" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026t. <em>Proof by Contradiction — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Proof_by_contradiction">https://en.wikipedia.org/wiki/Proof_by_contradiction</a>.
 </div>
-<div id="ref-wikipedia_proposition" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026u. <em>Proposition — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Proposition">https://en.wikipedia.org/wiki/Proposition</a>.
+<div id="ref-wikipedia_logical_connective" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical connective — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_connective">https://en.wikipedia.org/wiki/Logical_connective</a>
 </div>
-<div id="ref-wikipedia_propositional_calculus" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026v. <em>Propositional Calculus — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Propositional_calculus">https://en.wikipedia.org/wiki/Propositional_calculus</a>.
+</div>
+<div id="ref-wikipedia_negation" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Negation — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Negation">https://en.wikipedia.org/wiki/Negation</a>
+</div>
+</div>
+<div id="ref-wikipedia_logical_conjunction" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical conjunction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_conjunction">https://en.wikipedia.org/wiki/Logical_conjunction</a>
+</div>
+</div>
+<div id="ref-wikipedia_logical_disjunction" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical disjunction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_disjunction">https://en.wikipedia.org/wiki/Logical_disjunction</a>
+</div>
+</div>
+<div id="ref-wikipedia_material_conditional" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Material conditional — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Material_conditional">https://en.wikipedia.org/wiki/Material_conditional</a>
+</div>
+</div>
+<div id="ref-wikipedia_logical_biconditional" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical biconditional — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_biconditional">https://en.wikipedia.org/wiki/Logical_biconditional</a>
+</div>
 </div>
 <div id="ref-wikipedia_quantifier_logic" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026w. <em>Quantifier (Logic) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Quantifier_(logic)">https://en.wikipedia.org/wiki/Quantifier_(logic)</a>.
+<div class="csl-left-margin">[9] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Quantifier (logic) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Quantifier_(logic)">https://en.wikipedia.org/wiki/Quantifier_(logic)</a>
 </div>
-<div id="ref-wikipedia_theorem" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026x. <em>Theorem — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Theorem">https://en.wikipedia.org/wiki/Theorem</a>.
 </div>
 <div id="ref-wikipedia_universal_quantification" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026y. <em>Universal Quantification — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Universal_quantification">https://en.wikipedia.org/wiki/Universal_quantification</a>.
+<div class="csl-left-margin">[10] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Universal quantification — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Universal_quantification">https://en.wikipedia.org/wiki/Universal_quantification</a>
+</div>
+</div>
+<div id="ref-wikipedia_existential_quantification" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Existential quantification — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Existential_quantification">https://en.wikipedia.org/wiki/Existential_quantification</a>
+</div>
+</div>
+<div id="ref-wikipedia_logical_consequence" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Logical consequence — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Logical_consequence">https://en.wikipedia.org/wiki/Logical_consequence</a>
+</div>
+</div>
+<div id="ref-wikipedia_mathematical_proof" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Mathematical proof — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Mathematical_proof">https://en.wikipedia.org/wiki/Mathematical_proof</a>
+</div>
+</div>
+<div id="ref-wikipedia_theorem" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Theorem — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Theorem">https://en.wikipedia.org/wiki/Theorem</a>
+</div>
+</div>
+<div id="ref-wikipedia_lemma_mathematics" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Lemma (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Lemma_(mathematics)">https://en.wikipedia.org/wiki/Lemma_(mathematics)</a>
+</div>
+</div>
+<div id="ref-wikipedia_corollary" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Corollary — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Corollary">https://en.wikipedia.org/wiki/Corollary</a>
+</div>
+</div>
+<div id="ref-wikipedia_counterexample" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Counterexample — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Counterexample">https://en.wikipedia.org/wiki/Counterexample</a>
+</div>
+</div>
+<div id="ref-wikipedia_converse_logic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[18] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Converse (logic) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Converse_(logic)">https://en.wikipedia.org/wiki/Converse_(logic)</a>
+</div>
+</div>
+<div id="ref-wikipedia_necessity_and_sufficiency" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[19] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Necessity and sufficiency — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Necessity_and_sufficiency">https://en.wikipedia.org/wiki/Necessity_and_sufficiency</a>
+</div>
+</div>
+<div id="ref-wikipedia_proof_by_contradiction" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[20] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Proof by contradiction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Proof_by_contradiction">https://en.wikipedia.org/wiki/Proof_by_contradiction</a>
+</div>
+</div>
+<div id="ref-wikipedia_direct_proof" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[21] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Direct proof — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Direct_proof">https://en.wikipedia.org/wiki/Direct_proof</a>
+</div>
+</div>
+<div id="ref-wikipedia_mathematical_induction" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[22] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Mathematical induction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Mathematical_induction">https://en.wikipedia.org/wiki/Mathematical_induction</a>
+</div>
+</div>
+<div id="ref-wikipedia_propositional_calculus" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[23] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Propositional calculus — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Propositional_calculus">https://en.wikipedia.org/wiki/Propositional_calculus</a>
+</div>
+</div>
+<div id="ref-wikipedia_first_order_logic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[24] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“First-order logic — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/First-order_logic">https://en.wikipedia.org/wiki/First-order_logic</a>
+</div>
+</div>
+<div id="ref-wikipedia_formal_proof" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[25] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Formal proof — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Formal_proof">https://en.wikipedia.org/wiki/Formal_proof</a>
+</div>
+</div>
+<div id="ref-velleman2019prove" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[26] </div>
+<div class="csl-right-inline">D. J. Velleman, <em>How to prove it: A structured approach</em>, 3rd ed. Cambridge University Press, 2019. doi: <a href="https://doi.org/10.1017/9781108539890">10.1017/9781108539890</a>.</div>
+</div>
+<div id="ref-barkerplummer2011language" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[27] </div>
+<div class="csl-right-inline">D. Barker-Plummer, J. Barwise, and J. Etchemendy, <em>Language, proof and logic</em>, 2nd ed. Stanford, CA: CSLI Publications, 2011. Available: <a href="https://www.amazon.com/dp/1575866323">https://www.amazon.com/dp/1575866323</a>
+</div>
 </div>
 </div>
 

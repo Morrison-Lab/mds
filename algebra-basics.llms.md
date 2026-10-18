@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Equalities
 
@@ -12,7 +12,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 1 (Transitive relation)** Let \\\sim\\ be a [relation](functions.llms.md#def-relation) on a set \\S\\. The relation \\\sim\\ is **transitive** ([Wikipedia contributors 2026i](#ref-wikipedia_transitive_relation)) if, for all \\a, b, c \in S\\, \\a \sim b\\ and \\b \sim c\\ together imply \\a \sim c\\.
+> **Definition 1 (Transitive relation)** Let \\\sim\\ be a [relation](functions.llms.md#def-relation) on a set \\S\\. The relation \\\sim\\ is **transitive** [\[1\]](#ref-wikipedia_transitive_relation) if, for all \\a, b, c \in S\\, \\a \sim b\\ and \\b \sim c\\ together imply \\a \sim c\\.
 
 > **NOTE:**
 >
@@ -31,7 +31,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 2 (Identity)** An **identity** ([Wikipedia contributors 2026d](#ref-wikipedia_identity_mathematics)) is an equation between two expressions that holds for every value of its variables in a stated set, such as the [real numbers](number-systems.llms.md#def-real-numbers).
+> **Definition 2 (Identity)** An **identity** [\[2\]](#ref-wikipedia_identity_mathematics) is an equation between two expressions that holds for every value of its variables in a stated set, such as the [real numbers](number-systems.llms.md#def-real-numbers).
 
 > **NOTE:**
 >
@@ -44,7 +44,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 3 (Strict inequalities)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a\\ and \\b\\, \\a \< b\\ (“\\a\\ is less than \\b\\”) and \\a \> b\\ (“\\a\\ is greater than \\b\\”) are **strict inequalities** ([Wikipedia contributors 2026e](#ref-wikipedia_inequality_mathematics)).
+> **Definition 3 (Strict inequalities)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a\\ and \\b\\, \\a \< b\\ (“\\a\\ is less than \\b\\”) and \\a \> b\\ (“\\a\\ is greater than \\b\\”) are **strict inequalities** [\[3\]](#ref-wikipedia_inequality_mathematics).
 
 > **NOTE:**
 >
@@ -81,7 +81,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 5 (Power)** Let \\a\\ be a real number and \\n\\ a [natural number](number-systems.llms.md#def-natural-numbers). The \\n\\th **power** of \\a\\ is the product of \\n\\ copies of \\a\\ ([Wikipedia contributors 2026c](#ref-wikipedia_exponentiation)):
+> **Definition 5 (Power)** Let \\a\\ be a real number and \\n\\ a [natural number](number-systems.llms.md#def-natural-numbers). The \\n\\th **power** of \\a\\ is the product of \\n\\ copies of \\a\\ [\[4\]](#ref-wikipedia_exponentiation):
 >
 > \\a^n \stackrel{\text{def}}{=}\underbrace{a \cdot a \cdot\cdots \cdot a}\_{n \text{ factors}}\\
 
@@ -130,7 +130,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 10 (Square root)** For a real number \\a \ge 0\\, the **square root** of \\a\\, written \\\sqrt{a}\\ ([Wikipedia contributors 2026h](#ref-wikipedia_square_root)), is the non-negative real number whose square ([Definition 5](#def-power)) is \\a\\.
+> **Definition 10 (Square root)** For a real number \\a \ge 0\\, the **square root** of \\a\\, written \\\sqrt{a}\\ [\[5\]](#ref-wikipedia_square_root), is the non-negative real number whose square ([Definition 5](#def-power)) is \\a\\.
 
 > **NOTE:**
 >
@@ -143,7 +143,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 11 (Absolute value of a real number)** The **absolute value** of a real number \\a\\ ([Wikipedia contributors 2026a](#ref-wikipedia_absolute_value)) is
+> **Definition 11 (Absolute value of a real number)** The **absolute value** of a real number \\a\\ [\[6\]](#ref-wikipedia_absolute_value) is
 >
 > \\ \mathopen{}\left\|a\right\|\mathclose{} \stackrel{\text{def}}{=}\begin{cases} a, & a \ge 0 \\ -a, & a \< 0 \end{cases} \\
 
@@ -171,11 +171,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 ## 4 Percent
 
-The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” ([Wikipedia contributors 2026g](#ref-wikipedia_percentage)).
+The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” [\[7\]](#ref-wikipedia_percentage).
 
 > **NOTE:**
 >
-> **Definition 12 (Percent)** For a real number \\x\\, “\\x\\ **percent**”, written \\x\\\\, means \\x / 100\\ ([Wikipedia contributors 2026g](#ref-wikipedia_percentage)):
+> **Definition 12 (Percent)** For a real number \\x\\, “\\x\\ **percent**”, written \\x\\\\, means \\x / 100\\ [\[7\]](#ref-wikipedia_percentage):
 >
 > \\ x\\ \stackrel{\text{def}}{=}\frac{x}{100} \\
 >
@@ -214,7 +214,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 13 (Minimum)** Let \\A \subseteq \mathbb{R}\\. A number \\m\\ is the **minimum** of \\A\\ ([Wikipedia contributors 2026f](#ref-wikipedia_maxima_and_minima)), written \\\min A\\, if \\m \in A\\ and \\m \le a\\ for all \\a \in A\\.
+> **Definition 13 (Minimum)** Let \\A \subseteq \mathbb{R}\\. A number \\m\\ is the **minimum** of \\A\\ [\[8\]](#ref-wikipedia_maxima_and_minima), written \\\min A\\, if \\m \in A\\ and \\m \le a\\ for all \\a \in A\\.
 
 > **NOTE:**
 >
@@ -222,7 +222,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 14 (Maximum)** Let \\A \subseteq \mathbb{R}\\. A number \\M\\ is the **maximum** of \\A\\ ([Wikipedia contributors 2026f](#ref-wikipedia_maxima_and_minima)), written \\\max A\\, if \\M \in A\\ and \\a \le M\\ for all \\a \in A\\.
+> **Definition 14 (Maximum)** Let \\A \subseteq \mathbb{R}\\. A number \\M\\ is the **maximum** of \\A\\ [\[8\]](#ref-wikipedia_maxima_and_minima), written \\\max A\\, if \\M \in A\\ and \\a \le M\\ for all \\a \in A\\.
 
 > **NOTE:**
 >
@@ -233,7 +233,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 15 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ ([Wikipedia contributors 2026b](#ref-wikipedia_arg_max)) is the set of inputs where \\f\\ takes its smallest value:
+> **Definition 15 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where \\f\\ takes its smallest value:
 >
 > \\\arg \min\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(x) \le f(a)\right\\\mathclose{}\\
 >
@@ -247,7 +247,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 16 (Argmax)** Let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). The **argmax** of \\f\\ over \\A\\ ([Wikipedia contributors 2026b](#ref-wikipedia_arg_max)) is the set of inputs where \\f\\ takes its largest value:
+> **Definition 16 (Argmax)** Let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). The **argmax** of \\f\\ over \\A\\ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where \\f\\ takes its largest value:
 >
 > \\\arg \max\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(a) \le f(x)\right\\\mathclose{}\\
 >
@@ -327,42 +327,60 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 ## Further reading
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_transitive_relation)) — transitive relations, with examples
+- Wikipedia contributors [\[1\]](#ref-wikipedia_transitive_relation) — transitive relations, with examples
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_inequality_mathematics)) — strict and non-strict inequalities and their properties
+- Wikipedia contributors [\[3\]](#ref-wikipedia_inequality_mathematics) — strict and non-strict inequalities and their properties
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_exponentiation)) — powers with integer, rational and real exponents
+- Wikipedia contributors [\[4\]](#ref-wikipedia_exponentiation) — powers with integer, rational and real exponents
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_square_root)) — square roots and their properties
+- Wikipedia contributors [\[5\]](#ref-wikipedia_square_root) — square roots and their properties
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_absolute_value)) — the absolute value and its generalizations
+- Wikipedia contributors [\[6\]](#ref-wikipedia_absolute_value) — the absolute value and its generalizations
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_percentage)) — percentages, with worked examples
+- Wikipedia contributors [\[7\]](#ref-wikipedia_percentage) — percentages, with worked examples
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_maxima_and_minima)) — minima and maxima, local and global
+- Wikipedia contributors [\[8\]](#ref-wikipedia_maxima_and_minima) — minima and maxima, local and global
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_arg_max)) — the argmax and argmin
+- Wikipedia contributors [\[9\]](#ref-wikipedia_arg_max) — the argmax and argmin
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_identity_mathematics)) — identities, equalities that hold for all values of their variables
+- Wikipedia contributors [\[2\]](#ref-wikipedia_identity_mathematics) — identities, equalities that hold for all values of their variables
 
 Back to top
 
 ## References
 
-Wikipedia contributors. 2026a. *Absolute Value — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Absolute_value>.
+\[1\]
 
-Wikipedia contributors. 2026b. *Arg Max — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Arg_max>.
+Wikipedia contributors, “Transitive relation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Transitive_relation>
 
-Wikipedia contributors. 2026c. *Exponentiation — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Exponentiation>.
+\[2\]
 
-Wikipedia contributors. 2026d. *Identity (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Identity_(mathematics)>.
+Wikipedia contributors, “Identity (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Identity_(mathematics)>
 
-Wikipedia contributors. 2026e. *Inequality (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Inequality_(mathematics)>.
+\[3\]
 
-Wikipedia contributors. 2026f. *Maxima and Minima — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Maxima_and_minima>.
+Wikipedia contributors, “Inequality (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Inequality_(mathematics)>
 
-Wikipedia contributors. 2026g. *Percentage — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Percentage>.
+\[4\]
 
-Wikipedia contributors. 2026h. *Square Root — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Square_root>.
+Wikipedia contributors, “Exponentiation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Exponentiation>
 
-Wikipedia contributors. 2026i. *Transitive Relation — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Transitive_relation>.
+\[5\]
+
+Wikipedia contributors, “Square root — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Square_root>
+
+\[6\]
+
+Wikipedia contributors, “Absolute value — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Absolute_value>
+
+\[7\]
+
+Wikipedia contributors, “Percentage — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Percentage>
+
+\[8\]
+
+Wikipedia contributors, “Maxima and minima — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Maxima_and_minima>
+
+\[9\]
+
+Wikipedia contributors, “Arg max — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Arg_max>

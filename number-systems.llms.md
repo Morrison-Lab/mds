@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
@@ -27,7 +27,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Integers)** The **integers** ([Wikipedia contributors 2026a](#ref-wikipedia_integer)) are the whole numbers, together with their negatives and \\0\\:
+> **Definition 1 (Integers)** The **integers** [\[1\]](#ref-wikipedia_integer) are the whole numbers, together with their negatives and \\0\\:
 >
 > \\\mathbb{Z} \stackrel{\text{def}}{=}\mathopen{}\left\\\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\right\\\mathclose{}\\
 >
@@ -51,11 +51,11 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Even integer)** An integer ([Definition 1](#def-integers)) \\n\\ is **even** ([Wikipedia contributors 2026d](#ref-wikipedia_parity_mathematics)) if \\n = 2k\\ for some integer \\k\\.
+> **Definition 4 (Even integer)** An integer ([Definition 1](#def-integers)) \\n\\ is **even** [\[2\]](#ref-wikipedia_parity_mathematics) if \\n = 2k\\ for some integer \\k\\.
 
 > **NOTE:**
 >
-> **Definition 5 (Odd integer)** An integer ([Definition 1](#def-integers)) \\n\\ is **odd** ([Wikipedia contributors 2026d](#ref-wikipedia_parity_mathematics)) if \\n = 2k + 1\\ for some integer \\k\\.
+> **Definition 5 (Odd integer)** An integer ([Definition 1](#def-integers)) \\n\\ is **odd** [\[2\]](#ref-wikipedia_parity_mathematics) if \\n = 2k + 1\\ for some integer \\k\\.
 
 > **NOTE:**
 >
@@ -69,7 +69,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Natural numbers (our convention))** In these notes, the **natural numbers** ([Wikipedia contributors 2026c](#ref-wikipedia_natural_number)) are the positive integers ([Definition 2](#def-positive-integer)):
+> **Definition 6 (Natural numbers (our convention))** In these notes, the **natural numbers** [\[3\]](#ref-wikipedia_natural_number) are the positive integers ([Definition 2](#def-positive-integer)):
 >
 > \\\mathbb{N}\stackrel{\text{def}}{=}\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\
 
@@ -104,7 +104,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Rational numbers)** A **rational number** ([Wikipedia contributors 2026f](#ref-wikipedia_rational_number)) is a number that can be written as a fraction \\\frac{a}{b}\\, where \\a\\ and \\b\\ are integers ([Definition 1](#def-integers)) and \\b \ne 0\\. The set of rational numbers is written \\\mathbb{Q}\\:
+> **Definition 8 (Rational numbers)** A **rational number** [\[4\]](#ref-wikipedia_rational_number) is a number that can be written as a fraction \\\frac{a}{b}\\, where \\a\\ and \\b\\ are integers ([Definition 1](#def-integers)) and \\b \ne 0\\. The set of rational numbers is written \\\mathbb{Q}\\:
 >
 > \\\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\\\frac{a}{b} : a \in \mathbb{Z},\\ b \in \mathbb{Z},\\ b \ne 0\right\\\mathclose{}\\
 
@@ -119,11 +119,11 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Real numbers)** A **real number** ([Wikipedia contributors 2026g](#ref-wikipedia_real_number)) is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written \\\mathbb{R}\\.
+> **Definition 9 (Real numbers)** A **real number** [\[5\]](#ref-wikipedia_real_number) is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written \\\mathbb{R}\\.
 
 > **NOTE:**
 >
-> *Remark 1* (A working definition). [Definition 9](#def-real-numbers) is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. Rudin ([1976](#ref-rudin1976principles), Appendix to Chapter 1) constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, \\0.999\ldots\\ and \\1.000\ldots\\ are the same real number, \\1\\.
+> *Remark 1* (A working definition). [Definition 9](#def-real-numbers) is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. Rudin [\[6\]](#ref-rudin1976principles), Appendix to Chapter 1 constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, \\0.999\ldots\\ and \\1.000\ldots\\ are the same real number, \\1\\.
 
 > **NOTE:**
 >
@@ -135,52 +135,70 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Irrational numbers)** An **irrational number** ([Wikipedia contributors 2026b](#ref-wikipedia_irrational_number)) is a real number ([Definition 9](#def-real-numbers)) that is not rational ([Definition 8](#def-rational-numbers)).
+> **Definition 10 (Irrational numbers)** An **irrational number** [\[7\]](#ref-wikipedia_irrational_number) is a real number ([Definition 9](#def-real-numbers)) that is not rational ([Definition 8](#def-rational-numbers)).
 
 > **NOTE:**
 >
 > **Example 6 (Irrational numbers)**  
 >
-> - \\\sqrt{2} = 1.41421\ldots\\, the [square root](algebra-basics.llms.md#def-square-root) of \\2\\, is irrational: no fraction of integers \\\frac{a}{b}\\ squares to \\2\\ ([Wikipedia contributors 2026h](#ref-wikipedia_square_root_of_2)).
-> - \\\pi = 3.14159\ldots\\ is irrational ([Wikipedia contributors 2026e](#ref-wikipedia_proof_that_pi_is_irrational)).
+> - \\\sqrt{2} = 1.41421\ldots\\, the [square root](algebra-basics.llms.md#def-square-root) of \\2\\, is irrational: no fraction of integers \\\frac{a}{b}\\ squares to \\2\\ [\[8\]](#ref-wikipedia_square_root_of_2).
+> - \\\pi = 3.14159\ldots\\ is irrational [\[9\]](#ref-wikipedia_proof_that_pi_is_irrational).
 > - \\1.5\\ is not irrational, because \\1.5 = \frac{3}{2}\\ is rational.
 
 ## Further reading
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_integer)) — the integers
+- Wikipedia contributors [\[1\]](#ref-wikipedia_integer) — the integers
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_parity_mathematics)) — even and odd numbers
+- Wikipedia contributors [\[2\]](#ref-wikipedia_parity_mathematics) — even and odd numbers
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_natural_number)) — the natural numbers and their conventions
+- Wikipedia contributors [\[3\]](#ref-wikipedia_natural_number) — the natural numbers and their conventions
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_rational_number)) — the rational numbers
+- Wikipedia contributors [\[4\]](#ref-wikipedia_rational_number) — the rational numbers
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_real_number)) — the real numbers and their constructions
+- Wikipedia contributors [\[5\]](#ref-wikipedia_real_number) — the real numbers and their constructions
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_irrational_number)) — irrational numbers
+- Wikipedia contributors [\[7\]](#ref-wikipedia_irrational_number) — irrational numbers
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_square_root_of_2)) — the square root of 2
+- Wikipedia contributors [\[8\]](#ref-wikipedia_square_root_of_2) — the square root of 2
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_proof_that_pi_is_irrational)) — proofs that pi is irrational
+- Wikipedia contributors [\[9\]](#ref-wikipedia_proof_that_pi_is_irrational) — proofs that pi is irrational
 
 Back to top
 
 ## References
 
-Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
+\[1\]
 
-Wikipedia contributors. 2026a. *Integer — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Integer>.
+Wikipedia contributors, “Integer — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Integer>
 
-Wikipedia contributors. 2026b. *Irrational Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Irrational_number>.
+\[2\]
 
-Wikipedia contributors. 2026c. *Natural Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Natural_number>.
+Wikipedia contributors, “Parity (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Parity_(mathematics)>
 
-Wikipedia contributors. 2026d. *Parity (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Parity_(mathematics)>.
+\[3\]
 
-Wikipedia contributors. 2026e. *Proof That Pi Is Irrational — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational>.
+Wikipedia contributors, “Natural number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Natural_number>
 
-Wikipedia contributors. 2026f. *Rational Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Rational_number>.
+\[4\]
 
-Wikipedia contributors. 2026g. *Real Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Real_number>.
+Wikipedia contributors, “Rational number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Rational_number>
 
-Wikipedia contributors. 2026h. *Square Root of 2 — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Square_root_of_2>.
+\[5\]
+
+Wikipedia contributors, “Real number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Real_number>
+
+\[6\]
+
+W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.
+
+\[7\]
+
+Wikipedia contributors, “Irrational number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Irrational_number>
+
+\[8\]
+
+Wikipedia contributors, “Square root of 2 — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Square_root_of_2>
+
+\[9\]
+
+Wikipedia contributors, “Proof that pi is irrational — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational>

@@ -106,6 +106,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -352,11 +353,11 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+  <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-inner-products" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Inner products</h2>
 <div id="def-inner-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Inner product)</strong></span> An <strong>inner product</strong> <span class="citation" data-cites="wikipedia_inner_product_space">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> on <span class="math inline">\(\mathbb{R}^p\)</span> is a function that assigns to each ordered pair of vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> a real number <span class="math inline">\(\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}\)</span>, and that has the following four properties for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \in \mathbb{R}^p\)</span> and all real numbers <span class="math inline">\(a, b\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Inner product)</strong></span> An <strong>inner product</strong> <span class="citation" data-cites="wikipedia_inner_product_space"><a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> on <span class="math inline">\(\mathbb{R}^p\)</span> is a function that assigns to each ordered pair of vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> a real number <span class="math inline">\(\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}\)</span>, and that has the following four properties for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \in \mathbb{R}^p\)</span> and all real numbers <span class="math inline">\(a, b\)</span>:</p>
 <ul>
 <li>
 <strong>positivity</strong>: <span class="math inline">\(\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{} \ge 0\)</span>;</li>
@@ -369,7 +370,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="rem-inner-product-other-sources" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (The definition in other sources). </span><span class="citation" data-cites="axler2024linear">Axler (<a href="#/further-reading" role="doc-biblioref" onclick="">2024</a>, Definition 6.2, p.&nbsp;183)</span> states the same definition for any vector space over the real or complex numbers. Axler splits linearity in the first slot into additivity and homogeneity, and his last property is <em>conjugate</em> symmetry, <span class="math inline">\(\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rangle\mathclose{} = \overline{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rangle\mathclose{}}\)</span>, which for real numbers is the same as symmetry. Symmetry and linearity in the first slot together give linearity in the second slot.</p>
+<p><span class="proof-title"><em>Remark 1</em> (The definition in other sources). </span><span class="citation" data-cites="axler2024linear">Axler <a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a>, Definition 6.2, p.&nbsp;183</span> states the same definition for any vector space over the real or complex numbers. Axler splits linearity in the first slot into additivity and homogeneity, and his last property is <em>conjugate</em> symmetry, <span class="math inline">\(\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rangle\mathclose{} = \overline{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rangle\mathclose{}}\)</span>, which for real numbers is the same as symmetry. Symmetry and linearity in the first slot together give linearity in the second slot.</p>
 </div>
 </section><section class="slide level2"><div id="exm-dot-product-inner-product" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (The dot product is an inner product)</strong></span> The dot product (1) is an inner product on <span class="math inline">\(\mathbb{R}^p\)</span>, called the <strong>Euclidean</strong> or <strong>standard</strong> inner product. Each of the four properties in <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a> holds:</p>
@@ -400,7 +401,7 @@
 <p>which is positive, as positivity and definiteness require of a nonzero vector.</p>
 </div>
 </section><section class="slide level2"><div id="def-inner-product-space" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Inner product space)</strong></span> A <strong>real inner product space</strong> <span class="citation" data-cites="wikipedia_inner_product_space">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> is a pair <span class="math inline">\((V, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\)</span> of a real vector space <span class="math inline">\(V\)</span> and an inner product <span class="math inline">\(\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\)</span> on it, a function with the four properties of <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a>. We say that <span class="math inline">\(V\)</span> is <strong>equipped with</strong> that inner product: the inner product is part of the data of the space, so the same set of vectors with a different inner product is a different inner product space. <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a> states the properties for <span class="math inline">\(V = \mathbb{R}^p\)</span> (<a href="./linear-algebra-vectors.html#def-real-coordinate-space">Definition&nbsp;2 in Vectors</a>), and the same four properties define an inner product on other real vector spaces, such as spaces of matrices or functions.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Inner product space)</strong></span> A <strong>real inner product space</strong> <span class="citation" data-cites="wikipedia_inner_product_space"><a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> is a pair <span class="math inline">\((V, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\)</span> of a real vector space <span class="math inline">\(V\)</span> and an inner product <span class="math inline">\(\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\)</span> on it, a function with the four properties of <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a>. We say that <span class="math inline">\(V\)</span> is <strong>equipped with</strong> that inner product: the inner product is part of the data of the space, so the same set of vectors with a different inner product is a different inner product space. <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a> states the properties for <span class="math inline">\(V = \mathbb{R}^p\)</span> (<a href="./linear-algebra-vectors.html#def-real-coordinate-space">Definition&nbsp;2 in Vectors</a>), and the same four properties define an inner product on other real vector spaces, such as spaces of matrices or functions.</p>
 </div>
 </section><section class="slide level2"><div id="exm-inner-product-space" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (Real coordinate space as an inner product space)</strong></span> The Euclidean space <span class="math inline">\(\mathbb{R}^p\)</span> equipped with the standard dot product (1), that is, the pair <span class="math inline">\((\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\)</span> with <span class="math inline">\(\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>, is an inner product space, because the dot product satisfies the four inner product axioms (<a href="#/exm-dot-product-inner-product" class="quarto-xref">Example&nbsp;1</a>). For <span class="math inline">\(p = 2\)</span>, any vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2) \in \mathbb{R}^2\)</span> has squared norm <span class="math inline">\(\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{} = x_1^2 + x_2^2 \ge 0\)</span>, which is zero if and only if</p>
@@ -415,7 +416,7 @@ x_1 &amp;= x_2 \\
 </section><section class="slide level2"><div id="exm-weighted-inner-product" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (A weighted inner product)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = (c_1, \ldots, c_p)\)</span> be a vector of positive numbers, and define</p>
 <p><span class="math display">\[\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}} \stackrel{\text{def}}{=}\sum_{i=1}^pc_i\,x_i y_i.\]</span></p>
-<p>This function is also an inner product on <span class="math inline">\(\mathbb{R}^p\)</span> <span class="citation" data-cites="axler2024linear">(<a href="#/further-reading" role="doc-biblioref" onclick="">Axler 2024</a>, Example 6.3(b), p.&nbsp;184)</span>:</p>
+<p>This function is also an inner product on <span class="math inline">\(\mathbb{R}^p\)</span> <span class="citation" data-cites="axler2024linear"><a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a>, Example 6.3(b), p.&nbsp;184</span>:</p>
 <ul>
 <li>
 <strong>positivity</strong>: <span class="math inline">\(\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}} = \sum_{i=1}^pc_i\,x_i^2\)</span>, and each term <span class="math inline">\(c_i\,x_i^2\)</span> is a positive number times a square, so the sum is at least <span class="math inline">\(0\)</span>;</li>
@@ -537,7 +538,7 @@ a\,h(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphan
 </section><section class="slide level2"><div id="def-orthogonal-inner-product" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Orthogonality in an inner product space)</strong></span> In an inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) with inner product <span class="math inline">\(\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\)</span>, two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> are <strong>orthogonal with respect to</strong> <span class="math inline">\(\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\)</span>, written <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>, if</p>
 <p><span class="math display">\[\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{} = 0\]</span></p>
-<p><span class="citation" data-cites="banerjee2014linear">(<a href="#/further-reading" role="doc-biblioref" onclick="">Banerjee and Roy 2014</a>, Definition 7.3, p.&nbsp;181)</span>.</p>
+<p><span class="citation" data-cites="banerjee2014linear"><a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a>, Definition 7.3, p.&nbsp;181</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-orthogonal-inner-product" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Orthogonality depends on the inner product)</strong></span> Take the weighted inner product of <a href="#/exm-weighted-inner-product" class="quarto-xref">Example&nbsp;3</a> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = (2, 1)\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (1, -1)\)</span>. Then</p>
@@ -577,7 +578,7 @@ a\,h(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphan
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024vector">Zhou (<a href="#/further-reading" role="doc-biblioref" onclick="">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source leaves the proof of the triangle inequality to class; it is written out here.</p>
+<p>This section is adapted from <span class="citation" data-cites="zhou2024vector">Zhou <a href="#/further-reading" role="doc-biblioref" onclick="">[4]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source leaves the proof of the triangle inequality to class; it is written out here.</p>
 </div>
 </div>
 </div>
@@ -636,7 +637,7 @@ a\,h(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphan
 \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2
 = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 + 2\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2.
 \]</span></p>
-<p>In particular, if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;15 in Vectors</a>), then <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2\)</span> (the <strong>Pythagorean theorem</strong>) <span class="citation" data-cites="wikipedia_pythagorean_theorem">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span>.</p>
+<p>In particular, if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;15 in Vectors</a>), then <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2\)</span> (the <strong>Pythagorean theorem</strong>) <span class="citation" data-cites="wikipedia_pythagorean_theorem"><a href="#/further-reading" role="doc-biblioref" onclick="">[5]</a></span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
@@ -896,7 +897,7 @@ a\,h(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphan
 </ul>
 </div>
 </section><section class="slide level2 scrollable"><div id="def-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Norm (normed vector space, normed space))</strong></span> A <strong>norm</strong> <span class="citation" data-cites="wikipedia_norm_mathematics">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span> on a real vector space <span class="math inline">\(V\)</span> is a function <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{} : V \to [0, \infty)\)</span> that assigns to each vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in V\)</span> a nonnegative real number <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span>, and satisfies the following three axioms for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V\)</span> and all scalars <span class="math inline">\(c \in \mathbb{R}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Norm (normed vector space, normed space))</strong></span> A <strong>norm</strong> <span class="citation" data-cites="wikipedia_norm_mathematics"><a href="#/further-reading" role="doc-biblioref" onclick="">[6]</a></span> on a real vector space <span class="math inline">\(V\)</span> is a function <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{} : V \to [0, \infty)\)</span> that assigns to each vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in V\)</span> a nonnegative real number <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span>, and satisfies the following three axioms for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V\)</span> and all scalars <span class="math inline">\(c \in \mathbb{R}\)</span>:</p>
 <ol type="1">
 <li>
 <strong>Positivity and definiteness</strong>: <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \ge 0\)</span>, and <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = 0\)</span> if and only if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>;</li>
@@ -916,7 +917,7 @@ a\,h(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphan
 <p>Every inner product space <span class="math inline">\((\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\)</span> (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) naturally defines an induced norm <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}\)</span>, which satisfies all three norm axioms.</p>
 </div>
 </section><section class="slide level2"><div id="def-vector-p-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Vector <span class="math inline">\(p\)</span>-norm (<span class="math inline">\(\ell_p\)</span> norm, <span class="math inline">\(\ell_1\)</span> norm, taxicab norm, Manhattan norm, <span class="math inline">\(\ell_2\)</span> norm, infinity norm))</strong></span> For a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p\)</span> and any real number <span class="math inline">\(k \ge 1\)</span>, the <strong>vector <span class="math inline">\(p\)</span>-norm</strong> <span class="citation" data-cites="wikipedia_lp_space">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> (or <strong><span class="math inline">\(\ell_p\)</span> norm</strong>, traditionally named with parameter <span class="math inline">\(p\)</span> but denoted here with exponent <span class="math inline">\(k\)</span> to avoid clashing with the ambient vector dimension <span class="math inline">\(p\)</span>) is:</p>
+<p><span class="theorem-title"><strong>Definition 5 (Vector <span class="math inline">\(p\)</span>-norm (<span class="math inline">\(\ell_p\)</span> norm, <span class="math inline">\(\ell_1\)</span> norm, taxicab norm, Manhattan norm, <span class="math inline">\(\ell_2\)</span> norm, infinity norm))</strong></span> For a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p\)</span> and any real number <span class="math inline">\(k \ge 1\)</span>, the <strong>vector <span class="math inline">\(p\)</span>-norm</strong> <span class="citation" data-cites="wikipedia_lp_space"><a href="#/further-reading" role="doc-biblioref" onclick="">[7]</a></span> (or <strong><span class="math inline">\(\ell_p\)</span> norm</strong>, traditionally named with parameter <span class="math inline">\(p\)</span> but denoted here with exponent <span class="math inline">\(k\)</span> to avoid clashing with the ambient vector dimension <span class="math inline">\(p\)</span>) is:</p>
 <p><span class="math display">\[
 \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}^k\right)\mathclose{}^{1/k}.
 \]</span></p>
@@ -971,7 +972,7 @@ a\,h(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphan
 <p>In regression and machine learning, adding an <span class="math inline">\(\ell_1\)</span> penalty (Lasso regularization) to an objective function encourages sparse solutions: the level curves of the loss function tend to make contact with the sharp corners of the <span class="math inline">\(\ell_1\)</span> unit ball on the coordinate axes, setting irrelevant feature weights exactly to zero. In contrast, the smooth spherical <span class="math inline">\(\ell_2\)</span> penalty (Ridge regularization) shrinks all weights toward zero without setting them exactly to zero.</p>
 </div>
 </section><section class="slide level2"><div id="def-infinity-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Infinity norm (<span class="math inline">\(\ell_\infty\)</span> norm, maximum norm, Chebyshev norm))</strong></span> For a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p\)</span>, the <strong>infinity norm</strong> <span class="citation" data-cites="wikipedia_uniform_norm">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026k</a>)</span> (also the <strong><span class="math inline">\(\ell_\infty\)</span> norm</strong>, <strong>maximum norm</strong>, or <strong>Chebyshev norm</strong>) is defined separately from the <span class="math inline">\(p\)</span>-norms (<a href="#/def-vector-p-norm" class="quarto-xref">Definition&nbsp;5</a>) by</p>
+<p><span class="theorem-title"><strong>Definition 6 (Infinity norm (<span class="math inline">\(\ell_\infty\)</span> norm, maximum norm, Chebyshev norm))</strong></span> For a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p\)</span>, the <strong>infinity norm</strong> <span class="citation" data-cites="wikipedia_uniform_norm"><a href="#/further-reading" role="doc-biblioref" onclick="">[8]</a></span> (also the <strong><span class="math inline">\(\ell_\infty\)</span> norm</strong>, <strong>maximum norm</strong>, or <strong>Chebyshev norm</strong>) is defined separately from the <span class="math inline">\(p\)</span>-norms (<a href="#/def-vector-p-norm" class="quarto-xref">Definition&nbsp;5</a>) by</p>
 <p><span class="math display">\[
 \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_\infty \stackrel{\text{def}}{=}\max_{1 \le i \le p} \mathopen{}\left|x_i\right|\mathclose{}.
 \]</span></p>
@@ -1061,7 +1062,7 @@ a\,h(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphan
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-cosine-similarity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Cosine similarity)</strong></span> The <strong>cosine similarity</strong> <span class="citation" data-cites="wikipedia_cosine_similarity">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> between two nonzero vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> is their dot product divided by the product of their lengths:</p>
+<p><span class="theorem-title"><strong>Definition 8 (Cosine similarity)</strong></span> The <strong>cosine similarity</strong> <span class="citation" data-cites="wikipedia_cosine_similarity"><a href="#/further-reading" role="doc-biblioref" onclick="">[9]</a></span> between two nonzero vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> is their dot product divided by the product of their lengths:</p>
 <p><span class="math display">\[
 \operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\frac{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}}.
 \]</span></p>
@@ -1167,7 +1168,7 @@ r = \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\script
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>Like <a href="#/sec-cauchy-schwarz" class="quarto-xref">Section&nbsp;2</a>, this section is adapted from <span class="citation" data-cites="zhou2024vector">Zhou (<a href="#/further-reading" role="doc-biblioref" onclick="">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.</p>
+<p>Like <a href="#/sec-cauchy-schwarz" class="quarto-xref">Section&nbsp;2</a>, this section is adapted from <span class="citation" data-cites="zhou2024vector">Zhou <a href="#/further-reading" role="doc-biblioref" onclick="">[4]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.</p>
 </div>
 </div>
 </div>
@@ -1261,7 +1262,7 @@ r = \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\script
 <p>The converse fails: <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((1, 1)\)</span> are linearly independent, since <span class="math inline">\(c_1 (1, 0) + c_2 (1, 1) = (c_1 + c_2, c_2)\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only if <span class="math inline">\(c_2 = 0\)</span> and then <span class="math inline">\(c_1 = 0\)</span>, but they are not orthonormal, since <span class="math inline">\((1, 0) \cdot (1, 1) = 1 \ne 0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-orthonormal-basis" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Orthonormal basis)</strong></span> An <strong>orthonormal basis</strong> <span class="citation" data-cites="wikipedia_orthonormal_basis">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026g</a>)</span> of a subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span> is a basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>) whose vectors are orthonormal (<a href="./linear-algebra-vectors.html#def-orthonormal-vectors">Definition&nbsp;19 in Vectors</a>).</p>
+<p><span class="theorem-title"><strong>Definition 10 (Orthonormal basis)</strong></span> An <strong>orthonormal basis</strong> <span class="citation" data-cites="wikipedia_orthonormal_basis"><a href="#/further-reading" role="doc-biblioref" onclick="">[10]</a></span> of a subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span> is a basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>) whose vectors are orthonormal (<a href="./linear-algebra-vectors.html#def-orthonormal-vectors">Definition&nbsp;19 in Vectors</a>).</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exm-orthonormal-basis" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Orthonormal bases of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> &nbsp;</p>
@@ -1339,7 +1340,7 @@ r = \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\script
 <p>which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, as <a href="#/thm-orthonormal-expansion" class="quarto-xref">Theorem&nbsp;9</a> says.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="def-gram-schmidt" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Gram-Schmidt process)</strong></span> The <strong>Gram-Schmidt process</strong> <span class="citation" data-cites="wikipedia_gram_schmidt_process">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> takes vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k \in \mathbb{R}^p\)</span> and, for <span class="math inline">\(i = 1, 2, \ldots, k\)</span> in turn:</p>
+<p><span class="theorem-title"><strong>Definition 11 (Gram-Schmidt process)</strong></span> The <strong>Gram-Schmidt process</strong> <span class="citation" data-cites="wikipedia_gram_schmidt_process"><a href="#/further-reading" role="doc-biblioref" onclick="">[11]</a></span> takes vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k \in \mathbb{R}^p\)</span> and, for <span class="math inline">\(i = 1, 2, \ldots, k\)</span> in turn:</p>
 <ol type="1">
 <li>
 <strong>Orthogonalize:</strong> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i - \sum_{j=1}^{i-1} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j\)</span> (for <span class="math inline">\(i = 1\)</span> the sum is empty, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_1 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1\)</span>);</li>
@@ -1555,7 +1556,7 @@ r = \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\script
 </section><section id="outer-product" class="slide level2" data-number="4"><h2>
 <span class="header-section-number">4</span> Outer product</h2>
 <div id="def-outer-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Outer product)</strong></span> The <strong>outer product</strong> <span class="citation" data-cites="wikipedia_outer_product">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026h</a>)</span> of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> of length <span class="math inline">\(m\)</span> and a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> of length <span class="math inline">\(n\)</span> is the <span class="math inline">\(m \times n\)</span> matrix product (<a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;7 in Matrices</a>) <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\)</span> of the column vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> with the row vector <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\)</span>. Its entries are</p>
+<p><span class="theorem-title"><strong>Definition 12 (Outer product)</strong></span> The <strong>outer product</strong> <span class="citation" data-cites="wikipedia_outer_product"><a href="#/further-reading" role="doc-biblioref" onclick="">[12]</a></span> of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> of length <span class="math inline">\(m\)</span> and a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> of length <span class="math inline">\(n\)</span> is the <span class="math inline">\(m \times n\)</span> matrix product (<a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;7 in Matrices</a>) <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\)</span> of the column vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> with the row vector <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\)</span>. Its entries are</p>
 <p><span class="math display">\[
 \mathopen{}\left(\underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}_{m \times 1}\,\underbrace{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}}_{1 \times n}\right)\mathclose{}_{ij}
 = u_i v_j
@@ -1588,7 +1589,7 @@ r = \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\script
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-outer-vs-dot-product" class="proof remark">
-<p><span class="proof-title"><em>Remark 5</em> (Outer product and dot product). </span>The dot product <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> (<a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;6 in Matrices</a>) needs two vectors of the same length and gives a number. The outer product <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\)</span> takes vectors of any two lengths and gives a matrix <span class="citation" data-cites="banerjee2014linear">(<a href="#/further-reading" role="doc-biblioref" onclick="">Banerjee and Roy 2014, chap. 1</a>, p.&nbsp;11)</span>.</p>
+<p><span class="proof-title"><em>Remark 5</em> (Outer product and dot product). </span>The dot product <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> (<a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;6 in Matrices</a>) needs two vectors of the same length and gives a number. The outer product <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\)</span> takes vectors of any two lengths and gives a matrix <span class="citation" data-cites="banerjee2014linear"><a href="#/further-reading" role="doc-biblioref" onclick="">[3, Ch. 1]</a>, p.&nbsp;11</span>.</p>
 <p>For example, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)\)</span> in <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;25</a> have different lengths, so they have no dot product, but their outer product is a <span class="math inline">\(3 \times 2\)</span> matrix. For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)\)</span>, which have the same length, both products exist:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1635,17 +1636,17 @@ v_k\,(v_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\
 </div>
 </section><section id="further-reading" class="slide level2 unnumbered smaller scrollable"><h2>Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="wikipedia_inner_product_space">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026d</a>)</span> — inner product spaces, with examples</p></li>
-<li><p><span class="citation" data-cites="wikipedia_norm_mathematics">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026f</a>)</span> — norms on vector spaces</p></li>
-<li><p><span class="citation" data-cites="wikipedia_lp_space">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026e</a>)</span> — p-norms and the spaces they define</p></li>
-<li><p><span class="citation" data-cites="wikipedia_cauchy_schwarz_inequality">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026a</a>)</span> — the Cauchy-Schwarz inequality and its proofs</p></li>
-<li><p><span class="citation" data-cites="wikipedia_triangle_inequality">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026j</a>)</span> — the triangle inequality</p></li>
-<li><p><span class="citation" data-cites="wikipedia_cosine_similarity">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026b</a>)</span> — cosine similarity and its uses</p></li>
-<li><p><span class="citation" data-cites="wikipedia_orthonormal_basis">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026g</a>)</span> — orthonormal bases</p></li>
-<li><p><span class="citation" data-cites="wikipedia_gram_schmidt_process">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026c</a>)</span> — the Gram-Schmidt process, with an algorithm</p></li>
-<li><p><span class="citation" data-cites="wikipedia_outer_product">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026h</a>)</span> — the outer product and its rank</p></li>
-<li><p><span class="citation" data-cites="wikipedia_pythagorean_theorem">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026i</a>)</span> — the Pythagorean theorem and its generalizations</p></li>
-<li><p><span class="citation" data-cites="wikipedia_uniform_norm">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026k</a>)</span> — the uniform (infinity) norm</p></li>
+<li><p><span class="citation" data-cites="wikipedia_inner_product_space">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> — inner product spaces, with examples</p></li>
+<li><p><span class="citation" data-cites="wikipedia_norm_mathematics">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[6]</a></span> — norms on vector spaces</p></li>
+<li><p><span class="citation" data-cites="wikipedia_lp_space">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[7]</a></span> — p-norms and the spaces they define</p></li>
+<li><p><span class="citation" data-cites="wikipedia_cauchy_schwarz_inequality">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[13]</a></span> — the Cauchy-Schwarz inequality and its proofs</p></li>
+<li><p><span class="citation" data-cites="wikipedia_triangle_inequality">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[14]</a></span> — the triangle inequality</p></li>
+<li><p><span class="citation" data-cites="wikipedia_cosine_similarity">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[9]</a></span> — cosine similarity and its uses</p></li>
+<li><p><span class="citation" data-cites="wikipedia_orthonormal_basis">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[10]</a></span> — orthonormal bases</p></li>
+<li><p><span class="citation" data-cites="wikipedia_gram_schmidt_process">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[11]</a></span> — the Gram-Schmidt process, with an algorithm</p></li>
+<li><p><span class="citation" data-cites="wikipedia_outer_product">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[12]</a></span> — the outer product and its rank</p></li>
+<li><p><span class="citation" data-cites="wikipedia_pythagorean_theorem">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[5]</a></span> — the Pythagorean theorem and its generalizations</p></li>
+<li><p><span class="citation" data-cites="wikipedia_uniform_norm">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[8]</a></span> — the uniform (infinity) norm</p></li>
 </ul>
 
 
@@ -1835,48 +1836,75 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
     initRevealJsHtmlLink();
   }
 })();
-</script><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</script><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-wikipedia_inner_product_space" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Inner product space — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Inner_product_space">https://en.wikipedia.org/wiki/Inner_product_space</a>
+</div>
+</div>
 <div id="ref-axler2024linear" class="csl-entry" role="listitem">
-Axler, Sheldon. 2024. <em>Linear Algebra Done Right</em>. 4th ed. Undergraduate Texts in Mathematics. Springer. <a href="https://doi.org/10.1007/978-3-031-41026-0">https://doi.org/10.1007/978-3-031-41026-0</a>.
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">S. Axler, <em>Linear algebra done right</em>, 4th ed. in Undergraduate texts in mathematics. Springer, 2024. doi: <a href="https://doi.org/10.1007/978-3-031-41026-0">10.1007/978-3-031-41026-0</a>.</div>
 </div>
 <div id="ref-banerjee2014linear" class="csl-entry" role="listitem">
-Banerjee, Sudipto, and Anindya Roy. 2014. <em>Linear Algebra and Matrix Analysis for Statistics</em>. Vol. 181. Crc Press Boca Raton. <a href="https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388">https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388</a>.
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">S. Banerjee and A. Roy, <em>Linear algebra and matrix analysis for statistics</em>, vol. 181. Crc Press Boca Raton, 2014. Available: <a href="https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388">https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388</a>
 </div>
-<div id="ref-wikipedia_cauchy_schwarz_inequality" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Cauchy–Schwarz Inequality — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality">https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality</a>.
-</div>
-<div id="ref-wikipedia_cosine_similarity" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Cosine Similarity — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Cosine_similarity">https://en.wikipedia.org/wiki/Cosine_similarity</a>.
-</div>
-<div id="ref-wikipedia_gram_schmidt_process" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Gram–Schmidt Process — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process</a>.
-</div>
-<div id="ref-wikipedia_inner_product_space" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Inner Product Space — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Inner_product_space">https://en.wikipedia.org/wiki/Inner_product_space</a>.
-</div>
-<div id="ref-wikipedia_lp_space" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Lp Space — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Lp_space">https://en.wikipedia.org/wiki/Lp_space</a>.
-</div>
-<div id="ref-wikipedia_norm_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>Norm (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)">https://en.wikipedia.org/wiki/Norm_(mathematics)</a>.
-</div>
-<div id="ref-wikipedia_orthonormal_basis" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Orthonormal Basis — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Orthonormal_basis">https://en.wikipedia.org/wiki/Orthonormal_basis</a>.
-</div>
-<div id="ref-wikipedia_outer_product" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Outer Product — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Outer_product">https://en.wikipedia.org/wiki/Outer_product</a>.
-</div>
-<div id="ref-wikipedia_pythagorean_theorem" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026i. <em>Pythagorean Theorem — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Pythagorean_theorem">https://en.wikipedia.org/wiki/Pythagorean_theorem</a>.
-</div>
-<div id="ref-wikipedia_triangle_inequality" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026j. <em>Triangle Inequality — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Triangle_inequality">https://en.wikipedia.org/wiki/Triangle_inequality</a>.
-</div>
-<div id="ref-wikipedia_uniform_norm" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026k. <em>Uniform Norm — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Uniform_norm">https://en.wikipedia.org/wiki/Uniform_norm</a>.
 </div>
 <div id="ref-zhou2024vector" class="csl-entry" role="listitem">
-Zhou, Hua. 2024. <em>Vectors</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html">https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html</a>.
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">H. Zhou, <span>“Vectors.”</span> Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. [Online]. Available: <a href="https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html">https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html</a>
+</div>
+</div>
+<div id="ref-wikipedia_pythagorean_theorem" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Pythagorean theorem — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Pythagorean_theorem">https://en.wikipedia.org/wiki/Pythagorean_theorem</a>
+</div>
+</div>
+<div id="ref-wikipedia_norm_mathematics" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Norm (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)">https://en.wikipedia.org/wiki/Norm_(mathematics)</a>
+</div>
+</div>
+<div id="ref-wikipedia_lp_space" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Lp space — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Lp_space">https://en.wikipedia.org/wiki/Lp_space</a>
+</div>
+</div>
+<div id="ref-wikipedia_uniform_norm" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Uniform norm — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Uniform_norm">https://en.wikipedia.org/wiki/Uniform_norm</a>
+</div>
+</div>
+<div id="ref-wikipedia_cosine_similarity" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Cosine similarity — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Cosine_similarity">https://en.wikipedia.org/wiki/Cosine_similarity</a>
+</div>
+</div>
+<div id="ref-wikipedia_orthonormal_basis" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Orthonormal basis — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Orthonormal_basis">https://en.wikipedia.org/wiki/Orthonormal_basis</a>
+</div>
+</div>
+<div id="ref-wikipedia_gram_schmidt_process" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Gram–schmidt process — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process</a>
+</div>
+</div>
+<div id="ref-wikipedia_outer_product" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Outer product — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Outer_product">https://en.wikipedia.org/wiki/Outer_product</a>
+</div>
+</div>
+<div id="ref-wikipedia_cauchy_schwarz_inequality" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Cauchy–schwarz inequality — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality">https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality</a>
+</div>
+</div>
+<div id="ref-wikipedia_triangle_inequality" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Triangle inequality — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Triangle_inequality">https://en.wikipedia.org/wiki/Triangle_inequality</a>
+</div>
 </div>
 </div>
 </section>

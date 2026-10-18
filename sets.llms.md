@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 > **NOTE:**
 >
@@ -14,11 +14,11 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Set)** A **set** ([Wikipedia contributors 2026l](#ref-wikipedia_set_mathematics)) is a collection of distinct objects, called its elements. We write \\a \in A\\ when \\a\\ is an element of the set \\A\\, and \\a \notin A\\ when it is not. Two sets are equal when they have exactly the same elements.
+> **Definition 1 (Set)** A **set** [\[1\]](#ref-wikipedia_set_mathematics) is a collection of distinct objects, called its elements. We write \\a \in A\\ when \\a\\ is an element of the set \\A\\, and \\a \notin A\\ when it is not. Two sets are equal when they have exactly the same elements.
 
 > **NOTE:**
 >
-> *Remark 1* (Naive and formal set theory). [Definition 1](#def-set) is the informal (“naive”) notion of a set, which is all these notes need. Formal set theory states axioms for sets instead ([Wikipedia contributors 2026l](#ref-wikipedia_set_mathematics)). For example, the last sentence of [Definition 1](#def-set), that two sets are equal when they have exactly the same elements, is one of those axioms, the *axiom of extensionality*.
+> *Remark 1* (Naive and formal set theory). [Definition 1](#def-set) is the informal (“naive”) notion of a set, which is all these notes need. Formal set theory states axioms for sets instead [\[1\]](#ref-wikipedia_set_mathematics). For example, the last sentence of [Definition 1](#def-set), that two sets are equal when they have exactly the same elements, is one of those axioms, the *axiom of extensionality*.
 
 > **NOTE:**
 >
@@ -26,7 +26,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Set-builder notation)** For a set \\A\\ and a statement \\P(x)\\ about an element \\x\\, **set-builder notation** ([Wikipedia contributors 2026m](#ref-wikipedia_set_builder_notation)) \\\mathopen{}\left\\x \in A : P(x)\right\\\mathclose{}\\ denotes the set of elements \\x\\ of \\A\\ for which \\P(x)\\ is true.
+> **Definition 2 (Set-builder notation)** For a set \\A\\ and a statement \\P(x)\\ about an element \\x\\, **set-builder notation** [\[2\]](#ref-wikipedia_set_builder_notation) \\\mathopen{}\left\\x \in A : P(x)\right\\\mathclose{}\\ denotes the set of elements \\x\\ of \\A\\ for which \\P(x)\\ is true.
 
 > **NOTE:**
 >
@@ -34,7 +34,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **intervals** ([Wikipedia contributors 2026j](#ref-wikipedia_interval_mathematics)) with **endpoints** \\a\\ and \\b\\ are the closed interval ([Definition 4](#def-closed-interval)), the open interval ([Definition 5](#def-open-interval)), and the half-open intervals ([Definition 6](#def-half-open-interval)). The unbounded intervals ([Definition 7](#def-unbounded-interval)) have at most one endpoint.
+> **Definition 3 (Interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **intervals** [\[3\]](#ref-wikipedia_interval_mathematics) with **endpoints** \\a\\ and \\b\\ are the closed interval ([Definition 4](#def-closed-interval)), the open interval ([Definition 5](#def-open-interval)), and the half-open intervals ([Definition 6](#def-half-open-interval)). The unbounded intervals ([Definition 7](#def-unbounded-interval)) have at most one endpoint.
 >
 > A square bracket means the endpoint belongs to the interval, and a parenthesis means it does not. The symbols \\\infty\\ and \\-\infty\\ are not real numbers, so they always get a parenthesis.
 
@@ -69,7 +69,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Subset)** A set \\A\\ is a **subset** ([Wikipedia contributors 2026n](#ref-wikipedia_subset)) of a set \\B\\, written \\A \subseteq B\\, if every element of \\A\\ is an element of \\B\\.
+> **Definition 8 (Subset)** A set \\A\\ is a **subset** [\[4\]](#ref-wikipedia_subset) of a set \\B\\, written \\A \subseteq B\\, if every element of \\A\\ is an element of \\B\\.
 
 > **NOTE:**
 >
@@ -89,7 +89,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Proper subsets and the symbol \\\subset\\). Other sources call a strict subset a **proper subset**. Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) ([Wikipedia contributors 2026n](#ref-wikipedia_subset)). For example, \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subset \mathopen{}\left\\1, 2\right\\\mathclose{}\\ is true in the first reading, because \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2\right\\\mathclose{}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
+> *Remark 2* (Proper subsets and the symbol \\\subset\\). Other sources call a strict subset a **proper subset**. Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) [\[4\]](#ref-wikipedia_subset). For example, \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subset \mathopen{}\left\\1, 2\right\\\mathclose{}\\ is true in the first reading, because \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2\right\\\mathclose{}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
 
 > **NOTE:**
 >
@@ -117,11 +117,11 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Empty set)** The **empty set** ([Wikipedia contributors 2026d](#ref-wikipedia_empty_set)), denoted \\\emptyset\\, is the set that has no elements.
+> **Definition 12 (Empty set)** The **empty set** [\[5\]](#ref-wikipedia_empty_set), denoted \\\emptyset\\, is the set that has no elements.
 
 > **NOTE:**
 >
-> *Remark 5* (Other notation for the empty set). Other sources write \\\mathopen{}\left\\\right\\\mathclose{}\\ for \\\emptyset\\ ([Wikipedia contributors 2026d](#ref-wikipedia_empty_set)). Some sources call it the **null set**, but in measure theory a “null set” usually means a set of [measure zero](measures.llms.md#def-measure-zero), which need not be empty. For example, the interval \\\[0, 0\] = \mathopen{}\left\\0\right\\\mathclose{}\\ has length \\0 - 0 = 0\\, so it is a null set in that sense, but it is not empty, because \\0 \in \mathopen{}\left\\0\right\\\mathclose{}\\.
+> *Remark 5* (Other notation for the empty set). Other sources write \\\mathopen{}\left\\\right\\\mathclose{}\\ for \\\emptyset\\ [\[5\]](#ref-wikipedia_empty_set). Some sources call it the **null set**, but in measure theory a “null set” usually means a set of [measure zero](measures.llms.md#def-measure-zero), which need not be empty. For example, the interval \\\[0, 0\] = \mathopen{}\left\\0\right\\\mathclose{}\\ has length \\0 - 0 = 0\\, so it is a null set in that sense, but it is not empty, because \\0 \in \mathopen{}\left\\0\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
@@ -129,7 +129,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Vacuous truth)** A statement of the form “every element of \\A\\ has property \\P\\” is **vacuously true** ([Wikipedia contributors 2026p](#ref-wikipedia_vacuous_truth)) when \\A\\ is the [empty set](#def-empty-set): \\A\\ has no elements, so no element of \\A\\ fails to have property \\P\\.
+> **Definition 13 (Vacuous truth)** A statement of the form “every element of \\A\\ has property \\P\\” is **vacuously true** [\[6\]](#ref-wikipedia_vacuous_truth) when \\A\\ is the [empty set](#def-empty-set): \\A\\ has no elements, so no element of \\A\\ fails to have property \\P\\.
 
 > **NOTE:**
 >
@@ -153,7 +153,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Collection of sets (family of sets))** A **collection of sets** (also called a **family of sets**) ([Wikipedia contributors 2026f](#ref-wikipedia_family_of_sets)) is a set whose elements are themselves sets.
+> **Definition 14 (Collection of sets (family of sets))** A **collection of sets** (also called a **family of sets**) [\[7\]](#ref-wikipedia_family_of_sets) is a set whose elements are themselves sets.
 
 > **NOTE:**
 >
@@ -173,7 +173,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Index set)** An **index set** ([Wikipedia contributors 2026g](#ref-wikipedia_index_set)) is a set whose elements are used as [labels](#def-label) for objects. Each element of the index set is called an index.
+> **Definition 16 (Index set)** An **index set** [\[8\]](#ref-wikipedia_index_set) is a set whose elements are used as [labels](#def-label) for objects. Each element of the index set is called an index.
 
 > **NOTE:**
 >
@@ -181,7 +181,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Indexed family)** An **indexed family** ([Wikipedia contributors 2026h](#ref-wikipedia_indexed_family)) is a collection of objects, one for each element of a given [index set](#def-index-set). The object for the index \\i\\ is written \\a_i\\.
+> **Definition 17 (Indexed family)** An **indexed family** [\[9\]](#ref-wikipedia_indexed_family) is a collection of objects, one for each element of a given [index set](#def-index-set). The object for the index \\i\\ is written \\a_i\\.
 
 > **NOTE:**
 >
@@ -191,7 +191,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Union)** The **union** ([Wikipedia contributors 2026o](#ref-wikipedia_union_set_theory)) of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
+> **Definition 18 (Union)** The **union** [\[10\]](#ref-wikipedia_union_set_theory) of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
 >
 > \\A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ or } x \in B\right\\\mathclose{}\\
 
@@ -201,7 +201,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Intersection)** The **intersection** ([Wikipedia contributors 2026i](#ref-wikipedia_intersection_set_theory)) of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
+> **Definition 20 (Intersection)** The **intersection** [\[11\]](#ref-wikipedia_intersection_set_theory) of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
 >
 > \\A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ and } x \in B\right\\\mathclose{}\\
 
@@ -211,13 +211,13 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Set difference)** The **set difference** ([Wikipedia contributors 2026b](#ref-wikipedia_complement_set_theory)) of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
+> **Definition 22 (Set difference)** The **set difference** [\[12\]](#ref-wikipedia_complement_set_theory) of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
 >
 > \\A \setminus B \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : x \notin B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 23 (Complement)** Let \\A\\ be a [subset](#def-subset) of a set \\S\\. The **complement** ([Wikipedia contributors 2026b](#ref-wikipedia_complement_set_theory)) of \\A\\ in \\S\\ is the set difference ([Definition 22](#def-set-difference)) \\S \setminus A\\: the elements of \\S\\ that are not in \\A\\. When the set \\S\\ is clear from context, the complement of \\A\\ is written \\A^c\\:
+> **Definition 23 (Complement)** Let \\A\\ be a [subset](#def-subset) of a set \\S\\. The **complement** [\[12\]](#ref-wikipedia_complement_set_theory) of \\A\\ in \\S\\ is the set difference ([Definition 22](#def-set-difference)) \\S \setminus A\\: the elements of \\S\\ that are not in \\A\\. When the set \\S\\ is clear from context, the complement of \\A\\ is written \\A^c\\:
 >
 > \\A^c \stackrel{\text{def}}{=}S \setminus A = \mathopen{}\left\\x \in S : x \notin A\right\\\mathclose{}\\
 
@@ -251,7 +251,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 4 (De Morgan’s laws)** Let \\S\\ be a set, let \\I\\ be a nonempty set of indices, and let \\A_i\\ be a [subset](#def-subset) of \\S\\ for each \\i \in I\\. Then the complement of a union is the intersection of the complements, ([Wikipedia contributors 2026c](#ref-wikipedia_de_morgans_laws)) and the complement of an intersection is the union of the complements:
+> **Theorem 4 (De Morgan’s laws)** Let \\S\\ be a set, let \\I\\ be a nonempty set of indices, and let \\A_i\\ be a [subset](#def-subset) of \\S\\ for each \\i \in I\\. Then the complement of a union is the intersection of the complements, [\[13\]](#ref-wikipedia_de_morgans_laws) and the complement of an intersection is the union of the complements:
 >
 > \\ \begin{aligned} S \setminus \bigcup\_{i \in I} A_i &= \bigcap\_{i \in I} (S \setminus A_i) \\ S \setminus \bigcap\_{i \in I} A_i &= \bigcup\_{i \in I} (S \setminus A_i) \end{aligned} \\
 >
@@ -285,11 +285,11 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Ordered pair)** An **ordered pair** ([Wikipedia contributors 2026k](#ref-wikipedia_ordered_pair)) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
+> **Definition 24 (Ordered pair)** An **ordered pair** [\[14\]](#ref-wikipedia_ordered_pair) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
 
 > **NOTE:**
 >
-> **Definition 25 (Cartesian product)** The **Cartesian product** ([Wikipedia contributors 2026a](#ref-wikipedia_cartesian_product)) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
+> **Definition 25 (Cartesian product)** The **Cartesian product** [\[15\]](#ref-wikipedia_cartesian_product) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
 >
 > \\A \times B \stackrel{\text{def}}{=}\mathopen{}\left\\(a, b) : a \in A \text{ and } b \in B\right\\\mathclose{}\\
 
@@ -317,7 +317,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> *Remark 6* (Arithmetic with \\\infty\\). \\\infty\\ is not a real number, so some real-number arithmetic does not extend to it: \\\infty - \infty\\ is left undefined, and \\\infty + 1 = \infty + 2\\ does not imply \\1 = 2\\. Measure theory uses \\\[0, \infty\]\\ because the size of a set, such as the length of the whole real line, can be infinite ([Wikipedia contributors 2026e](#ref-wikipedia_extended_real_number_line)).
+> *Remark 6* (Arithmetic with \\\infty\\). \\\infty\\ is not a real number, so some real-number arithmetic does not extend to it: \\\infty - \infty\\ is left undefined, and \\\infty + 1 = \infty + 2\\ does not imply \\1 = 2\\. Measure theory uses \\\[0, \infty\]\\ because the size of a set, such as the length of the whole real line, can be infinite [\[16\]](#ref-wikipedia_extended_real_number_line).
 
 > **NOTE:**
 >
@@ -327,86 +327,126 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 These books and articles treat sets and the logic behind them in more depth.
 
-- Devlin ([1993](#ref-devlin1993joy)) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions in these notes.
+- Devlin [\[17\]](#ref-devlin1993joy) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions in these notes.
 
-- Halmos ([1974](#ref-halmos1974naive)) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.
+- Halmos [\[18\]](#ref-halmos1974naive) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.
 
-- Enderton ([2001](#ref-enderton2001logic)) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.
+- Enderton [\[19\]](#ref-enderton2001logic) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.
 
-- Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) teaches propositional and first-order logic, the language behind statements such as “for every set \\A\\ there exists…”.
+- Barker-Plummer et al. [\[20\]](#ref-barkerplummer2011language) teaches propositional and first-order logic, the language behind statements such as “for every set \\A\\ there exists…”.
 
-- Wikipedia contributors ([2026l](#ref-wikipedia_set_mathematics)) — sets, with the naive and axiomatic views
+- Wikipedia contributors [\[1\]](#ref-wikipedia_set_mathematics) — sets, with the naive and axiomatic views
 
-- Wikipedia contributors ([2026m](#ref-wikipedia_set_builder_notation)) — set-builder notation
+- Wikipedia contributors [\[2\]](#ref-wikipedia_set_builder_notation) — set-builder notation
 
-- Wikipedia contributors ([2026j](#ref-wikipedia_interval_mathematics)) — intervals and their endpoints
+- Wikipedia contributors [\[3\]](#ref-wikipedia_interval_mathematics) — intervals and their endpoints
 
-- Wikipedia contributors ([2026n](#ref-wikipedia_subset)) — subsets and the symbol conventions
+- Wikipedia contributors [\[4\]](#ref-wikipedia_subset) — subsets and the symbol conventions
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_empty_set)) — the empty set
+- Wikipedia contributors [\[5\]](#ref-wikipedia_empty_set) — the empty set
 
-- Wikipedia contributors ([2026p](#ref-wikipedia_vacuous_truth)) — vacuous truth
+- Wikipedia contributors [\[6\]](#ref-wikipedia_vacuous_truth) — vacuous truth
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_family_of_sets)) — families of sets
+- Wikipedia contributors [\[7\]](#ref-wikipedia_family_of_sets) — families of sets
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_index_set)) — index sets
+- Wikipedia contributors [\[8\]](#ref-wikipedia_index_set) — index sets
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_indexed_family)) — indexed families
+- Wikipedia contributors [\[9\]](#ref-wikipedia_indexed_family) — indexed families
 
-- Wikipedia contributors ([2026o](#ref-wikipedia_union_set_theory)) — unions of sets
+- Wikipedia contributors [\[10\]](#ref-wikipedia_union_set_theory) — unions of sets
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_intersection_set_theory)) — intersections of sets
+- Wikipedia contributors [\[11\]](#ref-wikipedia_intersection_set_theory) — intersections of sets
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_complement_set_theory)) — complements and set differences
+- Wikipedia contributors [\[12\]](#ref-wikipedia_complement_set_theory) — complements and set differences
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_de_morgans_laws)) — De Morgan’s laws
+- Wikipedia contributors [\[13\]](#ref-wikipedia_de_morgans_laws) — De Morgan’s laws
 
-- Wikipedia contributors ([2026k](#ref-wikipedia_ordered_pair)) — ordered pairs
+- Wikipedia contributors [\[14\]](#ref-wikipedia_ordered_pair) — ordered pairs
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_cartesian_product)) — Cartesian products
+- Wikipedia contributors [\[15\]](#ref-wikipedia_cartesian_product) — Cartesian products
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_extended_real_number_line)) — the extended real number line
+- Wikipedia contributors [\[16\]](#ref-wikipedia_extended_real_number_line) — the extended real number line
 
 ## References
 
-Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. *Language, Proof and Logic*. 2nd ed. CSLI Publications. <https://www.amazon.com/dp/1575866323>.
+\[1\]
 
-Devlin, Keith. 1993. *The Joy of Sets: Fundamentals of Contemporary Set Theory*. 2nd ed. Undergraduate Texts in Mathematics. Springer. <https://doi.org/10.1007/978-1-4612-0903-4>.
+Wikipedia contributors, “Set (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Set_(mathematics)>
 
-Enderton, Herbert B. 2001. *A Mathematical Introduction to Logic*. 2nd ed. Academic Press. <https://doi.org/10.1016/C2009-0-22107-6>.
+\[2\]
 
-Halmos, Paul R. 1974. *Naive Set Theory*. Undergraduate Texts in Mathematics. Springer. <https://doi.org/10.1007/978-1-4757-1645-0>.
+Wikipedia contributors, “Set-builder notation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Set-builder_notation>
 
-Wikipedia contributors. 2026a. *Cartesian Product — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Cartesian_product>.
+\[3\]
 
-Wikipedia contributors. 2026b. *Complement (Set Theory) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Complement_(set_theory)>.
+Wikipedia contributors, “Interval (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Interval_(mathematics)>
 
-Wikipedia contributors. 2026c. *De Morgan’s Laws — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/De_Morgan%27s_laws>.
+\[4\]
 
-Wikipedia contributors. 2026d. *Empty Set — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Empty_set>.
+Wikipedia contributors, “Subset — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Subset>
 
-Wikipedia contributors. 2026e. *Extended Real Number Line — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Extended_real_number_line>.
+\[5\]
 
-Wikipedia contributors. 2026f. *Family of Sets — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Family_of_sets>.
+Wikipedia contributors, “Empty set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Empty_set>
 
-Wikipedia contributors. 2026g. *Index Set — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Index_set>.
+\[6\]
 
-Wikipedia contributors. 2026h. *Indexed Family — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Indexed_family>.
+Wikipedia contributors, “Vacuous truth — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Vacuous_truth>
 
-Wikipedia contributors. 2026i. *Intersection (Set Theory) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Intersection_(set_theory)>.
+\[7\]
 
-Wikipedia contributors. 2026j. *Interval (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Interval_(mathematics)>.
+Wikipedia contributors, “Family of sets — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Family_of_sets>
 
-Wikipedia contributors. 2026k. *Ordered Pair — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Ordered_pair>.
+\[8\]
 
-Wikipedia contributors. 2026l. *Set (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Set_(mathematics)>.
+Wikipedia contributors, “Index set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Index_set>
 
-Wikipedia contributors. 2026m. *Set-Builder Notation — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Set-builder_notation>.
+\[9\]
 
-Wikipedia contributors. 2026n. *Subset — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Subset>.
+Wikipedia contributors, “Indexed family — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Indexed_family>
 
-Wikipedia contributors. 2026o. *Union (Set Theory) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Union_(set_theory)>.
+\[10\]
 
-Wikipedia contributors. 2026p. *Vacuous Truth — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Vacuous_truth>.
+Wikipedia contributors, “Union (set theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Union_(set_theory)>
+
+\[11\]
+
+Wikipedia contributors, “Intersection (set theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Intersection_(set_theory)>
+
+\[12\]
+
+Wikipedia contributors, “Complement (set theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Complement_(set_theory)>
+
+\[13\]
+
+Wikipedia contributors, “De morgan’s laws — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/De_Morgan%27s_laws>
+
+\[14\]
+
+Wikipedia contributors, “Ordered pair — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Ordered_pair>
+
+\[15\]
+
+Wikipedia contributors, “Cartesian product — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cartesian_product>
+
+\[16\]
+
+Wikipedia contributors, “Extended real number line — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Extended_real_number_line>
+
+\[17\]
+
+K. Devlin, *The joy of sets: Fundamentals of contemporary set theory*, 2nd ed. in Undergraduate texts in mathematics. New York: Springer, 1993. doi: [10.1007/978-1-4612-0903-4](https://doi.org/10.1007/978-1-4612-0903-4).
+
+\[18\]
+
+P. R. Halmos, *Naive set theory*. in Undergraduate texts in mathematics. New York: Springer, 1974. doi: [10.1007/978-1-4757-1645-0](https://doi.org/10.1007/978-1-4757-1645-0).
+
+\[19\]
+
+H. B. Enderton, *A mathematical introduction to logic*, 2nd ed. San Diego, CA: Academic Press, 2001. doi: [10.1016/C2009-0-22107-6](https://doi.org/10.1016/C2009-0-22107-6).
+
+\[20\]
+
+D. Barker-Plummer, J. Barwise, and J. Etchemendy, *Language, proof and logic*, 2nd ed. Stanford, CA: CSLI Publications, 2011. Available: <https://www.amazon.com/dp/1575866323>
 
 Back to top

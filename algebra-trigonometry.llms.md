@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Cosine and sine
 
 > **NOTE:**
 >
-> **Definition 1 (Unit circle)** The **unit circle** ([Wikipedia contributors 2026e](#ref-wikipedia_unit_circle)) is the set of points \\(x_1, x_2)\\ in the plane with \\x_1^2 + x_2^2 = 1\\.
+> **Definition 1 (Unit circle)** The **unit circle** [\[1\]](#ref-wikipedia_unit_circle) is the set of points \\(x_1, x_2)\\ in the plane with \\x_1^2 + x_2^2 = 1\\.
 
 > **NOTE:**
 >
@@ -23,7 +23,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (The number \\\pi\\)** The number \\\pi \approx 3.14159\\ ([Wikipedia contributors 2026a](#ref-wikipedia_pi)) is half of the circumference of the unit circle ([Definition 1](#def-unit-circle)).
+> **Definition 2 (The number \\\pi\\)** The number \\\pi \approx 3.14159\\ [\[2\]](#ref-wikipedia_pi) is half of the circumference of the unit circle ([Definition 1](#def-unit-circle)).
 
 > **NOTE:**
 >
@@ -31,7 +31,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Cosine)** For a real number \\\theta\\, start at the point \\(1, 0)\\ of the unit circle ([Definition 1](#def-unit-circle)) and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The first coordinate of the point reached is the **cosine** of \\\theta\\ ([Wikipedia contributors 2026c](#ref-wikipedia_sine_and_cosine)), written \\\cos\theta\\.
+> **Definition 3 (Cosine)** For a real number \\\theta\\, start at the point \\(1, 0)\\ of the unit circle ([Definition 1](#def-unit-circle)) and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The first coordinate of the point reached is the **cosine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\cos\theta\\.
 
 > **NOTE:**
 >
@@ -46,7 +46,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Sine)** For a real number \\\theta\\, the second coordinate of the point reached from \\(1, 0)\\ by moving a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle ([Definition 3](#def-cosine-sine)) is the **sine** of \\\theta\\ ([Wikipedia contributors 2026c](#ref-wikipedia_sine_and_cosine)), written \\\sin\theta\\.
+> **Definition 4 (Sine)** For a real number \\\theta\\, the second coordinate of the point reached from \\(1, 0)\\ by moving a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle ([Definition 3](#def-cosine-sine)) is the **sine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\sin\theta\\.
 
 > **NOTE:**
 >
@@ -59,7 +59,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 1 (The Pythagorean identity)** For every real number \\\theta\\ ([Wikipedia contributors 2026b](#ref-wikipedia_pythagorean_trigonometric_identity)),
+> **Theorem 1 (The Pythagorean identity)** For every real number \\\theta\\ [\[4\]](#ref-wikipedia_pythagorean_trigonometric_identity),
 >
 > \\ \cos^2\theta+ \sin^2\theta= 1. \\
 
@@ -141,26 +141,36 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 ## Further reading
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_unit_circle)) — the unit circle and its uses in trigonometry
+- Wikipedia contributors [\[1\]](#ref-wikipedia_unit_circle) — the unit circle and its uses in trigonometry
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_pi)) — the number pi, its definition and history
+- Wikipedia contributors [\[2\]](#ref-wikipedia_pi) — the number pi, its definition and history
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_sine_and_cosine)) — sine and cosine, with their properties and graphs
+- Wikipedia contributors [\[3\]](#ref-wikipedia_sine_and_cosine) — sine and cosine, with their properties and graphs
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_pythagorean_trigonometric_identity)) — the identity and its proofs
+- Wikipedia contributors [\[4\]](#ref-wikipedia_pythagorean_trigonometric_identity) — the identity and its proofs
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_trigonometric_functions)) — all six trigonometric functions
+- Wikipedia contributors [\[5\]](#ref-wikipedia_trigonometric_functions) — all six trigonometric functions
 
 Back to top
 
 ## References
 
-Wikipedia contributors. 2026a. *Pi — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Pi>.
+\[1\]
 
-Wikipedia contributors. 2026b. *Pythagorean Trigonometric Identity — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Pythagorean_trigonometric_identity>.
+Wikipedia contributors, “Unit circle — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Unit_circle>
 
-Wikipedia contributors. 2026c. *Sine and Cosine — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Sine_and_cosine>.
+\[2\]
 
-Wikipedia contributors. 2026d. *Trigonometric Functions — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Trigonometric_functions>.
+Wikipedia contributors, “Pi — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Pi>
 
-Wikipedia contributors. 2026e. *Unit Circle — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Unit_circle>.
+\[3\]
+
+Wikipedia contributors, “Sine and cosine — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Sine_and_cosine>
+
+\[4\]
+
+Wikipedia contributors, “Pythagorean trigonometric identity — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Pythagorean_trigonometric_identity>
+
+\[5\]
+
+Wikipedia contributors, “Trigonometric functions — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Trigonometric_functions>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-17 22:01:17 (PDT)
+Last modified: 2026-10-18 11:27:44 (PDT)
 
 ## 1 Polynomials
 
@@ -36,7 +36,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Polynomial)** A **polynomial** (in one variable \\x\\) ([Wikipedia contributors 2026j](#ref-wikipedia_polynomial)) is a [function](functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\. The [terms](algebra-sums.llms.md#def-term) of \\f\\ are \\a_n x^n, \ldots, a_1 x, a_0\\.
+> **Definition 2 (Polynomial)** A **polynomial** (in one variable \\x\\) [\[1\]](#ref-wikipedia_polynomial) is a [function](functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\. The [terms](algebra-sums.llms.md#def-term) of \\f\\ are \\a_n x^n, \ldots, a_1 x, a_0\\.
 
 > **NOTE:**
 >
@@ -71,7 +71,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Quadratic polynomial)** A [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\2\\, \\f(x) = a_2 x^2 + a_1 x + a_0\\ with \\a_2 \ne 0\\, is a **quadratic** ([Wikipedia contributors 2026k](#ref-wikipedia_quadratic_function)) polynomial.
+> **Definition 6 (Quadratic polynomial)** A [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\2\\, \\f(x) = a_2 x^2 + a_1 x + a_0\\ with \\a_2 \ne 0\\, is a **quadratic** [\[2\]](#ref-wikipedia_quadratic_function) polynomial.
 
 > **NOTE:**
 >
@@ -91,7 +91,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Parabola)** A **parabola** ([Wikipedia contributors 2026i](#ref-wikipedia_parabola)) is the [graph](functions.llms.md#def-graph) of a quadratic polynomial ([Definition 6](#def-quadratic-polynomial)).
+> **Definition 8 (Parabola)** A **parabola** [\[3\]](#ref-wikipedia_parabola) is the [graph](functions.llms.md#def-graph) of a quadratic polynomial ([Definition 6](#def-quadratic-polynomial)).
 
 > **NOTE:**
 >
@@ -101,13 +101,13 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Affine function of one variable)** A [function](functions.llms.md#def-function) \\f: \mathbb{R}\to \mathbb{R}\\ is **affine** ([Wikipedia contributors 2026a](#ref-wikipedia_affine_transformation)) if there are numbers \\m\\ and \\b\\ such that
+> **Definition 9 (Affine function of one variable)** A [function](functions.llms.md#def-function) \\f: \mathbb{R}\to \mathbb{R}\\ is **affine** [\[4\]](#ref-wikipedia_affine_transformation) if there are numbers \\m\\ and \\b\\ such that
 >
 > \\f(x) = m x + b \quad \text{for all } x \in \mathbb{R}\\
 
 > **NOTE:**
 >
-> **Definition 10 (Slope)** In the formula \\f(x) = m x + b\\ for an affine function \\f\\ ([Definition 9](#def-affine-function)), \\m\\ is called the **slope** of \\f\\ ([Wikipedia contributors 2026l](#ref-wikipedia_slope)).
+> **Definition 10 (Slope)** In the formula \\f(x) = m x + b\\ for an affine function \\f\\ ([Definition 9](#def-affine-function)), \\m\\ is called the **slope** of \\f\\ [\[5\]](#ref-wikipedia_slope).
 
 > **NOTE:**
 >
@@ -163,7 +163,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Limit of a sequence)** A real number \\L\\ is the **limit** of a [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers ([Wikipedia contributors 2026e](#ref-wikipedia_limit_of_a_sequence)), written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
+> **Definition 13 (Limit of a sequence)** A real number \\L\\ is the **limit** of a [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers [\[6\]](#ref-wikipedia_limit_of_a_sequence), written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
 >
 > \\\mathopen{}\left\|a_n - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } n \ge N.\\
 
@@ -195,7 +195,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Exponential function)** The **exponential function** ([Wikipedia contributors 2026d](#ref-wikipedia_exponential_function)) \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
+> **Definition 17 (Exponential function)** The **exponential function** [\[7\]](#ref-wikipedia_exponential_function) \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
 >
 > \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
@@ -216,17 +216,17 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Euler’s number)** **Euler’s number** ([Wikipedia contributors 2026c](#ref-wikipedia_e_mathematical_constant)) is
+> **Definition 18 (Euler’s number)** **Euler’s number** [\[8\]](#ref-wikipedia_e_mathematical_constant) is
 >
 > \\e \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\
 
 > **NOTE:**
 >
-> **Example 11 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](number-systems.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ ([Wikipedia contributors 2026c](#ref-wikipedia_e_mathematical_constant)).
+> **Example 11 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](number-systems.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ [\[8\]](#ref-wikipedia_e_mathematical_constant).
 
 > **NOTE:**
 >
-> **Definition 19 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\ ([Wikipedia contributors 2026h](#ref-wikipedia_natural_logarithm)), is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 17](#def-exponential-function)).
+> **Definition 19 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\ [\[9\]](#ref-wikipedia_natural_logarithm), is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 17](#def-exponential-function)).
 
 > **NOTE:**
 >
@@ -402,7 +402,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities ([Wikipedia contributors 2026m](#ref-wikipedia_tarskis_high_school_algebra_problem)):
+> *Remark 4* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[10\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
 >
 > - sums are symmetric and associative ([Theorem 5 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-symmetric), [Theorem 6 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-assoc));
 > - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 7 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-one), [Theorem 8 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-symmetric), [Theorem 9 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-assoc), [Theorem 11 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-distr));
@@ -414,7 +414,7 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** ([Wikipedia contributors 2026b](#ref-wikipedia_contour_line)) of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
+> **Definition 22 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** [\[11\]](#ref-wikipedia_contour_line) of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
 >
 > \\\mathopen{}\left\\(b, c) : g(b, c) = k\right\\\mathclose{}\\
 
@@ -663,58 +663,84 @@ Last modified: 2026-10-17 22:01:17 (PDT)
 
 ## Further reading
 
-- Wikipedia contributors ([2026j](#ref-wikipedia_polynomial)) — polynomials, their degree and their roots
+- Wikipedia contributors [\[1\]](#ref-wikipedia_polynomial) — polynomials, their degree and their roots
 
-- Wikipedia contributors ([2026k](#ref-wikipedia_quadratic_function)) — quadratic functions and their graphs
+- Wikipedia contributors [\[2\]](#ref-wikipedia_quadratic_function) — quadratic functions and their graphs
 
-- Wikipedia contributors ([2026f](#ref-wikipedia_linear_function)) — linear and affine functions of one variable
+- Wikipedia contributors [\[12\]](#ref-wikipedia_linear_function) — linear and affine functions of one variable
 
-- Wikipedia contributors ([2026l](#ref-wikipedia_slope)) — the slope of a line
+- Wikipedia contributors [\[5\]](#ref-wikipedia_slope) — the slope of a line
 
-- Wikipedia contributors ([2026e](#ref-wikipedia_limit_of_a_sequence)) — limits of sequences, with examples
+- Wikipedia contributors [\[6\]](#ref-wikipedia_limit_of_a_sequence) — limits of sequences, with examples
 
-- Wikipedia contributors ([2026d](#ref-wikipedia_exponential_function)) — the exponential function and its properties
+- Wikipedia contributors [\[7\]](#ref-wikipedia_exponential_function) — the exponential function and its properties
 
-- Wikipedia contributors ([2026g](#ref-wikipedia_logarithm)) — logarithms and their laws
+- Wikipedia contributors [\[13\]](#ref-wikipedia_logarithm) — logarithms and their laws
 
-- Wikipedia contributors ([2026h](#ref-wikipedia_natural_logarithm)) — the natural logarithm
+- Wikipedia contributors [\[9\]](#ref-wikipedia_natural_logarithm) — the natural logarithm
 
-- Wikipedia contributors ([2026a](#ref-wikipedia_affine_transformation)) — affine transformations and affine functions
+- Wikipedia contributors [\[4\]](#ref-wikipedia_affine_transformation) — affine transformations and affine functions
 
-- Wikipedia contributors ([2026b](#ref-wikipedia_contour_line)) — contour lines and level sets
+- Wikipedia contributors [\[11\]](#ref-wikipedia_contour_line) — contour lines and level sets
 
-- Wikipedia contributors ([2026c](#ref-wikipedia_e_mathematical_constant)) — the number e and its properties
+- Wikipedia contributors [\[8\]](#ref-wikipedia_e_mathematical_constant) — the number e and its properties
 
-- Wikipedia contributors ([2026i](#ref-wikipedia_parabola)) — parabolas and their properties
+- Wikipedia contributors [\[3\]](#ref-wikipedia_parabola) — parabolas and their properties
 
-- Wikipedia contributors ([2026m](#ref-wikipedia_tarskis_high_school_algebra_problem)) — Tarski’s high school algebra problem
+- Wikipedia contributors [\[10\]](#ref-wikipedia_tarskis_high_school_algebra_problem) — Tarski’s high school algebra problem
 
 Back to top
 
 ## References
 
-Wikipedia contributors. 2026a. *Affine Transformation — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Affine_transformation>.
+\[1\]
 
-Wikipedia contributors. 2026b. *Contour Line — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Contour_line>.
+Wikipedia contributors, “Polynomial — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Polynomial>
 
-Wikipedia contributors. 2026c. *E (Mathematical Constant) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/E_(mathematical_constant)>.
+\[2\]
 
-Wikipedia contributors. 2026d. *Exponential Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Exponential_function>.
+Wikipedia contributors, “Quadratic function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quadratic_function>
 
-Wikipedia contributors. 2026e. *Limit of a Sequence — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Limit_of_a_sequence>.
+\[3\]
 
-Wikipedia contributors. 2026f. *Linear Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Linear_function>.
+Wikipedia contributors, “Parabola — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Parabola>
 
-Wikipedia contributors. 2026g. *Logarithm — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Logarithm>.
+\[4\]
 
-Wikipedia contributors. 2026h. *Natural Logarithm — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Natural_logarithm>.
+Wikipedia contributors, “Affine transformation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Affine_transformation>
 
-Wikipedia contributors. 2026i. *Parabola — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Parabola>.
+\[5\]
 
-Wikipedia contributors. 2026j. *Polynomial — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Polynomial>.
+Wikipedia contributors, “Slope — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Slope>
 
-Wikipedia contributors. 2026k. *Quadratic Function — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Quadratic_function>.
+\[6\]
 
-Wikipedia contributors. 2026l. *Slope — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Slope>.
+Wikipedia contributors, “Limit of a sequence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Limit_of_a_sequence>
 
-Wikipedia contributors. 2026m. *Tarski’s High School Algebra Problem — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem>.
+\[7\]
+
+Wikipedia contributors, “Exponential function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Exponential_function>
+
+\[8\]
+
+Wikipedia contributors, “E (mathematical constant) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/E_(mathematical_constant)>
+
+\[9\]
+
+Wikipedia contributors, “Natural logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Natural_logarithm>
+
+\[10\]
+
+Wikipedia contributors, “Tarski’s high school algebra problem — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem>
+
+\[11\]
+
+Wikipedia contributors, “Contour line — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Contour_line>
+
+\[12\]
+
+Wikipedia contributors, “Linear function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_function>
+
+\[13\]
+
+Wikipedia contributors, “Logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logarithm>

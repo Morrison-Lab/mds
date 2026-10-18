@@ -106,6 +106,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -361,7 +362,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-17 22:01:17 (PDT)</p>
+  <p class="date">Last modified: 2026-10-18 11:27:44 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -370,7 +371,7 @@
 <section id="matrices" class="slide level2" data-number="1">
 <h2><span class="header-section-number">1</span> Matrices</h2>
 <div id="def-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Matrix)</strong></span> A <strong>matrix</strong> <span class="citation" data-cites="wikipedia_matrix_mathematics">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span> of dimensions <span class="math inline">\(m \times n\)</span> is a rectangular array of <span class="math inline">\(m \cdot n\)</span> numbers, arranged in <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Matrix)</strong></span> A <strong>matrix</strong> <span class="citation" data-cites="wikipedia_matrix_mathematics"><a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> of dimensions <span class="math inline">\(m \times n\)</span> is a rectangular array of <span class="math inline">\(m \cdot n\)</span> numbers, arranged in <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns:</p>
 <p><span class="math display">\[
 \mathbf{A} =
 \begin{bmatrix}
@@ -408,7 +409,7 @@ and the image examples in @exm-tensor are this repository's own illustration,
 not taken from that page.
 -->
 <div id="def-tensor" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Tensor)</strong></span> A <strong>tensor</strong> <span class="citation" data-cites="wikipedia_tensor">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026l</a>)</span> of order <span class="math inline">\(k \ge 1\)</span> is an array of numbers with <span class="math inline">\(k\)</span> indices, <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 2 (Tensor)</strong></span> A <strong>tensor</strong> <span class="citation" data-cites="wikipedia_tensor"><a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a></span> of order <span class="math inline">\(k \ge 1\)</span> is an array of numbers with <span class="math inline">\(k\)</span> indices, <span class="math display">\[
 \mathcal{A} = \mathopen{}\left(a_{i_1 i_2 \cdots i_k}\right)\mathclose{},
 \quad i_1 = 1, \ldots, n_1, \ \ldots, \ i_k = 1, \ldots, n_k,
 \]</span> and its dimensions are <span class="math inline">\(n_1 \times n_2 \times \cdots \times n_k\)</span>.</p>
@@ -421,7 +422,7 @@ not taken from that page.
 </div>
 <h3 id="sec-matrix-transpose">Matrix transpose</h3>
 <div id="def-matrix-transpose" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Matrix transpose)</strong></span> The <strong>transpose</strong> <span class="citation" data-cites="wikipedia_transpose">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026n</a>)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span> obtained by swapping the rows and columns of <span class="math inline">\(\mathbf{A}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 3 (Matrix transpose)</strong></span> The <strong>transpose</strong> <span class="citation" data-cites="wikipedia_transpose"><a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a></span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span> obtained by swapping the rows and columns of <span class="math inline">\(\mathbf{A}\)</span>:</p>
 <p><span class="math display">\[({\mathbf{A}}^{\top})_{ij} = a_{ji}\]</span></p>
 </div>
 </section>
@@ -437,7 +438,7 @@ not taken from that page.
 </div>
 <h3 id="matrix-addition">Matrix addition</h3>
 <div id="def-zero-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Zero matrix)</strong></span> The <span class="math inline">\(m \times n\)</span> <strong>zero matrix</strong> <span class="citation" data-cites="wikipedia_zero_matrix">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026o</a>)</span> <span class="math inline">\(\mathbf{0}_{m \times n}\)</span> (or <span class="math inline">\(\mathbf{0}\)</span> when dimensions are clear from context) has all entries equal to zero:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Zero matrix)</strong></span> The <span class="math inline">\(m \times n\)</span> <strong>zero matrix</strong> <span class="citation" data-cites="wikipedia_zero_matrix"><a href="#/further-reading" role="doc-biblioref" onclick="">[4]</a></span> <span class="math inline">\(\mathbf{0}_{m \times n}\)</span> (or <span class="math inline">\(\mathbf{0}\)</span> when dimensions are clear from context) has all entries equal to zero:</p>
 <p><span class="math display">\[
 \mathbf{0}_{m \times n} =
 \begin{bmatrix}
@@ -463,7 +464,7 @@ not taken from that page.
 <section class="slide level2">
 
 <div id="def-matrix-addition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Matrix addition)</strong></span> Two matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> of the same dimensions <span class="math inline">\(m \times n\)</span> can be added element-wise; their <strong>matrix sum</strong> <span class="citation" data-cites="wikipedia_matrix_addition">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 5 (Matrix addition)</strong></span> Two matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> of the same dimensions <span class="math inline">\(m \times n\)</span> can be added element-wise; their <strong>matrix sum</strong> <span class="citation" data-cites="wikipedia_matrix_addition"><a href="#/further-reading" role="doc-biblioref" onclick="">[5]</a></span> is:</p>
 <p><span class="math display">\[(\mathbf{A} + \mathbf{B})_{ij} = a_{ij} + b_{ij}\]</span></p>
 </div>
 </section>
@@ -513,7 +514,7 @@ not taken from that page.
 </div>
 <h3 id="scalar-multiplication">Scalar multiplication</h3>
 <div id="def-scalar-mult" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Scalar multiplication)</strong></span> The <strong>scalar multiple</strong> <span class="citation" data-cites="wikipedia_scalar_multiplication">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> of a matrix <span class="math inline">\(\mathbf{A}\)</span> by a scalar <span class="math inline">\(c\)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 6 (Scalar multiplication)</strong></span> The <strong>scalar multiple</strong> <span class="citation" data-cites="wikipedia_scalar_multiplication"><a href="#/further-reading" role="doc-biblioref" onclick="">[6]</a></span> of a matrix <span class="math inline">\(\mathbf{A}\)</span> by a scalar <span class="math inline">\(c\)</span> is:</p>
 <p><span class="math display">\[(c\mathbf{A})_{ij} = c \cdot a_{ij}\]</span></p>
 </div>
 </section>
@@ -530,7 +531,7 @@ not taken from that page.
 </div>
 <h3 id="matrix-multiplication">Matrix multiplication</h3>
 <div id="def-matrix-mult" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Matrix multiplication)</strong></span> The <strong>product</strong> <span class="citation" data-cites="wikipedia_matrix_multiplication">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026g</a>)</span> of an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> is the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{C} = \mathbf{A}\mathbf{B}\)</span> with entries:</p>
+<p><span class="theorem-title"><strong>Definition 7 (Matrix multiplication)</strong></span> The <strong>product</strong> <span class="citation" data-cites="wikipedia_matrix_multiplication"><a href="#/further-reading" role="doc-biblioref" onclick="">[7]</a></span> of an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> is the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{C} = \mathbf{A}\mathbf{B}\)</span> with entries:</p>
 <p><span class="math display">\[c_{ij} = \sum_{s=1}^{k} a_{is}\, b_{sj}\]</span></p>
 </div>
 </section>
@@ -641,7 +642,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 </div>
 <h3 id="square-and-identity-matrices">Square and identity matrices</h3>
 <div id="def-square-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Square matrix)</strong></span> A matrix is <strong>square</strong> <span class="citation" data-cites="wikipedia_square_matrix">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026j</a>)</span> if it has the same number of rows as columns.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Square matrix)</strong></span> A matrix is <strong>square</strong> <span class="citation" data-cites="wikipedia_square_matrix"><a href="#/further-reading" role="doc-biblioref" onclick="">[8]</a></span> if it has the same number of rows as columns.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -653,7 +654,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2">
 
 <div id="def-main-diagonal" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Main diagonal)</strong></span> The <strong>main diagonal</strong> <span class="citation" data-cites="wikipedia_main_diagonal">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the list of its entries <span class="math inline">\(a_{11}, a_{22}, \ldots, a_{kk}\)</span>, where <span class="math inline">\(k\)</span> is the smaller of <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Main diagonal)</strong></span> The <strong>main diagonal</strong> <span class="citation" data-cites="wikipedia_main_diagonal"><a href="#/further-reading" role="doc-biblioref" onclick="">[9]</a></span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the list of its entries <span class="math inline">\(a_{11}, a_{22}, \ldots, a_{kk}\)</span>, where <span class="math inline">\(k\)</span> is the smaller of <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -681,7 +682,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2">
 
 <div id="def-identity-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Identity matrix)</strong></span> The <span class="math inline">\(p \times p\)</span> <strong>identity matrix</strong> <span class="citation" data-cites="wikipedia_identity_matrix">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> <span class="math inline">\(\mathbf{I}_p\)</span> (or <span class="math inline">\(\mathbf{I}\)</span> when the size is clear from context) has ones on the <a href="#/def-main-diagonal">main diagonal</a> and zeros elsewhere:</p>
+<p><span class="theorem-title"><strong>Definition 12 (Identity matrix)</strong></span> The <span class="math inline">\(p \times p\)</span> <strong>identity matrix</strong> <span class="citation" data-cites="wikipedia_identity_matrix"><a href="#/further-reading" role="doc-biblioref" onclick="">[10]</a></span> <span class="math inline">\(\mathbf{I}_p\)</span> (or <span class="math inline">\(\mathbf{I}\)</span> when the size is clear from context) has ones on the <a href="#/def-main-diagonal">main diagonal</a> and zeros elsewhere:</p>
 <p><span class="math display">\[
 (\mathbf{I}_p)_{ij} =
 \begin{cases}
@@ -743,7 +744,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2">
 
 <div id="def-linear-system" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Linear system (system of linear equations))</strong></span> A <strong>linear system</strong> <span class="citation" data-cites="wikipedia_system_of_linear_equations">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026k</a>)</span> (or <strong>system of linear equations</strong>) with <span class="math inline">\(m\)</span> equations in <span class="math inline">\(n\)</span> unknowns is an equation <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> in which the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span> are given. A <strong>solution</strong> of the system is a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^n\)</span> for which <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> holds.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Linear system (system of linear equations))</strong></span> A <strong>linear system</strong> <span class="citation" data-cites="wikipedia_system_of_linear_equations"><a href="#/further-reading" role="doc-biblioref" onclick="">[11]</a></span> (or <strong>system of linear equations</strong>) with <span class="math inline">\(m\)</span> equations in <span class="math inline">\(n\)</span> unknowns is an equation <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> in which the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span> are given. A <strong>solution</strong> of the system is a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^n\)</span> for which <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> holds.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
@@ -768,7 +769,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 </div>
 <h3 id="linear-and-affine-maps">Linear and affine maps</h3>
 <div id="def-linear-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Linear map (linear transformation, linear function))</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> <span class="citation" data-cites="wikipedia_linear_map">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it preserves vector addition and scalar multiplication: for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 15 (Linear map (linear transformation, linear function))</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> <span class="citation" data-cites="wikipedia_linear_map"><a href="#/further-reading" role="doc-biblioref" onclick="">[12]</a></span> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it preserves vector addition and scalar multiplication: for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
 <ol type="1">
 <li><span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> (<em>additivity</em>)</li>
 <li><span class="math inline">\(f(c\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> (<em>homogeneity</em>)</li>
@@ -1055,7 +1056,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 <section class="slide level2">
 
 <div id="def-translation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Translation)</strong></span> For a fixed vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, the <strong>translation</strong> <span class="citation" data-cites="wikipedia_translation_geometry">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026m</a>)</span> by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is the function <span class="math inline">\(t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} : \mathbb{R}^m \to \mathbb{R}^m\)</span> defined by</p>
+<p><span class="theorem-title"><strong>Definition 18 (Translation)</strong></span> For a fixed vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, the <strong>translation</strong> <span class="citation" data-cites="wikipedia_translation_geometry"><a href="#/further-reading" role="doc-biblioref" onclick="">[13]</a></span> by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is the function <span class="math inline">\(t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} : \mathbb{R}^m \to \mathbb{R}^m\)</span> defined by</p>
 <p><span class="math display">\[t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\]</span></p>
 </div>
 </section>
@@ -1242,8 +1243,8 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-content">
 <ul>
-<li><span class="citation" data-cites="zhou2024matrix">Zhou (<a href="#/further-reading" role="doc-biblioref" onclick="">2024</a>)</span>, sections 6 (“Linear functions and operators”; see <a href="#/def-linear-operator" class="quarto-xref">Definition&nbsp;16</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \beta\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> whenever <span class="math inline">\(\alpha+ \beta= 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so the two definitions agree.</li>
-<li><span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe (<a href="#/further-reading" role="doc-biblioref" onclick="">2018</a>)</span>, chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the <a href="./calculus-derivatives.html#def-linear-approximation">first-order Taylor approximation</a> as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.</li>
+<li><span class="citation" data-cites="zhou2024matrix">Zhou <a href="#/further-reading" role="doc-biblioref" onclick="">[14]</a></span>, sections 6 (“Linear functions and operators”; see <a href="#/def-linear-operator" class="quarto-xref">Definition&nbsp;16</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \beta\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> whenever <span class="math inline">\(\alpha+ \beta= 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so the two definitions agree.</li>
+<li><span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe <a href="#/further-reading" role="doc-biblioref" onclick="">[15]</a></span>, chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the <a href="./calculus-derivatives.html#def-linear-approximation">first-order Taylor approximation</a> as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.</li>
 </ul>
 </div>
 </div>
@@ -1253,7 +1254,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="def-hyperplane" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Hyperplane)</strong></span> A <strong>hyperplane</strong> <span class="citation" data-cites="wikipedia_hyperplane">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> satisfying</p>
+<p><span class="theorem-title"><strong>Definition 22 (Hyperplane)</strong></span> A <strong>hyperplane</strong> <span class="citation" data-cites="wikipedia_hyperplane"><a href="#/further-reading" role="doc-biblioref" onclick="">[16]</a></span> in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> satisfying</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\]</span></p>
 <p>for some vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p \setminus \{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\}\)</span> and number <span class="math inline">\(b \in \mathbb{R}\)</span>. The number <span class="math inline">\(b\)</span> is the offset of the hyperplane.</p>
 </div>
@@ -1261,7 +1262,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="def-normal-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Normal vector of a hyperplane)</strong></span> In <a href="#/def-hyperplane" class="quarto-xref">Definition&nbsp;22</a>, the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is a <strong>normal vector</strong> <span class="citation" data-cites="wikipedia_normal_geometry">(<a href="#/further-reading" role="doc-biblioref" onclick="">Wikipedia contributors 2026h</a>)</span> of the hyperplane.</p>
+<p><span class="theorem-title"><strong>Definition 23 (Normal vector of a hyperplane)</strong></span> In <a href="#/def-hyperplane" class="quarto-xref">Definition&nbsp;22</a>, the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is a <strong>normal vector</strong> <span class="citation" data-cites="wikipedia_normal_geometry"><a href="#/further-reading" role="doc-biblioref" onclick="">[17]</a></span> of the hyperplane.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1641,21 +1642,21 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section id="further-reading" class="slide level2 unnumbered smaller scrollable">
 <h2>Further reading</h2>
 <ul>
-<li><p><span class="citation" data-cites="wikipedia_matrix_mathematics">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026f</a>)</span> — matrices, with their operations and applications</p></li>
-<li><p><span class="citation" data-cites="wikipedia_matrix_multiplication">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026g</a>)</span> — the matrix product and its properties</p></li>
-<li><p><span class="citation" data-cites="wikipedia_transpose">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026n</a>)</span> — the transpose of a matrix</p></li>
-<li><p><span class="citation" data-cites="wikipedia_identity_matrix">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026b</a>)</span> — the identity matrix</p></li>
-<li><p><span class="citation" data-cites="wikipedia_system_of_linear_equations">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026k</a>)</span> — linear systems and how to solve them</p></li>
-<li><p><span class="citation" data-cites="wikipedia_linear_map">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026c</a>)</span> — linear maps and their matrices</p></li>
-<li><p><span class="citation" data-cites="wikipedia_hyperplane">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026a</a>)</span> — hyperplanes and their equations</p></li>
-<li><p><span class="citation" data-cites="wikipedia_main_diagonal">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026d</a>)</span> — the main diagonal of a matrix</p></li>
-<li><p><span class="citation" data-cites="wikipedia_matrix_addition">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026e</a>)</span> — matrix addition</p></li>
-<li><p><span class="citation" data-cites="wikipedia_normal_geometry">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026h</a>)</span> — normal vectors to curves and surfaces</p></li>
-<li><p><span class="citation" data-cites="wikipedia_scalar_multiplication">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026i</a>)</span> — scalar multiplication</p></li>
-<li><p><span class="citation" data-cites="wikipedia_square_matrix">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026j</a>)</span> — square matrices</p></li>
-<li><p><span class="citation" data-cites="wikipedia_tensor">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026l</a>)</span> — tensors and their arrays of components</p></li>
-<li><p><span class="citation" data-cites="wikipedia_translation_geometry">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026m</a>)</span> — translations in geometry</p></li>
-<li><p><span class="citation" data-cites="wikipedia_zero_matrix">Wikipedia contributors (<a href="#/further-reading" role="doc-biblioref" onclick="">2026o</a>)</span> — zero matrices</p></li>
+<li><p><span class="citation" data-cites="wikipedia_matrix_mathematics">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span> — matrices, with their operations and applications</p></li>
+<li><p><span class="citation" data-cites="wikipedia_matrix_multiplication">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[7]</a></span> — the matrix product and its properties</p></li>
+<li><p><span class="citation" data-cites="wikipedia_transpose">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[3]</a></span> — the transpose of a matrix</p></li>
+<li><p><span class="citation" data-cites="wikipedia_identity_matrix">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[10]</a></span> — the identity matrix</p></li>
+<li><p><span class="citation" data-cites="wikipedia_system_of_linear_equations">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[11]</a></span> — linear systems and how to solve them</p></li>
+<li><p><span class="citation" data-cites="wikipedia_linear_map">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[12]</a></span> — linear maps and their matrices</p></li>
+<li><p><span class="citation" data-cites="wikipedia_hyperplane">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[16]</a></span> — hyperplanes and their equations</p></li>
+<li><p><span class="citation" data-cites="wikipedia_main_diagonal">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[9]</a></span> — the main diagonal of a matrix</p></li>
+<li><p><span class="citation" data-cites="wikipedia_matrix_addition">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[5]</a></span> — matrix addition</p></li>
+<li><p><span class="citation" data-cites="wikipedia_normal_geometry">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[17]</a></span> — normal vectors to curves and surfaces</p></li>
+<li><p><span class="citation" data-cites="wikipedia_scalar_multiplication">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[6]</a></span> — scalar multiplication</p></li>
+<li><p><span class="citation" data-cites="wikipedia_square_matrix">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[8]</a></span> — square matrices</p></li>
+<li><p><span class="citation" data-cites="wikipedia_tensor">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[2]</a></span> — tensors and their arrays of components</p></li>
+<li><p><span class="citation" data-cites="wikipedia_translation_geometry">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[13]</a></span> — translations in geometry</p></li>
+<li><p><span class="citation" data-cites="wikipedia_zero_matrix">Wikipedia contributors <a href="#/further-reading" role="doc-biblioref" onclick="">[4]</a></span> — zero matrices</p></li>
 </ul>
 
 
@@ -1849,57 +1850,57 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 })();
 </script>
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-boyd2018vmls" class="csl-entry" role="listitem">
-Boyd, Stephen, and Lieven Vandenberghe. 2018. <em>Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares</em>. Cambridge University Press. <a href="https://doi.org/10.1017/9781108583664">https://doi.org/10.1017/9781108583664</a>.
-</div>
-<div id="ref-wikipedia_hyperplane" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Hyperplane — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Hyperplane">https://en.wikipedia.org/wiki/Hyperplane</a>.
-</div>
-<div id="ref-wikipedia_identity_matrix" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Identity Matrix — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Identity_matrix">https://en.wikipedia.org/wiki/Identity_matrix</a>.
-</div>
-<div id="ref-wikipedia_linear_map" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Linear Map — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Linear_map">https://en.wikipedia.org/wiki/Linear_map</a>.
-</div>
-<div id="ref-wikipedia_main_diagonal" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Main Diagonal — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Main_diagonal">https://en.wikipedia.org/wiki/Main_diagonal</a>.
-</div>
-<div id="ref-wikipedia_matrix_addition" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026e. <em>Matrix Addition — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Matrix_addition">https://en.wikipedia.org/wiki/Matrix_addition</a>.
-</div>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-wikipedia_matrix_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026f. <em>Matrix (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">https://en.wikipedia.org/wiki/Matrix_(mathematics)</a>.
-</div>
-<div id="ref-wikipedia_matrix_multiplication" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026g. <em>Matrix Multiplication — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Matrix_multiplication">https://en.wikipedia.org/wiki/Matrix_multiplication</a>.
-</div>
-<div id="ref-wikipedia_normal_geometry" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026h. <em>Normal (Geometry) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">https://en.wikipedia.org/wiki/Normal_(geometry)</a>.
-</div>
-<div id="ref-wikipedia_scalar_multiplication" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026i. <em>Scalar Multiplication — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Scalar_multiplication">https://en.wikipedia.org/wiki/Scalar_multiplication</a>.
-</div>
-<div id="ref-wikipedia_square_matrix" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026j. <em>Square Matrix — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Square_matrix">https://en.wikipedia.org/wiki/Square_matrix</a>.
-</div>
-<div id="ref-wikipedia_system_of_linear_equations" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026k. <em>System of Linear Equations — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/System_of_linear_equations">https://en.wikipedia.org/wiki/System_of_linear_equations</a>.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Matrix (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">https://en.wikipedia.org/wiki/Matrix_(mathematics)</a></div>
 </div>
 <div id="ref-wikipedia_tensor" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026l. <em>Tensor — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Tensor">https://en.wikipedia.org/wiki/Tensor</a>.
-</div>
-<div id="ref-wikipedia_translation_geometry" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026m. <em>Translation (Geometry) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Translation_(geometry)">https://en.wikipedia.org/wiki/Translation_(geometry)</a>.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Tensor — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Tensor">https://en.wikipedia.org/wiki/Tensor</a></div>
 </div>
 <div id="ref-wikipedia_transpose" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026n. <em>Transpose — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Transpose">https://en.wikipedia.org/wiki/Transpose</a>.
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Transpose — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Transpose">https://en.wikipedia.org/wiki/Transpose</a></div>
 </div>
 <div id="ref-wikipedia_zero_matrix" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026o. <em>Zero Matrix — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Zero_matrix">https://en.wikipedia.org/wiki/Zero_matrix</a>.
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Zero matrix — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Zero_matrix">https://en.wikipedia.org/wiki/Zero_matrix</a></div>
+</div>
+<div id="ref-wikipedia_matrix_addition" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Matrix addition — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Matrix_addition">https://en.wikipedia.org/wiki/Matrix_addition</a></div>
+</div>
+<div id="ref-wikipedia_scalar_multiplication" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Scalar multiplication — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Scalar_multiplication">https://en.wikipedia.org/wiki/Scalar_multiplication</a></div>
+</div>
+<div id="ref-wikipedia_matrix_multiplication" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Matrix multiplication — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Matrix_multiplication">https://en.wikipedia.org/wiki/Matrix_multiplication</a></div>
+</div>
+<div id="ref-wikipedia_square_matrix" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Square matrix — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Square_matrix">https://en.wikipedia.org/wiki/Square_matrix</a></div>
+</div>
+<div id="ref-wikipedia_main_diagonal" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Main diagonal — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Main_diagonal">https://en.wikipedia.org/wiki/Main_diagonal</a></div>
+</div>
+<div id="ref-wikipedia_identity_matrix" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Identity matrix — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Identity_matrix">https://en.wikipedia.org/wiki/Identity_matrix</a></div>
+</div>
+<div id="ref-wikipedia_system_of_linear_equations" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">Wikipedia contributors, <span>“System of linear equations — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/System_of_linear_equations">https://en.wikipedia.org/wiki/System_of_linear_equations</a></div>
+</div>
+<div id="ref-wikipedia_linear_map" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Linear map — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Linear_map">https://en.wikipedia.org/wiki/Linear_map</a></div>
+</div>
+<div id="ref-wikipedia_translation_geometry" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Translation (geometry) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Translation_(geometry)">https://en.wikipedia.org/wiki/Translation_(geometry)</a></div>
 </div>
 <div id="ref-zhou2024matrix" class="csl-entry" role="listitem">
-Zhou, Hua. 2024. <em>Matrices</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html">https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html</a>.
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">H. Zhou, <span>“Matrices.”</span> Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. [Online]. Available: <a href="https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html">https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html</a></div>
+</div>
+<div id="ref-boyd2018vmls" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">S. Boyd and L. Vandenberghe, <em>Introduction to applied linear algebra: Vectors, matrices, and least squares</em>. Cambridge University Press, 2018. doi: <a href="https://doi.org/10.1017/9781108583664">10.1017/9781108583664</a>.</div>
+</div>
+<div id="ref-wikipedia_hyperplane" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Hyperplane — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Hyperplane">https://en.wikipedia.org/wiki/Hyperplane</a></div>
+</div>
+<div id="ref-wikipedia_normal_geometry" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Normal (geometry) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">https://en.wikipedia.org/wiki/Normal_(geometry)</a></div>
 </div>
 </div>
 </section>
