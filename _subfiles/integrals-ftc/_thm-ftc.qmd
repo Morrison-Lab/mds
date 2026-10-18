@@ -3,7 +3,7 @@
 :::{#thm-ftc-part1}
 #### Fundamental Theorem of Calculus, Part 1 (derivative of an integral)
 
-Let $f$ be a continuous function on a closed interval $[a, b]$.
+Let $f$ be a continuous function on a closed interval $[a, b]$ [@wikipedia_fundamental_theorem_of_calculus].
 Let $F(x) = \int_a^x f(t)\,dt$ for $x \in [a, b]$
 be the accumulation function of $f$ from $a$ (@def-accumulation-function).
 Then $F$ is differentiable and:

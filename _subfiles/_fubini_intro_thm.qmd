@@ -1,5 +1,5 @@
 The **Fubini--Tonelli theorem** states conditions under which the order
-of integration in a double integral can be exchanged.
+of integration in a double integral can be exchanged [@wikipedia_tonelli_s_theorem].
 We state them in two settings:
 the Riemann version (@thm-fubini) is what applied courses usually use
 for double integrals of continuous functions on simple regions;

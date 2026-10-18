@@ -12,7 +12,7 @@ and satisfies the following three axioms for all $\vx, \vy \in V$ and all scalar
 2. **Absolute homogeneity**:
    $\norm{c\,\vx} = \abs{c}\,\norm{\vx}$;
 3. **Subadditivity (triangle inequality)**:
-   $\norm{\vx + \vy} \le \norm{\vx} + \norm{\vy}$.
+   $\norm{\vx + \vy} \le \norm{\vx} + \norm{\vy}$ [@wikipedia_triangle_inequality].
 
 A vector space equipped with a norm is called a **normed vector space** (or **normed space**).
 

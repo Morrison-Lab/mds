@@ -8,7 +8,7 @@ The [proof](proof-writing.qmd#def-proof) is the standard induction on the number
 #### Jensen's inequality for a weighted average
 
 Let $f : \reals^p \to \reals$ be a
-[convex function](#def-convex-function).
+[convex function](#def-convex-function) [@wikipedia_jensens_inequality].
 Let $\dsn{x} \in \reals^p$,
 and let $\dsn{w} \ge 0$ be weights with $\sumin w_i = 1$.
 Then

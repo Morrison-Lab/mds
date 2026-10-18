@@ -19,7 +19,7 @@ of $\expt$ (@def-exponential-function).
 #### Other notations for the natural logarithm
 
 In these notes, $\logf{x}$ is always the natural logarithm,
-the logarithm with base $e$ (@def-euler-number).
+the logarithm with base $e$ (@def-euler-number) [@wikipedia_logarithm].
 Some sources write $\ln x$ for the natural logarithm
 and reserve $\log x$ for the logarithm with base 10.
 
