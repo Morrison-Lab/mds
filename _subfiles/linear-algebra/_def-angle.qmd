@@ -2,8 +2,8 @@
 #### Angle between two vectors
 
 The **angle** between two nonzero vectors $\vecf{x}, \vecf{y} \in \reals^p$
-is the unique number $\angpar \in [0, \pi]$ whose cosine (@def-cosine-sine) is
-the cosine similarity of the two vectors (@def-cosine-similarity):
+is the unique [real number](number-systems.qmd#def-real-numbers) $\angpar \in [0, \pi]$ whose cosine (@def-cosine-sine) is
+the [cosine similarity](#def-cosine-similarity) of the two vectors:
 
 $$
 \cos\angpar = \cossim(\vecf{x}, \vecf{y}).
@@ -16,8 +16,8 @@ $$
 :::{#rem-angle-well-defined}
 #### Why the angle is well defined
 
-The cosine similarity is defined, because both vectors are nonzero (@thm-norm-properties),
-and by @thm-cauchy-schwarz it lies between $-1$ and $1$.
+The [cosine similarity](#def-cosine-similarity) is defined, because both vectors are nonzero (@thm-norm-properties).
+By @thm-cauchy-schwarz, it lies between $-1$ and $1$.
 On $[0, \pi]$, $\cos$ is decreasing from $1$ to $-1$
 and takes each value in $[-1, 1]$ exactly once (@thm-cosine-bijection),
 so there is exactly one such $\angpar$.
