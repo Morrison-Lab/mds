@@ -24,56 +24,6 @@ format:
   in [propositional logic](#def-propositional-logic)
   and [first-order logic](#def-first-order-logic).
 
--   @wikipedia_direct_proof --- direct proofs
-
--   @wikipedia_mathematical_proof --- proofs, with the main techniques
-
--   @wikipedia_proof_by_contradiction --- proof by contradiction
-
--   @wikipedia_mathematical_induction --- mathematical induction
-
--   @wikipedia_counterexample --- counterexamples
-
--   @wikipedia_proposition --- propositions
-
--   @wikipedia_predicate_mathematical_logic --- predicates
-
--   @wikipedia_logical_connective --- logical connectives
-
--   @wikipedia_negation --- negation
-
--   @wikipedia_logical_conjunction --- logical conjunction
-
--   @wikipedia_logical_disjunction --- logical disjunction
-
--   @wikipedia_material_conditional --- the material conditional
-
--   @wikipedia_logical_biconditional --- the biconditional
-
--   @wikipedia_converse_logic --- converses
-
--   @wikipedia_necessity_and_sufficiency --- necessary and sufficient conditions
-
--   @wikipedia_quantifier_logic --- quantifiers
-
--   @wikipedia_universal_quantification --- universal quantification
-
--   @wikipedia_existential_quantification --- existential quantification
-
--   @wikipedia_logical_consequence --- logical consequence
-
--   @wikipedia_propositional_calculus --- propositional logic
-
--   @wikipedia_first_order_logic --- first-order logic
-
--   @wikipedia_formal_proof --- formal proofs
-
--   @wikipedia_theorem --- theorems
-
--   @wikipedia_lemma_mathematics --- lemmas
-
--   @wikipedia_corollary --- corollaries
-
 Free course materials on formal logic:
 
 - Thomas Icard's [Phil 150/250, Mathematical Logic course notes](https://web.stanford.edu/~icard/phil150)

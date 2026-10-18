@@ -8,7 +8,7 @@ $$
 $$
 
 with equality exactly when $\vecf{x}$ and $\vecf{y}$ are linearly dependent
-(@def-linearly-independent).
+(@def-linearly-independent) [@wikipedia_cauchy_schwarz_inequality].
 
 :::
 

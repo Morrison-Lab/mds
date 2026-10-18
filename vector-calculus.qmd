@@ -27,27 +27,7 @@ format:
 - @problifesavercalc
   The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.
 
--   @wikipedia_partial_derivative --- partial derivatives
-
 -   @wp:gradient --- the gradient
-
--   @wikipedia_level_set --- level sets
-
--   @wikipedia_total_derivative --- the total derivative
-
--   @wikipedia_jacobian_matrix_and_determinant --- the Jacobian matrix
-
--   @wikipedia_matrix_calculus --- matrix calculus and the numerator and denominator layouts
-
--   @wikipedia_errors_and_residuals --- residuals and errors
-
--   @wikipedia_residual_sum_of_squares --- the residual sum of squares
-
--   @wikipedia_ball_mathematics --- open and closed balls
-
--   @wikipedia_hessian_matrix --- the Hessian matrix
-
--   @wikipedia_symmetry_of_second_derivatives --- the symmetry of mixed second partial derivatives
 
 See also the [Linear Algebra and Vector Calculus
 further reading](linear-algebra.qmd#sec-additional-resources).

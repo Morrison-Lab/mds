@@ -13,36 +13,3 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_matrices.qmd >}}
-
-## Further reading {.unnumbered}
-
--   @wikipedia_matrix_mathematics --- matrices, with their operations and applications
-
--   @wikipedia_matrix_multiplication --- the matrix product and its properties
-
--   @wikipedia_transpose --- the transpose of a matrix
-
--   @wikipedia_identity_matrix --- the identity matrix
-
--   @wikipedia_system_of_linear_equations --- linear systems and how to solve them
-
--   @wikipedia_linear_map --- linear maps and their matrices
-
--   @wikipedia_hyperplane --- hyperplanes and their equations
-
--   @wikipedia_main_diagonal --- the main diagonal of a matrix
-
--   @wikipedia_matrix_addition --- matrix addition
-
--   @wikipedia_normal_geometry --- normal vectors to curves and surfaces
-
--   @wikipedia_scalar_multiplication --- scalar multiplication
-
--   @wikipedia_square_matrix --- square matrices
-
--   @wikipedia_tensor --- tensors and their arrays of components
-
--   @wikipedia_translation_geometry --- translations in geometry
-
--   @wikipedia_zero_matrix --- zero matrices
-

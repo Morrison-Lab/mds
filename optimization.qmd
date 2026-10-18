@@ -33,36 +33,6 @@ reticulate::py_require(c("numpy", "pandas"))
   its chapters on gradient descent and backpropagation calculus visually illustrate
   how gradients of multivariate cost functions are computed and used for optimization.
 
--   @wikipedia_fermats_theorem_stationary_points --- Fermat's theorem on stationary points
-
--   @wikipedia_taylors_theorem --- Taylor's theorem and its remainders
-
--   @wikipedia_saddle_point --- saddle points
-
--   @wikipedia_convex_set --- convex sets
-
--   @wikipedia_epigraph_mathematics --- epigraphs
-
--   @wikipedia_tangent_space --- tangent spaces and planes
-
--   @wikipedia_feasible_region --- feasible regions
-
--   @wikipedia_mathematical_optimization --- mathematical optimization
-
--   @wikipedia_lagrange_multiplier --- Lagrange multipliers
-
--   @wikipedia_iterative_method --- iterative methods
-
--   @wikipedia_newtons_method_in_optimization --- Newton's method in optimization
-
--   @wikipedia_rate_of_convergence --- rates of convergence
-
--   @wikipedia_gradient_descent --- gradient descent
-
--   @wikipedia_line_search --- line search
-
--   @wikipedia_backtracking_line_search --- backtracking line search and the Armijo condition
-
 ## References {.unnumbered}
 
 ::: {#refs}

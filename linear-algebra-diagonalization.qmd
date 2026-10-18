@@ -13,17 +13,3 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_diagonalization.qmd >}}
-
-## Further reading {.unnumbered}
-
--   @wikipedia_eigenvalues_and_eigenvectors --- eigenvalues, eigenvectors and eigenspaces, with examples
-
--   @wikipedia_matrix_similarity --- similar matrices and what they share
-
--   @wikipedia_diagonalizable_matrix --- when a matrix is diagonalizable, and how to diagonalize it
-
--   @wikipedia_block_matrix --- block matrices and block operations
-
--   @wikipedia_schur_complement --- the Schur complement and its uses
-
--   @wikipedia_cholesky_decomposition --- the Cholesky decomposition and how to compute it

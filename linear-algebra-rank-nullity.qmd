@@ -13,17 +13,3 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_rank_nullity.qmd >}}
-
-## Further reading {.unnumbered}
-
--   @wikipedia_row_and_column_spaces --- the row space, column space and null space
-
--   @wikipedia_rank_nullity_theorem --- the rank-nullity theorem and its proofs
-
--   @wikipedia_gram_matrix --- Gram matrices and their properties
-
--   @wikipedia_affine_space --- affine spaces and subspaces
-
--   @wikipedia_half_space_geometry --- half-spaces
-
--   @wikipedia_rank_factorization --- rank factorizations

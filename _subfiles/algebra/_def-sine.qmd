@@ -5,6 +5,7 @@ For a real number $\angpar$, the second coordinate of the point reached from $(1
 by moving a distance $\abs{\angpar}$ along the unit circle (@def-cosine-sine)
 is the **sine** of $\angpar$
 [@wikipedia_sine_and_cosine], written $\sin\angpar$.
+The sine is one of the trigonometric functions [@wikipedia_trigonometric_functions].
 
 :::
 

@@ -1,7 +1,8 @@
 :::{#thm-fundamental-subspaces}
 #### Fundamental theorem of linear algebra
 
-Let $\matr{A}$ be an $m \times n$ matrix with $\operatorname{rank}(\matr{A}) = r$. Then
+Let $\matr{A}$ be an $m \times n$ matrix with $\operatorname{rank}(\matr{A}) = r$.
+Then
 
 1. $\mathcal{C}(\matr{A})^\perp = \mathcal{N}(\tp{\matr{A}})$,
    and $\reals^m = \mathcal{C}(\matr{A}) \oplus \mathcal{N}(\tp{\matr{A}})$;
@@ -139,5 +140,7 @@ as a check, row 1 of $\matr{A}$ gives
 $\frac{8}{9} - 2 \cd \frac{2}{9} - 2 \cd \frac{2}{9} = 0$,
 and row 2 is $3$ times row 1,
 so $\matr{A}$ sends the null-space part to $\vzero_2$.
+
+These four statements are the fundamental theorem of linear algebra [@wikipedia_fundamental_theorem_of_linear_algebra].
 
 :::

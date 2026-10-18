@@ -13,30 +13,3 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/_sec_algebra_sums.qmd >}}
-
-## Further reading {.unnumbered}
-
--   @wikipedia_line_segment --- line segments in the plane and in space
-
--   @wikipedia_convex_function --- convex functions, their properties and examples
-
--   @wikipedia_jensens_inequality --- Jensen's inequality, with its probabilistic form
-
--   @wikipedia_upper_and_lower_bounds --- upper and lower bounds of a set
-
--   @wikipedia_infimum_and_supremum --- the infimum and supremum, with examples
-
--   @wikipedia_least_upper_bound_property --- the completeness of the real numbers
-
--   @wikipedia_commutative_property --- commutative operations, with examples
-
--   @wikipedia_associative_property --- associative operations, with examples
-
--   @wikipedia_distributive_property --- the distributive law
-
--   @wikipedia_chord_geometry --- chords of a curve
-
--   @wikipedia_identity_element --- identity elements of a binary operation
-
--   @wikipedia_like_terms --- like terms and how to combine them
-

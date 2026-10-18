@@ -16,6 +16,7 @@ More generally, Part 1 holds at any individual point $x$ where $f$ is
 integrable on $[a, b]$ (see @def-integrable) and continuous at $x$
 (see @def-continuous), even if $f$ has jump discontinuities (@def-jump-discontinuity) elsewhere
 [@rudin1976principles, Theorem 6.20, p. 133].
+This result is the first part of the fundamental theorem of calculus [@wikipedia_fundamental_theorem_of_calculus].
 :::
 
 [@larsonCalc11e, Theorem 4.11, p. 288]
