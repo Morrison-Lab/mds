@@ -19,6 +19,7 @@ $$
 \end{aligned}
 $$
 
-Setting $c = a$ and $d = b$ gives the [square of a sum](#thm-square-of-a-sum).
+Setting $c = a$ and $d = b$ gives $(a + b)^2 = a^2 + ab + ba + b^2$,
+which is the [square of a sum](#thm-square-of-a-sum) once $ab$ and $ba$ are combined.
 
 :::
