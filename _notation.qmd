@@ -66,15 +66,7 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/notation/_rem-process-notation.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/notation/_exm-process-notation.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_rem-reading-other-sources.qmd >}}
 
 ## Why is notation in probability and statistics so inconsistent and disorganized?
 
