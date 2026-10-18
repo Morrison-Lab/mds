@@ -1,7 +1,7 @@
 :::{#exm-pearson-angle}
 #### A correlation of one half is an angle of sixty degrees
 
-In @exm-pearson-cosine-centered, $r = 1/2$ for $\vx = (1, 2, 3)$ and $\vy = (1, 3, 2)$.
+In @exm-pearson-cosine-centered, $r = 1/2$ for $\vx = (1, 2, 3)$, $\vy = (1, 3, 2)$.
 By @cor-pearson-angle, the [angle](#def-angle) $\angpar$ between $\cent{\vx} = (-1, 0, 1)$ and $\cent{\vy} = (-1, 1, 0)$ satisfies
 
 $$
