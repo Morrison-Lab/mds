@@ -1,0 +1,10 @@
+:::{#exm-sigma-algebra-closed-under}
+#### A $\sigma$-algebra is closed under complements and countable unions
+
+A [$\sigma$-algebra](#def-sigma-algebra) $\salg$ on a set $S$
+is [closed under](functions.qmd#def-closed-under) complements in $S$
+and under unions of sequences of its sets,
+because @def-sigma-algebra requires both.
+The collection in @exm-not-sigma-algebra is not closed under complements.
+
+:::

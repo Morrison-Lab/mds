@@ -165,6 +165,14 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/sets/_def-pairwise-disjoint.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-pairwise-disjoint.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/sets/_def-ordered-pair.qmd >}}
 
 {{< slidebreak >}}

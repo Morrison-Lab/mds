@@ -23,11 +23,7 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/measures/_def-closed-under.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/measures/_exm-closed-under.qmd >}}
+{{< include mds/_subfiles/measures/_exm-sigma-algebra-closed-under.qmd >}}
 
 {{< slidebreak >}}
 
@@ -64,42 +60,6 @@ is the starting point of the Morrison Lab's probability notes
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-borel-sigma-algebra.qmd >}}
-
-## Pairwise disjoint sets
-
-{{< include mds/_subfiles/measures/_def-pairwise-disjoint.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/measures/_exm-pairwise-disjoint.qmd >}}
-
-## Infinite sums
-
-{{< include mds/_subfiles/measures/_def-non-decreasing.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/measures/_exm-non-decreasing.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/measures/_def-partial-sum.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/measures/_exm-partial-sum.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/measures/_def-infinite-sum.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/measures/_exm-infinite-sum.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/measures/_lem-nonneg-series.qmd >}}
 
 ## Additivity
 

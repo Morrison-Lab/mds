@@ -1,7 +1,7 @@
 :::{#rem-mutually-exclusive}
 #### Mutually exclusive events
 
-In probability, [pairwise disjoint](#def-pairwise-disjoint)
+In probability, [pairwise disjoint](sets.qmd#def-pairwise-disjoint)
 [events](#def-probability-measure) are usually called **mutually exclusive**.
 For example, for one roll of a six-sided die,
 the events "the roll is [even](number-systems.qmd#def-even-odd)", $\set{2, 4, 6}$,

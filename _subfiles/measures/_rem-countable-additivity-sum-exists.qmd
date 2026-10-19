@@ -1,7 +1,7 @@
 :::{#rem-countable-additivity-sum-exists}
 #### The sum in countable additivity always has a value
 
-By @lem-nonneg-series,
+By [sums of non-negative terms](algebra.qmd#lem-nonneg-series),
 the right-hand side of the equation in @def-countable-additivity,
 $\sumto{i}{\infty} \measure(A_i)$,
 always has a value,
