@@ -1,0 +1,8 @@
+:::{#exm-radian}
+#### Angles in radians
+
+- The points $(0, 1)$, $(-1, 0)$ are a quarter of the [unit circle](#def-unit-circle) apart,
+  so their [angle](#def-angle-unit-circle) is $\pi/2$ [radians](#def-radian).
+- The points $(0, 1)$, $(0, -1)$ are half of the circle apart, so their angle is $\pi$ radians.
+
+:::
