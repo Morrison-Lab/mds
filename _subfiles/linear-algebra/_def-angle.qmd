@@ -1,13 +1,14 @@
 :::{#def-angle}
 #### Angle between two vectors
 
-The **angle** between two nonzero vectors, $\vecf{x}, \vecf{y} \in \reals^p$,
-is the [arccosine](algebra-trigonometry.qmd#def-arccosine)
-of their [cosine similarity](#def-cosine-similarity):
+The **angle** between two nonzero vectors, $\vecf{x}, \vecf{y} \in \reals^p$, is
 
 $$
 \angpar \eqdef \arccos\paren{\cossim(\vecf{x}, \vecf{y})}.
 $$
+
+In words, the angle is the [arccosine](algebra-trigonometry.qmd#def-arccosine)
+of the [cosine similarity](#def-cosine-similarity) of the two vectors.
 
 :::
 

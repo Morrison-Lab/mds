@@ -9,4 +9,6 @@ $$
 d = 2\pi f.
 $$
 
+In words, the distance in radians is $2\pi$ times the fraction of the circle covered.
+
 :::
