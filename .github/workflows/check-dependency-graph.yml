@@ -15,5 +15,5 @@ jobs:
     uses: Morrison-Lab/gha/.github/workflows/check-dependency-graph.yml@v3
     with:
       pages-dir: .
-      # Warn-only until the existing cycles are resolved: https://github.com/Morrison-Lab/mds/issues/419
+      # Warn-only until the existing cycles are resolved: https://github.com/Morrison-Lab/mds/issues/410
       fail-on-cycle: false
