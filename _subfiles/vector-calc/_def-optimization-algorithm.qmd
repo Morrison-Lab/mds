@@ -1,0 +1,10 @@
+:::{#def-optimization-algorithm}
+#### Optimization algorithm
+
+With $f$ and $F$ as in @def-objective-function,
+an **optimization algorithm**
+[@wikipedia_mathematical_optimization]
+is a step-by-step procedure that takes $f$ and $F$ as inputs
+and returns a feasible point $\vx^\dagger \in F$ intended to have a small value of $f$.
+
+:::

@@ -110,6 +110,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-optimization-algorithm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-optimization-algorithm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_intro-lagrange.qmd >}}
 
 {{< slidebreak >}}
