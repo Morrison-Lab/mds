@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 09:38:56 (PDT)
+Last modified: 2026-10-19 11:02:25 (PDT)
 
 ## 1 Convex functions
 
@@ -96,7 +96,7 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 18 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 17 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
+> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 20 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 19 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
 >
 > Let \\t = \min\mathopen{}\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\mathclose{}\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta/ 2 \< \delta\\.
 >

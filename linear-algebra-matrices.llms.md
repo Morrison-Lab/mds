@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 09:38:56 (PDT)
+Last modified: 2026-10-19 11:02:25 (PDT)
 
 ## 1 Matrices
 
@@ -162,7 +162,7 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 >
 > \\ (\mathbf{A} + \mathbf{B})(\mathbf{C} + \mathbf{D}) = \mathbf{A}\mathbf{C} + \mathbf{A}\mathbf{D} + \mathbf{B}\mathbf{C} + \mathbf{B}\mathbf{D}. \\
 >
-> Each product keeps its factors in the order they appear on the left, because matrix multiplication is not commutative. So \\\mathbf{A}\mathbf{D}\\ and \\\mathbf{B}\mathbf{C}\\ are not combined into \\2\mathbf{A}\mathbf{D}\\ or similar.
+> Each product keeps its factors in the order they appear on the left, because matrix multiplication is not commutative. So \\\mathbf{A}\mathbf{D}\\ and \\\mathbf{B}\mathbf{C}\\ are not collected into \\2\mathbf{A}\mathbf{D}\\.
 
 > **NOTE:**
 >

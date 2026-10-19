@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 09:38:56 (PDT)
+Last modified: 2026-10-19 11:02:25 (PDT)
 
 > **NOTE:**
 >
@@ -483,23 +483,11 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> **Definition 25 (Positive part of a function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). The **positive part** of \\f\\ is the non-negative function
->
-> \\ f^{+}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\\f(s), 0\right\\\mathclose{}. \\
+> *Remark 11* (A function in terms of its positive and negative parts). For a [function](functions.llms.md#def-function) \\f : S \to \mathbb{R}\\, with the [positive part](algebra-basics.llms.md#def-positive-negative-parts) and [negative part](algebra-basics.llms.md#def-negative-part), \\f = f^{+} - f^{-}\\ and \\\mathopen{}\left\|f\right\|\mathclose{} = f^{+} + f^{-}\\. (\\f^{+}\\, \\f^{-}\\, and \\\mathopen{}\left\|f\right\|\mathclose{}\\ are [measurable](#def-measurable-function) when \\f\\ is [\[2\]](#ref-billingsley1995probability), Theorem 13.3.)
 
 > **NOTE:**
 >
-> **Definition 26 (Negative part of a function)** For \\f\\ as in [Definition 25](#def-positive-negative-parts), the **negative part** of \\f\\ is the non-negative function
->
-> \\ f^{-}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\\-f(s), 0\right\\\mathclose{}. \\
-
-> **NOTE:**
->
-> *Remark 11* (A function in terms of its positive and negative parts). With the positive part ([Definition 25](#def-positive-negative-parts)) and negative part ([Definition 26](#def-negative-part)), \\f = f^{+} - f^{-}\\ and \\\mathopen{}\left\|f\right\|\mathclose{} = f^{+} + f^{-}\\. (\\f^{+}\\, \\f^{-}\\, and \\\mathopen{}\left\|f\right\|\mathclose{}\\ are measurable when \\f\\ is [\[2\]](#ref-billingsley1995probability), Theorem 13.3.)
-
-> **NOTE:**
->
-> **Definition 27 (Integral of a real-valued function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). Let \\f^{+}\\ and \\f^{-}\\ be the positive and negative parts of \\f\\ ([Definition 25](#def-positive-negative-parts), [Definition 26](#def-negative-part)). The **integral** of \\f\\ with respect to \\\mu\\ is
+> **Definition 25 (Integral of a real-valued function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). Let \\f^{+}\\ and \\f^{-}\\ be the [positive part](algebra-basics.llms.md#def-positive-negative-parts) and [negative part](algebra-basics.llms.md#def-negative-part) of \\f\\. The **integral** of \\f\\ with respect to \\\mu\\ is
 >
 > \\\int_S f \\ d\mu\stackrel{\text{def}}{=}\int_S f^{+} \\ d\mu- \int_S f^{-} \\ d\mu,\\
 >
@@ -523,7 +511,7 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> **Definition 28 (Absolutely integrable function (integrable function, absolute integrability))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra-basics.llms.md#def-absolute-value) is finite:
+> **Definition 26 (Absolutely integrable function (integrable function, absolute integrability))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra-basics.llms.md#def-absolute-value) is finite:
 >
 > \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu\< \infty\\
 >
@@ -531,7 +519,7 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> *Remark 12* (An absolutely integrable function has a finite integral). If \\f\\ is absolutely integrable, then \\\int_S f^{+} \\ d\mu\\ and \\\int_S f^{-} \\ d\mu\\ are both finite, because \\f^{+} \le \mathopen{}\left\|f\right\|\mathclose{}\\ and \\f^{-} \le \mathopen{}\left\|f\right\|\mathclose{}\\, so each sum in [Definition 24](#def-integral-nonneg) for \\f^{+}\\ or \\f^{-}\\ is at most the matching sum for \\\mathopen{}\left\|f\right\|\mathclose{}\\. So \\\int_S f \\ d\mu\\ ([Definition 27](#def-integral)) is a real number.
+> *Remark 12* (An absolutely integrable function has a finite integral). If \\f\\ is absolutely integrable, then \\\int_S f^{+} \\ d\mu\\ and \\\int_S f^{-} \\ d\mu\\ are both finite, because \\f^{+} \le \mathopen{}\left\|f\right\|\mathclose{}\\ and \\f^{-} \le \mathopen{}\left\|f\right\|\mathclose{}\\, so each sum in [Definition 24](#def-integral-nonneg) for \\f^{+}\\ or \\f^{-}\\ is at most the matching sum for \\\mathopen{}\left\|f\right\|\mathclose{}\\. So \\\int_S f \\ d\mu\\ ([Definition 25](#def-integral)) is a real number.
 
 > **NOTE:**
 >
@@ -553,13 +541,13 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> **Definition 29 (\\L^p\\ norm (\\p\\-norm of a function))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For any [real number](number-systems.llms.md#def-real-numbers) \\p \ge 1\\, the **\\L^p\\ norm** of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
+> **Definition 27 (\\L^p\\ norm (\\p\\-norm of a function))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For any [real number](number-systems.llms.md#def-real-numbers) \\p \ge 1\\, the **\\L^p\\ norm** of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
 >
 > \\ \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \stackrel{\text{def}}{=}\mathopen{}\left(\int_S \mathopen{}\left\|f\right\|\mathclose{}^p \\ d\mu\right)\mathclose{}^{1/p}. \\
 
 > **NOTE:**
 >
-> **Example 26 (The \\L^1\\ and \\L^2\\ norms of \\x \mapsto x\\ on the unit interval)** Let \\S = \[0, 1\]\\ with the [Lebesgue measure](#def-lebesgue-measure) \\\mu\\, and let \\f(x) = x\\. By [Definition 29](#def-lp-norm),
+> **Example 26 (The \\L^1\\ and \\L^2\\ norms of \\x \mapsto x\\ on the unit interval)** Let \\S = \[0, 1\]\\ with the [Lebesgue measure](#def-lebesgue-measure) \\\mu\\, and let \\f(x) = x\\. By [Definition 27](#def-lp-norm),
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert f\right\rVert\mathclose{}\_1 &= \int_0^1 x \\ dx \\ &= \frac{1}{2}, \end{aligned} \\
 >
@@ -569,7 +557,7 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> **Definition 30 (\\\mathcal{L}^p\\ space (\\\mathcal{L}^p(S, \mathcal{S}, \mu)\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). Let \\p \ge 1\\ be a [real number](number-systems.llms.md#def-real-numbers). The **\\\mathcal{L}^p\\ space** \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ is the [set](sets.llms.md#def-set) of all [measurable functions](#def-measurable-function) \\f : S \to \mathbb{R}\\ whose [\\L^p\\ norm](#def-lp-norm) is less than \\\infty\\: \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \< \infty\\.
+> **Definition 28 (\\\mathcal{L}^p\\ space (\\\mathcal{L}^p(S, \mathcal{S}, \mu)\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). Let \\p \ge 1\\ be a [real number](number-systems.llms.md#def-real-numbers). The **\\\mathcal{L}^p\\ space** \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ is the [set](sets.llms.md#def-set) of all [measurable functions](#def-measurable-function) \\f : S \to \mathbb{R}\\ whose [\\L^p\\ norm](#def-lp-norm) is less than \\\infty\\: \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \< \infty\\.
 
 > **NOTE:**
 >
@@ -582,15 +570,15 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> **Definition 31 (Equal almost everywhere (\\f = g\\ \\\mu\\-a.e.))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). Let \\f, g : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). The [functions](functions.llms.md#def-function) \\f\\ and \\g\\ are **equal almost everywhere**, written \\f = g\\ \\\mu\\-a.e., if \\f(s) = g(s)\\ holds [almost everywhere](#def-almost-everywhere).
+> **Definition 29 (Equal almost everywhere (\\f = g\\ \\\mu\\-a.e.))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). Let \\f, g : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). The [functions](functions.llms.md#def-function) \\f\\ and \\g\\ are **equal almost everywhere**, written \\f = g\\ \\\mu\\-a.e., if \\f(s) = g(s)\\ holds [almost everywhere](#def-almost-everywhere).
 
 > **NOTE:**
 >
-> **Example 28 (A function that differs from \\0\\ at one point)** Let \\S = \mathbb{R}\\ with the [Lebesgue measure](#def-lebesgue-measure) \\\mu\\. Let \\f(s) = 1\\ if \\s = 0\\, and \\f(s) = 0\\ otherwise. The [set](sets.llms.md#def-set) \\\mathopen{}\left\\s : f(s) \neq 0\right\\\mathclose{} = \mathopen{}\left\\0\right\\\mathclose{}\\ has [measure zero](#def-measure-zero), so \\f = 0\\ [almost everywhere](#def-almost-everywhere) by [Definition 31](#def-equal-almost-everywhere).
+> **Example 28 (A function that differs from \\0\\ at one point)** Let \\S = \mathbb{R}\\ with the [Lebesgue measure](#def-lebesgue-measure) \\\mu\\. Let \\f(s) = 1\\ if \\s = 0\\, and \\f(s) = 0\\ otherwise. The [set](sets.llms.md#def-set) \\\mathopen{}\left\\s : f(s) \neq 0\right\\\mathclose{} = \mathopen{}\left\\0\right\\\mathclose{}\\ has [measure zero](#def-measure-zero), so \\f = 0\\ [almost everywhere](#def-almost-everywhere) by [Definition 29](#def-equal-almost-everywhere).
 
 > **NOTE:**
 >
-> **Definition 32 (\\L^p\\ space (\\L^p(S, \mathcal{S}, \mu)\\, \\L^p(\mu)\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). Let \\p \ge 1\\ be a [real number](number-systems.llms.md#def-real-numbers). For each \\f\\ in the [\\\mathcal{L}^p\\ space](#def-lp-function-space), let \\\[f\]\\ be the [set](sets.llms.md#def-set) of all [functions](functions.llms.md#def-function) in \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ that are [equal almost everywhere](#def-equal-almost-everywhere) to \\f\\. The **\\L^p\\ space** \\L^p(S, \mathcal{S}, \mu)\\ (or simply **\\L^p(\mu)\\**) is the [set](sets.llms.md#def-set) of all such [sets](sets.llms.md#def-set) \\\[f\]\\, with the [norm](linear-algebra-inner-products.llms.md#def-norm) \\\mathopen{}\left\lVert\[f\]\right\rVert\mathclose{}\_p \stackrel{\text{def}}{=}\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p\\ ([\\L^p\\ norm](#def-lp-norm)).
+> **Definition 30 (\\L^p\\ space (\\L^p(S, \mathcal{S}, \mu)\\, \\L^p(\mu)\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). Let \\p \ge 1\\ be a [real number](number-systems.llms.md#def-real-numbers). For each \\f\\ in the [\\\mathcal{L}^p\\ space](#def-lp-function-space), let \\\[f\]\\ be the [set](sets.llms.md#def-set) of all [functions](functions.llms.md#def-function) in \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ that are [equal almost everywhere](#def-equal-almost-everywhere) to \\f\\. The **\\L^p\\ space** \\L^p(S, \mathcal{S}, \mu)\\ (or simply **\\L^p(\mu)\\**) is the [set](sets.llms.md#def-set) of all such [sets](sets.llms.md#def-set) \\\[f\]\\, with the [norm](linear-algebra-inner-products.llms.md#def-norm) \\\mathopen{}\left\lVert\[f\]\right\rVert\mathclose{}\_p \stackrel{\text{def}}{=}\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p\\ ([\\L^p\\ norm](#def-lp-norm)).
 
 > **NOTE:**
 >
@@ -598,33 +586,33 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> **Definition 33 (Essential supremum norm (\\L^\infty\\ norm))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). The **essential supremum norm** (or **\\L^\infty\\ norm**) of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
+> **Definition 31 (Essential supremum norm (\\L^\infty\\ norm))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). The **essential supremum norm** (or **\\L^\infty\\ norm**) of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
 >
 > \\ \mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\inf \mathopen{}\left\\ C \ge 0 : \mu(\mathopen{}\left\\s \in S : \mathopen{}\left\|f(s)\right\|\mathclose{} \> C\right\\\mathclose{}) = 0 \right\\\mathclose{}. \\
 
 > **NOTE:**
 >
-> **Example 30 (The essential supremum norm ignores a null set)** Let \\S = \[0, 1\]\\ with the [Lebesgue measure](#def-lebesgue-measure) \\\mu\\. Let \\f(s) = 5\\ if \\s = 0\\ and \\f(s) = s\\ otherwise. Then \\\sup_s \mathopen{}\left\|f(s)\right\|\mathclose{} = 5\\. For \\C \ge 1\\, the [set](sets.llms.md#def-set) \\\mathopen{}\left\\s : \mathopen{}\left\|f(s)\right\|\mathclose{} \> C\right\\\mathclose{}\\ is empty or \\\mathopen{}\left\\0\right\\\mathclose{}\\, so it has [measure zero](#def-measure-zero), and for \\C \< 1\\ it has positive [measure](#def-measure). By [Definition 33](#def-essential-supremum-norm), \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty = 1\\.
+> **Example 30 (The essential supremum norm ignores a null set)** Let \\S = \[0, 1\]\\ with the [Lebesgue measure](#def-lebesgue-measure) \\\mu\\. Let \\f(s) = 5\\ if \\s = 0\\ and \\f(s) = s\\ otherwise. Then \\\sup_s \mathopen{}\left\|f(s)\right\|\mathclose{} = 5\\. For \\C \ge 1\\, the [set](sets.llms.md#def-set) \\\mathopen{}\left\\s : \mathopen{}\left\|f(s)\right\|\mathclose{} \> C\right\\\mathclose{}\\ is empty or \\\mathopen{}\left\\0\right\\\mathclose{}\\, so it has [measure zero](#def-measure-zero), and for \\C \< 1\\ it has positive [measure](#def-measure). By [Definition 31](#def-essential-supremum-norm), \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty = 1\\.
 
 > **NOTE:**
 >
-> **Definition 34 (\\\mathcal{L}^\infty\\ space (\\\mathcal{L}^\infty(S, \mathcal{S}, \mu)\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). The **\\\mathcal{L}^\infty\\ space** \\\mathcal{L}^\infty(S, \mathcal{S}, \mu)\\ is the [set](sets.llms.md#def-set) of all [measurable functions](#def-measurable-function) \\f : S \to \mathbb{R}\\ whose [essential supremum norm](#def-essential-supremum-norm) is less than \\\infty\\: \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty \< \infty\\.
+> **Definition 32 (\\\mathcal{L}^\infty\\ space (\\\mathcal{L}^\infty(S, \mathcal{S}, \mu)\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). The **\\\mathcal{L}^\infty\\ space** \\\mathcal{L}^\infty(S, \mathcal{S}, \mu)\\ is the [set](sets.llms.md#def-set) of all [measurable functions](#def-measurable-function) \\f : S \to \mathbb{R}\\ whose [essential supremum norm](#def-essential-supremum-norm) is less than \\\infty\\: \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty \< \infty\\.
 
 > **NOTE:**
 >
-> **Example 31 (Bounded and unbounded functions)** Let \\S = (0, 1)\\ with the [Lebesgue measure](#def-lebesgue-measure) \\\mu\\. The [function](functions.llms.md#def-function) \\f(s) = s\\ has \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty = 1 \< \infty\\, so \\f \in \mathcal{L}^\infty(S, \mathcal{S}, \mu)\\ by [Definition 34](#def-linf-function-space). The function \\g(s) = 1/s\\ exceeds every \\C\\ on the [set](sets.llms.md#def-set) \\(0, 1/C)\\ of positive [measure](#def-measure), so \\\mathopen{}\left\lVert g\right\rVert\mathclose{}\_\infty = \infty\\ and \\g \notin \mathcal{L}^\infty(S, \mathcal{S}, \mu)\\.
+> **Example 31 (Bounded and unbounded functions)** Let \\S = (0, 1)\\ with the [Lebesgue measure](#def-lebesgue-measure) \\\mu\\. The [function](functions.llms.md#def-function) \\f(s) = s\\ has \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty = 1 \< \infty\\, so \\f \in \mathcal{L}^\infty(S, \mathcal{S}, \mu)\\ by [Definition 32](#def-linf-function-space). The function \\g(s) = 1/s\\ exceeds every \\C\\ on the [set](sets.llms.md#def-set) \\(0, 1/C)\\ of positive [measure](#def-measure), so \\\mathopen{}\left\lVert g\right\rVert\mathclose{}\_\infty = \infty\\ and \\g \notin \mathcal{L}^\infty(S, \mathcal{S}, \mu)\\.
 
 > **NOTE:**
 >
-> **Definition 35 (\\L^\infty\\ space (\\L^\infty(S, \mathcal{S}, \mu)\\, \\L^\infty(\mu)\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For each \\f\\ in the [\\\mathcal{L}^\infty\\ space](#def-linf-function-space), let \\\[f\]\\ be the [set](sets.llms.md#def-set) of all [functions](functions.llms.md#def-function) in \\\mathcal{L}^\infty(S, \mathcal{S}, \mu)\\ that are [equal almost everywhere](#def-equal-almost-everywhere) to \\f\\. The **\\L^\infty\\ space** \\L^\infty(S, \mathcal{S}, \mu)\\ (or simply **\\L^\infty(\mu)\\**) is the [set](sets.llms.md#def-set) of all such [sets](sets.llms.md#def-set) \\\[f\]\\, with the [norm](linear-algebra-inner-products.llms.md#def-norm) \\\mathopen{}\left\lVert\[f\]\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty\\ ([essential supremum norm](#def-essential-supremum-norm)).
+> **Definition 33 (\\L^\infty\\ space (\\L^\infty(S, \mathcal{S}, \mu)\\, \\L^\infty(\mu)\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For each \\f\\ in the [\\\mathcal{L}^\infty\\ space](#def-linf-function-space), let \\\[f\]\\ be the [set](sets.llms.md#def-set) of all [functions](functions.llms.md#def-function) in \\\mathcal{L}^\infty(S, \mathcal{S}, \mu)\\ that are [equal almost everywhere](#def-equal-almost-everywhere) to \\f\\. The **\\L^\infty\\ space** \\L^\infty(S, \mathcal{S}, \mu)\\ (or simply **\\L^\infty(\mu)\\**) is the [set](sets.llms.md#def-set) of all such [sets](sets.llms.md#def-set) \\\[f\]\\, with the [norm](linear-algebra-inner-products.llms.md#def-norm) \\\mathopen{}\left\lVert\[f\]\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty\\ ([essential supremum norm](#def-essential-supremum-norm)).
 
 > **NOTE:**
 >
-> **Example 32 (Bounded functions equal almost everywhere)** Let \\f\\ be the [function](functions.llms.md#def-function) in [Example 30](#exm-essential-supremum-norm) and \\h(s) = s\\ on \\\[0, 1\]\\. Then \\f = h\\ almost everywhere ([Definition 31](#def-equal-almost-everywhere)), so \\\[f\] = \[h\]\\ in \\L^\infty(\mu)\\, and \\\mathopen{}\left\lVert\[f\]\right\rVert\mathclose{}\_\infty = \mathopen{}\left\lVert h\right\rVert\mathclose{}\_\infty = 1\\.
+> **Example 32 (Bounded functions equal almost everywhere)** Let \\f\\ be the [function](functions.llms.md#def-function) in [Example 30](#exm-essential-supremum-norm) and \\h(s) = s\\ on \\\[0, 1\]\\. Then \\f = h\\ almost everywhere ([Definition 29](#def-equal-almost-everywhere)), so \\\[f\] = \[h\]\\ in \\L^\infty(\mu)\\, and \\\mathopen{}\left\lVert\[f\]\right\rVert\mathclose{}\_\infty = \mathopen{}\left\lVert h\right\rVert\mathclose{}\_\infty = 1\\.
 
 > **NOTE:**
 >
-> **Theorem 5 (Holder’s inequality)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\p, q \in \[1, \infty\]\\ be conjugate exponents satisfying \\\frac{1}{p} + \frac{1}{q} = 1\\ (with the convention that \\q = \infty\\ when \\p = 1\\, and \\q = 1\\ when \\p = \infty\\). If \\f \in L^p(\mu)\\ and \\g \in L^q(\mu)\\ ([Definition 32](#def-lp-space)), then their product \\f g\\ is [absolutely integrable](#def-absolutely-integrable) (\\f g \in L^1(\mu)\\) and satisfies:
+> **Theorem 5 (Holder’s inequality)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\p, q \in \[1, \infty\]\\ be conjugate exponents satisfying \\\frac{1}{p} + \frac{1}{q} = 1\\ (with the convention that \\q = \infty\\ when \\p = 1\\, and \\q = 1\\ when \\p = \infty\\). If \\f \in L^p(\mu)\\ and \\g \in L^q(\mu)\\ ([Definition 30](#def-lp-space)), then their product \\f g\\ is [absolutely integrable](#def-absolutely-integrable) (\\f g \in L^1(\mu)\\) and satisfies:
 >
 > \\ \mathopen{}\left\lVert f g\right\rVert\mathclose{}\_1 = \int_S \mathopen{}\left\|f g\right\|\mathclose{} \\ d\mu\le \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p\\\mathopen{}\left\lVert g\right\rVert\mathclose{}\_q. \\
 >
@@ -636,7 +624,7 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 6 (Minkowski’s inequality (\\L^p\\ triangle inequality))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space) and let \\1 \le p \le \infty\\. For any functions \\f, g \in L^p(\mu)\\ ([Definition 32](#def-lp-space)), their sum \\f + g\\ is in \\L^p(\mu)\\ and satisfies:
+> **Theorem 6 (Minkowski’s inequality (\\L^p\\ triangle inequality))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space) and let \\1 \le p \le \infty\\. For any functions \\f, g \in L^p(\mu)\\ ([Definition 30](#def-lp-space)), their sum \\f + g\\ is in \\L^p(\mu)\\ and satisfies:
 >
 > \\ \mathopen{}\left\lVert f + g\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p + \mathopen{}\left\lVert g\right\rVert\mathclose{}\_p. \\
 >
@@ -676,11 +664,11 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> **Definition 36 (Measurable rectangle)** Let \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ be [measurable spaces](#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathcal{S}\\ and \\B \in \mathcal{T}\\.
+> **Definition 34 (Measurable rectangle)** Let \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ be [measurable spaces](#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathcal{S}\\ and \\B \in \mathcal{T}\\.
 
 > **NOTE:**
 >
-> **Definition 37 (Product \\\sigma\\-algebra)** For the measurable spaces \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ of [Definition 36](#def-measurable-rectangle), the **product \\\sigma\\-algebra** \\\mathcal{S}\otimes \mathcal{T}\\ is the \\\sigma\\-algebra on \\S \times T\\ [generated by](#def-generated-sigma-algebra) the measurable rectangles.
+> **Definition 35 (Product \\\sigma\\-algebra)** For the measurable spaces \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ of [Definition 34](#def-measurable-rectangle), the **product \\\sigma\\-algebra** \\\mathcal{S}\otimes \mathcal{T}\\ is the \\\sigma\\-algebra on \\S \times T\\ [generated by](#def-generated-sigma-algebra) the measurable rectangles.
 
 > **NOTE:**
 >
@@ -691,7 +679,7 @@ Last modified: 2026-10-19 09:38:56 (PDT)
 
 > **NOTE:**
 >
-> **Definition 38 (Product measure)** Let \\(S, \mathcal{S}, \mu)\\ and \\(T, \mathcal{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu\otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathcal{S}\otimes \mathcal{T}\\ that gives each measurable rectangle the product of the measures of its sides:
+> **Definition 36 (Product measure)** Let \\(S, \mathcal{S}, \mu)\\ and \\(T, \mathcal{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu\otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathcal{S}\otimes \mathcal{T}\\ that gives each measurable rectangle the product of the measures of its sides:
 >
 > \\(\mu\otimes \nu)(A \times B) = \mu(A) \\ \nu(B) \quad \text{for all } A \in \mathcal{S}\text{ and } B \in \mathcal{T},\\
 >
