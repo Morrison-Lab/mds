@@ -3,7 +3,7 @@
 
 For nonzero vectors in the plane, $\vecf{x}, \vecf{y}$,
 the [angle between the vectors](#def-angle)
-equals the [angle on the unit circle](algebra-trigonometry.qmd#def-angle-unit-circle)
+is the [angle on the unit circle](algebra-trigonometry.qmd#def-angle-unit-circle)
 between the points $\vecf{x} / \norm{\vecf{x}}$, $\vecf{y} / \norm{\vecf{y}}$.
 The [cosine similarity](#def-cosine-similarity) of the vectors
 is the [dot product](linear-algebra.qmd#def-dot-product) of these points.
