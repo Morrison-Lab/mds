@@ -1,7 +1,9 @@
 :::{#def-strict-subset}
 #### Strict subset (proper subset)
 
-A set $A$ is a **strict subset** (also called a **proper subset**) of a set $B$,
+A [set](#def-set) $A$ is a **strict subset**
+(also called a **proper subset**)
+of a set $B$,
 written $A \subsetneq B$,
 if $A$ is a [subset](#def-subset) of $B$
 and $A \neq B$.
