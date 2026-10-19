@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 02:15:32 (PDT)
+Last modified: 2026-10-19 03:19:39 (PDT)
 
 ## 1 Inner products
 
@@ -419,17 +419,43 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Angle between two vectors)** The **angle** between two nonzero vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \in \mathbb{R}^p\\ is the unique number \\\theta\in \[0, \pi\]\\ whose cosine ([Definition 3 in Trigonometry](algebra-trigonometry.llms.md#def-cosine-sine)) satisfies
+> **Definition 7 (Cosine similarity)** The **cosine similarity** [\[11\]](#ref-wikipedia_cosine_similarity) between two nonzero vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ is their dot product divided by the product of their lengths:
 >
-> \\ \cos\theta= \frac{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}{\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}}. \\
+> \\ \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\frac{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}{\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}}. \\
 
 > **NOTE:**
 >
-> *Remark 4* (Why the angle is well defined). The denominator is positive, because both vectors are nonzero ([Theorem 1](#thm-norm-properties)), and by [Theorem 3](#thm-cauchy-schwarz) the ratio lies between \\-1\\ and \\1\\. On \\\[0, \pi\]\\, \\\cos\\ is decreasing from \\1\\ to \\-1\\ and takes each value in \\\[-1, 1\]\\ exactly once ([Theorem 2 in Trigonometry](algebra-trigonometry.llms.md#thm-cosine-bijection)), so there is exactly one such \\\theta\\.
+> **Example 13 (Cosine similarity of parallel, orthogonal, and arbitrary vectors)** For vectors in \\\mathbb{R}^2\\:
+>
+> - Parallel vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (2, 4)\\:
+>
+>   \\ \begin{aligned} \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) &= \frac{2 + 8}{\sqrt{5}\\\sqrt{20}} \\ &= \frac{10}{10} \\ &= 1. \end{aligned} \\
+>
+> - Orthogonal vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (-2, 1)\\:
+>
+>   \\ \begin{aligned} \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) &= \frac{-2 + 2}{\sqrt{5}\\\sqrt{5}} \\ &= \frac{0}{5} \\ &= 0. \end{aligned} \\
+>
+> - Arbitrary vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 0)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (1, 1)\\:
+>
+>   \\ \begin{aligned} \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) &= \frac{1 \cdot 1 + 0 \cdot 1}{1 \cdot\sqrt{2}} \\ &= \frac{1}{\sqrt{2}}. \end{aligned} \\
+>
+> When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = \mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rangle\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Corollary 1 (A right angle means orthogonal)** For nonzero vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \in \mathbb{R}^p\\ with angle \\\theta\\ ([Definition 7](#def-angle)),
+> **Definition 8 (Angle between two vectors)** The **angle** between two nonzero vectors, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \in \mathbb{R}^p\\, is
+>
+> \\ \theta\stackrel{\text{def}}{=}\arccos\mathopen{}\left(\operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\right)\mathclose{}. \\
+>
+> In words, the angle is the [arccosine](algebra-trigonometry.llms.md#def-arccosine) of the [cosine similarity](#def-cosine-similarity) of the two vectors.
+
+> **NOTE:**
+>
+> *Remark 4* (Why the angle is well defined). The [cosine similarity](#def-cosine-similarity) is defined, because both vectors are nonzero ([Theorem 1](#thm-norm-properties)). By [Theorem 3](#thm-cauchy-schwarz), it lies in the [closed interval](sets.llms.md#def-closed-interval) \\\[-1, 1\]\\, which is where the [arccosine](algebra-trigonometry.llms.md#def-arccosine), \\\arccos\\, is defined. So the angle \\\theta\\ lies in \\\[0, \pi\]\\, with [cosine](algebra-trigonometry.llms.md#def-cosine-sine) \\\cos\theta= \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\.
+
+> **NOTE:**
+>
+> **Corollary 1 (A right angle means orthogonal)** For nonzero vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \in \mathbb{R}^p\\ with angle \\\theta\\ ([Definition 8](#def-angle)),
 >
 > \\ \theta= \frac{\pi}{2} \quad\Longleftrightarrow\quad \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = 0, \\
 >
@@ -437,11 +463,11 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Since \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} \> 0\\ ([Theorem 1](#thm-norm-properties)), \\\cos\theta= 0\\ exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = 0\\. On \\\[0, \pi\]\\, \\\cos\\ vanishes only at \\\pi/2\\.
+> *Proof*. Since \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} \> 0\\ ([Theorem 1](#thm-norm-properties)), \\\operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = 0\\ exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = 0\\ ([Definition 7](#def-cosine-similarity)), so \\\cos\theta= 0\\ exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = 0\\ ([Remark 4](#rem-angle-well-defined)). On \\\[0, \pi\]\\, \\\cos\\ vanishes only at \\\pi/2\\.
 
 > **NOTE:**
 >
-> **Example 13 (Some angles in the plane)**  
+> **Example 14 (Some angles in the plane)**  
 >
 > - \\(1, 0)\\ and \\(1, 1)\\: \\\cos\theta= \frac{1}{1 \cdot\sqrt{2}}\\, so \\\theta= \pi/4\\.
 >
@@ -461,37 +487,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Cosine similarity)** The **cosine similarity** [\[11\]](#ref-wikipedia_cosine_similarity) between two nonzero vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ is their dot product divided by the product of their lengths:
->
-> \\ \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\frac{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}{\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}}. \\
-
-> **NOTE:**
->
-> **Example 14 (Cosine similarity of parallel, orthogonal, and arbitrary vectors)** For vectors in \\\mathbb{R}^2\\:
->
-> - Parallel vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (2, 4)\\:
->
->   \\ \begin{aligned} \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) &= \frac{2 + 8}{\sqrt{5}\\\sqrt{20}} \\ &= \frac{10}{10} \\ &= 1. \end{aligned} \\
->
-> - Orthogonal vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (-2, 1)\\:
->
->   \\ \begin{aligned} \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) &= \frac{-2 + 2}{\sqrt{5}\\\sqrt{5}} \\ &= \frac{0}{5} \\ &= 0. \end{aligned} \\
->
-> - Arbitrary vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 0)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (1, 1)\\:
->
->   \\ \begin{aligned} \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) &= \frac{1 \cdot 1 + 0 \cdot 1}{1 \cdot\sqrt{2}} \\ &= \frac{1}{\sqrt{2}}. \end{aligned} \\
->
-> When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = \mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rangle\mathclose{}\\.
-
-> **NOTE:**
->
-> **Corollary 2 (Cosine similarity is the cosine of the angle)** For nonzero vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ with angle \\\theta\\ between them ([Definition 7](#def-angle)),
->
-> \\ \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = \cos\theta. \\
-
-> **NOTE:**
->
-> *Proof*. The ratio that [Definition 7](#def-angle) sets equal to \\\cos\theta\\ is the ratio that [Definition 8](#def-cosine-similarity) defines as \\\operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\.
+> *Remark 5* (How the two angles relate). For nonzero vectors in the plane, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\, the [angle between the vectors](#def-angle) is the [angle on the unit circle](algebra-trigonometry.llms.md#def-angle-unit-circle) between the points \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} / \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} / \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}\\. The [cosine similarity](#def-cosine-similarity) of the vectors is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of these points. Rotating the plane puts the first point at \\(1, 0)\\, with no change to the distance between the points along the circle or to their dot product. For the angle on the unit circle, \\\theta\\, the second point is then \\(\cos\theta, \pm\sin\theta)\\, so the dot product of the points is \\\cos\theta\\. Applying \\\arccos\\ to it returns \\\theta\\, which lies in \\\[0, \pi\]\\.
 
 > **NOTE:**
 >
@@ -501,7 +497,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Corollary 3 (Cosine similarity of unit vectors is their inner product)** In a real inner product space ([Definition 2](#def-inner-product-space)), for all vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ with \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = 1\\,
+> **Corollary 2 (Cosine similarity of unit vectors is their inner product)** In a real inner product space ([Definition 2](#def-inner-product-space)), for all vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ with \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = 1\\,
 >
 > \\ \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = \mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rangle\mathclose{}. \\
 
@@ -513,7 +509,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 6 (Pearson correlation is the cosine similarity of the centered vectors)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^n\\ be two vectors that are not constant, with means \\\bar{x} = \frac{1}{n}\sum\_{i=1}^nx_i\\ and \\\bar{y} = \frac{1}{n}\sum\_{i=1}^ny_i\\. Write \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \bar{x}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}\\ and \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \bar{y}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}\\ for the **centered** vectors, whose means are zero. Then the [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) \\r\\ of the \\n\\ pairs \\(x_i, y_i)\\ is the cosine similarity ([Definition 8](#def-cosine-similarity)) of the centered vectors:
+> **Theorem 6 (Pearson correlation is the cosine similarity of the centered vectors)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^n\\ be two vectors that are not constant, with means \\\bar{x} = \frac{1}{n}\sum\_{i=1}^nx_i\\ and \\\bar{y} = \frac{1}{n}\sum\_{i=1}^ny_i\\. Write \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \bar{x}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}\\ and \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \bar{y}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}\\ for the **centered** vectors, whose means are zero. Then the [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) \\r\\ of the \\n\\ pairs \\(x_i, y_i)\\ is the cosine similarity ([Definition 7](#def-cosine-similarity)) of the centered vectors:
 >
 > \\ r = \operatorname{cossim}({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}}). \\
 
@@ -535,6 +531,24 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 >
 > Without centering, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= 1 + 6 + 6 = 13\\ and \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = \sqrt{14}\\, so \\\operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = 13 / 14\\. The uncentered value is close to \\1\\ mostly because both vectors have positive entries and the same mean, not because they move together.
 
+> **NOTE:**
+>
+> **Corollary 3 (Pearson correlation is the cosine of the angle between the centered vectors)** For the two data vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^n\\ of [Theorem 6](#thm-pearson-cosine-centered), the centered vectors \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}\\, \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}}\\ are nonzero, so they have an [angle](#def-angle) \\\theta\\. The [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) \\r\\ satisfies
+>
+> \\ r = \cos\theta. \\
+
+> **NOTE:**
+>
+> *Proof*. By [Theorem 6](#thm-pearson-cosine-centered), \\r = \operatorname{cossim}({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}})\\. By [Definition 8](#def-angle), \\\theta= \arccos\mathopen{}\left(\operatorname{cossim}({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}})\right)\mathclose{}\\, so \\\cos\theta= \operatorname{cossim}({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}})\\ ([Remark 4](#rem-angle-well-defined)).
+
+> **NOTE:**
+>
+> **Example 16 (A correlation of one half is an angle of sixty degrees)** In [Example 15](#exm-pearson-cosine-centered), the correlation is \\r = 1/2\\, for the data vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 2, 3)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (1, 3, 2)\\. By [Corollary 3](#cor-pearson-angle), the [angle](#def-angle) \\\theta\\ between the centered vectors \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}} = (-1, 0, 1)\\, \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}} = (-1, 1, 0)\\ satisfies
+>
+> \\ \cos\theta= \frac{1}{2}, \\
+>
+> so the angle is \\\theta= \pi/3\\.
+
 ## 3 Orthonormal bases and Gram-Schmidt
 
 > **NOTE:**
@@ -555,7 +569,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 16 (Dotting with a combination of three vectors)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (1, 2, 3)\\ and take the combination \\2\\(1, 0, 0) - (0, 1, 0) + 4\\(0, 0, 1) = (2, -1, 4)\\. Directly,
+> **Example 17 (Dotting with a combination of three vectors)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (1, 2, 3)\\ and take the combination \\2\\(1, 0, 0) - (0, 1, 0) + 4\\(0, 0, 1) = (2, -1, 4)\\. Directly,
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot (2, -1, 4) &= 2 - 2 + 12 \\ &= 12. \end{aligned} \\
 >
@@ -567,7 +581,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Suppose \\\sum\_{j=1}^{k} c_j \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_j = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, and fix any \\i\\ between \\1\\ and \\k\\. Then
+> *Proof*. Suppose \\\sum\_{j=1}^{k} c_j \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_j = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\. Take any \\i \in \mathopen{}\left\\1, \ldots, k\right\\\mathclose{}\\. Then
 >
 > \\ \begin{aligned} 0 &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}} && \text{(every term of the dot product is } 0 \text{)} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_i \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_j\right)\mathclose{} && \text{(substitute the supposed equation)} \\ &= \sum\_{j=1}^{k} c_j\\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= c_i. && \text{(} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_j \text{ is } 1 \text{ if } j = i \text{ and } 0 \text{ otherwise)} \end{aligned} \\
 >
@@ -575,7 +589,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (Three orthonormal vectors in \\\mathbb{R}^3\\)** Let
+> **Example 18 (Three orthonormal vectors in \\\mathbb{R}^3\\)** Let
 >
 > \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 = (0, 0, 1), \quad \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0), \quad \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_3 = \tfrac{1}{\sqrt{2}}\\(1, -1, 0). \\
 >
@@ -597,15 +611,15 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 18 (Orthonormal bases of \\\mathbb{R}^3\\)**  
+> **Example 19 (Orthonormal bases of \\\mathbb{R}^3\\)**  
 >
 > - The indicator vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3\\ are orthonormal
 >   2.  and a basis of \\\mathbb{R}^3\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
-> - The vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_3\\ of [Example 17](#exm-orthonormal-independent) are orthonormal and linearly independent, so they are a basis of their span ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)), which therefore has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and is all of \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). So they are an orthonormal basis of \\\mathbb{R}^3\\ too.
+> - The vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_3\\ of [Example 18](#exm-orthonormal-independent) are orthonormal and linearly independent, so they are a basis of their span ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)), which therefore has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and is all of \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). So they are an orthonormal basis of \\\mathbb{R}^3\\ too.
 
 > **NOTE:**
 >
-> **Example 19 (Bases that are not orthonormal, and orthonormal lists that are not bases)**  
+> **Example 20 (Bases that are not orthonormal, and orthonormal lists that are not bases)**  
 >
 > - \\(1, 0), (1, 1)\\ is a basis of \\\mathbb{R}^2\\ ([Example 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-basis)). It is not an orthonormal basis, since \\(1, 0) \cdot (1, 1) = 1\\.
 > - \\(1, 0, 0), (0, 1, 0)\\ is orthonormal but not a basis of \\\mathbb{R}^3\\: its span is the plane \\z = 0\\ ([Example 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-span)), which does not contain \\(0, 0, 1)\\.
@@ -626,7 +640,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 20 (Expanding a vector in an orthonormal basis)** With the orthonormal basis \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_3\\ of \\\mathbb{R}^3\\ from [Example 18](#exm-orthonormal-basis) and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (1, 2, 3)\\: \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = 3\\,
+> **Example 21 (Expanding a vector in an orthonormal basis)** With the orthonormal basis \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_3\\ of \\\mathbb{R}^3\\ from [Example 19](#exm-orthonormal-basis) and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (1, 2, 3)\\: \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = 3\\,
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} &= \tfrac{1}{\sqrt{2}}\\(1 + 2) \\ &= \tfrac{3}{\sqrt{2}} \end{aligned} \\
 >
@@ -652,7 +666,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 21 (Two steps of Gram-Schmidt in \\\mathbb{R}^3\\)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 = (1, 1, 0)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_2 = (1, 0, 1)\\.
+> **Example 22 (Two steps of Gram-Schmidt in \\\mathbb{R}^3\\)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 = (1, 1, 0)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_2 = (1, 0, 1)\\.
 >
 > - **Step 1.** \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_1 = (1, 1, 0)\\, with norm \\\sqrt{2}\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\.
 >
@@ -674,7 +688,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 22 (Gram-Schmidt stops on dependent vectors)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 = (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_2 = (2, 4)\\. Step 1 gives \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 = \tfrac{1}{\sqrt{5}}\\(1, 2)\\. In step 2,
+> **Example 23 (Gram-Schmidt stops on dependent vectors)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 = (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_2 = (2, 4)\\. Step 1 gives \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 = \tfrac{1}{\sqrt{5}}\\(1, 2)\\. In step 2,
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_2 &= \tfrac{1}{\sqrt{5}}\\(2 + 8) \\ &= \tfrac{10}{\sqrt{5}}, \end{aligned} \\
 >
@@ -721,7 +735,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 23 (Finishing an orthonormal basis of \\\mathbb{R}^3\\)** Continue [Example 21](#exm-gram-schmidt) with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_3 = (0, 1, 1)\\. \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_3 = \tfrac{1}{\sqrt{2}}\\ and
+> **Example 24 (Finishing an orthonormal basis of \\\mathbb{R}^3\\)** Continue [Example 22](#exm-gram-schmidt) with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_3 = (0, 1, 1)\\. \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_3 = \tfrac{1}{\sqrt{2}}\\ and
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_3 &= \tfrac{1}{\sqrt{6}}\\(0 - 1 + 2) \\ &= \tfrac{1}{\sqrt{6}}, \end{aligned} \\
 >
@@ -757,7 +771,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 24 (Extending one unit vector to an orthonormal basis of \\\mathbb{R}^3\\)** Start from the unit vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\. Extend it to a basis of \\\mathbb{R}^3\\ as in [Example 18 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-extend-basis), starting from the empty list: \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1\\ is not in the span of the empty list, \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\, because \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1\right\rVert\mathclose{} = 1\\; \\(1, 0, 0)\\ is not in \\\operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1\right\\\mathclose{}\\, because every multiple of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1\\ has equal first and second entries, and \\(0, 0, 1)\\ is not in \\\operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1, (1, 0, 0)\right\\\mathclose{}\\, because every combination of those two vectors has third entry \\0\\. So \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1, (1, 0, 0), (0, 0, 1)\\ are linearly independent ([Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span)), and three linearly independent vectors in \\\mathbb{R}^3\\ are a basis of it (they are a basis of their span, which has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and so is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension))). Gram-Schmidt on \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1, (1, 0, 0), (0, 0, 1)\\:
+> **Example 25 (Extending one unit vector to an orthonormal basis of \\\mathbb{R}^3\\)** Start from the unit vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\. Extend it to a basis of \\\mathbb{R}^3\\ as in [Example 18 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-extend-basis), starting from the empty list: \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1\\ is not in the span of the empty list, \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\, because \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1\right\rVert\mathclose{} = 1\\; \\(1, 0, 0)\\ is not in \\\operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1\right\\\mathclose{}\\, because every multiple of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1\\ has equal first and second entries, and \\(0, 0, 1)\\ is not in \\\operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1, (1, 0, 0)\right\\\mathclose{}\\, because every combination of those two vectors has third entry \\0\\. So \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1, (1, 0, 0), (0, 0, 1)\\ are linearly independent ([Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span)), and three linearly independent vectors in \\\mathbb{R}^3\\ are a basis of it (they are a basis of their span, which has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and so is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension))). Gram-Schmidt on \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1, (1, 0, 0), (0, 0, 1)\\:
 >
 > 1.  \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\_1\\.
 >
@@ -769,7 +783,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 >
 > 3.  \\(0, 0, 1)\\ is orthogonal to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_3 = (0, 0, 1)\\, which already has norm \\1\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_3 = (0, 0, 1)\\.
 >
-> The result is the orthonormal basis of [Example 18](#exm-orthonormal-basis), in a different order.
+> The result is the orthonormal basis of [Example 19](#exm-orthonormal-basis), in a different order.
 
 ## 4 Outer product
 
@@ -781,15 +795,15 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 25 (An outer product)** For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = (1, 2, 3)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = (4, 5)\\:
+> **Example 26 (An outer product)** For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = (1, 2, 3)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = (4, 5)\\:
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top} &= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \begin{bmatrix} 4 & 5 \end{bmatrix} && \text{(definition of the outer product)} \\ &= \begin{bmatrix} 1 \cdot 4 & 1 \cdot 5 \\ 2 \cdot 4 & 2 \cdot 5 \\ 3 \cdot 4 & 3 \cdot 5 \end{bmatrix} && \text{(entry } (i, j) \text{ is } u_i v_j \text{)} \\ &= \begin{bmatrix} 4 & 5 \\ 8 & 10 \\ 12 & 15 \end{bmatrix} && \text{(multiply)} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 5* (Outer product and dot product). The dot product \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ ([Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ takes vectors of any two lengths and gives a matrix [\[3, Ch. 1\]](#ref-banerjee2014linear), p. 11.
+> *Remark 6* (Outer product and dot product). The dot product \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ ([Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ takes vectors of any two lengths and gives a matrix [\[3, Ch. 1\]](#ref-banerjee2014linear), p. 11.
 >
-> For example, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = (1, 2, 3)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = (4, 5)\\ in [Example 25](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a \\3 \times 2\\ matrix. For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}} = (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (3, 4)\\, which have the same length, both products exist:
+> For example, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = (1, 2, 3)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = (4, 5)\\ in [Example 26](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a \\3 \times 2\\ matrix. For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}} = (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (3, 4)\\, which have the same length, both products exist:
 >
 > \\ \begin{aligned} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} &= 1 \cdot 3 + 2 \cdot 4 \\ &= 11 \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}}^{\top} &= \begin{bmatrix} 1 \cdot 3 & 1 \cdot 4 \\ 2 \cdot 3 & 2 \cdot 4 \end{bmatrix} \\ &= \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix} \end{aligned} \\
 
@@ -815,7 +829,7 @@ Last modified: 2026-10-19 02:15:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 26 (The rank of an outer product)** In [Example 25](#exm-outer-product), the second column \\(5, 10, 15)\\ of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ is \\\frac{5}{4}\\ times the first column \\(4, 8, 12)\\, because the columns are \\v_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 4\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ and \\v_2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 5\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\. So the two columns are not linearly independent, and the \\3 \times 2\\ matrix has rank \\1\\.
+> **Example 27 (The rank of an outer product)** In [Example 26](#exm-outer-product), the second column \\(5, 10, 15)\\ of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ is \\\frac{5}{4}\\ times the first column \\(4, 8, 12)\\, because the columns are \\v_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 4\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ and \\v_2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 5\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\. So the two columns are not linearly independent, and the \\3 \times 2\\ matrix has rank \\1\\.
 
 Back to top
 
