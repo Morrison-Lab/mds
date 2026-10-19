@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 01:34:03 (PDT)
+Last modified: 2026-10-19 04:22:38 (PDT)
 
 ## 1 Cosine and sine
 
@@ -31,22 +31,7 @@ Last modified: 2026-10-19 01:34:03 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Radian)** A **radian** is a unit for measuring distance along the [unit circle](#def-unit-circle), chosen so that going once round the circle is a distance of \\2\pi\\ ([Definition 2](#def-pi)). A trip covering the [fraction](algebra-sums.llms.md#def-fraction) of the circle \\f\\ has the distance in radians \\d\\:
->
-> \\ d = 2\pi f. \\
->
-> In words, the distance in radians is \\2\pi\\ times the fraction of the circle covered.
-
-> **NOTE:**
->
-> **Example 3 (Angles in radians)**  
->
-> - The points \\(0, 1)\\, \\(-1, 0)\\ are a quarter of the [unit circle](#def-unit-circle) apart, so their [angle](#def-angle-unit-circle) is \\\pi/2\\ [radians](#def-radian).
-> - The points \\(0, 1)\\, \\(0, -1)\\ are half of the circle apart, so their angle is \\\pi\\ radians.
-
-> **NOTE:**
->
-> **Definition 4 (Angle on the unit circle)** The **angle** between two points of the [unit circle](#def-unit-circle) is how far apart they are along the circle, going the short way round, measured in [radians](#def-radian). Let the counterclockwise distance from the first point to the second be \\s \in \[0, 2\pi)\\. Then the angle is
+> **Definition 3 (Angle on the unit circle)** The **angle** between two points of the [unit circle](#def-unit-circle) is how far apart they are along the circle, going the short way round. Let the counterclockwise distance from the first point to the second be \\s \in \[0, 2\pi)\\. Then the angle is
 >
 > \\ \theta\stackrel{\text{def}}{=}\min\mathopen{}\left\\s, 2\pi - s\right\\\mathclose{}. \\
 >
@@ -54,11 +39,22 @@ Last modified: 2026-10-19 01:34:03 (PDT)
 
 > **NOTE:**
 >
-> **Example 4 (Three angles on the unit circle)**  
+> **Example 3 (Three angles on the unit circle)**  
 >
 > - The points \\(1, 0)\\, \\(0, 1)\\ are a quarter of the circle apart, so their [angle](#def-angle-unit-circle) is \\\pi/2\\.
 > - The points \\(1, 0)\\, \\(-1, 0)\\ are half of the circle apart, so their angle is \\\pi\\.
 > - The point \\(1, 0)\\ is \\0\\ apart from itself, so their angle is \\0\\.
+
+> **NOTE:**
+>
+> **Definition 4 (Radian)** A **radian** is the [angle on the unit circle](#def-angle-unit-circle) between two points that are a distance of \\1\\ apart along the circle. An [angle](#def-angle-unit-circle) of \\\theta\\ is then \\\theta\\ radians.
+
+> **NOTE:**
+>
+> **Example 4 (Angles in radians)**  
+>
+> - The points \\(0, 1)\\, \\(-1, 0)\\ are a quarter of the [unit circle](#def-unit-circle) apart, so their [angle](#def-angle-unit-circle) is \\\pi/2\\ [radians](#def-radian).
+> - The points \\(0, 1)\\, \\(0, -1)\\ are half of the circle apart, so their angle is \\\pi\\ radians.
 
 > **NOTE:**
 >

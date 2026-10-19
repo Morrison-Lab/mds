@@ -230,6 +230,46 @@ cookieconsent.run({
 })();
 </script>
 <style>
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -250,45 +290,15 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-fig.callout {
-  border-left-color: #757575;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -300,45 +310,35 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-tbl.callout {
+  border-left-color: #757575;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -1002,19 +1002,6 @@ window.Quarto = {
     </p>
 </div>
 
-<!-- gha-preview-page-banner:start -->
-<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
-    <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~1% of content changed).
-        <br>
-        <strong>🎨 Highlighting Legend:</strong> 
-        <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
-        <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 3px; border-radius: 2px;">added text (green)</mark> shows new content, and 
-        <mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 3px; border-radius: 2px;">new sections (blue)</mark> highlight entirely new paragraphs.
-    </p>
-</div>
-<!-- gha-preview-page-banner:end -->
-
 
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./linear-algebra.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="./linear-algebra-diagonalization.html">Diagonalization and Cholesky</a></li></ol></nav>
@@ -1030,7 +1017,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-19 01:34:03 (PDT)</p>
+      <p class="date">Last modified: 2026-10-19 04:22:38 (PDT)</p>
     </div>
   </div>
   
@@ -1092,11 +1079,11 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Invertible implies rank <span class="math inline">\(n\)</span>.</strong> If <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\)</span>, then</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 &amp;= \mathbf{I}_n \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \\
 &amp;= (\mathbf{A}^{-1} \mathbf{A})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
@@ -1110,10 +1097,10 @@ window.Quarto = {
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n,
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>so <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span>, the nullity is <span class="math inline">\(0\)</span>, and <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>).</p>
 <p><strong>Rank <span class="math inline">\(n\)</span> implies invertible.</strong> Every system <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> has exactly one solution (<a href="./linear-algebra-projections.html#cor-solution-unique">Corollary&nbsp;1 in Projections and Linear Systems</a>, both parts, with <span class="math inline">\(m = n\)</span>). Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j\)</span> solve <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;14 in Vectors</a>), and let <span class="math inline">\(\mathbf{B}\)</span> have columns <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_n\)</span>. Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A} \mathbf{B}\)</span> is <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> (1), so <span class="math inline">\(\mathbf{A} \mathbf{B} = \mathbf{I}_n\)</span>. For the other order,</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}\,(\mathbf{B} \mathbf{A} - \mathbf{I}_n)
 &amp;= \mathbf{A} \mathbf{B} \mathbf{A} - \mathbf{A} \mathbf{I}_n
@@ -1123,12 +1110,12 @@ window.Quarto = {
 &amp;&amp; \text{(} \mathbf{A} \mathbf{B} = \mathbf{I}_n \text{)}
 \\
 &amp;= \mathbf{A} - \mathbf{A}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \\
 &amp;= \mathbf{0}_{n \times n},
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>so every column of <span class="math inline">\(\mathbf{B} \mathbf{A} - \mathbf{I}_n\)</span> is in <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span> (1), and <span class="math inline">\(\mathbf{B} \mathbf{A} = \mathbf{I}_n\)</span>. So <span class="math inline">\(\mathbf{B}\)</span> satisfies <a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>. The two conditions in the statement are equivalent by <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>: the nullity is <span class="math inline">\(0\)</span> exactly when <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span>, because a subspace of dimension <span class="math inline">\(0\)</span> has the empty list as a basis, whose span is <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>), and <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(0\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</p>
 </div>
 </div>
@@ -1278,7 +1265,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathbb{R}^p\)</span>,</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 (\mathbf{A} - \lambda\,\mathbf{I}_p)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
 &amp;= \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} - (\lambda\,\mathbf{I}_p)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
@@ -1288,9 +1275,9 @@ window.Quarto = {
 &amp;&amp; \text{(}\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{, the scalar factor)}
 \\
 &amp;= \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} - \lambda\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}},
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>so <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \lambda\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>; the nonzero such <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> are the eigenvectors for <span class="math inline">\(\lambda\)</span>. So <span class="math inline">\(\lambda\)</span> is an eigenvalue exactly when that null space contains a nonzero vector, which by <a href="#thm-invertible-rank" class="quarto-xref">Theorem&nbsp;1</a> is exactly when <span class="math inline">\(\mathbf{A} - \lambda\,\mathbf{I}_p\)</span> is singular. With <span class="math inline">\(\lambda= 0\)</span>, <span class="math inline">\(\mathbf{A} - 0\,\mathbf{I}_p = \mathbf{A}\)</span>. An eigenspace is a null space, so it is a subspace (<a href="./linear-algebra-rank-nullity.html#thm-null-space-subspace">Theorem&nbsp;2 in Column Space, Null Space and Rank-Nullity</a>).</p>
 </div>
 </div>
@@ -1357,7 +1344,7 @@ c_1 &amp;= c_2 \\
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong></p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 (\mathbf{A} + s\,\mathbf{I}_p)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
 &amp;= \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} + (s\,\mathbf{I}_p)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
@@ -1370,12 +1357,12 @@ c_1 &amp;= c_2 \\
 &amp;&amp; \text{(eigenvector)}
 \\
 &amp;= \lambda\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} + s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \\
 &amp;= (\lambda+ s)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}.
 &amp;&amp; \text{(add entrywise)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p><strong>Part 2, by <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(k\)</span>.</strong> For <span class="math inline">\(k = 1\)</span> it is the assumption. If <span class="math inline">\(\mathbf{A}^{k-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \lambda^{k-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>, then</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1659,7 +1646,7 @@ v_2 &amp;= 2 v_1 \\
 <ol start="2" class="example" type="1">
 <li>is the condition of <a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a> for <span class="math inline">\(\mathbf{P}^{-1}\)</span> with <span class="math inline">\(\mathbf{P}\)</span> as the other factor, and that factor is unique (<a href="./linear-algebra-special-matrices.html#rem-invertible-inverse">Remark&nbsp;3 in Special Matrices and Decompositions</a>). If <span class="math inline">\(\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\)</span>, then</li>
 </ol>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 \mathbf{P} \mathbf{B} \mathbf{P}^{-1}
 &amp;= \mathbf{P}\,(\mathbf{P}^{-1} \mathbf{A} \mathbf{P})\,\mathbf{P}^{-1}
@@ -1672,9 +1659,9 @@ v_2 &amp;= 2 v_1 \\
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{A},
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>and the same steps with <span class="math inline">\(\mathbf{P}\)</span> and <span class="math inline">\(\mathbf{P}^{-1}\)</span> exchanged turn <span class="math inline">\(\mathbf{A} = \mathbf{P} \mathbf{B} \mathbf{P}^{-1}\)</span> back into <span class="math inline">\(\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\)</span>. So <span class="math inline">\(\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\)</span> exactly when <span class="math inline">\(\mathbf{A} = \mathbf{P} \mathbf{B} \mathbf{P}^{-1}\)</span>, and similarity goes both ways: <span class="math inline">\(\mathbf{A}\)</span> is similar to <span class="math inline">\(\mathbf{B}\)</span> through <span class="math inline">\(\mathbf{P}^{-1}\)</span>, whose inverse is <span class="math inline">\(\mathbf{P}\)</span>.</p>
 </div>
 </div>
@@ -1744,7 +1731,7 @@ v_2 &amp;= 2 v_1 \\
 &amp;= \mathbf{I}_p
 \end{aligned}
 \]</span></p>
-<p>for every invertible <span class="math inline">\(\mathbf{P}\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="./linear-algebra-matrices.html#thm-identity"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Theorem&nbsp;7</mark> in Matrices</a>, 2).</p>
+<p>for every invertible <span class="math inline">\(\mathbf{P}\)</span> (<a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>, 2).</p>
 </div>
 </div>
 </div>
@@ -1781,7 +1768,7 @@ v_2 &amp;= 2 v_1 \\
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>From <span class="math inline">\(\mathbf{A}\)</span> to <span class="math inline">\(\mathbf{B}\)</span>.</strong> Let <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \lambda\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathbf{P}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. Then</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}
 &amp;= (\mathbf{P}^{-1} \mathbf{A} \mathbf{P})\,(\mathbf{P}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})
@@ -1794,7 +1781,7 @@ v_2 &amp;= 2 v_1 \\
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{P}^{-1} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \\
 &amp;= \mathbf{P}^{-1}\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)}
@@ -1805,7 +1792,7 @@ v_2 &amp;= 2 v_1 \\
 &amp;= \lambda\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}.
 &amp;&amp; \text{(}\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>And <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>: if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1815,7 +1802,7 @@ v_2 &amp;= 2 v_1 \\
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}
 \end{aligned}
 \]</span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="./linear-algebra-matrices.html#thm-identity"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Theorem&nbsp;7</mark> in Matrices</a>, 2, <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matvec-mult">Definition&nbsp;13 in Matrices</a>), which is false.</p>
+<p>(<a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>, 2, <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matvec-mult">Definition&nbsp;13 in Matrices</a>), which is false.</p>
 <p><strong>From <span class="math inline">\(\mathbf{B}\)</span> to <span class="math inline">\(\mathbf{A}\)</span>.</strong> By <a href="#rem-similar-both-ways" class="quarto-xref">Remark&nbsp;1</a>,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1830,7 +1817,7 @@ v_2 &amp;= 2 v_1 \\
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>, 2, <a href="./linear-algebra-matrices.html#thm-identity"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Theorem&nbsp;7</mark> in Matrices</a>).</p>
+<p>(<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>, 2, <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>).</p>
 </div>
 </div>
 </div>
@@ -2023,11 +2010,11 @@ c_1 &amp;= c_2 \\
 \tag{1}\]</span></span></p>
 <p>Also, <span class="math inline">\(\mathbf{X}\)</span> has rank <span class="math inline">\(p\)</span> exactly when its <span class="math inline">\(p\)</span> columns are linearly independent (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>), which by <a href="#thm-invertible-rank" class="quarto-xref">Theorem&nbsp;1</a> is exactly when <span class="math inline">\(\mathbf{X}\)</span> is invertible.</p>
 <p><strong>Eigenvectors give a diagonalization.</strong> If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_p\)</span> are linearly independent eigenvectors, then <span class="math inline">\(\mathbf{X}\)</span> is invertible and <a href="#eq-ax-xlambda" class="quarto-xref">Equation&nbsp;1</a> gives <span class="math inline">\(\mathbf{A} \mathbf{X} = \mathbf{X} \mathbf{\Lambda}\)</span>, so</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}
 &amp;= \mathbf{A}\,\mathbf{I}_p
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \\
 &amp;= \mathbf{A}\,(\mathbf{X} \mathbf{X}^{-1})
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
@@ -2038,9 +2025,9 @@ c_1 &amp;= c_2 \\
 &amp;= \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}.
 &amp;&amp; \text{(} \mathbf{A} \mathbf{X} = \mathbf{X} \mathbf{\Lambda} \text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p><strong>A diagonalization gives eigenvectors.</strong> If <span class="math inline">\(\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\)</span>, then</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 \mathbf{A} \mathbf{X}
 &amp;= (\mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1})\,\mathbf{X}
@@ -2053,9 +2040,9 @@ c_1 &amp;= c_2 \\
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{X} \mathbf{\Lambda},
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>so each column satisfies <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j = \lambda_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j\)</span> (<a href="#eq-ax-xlambda" class="quarto-xref">Equation&nbsp;1</a>). <span class="math inline">\(\mathbf{X}\)</span> is invertible, so its columns are linearly independent, and in particular nonzero; they are <span class="math inline">\(p\)</span> linearly independent eigenvectors.</p>
 </div>
 </div>
@@ -2166,7 +2153,7 @@ c_1 &amp;= c_2 \\
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Powers of <span class="math inline">\(\mathbf{\Lambda}\)</span>.</strong> If <span class="math inline">\(\mathbf{D} = \operatorname{diag}(d_1, \ldots, d_p)\)</span> and <span class="math inline">\(\mathbf{E} = \operatorname{diag}(e_1, \ldots, e_p)\)</span>, with entries <span class="math inline">\(d_{il}\)</span> and <span class="math inline">\(e_{lj}\)</span> (so <span class="math inline">\(d_{ii} = d_i\)</span> and <span class="math inline">\(e_{jj} = e_j\)</span>), entry <span class="math inline">\((i, j)\)</span> of <span class="math inline">\(\mathbf{D} \mathbf{E}\)</span> is <span class="math inline">\(\sum_l d_{il}\,e_{lj}\)</span> (1), where <span class="math inline">\(d_{il} = 0\)</span> unless <span class="math inline">\(l = i\)</span> and <span class="math inline">\(e_{lj} = 0\)</span> unless <span class="math inline">\(l = j\)</span>. For <span class="math inline">\(i \ne j\)</span> no term survives, so the entry is <span class="math inline">\(0\)</span>; for <span class="math inline">\(i = j\)</span> only <span class="math inline">\(l = i\)</span> survives, giving <span class="math inline">\(d_i\,e_i\)</span>. So <span class="math inline">\(\mathbf{D} \mathbf{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)\)</span>, and <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(k\)</span> gives <span class="math inline">\(\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)\)</span>.</p>
 <p><strong>Powers of <span class="math inline">\(\mathbf{A}\)</span>, by induction on <span class="math inline">\(k\)</span>.</strong> <span class="math inline">\(k = 1\)</span> is the assumption. If it holds for <span class="math inline">\(k - 1\)</span>,</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}^k
 &amp;= \mathbf{A}^{k-1} \mathbf{A}
@@ -2185,12 +2172,12 @@ c_1 &amp;= c_2 \\
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{X} \mathbf{\Lambda}^{k-1} \mathbf{\Lambda} \mathbf{X}^{-1}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \\
 &amp;= \mathbf{X} \mathbf{\Lambda}^{k} \mathbf{X}^{-1}.
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices and Decompositions}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2303,15 +2290,15 @@ c_1 &amp;= c_2 \\
 &amp;= {\mathbf{B}}^{\top} \mathbf{B}
 \end{aligned}
 \]</span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="./linear-algebra-matrices.html#thm-transpose-product"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Theorem&nbsp;16</mark> in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>,</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p>(<a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>,</p>
+<p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,{\mathbf{B}}^{\top}\,\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 &amp;&amp; \text{(substitute } \mathbf{A} \text{)}
 \\
 &amp;= {(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}^{\top}\,(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)}
 \\
 &amp;= \mathopen{}\left\lVert\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
@@ -2319,14 +2306,14 @@ c_1 &amp;= c_2 \\
 &amp;\ge 0.
 &amp;&amp; \text{(}\href{linear-algebra-inner-products.qmd#thm-norm-properties}{\text{Theorem~1 in Inner Products and Orthogonality}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>If the columns of <span class="math inline">\(\mathbf{B}\)</span> are linearly independent, then <span class="math inline">\(\mathcal{N}(\mathbf{B}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> (<span class="math inline">\(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the combination of the columns with coefficients <span class="math inline">\(x_j\)</span>, <a href="./linear-algebra-subspaces.html#thm-matvec-columns">Theorem&nbsp;3 in Subspaces and Rank</a>, and only the zero combination is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, <a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>), so for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, <span class="math inline">\(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 &gt; 0\)</span> (<a href="./linear-algebra-inner-products.html#thm-norm-properties">Theorem&nbsp;1 in Inner Products and Orthogonality</a>, part 1).</p>
 <p><strong>Only if.</strong> Let <span class="math inline">\(\mathbf{A}\)</span> be positive semidefinite. It is symmetric, so <span class="math inline">\(\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}\)</span> (<a href="./linear-algebra-special-matrices.html#thm-spectral">Theorem&nbsp;12 in Special Matrices and Decompositions</a>), and every <span class="math inline">\(\lambda_i \ge 0\)</span> (<a href="./linear-algebra-special-matrices.html#thm-definite-eigenvalues">Theorem&nbsp;15 in Special Matrices and Decompositions</a>). Let <span class="math inline">\(\mathbf{\Lambda}^{1/2} \stackrel{\text{def}}{=}\operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})\)</span>, which is symmetric, with <span class="math inline">\(\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda}\)</span> (the product of diagonal matrices multiplies their diagonals, as in the proof of <a href="#thm-diagonalizable-powers" class="quarto-xref">Theorem&nbsp;9</a>), and let <span class="math inline">\(\mathbf{B} \stackrel{\text{def}}{=}\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}\)</span>. Then</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 {\mathbf{B}}^{\top} \mathbf{B}
 &amp;= {({\mathbf{Q}}^{\top})}^{\top}\,{(\mathbf{\Lambda}^{1/2})}^{\top}\,\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)}
 \\
 &amp;= \mathbf{Q}\,\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2}\,{\mathbf{Q}}^{\top}
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{; } \mathbf{\Lambda}^{1/2} \text{ is symmetric)}
@@ -2337,7 +2324,7 @@ c_1 &amp;= c_2 \\
 &amp;= \mathbf{A}.
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#thm-spectral}{\text{Theorem~12 in Special Matrices and Decompositions}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>If <span class="math inline">\(\mathbf{A}\)</span> is positive definite, it is positive semidefinite (<a href="./linear-algebra-special-matrices.html#rem-positive-definite-symmetry">Remark&nbsp;19 in Special Matrices and Decompositions</a>), so the same <span class="math inline">\(\mathbf{B}\)</span> gives <span class="math inline">\(\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\)</span>; and every <span class="math inline">\(\lambda_i &gt; 0\)</span> (<a href="./linear-algebra-special-matrices.html#thm-definite-eigenvalues">Theorem&nbsp;15 in Special Matrices and Decompositions</a>), so <span class="math inline">\(\mathbf{\Lambda}^{1/2}\)</span> is diagonal with nonzero diagonal, and invertible (its inverse is <span class="math inline">\(\operatorname{diag}(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})\)</span>); <span class="math inline">\({\mathbf{Q}}^{\top}\)</span> is invertible with inverse <span class="math inline">\(\mathbf{Q}\)</span> (<a href="./linear-algebra-special-matrices.html#rem-orthogonal-matrix-columns">Remark&nbsp;6 in Special Matrices and Decompositions</a>). So <span class="math inline">\(\mathbf{B}\)</span> is invertible (<a href="./linear-algebra-special-matrices.html#thm-inverse-product">Theorem&nbsp;1 in Special Matrices and Decompositions</a>), and its <span class="math inline">\(p\)</span> columns are linearly independent (<a href="#thm-invertible-rank" class="quarto-xref">Theorem&nbsp;1</a>, <a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>).</p>
 </div>
 </div>
@@ -2408,18 +2395,18 @@ c_1 &amp;= c_2 \\
 &amp;= {\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}
 \end{aligned}
 \]</span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="./linear-algebra-matrices.html#thm-transpose-product"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Theorem&nbsp;16</mark> in Matrices</a>, twice; <span class="math inline">\(\mathbf{C}\)</span> symmetric; <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_k\)</span>, <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>, since the columns of <span class="math inline">\(\mathbf{A}\)</span> are independent (<a href="./linear-algebra-subspaces.html#thm-matvec-columns">Theorem&nbsp;3 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>), and</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p>(<a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>, twice; <span class="math inline">\(\mathbf{C}\)</span> symmetric; <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_k\)</span>, <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>, since the columns of <span class="math inline">\(\mathbf{A}\)</span> are independent (<a href="./linear-algebra-subspaces.html#thm-matvec-columns">Theorem&nbsp;3 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>), and</p>
+<p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,({\mathbf{A}}^{\top} \mathbf{C} \mathbf{A})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 &amp;= {(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}^{\top}\,\mathbf{C}\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)}
 \\
 &amp;&gt; 0.
 &amp;&amp; \text{(} \mathbf{C} \text{ positive definite, } \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\text{)}
 \end{aligned}
-\]</mark></span></p>
-<p><strong>Part 2.</strong> <span class="math inline">\(\alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2\)</span> is symmetric: its transpose is <span class="math inline">\(\alpha_1 {\mathbf{A}_1}^{\top} + \alpha_2 {\mathbf{A}_2}^{\top} = \alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="./linear-algebra-matrices.html#thm-transpose-sum"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Theorem&nbsp;15</mark> in Matrices</a>, <a href="./linear-algebra-matrices.html#def-scalar-mult">Definition&nbsp;6 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>,</p>
+\]</span></p>
+<p><strong>Part 2.</strong> <span class="math inline">\(\alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2\)</span> is symmetric: its transpose is <span class="math inline">\(\alpha_1 {\mathbf{A}_1}^{\top} + \alpha_2 {\mathbf{A}_2}^{\top} = \alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2\)</span> (<a href="./linear-algebra-matrices.html#thm-transpose-sum">Theorem&nbsp;16 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-scalar-mult">Definition&nbsp;6 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,(\alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -2579,20 +2566,20 @@ c_1 &amp;= c_2 \\
 <div id="callout-52" class="callout-52-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{A} + \alpha\mathbf{I}_p\)</span> is symmetric: its transpose is <span class="math inline">\({\mathbf{A}}^{\top} + \alpha\mathbf{I}_p = \mathbf{A} + \alpha\mathbf{I}_p\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="./linear-algebra-matrices.html#thm-transpose-sum"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Theorem&nbsp;15</mark> in Matrices</a>, <a href="./linear-algebra-matrices.html#def-scalar-mult">Definition&nbsp;6 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>,</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{A} + \alpha\mathbf{I}_p\)</span> is symmetric: its transpose is <span class="math inline">\({\mathbf{A}}^{\top} + \alpha\mathbf{I}_p = \mathbf{A} + \alpha\mathbf{I}_p\)</span> (<a href="./linear-algebra-matrices.html#thm-transpose-sum">Theorem&nbsp;16 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-scalar-mult">Definition&nbsp;6 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>,</p>
+<p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,(\mathbf{A} + \alpha\mathbf{I}_p)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \alpha\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,\mathbf{I}_p\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{, }\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{)}
 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \alpha\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
 \\
 &amp;&gt; 0.
 &amp;&amp; \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0, \; \alpha&gt; 0, \; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p \text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2945,7 +2932,7 @@ x_{k+i, j} &amp;= b_{ji} \\
 \]</span></p>
 <p>and in the same way <span class="math inline">\((\mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})_{k+i} = ({\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}})_i + (\mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})_i\)</span> for <span class="math inline">\(i \le m\)</span>.</p>
 <p><strong>The expansion.</strong></p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
 &amp;= \sum_{i=1}^{k} u_i\,(\mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})_i + \sum_{i=1}^{m} w_i\,(\mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})_{k+i}
@@ -2958,14 +2945,14 @@ x_{k+i, j} &amp;= b_{ji} \\
 &amp;&amp; \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{)}
 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}
-&amp;&amp; \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} {\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = {\mathopen{}\left({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} {\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right)\mathclose{}}^{\top} \text{, which equals } {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \text{; } 1 \times 1 \text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)}
+&amp;&amp; \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} {\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = {\mathopen{}\left({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} {\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right)\mathclose{}}^{\top} \text{, which equals } {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \text{; } 1 \times 1 \text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)}
 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + 2\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}.
 &amp;&amp; \text{(combine like terms)}
 \end{aligned}
-\]</mark></span></p>
-<p><strong>Completing the square.</strong> Write <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \stackrel{\text{def}}{=}\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span> and <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>, 2, <a href="./linear-algebra-matrices.html#thm-identity"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Theorem&nbsp;7</mark> in Matrices</a>); <span class="math inline">\(\mathbf{A}^{-1}\)</span> is symmetric (<a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>). Then</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+\]</span></p>
+<p><strong>Completing the square.</strong> Write <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \stackrel{\text{def}}{=}\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span> and <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>, 2, <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>); <span class="math inline">\(\mathbf{A}^{-1}\)</span> is symmetric (<a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>). Then</p>
+<p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
 &amp;= (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}) \cdot \mathbf{A}\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}})
@@ -2987,9 +2974,9 @@ x_{k+i, j} &amp;= b_{ji} \\
 &amp;&amp; \text{(} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \text{, twice)}
 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + 2\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top}\,{\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}},
-&amp;&amp; \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} {\mathbf{B}}^{\top} \mathbf{A}^{-1} \text{, }\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, }\href{linear-algebra-special-matrices.qmd#cor-inverse-symmetric}{\text{Corollary~1 in Special Matrices and Decompositions}}\text{)}
+&amp;&amp; \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} {\mathbf{B}}^{\top} \mathbf{A}^{-1} \text{, }\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{, }\href{linear-algebra-special-matrices.qmd#cor-inverse-symmetric}{\text{Corollary~1 in Special Matrices and Decompositions}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>and</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -3139,7 +3126,7 @@ a &amp;= c \\
 &amp;= {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}
 \end{aligned}
 \]</span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="./linear-algebra-matrices.html#thm-transpose-product"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Theorem&nbsp;16</mark> in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a> for <span class="math inline">\({({\mathbf{B}}^{\top})}^{\top} = \mathbf{B}\)</span>, <a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{C}\)</span> is symmetric, so <span class="math inline">\(\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> is symmetric (the transpose of a difference is the difference of the transposes, entry by entry, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = -\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>; then <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &gt; 0\)</span> (<a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a>).</p>
+<p>(<a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a> for <span class="math inline">\({({\mathbf{B}}^{\top})}^{\top} = \mathbf{B}\)</span>, <a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{C}\)</span> is symmetric, so <span class="math inline">\(\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> is symmetric (the transpose of a difference is the difference of the transposes, entry by entry, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = -\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>; then <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &gt; 0\)</span> (<a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a>).</p>
 </div>
 </div>
 </div>

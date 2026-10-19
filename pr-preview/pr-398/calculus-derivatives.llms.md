@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 01:34:03 (PDT)
+Last modified: 2026-10-19 04:22:38 (PDT)
 
 ## 1 Derivatives
 
@@ -803,7 +803,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > **2.** Evaluate \\f\\ and \\f'\\ at \\x_0 = \pi/4\\:
 >
-> \\\begin{aligned} f(\pi/4) &= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} \\ &= \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} \\ &= \pi + 1 \\ f'(\pi/4) &= 4 - \sqrt{2}\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} \\ &= 4 - \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} \\ &= 4 - 1 \\ &= 3 \end{aligned}\\
+> \\\begin{aligned} f(\pi/4) &= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{}} \\ &= \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} \\ &= \pi + 1 \\ f'(\pi/4) &= 4 - \sqrt{2}{\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{}} \\ &= 4 - \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} \\ &= 4 - 1 \\ &= 3 \end{aligned}\\
 >
 > Using the point-slope formula, the tangent line at \\(\pi/4, \pi + 1)\\ is:
 >
@@ -815,7 +815,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > The exact value is:
 >
-> \\f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} \approx 4.171543\\
+> \\f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{}} \approx 4.171543\\
 >
 > The approximation error is \\\|4.171593 - 4.171543\| \approx 0.00005\\, on the order of \\(0.01)^2 = 10^{-4}\\.
 
