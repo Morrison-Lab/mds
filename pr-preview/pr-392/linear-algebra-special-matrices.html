@@ -221,16 +221,6 @@ cookieconsent.run({
 <script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><link href="site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
 <script src="site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-fig.callout {
   border-left-color: #757575;
 }
@@ -239,6 +229,26 @@ div.callout-fig.callout-style-default .callout-header {
 }
 div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-tbl.callout {
+  border-left-color: #757575;
+}
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
@@ -251,26 +261,6 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-cor.callout {
   border-left-color: #00838F;
 }
@@ -280,6 +270,16 @@ div.callout-cor.callout-style-default .callout-header {
 div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -291,6 +291,16 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-cnj.callout {
   border-left-color: #558B2F;
 }
@@ -301,15 +311,15 @@ div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -330,16 +340,6 @@ div.callout-solution.callout-style-default .callout-header {
 div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -1003,7 +1003,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-18 16:22:07 (PDT)</p>
+      <p class="date">Last modified: 2026-10-18 22:01:27 (PDT)</p>
     </div>
   </div>
   
@@ -1051,7 +1051,7 @@ window.Quarto = {
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-matrix-order" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Orders of square matrices)</strong></span> <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> has order <span class="math inline">\(2\)</span>, and <span class="math inline">\([5]\)</span> has order <span class="math inline">\(1\)</span>. A <span class="math inline">\(2 \times 3\)</span> matrix has no order, since it is not square (<a href="./linear-algebra-matrices.html#exm-square-matrix">Example&nbsp;7 in Matrices</a>).</p>
+<p><span class="theorem-title"><strong>Example 1 (Orders of square matrices)</strong></span> <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> has order <span class="math inline">\(2\)</span>, and <span class="math inline">\([5]\)</span> has order <span class="math inline">\(1\)</span>. A <span class="math inline">\(2 \times 3\)</span> matrix has no order, since it is not square (<a href="./linear-algebra-matrices.html#exm-square-matrix">Example&nbsp;8 in Matrices</a>).</p>
 </div>
 </div>
 </div>
@@ -1366,7 +1366,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(identity matrix)}
 \end{aligned}
 \]</span></p>
-<p>The steps use <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a> and <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;7 in Matrices</a>. Since <span class="math inline">\(\mathbf{B} = \mathbf{C}\)</span>, at most one matrix satisfies these equations, which is the uniqueness that <a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> asserts. When <span class="math inline">\(\mathbf{A}\)</span> is invertible, the matrix <span class="math inline">\(\mathbf{B}\)</span> in <a href="#def-invertible-matrix" class="quarto-xref">Definition&nbsp;6</a> is therefore the inverse <span class="math inline">\(\mathbf{A}^{-1}\)</span> of <span class="math inline">\(\mathbf{A}\)</span>, and <span class="math inline">\(\mathbf{A}\)</span> is invertible exactly when it has an inverse. For example, for <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span> in <a href="#exm-invertible-matrix" class="quarto-xref">Example&nbsp;5</a>, <span class="math inline">\(\begin{bmatrix} 0.5 &amp; -0.5 \\ 0 &amp; 1 \end{bmatrix}\)</span> is the only <span class="math inline">\(2 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> with</p>
+<p>The steps use <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a> and <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>. Since <span class="math inline">\(\mathbf{B} = \mathbf{C}\)</span>, at most one matrix satisfies these equations, which is the uniqueness that <a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> asserts. When <span class="math inline">\(\mathbf{A}\)</span> is invertible, the matrix <span class="math inline">\(\mathbf{B}\)</span> in <a href="#def-invertible-matrix" class="quarto-xref">Definition&nbsp;6</a> is therefore the inverse <span class="math inline">\(\mathbf{A}^{-1}\)</span> of <span class="math inline">\(\mathbf{A}\)</span>, and <span class="math inline">\(\mathbf{A}\)</span> is invertible exactly when it has an inverse. For example, for <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span> in <a href="#exm-invertible-matrix" class="quarto-xref">Example&nbsp;5</a>, <span class="math inline">\(\begin{bmatrix} 0.5 &amp; -0.5 \\ 0 &amp; 1 \end{bmatrix}\)</span> is the only <span class="math inline">\(2 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> with</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}\mathbf{B} &amp;= \mathbf{B}\mathbf{A} \\
@@ -1444,7 +1444,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(definition of } \mathbf{B}^{-1} \text{)}
 \end{aligned}
 \]</span></p>
-<p>So <span class="math inline">\(\mathbf{B}^{-1}\mathbf{A}^{-1}\)</span> satisfies <a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> for <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>. The steps use <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a> and <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;7 in Matrices</a>.</p>
+<p>So <span class="math inline">\(\mathbf{B}^{-1}\mathbf{A}^{-1}\)</span> satisfies <a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> for <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>. The steps use <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a> and <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>.</p>
 </div>
 </div>
 </div>
@@ -1508,7 +1508,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(} \mathbf{I}_p \text{ is symmetric)}
 \end{aligned}
 \]</span></p>
-<p>So <span class="math inline">\({\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\)</span> satisfies <a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> for <span class="math inline">\({\mathbf{A}}^{\top}\)</span>. The first step of each display is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>.</p>
+<p>So <span class="math inline">\({\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\)</span> satisfies <a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> for <span class="math inline">\({\mathbf{A}}^{\top}\)</span>. The first step of each display is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>.</p>
 </div>
 </div>
 </div>
@@ -1639,7 +1639,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 \begin{aligned}
 \mathbf{B}
 &amp;= \mathbf{I}_p\,\mathbf{B}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \\
 &amp;= (\mathbf{A}^{-1}\mathbf{A})\,\mathbf{B}
 &amp;&amp; \text{(}\href{#def-matrix-inverse}{\text{Definition~5}}\text{)}
@@ -1657,7 +1657,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(}\href{#def-matrix-inverse}{\text{Definition~5}}\text{)}
 \\
 &amp;= \mathbf{C}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \end{aligned}
 \]</span></p>
 <p><span class="math inline">\(\square\)</span></p>
@@ -1757,7 +1757,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <div class="callout-body-container callout-body">
 <div id="rem-matrix-vs-scalar-arithmetic" class="proof remark">
 <p><span class="proof-title"><em>Remark 4</em> (Matrix arithmetic compared with scalar arithmetic). </span><strong>Sums and differences.</strong> Matrix addition has every property that addition of numbers has: it is commutative (<a href="./linear-algebra-matrices.html#thm-matadd-commutative">Theorem&nbsp;1 in Matrices</a>), associative (<a href="./linear-algebra-matrices.html#thm-matadd-assoc">Theorem&nbsp;2 in Matrices</a>), has the zero matrix as its identity (<a href="./linear-algebra-matrices.html#thm-matadd-identity">Theorem&nbsp;3 in Matrices</a>), and gives each matrix a negative (<a href="./linear-algebra-matrices.html#thm-matadd-inverse">Theorem&nbsp;4 in Matrices</a>). The only new condition is that <span class="math inline">\(\mathbf{A} + \mathbf{B}\)</span> is defined only when <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> have the same dimensions.</p>
-<p><strong>Products.</strong> Matrix multiplication keeps three properties of multiplication of numbers: it is associative (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>), it is distributive over addition (<a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>), and it has an identity, <span class="math inline">\(\mathbf{I}_p\)</span> (<a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;7 in Matrices</a>). It differs from multiplication of numbers in four ways:</p>
+<p><strong>Products.</strong> Matrix multiplication keeps three properties of multiplication of numbers: it is associative (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>), it is distributive over addition (<a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>), and it has an identity, <span class="math inline">\(\mathbf{I}_p\)</span> (<a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>). It differs from multiplication of numbers in four ways:</p>
 <ul>
 <li>
 <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> is defined only when the number of columns of <span class="math inline">\(\mathbf{A}\)</span> equals the number of rows of <span class="math inline">\(\mathbf{B}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;7 in Matrices</a>).</li>
@@ -2212,7 +2212,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(definition of the Euclidean norm)}
 \end{aligned}
 \]</span></p>
-<p>Both norms are nonnegative square roots, so equal squares give <span class="math inline">\(\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span>. The second step is <a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;6 in Matrices</a>, the third is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>, and the fourth is <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>.</p>
+<p>Both norms are nonnegative square roots, so equal squares give <span class="math inline">\(\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span>. The second step is <a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;6 in Matrices</a>, the third is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>, and the fourth is <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>.</p>
 </div>
 </div>
 </div>
@@ -2513,7 +2513,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(move the scalar } \tfrac{1}{2} \text{ inside)}
 \end{aligned}
 \]</span></p>
-<p>The distributive step is <a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>, and the transpose step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>.</p>
+<p>The distributive step is <a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>, and the transpose step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>.</p>
 </div>
 </div>
 </div>
@@ -4202,7 +4202,7 @@ v_1 &amp;= \lambda v_2 \\
 &amp;&amp; \text{(transposing twice changes nothing)}
 \end{aligned}
 \]</span></p>
-<p>The first step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>, and the second follows from <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>, which swaps rows and columns, so swapping them again restores <span class="math inline">\(\mathbf{A}\)</span>.</p>
+<p>The first step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>, and the second follows from <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>, which swaps rows and columns, so swapping them again restores <span class="math inline">\(\mathbf{A}\)</span>.</p>
 <p><strong>The factorization.</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -4590,7 +4590,7 @@ v_2 &amp;= (\lambda- 1)\, v_1 \\
 &amp;&amp; \text{(} \mathbf{\Lambda} \text{ is diagonal)}
 \end{aligned}
 \]</span></p>
-<p>The second step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>. Also, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>: <span class="math inline">\(\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p\)</span> for an orthogonal matrix (<a href="#def-orthogonal-matrix" class="quarto-xref">Definition&nbsp;10</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
+<p>The second step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>. Also, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>: <span class="math inline">\(\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p\)</span> for an orthogonal matrix (<a href="#def-orthogonal-matrix" class="quarto-xref">Definition&nbsp;10</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
 <p><em>If every <span class="math inline">\(\lambda_i \ge 0\)</span></em>, then every term <span class="math inline">\(\lambda_i y_i^2 \ge 0\)</span>, so <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0\)</span>. <em>If every <span class="math inline">\(\lambda_i &gt; 0\)</span></em> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then some <span class="math inline">\(y_i \neq 0\)</span>, so at least one term is positive and the rest are non-negative, and <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} &gt; 0\)</span>.</p>
 <p><em>Conversely</em>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i\)</span>, column <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{Q}\)</span>, which is not <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> because it has norm 1. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = {\mathbf{Q}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i\)</span> is column <span class="math inline">\(i\)</span> of <span class="math inline">\({\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p\)</span>, so <span class="math inline">\(y_i = 1\)</span> and every other entry of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is <span class="math inline">\(0\)</span>, and the display gives <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i = \lambda_i\)</span>. So if <span class="math inline">\(\mathbf{A}\)</span> is positive semidefinite, <span class="math inline">\(\lambda_i \ge 0\)</span>, and if <span class="math inline">\(\mathbf{A}\)</span> is positive definite, <span class="math inline">\(\lambda_i &gt; 0\)</span>.</p>
 </div>
@@ -4690,7 +4690,7 @@ v_2 &amp;= (\lambda- 1)\, v_1 \\
 &amp;&amp; \text{(} \mathbf{Q} \text{ is orthogonal)}
 \end{aligned}
 \]</span></p>
-<p>The same steps, with <span class="math inline">\(\mathbf{\Lambda}^{-1}\)</span> and <span class="math inline">\(\mathbf{\Lambda}\)</span> swapped, give <span class="math inline">\(\mathbf{B}\mathbf{A} = \mathbf{I}_p\)</span>, so <span class="math inline">\(\mathbf{B} = \mathbf{A}^{-1}\)</span> (<a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a>). The steps with <span class="math inline">\(\mathbf{Q}\)</span> use <a href="#def-orthogonal-matrix" class="quarto-xref">Definition&nbsp;10</a>, whose remark records that <span class="math inline">\(\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p\)</span> too, and the identity step uses <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;7 in Matrices</a>.</p>
+<p>The same steps, with <span class="math inline">\(\mathbf{\Lambda}^{-1}\)</span> and <span class="math inline">\(\mathbf{\Lambda}\)</span> swapped, give <span class="math inline">\(\mathbf{B}\mathbf{A} = \mathbf{I}_p\)</span>, so <span class="math inline">\(\mathbf{B} = \mathbf{A}^{-1}\)</span> (<a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a>). The steps with <span class="math inline">\(\mathbf{Q}\)</span> use <a href="#def-orthogonal-matrix" class="quarto-xref">Definition&nbsp;10</a>, whose remark records that <span class="math inline">\(\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p\)</span> too, and the identity step uses <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>.</p>
 <p><span class="math inline">\(\mathbf{A}^{-1}\)</span> is symmetric by <a href="#cor-inverse-symmetric" class="quarto-xref">Corollary&nbsp;1</a>. For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = {\mathbf{Q}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, which is not <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> because <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>. As in the proof of <a href="#thm-definite-eigenvalues" class="quarto-xref">Theorem&nbsp;15</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -4991,7 +4991,7 @@ A_{12} &amp;= A_{21} \\
 &amp;&amp; \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}_{\mathbf{A}} \text{)}
 \\
 &amp;= (a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top})\,\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~15 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~16 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)}
 \\
 &amp;= a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)}
@@ -5012,7 +5012,7 @@ A_{12} &amp;= A_{21} \\
 &amp;&amp; \text{(a scalar equals its transpose)}
 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}{\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, twice)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{, twice)}
 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
 &amp;&amp; \text{($\mathbf{A}$ is symmetric)}
