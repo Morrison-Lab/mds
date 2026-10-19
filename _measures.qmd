@@ -211,7 +211,7 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/measures/_def-positive-negative-parts.qmd >}}
+{{< include mds/_subfiles/measures/_rem-positive-negative-parts.qmd >}}
 
 {{< slidebreak >}}
 

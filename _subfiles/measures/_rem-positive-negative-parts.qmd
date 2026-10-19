@@ -1,0 +1,9 @@
+:::{#rem-positive-negative-parts}
+#### A function in terms of its positive and negative parts
+
+For a [function](functions.qmd#def-function) $f : S \to \reals$, with the [positive part](algebra.qmd#def-positive-negative-parts) and [negative part](algebra.qmd#def-negative-part),
+$f = f^{+} - f^{-}$ and $\abs{f} = f^{+} + f^{-}$.
+($f^{+}$, $f^{-}$, and $\abs{f}$ are [measurable](#def-measurable-function) when $f$ is
+[@billingsley1995probability, Theorem 13.3].)
+
+:::
