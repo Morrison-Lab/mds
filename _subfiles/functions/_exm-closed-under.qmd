@@ -6,6 +6,6 @@
 - The odd integers are not closed under addition:
   $1$ and $3$ are odd, but $1 + 3 = 4$ is even.
 - The [collection](sets.qmd#def-collection) of all [subsets](sets.qmd#def-subset) of a [set](sets.qmd#def-set) $S$ is closed under [union](sets.qmd#def-union):
-  the union of two subsets of $S$ is again a subset of $S$.
+  the union of two subsets of $S$ is again a [subset](sets.qmd#def-subset) of $S$.
 
 :::
