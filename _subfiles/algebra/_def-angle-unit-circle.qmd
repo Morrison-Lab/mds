@@ -2,7 +2,7 @@
 #### Angle on the unit circle
 
 The **angle** between two points of the [unit circle](#def-unit-circle)
-is how far apart they are along the circle, going the short way round, measured in [radians](#def-radian).
+is how far apart they are along the circle, going the short way round.
 Let the counterclockwise distance from the first point to the second be $s \in [0, 2\pi)$.
 Then the angle is
 

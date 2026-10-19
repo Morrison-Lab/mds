@@ -1,14 +1,8 @@
 :::{#def-radian}
 #### Radian
 
-A **radian** is a unit for measuring distance along the [unit circle](#def-unit-circle),
-chosen so that going once round the circle is a distance of $2\pi$ (@def-pi).
-A trip covering the [fraction](algebra-sums.qmd#def-fraction) of the circle $f$ has the distance in radians $d$:
-
-$$
-d = 2\pi f.
-$$
-
-In words, the distance in radians is $2\pi$ times the fraction of the circle covered.
+A **radian** is the [angle on the unit circle](#def-angle-unit-circle)
+between two points that are a distance of $1$ apart along the circle.
+An angle of $\angpar$ is then $\angpar$ radians.
 
 :::

@@ -8,19 +8,19 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/algebra/_def-radian.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/algebra/_exm-radian.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/algebra/_def-angle-unit-circle.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_exm-angle-unit-circle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-radian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-radian.qmd >}}
 
 {{< slidebreak >}}
 
