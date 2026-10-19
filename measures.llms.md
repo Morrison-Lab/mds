@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 03:23:43 (PDT)
+Last modified: 2026-10-19 04:41:29 (PDT)
 
 > **NOTE:**
 >
@@ -14,7 +14,7 @@ Last modified: 2026-10-19 03:23:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (\\\sigma\\-algebra)** A **\\\sigma\\-algebra** [\[1\]](#ref-wikipedia_sigma_algebra) on a set \\S\\ is a [collection](sets.llms.md#def-collection) \\\mathcal{S}\\ of [subsets](sets.llms.md#def-subset) of \\S\\ that satisfies:
+> **Definition 1 (\\\sigma\\-algebra (\\\sigma\\-field, Borel field))** A **\\\sigma\\-algebra** [\[1\]](#ref-wikipedia_sigma_algebra) (also called a **\\\sigma\\-field** [\[2\]](#ref-billingsley1995probability) or a **Borel field** [\[3\]](#ref-CaseBerg01), Definition 1.2.1) on a set \\S\\ is a [collection](sets.llms.md#def-collection) \\\mathcal{S}\\ of [subsets](sets.llms.md#def-subset) of \\S\\ that satisfies:
 >
 > - \\\mathcal{S}\\ contains \\S\\ itself.
 > - For each set \\A\\ in \\\mathcal{S}\\, \\\mathcal{S}\\ contains its [complement](sets.llms.md#def-complement) \\S \setminus A\\.
@@ -22,7 +22,7 @@ Last modified: 2026-10-19 03:23:43 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (\\\sigma\\-field). Other sources call a \\\sigma\\-algebra a **\\\sigma\\-field** [\[2\]](#ref-billingsley1995probability) or a **Borel field** [\[3\]](#ref-CaseBerg01), Def. 1.2.1 [\[1\]](#ref-wikipedia_sigma_algebra). The names mean the same thing. The “Borel” in “Borel field” is a different use of “Borel” from the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) on \\\mathbb{R}\\, which is one particular \\\sigma\\-algebra.
+> *Remark 1* (“Borel” in “Borel field”). The “Borel” in “Borel field” is a different use of “Borel” from the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) on \\\mathbb{R}\\, which is one particular \\\sigma\\-algebra.
 
 > **NOTE:**
 >

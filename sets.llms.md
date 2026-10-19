@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 03:23:43 (PDT)
+Last modified: 2026-10-19 04:41:29 (PDT)
 
 > **NOTE:**
 >
@@ -85,11 +85,11 @@ Last modified: 2026-10-19 03:23:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Strict subset)** A set \\A\\ is a **strict subset** of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
+> **Definition 9 (Strict subset (proper subset))** A [set](#def-set) \\A\\ is a **strict subset** (also called a **proper subset**) of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
 
 > **NOTE:**
 >
-> *Remark 2* (Proper subsets and the symbol \\\subset\\). Other sources call a strict subset a **proper subset**. Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) [\[4\]](#ref-wikipedia_subset). For example, \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subset \mathopen{}\left\\1, 2\right\\\mathclose{}\\ is true in the first reading, because \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2\right\\\mathclose{}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
+> *Remark 2* (The symbol \\\subset\\). Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) [\[4\]](#ref-wikipedia_subset). For example, \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subset \mathopen{}\left\\1, 2\right\\\mathclose{}\\ is true in the first reading, because \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2\right\\\mathclose{}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
 
 > **NOTE:**
 >

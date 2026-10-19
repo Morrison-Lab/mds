@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 03:23:43 (PDT)
+Last modified: 2026-10-19 04:41:29 (PDT)
 
 > **NOTE:**
 >
@@ -254,15 +254,32 @@ Last modified: 2026-10-19 03:23:43 (PDT)
 >
 > **Definition 19 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
 
+> **NOTE:**
+>
+> **Definition 20 (Logistic function (also called the sigmoid or expit))** The **logistic function**, also called the **sigmoid** or **expit**, is the [function](#def-function) \\\sigma: \mathbb{R}\to (0, 1)\\ with [\[14\]](#ref-wikipedia_logistic_function)
+>
+> \\\sigma\mathopen{}\left(z\right)\mathclose{} \stackrel{\text{def}}{=}\frac{1}{1 + e^{-z}}.\\
+
+> **NOTE:**
+>
+> **Example 14 (Values of the logistic function)** The [logistic function](#def-logistic-function) at \\z = -2\\, \\z = 0\\ or \\z = 2\\ has these [values](#def-value):
+>
+> ``` downlit
+> z <- c(-2, 0, 2)
+> data.frame(z = z, sigmoid = 1 / (1 + exp(-z)))
+> ```
+>
+> The [value](#def-value) at \\z = 0\\ is \\1 / (1 + e^0) = 1/2\\. The values at \\\pm 2\\ add to 1; each lies in \\(0, 1)\\.
+
 ## 2 Countable sets
 
 > **NOTE:**
 >
-> **Definition 20 (Finite set)** A set \\A\\ is **finite** [\[14\]](#ref-wikipedia_finite_set) if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 19](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once.
+> **Definition 21 (Finite set)** A set \\A\\ is **finite** [\[15\]](#ref-wikipedia_finite_set) if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 19](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once.
 
 > **NOTE:**
 >
-> **Definition 21 (Cardinality)** For a finite set \\A\\ ([Definition 20](#def-finite-set)), the number \\n\\ in such a list is the **cardinality** [\[15\]](#ref-wikipedia_cardinality) of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
+> **Definition 22 (Cardinality)** For a finite set \\A\\ ([Definition 21](#def-finite-set)), the number \\n\\ in such a list is the **cardinality** [\[16\]](#ref-wikipedia_cardinality) of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
 
 > **NOTE:**
 >
@@ -270,7 +287,7 @@ Last modified: 2026-10-19 03:23:43 (PDT)
 
 > **NOTE:**
 >
-> **Example 14 (Finite and infinite sets)**  
+> **Example 15 (Finite and infinite sets)**  
 >
 > - \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is finite, with \\\mathopen{}\left\|\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\|\mathclose{} = 3\\.
 > - \\\mathopen{}\left\\1, 1, 2\right\\\mathclose{} = \mathopen{}\left\\1, 2\right\\\mathclose{}\\, so \\\mathopen{}\left\|\mathopen{}\left\\1, 1, 2\right\\\mathclose{}\right\|\mathclose{} = 2\\: a repeated listing does not count twice.
@@ -279,19 +296,19 @@ Last modified: 2026-10-19 03:23:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Infinite set)** A set that is not finite ([Definition 20](#def-finite-set)) is **infinite** [\[16\]](#ref-wikipedia_infinite_set).
+> **Definition 23 (Infinite set)** A set that is not finite ([Definition 21](#def-finite-set)) is **infinite** [\[17\]](#ref-wikipedia_infinite_set).
 
 > **NOTE:**
 >
-> **Definition 23 (Countable set)** A set is **countable** [\[17\]](#ref-wikipedia_countable_set) if it is finite ([Definition 20](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 17](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
+> **Definition 24 (Countable set)** A set is **countable** [\[18\]](#ref-wikipedia_countable_set) if it is finite ([Definition 21](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 17](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
 
 > **NOTE:**
 >
-> **Definition 24 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
+> **Definition 25 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
 
 > **NOTE:**
 >
-> **Example 15 (Countable and uncountable sets)**  
+> **Example 16 (Countable and uncountable sets)**  
 >
 > - \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ is countable, because it is finite.
 > - The [non-negative integers](number-systems.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
@@ -303,7 +320,7 @@ Last modified: 2026-10-19 03:23:43 (PDT)
 
 > **NOTE:**
 >
-> *Remark 8* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it [\[18\]](#ref-wikipedia_cantors_diagonal_argument). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
+> *Remark 8* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it [\[19\]](#ref-wikipedia_cantors_diagonal_argument). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
 
 ## References
 
@@ -361,21 +378,25 @@ Wikipedia contributors, “Sequence — Wikipedia, the free encyclopedia.” 202
 
 \[14\]
 
-Wikipedia contributors, “Finite set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Finite_set>
+Wikipedia contributors, “Logistic function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logistic_function>
 
 \[15\]
 
-Wikipedia contributors, “Cardinality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cardinality>
+Wikipedia contributors, “Finite set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Finite_set>
 
 \[16\]
 
-Wikipedia contributors, “Infinite set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Infinite_set>
+Wikipedia contributors, “Cardinality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cardinality>
 
 \[17\]
 
-Wikipedia contributors, “Countable set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Countable_set>
+Wikipedia contributors, “Infinite set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Infinite_set>
 
 \[18\]
+
+Wikipedia contributors, “Countable set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Countable_set>
+
+\[19\]
 
 Wikipedia contributors, “Cantor’s diagonal argument — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument>
 
