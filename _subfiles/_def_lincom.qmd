@@ -53,7 +53,7 @@ $$
 #### Linear combination
 
 A **linear combination** of the numbers $a_1, \ldots, a_k$
-with coefficients $c_1, \ldots, c_k$ (@def-lincom-coefficient)
+with coefficients $c_1, \ldots, c_k$
 is the weighted sum
 
 $$c_1 a_1 + \cdots + c_k a_k = \sumto{i}{k} c_i a_i$$
