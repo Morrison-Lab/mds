@@ -2,7 +2,7 @@
 
 #### A gradient that does not mention its variable
 
-Fix
+Take
 
 $$A = \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix}$$
 
