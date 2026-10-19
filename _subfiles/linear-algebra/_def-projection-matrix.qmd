@@ -2,6 +2,7 @@
 #### Orthogonal projection matrix
 
 A square matrix $\matr{P}$ is an **orthogonal projection matrix**
+(also called an **orthogonal projector**)
 if it is both symmetric (@def-symmetric-matrix)
 and idempotent (@def-idempotent-matrix):
 

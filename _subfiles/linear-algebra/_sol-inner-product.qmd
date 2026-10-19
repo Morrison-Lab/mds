@@ -31,7 +31,8 @@ a norm is a square root of a sum of squares, so it is never below zero.
 
 Python has both operations built in, and R builds them from `sum`.
 
-```python
+```{python}
+#| code-fold: false
 import numpy as np
 
 a = np.array([3.0, -1.0, 2.0])
@@ -48,5 +49,5 @@ b <- c(0, 4, -2)
 print(c(sum(a * b), round(sqrt(sum(a^2)), 3)))
 ```
 
-Both print $-8$ and $3.742$.
+Both print `r reticulate::py_eval("float(a @ b)")` and `r round(reticulate::py_eval("float(np.linalg.norm(a))"), 3)`.
 :::
