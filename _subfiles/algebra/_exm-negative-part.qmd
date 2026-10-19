@@ -1,0 +1,8 @@
+:::{#exm-negative-part}
+#### The negative part of the identity function
+
+For $f(x) = x$ on $\reals$, the negative part is $f^{-}(x) = \max\cb{-x, 0}$.
+At $x = 3$, $f^{-}(3) = \max\cb{-3, 0} = 0$,
+and at $x = -2$, $f^{-}(-2) = \max\cb{2, 0} = 2$.
+
+:::

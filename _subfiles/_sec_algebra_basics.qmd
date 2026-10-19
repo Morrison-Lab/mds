@@ -126,6 +126,22 @@ just make sure you execute it correctly.
 
 {{< include mds/_subfiles/algebra/_def-argmax.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-positive-negative-parts.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-positive-negative-parts.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-negative-part.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-negative-part.qmd >}}
+
 ## Global and local minimizers {#sec-minimizers}
 
 {{< include mds/_subfiles/algebra/_exr-local-vs-global-min.qmd >}}

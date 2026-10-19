@@ -1,0 +1,12 @@
+:::{#def-positive-negative-parts}
+#### Positive part of a function
+
+Let $S$ be a [set](sets.qmd#def-set),
+and let $f : S \to \reals$ be a [function](functions.qmd#def-function).
+The **positive part** of $f$ is the non-negative function
+
+$$
+f^{+}(s) \eqdef \max\cb{f(s), 0}.
+$$
+
+:::
