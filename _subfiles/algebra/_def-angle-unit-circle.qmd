@@ -2,7 +2,6 @@
 #### Angle on the unit circle
 
 The **angle** between two points of the [unit circle](#def-unit-circle)
-is how far apart they are along the circle, going the short way round, measured in radians.
-An angle is at least $0$, at most the number $\pi$ (@def-pi).
+is how far apart they are along the circle, going the short way round.
 
 :::

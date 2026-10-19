@@ -1,0 +1,15 @@
+:::{#prp-angle-unit-circle-range}
+#### Range of an angle on the unit circle
+
+An [angle](#def-angle-unit-circle) between two points of the [unit circle](#def-unit-circle)
+is at least $0$ and at most $\pi$ (@def-pi).
+
+:::
+
+::: proof
+
+The whole circle has length $2\pi$ (@def-pi).
+Going the short way round covers at most half of the circle, which is $\pi$.
+A distance along the circle is at least $0$.
+
+:::
