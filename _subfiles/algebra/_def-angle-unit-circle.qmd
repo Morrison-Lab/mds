@@ -10,7 +10,7 @@ $$
 \angpar \eqdef \min\cb{s, 2\pi - s}.
 $$
 
-In words, the angle is the smaller of the counterclockwise distance, $s$,
-and the clockwise distance, $2\pi - s$, from the first point to the second.
+In words, the angle is the smaller of two distances from the first point to the second:
+the counterclockwise one, $s$, or the clockwise one, $2\pi - s$.
 
 :::
