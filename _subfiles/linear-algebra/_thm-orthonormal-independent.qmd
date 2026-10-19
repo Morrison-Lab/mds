@@ -8,8 +8,9 @@ then they are linearly independent (@def-linearly-independent).
 
 ::: proof
 
-Suppose $\sumto{j}{k} c_j \vecf{q}_j = \vzero$,
-and fix any $i$ between $1$ and $k$. Then
+Suppose $\sumto{j}{k} c_j \vecf{q}_j = \vzero$.
+Take any $i \in \cb{1, \ldots, k}$.
+Then
 
 $$
 \ba

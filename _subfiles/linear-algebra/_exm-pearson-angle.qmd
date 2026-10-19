@@ -1,0 +1,13 @@
+:::{#exm-pearson-angle}
+#### A correlation of one half is an angle of sixty degrees
+
+In @exm-pearson-cosine-centered, the correlation is $r = 1/2$, for the data vectors $\vx = (1, 2, 3)$, $\vy = (1, 3, 2)$.
+By @cor-pearson-angle, the [angle](#def-angle) $\angpar$ between the centered vectors $\cent{\vx} = (-1, 0, 1)$, $\cent{\vy} = (-1, 1, 0)$ satisfies
+
+$$
+\cos\angpar = \frac{1}{2},
+$$
+
+so the angle is $\angpar = \pi/3$.
+
+:::
