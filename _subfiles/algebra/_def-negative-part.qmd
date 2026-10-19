@@ -2,7 +2,7 @@
 #### Negative part of a function
 
 For $f$ as in @def-positive-negative-parts,
-the **negative part** of $f$ is the non-negative function
+the **negative part** of $f$ is the non-negative [function](functions.qmd#def-function)
 
 $$
 f^{-}(s) \eqdef \max\cb{-f(s), 0}.
