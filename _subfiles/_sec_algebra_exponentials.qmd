@@ -62,6 +62,34 @@
 
 {{< include mds/_subfiles/algebra/_def-diverges-to-infinity.qmd >}}
 
+## Series {#sec-series}
+
+{{< include mds/_subfiles/algebra/_def-non-decreasing.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-non-decreasing.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-partial-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-partial-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-infinite-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-infinite-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_lem-nonneg-series.qmd >}}
+
 ## Exponentials and Logarithms
 
 {{< include mds/_subfiles/algebra/_def-exponential-function.qmd >}}

@@ -20,7 +20,7 @@ The algebra notes are split across these pages:
   sums, products and quotients, summation notation, limits of sums, and notational shorthands.
 - [Polynomials, Exponentials and Logarithms](algebra-exponentials.qmd):
   polynomials, affine and linear functions of one variable,
-  limits of sequences, exponentials and logarithms.
+  limits of [sequences](functions.qmd#def-sequence), [series](algebra-exponentials.qmd#def-infinite-sum), exponentials and logarithms.
 - [Trigonometry](algebra-trigonometry.qmd):
   cosine and sine on the unit circle, and the identities later pages use.
 - [Complex Numbers](algebra-complex.qmd):
