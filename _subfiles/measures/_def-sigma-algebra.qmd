@@ -5,7 +5,7 @@ A **$\sigma$-algebra**
 [@wikipedia_sigma_algebra]
 (also called a **$\sigma$-field** [@billingsley1995probability]
 or a **Borel field**
-[@CaseBerg01, Def. 1.2.1])
+[@CaseBerg01, Definition 1.2.1])
 on a set $S$
 is a [collection](sets.qmd#def-collection) $\salg$ of [subsets](sets.qmd#def-subset) of $S$
 that satisfies:
