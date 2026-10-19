@@ -390,6 +390,15 @@
    "external": false
   },
   {
+   "id": "mds/algebra#def-infinite-sum",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-infinite-sum",
+   "kind": "def",
+   "title": "Infinite sum (series)",
+   "external": false
+  },
+  {
    "id": "mds/algebra#def-intercept",
    "site": "mds",
    "page": "algebra",
@@ -489,6 +498,24 @@
    "external": false
   },
   {
+   "id": "mds/algebra#def-negative-part",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-negative-part",
+   "kind": "def",
+   "title": "Negative part of a function",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-non-decreasing",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-non-decreasing",
+   "kind": "def",
+   "title": "Non-decreasing sequence",
+   "external": false
+  },
+  {
    "id": "mds/algebra#def-non-strict-inequality",
    "site": "mds",
    "page": "algebra",
@@ -522,6 +549,15 @@
    "div": "def-parabola",
    "kind": "def",
    "title": "Parabola",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-partial-sum",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-partial-sum",
+   "kind": "def",
+   "title": "Partial sum",
    "external": false
   },
   {
@@ -585,6 +621,15 @@
    "div": "def-polynomial-leading-coefficient",
    "kind": "def",
    "title": "Leading coefficient",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-positive-negative-parts",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-positive-negative-parts",
+   "kind": "def",
+   "title": "Positive part of a function",
    "external": false
   },
   {
@@ -666,6 +711,15 @@
    "div": "def-quotient",
    "kind": "def",
    "title": "Quotient",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-radian",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-radian",
+   "kind": "def",
+   "title": "Radian",
    "external": false
   },
   {
@@ -846,6 +900,15 @@
    "div": "def-upper-limit",
    "kind": "def",
    "title": "Upper limit of a sum or integral",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#lem-nonneg-series",
+   "site": "mds",
+   "page": "algebra",
+   "div": "lem-nonneg-series",
+   "kind": "lem",
+   "title": "Sums of non-negative terms",
    "external": false
   },
   {
@@ -1272,6 +1335,15 @@
    "external": false
   },
   {
+   "id": "mds/algebra-basics#def-negative-part",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "def-negative-part",
+   "kind": "def",
+   "title": "Negative part of a function",
+   "external": false
+  },
+  {
    "id": "mds/algebra-basics#def-non-strict-inequality",
    "site": "mds",
    "page": "algebra-basics",
@@ -1287,6 +1359,15 @@
    "div": "def-percent",
    "kind": "def",
    "title": "Percent",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-basics#def-positive-negative-parts",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "def-positive-negative-parts",
+   "kind": "def",
+   "title": "Positive part of a function",
    "external": false
   },
   {
@@ -1623,6 +1704,15 @@
    "external": false
   },
   {
+   "id": "mds/algebra-exponentials#def-infinite-sum",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-infinite-sum",
+   "kind": "def",
+   "title": "Infinite sum (series)",
+   "external": false
+  },
+  {
    "id": "mds/algebra-exponentials#def-intercept",
    "site": "mds",
    "page": "algebra-exponentials",
@@ -1650,12 +1740,30 @@
    "external": false
   },
   {
+   "id": "mds/algebra-exponentials#def-non-decreasing",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-non-decreasing",
+   "kind": "def",
+   "title": "Non-decreasing sequence",
+   "external": false
+  },
+  {
    "id": "mds/algebra-exponentials#def-parabola",
    "site": "mds",
    "page": "algebra-exponentials",
    "div": "def-parabola",
    "kind": "def",
    "title": "Parabola",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#def-partial-sum",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-partial-sum",
+   "kind": "def",
+   "title": "Partial sum",
    "external": false
   },
   {
@@ -1737,6 +1845,15 @@
    "div": "def-slope",
    "kind": "def",
    "title": "Slope",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#lem-nonneg-series",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "lem-nonneg-series",
+   "kind": "lem",
+   "title": "Sums of non-negative terms",
    "external": false
   },
   {
@@ -2349,6 +2466,15 @@
    "div": "def-pi",
    "kind": "def",
    "title": "The number $\\pi$",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-trigonometry#def-radian",
+   "site": "mds",
+   "page": "algebra-trigonometry",
+   "div": "def-radian",
+   "kind": "def",
+   "title": "Radian",
    "external": false
   },
   {
@@ -3720,6 +3846,15 @@
    "external": false
   },
   {
+   "id": "mds/functions#def-closed-under",
+   "site": "mds",
+   "page": "functions",
+   "div": "def-closed-under",
+   "kind": "def",
+   "title": "Closed under an operation (closure)",
+   "external": false
+  },
+  {
    "id": "mds/functions#def-codomain",
    "site": "mds",
    "page": "functions",
@@ -3852,6 +3987,15 @@
    "div": "def-inverse-function",
    "kind": "def",
    "title": "Inverse function",
+   "external": false
+  },
+  {
+   "id": "mds/functions#def-logistic-function",
+   "site": "mds",
+   "page": "functions",
+   "div": "def-logistic-function",
+   "kind": "def",
+   "title": "Logistic function (also called the sigmoid or expit)",
    "external": false
   },
   {
@@ -9003,21 +9147,21 @@
    "external": false
   },
   {
+   "id": "mds/measures#def-borel-set",
+   "site": "mds",
+   "page": "measures",
+   "div": "def-borel-set",
+   "kind": "def",
+   "title": "Borel set",
+   "external": false
+  },
+  {
    "id": "mds/measures#def-borel-sigma-algebra",
    "site": "mds",
    "page": "measures",
    "div": "def-borel-sigma-algebra",
    "kind": "def",
    "title": "Borel $\\sigma$-algebra",
-   "external": false
-  },
-  {
-   "id": "mds/measures#def-closed-under",
-   "site": "mds",
-   "page": "measures",
-   "div": "def-closed-under",
-   "kind": "def",
-   "title": "Closed under an operation (closure)",
    "external": false
   },
   {
@@ -9036,6 +9180,24 @@
    "div": "def-counting-measure",
    "kind": "def",
    "title": "Counting measure",
+   "external": false
+  },
+  {
+   "id": "mds/measures#def-equal-almost-everywhere",
+   "site": "mds",
+   "page": "measures",
+   "div": "def-equal-almost-everywhere",
+   "kind": "def",
+   "title": "Equal almost everywhere ($f = g$ $\\measure$-a.e.)",
+   "external": false
+  },
+  {
+   "id": "mds/measures#def-essential-supremum-norm",
+   "site": "mds",
+   "page": "measures",
+   "div": "def-essential-supremum-norm",
+   "kind": "def",
+   "title": "Essential supremum norm ($L^\\infty$ norm)",
    "external": false
   },
   {
@@ -9075,15 +9237,6 @@
    "external": false
   },
   {
-   "id": "mds/measures#def-infinite-sum",
-   "site": "mds",
-   "page": "measures",
-   "div": "def-infinite-sum",
-   "kind": "def",
-   "title": "Infinite sum (series)",
-   "external": false
-  },
-  {
    "id": "mds/measures#def-integral",
    "site": "mds",
    "page": "measures",
@@ -9120,12 +9273,39 @@
    "external": false
   },
   {
+   "id": "mds/measures#def-linf-function-space",
+   "site": "mds",
+   "page": "measures",
+   "div": "def-linf-function-space",
+   "kind": "def",
+   "title": "$\\mathcal{L}^\\infty$ space ($\\mathcal{L}^\\infty(S, \\salg, \\measure)$)",
+   "external": false
+  },
+  {
    "id": "mds/measures#def-linf-space",
    "site": "mds",
    "page": "measures",
    "div": "def-linf-space",
    "kind": "def",
-   "title": "$L^\\infty$ space and essential supremum norm ($L^\\infty$ norm)",
+   "title": "$L^\\infty$ space ($L^\\infty(S, \\salg, \\measure)$, $L^\\infty(\\measure)$)",
+   "external": false
+  },
+  {
+   "id": "mds/measures#def-lp-function-space",
+   "site": "mds",
+   "page": "measures",
+   "div": "def-lp-function-space",
+   "kind": "def",
+   "title": "$\\mathcal{L}^p$ space ($\\mathcal{L}^p(S, \\salg, \\measure)$)",
+   "external": false
+  },
+  {
+   "id": "mds/measures#def-lp-norm",
+   "site": "mds",
+   "page": "measures",
+   "div": "def-lp-norm",
+   "kind": "def",
+   "title": "$L^p$ norm ($p$-norm of a function)",
    "external": false
   },
   {
@@ -9134,7 +9314,7 @@
    "page": "measures",
    "div": "def-lp-space",
    "kind": "def",
-   "title": "$L^p$ space and $L^p$ norm ($L^p(\\measure)$, $\\mathcal{L}^p$)",
+   "title": "$L^p$ space ($L^p(S, \\salg, \\measure)$, $L^p(\\measure)$)",
    "external": false
   },
   {
@@ -9201,57 +9381,12 @@
    "external": false
   },
   {
-   "id": "mds/measures#def-negative-part",
-   "site": "mds",
-   "page": "measures",
-   "div": "def-negative-part",
-   "kind": "def",
-   "title": "Negative part of a function",
-   "external": false
-  },
-  {
-   "id": "mds/measures#def-non-decreasing",
-   "site": "mds",
-   "page": "measures",
-   "div": "def-non-decreasing",
-   "kind": "def",
-   "title": "Non-decreasing sequence",
-   "external": false
-  },
-  {
    "id": "mds/measures#def-outcome",
    "site": "mds",
    "page": "measures",
    "div": "def-outcome",
    "kind": "def",
    "title": "Outcome",
-   "external": false
-  },
-  {
-   "id": "mds/measures#def-pairwise-disjoint",
-   "site": "mds",
-   "page": "measures",
-   "div": "def-pairwise-disjoint",
-   "kind": "def",
-   "title": "Pairwise disjoint sets (disjoint, mutually disjoint)",
-   "external": false
-  },
-  {
-   "id": "mds/measures#def-partial-sum",
-   "site": "mds",
-   "page": "measures",
-   "div": "def-partial-sum",
-   "kind": "def",
-   "title": "Partial sum",
-   "external": false
-  },
-  {
-   "id": "mds/measures#def-positive-negative-parts",
-   "site": "mds",
-   "page": "measures",
-   "div": "def-positive-negative-parts",
-   "kind": "def",
-   "title": "Positive part of a function",
    "external": false
   },
   {
@@ -9305,7 +9440,7 @@
    "page": "measures",
    "div": "def-sigma-algebra",
    "kind": "def",
-   "title": "$\\sigma$-algebra",
+   "title": "$\\sigma$-algebra ($\\sigma$-field, Borel field)",
    "external": false
   },
   {
@@ -9324,15 +9459,6 @@
    "div": "lem-countable-additivity-empty",
    "kind": "lem",
    "title": "Countable additivity and the empty set",
-   "external": false
-  },
-  {
-   "id": "mds/measures#lem-nonneg-series",
-   "site": "mds",
-   "page": "measures",
-   "div": "lem-nonneg-series",
-   "kind": "lem",
-   "title": "Sums of non-negative terms",
    "external": false
   },
   {
@@ -9702,6 +9828,15 @@
    "div": "def-objective-function",
    "kind": "def",
    "title": "Objective function (objective)",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-optimization-algorithm",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-optimization-algorithm",
+   "kind": "def",
+   "title": "Optimization algorithm",
    "external": false
   },
   {
@@ -10371,6 +10506,15 @@
    "external": false
   },
   {
+   "id": "mds/sets#def-pairwise-disjoint",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-pairwise-disjoint",
+   "kind": "def",
+   "title": "Pairwise disjoint sets (disjoint, mutually disjoint)",
+   "external": false
+  },
+  {
    "id": "mds/sets#def-set",
    "site": "mds",
    "page": "sets",
@@ -10403,7 +10547,7 @@
    "page": "sets",
    "div": "def-strict-subset",
    "kind": "def",
-   "title": "Strict subset",
+   "title": "Strict subset (proper subset)",
    "external": false
   },
   {
@@ -11098,6 +11242,22 @@
    "mds/algebra#def-bounded-below"
   ],
   [
+   "mds/algebra#def-infinite-sum",
+   "mds/algebra#def-convergent-sequence"
+  ],
+  [
+   "mds/algebra#def-infinite-sum",
+   "mds/algebra#def-diverges-to-infinity"
+  ],
+  [
+   "mds/algebra#def-infinite-sum",
+   "mds/algebra#def-partial-sum"
+  ],
+  [
+   "mds/algebra#def-infinite-sum",
+   "mds/algebra#lem-nonneg-series"
+  ],
+  [
    "mds/algebra#def-intercept",
    "mds/algebra#def-affine-function"
   ],
@@ -11146,6 +11306,22 @@
    "mds/functions#def-inverse-function"
   ],
   [
+   "mds/algebra#def-negative-part",
+   "mds/algebra#def-positive-negative-parts"
+  ],
+  [
+   "mds/algebra#def-negative-part",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra#def-non-decreasing",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/algebra#def-non-decreasing",
+   "mds/sets#def-extended-nonneg-reals"
+  ],
+  [
    "mds/algebra#def-non-strict-inequality",
    "mds/algebra#def-strict-inequality"
   ],
@@ -11164,6 +11340,18 @@
   [
    "mds/algebra#def-parabola",
    "mds/functions#def-graph"
+  ],
+  [
+   "mds/algebra#def-partial-sum",
+   "mds/algebra#def-summation"
+  ],
+  [
+   "mds/algebra#def-partial-sum",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/algebra#def-partial-sum",
+   "mds/sets#def-extended-nonneg-reals"
   ],
   [
    "mds/algebra#def-person-years",
@@ -11196,6 +11384,14 @@
   [
    "mds/algebra#def-polynomial-leading-coefficient",
    "mds/algebra#def-polynomial-degree"
+  ],
+  [
+   "mds/algebra#def-positive-negative-parts",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra#def-positive-negative-parts",
+   "mds/sets#def-set"
   ],
   [
    "mds/algebra#def-power",
@@ -11236,6 +11432,10 @@
   [
    "mds/algebra#def-quadratic-polynomial",
    "mds/algebra#def-polynomial-degree"
+  ],
+  [
+   "mds/algebra#def-radian",
+   "mds/algebra#def-angle-unit-circle"
   ],
   [
    "mds/algebra#def-rate",
@@ -11312,6 +11512,22 @@
   [
    "mds/algebra#def-upper-limit",
    "mds/calculus#def-riemann-integral"
+  ],
+  [
+   "mds/algebra#lem-nonneg-series",
+   "mds/algebra#def-infinite-sum"
+  ],
+  [
+   "mds/algebra#lem-nonneg-series",
+   "mds/algebra#def-non-decreasing"
+  ],
+  [
+   "mds/algebra#lem-nonneg-series",
+   "mds/algebra#def-partial-sum"
+  ],
+  [
+   "mds/algebra#lem-nonneg-series",
+   "mds/algebra#def-sequence-limit"
   ],
   [
    "mds/algebra#prp-angle-unit-circle-range",
@@ -11402,12 +11618,28 @@
    "mds/linear-algebra#def-euclidean-norm"
   ],
   [
+   "mds/algebra-basics#def-negative-part",
+   "mds/algebra-basics#def-positive-negative-parts"
+  ],
+  [
+   "mds/algebra-basics#def-negative-part",
+   "mds/functions#def-function"
+  ],
+  [
    "mds/algebra-basics#def-non-strict-inequality",
    "mds/algebra-basics#def-strict-inequality"
   ],
   [
    "mds/algebra-basics#def-non-strict-inequality",
    "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/algebra-basics#def-positive-negative-parts",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra-basics#def-positive-negative-parts",
+   "mds/sets#def-set"
   ],
   [
    "mds/algebra-basics#def-power",
@@ -11514,6 +11746,22 @@
    "mds/functions#def-sequence"
   ],
   [
+   "mds/algebra-exponentials#def-infinite-sum",
+   "mds/algebra#def-convergent-sequence"
+  ],
+  [
+   "mds/algebra-exponentials#def-infinite-sum",
+   "mds/algebra#def-diverges-to-infinity"
+  ],
+  [
+   "mds/algebra-exponentials#def-infinite-sum",
+   "mds/algebra-exponentials#def-partial-sum"
+  ],
+  [
+   "mds/algebra-exponentials#def-infinite-sum",
+   "mds/algebra-exponentials#lem-nonneg-series"
+  ],
+  [
    "mds/algebra-exponentials#def-intercept",
    "mds/algebra-exponentials#def-affine-function"
   ],
@@ -11530,12 +11778,32 @@
    "mds/functions#def-inverse-function"
   ],
   [
+   "mds/algebra-exponentials#def-non-decreasing",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/algebra-exponentials#def-non-decreasing",
+   "mds/sets#def-extended-nonneg-reals"
+  ],
+  [
    "mds/algebra-exponentials#def-parabola",
    "mds/algebra-exponentials#def-quadratic-polynomial"
   ],
   [
    "mds/algebra-exponentials#def-parabola",
    "mds/functions#def-graph"
+  ],
+  [
+   "mds/algebra-exponentials#def-partial-sum",
+   "mds/algebra#def-summation"
+  ],
+  [
+   "mds/algebra-exponentials#def-partial-sum",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/algebra-exponentials#def-partial-sum",
+   "mds/sets#def-extended-nonneg-reals"
   ],
   [
    "mds/algebra-exponentials#def-polynomial",
@@ -11580,6 +11848,22 @@
   [
    "mds/algebra-exponentials#def-slope",
    "mds/algebra-exponentials#def-affine-function"
+  ],
+  [
+   "mds/algebra-exponentials#lem-nonneg-series",
+   "mds/algebra#def-sequence-limit"
+  ],
+  [
+   "mds/algebra-exponentials#lem-nonneg-series",
+   "mds/algebra-exponentials#def-infinite-sum"
+  ],
+  [
+   "mds/algebra-exponentials#lem-nonneg-series",
+   "mds/algebra-exponentials#def-non-decreasing"
+  ],
+  [
+   "mds/algebra-exponentials#lem-nonneg-series",
+   "mds/algebra-exponentials#def-partial-sum"
   ],
   [
    "mds/algebra-exponentials#thm-affine-function-props",
@@ -11800,6 +12084,10 @@
   [
    "mds/algebra-trigonometry#def-pi",
    "mds/algebra-trigonometry#def-unit-circle"
+  ],
+  [
+   "mds/algebra-trigonometry#def-radian",
+   "mds/algebra-trigonometry#def-angle-unit-circle"
   ],
   [
    "mds/algebra-trigonometry#def-sine",
@@ -12615,6 +12903,10 @@
   ],
   [
    "mds/functions#def-inverse-function",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/functions#def-logistic-function",
    "mds/functions#def-function"
   ],
   [
@@ -14706,6 +14998,14 @@
    "mds/sets#def-subset"
   ],
   [
+   "mds/measures#def-borel-set",
+   "mds/measures#def-borel-sigma-algebra"
+  ],
+  [
+   "mds/measures#def-borel-set",
+   "mds/sets#def-set"
+  ],
+  [
    "mds/measures#def-borel-sigma-algebra",
    "mds/measures#def-generated-sigma-algebra"
   ],
@@ -14715,11 +15015,15 @@
   ],
   [
    "mds/measures#def-countable-additivity",
-   "mds/measures#def-pairwise-disjoint"
+   "mds/measures#def-sigma-algebra"
   ],
   [
    "mds/measures#def-countable-additivity",
-   "mds/measures#def-sigma-algebra"
+   "mds/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures#def-countable-additivity",
+   "mds/sets#def-set"
   ],
   [
    "mds/measures#def-counting-measure",
@@ -14728,6 +15032,30 @@
   [
    "mds/measures#def-counting-measure",
    "mds/measures#thm-power-set-sigma-algebra"
+  ],
+  [
+   "mds/measures#def-equal-almost-everywhere",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/measures#def-equal-almost-everywhere",
+   "mds/measures#def-almost-everywhere"
+  ],
+  [
+   "mds/measures#def-equal-almost-everywhere",
+   "mds/measures#def-measurable-function"
+  ],
+  [
+   "mds/measures#def-equal-almost-everywhere",
+   "mds/measures#def-measure-space"
+  ],
+  [
+   "mds/measures#def-essential-supremum-norm",
+   "mds/measures#def-measurable-function"
+  ],
+  [
+   "mds/measures#def-essential-supremum-norm",
+   "mds/measures#def-measure-space"
   ],
   [
    "mds/measures#def-event",
@@ -14739,15 +15067,19 @@
   ],
   [
    "mds/measures#def-finite-additivity",
-   "mds/measures#def-pairwise-disjoint"
-  ],
-  [
-   "mds/measures#def-finite-additivity",
    "mds/measures#def-sigma-algebra"
   ],
   [
    "mds/measures#def-finite-additivity",
    "mds/sets#def-extended-nonneg-reals"
+  ],
+  [
+   "mds/measures#def-finite-additivity",
+   "mds/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures#def-finite-additivity",
+   "mds/sets#def-set"
   ],
   [
    "mds/measures#def-finite-measure",
@@ -14758,20 +15090,12 @@
    "mds/sets#def-collection"
   ],
   [
-   "mds/measures#def-infinite-sum",
-   "mds/algebra#def-convergent-sequence"
+   "mds/measures#def-integral",
+   "mds/algebra#def-negative-part"
   ],
   [
-   "mds/measures#def-infinite-sum",
-   "mds/algebra#def-diverges-to-infinity"
-  ],
-  [
-   "mds/measures#def-infinite-sum",
-   "mds/measures#def-partial-sum"
-  ],
-  [
-   "mds/measures#def-infinite-sum",
-   "mds/measures#lem-nonneg-series"
+   "mds/measures#def-integral",
+   "mds/algebra#def-positive-negative-parts"
   ],
   [
    "mds/measures#def-integral",
@@ -14784,14 +15108,6 @@
   [
    "mds/measures#def-integral",
    "mds/measures#def-measure-space"
-  ],
-  [
-   "mds/measures#def-integral",
-   "mds/measures#def-negative-part"
-  ],
-  [
-   "mds/measures#def-integral",
-   "mds/measures#def-positive-negative-parts"
   ],
   [
    "mds/measures#def-integral-nonneg",
@@ -14811,7 +15127,11 @@
   ],
   [
    "mds/measures#def-integral-nonneg",
-   "mds/measures#def-pairwise-disjoint"
+   "mds/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures#def-integral-nonneg",
+   "mds/sets#def-set"
   ],
   [
    "mds/measures#def-lebesgue-measure",
@@ -14830,20 +15150,84 @@
    "mds/measures#def-lebesgue-measure"
   ],
   [
-   "mds/measures#def-linf-space",
-   "mds/measures#def-almost-everywhere"
+   "mds/measures#def-linf-function-space",
+   "mds/measures#def-essential-supremum-norm"
   ],
   [
-   "mds/measures#def-linf-space",
-   "mds/measures#def-lp-space"
-  ],
-  [
-   "mds/measures#def-linf-space",
+   "mds/measures#def-linf-function-space",
    "mds/measures#def-measurable-function"
+  ],
+  [
+   "mds/measures#def-linf-function-space",
+   "mds/measures#def-measure-space"
+  ],
+  [
+   "mds/measures#def-linf-function-space",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures#def-linf-space",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/measures#def-linf-space",
+   "mds/linear-algebra#def-norm"
+  ],
+  [
+   "mds/measures#def-linf-space",
+   "mds/measures#def-equal-almost-everywhere"
+  ],
+  [
+   "mds/measures#def-linf-space",
+   "mds/measures#def-essential-supremum-norm"
+  ],
+  [
+   "mds/measures#def-linf-space",
+   "mds/measures#def-linf-function-space"
   ],
   [
    "mds/measures#def-linf-space",
    "mds/measures#def-measure-space"
+  ],
+  [
+   "mds/measures#def-linf-space",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures#def-lp-function-space",
+   "mds/measures#def-lp-norm"
+  ],
+  [
+   "mds/measures#def-lp-function-space",
+   "mds/measures#def-measurable-function"
+  ],
+  [
+   "mds/measures#def-lp-function-space",
+   "mds/measures#def-measure-space"
+  ],
+  [
+   "mds/measures#def-lp-function-space",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/measures#def-lp-function-space",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures#def-lp-norm",
+   "mds/measures#def-measurable-function"
+  ],
+  [
+   "mds/measures#def-lp-norm",
+   "mds/measures#def-measure-space"
+  ],
+  [
+   "mds/measures#def-lp-norm",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/measures#def-lp-space",
+   "mds/functions#def-function"
   ],
   [
    "mds/measures#def-lp-space",
@@ -14851,19 +15235,27 @@
   ],
   [
    "mds/measures#def-lp-space",
-   "mds/measures#def-almost-everywhere"
+   "mds/measures#def-equal-almost-everywhere"
   ],
   [
    "mds/measures#def-lp-space",
-   "mds/measures#def-linf-space"
+   "mds/measures#def-lp-function-space"
   ],
   [
    "mds/measures#def-lp-space",
-   "mds/measures#def-measurable-function"
+   "mds/measures#def-lp-norm"
   ],
   [
    "mds/measures#def-lp-space",
    "mds/measures#def-measure-space"
+  ],
+  [
+   "mds/measures#def-lp-space",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/measures#def-lp-space",
+   "mds/sets#def-set"
   ],
   [
    "mds/measures#def-measurable-function",
@@ -14910,44 +15302,12 @@
    "mds/measures#def-measure-space"
   ],
   [
-   "mds/measures#def-negative-part",
-   "mds/measures#def-positive-negative-parts"
-  ],
-  [
-   "mds/measures#def-non-decreasing",
-   "mds/functions#def-sequence"
-  ],
-  [
-   "mds/measures#def-non-decreasing",
-   "mds/sets#def-extended-nonneg-reals"
-  ],
-  [
    "mds/measures#def-outcome",
    "mds/measures#def-probability-space"
   ],
   [
    "mds/measures#def-outcome",
    "mds/measures#def-sample-space"
-  ],
-  [
-   "mds/measures#def-partial-sum",
-   "mds/algebra#def-summation"
-  ],
-  [
-   "mds/measures#def-partial-sum",
-   "mds/functions#def-sequence"
-  ],
-  [
-   "mds/measures#def-partial-sum",
-   "mds/sets#def-extended-nonneg-reals"
-  ],
-  [
-   "mds/measures#def-positive-negative-parts",
-   "mds/measures#def-measurable-function"
-  ],
-  [
-   "mds/measures#def-positive-negative-parts",
-   "mds/measures#def-measure-space"
   ],
   [
    "mds/measures#def-probability-measure",
@@ -15014,22 +15374,6 @@
    "mds/measures#def-sigma-algebra"
   ],
   [
-   "mds/measures#lem-nonneg-series",
-   "mds/algebra#def-sequence-limit"
-  ],
-  [
-   "mds/measures#lem-nonneg-series",
-   "mds/measures#def-infinite-sum"
-  ],
-  [
-   "mds/measures#lem-nonneg-series",
-   "mds/measures#def-non-decreasing"
-  ],
-  [
-   "mds/measures#lem-nonneg-series",
-   "mds/measures#def-partial-sum"
-  ],
-  [
    "mds/measures#thm-countable-implies-finite",
    "mds/measures#def-countable-additivity"
   ],
@@ -15071,11 +15415,11 @@
   ],
   [
    "mds/measures#thm-sigma-algebra-closure",
-   "mds/functions#def-finite-set"
+   "mds/functions#def-closed-under"
   ],
   [
    "mds/measures#thm-sigma-algebra-closure",
-   "mds/measures#def-closed-under"
+   "mds/functions#def-finite-set"
   ],
   [
    "mds/measures#thm-sigma-algebra-closure",
@@ -15084,6 +15428,10 @@
   [
    "mds/measures#thm-sigma-algebra-closure",
    "mds/sets#def-empty-set"
+  ],
+  [
+   "mds/measures#thm-sigma-algebra-closure",
+   "mds/sets#def-union"
   ],
   [
    "mds/measures#thm-sigma-algebra-intersection",
@@ -15224,6 +15572,18 @@
   [
    "mds/optimization#def-objective-function",
    "mds/optimization#def-feasible-set"
+  ],
+  [
+   "mds/optimization#def-optimization-algorithm",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/optimization#def-optimization-algorithm",
+   "mds/optimization#def-feasible-set"
+  ],
+  [
+   "mds/optimization#def-optimization-algorithm",
+   "mds/optimization#def-objective-function"
   ],
   [
    "mds/optimization#def-quadratic-convergence",
@@ -15674,6 +16034,14 @@
    "mds/sets#def-unbounded-interval"
   ],
   [
+   "mds/sets#def-pairwise-disjoint",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/sets#def-strict-subset",
+   "mds/sets#def-set"
+  ],
+  [
    "mds/sets#def-strict-subset",
    "mds/sets#def-subset"
   ],
@@ -15856,6 +16224,14 @@
    "mds/algebra#def-summation"
   ],
   [
+   "mds/algebra-exponentials#def-infinite-sum",
+   "mds/algebra-exponentials#lem-nonneg-series"
+  ],
+  [
+   "mds/algebra#def-infinite-sum",
+   "mds/algebra#lem-nonneg-series"
+  ],
+  [
    "mds/calculus-derivatives#def-derivative",
    "mds/calculus-derivatives#def-differentiable"
   ],
@@ -15870,14 +16246,6 @@
   [
    "mds/linear-algebra#def-lincom-coefficient",
    "mds/linear-algebra#def-linear-combination"
-  ],
-  [
-   "mds/measures#def-infinite-sum",
-   "mds/measures#lem-nonneg-series"
-  ],
-  [
-   "mds/measures#def-linf-space",
-   "mds/measures#def-lp-space"
   ],
   [
    "mds/proof-writing#def-and",
@@ -15913,8 +16281,16 @@
    "mds/algebra#thm-mult-distr"
   ],
   [
+   "mds/algebra#def-infinite-sum",
+   "mds/algebra#lem-nonneg-series"
+  ],
+  [
    "mds/algebra#def-summation",
    "mds/algebra#def-lower-upper-limits"
+  ],
+  [
+   "mds/algebra-exponentials#def-infinite-sum",
+   "mds/algebra-exponentials#lem-nonneg-series"
   ],
   [
    "mds/algebra-sums#def-commutative",
@@ -15951,14 +16327,6 @@
   [
    "mds/linear-algebra-vectors#def-linear-combination",
    "mds/linear-algebra-vectors#def-lincom-coefficient"
-  ],
-  [
-   "mds/measures#def-infinite-sum",
-   "mds/measures#lem-nonneg-series"
-  ],
-  [
-   "mds/measures#def-lp-space",
-   "mds/measures#def-linf-space"
   ],
   [
    "mds/proof-writing#def-logical-connective",

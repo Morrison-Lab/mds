@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 03:11:51 (PDT)
+Last modified: 2026-10-19 11:35:40 (PDT)
 
 ## 1 Cosine and sine
 
@@ -47,6 +47,17 @@ Last modified: 2026-10-19 03:11:51 (PDT)
 
 > **NOTE:**
 >
+> **Definition 4 (Radian)** A **radian** is the [angle on the unit circle](#def-angle-unit-circle) between two points that are a distance of \\1\\ apart along the circle. An [angle](#def-angle-unit-circle) of \\\theta\\ is then \\\theta\\ radians.
+
+> **NOTE:**
+>
+> **Example 4 (Angles in radians)**  
+>
+> - The points \\(0, 1)\\, \\(-1, 0)\\ are a quarter of the [unit circle](#def-unit-circle) apart, so their [angle](#def-angle-unit-circle) is \\\pi/2\\ [radians](#def-radian).
+> - The points \\(0, 1)\\, \\(0, -1)\\ are half of the circle apart, so their angle is \\\pi\\ radians.
+
+> **NOTE:**
+>
 > **Proposition 1 (Range of an angle on the unit circle)** An [angle](#def-angle-unit-circle) between two points of the [unit circle](#def-unit-circle) is at least \\0\\, at most \\\pi\\ ([Definition 2](#def-pi)).
 
 > **NOTE:**
@@ -55,11 +66,11 @@ Last modified: 2026-10-19 03:11:51 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Cosine)** For a real number \\\theta\\, start at the point \\(1, 0)\\ of the unit circle ([Definition 1](#def-unit-circle)) and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The first coordinate of the point reached is the **cosine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\cos\theta\\.
+> **Definition 5 (Cosine)** For a real number \\\theta\\, start at the point \\(1, 0)\\ of the unit circle ([Definition 1](#def-unit-circle)) and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The first coordinate of the point reached is the **cosine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\cos\theta\\.
 
 > **NOTE:**
 >
-> **Example 4 (Cosines of some angles)**  
+> **Example 5 (Cosines of some angles)**  
 >
 > - \\\theta= 0\\ stays at \\(1, 0)\\, so \\\cos 0 = 1\\.
 > - \\\theta= \pi\\ goes half way around the circle, to \\(-1, 0)\\, so \\\cos\pi = -1\\.
@@ -70,16 +81,16 @@ Last modified: 2026-10-19 03:11:51 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Sine)** For a real number \\\theta\\, the second coordinate of the point reached from \\(1, 0)\\ by moving a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle ([Definition 4](#def-cosine-sine)) is the **sine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\sin\theta\\. The sine is one of the trigonometric functions [\[4\]](#ref-wikipedia_trigonometric_functions).
+> **Definition 6 (Sine)** For a real number \\\theta\\, the second coordinate of the point reached from \\(1, 0)\\ by moving a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle ([Definition 5](#def-cosine-sine)) is the **sine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\sin\theta\\. The sine is one of the trigonometric functions [\[4\]](#ref-wikipedia_trigonometric_functions).
 
 > **NOTE:**
 >
-> **Example 5 (Sines of some angles)**  
+> **Example 6 (Sines of some angles)**  
 >
 > - \\\theta= 0\\ stays at \\(1, 0)\\, so \\\sin 0 = 0\\.
 > - \\\theta= \pi\\ goes half way around the circle, to \\(-1, 0)\\, so \\\sin\pi = 0\\.
 > - \\\theta= \pi/2\\ goes a quarter of the way round, to \\(0, 1)\\, so \\\sin(\pi/2) = 1\\.
-> - \\\theta= \pi/4\\ reaches the point with \\x_1 = x_2 = \tfrac{1}{\sqrt{2}}\\ ([Example 4](#exm-cosine-sine)), so \\\sin(\pi/4) = \tfrac{1}{\sqrt{2}}\\.
+> - \\\theta= \pi/4\\ reaches the point with \\x_1 = x_2 = \tfrac{1}{\sqrt{2}}\\ ([Example 5](#exm-cosine-sine)), so \\\sin(\pi/4) = \tfrac{1}{\sqrt{2}}\\.
 
 > **NOTE:**
 >
@@ -93,7 +104,7 @@ Last modified: 2026-10-19 03:11:51 (PDT)
 
 > **NOTE:**
 >
-> **Example 6 (The unit circle and the angle \\\pi/3\\)** Take \\\theta= \pi/3\\, one sixth of the way round the circle. [Figure 1](#fig-cosine-sine-unit-circle) shows the point reached, \\(\cos\theta, \sin\theta)\\, and its two coordinates. The point is a vertex of a regular hexagon inscribed in the unit circle, whose sides have the same length as its radius, so the point is at distance \\1\\ from \\(1, 0)\\. Writing \\(x_1, x_2) = (\cos\theta, \sin\theta)\\,
+> **Example 7 (The unit circle and the angle \\\pi/3\\)** Take \\\theta= \pi/3\\, one sixth of the way round the circle. [Figure 1](#fig-cosine-sine-unit-circle) shows the point reached, \\(\cos\theta, \sin\theta)\\, and its two coordinates. The point is a vertex of a regular hexagon inscribed in the unit circle, whose sides have the same length as its radius, so the point is at distance \\1\\ from \\(1, 0)\\. Writing \\(x_1, x_2) = (\cos\theta, \sin\theta)\\,
 >
 > \\ \begin{aligned} 1 &= (x_1 - 1)^2 + x_2^2 \\ &= x_1^2 + x_2^2 - 2 x_1 + 1 \\ &= 2 - 2 x_1, \end{aligned} \\
 >
@@ -165,11 +176,11 @@ Last modified: 2026-10-19 03:11:51 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Arccosine)** The **arccosine** \\\arccos : \[-1, 1\] \to \[0, \pi\]\\ is the [function](functions.llms.md#def-function) that sends each [cosine](#def-cosine-sine), \\c \in \[-1, 1\]\\, to the one [real number](number-systems.llms.md#def-real-numbers) \\\theta\in \[0, \pi\]\\ whose cosine is \\c\\. By [Theorem 2](#thm-cosine-bijection), there is just one such \\\theta\\.
+> **Definition 7 (Arccosine)** The **arccosine** \\\arccos : \[-1, 1\] \to \[0, \pi\]\\ is the [function](functions.llms.md#def-function) that sends each [cosine](#def-cosine-sine), \\c \in \[-1, 1\]\\, to the one [real number](number-systems.llms.md#def-real-numbers) \\\theta\in \[0, \pi\]\\ whose cosine is \\c\\. By [Theorem 2](#thm-cosine-bijection), there is just one such \\\theta\\.
 
 > **NOTE:**
 >
-> **Example 7 (Three arccosines)**  
+> **Example 8 (Three arccosines)**  
 >
 > - The [arccosine](#def-arccosine) of one is \\\arccos 1 = 0\\, because the [cosine](#def-cosine-sine) of zero is \\\cos 0 = 1\\.
 > - The arccosine of zero is \\\arccos 0 = \pi/2\\, because the cosine of a quarter turn is \\\cos(\pi/2) = 0\\.

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 03:11:51 (PDT)
+Last modified: 2026-10-19 11:35:40 (PDT)
 
 ## 1 Equalities
 
@@ -126,7 +126,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 1* (Powers with real exponents). [Definition 21 in Polynomials, Exponentials and Logarithms](algebra-exponentials.llms.md#def-real-power) extends powers to real exponents when the base is positive.
+> *Remark 1* (Powers with real exponents). [Definition 24 in Polynomials, Exponentials and Logarithms](algebra-exponentials.llms.md#def-real-power) extends powers to real exponents when the base is positive.
 
 > **NOTE:**
 >
@@ -260,6 +260,26 @@ You are welcome to switch between decimal and percent notation freely; just make
 > - Let \\g(x) = x^2\\ on \\A = \mathopen{}\left\\-2, 0, 1, 2\right\\\mathclose{}\\. The values are \\g(-2) = 4\\, \\g(0) = 0\\, \\g(1) = 1\\ and \\g(2) = 4\\, so the largest value is \\4\\ and \\\arg \max\_{x \in A} g(x) = \mathopen{}\left\\-2, 2\right\\\mathclose{}\\. This argmax has two elements, so it is not written as a single \\\hat{x}\\.
 > - Let \\f(x) = x\\ on \\\[0, 1)\\. As in [Example 8](#exm-maximum), for every input \\x\\ the input \\\tfrac{x + 1}{2}\\ has a larger value, so no input attains a largest value, and \\\arg \max\_{x \in \[0, 1)} f(x)\\ is the [empty set](sets.llms.md#def-empty-set).
 
+> **NOTE:**
+>
+> **Definition 17 (Positive part of a function)** Let \\S\\ be a [set](sets.llms.md#def-set), and let \\f : S \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). The **positive part** of \\f\\ is the non-negative function
+>
+> \\ f^{+}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\\f(s), 0\right\\\mathclose{}. \\
+
+> **NOTE:**
+>
+> **Example 10 (The positive part of the identity function)** For \\f(x) = x\\ on \\\mathbb{R}\\, the [positive part](#def-positive-negative-parts) is \\f^{+}(x) = \max\mathopen{}\left\\x, 0\right\\\mathclose{}\\. At \\x = 3\\, \\f^{+}(3) = \max\mathopen{}\left\\3, 0\right\\\mathclose{} = 3\\, and at \\x = -2\\, \\f^{+}(-2) = \max\mathopen{}\left\\-2, 0\right\\\mathclose{} = 0\\.
+
+> **NOTE:**
+>
+> **Definition 18 (Negative part of a function)** For \\f\\ as in [Definition 17](#def-positive-negative-parts), the **negative part** of \\f\\ is the non-negative [function](functions.llms.md#def-function)
+>
+> \\ f^{-}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\\-f(s), 0\right\\\mathclose{}. \\
+
+> **NOTE:**
+>
+> **Example 11 (The negative part of the identity function)** For \\f(x) = x\\ on \\\mathbb{R}\\, the [negative part](#def-negative-part) is \\f^{-}(x) = \max\mathopen{}\left\\-x, 0\right\\\mathclose{}\\. At \\x = 3\\, \\f^{-}(3) = \max\mathopen{}\left\\-3, 0\right\\\mathclose{} = 0\\, and at \\x = -2\\, \\f^{-}(-2) = \max\mathopen{}\left\\2, 0\right\\\mathclose{} = 2\\.
+
 ## 6 Global and local minimizers
 
 > **NOTE:**
@@ -297,7 +317,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 17 (Global minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). A point \\x^\* \in A\\ is a **global minimizer** of \\f\\ over \\A\\ if \\f(x^\*) \le f(x)\\ for all \\x \in A\\.
+> **Definition 19 (Global minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). A point \\x^\* \in A\\ is a **global minimizer** of \\f\\ over \\A\\ if \\f(x^\*) \le f(x)\\ for all \\x \in A\\.
 
 > **NOTE:**
 >
@@ -305,19 +325,19 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 18 (Local minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). A point \\x^\* \in A\\ is a **local minimizer** of \\f\\ if there is a number \\\delta\> 0\\ such that \\f(x^\*) \le f(x)\\ for all \\x \in A\\ with \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\, where \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
+> **Definition 20 (Local minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](functions.llms.md#def-function). A point \\x^\* \in A\\ is a **local minimizer** of \\f\\ if there is a number \\\delta\> 0\\ such that \\f(x^\*) \le f(x)\\ for all \\x \in A\\ with \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\, where \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
 
 > **NOTE:**
 >
 > *Remark 6* (Local and global minimizers). For \\p = 1\\, \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x - x^\*\right\|\mathclose{}\\. For example, with \\x^\* = 1\\ and \\\delta= 1\\, the condition \\\mathopen{}\left\|x - 1\right\|\mathclose{} \< 1\\ means \\0 \< x \< 2\\.
 >
-> Every global minimizer ([Definition 17](#def-global-minimizer)) is a local minimizer: take any \\\delta\> 0\\. For example, \\x^\* = 0\\ is a global minimizer of \\f(x) = x^2\\ on \\\mathbb{R}\\, so it is also a local minimizer.
+> Every global minimizer ([Definition 19](#def-global-minimizer)) is a local minimizer: take any \\\delta\> 0\\. For example, \\x^\* = 0\\ is a global minimizer of \\f(x) = x^2\\ on \\\mathbb{R}\\, so it is also a local minimizer.
 >
 > The [converse](proof-writing.llms.md#def-converse) fails. In [Exercise 2](#exr-local-vs-global-min), \\x^\* = 1\\ is a local minimizer of \\f(x) = x^3 - 3x\\ (take \\\delta= 1\\), but not a global one.
 
 > **NOTE:**
 >
-> **Example 10 (A point that is not a local minimizer)** For \\f(x) = x^3 - 3x\\, the point \\x = -1\\ is not a local minimizer. For any \\t\\,
+> **Example 12 (A point that is not a local minimizer)** For \\f(x) = x^3 - 3x\\, the point \\x = -1\\ is not a local minimizer. For any \\t\\,
 >
 > \\ \begin{aligned} f(-1 + t) &= (-1 + t)^3 - 3(-1 + t) && \text{(substitute)} \\ &= (-1 + 3t - 3t^2 + t^3) - 3(-1 + t) && \text{(expand the cube)} \\ &= -1 + 3t - 3t^2 + t^3 + 3 - 3t && \text{(multiply } -3 \text{ into the parentheses)} \\ &= 2 - 3t^2 + t^3 && \text{(} 3t - 3t = 0 \text{ and } -1 + 3 = 2 \text{)} \\ &= 2 + t^2 (t - 3) && \text{(factor out } t^2 \text{)} \\ &= f(-1) + t^2 (t - 3), && \text{(} f(-1) = (-1)^3 - 3(-1) \text{, which equals } 2 \text{)} \end{aligned} \\
 >
