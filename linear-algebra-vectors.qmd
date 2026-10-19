@@ -12,9 +12,4 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
-```{r}
-#| include: false
-reticulate::py_require("numpy")
-```
-
 {{< include mds/_subfiles/_sec_linear_algebra_vectors.qmd >}}
