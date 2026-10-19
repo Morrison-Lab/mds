@@ -1,12 +1,12 @@
 :::{#rem-angle-unit-circle-angle}
 #### How the two angles relate
 
-For vectors in the plane, the [angle between two vectors](#def-angle)
+For nonzero vectors in the plane, $\vecf{x}, \vecf{y}$,
+the [angle between the vectors](#def-angle)
 equals the [angle on the unit circle](algebra-trigonometry.qmd#def-angle-unit-circle)
-between the points in their directions.
-The point in the direction of a nonzero vector, $\vecf{x}$, is $\vecf{x} / \norm{\vecf{x}}$.
-So the [cosine similarity](#def-cosine-similarity) of two vectors
-is the [dot product](linear-algebra.qmd#def-dot-product) of their points.
+between the points $\vecf{x} / \norm{\vecf{x}}$, $\vecf{y} / \norm{\vecf{y}}$.
+The [cosine similarity](#def-cosine-similarity) of the vectors
+is the [dot product](linear-algebra.qmd#def-dot-product) of these points.
 Rotating the plane puts the first point at $(1, 0)$,
 with no change to the distance between the points along the circle or to their dot product.
 For the angle on the unit circle, $\angpar$, the second point is then $(\cos\angpar, \pm\sin\angpar)$,
