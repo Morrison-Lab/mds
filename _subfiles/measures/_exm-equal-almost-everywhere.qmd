@@ -2,8 +2,8 @@
 #### A function that differs from $0$ at one point
 
 Let $S = \reals$ with the [Lebesgue measure](#def-lebesgue-measure) $\measure$.
-Let $f(s) = 1$ if $s = 0$ and $f(s) = 0$ otherwise.
-The set $\set{s : f(s) \neq 0} = \set{0}$ has [measure zero](#def-measure-zero),
-so $f = 0$ $\measure$-a.e. by @def-equal-almost-everywhere.
+Let $f(s) = 1$ if $s = 0$, and $f(s) = 0$ otherwise.
+The [set](sets.qmd#def-set) $\set{s : f(s) \neq 0} = \set{0}$ has [measure zero](#def-measure-zero),
+so $f = 0$ [almost everywhere](#def-almost-everywhere) by @def-equal-almost-everywhere.
 
 :::

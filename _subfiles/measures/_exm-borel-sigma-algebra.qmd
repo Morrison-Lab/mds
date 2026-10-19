@@ -1,10 +1,10 @@
 :::{#exm-borel-sigma-algebra}
 #### The Borel $\sigma$-algebra contains $\reals$ and the half-lines
 
-The interval $(-\infty, 0)$ is in $\borel$ by @def-borel-sigma-algebra.
-So is its complement $[0, \infty)$,
+The [interval](sets.qmd#def-interval) $(-\infty, 0)$ is in $\borel$ by @def-borel-sigma-algebra.
+So is its [complement](sets.qmd#def-complement) $[0, \infty)$,
 because $\borel$ is a $\sigma$-algebra (@def-sigma-algebra).
-The set $\reals$ is in $\borel$ too:
+The [set](sets.qmd#def-set) $\reals$ is in $\borel$ too:
 a $\sigma$-algebra on $\reals$ contains $\reals$ itself.
 
 :::

@@ -3,10 +3,10 @@
 
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
 For each $f$ in the [$\mathcal{L}^\infty$ space](#def-linf-function-space),
-let $[f]$ be the set of all functions in $\mathcal{L}^\infty(S, \salg, \measure)$ that are
+let $[f]$ be the [set](sets.qmd#def-set) of all [functions](functions.qmd#def-function) in $\mathcal{L}^\infty(S, \salg, \measure)$ that are
 [equal almost everywhere](#def-equal-almost-everywhere) to $f$.
 The **$L^\infty$ space** $L^\infty(S, \salg, \measure)$ (or simply **$L^\infty(\measure)$**)
-is the set of all such sets $[f]$,
+is the [set](sets.qmd#def-set) of all such [sets](sets.qmd#def-set) $[f]$,
 with the [norm](linear-algebra.qmd#def-norm) $\norm{[f]}_\infty \eqdef \norm{f}_\infty$
 ([essential supremum norm](#def-essential-supremum-norm)).
 

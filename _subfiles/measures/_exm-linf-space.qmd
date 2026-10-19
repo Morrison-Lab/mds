@@ -1,8 +1,8 @@
 :::{#exm-linf-space}
 #### Bounded functions equal almost everywhere
 
-Let $f$ be the function in @exm-essential-supremum-norm and $h(s) = s$ on $[0, 1]$.
-Then $f = h$ $\measure$-a.e. (@def-equal-almost-everywhere),
+Let $f$ be the [function](functions.qmd#def-function) in @exm-essential-supremum-norm and $h(s) = s$ on $[0, 1]$.
+Then $f = h$ almost everywhere (@def-equal-almost-everywhere),
 so $[f] = [h]$ in $L^\infty(\measure)$,
 and $\norm{[f]}_\infty = \norm{h}_\infty = 1$.
 

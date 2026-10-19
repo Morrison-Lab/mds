@@ -3,6 +3,6 @@
 
 A **Borel set**
 [@wikipedia_borel_set]
-is a set in the [Borel $\sigma$-algebra](#def-borel-sigma-algebra) $\borel$.
+is a [set](sets.qmd#def-set) in the [Borel $\sigma$-algebra](#def-borel-sigma-algebra) $\borel$.
 
 :::

@@ -1,13 +1,13 @@
 :::{#def-lp-space}
 #### $L^p$ space ($L^p(S, \salg, \measure)$, $L^p(\measure)$)
 
-Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space),
-and let $p \ge 1$ be a real number.
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
+Let $p \ge 1$ be a [real number](number-systems.qmd#def-real-numbers).
 For each $f$ in the [$\mathcal{L}^p$ space](#def-lp-function-space),
-let $[f]$ be the set of all functions in $\mathcal{L}^p(S, \salg, \measure)$ that are
+let $[f]$ be the [set](sets.qmd#def-set) of all [functions](functions.qmd#def-function) in $\mathcal{L}^p(S, \salg, \measure)$ that are
 [equal almost everywhere](#def-equal-almost-everywhere) to $f$.
 The **$L^p$ space** $L^p(S, \salg, \measure)$ (or simply **$L^p(\measure)$**)
-is the set of all such sets $[f]$,
+is the [set](sets.qmd#def-set) of all such [sets](sets.qmd#def-set) $[f]$,
 with the [norm](linear-algebra.qmd#def-norm) $\norm{[f]}_p \eqdef \norm{f}_p$
 ([$L^p$ norm](#def-lp-norm)).
 

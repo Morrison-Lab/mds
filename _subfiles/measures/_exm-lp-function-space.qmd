@@ -1,7 +1,7 @@
 :::{#exm-lp-function-space}
 #### An $L^1$ function not in $L^2$
 
-Consider the interval $(0, 1)$ equipped with the Borel $\sigma$-algebra (@def-borel-sigma-algebra)
+Consider the [interval](sets.qmd#def-interval) $(0, 1)$ with the Borel $\sigma$-algebra (@def-borel-sigma-algebra)
 and Lebesgue measure $\measure$ (@def-lebesgue-measure).
 Define $f : (0, 1) \to \reals$ by $f(x) = x^{-1/2}$.
 
@@ -24,7 +24,7 @@ Define $f : (0, 1) \to \reals$ by $f(x) = x^{-1/2}$.
    &= \frac{1}{x}.
    \end{aligned}
    $$
-   The integral is:
+   The [integral](#def-integral) is:
    $$
    \begin{aligned}
    \int_0^1 \frac{1}{x} \, dx
@@ -33,8 +33,8 @@ Define $f : (0, 1) \to \reals$ by $f(x) = x^{-1/2}$.
    &= \infty.
    \end{aligned}
    $$
-   Therefore, $\norm{f}_2 = \infty$, so $f \notin \mathcal{L}^2((0, 1), \measure)$.
+   So $\norm{f}_2 = \infty$, so $f \notin \mathcal{L}^2((0, 1), \measure)$.
 
-This shows that $\mathcal{L}^2 \subset \mathcal{L}^1$ on finite-measure sets: higher exponents impose stricter integrability requirements near singularities.
+This shows that $\mathcal{L}^2 \subset \mathcal{L}^1$ on [sets](sets.qmd#def-set) of [finite measure](#def-finite-measure): a larger $p$ imposes stricter requirements near singularities.
 
 :::
