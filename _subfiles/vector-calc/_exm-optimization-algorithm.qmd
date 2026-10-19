@@ -1,0 +1,22 @@
+:::{#exm-optimization-algorithm}
+#### Exhaustive search over a finite feasible set
+
+Let $f(\vx) = x_1^2 + x_2^2$,
+with the [feasible set](#def-feasible-set) the three points
+$\cb{\tp{(1, 0.5)}, \tp{(3, -1)}, \tp{(-1, 2)}}$ of the line of @exm-feasible-set.
+The procedure "evaluate $f$ at every feasible point;
+return the point with the smallest [value](functions.qmd#def-value)"
+is an [optimization algorithm](#def-optimization-algorithm).
+Computing $f$ at each point gives
+
+$$
+\begin{aligned}
+f(1, 0.5) &= 1 + 0.25 = 1.25, \\
+f(3, -1) &= 9 + 1 = 10, \\
+f(-1, 2) &= 1 + 4 = 5,
+\end{aligned}
+$$
+
+so it returns $\tp{(1, 0.5)}$, a [minimizer of $f$ over this feasible set](#def-minimizer-over-feasible-set).
+
+:::

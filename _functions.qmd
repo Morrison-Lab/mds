@@ -149,6 +149,14 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< include mds/_subfiles/functions/_exm-closed-under.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_def-logistic-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-logistic-function.qmd >}}
+
 ## Countable sets
 
 {{< include mds/_subfiles/functions/_def-finite-set.qmd >}}
