@@ -2,7 +2,7 @@
 #### Logistic function (also called the sigmoid or expit)
 
 The **logistic function**, also called the **sigmoid** or **expit**, is
-the function $\sigmoid : \reals \to (0, 1)$ with
+the [function](#def-function) $\sigmoid : \reals \to (0, 1)$ with
 [@wikipedia_logistic_function]
 
 $$\sigmoidf{z} \eqdef \frac{1}{1 + e^{-z}}.$$
