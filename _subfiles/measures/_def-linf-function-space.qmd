@@ -1,0 +1,10 @@
+:::{#def-linf-function-space}
+#### $\mathcal{L}^\infty$ space ($\mathcal{L}^\infty(S, \salg, \measure)$)
+
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
+The **$\mathcal{L}^\infty$ space** $\mathcal{L}^\infty(S, \salg, \measure)$
+is the [set](sets.qmd#def-set) of all [measurable functions](#def-measurable-function) $f : S \to \reals$
+whose [essential supremum norm](#def-essential-supremum-norm) is less than $\infty$:
+$\norm{f}_\infty < \infty$.
+
+:::

@@ -55,6 +55,14 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_exm-borel-sigma-algebra-half-lines.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-borel-set.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_exm-borel-sigma-algebra.qmd >}}
 
 ## Pairwise disjoint sets
@@ -263,11 +271,59 @@ is the starting point of the Morrison Lab's probability notes
 
 ## $L^p$ spaces
 
+{{< include mds/_subfiles/measures/_def-lp-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-lp-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-lp-function-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-lp-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-equal-almost-everywhere.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-equal-almost-everywhere.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_def-lp-space.qmd >}}
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_exm-lp-space-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-essential-supremum-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-essential-supremum-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-linf-function-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-linf-function-space.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_def-linf-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-linf-space.qmd >}}
 
 {{< slidebreak >}}
 

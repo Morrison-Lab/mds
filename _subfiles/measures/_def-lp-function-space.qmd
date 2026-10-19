@@ -1,0 +1,10 @@
+:::{#def-lp-function-space}
+#### $\mathcal{L}^p$ space ($\mathcal{L}^p(S, \salg, \measure)$)
+
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
+Let $p \ge 1$ be a [real number](number-systems.qmd#def-real-numbers).
+The **$\mathcal{L}^p$ space** $\mathcal{L}^p(S, \salg, \measure)$
+is the [set](sets.qmd#def-set) of all [measurable functions](#def-measurable-function) $f : S \to \reals$
+whose [$L^p$ norm](#def-lp-norm) is less than $\infty$: $\norm{f}_p < \infty$.
+
+:::

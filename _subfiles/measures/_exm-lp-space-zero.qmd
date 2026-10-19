@@ -1,0 +1,11 @@
+:::{#exm-lp-space-zero}
+#### The zero element of $L^p$
+
+Let $f$ be the [function](functions.qmd#def-function) in @exm-equal-almost-everywhere, which is $1$ at $s = 0$ and $0$ elsewhere.
+Then $f = 0$ [almost everywhere](#def-almost-everywhere), so $[f] = [0]$.
+Also $\norm{f}_p = 0$ although $f \neq 0$,
+so $\norm{f}_p = 0$ can hold for a nonzero element of $\mathcal{L}^p$;
+on $L^p(\measure)$, $\norm{[f]}_p = 0$ only for $[f] = [0]$,
+as a [norm](linear-algebra.qmd#def-norm) requires.
+
+:::

@@ -1,0 +1,12 @@
+:::{#def-lp-norm}
+#### $L^p$ norm ($p$-norm of a function)
+
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
+For any [real number](number-systems.qmd#def-real-numbers) $p \ge 1$,
+the **$L^p$ norm** of a [measurable function](#def-measurable-function) $f : S \to \reals$ is:
+
+$$
+\norm{f}_p \eqdef \paren{\int_S \abs{f}^p \, d\measure}^{1/p}.
+$$
+
+:::

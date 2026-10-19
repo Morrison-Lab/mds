@@ -1,0 +1,12 @@
+:::{#exm-essential-supremum-norm}
+#### The essential supremum norm ignores a null set
+
+Let $S = [0, 1]$ with the [Lebesgue measure](#def-lebesgue-measure) $\measure$.
+Let $f(s) = 5$ if $s = 0$ and $f(s) = s$ otherwise.
+Then $\sup_s \abs{f(s)} = 5$.
+For $C \ge 1$, the [set](sets.qmd#def-set) $\set{s : \abs{f(s)} > C}$ is empty or $\set{0}$,
+so it has [measure zero](#def-measure-zero),
+and for $C < 1$ it has positive [measure](#def-measure).
+By @def-essential-supremum-norm, $\norm{f}_\infty = 1$.
+
+:::

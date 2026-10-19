@@ -1,0 +1,26 @@
+:::{#exm-lp-norm}
+#### The $L^1$ and $L^2$ norms of $x \mapsto x$ on the unit interval
+
+Let $S = [0, 1]$ with the [Lebesgue measure](#def-lebesgue-measure) $\measure$,
+and let $f(x) = x$.
+By @def-lp-norm,
+
+$$
+\begin{aligned}
+\norm{f}_1
+&= \int_0^1 x \, dx \\
+&= \frac{1}{2},
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\norm{f}_2
+&= \paren{\int_0^1 x^2 \, dx}^{1/2} \\
+&= \paren{\frac{1}{3}}^{1/2}.
+\end{aligned}
+$$
+
+:::
