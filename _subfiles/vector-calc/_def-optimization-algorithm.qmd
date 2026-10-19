@@ -1,10 +1,21 @@
 :::{#def-optimization-algorithm}
 #### Optimization algorithm
 
-With $(f, F)$ as in @def-objective-function,
-an **optimization algorithm**
+Let:
+
+- $f : \reals^p \to \reals$: an [objective function](#def-objective-function);
+- $F \subseteq \reals^p$: a [feasible set](#def-feasible-set).
+
+An **optimization algorithm**
 [@wikipedia_mathematical_optimization]
-is a step-by-step procedure that, given $(f, F)$,
-returns a feasible point $\vx^\dagger \in F$ intended to make $f(\vx^\dagger)$ small.
+is a step-by-step procedure that maps the pair $(f, F)$ to a feasible point $\vx^\dagger$:
+
+$$
+(f, F) \mapsto \vx^\dagger \in F.
+$$ {#eq-optimization-algorithm}
+
+In words:
+given $(f, F)$,
+the procedure returns a feasible point $\vx^\dagger$ intended to make $f(\vx^\dagger)$ small.
 
 :::
