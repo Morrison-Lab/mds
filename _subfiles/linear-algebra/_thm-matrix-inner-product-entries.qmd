@@ -51,22 +51,22 @@ From @def-matrix-inner-product:
 $$
 \ba
 \iprod{\matr{A}}{\matr{B}}
-&= \tr\paren{\tp{\matr{A}}\matr{B}}
+&= \trf{\tp{\matr{A}}\matr{B}}
 && \text{(definition of the inner product)}
 \\
-&= \tr\paren{
+&= \trf{
 \tp{\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}}
 \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix}
 }
 && \text{(substitute)}
 \\
-&= \tr\paren{
+&= \trf{
 \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}
 \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix}
 }
 && \text{(definition of the transpose)}
 \\
-&= \tr\paren{\begin{bmatrix} -3 & 7 \\ -4 & 10 \end{bmatrix}}
+&= \trf{\begin{bmatrix} -3 & 7 \\ -4 & 10 \end{bmatrix}}
 && \text{(multiply)}
 \\
 &= -3 + 10

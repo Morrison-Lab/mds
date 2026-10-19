@@ -1,0 +1,21 @@
+:::{#cor-pearson-angle}
+#### Pearson correlation is the cosine of the angle between the centered vectors
+
+For the two data vectors $\vx, \vy \in \reals^n$ of @thm-pearson-cosine-centered,
+the centered vectors $\cent{\vx}$, $\cent{\vy}$ are nonzero,
+so they have an [angle](#def-angle) $\angpar$.
+The [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) $r$ satisfies
+
+$$
+r = \cos\angpar.
+$$
+
+:::
+
+::: proof
+
+By @thm-pearson-cosine-centered, $r = \cossim(\cent{\vx}, \cent{\vy})$.
+By @def-angle, $\angpar = \arccos\paren{\cossim(\cent{\vx}, \cent{\vy})}$,
+so $\cos\angpar = \cossim(\cent{\vx}, \cent{\vy})$ (@rem-angle-well-defined).
+
+:::

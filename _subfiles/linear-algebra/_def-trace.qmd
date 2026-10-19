@@ -19,7 +19,7 @@ $$\tr(\matr{M}) \eqdef \sumip M_{ii}$$
 
 $$
 \begin{aligned}
-\tr\paren{\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}}
+\trf{\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}}
 &= 1 + 4 \\
 &= 5
 \end{aligned}

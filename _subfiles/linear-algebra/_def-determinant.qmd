@@ -11,7 +11,7 @@ is the number defined recursively in $p$:
 - For $p = 1$, $\det(\matr{A}) = a_{11}$.
 - For $p \ge 2$,
   $$
-  \det(\matr{A}) = \sumjp (-1)^{1+j}\, a_{1j} \det\paren{\matr{A}_{(1j)}},
+  \det(\matr{A}) = \sumjp (-1)^{1+j}\, a_{1j} \detf{\matr{A}_{(1j)}},
   $$
   where $\matr{A}_{(1j)}$ is the $(p-1) \times (p-1)$ matrix
   left after deleting row $1$ and column $j$ of $\matr{A}$.
@@ -31,8 +31,8 @@ So:
 $$
 \ba
 \det(\matr{A})
-&= (-1)^{1+1}\, a \det\paren{\begin{bmatrix} d \end{bmatrix}}
- + (-1)^{1+2}\, b \det\paren{\begin{bmatrix} c \end{bmatrix}}
+&= (-1)^{1+1}\, a \detf{\begin{bmatrix} d \end{bmatrix}}
+ + (-1)^{1+2}\, b \detf{\begin{bmatrix} c \end{bmatrix}}
 && \text{(definition, } p = 2 \text{)}
 \\
 &= a d - b c
@@ -44,7 +44,7 @@ For example,
 
 $$
 \begin{aligned}
-\det\paren{\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}} &= 2 \cd 2 - 1 \cd 1 \\
+\detf{\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}} &= 2 \cd 2 - 1 \cd 1 \\
 &= 3.
 \end{aligned}
 $$
