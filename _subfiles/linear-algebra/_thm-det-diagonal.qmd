@@ -6,7 +6,7 @@ The determinant (@def-determinant) of a $p \times p$ diagonal matrix
 is the product of its diagonal entries:
 
 $$
-\det\paren{
+\detf{
 \begin{bmatrix}
 d_1    & \cdots & 0      \\
 \vdots & \ddots & \vdots \\
@@ -33,11 +33,11 @@ leaves the diagonal matrix with diagonal entries $d_2, \ldots, d_p$:
 $$
 \ba
 \det(\matr{D})
-&= (-1)^{1+1}\, d_1 \det\paren{\matr{D}_{(11)}}
- + \sum_{j=2}^p (-1)^{1+j} \cd 0 \cd \det\paren{\matr{D}_{(1j)}}
+&= (-1)^{1+1}\, d_1 \detf{\matr{D}_{(11)}}
+ + \sum_{j=2}^p (-1)^{1+j} \cd 0 \cd \detf{\matr{D}_{(1j)}}
 && \text{(definition)}
 \\
-&= d_1 \det\paren{\matr{D}_{(11)}}
+&= d_1 \detf{\matr{D}_{(11)}}
 && \text{(drop the zero terms)}
 \\
 &= d_1 \prod_{i=2}^p d_i

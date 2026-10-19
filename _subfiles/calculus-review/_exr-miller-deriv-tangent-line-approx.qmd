@@ -18,11 +18,11 @@ $$f'(x) = 4 - \sqrt{2}\sin x$$
 **2.** Evaluate $f$ and $f'$ at $x_0 = \pi/4$:
 
 $$\ba
-f(\pi/4) &= 4\paren{\frac{\pi}{4}} + \sqrt{2}\cos\paren{\frac{\pi}{4}} \\
+f(\pi/4) &= 4\paren{\frac{\pi}{4}} + \sqrt{2}\cosf{\frac{\pi}{4}} \\
 &= \pi + \sqrt{2}\paren{\frac{\sqrt{2}}{2}} \\
 &= \pi + 1
 \\
-f'(\pi/4) &= 4 - \sqrt{2}\sin\paren{\frac{\pi}{4}} \\
+f'(\pi/4) &= 4 - \sqrt{2}\sinf{\frac{\pi}{4}} \\
 &= 4 - \sqrt{2}\paren{\frac{\sqrt{2}}{2}} \\
 &= 4 - 1 \\
 &= 3
@@ -38,7 +38,7 @@ $$f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593$$
 
 The exact value is:
 
-$$f(\pi/4 + 0.01) = 4\paren{\frac{\pi}{4} + 0.01} + \sqrt{2}\cos\paren{\frac{\pi}{4} + 0.01} \approx 4.171543$$
+$$f(\pi/4 + 0.01) = 4\paren{\frac{\pi}{4} + 0.01} + \sqrt{2}\cosf{\frac{\pi}{4} + 0.01} \approx 4.171543$$
 
 The approximation error is $|4.171593 - 4.171543| \approx 0.00005$, on the order of $(0.01)^2 = 10^{-4}$.
 :::
