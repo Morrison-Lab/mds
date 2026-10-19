@@ -1,0 +1,8 @@
+:::{#exm-angle-unit-circle}
+#### Three angles on the unit circle
+
+- The points $(1, 0)$ and $(0, 1)$ are a quarter of the circle apart, so their angle is $\pi/2$.
+- The points $(1, 0)$ and $(-1, 0)$ are half of the circle apart, so their angle is $\pi$.
+- The point $(1, 0)$ and itself are $0$ apart, so their angle is $0$.
+
+:::

@@ -8,6 +8,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-angle-unit-circle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-angle-unit-circle.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-cosine-sine.qmd >}}
 
 {{< slidebreak >}}

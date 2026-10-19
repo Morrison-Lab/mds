@@ -1,0 +1,8 @@
+:::{#def-angle-unit-circle}
+#### Angle on the unit circle
+
+The **angle** between two points of the [unit circle](#def-unit-circle)
+is the length of the shorter arc of the circle that joins them.
+An angle is measured in radians, and it lies between $0$ and the number $\pi$ (@def-pi).
+
+:::
