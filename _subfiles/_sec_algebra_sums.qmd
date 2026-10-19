@@ -180,6 +180,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_thm-product-of-sums.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-product-of-sums.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_thm-square-of-a-sum.qmd >}}
 
 ## Summation notation {#sec-summation}
