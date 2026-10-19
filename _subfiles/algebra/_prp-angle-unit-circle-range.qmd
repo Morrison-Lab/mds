@@ -2,7 +2,7 @@
 #### Range of an angle on the unit circle
 
 An [angle](#def-angle-unit-circle) between two points of the [unit circle](#def-unit-circle)
-is at least $0$ and at most $\pi$ (@def-pi).
+is at least $0$, at most $\pi$ (@def-pi).
 
 :::
 
