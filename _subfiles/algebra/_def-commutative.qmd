@@ -7,6 +7,6 @@ is **commutative**
 if $a \star b = b \star a$ for all $a, b \in S$:
 the order of the two inputs does not matter.
 Some sources call a commutative operation **symmetric**,
-as in the theorem titles "Sums are symmetric" and "Products are symmetric".
+as in the theorem titles "Sums are symmetric" and "Products are symmetric". <!-- check-term-links: allow -->
 
 :::
