@@ -47,7 +47,7 @@ $$
 = \begin{bmatrix} 2 & 0 \\ 1 & 0 \end{bmatrix}.
 $$
 
-$\matr{A}$ has rank $2$, because its columns $(1, 0)$ and $(1, 1)$ are linearly independent.
+$\matr{A}$ has [rank](linear-algebra-subspaces.qmd#def-rank) $2$, because its columns $(1, 0)$ and $(1, 1)$ are [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent).
 $\matr{B}$ has rank $1$, because its second column is $\vzero_2$ and its first is not,
 and $\matr{A} \matr{B}$ has rank $1$ for the same reason.
 So $\operatorname{rank}(\matr{A} \matr{B}) = 1 \le \operatorname{rank}(\matr{B}) = 1$ (@thm-rank-product-right),

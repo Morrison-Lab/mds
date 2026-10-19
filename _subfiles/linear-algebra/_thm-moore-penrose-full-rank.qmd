@@ -1,10 +1,10 @@
 :::{#thm-moore-penrose-full-rank}
 #### The Moore-Penrose inverse of a matrix of full column rank or full row rank
 
-Let $\matr{A}$ be an $m \times n$ matrix.
+Let $\matr{A}$ be an $m \times n$ [matrix](linear-algebra-matrices.qmd#def-matrix).
 
 1. If $\matr{A}$ has full column rank (@def-full-column-rank), then
-   $\tp{\matr{A}} \matr{A}$ is invertible and
+   $\tp{\matr{A}} \matr{A}$ is [invertible](linear-algebra-special-matrices.qmd#def-matrix-inverse) and
    $\matr{A}^+ = \inv{(\tp{\matr{A}} \matr{A})}\,\tp{\matr{A}}$.
 2. If $\operatorname{rank}(\matr{A}) = m$, then
    $\matr{A} \tp{\matr{A}}$ is invertible and
@@ -14,11 +14,11 @@ Let $\matr{A}$ be an $m \times n$ matrix.
 
 ::: proof
 
-By @thm-moore-penrose-unique, it is enough to show that the matrix $\matr{G}$ named in each part
+By @thm-moore-penrose-unique, it is enough to show that the [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{G}$ named in each part
 satisfies the four conditions of @def-moore-penrose.
 
 **Part 1.**
-$\tp{\matr{A}} \matr{A}$ is invertible by @thm-gram-invertible.
+$\tp{\matr{A}} \matr{A}$ is [invertible](linear-algebra-special-matrices.qmd#def-matrix-inverse) by @thm-gram-invertible.
 Let $\matr{G} = \inv{(\tp{\matr{A}} \matr{A})}\,\tp{\matr{A}}$.
 Then
 
@@ -42,7 +42,7 @@ $$
   = \matr{A}\,\inv{\tp{(\tp{\matr{A}} \matr{A})}}\,\tp{\matr{A}}
   = \matr{A}\,\inv{(\tp{\matr{A}} \matr{A})}\,\tp{\matr{A}}
   = \matr{A} \matr{G}$,
-  by @thm-transpose-product, @thm-inverse-transpose, and because $\tp{\matr{A}} \matr{A}$ is symmetric.
+  by @thm-transpose-product, @thm-inverse-transpose, and because $\tp{\matr{A}} \matr{A}$ is [symmetric](linear-algebra-special-matrices.qmd#def-symmetric-matrix).
 
 **Part 2.**
 $\operatorname{rank}(\matr{A} \tp{\matr{A}}) = \operatorname{rank}(\matr{A}) = m$ (@thm-rank-transpose),
@@ -68,7 +68,7 @@ Then $\matr{A} \matr{G} = \matr{A} \tp{\matr{A}}\,\inv{(\matr{A} \tp{\matr{A}})}
 :::{#exm-moore-penrose-full-rank}
 #### Moore-Penrose inverses of a column and a row
 
-The $2 \times 1$ matrix $\matr{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ has full column rank,
+The $2 \times 1$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ has [full column rank](linear-algebra-subspaces.qmd#def-full-column-rank),
 and $\tp{\matr{A}} \matr{A} = \begin{bmatrix} 2 \end{bmatrix}$, so
 
 $$
@@ -79,9 +79,9 @@ $$
 $$
 
 Then $\matr{A}^+ \matr{A} = \begin{bmatrix} 1 \end{bmatrix}$,
-and $\matr{A} \matr{A}^+ = \begin{bmatrix} \tfrac{1}{2} & \tfrac{1}{2} \\ \tfrac{1}{2} & \tfrac{1}{2} \end{bmatrix}$ is symmetric.
+and $\matr{A} \matr{A}^+ = \begin{bmatrix} \tfrac{1}{2} & \tfrac{1}{2} \\ \tfrac{1}{2} & \tfrac{1}{2} \end{bmatrix}$ is [symmetric](linear-algebra-special-matrices.qmd#def-symmetric-matrix).
 
-The $1 \times 2$ matrix $\matr{B} = \begin{bmatrix} 1 & 1 \end{bmatrix}$ has rank $1$, its number of rows,
+The $1 \times 2$ matrix $\matr{B} = \begin{bmatrix} 1 & 1 \end{bmatrix}$ has [rank](linear-algebra-subspaces.qmd#def-rank) $1$, which is its count of rows,
 and $\matr{B} \tp{\matr{B}} = \begin{bmatrix} 2 \end{bmatrix}$, so
 
 $$

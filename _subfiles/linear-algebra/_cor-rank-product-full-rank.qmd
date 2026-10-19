@@ -11,7 +11,7 @@ Let $\matr{A}$ be $m \times n$ and $\matr{B}$ be $n \times k$.
 ::: proof
 
 **Part 1.**
-Because $\matr{A}$ has full column rank, $\matr{A} \vecf{y} = \vzero_m$ only for $\vecf{y} = \vzero_n$
+Because $\matr{A}$ has [full column rank](linear-algebra-subspaces.qmd#def-full-column-rank), $\matr{A} \vecf{y} = \vzero_m$ only for $\vecf{y} = \vzero_n$
 (@thm-independent-null-space).
 So for $\vecf{x} \in \reals^k$,
 
@@ -25,14 +25,14 @@ $$
 
 so $\mathcal{N}(\matr{A} \matr{B}) = \mathcal{N}(\matr{B})$ (@def-null-space),
 and the two matrices have the same nullity (@def-nullity).
-Both have $k$ columns, so by @thm-rank-nullity they have the same rank.
+Both have $k$ columns, so by @thm-rank-nullity they have the same [rank](linear-algebra-subspaces.qmd#def-rank).
 
 **Part 2.**
-$\mathcal{C}(\matr{B})$ is a subspace of $\reals^n$ (@thm-column-space-span) of dimension $n$ (@thm-rank-dim),
+$\mathcal{C}(\matr{B})$ is a [subspace](linear-algebra-subspaces.qmd#def-subspace) of $\reals^n$ (@thm-column-space-span) of [dimension](linear-algebra-subspaces.qmd#def-dimension) $n$ (@thm-rank-dim),
 so $\mathcal{C}(\matr{B}) = \reals^n$ (@thm-subspace-equal-dim).
 Every vector of $\mathcal{C}(\matr{A} \matr{B})$ is $\matr{A}\,(\matr{B} \vecf{x})$ for some $\vecf{x}$ (@def-column-space),
-and $\matr{B} \vecf{x}$ ranges over all of $\reals^n$,
-so $\mathcal{C}(\matr{A} \matr{B}) = \mathcal{C}(\matr{A})$ and the ranks are equal (@thm-rank-dim).
+and $\matr{B} \vecf{x}$ takes every vector of $\reals^n$,
+so $\mathcal{C}(\matr{A} \matr{B}) = \mathcal{C}(\matr{A})$ and the two matrices have the same rank (@thm-rank-dim).
 
 :::
 
@@ -41,9 +41,9 @@ so $\mathcal{C}(\matr{A} \matr{B}) = \mathcal{C}(\matr{A})$ and the ranks are eq
 :::{#exm-rank-product-full-rank}
 #### Ranks of products with a full-rank factor
 
-Let $\matr{B} = \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix}$, which has rank $1$.
+Let $\matr{B} = \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix}$, which has [rank](linear-algebra-subspaces.qmd#def-rank) $1$.
 
-- Part 1: $\matr{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}$ has two linearly independent columns, so it has full column rank, and
+- Part 1: $\matr{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}$ has two [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent) columns, so it has [full column rank](linear-algebra-subspaces.qmd#def-full-column-rank), and
   $\matr{A} \matr{B} = \begin{bmatrix} 2 & 0 \\ 1 & 0 \\ 0 & 0 \end{bmatrix}$ has rank $1 = \operatorname{rank}(\matr{B})$.
 - Part 2: let $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$, which has rank $1$, and let
   $\matr{B} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$, which has rank $2$.

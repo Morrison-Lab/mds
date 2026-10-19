@@ -2,8 +2,8 @@
 #### Eigenvectors of a symmetric matrix for distinct eigenvalues are orthogonal
 
 Let $\matr{A}$ be a symmetric $p \times p$ matrix (@def-symmetric-matrix),
-and let $\vecf{u}$ and $\vecf{v}$ be eigenvectors of $\matr{A}$ (@def-eigenvector)
-for eigenvalues $\eigval_1 \ne \eigval_2$.
+and let $\vecf{u}$ and $\vecf{v}$ be [eigenvectors](linear-algebra-special-matrices.qmd#def-eigenvector) of $\matr{A}$ (@def-eigenvector)
+for [eigenvalues](linear-algebra-special-matrices.qmd#def-eigenvalue) $\eigval_1 \ne \eigval_2$.
 Then $\vecf{u} \perp \vecf{v}$ (@def-orthogonal-vectors).
 
 :::
@@ -46,8 +46,8 @@ and $\eigval_1 - \eigval_2 \ne 0$, so $\vecf{u} \cdot \vecf{v} = 0$.
 :::{#exm-symmetric-eigenvectors-orthogonal}
 #### Eigenvectors of a symmetric $2 \times 2$ matrix
 
-$\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is symmetric.
-Its eigenvectors $(1, 1)$ for $\eigval_1 = 3$ and $(1, -1)$ for $\eigval_2 = 1$ (@exm-eigenvalue) satisfy
+$\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is [symmetric](linear-algebra-special-matrices.qmd#def-symmetric-matrix).
+Its [eigenvectors](linear-algebra-special-matrices.qmd#def-eigenvector) $(1, 1)$ for $\eigval_1 = 3$ and $(1, -1)$ for $\eigval_2 = 1$ (@exm-eigenvalue) satisfy
 
 $$
 \begin{aligned}
