@@ -1,0 +1,56 @@
+:::{#thm-rank-product-right}
+#### Multiplying on the left cannot increase the rank
+
+If $\matr{A}$ is $m \times n$ and $\matr{B}$ is $n \times k$, then
+
+$$
+\operatorname{rank}(\matr{A} \matr{B}) \le \operatorname{rank}(\matr{B}).
+$$
+
+:::
+
+::: proof
+
+$$
+\ba
+\operatorname{rank}(\matr{A} \matr{B})
+&= \operatorname{rank}(\tp{(\matr{A} \matr{B})})
+&& \text{(@thm-rank-transpose)}
+\\
+&= \operatorname{rank}(\tp{\matr{B}}\,\tp{\matr{A}})
+&& \text{(@thm-transpose-product)}
+\\
+&\le \operatorname{rank}(\tp{\matr{B}})
+&& \text{(@thm-rank-product, with } \tp{\matr{B}} \text{ on the left)}
+\\
+&= \operatorname{rank}(\matr{B}).
+&& \text{(@thm-rank-transpose)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-rank-product-right}
+#### A product of rank 1 with a factor of rank 2
+
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix},
+\qquad
+\matr{A} \matr{B}
+= \begin{bmatrix} 1 \cd 1 + 1 \cd 1 & 1 \cd 0 + 1 \cd 0 \\ 0 \cd 1 + 1 \cd 1 & 0 \cd 0 + 1 \cd 0 \end{bmatrix}
+= \begin{bmatrix} 2 & 0 \\ 1 & 0 \end{bmatrix}.
+$$
+
+$\matr{A}$ has rank $2$, because its columns $(1, 0)$ and $(1, 1)$ are linearly independent.
+$\matr{B}$ has rank $1$, because its second column is $\vzero_2$ and its first is not,
+and $\matr{A} \matr{B}$ has rank $1$ for the same reason.
+So $\operatorname{rank}(\matr{A} \matr{B}) = 1 \le \operatorname{rank}(\matr{B}) = 1$ (@thm-rank-product-right),
+and the bound of @thm-rank-product, $2$, is not the tighter one.
+
+:::

@@ -6,5 +6,13 @@ used under the MIT License
 (see the license text in @sec-subspaces).
 The source leaves the proof of the triangle inequality to class;
 it is written out here.
+These parts of the source are not part of this section:
+
+- its table of names for the angle between two vectors (aligned, acute, orthogonal, obtuse, opposed)
+- the triangle inequality for distances
+- the identity relating the average, the standard deviation and the root mean square of a vector
 
 :::
+
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->

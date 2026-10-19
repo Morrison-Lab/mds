@@ -10,5 +10,11 @@ used under the MIT License
 The source proves that a subspace and its orthogonal complement together make up $\reals^p$
 by extending an orthonormal basis;
 the proof here uses the rank-nullity theorem (@thm-rank-nullity) instead.
+The source defines the orthogonal complement inside an ambient vector space $V \subseteq \reals^m$;
+here the ambient space is always $\reals^p$,
+which is all that the fundamental theorem and the projections need.
 
 :::
+
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->
