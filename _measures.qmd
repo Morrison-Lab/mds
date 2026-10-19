@@ -55,7 +55,7 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/measures/_exm-borel-sigma-algebra.qmd >}}
+{{< include mds/_subfiles/measures/_exm-borel-sigma-algebra-half-lines.qmd >}}
 
 {{< slidebreak >}}
 
@@ -63,7 +63,7 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/measures/_exm-borel-set.qmd >}}
+{{< include mds/_subfiles/measures/_exm-borel-sigma-algebra.qmd >}}
 
 ## Pairwise disjoint sets
 
@@ -283,7 +283,7 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/measures/_exm-lp-function-space.qmd >}}
+{{< include mds/_subfiles/measures/_exm-lp-space.qmd >}}
 
 {{< slidebreak >}}
 
@@ -299,7 +299,7 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/measures/_exm-lp-space.qmd >}}
+{{< include mds/_subfiles/measures/_exm-lp-space-zero.qmd >}}
 
 {{< slidebreak >}}
 

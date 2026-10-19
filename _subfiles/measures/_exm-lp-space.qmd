@@ -1,11 +1,40 @@
 :::{#exm-lp-space}
-#### The zero element of $L^p$
+#### An $L^1$ function not in $L^2$
 
-Let $f$ be the [function](functions.qmd#def-function) in @exm-equal-almost-everywhere, which is $1$ at $s = 0$ and $0$ elsewhere.
-Then $f = 0$ [almost everywhere](#def-almost-everywhere), so $[f] = [0]$.
-Also $\norm{f}_p = 0$ although $f \neq 0$,
-so $\norm{f}_p = 0$ can hold for a nonzero element of $\mathcal{L}^p$;
-on $L^p(\measure)$, $\norm{[f]}_p = 0$ only for $[f] = [0]$,
-as a [norm](linear-algebra.qmd#def-norm) requires.
+Consider the [interval](sets.qmd#def-interval) $(0, 1)$ with the Borel $\sigma$-algebra (@def-borel-sigma-algebra)
+and Lebesgue measure $\measure$ (@def-lebesgue-measure).
+Define $f : (0, 1) \to \reals$ by $f(x) = x^{-1/2}$.
+
+1. For $p = 1$:
+   $$
+   \begin{aligned}
+   \norm{f}_1
+   &= \int_0^1 x^{-1/2} \, dx \\
+   &= \sb{2 x^{1/2}}_0^1 \\
+   &= 2 \\
+   &< \infty,
+   \end{aligned}
+   $$
+   so $f \in \mathcal{L}^1((0, 1), \measure)$.
+2. For $p = 2$:
+   $$
+   \begin{aligned}
+   \abs{f(x)}^2
+   &= \paren{x^{-1/2}}^2 \\
+   &= \frac{1}{x}.
+   \end{aligned}
+   $$
+   The [integral](#def-integral) is:
+   $$
+   \begin{aligned}
+   \int_0^1 \frac{1}{x} \, dx
+   &= \lim_{\smallconst \to 0^+} \sb{\ln x}_\smallconst^1 \\
+   &= \lim_{\smallconst \to 0^+} (-\ln \smallconst) \\
+   &= \infty.
+   \end{aligned}
+   $$
+   So $\norm{f}_2 = \infty$, so $f \notin \mathcal{L}^2((0, 1), \measure)$.
+
+This shows that $\mathcal{L}^2 \subset \mathcal{L}^1$ on [sets](sets.qmd#def-set) of [finite measure](#def-finite-measure): a larger $p$ imposes stricter requirements near singularities.
 
 :::
