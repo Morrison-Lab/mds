@@ -1,0 +1,23 @@
+:::{#exm-matmul-product-of-sums}
+#### Why the middle terms do not combine
+
+Take $\matr{A} = \matr{C} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$ and $\matr{B} = \matr{D} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}$.
+Then $\matr{A} + \matr{B} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$, so
+
+$$
+\ba
+(\matr{A} + \matr{B})^2 &= \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}, \\
+\matr{A}^2 + \matr{A}\matr{B} + \matr{B}\matr{A} + \matr{B}^2
+&= \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}
++ \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}
++ \begin{bmatrix} 1 & 1 \\ 1 & 2 \end{bmatrix}
++ \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix} \\
+&= \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}.
+\ea
+$$
+
+Here $\matr{A}\matr{B} \neq \matr{B}\matr{A}$, so the middle terms do not combine into $2\matr{A}\matr{B}$.
+The squared norm of a sum of vectors, $\norm{\vx + \vy}^2$, is a case where they do combine (@thm-norm-sum-square), because $\vx \cdot \vy = \vy \cdot \vx$.
+Matrices that commute, such as $\matr{A}$ and $\matr{A}^2$, combine the same way.
+
+:::

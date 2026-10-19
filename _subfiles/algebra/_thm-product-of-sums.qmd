@@ -1,0 +1,29 @@
+:::{#thm-product-of-sums}
+#### Product of two sums (FOIL)
+
+For any numbers $a$, $b$, $c$ and $d$,
+
+$$
+(a + b)(c + d) = ac + ad + bc + bd.
+$$
+
+The four products pair the **F**irst terms ($ac$), the **O**uter terms ($ad$), the **I**nner terms ($bc$) and the **L**ast terms ($bd$),
+which gives this rule its name, **FOIL**.
+
+:::
+
+::: proof
+
+$$
+\ba
+(a + b)(c + d)
+&= (a + b)\,c + (a + b)\,d
+&& \text{(distributive law, @thm-mult-distr)}
+\\ &= (ac + bc) + (ad + bd)
+&& \text{(distributive law, twice)}
+\\ &= ac + ad + bc + bd
+&& \text{(commutative and associative laws)}
+\ea
+$$
+
+:::
