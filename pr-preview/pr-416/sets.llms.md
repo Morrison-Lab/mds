@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 04:35:02 (PDT)
+Last modified: 2026-10-19 09:39:40 (PDT)
 
 > **NOTE:**
 >
@@ -85,11 +85,11 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Strict subset)** A set \\A\\ is a **strict subset** of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
+> **Definition 9 (Strict subset (proper subset))** A [set](#def-set) \\A\\ is a **strict subset** (also called a **proper subset**) of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
 
 > **NOTE:**
 >
-> *Remark 2* (Proper subsets and the symbol \\\subset\\). Other sources call a strict subset a **proper subset**. Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) [\[4\]](#ref-wikipedia_subset). For example, \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subset \mathopen{}\left\\1, 2\right\\\mathclose{}\\ is true in the first reading, because \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2\right\\\mathclose{}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
+> *Remark 2* (The symbol \\\subset\\). Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) [\[4\]](#ref-wikipedia_subset). For example, \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subset \mathopen{}\left\\1, 2\right\\\mathclose{}\\ is true in the first reading, because \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2\right\\\mathclose{}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
 
 > **NOTE:**
 >
@@ -285,17 +285,27 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Ordered pair)** An **ordered pair** [\[14\]](#ref-wikipedia_ordered_pair) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
+> **Definition 24 (Pairwise disjoint sets (disjoint, mutually disjoint))** Some [sets](#def-set) \\A_1, A_2, \ldots\\ (a list that may end or go on without end) are **pairwise disjoint** [\[14\]](#ref-wikipedia_disjoint_sets) (also called **disjoint** or **mutually disjoint**) when no two of them share an element:
+>
+> \\A_i \cap A_j = \emptyset \quad \text{for all } i \neq j\\
 
 > **NOTE:**
 >
-> **Definition 25 (Cartesian product)** The **Cartesian product** [\[15\]](#ref-wikipedia_cartesian_product) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
+> **Example 16 (Low and high die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](#exm-set)), the sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint: no roll is in both. The sets \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ are not, because \\2\\ is in both.
+
+> **NOTE:**
+>
+> **Definition 25 (Ordered pair)** An **ordered pair** [\[15\]](#ref-wikipedia_ordered_pair) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
+
+> **NOTE:**
+>
+> **Definition 26 (Cartesian product)** The **Cartesian product** [\[16\]](#ref-wikipedia_cartesian_product) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
 >
 > \\A \times B \stackrel{\text{def}}{=}\mathopen{}\left\\(a, b) : a \in A \text{ and } b \in B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Example 16 (Cartesian products)**  
+> **Example 17 (Cartesian products)**  
 >
 > - \\\mathopen{}\left\\1, 2\right\\\mathclose{} \times \mathopen{}\left\\5, 6\right\\\mathclose{} = \mathopen{}\left\\(1, 5), (1, 6), (2, 5), (2, 6)\right\\\mathclose{}\\. The pair \\(5, 1)\\ is not in it, because its first entry, \\5\\, is not in \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\; so \\(1, 5) \ne (5, 1)\\.
 > - The results of rolling a die twice form \\\mathopen{}\left\\1, \ldots, 6\right\\\mathclose{} \times \mathopen{}\left\\1, \ldots, 6\right\\\mathclose{}\\, which has \\6 \cdot 6 = 36\\ elements, such as \\(3, 5)\\: a 3 on the first roll and a 5 on the second.
@@ -305,7 +315,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Definition 26 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 27 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
 >
@@ -317,20 +327,20 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> *Remark 6* (Arithmetic with \\\infty\\). \\\infty\\ is not a real number, so some real-number arithmetic does not extend to it: \\\infty - \infty\\ is left undefined, and \\\infty + 1 = \infty + 2\\ does not imply \\1 = 2\\. Measure theory uses \\\[0, \infty\]\\ because the size of a set, such as the length of the whole real line, can be infinite [\[16\]](#ref-wikipedia_extended_real_number_line).
+> *Remark 6* (Arithmetic with \\\infty\\). \\\infty\\ is not a real number, so some real-number arithmetic does not extend to it: \\\infty - \infty\\ is left undefined, and \\\infty + 1 = \infty + 2\\ does not imply \\1 = 2\\. Measure theory uses \\\[0, \infty\]\\ because the size of a set, such as the length of the whole real line, can be infinite [\[17\]](#ref-wikipedia_extended_real_number_line).
 
 > **NOTE:**
 >
-> **Example 17 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
+> **Example 18 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
 
 ## 4 Further reading
 
 These books and articles treat sets and the logic behind them in more depth.
 
-- Devlin [\[17\]](#ref-devlin1993joy) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions in these notes.
-- Halmos [\[18\]](#ref-halmos1974naive) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.
-- Enderton [\[19\]](#ref-enderton2001logic) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.
-- Barker-Plummer et al. [\[20\]](#ref-barkerplummer2011language) teaches propositional and first-order logic, the language behind statements such as “for every set \\A\\ there exists…”.
+- Devlin [\[18\]](#ref-devlin1993joy) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions in these notes.
+- Halmos [\[19\]](#ref-halmos1974naive) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.
+- Enderton [\[20\]](#ref-enderton2001logic) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.
+- Barker-Plummer et al. [\[21\]](#ref-barkerplummer2011language) teaches propositional and first-order logic, the language behind statements such as “for every set \\A\\ there exists…”.
 
 ## References
 
@@ -388,29 +398,33 @@ Wikipedia contributors, “De morgan’s laws — Wikipedia, the free encycloped
 
 \[14\]
 
-Wikipedia contributors, “Ordered pair — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Ordered_pair>
+Wikipedia contributors, “Disjoint sets — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Disjoint_sets>
 
 \[15\]
 
-Wikipedia contributors, “Cartesian product — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cartesian_product>
+Wikipedia contributors, “Ordered pair — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Ordered_pair>
 
 \[16\]
 
-Wikipedia contributors, “Extended real number line — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Extended_real_number_line>
+Wikipedia contributors, “Cartesian product — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cartesian_product>
 
 \[17\]
 
-K. Devlin, *The joy of sets: Fundamentals of contemporary set theory*, 2nd ed. in Undergraduate texts in mathematics. New York: Springer, 1993. doi: [10.1007/978-1-4612-0903-4](https://doi.org/10.1007/978-1-4612-0903-4).
+Wikipedia contributors, “Extended real number line — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Extended_real_number_line>
 
 \[18\]
 
-P. R. Halmos, *Naive set theory*. in Undergraduate texts in mathematics. New York: Springer, 1974. doi: [10.1007/978-1-4757-1645-0](https://doi.org/10.1007/978-1-4757-1645-0).
+K. Devlin, *The joy of sets: Fundamentals of contemporary set theory*, 2nd ed. in Undergraduate texts in mathematics. New York: Springer, 1993. doi: [10.1007/978-1-4612-0903-4](https://doi.org/10.1007/978-1-4612-0903-4).
 
 \[19\]
 
-H. B. Enderton, *A mathematical introduction to logic*, 2nd ed. San Diego, CA: Academic Press, 2001. doi: [10.1016/C2009-0-22107-6](https://doi.org/10.1016/C2009-0-22107-6).
+P. R. Halmos, *Naive set theory*. in Undergraduate texts in mathematics. New York: Springer, 1974. doi: [10.1007/978-1-4757-1645-0](https://doi.org/10.1007/978-1-4757-1645-0).
 
 \[20\]
+
+H. B. Enderton, *A mathematical introduction to logic*, 2nd ed. San Diego, CA: Academic Press, 2001. doi: [10.1016/C2009-0-22107-6](https://doi.org/10.1016/C2009-0-22107-6).
+
+\[21\]
 
 D. Barker-Plummer, J. Barwise, and J. Etchemendy, *Language, proof and logic*, 2nd ed. Stanford, CA: CSLI Publications, 2011. Available: <https://www.amazon.com/dp/1575866323>
 

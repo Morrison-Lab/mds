@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 04:35:02 (PDT)
+Last modified: 2026-10-19 09:39:40 (PDT)
 
 ## 1 Polynomials
 
@@ -191,11 +191,76 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 >
 > **Definition 16 (Divergence of a sequence to infinity)** A [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
 
-## 4 Exponentials and Logarithms
+## 4 Series
 
 > **NOTE:**
 >
-> **Definition 17 (Exponential function)** The **exponential function** [\[8\]](#ref-wikipedia_exponential_function) \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
+> **Definition 17 (Non-decreasing sequence)** A [sequence](functions.llms.md#def-sequence) \\a_1, a_2, \ldots\\ of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals) is **non-decreasing** if each term is at least as large as the one before it:
+>
+> \\a_n \le a\_{n+1} \quad \text{for every } n \in \mathbb{N}\\
+
+> **NOTE:**
+>
+> **Example 10 (Non-decreasing and not)**  
+>
+> - \\1, 2, 2, 3, 3, 3, \ldots\\ is non-decreasing: a term may equal the one before it.
+>
+> - \\1, 2, \infty, \infty, \ldots\\ is non-decreasing, because \\\infty\\ is greater than every real number.
+>
+> - \\1, \frac{1}{2}, \frac{1}{3}, \ldots\\ is not non-decreasing, because
+>
+>   \\ \begin{aligned} a_2 &= \frac{1}{2} \\ &\< 1 \\ &= a_1. \end{aligned} \\
+
+> **NOTE:**
+>
+> **Definition 18 (Partial sum)** Let \\a_1, a_2, \ldots\\ be a [sequence](functions.llms.md#def-sequence) of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals). For each \\n \in \mathbb{N}\\, its \\n\\th **partial sum** [\[8\]](#ref-wikipedia_series_mathematics) is the [sum](algebra-sums.llms.md#def-summation) of its first \\n\\ terms:
+>
+> \\s_n \stackrel{\text{def}}{=}\sum\_{i=1}^na_i = a_1 + \cdots + a_n\\
+
+> **NOTE:**
+>
+> **Example 11 (Partial sums of halves)** For \\a_i = 1/2^i\\, the sequence \\\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots\\, the first three partial sums are \\s_1 = \frac{1}{2}\\,
+>
+> \\ \begin{aligned} s_2 &= \frac{1}{2} + \frac{1}{4} \\ &= \frac{3}{4}, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} s_3 &= \frac{3}{4} + \frac{1}{8} \\ &= \frac{7}{8}. \end{aligned} \\
+>
+> In general, \\s_n = 1 - 1/2^n\\.
+
+> **NOTE:**
+>
+> **Definition 19 (Infinite sum (series))** Let \\a_1, a_2, \ldots\\ be a sequence in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 18](#def-partial-sum)). The **infinite sum** (also called a **series**) [\[8\]](#ref-wikipedia_series_mathematics) \\\sum\_{i=1}^{\infty} a_i\\ is the limit of the partial sums:
+>
+> \\\sum\_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim\_{n \to \infty} s_n\\
+>
+> Here the limit is a real number when the partial sums are real numbers that [converge](#def-convergent-sequence) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](#def-diverges-to-infinity) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
+
+> **NOTE:**
+>
+> **Example 12 (A finite and an infinite sum)**  
+>
+> - For \\a_i = 1/2^i\\, the partial sums \\s_n = 1 - 1/2^n\\ ([Example 11](#exm-partial-sum)) converge to \\1\\, because \\1/2^n \to 0\\. So \\\sum\_{i=1}^{\infty} 1/2^i = 1\\.
+> - For \\a_i = 1\\, the partial sums are \\s_n = n\\, which diverge to \\\infty\\. So \\\sum\_{i=1}^{\infty} 1 = \infty\\.
+
+> **NOTE:**
+>
+> **Lemma 1 (Sums of non-negative terms)** Let \\a_1, a_2, \ldots\\ be values in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 18](#def-partial-sum)), where \\x + \infty = \infty\\ for every \\x\\ in \\\[0, \infty\]\\. Then the partial sums are [non-decreasing](#def-non-decreasing), \\s_1 \le s_2 \le \cdots\\, so their [limit](#def-sequence-limit), the infinite sum \\\sum\_{i=1}^{\infty} a_i\\ ([Definition 19](#def-infinite-sum)), always exists, and it is either a finite number or \\\infty\\.
+
+> **NOTE:**
+>
+> *Proof*. For each \\n\\:
+>
+> \\ \begin{aligned} s\_{n+1} &= s_n + a\_{n+1} && \text{(definition of } s\_{n+1} \text{)} \\ &\ge s_n && \text{(} a\_{n+1} \ge 0 \text{)} \end{aligned} \\
+>
+> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](number-systems.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](#def-convergent-sequence) to a finite number [\[9\]](#ref-wikipedia_monotone_convergence_theorem). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
+
+## 5 Exponentials and Logarithms
+
+> **NOTE:**
+>
+> **Definition 20 (Exponential function)** The **exponential function** [\[10\]](#ref-wikipedia_exponential_function) \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
 >
 > \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
@@ -203,7 +268,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Example 10 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
+> **Example 13 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
 >
 > |    \\n\\ | \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ |
 > |---------:|:----------------------------------------------------------|
@@ -216,33 +281,33 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Euler’s number)** **Euler’s number** [\[9\]](#ref-wikipedia_e_mathematical_constant) is
+> **Definition 21 (Euler’s number)** **Euler’s number** [\[11\]](#ref-wikipedia_e_mathematical_constant) is
 >
 > \\e \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\
 
 > **NOTE:**
 >
-> **Example 11 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](number-systems.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ [\[9\]](#ref-wikipedia_e_mathematical_constant).
+> **Example 14 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](number-systems.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ [\[11\]](#ref-wikipedia_e_mathematical_constant).
 
 > **NOTE:**
 >
-> **Definition 19 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\ [\[10\]](#ref-wikipedia_natural_logarithm), is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 17](#def-exponential-function)).
+> **Definition 22 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\ [\[12\]](#ref-wikipedia_natural_logarithm), is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 20](#def-exponential-function)).
 
 > **NOTE:**
 >
-> *Remark 3* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 18](#def-euler-number)) [\[11\]](#ref-wikipedia_logarithm). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+> *Remark 3* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 21](#def-euler-number)) [\[13\]](#ref-wikipedia_logarithm). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
 
 > **NOTE:**
 >
-> **Example 12 (Natural logarithms)**  
+> **Example 15 (Natural logarithms)**  
 >
-> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 10](#exm-exponential-function)).
-> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 18](#def-euler-number)).
+> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 13](#exm-exponential-function)).
+> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 21](#def-euler-number)).
 > - \\\operatorname{log}\mathopen{}\left\\0\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\-2\right\\\mathclose{}\\ are not defined, because \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} \> 0\\ for every real \\y\\.
 
 > **NOTE:**
 >
-> **Definition 20 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
+> **Definition 23 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
 >
 > \\a^b \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{}.\\
 >
@@ -250,7 +315,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Example 13 (Real powers, and \\e^x\\)**  
+> **Example 16 (Real powers, and \\e^x\\)**  
 >
 > - \\2^3 = \operatorname{exp}\mathopen{}\left\\3 \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\3 \cdot 0.69315\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\2.07944\right\\\mathclose{} \approx 8\\, which agrees with
 >
@@ -260,22 +325,22 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 >
 > - \\2^{1/2} = \operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 >
-> - For every real \\x\\, with base \\e\\ ([Definition 18](#def-euler-number)):
+> - For every real \\x\\, with base \\e\\ ([Definition 21](#def-euler-number)):
 >
->   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~20}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~12}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
+>   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~23}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~15}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
 >
 >   So \\e^x\\ and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\ are two names for the same number.
 
 > **NOTE:**
 >
-> **Definition 21 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 20](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
+> **Definition 24 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 23](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
 >
 > - For a real number \\c \> 0\\, \\0^c \stackrel{\text{def}}{=}0\\. For a natural number \\c\\, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
 > - For \\b \< 0\\, \\b^c\\ is defined only when \\c\\ is an [integer](number-systems.llms.md#def-integers), by [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for \\b \< 0\\ and a non-integer \\c\\, \\b^c\\ is undefined.
 
 > **NOTE:**
 >
-> **Example 14 (Powers of zero and of negative numbers)**  
+> **Example 17 (Powers of zero and of negative numbers)**  
 >
 > - \\0^{1/2} = 0\\, which agrees with \\\sqrt{0} = 0\\ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 > - \\(-8)^2 = 64\\ and \\(-8)^{-1} = -\tfrac{1}{8}\\ are defined, since the exponents are integers.
@@ -322,7 +387,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Example 15 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
+> **Example 18 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
 
 > **NOTE:**
 >
@@ -332,7 +397,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Example 16 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
+> **Example 19 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
 
 > **NOTE:**
 >
@@ -352,7 +417,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\,
+> **Example 20 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\,
 >
 > \\ \begin{aligned} 2^{3+4} &= 2^7 \\ &= 128, \end{aligned} \\
 >
@@ -370,7 +435,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Example 18 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\,
+> **Example 21 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\,
 >
 > \\ \begin{aligned} (2 \cdot 3)^2 &= 6^2 \\ &= 36, \end{aligned} \\
 >
@@ -386,7 +451,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Example 19 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
+> **Example 22 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
 >
 > \\ \begin{aligned} a^{bc} &= (-1)^{2 \cdot\frac{1}{2}} \\ &= (-1)^{1} \\ &= -1 \end{aligned} \\
 >
@@ -402,7 +467,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[12\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
+> *Remark 4* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[14\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
 >
 > - sums are symmetric and associative ([Theorem 5 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-symmetric), [Theorem 6 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-assoc));
 > - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 7 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-one), [Theorem 8 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-symmetric), [Theorem 9 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-assoc), [Theorem 11 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-distr));
@@ -414,13 +479,13 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** [\[13\]](#ref-wikipedia_contour_line) of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
+> **Definition 25 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** [\[15\]](#ref-wikipedia_contour_line) of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
 >
 > \\\mathopen{}\left\\(b, c) : g(b, c) = k\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Example 20 (Contour lines of a bowl)** For \\g(b, c) = b^2 + c^2\\, the contour line at height \\k = 4\\ is \\\mathopen{}\left\\(b, c) : b^2 + c^2 = 4\right\\\mathclose{}\\, the circle of radius \\2\\ around \\(0, 0)\\: for example,
+> **Example 23 (Contour lines of a bowl)** For \\g(b, c) = b^2 + c^2\\, the contour line at height \\k = 4\\ is \\\mathopen{}\left\\(b, c) : b^2 + c^2 = 4\right\\\mathclose{}\\, the circle of radius \\2\\ around \\(0, 0)\\: for example,
 >
 > \\ \begin{aligned} g(2, 0) &= 4 + 0 \\ &= 4 \end{aligned} \\
 >
@@ -440,7 +505,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> *Solution 2*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 21](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 2*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 24](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 >
@@ -593,7 +658,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 10 (When exponentiation equals multiplication)** Let \\b, c \in \mathbb{R}\\, where \\b^c\\ is defined (for \\b \< 0\\, only integer \\c\\ is allowed; [Definition 21](#def-power-nonpositive-base)). Then \\b^c = bc\\ if and only if one of the following holds:
+> **Theorem 10 (When exponentiation equals multiplication)** Let \\b, c \in \mathbb{R}\\, where \\b^c\\ is defined (for \\b \< 0\\, only integer \\c\\ is allowed; [Definition 24](#def-power-nonpositive-base)). Then \\b^c = bc\\ if and only if one of the following holds:
 >
 > 1.  \\c = 1\\;
 > 2.  \\b = 0\\ and \\c \> 0\\;
@@ -626,7 +691,7 @@ Last modified: 2026-10-19 04:35:02 (PDT)
 > 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
 > 2.  \\bc = b^c\\ (see [Theorem 10](#thm-exp-vs-mult)).
 >
-> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 21](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
+> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 24](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
 > - If \\b \< 0\\, then \\0^b\\ is undefined, so \\(a^b)^c\\ is undefined.
 >
@@ -695,24 +760,32 @@ Wikipedia contributors, “Limit of a sequence — Wikipedia, the free encyclope
 
 \[8\]
 
-Wikipedia contributors, “Exponential function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Exponential_function>
+Wikipedia contributors, “Series (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Series_(mathematics)>
 
 \[9\]
 
-Wikipedia contributors, “E (mathematical constant) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/E_(mathematical_constant)>
+Wikipedia contributors, “Monotone convergence theorem — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Monotone_convergence_theorem>
 
 \[10\]
 
-Wikipedia contributors, “Natural logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Natural_logarithm>
+Wikipedia contributors, “Exponential function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Exponential_function>
 
 \[11\]
 
-Wikipedia contributors, “Logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logarithm>
+Wikipedia contributors, “E (mathematical constant) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/E_(mathematical_constant)>
 
 \[12\]
 
-Wikipedia contributors, “Tarski’s high school algebra problem — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem>
+Wikipedia contributors, “Natural logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Natural_logarithm>
 
 \[13\]
+
+Wikipedia contributors, “Logarithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Logarithm>
+
+\[14\]
+
+Wikipedia contributors, “Tarski’s high school algebra problem — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem>
+
+\[15\]
 
 Wikipedia contributors, “Contour line — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Contour_line>
