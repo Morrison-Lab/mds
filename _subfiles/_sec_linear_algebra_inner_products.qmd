@@ -76,6 +76,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-angle-unit-circle-angle.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-cosine-similarity-inner-product-space.qmd >}}
 
 {{< slidebreak >}}
