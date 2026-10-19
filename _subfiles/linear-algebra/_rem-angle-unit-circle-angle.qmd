@@ -5,7 +5,8 @@ For vectors in the plane, the [angle between two vectors](#def-angle)
 equals the [angle on the unit circle](algebra-trigonometry.qmd#def-angle-unit-circle)
 between the points in their directions.
 The point in the direction of a nonzero vector, $\vecf{x}$, is $\vecf{x} / \norm{\vecf{x}}$.
-So the cosine similarity of two vectors is the [dot product](linear-algebra.qmd#def-dot-product) of their points (@def-cosine-similarity).
+So the [cosine similarity](#def-cosine-similarity) of two vectors
+is the [dot product](linear-algebra.qmd#def-dot-product) of their points.
 Rotating the plane puts the first point at $(1, 0)$,
 with no change to the distance between the points along the circle or to their dot product.
 For the angle on the unit circle, $\angpar$, the second point is then $(\cos\angpar, \pm\sin\angpar)$,
