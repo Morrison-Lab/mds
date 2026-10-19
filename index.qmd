@@ -34,7 +34,7 @@ organized by topic:
 - [Sets and Functions](sets-functions.qmd), on four pages:
   - [Sets](sets.qmd):
     sets, subsets and supersets, the empty set,
-    unions, intersections, and set differences,
+    unions, intersections, set differences, [pairwise disjoint sets](sets.qmd#def-pairwise-disjoint),
     and the extended non-negative real numbers
   - [Functions](functions.qmd):
     functions with their domains, codomains, and images, sequences, and countable sets
@@ -45,9 +45,9 @@ organized by topic:
     and their algebraic properties
 - [Algebra](algebra.qmd):
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
-  percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
+  percent, sums, products, quotients, limits of sums, notational shorthands, [series](algebra-exponentials.qmd#def-infinite-sum), exponentials and logarithms
 - [Measures](measures.qmd):
-  $\sigma$-algebras, pairwise disjoint sets, finite and countable additivity,
+  $\sigma$-algebras, finite and countable additivity,
   measures, and the counting measure
 - [Calculus](calculus.qmd):
   derivative rules, antiderivatives,

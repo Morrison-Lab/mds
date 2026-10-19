@@ -141,6 +141,8 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< include mds/_subfiles/functions/_def-finite-sequence.qmd >}}
 
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-closed-under.qmd >}}
 
 {{< slidebreak >}}
