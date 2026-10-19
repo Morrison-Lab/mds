@@ -8,6 +8,18 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-angle-unit-circle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-angle-unit-circle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_prp-angle-unit-circle-range.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-cosine-sine.qmd >}}
 
 {{< slidebreak >}}
@@ -25,3 +37,11 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-cosine-bijection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-arccosine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-arccosine.qmd >}}

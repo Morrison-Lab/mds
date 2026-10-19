@@ -1,0 +1,16 @@
+:::{#def-angle-unit-circle}
+#### Angle on the unit circle
+
+The **angle** between two points of the [unit circle](#def-unit-circle)
+is how far apart they are along the circle, going the short way round.
+Let the counterclockwise distance from the first point to the second be $s \in [0, 2\pi)$.
+Then the angle is
+
+$$
+\angpar \eqdef \min\cb{s, 2\pi - s}.
+$$
+
+In words, the angle is the smaller of two distances from the first point to the second:
+the counterclockwise one, $s$, or the clockwise one, $2\pi - s$.
+
+:::
