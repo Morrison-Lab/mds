@@ -3,6 +3,6 @@
 
 A **radian** is the [angle on the unit circle](#def-angle-unit-circle)
 between two points that are a distance of $1$ apart along the circle.
-An angle of $\angpar$ is then $\angpar$ radians.
+An [angle](#def-angle-unit-circle) of $\angpar$ is then $\angpar$ radians.
 
 :::
