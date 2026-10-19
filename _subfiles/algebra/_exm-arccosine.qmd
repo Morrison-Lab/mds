@@ -1,7 +1,7 @@
 :::{#exm-arccosine}
 #### Three arccosines
 
-- The arccosine of one is $\arccos 1 = 0$, because the cosine of zero is $\cos 0 = 1$.
+- The [arccosine](#def-arccosine) of one is $\arccos 1 = 0$, because the [cosine](#def-cosine-sine) of zero is $\cos 0 = 1$.
 - The arccosine of zero is $\arccos 0 = \pi/2$, because the cosine of a quarter turn is $\cos(\pi/2) = 0$.
 - The arccosine of minus one is $\arccos(-1) = \pi$, because the cosine of a half turn is $\cos\pi = -1$.
 
