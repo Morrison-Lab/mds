@@ -1,7 +1,7 @@
 :::{#def-radian}
 #### Radian
 
-A **radian** is the unit of distance along the [unit circle](#def-unit-circle)
-in which the whole circle is $2\pi$ radians ($\pi$ from @def-pi).
+A **radian** is a unit for measuring distance along the [unit circle](#def-unit-circle),
+chosen so that going once round the circle is a distance of $2\pi$ (@def-pi).
 
 :::
