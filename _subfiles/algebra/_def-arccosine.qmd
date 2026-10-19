@@ -2,8 +2,8 @@
 #### Arccosine
 
 The **arccosine** $\arccos : [-1, 1] \to [0, \pi]$
-is the [function](functions.qmd#def-function) that sends each $c \in [-1, 1]$
-to the one $\angpar \in [0, \pi]$ with $\cos\angpar = c$.
+is the [function](functions.qmd#def-function) that sends each [cosine](#def-cosine-sine), $c \in [-1, 1]$,
+to the one [real number](number-systems.qmd#def-real-numbers) $\angpar \in [0, \pi]$ whose cosine is $c$.
 By @thm-cosine-bijection, there is just one such $\angpar$.
 
 :::

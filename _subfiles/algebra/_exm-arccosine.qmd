@@ -1,8 +1,8 @@
 :::{#exm-arccosine}
 #### Three arccosines
 
-- $\arccos 1 = 0$, because $\cos 0 = 1$.
-- $\arccos 0 = \pi/2$, because $\cos(\pi/2) = 0$.
-- $\arccos(-1) = \pi$, because $\cos\pi = -1$.
+- The arccosine of one is $\arccos 1 = 0$, because the cosine of zero is $\cos 0 = 1$.
+- The arccosine of zero is $\arccos 0 = \pi/2$, because the cosine of a quarter turn is $\cos(\pi/2) = 0$.
+- The arccosine of minus one is $\arccos(-1) = \pi$, because the cosine of a half turn is $\cos\pi = -1$.
 
 :::

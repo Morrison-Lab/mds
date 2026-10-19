@@ -1,7 +1,7 @@
 :::{#cor-pearson-angle}
 #### Pearson correlation is the cosine of the angle between the centered vectors
 
-For the vectors $\vx, \vy \in \reals^n$ of @thm-pearson-cosine-centered,
+For the two data vectors $\vx, \vy \in \reals^n$ of @thm-pearson-cosine-centered,
 the centered vectors $\cent{\vx}$, $\cent{\vy}$ are nonzero,
 so they have an [angle](#def-angle) $\angpar$.
 The [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) $r$ satisfies
