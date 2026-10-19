@@ -3,5 +3,10 @@
 
 A **radian** is a unit for measuring distance along the [unit circle](#def-unit-circle),
 chosen so that going once round the circle is a distance of $2\pi$ (@def-pi).
+A trip covering the fraction of the circle $f$ has the distance in radians $d$:
+
+$$
+d = 2\pi f.
+$$
 
 :::
