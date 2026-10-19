@@ -38,7 +38,10 @@ import numpy as np
 a = np.array([3.0, -1.0, 2.0])
 b = np.array([0.0, 4.0, -2.0])
 
-print(a @ b, round(float(np.linalg.norm(a)), 3))
+inner = float(a @ b)
+norm_a = round(float(np.linalg.norm(a)), 3)
+
+print(inner, norm_a)
 ```
 
 ```{r}
@@ -49,5 +52,5 @@ b <- c(0, 4, -2)
 print(c(sum(a * b), round(sqrt(sum(a^2)), 3)))
 ```
 
-Both print `r reticulate::py_eval("float(a @ b)")` and `r round(reticulate::py_eval("float(np.linalg.norm(a))"), 3)`.
+Both print `r reticulate::py$inner` and `r reticulate::py$norm_a`.
 :::
