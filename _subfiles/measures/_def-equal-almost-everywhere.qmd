@@ -1,0 +1,10 @@
+:::{#def-equal-almost-everywhere}
+#### Equal almost everywhere ($f = g$ $\measure$-a.e.)
+
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space),
+and let $f, g : S \to \reals$ be [measurable functions](#def-measurable-function).
+The functions $f$ and $g$ are **equal almost everywhere**,
+written $f = g$ $\measure$-a.e.,
+if the statement $f(s) = g(s)$ holds [almost everywhere](#def-almost-everywhere).
+
+:::

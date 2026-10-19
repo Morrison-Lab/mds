@@ -1,13 +1,10 @@
 :::{#exm-borel-sigma-algebra}
-#### Some Borel sets
+#### The Borel $\sigma$-algebra contains $\reals$ and the half-lines
 
-- Every interval, such as $[0, 1]$, $(2, 5)$, or $[0, \infty)$, is a Borel set.
-- A single point $\set{a} = [a, a]$ is an interval, so it is a Borel set.
-- The [integers](number-systems.qmd#def-integers) are a Borel set:
-  they are the union of the sequence of single points $\set{0}, \set{1}, \set{-1}, \set{2}, \set{-2}, \ldots$
-  ([countable and uncountable sets](functions.qmd#exm-countable-set) lists them this way),
-  and $\borel$ contains that union by @def-sigma-algebra.
-- The complement $\reals \setminus [0, 1]$ is a Borel set,
-  because $\borel$ contains the complement of each of its sets.
+The interval $(-\infty, 0)$ is in $\borel$ by @def-borel-sigma-algebra.
+So is its complement $[0, \infty)$,
+because $\borel$ is a $\sigma$-algebra (@def-sigma-algebra).
+The set $\reals$ is in $\borel$ too:
+a $\sigma$-algebra on $\reals$ contains $\reals$ itself.
 
 :::

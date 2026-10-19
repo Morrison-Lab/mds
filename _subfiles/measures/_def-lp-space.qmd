@@ -1,60 +1,14 @@
 :::{#def-lp-space}
-#### $L^p$ space and $L^p$ norm ($L^p(\measure)$, $\mathcal{L}^p$)
+#### $L^p$ space ($L^p(S, \salg, \measure)$, $L^p(\measure)$)
 
-Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
-For any real number $p \ge 1$, the **$L^p$ norm** of a [measurable function](#def-measurable-function) $f : S \to \reals$ is:
-
-$$
-\norm{f}_p \eqdef \paren{\int_S \abs{f}^p \, d\measure}^{1/p}.
-$$
-
-The space $\mathcal{L}^p(S, \salg, \measure)$ consists of all measurable functions $f : S \to \reals$ for which $\norm{f}_p < \infty$.
-To satisfy the definiteness axiom of a [norm](linear-algebra.qmd#def-norm) ($\norm{f}_p = 0$ if and only if $f = 0$),
-functions that are equal [almost everywhere](#def-almost-everywhere) ($\measure$-a.e.) are identified into equivalence classes.
-The resulting normed vector space is the **$L^p$ space**, denoted $L^p(S, \salg, \measure)$ (or simply **$L^p(\measure)$**).
-The case $p = \infty$ is defined separately, in @def-linf-space.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-lp-space}
-#### An $L^1$ function not in $L^2$
-
-Consider the interval $(0, 1)$ equipped with the Borel $\sigma$-algebra (@def-borel-sigma-algebra)
-and Lebesgue measure $\measure$ (@def-lebesgue-measure).
-Define $f : (0, 1) \to \reals$ by $f(x) = x^{-1/2}$.
-
-1. For $p = 1$:
-   $$
-   \begin{aligned}
-   \norm{f}_1
-   &= \int_0^1 x^{-1/2} \, dx \\
-   &= \sb{2 x^{1/2}}_0^1 \\
-   &= 2 \\
-   &< \infty,
-   \end{aligned}
-   $$
-   so $f \in L^1((0, 1), \measure)$.
-2. For $p = 2$:
-   $$
-   \begin{aligned}
-   \abs{f(x)}^2
-   &= \paren{x^{-1/2}}^2 \\
-   &= \frac{1}{x}.
-   \end{aligned}
-   $$
-   The integral is:
-   $$
-   \begin{aligned}
-   \int_0^1 \frac{1}{x} \, dx
-   &= \lim_{\smallconst \to 0^+} \sb{\ln x}_\smallconst^1 \\
-   &= \lim_{\smallconst \to 0^+} (-\ln \smallconst) \\
-   &= \infty.
-   \end{aligned}
-   $$
-   Therefore, $\norm{f}_2 = \infty$, so $f \notin L^2((0, 1), \measure)$.
-
-This shows that $L^2 \subset L^1$ on finite-measure sets: higher exponents impose stricter integrability requirements near singularities.
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space),
+and let $p \ge 1$ be a real number.
+For each $f$ in the [$\mathcal{L}^p$ space](#def-lp-function-space),
+let $[f]$ be the set of all functions in $\mathcal{L}^p(S, \salg, \measure)$ that are
+[equal almost everywhere](#def-equal-almost-everywhere) to $f$.
+The **$L^p$ space** $L^p(S, \salg, \measure)$ (or simply **$L^p(\measure)$**)
+is the set of all such sets $[f]$,
+with the [norm](linear-algebra.qmd#def-norm) $\norm{[f]}_p \eqdef \norm{f}_p$
+([$L^p$ norm](#def-lp-norm)).
 
 :::

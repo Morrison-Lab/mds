@@ -1,14 +1,13 @@
 :::{#def-linf-space}
-#### $L^\infty$ space and essential supremum norm ($L^\infty$ norm)
+#### $L^\infty$ space ($L^\infty(S, \salg, \measure)$, $L^\infty(\measure)$)
 
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
-For $p = \infty$, the **essential supremum norm** (or **$L^\infty$ norm**) of a [measurable function](#def-measurable-function) $f : S \to \reals$ is:
-
-$$
-\norm{f}_\infty \eqdef \inf \cb{ C \ge 0 : \measure(\cb{s \in S : \abs{f(s)} > C}) = 0 }.
-$$
-
-The space $L^\infty(S, \salg, \measure)$ consists of equivalence classes of essentially bounded measurable functions,
-identified as in @def-lp-space when they are equal [almost everywhere](#def-almost-everywhere).
+For each $f$ in the [$\mathcal{L}^\infty$ space](#def-linf-function-space),
+let $[f]$ be the set of all functions in $\mathcal{L}^\infty(S, \salg, \measure)$ that are
+[equal almost everywhere](#def-equal-almost-everywhere) to $f$.
+The **$L^\infty$ space** $L^\infty(S, \salg, \measure)$ (or simply **$L^\infty(\measure)$**)
+is the set of all such sets $[f]$,
+with the [norm](linear-algebra.qmd#def-norm) $\norm{[f]}_\infty \eqdef \norm{f}_\infty$
+([essential supremum norm](#def-essential-supremum-norm)).
 
 :::

@@ -1,0 +1,10 @@
+:::{#exm-linf-function-space}
+#### Bounded and unbounded functions
+
+Let $S = (0, 1)$ with the [Lebesgue measure](#def-lebesgue-measure) $\measure$.
+The function $f(s) = s$ has $\norm{f}_\infty = 1 < \infty$,
+so $f \in \mathcal{L}^\infty(S, \salg, \measure)$ by @def-linf-function-space.
+The function $g(s) = 1/s$ exceeds every $C$ on the set $(0, 1/C)$ of positive measure,
+so $\norm{g}_\infty = \infty$ and $g \notin \mathcal{L}^\infty(S, \salg, \measure)$.
+
+:::
