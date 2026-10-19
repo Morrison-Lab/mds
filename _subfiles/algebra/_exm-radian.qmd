@@ -1,0 +1,8 @@
+:::{#exm-radian}
+#### Distances in radians
+
+- The whole [unit circle](#def-unit-circle) is $2\pi$ [radians](#def-radian) round.
+- Half of the circle is $\pi$ radians.
+- A quarter of the circle is $\pi/2$ radians.
+
+:::

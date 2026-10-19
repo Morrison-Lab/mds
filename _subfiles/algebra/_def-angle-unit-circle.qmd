@@ -2,6 +2,6 @@
 #### Angle on the unit circle
 
 The **angle** between two points of the [unit circle](#def-unit-circle)
-is how far apart they are along the circle, going the short way round.
+is how far apart they are along the circle, going the short way round, measured in [radians](#def-radian).
 
 :::
