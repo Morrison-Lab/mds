@@ -4,8 +4,8 @@
 For an $m \times n$ matrix $\matr{A}$ and an $n \times m$ matrix $\matr{B}$:
 
 $$
-\tr\paren{\underbrace{\matr{A}\matr{B}}_{m \times m}}
-= \tr\paren{\underbrace{\matr{B}\matr{A}}_{n \times n}}
+\trf{\underbrace{\matr{A}\matr{B}}_{m \times m}}
+= \trf{\underbrace{\matr{B}\matr{A}}_{n \times n}}
 $$
 
 :::
@@ -124,10 +124,10 @@ moves the last factor of the triple product to the front
 $$
 \ba
 \tr(\matr{A}\matr{B}\matr{C})
-&= \tr\paren{(\matr{A}\matr{B})\,\matr{C}}
+&= \trf{(\matr{A}\matr{B})\,\matr{C}}
 && \text{(matrix multiplication is associative)}
 \\
-&= \tr\paren{\matr{C}\,(\matr{A}\matr{B})}
+&= \trf{\matr{C}\,(\matr{A}\matr{B})}
 && \text{(the theorem, applied to the two factors } \matr{A}\matr{B} \text{ and } \matr{C} \text{)}
 \\
 &= \tr(\matr{C}\matr{A}\matr{B})
