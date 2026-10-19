@@ -362,7 +362,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-18 13:21:32 (PDT)</p>
+  <p class="date">Last modified: 2026-10-18 16:43:42 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -617,6 +617,48 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <p><span class="math display">\[(\mathbf{A} + \mathbf{B})\mathbf{C} = \mathbf{A}\mathbf{C} + \mathbf{B}\mathbf{C}\]</span></p>
 </div>
 </section>
+<section class="slide level2">
+
+<div id="thm-matmul-product-of-sums" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 7 (Product of two sums of matrices)</strong></span> For <span class="math inline">\(m \times k\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> and <span class="math inline">\(k \times n\)</span> matrices <span class="math inline">\(\mathbf{C}\)</span> and <span class="math inline">\(\mathbf{D}\)</span>,</p>
+<p><span class="math display">\[
+(\mathbf{A} + \mathbf{B})(\mathbf{C} + \mathbf{D})
+= \mathbf{A}\mathbf{C} + \mathbf{A}\mathbf{D} + \mathbf{B}\mathbf{C} + \mathbf{B}\mathbf{D}.
+\]</span></p>
+<p>Each product keeps its factors in the order they appear on the left, because matrix multiplication is not commutative. So <span class="math inline">\(\mathbf{A}\mathbf{D}\)</span> and <span class="math inline">\(\mathbf{B}\mathbf{C}\)</span> are not combined into <span class="math inline">\(2\mathbf{A}\mathbf{D}\)</span> or similar.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
+\begin{aligned}
+(\mathbf{A} + \mathbf{B})(\mathbf{C} + \mathbf{D})
+&amp;= (\mathbf{A} + \mathbf{B})\mathbf{C} + (\mathbf{A} + \mathbf{B})\mathbf{D}
+&amp;&amp; \text{(}\href{#thm-matmul-distrib}{\text{Theorem~6}}\text{, from the left)}
+\\ &amp;= \mathbf{A}\mathbf{C} + \mathbf{B}\mathbf{C} + \mathbf{A}\mathbf{D} + \mathbf{B}\mathbf{D}
+&amp;&amp; \text{(}\href{#thm-matmul-distrib}{\text{Theorem~6}}\text{, from the right, twice)}
+\\ &amp;= \mathbf{A}\mathbf{C} + \mathbf{A}\mathbf{D} + \mathbf{B}\mathbf{C} + \mathbf{B}\mathbf{D}
+&amp;&amp; \text{(matrix addition is commutative)}
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-matmul-product-of-sums" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (Why the middle terms do not combine)</strong></span> Take <span class="math inline">\(\mathbf{A} = \mathbf{C} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{B} = \mathbf{D} = \begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 1 \end{bmatrix}\)</span>. Then <span class="math inline">\(\mathbf{A} + \mathbf{B} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span>, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\mathbf{A} + \mathbf{B})^2 &amp;= \begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}, \\
+\mathbf{A}^2 + \mathbf{A}\mathbf{B} + \mathbf{B}\mathbf{A} + \mathbf{B}^2
+&amp;= \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{bmatrix}
++ \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}
++ \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}
++ \begin{bmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{bmatrix} \\
+&amp;= \begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}.
+\end{aligned}
+\]</span></p>
+<p>Here <span class="math inline">\(\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}\)</span>, so the middle terms do not combine into <span class="math inline">\(2\mathbf{A}\mathbf{B}\)</span>. The squared norm of a sum of vectors, <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2\)</span>, is a case where they do combine (<a href="./linear-algebra-inner-products.html#thm-norm-sum-square">Theorem&nbsp;2 in Inner Products and Orthogonality</a>), because <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. Matrices that commute, such as <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{A}^2\)</span>, combine the same way.</p>
+</div>
+</section>
 <section class="slide level2 scrollable">
 
 <div id="exr-shape-rule" class="theorem exercise">
@@ -648,7 +690,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2">
 
 <div id="exm-square-matrix" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Square and not square)</strong></span> <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> is square (<span class="math inline">\(2\)</span> rows, <span class="math inline">\(2\)</span> columns); <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}\)</span> is not (<span class="math inline">\(2\)</span> rows, <span class="math inline">\(3\)</span> columns).</p>
+<p><span class="theorem-title"><strong>Example 8 (Square and not square)</strong></span> <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> is square (<span class="math inline">\(2\)</span> rows, <span class="math inline">\(2\)</span> columns); <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}\)</span> is not (<span class="math inline">\(2\)</span> rows, <span class="math inline">\(3\)</span> columns).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -672,7 +714,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2">
 
 <div id="exm-main-diagonal" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Diagonal entries of a square and a non-square matrix)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 9 (Diagonal entries of a square and a non-square matrix)</strong></span> &nbsp;</p>
 <ul>
 <li>For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span>, the diagonal entries are <span class="math inline">\(a_{11} = 1\)</span> and <span class="math inline">\(a_{22} = 4\)</span>, and the off-diagonal entries are <span class="math inline">\(a_{12} = 2\)</span> and <span class="math inline">\(a_{21} = 3\)</span>.</li>
 <li>For <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}\)</span>, <span class="math inline">\(m = 2\)</span> and <span class="math inline">\(n = 3\)</span>, so <span class="math inline">\(k = 2\)</span>, and the diagonal entries are <span class="math inline">\(b_{11} = 1\)</span> and <span class="math inline">\(b_{22} = 5\)</span>; the other four entries, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4\)</span> and <span class="math inline">\(6\)</span>, are off-diagonal.</li>
@@ -703,7 +745,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2">
 
 <div id="exm-identity-matrix" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (The <span class="math inline">\(3 \times 3\)</span> identity)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 10 (The <span class="math inline">\(3 \times 3\)</span> identity)</strong></span> <span class="math display">\[
 \mathbf{I}_3 = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix},
 \]</span></p>
 <p>so, for instance, <span class="math inline">\((\mathbf{I}_3)_{22} = 1\)</span> and <span class="math inline">\((\mathbf{I}_3)_{23} = 0\)</span>.</p>
@@ -715,7 +757,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <p><span class="proof-title"><em>Remark 3</em> (The identity matrix and the Kronecker delta). </span>The entries of the identity matrix are given by the <a href="./indicator-functions.html#def-kronecker-delta">Kronecker delta</a>: <span class="math inline">\((\mathbf{I}_p)_{ij} = \delta_{ij}\)</span>.</p>
 </div>
 <div id="thm-identity" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (Identity matrix is a multiplicative identity)</strong></span> For any <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 8 (Identity matrix is a multiplicative identity)</strong></span> For any <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>:</p>
 <p><span class="math display">\[\mathbf{A}\,\mathbf{I}_p = \mathbf{A}\]</span></p>
 <p><span class="math display">\[\mathbf{I}_m\,\mathbf{A} = \mathbf{A}\]</span></p>
 </div>
@@ -750,7 +792,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2 scrollable">
 
 <div id="exm-linear-system" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (Two equations in two unknowns)</strong></span> By <a href="#/def-matvec-mult" class="quarto-xref">Definition&nbsp;13</a>, row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is the equation <span class="math inline">\(a_{i1} x_1 + \cdots + a_{in} x_n = b_i\)</span>. So the two equations <span class="math inline">\(x_1 + 2 x_2 = 5\)</span> and <span class="math inline">\(3 x_1 + 4 x_2 = 6\)</span> form the linear system <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 5 \\ 6 \end{bmatrix}\)</span>. The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (-4, 4.5)\)</span> is a solution:</p>
+<p><span class="theorem-title"><strong>Example 11 (Two equations in two unknowns)</strong></span> By <a href="#/def-matvec-mult" class="quarto-xref">Definition&nbsp;13</a>, row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is the equation <span class="math inline">\(a_{i1} x_1 + \cdots + a_{in} x_n = b_i\)</span>. So the two equations <span class="math inline">\(x_1 + 2 x_2 = 5\)</span> and <span class="math inline">\(3 x_1 + 4 x_2 = 6\)</span> form the linear system <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 5 \\ 6 \end{bmatrix}\)</span>. The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (-4, 4.5)\)</span> is a solution:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
@@ -779,7 +821,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2">
 
 <div id="exm-linear-map" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (A linear map, and two functions that are not)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 12 (A linear map, and two functions that are not)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)\)</span> on <span class="math inline">\(\mathbb{R}^2\)</span> is linear. For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^2\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>:</p>
 <p><span class="math display">\[
@@ -809,13 +851,13 @@ f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 <section class="slide level2">
 
 <div id="exm-linear-operator" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (A linear operator, and a linear map that is not one)</strong></span> The map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}^2\)</span>, so it is a linear operator on <span class="math inline">\(\mathbb{R}^2\)</span>. The linear map <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 + x_2\)</span> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, so it is linear but not an operator: its outputs have length <span class="math inline">\(1\)</span>, not <span class="math inline">\(2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 13 (A linear operator, and a linear map that is not one)</strong></span> The map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;12</a> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}^2\)</span>, so it is a linear operator on <span class="math inline">\(\mathbb{R}^2\)</span>. The linear map <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 + x_2\)</span> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, so it is linear but not an operator: its outputs have length <span class="math inline">\(1\)</span>, not <span class="math inline">\(2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="thm-linear-map-zero" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (A linear map sends zero to zero)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 9 (A linear map sends zero to zero)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>On the left, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> is the zero vector of length <span class="math inline">\(p\)</span>; on the right, it is the zero vector of length <span class="math inline">\(m\)</span>.</p>
@@ -835,14 +877,14 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 <section class="slide level2">
 
 <div id="exm-linear-map-zero" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (Ruling out linearity at zero)</strong></span> In <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a>, <span class="math inline">\(g(x) = x + 1\)</span> has <span class="math inline">\(g(0) = 1 \neq 0\)</span>, so by <a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a> it is not linear, without checking additivity or homogeneity.</p>
+<p><span class="theorem-title"><strong>Example 14 (Ruling out linearity at zero)</strong></span> In <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;12</a>, <span class="math inline">\(g(x) = x + 1\)</span> has <span class="math inline">\(g(0) = 1 \neq 0\)</span>, so by <a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;9</a> it is not linear, without checking additivity or homogeneity.</p>
 <p>Sending <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> is necessary but not sufficient: <span class="math inline">\(h(x) = x^2\)</span> in the same example has <span class="math inline">\(h(0) = 0\)</span> and is still not linear.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="thm-matrix-map-linear" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (Multiplying by a matrix is a linear map)</strong></span> For any <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the function <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> defined by <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 10 (Multiplying by a matrix is a linear map)</strong></span> For any <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the function <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> defined by <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>).</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Both conditions are checked one entry at a time. For each <span class="math inline">\(i \in \{1, \ldots, m\}\)</span>, additivity:</p>
@@ -887,7 +929,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 <section class="slide level2">
 
 <div id="thm-linear-map-lincom" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (A linear map preserves linear combinations)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then for any vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k \in \mathbb{R}^p\)</span> and any coefficients <span class="math inline">\(c_1, \ldots, c_k \in \mathbb{R}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 11 (A linear map preserves linear combinations)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then for any vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k \in \mathbb{R}^p\)</span> and any coefficients <span class="math inline">\(c_1, \ldots, c_k \in \mathbb{R}\)</span>:</p>
 <p><span class="math display">\[f\mathopen{}\left(\sum_{j=1}^{k} c_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_j\right)\mathclose{} = \sum_{j=1}^{k} c_j f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_j)\]</span></p>
 </div>
 <div class="proof">
@@ -913,7 +955,7 @@ f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \mathord{\smash[b]{\underset{\raise.3ex\h
 <section class="slide level2">
 
 <div id="thm-linear-map-matrix" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 11 (Every linear map is multiplication by a matrix)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then there is exactly one <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> such that</p>
+<p><span class="theorem-title"><strong>Theorem 12 (Every linear map is multiplication by a matrix)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then there is exactly one <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> such that</p>
 <p><span class="math display">\[f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\quad \text{for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\]</span></p>
 <p>Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span>, the value of <span class="math inline">\(f\)</span> at the <span class="math inline">\(j\)</span>th indicator vector (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;14 in Vectors</a>); that is, <span class="math inline">\(a_{ij} = \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\right)\mathclose{}_i\)</span>.</p>
 </div>
@@ -925,7 +967,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= f\mathopen{}\left(\sum_{j=1}^px_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right)\mathclose{}
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#thm-standard-basis-expansion}{\text{Theorem~3 in Vectors}}\text{)}
 \\&amp;= \sum_{j=1}^px_j f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)
-&amp;&amp; \text{(}\href{#thm-linear-map-lincom}{\text{Theorem~10}}\text{)}
+&amp;&amp; \text{(}\href{#thm-linear-map-lincom}{\text{Theorem~11}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>and entry <span class="math inline">\(i\)</span> of that sum is</p>
@@ -971,13 +1013,13 @@ b_{ij} &amp;= \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\
 <section class="slide level2">
 
 <div id="def-matrix-of-linear-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Matrix of a linear map)</strong></span> The <strong>matrix of</strong> a linear map <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is the unique <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>). Its column <span class="math inline">\(j\)</span> is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Matrix of a linear map)</strong></span> The <strong>matrix of</strong> a linear map <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is the unique <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;12</a>). Its column <span class="math inline">\(j\)</span> is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-linear-map-matrix" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (Finding the matrix of a linear map)</strong></span> For <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a>, the values of <span class="math inline">\(f\)</span> at the indicator vectors are</p>
+<p><span class="theorem-title"><strong>Example 15 (Finding the matrix of a linear map)</strong></span> For <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;12</a>, the values of <span class="math inline">\(f\)</span> at the indicator vectors are</p>
 <p><span class="math display">\[
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) = f\mathopen{}\left(\begin{bmatrix}1 \\ 0\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 1 \\ 1 + 0\end{bmatrix} = \begin{bmatrix}2 \\ 1\end{bmatrix},
 \qquad
@@ -994,12 +1036,12 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 <p>and then <span class="math inline">\(w_j = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span> for each <span class="math inline">\(j\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>If <span class="math inline">\(f\)</span> is linear.</strong> <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a> with <span class="math inline">\(m = 1\)</span> gives a <span class="math inline">\(1 \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(a_{1j} = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span>. Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> be the vector with <span class="math inline">\(w_j = a_{1j}\)</span>, so that <span class="math inline">\(\mathbf{A} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}\)</span>. Then</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>If <span class="math inline">\(f\)</span> is linear.</strong> <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;12</a> with <span class="math inline">\(m = 1\)</span> gives a <span class="math inline">\(1 \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(a_{1j} = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span>. Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> be the vector with <span class="math inline">\(w_j = a_{1j}\)</span>, so that <span class="math inline">\(\mathbf{A} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
 &amp;= \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
-&amp;&amp; \text{(}\href{#thm-linear-map-matrix}{\text{Theorem~11}}\text{)}
+&amp;&amp; \text{(}\href{#thm-linear-map-matrix}{\text{Theorem~12}}\text{)}
 \\&amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 &amp;&amp; (\mathbf{A} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top})
 \end{aligned}
@@ -1011,13 +1053,13 @@ w_j &amp;= a_{1j} \\
 &amp;= f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j).
 \end{aligned}
 \]</span></p>
-<p><strong>If <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>.</strong> Here <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}\)</span> is a <span class="math inline">\(1 \times p\)</span> matrix, so <span class="math inline">\(f\)</span> is linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>.</p>
+<p><strong>If <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>.</strong> Here <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}\)</span> is a <span class="math inline">\(1 \times p\)</span> matrix, so <span class="math inline">\(f\)</span> is linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;10</a>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-linear-scalar" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (A linear function from <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>)</strong></span> <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 + 5 x_2\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, 5)}^{\top}\)</span>, so it is linear by <a href="#/cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>. The entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> are the values at the indicator vectors:</p>
+<p><span class="theorem-title"><strong>Example 16 (A linear function from <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>)</strong></span> <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 + 5 x_2\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, 5)}^{\top}\)</span>, so it is linear by <a href="#/cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>. The entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> are the values at the indicator vectors:</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) &amp;= 3 \cdot 1 + 5 \cdot 0 \\
@@ -1031,7 +1073,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 &amp;= 5.
 \end{aligned}
 \]</span></p>
-<p><span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 + 5 x_2 + 1\)</span> is not linear, because <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = 1 \neq 0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>).</p>
+<p><span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 + 5 x_2 + 1\)</span> is not linear, because <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = 1 \neq 0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;9</a>).</p>
 </div>
 <div title="Videos">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1063,7 +1105,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 <section class="slide level2">
 
 <div id="exm-translation" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Translating two points)</strong></span> The translation by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, -2)}^{\top}\)</span> sends</p>
+<p><span class="theorem-title"><strong>Example 17 (Translating two points)</strong></span> The translation by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, -2)}^{\top}\)</span> sends</p>
 <p><span class="math display">\[
 t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}\mathopen{}\left(\begin{bmatrix}0 \\ 0\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}0 + 1 \\ 0 + (-2)\end{bmatrix} = \begin{bmatrix}1 \\ -2\end{bmatrix},
 \qquad
@@ -1120,7 +1162,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="exm-augmented-vector" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (An affine function as a dot product with an augmented vector)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(2, 5)}^{\top}\)</span>, the augmented vector is <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = {(1, 2, 5)}^{\top}\)</span>. With <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, -1)}^{\top}\)</span> and <span class="math inline">\(b = 4\)</span>, the affine function <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> (<a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a>) equals the dot product of <span class="math inline">\({(b, w_1, w_2)}^{\top} = {(4, 3, -1)}^{\top}\)</span> with <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 18 (An affine function as a dot product with an augmented vector)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(2, 5)}^{\top}\)</span>, the augmented vector is <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = {(1, 2, 5)}^{\top}\)</span>. With <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, -1)}^{\top}\)</span> and <span class="math inline">\(b = 4\)</span>, the affine function <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> (<a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a>) equals the dot product of <span class="math inline">\({(b, w_1, w_2)}^{\top} = {(4, 3, -1)}^{\top}\)</span> with <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b
@@ -1136,7 +1178,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="thm-affine-map-zero" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 12 (An affine map sends zero to its offset)</strong></span> An affine map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) satisfies <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 13 (An affine map sends zero to its offset)</strong></span> An affine map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) satisfies <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>First, <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>: for each <span class="math inline">\(i\)</span>,</p>
@@ -1168,7 +1210,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 <section class="slide level2">
 
 <div id="thm-affine-linear-iff" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 13 (An affine map is linear exactly when its offset is zero)</strong></span> An affine map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) is linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>) if and only if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 14 (An affine map is linear exactly when its offset is zero)</strong></span> An affine map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) is linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>) if and only if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then</p>
@@ -1178,13 +1220,13 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}},
 \end{aligned}
 \]</span></p>
-<p>which is linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>. Conversely, if <span class="math inline">\(f\)</span> is linear, then <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> by <a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>, and <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> by <a href="#/thm-affine-map-zero" class="quarto-xref">Theorem&nbsp;12</a>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+<p>which is linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;10</a>. Conversely, if <span class="math inline">\(f\)</span> is linear, then <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> by <a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;9</a>, and <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> by <a href="#/thm-affine-map-zero" class="quarto-xref">Theorem&nbsp;13</a>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-affine-linear-iff" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (Two affine maps with the same matrix)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix}2 &amp; 0 \\ 1 &amp; 1\end{bmatrix}\)</span>, the matrix of the linear map in <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;11</a>. <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> has offset <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, so it is linear. <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span> has offset <span class="math inline">\(\begin{bmatrix}1 \\ 0\end{bmatrix} \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;13</a> it is not linear: indeed <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span>, not <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 19 (Two affine maps with the same matrix)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix}2 &amp; 0 \\ 1 &amp; 1\end{bmatrix}\)</span>, the matrix of the linear map in <a href="#/exm-linear-map" class="quarto-xref">Example&nbsp;12</a>. <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> has offset <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, so it is linear. <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span> has offset <span class="math inline">\(\begin{bmatrix}1 \\ 0\end{bmatrix} \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;14</a> it is not linear: indeed <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span>, not <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1193,7 +1235,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <p><span class="theorem-title"><strong>Corollary 2 (Every linear map is affine)</strong></span> Every linear map <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}^m\)</span> (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>) is an affine map (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>) with offset <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(f\)</span> is linear, <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a> gives a matrix <span class="math inline">\(\mathbf{A}\)</span> with</p>
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(f\)</span> is linear, <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;12</a> gives a matrix <span class="math inline">\(\mathbf{A}\)</span> with</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) &amp;= \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\\
@@ -1206,10 +1248,10 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="thm-affine-map-unique" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (An affine map determines its matrix and offset)</strong></span> If <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> and <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}'\)</span> for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>), then <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}' = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 15 (An affine map determines its matrix and offset)</strong></span> If <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> and <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}'\)</span> for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>), then <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}' = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>By <a href="#/thm-affine-map-zero" class="quarto-xref">Theorem&nbsp;12</a>, applied to each formula,</p>
+<p><span class="proof-title"><em>Proof</em>. </span>By <a href="#/thm-affine-map-zero" class="quarto-xref">Theorem&nbsp;13</a>, applied to each formula,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} &amp;= f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) \\
@@ -1223,13 +1265,13 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 \end{aligned}
 \]</span></p>
-<p>for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, so <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{A}'\)</span> are both matrices (<a href="#/def-matrix-of-linear-map" class="quarto-xref">Definition&nbsp;17</a>) of the linear map <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>), and the uniqueness in <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a> gives <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span>.</p>
+<p>for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, so <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{A}'\)</span> are both matrices (<a href="#/def-matrix-of-linear-map" class="quarto-xref">Definition&nbsp;17</a>) of the linear map <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (linear by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;10</a>), and the uniqueness in <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;12</a> gives <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-linear-affine-terminology" class="proof remark">
-<p><span class="proof-title"><em>Remark 7</em> (“Linear” in this site, and in machine learning and statistics). </span>This site uses “linear” only in the sense of <a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;13</a> a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as <a href="./algebra-exponentials.html#def-affine-function">affine</a> <span class="math inline">\(a x + b\)</span> versus <a href="./algebra-exponentials.html#def-linear-function">linear</a> <span class="math inline">\(a x\)</span> on the algebra page. (The algebra page writes these as <span class="math inline">\(m x + b\)</span> and <span class="math inline">\(m x\)</span>; here <span class="math inline">\(m\)</span> already names the number of outputs.)</p>
+<p><span class="proof-title"><em>Remark 7</em> (“Linear” in this site, and in machine learning and statistics). </span>This site uses “linear” only in the sense of <a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;14</a> a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as <a href="./algebra-exponentials.html#def-affine-function">affine</a> <span class="math inline">\(a x + b\)</span> versus <a href="./algebra-exponentials.html#def-linear-function">linear</a> <span class="math inline">\(a x\)</span> on the algebra page. (The algebra page writes these as <span class="math inline">\(m x + b\)</span> and <span class="math inline">\(m x\)</span>; here <span class="math inline">\(m\)</span> already names the number of outputs.)</p>
 <p>Machine learning and statistics often call any function of the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> “linear”, as in a <em>linear model</em> in statistics or a <em>linear layer</em> in a neural network, and call the offset <span class="math inline">\(b\)</span> the bias (machine learning) or the intercept (statistics), as <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a> notes. A model with an intercept is affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> but linear in its coefficients <span class="math inline">\((b, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})\)</span>, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: <span class="math inline">\(w_1 x + w_2 x^2 + b\)</span> is not affine in <span class="math inline">\(x\)</span>, but it is linear in <span class="math inline">\((b, w_1, w_2)\)</span>. Separately, the affine function <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> is a linear function of the augmented vector <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}\)</span> (<a href="#/def-augmented-vector" class="quarto-xref">Definition&nbsp;21</a>), with <span class="math inline">\(b\)</span> as the coefficient on its first entry.</p>
 </div>
 <div title="Further reading">
@@ -1243,7 +1285,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-content">
 <ul>
-<li><span class="citation" data-cites="zhou2024matrix">Zhou <a href="#/references" role="doc-biblioref" onclick="">[14]</a></span>, sections 6 (“Linear functions and operators”; see <a href="#/def-linear-operator" class="quarto-xref">Definition&nbsp;16</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;11</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \beta\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> whenever <span class="math inline">\(\alpha+ \beta= 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so the two definitions agree.</li>
+<li><span class="citation" data-cites="zhou2024matrix">Zhou <a href="#/references" role="doc-biblioref" onclick="">[14]</a></span>, sections 6 (“Linear functions and operators”; see <a href="#/def-linear-operator" class="quarto-xref">Definition&nbsp;16</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;12</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \beta\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> whenever <span class="math inline">\(\alpha+ \beta= 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so the two definitions agree.</li>
 <li><span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe <a href="#/references" role="doc-biblioref" onclick="">[15]</a></span>, chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the <a href="./calculus-derivatives.html#def-linear-approximation">first-order Taylor approximation</a> as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.</li>
 </ul>
 </div>
@@ -1268,7 +1310,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="exm-hyperplane" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (A line in <span class="math inline">\(\mathbb{R}^2\)</span>, and why the normal vector must be nonzero)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 20 (A line in <span class="math inline">\(\mathbb{R}^2\)</span>, and why the normal vector must be nonzero)</strong></span> &nbsp;</p>
 <ul>
 <li>With <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, the hyperplane in <span class="math inline">\(\mathbb{R}^2\)</span> is the line <span class="math inline">\(x_1 + x_2 - 1 = 0\)</span>. The point <span class="math inline">\((1, 0)\)</span> is on it, since <span class="math inline">\(1 + 0 - 1 = 0\)</span>; the point <span class="math inline">\((1, 1)\)</span> is not, since <span class="math inline">\(1 + 1 - 1 = 1 &gt; 0\)</span>, so it lies in the half-space where <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b &gt; 0\)</span>.</li>
 <li>With <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, the equation reads <span class="math inline">\(b = 0\)</span>: if <span class="math inline">\(b \ne 0\)</span> no point satisfies it, and if <span class="math inline">\(b = 0\)</span> every point does, so the set is empty or all of <span class="math inline">\(\mathbb{R}^2\)</span>, not a line. That degenerate case is why the definition requires <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</li>
@@ -1509,18 +1551,18 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div id="sol-which-are-linear" class="proof solution">
 <p><span class="proof-title"><em>Solution 3</em>. </span></p>
 <ol type="1">
-<li><strong>Affine, and linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with <span class="math inline">\(b = 0\)</span>, which is a linear map by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;9</a>: the matrix <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\)</span> times <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>.</li>
-<li><strong>Affine.</strong> Still an inner product plus an offset; here the offset is <span class="math inline">\(b = -y\)</span>, which is a constant because <span class="math inline">\(y\)</span> is held fixed. It is linear only when <span class="math inline">\(y = 0\)</span>: otherwise <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> gives <span class="math inline">\(-y \ne 0\)</span>, and a linear map sends <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\(0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>).</li>
+<li><strong>Affine, and linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with <span class="math inline">\(b = 0\)</span>, which is a linear map by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;10</a>: the matrix <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\)</span> times <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>.</li>
+<li><strong>Affine.</strong> Still an inner product plus an offset; here the offset is <span class="math inline">\(b = -y\)</span>, which is a constant because <span class="math inline">\(y\)</span> is held fixed. It is linear only when <span class="math inline">\(y = 0\)</span>: otherwise <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> gives <span class="math inline">\(-y \ne 0\)</span>, and a linear map sends <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\(0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;9</a>).</li>
 <li><strong>Not affine.</strong> Squaring is not an inner product plus an offset. This expression is the squared error of one observation, and its curvature in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is exactly why fitting a model is an optimization problem rather than a lookup.</li>
 <li><strong>Not affine.</strong> By <a href="./linear-algebra-vectors.html#eq-l2-norm">Equation&nbsp;2 in Vectors</a> this is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, which has <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> in both slots at once. Hold either slot fixed and it is linear in the other; as a function of the single variable <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> it is quadratic.</li>
-<li><strong>Affine, not linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with coefficient vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}= (x_1, 0, \dots, 0)^{\top}\)</span> and <span class="math inline">\(b = 3\)</span>; at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> it equals <span class="math inline">\(3 \ne 0\)</span>, so it is not linear (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;8</a>). The data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is untouched — <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\)</span> is a new vector built from its first entry.</li>
+<li><strong>Affine, not linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with coefficient vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}= (x_1, 0, \dots, 0)^{\top}\)</span> and <span class="math inline">\(b = 3\)</span>; at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> it equals <span class="math inline">\(3 \ne 0\)</span>, so it is not linear (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;9</a>). The data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is untouched — <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\)</span> is a new vector built from its first entry.</li>
 </ol>
 <p>Items 1, 2 and 5 are affine and items 3 and 4 are not, which is the split that matters: a <em>model</em> can be affine in its weights while the <em>quantity we minimize</em> is not. Squared error and the norm penalty are both curved in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, and that curvature is what makes fitting an optimization problem at all: there is always a downhill direction to follow. Curvature alone does not promise a <em>single</em> answer. The squared error of one observation is completely flat along a whole line of weight vectors, every one of which fits that observation exactly, and pinning down one of them is part of what the norm penalty is added for in week 3.</p>
 </div>
 <h3 id="transposes-of-sums-and-products">Transposes of sums and products</h3>
 <!-- heading shares the slide; do not re-flag -->
 <div id="thm-transpose-sum" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 15 (Transpose of a sum)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 16 (Transpose of a sum)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
 <p><span class="math display">\[{(\mathbf{A} + \mathbf{B})}^{\top} = {\mathbf{A}}^{\top} + {\mathbf{B}}^{\top}\]</span></p>
 <p>In particular, for column vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of the same length:</p>
 <p><span class="math display">\[{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})}^{\top} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\]</span></p>
@@ -1548,7 +1590,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="thm-transpose-product" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 16 (Transpose of a product)</strong></span> For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 17 (Transpose of a product)</strong></span> For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span>:</p>
 <p><span class="math display">\[
 \underbrace{{(\mathbf{A}\mathbf{B})}^{\top}}_{n \times m}
 = \underbrace{{\mathbf{B}}^{\top}}_{n \times k}\,\underbrace{{\mathbf{A}}^{\top}}_{k \times m}
@@ -1600,7 +1642,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="thm-scalar-transpose" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 17 (A <span class="math inline">\(1 \times 1\)</span> product equals its own transpose)</strong></span> If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> are vectors of length <span class="math inline">\(p\)</span> and <span class="math inline">\(\mathbf{M}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix, then <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is a number, and</p>
+<p><span class="theorem-title"><strong>Theorem 18 (A <span class="math inline">\(1 \times 1\)</span> product equals its own transpose)</strong></span> If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> are vectors of length <span class="math inline">\(p\)</span> and <span class="math inline">\(\mathbf{M}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix, then <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is a number, and</p>
 <p><span class="math display">\[
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
 = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\,{\mathbf{M}}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}.
@@ -1622,13 +1664,13 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;&amp; \text{(transposing twice changes nothing)}
 \end{aligned}
 \]</span></p>
-<p>The transpose step is <a href="#/thm-transpose-product" class="quarto-xref">Theorem&nbsp;16</a>. Taking <span class="math inline">\(\mathbf{M} = \mathbf{I}\)</span> gives the last statement.</p>
+<p>The transpose step is <a href="#/thm-transpose-product" class="quarto-xref">Theorem&nbsp;17</a>. Taking <span class="math inline">\(\mathbf{M} = \mathbf{I}\)</span> gives the last statement.</p>
 </div>
 </section>
 <section class="slide level2 smaller scrollable" id="references">
 
 <div id="exm-scalar-transpose" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Two ways to write the same number)</strong></span> Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (3, -1)\)</span> and <span class="math inline">\(\mathbf{M} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>. Then <span class="math inline">\(\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, -3)\)</span>, so</p>
+<p><span class="theorem-title"><strong>Example 21 (Two ways to write the same number)</strong></span> Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (3, -1)\)</span> and <span class="math inline">\(\mathbf{M} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>. Then <span class="math inline">\(\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, -3)\)</span>, so</p>
 <p><span class="math display">\[
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 1 \cdot 1 + 2 \cdot (-3) = -5.
 \]</span></p>

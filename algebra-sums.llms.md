@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 13:21:32 (PDT)
+Last modified: 2026-10-18 16:43:42 (PDT)
 
 ## 1 Convex functions
 
@@ -423,7 +423,31 @@ Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 12 (Square of a sum)** For any numbers \\a\\ and \\b\\,
+> **Theorem 12 (Product of two sums (FOIL))** For any numbers \\a\\, \\b\\, \\c\\ and \\d\\,
+>
+> \\ (a + b)(c + d) = ac + ad + bc + bd. \\
+>
+> The four products pair the **F**irst terms (\\ac\\), the **O**uter terms (\\ad\\), the **I**nner terms (\\bc\\) and the **L**ast terms (\\bd\\), which gives this rule its name, **FOIL**.
+
+> **NOTE:**
+>
+> *Proof*. \\ \begin{aligned} (a + b)(c + d) &= (a + b)\\c + (a + b)\\d && \text{(distributive law, }\href{#thm-mult-distr}{\text{Theorem~11}}\text{)} \\ &= (ac + bc) + (ad + bd) && \text{(distributive law, twice)} \\ &= ac + ad + bc + bd && \text{(commutative and associative laws)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 18 (Checking FOIL)** With \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = 4\\,
+>
+> \\ \begin{aligned} (1 + 2)(3 + 4) &= 3 \cdot 7 \\ &= 21, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} 1 \cdot 3 + 1 \cdot 4 + 2 \cdot 3 + 2 \cdot 4 &= 3 + 4 + 6 + 8 \\ &= 21. \end{aligned} \\
+>
+> Setting \\c = a\\ and \\d = b\\ gives \\(a + b)^2 = a^2 + ab + ba + b^2\\, which is the [square of a sum](#thm-square-of-a-sum) once \\ab\\ and \\ba\\ are combined.
+
+> **NOTE:**
+>
+> **Theorem 13 (Square of a sum)** For any numbers \\a\\ and \\b\\,
 >
 > \\ (a + b)^2 = a^2 + 2ab + b^2 \\
 
@@ -433,7 +457,7 @@ Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 12](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. For example, the square \\(y - \hat y)^2\\ of the difference between an observed value \\y\\ and a prediction \\\hat y\\ of it expands this way. With \\y = 5\\ and \\\hat y= 3\\,
+> *Remark 5* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 13](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. For example, the square \\(y - \hat y)^2\\ of the difference between an observed value \\y\\ and a prediction \\\hat y\\ of it expands this way. With \\y = 5\\ and \\\hat y= 3\\,
 >
 > \\ \begin{aligned} (5 - 3)^2 &= 2^2 \\ &= 4, \end{aligned} \\
 >
@@ -513,7 +537,7 @@ Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 13 (A constant factor comes out of a sum)** For any number \\c\\ and numbers \\a_m, \ldots, a_n\\,
+> **Theorem 14 (A constant factor comes out of a sum)** For any number \\c\\ and numbers \\a_m, \ldots, a_n\\,
 >
 > \\ \sum\_{i=m}^{n} c\\ a_i = c \sum\_{i=m}^{n} a_i \\
 
@@ -523,7 +547,7 @@ Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 14 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
+> **Theorem 15 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
 >
 > \\ \sum\_{i=m}^{n} \mathopen{}\left(a_i + b_i\right)\mathclose{} = \sum\_{i=m}^{n} a_i + \sum\_{i=m}^{n} b_i \\
 
@@ -568,7 +592,7 @@ Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 18 (A sum over the empty set)** For example, \\\sum\_{x \in \mathopen{}\left\\\right\\\mathclose{}} x^2 = 0\\.
+> **Example 19 (A sum over the empty set)** For example, \\\sum\_{x \in \mathopen{}\left\\\right\\\mathclose{}} x^2 = 0\\.
 
 ## 8 Quotients
 
@@ -592,11 +616,11 @@ Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 19 (Numerator and denominator of a fraction)** The fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
+> **Example 20 (Numerator and denominator of a fraction)** The fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
 
 > **NOTE:**
 >
-> **Example 20 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 23](#def-quotient) requires a nonzero denominator.
+> **Example 21 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 23](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
@@ -608,7 +632,7 @@ Last modified: 2026-10-18 13:21:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 21 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
+> **Example 22 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
 
 > **NOTE:**
 >
@@ -624,7 +648,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 22 (A ratio, and a quotient that is not one)**  
+> **Example 23 (A ratio, and a quotient that is not one)**  
 >
 > - A board \\150\\ cm long and one \\75\\ cm long have length ratio \\\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\\: both lengths are in centimeters, so the units cancel and the ratio has none.
 > - A sample of mass \\300\\ g and volume \\150\\ cm\\^3\\ gives the quotient \\\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\\ g per cm\\^3\\, its density. The numerator and denominator are in different units, so this quotient is not a ratio.
@@ -639,7 +663,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 23 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
+> **Example 24 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
 >
 > - the proportion of patients who smoke is \\\tfrac{30}{120} = 0.25\\: the \\30\\ smokers are a subset of the \\120\\ patients;
 > - the ratio of smokers to non-smokers is \\\tfrac{30}{90} = \tfrac{1}{3}\\. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the \\30\\ smokers are not part of the \\90\\ non-smokers.
@@ -650,7 +674,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 24 (Proportional and non-proportional functions)**  
+> **Example 25 (Proportional and non-proportional functions)**  
 >
 > - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\,
 >
@@ -682,7 +706,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 25 (Reading off limits)**  
+> **Example 26 (Reading off limits)**  
 >
 > - In \\\sum\_{i=2}^{5} i^2\\, the lower limit is \\2\\ and the upper limit is \\5\\, so the sum is \\2^2 + 3^2 + 4^2 + 5^2 = 54\\.
 > - In \\\int_0^3 x\\dx\\, the lower limit is \\0\\ and the upper limit is \\3\\.
@@ -740,7 +764,7 @@ For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\ma
 
 > **NOTE:**
 >
-> **Example 26 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
+> **Example 27 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
 >
 > \\ \begin{aligned} \sum\_{i=1}^{3} x_i &= x_1 + x_2 + x_3 && \text{(definition of summation notation)} \\ &= 2 + 5 + 1 && \text{(substitute the values)} \\ &= 8 && \text{(add)} \end{aligned} \\
 

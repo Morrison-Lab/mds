@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-18 13:21:32 (PDT)</p>
+  <p class="date">Last modified: 2026-10-18 16:43:42 (PDT)</p>
 </section><section class="slide level2"></section><section id="special-matrices" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Special Matrices</h2>
 <p>Some special matrices appeared earlier:</p>
@@ -369,7 +369,7 @@
 <p><span class="theorem-title"><strong>Definition 1 (Order of a square matrix)</strong></span> The <strong>order</strong> of a square matrix (<a href="./linear-algebra-matrices.html#def-square-matrix">Definition&nbsp;8 in Matrices</a>) is its number of rows, which equals its number of columns.</p>
 </div>
 </section><section class="slide level2"><div id="exm-matrix-order" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Orders of square matrices)</strong></span> <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> has order <span class="math inline">\(2\)</span>, and <span class="math inline">\([5]\)</span> has order <span class="math inline">\(1\)</span>. A <span class="math inline">\(2 \times 3\)</span> matrix has no order, since it is not square (<a href="./linear-algebra-matrices.html#exm-square-matrix">Example&nbsp;7 in Matrices</a>).</p>
+<p><span class="theorem-title"><strong>Example 1 (Orders of square matrices)</strong></span> <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> has order <span class="math inline">\(2\)</span>, and <span class="math inline">\([5]\)</span> has order <span class="math inline">\(1\)</span>. A <span class="math inline">\(2 \times 3\)</span> matrix has no order, since it is not square (<a href="./linear-algebra-matrices.html#exm-square-matrix">Example&nbsp;8 in Matrices</a>).</p>
 </div>
 </section><section class="slide level2"><div id="def-matrix-power" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Matrix power)</strong></span> For a square matrix <span class="math inline">\(\mathbf{A}\)</span> of order <span class="math inline">\(p\)</span> and a positive integer <span class="math inline">\(k\)</span>, the <span class="math inline">\(k\)</span>-th <strong>power</strong> of <span class="math inline">\(\mathbf{A}\)</span> is:</p>
@@ -504,7 +504,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(identity matrix)}
 \end{aligned}
 \]</span></p>
-<p>The steps use <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a> and <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;7 in Matrices</a>. Since <span class="math inline">\(\mathbf{B} = \mathbf{C}\)</span>, at most one matrix satisfies these equations, which is the uniqueness that <a href="#/def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> asserts. When <span class="math inline">\(\mathbf{A}\)</span> is invertible, the matrix <span class="math inline">\(\mathbf{B}\)</span> in <a href="#/def-invertible-matrix" class="quarto-xref">Definition&nbsp;6</a> is therefore the inverse <span class="math inline">\(\mathbf{A}^{-1}\)</span> of <span class="math inline">\(\mathbf{A}\)</span>, and <span class="math inline">\(\mathbf{A}\)</span> is invertible exactly when it has an inverse. For example, for <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span> in <a href="#/exm-invertible-matrix" class="quarto-xref">Example&nbsp;5</a>, <span class="math inline">\(\begin{bmatrix} 0.5 &amp; -0.5 \\ 0 &amp; 1 \end{bmatrix}\)</span> is the only <span class="math inline">\(2 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> with</p>
+<p>The steps use <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a> and <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>. Since <span class="math inline">\(\mathbf{B} = \mathbf{C}\)</span>, at most one matrix satisfies these equations, which is the uniqueness that <a href="#/def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> asserts. When <span class="math inline">\(\mathbf{A}\)</span> is invertible, the matrix <span class="math inline">\(\mathbf{B}\)</span> in <a href="#/def-invertible-matrix" class="quarto-xref">Definition&nbsp;6</a> is therefore the inverse <span class="math inline">\(\mathbf{A}^{-1}\)</span> of <span class="math inline">\(\mathbf{A}\)</span>, and <span class="math inline">\(\mathbf{A}\)</span> is invertible exactly when it has an inverse. For example, for <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span> in <a href="#/exm-invertible-matrix" class="quarto-xref">Example&nbsp;5</a>, <span class="math inline">\(\begin{bmatrix} 0.5 &amp; -0.5 \\ 0 &amp; 1 \end{bmatrix}\)</span> is the only <span class="math inline">\(2 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> with</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}\mathbf{B} &amp;= \mathbf{B}\mathbf{A} \\
@@ -552,7 +552,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(definition of } \mathbf{B}^{-1} \text{)}
 \end{aligned}
 \]</span></p>
-<p>So <span class="math inline">\(\mathbf{B}^{-1}\mathbf{A}^{-1}\)</span> satisfies <a href="#/def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> for <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>. The steps use <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a> and <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;7 in Matrices</a>.</p>
+<p>So <span class="math inline">\(\mathbf{B}^{-1}\mathbf{A}^{-1}\)</span> satisfies <a href="#/def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> for <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>. The steps use <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a> and <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>.</p>
 </div>
 </section><section class="slide level2"><div id="thm-inverse-transpose" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (Inverse of a transpose)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is an invertible <span class="math inline">\(p \times p\)</span> matrix, then <span class="math inline">\({\mathbf{A}}^{\top}\)</span> is invertible, and</p>
@@ -586,7 +586,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(} \mathbf{I}_p \text{ is symmetric)}
 \end{aligned}
 \]</span></p>
-<p>So <span class="math inline">\({\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\)</span> satisfies <a href="#/def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> for <span class="math inline">\({\mathbf{A}}^{\top}\)</span>. The first step of each display is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>.</p>
+<p>So <span class="math inline">\({\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\)</span> satisfies <a href="#/def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a> for <span class="math inline">\({\mathbf{A}}^{\top}\)</span>. The first step of each display is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-inverse-transpose" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Inverting a transpose)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span>, <a href="#/exm-invertible-matrix" class="quarto-xref">Example&nbsp;5</a> gives <span class="math inline">\(\mathbf{A}^{-1} = \begin{bmatrix} 0.5 &amp; -0.5 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so <a href="#/thm-inverse-transpose" class="quarto-xref">Theorem&nbsp;2</a> says</p>
@@ -627,7 +627,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 \begin{aligned}
 \mathbf{B}
 &amp;= \mathbf{I}_p\,\mathbf{B}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \\
 &amp;= (\mathbf{A}^{-1}\mathbf{A})\,\mathbf{B}
 &amp;&amp; \text{(}\href{#def-matrix-inverse}{\text{Definition~5}}\text{)}
@@ -645,7 +645,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(}\href{#def-matrix-inverse}{\text{Definition~5}}\text{)}
 \\
 &amp;= \mathbf{C}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)}
 \end{aligned}
 \]</span></p>
 <p><span class="math inline">\(\square\)</span></p>
@@ -685,7 +685,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 </section><section class="slide level2"><div id="rem-matrix-vs-scalar-arithmetic" class="proof remark">
 <p><span class="proof-title"><em>Remark 4</em> (Matrix arithmetic compared with scalar arithmetic). </span><strong>Sums and differences.</strong> Matrix addition has every property that addition of numbers has: it is commutative (<a href="./linear-algebra-matrices.html#thm-matadd-commutative">Theorem&nbsp;1 in Matrices</a>), associative (<a href="./linear-algebra-matrices.html#thm-matadd-assoc">Theorem&nbsp;2 in Matrices</a>), has the zero matrix as its identity (<a href="./linear-algebra-matrices.html#thm-matadd-identity">Theorem&nbsp;3 in Matrices</a>), and gives each matrix a negative (<a href="./linear-algebra-matrices.html#thm-matadd-inverse">Theorem&nbsp;4 in Matrices</a>). The only new condition is that <span class="math inline">\(\mathbf{A} + \mathbf{B}\)</span> is defined only when <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> have the same dimensions.</p>
-<p><strong>Products.</strong> Matrix multiplication keeps three properties of multiplication of numbers: it is associative (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>), it is distributive over addition (<a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>), and it has an identity, <span class="math inline">\(\mathbf{I}_p\)</span> (<a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;7 in Matrices</a>). It differs from multiplication of numbers in four ways:</p>
+<p><strong>Products.</strong> Matrix multiplication keeps three properties of multiplication of numbers: it is associative (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>), it is distributive over addition (<a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>), and it has an identity, <span class="math inline">\(\mathbf{I}_p\)</span> (<a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>). It differs from multiplication of numbers in four ways:</p>
 <ul>
 <li>
 <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> is defined only when the number of columns of <span class="math inline">\(\mathbf{A}\)</span> equals the number of rows of <span class="math inline">\(\mathbf{B}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;7 in Matrices</a>).</li>
@@ -885,7 +885,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(definition of the Euclidean norm)}
 \end{aligned}
 \]</span></p>
-<p>Both norms are nonnegative square roots, so equal squares give <span class="math inline">\(\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span>. The second step is <a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;6 in Matrices</a>, the third is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>, and the fourth is <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>.</p>
+<p>Both norms are nonnegative square roots, so equal squares give <span class="math inline">\(\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span>. The second step is <a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;6 in Matrices</a>, the third is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>, and the fourth is <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;5 in Matrices</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-orthogonal-norm" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (Rotating a vector keeps its length)</strong></span> With <span class="math inline">\(\mathbf{Q}\)</span> from <a href="#/exm-orthogonal-matrix" class="quarto-xref">Example&nbsp;13</a> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)\)</span> from <a href="./linear-algebra-vectors.html#exm-euclidean-norm">Example&nbsp;11 in Vectors</a>:</p>
@@ -1036,7 +1036,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(move the scalar } \tfrac{1}{2} \text{ inside)}
 \end{aligned}
 \]</span></p>
-<p>The distributive step is <a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>, and the transpose step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>.</p>
+<p>The distributive step is <a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>, and the transpose step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-quadratic-form-symmetric" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Replacing a matrix by its symmetric part)</strong></span> With <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span> from <a href="#/exm-symmetric-part" class="quarto-xref">Example&nbsp;17</a> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 1)\)</span>:</p>
@@ -2165,7 +2165,7 @@ v_1 &amp;= \lambda v_2 \\
 &amp;&amp; \text{(transposing twice changes nothing)}
 \end{aligned}
 \]</span></p>
-<p>The first step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>, and the second follows from <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>, which swaps rows and columns, so swapping them again restores <span class="math inline">\(\mathbf{A}\)</span>.</p>
+<p>The first step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>, and the second follows from <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>, which swaps rows and columns, so swapping them again restores <span class="math inline">\(\mathbf{A}\)</span>.</p>
 <p><strong>The factorization.</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -2426,7 +2426,7 @@ v_2 &amp;= (\lambda- 1)\, v_1 \\
 &amp;&amp; \text{(} \mathbf{\Lambda} \text{ is diagonal)}
 \end{aligned}
 \]</span></p>
-<p>The second step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;16 in Matrices</a>. Also, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>: <span class="math inline">\(\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p\)</span> for an orthogonal matrix (<a href="#/def-orthogonal-matrix" class="quarto-xref">Definition&nbsp;10</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
+<p>The second step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;17 in Matrices</a>. Also, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>: <span class="math inline">\(\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p\)</span> for an orthogonal matrix (<a href="#/def-orthogonal-matrix" class="quarto-xref">Definition&nbsp;10</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
 <p><em>If every <span class="math inline">\(\lambda_i \ge 0\)</span></em>, then every term <span class="math inline">\(\lambda_i y_i^2 \ge 0\)</span>, so <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0\)</span>. <em>If every <span class="math inline">\(\lambda_i &gt; 0\)</span></em> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then some <span class="math inline">\(y_i \neq 0\)</span>, so at least one term is positive and the rest are non-negative, and <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} &gt; 0\)</span>.</p>
 <p><em>Conversely</em>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i\)</span>, column <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{Q}\)</span>, which is not <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> because it has norm 1. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = {\mathbf{Q}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i\)</span> is column <span class="math inline">\(i\)</span> of <span class="math inline">\({\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p\)</span>, so <span class="math inline">\(y_i = 1\)</span> and every other entry of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is <span class="math inline">\(0\)</span>, and the display gives <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i = \lambda_i\)</span>. So if <span class="math inline">\(\mathbf{A}\)</span> is positive semidefinite, <span class="math inline">\(\lambda_i \ge 0\)</span>, and if <span class="math inline">\(\mathbf{A}\)</span> is positive definite, <span class="math inline">\(\lambda_i &gt; 0\)</span>.</p>
 </div>
@@ -2481,7 +2481,7 @@ v_2 &amp;= (\lambda- 1)\, v_1 \\
 &amp;&amp; \text{(} \mathbf{Q} \text{ is orthogonal)}
 \end{aligned}
 \]</span></p>
-<p>The same steps, with <span class="math inline">\(\mathbf{\Lambda}^{-1}\)</span> and <span class="math inline">\(\mathbf{\Lambda}\)</span> swapped, give <span class="math inline">\(\mathbf{B}\mathbf{A} = \mathbf{I}_p\)</span>, so <span class="math inline">\(\mathbf{B} = \mathbf{A}^{-1}\)</span> (<a href="#/def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a>). The steps with <span class="math inline">\(\mathbf{Q}\)</span> use <a href="#/def-orthogonal-matrix" class="quarto-xref">Definition&nbsp;10</a>, whose remark records that <span class="math inline">\(\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p\)</span> too, and the identity step uses <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;7 in Matrices</a>.</p>
+<p>The same steps, with <span class="math inline">\(\mathbf{\Lambda}^{-1}\)</span> and <span class="math inline">\(\mathbf{\Lambda}\)</span> swapped, give <span class="math inline">\(\mathbf{B}\mathbf{A} = \mathbf{I}_p\)</span>, so <span class="math inline">\(\mathbf{B} = \mathbf{A}^{-1}\)</span> (<a href="#/def-matrix-inverse" class="quarto-xref">Definition&nbsp;5</a>). The steps with <span class="math inline">\(\mathbf{Q}\)</span> use <a href="#/def-orthogonal-matrix" class="quarto-xref">Definition&nbsp;10</a>, whose remark records that <span class="math inline">\(\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p\)</span> too, and the identity step uses <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;8 in Matrices</a>.</p>
 <p><span class="math inline">\(\mathbf{A}^{-1}\)</span> is symmetric by <a href="#/cor-inverse-symmetric" class="quarto-xref">Corollary&nbsp;1</a>. For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = {\mathbf{Q}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, which is not <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> because <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>. As in the proof of <a href="#/thm-definite-eigenvalues" class="quarto-xref">Theorem&nbsp;15</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -2653,7 +2653,7 @@ A_{12} &amp;= A_{21} \\
 &amp;&amp; \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}_{\mathbf{A}} \text{)}
 \\
 &amp;= (a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top})\,\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~15 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~16 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)}
 \\
 &amp;= a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)}
@@ -2674,7 +2674,7 @@ A_{12} &amp;= A_{21} \\
 &amp;&amp; \text{(a scalar equals its transpose)}
 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}{\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, twice)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{, twice)}
 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
 &amp;&amp; \text{($\mathbf{A}$ is symmetric)}
