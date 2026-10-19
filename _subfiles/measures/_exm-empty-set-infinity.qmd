@@ -18,7 +18,7 @@ $$
 $$
 
 and the right-hand side,
-the limit of its partial sums (@lem-nonneg-series), is:
+the [limit](algebra.qmd#def-sequence-limit) of its [partial sums](algebra.qmd#def-partial-sum) ([sums of non-negative terms](algebra.qmd#lem-nonneg-series)), is:
 
 $$
 \ba

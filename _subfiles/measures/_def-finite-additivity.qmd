@@ -7,7 +7,7 @@ with values in the [extended non-negative reals](sets.qmd#def-extended-nonneg-re
 is **finitely additive**
 [@wikipedia_sigma_additive_set_function]
 if, for every finite collection of
-[pairwise disjoint](#def-pairwise-disjoint) sets $\dsn{A}$ in $\salg$,
+[pairwise disjoint](sets.qmd#def-pairwise-disjoint) [sets](sets.qmd#def-set) $\dsn{A}$ in $\salg$,
 the value of their union is the sum of their values:
 
 $$\measure(A_1 \cup \cdots \cup A_n) = \sumin \measure(A_i)$$

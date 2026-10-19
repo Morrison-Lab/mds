@@ -47,7 +47,7 @@ organized by topic:
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
   percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Measures](measures.qmd):
-  $\sigma$-algebras, pairwise disjoint sets, finite and countable additivity,
+  $\sigma$-algebras, [finite](functions.qmd#def-finite-set) and [countable additivity](measures.qmd#def-countable-additivity),
   measures, and the counting measure
 - [Calculus](calculus.qmd):
   derivative rules, antiderivatives,
