@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 22:01:27 (PDT)
+Last modified: 2026-10-19 01:54:28 (PDT)
 
 ## 1 Inner products
 
@@ -443,13 +443,15 @@ Last modified: 2026-10-18 22:01:27 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Angle between two vectors)** The **angle** between two nonzero vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \in \mathbb{R}^p\\ is the unique [real number](number-systems.llms.md#def-real-numbers) \\\theta\in \[0, \pi\]\\ whose cosine ([Definition 3 in Trigonometry](algebra-trigonometry.llms.md#def-cosine-sine)) is the [cosine similarity](#def-cosine-similarity) of the two vectors:
+> **Definition 8 (Angle between two vectors)** The **angle** between two nonzero vectors, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \in \mathbb{R}^p\\, is
 >
-> \\ \cos\theta= \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}). \\
+> \\ \theta\stackrel{\text{def}}{=}\arccos\mathopen{}\left(\operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\right)\mathclose{}. \\
+>
+> In words, the angle is the [arccosine](algebra-trigonometry.llms.md#def-arccosine) of the [cosine similarity](#def-cosine-similarity) of the two vectors.
 
 > **NOTE:**
 >
-> *Remark 4* (Why the angle is well defined). The [cosine similarity](#def-cosine-similarity) is defined, because both vectors are nonzero ([Theorem 1](#thm-norm-properties)). By [Theorem 3](#thm-cauchy-schwarz), it lies in \\\[-1, 1\]\\. On \\\[0, \pi\]\\, \\\cos\\ is decreasing from \\1\\ to \\-1\\. It hits each point of \\\[-1, 1\]\\ exactly once ([Theorem 2 in Trigonometry](algebra-trigonometry.llms.md#thm-cosine-bijection)), so there is exactly one such \\\theta\\.
+> *Remark 4* (Why the angle is well defined). The [cosine similarity](#def-cosine-similarity) is defined, because both vectors are nonzero ([Theorem 1](#thm-norm-properties)). By [Theorem 3](#thm-cauchy-schwarz), it lies in the [closed interval](sets.llms.md#def-closed-interval) \\\[-1, 1\]\\, which is where the [arccosine](algebra-trigonometry.llms.md#def-arccosine), \\\arccos\\, is defined. So the angle \\\theta\\ lies in \\\[0, \pi\]\\, with [cosine](algebra-trigonometry.llms.md#def-cosine-sine) \\\cos\theta= \operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\.
 
 > **NOTE:**
 >
@@ -461,7 +463,7 @@ Last modified: 2026-10-18 22:01:27 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Since \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} \> 0\\ ([Theorem 1](#thm-norm-properties)), \\\operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = 0\\ exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = 0\\ ([Definition 7](#def-cosine-similarity)), so \\\cos\theta= 0\\ exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = 0\\. On \\\[0, \pi\]\\, \\\cos\\ vanishes only at \\\pi/2\\.
+> *Proof*. Since \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} \> 0\\ ([Theorem 1](#thm-norm-properties)), \\\operatorname{cossim}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = 0\\ exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = 0\\ ([Definition 7](#def-cosine-similarity)), so \\\cos\theta= 0\\ exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = 0\\ ([Remark 4](#rem-angle-well-defined)). On \\\[0, \pi\]\\, \\\cos\\ vanishes only at \\\pi/2\\.
 
 > **NOTE:**
 >
@@ -482,6 +484,10 @@ Last modified: 2026-10-18 22:01:27 (PDT)
 >   so \\\theta= \pi\\.
 >
 > - \\(1, 0)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\: there is no angle, because the ratio would divide by \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\rVert\mathclose{} = 0\\.
+
+> **NOTE:**
+>
+> *Remark 5* (How the two angles relate). For nonzero vectors in the plane, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\, the [angle between the vectors](#def-angle) is the [angle on the unit circle](algebra-trigonometry.llms.md#def-angle-unit-circle) between the points \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} / \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} / \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{}\\. The [cosine similarity](#def-cosine-similarity) of the vectors is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of these points. Rotating the plane puts the first point at \\(1, 0)\\, with no change to the distance between the points along the circle or to their dot product. For the angle on the unit circle, \\\theta\\, the second point is then \\(\cos\theta, \pm\sin\theta)\\, so the dot product of the points is \\\cos\theta\\. Applying \\\arccos\\ to it returns \\\theta\\, which lies in \\\[0, \pi\]\\.
 
 > **NOTE:**
 >
@@ -527,21 +533,21 @@ Last modified: 2026-10-18 22:01:27 (PDT)
 
 > **NOTE:**
 >
-> **Corollary 3 (Pearson correlation is the cosine of the angle between the centered vectors)** For the vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^n\\ of [Theorem 6](#thm-pearson-cosine-centered), the centered vectors \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}\\, \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}}\\ are nonzero, so they have an [angle](#def-angle) \\\theta\\. The [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) \\r\\ satisfies
+> **Corollary 3 (Pearson correlation is the cosine of the angle between the centered vectors)** For the two data vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^n\\ of [Theorem 6](#thm-pearson-cosine-centered), the centered vectors \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}\\, \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}}\\ are nonzero, so they have an [angle](#def-angle) \\\theta\\. The [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) \\r\\ satisfies
 >
 > \\ r = \cos\theta. \\
 
 > **NOTE:**
 >
-> *Proof*. By [Theorem 6](#thm-pearson-cosine-centered), \\r = \operatorname{cossim}({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}})\\. By [Definition 8](#def-angle), \\\cos\theta= \operatorname{cossim}({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}})\\.
+> *Proof*. By [Theorem 6](#thm-pearson-cosine-centered), \\r = \operatorname{cossim}({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}})\\. By [Definition 8](#def-angle), \\\theta= \arccos\mathopen{}\left(\operatorname{cossim}({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}})\right)\mathclose{}\\, so \\\cos\theta= \operatorname{cossim}({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}})\\ ([Remark 4](#rem-angle-well-defined)).
 
 > **NOTE:**
 >
-> **Example 16 (A correlation of one half is an angle of sixty degrees)** In [Example 15](#exm-pearson-cosine-centered), \\r = 1/2\\ for \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 2, 3)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (1, 3, 2)\\. By [Corollary 3](#cor-pearson-angle), the [angle](#def-angle) \\\theta\\ between \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}} = (-1, 0, 1)\\, \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}} = (-1, 1, 0)\\ satisfies
+> **Example 16 (A correlation of one half is an angle of sixty degrees)** In [Example 15](#exm-pearson-cosine-centered), the correlation is \\r = 1/2\\, for the data vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 2, 3)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (1, 3, 2)\\. By [Corollary 3](#cor-pearson-angle), the [angle](#def-angle) \\\theta\\ between the centered vectors \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\mathrm{c}} = (-1, 0, 1)\\, \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\mathrm{c}} = (-1, 1, 0)\\ satisfies
 >
 > \\ \cos\theta= \frac{1}{2}, \\
 >
-> so \\\theta= \pi/3\\.
+> so the angle is \\\theta= \pi/3\\.
 
 ## 3 Orthonormal bases and Gram-Schmidt
 
@@ -795,7 +801,7 @@ Last modified: 2026-10-18 22:01:27 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (Outer product and dot product). The dot product \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ ([Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ takes vectors of any two lengths and gives a matrix [\[3, Ch. 1\]](#ref-banerjee2014linear), p. 11.
+> *Remark 6* (Outer product and dot product). The dot product \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ ([Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ takes vectors of any two lengths and gives a matrix [\[3, Ch. 1\]](#ref-banerjee2014linear), p. 11.
 >
 > For example, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = (1, 2, 3)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = (4, 5)\\ in [Example 26](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a \\3 \times 2\\ matrix. For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}} = (1, 2)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (3, 4)\\, which have the same length, both products exist:
 >

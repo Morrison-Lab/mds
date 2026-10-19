@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 22:01:27 (PDT)
+Last modified: 2026-10-19 01:54:28 (PDT)
 
 ## 1 Special Matrices
 
@@ -1159,17 +1159,17 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > **Definition 26 (Determinant)** The **determinant** [\[14\]](#ref-wikipedia_determinant) of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
 >
 > - For \\p = 1\\, \\\det(\mathbf{A}) = a\_{11}\\.
-> - For \\p \ge 2\\, \\ \det(\mathbf{A}) = \sum\_{j=1}^p(-1)^{1+j}\\ a\_{1j} \det\mathopen{}\left(\mathbf{A}\_{(1j)}\right)\mathclose{}, \\ where \\\mathbf{A}\_{(1j)}\\ is the \\(p-1) \times (p-1)\\ matrix left after deleting row \\1\\ and column \\j\\ of \\\mathbf{A}\\.
+> - For \\p \ge 2\\, \\ \det(\mathbf{A}) = \sum\_{j=1}^p(-1)^{1+j}\\ a\_{1j} {\det\mathopen{}\left(\mathbf{A}\_{(1j)}\right)\mathclose{}}, \\ where \\\mathbf{A}\_{(1j)}\\ is the \\(p-1) \times (p-1)\\ matrix left after deleting row \\1\\ and column \\j\\ of \\\mathbf{A}\\.
 
 > **NOTE:**
 >
 > **Example 36 (Determinant of a \\2 \times 2\\ matrix)** For \\\mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}\\, deleting row 1 and column 1 leaves \\\begin{bmatrix} d \end{bmatrix}\\, and deleting row 1 and column 2 leaves \\\begin{bmatrix} c \end{bmatrix}\\. So:
 >
-> \\ \begin{aligned} \det(\mathbf{A}) &= (-1)^{1+1}\\ a \det\mathopen{}\left(\begin{bmatrix} d \end{bmatrix}\right)\mathclose{} + (-1)^{1+2}\\ b \det\mathopen{}\left(\begin{bmatrix} c \end{bmatrix}\right)\mathclose{} && \text{(definition, } p = 2 \text{)} \\ &= a d - b c && \text{(definition, } p = 1 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \det(\mathbf{A}) &= (-1)^{1+1}\\ a {\det\mathopen{}\left(\begin{bmatrix} d \end{bmatrix}\right)\mathclose{}} + (-1)^{1+2}\\ b {\det\mathopen{}\left(\begin{bmatrix} c \end{bmatrix}\right)\mathclose{}} && \text{(definition, } p = 2 \text{)} \\ &= a d - b c && \text{(definition, } p = 1 \text{)} \end{aligned} \\
 >
 > For example,
 >
-> \\ \begin{aligned} \det\mathopen{}\left(\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\right)\mathclose{} &= 2 \cdot 2 - 1 \cdot 1 \\ &= 3. \end{aligned} \\
+> \\ \begin{aligned} {\det\mathopen{}\left(\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\right)\mathclose{}} &= 2 \cdot 2 - 1 \cdot 1 \\ &= 3. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1191,7 +1191,7 @@ See also [\[14\]](#ref-wikipedia_determinant).
 >
 > **Theorem 19 (Determinant of a diagonal matrix)** The determinant ([Definition 26](#def-determinant)) of a \\p \times p\\ diagonal matrix ([Definition 4](#def-diagonal-matrix)) is the product of its diagonal entries:
 >
-> \\ \det\mathopen{}\left( \begin{bmatrix} d_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & d_p \end{bmatrix} \right)\mathclose{} = \prod\_{i=1}^p d_i \\
+> \\ {\det\mathopen{}\left( \begin{bmatrix} d_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & d_p \end{bmatrix} \right)\mathclose{}} = \prod\_{i=1}^p d_i \\
 
 > **NOTE:**
 >
@@ -1199,7 +1199,7 @@ See also [\[14\]](#ref-wikipedia_determinant).
 >
 > For \\p \ge 2\\, suppose the result holds for \\(p-1) \times (p-1)\\ diagonal matrices, and let \\\mathbf{D}\\ be \\p \times p\\ and diagonal. Row 1 of \\\mathbf{D}\\ is \\(d_1, 0, \ldots, 0)\\, so only the \\j = 1\\ term of the definition can be nonzero, and deleting row 1 and column 1 of \\\mathbf{D}\\ leaves the diagonal matrix with diagonal entries \\d_2, \ldots, d_p\\:
 >
-> \\ \begin{aligned} \det(\mathbf{D}) &= (-1)^{1+1}\\ d_1 \det\mathopen{}\left(\mathbf{D}\_{(11)}\right)\mathclose{} + \sum\_{j=2}^p (-1)^{1+j} \cdot 0 \cdot\det\mathopen{}\left(\mathbf{D}\_{(1j)}\right)\mathclose{} && \text{(definition)} \\ &= d_1 \det\mathopen{}\left(\mathbf{D}\_{(11)}\right)\mathclose{} && \text{(drop the zero terms)} \\ &= d_1 \prod\_{i=2}^p d_i && \text{(induction hypothesis)} \\ &= \prod\_{i=1}^p d_i && \text{(combine)} \end{aligned} \\
+> \\ \begin{aligned} \det(\mathbf{D}) &= (-1)^{1+1}\\ d_1 {\det\mathopen{}\left(\mathbf{D}\_{(11)}\right)\mathclose{}} + \sum\_{j=2}^p (-1)^{1+j} \cdot 0 \cdot{\det\mathopen{}\left(\mathbf{D}\_{(1j)}\right)\mathclose{}} && \text{(definition)} \\ &= d_1 {\det\mathopen{}\left(\mathbf{D}\_{(11)}\right)\mathclose{}} && \text{(drop the zero terms)} \\ &= d_1 \prod\_{i=2}^p d_i && \text{(induction hypothesis)} \\ &= \prod\_{i=1}^p d_i && \text{(combine)} \end{aligned} \\
 
 > **NOTE:**
 >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-18 22:01:27 (PDT)
+Last modified: 2026-10-19 01:54:28 (PDT)
 
 ## 1 Cosine and sine
 
@@ -31,11 +31,35 @@ Last modified: 2026-10-18 22:01:27 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Cosine)** For a real number \\\theta\\, start at the point \\(1, 0)\\ of the unit circle ([Definition 1](#def-unit-circle)) and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The first coordinate of the point reached is the **cosine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\cos\theta\\.
+> **Definition 3 (Angle on the unit circle)** The **angle** between two points of the [unit circle](#def-unit-circle) is how far apart they are along the circle, going the short way round. Let the counterclockwise distance from the first point to the second be \\s \in \[0, 2\pi)\\. Then the angle is
+>
+> \\ \theta\stackrel{\text{def}}{=}\min\mathopen{}\left\\s, 2\pi - s\right\\\mathclose{}. \\
+>
+> In words, the angle is the smaller of two distances from the first point to the second: the counterclockwise one, \\s\\, or the clockwise one, \\2\pi - s\\.
 
 > **NOTE:**
 >
-> **Example 3 (Cosines of some angles)**  
+> **Example 3 (Three angles on the unit circle)**  
+>
+> - The points \\(1, 0)\\, \\(0, 1)\\ are a quarter of the circle apart, so their [angle](#def-angle-unit-circle) is \\\pi/2\\.
+> - The points \\(1, 0)\\, \\(-1, 0)\\ are half of the circle apart, so their angle is \\\pi\\.
+> - The point \\(1, 0)\\ is \\0\\ apart from itself, so their angle is \\0\\.
+
+> **NOTE:**
+>
+> **Proposition 1 (Range of an angle on the unit circle)** An [angle](#def-angle-unit-circle) between two points of the [unit circle](#def-unit-circle) is at least \\0\\, at most \\\pi\\ ([Definition 2](#def-pi)).
+
+> **NOTE:**
+>
+> *Proof*. The whole circle has length \\2\pi\\ ([Definition 2](#def-pi)). Going the short way round covers at most half of the circle, which is \\\pi\\. A distance along the circle is at least \\0\\.
+
+> **NOTE:**
+>
+> **Definition 4 (Cosine)** For a real number \\\theta\\, start at the point \\(1, 0)\\ of the unit circle ([Definition 1](#def-unit-circle)) and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The first coordinate of the point reached is the **cosine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\cos\theta\\.
+
+> **NOTE:**
+>
+> **Example 4 (Cosines of some angles)**  
 >
 > - \\\theta= 0\\ stays at \\(1, 0)\\, so \\\cos 0 = 1\\.
 > - \\\theta= \pi\\ goes half way around the circle, to \\(-1, 0)\\, so \\\cos\pi = -1\\.
@@ -46,16 +70,16 @@ Last modified: 2026-10-18 22:01:27 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Sine)** For a real number \\\theta\\, the second coordinate of the point reached from \\(1, 0)\\ by moving a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle ([Definition 3](#def-cosine-sine)) is the **sine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\sin\theta\\. The sine is one of the trigonometric functions [\[4\]](#ref-wikipedia_trigonometric_functions).
+> **Definition 5 (Sine)** For a real number \\\theta\\, the second coordinate of the point reached from \\(1, 0)\\ by moving a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle ([Definition 4](#def-cosine-sine)) is the **sine** of \\\theta\\ [\[3\]](#ref-wikipedia_sine_and_cosine), written \\\sin\theta\\. The sine is one of the trigonometric functions [\[4\]](#ref-wikipedia_trigonometric_functions).
 
 > **NOTE:**
 >
-> **Example 4 (Sines of some angles)**  
+> **Example 5 (Sines of some angles)**  
 >
 > - \\\theta= 0\\ stays at \\(1, 0)\\, so \\\sin 0 = 0\\.
 > - \\\theta= \pi\\ goes half way around the circle, to \\(-1, 0)\\, so \\\sin\pi = 0\\.
 > - \\\theta= \pi/2\\ goes a quarter of the way round, to \\(0, 1)\\, so \\\sin(\pi/2) = 1\\.
-> - \\\theta= \pi/4\\ reaches the point with \\x_1 = x_2 = \tfrac{1}{\sqrt{2}}\\ ([Example 3](#exm-cosine-sine)), so \\\sin(\pi/4) = \tfrac{1}{\sqrt{2}}\\.
+> - \\\theta= \pi/4\\ reaches the point with \\x_1 = x_2 = \tfrac{1}{\sqrt{2}}\\ ([Example 4](#exm-cosine-sine)), so \\\sin(\pi/4) = \tfrac{1}{\sqrt{2}}\\.
 
 > **NOTE:**
 >
@@ -69,7 +93,7 @@ Last modified: 2026-10-18 22:01:27 (PDT)
 
 > **NOTE:**
 >
-> **Example 5 (The unit circle and the angle \\\pi/3\\)** Take \\\theta= \pi/3\\, one sixth of the way round the circle. [Figure 1](#fig-cosine-sine-unit-circle) shows the point reached, \\(\cos\theta, \sin\theta)\\, and its two coordinates. The point is a vertex of a regular hexagon inscribed in the unit circle, whose sides have the same length as its radius, so the point is at distance \\1\\ from \\(1, 0)\\. Writing \\(x_1, x_2) = (\cos\theta, \sin\theta)\\,
+> **Example 6 (The unit circle and the angle \\\pi/3\\)** Take \\\theta= \pi/3\\, one sixth of the way round the circle. [Figure 1](#fig-cosine-sine-unit-circle) shows the point reached, \\(\cos\theta, \sin\theta)\\, and its two coordinates. The point is a vertex of a regular hexagon inscribed in the unit circle, whose sides have the same length as its radius, so the point is at distance \\1\\ from \\(1, 0)\\. Writing \\(x_1, x_2) = (\cos\theta, \sin\theta)\\,
 >
 > \\ \begin{aligned} 1 &= (x_1 - 1)^2 + x_2^2 \\ &= x_1^2 + x_2^2 - 2 x_1 + 1 \\ &= 2 - 2 x_1, \end{aligned} \\
 >
@@ -141,15 +165,15 @@ Last modified: 2026-10-18 22:01:27 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Arccosine)** The **arccosine** \\\arccos : \[-1, 1\] \to \[0, \pi\]\\ is the [function](functions.llms.md#def-function) that sends each \\c \in \[-1, 1\]\\ to the one \\\theta\in \[0, \pi\]\\ with \\\cos\theta= c\\. By [Theorem 2](#thm-cosine-bijection), there is just one such \\\theta\\.
+> **Definition 6 (Arccosine)** The **arccosine** \\\arccos : \[-1, 1\] \to \[0, \pi\]\\ is the [function](functions.llms.md#def-function) that sends each [cosine](#def-cosine-sine), \\c \in \[-1, 1\]\\, to the one [real number](number-systems.llms.md#def-real-numbers) \\\theta\in \[0, \pi\]\\ whose cosine is \\c\\. By [Theorem 2](#thm-cosine-bijection), there is just one such \\\theta\\.
 
 > **NOTE:**
 >
-> **Example 6 (Three arccosines)**  
+> **Example 7 (Three arccosines)**  
 >
-> - \\\arccos 1 = 0\\, because \\\cos 0 = 1\\.
-> - \\\arccos 0 = \pi/2\\, because \\\cos(\pi/2) = 0\\.
-> - \\\arccos(-1) = \pi\\, because \\\cos\pi = -1\\.
+> - The [arccosine](#def-arccosine) of one is \\\arccos 1 = 0\\, because the [cosine](#def-cosine-sine) of zero is \\\cos 0 = 1\\.
+> - The arccosine of zero is \\\arccos 0 = \pi/2\\, because the cosine of a quarter turn is \\\cos(\pi/2) = 0\\.
+> - The arccosine of minus one is \\\arccos(-1) = \pi\\, because the cosine of a half turn is \\\cos\pi = -1\\.
 
 Back to top
 
