@@ -47,7 +47,7 @@ The **unbounded intervals** have at most one endpoint:
 :::{#def-interval}
 #### Interval
 
-For real numbers $a \le b$,
+For real numbers $a \le b$, <!-- check-term-links: allow -->
 the **intervals**
 [@wikipedia_interval_mathematics]
 with **endpoints** $a$ and $b$ are
@@ -56,7 +56,7 @@ the open interval (@def-open-interval),
 and the half-open intervals (@def-half-open-interval).
 The unbounded intervals (@def-unbounded-interval) have at most one endpoint.
 
-A square bracket means the endpoint belongs to the interval,
+A square bracket means the endpoint belongs to the interval, <!-- check-term-links: allow -->
 and a parenthesis means it does not.
 The symbols $\infty$ and $-\infty$ are not real numbers,
 so they always get a parenthesis.
