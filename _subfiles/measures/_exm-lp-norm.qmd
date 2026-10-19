@@ -1,5 +1,5 @@
 :::{#exm-lp-norm}
-#### The $L^1$ and $L^2$ norms of $x \mapsto x$ on $[0, 1]$
+#### The $L^1$ and $L^2$ norms of $x \mapsto x$ on the unit interval
 
 Let $S = [0, 1]$ with the [Lebesgue measure](#def-lebesgue-measure) $\measure$,
 and let $f(x) = x$.
