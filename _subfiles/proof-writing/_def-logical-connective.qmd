@@ -7,6 +7,6 @@ builds a new proposition (@def-proposition)
 from one or two propositions $P$ and $Q$,
 with a truth value that depends only on the truth values of $P$ and $Q$.
 These notes use five, each defined next:
-not, and, or, implies, and if and only if.
+not, and, or, implies, and if and only if. <!-- check-term-links: allow -->
 
 :::

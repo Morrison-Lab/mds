@@ -6,6 +6,6 @@ A **quantifier**
 turns a predicate $P(x)$ (@def-predicate)
 about the elements $x$ of a set $S$ into a proposition (@def-proposition).
 There are two, each defined next:
-the universal quantifier and the existential quantifier.
+the universal quantifier and the existential quantifier. <!-- check-term-links: allow -->
 
 :::
