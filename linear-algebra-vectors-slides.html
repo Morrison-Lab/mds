@@ -353,7 +353,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-19 12:33:15 (PDT)</p>
+  <p class="date">Last modified: 2026-10-19 23:31:34 (PDT)</p>
 </section><section class="slide level2"></section><section id="vectors" class="slide level2 scrollable" data-number="1"><h2>
 <span class="header-section-number">1</span> Vectors</h2>
 <div id="exr-list-as-vector" class="theorem exercise">
@@ -904,12 +904,18 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <p><span class="math display">\[\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\right\rVert\mathclose{}_2 = \sqrt{14} \approx 3.742\]</span></p>
 <p>The inner product came out negative while the norm cannot: a norm is a square root of a sum of squares, so it is never below zero.</p>
 <p>Python has both operations built in, and R builds them from <code>sum</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-label="1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-label="1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a aria-label="2"></a></span>
 <span id="cb1-3"><a aria-label="3"></a>a <span class="op">=</span> np.array([<span class="fl">3.0</span>, <span class="op">-</span><span class="fl">1.0</span>, <span class="fl">2.0</span>])</span>
 <span id="cb1-4"><a aria-label="4"></a>b <span class="op">=</span> np.array([<span class="fl">0.0</span>, <span class="fl">4.0</span>, <span class="op">-</span><span class="fl">2.0</span>])</span>
 <span id="cb1-5"><a aria-label="5"></a></span>
-<span id="cb1-6"><a aria-label="6"></a><span class="bu">print</span>(a <span class="op">@</span> b, <span class="bu">round</span>(<span class="bu">float</span>(np.linalg.norm(a)), <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-6"><a aria-label="6"></a>inner <span class="op">=</span> <span class="bu">float</span>(a <span class="op">@</span> b)</span>
+<span id="cb1-7"><a aria-label="7"></a>norm_a <span class="op">=</span> <span class="bu">round</span>(<span class="bu">float</span>(np.linalg.norm(a)), <span class="dv">3</span>)</span>
+<span id="cb1-8"><a aria-label="8"></a></span>
+<span id="cb1-9"><a aria-label="9"></a><span class="bu">print</span>(inner, norm_a)</span>
+<span id="cb1-10"><a aria-label="10"></a><span class="co">#&gt; -8.0 3.742</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>)</span>
 <span id="cb2-2"><a aria-label="2"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">4</span>, <span class="sc">-</span><span class="dv">2</span>)</span>
@@ -917,7 +923,7 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <span id="cb2-4"><a aria-label="4"></a><span class="fu">print</span>(<span class="fu">c</span>(<span class="fu">sum</span>(a <span class="sc">*</span> b), <span class="fu">round</span>(<span class="fu">sqrt</span>(<span class="fu">sum</span>(a<span class="sc">^</span><span class="dv">2</span>)), <span class="dv">3</span>)))</span>
 <span id="cb2-5"><a aria-label="5"></a><span class="co">#&gt; [1] -8.000  3.742</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Both print <span class="math inline">\(-8\)</span> and <span class="math inline">\(3.742\)</span>.</p>
+<p>Both print -8 and 3.742.</p>
 </div>
 </section><section class="slide level2 smaller scrollable" id="references"><div title="Video lecture">
 <div class="callout callout-tip callout-titled callout-style-default">

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 12:33:15 (PDT)
+Last modified: 2026-10-19 23:31:34 (PDT)
 
 ## 1 Vectors
 
@@ -391,7 +391,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > a = np.array([3.0, -1.0, 2.0])
 > b = np.array([0.0, 4.0, -2.0])
 >
-> print(a @ b, round(float(np.linalg.norm(a)), 3))
+> inner = float(a @ b)
+> norm_a = round(float(np.linalg.norm(a)), 3)
+>
+> print(inner, norm_a)
+> #> -8.0 3.742
 > ```
 >
 > ``` downlit
@@ -402,7 +406,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > #> [1] -8.000  3.742
 > ```
 >
-> Both print \\-8\\ and \\3.742\\.
+> Both print -8 and 3.742.
 
 > **TIP:**
 >
