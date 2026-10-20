@@ -29,14 +29,6 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/sets/_def-interval.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/sets/_exm-interval.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/sets/_def-subset.qmd >}}
 
 {{< slidebreak >}}
@@ -86,6 +78,14 @@ the expressions that write functions down and the algorithms that compute them.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/sets/_thm-empty-subset.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_def-interval.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-interval.qmd >}}
 
 {{< slidebreak >}}
 
