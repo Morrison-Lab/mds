@@ -7,7 +7,9 @@ The following statements are equivalent:
 
 1. $\matr{A} \vecf{x} = \vecf{b}$ is consistent (@def-consistent-system);
 2. $\vecf{b} \in \mathcal{C}(\matr{A})$ (@def-column-space);
-3. $\matr{A} \matr{G} \vecf{b} = \vecf{b}$.
+3. $\matr{A} \matr{G} \vecf{b} = \vecf{b}$;
+4. $\operatorname{rank}\paren{\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix}} = \operatorname{rank}(\matr{A})$,
+   where $\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix}$ is the $m \times (n + 1)$ [matrix](linear-algebra-matrices.qmd#def-matrix) whose last column is $\vecf{b}$.
 
 :::
 
@@ -27,6 +29,18 @@ which is statement 3 (@thm-matmul-assoc).
 If $\matr{A} \matr{G} \vecf{b} = \vecf{b}$,
 then $\vecf{x} = \matr{G} \vecf{b}$ is a solution,
 since $\matr{A}\,(\matr{G} \vecf{b}) = (\matr{A} \matr{G})\,\vecf{b}$ (@thm-matmul-assoc).
+
+**2 and 4 are equivalent.**
+Every column of $\matr{A}$ is a column of $\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix}$,
+so $\mathcal{C}(\matr{A}) \subseteq \mathcal{C}\paren{\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix}}$.
+
+- If $\vecf{b} \in \mathcal{C}(\matr{A})$,
+  every combination of the columns of $\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix}$
+  is a combination of the columns of $\matr{A}$ (@def-column-space),
+  so the two column spaces (@def-column-space) coincide and their [ranks](linear-algebra-subspaces.qmd#def-rank) agree (@thm-rank-dim).
+- If the ranks agree, the two column spaces have the same [dimension](linear-algebra-subspaces.qmd#def-dimension) (@thm-rank-dim),
+  so they coincide (@thm-subspace-equal-dim),
+  and $\vecf{b} \in \mathcal{C}\paren{\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix}} = \mathcal{C}(\matr{A})$.
 
 :::
 
@@ -51,5 +65,14 @@ $\matr{A} \matr{G} = \begin{bmatrix} 1 & 5 \\ 0 & 0 \end{bmatrix}$.
   so the system is consistent.
 - $\vecf{b} = (2, 1)$: $\matr{A} \matr{G} \vecf{b} = (7, 0) \ne \vecf{b}$, so it is not,
   as @exm-generalized-inverse-solves found directly.
+
+Item 4 agrees.
+$\matr{A}$ has [rank](linear-algebra-subspaces.qmd#def-rank) $1$.
+For $\vecf{b} = (2, 0)$,
+$\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix} = \begin{bmatrix} 1 & 0 & 2 \\ 0 & 0 & 0 \end{bmatrix}$
+also has rank $1$.
+For $\vecf{b} = (2, 1)$,
+$\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix} = \begin{bmatrix} 1 & 0 & 2 \\ 0 & 0 & 1 \end{bmatrix}$
+has rank $2$, because $(1, 0)$ and $(2, 1)$ are [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent).
 
 :::

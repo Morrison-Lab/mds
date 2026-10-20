@@ -152,15 +152,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-distributive.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_exm-distributive.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
 
 {{< slidebreak >}}
 

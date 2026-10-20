@@ -8,6 +8,8 @@ The source states the first-order test (in one direction) and the second-derivat
 here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of @sec-optimality-vector.
 The source defines both concave and strictly concave as "$-f$ is strictly convex";
 here $f$ is concave when $-f$ is convex.
+The source states that an intersection of convex sets is convex and that a maximum of convex functions is convex for any finite number of them;
+here each is stated for two and the general case follows by induction.
 These parts of the source are not part of this section:
 
 - its catalogs of convex sets and convex functions, including the positive semidefinite matrices and $-\log \det$
@@ -15,3 +17,6 @@ These parts of the source are not part of this section:
 - its examples, exercises and figures, including the multivariate normal maximum likelihood example
 
 :::
+
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->

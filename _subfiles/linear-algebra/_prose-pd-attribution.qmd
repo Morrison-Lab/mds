@@ -14,9 +14,16 @@ These parts of the source are left out:
 - its pivot test
 - its Hadamard-product "Schur lemma"
 - its notes on the LU factorization and computational cost
+- its statement that a nonnegative combination of positive semidefinite matrices is positive semidefinite
+  (@thm-pd-operations states the positive definite version)
+- its section on the ellipse $a x^2 + 2 b x y + c y^2 = 1$, with its worked example of a positive definite and an indefinite matrix
+- its numerical example of the Cholesky factorization
 
 The source leaves the Schur complement test unproved;
 it is proved here from a block expansion of the quadratic form,
 and the Cholesky factorization is derived from it.
 
 :::
+
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->

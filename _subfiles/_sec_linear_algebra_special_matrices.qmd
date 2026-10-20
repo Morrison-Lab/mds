@@ -132,6 +132,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-symmetric-eigenvectors-orthogonal.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-eigendecomposition.qmd >}}
 
 {{< slidebreak >}}
@@ -151,6 +155,8 @@
 {{< include mds/_subfiles/linear-algebra/_def-positive-semidefinite.qmd >}}
 
 {{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-gram-properties.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-positive-definite.qmd >}}
 

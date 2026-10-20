@@ -8,7 +8,7 @@ if the limit (@def-limit) of the difference quotient (@def-difference-quotient) 
 $$f'(c) \eqdef \lim_{h \to 0} \frac{f(c + h) - f(c)}{h},$$
 
 exists and is finite.
-The number $f'(c)$ is the derivative of $f$ at $c$ (@def-derivative).
+The value of this limit is denoted $f'(c)$. <!-- check-term-links: allow -->
 
 [@larsonCalc11e, Section 2.1, p. 100]
 

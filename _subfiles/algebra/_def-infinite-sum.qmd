@@ -13,8 +13,7 @@ Here the limit is a real number
 when the partial sums are real numbers that [converge](algebra.qmd#def-convergent-sequence) to it,
 and it is $\infty$
 when the partial sums [diverge to $\infty$](algebra.qmd#def-diverges-to-infinity)
-or some partial sum is $\infty$;
-@lem-nonneg-series, next, shows that one of these always happens.
+or some partial sum is $\infty$. <!-- check-term-links: allow -->
 Sums with other index ranges, such as $\sum_{k=0}^{\infty} a_k$,
 are defined the same way.
 

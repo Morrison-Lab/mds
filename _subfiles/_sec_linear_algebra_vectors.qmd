@@ -1,5 +1,10 @@
 ## Vectors
 
+```{r}
+#| include: false
+reticulate::py_require("numpy")
+```
+
 {{< include mds/_subfiles/linear-algebra/_exr-list-as-vector.qmd >}}
 
 {{< slidebreak >}}

@@ -9,5 +9,13 @@ that is false without reordering rows (the $2 \times 2$ row swap $\begin{bmatrix
 so this section states only how an LU factorization, when one exists, solves a system.
 The least squares results are proved here from the closest-point theorem (@thm-closest-point)
 rather than by differentiating, and the QR factorization is derived from Gram-Schmidt (@thm-gram-schmidt).
+These parts of the source are not part of this section:
+
+- the operation counts for the triangular solves, LU and QR
+- solving a system by inverting a matrix through its QR factorization, and the comparison of that with solving it directly
+- the pivoted factorization $\matr{P}\matr{A} = \matr{L}\matr{U}$, which @exm-not-lu only touches
 
 :::
+
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->

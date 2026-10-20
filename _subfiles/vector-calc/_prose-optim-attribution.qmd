@@ -10,8 +10,12 @@ and the approximation is made exact by evaluating the Hessian at a point between
 The source calls points with zero gradient critical points;
 here they are stationary points,
 because the [calculus notes](calculus.qmd#def-critical-point) give "critical point" a wider meaning.
+The source states these results for differentiable functions without saying how smooth;
+here the first-order results assume continuous first partial derivatives, and the second-order results continuous second partial derivatives.
 These parts of the source are not part of this section:
 
+- its remark that maximizing $f$ is minimizing $-f$, and its classification of constraints
+- its figure of local, strict local and global minima
 - its one-variable Taylor example and its plots
 - matrix calculus
 - convexity
@@ -19,3 +23,6 @@ These parts of the source are not part of this section:
 - Newton's method and gradient descent
 
 :::
+
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->

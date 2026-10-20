@@ -78,6 +78,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-moore-penrose-full-rank.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-consistent-system.qmd >}}
 
 {{< slidebreak >}}
