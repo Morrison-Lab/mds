@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 13:26:01 (PDT)
+Last modified: 2026-10-19 23:35:06 (PDT)
 
 > **NOTE:**
 >
@@ -34,46 +34,11 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **intervals** [\[3\]](#ref-wikipedia_interval_mathematics) with **endpoints** \\a\\ and \\b\\ are the closed interval ([Definition 4](#def-closed-interval)), the open interval ([Definition 5](#def-open-interval)), and the half-open intervals ([Definition 6](#def-half-open-interval)). The unbounded intervals ([Definition 7](#def-unbounded-interval)) have at most one endpoint.
->
-> A square bracket means the endpoint belongs to the interval, and a parenthesis means it does not. The symbols \\\infty\\ and \\-\infty\\ are not real numbers, so they always get a parenthesis.
+> **Definition 3 (Subset)** A set \\A\\ is a **subset** [\[3\]](#ref-wikipedia_subset) of a set \\B\\, written \\A \subseteq B\\, if every element of \\A\\ is an element of \\B\\.
 
 > **NOTE:**
 >
-> **Definition 4 (Closed interval)** For real numbers \\a \le b\\, the **closed interval** is \\\[a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \le b\right\\\mathclose{}\\.
-
-> **NOTE:**
->
-> **Definition 5 (Open interval)** For real numbers \\a \le b\\, the **open interval** is \\(a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \< b\right\\\mathclose{}\\.
-
-> **NOTE:**
->
-> **Definition 6 (Half-open intervals)** For real numbers \\a \le b\\, the **half-open intervals** are \\\[a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \< b\right\\\mathclose{}\\ and \\(a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \le b\right\\\mathclose{}\\.
-
-> **NOTE:**
->
-> **Definition 7 (Unbounded intervals)** The **unbounded intervals** have at most one endpoint:
->
-> - \\\[a, \infty) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \ge a\right\\\mathclose{}\\ and \\(a, \infty) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \> a\right\\\mathclose{}\\;
-> - \\(-\infty, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \le b\right\\\mathclose{}\\ and \\(-\infty, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \< b\right\\\mathclose{}\\;
-> - \\(-\infty, \infty) \stackrel{\text{def}}{=}\mathbb{R}\\.
-
-> **NOTE:**
->
-> **Example 3 (Which numbers are in an interval)**  
->
-> - \\1 \in \[1, 2\]\\, but \\1 \notin (1, 2)\\.
-> - \\2 \in (1, 2\]\\, but \\2 \notin \[1, 2)\\.
-> - \\1.5\\ is in all four of \\\[1, 2\]\\, \\(1, 2)\\, \\\[1, 2)\\, and \\(1, 2\]\\.
-> - \\\[0, \infty)\\ is the set of non-negative real numbers: \\0 \in \[0, \infty)\\ and \\1000 \in \[0, \infty)\\, but \\-0.1 \notin \[0, \infty)\\.
-
-> **NOTE:**
->
-> **Definition 8 (Subset)** A set \\A\\ is a **subset** [\[4\]](#ref-wikipedia_subset) of a set \\B\\, written \\A \subseteq B\\, if every element of \\A\\ is an element of \\B\\.
-
-> **NOTE:**
->
-> **Example 4 (Even die rolls)** The even die rolls form a subset of the possible rolls: \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, because each of \\2\\, \\4\\, and \\6\\ is a possible roll. The set \\\mathopen{}\left\\2, 4, 7\right\\\mathclose{}\\ is not a subset of \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, because \\7\\ is not a possible roll.
+> **Example 3 (Even die rolls)** The even die rolls form a subset of the possible rolls: \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, because each of \\2\\, \\4\\, and \\6\\ is a possible roll. The set \\\mathopen{}\left\\2, 4, 7\right\\\mathclose{}\\ is not a subset of \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, because \\7\\ is not a possible roll.
 
 > **NOTE:**
 >
@@ -81,19 +46,19 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Every element of \\A\\ is an element of \\A\\, which is [Definition 8](#def-subset) with \\B = A\\.
+> *Proof*. Every element of \\A\\ is an element of \\A\\, which is [Definition 3](#def-subset) with \\B = A\\.
 
 > **NOTE:**
 >
-> **Definition 9 (Strict subset (proper subset))** A [set](#def-set) \\A\\ is a **strict subset** (also called a **proper subset**) of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
+> **Definition 4 (Strict subset (proper subset))** A [set](#def-set) \\A\\ is a **strict subset** (also called a **proper subset**) of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
 
 > **NOTE:**
 >
-> *Remark 2* (The symbol \\\subset\\). Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) [\[4\]](#ref-wikipedia_subset). For example, \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subset \mathopen{}\left\\1, 2\right\\\mathclose{}\\ is true in the first reading, because \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2\right\\\mathclose{}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
+> *Remark 2* (The symbol \\\subset\\). Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) [\[3\]](#ref-wikipedia_subset). For example, \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subset \mathopen{}\left\\1, 2\right\\\mathclose{}\\ is true in the first reading, because \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2\right\\\mathclose{}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
 
 > **NOTE:**
 >
-> **Definition 10 (Superset)** A set \\B\\ is a **superset** of a set \\A\\, written \\B \supseteq A\\, if every element of \\A\\ is an element of \\B\\.
+> **Definition 5 (Superset)** A set \\B\\ is a **superset** of a set \\A\\, written \\B \supseteq A\\, if every element of \\A\\ is an element of \\B\\.
 
 > **NOTE:**
 >
@@ -101,7 +66,7 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Strict superset)** A set \\B\\ is a **strict superset** of a set \\A\\, written \\B \supsetneq A\\, if \\B\\ is a [superset](#def-superset) of \\A\\ and \\B \neq A\\.
+> **Definition 6 (Strict superset)** A set \\B\\ is a **strict superset** of a set \\A\\, written \\B \supsetneq A\\, if \\B\\ is a [superset](#def-superset) of \\A\\ and \\B \neq A\\.
 
 > **NOTE:**
 >
@@ -109,31 +74,31 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Example 5 (Strict subsets and supersets of die rolls)** For the even rolls \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and the possible rolls \\B = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\:
+> **Example 4 (Strict subsets and supersets of die rolls)** For the even rolls \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and the possible rolls \\B = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\:
 >
-> - \\A \subsetneq B\\, because \\A \subseteq B\\ ([Example 4](#exm-subset)) and \\1 \in B\\ but \\1 \notin A\\, so \\A \neq B\\;
+> - \\A \subsetneq B\\, because \\A \subseteq B\\ ([Example 3](#exm-subset)) and \\1 \in B\\ but \\1 \notin A\\, so \\A \neq B\\;
 > - \\B \supseteq A\\ and \\B \supsetneq A\\, for the same reasons;
 > - \\B \subseteq B\\, but \\B\\ is not a strict subset of itself, because \\B = B\\; likewise \\B \supseteq B\\, but \\B\\ is not a strict superset of itself, because \\B = B\\.
 
 > **NOTE:**
 >
-> **Definition 12 (Empty set)** The **empty set** [\[5\]](#ref-wikipedia_empty_set), denoted \\\emptyset\\, is the set that has no elements.
+> **Definition 7 (Empty set)** The **empty set** [\[4\]](#ref-wikipedia_empty_set), denoted \\\emptyset\\, is the set that has no elements.
 
 > **NOTE:**
 >
-> *Remark 5* (Other notation for the empty set). Other sources write \\\mathopen{}\left\\\right\\\mathclose{}\\ for \\\emptyset\\ [\[5\]](#ref-wikipedia_empty_set). Some sources call it the **null set**, but in measure theory a “null set” usually means a set of [measure zero](measures.llms.md#def-measure-zero), which need not be empty. For example, the interval \\\[0, 0\] = \mathopen{}\left\\0\right\\\mathclose{}\\ has length \\0 - 0 = 0\\, so it is a null set in that sense, but it is not empty, because \\0 \in \mathopen{}\left\\0\right\\\mathclose{}\\.
+> *Remark 5* (Other notation for the empty set). Other sources write \\\mathopen{}\left\\\right\\\mathclose{}\\ for \\\emptyset\\ [\[4\]](#ref-wikipedia_empty_set). Some sources call it the **null set**, but in measure theory a “null set” usually means a set of [measure zero](measures.llms.md#def-measure-zero), which need not be empty. For example, the interval \\\[0, 0\] = \mathopen{}\left\\0\right\\\mathclose{}\\ has length \\0 - 0 = 0\\, so it is a null set in that sense, but it is not empty, because \\0 \in \mathopen{}\left\\0\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Example 6 (Impossible die rolls)** No roll of a six-sided die is greater than 6, so \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \> 6\right\\\mathclose{} = \emptyset\\.
+> **Example 5 (Impossible die rolls)** No roll of a six-sided die is greater than 6, so \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \> 6\right\\\mathclose{} = \emptyset\\.
 
 > **NOTE:**
 >
-> **Definition 13 (Vacuous truth)** A statement of the form “every element of \\A\\ has property \\P\\” is **vacuously true** [\[6\]](#ref-wikipedia_vacuous_truth) when \\A\\ is the [empty set](#def-empty-set): \\A\\ has no elements, so no element of \\A\\ fails to have property \\P\\.
+> **Definition 8 (Vacuous truth)** A statement of the form “every element of \\A\\ has property \\P\\” is **vacuously true** [\[5\]](#ref-wikipedia_vacuous_truth) when \\A\\ is the [empty set](#def-empty-set): \\A\\ has no elements, so no element of \\A\\ fails to have property \\P\\.
 
 > **NOTE:**
 >
-> **Example 7 (Every impossible die roll is even)** The set of die rolls greater than 6 is \\\emptyset\\ ([Example 6](#exm-empty-set)). So “every die roll greater than 6 is even” is vacuously true, and so is “every die roll greater than 6 is odd”: there is no such roll to fail either statement.
+> **Example 6 (Every impossible die roll is even)** The set of die rolls greater than 6 is \\\emptyset\\ ([Example 5](#exm-empty-set)). So “every die roll greater than 6 is even” is vacuously true, and so is “every die roll greater than 6 is odd”: there is no such roll to fail either statement.
 
 > **NOTE:**
 >
@@ -149,11 +114,50 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. By [Definition 8](#def-subset), \\\emptyset \subseteq A\\ fails only if some element of \\\emptyset\\ is not in \\A\\. The [empty set](#def-empty-set) has no elements, so no such element exists.
+> *Proof*. By [Definition 3](#def-subset), \\\emptyset \subseteq A\\ fails only if some element of \\\emptyset\\ is not in \\A\\. The [empty set](#def-empty-set) has no elements, so no such element exists.
 
 > **NOTE:**
 >
-> **Definition 14 (Collection of sets (family of sets))** A **collection of sets** (also called a **family of sets**) [\[7\]](#ref-wikipedia_family_of_sets) is a set whose elements are themselves sets.
+> **Definition 9 (Lower bound and upper bound)** For a [subset](#def-subset) \\S \subseteq \mathbb{R}\\ of the [real numbers](number-systems.llms.md#def-real-numbers), a [real number](number-systems.llms.md#def-real-numbers) \\a\\ is a **lower bound** of \\S\\ if \\a \le x\\ for every \\x \in S\\, and a real number \\b\\ is an **upper bound** of \\S\\ if \\x \le b\\ for every \\x \in S\\; each is a **bound** of \\S\\.
+
+> **NOTE:**
+>
+> **Definition 10 (Interval)** An **interval** [\[6\]](#ref-wikipedia_interval_mathematics) is a [subset](#def-subset) of the [real numbers](number-systems.llms.md#def-real-numbers) that consists of all real numbers between two bounds \\a \le b\\ ([Definition 9](#def-bound)), possibly including one or both bounds, or of all real numbers on one side of a single bound, or all of \\\mathbb{R}\\. The bounds \\a\\ and \\b\\ that define the interval are its **endpoints**.
+>
+> A square bracket means the endpoint belongs to the interval, and a parenthesis means it does not. The symbols \\\infty\\ and \\-\infty\\ are not real numbers, so they always get a parenthesis.
+
+> **NOTE:**
+>
+> **Definition 11 (Closed interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **closed interval** is the interval ([Definition 10](#def-interval)) \\\[a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \le b\right\\\mathclose{}\\ that includes both bounds ([Definition 9](#def-bound)).
+
+> **NOTE:**
+>
+> **Definition 12 (Open interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **open interval** is the interval ([Definition 10](#def-interval)) \\(a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \< b\right\\\mathclose{}\\ that includes neither bound ([Definition 9](#def-bound)).
+
+> **NOTE:**
+>
+> **Definition 13 (Half-open intervals)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **half-open intervals** are the intervals ([Definition 10](#def-interval)) \\\[a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \< b\right\\\mathclose{}\\ and \\(a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \le b\right\\\mathclose{}\\ that include one bound ([Definition 9](#def-bound)) and not the other.
+
+> **NOTE:**
+>
+> **Definition 14 (Unbounded intervals)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a\\ and \\b\\, the **unbounded intervals** are the intervals ([Definition 10](#def-interval)) with at most one bound ([Definition 9](#def-bound)):
+>
+> - \\\[a, \infty) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \ge a\right\\\mathclose{}\\ and \\(a, \infty) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \> a\right\\\mathclose{}\\;
+> - \\(-\infty, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \le b\right\\\mathclose{}\\ and \\(-\infty, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \< b\right\\\mathclose{}\\;
+> - \\(-\infty, \infty) \stackrel{\text{def}}{=}\mathbb{R}\\.
+
+> **NOTE:**
+>
+> **Example 7 (Which numbers are in an interval)**  
+>
+> - \\1 \in \[1, 2\]\\, but \\1 \notin (1, 2)\\.
+> - \\2 \in (1, 2\]\\, but \\2 \notin \[1, 2)\\.
+> - \\1.5\\ is in all four of \\\[1, 2\]\\, \\(1, 2)\\, \\\[1, 2)\\, and \\(1, 2\]\\.
+> - \\\[0, \infty)\\ is the set of non-negative real numbers: \\0 \in \[0, \infty)\\ and \\1000 \in \[0, \infty)\\, but \\-0.1 \notin \[0, \infty)\\.
+
+> **NOTE:**
+>
+> **Definition 15 (Collection of sets (family of sets))** A **collection of sets** (also called a **family of sets**) [\[7\]](#ref-wikipedia_family_of_sets) is a set whose elements are themselves sets.
 
 > **NOTE:**
 >
@@ -165,7 +169,7 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Label)** A **label** is a name or symbol attached to an object, so that we can refer to the object and tell it apart from other objects.
+> **Definition 16 (Label)** A **label** is a name or symbol attached to an object, so that we can refer to the object and tell it apart from other objects.
 
 > **NOTE:**
 >
@@ -173,7 +177,7 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Index set)** An **index set** [\[8\]](#ref-wikipedia_index_set) is a set whose elements are used as [labels](#def-label) for objects. Each element of the index set is called an index.
+> **Definition 17 (Index set)** An **index set** [\[8\]](#ref-wikipedia_index_set) is a set whose elements are used as [labels](#def-label) for objects. Each element of the index set is called an index.
 
 > **NOTE:**
 >
@@ -181,7 +185,7 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Indexed family)** An **indexed family** [\[9\]](#ref-wikipedia_indexed_family) is a collection of objects, one for each element of a given [index set](#def-index-set). The object for the index \\i\\ is written \\a_i\\.
+> **Definition 18 (Indexed family)** An **indexed family** [\[9\]](#ref-wikipedia_indexed_family) is a collection of objects, one for each element of a given [index set](#def-index-set). The object for the index \\i\\ is written \\a_i\\.
 
 > **NOTE:**
 >
@@ -191,33 +195,33 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Union)** The **union** [\[10\]](#ref-wikipedia_union_set_theory) of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
+> **Definition 19 (Union)** The **union** [\[10\]](#ref-wikipedia_union_set_theory) of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
 >
 > \\A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ or } x \in B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 19 (Union of a family of sets)** Let \\I\\ be a set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **union** of the sets \\A_i\\, written \\\bigcup\_{i \in I} A_i\\, is the set of elements that are in at least one \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcup\_{i=1}^{n} A_i\\ or \\A_1 \cup \cdots \cup A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcup\_{i=1}^{\infty} A_i\\.
+> **Definition 20 (Union of a family of sets)** Let \\I\\ be a set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **union** of the sets \\A_i\\, written \\\bigcup\_{i \in I} A_i\\, is the set of elements that are in at least one \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcup\_{i=1}^{n} A_i\\ or \\A_1 \cup \cdots \cup A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcup\_{i=1}^{\infty} A_i\\.
 
 > **NOTE:**
 >
-> **Definition 20 (Intersection)** The **intersection** [\[11\]](#ref-wikipedia_intersection_set_theory) of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
+> **Definition 21 (Intersection)** The **intersection** [\[11\]](#ref-wikipedia_intersection_set_theory) of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
 >
 > \\A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ and } x \in B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 21 (Intersection of a family of sets)** Let \\I\\ be a nonempty set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **intersection** of the sets \\A_i\\, written \\\bigcap\_{i \in I} A_i\\, is the set of elements that are in every \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcap\_{i=1}^{n} A_i\\ or \\A_1 \cap \cdots \cap A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcap\_{i=1}^{\infty} A_i\\.
+> **Definition 22 (Intersection of a family of sets)** Let \\I\\ be a nonempty set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **intersection** of the sets \\A_i\\, written \\\bigcap\_{i \in I} A_i\\, is the set of elements that are in every \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcap\_{i=1}^{n} A_i\\ or \\A_1 \cap \cdots \cap A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcap\_{i=1}^{\infty} A_i\\.
 
 > **NOTE:**
 >
-> **Definition 22 (Set difference)** The **set difference** [\[12\]](#ref-wikipedia_complement_set_theory) of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
+> **Definition 23 (Set difference)** The **set difference** [\[12\]](#ref-wikipedia_complement_set_theory) of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
 >
 > \\A \setminus B \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : x \notin B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 23 (Complement)** Let \\A\\ be a [subset](#def-subset) of a set \\S\\. The **complement** [\[12\]](#ref-wikipedia_complement_set_theory) of \\A\\ in \\S\\ is the set difference ([Definition 22](#def-set-difference)) \\S \setminus A\\: the elements of \\S\\ that are not in \\A\\. When the set \\S\\ is clear from context, the complement of \\A\\ is written \\A^c\\:
+> **Definition 24 (Complement)** Let \\A\\ be a [subset](#def-subset) of a set \\S\\. The **complement** [\[12\]](#ref-wikipedia_complement_set_theory) of \\A\\ in \\S\\ is the set difference ([Definition 23](#def-set-difference)) \\S \setminus A\\: the elements of \\S\\ that are not in \\A\\. When the set \\S\\ is clear from context, the complement of \\A\\ is written \\A^c\\:
 >
 > \\A^c \stackrel{\text{def}}{=}S \setminus A = \mathopen{}\left\\x \in S : x \notin A\right\\\mathclose{}\\
 
@@ -255,17 +259,17 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 >
 > \\ \begin{aligned} S \setminus \bigcup\_{i \in I} A_i &= \bigcap\_{i \in I} (S \setminus A_i) \\ S \setminus \bigcap\_{i \in I} A_i &= \bigcup\_{i \in I} (S \setminus A_i) \end{aligned} \\
 >
-> With the complement notation of [Definition 23](#def-complement), these read \\\mathopen{}\left(\bigcup\_{i \in I} A_i\right)\mathclose{}^c = \bigcap\_{i \in I} A_i^c\\ and \\\mathopen{}\left(\bigcap\_{i \in I} A_i\right)\mathclose{}^c = \bigcup\_{i \in I} A_i^c\\.
+> With the complement notation of [Definition 24](#def-complement), these read \\\mathopen{}\left(\bigcup\_{i \in I} A_i\right)\mathclose{}^c = \bigcap\_{i \in I} A_i^c\\ and \\\mathopen{}\left(\bigcap\_{i \in I} A_i\right)\mathclose{}^c = \bigcup\_{i \in I} A_i^c\\.
 
 > **NOTE:**
 >
 > *Proof*. Two sets are equal when they have the same elements ([Definition 1](#def-set)), so it is enough to show that an element \\x\\ is in the left-hand side [if and only if](proof-writing.llms.md#def-necessary-sufficient) (\\\iff\\) it is in the right-hand side. For the first law:
 >
-> \\ \begin{aligned} x \in S \setminus \bigcup\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcup\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~22}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for every } i \in I && \text{(}\href{#def-union}{\text{Definition~18}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for every } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~22}}\text{)} \\ &\iff x \in \bigcap\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-intersection}{\text{Definition~20}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} x \in S \setminus \bigcup\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcup\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~23}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for every } i \in I && \text{(}\href{#def-union}{\text{Definition~19}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for every } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~23}}\text{)} \\ &\iff x \in \bigcap\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-intersection}{\text{Definition~21}}\text{)} \end{aligned} \\
 >
 > For the second law:
 >
-> \\ \begin{aligned} x \in S \setminus \bigcap\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcap\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~22}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for some } i \in I && \text{(}\href{#def-intersection}{\text{Definition~20}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for some } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~22}}\text{)} \\ &\iff x \in \bigcup\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-union}{\text{Definition~18}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} x \in S \setminus \bigcap\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcap\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~23}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for some } i \in I && \text{(}\href{#def-intersection}{\text{Definition~21}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for some } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~23}}\text{)} \\ &\iff x \in \bigcup\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-union}{\text{Definition~19}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -285,7 +289,7 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Pairwise disjoint sets (disjoint, mutually disjoint))** Some [sets](#def-set) \\A_1, A_2, \ldots\\ (a list that may end or go on without end) are **pairwise disjoint** [\[14\]](#ref-wikipedia_disjoint_sets) (also called **disjoint** or **mutually disjoint**) when no two of them share an element:
+> **Definition 25 (Pairwise disjoint sets (disjoint, mutually disjoint))** Some [sets](#def-set) \\A_1, A_2, \ldots\\ (a list that may end or go on without end) are **pairwise disjoint** [\[14\]](#ref-wikipedia_disjoint_sets) (also called **disjoint** or **mutually disjoint**) when no two of them share an element:
 >
 > \\A_i \cap A_j = \emptyset \quad \text{for all } i \neq j\\
 
@@ -295,11 +299,11 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 25 (Ordered pair)** An **ordered pair** [\[15\]](#ref-wikipedia_ordered_pair) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
+> **Definition 26 (Ordered pair)** An **ordered pair** [\[15\]](#ref-wikipedia_ordered_pair) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
 
 > **NOTE:**
 >
-> **Definition 26 (Cartesian product)** The **Cartesian product** [\[16\]](#ref-wikipedia_cartesian_product) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
+> **Definition 27 (Cartesian product)** The **Cartesian product** [\[16\]](#ref-wikipedia_cartesian_product) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
 >
 > \\A \times B \stackrel{\text{def}}{=}\mathopen{}\left\\(a, b) : a \in A \text{ and } b \in B\right\\\mathclose{}\\
 
@@ -315,7 +319,7 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 27 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 28 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
 >
@@ -354,19 +358,19 @@ Wikipedia contributors, “Set-builder notation — Wikipedia, the free encyclop
 
 \[3\]
 
-Wikipedia contributors, “Interval (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Interval_(mathematics)>
+Wikipedia contributors, “Subset — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Subset>
 
 \[4\]
 
-Wikipedia contributors, “Subset — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Subset>
+Wikipedia contributors, “Empty set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Empty_set>
 
 \[5\]
 
-Wikipedia contributors, “Empty set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Empty_set>
+Wikipedia contributors, “Vacuous truth — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Vacuous_truth>
 
 \[6\]
 
-Wikipedia contributors, “Vacuous truth — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Vacuous_truth>
+Wikipedia contributors, “Interval (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Interval_(mathematics)>
 
 \[7\]
 

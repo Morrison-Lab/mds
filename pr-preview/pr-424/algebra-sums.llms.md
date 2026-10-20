@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 13:26:01 (PDT)
+Last modified: 2026-10-19 23:35:06 (PDT)
 
 ## 1 Convex functions
 
@@ -265,7 +265,7 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Commutative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 12](#def-identity-element)) is **commutative** [\[10\]](#ref-wikipedia_commutative_property) if \\a \star b = b \star a\\ for all \\a, b \in S\\: the order of the two inputs does not matter. Some sources, including the titles of [Theorem 5](#thm-sum-symmetric) and [Theorem 8](#thm-prod-symmetric), call a commutative operation **symmetric**.
+> **Definition 13 (Commutative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 12](#def-identity-element)) is **commutative** [\[10\]](#ref-wikipedia_commutative_property) if \\a \star b = b \star a\\ for all \\a, b \in S\\: the order of the two inputs does not matter. Some sources call a commutative operation **symmetric**, as in the theorem titles “Sums are symmetric” and “Products are symmetric”.
 
 > **NOTE:**
 >
@@ -367,6 +367,10 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 
 > **NOTE:**
 >
+> **Theorem 11 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
+
+> **NOTE:**
+>
 > **Definition 16 (Distributive law)** The **distributive law** [\[12\]](#ref-wikipedia_distributive_property) is the statement that multiplication distributes over addition ([Definition 15](#def-distributes-over)): \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 11](#thm-mult-distr)). We then say multiplication is **distributive**.
 
 > **NOTE:**
@@ -376,10 +380,6 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 > and
 >
 > \\ \begin{aligned} (3 \times 4) + (3 \times 5) &= 12 + 15 \\ &= 27. \end{aligned} \\
-
-> **NOTE:**
->
-> **Theorem 11 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
 
 > **NOTE:**
 >
@@ -492,7 +492,7 @@ Last modified: 2026-10-19 13:26:01 (PDT)
 >
 > \\ \sum\_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a\_{m+1} + \cdots + a_n \\
 >
-> The numbers \\m\\ and \\n\\ are its lower and upper limits, defined in the [notation for limits of a sum](#def-lower-upper-limits).
+> The numbers \\m\\ and \\n\\ are its lower and upper limits: the first and last values of the index.
 
 > **NOTE:**
 >

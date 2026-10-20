@@ -348,6 +348,19 @@
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
+<!-- gha-preview-page-banner:start -->
+<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~81% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
+        <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 3px; border-radius: 2px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 3px; border-radius: 2px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
+<!-- gha-preview-page-banner:end -->
+
   <div class="reveal">
     <div class="slides">
 
@@ -356,7 +369,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-19 13:26:01 (PDT)</p>
+  <p class="date">Last modified: 2026-10-19 23:35:06 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-column-null-space" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Column space and null space</h2>
 <div id="def-column-space" class="theorem definition">
@@ -600,60 +613,8 @@
 \]</span></p>
 <p>is entry <span class="math inline">\((1, 2)\)</span>.</p>
 </div>
-</section><section class="slide level2 scrollable"><div id="thm-gram-properties" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5 (Entries and symmetry of a Gram matrix)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> matrix with columns <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n\)</span>, and let <span class="math inline">\(\mathbf{G} = {\mathbf{A}}^{\top} \mathbf{A}\)</span> (<a href="#/def-gram-matrix" class="quarto-xref">Definition&nbsp;6</a>).</p>
-<ol type="1">
-<li>Entry <span class="math inline">\((i, j)\)</span> of <span class="math inline">\(\mathbf{G}\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\)</span>.</li>
-<li>
-<span class="math inline">\(\mathbf{G}\)</span> is symmetric (<a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">Definition&nbsp;3 in Special Matrices and Decompositions</a>).</li>
-<li>
-<span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 \ge 0\)</span> for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^n\)</span>, so <span class="math inline">\(\mathbf{G}\)</span> is <a href="./linear-algebra-special-matrices.html#def-positive-semidefinite">positive semidefinite</a>.</li>
-</ol>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>Entries.</strong> Row <span class="math inline">\(i\)</span> of <span class="math inline">\({\mathbf{A}}^{\top}\)</span> is <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i}^{\top}\)</span>, so entry <span class="math inline">\((i, j)\)</span> of <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{A}\)</span> is the dot product of that row with column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A}\)</span>, namely <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\)</span>.</p>
-<p><strong>Symmetry.</strong> The dot product is commutative, so</p>
-<p><span class="math display">\[
-\begin{aligned}
-g_{ij} &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \\
-&amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \\
-&amp;= g_{ji}.
-\end{aligned}
-\]</span></p>
-<p><strong>Positive semidefiniteness.</strong> For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>,</p>
-<p><span class="math display">\[
-\begin{aligned}
-{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
-&amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,{\mathbf{A}}^{\top}\,\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
-&amp;&amp; \text{(substitute } \mathbf{G} \text{)}
-\\
-&amp;= {(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}^{\top}\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)}
-\\
-&amp;= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
-\\
-&amp;\ge 0.
-&amp;&amp; \text{(a squared norm is nonnegative)}
-\end{aligned}
-\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exm-gram-properties" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Checking the properties on a small Gram matrix)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-gram-matrix" class="quarto-xref">Example&nbsp;8</a>, <span class="math inline">\(\mathbf{G} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span>. It is symmetric: <span class="math inline">\(g_{12} = g_{21} = 1\)</span>. Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1)\)</span>. Then</p>
-<p><span class="math display">\[
-\begin{aligned}
-{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
-&amp;= \begin{bmatrix} 1 &amp; -1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix}
-&amp;&amp; \text{(} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1) \text{)}
-\\
-&amp;= 2,
-&amp;&amp; \text{(multiply and add)}
-\end{aligned}
-\]</span></p>
-<p>and <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 0, -1)\)</span> has <span class="math inline">\(\mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 = 1 + 0 + 1 = 2\)</span>, as the theorem says. The converse (every positive semidefinite matrix is a Gram matrix) is <a href="./linear-algebra-diagonalization.html#thm-pd-gram">this theorem</a>.</p>
-</div>
 </section><section class="slide level2"><div id="thm-null-gram" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (<span class="math inline">\({\mathbf{A}}^{\top} \mathbf{A}\)</span> has the same null space as <span class="math inline">\(\mathbf{A}\)</span>)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
+<p><span class="theorem-title"><strong>Theorem 5 (<span class="math inline">\({\mathbf{A}}^{\top} \mathbf{A}\)</span> has the same null space as <span class="math inline">\(\mathbf{A}\)</span>)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
 <p><span class="math display">\[
 \mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A}).
 \]</span></p>
@@ -692,7 +653,7 @@ g_{ij} &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{
 <p>A vector whose Euclidean norm is <span class="math inline">\(0\)</span> has every entry <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-null-gram" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (The null space of a Gram matrix)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>,</p>
+<p><span class="theorem-title"><strong>Example 9 (The null space of a Gram matrix)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathbf{A}}^{\top} \mathbf{A}
@@ -714,12 +675,23 @@ g_{ij} &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024rank">Zhou <a href="#/references" role="doc-biblioref" onclick="">[3]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>).</p>
+<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">This section is adapted from <span class="citation" data-cites="zhou2024rank">Zhou <a href="#/references" role="doc-biblioref" onclick="">[3]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). <a href="#/thm-rank-product-right" class="quarto-xref">Theorem&nbsp;10</a> and <a href="#/cor-rank-product-full-rank" class="quarto-xref">Corollary&nbsp;2</a> restore the source’s statements that a product has rank at most the rank of either factor, and that multiplying by a matrix of full column rank or by a matrix whose rank is its number of rows does not change the rank. These parts of the source are not part of this section:</mark></p>
+<ul>
+<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">the names “full row rank”, “full rank” and “singular”</mark></li>
+<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">the statement that <span class="math inline">\(\mathcal{C}(\mathbf{C}) \subseteq \mathcal{C}(\mathbf{A})\)</span> exactly when <span class="math inline">\(\mathbf{C} = \mathbf{A}\mathbf{B}\)</span> for some <span class="math inline">\(\mathbf{B}\)</span>, and its row space version, and the containment <span class="math inline">\(\mathcal{N}(\mathbf{B}) \subseteq \mathcal{N}(\mathbf{A}\mathbf{B})\)</span>
+</mark></li>
+<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">the dimension of a subspace as the largest number of linearly independent vectors in it, or the smallest number of vectors that span it</mark></li>
+<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">the properties of a rank factorization <span class="math inline">\(\mathbf{A} = \mathbf{C}\mathbf{R}\)</span> (<span class="math inline">\(\operatorname{rank}(\mathbf{C}) = \operatorname{rank}(\mathbf{R}) = r\)</span>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathcal{C}(\mathbf{C})\)</span>, <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathcal{N}(\mathbf{R})\)</span>), the fact that it is not unique, and the second proof of <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = \operatorname{rank}({\mathbf{A}}^{\top})\)</span> that it gives</mark></li>
+<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">calling <span class="math inline">\(\mathbf{A}{\mathbf{A}}^{\top}\)</span> a Gram matrix, and the equation <span class="math inline">\(\mathcal{N}(\mathbf{A}{\mathbf{A}}^{\top}) = \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="#/thm-null-gram" class="quarto-xref">Theorem&nbsp;5</a> applied to <span class="math inline">\({\mathbf{A}}^{\top}\)</span> gives it)</mark></li>
+<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">the statement that <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> and <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span> share only the zero vector (it follows from <a href="./linear-algebra-direct-sums.html#thm-fundamental-subspaces">Theorem&nbsp;10 in Direct Sums and Orthogonal Complements</a>)</mark></li>
+</ul>
 </div>
 </div>
 </div>
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->
 </section><section class="slide level2"><div id="thm-rank-dim" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (The rank is the dimension of the column space)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
+<p><span class="theorem-title"><strong>Theorem 6 (The rank is the dimension of the column space)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
 <p><span class="math display">\[
 \operatorname{rank}(\mathbf{A}) = \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{}.
 \]</span></p>
@@ -731,7 +703,7 @@ g_{ij} &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{
 <p>The chosen columns are linearly independent and span <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>, so they are a basis of it, and <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>). If <span class="math inline">\(r = 0\)</span>, every column is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\)</span>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\right\}\mathclose{}\)</span>, and both sides are <span class="math inline">\(0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-rank-dim" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (The rank of the matrix in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 3)\right\}\mathclose{}\)</span> (<a href="#/exm-column-space-span" class="quarto-xref">Example&nbsp;2</a>), and <span class="math inline">\((1, 3)\)</span> is linearly independent because it is nonzero, so it is a basis and <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> has dimension <span class="math inline">\(1\)</span>. So <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = 1\)</span>, by <a href="#/thm-rank-dim" class="quarto-xref">Theorem&nbsp;7</a>. Directly: the first column <span class="math inline">\((1, 3)\)</span> is linearly independent on its own, and any two columns are dependent, because each column is a multiple of <span class="math inline">\((1, 3)\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 10 (The rank of the matrix in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 3)\right\}\mathclose{}\)</span> (<a href="#/exm-column-space-span" class="quarto-xref">Example&nbsp;2</a>), and <span class="math inline">\((1, 3)\)</span> is linearly independent because it is nonzero, so it is a basis and <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> has dimension <span class="math inline">\(1\)</span>. So <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = 1\)</span>, by <a href="#/thm-rank-dim" class="quarto-xref">Theorem&nbsp;6</a>. Directly: the first column <span class="math inline">\((1, 3)\)</span> is linearly independent on its own, and any two columns are dependent, because each column is a multiple of <span class="math inline">\((1, 3)\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-nullity" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Nullity)</strong></span> The <strong>nullity</strong> <span class="citation" data-cites="wikipedia_rank_nullity_theorem"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> of a matrix <span class="math inline">\(\mathbf{A}\)</span> is the dimension of its null space (<a href="#/def-null-space" class="quarto-xref">Definition&nbsp;3</a>):</p>
@@ -740,7 +712,7 @@ g_{ij} &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-nullity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (The nullity of the matrix in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}\)</span> (<a href="#/exm-null-space" class="quarto-xref">Example&nbsp;3</a>). Those two vectors are linearly independent: <span class="math inline">\(c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span> only if</p>
+<p><span class="theorem-title"><strong>Example 11 (The nullity of the matrix in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}\)</span> (<a href="#/exm-null-space" class="quarto-xref">Example&nbsp;3</a>). Those two vectors are linearly independent: <span class="math inline">\(c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span> only if</p>
 <p><span class="math display">\[
 \begin{aligned}
 c_1 &amp;= c_2 \\
@@ -750,7 +722,7 @@ c_1 &amp;= c_2 \\
 <p>So they are a basis of <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>, and <span class="math inline">\(\operatorname{nullity}(\mathbf{A}) = 2\)</span>. The <span class="math inline">\(2 \times 2\)</span> identity matrix has nullity <span class="math inline">\(0\)</span>, because <span class="math inline">\(\mathbf{I} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> only when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="thm-rank-nullity" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (Rank-nullity theorem)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
+<p><span class="theorem-title"><strong>Theorem 7 (Rank-nullity theorem)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
 <p><span class="math display">\[
 \operatorname{rank}(\mathbf{A}) + \operatorname{nullity}(\mathbf{A}) = n.
 \]</span></p>
@@ -780,13 +752,13 @@ c_1 &amp;= c_2 \\
 \end{aligned}
 \]</span></p>
 <p>a linear combination of <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_{n-\nu}\)</span>. These vectors are in <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>, so their span is exactly <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>.</p>
-<p>So <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = n - \nu\)</span>, and <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n - \nu\)</span> by <a href="#/thm-rank-dim" class="quarto-xref">Theorem&nbsp;7</a>.</p>
+<p>So <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = n - \nu\)</span>, and <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n - \nu\)</span> by <a href="#/thm-rank-dim" class="quarto-xref">Theorem&nbsp;6</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-rank-nullity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (Checking rank-nullity on the matrix in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>)</strong></span> The matrix <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a> has <span class="math inline">\(n = 3\)</span> columns, rank <span class="math inline">\(1\)</span> (<a href="#/exm-rank-dim" class="quarto-xref">Example&nbsp;11</a>) and nullity <span class="math inline">\(2\)</span> (<a href="#/exm-nullity" class="quarto-xref">Example&nbsp;12</a>), and <span class="math inline">\(1 + 2 = 3\)</span>. The <span class="math inline">\(2 \times 2\)</span> identity matrix has rank <span class="math inline">\(2\)</span> and nullity <span class="math inline">\(0\)</span> (<a href="#/exm-nullity" class="quarto-xref">Example&nbsp;12</a>), and <span class="math inline">\(2 + 0 = 2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 12 (Checking rank-nullity on the matrix in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>)</strong></span> The matrix <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a> has <span class="math inline">\(n = 3\)</span> columns, rank <span class="math inline">\(1\)</span> (<a href="#/exm-rank-dim" class="quarto-xref">Example&nbsp;10</a>) and nullity <span class="math inline">\(2\)</span> (<a href="#/exm-nullity" class="quarto-xref">Example&nbsp;11</a>), and <span class="math inline">\(1 + 2 = 3\)</span>. The <span class="math inline">\(2 \times 2\)</span> identity matrix has rank <span class="math inline">\(2\)</span> and nullity <span class="math inline">\(0\)</span> (<a href="#/exm-nullity" class="quarto-xref">Example&nbsp;11</a>), and <span class="math inline">\(2 + 0 = 2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="thm-rank-product" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (Multiplying on the right cannot increase the rank)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(m \times n\)</span> and <span class="math inline">\(\mathbf{B}\)</span> is <span class="math inline">\(n \times k\)</span>, then</p>
+<p><span class="theorem-title"><strong>Theorem 8 (Multiplying on the right cannot increase the rank)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(m \times n\)</span> and <span class="math inline">\(\mathbf{B}\)</span> is <span class="math inline">\(n \times k\)</span>, then</p>
 <p><span class="math display">\[
 \operatorname{rank}(\mathbf{A} \mathbf{B}) \le \operatorname{rank}(\mathbf{A}).
 \]</span></p>
@@ -806,18 +778,18 @@ c_1 &amp;= c_2 \\
 \begin{aligned}
 \operatorname{rank}(\mathbf{A} \mathbf{B})
 &amp;= \dim\mathopen{}\left(\mathcal{C}(\mathbf{A} \mathbf{B})\right)\mathclose{}
-&amp;&amp; \text{(}\href{#thm-rank-dim}{\text{Theorem~7}}\text{)}
+&amp;&amp; \text{(}\href{#thm-rank-dim}{\text{Theorem~6}}\text{)}
 \\
 &amp;\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{}
 &amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-dim-bound}{\text{Theorem~10 in Subspaces and Rank}}\text{, part 2)}
 \\
 &amp;= \operatorname{rank}(\mathbf{A}).
-&amp;&amp; \text{(}\href{#thm-rank-dim}{\text{Theorem~7}}\text{)}
+&amp;&amp; \text{(}\href{#thm-rank-dim}{\text{Theorem~6}}\text{)}
 \end{aligned}
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-rank-product" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (A product can lose rank)</strong></span> Let</p>
+<p><span class="theorem-title"><strong>Example 13 (A product can lose rank)</strong></span> Let</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix},
 \qquad
@@ -827,10 +799,10 @@ c_1 &amp;= c_2 \\
 = \begin{bmatrix} 1 \cdot 0 + 0 \cdot 1 &amp; 1 \cdot 0 + 0 \cdot 0 \\ 0 \cdot 0 + 0 \cdot 1 &amp; 0 \cdot 0 + 0 \cdot 0 \end{bmatrix}
 = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}.
 \]</span></p>
-<p><span class="math inline">\(\mathbf{A}\)</span> has rank <span class="math inline">\(1\)</span>, but <span class="math inline">\(\mathbf{A} \mathbf{B}\)</span> has rank <span class="math inline">\(0\)</span>, so the inequality in <a href="#/thm-rank-product" class="quarto-xref">Theorem&nbsp;9</a> can be strict. With the <span class="math inline">\(2 \times 2\)</span> identity in place of <span class="math inline">\(\mathbf{B}\)</span>, <span class="math inline">\(\mathbf{A} \mathbf{I} = \mathbf{A}\)</span> keeps rank <span class="math inline">\(1\)</span>, and the inequality is an equality.</p>
+<p><span class="math inline">\(\mathbf{A}\)</span> has rank <span class="math inline">\(1\)</span>, but <span class="math inline">\(\mathbf{A} \mathbf{B}\)</span> has rank <span class="math inline">\(0\)</span>, so the inequality in <a href="#/thm-rank-product" class="quarto-xref">Theorem&nbsp;8</a> can be strict. With the <span class="math inline">\(2 \times 2\)</span> identity in place of <span class="math inline">\(\mathbf{B}\)</span>, <span class="math inline">\(\mathbf{A} \mathbf{I} = \mathbf{A}\)</span> keeps rank <span class="math inline">\(1\)</span>, and the inequality is an equality.</p>
 </div>
 </section><section class="slide level2"><div id="thm-rank-transpose" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (Fundamental theorem of ranks)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
+<p><span class="theorem-title"><strong>Theorem 9 (Fundamental theorem of ranks)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \operatorname{rank}(\mathbf{A})
@@ -842,18 +814,18 @@ c_1 &amp;= c_2 \\
 <p>In particular, the largest number of linearly independent rows of <span class="math inline">\(\mathbf{A}\)</span> equals the largest number of linearly independent columns.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) = \operatorname{rank}(\mathbf{A})\)</span>.</strong> Both matrices have <span class="math inline">\(n\)</span> columns, and <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A})\)</span> (<a href="#/thm-null-gram" class="quarto-xref">Theorem&nbsp;6</a>), so they have the same nullity (<a href="#/def-nullity" class="quarto-xref">Definition&nbsp;7</a>). Then</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) = \operatorname{rank}(\mathbf{A})\)</span>.</strong> Both matrices have <span class="math inline">\(n\)</span> columns, and <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A})\)</span> (<a href="#/thm-null-gram" class="quarto-xref">Theorem&nbsp;5</a>), so they have the same nullity (<a href="#/def-nullity" class="quarto-xref">Definition&nbsp;7</a>). Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A})
 &amp;= n - \operatorname{nullity}({\mathbf{A}}^{\top} \mathbf{A})
-&amp;&amp; \text{(}\href{#thm-rank-nullity}{\text{Theorem~8}}\text{)}
+&amp;&amp; \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{)}
 \\
 &amp;= n - \operatorname{nullity}(\mathbf{A})
 &amp;&amp; \text{(equal null spaces)}
 \\
 &amp;= \operatorname{rank}(\mathbf{A}).
-&amp;&amp; \text{(}\href{#thm-rank-nullity}{\text{Theorem~8}}\text{)}
+&amp;&amp; \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{)}
 \end{aligned}
 \]</span></p>
 <p><strong><span class="math inline">\(\operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) = \operatorname{rank}({\mathbf{A}}^{\top})\)</span>.</strong> Apply the previous step to the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span>, using <span class="math inline">\({({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\)</span>.</p>
@@ -865,19 +837,19 @@ c_1 &amp;= c_2 \\
 &amp;&amp; \text{(first step)}
 \\
 &amp;\le \operatorname{rank}({\mathbf{A}}^{\top})
-&amp;&amp; \text{(}\href{#thm-rank-product}{\text{Theorem~9}}\text{, with } {\mathbf{A}}^{\top} \text{ on the left)}
+&amp;&amp; \text{(}\href{#thm-rank-product}{\text{Theorem~8}}\text{, with } {\mathbf{A}}^{\top} \text{ on the left)}
 \\
 &amp;= \operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top})
 &amp;&amp; \text{(second step)}
 \\
 &amp;\le \operatorname{rank}(\mathbf{A}).
-&amp;&amp; \text{(}\href{#thm-rank-product}{\text{Theorem~9}}\text{, with } \mathbf{A} \text{ on the left)}
+&amp;&amp; \text{(}\href{#thm-rank-product}{\text{Theorem~8}}\text{, with } \mathbf{A} \text{ on the left)}
 \end{aligned}
 \]</span></p>
 <p>The chain starts and ends at <span class="math inline">\(\operatorname{rank}(\mathbf{A})\)</span>, so every quantity in it equals <span class="math inline">\(\operatorname{rank}(\mathbf{A})\)</span>. The columns of <span class="math inline">\({\mathbf{A}}^{\top}\)</span> are the rows of <span class="math inline">\(\mathbf{A}\)</span>, which gives the statement about rows.</p>
 </div>
 </section><section class="slide level2"><div id="exm-rank-transpose" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (Four equal ranks)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = 1\)</span> (<a href="#/exm-rank-dim" class="quarto-xref">Example&nbsp;11</a>). Its transpose <span class="math inline">\({\mathbf{A}}^{\top} = \begin{bmatrix} 1 &amp; 3 \\ -2 &amp; -6 \\ -2 &amp; -6 \end{bmatrix}\)</span> has second column <span class="math inline">\(3\)</span> times its first, so its rank is <span class="math inline">\(1\)</span>. <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{A}\)</span> in <a href="#/exm-null-gram" class="quarto-xref">Example&nbsp;10</a> has every row a multiple of <span class="math inline">\((1, -2, -2)\)</span>, so its rank is <span class="math inline">\(1\)</span> too, and</p>
+<p><span class="theorem-title"><strong>Example 14 (Four equal ranks)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = 1\)</span> (<a href="#/exm-rank-dim" class="quarto-xref">Example&nbsp;10</a>). Its transpose <span class="math inline">\({\mathbf{A}}^{\top} = \begin{bmatrix} 1 &amp; 3 \\ -2 &amp; -6 \\ -2 &amp; -6 \end{bmatrix}\)</span> has second column <span class="math inline">\(3\)</span> times its first, so its rank is <span class="math inline">\(1\)</span>. <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{A}\)</span> in <a href="#/exm-null-gram" class="quarto-xref">Example&nbsp;9</a> has every row a multiple of <span class="math inline">\((1, -2, -2)\)</span>, so its rank is <span class="math inline">\(1\)</span> too, and</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{A} {\mathbf{A}}^{\top}
@@ -892,10 +864,73 @@ c_1 &amp;= c_2 \\
 <p><span class="theorem-title"><strong>Corollary 1 (The rank is at most the smaller dimension)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(\operatorname{rank}(\mathbf{A}) \le \min\mathopen{}\left\{m, n\right\}\mathclose{}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(n\)</span> columns, so at most <span class="math inline">\(n\)</span> of them are linearly independent, and <span class="math inline">\(\operatorname{rank}(\mathbf{A}) \le n\)</span> (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>). Likewise <span class="math inline">\({\mathbf{A}}^{\top}\)</span> has <span class="math inline">\(m\)</span> columns, so <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = \operatorname{rank}({\mathbf{A}}^{\top}) \le m\)</span> (<a href="#/thm-rank-transpose" class="quarto-xref">Theorem&nbsp;10</a>).</p>
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(n\)</span> columns, so at most <span class="math inline">\(n\)</span> of them are linearly independent, and <span class="math inline">\(\operatorname{rank}(\mathbf{A}) \le n\)</span> (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>). Likewise <span class="math inline">\({\mathbf{A}}^{\top}\)</span> has <span class="math inline">\(m\)</span> columns, so <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = \operatorname{rank}({\mathbf{A}}^{\top}) \le m\)</span> (<a href="#/thm-rank-transpose" class="quarto-xref">Theorem&nbsp;9</a>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-rank-bound" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (A <span class="math inline">\(2 \times 3\)</span> matrix has rank at most <span class="math inline">\(2\)</span>)</strong></span> By <a href="#/cor-rank-bound" class="quarto-xref">Corollary&nbsp;1</a>, every <span class="math inline">\(2 \times 3\)</span> matrix has rank at most <span class="math inline">\(\min\mathopen{}\left\{2, 3\right\}\mathclose{} = 2\)</span>, even though it has <span class="math inline">\(3\)</span> columns. The matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-subspaces.html#rem-full-column-rank-shape">Remark&nbsp;1 in Subspaces and Rank</a> reaches that bound: its first two columns <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((0, 1)\)</span> are linearly independent, so its rank is <span class="math inline">\(2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 15 (A <span class="math inline">\(2 \times 3\)</span> matrix has rank at most <span class="math inline">\(2\)</span>)</strong></span> By <a href="#/cor-rank-bound" class="quarto-xref">Corollary&nbsp;1</a>, every <span class="math inline">\(2 \times 3\)</span> matrix has rank at most <span class="math inline">\(\min\mathopen{}\left\{2, 3\right\}\mathclose{} = 2\)</span>, even though it has <span class="math inline">\(3\)</span> columns. The matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-subspaces.html#rem-full-column-rank-shape">Remark&nbsp;1 in Subspaces and Rank</a> reaches that bound: its first two columns <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((0, 1)\)</span> are linearly independent, so its rank is <span class="math inline">\(2\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="thm-rank-product-right" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 10 (Multiplying on the left cannot increase the rank)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(m \times n\)</span> and <span class="math inline">\(\mathbf{B}\)</span> is <span class="math inline">\(n \times k\)</span>, then</p>
+<p><span class="math display">\[
+\operatorname{rank}(\mathbf{A} \mathbf{B}) \le \operatorname{rank}(\mathbf{B}).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
+\begin{aligned}
+\operatorname{rank}(\mathbf{A} \mathbf{B})
+&amp;= \operatorname{rank}({(\mathbf{A} \mathbf{B})}^{\top})
+&amp;&amp; \text{(}\href{#thm-rank-transpose}{\text{Theorem~9}}\text{)}
+\\
+&amp;= \operatorname{rank}({\mathbf{B}}^{\top}\,{\mathbf{A}}^{\top})
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)}
+\\
+&amp;\le \operatorname{rank}({\mathbf{B}}^{\top})
+&amp;&amp; \text{(}\href{#thm-rank-product}{\text{Theorem~8}}\text{, with } {\mathbf{B}}^{\top} \text{ on the left)}
+\\
+&amp;= \operatorname{rank}(\mathbf{B}).
+&amp;&amp; \text{(}\href{#thm-rank-transpose}{\text{Theorem~9}}\text{)}
+\end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exm-rank-product-right" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (A product of rank 1 with a factor of rank 2)</strong></span> Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix},
+\qquad
+\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 0 \end{bmatrix},
+\qquad
+\mathbf{A} \mathbf{B}
+= \begin{bmatrix} 1 \cdot 1 + 1 \cdot 1 &amp; 1 \cdot 0 + 1 \cdot 0 \\ 0 \cdot 1 + 1 \cdot 1 &amp; 0 \cdot 0 + 1 \cdot 0 \end{bmatrix}
+= \begin{bmatrix} 2 &amp; 0 \\ 1 &amp; 0 \end{bmatrix}.
+\]</span></p>
+<p><span class="math inline">\(\mathbf{A}\)</span> has <a href="./linear-algebra-subspaces.html#def-rank">rank</a> <span class="math inline">\(2\)</span>, because its columns <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((1, 1)\)</span> are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>. <span class="math inline">\(\mathbf{B}\)</span> has rank <span class="math inline">\(1\)</span>, because its second column is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> and its first is not, and <span class="math inline">\(\mathbf{A} \mathbf{B}\)</span> has rank <span class="math inline">\(1\)</span> for the same reason. So <span class="math inline">\(\operatorname{rank}(\mathbf{A} \mathbf{B}) = 1 \le \operatorname{rank}(\mathbf{B}) = 1\)</span> (<a href="#/thm-rank-product-right" class="quarto-xref">Theorem&nbsp;10</a>), and the bound of <a href="#/thm-rank-product" class="quarto-xref">Theorem&nbsp;8</a>, <span class="math inline">\(2\)</span>, is not the tighter one.</p>
+</div>
+</section><section class="slide level2 scrollable"><div id="cor-rank-product-full-rank" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 2 (Multiplying by a matrix of full rank does not change the rank)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be <span class="math inline">\(m \times n\)</span> and <span class="math inline">\(\mathbf{B}\)</span> be <span class="math inline">\(n \times k\)</span>.</p>
+<ol type="1">
+<li>If <span class="math inline">\(\mathbf{A}\)</span> has full column rank (<a href="./linear-algebra-subspaces.html#def-full-column-rank">Definition&nbsp;3 in Subspaces and Rank</a>), then <span class="math inline">\(\operatorname{rank}(\mathbf{A} \mathbf{B}) = \operatorname{rank}(\mathbf{B})\)</span>.</li>
+<li>If <span class="math inline">\(\operatorname{rank}(\mathbf{B}) = n\)</span>, then <span class="math inline">\(\operatorname{rank}(\mathbf{A} \mathbf{B}) = \operatorname{rank}(\mathbf{A})\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> Because <span class="math inline">\(\mathbf{A}\)</span> has <a href="./linear-algebra-subspaces.html#def-full-column-rank">full column rank</a>, <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\)</span> only for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\)</span> (<a href="#/thm-independent-null-space" class="quarto-xref">Theorem&nbsp;3</a>). So for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^k\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{A} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m
+&amp;\iff \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n
+&amp;&amp; \text{(}\href{#thm-independent-null-space}{\text{Theorem~3}}\text{, with } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \text{)}
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\mathcal{N}(\mathbf{A} \mathbf{B}) = \mathcal{N}(\mathbf{B})\)</span> (<a href="#/def-null-space" class="quarto-xref">Definition&nbsp;3</a>), and the two matrices have the same nullity (<a href="#/def-nullity" class="quarto-xref">Definition&nbsp;7</a>). Both have <span class="math inline">\(k\)</span> columns, so by <a href="#/thm-rank-nullity" class="quarto-xref">Theorem&nbsp;7</a> they have the same <a href="./linear-algebra-subspaces.html#def-rank">rank</a>.</p>
+<p><strong>Part 2.</strong> <span class="math inline">\(\mathcal{C}(\mathbf{B})\)</span> is a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a> of <span class="math inline">\(\mathbb{R}^n\)</span> (<a href="#/thm-column-space-span" class="quarto-xref">Theorem&nbsp;1</a>) of <a href="./linear-algebra-subspaces.html#def-dimension">dimension</a> <span class="math inline">\(n\)</span> (<a href="#/thm-rank-dim" class="quarto-xref">Theorem&nbsp;6</a>), so <span class="math inline">\(\mathcal{C}(\mathbf{B}) = \mathbb{R}^n\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>). Every vector of <span class="math inline">\(\mathcal{C}(\mathbf{A} \mathbf{B})\)</span> is <span class="math inline">\(\mathbf{A}\,(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#/def-column-space" class="quarto-xref">Definition&nbsp;1</a>), and <span class="math inline">\(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> takes every vector of <span class="math inline">\(\mathbb{R}^n\)</span>, so <span class="math inline">\(\mathcal{C}(\mathbf{A} \mathbf{B}) = \mathcal{C}(\mathbf{A})\)</span> and the two matrices have the same rank (<a href="#/thm-rank-dim" class="quarto-xref">Theorem&nbsp;6</a>).</p>
+</div>
+</section><section class="slide level2"><div id="exm-rank-product-full-rank" class="theorem example">
+<p><span class="theorem-title"><strong>Example 17 (Ranks of products with a full-rank factor)</strong></span> Let <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 0 \end{bmatrix}\)</span>, which has <a href="./linear-algebra-subspaces.html#def-rank">rank</a> <span class="math inline">\(1\)</span>.</p>
+<ul>
+<li>Part 1: <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}\)</span> has two <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a> columns, so it has <a href="./linear-algebra-subspaces.html#def-full-column-rank">full column rank</a>, and <span class="math inline">\(\mathbf{A} \mathbf{B} = \begin{bmatrix} 2 &amp; 0 \\ 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span> has rank <span class="math inline">\(1 = \operatorname{rank}(\mathbf{B})\)</span>.</li>
+<li>Part 2: let <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span>, which has rank <span class="math inline">\(1\)</span>, and let <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span>, which has rank <span class="math inline">\(2\)</span>. Then <span class="math inline">\(\mathbf{A} \mathbf{B} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}\)</span> has rank <span class="math inline">\(1 = \operatorname{rank}(\mathbf{A})\)</span>.</li>
+</ul>
 </div>
 </section><section class="slide level2"><div id="thm-centered-data-rank" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 11 (A centered data matrix has rank at most <span class="math inline">\(n - 1\)</span>)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be an <span class="math inline">\(n \times p\)</span> matrix with rows <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1}^{\top}, \ldots, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n}^{\top}\)</span>, let <span class="math inline">\(\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \frac{1}{n}\sum_{i=1}^n \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i\)</span> be the mean of the rows, and let <span class="math inline">\(\mathbf{X}_c = \mathbf{X}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\,{\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}^{\top}\)</span> be the matrix whose row <span class="math inline">\(i\)</span> is <span class="math inline">\({(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - \bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}})}^{\top}\)</span>, where <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> is the ones vector of length <span class="math inline">\(n\)</span> (<a href="./linear-algebra-vectors.html#def-ones-vector">Definition&nbsp;13 in Vectors</a>). Then <span class="math inline">\(\operatorname{rank}(\mathbf{X}_c) \le n - 1\)</span>.</p>
@@ -917,15 +952,15 @@ c_1 &amp;= c_2 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p}^{\top}.
 \end{aligned}
 \]</span></p>
-<p>Transposing, <span class="math inline">\({\mathbf{X}_c}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>. The ones vector is nonzero, so it is in the null space of the <span class="math inline">\(p \times n\)</span> matrix <span class="math inline">\({\mathbf{X}_c}^{\top}\)</span>, and <span class="math inline">\(\operatorname{nullity}({\mathbf{X}_c}^{\top}) \ge 1\)</span>. By <a href="#/thm-rank-nullity" class="quarto-xref">Theorem&nbsp;8</a>, applied to the <span class="math inline">\(n\)</span> columns of <span class="math inline">\({\mathbf{X}_c}^{\top}\)</span>,</p>
+<p>Transposing, <span class="math inline">\({\mathbf{X}_c}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span>. The ones vector is nonzero, so it is in the null space of the <span class="math inline">\(p \times n\)</span> matrix <span class="math inline">\({\mathbf{X}_c}^{\top}\)</span>, and <span class="math inline">\(\operatorname{nullity}({\mathbf{X}_c}^{\top}) \ge 1\)</span>. By <a href="#/thm-rank-nullity" class="quarto-xref">Theorem&nbsp;7</a>, applied to the <span class="math inline">\(n\)</span> columns of <span class="math inline">\({\mathbf{X}_c}^{\top}\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \operatorname{rank}(\mathbf{X}_c)
 &amp;= \operatorname{rank}({\mathbf{X}_c}^{\top})
-&amp;&amp; \text{(}\href{#thm-rank-transpose}{\text{Theorem~10}}\text{)}
+&amp;&amp; \text{(}\href{#thm-rank-transpose}{\text{Theorem~9}}\text{)}
 \\
 &amp;= n - \operatorname{nullity}({\mathbf{X}_c}^{\top})
-&amp;&amp; \text{(}\href{#thm-rank-nullity}{\text{Theorem~8}}\text{)}
+&amp;&amp; \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{)}
 \\
 &amp;\le n - 1.
 &amp;&amp; \text{(} \operatorname{nullity}({\mathbf{X}_c}^{\top}) \ge 1 \text{)}
@@ -933,14 +968,14 @@ c_1 &amp;= c_2 \\
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-centered-data-rank" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (Two points in three dimensions)</strong></span> <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 3 &amp; 2 &amp; 1 \end{bmatrix}\)</span> has <span class="math inline">\(\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = (2, 2, 2)\)</span>, so</p>
+<p><span class="theorem-title"><strong>Example 18 (Two points in three dimensions)</strong></span> <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 3 &amp; 2 &amp; 1 \end{bmatrix}\)</span> has <span class="math inline">\(\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = (2, 2, 2)\)</span>, so</p>
 <p><span class="math display">\[
 \mathbf{X}_c = \begin{bmatrix} -1 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -1 \end{bmatrix}.
 \]</span></p>
 <p>The second row is <span class="math inline">\(-1\)</span> times the first, so <span class="math inline">\(\operatorname{rank}(\mathbf{X}_c) = 1 = n - 1\)</span>, and the column sums are zero: <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}}^{\top}\mathbf{X}_c = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3}^{\top}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="cor-sample-covariance-singular" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 2 (A sample covariance matrix from <span class="math inline">\(n \le p\)</span> points is singular)</strong></span> With <span class="math inline">\(\mathbf{X}_c\)</span> as in <a href="#/thm-centered-data-rank" class="quarto-xref">Theorem&nbsp;11</a>, the sample covariance matrix</p>
+<p><span class="theorem-title"><strong>Corollary 3 (A sample covariance matrix from <span class="math inline">\(n \le p\)</span> points is singular)</strong></span> With <span class="math inline">\(\mathbf{X}_c\)</span> as in <a href="#/thm-centered-data-rank" class="quarto-xref">Theorem&nbsp;11</a>, the sample covariance matrix</p>
 <p><span class="math display">\[
 \mathbf{S} = \frac{1}{n - 1}\,{\mathbf{X}_c}^{\top}\mathbf{X}_c
 \]</span></p>
@@ -954,7 +989,7 @@ c_1 &amp;= c_2 \\
 &amp;&amp; \text{(multiplying by } \tfrac{1}{n-1} \ne 0 \text{ does not change the rank)}
 \\
 &amp;= \operatorname{rank}(\mathbf{X}_c)
-&amp;&amp; \text{(}\href{#thm-rank-transpose}{\text{Theorem~10}}\text{)}
+&amp;&amp; \text{(}\href{#thm-rank-transpose}{\text{Theorem~9}}\text{)}
 \\
 &amp;\le n - 1.
 &amp;&amp; \text{(}\href{#thm-centered-data-rank}{\text{Theorem~11}}\text{)}
@@ -963,7 +998,7 @@ c_1 &amp;= c_2 \\
 <p>If <span class="math inline">\(n \le p\)</span>, then <span class="math inline">\(\operatorname{rank}(\mathbf{S}) \le n - 1 &lt; p\)</span>, so <span class="math inline">\(\mathbf{S}\)</span> does not have full column rank, and it is not invertible by <a href="./linear-algebra-diagonalization.html#thm-invertible-rank">Theorem&nbsp;1 in Diagonalization and Cholesky</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-sample-covariance-singular" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (As many points as dimensions)</strong></span> The <span class="math inline">\(n = 3\)</span> points <span class="math inline">\((1, 0, 0)\)</span>, <span class="math inline">\((0, 1, 0)\)</span> and <span class="math inline">\((0, 0, 1)\)</span> in <span class="math inline">\(p = 3\)</span> dimensions have <span class="math inline">\(\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \frac{1}{3}(1, 1, 1)\)</span>, so</p>
+<p><span class="theorem-title"><strong>Example 19 (As many points as dimensions)</strong></span> The <span class="math inline">\(n = 3\)</span> points <span class="math inline">\((1, 0, 0)\)</span>, <span class="math inline">\((0, 1, 0)\)</span> and <span class="math inline">\((0, 0, 1)\)</span> in <span class="math inline">\(p = 3\)</span> dimensions have <span class="math inline">\(\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \frac{1}{3}(1, 1, 1)\)</span>, so</p>
 <p><span class="math display">\[
 \mathbf{X}_c = \mathbf{I}_3 - \tfrac{1}{3}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}}^{\top},
 \qquad
@@ -980,7 +1015,7 @@ c_1 &amp;= c_2 \\
 <p>for some vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathbb{R}^p\)</span> and some subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>): the <a href="./functions.html#def-image">image</a> of <span class="math inline">\(\mathcal{S}\)</span> under the translation by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\)</span> (<a href="./linear-algebra-matrices.html#def-translation">Definition&nbsp;18 in Matrices</a>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-affine-subspace" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (A line that misses the origin is an affine subspace)</strong></span> The line <span class="math inline">\(\mathcal{T} = \mathopen{}\left\{(x, 1) : x \in \mathbb{R}\right\}\mathclose{}\)</span> of <a href="./linear-algebra-subspaces.html#exm-not-subspace">Example&nbsp;4 in Subspaces and Rank</a> is not a subspace, but it is an affine subspace, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = (0, 1)\)</span> and <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 0)\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>):</p>
+<p><span class="theorem-title"><strong>Example 20 (A line that misses the origin is an affine subspace)</strong></span> The line <span class="math inline">\(\mathcal{T} = \mathopen{}\left\{(x, 1) : x \in \mathbb{R}\right\}\mathclose{}\)</span> of <a href="./linear-algebra-subspaces.html#exm-not-subspace">Example&nbsp;4 in Subspaces and Rank</a> is not a subspace, but it is an affine subspace, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = (0, 1)\)</span> and <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 0)\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>):</p>
 <p><span class="math display">\[
 \begin{aligned}
 (0, 1) + c\,(1, 0)
@@ -1013,7 +1048,7 @@ c_1 &amp;= c_2 \\
 &amp;&amp; \text{(}\href{#def-nullity}{\text{Definition~7}}\text{)}
 \\
 &amp;= p - \operatorname{rank}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top})
-&amp;&amp; \text{(}\href{#thm-rank-nullity}{\text{Theorem~8}}\text{, for the } p \text{ columns of } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \text{)}
+&amp;&amp; \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{, for the } p \text{ columns of } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \text{)}
 \\
 &amp;= p - 1.
 &amp;&amp; \text{(the rank is } 1 \text{)}
@@ -1064,7 +1099,7 @@ c_1 &amp;= c_2 \\
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-hyperplane-subspace" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (The plane <span class="math inline">\(x_1 + x_2 + x_3 = 1\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, so <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + x_2 + x_3 - 1 = 0\right\}\mathclose{}\)</span>, the plane that <a href="./linear-algebra-subspaces.html#exm-subspace-zero">Example&nbsp;5 in Subspaces and Rank</a> showed is not a subspace. By part 1, <span class="math inline">\(\mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + x_2 + x_3 = 0\right\}\mathclose{}\)</span> is a subspace of dimension <span class="math inline">\(3 - 1 = 2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 21 (The plane <span class="math inline">\(x_1 + x_2 + x_3 = 1\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, so <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + x_2 + x_3 - 1 = 0\right\}\mathclose{}\)</span>, the plane that <a href="./linear-algebra-subspaces.html#exm-subspace-zero">Example&nbsp;5 in Subspaces and Rank</a> showed is not a subspace. By part 1, <span class="math inline">\(\mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + x_2 + x_3 = 0\right\}\mathclose{}\)</span> is a subspace of dimension <span class="math inline">\(3 - 1 = 2\)</span>.</p>
 <ul>
 <li><p><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = (1, 0, 0)\)</span> is in <span class="math inline">\(\mathcal{H}\)</span>, since <span class="math inline">\(1 + 0 + 0 - 1 = 0\)</span>, and so is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1, 0)\)</span>.</p></li>
 <li><p>Their difference <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = (-1, 1, 0)\)</span> has entries summing to <span class="math inline">\(-1 + 1 + 0 = 0\)</span>, so it is in <span class="math inline">\(\mathcal{H}_0\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + (-1, 1, 0)\)</span>, as part 2 says.</p></li>
@@ -1099,7 +1134,7 @@ c_1 &amp;= c_2 \\
 </ol>
 </div>
 </section><section class="slide level2"></section><section class="slide level2"><div id="exm-hyperplane-origin" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (A line in <span class="math inline">\(\mathbb{R}^2\)</span> and a plane in <span class="math inline">\(\mathbb{R}^3\)</span>, checked on a grid of points)</strong></span> In <span class="math inline">\(\mathbb{R}^2\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, the line of <a href="./linear-algebra-matrices.html#exm-hyperplane">Example&nbsp;20 in Matrices</a>. The point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = -\frac{b}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is on it, and the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (-w_2, w_1)\)</span> is nonzero with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 0\)</span>, so it spans the subspace <span class="math inline">\(\mathcal{H}_0\)</span> of <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;12</a>. In <span class="math inline">\(\mathbb{R}^3\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, the plane of <a href="#/exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;20</a>, with the independent vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = (1, -1, 0)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = (0, 1, -1)\)</span> in <span class="math inline">\(\mathcal{H}_0\)</span>. The code evaluates <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> at the origin and at points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 22 (A line in <span class="math inline">\(\mathbb{R}^2\)</span> and a plane in <span class="math inline">\(\mathbb{R}^3\)</span>, checked on a grid of points)</strong></span> In <span class="math inline">\(\mathbb{R}^2\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, the line of <a href="./linear-algebra-matrices.html#exm-hyperplane">Example&nbsp;20 in Matrices</a>. The point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = -\frac{b}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is on it, and the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (-w_2, w_1)\)</span> is nonzero with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 0\)</span>, so it spans the subspace <span class="math inline">\(\mathcal{H}_0\)</span> of <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;12</a>. In <span class="math inline">\(\mathbb{R}^3\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, the plane of <a href="#/exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;21</a>, with the independent vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = (1, -1, 0)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = (0, 1, -1)\)</span> in <span class="math inline">\(\mathcal{H}_0\)</span>. The code evaluates <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> at the origin and at points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>level <span class="ot">&lt;-</span> <span class="cf">function</span>(w, b, x) <span class="fu">sum</span>(w <span class="sc">*</span> x) <span class="sc">+</span> b</span>
 <span id="cb1-2"><a aria-label="2"></a></span>
@@ -1153,7 +1188,7 @@ c_1 &amp;= c_2 \\
           overflow: hidden!important;
           display:block!important;
       }</style></aside></section><section class="slide level2"><div id="exm-half-space-plane" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22 (Half-spaces of a line in the plane)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the line in <span class="math inline">\(\mathbb{R}^2\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 2)\)</span> and <span class="math inline">\(b = -2\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>), so <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\}\mathclose{}\)</span>. Evaluate <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> at three points (<a href="#/def-half-space" class="quarto-xref">Definition&nbsp;9</a>):</p>
+<p><span class="theorem-title"><strong>Example 23 (Half-spaces of a line in the plane)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the line in <span class="math inline">\(\mathbb{R}^2\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 2)\)</span> and <span class="math inline">\(b = -2\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>), so <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\}\mathclose{}\)</span>. Evaluate <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> at three points (<a href="#/def-half-space" class="quarto-xref">Definition&nbsp;9</a>):</p>
 <ul>
 <li>At <span class="math inline">\((0, 0)\)</span> it equals <span class="math inline">\(0 + 0 - 2 = -2 &lt; 0\)</span>, so <span class="math inline">\((0, 0) \in \mathcal{H}^-\)</span>.</li>
 <li>At <span class="math inline">\((2, 0)\)</span> it equals <span class="math inline">\(2 + 0 - 2 = 0\)</span>, so <span class="math inline">\((2, 0) \in \mathcal{H}\)</span>.</li>
@@ -1175,8 +1210,8 @@ c_1 &amp;= c_2 \\
 <p>The same holds for <span class="math inline">\(\mathcal{H}^-\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathcal{H}\)</span>. By <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;12</a> part 3, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 0\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = 0\right\}\mathclose{}\)</span>. Conversely, fix any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}\)</span> (it exists by <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;12</a> part 2). For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\)</span>, the point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span> is in <span class="math inline">\(\mathcal{H}\)</span> by the same part, and <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span>. So <span class="math inline">\(D(\mathcal{H}) = \mathcal{H}_0\)</span>, which has dimension <span class="math inline">\(p - 1\)</span> by <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;12</a> part 1.</p>
-<p><strong>Part 2.</strong> Every difference is in <span class="math inline">\(\mathbb{R}^p\)</span>, so <span class="math inline">\(D(\mathcal{H}^+) \subseteq \mathbb{R}^p\)</span>. For the other direction, fix any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}\)</span> and any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathbb{R}^p\)</span>. For a number <span class="math inline">\(t &gt; 0\)</span> to be chosen, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>. Then</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathcal{H}\)</span>. By <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;12</a> part 3, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 0\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = 0\right\}\mathclose{}\)</span>. Conversely, take any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}\)</span> (<a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;12</a> part 2 gives such a point). For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\)</span>, the point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span> is in <span class="math inline">\(\mathcal{H}\)</span> by the same part, and <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span>. So <span class="math inline">\(D(\mathcal{H}) = \mathcal{H}_0\)</span>, which has dimension <span class="math inline">\(p - 1\)</span> by <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;12</a> part 1.</p>
+<p><strong>Part 2.</strong> Every difference is in <span class="math inline">\(\mathbb{R}^p\)</span>, so <span class="math inline">\(D(\mathcal{H}^+) \subseteq \mathbb{R}^p\)</span>. For the reverse inclusion, take any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}\)</span>. Take any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathbb{R}^p\)</span>. For a number <span class="math inline">\(t &gt; 0\)</span> to be chosen, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t + b
@@ -1202,7 +1237,7 @@ c_1 &amp;= c_2 \\
 <p>The proof for <span class="math inline">\(\mathcal{H}^-\)</span> is the same with <span class="math inline">\(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and <span class="math inline">\(-b\)</span> in place of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and <span class="math inline">\(b\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-half-space-iris" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (Two iris species on either side of a line)</strong></span> The <code>iris</code> data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)\)</span> be the petal length and petal width of one flower. A logistic regression of the species on <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> gives a coefficient vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and an intercept <span class="math inline">\(b\)</span>. The line <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\)</span> is a hyperplane in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>), and the two species mostly fall in its two open half-spaces (<a href="#/def-half-space" class="quarto-xref">Definition&nbsp;9</a>). <a href="#/fig-half-space-iris" class="quarto-xref">Figure&nbsp;1</a> shows the line and the flowers.</p>
+<p><span class="theorem-title"><strong>Example 24 (Two iris species on either side of a line)</strong></span> The <code>iris</code> data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)\)</span> be the petal length and petal width of one flower. A logistic regression of the species on <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> gives a coefficient vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and an intercept <span class="math inline">\(b\)</span>. The line <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\)</span> is a hyperplane in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>), and the two species mostly fall in its two open half-spaces (<a href="#/def-half-space" class="quarto-xref">Definition&nbsp;9</a>). <a href="#/fig-half-space-iris" class="quarto-xref">Figure&nbsp;1</a> shows the line and the flowers.</p>
 <div class="cell">
 <details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>two_species <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(iris, Species <span class="sc">!=</span> <span class="st">"setosa"</span>) <span class="sc">|&gt;</span> <span class="fu">droplevels</span>()</span>
 <span id="cb2-2"><a aria-label="2"></a>fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
@@ -1242,7 +1277,7 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 <p>The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> points toward the virginica side, so the positive half-space <span class="math inline">\(\mathcal{H}^+\)</span> holds 50 of the 100 flowers, and 47 of them are virginica. The line is a set of dimension <span class="math inline">\(p - 1 = 1\)</span>, and each side is a region of the plane of dimension <span class="math inline">\(p = 2\)</span> (<a href="#/thm-half-space-dimension" class="quarto-xref">Theorem&nbsp;14</a>).</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exr-half-space-sides" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Which side of the plane?)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the plane in <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span> (<a href="#/exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;20</a>).</p>
+<p><span class="theorem-title"><strong>Exercise 1 (Which side of the plane?)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the plane in <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span> (<a href="#/exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;21</a>).</p>
 <ol type="1">
 <li>For each point, say whether it is in <span class="math inline">\(\mathcal{H}^+\)</span>, <span class="math inline">\(\mathcal{H}\)</span> or <span class="math inline">\(\mathcal{H}^-\)</span> (<a href="#/def-half-space" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\((0, 0, 0)\)</span>, <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((1, 1, 1)\)</span>.</li>
 <li>Write the plane and its half-spaces using <span class="math inline">\(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and <span class="math inline">\(-b\)</span>. Which points from part 1 change sides?</li>
@@ -1272,7 +1307,7 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-rank-factorization" class="theorem example">
-<p><span class="theorem-title"><strong>Example 24 (A rank factorization of a rank-one matrix)</strong></span> The matrix <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a> has rank <span class="math inline">\(1\)</span> (<a href="#/exm-rank-dim" class="quarto-xref">Example&nbsp;11</a>), and</p>
+<p><span class="theorem-title"><strong>Example 25 (A rank factorization of a rank-one matrix)</strong></span> The matrix <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a> has rank <span class="math inline">\(1\)</span> (<a href="#/exm-rank-dim" class="quarto-xref">Example&nbsp;10</a>), and</p>
 <p><span class="math display">\[
 \begin{aligned}
 \begin{bmatrix} 1 \\ 3 \end{bmatrix}
@@ -1287,7 +1322,7 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 <p><span class="theorem-title"><strong>Theorem 15 (Every nonzero matrix has a rank factorization)</strong></span> Every <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r \ge 1\)</span> has a rank factorization (<a href="#/def-rank-factorization" class="quarto-xref">Definition&nbsp;11</a>). One is given by taking the columns of <span class="math inline">\(\mathbf{C}\)</span> to be any basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> has dimension <span class="math inline">\(r\)</span> (<a href="#/thm-rank-dim" class="quarto-xref">Theorem&nbsp;7</a>), so it has a basis <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>); let <span class="math inline">\(\mathbf{C}\)</span> be the <span class="math inline">\(m \times r\)</span> matrix with these columns. Each column <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\)</span> of <span class="math inline">\(\mathbf{A}\)</span> is in <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = r_{1j} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1 + \cdots + r_{rj} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r\)</span> for some numbers <span class="math inline">\(r_{ij}\)</span>, because the basis spans <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. Let <span class="math inline">\(\mathbf{R}\)</span> be the <span class="math inline">\(r \times n\)</span> matrix with entries <span class="math inline">\(r_{ij}\)</span>, whose column <span class="math inline">\(j\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_j = (r_{1j}, \ldots, r_{rj})\)</span>. Then column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{C} \mathbf{R}\)</span> is</p>
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> has dimension <span class="math inline">\(r\)</span> (<a href="#/thm-rank-dim" class="quarto-xref">Theorem&nbsp;6</a>), so it has a basis <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>); let <span class="math inline">\(\mathbf{C}\)</span> be the <span class="math inline">\(m \times r\)</span> matrix with these columns. Each column <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\)</span> of <span class="math inline">\(\mathbf{A}\)</span> is in <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = r_{1j} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1 + \cdots + r_{rj} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r\)</span> for some numbers <span class="math inline">\(r_{ij}\)</span>, because the basis spans <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. Let <span class="math inline">\(\mathbf{R}\)</span> be the <span class="math inline">\(r \times n\)</span> matrix with entries <span class="math inline">\(r_{ij}\)</span>, whose column <span class="math inline">\(j\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_j = (r_{1j}, \ldots, r_{rj})\)</span>. Then column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{C} \mathbf{R}\)</span> is</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_j
@@ -1301,7 +1336,7 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 <p>so <span class="math inline">\(\mathbf{C} \mathbf{R} = \mathbf{A}\)</span>.</p>
 </div>
 </section><section class="slide level2 smaller scrollable" id="references"><div id="exm-rank-factorization-construct" class="theorem example">
-<p><span class="theorem-title"><strong>Example 25 (Building a rank factorization from a basis)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\((1, 3)\)</span> spans <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="#/exm-column-space-span" class="quarto-xref">Example&nbsp;2</a>), and it is linearly independent because it is nonzero (<span class="math inline">\(c\,(1, 3) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> forces <span class="math inline">\(c = 0\)</span>), so it is a basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. The columns of <span class="math inline">\(\mathbf{A}\)</span> are <span class="math inline">\((1, 3) = 1 \cdot(1, 3)\)</span>, <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span> and <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span>, so the construction in <a href="#/thm-rank-factorization" class="quarto-xref">Theorem&nbsp;15</a> gives <span class="math inline">\(\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; -2 &amp; -2 \end{bmatrix}\)</span>, the factorization in <a href="#/exm-rank-factorization" class="quarto-xref">Example&nbsp;24</a>.</p>
+<p><span class="theorem-title"><strong>Example 26 (Building a rank factorization from a basis)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\((1, 3)\)</span> spans <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="#/exm-column-space-span" class="quarto-xref">Example&nbsp;2</a>), and it is linearly independent because it is nonzero (<span class="math inline">\(c\,(1, 3) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> forces <span class="math inline">\(c = 0\)</span>), so it is a basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. The columns of <span class="math inline">\(\mathbf{A}\)</span> are <span class="math inline">\((1, 3) = 1 \cdot(1, 3)\)</span>, <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span> and <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span>, so the construction in <a href="#/thm-rank-factorization" class="quarto-xref">Theorem&nbsp;15</a> gives <span class="math inline">\(\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; -2 &amp; -2 \end{bmatrix}\)</span>, the factorization in <a href="#/exm-rank-factorization" class="quarto-xref">Example&nbsp;25</a>.</p>
 </div>
 
 

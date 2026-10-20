@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 13:26:01 (PDT)
+Last modified: 2026-10-19 23:35:06 (PDT)
 
 ## 1 Vectors
 
@@ -119,7 +119,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 9 (Linear combination)** A **linear combination** of the numbers \\a_1, \ldots, a_k\\ with coefficients \\c_1, \ldots, c_k\\ ([Definition 10](#def-lincom-coefficient)) is the weighted sum
+> **Definition 9 (Linear combination)** A **linear combination** of the numbers \\a_1, \ldots, a_k\\ with coefficients \\c_1, \ldots, c_k\\ is the weighted sum
 >
 > \\c_1 a_1 + \cdots + c_k a_k = \sum\_{i=1}^{k} c_i a_i\\
 >
@@ -391,7 +391,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > a = np.array([3.0, -1.0, 2.0])
 > b = np.array([0.0, 4.0, -2.0])
 >
-> print(a @ b, round(float(np.linalg.norm(a)), 3))
+> inner = float(a @ b)
+> norm_a = round(float(np.linalg.norm(a)), 3)
+>
+> print(inner, norm_a)
+> #> -8.0 3.742
 > ```
 >
 > ``` downlit
@@ -402,7 +406,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > #> [1] -8.000  3.742
 > ```
 >
-> Both print \\-8\\ and \\3.742\\.
+> Both print -8 and 3.742.
 
 > **TIP:**
 >

@@ -4269,6 +4269,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#cor-rank-product-full-rank",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "cor-rank-product-full-rank",
+   "kind": "cor",
+   "title": "Multiplying by a matrix of full rank does not change the rank",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#cor-right-angle-orthogonal",
    "site": "mds",
    "page": "linear-algebra",
@@ -6132,6 +6141,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-moore-penrose-full-rank",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse of a matrix of full column rank or full row rank",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-moore-penrose-generalized-inverse",
    "site": "mds",
    "page": "linear-algebra",
@@ -6429,6 +6447,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-rank-product-right",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-rank-product-right",
+   "kind": "thm",
+   "title": "Multiplying on the left cannot increase the rank",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-rank-subadditive",
    "site": "mds",
    "page": "linear-algebra",
@@ -6570,6 +6597,15 @@
    "div": "thm-svd-evd",
    "kind": "thm",
    "title": "An SVD gives an eigendecomposition of $\\tp{\\matr{A}}\\matr{A}$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-symmetric-eigenvectors-orthogonal",
+   "kind": "thm",
+   "title": "Eigenvectors of a symmetric matrix for distinct eigenvalues are orthogonal",
    "external": false
   },
   {
@@ -7941,6 +7977,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-projections#thm-moore-penrose-full-rank",
+   "site": "mds",
+   "page": "linear-algebra-projections",
+   "div": "thm-moore-penrose-full-rank",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse of a matrix of full column rank or full row rank",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-projections#thm-moore-penrose-generalized-inverse",
    "site": "mds",
    "page": "linear-algebra-projections",
@@ -8037,6 +8082,15 @@
    "div": "cor-rank-bound",
    "kind": "cor",
    "title": "The rank is at most the smaller dimension",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "site": "mds",
+   "page": "linear-algebra-rank-nullity",
+   "div": "cor-rank-product-full-rank",
+   "kind": "cor",
+   "title": "Multiplying by a matrix of full rank does not change the rank",
    "external": false
   },
   {
@@ -8166,15 +8220,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-rank-nullity#thm-gram-properties",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-gram-properties",
-   "kind": "thm",
-   "title": "Entries and symmetry of a Gram matrix",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
    "site": "mds",
    "page": "linear-algebra-rank-nullity",
@@ -8262,6 +8307,15 @@
    "div": "thm-rank-product",
    "kind": "thm",
    "title": "Multiplying on the right cannot increase the rank",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-rank-nullity#thm-rank-product-right",
+   "site": "mds",
+   "page": "linear-algebra-rank-nullity",
+   "div": "thm-rank-product-right",
+   "kind": "thm",
+   "title": "Multiplying on the left cannot increase the rank",
    "external": false
   },
   {
@@ -8598,6 +8652,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-special-matrices#thm-gram-properties",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "thm-gram-properties",
+   "kind": "thm",
+   "title": "Entries and symmetry of a Gram matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-special-matrices#thm-inverse-product",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -8721,6 +8784,15 @@
    "div": "thm-svd-evd",
    "kind": "thm",
    "title": "An SVD gives an eigendecomposition of $\\tp{\\matr{A}}\\matr{A}$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#thm-symmetric-eigenvectors-orthogonal",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "thm-symmetric-eigenvectors-orthogonal",
+   "kind": "thm",
+   "title": "Eigenvectors of a symmetric matrix for distinct eigenvalues are orthogonal",
    "external": false
   },
   {
@@ -10362,6 +10434,15 @@
    "external": false
   },
   {
+   "id": "mds/sets#def-bound",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-bound",
+   "kind": "def",
+   "title": "Lower bound and upper bound",
+   "external": false
+  },
+  {
    "id": "mds/sets#def-cartesian-product",
    "site": "mds",
    "page": "sets",
@@ -11122,14 +11203,6 @@
    "mds/algebra#def-identity-element"
   ],
   [
-   "mds/algebra#def-commutative",
-   "mds/algebra#thm-prod-symmetric"
-  ],
-  [
-   "mds/algebra#def-commutative",
-   "mds/algebra#thm-sum-symmetric"
-  ],
-  [
    "mds/algebra#def-complex-conjugate",
    "mds/algebra#def-complex-number"
   ],
@@ -11252,10 +11325,6 @@
   [
    "mds/algebra#def-infinite-sum",
    "mds/algebra#def-partial-sum"
-  ],
-  [
-   "mds/algebra#def-infinite-sum",
-   "mds/algebra#lem-nonneg-series"
   ],
   [
    "mds/algebra#def-intercept",
@@ -11488,10 +11557,6 @@
   [
    "mds/algebra#def-sum-over-set",
    "mds/sets#def-set"
-  ],
-  [
-   "mds/algebra#def-summation",
-   "mds/algebra#def-lower-upper-limits"
   ],
   [
    "mds/algebra#def-summation-index",
@@ -11758,10 +11823,6 @@
    "mds/algebra-exponentials#def-partial-sum"
   ],
   [
-   "mds/algebra-exponentials#def-infinite-sum",
-   "mds/algebra-exponentials#lem-nonneg-series"
-  ],
-  [
    "mds/algebra-exponentials#def-intercept",
    "mds/algebra-exponentials#def-affine-function"
   ],
@@ -11942,14 +12003,6 @@
    "mds/algebra-sums#def-identity-element"
   ],
   [
-   "mds/algebra-sums#def-commutative",
-   "mds/algebra-sums#thm-prod-symmetric"
-  ],
-  [
-   "mds/algebra-sums#def-commutative",
-   "mds/algebra-sums#thm-sum-symmetric"
-  ],
-  [
    "mds/algebra-sums#def-convex-function",
    "mds/functions#def-function"
   ],
@@ -12024,10 +12077,6 @@
   [
    "mds/algebra-sums#def-sum-over-set",
    "mds/sets#def-set"
-  ],
-  [
-   "mds/algebra-sums#def-summation",
-   "mds/algebra#def-lower-upper-limits"
   ],
   [
    "mds/algebra-sums#def-summation-index",
@@ -12132,10 +12181,6 @@
   [
    "mds/calculus#def-difference-quotient",
    "mds/algebra#def-slope"
-  ],
-  [
-   "mds/calculus#def-differentiable",
-   "mds/calculus#def-derivative"
   ],
   [
    "mds/calculus#def-differentiable",
@@ -12480,10 +12525,6 @@
   [
    "mds/calculus-derivatives#def-difference-quotient",
    "mds/algebra#def-slope"
-  ],
-  [
-   "mds/calculus-derivatives#def-differentiable",
-   "mds/calculus-derivatives#def-derivative"
   ],
   [
    "mds/calculus-derivatives#def-differentiable",
@@ -13038,6 +13079,10 @@
    "sds/exploratory-descriptive#def-pearson-r"
   ],
   [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra#def-full-column-rank"
+  ],
+  [
    "mds/linear-algebra#cor-right-angle-orthogonal",
    "mds/linear-algebra#def-angle"
   ],
@@ -13260,10 +13305,6 @@
   [
    "mds/linear-algebra#def-lincom-coefficient",
    "mds/linear-algebra#def-linear-combination"
-  ],
-  [
-   "mds/linear-algebra#def-linear-combination",
-   "mds/linear-algebra#def-lincom-coefficient"
   ],
   [
    "mds/linear-algebra#def-linear-map",
@@ -13558,6 +13599,10 @@
    "mds/linear-algebra#def-generalized-inverse"
   ],
   [
+   "mds/linear-algebra#thm-consistency",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra#thm-definite-eigenvalues",
    "mds/linear-algebra#def-eigendecomposition"
   ],
@@ -13824,6 +13869,18 @@
   [
    "mds/linear-algebra#thm-moore-penrose-exists",
    "mds/linear-algebra#thm-moore-penrose-unique"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#def-full-column-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-generalized-inverse",
@@ -14124,6 +14181,26 @@
   [
    "mds/linear-algebra#thm-svd-evd",
    "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra#def-eigenvector"
+  ],
+  [
+   "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra#def-orthogonal-vectors"
+  ],
+  [
+   "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra-special-matrices#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra-special-matrices#def-eigenvector"
   ],
   [
    "mds/linear-algebra#thm-vector-p-norm",
@@ -14459,6 +14536,10 @@
   ],
   [
    "mds/linear-algebra-projections#thm-consistency",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-consistency",
    "mds/linear-algebra-projections#def-consistent-system"
   ],
   [
@@ -14492,6 +14573,14 @@
   [
    "mds/linear-algebra-projections#thm-moore-penrose-exists",
    "mds/linear-algebra-projections#thm-moore-penrose-unique"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-full-rank",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-full-rank",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-generalized-inverse",
@@ -14576,14 +14665,6 @@
   [
    "mds/linear-algebra-rank-nullity#def-nullity",
    "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-gram-properties",
-   "mds/linear-algebra#def-positive-semidefinite"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-gram-properties",
-   "mds/linear-algebra-rank-nullity#def-gram-matrix"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
@@ -14718,6 +14799,14 @@
    "mds/linear-algebra-special-matrices#def-eigendecomposition"
   ],
   [
+   "mds/linear-algebra-special-matrices#thm-gram-properties",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-gram-properties",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
    "mds/linear-algebra-special-matrices#thm-invertible-cancel",
    "mds/linear-algebra-special-matrices#def-invertible-matrix"
   ],
@@ -14779,6 +14868,18 @@
   ],
   [
    "mds/linear-algebra-special-matrices#thm-svd-evd",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra-special-matrices#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra-special-matrices#def-eigenvector"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-eigenvectors-orthogonal",
    "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
@@ -14896,10 +14997,6 @@
   [
    "mds/linear-algebra-vectors#def-lincom-coefficient",
    "mds/linear-algebra-vectors#def-linear-combination"
-  ],
-  [
-   "mds/linear-algebra-vectors#def-linear-combination",
-   "mds/linear-algebra-vectors#def-lincom-coefficient"
   ],
   [
    "mds/linear-algebra-vectors#def-mean",
@@ -15867,26 +15964,6 @@
   ],
   [
    "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-and"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-iff"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-implies"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-not"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-or"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
    "mds/proof-writing#def-proposition"
   ],
   [
@@ -15947,27 +16024,11 @@
   ],
   [
    "mds/proof-writing#def-quantifier",
-   "mds/proof-writing#def-existential-quantifier"
-  ],
-  [
-   "mds/proof-writing#def-quantifier",
    "mds/proof-writing#def-predicate"
   ],
   [
    "mds/proof-writing#def-quantifier",
    "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-quantifier",
-   "mds/proof-writing#def-universal-quantifier"
-  ],
-  [
-   "mds/proof-writing#def-result",
-   "mds/proof-writing#def-corollary"
-  ],
-  [
-   "mds/proof-writing#def-result",
-   "mds/proof-writing#def-lemma"
   ],
   [
    "mds/proof-writing#def-result",
@@ -15976,10 +16037,6 @@
   [
    "mds/proof-writing#def-result",
    "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-result",
-   "mds/proof-writing#def-theorem"
   ],
   [
    "mds/proof-writing#def-theorem",
@@ -15998,12 +16055,44 @@
    "mds/proof-writing#def-proposition"
   ],
   [
+   "mds/sets#def-bound",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/sets#def-bound",
+   "mds/sets#def-subset"
+  ],
+  [
+   "mds/sets#def-closed-interval",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/sets#def-closed-interval",
+   "mds/sets#def-bound"
+  ],
+  [
+   "mds/sets#def-closed-interval",
+   "mds/sets#def-interval"
+  ],
+  [
    "mds/sets#def-complement",
    "mds/sets#def-set-difference"
   ],
   [
    "mds/sets#def-complement",
    "mds/sets#def-subset"
+  ],
+  [
+   "mds/sets#def-half-open-interval",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/sets#def-half-open-interval",
+   "mds/sets#def-bound"
+  ],
+  [
+   "mds/sets#def-half-open-interval",
+   "mds/sets#def-interval"
   ],
   [
    "mds/sets#def-index-set",
@@ -16019,19 +16108,23 @@
   ],
   [
    "mds/sets#def-interval",
-   "mds/sets#def-closed-interval"
+   "mds/sets#def-bound"
   ],
   [
    "mds/sets#def-interval",
-   "mds/sets#def-half-open-interval"
+   "mds/sets#def-subset"
   ],
   [
-   "mds/sets#def-interval",
-   "mds/sets#def-open-interval"
+   "mds/sets#def-open-interval",
+   "mds/number-systems#def-real-numbers"
   ],
   [
-   "mds/sets#def-interval",
-   "mds/sets#def-unbounded-interval"
+   "mds/sets#def-open-interval",
+   "mds/sets#def-bound"
+  ],
+  [
+   "mds/sets#def-open-interval",
+   "mds/sets#def-interval"
   ],
   [
    "mds/sets#def-pairwise-disjoint",
@@ -16048,6 +16141,18 @@
   [
    "mds/sets#def-strict-superset",
    "mds/sets#def-superset"
+  ],
+  [
+   "mds/sets#def-unbounded-interval",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/sets#def-unbounded-interval",
+   "mds/sets#def-bound"
+  ],
+  [
+   "mds/sets#def-unbounded-interval",
+   "mds/sets#def-interval"
   ],
   [
    "mds/sets#def-vacuous-truth",
@@ -16218,171 +16323,6 @@
    "mds/linear-algebra#def-quadratic-form"
   ]
  ],
- "cycles": [
-  [
-   "mds/algebra#def-lower-upper-limits",
-   "mds/algebra#def-summation"
-  ],
-  [
-   "mds/algebra-exponentials#def-infinite-sum",
-   "mds/algebra-exponentials#lem-nonneg-series"
-  ],
-  [
-   "mds/algebra#def-infinite-sum",
-   "mds/algebra#lem-nonneg-series"
-  ],
-  [
-   "mds/calculus-derivatives#def-derivative",
-   "mds/calculus-derivatives#def-differentiable"
-  ],
-  [
-   "mds/calculus#def-derivative",
-   "mds/calculus#def-differentiable"
-  ],
-  [
-   "mds/linear-algebra-vectors#def-lincom-coefficient",
-   "mds/linear-algebra-vectors#def-linear-combination"
-  ],
-  [
-   "mds/linear-algebra#def-lincom-coefficient",
-   "mds/linear-algebra#def-linear-combination"
-  ],
-  [
-   "mds/proof-writing#def-and",
-   "mds/proof-writing#def-iff",
-   "mds/proof-writing#def-implies",
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-not",
-   "mds/proof-writing#def-or"
-  ],
-  [
-   "mds/proof-writing#def-existential-quantifier",
-   "mds/proof-writing#def-quantifier",
-   "mds/proof-writing#def-universal-quantifier"
-  ],
-  [
-   "mds/proof-writing#def-corollary",
-   "mds/proof-writing#def-lemma",
-   "mds/proof-writing#def-result",
-   "mds/proof-writing#def-theorem"
-  ]
- ],
- "forwardReferences": [
-  [
-   "mds/algebra#def-commutative",
-   "mds/algebra#thm-prod-symmetric"
-  ],
-  [
-   "mds/algebra#def-commutative",
-   "mds/algebra#thm-sum-symmetric"
-  ],
-  [
-   "mds/algebra#def-distributive",
-   "mds/algebra#thm-mult-distr"
-  ],
-  [
-   "mds/algebra#def-infinite-sum",
-   "mds/algebra#lem-nonneg-series"
-  ],
-  [
-   "mds/algebra#def-summation",
-   "mds/algebra#def-lower-upper-limits"
-  ],
-  [
-   "mds/algebra-exponentials#def-infinite-sum",
-   "mds/algebra-exponentials#lem-nonneg-series"
-  ],
-  [
-   "mds/algebra-sums#def-commutative",
-   "mds/algebra-sums#thm-prod-symmetric"
-  ],
-  [
-   "mds/algebra-sums#def-commutative",
-   "mds/algebra-sums#thm-sum-symmetric"
-  ],
-  [
-   "mds/algebra-sums#def-distributive",
-   "mds/algebra-sums#thm-mult-distr"
-  ],
-  [
-   "mds/calculus#def-differentiable",
-   "mds/calculus#def-derivative"
-  ],
-  [
-   "mds/calculus-derivatives#def-differentiable",
-   "mds/calculus-derivatives#def-derivative"
-  ],
-  [
-   "mds/linear-algebra#def-linear-combination",
-   "mds/linear-algebra#def-lincom-coefficient"
-  ],
-  [
-   "mds/linear-algebra#thm-gram-properties",
-   "mds/linear-algebra#def-positive-semidefinite"
-  ],
-  [
-   "mds/linear-algebra#thm-gram-properties",
-   "mds/linear-algebra#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-vectors#def-linear-combination",
-   "mds/linear-algebra-vectors#def-lincom-coefficient"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-and"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-iff"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-implies"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-not"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-or"
-  ],
-  [
-   "mds/proof-writing#def-quantifier",
-   "mds/proof-writing#def-existential-quantifier"
-  ],
-  [
-   "mds/proof-writing#def-quantifier",
-   "mds/proof-writing#def-universal-quantifier"
-  ],
-  [
-   "mds/proof-writing#def-result",
-   "mds/proof-writing#def-corollary"
-  ],
-  [
-   "mds/proof-writing#def-result",
-   "mds/proof-writing#def-lemma"
-  ],
-  [
-   "mds/proof-writing#def-result",
-   "mds/proof-writing#def-theorem"
-  ],
-  [
-   "mds/sets#def-interval",
-   "mds/sets#def-closed-interval"
-  ],
-  [
-   "mds/sets#def-interval",
-   "mds/sets#def-half-open-interval"
-  ],
-  [
-   "mds/sets#def-interval",
-   "mds/sets#def-open-interval"
-  ],
-  [
-   "mds/sets#def-interval",
-   "mds/sets#def-unbounded-interval"
-  ]
- ]
+ "cycles": [],
+ "forwardReferences": []
 }

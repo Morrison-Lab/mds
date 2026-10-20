@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 13:26:01 (PDT)
+Last modified: 2026-10-19 23:35:06 (PDT)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -35,7 +35,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 3 (Logical connective)** A **logical connective** [\[3\]](#ref-wikipedia_logical_connective) builds a new proposition ([Definition 1](#def-proposition)) from one or two propositions \\P\\ and \\Q\\, with a truth value that depends only on the truth values of \\P\\ and \\Q\\. These notes use five, defined next: not ([Definition 4](#def-not)), and ([Definition 5](#def-and)), or ([Definition 6](#def-or)), implies ([Definition 7](#def-implies)), and if and only if ([Definition 8](#def-iff)).
+> **Definition 3 (Logical connective)** A **logical connective** [\[3\]](#ref-wikipedia_logical_connective) builds a new proposition ([Definition 1](#def-proposition)) from one or two propositions \\P\\ and \\Q\\, with a truth value that depends only on the truth values of \\P\\ and \\Q\\. These notes use five, each defined next: not, and, or, implies, and if and only if.
 
 > **NOTE:**
 >
@@ -106,7 +106,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 9 (Quantifier)** A **quantifier** [\[9\]](#ref-wikipedia_quantifier_logic) turns a predicate \\P(x)\\ ([Definition 2](#def-predicate)) about the elements \\x\\ of a set \\S\\ into a proposition ([Definition 1](#def-proposition)). There are two: the universal quantifier ([Definition 10](#def-universal-quantifier)) and the existential quantifier ([Definition 11](#def-existential-quantifier)).
+> **Definition 9 (Quantifier)** A **quantifier** [\[9\]](#ref-wikipedia_quantifier_logic) turns a predicate \\P(x)\\ ([Definition 2](#def-predicate)) about the elements \\x\\ of a set \\S\\ into a proposition ([Definition 1](#def-proposition)). There are two, each defined next: the universal quantifier and the existential quantifier.
 
 > **NOTE:**
 >
@@ -271,7 +271,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 16 (Result)** A **result** is a proposition ([Definition 1](#def-proposition)) that has a proof ([Definition 14](#def-proof)). These notes label each result by its role: as a theorem ([Definition 17](#def-theorem)), a lemma ([Definition 18](#def-lemma)), or a corollary ([Definition 19](#def-corollary)).
+> **Definition 16 (Result)** A **result** is a proposition ([Definition 1](#def-proposition)) that has a proof ([Definition 14](#def-proof)). These notes label each result by its role: as a theorem, a lemma, or a corollary, each defined next.
 
 > **NOTE:**
 >
