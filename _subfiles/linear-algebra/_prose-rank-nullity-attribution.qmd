@@ -4,5 +4,25 @@
 This section is adapted from @zhou2024rank,
 used under the MIT License
 (see the license text in @sec-subspaces).
+@thm-rank-product-right and @cor-rank-product-full-rank restore the source's statements that a product has rank at most the rank of either factor,
+and that multiplying by a matrix of full column rank or by a matrix whose rank is its number of rows does not change the rank.
+These parts of the source are not part of this section:
+
+- the names "full row rank", "full rank" and "singular"
+- the statement that $\mathcal{C}(\matr{C}) \subseteq \mathcal{C}(\matr{A})$ exactly when $\matr{C} = \matr{A}\matr{B}$ for some $\matr{B}$,
+  and its row space version,
+  and the containment $\mathcal{N}(\matr{B}) \subseteq \mathcal{N}(\matr{A}\matr{B})$
+- the dimension of a subspace as the largest number of linearly independent vectors in it, or the smallest number of vectors that span it
+- the properties of a rank factorization $\matr{A} = \matr{C}\matr{R}$
+  ($\operatorname{rank}(\matr{C}) = \operatorname{rank}(\matr{R}) = r$,
+  $\mathcal{C}(\matr{A}) = \mathcal{C}(\matr{C})$, $\mathcal{N}(\matr{A}) = \mathcal{N}(\matr{R})$),
+  the fact that it is not unique, and the second proof of $\operatorname{rank}(\matr{A}) = \operatorname{rank}(\tp{\matr{A}})$ that it gives
+- calling $\matr{A}\tp{\matr{A}}$ a Gram matrix, and the equation $\mathcal{N}(\matr{A}\tp{\matr{A}}) = \mathcal{N}(\tp{\matr{A}})$
+  (@thm-null-gram applied to $\tp{\matr{A}}$ gives it)
+- the statement that $\mathcal{C}(\matr{A})$ and $\mathcal{N}(\tp{\matr{A}})$ share only the zero vector
+  (it follows from @thm-fundamental-subspaces)
 
 :::
+
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->

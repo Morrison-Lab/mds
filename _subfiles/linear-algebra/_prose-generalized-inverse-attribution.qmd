@@ -8,5 +8,20 @@ The source defers the existence of the Moore-Penrose inverse to the singular val
 the proof here builds it from a rank factorization (@thm-rank-factorization) instead,
 and the section adds the projection $\mX \matr{G} \tp{\mX}$
 for any generalized inverse $\matr{G}$ of $\tp{\mX} \mX$, which the source does not cover.
+@thm-moore-penrose-full-rank restores the source's formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank,
+and the fourth equivalent statement in @thm-consistency restores the source's rank test for consistency.
+These parts of the source are not part of this section:
+
+- the QR forms of the full-rank formulas
+- $\operatorname{rank}(\matr{A}^-) \ge \operatorname{rank}(\matr{A})$,
+  $\mathcal{C}(\matr{A}) = \mathcal{C}(\matr{A}\matr{A}^-)$,
+  $\operatorname{rank}(\matr{A}) = \operatorname{rank}(\matr{A}\matr{A}^-) = \operatorname{rank}(\matr{A}^-\matr{A})$,
+  and $\operatorname{rank}(\matr{A}^+) = \operatorname{rank}(\matr{A})$
+- the remarks that $\matr{A}\matr{A}^-$ and $\matr{A}^-\matr{A}$ are projections, oblique in general and orthogonal for $\matr{A}^+$
+- the reflexive generalized inverse (conditions 1 and 2 alone), and the generalized inverses of $\tp{\matr{A}}$ and $k\matr{A}$
+- the operation counts for the triangular solves, LU and QR, and the comparison of the Cholesky factorization with LU
 
 :::
+
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->

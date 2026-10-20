@@ -132,6 +132,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-symmetric-eigenvectors-orthogonal.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-eigendecomposition.qmd >}}
 
 {{< slidebreak >}}

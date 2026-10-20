@@ -11,9 +11,19 @@ rather than through the characteristic polynomial.
 Only the source's material on similarity, diagonalization and the basic eigenvalue properties is adapted;
 its characteristic polynomial and algebraic multiplicity,
 its trace and determinant identities,
-and its section on symmetric matrices (covered by @thm-spectral) are left out,
-and its result that eigenvalues of orthogonal matrices have modulus $1$ appears here in the real form $\pm 1$.
+and the part of its section on symmetric matrices that builds bases of the column space and null space from eigenvectors are left out.
+The rest of that section is covered by @thm-spectral and @thm-symmetric-eigenvectors-orthogonal.
+Its result that eigenvalues of orthogonal matrices have modulus $1$ appears here in the real form $\pm 1$.
+Three other parts of the source are not part of this section:
+
+- its statement that the eigenvalues of a lower triangular matrix are also its diagonal entries (@thm-eigen-triangular states the upper triangular case)
+- its three further examples of matrices with geometric multiplicity smaller than algebraic multiplicity
+  (@exm-eigenspace gives one nilpotent example)
+- its code cells
 The source's two-vector argument that eigenvectors for distinct eigenvalues are independent
 is extended here to any number of eigenvectors.
 
 :::
+
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->
