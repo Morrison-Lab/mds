@@ -22,8 +22,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_thm-gram-properties.qmd >}}
-
 {{< include mds/_subfiles/linear-algebra/_thm-null-gram.qmd >}}
 
 ## Rank-nullity and rank factorization {#sec-rank-nullity}
