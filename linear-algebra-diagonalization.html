@@ -106,9 +106,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e2e99260caf587923434b4f4fad7f843.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-21d6635088db142e2cbd7c5b96a7a6ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e2e99260caf587923434b4f4fad7f843.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
 <link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
@@ -230,65 +230,15 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -300,15 +250,55 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-tbl.callout {
+  border-left-color: #757575;
+}
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -320,25 +310,15 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-fig.callout {
   border-left-color: #757575;
@@ -349,6 +329,26 @@ div.callout-fig.callout-style-default .callout-header {
 div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -1002,7 +1002,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-19 23:31:34 (PDT)</p>
+      <p class="date">Last modified: 2026-10-20 00:42:48 (PDT)</p>
     </div>
   </div>
   
@@ -1028,10 +1028,17 @@ window.Quarto = {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024eig">Zhou <a href="#ref-zhou2024eig" role="doc-biblioref">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). These notes take eigenvalues to be real numbers (<a href="./linear-algebra-special-matrices.html#def-eigenvalue">Definition&nbsp;16 in Special Matrices and Decompositions</a>), so the source’s complex eigenvalues are left out, and eigenvalues are characterized through null spaces rather than through the characteristic polynomial. Only the source’s material on similarity, diagonalization and the basic eigenvalue properties is adapted; its characteristic polynomial and algebraic multiplicity, its trace and determinant identities, and its section on symmetric matrices (covered by <a href="./linear-algebra-special-matrices.html#thm-spectral">Theorem&nbsp;12 in Special Matrices and Decompositions</a>) are left out, and its result that eigenvalues of orthogonal matrices have modulus <span class="math inline">\(1\)</span> appears here in the real form <span class="math inline">\(\pm 1\)</span>. The source’s two-vector argument that eigenvectors for distinct eigenvalues are independent is extended here to any number of eigenvectors.</p>
+<p>This section is adapted from <span class="citation" data-cites="zhou2024eig">Zhou <a href="#ref-zhou2024eig" role="doc-biblioref">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). These notes take eigenvalues to be real numbers (<a href="./linear-algebra-special-matrices.html#def-eigenvalue">Definition&nbsp;16 in Special Matrices and Decompositions</a>), so the source’s complex eigenvalues are left out, and eigenvalues are characterized through null spaces rather than through the characteristic polynomial. Only the source’s material on similarity, diagonalization and the basic eigenvalue properties is adapted; its characteristic polynomial and algebraic multiplicity, its trace and determinant identities, and the part of its section on symmetric matrices that builds bases of the column space and null space from eigenvectors are left out. The rest of that section is covered by <a href="./linear-algebra-special-matrices.html#thm-spectral">Theorem&nbsp;12 in Special Matrices and Decompositions</a> and <a href="./linear-algebra-special-matrices.html#thm-symmetric-eigenvectors-orthogonal">Theorem&nbsp;13 in Special Matrices and Decompositions</a>. Its result that eigenvalues of orthogonal matrices have modulus <span class="math inline">\(1\)</span> appears here in the real form <span class="math inline">\(\pm 1\)</span>. Three other parts of the source are not part of this section:</p>
+<ul>
+<li>its statement that the eigenvalues of a lower triangular matrix are also its diagonal entries (<a href="#thm-eigen-triangular" class="quarto-xref">Theorem&nbsp;4</a> states the upper triangular case)</li>
+<li>its three further examples of matrices with geometric multiplicity smaller than algebraic multiplicity (<a href="#exm-eigenspace" class="quarto-xref">Example&nbsp;2</a> gives one nilpotent example)</li>
+<li>its code cells The source’s two-vector argument that eigenvectors for distinct eigenvalues are independent is extended here to any number of eigenvectors.</li>
+</ul>
 </div>
 </div>
 </div>
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1083,7 +1090,7 @@ window.Quarto = {
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)}
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span>, the nullity is <span class="math inline">\(0\)</span>, and <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>).</p>
+<p>so <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span>, the nullity is <span class="math inline">\(0\)</span>, and <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>).</p>
 <p><strong>Rank <span class="math inline">\(n\)</span> implies invertible.</strong> Every system <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> has exactly one solution (<a href="./linear-algebra-projections.html#cor-solution-unique">Corollary&nbsp;1 in Projections and Linear Systems</a>, both parts, with <span class="math inline">\(m = n\)</span>). Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j\)</span> solve <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;14 in Vectors</a>), and let <span class="math inline">\(\mathbf{B}\)</span> have columns <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_n\)</span>. Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A} \mathbf{B}\)</span> is <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> (1), so <span class="math inline">\(\mathbf{A} \mathbf{B} = \mathbf{I}_n\)</span>. For the other order,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1101,7 +1108,7 @@ window.Quarto = {
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
 \]</span></p>
-<p>so every column of <span class="math inline">\(\mathbf{B} \mathbf{A} - \mathbf{I}_n\)</span> is in <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span> (1), and <span class="math inline">\(\mathbf{B} \mathbf{A} = \mathbf{I}_n\)</span>. So <span class="math inline">\(\mathbf{B}\)</span> satisfies <a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>. The two conditions in the statement are equivalent by <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>: the nullity is <span class="math inline">\(0\)</span> exactly when <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span>, because a subspace of dimension <span class="math inline">\(0\)</span> has the empty list as a basis, whose span is <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>), and <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(0\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</p>
+<p>so every column of <span class="math inline">\(\mathbf{B} \mathbf{A} - \mathbf{I}_n\)</span> is in <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span> (1), and <span class="math inline">\(\mathbf{B} \mathbf{A} = \mathbf{I}_n\)</span>. So <span class="math inline">\(\mathbf{B}\)</span> satisfies <a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>. The two conditions in the statement are equivalent by <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>: the nullity is <span class="math inline">\(0\)</span> exactly when <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span>, because a subspace of dimension <span class="math inline">\(0\)</span> has the empty list as a basis, whose span is <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>), and <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(0\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</p>
 </div>
 </div>
 </div>
@@ -1435,7 +1442,7 @@ c_1 &amp;= c_2 \\
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{U} - \lambda\,\mathbf{I}_p\)</span> is upper triangular, with diagonal entries <span class="math inline">\(u_{ii} - \lambda\)</span> (<a href="./linear-algebra-matrices.html#def-identity-matrix">Definition&nbsp;12 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-addition">Definition&nbsp;5 in Matrices</a>).</p>
-<p><strong>If <span class="math inline">\(\lambda\)</span> is not a diagonal entry,</strong> every <span class="math inline">\(u_{ii} - \lambda\ne 0\)</span>, so <span class="math inline">\((\mathbf{U} - \lambda\,\mathbf{I}_p)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> has exactly one solution, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> (<a href="./linear-algebra-projections.html#thm-back-substitution">Theorem&nbsp;16 in Projections and Linear Systems</a>), and <span class="math inline">\(\lambda\)</span> is not an eigenvalue (<a href="#thm-eigenvalue-singular" class="quarto-xref">Theorem&nbsp;2</a>).</p>
+<p><strong>If <span class="math inline">\(\lambda\)</span> is not a diagonal entry,</strong> every <span class="math inline">\(u_{ii} - \lambda\ne 0\)</span>, so <span class="math inline">\((\mathbf{U} - \lambda\,\mathbf{I}_p)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> has exactly one solution, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> (<a href="./linear-algebra-projections.html#thm-back-substitution">Theorem&nbsp;17 in Projections and Linear Systems</a>), and <span class="math inline">\(\lambda\)</span> is not an eigenvalue (<a href="#thm-eigenvalue-singular" class="quarto-xref">Theorem&nbsp;2</a>).</p>
 <p><strong>If <span class="math inline">\(\lambda\)</span> is a diagonal entry,</strong> let <span class="math inline">\(k\)</span> be the smallest index with <span class="math inline">\(u_{kk} = \lambda\)</span>, and write <span class="math inline">\(\mathbf{M} = \mathbf{U} - \lambda\,\mathbf{I}_p\)</span>, so <span class="math inline">\(m_{kk} = 0\)</span> and <span class="math inline">\(m_{ii} \ne 0\)</span> for <span class="math inline">\(i &lt; k\)</span>. Look for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> with <span class="math inline">\(v_k = 1\)</span> and <span class="math inline">\(v_j = 0\)</span> for <span class="math inline">\(j &gt; k\)</span>. Entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{M} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1451,7 +1458,7 @@ c_1 &amp;= c_2 \\
 <ul>
 <li>for <span class="math inline">\(i &gt; k\)</span> entry <span class="math inline">\(i\)</span> is <span class="math inline">\(0\)</span>;</li>
 <li>for <span class="math inline">\(i = k\)</span> it is <span class="math inline">\(m_{kk}\,v_k = 0\)</span>;</li>
-<li>for <span class="math inline">\(i &lt; k\)</span> it is <span class="math inline">\(0\)</span> exactly when <span class="math inline">\(v_i = -\frac{1}{m_{ii}} \sum_{j=i+1}^{k} m_{ij}\,v_j\)</span>, and these equations fix <span class="math inline">\(v_{k-1}, \ldots, v_1\)</span> in turn, as in <a href="./linear-algebra-projections.html#thm-back-substitution">Theorem&nbsp;16 in Projections and Linear Systems</a>.</li>
+<li>for <span class="math inline">\(i &lt; k\)</span> it is <span class="math inline">\(0\)</span> exactly when <span class="math inline">\(v_i = -\frac{1}{m_{ii}} \sum_{j=i+1}^{k} m_{ij}\,v_j\)</span>, and these equations fix <span class="math inline">\(v_{k-1}, \ldots, v_1\)</span> in turn, as in <a href="./linear-algebra-projections.html#thm-back-substitution">Theorem&nbsp;17 in Projections and Linear Systems</a>.</li>
 </ul>
 <p>So <span class="math inline">\(\mathbf{M} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> with <span class="math inline">\(v_k = 1\)</span>, hence <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, and <span class="math inline">\(\lambda\)</span> is an eigenvalue.</p>
 </div>
@@ -1471,7 +1478,7 @@ c_1 &amp;= c_2 \\
 <div id="callout-17" class="callout-17-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-eigen-triangular" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Eigenvalues read off the diagonal)</strong></span> <span class="math inline">\(\mathbf{U} = \begin{bmatrix} 2 &amp; 1 &amp; -1 \\ 0 &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; -1 \end{bmatrix}\)</span> of <a href="./linear-algebra-projections.html#exm-triangular-matrix">Example&nbsp;23 in Projections and Linear Systems</a> has eigenvalues <span class="math inline">\(2\)</span>, <span class="math inline">\(\tfrac{1}{2}\)</span> and <span class="math inline">\(-1\)</span>. For <span class="math inline">\(\lambda= \tfrac{1}{2}\)</span> (so <span class="math inline">\(k = 2\)</span>), take <span class="math inline">\(v_2 = 1\)</span>, <span class="math inline">\(v_3 = 0\)</span>; row 1 of <span class="math inline">\((\mathbf{U} - \tfrac{1}{2}\,\mathbf{I}_3)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is <span class="math inline">\(\tfrac{3}{2}\,v_1 + 1 = 0\)</span>, so <span class="math inline">\(v_1 = -\tfrac{2}{3}\)</span>. Check:</p>
+<p><span class="theorem-title"><strong>Example 6 (Eigenvalues read off the diagonal)</strong></span> <span class="math inline">\(\mathbf{U} = \begin{bmatrix} 2 &amp; 1 &amp; -1 \\ 0 &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; -1 \end{bmatrix}\)</span> of <a href="./linear-algebra-projections.html#exm-triangular-matrix">Example&nbsp;24 in Projections and Linear Systems</a> has eigenvalues <span class="math inline">\(2\)</span>, <span class="math inline">\(\tfrac{1}{2}\)</span> and <span class="math inline">\(-1\)</span>. For <span class="math inline">\(\lambda= \tfrac{1}{2}\)</span> (so <span class="math inline">\(k = 2\)</span>), take <span class="math inline">\(v_2 = 1\)</span>, <span class="math inline">\(v_3 = 0\)</span>; row 1 of <span class="math inline">\((\mathbf{U} - \tfrac{1}{2}\,\mathbf{I}_3)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is <span class="math inline">\(\tfrac{3}{2}\,v_1 + 1 = 0\)</span>, so <span class="math inline">\(v_1 = -\tfrac{2}{3}\)</span>. Check:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{U}\,(-\tfrac{2}{3}, 1, 0) &amp;= (-\tfrac{4}{3} + 1, \tfrac{1}{2}, 0) \\
@@ -2220,7 +2227,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024pd">Zhou <a href="#ref-zhou2024pd" role="doc-biblioref">[5]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already (<a href="./linear-algebra-special-matrices.html#thm-definite-eigenvalues">Theorem&nbsp;15 in Special Matrices and Decompositions</a>). These parts of the source are left out:</p>
+<p>This section is adapted from <span class="citation" data-cites="zhou2024pd">Zhou <a href="#ref-zhou2024pd" role="doc-biblioref">[5]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already (<a href="./linear-algebra-special-matrices.html#thm-definite-eigenvalues">Theorem&nbsp;17 in Special Matrices and Decompositions</a>). These parts of the source are left out:</p>
 <ul>
 <li>its covariance test, which needs probability</li>
 <li>its material on minimization</li>
@@ -2228,11 +2235,16 @@ c_1 &amp;= c_2 \\
 <li>its pivot test</li>
 <li>its Hadamard-product “Schur lemma”</li>
 <li>its notes on the LU factorization and computational cost</li>
+<li>its statement that a nonnegative combination of positive semidefinite matrices is positive semidefinite (<a href="#thm-pd-operations" class="quarto-xref">Theorem&nbsp;11</a> states the positive definite version)</li>
+<li>its section on the ellipse <span class="math inline">\(a x^2 + 2 b x y + c y^2 = 1\)</span>, with its worked example of a positive definite and an indefinite matrix</li>
+<li>its numerical example of the Cholesky factorization</li>
 </ul>
 <p>The source leaves the Schur complement test unproved; it is proved here from a block expansion of the quadratic form, and the Cholesky factorization is derived from it.</p>
 </div>
 </div>
 </div>
+<!-- check-term-links: ignore-file -->
+<!-- This note names source material by its own words, so its terms are mentions, not first uses. -->
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2293,7 +2305,7 @@ c_1 &amp;= c_2 \\
 \end{aligned}
 \]</span></p>
 <p>If the columns of <span class="math inline">\(\mathbf{B}\)</span> are linearly independent, then <span class="math inline">\(\mathcal{N}(\mathbf{B}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> (<span class="math inline">\(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the combination of the columns with coefficients <span class="math inline">\(x_j\)</span>, <a href="./linear-algebra-subspaces.html#thm-matvec-columns">Theorem&nbsp;3 in Subspaces and Rank</a>, and only the zero combination is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, <a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>), so for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, <span class="math inline">\(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 &gt; 0\)</span> (<a href="./linear-algebra-inner-products.html#thm-norm-properties">Theorem&nbsp;1 in Inner Products and Orthogonality</a>, part 1).</p>
-<p><strong>Only if.</strong> Let <span class="math inline">\(\mathbf{A}\)</span> be positive semidefinite. It is symmetric, so <span class="math inline">\(\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}\)</span> (<a href="./linear-algebra-special-matrices.html#thm-spectral">Theorem&nbsp;12 in Special Matrices and Decompositions</a>), and every <span class="math inline">\(\lambda_i \ge 0\)</span> (<a href="./linear-algebra-special-matrices.html#thm-definite-eigenvalues">Theorem&nbsp;15 in Special Matrices and Decompositions</a>). Let <span class="math inline">\(\mathbf{\Lambda}^{1/2} \stackrel{\text{def}}{=}\operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})\)</span>, which is symmetric, with <span class="math inline">\(\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda}\)</span> (the product of diagonal matrices multiplies their diagonals, as in the proof of <a href="#thm-diagonalizable-powers" class="quarto-xref">Theorem&nbsp;9</a>), and let <span class="math inline">\(\mathbf{B} \stackrel{\text{def}}{=}\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}\)</span>. Then</p>
+<p><strong>Only if.</strong> Let <span class="math inline">\(\mathbf{A}\)</span> be positive semidefinite. It is symmetric, so <span class="math inline">\(\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}\)</span> (<a href="./linear-algebra-special-matrices.html#thm-spectral">Theorem&nbsp;12 in Special Matrices and Decompositions</a>), and every <span class="math inline">\(\lambda_i \ge 0\)</span> (<a href="./linear-algebra-special-matrices.html#thm-definite-eigenvalues">Theorem&nbsp;17 in Special Matrices and Decompositions</a>). Let <span class="math inline">\(\mathbf{\Lambda}^{1/2} \stackrel{\text{def}}{=}\operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})\)</span>, which is symmetric, with <span class="math inline">\(\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda}\)</span> (the product of diagonal matrices multiplies their diagonals, as in the proof of <a href="#thm-diagonalizable-powers" class="quarto-xref">Theorem&nbsp;9</a>), and let <span class="math inline">\(\mathbf{B} \stackrel{\text{def}}{=}\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathbf{B}}^{\top} \mathbf{B}
@@ -2310,7 +2322,7 @@ c_1 &amp;= c_2 \\
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#thm-spectral}{\text{Theorem~12 in Special Matrices and Decompositions}}\text{)}
 \end{aligned}
 \]</span></p>
-<p>If <span class="math inline">\(\mathbf{A}\)</span> is positive definite, it is positive semidefinite (<a href="./linear-algebra-special-matrices.html#rem-positive-definite-symmetry">Remark&nbsp;19 in Special Matrices and Decompositions</a>), so the same <span class="math inline">\(\mathbf{B}\)</span> gives <span class="math inline">\(\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\)</span>; and every <span class="math inline">\(\lambda_i &gt; 0\)</span> (<a href="./linear-algebra-special-matrices.html#thm-definite-eigenvalues">Theorem&nbsp;15 in Special Matrices and Decompositions</a>), so <span class="math inline">\(\mathbf{\Lambda}^{1/2}\)</span> is diagonal with nonzero diagonal, and invertible (its inverse is <span class="math inline">\(\operatorname{diag}(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})\)</span>); <span class="math inline">\({\mathbf{Q}}^{\top}\)</span> is invertible with inverse <span class="math inline">\(\mathbf{Q}\)</span> (<a href="./linear-algebra-special-matrices.html#rem-orthogonal-matrix-columns">Remark&nbsp;6 in Special Matrices and Decompositions</a>). So <span class="math inline">\(\mathbf{B}\)</span> is invertible (<a href="./linear-algebra-special-matrices.html#thm-inverse-product">Theorem&nbsp;1 in Special Matrices and Decompositions</a>), and its <span class="math inline">\(p\)</span> columns are linearly independent (<a href="#thm-invertible-rank" class="quarto-xref">Theorem&nbsp;1</a>, <a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>).</p>
+<p>If <span class="math inline">\(\mathbf{A}\)</span> is positive definite, it is positive semidefinite (<a href="./linear-algebra-special-matrices.html#rem-positive-definite-symmetry">Remark&nbsp;19 in Special Matrices and Decompositions</a>), so the same <span class="math inline">\(\mathbf{B}\)</span> gives <span class="math inline">\(\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\)</span>; and every <span class="math inline">\(\lambda_i &gt; 0\)</span> (<a href="./linear-algebra-special-matrices.html#thm-definite-eigenvalues">Theorem&nbsp;17 in Special Matrices and Decompositions</a>), so <span class="math inline">\(\mathbf{\Lambda}^{1/2}\)</span> is diagonal with nonzero diagonal, and invertible (its inverse is <span class="math inline">\(\operatorname{diag}(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})\)</span>); <span class="math inline">\({\mathbf{Q}}^{\top}\)</span> is invertible with inverse <span class="math inline">\(\mathbf{Q}\)</span> (<a href="./linear-algebra-special-matrices.html#rem-orthogonal-matrix-columns">Remark&nbsp;6 in Special Matrices and Decompositions</a>). So <span class="math inline">\(\mathbf{B}\)</span> is invertible (<a href="./linear-algebra-special-matrices.html#thm-inverse-product">Theorem&nbsp;1 in Special Matrices and Decompositions</a>), and its <span class="math inline">\(p\)</span> columns are linearly independent (<a href="#thm-invertible-rank" class="quarto-xref">Theorem&nbsp;1</a>, <a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>).</p>
 </div>
 </div>
 </div>
@@ -2330,9 +2342,9 @@ c_1 &amp;= c_2 \\
 <div id="exm-pd-gram" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (Gram factorizations)</strong></span> &nbsp;</p>
 <ul>
-<li>With <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; 1 \end{bmatrix}\)</span> (<span class="math inline">\(1 \times 2\)</span>), <span class="math inline">\({\mathbf{R}}^{\top} \mathbf{R} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, the positive semidefinite matrix of <a href="./linear-algebra-special-matrices.html#exm-positive-semidefinite">Example&nbsp;29 in Special Matrices and Decompositions</a>; the two columns of <span class="math inline">\(\mathbf{R}\)</span>, <span class="math inline">\(1\)</span> and <span class="math inline">\(1\)</span>, are dependent, so part 2 does not apply to <span class="math inline">\(\mathbf{R}\)</span>; <span class="math inline">\({\mathbf{R}}^{\top} \mathbf{R}\)</span> is in fact not positive definite (<a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;30 in Special Matrices and Decompositions</a>).</li>
+<li>With <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; 1 \end{bmatrix}\)</span> (<span class="math inline">\(1 \times 2\)</span>), <span class="math inline">\({\mathbf{R}}^{\top} \mathbf{R} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, the positive semidefinite matrix of <a href="./linear-algebra-special-matrices.html#exm-positive-semidefinite">Example&nbsp;30 in Special Matrices and Decompositions</a>; the two columns of <span class="math inline">\(\mathbf{R}\)</span>, <span class="math inline">\(1\)</span> and <span class="math inline">\(1\)</span>, are dependent, so part 2 does not apply to <span class="math inline">\(\mathbf{R}\)</span>; <span class="math inline">\({\mathbf{R}}^{\top} \mathbf{R}\)</span> is in fact not positive definite (<a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;32 in Special Matrices and Decompositions</a>).</li>
 <li>With <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 2 \\ 1 &amp; 3 \end{bmatrix}\)</span>, whose columns are independent (<a href="./linear-algebra-subspaces.html#exm-rank">Example&nbsp;2 in Subspaces and Rank</a>), <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 3 &amp; 6 \\ 6 &amp; 14 \end{bmatrix}\)</span> (<a href="./linear-algebra-projections.html#exm-gram-invertible">Example&nbsp;1 in Projections and Linear Systems</a>) is positive definite.</li>
-<li><span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;30 in Special Matrices and Decompositions</a> is symmetric but not positive semidefinite, so by part 1 it is not <span class="math inline">\({\mathbf{B}}^{\top} \mathbf{B}\)</span> for any <span class="math inline">\(\mathbf{B}\)</span>.</li>
+<li><span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;32 in Special Matrices and Decompositions</a> is symmetric but not positive semidefinite, so by part 1 it is not <span class="math inline">\({\mathbf{B}}^{\top} \mathbf{B}\)</span> for any <span class="math inline">\(\mathbf{B}\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -2425,7 +2437,7 @@ c_1 &amp;= c_2 \\
 <p><span class="theorem-title"><strong>Example 16 (Building positive definite matrices)</strong></span> &nbsp;</p>
 <ul>
 <li><p>With <span class="math inline">\(\mathbf{C} = \mathbf{I}_3\)</span> and <span class="math inline">\(\mathbf{X}\)</span> of <a href="#exm-pd-gram" class="quarto-xref">Example&nbsp;15</a>, part 1 gives again that <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}\)</span> is positive definite.</p></li>
-<li><p>With <span class="math inline">\(\alpha_1 = 2\)</span>, <span class="math inline">\(\mathbf{A}_1 = \mathbf{I}_2\)</span> (<a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;30 in Special Matrices and Decompositions</a>), <span class="math inline">\(\alpha_2 = 1\)</span> and</p>
+<li><p>With <span class="math inline">\(\alpha_1 = 2\)</span>, <span class="math inline">\(\mathbf{A}_1 = \mathbf{I}_2\)</span> (<a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;32 in Special Matrices and Decompositions</a>), <span class="math inline">\(\alpha_2 = 1\)</span> and</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}_2 &amp;= {\mathbf{X}}^{\top} \mathbf{X}\\
@@ -2515,7 +2527,7 @@ c_1 &amp;= c_2 \\
 \end{aligned}
 \]</span></p>
 <p>which is <span class="math inline">\(0\)</span> only when <span class="math inline">\(x_1 = x_2 = 0\)</span>. It is invertible, with <span class="math inline">\({\mathopen{}\left(\mathbf{A}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} 2 &amp; -1 \\ -1 &amp; 2 \end{bmatrix}\)</span>.</p>
-<p>The converse fails. <span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;30 in Special Matrices and Decompositions</a> is not positive definite, yet it is invertible: <span class="math inline">\({\mathopen{}\left(\mathbf{D}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} -1 &amp; 2 \\ 2 &amp; -1 \end{bmatrix}\)</span>.</p>
+<p>The converse fails. <span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;32 in Special Matrices and Decompositions</a> is not positive definite, yet it is invertible: <span class="math inline">\({\mathopen{}\left(\mathbf{D}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} -1 &amp; 2 \\ 2 &amp; -1 \end{bmatrix}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2582,7 +2594,7 @@ c_1 &amp;= c_2 \\
 <div id="callout-53" class="callout-53-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-psd-plus-multiple-identity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (Repairing a singular matrix)</strong></span> <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-semidefinite">Example&nbsp;29 in Special Matrices and Decompositions</a> is positive semidefinite and singular: <span class="math inline">\(\mathbf{B} (1, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>. With <span class="math inline">\(\alpha= 1\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 18 (Repairing a singular matrix)</strong></span> <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-semidefinite">Example&nbsp;30 in Special Matrices and Decompositions</a> is positive semidefinite and singular: <span class="math inline">\(\mathbf{B} (1, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>. With <span class="math inline">\(\alpha= 1\)</span>,</p>
 <p><span class="math display">\[
 \mathbf{B} + \mathbf{I}_2 = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix},
 \]</span></p>
@@ -2630,7 +2642,7 @@ c_1 &amp;= c_2 \\
 &amp;&amp; \text{(}\href{#thm-invertible-rank}{\text{Theorem~1}}\text{)}
 \\
 &amp;\iff \mathcal{N}(\mathbf{X}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\right\}\mathclose{}
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-null-gram}{\text{Theorem~6 in Column Space, Null Space and Rank-Nullity}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-null-gram}{\text{Theorem~5 in Column Space, Null Space and Rank-Nullity}}\text{)}
 \\
 &amp;\iff \mathbf{X}\text{ has full column rank.}
 &amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-independent-null-space}{\text{Theorem~3 in Column Space, Null Space and Rank-Nullity}}\text{)}
@@ -2843,7 +2855,7 @@ k &amp;= l \\
 &amp;&gt; 0
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-special-matrices.html#def-determinant">Definition&nbsp;26 in Special Matrices and Decompositions</a>); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: <span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;30 in Special Matrices and Decompositions</a> has them but is not positive definite.</p>
+<p>(<a href="./linear-algebra-special-matrices.html#def-determinant">Definition&nbsp;26 in Special Matrices and Decompositions</a>); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: <span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;32 in Special Matrices and Decompositions</a> has them but is not positive definite.</p>
 </div>
 </div>
 </div>
@@ -3103,8 +3115,8 @@ a &amp;= c \\
 <div id="callout-69" class="callout-69-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\(\mathbf{A}\)</span> is positive definite, so invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">Theorem&nbsp;16 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{S}\)</span> is defined. <span class="math inline">\(\mathbf{X}\)</span> is symmetric. Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>. By <a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a>, <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, and both terms are at least <span class="math inline">\(0\)</span>. If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, the second term is positive. If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>, so the first term is positive. Either way <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &gt; 0\)</span>.</p>
-<p><strong>Only if.</strong> <span class="math inline">\(\mathbf{A}\)</span> is the top-left <span class="math inline">\(k \times k\)</span> block of <span class="math inline">\(\mathbf{X}\)</span>, so it is positive definite (<a href="#thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;14</a>), and invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">Theorem&nbsp;16 in Special Matrices and Decompositions</a>). <span class="math inline">\(\mathbf{S}\)</span> is symmetric:</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\(\mathbf{A}\)</span> is positive definite, so invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">Theorem&nbsp;18 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{S}\)</span> is defined. <span class="math inline">\(\mathbf{X}\)</span> is symmetric. Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>. By <a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a>, <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, and both terms are at least <span class="math inline">\(0\)</span>. If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, the second term is positive. If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>, so the first term is positive. Either way <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &gt; 0\)</span>.</p>
+<p><strong>Only if.</strong> <span class="math inline">\(\mathbf{A}\)</span> is the top-left <span class="math inline">\(k \times k\)</span> block of <span class="math inline">\(\mathbf{X}\)</span>, so it is positive definite (<a href="#thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;14</a>), and invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">Theorem&nbsp;18 in Special Matrices and Decompositions</a>). <span class="math inline">\(\mathbf{S}\)</span> is symmetric:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {({\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B})}^{\top} &amp;= {\mathbf{B}}^{\top}\,{(\mathbf{A}^{-1})}^{\top}\,\mathbf{B} \\
@@ -3132,7 +3144,7 @@ a &amp;= c \\
 <p><span class="theorem-title"><strong>Example 24 (Testing <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> A symmetric <span class="math inline">\(\begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span> is positive definite exactly when <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(c - \tfrac{b^2}{a} &gt; 0\)</span>, that is, <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(ac &gt; b^2\)</span> (a <span class="math inline">\(1 \times 1\)</span> matrix <span class="math inline">\([s]\)</span> is positive definite exactly when <span class="math inline">\(s &gt; 0\)</span>, since <span class="math inline">\({x}^{\top} s x = s x^2\)</span>).</p>
 <ul>
 <li><span class="math inline">\(\begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}\)</span>: <span class="math inline">\(5 &gt; 0\)</span> and <span class="math inline">\(\tfrac{9}{5} &gt; 0\)</span> (<a href="#exm-schur-complement" class="quarto-xref">Example&nbsp;23</a>), so it is positive definite.</li>
-<li><span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span>: <span class="math inline">\(1 &gt; 0\)</span> but <span class="math inline">\(\mathbf{S} = -3\)</span>, so it is not, as <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;30 in Special Matrices and Decompositions</a> found directly.</li>
+<li><span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span>: <span class="math inline">\(1 &gt; 0\)</span> but <span class="math inline">\(\mathbf{S} = -3\)</span>, so it is not, as <a href="./linear-algebra-special-matrices.html#exm-positive-definite">Example&nbsp;32 in Special Matrices and Decompositions</a> found directly.</li>
 </ul>
 </div>
 </div>
@@ -3169,7 +3181,7 @@ a &amp;= c \\
 <div id="callout-72" class="callout-72-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\({\mathbf{L}}^{\top}\)</span> is upper triangular with positive diagonal (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>), so <span class="math inline">\({\mathbf{L}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> (<a href="./linear-algebra-projections.html#thm-back-substitution">Theorem&nbsp;16 in Projections and Linear Systems</a>), and the columns of <span class="math inline">\({\mathbf{L}}^{\top}\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#thm-matvec-columns">Theorem&nbsp;3 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>). So <span class="math inline">\(\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\,{\mathbf{L}}^{\top}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>) is positive definite (<a href="#thm-pd-gram" class="quarto-xref">Theorem&nbsp;10</a>, part 2).</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\({\mathbf{L}}^{\top}\)</span> is upper triangular with positive diagonal (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>), so <span class="math inline">\({\mathbf{L}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> (<a href="./linear-algebra-projections.html#thm-back-substitution">Theorem&nbsp;17 in Projections and Linear Systems</a>), and the columns of <span class="math inline">\({\mathbf{L}}^{\top}\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#thm-matvec-columns">Theorem&nbsp;3 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>). So <span class="math inline">\(\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\,{\mathbf{L}}^{\top}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>) is positive definite (<a href="#thm-pd-gram" class="quarto-xref">Theorem&nbsp;10</a>, part 2).</p>
 <p><strong>Only if, with uniqueness, by <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(p\)</span>.</strong> For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathbf{A} = [a]\)</span> with <span class="math inline">\(a &gt; 0\)</span> (<a href="#thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;14</a>), and <span class="math inline">\([c]\,[c] = [a]\)</span> with <span class="math inline">\(c &gt; 0\)</span> holds exactly for <span class="math inline">\(c = \sqrt{a}\)</span>. For <span class="math inline">\(p &gt; 1\)</span>, assume every <span class="math inline">\((p - 1) \times (p - 1)\)</span> positive definite matrix has exactly one such factor, and split off the first row and column. <span class="math inline">\(\mathbf{A}\)</span> is symmetric, so its first row is the transpose of its first column:</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} a_{11} &amp; {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top} \\ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} &amp; \mathbf{A}_{22} \end{bmatrix},

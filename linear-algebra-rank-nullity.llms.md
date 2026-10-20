@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-19 23:31:34 (PDT)
+Last modified: 2026-10-20 00:42:48 (PDT)
 
 ## 1 Column space and null space
 
@@ -184,35 +184,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Theorem 5 (Entries and symmetry of a Gram matrix)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with columns \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_n\\, and let \\\mathbf{G} = {\mathbf{A}}^{\top} \mathbf{A}\\ ([Definition 6](#def-gram-matrix)).
->
-> 1.  Entry \\(i, j)\\ of \\\mathbf{G}\\ is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j\\.
-> 2.  \\\mathbf{G}\\ is symmetric ([Definition 3 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
-> 3.  \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathopen{}\left\lVert\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 \ge 0\\ for every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^n\\, so \\\mathbf{G}\\ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite).
-
-> **NOTE:**
->
-> *Proof*. **Entries.** Row \\i\\ of \\{\mathbf{A}}^{\top}\\ is \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i}^{\top}\\, so entry \\(i, j)\\ of \\{\mathbf{A}}^{\top} \mathbf{A}\\ is the dot product of that row with column \\j\\ of \\\mathbf{A}\\, namely \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j\\.
->
-> **Symmetry.** The dot product is commutative, so
->
-> \\ \begin{aligned} g\_{ij} &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_i \\ &= g\_{ji}. \end{aligned} \\
->
-> **Positive semidefiniteness.** For any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\,
->
-> \\ \begin{aligned} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} &= {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top}\\{\mathbf{A}}^{\top}\\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} && \text{(substitute } \mathbf{G} \text{)} \\ &= {(\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})}^{\top}\\(\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)} \\ &\ge 0. && \text{(a squared norm is nonnegative)} \end{aligned} \\
-
-> **NOTE:**
->
-> **Example 9 (Checking the properties on a small Gram matrix)** For \\\mathbf{A}\\ in [Example 8](#exm-gram-matrix), \\\mathbf{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\. It is symmetric: \\g\_{12} = g\_{21} = 1\\. Take \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, -1)\\. Then
->
-> \\ \begin{aligned} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} &= \begin{bmatrix} 1 & -1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} && \text{(} \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, -1) \text{)} \\ &= 2, && \text{(multiply and add)} \end{aligned} \\
->
-> and \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 0, -1)\\ has \\\mathopen{}\left\lVert\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 = 1 + 0 + 1 = 2\\, as the theorem says. The converse (every positive semidefinite matrix is a Gram matrix) is [this theorem](linear-algebra-diagonalization.llms.md#thm-pd-gram).
-
-> **NOTE:**
->
-> **Theorem 6 (\\{\mathbf{A}}^{\top} \mathbf{A}\\ has the same null space as \\\mathbf{A}\\)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
+> **Theorem 5 (\\{\mathbf{A}}^{\top} \mathbf{A}\\ has the same null space as \\\mathbf{A}\\)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
 >
 > \\ \mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A}). \\
 
@@ -230,7 +202,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 10 (The null space of a Gram matrix)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space),
+> **Example 9 (The null space of a Gram matrix)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space),
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} &= \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix} \begin{bmatrix} 1 & -2 & -2 \\ 3 & -6 & -6 \end{bmatrix} \\ &= \begin{bmatrix} 10 & -20 & -20 \\ -20 & 40 & 40 \\ -20 & 40 & 40 \end{bmatrix}. \end{aligned} \\
 >
@@ -240,11 +212,18 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[3\]](#ref-zhou2024rank), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)).
+> This section is adapted from Zhou [\[3\]](#ref-zhou2024rank), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). [Theorem 10](#thm-rank-product-right) and [Corollary 2](#cor-rank-product-full-rank) restore the source’s statements that a product has rank at most the rank of either factor, and that multiplying by a matrix of full column rank or by a matrix whose rank is its number of rows does not change the rank. These parts of the source are not part of this section:
+>
+> - the names “full row rank”, “full rank” and “singular”
+> - the statement that \\\mathcal{C}(\mathbf{C}) \subseteq \mathcal{C}(\mathbf{A})\\ exactly when \\\mathbf{C} = \mathbf{A}\mathbf{B}\\ for some \\\mathbf{B}\\, and its row space version, and the containment \\\mathcal{N}(\mathbf{B}) \subseteq \mathcal{N}(\mathbf{A}\mathbf{B})\\
+> - the dimension of a subspace as the largest number of linearly independent vectors in it, or the smallest number of vectors that span it
+> - the properties of a rank factorization \\\mathbf{A} = \mathbf{C}\mathbf{R}\\ (\\\operatorname{rank}(\mathbf{C}) = \operatorname{rank}(\mathbf{R}) = r\\, \\\mathcal{C}(\mathbf{A}) = \mathcal{C}(\mathbf{C})\\, \\\mathcal{N}(\mathbf{A}) = \mathcal{N}(\mathbf{R})\\), the fact that it is not unique, and the second proof of \\\operatorname{rank}(\mathbf{A}) = \operatorname{rank}({\mathbf{A}}^{\top})\\ that it gives
+> - calling \\\mathbf{A}{\mathbf{A}}^{\top}\\ a Gram matrix, and the equation \\\mathcal{N}(\mathbf{A}{\mathbf{A}}^{\top}) = \mathcal{N}({\mathbf{A}}^{\top})\\ ([Theorem 5](#thm-null-gram) applied to \\{\mathbf{A}}^{\top}\\ gives it)
+> - the statement that \\\mathcal{C}(\mathbf{A})\\ and \\\mathcal{N}({\mathbf{A}}^{\top})\\ share only the zero vector (it follows from [Theorem 10 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-fundamental-subspaces))
 
 > **NOTE:**
 >
-> **Theorem 7 (The rank is the dimension of the column space)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
+> **Theorem 6 (The rank is the dimension of the column space)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
 >
 > \\ \operatorname{rank}(\mathbf{A}) = \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{}. \\
 
@@ -260,7 +239,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 11 (The rank of the matrix in [Example 1](#exm-column-space))** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(1, 3)\right\\\mathclose{}\\ ([Example 2](#exm-column-space-span)), and \\(1, 3)\\ is linearly independent because it is nonzero, so it is a basis and \\\mathcal{C}(\mathbf{A})\\ has dimension \\1\\. So \\\operatorname{rank}(\mathbf{A}) = 1\\, by [Theorem 7](#thm-rank-dim). Directly: the first column \\(1, 3)\\ is linearly independent on its own, and any two columns are dependent, because each column is a multiple of \\(1, 3)\\.
+> **Example 10 (The rank of the matrix in [Example 1](#exm-column-space))** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(1, 3)\right\\\mathclose{}\\ ([Example 2](#exm-column-space-span)), and \\(1, 3)\\ is linearly independent because it is nonzero, so it is a basis and \\\mathcal{C}(\mathbf{A})\\ has dimension \\1\\. So \\\operatorname{rank}(\mathbf{A}) = 1\\, by [Theorem 6](#thm-rank-dim). Directly: the first column \\(1, 3)\\ is linearly independent on its own, and any two columns are dependent, because each column is a multiple of \\(1, 3)\\.
 
 > **NOTE:**
 >
@@ -270,7 +249,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 12 (The nullity of the matrix in [Example 1](#exm-column-space))** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\ ([Example 3](#exm-null-space)). Those two vectors are linearly independent: \\c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)\\, which is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_3\\ only if
+> **Example 11 (The nullity of the matrix in [Example 1](#exm-column-space))** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\ ([Example 3](#exm-null-space)). Those two vectors are linearly independent: \\c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)\\, which is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_3\\ only if
 >
 > \\ \begin{aligned} c_1 &= c_2 \\ &= 0. \end{aligned} \\
 >
@@ -278,7 +257,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Theorem 8 (Rank-nullity theorem)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
+> **Theorem 7 (Rank-nullity theorem)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
 >
 > \\ \operatorname{rank}(\mathbf{A}) + \operatorname{nullity}(\mathbf{A}) = n. \\
 
@@ -298,15 +277,15 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > a linear combination of \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\_1, \ldots, \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\_{n-\nu}\\. These vectors are in \\\mathcal{C}(\mathbf{A})\\, so their span is exactly \\\mathcal{C}(\mathbf{A})\\.
 >
-> So \\\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = n - \nu\\, and \\\operatorname{rank}(\mathbf{A}) = n - \nu\\ by [Theorem 7](#thm-rank-dim).
+> So \\\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = n - \nu\\, and \\\operatorname{rank}(\mathbf{A}) = n - \nu\\ by [Theorem 6](#thm-rank-dim).
 
 > **NOTE:**
 >
-> **Example 13 (Checking rank-nullity on the matrix in [Example 1](#exm-column-space))** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has \\n = 3\\ columns, rank \\1\\ ([Example 11](#exm-rank-dim)) and nullity \\2\\ ([Example 12](#exm-nullity)), and \\1 + 2 = 3\\. The \\2 \times 2\\ identity matrix has rank \\2\\ and nullity \\0\\ ([Example 12](#exm-nullity)), and \\2 + 0 = 2\\.
+> **Example 12 (Checking rank-nullity on the matrix in [Example 1](#exm-column-space))** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has \\n = 3\\ columns, rank \\1\\ ([Example 10](#exm-rank-dim)) and nullity \\2\\ ([Example 11](#exm-nullity)), and \\1 + 2 = 3\\. The \\2 \times 2\\ identity matrix has rank \\2\\ and nullity \\0\\ ([Example 11](#exm-nullity)), and \\2 + 0 = 2\\.
 
 > **NOTE:**
 >
-> **Theorem 9 (Multiplying on the right cannot increase the rank)** If \\\mathbf{A}\\ is \\m \times n\\ and \\\mathbf{B}\\ is \\n \times k\\, then
+> **Theorem 8 (Multiplying on the right cannot increase the rank)** If \\\mathbf{A}\\ is \\m \times n\\ and \\\mathbf{B}\\ is \\n \times k\\, then
 >
 > \\ \operatorname{rank}(\mathbf{A} \mathbf{B}) \le \operatorname{rank}(\mathbf{A}). \\
 
@@ -320,19 +299,19 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > **Compare dimensions.** Both column spaces are subspaces ([Theorem 1](#thm-column-space-span)), so
 >
-> \\ \begin{aligned} \operatorname{rank}(\mathbf{A} \mathbf{B}) &= \dim\mathopen{}\left(\mathcal{C}(\mathbf{A} \mathbf{B})\right)\mathclose{} && \text{(}\href{#thm-rank-dim}{\text{Theorem~7}}\text{)} \\ &\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} && \text{(}\href{linear-algebra-subspaces.qmd#thm-dim-bound}{\text{Theorem~10 in Subspaces and Rank}}\text{, part 2)} \\ &= \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-dim}{\text{Theorem~7}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \operatorname{rank}(\mathbf{A} \mathbf{B}) &= \dim\mathopen{}\left(\mathcal{C}(\mathbf{A} \mathbf{B})\right)\mathclose{} && \text{(}\href{#thm-rank-dim}{\text{Theorem~6}}\text{)} \\ &\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} && \text{(}\href{linear-algebra-subspaces.qmd#thm-dim-bound}{\text{Theorem~10 in Subspaces and Rank}}\text{, part 2)} \\ &= \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-dim}{\text{Theorem~6}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 14 (A product can lose rank)** Let
+> **Example 13 (A product can lose rank)** Let
 >
 > \\ \mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \qquad \mathbf{B} = \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}, \qquad \mathbf{A} \mathbf{B} = \begin{bmatrix} 1 \cdot 0 + 0 \cdot 1 & 1 \cdot 0 + 0 \cdot 0 \\ 0 \cdot 0 + 0 \cdot 1 & 0 \cdot 0 + 0 \cdot 0 \end{bmatrix} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}. \\
 >
-> \\\mathbf{A}\\ has rank \\1\\, but \\\mathbf{A} \mathbf{B}\\ has rank \\0\\, so the inequality in [Theorem 9](#thm-rank-product) can be strict. With the \\2 \times 2\\ identity in place of \\\mathbf{B}\\, \\\mathbf{A} \mathbf{I} = \mathbf{A}\\ keeps rank \\1\\, and the inequality is an equality.
+> \\\mathbf{A}\\ has rank \\1\\, but \\\mathbf{A} \mathbf{B}\\ has rank \\0\\, so the inequality in [Theorem 8](#thm-rank-product) can be strict. With the \\2 \times 2\\ identity in place of \\\mathbf{B}\\, \\\mathbf{A} \mathbf{I} = \mathbf{A}\\ keeps rank \\1\\, and the inequality is an equality.
 
 > **NOTE:**
 >
-> **Theorem 10 (Fundamental theorem of ranks)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
+> **Theorem 9 (Fundamental theorem of ranks)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
 >
 > \\ \begin{aligned} \operatorname{rank}(\mathbf{A}) &= \operatorname{rank}({\mathbf{A}}^{\top}) \\ &= \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) \\ &= \operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}). \end{aligned} \\
 >
@@ -340,21 +319,21 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> *Proof*. **\\\operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) = \operatorname{rank}(\mathbf{A})\\.** Both matrices have \\n\\ columns, and \\\mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A})\\ ([Theorem 6](#thm-null-gram)), so they have the same nullity ([Definition 7](#def-nullity)). Then
+> *Proof*. **\\\operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) = \operatorname{rank}(\mathbf{A})\\.** Both matrices have \\n\\ columns, and \\\mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A})\\ ([Theorem 5](#thm-null-gram)), so they have the same nullity ([Definition 7](#def-nullity)). Then
 >
-> \\ \begin{aligned} \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) &= n - \operatorname{nullity}({\mathbf{A}}^{\top} \mathbf{A}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~8}}\text{)} \\ &= n - \operatorname{nullity}(\mathbf{A}) && \text{(equal null spaces)} \\ &= \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-nullity}{\text{Theorem~8}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) &= n - \operatorname{nullity}({\mathbf{A}}^{\top} \mathbf{A}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{)} \\ &= n - \operatorname{nullity}(\mathbf{A}) && \text{(equal null spaces)} \\ &= \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{)} \end{aligned} \\
 >
 > **\\\operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) = \operatorname{rank}({\mathbf{A}}^{\top})\\.** Apply the previous step to the \\n \times m\\ matrix \\{\mathbf{A}}^{\top}\\, using \\{({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\\.
 >
 > **Chain the inequalities.**
 >
-> \\ \begin{aligned} \operatorname{rank}(\mathbf{A}) &= \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) && \text{(first step)} \\ &\le \operatorname{rank}({\mathbf{A}}^{\top}) && \text{(}\href{#thm-rank-product}{\text{Theorem~9}}\text{, with } {\mathbf{A}}^{\top} \text{ on the left)} \\ &= \operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) && \text{(second step)} \\ &\le \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-product}{\text{Theorem~9}}\text{, with } \mathbf{A} \text{ on the left)} \end{aligned} \\
+> \\ \begin{aligned} \operatorname{rank}(\mathbf{A}) &= \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) && \text{(first step)} \\ &\le \operatorname{rank}({\mathbf{A}}^{\top}) && \text{(}\href{#thm-rank-product}{\text{Theorem~8}}\text{, with } {\mathbf{A}}^{\top} \text{ on the left)} \\ &= \operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) && \text{(second step)} \\ &\le \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-product}{\text{Theorem~8}}\text{, with } \mathbf{A} \text{ on the left)} \end{aligned} \\
 >
 > The chain starts and ends at \\\operatorname{rank}(\mathbf{A})\\, so every quantity in it equals \\\operatorname{rank}(\mathbf{A})\\. The columns of \\{\mathbf{A}}^{\top}\\ are the rows of \\\mathbf{A}\\, which gives the statement about rows.
 
 > **NOTE:**
 >
-> **Example 15 (Four equal ranks)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\operatorname{rank}(\mathbf{A}) = 1\\ ([Example 11](#exm-rank-dim)). Its transpose \\{\mathbf{A}}^{\top} = \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}\\ has second column \\3\\ times its first, so its rank is \\1\\. \\{\mathbf{A}}^{\top} \mathbf{A}\\ in [Example 10](#exm-null-gram) has every row a multiple of \\(1, -2, -2)\\, so its rank is \\1\\ too, and
+> **Example 14 (Four equal ranks)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\operatorname{rank}(\mathbf{A}) = 1\\ ([Example 10](#exm-rank-dim)). Its transpose \\{\mathbf{A}}^{\top} = \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}\\ has second column \\3\\ times its first, so its rank is \\1\\. \\{\mathbf{A}}^{\top} \mathbf{A}\\ in [Example 9](#exm-null-gram) has every row a multiple of \\(1, -2, -2)\\, so its rank is \\1\\ too, and
 >
 > \\ \begin{aligned} \mathbf{A} {\mathbf{A}}^{\top} &= \begin{bmatrix} 1 \cdot 1 + (-2)(-2) + (-2)(-2) & 1 \cdot 3 + (-2)(-6) + (-2)(-6) \\ 3 \cdot 1 + (-6)(-2) + (-6)(-2) & 3 \cdot 3 + (-6)(-6) + (-6)(-6) \end{bmatrix} \\ &= \begin{bmatrix} 9 & 27 \\ 27 & 81 \end{bmatrix}, \end{aligned} \\
 >
@@ -366,11 +345,53 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{A}\\ has \\n\\ columns, so at most \\n\\ of them are linearly independent, and \\\operatorname{rank}(\mathbf{A}) \le n\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)). Likewise \\{\mathbf{A}}^{\top}\\ has \\m\\ columns, so \\\operatorname{rank}(\mathbf{A}) = \operatorname{rank}({\mathbf{A}}^{\top}) \le m\\ ([Theorem 10](#thm-rank-transpose)).
+> *Proof*. \\\mathbf{A}\\ has \\n\\ columns, so at most \\n\\ of them are linearly independent, and \\\operatorname{rank}(\mathbf{A}) \le n\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)). Likewise \\{\mathbf{A}}^{\top}\\ has \\m\\ columns, so \\\operatorname{rank}(\mathbf{A}) = \operatorname{rank}({\mathbf{A}}^{\top}) \le m\\ ([Theorem 9](#thm-rank-transpose)).
 
 > **NOTE:**
 >
-> **Example 16 (A \\2 \times 3\\ matrix has rank at most \\2\\)** By [Corollary 1](#cor-rank-bound), every \\2 \times 3\\ matrix has rank at most \\\min\mathopen{}\left\\2, 3\right\\\mathclose{} = 2\\, even though it has \\3\\ columns. The matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ of [Remark 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#rem-full-column-rank-shape) reaches that bound: its first two columns \\(1, 0)\\ and \\(0, 1)\\ are linearly independent, so its rank is \\2\\.
+> **Example 15 (A \\2 \times 3\\ matrix has rank at most \\2\\)** By [Corollary 1](#cor-rank-bound), every \\2 \times 3\\ matrix has rank at most \\\min\mathopen{}\left\\2, 3\right\\\mathclose{} = 2\\, even though it has \\3\\ columns. The matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ of [Remark 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#rem-full-column-rank-shape) reaches that bound: its first two columns \\(1, 0)\\ and \\(0, 1)\\ are linearly independent, so its rank is \\2\\.
+
+> **NOTE:**
+>
+> **Theorem 10 (Multiplying on the left cannot increase the rank)** If \\\mathbf{A}\\ is \\m \times n\\ and \\\mathbf{B}\\ is \\n \times k\\, then
+>
+> \\ \operatorname{rank}(\mathbf{A} \mathbf{B}) \le \operatorname{rank}(\mathbf{B}). \\
+
+> **NOTE:**
+>
+> *Proof*. \\ \begin{aligned} \operatorname{rank}(\mathbf{A} \mathbf{B}) &= \operatorname{rank}({(\mathbf{A} \mathbf{B})}^{\top}) && \text{(}\href{#thm-rank-transpose}{\text{Theorem~9}}\text{)} \\ &= \operatorname{rank}({\mathbf{B}}^{\top}\\{\mathbf{A}}^{\top}) && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &\le \operatorname{rank}({\mathbf{B}}^{\top}) && \text{(}\href{#thm-rank-product}{\text{Theorem~8}}\text{, with } {\mathbf{B}}^{\top} \text{ on the left)} \\ &= \operatorname{rank}(\mathbf{B}). && \text{(}\href{#thm-rank-transpose}{\text{Theorem~9}}\text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 16 (A product of rank 1 with a factor of rank 2)** Let
+>
+> \\ \mathbf{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}, \qquad \mathbf{B} = \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix}, \qquad \mathbf{A} \mathbf{B} = \begin{bmatrix} 1 \cdot 1 + 1 \cdot 1 & 1 \cdot 0 + 1 \cdot 0 \\ 0 \cdot 1 + 1 \cdot 1 & 0 \cdot 0 + 1 \cdot 0 \end{bmatrix} = \begin{bmatrix} 2 & 0 \\ 1 & 0 \end{bmatrix}. \\
+>
+> \\\mathbf{A}\\ has [rank](linear-algebra-subspaces.llms.md#def-rank) \\2\\, because its columns \\(1, 0)\\ and \\(1, 1)\\ are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent). \\\mathbf{B}\\ has rank \\1\\, because its second column is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_2\\ and its first is not, and \\\mathbf{A} \mathbf{B}\\ has rank \\1\\ for the same reason. So \\\operatorname{rank}(\mathbf{A} \mathbf{B}) = 1 \le \operatorname{rank}(\mathbf{B}) = 1\\ ([Theorem 10](#thm-rank-product-right)), and the bound of [Theorem 8](#thm-rank-product), \\2\\, is not the tighter one.
+
+> **NOTE:**
+>
+> **Corollary 2 (Multiplying by a matrix of full rank does not change the rank)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\mathbf{B}\\ be \\n \times k\\.
+>
+> 1.  If \\\mathbf{A}\\ has full column rank ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), then \\\operatorname{rank}(\mathbf{A} \mathbf{B}) = \operatorname{rank}(\mathbf{B})\\.
+> 2.  If \\\operatorname{rank}(\mathbf{B}) = n\\, then \\\operatorname{rank}(\mathbf{A} \mathbf{B}) = \operatorname{rank}(\mathbf{A})\\.
+
+> **NOTE:**
+>
+> *Proof*. **Part 1.** Because \\\mathbf{A}\\ has [full column rank](linear-algebra-subspaces.llms.md#def-full-column-rank), \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_m\\ only for \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_n\\ ([Theorem 3](#thm-independent-null-space)). So for \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^k\\,
+>
+> \\ \begin{aligned} \mathbf{A} \mathbf{B} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_m &\iff \mathbf{B} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_n && \text{(}\href{#thm-independent-null-space}{\text{Theorem~3}}\text{, with } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = \mathbf{B} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \text{)} \end{aligned} \\
+>
+> so \\\mathcal{N}(\mathbf{A} \mathbf{B}) = \mathcal{N}(\mathbf{B})\\ ([Definition 3](#def-null-space)), and the two matrices have the same nullity ([Definition 7](#def-nullity)). Both have \\k\\ columns, so by [Theorem 7](#thm-rank-nullity) they have the same [rank](linear-algebra-subspaces.llms.md#def-rank).
+>
+> **Part 2.** \\\mathcal{C}(\mathbf{B})\\ is a [subspace](linear-algebra-subspaces.llms.md#def-subspace) of \\\mathbb{R}^n\\ ([Theorem 1](#thm-column-space-span)) of [dimension](linear-algebra-subspaces.llms.md#def-dimension) \\n\\ ([Theorem 6](#thm-rank-dim)), so \\\mathcal{C}(\mathbf{B}) = \mathbb{R}^n\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)). Every vector of \\\mathcal{C}(\mathbf{A} \mathbf{B})\\ is \\\mathbf{A}\\(\mathbf{B} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ for some \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ ([Definition 1](#def-column-space)), and \\\mathbf{B} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ takes every vector of \\\mathbb{R}^n\\, so \\\mathcal{C}(\mathbf{A} \mathbf{B}) = \mathcal{C}(\mathbf{A})\\ and the two matrices have the same rank ([Theorem 6](#thm-rank-dim)).
+
+> **NOTE:**
+>
+> **Example 17 (Ranks of products with a full-rank factor)** Let \\\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix}\\, which has [rank](linear-algebra-subspaces.llms.md#def-rank) \\1\\.
+>
+> - Part 1: \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}\\ has two [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent) columns, so it has [full column rank](linear-algebra-subspaces.llms.md#def-full-column-rank), and \\\mathbf{A} \mathbf{B} = \begin{bmatrix} 2 & 0 \\ 1 & 0 \\ 0 & 0 \end{bmatrix}\\ has rank \\1 = \operatorname{rank}(\mathbf{B})\\.
+> - Part 2: let \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, which has rank \\1\\, and let \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}\\, which has rank \\2\\. Then \\\mathbf{A} \mathbf{B} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\\ has rank \\1 = \operatorname{rank}(\mathbf{A})\\.
 
 > **NOTE:**
 >
@@ -382,13 +403,13 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > \\ \begin{aligned} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}}^{\top}\mathbf{X}\_c &= {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}}^{\top}\mathbf{X}- \mathopen{}\left({\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}\right)\mathclose{}{\bar{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}}^{\top} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)} \\ &= \sum\_{i=1}^n {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_i}^{\top} - n\\{\bar{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}}^{\top} && \text{(} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}} = n \text{)} \\ &= n\\{\bar{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}}^{\top} - n\\{\bar{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}}^{\top} && \text{(definition of } \bar{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} \text{)} \\ &= {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p}^{\top}. \end{aligned} \\
 >
-> Transposing, \\{\mathbf{X}\_c}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\. The ones vector is nonzero, so it is in the null space of the \\p \times n\\ matrix \\{\mathbf{X}\_c}^{\top}\\, and \\\operatorname{nullity}({\mathbf{X}\_c}^{\top}) \ge 1\\. By [Theorem 8](#thm-rank-nullity), applied to the \\n\\ columns of \\{\mathbf{X}\_c}^{\top}\\,
+> Transposing, \\{\mathbf{X}\_c}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\. The ones vector is nonzero, so it is in the null space of the \\p \times n\\ matrix \\{\mathbf{X}\_c}^{\top}\\, and \\\operatorname{nullity}({\mathbf{X}\_c}^{\top}) \ge 1\\. By [Theorem 7](#thm-rank-nullity), applied to the \\n\\ columns of \\{\mathbf{X}\_c}^{\top}\\,
 >
-> \\ \begin{aligned} \operatorname{rank}(\mathbf{X}\_c) &= \operatorname{rank}({\mathbf{X}\_c}^{\top}) && \text{(}\href{#thm-rank-transpose}{\text{Theorem~10}}\text{)} \\ &= n - \operatorname{nullity}({\mathbf{X}\_c}^{\top}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~8}}\text{)} \\ &\le n - 1. && \text{(} \operatorname{nullity}({\mathbf{X}\_c}^{\top}) \ge 1 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \operatorname{rank}(\mathbf{X}\_c) &= \operatorname{rank}({\mathbf{X}\_c}^{\top}) && \text{(}\href{#thm-rank-transpose}{\text{Theorem~9}}\text{)} \\ &= n - \operatorname{nullity}({\mathbf{X}\_c}^{\top}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{)} \\ &\le n - 1. && \text{(} \operatorname{nullity}({\mathbf{X}\_c}^{\top}) \ge 1 \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 17 (Two points in three dimensions)** \\\mathbf{X}= \begin{bmatrix} 1 & 2 & 3 \\ 3 & 2 & 1 \end{bmatrix}\\ has \\\bar{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} = (2, 2, 2)\\, so
+> **Example 18 (Two points in three dimensions)** \\\mathbf{X}= \begin{bmatrix} 1 & 2 & 3 \\ 3 & 2 & 1 \end{bmatrix}\\ has \\\bar{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} = (2, 2, 2)\\, so
 >
 > \\ \mathbf{X}\_c = \begin{bmatrix} -1 & 0 & 1 \\ 1 & 0 & -1 \end{bmatrix}. \\
 >
@@ -396,7 +417,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Corollary 2 (A sample covariance matrix from \\n \le p\\ points is singular)** With \\\mathbf{X}\_c\\ as in [Theorem 11](#thm-centered-data-rank), the sample covariance matrix
+> **Corollary 3 (A sample covariance matrix from \\n \le p\\ points is singular)** With \\\mathbf{X}\_c\\ as in [Theorem 11](#thm-centered-data-rank), the sample covariance matrix
 >
 > \\ \mathbf{S} = \frac{1}{n - 1}\\{\mathbf{X}\_c}^{\top}\mathbf{X}\_c \\
 >
@@ -404,13 +425,13 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \operatorname{rank}(\mathbf{S}) &= \operatorname{rank}({\mathbf{X}\_c}^{\top}\mathbf{X}\_c) && \text{(multiplying by } \tfrac{1}{n-1} \ne 0 \text{ does not change the rank)} \\ &= \operatorname{rank}(\mathbf{X}\_c) && \text{(}\href{#thm-rank-transpose}{\text{Theorem~10}}\text{)} \\ &\le n - 1. && \text{(}\href{#thm-centered-data-rank}{\text{Theorem~11}}\text{)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \operatorname{rank}(\mathbf{S}) &= \operatorname{rank}({\mathbf{X}\_c}^{\top}\mathbf{X}\_c) && \text{(multiplying by } \tfrac{1}{n-1} \ne 0 \text{ does not change the rank)} \\ &= \operatorname{rank}(\mathbf{X}\_c) && \text{(}\href{#thm-rank-transpose}{\text{Theorem~9}}\text{)} \\ &\le n - 1. && \text{(}\href{#thm-centered-data-rank}{\text{Theorem~11}}\text{)} \end{aligned} \\
 >
 > If \\n \le p\\, then \\\operatorname{rank}(\mathbf{S}) \le n - 1 \< p\\, so \\\mathbf{S}\\ does not have full column rank, and it is not invertible by [Theorem 1 in Diagonalization and Cholesky](linear-algebra-diagonalization.llms.md#thm-invertible-rank).
 
 > **NOTE:**
 >
-> **Example 18 (As many points as dimensions)** The \\n = 3\\ points \\(1, 0, 0)\\, \\(0, 1, 0)\\ and \\(0, 0, 1)\\ in \\p = 3\\ dimensions have \\\bar{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} = \frac{1}{3}(1, 1, 1)\\, so
+> **Example 19 (As many points as dimensions)** The \\n = 3\\ points \\(1, 0, 0)\\, \\(0, 1, 0)\\ and \\(0, 0, 1)\\ in \\p = 3\\ dimensions have \\\bar{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} = \frac{1}{3}(1, 1, 1)\\, so
 >
 > \\ \mathbf{X}\_c = \mathbf{I}\_3 - \tfrac{1}{3}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}}^{\top}, \qquad \mathbf{S} = \tfrac{1}{2}\\\mathbf{X}\_c = \tfrac{1}{6}\begin{bmatrix} 2 & -1 & -1 \\ -1 & 2 & -1 \\ -1 & -1 & 2 \end{bmatrix}, \\
 >
@@ -426,7 +447,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 19 (A line that misses the origin is an affine subspace)** The line \\\mathcal{T} = \mathopen{}\left\\(x, 1) : x \in \mathbb{R}\right\\\mathclose{}\\ of [Example 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-not-subspace) is not a subspace, but it is an affine subspace, with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 = (0, 1)\\ and \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)):
+> **Example 20 (A line that misses the origin is an affine subspace)** The line \\\mathcal{T} = \mathopen{}\left\\(x, 1) : x \in \mathbb{R}\right\\\mathclose{}\\ of [Example 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-not-subspace) is not a subspace, but it is an affine subspace, with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 = (0, 1)\\ and \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)):
 >
 > \\ \begin{aligned} (0, 1) + c\\(1, 0) &= (0 + c,\\ 1 + 0) && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \\ &= (c, 1), && \text{(add)} \end{aligned} \\
 >
@@ -446,7 +467,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > **Part 1.** \\\mathcal{H}\_0\\ is the null space \\\mathcal{N}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top})\\ ([Definition 3](#def-null-space)), so it is a subspace ([Theorem 2](#thm-null-space-subspace)). The \\p\\ columns of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top}\\ are the numbers \\w_1, \ldots, w_p\\. Some \\w_j \ne 0\\, because \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \ne \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, and that column on its own is linearly independent (\\c\\w_j = 0\\ forces \\c = 0\\), so \\\operatorname{rank}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top}) \ge 1\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)); and \\\operatorname{rank}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top}) \le \min\mathopen{}\left\\1, p\right\\\mathclose{} = 1\\ ([Corollary 1](#cor-rank-bound)). So
 >
-> \\ \begin{aligned} \dim(\mathcal{H}\_0) &= \operatorname{nullity}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top}) && \text{(}\href{#def-nullity}{\text{Definition~7}}\text{)} \\ &= p - \operatorname{rank}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~8}}\text{, for the } p \text{ columns of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top} \text{)} \\ &= p - 1. && \text{(the rank is } 1 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \dim(\mathcal{H}\_0) &= \operatorname{nullity}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top}) && \text{(}\href{#def-nullity}{\text{Definition~7}}\text{)} \\ &= p - \operatorname{rank}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{, for the } p \text{ columns of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top} \text{)} \\ &= p - 1. && \text{(the rank is } 1 \text{)} \end{aligned} \\
 >
 > **Part 2.** \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = w_1^2 + \cdots + w_p^2 \> 0\\, because some \\w_j \ne 0\\. So \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\* \stackrel{\text{def}}{=}-\frac{b}{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ is defined, and
 >
@@ -464,7 +485,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 20 (The plane \\x_1 + x_2 + x_3 = 1\\ in \\\mathbb{R}^3\\)** Take \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 1, 1)\\ and \\b = -1\\, so \\\mathcal{H} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: x_1 + x_2 + x_3 - 1 = 0\right\\\mathclose{}\\, the plane that [Example 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-subspace-zero) showed is not a subspace. By part 1, \\\mathcal{H}\_0 = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: x_1 + x_2 + x_3 = 0\right\\\mathclose{}\\ is a subspace of dimension \\3 - 1 = 2\\.
+> **Example 21 (The plane \\x_1 + x_2 + x_3 = 1\\ in \\\mathbb{R}^3\\)** Take \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 1, 1)\\ and \\b = -1\\, so \\\mathcal{H} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: x_1 + x_2 + x_3 - 1 = 0\right\\\mathclose{}\\, the plane that [Example 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-subspace-zero) showed is not a subspace. By part 1, \\\mathcal{H}\_0 = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: x_1 + x_2 + x_3 = 0\right\\\mathclose{}\\ is a subspace of dimension \\3 - 1 = 2\\.
 >
 > - \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 = (1, 0, 0)\\ is in \\\mathcal{H}\\, since \\1 + 0 + 0 - 1 = 0\\, and so is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (0, 1, 0)\\.
 >
@@ -504,7 +525,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 21 (A line in \\\mathbb{R}^2\\ and a plane in \\\mathbb{R}^3\\, checked on a grid of points)** In \\\mathbb{R}^2\\, take \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 1)\\ and \\b = -1\\, the line of [Example 20 in Matrices](linear-algebra-matrices.llms.md#exm-hyperplane). The point \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 = -\frac{b}{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ is on it, and the vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = (-w_2, w_1)\\ is nonzero with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = 0\\, so it spans the subspace \\\mathcal{H}\_0\\ of [Theorem 12](#thm-hyperplane-subspace). In \\\mathbb{R}^3\\, take \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 1, 1)\\ and \\b = -1\\, the plane of [Example 20](#exm-hyperplane-subspace), with the independent vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 = (1, -1, 0)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_2 = (0, 1, -1)\\ in \\\mathcal{H}\_0\\. The code evaluates \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b\\ at the origin and at points \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + t\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + s\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + t\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_2\\.
+> **Example 22 (A line in \\\mathbb{R}^2\\ and a plane in \\\mathbb{R}^3\\, checked on a grid of points)** In \\\mathbb{R}^2\\, take \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 1)\\ and \\b = -1\\, the line of [Example 20 in Matrices](linear-algebra-matrices.llms.md#exm-hyperplane). The point \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 = -\frac{b}{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ is on it, and the vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = (-w_2, w_1)\\ is nonzero with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = 0\\, so it spans the subspace \\\mathcal{H}\_0\\ of [Theorem 12](#thm-hyperplane-subspace). In \\\mathbb{R}^3\\, take \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 1, 1)\\ and \\b = -1\\, the plane of [Example 21](#exm-hyperplane-subspace), with the independent vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 = (1, -1, 0)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_2 = (0, 1, -1)\\ in \\\mathcal{H}\_0\\. The code evaluates \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b\\ at the origin and at points \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + t\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + s\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_1 + t\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\_2\\.
 >
 > ``` downlit
 > level <- function(w, b, x) sum(w * x) + b
@@ -553,7 +574,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 22 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 2)\\ and \\b = -2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b\\ at three points ([Definition 9](#def-half-space)):
+> **Example 23 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 2)\\ and \\b = -2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b\\ at three points ([Definition 9](#def-half-space)):
 >
 > - At \\(0, 0)\\ it equals \\0 + 0 - 2 = -2 \< 0\\, so \\(0, 0) \in \mathcal{H}^-\\.
 > - At \\(2, 0)\\ it equals \\2 + 0 - 2 = 0\\, so \\(2, 0) \in \mathcal{H}\\.
@@ -576,9 +597,9 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathcal{H}\\. By [Theorem 12](#thm-hyperplane-subspace) part 3, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = 0\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathcal{H}\_0 = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = 0\right\\\mathclose{}\\. Conversely, fix any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 \in \mathcal{H}\\ (it exists by [Theorem 12](#thm-hyperplane-subspace) part 2). For any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \in \mathcal{H}\_0\\, the point \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\ is in \\\mathcal{H}\\ by the same part, and \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}) - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\. So \\D(\mathcal{H}) = \mathcal{H}\_0\\, which has dimension \\p - 1\\ by [Theorem 12](#thm-hyperplane-subspace) part 1.
+> *Proof*. **Part 1.** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathcal{H}\\. By [Theorem 12](#thm-hyperplane-subspace) part 3, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = 0\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathcal{H}\_0 = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = 0\right\\\mathclose{}\\. Conversely, take any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 \in \mathcal{H}\\ ([Theorem 12](#thm-hyperplane-subspace) part 2 gives such a point). For any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \in \mathcal{H}\_0\\, the point \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\ is in \\\mathcal{H}\\ by the same part, and \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}) - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\. So \\D(\mathcal{H}) = \mathcal{H}\_0\\, which has dimension \\p - 1\\ by [Theorem 12](#thm-hyperplane-subspace) part 1.
 >
-> **Part 2.** Every difference is in \\\mathbb{R}^p\\, so \\D(\mathcal{H}^+) \subseteq \mathbb{R}^p\\. For the other direction, fix any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 \in \mathcal{H}\\ and any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathbb{R}^p\\. For a number \\t \> 0\\ to be chosen, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_t \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + t\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\. Then
+> **Part 2.** Every difference is in \\\mathbb{R}^p\\, so \\D(\mathcal{H}^+) \subseteq \mathbb{R}^p\\. For the reverse inclusion, take any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 \in \mathcal{H}\\. Take any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathbb{R}^p\\. For a number \\t \> 0\\ to be chosen, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_t \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + t\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\. Then
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_t + b &= \mathopen{}\left(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 + b\right)\mathclose{} + t\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} && \text{(linearity of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\mapsto \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \text{)} \\ &= t\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}, && \text{(} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_0 \in \mathcal{H} \text{)} \end{aligned} \\
 >
@@ -592,7 +613,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 23 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ gives a coefficient vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ and an intercept \\b\\. The line \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 9](#def-half-space)). [Figure 1](#fig-half-space-iris) shows the line and the flowers.
+> **Example 24 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ gives a coefficient vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ and an intercept \\b\\. The line \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 9](#def-half-space)). [Figure 1](#fig-half-space-iris) shows the line and the flowers.
 >
 > Show R code
 >
@@ -634,7 +655,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Exercise 1 (Which side of the plane?)** Let \\\mathcal{H}\\ be the plane in \\\mathbb{R}^3\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 1, 1)\\ and \\b = -1\\ ([Example 20](#exm-hyperplane-subspace)).
+> **Exercise 1 (Which side of the plane?)** Let \\\mathcal{H}\\ be the plane in \\\mathbb{R}^3\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 1, 1)\\ and \\b = -1\\ ([Example 21](#exm-hyperplane-subspace)).
 >
 > 1.  For each point, say whether it is in \\\mathcal{H}^+\\, \\\mathcal{H}\\ or \\\mathcal{H}^-\\ ([Definition 9](#def-half-space)): \\(0, 0, 0)\\, \\(1, 0, 0)\\ and \\(1, 1, 1)\\.
 > 2.  Write the plane and its half-spaces using \\-\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ and \\-b\\. Which points from part 1 change sides?
@@ -662,7 +683,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 24 (A rank factorization of a rank-one matrix)** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has rank \\1\\ ([Example 11](#exm-rank-dim)), and
+> **Example 25 (A rank factorization of a rank-one matrix)** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has rank \\1\\ ([Example 10](#exm-rank-dim)), and
 >
 > \\ \begin{aligned} \begin{bmatrix} 1 \\ 3 \end{bmatrix} \begin{bmatrix} 1 & -2 & -2 \end{bmatrix} &= \begin{bmatrix} 1 \cdot 1 & 1 \cdot(-2) & 1 \cdot(-2) \\ 3 \cdot 1 & 3 \cdot(-2) & 3 \cdot(-2) \end{bmatrix} \\ &= \begin{bmatrix} 1 & -2 & -2 \\ 3 & -6 & -6 \end{bmatrix}, \end{aligned} \\
 >
@@ -674,7 +695,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> *Proof*. \\\mathcal{C}(\mathbf{A})\\ has dimension \\r\\ ([Theorem 7](#thm-rank-dim)), so it has a basis \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_r\\ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)); let \\\mathbf{C}\\ be the \\m \times r\\ matrix with these columns. Each column \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j\\ of \\\mathbf{A}\\ is in \\\mathcal{C}(\mathbf{A})\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j = r\_{1j} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_1 + \cdots + r\_{rj} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_r\\ for some numbers \\r\_{ij}\\, because the basis spans \\\mathcal{C}(\mathbf{A})\\. Let \\\mathbf{R}\\ be the \\r \times n\\ matrix with entries \\r\_{ij}\\, whose column \\j\\ is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{r}}\vphantom{r}}\_j = (r\_{1j}, \ldots, r\_{rj})\\. Then column \\j\\ of \\\mathbf{C} \mathbf{R}\\ is
+> *Proof*. \\\mathcal{C}(\mathbf{A})\\ has dimension \\r\\ ([Theorem 6](#thm-rank-dim)), so it has a basis \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_r\\ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)); let \\\mathbf{C}\\ be the \\m \times r\\ matrix with these columns. Each column \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j\\ of \\\mathbf{A}\\ is in \\\mathcal{C}(\mathbf{A})\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j = r\_{1j} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_1 + \cdots + r\_{rj} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_r\\ for some numbers \\r\_{ij}\\, because the basis spans \\\mathcal{C}(\mathbf{A})\\. Let \\\mathbf{R}\\ be the \\r \times n\\ matrix with entries \\r\_{ij}\\, whose column \\j\\ is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{r}}\vphantom{r}}\_j = (r\_{1j}, \ldots, r\_{rj})\\. Then column \\j\\ of \\\mathbf{C} \mathbf{R}\\ is
 >
 > \\ \begin{aligned} \mathbf{C} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{r}}\vphantom{r}}\_j &= r\_{1j} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_1 + \cdots + r\_{rj} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\_r && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-columns}{\text{Theorem~3 in Subspaces and Rank}}\text{)} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_j, && \text{(choice of the } r\_{ij} \text{)} \end{aligned} \\
 >
@@ -682,7 +703,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 25 (Building a rank factorization from a basis)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\(1, 3)\\ spans \\\mathcal{C}(\mathbf{A})\\ ([Example 2](#exm-column-space-span)), and it is linearly independent because it is nonzero (\\c\\(1, 3) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_2\\ forces \\c = 0\\), so it is a basis of \\\mathcal{C}(\mathbf{A})\\. The columns of \\\mathbf{A}\\ are \\(1, 3) = 1 \cdot(1, 3)\\, \\(-2, -6) = -2 \cdot(1, 3)\\ and \\(-2, -6) = -2 \cdot(1, 3)\\, so the construction in [Theorem 15](#thm-rank-factorization) gives \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\ and \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\, the factorization in [Example 24](#exm-rank-factorization).
+> **Example 26 (Building a rank factorization from a basis)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\(1, 3)\\ spans \\\mathcal{C}(\mathbf{A})\\ ([Example 2](#exm-column-space-span)), and it is linearly independent because it is nonzero (\\c\\(1, 3) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_2\\ forces \\c = 0\\), so it is a basis of \\\mathcal{C}(\mathbf{A})\\. The columns of \\\mathbf{A}\\ are \\(1, 3) = 1 \cdot(1, 3)\\, \\(-2, -6) = -2 \cdot(1, 3)\\ and \\(-2, -6) = -2 \cdot(1, 3)\\, so the construction in [Theorem 15](#thm-rank-factorization) gives \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\ and \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\, the factorization in [Example 25](#exm-rank-factorization).
 
 Back to top
 
