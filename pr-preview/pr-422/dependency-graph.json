@@ -8166,15 +8166,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-rank-nullity#thm-gram-properties",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-gram-properties",
-   "kind": "thm",
-   "title": "Entries and symmetry of a Gram matrix",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
    "site": "mds",
    "page": "linear-algebra-rank-nullity",
@@ -8595,6 +8586,15 @@
    "div": "thm-frobenius-norm-columns",
    "kind": "thm",
    "title": "The squared Frobenius norm adds up the squared column norms",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#thm-gram-properties",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "thm-gram-properties",
+   "kind": "thm",
+   "title": "Entries and symmetry of a Gram matrix",
    "external": false
   },
   {
@@ -10359,6 +10359,15 @@
    "div": "thm-proof-by-contradiction",
    "kind": "thm",
    "title": "A proof by contradiction proves its proposition",
+   "external": false
+  },
+  {
+   "id": "mds/sets#def-bound",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-bound",
+   "kind": "def",
+   "title": "Lower bound and upper bound",
    "external": false
   },
   {
@@ -13666,6 +13675,14 @@
    "mds/linear-algebra#def-gram-matrix"
   ],
   [
+   "mds/linear-algebra#thm-gram-properties",
+   "mds/linear-algebra#def-positive-semidefinite"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-properties",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
    "mds/linear-algebra#thm-gram-schmidt",
    "mds/linear-algebra#def-gram-schmidt"
   ],
@@ -14570,10 +14587,6 @@
    "mds/linear-algebra-rank-nullity#def-null-space"
   ],
   [
-   "mds/linear-algebra-rank-nullity#thm-gram-properties",
-   "mds/linear-algebra-rank-nullity#def-gram-matrix"
-  ],
-  [
    "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
    "mds/linear-algebra-rank-nullity#def-half-space"
   ],
@@ -14704,6 +14717,14 @@
   [
    "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
    "mds/linear-algebra-special-matrices#def-eigendecomposition"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-gram-properties",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-gram-properties",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-invertible-cancel",
@@ -15986,8 +16007,24 @@
    "mds/proof-writing#def-proposition"
   ],
   [
+   "mds/sets#def-bound",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/sets#def-bound",
+   "mds/sets#def-subset"
+  ],
+  [
    "mds/sets#def-closed-interval",
    "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/sets#def-closed-interval",
+   "mds/sets#def-bound"
+  ],
+  [
+   "mds/sets#def-closed-interval",
+   "mds/sets#def-interval"
   ],
   [
    "mds/sets#def-complement",
@@ -15996,6 +16033,18 @@
   [
    "mds/sets#def-complement",
    "mds/sets#def-subset"
+  ],
+  [
+   "mds/sets#def-half-open-interval",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/sets#def-half-open-interval",
+   "mds/sets#def-bound"
+  ],
+  [
+   "mds/sets#def-half-open-interval",
+   "mds/sets#def-interval"
   ],
   [
    "mds/sets#def-index-set",
@@ -16007,19 +16056,27 @@
   ],
   [
    "mds/sets#def-interval",
-   "mds/sets#def-closed-interval"
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/sets#def-interval",
-   "mds/sets#def-half-open-interval"
+   "mds/sets#def-bound"
   ],
   [
    "mds/sets#def-interval",
-   "mds/sets#def-open-interval"
+   "mds/sets#def-subset"
   ],
   [
-   "mds/sets#def-interval",
-   "mds/sets#def-unbounded-interval"
+   "mds/sets#def-open-interval",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/sets#def-open-interval",
+   "mds/sets#def-bound"
+  ],
+  [
+   "mds/sets#def-open-interval",
+   "mds/sets#def-interval"
   ],
   [
    "mds/sets#def-pairwise-disjoint",
@@ -16036,6 +16093,18 @@
   [
    "mds/sets#def-strict-superset",
    "mds/sets#def-superset"
+  ],
+  [
+   "mds/sets#def-unbounded-interval",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/sets#def-unbounded-interval",
+   "mds/sets#def-bound"
+  ],
+  [
+   "mds/sets#def-unbounded-interval",
+   "mds/sets#def-interval"
   ],
   [
    "mds/sets#def-vacuous-truth",
