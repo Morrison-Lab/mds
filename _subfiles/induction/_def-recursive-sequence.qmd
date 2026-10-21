@@ -7,13 +7,15 @@ is **recursively defined**
 [@wikipedia_recurrence_relation]
 by two things:
 
-1. **Initial terms:** specific values for $a_{n_0}, \ldots, a_{n_0 + m - 1}$.
+1. **Initial [terms](functions.qmd#def-sequence-term):**
+   specific [values](functions.qmd#def-value) for $a_{n_0}, \ldots, a_{n_0 + m - 1}$.
 2. **Recurrence:** a rule that gives $a_n$
-   in terms of the $m$ terms $a_{n-1}, \ldots, a_{n-m}$ just before it,
+   from the $m$ entries $a_{n-1}, \ldots, a_{n-m}$ just before it,
    for every integer $n \ge n_0 + m$.
 
-The initial terms and the recurrence together fix every term:
-the first $m$ terms are given,
-and each later term follows from the $m$ terms before it.
+The initial terms and the recurrence together fix every
+[term](functions.qmd#def-sequence-term):
+the first $m$ entries are given,
+and each later entry follows from the $m$ entries before it.
 
 :::
