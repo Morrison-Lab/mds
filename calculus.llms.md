@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-20 00:42:48 (PDT)
+Last modified: 2026-10-21 13:11:08 (PDT)
 
 The calculus notes are split across these pages:
 
