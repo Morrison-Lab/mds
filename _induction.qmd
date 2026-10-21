@@ -1,0 +1,26 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+[Proof by induction](proof-writing.qmd#def-proof-by-induction) proves a statement about every integer from some starting integer on.
+Sequences defined by a rule on their earlier terms are the usual place to use it.
+This page defines the sequences,
+then adds the stronger form of induction that they often need.
+
+:::
+
+## Recursively defined sequences
+
+{{< include mds/_subfiles/induction/_def-recursive-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/induction/_exm-recursive-sequence.qmd >}}
+
+## Strong induction
+
+{{< include mds/_subfiles/induction/_def-strong-induction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/induction/_exm-strong-induction.qmd >}}
