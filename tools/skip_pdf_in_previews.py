@@ -40,7 +40,6 @@ DOCX_BLOCK = re.compile(r"^  docx:" + BLOCK_TAIL, re.M)
 EMPTY_FORMAT = re.compile(r"^format:[ \t]*\n(?:[ \t]*\n)*(?=[^ \t\n#]|\Z)", re.M)
 
 
-
 # The formats a preview leaves out, each with the label that keeps it.
 FORMATS = {"pdf": (PDF_BLOCK, LABEL), "docx": (DOCX_BLOCK, DOCX_LABEL)}
 
@@ -99,9 +98,15 @@ def main() -> int:
         changed.append(path.name)
     listed = " and ".join(names)
     if not changed:
-        print(f"skip_pdf_in_previews: warning: found no {listed} format to remove", file=sys.stderr)
+        print(
+            f"skip_pdf_in_previews: warning: found no {listed} format to remove",
+            file=sys.stderr,
+        )
         return 0
-    print(f"skip_pdf_in_previews: removed the {listed} format from {len(changed)} files", file=sys.stderr)
+    print(
+        f"skip_pdf_in_previews: removed the {listed} format from {len(changed)} files",
+        file=sys.stderr,
+    )
     # A page whose entry has another shape (`format: [html, pdf]`, a different
     # indent) would still render the format, silently.
     for path, front in targets:
@@ -110,7 +115,10 @@ def main() -> int:
             text = text.partition("\n---\n")[0] if text.startswith("---\n") else ""
         for name in names:
             if re.search(rf"^\s*({name}:|format:.*\b{name}\b)", text, re.M):
-                print(f"skip_pdf_in_previews: warning: {path.name} still mentions {name}", file=sys.stderr)
+                print(
+                    f"skip_pdf_in_previews: warning: {path.name} still mentions {name}",
+                    file=sys.stderr,
+                )
     return 0
 
 
