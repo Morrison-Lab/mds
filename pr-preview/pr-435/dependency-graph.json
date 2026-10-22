@@ -4179,6 +4179,33 @@
    "external": false
   },
   {
+   "id": "mds/induction#def-fibonacci-sequence",
+   "site": "mds",
+   "page": "induction",
+   "div": "def-fibonacci-sequence",
+   "kind": "def",
+   "title": "Fibonacci sequence",
+   "external": false
+  },
+  {
+   "id": "mds/induction#def-recursive-sequence",
+   "site": "mds",
+   "page": "induction",
+   "div": "def-recursive-sequence",
+   "kind": "def",
+   "title": "Recursively defined sequence",
+   "external": false
+  },
+  {
+   "id": "mds/induction#def-strong-induction",
+   "site": "mds",
+   "page": "induction",
+   "div": "def-strong-induction",
+   "kind": "def",
+   "title": "Proof by strong induction",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#cor-cosine-similarity-unit-vectors",
    "site": "mds",
    "page": "linear-algebra",
@@ -13108,6 +13135,50 @@
   [
    "mds/indicator-functions#def-set-predicate-notation",
    "mds/indicator-functions#def-indicator-function"
+  ],
+  [
+   "mds/induction#def-fibonacci-sequence",
+   "mds/functions#def-sequence-term"
+  ],
+  [
+   "mds/induction#def-fibonacci-sequence",
+   "mds/induction#def-recursive-sequence"
+  ],
+  [
+   "mds/induction#def-fibonacci-sequence",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/induction#def-recursive-sequence",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/induction#def-recursive-sequence",
+   "mds/functions#def-sequence-term"
+  ],
+  [
+   "mds/induction#def-recursive-sequence",
+   "mds/functions#def-value"
+  ],
+  [
+   "mds/induction#def-recursive-sequence",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/induction#def-strong-induction",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/induction#def-strong-induction",
+   "mds/proof-writing#def-predicate"
+  ],
+  [
+   "mds/induction#def-strong-induction",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/induction#def-strong-induction",
+   "mds/sets#def-vacuous-truth"
   ],
   [
    "mds/linear-algebra#cor-cosine-similarity-unit-vectors",
