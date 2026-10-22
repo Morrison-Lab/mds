@@ -88,6 +88,8 @@ website:
         href: optimization.qmd
       - text: "Proof Writing"
         href: proof-writing.qmd
+      - text: "Induction and Recursion"
+        href: induction.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mds
@@ -144,6 +146,7 @@ website:
       - vector-calculus.qmd
       - optimization.qmd
       - proof-writing.qmd
+      - induction.qmd
 
 # Each type below gets a title bar (type, number, name) apart from the body,
 # and folds, open by default: the callouty-theorem defaults since 1.4.0.
