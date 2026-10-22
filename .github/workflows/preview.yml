@@ -62,7 +62,9 @@ jobs:
       # `page-banners` job below.
       changed-chapters-banner: true
       highlight-changes: ${{ !contains(github.event.pull_request.labels.*.name, 'no-preview-highlights') }}
-      docx-tracked-changes: true
+      # The Word files exist only when the PR carries `preview:docx`
+      # (tools/skip_pdf_in_previews.py); without them the step fails on its empty glob.
+      docx-tracked-changes: ${{ contains(github.event.pull_request.labels.*.name, 'preview:docx') }}
       # Pages render at the site root, beside their slide decks
       # (gha's default `chapters/*.html` and `chapters/*.docx` would miss them).
       changed-chapters-glob: '**/*.html'
