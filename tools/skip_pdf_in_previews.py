@@ -28,6 +28,9 @@ LABEL = "preview:pdf"
 # A `pdf:` key at the two-space indent of a `format:` map, and the lines that
 # belong to it: blank lines, and anything indented deeper (comments included).
 PDF_BLOCK = re.compile(r"^  pdf:[^\n]*\n(?:(?:[ \t]*\n)|(?:    [^\n]*\n))*", re.M)
+# A top-level `format:` key left with no value, which Quarto rejects ("has empty
+# value but it must instead be 'ansi'"): `_quarto.yml` declares only the pdf format.
+EMPTY_FORMAT = re.compile(r"^format:[ \t]*\n(?:[ \t]*\n)*(?=[^ \t\n#]|\Z)", re.M)
 
 
 def skip_requested() -> bool:
@@ -47,7 +50,7 @@ def skip_requested() -> bool:
 def strip_pdf(text: str, front_matter_only: bool) -> str:
     """Remove the `pdf:` blocks from `text`, or from its front matter only."""
     if not front_matter_only:
-        return PDF_BLOCK.sub("", text)
+        return EMPTY_FORMAT.sub("", PDF_BLOCK.sub("", text))
     if not text.startswith("---\n"):
         return text
     end = text.find("\n---\n", 4)

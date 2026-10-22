@@ -3,7 +3,7 @@ project:
   output-dir: _site
   # Writes dependency-graph.json: the prerequisite graph of the definitions and results.
   # Then, on a pull request without the `preview:pdf` label, drops the PDF handouts
-  # from the working copy so the preview stays under the 90-minute cap.
+  # from the working copy, since the LaTeX handouts take most of the render time.
   pre-render:
     - python3 tools/build_dependency_graph.py --pages . --site mds --out dependency-graph.json
     - python3 tools/skip_pdf_in_previews.py

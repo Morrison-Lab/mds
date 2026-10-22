@@ -41,6 +41,21 @@ SHARED = """format:
 """
 
 
+SHARED_PDF_ONLY = """editor:
+  markdown:
+    wrap: 72
+
+format:
+  pdf:
+    filters:
+      - callouty
+
+knitr:
+  opts_chunk:
+    collapse: true
+"""
+
+
 def run(root: Path, env: dict) -> subprocess.CompletedProcess:
     # The script locates the project from its own path, so copy it under root.
     tools = root / "tools"
@@ -90,6 +105,14 @@ def main() -> int:
         check("kept-in-body.pdf" in page, "body text outside the front matter changed")
         check("pdf:" not in shared and "html:" in shared, "_quarto.yml not stripped correctly")
         check("removed the pdf format from 2 files" in result.stderr, result.stderr)
+
+        # `_quarto.yml` that declares only pdf must not keep an empty `format:`,
+        # which Quarto rejects as a validation error.
+        project(root, shared=SHARED_PDF_ONLY)
+        run(root, event(root, []))
+        shared = (root / "_quarto.yml").read_text(encoding="utf-8")
+        check("format:" not in shared, "an empty format: key was left behind")
+        check("knitr:" in shared and "editor:" in shared, "other keys were lost")
 
         project(root)
         run(root, event(root, ["preview:pdf"]))
