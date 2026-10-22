@@ -30,6 +30,8 @@ exclude = [
   # Login-gated course sites (lecture videos and Canvas) return 401 to CI
   "https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/.*",
   "https://wwu.instructure.com/.*",
+  # Stanford returned 503 for this page on 2026-10-22 (cs.stanford.edu and ai.stanford.edu); remove once it answers again
+  "https://cs.stanford.edu/~epacuit/classes/phil151winter09.html",
 ]
 
 # `mds` is a symlink to the repository root, so include paths read
