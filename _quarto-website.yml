@@ -48,6 +48,7 @@ website:
         menu:
           - sets.qmd
           - functions.qmd
+          - relations.qmd
           - growth-rates.qmd
           - expressions-algorithms.qmd
           - indicator-functions.qmd
@@ -114,6 +115,7 @@ website:
         contents:
           - sets.qmd
           - functions.qmd
+          - relations.qmd
           - growth-rates.qmd
           - expressions-algorithms.qmd
           - indicator-functions.qmd
