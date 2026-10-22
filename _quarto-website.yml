@@ -48,6 +48,7 @@ website:
         menu:
           - sets.qmd
           - functions.qmd
+          - growth-rates.qmd
           - expressions-algorithms.qmd
           - indicator-functions.qmd
       - text: "Algebra"
@@ -111,6 +112,7 @@ website:
         contents:
           - sets.qmd
           - functions.qmd
+          - growth-rates.qmd
           - expressions-algorithms.qmd
           - indicator-functions.qmd
       - section: "Algebra"
