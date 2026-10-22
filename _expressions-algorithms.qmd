@@ -19,6 +19,22 @@ the parse trees of expressions, and algorithms, which compute those functions.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/expressions-algorithms/_def-closed-form-expression.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_exm-closed-form-expression.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_def-closed-form-solution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_exm-closed-form-solution.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/expressions-algorithms/_def-parse-tree.qmd >}}
 
 {{< slidebreak >}}

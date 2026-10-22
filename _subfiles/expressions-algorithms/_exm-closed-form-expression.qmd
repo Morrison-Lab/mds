@@ -1,0 +1,16 @@
+:::{#exm-closed-form-expression}
+#### The quadratic formula
+
+For $a \neq 0$ and $b^2 - 4 a c \ge 0$,
+the larger root of $a x^2 + b x + c = 0$ is
+
+$$
+x = \frac{-b + \sqrt{b^2 - 4 a c}}{2 a},
+$$
+
+a closed-form expression in $a$, $b$ and $c$.
+The root of $x - \cos x = 0$ is a counterexample:
+it has no known closed-form expression
+(@exm-no-known-algorithm).
+
+:::

@@ -1,0 +1,21 @@
+:::{#exm-closed-form-solution}
+#### Least squares versus logistic regression
+
+Minimizing the squared-error cost of a linear model over $\vcoef$
+gives the normal equations $\stprod{\design} \vcoef = \tp{\design} \vy$.
+When $\stprod{\design}$ is invertible,
+the unique minimizer is the closed-form expression
+
+$$
+\hvcoef = \inv{\stprod{\design}} \tp{\design} \vy,
+$$
+
+so least squares has a closed-form solution.
+
+The minimizer of the logistic regression cost,
+$\hvcoef = \argmin_{\vcoef} C(\vcoef)$,
+is a well-defined vector,
+but no closed-form expression for it is known.
+An iterative [algorithm](#def-algorithm) approximates it.
+
+:::
