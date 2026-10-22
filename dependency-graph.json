@@ -10461,6 +10461,42 @@
    "external": false
   },
   {
+   "id": "mds/relations#def-equivalence-class",
+   "site": "mds",
+   "page": "relations",
+   "div": "def-equivalence-class",
+   "kind": "def",
+   "title": "Equivalence class",
+   "external": false
+  },
+  {
+   "id": "mds/relations#def-equivalence-relation",
+   "site": "mds",
+   "page": "relations",
+   "div": "def-equivalence-relation",
+   "kind": "def",
+   "title": "Equivalence relation",
+   "external": false
+  },
+  {
+   "id": "mds/relations#def-reflexive",
+   "site": "mds",
+   "page": "relations",
+   "div": "def-reflexive",
+   "kind": "def",
+   "title": "Reflexive relation",
+   "external": false
+  },
+  {
+   "id": "mds/relations#def-symmetric-relation",
+   "site": "mds",
+   "page": "relations",
+   "div": "def-symmetric-relation",
+   "kind": "def",
+   "title": "Symmetric relation",
+   "external": false
+  },
+  {
    "id": "mds/sets#def-bound",
    "site": "mds",
    "page": "sets",
@@ -16124,6 +16160,58 @@
   [
    "mds/proof-writing#thm-proof-by-contradiction",
    "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/relations#def-equivalence-class",
+   "mds/relations#def-equivalence-relation"
+  ],
+  [
+   "mds/relations#def-equivalence-class",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/algebra#def-transitive"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/functions#def-relation"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/relations#def-reflexive"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/relations#def-symmetric-relation"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/relations#def-reflexive",
+   "mds/functions#def-relation"
+  ],
+  [
+   "mds/relations#def-reflexive",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/relations#def-symmetric-relation",
+   "mds/functions#def-relation"
+  ],
+  [
+   "mds/relations#def-symmetric-relation",
+   "mds/proof-writing#def-implies"
+  ],
+  [
+   "mds/relations#def-symmetric-relation",
+   "mds/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/relations#def-symmetric-relation",
+   "mds/sets#def-set"
   ],
   [
    "mds/sets#def-bound",
