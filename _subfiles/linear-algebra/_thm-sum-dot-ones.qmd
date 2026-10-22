@@ -49,6 +49,6 @@ $$
 $$
 
 which is $\sumof{\vx}$, as in @exm-sum-of-elements.
-Dividing by the number of entries, $p = 3$, gives the [mean](#def-mean) of the entries, $6 / 3 = 2$.
+Dividing by $p = 3$ gives the [mean](#def-mean) of the entries, $6 / 3 = 2$.
 
 :::
