@@ -101,10 +101,10 @@ def main() -> int:
         head = page.partition("\n---\n")[0]
         check("pdf:" not in head, "front matter still declares pdf")
         check("functions-handout.pdf" not in page, "the handout name survived")
-        check("html: default" in head and "docx:" in head, "other formats were lost")
+        check("html: default" in head and "docx:" not in head, "html lost or docx kept")
         check("kept-in-body.pdf" in page, "body text outside the front matter changed")
         check("pdf:" not in shared and "html:" in shared, "_quarto.yml not stripped correctly")
-        check("removed the pdf format from 2 files" in result.stderr, result.stderr)
+        check("removed the pdf and docx format from 2 files" in result.stderr, result.stderr)
 
         # `_quarto.yml` that declares only pdf must not keep an empty `format:`,
         # which Quarto rejects as a validation error.
@@ -115,18 +115,30 @@ def main() -> int:
         check("knitr:" in shared and "editor:" in shared, "other keys were lost")
 
         project(root)
-        run(root, event(root, ["preview:pdf"]))
-        check((root / "functions.qmd").read_text(encoding="utf-8") == PAGE, "label did not keep pdf")
+        run(root, event(root, ["preview:pdf", "preview:docx"]))
+        check((root / "functions.qmd").read_text(encoding="utf-8") == PAGE, "labels did not keep formats")
 
+        project(root)
+        run(root, event(root, ["preview:pdf"]))
+        head = (root / "functions.qmd").read_text(encoding="utf-8").partition("\n---\n")[0]
+        check("pdf:" in head and "docx:" not in head, "preview:pdf should keep only pdf")
+
+        project(root)
+        run(root, event(root, ["preview:docx"]))
+        head = (root / "functions.qmd").read_text(encoding="utf-8").partition("\n---\n")[0]
+        check("docx:" in head and "pdf:" not in head, "preview:docx should keep only docx")
+
+        project(root)
         run(root, {"GITHUB_EVENT_NAME": "push"})
         check((root / "functions.qmd").read_text(encoding="utf-8") == PAGE, "push dropped pdf")
 
+        project(root)
         run(root, {**event(root, []), "MDS_SKIP_PDF": "0"})
         check((root / "functions.qmd").read_text(encoding="utf-8") == PAGE, "MDS_SKIP_PDF=0 ignored")
 
         project(root, page="---\ntitle: x\n---\n\nBody.\n", shared="project:\n  type: website\n")
         result = run(root, {"MDS_SKIP_PDF": "1"})
-        check("found no pdf format to remove" in result.stderr, "no warning when nothing to strip")
+        check("found no pdf and docx format to remove" in result.stderr, "no warning when nothing to strip")
     print("test_skip_pdf_in_previews: ok")
     return 0
 
