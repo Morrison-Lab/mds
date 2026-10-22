@@ -1,0 +1,53 @@
+:::{#thm-sum-dot-ones}
+#### The ones vector sums the entries
+
+For every $\vx \in \reals^p$,
+the sum of the elements of $\vx$ (@def-sum-of-elements)
+equals the dot product of the ones vector (@def-ones-vector) with $\vx$:
+
+$$
+\sumof{\vx} = \v1 \cdot \vx.
+$$
+
+:::
+
+::: proof
+
+$$
+\ba
+\v1 \cdot \vx
+&= \sumip 1 \cd x_i
+&& \text{(@def-dot-product, with every entry of } \v1 \text{ equal to } 1 \text{)}
+\\
+&= \sumip x_i
+&& \text{(multiply each entry by } 1 \text{)}
+\\
+&= \sumof{\vx}.
+&& \text{(@def-sum-of-elements)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-sum-dot-ones}
+#### The ones vector applied to a vector with three entries
+
+For $\vx = (2, -1, 5)$ and the ones vector $\v1$ of length $3$,
+
+$$
+\ba
+\v1 \cdot \vx
+&= 1 \cd 2 + 1 \cd (-1) + 1 \cd 5
+&& \text{(@def-dot-product)}
+\\
+&= 6,
+&& \text{(multiply and add)}
+\ea
+$$
+
+which is $\sumof{\vx}$, as in @exm-sum-of-elements.
+Dividing by the length $p = 3$ gives the [mean](#def-mean) of the entries, $6 / 3 = 2$.
+
+:::
