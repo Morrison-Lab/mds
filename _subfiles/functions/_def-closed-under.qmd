@@ -1,5 +1,5 @@
 :::{#def-closed-under}
-#### Closed under an operation, closure
+#### Closed under an operation
 
 A set $A$ is **closed under**
 [@wikipedia_closure_mathematics]

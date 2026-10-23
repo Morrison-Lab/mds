@@ -1,5 +1,5 @@
 :::{#def-subspace}
-#### Subspace, linear subspace, vector space, linear space
+#### Subspace, linear subspace
 
 A set $\mathcal{S}$ of vectors in $\reals^p$ is a **subspace**
 [@wikipedia_linear_subspace]
