@@ -13,6 +13,8 @@ $$
 
 :::
 
+::: {.content-hidden when-format="revealjs"}
+
 ::: proof
 
 Each side of each law is built from $P$ and $Q$,
@@ -30,5 +32,7 @@ The third and fourth columns agree in every row,
 which proves the first law,
 and the fifth and sixth columns agree in every row,
 which proves the second.
+
+:::
 
 :::

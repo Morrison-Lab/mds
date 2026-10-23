@@ -12,6 +12,6 @@ to the truth table of @exm-truth-table gives:
 | F   | F   | T        | T               | T                 |
 
 The last two columns agree in every row,
-so $P \Rightarrow Q \equiv \neg P \lor Q$.
+so $(P \Rightarrow Q) \equiv (\neg P \lor Q)$.
 
 :::
