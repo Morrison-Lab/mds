@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 16:35:23 (PDT)
+Last modified: 2026-10-22 21:43:08 (PDT)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
