@@ -2,7 +2,7 @@
 #### $P \Rightarrow Q$ is logically equivalent to $\neg P \lor Q$
 
 Adding a column for $\neg P \lor Q$
-to the truth table of @exm-truth-table gives:
+to the [truth table](#def-truth-table) of @exm-truth-table gives:
 
 | $P$ | $Q$ | $\neg P$ | $\neg P \lor Q$ | $P \Rightarrow Q$ |
 |:---:|:---:|:--------:|:---------------:|:-----------------:|

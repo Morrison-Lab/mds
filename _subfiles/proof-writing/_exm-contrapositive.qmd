@@ -1,7 +1,7 @@
 :::{#exm-contrapositive}
 #### The contrapositive versus the converse
 
-The proposition "if $n$ is a multiple of $4$, then $n$ is even"
+The [proposition](#def-proposition) "if $n$ is a multiple of $4$, then $n$ is even"
 from @exm-converse has:
 
 - converse (@def-converse): "if $n$ is even, then $n$ is a multiple of $4$", which is false;
