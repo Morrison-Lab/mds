@@ -1,5 +1,5 @@
 :::{#def-linear-system}
-#### Linear system (system of linear equations)
+#### Linear system, system of linear equations
 
 A **linear system**
 [@wikipedia_system_of_linear_equations]

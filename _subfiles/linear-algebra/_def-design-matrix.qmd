@@ -1,5 +1,5 @@
 :::{#def-design-matrix}
-#### Design matrix (model matrix)
+#### Design matrix, model matrix
 
 In a regression model with $n$ observations and $p$ predictors,
 the **design matrix**
