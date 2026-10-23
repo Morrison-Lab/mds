@@ -12,8 +12,7 @@ and it is closed under vector addition and scalar multiplication:
 2. if $\vecf{u} \in \mathcal{S}$ and $c \in \reals$,
    then $c \vecf{u} \in \mathcal{S}$.
 
-A subspace is also called a **linear subspace**,
-a **vector space**, or a **linear space**.
+A subspace is also called a **linear subspace**.
 
 :::
 
