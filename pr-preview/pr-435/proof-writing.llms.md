@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 09:52:25 (PDT)
+Last modified: 2026-10-22 22:13:27 (PDT)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -415,7 +415,7 @@ For example, here is a derivation that the [hat matrix](linear-algebra-projectio
 
 \\ \begin{aligned} \mathbf{H}^2 &= \mathbf{H}\mathbf{H} && \text{(definition of a matrix power)} \\ &= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\\\mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top} && \text{(definition of } \mathbf{H} \text{)} \\ &= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}({\mathbf{X}}^{\top}\mathbf{X})({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top} && \text{(regroup; matrix multiplication is associative)} \\ &= \mathbf{X}\\\mathbf{I}\_p\\({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top} && \text{(a matrix inverse times the matrix is } \mathbf{I}\_p \text{)} \\ &= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top} && \text{(the identity matrix changes nothing)} \\ &= \mathbf{H} && \text{(definition of } \mathbf{H} \text{)} \end{aligned} \\
 
-The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page uses this derivation to show that \\\mathbf{H}\\ is a [projection matrix](linear-algebra-special-matrices.llms.md#def-projection-matrix). The probability notes derive the variance identity \\\operatorname{Var}\mathopen{}\left(X\right)\mathclose{} = \operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} - {\mathopen{}\left(\operatorname{E}\mathopen{}\left\[X\right\]\mathclose{}\right)\mathclose{}}^2\\ [in the same annotated style](https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance).
+The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page uses this derivation to show that \\\mathbf{H}\\ is a [projection matrix](linear-algebra-special-matrices.llms.md#def-projection-matrix). The probability notes derive the variance identity \\{\operatorname{Var}\mathopen{}\left(X\right)\mathclose{}} = {\operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{}} - {\mathopen{}\left({\operatorname{E}\mathopen{}\left\[X\right\]\mathclose{}}\right)\mathclose{}}^{2}\\ [in the same annotated style](https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance).
 
 ## 4 Direct proof
 

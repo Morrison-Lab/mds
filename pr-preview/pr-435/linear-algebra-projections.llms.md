@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 09:52:25 (PDT)
+Last modified: 2026-10-22 22:13:27 (PDT)
 
 ## 1 Design Matrix
 
@@ -154,7 +154,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > \\ \begin{aligned} ({\mathbf{Q}}^{\top} \mathbf{Q})\_{ij} &= \sum\_{k=1}^{p} ({\mathbf{Q}}^{\top})\_{ik}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \\ &= \sum\_{k=1}^{p} q\_{ki}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_j, && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \end{aligned} \\
 >
-> which is \\1\\ if \\i = j\\ and \\0\\ otherwise ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\ ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
+> which is \\1\\ if \\i = j\\ and \\0\\ otherwise ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\ ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
 >
 > **The split.** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = \mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\. \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = \mathbf{Q}\\({\mathbf{Q}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)) is in \\\mathcal{C}(\mathbf{Q})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), which is \\\operatorname{span}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_r\right\\\mathclose{} = \mathcal{S}\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)). For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\,
 >
@@ -205,7 +205,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)). By the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\mathbf{P} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ is the orthogonal projection of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ onto \\\mathcal{C}(\mathbf{P})\\.
 >
-> **Part 2.** The orthogonal projection of a vector onto \\\mathcal{S}\\ is unique ([Definition 3](#def-orthogonal-projection)), so \\\mathbf{P}\_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j = \mathbf{P}\_2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ for each indicator vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). \\\mathbf{P}\_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ is column \\j\\ of \\\mathbf{P}\_1\\: by [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns) it is the combination of the columns of \\\mathbf{P}\_1\\ with coefficients the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\, which are \\1\\ in place \\j\\ and \\0\\ elsewhere ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). Likewise for \\\mathbf{P}\_2\\, so the two matrices have the same columns.
+> **Part 2.** The orthogonal projection of a vector onto \\\mathcal{S}\\ is unique ([Definition 3](#def-orthogonal-projection)), so \\\mathbf{P}\_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j = \mathbf{P}\_2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ for each indicator vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). \\\mathbf{P}\_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ is column \\j\\ of \\\mathbf{P}\_1\\: by [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns) it is the combination of the columns of \\\mathbf{P}\_1\\ with coefficients the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\, which are \\1\\ in place \\j\\ and \\0\\ elsewhere ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). Likewise for \\\mathbf{P}\_2\\, so the two matrices have the same columns.
 
 > **NOTE:**
 >
@@ -734,7 +734,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > \\ \underbrace{\mathbf{A}}\_{m \times n} = \underbrace{\mathbf{Q}}\_{m \times n}\\\underbrace{\mathbf{R}}\_{n \times n}, \\
 >
-> where the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)) and \\\mathbf{R}\\ is upper triangular ([Definition 7](#def-triangular-matrix)) with positive diagonal entries.
+> where the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)) and \\\mathbf{R}\\ is upper triangular ([Definition 7](#def-triangular-matrix)) with positive diagonal entries.
 
 > **NOTE:**
 >

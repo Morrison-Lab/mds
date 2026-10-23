@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 09:52:25 (PDT)
+Last modified: 2026-10-22 22:13:27 (PDT)
 
 > **NOTE:**
 >
@@ -20,7 +20,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 
 > **NOTE:**
 >
-> **Example 1 (Doubling a die roll)** The rule \\f(a) = 2a\\ defines a function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\, because it assigns exactly one real number to each possible roll; for example, \\f(3) = 6\\. A rule that assigned both \\2\\ and \\-2\\ to the roll \\1\\ would not be a function, because a function assigns exactly one value to each element.
+> **Example 1 (Doubling a die roll)** The rule \\f(a) = 2a\\ defines a function \\f : {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} \to \mathbb{R}\\, because it assigns exactly one real number to each possible roll; for example, \\f(3) = 6\\. A rule that assigned both \\2\\ and \\-2\\ to the roll \\1\\ would not be a function, because a function assigns exactly one value to each element.
 
 > **NOTE:**
 >
@@ -28,7 +28,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 
 > **NOTE:**
 >
-> **Example 2 (Arguments of doubling a die roll)** For the function \\f(a) = 2a\\ in [Example 1](#exm-function), the roll \\3\\ is an argument of \\f\\, because \\f\\ can be applied to it. The number \\7\\ is not an argument of \\f\\, because it is not an element of \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\.
+> **Example 2 (Arguments of doubling a die roll)** For the function \\f(a) = 2a\\ in [Example 1](#exm-function), the roll \\3\\ is an argument of \\f\\, because \\f\\ can be applied to it. The number \\7\\ is not an argument of \\f\\, because it is not an element of \\{\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\.
 
 > **NOTE:**
 >
@@ -58,7 +58,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > **Definition 7 (Image)** The **image** [\[5\]](#ref-wikipedia_image_mathematics) of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
 >
-> \\f(A) \stackrel{\text{def}}{=}\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}\\
+> \\f(A) \stackrel{\text{def}}{=}{\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}}\\
 >
 > For a single element \\a \in A\\, the value \\f(a)\\ is also called the **image of** \\a\\ under \\f\\.
 
@@ -81,11 +81,11 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 
 > **NOTE:**
 >
-> **Example 6 (Domain, codomain, and image of the doubled die roll)** For the function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = 2a\\ from [Example 1](#exm-function):
+> **Example 6 (Domain, codomain, and image of the doubled die roll)** For the function \\f : {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} \to \mathbb{R}\\ with \\f(a) = 2a\\ from [Example 1](#exm-function):
 >
-> - the domain is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\;
+> - the domain is \\{\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\;
 > - the codomain is \\\mathbb{R}\\;
-> - the image is \\\mathopen{}\left\\2, 4, 6, 8, 10, 12\right\\\mathclose{}\\.
+> - the image is \\{\mathopen{}\left\\2, 4, 6, 8, 10, 12\right\\\mathclose{}}\\.
 >
 > The image is a subset of the codomain, and here a much smaller one: most real numbers, such as \\3\\ and \\-1\\, are not values of \\f\\.
 
@@ -93,11 +93,11 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > **Definition 9 (Graph of a function)** The **graph** [\[7\]](#ref-wikipedia_graph_of_a_function) of a [function](#def-function) \\f : A \to B\\ is the set of [ordered pairs](sets.llms.md#def-ordered-pair) \\(a, f(a))\\, one for each element \\a\\ of its domain:
 >
-> \\\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}\\
+> \\{\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
-> **Example 7 (The graph of a function on three points)** Let \\f : \mathopen{}\left\\-1, 0, 2\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = a^2\\. Then \\f(-1) = 1\\, \\f(0) = 0\\, and \\f(2) = 4\\, so the graph of \\f\\ is \\\mathopen{}\left\\(-1, 1), (0, 0), (2, 4)\right\\\mathclose{}\\. The pair \\(1, 1)\\ is not in the graph, because \\1\\ is not in the domain of \\f\\.
+> **Example 7 (The graph of a function on three points)** Let \\f : {\mathopen{}\left\\-1, 0, 2\right\\\mathclose{}} \to \mathbb{R}\\ with \\f(a) = a^2\\. Then \\f(-1) = 1\\, \\f(0) = 0\\, and \\f(2) = 4\\, so the graph of \\f\\ is \\{\mathopen{}\left\\(-1, 1), (0, 0), (2, 4)\right\\\mathclose{}}\\. The pair \\(1, 1)\\ is not in the graph, because \\1\\ is not in the domain of \\f\\.
 
 > **NOTE:**
 >
@@ -105,12 +105,12 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (What a function is fundamentally). [Definition 1](#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](sets.llms.md#def-ordered-pair) and its graph ([Definition 9](#def-graph)): the set of pairs \\G = \mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{} \subseteq A \times B\\. Authors define a function formally in one of two ways:
+> *Remark 3* (What a function is fundamentally). [Definition 1](#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](sets.llms.md#def-ordered-pair) and its graph ([Definition 9](#def-graph)): the set of pairs \\G = {\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}} \subseteq A \times B\\. Authors define a function formally in one of two ways:
 >
 > 1.  **As its graph** [\[8, Sec. 8\]](#ref-halmos1974naive), p. 30: a function is a subset of \\A \times B\\ containing exactly one pair \\(a, b)\\ for each \\a \in A\\, where \\b = f(a)\\, and the statement \\f(a) = b\\ is notation for \\(a, b) \in f\\. Under this convention, the codomain \\B\\ is specified alongside the graph in the declaration \\f : A \to B\\.
 > 2.  **As a triple \\(A, B, G)\\**: the function consists of the domain \\A\\, the codomain \\B\\, and the graph \\G \subseteq A \times B\\. This explicit packaging retains the codomain \\B\\ as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into \\\mathbb{R}\\ versus into integers).
 >
-> For example, the die-doubling function in [Example 1](#exm-function) has the graph of six ordered pairs \\\mathopen{}\left\\(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\\\mathclose{}\\.
+> For example, the die-doubling function in [Example 1](#exm-function) has the graph of six ordered pairs \\{\mathopen{}\left\\(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\\\mathclose{}}\\.
 >
 > This distinction clarifies what a function is and is not:
 >
@@ -248,11 +248,11 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > - \\a_n = \frac{1}{n}\\ is the sequence \\1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots\\; its third term is \\a_3 = \frac{1}{3}\\.
 > - \\b_n = (-1)^n\\ is the sequence \\-1, 1, -1, 1, \ldots\\: a sequence can repeat values.
-> - The die rolls \\4, 1, 4\\ form a finite sequence of length \\3\\, with \\a_1 = 4\\, \\a_2 = 1\\, and \\a_3 = 4\\. As a set, \\\mathopen{}\left\\4, 1, 4\right\\\mathclose{} = \mathopen{}\left\\1, 4\right\\\mathclose{}\\, but as a sequence, the order and the repeats matter.
+> - The die rolls \\4, 1, 4\\ form a finite sequence of length \\3\\, with \\a_1 = 4\\, \\a_2 = 1\\, and \\a_3 = 4\\. As a set, \\{\mathopen{}\left\\4, 1, 4\right\\\mathclose{}} = {\mathopen{}\left\\1, 4\right\\\mathclose{}}\\, but as a sequence, the order and the repeats matter.
 
 > **NOTE:**
 >
-> **Definition 19 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
+> **Definition 19 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\{\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
 
 > **NOTE:**
 >
@@ -270,7 +270,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > **Definition 21 (Logistic function (also called the sigmoid or expit))** The **logistic function**, also called the **sigmoid** or **expit**, is the [function](#def-function) \\\sigma: \mathbb{R}\to (0, 1)\\ with [\[15\]](#ref-wikipedia_logistic_function)
 >
-> \\\sigma\mathopen{}\left(z\right)\mathclose{} \stackrel{\text{def}}{=}\frac{1}{1 + e^{-z}}.\\
+> \\{\sigma\mathopen{}\left(z\right)\mathclose{}} \stackrel{\text{def}}{=}\frac{1}{1 + e^{-z}}.\\
 
 > **NOTE:**
 >
@@ -295,16 +295,16 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 
 > **NOTE:**
 >
-> *Remark 7* (Two meanings of \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\). Applied to a set, the bars \\\mathopen{}\left\|A\right\|\mathclose{}\\ mean the cardinality of \\A\\. Applied to a number, \\\mathopen{}\left\|x\right\|\mathclose{}\\ means its [absolute value](algebra-basics.llms.md#def-absolute-value), or its [modulus](algebra-complex.llms.md#def-complex-modulus) when \\x\\ is complex. For example, \\\mathopen{}\left\|\mathopen{}\left\\-3\right\\\mathclose{}\right\|\mathclose{} = 1\\, but \\\mathopen{}\left\|-3\right\|\mathclose{} = 3\\.
+> *Remark 7* (Two meanings of \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\). Applied to a set, the bars \\\mathopen{}\left\|A\right\|\mathclose{}\\ mean the cardinality of \\A\\. Applied to a number, \\\mathopen{}\left\|x\right\|\mathclose{}\\ means its [absolute value](algebra-basics.llms.md#def-absolute-value), or its [modulus](algebra-complex.llms.md#def-complex-modulus) when \\x\\ is complex. For example, \\\mathopen{}\left\|{\mathopen{}\left\\-3\right\\\mathclose{}}\right\|\mathclose{} = 1\\, but \\\mathopen{}\left\|-3\right\|\mathclose{} = 3\\.
 
 > **NOTE:**
 >
 > **Example 16 (Finite and infinite sets)**  
 >
-> - \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is finite, with \\\mathopen{}\left\|\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\|\mathclose{} = 3\\.
-> - \\\mathopen{}\left\\1, 1, 2\right\\\mathclose{} = \mathopen{}\left\\1, 2\right\\\mathclose{}\\, so \\\mathopen{}\left\|\mathopen{}\left\\1, 1, 2\right\\\mathclose{}\right\|\mathclose{} = 2\\: a repeated listing does not count twice.
+> - \\{\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ is finite, with \\\mathopen{}\left\|{\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\right\|\mathclose{} = 3\\.
+> - \\{\mathopen{}\left\\1, 1, 2\right\\\mathclose{}} = {\mathopen{}\left\\1, 2\right\\\mathclose{}}\\, so \\\mathopen{}\left\|{\mathopen{}\left\\1, 1, 2\right\\\mathclose{}}\right\|\mathclose{} = 2\\: a repeated listing does not count twice.
 > - \\\emptyset\\ is finite, with \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
-> - The natural numbers \\\mathbb{N}= \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\ are infinite: for any \\n\\, a list \\a_1, \ldots, a_n\\ of natural numbers misses the natural number \\a_1 + \cdots + a_n + 1\\, which is larger than every number in the list.
+> - The natural numbers \\\mathbb{N}= {\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}}\\ are infinite: for any \\n\\, a list \\a_1, \ldots, a_n\\ of natural numbers misses the natural number \\a_1 + \cdots + a_n + 1\\, which is larger than every number in the list.
 
 > **NOTE:**
 >
@@ -322,8 +322,8 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > **Example 17 (Countable and uncountable sets)**  
 >
-> - \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ is countable, because it is finite.
-> - The [non-negative integers](number-systems.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
+> - \\{\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ is countable, because it is finite.
+> - The [non-negative integers](number-systems.llms.md#def-nonnegative-integers) \\{\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
 > - The [integers](number-systems.llms.md#def-integers) are countably infinite too: the sequence \\0, 1, -1, 2, -2, 3, -3, \ldots\\ lists every one of them.
 
 > **NOTE:**

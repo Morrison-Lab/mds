@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 09:52:25 (PDT)
+Last modified: 2026-10-22 22:13:27 (PDT)
 
 ## 1 Derivatives
 
@@ -97,7 +97,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > \\f'(c) \stackrel{\text{def}}{=}\lim\_{h \to 0} \frac{f(c + h) - f(c)}{h},\\
 >
-> exists and is finite. The number \\f'(c)\\ is the derivative of \\f\\ at \\c\\ ([Definition 7](#def-derivative)).
+> exists and is finite. The value of this limit is denoted \\f'(c)\\.
 >
 > [\[5, Sec. 2.1\]](#ref-larsonCalc11e), p. 100
 
@@ -281,7 +281,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > **Theorem 4 (Derivative of natural logarithm)** For every \\x \> 0\\, the derivative of the [natural logarithm](algebra-exponentials.llms.md#def-natural-log) is:
 >
-> \\ \begin{aligned} \operatorname{log}'\mathopen{}\left\\x\right\\\mathclose{} &= \frac{1}{x} \\ &= x^{-1} \end{aligned} \\
+> \\ \begin{aligned} {\operatorname{log}'\mathopen{}\left\\x\right\\\mathclose{}} &= \frac{1}{x} \\ &= x^{-1} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -313,7 +313,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > **Theorem 5 (Derivative of exponential)** For every real \\x\\, the derivative of the [exponential function](algebra-exponentials.llms.md#def-exponential-function) is:
 >
-> \\\operatorname{exp}'\mathopen{}\left\\x\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\
+> \\{\operatorname{exp}'\mathopen{}\left\\x\right\\\mathclose{}} = {\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
@@ -435,19 +435,19 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > Find the derivative of
 >
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+> \\f(x) = {\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
-> *Solution 7*. Apply the chain rule ([Theorem 10](#thm-chain-rule)) with outer function \\\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ and inner function \\u(x) = -x^2/2\\. Since \\\frac{d }{d u}\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ ([Theorem 5](#thm-deriv-exp)) and \\u'(x) = -x\\:
+> *Solution 7*. Apply the chain rule ([Theorem 10](#thm-chain-rule)) with outer function \\{\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}}\\ and inner function \\u(x) = -x^2/2\\. Since \\\frac{d }{d u}{\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}} = {\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}}\\ ([Theorem 5](#thm-deriv-exp)) and \\u'(x) = -x\\:
 >
-> \\ \begin{aligned} f'(x) &= u'(x)\operatorname{exp}\mathopen{}\left\\u(x)\right\\\mathclose{} \\ &= -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned} \\
+> \\ \begin{aligned} f'(x) &= u'(x){\operatorname{exp}\mathopen{}\left\\u(x)\right\\\mathclose{}} \\ &= -x{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Theorem 11 (Derivative of the standard Gaussian kernel)** For \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\ and every \\x \in \mathbb{R}\\,
+> **Theorem 11 (Derivative of the standard Gaussian kernel)** For \\f(x) = {\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\ and every \\x \in \mathbb{R}\\,
 >
-> \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+> \\f'(x) = -x{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
@@ -459,23 +459,23 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > Find the second derivative of
 >
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+> \\f(x) = {\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
-> *Solution 8*. From [Theorem 11](#thm-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\. Apply the product rule ([Theorem 8](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\:
+> *Solution 8*. From [Theorem 11](#thm-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x{\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}}\\. Apply the product rule ([Theorem 8](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = {\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}}\\:
 >
-> \\\begin{aligned} u'(x) &= -1 \\ v'(x) &= -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
+> \\\begin{aligned} u'(x) &= -1 \\ v'(x) &= -x{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}} \end{aligned}\\
 >
 > Therefore:
 >
-> \\\begin{aligned} f''(x) &= u'(x)v(x) + u(x)v'(x) \\ &= (-1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} + (-x)\mathopen{}\left\[-x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{} \\ &= (x^2 - 1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
+> \\\begin{aligned} f''(x) &= u'(x)v(x) + u(x)v'(x) \\ &= (-1){\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}} + (-x)\mathopen{}\left\[-x{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\right\]\mathclose{} \\ &= (x^2 - 1){\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}} \end{aligned}\\
 
 > **NOTE:**
 >
-> **Theorem 12 (Second derivative of the standard Gaussian kernel)** For \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\ and every \\x \in \mathbb{R}\\,
+> **Theorem 12 (Second derivative of the standard Gaussian kernel)** For \\f(x) = {\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\ and every \\x \in \mathbb{R}\\,
 >
-> \\f''(x) = (x^2 - 1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+> \\f''(x) = (x^2 - 1){\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
@@ -487,21 +487,21 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > Find the derivative of
 >
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\cos(3x^4)\\
+> \\f(x) = {\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}}\cos(3x^4)\\
 
 > **NOTE:**
 >
-> *Solution 9*. Apply the product rule ([Theorem 8](#thm-product-rule)) to \\u(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\\ and \\v(x) = \cos(3x^4)\\:
+> *Solution 9*. Apply the product rule ([Theorem 8](#thm-product-rule)) to \\u(x) = {\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}}\\ and \\v(x) = \cos(3x^4)\\:
 >
 > \\f'(x) = u'(x)v(x) + u(x)v'(x)\\
 >
 > Compute \\u'(x)\\ and \\v'(x)\\ via the chain rule ([Theorem 10](#thm-chain-rule)):
 >
-> \\\begin{aligned} u'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{} \\ v'(x) &= -12x^3 \sin(3x^4) \end{aligned}\\
+> \\\begin{aligned} u'(x) &= 8x^7 {\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}} \\ v'(x) &= -12x^3 \sin(3x^4) \end{aligned}\\
 >
 > Substitute both derivatives into the product rule:
 >
-> \\\begin{aligned} f'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\cos(3x^4) - 12x^3 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\sin(3x^4) \\ &= 4x^3 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\mathopen{}\left\[2x^4 \cos(3x^4) - 3\sin(3x^4)\right\]\mathclose{} \end{aligned}\\
+> \\\begin{aligned} f'(x) &= 8x^7 {\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}}\cos(3x^4) - 12x^3 {\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}}\sin(3x^4) \\ &= 4x^3 {\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}}\mathopen{}\left\[2x^4 \cos(3x^4) - 3\sin(3x^4)\right\]\mathclose{} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -525,13 +525,13 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > **Corollary 1 (Chain rule for logarithms)** If \\f\\ is differentiable at \\x\\ and \\f(x) \> 0\\, then
 >
-> \\ \frac{d }{d x}\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{} = \frac{f'(x)}{f(x)} \\
+> \\ \frac{d }{d x}{\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}} = \frac{f'(x)}{f(x)} \\
 
 > **NOTE:**
 >
 > *Proof*. Apply [Theorem 10](#thm-chain-rule) and [Theorem 4](#thm-deriv-log):
 >
-> \\ \begin{aligned} \frac{d }{d x}\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{} &= f'(x) \cdot\operatorname{log}'\mathopen{}\left\\f(x)\right\\\mathclose{} && \text{(chain rule, with } g = f \text{ and outer function } \log \text{)} \\ &= f'(x) \cdot\frac{1}{f(x)} && \text{(derivative of } \log \text{, valid because } f(x) \> 0 \text{)} \\ &= \frac{f'(x)}{f(x)} && \text{(multiply)} \end{aligned} \\
+> \\ \begin{aligned} \frac{d }{d x}{\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}} &= f'(x) \cdot{\operatorname{log}'\mathopen{}\left\\f(x)\right\\\mathclose{}} && \text{(chain rule, with } g = f \text{ and outer function } \log \text{)} \\ &= f'(x) \cdot\frac{1}{f(x)} && \text{(derivative of } \log \text{, valid because } f(x) \> 0 \text{)} \\ &= \frac{f'(x)}{f(x)} && \text{(multiply)} \end{aligned} \\
 
 > **TIP:**
 >
@@ -583,13 +583,13 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Logarithmic derivative)** The **logarithmic derivative** \\\frac{f'(x)}{f(x)}\\ of a function \\f\\ of a real variable equals \\\frac{d }{d x}\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}\\ by [Corollary 1](#cor-deriv-log-chain) and measures the rate of change of \\f\\ relative to its size; it needs \\f(x) \> 0\\, and for \\f(x) \< 0\\ the same expression is the derivative of \\\operatorname{log}\mathopen{}\left\\\mathopen{}\left\|f(x)\right\|\mathclose{}\right\\\mathclose{}\\.
+> **Definition 14 (Logarithmic derivative)** The **logarithmic derivative** \\\frac{f'(x)}{f(x)}\\ of a function \\f\\ of a real variable equals \\\frac{d }{d x}{\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}}\\ by [Corollary 1](#cor-deriv-log-chain) and measures the rate of change of \\f\\ relative to its size; it needs \\f(x) \> 0\\, and for \\f(x) \< 0\\ the same expression is the derivative of \\{\operatorname{log}\mathopen{}\left\\\mathopen{}\left\|f(x)\right\|\mathclose{}\right\\\mathclose{}}\\.
 
 > **NOTE:**
 >
 > **Definition 15 (Profile of a function)** The **profile** of a function \\f\\ of a real variable is the list of related functions and values to work out when meeting \\f\\ for the first time:
 >
-> - the logarithm \\\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}\\, where \\f(x) \> 0\\;
+> - the logarithm \\{\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}}\\, where \\f(x) \> 0\\;
 > - the derivatives \\f'(x)\\, \\f''(x)\\, and so on, as far as they are informative;
 > - the [logarithmic derivative](#def-logarithmic-derivative) \\\frac{f'(x)}{f(x)}\\;
 > - the inverse function \\f^{-1}\\ ([definition](functions.llms.md#def-inverse-function)), which exists on the [image](functions.llms.md#def-image) of \\f\\ when \\f\\ is one-to-one, and otherwise only after restricting the domain of \\f\\;
@@ -607,7 +607,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > The profile in [Definition 15](#def-function-profile) of \\f\\ is as follows. Write \\E = e^{-x}\\, so that \\f = \frac{1}{1 + E}\\ and \\1 - f = \frac{E}{1 + E}\\.
 >
-> - **Logarithm:** \\\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{} = -\operatorname{log}\mathopen{}\left\\1 + e^{-x}\right\\\mathclose{}\\, defined for every real \\x\\ because \\f(x) \> 0\\.
+> - **Logarithm:** \\{\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}} = -{\operatorname{log}\mathopen{}\left\\1 + e^{-x}\right\\\mathclose{}}\\, defined for every real \\x\\ because \\f(x) \> 0\\.
 >
 > - **Derivative:** by the chain rule,
 >
@@ -619,15 +619,15 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > - **Inverse:** for \\y \in (0, 1)\\, solving \\y = \frac{1}{1 + e^{-x}}\\ for \\x\\ gives
 >
->   \\ \begin{aligned} \frac{1}{y} &= 1 + e^{-x} \\ e^{-x} &= \frac{1 - y}{y} \\ x &= \operatorname{log}\mathopen{}\left\\\frac{y}{1 - y}\right\\\mathclose{}. \end{aligned} \\
+>   \\ \begin{aligned} \frac{1}{y} &= 1 + e^{-x} \\ e^{-x} &= \frac{1 - y}{y} \\ x &= {\operatorname{log}\mathopen{}\left\\\frac{y}{1 - y}\right\\\mathclose{}}. \end{aligned} \\
 >
->   So \\f^{-1}(y) = \operatorname{logit}\mathopen{}\left\\y\right\\\mathclose{}\\, the log-odds. The inverse exists because \\f' = f(1 - f) \> 0\\, so \\f\\ is strictly increasing and therefore one-to-one.
+>   So \\f^{-1}(y) = {\operatorname{logit}\mathopen{}\left\\y\right\\\mathclose{}}\\, the log-odds. The inverse exists because \\f' = f(1 - f) \> 0\\, so \\f\\ is strictly increasing and therefore one-to-one.
 >
 > - **Complement:** \\1 - f(x) = \frac{e^{-x}}{1 + e^{-x}} = \frac{1}{e^{x} + 1} = f(-x)\\.
 >
 > - **Reciprocal:** \\\frac{1}{f(x)} = 1 + e^{-x}\\.
 >
-> - **Antiderivative:** \\F(x) = \operatorname{log}\mathopen{}\left\\1 + e^{x}\right\\\mathclose{}\\ satisfies \\F'(x) = \frac{e^{x}}{1 + e^{x}} = f(x)\\, so \\\int f(x)\\dx = \operatorname{log}\mathopen{}\left\\1 + e^{x}\right\\\mathclose{} + C\\.
+> - **Antiderivative:** \\F(x) = {\operatorname{log}\mathopen{}\left\\1 + e^{x}\right\\\mathclose{}}\\ satisfies \\F'(x) = \frac{e^{x}}{1 + e^{x}} = f(x)\\, so \\\int f(x)\\dx = {\operatorname{log}\mathopen{}\left\\1 + e^{x}\right\\\mathclose{}} + C\\.
 >
 > - **Key values:** \\f(0) = \frac{1}{1 + 1} = \frac{1}{2}\\ and \\f(1) = \frac{1}{1 + e^{-1}}\\. As \\x \to \infty\\, \\e^{-x} \to 0\\, so \\f(x) \to 1\\; as \\x \to -\infty\\, \\e^{-x} \to \infty\\, so \\f(x) \to 0\\.
 >
@@ -662,7 +662,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 > key_values <- c(f(0), f(1), f(10), f(-10))
 > ```
 >
-> Each entry of `checks` is the largest discrepancy between a formula above and a numerical computation; every one is below \\10^{-14}\\ (the chunk stops with an error otherwise), which is rounding error. The key values are \\f(0) =\\ 0.5 and \\f(1) \approx\\ 0.7311. At \\x = 10\\ and \\x = -10\\ the function is already close to its limits, \\f(10) \approx\\ 0.99995 and \\f(-10) \approx\\ 0.0000454. [Figure 1](#fig-function-profile-logistic) graphs \\f\\, \\f'\\ and \\\operatorname{log}\mathopen{}\left\\f\right\\\mathclose{}\\.
+> Each entry of `checks` is the largest discrepancy between a formula above and a numerical computation; every one is below \\10^{-14}\\ (the chunk stops with an error otherwise), which is rounding error. The key values are \\f(0) =\\ 0.5 and \\f(1) \approx\\ 0.7311. At \\x = 10\\ and \\x = -10\\ the function is already close to its limits, \\f(10) \approx\\ 0.99995 and \\f(-10) \approx\\ 0.0000454. [Figure 1](#fig-function-profile-logistic) graphs \\f\\, \\f'\\ and \\{\operatorname{log}\mathopen{}\left\\f\right\\\mathclose{}}\\.
 >
 > Show R code
 >
@@ -1146,7 +1146,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > Find the first six terms (up to degree 5) of the Taylor series for
 >
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\\
+> \\f(x) = {\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}}\\
 >
 > at \\x_0 = 0\\.
 
@@ -1154,7 +1154,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > *Solution 22*. Substitute \\u = x^8\\ into \\e^u = 1 + u + \frac{u^2}{2!} + \dots\\:
 >
-> \\\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{} = 1 + x^8 + \frac{x^{16}}{2} + \dots\\
+> \\{\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}} = 1 + x^8 + \frac{x^{16}}{2} + \dots\\
 >
 > Because the lowest-order variable term is \\x^8\\, all coefficients for powers \\x^1, x^2, x^3, x^4, x^5\\ are zero:
 >
@@ -1166,7 +1166,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > Find the terms up to degree 3 of the Taylor series for the standard normal density
 >
-> \\\phi(x) = \frac{1}{\sqrt{2\pi}}\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+> \\\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\
 >
 > at \\x_0 = 0\\.
 
@@ -1174,7 +1174,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > *Solution 23*. Using \\e^u = 1 + u + O(u^2)\\ with \\u = -x^2/2\\:
 >
-> \\\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} = 1 - \frac{x^2}{2} + O(x^4)\\
+> \\{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}} = 1 - \frac{x^2}{2} + O(x^4)\\
 >
 > Multiplying by the normalization constant \\1/\sqrt{2\pi}\\:
 >
@@ -1186,7 +1186,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Theorem 14 (Maclaurin polynomial of the standard normal density)** The Maclaurin polynomial ([Definition 21](#def-maclaurin-polynomial)) of degree 3 of the standard normal density \\\phi(x) = \frac{1}{\sqrt{2\pi}}\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\ is
+> **Theorem 14 (Maclaurin polynomial of the standard normal density)** The Maclaurin polynomial ([Definition 21](#def-maclaurin-polynomial)) of degree 3 of the standard normal density \\\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\ is
 >
 > \\P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\\
 

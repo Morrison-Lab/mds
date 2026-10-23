@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 09:52:25 (PDT)
+Last modified: 2026-10-22 22:13:27 (PDT)
 
 ## 1 Sums and direct sums
 
@@ -280,7 +280,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Orthogonal complement)** The **orthogonal complement** [\[5\]](#ref-wikipedia_orthogonal_complement) of a set \\\mathcal{X}\\ of vectors in \\\mathbb{R}^p\\ is the set of vectors orthogonal ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) to every vector of \\\mathcal{X}\\:
+> **Definition 5 (Orthogonal complement)** The **orthogonal complement** [\[5\]](#ref-wikipedia_orthogonal_complement) of a set \\\mathcal{X}\\ of vectors in \\\mathbb{R}^p\\ is the set of vectors orthogonal ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) to every vector of \\\mathcal{X}\\:
 >
 > \\ \mathcal{X}^\perp \stackrel{\text{def}}{=} \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathbb{R}^p : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 0 \text{ for all } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathcal{X}\right\\\mathclose{}. \\
 >
@@ -344,7 +344,7 @@ Last modified: 2026-10-22 09:52:25 (PDT)
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} &= (-2u_2, u_2) \\ &= u_2\\(-2, 1). \end{aligned} \\
 >
-> That set is \\\operatorname{span}\mathopen{}\left\\(-2, 1)\right\\\mathclose{}\\, a subspace by [Theorem 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-span-subspace), as [Theorem 6](#thm-orthogonal-complement-subspace) says it must be. It contains \\(-2, 1)\\, the vector [Remark 9 in Vectors](linear-algebra-vectors.llms.md#rem-orthogonal-perpendicular) found perpendicular to \\(1, 2)\\.
+> That set is \\\operatorname{span}\mathopen{}\left\\(-2, 1)\right\\\mathclose{}\\, a subspace by [Theorem 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-span-subspace), as [Theorem 6](#thm-orthogonal-complement-subspace) says it must be. It contains \\(-2, 1)\\, the vector [Remark 8 in Vectors](linear-algebra-vectors.llms.md#rem-orthogonal-perpendicular) found perpendicular to \\(1, 2)\\.
 
 > **NOTE:**
 >

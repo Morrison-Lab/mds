@@ -4,14 +4,16 @@ Code
 
 Published
 
-Last modified: 2026-10-22 09:52:25 (PDT)
+Last modified: 2026-10-22 22:13:27 (PDT)
 
 ## 1 Optimality conditions in several variables
 
 > **NOTE:**
 >
-> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](proof-writing.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus-derivatives.llms.md#def-critical-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
+> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](proof-writing.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{h}}\vphantom{h}}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus-derivatives.llms.md#def-critical-point) give “critical point” a wider meaning. The source states these results for differentiable functions without saying how smooth; here the first-order results assume continuous first partial derivatives, and the second-order results continuous second partial derivatives. These parts of the source are not part of this section:
 >
+> - its remark that maximizing \\f\\ is minimizing \\-f\\, and its classification of constraints
+> - its figure of local, strict local and global minima
 > - its one-variable Taylor example and its plots
 > - matrix calculus
 > - convexity
@@ -135,9 +137,9 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >     {"beta": [beta_hat, np.zeros(2)], "gradient": [grad_hat, grad_zero]},
 >     index=["solution", "zero vector"],
 > )
-> #>                                                   beta                                        gradient
-> #> solution     [39.93586102117057, -0.15784473335365445]  [9.471534667682135e-12, 6.662048690486699e-11]
-> #> zero vector                                 [0.0, 0.0]               [-18381.600000000006, -1737437.6]
+> #>                                beta                gradient
+> #> solution     [39.935861, -0.157845]              [0.0, 0.0]
+> #> zero vector              [0.0, 0.0]  [-18381.6, -1737437.6]
 > ```
 >
 > A library fit gives the same coefficients:
@@ -376,7 +378,7 @@ This theorem is the case \\n = 2\\ of [\[4\]](#ref-rudin1976principles), Theorem
 
 > **NOTE:**
 >
-> This section is adapted from the convexity part of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of [Section 1](#sec-optimality-vector). The source defines both concave and strictly concave as “\\-f\\ is strictly convex”; here \\f\\ is concave when \\-f\\ is convex. These parts of the source are not part of this section:
+> This section is adapted from the convexity part of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of [Section 1](#sec-optimality-vector). The source defines both concave and strictly concave as “\\-f\\ is strictly convex”; here \\f\\ is concave when \\-f\\ is convex. The source states that an intersection of convex sets is convex and that a maximum of convex functions is convex for any finite number of them; here each is stated for two and the general case follows by induction. These parts of the source are not part of this section:
 >
 > - its catalogs of convex sets and convex functions, including the positive semidefinite matrices and \\-\log \det\\
 > - intersections of infinitely many convex sets, and suprema of infinitely many convex functions

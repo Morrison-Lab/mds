@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 09:52:25 (PDT)
+Last modified: 2026-10-22 22:13:27 (PDT)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -64,7 +64,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 >
 > Let
 >
-> \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\
+> \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}{\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}}\\
 >
 > Find \\\frac{\partial f}{\partial \mu}\\ and \\\frac{\partial f}{\partial \sigma}\\.
 
@@ -72,11 +72,11 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 >
 > *Solution 2*. **1. Derivative with respect to \\\mu\\:** Treat \\\sigma\\ as constant. Differentiating the exponential factor via the chain rule:
 >
-> \\\begin{aligned} \frac{\partial f}{\partial \mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right\]\mathclose{} \\ &= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma) \end{aligned}\\
+> \\\begin{aligned} \frac{\partial f}{\partial \mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}{\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}} \cdot\mathopen{}\left\[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right\]\mathclose{} \\ &= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma) \end{aligned}\\
 >
-> **2. Derivative with respect to \\\sigma\\:** Write \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\ and apply the product rule:
+> **2. Derivative with respect to \\\sigma\\:** Write \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}{\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}}\\ and apply the product rule:
 >
-> \\\begin{aligned} \frac{\partial f}{\partial \sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[\frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} \\ &= \mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma) \end{aligned}\\
+> \\\begin{aligned} \frac{\partial f}{\partial \sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}{\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}{\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}} \cdot\mathopen{}\left\[\frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} \\ &= \mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma) \end{aligned}\\
 >
 > *Remark:* Setting \\\frac{\partial f}{\partial \mu} = 0\\ and \\\frac{\partial f}{\partial \sigma} = 0\\ for a sample of independent observations leads directly to the values that make the sample most probable, which statistics calls the maximum likelihood estimates: \\\hat{\mu}= \bar{x}\\ and \\\hat{\sigma}^2 = \frac{1}{n}\sum\_{i=1}^n(x_i - \bar{x})^2\\.
 
@@ -84,7 +84,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 >
 > **Theorem 1 (Partial derivatives of the normal density with respect to its parameters)** Let \\\mu\in \mathbb{R}\\ and \\\sigma\> 0\\, and let
 >
-> \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\
+> \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}{\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}}\\
 >
 > Then for every \\x \in \mathbb{R}\\,
 >
@@ -95,7 +95,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 > *Proof*. This is the solution to [Exercise 2](#exr-miller-pderiv-normal-parameters), worked in [Solution 2](#sol-miller-pderiv-normal-parameters). The argument has two steps.
 >
 > 1.  For \\\frac{\partial f}{\partial \mu}\\, treat \\\sigma\\ as constant. The prefactor is constant, so the chain rule on the exponential gives \\\frac{\partial f}{\partial \mu} = f(x; \mu, \sigma) \cdot\mathopen{}\left\[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right\]\mathclose{} = \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma)\\.
-> 2.  For \\\frac{\partial f}{\partial \sigma}\\, write \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\. The product rule gives one term from differentiating \\\sigma^{-1}\\, namely \\-\sigma^{-1} f(x; \mu, \sigma)\\, and one from the chain rule on the exponential, namely \\\frac{(x - \mu)^2}{\sigma^3} f(x; \mu, \sigma)\\. Adding them gives \\\mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma)\\.
+> 2.  For \\\frac{\partial f}{\partial \sigma}\\, write \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}{\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}}\\. The product rule gives one term from differentiating \\\sigma^{-1}\\, namely \\-\sigma^{-1} f(x; \mu, \sigma)\\, and one from the chain rule on the exponential, namely \\\frac{(x - \mu)^2}{\sigma^3} f(x; \mu, \sigma)\\. Adding them gives \\\mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma)\\.
 
 > **NOTE:**
 >
@@ -103,17 +103,17 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 >
 > Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
-> \\f(x, y) = x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
+> \\f(x, y) = x{\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
 > *Solution 3*. With respect to \\x\\, apply the product rule:
 >
-> \\ \begin{aligned} \frac{\partial f}{\partial x} &= (1)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} + x \cdot\mathopen{}\left\[2x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} \\ &= (1 + 2x^2)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial f}{\partial x} &= (1){\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}} + x \cdot\mathopen{}\left\[2x{\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}}\right\]\mathclose{} \\ &= (1 + 2x^2){\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}} \end{aligned} \\
 >
 > With respect to \\y\\, treat \\x\\ as constant:
 >
-> \\ \begin{aligned} \frac{\partial f}{\partial y} &= x \cdot\mathopen{}\left\[2y\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} \\ &= 2xy\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial f}{\partial y} &= x \cdot\mathopen{}\left\[2y{\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}}\right\]\mathclose{} \\ &= 2xy{\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -831,7 +831,7 @@ See Felippa [\[12\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Exercise 7 (A gradient that does not mention its variable)** Fix
+> **Exercise 7 (A gradient that does not mention its variable)** Take
 >
 > \\A = \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix}\\
 >

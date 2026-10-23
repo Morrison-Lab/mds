@@ -5394,6 +5394,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-sum-of-elements",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-sum-of-elements",
+   "kind": "def",
+   "title": "Sum of the elements of a vector",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-svd",
    "site": "mds",
    "page": "linear-algebra",
@@ -6624,6 +6633,15 @@
    "div": "thm-subspace-zero",
    "kind": "thm",
    "title": "Every subspace contains the zero vector",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#thm-sum-dot-ones",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-sum-dot-ones",
+   "kind": "thm",
+   "title": "The ones vector sums the entries",
    "external": false
   },
   {
@@ -9174,6 +9192,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-vectors#def-sum-of-elements",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "def-sum-of-elements",
+   "kind": "def",
+   "title": "Sum of the elements of a vector",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-vectors#def-transpose",
    "site": "mds",
    "page": "linear-algebra-vectors",
@@ -9243,6 +9270,15 @@
    "div": "thm-standard-basis-expansion",
    "kind": "thm",
    "title": "A vector is a linear combination of indicator vectors",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-vectors#thm-sum-dot-ones",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "thm-sum-dot-ones",
+   "kind": "thm",
+   "title": "The ones vector sums the entries",
    "external": false
   },
   {
@@ -10485,6 +10521,42 @@
    "div": "thm-proof-by-contradiction",
    "kind": "thm",
    "title": "A proof by contradiction proves its proposition",
+   "external": false
+  },
+  {
+   "id": "mds/relations#def-equivalence-class",
+   "site": "mds",
+   "page": "relations",
+   "div": "def-equivalence-class",
+   "kind": "def",
+   "title": "Equivalence class",
+   "external": false
+  },
+  {
+   "id": "mds/relations#def-equivalence-relation",
+   "site": "mds",
+   "page": "relations",
+   "div": "def-equivalence-relation",
+   "kind": "def",
+   "title": "Equivalence relation",
+   "external": false
+  },
+  {
+   "id": "mds/relations#def-reflexive",
+   "site": "mds",
+   "page": "relations",
+   "div": "def-reflexive",
+   "kind": "def",
+   "title": "Reflexive relation",
+   "external": false
+  },
+  {
+   "id": "mds/relations#def-symmetric-relation",
+   "site": "mds",
+   "page": "relations",
+   "div": "def-symmetric-relation",
+   "kind": "def",
+   "title": "Symmetric relation",
    "external": false
   },
   {
@@ -13657,6 +13729,10 @@
    "mds/linear-algebra#def-subspace"
   ],
   [
+   "mds/linear-algebra#def-sum-of-elements",
+   "mds/algebra#def-summation"
+  ],
+  [
    "mds/linear-algebra#def-svd",
    "mds/linear-algebra#thm-svd"
   ],
@@ -14307,6 +14383,18 @@
   [
    "mds/linear-algebra#thm-subspace-zero",
    "mds/linear-algebra#def-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-sum-dot-ones",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra#thm-sum-dot-ones",
+   "mds/linear-algebra#def-ones-vector"
+  ],
+  [
+   "mds/linear-algebra#thm-sum-dot-ones",
+   "mds/linear-algebra#def-sum-of-elements"
   ],
   [
    "mds/linear-algebra#thm-sum-intersection-subspace",
@@ -15197,6 +15285,10 @@
    "mds/number-systems#def-real-numbers"
   ],
   [
+   "mds/linear-algebra-vectors#def-sum-of-elements",
+   "mds/algebra#def-summation"
+  ],
+  [
    "mds/linear-algebra-vectors#def-transpose",
    "mds/functions#def-sequence"
   ],
@@ -15215,6 +15307,18 @@
   [
    "mds/linear-algebra-vectors#thm-standard-basis-expansion",
    "mds/linear-algebra-vectors#def-linear-combination"
+  ],
+  [
+   "mds/linear-algebra-vectors#thm-sum-dot-ones",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra-vectors#thm-sum-dot-ones",
+   "mds/linear-algebra-vectors#def-ones-vector"
+  ],
+  [
+   "mds/linear-algebra-vectors#thm-sum-dot-ones",
+   "mds/linear-algebra-vectors#def-sum-of-elements"
   ],
   [
    "mds/measures#cor-measure-finitely-additive",
@@ -16207,6 +16311,58 @@
   [
    "mds/proof-writing#thm-proof-by-contradiction",
    "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/relations#def-equivalence-class",
+   "mds/relations#def-equivalence-relation"
+  ],
+  [
+   "mds/relations#def-equivalence-class",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/algebra#def-transitive"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/functions#def-relation"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/relations#def-reflexive"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/relations#def-symmetric-relation"
+  ],
+  [
+   "mds/relations#def-equivalence-relation",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/relations#def-reflexive",
+   "mds/functions#def-relation"
+  ],
+  [
+   "mds/relations#def-reflexive",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/relations#def-symmetric-relation",
+   "mds/functions#def-relation"
+  ],
+  [
+   "mds/relations#def-symmetric-relation",
+   "mds/proof-writing#def-implies"
+  ],
+  [
+   "mds/relations#def-symmetric-relation",
+   "mds/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/relations#def-symmetric-relation",
+   "mds/sets#def-set"
   ],
   [
    "mds/sets#def-bound",

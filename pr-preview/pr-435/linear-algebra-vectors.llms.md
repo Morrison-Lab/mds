@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 09:52:25 (PDT)
+Last modified: 2026-10-22 22:13:27 (PDT)
 
 ## 1 Vectors
 
@@ -119,7 +119,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 9 (Linear combination)** A **linear combination** of the numbers \\a_1, \ldots, a_k\\ with coefficients \\c_1, \ldots, c_k\\ ([Definition 10](#def-lincom-coefficient)) is the weighted sum
+> **Definition 9 (Linear combination)** A **linear combination** of the numbers \\a_1, \ldots, a_k\\ with coefficients \\c_1, \ldots, c_k\\ is the weighted sum
 >
 > \\c_1 a_1 + \cdots + c_k a_k = \sum\_{i=1}^{k} c_i a_i\\
 >
@@ -191,29 +191,49 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 7* (The ones vector sums the entries). The dot product ([Definition 8](#def-dot-product)) of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is the sum of the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\:
+> **Definition 14 (Sum of the elements of a vector)** The **sum of the elements** of a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ is the [sum](algebra-sums.llms.md#def-summation) of its entries:
 >
-> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}&= \sum\_{i=1}^p1 \cdot x_i \\ &= \sum\_{i=1}^px_i. \end{aligned} \\
+> \\ {s\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}} \stackrel{\text{def}}{=}\sum\_{i=1}^px_i. \\
 >
-> For example, for \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (2, -1, 5)\\,
->
-> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}&= 2 + (-1) + 5 \\ &= 6, \end{aligned} \\
->
-> and dividing by the length \\p = 3\\ gives the [mean](#def-mean) of the entries, \\6 / 3 = 2\\.
+> In words, \\{s\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}}\\ is the entries of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ added together.
 
 > **NOTE:**
 >
-> **Definition 14 (Indicator vector (standard basis vector))** The \\j\\-th **indicator vector** (or **standard basis vector** [\[6\]](#ref-wikipedia_standard_basis) ) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ of length \\p\\ has a \\1\\ in position \\j\\ and \\0\\s elsewhere:
+> **Example 9 (The sum of the elements of a vector with three entries)** For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (2, -1, 5)\\,
+>
+> \\ \begin{aligned} {s\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}} &= 2 + (-1) + 5 && \text{(definition of the sum of the elements, with } p = 3 \text{)} \\ &= 6. && \text{(add)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Theorem 2 (The ones vector sums the entries)** For every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\, the [sum of the elements](#def-sum-of-elements) of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is the [dot product](#def-dot-product) of the [ones vector](#def-ones-vector) with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\:
+>
+> \\ {s\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}. \\
+
+> **NOTE:**
+>
+> *Proof*. \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} &= \sum\_{i=1}^p1 \cdot x_i && \text{(}\href{#def-dot-product}{\text{Definition~8}}\text{, with every entry of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}} \text{ equal to } 1 \text{)} \\ &= \sum\_{i=1}^px_i && \text{(multiply each entry by } 1 \text{)} \\ &= {s\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}}. && \text{(}\href{#def-sum-of-elements}{\text{Definition~14}}\text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 10 (The ones vector applied to a vector with three entries)** For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (2, -1, 5)\\ and the [ones vector](#def-ones-vector) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}}\\ with three entries,
+>
+> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{1}}\vphantom{1}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} &= 1 \cdot 2 + 1 \cdot(-1) + 1 \cdot 5 && \text{(}\href{#def-dot-product}{\text{Definition~8}}\text{)} \\ &= 6, && \text{(multiply and add)} \end{aligned} \\
+>
+> which is \\{s\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}}\\, as in [Example 9](#exm-sum-of-elements). Dividing by \\p = 3\\ gives the [mean](#def-mean) of the entries, \\6 / 3 = 2\\.
+
+> **NOTE:**
+>
+> **Definition 15 (Indicator vector (standard basis vector))** The \\j\\-th **indicator vector** (or **standard basis vector** [\[6\]](#ref-wikipedia_standard_basis) ) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ of length \\p\\ has a \\1\\ in position \\j\\ and \\0\\s elsewhere:
 >
 > \\ (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j)\_i = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases} \qquad \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j = \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix} \leftarrow \text{position } j \\
 
 > **NOTE:**
 >
-> *Remark 8* (Indicator vectors build every vector). For \\p = 3\\, the indicator vectors are \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 = (1, 0, 0)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 = (0, 1, 0)\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3 = (0, 0, 1)\\. Every vector of length \\3\\ is a weighted sum \\c_1\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + c_2\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + c_3\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3\\ of them, with weights equal to its entries; for example, \\(2, -1, 5) = 2\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 - 1\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + 5\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3\\. No other weights work: entry \\j\\ of \\c_1\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + c_2\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + c_3\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3\\ is \\c_j\\, so each weight \\c_j\\ must equal entry \\j\\ of the vector.
+> *Remark 7* (Indicator vectors build every vector). For \\p = 3\\, the indicator vectors are \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 = (1, 0, 0)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 = (0, 1, 0)\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3 = (0, 0, 1)\\. Every vector of length \\3\\ is a weighted sum \\c_1\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + c_2\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + c_3\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3\\ of them, with weights equal to its entries; for example, \\(2, -1, 5) = 2\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 - 1\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + 5\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3\\. No other weights work: entry \\j\\ of \\c_1\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + c_2\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + c_3\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3\\ is \\c_j\\, so each weight \\c_j\\ must equal entry \\j\\ of the vector.
 
 > **NOTE:**
 >
-> **Theorem 2 (Indicator vectors select entries)** For any vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ of length \\p\\ and any \\j \in \\1, \ldots, p\\\\:
+> **Theorem 3 (Indicator vectors select entries)** For any vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ of length \\p\\ and any \\j \in \\1, \ldots, p\\\\:
 >
 > \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= x_j\\
 
@@ -225,7 +245,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Theorem 3 (A vector is a linear combination of indicator vectors)** Every vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ is the linear combination ([Definition 9](#def-linear-combination)) of the indicator vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\ ([Definition 14](#def-indicator-vector)) with coefficients \\x_1, \ldots, x_p\\:
+> **Theorem 4 (A vector is a linear combination of indicator vectors)** Every vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\ is the linear combination ([Definition 9](#def-linear-combination)) of the indicator vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\ ([Definition 15](#def-indicator-vector)) with coefficients \\x_1, \ldots, x_p\\:
 >
 > \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \sum\_{j=1}^px_j \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\
 
@@ -233,23 +253,23 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Proof*. Compare the two sides entry by entry. For each \\i \in \\1, \ldots, p\\\\:
 >
-> \\ \begin{aligned} \mathopen{}\left(\sum\_{j=1}^px_j \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\right)\mathclose{}\_i &= \sum\_{j=1}^px_j (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j)\_i && \text{(}\href{#def-linear-combination}{\text{Definition~9}}\text{, entry by entry)} \\&= \sum\_{j=1}^p \begin{cases} x_j \cdot 1 & \text{if } j = i \\ x_j \cdot 0 & \text{if } j \neq i \end{cases} && \text{(}\href{#def-indicator-vector}{\text{Definition~14}}\text{)} \\&= x_i \cdot 1 + \sum\_{j \neq i} x_j \cdot 0 && \text{(split off the } j = i \text{ term)} \\&= x_i + 0 && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)} \\&= x_i && \text{(adding } 0 \text{ changes nothing)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(\sum\_{j=1}^px_j \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\right)\mathclose{}\_i &= \sum\_{j=1}^px_j (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j)\_i && \text{(}\href{#def-linear-combination}{\text{Definition~9}}\text{, entry by entry)} \\&= \sum\_{j=1}^p \begin{cases} x_j \cdot 1 & \text{if } j = i \\ x_j \cdot 0 & \text{if } j \neq i \end{cases} && \text{(}\href{#def-indicator-vector}{\text{Definition~15}}\text{)} \\&= x_i \cdot 1 + \sum\_{j \neq i} x_j \cdot 0 && \text{(split off the } j = i \text{ term)} \\&= x_i + 0 && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)} \\&= x_i && \text{(adding } 0 \text{ changes nothing)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 9 (Expanding a vector in indicator vectors)** \\ \begin{aligned} \begin{bmatrix}4 \\ -1 \\ 2\end{bmatrix} &= 4 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + (-1) \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 2 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \\ &= 4 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + 2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3 \end{aligned} \\
+> **Example 11 (Expanding a vector in indicator vectors)** \\ \begin{aligned} \begin{bmatrix}4 \\ -1 \\ 2\end{bmatrix} &= 4 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + (-1) \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 2 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \\ &= 4 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + 2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3 \end{aligned} \\
 
 ### 1.2 Orthogonality
 
 > **NOTE:**
 >
-> **Definition 15 (Orthogonal vectors)** Two vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ of the same length are **orthogonal** [\[7\]](#ref-wikipedia_orthogonality) (written \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\perp \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\) if their dot product ([Definition 8](#def-dot-product)) is zero:
+> **Definition 16 (Orthogonal vectors)** Two vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ of the same length are **orthogonal** [\[7\]](#ref-wikipedia_orthogonality) (written \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\perp \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\) if their dot product ([Definition 8](#def-dot-product)) is zero:
 >
 > \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\perp \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\iff \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= 0\\
 
 > **NOTE:**
 >
-> *Remark 9* (Orthogonal means perpendicular). Orthogonality extends the geometric idea of perpendicular lines to vectors with any number of entries. In the plane, \\(1, 2)\\ and \\(-2, 1)\\ are perpendicular, and their dot product is \\1 \cdot(-2) + 2 \cdot 1 = 0\\. The same test works in \\\mathbb{R}^3\\, where pictures are harder to draw:
+> *Remark 8* (Orthogonal means perpendicular). Orthogonality extends the geometric idea of perpendicular lines to vectors with any number of entries. In the plane, \\(1, 2)\\ and \\(-2, 1)\\ are perpendicular, and their dot product is \\1 \cdot(-2) + 2 \cdot 1 = 0\\. The same test works in \\\mathbb{R}^3\\, where pictures are harder to draw:
 >
 > \\ \begin{aligned} (1, 1, 0) \cdot (1, -1, 5) &= 1 - 1 + 0 \\ &= 0, \end{aligned} \\
 >
@@ -257,13 +277,13 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 10 (Vectors that are not orthogonal)** \\ \begin{aligned} (1, 2) \cdot (1, 1) &= 1 \cdot 1 + 2 \cdot 1 \\ &= 3 \\ &\ne 0, \end{aligned} \\
+> **Example 12 (Vectors that are not orthogonal)** \\ \begin{aligned} (1, 2) \cdot (1, 1) &= 1 \cdot 1 + 2 \cdot 1 \\ &= 3 \\ &\ne 0, \end{aligned} \\
 >
 > so \\(1, 2)\\ and \\(1, 1)\\ are not orthogonal.
 
 > **NOTE:**
 >
-> **Definition 16 (Euclidean norm (length, \\L_2\\ norm))** The **Euclidean norm** [\[8\]](#ref-wikipedia_euclidean_vector) (or **length**, also called the **\\L_2\\ norm** and written \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\_2\\) of a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ of length \\p\\ is
+> **Definition 17 (Euclidean norm (length, \\L_2\\ norm))** The **Euclidean norm** [\[8\]](#ref-wikipedia_euclidean_vector) (or **length**, also called the **\\L_2\\ norm** and written \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\_2\\) of a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ of length \\p\\ is
 >
 > \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} = \sqrt{\sum\_{i=1}^px_i^2} \tag{2}\\
 >
@@ -271,7 +291,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 11 (The length of a vector)** For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (3, 4)\\:
+> **Example 13 (The length of a vector)** For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (3, 4)\\:
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} &= \sqrt{3^2 + 4^2} && \text{(definition of the norm)} \\ &= \sqrt{25} && \text{(square and add)} \\ &= 5 \end{aligned} \\
 >
@@ -279,11 +299,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 17 (Unit vector)** A **unit vector** [\[9\]](#ref-wikipedia_unit_vector) is a vector whose Euclidean norm ([Definition 16](#def-euclidean-norm)) is \\1\\. A unit vector is said to have *unit length*.
+> **Definition 18 (Unit vector)** A **unit vector** [\[9\]](#ref-wikipedia_unit_vector) is a vector whose Euclidean norm ([Definition 17](#def-euclidean-norm)) is \\1\\. A unit vector is said to have *unit length*.
 
 > **NOTE:**
 >
-> **Example 12 (A unit vector and a vector that is not one)** For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (0.6, 0.8)\\:
+> **Example 14 (A unit vector and a vector that is not one)** For \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (0.6, 0.8)\\:
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} &= \sqrt{0.6^2 + 0.8^2} && \text{(definition of the norm)} \\ &= \sqrt{0.36 + 0.64} && \text{(square)} \\ &= \sqrt{1} && \text{(add)} \\ &= 1 && \text{(take the square root)} \end{aligned} \\
 >
@@ -315,29 +335,29 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 18 (Euclidean distance)** The **Euclidean distance** [\[10\]](#ref-wikipedia_euclidean_distance) between two vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ of length \\p\\ is the [Euclidean norm](#def-euclidean-norm) of their difference:
+> **Definition 19 (Euclidean distance)** The **Euclidean distance** [\[10\]](#ref-wikipedia_euclidean_distance) between two vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ of length \\p\\ is the [Euclidean norm](#def-euclidean-norm) of their difference:
 >
 > \\d(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = \sqrt{\sum\_{i=1}^p(x_i - y_i)^2} \tag{3}\\
 
 > **NOTE:**
 >
-> *Remark 10* (Distance from the origin). The distance from the origin \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ to a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is the norm of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\:
+> *Remark 9* (Distance from the origin). The distance from the origin \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ to a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is the norm of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\:
 >
 > \\ \begin{aligned} d(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}) &= \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\rVert\mathclose{} \\ &= \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \end{aligned} \\
 >
 > [\[11, p. 39\]](#ref-goodfellow2016deep).
 >
-> For example, the distance from \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ to \\(3, 4)\\ is \\\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\\, as in [Example 11](#exm-euclidean-norm).
+> For example, the distance from \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ to \\(3, 4)\\ is \\\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\\, as in [Example 13](#exm-euclidean-norm).
 
 > **NOTE:**
 >
-> **Definition 19 (Orthonormal vectors)** A set of vectors \\\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_1, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_2, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_k\\\\ is **orthonormal** if the vectors are mutually orthogonal ([Definition 15](#def-orthogonal-vectors)) and each has norm \\1\\ ([Definition 16](#def-euclidean-norm)), that is, [unit length](#def-unit-vector):
+> **Definition 20 (Orthonormal vectors)** A set of vectors \\\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_1, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_2, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_k\\\\ is **orthonormal** if the vectors are mutually orthogonal ([Definition 16](#def-orthogonal-vectors)) and each has norm \\1\\ ([Definition 17](#def-euclidean-norm)), that is, [unit length](#def-unit-vector):
 >
 > \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_j = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases}\\
 
 > **NOTE:**
 >
-> **Example 13 (Indicator vectors are orthonormal)** The indicator vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\ ([Definition 14](#def-indicator-vector)) form an orthonormal set. By [Theorem 2](#thm-indicator-selection), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ is entry \\i\\ of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\, which is \\1\\ if \\i = j\\ and \\0\\ if \\i \neq j\\. For \\p = 2\\:
+> **Example 15 (Indicator vectors are orthonormal)** The indicator vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\ ([Definition 15](#def-indicator-vector)) form an orthonormal set. By [Theorem 3](#thm-indicator-selection), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_i \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\ is entry \\i\\ of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\\, which is \\1\\ if \\i = j\\ and \\0\\ if \\i \neq j\\. For \\p = 2\\:
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 &= 1 \cdot 1 + 0 \cdot 0 \\ &= 1, \end{aligned} \\
 >
@@ -349,7 +369,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 14 (Two ways to fail to be orthonormal)**  
+> **Example 16 (Two ways to fail to be orthonormal)**  
 >
 > - \\(1, 1)\\ and \\(1, -1)\\ are orthogonal, since \\1 \cdot 1 + 1 \cdot(-1) = 0\\, but not orthonormal: \\(1, 1) \cdot (1, 1) = 2 \ne 1\\.
 >

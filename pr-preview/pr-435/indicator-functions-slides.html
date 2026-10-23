@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-22 09:52:25 (PDT)</p>
+  <p class="date">Last modified: 2026-10-22 22:13:27 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -328,7 +328,7 @@
 <div id="def-predicate-indicator" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Predicate indicator)</strong></span> For any logical proposition or predicate <span class="math inline">\(P\)</span>, the <strong>indicator</strong> of <span class="math inline">\(P\)</span>, or <strong>predicate indicator</strong>, takes the value <span class="math inline">\(1\)</span> when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(0\)</span> when <span class="math inline">\(P\)</span> is false:</p>
 <p><span class="math display">\[
-\mathbb{1}\mathopen{}\left(P\right)\mathclose{} \stackrel{\text{def}}{=}\begin{cases}
+{\mathbb{1}\mathopen{}\left(P\right)\mathclose{}} \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; \text{if } P \text{ is true} \\
 0, &amp; \text{if } P \text{ is false}
 \end{cases}
@@ -345,10 +345,10 @@
 <li>For <span class="math inline">\(x = 3.5\)</span>: since <span class="math inline">\(3.5 \in [0, \infty)\)</span>, <span class="math inline">\(\mathbb{1}_{A}(3.5) = 1\)</span>.</li>
 <li>For <span class="math inline">\(x = -2.1\)</span>: since <span class="math inline">\(-2.1 \notin [0, \infty)\)</span>, <span class="math inline">\(\mathbb{1}_{A}(-2.1) = 0\)</span>.</li>
 </ul></li>
-<li>Predicate indicator <span class="math inline">\(\mathbb{1}\mathopen{}\left(Y &gt; 5\right)\mathclose{}\)</span>:
+<li>Predicate indicator <span class="math inline">\({\mathbb{1}\mathopen{}\left(Y &gt; 5\right)\mathclose{}}\)</span>:
 <ul>
-<li>If an observation yields <span class="math inline">\(Y = 7.2\)</span>, the predicate <span class="math inline">\(7.2 &gt; 5\)</span> is true, so <span class="math inline">\(\mathbb{1}\mathopen{}\left(7.2 &gt; 5\right)\mathclose{} = 1\)</span>.</li>
-<li>If an observation yields <span class="math inline">\(Y = 4.1\)</span>, the predicate <span class="math inline">\(4.1 &gt; 5\)</span> is false, so <span class="math inline">\(\mathbb{1}\mathopen{}\left(4.1 &gt; 5\right)\mathclose{} = 0\)</span>.</li>
+<li>If an observation yields <span class="math inline">\(Y = 7.2\)</span>, the predicate <span class="math inline">\(7.2 &gt; 5\)</span> is true, so <span class="math inline">\({\mathbb{1}\mathopen{}\left(7.2 &gt; 5\right)\mathclose{}} = 1\)</span>.</li>
+<li>If an observation yields <span class="math inline">\(Y = 4.1\)</span>, the predicate <span class="math inline">\(4.1 &gt; 5\)</span> is false, so <span class="math inline">\({\mathbb{1}\mathopen{}\left(4.1 &gt; 5\right)\mathclose{}} = 0\)</span>.</li>
 </ul></li>
 </ol>
 </div>
@@ -362,8 +362,8 @@
 <section class="slide level2">
 
 <div id="exm-binary-variable" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (A binary variable is an indicator)</strong></span> In a study of <span class="math inline">\(n\)</span> people, let <span class="math inline">\(s_i = 1\)</span> if person <span class="math inline">\(i\)</span> smokes and <span class="math inline">\(s_i = 0\)</span> otherwise, for <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>. Then <span class="math inline">\(s_i\)</span> is a binary variable (<a href="#/def-binary-variable" class="quarto-xref">Definition&nbsp;3</a>). It is also the predicate indicator (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) of the proposition “person <span class="math inline">\(i\)</span> smokes”: <span class="math inline">\(s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\)</span>.</p>
-<p>In the same way, every indicator is a binary variable, and every binary variable <span class="math inline">\(X\)</span> is the indicator of its own value being <span class="math inline">\(1\)</span>: <span class="math inline">\(X = \mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}\)</span>, since both sides are <span class="math inline">\(1\)</span> when <span class="math inline">\(X = 1\)</span> and <span class="math inline">\(0\)</span> when <span class="math inline">\(X = 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 2 (A binary variable is an indicator)</strong></span> In a study of <span class="math inline">\(n\)</span> people, let <span class="math inline">\(s_i = 1\)</span> if person <span class="math inline">\(i\)</span> smokes and <span class="math inline">\(s_i = 0\)</span> otherwise, for <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>. Then <span class="math inline">\(s_i\)</span> is a binary variable (<a href="#/def-binary-variable" class="quarto-xref">Definition&nbsp;3</a>). It is also the predicate indicator (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) of the proposition “person <span class="math inline">\(i\)</span> smokes”: <span class="math inline">\(s_i = {\mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}}\)</span>.</p>
+<p>In the same way, every indicator is a binary variable, and every binary variable <span class="math inline">\(X\)</span> is the indicator of its own value being <span class="math inline">\(1\)</span>: <span class="math inline">\(X = {\mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}}\)</span>, since both sides are <span class="math inline">\(1\)</span> when <span class="math inline">\(X = 1\)</span> and <span class="math inline">\(0\)</span> when <span class="math inline">\(X = 0\)</span>.</p>
 </div>
 <h3 id="two-primary-notational-paradigms-set-vs.-predicate-notation">Two primary notational paradigms: set vs.&nbsp;predicate notation</h3>
 <p>The vast majority of indicator notations belong to one of two families: set notation or predicate notation.</p>
@@ -377,13 +377,13 @@
 <section class="slide level2">
 
 <div id="def-predicate-notation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Predicate notation for indicators)</strong></span> An indicator (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) is written in <strong>predicate notation</strong> when a proposition or predicate <span class="math inline">\(P\)</span> (<a href="./proof-writing.html#def-predicate">definition</a>) appears as its argument, as in <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 5 (Predicate notation for indicators)</strong></span> An indicator (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) is written in <strong>predicate notation</strong> when a proposition or predicate <span class="math inline">\(P\)</span> (<a href="./proof-writing.html#def-predicate">definition</a>) appears as its argument, as in <span class="math inline">\({\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\)</span> or <span class="math inline">\({\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-set-predicate-notation" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (One indicator in both notations)</strong></span> Let <span class="math inline">\(A = [0, \infty)\)</span>, the nonnegative real numbers. The indicator of <span class="math inline">\(A\)</span> is <span class="math inline">\(\mathbb{1}_{A}(x)\)</span> in set notation, and <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\)</span> in predicate notation (<a href="#/def-set-predicate-notation" class="quarto-xref">Definition&nbsp;4</a>, <a href="#/def-predicate-notation" class="quarto-xref">Definition&nbsp;5</a>). At <span class="math inline">\(x = 3.5\)</span>, all three equal <span class="math inline">\(1\)</span>; at <span class="math inline">\(x = -2.1\)</span>, all three equal <span class="math inline">\(0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 3 (One indicator in both notations)</strong></span> Let <span class="math inline">\(A = [0, \infty)\)</span>, the nonnegative real numbers. The indicator of <span class="math inline">\(A\)</span> is <span class="math inline">\(\mathbb{1}_{A}(x)\)</span> in set notation, and <span class="math inline">\({\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}\)</span> or <span class="math inline">\({\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}}\)</span> in predicate notation (<a href="#/def-set-predicate-notation" class="quarto-xref">Definition&nbsp;4</a>, <a href="#/def-predicate-notation" class="quarto-xref">Definition&nbsp;5</a>). At <span class="math inline">\(x = 3.5\)</span>, all three equal <span class="math inline">\(1\)</span>; at <span class="math inline">\(x = -2.1\)</span>, all three equal <span class="math inline">\(0\)</span>.</p>
 </div>
 <h4 id="set-notation">Set notation</h4>
 <p>In set notation, the indicator is tied to a set <span class="math inline">\(A\)</span>, which appears as a subscript:</p>
@@ -404,7 +404,7 @@
 <li><span class="math inline">\(\mathbb{1}\{x \in A\}\)</span> or <span class="math inline">\(\mathbb{1}\{P\}\)</span></li>
 <li><span class="math inline">\(I(x \in A)\)</span> or <span class="math inline">\(I(P)\)</span></li>
 </ul>
-<p>Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities (<a href="./proof-writing.html#def-inequality">definition</a>) involving random variables, such as <span class="math inline">\(\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}\)</span> (an event occurring before time <span class="math inline">\(t\)</span>) or <span class="math inline">\(\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}\)</span> (a binary outcome).</p>
+<p>Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities (<a href="./proof-writing.html#def-inequality">definition</a>) involving random variables, such as <span class="math inline">\({\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}}\)</span> (an event occurring before time <span class="math inline">\(t\)</span>) or <span class="math inline">\({\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}}\)</span> (a binary outcome).</p>
 <h4 id="equivalence-between-paradigms">Equivalence between paradigms</h4>
 <p>The two paradigms are connected by evaluating the predicate indicator at the membership statement <span class="math inline">\(x \in A\)</span>:</p>
 <p><span class="math display">\[
@@ -426,7 +426,7 @@
 </section>
 <section class="slide level2">
 
-<p>Set notation is more natural when the underlying set <span class="math inline">\(A\)</span> has a standard name (such as the support of a distribution (<a href="#/def-support" class="quarto-xref">Definition&nbsp;6</a>), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as <span class="math inline">\(\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\)</span>.</p>
+<p>Set notation is more natural when the underlying set <span class="math inline">\(A\)</span> has a standard name (such as the support of a distribution (<a href="#/def-support" class="quarto-xref">Definition&nbsp;6</a>), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as <span class="math inline">\({\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}}\)</span>.</p>
 <h3 id="iverson-bracket-notation">Iverson bracket notation</h3>
 <p>In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the Iverson bracket <span class="citation" data-cites="wikipedia_iverson_bracket"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span>.</p>
 </section>
@@ -456,10 +456,10 @@
 <section class="slide level2">
 
 <div id="rem-iverson-indicator" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (The Iverson bracket is the predicate indicator). </span>The Iverson bracket <span class="math inline">\([P]\)</span> is the predicate indicator <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) in different notation. Under this notation, set membership is written <span class="math inline">\([x \in A]\)</span>, so <span class="math inline">\([x \in A] = \mathbb{1}_{A}(x)\)</span>. For example, the values in <a href="#/exm-indicator-numerical" class="quarto-xref">Example&nbsp;1</a> become</p>
+<p><span class="proof-title"><em>Remark 1</em> (The Iverson bracket is the predicate indicator). </span>The Iverson bracket <span class="math inline">\([P]\)</span> is the predicate indicator <span class="math inline">\({\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\)</span> (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) in different notation. Under this notation, set membership is written <span class="math inline">\([x \in A]\)</span>, so <span class="math inline">\([x \in A] = \mathbb{1}_{A}(x)\)</span>. For example, the values in <a href="#/exm-indicator-numerical" class="quarto-xref">Example&nbsp;1</a> become</p>
 <p><span class="math display">\[
 \begin{aligned}
-[7.2 &gt; 5] &amp;= \mathbb{1}\mathopen{}\left(7.2 &gt; 5\right)\mathclose{} \\
+[7.2 &gt; 5] &amp;= {\mathbb{1}\mathopen{}\left(7.2 &gt; 5\right)\mathclose{}} \\
 &amp;= 1
 \end{aligned}
 \]</span></p>
@@ -587,8 +587,8 @@ Table&nbsp;1: Notations for indicator functions across mathematical and statisti
 <p>In these notes, we standardize on blackboard bold <span class="math inline">\(\mathbb{1}\)</span> via the macros defined in <code>latex-macros/macros.qmd</code>:</p>
 <ul>
 <li><code>\indic{A}</code> produces <span class="math inline">\(\mathbb{1}_{A}\)</span> (set subscript)</li>
-<li><code>\indicp{P}</code> produces <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> (predicate in parentheses)</li>
-<li><code>\indiccb{P}</code> produces <span class="math inline">\(\mathbb{1}\mathopen{}\left\{P\right\}\mathclose{}\)</span> (predicate in curly braces)</li>
+<li><code>\indicp{P}</code> produces <span class="math inline">\({\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\)</span> (predicate in parentheses)</li>
+<li><code>\indiccb{P}</code> produces <span class="math inline">\({\mathbb{1}\mathopen{}\left\{P\right\}\mathclose{}}\)</span> (predicate in curly braces)</li>
 <li><code>\1{P}</code> produces <span class="math inline">\(\text{1}_{P}\)</span> (text numeral with subscript, used in legacy formulas)</li>
 </ul>
 <p>Blackboard bold <span class="math inline">\(\mathbb{1}\)</span> is preferred because it avoids all common collisions: it is visually distinct from the scalar <span class="math inline">\(1\)</span>, the identity matrix <span class="math inline">\(I\)</span>, and the observed and expected Fisher information matrices (<span class="math inline">\(I\)</span>, <span class="math inline">\(\mathcal{I}\)</span>).</p>

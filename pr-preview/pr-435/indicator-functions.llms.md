@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 09:52:25 (PDT)
+Last modified: 2026-10-22 22:13:27 (PDT)
 
 ## 1 Indicator functions
 
@@ -27,7 +27,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 >
 > **Definition 2 (Predicate indicator)** For any logical proposition or predicate \\P\\, the **indicator** of \\P\\, or **predicate indicator**, takes the value \\1\\ when \\P\\ is true and \\0\\ when \\P\\ is false:
 >
-> \\ \mathbb{1}\mathopen{}\left(P\right)\mathclose{} \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
+> \\ {\mathbb{1}\mathopen{}\left(P\right)\mathclose{}} \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
 > **NOTE:**
 >
@@ -36,9 +36,9 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 > 1.  Set indicator \\\mathbb{1}\_{A}(x)\\:
 >     - For \\x = 3.5\\: since \\3.5 \in \[0, \infty)\\, \\\mathbb{1}\_{A}(3.5) = 1\\.
 >     - For \\x = -2.1\\: since \\-2.1 \notin \[0, \infty)\\, \\\mathbb{1}\_{A}(-2.1) = 0\\.
-> 2.  Predicate indicator \\\mathbb{1}\mathopen{}\left(Y \> 5\right)\mathclose{}\\:
->     - If an observation yields \\Y = 7.2\\, the predicate \\7.2 \> 5\\ is true, so \\\mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} = 1\\.
->     - If an observation yields \\Y = 4.1\\, the predicate \\4.1 \> 5\\ is false, so \\\mathbb{1}\mathopen{}\left(4.1 \> 5\right)\mathclose{} = 0\\.
+> 2.  Predicate indicator \\{\mathbb{1}\mathopen{}\left(Y \> 5\right)\mathclose{}}\\:
+>     - If an observation yields \\Y = 7.2\\, the predicate \\7.2 \> 5\\ is true, so \\{\mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{}} = 1\\.
+>     - If an observation yields \\Y = 4.1\\, the predicate \\4.1 \> 5\\ is false, so \\{\mathbb{1}\mathopen{}\left(4.1 \> 5\right)\mathclose{}} = 0\\.
 
 > **NOTE:**
 >
@@ -46,9 +46,9 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Example 2 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 3](#def-binary-variable)). It is also the predicate indicator ([Definition 1](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\\.
+> **Example 2 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 3](#def-binary-variable)). It is also the predicate indicator ([Definition 1](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = {\mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}}\\.
 >
-> In the same way, every indicator is a binary variable, and every binary variable \\X\\ is the indicator of its own value being \\1\\: \\X = \mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}\\, since both sides are \\1\\ when \\X = 1\\ and \\0\\ when \\X = 0\\.
+> In the same way, every indicator is a binary variable, and every binary variable \\X\\ is the indicator of its own value being \\1\\: \\X = {\mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}}\\, since both sides are \\1\\ when \\X = 1\\ and \\0\\ when \\X = 0\\.
 
 ### 1.1 Two primary notational paradigms: set vs. predicate notation
 
@@ -60,11 +60,11 @@ The vast majority of indicator notations belong to one of two families: set nota
 
 > **NOTE:**
 >
-> **Definition 5 (Predicate notation for indicators)** An indicator ([Definition 1](#def-indicator-function)) is written in **predicate notation** when a proposition or predicate \\P\\ ([definition](proof-writing.llms.md#def-predicate)) appears as its argument, as in \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\.
+> **Definition 5 (Predicate notation for indicators)** An indicator ([Definition 1](#def-indicator-function)) is written in **predicate notation** when a proposition or predicate \\P\\ ([definition](proof-writing.llms.md#def-predicate)) appears as its argument, as in \\{\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\\ or \\{\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}\\.
 
 > **NOTE:**
 >
-> **Example 3 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\\ in predicate notation ([Definition 4](#def-set-predicate-notation), [Definition 5](#def-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
+> **Example 3 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\{\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}\\ or \\{\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}}\\ in predicate notation ([Definition 4](#def-set-predicate-notation), [Definition 5](#def-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
 
 #### Set notation
 
@@ -88,7 +88,7 @@ In predicate notation, the indicator takes a logical condition, relation, or pro
 - \\\mathbb{1}\\x \in A\\\\ or \\\mathbb{1}\\P\\\\
 - \\I(x \in A)\\ or \\I(P)\\
 
-Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities ([definition](proof-writing.llms.md#def-inequality)) involving random variables, such as \\\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}\\ (an event occurring before time \\t\\) or \\\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}\\ (a binary outcome).
+Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities ([definition](proof-writing.llms.md#def-inequality)) involving random variables, such as \\{\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}}\\ (an event occurring before time \\t\\) or \\{\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}}\\ (a binary outcome).
 
 #### Equivalence between paradigms
 
@@ -107,7 +107,7 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 > - A fair six-sided die gives each of \\1, 2, \ldots, 6\\ probability \\\tfrac{1}{6} \> 0\\ and every other value probability \\0\\, so its support is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\.
 > - A count that can be \\0\\, \\1\\, \\2\\, and so on, each with positive probability, such as the number of hospital visits in a year, has support \\\mathbb{N}\_0 = \mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\.
 
-Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 6](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
+Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 6](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\{\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}}\\.
 
 ### 1.2 Iverson bracket notation
 
@@ -129,9 +129,9 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> *Remark 1* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 1](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 1](#exm-indicator-numerical) become
+> *Remark 1* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\{\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\\ ([Definition 1](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 1](#exm-indicator-numerical) become
 >
-> \\ \begin{aligned} \[7.2 \> 5\] &= \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} \\ &= 1 \end{aligned} \\
+> \\ \begin{aligned} \[7.2 \> 5\] &= {\mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{}} \\ &= 1 \end{aligned} \\
 >
 > and, with \\A = \[0, \infty)\\,
 >
@@ -189,8 +189,8 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros defined in `latex-macros/macros.qmd`:
 
 - `\indic{A}` produces \\\mathbb{1}\_{A}\\ (set subscript)
-- `\indicp{P}` produces \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ (predicate in parentheses)
-- `\indiccb{P}` produces \\\mathbb{1}\mathopen{}\left\\P\right\\\mathclose{}\\ (predicate in curly braces)
+- `\indicp{P}` produces \\{\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\\ (predicate in parentheses)
+- `\indiccb{P}` produces \\{\mathbb{1}\mathopen{}\left\\P\right\\\mathclose{}}\\ (predicate in curly braces)
 - `\1{P}` produces \\\text{1}\_{P}\\ (text numeral with subscript, used in legacy formulas)
 
 Blackboard bold \\\mathbb{1}\\ is preferred because it avoids all common collisions: it is visually distinct from the scalar \\1\\, the identity matrix \\I\\, and the observed and expected Fisher information matrices (\\I\\, \\\mathcal{I}\\).

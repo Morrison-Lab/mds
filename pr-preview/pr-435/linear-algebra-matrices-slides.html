@@ -362,7 +362,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-22 09:52:25 (PDT)</p>
+  <p class="date">Last modified: 2026-10-22 22:13:27 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -957,7 +957,7 @@ f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \mathord{\smash[b]{\underset{\raise.3ex\h
 <div id="thm-linear-map-matrix" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 12 (Every linear map is multiplication by a matrix)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>), then there is exactly one <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> such that</p>
 <p><span class="math display">\[f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\quad \text{for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\]</span></p>
-<p>Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span>, the value of <span class="math inline">\(f\)</span> at the <span class="math inline">\(j\)</span>th indicator vector (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;14 in Vectors</a>); that is, <span class="math inline">\(a_{ij} = \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\right)\mathclose{}_i\)</span>.</p>
+<p>Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span>, the value of <span class="math inline">\(f\)</span> at the <span class="math inline">\(j\)</span>th indicator vector (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;15 in Vectors</a>); that is, <span class="math inline">\(a_{ij} = \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\right)\mathclose{}_i\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Existence.</strong> Let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(m \times p\)</span> matrix with <span class="math inline">\(a_{ij} = \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\right)\mathclose{}_i\)</span>. For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>,</p>
@@ -965,7 +965,7 @@ f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \mathord{\smash[b]{\underset{\raise.3ex\h
 \begin{aligned}
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
 &amp;= f\mathopen{}\left(\sum_{j=1}^px_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right)\mathclose{}
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#thm-standard-basis-expansion}{\text{Theorem~3 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#thm-standard-basis-expansion}{\text{Theorem~4 in Vectors}}\text{)}
 \\&amp;= \sum_{j=1}^px_j f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)
 &amp;&amp; \text{(}\href{#thm-linear-map-lincom}{\text{Theorem~11}}\text{)}
 \end{aligned}
@@ -993,7 +993,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 \\&amp;= \sum_{k=1}^{p} b_{ik} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)_k
 &amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)}
 \\&amp;= b_{ij} \cdot 1 + \sum_{k \neq j} b_{ik} \cdot 0
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-indicator-vector}{\text{Definition~14 in Vectors}}\text{, splitting off the } k = j \text{ term)}
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-indicator-vector}{\text{Definition~15 in Vectors}}\text{, splitting off the } k = j \text{ term)}
 \\&amp;= b_{ij} + 0
 &amp;&amp; \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)}
 \\&amp;= b_{ij}
