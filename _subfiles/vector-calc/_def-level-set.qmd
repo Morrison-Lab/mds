@@ -11,7 +11,7 @@ $$
 $$
 
 the set of points where $f$ takes the value $c$.
-For $p = 2$, a level set is often a [level curve](#def-level-curve).
+For $p = 2$, a level set is often a level curve.
 
 :::
 
