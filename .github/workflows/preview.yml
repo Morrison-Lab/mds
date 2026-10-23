@@ -36,8 +36,9 @@ jobs:
       install-package: false
       apt-packages: ''
       setup-chrome: false
-      # The PDF handouts are left out of a preview unless the PR carries the
-      # `preview:pdf` label (tools/skip_pdf_in_previews.py, a pre-render script);
+      # The PDF handouts and Word files are left out of a preview unless the PR
+      # carries the `preview:pdf` or `preview:docx` label
+      # (tools/skip_pdf_in_previews.py, a pre-render script);
       # the publish on main still builds them. TinyTeX stays installed for the
       # labelled render.
       tinytex: true
@@ -49,9 +50,9 @@ jobs:
       # only the formats requested by `preview:*` labels.
       formats: default
       timezone: America/Los_Angeles
-      # The full render (every page in html, slides, PDF and docx) outlasts gha's
-      # default 45-minute cap.
-      timeout-minutes: 90
+      # The html and slide render outlasts gha's default 45-minute cap: with only
+      # the PDFs skipped, the preview of mds#443 took 89 of 90 minutes.
+      timeout-minutes: 120
       # Rebuild when this label is added or removed (it toggles highlighting below).
       extra-preview-labels: '["no-preview-highlights"]'
       # Compare against the published render: banner on the home page naming the
@@ -61,7 +62,9 @@ jobs:
       # `page-banners` job below.
       changed-chapters-banner: true
       highlight-changes: ${{ !contains(github.event.pull_request.labels.*.name, 'no-preview-highlights') }}
-      docx-tracked-changes: true
+      # The Word files exist only when the PR carries `preview:docx`
+      # (tools/skip_pdf_in_previews.py); without them the step fails on its empty glob.
+      docx-tracked-changes: ${{ contains(github.event.pull_request.labels.*.name, 'preview:docx') }}
       # Pages render at the site root, beside their slide decks
       # (gha's default `chapters/*.html` and `chapters/*.docx` would miss them).
       changed-chapters-glob: '**/*.html'
