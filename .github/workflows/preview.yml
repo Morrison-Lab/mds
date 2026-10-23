@@ -13,6 +13,8 @@ name: Quarto Preview Build
 
 on:
   pull_request:
+    # `labeled` and `unlabeled` rebuild the preview when `preview:pdf` is added
+    # or removed.
     types: [opened, reopened, synchronize, labeled, unlabeled, closed]
 
 jobs:
@@ -34,7 +36,10 @@ jobs:
       install-package: false
       apt-packages: ''
       setup-chrome: false
-      # PDF handouts are part of the default render below, so TinyTeX is always needed.
+      # The PDF handouts are left out of a preview unless the PR carries the
+      # `preview:pdf` label (tools/skip_pdf_in_previews.py, a pre-render script);
+      # the publish on main still builds them. TinyTeX stays installed for the
+      # labelled render.
       tinytex: true
       # `_quarto.yml` already selects the `website` profile by default.
       render-profile: ''

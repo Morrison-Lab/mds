@@ -2,7 +2,11 @@ project:
   type: website
   output-dir: _site
   # Writes dependency-graph.json: the prerequisite graph of the definitions and results.
-  pre-render: python3 tools/build_dependency_graph.py --pages . --site mds --out dependency-graph.json
+  # Then, on a pull request without the `preview:pdf` label, drops the PDF handouts
+  # from the working copy, since the LaTeX handouts take most of the render time.
+  pre-render:
+    - python3 tools/build_dependency_graph.py --pages . --site mds --out dependency-graph.json
+    - python3 tools/skip_pdf_in_previews.py
   resources:
     - dependency-graph.js
     - dependency-graph.json
