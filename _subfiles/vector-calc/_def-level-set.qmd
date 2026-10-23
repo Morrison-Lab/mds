@@ -1,5 +1,5 @@
 :::{#def-level-set}
-#### Level set (level curve, contour)
+#### Level set, level curve, contour
 
 Let $f : \reals^p \to \reals$ and let $c$ be a real number.
 The **level set**

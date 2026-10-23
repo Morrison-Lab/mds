@@ -1,5 +1,5 @@
 :::{#def-infimum}
-#### Infimum (greatest lower bound)
+#### Infimum, greatest lower bound
 
 Let $A \subseteq \reals$ be nonempty
 and bounded below (@def-bounded-below).
