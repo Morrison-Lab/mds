@@ -41,7 +41,7 @@ $\vzero$ is not feasible, since $3 \cd 0 + 4 \cd 0 = 0 \ne 5$.
 {{< slidebreak >}}
 
 :::{#def-objective-function}
-#### Objective function (objective)
+#### Objective function, objective
 
 Let $f : \reals^p \to \reals$ and let $F \subseteq \reals^p$ be a feasible set (@def-feasible-set).
 In the problem of minimizing $f$ over $F$,
