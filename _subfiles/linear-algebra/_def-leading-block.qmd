@@ -1,5 +1,5 @@
 :::{#def-leading-block}
-#### Leading block (top-left block) of a square matrix
+#### Leading block of a square matrix, top-left block
 
 When $\matr{X}$ is $n \times n$ and $1 \le k \le n$,
 the $k \times k$ matrix of the entries $x_{ij}$ with $i, j \le k$

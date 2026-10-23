@@ -24,7 +24,7 @@ This section summarizes the principal notational conventions.
 {{< slidebreak >}}
 
 :::{#def-indicator-function}
-#### Indicator function (set indicator)
+#### Indicator function, set indicator
 
 For any subset $A \subseteq \universe$ of a universal set $\universe$,
 the **indicator function** of $A$,
