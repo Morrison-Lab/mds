@@ -66,3 +66,15 @@ the parse trees of expressions, and algorithms, which compute those functions.
 {{< include mds/_subfiles/expressions-algorithms/_exr-expression-or-algorithm-part3.qmd >}}
 
 {{< include mds/_subfiles/expressions-algorithms/_sol-expression-or-algorithm-part3.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_exr-expression-or-algorithm-part4.qmd >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_sol-expression-or-algorithm-part4.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_exr-expression-or-algorithm-part5.qmd >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_sol-expression-or-algorithm-part5.qmd >}}

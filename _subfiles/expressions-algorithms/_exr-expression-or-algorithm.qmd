@@ -2,7 +2,6 @@
 
 #### Is an expression an algorithm?
 
-How do a [function](functions.qmd), an [expression](#def-expression) and an [algorithm](#def-algorithm) differ?
-Which of the three does $a x^2 + b x + c$ name?
+How do a [function](functions.qmd#def-function), an [expression](#def-expression) and an [algorithm](#def-algorithm) differ?
 
 :::

@@ -1,8 +1,8 @@
 ::: {#sol-expression-or-algorithm-part3}
 
-$(a x + b)\,x + c$, Horner's form.
-It uses two multiplications and two additions, where the first form,
-with $x^2$ computed as $x \cdot x$, uses three multiplications and two additions.
-The two [expressions](#def-expression) denote the same function and describe different [algorithms](#def-algorithm).
+Not by itself.
+The [expression](#def-expression) says *what* value goes with each $x$, not *how* to compute it.
+Once $a$, $b$, $c$ and $x$ have values,
+evaluating its [parse tree](#def-parse-tree) from the leaves up is an [algorithm](#def-algorithm).
 
 :::
