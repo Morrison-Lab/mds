@@ -9,7 +9,7 @@ if the integral of its [absolute value](algebra.qmd#def-absolute-value) is finit
 
 $$\int_S \abs{f} \, d\measure < \infty$$
 
-The property itself is called **absolute integrability**.
+The property itself is called absolute integrability.
 
 :::
 
