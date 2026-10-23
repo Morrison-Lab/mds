@@ -1,10 +1,10 @@
 :::{#def-level-curve}
 #### Level curve
 
-Let $f : \reals^2 \to \reals$ and let $c$ be a real number.
+Let $f : \reals^2 \to \reals$ and let $c$ be a [real number](number-systems.qmd#def-real-numbers).
 The **level curve** of $f$ at $c$
 is the [level set](#def-level-set) of $f$ at $c$
-when that set is a curve in the plane.
+when it is a curve in the plane.
 It is the special case $p = 2$ of a level set.
 A [contour line](algebra-exponentials.qmd#def-contour-line)
 is a level curve drawn on a plot of $f$.
