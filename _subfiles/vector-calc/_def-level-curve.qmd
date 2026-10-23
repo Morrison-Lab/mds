@@ -1,0 +1,22 @@
+:::{#def-level-curve}
+#### Level curve
+
+Let $f : \reals^2 \to \reals$ and let $c$ be a real number.
+The **level curve** of $f$ at $c$
+is the [level set](#def-level-set) of $f$ at $c$
+when that set is a curve in the plane.
+It is the special case $p = 2$ of a level set.
+A [contour line](algebra-exponentials.qmd#def-contour-line)
+is a level curve drawn on a plot of $f$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-level-curve}
+#### A level curve of $x_1^2 + x_2^2$
+
+Let $f(\vx) = x_1^2 + x_2^2$ for $\vx = \tp{(x_1, x_2)}$.
+The level curve at $4$ is the circle of radius $2$ around $\vzero$.
+
+:::
