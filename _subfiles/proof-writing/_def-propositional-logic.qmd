@@ -9,7 +9,7 @@ among [propositions](#def-proposition)
 built from basic propositions $P, Q, R, \ldots$
 using only the [logical connectives](#def-logical-connective).
 Whether such propositions entail one another
-depends only on the truth values of the basic propositions,
+depends only on the truth values of the basic propositions, <!-- check-term-links: allow -->
 not on what the basic propositions say.
 
 :::

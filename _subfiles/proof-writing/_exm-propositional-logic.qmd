@@ -8,6 +8,6 @@ so $P \Rightarrow Q$ would be false,
 which contradicts the assumption.
 So $Q$ is true.
 This holds whatever $P$ and $Q$ say,
-so $P$ and $P \Rightarrow Q$ logically entail $Q$.
+so $P$ and $P \Rightarrow Q$ [logically entail](#def-logical-entailment) $Q$.
 
 :::
