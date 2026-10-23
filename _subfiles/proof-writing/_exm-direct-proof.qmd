@@ -1,7 +1,7 @@
 :::{#exm-direct-proof}
 #### The square of an odd integer is odd
 
-Claim: if $n$ is an [odd](number-systems.qmd#def-odd) integer,
+Claim: if $n$ is an [odd](number-systems.qmd#def-odd) [integer](number-systems.qmd#def-integers),
 then $n^2$ is odd.
 
 Since $n$ is odd,
@@ -23,7 +23,7 @@ n^2
 $$
 
 and $2k^2 + 2k$ is an integer,
-because sums and products of integers are integers.
+because adding or multiplying [integers](number-systems.qmd#def-integers) gives an integer.
 So $n^2 = 2 \cd (\text{an integer}) + 1$, which is the definition of odd.
 For example,
 
@@ -47,6 +47,6 @@ and $2 \cd 3^2 + 2 \cd 3 = 24$.
 
 The proof above that
 [the sum of two even integers is even](#exm-proof)
-is also a direct proof.
+is also a [direct proof](#def-direct-proof).
 
 :::

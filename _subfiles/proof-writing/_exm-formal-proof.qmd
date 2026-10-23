@@ -3,7 +3,7 @@
 
 Suppose the allowed rules include
 "from $P$ and $P \Rightarrow Q$, conclude $Q$".
-Then this is a formal proof of $Q$ from the assumptions $P$ and $P \Rightarrow Q$:
+Then this is a [formal proof](#def-formal-proof) of $Q$ from the assumptions $P$ and $P \Rightarrow Q$:
 
 1. $P$ (assumption)
 2. $P \Rightarrow Q$ (assumption)
