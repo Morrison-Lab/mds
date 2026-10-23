@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 14:50:39 (PDT)
+Last modified: 2026-10-23 16:01:17 (PDT)
 
 The algebra notes are split across these pages:
 

@@ -5057,7 +5057,7 @@
    "page": "linear-algebra",
    "div": "def-mean",
    "kind": "def",
-   "title": "Mean, average, sample mean",
+   "title": "Mean, average",
    "external": false
   },
   {
@@ -9143,7 +9143,7 @@
    "page": "linear-algebra-vectors",
    "div": "def-mean",
    "kind": "def",
-   "title": "Mean, average, sample mean",
+   "title": "Mean, average",
    "external": false
   },
   {
@@ -9305,7 +9305,7 @@
    "page": "measures",
    "div": "def-absolutely-integrable",
    "kind": "def",
-   "title": "Absolutely integrable function, integrable function, absolute integrability",
+   "title": "Absolutely integrable function, integrable function",
    "external": false
   },
   {
@@ -11105,7 +11105,7 @@
    "page": "vector-calculus",
    "div": "def-row-vector-derivative",
    "kind": "def",
-   "title": "Row-vector derivative, total derivative",
+   "title": "Row-vector derivative",
    "external": false
   },
   {

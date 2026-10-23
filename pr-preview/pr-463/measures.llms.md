@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 14:50:39 (PDT)
+Last modified: 2026-10-23 16:01:17 (PDT)
 
 > **NOTE:**
 >
@@ -511,7 +511,7 @@ Last modified: 2026-10-23 14:50:39 (PDT)
 
 > **NOTE:**
 >
-> **Definition 26 (Absolutely integrable function, integrable function, absolute integrability)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra-basics.llms.md#def-absolute-value) is finite:
+> **Definition 26 (Absolutely integrable function, integrable function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra-basics.llms.md#def-absolute-value) is finite:
 >
 > \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu\< \infty\\
 >
