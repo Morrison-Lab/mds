@@ -54,6 +54,7 @@ website:
           - sets.qmd
           - functions.qmd
           - relations.qmd
+          - growth-rates.qmd
           - expressions-algorithms.qmd
           - indicator-functions.qmd
       - text: "Algebra"
@@ -120,6 +121,7 @@ website:
           - sets.qmd
           - functions.qmd
           - relations.qmd
+          - growth-rates.qmd
           - expressions-algorithms.qmd
           - indicator-functions.qmd
       - section: "Algebra"
