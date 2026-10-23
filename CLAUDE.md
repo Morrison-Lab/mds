@@ -52,6 +52,10 @@ Mirrors [`.github/copilot-instructions.md`](.github/copilot-instructions.md). Ke
 - **Spell check**: words go in `inst/WORDLIST` (see `.github/workflows/check-spelling.yaml`). Update the wordlist instead of disabling the check.
 - **Link check**: tuned in `lychee.toml`; prefer fixing broken links over adding exceptions.
 - **Other CI checks**: workflows also verify bibliography DOIs (`check-bibliography-dois.yml`) and flag non-standard characters (`check-non-standard-chars.yaml`). Fix the flagged source rather than relaxing the check.
+- **Previews skip the PDFs and Word files**: on a pull request, `tools/skip_pdf_in_previews.py` (a `pre-render` script) removes the `pdf` and `docx` formats
+  unless the PR carries the label `preview:pdf` or `preview:docx`.
+  The publish on `main` builds both.
+  With only the PDFs skipped, a preview took 89 of its 90 minutes, so the preview cap is 120 minutes (decided 2026-10-22, mds#447).
 - **Dependencies**: Dependabot auto-updates the `latex-macros` submodule and GitHub Actions (see `.github/dependabot.yml`); don't bump those by hand unless a PR needs it.
 
 ## Pull request expectations
