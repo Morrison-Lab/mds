@@ -2,7 +2,7 @@
 #### Disjoint sets
 
 Two [sets](#def-set) $A$ and $B$ are **disjoint**
-if they share no element:
+if their [intersection](#def-intersection) is the [empty set](#def-empty-set):
 
 $$A \cap B = \emptyset$$
 
