@@ -30,8 +30,12 @@ jobs:
         any::rmarkdown
         any::tibble
       tinytex: true
-      # One bare `quarto render` of every declared format, as before.
-      formats: ''
+      # The whole-project PDF pass ran Deno out of memory (a 12 GB heap, exit
+      # 133; run 39843335598). Render the other formats in one process each,
+      # and the PDFs one file at a time, each in its own process
+      # (https://github.com/Morrison-Lab/gha/issues/1170).
+      formats: 'html revealjs docx'
+      per-file-formats: pdf
       timezone: America/Los_Angeles
       # The full render (every page in html, slides, PDF and docx) outlasts gha's
       # default 45-minute cap. Publishes took 56 to 76 minutes on 2026-10-22, so
