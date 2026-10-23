@@ -1,0 +1,8 @@
+::: {#exr-expression-or-algorithm}
+
+#### Is an expression an algorithm?
+
+How do a [function](functions.qmd), an [expression](#def-expression) and an [algorithm](#def-algorithm) differ?
+Which of the three does $a x^2 + b x + c$ name?
+
+:::

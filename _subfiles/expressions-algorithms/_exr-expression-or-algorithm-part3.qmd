@@ -1,0 +1,10 @@
+::: {#exr-expression-or-algorithm-part3}
+
+#### Is an expression an algorithm? (part 3)
+
+Use the setup of @exr-expression-or-algorithm.
+
+Write a second [expression](#def-expression) with the same value for every $x$
+that needs fewer multiplications.
+
+:::

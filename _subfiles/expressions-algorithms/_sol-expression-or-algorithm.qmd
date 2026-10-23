@@ -1,0 +1,10 @@
+::: {#sol-expression-or-algorithm}
+
+A function is the input-output relationship.
+An expression is a string of symbols that denotes a function,
+and many expressions denote the same one.
+An algorithm is a finite list of steps that computes a function,
+and many algorithms compute the same one.
+So $a x^2 + b x + c$ is an expression: it names a function, and it is not an algorithm.
+
+:::

@@ -1,0 +1,12 @@
+::: {#sol-expression-or-algorithm-part2}
+
+Not by itself.
+The [expression](#def-expression) says *what* value goes with each $x$, not *how* to compute it.
+Precedence resolves how the symbols group:
+$a x^2 + b x + c$ parses as a sum of three products, with the power applied first,
+and that parse is a [tree](#def-parse-tree).
+Once $a$, $b$, $c$ and $x$ have values,
+evaluating the tree from the leaves up is an [algorithm](#def-algorithm).
+Precedence is a rule for reading the expression, not a step in that algorithm.
+
+:::

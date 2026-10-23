@@ -1,0 +1,11 @@
+::: {#exr-expression-or-algorithm-part2}
+
+#### Is an expression an algorithm? (part 2)
+
+Use the setup of @exr-expression-or-algorithm.
+
+Does the [expression](#def-expression) $a x^2 + b x + c$ tell you which arithmetic steps to carry out,
+in which order?
+What do the rules of operator precedence (PEMDAS) contribute?
+
+:::
