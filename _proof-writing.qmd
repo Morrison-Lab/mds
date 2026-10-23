@@ -72,6 +72,26 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_def-truth-table.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-truth-table.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-logically-equivalent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-logically-equivalent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-de-morgan-logic.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-quantifier.qmd >}}
 
 {{< slidebreak >}}
@@ -201,6 +221,18 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-conve
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_def-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-sufficient-condition.qmd >}}
 
 {{< slidebreak >}}
@@ -292,6 +324,22 @@ $\Var{X} = \E{X^2} - \sqf{\E{X}}$
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/proof-writing/_exm-direct-proof.qmd >}}
+
+## Proof by contrapositive {#sec-proof-by-contrapositive}
+
+{{< include mds/_subfiles/proof-writing/_def-proof-by-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-proof-by-contrapositive.qmd >}}
+
+## Proof by cases {#sec-proof-by-cases}
+
+{{< include mds/_subfiles/proof-writing/_def-proof-by-cases.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-proof-by-cases.qmd >}}
 
 ## Follow the golden rule {#sec-golden-rule}
 
