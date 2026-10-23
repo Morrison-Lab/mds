@@ -1,5 +1,5 @@
 :::{#def-mean}
-#### Mean, average, sample mean
+#### Mean, average
 
 The **mean**
 [@wikipedia_arithmetic_mean]
