@@ -51,6 +51,14 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_def-preimage.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_exm-preimage.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-range.qmd >}}
 
 {{< slidebreak >}}
