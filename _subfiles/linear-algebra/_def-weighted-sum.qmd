@@ -1,0 +1,13 @@
+:::{#def-weighted-sum}
+#### Weighted sum, weights
+
+A **weighted sum** of the numbers $a_1, \ldots, a_k$
+is a [linear combination](#def-linear-combination) of them,
+and its coefficients $w_1, \ldots, w_k$ are called its **weights**:
+
+$$w_1 a_1 + \cdots + w_k a_k = \sumto{i}{k} w_i a_i$$
+
+Each number $a_i$ is multiplied by its weight $w_i$,
+and the products are added.
+
+:::

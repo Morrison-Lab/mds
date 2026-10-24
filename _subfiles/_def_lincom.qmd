@@ -54,7 +54,7 @@ $$
 
 A **linear combination** of the numbers $a_1, \ldots, a_k$
 with coefficients $c_1, \ldots, c_k$
-is the weighted sum
+is the sum
 
 $$c_1 a_1 + \cdots + c_k a_k = \sumto{i}{k} c_i a_i$$
 
@@ -85,6 +85,22 @@ The linear combination of the numbers $4$ and $5$ with coefficients $2$ and $3$ 
 $2 \cd 4 + 3 \cd 5 = 8 + 15 = 23$.
 
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-weighted-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-weighted-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-weighted-average.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-weighted-average.qmd >}}
 
 {{< slidebreak >}}
 
