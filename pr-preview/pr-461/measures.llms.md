@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 13:31:06 (PDT)
+Last modified: 2026-10-23 16:59:49 (PDT)
 
 > **NOTE:**
 >
@@ -137,7 +137,7 @@ Last modified: 2026-10-23 13:31:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 7 (Counting elements is finitely additive)** For the die rolls \\D = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ ([sets of die rolls](sets.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](functions.llms.md#def-cardinality)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\5, 6\right\\\mathclose{}}\\ are pairwise disjoint ([low and high die rolls](sets.llms.md#exm-pairwise-disjoint)), and:
+> **Example 7 (Counting elements is finitely additive)** For the die rolls \\D = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ ([sets of die rolls](sets.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](functions.llms.md#def-cardinality)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\5, 6\right\\\mathclose{}}\\ are pairwise disjoint ([low, middle and high die rolls](sets.llms.md#exm-pairwise-disjoint)), and:
 >
 > \\ \begin{aligned} \mu({\mathopen{}\left\\1, 2\right\\\mathclose{}} \cup {\mathopen{}\left\\5, 6\right\\\mathclose{}}) &= \mu({\mathopen{}\left\\1, 2, 5, 6\right\\\mathclose{}}) && \text{(take the union)} \\ &= 4 && \text{(count the elements)} \\ &= 2 + 2 && \text{(write 4 as a sum)} \\ &= \mu({\mathopen{}\left\\1, 2\right\\\mathclose{}}) + \mu({\mathopen{}\left\\5, 6\right\\\mathclose{}}) && \text{(count each set's elements)} \end{aligned} \\
 >

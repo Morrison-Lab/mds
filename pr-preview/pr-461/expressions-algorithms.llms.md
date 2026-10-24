@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 13:31:06 (PDT)
+Last modified: 2026-10-23 16:59:49 (PDT)
 
 > **NOTE:**
 >
@@ -50,7 +50,11 @@ Last modified: 2026-10-23 13:31:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Algorithm)** An **algorithm** [\[3\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm *computes* a [function](functions.llms.md#def-function): for each input it returns the function’s value at that input.
+> **Definition 3 (Algorithm)** An **algorithm** [\[3\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.
+
+> **NOTE:**
+>
+> **Definition 4 (Computes)** An [algorithm](#def-algorithm) **computes** a [function](functions.llms.md#def-function) when, for each [input](functions.llms.md#def-argument), it returns the function’s [value](functions.llms.md#def-value) at that input.
 
 > **NOTE:**
 >
@@ -58,7 +62,11 @@ Last modified: 2026-10-23 13:31:06 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (How functions, expressions and algorithms relate). The three ideas fit together this way:
+> *Remark 2* (Procedures that are not algorithms here). By the definition of an [algorithm](#def-algorithm), every algorithm [computes](#def-computes) some [function](functions.llms.md#def-function). That holds because an algorithm has unambiguous steps and halts on every valid [input](functions.llms.md#def-argument). A procedure that makes random choices can return different [values](functions.llms.md#def-value) for the same input. A procedure that never halts returns no [value](functions.llms.md#def-value) for some inputs. Neither computes a function, and neither is an algorithm in this sense, although some texts call them [algorithms](#def-algorithm).
+
+> **NOTE:**
+>
+> *Remark 3* (How functions, expressions and algorithms relate). The three ideas fit together this way:
 >
 > - A function is the input-output relationship.
 > - An [expression](#def-expression) denotes a function, and many expressions denote the same one.
@@ -68,7 +76,7 @@ Last modified: 2026-10-23 13:31:06 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
+> *Remark 4* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
 
 > **NOTE:**
 >
