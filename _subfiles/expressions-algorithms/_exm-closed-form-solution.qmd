@@ -1,0 +1,20 @@
+:::{#exm-closed-form-solution}
+#### Least squares versus logistic regression
+
+Minimizing the [squared-error](vector-calculus.qmd#def-squared-error) cost of a [linear](algebra.qmd#def-linear-function) model over $\vcoef$
+gives the [normal equations](linear-algebra-projections.qmd#def-normal-equations) $\stprod{\design} \vcoef = \tp{\design} \vy$.
+When $\stprod{\design}$ is [invertible](linear-algebra-special-matrices.qmd#def-matrix-inverse),
+the unique minimizer is the [closed-form expression](#def-closed-form-expression)
+
+$$
+\hvcoef = \inv{\stprod{\design}} \tp{\design} \vy,
+$$
+
+so [least squares](linear-algebra-projections.qmd#def-least-squares) has a [closed-form solution](#def-closed-form-solution).
+
+The minimizer over $\vcoef$ of the logistic regression cost
+is a well-defined vector,
+but no closed-form expression for it is known.
+An iterative [algorithm](#def-algorithm) approximates it.
+
+:::

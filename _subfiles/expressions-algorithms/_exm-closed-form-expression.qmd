@@ -1,0 +1,15 @@
+:::{#exm-closed-form-expression}
+#### The quadratic formula
+
+For $a \neq 0$ with $b^2 - 4 a c \ge 0$,
+a root of $a x^2 + b x + c = 0$ is
+
+$$
+x = \frac{-b + \sqrt{b^2 - 4 a c}}{2 a},
+$$
+
+a [closed-form expression](#def-closed-form-expression) in $a$, $b$, $c$.
+The root of $x - \cos x = 0$ is a [counterexample](proof-writing.qmd#def-counterexample):
+it has no known closed-form expression.
+
+:::
