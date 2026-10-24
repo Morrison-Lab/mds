@@ -13,6 +13,6 @@ w_i \ge 0 \text{ for each } i
 \sumto{i}{k} w_i = 1
 $$
 
-An $a_i$ with a larger weight counts for more.
+An $a_i$ with a larger [weight](#def-weight) counts for more.
 
 :::

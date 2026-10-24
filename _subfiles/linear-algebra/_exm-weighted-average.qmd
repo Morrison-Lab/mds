@@ -17,6 +17,6 @@ $$
 \ea
 $$
 
-The grade $85$ lies between $70$ and $90$, and nearer to $90$, which has the larger weight.
+The grade $85$ lies between $70$ and $90$, and nearer to $90$, which has the larger [weight](#def-weight).
 
 :::
