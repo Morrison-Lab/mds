@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 16:03:07 (PDT)
+Last modified: 2026-10-23 16:51:51 (PDT)
 
 ## 1 Rank
 
@@ -68,7 +68,7 @@ Last modified: 2026-10-23 16:03:07 (PDT)
 > 1.  if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{S}\\, then \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{S}\\;
 > 2.  if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\c \in \mathbb{R}\\, then \\c \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\.
 >
-> A subspace is also called a **linear subspace**, a **vector space**, or a **linear space**.
+> A subspace is also called a **linear subspace**.
 
 > **NOTE:**
 >

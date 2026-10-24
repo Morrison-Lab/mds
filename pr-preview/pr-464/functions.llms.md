@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 16:03:07 (PDT)
+Last modified: 2026-10-23 16:51:51 (PDT)
 
 > **NOTE:**
 >
@@ -256,7 +256,7 @@ Last modified: 2026-10-23 16:03:07 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Closed under an operation)** A set \\A\\ is **closed under** [\[14\]](#ref-wikipedia_closure_mathematics) an operation, such as addition of numbers or union of sets, if applying the operation to elements of \\A\\ always gives an element of \\A\\. This property is called **closure** under the operation.
+> **Definition 20 (Closed under an operation)** A set \\A\\ is **closed under** [\[14\]](#ref-wikipedia_closure_mathematics) an operation, such as addition of numbers or union of sets, if applying the operation to elements of \\A\\ always gives an element of \\A\\. This property is called closure under the operation.
 
 > **NOTE:**
 >
@@ -268,7 +268,7 @@ Last modified: 2026-10-23 16:03:07 (PDT)
 
 > **NOTE:**
 >
-> **Definition 21 (Logistic function (also called the sigmoid or expit))** The **logistic function**, also called the **sigmoid** or **expit**, is the [function](#def-function) \\\sigma: \mathbb{R}\to (0, 1)\\ with [\[15\]](#ref-wikipedia_logistic_function)
+> **Definition 21 (Logistic function, sigmoid, expit)** The **logistic function**, also called the **sigmoid** or **expit**, is the [function](#def-function) \\\sigma: \mathbb{R}\to (0, 1)\\ with [\[15\]](#ref-wikipedia_logistic_function)
 >
 > \\{\sigma\mathopen{}\left(z\right)\mathclose{}} \stackrel{\text{def}}{=}\frac{1}{1 + e^{-z}}.\\
 
