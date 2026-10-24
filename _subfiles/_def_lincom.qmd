@@ -54,7 +54,7 @@ $$
 
 A **linear combination** of the numbers $a_1, \ldots, a_k$
 with coefficients $c_1, \ldots, c_k$
-is the sum
+is the [sum](algebra.qmd#def-summation)
 
 $$c_1 a_1 + \cdots + c_k a_k = \sumto{i}{k} c_i a_i$$
 

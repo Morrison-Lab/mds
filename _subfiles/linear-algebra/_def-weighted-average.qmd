@@ -1,9 +1,9 @@
 :::{#def-weighted-average}
 #### Weighted average, weighted mean
 
-A **weighted average** (or **weighted mean**) of the numbers $a_1, \ldots, a_k$
+A **weighted average** (or **weighted mean**) of the [numbers](number-systems.qmd#def-real-numbers) $a_1, \ldots, a_k$
 is a [weighted sum](#def-weighted-sum) of them
-whose weights $w_1, \ldots, w_k$ are non-negative and add to $1$:
+whose [weights](#def-weighted-sum) $w_1, \ldots, w_k$ are non-negative and add to $1$:
 
 $$
 \sumto{i}{k} w_i a_i
@@ -13,6 +13,6 @@ w_i \ge 0 \text{ for each } i
 \sumto{i}{k} w_i = 1
 $$
 
-A number with a larger weight counts for more in the average.
+An $a_i$ with a larger weight counts for more.
 
 :::

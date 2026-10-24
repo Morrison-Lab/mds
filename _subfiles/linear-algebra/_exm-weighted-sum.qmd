@@ -2,8 +2,8 @@
 #### The total price of a shopping basket
 
 A basket holds $3$ items that cost $\$2$ each and $2$ items that cost $\$5$ each.
-The total price is the weighted sum of the prices $2$ and $5$
-with weights $3$ and $2$, the number of items at each price:
+The total price is the [weighted sum](#def-weighted-sum) of the prices $2$ and $5$
+with [weights](#def-weighted-sum) $3$ and $2$, the count of items at each price:
 
 $$
 \ba
