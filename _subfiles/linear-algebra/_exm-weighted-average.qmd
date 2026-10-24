@@ -1,0 +1,22 @@
+:::{#exm-weighted-average}
+#### A course grade
+
+A course grade counts the midterm for $1/4$ and the final for $3/4$.
+A student scores $70$ on the midterm and $90$ on the final.
+The [weights](#def-weight) $1/4$ and $3/4$ are non-negative and add to $1$,
+so the grade is a [weighted average](#def-weighted-average) of $70$ and $90$:
+
+$$
+\ba
+\frac{1}{4} \cd 70 + \frac{3}{4} \cd 90
+&= 17.5 + 67.5
+&& \text{(multiply each score by its weight)}
+\\
+&= 85
+&& \text{(add)}
+\ea
+$$
+
+The grade $85$ lies between $70$ and $90$, and nearer to $90$, which has the larger [weight](#def-weight).
+
+:::

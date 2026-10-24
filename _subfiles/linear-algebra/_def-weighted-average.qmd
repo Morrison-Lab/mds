@@ -1,0 +1,18 @@
+:::{#def-weighted-average}
+#### Weighted average, weighted mean
+
+A **weighted average** (or **weighted mean**) of the [numbers](number-systems.qmd#def-real-numbers) $a_1, \ldots, a_k$
+is a [weighted sum](#def-weighted-sum) of them
+whose [weights](#def-weight) $w_1, \ldots, w_k$ are non-negative and add to $1$:
+
+$$
+\sumto{i}{k} w_i a_i
+\quad\text{with}\quad
+w_i \ge 0 \text{ for each } i
+\quad\text{and}\quad
+\sumto{i}{k} w_i = 1
+$$
+
+An $a_i$ with a larger [weight](#def-weight) counts for more.
+
+:::
