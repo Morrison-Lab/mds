@@ -85,6 +85,10 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/sets/_rem-interval-brackets.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/sets/_exm-interval.qmd >}}
 
 {{< slidebreak >}}
