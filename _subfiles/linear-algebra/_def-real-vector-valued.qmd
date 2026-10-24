@@ -1,5 +1,5 @@
 :::{#def-real-vector-valued}
-#### Real-valued (scalar-valued) function
+#### Real-valued function, scalar-valued function
 
 A [function](functions.qmd#def-function) $f : A \to \reals$,
 whose values are numbers,
