@@ -4004,7 +4004,7 @@
    "page": "functions",
    "div": "def-logistic-function",
    "kind": "def",
-   "title": "Logistic function (also called the sigmoid or expit)",
+   "title": "Logistic function, sigmoid, expit",
    "external": false
   },
   {
@@ -4373,7 +4373,7 @@
    "page": "linear-algebra",
    "div": "def-affine-map",
    "kind": "def",
-   "title": "Affine map (affine transformation, affine function)",
+   "title": "Affine map, affine transformation, affine function",
    "external": false
   },
   {
@@ -4382,7 +4382,7 @@
    "page": "linear-algebra",
    "div": "def-affine-offset",
    "kind": "def",
-   "title": "Offset (intercept, bias) of an affine map",
+   "title": "Offset of an affine map, intercept, bias",
    "external": false
   },
   {
@@ -4445,7 +4445,7 @@
    "page": "linear-algebra",
    "div": "def-column-space",
    "kind": "def",
-   "title": "Column space (range, image)",
+   "title": "Column space, range, image",
    "external": false
   },
   {
@@ -4499,7 +4499,7 @@
    "page": "linear-algebra",
    "div": "def-conjugate-transpose",
    "kind": "def",
-   "title": "Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate)",
+   "title": "Conjugate transpose, Hermitian adjoint, Hermitian conjugate, transjugate",
    "external": false
   },
   {
@@ -4562,7 +4562,7 @@
    "page": "linear-algebra",
    "div": "def-design-matrix",
    "kind": "def",
-   "title": "Design matrix (model matrix)",
+   "title": "Design matrix, model matrix",
    "external": false
   },
   {
@@ -4634,7 +4634,7 @@
    "page": "linear-algebra",
    "div": "def-eigendecomposition",
    "kind": "def",
-   "title": "Eigendecomposition (spectral decomposition)",
+   "title": "Eigendecomposition, spectral decomposition",
    "external": false
   },
   {
@@ -4769,7 +4769,7 @@
    "page": "linear-algebra",
    "div": "def-hermitian-matrix",
    "kind": "def",
-   "title": "Hermitian matrix (self-adjoint matrix)",
+   "title": "Hermitian matrix, self-adjoint matrix",
    "external": false
   },
   {
@@ -4841,7 +4841,7 @@
    "page": "linear-algebra",
    "div": "def-invertible-matrix",
    "kind": "def",
-   "title": "Invertible matrix (non-singular matrix)",
+   "title": "Invertible matrix, non-singular matrix",
    "external": false
   },
   {
@@ -4895,7 +4895,7 @@
    "page": "linear-algebra",
    "div": "def-linear-map",
    "kind": "def",
-   "title": "Linear map (linear transformation, linear function)",
+   "title": "Linear map, linear transformation, linear function",
    "external": false
   },
   {
@@ -4913,7 +4913,7 @@
    "page": "linear-algebra",
    "div": "def-linear-system",
    "kind": "def",
-   "title": "Linear system (system of linear equations)",
+   "title": "Linear system, system of linear equations",
    "external": false
   },
   {
@@ -5102,7 +5102,7 @@
    "page": "linear-algebra",
    "div": "def-null-space",
    "kind": "def",
-   "title": "Null space (kernel)",
+   "title": "Null space, kernel",
    "external": false
   },
   {
@@ -5363,7 +5363,7 @@
    "page": "linear-algebra",
    "div": "def-skew-hermitian-matrix",
    "kind": "def",
-   "title": "Skew-Hermitian matrix (anti-Hermitian matrix)",
+   "title": "Skew-Hermitian matrix, anti-Hermitian matrix",
    "external": false
   },
   {
@@ -6785,7 +6785,7 @@
    "page": "linear-algebra-complex",
    "div": "def-conjugate-transpose",
    "kind": "def",
-   "title": "Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate)",
+   "title": "Conjugate transpose, Hermitian adjoint, Hermitian conjugate, transjugate",
    "external": false
   },
   {
@@ -6794,7 +6794,7 @@
    "page": "linear-algebra-complex",
    "div": "def-hermitian-matrix",
    "kind": "def",
-   "title": "Hermitian matrix (self-adjoint matrix)",
+   "title": "Hermitian matrix, self-adjoint matrix",
    "external": false
   },
   {
@@ -6803,7 +6803,7 @@
    "page": "linear-algebra-complex",
    "div": "def-skew-hermitian-matrix",
    "kind": "def",
-   "title": "Skew-Hermitian matrix (anti-Hermitian matrix)",
+   "title": "Skew-Hermitian matrix, anti-Hermitian matrix",
    "external": false
   },
   {
@@ -7487,7 +7487,7 @@
    "page": "linear-algebra-matrices",
    "div": "def-affine-map",
    "kind": "def",
-   "title": "Affine map (affine transformation, affine function)",
+   "title": "Affine map, affine transformation, affine function",
    "external": false
   },
   {
@@ -7496,7 +7496,7 @@
    "page": "linear-algebra-matrices",
    "div": "def-affine-offset",
    "kind": "def",
-   "title": "Offset (intercept, bias) of an affine map",
+   "title": "Offset of an affine map, intercept, bias",
    "external": false
   },
   {
@@ -7541,7 +7541,7 @@
    "page": "linear-algebra-matrices",
    "div": "def-linear-map",
    "kind": "def",
-   "title": "Linear map (linear transformation, linear function)",
+   "title": "Linear map, linear transformation, linear function",
    "external": false
   },
   {
@@ -7559,7 +7559,7 @@
    "page": "linear-algebra-matrices",
    "div": "def-linear-system",
    "kind": "def",
-   "title": "Linear system (system of linear equations)",
+   "title": "Linear system, system of linear equations",
    "external": false
   },
   {
@@ -7874,7 +7874,7 @@
    "page": "linear-algebra-projections",
    "div": "def-design-matrix",
    "kind": "def",
-   "title": "Design matrix (model matrix)",
+   "title": "Design matrix, model matrix",
    "external": false
   },
   {
@@ -8207,7 +8207,7 @@
    "page": "linear-algebra-rank-nullity",
    "div": "def-column-space",
    "kind": "def",
-   "title": "Column space (range, image)",
+   "title": "Column space, range, image",
    "external": false
   },
   {
@@ -8252,7 +8252,7 @@
    "page": "linear-algebra-rank-nullity",
    "div": "def-null-space",
    "kind": "def",
-   "title": "Null space (kernel)",
+   "title": "Null space, kernel",
    "external": false
   },
   {
@@ -8477,7 +8477,7 @@
    "page": "linear-algebra-special-matrices",
    "div": "def-eigendecomposition",
    "kind": "def",
-   "title": "Eigendecomposition (spectral decomposition)",
+   "title": "Eigendecomposition, spectral decomposition",
    "external": false
   },
   {
@@ -8531,7 +8531,7 @@
    "page": "linear-algebra-special-matrices",
    "div": "def-invertible-matrix",
    "kind": "def",
-   "title": "Invertible matrix (non-singular matrix)",
+   "title": "Invertible matrix, non-singular matrix",
    "external": false
   },
   {
@@ -16703,6 +16703,10 @@
   [
    "mds/vector-calculus#def-residual-sum-of-squares",
    "mds/vector-calculus#def-squared-error"
+  ],
+  [
+   "mds/vector-calculus#def-row-vector-derivative",
+   "mds/calculus#def-derivative"
   ],
   [
    "mds/vector-calculus#def-row-vector-derivative",

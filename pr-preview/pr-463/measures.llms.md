@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 16:01:17 (PDT)
+Last modified: 2026-10-23 16:58:07 (PDT)
 
 > **NOTE:**
 >
@@ -515,7 +515,7 @@ Last modified: 2026-10-23 16:01:17 (PDT)
 >
 > \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu\< \infty\\
 >
-> The property itself is called **absolute integrability**.
+> The property itself is called absolute integrability.
 
 > **NOTE:**
 >
