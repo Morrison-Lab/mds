@@ -7,7 +7,7 @@ The **preimage**
 [@wikipedia_image_mathematics]
 (also called the **inverse image**)
 of $S$ under $f$
-is the set of elements of $A$ whose [values](#def-value) are in $S$:
+is the [set](sets.qmd#def-set) of elements of $A$ whose [values](#def-value) are in $S$:
 
 $$f^{-1}(S) \eqdef \set{a \in A : f(a) \in S}$$
 
