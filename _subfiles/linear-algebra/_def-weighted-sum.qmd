@@ -1,12 +1,12 @@
 :::{#def-weighted-sum}
-#### Weighted sum, weights
+#### Weighted sum
 
 A **weighted sum** of the [numbers](number-systems.qmd#def-real-numbers) $a_1, \ldots, a_k$
 is a [linear combination](#def-linear-combination) of them,
-and its [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$ are called its **weights**:
+with [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$:
 
 $$w_1 a_1 + \cdots + w_k a_k = \sumto{i}{k} w_i a_i$$
 
-Multiply each $a_i$ by its weight $w_i$, then add.
+Multiply each $a_i$ by its coefficient $w_i$, then add.
 
 :::

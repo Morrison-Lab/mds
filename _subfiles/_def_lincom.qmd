@@ -92,6 +92,10 @@ $2 \cd 4 + 3 \cd 5 = 8 + 15 = 23$.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-weight.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_exm-weighted-sum.qmd >}}
 
 {{< slidebreak >}}
