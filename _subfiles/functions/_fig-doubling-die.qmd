@@ -56,7 +56,7 @@ if (knitr::is_html_output()) {
 
 The [function](#def-function) $f(a) = 2a$ on the die rolls.
 The six points are the [graph](#def-graph) of $f$.
-The square markers on the vertical axis are the [image of](#def-image) $f$:
+The markers on the vertical axis are the [image of](#def-image) $f$:
 only the multiples of $2$ from $2$ to $12$ are [values](#def-value) of $f$,
 though the [codomain](#def-codomain) is all of $\reals$.
 
