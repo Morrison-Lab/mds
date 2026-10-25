@@ -79,10 +79,6 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/functions/_fig-doubling-die.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/functions/_def-graph.qmd >}}
 
 {{< slidebreak >}}
@@ -92,6 +88,10 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/functions/_fig-graph-three-points.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_fig-doubling-die.qmd >}}
 
 {{< slidebreak >}}
 
