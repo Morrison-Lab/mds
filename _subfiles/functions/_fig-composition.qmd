@@ -51,7 +51,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-The compositions $f \circ g$ and $g \circ f$ of @exm-composition are different functions.
-At $x = 2$ they take the values $9$ and $5$.
+The [compositions](#def-composition) $f \circ g$ and $g \circ f$ of @exm-composition are different [functions](#def-function).
+At $x = 2$ they take the [values](#def-value) $9$ and $5$.
 
 :::

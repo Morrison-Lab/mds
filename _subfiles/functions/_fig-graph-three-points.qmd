@@ -45,7 +45,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-The graph of $f(a) = a^2$ on the domain $\set{-1, 0, 2}$.
-The pair $(1, 1)$ lies on the parabola $y = a^2$ but not in the graph of $f$, because $1$ is not in the domain.
+The [graph](#def-graph) of $f(a) = a^2$ on the [domain](#def-domain) $\set{-1, 0, 2}$.
+The pair $(1, 1)$ lies on the curve $y = a^2$ but not in the graph of $f$, because $1$ is not in the domain.
 
 :::

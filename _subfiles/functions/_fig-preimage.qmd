@@ -49,7 +49,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-The preimage of a set of values is the set of rolls whose points lie at those heights.
+The [preimage](#def-preimage) of a [set](sets.qmd#def-set) of [values](#def-value) is the set of rolls whose points lie at those heights.
 The heights $4$ and $6$ are reached at the rolls $2$ and $3$, so the preimage of $\set{4, 6}$ is $\set{2, 3}$.
 The height $3$ is reached by no roll, so its preimage is empty.
 

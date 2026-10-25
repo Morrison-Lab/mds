@@ -42,9 +42,10 @@ if (knitr::is_html_output()) {
 }
 ```
 
-The function $f(a) = 2a$ on the die rolls.
-The six points are the graph of $f$.
-The squares on the vertical axis are the image of $f$:
-only the even numbers from 2 to 12 are values of $f$, though the codomain is all of $\reals$.
+The [function](#def-function) $f(a) = 2a$ on the die rolls.
+The six points are the [graph](#def-graph) of $f$.
+The orange markers on the vertical axis are the [image](#def-image) of $f$:
+only the multiples of $2$ from $2$ to $12$ are [values](#def-value) of $f$,
+though the [codomain](#def-codomain) is all of $\reals$.
 
 :::

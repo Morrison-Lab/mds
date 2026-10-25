@@ -32,7 +32,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-The first ten terms of the sequences $a_n = 1/n$ and $b_n = (-1)^n$ of @exm-sequence, plotted against the index $n$.
-The terms of $b_n$ repeat two values.
+The first ten [terms](#def-sequence-term) of the [sequences](#def-sequence) $a_n = 1/n$ and $b_n = (-1)^n$ of @exm-sequence, plotted against $n$.
+The sequence $b_n$ repeats two [values](#def-value).
 
 :::

@@ -38,7 +38,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-The graph of $f(a) = a^2$ on all of $\reals$ is the whole parabola.
+The [graph](#def-graph) of $f(a) = a^2$ on all of $\reals$ is the whole curve $y = a^2$.
 Each point of the curve is a pair $(a, f(a))$;
 the three pairs from @exm-graph are marked.
 

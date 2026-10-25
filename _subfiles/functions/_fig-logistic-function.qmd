@@ -48,7 +48,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-The logistic function.
-Its values lie strictly between $0$ and $1$, and the marked points are the values at $z = -2$, $0$ and $2$ from @exm-logistic-function.
+The [logistic function](#def-logistic-function).
+Its [values](#def-value) lie strictly between $0$ and $1$, and the marked points are the values at $z = -2$, $0$ and $2$ from @exm-logistic-function.
 
 :::

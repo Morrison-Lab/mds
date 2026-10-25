@@ -81,7 +81,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-Left: the graph of the inverse function $f^{-1}$ is the graph of $f$ reflected across the line $y = x$, so $(3, 7)$ becomes $(7, 3)$.
+Left: the [graph](#def-graph) of the [inverse function](#def-inverse-function) $f^{-1}$ is the graph of $f$ reflected across the line $y = x$, so $(3, 7)$ becomes $(7, 3)$.
 Right: the horizontal line $y = 4$ meets the graph of $h(x) = x^2$ twice, at $x = -2$ and $x = 2$,
 so $h$ has no inverse function.
 
