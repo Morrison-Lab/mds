@@ -1,0 +1,45 @@
+::: {#fig-graph-real-function}
+
+```{r}
+#| label: graph-real-function-plot
+#| fig-alt: >-
+#|   A parabola opening upward with its lowest point at the origin.
+#|   Three points on the curve at horizontal positions -1, 0 and 2
+#|   are marked and labeled with the pairs (-1, 1), (0, 0) and (2, 4).
+curve_data <- data.frame(a = seq(-2.5, 2.5, length.out = 201))
+curve_data$value <- curve_data$a^2
+marked <- data.frame(a = c(-1, 0, 2), value = c(-1, 0, 2)^2)
+marked$label <- sprintf("(%d, %d)", marked$a, marked$value)
+
+graph_real_function_plot <- ggplot2::ggplot() +
+  ggplot2::geom_line(
+    data = curve_data,
+    ggplot2::aes(x = a, y = value),
+    colour = "#0072B2"
+  ) +
+  ggplot2::geom_point(
+    data = marked,
+    ggplot2::aes(x = a, y = value, text = label),
+    size = 3
+  ) +
+  ggplot2::geom_text(
+    data = marked,
+    ggplot2::aes(x = a, y = value, label = label),
+    nudge_x = 0.35,
+    nudge_y = 0.4
+  ) +
+  ggplot2::labs(x = "a", y = "f(a) = a^2") +
+  ggplot2::theme_minimal()
+
+if (knitr::is_html_output()) {
+  plotly::ggplotly(graph_real_function_plot, tooltip = "text")
+} else {
+  graph_real_function_plot
+}
+```
+
+The graph of $f(a) = a^2$ on all of $\reals$ is the whole parabola.
+Each point of the curve is a pair $(a, f(a))$;
+the three pairs from @exm-graph are marked.
+
+:::

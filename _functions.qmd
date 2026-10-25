@@ -59,6 +59,10 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_fig-preimage.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-range.qmd >}}
 
 {{< slidebreak >}}
@@ -75,6 +79,10 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_fig-doubling-die.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-graph.qmd >}}
 
 {{< slidebreak >}}
@@ -83,7 +91,15 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_fig-graph-three-points.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_rem-graph-real-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_fig-graph-real-function.qmd >}}
 
 {{< slidebreak >}}
 
@@ -99,11 +115,19 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_fig-composition.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-inverse-function.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/functions/_exm-inverse-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_fig-inverse-function.qmd >}}
 
 {{< slidebreak >}}
 
@@ -147,6 +171,10 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_fig-sequences.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-finite-sequence.qmd >}}
 
 {{< slidebreak >}}
@@ -164,6 +192,10 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/functions/_exm-logistic-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_fig-logistic-function.qmd >}}
 
 ## Countable sets
 
