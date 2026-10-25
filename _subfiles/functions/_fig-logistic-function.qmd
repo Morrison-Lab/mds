@@ -26,7 +26,7 @@ logistic_function_plot <- ggplot2::ggplot() +
   ) +
   ggplot2::geom_point(
     data = logistic_points,
-    ggplot2::aes(x = z, y = sigmoid, text = label),
+    ggplot2::aes(x = z, y = sigmoid),
     size = 3,
     colour = "#D55E00"
   ) +
@@ -42,7 +42,7 @@ logistic_function_plot <- ggplot2::ggplot() +
   ggplot2::theme_minimal()
 
 if (knitr::is_html_output()) {
-  plotly::ggplotly(logistic_function_plot, tooltip = "text")
+  plotly::ggplotly(logistic_function_plot)
 } else {
   logistic_function_plot
 }
