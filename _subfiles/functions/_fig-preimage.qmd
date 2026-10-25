@@ -1,12 +1,19 @@
 ::: {#fig-preimage}
 
 ```{r}
+#| label: preimage-alt
+#| include: false
+fig_alt <- paste(
+  "The six points of the doubled die roll, at heights 2, 4, 6, 8, 10 and 12.",
+  "Horizontal lines at heights 4 and 6 each pass through one point,",
+  "at die rolls 2 and 3.",
+  "A dashed horizontal line at height 3 passes through no point."
+)
+```
+
+```{r}
 #| label: preimage-plot
-#| fig-alt: >-
-#|   The six points of the doubled die roll, at heights 2, 4, 6, 8, 10 and 12.
-#|   Horizontal lines at heights 4 and 6 each pass through one point,
-#|   at die rolls 2 and 3.
-#|   A dashed horizontal line at height 3 passes through no point.
+#| fig-alt: !expr fig_alt
 rolls <- data.frame(roll = 1:6, double = 2 * (1:6))
 levels_shown <- data.frame(
   height = c(3, 4, 6),
@@ -42,8 +49,12 @@ preimage_plot <- ggplot2::ggplot() +
   ggplot2::theme(legend.position = "bottom")
 
 if (knitr::is_html_output()) {
-  plotly::ggplotly(preimage_plot) |>
-    plotly::layout(legend = list(orientation = "h", y = -0.2))
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(preimage_plot) |>
+      plotly::layout(legend = list(orientation = "h", y = -0.2))
+  )
 } else {
   preimage_plot
 }

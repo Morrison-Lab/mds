@@ -1,12 +1,20 @@
 ::: {#fig-doubling-die}
 
 ```{r}
+#| label: doubling-die-alt
+#| include: false
+fig_alt <- paste(
+  "A scatter plot of six points,",
+  "one for each die roll from 1 to 6 on the horizontal axis,",
+  "rising along a straight line at heights 2, 4, 6, 8, 10 and 12.",
+  "Dotted lines carry each height across to the vertical axis,",
+  "where the image of the function is marked."
+)
+```
+
+```{r}
 #| label: doubling-die-plot
-#| fig-alt: >-
-#|   A scatter plot of six points, one for each die roll from 1 to 6 on the horizontal axis,
-#|   rising along a straight line at heights 2, 4, 6, 8, 10 and 12.
-#|   Dotted lines carry each height across to the vertical axis,
-#|   where the image of the function is marked.
+#| fig-alt: !expr fig_alt
 rolls <- data.frame(roll = 1:6, double = 2 * (1:6))
 
 doubling_die_plot <- ggplot2::ggplot(rolls) +
@@ -35,8 +43,12 @@ doubling_die_plot <- ggplot2::ggplot(rolls) +
   ggplot2::theme(legend.position = "bottom")
 
 if (knitr::is_html_output()) {
-  plotly::ggplotly(doubling_die_plot) |>
-    plotly::layout(legend = list(orientation = "h", y = -0.2))
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(doubling_die_plot) |>
+      plotly::layout(legend = list(orientation = "h", y = -0.2))
+  )
 } else {
   doubling_die_plot
 }
@@ -44,7 +56,7 @@ if (knitr::is_html_output()) {
 
 The [function](#def-function) $f(a) = 2a$ on the die rolls.
 The six points are the [graph](#def-graph) of $f$.
-The orange markers on the vertical axis are the [image of](#def-image) $f$:
+The square markers on the vertical axis are the [image of](#def-image) $f$:
 only the multiples of $2$ from $2$ to $12$ are [values](#def-value) of $f$,
 though the [codomain](#def-codomain) is all of $\reals$.
 
