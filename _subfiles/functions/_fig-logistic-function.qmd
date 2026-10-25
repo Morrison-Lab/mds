@@ -1,13 +1,21 @@
 ::: {#fig-logistic-function}
 
 ```{r}
+#| label: logistic-function-alt
+#| include: false
+fig_alt <- paste(
+  "The logistic function over z from -6 to 6, an S-shaped curve",
+  "rising from near 0 on the left to near 1 on the right.",
+  "Dotted horizontal lines mark the values 0 and 1,",
+  "which the curve approaches but never reaches.",
+  "Three points are marked, at z = -2, 0 and 2,",
+  "with the middle one at height 0.5."
+)
+```
+
+```{r}
 #| label: logistic-function-plot
-#| fig-alt: >-
-#|   The logistic function over z from -6 to 6, an S-shaped curve
-#|   rising from near 0 on the left to near 1 on the right.
-#|   Dotted horizontal lines mark the values 0 and 1, which the curve approaches but never reaches.
-#|   Three points are marked, at z = -2, 0 and 2,
-#|   with the middle one at height 0.5.
+#| fig-alt: !expr fig_alt
 z_grid <- seq(-6, 6, length.out = 241)
 logistic_curve <- data.frame(z = z_grid, sigmoid = plogis(z_grid))
 logistic_points <- data.frame(z = c(-2, 0, 2), sigmoid = plogis(c(-2, 0, 2)))
@@ -42,7 +50,11 @@ logistic_function_plot <- ggplot2::ggplot() +
   ggplot2::theme_minimal()
 
 if (knitr::is_html_output()) {
-  plotly::ggplotly(logistic_function_plot)
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(logistic_function_plot)
+  )
 } else {
   logistic_function_plot
 }

@@ -1,46 +1,68 @@
 ::: {#fig-inverse-function}
 
 ```{r}
+#| label: inverse-function-alt
+#| include: false
+fig_alt <- paste(
+  "Two panels with labeled curves.",
+  "In the first, the line y = 2x + 1 and its inverse,",
+  "the line y = (x - 1) / 2,",
+  "are mirror images across the dashed diagonal y = x,",
+  "drawn at 45 degrees on equal axes.",
+  "The point (3, 7) on the first line corresponds to the point (7, 3)",
+  "on the second.",
+  "In the second panel, the parabola y = x^2 is crossed twice",
+  "by the dotted horizontal line y = 4, at x = -2 and x = 2."
+)
+```
+
+```{r}
 #| label: inverse-function-plot
-#| fig-alt: >-
-#|   Two panels.
-#|   In the first, the line y = 2x + 1 and its inverse, the line y = (x - 1) / 2,
-#|   are mirror images across the dashed diagonal y = x.
-#|   The point (3, 7) on the first line corresponds to the point (7, 3) on the second.
-#|   In the second panel, the parabola y = x^2 is crossed twice
-#|   by the horizontal line y = 4, at x = -2 and x = 2.
+#| fig-alt: !expr fig_alt
 line_panel <- "f(x) = 2x + 1 and its inverse"
 square_panel <- "h(x) = x^2 is not invertible"
 panel_levels <- c(line_panel, square_panel)
+as_panel <- function(panel) factor(panel, levels = panel_levels)
 
-x_line <- seq(-2, 8, length.out = 101)
+x_f <- seq(-2, 4, length.out = 101)
+x_inverse <- seq(-3, 9, length.out = 101)
 lines_data <- data.frame(
-  panel = factor(line_panel, levels = panel_levels),
-  x = rep(x_line, 3),
-  y = c(2 * x_line + 1, (x_line - 1) / 2, x_line),
-  curve = rep(c("f", "inverse of f", "y = x"), each = length(x_line))
+  panel = as_panel(line_panel),
+  x = c(x_f, x_inverse, x_inverse),
+  y = c(2 * x_f + 1, (x_inverse - 1) / 2, x_inverse),
+  curve = rep(
+    c("f", "inverse of f", "y = x"),
+    times = c(length(x_f), length(x_inverse), length(x_inverse))
+  )
 )
 x_square <- seq(-3, 3, length.out = 101)
 square_data <- data.frame(
-  panel = factor(square_panel, levels = panel_levels),
+  panel = as_panel(square_panel),
   x = x_square,
   y = x_square^2,
   curve = "h"
 )
 marked <- data.frame(
-  panel = factor(
-    c(line_panel, line_panel, square_panel, square_panel),
-    levels = panel_levels
-  ),
+  panel = as_panel(c(line_panel, line_panel, square_panel, square_panel)),
   x = c(3, 7, -2, 2),
   y = c(7, 3, 4, 4)
 )
-level_four <- data.frame(
-  panel = factor(square_panel, levels = panel_levels),
-  y = 4
+# equal ranges on both axes of the first panel keep y = x at 45 degrees
+equal_range <- data.frame(
+  panel = as_panel(line_panel),
+  x = c(-3, 9),
+  y = c(-3, 9)
 )
+labels_data <- data.frame(
+  panel = as_panel(c(line_panel, line_panel, line_panel, square_panel)),
+  x = c(1.2, 7, 7.5, 2.4),
+  y = c(5.2, 0.6, 8.2, 4.6),
+  label = c("f", "inverse of f", "y = x", "y = 4")
+)
+level_four <- data.frame(panel = as_panel(square_panel), y = 4)
 
 inverse_function_plot <- ggplot2::ggplot() +
+  ggplot2::geom_blank(data = equal_range, ggplot2::aes(x = x, y = y)) +
   ggplot2::geom_line(
     data = rbind(lines_data, square_data),
     ggplot2::aes(x = x, y = y, colour = curve, linetype = curve)
@@ -52,6 +74,10 @@ inverse_function_plot <- ggplot2::ggplot() +
     linetype = "dotted"
   ) +
   ggplot2::geom_point(data = marked, ggplot2::aes(x = x, y = y), size = 3) +
+  ggplot2::geom_text(
+    data = labels_data,
+    ggplot2::aes(x = x, y = y, label = label)
+  ) +
   ggplot2::facet_wrap(~panel, scales = "free") +
   ggplot2::scale_colour_manual(
     values = c(
@@ -69,13 +95,16 @@ inverse_function_plot <- ggplot2::ggplot() +
       "h" = "solid"
     )
   ) +
-  ggplot2::labs(x = "x", y = "y", colour = NULL, linetype = NULL) +
+  ggplot2::labs(x = "x", y = "y") +
   ggplot2::theme_minimal() +
-  ggplot2::theme(legend.position = "bottom")
+  ggplot2::theme(legend.position = "none")
 
 if (knitr::is_html_output()) {
-  plotly::ggplotly(inverse_function_plot) |>
-    plotly::layout(legend = list(orientation = "h", y = -0.2))
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(inverse_function_plot)
+  )
 } else {
   inverse_function_plot
 }

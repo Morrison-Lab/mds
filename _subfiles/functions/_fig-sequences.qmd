@@ -1,11 +1,19 @@
 ::: {#fig-sequences}
 
 ```{r}
+#| label: sequences-alt
+#| include: false
+fig_alt <- paste(
+  "Two panels of points plotted against the index n from 1 to 10.",
+  "In the first, the terms 1 over n fall from 1 toward 0,",
+  "getting closer together.",
+  "In the second, the terms of (-1) to the n alternate between -1 and 1."
+)
+```
+
+```{r}
 #| label: sequences-plot
-#| fig-alt: >-
-#|   Two panels of points plotted against the index n from 1 to 10.
-#|   In the first, the terms 1 over n fall from 1 toward 0, getting closer together.
-#|   In the second, the terms of (-1) to the n alternate between -1 and 1.
+#| fig-alt: !expr fig_alt
 n <- 1:10
 sequence_labels <- c("a_n = 1/n", "b_n = (-1)^n")
 sequences <- data.frame(
@@ -26,7 +34,11 @@ sequences_plot <- ggplot2::ggplot(sequences) +
   ggplot2::theme_minimal()
 
 if (knitr::is_html_output()) {
-  plotly::ggplotly(sequences_plot)
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(sequences_plot)
+  )
 } else {
   sequences_plot
 }

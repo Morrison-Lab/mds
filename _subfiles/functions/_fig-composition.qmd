@@ -1,13 +1,21 @@
 ::: {#fig-composition}
 
 ```{r}
+#| label: composition-alt
+#| include: false
+fig_alt <- paste(
+  "Two parabolas over x from -3 to 3.",
+  "The curve for f of g of x has its lowest point, 0, at x = -1.",
+  "The curve for g of f of x has its lowest point, 1, at x = 0.",
+  "The two curves cross at x = 0, where both equal 1.",
+  "At x = 2 the first curve is at 9 and the second is at 5,",
+  "and both points are marked."
+)
+```
+
+```{r}
 #| label: composition-plot
-#| fig-alt: >-
-#|   Two parabolas over x from -3 to 3.
-#|   The curve for f of g of x has its lowest point at x = -1.
-#|   The curve for g of f of x is raised by one and has its lowest point at x = 0.
-#|   At x = 2 the first curve is at 9 and the second is at 5,
-#|   and both points are marked.
+#| fig-alt: !expr fig_alt
 x_grid <- seq(-3, 3, length.out = 241)
 fg_label <- "f(g(x)) = (x + 1)^2"
 gf_label <- "g(f(x)) = x^2 + 1"
@@ -44,8 +52,12 @@ composition_plot <- ggplot2::ggplot() +
   ggplot2::theme(legend.position = "bottom")
 
 if (knitr::is_html_output()) {
-  plotly::ggplotly(composition_plot) |>
-    plotly::layout(legend = list(orientation = "h", y = -0.2))
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(composition_plot) |>
+      plotly::layout(legend = list(orientation = "h", y = -0.2))
+  )
 } else {
   composition_plot
 }
