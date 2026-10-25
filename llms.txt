@@ -1,0 +1,6 @@
+# Math for Data Science
+
+> Mathematics prerequisites for data science courses
+
+## Pages
+
