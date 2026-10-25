@@ -19,7 +19,7 @@ graph_real_function_plot <- ggplot2::ggplot() +
   ) +
   ggplot2::geom_point(
     data = marked,
-    ggplot2::aes(x = a, y = value, text = label),
+    ggplot2::aes(x = a, y = value),
     size = 3
   ) +
   ggplot2::geom_text(
@@ -32,7 +32,7 @@ graph_real_function_plot <- ggplot2::ggplot() +
   ggplot2::theme_minimal()
 
 if (knitr::is_html_output()) {
-  plotly::ggplotly(graph_real_function_plot, tooltip = "text")
+  plotly::ggplotly(graph_real_function_plot)
 } else {
   graph_real_function_plot
 }
