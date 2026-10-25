@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-24 15:35:26 (PDT)
+Last modified: 2026-10-24 20:19:00 (PDT)
 
 > **NOTE:**
 >
@@ -278,9 +278,9 @@ Last modified: 2026-10-24 15:35:26 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Logistic function, sigmoid, expit)** The **logistic function**, also called the **sigmoid** or **expit**, is the [function](#def-function) \\\sigma: \mathbb{R}\to (0, 1)\\ with [\[15\]](#ref-wikipedia_logistic_function)
+> **Definition 22 (Logistic function, sigmoid, expit)** The **logistic function**, also called the **sigmoid** or **expit**, is the [function](#def-function) \\\operatorname{expit}: \mathbb{R}\to (0, 1)\\ with [\[15\]](#ref-wikipedia_logistic_function)
 >
-> \\{\sigma\mathopen{}\left(z\right)\mathclose{}} \stackrel{\text{def}}{=}\frac{1}{1 + e^{-z}}.\\
+> \\{\operatorname{expit}\mathopen{}\left(z\right)\mathclose{}} \stackrel{\text{def}}{=}\frac{1}{1 + e^{-z}}.\\
 
 > **NOTE:**
 >
