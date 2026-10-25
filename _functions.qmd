@@ -115,6 +115,10 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_fig-not-invertible.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-elementwise-function.qmd >}}
 
 {{< slidebreak >}}
