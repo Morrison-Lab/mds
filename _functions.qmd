@@ -175,6 +175,10 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_fig-sequences.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-finite-sequence.qmd >}}
 
 {{< slidebreak >}}
@@ -192,6 +196,10 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/functions/_exm-logistic-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/functions/_fig-logistic-function.qmd >}}
 
 ## Countable sets
 
