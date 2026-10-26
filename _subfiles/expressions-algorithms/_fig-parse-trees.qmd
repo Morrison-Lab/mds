@@ -60,11 +60,21 @@ layout_tree <- function(node, depth = 0, next_x = 0) {
     edges <- rbind(
       edges,
       sub$edges,
-      data.frame(x = NA_real_, y = -depth, xend = sub$nodes$x[1], yend = sub$nodes$y[1])
+      data.frame(
+        x = NA_real_,
+        y = -depth,
+        xend = sub$nodes$x[1],
+        yend = sub$nodes$y[1]
+      )
     )
     nodes <- rbind(nodes, sub$nodes)
   }
-  me <- data.frame(label = node[[1]], x = mean(child_x), y = -depth, is_leaf = FALSE)
+  me <- data.frame(
+    label = node[[1]],
+    x = mean(child_x),
+    y = -depth,
+    is_leaf = FALSE
+  )
   edges$x[is.na(edges$x)] <- me$x
   list(nodes = rbind(me, nodes), edges = edges, next_x = next_x)
 }
@@ -99,7 +109,11 @@ ggplot2::ggplot() +
   ggplot2::scale_fill_manual(
     values = c(operation = "#CCE5F6", leaf = "#F9DDBF")
   ) +
-  ggplot2::facet_wrap(~tree, scales = "free_x", labeller = ggplot2::label_parsed) +
+  ggplot2::facet_wrap(
+    ~tree,
+    scales = "free_x",
+    labeller = ggplot2::label_parsed
+  ) +
   ggplot2::labs(fill = "node type") +
   ggplot2::theme_void() +
   ggplot2::theme(
