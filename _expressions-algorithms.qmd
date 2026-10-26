@@ -15,6 +15,10 @@ the parse trees of expressions, and algorithms, which compute those functions.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/expressions-algorithms/_def-denotes.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/expressions-algorithms/_exm-expression.qmd >}}
 
 {{< slidebreak >}}
