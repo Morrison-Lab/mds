@@ -3,7 +3,7 @@
 
 Let $f : \reals^p \to \reals$ have first partial derivatives,
 let $\vx^{(0)}$ be a starting point,
-and let $s^{(0)}, s^{(1)}, \ldots$ be positive step lengths.
+and let $s^{(0)}, s^{(1)}, \ldots$ be positive [step lengths](#def-gradient-descent).
 **Gradient ascent**
 [@wikipedia_gradient_descent]
 computes, for $t = 0, 1, 2, \ldots$,
@@ -21,7 +21,7 @@ $$
 
 Gradient ascent on $f$ takes the same steps as [gradient descent](#def-gradient-descent) on $-f$,
 since $\deriv{\vx} (-f) = -\deriv{\vx} f$.
-For $f(x) = -x^2$, $f'(x) = -2x$, so gradient ascent with fixed step length $s$ is
+For $f(x) = -x^2$, $f'(x) = -2x$, so gradient ascent with fixed [step length](#def-gradient-descent) $s$ is
 $x^{(t+1)} = (1 - 2s)\,x^{(t)}$,
 the iteration of @exm-gradient-descent, and it tends to the maximizer $0$ when $0 < s < 1$.
 
