@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 ## 1 Double Integrals
 
@@ -60,15 +60,15 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > **Example 3 (Changing the order of integration for a non-rectangular region)** Adapted from [\[3, Sec. 14.2\]](#ref-larsonCalc11e), Example 4, pp. 984–985.
 >
-> Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Uniform}(0, 1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-uniform) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\\[0, 1\]^2\\. Define the function \\g(x, y) = \text{e}^{-x^2}\\\mathbb{1}\mathopen{}\left(y \le x\right)\mathclose{}\\, where \\e\\ is [Euler’s number](algebra-exponentials.llms.md#def-euler-number), and compute its [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\.
+> Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Uniform}(0, 1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-uniform) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\\[0, 1\]^2\\. Define the function \\g(x, y) = \text{e}^{-x^2}\\{\mathbb{1}\mathopen{}\left(y \le x\right)\mathclose{}}\\, where \\e\\ is [Euler’s number](algebra-exponentials.llms.md#def-euler-number), and compute its [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) \\{\mathbb{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}}\\.
 >
 > Because the joint density equals \\1\\ on \\\[0, 1\]^2\\, this expectation is the double integral of \\g\\ over the unit square:
 >
-> \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \iint\_{\[0, 1\]^2} g(x, y)\\dA.\\
+> \\{\mathbb{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}} = \iint\_{\[0, 1\]^2} g(x, y)\\dA.\\
 >
-> The [indicator](indicator-functions.llms.md#def-indicator-function) factor \\\mathbb{1}\mathopen{}\left(y \le x\right)\mathclose{}\\ equals \\1\\ on the triangular region where \\y \le x\\ and \\0\\ elsewhere, so only that region, namely \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\ ([Figure 1](#fig-fubini-nonrect-region)), contributes, and there \\g(x, y) = \text{e}^{-x^2}\\:
+> The [indicator](indicator-functions.llms.md#def-indicator-function) factor \\{\mathbb{1}\mathopen{}\left(y \le x\right)\mathclose{}}\\ equals \\1\\ on the triangular region where \\y \le x\\ and \\0\\ elsewhere, so only that region, namely \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\ ([Figure 1](#fig-fubini-nonrect-region)), contributes, and there \\g(x, y) = \text{e}^{-x^2}\\:
 >
-> \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \iint_D \text{e}^{-x^2}\\dA.\\
+> \\{\mathbb{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}} = \iint_D \text{e}^{-x^2}\\dA.\\
 >
 > > **NOTE:**
 > >
@@ -97,7 +97,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > >   ggplot2::scale_x_continuous(breaks = c(0, 0.5, 1), limits = c(-0.1, 1.3)) +
 > >   ggplot2::scale_y_continuous(breaks = c(0, 0.5, 1), limits = c(-0.2, 1.2)) +
 > >   ggplot2::coord_equal() +
-> >   ggplot2::labs(x = "x", y = "y") +
+> >   ggplot2::labs(x = "First coordinate, x", y = "Second coordinate, y") +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -143,8 +143,8 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > > plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
 > >   plotly::add_surface(showscale = FALSE) |>
 > >   plotly::layout(scene = list(
-> >     xaxis = list(title = "x"),
-> >     yaxis = list(title = "y"),
+> >     xaxis = list(title = "First coordinate, x"),
+> >     yaxis = list(title = "Second coordinate, y"),
 > >     zaxis = list(title = "z = exp(-x^2)"),
 > >     camera = list(eye = list(x = 1.6, y = -1.6, z = 0.8))
 > >   ))
@@ -265,8 +265,8 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > >     )
 > >   ) |>
 > >   plotly::layout(scene = list(
-> >     xaxis = list(title = "x"),
-> >     yaxis = list(title = "y"),
+> >     xaxis = list(title = "First coordinate, x"),
+> >     yaxis = list(title = "Second coordinate, y"),
 > >     zaxis = list(title = "f(x, y)", range = c(-z_clip, z_clip)),
 > >     camera = list(eye = list(x = 1.6, y = 1.6, z = 0.6))
 > >   ))
@@ -288,13 +288,13 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 5 (Evaluating a double integral on a rectangle)** Structure adapted from [\[3, Sec. 14.2\]](#ref-larsonCalc11e), Example 2, pp. 982–983; the integrand \\x^2 + y^2\\ is original, chosen so the integral equals \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\ for \\g(x, y) = x^2 + y^2\\.
+> **Example 5 (Evaluating a double integral on a rectangle)** Structure adapted from [\[3, Sec. 14.2\]](#ref-larsonCalc11e), Example 2, pp. 982–983; the integrand \\x^2 + y^2\\ is original, chosen so the integral equals \\{\mathbb{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}}\\ for \\g(x, y) = x^2 + y^2\\.
 >
-> Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Uniform}(0, 1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-uniform) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\R = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, 1\]\\\\ ([Figure 4](#fig-fubini-rect-region)). Define the function \\g(x, y) = x^2 + y^2\\, and compute its [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\.
+> Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Uniform}(0, 1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-uniform) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\R = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, 1\]\\\\ ([Figure 4](#fig-fubini-rect-region)). Define the function \\g(x, y) = x^2 + y^2\\, and compute its [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) \\{\mathbb{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}}\\.
 >
 > Because the joint density equals \\1\\ on \\R\\, this expectation is the double integral of \\g\\ over \\R\\:
 >
-> \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \iint_R \mathopen{}\left(x^2 + y^2\right)\mathclose{}\\dA.\\
+> \\{\mathbb{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}} = \iint_R \mathopen{}\left(x^2 + y^2\right)\mathclose{}\\dA.\\
 >
 > > **NOTE:**
 > >
@@ -312,7 +312,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > >   ggplot2::scale_x_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
 > >   ggplot2::scale_y_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
 > >   ggplot2::coord_equal() +
-> >   ggplot2::labs(x = "x", y = "y") +
+> >   ggplot2::labs(x = "First coordinate, x", y = "Second coordinate, y") +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -324,7 +324,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > **Integrating \\y\\ first, then \\x\\:**
 >
-> \\ \begin{aligned} \operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} &= \int_0^1\\\int_0^1 \mathopen{}\left(x^2 + y^2\right)\mathclose{}\\dy\\dx \\&= \int_0^1 \mathopen{}\left\[x^2 y + \frac{y^3}{3}\right\]\mathclose{}\_0^1\\dx \\&= \int_0^1 \mathopen{}\left(x^2 + \frac{1}{3}\right)\mathclose{}\\dx \\&= \mathopen{}\left\[\frac{x^3}{3} + \frac{x}{3}\right\]\mathclose{}\_0^1 \\&= \frac{2}{3} \end{aligned} \\
+> \\ \begin{aligned} {\mathbb{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}} &= \int_0^1\\\int_0^1 \mathopen{}\left(x^2 + y^2\right)\mathclose{}\\dy\\dx \\&= \int_0^1 \mathopen{}\left\[x^2 y + \frac{y^3}{3}\right\]\mathclose{}\_0^1\\dx \\&= \int_0^1 \mathopen{}\left(x^2 + \frac{1}{3}\right)\mathclose{}\\dx \\&= \mathopen{}\left\[\frac{x^3}{3} + \frac{x}{3}\right\]\mathclose{}\_0^1 \\&= \frac{2}{3} \end{aligned} \\
 >
 > **Integrating \\x\\ first, then \\y\\** (verifying the order can be swapped):
 >
@@ -334,11 +334,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > As a cross-check, linearity of expectation gives the same value: since
 >
-> \\ \begin{aligned} \operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} &= \int_0^1 x^2\\dx \\ &= \frac{1}{3} \end{aligned} \\
+> \\ \begin{aligned} {\mathbb{E}\mathopen{}\left\[X^2\right\]\mathclose{}} &= \int_0^1 x^2\\dx \\ &= \frac{1}{3} \end{aligned} \\
 >
 > for \\X \sim \operatorname{Uniform}(0, 1)\\ (and likewise for \\Y\\),
 >
-> \\ \begin{aligned} \operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} &= \operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{} \\ &= \operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} + \operatorname{E}\mathopen{}\left\[Y^2\right\]\mathclose{} \\ &= \frac{1}{3} + \frac{1}{3} \\ &= \frac{2}{3}. \end{aligned} \\
+> \\ \begin{aligned} {\mathbb{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}} &= {\mathbb{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{}} \\ &= {\mathbb{E}\mathopen{}\left\[X^2\right\]\mathclose{}} + {\mathbb{E}\mathopen{}\left\[Y^2\right\]\mathclose{}} \\ &= \frac{1}{3} + \frac{1}{3} \\ &= \frac{2}{3}. \end{aligned} \\
 >
 > The solid whose volume equals this integral is shown in [Figure 5](#fig-fubini-rect).
 >
@@ -355,13 +355,13 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > > plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
 > >   plotly::add_surface(showscale = FALSE) |>
 > >   plotly::layout(scene = list(
-> >     xaxis = list(title = "x"),
-> >     yaxis = list(title = "y"),
+> >     xaxis = list(title = "First coordinate, x"),
+> >     yaxis = list(title = "Second coordinate, y"),
 > >     zaxis = list(title = "z", range = c(0, 2))
 > >   ))
 > > ```
 > >
-> > Figure 5: Surface \\z = x^2 + y^2\\ over the unit square \\\[0, 1\]^2\\. The double integral \\\tfrac{2}{3}\\ is the volume between this surface and the \\xy\\-plane, and equals \\\operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{}\\.
+> > Figure 5: Surface \\z = x^2 + y^2\\ over the unit square \\\[0, 1\]^2\\. The double integral \\\tfrac{2}{3}\\ is the volume between this surface and the \\xy\\-plane, and equals \\{\mathbb{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{}}\\.
 
 > **NOTE:**
 >

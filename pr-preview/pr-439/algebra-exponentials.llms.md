@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 ## 1 Polynomials
 
@@ -231,11 +231,11 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Infinite sum (series))** Let \\a_1, a_2, \ldots\\ be a sequence in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 18](#def-partial-sum)). The **infinite sum** (also called a **series**) [\[8\]](#ref-wikipedia_series_mathematics) \\\sum\_{i=1}^{\infty} a_i\\ is the limit of the partial sums:
+> **Definition 19 (Infinite sum, series)** Let \\a_1, a_2, \ldots\\ be a sequence in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 18](#def-partial-sum)). The **infinite sum** (also called a **series**) [\[8\]](#ref-wikipedia_series_mathematics) \\\sum\_{i=1}^{\infty} a_i\\ is the limit of the partial sums:
 >
 > \\\sum\_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim\_{n \to \infty} s_n\\
 >
-> Here the limit is a real number when the partial sums are real numbers that [converge](#def-convergent-sequence) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](#def-diverges-to-infinity) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
+> Here the limit is a real number when the partial sums are real numbers that [converge](#def-convergent-sequence) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](#def-diverges-to-infinity) or some partial sum is \\\infty\\. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
 
 > **NOTE:**
 >
@@ -262,13 +262,13 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > **Definition 20 (Exponential function)** The **exponential function** [\[10\]](#ref-wikipedia_exponential_function) \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
 >
-> \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
+> \\{\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
 > the [limit](#def-sequence-limit) of the [sequence](functions.llms.md#def-sequence) \\\mathopen{}\left(1 + \frac{x}{1}\right)\mathclose{}^1, \mathopen{}\left(1 + \frac{x}{2}\right)\mathclose{}^2, \mathopen{}\left(1 + \frac{x}{3}\right)\mathclose{}^3, \ldots\\. That limit exists for every real number \\x\\, and it is positive.
 
 > **NOTE:**
 >
-> **Example 13 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
+> **Example 13 (Approximating \\{\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
 >
 > |    \\n\\ | \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ |
 > |---------:|:----------------------------------------------------------|
@@ -277,13 +277,13 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 > |  \\100\\ | \\2.70481\ldots\\                                         |
 > | \\1000\\ | \\2.71692\ldots\\                                         |
 >
-> They approach \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\. For \\x = 0\\, every term is \\\mathopen{}\left(1 + 0\right)\mathclose{}^n = 1\\, so \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\.
+> They approach \\{\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}} = 2.71828\ldots\\. For \\x = 0\\, every term is \\\mathopen{}\left(1 + 0\right)\mathclose{}^n = 1\\, so \\{\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{}} = 1\\.
 
 > **NOTE:**
 >
 > **Definition 21 (Euler’s number)** **Euler’s number** [\[11\]](#ref-wikipedia_e_mathematical_constant) is
 >
-> \\e \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\
+> \\e \stackrel{\text{def}}{=}{\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}} = 2.71828\ldots\\
 
 > **NOTE:**
 >
@@ -291,25 +291,25 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\ [\[12\]](#ref-wikipedia_natural_logarithm), is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 20](#def-exponential-function)).
+> **Definition 22 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}}\\ [\[12\]](#ref-wikipedia_natural_logarithm), is the real number \\y\\ with \\{\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{}} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 20](#def-exponential-function)).
 
 > **NOTE:**
 >
-> *Remark 3* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 21](#def-euler-number)) [\[13\]](#ref-wikipedia_logarithm). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+> *Remark 3* (Other notations for the natural logarithm). In these notes, \\{\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 21](#def-euler-number)) [\[13\]](#ref-wikipedia_logarithm). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
 
 > **NOTE:**
 >
 > **Example 15 (Natural logarithms)**  
 >
-> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 13](#exm-exponential-function)).
-> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 21](#def-euler-number)).
-> - \\\operatorname{log}\mathopen{}\left\\0\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\-2\right\\\mathclose{}\\ are not defined, because \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} \> 0\\ for every real \\y\\.
+> - \\{\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{}} = 0\\, because \\{\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{}} = 1\\ ([Example 13](#exm-exponential-function)).
+> - \\{\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}} = 1\\, because \\{\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}} = e\\ ([Definition 21](#def-euler-number)).
+> - \\{\operatorname{log}\mathopen{}\left\\0\right\\\mathclose{}}\\ and \\{\operatorname{log}\mathopen{}\left\\-2\right\\\mathclose{}}\\ are not defined, because \\{\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{}} \> 0\\ for every real \\y\\.
 
 > **NOTE:**
 >
 > **Definition 23 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
 >
-> \\a^b \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{}.\\
+> \\a^b \stackrel{\text{def}}{=}{\operatorname{exp}\mathopen{}\left\\b \cdot{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}}\right\\\mathclose{}}.\\
 >
 > When \\b\\ is an integer, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer).
 
@@ -317,19 +317,19 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > **Example 16 (Real powers, and \\e^x\\)**  
 >
-> - \\2^3 = \operatorname{exp}\mathopen{}\left\\3 \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\3 \cdot 0.69315\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\2.07944\right\\\mathclose{} \approx 8\\, which agrees with
+> - \\2^3 = {\operatorname{exp}\mathopen{}\left\\3 \cdot{\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}}\right\\\mathclose{}} \approx {\operatorname{exp}\mathopen{}\left\\3 \cdot 0.69315\right\\\mathclose{}} \approx {\operatorname{exp}\mathopen{}\left\\2.07944\right\\\mathclose{}} \approx 8\\, which agrees with
 >
 >   \\ \begin{aligned} 2^3 &= 2 \cdot 2 \cdot 2 \\ &= 8 \end{aligned} \\
 >
 >   from [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
 >
-> - \\2^{1/2} = \operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
+> - \\2^{1/2} = {\operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot{\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}}\right\\\mathclose{}} \approx {\operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{}} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 >
 > - For every real \\x\\, with base \\e\\ ([Definition 21](#def-euler-number)):
 >
->   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~23}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~15}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
+>   \\ \begin{aligned} e^x &= {\operatorname{exp}\mathopen{}\left\\x \cdot{\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}}\right\\\mathclose{}} && \text{(}\href{#def-real-power}{\text{Definition~23}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= {\operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{}} && \text{(}{\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~15}}\text{)} \\ &= {\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
 >
->   So \\e^x\\ and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\ are two names for the same number.
+>   So \\e^x\\ and \\{\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}}\\ are two names for the same number.
 
 > **NOTE:**
 >
@@ -350,54 +350,54 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > **Theorem 2 (\\\operatorname{exp}\\ and \\\operatorname{log}\\ are mutual inverses)**  
 >
-> 1.  For every \\a \> 0\\: \\\operatorname{exp}\mathopen{}\left\\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
-> 2.  For every \\a \in \mathbb{R}\\: \\\operatorname{log}\mathopen{}\left\\\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
+> 1.  For every \\a \> 0\\: \\{\operatorname{exp}\mathopen{}\left\\{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}}\right\\\mathclose{}} = a\\.
+> 2.  For every \\a \in \mathbb{R}\\: \\{\operatorname{log}\mathopen{}\left\\{\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}}\right\\\mathclose{}} = a\\.
 
 > **NOTE:**
 >
 > **Theorem 3 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
 >
-> \\ \operatorname{log}\mathopen{}\left\\a \cdot b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} \\
+> \\ {\operatorname{log}\mathopen{}\left\\a \cdot b\right\\\mathclose{}} = {\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}} + {\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}} \\
 
 > **NOTE:**
 >
 > **Corollary 1 (Logarithm of a quotient)** If \\a \> 0\\ and \\b \> 0\\, then
 >
-> \\\operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\
+> \\{\operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}} = {\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}} - {\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
 > *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 3](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
 >
-> \\ \begin{aligned} \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\\frac{a}{b} \cdot b\right\\\mathclose{} && \text{(} a = \tfrac{a}{b} \cdot b \text{)} \\ &= \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} && \text{(logarithm of a product)} \end{aligned} \\
+> \\ \begin{aligned} {\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}} &= {\operatorname{log}\mathopen{}\left\\\frac{a}{b} \cdot b\right\\\mathclose{}} && \text{(} a = \tfrac{a}{b} \cdot b \text{)} \\ &= {\operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}} + {\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}} && \text{(logarithm of a product)} \end{aligned} \\
 >
-> The second step applies [Theorem 3](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
+> The second step applies [Theorem 3](#thm-log-prod). Subtracting \\{\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}}\\ from both sides gives \\{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}} - {\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}} = {\operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}}\\.
 
 > **NOTE:**
 >
 > **Theorem 4 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
 >
-> \\ \operatorname{log}\mathopen{}\left\\a^b\right\\\mathclose{} = b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} \\
+> \\ {\operatorname{log}\mathopen{}\left\\a^b\right\\\mathclose{}} = b \cdot{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}} \\
 
 > **NOTE:**
 >
 > **Theorem 5 (Exponential of a sum)** The exponential of a sum is equal to the product of the exponentials of its [terms](algebra-sums.llms.md#def-term):
 >
-> \\\operatorname{exp}\mathopen{}\left\\a+b\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}\\
+> \\{\operatorname{exp}\mathopen{}\left\\a+b\right\\\mathclose{}} = {\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}} \cdot{\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
-> **Example 18 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
+> **Example 18 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\{\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{}} = {\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}} \approx 148.41\\, and \\{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \cdot{\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{}} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
 
 > **NOTE:**
 >
 > **Corollary 2 (Exponential of a difference)** The exponential of a difference is the exponential of the first term divided by the exponential of the second term:
 >
-> \\\operatorname{exp}\mathopen{}\left\\a-b\right\\\mathclose{} = \frac{\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}}\\
+> \\{\operatorname{exp}\mathopen{}\left\\a-b\right\\\mathclose{}} = \frac{{\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}}}{{\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}}}\\
 
 > **NOTE:**
 >
-> **Example 19 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
+> **Example 19 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\{\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{}} = {\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{}} \approx 20.09\\, and \\\frac{{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}}{{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
 
 > **NOTE:**
 >
@@ -463,7 +463,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Corollary 3 (Natural exponential of a product)** \\ \begin{aligned} \operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{} &= (\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{})^b \\ &= (\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{})^a \end{aligned} \\
+> **Corollary 3 (Natural exponential of a product)** \\ \begin{aligned} {\operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{}} &= ({\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}})^b \\ &= ({\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}})^a \end{aligned} \\
 
 > **NOTE:**
 >
@@ -515,7 +515,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 >     (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
 >
-> 3.  \\b \> 0\\, \\c \> 0\\, \\c \neq 1\\, and \\b = \operatorname{exp}\mathopen{}\left\\\frac{\operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}}{c-1}\right\\\mathclose{}\\. For \\b \> 0\\, dividing both sides of \\b^c = bc\\ by \\b\\ gives \\b^{c-1} = c\\, which needs \\c \> 0\\ because \\b^{c-1} \> 0\\; taking logarithms then gives \\(c-1)\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}\\. For example, \\c = 2\\ gives \\b = 2\\, and indeed
+> 3.  \\b \> 0\\, \\c \> 0\\, \\c \neq 1\\, and \\b = {\operatorname{exp}\mathopen{}\left\\\frac{{\operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}}}{c-1}\right\\\mathclose{}}\\. For \\b \> 0\\, dividing both sides of \\b^c = bc\\ by \\b\\ gives \\b^{c-1} = c\\, which needs \\c \> 0\\ because \\b^{c-1} \> 0\\; taking logarithms then gives \\(c-1){\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}} = {\operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}}\\. For example, \\c = 2\\ gives \\b = 2\\, and indeed
 >
 >     \\ \begin{aligned} 2^2 &= 4 \\ &= 2 \cdot 2. \end{aligned} \\
 >
@@ -586,11 +586,11 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >     scene = list(
 >       xaxis = list(
 >         # type = "log",
->         title = "b"
+>         title = "First input, b"
 >       ),
 >       yaxis = list(
 >         # type = "log",
->         title = "c"
+>         title = "Second input, c"
 >       ),
 >       zaxis = list(
 >         # type = "log",
@@ -639,11 +639,11 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >     scene = list(
 >       xaxis = list(
 >         # type = "log",
->         title = "b"
+>         title = "First input, b"
 >       ),
 >       yaxis = list(
 >         # type = "log",
->         title = "c"
+>         title = "Second input, c"
 >       ),
 >       zaxis = list(
 >         title = "outcome"
@@ -662,7 +662,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > 1.  \\c = 1\\;
 > 2.  \\b = 0\\ and \\c \> 0\\;
-> 3.  \\b \> 0\\, \\c \> 0\\, \\c \neq 1\\, and \\b = \operatorname{exp}\mathopen{}\left\\\frac{\operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}}{c-1}\right\\\mathclose{}\\;
+> 3.  \\b \> 0\\, \\c \> 0\\, \\c \neq 1\\, and \\b = {\operatorname{exp}\mathopen{}\left\\\frac{{\operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}}}{c-1}\right\\\mathclose{}}\\;
 > 4.  \\b \< 0\\, \\c\\ is an odd integer with \\c \ge 3\\, and \\b = -c^{1/(c-1)}\\;
 > 5.  \\b \< 0\\, \\c\\ is an even integer with \\c \le -2\\, and \\b = -(-c)^{1/(c-1)}\\.
 
@@ -684,11 +684,11 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > **Case \\a \> 0\\.** By [Theorem 9](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 4](#thm-log-exp)):
 >
-> \\ \begin{aligned} a^{bc} &= a^{(b^c)} \\ \operatorname{log}\mathopen{}\left\\a^{bc}\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\a^{(b^c)}\right\\\mathclose{} && \text{(take logarithms of both sides)} \\ bc \cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= b^c\cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} && \text{(logarithm of a power)} \end{aligned} \tag{1}\\
+> \\ \begin{aligned} a^{bc} &= a^{(b^c)} \\ {\operatorname{log}\mathopen{}\left\\a^{bc}\right\\\mathclose{}} &= {\operatorname{log}\mathopen{}\left\\a^{(b^c)}\right\\\mathclose{}} && \text{(take logarithms of both sides)} \\ bc \cdot {\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}} &= b^c\cdot {\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}} && \text{(logarithm of a power)} \end{aligned} \tag{1}\\
 >
 > The last line of [Equation 1](#eq-double-exp-log-scale) holds exactly when
 >
-> 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
+> 1.  \\a = 1\\ (so that \\{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}} = 0\\), or
 > 2.  \\bc = b^c\\ (see [Theorem 10](#thm-exp-vs-mult)).
 >
 > **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 24](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.

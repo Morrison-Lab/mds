@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 ## 1 Integration
 
@@ -56,7 +56,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > > ``` downlit
 > > ggplot2::ggplot() +
 > >   ggplot2::geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
-> >   ggplot2::labs(x = "x", y = expression(f(x))) +
+> >   ggplot2::labs(x = "Input, x", y = expression("Integrand, " * f(x))) +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -80,7 +80,11 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > >
 > > ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
 > >   ggplot2::geom_line(linewidth = 0.8) +
-> >   ggplot2::labs(x = "x", y = expression(F(x)), color = "C") +
+> >   ggplot2::labs(
+> >     x = "Input, x",
+> >     y = expression("Antiderivative, " * F(x)),
+> >     color = "C"
+> >   ) +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -98,7 +102,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > |:--:|:--:|:---|
 > | \\c\\ | \\cx\\ | — |
 > | \\x^n\\ | \\\dfrac{x^{n+1}}{n+1}\\ | \\n \ne -1\\ |
-> | \\\dfrac{1}{x}\\ | \\\operatorname{log}\mathopen{}\left\\\mathopen{}\left\|x\right\|\mathclose{}\right\\\mathclose{}\\ | \\x \ne 0\\ |
+> | \\\dfrac{1}{x}\\ | \\{\operatorname{log}\mathopen{}\left\\\mathopen{}\left\|x\right\|\mathclose{}\right\\\mathclose{}}\\ | \\x \ne 0\\ |
 > | \\\text{e}^{x}\\ | \\\text{e}^{x}\\ | (self-antiderivative) |
 > | \\\text{e}^{cx}\\ | \\\dfrac{1}{c}\text{e}^{cx}\\ | \\c \ne 0\\ |
 > | \\\sin x\\ | \\-\cos x\\ | — |
@@ -721,19 +725,19 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Evaluate the integral:
 >
-> \\\int_a^b x^3 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
+> \\\int_a^b x^3 {\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\dx\\
 
 > **NOTE:**
 >
-> *Solution 9*. Factor the integrand as \\x^2 \cdot\mathopen{}\left(x \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\right)\mathclose{}\\. Set:
+> *Solution 9*. Factor the integrand as \\x^2 \cdot\mathopen{}\left(x {\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}}\right)\mathclose{}\\. Set:
 >
-> \\u = x^2, \qquad dv = x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
+> \\u = x^2, \qquad dv = x{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\dx\\
 >
-> Then \\du = 2x\\dx\\ and \\v = -\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\.
+> Then \\du = 2x\\dx\\ and \\v = -{\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}}\\.
 >
 > Using integration by parts (\\\int u\\dv = uv - \int v\\du\\):
 >
-> \\\begin{aligned} \int_a^b x^3 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b - \int_a^b \mathopen{}\left\[-\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}(2x\\dx) \\ &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b + 2\int_a^b x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx \\ &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b + 2\mathopen{}\left\[-\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b \\ &= \mathopen{}\left\[-(x^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b \\ &= (a^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{a^2}{2}\right\\\mathclose{} - (b^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{b^2}{2}\right\\\mathclose{} \end{aligned}\\
+> \\\begin{aligned} \int_a^b x^3 {\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\dx &= \mathopen{}\left\[-x^2 {\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\right\]\mathclose{}\_a^b - \int_a^b \mathopen{}\left\[-{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\right\]\mathclose{}(2x\\dx) \\ &= \mathopen{}\left\[-x^2 {\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\right\]\mathclose{}\_a^b + 2\int_a^b x{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\dx \\ &= \mathopen{}\left\[-x^2 {\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\right\]\mathclose{}\_a^b + 2\mathopen{}\left\[-{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\right\]\mathclose{}\_a^b \\ &= \mathopen{}\left\[-(x^2 + 2){\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\right\]\mathclose{}\_a^b \\ &= (a^2 + 2){\operatorname{exp}\mathopen{}\left\\-\frac{a^2}{2}\right\\\mathclose{}} - (b^2 + 2){\operatorname{exp}\mathopen{}\left\\-\frac{b^2}{2}\right\\\mathclose{}} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -894,7 +898,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Evaluate the improper integral:
 >
-> \\\int_0^\infty x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}\\dx\\
+> \\\int_0^\infty x{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}}\\dx\\
 
 > **NOTE:**
 >
@@ -907,7 +911,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Substitute:
 >
-> \\ \begin{aligned} \int_0^\infty x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}\\dx &= 2\int_0^\infty e^{-u}\\du \\ &= 2\mathopen{}\left\[-e^{-u}\right\]\mathclose{}\_0^\infty \\ &= 2\mathopen{}\left(0 - (-1)\right)\mathclose{} \\ &= 2 \end{aligned} \\
+> \\ \begin{aligned} \int_0^\infty x{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}}\\dx &= 2\int_0^\infty e^{-u}\\du \\ &= 2\mathopen{}\left\[-e^{-u}\right\]\mathclose{}\_0^\infty \\ &= 2\mathopen{}\left(0 - (-1)\right)\mathclose{} \\ &= 2 \end{aligned} \\
 >
 > *Remark:* Integrals of this structure arise directly in calculating moments and normalization constants for Gaussian and Rayleigh probability distributions.
 

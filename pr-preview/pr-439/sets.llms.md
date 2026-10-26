@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 > **NOTE:**
 >
@@ -22,15 +22,15 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Example 1 (Sets of die rolls)** The possible results of rolling a six-sided die form the set \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, with \\3 \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ and \\7 \notin \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\. The sets \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\\mathopen{}\left\\3, 2, 1\right\\\mathclose{}\\ are equal, because they have the same elements; the order in which the elements are listed does not matter.
+> **Example 1 (Sets of die rolls)** The possible results of rolling a six-sided die form the set \\{\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\, with \\3 \in {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ and \\7 \notin {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\. The sets \\{\mathopen{}\left\\1, 2, 3\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\3, 2, 1\right\\\mathclose{}}\\ are equal, because they have the same elements; the order in which the elements are listed does not matter.
 
 > **NOTE:**
 >
-> **Definition 2 (Set-builder notation)** For a set \\A\\ and a statement \\P(x)\\ about an element \\x\\, **set-builder notation** [\[2\]](#ref-wikipedia_set_builder_notation) \\\mathopen{}\left\\x \in A : P(x)\right\\\mathclose{}\\ denotes the set of elements \\x\\ of \\A\\ for which \\P(x)\\ is true.
+> **Definition 2 (Set-builder notation)** For a set \\A\\ and a statement \\P(x)\\ about an element \\x\\, **set-builder notation** [\[2\]](#ref-wikipedia_set_builder_notation) \\{\mathopen{}\left\\x \in A : P(x)\right\\\mathclose{}}\\ denotes the set of elements \\x\\ of \\A\\ for which \\P(x)\\ is true.
 
 > **NOTE:**
 >
-> **Example 2 (Even die rolls in set-builder notation)** \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \text{ is even}\right\\\mathclose{} = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is the set of [even](number-systems.llms.md#def-even-odd) rolls, and \\\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}\\ is the set of positive [real numbers](number-systems.llms.md#def-real-numbers).
+> **Example 2 (Even die rolls in set-builder notation)** \\{\mathopen{}\left\\x \in {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} : x \text{ is even}\right\\\mathclose{}} = {\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ is the set of [even](number-systems.llms.md#def-even-odd) rolls, and \\{\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}}\\ is the set of positive [real numbers](number-systems.llms.md#def-real-numbers).
 
 > **NOTE:**
 >
@@ -38,7 +38,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Example 3 (Even die rolls)** The even die rolls form a subset of the possible rolls: \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, because each of \\2\\, \\4\\, and \\6\\ is a possible roll. The set \\\mathopen{}\left\\2, 4, 7\right\\\mathclose{}\\ is not a subset of \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, because \\7\\ is not a possible roll.
+> **Example 3 (Even die rolls)** The even die rolls form a subset of the possible rolls: \\{\mathopen{}\left\\2, 4, 6\right\\\mathclose{}} \subseteq {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\, because each of \\2\\, \\4\\, and \\6\\ is a possible roll. The set \\{\mathopen{}\left\\2, 4, 7\right\\\mathclose{}}\\ is not a subset of \\{\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\, because \\7\\ is not a possible roll.
 
 > **NOTE:**
 >
@@ -50,11 +50,11 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Strict subset (proper subset))** A [set](#def-set) \\A\\ is a **strict subset** (also called a **proper subset**) of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
+> **Definition 4 (Strict subset, proper subset)** A [set](#def-set) \\A\\ is a **strict subset** (also called a **proper subset**) of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
 
 > **NOTE:**
 >
-> *Remark 2* (The symbol \\\subset\\). Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) [\[3\]](#ref-wikipedia_subset). For example, \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subset \mathopen{}\left\\1, 2\right\\\mathclose{}\\ is true in the first reading, because \\\mathopen{}\left\\1, 2\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2\right\\\mathclose{}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
+> *Remark 2* (The symbol \\\subset\\). Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) [\[3\]](#ref-wikipedia_subset). For example, \\{\mathopen{}\left\\1, 2\right\\\mathclose{}} \subset {\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ is true in the first reading, because \\{\mathopen{}\left\\1, 2\right\\\mathclose{}} \subseteq {\mathopen{}\left\\1, 2\right\\\mathclose{}}\\, and false in the second, because the two sets are equal. These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
 
 > **NOTE:**
 >
@@ -62,7 +62,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (Superset and subset). \\B \supseteq A\\ means the same thing as \\A \subseteq B\\ ([subset](#def-subset)). For example, \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{} \supseteq \mathopen{}\left\\1, 3\right\\\mathclose{}\\, and \\\mathopen{}\left\\1, 3\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\. But \\\mathopen{}\left\\1, 3\right\\\mathclose{}\\ is not a superset of \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\, because \\2 \in \mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\2 \notin \mathopen{}\left\\1, 3\right\\\mathclose{}\\.
+> *Remark 3* (Superset and subset). \\B \supseteq A\\ means the same thing as \\A \subseteq B\\ ([subset](#def-subset)). For example, \\{\mathopen{}\left\\1, 2, 3\right\\\mathclose{}} \supseteq {\mathopen{}\left\\1, 3\right\\\mathclose{}}\\, and \\{\mathopen{}\left\\1, 3\right\\\mathclose{}} \subseteq {\mathopen{}\left\\1, 2, 3\right\\\mathclose{}}\\. But \\{\mathopen{}\left\\1, 3\right\\\mathclose{}}\\ is not a superset of \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\, because \\2 \in {\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ and \\2 \notin {\mathopen{}\left\\1, 3\right\\\mathclose{}}\\.
 
 > **NOTE:**
 >
@@ -70,11 +70,11 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Strict superset and strict subset). \\B \supsetneq A\\ means the same thing as \\A \subsetneq B\\ ([strict subset](#def-strict-subset)). For example, \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{} \supsetneq \mathopen{}\left\\1, 3\right\\\mathclose{}\\, because \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ contains \\2\\ and \\\mathopen{}\left\\1, 3\right\\\mathclose{}\\ does not.
+> *Remark 4* (Strict superset and strict subset). \\B \supsetneq A\\ means the same thing as \\A \subsetneq B\\ ([strict subset](#def-strict-subset)). For example, \\{\mathopen{}\left\\1, 2, 3\right\\\mathclose{}} \supsetneq {\mathopen{}\left\\1, 3\right\\\mathclose{}}\\, because \\{\mathopen{}\left\\1, 2, 3\right\\\mathclose{}}\\ contains \\2\\ and \\{\mathopen{}\left\\1, 3\right\\\mathclose{}}\\ does not.
 
 > **NOTE:**
 >
-> **Example 4 (Strict subsets and supersets of die rolls)** For the even rolls \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and the possible rolls \\B = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\:
+> **Example 4 (Strict subsets and supersets of die rolls)** For the even rolls \\A = {\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ and the possible rolls \\B = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\:
 >
 > - \\A \subsetneq B\\, because \\A \subseteq B\\ ([Example 3](#exm-subset)) and \\1 \in B\\ but \\1 \notin A\\, so \\A \neq B\\;
 > - \\B \supseteq A\\ and \\B \supsetneq A\\, for the same reasons;
@@ -86,11 +86,11 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (Other notation for the empty set). Other sources write \\\mathopen{}\left\\\right\\\mathclose{}\\ for \\\emptyset\\ [\[4\]](#ref-wikipedia_empty_set). Some sources call it the **null set**, but in measure theory a “null set” usually means a set of [measure zero](measures.llms.md#def-measure-zero), which need not be empty. For example, the interval \\\[0, 0\] = \mathopen{}\left\\0\right\\\mathclose{}\\ has length \\0 - 0 = 0\\, so it is a null set in that sense, but it is not empty, because \\0 \in \mathopen{}\left\\0\right\\\mathclose{}\\.
+> *Remark 5* (Other notation for the empty set). Other sources write \\{\mathopen{}\left\\\right\\\mathclose{}}\\ for \\\emptyset\\ [\[4\]](#ref-wikipedia_empty_set). Some sources call it the **null set**, but in measure theory a “null set” usually means a set of [measure zero](measures.llms.md#def-measure-zero), which need not be empty. For example, the interval \\\[0, 0\] = {\mathopen{}\left\\0\right\\\mathclose{}}\\ has length \\0 - 0 = 0\\, so it is a null set in that sense, but it is not empty, because \\0 \in {\mathopen{}\left\\0\right\\\mathclose{}}\\.
 
 > **NOTE:**
 >
-> **Example 5 (Impossible die rolls)** No roll of a six-sided die is greater than 6, so \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \> 6\right\\\mathclose{} = \emptyset\\.
+> **Example 5 (Impossible die rolls)** No roll of a six-sided die is greater than 6, so \\{\mathopen{}\left\\x \in {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} : x \> 6\right\\\mathclose{}} = \emptyset\\.
 
 > **NOTE:**
 >
@@ -128,22 +128,22 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Closed interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **closed interval** is the interval ([Definition 10](#def-interval)) \\\[a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \le b\right\\\mathclose{}\\ that includes both bounds ([Definition 9](#def-bound)).
+> **Definition 11 (Closed interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **closed interval** is the interval ([Definition 10](#def-interval)) \\\[a, b\] \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: a \le x \le b\right\\\mathclose{}}\\ that includes both bounds ([Definition 9](#def-bound)).
 
 > **NOTE:**
 >
-> **Definition 12 (Open interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **open interval** is the interval ([Definition 10](#def-interval)) \\(a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \< b\right\\\mathclose{}\\ that includes neither bound ([Definition 9](#def-bound)).
+> **Definition 12 (Open interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **open interval** is the interval ([Definition 10](#def-interval)) \\(a, b) \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: a \< x \< b\right\\\mathclose{}}\\ that includes neither bound ([Definition 9](#def-bound)).
 
 > **NOTE:**
 >
-> **Definition 13 (Half-open intervals)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **half-open intervals** are the intervals ([Definition 10](#def-interval)) \\\[a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \< b\right\\\mathclose{}\\ and \\(a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \le b\right\\\mathclose{}\\ that include one bound ([Definition 9](#def-bound)) and not the other.
+> **Definition 13 (Half-open intervals)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **half-open intervals** are the intervals ([Definition 10](#def-interval)) \\\[a, b) \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: a \le x \< b\right\\\mathclose{}}\\ and \\(a, b\] \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: a \< x \le b\right\\\mathclose{}}\\ that include one bound ([Definition 9](#def-bound)) and not the other.
 
 > **NOTE:**
 >
 > **Definition 14 (Unbounded intervals)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a\\ and \\b\\, the **unbounded intervals** are the intervals ([Definition 10](#def-interval)) with at most one bound ([Definition 9](#def-bound)):
 >
-> - \\\[a, \infty) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \ge a\right\\\mathclose{}\\ and \\(a, \infty) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \> a\right\\\mathclose{}\\;
-> - \\(-\infty, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \le b\right\\\mathclose{}\\ and \\(-\infty, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \< b\right\\\mathclose{}\\;
+> - \\\[a, \infty) \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: x \ge a\right\\\mathclose{}}\\ and \\(a, \infty) \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: x \> a\right\\\mathclose{}}\\;
+> - \\(-\infty, b\] \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: x \le b\right\\\mathclose{}}\\ and \\(-\infty, b) \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: x \< b\right\\\mathclose{}}\\;
 > - \\(-\infty, \infty) \stackrel{\text{def}}{=}\mathbb{R}\\.
 
 > **NOTE:**
@@ -157,15 +157,15 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Collection of sets (family of sets))** A **collection of sets** (also called a **family of sets**) [\[7\]](#ref-wikipedia_family_of_sets) is a set whose elements are themselves sets.
+> **Definition 15 (Collection of sets, family of sets)** A **collection of sets** (also called a **family of sets**) [\[7\]](#ref-wikipedia_family_of_sets) is a set whose elements are themselves sets.
 
 > **NOTE:**
 >
-> **Example 8 (The collection of all subsets of a two-element set)** The subsets of \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ are \\\emptyset\\, \\\mathopen{}\left\\1\right\\\mathclose{}\\, \\\mathopen{}\left\\2\right\\\mathclose{}\\, and \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ ([Theorem 3](#thm-empty-subset) and [Theorem 1](#thm-subset-reflexive) give the first and the last), so the collection of all subsets of \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ is
+> **Example 8 (The collection of all subsets of a two-element set)** The subsets of \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ are \\\emptyset\\, \\{\mathopen{}\left\\1\right\\\mathclose{}}\\, \\{\mathopen{}\left\\2\right\\\mathclose{}}\\, and \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ ([Theorem 3](#thm-empty-subset) and [Theorem 1](#thm-subset-reflexive) give the first and the last), so the collection of all subsets of \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ is
 >
-> \\\mathopen{}\left\\\emptyset, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\1, 2\right\\\mathclose{}\right\\\mathclose{}\\
+> \\{\mathopen{}\left\\\emptyset, {\mathopen{}\left\\1\right\\\mathclose{}}, {\mathopen{}\left\\2\right\\\mathclose{}}, {\mathopen{}\left\\1, 2\right\\\mathclose{}}\right\\\mathclose{}}\\
 >
-> It has four elements, each of them a set. The collection \\\mathopen{}\left\\\emptyset\right\\\mathclose{}\\ has one element, the empty set, so it is not equal to \\\emptyset\\, which has none.
+> It has four elements, each of them a set. The collection \\{\mathopen{}\left\\\emptyset\right\\\mathclose{}}\\ has one element, the empty set, so it is not equal to \\\emptyset\\, which has none.
 
 > **NOTE:**
 >
@@ -197,7 +197,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > **Definition 19 (Union)** The **union** [\[10\]](#ref-wikipedia_union_set_theory) of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
 >
-> \\A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ or } x \in B\right\\\mathclose{}\\
+> \\A \cup B \stackrel{\text{def}}{=}{\mathopen{}\left\\x : x \in A \text{ or } x \in B\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
@@ -207,7 +207,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > **Definition 21 (Intersection)** The **intersection** [\[11\]](#ref-wikipedia_intersection_set_theory) of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
 >
-> \\A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ and } x \in B\right\\\mathclose{}\\
+> \\A \cap B \stackrel{\text{def}}{=}{\mathopen{}\left\\x : x \in A \text{ and } x \in B\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
@@ -217,41 +217,41 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > **Definition 23 (Set difference)** The **set difference** [\[12\]](#ref-wikipedia_complement_set_theory) of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
 >
-> \\A \setminus B \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : x \notin B\right\\\mathclose{}\\
+> \\A \setminus B \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in A : x \notin B\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
 > **Definition 24 (Complement)** Let \\A\\ be a [subset](#def-subset) of a set \\S\\. The **complement** [\[12\]](#ref-wikipedia_complement_set_theory) of \\A\\ in \\S\\ is the set difference ([Definition 23](#def-set-difference)) \\S \setminus A\\: the elements of \\S\\ that are not in \\A\\. When the set \\S\\ is clear from context, the complement of \\A\\ is written \\A^c\\:
 >
-> \\A^c \stackrel{\text{def}}{=}S \setminus A = \mathopen{}\left\\x \in S : x \notin A\right\\\mathclose{}\\
+> \\A^c \stackrel{\text{def}}{=}S \setminus A = {\mathopen{}\left\\x \in S : x \notin A\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
-> **Example 12 (Complements of sets of die rolls)** Let \\S = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ be the possible rolls of a die.
+> **Example 12 (Complements of sets of die rolls)** Let \\S = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ be the possible rolls of a die.
 >
-> - The complement of the even rolls \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is \\A^c = \mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, the odd rolls.
+> - The complement of the even rolls \\A = {\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ is \\A^c = {\mathopen{}\left\\1, 3, 5\right\\\mathclose{}}\\, the odd rolls.
 > - The complement of \\S\\ itself is \\S^c = \emptyset\\, and the complement of \\\emptyset\\ is \\\emptyset^c = S\\.
 >
-> The complement depends on \\S\\: in \\S = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, the complement of \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, but in \\S = \mathopen{}\left\\2, 4, 6, 8\right\\\mathclose{}\\, it is \\\mathopen{}\left\\8\right\\\mathclose{}\\.
+> The complement depends on \\S\\: in \\S = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\, the complement of \\{\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ is \\{\mathopen{}\left\\1, 3, 5\right\\\mathclose{}}\\, but in \\S = {\mathopen{}\left\\2, 4, 6, 8\right\\\mathclose{}}\\, it is \\{\mathopen{}\left\\8\right\\\mathclose{}}\\.
 
 > **NOTE:**
 >
-> **Example 13 (Combining sets of die rolls)** Let \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ (the even rolls) and \\B = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ (the rolls of at most 3). Then:
+> **Example 13 (Combining sets of die rolls)** Let \\A = {\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ (the even rolls) and \\B = {\mathopen{}\left\\1, 2, 3\right\\\mathclose{}}\\ (the rolls of at most 3). Then:
 >
-> - \\A \cup B = \mathopen{}\left\\1, 2, 3, 4, 6\right\\\mathclose{}\\, the rolls that are even or at most 3;
-> - \\A \cap B = \mathopen{}\left\\2\right\\\mathclose{}\\, the only roll that is both;
-> - \\A \setminus B = \mathopen{}\left\\4, 6\right\\\mathclose{}\\, the even rolls greater than 3;
-> - \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \cap \mathopen{}\left\\1, 3, 5\right\\\mathclose{} = \emptyset\\: no roll is both even and odd.
+> - \\A \cup B = {\mathopen{}\left\\1, 2, 3, 4, 6\right\\\mathclose{}}\\, the rolls that are even or at most 3;
+> - \\A \cap B = {\mathopen{}\left\\2\right\\\mathclose{}}\\, the only roll that is both;
+> - \\A \setminus B = {\mathopen{}\left\\4, 6\right\\\mathclose{}}\\, the even rolls greater than 3;
+> - \\{\mathopen{}\left\\2, 4, 6\right\\\mathclose{}} \cap {\mathopen{}\left\\1, 3, 5\right\\\mathclose{}} = \emptyset\\: no roll is both even and odd.
 
 > **NOTE:**
 >
 > **Example 14 (Unions and intersections of many sets)**  
 >
-> - \\ \begin{aligned} \bigcup\_{i=1}^{3} \mathopen{}\left\\i, i + 1\right\\\mathclose{} &= \mathopen{}\left\\1, 2\right\\\mathclose{} \cup \mathopen{}\left\\2, 3\right\\\mathclose{} \cup \mathopen{}\left\\3, 4\right\\\mathclose{} \\ &= \mathopen{}\left\\1, 2, 3, 4\right\\\mathclose{}. \end{aligned} \\
+> - \\ \begin{aligned} \bigcup\_{i=1}^{3} {\mathopen{}\left\\i, i + 1\right\\\mathclose{}} &= {\mathopen{}\left\\1, 2\right\\\mathclose{}} \cup {\mathopen{}\left\\2, 3\right\\\mathclose{}} \cup {\mathopen{}\left\\3, 4\right\\\mathclose{}} \\ &= {\mathopen{}\left\\1, 2, 3, 4\right\\\mathclose{}}. \end{aligned} \\
 >
-> - \\\bigcup\_{i=1}^{\infty} \mathopen{}\left\\i\right\\\mathclose{} = \mathbb{N}\\: each natural number \\n\\ is in the set \\\mathopen{}\left\\n\right\\\mathclose{}\\, and each set \\\mathopen{}\left\\i\right\\\mathclose{}\\ contains only the natural number \\i\\.
+> - \\\bigcup\_{i=1}^{\infty} {\mathopen{}\left\\i\right\\\mathclose{}} = \mathbb{N}\\: each natural number \\n\\ is in the set \\{\mathopen{}\left\\n\right\\\mathclose{}}\\, and each set \\{\mathopen{}\left\\i\right\\\mathclose{}}\\ contains only the natural number \\i\\.
 >
-> - \\\bigcap\_{i=1}^{\infty} \[0, 1/i\] = \mathopen{}\left\\0\right\\\mathclose{}\\: \\0\\ is in every interval \\\[0, 1/i\]\\; a number \\x \> 0\\ is not in \\\[0, 1/i\]\\ once \\i \> 1/x\\; and a number \\x \< 0\\ is in none of them.
+> - \\\bigcap\_{i=1}^{\infty} \[0, 1/i\] = {\mathopen{}\left\\0\right\\\mathclose{}}\\: \\0\\ is in every interval \\\[0, 1/i\]\\; a number \\x \> 0\\ is not in \\\[0, 1/i\]\\ once \\i \> 1/x\\; and a number \\x \< 0\\ is in none of them.
 
 > **NOTE:**
 >
@@ -273,55 +273,65 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Example 15 (De Morgan’s laws for die rolls)** In \\S = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, let \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\B = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\, as in [Example 13](#exm-set-operations), so \\A^c = \mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\ and \\B^c = \mathopen{}\left\\4, 5, 6\right\\\mathclose{}\\.
+> **Example 15 (De Morgan’s laws for die rolls)** In \\S = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\, let \\A = {\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ and \\B = {\mathopen{}\left\\1, 2, 3\right\\\mathclose{}}\\, as in [Example 13](#exm-set-operations), so \\A^c = {\mathopen{}\left\\1, 3, 5\right\\\mathclose{}}\\ and \\B^c = {\mathopen{}\left\\4, 5, 6\right\\\mathclose{}}\\.
 >
-> - \\ \begin{aligned} (A \cup B)^c &= \mathopen{}\left\\1, 2, 3, 4, 6\right\\\mathclose{}^c \\ &= \mathopen{}\left\\5\right\\\mathclose{}, \end{aligned} \\
->
->   and
->
->   \\ \begin{aligned} A^c \cap B^c &= \mathopen{}\left\\1, 3, 5\right\\\mathclose{} \cap \mathopen{}\left\\4, 5, 6\right\\\mathclose{} \\ &= \mathopen{}\left\\5\right\\\mathclose{}. \end{aligned} \\
->
-> - \\ \begin{aligned} (A \cap B)^c &= \mathopen{}\left\\2\right\\\mathclose{}^c \\ &= \mathopen{}\left\\1, 3, 4, 5, 6\right\\\mathclose{}, \end{aligned} \\
+> - \\ \begin{aligned} (A \cup B)^c &= {\mathopen{}\left\\1, 2, 3, 4, 6\right\\\mathclose{}}^c \\ &= {\mathopen{}\left\\5\right\\\mathclose{}}, \end{aligned} \\
 >
 >   and
 >
->   \\ \begin{aligned} A^c \cup B^c &= \mathopen{}\left\\1, 3, 5\right\\\mathclose{} \cup \mathopen{}\left\\4, 5, 6\right\\\mathclose{} \\ &= \mathopen{}\left\\1, 3, 4, 5, 6\right\\\mathclose{}. \end{aligned} \\
+>   \\ \begin{aligned} A^c \cap B^c &= {\mathopen{}\left\\1, 3, 5\right\\\mathclose{}} \cap {\mathopen{}\left\\4, 5, 6\right\\\mathclose{}} \\ &= {\mathopen{}\left\\5\right\\\mathclose{}}. \end{aligned} \\
+>
+> - \\ \begin{aligned} (A \cap B)^c &= {\mathopen{}\left\\2\right\\\mathclose{}}^c \\ &= {\mathopen{}\left\\1, 3, 4, 5, 6\right\\\mathclose{}}, \end{aligned} \\
+>
+>   and
+>
+>   \\ \begin{aligned} A^c \cup B^c &= {\mathopen{}\left\\1, 3, 5\right\\\mathclose{}} \cup {\mathopen{}\left\\4, 5, 6\right\\\mathclose{}} \\ &= {\mathopen{}\left\\1, 3, 4, 5, 6\right\\\mathclose{}}. \end{aligned} \\
 
 > **NOTE:**
 >
-> **Definition 25 (Pairwise disjoint sets (disjoint, mutually disjoint))** Some [sets](#def-set) \\A_1, A_2, \ldots\\ (a list that may end or go on without end) are **pairwise disjoint** [\[14\]](#ref-wikipedia_disjoint_sets) (also called **disjoint** or **mutually disjoint**) when no two of them share an element:
+> **Definition 25 (Disjoint sets)** Two [sets](#def-set) \\A\\ and \\B\\ are **disjoint** if their [intersection](#def-intersection) is the [empty set](#def-empty-set):
+>
+> \\A \cap B = \emptyset\\
+
+> **NOTE:**
+>
+> **Example 16 (Two disjoint sets of die rolls)** For the die rolls \\D = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ ([sets of die rolls](#exm-set)), the sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\5, 6\right\\\mathclose{}}\\ are disjoint: no roll is in both. The sets \\{\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ are not, because \\2\\ is in both.
+
+> **NOTE:**
+>
+> **Definition 26 (Pairwise disjoint sets, mutually disjoint sets)** Some [sets](#def-set) \\A_1, A_2, \ldots\\ (a list that may end or go on without end) are **pairwise disjoint** [\[14\]](#ref-wikipedia_disjoint_sets) (also called **mutually disjoint**) when every two of them are [disjoint](#def-disjoint-sets):
 >
 > \\A_i \cap A_j = \emptyset \quad \text{for all } i \neq j\\
 
 > **NOTE:**
 >
-> **Example 16 (Low and high die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](#exm-set)), the sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint: no roll is in both. The sets \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ are not, because \\2\\ is in both.
+> **Example 17 (Low, middle and high die rolls)** For the die rolls \\D = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ ([sets of die rolls](#exm-set)), the sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\, \\{\mathopen{}\left\\3, 4\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\5, 6\right\\\mathclose{}}\\ are [pairwise disjoint](#def-pairwise-disjoint): no roll is in more than one of them. The sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\, \\{\mathopen{}\left\\3, 4\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\2, 5\right\\\mathclose{}}\\ are not, because \\2\\ is in both the first and the third.
 
 > **NOTE:**
 >
-> **Definition 26 (Ordered pair)** An **ordered pair** [\[15\]](#ref-wikipedia_ordered_pair) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
+> **Definition 27 (Ordered pair)** An **ordered pair** [\[15\]](#ref-wikipedia_ordered_pair) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
 
 > **NOTE:**
 >
-> **Definition 27 (Cartesian product)** The **Cartesian product** [\[16\]](#ref-wikipedia_cartesian_product) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
+> **Definition 28 (Cartesian product)** The **Cartesian product** [\[16\]](#ref-wikipedia_cartesian_product) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
 >
-> \\A \times B \stackrel{\text{def}}{=}\mathopen{}\left\\(a, b) : a \in A \text{ and } b \in B\right\\\mathclose{}\\
+> \\A \times B \stackrel{\text{def}}{=}{\mathopen{}\left\\(a, b) : a \in A \text{ and } b \in B\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
-> **Example 17 (Cartesian products)**  
+> **Example 18 (Cartesian products)**  
 >
-> - \\\mathopen{}\left\\1, 2\right\\\mathclose{} \times \mathopen{}\left\\5, 6\right\\\mathclose{} = \mathopen{}\left\\(1, 5), (1, 6), (2, 5), (2, 6)\right\\\mathclose{}\\. The pair \\(5, 1)\\ is not in it, because its first entry, \\5\\, is not in \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\; so \\(1, 5) \ne (5, 1)\\.
-> - The results of rolling a die twice form \\\mathopen{}\left\\1, \ldots, 6\right\\\mathclose{} \times \mathopen{}\left\\1, \ldots, 6\right\\\mathclose{}\\, which has \\6 \cdot 6 = 36\\ elements, such as \\(3, 5)\\: a 3 on the first roll and a 5 on the second.
+> - \\{\mathopen{}\left\\1, 2\right\\\mathclose{}} \times {\mathopen{}\left\\5, 6\right\\\mathclose{}} = {\mathopen{}\left\\(1, 5), (1, 6), (2, 5), (2, 6)\right\\\mathclose{}}\\. The pair \\(5, 1)\\ is not in it, because its first entry, \\5\\, is not in \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\; so \\(1, 5) \ne (5, 1)\\.
+> - The results of rolling a die twice form \\{\mathopen{}\left\\1, \ldots, 6\right\\\mathclose{}} \times {\mathopen{}\left\\1, \ldots, 6\right\\\mathclose{}}\\, which has \\6 \cdot 6 = 36\\ elements, such as \\(3, 5)\\: a 3 on the first roll and a 5 on the second.
 > - \\\[0, 2\] \times \[0, 3\]\\ is the set of points \\(x, y)\\ in the plane with \\0 \le x \le 2\\ and \\0 \le y \le 3\\: a rectangle of width \\2\\ and height \\3\\.
 
 ## 3 Extended non-negative real numbers
 
 > **NOTE:**
 >
-> **Definition 28 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 29 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
-> \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
+> \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup {\mathopen{}\left\\\infty\right\\\mathclose{}}\\
 >
 > Addition extends to \\\[0, \infty\]\\ by setting
 >
@@ -335,7 +345,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Example 18 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
+> **Example 19 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
 
 ## 4 Further reading
 

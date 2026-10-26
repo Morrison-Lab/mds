@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 ## 1 Complex numbers
 
@@ -189,7 +189,7 @@ Axler [\[2\]](#ref-axler2024linear), Definition 4.2, p. 120 gives the same defi
 
 > **NOTE:**
 >
-> **Definition 7 (Absolute value (modulus) of a complex number)** The **absolute value**, or **modulus** [\[3\]](#ref-wikipedia_complex_number), of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
+> **Definition 7 (Absolute value of a complex number, modulus)** The **absolute value**, or **modulus** [\[3\]](#ref-wikipedia_complex_number), of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
 >
 > \\\mathopen{}\left\|z\right\|\mathclose{} \stackrel{\text{def}}{=}\sqrt{a^2 + b^2}.\\
 

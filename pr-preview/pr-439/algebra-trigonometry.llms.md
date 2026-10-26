@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 ## 1 Cosine and sine
 
@@ -154,7 +154,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 > >     hjust = 0
 > >   ) +
 > >   ggplot2::coord_equal() +
-> >   ggplot2::labs(x = "x1", y = "x2") +
+> >   ggplot2::labs(x = "First coordinate, x1", y = "Second coordinate, x2") +
 > >   ggplot2::theme_minimal()
 > >
 > > if (knitr::is_html_output()) {
@@ -172,7 +172,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. For \\\theta\in \[0, \pi\]\\, the point \\(\cos\theta, \sin\theta)\\ is at distance \\\theta\\ along the circle from \\(1, 0)\\, counterclockwise, so it lies on the upper half of the unit circle, \\\mathopen{}\left\\(x_1, x_2) : x_1^2 + x_2^2 = 1,\\ x_2 \ge 0\right\\\mathclose{}\\, which gives \\\sin\theta\ge 0\\. Different values of \\\theta\\ in \\\[0, \pi\]\\ are different distances along that half circle, so they give different points. Two different points of the upper half have different first coordinates, because \\x_2 = \sqrt{1 - x_1^2}\\ is determined by \\x_1\\. So \\\cos\\ is one-to-one on \\\[0, \pi\]\\. Every \\x_1 \in \[-1, 1\]\\ is the first coordinate of the point \\(x_1, \sqrt{1 - x_1^2})\\ of the upper half, and the distance along the half circle from \\(1, 0)\\ to that point is some \\\theta\in \[0, \pi\]\\, so \\\cos\\ takes every value in \\\[-1, 1\]\\. Finally, move along the upper half circle from \\(1, 0)\\ to \\(-1, 0)\\ as \\\theta\\ increases from \\0\\ to \\\pi\\. The first coordinate never takes the same value twice, so it never turns back. It starts at \\\cos 0 = 1\\ and ends at \\\cos\pi = -1\\, so it only decreases.
+> *Proof*. For \\\theta\in \[0, \pi\]\\, the point \\(\cos\theta, \sin\theta)\\ is at distance \\\theta\\ along the circle from \\(1, 0)\\, counterclockwise, so it lies on the upper half of the unit circle, \\{\mathopen{}\left\\(x_1, x_2) : x_1^2 + x_2^2 = 1,\\ x_2 \ge 0\right\\\mathclose{}}\\, which gives \\\sin\theta\ge 0\\. Different values of \\\theta\\ in \\\[0, \pi\]\\ are different distances along that half circle, so they give different points. Two different points of the upper half have different first coordinates, because \\x_2 = \sqrt{1 - x_1^2}\\ is determined by \\x_1\\. So \\\cos\\ is one-to-one on \\\[0, \pi\]\\. Every \\x_1 \in \[-1, 1\]\\ is the first coordinate of the point \\(x_1, \sqrt{1 - x_1^2})\\ of the upper half, and the distance along the half circle from \\(1, 0)\\ to that point is some \\\theta\in \[0, \pi\]\\, so \\\cos\\ takes every value in \\\[-1, 1\]\\. Finally, move along the upper half circle from \\(1, 0)\\ to \\(-1, 0)\\ as \\\theta\\ increases from \\0\\ to \\\pi\\. The first coordinate never takes the same value twice, so it never turns back. It starts at \\\cos 0 = 1\\ and ends at \\\cos\pi = -1\\, so it only decreases.
 
 > **NOTE:**
 >

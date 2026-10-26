@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 ## 1 Indicator functions
 
@@ -19,7 +19,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Definition 1 (Indicator function (set indicator))** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\, [\[1\]](#ref-wikipedia_indicator_function) or **set indicator**, is the function \\\mathbb{1}\_{A} : \Omega\to \\0, 1\\\\ defined by:
+> **Definition 1 (Indicator function, set indicator)** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\, [\[1\]](#ref-wikipedia_indicator_function) or **set indicator**, is the function \\\mathbb{1}\_{A} : \Omega\to \\0, 1\\\\ defined by:
 >
 > \\ \mathbb{1}\_{A}(x) \stackrel{\text{def}}{=}\begin{cases} 1, & x \in A \\ 0, & x \notin A \end{cases} \\
 
@@ -27,7 +27,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 >
 > **Definition 2 (Predicate indicator)** For any logical proposition or predicate \\P\\, the **indicator** of \\P\\, or **predicate indicator**, takes the value \\1\\ when \\P\\ is true and \\0\\ when \\P\\ is false:
 >
-> \\ \mathbb{1}\mathopen{}\left(P\right)\mathclose{} \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
+> \\ {\mathbb{1}\mathopen{}\left(P\right)\mathclose{}} \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
 > **NOTE:**
 >
@@ -36,9 +36,9 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 > 1.  Set indicator \\\mathbb{1}\_{A}(x)\\:
 >     - For \\x = 3.5\\: since \\3.5 \in \[0, \infty)\\, \\\mathbb{1}\_{A}(3.5) = 1\\.
 >     - For \\x = -2.1\\: since \\-2.1 \notin \[0, \infty)\\, \\\mathbb{1}\_{A}(-2.1) = 0\\.
-> 2.  Predicate indicator \\\mathbb{1}\mathopen{}\left(Y \> 5\right)\mathclose{}\\:
->     - If an observation yields \\Y = 7.2\\, the predicate \\7.2 \> 5\\ is true, so \\\mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} = 1\\.
->     - If an observation yields \\Y = 4.1\\, the predicate \\4.1 \> 5\\ is false, so \\\mathbb{1}\mathopen{}\left(4.1 \> 5\right)\mathclose{} = 0\\.
+> 2.  Predicate indicator \\{\mathbb{1}\mathopen{}\left(Y \> 5\right)\mathclose{}}\\:
+>     - If an observation yields \\Y = 7.2\\, the predicate \\7.2 \> 5\\ is true, so \\{\mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{}} = 1\\.
+>     - If an observation yields \\Y = 4.1\\, the predicate \\4.1 \> 5\\ is false, so \\{\mathbb{1}\mathopen{}\left(4.1 \> 5\right)\mathclose{}} = 0\\.
 
 > **NOTE:**
 >
@@ -46,9 +46,9 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Example 2 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 3](#def-binary-variable)). It is also the predicate indicator ([Definition 1](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\\.
+> **Example 2 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 3](#def-binary-variable)). It is also the predicate indicator ([Definition 1](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = {\mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}}\\.
 >
-> In the same way, every indicator is a binary variable, and every binary variable \\X\\ is the indicator of its own value being \\1\\: \\X = \mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}\\, since both sides are \\1\\ when \\X = 1\\ and \\0\\ when \\X = 0\\.
+> In the same way, every indicator is a binary variable, and every binary variable \\X\\ is the indicator of its own value being \\1\\: \\X = {\mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}}\\, since both sides are \\1\\ when \\X = 1\\ and \\0\\ when \\X = 0\\.
 
 ### 1.1 Two primary notational paradigms: set vs. predicate notation
 
@@ -60,11 +60,11 @@ The vast majority of indicator notations belong to one of two families: set nota
 
 > **NOTE:**
 >
-> **Definition 5 (Predicate notation for indicators)** An indicator ([Definition 1](#def-indicator-function)) is written in **predicate notation** when a proposition or predicate \\P\\ ([definition](proof-writing.llms.md#def-predicate)) appears as its argument, as in \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\.
+> **Definition 5 (Predicate notation for indicators)** An indicator ([Definition 1](#def-indicator-function)) is written in **predicate notation** when a proposition or predicate \\P\\ ([definition](proof-writing.llms.md#def-predicate)) appears as its argument, as in \\{\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\\ or \\{\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}\\.
 
 > **NOTE:**
 >
-> **Example 3 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\\ in predicate notation ([Definition 4](#def-set-predicate-notation), [Definition 5](#def-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
+> **Example 3 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\{\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}\\ or \\{\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}}\\ in predicate notation ([Definition 4](#def-set-predicate-notation), [Definition 5](#def-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
 
 #### Set notation
 
@@ -88,7 +88,7 @@ In predicate notation, the indicator takes a logical condition, relation, or pro
 - \\\mathbb{1}\\x \in A\\\\ or \\\mathbb{1}\\P\\\\
 - \\I(x \in A)\\ or \\I(P)\\
 
-Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities ([definition](proof-writing.llms.md#def-inequality)) involving random variables, such as \\\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}\\ (an event occurring before time \\t\\) or \\\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}\\ (a binary outcome).
+Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities ([definition](proof-writing.llms.md#def-inequality)) involving random variables, such as \\{\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}}\\ (an event occurring before time \\t\\) or \\{\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}}\\ (a binary outcome).
 
 #### Equivalence between paradigms
 
@@ -107,7 +107,7 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 > - A fair six-sided die gives each of \\1, 2, \ldots, 6\\ probability \\\tfrac{1}{6} \> 0\\ and every other value probability \\0\\, so its support is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\.
 > - A count that can be \\0\\, \\1\\, \\2\\, and so on, each with positive probability, such as the number of hospital visits in a year, has support \\\mathbb{N}\_0 = \mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\.
 
-Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 6](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
+Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 6](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\{\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}}\\.
 
 ### 1.2 Iverson bracket notation
 
@@ -129,9 +129,9 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> *Remark 1* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 1](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 1](#exm-indicator-numerical) become
+> *Remark 1* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\{\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\\ ([Definition 1](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 1](#exm-indicator-numerical) become
 >
-> \\ \begin{aligned} \[7.2 \> 5\] &= \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} \\ &= 1 \end{aligned} \\
+> \\ \begin{aligned} \[7.2 \> 5\] &= {\mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{}} \\ &= 1 \end{aligned} \\
 >
 > and, with \\A = \[0, \infty)\\,
 >
@@ -165,7 +165,7 @@ The primary advantage of the Iverson bracket is algebraic conciseness: it turns 
 
 With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\U = \mathopen{}\left\\1, 2, 3, 4, 5\right\\\mathclose{}\\, both sides equal \\2 + 4 = 6\\.
 
-However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets.llms.md#def-closed-interval) \\\[a, b\]\\, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) \\\operatorname{E}\[Y \mid X\]\\ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
+However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets.llms.md#def-closed-interval) \\\[a, b\]\\, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) \\\mathbb{E}\[Y \mid X\]\\ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
 
 ### 1.4 Summary of indicator notations
 
@@ -180,7 +180,7 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 > | **Blackboard bold I** | \\\mathbb{I}(x \in A)\\, \\\mathbb{I}(P)\\ | Econometrics, machine learning, statistics | Clear predicate notation; avoids confusion with numerals. |
 > | **Letter \\I\\** | \\I_A(x)\\, \\I(P)\\ | Classical statistics, epidemiology | Can be confused with the identity matrix \\I\\ or the Fisher information \\\mathcal{I}\\, which measures how much a sample tells about a parameter. |
 > | **Iverson bracket** | \\\[P\]\\, \\\[x \in A\]\\ | Computer science, discrete mathematics | Very compact, but square brackets collide with intervals and expectation brackets. |
-> | **Greek letter \\\chi\\** | \\\chi_A(x)\\ | Real analysis, measure theory | Often termed “characteristic function”; in probability, that name instead means \\t \mapsto \operatorname{E}\[e^{itX}\]\\ for a random variable \\X\\. |
+> | **Greek letter \\\chi\\** | \\\chi_A(x)\\ | Real analysis, measure theory | Often termed “characteristic function”; in probability, that name instead means \\t \mapsto \mathbb{E}\[e^{itX}\]\\ for a random variable \\X\\. |
 >
 > Table 1: Notations for indicator functions across mathematical and statistical literature
 
@@ -189,8 +189,8 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros defined in `latex-macros/macros.qmd`:
 
 - `\indic{A}` produces \\\mathbb{1}\_{A}\\ (set subscript)
-- `\indicp{P}` produces \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ (predicate in parentheses)
-- `\indiccb{P}` produces \\\mathbb{1}\mathopen{}\left\\P\right\\\mathclose{}\\ (predicate in curly braces)
+- `\indicp{P}` produces \\{\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\\ (predicate in parentheses)
+- `\indiccb{P}` produces \\{\mathbb{1}\mathopen{}\left\\P\right\\\mathclose{}}\\ (predicate in curly braces)
 - `\1{P}` produces \\\text{1}\_{P}\\ (text numeral with subscript, used in legacy formulas)
 
 Blackboard bold \\\mathbb{1}\\ is preferred because it avoids all common collisions: it is visually distinct from the scalar \\1\\, the identity matrix \\I\\, and the observed and expected Fisher information matrices (\\I\\, \\\mathcal{I}\\).
@@ -229,7 +229,7 @@ For subsets \\A\\ and \\B\\ of \\\Omega\\, with [complement](sets.llms.md#def-co
 
 - **Expectation gives probability:** When \\\Omega\\ is a [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space) and \\A\\ is an [event](https://morrison-lab.github.io/pds/probability-basics.html#def-event), the [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) of its indicator is the [probability](https://morrison-lab.github.io/pds/probability-basics.html#def-probability) of the event (all four terms are defined in the Morrison Lab’s probability notes):
 
-  \\ \begin{aligned} \operatorname{E}\[\mathbb{1}\_{A}\] &= 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) \\ &= \Pr(A) \end{aligned} \\
+  \\ \begin{aligned} \mathbb{E}\[\mathbb{1}\_{A}\] &= 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) \\ &= \Pr(A) \end{aligned} \\
 
 This [identity](algebra-basics.llms.md#def-identity) turns probabilities into expectations. It is the mathematical foundation for:
 

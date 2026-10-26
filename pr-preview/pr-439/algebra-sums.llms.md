@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 ## 1 Convex functions
 
@@ -98,7 +98,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 20 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 19 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
 >
-> Let \\t = \min\mathopen{}\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\mathclose{}\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta/ 2 \< \delta\\.
+> Let \\t = \min{\mathopen{}\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\mathclose{}}\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta/ 2 \< \delta\\.
 >
 > By convexity, \\ f(z) \le t f(y) + (1 - t) f(x^\*) \< t f(x^\*) + (1 - t) f(x^\*) = f(x^\*), \\ where the strict inequality uses \\t \> 0\\ and \\f(y) \< f(x^\*)\\. So \\f(z) \< f(x^\*)\\ with \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} \< \delta\\, which contradicts \\x^\*\\ being a local minimizer. Hence \\x^\*\\ is a global minimizer.
 
@@ -178,7 +178,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below ([Definition 7](#def-bounded-below)). The **infimum** of \\A\\ [\[8\]](#ref-wikipedia_infimum_and_supremum), written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
+> **Definition 9 (Infimum, greatest lower bound)** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below ([Definition 7](#def-bounded-below)). The **infimum** of \\A\\ [\[8\]](#ref-wikipedia_infimum_and_supremum), written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
 >
 > \\\inf A \stackrel{\text{def}}{=}\max\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ t \le a\right\\\mathclose{}\\
 >
@@ -214,7 +214,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above ([Definition 6](#def-bounded-above)). The **supremum** of \\A\\ [\[8\]](#ref-wikipedia_infimum_and_supremum), written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
+> **Definition 10 (Supremum, least upper bound)** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above ([Definition 6](#def-bounded-above)). The **supremum** of \\A\\ [\[8\]](#ref-wikipedia_infimum_and_supremum), written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
 >
 > \\\sup A \stackrel{\text{def}}{=}\min\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ a \le t\right\\\mathclose{}\\
 >
@@ -738,7 +738,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ (defined in the Morrison Lab’s probability notes) is a [function](functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Range](functions.llms.md#def-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
 
-[Table 1](#tbl-notational-shorthands) lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
+[Table 1](#tbl-notational-shorthands) lists shorthands you may encounter in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
 
 > **NOTE:**
 >

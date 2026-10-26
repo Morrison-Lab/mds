@@ -357,7 +357,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-22 11:36:18 (PDT)</p>
+  <p class="date">Last modified: 2026-10-26 12:27:31 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-derivatives" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Derivatives</h2>
 <h3 id="sec-limits-derivatives">Limits and derivatives</h3>
@@ -476,7 +476,7 @@
 </section><section class="slide level2"><div id="def-differentiable" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Differentiable function)</strong></span> A function <span class="math inline">\(f\)</span> is <strong>differentiable at</strong> <span class="math inline">\(x = c\)</span> <span class="citation" data-cites="wikipedia_differentiable_function"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> if the limit (<a href="#/def-limit" class="quarto-xref">Definition&nbsp;1</a>) of the difference quotient (<a href="#/def-difference-quotient" class="quarto-xref">Definition&nbsp;5</a>) as <span class="math inline">\(h \to 0\)</span>,</p>
 <p><span class="math display">\[f'(c) \stackrel{\text{def}}{=}\lim_{h \to 0} \frac{f(c + h) - f(c)}{h},\]</span></p>
-<p>exists and is finite. The number <span class="math inline">\(f'(c)\)</span> is the derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;7</a>).</p>
+<p>exists and is finite. The value of this limit is denoted <span class="math inline">\(f'(c)\)</span>. <!-- check-term-links: allow --></p>
 <p><span class="citation" data-cites="larsonCalc11e"><a href="#/references" role="doc-biblioref" onclick="">[5, Sec. 2.1]</a>, p.&nbsp;100</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-differentiable" class="theorem example">
@@ -726,7 +726,7 @@ x
 <p><span class="theorem-title"><strong>Theorem 4 (Derivative of natural logarithm)</strong></span> For every <span class="math inline">\(x &gt; 0\)</span>, the derivative of the <a href="./algebra-exponentials.html#def-natural-log">natural logarithm</a> is:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\operatorname{log}'\mathopen{}\left\{x\right\}\mathclose{}
+{\operatorname{log}'\mathopen{}\left\{x\right\}\mathclose{}}
 &amp;= \frac{1}{x} \\
 &amp;= x^{-1}
 \end{aligned}
@@ -761,7 +761,7 @@ f(x)
 </div>
 </section><section class="slide level2"><div id="thm-deriv-exp" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (Derivative of exponential)</strong></span> For every real <span class="math inline">\(x\)</span>, the derivative of the <a href="./algebra-exponentials.html#def-exponential-function">exponential function</a> is:</p>
-<p><span class="math display">\[\operatorname{exp}'\mathopen{}\left\{x\right\}\mathclose{} = \operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}\]</span></p>
+<p><span class="math display">\[{\operatorname{exp}'\mathopen{}\left\{x\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-sin" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 6 (Derivative of sine)</strong></span> For every real <span class="math inline">\(x\)</span>, the derivative of the sine function is:</p>
@@ -896,21 +896,21 @@ f'(x)
 </section><section class="slide level2"><div id="exr-miller-deriv-gaussian-kernel" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 7 (Derivative of the standard Gaussian kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.5.</p>
 <p>Find the derivative of</p>
-<p><span class="math display">\[f(x) = \operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\]</span></p>
+<p><span class="math display">\[f(x) = {\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\]</span></p>
 </div>
 <div id="sol-miller-deriv-gaussian-kernel" class="proof solution">
-<p><span class="proof-title"><em>Solution 7</em>. </span>Apply the chain rule (<a href="#/thm-chain-rule" class="quarto-xref">Theorem&nbsp;10</a>) with outer function <span class="math inline">\(\operatorname{exp}\mathopen{}\left\{u\right\}\mathclose{}\)</span> and inner function <span class="math inline">\(u(x) = -x^2/2\)</span>. Since <span class="math inline">\(\frac{d }{d u}\operatorname{exp}\mathopen{}\left\{u\right\}\mathclose{} = \operatorname{exp}\mathopen{}\left\{u\right\}\mathclose{}\)</span> (<a href="#/thm-deriv-exp" class="quarto-xref">Theorem&nbsp;5</a>) and <span class="math inline">\(u'(x) = -x\)</span>:</p>
+<p><span class="proof-title"><em>Solution 7</em>. </span>Apply the chain rule (<a href="#/thm-chain-rule" class="quarto-xref">Theorem&nbsp;10</a>) with outer function <span class="math inline">\({\operatorname{exp}\mathopen{}\left\{u\right\}\mathclose{}}\)</span> and inner function <span class="math inline">\(u(x) = -x^2/2\)</span>. Since <span class="math inline">\(\frac{d }{d u}{\operatorname{exp}\mathopen{}\left\{u\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{u\right\}\mathclose{}}\)</span> (<a href="#/thm-deriv-exp" class="quarto-xref">Theorem&nbsp;5</a>) and <span class="math inline">\(u'(x) = -x\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 f'(x)
-&amp;= u'(x)\operatorname{exp}\mathopen{}\left\{u(x)\right\}\mathclose{} \\
-&amp;= -x\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}
+&amp;= u'(x){\operatorname{exp}\mathopen{}\left\{u(x)\right\}\mathclose{}} \\
+&amp;= -x{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}
 \end{aligned}
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-gaussian-kernel" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 11 (Derivative of the standard Gaussian kernel)</strong></span> For <span class="math inline">\(f(x) = \operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\)</span> and every <span class="math inline">\(x \in \mathbb{R}\)</span>,</p>
-<p><span class="math display">\[f'(x) = -x\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 11 (Derivative of the standard Gaussian kernel)</strong></span> For <span class="math inline">\(f(x) = {\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\)</span> and every <span class="math inline">\(x \in \mathbb{R}\)</span>,</p>
+<p><span class="math display">\[f'(x) = -x{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-deriv-gaussian-kernel" class="quarto-xref">Exercise&nbsp;7</a>, worked in <a href="#/sol-miller-deriv-gaussian-kernel" class="quarto-xref">Solution&nbsp;7</a>.</p>
@@ -918,27 +918,27 @@ f'(x)
 </section><section class="slide level2"><div id="exr-miller-deriv-second-gaussian-kernel" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 8 (Second derivative of the Gaussian kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.6.</p>
 <p>Find the second derivative of</p>
-<p><span class="math display">\[f(x) = \operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\]</span></p>
+<p><span class="math display">\[f(x) = {\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\]</span></p>
 </div>
 <div id="sol-miller-deriv-second-gaussian-kernel" class="proof solution">
-<p><span class="proof-title"><em>Solution 8</em>. </span>From <a href="#/thm-deriv-gaussian-kernel" class="quarto-xref">Theorem&nbsp;11</a>, the first derivative is <span class="math inline">\(f'(x) = -x\operatorname{exp}\mathopen{}\left\{-x^2/2\right\}\mathclose{}\)</span>. Apply the product rule (<a href="#/thm-product-rule" class="quarto-xref">Theorem&nbsp;8</a>) to <span class="math inline">\(u(x) = -x\)</span> and <span class="math inline">\(v(x) = \operatorname{exp}\mathopen{}\left\{-x^2/2\right\}\mathclose{}\)</span>:</p>
+<p><span class="proof-title"><em>Solution 8</em>. </span>From <a href="#/thm-deriv-gaussian-kernel" class="quarto-xref">Theorem&nbsp;11</a>, the first derivative is <span class="math inline">\(f'(x) = -x{\operatorname{exp}\mathopen{}\left\{-x^2/2\right\}\mathclose{}}\)</span>. Apply the product rule (<a href="#/thm-product-rule" class="quarto-xref">Theorem&nbsp;8</a>) to <span class="math inline">\(u(x) = -x\)</span> and <span class="math inline">\(v(x) = {\operatorname{exp}\mathopen{}\left\{-x^2/2\right\}\mathclose{}}\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
 u'(x) &amp;= -1
 \\
-v'(x) &amp;= -x\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}
+v'(x) &amp;= -x{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}
 \end{aligned}\]</span></p>
 <p>Therefore:</p>
 <p><span class="math display">\[\begin{aligned}
 f''(x) &amp;= u'(x)v(x) + u(x)v'(x)
 \\
-&amp;= (-1)\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{} + (-x)\mathopen{}\left[-x\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\right]\mathclose{}
+&amp;= (-1){\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}} + (-x)\mathopen{}\left[-x{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\right]\mathclose{}
 \\
-&amp;= (x^2 - 1)\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}
+&amp;= (x^2 - 1){\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}
 \end{aligned}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-second-gaussian-kernel" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 12 (Second derivative of the standard Gaussian kernel)</strong></span> For <span class="math inline">\(f(x) = \operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\)</span> and every <span class="math inline">\(x \in \mathbb{R}\)</span>,</p>
-<p><span class="math display">\[f''(x) = (x^2 - 1)\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 12 (Second derivative of the standard Gaussian kernel)</strong></span> For <span class="math inline">\(f(x) = {\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\)</span> and every <span class="math inline">\(x \in \mathbb{R}\)</span>,</p>
+<p><span class="math display">\[f''(x) = (x^2 - 1){\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-deriv-second-gaussian-kernel" class="quarto-xref">Exercise&nbsp;8</a>, worked in <a href="#/sol-miller-deriv-second-gaussian-kernel" class="quarto-xref">Solution&nbsp;8</a>.</p>
@@ -946,22 +946,22 @@ f''(x) &amp;= u'(x)v(x) + u(x)v'(x)
 </section><section class="slide level2"><div id="exr-miller-deriv-product-chain-composite" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 9 (Combining product and chain rules)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.7.</p>
 <p>Find the derivative of</p>
-<p><span class="math display">\[f(x) = \operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}\cos(3x^4)\]</span></p>
+<p><span class="math display">\[f(x) = {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\cos(3x^4)\]</span></p>
 </div>
 <div id="sol-miller-deriv-product-chain-composite" class="proof solution">
-<p><span class="proof-title"><em>Solution 9</em>. </span>Apply the product rule (<a href="#/thm-product-rule" class="quarto-xref">Theorem&nbsp;8</a>) to <span class="math inline">\(u(x) = \operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}\)</span> and <span class="math inline">\(v(x) = \cos(3x^4)\)</span>:</p>
+<p><span class="proof-title"><em>Solution 9</em>. </span>Apply the product rule (<a href="#/thm-product-rule" class="quarto-xref">Theorem&nbsp;8</a>) to <span class="math inline">\(u(x) = {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\)</span> and <span class="math inline">\(v(x) = \cos(3x^4)\)</span>:</p>
 <p><span class="math display">\[f'(x) = u'(x)v(x) + u(x)v'(x)\]</span></p>
 <p>Compute <span class="math inline">\(u'(x)\)</span> and <span class="math inline">\(v'(x)\)</span> via the chain rule (<a href="#/thm-chain-rule" class="quarto-xref">Theorem&nbsp;10</a>):</p>
 <p><span class="math display">\[\begin{aligned}
-u'(x) &amp;= 8x^7 \operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}
+u'(x) &amp;= 8x^7 {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}
 \\
 v'(x) &amp;= -12x^3 \sin(3x^4)
 \end{aligned}\]</span></p>
 <p>Substitute both derivatives into the product rule:</p>
 <p><span class="math display">\[\begin{aligned}
-f'(x) &amp;= 8x^7 \operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}\cos(3x^4) - 12x^3 \operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}\sin(3x^4)
+f'(x) &amp;= 8x^7 {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\cos(3x^4) - 12x^3 {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\sin(3x^4)
 \\
-&amp;= 4x^3 \operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}\mathopen{}\left[2x^4 \cos(3x^4) - 3\sin(3x^4)\right]\mathclose{}
+&amp;= 4x^3 {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\mathopen{}\left[2x^4 \cos(3x^4) - 3\sin(3x^4)\right]\mathclose{}
 \end{aligned}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-generalized-power-rule" class="theorem exercise">
@@ -991,15 +991,15 @@ f'(x)
 </section><section class="slide level2"><div id="cor-deriv-log-chain" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 1 (Chain rule for logarithms)</strong></span> If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(x\)</span> and <span class="math inline">\(f(x) &gt; 0\)</span>, then</p>
 <p><span class="math display">\[
-\frac{d }{d x}\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{} = \frac{f'(x)}{f(x)}
+\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}} = \frac{f'(x)}{f(x)}
 \]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Apply <a href="#/thm-chain-rule" class="quarto-xref">Theorem&nbsp;10</a> and <a href="#/thm-deriv-log" class="quarto-xref">Theorem&nbsp;4</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\frac{d }{d x}\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}
-&amp;= f'(x) \cdot\operatorname{log}'\mathopen{}\left\{f(x)\right\}\mathclose{}
+\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}
+&amp;= f'(x) \cdot{\operatorname{log}'\mathopen{}\left\{f(x)\right\}\mathclose{}}
 &amp;&amp; \text{(chain rule, with } g = f \text{ and outer function } \log \text{)}
 \\
 &amp;= f'(x) \cdot\frac{1}{f(x)}
@@ -1073,12 +1073,12 @@ f''(x)
 </div>
 <h3 id="sec-function-profile">Studying a new function</h3>
 <div id="def-logarithmic-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Logarithmic derivative)</strong></span> The <strong>logarithmic derivative</strong> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span> of a function <span class="math inline">\(f\)</span> of a real variable equals <span class="math inline">\(\frac{d }{d x}\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}\)</span> by <a href="#/cor-deriv-log-chain" class="quarto-xref">Corollary&nbsp;1</a> and measures the rate of change of <span class="math inline">\(f\)</span> relative to its size; it needs <span class="math inline">\(f(x) &gt; 0\)</span>, and for <span class="math inline">\(f(x) &lt; 0\)</span> the same expression is the derivative of <span class="math inline">\(\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Logarithmic derivative)</strong></span> The <strong>logarithmic derivative</strong> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span> of a function <span class="math inline">\(f\)</span> of a real variable equals <span class="math inline">\(\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}\)</span> by <a href="#/cor-deriv-log-chain" class="quarto-xref">Corollary&nbsp;1</a> and measures the rate of change of <span class="math inline">\(f\)</span> relative to its size; it needs <span class="math inline">\(f(x) &gt; 0\)</span>, and for <span class="math inline">\(f(x) &lt; 0\)</span> the same expression is the derivative of <span class="math inline">\({\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-function-profile" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Profile of a function)</strong></span> The <strong>profile</strong> of a function <span class="math inline">\(f\)</span> of a real variable is the list of related functions and values to work out when meeting <span class="math inline">\(f\)</span> for the first time:</p>
 <ul>
-<li>the logarithm <span class="math inline">\(\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}\)</span>, where <span class="math inline">\(f(x) &gt; 0\)</span>;</li>
+<li>the logarithm <span class="math inline">\({\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}\)</span>, where <span class="math inline">\(f(x) &gt; 0\)</span>;</li>
 <li>the derivatives <span class="math inline">\(f'(x)\)</span>, <span class="math inline">\(f''(x)\)</span>, and so on, as far as they are informative;</li>
 <li>the <a href="#/def-logarithmic-derivative">logarithmic derivative</a> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span>;</li>
 <li>the inverse function <span class="math inline">\(f^{-1}\)</span> (<a href="./functions.html#def-inverse-function">definition</a>), which exists on the <a href="./functions.html#def-image">image</a> of <span class="math inline">\(f\)</span> when <span class="math inline">\(f\)</span> is one-to-one, and otherwise only after restricting the domain of <span class="math inline">\(f\)</span>;</li>
@@ -1096,7 +1096,7 @@ f(x) = \frac{1}{1 + e^{-x}}.
 \]</span></p>
 <p>The profile in <a href="#/def-function-profile" class="quarto-xref">Definition&nbsp;15</a> of <span class="math inline">\(f\)</span> is as follows. Write <span class="math inline">\(E = e^{-x}\)</span>, so that <span class="math inline">\(f = \frac{1}{1 + E}\)</span> and <span class="math inline">\(1 - f = \frac{E}{1 + E}\)</span>.</p>
 <ul>
-<li><p><strong>Logarithm:</strong> <span class="math inline">\(\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{} = -\operatorname{log}\mathopen{}\left\{1 + e^{-x}\right\}\mathclose{}\)</span>, defined for every real <span class="math inline">\(x\)</span> because <span class="math inline">\(f(x) &gt; 0\)</span>.</p></li>
+<li><p><strong>Logarithm:</strong> <span class="math inline">\({\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}} = -{\operatorname{log}\mathopen{}\left\{1 + e^{-x}\right\}\mathclose{}}\)</span>, defined for every real <span class="math inline">\(x\)</span> because <span class="math inline">\(f(x) &gt; 0\)</span>.</p></li>
 <li>
 <p><strong>Derivative:</strong> by the chain rule,</p>
 <p><span class="math display">\[
@@ -1119,14 +1119,14 @@ f'(x)
 \begin{aligned}
 \frac{1}{y} &amp;= 1 + e^{-x} \\
 e^{-x} &amp;= \frac{1 - y}{y} \\
-x &amp;= \operatorname{log}\mathopen{}\left\{\frac{y}{1 - y}\right\}\mathclose{}.
+x &amp;= {\operatorname{log}\mathopen{}\left\{\frac{y}{1 - y}\right\}\mathclose{}}.
 \end{aligned}
 \]</span></p>
-<p>So <span class="math inline">\(f^{-1}(y) = \operatorname{logit}\mathopen{}\left\{y\right\}\mathclose{}\)</span>, the log-odds. The inverse exists because <span class="math inline">\(f' = f(1 - f) &gt; 0\)</span>, so <span class="math inline">\(f\)</span> is strictly increasing and therefore one-to-one.</p>
+<p>So <span class="math inline">\(f^{-1}(y) = {\operatorname{logit}\mathopen{}\left\{y\right\}\mathclose{}}\)</span>, the log-odds. The inverse exists because <span class="math inline">\(f' = f(1 - f) &gt; 0\)</span>, so <span class="math inline">\(f\)</span> is strictly increasing and therefore one-to-one.</p>
 </li>
 <li><p><strong>Complement:</strong> <span class="math inline">\(1 - f(x) = \frac{e^{-x}}{1 + e^{-x}} = \frac{1}{e^{x} + 1} = f(-x)\)</span>.</p></li>
 <li><p><strong>Reciprocal:</strong> <span class="math inline">\(\frac{1}{f(x)} = 1 + e^{-x}\)</span>.</p></li>
-<li><p><strong>Antiderivative:</strong> <span class="math inline">\(F(x) = \operatorname{log}\mathopen{}\left\{1 + e^{x}\right\}\mathclose{}\)</span> satisfies <span class="math inline">\(F'(x) = \frac{e^{x}}{1 + e^{x}} = f(x)\)</span>, so <span class="math inline">\(\int f(x)\,dx = \operatorname{log}\mathopen{}\left\{1 + e^{x}\right\}\mathclose{} + C\)</span>.</p></li>
+<li><p><strong>Antiderivative:</strong> <span class="math inline">\(F(x) = {\operatorname{log}\mathopen{}\left\{1 + e^{x}\right\}\mathclose{}}\)</span> satisfies <span class="math inline">\(F'(x) = \frac{e^{x}}{1 + e^{x}} = f(x)\)</span>, so <span class="math inline">\(\int f(x)\,dx = {\operatorname{log}\mathopen{}\left\{1 + e^{x}\right\}\mathclose{}} + C\)</span>.</p></li>
 <li><p><strong>Key values:</strong> <span class="math inline">\(f(0) = \frac{1}{1 + 1} = \frac{1}{2}\)</span> and <span class="math inline">\(f(1) = \frac{1}{1 + e^{-1}}\)</span>. As <span class="math inline">\(x \to \infty\)</span>, <span class="math inline">\(e^{-x} \to 0\)</span>, so <span class="math inline">\(f(x) \to 1\)</span>; as <span class="math inline">\(x \to -\infty\)</span>, <span class="math inline">\(e^{-x} \to \infty\)</span>, so <span class="math inline">\(f(x) \to 0\)</span>.</p></li>
 </ul>
 <p>The code checks these results numerically, using the base R functions <code><a href="https://rdrr.io/r/stats/Logistic.html">plogis()</a></code> for <span class="math inline">\(f\)</span> and <code><a href="https://rdrr.io/r/stats/Logistic.html">qlogis()</a></code> for <span class="math inline">\(f^{-1}\)</span>, and <code><a href="https://rdrr.io/r/stats/deriv.html">D()</a></code> to differentiate symbolically.</p>
@@ -1158,7 +1158,7 @@ x &amp;= \operatorname{log}\mathopen{}\left\{\frac{y}{1 - y}\right\}\mathclose{}
 <span id="cb1-25"><a aria-label="25"></a></span>
 <span id="cb1-26"><a aria-label="26"></a>key_values <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">f</span>(<span class="dv">0</span>), <span class="fu">f</span>(<span class="dv">1</span>), <span class="fu">f</span>(<span class="dv">10</span>), <span class="fu">f</span>(<span class="sc">-</span><span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Each entry of <code>checks</code> is the largest discrepancy between a formula above and a numerical computation; every one is below <span class="math inline">\(10^{-14}\)</span> (the chunk stops with an error otherwise), which is rounding error. The key values are <span class="math inline">\(f(0) =\)</span> 0.5 and <span class="math inline">\(f(1) \approx\)</span> 0.7311. At <span class="math inline">\(x = 10\)</span> and <span class="math inline">\(x = -10\)</span> the function is already close to its limits, <span class="math inline">\(f(10) \approx\)</span> 0.99995 and <span class="math inline">\(f(-10) \approx\)</span> 0.0000454. <a href="#/fig-function-profile-logistic" class="quarto-xref">Figure&nbsp;1</a> graphs <span class="math inline">\(f\)</span>, <span class="math inline">\(f'\)</span> and <span class="math inline">\(\operatorname{log}\mathopen{}\left\{f\right\}\mathclose{}\)</span>.</p>
+<p>Each entry of <code>checks</code> is the largest discrepancy between a formula above and a numerical computation; every one is below <span class="math inline">\(10^{-14}\)</span> (the chunk stops with an error otherwise), which is rounding error. The key values are <span class="math inline">\(f(0) =\)</span> 0.5 and <span class="math inline">\(f(1) \approx\)</span> 0.7311. At <span class="math inline">\(x = 10\)</span> and <span class="math inline">\(x = -10\)</span> the function is already close to its limits, <span class="math inline">\(f(10) \approx\)</span> 0.99995 and <span class="math inline">\(f(-10) \approx\)</span> 0.0000454. <a href="#/fig-function-profile-logistic" class="quarto-xref">Figure&nbsp;1</a> graphs <span class="math inline">\(f\)</span>, <span class="math inline">\(f'\)</span> and <span class="math inline">\({\operatorname{log}\mathopen{}\left\{f\right\}\mathclose{}}\)</span>.</p>
 <div class="cell">
 <details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">6</span>, <span class="dv">6</span>, <span class="at">length.out =</span> <span class="dv">241</span>)</span>
 <span id="cb2-2"><a aria-label="2"></a>panels <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -1173,7 +1173,7 @@ x &amp;= \operatorname{log}\mathopen{}\left\{\frac{y}{1 - y}\right\}\mathclose{}
 <span id="cb2-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> value) <span class="sc">+</span></span>
 <span id="cb2-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>() <span class="sc">+</span></span>
 <span id="cb2-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>panel, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb2-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div id="fig-function-profile-logistic" class="quarto-float quarto-figure quarto-figure-center" alt="Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right.">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-function-profile-logistic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1743,12 +1743,12 @@ e^x &amp;= \sum_{n=0}^\infty \frac{x^n}{n!} \\
 </section><section class="slide level2"><div id="exr-miller-taylor-exp-power" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 22 (Taylor series of a composite exponential)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.21.</p>
 <p>Find the first six terms (up to degree 5) of the Taylor series for</p>
-<p><span class="math display">\[f(x) = \operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}\]</span></p>
+<p><span class="math display">\[f(x) = {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
 </div>
 <div id="sol-miller-taylor-exp-power" class="proof solution">
 <p><span class="proof-title"><em>Solution 22</em>. </span>Substitute <span class="math inline">\(u = x^8\)</span> into <span class="math inline">\(e^u = 1 + u + \frac{u^2}{2!} + \dots\)</span>:</p>
-<p><span class="math display">\[\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{} = 1 + x^8 + \frac{x^{16}}{2} + \dots\]</span></p>
+<p><span class="math display">\[{\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}} = 1 + x^8 + \frac{x^{16}}{2} + \dots\]</span></p>
 <p>Because the lowest-order variable term is <span class="math inline">\(x^8\)</span>, all coefficients for powers <span class="math inline">\(x^1, x^2, x^3, x^4, x^5\)</span> are zero:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1761,19 +1761,19 @@ P_5(x)
 </section><section class="slide level2"><div id="exr-miller-taylor-normal-density" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 23 (Taylor expansion of the normal density)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.22.</p>
 <p>Find the terms up to degree 3 of the Taylor series for the standard normal density</p>
-<p><span class="math display">\[\phi(x) = \frac{1}{\sqrt{2\pi}}\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\]</span></p>
+<p><span class="math display">\[\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
 </div>
 <div id="sol-miller-taylor-normal-density" class="proof solution">
 <p><span class="proof-title"><em>Solution 23</em>. </span>Using <span class="math inline">\(e^u = 1 + u + O(u^2)\)</span> with <span class="math inline">\(u = -x^2/2\)</span>:</p>
-<p><span class="math display">\[\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{} = 1 - \frac{x^2}{2} + O(x^4)\]</span></p>
+<p><span class="math display">\[{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}} = 1 - \frac{x^2}{2} + O(x^4)\]</span></p>
 <p>Multiplying by the normalization constant <span class="math inline">\(1/\sqrt{2\pi}\)</span>:</p>
 <p><span class="math display">\[\phi(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}} + O(x^4)\]</span></p>
 <p>Up to degree 3, the odd powers vanish by symmetry, so:</p>
 <p><span class="math display">\[P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-taylor-normal-density" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (Maclaurin polynomial of the standard normal density)</strong></span> The Maclaurin polynomial (<a href="#/def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;21</a>) of degree 3 of the standard normal density <span class="math inline">\(\phi(x) = \frac{1}{\sqrt{2\pi}}\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}\)</span> is</p>
+<p><span class="theorem-title"><strong>Theorem 14 (Maclaurin polynomial of the standard normal density)</strong></span> The Maclaurin polynomial (<a href="#/def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;21</a>) of degree 3 of the standard normal density <span class="math inline">\(\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\)</span> is</p>
 <p><span class="math display">\[P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\]</span></p>
 </div>
 <div class="proof">

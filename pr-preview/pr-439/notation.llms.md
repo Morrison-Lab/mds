@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
-Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
+Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 
 > **NOTE:**
 >
@@ -20,16 +20,16 @@ Mathematical notation is not standardized. This section states the conventions t
 > | \\\mid\\ | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|` |
 > | \\\sum\\ | [sum](algebra-sums.llms.md#sec-summation) | `\sum` |
 > | \\\prod\\ | product | `\prod` |
-> | \\\mu\\ | population mean, \\\operatorname{E}\[X\]\\, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ | `\mu` |
-> | \\\operatorname{E}\\ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
+> | \\\mu\\ | population mean, \\\mathbb{E}\[X\]\\, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ | `\mu` |
+> | \\\mathbb{E}\\ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
 > | \\x^{\top}\\ | transpose of \\x\\ | `x\'` |
 > | \\'\\ | transpose or [derivative](calculus-derivatives.llms.md#def-derivative)[^1] | `'` |
 > | \\\perp\\\\\\\perp\\ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
 > | \\\therefore\\ | [therefore](proof-writing.llms.md#def-logical-entailment), thus | `\therefore` |
 > | \\\eta\\ | [linear predictor](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") of a generalized linear model[^2] | `\eta` |
 > | \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\ | floor of \\x\\: largest [integer](number-systems.llms.md#def-integers) less than or equal to \\x\\ | `\lfloor x \rfloor` |
-> | \\\mathopen{}\left\lceil x\right\rceil\mathclose{}\\ | ceiling of \\x\\: smallest [integer](number-systems.llms.md#def-integers) greater than or equal to \\x\\ | `\lceil x \rceil` |
-> | \\\mathbb{1}\_{A}(x)\\, \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ | indicator function ([definition](indicator-functions.llms.md#def-indicator-function)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
+> | \\{\mathopen{}\left\lceil x\right\rceil\mathclose{}}\\ | ceiling of \\x\\: smallest [integer](number-systems.llms.md#def-integers) greater than or equal to \\x\\ | `\lceil x \rceil` |
+> | \\\mathbb{1}\_{A}(x)\\, \\{\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\\ | indicator function ([definition](indicator-functions.llms.md#def-indicator-function)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 >
 > Table 1: Notation used in this book
 
@@ -50,7 +50,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > Under these rules, \\f\_\theta(x)\\ reads “the member of the family labeled \\\theta\\, evaluated at \\x\\”. The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-subscripts-parentheses) gives the reason for this split and explains how to read a source that divides the work differently.
 
-The [Notation Across Sources page](https://morrison-lab.github.io/macros/notation-across-sources.html#sec-notation-subscripts) of the macros site tabulates our form of each object beside the other forms you may meet.
+The [Notation Across Sources page](https://morrison-lab.github.io/macros/notation-across-sources.html#sec-notation-subscripts) of the macros site tabulates our form of each object beside the other forms you may encounter.
 
 > **NOTE:**
 >

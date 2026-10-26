@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 > **NOTE:**
 >
@@ -56,7 +56,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 >
 > **Definition 4 (Equivalence class)** Let \\\sim\\ be an [equivalence relation](#def-equivalence-relation) on a [set](sets.llms.md#def-set) \\S\\, and let \\a \in S\\. The **equivalence class** [\[4\]](#ref-wikipedia_equivalence_class) of \\a\\ is the set of elements of \\S\\ related to \\a\\:
 >
-> \\ \[a\] \stackrel{\text{def}}{=}\mathopen{}\left\\b \in S : b \sim a\right\\\mathclose{}. \\
+> \\ \[a\] \stackrel{\text{def}}{=}{\mathopen{}\left\\b \in S : b \sim a\right\\\mathclose{}}. \\
 
 > **NOTE:**
 >

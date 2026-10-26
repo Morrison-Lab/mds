@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-22 11:36:18 (PDT)
+Last modified: 2026-10-26 12:27:31 (PDT)
 
 ## 1 Complex vectors and matrices
 
@@ -28,7 +28,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))** The **conjugate transpose** [\[1\]](#ref-wikipedia_conjugate_transpose) (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
+> **Definition 4 (Conjugate transpose, Hermitian adjoint, Hermitian conjugate, transjugate)** The **conjugate transpose** [\[1\]](#ref-wikipedia_conjugate_transpose) (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
 >
 > \\(\mathbf{A}^{\mathsf{H}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{kj}} \quad \text{for } j \in \\1, \ldots, n\\,\\ k \in \\1, \ldots, m\\.\\
 
@@ -101,19 +101,19 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 2 (The adjoint property for inner products)** Let \\\mathbf{A}\\ be an \\m \times n\\ complex matrix. Under the standard inner product on complex Euclidean space, \\\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\,
+> **Theorem 2 (The adjoint property for inner products)** Let \\\mathbf{A}\\ be an \\m \times n\\ complex matrix. Under the standard inner product on complex Euclidean space, \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\,
 >
-> \\\mathopen{}\left\langle \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{} = \mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathbf{A}^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{} \quad \text{for all } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathbb{C}^n \text{ and } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathbb{C}^m.\\
+> \\{\mathopen{}\left\langle \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}} = {\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathbf{A}^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}} \quad \text{for all } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathbb{C}^n \text{ and } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathbb{C}^m.\\
 
 > **NOTE:**
 >
 > *Proof*. By the definition of the standard complex inner product and the product rule for the Hermitian adjoint ([Theorem 1](#thm-hermitian-adjoint-properties)):
 >
-> \\ \begin{aligned} \mathopen{}\left\langle \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{} &= (\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}})^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} && \text{(definition of standard inner product)} \\ &= (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} && \text{(}\href{#thm-hermitian-adjoint-properties}{\text{Theorem~1}}\text{, reversal of products)} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}^{\mathsf{H}}(\mathbf{A}^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}) && \text{(associativity of matrix multiplication)} \\ &= \mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathbf{A}^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{} && \text{(definition of standard inner product)}. \end{aligned} \\
+> \\ \begin{aligned} {\mathopen{}\left\langle \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}} &= (\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}})^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} && \text{(definition of standard inner product)} \\ &= (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} && \text{(}\href{#thm-hermitian-adjoint-properties}{\text{Theorem~1}}\text{, reversal of products)} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}^{\mathsf{H}}(\mathbf{A}^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}) && \text{(associativity of matrix multiplication)} \\ &= {\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathbf{A}^{\mathsf{H}}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}} && \text{(definition of standard inner product)}. \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 3* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\mathopen{}\left\langle T\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{} = \mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, T^\*\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}\\ (Axler [\[2\]](#ref-axler2024linear), Definition 7.1, p. 226). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler [\[2\]](#ref-axler2024linear), Proposition 7.9, p. 231).
+> *Remark 3* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\{\mathopen{}\left\langle T\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}} = {\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, T^\*\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}}\\ (Axler [\[2\]](#ref-axler2024linear), Definition 7.1, p. 226). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler [\[2\]](#ref-axler2024linear), Proposition 7.9, p. 231).
 
 > **NOTE:**
 >
@@ -159,13 +159,13 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Hermitian matrix (self-adjoint matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** [\[3\]](#ref-wikipedia_hermitian_matrix) (or **self-adjoint**) if it equals its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
+> **Definition 5 (Hermitian matrix, self-adjoint matrix)** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** [\[3\]](#ref-wikipedia_hermitian_matrix) (or **self-adjoint**) if it equals its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\\
 
 > **NOTE:**
 >
-> *Remark 4* (Why “self-adjoint”). The term *self-adjoint* comes directly from [Theorem 2](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\\mathopen{}\left\langle \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{} = \mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}\\ for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
+> *Remark 4* (Why “self-adjoint”). The term *self-adjoint* comes directly from [Theorem 2](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\{\mathopen{}\left\langle \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}} = {\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rangle\mathclose{}}\\ for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
 
 > **NOTE:**
 >
@@ -185,7 +185,7 @@ Last modified: 2026-10-22 11:36:18 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Skew-Hermitian matrix (anti-Hermitian matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** [\[4\]](#ref-wikipedia_skew_hermitian_matrix) (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
+> **Definition 6 (Skew-Hermitian matrix, anti-Hermitian matrix)** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** [\[4\]](#ref-wikipedia_skew_hermitian_matrix) (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = -\mathbf{A}.\\
 
