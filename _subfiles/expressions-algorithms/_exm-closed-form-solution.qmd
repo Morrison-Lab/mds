@@ -16,6 +16,6 @@ so [least squares](linear-algebra-projections.qmd#def-least-squares) has a [clos
 For logistic regression, no closed-form expression is known for a minimizer
 of the negative log-likelihood over $\vcoef$,
 so that problem has no known closed-form solution.
-When a minimizer exists, an iterative method approximates it.
+When a minimizer exists, an [iterative method](optimization.qmd#def-iterative-method) approximates it.
 
 :::
