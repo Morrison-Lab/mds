@@ -41,4 +41,70 @@ $$
 The contour line at height $k = -1$ is empty,
 because $b^2 + c^2 \ge 0$ for all $b$ and $c$.
 
+```{r}
+#| label: contour-line-alt
+#| echo: false
+# The alt text, saved once for the figure and its interactive widget.
+fig_alt_contour_bowl <- paste(
+  "Contour plot of g(b, c) = b squared plus c squared,",
+  "with the first coordinate b on the horizontal axis",
+  "and the second coordinate c on the vertical axis.",
+  "The contour lines at heights 1, 4 and 9 are concentric circles",
+  "of radius 1, 2 and 3 around the origin.",
+  "Two dots mark the points (2, 0) and (0, -2) on the circle at height 4."
+)
+```
+
+:::{#fig-contour-line}
+
+```{r}
+#| label: contour-line-plot
+#| code-fold: true
+#| echo: !expr knitr::is_html_output()
+#| message: false
+#| warning: false
+#| fig-alt: !expr fig_alt_contour_bowl
+#| fig-height: 4.5
+#| fig-width: 5
+library(ggplot2)
+
+# The bowl g(b, c) = b^2 + c^2 on a grid, and the two points of the example.
+bowl <- expand.grid(
+  b = seq(-3.5, 3.5, length.out = 200),
+  c = seq(-3.5, 3.5, length.out = 200)
+)
+bowl$g <- bowl$b^2 + bowl$c^2
+on_circle <- data.frame(b = c(2, 0), c = c(0, -2))
+
+contour_plot <- ggplot(bowl) +
+  aes(b, c) +
+  geom_contour(
+    aes(z = g, colour = factor(after_stat(level))),
+    breaks = c(1, 4, 9)
+  ) +
+  geom_point(data = on_circle, size = 2.5) +
+  scale_colour_viridis_d(name = "height k", end = 0.85) +
+  coord_fixed(expand = FALSE) +
+  labs(x = "first coordinate, b", y = "second coordinate, c") +
+  theme(legend.position = "bottom")
+
+if (knitr::is_html_output()) {
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt_contour_bowl,
+    plotly::ggplotly(contour_plot) |>
+      plotly::layout(
+        legend = list(orientation = "h", x = 0.5, xanchor = "center", y = -0.25)
+      ) |>
+      plotly::config(displaylogo = FALSE, responsive = TRUE)
+  )
+} else {
+  contour_plot
+}
+```
+
+The contour lines of $g(b, c) = b^2 + c^2$ at heights $1$, $4$ and $9$.
+The dots mark the two points of the example on the circle at height $4$.
+:::
+
 :::
