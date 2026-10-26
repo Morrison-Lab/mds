@@ -14,7 +14,7 @@ $$
 
 where $s^{(t)} > 0$ is a [step length](#def-gradient-descent) chosen by a [line search](#def-line-search),
 and $\matr{H}^{(t+1)}$ is a positive definite matrix
-that satisfies the [secant condition](#def-secant-condition) in the form
+that approximates the [inverse](linear-algebra-special-matrices.qmd#def-matrix-inverse) Hessian by satisfying the [secant condition](#def-secant-condition) in the form
 $\matr{H}^{(t+1)} \vy^{(t)} = \vecf{s}^{(t)}$,
 with $\vecf{s}^{(t)} = \vx^{(t+1)} - \vx^{(t)}$
 and $\vy^{(t)} = \deriv{\vx} f(\vx^{(t+1)}) - \deriv{\vx} f(\vx^{(t)})$.

@@ -40,7 +40,7 @@ $$
 $$
 
 So the Hessian $\matr{Q}$ of the [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial) satisfies the secant condition for every step.
-For a general $f$, the same holds approximately for a short step,
-which is why a [matrix](linear-algebra-matrices.qmd#def-matrix) that satisfies it is a reasonable stand-in for the Hessian.
+For a general $f$, $\vy \approx \matr{H}_f \vecf{s}$ holds for a short step, with $\matr{H}_f$ the Hessian of $f$ near the step,
+which is why a [matrix](linear-algebra-matrices.qmd#def-matrix) that satisfies the secant condition is a reasonable stand-in for the Hessian.
 
 :::

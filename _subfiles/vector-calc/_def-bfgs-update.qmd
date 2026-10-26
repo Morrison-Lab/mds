@@ -23,7 +23,7 @@ $$
 ::: {#exm-bfgs-step}
 #### A BFGS update from the quasi-Newton step
 
-Continue @exm-quasi-newton-step with $\matr{H} = \matr{I}_2$, $\vecf{s} = \vecf{s}^{(0)}$ and $\vy = \vy^{(0)}$.
+Continue @exm-quasi-newton-step with $\matr{H} = \matr{I}_2$, $\vecf{s} = \vecf{s}^{(0)}$, and $\vy = \vy^{(0)}$.
 
 ```{r}
 #| label: bfgs-step
