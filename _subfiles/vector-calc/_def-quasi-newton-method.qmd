@@ -13,8 +13,8 @@ $$
 $$
 
 where $s^{(t)} > 0$ is a [step length](#def-gradient-descent) chosen by a [line search](#def-line-search),
-and $\matr{H}^{(t+1)}$ is a positive definite matrix
-that approximates the [inverse](linear-algebra-special-matrices.qmd#def-matrix-inverse) Hessian by satisfying the [secant condition](#def-secant-condition) in the form
+and $\matr{H}^{(t+1)}$ is a [symmetric](linear-algebra.qmd#def-symmetric-matrix) positive definite matrix
+whose [inverse](linear-algebra-special-matrices.qmd#def-matrix-inverse) satisfies the [secant condition](#def-secant-condition), that is,
 $\matr{H}^{(t+1)} \vy^{(t)} = \vecf{s}^{(t)}$,
 with $\vecf{s}^{(t)} = \vx^{(t+1)} - \vx^{(t)}$
 and $\vy^{(t)} = \deriv{\vx} f(\vx^{(t+1)}) - \deriv{\vx} f(\vx^{(t)})$.
@@ -51,7 +51,6 @@ y <- grad(x1) - grad(x0)
 
 The step length is `{r} step`, which moves the [iterate](#def-iterate) to $\vx^{(1)} = (`{r} x1[1]`, `{r} x1[2]`)$
 and lowers $f$ from `{r} f(x0)` to `{r} f(x1)`.
-Because $\matr{H}^{(0)} = \matr{I}_2$, this step is a [gradient descent](#def-gradient-descent) step.
 The difference of the [gradients](vector-calculus.qmd#def-vector-derivative), $\vy^{(0)} = (`{r} y[1]`, `{r} y[2]`)$, is $\matr{Q} \vecf{s}^{(0)}$ ([the secant condition](#def-secant-condition) for a quadratic function).
 
 :::

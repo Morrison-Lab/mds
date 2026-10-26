@@ -8,7 +8,9 @@ that never forms $\matr{H}^{(t)}$.
 It stores only the $m$ most recent pairs $(\vecf{s}^{(j)}, \vy^{(j)})$,
 with $m$ small, such as $5$ or $20$,
 and obtains $\matr{H}^{(t)} \deriv{\vx} f(\vx^{(t)})$
-implicitly, through a few vector operations, as if the [BFGS update](#def-bfgs-update) for those $m$ pairs were applied to a simple starting [matrix](linear-algebra-matrices.qmd#def-matrix), such as a multiple of $\matr{I}_p$.
+implicitly, through a few vector operations,
+as if the [BFGS update](#def-bfgs-update) for those $m$ pairs were applied
+to a simple starting [matrix](linear-algebra-matrices.qmd#def-matrix), such as a multiple of $\matr{I}_p$.
 
 :::
 
@@ -18,7 +20,8 @@ implicitly, through a few vector operations, as if the [BFGS update](#def-bfgs-u
 #### L-BFGS applies the update without forming the matrix
 
 Continue @exm-bfgs-step with $m = 1$ stored pair $(\vecf{s}^{(0)}, \vy^{(0)})$ and starting [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{I}_2$.
-The code obtains $\matr{H}^+ \deriv{\vx} f(\vx^{(1)})$ from vectors alone, in two passes over the stored pair, and compares it with the [matrix product](linear-algebra.qmd#def-matrix-mult).
+Below, $\matr{H}^+ \deriv{\vx} f(\vx^{(1)})$ is formed from vectors alone, in two passes over the stored pair,
+then compared with the [matrix product](linear-algebra.qmd#def-matrix-mult).
 
 ```{r}
 #| label: lbfgs-step
@@ -31,10 +34,8 @@ r <- r + s * (alpha - beta)
 rbind(from_vectors = r, from_matrix = drop(H1 %*% g1))
 ```
 
-The two rows agree to within `{r} format(max(abs(r - H1 %*% g1)), digits = 2)`,
-yet the first never formed a $2 \times 2$ matrix.
+The two rows agree to within `{r} format(max(abs(r - H1 %*% g1)), digits = 2)`, although the first never forms the matrix.
 BFGS stores a dense $p \times p$ matrix and spends about $p^2$ operations per iteration;
-L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$ operations per iteration,
-so it remains usable when $p$ is in the millions.
+L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$ operations per iteration, so it remains usable when $p$ is in the millions.
 
 :::
