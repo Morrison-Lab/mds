@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:22:15 (PDT)
+Last modified: 2026-10-26 12:24:58 (PDT)
 
-Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
+Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 
 > **NOTE:**
 >

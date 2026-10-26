@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:22:15 (PDT)
+Last modified: 2026-10-26 12:24:58 (PDT)
 
 > **NOTE:**
 >
@@ -50,7 +50,11 @@ Last modified: 2026-10-23 02:22:15 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Algorithm)** An **algorithm** [\[3\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm *computes* a [function](functions.llms.md#def-function): for each input it returns the function’s value at that input.
+> **Definition 3 (Algorithm)** An **algorithm** [\[3\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.
+
+> **NOTE:**
+>
+> **Definition 4 (Computes)** An [algorithm](#def-algorithm) **computes** a [function](functions.llms.md#def-function) when, for each [input](functions.llms.md#def-argument), it returns the function’s [value](functions.llms.md#def-value) at that input.
 
 > **NOTE:**
 >
@@ -58,7 +62,11 @@ Last modified: 2026-10-23 02:22:15 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (How functions, expressions and algorithms relate). The three ideas fit together this way:
+> *Remark 2* (Procedures that are not algorithms here). By the definition of an [algorithm](#def-algorithm), every algorithm [computes](#def-computes) some [function](functions.llms.md#def-function). That holds because an algorithm has unambiguous steps and halts on every valid [input](functions.llms.md#def-argument). A procedure that makes random choices can return different [values](functions.llms.md#def-value) for the same input. A procedure that never halts returns no [value](functions.llms.md#def-value) for some inputs. Neither computes a function, and neither is an algorithm in this sense, although some texts call them [algorithms](#def-algorithm).
+
+> **NOTE:**
+>
+> *Remark 3* (How functions, expressions and algorithms relate). The three ideas fit together this way:
 >
 > - A function is the input-output relationship.
 > - An [expression](#def-expression) denotes a function, and many expressions denote the same one.
@@ -68,11 +76,61 @@ Last modified: 2026-10-23 02:22:15 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
+> *Remark 4* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
 
 > **NOTE:**
 >
 > **Example 4 (A minimizer with no known formula)** The minimizer \\\arg \min\_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\\ is well defined, because \\x - \cos x\\ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
+
+## 3 Exercises
+
+> **NOTE:**
+>
+> **Exercise 1 (Is an expression an algorithm?)** How do a [function](functions.llms.md#def-function), an [expression](#def-expression) and an [algorithm](#def-algorithm) differ?
+
+> **NOTE:**
+>
+> *Solution 1*. A [function](functions.llms.md#def-function) is the input-output relationship. An [expression](#def-expression) is a string of symbols that denotes a function, and many [expressions](#def-expression) denote the same one. An [algorithm](#def-algorithm) is a [finite](functions.llms.md#def-finite-sequence) list of steps that computes a function, and many [algorithms](#def-algorithm) compute the same one.
+
+> **NOTE:**
+>
+> **Exercise 2 (Is an expression an algorithm? (part 2))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
+>
+> Which of the three does \\a x^2 + b x + c\\ name: a [function](functions.llms.md#def-function), an [expression](#def-expression) or an [algorithm](#def-algorithm)?
+
+> **NOTE:**
+>
+> *Solution 2*. It is an [expression](#def-expression): it names a [function](functions.llms.md#def-function), and it is not an [algorithm](#def-algorithm).
+
+> **NOTE:**
+>
+> **Exercise 3 (Is an expression an algorithm? (part 3))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
+>
+> Does the [expression](#def-expression) \\a x^2 + b x + c\\ tell you which arithmetic steps to carry out?
+
+> **NOTE:**
+>
+> *Solution 3*. Not by itself. The [expression](#def-expression) says *what* to compute, not *how* to compute it. Once \\a\\, \\b\\, \\c\\ and \\x\\ are known, evaluating its [parse tree](#def-parse-tree) from the leaves up is an [algorithm](#def-algorithm).
+
+> **NOTE:**
+>
+> **Exercise 4 (Is an expression an algorithm? (part 4))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
+>
+> What do the rules of precedence (PEMDAS) contribute to the [expression](#def-expression) \\a x^2 + b x + c\\?
+
+> **NOTE:**
+>
+> *Solution 4*. Precedence resolves how the symbols group: \\a x^2 + b x + c\\ groups into three parts added together, with \\x^2\\ evaluated before the multiplication by \\a\\, and that grouping is a [tree](#def-parse-tree). Precedence is a rule for reading the [expression](#def-expression), not a step in an [algorithm](#def-algorithm) that evaluates it.
+
+> **NOTE:**
+>
+> **Exercise 5 (Is an expression an algorithm? (part 5))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
+>
+> Write a second [expression](#def-expression) that denotes the same [function](functions.llms.md#def-function) as \\a x^2 + b x + c\\ and needs fewer multiplications.
+
+> **NOTE:**
+>
+> *Solution 5*. \\(a x + b)\\x + c\\, Horner’s form. It uses two multiplications and two additions, where the first form, with \\x^2\\ computed as \\x \cdot x\\, uses three multiplications and two additions. The two [expressions](#def-expression) denote the same [function](functions.llms.md#def-function) and describe different [algorithms](#def-algorithm).
 
 Back to top
 

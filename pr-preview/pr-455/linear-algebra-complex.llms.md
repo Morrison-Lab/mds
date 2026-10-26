@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:22:15 (PDT)
+Last modified: 2026-10-26 12:24:58 (PDT)
 
 ## 1 Complex vectors and matrices
 
@@ -28,7 +28,7 @@ Last modified: 2026-10-23 02:22:15 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))** The **conjugate transpose** [\[1\]](#ref-wikipedia_conjugate_transpose) (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
+> **Definition 4 (Conjugate transpose, Hermitian adjoint, Hermitian conjugate, transjugate)** The **conjugate transpose** [\[1\]](#ref-wikipedia_conjugate_transpose) (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
 >
 > \\(\mathbf{A}^{\mathsf{H}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{kj}} \quad \text{for } j \in \\1, \ldots, n\\,\\ k \in \\1, \ldots, m\\.\\
 
@@ -159,7 +159,7 @@ Last modified: 2026-10-23 02:22:15 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Hermitian matrix (self-adjoint matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** [\[3\]](#ref-wikipedia_hermitian_matrix) (or **self-adjoint**) if it equals its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
+> **Definition 5 (Hermitian matrix, self-adjoint matrix)** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** [\[3\]](#ref-wikipedia_hermitian_matrix) (or **self-adjoint**) if it equals its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\\
 
@@ -185,7 +185,7 @@ Last modified: 2026-10-23 02:22:15 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Skew-Hermitian matrix (anti-Hermitian matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** [\[4\]](#ref-wikipedia_skew_hermitian_matrix) (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
+> **Definition 6 (Skew-Hermitian matrix, anti-Hermitian matrix)** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** [\[4\]](#ref-wikipedia_skew_hermitian_matrix) (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 4](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = -\mathbf{A}.\\
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:22:15 (PDT)
+Last modified: 2026-10-26 12:24:58 (PDT)
 
 > **NOTE:**
 >
@@ -137,7 +137,7 @@ Last modified: 2026-10-23 02:22:15 (PDT)
 
 > **NOTE:**
 >
-> **Example 7 (Counting elements is finitely additive)** For the die rolls \\D = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ ([sets of die rolls](sets.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](functions.llms.md#def-cardinality)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\5, 6\right\\\mathclose{}}\\ are pairwise disjoint ([low and high die rolls](sets.llms.md#exm-pairwise-disjoint)), and:
+> **Example 7 (Counting elements is finitely additive)** For the die rolls \\D = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ ([sets of die rolls](sets.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](functions.llms.md#def-cardinality)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\5, 6\right\\\mathclose{}}\\ are pairwise disjoint ([low, middle and high die rolls](sets.llms.md#exm-pairwise-disjoint)), and:
 >
 > \\ \begin{aligned} \mu({\mathopen{}\left\\1, 2\right\\\mathclose{}} \cup {\mathopen{}\left\\5, 6\right\\\mathclose{}}) &= \mu({\mathopen{}\left\\1, 2, 5, 6\right\\\mathclose{}}) && \text{(take the union)} \\ &= 4 && \text{(count the elements)} \\ &= 2 + 2 && \text{(write 4 as a sum)} \\ &= \mu({\mathopen{}\left\\1, 2\right\\\mathclose{}}) + \mu({\mathopen{}\left\\5, 6\right\\\mathclose{}}) && \text{(count each set's elements)} \end{aligned} \\
 >
@@ -337,7 +337,7 @@ Last modified: 2026-10-23 02:22:15 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Measure zero (null set))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathcal{S}\\ has **measure zero** [\[10\]](#ref-wikipedia_null_set) (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
+> **Definition 14 (Measure zero, null set)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathcal{S}\\ has **measure zero** [\[10\]](#ref-wikipedia_null_set) (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
 
 > **NOTE:**
 >
@@ -511,11 +511,11 @@ Last modified: 2026-10-23 02:22:15 (PDT)
 
 > **NOTE:**
 >
-> **Definition 26 (Absolutely integrable function (integrable function, absolute integrability))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra-basics.llms.md#def-absolute-value) is finite:
+> **Definition 26 (Absolutely integrable function, integrable function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra-basics.llms.md#def-absolute-value) is finite:
 >
 > \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu\< \infty\\
 >
-> The property itself is called **absolute integrability**.
+> The property itself is called absolute integrability.
 
 > **NOTE:**
 >
