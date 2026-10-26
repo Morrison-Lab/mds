@@ -1,12 +1,12 @@
 :::{#def-gradient-ascent}
 #### Gradient ascent
 
-Let $f : \reals^p \to \reals$ have first partial derivatives,
+Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.qmd#def-partial-derivative),
 let $\vx^{(0)}$ be a starting point,
 and let $s^{(0)}, s^{(1)}, \ldots$ be positive [step lengths](#def-gradient-descent).
 **Gradient ascent**
 [@wikipedia_gradient_descent]
-computes, for $t = 0, 1, 2, \ldots$,
+repeats, for $t = 0, 1, 2, \ldots$, the update
 
 $$
 \vx^{(t+1)} \eqdef \vx^{(t)} + s^{(t)}\,\deriv{\vx} f(\vx^{(t)}).
