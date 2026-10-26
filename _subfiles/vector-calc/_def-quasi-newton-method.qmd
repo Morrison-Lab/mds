@@ -1,0 +1,38 @@
+:::{#def-quasi-newton-method}
+#### Quasi-Newton method
+
+Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.qmd#def-partial-derivative),
+let $\vx^{(0)}$ be a starting point,
+and let $\matr{H}^{(0)}$ be a [positive definite matrix](linear-algebra.qmd#def-positive-definite).
+A **quasi-Newton method**
+[@nocedal2006numerical, Chapter 6]
+produces, for $t = 0, 1, 2, \ldots$,
+
+$$
+\vx^{(t+1)} \eqdef \vx^{(t)} - s^{(t)} \matr{H}^{(t)} \deriv{\vx} f(\vx^{(t)}),
+$$
+
+where $s^{(t)} > 0$ is a [step length](#def-gradient-descent) chosen by a [line search](#def-line-search),
+and $\matr{H}^{(t+1)}$ is a positive definite matrix
+that satisfies the [secant condition](#def-secant-condition) in the form
+$\matr{H}^{(t+1)} \vy^{(t)} = \vecf{s}^{(t)}$,
+with $\vecf{s}^{(t)} = \vx^{(t+1)} - \vx^{(t)}$
+and $\vy^{(t)} = \deriv{\vx} f(\vx^{(t+1)}) - \deriv{\vx} f(\vx^{(t)})$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-quasi-newton-cost}
+#### Why a quasi-Newton method is used
+
+Because $\matr{H}^{(t)}$ is [positive definite](linear-algebra.qmd#def-positive-definite), $-\matr{H}^{(t)} \deriv{\vx} f(\vx^{(t)})$ is a [descent direction](#def-descent-direction),
+so a [line search](#def-line-search) finds a step that decreases $f$.
+[Newton's method](#def-newton-method) needs the Hessian and the solution of a system of equations at every iteration,
+which costs about $p^3$ operations for a dense $p \times p$ Hessian,
+and requires the formulas for its entries.
+A quasi-Newton method needs only the [gradient](vector-calculus.qmd#def-vector-derivative) and an update of $\matr{H}^{(t)}$ costing about $p^2$ operations.
+Near a minimizer it is superlinearly fast: faster than [gradient descent](#def-gradient-descent), slower than Newton's method [@nocedal2006numerical, Chapter 6].
+With $\matr{H}^{(t)} = \matr{I}_p$ at every $t$, it is [gradient descent](#def-gradient-descent).
+
+:::

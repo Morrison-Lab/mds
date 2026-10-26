@@ -1,0 +1,46 @@
+:::{#def-secant-condition}
+#### Secant condition
+
+Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.qmd#def-partial-derivative),
+and let $\vx, \vx^+ \in \reals^p$.
+Write $\vecf{s} \eqdef \vx^+ - \vx$ for the step
+and $\vy \eqdef \deriv{\vx} f(\vx^+) - \deriv{\vx} f(\vx)$ for the change in the [gradient](vector-calculus.qmd#def-vector-derivative).
+A [symmetric matrix](linear-algebra.qmd#def-symmetric-matrix) $\matr{B}$ satisfies the **secant condition**
+[@nocedal2006numerical, Chapter 6]
+for $(\vecf{s}, \vy)$ when
+
+$$
+\matr{B} \vecf{s} = \vy.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-secant-condition}
+#### The Hessian of a quadratic function satisfies the secant condition
+
+Let $f(\vx) = \tfrac{1}{2} \qform{\matr{Q}}{\vx} - \dprod{\vecf{b}}{\vx}$
+with $\matr{Q}$ [symmetric](linear-algebra.qmd#def-symmetric-matrix).
+Then $\deriv{\vx} f(\vx) = \matr{Q} \vx - \vecf{b}$,
+so for any $\vx$ and $\vx^+$
+
+$$
+\ba
+\vy
+&= (\matr{Q} \vx^+ - \vecf{b}) - (\matr{Q} \vx - \vecf{b})
+&& \text{(gradient at each point)}
+\\
+&= \matr{Q} (\vx^+ - \vx)
+&& \text{(collect terms)}
+\\
+&= \matr{Q} \vecf{s}.
+&& \text{(definition of } \vecf{s} \text{)}
+\ea
+$$
+
+So the Hessian $\matr{Q}$ of the [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial) satisfies the secant condition for every step.
+For a general $f$, the same holds approximately for a short step,
+which is why a [matrix](linear-algebra-matrices.qmd#def-matrix) that satisfies it is a reasonable stand-in for the Hessian.
+
+:::

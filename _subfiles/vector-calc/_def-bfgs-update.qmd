@@ -1,0 +1,41 @@
+:::{#def-bfgs-update}
+#### BFGS update (Broyden-Fletcher-Goldfarb-Shanno)
+
+Let $\matr{H}$ be a $p \times p$ [positive definite matrix](linear-algebra.qmd#def-positive-definite),
+and let $\vecf{s}, \vy \in \reals^p$ satisfy $\dprod{\vy}{\vecf{s}} > 0$.
+With $\rho \eqdef 1 / \dprod{\vy}{\vecf{s}}$,
+the **BFGS update**
+[@nocedal2006numerical, Chapter 6]
+of $\matr{H}$ is
+
+$$
+\matr{H}^+
+\eqdef \paren{\matr{I}_p - \rho \oprod{\vecf{s}}{\vy}}
+\matr{H}
+\paren{\matr{I}_p - \rho \oprod{\vy}{\vecf{s}}}
++ \rho \oprod{\vecf{s}}{\vecf{s}}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-bfgs-curvature}
+#### The curvature condition $\dprod{\vy}{\vecf{s}} > 0$
+
+If the [strict inequality](algebra.qmd#def-strict-inequality) of @thm-convex-first-order holds for distinct points,
+then $\dprod{\vy}{\vecf{s}} > 0$ whenever $\vx^+ \ne \vx$.
+Add the versions at $(\vx^+, \vx)$ and at $(\vx, \vx^+)$:
+
+$$
+f(\vx^+) + f(\vx)
+> f(\vx) + f(\vx^+)
++ \dprod{\deriv{\vx} f(\vx)}{\vecf{s}}
+- \dprod{\deriv{\vx} f(\vx^+)}{\vecf{s}},
+$$
+
+so $0 > -\dprod{\vy}{\vecf{s}}$.
+For a general $f$, a [line search](#def-line-search) that enforces a curvature condition on the [step length](#def-gradient-descent)
+(the Wolfe conditions [@nocedal2006numerical, Chapter 3]) guarantees it.
+
+:::

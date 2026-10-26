@@ -1,0 +1,25 @@
+:::{#def-lbfgs}
+#### Limited-memory BFGS (L-BFGS)
+
+**Limited-memory BFGS** (**L-BFGS**)
+[@nocedal2006numerical, Chapter 7]
+is the [quasi-Newton method](#def-quasi-newton-method)
+that never forms $\matr{H}^{(t)}$.
+It stores only the $m$ most recent pairs $(\vecf{s}^{(j)}, \vy^{(j)})$,
+with $m$ small, such as $5$ or $20$,
+and obtains $\matr{H}^{(t)} \deriv{\vx} f(\vx^{(t)})$
+by applying the [BFGS update](#def-bfgs-update) for those $m$ pairs to a simple starting [matrix](linear-algebra-matrices.qmd#def-matrix), such as a multiple of $\matr{I}_p$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-lbfgs-cost}
+#### Why L-BFGS is used for large problems
+
+BFGS stores a dense $p \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) and spends about $p^2$ operations per iteration.
+L-BFGS stores $2m$ vectors with $p$ entries each and spends about $m p$ operations per iteration,
+so it remains usable when $p$ is in the thousands or millions,
+as in fitting a regularized logistic regression with many predictors.
+
+:::
