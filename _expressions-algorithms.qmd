@@ -31,6 +31,10 @@ the parse trees of expressions, and algorithms, which compute those functions.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/expressions-algorithms/_fig-parse-trees.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/expressions-algorithms/_rem-expression-parse-tree.qmd >}}
 
 ## Algorithms
