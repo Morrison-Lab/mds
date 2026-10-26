@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-25 16:46:34 (PDT)
+Last modified: 2026-10-25 18:01:14 (PDT)
 
 > **NOTE:**
 >
@@ -351,6 +351,60 @@ Last modified: 2026-10-25 16:46:34 (PDT)
 
 > **NOTE:**
 >
+> Show R code
+>
+> ``` downlit
+> x_grid <- seq(-3, 3, length.out = 241)
+> fg_label <- "f(g(x)) = (x + 1)^2"
+> gf_label <- "g(f(x)) = x^2 + 1"
+> compositions <- data.frame(
+>   x = rep(x_grid, 2),
+>   composition = rep(c(fg_label, gf_label), each = length(x_grid)),
+>   value = c((x_grid + 1)^2, x_grid^2 + 1)
+> )
+> at_two <- data.frame(
+>   x = 2,
+>   composition = c(fg_label, gf_label),
+>   value = c(9, 5)
+> )
+>
+> composition_plot <- ggplot2::ggplot() +
+>   ggplot2::geom_line(
+>     data = compositions,
+>     ggplot2::aes(x = x, y = value, colour = composition)
+>   ) +
+>   ggplot2::geom_point(
+>     data = at_two,
+>     ggplot2::aes(x = x, y = value, colour = composition),
+>     size = 3
+>   ) +
+>   ggplot2::geom_text(
+>     data = at_two,
+>     ggplot2::aes(x = x, y = value, label = value),
+>     nudge_x = -0.3,
+>     nudge_y = 0.5
+>   ) +
+>   ggplot2::scale_colour_manual(values = c("#0072B2", "#D55E00")) +
+>   ggplot2::labs(x = "x", y = "value", colour = NULL) +
+>   ggplot2::theme_minimal() +
+>   ggplot2::theme(legend.position = "bottom")
+>
+> if (knitr::is_html_output()) {
+>   htmltools::div(
+>     role = "img",
+>     `aria-label` = fig_alt,
+>     plotly::ggplotly(composition_plot) |>
+>       plotly::layout(legend = list(orientation = "h", y = -0.2))
+>   )
+> } else {
+>   composition_plot
+> }
+> ```
+>
+> Figure 5: The [compositions](#def-composition) \\f \circ g\\ and \\g \circ f\\ of [Example 9](#exm-composition) are different [functions](#def-function). At \\x = 2\\ they take the [values](#def-value) \\9\\ and \\5\\.
+
+> **NOTE:**
+>
 > **Definition 14 (Inverse function)** Let \\f : A \to B\\ be a [function](#def-function). A function \\g : B \to A\\ is the **inverse function** [\[10\]](#ref-wikipedia_inverse_function) of \\f\\, written \\f^{-1}\\, if both
 >
 > - \\g(f(a)) = a\\ for every \\a \in A\\, and
@@ -371,6 +425,97 @@ Last modified: 2026-10-25 16:46:34 (PDT)
 >   \\ \begin{aligned} f^{-1}(7) &= \frac{7 - 1}{2} \\ &= 3. \end{aligned} \\
 >
 > - Let \\h : \mathbb{R}\to \mathbb{R}\\ with \\h(x) = x^2\\. Then \\h(-2) = 4\\ and \\h(2) = 4\\, so an inverse function would need \\h^{-1}(4)\\ to equal both \\-2\\ and \\2\\. So \\h\\ is not invertible.
+
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> x_f <- seq(-2, 4, length.out = 101)
+> x_inverse <- seq(-3, 9, length.out = 101)
+> lines_data <- data.frame(
+>   x = c(x_f, x_inverse, x_inverse),
+>   y = c(2 * x_f + 1, (x_inverse - 1) / 2, x_inverse),
+>   curve = rep(
+>     c("f", "inverse of f", "y = x"),
+>     times = c(length(x_f), length(x_inverse), length(x_inverse))
+>   )
+> )
+> marked <- data.frame(x = c(3, 7), y = c(7, 3))
+> labels_data <- data.frame(
+>   x = c(1.2, 7, 7.5),
+>   y = c(5.2, 0.6, 8.2),
+>   label = c("f", "inverse of f", "y = x")
+> )
+>
+> inverse_function_plot <- ggplot2::ggplot() +
+>   ggplot2::geom_line(
+>     data = lines_data,
+>     ggplot2::aes(x = x, y = y, colour = curve, linetype = curve)
+>   ) +
+>   ggplot2::geom_point(data = marked, ggplot2::aes(x = x, y = y), size = 3) +
+>   ggplot2::geom_text(
+>     data = labels_data,
+>     ggplot2::aes(x = x, y = y, label = label)
+>   ) +
+>   ggplot2::coord_fixed(xlim = c(-3, 9), ylim = c(-3, 9)) +
+>   ggplot2::scale_colour_manual(
+>     values = c("f" = "#0072B2", "inverse of f" = "#D55E00", "y = x" = "grey40")
+>   ) +
+>   ggplot2::scale_linetype_manual(
+>     values = c("f" = "solid", "inverse of f" = "solid", "y = x" = "dashed")
+>   ) +
+>   ggplot2::labs(x = "x", y = "y") +
+>   ggplot2::theme_minimal() +
+>   ggplot2::theme(legend.position = "none")
+>
+> if (knitr::is_html_output()) {
+>   htmltools::div(
+>     role = "img",
+>     `aria-label` = fig_alt,
+>     plotly::ggplotly(inverse_function_plot)
+>   )
+> } else {
+>   inverse_function_plot
+> }
+> ```
+>
+> Figure 6: The [graph](#def-graph) of the [inverse function](#def-inverse-function) \\f^{-1}\\ of \\f(x) = 2x + 1\\ is the graph of \\f\\ reflected across the line \\y = x\\, so \\(3, 7)\\ becomes \\(7, 3)\\.
+
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> x_square <- seq(-3, 3, length.out = 101)
+> square_data <- data.frame(x = x_square, y = x_square^2)
+> marked <- data.frame(x = c(-2, 2), y = c(4, 4))
+>
+> not_invertible_plot <- ggplot2::ggplot() +
+>   ggplot2::geom_hline(yintercept = 4, colour = "grey40", linetype = "dotted") +
+>   ggplot2::geom_line(
+>     data = square_data,
+>     ggplot2::aes(x = x, y = y),
+>     colour = "#0072B2"
+>   ) +
+>   ggplot2::geom_point(data = marked, ggplot2::aes(x = x, y = y), size = 3) +
+>   ggplot2::annotate("text", x = -2.8, y = 4.6, label = "y = 4") +
+>   ggplot2::scale_x_continuous(breaks = -3:3) +
+>   ggplot2::labs(x = "x", y = "h(x) = x^2") +
+>   ggplot2::theme_minimal()
+>
+> if (knitr::is_html_output()) {
+>   htmltools::div(
+>     role = "img",
+>     `aria-label` = fig_alt,
+>     plotly::ggplotly(not_invertible_plot)
+>   )
+> } else {
+>   not_invertible_plot
+> }
+> ```
+>
+> Figure 7: The horizontal line \\y = 4\\ meets the [graph](#def-graph) of \\h(x) = x^2\\ twice, at \\x = -2\\ and \\x = 2\\, so \\h\\ has no [inverse function](#def-inverse-function).
 
 > **NOTE:**
 >
@@ -453,6 +598,43 @@ Last modified: 2026-10-25 16:46:34 (PDT)
 
 > **NOTE:**
 >
+> Show R code
+>
+> ``` downlit
+> n <- 1:10
+> sequence_labels <- c("a_n = 1/n", "b_n = (-1)^n")
+> sequences <- data.frame(
+>   n = rep(n, 2),
+>   sequence = factor(
+>     rep(sequence_labels, each = length(n)),
+>     levels = sequence_labels
+>   ),
+>   term = c(1 / n, (-1)^n)
+> )
+>
+> sequences_plot <- ggplot2::ggplot(sequences) +
+>   ggplot2::aes(x = n, y = term) +
+>   ggplot2::geom_point(size = 2.5, colour = "#0072B2") +
+>   ggplot2::facet_wrap(~sequence, scales = "free_y") +
+>   ggplot2::scale_x_continuous(breaks = n) +
+>   ggplot2::labs(x = "n", y = "term") +
+>   ggplot2::theme_minimal()
+>
+> if (knitr::is_html_output()) {
+>   htmltools::div(
+>     role = "img",
+>     `aria-label` = fig_alt,
+>     plotly::ggplotly(sequences_plot)
+>   )
+> } else {
+>   sequences_plot
+> }
+> ```
+>
+> Figure 8: The first ten [terms](#def-sequence-term) of the [sequences](#def-sequence) \\a_n = 1/n\\ and \\b_n = (-1)^n\\ of [Example 14](#exm-sequence), plotted against \\n\\. The terms of \\b_n\\ take only two [values](#def-value).
+
+> **NOTE:**
+>
 > **Definition 20 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\{\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
 
 > **NOTE:**
@@ -483,6 +665,57 @@ Last modified: 2026-10-25 16:46:34 (PDT)
 > ```
 >
 > The [value](#def-value) at \\z = 0\\ is \\1 / (1 + e^0) = 1/2\\. The values at \\\pm 2\\ add to 1; each lies in \\(0, 1)\\.
+
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> z_grid <- seq(-6, 6, length.out = 241)
+> logistic_curve <- data.frame(z = z_grid, sigmoid = plogis(z_grid))
+> logistic_points <- data.frame(z = c(-2, 0, 2), sigmoid = plogis(c(-2, 0, 2)))
+> logistic_points$label <- sprintf("%.3f", logistic_points$sigmoid)
+>
+> logistic_function_plot <- ggplot2::ggplot() +
+>   ggplot2::geom_hline(
+>     yintercept = c(0, 1),
+>     linetype = "dotted",
+>     colour = "grey50"
+>   ) +
+>   ggplot2::geom_line(
+>     data = logistic_curve,
+>     ggplot2::aes(x = z, y = sigmoid),
+>     colour = "#0072B2"
+>   ) +
+>   ggplot2::geom_point(
+>     data = logistic_points,
+>     ggplot2::aes(x = z, y = sigmoid),
+>     size = 3,
+>     colour = "#D55E00"
+>   ) +
+>   ggplot2::geom_text(
+>     data = logistic_points,
+>     ggplot2::aes(x = z, y = sigmoid, label = label),
+>     nudge_x = 0.2,
+>     nudge_y = -0.06,
+>     hjust = 0
+>   ) +
+>   ggplot2::scale_x_continuous(breaks = seq(-6, 6, 2)) +
+>   ggplot2::labs(x = "z", y = "logistic(z)") +
+>   ggplot2::theme_minimal()
+>
+> if (knitr::is_html_output()) {
+>   htmltools::div(
+>     role = "img",
+>     `aria-label` = fig_alt,
+>     plotly::ggplotly(logistic_function_plot)
+>   )
+> } else {
+>   logistic_function_plot
+> }
+> ```
+>
+> Figure 9: The [logistic function](#def-logistic-function) for \\z\\ from \\-6\\ to \\6\\. Its [values](#def-value) lie strictly between \\0\\ and \\1\\, and the marked points are the values at \\z = -2\\, \\0\\ and \\2\\ from [Example 16](#exm-logistic-function).
 
 ## 2 Countable sets
 
