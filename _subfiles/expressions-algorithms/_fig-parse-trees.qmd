@@ -24,12 +24,12 @@ fig_alt <- paste(
 # and the remaining elements are its children.
 times <- intToUtf8(215)
 trees <- list(
-  "(a x + b) x + c" = list(
+  "(a * x + b) * x + c" = list(
     "+",
     list(times, list("+", list(times, "a", "x"), "b"), "x"),
     "c"
   ),
-  "a x^2 + b x + c" = list(
+  "a * x^2 + b * x + c" = list(
     "+",
     list(
       "+",
@@ -99,7 +99,7 @@ ggplot2::ggplot() +
   ggplot2::scale_fill_manual(
     values = c(operation = "#CCE5F6", leaf = "#F9DDBF")
   ) +
-  ggplot2::facet_wrap(~tree, scales = "free_x") +
+  ggplot2::facet_wrap(~tree, scales = "free_x", labeller = ggplot2::label_parsed) +
   ggplot2::labs(fill = "node type") +
   ggplot2::theme_void() +
   ggplot2::theme(
@@ -110,5 +110,6 @@ ggplot2::ggplot() +
 
 The [parse trees](#def-parse-tree) of $(a x + b)\,x + c$ and $a x^2 + b x + c$.
 Each operation is a node with one child per [argument](functions.qmd#def-argument), and the leaves are the symbols that are not operations.
+The caret is the [power](algebra-basics.qmd#def-power) operation, which takes a [base](algebra-basics.qmd#def-power-base) and an [exponent](algebra-basics.qmd#def-power-exponent).
 
 :::
