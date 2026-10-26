@@ -21,7 +21,7 @@ $$
 
 Gradient ascent on $f$ takes the same steps as [gradient descent](#def-gradient-descent) on $-f$,
 since $\deriv{\vx} (-f) = -\deriv{\vx} f$.
-For $f(x) = -x^2$, $f'(x) = -2x$, so gradient ascent with fixed [step length](#def-gradient-descent) $s$ is
+In one variable, for $f(x) = -x^2$ the derivative is $f'(x) = -2x$, so gradient ascent with fixed [step length](#def-gradient-descent) $s$ is
 $x^{(t+1)} = (1 - 2s)\,x^{(t)}$,
 the iteration of @exm-gradient-descent, which tends to the maximizer $0$ when $0 < s < 1$.
 
