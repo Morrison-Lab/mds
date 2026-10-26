@@ -11,7 +11,6 @@ $$
 $$
 
 whose right-hand side is a [closed-form expression](#def-closed-form-expression),
-
 so [least squares](linear-algebra-projections.qmd#def-least-squares) has a [closed-form solution](#def-closed-form-solution).
 
 For logistic regression, no closed-form expression is known for a minimizer
