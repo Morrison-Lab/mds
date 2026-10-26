@@ -22,7 +22,7 @@ fig_alt <- paste(
 #| fig-height: 4
 # Each tree is a nested list: the first element is the node's label,
 # and the remaining elements are its children.
-times <- "×"
+times <- intToUtf8(215)
 trees <- list(
   "(a x + b) x + c" = list(
     "+",
@@ -108,7 +108,7 @@ ggplot2::ggplot() +
   )
 ```
 
-The parse trees of $(a x + b)\,x + c$ and $a x^2 + b x + c$.
-Each operation is a node with one child per argument, and the leaves are the variables and constants.
+The [parse trees](#def-parse-tree) of $(a x + b)\,x + c$ and $a x^2 + b x + c$.
+Each operation is a node with one child per [argument](functions.qmd#def-argument), and the leaves are the symbols that are not operations.
 
 :::
