@@ -17,12 +17,12 @@ $$
 {{< slidebreak >}}
 
 :::{#exm-gradient-ascent}
-#### Gradient ascent is gradient descent on the negative
+#### Gradient ascent is gradient descent on the negative function
 
 Gradient ascent on $f$ takes the same steps as [gradient descent](#def-gradient-descent) on $-f$,
 since $\deriv{\vx} (-f) = -\deriv{\vx} f$.
 For $f(x) = -x^2$, $f'(x) = -2x$, so gradient ascent with fixed [step length](#def-gradient-descent) $s$ is
 $x^{(t+1)} = (1 - 2s)\,x^{(t)}$,
-the iteration of @exm-gradient-descent, and it tends to the maximizer $0$ when $0 < s < 1$.
+the iteration of @exm-gradient-descent, which tends to the maximizer $0$ when $0 < s < 1$.
 
 :::
