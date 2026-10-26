@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-24 20:19:00 (PDT)
+Last modified: 2026-10-25 16:46:34 (PDT)
 
 > **NOTE:**
 >
@@ -74,6 +74,59 @@ Last modified: 2026-10-24 20:19:00 (PDT)
 
 > **NOTE:**
 >
+> Show R code
+>
+> ``` downlit
+> rolls <- data.frame(roll = 1:6, double = 2 * (1:6))
+> levels_shown <- data.frame(
+>   height = c(3, 4, 6),
+>   hits = c(
+>     "preimage is empty",
+>     "preimage contains a roll",
+>     "preimage contains a roll"
+>   )
+> )
+>
+> preimage_plot <- ggplot2::ggplot() +
+>   ggplot2::geom_hline(
+>     data = levels_shown,
+>     ggplot2::aes(yintercept = height, linetype = hits),
+>     colour = "#D55E00"
+>   ) +
+>   ggplot2::geom_point(
+>     data = rolls,
+>     ggplot2::aes(x = roll, y = double),
+>     size = 3,
+>     colour = "#0072B2"
+>   ) +
+>   ggplot2::scale_x_continuous(breaks = 1:6) +
+>   ggplot2::scale_y_continuous(breaks = c(2, 3, 4, 6, 8, 10, 12)) +
+>   ggplot2::scale_linetype_manual(
+>     values = c(
+>       "preimage contains a roll" = "solid",
+>       "preimage is empty" = "dashed"
+>     )
+>   ) +
+>   ggplot2::labs(x = "a (the roll)", y = "f(a) = 2a", linetype = NULL) +
+>   ggplot2::theme_minimal() +
+>   ggplot2::theme(legend.position = "bottom")
+>
+> if (knitr::is_html_output()) {
+>   htmltools::div(
+>     role = "img",
+>     `aria-label` = fig_alt,
+>     plotly::ggplotly(preimage_plot) |>
+>       plotly::layout(legend = list(orientation = "h", y = -0.2))
+>   )
+> } else {
+>   preimage_plot
+> }
+> ```
+>
+> Figure 1: The [preimage](#def-preimage) of a [set](sets.llms.md#def-set) of [values](#def-value) is the set of rolls whose points lie at those heights. The heights \\4\\ and \\6\\ are reached at the rolls \\2\\ and \\3\\, so the preimage of \\{\mathopen{}\left\\4, 6\right\\\mathclose{}}\\ is \\{\mathopen{}\left\\2, 3\right\\\mathclose{}}\\. The height \\3\\ is reached by no roll, so its preimage is empty.
+
+> **NOTE:**
+>
 > **Definition 9 (Range)** The word **range** of a [function](#def-function) \\f : A \to B\\ has two conflicting meanings, and sources use one or the other:
 >
 > - the [image](#def-image) of \\f\\, the set \\f(A)\\ of values that \\f\\ actually takes;
@@ -111,7 +164,145 @@ Last modified: 2026-10-24 20:19:00 (PDT)
 
 > **NOTE:**
 >
+> Show R code
+>
+> ``` downlit
+> graph_points <- data.frame(a = c(-1, 0, 2), value = c(-1, 0, 2)^2)
+> parabola <- data.frame(a = seq(-1.5, 2.5, length.out = 201))
+> parabola$value <- parabola$a^2
+>
+> graph_three_points_plot <- ggplot2::ggplot() +
+>   ggplot2::geom_line(
+>     data = parabola,
+>     ggplot2::aes(x = a, y = value),
+>     colour = "grey80"
+>   ) +
+>   ggplot2::geom_point(
+>     data = graph_points,
+>     ggplot2::aes(x = a, y = value, colour = "in the graph"),
+>     size = 3
+>   ) +
+>   ggplot2::geom_point(
+>     data = data.frame(a = 1, value = 1),
+>     ggplot2::aes(x = a, y = value, colour = "not in the graph"),
+>     shape = 1,
+>     size = 3,
+>     stroke = 1.2
+>   ) +
+>   ggplot2::scale_colour_manual(
+>     values = c("in the graph" = "#0072B2", "not in the graph" = "#D55E00")
+>   ) +
+>   ggplot2::scale_x_continuous(breaks = -1:2) +
+>   ggplot2::labs(x = "a", y = "f(a) = a^2", colour = NULL) +
+>   ggplot2::theme_minimal() +
+>   ggplot2::theme(legend.position = "bottom")
+>
+> if (knitr::is_html_output()) {
+>   htmltools::div(
+>     role = "img",
+>     `aria-label` = fig_alt,
+>     plotly::ggplotly(graph_three_points_plot) |>
+>       plotly::layout(legend = list(orientation = "h", y = -0.2))
+>   )
+> } else {
+>   graph_three_points_plot
+> }
+> ```
+>
+> Figure 2: The [graph](#def-graph) of \\f(a) = a^2\\ on the [domain](#def-domain) \\{\mathopen{}\left\\-1, 0, 2\right\\\mathclose{}}\\. The pair \\(1, 1)\\ lies on the curve \\y = a^2\\ but not in the graph of \\f\\, because \\1\\ is not in the domain.
+
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> rolls <- data.frame(roll = 1:6, double = 2 * (1:6))
+>
+> doubling_die_plot <- ggplot2::ggplot(rolls) +
+>   ggplot2::aes(x = roll, y = double) +
+>   ggplot2::geom_segment(
+>     ggplot2::aes(xend = 0, yend = double),
+>     linetype = "dotted",
+>     colour = "grey50"
+>   ) +
+>   ggplot2::geom_point(
+>     ggplot2::aes(colour = "graph of f"),
+>     size = 3
+>   ) +
+>   ggplot2::geom_point(
+>     ggplot2::aes(x = 0, colour = "image of f"),
+>     shape = 15,
+>     size = 3
+>   ) +
+>   ggplot2::scale_x_continuous(breaks = 0:6, limits = c(0, 6)) +
+>   ggplot2::scale_y_continuous(breaks = seq(0, 12, 2), limits = c(0, 12)) +
+>   ggplot2::scale_colour_manual(
+>     values = c("graph of f" = "#0072B2", "image of f" = "#D55E00")
+>   ) +
+>   ggplot2::labs(x = "a (the roll)", y = "f(a) = 2a", colour = NULL) +
+>   ggplot2::theme_minimal() +
+>   ggplot2::theme(legend.position = "bottom")
+>
+> if (knitr::is_html_output()) {
+>   htmltools::div(
+>     role = "img",
+>     `aria-label` = fig_alt,
+>     plotly::ggplotly(doubling_die_plot) |>
+>       plotly::layout(legend = list(orientation = "h", y = -0.2))
+>   )
+> } else {
+>   doubling_die_plot
+> }
+> ```
+>
+> Figure 3: The [function](#def-function) \\f(a) = 2a\\ on the die rolls. The six points are the [graph](#def-graph) of \\f\\. The markers on the vertical axis are the [image of](#def-image) \\f\\: only the multiples of \\2\\ from \\2\\ to \\12\\ are [values](#def-value) of \\f\\, though the [codomain](#def-codomain) is all of \\\mathbb{R}\\.
+
+> **NOTE:**
+>
 > *Remark 2* (The graph of a real function is a curve). For a function \\f : \mathbb{R}\to \mathbb{R}\\, the graph is a curve in the plane, with \\a\\ on the horizontal axis and \\f(a)\\ on the vertical axis.
+
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> curve_data <- data.frame(a = seq(-2.5, 2.5, length.out = 201))
+> curve_data$value <- curve_data$a^2
+> marked <- data.frame(a = c(-1, 0, 2), value = c(-1, 0, 2)^2)
+> marked$label <- sprintf("(%d, %d)", marked$a, marked$value)
+>
+> graph_real_function_plot <- ggplot2::ggplot() +
+>   ggplot2::geom_line(
+>     data = curve_data,
+>     ggplot2::aes(x = a, y = value),
+>     colour = "#0072B2"
+>   ) +
+>   ggplot2::geom_point(
+>     data = marked,
+>     ggplot2::aes(x = a, y = value),
+>     size = 3
+>   ) +
+>   ggplot2::geom_text(
+>     data = marked,
+>     ggplot2::aes(x = a, y = value, label = label),
+>     nudge_x = 0.35,
+>     nudge_y = 0.4
+>   ) +
+>   ggplot2::labs(x = "a", y = "f(a) = a^2") +
+>   ggplot2::theme_minimal()
+>
+> if (knitr::is_html_output()) {
+>   htmltools::div(
+>     role = "img",
+>     `aria-label` = fig_alt,
+>     plotly::ggplotly(graph_real_function_plot)
+>   )
+> } else {
+>   graph_real_function_plot
+> }
+> ```
+>
+> Figure 4: The [graph](#def-graph) of \\f(a) = a^2\\ on all of \\\mathbb{R}\\ is the whole curve \\y = a^2\\, shown here for \\-2.5 \le a \le 2.5\\. Each point of the curve is a pair \\(a, f(a))\\; the three pairs from [Example 8](#exm-graph) are marked.
 
 > **NOTE:**
 >
