@@ -1,5 +1,5 @@
 :::{#def-indicator-vector}
-#### Indicator vector (standard basis vector)
+#### Indicator vector, standard basis vector
 
 The $j$-th **indicator vector** (or **standard basis vector**
 [@wikipedia_standard_basis]

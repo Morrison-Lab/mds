@@ -1,5 +1,5 @@
 :::{#def-supremum}
-#### Supremum (least upper bound)
+#### Supremum, least upper bound
 
 Let $A \subseteq \reals$ be nonempty
 and bounded above (@def-bounded-above).

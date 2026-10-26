@@ -1,5 +1,5 @@
 :::{#def-affine-map}
-#### Affine map (affine transformation, affine function)
+#### Affine map, affine transformation, affine function
 
 A [function](functions.qmd#def-function) $f: \reals^p \to \reals^m$ is an **affine map**
 (also called an **affine transformation** or **affine function**)
@@ -20,7 +20,7 @@ $$
 {{< slidebreak >}}
 
 :::{#def-affine-offset}
-#### Offset (intercept, bias) of an affine map
+#### Offset of an affine map, intercept, bias
 
 In @def-affine-map, the vector $\vec{b}$ is called the **offset** of $f$
 (statistics also calls it the **intercept**, and machine learning the **bias**).

@@ -1,5 +1,5 @@
 :::{#def-conjugate-transpose}
-#### Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate)
+#### Conjugate transpose, Hermitian adjoint, Hermitian conjugate, transjugate
 
 The **conjugate transpose**
 [@wikipedia_conjugate_transpose]

@@ -72,6 +72,26 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_def-truth-table.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-truth-table.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-logically-equivalent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-logically-equivalent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-de-morgan-logic.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-quantifier.qmd >}}
 
 {{< slidebreak >}}
@@ -201,6 +221,18 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-conve
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_def-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-sufficient-condition.qmd >}}
 
 {{< slidebreak >}}
@@ -242,29 +274,11 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-conve
 
 ## Don't skip steps {#sec-dont-skip-steps}
 
-Show every step of the derivation.
-Each line should follow from the previous line by a single, identifiable move:
-
-- applying a definition,
-- substituting a known result, or
-- performing one algebraic operation.
-
-When you skip steps,
-you force the reader to reconstruct your reasoning,
-which is exactly the work the proof was supposed to do *for* them.
-A step that feels "obvious" while you are writing it
-is often the step a reader gets stuck on.
-Phrases like "it can be shown that" or "clearly"
-usually mark a skipped step;
-show the step instead.
+{{< include mds/_subfiles/proof-writing/_sec-dont-skip-steps.qmd >}}
 
 ## Annotate each step {#sec-annotate-each-step}
 
-For each step,
-note the definition, [theorem](#def-theorem), or algebraic rule that justifies it.
-A brief annotation to the right of the line is usually enough.
-Annotations make the proof checkable,
-and they teach the reader which tool to reach for in similar situations.
+{{< include mds/_subfiles/proof-writing/_sec-annotate-each-step.qmd >}}
 
 For example,
 here is a derivation that the
@@ -305,90 +319,31 @@ $\Var{X} = \E{X^2} - \sqf{\E{X}}$
 
 ## Direct proof {#sec-direct-proof}
 
-:::{#def-direct-proof}
-#### Direct proof
-
-A **direct proof**
-[@wikipedia_direct_proof]
-of a proposition $Q$
-starts from the assumptions that $Q$ is stated under, if any,
-and reaches $Q$ through a chain of steps,
-each of which applies a definition,
-a previously proved result,
-or one rule of logic or algebra
-to the assumptions or to earlier steps.
-A direct proof never assumes that $Q$ is false;
-compare [proof by contradiction](#def-proof-by-contradiction),
-which does.
-
-:::
+{{< include mds/_subfiles/proof-writing/_def-direct-proof.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#exm-direct-proof}
-#### The square of an odd integer is odd
+{{< include mds/_subfiles/proof-writing/_exm-direct-proof.qmd >}}
 
-Claim: if $n$ is an [odd](number-systems.qmd#def-odd) integer,
-then $n^2$ is odd.
+## Proof by contrapositive {#sec-proof-by-contrapositive}
 
-Since $n$ is odd,
-there is an integer $k$ with $n = 2k + 1$.
-Then
+{{< include mds/_subfiles/proof-writing/_def-proof-by-contrapositive.qmd >}}
 
-$$
-\ba
-n^2
-&= (2k + 1)^2
-&& \text{(substitute } n = 2k + 1 \text{)}
-\\&= (2k)^2 + 2 \cd 2k \cd 1 + 1^2
-&& \text{(square of a sum)}
-\\&= 4k^2 + 4k + 1
-&& \text{(arithmetic)}
-\\&= 2(2k^2 + 2k) + 1
-&& \text{(distributive law, read from right to left)}
-\ea
-$$
+{{< slidebreak >}}
 
-and $2k^2 + 2k$ is an integer,
-because sums and products of integers are integers.
-So $n^2 = 2 \cd (\text{an integer}) + 1$, which is the definition of odd.
-For example,
+{{< include mds/_subfiles/proof-writing/_exm-proof-by-contrapositive.qmd >}}
 
-$$
-\begin{aligned}
-n &= 7 \\
-&= 2 \cd 3 + 1
-\end{aligned}
-$$
+## Proof by cases {#sec-proof-by-cases}
 
-gives
+{{< include mds/_subfiles/proof-writing/_def-proof-by-cases.qmd >}}
 
-$$
-\begin{aligned}
-n^2 &= 49 \\
-&= 2 \cd 24 + 1,
-\end{aligned}
-$$
+{{< slidebreak >}}
 
-and $2 \cd 3^2 + 2 \cd 3 = 24$.
-
-The proof above that
-[the sum of two even integers is even](#exm-proof)
-is also a direct proof.
-
-:::
+{{< include mds/_subfiles/proof-writing/_exm-proof-by-cases.qmd >}}
 
 ## Follow the golden rule {#sec-golden-rule}
 
-In general,
-follow the golden rule:
-treat your readers the way you want to be treated as a reader.
-
-When you read someone else's proof,
-you want to be able to follow every step without guessing,
-to know which result is being used at each line,
-and to never be left wondering where a quantity came from.
-Write your own proofs to meet that same standard.
+{{< include mds/_subfiles/proof-writing/_sec-golden-rule.qmd >}}
 
 ## Proof by induction {#sec-proof-by-induction}
 
@@ -412,103 +367,24 @@ The following example uses [summation notation](algebra.qmd#def-summation).
 
 ## Formal logic {#sec-formal-logic}
 
-:::{#def-propositional-logic}
-#### Propositional logic
-
-**Propositional logic**
-[@wikipedia_propositional_calculus]
-is the study of
-[logical entailment](#def-logical-entailment)
-among [propositions](#def-proposition)
-built from basic propositions $P, Q, R, \ldots$
-using only the [logical connectives](#def-logical-connective).
-Whether such propositions entail one another
-depends only on the truth values of the basic propositions,
-not on what the basic propositions say.
-
-:::
+{{< include mds/_subfiles/proof-writing/_def-propositional-logic.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#exm-propositional-logic}
-#### $P$ and $P \Rightarrow Q$ entail $Q$
-
-Suppose $P$ is true and $P \Rightarrow Q$ is true.
-If $Q$ were false,
-then $P \Rightarrow Q$ would have a true $P$ and a false $Q$,
-so $P \Rightarrow Q$ would be false,
-which contradicts the assumption.
-So $Q$ is true.
-This holds whatever $P$ and $Q$ say,
-so $P$ and $P \Rightarrow Q$ logically entail $Q$.
-
-:::
+{{< include mds/_subfiles/proof-writing/_exm-propositional-logic.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#def-first-order-logic}
-#### First-order logic
-
-**First-order logic**
-[@wikipedia_first_order_logic]
-extends propositional logic (@def-propositional-logic)
-by also allowing:
-
-- variables $x, y, \ldots$ that stand for elements of a set;
-- [predicates](#def-predicate) of one or more of those variables,
-  such as $P(x)$ or $x < y$;
-- [functions](functions.qmd#def-function) of them, such as $x + y$;
-- equality between them;
-- [quantifiers](#def-quantifier) $\forall$ and $\exists$ over them.
-
-:::
+{{< include mds/_subfiles/proof-writing/_def-first-order-logic.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#exm-first-order-logic}
-#### From "for all" to one element
-
-Let $P(x)$ be a predicate about the elements of a set $S$,
-and let $a \in S$.
-The propositions $\forall x \in S, P(x)$ and $a \in S$
-logically entail $P(a)$:
-if $P(x)$ is true for every element $x$ of $S$,
-then it is true for the element $a$.
-For example,
-$\forall x \in \mathbb{Z}, x^2 \ge 0$ entails $3^2 \ge 0$.
-Propositional logic alone cannot express this entailment,
-because it has no way to refer to the elements of $S$.
-
-:::
+{{< include mds/_subfiles/proof-writing/_exm-first-order-logic.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#def-formal-proof}
-#### Formal proof
-
-A **formal proof**
-[@wikipedia_formal_proof]
-is a [proof](#def-proof)
-written in propositional logic (@def-propositional-logic)
-or first-order logic (@def-first-order-logic)
-in which each step is an assumption
-or follows from earlier steps by one rule
-taken from a fixed list of allowed rules,
-so that checking the proof needs no understanding of what its propositions mean.
-
-:::
+{{< include mds/_subfiles/proof-writing/_def-formal-proof.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#exm-formal-proof}
-#### A three-step formal proof
-
-Suppose the allowed rules include
-"from $P$ and $P \Rightarrow Q$, conclude $Q$".
-Then this is a formal proof of $Q$ from the assumptions $P$ and $P \Rightarrow Q$:
-
-1. $P$ (assumption)
-2. $P \Rightarrow Q$ (assumption)
-3. $Q$ (from steps 1 and 2, by the rule above)
-
-:::
+{{< include mds/_subfiles/proof-writing/_exm-formal-proof.qmd >}}

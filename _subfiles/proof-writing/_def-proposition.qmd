@@ -1,5 +1,5 @@
 :::{#def-proposition}
-#### Proposition (statement)
+#### Proposition, statement
 
 A **proposition**
 [@wikipedia_proposition], or **statement**,
