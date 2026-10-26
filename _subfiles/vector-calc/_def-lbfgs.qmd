@@ -8,7 +8,7 @@ that never forms $\matr{H}^{(t)}$.
 It stores only the $m$ most recent pairs $(\vecf{s}^{(j)}, \vy^{(j)})$,
 with $m$ small, such as $5$ or $20$,
 and obtains $\matr{H}^{(t)} \deriv{\vx} f(\vx^{(t)})$
-by applying the [BFGS update](#def-bfgs-update) for those $m$ pairs to a simple starting [matrix](linear-algebra-matrices.qmd#def-matrix), such as a multiple of $\matr{I}_p$.
+implicitly, through a few vector operations, as if the [BFGS update](#def-bfgs-update) for those $m$ pairs were applied to a simple starting [matrix](linear-algebra-matrices.qmd#def-matrix), such as a multiple of $\matr{I}_p$.
 
 :::
 

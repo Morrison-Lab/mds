@@ -47,7 +47,7 @@ and its smallest [eigenvalue](linear-algebra.qmd#def-eigenvalue) is `{r} min(eig
 #### The curvature condition $\dprod{\vy}{\vecf{s}} > 0$
 
 If the [strict inequality](algebra.qmd#def-strict-inequality) of @thm-convex-first-order holds for distinct points,
-then $\dprod{\vy}{\vecf{s}} > 0$ whenever $\vx^+ \ne \vx$.
+then $\dprod{\vy}{\vecf{s}} > 0$ for $\vecf{s} = \vx^+ - \vx \ne \vzero$ and $\vy = \deriv{\vx} f(\vx^+) - \deriv{\vx} f(\vx)$.
 Add the versions at $(\vx^+, \vx)$ and at $(\vx, \vx^+)$:
 
 $$
@@ -59,6 +59,6 @@ $$
 
 so $0 > -\dprod{\vy}{\vecf{s}}$.
 For a general $f$, a [line search](#def-line-search) that enforces a curvature condition on the [step length](#def-gradient-descent)
-(the Wolfe conditions [@nocedal2006numerical, Chapter 3]) guarantees it.
+(the Wolfe conditions [@nocedal2006numerical, Chapter 3]) guarantees $\dprod{\vy}{\vecf{s}} > 0$.
 
 :::
