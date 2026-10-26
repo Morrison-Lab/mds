@@ -12,9 +12,9 @@ $$
 
 so [least squares](linear-algebra-projections.qmd#def-least-squares) has a [closed-form solution](#def-closed-form-solution).
 
-The minimizer over $\vcoef$ of the logistic regression cost
-is a well-defined vector,
-but no closed-form expression for it is known.
-An iterative [algorithm](#def-algorithm) approximates it.
+For logistic regression, minimizing the negative log-likelihood over $\vcoef$
+has no known closed-form expression for the minimizer.
+An iterative [algorithm](#def-algorithm) approximates it
+whenever a minimizer exists.
 
 :::

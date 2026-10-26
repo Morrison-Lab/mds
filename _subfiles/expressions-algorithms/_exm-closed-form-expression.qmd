@@ -8,7 +8,7 @@ $$
 x = \frac{-b + \sqrt{b^2 - 4 a c}}{2 a},
 $$
 
-a [closed-form expression](#def-closed-form-expression) in $a$, $b$, $c$.
+a [closed-form expression](#def-closed-form-expression) in $a$, $b$, and $c$.
 The root of $x - \cos x = 0$ is a [counterexample](proof-writing.qmd#def-counterexample):
 it has no known closed-form expression.
 
