@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-26 02:21:32 (PDT)
+Last modified: 2026-10-26 03:33:07 (PDT)
 
 ## 1 Convex functions
 
@@ -738,7 +738,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ (defined in the Morrison Lab’s probability notes) is a [function](functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Range](functions.llms.md#def-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
 
-[Table 1](#tbl-notational-shorthands) lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
+[Table 1](#tbl-notational-shorthands) lists shorthands you may encounter in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
 
 > **NOTE:**
 >

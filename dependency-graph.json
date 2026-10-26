@@ -9876,6 +9876,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-bfgs-update",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-bfgs-update",
+   "kind": "def",
+   "title": "BFGS update (Broyden-Fletcher-Goldfarb-Shanno)",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-concave",
    "site": "mds",
    "page": "optimization",
@@ -10002,6 +10011,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-lbfgs",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-lbfgs",
+   "kind": "def",
+   "title": "Limited-memory BFGS (L-BFGS)",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-line-search",
    "site": "mds",
    "page": "optimization",
@@ -10092,12 +10110,30 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-quasi-newton-method",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-quasi-newton-method",
+   "kind": "def",
+   "title": "Quasi-Newton method",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-saddle-point",
    "site": "mds",
    "page": "optimization",
    "div": "def-saddle-point",
    "kind": "def",
    "title": "Saddle point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-secant-condition",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-secant-condition",
+   "kind": "def",
+   "title": "Secant condition",
    "external": false
   },
   {
@@ -16114,6 +16150,14 @@
    "mds/optimization#def-line-search"
   ],
   [
+   "mds/optimization#def-bfgs-update",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#def-bfgs-update",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
    "mds/optimization#def-concave",
    "mds/algebra#def-convex-function"
   ],
@@ -16148,6 +16192,18 @@
   [
    "mds/optimization#def-lagrange-multipliers",
    "mds/optimization#def-lagrangian"
+  ],
+  [
+   "mds/optimization#def-lbfgs",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/optimization#def-lbfgs",
+   "mds/optimization#def-bfgs-update"
+  ],
+  [
+   "mds/optimization#def-lbfgs",
+   "mds/optimization#def-quasi-newton-method"
   ],
   [
    "mds/optimization#def-line-search",
@@ -16206,6 +16262,34 @@
    "mds/optimization#def-newton-method"
   ],
   [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/optimization#def-line-search"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/optimization#def-secant-condition"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
    "mds/optimization#def-saddle-point",
    "mds/algebra#def-local-minimizer"
   ],
@@ -16216,6 +16300,18 @@
   [
    "mds/optimization#def-saddle-point",
    "mds/optimization#def-stationary-point"
+  ],
+  [
+   "mds/optimization#def-secant-condition",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/optimization#def-secant-condition",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
+   "mds/optimization#def-secant-condition",
+   "mds/vector-calculus#def-vector-derivative"
   ],
   [
    "mds/optimization#def-sensitivity",
