@@ -186,6 +186,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-gradient-ascent.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-line-search.qmd >}}
 
 {{< slidebreak >}}
