@@ -1,0 +1,41 @@
+:::{#def-lbfgs}
+#### Limited-memory BFGS (L-BFGS)
+
+**Limited-memory BFGS** (**L-BFGS**)
+[@nocedal2006numerical, Chapter 7]
+is the [quasi-Newton method](#def-quasi-newton-method)
+that never forms $\matr{H}^{(t)}$.
+It stores only the $m$ most recent pairs $(\vecf{s}^{(j)}, \vy^{(j)})$,
+with $m$ small, such as $5$ or $20$,
+and obtains $\matr{H}^{(t)} \deriv{\vx} f(\vx^{(t)})$
+implicitly, through a few vector operations,
+as if the [BFGS update](#def-bfgs-update) for those $m$ pairs were applied
+to a simple starting [matrix](linear-algebra-matrices.qmd#def-matrix), such as a multiple of $\matr{I}_p$.
+
+:::
+
+{{< slidebreak >}}
+
+::: {#exm-lbfgs-step}
+#### L-BFGS applies the update without forming the matrix
+
+Continue @exm-bfgs-step with $m = 1$ stored pair $(\vecf{s}^{(0)}, \vy^{(0)})$ and starting [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{I}_2$.
+Below, $\matr{H}^+ \deriv{\vx} f(\vx^{(1)})$ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra.qmd#def-matrix-mult).
+
+```{r}
+#| label: lbfgs-step
+#| code-fold: false
+g1 <- grad(x1)
+alpha <- rho * sum(s * g1)
+q <- g1 - alpha * y
+r <- drop(H0 %*% q)
+beta <- rho * sum(y * r)
+r <- r + s * (alpha - beta)
+rbind(from_vectors = r, from_matrix = drop(H1 %*% g1))
+```
+
+The two rows agree to within `{r} format(max(abs(r - H1 %*% g1)), digits = 2)`, although the first never forms the matrix.
+BFGS stores a dense $p \times p$ matrix and spends about $p^2$ operations per iteration;
+L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$ operations per iteration, so it remains usable when $p$ is in the millions.
+
+:::
