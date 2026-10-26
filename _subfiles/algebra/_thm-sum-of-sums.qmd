@@ -10,5 +10,5 @@ $$
 :::
 
 ::: proof
-By @sol-sum-rules, part 2.
+By @sol-sum-rules, part 2. <!-- check-solution-citations: allow -->
 :::

@@ -10,7 +10,7 @@ $$
 :::
 
 ::: proof
-By @sol-square-of-a-sum.
+By @sol-square-of-a-sum. <!-- check-solution-citations: allow -->
 :::
 
 {{< slidebreak >}}
