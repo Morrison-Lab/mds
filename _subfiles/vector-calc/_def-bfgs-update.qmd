@@ -37,7 +37,7 @@ drop(H1 %*% y)
 
 Here $\dprod{\vy}{\vecf{s}} = `{r} sum(y * s)` > 0$, so $\rho = `{r} rho`$.
 The updated [matrix](linear-algebra-matrices.qmd#def-matrix) satisfies $\matr{H}^+ \vy = (`{r} round(H1 %*% y, 6)[1]`, `{r} round(H1 %*% y, 6)[2]`)$, which is $\vecf{s} = (`{r} round(s, 6)[1]`, `{r} round(s, 6)[2]`)$,
-and its smallest [eigenvalue](linear-algebra.qmd#def-eigenvalue) is `{r} min(eigen(H1)$values)`, so it is [positive definite](linear-algebra.qmd#def-positive-definite).
+and its smallest [eigenvalue](linear-algebra.qmd#def-eigenvalue) is `{r} min(eigen(H1)$values)`, so $\matr{H}^+$ is [positive definite](linear-algebra.qmd#def-positive-definite).
 
 :::
 
@@ -59,6 +59,6 @@ $$
 
 so $0 > -\dprod{\vy}{\vecf{s}}$.
 For a general $f$, a [line search](#def-line-search) that enforces a curvature condition on the [step length](#def-gradient-descent)
-(the Wolfe conditions [@nocedal2006numerical, Chapter 3]) guarantees $\dprod{\vy}{\vecf{s}} > 0$.
+(the Wolfe conditions [@nocedal2006numerical, Chapter 3]) guarantees $\dprod{\vy}{\vecf{s}} > 0$, and a step that satisfies them can be found along a [descent direction](#def-descent-direction) when $f$ cannot keep decreasing forever.
 
 :::

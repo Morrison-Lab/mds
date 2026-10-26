@@ -34,7 +34,7 @@ rbind(from_vectors = r, from_matrix = drop(H1 %*% g1))
 The two rows agree to within `{r} format(max(abs(r - H1 %*% g1)), digits = 2)`,
 yet the first never formed a $2 \times 2$ matrix.
 BFGS stores a dense $p \times p$ matrix and spends about $p^2$ operations per iteration;
-L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$,
+L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$ operations per iteration,
 so it remains usable when $p$ is in the millions.
 
 :::

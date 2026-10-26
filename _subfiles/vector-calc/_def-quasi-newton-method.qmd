@@ -62,12 +62,12 @@ The difference of the [gradients](vector-calculus.qmd#def-vector-derivative), $\
 #### Why a quasi-Newton method is used
 
 Because $\matr{H}^{(t)}$ is [positive definite](linear-algebra.qmd#def-positive-definite), $-\matr{H}^{(t)} \deriv{\vx} f(\vx^{(t)})$ is a [descent direction](#def-descent-direction),
-so a [line search](#def-line-search) finds a step that decreases $f$.
+so, when the [gradient](vector-calculus.qmd#def-vector-derivative) is not $\vzero$, a [line search](#def-line-search) finds a step that decreases $f$.
 [Newton's method](#def-newton-method) needs the Hessian and the solution of a system of equations at every iteration,
 which costs about $p^3$ operations for a dense $p \times p$ Hessian,
 and requires the formulas for its entries.
 A quasi-Newton method needs only the [gradient](vector-calculus.qmd#def-vector-derivative) and an update of $\matr{H}^{(t)}$ costing about $p^2$ operations.
-Near a minimizer it is superlinearly fast: faster than [gradient descent](#def-gradient-descent), slower than Newton's method [@nocedal2006numerical, Chapter 6].
+Near a minimizer the method speeds up superlinearly: faster than [gradient descent](#def-gradient-descent), slower than Newton's method [@nocedal2006numerical, Chapter 6].
 Replacing $\matr{H}^{(t)}$ by $\matr{I}_p$ in the step formula gives [gradient descent](#def-gradient-descent).
 
 :::
