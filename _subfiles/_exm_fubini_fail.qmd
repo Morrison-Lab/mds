@@ -105,8 +105,8 @@ plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
     )
   ) |>
   plotly::layout(scene = list(
-    xaxis = list(title = "x"),
-    yaxis = list(title = "y"),
+    xaxis = list(title = "First coordinate, x"),
+    yaxis = list(title = "Second coordinate, y"),
     zaxis = list(title = "f(x, y)", range = c(-z_clip, z_clip)),
     camera = list(eye = list(x = 1.6, y = 1.6, z = 0.6))
   ))

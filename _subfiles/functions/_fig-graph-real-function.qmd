@@ -35,7 +35,7 @@ graph_real_function_plot <- ggplot2::ggplot() +
     nudge_x = 0.35,
     nudge_y = 0.4
   ) +
-  ggplot2::labs(x = "a", y = "f(a) = a^2") +
+  ggplot2::labs(x = "Input, a", y = "Output, f(a) = a^2") +
   ggplot2::theme_minimal()
 
 if (knitr::is_html_output()) {
