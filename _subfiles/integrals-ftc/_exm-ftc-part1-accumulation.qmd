@@ -57,7 +57,7 @@ ggplot2::ggplot() +
     ggplot2::aes(xintercept = x, color = factor(x)),
     linetype = "dashed", linewidth = 0.6
   ) +
-  ggplot2::labs(x = "t", y = "f(t) = 2t", color = "x") +
+  ggplot2::labs(x = "Input, t", y = "Output, f(t) = 2t", color = "x") +
   ggplot2::theme_minimal() +
   ggplot2::theme(legend.position = "bottom")
 ```
@@ -92,7 +92,7 @@ ggplot2::ggplot() +
     ),
     linewidth = 0.8
   ) +
-  ggplot2::labs(x = "x", y = expression(F(x) == x^2), color = "x") +
+  ggplot2::labs(x = "Upper limit, x", y = expression(F(x) == x^2), color = "x") +
   ggplot2::theme_minimal() +
   ggplot2::theme(legend.position = "bottom")
 ```

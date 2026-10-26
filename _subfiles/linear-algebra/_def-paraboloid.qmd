@@ -67,8 +67,8 @@ height <- outer(axis_values, axis_values, function(x1, x2) x1^2 + x2^2)
 plotly::plot_ly(x = ~axis_values, y = ~axis_values, z = ~t(height)) |>
   plotly::add_surface(showscale = FALSE) |>
   plotly::layout(scene = list(
-    xaxis = list(title = "x1"),
-    yaxis = list(title = "x2"),
+    xaxis = list(title = "First coordinate, x1"),
+    yaxis = list(title = "Second coordinate, x2"),
     zaxis = list(title = "f(x)")
   ))
 ```
