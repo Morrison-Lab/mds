@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-26 12:55:55 (PDT)
+Last modified: 2026-10-26 14:36:46 (PDT)
 
 > **NOTE:**
 >
@@ -14,21 +14,25 @@ Last modified: 2026-10-26 12:55:55 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Expression)** An **expression** [\[1\]](#ref-wikipedia_expression_mathematics) is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression *denotes* a [function](functions.llms.md#def-function): it fixes the output for each input.
+> **Definition 1 (Expression)** An **expression** [\[1\]](#ref-wikipedia_expression_mathematics) is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation.
 
 > **NOTE:**
 >
-> **Example 1 (Two expressions for one function)** The expressions \\a x^2 + b x + c\\ and \\(a x + b)\\x + c\\ denote the same function of \\x\\ for any fixed \\a\\, \\b\\ and \\c\\, because they give the same value at every \\x\\.
+> **Definition 2 (Denotes)** An [expression](#def-expression) **denotes** a [function](functions.llms.md#def-function) when evaluating the expression at each [input](functions.llms.md#def-argument) of the function, with the expression’s variables taking that input, gives the function’s [value](functions.llms.md#def-value) at that input.
+
+> **NOTE:**
+>
+> **Example 1 (Two expressions for one function)** The [expressions](#def-expression) \\a x^2 + b x + c\\ and \\(a x + b)\\x + c\\ [denote](#def-denotes) the same [function](functions.llms.md#def-function) of \\x\\ for any fixed \\a\\, \\b\\ and \\c\\, because they give the same value at every \\x\\.
 >
 > Precedence parses \\a x^2 + b x + c\\ as a sum of three terms: the power \\x^2\\ is applied first, then \\a\\ multiplies \\x^2\\ and \\b\\ multiplies \\x\\, and the three products are added. The parentheses in \\(a x + b)\\x + c\\ force a different tree: \\a\\ multiplies \\x\\, \\b\\ is added, the sum multiplies \\x\\, and \\c\\ is added.
 
 > **NOTE:**
 >
-> **Definition 2 (Parse tree)** The **parse tree** [\[2\]](#ref-wikipedia_parse_tree) of an [expression](#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
+> **Definition 3 (Parse tree)** The **parse tree** [\[2\]](#ref-wikipedia_parse_tree) of an [expression](#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
 
 > **NOTE:**
 >
-> **Example 2 (The parse tree of a polynomial)** The parse tree of \\(a x + b)\\x + c\\, with each operation having two children, is:
+> **Example 2 (The parse tree of a polynomial)** The [parse tree](#def-parse-tree) of \\(a x + b)\\x + c\\, with each operation having two children, is drawn in [Figure 1](#fig-parse-trees) (left) and written out as a list here:
 >
 > - the root \\+\\, whose children are
 >   - the node \\\times\\, whose children are
@@ -38,23 +42,134 @@ Last modified: 2026-10-26 12:55:55 (PDT)
 >     - the leaf \\x\\;
 >   - the leaf \\c\\.
 >
-> Read from the leaves up, the tree says to multiply \\a\\ by \\x\\, add \\b\\, multiply by \\x\\, and add \\c\\. The expression \\a x^2 + b x + c\\ has a different tree. Its root is the \\+\\ whose children are \\a x^2 + b x\\ and \\c\\, and the first of these is a \\+\\ whose children are \\a x^2\\ and \\b x\\.
+> Read from the leaves up, the tree says to multiply \\a\\ by \\x\\, add \\b\\, multiply by \\x\\, and add \\c\\. The [expression](#def-expression) \\a x^2 + b x + c\\ has a different tree ([Figure 1](#fig-parse-trees), right). Its root is the \\+\\ whose children are \\a x^2 + b x\\ and \\c\\, and the first of these is a \\+\\ whose children are \\a x^2\\ and \\b x\\.
 
 > **NOTE:**
 >
-> *Remark 1* (Expressions, precedence and parse trees). An expression does not say how to compute the output it fixes, and many expressions denote the same function. A function is the input-output relationship itself; an expression is one way of writing it down.
+> Show R code
 >
-> The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree ([Definition 2](#def-parse-tree)).
+> ``` downlit
+> # Each tree is a nested list: the first element is the node's label,
+> # and the remaining elements are its children.
+> times <- intToUtf8(215)
+> trees <- list(
+>   "(a * x + b) * x + c" = list(
+>     "+",
+>     list(times, list("+", list(times, "a", "x"), "b"), "x"),
+>     "c"
+>   ),
+>   "a * x^2 + b * x + c" = list(
+>     "+",
+>     list(
+>       "+",
+>       list(times, "a", list("^", "x", "2")),
+>       list(times, "b", "x")
+>     ),
+>     "c"
+>   )
+> )
+>
+> # Leaves sit at consecutive x positions;
+> # each operation sits above the mean of its children.
+> layout_tree <- function(node, depth = 0, next_x = 0) {
+>   if (!is.list(node)) {
+>     return(list(
+>       nodes = data.frame(label = node, x = next_x, y = -depth, is_leaf = TRUE),
+>       edges = NULL,
+>       next_x = next_x + 1
+>     ))
+>   }
+>   nodes <- NULL
+>   edges <- NULL
+>   child_x <- numeric()
+>   for (child in node[-1]) {
+>     sub <- layout_tree(child, depth + 1, next_x)
+>     next_x <- sub$next_x
+>     child_x <- c(child_x, sub$nodes$x[1])
+>     edges <- rbind(
+>       edges,
+>       sub$edges,
+>       data.frame(
+>         x = NA_real_,
+>         y = -depth,
+>         xend = sub$nodes$x[1],
+>         yend = sub$nodes$y[1]
+>       )
+>     )
+>     nodes <- rbind(nodes, sub$nodes)
+>   }
+>   me <- data.frame(
+>     label = node[[1]],
+>     x = mean(child_x),
+>     y = -depth,
+>     is_leaf = FALSE
+>   )
+>   edges$x[is.na(edges$x)] <- me$x
+>   list(nodes = rbind(me, nodes), edges = edges, next_x = next_x)
+> }
+>
+> laid_out <- lapply(trees, layout_tree)
+> tree_nodes <- do.call(rbind, Map(
+>   function(res, name) cbind(res$nodes, tree = name),
+>   laid_out,
+>   names(trees)
+> ))
+> tree_edges <- do.call(rbind, Map(
+>   function(res, name) cbind(res$edges, tree = name),
+>   laid_out,
+>   names(trees)
+> ))
+> tree_nodes$kind <- ifelse(tree_nodes$is_leaf, "leaf", "operation")
+> tree_nodes$tree <- factor(tree_nodes$tree, levels = names(trees))
+> tree_edges$tree <- factor(tree_edges$tree, levels = names(trees))
+>
+> ggplot2::ggplot() +
+>   ggplot2::geom_segment(
+>     data = tree_edges,
+>     ggplot2::aes(x = x, y = y, xend = xend, yend = yend),
+>     colour = "grey50"
+>   ) +
+>   ggplot2::geom_label(
+>     data = tree_nodes,
+>     ggplot2::aes(x = x, y = y, label = label, fill = kind),
+>     size = 5,
+>     linewidth = 0
+>   ) +
+>   ggplot2::scale_fill_manual(
+>     values = c(operation = "#CCE5F6", leaf = "#F9DDBF")
+>   ) +
+>   ggplot2::facet_wrap(
+>     ~tree,
+>     scales = "free_x",
+>     labeller = ggplot2::label_parsed
+>   ) +
+>   ggplot2::labs(fill = "node type") +
+>   ggplot2::theme_void() +
+>   ggplot2::theme(
+>     legend.position = "bottom",
+>     strip.text = ggplot2::element_text(size = 12)
+>   )
+> ```
+>
+> [![Two parse trees, drawn with the root at the top. In the left tree the root plus has children times and the leaf c. That times has children plus and the leaf x. The plus below it has children times and the leaf b, and that times has the leaves a and x. In the right tree the root plus has children plus and the leaf c. That plus has two children, both times. The first times has the leaf a and a power node with leaves x and 2. The second times has the leaves b and x.](expressions-algorithms_files/figure-html/parse-trees-plot-1.png)](expressions-algorithms_files/figure-html/parse-trees-plot-1.png "Figure 1: The parse trees of (a x + b)\,x + c and a x^2 + b x + c. Each operation is a node with one child per argument, and the leaves are the symbols that are not operations. The caret is the power operation, which takes a base and an exponent.")
+>
+> Figure 1: The [parse trees](#def-parse-tree) of \\(a x + b)\\x + c\\ and \\a x^2 + b x + c\\. Each operation is a node with one child per [argument](functions.llms.md#def-argument), and the leaves are the symbols that are not operations. The caret is the [power](algebra-basics.llms.md#def-power) operation, which takes a [base](algebra-basics.llms.md#def-power-base) and an [exponent](algebra-basics.llms.md#def-power-exponent).
+
+> **NOTE:**
+>
+> *Remark 1* (Expressions, precedence and parse trees). An [expression](#def-expression) does not say how to compute the [output](functions.llms.md#def-value) it fixes, and many [expressions](#def-expression) [denote](#def-denotes) the same [function](functions.llms.md#def-function). A function is the input-output relationship itself; an expression is one way of writing it down.
+>
+> The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree ([Definition 3](#def-parse-tree)).
 
 ## 2 Algorithms
 
 > **NOTE:**
 >
-> **Definition 3 (Algorithm)** An **algorithm** [\[3\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.
+> **Definition 4 (Algorithm)** An **algorithm** [\[3\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.
 
 > **NOTE:**
 >
-> **Definition 4 (Computes)** An [algorithm](#def-algorithm) **computes** a [function](functions.llms.md#def-function) when, for each [input](functions.llms.md#def-argument), it returns the function’s [value](functions.llms.md#def-value) at that input.
+> **Definition 5 (Computes)** An [algorithm](#def-algorithm) **computes** a [function](functions.llms.md#def-function) when, for each [input](functions.llms.md#def-argument), it returns the function’s [value](functions.llms.md#def-value) at that input.
 
 > **NOTE:**
 >
@@ -68,15 +183,15 @@ Last modified: 2026-10-26 12:55:55 (PDT)
 >
 > *Remark 3* (How functions, expressions and algorithms relate). The three ideas fit together this way:
 >
-> - A function is the input-output relationship.
-> - An [expression](#def-expression) denotes a function, and many expressions denote the same one.
-> - An [algorithm](#def-algorithm) computes a function, and many algorithms compute the same one.
+> - A [function](functions.llms.md#def-function) is the input-output relationship.
+> - An [expression](#def-expression) [denotes](#def-denotes) a function, and many expressions denote the same one.
+> - An [algorithm](#def-algorithm) [computes](#def-computes) a function, and many algorithms compute the same one.
 >
 > An expression is not an algorithm, because it does not say what to do, or in what order. Given values for its variables, evaluating its parse tree from the leaves up is one algorithm for the function it denotes, and a different expression for the same function gives a different tree and a different algorithm.
 
 > **NOTE:**
 >
-> *Remark 4* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
+> *Remark 4* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and [expressions](#def-expression) that [denote](#def-denotes) them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
 
 > **NOTE:**
 >
@@ -90,7 +205,7 @@ Last modified: 2026-10-26 12:55:55 (PDT)
 
 > **NOTE:**
 >
-> *Solution 1*. A [function](functions.llms.md#def-function) is the input-output relationship. An [expression](#def-expression) is a string of symbols that denotes a function, and many [expressions](#def-expression) denote the same one. An [algorithm](#def-algorithm) is a [finite](functions.llms.md#def-finite-sequence) list of steps that computes a function, and many [algorithms](#def-algorithm) compute the same one.
+> *Solution 1*. A [function](functions.llms.md#def-function) is the input-output relationship. An [expression](#def-expression) is a string of symbols that [denotes](#def-denotes) a function, and many [expressions](#def-expression) denote the same one. An [algorithm](#def-algorithm) is a [finite](functions.llms.md#def-finite-sequence) list of steps that [computes](#def-computes) a function, and many [algorithms](#def-algorithm) compute the same one.
 
 > **NOTE:**
 >
@@ -126,7 +241,7 @@ Last modified: 2026-10-26 12:55:55 (PDT)
 >
 > **Exercise 5 (Is an expression an algorithm? (part 5))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
 >
-> Write a second [expression](#def-expression) that denotes the same [function](functions.llms.md#def-function) as \\a x^2 + b x + c\\ and needs fewer multiplications.
+> Write a second [expression](#def-expression) that [denotes](#def-denotes) the same [function](functions.llms.md#def-function) as \\a x^2 + b x + c\\ and needs fewer multiplications.
 
 > **NOTE:**
 >

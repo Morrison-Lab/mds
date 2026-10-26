@@ -3819,6 +3819,15 @@
    "external": false
   },
   {
+   "id": "mds/expressions-algorithms#def-denotes",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-denotes",
+   "kind": "def",
+   "title": "Denotes",
+   "external": false
+  },
+  {
    "id": "mds/expressions-algorithms#def-expression",
    "site": "mds",
    "page": "expressions-algorithms",
@@ -9948,6 +9957,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-gradient-ascent",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-gradient-ascent",
+   "kind": "def",
+   "title": "Gradient ascent",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-gradient-descent",
    "site": "mds",
    "page": "optimization",
@@ -13186,8 +13204,20 @@
    "mds/functions#def-value"
   ],
   [
-   "mds/expressions-algorithms#def-expression",
+   "mds/expressions-algorithms#def-denotes",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/expressions-algorithms#def-denotes",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/expressions-algorithms#def-denotes",
    "mds/functions#def-function"
+  ],
+  [
+   "mds/expressions-algorithms#def-denotes",
+   "mds/functions#def-value"
   ],
   [
    "mds/expressions-algorithms#def-parse-tree",
@@ -16176,6 +16206,14 @@
   [
    "mds/optimization#def-exact-line-search",
    "mds/optimization#def-line-search"
+  ],
+  [
+   "mds/optimization#def-gradient-ascent",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#def-gradient-ascent",
+   "mds/vector-calculus#def-partial-derivative"
   ],
   [
    "mds/optimization#def-iterate",
