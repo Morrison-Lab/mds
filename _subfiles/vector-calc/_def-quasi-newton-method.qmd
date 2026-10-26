@@ -9,10 +9,10 @@ A **quasi-Newton method**
 produces, for $t = 0, 1, 2, \ldots$,
 
 $$
-\vx^{(t+1)} \eqdef \vx^{(t)} - s^{(t)} \matr{H}^{(t)} \deriv{\vx} f(\vx^{(t)}),
+\vx^{(t+1)} \eqdef \vx^{(t)} - \alpha^{(t)} \matr{H}^{(t)} \deriv{\vx} f(\vx^{(t)}),
 $$
 
-where $s^{(t)} > 0$ is a [step length](#def-gradient-descent) chosen by a [line search](#def-line-search),
+where $\alpha^{(t)} > 0$ is a [step length](#def-gradient-descent) chosen by a [line search](#def-line-search),
 and $\matr{H}^{(t+1)}$ is a [symmetric](linear-algebra.qmd#def-symmetric-matrix) positive definite matrix
 whose [inverse](linear-algebra-special-matrices.qmd#def-matrix-inverse) satisfies the [secant condition](#def-secant-condition), that is,
 $\matr{H}^{(t+1)} \vy^{(t)} = \vecf{s}^{(t)}$,
@@ -29,9 +29,9 @@ and $\vy^{(t)} = \deriv{\vx} f(\vx^{(t+1)}) - \deriv{\vx} f(\vx^{(t)})$.
 Take $f(\vx) = \tfrac{1}{2} \qform{\matr{Q}}{\vx} - \dprod{\vecf{b}}{\vx}$
 with $\matr{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}$ and $\vecf{b} = \tp{(1, 2)}$
 (@exm-secant-condition),
-$\vx^{(0)} = \vzero_{2 \times 1}$ and $\matr{H}^{(0)} = \matr{I}_2$.
+$\vx^{(0)} = \vzero$ and $\matr{H}^{(0)} = \matr{I}_2$.
 For a [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes $f$ along a [direction](vector-calculus.qmd#def-direction) $\vecf{d}$ is
-$s = -\dprod{\deriv{\vx} f(\vx)}{\vecf{d}} / \qform{\matr{Q}}{\vecf{d}}$.
+$\alpha = -\dprod{\deriv{\vx} f(\vx)}{\vecf{d}} / \qform{\matr{Q}}{\vecf{d}}$.
 
 ```{r}
 #| label: quasi-newton-step

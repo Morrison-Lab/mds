@@ -1,7 +1,7 @@
 :::{#def-bfgs-update}
 #### BFGS update (Broyden-Fletcher-Goldfarb-Shanno)
 
-Let $\matr{H}$ be a $p \times p$ [positive definite matrix](linear-algebra.qmd#def-positive-definite),
+Let $\matr{H}$, an approximation of the [inverse](linear-algebra-special-matrices.qmd#def-matrix-inverse) Hessian, be a $p \times p$ [positive definite matrix](linear-algebra.qmd#def-positive-definite),
 and let $\vecf{s}, \vy \in \reals^p$ satisfy $\dprod{\vy}{\vecf{s}} > 0$.
 With $\rho \eqdef 1 / \dprod{\vy}{\vecf{s}}$,
 the **BFGS update**

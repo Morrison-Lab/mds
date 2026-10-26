@@ -20,15 +20,15 @@ to a simple starting [matrix](linear-algebra-matrices.qmd#def-matrix), such as a
 #### L-BFGS applies the update without forming the matrix
 
 Continue @exm-bfgs-step with $m = 1$ stored pair $(\vecf{s}^{(0)}, \vy^{(0)})$ and starting [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{I}_2$.
-Below, $\matr{H}^+ \deriv{\vx} f(\vx^{(1)})$ is formed from vectors alone, in two passes over the stored pair,
-then compared with the [matrix product](linear-algebra.qmd#def-matrix-mult).
+Below, $\matr{H}^+ \deriv{\vx} f(\vx^{(1)})$ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra.qmd#def-matrix-mult).
 
 ```{r}
 #| label: lbfgs-step
 #| code-fold: false
 g1 <- grad(x1)
 alpha <- rho * sum(s * g1)
-r <- g1 - alpha * y
+q <- g1 - alpha * y
+r <- drop(H0 %*% q)
 beta <- rho * sum(y * r)
 r <- r + s * (alpha - beta)
 rbind(from_vectors = r, from_matrix = drop(H1 %*% g1))
