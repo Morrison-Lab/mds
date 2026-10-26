@@ -17,6 +17,7 @@ biostatistics
 BMI
 Borel
 borel
+Broyden
 Chebyshev
 checkable
 Cholesky
@@ -26,6 +27,7 @@ codomains
 cofactor
 coll
 contrapositive
+Davidon
 definiteness
 Diagonalizable
 diagonalizable
@@ -44,8 +46,10 @@ equalities
 erf
 exponentials
 factorizations
+Fletcher
 gensalg
 glitchy
+Goldfarb
 Hadamard
 Holder
 Horner's
@@ -82,6 +86,7 @@ orthonormal
 PEMDAS
 perp
 positivity
+Powell
 precalculus
 preimage
 quadratically
@@ -99,6 +104,7 @@ Schwarz
 Sebastien
 semidefinite
 SERG
+Shanno
 shorthands
 StatLib
 subadditive
@@ -106,6 +112,7 @@ Subadditivity
 subfiles
 submodule
 submodule's
+superlinearly
 SVD
 SVMs
 symlink
@@ -129,10 +136,3 @@ pMAE
 pMSE
 sMAE
 sMSE
-Broyden
-Davidon
-Goldfarb
-Shanno
-superlinearly
-Fletcher
-Powell
