@@ -44,7 +44,7 @@ preimage_plot <- ggplot2::ggplot() +
       "preimage is empty" = "dashed"
     )
   ) +
-  ggplot2::labs(x = "a (the roll)", y = "f(a) = 2a", linetype = NULL) +
+  ggplot2::labs(x = "a (the roll)", y = "Output, f(a) = 2a", linetype = NULL) +
   ggplot2::theme_minimal() +
   ggplot2::theme(legend.position = "bottom")
 
