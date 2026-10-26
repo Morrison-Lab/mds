@@ -55,11 +55,11 @@ plotly::plot_ly(
     scene = list(
       xaxis = list(
         # type = "log",
-        title = "b"
+        title = "First input, b"
       ),
       yaxis = list(
         # type = "log",
-        title = "c"
+        title = "Second input, c"
       ),
       zaxis = list(
         # type = "log",

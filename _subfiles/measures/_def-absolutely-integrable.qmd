@@ -1,5 +1,5 @@
 :::{#def-absolutely-integrable}
-#### Absolutely integrable function (integrable function, absolute integrability)
+#### Absolutely integrable function, integrable function
 
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
 A [measurable](#def-measurable-function) function $f : S \to \reals$
@@ -9,7 +9,7 @@ if the integral of its [absolute value](algebra.qmd#def-absolute-value) is finit
 
 $$\int_S \abs{f} \, d\measure < \infty$$
 
-The property itself is called **absolute integrability**.
+The property itself is called absolute integrability.
 
 :::
 

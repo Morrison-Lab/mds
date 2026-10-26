@@ -113,7 +113,7 @@ ggplot2::ggplot(panels) +
   ggplot2::aes(x = x, y = value) +
   ggplot2::geom_line() +
   ggplot2::facet_wrap(~panel, scales = "free_y") +
-  ggplot2::labs(x = "x", y = NULL)
+  ggplot2::labs(x = "Input, x", y = NULL)
 ```
 
 :::

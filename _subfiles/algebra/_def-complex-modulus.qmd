@@ -1,5 +1,5 @@
 :::{#def-complex-modulus}
-#### Absolute value (modulus) of a complex number
+#### Absolute value of a complex number, modulus
 
 The **absolute value**, or **modulus**
 [@wikipedia_complex_number], of a complex number $z = a + b\,i$ (@def-complex-number) is

@@ -1,5 +1,5 @@
 :::{#def-level-set}
-#### Level set (level curve, contour)
+#### Level set
 
 Let $f : \reals^p \to \reals$ and let $c$ be a real number.
 The **level set**
@@ -11,8 +11,8 @@ $$
 $$
 
 the set of points where $f$ takes the value $c$.
-For $p = 2$, a level set is often a curve in the plane,
-called a **level curve** (or **contour**) of $f$.
+It is the [preimage](functions.qmd#def-preimage) of $\cb{c}$ under $f$, so we write it $\levelsetof{c}{f}$.
+For $p = 2$, a level set is often a curve in the plane.
 
 :::
 
