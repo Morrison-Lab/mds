@@ -104,7 +104,7 @@ if (knitr::is_html_output()) {
 ```
 
 The contour lines of $g(b, c) = b^2 + c^2$ at heights $1$, $4$ and $9$.
-The dots mark the two points of the example on the circle at height $4$.
+The dots mark the points $(2, 0)$ and $(0, -2)$ of the example on the circle at height $4$.
 :::
 
 :::
