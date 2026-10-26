@@ -40,7 +40,7 @@ ggplot2::ggplot() +
   ggplot2::scale_x_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
   ggplot2::scale_y_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
   ggplot2::coord_equal() +
-  ggplot2::labs(x = "x", y = "y") +
+  ggplot2::labs(x = "First coordinate, x", y = "Second coordinate, y") +
   ggplot2::theme_minimal()
 ```
 
@@ -119,8 +119,8 @@ z_mat <- outer(x_seq, y_seq, function(x, y) x^2 + y^2)
 plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
   plotly::add_surface(showscale = FALSE) |>
   plotly::layout(scene = list(
-    xaxis = list(title = "x"),
-    yaxis = list(title = "y"),
+    xaxis = list(title = "First coordinate, x"),
+    yaxis = list(title = "Second coordinate, y"),
     zaxis = list(title = "z", range = c(0, 2))
   ))
 ```

@@ -207,3 +207,21 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-backtracking-line-search.qmd >}}
+
+## Quasi-Newton methods {#sec-quasi-newton}
+
+{{< include mds/_subfiles/vector-calc/_prose-quasinewton-attribution.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_def-secant-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-quasi-newton-method.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-bfgs-update.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-lbfgs.qmd >}}

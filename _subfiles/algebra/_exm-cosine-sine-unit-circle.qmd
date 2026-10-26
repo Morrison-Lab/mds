@@ -77,7 +77,7 @@ unit_circle_plot <- ggplot2::ggplot() +
     hjust = 0
   ) +
   ggplot2::coord_equal() +
-  ggplot2::labs(x = "x1", y = "x2") +
+  ggplot2::labs(x = "First coordinate, x1", y = "Second coordinate, x2") +
   ggplot2::theme_minimal()
 
 if (knitr::is_html_output()) {
