@@ -20,6 +20,29 @@ $$
 
 {{< slidebreak >}}
 
+::: {#exm-bfgs-step}
+#### A BFGS update from the quasi-Newton step
+
+Continue @exm-quasi-newton-step with $\matr{H} = \matr{I}_2$, $\vecf{s} = \vecf{s}^{(0)}$ and $\vy = \vy^{(0)}$.
+
+```{r}
+#| label: bfgs-step
+#| code-fold: false
+rho <- 1 / sum(y * s)
+left <- diag(2) - rho * s %*% t(y)
+H1 <- left %*% H0 %*% t(left) + rho * s %*% t(s)
+H1
+drop(H1 %*% y)
+```
+
+Here $\dprod{\vy}{\vecf{s}} = `{r} sum(y * s)` > 0$, so $\rho = `{r} rho`$.
+The updated [matrix](linear-algebra-matrices.qmd#def-matrix) satisfies $\matr{H}^+ \vy = (`{r} round(H1 %*% y, 6)[1]`, `{r} round(H1 %*% y, 6)[2]`)$, which is $\vecf{s} = (`{r} round(s, 6)[1]`, `{r} round(s, 6)[2]`)$,
+and its smallest [eigenvalue](linear-algebra.qmd#def-eigenvalue) is `{r} min(eigen(H1)$values)`, so it is [positive definite](linear-algebra.qmd#def-positive-definite).
+
+:::
+
+{{< slidebreak >}}
+
 :::{#rem-bfgs-curvature}
 #### The curvature condition $\dprod{\vy}{\vecf{s}} > 0$
 

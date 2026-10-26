@@ -14,12 +14,27 @@ by applying the [BFGS update](#def-bfgs-update) for those $m$ pairs to a simple 
 
 {{< slidebreak >}}
 
-:::{#rem-lbfgs-cost}
-#### Why L-BFGS is used for large problems
+::: {#exm-lbfgs-step}
+#### L-BFGS applies the update without forming the matrix
 
-BFGS stores a dense $p \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) and spends about $p^2$ operations per iteration.
-L-BFGS stores $2m$ vectors with $p$ entries each and spends about $m p$ operations per iteration,
-so it remains usable when $p$ is in the thousands or millions,
-as in fitting a regularized logistic regression with many predictors.
+Continue @exm-bfgs-step with $m = 1$ stored pair $(\vecf{s}^{(0)}, \vy^{(0)})$ and starting [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{I}_2$.
+The code obtains $\matr{H}^+ \deriv{\vx} f(\vx^{(1)})$ from vectors alone, in two passes over the stored pair, and compares it with the [matrix product](linear-algebra.qmd#def-matrix-mult).
+
+```{r}
+#| label: lbfgs-step
+#| code-fold: false
+g1 <- grad(x1)
+alpha <- rho * sum(s * g1)
+r <- g1 - alpha * y
+beta <- rho * sum(y * r)
+r <- r + s * (alpha - beta)
+rbind(from_vectors = r, from_matrix = drop(H1 %*% g1))
+```
+
+The two rows agree to within `{r} format(max(abs(r - H1 %*% g1)), digits = 2)`,
+yet the first never formed a $2 \times 2$ matrix.
+BFGS stores a dense $p \times p$ matrix and spends about $p^2$ operations per iteration;
+L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$,
+so it remains usable when $p$ is in the millions.
 
 :::

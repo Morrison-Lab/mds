@@ -23,6 +23,41 @@ and $\vy^{(t)} = \deriv{\vx} f(\vx^{(t+1)}) - \deriv{\vx} f(\vx^{(t)})$.
 
 {{< slidebreak >}}
 
+::: {#exm-quasi-newton-step}
+#### One quasi-Newton step on a quadratic function
+
+Take $f(\vx) = \tfrac{1}{2} \qform{\matr{Q}}{\vx} - \dprod{\vecf{b}}{\vx}$
+with $\matr{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}$ and $\vecf{b} = \tp{(1, 2)}$
+(@exm-secant-condition),
+$\vx^{(0)} = \vzero_{2 \times 1}$ and $\matr{H}^{(0)} = \matr{I}_2$.
+For a [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes $f$ along a [direction](vector-calculus.qmd#def-direction) $\vecf{d}$ is
+$s = -\dprod{\deriv{\vx} f(\vx)}{\vecf{d}} / \qform{\matr{Q}}{\vecf{d}}$.
+
+```{r}
+#| label: quasi-newton-step
+#| code-fold: false
+Q <- matrix(c(4, 1, 1, 3), nrow = 2)
+b <- c(1, 2)
+f <- function(x) 0.5 * sum(x * (Q %*% x)) - sum(b * x)
+grad <- function(x) drop(Q %*% x - b)
+x0 <- c(0, 0)
+H0 <- diag(2)
+d <- -drop(H0 %*% grad(x0))
+step <- -sum(grad(x0) * d) / drop(t(d) %*% Q %*% d)
+x1 <- x0 + step * d
+s <- x1 - x0
+y <- grad(x1) - grad(x0)
+```
+
+The step length is `{r} step`, which moves the [iterate](#def-iterate) to $\vx^{(1)} = (`{r} x1[1]`, `{r} x1[2]`)$
+and lowers $f$ from `{r} f(x0)` to `{r} f(x1)`.
+Because $\matr{H}^{(0)} = \matr{I}_2$, this step is a [gradient descent](#def-gradient-descent) step.
+The difference of the [gradients](vector-calculus.qmd#def-vector-derivative), $\vy^{(0)} = (`{r} y[1]`, `{r} y[2]`)$, is $\matr{Q} \vecf{s}^{(0)}$ ([the secant condition](#def-secant-condition) for a quadratic function).
+
+:::
+
+{{< slidebreak >}}
+
 :::{#rem-quasi-newton-cost}
 #### Why a quasi-Newton method is used
 
