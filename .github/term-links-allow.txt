@@ -2,3 +2,7 @@ and
 not
 even
 therefore
+constant
+finite
+number
+exists
