@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:44:43 (PDT)
+Last modified: 2026-10-26 03:53:25 (PDT)
 
 ## 1 Derivatives
 
@@ -680,7 +680,7 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 >   ggplot2::aes(x = x, y = value) +
 >   ggplot2::geom_line() +
 >   ggplot2::facet_wrap(~panel, scales = "free_y") +
->   ggplot2::labs(x = "x", y = NULL)
+>   ggplot2::labs(x = "Input, x", y = NULL)
 > ```
 >
 > > **NOTE:**

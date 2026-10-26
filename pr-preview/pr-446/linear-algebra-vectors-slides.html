@@ -353,7 +353,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-23 02:44:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-26 03:53:25 (PDT)</p>
 </section><section class="slide level2"></section><section id="vectors" class="slide level2 scrollable" data-number="1"><h2>
 <span class="header-section-number">1</span> Vectors</h2>
 <div id="exr-list-as-vector" class="theorem exercise">
@@ -420,7 +420,7 @@ x_{p}
 <p><span class="theorem-title"><strong>Example 1 (Scalars and a vector)</strong></span> The numbers <span class="math inline">\(5\)</span> and <span class="math inline">\(-0.2\)</span> are scalars. The column vector <span class="math inline">\((5, -0.2)\)</span> is not a scalar: it has <span class="math inline">\(2\)</span> entries, so it is in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a>), and each of its <span class="math inline">\(2\)</span> entries is a scalar.</p>
 </div>
 </section><section class="slide level2"><div id="def-real-vector-valued" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Real-valued (scalar-valued) function)</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f : A \to \mathbb{R}\)</span>, whose values are numbers, is <strong>real-valued</strong> (also called <strong>scalar-valued</strong>, since its values are <a href="#/def-scalar">scalars</a>).</p>
+<p><span class="theorem-title"><strong>Definition 4 (Real-valued function, scalar-valued function)</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f : A \to \mathbb{R}\)</span>, whose values are numbers, is <strong>real-valued</strong> (also called <strong>scalar-valued</strong>, since its values are <a href="#/def-scalar">scalars</a>).</p>
 </div>
 </section><section class="slide level2"><div id="def-vector-valued" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Vector-valued function)</strong></span> A function <span class="math inline">\(f : A \to \mathbb{R}^m\)</span>, whose values are vectors (<a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a>), is <strong>vector-valued</strong>.</p>
@@ -503,7 +503,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-linear-combination" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Linear combination)</strong></span> A <strong>linear combination</strong> of the numbers <span class="math inline">\(a_1, \ldots, a_k\)</span> with coefficients <span class="math inline">\(c_1, \ldots, c_k\)</span> is the weighted sum</p>
+<p><span class="theorem-title"><strong>Definition 9 (Linear combination)</strong></span> A <strong>linear combination</strong> of the numbers <span class="math inline">\(a_1, \ldots, a_k\)</span> with coefficients <span class="math inline">\(c_1, \ldots, c_k\)</span> is the <a href="./algebra-sums.html#def-summation">sum</a></p>
 <p><span class="math display">\[c_1 a_1 + \cdots + c_k a_k = \sum_{i=1}^{k} c_i a_i\]</span></p>
 <p>A linear combination of vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\)</span> of the same length is defined entry by entry: entry <span class="math inline">\(j\)</span> of <span class="math inline">\(\sum_{i=1}^{k} c_i \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i\)</span> is the linear combination of the <span class="math inline">\(j\)</span>th entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\)</span> with the same coefficients.</p>
 </div>
@@ -513,8 +513,54 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 </section><section class="slide level2"><div id="exm-lincom-coefficient" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Coefficients of a linear combination of numbers)</strong></span> The linear combination of the numbers <span class="math inline">\(4\)</span> and <span class="math inline">\(5\)</span> with coefficients <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> is <span class="math inline">\(2 \cdot 4 + 3 \cdot 5 = 8 + 15 = 23\)</span>.</p>
 </div>
+</section><section class="slide level2"><div id="def-weighted-sum" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Weighted sum)</strong></span> A <strong>weighted sum</strong> of the <a href="./number-systems.html#def-real-numbers">numbers</a> <span class="math inline">\(a_1, \ldots, a_k\)</span> is a <a href="#/def-linear-combination">linear combination</a> of them, with <a href="#/def-lincom-coefficient">coefficients</a> <span class="math inline">\(w_1, \ldots, w_k\)</span>:</p>
+<p><span class="math display">\[w_1 a_1 + \cdots + w_k a_k = \sum_{i=1}^{k} w_i a_i\]</span></p>
+<p>Multiply each <span class="math inline">\(a_i\)</span> by its coefficient <span class="math inline">\(w_i\)</span>, then add.</p>
+</div>
+</section><section class="slide level2"><div id="def-weight" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Weight)</strong></span> The <a href="#/def-lincom-coefficient">coefficients</a> <span class="math inline">\(w_1, \ldots, w_k\)</span> of a <a href="#/def-weighted-sum">weighted sum</a> <span class="math inline">\(\sum_{i=1}^{k} w_i a_i\)</span> are called its <strong>weights</strong>. The weight <span class="math inline">\(w_i\)</span> says how much <span class="math inline">\(a_i\)</span> counts.</p>
+</div>
+</section><section class="slide level2"><div id="exm-weighted-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (The total price of a shopping basket)</strong></span> A basket holds <span class="math inline">\(3\)</span> items that cost <span class="math inline">\(\$2\)</span> each and <span class="math inline">\(2\)</span> items that cost <span class="math inline">\(\$5\)</span> each. The total price is the <a href="#/def-weighted-sum">weighted sum</a> of the prices <span class="math inline">\(2\)</span> and <span class="math inline">\(5\)</span> with <a href="#/def-weight">weights</a> <span class="math inline">\(3\)</span> and <span class="math inline">\(2\)</span>, the count of items at each price:</p>
+<p><span class="math display">\[
+\begin{aligned}
+3 \cdot 2 + 2 \cdot 5
+&amp;= 6 + 10
+&amp;&amp; \text{(multiply each price by its weight)}
+\\
+&amp;= 16
+&amp;&amp; \text{(add)}
+\end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="def-weighted-average" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Weighted average, weighted mean)</strong></span> A <strong>weighted average</strong> (or <strong>weighted mean</strong>) of the <a href="./number-systems.html#def-real-numbers">numbers</a> <span class="math inline">\(a_1, \ldots, a_k\)</span> is a <a href="#/def-weighted-sum">weighted sum</a> of them whose <a href="#/def-weight">weights</a> <span class="math inline">\(w_1, \ldots, w_k\)</span> are non-negative and add to <span class="math inline">\(1\)</span>:</p>
+<p><span class="math display">\[
+\sum_{i=1}^{k} w_i a_i
+\quad\text{with}\quad
+w_i \ge 0 \text{ for each } i
+\quad\text{and}\quad
+\sum_{i=1}^{k} w_i = 1
+\]</span></p>
+<p>An <span class="math inline">\(a_i\)</span> with a larger <a href="#/def-weight">weight</a> counts for more.</p>
+</div>
+</section><section class="slide level2"><div id="exm-weighted-average" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (A course grade)</strong></span> A course grade counts the midterm for <span class="math inline">\(1/4\)</span> and the final for <span class="math inline">\(3/4\)</span>. A student scores <span class="math inline">\(70\)</span> on the midterm and <span class="math inline">\(90\)</span> on the final. The <a href="#/def-weight">weights</a> <span class="math inline">\(1/4\)</span> and <span class="math inline">\(3/4\)</span> are non-negative and add to <span class="math inline">\(1\)</span>, so the grade is a <a href="#/def-weighted-average">weighted average</a> of <span class="math inline">\(70\)</span> and <span class="math inline">\(90\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{1}{4} \cdot 70 + \frac{3}{4} \cdot 90
+&amp;= 17.5 + 67.5
+&amp;&amp; \text{(multiply each score by its weight)}
+\\
+&amp;= 85
+&amp;&amp; \text{(add)}
+\end{aligned}
+\]</span></p>
+<p>The grade <span class="math inline">\(85\)</span> lies between <span class="math inline">\(70\)</span> and <span class="math inline">\(90\)</span>, and nearer to <span class="math inline">\(90\)</span>, which has the larger <a href="#/def-weight">weight</a>.</p>
+</div>
 </section><section class="slide level2"><div id="exm-linear-combination-vectors" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (A linear combination of two vectors)</strong></span> The linear combination of <span class="math inline">\({(1, 0)}^{\top}\)</span> and <span class="math inline">\({(0, 1)}^{\top}\)</span> with coefficients <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> is <span class="math inline">\({(2 \cdot 1 + 3 \cdot 0,\ 2 \cdot 0 + 3 \cdot 1)}^{\top} = {(2, 3)}^{\top}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 9 (A linear combination of two vectors)</strong></span> The linear combination of <span class="math inline">\({(1, 0)}^{\top}\)</span> and <span class="math inline">\({(0, 1)}^{\top}\)</span> with coefficients <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> is <span class="math inline">\({(2 \cdot 1 + 3 \cdot 0,\ 2 \cdot 0 + 3 \cdot 1)}^{\top} = {(2, 3)}^{\top}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-dot-product-lincom" class="proof remark">
 <p><span class="proof-title"><em>Remark 4</em> (The dot product is a linear combination). </span>The dot product <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is a linear combination (<a href="#/def-linear-combination" class="quarto-xref">Definition&nbsp;9</a>) of the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>, with coefficients <span class="math inline">\(x_1, \ldots, x_p\)</span>. In <a href="#/exm-dot-product" class="quarto-xref">Example&nbsp;5</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6\)</span> is the linear combination of <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span>, and <span class="math inline">\(6\)</span> with coefficients <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(3\)</span>.</p>
@@ -541,7 +587,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 </div>
 <h3 id="special-vectors">Special vectors</h3>
 <div id="def-zero-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Zero vector)</strong></span> The <strong>zero vector</strong> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to zero:</p>
+<p><span class="theorem-title"><strong>Definition 14 (Zero vector)</strong></span> The <strong>zero vector</strong> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to zero:</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}=
 \begin{bmatrix}
@@ -562,11 +608,11 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-mean" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Mean (average, sample mean))</strong></span> The <strong>mean</strong> <span class="citation" data-cites="wikipedia_arithmetic_mean"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span> (or <strong>average</strong>) of <span class="math inline">\(n\)</span> numbers <span class="math inline">\(y_1, \ldots, y_n\)</span> is their <a href="./algebra-sums.html#def-summation">sum</a> divided by how many there are:</p>
+<p><span class="theorem-title"><strong>Definition 15 (Mean, average)</strong></span> The <strong>mean</strong> <span class="citation" data-cites="wikipedia_arithmetic_mean"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span> (or <strong>average</strong>) of <span class="math inline">\(n\)</span> numbers <span class="math inline">\(y_1, \ldots, y_n\)</span> is their <a href="./algebra-sums.html#def-summation">sum</a> divided by how many there are:</p>
 <p><span class="math display">\[\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum_{i=1}^ny_i\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-mean" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (The mean of three numbers)</strong></span> For <span class="math inline">\(y_1 = 2\)</span>, <span class="math inline">\(y_2 = -1\)</span> and <span class="math inline">\(y_3 = 5\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 10 (The mean of three numbers)</strong></span> For <span class="math inline">\(y_1 = 2\)</span>, <span class="math inline">\(y_2 = -1\)</span> and <span class="math inline">\(y_3 = 5\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \bar{y}
@@ -585,7 +631,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p><span class="proof-title"><em>Remark 6</em> (The sample mean estimates the population mean). </span>When the numbers are observed data values, <span class="math inline">\(\bar{y}\)</span> is also called the sample mean, an estimator of the <a href="https://morrison-lab.github.io/pds/expectation.html#def-expectation">population mean</a>.</p>
 </div>
 </section><section class="slide level2"><div id="def-ones-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Ones vector)</strong></span> The <strong>ones vector</strong> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to one:</p>
+<p><span class="theorem-title"><strong>Definition 16 (Ones vector)</strong></span> The <strong>ones vector</strong> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to one:</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} =
 \begin{bmatrix}
@@ -597,14 +643,14 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-sum-of-elements" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Sum of the elements of a vector)</strong></span> The <strong>sum of the elements</strong> of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> is the <a href="./algebra-sums.html#def-summation">sum</a> of its entries:</p>
+<p><span class="theorem-title"><strong>Definition 17 (Sum of the elements of a vector)</strong></span> The <strong>sum of the elements</strong> of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> is the <a href="./algebra-sums.html#def-summation">sum</a> of its entries:</p>
 <p><span class="math display">\[
 {s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}} \stackrel{\text{def}}{=}\sum_{i=1}^px_i.
 \]</span></p>
 <p>In words, <span class="math inline">\({s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\)</span> is the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> added together.</p>
 </div>
 </section><section class="slide level2"><div id="exm-sum-of-elements" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (The sum of the elements of a vector with three entries)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, -1, 5)\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 11 (The sum of the elements of a vector with three entries)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, -1, 5)\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 {s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}
@@ -633,12 +679,12 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 &amp;&amp; \text{(multiply each entry by } 1 \text{)}
 \\
 &amp;= {s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}.
-&amp;&amp; \text{(}\href{#def-sum-of-elements}{\text{Definition~14}}\text{)}
+&amp;&amp; \text{(}\href{#def-sum-of-elements}{\text{Definition~17}}\text{)}
 \end{aligned}
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-sum-dot-ones" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (The ones vector applied to a vector with three entries)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, -1, 5)\)</span> and the <a href="#/def-ones-vector">ones vector</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> with three entries,</p>
+<p><span class="theorem-title"><strong>Example 12 (The ones vector applied to a vector with three entries)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, -1, 5)\)</span> and the <a href="#/def-ones-vector">ones vector</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> with three entries,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -649,10 +695,10 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 &amp;&amp; \text{(multiply and add)}
 \end{aligned}
 \]</span></p>
-<p>which is <span class="math inline">\({s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\)</span>, as in <a href="#/exm-sum-of-elements" class="quarto-xref">Example&nbsp;9</a>. Dividing by <span class="math inline">\(p = 3\)</span> gives the <a href="#/def-mean">mean</a> of the entries, <span class="math inline">\(6 / 3 = 2\)</span>.</p>
+<p>which is <span class="math inline">\({s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\)</span>, as in <a href="#/exm-sum-of-elements" class="quarto-xref">Example&nbsp;11</a>. Dividing by <span class="math inline">\(p = 3\)</span> gives the <a href="#/def-mean">mean</a> of the entries, <span class="math inline">\(6 / 3 = 2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-indicator-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Indicator vector (standard basis vector))</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <strong>standard basis vector</strong> <span class="citation" data-cites="wikipedia_standard_basis"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span> ) <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
+<p><span class="theorem-title"><strong>Definition 18 (Indicator vector, standard basis vector)</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <strong>standard basis vector</strong> <span class="citation" data-cites="wikipedia_standard_basis"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span> ) <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
 <p><span class="math display">\[
 (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)_i =
 \begin{cases}
@@ -699,7 +745,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-standard-basis-expansion" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (A vector is a linear combination of indicator vectors)</strong></span> Every vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> is the linear combination (<a href="#/def-linear-combination" class="quarto-xref">Definition&nbsp;9</a>) of the indicator vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p\)</span> (<a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;15</a>) with coefficients <span class="math inline">\(x_1, \ldots, x_p\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 4 (A vector is a linear combination of indicator vectors)</strong></span> Every vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> is the linear combination (<a href="#/def-linear-combination" class="quarto-xref">Definition&nbsp;9</a>) of the indicator vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p\)</span> (<a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;18</a>) with coefficients <span class="math inline">\(x_1, \ldots, x_p\)</span>:</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \sum_{j=1}^px_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\]</span></p>
 </div>
 <div class="proof">
@@ -714,7 +760,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
    x_j \cdot 1 &amp; \text{if } j = i \\
    x_j \cdot 0 &amp; \text{if } j \neq i
    \end{cases}
-&amp;&amp; \text{(}\href{#def-indicator-vector}{\text{Definition~15}}\text{)}
+&amp;&amp; \text{(}\href{#def-indicator-vector}{\text{Definition~18}}\text{)}
 \\&amp;= x_i \cdot 1 + \sum_{j \neq i} x_j \cdot 0
 &amp;&amp; \text{(split off the } j = i \text{ term)}
 \\&amp;= x_i + 0
@@ -725,7 +771,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-standard-basis-expansion" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (Expanding a vector in indicator vectors)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 13 (Expanding a vector in indicator vectors)</strong></span> <span class="math display">\[
 \begin{aligned}
 \begin{bmatrix}4 \\ -1 \\ 2\end{bmatrix}
 &amp;= 4 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + (-1) \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 2 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \\
@@ -735,7 +781,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 </div>
 <h3 id="orthogonality">Orthogonality</h3>
 <div id="def-orthogonal-vectors" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of the same length are <strong>orthogonal</strong> <span class="citation" data-cites="wikipedia_orthogonality"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> (written <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>) if their dot product (<a href="#/def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) is zero:</p>
+<p><span class="theorem-title"><strong>Definition 19 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of the same length are <strong>orthogonal</strong> <span class="citation" data-cites="wikipedia_orthogonality"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> (written <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>) if their dot product (<a href="#/def-dot-product" class="quarto-xref">Definition&nbsp;8</a>) is zero:</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\iff \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 0\]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-orthogonal-perpendicular" class="proof remark">
@@ -749,7 +795,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p>so <span class="math inline">\((1, 1, 0) \perp (1, -1, 5)\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-not-orthogonal" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (Vectors that are not orthogonal)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 14 (Vectors that are not orthogonal)</strong></span> <span class="math display">\[
 \begin{aligned}
 (1, 2) \cdot (1, 1) &amp;= 1 \cdot 1 + 2 \cdot 1 \\
 &amp;= 3 \\
@@ -759,12 +805,12 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p>so <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((1, 1)\)</span> are not orthogonal.</p>
 </div>
 </section><section class="slide level2"><div id="def-euclidean-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Euclidean norm (length, <span class="math inline">\(L_2\)</span> norm))</strong></span> The <strong>Euclidean norm</strong> <span class="citation" data-cites="wikipedia_euclidean_vector"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> (or <strong>length</strong>, also called the <strong><span class="math inline">\(L_2\)</span> norm</strong> and written <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2\)</span>) of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> of length <span class="math inline">\(p\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 20 (Euclidean norm (length, <span class="math inline">\(L_2\)</span> norm))</strong></span> The <strong>Euclidean norm</strong> <span class="citation" data-cites="wikipedia_euclidean_vector"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> (or <strong>length</strong>, also called the <strong><span class="math inline">\(L_2\)</span> norm</strong> and written <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2\)</span>) of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> of length <span class="math inline">\(p\)</span> is</p>
 <p><span id="eq-l2-norm"><span class="math display">\[\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \sqrt{\sum_{i=1}^px_i^2} \tag{2}\]</span></span></p>
 <p>where <span class="math inline">\(\sqrt{\cdot}\)</span> is the <a href="./algebra-basics.html#def-square-root">square root</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-euclidean-norm" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (The length of a vector)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 15 (The length of a vector)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}
@@ -780,10 +826,10 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p>The vector <span class="math inline">\((0.6, 0.8)\)</span> has norm <span class="math inline">\(\sqrt{0.36 + 0.64} = 1\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-unit-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Unit vector)</strong></span> A <strong>unit vector</strong> <span class="citation" data-cites="wikipedia_unit_vector"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> is a vector whose Euclidean norm (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;17</a>) is <span class="math inline">\(1\)</span>. A unit vector is said to have <em>unit length</em>.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Unit vector)</strong></span> A <strong>unit vector</strong> <span class="citation" data-cites="wikipedia_unit_vector"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> is a vector whose Euclidean norm (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;20</a>) is <span class="math inline">\(1\)</span>. A unit vector is said to have <em>unit length</em>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-unit-vector" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (A unit vector and a vector that is not one)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0.6, 0.8)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 16 (A unit vector and a vector that is not one)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0.6, 0.8)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}
@@ -852,7 +898,7 @@ from the origin to the point identified by x".
 The distance between two arbitrary points, as the norm of their difference,
 is the standard extension of that statement and is not stated on that page.
 --><div id="def-euclidean-distance" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Euclidean distance)</strong></span> The <strong>Euclidean distance</strong> <span class="citation" data-cites="wikipedia_euclidean_distance"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span> between two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of length <span class="math inline">\(p\)</span> is the <a href="#/def-euclidean-norm">Euclidean norm</a> of their difference:</p>
+<p><span class="theorem-title"><strong>Definition 22 (Euclidean distance)</strong></span> The <strong>Euclidean distance</strong> <span class="citation" data-cites="wikipedia_euclidean_distance"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span> between two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> of length <span class="math inline">\(p\)</span> is the <a href="#/def-euclidean-norm">Euclidean norm</a> of their difference:</p>
 <p><span id="eq-euclidean-distance"><span class="math display">\[d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = \sqrt{\sum_{i=1}^p(x_i - y_i)^2} \tag{3}\]</span></span></p>
 </div>
 </section><section class="slide level2"><div id="rem-distance-from-origin" class="proof remark">
@@ -864,10 +910,10 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 \end{aligned}
 \]</span></p>
 <p><span class="citation" data-cites="goodfellow2016deep"><a href="#/references" role="doc-biblioref" onclick="">[11, p. 39]</a></span>.</p>
-<p>For example, the distance from <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\((3, 4)\)</span> is <span class="math inline">\(\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\)</span>, as in <a href="#/exm-euclidean-norm" class="quarto-xref">Example&nbsp;13</a>.</p>
+<p>For example, the distance from <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\((3, 4)\)</span> is <span class="math inline">\(\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\)</span>, as in <a href="#/exm-euclidean-norm" class="quarto-xref">Example&nbsp;15</a>.</p>
 </div>
 </section><section class="slide level2"><div id="def-orthonormal-vectors" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Orthonormal vectors)</strong></span> A set of vectors <span class="math inline">\(\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_k\}\)</span> is <strong>orthonormal</strong> if the vectors are mutually orthogonal (<a href="#/def-orthogonal-vectors" class="quarto-xref">Definition&nbsp;16</a>) and each has norm <span class="math inline">\(1\)</span> (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;17</a>), that is, <a href="#/def-unit-vector">unit length</a>:</p>
+<p><span class="theorem-title"><strong>Definition 23 (Orthonormal vectors)</strong></span> A set of vectors <span class="math inline">\(\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_k\}\)</span> is <strong>orthonormal</strong> if the vectors are mutually orthogonal (<a href="#/def-orthogonal-vectors" class="quarto-xref">Definition&nbsp;19</a>) and each has norm <span class="math inline">\(1\)</span> (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;20</a>), that is, <a href="#/def-unit-vector">unit length</a>:</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j =
 \begin{cases}
 1 &amp; \text{if } i = j \\
@@ -875,7 +921,7 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 \end{cases}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-indicator-orthonormal" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (Indicator vectors are orthonormal)</strong></span> The indicator vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p\)</span> (<a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;15</a>) form an orthonormal set. By <a href="#/thm-indicator-selection" class="quarto-xref">Theorem&nbsp;3</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> is entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span>, which is <span class="math inline">\(1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> if <span class="math inline">\(i \neq j\)</span>. For <span class="math inline">\(p = 2\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 17 (Indicator vectors are orthonormal)</strong></span> The indicator vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p\)</span> (<a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;18</a>) form an orthonormal set. By <a href="#/thm-indicator-selection" class="quarto-xref">Theorem&nbsp;3</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> is entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span>, which is <span class="math inline">\(1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> if <span class="math inline">\(i \neq j\)</span>. For <span class="math inline">\(p = 2\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 &amp;= 1 \cdot 1 + 0 \cdot 0 \\
@@ -897,7 +943,7 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-not-orthonormal" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Two ways to fail to be orthonormal)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 18 (Two ways to fail to be orthonormal)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\((1, 1)\)</span> and <span class="math inline">\((1, -1)\)</span> are orthogonal, since <span class="math inline">\(1 \cdot 1 + 1 \cdot(-1) = 0\)</span>, but not orthonormal: <span class="math inline">\((1, 1) \cdot (1, 1) = 2 \ne 1\)</span>.</p></li>
 <li>

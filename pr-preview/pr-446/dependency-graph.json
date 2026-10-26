@@ -170,7 +170,7 @@
    "page": "algebra",
    "div": "def-complex-modulus",
    "kind": "def",
-   "title": "Absolute value (modulus) of a complex number",
+   "title": "Absolute value of a complex number, modulus",
    "external": false
   },
   {
@@ -386,7 +386,7 @@
    "page": "algebra",
    "div": "def-infimum",
    "kind": "def",
-   "title": "Infimum (greatest lower bound)",
+   "title": "Infimum, greatest lower bound",
    "external": false
   },
   {
@@ -395,7 +395,7 @@
    "page": "algebra",
    "div": "def-infinite-sum",
    "kind": "def",
-   "title": "Infinite sum (series)",
+   "title": "Infinite sum, series",
    "external": false
   },
   {
@@ -854,7 +854,7 @@
    "page": "algebra",
    "div": "def-supremum",
    "kind": "def",
-   "title": "Supremum (least upper bound)",
+   "title": "Supremum, least upper bound",
    "external": false
   },
   {
@@ -1520,7 +1520,7 @@
    "page": "algebra-complex",
    "div": "def-complex-modulus",
    "kind": "def",
-   "title": "Absolute value (modulus) of a complex number",
+   "title": "Absolute value of a complex number, modulus",
    "external": false
   },
   {
@@ -1709,7 +1709,7 @@
    "page": "algebra-exponentials",
    "div": "def-infinite-sum",
    "kind": "def",
-   "title": "Infinite sum (series)",
+   "title": "Infinite sum, series",
    "external": false
   },
   {
@@ -2105,7 +2105,7 @@
    "page": "algebra-sums",
    "div": "def-infimum",
    "kind": "def",
-   "title": "Infimum (greatest lower bound)",
+   "title": "Infimum, greatest lower bound",
    "external": false
   },
   {
@@ -2267,7 +2267,7 @@
    "page": "algebra-sums",
    "div": "def-supremum",
    "kind": "def",
-   "title": "Supremum (least upper bound)",
+   "title": "Supremum, least upper bound",
    "external": false
   },
   {
@@ -3828,6 +3828,15 @@
    "external": false
   },
   {
+   "id": "mds/expressions-algorithms#def-computes",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-computes",
+   "kind": "def",
+   "title": "Computes",
+   "external": false
+  },
+  {
    "id": "mds/expressions-algorithms#def-expression",
    "site": "mds",
    "page": "expressions-algorithms",
@@ -3851,7 +3860,7 @@
    "page": "functions",
    "div": "def-argument",
    "kind": "def",
-   "title": "Argument (input)",
+   "title": "Argument, input",
    "external": false
   },
   {
@@ -3869,7 +3878,7 @@
    "page": "functions",
    "div": "def-closed-under",
    "kind": "def",
-   "title": "Closed under an operation (closure)",
+   "title": "Closed under an operation",
    "external": false
   },
   {
@@ -3950,7 +3959,7 @@
    "page": "functions",
    "div": "def-function",
    "kind": "def",
-   "title": "Function (map, mapping, transformation)",
+   "title": "Function, map, mapping, transformation",
    "external": false
   },
   {
@@ -4013,7 +4022,7 @@
    "page": "functions",
    "div": "def-logistic-function",
    "kind": "def",
-   "title": "Logistic function (also called the sigmoid or expit)",
+   "title": "Logistic function, sigmoid, expit",
    "external": false
   },
   {
@@ -4032,6 +4041,15 @@
    "div": "def-outer-function",
    "kind": "def",
    "title": "Outer function",
+   "external": false
+  },
+  {
+   "id": "mds/functions#def-preimage",
+   "site": "mds",
+   "page": "functions",
+   "div": "def-preimage",
+   "kind": "def",
+   "title": "Preimage, inverse image",
    "external": false
   },
   {
@@ -4076,7 +4094,7 @@
    "page": "functions",
    "div": "def-value",
    "kind": "def",
-   "title": "Value (output)",
+   "title": "Value, output",
    "external": false
   },
   {
@@ -4139,7 +4157,7 @@
    "page": "indicator-functions",
    "div": "def-indicator-function",
    "kind": "def",
-   "title": "Indicator function (set indicator)",
+   "title": "Indicator function, set indicator",
    "external": false
   },
   {
@@ -4382,7 +4400,7 @@
    "page": "linear-algebra",
    "div": "def-affine-map",
    "kind": "def",
-   "title": "Affine map (affine transformation, affine function)",
+   "title": "Affine map, affine transformation, affine function",
    "external": false
   },
   {
@@ -4391,7 +4409,7 @@
    "page": "linear-algebra",
    "div": "def-affine-offset",
    "kind": "def",
-   "title": "Offset (intercept, bias) of an affine map",
+   "title": "Offset of an affine map, intercept, bias",
    "external": false
   },
   {
@@ -4454,7 +4472,7 @@
    "page": "linear-algebra",
    "div": "def-column-space",
    "kind": "def",
-   "title": "Column space (range, image)",
+   "title": "Column space, range, image",
    "external": false
   },
   {
@@ -4508,7 +4526,7 @@
    "page": "linear-algebra",
    "div": "def-conjugate-transpose",
    "kind": "def",
-   "title": "Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate)",
+   "title": "Conjugate transpose, Hermitian adjoint, Hermitian conjugate, transjugate",
    "external": false
   },
   {
@@ -4571,7 +4589,7 @@
    "page": "linear-algebra",
    "div": "def-design-matrix",
    "kind": "def",
-   "title": "Design matrix (model matrix)",
+   "title": "Design matrix, model matrix",
    "external": false
   },
   {
@@ -4643,7 +4661,7 @@
    "page": "linear-algebra",
    "div": "def-eigendecomposition",
    "kind": "def",
-   "title": "Eigendecomposition (spectral decomposition)",
+   "title": "Eigendecomposition, spectral decomposition",
    "external": false
   },
   {
@@ -4778,7 +4796,7 @@
    "page": "linear-algebra",
    "div": "def-hermitian-matrix",
    "kind": "def",
-   "title": "Hermitian matrix (self-adjoint matrix)",
+   "title": "Hermitian matrix, self-adjoint matrix",
    "external": false
   },
   {
@@ -4814,7 +4832,7 @@
    "page": "linear-algebra",
    "div": "def-indicator-vector",
    "kind": "def",
-   "title": "Indicator vector (standard basis vector)",
+   "title": "Indicator vector, standard basis vector",
    "external": false
   },
   {
@@ -4850,7 +4868,7 @@
    "page": "linear-algebra",
    "div": "def-invertible-matrix",
    "kind": "def",
-   "title": "Invertible matrix (non-singular matrix)",
+   "title": "Invertible matrix, non-singular matrix",
    "external": false
   },
   {
@@ -4859,7 +4877,7 @@
    "page": "linear-algebra",
    "div": "def-leading-block",
    "kind": "def",
-   "title": "Leading block (top-left block) of a square matrix",
+   "title": "Leading block of a square matrix, top-left block",
    "external": false
   },
   {
@@ -4904,7 +4922,7 @@
    "page": "linear-algebra",
    "div": "def-linear-map",
    "kind": "def",
-   "title": "Linear map (linear transformation, linear function)",
+   "title": "Linear map, linear transformation, linear function",
    "external": false
   },
   {
@@ -4922,7 +4940,7 @@
    "page": "linear-algebra",
    "div": "def-linear-system",
    "kind": "def",
-   "title": "Linear system (system of linear equations)",
+   "title": "Linear system, system of linear equations",
    "external": false
   },
   {
@@ -5066,7 +5084,7 @@
    "page": "linear-algebra",
    "div": "def-mean",
    "kind": "def",
-   "title": "Mean (average, sample mean)",
+   "title": "Mean, average",
    "external": false
   },
   {
@@ -5111,7 +5129,7 @@
    "page": "linear-algebra",
    "div": "def-null-space",
    "kind": "def",
-   "title": "Null space (kernel)",
+   "title": "Null space, kernel",
    "external": false
   },
   {
@@ -5309,7 +5327,7 @@
    "page": "linear-algebra",
    "div": "def-real-vector-valued",
    "kind": "def",
-   "title": "Real-valued (scalar-valued) function",
+   "title": "Real-valued function, scalar-valued function",
    "external": false
   },
   {
@@ -5372,7 +5390,7 @@
    "page": "linear-algebra",
    "div": "def-skew-hermitian-matrix",
    "kind": "def",
-   "title": "Skew-Hermitian matrix (anti-Hermitian matrix)",
+   "title": "Skew-Hermitian matrix, anti-Hermitian matrix",
    "external": false
   },
   {
@@ -5399,7 +5417,7 @@
    "page": "linear-algebra",
    "div": "def-subspace",
    "kind": "def",
-   "title": "Subspace (linear subspace, vector space, linear space)",
+   "title": "Subspace, linear subspace",
    "external": false
   },
   {
@@ -5535,6 +5553,33 @@
    "div": "def-vector-valued",
    "kind": "def",
    "title": "Vector-valued function",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-weight",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-weight",
+   "kind": "def",
+   "title": "Weight",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-weighted-average",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-weighted-average",
+   "kind": "def",
+   "title": "Weighted average, weighted mean",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-weighted-sum",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-weighted-sum",
+   "kind": "def",
+   "title": "Weighted sum",
    "external": false
   },
   {
@@ -6794,7 +6839,7 @@
    "page": "linear-algebra-complex",
    "div": "def-conjugate-transpose",
    "kind": "def",
-   "title": "Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate)",
+   "title": "Conjugate transpose, Hermitian adjoint, Hermitian conjugate, transjugate",
    "external": false
   },
   {
@@ -6803,7 +6848,7 @@
    "page": "linear-algebra-complex",
    "div": "def-hermitian-matrix",
    "kind": "def",
-   "title": "Hermitian matrix (self-adjoint matrix)",
+   "title": "Hermitian matrix, self-adjoint matrix",
    "external": false
   },
   {
@@ -6812,7 +6857,7 @@
    "page": "linear-algebra-complex",
    "div": "def-skew-hermitian-matrix",
    "kind": "def",
-   "title": "Skew-Hermitian matrix (anti-Hermitian matrix)",
+   "title": "Skew-Hermitian matrix, anti-Hermitian matrix",
    "external": false
   },
   {
@@ -6911,7 +6956,7 @@
    "page": "linear-algebra-diagonalization",
    "div": "def-leading-block",
    "kind": "def",
-   "title": "Leading block (top-left block) of a square matrix",
+   "title": "Leading block of a square matrix, top-left block",
    "external": false
   },
   {
@@ -7496,7 +7541,7 @@
    "page": "linear-algebra-matrices",
    "div": "def-affine-map",
    "kind": "def",
-   "title": "Affine map (affine transformation, affine function)",
+   "title": "Affine map, affine transformation, affine function",
    "external": false
   },
   {
@@ -7505,7 +7550,7 @@
    "page": "linear-algebra-matrices",
    "div": "def-affine-offset",
    "kind": "def",
-   "title": "Offset (intercept, bias) of an affine map",
+   "title": "Offset of an affine map, intercept, bias",
    "external": false
   },
   {
@@ -7550,7 +7595,7 @@
    "page": "linear-algebra-matrices",
    "div": "def-linear-map",
    "kind": "def",
-   "title": "Linear map (linear transformation, linear function)",
+   "title": "Linear map, linear transformation, linear function",
    "external": false
   },
   {
@@ -7568,7 +7613,7 @@
    "page": "linear-algebra-matrices",
    "div": "def-linear-system",
    "kind": "def",
-   "title": "Linear system (system of linear equations)",
+   "title": "Linear system, system of linear equations",
    "external": false
   },
   {
@@ -7883,7 +7928,7 @@
    "page": "linear-algebra-projections",
    "div": "def-design-matrix",
    "kind": "def",
-   "title": "Design matrix (model matrix)",
+   "title": "Design matrix, model matrix",
    "external": false
   },
   {
@@ -8216,7 +8261,7 @@
    "page": "linear-algebra-rank-nullity",
    "div": "def-column-space",
    "kind": "def",
-   "title": "Column space (range, image)",
+   "title": "Column space, range, image",
    "external": false
   },
   {
@@ -8261,7 +8306,7 @@
    "page": "linear-algebra-rank-nullity",
    "div": "def-null-space",
    "kind": "def",
-   "title": "Null space (kernel)",
+   "title": "Null space, kernel",
    "external": false
   },
   {
@@ -8486,7 +8531,7 @@
    "page": "linear-algebra-special-matrices",
    "div": "def-eigendecomposition",
    "kind": "def",
-   "title": "Eigendecomposition (spectral decomposition)",
+   "title": "Eigendecomposition, spectral decomposition",
    "external": false
   },
   {
@@ -8540,7 +8585,7 @@
    "page": "linear-algebra-special-matrices",
    "div": "def-invertible-matrix",
    "kind": "def",
-   "title": "Invertible matrix (non-singular matrix)",
+   "title": "Invertible matrix, non-singular matrix",
    "external": false
   },
   {
@@ -8981,7 +9026,7 @@
    "page": "linear-algebra-subspaces",
    "div": "def-subspace",
    "kind": "def",
-   "title": "Subspace (linear subspace, vector space, linear space)",
+   "title": "Subspace, linear subspace",
    "external": false
   },
   {
@@ -9125,7 +9170,7 @@
    "page": "linear-algebra-vectors",
    "div": "def-indicator-vector",
    "kind": "def",
-   "title": "Indicator vector (standard basis vector)",
+   "title": "Indicator vector, standard basis vector",
    "external": false
   },
   {
@@ -9152,7 +9197,7 @@
    "page": "linear-algebra-vectors",
    "div": "def-mean",
    "kind": "def",
-   "title": "Mean (average, sample mean)",
+   "title": "Mean, average",
    "external": false
   },
   {
@@ -9197,7 +9242,7 @@
    "page": "linear-algebra-vectors",
    "div": "def-real-vector-valued",
    "kind": "def",
-   "title": "Real-valued (scalar-valued) function",
+   "title": "Real-valued function, scalar-valued function",
    "external": false
   },
   {
@@ -9252,6 +9297,33 @@
    "div": "def-vector-valued",
    "kind": "def",
    "title": "Vector-valued function",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-vectors#def-weight",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "def-weight",
+   "kind": "def",
+   "title": "Weight",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-vectors#def-weighted-average",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "def-weighted-average",
+   "kind": "def",
+   "title": "Weighted average, weighted mean",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-vectors#def-weighted-sum",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "def-weighted-sum",
+   "kind": "def",
+   "title": "Weighted sum",
    "external": false
   },
   {
@@ -9314,7 +9386,7 @@
    "page": "measures",
    "div": "def-absolutely-integrable",
    "kind": "def",
-   "title": "Absolutely integrable function (integrable function, absolute integrability)",
+   "title": "Absolutely integrable function, integrable function",
    "external": false
   },
   {
@@ -9557,7 +9629,7 @@
    "page": "measures",
    "div": "def-measure-zero",
    "kind": "def",
-   "title": "Measure zero (null set)",
+   "title": "Measure zero, null set",
    "external": false
   },
   {
@@ -9822,6 +9894,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-bfgs-update",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-bfgs-update",
+   "kind": "def",
+   "title": "BFGS update (Broyden-Fletcher-Goldfarb-Shanno)",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-concave",
    "site": "mds",
    "page": "optimization",
@@ -9948,6 +10029,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-lbfgs",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-lbfgs",
+   "kind": "def",
+   "title": "Limited-memory BFGS (L-BFGS)",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-line-search",
    "site": "mds",
    "page": "optimization",
@@ -10007,7 +10097,7 @@
    "page": "optimization",
    "div": "def-objective-function",
    "kind": "def",
-   "title": "Objective function (objective)",
+   "title": "Objective function, objective",
    "external": false
   },
   {
@@ -10034,7 +10124,16 @@
    "page": "optimization",
    "div": "def-quadratic-model",
    "kind": "def",
-   "title": "Quadratic model (second-order Taylor polynomial)",
+   "title": "Quadratic model, second-order Taylor polynomial",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-quasi-newton-method",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-quasi-newton-method",
+   "kind": "def",
+   "title": "Quasi-Newton method",
    "external": false
   },
   {
@@ -10044,6 +10143,15 @@
    "div": "def-saddle-point",
    "kind": "def",
    "title": "Saddle point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-secant-condition",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-secant-condition",
+   "kind": "def",
+   "title": "Secant condition",
    "external": false
   },
   {
@@ -10263,6 +10371,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-contrapositive",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-contrapositive",
+   "kind": "def",
+   "title": "Contrapositive",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-converse",
    "site": "mds",
    "page": "proof-writing",
@@ -10385,7 +10502,16 @@
    "page": "proof-writing",
    "div": "def-logical-entailment",
    "kind": "def",
-   "title": "Logical entailment (logical consequence, deductive consequence)",
+   "title": "Logical entailment, logical consequence, deductive consequence",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#def-logically-equivalent",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-logically-equivalent",
+   "kind": "def",
+   "title": "Logically equivalent",
    "external": false
   },
   {
@@ -10443,12 +10569,30 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-proof-by-cases",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-proof-by-cases",
+   "kind": "def",
+   "title": "Proof by cases, proof by exhaustion",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-proof-by-contradiction",
    "site": "mds",
    "page": "proof-writing",
    "div": "def-proof-by-contradiction",
    "kind": "def",
    "title": "Proof by contradiction",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#def-proof-by-contrapositive",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-proof-by-contrapositive",
+   "kind": "def",
+   "title": "Proof by contrapositive",
    "external": false
   },
   {
@@ -10466,7 +10610,7 @@
    "page": "proof-writing",
    "div": "def-proposition",
    "kind": "def",
-   "title": "Proposition (statement)",
+   "title": "Proposition, statement",
    "external": false
   },
   {
@@ -10515,12 +10659,39 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-truth-table",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-truth-table",
+   "kind": "def",
+   "title": "Truth table",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-universal-quantifier",
    "site": "mds",
    "page": "proof-writing",
    "div": "def-universal-quantifier",
    "kind": "def",
    "title": "Universal quantifier",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-contrapositive",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-contrapositive",
+   "kind": "thm",
+   "title": "A conditional is equivalent to its contrapositive",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-de-morgan-logic",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-de-morgan-logic",
+   "kind": "thm",
+   "title": "De Morgan's laws for propositions",
    "external": false
   },
   {
@@ -10610,7 +10781,7 @@
    "page": "sets",
    "div": "def-collection",
    "kind": "def",
-   "title": "Collection of sets (family of sets)",
+   "title": "Collection of sets, family of sets",
    "external": false
   },
   {
@@ -10620,6 +10791,15 @@
    "div": "def-complement",
    "kind": "def",
    "title": "Complement",
+   "external": false
+  },
+  {
+   "id": "mds/sets#def-disjoint-sets",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-disjoint-sets",
+   "kind": "def",
+   "title": "Disjoint sets",
    "external": false
   },
   {
@@ -10736,7 +10916,7 @@
    "page": "sets",
    "div": "def-pairwise-disjoint",
    "kind": "def",
-   "title": "Pairwise disjoint sets (disjoint, mutually disjoint)",
+   "title": "Pairwise disjoint sets, mutually disjoint sets",
    "external": false
   },
   {
@@ -10772,7 +10952,7 @@
    "page": "sets",
    "div": "def-strict-subset",
    "kind": "def",
-   "title": "Strict subset (proper subset)",
+   "title": "Strict subset, proper subset",
    "external": false
   },
   {
@@ -10983,12 +11163,21 @@
    "external": false
   },
   {
+   "id": "mds/vector-calculus#def-level-curve",
+   "site": "mds",
+   "page": "vector-calculus",
+   "div": "def-level-curve",
+   "kind": "def",
+   "title": "Level curve",
+   "external": false
+  },
+  {
    "id": "mds/vector-calculus#def-level-set",
    "site": "mds",
    "page": "vector-calculus",
    "div": "def-level-set",
    "kind": "def",
-   "title": "Level set (level curve, contour)",
+   "title": "Level set",
    "external": false
   },
   {
@@ -11051,7 +11240,7 @@
    "page": "vector-calculus",
    "div": "def-row-vector-derivative",
    "kind": "def",
-   "title": "Row-vector derivative (total derivative)",
+   "title": "Row-vector derivative",
    "external": false
   },
   {
@@ -11087,7 +11276,7 @@
    "page": "vector-calculus",
    "div": "def-vector-derivative",
    "kind": "def",
-   "title": "Vector derivative (gradient)",
+   "title": "Vector derivative, gradient",
    "external": false
   },
   {
@@ -12999,10 +13188,6 @@
    "mds/calculus-integration#def-riemann-sum-equal-width"
   ],
   [
-   "mds/expressions-algorithms#def-algorithm",
-   "mds/functions#def-function"
-  ],
-  [
    "mds/expressions-algorithms#def-closed-form-expression",
    "mds/algebra-basics#def-power"
   ],
@@ -13021,6 +13206,22 @@
   [
    "mds/expressions-algorithms#def-closed-form-solution",
    "mds/functions#def-function"
+  ],
+  [
+   "mds/expressions-algorithms#def-computes",
+   "mds/expressions-algorithms#def-algorithm"
+  ],
+  [
+   "mds/expressions-algorithms#def-computes",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/expressions-algorithms#def-computes",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/expressions-algorithms#def-computes",
+   "mds/functions#def-value"
   ],
   [
    "mds/expressions-algorithms#def-expression",
@@ -13129,6 +13330,22 @@
   [
    "mds/functions#def-outer-function",
    "mds/functions#def-composition"
+  ],
+  [
+   "mds/functions#def-preimage",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/functions#def-preimage",
+   "mds/functions#def-value"
+  ],
+  [
+   "mds/functions#def-preimage",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/functions#def-preimage",
+   "mds/sets#def-subset"
   ],
   [
    "mds/functions#def-range",
@@ -13571,6 +13788,10 @@
    "mds/linear-algebra#def-linear-combination"
   ],
   [
+   "mds/linear-algebra#def-linear-combination",
+   "mds/algebra#def-summation"
+  ],
+  [
    "mds/linear-algebra#def-linear-map",
    "mds/functions#def-function"
   ],
@@ -13789,6 +14010,38 @@
   [
    "mds/linear-algebra#def-vector-valued",
    "mds/linear-algebra#def-real-coordinate-space"
+  ],
+  [
+   "mds/linear-algebra#def-weight",
+   "mds/linear-algebra#def-lincom-coefficient"
+  ],
+  [
+   "mds/linear-algebra#def-weight",
+   "mds/linear-algebra#def-weighted-sum"
+  ],
+  [
+   "mds/linear-algebra#def-weighted-average",
+   "mds/linear-algebra#def-weight"
+  ],
+  [
+   "mds/linear-algebra#def-weighted-average",
+   "mds/linear-algebra#def-weighted-sum"
+  ],
+  [
+   "mds/linear-algebra#def-weighted-average",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra#def-weighted-sum",
+   "mds/linear-algebra#def-lincom-coefficient"
+  ],
+  [
+   "mds/linear-algebra#def-weighted-sum",
+   "mds/linear-algebra#def-linear-combination"
+  ],
+  [
+   "mds/linear-algebra#def-weighted-sum",
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/linear-algebra#thm-add-outside-span",
@@ -15279,6 +15532,10 @@
    "mds/linear-algebra-vectors#def-linear-combination"
   ],
   [
+   "mds/linear-algebra-vectors#def-linear-combination",
+   "mds/algebra#def-summation"
+  ],
+  [
    "mds/linear-algebra-vectors#def-mean",
    "mds/algebra#def-summation"
   ],
@@ -15337,6 +15594,38 @@
   [
    "mds/linear-algebra-vectors#def-vector-valued",
    "mds/linear-algebra-vectors#def-real-coordinate-space"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-weight",
+   "mds/linear-algebra-vectors#def-lincom-coefficient"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-weight",
+   "mds/linear-algebra-vectors#def-weighted-sum"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-weighted-average",
+   "mds/linear-algebra-vectors#def-weight"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-weighted-average",
+   "mds/linear-algebra-vectors#def-weighted-sum"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-weighted-average",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-weighted-sum",
+   "mds/linear-algebra-vectors#def-lincom-coefficient"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-weighted-sum",
+   "mds/linear-algebra-vectors#def-linear-combination"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-weighted-sum",
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/linear-algebra-vectors#thm-standard-basis-expansion",
@@ -15899,6 +16188,14 @@
    "mds/optimization#def-line-search"
   ],
   [
+   "mds/optimization#def-bfgs-update",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#def-bfgs-update",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
    "mds/optimization#def-concave",
    "mds/algebra#def-convex-function"
   ],
@@ -15933,6 +16230,18 @@
   [
    "mds/optimization#def-lagrange-multipliers",
    "mds/optimization#def-lagrangian"
+  ],
+  [
+   "mds/optimization#def-lbfgs",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/optimization#def-lbfgs",
+   "mds/optimization#def-bfgs-update"
+  ],
+  [
+   "mds/optimization#def-lbfgs",
+   "mds/optimization#def-quasi-newton-method"
   ],
   [
    "mds/optimization#def-line-search",
@@ -15991,6 +16300,34 @@
    "mds/optimization#def-newton-method"
   ],
   [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/optimization#def-line-search"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/optimization#def-secant-condition"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
    "mds/optimization#def-saddle-point",
    "mds/algebra#def-local-minimizer"
   ],
@@ -16001,6 +16338,18 @@
   [
    "mds/optimization#def-saddle-point",
    "mds/optimization#def-stationary-point"
+  ],
+  [
+   "mds/optimization#def-secant-condition",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/optimization#def-secant-condition",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
+   "mds/optimization#def-secant-condition",
+   "mds/vector-calculus#def-vector-derivative"
   ],
   [
    "mds/optimization#def-sensitivity",
@@ -16183,6 +16532,10 @@
    "mds/proof-writing#def-logical-connective"
   ],
   [
+   "mds/proof-writing#def-contrapositive",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#def-corollary",
    "mds/proof-writing#def-result"
   ],
@@ -16287,6 +16640,18 @@
    "mds/proof-writing#def-proposition"
   ],
   [
+   "mds/proof-writing#def-logically-equivalent",
+   "mds/proof-writing#def-logical-connective"
+  ],
+  [
+   "mds/proof-writing#def-logically-equivalent",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-logically-equivalent",
+   "mds/proof-writing#def-truth-table"
+  ],
+  [
    "mds/proof-writing#def-necessary-sufficient",
    "mds/proof-writing#def-converse"
   ],
@@ -16313,6 +16678,26 @@
   [
    "mds/proof-writing#def-proof",
    "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-proof-by-cases",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-proof-by-contrapositive",
+   "mds/proof-writing#def-contrapositive"
+  ],
+  [
+   "mds/proof-writing#def-proof-by-contrapositive",
+   "mds/proof-writing#def-direct-proof"
+  ],
+  [
+   "mds/proof-writing#def-proof-by-contrapositive",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-proof-by-contrapositive",
+   "mds/proof-writing#thm-contrapositive"
   ],
   [
    "mds/proof-writing#def-proof-by-induction",
@@ -16355,8 +16740,24 @@
    "mds/proof-writing#def-result"
   ],
   [
+   "mds/proof-writing#def-truth-table",
+   "mds/proof-writing#def-logical-connective"
+  ],
+  [
+   "mds/proof-writing#def-truth-table",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#def-universal-quantifier",
    "mds/proof-writing#def-quantifier"
+  ],
+  [
+   "mds/proof-writing#thm-contrapositive",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-de-morgan-logic",
+   "mds/proof-writing#def-proposition"
   ],
   [
    "mds/proof-writing#thm-derivation-chain",
@@ -16447,6 +16848,18 @@
    "mds/sets#def-subset"
   ],
   [
+   "mds/sets#def-disjoint-sets",
+   "mds/sets#def-empty-set"
+  ],
+  [
+   "mds/sets#def-disjoint-sets",
+   "mds/sets#def-intersection"
+  ],
+  [
+   "mds/sets#def-disjoint-sets",
+   "mds/sets#def-set"
+  ],
+  [
    "mds/sets#def-half-open-interval",
    "mds/number-systems#def-real-numbers"
   ],
@@ -16489,6 +16902,10 @@
   [
    "mds/sets#def-open-interval",
    "mds/sets#def-interval"
+  ],
+  [
+   "mds/sets#def-pairwise-disjoint",
+   "mds/sets#def-disjoint-sets"
   ],
   [
    "mds/sets#def-pairwise-disjoint",
@@ -16579,6 +16996,22 @@
    "mds/vector-calculus#def-vector-valued-derivative"
   ],
   [
+   "mds/vector-calculus#def-level-curve",
+   "mds/algebra-exponentials#def-contour-line"
+  ],
+  [
+   "mds/vector-calculus#def-level-curve",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/vector-calculus#def-level-curve",
+   "mds/vector-calculus#def-level-set"
+  ],
+  [
+   "mds/vector-calculus#def-level-set",
+   "mds/functions#def-preimage"
+  ],
+  [
    "mds/vector-calculus#def-matrix-derivative",
    "mds/vector-calculus#def-vector-derivative"
   ],
@@ -16605,6 +17038,10 @@
   [
    "mds/vector-calculus#def-residual-sum-of-squares",
    "mds/vector-calculus#def-squared-error"
+  ],
+  [
+   "mds/vector-calculus#def-row-vector-derivative",
+   "mds/calculus#def-derivative"
   ],
   [
    "mds/vector-calculus#def-row-vector-derivative",

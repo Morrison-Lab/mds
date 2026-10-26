@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-23 02:44:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-26 03:53:25 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-integration" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Integration</h2>
 <p>Integration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability.</p>
@@ -411,7 +411,7 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-antiderivatives" style="flex-basis: 50.0%;justify-content: flex-start;">
 <details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb1-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(<span class="at">fun =</span> \(x) x<span class="sc">^</span><span class="dv">2</span>, <span class="at">xlim =</span> x_lim, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb1-3"><a aria-label="3"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">f</span>(x))) <span class="sc">+</span></span>
+<span id="cb1-3"><a aria-label="3"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"Integrand, "</span> <span class="sc">*</span> <span class="fu">f</span>(x))) <span class="sc">+</span></span>
 <span id="cb1-4"><a aria-label="4"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-antiderivatives-f" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig"><figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-antiderivatives-f-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -443,8 +443,12 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 <span id="cb2-11"><a aria-label="11"></a></span>
 <span id="cb2-12"><a aria-label="12"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(df, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> C)) <span class="sc">+</span></span>
 <span id="cb2-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb2-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">F</span>(x)), <span class="at">color =</span> <span class="st">"C"</span>) <span class="sc">+</span></span>
-<span id="cb2-15"><a aria-label="15"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
+<span id="cb2-15"><a aria-label="15"></a>    <span class="at">x =</span> <span class="st">"Input, x"</span>,</span>
+<span id="cb2-16"><a aria-label="16"></a>    <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"Antiderivative, "</span> <span class="sc">*</span> <span class="fu">F</span>(x)),</span>
+<span id="cb2-17"><a aria-label="17"></a>    <span class="at">color =</span> <span class="st">"C"</span></span>
+<span id="cb2-18"><a aria-label="18"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-antiderivatives-F" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig"><figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-antiderivatives-F-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Family of antiderivatives <span class="math inline">\(F(x) = x^3/3 + C\)</span>.

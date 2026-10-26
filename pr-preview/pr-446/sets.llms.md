@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:44:43 (PDT)
+Last modified: 2026-10-26 03:53:25 (PDT)
 
 > **NOTE:**
 >
@@ -50,7 +50,7 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Strict subset (proper subset))** A [set](#def-set) \\A\\ is a **strict subset** (also called a **proper subset**) of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
+> **Definition 4 (Strict subset, proper subset)** A [set](#def-set) \\A\\ is a **strict subset** (also called a **proper subset**) of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
 
 > **NOTE:**
 >
@@ -157,7 +157,7 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Collection of sets (family of sets))** A **collection of sets** (also called a **family of sets**) [\[7\]](#ref-wikipedia_family_of_sets) is a set whose elements are themselves sets.
+> **Definition 15 (Collection of sets, family of sets)** A **collection of sets** (also called a **family of sets**) [\[7\]](#ref-wikipedia_family_of_sets) is a set whose elements are themselves sets.
 
 > **NOTE:**
 >
@@ -289,27 +289,37 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 25 (Pairwise disjoint sets (disjoint, mutually disjoint))** Some [sets](#def-set) \\A_1, A_2, \ldots\\ (a list that may end or go on without end) are **pairwise disjoint** [\[14\]](#ref-wikipedia_disjoint_sets) (also called **disjoint** or **mutually disjoint**) when no two of them share an element:
+> **Definition 25 (Disjoint sets)** Two [sets](#def-set) \\A\\ and \\B\\ are **disjoint** if their [intersection](#def-intersection) is the [empty set](#def-empty-set):
+>
+> \\A \cap B = \emptyset\\
+
+> **NOTE:**
+>
+> **Example 16 (Two disjoint sets of die rolls)** For the die rolls \\D = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ ([sets of die rolls](#exm-set)), the sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\5, 6\right\\\mathclose{}}\\ are disjoint: no roll is in both. The sets \\{\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ are not, because \\2\\ is in both.
+
+> **NOTE:**
+>
+> **Definition 26 (Pairwise disjoint sets, mutually disjoint sets)** Some [sets](#def-set) \\A_1, A_2, \ldots\\ (a list that may end or go on without end) are **pairwise disjoint** [\[14\]](#ref-wikipedia_disjoint_sets) (also called **mutually disjoint**) when every two of them are [disjoint](#def-disjoint-sets):
 >
 > \\A_i \cap A_j = \emptyset \quad \text{for all } i \neq j\\
 
 > **NOTE:**
 >
-> **Example 16 (Low and high die rolls)** For the die rolls \\D = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ ([sets of die rolls](#exm-set)), the sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\5, 6\right\\\mathclose{}}\\ are pairwise disjoint: no roll is in both. The sets \\{\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\ are not, because \\2\\ is in both.
+> **Example 17 (Low, middle and high die rolls)** For the die rolls \\D = {\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}}\\ ([sets of die rolls](#exm-set)), the sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\, \\{\mathopen{}\left\\3, 4\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\5, 6\right\\\mathclose{}}\\ are [pairwise disjoint](#def-pairwise-disjoint): no roll is in more than one of them. The sets \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\, \\{\mathopen{}\left\\3, 4\right\\\mathclose{}}\\ and \\{\mathopen{}\left\\2, 5\right\\\mathclose{}}\\ are not, because \\2\\ is in both the first and the third.
 
 > **NOTE:**
 >
-> **Definition 26 (Ordered pair)** An **ordered pair** [\[15\]](#ref-wikipedia_ordered_pair) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
+> **Definition 27 (Ordered pair)** An **ordered pair** [\[15\]](#ref-wikipedia_ordered_pair) \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
 
 > **NOTE:**
 >
-> **Definition 27 (Cartesian product)** The **Cartesian product** [\[16\]](#ref-wikipedia_cartesian_product) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
+> **Definition 28 (Cartesian product)** The **Cartesian product** [\[16\]](#ref-wikipedia_cartesian_product) of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
 >
 > \\A \times B \stackrel{\text{def}}{=}{\mathopen{}\left\\(a, b) : a \in A \text{ and } b \in B\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
-> **Example 17 (Cartesian products)**  
+> **Example 18 (Cartesian products)**  
 >
 > - \\{\mathopen{}\left\\1, 2\right\\\mathclose{}} \times {\mathopen{}\left\\5, 6\right\\\mathclose{}} = {\mathopen{}\left\\(1, 5), (1, 6), (2, 5), (2, 6)\right\\\mathclose{}}\\. The pair \\(5, 1)\\ is not in it, because its first entry, \\5\\, is not in \\{\mathopen{}\left\\1, 2\right\\\mathclose{}}\\; so \\(1, 5) \ne (5, 1)\\.
 > - The results of rolling a die twice form \\{\mathopen{}\left\\1, \ldots, 6\right\\\mathclose{}} \times {\mathopen{}\left\\1, \ldots, 6\right\\\mathclose{}}\\, which has \\6 \cdot 6 = 36\\ elements, such as \\(3, 5)\\: a 3 on the first roll and a 5 on the second.
@@ -319,7 +329,7 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 28 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 29 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup {\mathopen{}\left\\\infty\right\\\mathclose{}}\\
 >
@@ -335,7 +345,7 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Example 18 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
+> **Example 19 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
 
 ## 4 Further reading
 

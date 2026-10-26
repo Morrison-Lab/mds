@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-23 02:44:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-26 03:53:25 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -470,7 +470,7 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 <section class="slide level2">
 
 <div id="exm-finite-additivity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span> (<a href="./sets.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span> (<a href="./functions.html#def-cardinality">cardinality</a>), for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{5, 6\right\}\mathclose{}}\)</span> are pairwise disjoint (<a href="./sets.html#exm-pairwise-disjoint">low and high die rolls</a>), and:</p>
+<p><span class="theorem-title"><strong>Example 7 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span> (<a href="./sets.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span> (<a href="./functions.html#def-cardinality">cardinality</a>), for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{5, 6\right\}\mathclose{}}\)</span> are pairwise disjoint (<a href="./sets.html#exm-pairwise-disjoint">low, middle and high die rolls</a>), and:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mu({\mathopen{}\left\{1, 2\right\}\mathclose{}} \cup {\mathopen{}\left\{5, 6\right\}\mathclose{}})
@@ -840,7 +840,7 @@ A_{n+1} &amp;= A_{n+2} \\
 <section class="slide level2">
 
 <div id="def-measure-zero" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Measure zero (null set))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#/def-measure-space">measure space</a>. A set <span class="math inline">\(A \in \mathcal{S}\)</span> has <strong>measure zero</strong> <span class="citation" data-cites="wikipedia_null_set"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span> (also called a <strong>null set</strong> for <span class="math inline">\(\mu\)</span>) if <span class="math inline">\(\mu(A) = 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Measure zero, null set)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#/def-measure-space">measure space</a>. A set <span class="math inline">\(A \in \mathcal{S}\)</span> has <strong>measure zero</strong> <span class="citation" data-cites="wikipedia_null_set"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span> (also called a <strong>null set</strong> for <span class="math inline">\(\mu\)</span>) if <span class="math inline">\(\mu(A) = 0\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1082,9 +1082,9 @@ A_2 &amp;= A_3 \\
 <section class="slide level2">
 
 <div id="def-absolutely-integrable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 26 (Absolutely integrable function (integrable function, absolute integrability))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#/def-measure-space">measure space</a>. A <a href="#/def-measurable-function">measurable</a> function <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>absolutely integrable</strong> with respect to <span class="math inline">\(\mu\)</span> (often just called <strong>integrable</strong>) if the integral of its <a href="./algebra-basics.html#def-absolute-value">absolute value</a> is finite:</p>
+<p><span class="theorem-title"><strong>Definition 26 (Absolutely integrable function, integrable function)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#/def-measure-space">measure space</a>. A <a href="#/def-measurable-function">measurable</a> function <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>absolutely integrable</strong> with respect to <span class="math inline">\(\mu\)</span> (often just called <strong>integrable</strong>) if the integral of its <a href="./algebra-basics.html#def-absolute-value">absolute value</a> is finite:</p>
 <p><span class="math display">\[\int_S \mathopen{}\left|f\right|\mathclose{} \, d\mu&lt; \infty\]</span></p>
-<p>The property itself is called <strong>absolute integrability</strong>.</p>
+<p>The property itself is called absolute integrability.</p>
 </div>
 </section>
 <section class="slide level2">

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:44:43 (PDT)
+Last modified: 2026-10-26 03:53:25 (PDT)
 
 ## 1 Polynomials
 
@@ -231,7 +231,7 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Infinite sum (series))** Let \\a_1, a_2, \ldots\\ be a sequence in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 18](#def-partial-sum)). The **infinite sum** (also called a **series**) [\[8\]](#ref-wikipedia_series_mathematics) \\\sum\_{i=1}^{\infty} a_i\\ is the limit of the partial sums:
+> **Definition 19 (Infinite sum, series)** Let \\a_1, a_2, \ldots\\ be a sequence in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 18](#def-partial-sum)). The **infinite sum** (also called a **series**) [\[8\]](#ref-wikipedia_series_mathematics) \\\sum\_{i=1}^{\infty} a_i\\ is the limit of the partial sums:
 >
 > \\\sum\_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim\_{n \to \infty} s_n\\
 >
@@ -586,11 +586,11 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 >     scene = list(
 >       xaxis = list(
 >         # type = "log",
->         title = "b"
+>         title = "First input, b"
 >       ),
 >       yaxis = list(
 >         # type = "log",
->         title = "c"
+>         title = "Second input, c"
 >       ),
 >       zaxis = list(
 >         # type = "log",
@@ -639,11 +639,11 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 >     scene = list(
 >       xaxis = list(
 >         # type = "log",
->         title = "b"
+>         title = "First input, b"
 >       ),
 >       yaxis = list(
 >         # type = "log",
->         title = "c"
+>         title = "Second input, c"
 >       ),
 >       zaxis = list(
 >         title = "outcome"

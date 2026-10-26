@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-23 02:44:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-26 03:53:25 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -377,12 +377,12 @@ c_1 &amp;= \cdots \\
 <section class="slide level2 scrollable">
 
 <div id="def-subspace" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Subspace (linear subspace, vector space, linear space))</strong></span> A set <span class="math inline">\(\mathcal{S}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is a <strong>subspace</strong> <span class="citation" data-cites="wikipedia_linear_subspace"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> of <span class="math inline">\(\mathbb{R}^p\)</span> if it is not empty and it is closed under vector addition and scalar multiplication:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Subspace, linear subspace)</strong></span> A set <span class="math inline">\(\mathcal{S}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is a <strong>subspace</strong> <span class="citation" data-cites="wikipedia_linear_subspace"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> of <span class="math inline">\(\mathbb{R}^p\)</span> if it is not empty and it is closed under vector addition and scalar multiplication:</p>
 <ol type="1">
 <li>if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{S}\)</span>, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{S}\)</span>;</li>
 <li>if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>, then <span class="math inline">\(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}\)</span>.</li>
 </ol>
-<p>A subspace is also called a <strong>linear subspace</strong>, a <strong>vector space</strong>, or a <strong>linear space</strong>.</p>
+<p>A subspace is also called a <strong>linear subspace</strong>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -752,7 +752,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 <p><span class="theorem-title"><strong>Example 16 (The dimensions of some subspaces)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\(\dim(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}) = 0\)</span>, by the convention in <a href="#/def-dimension" class="quarto-xref">Definition&nbsp;9</a>.</li>
-<li><span class="math inline">\(\dim(\mathbb{R}^2) = 2\)</span>, by <a href="#/exm-basis" class="quarto-xref">Example&nbsp;11</a>. More generally, <span class="math inline">\(\dim(\mathbb{R}^p) = p\)</span>: the indicator vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p\)</span> (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;15 in Vectors</a>) are linearly independent, since <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 + \cdots + c_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p = (c_1, \ldots, c_p)\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span> only if every <span class="math inline">\(c_i = 0\)</span>; and they span <span class="math inline">\(\mathbb{R}^p\)</span>, since any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = x_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 + \cdots + x_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p\)</span>.</li>
+<li><span class="math inline">\(\dim(\mathbb{R}^2) = 2\)</span>, by <a href="#/exm-basis" class="quarto-xref">Example&nbsp;11</a>. More generally, <span class="math inline">\(\dim(\mathbb{R}^p) = p\)</span>: the indicator vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p\)</span> (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;18 in Vectors</a>) are linearly independent, since <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 + \cdots + c_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p = (c_1, \ldots, c_p)\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\)</span> only if every <span class="math inline">\(c_i = 0\)</span>; and they span <span class="math inline">\(\mathbb{R}^p\)</span>, since any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = x_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 + \cdots + x_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p\)</span>.</li>
 <li>The line in <a href="#/exm-subspace" class="quarto-xref">Example&nbsp;3</a> has dimension <span class="math inline">\(1\)</span>: the single vector <span class="math inline">\((1, 2)\)</span> is linearly independent and spans the line.</li>
 <li>The plane <span class="math inline">\(z = 0\)</span> in <a href="#/exm-span" class="quarto-xref">Example&nbsp;6</a> has dimension <span class="math inline">\(2\)</span>, with basis <span class="math inline">\((1, 0, 0), (0, 1, 0)\)</span>.</li>
 </ul>

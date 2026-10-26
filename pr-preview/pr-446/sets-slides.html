@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-23 02:44:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-26 03:53:25 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -356,7 +356,7 @@
 <section class="slide level2">
 
 <div id="def-strict-subset" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Strict subset (proper subset))</strong></span> A <a href="#/def-set">set</a> <span class="math inline">\(A\)</span> is a <strong>strict subset</strong> (also called a <strong>proper subset</strong>) of a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \subsetneq B\)</span>, if <span class="math inline">\(A\)</span> is a <a href="#/def-subset">subset</a> of <span class="math inline">\(B\)</span> and <span class="math inline">\(A \neq B\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Strict subset, proper subset)</strong></span> A <a href="#/def-set">set</a> <span class="math inline">\(A\)</span> is a <strong>strict subset</strong> (also called a <strong>proper subset</strong>) of a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \subsetneq B\)</span>, if <span class="math inline">\(A\)</span> is a <a href="#/def-subset">subset</a> of <span class="math inline">\(B\)</span> and <span class="math inline">\(A \neq B\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -505,7 +505,7 @@
 <section class="slide level2">
 
 <div id="def-collection" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Collection of sets (family of sets))</strong></span> A <strong>collection of sets</strong> (also called a <strong>family of sets</strong>) <span class="citation" data-cites="wikipedia_family_of_sets"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is a set whose elements are themselves sets.</p>
+<p><span class="theorem-title"><strong>Definition 15 (Collection of sets, family of sets)</strong></span> A <strong>collection of sets</strong> (also called a <strong>family of sets</strong>) <span class="citation" data-cites="wikipedia_family_of_sets"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is a set whose elements are themselves sets.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -710,34 +710,47 @@ A^c \cup B^c &amp;= {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}} \cup {\matho
 </section>
 <section class="slide level2">
 
+<div id="def-disjoint-sets" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 25 (Disjoint sets)</strong></span> Two <a href="#/def-set">sets</a> <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <strong>disjoint</strong> if their <a href="#/def-intersection">intersection</a> is the <a href="#/def-empty-set">empty set</a>:</p>
+<p><span class="math display">\[A \cap B = \emptyset\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-disjoint-sets" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (Two disjoint sets of die rolls)</strong></span> For the die rolls <span class="math inline">\(D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span> (<a href="#/exm-set">sets of die rolls</a>), the sets <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{5, 6\right\}\mathclose{}}\)</span> are disjoint: no roll is in both. The sets <span class="math inline">\({\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-pairwise-disjoint" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 25 (Pairwise disjoint sets (disjoint, mutually disjoint))</strong></span> Some <a href="#/def-set">sets</a> <span class="math inline">\(A_1, A_2, \ldots\)</span> (a list that may end or go on without end) are <strong>pairwise disjoint</strong> <span class="citation" data-cites="wikipedia_disjoint_sets"><a href="#/references" role="doc-biblioref" onclick="">[14]</a></span> (also called <strong>disjoint</strong> or <strong>mutually disjoint</strong>) when no two of them share an element:</p>
+<p><span class="theorem-title"><strong>Definition 26 (Pairwise disjoint sets, mutually disjoint sets)</strong></span> Some <a href="#/def-set">sets</a> <span class="math inline">\(A_1, A_2, \ldots\)</span> (a list that may end or go on without end) are <strong>pairwise disjoint</strong> <span class="citation" data-cites="wikipedia_disjoint_sets"><a href="#/references" role="doc-biblioref" onclick="">[14]</a></span> (also called <strong>mutually disjoint</strong>) when every two of them are <a href="#/def-disjoint-sets">disjoint</a>:</p>
 <p><span class="math display">\[A_i \cap A_j = \emptyset \quad \text{for all } i \neq j\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-pairwise-disjoint" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span> (<a href="#/exm-set">sets of die rolls</a>), the sets <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{5, 6\right\}\mathclose{}}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\({\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
+<p><span class="theorem-title"><strong>Example 17 (Low, middle and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span> (<a href="#/exm-set">sets of die rolls</a>), the sets <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span>, <span class="math inline">\({\mathopen{}\left\{3, 4\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{5, 6\right\}\mathclose{}}\)</span> are <a href="#/def-pairwise-disjoint">pairwise disjoint</a>: no roll is in more than one of them. The sets <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span>, <span class="math inline">\({\mathopen{}\left\{3, 4\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{2, 5\right\}\mathclose{}}\)</span> are not, because <span class="math inline">\(2\)</span> is in both the first and the third.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-ordered-pair" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 26 (Ordered pair)</strong></span> An <strong>ordered pair</strong> <span class="citation" data-cites="wikipedia_ordered_pair"><a href="#/references" role="doc-biblioref" onclick="">[15]</a></span> <span class="math inline">\((a, b)\)</span> is a pair of objects listed in order, with <span class="math inline">\(a\)</span> first and <span class="math inline">\(b\)</span> second; two ordered pairs are equal, <span class="math inline">\((a, b) = (c, d)\)</span>, when <span class="math inline">\(a = c\)</span> and <span class="math inline">\(b = d\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 27 (Ordered pair)</strong></span> An <strong>ordered pair</strong> <span class="citation" data-cites="wikipedia_ordered_pair"><a href="#/references" role="doc-biblioref" onclick="">[15]</a></span> <span class="math inline">\((a, b)\)</span> is a pair of objects listed in order, with <span class="math inline">\(a\)</span> first and <span class="math inline">\(b\)</span> second; two ordered pairs are equal, <span class="math inline">\((a, b) = (c, d)\)</span>, when <span class="math inline">\(a = c\)</span> and <span class="math inline">\(b = d\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-cartesian-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 27 (Cartesian product)</strong></span> The <strong>Cartesian product</strong> <span class="citation" data-cites="wikipedia_cartesian_product"><a href="#/references" role="doc-biblioref" onclick="">[16]</a></span> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \times B\)</span>, is the set of ordered pairs whose first entry is in <span class="math inline">\(A\)</span> and whose second entry is in <span class="math inline">\(B\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 28 (Cartesian product)</strong></span> The <strong>Cartesian product</strong> <span class="citation" data-cites="wikipedia_cartesian_product"><a href="#/references" role="doc-biblioref" onclick="">[16]</a></span> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \times B\)</span>, is the set of ordered pairs whose first entry is in <span class="math inline">\(A\)</span> and whose second entry is in <span class="math inline">\(B\)</span>:</p>
 <p><span class="math display">\[A \times B \stackrel{\text{def}}{=}{\mathopen{}\left\{(a, b) : a \in A \text{ and } b \in B\right\}\mathclose{}}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-cartesian-product" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (Cartesian products)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 18 (Cartesian products)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}} \times {\mathopen{}\left\{5, 6\right\}\mathclose{}} = {\mathopen{}\left\{(1, 5), (1, 6), (2, 5), (2, 6)\right\}\mathclose{}}\)</span>. The pair <span class="math inline">\((5, 1)\)</span> is not in it, because its first entry, <span class="math inline">\(5\)</span>, is not in <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span>; so <span class="math inline">\((1, 5) \ne (5, 1)\)</span>.</li>
 <li>The results of rolling a die twice form <span class="math inline">\({\mathopen{}\left\{1, \ldots, 6\right\}\mathclose{}} \times {\mathopen{}\left\{1, \ldots, 6\right\}\mathclose{}}\)</span>, which has <span class="math inline">\(6 \cdot 6 = 36\)</span> elements, such as <span class="math inline">\((3, 5)\)</span>: a 3 on the first roll and a 5 on the second.</li>
@@ -748,7 +761,7 @@ A^c \cup B^c &amp;= {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}} \cup {\matho
 <section id="extended-non-negative-real-numbers" class="slide level2" data-number="3">
 <h2><span class="header-section-number">3</span> Extended non-negative real numbers</h2>
 <div id="def-extended-nonneg-reals" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 28 (Extended non-negative real numbers)</strong></span> The <strong>extended non-negative real numbers</strong>, written <span class="math inline">\([0, \infty]\)</span>, are the non-negative real numbers together with an extra element <span class="math inline">\(\infty\)</span> that is greater than every real number:</p>
+<p><span class="theorem-title"><strong>Definition 29 (Extended non-negative real numbers)</strong></span> The <strong>extended non-negative real numbers</strong>, written <span class="math inline">\([0, \infty]\)</span>, are the non-negative real numbers together with an extra element <span class="math inline">\(\infty\)</span> that is greater than every real number:</p>
 <p><span class="math display">\[[0, \infty] \stackrel{\text{def}}{=}[0, \infty) \cup {\mathopen{}\left\{\infty\right\}\mathclose{}}\]</span></p>
 <p>Addition extends to <span class="math inline">\([0, \infty]\)</span> by setting</p>
 <p><span class="math display">\[
@@ -769,7 +782,7 @@ x + \infty &amp;= \infty + x \\
 <section class="slide level2">
 
 <div id="exm-extended-nonneg-reals" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (Adding with <span class="math inline">\(\infty\)</span>)</strong></span> In <span class="math inline">\([0, \infty]\)</span>, <span class="math inline">\(2 + 3 = 5\)</span> as usual, while <span class="math inline">\(2 + \infty = \infty\)</span> and <span class="math inline">\(\infty + \infty = \infty\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 19 (Adding with <span class="math inline">\(\infty\)</span>)</strong></span> In <span class="math inline">\([0, \infty]\)</span>, <span class="math inline">\(2 + 3 = 5\)</span> as usual, while <span class="math inline">\(2 + \infty = \infty\)</span> and <span class="math inline">\(\infty + \infty = \infty\)</span>.</p>
 </div>
 </section>
 <section id="sec-further-reading" class="slide level2" data-number="4">

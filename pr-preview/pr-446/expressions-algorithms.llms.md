@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:44:43 (PDT)
+Last modified: 2026-10-26 03:53:25 (PDT)
 
 > **NOTE:**
 >
@@ -24,15 +24,15 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Closed-form expression (formula))** A **closed-form expression** (or **formula**) [\[2\]](#ref-wikipedia_closed_form_expression) is an [expression](#def-expression) built from a list of accepted [functions](functions.llms.md#def-function), such as [powers](algebra-basics.llms.md#def-power), roots, exponentials, logarithms, trigonometric functions. The accepted list is a convention. A source states it when it matters.
+> **Definition 2 (Closed-form expression (formula))** A **closed-form expression** (or **formula**) [\[2\]](#ref-wikipedia_closed_form_expression) is an [expression](#def-expression) built from constants and variables using a finite number of operations from a list of accepted [functions](functions.llms.md#def-function), such as [powers](algebra-basics.llms.md#def-power), roots, exponentials, logarithms, and trigonometric functions. Which functions are accepted is a convention, and a source states it when the boundary matters.
 
 > **NOTE:**
 >
-> **Example 2 (The quadratic formula)** For \\a \neq 0\\ with \\b^2 - 4 a c \ge 0\\, a root of \\a x^2 + b x + c = 0\\ is
+> **Example 2 (The quadratic formula)** For \\a \neq 0\\ with \\b^2 - 4 a c \ge 0\\, the roots of \\a x^2 + b x + c = 0\\ are
 >
-> \\ x = \frac{-b + \sqrt{b^2 - 4 a c}}{2 a}, \\
+> \\ x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a}, \\
 >
-> a [closed-form expression](#def-closed-form-expression) in \\a\\, \\b\\, \\c\\. The root of \\x - \cos x = 0\\ is a [counterexample](proof-writing.llms.md#def-counterexample): it has no known closed-form expression.
+> where the right-hand side is a [closed-form expression](#def-closed-form-expression) in \\a\\, \\b\\, and \\c\\. By contrast, no closed-form expression is known for the root of \\x - \cos x = 0\\.
 
 > **NOTE:**
 >
@@ -40,13 +40,13 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Example 3 (Least squares versus logistic regression)** Minimizing the [squared-error](vector-calculus.llms.md#def-squared-error) cost of a [linear](algebra-exponentials.llms.md#def-linear-function) model over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ gives the [normal equations](linear-algebra-projections.llms.md#def-normal-equations) \\{D}^{\top} D \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}= {D}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\. When \\{D}^{\top} D\\ is [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse), the unique minimizer is the [closed-form expression](#def-closed-form-expression)
+> **Example 3 (Least squares versus logistic regression)** Minimizing the [squared-error](vector-calculus.llms.md#def-squared-error) cost of a [linear](algebra-exponentials.llms.md#def-linear-function) model over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ gives the [normal equations](linear-algebra-projections.llms.md#def-normal-equations) \\{D}^{\top} D \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}= {D}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\. When \\{D}^{\top} D\\ is [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse), the unique minimizer is
 >
 > \\ \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({D}^{\top} D\right)\mathclose{}}^{-1} {D}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}, \\
 >
-> so [least squares](linear-algebra-projections.llms.md#def-least-squares) has a [closed-form solution](#def-closed-form-solution).
+> whose right-hand side is a [closed-form expression](#def-closed-form-expression), so [least squares](linear-algebra-projections.llms.md#def-least-squares) has a [closed-form solution](#def-closed-form-solution).
 >
-> The minimizer over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ of the logistic regression cost is a well-defined vector, but no closed-form expression for it is known. An iterative [algorithm](#def-algorithm) approximates it.
+> For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, so that problem has no known closed-form solution. When a minimizer exists, an [iterative method](optimization.llms.md#def-iterative-method) approximates it.
 
 > **NOTE:**
 >
@@ -76,7 +76,11 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Algorithm)** An **algorithm** [\[4\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm *computes* a [function](functions.llms.md#def-function): for each input it returns the function’s value at that input.
+> **Definition 5 (Algorithm)** An **algorithm** [\[4\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.
+
+> **NOTE:**
+>
+> **Definition 6 (Computes)** An [algorithm](#def-algorithm) **computes** a [function](functions.llms.md#def-function) when, for each [input](functions.llms.md#def-argument), it returns the function’s [value](functions.llms.md#def-value) at that input.
 
 > **NOTE:**
 >
@@ -84,7 +88,11 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (How functions, expressions and algorithms relate). The three ideas fit together this way:
+> *Remark 2* (Procedures that are not algorithms here). By the definition of an [algorithm](#def-algorithm), every algorithm [computes](#def-computes) some [function](functions.llms.md#def-function). That holds because an algorithm has unambiguous steps and halts on every valid [input](functions.llms.md#def-argument). A procedure that makes random choices can return different [values](functions.llms.md#def-value) for the same input. A procedure that never halts returns no [value](functions.llms.md#def-value) for some inputs. Neither computes a function, and neither is an algorithm in this sense, although some texts call them [algorithms](#def-algorithm).
+
+> **NOTE:**
+>
+> *Remark 3* (How functions, expressions and algorithms relate). The three ideas fit together this way:
 >
 > - A function is the input-output relationship.
 > - An [expression](#def-expression) denotes a function, and many expressions denote the same one.
@@ -94,11 +102,61 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
+> *Remark 4* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
 
 > **NOTE:**
 >
 > **Example 6 (A minimizer with no known formula)** The minimizer \\\arg \min\_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\\ is well defined, because \\x - \cos x\\ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
+
+## 3 Exercises
+
+> **NOTE:**
+>
+> **Exercise 1 (Is an expression an algorithm?)** How do a [function](functions.llms.md#def-function), an [expression](#def-expression) and an [algorithm](#def-algorithm) differ?
+
+> **NOTE:**
+>
+> *Solution 1*. A [function](functions.llms.md#def-function) is the input-output relationship. An [expression](#def-expression) is a string of symbols that denotes a function, and many [expressions](#def-expression) denote the same one. An [algorithm](#def-algorithm) is a [finite](functions.llms.md#def-finite-sequence) list of steps that computes a function, and many [algorithms](#def-algorithm) compute the same one.
+
+> **NOTE:**
+>
+> **Exercise 2 (Is an expression an algorithm? (part 2))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
+>
+> Which of the three does \\a x^2 + b x + c\\ name: a [function](functions.llms.md#def-function), an [expression](#def-expression) or an [algorithm](#def-algorithm)?
+
+> **NOTE:**
+>
+> *Solution 2*. It is an [expression](#def-expression): it names a [function](functions.llms.md#def-function), and it is not an [algorithm](#def-algorithm).
+
+> **NOTE:**
+>
+> **Exercise 3 (Is an expression an algorithm? (part 3))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
+>
+> Does the [expression](#def-expression) \\a x^2 + b x + c\\ tell you which arithmetic steps to carry out?
+
+> **NOTE:**
+>
+> *Solution 3*. Not by itself. The [expression](#def-expression) says *what* to compute, not *how* to compute it. Once \\a\\, \\b\\, \\c\\ and \\x\\ are known, evaluating its [parse tree](#def-parse-tree) from the leaves up is an [algorithm](#def-algorithm).
+
+> **NOTE:**
+>
+> **Exercise 4 (Is an expression an algorithm? (part 4))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
+>
+> What do the rules of precedence (PEMDAS) contribute to the [expression](#def-expression) \\a x^2 + b x + c\\?
+
+> **NOTE:**
+>
+> *Solution 4*. Precedence resolves how the symbols group: \\a x^2 + b x + c\\ groups into three parts added together, with \\x^2\\ evaluated before the multiplication by \\a\\, and that grouping is a [tree](#def-parse-tree). Precedence is a rule for reading the [expression](#def-expression), not a step in an [algorithm](#def-algorithm) that evaluates it.
+
+> **NOTE:**
+>
+> **Exercise 5 (Is an expression an algorithm? (part 5))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
+>
+> Write a second [expression](#def-expression) that denotes the same [function](functions.llms.md#def-function) as \\a x^2 + b x + c\\ and needs fewer multiplications.
+
+> **NOTE:**
+>
+> *Solution 5*. \\(a x + b)\\x + c\\, Horner’s form. It uses two multiplications and two additions, where the first form, with \\x^2\\ computed as \\x \cdot x\\, uses three multiplications and two additions. The two [expressions](#def-expression) denote the same [function](functions.llms.md#def-function) and describe different [algorithms](#def-algorithm).
 
 Back to top
 

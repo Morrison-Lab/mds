@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:44:43 (PDT)
+Last modified: 2026-10-26 03:53:25 (PDT)
 
 ## 1 Rank
 
@@ -63,12 +63,12 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Subspace (linear subspace, vector space, linear space))** A set \\\mathcal{S}\\ of vectors in \\\mathbb{R}^p\\ is a **subspace** [\[4\]](#ref-wikipedia_linear_subspace) of \\\mathbb{R}^p\\ if it is not empty and it is closed under vector addition and scalar multiplication:
+> **Definition 4 (Subspace, linear subspace)** A set \\\mathcal{S}\\ of vectors in \\\mathbb{R}^p\\ is a **subspace** [\[4\]](#ref-wikipedia_linear_subspace) of \\\mathbb{R}^p\\ if it is not empty and it is closed under vector addition and scalar multiplication:
 >
 > 1.  if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{S}\\, then \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \in \mathcal{S}\\;
 > 2.  if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\ and \\c \in \mathbb{R}\\, then \\c \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} \in \mathcal{S}\\.
 >
-> A subspace is also called a **linear subspace**, a **vector space**, or a **linear space**.
+> A subspace is also called a **linear subspace**.
 
 > **NOTE:**
 >
@@ -297,7 +297,7 @@ Last modified: 2026-10-23 02:44:43 (PDT)
 > **Example 16 (The dimensions of some subspaces)**  
 >
 > - \\\dim(\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}) = 0\\, by the convention in [Definition 9](#def-dimension).
-> - \\\dim(\mathbb{R}^2) = 2\\, by [Example 11](#exm-basis). More generally, \\\dim(\mathbb{R}^p) = p\\: the indicator vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\ ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) are linearly independent, since \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + \cdots + c_p \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p = (c_1, \ldots, c_p)\\, which is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\ only if every \\c_i = 0\\; and they span \\\mathbb{R}^p\\, since any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = x_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + \cdots + x_p \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\.
+> - \\\dim(\mathbb{R}^2) = 2\\, by [Example 11](#exm-basis). More generally, \\\dim(\mathbb{R}^p) = p\\: the indicator vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1, \ldots, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\ ([Definition 18 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) are linearly independent, since \\c_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + \cdots + c_p \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p = (c_1, \ldots, c_p)\\, which is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_p\\ only if every \\c_i = 0\\; and they span \\\mathbb{R}^p\\, since any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = x_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 + \cdots + x_p \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_p\\.
 > - The line in [Example 3](#exm-subspace) has dimension \\1\\: the single vector \\(1, 2)\\ is linearly independent and spans the line.
 > - The plane \\z = 0\\ in [Example 6](#exm-span) has dimension \\2\\, with basis \\(1, 0, 0), (0, 1, 0)\\.
 
