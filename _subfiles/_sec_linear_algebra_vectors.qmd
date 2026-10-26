@@ -63,7 +63,13 @@ reticulate::py_require("numpy")
 
 {{< include mds/_subfiles/linear-algebra/_def-ones-vector.qmd >}}
 
-{{< include mds/_subfiles/linear-algebra/_note-def-ones-vector.qmd >}}
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-sum-of-elements.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-sum-dot-ones.qmd >}}
 
 {{< slidebreak >}}
 

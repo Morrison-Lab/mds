@@ -1,0 +1,33 @@
+:::{#def-sum-of-elements}
+#### Sum of the elements of a vector
+
+The **sum of the elements** of a vector $\vx \in \reals^p$
+is the [sum](algebra.qmd#def-summation) of its entries:
+
+$$
+\sumof{\vx} \eqdef \sumip x_i.
+$$
+
+In words, $\sumof{\vx}$ is the entries of $\vx$ added together.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-sum-of-elements}
+#### The sum of the elements of a vector with three entries
+
+For $\vx = (2, -1, 5)$,
+
+$$
+\ba
+\sumof{\vx}
+&= 2 + (-1) + 5
+&& \text{(definition of the sum of the elements, with } p = 3 \text{)}
+\\
+&= 6.
+&& \text{(add)}
+\ea
+$$
+
+:::

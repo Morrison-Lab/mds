@@ -56,6 +56,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-level-curve.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_fig-gradient-explorer.qmd >}}
 
 {{< slidebreak >}}

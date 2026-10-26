@@ -1,0 +1,8 @@
+:::{#def-weight}
+#### Weight
+
+The [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$ of a [weighted sum](#def-weighted-sum) $\sumto{i}{k} w_i a_i$
+are called its **weights**.
+The weight $w_i$ says how much $a_i$ counts.
+
+:::

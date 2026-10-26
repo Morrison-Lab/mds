@@ -60,7 +60,7 @@ $$
 \\
 &= \sumto{i}{k-1} c_i \vecf{v}_i
  - \sumto{i}{k-1} \frac{c_i v_{i,p}}{v_{k,p}}\,\vecf{v}_k
-&& \text{(distribute each } c_i \text{, and split the sum)}
+&& \text{(distribute each } c_i \text{, and distribute the sum over the difference)}
 \\
 &= c_1 \vecf{v}_1 + \cdots + c_{k-1} \vecf{v}_{k-1}
  - \paren{\sumto{i}{k-1} \frac{c_i v_{i,p}}{v_{k,p}}}\,\vecf{v}_k,

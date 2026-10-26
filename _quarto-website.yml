@@ -2,7 +2,12 @@ project:
   type: website
   output-dir: _site
   # Writes dependency-graph.json: the prerequisite graph of the definitions and results.
-  pre-render: python3 tools/build_dependency_graph.py --pages . --site mds --out dependency-graph.json
+  # Then, on a pull request, drops the PDF handouts and Word files from the working
+  # copy unless it carries the `preview:pdf` or `preview:docx` label, since they take
+  # most of the render time.
+  pre-render:
+    - python3 tools/build_dependency_graph.py --pages . --site mds --out dependency-graph.json
+    - python3 tools/skip_pdf_in_previews.py
   resources:
     - dependency-graph.js
     - dependency-graph.json
@@ -49,6 +54,7 @@ website:
           - sets.qmd
           - functions.qmd
           - relations.qmd
+          - growth-rates.qmd
           - expressions-algorithms.qmd
           - indicator-functions.qmd
       - text: "Algebra"
@@ -115,6 +121,7 @@ website:
           - sets.qmd
           - functions.qmd
           - relations.qmd
+          - growth-rates.qmd
           - expressions-algorithms.qmd
           - indicator-functions.qmd
       - section: "Algebra"
@@ -281,7 +288,6 @@ format:
     df-print: tibble
     prefer-html: true
   revealjs:
-    output-file: "{stem}-slides.html"
     search: false # decks duplicate the HTML pages, so the search indexes only the HTML format
     theme: [simple, styles-reveal.scss]
     include-in-header: qwt-reveal-toggle.html

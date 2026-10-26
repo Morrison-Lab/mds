@@ -1,5 +1,5 @@
 :::{#def-linear-map}
-#### Linear map (linear transformation, linear function)
+#### Linear map, linear transformation, linear function
 
 A [function](functions.qmd#def-function) $f: \reals^p \to \reals^m$ is a **linear map**
 [@wikipedia_linear_map]
