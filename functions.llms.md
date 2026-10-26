@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-25 18:01:14 (PDT)
+Last modified: 2026-10-26 02:21:32 (PDT)
 
 > **NOTE:**
 >
@@ -107,7 +107,11 @@ Last modified: 2026-10-25 18:01:14 (PDT)
 >       "preimage is empty" = "dashed"
 >     )
 >   ) +
->   ggplot2::labs(x = "a (the roll)", y = "f(a) = 2a", linetype = NULL) +
+>   ggplot2::labs(
+>     x = "Input, a (the roll)",
+>     y = "Output, f(a) = 2a",
+>     linetype = NULL
+>   ) +
 >   ggplot2::theme_minimal() +
 >   ggplot2::theme(legend.position = "bottom")
 >
@@ -239,7 +243,11 @@ Last modified: 2026-10-25 18:01:14 (PDT)
 >   ggplot2::scale_colour_manual(
 >     values = c("graph of f" = "#0072B2", "image of f" = "#D55E00")
 >   ) +
->   ggplot2::labs(x = "a (the roll)", y = "f(a) = 2a", colour = NULL) +
+>   ggplot2::labs(
+>     x = "Input, a (the roll)",
+>     y = "Output, f(a) = 2a",
+>     colour = NULL
+>   ) +
 >   ggplot2::theme_minimal() +
 >   ggplot2::theme(legend.position = "bottom")
 >
@@ -288,7 +296,7 @@ Last modified: 2026-10-25 18:01:14 (PDT)
 >     nudge_x = 0.35,
 >     nudge_y = 0.4
 >   ) +
->   ggplot2::labs(x = "a", y = "f(a) = a^2") +
+>   ggplot2::labs(x = "Input, a", y = "Output, f(a) = a^2") +
 >   ggplot2::theme_minimal()
 >
 > if (knitr::is_html_output()) {
@@ -385,7 +393,7 @@ Last modified: 2026-10-25 18:01:14 (PDT)
 >     nudge_y = 0.5
 >   ) +
 >   ggplot2::scale_colour_manual(values = c("#0072B2", "#D55E00")) +
->   ggplot2::labs(x = "x", y = "value", colour = NULL) +
+>   ggplot2::labs(x = "Input, x", y = "Output, value", colour = NULL) +
 >   ggplot2::theme_minimal() +
 >   ggplot2::theme(legend.position = "bottom")
 >
