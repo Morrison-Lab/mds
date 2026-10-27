@@ -28,7 +28,8 @@ and $(w - 2)^2 \ge 0$, so $f(w) \ge 3 = f(2)$ for every $w$.
 Equivalently, the derivative is negative below $w = 2$ and positive above it,
 so the function falls into that point and rises out of it.
 
-**3.** At $w = 1$ the derivative is $2(1) - 4 = -2$, so $f$ is falling there.
+**3.** At $w = 1$ the derivative is $2(1) - 4 = -2$,
+so $f$ is falling there.
 
 **4.** With $\smallconst = 0.01$, the [linear approximation](calculus.qmd#eq-linear-approx) predicts a change of
 $(0.01)(-2) = -0.02$, from
@@ -54,7 +55,8 @@ f(1.01)
 $$
 
 a change of $-0.0199$.
-The prediction is off by $0.0001$, which is $\smallconst^2$:
+
+**6.** The prediction is off by $0.0001$, which is $\smallconst^2$:
 the linear approximation drops everything of that order and smaller,
 so halving the step quarters the error.
 That trade is the whole bargain of [gradient descent](optimization.qmd#def-gradient-descent),

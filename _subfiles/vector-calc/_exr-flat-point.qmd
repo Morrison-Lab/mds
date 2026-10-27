@@ -10,6 +10,7 @@ Let $f(w) = w^2 - 4w + 7$.
     of the values of $f$.
 3.  Evaluate the [derivative](calculus.qmd#def-derivative) at $w = 1$.
 4.  Use the [linear approximation](calculus.qmd#eq-linear-approx) to predict $f(1.01)$.
-5.  Compute $f(1.01)$ exactly, and compare it with the prediction.
+5.  Compute $f(1.01)$ exactly.
+6.  Compare the exact value with the prediction.
 
 :::
