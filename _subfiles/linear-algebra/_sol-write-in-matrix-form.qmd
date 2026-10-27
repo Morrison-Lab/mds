@@ -1,13 +1,13 @@
 ::: {#sol-write-in-matrix-form}
 
-Read the coefficients straight off the rule.
+**1.** Read the coefficients straight off the rule.
 There are three inputs, so $p = 3$:
 
 $$\vec w = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 \qquad b = -30$$
 
 and the rule is $f(\vx) = \vec w\' \vx + b$.
-For the patient,
+**2.** For the patient,
 
 $$\vx = \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 

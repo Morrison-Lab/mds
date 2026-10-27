@@ -4,19 +4,23 @@
 
 1.  Replace $x$ by each element of $A$ in turn, and add the results:
 
+    $$\sum_{x \in A} f(x) = f(-1) + f(2) + f(5)$$
+
+2.  Evaluate each term and add:
+
     $$
     \ba
-    \sum_{x \in A} f(x)
-    &= f(-1) + f(2) + f(5)
-    \\ &= (-1)^2 + 2^2 + 5^2
+    f(-1) + f(2) + f(5)
+    &= (-1)^2 + 2^2 + 5^2
     \\ &= 1 + 4 + 25
     \\ &= 30
     \ea
     $$
 
-2.  In the order $5, -1, 2$, the terms are $25$, $1$ and $4$.
+3.  In the order $5, -1, 2$, the terms are $25$, $1$ and $4$.
     Their total is $25 + 1 + 4 = 30$.
-    The total is the same,
+
+4.  The total is the same,
     because addition does not depend on the order of the terms.
 
 :::
@@ -29,11 +33,14 @@
 
 1.  Replace $x$ by each element of $A$ in turn, and add the results:
 
+    $$\sum_{x \in A} f(x) = f(-1) + f(2) + f(5)$$
+
+2.  Evaluate each term and add:
+
     $$
     \ba
-    \sum_{x \in A} f(x)
-    &= f(-1) + f(2) + f(5)
-    \\ &= (-1)^2 + 2^2 + 5^2
+    f(-1) + f(2) + f(5)
+    &= (-1)^2 + 2^2 + 5^2
     \\ &= 1 + 4 + 25
     \\ &= 30
     \ea
@@ -45,9 +52,10 @@
 
 :::{.solution}
 
-2.  In the order $5, -1, 2$, the terms are $25$, $1$ and $4$.
+3.  In the order $5, -1, 2$, the terms are $25$, $1$ and $4$.
     Their total is $25 + 1 + 4 = 30$.
-    The total is the same,
+
+4.  The total is the same,
     because addition does not depend on the order of the terms.
 
 :::
