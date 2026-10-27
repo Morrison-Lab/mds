@@ -6,8 +6,11 @@ Evaluating the tree of $a x^2 + b x + c$, with $x^2$ computed as $x \cdot x$,
 takes three multiplications and two additions.
 Evaluating the tree of Horner's form $(a x + b)\,x + c$
 takes two multiplications and two additions.
-The code evaluates both at $a = 2$, $b = -3$, $c = 5$ and $x = 1.5$.
-They are the same function, so the two [values](functions.qmd#def-value) must agree.
+The code evaluates both at $a = 2$, $b = -3$, $c = 5$ and $x = 1.5$,
+and names each intermediate result.
+(It calls the constant `c0`, because `c` is a built-in function in R.)
+The two [algorithms](#def-algorithm) [compute](#def-computes) the same function,
+so the two [values](functions.qmd#def-value) must agree.
 
 ::: {.panel-tabset}
 
@@ -20,9 +23,15 @@ a <- 2
 b <- -3
 c0 <- 5
 x <- 1.5
-expanded <- a * x * x + b * x + c0 # 3 multiplications, 2 additions
-horner <- (a * x + b) * x + c0 # 2 multiplications, 2 additions
-print(c(expanded, horner))
+# Expanded form: 3 multiplications, 2 additions
+square_term <- a * x * x
+linear_term <- b * x
+expanded <- square_term + linear_term + c0
+# Horner's form: 2 multiplications, 2 additions
+inner <- a * x + b
+horner <- inner * x + c0
+c(square_term, linear_term, expanded)
+c(inner, horner)
 ```
 
 ### Python
@@ -30,14 +39,25 @@ print(c(expanded, horner))
 ```{python}
 #| label: two-algorithms-python
 #| code-fold: false
-a, b, c0, x = 2, -3, 5, 1.5
-expanded = a * x * x + b * x + c0  # 3 multiplications, 2 additions
-horner = (a * x + b) * x + c0  # 2 multiplications, 2 additions
-print(expanded, horner)
+a = 2
+b = -3
+c0 = 5
+x = 1.5
+# Expanded form: 3 multiplications, 2 additions
+square_term = a * x * x
+linear_term = b * x
+expanded = square_term + linear_term + c0
+# Horner's form: 2 multiplications, 2 additions
+inner = a * x + b
+horner = inner * x + c0
+print(square_term, linear_term, expanded)
+print(inner, horner)
 ```
 
 :::
 
-Both [algorithms](#def-algorithm) give $`r horner`$, by different steps.
+The expanded form adds `{r} square_term`, `{r} linear_term` and `{r} c0` to reach `{r} expanded`.
+Horner's form multiplies `{r} inner` by `{r} x` and adds `{r} c0` to reach `{r} horner`.
+Different steps give the same value.
 
 :::
