@@ -7,8 +7,8 @@ takes three multiplications and two additions.
 Evaluating the tree of Horner's form $(a x + b)\,x + c$
 takes two multiplications and two additions.
 The code evaluates both at $a = 2$, $b = -3$, $c = 5$ and $x = 1.5$,
-and names each intermediate result.
-(It calls the constant `c0`, because `c` is a built-in function in R.)
+and gives each partial sum and product a name.
+(It calls $c$ `c0`, because `c` is a built-in function in R.)
 The two [algorithms](#def-algorithm) [compute](#def-computes) the same function,
 so the two [values](functions.qmd#def-value) must agree.
 
@@ -58,6 +58,6 @@ print(inner, horner)
 
 The expanded form adds `{r} square_term`, `{r} linear_term` and `{r} c0` to reach `{r} expanded`.
 Horner's form multiplies `{r} inner` by `{r} x` and adds `{r} c0` to reach `{r} horner`.
-Different steps give the same value.
+Different steps give the same [value](functions.qmd#def-value).
 
 :::
