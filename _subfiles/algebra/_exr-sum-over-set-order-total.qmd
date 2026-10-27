@@ -2,7 +2,7 @@
 
 #### Does the order change the total?
 
-Say whether the total in @exr-sum-over-set-reorder
+Say whether the total in @exr-sum-over-set-reorder-total
 is the same as the total in @exr-sum-over-set-value.
 
 :::

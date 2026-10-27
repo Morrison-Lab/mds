@@ -1,15 +1,16 @@
 :::{#sol-flat-point-minimum}
 
-Evaluate $f$ there:
+The [flat point](calculus-derivatives.qmd#def-flat-point) is $w = 2$, from @sol-flat-point-find.
+Evaluating $f$ there gives
 
 $$
 \begin{aligned}
 f(2) &= 4 - 8 + 7 \\
-&= 3
+&= 3.
 \end{aligned}
 $$
 
-is the minimum of the values of $f$.
+This is the [minimum](algebra.qmd#def-minimum) of the [values](functions.qmd#def-value) of $f$.
 Completing the square, $f(w) = (w - 2)^2 + 3$,
 since
 

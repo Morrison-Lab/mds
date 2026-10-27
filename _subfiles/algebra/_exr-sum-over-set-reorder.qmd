@@ -1,9 +1,9 @@
 :::{#exr-sum-over-set-reorder}
 
-#### Add the terms in a different order
+#### List the terms in a different order
 
 In the setting of @exr-sum-over-set,
 list the elements of $A$ in a different order,
-and add up the same terms in that order.
+and write the [term](algebra-sums.qmd#def-term) for each element in that order.
 
 :::
