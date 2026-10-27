@@ -29,7 +29,8 @@ Equivalently, the derivative is negative below $w = 2$ and positive above it,
 so the function falls into that point and rises out of it.
 
 **3.** At $w = 1$ the derivative is $2(1) - 4 = -2$, so $f$ is falling there.
-With $\smallconst = 0.01$, the [linear approximation](calculus.qmd#eq-linear-approx) predicts a change of
+
+**4.** With $\smallconst = 0.01$, the [linear approximation](calculus.qmd#eq-linear-approx) predicts a change of
 $(0.01)(-2) = -0.02$, from
 
 $$
@@ -40,7 +41,8 @@ f(1) &= 1 - 4 + 7 \\
 $$
 
 to $3.98$.
-The exact value is
+
+**5.** The exact value is
 
 $$
 \begin{aligned}

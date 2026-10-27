@@ -8,7 +8,8 @@ Let $f(w) = w^2 - 4w + 7$.
 2.  Find the flat point $w$ of $f$, and say whether $f(w)$ is the
     [minimum](algebra.qmd#def-minimum) or the [maximum](algebra.qmd#def-maximum)
     of the values of $f$.
-3.  Evaluate the [derivative](calculus.qmd#def-derivative) at $w = 1$, use the [linear approximation](calculus.qmd#eq-linear-approx) to predict
-    $f(1.01)$, and compare that prediction with the exact value.
+3.  Evaluate the [derivative](calculus.qmd#def-derivative) at $w = 1$.
+4.  Use the [linear approximation](calculus.qmd#eq-linear-approx) to predict $f(1.01)$.
+5.  Compute $f(1.01)$ exactly, and compare it with the prediction.
 
 :::
