@@ -56,6 +56,14 @@ page-xrefs:
       - linear-algebra-projections.qmd
       - linear-algebra-diagonalization.qmd
       - linear-algebra-complex.qmd
+  # The critical points section moved from calculus-derivatives.qmd to
+  # optimization.qmd, so links to its ids on the calculus pages go on there.
+  - index: calculus-derivatives.qmd
+    pages:
+      - optimization.qmd
+  - index: calculus.qmd
+    pages:
+      - optimization.qmd
   # linear-algebra-subspaces.qmd was split again, so links to it from before
   # the second split (index#id) go on to the page now holding #id.
   - index: linear-algebra-subspaces.qmd
