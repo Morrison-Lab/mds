@@ -2,7 +2,7 @@
 
 #### Approximate with the tangent line
 
-Use the tangent line from @exr-miller-deriv-tangent-line-approx-tangent
+Use the [tangent line](calculus.qmd#def-tangent-line) from @exr-miller-deriv-tangent-line-approx-tangent
 to approximate $f(\pi/4 + 0.01)$.
 
 :::

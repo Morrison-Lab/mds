@@ -1,6 +1,6 @@
 :::{#sol-flat-point}
 
-Term by term:
+Differentiating each [term](algebra-sums.qmd#def-term):
 
 $$\frac{df}{dw} = 2w - 4$$
 

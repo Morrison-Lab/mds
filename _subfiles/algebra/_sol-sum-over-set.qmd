@@ -1,6 +1,6 @@
 :::{#sol-sum-over-set}
 
-Replace $x$ by each element of $A$ in turn, and add the results:
+Replace $x$ by each element of $A$ in turn, and add:
 
 $$\sum_{x \in A} f(x) = f(-1) + f(2) + f(5)$$
 

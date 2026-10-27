@@ -1,6 +1,6 @@
 :::{#sol-miller-deriv-tangent-line-approx}
 
-Differentiate term by term:
+Differentiate each [term](algebra-sums.qmd#def-term):
 
 $$f'(x) = 4 - \sqrt{2}\sin x$$
 
