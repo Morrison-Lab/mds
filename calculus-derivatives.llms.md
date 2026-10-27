@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-27 09:35:20 (PDT)
+Last modified: 2026-10-27 11:01:31 (PDT)
 
 ## 1 Derivatives
 
@@ -680,7 +680,7 @@ Last modified: 2026-10-27 09:35:20 (PDT)
 >   ggplot2::aes(x = x, y = value) +
 >   ggplot2::geom_line() +
 >   ggplot2::facet_wrap(~panel, scales = "free_y") +
->   ggplot2::labs(x = "x", y = NULL)
+>   ggplot2::labs(x = "Input, x", y = NULL)
 > ```
 >
 > > **NOTE:**
@@ -819,176 +819,17 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > The approximation error is \\\|4.171593 - 4.171543\| \approx 0.00005\\, on the order of \\(0.01)^2 = 10^{-4}\\.
 
-### 1.6 Critical points and optimization
+### 1.6 Taylor series
 
 > **NOTE:**
 >
-> **Definition 18 (Flat point (stationary point))** Let \\f\\ be differentiable at \\c\\ ([Definition 6](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a **stationary point**) [\[16\]](#ref-wikipedia_stationary_point).
-
-> **NOTE:**
->
-> **Example 10 (Flat points, and a point that is not one)**  
->
-> - \\f(w) = w^3\\ has \\f'(w) = 3w^2\\, which is \\0\\ at \\w = 0\\, so \\0\\ is a flat point. Yet \\f(0) = 0\\ is neither the [minimum](algebra-basics.llms.md#def-minimum) nor the [maximum](algebra-basics.llms.md#def-maximum) of the values \\f\\ takes on any open interval around \\0\\: \\f(w) \< 0\\ for \\w \< 0\\ and \\f(w) \> 0\\ for \\w \> 0\\.
-> - \\h(w) = w^2\\ has \\h'(1) = 2 \ne 0\\, so \\1\\ is not a flat point.
-
-> **NOTE:**
->
-> **Exercise 14 (Find the flat point, and check the approximation)** Let \\f(w) = w^2 - 4w + 7\\.
->
-> 1.  Differentiate \\f\\.
-> 2.  Find the flat point \\w\\ of \\f\\, and say whether \\f(w)\\ is the [minimum](algebra-basics.llms.md#def-minimum) or the [maximum](algebra-basics.llms.md#def-maximum) of the values of \\f\\.
-> 3.  Evaluate the derivative at \\w = 1\\, use [Equation 1](#eq-linear-approx) to predict \\f(1.01)\\, and compare that prediction with the exact value.
-
-> **NOTE:**
->
-> *Solution 14*. **1.** Term by term:
->
-> \\\frac{df}{dw} = 2w - 4\\
->
-> **2.** Set it to zero: \\2w - 4 = 0\\ gives \\w = 2\\.
->
-> \\ \begin{aligned} f(2) &= 4 - 8 + 7 \\ &= 3 \end{aligned} \\
->
-> is the minimum of the values of \\f\\. Completing the square, \\f(w) = (w - 2)^2 + 3\\, since
->
-> \\ \begin{aligned} (w - 2)^2 + 3 &= w^2 - 4w + 4 + 3 \\ &= w^2 - 4w + 7, \end{aligned} \\
->
-> and \\(w - 2)^2 \ge 0\\, so \\f(w) \ge 3 = f(2)\\ for every \\w\\. Equivalently, the derivative is negative below \\w = 2\\ and positive above it, so the function falls into that point and rises out of it.
->
-> **3.** At \\w = 1\\ the derivative is \\2(1) - 4 = -2\\, so \\f\\ is falling there. With \\\varepsilon= 0.01\\, [Equation 1](#eq-linear-approx) predicts a change of \\(0.01)(-2) = -0.02\\, from
->
-> \\ \begin{aligned} f(1) &= 1 - 4 + 7 \\ &= 4 \end{aligned} \\
->
-> to \\3.98\\. The exact value is
->
-> \\ \begin{aligned} f(1.01) &= (1.01)^2 - 4(1.01) + 7 \\ &= 1.0201 - 4.04 + 7 \\ &= 3.9801 \end{aligned} \\
->
-> a change of \\-0.0199\\. The prediction is off by \\0.0001\\, which is \\\varepsilon^2\\: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of [gradient descent](optimization.llms.md#def-gradient-descent), the step-by-step method of fitting models defined on the optimization page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.
-
-> **NOTE:**
->
-> **Definition 19 (Critical point)** Let \\f\\ be a function defined on an [open interval](sets.llms.md#def-open-interval) containing \\c\\. The point \\c\\ is a **critical point** of \\f\\ if either \\f'(c) = 0\\ or \\f\\ is not differentiable at \\c\\ ([Definition 6](#def-differentiable)).
-
-> **NOTE:**
->
-> **Example 11 (Critical points that are and are not flat points)**  
->
-> - \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\ has no derivative at \\w = 0\\: its one-sided derivatives there are \\1\\ and \\-1\\ ([Example 6](#exm-one-sided-derivative)), so the difference quotient \\\tfrac{\mathopen{}\left\|h\right\|\mathclose{} - 0}{h}\\ has no limit as \\h \to 0\\ ([Definition 4](#def-one-sided-limit)). So \\0\\ is a critical point of \\g\\ but not a flat point.
->
-> - \\f(w) = w^3\\ has
->
->   \\ \begin{aligned} f'(0) &= 3 \cdot 0^2 \\ &= 0, \end{aligned} \\
->
->   so \\0\\ is a flat point of \\f\\, and hence a critical point.
->
-> - \\h(w) = w^2\\ is differentiable everywhere, with \\h'(w) = 2w\\, which is \\0\\ only at \\w = 0\\. So \\0\\ is the only critical point of \\h\\; for example, \\h'(1) = 2 \ne 0\\, so \\1\\ is not one.
-
-> **NOTE:**
->
-> **Theorem 13 (Every flat point is a critical point)** If \\c\\ is a flat point of \\f\\ ([Definition 1 in Optimization](optimization.llms.md#def-flat-point)), then \\c\\ is a critical point of \\f\\ ([Definition 2 in Optimization](optimization.llms.md#def-critical-point)).
-
-> **NOTE:**
->
-> *Proof*. A flat point \\c\\ has \\f\\ differentiable at \\c\\ and \\f'(c) = 0\\. The condition “\\f'(c) = 0\\” is the first alternative in [Definition 2 in Optimization](optimization.llms.md#def-critical-point), so \\c\\ is a critical point.
-
-> **NOTE:**
->
-> **Example 12 (The flat points of a cubic, and a critical point that is not flat)** For \\f(w) = w^3 - 3w\\, the derivative is \\f'(w) = 3w^2 - 3\\. The code differentiates \\f\\ with [`D()`](https://rdrr.io/r/stats/deriv.html) and evaluates \\f'\\ at several points. For \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\, it computes the difference quotients at \\0\\ from both sides.
->
-> ``` downlit
-> f_prime <- D(quote(w^3 - 3 * w), "w")
-> points <- c(-2, -1, 0, 1, 2)
-> derivs <- data.frame(w = points, f_prime = eval(f_prime, list(w = points)))
-> derivs
-> ```
->
-> ``` downlit
-> flat <- derivs$w[derivs$f_prime == 0]
->
-> h <- c(-1e-3, 1e-3)
-> quotients <- abs(h) / h
-> quotients
-> #> [1] -1  1
-> ```
->
-> The derivative is \\0\\ at 2 of the 5 points, namely \\w = -1\\ and \\w = 1\\. These are flat points of \\f\\, so by [Theorem 1 in Optimization](optimization.llms.md#thm-flat-point-critical) they are critical points. The difference quotients of \\g\\ at \\0\\ are -1 from the left and 1 from the right, so \\g\\ has no derivative at \\0\\. Thus \\0\\ is a critical point of \\g\\ ([Definition 2 in Optimization](optimization.llms.md#def-critical-point)), but not a flat point.
-
-> **NOTE:**
->
-> **Exercise 15 (Maximizing a gamma-family kernel)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.10.
->
-> Find the maximum value of
->
-> \\f(x) = x^4 e^{-x}\\
->
-> on the interval \\\[0, \infty)\\.
-
-> **NOTE:**
->
-> *Solution 15*. Differentiate using the product rule:
->
-> \\ \begin{aligned} f'(x) &= 4x^3 e^{-x} - x^4 e^{-x} \\ &= x^3 e^{-x}(4 - x) \end{aligned} \\
->
-> On \\\[0, \infty)\\, \\e^{-x} \> 0\\, so \\f'(x) = 0\\ only at \\x = 0\\ and \\x = 4\\.
->
-> Evaluate \\f\\ at the boundary and critical points:
->
-> - At \\x = 0\\: \\f(0) = 0\\.
->
-> - At \\x = 4\\:
->
->   \\ \begin{aligned} f(4) &= 4^4 e^{-4} \\ &= 256 e^{-4} \\ &\approx 4.6888. \end{aligned} \\
->
-> - As \\x \to \infty\\: exponential decay dominates polynomial growth, so \\\lim\_{x \to \infty} x^4 e^{-x} = 0\\.
->
-> Since \\f(x) \ge 0\\ for all \\x \ge 0\\ and \\f(4) \> 0\\, the global maximum occurs at \\x = 4\\, with maximum value \\256/e^4\\.
-
-> **NOTE:**
->
-> **Exercise 16 (Classifying critical points with the second derivative test)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.11.
->
-> Find the critical points of
->
-> \\f(x) = 4x^3 - 3x^2\\
->
-> and decide whether each is a local maximum, a local minimum, or an inflection point.
-
-> **NOTE:**
->
-> *Solution 16*. Compute the first derivative:
->
-> \\ \begin{aligned} f'(x) &= 12x^2 - 6x \\ &= 6x(2x - 1) \end{aligned} \\
->
-> Setting \\f'(x) = 0\\ gives critical points at \\x = 0\\ and \\x = 1/2\\.
->
-> Compute the second derivative:
->
-> \\f''(x) = 24x - 6\\
->
-> Apply the second derivative test at each critical point:
->
-> - At \\x = 0\\: \\f''(0) = -6 \< 0\\, so \\x = 0\\ is a strict local maximum.
->
-> - At \\x = 1/2\\:
->
->   \\ \begin{aligned} f''(1/2) &= 24(1/2) - 6 \\ &= 6 \\ &\> 0, \end{aligned} \\
->
->   so \\x = 1/2\\ is a strict local minimum.
->
-> Inflection points occur where the second derivative changes sign (\\f''(x) = 0\\ at \\x = 1/4\\). Because \\f''\\ is non-zero at both critical points, neither is an inflection point.
-
-### 1.7 Taylor series
-
-> **NOTE:**
->
-> **Definition 20 (Taylor polynomial)** Let \\f\\ be a function that has at least \\n\\ derivatives at a point \\x_0\\. The **Taylor polynomial** of degree \\n\\ for \\f\\ centered at \\x_0\\ is:
+> **Definition 18 (Taylor polynomial)** Let \\f\\ be a function that has at least \\n\\ derivatives at a point \\x_0\\. The **Taylor polynomial** of degree \\n\\ for \\f\\ centered at \\x_0\\ is:
 >
 > \\ \begin{aligned} P_n(x) &= \sum\_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k \\ &= f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n \end{aligned} \tag{2}\\
 
 > **NOTE:**
 >
-> **Example 13 (Taylor series of the exponential function)** For \\f(x) = e^x\\ centered at \\x_0 = 0\\, every derivative is
+> **Example 10 (Taylor series of the exponential function)** For \\f(x) = e^x\\ centered at \\x_0 = 0\\, every derivative is
 >
 > \\ \begin{aligned} f^{(k)}(0) &= e^0 \\ &= 1. \end{aligned} \\
 >
@@ -1002,21 +843,21 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 21 (Maclaurin polynomial)** When \\x_0 = 0\\, the Taylor polynomial \\P_n(x)\\ ([Definition 20](#def-taylor-polynomial)) is called the **Maclaurin polynomial**.
+> **Definition 19 (Maclaurin polynomial)** When \\x_0 = 0\\, the Taylor polynomial \\P_n(x)\\ ([Definition 18](#def-taylor-polynomial)) is called the **Maclaurin polynomial**.
 
 > **NOTE:**
 >
-> **Definition 22 (Taylor series)** Let \\f\\ and \\x_0\\ be as in [Definition 20](#def-taylor-polynomial). When \\f\\ is infinitely differentiable and the series converges to \\f(x)\\ on an open interval containing \\x_0\\, the infinite sum \\\sum\_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\\ is the **Taylor series** of \\f\\ centered at \\x_0\\.
+> **Definition 20 (Taylor series)** Let \\f\\ and \\x_0\\ be as in [Definition 18](#def-taylor-polynomial). When \\f\\ is infinitely differentiable and the series converges to \\f(x)\\ on an open interval containing \\x_0\\, the infinite sum \\\sum\_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\\ is the **Taylor series** of \\f\\ centered at \\x_0\\.
 
 > **TIP:**
 >
 > Chapter 11 of the [*Essence of calculus*](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:
 >
-> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 20](#def-taylor-polynomial)).
+> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 18](#def-taylor-polynomial)).
 
 > **NOTE:**
 >
-> **Exercise 17 (Taylor polynomial of a polynomial at the origin)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.16.
+> **Exercise 14 (Taylor polynomial of a polynomial at the origin)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.16.
 >
 > Find the first five terms (up to degree 4) of the Taylor series for
 >
@@ -1026,7 +867,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 17*. Evaluate \\f\\ and its first four derivatives at \\x = 0\\:
+> *Solution 14*. Evaluate \\f\\ and its first four derivatives at \\x = 0\\:
 >
 > \\\begin{aligned} f(x) &= x^8 + x^4 + 3 &\implies f(0) &= 3 \\ f'(x) &= 8x^7 + 4x^3 &\implies f'(0) &= 0 \\ f''(x) &= 56x^6 + 12x^2 &\implies f''(0) &= 0 \\ f'''(x) &= 336x^5 + 24x &\implies f'''(0) &= 0 \\ f^{(4)}(x) &= 1680x^4 + 24 &\implies f^{(4)}(0) &= 24 \end{aligned}\\
 >
@@ -1038,7 +879,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 18 (Taylor expansion of a polynomial at a nonzero point)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.17.
+> **Exercise 15 (Taylor expansion of a polynomial at a nonzero point)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.17.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
 >
@@ -1048,7 +889,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 18*. Evaluate \\f\\ and its first two derivatives at \\x_0 = 1\\:
+> *Solution 15*. Evaluate \\f\\ and its first two derivatives at \\x_0 = 1\\:
 >
 > \\\begin{aligned} f(1) &= 1^8 + 1^4 + 3 \\ &= 5 \\ f'(1) &= 8(1)^7 + 4(1)^3 \\ &= 12 \\ f''(1) &= 56(1)^6 + 12(1)^2 \\ &= 68 \end{aligned}\\
 >
@@ -1058,7 +899,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Example 14 (Taylor series of the cosine function)** For \\f(x) = \cos x\\ centered at \\x_0 = 0\\, the derivatives follow a repeating cycle of length 4:
+> **Example 11 (Taylor series of the cosine function)** For \\f(x) = \cos x\\ centered at \\x_0 = 0\\, the derivatives follow a repeating cycle of length 4:
 >
 > \\\begin{aligned} f(0) &= \cos(0) \\ &= 1, \\ f'(0) &= -\sin(0) \\ &= 0, \\ f''(0) &= -\cos(0) \\ &= -1, \\ f'''(0) &= \sin(0) \\ &= 0, \end{aligned}\\
 >
@@ -1068,13 +909,13 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Example 15 (Taylor series of the sine function)** For \\f(x) = \sin x\\ centered at \\x_0 = 0\\, the derivatives evaluate at \\0\\ to \\f^{(2k)}(0) = 0\\ and \\f^{(2k+1)}(0) = (-1)^k\\ for all \\k \ge 0\\. The Taylor series converges everywhere to \\\sin x\\:
+> **Example 12 (Taylor series of the sine function)** For \\f(x) = \sin x\\ centered at \\x_0 = 0\\, the derivatives evaluate at \\0\\ to \\f^{(2k)}(0) = 0\\ and \\f^{(2k+1)}(0) = (-1)^k\\ for all \\k \ge 0\\. The Taylor series converges everywhere to \\\sin x\\:
 >
 > \\ \begin{aligned} \sin x &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots \\ &= \sum\_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}x^{2k+1} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Exercise 19 (Taylor expansion of a scaled cosine)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.18.
+> **Exercise 16 (Taylor expansion of a scaled cosine)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.18.
 >
 > Find the terms up to degree 4 in the Taylor series for
 >
@@ -1084,7 +925,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 19*. Recall the standard Maclaurin series for cosine:
+> *Solution 16*. Recall the standard Maclaurin series for cosine:
 >
 > \\\cos u = 1 - \frac{u^2}{2!} + \frac{u^4}{4!} - \dots\\
 >
@@ -1096,7 +937,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 20 (Taylor series of a power of a function)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.19.
+> **Exercise 17 (Taylor series of a power of a function)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.19.
 >
 > Find the terms up to degree 4 in the Taylor series for
 >
@@ -1106,7 +947,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 20*. From [Exercise 19](#exr-miller-taylor-cos-scaled), the expansion of \\\cos(5x)\\ up to order \\x^4\\ is:
+> *Solution 17*. From [Exercise 16](#exr-miller-taylor-cos-scaled), the expansion of \\\cos(5x)\\ up to order \\x^4\\ is:
 >
 > \\\cos(5x) = 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 + O(x^6)\\
 >
@@ -1116,7 +957,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 21 (Linear Taylor polynomial of the exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.20.
+> **Exercise 18 (Linear Taylor polynomial of the exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.20.
 >
 > Find the first two terms (degree 1) of the Taylor series for
 >
@@ -1126,7 +967,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 21*. Since
+> *Solution 18*. Since
 >
 > \\ \begin{aligned} f(0) &= e^0 \\ &= 1 \end{aligned} \\
 >
@@ -1142,7 +983,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 22 (Taylor series of a composite exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.21.
+> **Exercise 19 (Taylor series of a composite exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.21.
 >
 > Find the first six terms (up to degree 5) of the Taylor series for
 >
@@ -1152,7 +993,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 22*. Substitute \\u = x^8\\ into \\e^u = 1 + u + \frac{u^2}{2!} + \dots\\:
+> *Solution 19*. Substitute \\u = x^8\\ into \\e^u = 1 + u + \frac{u^2}{2!} + \dots\\:
 >
 > \\{\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}} = 1 + x^8 + \frac{x^{16}}{2} + \dots\\
 >
@@ -1162,7 +1003,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 23 (Taylor expansion of the normal density)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.22.
+> **Exercise 20 (Taylor expansion of the normal density)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.22.
 >
 > Find the terms up to degree 3 of the Taylor series for the standard normal density
 >
@@ -1172,7 +1013,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 23*. Using \\e^u = 1 + u + O(u^2)\\ with \\u = -x^2/2\\:
+> *Solution 20*. Using \\e^u = 1 + u + O(u^2)\\ with \\u = -x^2/2\\:
 >
 > \\{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}} = 1 - \frac{x^2}{2} + O(x^4)\\
 >
@@ -1186,17 +1027,17 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Theorem 14 (Maclaurin polynomial of the standard normal density)** The Maclaurin polynomial ([Definition 21](#def-maclaurin-polynomial)) of degree 3 of the standard normal density \\\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\ is
+> **Theorem 13 (Maclaurin polynomial of the standard normal density)** The Maclaurin polynomial ([Definition 19](#def-maclaurin-polynomial)) of degree 3 of the standard normal density \\\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}}\\ is
 >
 > \\P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\\
 
 > **NOTE:**
 >
-> *Proof*. This is the solution to [Exercise 23](#exr-miller-taylor-normal-density), worked in [Solution 23](#sol-miller-taylor-normal-density).
+> *Proof*. This is the solution to [Exercise 20](#exr-miller-taylor-normal-density), worked in [Solution 20](#sol-miller-taylor-normal-density).
 
 > **NOTE:**
 >
-> **Exercise 24 (Taylor expansion of the square root)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.23.
+> **Exercise 21 (Taylor expansion of the square root)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.23.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
 >
@@ -1206,7 +1047,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 24*. Compute the values at \\x_0 = 1/3\\:
+> *Solution 21*. Compute the values at \\x_0 = 1/3\\:
 >
 > \\\begin{aligned} f(1/3) &= \mathopen{}\left(\frac{1}{3}\right)\mathclose{}^{1/2} \\ &= \frac{1}{\sqrt{3}} \\ &= \frac{\sqrt{3}}{3} \\ f'(x) &= \frac{1}{2}x^{-1/2} \\ \implies f'(1/3) &= \frac{1}{2}\sqrt{3} \\ &= \frac{\sqrt{3}}{2} \\ f''(x) &= -\frac{1}{4}x^{-3/2} \\ \implies f''(1/3) &= -\frac{1}{4} \cdot 3\sqrt{3} \\ &= -\frac{3\sqrt{3}}{4} \end{aligned}\\
 >
@@ -1216,7 +1057,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 25 (Taylor expansion of a fractional power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.24.
+> **Exercise 22 (Taylor expansion of a fractional power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.24.
 >
 > Find the first three terms of the Taylor series for
 >
@@ -1226,7 +1067,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 25*. At \\x_0 = 1/2\\, \\1 + x_0 = 3/2\\:
+> *Solution 22*. At \\x_0 = 1/2\\, \\1 + x_0 = 3/2\\:
 >
 > \\\begin{aligned} f(1/2) &= \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3} \\ f'(x) &= \frac{1}{3}(1 + x)^{-2/3} \\ \implies f'(1/2) &= \frac{1}{3}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-2/3} \\ &= \frac{1}{3}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{2/3} \\ f''(x) &= -\frac{2}{9}(1 + x)^{-5/3} \\ \implies f''(1/2) &= -\frac{2}{9}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-5/3} \\ &= -\frac{2}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3} \end{aligned}\\
 >
@@ -1236,7 +1077,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 26 (Taylor expansion of \\x \log x\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.25.
+> **Exercise 23 (Taylor expansion of \\x \log x\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.25.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
 >
@@ -1246,7 +1087,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 26*. Evaluate derivatives at \\x_0 = 1\\:
+> *Solution 23*. Evaluate derivatives at \\x_0 = 1\\:
 >
 > \\\begin{aligned} f(1) &= 1 \log 1 \\ &= 0 \\ f'(x) &= \log x + 1 \\ \implies f'(1) &= 0 + 1 \\ &= 1 \\ f''(x) &= \frac{1}{x} \implies f''(1) = 1 \end{aligned}\\
 >
@@ -1256,7 +1097,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 27 (Maclaurin series of \\\log(1 + x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.26.
+> **Exercise 24 (Maclaurin series of \\\log(1 + x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.26.
 >
 > Find the first three terms of the Taylor series for
 >
@@ -1266,7 +1107,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 27*. Differentiating repeatedly at \\x_0 = 0\\:
+> *Solution 24*. Differentiating repeatedly at \\x_0 = 0\\:
 >
 > \\\begin{aligned} f(0) &= \log 1 \\ &= 0 \\ f'(x) &= (1 + x)^{-1} \implies f'(0) = 1 \\ f''(x) &= -(1 + x)^{-2} \implies f''(0) = -1 \\ f'''(x) &= 2(1 + x)^{-3} \implies f'''(0) = 2 \end{aligned}\\
 >
@@ -1276,17 +1117,17 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Theorem 15 (Maclaurin polynomial of \\\log(1 + x)\\)** The Maclaurin polynomial ([Definition 21](#def-maclaurin-polynomial)) of degree 3 of \\f(x) = \log(1 + x)\\ is
+> **Theorem 14 (Maclaurin polynomial of \\\log(1 + x)\\)** The Maclaurin polynomial ([Definition 19](#def-maclaurin-polynomial)) of degree 3 of \\f(x) = \log(1 + x)\\ is
 >
 > \\P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}\\
 
 > **NOTE:**
 >
-> *Proof*. This is the solution to [Exercise 27](#exr-miller-taylor-log-one-plus-x), worked in [Solution 27](#sol-miller-taylor-log-one-plus-x).
+> *Proof*. This is the solution to [Exercise 24](#exr-miller-taylor-log-one-plus-x), worked in [Solution 24](#sol-miller-taylor-log-one-plus-x).
 
 > **NOTE:**
 >
-> **Exercise 28 (Maclaurin series of \\\log(1 - x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.27.
+> **Exercise 25 (Maclaurin series of \\\log(1 - x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.27.
 >
 > Find the terms up to degree 3 of the Taylor series for
 >
@@ -1296,23 +1137,23 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 28*. Substitute \\u = -x\\ into the expansion for \\\log(1 + u)\\ from [Theorem 15](#thm-taylor-log-one-plus-x):
+> *Solution 25*. Substitute \\u = -x\\ into the expansion for \\\log(1 + u)\\ from [Theorem 14](#thm-taylor-log-one-plus-x):
 >
 > \\ \begin{aligned} \log(1 - x) &= (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots \\ &= -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots \end{aligned} \\
 
 > **NOTE:**
 >
-> **Theorem 16 (Maclaurin polynomial of \\\log(1 - x)\\)** The Maclaurin polynomial ([Definition 21](#def-maclaurin-polynomial)) of degree 3 of \\f(x) = \log(1 - x)\\ is
+> **Theorem 15 (Maclaurin polynomial of \\\log(1 - x)\\)** The Maclaurin polynomial ([Definition 19](#def-maclaurin-polynomial)) of degree 3 of \\f(x) = \log(1 - x)\\ is
 >
 > \\P_3(x) = -x - \frac{x^2}{2} - \frac{x^3}{3}\\
 
 > **NOTE:**
 >
-> *Proof*. This is the solution to [Exercise 28](#exr-miller-taylor-log-one-minus-x), worked in [Solution 28](#sol-miller-taylor-log-one-minus-x).
+> *Proof*. This is the solution to [Exercise 25](#exr-miller-taylor-log-one-minus-x), worked in [Solution 25](#sol-miller-taylor-log-one-minus-x).
 
 > **NOTE:**
 >
-> **Exercise 29 (Taylor series of \\\log((1 - x)e^x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.28.
+> **Exercise 26 (Taylor series of \\\log((1 - x)e^x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.28.
 >
 > Find the first two non-zero terms of the Taylor series for
 >
@@ -1322,11 +1163,11 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 29*. Expand using logarithm properties:
+> *Solution 26*. Expand using logarithm properties:
 >
 > \\ \begin{aligned} f(x) &= \log(1 - x) + \log(e^x) \\ &= \log(1 - x) + x \end{aligned} \\
 >
-> Substitute the series for \\\log(1 - x)\\ from [Theorem 16](#thm-taylor-log-one-minus-x):
+> Substitute the series for \\\log(1 - x)\\ from [Theorem 15](#thm-taylor-log-one-minus-x):
 >
 > \\ \begin{aligned} f(x) &= \mathopen{}\left(-x - \frac{x^2}{2} - \frac{x^3}{3} - \dots\right)\mathclose{} + x \\ &= -\frac{x^2}{2} - \frac{x^3}{3} - \dots \end{aligned} \\
 >
@@ -1336,7 +1177,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 30 (Taylor series of a product of known expansions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.29.
+> **Exercise 27 (Taylor series of a product of known expansions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.29.
 >
 > Find the terms up to degree 2 of the Taylor series for
 >
@@ -1346,7 +1187,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 30*. Multiply the known Maclaurin expansions:
+> *Solution 27*. Multiply the known Maclaurin expansions:
 >
 > \\\begin{aligned} \cos x &= 1 - \frac{x^2}{2} + O(x^4) \\ \log(1 + x) &= x - \frac{x^2}{2} + O(x^3) \end{aligned}\\
 >
@@ -1356,7 +1197,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 31 (Taylor series of \\\log(1 + 2x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.30.
+> **Exercise 28 (Taylor series of \\\log(1 + 2x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.30.
 >
 > Find the first two non-zero terms of the Taylor series for
 >
@@ -1366,7 +1207,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 31*. Substitute \\u = 2x\\ into the Maclaurin series \\\log(1 + u) = u - \frac{u^2}{2} + \dots\\:
+> *Solution 28*. Substitute \\u = 2x\\ into the Maclaurin series \\\log(1 + u) = u - \frac{u^2}{2} + \dots\\:
 >
 > \\ \begin{aligned} \log(1 + 2x) &= (2x) - \frac{(2x)^2}{2} + \dots \\ &= 2x - 2x^2 + \dots \end{aligned} \\
 
@@ -1433,7 +1274,3 @@ Wikipedia contributors, “Linear approximation — Wikipedia, the free encyclop
 \[15\]
 
 S. Boyd and L. Vandenberghe, *Introduction to applied linear algebra: Vectors, matrices, and least squares*. Cambridge University Press, 2018. doi: [10.1017/9781108583664](https://doi.org/10.1017/9781108583664).
-
-\[16\]
-
-Wikipedia contributors, “Stationary point — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Stationary_point>

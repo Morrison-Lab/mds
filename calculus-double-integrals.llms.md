@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-27 09:35:20 (PDT)
+Last modified: 2026-10-27 11:01:31 (PDT)
 
 ## 1 Double Integrals
 
@@ -97,7 +97,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > >   ggplot2::scale_x_continuous(breaks = c(0, 0.5, 1), limits = c(-0.1, 1.3)) +
 > >   ggplot2::scale_y_continuous(breaks = c(0, 0.5, 1), limits = c(-0.2, 1.2)) +
 > >   ggplot2::coord_equal() +
-> >   ggplot2::labs(x = "x", y = "y") +
+> >   ggplot2::labs(x = "First coordinate, x", y = "Second coordinate, y") +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -143,8 +143,8 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > > plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
 > >   plotly::add_surface(showscale = FALSE) |>
 > >   plotly::layout(scene = list(
-> >     xaxis = list(title = "x"),
-> >     yaxis = list(title = "y"),
+> >     xaxis = list(title = "First coordinate, x"),
+> >     yaxis = list(title = "Second coordinate, y"),
 > >     zaxis = list(title = "z = exp(-x^2)"),
 > >     camera = list(eye = list(x = 1.6, y = -1.6, z = 0.8))
 > >   ))
@@ -265,8 +265,8 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > >     )
 > >   ) |>
 > >   plotly::layout(scene = list(
-> >     xaxis = list(title = "x"),
-> >     yaxis = list(title = "y"),
+> >     xaxis = list(title = "First coordinate, x"),
+> >     yaxis = list(title = "Second coordinate, y"),
 > >     zaxis = list(title = "f(x, y)", range = c(-z_clip, z_clip)),
 > >     camera = list(eye = list(x = 1.6, y = 1.6, z = 0.6))
 > >   ))
@@ -312,7 +312,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > >   ggplot2::scale_x_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
 > >   ggplot2::scale_y_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
 > >   ggplot2::coord_equal() +
-> >   ggplot2::labs(x = "x", y = "y") +
+> >   ggplot2::labs(x = "First coordinate, x", y = "Second coordinate, y") +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -355,8 +355,8 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > > plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
 > >   plotly::add_surface(showscale = FALSE) |>
 > >   plotly::layout(scene = list(
-> >     xaxis = list(title = "x"),
-> >     yaxis = list(title = "y"),
+> >     xaxis = list(title = "First coordinate, x"),
+> >     yaxis = list(title = "Second coordinate, y"),
 > >     zaxis = list(title = "z", range = c(0, 2))
 > >   ))
 > > ```

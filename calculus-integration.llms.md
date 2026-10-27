@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-27 09:35:20 (PDT)
+Last modified: 2026-10-27 11:01:31 (PDT)
 
 ## 1 Integration
 
@@ -56,7 +56,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > > ``` downlit
 > > ggplot2::ggplot() +
 > >   ggplot2::geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
-> >   ggplot2::labs(x = "x", y = expression(f(x))) +
+> >   ggplot2::labs(x = "Input, x", y = expression("Integrand, " * f(x))) +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -80,7 +80,11 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > >
 > > ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
 > >   ggplot2::geom_line(linewidth = 0.8) +
-> >   ggplot2::labs(x = "x", y = expression(F(x)), color = "C") +
+> >   ggplot2::labs(
+> >     x = "Input, x",
+> >     y = expression("Antiderivative, " * F(x)),
+> >     color = "C"
+> >   ) +
 > >   ggplot2::theme_minimal()
 > > ```
 > >

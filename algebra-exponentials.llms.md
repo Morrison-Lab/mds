@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-27 09:35:20 (PDT)
+Last modified: 2026-10-27 11:01:31 (PDT)
 
 ## 1 Polynomials
 
@@ -494,6 +494,50 @@ Last modified: 2026-10-27 09:35:20 (PDT)
 > \\ \begin{aligned} g(0, -2) &= 0 + 4 \\ &= 4. \end{aligned} \\
 >
 > The contour line at height \\k = -1\\ is empty, because \\b^2 + c^2 \ge 0\\ for all \\b\\ and \\c\\.
+>
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > library(ggplot2)
+> >
+> > # The bowl g(b, c) = b^2 + c^2 on a grid, and the two points of the example.
+> > bowl <- expand.grid(
+> >   b = seq(-3.5, 3.5, length.out = 200),
+> >   c = seq(-3.5, 3.5, length.out = 200)
+> > )
+> > bowl$g <- bowl$b^2 + bowl$c^2
+> > on_circle <- data.frame(b = c(2, 0), c = c(0, -2))
+> >
+> > contour_plot <- ggplot(bowl) +
+> >   aes(b, c) +
+> >   geom_contour(
+> >     aes(z = g, colour = factor(after_stat(level))),
+> >     breaks = c(1, 4, 9)
+> >   ) +
+> >   geom_point(data = on_circle, size = 2.5) +
+> >   scale_colour_viridis_d(name = "height k", end = 0.85) +
+> >   coord_fixed(expand = FALSE) +
+> >   labs(x = "first coordinate, b", y = "second coordinate, c") +
+> >   theme(legend.position = "bottom")
+> >
+> > if (knitr::is_html_output()) {
+> >   htmltools::div(
+> >     role = "img",
+> >     `aria-label` = fig_alt_contour_bowl,
+> >     plotly::ggplotly(contour_plot) |>
+> >       plotly::layout(
+> >         legend = list(orientation = "h", x = 0.5, xanchor = "center", y = -0.25)
+> >       ) |>
+> >       plotly::config(displaylogo = FALSE, responsive = TRUE)
+> >   )
+> > } else {
+> >   contour_plot
+> > }
+> > ```
+> >
+> > Figure 1: The contour lines of \\g(b, c) = b^2 + c^2\\ at heights \\1\\, \\4\\ and \\9\\. The dots mark the points \\(2, 0)\\ and \\(0, -2)\\ of the example on the circle at height \\4\\.
 
 > **NOTE:**
 >
@@ -529,7 +573,7 @@ Last modified: 2026-10-27 09:35:20 (PDT)
 >
 > For \\b \< 0\\, cases 4 and 5 come from \\b^{c-1} = c\\ as well: when \\c - 1\\ is even, \\b^{c-1} \> 0\\, so \\c\\ must be positive; when \\c - 1\\ is odd, \\b^{c-1} \< 0\\, so \\c\\ must be negative.
 >
-> See the red contours in [Figure 2](#fig-double-exponential2) for a visualization of the \\b \ge 0\\ cases.
+> See the red contours in [Figure 3](#fig-double-exponential2) for a visualization of the \\b \ge 0\\ cases.
 
 > **NOTE:**
 >
@@ -586,11 +630,11 @@ Last modified: 2026-10-27 09:35:20 (PDT)
 >     scene = list(
 >       xaxis = list(
 >         # type = "log",
->         title = "b"
+>         title = "First input, b"
 >       ),
 >       yaxis = list(
 >         # type = "log",
->         title = "c"
+>         title = "Second input, c"
 >       ),
 >       zaxis = list(
 >         # type = "log",
@@ -603,7 +647,7 @@ Last modified: 2026-10-27 09:35:20 (PDT)
 >   )
 > ```
 >
-> Figure 1: Graph of \\b\*c\\ and \\b^c\\
+> Figure 2: Graph of \\b\*c\\ and \\b^c\\
 
 > **NOTE:**
 >
@@ -639,11 +683,11 @@ Last modified: 2026-10-27 09:35:20 (PDT)
 >     scene = list(
 >       xaxis = list(
 >         # type = "log",
->         title = "b"
+>         title = "First input, b"
 >       ),
 >       yaxis = list(
 >         # type = "log",
->         title = "c"
+>         title = "Second input, c"
 >       ),
 >       zaxis = list(
 >         title = "outcome"
@@ -654,7 +698,7 @@ Last modified: 2026-10-27 09:35:20 (PDT)
 >   )
 > ```
 >
-> Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-line) are at heights \\0\\ and \\1\\; the ones at height \\0\\ show where \\b^c = b\*c\\.
+> Figure 3: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-line) are at heights \\0\\ and \\1\\; the ones at height \\0\\ show where \\b^c = b\*c\\.
 
 > **NOTE:**
 >
