@@ -357,7 +357,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-27 00:23:12 (PDT)</p>
+  <p class="date">Last modified: 2026-10-27 01:34:30 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-derivatives" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Derivatives</h2>
 <h3 id="sec-limits-derivatives">Limits and derivatives</h3>
@@ -1432,7 +1432,7 @@ f'(0) &amp;= 3 \cdot 0^2 \\
 </ul>
 </div>
 </section><section class="slide level2"><div id="thm-flat-point-critical" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 13 (Every flat point is a critical point)</strong></span> If <span class="math inline">\(c\)</span> is a flat point of <span class="math inline">\(f\)</span> (<a href="#/def-flat-point" class="quarto-xref">Definition&nbsp;18</a>), then <span class="math inline">\(c\)</span> is a critical point of <span class="math inline">\(f\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;19</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 13 (Every flat point is a critical point)</strong></span> If <span class="math inline">\(c\)</span> is a flat point of <span class="math inline">\(f\)</span> (<a href="./optimization.html#def-flat-point">Definition&nbsp;1 in Optimization</a>), then <span class="math inline">\(c\)</span> is a critical point of <span class="math inline">\(f\)</span> (<a href="./optimization.html#def-critical-point">Definition&nbsp;2 in Optimization</a>).</p>
 </div>
 </section><section class="slide level2"></section><section class="slide level2"><div id="exm-flat-point-critical" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (The flat points of a cubic, and a critical point that is not flat)</strong></span> For <span class="math inline">\(f(w) = w^3 - 3w\)</span>, the derivative is <span class="math inline">\(f'(w) = 3w^2 - 3\)</span>. The code differentiates <span class="math inline">\(f\)</span> with <code><a href="https://rdrr.io/r/stats/deriv.html">D()</a></code> and evaluates <span class="math inline">\(f'\)</span> at several points. For <span class="math inline">\(g(w) = \mathopen{}\left|w\right|\mathclose{}\)</span>, it computes the difference quotients at <span class="math inline">\(0\)</span> from both sides.</p>
@@ -1455,7 +1455,7 @@ f'(0) &amp;= 3 \cdot 0^2 \\
 <span id="cb8-5"><a aria-label="5"></a>quotients</span>
 <span id="cb8-6"><a aria-label="6"></a><span class="co">#&gt; [1] -1  1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>The derivative is <span class="math inline">\(0\)</span> at 2 of the 5 points, namely <span class="math inline">\(w = -1\)</span> and <span class="math inline">\(w = 1\)</span>. These are flat points of <span class="math inline">\(f\)</span>, so by <a href="#/thm-flat-point-critical" class="quarto-xref">Theorem&nbsp;13</a> they are critical points. The difference quotients of <span class="math inline">\(g\)</span> at <span class="math inline">\(0\)</span> are -1 from the left and 1 from the right, so <span class="math inline">\(g\)</span> has no derivative at <span class="math inline">\(0\)</span>. Thus <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;19</a>), but not a flat point.</p>
+<p>The derivative is <span class="math inline">\(0\)</span> at 2 of the 5 points, namely <span class="math inline">\(w = -1\)</span> and <span class="math inline">\(w = 1\)</span>. These are flat points of <span class="math inline">\(f\)</span>, so by <a href="./optimization.html#thm-flat-point-critical">Theorem&nbsp;1 in Optimization</a> they are critical points. The difference quotients of <span class="math inline">\(g\)</span> at <span class="math inline">\(0\)</span> are -1 from the left and 1 from the right, so <span class="math inline">\(g\)</span> has no derivative at <span class="math inline">\(0\)</span>. Thus <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> (<a href="./optimization.html#def-critical-point">Definition&nbsp;2 in Optimization</a>), but not a flat point.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-opt-gamma-kernel" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 15 (Maximizing a gamma-family kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.10.</p>

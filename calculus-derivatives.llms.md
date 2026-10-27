@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-27 00:23:12 (PDT)
+Last modified: 2026-10-27 01:34:30 (PDT)
 
 ## 1 Derivatives
 
@@ -886,11 +886,11 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Theorem 13 (Every flat point is a critical point)** If \\c\\ is a flat point of \\f\\ ([Definition 18](#def-flat-point)), then \\c\\ is a critical point of \\f\\ ([Definition 19](#def-critical-point)).
+> **Theorem 13 (Every flat point is a critical point)** If \\c\\ is a flat point of \\f\\ ([Definition 1 in Optimization](optimization.llms.md#def-flat-point)), then \\c\\ is a critical point of \\f\\ ([Definition 2 in Optimization](optimization.llms.md#def-critical-point)).
 
 > **NOTE:**
 >
-> *Proof*. A flat point \\c\\ has \\f\\ differentiable at \\c\\ and \\f'(c) = 0\\. The condition “\\f'(c) = 0\\” is the first alternative in [Definition 19](#def-critical-point), so \\c\\ is a critical point.
+> *Proof*. A flat point \\c\\ has \\f\\ differentiable at \\c\\ and \\f'(c) = 0\\. The condition “\\f'(c) = 0\\” is the first alternative in [Definition 2 in Optimization](optimization.llms.md#def-critical-point), so \\c\\ is a critical point.
 
 > **NOTE:**
 >
@@ -912,7 +912,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 > #> [1] -1  1
 > ```
 >
-> The derivative is \\0\\ at 2 of the 5 points, namely \\w = -1\\ and \\w = 1\\. These are flat points of \\f\\, so by [Theorem 13](#thm-flat-point-critical) they are critical points. The difference quotients of \\g\\ at \\0\\ are -1 from the left and 1 from the right, so \\g\\ has no derivative at \\0\\. Thus \\0\\ is a critical point of \\g\\ ([Definition 19](#def-critical-point)), but not a flat point.
+> The derivative is \\0\\ at 2 of the 5 points, namely \\w = -1\\ and \\w = 1\\. These are flat points of \\f\\, so by [Theorem 1 in Optimization](optimization.llms.md#thm-flat-point-critical) they are critical points. The difference quotients of \\g\\ at \\0\\ are -1 from the left and 1 from the right, so \\g\\ has no derivative at \\0\\. Thus \\0\\ is a critical point of \\g\\ ([Definition 2 in Optimization](optimization.llms.md#def-critical-point)), but not a flat point.
 
 > **NOTE:**
 >
