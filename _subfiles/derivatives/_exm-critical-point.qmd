@@ -7,7 +7,8 @@
   So the [difference quotient](calculus.qmd#def-difference-quotient)
   $\tfrac{\abs{h} - 0}{h}$
   has no [limit](calculus.qmd#def-limit) as $h \to 0$,
-  because its [one-sided limits](calculus.qmd#def-one-sided-limit) differ.
+  because the limits from the left and from the right
+  ([one-sided limits](calculus.qmd#def-one-sided-limit)) differ.
   So $0$ is a critical point of $g$ but not a flat point.
 - $f(w) = w^3$ has
 
@@ -18,9 +19,12 @@
   \end{aligned}
   $$
 
-  so $0$ is a flat point of $f$, and hence a critical point.
+  so $0$ is a flat point of $f$,
+  and hence a critical point.
 - $h(w) = w^2$ is differentiable everywhere, with $h'(w) = 2w$,
   which is $0$ only at $w = 0$.
-  So $0$ is the only critical point of $h$; for example, $h'(1) = 2 \ne 0$, so $1$ is not one.
+  So $0$ is the only critical point of $h$.
+  For example, $h'(1) = 2 \ne 0$,
+  so $1$ is not one.
 
 :::
