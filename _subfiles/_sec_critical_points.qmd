@@ -17,7 +17,7 @@ then $c$ is a **flat point** of $f$ (also called a **stationary point**)
 - $f(w) = w^3$ has $f'(w) = 3w^2$, which is $0$ at $w = 0$, so $0$ is a flat point.
   Yet $f(0) = 0$ is neither the [minimum](algebra.qmd#def-minimum)
   nor the [maximum](algebra.qmd#def-maximum)
-  of the values $f$ takes on any open interval around $0$:
+  of the [values](functions.qmd#def-value) $f$ takes on any [open interval](sets.qmd#def-open-interval) around $0$:
   $f(w) < 0$ for $w < 0$,
   and $f(w) > 0$ for $w > 0$.
 - $h(w) = w^2$ has $h'(1) = 2 \ne 0$, so $1$ is not a flat point.
