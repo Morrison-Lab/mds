@@ -42,7 +42,7 @@ $$
 
 to $3.98$.
 
-**5.** The exact value is
+**5.** The exact [value](functions.qmd#def-value) is
 
 $$
 \begin{aligned}
