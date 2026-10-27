@@ -4,7 +4,7 @@
 
 Use the setup of @exr-expression-or-algorithm.
 
-Write a second [expression](#def-expression) that denotes the same [function](functions.qmd#def-function) as $a x^2 + b x + c$
+Write a second [expression](#def-expression) that [denotes](#def-denotes) the same [function](functions.qmd#def-function) as $a x^2 + b x + c$
 and needs fewer multiplications.
 
 :::
