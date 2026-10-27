@@ -13,6 +13,7 @@ $$ {#eq-monomial}
 that multiplies [powers](algebra-basics.qmd#def-power) of those variables,
 whose [exponents](algebra-basics.qmd#def-power-exponent) $a_1, \ldots, a_p$
 are nonnegative [integers](number-systems.qmd#def-integers).
+
 Each $a_j = 0$ contributes the factor $x_j^0 = 1$
 ([zero exponent](algebra-basics.qmd#def-power-integer)).
 
