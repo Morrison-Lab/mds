@@ -1,0 +1,12 @@
+:::{#exm-monomial}
+#### Which expressions are monomials
+
+Take the four variables $x_1, x_2, x_3, x_4$.
+
+- $x_1^3 x_4$ is a [monomial](#def-monomial), with [exponents](algebra-basics.qmd#def-power-exponent) $(a_1, a_2, a_3, a_4) = (3, 0, 0, 1)$.
+- The [constant](#def-constant-function) $1$ is the monomial whose exponents are all $0$.
+- $x_1 / x_2 = x_1 x_2^{-1}$ is not a monomial, because the [exponent](algebra-basics.qmd#def-power-exponent) of $x_2$ is negative.
+- $\sqrt{x_3} = x_3^{1/2}$ is not a monomial, because its exponent is not an [integer](number-systems.qmd#def-integers).
+- $x_1 + x_4$ is not a monomial: it adds two monomials rather than multiplying [powers](algebra-basics.qmd#def-power).
+
+:::

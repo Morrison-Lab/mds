@@ -1,0 +1,17 @@
+:::{#def-monomial}
+#### Monomial (power product)
+
+A **monomial**, also called a **power product**
+[@wikipedia_monomial],
+in the variables $x_1, \ldots, x_p$
+is an [expression](expressions-algorithms.qmd#def-expression)
+
+$$
+x_1^{a_1} x_2^{a_2} \cdots x_p^{a_p}
+$$ {#eq-monomial}
+
+that multiplies [powers](algebra-basics.qmd#def-power) of those variables,
+whose [exponents](algebra-basics.qmd#def-power-exponent) $a_1, \ldots, a_p$
+are nonnegative [integers](number-systems.qmd#def-integers).
+
+:::
