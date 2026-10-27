@@ -3810,6 +3810,24 @@
    "external": false
   },
   {
+   "id": "mds/expressions-algorithms#def-closed-form-expression",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-closed-form-expression",
+   "kind": "def",
+   "title": "Closed-form expression (formula)",
+   "external": false
+  },
+  {
+   "id": "mds/expressions-algorithms#def-closed-form-solution",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-closed-form-solution",
+   "kind": "def",
+   "title": "Closed-form solution",
+   "external": false
+  },
+  {
    "id": "mds/expressions-algorithms#def-computes",
    "site": "mds",
    "page": "expressions-algorithms",
@@ -13186,6 +13204,26 @@
   [
    "mds/calculus-integration#thm-riemann-general",
    "mds/calculus-integration#def-riemann-sum-equal-width"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-expression",
+   "mds/algebra-basics#def-power"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-expression",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-expression",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-solution",
+   "mds/expressions-algorithms#def-closed-form-expression"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-solution",
+   "mds/functions#def-function"
   ],
   [
    "mds/expressions-algorithms#def-computes",

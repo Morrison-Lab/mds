@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-26 14:36:46 (PDT)
+Last modified: 2026-10-26 20:57:05 (PDT)
 
 > **NOTE:**
 >
@@ -28,11 +28,37 @@ Last modified: 2026-10-26 14:36:46 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Parse tree)** The **parse tree** [\[2\]](#ref-wikipedia_parse_tree) of an [expression](#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
+> **Definition 3 (Closed-form expression (formula))** A **closed-form expression** (or **formula**) [\[2\]](#ref-wikipedia_closed_form_expression) is an [expression](#def-expression) built from constants and variables using a finite number of operations from a list of accepted [functions](functions.llms.md#def-function), such as [powers](algebra-basics.llms.md#def-power), roots, exponentials, logarithms, and trigonometric functions. Which functions are accepted is a convention, and a source states it when the boundary matters.
 
 > **NOTE:**
 >
-> **Example 2 (The parse tree of a polynomial)** The [parse tree](#def-parse-tree) of \\(a x + b)\\x + c\\, with each operation having two children, is drawn in [Figure 1](#fig-parse-trees) (left) and written out as a list here:
+> **Example 2 (The quadratic formula)** For \\a \neq 0\\ with \\b^2 - 4 a c \ge 0\\, the roots of \\a x^2 + b x + c = 0\\ are
+>
+> \\ x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a}, \\
+>
+> where the right-hand side is a [closed-form expression](#def-closed-form-expression) in \\a\\, \\b\\, and \\c\\. By contrast, no closed-form expression is known for the root of \\x - \cos x = 0\\.
+
+> **NOTE:**
+>
+> **Definition 4 (Closed-form solution)** A **closed-form solution** of a problem, such as solving an equation or minimizing a [function](functions.llms.md#def-function), is a [closed-form expression](#def-closed-form-expression) for the answer.
+
+> **NOTE:**
+>
+> **Example 3 (Least squares versus logistic regression)** Minimizing the [squared-error](vector-calculus.llms.md#def-squared-error) cost of a [linear](algebra-exponentials.llms.md#def-linear-function) model over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ gives the [normal equations](linear-algebra-projections.llms.md#def-normal-equations) \\{D}^{\top} D \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}= {D}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\. When \\{D}^{\top} D\\ is [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse), the unique minimizer is
+>
+> \\ \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({D}^{\top} D\right)\mathclose{}}^{-1} {D}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}, \\
+>
+> whose right-hand side is a [closed-form expression](#def-closed-form-expression), so [least squares](linear-algebra-projections.llms.md#def-least-squares) has a [closed-form solution](#def-closed-form-solution).
+>
+> For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, so that problem has no known closed-form solution. When a minimizer exists, an [iterative method](optimization.llms.md#def-iterative-method) approximates it.
+
+> **NOTE:**
+>
+> **Definition 5 (Parse tree)** The **parse tree** [\[3\]](#ref-wikipedia_parse_tree) of an [expression](#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
+
+> **NOTE:**
+>
+> **Example 4 (The parse tree of a polynomial)** The [parse tree](#def-parse-tree) of \\(a x + b)\\x + c\\, with each operation having two children, is drawn in [Figure 1](#fig-parse-trees) (left) and written out as a list here:
 >
 > - the root \\+\\, whose children are
 >   - the node \\\times\\, whose children are
@@ -159,21 +185,21 @@ Last modified: 2026-10-26 14:36:46 (PDT)
 >
 > *Remark 1* (Expressions, precedence and parse trees). An [expression](#def-expression) does not say how to compute the [output](functions.llms.md#def-value) it fixes, and many [expressions](#def-expression) [denote](#def-denotes) the same [function](functions.llms.md#def-function). A function is the input-output relationship itself; an expression is one way of writing it down.
 >
-> The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree ([Definition 3](#def-parse-tree)).
+> The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree ([Definition 5](#def-parse-tree)).
 
 ## 2 Algorithms
 
 > **NOTE:**
 >
-> **Definition 4 (Algorithm)** An **algorithm** [\[3\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.
+> **Definition 6 (Algorithm)** An **algorithm** [\[4\]](#ref-wikipedia_algorithm) is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.
 
 > **NOTE:**
 >
-> **Definition 5 (Computes)** An [algorithm](#def-algorithm) **computes** a [function](functions.llms.md#def-function) when, for each [input](functions.llms.md#def-argument), it returns the function’s [value](functions.llms.md#def-value) at that input.
+> **Definition 7 (Computes)** An [algorithm](#def-algorithm) **computes** a [function](functions.llms.md#def-function) when, for each [input](functions.llms.md#def-argument), it returns the function’s [value](functions.llms.md#def-value) at that input.
 
 > **NOTE:**
 >
-> **Example 3 (Two algorithms for one function)** Take the function that [Example 1](#exm-expression) writes two ways. Evaluating the tree of \\a x^2 + b x + c\\, with \\x^2\\ computed as \\x \cdot x\\, takes three multiplications and two additions. Evaluating the tree of Horner’s form \\(a x + b)\\x + c\\ takes two multiplications and two additions. At \\a = 2\\, \\b = -3\\, \\c = 5\\ and \\x = 1.5\\, the first algorithm computes \\4.5 - 4.5 + 5 = 5\\ and the second computes \\(3 - 3) \cdot 1.5 + 5 = 5\\, the same value by different steps.
+> **Example 5 (Two algorithms for one function)** Take the function that [Example 1](#exm-expression) writes two ways. Evaluating the tree of \\a x^2 + b x + c\\, with \\x^2\\ computed as \\x \cdot x\\, takes three multiplications and two additions. Evaluating the tree of Horner’s form \\(a x + b)\\x + c\\ takes two multiplications and two additions. At \\a = 2\\, \\b = -3\\, \\c = 5\\ and \\x = 1.5\\, the first algorithm computes \\4.5 - 4.5 + 5 = 5\\ and the second computes \\(3 - 3) \cdot 1.5 + 5 = 5\\, the same value by different steps.
 
 > **NOTE:**
 >
@@ -195,7 +221,7 @@ Last modified: 2026-10-26 14:36:46 (PDT)
 
 > **NOTE:**
 >
-> **Example 4 (A minimizer with no known formula)** The minimizer \\\arg \min\_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\\ is well defined, because \\x - \cos x\\ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
+> **Example 6 (A minimizer with no known formula)** The minimizer \\\arg \min\_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\\ is well defined, because \\x - \cos x\\ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
 
 ## 3 Exercises
 
@@ -257,8 +283,12 @@ Wikipedia contributors, “Expression (mathematics) — Wikipedia, the free ency
 
 \[2\]
 
-Wikipedia contributors, “Parse tree — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Parse_tree>
+Wikipedia contributors, “Closed-form expression — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Closed-form_expression>
 
 \[3\]
+
+Wikipedia contributors, “Parse tree — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Parse_tree>
+
+\[4\]
 
 Wikipedia contributors, “Algorithm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Algorithm>
