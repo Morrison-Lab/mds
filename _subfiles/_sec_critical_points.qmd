@@ -3,7 +3,7 @@
 :::{#def-flat-point}
 #### Flat point (stationary point)
 
-Let $f$ be [differentiable](calculus.qmd#def-differentiable) at $c$.
+Let $f$ be [differentiable at](calculus.qmd#def-differentiable) $c$.
 If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary point**)
 [@wikipedia_stationary_point].
 :::
