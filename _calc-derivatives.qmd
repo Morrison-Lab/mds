@@ -383,60 +383,6 @@ as an affine function for functions of several variables as well.
 
 {{< slidebreak >}}
 
-### Critical points and optimization {#sec-critical-points}
-
-:::{#def-flat-point}
-#### Flat point (stationary point)
-
-Let $f$ be differentiable at $c$ (@def-differentiable).
-If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary point**)
-[@wikipedia_stationary_point].
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-flat-point}
-#### Flat points, and a point that is not one
-
-- $f(w) = w^3$ has $f'(w) = 3w^2$, which is $0$ at $w = 0$, so $0$ is a flat point.
-  Yet $f(0) = 0$ is neither the [minimum](algebra.qmd#def-minimum) nor the [maximum](algebra.qmd#def-maximum)
-  of the values $f$ takes on any open interval around $0$: $f(w) < 0$ for $w < 0$ and $f(w) > 0$ for $w > 0$.
-- $h(w) = w^2$ has $h'(1) = 2 \ne 0$, so $1$ is not a flat point.
-
-:::
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exr-flat-point.qmd >}}
-
-{{< include mds/_subfiles/vector-calc/_sol-flat-point.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/derivatives/_def-critical-point.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/derivatives/_exm-critical-point.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/derivatives/_thm-flat-point-critical.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/derivatives/_exm-flat-point-critical.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-opt-gamma-kernel.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-classify-critical-points.qmd >}}
-
-{{< slidebreak >}}
-
 ### Taylor series {#sec-taylor-series}
 
 {{< include mds/_subfiles/derivatives/_def-taylor-polynomial.qmd >}}

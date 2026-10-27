@@ -1,6 +1,6 @@
 :::{#rem-stationary-point-one-variable}
 #### Stationary points in one variable
 
-For $p = 1$, a stationary point is a [flat point](calculus.qmd#def-flat-point).
+For $p = 1$, a [stationary point](#def-stationary-point) is a flat point (@def-flat-point).
 
 :::
