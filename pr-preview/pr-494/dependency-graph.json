@@ -3810,12 +3810,39 @@
    "external": false
   },
   {
+   "id": "mds/expressions-algorithms#def-closed-form-expression",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-closed-form-expression",
+   "kind": "def",
+   "title": "Closed-form expression (formula)",
+   "external": false
+  },
+  {
+   "id": "mds/expressions-algorithms#def-closed-form-solution",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-closed-form-solution",
+   "kind": "def",
+   "title": "Closed-form solution",
+   "external": false
+  },
+  {
    "id": "mds/expressions-algorithms#def-computes",
    "site": "mds",
    "page": "expressions-algorithms",
    "div": "def-computes",
    "kind": "def",
    "title": "Computes",
+   "external": false
+  },
+  {
+   "id": "mds/expressions-algorithms#def-denotes",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-denotes",
+   "kind": "def",
+   "title": "Denotes",
    "external": false
   },
   {
@@ -9948,6 +9975,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-gradient-ascent",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-gradient-ascent",
+   "kind": "def",
+   "title": "Gradient ascent",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-gradient-descent",
    "site": "mds",
    "page": "optimization",
@@ -13170,6 +13206,26 @@
    "mds/calculus-integration#def-riemann-sum-equal-width"
   ],
   [
+   "mds/expressions-algorithms#def-closed-form-expression",
+   "mds/algebra-basics#def-power"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-expression",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-expression",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-solution",
+   "mds/expressions-algorithms#def-closed-form-expression"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-solution",
+   "mds/functions#def-function"
+  ],
+  [
    "mds/expressions-algorithms#def-computes",
    "mds/expressions-algorithms#def-algorithm"
   ],
@@ -13186,8 +13242,20 @@
    "mds/functions#def-value"
   ],
   [
-   "mds/expressions-algorithms#def-expression",
+   "mds/expressions-algorithms#def-denotes",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/expressions-algorithms#def-denotes",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/expressions-algorithms#def-denotes",
    "mds/functions#def-function"
+  ],
+  [
+   "mds/expressions-algorithms#def-denotes",
+   "mds/functions#def-value"
   ],
   [
    "mds/expressions-algorithms#def-parse-tree",
@@ -16176,6 +16244,14 @@
   [
    "mds/optimization#def-exact-line-search",
    "mds/optimization#def-line-search"
+  ],
+  [
+   "mds/optimization#def-gradient-ascent",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#def-gradient-ascent",
+   "mds/vector-calculus#def-partial-derivative"
   ],
   [
    "mds/optimization#def-iterate",

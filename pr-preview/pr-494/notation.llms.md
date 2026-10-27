@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-26 12:23:41 (PDT)
+Last modified: 2026-10-26 23:15:36 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 
@@ -50,19 +50,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > Under these rules, \\f\_\theta(x)\\ reads “the member of the family labeled \\\theta\\, evaluated at \\x\\”. The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-subscripts-parentheses) gives the reason for this split and explains how to read a source that divides the work differently.
 
-> **NOTE:**
->
-> | object | our form | other forms you may meet |
-> |----|----|----|
-> | entry of a vector or matrix | \\x_i\\, \\A\_{ij}\\ | \\x(i)\\, \\A(i, j)\\, and `A[i, j]` in code |
-> | term of a [sequence](functions.llms.md#def-sequence) | \\a_n\\ | \\a(n)\\ |
-> | function with a parameter | \\f\_\theta(x)\\ | \\f(x; \theta)\\, \\f(x \mid \theta)\\, \\f(x, \theta)\\ |
-> | probability under a parameter | \\\Pr\_\theta(A)\\ | \\\Pr(A; \theta)\\, \\\Pr(A \mid \theta)\\ |
-> | derivative of order \\k\\ | \\f^{(k)}(x)\\ | \\f^{\[k\]}(x)\\, \\\mathrm{D}^k f(x)\\ |
-> | order statistic | \\X\_{(i)}\\ | \\X\_{i:n}\\ |
-> | sample index | \\x_i\\ | \\x^{(i)}\\ |
->
-> Table 2: Subscripts and parentheses in these notes, and the alternatives
+The [Notation Across Sources page](https://morrison-lab.github.io/macros/notation-across-sources.html#sec-notation-subscripts) of the macros site tabulates our form of each object beside the other forms you may encounter.
 
 > **NOTE:**
 >
