@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-27 01:34:30 (PDT)</p>
+  <p class="date">Last modified: 2026-10-27 09:35:20 (PDT)</p>
 </section><section class="slide level2"><div class="proof remark">
 <p><span class="proof-title"><em>Remark</em>. </span>A function can be written down as an expression and computed by an algorithm. This page defines expressions, which write down the <a href="./functions.html">functions</a> in the Morrison Lab’s probability and statistics notes, the parse trees of expressions, and algorithms, which compute those functions.</p>
 </div>
@@ -546,7 +546,54 @@ Figure&nbsp;1: The <a href="#/def-parse-tree">parse trees</a> of <span class="ma
 <p><span class="theorem-title"><strong>Definition 7 (Computes)</strong></span> An <a href="#/def-algorithm">algorithm</a> <strong>computes</strong> a <a href="./functions.html#def-function">function</a> when, for each <a href="./functions.html#def-argument">input</a>, it returns the function’s <a href="./functions.html#def-value">value</a> at that input.</p>
 </div>
 </section><section class="slide level2"><div id="exm-algorithm" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (Two algorithms for one function)</strong></span> Take the function that <a href="#/exm-expression" class="quarto-xref">Example&nbsp;1</a> writes two ways. Evaluating the tree of <span class="math inline">\(a x^2 + b x + c\)</span>, with <span class="math inline">\(x^2\)</span> computed as <span class="math inline">\(x \cdot x\)</span>, takes three multiplications and two additions. Evaluating the tree of Horner’s form <span class="math inline">\((a x + b)\,x + c\)</span> takes two multiplications and two additions. At <span class="math inline">\(a = 2\)</span>, <span class="math inline">\(b = -3\)</span>, <span class="math inline">\(c = 5\)</span> and <span class="math inline">\(x = 1.5\)</span>, the first algorithm computes <span class="math inline">\(4.5 - 4.5 + 5 = 5\)</span> and the second computes <span class="math inline">\((3 - 3) \cdot 1.5 + 5 = 5\)</span>, the same value by different steps.</p>
+<p><span class="theorem-title"><strong>Example 5 (Two algorithms for one function)</strong></span> Take the <a href="./functions.html#def-function">function</a> that <a href="#/exm-expression" class="quarto-xref">Example&nbsp;1</a> writes two ways. Evaluating the tree of <span class="math inline">\(a x^2 + b x + c\)</span>, with <span class="math inline">\(x^2\)</span> computed as <span class="math inline">\(x \cdot x\)</span>, takes three multiplications and two additions. Evaluating the tree of Horner’s form <span class="math inline">\((a x + b)\,x + c\)</span> takes two multiplications and two additions. We evaluate both forms at <span class="math inline">\(a = 2\)</span>, <span class="math inline">\(b = -3\)</span>, <span class="math inline">\(c = 5\)</span> and <span class="math inline">\(x = 1.5\)</span>, in R and in Python, and give each intermediate quantity a name. (The code calls <span class="math inline">\(c\)</span> <code>c0</code>, because <code>c</code> is a built-in function in R.) The two <a href="#/def-algorithm">algorithms</a> <a href="#/def-computes">compute</a> the same function, so the two <a href="./functions.html#def-value">values</a> must agree.</p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">R</a></li>
+<li><a href="#tabset-1-2">Python</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb2-2"><a aria-label="2"></a>b <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">3</span></span>
+<span id="cb2-3"><a aria-label="3"></a>c0 <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb2-4"><a aria-label="4"></a>x <span class="ot">&lt;-</span> <span class="fl">1.5</span></span>
+<span id="cb2-5"><a aria-label="5"></a><span class="co"># Expanded form: 3 multiplications, 2 additions</span></span>
+<span id="cb2-6"><a aria-label="6"></a>square_term <span class="ot">&lt;-</span> a <span class="sc">*</span> x <span class="sc">*</span> x</span>
+<span id="cb2-7"><a aria-label="7"></a>linear_term <span class="ot">&lt;-</span> b <span class="sc">*</span> x</span>
+<span id="cb2-8"><a aria-label="8"></a>expanded <span class="ot">&lt;-</span> square_term <span class="sc">+</span> linear_term <span class="sc">+</span> c0</span>
+<span id="cb2-9"><a aria-label="9"></a><span class="co"># Horner's form: 2 multiplications, 2 additions</span></span>
+<span id="cb2-10"><a aria-label="10"></a>inner <span class="ot">&lt;-</span> a <span class="sc">*</span> x <span class="sc">+</span> b</span>
+<span id="cb2-11"><a aria-label="11"></a>horner <span class="ot">&lt;-</span> inner <span class="sc">*</span> x <span class="sc">+</span> c0</span>
+<span id="cb2-12"><a aria-label="12"></a><span class="fu">c</span>(square_term, linear_term, expanded)</span>
+<span id="cb2-13"><a aria-label="13"></a><span class="co">#&gt; [1]  4.5 -4.5  5.0</span></span>
+<span id="cb2-14"><a aria-label="14"></a><span class="fu">c</span>(inner, horner)</span>
+<span id="cb2-15"><a aria-label="15"></a><span class="co">#&gt; [1] 0 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-label="1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb3-2"><a aria-label="2"></a>b <span class="op">=</span> <span class="op">-</span><span class="dv">3</span></span>
+<span id="cb3-3"><a aria-label="3"></a>c0 <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb3-4"><a aria-label="4"></a>x <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="co"># Expanded form: 3 multiplications, 2 additions</span></span>
+<span id="cb3-6"><a aria-label="6"></a>square_term <span class="op">=</span> a <span class="op">*</span> x <span class="op">*</span> x</span>
+<span id="cb3-7"><a aria-label="7"></a>linear_term <span class="op">=</span> b <span class="op">*</span> x</span>
+<span id="cb3-8"><a aria-label="8"></a>expanded <span class="op">=</span> square_term <span class="op">+</span> linear_term <span class="op">+</span> c0</span>
+<span id="cb3-9"><a aria-label="9"></a><span class="co"># Horner's form: 2 multiplications, 2 additions</span></span>
+<span id="cb3-10"><a aria-label="10"></a>inner <span class="op">=</span> a <span class="op">*</span> x <span class="op">+</span> b</span>
+<span id="cb3-11"><a aria-label="11"></a>horner <span class="op">=</span> inner <span class="op">*</span> x <span class="op">+</span> c0</span>
+<span id="cb3-12"><a aria-label="12"></a><span class="bu">print</span>(square_term, linear_term, expanded)</span>
+<span id="cb3-13"><a aria-label="13"></a><span class="co">#&gt; 4.5 -4.5 5.0</span></span>
+<span id="cb3-14"><a aria-label="14"></a><span class="bu">print</span>(inner, horner)</span>
+<span id="cb3-15"><a aria-label="15"></a><span class="co">#&gt; 0.0 5.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>The expanded form adds 4.5, -4.5 and 5 to reach 5. Horner’s form multiplies 0 by 1.5 and adds 5 to reach 5. Different steps give the same <a href="./functions.html#def-value">value</a>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-algorithm-scope" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (Procedures that are not algorithms here). </span>By the definition of an <a href="#/def-algorithm">algorithm</a>, every algorithm <a href="#/def-computes">computes</a> some <a href="./functions.html#def-function">function</a>. That holds because an algorithm has unambiguous steps and halts on every valid <a href="./functions.html#def-argument">input</a>. A procedure that makes random choices can return different <a href="./functions.html#def-value">values</a> for the same input. A procedure that never halts returns no <a href="./functions.html#def-value">value</a> for some inputs. Neither computes a function, and neither is an algorithm in this sense, although some texts call them <a href="#/def-algorithm">algorithms</a>.</p>

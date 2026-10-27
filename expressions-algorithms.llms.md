@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-27 01:34:30 (PDT)
+Last modified: 2026-10-27 09:35:20 (PDT)
 
 > **NOTE:**
 >
@@ -199,7 +199,49 @@ Last modified: 2026-10-27 01:34:30 (PDT)
 
 > **NOTE:**
 >
-> **Example 5 (Two algorithms for one function)** Take the function that [Example 1](#exm-expression) writes two ways. Evaluating the tree of \\a x^2 + b x + c\\, with \\x^2\\ computed as \\x \cdot x\\, takes three multiplications and two additions. Evaluating the tree of Horner’s form \\(a x + b)\\x + c\\ takes two multiplications and two additions. At \\a = 2\\, \\b = -3\\, \\c = 5\\ and \\x = 1.5\\, the first algorithm computes \\4.5 - 4.5 + 5 = 5\\ and the second computes \\(3 - 3) \cdot 1.5 + 5 = 5\\, the same value by different steps.
+> **Example 5 (Two algorithms for one function)** Take the [function](functions.llms.md#def-function) that [Example 1](#exm-expression) writes two ways. Evaluating the tree of \\a x^2 + b x + c\\, with \\x^2\\ computed as \\x \cdot x\\, takes three multiplications and two additions. Evaluating the tree of Horner’s form \\(a x + b)\\x + c\\ takes two multiplications and two additions. We evaluate both forms at \\a = 2\\, \\b = -3\\, \\c = 5\\ and \\x = 1.5\\, in R and in Python, and give each intermediate quantity a name. (The code calls \\c\\ `c0`, because `c` is a built-in function in R.) The two [algorithms](#def-algorithm) [compute](#def-computes) the same function, so the two [values](functions.llms.md#def-value) must agree.
+>
+> ## R
+>
+> ``` downlit
+> a <- 2
+> b <- -3
+> c0 <- 5
+> x <- 1.5
+> # Expanded form: 3 multiplications, 2 additions
+> square_term <- a * x * x
+> linear_term <- b * x
+> expanded <- square_term + linear_term + c0
+> # Horner's form: 2 multiplications, 2 additions
+> inner <- a * x + b
+> horner <- inner * x + c0
+> c(square_term, linear_term, expanded)
+> #> [1]  4.5 -4.5  5.0
+> c(inner, horner)
+> #> [1] 0 5
+> ```
+>
+> ## Python
+>
+> ``` python
+> a = 2
+> b = -3
+> c0 = 5
+> x = 1.5
+> # Expanded form: 3 multiplications, 2 additions
+> square_term = a * x * x
+> linear_term = b * x
+> expanded = square_term + linear_term + c0
+> # Horner's form: 2 multiplications, 2 additions
+> inner = a * x + b
+> horner = inner * x + c0
+> print(square_term, linear_term, expanded)
+> #> 4.5 -4.5 5.0
+> print(inner, horner)
+> #> 0.0 5.0
+> ```
+>
+> The expanded form adds 4.5, -4.5 and 5 to reach 5. Horner’s form multiplies 0 by 1.5 and adds 5 to reach 5. Different steps give the same [value](functions.llms.md#def-value).
 
 > **NOTE:**
 >
