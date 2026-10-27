@@ -6,7 +6,7 @@
 
     $$\sum_{x \in A} f(x) = f(-1) + f(2) + f(5)$$
 
-2.  Evaluate each term and add:
+2.  Evaluate each [term](algebra-sums.qmd#def-term) and add:
 
     $$
     \ba
@@ -17,7 +17,7 @@
     \ea
     $$
 
-3.  In the order $5, -1, 2$, the terms are $25$, $1$ and $4$.
+3.  In the order $5, -1, 2$, the [terms](algebra-sums.qmd#def-term) are $25$, $1$ and $4$.
     Their total is $25 + 1 + 4 = 30$.
 
 4.  The total is the same,
@@ -35,7 +35,7 @@
 
     $$\sum_{x \in A} f(x) = f(-1) + f(2) + f(5)$$
 
-2.  Evaluate each term and add:
+2.  Evaluate each [term](algebra-sums.qmd#def-term) and add:
 
     $$
     \ba
@@ -52,7 +52,7 @@
 
 :::{.solution}
 
-3.  In the order $5, -1, 2$, the terms are $25$, $1$ and $4$.
+3.  In the order $5, -1, 2$, the [terms](algebra-sums.qmd#def-term) are $25$, $1$ and $4$.
     Their total is $25 + 1 + 4 = 30$.
 
 4.  The total is the same,

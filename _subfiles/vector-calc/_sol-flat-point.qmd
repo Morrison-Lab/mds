@@ -44,7 +44,7 @@ $$
 
 to $3.98$.
 
-**6.** The exact value is
+**6.** The exact [value](functions.qmd#def-value) is
 
 $$
 \begin{aligned}
