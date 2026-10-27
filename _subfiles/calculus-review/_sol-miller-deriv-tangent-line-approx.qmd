@@ -1,0 +1,7 @@
+:::{#sol-miller-deriv-tangent-line-approx}
+
+Differentiate term by term:
+
+$$f'(x) = 4 - \sqrt{2}\sin x$$
+
+:::

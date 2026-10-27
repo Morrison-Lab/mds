@@ -1,0 +1,8 @@
+:::{#exr-miller-deriv-tangent-line-approx-compare}
+
+#### Check the approximation
+
+Compare the approximation in @exr-miller-deriv-tangent-line-approx-approx
+with the exact [value](functions.qmd#def-value) of $f(\pi/4 + 0.01)$.
+
+:::

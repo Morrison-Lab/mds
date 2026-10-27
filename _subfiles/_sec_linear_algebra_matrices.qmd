@@ -184,7 +184,17 @@
 
 {{< include mds/_subfiles/linear-algebra/_exr-write-in-matrix-form.qmd >}}
 
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_sol-write-in-matrix-form.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-write-in-matrix-form-score.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-write-in-matrix-form-score.qmd >}}
 
 {{< slidebreak >}}
 

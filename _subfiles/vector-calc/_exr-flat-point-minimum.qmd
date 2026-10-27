@@ -1,0 +1,10 @@
+:::{#exr-flat-point-minimum}
+
+#### Classify the flat point
+
+In the setting of @exr-flat-point,
+say whether $f(w)$ at the flat point is the
+[minimum](algebra.qmd#def-minimum) or the [maximum](algebra.qmd#def-maximum)
+of the values of $f$.
+
+:::

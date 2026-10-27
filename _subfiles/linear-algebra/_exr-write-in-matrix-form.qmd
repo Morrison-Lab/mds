@@ -1,4 +1,4 @@
-::: {#exr-write-in-matrix-form}
+:::{#exr-write-in-matrix-form}
 
 #### Write a rule in matrix form
 
@@ -14,9 +14,7 @@ The rule in use is
 
 $$\text{score} = 0.4\,x_1 + 0.2\,x_2 + 1.5\,x_3 - 30$$
 
-1.  Write this rule in the form of @eq-linear-scalar,
-    naming $\vec w$, $b$ and $p$ explicitly.
-2.  Give the score for a patient aged $50$ with blood pressure $130$ and BMI
-    $28$.
+Write this rule in the form of @eq-linear-scalar,
+naming $\vec w$, $b$ and $p$ explicitly.
 
 :::

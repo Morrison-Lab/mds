@@ -228,6 +228,30 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_exr-sum-over-set-value.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-sum-over-set-value.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-sum-over-set-reorder.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-sum-over-set-reorder.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-sum-over-set-order-total.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-sum-over-set-order-total.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-sum-over-set.qmd >}}
 
 {{< slidebreak >}}

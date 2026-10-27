@@ -1,0 +1,6 @@
+:::{#sol-sum-over-set-reorder}
+
+In the order $5, -1, 2$, the [terms](algebra-sums.qmd#def-term) are $25$, $1$ and $4$.
+Their total is $25 + 1 + 4 = 30$.
+
+:::

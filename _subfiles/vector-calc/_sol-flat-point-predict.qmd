@@ -1,0 +1,15 @@
+:::{#sol-flat-point-predict}
+
+With $\smallconst = 0.01$, @eq-linear-approx predicts a change of
+$(0.01)(-2) = -0.02$, from
+
+$$
+\begin{aligned}
+f(1) &= 1 - 4 + 7 \\
+&= 4
+\end{aligned}
+$$
+
+to $3.98$.
+
+:::

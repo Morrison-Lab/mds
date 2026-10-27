@@ -383,6 +383,34 @@ as an affine function for functions of several variables as well.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx-tangent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx-tangent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx-compare.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx-compare.qmd >}}
+
+{{< slidebreak >}}
+
 ### Critical points and optimization {#sec-critical-points}
 
 :::{#def-flat-point}
@@ -409,7 +437,49 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary 
 
 {{< include mds/_subfiles/vector-calc/_exr-flat-point.qmd >}}
 
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_sol-flat-point.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-flat-point-find.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-flat-point-find.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-flat-point-minimum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-flat-point-minimum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-flat-point-slope.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-flat-point-slope.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-flat-point-predict.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-flat-point-predict.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-flat-point-compare.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-flat-point-compare.qmd >}}
 
 {{< slidebreak >}}
 

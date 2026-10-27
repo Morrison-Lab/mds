@@ -1,0 +1,5 @@
+:::{#sol-flat-point-slope}
+
+At $w = 1$ the derivative is $2(1) - 4 = -2$, so $f$ is falling there.
+
+:::

@@ -1,0 +1,8 @@
+:::{#exr-flat-point-predict}
+
+#### Predict a nearby value
+
+In the setting of @exr-flat-point,
+use @eq-linear-approx to predict $f(1.01)$.
+
+:::

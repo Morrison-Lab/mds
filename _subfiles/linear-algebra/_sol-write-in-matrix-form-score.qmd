@@ -1,0 +1,32 @@
+:::{#sol-write-in-matrix-form-score}
+
+For the patient,
+
+$$\vx = \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
+
+$$
+\begin{aligned}
+\vec w\' \vx
+&= (0.4)(50) + (0.2)(130) + (1.5)(28) \\
+&= 20 + 26 + 42 \\
+&= 88
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+f(\vx)
+&= 88 - 30 \\
+&= 58
+\end{aligned}
+$$
+
+Two things are worth noticing.
+The coefficients are not comparable as they stand: $1.5$ is the largest
+number but BMI is measured on the smallest scale,
+so the weight on a feature says nothing on its own about how much that
+feature matters.
+And $b = -30$ is doing real work --- without it the score would be $88$,
+which is a different clinical claim entirely.
+
+:::

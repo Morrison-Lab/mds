@@ -1,16 +1,9 @@
-::: {#exr-flat-point}
+:::{#exr-flat-point}
 
-#### Find the flat point, and check the approximation
+#### Differentiate a quadratic
 
 Let $f(w) = w^2 - 4w + 7$.
 
-1.  Differentiate $f$.
-2.  Find the [flat point](calculus-derivatives.qmd#def-flat-point) $w$ of $f$.
-3.  Say whether $f(w)$ is the
-    [minimum](algebra.qmd#def-minimum) or the [maximum](algebra.qmd#def-maximum)
-    of the values of $f$.
-4.  Evaluate the [derivative](calculus-derivatives.qmd#def-derivative) at $w = 1$.
-5.  Use @eq-linear-approx to predict $f(1.01)$.
-6.  Compare that prediction with the exact [value](functions.qmd#def-value).
+Differentiate $f$.
 
 :::
