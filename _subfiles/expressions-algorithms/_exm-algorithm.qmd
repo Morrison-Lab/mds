@@ -7,7 +7,7 @@ takes three multiplications and two additions.
 Evaluating the tree of Horner's form $(a x + b)\,x + c$
 takes two multiplications and two additions.
 The code evaluates both at $a = 2$, $b = -3$, $c = 5$ and $x = 1.5$.
-They are the same function, so the two values must agree.
+They are the same function, so the two [values](functions.qmd#def-value) must agree.
 
 ::: {.panel-tabset}
 
@@ -38,6 +38,6 @@ print(expanded, horner)
 
 :::
 
-Both algorithms give $`r horner`$, by different steps.
+Both [algorithms](#def-algorithm) give $`r horner`$, by different steps.
 
 :::
