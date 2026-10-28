@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-27 17:38:18 (PDT)</p>
+  <p class="date">Last modified: 2026-10-27 20:53:54 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -1196,41 +1196,74 @@ w_1 &amp;= w_2 \\
 <p><span class="proof-title"><em>Proof</em>. </span>By <a href="#/sol-sum-rules" class="quarto-xref">Solution&nbsp;4</a>, part 2.</p>
 </div>
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="exr-sum-over-set" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5 (Sum over a set)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{-1, 2, 5\right\}\mathclose{}\)</span> and let <span class="math inline">\(f(x) = x^2\)</span>. The expression <span class="math inline">\(\sum_{x \in A} f(x)\)</span> means: add up <span class="math inline">\(f(x)\)</span> for each element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span>.</p>
-<ol type="1">
-<li>Write <span class="math inline">\(\sum_{x \in A} f(x)\)</span> without the <span class="math inline">\(\sum\)</span> symbol, and compute its value.</li>
-<li>List the elements of <span class="math inline">\(A\)</span> in a different order, and add up the same terms in that order. Is the total the same?</li>
-</ol>
+<p>Write <span class="math inline">\(\sum_{x \in A} f(x)\)</span> without the <span class="math inline">\(\sum\)</span> symbol.</p>
 </div>
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="sol-sum-over-set" class="proof solution">
-<p><span class="proof-title"><em>Solution 5</em>. </span></p>
-<ol type="1">
-<li><p>Replace <span class="math inline">\(x\)</span> by each element of <span class="math inline">\(A\)</span> in turn, and add the results:</p>
+<p><span class="proof-title"><em>Solution 5</em>. </span>Replace <span class="math inline">\(x\)</span> by each element of <span class="math inline">\(A\)</span> in turn, and add:</p>
+<p><span class="math display">\[\sum_{x \in A} f(x) = f(-1) + f(2) + f(5)\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-sum-over-set-value" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Value of a sum over a set)</strong></span> In the setting of <a href="#/exr-sum-over-set" class="quarto-xref">Exercise&nbsp;5</a>, find the <a href="./functions.html#def-value">value</a> of <span class="math inline">\(\sum_{x \in A} f(x)\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-sum-over-set-value" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span>Evaluate each <a href="./algebra-sums.html#def-term">term</a> and add:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\sum_{x \in A} f(x)
-&amp;= f(-1) + f(2) + f(5)
-\\ &amp;= (-1)^2 + 2^2 + 5^2
+f(-1) + f(2) + f(5)
+&amp;= (-1)^2 + 2^2 + 5^2
 \\ &amp;= 1 + 4 + 25
 \\ &amp;= 30
 \end{aligned}
-\]</span></p></li>
-</ol>
+\]</span></p>
 </div>
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
-<div class="proof solution">
-<p><span class="proof-title"><em>Solution</em>. </span></p>
-<ol start="2" type="1">
-<li>In the order <span class="math inline">\(5, -1, 2\)</span>, the terms are <span class="math inline">\(25\)</span>, <span class="math inline">\(1\)</span> and <span class="math inline">\(4\)</span>. Their total is <span class="math inline">\(25 + 1 + 4 = 30\)</span>. The total is the same, because addition does not depend on the order of the terms.</li>
-</ol>
+<div id="exr-sum-over-set-reorder" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (List the terms in a different order)</strong></span> In the setting of <a href="#/exr-sum-over-set" class="quarto-xref">Exercise&nbsp;5</a>, list the elements of <span class="math inline">\(A\)</span> in a different order, and write the <a href="./algebra-sums.html#def-term">term</a> for each element in that order.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-sum-over-set-reorder" class="proof solution">
+<p><span class="proof-title"><em>Solution 7</em>. </span>In the order <span class="math inline">\(5, -1, 2\)</span>, the <a href="./algebra-sums.html#def-term">terms</a> are <span class="math inline">\(25\)</span>, <span class="math inline">\(1\)</span> and <span class="math inline">\(4\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-sum-over-set-reorder-total" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8 (Add the terms in the new order)</strong></span> In the setting of <a href="#/exr-sum-over-set-reorder" class="quarto-xref">Exercise&nbsp;7</a>, add up the <a href="./algebra-sums.html#def-term">terms</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-sum-over-set-reorder-total" class="proof solution">
+<p><span class="proof-title"><em>Solution 8</em>. </span>The total is <span class="math inline">\(25 + 1 + 4 = 30\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-sum-over-set-order-total" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9 (Does the order change the total?)</strong></span> Say whether the total in <a href="#/exr-sum-over-set-reorder-total" class="quarto-xref">Exercise&nbsp;8</a> is the same as the total in <a href="#/exr-sum-over-set-value" class="quarto-xref">Exercise&nbsp;6</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-sum-over-set-order-total" class="proof solution">
+<p><span class="proof-title"><em>Solution 9</em>. </span>The total is the same, because addition does not depend on the order of the terms.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1246,7 +1279,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="rem-sum-over-set-order" class="proof remark">
-<p><span class="proof-title"><em>Remark 7</em> (The order of the terms does not matter). </span>The order in which we list the elements of <span class="math inline">\(A\)</span> does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if <span class="math inline">\(A = \mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span> and <span class="math inline">\(f(x) = x^2\)</span>, listing <span class="math inline">\(A\)</span> as <span class="math inline">\(1, 2, 3\)</span> gives <span class="math inline">\(1 + 4 + 9 = 14\)</span>, and listing <span class="math inline">\(A\)</span> as <span class="math inline">\(3, 1, 2\)</span> gives <span class="math inline">\(9 + 1 + 4 = 14\)</span>. <a href="#/exr-sum-over-set" class="quarto-xref">Exercise&nbsp;5</a>, part 2, shows another example.</p>
+<p><span class="proof-title"><em>Remark 7</em> (The order of the terms does not matter). </span>The order in which we list the elements of <span class="math inline">\(A\)</span> does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if <span class="math inline">\(A = \mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span> and <span class="math inline">\(f(x) = x^2\)</span>, listing <span class="math inline">\(A\)</span> as <span class="math inline">\(1, 2, 3\)</span> gives <span class="math inline">\(1 + 4 + 9 = 14\)</span>, and listing <span class="math inline">\(A\)</span> as <span class="math inline">\(3, 1, 2\)</span> gives <span class="math inline">\(9 + 1 + 4 = 14\)</span>. <a href="#/exr-sum-over-set-value" class="quarto-xref">Exercise&nbsp;6</a> and <a href="#/exr-sum-over-set-reorder-total" class="quarto-xref">Exercise&nbsp;8</a> show another example.</p>
 <p>When <span class="math inline">\(A = \mathopen{}\left\{m, m+1, \ldots, n\right\}\mathclose{}\)</span>, this sum is the same as <span class="math inline">\(\sum_{i=m}^{n} f(i)\)</span> from <a href="#/def-summation" class="quarto-xref">Definition&nbsp;19</a>.</p>
 </div>
 </section>

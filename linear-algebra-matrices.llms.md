@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-27 17:38:18 (PDT)
+Last modified: 2026-10-27 20:53:54 (PDT)
 
 ## 1 Matrices
 
@@ -687,15 +687,23 @@ Last modified: 2026-10-27 17:38:18 (PDT)
 >
 > \\\text{score} = 0.4\\x_1 + 0.2\\x_2 + 1.5\\x_3 - 30\\
 >
-> Write this rule in the form of [Equation 1](#eq-linear-scalar), naming \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\, \\b\\ and \\p\\ explicitly, and give the score for a patient aged \\50\\ with blood pressure \\130\\ and BMI \\28\\.
+> Write this rule in the form of [Equation 1](#eq-linear-scalar), naming \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\, \\b\\ and \\p\\ explicitly.
 
 > **NOTE:**
 >
-> *Solution 2*. Read the coefficients straight off the rule. There are three inputs, so \\p = 3\\:
+> *Solution 2*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so \\p = 3\\:
 >
 > \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix}, \qquad b = -30\\
 >
-> and the rule is \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ b\\. For the patient,
+> and the rule is \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}+ b\\.
+
+> **NOTE:**
+>
+> **Exercise 3 (Score a patient)** Give the score from the rule in [Exercise 2](#exr-write-in-matrix-form) for a patient aged \\50\\ with blood pressure \\130\\ and BMI \\28\\.
+
+> **NOTE:**
+>
+> *Solution 3*. For the patient,
 >
 > \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\\
 >
@@ -703,11 +711,11 @@ Last modified: 2026-10-27 17:38:18 (PDT)
 >
 > \\ \begin{aligned} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) &= 88 - 30 \\ &= 58 \end{aligned} \\
 >
-> Two things are worth noticing. The coefficients are not comparable as they stand: \\1.5\\ is the largest number but BMI is measured on the smallest scale, so the weight on a feature says nothing on its own about how much that feature matters. And \\b = -30\\ is doing real work — without it the score would be \\88\\, which is a different clinical claim entirely.
+> Two things are worth noticing. The [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) are not comparable as they stand. The [weight](linear-algebra-vectors.llms.md#def-weight) on BMI, \\1.5\\, is \\7.5\\ times the weight on blood pressure, \\0.2\\, but the contribution of BMI, \\42\\, is less than twice the contribution of blood pressure, \\26\\, because the BMI [value](functions.llms.md#def-value), \\28\\, is much smaller than the blood pressure value, \\130\\. So the weight on a feature says nothing on its own about how much that feature contributes to the score. And \\b = -30\\ changes the score: without it, the score would be \\88\\ instead of \\58\\.
 
 > **NOTE:**
 >
-> **Exercise 3 (Which of these are affine in \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\?)** Each of the five expressions is a function of the weights \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \in \mathbb{R}^p\\, with the data \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\y\\ held fixed. Say which ones are affine ([Definition 19](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 15](#def-linear-map)).
+> **Exercise 4 (Which of these are affine in \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\?)** Each of the five expressions is a function of the weights \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \in \mathbb{R}^p\\, with the data \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\y\\ held fixed. Say which ones are affine ([Definition 19](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 15](#def-linear-map)).
 >
 > 1.  \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\
 > 2.  \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- y\\
@@ -717,7 +725,7 @@ Last modified: 2026-10-27 17:38:18 (PDT)
 
 > **NOTE:**
 >
-> *Solution 3*.
+> *Solution 4*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with \\b = 0\\, which is a linear map by [Theorem 10](#thm-matrix-map-linear): the matrix \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top}\\ times \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is \\b = -y\\, which is a constant because \\y\\ is held fixed. It is linear only when \\y = 0\\: otherwise \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ gives \\-y \ne 0\\, and a linear map sends \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ to \\0\\ ([Theorem 9](#thm-linear-map-zero)).
