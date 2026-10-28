@@ -1,6 +1,6 @@
 :::{#exr-flat-point-slope}
 
-#### Slope at a nearby point
+#### Slope at $w = 1$
 
 In the setting of @exr-flat-point,
 evaluate the [derivative](calculus-derivatives.qmd#def-derivative) at $w = 1$.

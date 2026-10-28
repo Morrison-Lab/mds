@@ -1,5 +1,7 @@
 :::{#sol-flat-point-find}
 
-The [derivative](calculus-derivatives.qmd#def-derivative) is zero where $2w - 4 = 0$, which gives $w = 2$.
+The [derivative](calculus-derivatives.qmd#def-derivative) is zero
+where $2w - 4 = 0$,
+which gives $w = 2$.
 
 :::
