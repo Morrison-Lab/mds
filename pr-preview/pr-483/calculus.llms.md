@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-10-26 01:07:23 (PDT)
+Last modified: 2026-10-28 11:04:35 (PDT)
 
 The calculus notes are split across these pages:
 
-- [Derivatives and Taylor Series](calculus-derivatives.llms.md): limits and derivatives, derivative rules, tangent lines, linear approximation, critical points and optimization, and Taylor series.
+- [Derivatives and Taylor Series](calculus-derivatives.llms.md): limits and derivatives, derivative rules, tangent lines, linear approximation, and Taylor series.
 - [Integrals and the Fundamental Theorem of Calculus](calculus-integration.llms.md): antiderivatives, regularity conditions, and the Fundamental Theorem of Calculus.
 - [Double Integrals and Fubini’s Theorem](calculus-double-integrals.llms.md): double integrals over rectangles and non-rectangular regions, and Fubini’s and Tonelli’s theorems.
 

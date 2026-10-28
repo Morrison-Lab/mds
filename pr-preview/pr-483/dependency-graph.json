@@ -489,6 +489,24 @@
    "external": false
   },
   {
+   "id": "mds/algebra#def-monomial",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-monomial",
+   "kind": "def",
+   "title": "Monomial (power product)",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-monomial-degree",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-monomial-degree",
+   "kind": "def",
+   "title": "Degree of a monomial",
+   "external": false
+  },
+  {
    "id": "mds/algebra#def-natural-log",
    "site": "mds",
    "page": "algebra",
@@ -1731,6 +1749,24 @@
    "external": false
   },
   {
+   "id": "mds/algebra-exponentials#def-monomial",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-monomial",
+   "kind": "def",
+   "title": "Monomial (power product)",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#def-monomial-degree",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-monomial-degree",
+   "kind": "def",
+   "title": "Degree of a monomial",
+   "external": false
+  },
+  {
    "id": "mds/algebra-exponentials#def-natural-log",
    "site": "mds",
    "page": "algebra-exponentials",
@@ -2577,15 +2613,6 @@
    "external": false
   },
   {
-   "id": "mds/calculus#def-critical-point",
-   "site": "mds",
-   "page": "calculus",
-   "div": "def-critical-point",
-   "kind": "def",
-   "title": "Critical point",
-   "external": false
-  },
-  {
    "id": "mds/calculus#def-derivative",
    "site": "mds",
    "page": "calculus",
@@ -2646,15 +2673,6 @@
    "div": "def-evaluation-bracket",
    "kind": "def",
    "title": "Evaluation bracket",
-   "external": false
-  },
-  {
-   "id": "mds/calculus#def-flat-point",
-   "site": "mds",
-   "page": "calculus",
-   "div": "def-flat-point",
-   "kind": "def",
-   "title": "Flat point (stationary point)",
    "external": false
   },
   {
@@ -3036,15 +3054,6 @@
    "external": false
   },
   {
-   "id": "mds/calculus#thm-flat-point-critical",
-   "site": "mds",
-   "page": "calculus",
-   "div": "thm-flat-point-critical",
-   "kind": "thm",
-   "title": "Every flat point is a critical point",
-   "external": false
-  },
-  {
    "id": "mds/calculus#thm-ftc-part1",
    "site": "mds",
    "page": "calculus",
@@ -3171,15 +3180,6 @@
    "external": false
   },
   {
-   "id": "mds/calculus-derivatives#def-critical-point",
-   "site": "mds",
-   "page": "calculus-derivatives",
-   "div": "def-critical-point",
-   "kind": "def",
-   "title": "Critical point",
-   "external": false
-  },
-  {
    "id": "mds/calculus-derivatives#def-derivative",
    "site": "mds",
    "page": "calculus-derivatives",
@@ -3204,15 +3204,6 @@
    "div": "def-differentiable",
    "kind": "def",
    "title": "Differentiable function",
-   "external": false
-  },
-  {
-   "id": "mds/calculus-derivatives#def-flat-point",
-   "site": "mds",
-   "page": "calculus-derivatives",
-   "div": "def-flat-point",
-   "kind": "def",
-   "title": "Flat point (stationary point)",
    "external": false
   },
   {
@@ -3456,15 +3447,6 @@
    "div": "thm-deriv-sin",
    "kind": "thm",
    "title": "Derivative of sine",
-   "external": false
-  },
-  {
-   "id": "mds/calculus-derivatives#thm-flat-point-critical",
-   "site": "mds",
-   "page": "calculus-derivatives",
-   "div": "thm-flat-point-critical",
-   "kind": "thm",
-   "title": "Every flat point is a critical point",
    "external": false
   },
   {
@@ -3810,12 +3792,39 @@
    "external": false
   },
   {
+   "id": "mds/expressions-algorithms#def-closed-form-expression",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-closed-form-expression",
+   "kind": "def",
+   "title": "Closed-form expression (formula)",
+   "external": false
+  },
+  {
+   "id": "mds/expressions-algorithms#def-closed-form-solution",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-closed-form-solution",
+   "kind": "def",
+   "title": "Closed-form solution",
+   "external": false
+  },
+  {
    "id": "mds/expressions-algorithms#def-computes",
    "site": "mds",
    "page": "expressions-algorithms",
    "div": "def-computes",
    "kind": "def",
    "title": "Computes",
+   "external": false
+  },
+  {
+   "id": "mds/expressions-algorithms#def-denotes",
+   "site": "mds",
+   "page": "expressions-algorithms",
+   "div": "def-denotes",
+   "kind": "def",
+   "title": "Denotes",
    "external": false
   },
   {
@@ -9876,6 +9885,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-bfgs-update",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-bfgs-update",
+   "kind": "def",
+   "title": "BFGS update (Broyden-Fletcher-Goldfarb-Shanno)",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-concave",
    "site": "mds",
    "page": "optimization",
@@ -9900,6 +9918,15 @@
    "div": "def-convex-set",
    "kind": "def",
    "title": "Convex set",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-critical-point",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-critical-point",
+   "kind": "def",
+   "title": "Critical point",
    "external": false
   },
   {
@@ -9936,6 +9963,24 @@
    "div": "def-feasible-set",
    "kind": "def",
    "title": "Feasible set",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-flat-point",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-flat-point",
+   "kind": "def",
+   "title": "Flat point (stationary point)",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-gradient-ascent",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-gradient-ascent",
+   "kind": "def",
+   "title": "Gradient ascent",
    "external": false
   },
   {
@@ -9999,6 +10044,15 @@
    "div": "def-lagrangian",
    "kind": "def",
    "title": "Lagrangian",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-lbfgs",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-lbfgs",
+   "kind": "def",
+   "title": "Limited-memory BFGS (L-BFGS)",
    "external": false
   },
   {
@@ -10092,12 +10146,30 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-quasi-newton-method",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-quasi-newton-method",
+   "kind": "def",
+   "title": "Quasi-Newton method",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-saddle-point",
    "site": "mds",
    "page": "optimization",
    "div": "def-saddle-point",
    "kind": "def",
    "title": "Saddle point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-secant-condition",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-secant-condition",
+   "kind": "def",
+   "title": "Secant condition",
    "external": false
   },
   {
@@ -10251,6 +10323,15 @@
    "div": "thm-first-order-condition",
    "kind": "thm",
    "title": "First-order necessary condition",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#thm-flat-point-critical",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-flat-point-critical",
+   "kind": "thm",
+   "title": "Every flat point is a critical point",
    "external": false
   },
   {
@@ -11646,6 +11727,38 @@
    "mds/calculus#def-riemann-integral"
   ],
   [
+   "mds/algebra#def-monomial",
+   "mds/algebra-basics#def-power"
+  ],
+  [
+   "mds/algebra#def-monomial",
+   "mds/algebra-basics#def-power-exponent"
+  ],
+  [
+   "mds/algebra#def-monomial",
+   "mds/algebra-basics#def-power-integer"
+  ],
+  [
+   "mds/algebra#def-monomial",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/algebra#def-monomial",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/algebra#def-monomial-degree",
+   "mds/algebra#def-monomial"
+  ],
+  [
+   "mds/algebra#def-monomial-degree",
+   "mds/algebra-basics#def-power-exponent"
+  ],
+  [
+   "mds/algebra#def-monomial-degree",
+   "mds/algebra-sums#def-summation"
+  ],
+  [
    "mds/algebra#def-natural-log",
    "mds/algebra#def-exponential-function"
   ],
@@ -12110,6 +12223,38 @@
    "mds/algebra-exponentials#def-affine-function"
   ],
   [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/algebra-basics#def-power"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/algebra-basics#def-power-exponent"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/algebra-basics#def-power-integer"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial-degree",
+   "mds/algebra-basics#def-power-exponent"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial-degree",
+   "mds/algebra-exponentials#def-monomial"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial-degree",
+   "mds/algebra-sums#def-summation"
+  ],
+  [
    "mds/algebra-exponentials#def-natural-log",
    "mds/algebra-exponentials#def-exponential-function"
   ],
@@ -12446,14 +12591,6 @@
    "mds/calculus#def-continuous"
   ],
   [
-   "mds/calculus#def-critical-point",
-   "mds/calculus#def-differentiable"
-  ],
-  [
-   "mds/calculus#def-critical-point",
-   "mds/sets#def-open-interval"
-  ],
-  [
    "mds/calculus#def-derivative",
    "mds/calculus#def-differentiable"
   ],
@@ -12488,10 +12625,6 @@
   [
    "mds/calculus#def-evaluation-bracket",
    "mds/algebra#def-limits-of-integration"
-  ],
-  [
-   "mds/calculus#def-flat-point",
-   "mds/calculus#def-differentiable"
   ],
   [
    "mds/calculus#def-function-profile",
@@ -12686,14 +12819,6 @@
    "mds/number-systems#def-integers"
   ],
   [
-   "mds/calculus#thm-flat-point-critical",
-   "mds/calculus#def-critical-point"
-  ],
-  [
-   "mds/calculus#thm-flat-point-critical",
-   "mds/calculus#def-flat-point"
-  ],
-  [
    "mds/calculus#thm-ftc-part1",
    "mds/calculus#def-accumulation-function"
   ],
@@ -12790,14 +12915,6 @@
    "mds/measures#def-sigma-finite"
   ],
   [
-   "mds/calculus-derivatives#def-critical-point",
-   "mds/calculus-derivatives#def-differentiable"
-  ],
-  [
-   "mds/calculus-derivatives#def-critical-point",
-   "mds/sets#def-open-interval"
-  ],
-  [
    "mds/calculus-derivatives#def-derivative",
    "mds/calculus-derivatives#def-differentiable"
   ],
@@ -12812,10 +12929,6 @@
   [
    "mds/calculus-derivatives#def-differentiable",
    "mds/calculus-derivatives#def-limit"
-  ],
-  [
-   "mds/calculus-derivatives#def-flat-point",
-   "mds/calculus-derivatives#def-differentiable"
   ],
   [
    "mds/calculus-derivatives#def-function-profile",
@@ -12944,14 +13057,6 @@
   [
    "mds/calculus-derivatives#thm-deriv-polynomial",
    "mds/number-systems#def-integers"
-  ],
-  [
-   "mds/calculus-derivatives#thm-flat-point-critical",
-   "mds/calculus-derivatives#def-critical-point"
-  ],
-  [
-   "mds/calculus-derivatives#thm-flat-point-critical",
-   "mds/calculus-derivatives#def-flat-point"
   ],
   [
    "mds/calculus-derivatives#thm-taylor-log-one-minus-x",
@@ -13134,6 +13239,26 @@
    "mds/calculus-integration#def-riemann-sum-equal-width"
   ],
   [
+   "mds/expressions-algorithms#def-closed-form-expression",
+   "mds/algebra-basics#def-power"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-expression",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-expression",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-solution",
+   "mds/expressions-algorithms#def-closed-form-expression"
+  ],
+  [
+   "mds/expressions-algorithms#def-closed-form-solution",
+   "mds/functions#def-function"
+  ],
+  [
    "mds/expressions-algorithms#def-computes",
    "mds/expressions-algorithms#def-algorithm"
   ],
@@ -13150,8 +13275,20 @@
    "mds/functions#def-value"
   ],
   [
-   "mds/expressions-algorithms#def-expression",
+   "mds/expressions-algorithms#def-denotes",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/expressions-algorithms#def-denotes",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/expressions-algorithms#def-denotes",
    "mds/functions#def-function"
+  ],
+  [
+   "mds/expressions-algorithms#def-denotes",
+   "mds/functions#def-value"
   ],
   [
    "mds/expressions-algorithms#def-parse-tree",
@@ -16114,12 +16251,24 @@
    "mds/optimization#def-line-search"
   ],
   [
+   "mds/optimization#def-bfgs-update",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#def-bfgs-update",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
    "mds/optimization#def-concave",
    "mds/algebra#def-convex-function"
   ],
   [
    "mds/optimization#def-constraints",
    "mds/optimization#def-feasible-set"
+  ],
+  [
+   "mds/optimization#def-critical-point",
+   "mds/sets#def-open-interval"
   ],
   [
    "mds/optimization#def-descent-direction",
@@ -16132,6 +16281,18 @@
   [
    "mds/optimization#def-exact-line-search",
    "mds/optimization#def-line-search"
+  ],
+  [
+   "mds/optimization#def-flat-point",
+   "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization#def-gradient-ascent",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#def-gradient-ascent",
+   "mds/vector-calculus#def-partial-derivative"
   ],
   [
    "mds/optimization#def-iterate",
@@ -16148,6 +16309,18 @@
   [
    "mds/optimization#def-lagrange-multipliers",
    "mds/optimization#def-lagrangian"
+  ],
+  [
+   "mds/optimization#def-lbfgs",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/optimization#def-lbfgs",
+   "mds/optimization#def-bfgs-update"
+  ],
+  [
+   "mds/optimization#def-lbfgs",
+   "mds/optimization#def-quasi-newton-method"
   ],
   [
    "mds/optimization#def-line-search",
@@ -16206,6 +16379,34 @@
    "mds/optimization#def-newton-method"
   ],
   [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/optimization#def-line-search"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/optimization#def-secant-condition"
+  ],
+  [
+   "mds/optimization#def-quasi-newton-method",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
    "mds/optimization#def-saddle-point",
    "mds/algebra#def-local-minimizer"
   ],
@@ -16216,6 +16417,18 @@
   [
    "mds/optimization#def-saddle-point",
    "mds/optimization#def-stationary-point"
+  ],
+  [
+   "mds/optimization#def-secant-condition",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/optimization#def-secant-condition",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
+   "mds/optimization#def-secant-condition",
+   "mds/vector-calculus#def-vector-derivative"
   ],
   [
    "mds/optimization#def-sensitivity",
@@ -16340,6 +16553,14 @@
   [
    "mds/optimization#thm-first-order-condition",
    "mds/optimization#def-stationary-point"
+  ],
+  [
+   "mds/optimization#thm-flat-point-critical",
+   "mds/optimization#def-critical-point"
+  ],
+  [
+   "mds/optimization#thm-flat-point-critical",
+   "mds/optimization#def-flat-point"
   ],
   [
    "mds/optimization#thm-newton-model",

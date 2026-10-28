@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-26 01:07:23 (PDT)
+Last modified: 2026-10-28 11:04:35 (PDT)
 
 ## 1 Cosine and sine
 
@@ -154,7 +154,7 @@ Last modified: 2026-10-26 01:07:23 (PDT)
 > >     hjust = 0
 > >   ) +
 > >   ggplot2::coord_equal() +
-> >   ggplot2::labs(x = "x1", y = "x2") +
+> >   ggplot2::labs(x = "First coordinate, x1", y = "Second coordinate, x2") +
 > >   ggplot2::theme_minimal()
 > >
 > > if (knitr::is_html_output()) {

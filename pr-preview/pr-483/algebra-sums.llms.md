@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-26 01:07:23 (PDT)
+Last modified: 2026-10-28 11:04:35 (PDT)
 
 ## 1 Convex functions
 
@@ -559,18 +559,47 @@ Last modified: 2026-10-26 01:07:23 (PDT)
 >
 > **Exercise 5 (Sum over a set)** Let \\A = \mathopen{}\left\\-1, 2, 5\right\\\mathclose{}\\ and let \\f(x) = x^2\\. The expression \\\sum\_{x \in A} f(x)\\ means: add up \\f(x)\\ for each element \\x\\ of \\A\\.
 >
-> 1.  Write \\\sum\_{x \in A} f(x)\\ without the \\\sum\\ symbol, and compute its value.
-> 2.  List the elements of \\A\\ in a different order, and add up the same terms in that order. Is the total the same?
+> Write \\\sum\_{x \in A} f(x)\\ without the \\\sum\\ symbol.
 
 > **NOTE:**
 >
-> *Solution 5*.
+> *Solution 5*. Replace \\x\\ by each element of \\A\\ in turn, and add:
 >
-> 1.  Replace \\x\\ by each element of \\A\\ in turn, and add the results:
+> \\\sum\_{x \in A} f(x) = f(-1) + f(2) + f(5)\\
+
+> **NOTE:**
 >
->     \\ \begin{aligned} \sum\_{x \in A} f(x) &= f(-1) + f(2) + f(5) \\ &= (-1)^2 + 2^2 + 5^2 \\ &= 1 + 4 + 25 \\ &= 30 \end{aligned} \\
+> **Exercise 6 (Value of a sum over a set)** In the setting of [Exercise 5](#exr-sum-over-set), find the [value](functions.llms.md#def-value) of \\\sum\_{x \in A} f(x)\\.
+
+> **NOTE:**
 >
-> 2.  In the order \\5, -1, 2\\, the terms are \\25\\, \\1\\ and \\4\\. Their total is \\25 + 1 + 4 = 30\\. The total is the same, because addition does not depend on the order of the terms.
+> *Solution 6*. Evaluate each [term](algebra-sums.llms.md#def-term) and add:
+>
+> \\ \begin{aligned} f(-1) + f(2) + f(5) &= (-1)^2 + 2^2 + 5^2 \\ &= 1 + 4 + 25 \\ &= 30 \end{aligned} \\
+
+> **NOTE:**
+>
+> **Exercise 7 (List the terms in a different order)** In the setting of [Exercise 5](#exr-sum-over-set), list the elements of \\A\\ in a different order, and write the [term](algebra-sums.llms.md#def-term) for each element in that order.
+
+> **NOTE:**
+>
+> *Solution 7*. In the order \\5, -1, 2\\, the [terms](algebra-sums.llms.md#def-term) are \\25\\, \\1\\ and \\4\\.
+
+> **NOTE:**
+>
+> **Exercise 8 (Add the terms in the new order)** In the setting of [Exercise 7](#exr-sum-over-set-reorder), add up the [terms](algebra-sums.llms.md#def-term).
+
+> **NOTE:**
+>
+> *Solution 8*. The total is \\25 + 1 + 4 = 30\\.
+
+> **NOTE:**
+>
+> **Exercise 9 (Does the order change the total?)** Say whether the total in [Exercise 8](#exr-sum-over-set-reorder-total) is the same as the total in [Exercise 6](#exr-sum-over-set-value).
+
+> **NOTE:**
+>
+> *Solution 9*. The total is the same, because addition does not depend on the order of the terms.
 
 > **NOTE:**
 >
@@ -582,7 +611,7 @@ Last modified: 2026-10-26 01:07:23 (PDT)
 
 > **NOTE:**
 >
-> *Remark 7* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 5](#exr-sum-over-set), part 2, shows another example.
+> *Remark 7* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 6](#exr-sum-over-set-value) and [Exercise 8](#exr-sum-over-set-reorder-total) show another example.
 >
 > When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 19](#def-summation).
 
@@ -738,7 +767,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ (defined in the Morrison Lab’s probability notes) is a [function](functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Range](functions.llms.md#def-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
 
-[Table 1](#tbl-notational-shorthands) lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
+[Table 1](#tbl-notational-shorthands) lists shorthands you may encounter in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
 
 > **NOTE:**
 >

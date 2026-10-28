@@ -362,7 +362,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-26 01:07:23 (PDT)</p>
+  <p class="date">Last modified: 2026-10-28 11:04:35 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -1510,13 +1510,28 @@ Figure&nbsp;1: The <a href="./functions.html#def-graph">graph</a> of <span class
 </table>
 <p>The rule in use is</p>
 <p><span class="math display">\[\text{score} = 0.4\,x_1 + 0.2\,x_2 + 1.5\,x_3 - 30\]</span></p>
-<p>Write this rule in the form of <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a>, naming <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(p\)</span> explicitly, and give the score for a patient aged <span class="math inline">\(50\)</span> with blood pressure <span class="math inline">\(130\)</span> and BMI <span class="math inline">\(28\)</span>.</p>
+<p>Write this rule in the form of <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a>, naming <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(p\)</span> explicitly.</p>
 </div>
+</section>
+<section class="slide level2">
+
 <div id="sol-write-in-matrix-form" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span>Read the coefficients straight off the rule. There are three inputs, so <span class="math inline">\(p = 3\)</span>:</p>
+<p><span class="proof-title"><em>Solution 2</em>. </span>Read the <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> straight off the rule. There are three inputs, so <span class="math inline">\(p = 3\)</span>:</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 \qquad b = -30\]</span></p>
-<p>and the rule is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b\)</span>. For the patient,</p>
+<p>and the rule is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-write-in-matrix-form-score" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Score a patient)</strong></span> Give the score from the rule in <a href="#/exr-write-in-matrix-form" class="quarto-xref">Exercise&nbsp;2</a> for a patient aged <span class="math inline">\(50\)</span> with blood pressure <span class="math inline">\(130\)</span> and BMI <span class="math inline">\(28\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-write-in-matrix-form-score" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>For the patient,</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1533,13 +1548,13 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= 58
 \end{aligned}
 \]</span></p>
-<p>Two things are worth noticing. The coefficients are not comparable as they stand: <span class="math inline">\(1.5\)</span> is the largest number but BMI is measured on the smallest scale, so the weight on a feature says nothing on its own about how much that feature matters. And <span class="math inline">\(b = -30\)</span> is doing real work — without it the score would be <span class="math inline">\(88\)</span>, which is a different clinical claim entirely.</p>
+<p>Two things are worth noticing. The <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> are not comparable as they stand. The <a href="./linear-algebra-vectors.html#def-weight">weight</a> on BMI, <span class="math inline">\(1.5\)</span>, is <span class="math inline">\(7.5\)</span> times the weight on blood pressure, <span class="math inline">\(0.2\)</span>, but the contribution of BMI, <span class="math inline">\(42\)</span>, is less than twice the contribution of blood pressure, <span class="math inline">\(26\)</span>, because the BMI <a href="./functions.html#def-value">value</a>, <span class="math inline">\(28\)</span>, is much smaller than the blood pressure value, <span class="math inline">\(130\)</span>. So the weight on a feature says nothing on its own about how much that feature contributes to the score. And <span class="math inline">\(b = -30\)</span> changes the score: without it, the score would be <span class="math inline">\(88\)</span> instead of <span class="math inline">\(58\)</span>.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
 
 <div id="exr-which-are-linear" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are affine (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>), that is, have the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an inner product plus an offset — and which of those are also linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>).</p>
+<p><span class="theorem-title"><strong>Exercise 4 (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are affine (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;19</a>), that is, have the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an inner product plus an offset — and which of those are also linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;15</a>).</p>
 <ol type="1">
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span></li>
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y\)</span></li>
@@ -1549,7 +1564,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </ol>
 </div>
 <div id="sol-which-are-linear" class="proof solution">
-<p><span class="proof-title"><em>Solution 3</em>. </span></p>
+<p><span class="proof-title"><em>Solution 4</em>. </span></p>
 <ol type="1">
 <li><strong>Affine, and linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with <span class="math inline">\(b = 0\)</span>, which is a linear map by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;10</a>: the matrix <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\)</span> times <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>.</li>
 <li><strong>Affine.</strong> Still an inner product plus an offset; here the offset is <span class="math inline">\(b = -y\)</span>, which is a constant because <span class="math inline">\(y\)</span> is held fixed. It is linear only when <span class="math inline">\(y = 0\)</span>: otherwise <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> gives <span class="math inline">\(-y \ne 0\)</span>, and a linear map sends <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\(0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;9</a>).</li>

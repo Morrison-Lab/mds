@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-26 01:07:23 (PDT)
+Last modified: 2026-10-28 11:04:35 (PDT)
 
 > **NOTE:**
 >
@@ -123,8 +123,6 @@ Last modified: 2026-10-26 01:07:23 (PDT)
 > **NOTE:**
 >
 > **Definition 10 (Interval)** An **interval** [\[6\]](#ref-wikipedia_interval_mathematics) is a [subset](#def-subset) of the [real numbers](number-systems.llms.md#def-real-numbers) that consists of all real numbers between two bounds \\a \le b\\ ([Definition 9](#def-bound)), possibly including one or both bounds, or of all real numbers on one side of a single bound, or all of \\\mathbb{R}\\. The bounds \\a\\ and \\b\\ that define the interval are its **endpoints**.
->
-> A square bracket means the endpoint belongs to the interval, and a parenthesis means it does not. The symbols \\\infty\\ and \\-\infty\\ are not real numbers, so they always get a parenthesis.
 
 > **NOTE:**
 >
@@ -145,6 +143,10 @@ Last modified: 2026-10-26 01:07:23 (PDT)
 > - \\\[a, \infty) \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: x \ge a\right\\\mathclose{}}\\ and \\(a, \infty) \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: x \> a\right\\\mathclose{}}\\;
 > - \\(-\infty, b\] \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: x \le b\right\\\mathclose{}}\\ and \\(-\infty, b) \stackrel{\text{def}}{=}{\mathopen{}\left\\x \in \mathbb{R}: x \< b\right\\\mathclose{}}\\;
 > - \\(-\infty, \infty) \stackrel{\text{def}}{=}\mathbb{R}\\.
+
+> **NOTE:**
+>
+> *Remark 6* (Brackets and parentheses in interval notation). In the notation for an [interval](#def-interval), a bracket marks an [endpoint](#def-interval) that belongs to the interval, while a parenthesis marks an endpoint that is excluded. The symbols \\\infty\\, \\-\infty\\ denote no [real number](number-systems.llms.md#def-real-numbers), so they always get a parenthesis.
 
 > **NOTE:**
 >
@@ -341,7 +343,7 @@ Last modified: 2026-10-26 01:07:23 (PDT)
 
 > **NOTE:**
 >
-> *Remark 6* (Arithmetic with \\\infty\\). \\\infty\\ is not a real number, so some real-number arithmetic does not extend to it: \\\infty - \infty\\ is left undefined, and \\\infty + 1 = \infty + 2\\ does not imply \\1 = 2\\. Measure theory uses \\\[0, \infty\]\\ because the size of a set, such as the length of the whole real line, can be infinite [\[17\]](#ref-wikipedia_extended_real_number_line).
+> *Remark 7* (Arithmetic with \\\infty\\). \\\infty\\ is not a real number, so some real-number arithmetic does not extend to it: \\\infty - \infty\\ is left undefined, and \\\infty + 1 = \infty + 2\\ does not imply \\1 = 2\\. Measure theory uses \\\[0, \infty\]\\ because the size of a set, such as the length of the whole real line, can be infinite [\[17\]](#ref-wikipedia_extended_real_number_line).
 
 > **NOTE:**
 >

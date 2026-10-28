@@ -9,16 +9,19 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
-
-  <title>Math for Data Science – Expressions and Algorithms</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
-  <style>
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+<title>Math for Data Science – Expressions and Algorithms</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+<style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
@@ -36,6 +39,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -57,18 +126,14 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-8bf93e1a1ae4568f338a25a981ddcad4.css">
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
-
-  <script type="text/plain" cookie-consent="tracking">
+<link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-8bf93e1a1ae4568f338a25a981ddcad4.css">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script><script type="text/plain" cookie-consent="tracking">
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
-  </script>
-  
-  <script type="text/javascript" charset="UTF-8">
+  </script><script type="text/javascript" charset="UTF-8">
   document.addEventListener('DOMContentLoaded', function () {
   cookieconsent.run({
     "notice_banner_type":"simple",
@@ -83,13 +148,11 @@
   "language":"en"
     });
   });
-  </script> 
-    
-  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+  </script><link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -177,7 +240,7 @@
       margin-right: 0; 
     }
   </style>
-  <!--
+<!--
     Colour-theme dropdown for the qwt revealjs format: Light, Off-white,
     Parchment, Dark. Pulled into every slide deck via the `include-in-header`
     entry in the `revealjs:` block of `_quarto-website.yml`. Pairs with
@@ -188,8 +251,7 @@
     "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
     so it carries across the site and the decks. First-time visitors get
     Dark if their system prefers it, and Off-white otherwise.
-  -->
-  <style>
+  --><style>
     #qwt-theme-select {
       position: fixed;
       bottom: 8px;
@@ -218,7 +280,7 @@
     }
     @media print { #qwt-theme-select { display: none; } }
   </style>
-  <script>
+<script>
   (function () {
     "use strict";
     var KEY = "mln-theme";
@@ -282,49 +344,60 @@
       init();
     }
   })();
-  </script>
+  </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Expressions and Algorithms</h1>
+<section id="title-slide" class="quarto-title-block center"><h1 class="title">Expressions and Algorithms</h1>
 
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-26 01:07:23 (PDT)</p>
-</section>
-<section class="slide level2">
-
-<div class="proof remark">
+  <p class="date">Last modified: 2026-10-28 11:04:35 (PDT)</p>
+</section><section class="slide level2"><div class="proof remark">
 <p><span class="proof-title"><em>Remark</em>. </span>A function can be written down as an expression and computed by an algorithm. This page defines expressions, which write down the <a href="./functions.html">functions</a> in the Morrison Lab’s probability and statistics notes, the parse trees of expressions, and algorithms, which compute those functions.</p>
 </div>
-</section>
-<section id="expressions" class="slide level2" data-number="1">
-<h2><span class="header-section-number">1</span> Expressions</h2>
+</section><section id="expressions" class="slide level2" data-number="1"><h2>
+<span class="header-section-number">1</span> Expressions</h2>
 <div id="def-expression" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Expression)</strong></span> An <strong>expression</strong> <span class="citation" data-cites="wikipedia_expression_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression <em>denotes</em> a <a href="./functions.html#def-function">function</a>: it fixes the output for each input.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Expression)</strong></span> An <strong>expression</strong> <span class="citation" data-cites="wikipedia_expression_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exm-expression" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Two expressions for one function)</strong></span> The expressions <span class="math inline">\(a x^2 + b x + c\)</span> and <span class="math inline">\((a x + b)\,x + c\)</span> denote the same function of <span class="math inline">\(x\)</span> for any fixed <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>, because they give the same value at every <span class="math inline">\(x\)</span>.</p>
+</section><section class="slide level2"><div id="def-denotes" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Denotes)</strong></span> An <a href="#/def-expression">expression</a> <strong>denotes</strong> a <a href="./functions.html#def-function">function</a> when evaluating the expression at each <a href="./functions.html#def-argument">input</a> of the function, with the expression’s variables taking that input, gives the function’s <a href="./functions.html#def-value">value</a> at that input.</p>
+</div>
+</section><section class="slide level2"><div id="exm-expression" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Two expressions for one function)</strong></span> The <a href="#/def-expression">expressions</a> <span class="math inline">\(a x^2 + b x + c\)</span> and <span class="math inline">\((a x + b)\,x + c\)</span> <a href="#/def-denotes">denote</a> the same <a href="./functions.html#def-function">function</a> of <span class="math inline">\(x\)</span> for any fixed <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>, because they give the same value at every <span class="math inline">\(x\)</span>.</p>
 <p>Precedence parses <span class="math inline">\(a x^2 + b x + c\)</span> as a sum of three terms: the power <span class="math inline">\(x^2\)</span> is applied first, then <span class="math inline">\(a\)</span> multiplies <span class="math inline">\(x^2\)</span> and <span class="math inline">\(b\)</span> multiplies <span class="math inline">\(x\)</span>, and the three products are added. The parentheses in <span class="math inline">\((a x + b)\,x + c\)</span> force a different tree: <span class="math inline">\(a\)</span> multiplies <span class="math inline">\(x\)</span>, <span class="math inline">\(b\)</span> is added, the sum multiplies <span class="math inline">\(x\)</span>, and <span class="math inline">\(c\)</span> is added.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="def-parse-tree" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Parse tree)</strong></span> The <strong>parse tree</strong> <span class="citation" data-cites="wikipedia_parse_tree"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> of an <a href="#/def-expression">expression</a> is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.</p>
+</section><section class="slide level2"><div id="def-closed-form-expression" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Closed-form expression (formula))</strong></span> A <strong>closed-form expression</strong> (or <strong>formula</strong>) <span class="citation" data-cites="wikipedia_closed_form_expression"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> is an <a href="#/def-expression">expression</a> built from constants and variables <!-- check-term-links: allow --> using a finite number of operations from a list of accepted <a href="./functions.html#def-function">functions</a>, <!-- check-term-links: allow --> such as <a href="./algebra-basics.html#def-power">powers</a>, roots, exponentials, logarithms, and trigonometric functions. Which functions are accepted is a convention, and a source states it when the boundary matters.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exm-parse-tree" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (The parse tree of a polynomial)</strong></span> The parse tree of <span class="math inline">\((a x + b)\,x + c\)</span>, with each operation having two children, is:</p>
+</section><section class="slide level2"><div id="exm-closed-form-expression" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (The quadratic formula)</strong></span> For <span class="math inline">\(a \neq 0\)</span> with <span class="math inline">\(b^2 - 4 a c \ge 0\)</span>, the roots of <span class="math inline">\(a x^2 + b x + c = 0\)</span> are</p>
+<p><span class="math display">\[
+x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a},
+\]</span></p>
+<p>where the right-hand side is a <a href="#/def-closed-form-expression">closed-form expression</a> in <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>. By contrast, no closed-form expression is known for the root of <span class="math inline">\(x - \cos x = 0\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="def-closed-form-solution" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Closed-form solution)</strong></span> A <strong>closed-form solution</strong> of a problem, such as solving an equation or minimizing a <a href="./functions.html#def-function">function</a>, is a <a href="#/def-closed-form-expression">closed-form expression</a> for the answer.</p>
+</div>
+</section><section class="slide level2"><div id="exm-closed-form-solution" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (Least squares versus logistic regression)</strong></span> Minimizing the <a href="./vector-calculus.html#def-squared-error">squared-error</a> cost of a <a href="./algebra-exponentials.html#def-linear-function">linear</a> model over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> gives the <a href="./linear-algebra-projections.html#def-normal-equations">normal equations</a> <span class="math inline">\({D}^{\top} D \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>. When <span class="math inline">\({D}^{\top} D\)</span> is <a href="./linear-algebra-special-matrices.html#def-matrix-inverse">invertible</a>, the unique minimizer is</p>
+<p><span class="math display">\[
+\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({D}^{\top} D\right)\mathclose{}}^{-1} {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}},
+\]</span></p>
+<p>whose right-hand side is a <a href="#/def-closed-form-expression">closed-form expression</a>, so <a href="./linear-algebra-projections.html#def-least-squares">least squares</a> has a <a href="#/def-closed-form-solution">closed-form solution</a>.</p>
+<p>For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>, so that problem has no known closed-form solution. When a minimizer exists, an <a href="./optimization.html#def-iterative-method">iterative method</a> approximates it. <!-- check-term-links: allow --></p>
+</div>
+</section><section class="slide level2"><div id="def-parse-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Parse tree)</strong></span> The <strong>parse tree</strong> <span class="citation" data-cites="wikipedia_parse_tree"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> of an <a href="#/def-expression">expression</a> is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.</p>
+</div>
+</section><section class="slide level2"><div id="exm-parse-tree" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (The parse tree of a polynomial)</strong></span> The <a href="#/def-parse-tree">parse tree</a> of <span class="math inline">\((a x + b)\,x + c\)</span>, with each operation having two children, is drawn in <a href="#/fig-parse-trees" class="quarto-xref">Figure&nbsp;1</a> (left) and written out as a list here:</p>
 <ul>
 <li>the root <span class="math inline">\(+\)</span>, whose children are
 <ul>
@@ -334,114 +407,244 @@
 <ul>
 <li>the node <span class="math inline">\(\times\)</span>, whose children are the leaves <span class="math inline">\(a\)</span> and <span class="math inline">\(x\)</span>,</li>
 <li>the leaf <span class="math inline">\(b\)</span>;</li>
-</ul></li>
-<li>the leaf <span class="math inline">\(x\)</span>;</li>
-</ul></li>
-<li>the leaf <span class="math inline">\(c\)</span>.</li>
-</ul></li>
 </ul>
-<p>Read from the leaves up, the tree says to multiply <span class="math inline">\(a\)</span> by <span class="math inline">\(x\)</span>, add <span class="math inline">\(b\)</span>, multiply by <span class="math inline">\(x\)</span>, and add <span class="math inline">\(c\)</span>. The expression <span class="math inline">\(a x^2 + b x + c\)</span> has a different tree. Its root is the <span class="math inline">\(+\)</span> whose children are <span class="math inline">\(a x^2 + b x\)</span> and <span class="math inline">\(c\)</span>, and the first of these is a <span class="math inline">\(+\)</span> whose children are <span class="math inline">\(a x^2\)</span> and <span class="math inline">\(b x\)</span>.</p>
+</li>
+<li>the leaf <span class="math inline">\(x\)</span>;</li>
+</ul>
+</li>
+<li>the leaf <span class="math inline">\(c\)</span>.</li>
+</ul>
+</li>
+</ul>
+<p>Read from the leaves up, the tree says to multiply <span class="math inline">\(a\)</span> by <span class="math inline">\(x\)</span>, add <span class="math inline">\(b\)</span>, multiply by <span class="math inline">\(x\)</span>, and add <span class="math inline">\(c\)</span>. The <a href="#/def-expression">expression</a> <span class="math inline">\(a x^2 + b x + c\)</span> has a different tree (<a href="#/fig-parse-trees" class="quarto-xref">Figure&nbsp;1</a>, right). Its root is the <span class="math inline">\(+\)</span> whose children are <span class="math inline">\(a x^2 + b x\)</span> and <span class="math inline">\(c\)</span>, and the first of these is a <span class="math inline">\(+\)</span> whose children are <span class="math inline">\(a x^2\)</span> and <span class="math inline">\(b x\)</span>.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="rem-expression-parse-tree" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Expressions, precedence and parse trees). </span>An expression does not say how to compute the output it fixes, and many expressions denote the same function. A function is the input-output relationship itself; an expression is one way of writing it down.</p>
-<p>The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree (<a href="#/def-parse-tree" class="quarto-xref">Definition&nbsp;2</a>).</p>
+</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="co"># Each tree is a nested list: the first element is the node's label,</span></span>
+<span id="cb1-2"><a aria-label="2"></a><span class="co"># and the remaining elements are its children.</span></span>
+<span id="cb1-3"><a aria-label="3"></a>times <span class="ot">&lt;-</span> <span class="fu">intToUtf8</span>(<span class="dv">215</span>)</span>
+<span id="cb1-4"><a aria-label="4"></a>trees <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb1-5"><a aria-label="5"></a>  <span class="st">"(a * x + b) * x + c"</span> <span class="ot">=</span> <span class="fu">list</span>(</span>
+<span id="cb1-6"><a aria-label="6"></a>    <span class="st">"+"</span>,</span>
+<span id="cb1-7"><a aria-label="7"></a>    <span class="fu">list</span>(times, <span class="fu">list</span>(<span class="st">"+"</span>, <span class="fu">list</span>(times, <span class="st">"a"</span>, <span class="st">"x"</span>), <span class="st">"b"</span>), <span class="st">"x"</span>),</span>
+<span id="cb1-8"><a aria-label="8"></a>    <span class="st">"c"</span></span>
+<span id="cb1-9"><a aria-label="9"></a>  ),</span>
+<span id="cb1-10"><a aria-label="10"></a>  <span class="st">"a * x^2 + b * x + c"</span> <span class="ot">=</span> <span class="fu">list</span>(</span>
+<span id="cb1-11"><a aria-label="11"></a>    <span class="st">"+"</span>,</span>
+<span id="cb1-12"><a aria-label="12"></a>    <span class="fu">list</span>(</span>
+<span id="cb1-13"><a aria-label="13"></a>      <span class="st">"+"</span>,</span>
+<span id="cb1-14"><a aria-label="14"></a>      <span class="fu">list</span>(times, <span class="st">"a"</span>, <span class="fu">list</span>(<span class="st">"^"</span>, <span class="st">"x"</span>, <span class="st">"2"</span>)),</span>
+<span id="cb1-15"><a aria-label="15"></a>      <span class="fu">list</span>(times, <span class="st">"b"</span>, <span class="st">"x"</span>)</span>
+<span id="cb1-16"><a aria-label="16"></a>    ),</span>
+<span id="cb1-17"><a aria-label="17"></a>    <span class="st">"c"</span></span>
+<span id="cb1-18"><a aria-label="18"></a>  )</span>
+<span id="cb1-19"><a aria-label="19"></a>)</span>
+<span id="cb1-20"><a aria-label="20"></a></span>
+<span id="cb1-21"><a aria-label="21"></a><span class="co"># Leaves sit at consecutive x positions;</span></span>
+<span id="cb1-22"><a aria-label="22"></a><span class="co"># each operation sits above the mean of its children.</span></span>
+<span id="cb1-23"><a aria-label="23"></a>layout_tree <span class="ot">&lt;-</span> <span class="cf">function</span>(node, <span class="at">depth =</span> <span class="dv">0</span>, <span class="at">next_x =</span> <span class="dv">0</span>) {</span>
+<span id="cb1-24"><a aria-label="24"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.list</span>(node)) {</span>
+<span id="cb1-25"><a aria-label="25"></a>    <span class="fu">return</span>(<span class="fu">list</span>(</span>
+<span id="cb1-26"><a aria-label="26"></a>      <span class="at">nodes =</span> <span class="fu">data.frame</span>(<span class="at">label =</span> node, <span class="at">x =</span> next_x, <span class="at">y =</span> <span class="sc">-</span>depth, <span class="at">is_leaf =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb1-27"><a aria-label="27"></a>      <span class="at">edges =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-28"><a aria-label="28"></a>      <span class="at">next_x =</span> next_x <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb1-29"><a aria-label="29"></a>    ))</span>
+<span id="cb1-30"><a aria-label="30"></a>  }</span>
+<span id="cb1-31"><a aria-label="31"></a>  nodes <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb1-32"><a aria-label="32"></a>  edges <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb1-33"><a aria-label="33"></a>  child_x <span class="ot">&lt;-</span> <span class="fu">numeric</span>()</span>
+<span id="cb1-34"><a aria-label="34"></a>  <span class="cf">for</span> (child <span class="cf">in</span> node[<span class="sc">-</span><span class="dv">1</span>]) {</span>
+<span id="cb1-35"><a aria-label="35"></a>    sub <span class="ot">&lt;-</span> <span class="fu">layout_tree</span>(child, depth <span class="sc">+</span> <span class="dv">1</span>, next_x)</span>
+<span id="cb1-36"><a aria-label="36"></a>    next_x <span class="ot">&lt;-</span> sub<span class="sc">$</span>next_x</span>
+<span id="cb1-37"><a aria-label="37"></a>    child_x <span class="ot">&lt;-</span> <span class="fu">c</span>(child_x, sub<span class="sc">$</span>nodes<span class="sc">$</span>x[<span class="dv">1</span>])</span>
+<span id="cb1-38"><a aria-label="38"></a>    edges <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb1-39"><a aria-label="39"></a>      edges,</span>
+<span id="cb1-40"><a aria-label="40"></a>      sub<span class="sc">$</span>edges,</span>
+<span id="cb1-41"><a aria-label="41"></a>      <span class="fu">data.frame</span>(</span>
+<span id="cb1-42"><a aria-label="42"></a>        <span class="at">x =</span> <span class="cn">NA_real_</span>,</span>
+<span id="cb1-43"><a aria-label="43"></a>        <span class="at">y =</span> <span class="sc">-</span>depth,</span>
+<span id="cb1-44"><a aria-label="44"></a>        <span class="at">xend =</span> sub<span class="sc">$</span>nodes<span class="sc">$</span>x[<span class="dv">1</span>],</span>
+<span id="cb1-45"><a aria-label="45"></a>        <span class="at">yend =</span> sub<span class="sc">$</span>nodes<span class="sc">$</span>y[<span class="dv">1</span>]</span>
+<span id="cb1-46"><a aria-label="46"></a>      )</span>
+<span id="cb1-47"><a aria-label="47"></a>    )</span>
+<span id="cb1-48"><a aria-label="48"></a>    nodes <span class="ot">&lt;-</span> <span class="fu">rbind</span>(nodes, sub<span class="sc">$</span>nodes)</span>
+<span id="cb1-49"><a aria-label="49"></a>  }</span>
+<span id="cb1-50"><a aria-label="50"></a>  me <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-51"><a aria-label="51"></a>    <span class="at">label =</span> node[[<span class="dv">1</span>]],</span>
+<span id="cb1-52"><a aria-label="52"></a>    <span class="at">x =</span> <span class="fu">mean</span>(child_x),</span>
+<span id="cb1-53"><a aria-label="53"></a>    <span class="at">y =</span> <span class="sc">-</span>depth,</span>
+<span id="cb1-54"><a aria-label="54"></a>    <span class="at">is_leaf =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-55"><a aria-label="55"></a>  )</span>
+<span id="cb1-56"><a aria-label="56"></a>  edges<span class="sc">$</span>x[<span class="fu">is.na</span>(edges<span class="sc">$</span>x)] <span class="ot">&lt;-</span> me<span class="sc">$</span>x</span>
+<span id="cb1-57"><a aria-label="57"></a>  <span class="fu">list</span>(<span class="at">nodes =</span> <span class="fu">rbind</span>(me, nodes), <span class="at">edges =</span> edges, <span class="at">next_x =</span> next_x)</span>
+<span id="cb1-58"><a aria-label="58"></a>}</span>
+<span id="cb1-59"><a aria-label="59"></a></span>
+<span id="cb1-60"><a aria-label="60"></a>laid_out <span class="ot">&lt;-</span> <span class="fu">lapply</span>(trees, layout_tree)</span>
+<span id="cb1-61"><a aria-label="61"></a>tree_nodes <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">Map</span>(</span>
+<span id="cb1-62"><a aria-label="62"></a>  <span class="cf">function</span>(res, name) <span class="fu">cbind</span>(res<span class="sc">$</span>nodes, <span class="at">tree =</span> name),</span>
+<span id="cb1-63"><a aria-label="63"></a>  laid_out,</span>
+<span id="cb1-64"><a aria-label="64"></a>  <span class="fu">names</span>(trees)</span>
+<span id="cb1-65"><a aria-label="65"></a>))</span>
+<span id="cb1-66"><a aria-label="66"></a>tree_edges <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">Map</span>(</span>
+<span id="cb1-67"><a aria-label="67"></a>  <span class="cf">function</span>(res, name) <span class="fu">cbind</span>(res<span class="sc">$</span>edges, <span class="at">tree =</span> name),</span>
+<span id="cb1-68"><a aria-label="68"></a>  laid_out,</span>
+<span id="cb1-69"><a aria-label="69"></a>  <span class="fu">names</span>(trees)</span>
+<span id="cb1-70"><a aria-label="70"></a>))</span>
+<span id="cb1-71"><a aria-label="71"></a>tree_nodes<span class="sc">$</span>kind <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(tree_nodes<span class="sc">$</span>is_leaf, <span class="st">"leaf"</span>, <span class="st">"operation"</span>)</span>
+<span id="cb1-72"><a aria-label="72"></a>tree_nodes<span class="sc">$</span>tree <span class="ot">&lt;-</span> <span class="fu">factor</span>(tree_nodes<span class="sc">$</span>tree, <span class="at">levels =</span> <span class="fu">names</span>(trees))</span>
+<span id="cb1-73"><a aria-label="73"></a>tree_edges<span class="sc">$</span>tree <span class="ot">&lt;-</span> <span class="fu">factor</span>(tree_edges<span class="sc">$</span>tree, <span class="at">levels =</span> <span class="fu">names</span>(trees))</span>
+<span id="cb1-74"><a aria-label="74"></a></span>
+<span id="cb1-75"><a aria-label="75"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-76"><a aria-label="76"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_segment</span>(</span>
+<span id="cb1-77"><a aria-label="77"></a>    <span class="at">data =</span> tree_edges,</span>
+<span id="cb1-78"><a aria-label="78"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend),</span>
+<span id="cb1-79"><a aria-label="79"></a>    <span class="at">colour =</span> <span class="st">"grey50"</span></span>
+<span id="cb1-80"><a aria-label="80"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-81"><a aria-label="81"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_label</span>(</span>
+<span id="cb1-82"><a aria-label="82"></a>    <span class="at">data =</span> tree_nodes,</span>
+<span id="cb1-83"><a aria-label="83"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">label =</span> label, <span class="at">fill =</span> kind),</span>
+<span id="cb1-84"><a aria-label="84"></a>    <span class="at">size =</span> <span class="dv">5</span>,</span>
+<span id="cb1-85"><a aria-label="85"></a>    <span class="at">linewidth =</span> <span class="dv">0</span></span>
+<span id="cb1-86"><a aria-label="86"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-87"><a aria-label="87"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_fill_manual</span>(</span>
+<span id="cb1-88"><a aria-label="88"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="at">operation =</span> <span class="st">"#CCE5F6"</span>, <span class="at">leaf =</span> <span class="st">"#F9DDBF"</span>)</span>
+<span id="cb1-89"><a aria-label="89"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-90"><a aria-label="90"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(</span>
+<span id="cb1-91"><a aria-label="91"></a>    <span class="sc">~</span>tree,</span>
+<span id="cb1-92"><a aria-label="92"></a>    <span class="at">scales =</span> <span class="st">"free_x"</span>,</span>
+<span id="cb1-93"><a aria-label="93"></a>    <span class="at">labeller =</span> ggplot2<span class="sc">::</span>label_parsed</span>
+<span id="cb1-94"><a aria-label="94"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-95"><a aria-label="95"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"node type"</span>) <span class="sc">+</span></span>
+<span id="cb1-96"><a aria-label="96"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb1-97"><a aria-label="97"></a>  ggplot2<span class="sc">::</span><span class="fu">theme</span>(</span>
+<span id="cb1-98"><a aria-label="98"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb1-99"><a aria-label="99"></a>    <span class="at">strip.text =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)</span>
+<span id="cb1-100"><a aria-label="100"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-parse-trees" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-parse-trees-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The <a href="#/def-parse-tree">parse trees</a> of <span class="math inline">\((a x + b)\,x + c\)</span> and <span class="math inline">\(a x^2 + b x + c\)</span>. Each operation is a node with one child per <a href="./functions.html#def-argument">argument</a>, and the leaves are the symbols that are not operations. The caret is the <a href="./algebra-basics.html#def-power">power</a> operation, which takes a <a href="./algebra-basics.html#def-power-base">base</a> and an <a href="./algebra-basics.html#def-power-exponent">exponent</a>.
+</figcaption><div aria-describedby="fig-parse-trees-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="expressions-algorithms_files/figure-html/parse-trees-plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The parse trees of (a x + b)\,x + c and a x^2 + b x + c. Each operation is a node with one child per argument, and the leaves are the symbols that are not operations. The caret is the power operation, which takes a base and an exponent."><img data-src="expressions-algorithms_files/figure-html/parse-trees-plot-1.png" alt="Two parse trees, drawn with the root at the top. In the left tree the root plus has children times and the leaf c. That times has children plus and the leaf x. The plus below it has children times and the leaf b, and that times has the leaves a and x. In the right tree the root plus has children plus and the leaf c. That plus has two children, both times. The first times has the leaf a and a power node with leaves x and 2. The second times has the leaves b and x." width="672"></a></p>
+</figure>
 </div>
-</section>
-<section id="algorithms" class="slide level2" data-number="2">
-<h2><span class="header-section-number">2</span> Algorithms</h2>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</section><section class="slide level2"><div id="rem-expression-parse-tree" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (Expressions, precedence and parse trees). </span>An <a href="#/def-expression">expression</a> does not say how to compute the <a href="./functions.html#def-value">output</a> it fixes, and many <a href="#/def-expression">expressions</a> <a href="#/def-denotes">denote</a> the same <a href="./functions.html#def-function">function</a>. A function is the input-output relationship itself; an expression is one way of writing it down.</p>
+<p>The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree (<a href="#/def-parse-tree" class="quarto-xref">Definition&nbsp;5</a>).</p>
+</div>
+</section><section id="algorithms" class="slide level2" data-number="2"><h2>
+<span class="header-section-number">2</span> Algorithms</h2>
 <div id="def-algorithm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Algorithm)</strong></span> An <strong>algorithm</strong> <span class="citation" data-cites="wikipedia_algorithm"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.</p>
+<p><span class="theorem-title"><strong>Definition 6 (Algorithm)</strong></span> An <strong>algorithm</strong> <span class="citation" data-cites="wikipedia_algorithm"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="def-computes" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Computes)</strong></span> An <a href="#/def-algorithm">algorithm</a> <strong>computes</strong> a <a href="./functions.html#def-function">function</a> when, for each <a href="./functions.html#def-argument">input</a>, it returns the function’s <a href="./functions.html#def-value">value</a> at that input.</p>
+</section><section class="slide level2"><div id="def-computes" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Computes)</strong></span> An <a href="#/def-algorithm">algorithm</a> <strong>computes</strong> a <a href="./functions.html#def-function">function</a> when, for each <a href="./functions.html#def-argument">input</a>, it returns the function’s <a href="./functions.html#def-value">value</a> at that input.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exm-algorithm" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Two algorithms for one function)</strong></span> Take the function that <a href="#/exm-expression" class="quarto-xref">Example&nbsp;1</a> writes two ways. Evaluating the tree of <span class="math inline">\(a x^2 + b x + c\)</span>, with <span class="math inline">\(x^2\)</span> computed as <span class="math inline">\(x \cdot x\)</span>, takes three multiplications and two additions. Evaluating the tree of Horner’s form <span class="math inline">\((a x + b)\,x + c\)</span> takes two multiplications and two additions. At <span class="math inline">\(a = 2\)</span>, <span class="math inline">\(b = -3\)</span>, <span class="math inline">\(c = 5\)</span> and <span class="math inline">\(x = 1.5\)</span>, the first algorithm computes <span class="math inline">\(4.5 - 4.5 + 5 = 5\)</span> and the second computes <span class="math inline">\((3 - 3) \cdot 1.5 + 5 = 5\)</span>, the same value by different steps.</p>
+</section><section class="slide level2"><div id="exm-algorithm" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Two algorithms for one function)</strong></span> Take the <a href="./functions.html#def-function">function</a> that <a href="#/exm-expression" class="quarto-xref">Example&nbsp;1</a> writes two ways. Evaluating the tree of <span class="math inline">\(a x^2 + b x + c\)</span>, with <span class="math inline">\(x^2\)</span> computed as <span class="math inline">\(x \cdot x\)</span>, takes three multiplications and two additions. Evaluating the tree of Horner’s form <span class="math inline">\((a x + b)\,x + c\)</span> takes two multiplications and two additions. We evaluate both forms at <span class="math inline">\(a = 2\)</span>, <span class="math inline">\(b = -3\)</span>, <span class="math inline">\(c = 5\)</span> and <span class="math inline">\(x = 1.5\)</span>, in R and in Python, and give each intermediate quantity a name. (The code calls <span class="math inline">\(c\)</span> <code>c0</code>, because <code>c</code> is a built-in function in R.) The two <a href="#/def-algorithm">algorithms</a> <a href="#/def-computes">compute</a> the same function, so the two <a href="./functions.html#def-value">values</a> must agree.</p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">R</a></li>
+<li><a href="#tabset-1-2">Python</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb2-2"><a aria-label="2"></a>b <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">3</span></span>
+<span id="cb2-3"><a aria-label="3"></a>c0 <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb2-4"><a aria-label="4"></a>x <span class="ot">&lt;-</span> <span class="fl">1.5</span></span>
+<span id="cb2-5"><a aria-label="5"></a><span class="co"># Expanded form: 3 multiplications, 2 additions</span></span>
+<span id="cb2-6"><a aria-label="6"></a>square_term <span class="ot">&lt;-</span> a <span class="sc">*</span> x <span class="sc">*</span> x</span>
+<span id="cb2-7"><a aria-label="7"></a>linear_term <span class="ot">&lt;-</span> b <span class="sc">*</span> x</span>
+<span id="cb2-8"><a aria-label="8"></a>expanded <span class="ot">&lt;-</span> square_term <span class="sc">+</span> linear_term <span class="sc">+</span> c0</span>
+<span id="cb2-9"><a aria-label="9"></a><span class="co"># Horner's form: 2 multiplications, 2 additions</span></span>
+<span id="cb2-10"><a aria-label="10"></a>inner <span class="ot">&lt;-</span> a <span class="sc">*</span> x <span class="sc">+</span> b</span>
+<span id="cb2-11"><a aria-label="11"></a>horner <span class="ot">&lt;-</span> inner <span class="sc">*</span> x <span class="sc">+</span> c0</span>
+<span id="cb2-12"><a aria-label="12"></a><span class="fu">c</span>(square_term, linear_term, expanded)</span>
+<span id="cb2-13"><a aria-label="13"></a><span class="co">#&gt; [1]  4.5 -4.5  5.0</span></span>
+<span id="cb2-14"><a aria-label="14"></a><span class="fu">c</span>(inner, horner)</span>
+<span id="cb2-15"><a aria-label="15"></a><span class="co">#&gt; [1] 0 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="rem-algorithm-scope" class="proof remark">
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-label="1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb3-2"><a aria-label="2"></a>b <span class="op">=</span> <span class="op">-</span><span class="dv">3</span></span>
+<span id="cb3-3"><a aria-label="3"></a>c0 <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb3-4"><a aria-label="4"></a>x <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="co"># Expanded form: 3 multiplications, 2 additions</span></span>
+<span id="cb3-6"><a aria-label="6"></a>square_term <span class="op">=</span> a <span class="op">*</span> x <span class="op">*</span> x</span>
+<span id="cb3-7"><a aria-label="7"></a>linear_term <span class="op">=</span> b <span class="op">*</span> x</span>
+<span id="cb3-8"><a aria-label="8"></a>expanded <span class="op">=</span> square_term <span class="op">+</span> linear_term <span class="op">+</span> c0</span>
+<span id="cb3-9"><a aria-label="9"></a><span class="co"># Horner's form: 2 multiplications, 2 additions</span></span>
+<span id="cb3-10"><a aria-label="10"></a>inner <span class="op">=</span> a <span class="op">*</span> x <span class="op">+</span> b</span>
+<span id="cb3-11"><a aria-label="11"></a>horner <span class="op">=</span> inner <span class="op">*</span> x <span class="op">+</span> c0</span>
+<span id="cb3-12"><a aria-label="12"></a><span class="bu">print</span>(square_term, linear_term, expanded)</span>
+<span id="cb3-13"><a aria-label="13"></a><span class="co">#&gt; 4.5 -4.5 5.0</span></span>
+<span id="cb3-14"><a aria-label="14"></a><span class="bu">print</span>(inner, horner)</span>
+<span id="cb3-15"><a aria-label="15"></a><span class="co">#&gt; 0.0 5.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>The expanded form adds 4.5, -4.5 and 5 to reach 5. Horner’s form multiplies 0 by 1.5 and adds 5 to reach 5. Different steps give the same <a href="./functions.html#def-value">value</a>.</p>
+</div>
+</section><section class="slide level2"><div id="rem-algorithm-scope" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (Procedures that are not algorithms here). </span>By the definition of an <a href="#/def-algorithm">algorithm</a>, every algorithm <a href="#/def-computes">computes</a> some <a href="./functions.html#def-function">function</a>. That holds because an algorithm has unambiguous steps and halts on every valid <a href="./functions.html#def-argument">input</a>. A procedure that makes random choices can return different <a href="./functions.html#def-value">values</a> for the same input. A procedure that never halts returns no <a href="./functions.html#def-value">value</a> for some inputs. Neither computes a function, and neither is an algorithm in this sense, although some texts call them <a href="#/def-algorithm">algorithms</a>.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="rem-function-expression-algorithm" class="proof remark">
+</section><section class="slide level2"><div id="rem-function-expression-algorithm" class="proof remark">
 <p><span class="proof-title"><em>Remark 3</em> (How functions, expressions and algorithms relate). </span>The three ideas fit together this way:</p>
 <ul>
-<li>A function is the input-output relationship.</li>
-<li>An <a href="#/def-expression">expression</a> denotes a function, and many expressions denote the same one.</li>
-<li>An <a href="#/def-algorithm">algorithm</a> computes a function, and many algorithms compute the same one.</li>
+<li>A <a href="./functions.html#def-function">function</a> is the input-output relationship.</li>
+<li>An <a href="#/def-expression">expression</a> <a href="#/def-denotes">denotes</a> a function, and many expressions denote the same one.</li>
+<li>An <a href="#/def-algorithm">algorithm</a> <a href="#/def-computes">computes</a> a function, and many algorithms compute the same one.</li>
 </ul>
 <p>An expression is not an algorithm, because it does not say what to do, or in what order. Given values for its variables, evaluating its parse tree from the leaves up is one algorithm for the function it denotes, and a different expression for the same function gives a different tree and a different algorithm.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="rem-no-known-algorithm" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Values with no known algorithm). </span>Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an <span class="math inline">\(\arg \min\)</span> over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.</p>
+</section><section class="slide level2"><div id="rem-no-known-algorithm" class="proof remark">
+<p><span class="proof-title"><em>Remark 4</em> (Values with no known algorithm). </span>Some functions have no known finite algorithm for their exact values, and <a href="#/def-expression">expressions</a> that <a href="#/def-denotes">denote</a> them, such as a limit, a supremum, an integral with no closed form, or an <span class="math inline">\(\arg \min\)</span> over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exm-no-known-algorithm" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (A minimizer with no known formula)</strong></span> The minimizer <span class="math inline">\(\arg \min_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\)</span> is well defined, because <span class="math inline">\(x - \cos x\)</span> is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.</p>
+</section><section class="slide level2"><div id="exm-no-known-algorithm" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (A minimizer with no known formula)</strong></span> The minimizer <span class="math inline">\(\arg \min_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\)</span> is well defined, because <span class="math inline">\(x - \cos x\)</span> is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.</p>
 </div>
-</section>
-<section id="exercises" class="slide level2" data-number="3">
-<h2><span class="header-section-number">3</span> Exercises</h2>
+</section><section id="exercises" class="slide level2" data-number="3"><h2>
+<span class="header-section-number">3</span> Exercises</h2>
 <div id="exr-expression-or-algorithm" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Is an expression an algorithm?)</strong></span> How do a <a href="./functions.html#def-function">function</a>, an <a href="#/def-expression">expression</a> and an <a href="#/def-algorithm">algorithm</a> differ?</p>
 </div>
 <div id="sol-expression-or-algorithm" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span>A <a href="./functions.html#def-function">function</a> is the input-output relationship. An <a href="#/def-expression">expression</a> is a string of symbols that denotes a function, and many <a href="#/def-expression">expressions</a> denote the same one. An <a href="#/def-algorithm">algorithm</a> is a <a href="./functions.html#def-finite-sequence">finite</a> list of steps that computes a function, and many <a href="#/def-algorithm">algorithms</a> compute the same one.</p>
+<p><span class="proof-title"><em>Solution 1</em>. </span>A <a href="./functions.html#def-function">function</a> is the input-output relationship. An <a href="#/def-expression">expression</a> is a string of symbols that <a href="#/def-denotes">denotes</a> a function, and many <a href="#/def-expression">expressions</a> denote the same one. An <a href="#/def-algorithm">algorithm</a> is a <a href="./functions.html#def-finite-sequence">finite</a> list of steps that <a href="#/def-computes">computes</a> a function, and many <a href="#/def-algorithm">algorithms</a> compute the same one.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exr-expression-or-algorithm-part2" class="theorem exercise">
+</section><section class="slide level2"><div id="exr-expression-or-algorithm-part2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 2 (Is an expression an algorithm? (part 2))</strong></span> Use the setup of <a href="#/exr-expression-or-algorithm" class="quarto-xref">Exercise&nbsp;1</a>.</p>
 <p>Which of the three does <span class="math inline">\(a x^2 + b x + c\)</span> name: a <a href="./functions.html#def-function">function</a>, an <a href="#/def-expression">expression</a> or an <a href="#/def-algorithm">algorithm</a>?</p>
 </div>
 <div id="sol-expression-or-algorithm-part2" class="proof solution">
 <p><span class="proof-title"><em>Solution 2</em>. </span>It is an <a href="#/def-expression">expression</a>: it names a <a href="./functions.html#def-function">function</a>, and it is not an <a href="#/def-algorithm">algorithm</a>.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exr-expression-or-algorithm-part3" class="theorem exercise">
+</section><section class="slide level2"><div id="exr-expression-or-algorithm-part3" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3 (Is an expression an algorithm? (part 3))</strong></span> Use the setup of <a href="#/exr-expression-or-algorithm" class="quarto-xref">Exercise&nbsp;1</a>.</p>
 <p>Does the <a href="#/def-expression">expression</a> <span class="math inline">\(a x^2 + b x + c\)</span> tell you which arithmetic steps to carry out?</p>
 </div>
 <div id="sol-expression-or-algorithm-part3" class="proof solution">
 <p><span class="proof-title"><em>Solution 3</em>. </span>Not by itself. The <a href="#/def-expression">expression</a> says <em>what</em> to compute, not <em>how</em> to compute it. Once <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span> and <span class="math inline">\(x\)</span> are known, evaluating its <a href="#/def-parse-tree">parse tree</a> from the leaves up is an <a href="#/def-algorithm">algorithm</a>.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exr-expression-or-algorithm-part4" class="theorem exercise">
+</section><section class="slide level2"><div id="exr-expression-or-algorithm-part4" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4 (Is an expression an algorithm? (part 4))</strong></span> Use the setup of <a href="#/exr-expression-or-algorithm" class="quarto-xref">Exercise&nbsp;1</a>.</p>
 <p>What do the rules of precedence (PEMDAS) contribute to the <a href="#/def-expression">expression</a> <span class="math inline">\(a x^2 + b x + c\)</span>?</p>
 </div>
 <div id="sol-expression-or-algorithm-part4" class="proof solution">
 <p><span class="proof-title"><em>Solution 4</em>. </span>Precedence resolves how the symbols group: <span class="math inline">\(a x^2 + b x + c\)</span> groups into three parts added together, with <span class="math inline">\(x^2\)</span> evaluated before the multiplication by <span class="math inline">\(a\)</span>, and that grouping is a <a href="#/def-parse-tree">tree</a>. Precedence is a rule for reading the <a href="#/def-expression">expression</a>, not a step in an <a href="#/def-algorithm">algorithm</a> that evaluates it.</p>
 </div>
-</section>
-<section class="slide level2 smaller scrollable" id="references">
-
-<div id="exr-expression-or-algorithm-part5" class="theorem exercise">
+</section><section class="slide level2 smaller scrollable" id="references"><div id="exr-expression-or-algorithm-part5" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5 (Is an expression an algorithm? (part 5))</strong></span> Use the setup of <a href="#/exr-expression-or-algorithm" class="quarto-xref">Exercise&nbsp;1</a>.</p>
-<p>Write a second <a href="#/def-expression">expression</a> that denotes the same <a href="./functions.html#def-function">function</a> as <span class="math inline">\(a x^2 + b x + c\)</span> and needs fewer multiplications.</p>
+<p>Write a second <a href="#/def-expression">expression</a> that <a href="#/def-denotes">denotes</a> the same <a href="./functions.html#def-function">function</a> as <span class="math inline">\(a x^2 + b x + c\)</span> and needs fewer multiplications.</p>
 </div>
 <div id="sol-expression-or-algorithm-part5" class="proof solution">
 <p><span class="proof-title"><em>Solution 5</em>. </span><span class="math inline">\((a x + b)\,x + c\)</span>, Horner’s form. It uses two multiplications and two additions, where the first form, with <span class="math inline">\(x^2\)</span> computed as <span class="math inline">\(x \cdot x\)</span>, uses three multiplications and two additions. The two <a href="#/def-expression">expressions</a> denote the same <a href="./functions.html#def-function">function</a> and describe different <a href="#/def-algorithm">algorithms</a>.</p>
@@ -520,9 +723,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("load", alignEquationAnchorsWithDefault);
-</script>
-
-<script>
+</script><script>
 (function () {
   var css = [
     "#revealjs-html-link {",
@@ -636,44 +837,37 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
     initRevealJsHtmlLink();
   }
 })();
-</script>
-
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+</script><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-wikipedia_expression_mathematics" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Expression (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Expression_(mathematics)">https://en.wikipedia.org/wiki/Expression_(mathematics)</a></div>
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Expression (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Expression_(mathematics)">https://en.wikipedia.org/wiki/Expression_(mathematics)</a>
+</div>
+</div>
+<div id="ref-wikipedia_closed_form_expression" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Closed-form expression — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Closed-form_expression">https://en.wikipedia.org/wiki/Closed-form_expression</a>
+</div>
 </div>
 <div id="ref-wikipedia_parse_tree" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Parse tree — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Parse_tree">https://en.wikipedia.org/wiki/Parse_tree</a></div>
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Parse tree — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Parse_tree">https://en.wikipedia.org/wiki/Parse_tree</a>
+</div>
 </div>
 <div id="ref-wikipedia_algorithm" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Algorithm — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Algorithm">https://en.wikipedia.org/wiki/Algorithm</a></div>
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Algorithm — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Algorithm">https://en.wikipedia.org/wiki/Algorithm</a>
+</div>
 </div>
 </div>
 </section>
-    </div>
+</div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="site_libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="site_libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="site_libs/revealjs/plugin/notes/notes.js"></script><script src="site_libs/revealjs/plugin/search/search.js"></script><script src="site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -864,8 +1058,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
-    </script>
-    <script id="quarto-html-after-body" type="application/javascript">
+    </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -1032,7 +1225,38 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           }
         }
       });
-      </script>
-    
+      </script><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+
 
 </body></html>

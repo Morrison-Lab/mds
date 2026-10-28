@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.19">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Expressions and Algorithms – Math for Data Science</title>
 <style>
 /* Default styles provided by pandoc.
@@ -83,7 +80,6 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -106,13 +102,15 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-32175d0f72e0e491c1b088dc3edaaf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ffa90fc80aacaac94cfaedfdd1fbad0f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-32175d0f72e0e491c1b088dc3edaaf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
 <link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -138,18 +136,13 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
-
-<script type="text/plain" cookie-consent="tracking">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script><script type="text/plain" cookie-consent="tracking">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
-</script>
-
-<script type="text/javascript" charset="UTF-8">
+</script><script type="text/javascript" charset="UTF-8">
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
@@ -164,9 +157,7 @@ cookieconsent.run({
 "language":"en"
   });
 });
-</script> 
-  
-<script>
+</script><script>
 // Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
 // handles light/dark and remembers it; the two tinted palettes are a
 // data-palette attribute on <html>. The choice is kept under "mln-theme".
@@ -228,28 +219,8 @@ cookieconsent.run({
     apply(choice, false);
   });
 })();
-</script>
-<style>
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
+</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -260,15 +231,15 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -280,24 +251,14 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
+div.callout-tbl.callout {
   border-left-color: #757575;
 }
-div.callout-fig.callout-style-default .callout-header {
+div.callout-tbl.callout-style-default .callout-header {
   background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
@@ -310,25 +271,25 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-tbl.callout {
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
   border-left-color: #757575;
 }
-div.callout-tbl.callout-style-default .callout-header {
+div.callout-fig.callout-style-default .callout-header {
   background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -340,6 +301,26 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -350,12 +331,18 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 </style>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -380,11 +367,8 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script>
-
-<link rel="stylesheet" href="styles.css">
+</script><link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -550,9 +534,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Math for Data Science</span>
@@ -564,7 +546,7 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link active" href="./notation.html" aria-current="page"> 
 <span class="menu-text">Notation</span></a>
   </li>  
@@ -576,8 +558,8 @@ window.Quarto = {
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sets-and-functions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Sets and Functions</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-sets-and-functions">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sets-and-functions">
+<li>
     <a class="dropdown-item" href="./sets.html">
  <span class="dropdown-text">Sets</span></a>
   </li>  
@@ -602,13 +584,13 @@ window.Quarto = {
  <span class="dropdown-text">Indicator Functions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-algebra" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Algebra</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-algebra">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-algebra">
+<li>
     <a class="dropdown-item" href="./algebra.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
@@ -633,7 +615,7 @@ window.Quarto = {
  <span class="dropdown-text">Complex Numbers</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="./measures.html"> 
 <span class="menu-text">Measures</span></a>
@@ -642,8 +624,8 @@ window.Quarto = {
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-calculus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Calculus</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-calculus">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-calculus">
+<li>
     <a class="dropdown-item" href="./calculus.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
@@ -660,13 +642,13 @@ window.Quarto = {
  <span class="dropdown-text">Double Integrals and Fubini’s Theorem</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-linear-algebra" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Linear Algebra</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-linear-algebra">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-linear-algebra">
+<li>
     <a class="dropdown-item" href="./linear-algebra.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
@@ -711,7 +693,7 @@ window.Quarto = {
  <span class="dropdown-text">Complex Vectors and Matrices</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="./vector-calculus.html"> 
 <span class="menu-text">Vector Calculus</span></a>
@@ -729,14 +711,14 @@ window.Quarto = {
 <span class="menu-text">Induction and Recursion</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/Morrison-Lab/mds"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -746,9 +728,7 @@ window.Quarto = {
 </a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -756,15 +736,11 @@ window.Quarto = {
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
@@ -790,8 +766,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sets</span></a>
@@ -828,7 +804,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./algebra.html" class="sidebar-item-text sidebar-link">
@@ -837,8 +813,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./algebra-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Equalities, Inequalities and Minimizers</span></a>
@@ -869,7 +845,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./measures.html" class="sidebar-item-text sidebar-link">
@@ -884,8 +860,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./calculus-derivatives.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Derivatives and Taylor Series</span></a>
@@ -904,7 +880,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./linear-algebra.html" class="sidebar-item-text sidebar-link">
@@ -913,8 +889,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-vectors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors</span></a>
@@ -975,7 +951,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
@@ -1001,20 +977,17 @@ window.Quarto = {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#expressions" id="toc-expressions" class="nav-link active" data-scroll-target="#expressions"><span class="header-section-number">1</span> Expressions</a></li>
+<li><a href="#expressions" id="toc-expressions" class="nav-link active" data-scroll-target="#expressions"><span class="header-section-number">1</span> Expressions</a></li>
   <li><a href="#algorithms" id="toc-algorithms" class="nav-link" data-scroll-target="#algorithms"><span class="header-section-number">2</span> Algorithms</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3</span> Exercises</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/expressions-algorithms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/expressions-algorithms.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="expressions-algorithms-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/expressions-algorithms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/expressions-algorithms.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="expressions-algorithms-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><!-- qwt-page-banners -->
@@ -1032,11 +1005,7 @@ window.Quarto = {
         <strong>📋 Other Formats:</strong> <a href="expressions-algorithms-slides.html">🎞️ Slides</a>
     </p>
 </div>
-
-
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sets-functions.html">Sets and Functions</a></li><li class="breadcrumb-item"><a href="./expressions-algorithms.html">Expressions and Algorithms</a></li></ol></nav>
-<div class="quarto-title">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sets-functions.html">Sets and Functions</a></li><li class="breadcrumb-item"><a href="./expressions-algorithms.html">Expressions and Algorithms</a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Expressions and Algorithms</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -1048,7 +1017,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-26 01:07:23 (PDT)</p>
+      <p class="date">Last modified: 2026-10-28 11:04:35 (PDT)</p>
     </div>
   </div>
   
@@ -1057,10 +1026,7 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<div class="callouty-titled callout callout-style-default callout-remark callout-titled">
+</header><div class="callouty-titled callout callout-style-default callout-remark callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1078,8 +1044,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<section id="expressions" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="expressions"><span class="header-section-number">1</span> Expressions</h2>
+<section id="expressions" class="level2" data-number="1"><h2 data-number="1" class="anchored" data-anchor-id="expressions">
+<span class="header-section-number">1</span> Expressions</h2>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1093,13 +1059,31 @@ window.Quarto = {
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-expression" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Expression)</strong></span> An <strong>expression</strong> <span class="citation" data-cites="wikipedia_expression_mathematics"><a href="#ref-wikipedia_expression_mathematics" role="doc-biblioref">[1]</a></span> is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression <em>denotes</em> a <a href="./functions.html#def-function">function</a>: it fixes the output for each input.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Expression)</strong></span> An <strong>expression</strong> <span class="citation" data-cites="wikipedia_expression_mathematics"><a href="#ref-wikipedia_expression_mathematics" role="doc-biblioref">[1]</a></span> is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-def callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-denotes" class="quarto-xref">Definition&nbsp;2</a> (Denotes)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="def-denotes" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Denotes)</strong></span> An <a href="#def-expression">expression</a> <strong>denotes</strong> a <a href="./functions.html#def-function">function</a> when evaluating the expression at each <a href="./functions.html#def-argument">input</a> of the function, with the expression’s variables taking that input, gives the function’s <a href="./functions.html#def-value">value</a> at that input.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1108,47 +1092,128 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-expression" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Two expressions for one function)</strong></span> The expressions <span class="math inline">\(a x^2 + b x + c\)</span> and <span class="math inline">\((a x + b)\,x + c\)</span> denote the same function of <span class="math inline">\(x\)</span> for any fixed <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>, because they give the same value at every <span class="math inline">\(x\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 1 (Two expressions for one function)</strong></span> The <a href="#def-expression">expressions</a> <span class="math inline">\(a x^2 + b x + c\)</span> and <span class="math inline">\((a x + b)\,x + c\)</span> <a href="#def-denotes">denote</a> the same <a href="./functions.html#def-function">function</a> of <span class="math inline">\(x\)</span> for any fixed <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>, because they give the same value at every <span class="math inline">\(x\)</span>.</p>
 <p>Precedence parses <span class="math inline">\(a x^2 + b x + c\)</span> as a sum of three terms: the power <span class="math inline">\(x^2\)</span> is applied first, then <span class="math inline">\(a\)</span> multiplies <span class="math inline">\(x^2\)</span> and <span class="math inline">\(b\)</span> multiplies <span class="math inline">\(x\)</span>, and the three products are added. The parentheses in <span class="math inline">\((a x + b)\,x + c\)</span> force a different tree: <span class="math inline">\(a\)</span> multiplies <span class="math inline">\(x\)</span>, <span class="math inline">\(b\)</span> is added, the sum multiplies <span class="math inline">\(x\)</span>, and <span class="math inline">\(c\)</span> is added.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-parse-tree" class="quarto-xref">Definition&nbsp;2</a> (Parse tree)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-parse-tree" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Parse tree)</strong></span> The <strong>parse tree</strong> <span class="citation" data-cites="wikipedia_parse_tree"><a href="#ref-wikipedia_parse_tree" role="doc-biblioref">[2]</a></span> of an <a href="#def-expression">expression</a> is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-parse-tree" class="quarto-xref">Example&nbsp;2</a> (The parse tree of a polynomial)
+<span class="screen-reader-only">Def</span><a href="#def-closed-form-expression" class="quarto-xref">Definition&nbsp;3</a> (Closed-form expression (formula))
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
+<div id="def-closed-form-expression" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Closed-form expression (formula))</strong></span> A <strong>closed-form expression</strong> (or <strong>formula</strong>) <span class="citation" data-cites="wikipedia_closed_form_expression"><a href="#ref-wikipedia_closed_form_expression" role="doc-biblioref">[2]</a></span> is an <a href="#def-expression">expression</a> built from constants and variables <!-- check-term-links: allow --> using a finite number of operations from a list of accepted <a href="./functions.html#def-function">functions</a>, <!-- check-term-links: allow --> such as <a href="./algebra-basics.html#def-power">powers</a>, roots, exponentials, logarithms, and trigonometric functions. Which functions are accepted is a convention, and a source states it when the boundary matters.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-closed-form-expression" class="quarto-xref">Example&nbsp;2</a> (The quadratic formula)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exm-closed-form-expression" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (The quadratic formula)</strong></span> For <span class="math inline">\(a \neq 0\)</span> with <span class="math inline">\(b^2 - 4 a c \ge 0\)</span>, the roots of <span class="math inline">\(a x^2 + b x + c = 0\)</span> are</p>
+<p><span class="math display">\[
+x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a},
+\]</span></p>
+<p>where the right-hand side is a <a href="#def-closed-form-expression">closed-form expression</a> in <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>. By contrast, no closed-form expression is known for the root of <span class="math inline">\(x - \cos x = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-def callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-closed-form-solution" class="quarto-xref">Definition&nbsp;4</a> (Closed-form solution)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="def-closed-form-solution" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Closed-form solution)</strong></span> A <strong>closed-form solution</strong> of a problem, such as solving an equation or minimizing a <a href="./functions.html#def-function">function</a>, is a <a href="#def-closed-form-expression">closed-form expression</a> for the answer.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-closed-form-solution" class="quarto-xref">Example&nbsp;3</a> (Least squares versus logistic regression)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exm-closed-form-solution" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (Least squares versus logistic regression)</strong></span> Minimizing the <a href="./vector-calculus.html#def-squared-error">squared-error</a> cost of a <a href="./algebra-exponentials.html#def-linear-function">linear</a> model over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> gives the <a href="./linear-algebra-projections.html#def-normal-equations">normal equations</a> <span class="math inline">\({D}^{\top} D \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>. When <span class="math inline">\({D}^{\top} D\)</span> is <a href="./linear-algebra-special-matrices.html#def-matrix-inverse">invertible</a>, the unique minimizer is</p>
+<p><span class="math display">\[
+\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({D}^{\top} D\right)\mathclose{}}^{-1} {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}},
+\]</span></p>
+<p>whose right-hand side is a <a href="#def-closed-form-expression">closed-form expression</a>, so <a href="./linear-algebra-projections.html#def-least-squares">least squares</a> has a <a href="#def-closed-form-solution">closed-form solution</a>.</p>
+<p>For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>, so that problem has no known closed-form solution. When a minimizer exists, an <a href="./optimization.html#def-iterative-method">iterative method</a> approximates it. <!-- check-term-links: allow --></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-def callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-parse-tree" class="quarto-xref">Definition&nbsp;5</a> (Parse tree)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="def-parse-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Parse tree)</strong></span> The <strong>parse tree</strong> <span class="citation" data-cites="wikipedia_parse_tree"><a href="#ref-wikipedia_parse_tree" role="doc-biblioref">[3]</a></span> of an <a href="#def-expression">expression</a> is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-parse-tree" class="quarto-xref">Example&nbsp;4</a> (The parse tree of a polynomial)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-parse-tree" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (The parse tree of a polynomial)</strong></span> The parse tree of <span class="math inline">\((a x + b)\,x + c\)</span>, with each operation having two children, is:</p>
+<p><span class="theorem-title"><strong>Example 4 (The parse tree of a polynomial)</strong></span> The <a href="#def-parse-tree">parse tree</a> of <span class="math inline">\((a x + b)\,x + c\)</span>, with each operation having two children, is drawn in <a href="#fig-parse-trees" class="quarto-xref">Figure&nbsp;1</a> (left) and written out as a list here:</p>
 <ul>
 <li>the root <span class="math inline">\(+\)</span>, whose children are
 <ul>
@@ -1158,107 +1223,140 @@ window.Quarto = {
 <ul>
 <li>the node <span class="math inline">\(\times\)</span>, whose children are the leaves <span class="math inline">\(a\)</span> and <span class="math inline">\(x\)</span>,</li>
 <li>the leaf <span class="math inline">\(b\)</span>;</li>
-</ul></li>
-<li>the leaf <span class="math inline">\(x\)</span>;</li>
-</ul></li>
-<li>the leaf <span class="math inline">\(c\)</span>.</li>
-</ul></li>
 </ul>
-<p>Read from the leaves up, the tree says to multiply <span class="math inline">\(a\)</span> by <span class="math inline">\(x\)</span>, add <span class="math inline">\(b\)</span>, multiply by <span class="math inline">\(x\)</span>, and add <span class="math inline">\(c\)</span>. The expression <span class="math inline">\(a x^2 + b x + c\)</span> has a different tree. Its root is the <span class="math inline">\(+\)</span> whose children are <span class="math inline">\(a x^2 + b x\)</span> and <span class="math inline">\(c\)</span>, and the first of these is a <span class="math inline">\(+\)</span> whose children are <span class="math inline">\(a x^2\)</span> and <span class="math inline">\(b x\)</span>.</p>
+</li>
+<li>the leaf <span class="math inline">\(x\)</span>;</li>
+</ul>
+</li>
+<li>the leaf <span class="math inline">\(c\)</span>.</li>
+</ul>
+</li>
+</ul>
+<p>Read from the leaves up, the tree says to multiply <span class="math inline">\(a\)</span> by <span class="math inline">\(x\)</span>, add <span class="math inline">\(b\)</span>, multiply by <span class="math inline">\(x\)</span>, and add <span class="math inline">\(c\)</span>. The <a href="#def-expression">expression</a> <span class="math inline">\(a x^2 + b x + c\)</span> has a different tree (<a href="#fig-parse-trees" class="quarto-xref">Figure&nbsp;1</a>, right). Its root is the <span class="math inline">\(+\)</span> whose children are <span class="math inline">\(a x^2 + b x\)</span> and <span class="math inline">\(c\)</span>, and the first of these is a <span class="math inline">\(+\)</span> whose children are <span class="math inline">\(a x^2\)</span> and <span class="math inline">\(b x\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout callout-style-simple callout-fig no-icon">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Remark</span><a href="#rem-expression-parse-tree" class="quarto-xref">Remark&nbsp;1</a> (Expressions, precedence and parse trees)
+<div class="callout-body-container">
+<details class="code-fold"><summary>Show R code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Each tree is a nested list: the first element is the node's label,</span></span>
+<span><span class="co"># and the remaining elements are its children.</span></span>
+<span><span class="va">times</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/utf8Conversion.html">intToUtf8</a></span><span class="op">(</span><span class="fl">215</span><span class="op">)</span></span>
+<span><span class="va">trees</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  <span class="st">"(a * x + b) * x + c"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>    <span class="st">"+"</span>,</span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">times</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"+"</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">times</span>, <span class="st">"a"</span>, <span class="st">"x"</span><span class="op">)</span>, <span class="st">"b"</span><span class="op">)</span>, <span class="st">"x"</span><span class="op">)</span>,</span>
+<span>    <span class="st">"c"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="st">"a * x^2 + b * x + c"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>    <span class="st">"+"</span>,</span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>      <span class="st">"+"</span>,</span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">times</span>, <span class="st">"a"</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"^"</span>, <span class="st">"x"</span>, <span class="st">"2"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">times</span>, <span class="st">"b"</span>, <span class="st">"x"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    <span class="st">"c"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Leaves sit at consecutive x positions;</span></span>
+<span><span class="co"># each operation sits above the mean of its children.</span></span>
+<span><span class="va">layout_tree</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">node</span>, <span class="va">depth</span> <span class="op">=</span> <span class="fl">0</span>, <span class="va">next_x</span> <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">is.list</a></span><span class="op">(</span><span class="va">node</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>      nodes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>label <span class="op">=</span> <span class="va">node</span>, x <span class="op">=</span> <span class="va">next_x</span>, y <span class="op">=</span> <span class="op">-</span><span class="va">depth</span>, is_leaf <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>      edges <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>      next_x <span class="op">=</span> <span class="va">next_x</span> <span class="op">+</span> <span class="fl">1</span></span>
+<span>    <span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="va">nodes</span> <span class="op">&lt;-</span> <span class="cn">NULL</span></span>
+<span>  <span class="va">edges</span> <span class="op">&lt;-</span> <span class="cn">NULL</span></span>
+<span>  <span class="va">child_x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">numeric</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">child</span> <span class="kw">in</span> <span class="va">node</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">sub</span> <span class="op">&lt;-</span> <span class="fu">layout_tree</span><span class="op">(</span><span class="va">child</span>, <span class="va">depth</span> <span class="op">+</span> <span class="fl">1</span>, <span class="va">next_x</span><span class="op">)</span></span>
+<span>    <span class="va">next_x</span> <span class="op">&lt;-</span> <span class="va">sub</span><span class="op">$</span><span class="va">next_x</span></span>
+<span>    <span class="va">child_x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">child_x</span>, <span class="va">sub</span><span class="op">$</span><span class="va">nodes</span><span class="op">$</span><span class="va">x</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
+<span>    <span class="va">edges</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span></span>
+<span>      <span class="va">edges</span>,</span>
+<span>      <span class="va">sub</span><span class="op">$</span><span class="va">edges</span>,</span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>        x <span class="op">=</span> <span class="cn">NA_real_</span>,</span>
+<span>        y <span class="op">=</span> <span class="op">-</span><span class="va">depth</span>,</span>
+<span>        xend <span class="op">=</span> <span class="va">sub</span><span class="op">$</span><span class="va">nodes</span><span class="op">$</span><span class="va">x</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,</span>
+<span>        yend <span class="op">=</span> <span class="va">sub</span><span class="op">$</span><span class="va">nodes</span><span class="op">$</span><span class="va">y</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
+<span>      <span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>    <span class="va">nodes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="va">nodes</span>, <span class="va">sub</span><span class="op">$</span><span class="va">nodes</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="va">me</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>    label <span class="op">=</span> <span class="va">node</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>    x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">child_x</span><span class="op">)</span>,</span>
+<span>    y <span class="op">=</span> <span class="op">-</span><span class="va">depth</span>,</span>
+<span>    is_leaf <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span></span>
+<span>  <span class="va">edges</span><span class="op">$</span><span class="va">x</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">edges</span><span class="op">$</span><span class="va">x</span><span class="op">)</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">me</span><span class="op">$</span><span class="va">x</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>nodes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="va">me</span>, <span class="va">nodes</span><span class="op">)</span>, edges <span class="op">=</span> <span class="va">edges</span>, next_x <span class="op">=</span> <span class="va">next_x</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">laid_out</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">trees</span>, <span class="va">layout_tree</span><span class="op">)</span></span>
+<span><span class="va">tree_nodes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/do.call.html">do.call</a></span><span class="op">(</span><span class="va">rbind</span>, <span class="fu"><a href="https://rdrr.io/r/base/funprog.html">Map</a></span><span class="op">(</span></span>
+<span>  <span class="kw">function</span><span class="op">(</span><span class="va">res</span>, <span class="va">name</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">res</span><span class="op">$</span><span class="va">nodes</span>, tree <span class="op">=</span> <span class="va">name</span><span class="op">)</span>,</span>
+<span>  <span class="va">laid_out</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">trees</span><span class="op">)</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tree_edges</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/do.call.html">do.call</a></span><span class="op">(</span><span class="va">rbind</span>, <span class="fu"><a href="https://rdrr.io/r/base/funprog.html">Map</a></span><span class="op">(</span></span>
+<span>  <span class="kw">function</span><span class="op">(</span><span class="va">res</span>, <span class="va">name</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">res</span><span class="op">$</span><span class="va">edges</span>, tree <span class="op">=</span> <span class="va">name</span><span class="op">)</span>,</span>
+<span>  <span class="va">laid_out</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">trees</span><span class="op">)</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tree_nodes</span><span class="op">$</span><span class="va">kind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">tree_nodes</span><span class="op">$</span><span class="va">is_leaf</span>, <span class="st">"leaf"</span>, <span class="st">"operation"</span><span class="op">)</span></span>
+<span><span class="va">tree_nodes</span><span class="op">$</span><span class="va">tree</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">tree_nodes</span><span class="op">$</span><span class="va">tree</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">trees</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tree_edges</span><span class="op">$</span><span class="va">tree</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">tree_edges</span><span class="op">$</span><span class="va">tree</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">trees</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">tree_edges</span>,</span>
+<span>    <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span>, xend <span class="op">=</span> <span class="va">xend</span>, yend <span class="op">=</span> <span class="va">yend</span><span class="op">)</span>,</span>
+<span>    colour <span class="op">=</span> <span class="st">"grey50"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_label</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">tree_nodes</span>,</span>
+<span>    <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span>, label <span class="op">=</span> <span class="va">label</span>, fill <span class="op">=</span> <span class="va">kind</span><span class="op">)</span>,</span>
+<span>    size <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>    linewidth <span class="op">=</span> <span class="fl">0</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span></span>
+<span>    values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>operation <span class="op">=</span> <span class="st">"#CCE5F6"</span>, leaf <span class="op">=</span> <span class="st">"#F9DDBF"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span></span>
+<span>    <span class="op">~</span><span class="va">tree</span>,</span>
+<span>    scales <span class="op">=</span> <span class="st">"free_x"</span>,</span>
+<span>    labeller <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va"><a href="https://ggplot2.tidyverse.org/reference/labellers.html">label_parsed</a></span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"node type"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_void</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    legend.position <span class="op">=</span> <span class="st">"bottom"</span>,</span>
+<span>    strip.text <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-parse-trees" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-parse-trees-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The <a href="#def-parse-tree">parse trees</a> of <span class="math inline">\((a x + b)\,x + c\)</span> and <span class="math inline">\(a x^2 + b x + c\)</span>. Each operation is a node with one child per <a href="./functions.html#def-argument">argument</a>, and the leaves are the symbols that are not operations. The caret is the <a href="./algebra-basics.html#def-power">power</a> operation, which takes a <a href="./algebra-basics.html#def-power-base">base</a> and an <a href="./algebra-basics.html#def-power-exponent">exponent</a>.
+</figcaption><div aria-describedby="fig-parse-trees-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="expressions-algorithms_files/figure-html/parse-trees-plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The parse trees of (a x + b)\,x + c and a x^2 + b x + c. Each operation is a node with one child per argument, and the leaves are the symbols that are not operations. The caret is the power operation, which takes a base and an exponent."><img src="expressions-algorithms_files/figure-html/parse-trees-plot-1.png" class="img-fluid figure-img" alt="Two parse trees, drawn with the root at the top. In the left tree the root plus has children times and the leaf c. That times has children plus and the leaf x. The plus below it has children times and the leaf b, and that times has the leaves a and x. In the right tree the root plus has children plus and the leaf c. That plus has two children, both times. The first times has the leaf a and a power node with leaves x and 2. The second times has the leaves b and x." width="672"></a></p>
+</figure>
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="rem-expression-parse-tree" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Expressions, precedence and parse trees). </span>An expression does not say how to compute the output it fixes, and many expressions denote the same function. A function is the input-output relationship itself; an expression is one way of writing it down.</p>
-<p>The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree (<a href="#def-parse-tree" class="quarto-xref">Definition&nbsp;2</a>).</p>
 </div>
 </div>
 </div>
-</div>
-</section>
-<section id="algorithms" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="algorithms"><span class="header-section-number">2</span> Algorithms</h2>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-algorithm" class="quarto-xref">Definition&nbsp;3</a> (Algorithm)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-algorithm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Algorithm)</strong></span> An <strong>algorithm</strong> <span class="citation" data-cites="wikipedia_algorithm"><a href="#ref-wikipedia_algorithm" role="doc-biblioref">[3]</a></span> is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-computes" class="quarto-xref">Definition&nbsp;4</a> (Computes)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-computes" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Computes)</strong></span> An <a href="#def-algorithm">algorithm</a> <strong>computes</strong> a <a href="./functions.html#def-function">function</a> when, for each <a href="./functions.html#def-argument">input</a>, it returns the function’s <a href="./functions.html#def-value">value</a> at that input.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-algorithm" class="quarto-xref">Example&nbsp;3</a> (Two algorithms for one function)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-algorithm" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Two algorithms for one function)</strong></span> Take the function that <a href="#exm-expression" class="quarto-xref">Example&nbsp;1</a> writes two ways. Evaluating the tree of <span class="math inline">\(a x^2 + b x + c\)</span>, with <span class="math inline">\(x^2\)</span> computed as <span class="math inline">\(x \cdot x\)</span>, takes three multiplications and two additions. Evaluating the tree of Horner’s form <span class="math inline">\((a x + b)\,x + c\)</span> takes two multiplications and two additions. At <span class="math inline">\(a = 2\)</span>, <span class="math inline">\(b = -3\)</span>, <span class="math inline">\(c = 5\)</span> and <span class="math inline">\(x = 1.5\)</span>, the first algorithm computes <span class="math inline">\(4.5 - 4.5 + 5 = 5\)</span> and the second computes <span class="math inline">\((3 - 3) \cdot 1.5 + 5 = 5\)</span>, the same value by different steps.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Remark</span><a href="#rem-algorithm-scope" class="quarto-xref">Remark&nbsp;2</a> (Procedures that are not algorithms here)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="rem-algorithm-scope" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (Procedures that are not algorithms here). </span>By the definition of an <a href="#def-algorithm">algorithm</a>, every algorithm <a href="#def-computes">computes</a> some <a href="./functions.html#def-function">function</a>. That holds because an algorithm has unambiguous steps and halts on every valid <a href="./functions.html#def-argument">input</a>. A procedure that makes random choices can return different <a href="./functions.html#def-value">values</a> for the same input. A procedure that never halts returns no <a href="./functions.html#def-value">value</a> for some inputs. Neither computes a function, and neither is an algorithm in this sense, although some texts call them <a href="#def-algorithm">algorithms</a>.</p>
+</figure>
 </div>
 </div>
 </div>
@@ -1269,18 +1367,158 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Remark</span><a href="#rem-function-expression-algorithm" class="quarto-xref">Remark&nbsp;3</a> (How functions, expressions and algorithms relate)
+<span class="screen-reader-only">Remark</span><a href="#rem-expression-parse-tree" class="quarto-xref">Remark&nbsp;1</a> (Expressions, precedence and parse trees)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
+<div id="rem-expression-parse-tree" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (Expressions, precedence and parse trees). </span>An <a href="#def-expression">expression</a> does not say how to compute the <a href="./functions.html#def-value">output</a> it fixes, and many <a href="#def-expression">expressions</a> <a href="#def-denotes">denote</a> the same <a href="./functions.html#def-function">function</a>. A function is the input-output relationship itself; an expression is one way of writing it down.</p>
+<p>The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree (<a href="#def-parse-tree" class="quarto-xref">Definition&nbsp;5</a>).</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="algorithms" class="level2" data-number="2"><h2 data-number="2" class="anchored" data-anchor-id="algorithms">
+<span class="header-section-number">2</span> Algorithms</h2>
+<div class="callouty-titled callout callout-style-default callout-def callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-algorithm" class="quarto-xref">Definition&nbsp;6</a> (Algorithm)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="def-algorithm" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Algorithm)</strong></span> An <strong>algorithm</strong> <span class="citation" data-cites="wikipedia_algorithm"><a href="#ref-wikipedia_algorithm" role="doc-biblioref">[4]</a></span> is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-def callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-computes" class="quarto-xref">Definition&nbsp;7</a> (Computes)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="def-computes" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Computes)</strong></span> An <a href="#def-algorithm">algorithm</a> <strong>computes</strong> a <a href="./functions.html#def-function">function</a> when, for each <a href="./functions.html#def-argument">input</a>, it returns the function’s <a href="./functions.html#def-value">value</a> at that input.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-algorithm" class="quarto-xref">Example&nbsp;5</a> (Two algorithms for one function)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exm-algorithm" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Two algorithms for one function)</strong></span> Take the <a href="./functions.html#def-function">function</a> that <a href="#exm-expression" class="quarto-xref">Example&nbsp;1</a> writes two ways. Evaluating the tree of <span class="math inline">\(a x^2 + b x + c\)</span>, with <span class="math inline">\(x^2\)</span> computed as <span class="math inline">\(x \cdot x\)</span>, takes three multiplications and two additions. Evaluating the tree of Horner’s form <span class="math inline">\((a x + b)\,x + c\)</span> takes two multiplications and two additions. We evaluate both forms at <span class="math inline">\(a = 2\)</span>, <span class="math inline">\(b = -3\)</span>, <span class="math inline">\(c = 5\)</span> and <span class="math inline">\(x = 1.5\)</span>, in R and in Python, and give each intermediate quantity a name. (The code calls <span class="math inline">\(c\)</span> <code>c0</code>, because <code>c</code> is a built-in function in R.) The two <a href="#def-algorithm">algorithms</a> <a href="#def-computes">compute</a> the same function, so the two <a href="./functions.html#def-value">values</a> must agree.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fl">2</span></span>
+<span><span class="va">b</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">3</span></span>
+<span><span class="va">c0</span> <span class="op">&lt;-</span> <span class="fl">5</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1.5</span></span>
+<span><span class="co"># Expanded form: 3 multiplications, 2 additions</span></span>
+<span><span class="va">square_term</span> <span class="op">&lt;-</span> <span class="va">a</span> <span class="op">*</span> <span class="va">x</span> <span class="op">*</span> <span class="va">x</span></span>
+<span><span class="va">linear_term</span> <span class="op">&lt;-</span> <span class="va">b</span> <span class="op">*</span> <span class="va">x</span></span>
+<span><span class="va">expanded</span> <span class="op">&lt;-</span> <span class="va">square_term</span> <span class="op">+</span> <span class="va">linear_term</span> <span class="op">+</span> <span class="va">c0</span></span>
+<span><span class="co"># Horner's form: 2 multiplications, 2 additions</span></span>
+<span><span class="va">inner</span> <span class="op">&lt;-</span> <span class="va">a</span> <span class="op">*</span> <span class="va">x</span> <span class="op">+</span> <span class="va">b</span></span>
+<span><span class="va">horner</span> <span class="op">&lt;-</span> <span class="va">inner</span> <span class="op">*</span> <span class="va">x</span> <span class="op">+</span> <span class="va">c0</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">square_term</span>, <span class="va">linear_term</span>, <span class="va">expanded</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1]  4.5 -4.5  5.0</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">inner</span>, <span class="va">horner</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 0 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="op">-</span><span class="dv">3</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>c0 <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Expanded form: 3 multiplications, 2 additions</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>square_term <span class="op">=</span> a <span class="op">*</span> x <span class="op">*</span> x</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>linear_term <span class="op">=</span> b <span class="op">*</span> x</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>expanded <span class="op">=</span> square_term <span class="op">+</span> linear_term <span class="op">+</span> c0</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Horner's form: 2 multiplications, 2 additions</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>inner <span class="op">=</span> a <span class="op">*</span> x <span class="op">+</span> b</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>horner <span class="op">=</span> inner <span class="op">*</span> x <span class="op">+</span> c0</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(square_term, linear_term, expanded)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4.5 -4.5 5.0</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inner, horner)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 0.0 5.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>The expanded form adds 4.5, -4.5 and 5 to reach 5. Horner’s form multiplies 0 by 1.5 and adds 5 to reach 5. Different steps give the same <a href="./functions.html#def-value">value</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-remark callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-algorithm-scope" class="quarto-xref">Remark&nbsp;2</a> (Procedures that are not algorithms here)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="rem-algorithm-scope" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (Procedures that are not algorithms here). </span>By the definition of an <a href="#def-algorithm">algorithm</a>, every algorithm <a href="#def-computes">computes</a> some <a href="./functions.html#def-function">function</a>. That holds because an algorithm has unambiguous steps and halts on every valid <a href="./functions.html#def-argument">input</a>. A procedure that makes random choices can return different <a href="./functions.html#def-value">values</a> for the same input. A procedure that never halts returns no <a href="./functions.html#def-value">value</a> for some inputs. Neither computes a function, and neither is an algorithm in this sense, although some texts call them <a href="#def-algorithm">algorithms</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-remark callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-function-expression-algorithm" class="quarto-xref">Remark&nbsp;3</a> (How functions, expressions and algorithms relate)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-function-expression-algorithm" class="proof remark">
 <p><span class="proof-title"><em>Remark 3</em> (How functions, expressions and algorithms relate). </span>The three ideas fit together this way:</p>
 <ul>
-<li>A function is the input-output relationship.</li>
-<li>An <a href="#def-expression">expression</a> denotes a function, and many expressions denote the same one.</li>
-<li>An <a href="#def-algorithm">algorithm</a> computes a function, and many algorithms compute the same one.</li>
+<li>A <a href="./functions.html#def-function">function</a> is the input-output relationship.</li>
+<li>An <a href="#def-expression">expression</a> <a href="#def-denotes">denotes</a> a function, and many expressions denote the same one.</li>
+<li>An <a href="#def-algorithm">algorithm</a> <a href="#def-computes">computes</a> a function, and many algorithms compute the same one.</li>
 </ul>
 <p>An expression is not an algorithm, because it does not say what to do, or in what order. Given values for its variables, evaluating its parse tree from the leaves up is one algorithm for the function it denotes, and a different expression for the same function gives a different tree and a different algorithm.</p>
 </div>
@@ -1288,7 +1526,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1297,37 +1535,36 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-no-known-algorithm" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Values with no known algorithm). </span>Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an <span class="math inline">\(\arg \min\)</span> over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Values with no known algorithm). </span>Some functions have no known finite algorithm for their exact values, and <a href="#def-expression">expressions</a> that <a href="#def-denotes">denote</a> them, such as a limit, a supremum, an integral with no closed form, or an <span class="math inline">\(\arg \min\)</span> over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-no-known-algorithm" class="quarto-xref">Example&nbsp;4</a> (A minimizer with no known formula)
+<span class="screen-reader-only">Exm</span><a href="#exm-no-known-algorithm" class="quarto-xref">Example&nbsp;6</a> (A minimizer with no known formula)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-no-known-algorithm" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (A minimizer with no known formula)</strong></span> The minimizer <span class="math inline">\(\arg \min_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\)</span> is well defined, because <span class="math inline">\(x - \cos x\)</span> is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.</p>
+<p><span class="theorem-title"><strong>Example 6 (A minimizer with no known formula)</strong></span> The minimizer <span class="math inline">\(\arg \min_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\)</span> is well defined, because <span class="math inline">\(x - \cos x\)</span> is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.</p>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="exercises" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="exercises"><span class="header-section-number">3</span> Exercises</h2>
+</section><section id="exercises" class="level2" data-number="3"><h2 data-number="3" class="anchored" data-anchor-id="exercises">
+<span class="header-section-number">3</span> Exercises</h2>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1336,7 +1573,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-expression-or-algorithm" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Is an expression an algorithm?)</strong></span> How do a <a href="./functions.html#def-function">function</a>, an <a href="#def-expression">expression</a> and an <a href="#def-algorithm">algorithm</a> differ?</p>
@@ -1345,7 +1582,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1354,16 +1591,16 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-expression-or-algorithm" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span>A <a href="./functions.html#def-function">function</a> is the input-output relationship. An <a href="#def-expression">expression</a> is a string of symbols that denotes a function, and many <a href="#def-expression">expressions</a> denote the same one. An <a href="#def-algorithm">algorithm</a> is a <a href="./functions.html#def-finite-sequence">finite</a> list of steps that computes a function, and many <a href="#def-algorithm">algorithms</a> compute the same one.</p>
+<p><span class="proof-title"><em>Solution 1</em>. </span>A <a href="./functions.html#def-function">function</a> is the input-output relationship. An <a href="#def-expression">expression</a> is a string of symbols that <a href="#def-denotes">denotes</a> a function, and many <a href="#def-expression">expressions</a> denote the same one. An <a href="#def-algorithm">algorithm</a> is a <a href="./functions.html#def-finite-sequence">finite</a> list of steps that <a href="#def-computes">computes</a> a function, and many <a href="#def-algorithm">algorithms</a> compute the same one.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1372,7 +1609,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-expression-or-algorithm-part2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 2 (Is an expression an algorithm? (part 2))</strong></span> Use the setup of <a href="#exr-expression-or-algorithm" class="quarto-xref">Exercise&nbsp;1</a>.</p>
@@ -1382,7 +1619,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1391,7 +1628,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-expression-or-algorithm-part2" class="proof solution">
 <p><span class="proof-title"><em>Solution 2</em>. </span>It is an <a href="#def-expression">expression</a>: it names a <a href="./functions.html#def-function">function</a>, and it is not an <a href="#def-algorithm">algorithm</a>.</p>
@@ -1400,7 +1637,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1409,7 +1646,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-expression-or-algorithm-part3" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3 (Is an expression an algorithm? (part 3))</strong></span> Use the setup of <a href="#exr-expression-or-algorithm" class="quarto-xref">Exercise&nbsp;1</a>.</p>
@@ -1419,7 +1656,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1428,7 +1665,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-expression-or-algorithm-part3" class="proof solution">
 <p><span class="proof-title"><em>Solution 3</em>. </span>Not by itself. The <a href="#def-expression">expression</a> says <em>what</em> to compute, not <em>how</em> to compute it. Once <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span> and <span class="math inline">\(x\)</span> are known, evaluating its <a href="#def-parse-tree">parse tree</a> from the leaves up is an <a href="#def-algorithm">algorithm</a>.</p>
@@ -1437,7 +1674,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1446,7 +1683,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-expression-or-algorithm-part4" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4 (Is an expression an algorithm? (part 4))</strong></span> Use the setup of <a href="#exr-expression-or-algorithm" class="quarto-xref">Exercise&nbsp;1</a>.</p>
@@ -1456,7 +1693,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1465,7 +1702,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-expression-or-algorithm-part4" class="proof solution">
 <p><span class="proof-title"><em>Solution 4</em>. </span>Precedence resolves how the symbols group: <span class="math inline">\(a x^2 + b x + c\)</span> groups into three parts added together, with <span class="math inline">\(x^2\)</span> evaluated before the multiplication by <span class="math inline">\(a\)</span>, and that grouping is a <a href="#def-parse-tree">tree</a>. Precedence is a rule for reading the <a href="#def-expression">expression</a>, not a step in an <a href="#def-algorithm">algorithm</a> that evaluates it.</p>
@@ -1474,7 +1711,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1483,17 +1720,17 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-expression-or-algorithm-part5" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5 (Is an expression an algorithm? (part 5))</strong></span> Use the setup of <a href="#exr-expression-or-algorithm" class="quarto-xref">Exercise&nbsp;1</a>.</p>
-<p>Write a second <a href="#def-expression">expression</a> that denotes the same <a href="./functions.html#def-function">function</a> as <span class="math inline">\(a x^2 + b x + c\)</span> and needs fewer multiplications.</p>
+<p>Write a second <a href="#def-expression">expression</a> that <a href="#def-denotes">denotes</a> the same <a href="./functions.html#def-function">function</a> as <span class="math inline">\(a x^2 + b x + c\)</span> and needs fewer multiplications.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1502,7 +1739,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-expression-or-algorithm-part5" class="proof solution">
 <p><span class="proof-title"><em>Solution 5</em>. </span><span class="math inline">\((a x + b)\,x + c\)</span>, Horner’s form. It uses two multiplications and two additions, where the first form, with <span class="math inline">\(x^2\)</span> computed as <span class="math inline">\(x \cdot x\)</span>, uses three multiplications and two additions. The two <a href="#def-expression">expressions</a> denote the same <a href="./functions.html#def-function">function</a> and describe different <a href="#def-algorithm">algorithms</a>.</p>
@@ -1690,9 +1927,7 @@ window.addEventListener("load", () => {
   normalizeInternalAnchorLinkIcons();
   moveTheoremDivAnchorsInlineWithRetry();
 });
-</script>
-
-<script>
+</script><script>
 const defaultAnchorIconFallback = "#";
 
 function getDefaultAnchorTemplate() {
@@ -1765,22 +2000,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("load", alignEquationAnchorsWithDefault);
 </script>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-wikipedia_expression_mathematics" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Expression (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Expression_(mathematics)">https://en.wikipedia.org/wiki/Expression_(mathematics)</a></div>
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Expression (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Expression_(mathematics)">https://en.wikipedia.org/wiki/Expression_(mathematics)</a>
+</div>
+</div>
+<div id="ref-wikipedia_closed_form_expression" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Closed-form expression — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Closed-form_expression">https://en.wikipedia.org/wiki/Closed-form_expression</a>
+</div>
 </div>
 <div id="ref-wikipedia_parse_tree" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Parse tree — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Parse_tree">https://en.wikipedia.org/wiki/Parse_tree</a></div>
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Parse tree — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Parse_tree">https://en.wikipedia.org/wiki/Parse_tree</a>
+</div>
 </div>
 <div id="ref-wikipedia_algorithm" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Algorithm — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Algorithm">https://en.wikipedia.org/wiki/Algorithm</a></div>
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Algorithm — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Algorithm">https://en.wikipedia.org/wiki/Algorithm</a>
 </div>
-</div></section></div></main> <!-- /main -->
-<!--
+</div>
+</div></section></div></main><!-- /main --><!--
 Page-navigation helpers for the HTML format, included after the body of every
 page by _quarto-website.yml. Vendored from Morrison-Lab/lbt (a private repo), via Morrison-Lab/qwt.
 
@@ -1803,8 +2044,7 @@ the text, the sidebar, or the table of contents:
 
 Both are hidden below Bootstrap's large breakpoint, where the sidebar
 collapses and there is no gutter to put them in.
--->
-<style>
+--><style>
 .page-nav-arrow {
   position: fixed;
   top: 50%;
@@ -1927,8 +2167,7 @@ document.addEventListener("DOMContentLoaded", function () {
   place();
   window.addEventListener("resize", place);
 });
-</script>
-<script>
+</script><script>
 // Typesetting equations and loading images change the height of everything
 // above the reader and push the text they were reading out of view. Keep the
 // reader's place: until they scroll, that is the link target (#id or a text
@@ -2041,8 +2280,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.readyState === "complete") afterMath();
   else window.addEventListener("load", afterMath);
 })();
-</script>
-<script>
+</script><script>
 // The table-fit rule makes a page table a block box so it can scroll.
 // Some browsers then drop the table role, so give each one back.
 document.querySelectorAll("main table").forEach(function (t) {
@@ -2050,8 +2288,7 @@ document.querySelectorAll("main table").forEach(function (t) {
     t.setAttribute("role", "table");
   }
 });
-</script>
-<script id="quarto-html-after-body" type="application/javascript">
+</script><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2516,9 +2753,7 @@ document.querySelectorAll("main table").forEach(function (t) {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./growth-rates.html" class="pagination-link" aria-label="Growth Rates">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Growth Rates</span>
       </a>          
@@ -2529,19 +2764,18 @@ document.querySelectorAll("main table").forEach(function (t) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Expressions and Algorithms"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: expressions-algorithms-slides.html</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_expressions-algorithms.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Expressions and Algorithms"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: expressions-algorithms-slides.html</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_expressions-algorithms.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -2552,10 +2786,38 @@ document.querySelectorAll("main table").forEach(function (t) {
       &nbsp;
     </div>
   </div>
-</footer>
-<script src="dependency-graph.js" defer=""></script>
-
-
+</footer><script src="dependency-graph.js" defer=""></script><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 </body></html>

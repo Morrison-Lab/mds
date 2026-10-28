@@ -102,9 +102,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-32175d0f72e0e491c1b088dc3edaaf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ffa90fc80aacaac94cfaedfdd1fbad0f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-32175d0f72e0e491c1b088dc3edaaf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
 <link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
@@ -222,6 +222,16 @@ cookieconsent.run({
 </script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-prp.callout {
   border-left-color: #827717;
 }
@@ -231,46 +241,6 @@ div.callout-prp.callout-style-default .callout-header {
 div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -282,15 +252,35 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-cor.callout {
+  border-left-color: #00838F;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-tbl.callout {
   border-left-color: #757575;
@@ -302,25 +292,15 @@ div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -332,15 +312,35 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -993,8 +993,7 @@ window.Quarto = {
   <li><a href="#sec-function-profile" id="toc-sec-function-profile" class="nav-link" data-scroll-target="#sec-function-profile"><span class="header-section-number">1.3</span> Studying a new function</a></li>
   <li><a href="#sec-tangent-lines" id="toc-sec-tangent-lines" class="nav-link" data-scroll-target="#sec-tangent-lines"><span class="header-section-number">1.4</span> Tangent lines</a></li>
   <li><a href="#sec-linear-approximation" id="toc-sec-linear-approximation" class="nav-link" data-scroll-target="#sec-linear-approximation"><span class="header-section-number">1.5</span> Linear approximation</a></li>
-  <li><a href="#sec-critical-points" id="toc-sec-critical-points" class="nav-link" data-scroll-target="#sec-critical-points"><span class="header-section-number">1.6</span> Critical points and optimization</a></li>
-  <li><a href="#sec-taylor-series" id="toc-sec-taylor-series" class="nav-link" data-scroll-target="#sec-taylor-series"><span class="header-section-number">1.7</span> Taylor series</a></li>
+  <li><a href="#sec-taylor-series" id="toc-sec-taylor-series" class="nav-link" data-scroll-target="#sec-taylor-series"><span class="header-section-number">1.6</span> Taylor series</a></li>
   </ul>
 </li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/calculus-derivatives.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/calculus-derivatives.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="calculus-derivatives-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
@@ -1015,6 +1014,19 @@ window.Quarto = {
         <strong>📋 Other Formats:</strong> <a href="calculus-derivatives-slides.html">🎞️ Slides</a>
     </p>
 </div>
+
+<!-- gha-preview-page-banner:start -->
+<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~13% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
+        <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 3px; border-radius: 2px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 3px; border-radius: 2px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
+<!-- gha-preview-page-banner:end -->
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./calculus.html">Calculus</a></li><li class="breadcrumb-item"><a href="./calculus-derivatives.html">Derivatives and Taylor Series</a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Derivatives and Taylor Series</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
@@ -1027,7 +1039,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-26 01:07:23 (PDT)</p>
+      <p class="date">Last modified: 2026-10-28 11:04:35 (PDT)</p>
     </div>
   </div>
   
@@ -2797,7 +2809,7 @@ x &amp;= {\operatorname{log}\mathopen{}\left\{\frac{y}{1 - y}\right\}\mathclose{
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">value</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">panel</span>, scales <span class="op">=</span> <span class="st">"free_y"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"x"</span>, y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Input, x"</span>, y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div class="callout callout-style-simple callout-fig no-icon">
 <div class="callout-body d-flex">
@@ -3046,11 +3058,7 @@ Figure&nbsp;2: The linear approximation <a href="#eq-linear-approx" class="quart
 <div id="exr-miller-deriv-tangent-line-approx" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 13 (Tangent line approximation)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.8.</p>
 <p>Let <span class="math inline">\(f(x) = 4x + \sqrt{2}\cos x\)</span>.</p>
-<ol type="1">
-<li>Compute <span class="math inline">\(f'(x)\)</span>.</li>
-<li>Find the equation of the tangent line to the curve <span class="math inline">\(y = f(x)\)</span> at <span class="math inline">\(x = \pi/4\)</span>.</li>
-<li>Use the tangent line to approximate <span class="math inline">\(f(\pi/4 + 0.01)\)</span>, and compare that approximation with the exact value.</li>
-</ol>
+<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Find</mark> <span class="math inline">\(f'(x)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3068,9 +3076,44 @@ Figure&nbsp;2: The linear approximation <a href="#eq-linear-approx" class="quart
 <div id="callout-77" class="callout-77-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-deriv-tangent-line-approx" class="proof solution">
-<p><span class="proof-title"><em>Solution 13</em>. </span><strong>1.</strong> Differentiate term by term:</p>
+<p><span class="proof-title"><em>Solution 13</em>. </span>Differentiate <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">each</mark> <a href="./algebra-sums.html#def-term">term</a>:</p>
 <p><span class="math display">\[f'(x) = 4 - \sqrt{2}\sin x\]</span></p>
-<p><strong>2.</strong> Evaluate <span class="math inline">\(f\)</span> and <span class="math inline">\(f'\)</span> at <span class="math inline">\(x_0 = \pi/4\)</span>:</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-78-contents" aria-controls="callout-78" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-deriv-tangent-line-approx-tangent" class="quarto-xref">Exercise&nbsp;14</a> (Tangent line at a point)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-78" class="callout-78-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-miller-deriv-tangent-line-approx-tangent" class="theorem exercise">
+<p><span class="theorem-title"><strong><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Exercise 14 (Tangent line at a point)</mark></strong></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> In the setting of </mark><a href="#exr-miller-deriv-tangent-line-approx" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Exercise&nbsp;13</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">, find</mark> the equation of the <a href="#def-tangent-line">tangent line</a> to the curve <span class="math inline">\(y = f(x)\)</span> at <span class="math inline">\(x = \pi/4\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-79-contents" aria-controls="callout-79" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-deriv-tangent-line-approx-tangent" class="quarto-xref">Solution&nbsp;14</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-79" class="callout-79-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-miller-deriv-tangent-line-approx-tangent" class="proof solution">
+<p><span class="proof-title"><em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Solution 14</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Evaluate <span class="math inline">\(f\)</span> and <span class="math inline">\(f'\)</span> at <span class="math inline">\(x_0 = \pi/4\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
 f(\pi/4) &amp;= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{}} \\
 &amp;= \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} \\
@@ -3083,55 +3126,6 @@ f'(\pi/4) &amp;= 4 - \sqrt{2}{\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclos
 \end{aligned}\]</span></p>
 <p>Using the point-slope formula, the tangent line at <span class="math inline">\((\pi/4, \pi + 1)\)</span> is:</p>
 <p><span class="math display">\[y - (\pi + 1) = 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{} \implies y = \pi + 1 + 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{}\]</span></p>
-<p><strong>3.</strong> At <span class="math inline">\(x = \pi/4 + 0.01\)</span>, the linear approximation (<a href="#eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a>) gives:</p>
-<p><span class="math display">\[f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593\]</span></p>
-<p>The exact value is:</p>
-<p><span class="math display">\[f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{}} \approx 4.171543\]</span></p>
-<p>The approximation error is <span class="math inline">\(|4.171593 - 4.171543| \approx 0.00005\)</span>, on the order of <span class="math inline">\((0.01)^2 = 10^{-4}\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section id="sec-critical-points" class="level3" data-number="1.6"><h3 data-number="1.6" class="anchored" data-anchor-id="sec-critical-points">
-<span class="header-section-number">1.6</span> Critical points and optimization</h3>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-78-contents" aria-controls="callout-78" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-flat-point" class="quarto-xref">Definition&nbsp;18</a> (Flat point (stationary point))
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-78" class="callout-78-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-flat-point" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Flat point (stationary point))</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#def-differentiable" class="quarto-xref">Definition&nbsp;6</a>). If <span class="math inline">\(f'(c) = 0\)</span>, then <span class="math inline">\(c\)</span> is a <strong>flat point</strong> of <span class="math inline">\(f\)</span> (also called a <strong>stationary point</strong>) <span class="citation" data-cites="wikipedia_stationary_point"><a href="#ref-wikipedia_stationary_point" role="doc-biblioref">[16]</a></span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-79-contents" aria-controls="callout-79" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-flat-point" class="quarto-xref">Example&nbsp;10</a> (Flat points, and a point that is not one)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-79" class="callout-79-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-flat-point" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (Flat points, and a point that is not one)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(f(w) = w^3\)</span> has <span class="math inline">\(f'(w) = 3w^2\)</span>, which is <span class="math inline">\(0\)</span> at <span class="math inline">\(w = 0\)</span>, so <span class="math inline">\(0\)</span> is a flat point. Yet <span class="math inline">\(f(0) = 0\)</span> is neither the <a href="./algebra-basics.html#def-minimum">minimum</a> nor the <a href="./algebra-basics.html#def-maximum">maximum</a> of the values <span class="math inline">\(f\)</span> takes on any open interval around <span class="math inline">\(0\)</span>: <span class="math inline">\(f(w) &lt; 0\)</span> for <span class="math inline">\(w &lt; 0\)</span> and <span class="math inline">\(f(w) &gt; 0\)</span> for <span class="math inline">\(w &gt; 0\)</span>.</li>
-<li>
-<span class="math inline">\(h(w) = w^2\)</span> has <span class="math inline">\(h'(1) = 2 \ne 0\)</span>, so <span class="math inline">\(1\)</span> is not a flat point.</li>
-</ul>
 </div>
 </div>
 </div>
@@ -3142,19 +3136,14 @@ f'(\pi/4) &amp;= 4 - \sqrt{2}{\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclos
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-flat-point" class="quarto-xref">Exercise&nbsp;14</a> (Find the flat point, and check the approximation)
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-deriv-tangent-line-approx-approx" class="quarto-xref">Exercise&nbsp;15</a> (Approximate with the tangent line)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-80" class="callout-80-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<div id="exr-flat-point" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14 (Find the flat point, and check the approximation)</strong></span> Let <span class="math inline">\(f(w) = w^2 - 4w + 7\)</span>.</p>
-<ol type="1">
-<li>Differentiate <span class="math inline">\(f\)</span>.</li>
-<li>Find the flat point <span class="math inline">\(w\)</span> of <span class="math inline">\(f\)</span>, and say whether <span class="math inline">\(f(w)\)</span> is the <a href="./algebra-basics.html#def-minimum">minimum</a> or the <a href="./algebra-basics.html#def-maximum">maximum</a> of the values of <span class="math inline">\(f\)</span>.</li>
-<li>Evaluate the derivative at <span class="math inline">\(w = 1\)</span>, use <a href="#eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> to predict <span class="math inline">\(f(1.01)\)</span>, and compare that prediction with the exact value.</li>
-</ol>
+<div id="exr-miller-deriv-tangent-line-approx-approx" class="theorem exercise">
+<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Exercise 15 (Approximate with the tangent line)</strong></span> Use the <a href="#def-tangent-line">tangent line</a> from <a href="#exr-miller-deriv-tangent-line-approx-tangent" class="quarto-xref">Exercise&nbsp;14</a> to approximate <span class="math inline">\(f(\pi/4 + 0.01)\)</span>.</mark></p>
 </div>
 </div>
 </div>
@@ -3165,319 +3154,73 @@ f'(\pi/4) &amp;= 4 - \sqrt{2}{\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclos
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-flat-point" class="quarto-xref">Solution&nbsp;14</a>
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-deriv-tangent-line-approx-approx" class="quarto-xref">Solution&nbsp;15</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-81" class="callout-81-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="sol-flat-point" class="proof solution">
-<p><span class="proof-title"><em>Solution 14</em>. </span><strong>1.</strong> Term by term:</p>
-<p><span class="math display">\[\frac{df}{dw} = 2w - 4\]</span></p>
-<p><strong>2.</strong> Set it to zero: <span class="math inline">\(2w - 4 = 0\)</span> gives <span class="math inline">\(w = 2\)</span>.</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(2) &amp;= 4 - 8 + 7 \\
-&amp;= 3
-\end{aligned}
-\]</span></p>
-<p>is the minimum of the values of <span class="math inline">\(f\)</span>. Completing the square, <span class="math inline">\(f(w) = (w - 2)^2 + 3\)</span>, since</p>
-<p><span class="math display">\[
-\begin{aligned}
-(w - 2)^2 + 3 &amp;= w^2 - 4w + 4 + 3 \\
-&amp;= w^2 - 4w + 7,
-\end{aligned}
-\]</span></p>
-<p>and <span class="math inline">\((w - 2)^2 \ge 0\)</span>, so <span class="math inline">\(f(w) \ge 3 = f(2)\)</span> for every <span class="math inline">\(w\)</span>. Equivalently, the derivative is negative below <span class="math inline">\(w = 2\)</span> and positive above it, so the function falls into that point and rises out of it.</p>
-<p><strong>3.</strong> At <span class="math inline">\(w = 1\)</span> the derivative is <span class="math inline">\(2(1) - 4 = -2\)</span>, so <span class="math inline">\(f\)</span> is falling there. With <span class="math inline">\(\varepsilon= 0.01\)</span>, <a href="#eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> predicts a change of <span class="math inline">\((0.01)(-2) = -0.02\)</span>, from</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(1) &amp;= 1 - 4 + 7 \\
-&amp;= 4
-\end{aligned}
-\]</span></p>
-<p>to <span class="math inline">\(3.98\)</span>. The exact value is</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(1.01)
-&amp;= (1.01)^2 - 4(1.01) + 7 \\
-&amp;= 1.0201 - 4.04 + 7 \\
-&amp;= 3.9801
-\end{aligned}
-\]</span></p>
-<p>a change of <span class="math inline">\(-0.0199\)</span>. The prediction is off by <span class="math inline">\(0.0001\)</span>, which is <span class="math inline">\(\varepsilon^2\)</span>: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of <a href="./optimization.html#def-gradient-descent">gradient descent</a>, the step-by-step method of fitting models defined on the optimization page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.</p>
+<div id="sol-miller-deriv-tangent-line-approx-approx" class="proof solution">
+<p><span class="proof-title"><em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Solution 15</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>At <span class="math inline">\(x = \pi/4 + 0.01\)</span>, the <a href="#def-linear-approximation">linear approximation</a> (<a href="#eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a>) gives:</p>
+<p><span class="math display">\[f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593\]</span></p>
 </div>
 </div>
 </div>
 </div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-82-contents" aria-controls="callout-82" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-critical-point" class="quarto-xref">Definition&nbsp;19</a> (Critical point)
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-deriv-tangent-line-approx-compare" class="quarto-xref">Exercise&nbsp;16</a> (Check the approximation)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-82" class="callout-82-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<div id="def-critical-point" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Critical point)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined on an <a href="./sets.html#def-open-interval">open interval</a> containing <span class="math inline">\(c\)</span>. The point <span class="math inline">\(c\)</span> is a <strong>critical point</strong> of <span class="math inline">\(f\)</span> if either <span class="math inline">\(f'(c) = 0\)</span> or <span class="math inline">\(f\)</span> is not differentiable at <span class="math inline">\(c\)</span> (<a href="#def-differentiable" class="quarto-xref">Definition&nbsp;6</a>).</p>
+<div id="exr-miller-deriv-tangent-line-approx-compare" class="theorem exercise">
+<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Exercise 16 (Check the approximation)</strong></span> Compare the approximation in <a href="#exr-miller-deriv-tangent-line-approx-approx" class="quarto-xref">Exercise&nbsp;15</a> with the exact <a href="./functions.html#def-value">value</a> of <span class="math inline">\(f(\pi/4 + 0.01)\)</span>.</mark></p>
 </div>
 </div>
 </div>
 </div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-83-contents" aria-controls="callout-83" aria-expanded="true" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-83-contents" aria-controls="callout-83" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-critical-point" class="quarto-xref">Example&nbsp;11</a> (Critical points that are and are not flat points)
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-deriv-tangent-line-approx-compare" class="quarto-xref">Solution&nbsp;16</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-83" class="callout-83-contents callout-collapse collapse show">
+<div id="callout-83" class="callout-83-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="exm-critical-point" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (Critical points that are and are not flat points)</strong></span> &nbsp;</p>
-<ul>
-<li><p><span class="math inline">\(g(w) = \mathopen{}\left|w\right|\mathclose{}\)</span> has no derivative at <span class="math inline">\(w = 0\)</span>: its one-sided derivatives there are <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span> (<a href="#exm-one-sided-derivative" class="quarto-xref">Example&nbsp;6</a>), so the difference quotient <span class="math inline">\(\tfrac{\mathopen{}\left|h\right|\mathclose{} - 0}{h}\)</span> has no limit as <span class="math inline">\(h \to 0\)</span> (<a href="#def-one-sided-limit" class="quarto-xref">Definition&nbsp;4</a>). So <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> but not a flat point.</p></li>
-<li>
-<p><span class="math inline">\(f(w) = w^3\)</span> has</p>
-<p><span class="math display">\[
-\begin{aligned}
-f'(0) &amp;= 3 \cdot 0^2 \\
-&amp;= 0,
-\end{aligned}
-\]</span></p>
-<p>so <span class="math inline">\(0\)</span> is a flat point of <span class="math inline">\(f\)</span>, and hence a critical point.</p>
-</li>
-<li><p><span class="math inline">\(h(w) = w^2\)</span> is differentiable everywhere, with <span class="math inline">\(h'(w) = 2w\)</span>, which is <span class="math inline">\(0\)</span> only at <span class="math inline">\(w = 0\)</span>. So <span class="math inline">\(0\)</span> is the only critical point of <span class="math inline">\(h\)</span>; for example, <span class="math inline">\(h'(1) = 2 \ne 0\)</span>, so <span class="math inline">\(1\)</span> is not one.</p></li>
-</ul>
+<div id="sol-miller-deriv-tangent-line-approx-compare" class="proof solution">
+<p><span class="proof-title"><em><mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 2px; border-radius: 2px;">Solution 16</mark></em><mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 2px; border-radius: 2px;">. </mark></span>The exact <a href="./functions.html#def-value">value</a> is:</p>
+<p><span class="math display">\[f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{}} \approx 4.171543\]</span></p>
+<p>The approximation error is <span class="math inline">\(|4.171593 - 4.171543| \approx 0.00005\)</span>, on the order of <span class="math inline">\((0.01)^2 = 10^{-4}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callouty-titled callout callout-style-default callout-lem callout-titled">
+</section><section id="sec-taylor-series" class="level3" data-number="1.6"><h3 data-number="1.6" class="anchored" data-anchor-id="sec-taylor-series">
+<span class="header-section-number">1.6</span> Taylor series</h3>
+<div class="callouty-titled callout callout-style-default callout-def callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-84-contents" aria-controls="callout-84" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Lem</span><a href="#thm-flat-point-critical" class="quarto-xref">Theorem&nbsp;13</a> (Every flat point is a critical point)
+<span class="screen-reader-only">Def</span><a href="#def-taylor-polynomial" class="quarto-xref">Definition&nbsp;18</a> (Taylor polynomial)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-84" class="callout-84-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<div id="thm-flat-point-critical" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 13 (Every flat point is a critical point)</strong></span> If <span class="math inline">\(c\)</span> is a flat point of <span class="math inline">\(f\)</span> (<a href="#def-flat-point" class="quarto-xref">Definition&nbsp;18</a>), then <span class="math inline">\(c\)</span> is a critical point of <span class="math inline">\(f\)</span> (<a href="#def-critical-point" class="quarto-xref">Definition&nbsp;19</a>).</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-85-contents" aria-controls="callout-85" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Proof</span>Proof
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-85" class="callout-85-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>A flat point <span class="math inline">\(c\)</span> has <span class="math inline">\(f\)</span> differentiable at <span class="math inline">\(c\)</span> and <span class="math inline">\(f'(c) = 0\)</span>. The condition “<span class="math inline">\(f'(c) = 0\)</span>” is the first alternative in <a href="#def-critical-point" class="quarto-xref">Definition&nbsp;19</a>, so <span class="math inline">\(c\)</span> is a critical point.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-86-contents" aria-controls="callout-86" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-flat-point-critical" class="quarto-xref">Example&nbsp;12</a> (The flat points of a cubic, and a critical point that is not flat)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-86" class="callout-86-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-flat-point-critical" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (The flat points of a cubic, and a critical point that is not flat)</strong></span> For <span class="math inline">\(f(w) = w^3 - 3w\)</span>, the derivative is <span class="math inline">\(f'(w) = 3w^2 - 3\)</span>. The code differentiates <span class="math inline">\(f\)</span> with <code><a href="https://rdrr.io/r/stats/deriv.html">D()</a></code> and evaluates <span class="math inline">\(f'\)</span> at several points. For <span class="math inline">\(g(w) = \mathopen{}\left|w\right|\mathclose{}\)</span>, it computes the difference quotients at <span class="math inline">\(0\)</span> from both sides.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">f_prime</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/deriv.html">D</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/substitute.html">quote</a></span><span class="op">(</span><span class="va">w</span><span class="op">^</span><span class="fl">3</span> <span class="op">-</span> <span class="fl">3</span> <span class="op">*</span> <span class="va">w</span><span class="op">)</span>, <span class="st">"w"</span><span class="op">)</span></span>
-<span><span class="va">points</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>, <span class="op">-</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="va">derivs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>w <span class="op">=</span> <span class="va">points</span>, f_prime <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/eval.html">eval</a></span><span class="op">(</span><span class="va">f_prime</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>w <span class="op">=</span> <span class="va">points</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">derivs</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["w"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["f_prime"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"-2","2":"9"},{"1":"-1","2":"0"},{"1":"0","2":"-3"},{"1":"1","2":"0"},{"1":"2","2":"9"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flat</span> <span class="op">&lt;-</span> <span class="va">derivs</span><span class="op">$</span><span class="va">w</span><span class="op">[</span><span class="va">derivs</span><span class="op">$</span><span class="va">f_prime</span> <span class="op">==</span> <span class="fl">0</span><span class="op">]</span></span>
-<span></span>
-<span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1e-3</span>, <span class="fl">1e-3</span><span class="op">)</span></span>
-<span><span class="va">quotients</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="va">h</span><span class="op">)</span> <span class="op">/</span> <span class="va">h</span></span>
-<span><span class="va">quotients</span></span>
-<span><span class="co">#&gt; [1] -1  1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>The derivative is <span class="math inline">\(0\)</span> at 2 of the 5 points, namely <span class="math inline">\(w = -1\)</span> and <span class="math inline">\(w = 1\)</span>. These are flat points of <span class="math inline">\(f\)</span>, so by <a href="#thm-flat-point-critical" class="quarto-xref">Theorem&nbsp;13</a> they are critical points. The difference quotients of <span class="math inline">\(g\)</span> at <span class="math inline">\(0\)</span> are -1 from the left and 1 from the right, so <span class="math inline">\(g\)</span> has no derivative at <span class="math inline">\(0\)</span>. Thus <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> (<a href="#def-critical-point" class="quarto-xref">Definition&nbsp;19</a>), but not a flat point.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-87-contents" aria-controls="callout-87" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-miller-deriv-opt-gamma-kernel" class="quarto-xref">Exercise&nbsp;15</a> (Maximizing a gamma-family kernel)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-87" class="callout-87-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exr-miller-deriv-opt-gamma-kernel" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 15 (Maximizing a gamma-family kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.10.</p>
-<p>Find the maximum value of</p>
-<p><span class="math display">\[f(x) = x^4 e^{-x}\]</span></p>
-<p>on the interval <span class="math inline">\([0, \infty)\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-88-contents" aria-controls="callout-88" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-miller-deriv-opt-gamma-kernel" class="quarto-xref">Solution&nbsp;15</a>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-88" class="callout-88-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div id="sol-miller-deriv-opt-gamma-kernel" class="proof solution">
-<p><span class="proof-title"><em>Solution 15</em>. </span>Differentiate using the product rule:</p>
-<p><span class="math display">\[
-\begin{aligned}
-f'(x)
-&amp;= 4x^3 e^{-x} - x^4 e^{-x} \\
-&amp;= x^3 e^{-x}(4 - x)
-\end{aligned}
-\]</span></p>
-<p>On <span class="math inline">\([0, \infty)\)</span>, <span class="math inline">\(e^{-x} &gt; 0\)</span>, so <span class="math inline">\(f'(x) = 0\)</span> only at <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(x = 4\)</span>.</p>
-<p>Evaluate <span class="math inline">\(f\)</span> at the boundary and critical points:</p>
-<ul>
-<li><p>At <span class="math inline">\(x = 0\)</span>: <span class="math inline">\(f(0) = 0\)</span>.</p></li>
-<li>
-<p>At <span class="math inline">\(x = 4\)</span>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(4) &amp;= 4^4 e^{-4} \\
-&amp;= 256 e^{-4} \\
-&amp;\approx 4.6888.
-\end{aligned}
-\]</span></p>
-</li>
-<li><p>As <span class="math inline">\(x \to \infty\)</span>: exponential decay dominates polynomial growth, so <span class="math inline">\(\lim_{x \to \infty} x^4 e^{-x} = 0\)</span>.</p></li>
-</ul>
-<p>Since <span class="math inline">\(f(x) \ge 0\)</span> for all <span class="math inline">\(x \ge 0\)</span> and <span class="math inline">\(f(4) &gt; 0\)</span>, the global maximum occurs at <span class="math inline">\(x = 4\)</span>, with maximum value <span class="math inline">\(256/e^4\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-89-contents" aria-controls="callout-89" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-miller-deriv-classify-critical-points" class="quarto-xref">Exercise&nbsp;16</a> (Classifying critical points with the second derivative test)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-89" class="callout-89-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exr-miller-deriv-classify-critical-points" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 16 (Classifying critical points with the second derivative test)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.11.</p>
-<p>Find the critical points of</p>
-<p><span class="math display">\[f(x) = 4x^3 - 3x^2\]</span></p>
-<p>and decide whether each is a local maximum, a local minimum, or an inflection point.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-90-contents" aria-controls="callout-90" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-miller-deriv-classify-critical-points" class="quarto-xref">Solution&nbsp;16</a>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-90" class="callout-90-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div id="sol-miller-deriv-classify-critical-points" class="proof solution">
-<p><span class="proof-title"><em>Solution 16</em>. </span>Compute the first derivative:</p>
-<p><span class="math display">\[
-\begin{aligned}
-f'(x)
-&amp;= 12x^2 - 6x \\
-&amp;= 6x(2x - 1)
-\end{aligned}
-\]</span></p>
-<p>Setting <span class="math inline">\(f'(x) = 0\)</span> gives critical points at <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(x = 1/2\)</span>.</p>
-<p>Compute the second derivative:</p>
-<p><span class="math display">\[f''(x) = 24x - 6\]</span></p>
-<p>Apply the second derivative test at each critical point:</p>
-<ul>
-<li><p>At <span class="math inline">\(x = 0\)</span>: <span class="math inline">\(f''(0) = -6 &lt; 0\)</span>, so <span class="math inline">\(x = 0\)</span> is a strict local maximum.</p></li>
-<li>
-<p>At <span class="math inline">\(x = 1/2\)</span>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-f''(1/2) &amp;= 24(1/2) - 6 \\
-&amp;= 6 \\
-&amp;&gt; 0,
-\end{aligned}
-\]</span></p>
-<p>so <span class="math inline">\(x = 1/2\)</span> is a strict local minimum.</p>
-</li>
-</ul>
-<p>Inflection points occur where the second derivative changes sign (<span class="math inline">\(f''(x) = 0\)</span> at <span class="math inline">\(x = 1/4\)</span>). Because <span class="math inline">\(f''\)</span> is non-zero at both critical points, neither is an inflection point.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section id="sec-taylor-series" class="level3" data-number="1.7"><h3 data-number="1.7" class="anchored" data-anchor-id="sec-taylor-series">
-<span class="header-section-number">1.7</span> Taylor series</h3>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-91-contents" aria-controls="callout-91" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-taylor-polynomial" class="quarto-xref">Definition&nbsp;20</a> (Taylor polynomial)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-91" class="callout-91-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
 <div id="def-taylor-polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Taylor polynomial)</strong></span> Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> of degree <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 18 (Taylor polynomial)</strong></span> Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> of degree <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
 <p><span id="eq-taylor-poly-def"><span class="math display">\[
 \begin{aligned}
 P_n(x)
@@ -3490,19 +3233,19 @@ P_n(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-92-contents" aria-controls="callout-92" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-85-contents" aria-controls="callout-85" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-taylor-polynomial-exponential" class="quarto-xref">Example&nbsp;13</a> (Taylor series of the exponential function)
+<span class="screen-reader-only">Exm</span><a href="#exm-taylor-polynomial-exponential" class="quarto-xref">Example&nbsp;10</a> (Taylor series of the exponential function)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-92" class="callout-92-contents callout-collapse collapse show">
+<div id="callout-85" class="callout-85-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-taylor-polynomial-exponential" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (Taylor series of the exponential function)</strong></span> For <span class="math inline">\(f(x) = e^x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, every derivative is</p>
+<p><span class="theorem-title"><strong>Example 10 (Taylor series of the exponential function)</strong></span> For <span class="math inline">\(f(x) = e^x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, every derivative is</p>
 <p><span class="math display">\[
 \begin{aligned}
 f^{(k)}(0) &amp;= e^0 \\
@@ -3524,37 +3267,37 @@ P_n(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-93-contents" aria-controls="callout-93" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-86-contents" aria-controls="callout-86" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;21</a> (Maclaurin polynomial)
+<span class="screen-reader-only">Def</span><a href="#def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;19</a> (Maclaurin polynomial)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-93" class="callout-93-contents callout-collapse collapse show">
+<div id="callout-86" class="callout-86-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-maclaurin-polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Maclaurin polynomial)</strong></span> When <span class="math inline">\(x_0 = 0\)</span>, the Taylor polynomial <span class="math inline">\(P_n(x)\)</span> (<a href="#def-taylor-polynomial" class="quarto-xref">Definition&nbsp;20</a>) is called the <strong>Maclaurin polynomial</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 19 (Maclaurin polynomial)</strong></span> When <span class="math inline">\(x_0 = 0\)</span>, the Taylor polynomial <span class="math inline">\(P_n(x)\)</span> (<a href="#def-taylor-polynomial" class="quarto-xref">Definition&nbsp;18</a>) is called the <strong>Maclaurin polynomial</strong>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-94-contents" aria-controls="callout-94" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-87-contents" aria-controls="callout-87" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-taylor-series" class="quarto-xref">Definition&nbsp;22</a> (Taylor series)
+<span class="screen-reader-only">Def</span><a href="#def-taylor-series" class="quarto-xref">Definition&nbsp;20</a> (Taylor series)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-94" class="callout-94-contents callout-collapse collapse show">
+<div id="callout-87" class="callout-87-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-taylor-series" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Taylor series)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(x_0\)</span> be as in <a href="#def-taylor-polynomial" class="quarto-xref">Definition&nbsp;20</a>. When <span class="math inline">\(f\)</span> is infinitely differentiable and the series converges to <span class="math inline">\(f(x)\)</span> on an open interval containing <span class="math inline">\(x_0\)</span>, the infinite sum <span class="math inline">\(\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\)</span> is the <strong>Taylor series</strong> of <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 20 (Taylor series)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(x_0\)</span> be as in <a href="#def-taylor-polynomial" class="quarto-xref">Definition&nbsp;18</a>. When <span class="math inline">\(f\)</span> is infinitely differentiable and the series converges to <span class="math inline">\(f(x)\)</span> on an open interval containing <span class="math inline">\(x_0\)</span>, the infinite sum <span class="math inline">\(\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\)</span> is the <strong>Taylor series</strong> of <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3572,12 +3315,12 @@ P_n(x)
 <p>Chapter 11 of the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"><em>Essence of calculus</em></a> series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:</p>
 <ul>
 <li>
-<a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor series</a> shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations (<a href="#def-taylor-polynomial" class="quarto-xref">Definition&nbsp;20</a>).</li>
+<a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor series</a> shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations (<a href="#def-taylor-polynomial" class="quarto-xref">Definition&nbsp;18</a>).</li>
 </ul>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-96-contents" aria-controls="callout-96" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-89-contents" aria-controls="callout-89" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3586,10 +3329,10 @@ P_n(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-96" class="callout-96-contents callout-collapse collapse show">
+<div id="callout-89" class="callout-89-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-poly-zero" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 17 (Taylor polynomial of a polynomial at the origin)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.16.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">17</mark> (Taylor polynomial of a polynomial at the origin)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.16.</p>
 <p>Find the first five terms (up to degree 4) of the Taylor series for</p>
 <p><span class="math display">\[f(x) = x^8 + x^4 + 3\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -3598,7 +3341,7 @@ P_n(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-97-contents" aria-controls="callout-97" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-90-contents" aria-controls="callout-90" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -3607,10 +3350,10 @@ P_n(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-97" class="callout-97-contents callout-collapse collapse">
+<div id="callout-90" class="callout-90-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-poly-zero" class="proof solution">
-<p><span class="proof-title"><em>Solution 17</em>. </span>Evaluate <span class="math inline">\(f\)</span> and its first four derivatives at <span class="math inline">\(x = 0\)</span>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">17</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Evaluate <span class="math inline">\(f\)</span> and its first four derivatives at <span class="math inline">\(x = 0\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
 f(x) &amp;= x^8 + x^4 + 3 &amp;\implies f(0) &amp;= 3
 \\
@@ -3636,7 +3379,7 @@ P_4(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-98-contents" aria-controls="callout-98" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-91-contents" aria-controls="callout-91" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3645,10 +3388,10 @@ P_4(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-98" class="callout-98-contents callout-collapse collapse show">
+<div id="callout-91" class="callout-91-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-poly-nonzero" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18 (Taylor expansion of a polynomial at a nonzero point)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.17.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">18</mark> (Taylor expansion of a polynomial at a nonzero point)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.17.</p>
 <p>Find the first three terms (up to degree 2) of the Taylor series for</p>
 <p><span class="math display">\[f(x) = x^8 + x^4 + 3\]</span></p>
 <p>at <span class="math inline">\(x_0 = 1\)</span>.</p>
@@ -3657,7 +3400,7 @@ P_4(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-99-contents" aria-controls="callout-99" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-92-contents" aria-controls="callout-92" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -3666,10 +3409,10 @@ P_4(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-99" class="callout-99-contents callout-collapse collapse">
+<div id="callout-92" class="callout-92-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-poly-nonzero" class="proof solution">
-<p><span class="proof-title"><em>Solution 18</em>. </span>Evaluate <span class="math inline">\(f\)</span> and its first two derivatives at <span class="math inline">\(x_0 = 1\)</span>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">18</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Evaluate <span class="math inline">\(f\)</span> and its first two derivatives at <span class="math inline">\(x_0 = 1\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
 f(1) &amp;= 1^8 + 1^4 + 3 \\
 &amp;= 5
@@ -3693,19 +3436,19 @@ P_2(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-100-contents" aria-controls="callout-100" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-93-contents" aria-controls="callout-93" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-taylor-polynomial-cosine" class="quarto-xref">Example&nbsp;14</a> (Taylor series of the cosine function)
+<span class="screen-reader-only">Exm</span><a href="#exm-taylor-polynomial-cosine" class="quarto-xref">Example&nbsp;11</a> (Taylor series of the cosine function)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-100" class="callout-100-contents callout-collapse collapse show">
+<div id="callout-93" class="callout-93-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-taylor-polynomial-cosine" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (Taylor series of the cosine function)</strong></span> For <span class="math inline">\(f(x) = \cos x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives follow a repeating cycle of length 4:</p>
+<p><span class="theorem-title"><strong>Example 11 (Taylor series of the cosine function)</strong></span> For <span class="math inline">\(f(x) = \cos x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives follow a repeating cycle of length 4:</p>
 <p><span class="math display">\[\begin{aligned}
 f(0) &amp;= \cos(0) \\
 &amp;= 1, \\
@@ -3729,19 +3472,19 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-101-contents" aria-controls="callout-101" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-94-contents" aria-controls="callout-94" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-taylor-polynomial-sine" class="quarto-xref">Example&nbsp;15</a> (Taylor series of the sine function)
+<span class="screen-reader-only">Exm</span><a href="#exm-taylor-polynomial-sine" class="quarto-xref">Example&nbsp;12</a> (Taylor series of the sine function)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-101" class="callout-101-contents callout-collapse collapse show">
+<div id="callout-94" class="callout-94-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-taylor-polynomial-sine" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (Taylor series of the sine function)</strong></span> For <span class="math inline">\(f(x) = \sin x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives evaluate at <span class="math inline">\(0\)</span> to <span class="math inline">\(f^{(2k)}(0) = 0\)</span> and <span class="math inline">\(f^{(2k+1)}(0) = (-1)^k\)</span> for all <span class="math inline">\(k \ge 0\)</span>. The Taylor series converges everywhere to <span class="math inline">\(\sin x\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 12 (Taylor series of the sine function)</strong></span> For <span class="math inline">\(f(x) = \sin x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives evaluate at <span class="math inline">\(0\)</span> to <span class="math inline">\(f^{(2k)}(0) = 0\)</span> and <span class="math inline">\(f^{(2k+1)}(0) = (-1)^k\)</span> for all <span class="math inline">\(k \ge 0\)</span>. The Taylor series converges everywhere to <span class="math inline">\(\sin x\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \sin x
@@ -3754,7 +3497,7 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-102-contents" aria-controls="callout-102" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-95-contents" aria-controls="callout-95" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3763,10 +3506,10 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-102" class="callout-102-contents callout-collapse collapse show">
+<div id="callout-95" class="callout-95-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-cos-scaled" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 19 (Taylor expansion of a scaled cosine)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.18.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">19</mark> (Taylor expansion of a scaled cosine)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.18.</p>
 <p>Find the terms up to degree 4 in the Taylor series for</p>
 <p><span class="math display">\[f(x) = \cos(5x)\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -3775,7 +3518,7 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-103-contents" aria-controls="callout-103" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-96-contents" aria-controls="callout-96" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -3784,10 +3527,10 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-103" class="callout-103-contents callout-collapse collapse">
+<div id="callout-96" class="callout-96-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-cos-scaled" class="proof solution">
-<p><span class="proof-title"><em>Solution 19</em>. </span>Recall the standard Maclaurin series for cosine:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">19</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Recall the standard Maclaurin series for cosine:</p>
 <p><span class="math display">\[\cos u = 1 - \frac{u^2}{2!} + \frac{u^4}{4!} - \dots\]</span></p>
 <p>Substitute <span class="math inline">\(u = 5x\)</span>:</p>
 <p><span class="math display">\[
@@ -3803,7 +3546,7 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-104-contents" aria-controls="callout-104" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-97-contents" aria-controls="callout-97" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3812,10 +3555,10 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-104" class="callout-104-contents callout-collapse collapse show">
+<div id="callout-97" class="callout-97-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-cos-cubed" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 20 (Taylor series of a power of a function)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.19.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">20</mark> (Taylor series of a power of a function)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.19.</p>
 <p>Find the terms up to degree 4 in the Taylor series for</p>
 <p><span class="math display">\[f(x) = \cos^3(5x)\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -3824,7 +3567,7 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-105-contents" aria-controls="callout-105" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-98-contents" aria-controls="callout-98" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -3833,10 +3576,10 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-105" class="callout-105-contents callout-collapse collapse">
+<div id="callout-98" class="callout-98-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-cos-cubed" class="proof solution">
-<p><span class="proof-title"><em>Solution 20</em>. </span>From <a href="#exr-miller-taylor-cos-scaled" class="quarto-xref">Exercise&nbsp;19</a>, the expansion of <span class="math inline">\(\cos(5x)\)</span> up to order <span class="math inline">\(x^4\)</span> is:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">20</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>From <a href="#exr-miller-taylor-cos-scaled" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Exercise&nbsp;19</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> the expansion of <span class="math inline">\(\cos(5x)\)</span> up to order <span class="math inline">\(x^4\)</span> is:</p>
 <p><span class="math display">\[\cos(5x) = 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 + O(x^6)\]</span></p>
 <p>Cube this expansion using <span class="math inline">\((1 - y)^3 = 1 - 3y + 3y^2 - y^3\)</span> with <span class="math inline">\(y = \frac{25}{2}x^2 - \frac{625}{24}x^4\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
@@ -3851,7 +3594,7 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-106-contents" aria-controls="callout-106" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-99-contents" aria-controls="callout-99" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3860,10 +3603,10 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-106" class="callout-106-contents callout-collapse collapse show">
+<div id="callout-99" class="callout-99-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-exp-base" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 21 (Linear Taylor polynomial of the exponential)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.20.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">21</mark> (Linear Taylor polynomial of the exponential)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.20.</p>
 <p>Find the first two terms (degree 1) of the Taylor series for</p>
 <p><span class="math display">\[f(x) = e^x\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -3872,7 +3615,7 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-107-contents" aria-controls="callout-107" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-100-contents" aria-controls="callout-100" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -3881,10 +3624,10 @@ f'''(0) &amp;= \sin(0) \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-107" class="callout-107-contents callout-collapse collapse">
+<div id="callout-100" class="callout-100-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-exp-base" class="proof solution">
-<p><span class="proof-title"><em>Solution 21</em>. </span>Since</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">21</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Since</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(0) &amp;= e^0 \\
@@ -3917,7 +3660,7 @@ e^x &amp;= \sum_{n=0}^\infty \frac{x^n}{n!} \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-108-contents" aria-controls="callout-108" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-101-contents" aria-controls="callout-101" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3926,10 +3669,10 @@ e^x &amp;= \sum_{n=0}^\infty \frac{x^n}{n!} \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-108" class="callout-108-contents callout-collapse collapse show">
+<div id="callout-101" class="callout-101-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-exp-power" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 22 (Taylor series of a composite exponential)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.21.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">22</mark> (Taylor series of a composite exponential)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.21.</p>
 <p>Find the first six terms (up to degree 5) of the Taylor series for</p>
 <p><span class="math display">\[f(x) = {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -3938,7 +3681,7 @@ e^x &amp;= \sum_{n=0}^\infty \frac{x^n}{n!} \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-109-contents" aria-controls="callout-109" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-102-contents" aria-controls="callout-102" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -3947,10 +3690,10 @@ e^x &amp;= \sum_{n=0}^\infty \frac{x^n}{n!} \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-109" class="callout-109-contents callout-collapse collapse">
+<div id="callout-102" class="callout-102-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-exp-power" class="proof solution">
-<p><span class="proof-title"><em>Solution 22</em>. </span>Substitute <span class="math inline">\(u = x^8\)</span> into <span class="math inline">\(e^u = 1 + u + \frac{u^2}{2!} + \dots\)</span>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">22</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Substitute <span class="math inline">\(u = x^8\)</span> into <span class="math inline">\(e^u = 1 + u + \frac{u^2}{2!} + \dots\)</span>:</p>
 <p><span class="math display">\[{\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}} = 1 + x^8 + \frac{x^{16}}{2} + \dots\]</span></p>
 <p>Because the lowest-order variable term is <span class="math inline">\(x^8\)</span>, all coefficients for powers <span class="math inline">\(x^1, x^2, x^3, x^4, x^5\)</span> are zero:</p>
 <p><span class="math display">\[
@@ -3965,7 +3708,7 @@ P_5(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-110-contents" aria-controls="callout-110" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-103-contents" aria-controls="callout-103" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3974,10 +3717,10 @@ P_5(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-110" class="callout-110-contents callout-collapse collapse show">
+<div id="callout-103" class="callout-103-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-normal-density" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 23 (Taylor expansion of the normal density)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.22.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">23</mark> (Taylor expansion of the normal density)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.22.</p>
 <p>Find the terms up to degree 3 of the Taylor series for the standard normal density</p>
 <p><span class="math display">\[\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -3986,7 +3729,7 @@ P_5(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-111-contents" aria-controls="callout-111" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-104-contents" aria-controls="callout-104" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -3995,10 +3738,10 @@ P_5(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-111" class="callout-111-contents callout-collapse collapse">
+<div id="callout-104" class="callout-104-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-normal-density" class="proof solution">
-<p><span class="proof-title"><em>Solution 23</em>. </span>Using <span class="math inline">\(e^u = 1 + u + O(u^2)\)</span> with <span class="math inline">\(u = -x^2/2\)</span>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">23</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Using <span class="math inline">\(e^u = 1 + u + O(u^2)\)</span> with <span class="math inline">\(u = -x^2/2\)</span>:</p>
 <p><span class="math display">\[{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}} = 1 - \frac{x^2}{2} + O(x^4)\]</span></p>
 <p>Multiplying by the normalization constant <span class="math inline">\(1/\sqrt{2\pi}\)</span>:</p>
 <p><span class="math display">\[\phi(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}} + O(x^4)\]</span></p>
@@ -4009,26 +3752,26 @@ P_5(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-112-contents" aria-controls="callout-112" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-105-contents" aria-controls="callout-105" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Lem</span><a href="#thm-taylor-normal-density" class="quarto-xref">Theorem&nbsp;14</a> (Maclaurin polynomial of the standard normal density)
+<span class="screen-reader-only">Lem</span><a href="#thm-taylor-normal-density" class="quarto-xref">Theorem&nbsp;13</a> (Maclaurin polynomial of the standard normal density)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-112" class="callout-112-contents callout-collapse collapse show">
+<div id="callout-105" class="callout-105-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-taylor-normal-density" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (Maclaurin polynomial of the standard normal density)</strong></span> The Maclaurin polynomial (<a href="#def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;21</a>) of degree 3 of the standard normal density <span class="math inline">\(\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\)</span> is</p>
+<p><span class="theorem-title"><strong>Theorem 13 (Maclaurin polynomial of the standard normal density)</strong></span> The Maclaurin polynomial (<a href="#def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;19</a>) of degree 3 of the standard normal density <span class="math inline">\(\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\)</span> is</p>
 <p><span class="math display">\[P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\]</span></p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-113-contents" aria-controls="callout-113" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-106-contents" aria-controls="callout-106" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4037,16 +3780,16 @@ P_5(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-113" class="callout-113-contents callout-collapse collapse">
+<div id="callout-106" class="callout-106-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#exr-miller-taylor-normal-density" class="quarto-xref">Exercise&nbsp;23</a>, worked in <a href="#sol-miller-taylor-normal-density" class="quarto-xref">Solution&nbsp;23</a>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#exr-miller-taylor-normal-density" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Exercise&nbsp;23</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> worked in <a href="#sol-miller-taylor-normal-density" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Solution&nbsp;23</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark></p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-114-contents" aria-controls="callout-114" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-107-contents" aria-controls="callout-107" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4055,10 +3798,10 @@ P_5(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-114" class="callout-114-contents callout-collapse collapse show">
+<div id="callout-107" class="callout-107-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-sqrt" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 24 (Taylor expansion of the square root)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.23.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">24</mark> (Taylor expansion of the square root)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.23.</p>
 <p>Find the first three terms (up to degree 2) of the Taylor series for</p>
 <p><span class="math display">\[f(x) = \sqrt{x}\]</span></p>
 <p>at <span class="math inline">\(x_0 = 1/3\)</span>.</p>
@@ -4067,7 +3810,7 @@ P_5(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-115-contents" aria-controls="callout-115" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-108-contents" aria-controls="callout-108" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -4076,10 +3819,10 @@ P_5(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-115" class="callout-115-contents callout-collapse collapse">
+<div id="callout-108" class="callout-108-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-sqrt" class="proof solution">
-<p><span class="proof-title"><em>Solution 24</em>. </span>Compute the values at <span class="math inline">\(x_0 = 1/3\)</span>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">24</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Compute the values at <span class="math inline">\(x_0 = 1/3\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
 f(1/3) &amp;= \mathopen{}\left(\frac{1}{3}\right)\mathclose{}^{1/2}
 \\
@@ -4106,7 +3849,7 @@ f''(x) &amp;= -\frac{1}{4}x^{-3/2}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-116-contents" aria-controls="callout-116" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-109-contents" aria-controls="callout-109" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4115,10 +3858,10 @@ f''(x) &amp;= -\frac{1}{4}x^{-3/2}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-116" class="callout-116-contents callout-collapse collapse show">
+<div id="callout-109" class="callout-109-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-cube-root" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 25 (Taylor expansion of a fractional power)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.24.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">25</mark> (Taylor expansion of a fractional power)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.24.</p>
 <p>Find the first three terms of the Taylor series for</p>
 <p><span class="math display">\[f(x) = (1 + x)^{1/3}\]</span></p>
 <p>at <span class="math inline">\(x_0 = 1/2\)</span>.</p>
@@ -4127,7 +3870,7 @@ f''(x) &amp;= -\frac{1}{4}x^{-3/2}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-117-contents" aria-controls="callout-117" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-110-contents" aria-controls="callout-110" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -4136,10 +3879,10 @@ f''(x) &amp;= -\frac{1}{4}x^{-3/2}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-117" class="callout-117-contents callout-collapse collapse">
+<div id="callout-110" class="callout-110-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-cube-root" class="proof solution">
-<p><span class="proof-title"><em>Solution 25</em>. </span>At <span class="math inline">\(x_0 = 1/2\)</span>, <span class="math inline">\(1 + x_0 = 3/2\)</span>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">25</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>At <span class="math inline">\(x_0 = 1/2\)</span>, <span class="math inline">\(1 + x_0 = 3/2\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
 f(1/2) &amp;= \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3}
 \\
@@ -4162,7 +3905,7 @@ f''(x) &amp;= -\frac{2}{9}(1 + x)^{-5/3}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-118-contents" aria-controls="callout-118" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-111-contents" aria-controls="callout-111" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4171,10 +3914,10 @@ f''(x) &amp;= -\frac{2}{9}(1 + x)^{-5/3}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-118" class="callout-118-contents callout-collapse collapse show">
+<div id="callout-111" class="callout-111-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-x-log-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 26 (Taylor expansion of <span class="math inline">\(x \log x\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.25.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">26</mark> (Taylor expansion of <span class="math inline">\(x \log x\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.25.</p>
 <p>Find the first three terms (up to degree 2) of the Taylor series for</p>
 <p><span class="math display">\[f(x) = x\log x\]</span></p>
 <p>at <span class="math inline">\(x_0 = 1\)</span>.</p>
@@ -4183,7 +3926,7 @@ f''(x) &amp;= -\frac{2}{9}(1 + x)^{-5/3}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-119-contents" aria-controls="callout-119" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-112-contents" aria-controls="callout-112" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -4192,10 +3935,10 @@ f''(x) &amp;= -\frac{2}{9}(1 + x)^{-5/3}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-119" class="callout-119-contents callout-collapse collapse">
+<div id="callout-112" class="callout-112-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-x-log-x" class="proof solution">
-<p><span class="proof-title"><em>Solution 26</em>. </span>Evaluate derivatives at <span class="math inline">\(x_0 = 1\)</span>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">26</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Evaluate derivatives at <span class="math inline">\(x_0 = 1\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
 f(1) &amp;= 1 \log 1
 \\
@@ -4222,7 +3965,7 @@ P_2(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-120-contents" aria-controls="callout-120" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-113-contents" aria-controls="callout-113" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4231,10 +3974,10 @@ P_2(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-120" class="callout-120-contents callout-collapse collapse show">
+<div id="callout-113" class="callout-113-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-log-one-plus-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 27 (Maclaurin series of <span class="math inline">\(\log(1 + x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.26.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">27</mark> (Maclaurin series of <span class="math inline">\(\log(1 + x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.26.</p>
 <p>Find the first three terms of the Taylor series for</p>
 <p><span class="math display">\[f(x) = \log(1 + x)\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -4243,7 +3986,7 @@ P_2(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-121-contents" aria-controls="callout-121" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-114-contents" aria-controls="callout-114" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -4252,10 +3995,10 @@ P_2(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-121" class="callout-121-contents callout-collapse collapse">
+<div id="callout-114" class="callout-114-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-log-one-plus-x" class="proof solution">
-<p><span class="proof-title"><em>Solution 27</em>. </span>Differentiating repeatedly at <span class="math inline">\(x_0 = 0\)</span>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">27</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Differentiating repeatedly at <span class="math inline">\(x_0 = 0\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
 f(0) &amp;= \log 1 \\
 &amp;= 0
@@ -4273,26 +4016,26 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-122-contents" aria-controls="callout-122" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-115-contents" aria-controls="callout-115" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Lem</span><a href="#thm-taylor-log-one-plus-x" class="quarto-xref">Theorem&nbsp;15</a> (Maclaurin polynomial of <span class="math inline">\(\log(1 + x)\)</span>)
+<span class="screen-reader-only">Lem</span><a href="#thm-taylor-log-one-plus-x" class="quarto-xref">Theorem&nbsp;14</a> (Maclaurin polynomial of <span class="math inline">\(\log(1 + x)\)</span>)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-122" class="callout-122-contents callout-collapse collapse show">
+<div id="callout-115" class="callout-115-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-taylor-log-one-plus-x" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 15 (Maclaurin polynomial of <span class="math inline">\(\log(1 + x)\)</span>)</strong></span> The Maclaurin polynomial (<a href="#def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;21</a>) of degree 3 of <span class="math inline">\(f(x) = \log(1 + x)\)</span> is</p>
+<p><span class="theorem-title"><strong>Theorem 14 (Maclaurin polynomial of <span class="math inline">\(\log(1 + x)\)</span>)</strong></span> The Maclaurin polynomial (<a href="#def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;19</a>) of degree 3 of <span class="math inline">\(f(x) = \log(1 + x)\)</span> is</p>
 <p><span class="math display">\[P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}\]</span></p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-123-contents" aria-controls="callout-123" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-116-contents" aria-controls="callout-116" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4301,16 +4044,16 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-123" class="callout-123-contents callout-collapse collapse">
+<div id="callout-116" class="callout-116-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#exr-miller-taylor-log-one-plus-x" class="quarto-xref">Exercise&nbsp;27</a>, worked in <a href="#sol-miller-taylor-log-one-plus-x" class="quarto-xref">Solution&nbsp;27</a>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#exr-miller-taylor-log-one-plus-x" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Exercise&nbsp;27</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> worked in <a href="#sol-miller-taylor-log-one-plus-x" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Solution&nbsp;27</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark></p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-124-contents" aria-controls="callout-124" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-117-contents" aria-controls="callout-117" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4319,10 +4062,10 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-124" class="callout-124-contents callout-collapse collapse show">
+<div id="callout-117" class="callout-117-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-log-one-minus-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 28 (Maclaurin series of <span class="math inline">\(\log(1 - x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.27.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">28</mark> (Maclaurin series of <span class="math inline">\(\log(1 - x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.27.</p>
 <p>Find the terms up to degree 3 of the Taylor series for</p>
 <p><span class="math display">\[f(x) = \log(1 - x)\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -4331,7 +4074,7 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-125-contents" aria-controls="callout-125" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-118-contents" aria-controls="callout-118" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -4340,10 +4083,10 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-125" class="callout-125-contents callout-collapse collapse">
+<div id="callout-118" class="callout-118-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-log-one-minus-x" class="proof solution">
-<p><span class="proof-title"><em>Solution 28</em>. </span>Substitute <span class="math inline">\(u = -x\)</span> into the expansion for <span class="math inline">\(\log(1 + u)\)</span> from <a href="#thm-taylor-log-one-plus-x" class="quarto-xref">Theorem&nbsp;15</a>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">28</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Substitute <span class="math inline">\(u = -x\)</span> into the expansion for <span class="math inline">\(\log(1 + u)\)</span> from <a href="#thm-taylor-log-one-plus-x" class="quarto-xref">Theorem&nbsp;14</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \log(1 - x)
@@ -4356,26 +4099,26 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-126-contents" aria-controls="callout-126" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-119-contents" aria-controls="callout-119" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Lem</span><a href="#thm-taylor-log-one-minus-x" class="quarto-xref">Theorem&nbsp;16</a> (Maclaurin polynomial of <span class="math inline">\(\log(1 - x)\)</span>)
+<span class="screen-reader-only">Lem</span><a href="#thm-taylor-log-one-minus-x" class="quarto-xref">Theorem&nbsp;15</a> (Maclaurin polynomial of <span class="math inline">\(\log(1 - x)\)</span>)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-126" class="callout-126-contents callout-collapse collapse show">
+<div id="callout-119" class="callout-119-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-taylor-log-one-minus-x" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 16 (Maclaurin polynomial of <span class="math inline">\(\log(1 - x)\)</span>)</strong></span> The Maclaurin polynomial (<a href="#def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;21</a>) of degree 3 of <span class="math inline">\(f(x) = \log(1 - x)\)</span> is</p>
+<p><span class="theorem-title"><strong>Theorem 15 (Maclaurin polynomial of <span class="math inline">\(\log(1 - x)\)</span>)</strong></span> The Maclaurin polynomial (<a href="#def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;19</a>) of degree 3 of <span class="math inline">\(f(x) = \log(1 - x)\)</span> is</p>
 <p><span class="math display">\[P_3(x) = -x - \frac{x^2}{2} - \frac{x^3}{3}\]</span></p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-127-contents" aria-controls="callout-127" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-120-contents" aria-controls="callout-120" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4384,16 +4127,16 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-127" class="callout-127-contents callout-collapse collapse">
+<div id="callout-120" class="callout-120-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#exr-miller-taylor-log-one-minus-x" class="quarto-xref">Exercise&nbsp;28</a>, worked in <a href="#sol-miller-taylor-log-one-minus-x" class="quarto-xref">Solution&nbsp;28</a>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#exr-miller-taylor-log-one-minus-x" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Exercise&nbsp;28</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> worked in <a href="#sol-miller-taylor-log-one-minus-x" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Solution&nbsp;28</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark></p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-128-contents" aria-controls="callout-128" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-121-contents" aria-controls="callout-121" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4402,10 +4145,10 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-128" class="callout-128-contents callout-collapse collapse show">
+<div id="callout-121" class="callout-121-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-log-product-exp" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 29 (Taylor series of <span class="math inline">\(\log((1 - x)e^x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.28.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">29</mark> (Taylor series of <span class="math inline">\(\log((1 - x)e^x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.28.</p>
 <p>Find the first two non-zero terms of the Taylor series for</p>
 <p><span class="math display">\[f(x) = \log((1 - x)e^x)\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -4414,7 +4157,7 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-129-contents" aria-controls="callout-129" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-122-contents" aria-controls="callout-122" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -4423,10 +4166,10 @@ f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-129" class="callout-129-contents callout-collapse collapse">
+<div id="callout-122" class="callout-122-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-log-product-exp" class="proof solution">
-<p><span class="proof-title"><em>Solution 29</em>. </span>Expand using logarithm properties:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">29</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Expand using logarithm properties:</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(x)
@@ -4434,7 +4177,7 @@ f(x)
 &amp;= \log(1 - x) + x
 \end{aligned}
 \]</span></p>
-<p>Substitute the series for <span class="math inline">\(\log(1 - x)\)</span> from <a href="#thm-taylor-log-one-minus-x" class="quarto-xref">Theorem&nbsp;16</a>:</p>
+<p>Substitute the series for <span class="math inline">\(\log(1 - x)\)</span> from <a href="#thm-taylor-log-one-minus-x" class="quarto-xref">Theorem&nbsp;15</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(x)
@@ -4449,7 +4192,7 @@ f(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-130-contents" aria-controls="callout-130" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-123-contents" aria-controls="callout-123" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4458,10 +4201,10 @@ f(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-130" class="callout-130-contents callout-collapse collapse show">
+<div id="callout-123" class="callout-123-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-product-cos-log" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 30 (Taylor series of a product of known expansions)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.29.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">30</mark> (Taylor series of a product of known expansions)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.29.</p>
 <p>Find the terms up to degree 2 of the Taylor series for</p>
 <p><span class="math display">\[f(x) = \cos(x)\log(1 + x)\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -4470,7 +4213,7 @@ f(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-131-contents" aria-controls="callout-131" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-124-contents" aria-controls="callout-124" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -4479,10 +4222,10 @@ f(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-131" class="callout-131-contents callout-collapse collapse">
+<div id="callout-124" class="callout-124-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-product-cos-log" class="proof solution">
-<p><span class="proof-title"><em>Solution 30</em>. </span>Multiply the known Maclaurin expansions:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">30</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Multiply the known Maclaurin expansions:</p>
 <p><span class="math display">\[\begin{aligned}
 \cos x &amp;= 1 - \frac{x^2}{2} + O(x^4)
 \\
@@ -4501,7 +4244,7 @@ f(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-132-contents" aria-controls="callout-132" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-125-contents" aria-controls="callout-125" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4510,10 +4253,10 @@ f(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-132" class="callout-132-contents callout-collapse collapse show">
+<div id="callout-125" class="callout-125-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-miller-taylor-log-scaled" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 31 (Taylor series of <span class="math inline">\(\log(1 + 2x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.30.</p>
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">31</mark> (Taylor series of <span class="math inline">\(\log(1 + 2x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[10]</a></span>, Question 1.1.30.</p>
 <p>Find the first two non-zero terms of the Taylor series for</p>
 <p><span class="math display">\[f(x) = \log(1 + 2x)\]</span></p>
 <p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
@@ -4522,7 +4265,7 @@ f(x)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-133-contents" aria-controls="callout-133" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-126-contents" aria-controls="callout-126" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -4531,10 +4274,10 @@ f(x)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-133" class="callout-133-contents callout-collapse collapse">
+<div id="callout-126" class="callout-126-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-taylor-log-scaled" class="proof solution">
-<p><span class="proof-title"><em>Solution 31</em>. </span>Substitute <span class="math inline">\(u = 2x\)</span> into the Maclaurin series <span class="math inline">\(\log(1 + u) = u - \frac{u^2}{2} + \dots\)</span>:</p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">31</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Substitute <span class="math inline">\(u = 2x\)</span> into the Maclaurin series <span class="math inline">\(\log(1 + u) = u - \frac{u^2}{2} + \dots\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \log(1 + 2x)
@@ -4798,6 +4541,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("load", alignEquationAnchorsWithDefault);
+</script><script>
+(function () {
+  var moved = {"a-bfgs-update-from-the-quasi-newton-step":"optimization.html","a-convex-function-and-a-non-convex-one":"optimization.html","a-line-as-a-feasible-set":"optimization.html","a-local-maximizer":"optimization.html","a-maximum-is-convex-a-minimum-need-not-be":"optimization.html","a-minimizer-has-derivative-zero":"optimization.html","a-quadratic-form-is-at-least-the-smallest-eigenvalue-times-the-squared-length":"optimization.html","a-quadratic-form-with-small-entries-is-small":"optimization.html","a-saddle-point":"optimization.html","a-set-that-is-not-convex":"optimization.html","a-short-enough-step-downhill-decreases-the-function":"optimization.html","a-stationary-point-and-a-point-that-is-not-one":"optimization.html","a-stationary-point-of-the-sum-of-squared-errors-on-real-data":"optimization.html","a-tangent-line-and-a-tangent-plane":"optimization.html","an-intersection-of-convex-sets-is-convex":"optimization.html","applying-the-test-and-its-limits":"optimization.html","armijo-condition":"optimization.html","backtracking-line-search":"optimization.html","backtracking-on-a-parabola":"optimization.html","bfgs-step":"optimization.html","bfgs-update-broyden-fletcher-goldfarb-shanno":"optimization.html","check-the-prediction":"optimization.html","checking-the-bound":"optimization.html","checking-the-bound-1":"optimization.html","classify-the-flat-point":"optimization.html","classifying-critical-points-with-the-second-derivative-test":"optimization.html","classifying-stationary-points":"optimization.html","concave-function":"optimization.html","constraints":"optimization.html","convergence-of-a-sequence-of-vectors":"optimization.html","convex-set":"optimization.html","convex-sets":"optimization.html","convexity-through-the-epigraph":"optimization.html","cor-convex-stationary":"optimization.html","cor-qp-sensitivity":"optimization.html","critical-point":"optimization.html","critical-points-that-are-and-are-not-flat-points":"optimization.html","def-armijo-condition":"optimization.html","def-backtracking-line-search":"optimization.html","def-bfgs-update":"optimization.html","def-concave":"optimization.html","def-constraints":"optimization.html","def-convex-set":"optimization.html","def-critical-point":"optimization.html","def-descent-direction":"optimization.html","def-epigraph":"optimization.html","def-exact-line-search":"optimization.html","def-feasible-set":"optimization.html","def-flat-point":"optimization.html","def-gradient-ascent":"optimization.html","def-gradient-descent":"optimization.html","def-half-space":"optimization.html","def-iterate":"optimization.html","def-iterate-error":"optimization.html","def-iterative-method":"optimization.html","def-lagrange-multipliers":"optimization.html","def-lagrangian":"optimization.html","def-lbfgs":"optimization.html","def-line-search":"optimization.html","def-local-maximizer":"optimization.html","def-minimization-problem":"optimization.html","def-minimizer-over-feasible-set":"optimization.html","def-newton-method":"optimization.html","def-newton-step":"optimization.html","def-objective-function":"optimization.html","def-optimization-algorithm":"optimization.html","def-quadratic-convergence":"optimization.html","def-quadratic-model":"optimization.html","def-quasi-newton-method":"optimization.html","def-saddle-point":"optimization.html","def-secant-condition":"optimization.html","def-sensitivity":"optimization.html","def-stationary-point":"optimization.html","def-strict-local-minimizer":"optimization.html","def-strictly-concave":"optimization.html","def-strictly-convex":"optimization.html","def-tangent-plane":"optimization.html","def-vector-sequence-limit":"optimization.html","descent-direction":"optimization.html","descent-directions-for-x_12-x_22-at-tp1-0":"optimization.html","differentiate-a-quadratic":"optimization.html","epigraph":"optimization.html","eq-kkt":"optimization.html","eq-optimization-algorithm":"optimization.html","eq-supporting-hyperplane":"optimization.html","error-of-an-iterate":"optimization.html","every-flat-point-is-a-critical-point":"optimization.html","exact-line-search":"optimization.html","exact-line-search-on-a-parabola":"optimization.html","exact-value":"optimization.html","exhaustive-search-over-a-finite-feasible-set":"optimization.html","exm-armijo-condition":"optimization.html","exm-backtracking-line-search":"optimization.html","exm-bfgs-step":"optimization.html","exm-convex-first-order":"optimization.html","exm-convex-hessian":"optimization.html","exm-convex-hessian-not-necessary":"optimization.html","exm-convex-intersection":"optimization.html","exm-convex-max":"optimization.html","exm-convex-set":"optimization.html","exm-convex-stationary":"optimization.html","exm-critical-point":"optimization.html","exm-def-epigraph":"optimization.html","exm-descent-direction":"optimization.html","exm-descent-directions":"optimization.html","exm-epigraph":"optimization.html","exm-feasible-set":"optimization.html","exm-fermat":"optimization.html","exm-first-order-condition":"optimization.html","exm-flat-point":"optimization.html","exm-flat-point-critical":"optimization.html","exm-gd-zigzag":"optimization.html","exm-gradient-ascent":"optimization.html","exm-gradient-descent":"optimization.html","exm-half-space":"optimization.html","exm-lagrangian":"optimization.html","exm-lbfgs-step":"optimization.html","exm-line-search":"optimization.html","exm-local-maximizer":"optimization.html","exm-minimization-problem":"optimization.html","exm-newton-convergence":"optimization.html","exm-newton-maximum":"optimization.html","exm-newton-method":"optimization.html","exm-newton-model":"optimization.html","exm-newton-quadratic":"optimization.html","exm-not-convex-set":"optimization.html","exm-not-quadratic-convergence":"optimization.html","exm-optimization-algorithm":"optimization.html","exm-qf-eigen-bound":"optimization.html","exm-qf-entry-bound":"optimization.html","exm-qp-equality":"optimization.html","exm-qp-equality-fails":"optimization.html","exm-qp-sensitivity":"optimization.html","exm-quadratic-model":"optimization.html","exm-quasi-newton-step":"optimization.html","exm-saddle-point":"optimization.html","exm-secant-condition":"optimization.html","exm-second-order-condition":"optimization.html","exm-second-order-inconclusive":"optimization.html","exm-sensitivity":"optimization.html","exm-stationary-least-squares":"optimization.html","exm-stationary-point":"optimization.html","exm-strict-local-minimizer":"optimization.html","exm-strictly-convex":"optimization.html","exm-tangent-plane":"optimization.html","exm-taylor-1d":"optimization.html","exm-taylor-mv":"optimization.html","exm-vector-sequence-limit":"optimization.html","exr-flat-point":"optimization.html","exr-flat-point-compare":"optimization.html","exr-flat-point-exact":"optimization.html","exr-flat-point-find":"optimization.html","exr-flat-point-minimum":"optimization.html","exr-flat-point-predict":"optimization.html","exr-flat-point-slope":"optimization.html","exr-miller-deriv-classify-critical-points":"optimization.html","exr-miller-deriv-opt-gamma-kernel":"optimization.html","feasible-set":"optimization.html","find-the-flat-point":"optimization.html","first-order-characterization-of-convexity":"optimization.html","first-order-necessary-condition":"optimization.html","fixed-steps-on-a-parabola":"optimization.html","flat-point-critical":"optimization.html","flat-point-stationary-point":"optimization.html","flat-points-and-a-point-that-is-not-one":"optimization.html","for-a-quadratic-form-the-expansion-is-exact":"optimization.html","gradient-ascent":"optimization.html","gradient-ascent-is-gradient-descent-on-the-negative-function":"optimization.html","gradient-descent":"optimization.html","gradient-descent-as-newtons-method-with-a-simpler-hessian":"optimization.html","gradient-descent-zigzags":"optimization.html","half-space":"optimization.html","halving-a-vector":"optimization.html","halving-the-error-is-not-quadratic-convergence":"optimization.html","how-short-is-short-enough":"optimization.html","intersecting-a-ball-with-a-half-plane":"optimization.html","iterate":"optimization.html","iterative-method":"optimization.html","l-bfgs-applies-the-update-without-forming-the-matrix":"optimization.html","lagrange-multipliers":"optimization.html","lagrangian":"optimization.html","lbfgs-step":"optimization.html","lem-qf-eigen-bound":"optimization.html","lem-qf-entry-bound":"optimization.html","limited-memory-bfgs-l-bfgs":"optimization.html","line-search":"optimization.html","local-maximizer":"optimization.html","maximizing-a-gamma-family-kernel":"optimization.html","minimization-problem":"optimization.html","minimizer-over-a-feasible-set":"optimization.html","minimizing-a-positive-definite-quadratic-under-linear-constraints":"optimization.html","minimizing-over-a-line":"optimization.html","moving-the-line":"optimization.html","newton-step":"optimization.html","newtons-method-can-find-a-maximum":"optimization.html","newtons-method-for-a-cubic":"optimization.html","newtons-method-for-minimization":"optimization.html","newtons-method-minimizes-a-quadratic-in-one-step":"optimization.html","objective-function-objective":"optimization.html","one-quasi-newton-step-on-a-quadratic-function":"optimization.html","one-step-to-the-minimizer":"optimization.html","optimization-algorithm":"optimization.html","predict-a-nearby-value":"optimization.html","python":"optimization.html","quadratic-convergence":"optimization.html","quadratic-model-second-order-taylor-polynomial":"optimization.html","quasi-newton-method":"optimization.html","quasi-newton-step":"optimization.html","r":"optimization.html","references":"optimization.html","refs":"optimization.html","rem-bfgs-curvature":"optimization.html","rem-gradient-descent-newton":"optimization.html","rem-quadratic-model-taylor":"optimization.html","rem-quasi-newton-cost":"optimization.html","rem-stationary-point-one-variable":"optimization.html","rem-tangent-plane-one-variable":"optimization.html","saddle-point":"optimization.html","sec-additional-resources":"optimization.html","sec-convexity-vector":"optimization.html","sec-critical-points":"optimization.html","sec-descent":"optimization.html","sec-lagrange":"optimization.html","sec-optimality-vector":"optimization.html","sec-quasi-newton":"optimization.html","secant-condition":"optimization.html","second-derivative-test-for-convexity":"optimization.html","second-order-sufficient-condition":"optimization.html","second-order-taylor-theorem-in-several-variables":"optimization.html","sensitivity":"optimization.html","slope-at-w-1":"optimization.html","sol-flat-point":"optimization.html","sol-flat-point-compare":"optimization.html","sol-flat-point-exact":"optimization.html","sol-flat-point-find":"optimization.html","sol-flat-point-minimum":"optimization.html","sol-flat-point-predict":"optimization.html","sol-flat-point-slope":"optimization.html","sol-miller-deriv-classify-critical-points":"optimization.html","sol-miller-deriv-opt-gamma-kernel":"optimization.html","source":"optimization.html","source-1":"optimization.html","source-2":"optimization.html","source-3":"optimization.html","source-and-license":"optimization.html","stationary-least-squares-lm":"optimization.html","stationary-least-squares-r":"optimization.html","stationary-point":"optimization.html","stationary-points-in-one-variable":"optimization.html","stationary-points-of-a-convex-function-are-global-minimizers":"optimization.html","strict-and-non-strict-local-minimizers":"optimization.html","strict-local-minimizer":"optimization.html","strictly-concave-function":"optimization.html","strictly-convex-and-convex-but-not-strictly":"optimization.html","strictly-convex-function":"optimization.html","strictly-convex-with-a-singular-hessian":"optimization.html","tangent-lines-under-a-parabola":"optimization.html","tangent-plane":"optimization.html","taylors-theorem-with-a-second-order-remainder":"optimization.html","the-armijo-condition-on-a-parabola":"optimization.html","the-closest-point-on-a-line-to-the-origin":"optimization.html","the-condition-is-sufficient-not-necessary":"optimization.html","the-curvature-condition-dprodvyvecfs-0":"optimization.html","the-epigraph-of-x2":"optimization.html","the-error-squares-at-each-step":"optimization.html","the-flat-points-of-a-cubic-and-a-critical-point-that-is-not-flat":"optimization.html","the-gradients-of-the-lagrangian-of-a-quadratic":"optimization.html","the-hessian-of-a-quadratic-function-satisfies-the-secant-condition":"optimization.html","the-hypotheses-are-needed":"optimization.html","the-maximum-of-convex-functions-is-convex":"optimization.html","the-model-at-x-2.5":"optimization.html","the-multiplier-is-the-sensitivity-of-the-minimum-value":"optimization.html","the-newton-step-at-x-2.5":"optimization.html","the-newton-step-minimizes-the-quadratic-model":"optimization.html","the-quadratic-model-and-taylors-theorem":"optimization.html","the-remainder-point-for-ex":"optimization.html","the-right-half-plane":"optimization.html","the-sensitivity-of-a-one-point-problem":"optimization.html","the-tangent-plane-in-one-variable":"optimization.html","thm-convex-first-order":"optimization.html","thm-convex-hessian":"optimization.html","thm-convex-intersection":"optimization.html","thm-convex-max":"optimization.html","thm-descent-direction":"optimization.html","thm-epigraph":"optimization.html","thm-fermat":"optimization.html","thm-first-order-condition":"optimization.html","thm-flat-point-critical":"optimization.html","thm-newton-model":"optimization.html","thm-newton-quadratic":"optimization.html","thm-qp-equality":"optimization.html","thm-second-order-condition":"optimization.html","thm-taylor-1d":"optimization.html","thm-taylor-mv":"optimization.html","two-epigraphs":"optimization.html","using-the-condition-to-locate-and-to-rule-out-minimizers":"optimization.html","using-the-hessian-to-show-convexity":"optimization.html","why-a-quasi-newton-method-is-used":"optimization.html"};
+  function follow() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (id && !document.getElementById(id) && moved[id]) {
+      location.replace(moved[id] + location.hash);
+    }
+  }
+  follow();
+  window.addEventListener('hashchange', follow);
+})();
 </script>
 </section></section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-wikipedia_limit_of_a_function" class="csl-entry" role="listitem">
@@ -4873,11 +4628,6 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <div id="ref-boyd2018vmls" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[15] </div>
 <div class="csl-right-inline">S. Boyd and L. Vandenberghe, <em>Introduction to applied linear algebra: Vectors, matrices, and least squares</em>. Cambridge University Press, 2018. doi: <a href="https://doi.org/10.1017/9781108583664">10.1017/9781108583664</a>.</div>
-</div>
-<div id="ref-wikipedia_stationary_point" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[16] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Stationary point — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Stationary_point">https://en.wikipedia.org/wiki/Stationary_point</a>
-</div>
 </div>
 </div></section></div></main><!-- /main --><!--
 Page-navigation helpers for the HTML format, included after the body of every
@@ -5631,17 +5381,17 @@ window._ojs.runtime.interpretFromScriptTags();
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Derivatives and Taylor Series"</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: calculus-derivatives-slides.html</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_calculus_derivatives.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Derivatives and Taylor Series"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: calculus-derivatives-slides.html</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_calculus_derivatives.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
