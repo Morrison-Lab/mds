@@ -2,7 +2,7 @@
 #### Basins of a double-well function
 
 Let $f(x) = x^4 - 2x^2$,
-so $f'(x) = 4x(x - 1)(x + 1)$
+so $\deriv{x} f(x) = 4x(x - 1)(x + 1)$
 and the [stationary points](#def-stationary-point) are $-1$, $0$ and $1$.
 Both $-1$ and $1$ are
 [local minimizers](algebra-basics.qmd#def-local-minimizer),
@@ -71,7 +71,8 @@ print(basin_far_bs)
 Each start from $-1.5$ to $1.5$ ends at the
 [minimizer](algebra-basics.qmd#def-local-minimizer)
 on its own side of $0$,
-so near $0$ the sign of the starting point decides which minimizer the run reaches.
+so near $0$ the sign of the starting point
+decides which minimizer the run reaches.
 The [basin of attraction](#def-basin-of-attraction) of $1$
 is not all of $(0, \infty)$:
 the first step from $x^{(0)} = 3$ lands at
@@ -83,7 +84,8 @@ From $x^{(0)} = 4$ the [iterates](#def-iterate) are
 `{r} paste(sprintf("%.0f", basin_far_bs), collapse = ", ")`,
 which grow in size at every step shown.
 Both of these starts are far from $0$,
-where the steep $f'$ makes the step $s f'(x)$ long.
+where the gradient is large
+and so the step $s \deriv{x} f(x)$ is long.
 So the basin depends on the [step length](#def-gradient-descent),
 and it is not a half-line.
 
