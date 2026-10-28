@@ -40,7 +40,8 @@ print({name: round(rosenbrock_rf(*p), 3) for name, p in points_rf.items()})
 
 # On the curve x2 = x1^2 the first term vanishes, leaving (1 - x1)^2.
 x_curve_rf = np.array([-1.0, 0.0, 0.5, 1.0, 2.0])
-print(rosenbrock_rf(x_curve_rf, x_curve_rf ** 2), (1 - x_curve_rf) ** 2)
+print("on_curve:", rosenbrock_rf(x_curve_rf, x_curve_rf ** 2))
+print("formula: ", (1 - x_curve_rf) ** 2)
 ```
 
 :::

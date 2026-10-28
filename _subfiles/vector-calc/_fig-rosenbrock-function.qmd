@@ -5,16 +5,17 @@
 ### R
 
 ```{r}
-#| label: fig-rosenbrock-function-r
+#| label: rosenbrock-contours-r
 #| fig-alt: >-
 #|   Contour plot of the Rosenbrock function over first coordinates
 #|   from -2 to 2 and second coordinates from -1 to 3.
 #|   The contours are nested curved bands around a narrow parabola-shaped valley
 #|   along the dashed curve x2 equals x1 squared,
 #|   with steep walls on both sides.
-#|   Three marked points: the minimizer at (1, 1) on the valley floor,
-#|   the origin on the valley floor,
-#|   and the standard starting point (-1.2, 1),
+#|   Three marked points, each with its own colour and shape:
+#|   the minimizer at (1, 1) on the valley floor, a blue circle,
+#|   the origin on the valley floor, a green square,
+#|   and the standard starting point (-1.2, 1), an orange triangle,
 #|   on the left, just outside the dashed curve.
 #| fig-height: 4
 #| fig-width: 5
@@ -51,16 +52,17 @@ ggplot(rf_grid, aes(x1, x2)) +
 ### Python
 
 ```{python}
-#| label: fig-rosenbrock-function-py
+#| label: rosenbrock-contours-python
 #| fig-alt: >-
 #|   Contour plot of the Rosenbrock function over first coordinates
 #|   from -2 to 2 and second coordinates from -1 to 3.
 #|   The contours are nested curved bands around a narrow parabola-shaped valley
 #|   along the dashed curve x2 equals x1 squared,
 #|   with steep walls on both sides.
-#|   Three marked points: the minimizer at (1, 1) on the valley floor,
-#|   the origin on the valley floor,
-#|   and the standard starting point (-1.2, 1),
+#|   Three marked points, each with its own colour and shape:
+#|   the minimizer at (1, 1) on the valley floor, a blue circle,
+#|   the origin on the valley floor, a green square,
+#|   and the standard starting point (-1.2, 1), an orange triangle,
 #|   on the left, just outside the dashed curve.
 import matplotlib.pyplot as plt
 import numpy as np
