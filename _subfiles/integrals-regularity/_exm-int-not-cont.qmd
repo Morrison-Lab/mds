@@ -48,7 +48,7 @@ ggplot2::ggplot() +
     labels = c("0", "1/2", "1")
   ) +
   ggplot2::scale_y_continuous(limits = c(-0.1, 1.2)) +
-  ggplot2::labs(x = "x", y = "f(x)") +
+  ggplot2::labs(x = "Input, x", y = "Output, f(x)") +
   ggplot2::theme_minimal()
 ```
 

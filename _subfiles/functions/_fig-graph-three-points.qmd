@@ -41,7 +41,7 @@ graph_three_points_plot <- ggplot2::ggplot() +
     values = c("in the graph" = "#0072B2", "not in the graph" = "#D55E00")
   ) +
   ggplot2::scale_x_continuous(breaks = -1:2) +
-  ggplot2::labs(x = "a", y = "f(a) = a^2", colour = NULL) +
+  ggplot2::labs(x = "Input, a", y = "Output, f(a) = a^2", colour = NULL) +
   ggplot2::theme_minimal() +
   ggplot2::theme(legend.position = "bottom")
 

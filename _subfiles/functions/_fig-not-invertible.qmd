@@ -27,7 +27,7 @@ not_invertible_plot <- ggplot2::ggplot() +
   ggplot2::geom_point(data = marked, ggplot2::aes(x = x, y = y), size = 3) +
   ggplot2::annotate("text", x = -2.8, y = 4.6, label = "y = 4") +
   ggplot2::scale_x_continuous(breaks = -3:3) +
-  ggplot2::labs(x = "x", y = "h(x) = x^2") +
+  ggplot2::labs(x = "Input, x", y = "Output, h(x) = x^2") +
   ggplot2::theme_minimal()
 
 if (knitr::is_html_output()) {

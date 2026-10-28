@@ -49,7 +49,7 @@ inverse_function_plot <- ggplot2::ggplot() +
   ggplot2::scale_linetype_manual(
     values = c("f" = "solid", "inverse of f" = "solid", "y = x" = "dashed")
   ) +
-  ggplot2::labs(x = "x", y = "y") +
+  ggplot2::labs(x = "Input, x", y = "Output, y") +
   ggplot2::theme_minimal() +
   ggplot2::theme(legend.position = "none")
 
