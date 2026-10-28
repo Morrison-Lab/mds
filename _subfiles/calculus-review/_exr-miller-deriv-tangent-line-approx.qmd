@@ -6,6 +6,6 @@ Adapted from @problifesavercalc, Question 1.1.8.
 
 Let $f(x) = 4x + \sqrt{2}\cos x$.
 
-Compute $f'(x)$.
+Find $f'(x)$.
 
 :::

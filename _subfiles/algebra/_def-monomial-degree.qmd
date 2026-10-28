@@ -1,0 +1,9 @@
+:::{#def-monomial-degree}
+#### Degree of a monomial
+
+The **degree** of the [monomial](#def-monomial) $x_1^{a_1} x_2^{a_2} \cdots x_p^{a_p}$
+is the [sum](algebra-sums.qmd#def-summation) of its [exponents](algebra-basics.qmd#def-power-exponent),
+$a_1 + a_2 + \cdots + a_p$
+[@wikipedia_monomial].
+
+:::

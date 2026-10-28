@@ -42,6 +42,22 @@
 
 {{< include mds/_subfiles/algebra/_exm-parabola.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-monomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-monomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-monomial-degree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-monomial-degree.qmd >}}
+
 ## Affine and linear functions of one variable {#sec-affine-linear-functions}
 
 {{< include mds/_subfiles/algebra/_def-affine-function.qmd >}}

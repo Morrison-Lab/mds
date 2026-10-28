@@ -1,6 +1,6 @@
 :::{#sol-flat-point-minimum}
 
-The [flat point](calculus-derivatives.qmd#def-flat-point) is $w = 2$, from @sol-flat-point-find.
+The [flat point](#def-flat-point) is $w = 2$, from @sol-flat-point-find.
 Evaluating $f$ there gives
 
 $$

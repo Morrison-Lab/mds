@@ -3,6 +3,6 @@
 #### Find the flat point
 
 In the setting of @exr-flat-point,
-find the [flat point](calculus-derivatives.qmd#def-flat-point) $w$ of $f$.
+find the [flat point](#def-flat-point) $w$ of $f$.
 
 :::

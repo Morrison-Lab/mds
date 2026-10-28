@@ -1,6 +1,6 @@
 :::{#sol-flat-point-predict}
 
-With $\smallconst = 0.01$, @eq-linear-approx predicts a change of
+With $\smallconst = 0.01$, the [linear approximation](calculus.qmd#eq-linear-approx) predicts a change of
 $(0.01)(-2) = -0.02$, from
 
 $$

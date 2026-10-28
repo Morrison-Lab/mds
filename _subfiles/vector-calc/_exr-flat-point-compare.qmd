@@ -3,6 +3,6 @@
 #### Check the prediction
 
 Compare the prediction in @exr-flat-point-predict
-with the exact [value](functions.qmd#def-value) of $f(1.01)$.
+with the exact [value](functions.qmd#def-value) of $f(1.01)$ from @exr-flat-point-exact.
 
 :::

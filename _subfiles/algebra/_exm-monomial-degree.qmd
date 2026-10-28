@@ -1,0 +1,10 @@
+:::{#exm-monomial-degree}
+#### Degrees of some monomials
+
+- $x_1^3 x_4$ has [degree](#def-monomial-degree) $3 + 1 = 4$.
+- $x_2^2 x_3^5$ has degree $2 + 5 = 7$.
+- The [constant](#def-constant-function) [monomial](#def-monomial) $1$ has degree $0$.
+- With one variable, the monomial $x^n$ has degree $n$,
+  which is the [degree](#def-polynomial-degree) of the one-term [polynomial](#def-polynomial) $f(x) = x^n$.
+
+:::

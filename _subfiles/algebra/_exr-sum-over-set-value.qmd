@@ -3,6 +3,6 @@
 #### Value of a sum over a set
 
 In the setting of @exr-sum-over-set,
-compute the [value](functions.qmd#def-value) of $\sum_{x \in A} f(x)$.
+find the [value](functions.qmd#def-value) of $\sum_{x \in A} f(x)$.
 
 :::
