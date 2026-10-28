@@ -84,7 +84,7 @@ From $x^{(0)} = 4$ the [iterates](#def-iterate) are
 which grow in size at every step shown.
 Both of these starts are far from $0$,
 where the steep $f'$ makes the step $s f'(x)$ long.
-So the basin depends on the step length,
+So the basin depends on the [step length](#def-gradient-descent),
 and it is not a half-line.
 
 :::
