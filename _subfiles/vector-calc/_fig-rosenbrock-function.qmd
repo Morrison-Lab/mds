@@ -89,6 +89,6 @@ plt.show()
 
 [Level curves](vector-calculus.qmd#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function),
 with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley.
-The minimizer, the origin and the starting point are marked.
+The [minimizer](algebra-basics.qmd#def-global-minimizer), the origin and the starting point are marked.
 
 :::
