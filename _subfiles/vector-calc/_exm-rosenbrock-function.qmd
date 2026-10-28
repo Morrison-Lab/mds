@@ -3,7 +3,7 @@
 
 We evaluate the [Rosenbrock function](#def-rosenbrock-function) at the minimizer $(1, 1)$, at the origin, and at the standard starting point $(-1.2, 1)$.
 Then we evaluate it along the curve $x_2 = x_1^2$,
-which is the floor of the function's narrow, curved valley.
+which is the floor of a narrow, curved valley.
 
 ::: {.panel-tabset group="language"}
 
@@ -45,13 +45,14 @@ print(rosenbrock_rf(x_curve_rf, x_curve_rf ** 2), (1 - x_curve_rf) ** 2)
 
 :::
 
-The [function](functions.qmd#def-function) is a sum of two squares that are both zero only at $(1, 1)$,
-so it is $0$ there and positive everywhere else,
-and $(1, 1)$ is the [global minimizer](algebra-basics.qmd#def-global-minimizer).
+The [function](functions.qmd#def-function) is $0$ at $(1, 1)$ and positive everywhere else,
+because both of its parts are non-negative
+and vanish together only when $x_1 = 1$ and $x_2 = 1$.
+So $(1, 1)$ is the [global minimizer](algebra-basics.qmd#def-global-minimizer).
 At the starting point the [value](functions.qmd#def-value) is `{r} sprintf("%.1f", rosenbrock_rf(-1.2, 1))`,
 mostly from the first [term](algebra-sums.qmd#def-term),
 because $(-1.2, 1)$ is off the curve $x_2 = x_1^2$.
-On the curve the function equals $(1 - x_1)^2$,
+On the curve the function is $(1 - x_1)^2$,
 which varies slowly compared with the steep walls.
 
 :::
