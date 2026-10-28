@@ -80,9 +80,11 @@ plt.show()
 
 :::
 
-[Gradient descent](#def-gradient-descent) with step length $`r basin_step_bs`$
-on the double-well function of @exm-basin-of-attraction,
-from six starting values.
+[Gradient descent](#def-gradient-descent)
+with [step length](#def-gradient-descent) $`r basin_step_bs`$
+on the double-well [function](functions.qmd#def-function)
+of @exm-basin-of-attraction,
+from six starting [values](functions.qmd#def-value).
 Each run settles at the [local minimizer](algebra-basics.qmd#def-local-minimizer)
 on its own side of the [local maximizer](#def-local-maximizer) at $0$.
 
