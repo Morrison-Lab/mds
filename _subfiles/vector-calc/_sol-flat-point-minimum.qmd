@@ -23,7 +23,7 @@ $$
 
 and $(w - 2)^2 \ge 0$,
 so $f(w) \ge 3 = f(2)$ for every $w$.
-Equivalently, the derivative is negative below $w = 2$
+Equivalently, the [derivative](calculus-derivatives.qmd#def-derivative) is negative below $w = 2$
 and positive above it,
 so the function falls into that point and rises out of it.
 

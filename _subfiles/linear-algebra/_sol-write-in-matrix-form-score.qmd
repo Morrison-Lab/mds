@@ -22,16 +22,16 @@ f(\vx)
 $$
 
 Two things are worth noticing.
-The coefficients are not comparable as they stand.
-The weight on BMI, $1.5$,
+The [coefficients](linear-algebra-vectors.qmd#def-lincom-coefficient) are not comparable as they stand.
+The [weight](linear-algebra-vectors.qmd#def-weight) on BMI, $1.5$,
 is $7.5$ times the weight on blood pressure, $0.2$,
 but the contribution of BMI, $42$,
 is less than twice the contribution of blood pressure, $26$,
-because the BMI value, $28$,
+because the BMI [value](functions.qmd#def-value), $28$,
 is much smaller than the blood pressure value, $130$.
 So the weight on a feature says nothing on its own
 about how much that feature contributes to the score.
-And $b = -30$ changes the result:
+And $b = -30$ changes the score:
 without it,
 the score would be $88$ instead of $58$.
 
