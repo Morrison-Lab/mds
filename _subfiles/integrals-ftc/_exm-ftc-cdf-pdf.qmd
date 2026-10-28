@@ -118,7 +118,7 @@ ggplot2::ggplot() +
     fun = \(t) lambda * exp(-lambda * t),
     xlim = c(0, t_max), linewidth = 1
   ) +
-  ggplot2::labs(x = "Value, t", y = "Density, f(t)") +
+  ggplot2::labs(x = "Time, t", y = "Density, f(t)") +
   ggplot2::theme_minimal()
 ```
 
@@ -147,7 +147,7 @@ ggplot2::ggplot() +
     ggplot2::aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
     linetype = "dashed", color = "steelblue"
   ) +
-  ggplot2::labs(x = "Value, t", y = "Cumulative probability, F(t)") +
+  ggplot2::labs(x = "Time, t", y = "Cumulative probability, F(t)") +
   ggplot2::theme_minimal()
 ```
 

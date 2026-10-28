@@ -69,7 +69,7 @@ plotly::plot_ly(x = ~axis_values, y = ~axis_values, z = ~t(height)) |>
   plotly::layout(scene = list(
     xaxis = list(title = "First coordinate, x1"),
     yaxis = list(title = "Second coordinate, x2"),
-    zaxis = list(title = "f(x)")
+    zaxis = list(title = "Height, f(x)")
   ))
 ```
 
