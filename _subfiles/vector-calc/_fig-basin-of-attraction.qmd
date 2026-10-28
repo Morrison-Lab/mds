@@ -17,24 +17,40 @@
 #|   slide down the left well to -1.
 #| fig-height: 4
 #| fig-width: 5
-library(ggplot2)
+# Uses basin_step_bs and basin_starts_bs from the example above.
 basin_cost_bf <- function(x) x^4 - 2 * x^2
-basin_paths_bf <- do.call(rbind, lapply(basin_starts_bs[1:6], function(x0) {
-  x <- Reduce(function(x, i) basin_next_bs(x), 1:30, x0, accumulate = TRUE)
-  data.frame(
-    x = x,
-    cost = basin_cost_bf(x),
-    side = ifelse(x0 > 0, "start above 0", "start below 0")
+basin_iterates_bf <- function(x0, step, n_steps) {
+  x <- numeric(n_steps + 1)
+  x[1] <- x0
+  for (i in seq_len(n_steps)) {
+    x[i + 1] <- x[i] - step * (4 * x[i]^3 - 4 * x[i])
+  }
+  x
+}
+basin_runs_bf <- lapply(
+  basin_starts_bs[1:6], basin_iterates_bf,
+  step = basin_step_bs, n_steps = 30
+)
+basin_paths_bf <- data.frame(
+  x = unlist(basin_runs_bf),
+  side = rep(
+    ifelse(basin_starts_bs[1:6] > 0, "start above 0", "start below 0"),
+    each = 31
   )
-}))
-ggplot(basin_paths_bf, aes(x, cost)) +
-  geom_function(fun = basin_cost_bf, colour = "grey60", xlim = c(-1.6, 1.6)) +
-  geom_point(aes(colour = side, shape = side), alpha = 0.7) +
-  scale_colour_manual(
+)
+basin_paths_bf$cost <- basin_cost_bf(basin_paths_bf$x)
+ggplot2::ggplot(basin_paths_bf, ggplot2::aes(x, cost)) +
+  ggplot2::geom_function(
+    fun = basin_cost_bf, colour = "grey60", xlim = c(-1.6, 1.6)
+  ) +
+  ggplot2::geom_point(
+    ggplot2::aes(colour = side, shape = side), alpha = 0.7
+  ) +
+  ggplot2::scale_colour_manual(
     values = c("start above 0" = "#0072B2", "start below 0" = "#D55E00")
   ) +
-  labs(x = "x", y = "f(x)", colour = NULL, shape = NULL) +
-  theme(legend.position = "bottom")
+  ggplot2::labs(x = "x", y = "f(x)", colour = NULL, shape = NULL) +
+  ggplot2::theme(legend.position = "bottom")
 ```
 
 ### Python
