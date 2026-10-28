@@ -1,0 +1,6 @@
+:::{#sol-sum-over-set-order-total}
+
+The total is the same,
+because addition does not depend on the order of the terms.
+
+:::

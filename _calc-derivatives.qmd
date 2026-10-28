@@ -383,6 +383,34 @@ as an affine function for functions of several variables as well.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx-tangent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx-tangent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx-compare.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx-compare.qmd >}}
+
+{{< slidebreak >}}
+
 ### Taylor series {#sec-taylor-series}
 
 {{< include mds/_subfiles/derivatives/_def-taylor-polynomial.qmd >}}

@@ -1,0 +1,8 @@
+:::{#exr-flat-point-find}
+
+#### Find the flat point
+
+In the setting of @exr-flat-point,
+find the [flat point](#def-flat-point) $w$ of $f$.
+
+:::

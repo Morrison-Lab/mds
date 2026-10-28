@@ -1,0 +1,8 @@
+:::{#exr-miller-deriv-tangent-line-approx-tangent}
+
+#### Tangent line at a point
+
+In the setting of @exr-miller-deriv-tangent-line-approx,
+find the equation of the [tangent line](calculus.qmd#def-tangent-line) to the curve $y = f(x)$ at $x = \pi/4$.
+
+:::

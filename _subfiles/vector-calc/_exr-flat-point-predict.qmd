@@ -1,0 +1,9 @@
+:::{#exr-flat-point-predict}
+
+#### Predict a nearby value
+
+In the setting of @exr-flat-point,
+use the [linear approximation](calculus.qmd#eq-linear-approx) and the [derivative](calculus-derivatives.qmd#def-derivative) at $w = 1$ from @exr-flat-point-slope
+to predict $f(1.01)$.
+
+:::

@@ -1,0 +1,16 @@
+:::{#sol-flat-point-exact}
+
+The exact [value](functions.qmd#def-value) is
+
+$$
+\begin{aligned}
+f(1.01)
+&= (1.01)^2 - 4(1.01) + 7 \\
+&= 1.0201 - 4.04 + 7 \\
+&= 3.9801
+\end{aligned}
+$$
+
+a change of $-0.0199$ from $f(1) = 4$.
+
+:::

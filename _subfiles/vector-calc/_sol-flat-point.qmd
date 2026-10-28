@@ -1,68 +1,7 @@
-::: {#sol-flat-point}
+:::{#sol-flat-point}
 
-**1.** Term by term:
+Differentiating each [term](algebra-sums.qmd#def-term):
 
 $$\frac{df}{dw} = 2w - 4$$
-
-**2.** Set it to zero: $2w - 4 = 0$ gives $w = 2$.
-
-$$
-\begin{aligned}
-f(2) &= 4 - 8 + 7 \\
-&= 3
-\end{aligned}
-$$
-
-is the minimum of the values of $f$.
-Completing the square, $f(w) = (w - 2)^2 + 3$,
-since
-
-$$
-\begin{aligned}
-(w - 2)^2 + 3 &= w^2 - 4w + 4 + 3 \\
-&= w^2 - 4w + 7,
-\end{aligned}
-$$
-
-and $(w - 2)^2 \ge 0$, so $f(w) \ge 3 = f(2)$ for every $w$.
-Equivalently, the derivative is negative below $w = 2$ and positive above it,
-so the function falls into that point and rises out of it.
-
-**3.** At $w = 1$ the derivative is $2(1) - 4 = -2$,
-so $f$ is falling there.
-
-**4.** With $\smallconst = 0.01$, the [linear approximation](calculus.qmd#eq-linear-approx) predicts a change of
-$(0.01)(-2) = -0.02$, from
-
-$$
-\begin{aligned}
-f(1) &= 1 - 4 + 7 \\
-&= 4
-\end{aligned}
-$$
-
-to $3.98$.
-
-**5.** The exact [value](functions.qmd#def-value) is
-
-$$
-\begin{aligned}
-f(1.01)
-&= (1.01)^2 - 4(1.01) + 7 \\
-&= 1.0201 - 4.04 + 7 \\
-&= 3.9801
-\end{aligned}
-$$
-
-a change of $-0.0199$.
-
-**6.** The prediction is off by $0.0001$,
-which is $\smallconst^2$:
-the linear approximation drops everything of that order and smaller,
-so halving the step quarters the error.
-That trade is the whole bargain of [gradient descent](optimization.qmd#def-gradient-descent),
-the step-by-step method of fitting models defined on the optimization page.
-We take a step in the direction the derivative recommends,
-and the recommendation is trustworthy only as far as the step is small.
 
 :::

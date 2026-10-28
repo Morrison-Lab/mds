@@ -1,0 +1,8 @@
+:::{#exr-flat-point-exact}
+
+#### Exact value
+
+In the setting of @exr-flat-point,
+find the exact [value](functions.qmd#def-value) of $f(1.01)$.
+
+:::
