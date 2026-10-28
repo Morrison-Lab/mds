@@ -1,0 +1,80 @@
+:::{#exm-basin-of-attraction}
+#### Basins of a double-well function
+
+Let $f(x) = x^4 - 2x^2$, so $f'(x) = 4x(x - 1)(x + 1)$
+and the [stationary points](#def-stationary-point) are $-1$, $0$ and $1$.
+Both $-1$ and $1$ are [local minimizers](algebra-basics.qmd#def-local-minimizer),
+with $f(\pm 1) = -1$, and $0$ is a [local maximizer](#def-local-maximizer).
+We run [gradient descent](#def-gradient-descent) with the fixed step length $s = 0.05$
+from several starting points, for 200 steps,
+and for three steps from $x^{(0)} = 4$.
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: basin-runs-r
+#| code-fold: false
+basin_step_bs <- 0.05
+basin_next_bs <- function(x) x - basin_step_bs * (4 * x^3 - 4 * x)
+basin_gd_bs <- function(x0, n_steps = 200) {
+  x <- x0
+  for (i in seq_len(n_steps)) x <- basin_next_bs(x)
+  x
+}
+basin_starts_bs <- c(-1.5, -0.5, -0.1, 0.1, 0.5, 1.5, 3)
+basin_final_bs <- sapply(basin_starts_bs, basin_gd_bs)
+data.frame(start = basin_starts_bs, end = signif(basin_final_bs, 3))
+
+# Three steps from 4: the iterates grow in size.
+basin_far_bs <- Reduce(
+  function(x, i) basin_next_bs(x), 1:3, 4, accumulate = TRUE
+)
+basin_far_bs
+```
+
+### Python
+
+```{python}
+#| label: basin-runs-python
+#| code-fold: false
+basin_step_bs = 0.05
+
+def basin_next_bs(x):
+    return x - basin_step_bs * (4 * x ** 3 - 4 * x)
+
+def basin_gd_bs(x0, n_steps=200):
+    x = x0
+    for _ in range(n_steps):
+        x = basin_next_bs(x)
+    return x
+
+basin_starts_bs = [-1.5, -0.5, -0.1, 0.1, 0.5, 1.5, 3]
+for start in basin_starts_bs:
+    print(start, float(f"{basin_gd_bs(start):.3g}"))
+
+# Three steps from 4: the iterates grow in size.
+basin_far_bs = [4.0]
+for _ in range(3):
+    basin_far_bs.append(basin_next_bs(basin_far_bs[-1]))
+print(basin_far_bs)
+```
+
+:::
+
+Each start from $-1.5$ to $1.5$ ends at the minimizer on its own side of $0$,
+so near $0$ the sign of the starting point decides which minimizer the run reaches.
+The basin of attraction of $1$ is not all of $(0, \infty)$ (@def-basin-of-attraction):
+the first step from $x^{(0)} = 3$ lands at
+`{r} sprintf("%.1f", basin_next_bs(3))`,
+which is on the other side of $0$, and the run ends at
+`{r} sprintf("%.0f", basin_final_bs[basin_starts_bs == 3])`.
+From $x^{(0)} = 4$ the iterates are
+`{r} paste(sprintf("%.0f", basin_far_bs), collapse = ", ")`,
+growing in size at every step, and they keep growing,
+so $4$ is in no basin.
+Both of these starts are far from $0$, where the steep $f'$ makes the step $s f'(x)$ long,
+so the basin depends on the step length, and it is not a half-line.
+
+:::
