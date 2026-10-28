@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-27 20:53:54 (PDT)
+Last modified: 2026-10-28 13:13:09 (PDT)
 
 > **NOTE:**
 >
@@ -197,7 +197,7 @@ Last modified: 2026-10-27 20:53:54 (PDT)
 >     values = c("in the graph" = "#0072B2", "not in the graph" = "#D55E00")
 >   ) +
 >   ggplot2::scale_x_continuous(breaks = -1:2) +
->   ggplot2::labs(x = "a", y = "f(a) = a^2", colour = NULL) +
+>   ggplot2::labs(x = "Input, a", y = "Output, f(a) = a^2", colour = NULL) +
 >   ggplot2::theme_minimal() +
 >   ggplot2::theme(legend.position = "bottom")
 >
@@ -473,7 +473,7 @@ Last modified: 2026-10-27 20:53:54 (PDT)
 >   ggplot2::scale_linetype_manual(
 >     values = c("f" = "solid", "inverse of f" = "solid", "y = x" = "dashed")
 >   ) +
->   ggplot2::labs(x = "x", y = "y") +
+>   ggplot2::labs(x = "Input, x", y = "Output, y") +
 >   ggplot2::theme_minimal() +
 >   ggplot2::theme(legend.position = "none")
 >
@@ -509,7 +509,7 @@ Last modified: 2026-10-27 20:53:54 (PDT)
 >   ggplot2::geom_point(data = marked, ggplot2::aes(x = x, y = y), size = 3) +
 >   ggplot2::annotate("text", x = -2.8, y = 4.6, label = "y = 4") +
 >   ggplot2::scale_x_continuous(breaks = -3:3) +
->   ggplot2::labs(x = "x", y = "h(x) = x^2") +
+>   ggplot2::labs(x = "Input, x", y = "Output, h(x) = x^2") +
 >   ggplot2::theme_minimal()
 >
 > if (knitr::is_html_output()) {
@@ -625,7 +625,7 @@ Last modified: 2026-10-27 20:53:54 (PDT)
 >   ggplot2::geom_point(size = 2.5, colour = "#0072B2") +
 >   ggplot2::facet_wrap(~sequence, scales = "free_y") +
 >   ggplot2::scale_x_continuous(breaks = n) +
->   ggplot2::labs(x = "n", y = "term") +
+>   ggplot2::labs(x = "Index, n", y = "term") +
 >   ggplot2::theme_minimal()
 >
 > if (knitr::is_html_output()) {
@@ -709,7 +709,7 @@ Last modified: 2026-10-27 20:53:54 (PDT)
 >     hjust = 0
 >   ) +
 >   ggplot2::scale_x_continuous(breaks = seq(-6, 6, 2)) +
->   ggplot2::labs(x = "z", y = "logistic(z)") +
+>   ggplot2::labs(x = "Score, z", y = "logistic(z)") +
 >   ggplot2::theme_minimal()
 >
 > if (knitr::is_html_output()) {
