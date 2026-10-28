@@ -19,7 +19,10 @@ sapply(points_rf, function(p) round(rosenbrock_rf(p[1], p[2]), 3))
 
 # On the curve x2 = x1^2 the first term vanishes, leaving (1 - x1)^2.
 x_curve_rf <- c(-1, 0, 0.5, 1, 2)
-rbind(on_curve = rosenbrock_rf(x_curve_rf, x_curve_rf^2), formula = (1 - x_curve_rf)^2)
+rbind(
+  on_curve = rosenbrock_rf(x_curve_rf, x_curve_rf^2),
+  formula = (1 - x_curve_rf)^2
+)
 ```
 
 ### Python
