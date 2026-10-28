@@ -1,0 +1,14 @@
+:::{#def-rosenbrock-function}
+#### Rosenbrock function
+
+The **Rosenbrock function** on $\reals^2$ is
+
+$$
+f(\vx) \eqdef 100\paren{x_2 - x_1^2}^2 + \paren{1 - x_1}^2,
+\qquad \vx = \tp{(x_1, x_2)}.
+$$
+
+It is a standard test problem for optimizers
+[@wikipedia_rosenbrock_function].
+
+:::

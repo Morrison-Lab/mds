@@ -16,7 +16,7 @@ resources:
 
 ```{r}
 #| include: false
-reticulate::py_require(c("numpy", "pandas"))
+reticulate::py_require(c("numpy", "pandas", "matplotlib"))
 ```
 
 {{< include mds/_subfiles/_sec_optimization.qmd >}}

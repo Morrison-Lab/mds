@@ -1,0 +1,59 @@
+:::{#exm-rosenbrock-function}
+#### Values of the Rosenbrock function
+
+We evaluate the [Rosenbrock function](#def-rosenbrock-function) at the [minimizer](algebra-basics.qmd#def-global-minimizer) $(1, 1)$, at the origin, and at the standard starting point $(-1.2, 1)$.
+Then we evaluate it along the curve $x_2 = x_1^2$,
+which is the floor of a narrow, curved valley.
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: rosenbrock-values-r
+#| code-fold: false
+rosenbrock_rf <- function(x1, x2) 100 * (x2 - x1^2)^2 + (1 - x1)^2
+
+points_rf <- list(minimizer = c(1, 1), origin = c(0, 0), start = c(-1.2, 1))
+sapply(points_rf, function(p) round(rosenbrock_rf(p[1], p[2]), 3))
+
+# On the curve x2 = x1^2 the first term vanishes, leaving (1 - x1)^2.
+x_curve_rf <- c(-1, 0, 0.5, 1, 2)
+rbind(
+  on_curve = rosenbrock_rf(x_curve_rf, x_curve_rf^2),
+  formula = (1 - x_curve_rf)^2
+)
+```
+
+### Python
+
+```{python}
+#| label: rosenbrock-values-python
+#| code-fold: false
+import numpy as np
+
+def rosenbrock_rf(x1, x2):
+    return 100 * (x2 - x1 ** 2) ** 2 + (1 - x1) ** 2
+
+points_rf = {"minimizer": (1, 1), "origin": (0, 0), "start": (-1.2, 1)}
+print({name: round(rosenbrock_rf(*p), 3) for name, p in points_rf.items()})
+
+# On the curve x2 = x1^2 the first term vanishes, leaving (1 - x1)^2.
+x_curve_rf = np.array([-1.0, 0.0, 0.5, 1.0, 2.0])
+print("on_curve:", rosenbrock_rf(x_curve_rf, x_curve_rf ** 2))
+print("formula: ", (1 - x_curve_rf) ** 2)
+```
+
+:::
+
+The [function](functions.qmd#def-function) is $0$ at $(1, 1)$ and positive everywhere else,
+because both of its parts are non-negative
+and vanish together only when $x_1 = 1$ and $x_2 = 1$.
+So $(1, 1)$ is the [global minimizer](algebra-basics.qmd#def-global-minimizer).
+At the starting point the [value](functions.qmd#def-value) is `{r} sprintf("%.1f", rosenbrock_rf(-1.2, 1))`,
+mostly from the first [term](algebra-sums.qmd#def-term),
+because $(-1.2, 1)$ is off the curve $x_2 = x_1^2$.
+On the curve the function is $(1 - x_1)^2$,
+which varies slowly compared with the steep walls.
+
+:::

@@ -210,6 +210,18 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-rosenbrock-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-rosenbrock-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-rosenbrock-function.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-armijo-condition.qmd >}}
 
 {{< slidebreak >}}
