@@ -30,7 +30,7 @@ sequences_plot <- ggplot2::ggplot(sequences) +
   ggplot2::geom_point(size = 2.5, colour = "#0072B2") +
   ggplot2::facet_wrap(~sequence, scales = "free_y") +
   ggplot2::scale_x_continuous(breaks = n) +
-  ggplot2::labs(x = "Index, n", y = "term") +
+  ggplot2::labs(x = "Index, n", y = "Term value") +
   ggplot2::theme_minimal()
 
 if (knitr::is_html_output()) {
