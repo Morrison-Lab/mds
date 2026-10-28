@@ -1,7 +1,7 @@
 :::{#exm-rosenbrock-function}
 #### Values of the Rosenbrock function
 
-We evaluate the [function](functions.qmd#def-function) at the minimizer $(1, 1)$, at the origin, and at the standard starting point $(-1.2, 1)$.
+We evaluate the [Rosenbrock function](#def-rosenbrock-function) at the minimizer $(1, 1)$, at the origin, and at the standard starting point $(-1.2, 1)$.
 Then we evaluate it along the curve $x_2 = x_1^2$,
 which the function treats as the floor of a narrow, curved valley.
 

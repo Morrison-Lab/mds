@@ -54,7 +54,7 @@ plt.show()
 
 :::
 
-[Level curves](#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function) of @exm-rosenbrock-function,
+[Level curves](vector-calculus.qmd#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function) of @exm-rosenbrock-function,
 with the curve $x_2 = x_1^2$ (dashed) along the floor of its valley.
 
 :::
