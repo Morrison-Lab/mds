@@ -16,6 +16,8 @@ fig_alt <- paste(
 ```{r}
 #| label: logistic-function-plot
 #| fig-alt: !expr fig_alt
+# the Greek letter eta, written as a code point to keep this file ASCII
+eta_symbol <- intToUtf8(0x3b7)
 eta_grid <- seq(-6, 6, length.out = 241)
 logistic_curve <- data.frame(eta = eta_grid, sigmoid = plogis(eta_grid))
 logistic_points <- data.frame(eta = c(-2, 0, 2), sigmoid = plogis(c(-2, 0, 2)))
@@ -46,7 +48,10 @@ logistic_function_plot <- ggplot2::ggplot() +
     hjust = 0
   ) +
   ggplot2::scale_x_continuous(breaks = seq(-6, 6, 2)) +
-  ggplot2::labs(x = "Log-odds, η", y = "Probability, logistic(η)") +
+  ggplot2::labs(
+    x = paste0("Log-odds, ", eta_symbol),
+    y = paste0("Probability, logistic(", eta_symbol, ")")
+  ) +
   ggplot2::theme_minimal()
 
 if (knitr::is_html_output()) {
