@@ -49,7 +49,7 @@ print("formula: ", (1 - x_curve_rf) ** 2)
 The [function](functions.qmd#def-function) is $0$ at $(1, 1)$ and positive everywhere else,
 because both of its parts are non-negative
 and vanish together only when $x_1 = 1$ and $x_2 = 1$.
-So $(1, 1)$ is the global minimizer.
+So $(1, 1)$ is the [global minimizer](algebra-basics.qmd#def-global-minimizer).
 At the starting point the [value](functions.qmd#def-value) is `{r} sprintf("%.1f", rosenbrock_rf(-1.2, 1))`,
 mostly from the first [term](algebra-sums.qmd#def-term),
 because $(-1.2, 1)$ is off the curve $x_2 = x_1^2$.
