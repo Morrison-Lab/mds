@@ -9,6 +9,6 @@ eta <- c(-2, 0, 2)
 data.frame(eta = eta, sigmoid = 1 / (1 + exp(-eta)))
 ```
 
-The [value](#def-value) at $\logodds = 0$ is $1 / (1 + e^0) = 1/2$.
+The [value](#def-value) at $\logodds = 0$ is $1 / (1 + \e{-0}) = 1/2$.
 The values at $\pm 2$ add to 1; each lies in $(0, 1)$.
 :::
