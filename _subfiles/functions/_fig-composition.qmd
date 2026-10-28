@@ -47,7 +47,7 @@ composition_plot <- ggplot2::ggplot() +
     nudge_y = 0.5
   ) +
   ggplot2::scale_colour_manual(values = c("#0072B2", "#D55E00")) +
-  ggplot2::labs(x = "x", y = "value", colour = NULL) +
+  ggplot2::labs(x = "Input, x", y = "Output, value", colour = NULL) +
   ggplot2::theme_minimal() +
   ggplot2::theme(legend.position = "bottom")
 

@@ -1,0 +1,30 @@
+:::{#sol-flat-point-minimum}
+
+The [flat point](#def-flat-point) is $w = 2$, from @sol-flat-point-find.
+Evaluating $f$ there gives
+
+$$
+\begin{aligned}
+f(2) &= 4 - 8 + 7 \\
+&= 3.
+\end{aligned}
+$$
+
+This is the [minimum](algebra.qmd#def-minimum) of the [values](functions.qmd#def-value) of $f$.
+Completing the square, $f(w) = (w - 2)^2 + 3$,
+since
+
+$$
+\begin{aligned}
+(w - 2)^2 + 3 &= w^2 - 4w + 4 + 3 \\
+&= w^2 - 4w + 7,
+\end{aligned}
+$$
+
+and $(w - 2)^2 \ge 0$,
+so $f(w) \ge 3 = f(2)$ for every $w$.
+Equivalently, the [derivative](calculus-derivatives.qmd#def-derivative) is negative below $w = 2$
+and positive above it,
+so the function falls into that point and rises out of it.
+
+:::

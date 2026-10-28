@@ -2,7 +2,7 @@
 
 Mathematical notation is not standardized.
 This section states the conventions these notes use,
-and the alternatives you may meet in other sources.
+and the alternatives you may encounter in other sources.
 
 | symbol | meaning | LaTeX
 |-------------|--------------------------------------------------|-----------
@@ -62,7 +62,7 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/notation/_tbl-subscript-parentheses.qmd >}}
+{{< include mds/_subfiles/notation/_prose-subscript-parentheses-alternatives.qmd >}}
 
 {{< slidebreak >}}
 

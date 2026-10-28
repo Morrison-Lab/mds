@@ -38,7 +38,11 @@ doubling_die_plot <- ggplot2::ggplot(rolls) +
   ggplot2::scale_colour_manual(
     values = c("graph of f" = "#0072B2", "image of f" = "#D55E00")
   ) +
-  ggplot2::labs(x = "a (the roll)", y = "f(a) = 2a", colour = NULL) +
+  ggplot2::labs(
+    x = "Input, a (the roll)",
+    y = "Output, f(a) = 2a",
+    colour = NULL
+  ) +
   ggplot2::theme_minimal() +
   ggplot2::theme(legend.position = "bottom")
 

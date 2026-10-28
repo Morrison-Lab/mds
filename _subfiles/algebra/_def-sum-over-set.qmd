@@ -28,7 +28,7 @@ without changing the total.
 For example, if $A = \cb{1, 2, 3}$ and $f(x) = x^2$,
 listing $A$ as $1, 2, 3$ gives $1 + 4 + 9 = 14$,
 and listing $A$ as $3, 1, 2$ gives $9 + 1 + 4 = 14$.
-@exr-sum-over-set, part 2, shows another example.
+@exr-sum-over-set-value and @exr-sum-over-set-reorder-total show another example.
 
 When $A = \cb{m, m+1, \ldots, n}$,
 this sum is the same as $\sum_{i=m}^{n} f(i)$ from @def-summation.

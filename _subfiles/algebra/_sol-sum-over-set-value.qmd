@@ -1,0 +1,14 @@
+:::{#sol-sum-over-set-value}
+
+Evaluate each [term](algebra-sums.qmd#def-term) and add:
+
+$$
+\ba
+f(-1) + f(2) + f(5)
+&= (-1)^2 + 2^2 + 5^2
+\\ &= 1 + 4 + 25
+\\ &= 30
+\ea
+$$
+
+:::

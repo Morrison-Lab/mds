@@ -1,0 +1,66 @@
+:::{#def-bfgs-update}
+#### BFGS update (Broyden-Fletcher-Goldfarb-Shanno)
+
+Let $\matr{H}$, an approximation of the [inverse](linear-algebra-special-matrices.qmd#def-matrix-inverse) Hessian, be a $p \times p$ [positive definite matrix](linear-algebra.qmd#def-positive-definite),
+and let $\vecf{s}, \vy \in \reals^p$ satisfy $\dprod{\vy}{\vecf{s}} > 0$.
+With $\rho \eqdef 1 / \dprod{\vy}{\vecf{s}}$,
+the **BFGS update**
+[@nocedal2006numerical, Chapter 6]
+of $\matr{H}$ is
+
+$$
+\matr{H}^+
+\eqdef \paren{\matr{I}_p - \rho \oprod{\vecf{s}}{\vy}}
+\matr{H}
+\paren{\matr{I}_p - \rho \oprod{\vy}{\vecf{s}}}
++ \rho \oprod{\vecf{s}}{\vecf{s}}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+::: {#exm-bfgs-step}
+#### A BFGS update from the quasi-Newton step
+
+Continue @exm-quasi-newton-step with $\matr{H} = \matr{I}_2$, $\vecf{s} = \vecf{s}^{(0)}$, and $\vy = \vy^{(0)}$.
+
+```{r}
+#| label: bfgs-step
+#| code-fold: false
+rho <- 1 / sum(y * s)
+left <- diag(2) - rho * s %*% t(y)
+H1 <- left %*% H0 %*% t(left) + rho * s %*% t(s)
+H1
+drop(H1 %*% y)
+```
+
+Here $\dprod{\vy}{\vecf{s}} = `{r} sum(y * s)` > 0$, so $\rho = `{r} rho`$.
+The updated [matrix](linear-algebra-matrices.qmd#def-matrix) satisfies $\matr{H}^+ \vy = (`{r} round(H1 %*% y, 6)[1]`, `{r} round(H1 %*% y, 6)[2]`)$,
+which is $\vecf{s} = (`{r} round(s, 6)[1]`, `{r} round(s, 6)[2]`)$,
+and its smallest [eigenvalue](linear-algebra.qmd#def-eigenvalue) is `{r} min(eigen(H1)$values)`, so $\matr{H}^+$ is [positive definite](linear-algebra.qmd#def-positive-definite).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-bfgs-curvature}
+#### The curvature condition $\dprod{\vy}{\vecf{s}} > 0$
+
+If the [strict inequality](algebra.qmd#def-strict-inequality) of @thm-convex-first-order holds for distinct points,
+then $\dprod{\vy}{\vecf{s}} > 0$ for $\vecf{s} = \vx^+ - \vx \ne \vzero$ and $\vy = \deriv{\vx} f(\vx^+) - \deriv{\vx} f(\vx)$.
+Add the versions at $(\vx^+, \vx)$ and at $(\vx, \vx^+)$:
+
+$$
+f(\vx^+) + f(\vx)
+> f(\vx) + f(\vx^+)
++ \dprod{\deriv{\vx} f(\vx)}{\vecf{s}}
+- \dprod{\deriv{\vx} f(\vx^+)}{\vecf{s}},
+$$
+
+so $0 > -\dprod{\vy}{\vecf{s}}$.
+For a general $f$, a [line search](#def-line-search) that enforces a curvature condition on the [step length](#def-gradient-descent)
+(the Wolfe conditions [@nocedal2006numerical, Chapter 3]) guarantees $\dprod{\vy}{\vecf{s}} > 0$.
+Such a step can be found along a [descent direction](#def-descent-direction) when $f$ cannot keep decreasing forever.
+
+:::

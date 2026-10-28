@@ -1,0 +1,7 @@
+:::{#sol-miller-deriv-tangent-line-approx-approx}
+
+At $x = \pi/4 + 0.01$, the [linear approximation](calculus.qmd#def-linear-approximation) (@eq-linear-approx) gives:
+
+$$f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593$$
+
+:::

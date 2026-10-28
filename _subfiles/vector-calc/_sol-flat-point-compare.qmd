@@ -1,0 +1,16 @@
+:::{#sol-flat-point-compare}
+
+The prediction $3.98$ (@sol-flat-point-predict)
+and the exact [value](functions.qmd#def-value) $3.9801$ (@sol-flat-point-exact)
+differ by $0.0001$,
+which is $\smallconst^2$.
+The [linear approximation](calculus.qmd#def-linear-approximation) drops everything of that order and smaller,
+so halving the step quarters the error.
+That trade is the whole bargain of [gradient descent](optimization.qmd#def-gradient-descent),
+the step-by-step method of fitting models
+that the optimization page defines.
+We take a step in the direction the derivative recommends,
+and the recommendation is trustworthy
+only as far as the step is small.
+
+:::

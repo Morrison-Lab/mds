@@ -1,0 +1,5 @@
+:::{#sol-sum-over-set-reorder-total}
+
+The total is $25 + 1 + 4 = 30$.
+
+:::

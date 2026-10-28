@@ -84,7 +84,7 @@ $\rangef{x}$ is a set, not that difference.
 
 {{< slidebreak >}}
 
-@tbl-notational-shorthands lists shorthands you may meet in other sources,
+@tbl-notational-shorthands lists shorthands you may encounter in other sources,
 the full form each one abbreviates,
 and the part each one leaves out.
 In the table,

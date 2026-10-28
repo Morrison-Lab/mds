@@ -1,0 +1,9 @@
+:::{#sol-miller-deriv-tangent-line-approx-compare}
+
+The exact [value](functions.qmd#def-value) is:
+
+$$f(\pi/4 + 0.01) = 4\paren{\frac{\pi}{4} + 0.01} + \sqrt{2}\cosf{\frac{\pi}{4} + 0.01} \approx 4.171543$$
+
+The approximation error is $|4.171593 - 4.171543| \approx 0.00005$, on the order of $(0.01)^2 = 10^{-4}$.
+
+:::

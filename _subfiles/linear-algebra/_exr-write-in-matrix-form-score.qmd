@@ -1,0 +1,8 @@
+:::{#exr-write-in-matrix-form-score}
+
+#### Score a patient
+
+Give the score from the rule in @exr-write-in-matrix-form
+for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+
+:::

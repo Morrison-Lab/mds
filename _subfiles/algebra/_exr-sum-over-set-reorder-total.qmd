@@ -1,0 +1,8 @@
+:::{#exr-sum-over-set-reorder-total}
+
+#### Add the terms in the new order
+
+In the setting of @exr-sum-over-set-reorder,
+add up the [terms](algebra-sums.qmd#def-term).
+
+:::
