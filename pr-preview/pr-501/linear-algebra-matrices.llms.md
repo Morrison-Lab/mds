@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-27 19:23:56 (PDT)
+Last modified: 2026-10-27 19:57:03 (PDT)
 
 ## 1 Matrices
 
@@ -711,7 +711,7 @@ Last modified: 2026-10-27 19:23:56 (PDT)
 >
 > \\ \begin{aligned} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) &= 88 - 30 \\ &= 58 \end{aligned} \\
 >
-> Two things are worth noticing. The coefficients are not comparable as they stand: \\1.5\\ is the largest number but BMI is measured on the smallest scale, so the weight on a feature says nothing on its own about how much that feature matters. And \\b = -30\\ is doing real work — without it the score would be \\88\\, which is a different clinical claim entirely.
+> Two things are worth noticing. The [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) are not comparable as they stand. The [weight](linear-algebra-vectors.llms.md#def-weight) on BMI, \\1.5\\, is \\7.5\\ times the weight on blood pressure, \\0.2\\, but the contribution of BMI, \\42\\, is less than twice the contribution of blood pressure, \\26\\, because the BMI [value](functions.llms.md#def-value), \\28\\, is much smaller than the blood pressure value, \\130\\. So the weight on a feature says nothing on its own about how much that feature contributes to the score. And \\b = -30\\ changes the score: without it, the score would be \\88\\ instead of \\58\\.
 
 > **NOTE:**
 >

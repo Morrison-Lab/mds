@@ -362,7 +362,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-27 19:23:56 (PDT)</p>
+  <p class="date">Last modified: 2026-10-27 19:57:03 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -1548,7 +1548,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= 58
 \end{aligned}
 \]</span></p>
-<p>Two things are worth noticing. The coefficients are not comparable as they stand: <span class="math inline">\(1.5\)</span> is the largest number but BMI is measured on the smallest scale, so the weight on a feature says nothing on its own about how much that feature matters. And <span class="math inline">\(b = -30\)</span> is doing real work — without it the score would be <span class="math inline">\(88\)</span>, which is a different clinical claim entirely.</p>
+<p>Two things are worth noticing. The <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> are not comparable as they stand. The <a href="./linear-algebra-vectors.html#def-weight">weight</a> on BMI, <span class="math inline">\(1.5\)</span>, is <span class="math inline">\(7.5\)</span> times the weight on blood pressure, <span class="math inline">\(0.2\)</span>, but the contribution of BMI, <span class="math inline">\(42\)</span>, is less than twice the contribution of blood pressure, <span class="math inline">\(26\)</span>, because the BMI <a href="./functions.html#def-value">value</a>, <span class="math inline">\(28\)</span>, is much smaller than the blood pressure value, <span class="math inline">\(130\)</span>. So the weight on a feature says nothing on its own about how much that feature contributes to the score. And <span class="math inline">\(b = -30\)</span> changes the score: without it, the score would be <span class="math inline">\(88\)</span> instead of <span class="math inline">\(58\)</span>.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
