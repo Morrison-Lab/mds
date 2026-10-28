@@ -489,6 +489,24 @@
    "external": false
   },
   {
+   "id": "mds/algebra#def-monomial",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-monomial",
+   "kind": "def",
+   "title": "Monomial (power product)",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-monomial-degree",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-monomial-degree",
+   "kind": "def",
+   "title": "Degree of a monomial",
+   "external": false
+  },
+  {
    "id": "mds/algebra#def-natural-log",
    "site": "mds",
    "page": "algebra",
@@ -1728,6 +1746,24 @@
    "div": "def-linear-function",
    "kind": "def",
    "title": "Linear function of one variable",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#def-monomial",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-monomial",
+   "kind": "def",
+   "title": "Monomial (power product)",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#def-monomial-degree",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-monomial-degree",
+   "kind": "def",
+   "title": "Degree of a monomial",
    "external": false
   },
   {
@@ -11691,6 +11727,38 @@
    "mds/calculus#def-riemann-integral"
   ],
   [
+   "mds/algebra#def-monomial",
+   "mds/algebra-basics#def-power"
+  ],
+  [
+   "mds/algebra#def-monomial",
+   "mds/algebra-basics#def-power-exponent"
+  ],
+  [
+   "mds/algebra#def-monomial",
+   "mds/algebra-basics#def-power-integer"
+  ],
+  [
+   "mds/algebra#def-monomial",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/algebra#def-monomial",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/algebra#def-monomial-degree",
+   "mds/algebra#def-monomial"
+  ],
+  [
+   "mds/algebra#def-monomial-degree",
+   "mds/algebra-basics#def-power-exponent"
+  ],
+  [
+   "mds/algebra#def-monomial-degree",
+   "mds/algebra-sums#def-summation"
+  ],
+  [
    "mds/algebra#def-natural-log",
    "mds/algebra#def-exponential-function"
   ],
@@ -12153,6 +12221,38 @@
   [
    "mds/algebra-exponentials#def-linear-function",
    "mds/algebra-exponentials#def-affine-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/algebra-basics#def-power"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/algebra-basics#def-power-exponent"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/algebra-basics#def-power-integer"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial-degree",
+   "mds/algebra-basics#def-power-exponent"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial-degree",
+   "mds/algebra-exponentials#def-monomial"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial-degree",
+   "mds/algebra-sums#def-summation"
   ],
   [
    "mds/algebra-exponentials#def-natural-log",
