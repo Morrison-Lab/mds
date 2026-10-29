@@ -2,6 +2,8 @@
 title: "Linear Algebra"
 format:
   html: default
+  revealjs:
+    output-file: linear-algebra-slides.html
   pdf:
     output-file: linear-algebra-handout.pdf
   docx:
