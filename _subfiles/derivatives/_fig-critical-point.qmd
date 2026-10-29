@@ -1,0 +1,79 @@
+::: {#fig-critical-point}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: critical-point-r
+#| fig-alt: >-
+#|   Three panels over w from -2 to 2. Left: the absolute value of w, a V shape
+#|   with a sharp corner at the origin marked by a vermilion triangle. Middle:
+#|   w cubed, rising and flat at the origin, marked by a vermilion circle.
+#|   Right: w squared, a parabola with its lowest point at the origin marked by
+#|   a vermilion circle.
+#| fig-height: 3
+#| fig-width: 7
+cp_w_fc <- seq(-2, 2, length.out = 201)
+cp_abs_value_fc <- abs(cp_w_fc)
+cp_abs_fc <- tibble::tibble(w = cp_w_fc, value = cp_abs_value_fc, panel = "|w|")
+cp_cube_fc <- tibble::tibble(w = cp_w_fc, value = cp_w_fc^3, panel = "w^3")
+cp_square_fc <- tibble::tibble(w = cp_w_fc, value = cp_w_fc^2, panel = "w^2")
+cp_curves_fc <- dplyr::bind_rows(cp_abs_fc, cp_cube_fc, cp_square_fc)
+cp_levels_fc <- c("|w|", "w^3", "w^2")
+cp_curves_fc$panel <- factor(cp_curves_fc$panel, levels = cp_levels_fc)
+cp_kinds_fc <- c("not flat", "flat", "flat")
+cp_marks_fc <- tibble::tibble(
+  w = 0, value = 0, panel = cp_levels_fc, kind = cp_kinds_fc
+)
+cp_marks_fc$panel <- factor(cp_marks_fc$panel, levels = cp_levels_fc)
+cp_aes_fc <- ggplot2::aes(w, value)
+cp_marks_aes_fc <- ggplot2::aes(shape = kind)
+cp_shapes_fc <- c("flat" = 16, "not flat" = 17)
+ggplot2::ggplot(cp_curves_fc, cp_aes_fc) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(
+    data = cp_marks_fc, mapping = cp_marks_aes_fc,
+    colour = "#D55E00", size = 3
+  ) +
+  ggplot2::scale_shape_manual(values = cp_shapes_fc) +
+  ggplot2::facet_wrap(~panel, scales = "free_y") +
+  ggplot2::labs(x = "w", y = NULL, shape = "critical point")
+```
+
+### Python
+
+```{python}
+#| label: critical-point-python
+#| fig-alt: >-
+#|   Three panels over w from -2 to 2. Left: the absolute value of w, a V shape
+#|   with a sharp corner at the origin marked by a vermilion triangle. Middle:
+#|   w cubed, rising and flat at the origin, marked by a vermilion circle.
+#|   Right: w squared, a parabola with its lowest point at the origin marked by
+#|   a vermilion circle.
+#| fig-height: 3
+#| fig-width: 7
+import matplotlib.pyplot as plt
+import numpy as np
+
+cp_w_fc = np.linspace(-2, 2, 201)
+cp_curves_fc = [("|w|", np.abs(cp_w_fc), "^"),
+                ("w^3", cp_w_fc**3, "o"),
+                ("w^2", cp_w_fc**2, "o")]
+fig, axes = plt.subplots(1, 3, figsize=(7, 3), layout="constrained")
+for ax, (title, values, marker) in zip(axes, cp_curves_fc):
+    ax.plot(cp_w_fc, values, color="#0072B2")
+    ax.plot(0, 0, marker, color="#D55E00", markersize=8)
+    ax.set_title(title)
+    ax.set_xlabel("w")
+plt.show()
+```
+
+:::
+
+These are the [functions](functions.qmd#def-function) of @exm-critical-point,
+with the [critical point](#def-critical-point) $0$ marked on each.
+The corner of $\abs{w}$ at $0$ is a critical point that is not a [flat point](#def-flat-point) (triangle).
+$w^3$ and $w^2$ are flat at $0$ (circles).
+
+:::
