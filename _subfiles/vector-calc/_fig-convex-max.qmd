@@ -8,28 +8,38 @@
 #| label: convex-max-r
 #| fig-alt: >-
 #|   Two panels over x. Left: the lines x and x squared in thin grey and their
-#|   pointwise maximum in blue, a curve that is convex. Right: the curve g of x,
-#|   the smaller of x squared and x minus 2 squared, in blue, a double dip with a
-#|   peak of 1 at x of 1. A vermilion segment along the x-axis joins the points
-#|   (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above
-#|   that segment.
+#|   pointwise maximum in blue, a curve that is convex. Right: the curve g of
+#|   x, the smaller of x squared and x minus 2 squared, in blue, a double dip
+#|   with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the
+#|   points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1)
+#|   lies above that segment.
 #| fig-height: 3.5
 #| fig-width: 7
 cm_x_fm <- seq(-1, 3, length.out = 201)
 cm_levels_fm <- c("max{x, x^2}", "min{x^2, (x - 2)^2}")
 cm_max_value_fm <- pmax(cm_x_fm, cm_x_fm^2)
 cm_min_value_fm <- pmin(cm_x_fm^2, (cm_x_fm - 2)^2)
-cm_max_fm <- tibble::tibble(x = cm_x_fm, value = cm_max_value_fm, panel = cm_levels_fm[1])
-cm_min_fm <- tibble::tibble(x = cm_x_fm, value = cm_min_value_fm, panel = cm_levels_fm[2])
-cm_main_fm <- rbind(cm_max_fm, cm_min_fm)
+cm_max_fm <- tibble::tibble(
+  x = cm_x_fm, value = cm_max_value_fm, panel = cm_levels_fm[1]
+)
+cm_min_fm <- tibble::tibble(
+  x = cm_x_fm, value = cm_min_value_fm, panel = cm_levels_fm[2]
+)
+cm_main_fm <- dplyr::bind_rows(cm_max_fm, cm_min_fm)
 cm_main_fm$panel <- factor(cm_main_fm$panel, levels = cm_levels_fm)
-cm_line_fm <- tibble::tibble(x = cm_x_fm, value = cm_x_fm, panel = cm_levels_fm[1])
-cm_square_fm <- tibble::tibble(x = cm_x_fm, value = cm_x_fm^2, panel = cm_levels_fm[1])
-cm_line_fm$part <- "x"
-cm_square_fm$part <- "x^2"
-cm_parts_fm <- rbind(cm_line_fm, cm_square_fm)
+cm_square_value_fm <- cm_x_fm^2
+cm_line_fm <- tibble::tibble(
+  x = cm_x_fm, value = cm_x_fm, panel = cm_levels_fm[1], part = "x"
+)
+cm_square_fm <- tibble::tibble(
+  x = cm_x_fm, value = cm_square_value_fm, panel = cm_levels_fm[1],
+  part = "x^2"
+)
+cm_parts_fm <- dplyr::bind_rows(cm_line_fm, cm_square_fm)
 cm_parts_fm$panel <- factor(cm_parts_fm$panel, levels = cm_levels_fm)
-cm_chord_fm <- tibble::tibble(x = 0, xend = 2, value = 0, panel = cm_levels_fm[2])
+cm_chord_fm <- tibble::tibble(
+  x = 0, xend = 2, value = 0, panel = cm_levels_fm[2]
+)
 cm_chord_fm$panel <- factor(cm_chord_fm$panel, levels = cm_levels_fm)
 cm_mid_fm <- tibble::tibble(x = 1, value = 1, panel = cm_levels_fm[2])
 cm_mid_fm$panel <- factor(cm_mid_fm$panel, levels = cm_levels_fm)
@@ -56,11 +66,11 @@ ggplot2::ggplot(cm_main_fm, cm_aes_fm) +
 #| label: convex-max-python
 #| fig-alt: >-
 #|   Two panels over x. Left: the lines x and x squared in thin grey and their
-#|   pointwise maximum in blue, a curve that is convex. Right: the curve g of x,
-#|   the smaller of x squared and x minus 2 squared, in blue, a double dip with a
-#|   peak of 1 at x of 1. A vermilion segment along the x-axis joins the points
-#|   (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above
-#|   that segment.
+#|   pointwise maximum in blue, a curve that is convex. Right: the curve g of
+#|   x, the smaller of x squared and x minus 2 squared, in blue, a double dip
+#|   with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the
+#|   points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1)
+#|   lies above that segment.
 #| fig-height: 3.5
 #| fig-width: 7
 import matplotlib.pyplot as plt
@@ -85,6 +95,7 @@ plt.show()
 
 The [functions](functions.qmd#def-function) of @exm-convex-max.
 The [maximum](algebra.qmd#def-maximum) of the two [convex functions](algebra.qmd#def-convex-function) on the left is again one.
-The [minimum](algebra.qmd#def-minimum) on the right is not: $g(1) = 1$ is above $\tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$, the height of the segment.
+The [minimum](algebra.qmd#def-minimum) on the right is not:
+$g(1) = 1$ is above $\tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$, the height of the segment.
 
 :::

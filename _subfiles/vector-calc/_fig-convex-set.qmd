@@ -7,14 +7,18 @@
 ```{r}
 #| label: convex-set-r
 #| fig-alt: >-
-#|   A blue-outlined disk of radius 1 centered at the origin, shaded light blue.
-#|   Two vermilion circles mark points x and y inside it, joined by a vermilion
-#|   segment that stays inside the disk.
+#|   A blue-outlined disk of radius 1 centered at the origin, shaded light
+#|   blue. Two vermilion circles mark points x and y inside it, joined by a
+#|   vermilion segment that stays inside the disk.
 #| fig-height: 4
 #| fig-width: 4
 cs_angle_fc <- seq(0, 2 * pi, length.out = 201)
-cs_disk_fc <- tibble::tibble(x1 = cos(cs_angle_fc), x2 = sin(cs_angle_fc))
-cs_points_fc <- tibble::tibble(x1 = c(-0.7, 0.6), x2 = c(-0.4, 0.5))
+cs_cos_fc <- cos(cs_angle_fc)
+cs_sin_fc <- sin(cs_angle_fc)
+cs_disk_fc <- tibble::tibble(x1 = cs_cos_fc, x2 = cs_sin_fc)
+cs_points_x1_fc <- c(-0.7, 0.6)
+cs_points_x2_fc <- c(-0.4, 0.5)
+cs_points_fc <- tibble::tibble(x1 = cs_points_x1_fc, x2 = cs_points_x2_fc)
 cs_segment_fc <- tibble::tibble(
   x1 = -0.7, x2 = -0.4, x1_end = 0.6, x2_end = 0.5
 )
@@ -35,9 +39,9 @@ ggplot2::ggplot(cs_disk_fc, cs_aes_fc) +
 ```{python}
 #| label: convex-set-python
 #| fig-alt: >-
-#|   A blue-outlined disk of radius 1 centered at the origin, shaded light blue.
-#|   Two vermilion circles mark points x and y inside it, joined by a vermilion
-#|   segment that stays inside the disk.
+#|   A blue-outlined disk of radius 1 centered at the origin, shaded light
+#|   blue. Two vermilion circles mark points x and y inside it, joined by a
+#|   vermilion segment that stays inside the disk.
 #| fig-height: 4
 #| fig-width: 4
 import matplotlib.pyplot as plt

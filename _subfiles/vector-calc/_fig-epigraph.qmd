@@ -9,8 +9,8 @@
 #| fig-alt: >-
 #|   Plot of the parabola s equals x squared for x from -2 to 2. The region on
 #|   and above the parabola is shaded light blue. A vermilion filled circle at
-#|   (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below
-#|   the parabola, outside it.
+#|   (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies
+#|   below the parabola, outside it.
 #| fig-height: 4
 #| fig-width: 5
 ep_x_fe <- seq(-2, 2, length.out = 201)
@@ -45,8 +45,8 @@ ggplot2::ggplot(ep_curve_fe, ep_aes_fe) +
 #| fig-alt: >-
 #|   Plot of the parabola s equals x squared for x from -2 to 2. The region on
 #|   and above the parabola is shaded light blue. A vermilion filled circle at
-#|   (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below
-#|   the parabola, outside it.
+#|   (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies
+#|   below the parabola, outside it.
 #| fig-height: 4
 #| fig-width: 5
 import matplotlib.pyplot as plt
