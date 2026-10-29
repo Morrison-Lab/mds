@@ -1,0 +1,15 @@
+---
+title: "Product Measures"
+format:
+  html: default
+  revealjs:
+    output-file: measures-product-slides.html
+  pdf:
+    output-file: measures-product-handout.pdf
+  docx:
+    output-file: measures-product.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_measures_product.qmd >}}

@@ -1,0 +1,15 @@
+---
+title: "$L^p$ Spaces"
+format:
+  html: default
+  revealjs:
+    output-file: measures-lp-spaces-slides.html
+  pdf:
+    output-file: measures-lp-spaces-handout.pdf
+  docx:
+    output-file: measures-lp-spaces.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_measures_lp_spaces.qmd >}}

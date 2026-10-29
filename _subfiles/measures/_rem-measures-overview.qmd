@@ -1,0 +1,12 @@
+::: remark
+
+A measure assigns a size to each set in a
+[collection of sets](sets.qmd#def-collection):
+how many elements it has, how long it is, or how likely it is.
+These notes build measures from $\sigma$-algebras and additivity,
+using the definitions on the [Sets](sets.qmd) and [Functions](functions.qmd) pages.
+One kind of measure, the probability measure (@def-probability-measure),
+is the starting point of the Morrison Lab's probability notes
+([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
+
+:::

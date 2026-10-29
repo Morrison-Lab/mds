@@ -1,0 +1,35 @@
+## Measurable functions and integrals
+
+{{< include mds/_subfiles/measures/_def-measurable-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-measurable-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-integral-nonneg.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-integral-nonneg.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_rem-positive-negative-parts.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-integral.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-integral.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-absolutely-integrable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-absolutely-integrable.qmd >}}

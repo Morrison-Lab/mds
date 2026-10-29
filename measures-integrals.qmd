@@ -1,0 +1,15 @@
+---
+title: "Measurable Functions and Integrals"
+format:
+  html: default
+  revealjs:
+    output-file: measures-integrals-slides.html
+  pdf:
+    output-file: measures-integrals-handout.pdf
+  docx:
+    output-file: measures-integrals.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_measures_integrals.qmd >}}

@@ -39,6 +39,14 @@ page-xrefs:
       - algebra-exponentials.qmd
       - algebra-trigonometry.qmd
       - algebra-complex.qmd
+  - index: measures.qmd
+    pages:
+      - measures-sigma-algebras.qmd
+      - measures-additivity.qmd
+      - measures-measure-spaces.qmd
+      - measures-integrals.qmd
+      - measures-lp-spaces.qmd
+      - measures-product.qmd
   - index: calculus.qmd
     pages:
       - calculus-derivatives.qmd

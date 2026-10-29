@@ -1,0 +1,47 @@
+## $\sigma$-algebras
+
+{{< include mds/_subfiles/measures/_def-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-sigma-algebra-closed-under.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_thm-sigma-algebra-closure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_thm-power-set-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_thm-sigma-algebra-intersection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-generated-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-generated-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-borel-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-borel-sigma-algebra-half-lines.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-borel-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-borel-sigma-algebra.qmd >}}
