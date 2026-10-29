@@ -1,0 +1,39 @@
+::: {#exm-plateau}
+#### A cost with no stationary point
+
+```{r}
+#| label: plateau-sizes-r
+#| echo: false
+plateau_exp_zero_pe <- exp(0)
+plateau_size_zero_pe <- 1 / (1 + plateau_exp_zero_pe)
+plateau_exp_ten_pe <- exp(10)
+plateau_size_ten_pe <- 1 / (1 + plateau_exp_ten_pe)
+plateau_size_ten_sig_pe <- signif(plateau_size_ten_pe, 3)
+```
+
+<!--
+Bare f and x on purpose: latex-macros/macros.qmd has no macro for a scalar
+function or its scalar variable, and the basin example writes f(x) the same way.
+-->
+
+Let $f(x) = \log\paren{1 + \e{-x}}$.
+Its [derivative](calculus-derivatives.qmd#def-derivative) is
+$\deriv{x} f(x) = -1 / (1 + \e{x})$,
+which is negative for every $x$,
+so $f$ has no [stationary point](#def-stationary-point) at all.
+
+At $x = 0$ the [gradient](vector-calculus.qmd#def-vector-derivative)
+has size $`{r} plateau_size_zero_pe`$.
+At $x = 10$ it has size $`{r} plateau_size_ten_sig_pe`$,
+which is small but not zero.
+A step of [gradient descent](#def-gradient-descent)
+subtracts the gradient times the [step length](#def-gradient-descent).
+The gradient is negative,
+so the [iterates](#def-iterate) keep moving to the right,
+more and more slowly.
+With tolerance $\epsilon = 10^{-4}$,
+the region $x \ge 10$ is a plateau (@def-plateau).
+A run that enters this plateau has not converged;
+the run has only slowed down.
+
+:::

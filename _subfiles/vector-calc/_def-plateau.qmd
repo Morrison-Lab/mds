@@ -1,0 +1,20 @@
+::: {#def-plateau}
+#### Plateau
+
+Let $f : \reals^p \to \reals$ be a [function](functions.qmd#def-function)
+with a [gradient](vector-calculus.qmd#def-vector-derivative)
+at every point of a region,
+and let $\epsilon > 0$ be a tolerance.
+The region is a **plateau** of $f$ if the
+[Euclidean norm](linear-algebra-vectors.qmd#def-euclidean-norm)
+of the gradient satisfies
+
+$$
+0 < \norm{\deriv{\vx} f(\vx)} < \epsilon
+$$
+
+at every point $\vx$ of the region.
+The function is then nearly flat on the region,
+and the region contains no [stationary point](#def-stationary-point).
+
+:::
