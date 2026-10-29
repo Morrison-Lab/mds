@@ -11,9 +11,10 @@
 #|   at 10. The left plot, titled p equals 1, shows the curve one over the
 #|   square root of x falling steeply from 10 at x of 0.01 to 1 at x of
 #|   1, with the area under it shaded blue; the area is 2. The right plot,
-#|   titled p equals 2, shows the curve one over x, which rises past 10 at x of 0.1 and
-#|   keeps climbing toward x of 0, with the area under it shaded vermilion and running off
-#|   the top of the plot, because its area is infinite.
+#|   titled p equals 2, shows the curve one over x, which rises past 10
+#|   just left of x of 0.1 and keeps climbing toward x of 0.
+#|   The area under it is shaded vermilion and runs off the top of the plot,
+#|   because its area is infinite.
 #| fig-height: 3.5
 #| fig-width: 7
 lpss_x_pf <- seq(0.01, 1, length.out = 400)
@@ -28,13 +29,14 @@ lpss_p2_pf <- tibble::tibble(
 lpss_curves_pf <- dplyr::bind_rows(lpss_p1_pf, lpss_p2_pf)
 lpss_aes_pf <- ggplot2::aes(x, y, fill = panel, colour = panel)
 lpss_colours_pf <- c("#0072B2", "#D55E00")
+lpss_ylim_pf <- c(0, 10)
 ggplot2::ggplot(lpss_curves_pf, lpss_aes_pf) +
   ggplot2::geom_area(alpha = 0.3, colour = NA) +
   ggplot2::geom_line() +
   ggplot2::facet_wrap(ggplot2::vars(panel)) +
   ggplot2::scale_fill_manual(values = lpss_colours_pf) +
   ggplot2::scale_colour_manual(values = lpss_colours_pf) +
-  ggplot2::coord_cartesian(ylim = c(0, 10)) +
+  ggplot2::coord_cartesian(ylim = lpss_ylim_pf) +
   ggplot2::guides(fill = "none", colour = "none") +
   ggplot2::labs(x = "x", y = "|f(x)|^p")
 ```
@@ -48,9 +50,10 @@ ggplot2::ggplot(lpss_curves_pf, lpss_aes_pf) +
 #|   at 10. The left plot, titled p equals 1, shows the curve one over the
 #|   square root of x falling steeply from 10 at x of 0.01 to 1 at x of
 #|   1, with the area under it shaded blue; the area is 2. The right plot,
-#|   titled p equals 2, shows the curve one over x, which rises past 10 at x of 0.1 and
-#|   keeps climbing toward x of 0, with the area under it shaded vermilion and running off
-#|   the top of the plot, because its area is infinite.
+#|   titled p equals 2, shows the curve one over x, which rises past 10
+#|   just left of x of 0.1 and keeps climbing toward x of 0.
+#|   The area under it is shaded vermilion and runs off the top of the plot,
+#|   because its area is infinite.
 #| fig-height: 3.5
 #| fig-width: 7
 import matplotlib.pyplot as plt
