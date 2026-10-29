@@ -1,9 +1,0 @@
-:::{#exr-best-step-evaluate}
-
-#### Evaluate the best step length
-
-Let $\matr{S} = \sbmat{ 1 & 0 \\ 0 & 9 }$.
-Using @thm-best-constant-step,
-find $\steplen^*$, $\condnum(\matr{S})$ and $\convrate(\steplen^*)$.
-
-:::

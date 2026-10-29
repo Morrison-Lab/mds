@@ -1,9 +1,0 @@
-:::{#exr-step-length-range}
-
-#### Which step lengths shrink the error bound
-
-In the setting of @thm-gd-quadratic-error,
-find all $\steplen > 0$ with $\convrate(\steplen) < 1$,
-and write the answer as a condition on $\steplen$ that involves $\eigval_{\max}$.
-
-:::
