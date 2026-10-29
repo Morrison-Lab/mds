@@ -252,6 +252,14 @@
 
 {{< include mds/_subfiles/vector-calc/_def-backtracking-line-search.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-gd-quadratic-error.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-gd-quadratic-error.qmd >}}
+
 ## Quasi-Newton methods {#sec-quasi-newton}
 
 {{< include mds/_subfiles/vector-calc/_prose-quasinewton-attribution.qmd >}}

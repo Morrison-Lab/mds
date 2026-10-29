@@ -1,0 +1,75 @@
+:::{#thm-gd-quadratic-error}
+#### A bound on the error of gradient descent on a quadratic
+
+Let $\matr{S}$ be a $p \times p$
+[positive definite matrix](linear-algebra.qmd#def-positive-definite)
+with [eigenvalues](linear-algebra.qmd#def-eigenvalue) $\eigval_1, \ldots, \eigval_p$,
+let $\vecf{c} \in \reals^p$,
+and let $f(\vx) = \tfrac{1}{2}\,\qform{\matr{S}}{\vx} - \dprod{\vecf{c}}{\vx}$,
+whose unique [minimizer](algebra.qmd#def-global-minimizer) is $\vx^* = \matr{S}^{-1} \vecf{c}$ (@thm-newton-quadratic).
+[Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $\steplen > 0$
+from any $\iterpoint{\vx}{0}$ has [errors](#def-iterate-error) satisfying, for $t = 1, 2, \ldots$,
+
+$$
+\norm{\iterpoint{\vx}{t} - \vx^*} \le \convrate(\steplen)^t\,\norm{\iterpoint{\vx}{0} - \vx^*},
+\qquad
+\convrate(\steplen) \eqdef \max_{1 \le i \le p} \abs{1 - \steplen\,\eigval_i}.
+$$
+
+:::
+
+::: proof
+
+Let $\ve^{(t)} \eqdef \iterpoint{\vx}{t} - \vx^*$ be the [error](#def-iterate-error) at step $t$.
+The [gradient](vector-calculus.qmd#def-vector-derivative) of $f$ is $\deriv{\vx} f(\vx) = \matr{S}\vx - \vecf{c}$
+(see the proof of @thm-newton-quadratic),
+and $\vecf{c} = \matr{S}\vx^*$,
+so
+
+$$
+\ba
+\ve^{(t+1)}
+&= \iterpoint{\vx}{t} - \steplen\,(\matr{S}\iterpoint{\vx}{t} - \vecf{c}) - \vx^*
+&& \text{(definition of gradient descent)}
+\\
+&= \iterpoint{\vx}{t} - \steplen\,\matr{S}(\iterpoint{\vx}{t} - \vx^*) - \vx^*
+&& \text{(} \vecf{c} = \matr{S}\vx^* \text{)}
+\\
+&= (\matr{I}_p - \steplen\,\matr{S})\,\ve^{(t)}.
+&& \text{(collect the terms in } \ve^{(t)} \text{)}
+\ea
+$$
+
+By [induction](proof-writing.qmd#def-proof-by-induction) on $t$, $\ve^{(t)} = (\matr{I}_p - \steplen\,\matr{S})^t\,\ve^{(0)}$.
+Write $\matr{S} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$
+([spectral theorem](linear-algebra.qmd#thm-spectral)).
+Then $\matr{I}_p - \steplen\,\matr{S} = \matr{Q}(\matr{I}_p - \steplen\,\matr{\Eigvals})\tp{\matr{Q}}$
+because $\matr{Q}\tp{\matr{Q}} = \matr{I}_p$,
+and the $t$th [power](linear-algebra.qmd#def-matrix-power) cancels each inner $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$,
+so
+
+$$
+\ba
+\norm{\ve^{(t)}}
+&= \norm{\matr{Q}(\matr{I}_p - \steplen\,\matr{\Eigvals})^t\tp{\matr{Q}}\ve^{(0)}}
+&& \text{(the factorization above)}
+\\
+&= \norm{(\matr{I}_p - \steplen\,\matr{\Eigvals})^t\tp{\matr{Q}}\ve^{(0)}}
+&& \text{(orthogonal matrices preserve length)}
+\\
+&\le \convrate(\steplen)^t\,\norm{\tp{\matr{Q}}\ve^{(0)}}
+&& \text{(each coordinate is multiplied by } (1 - \steplen\eigval_i)^t \text{)}
+\\
+&= \convrate(\steplen)^t\,\norm{\ve^{(0)}}.
+&& \text{(orthogonal matrices preserve length)}
+\ea
+$$
+
+The length-preserving steps apply
+[orthogonal matrices preserve length](linear-algebra.qmd#thm-orthogonal-norm).
+The [inequality](proof-writing.qmd#def-inequality) holds
+because $\matr{I}_p - \steplen\,\matr{\Eigvals}$ is diagonal,
+so its $t$th power multiplies coordinate $i$ by $(1 - \steplen\,\eigval_i)^t$,
+whose [absolute value](algebra.qmd#def-absolute-value) is at most $\convrate(\steplen)^t$.
+
+:::

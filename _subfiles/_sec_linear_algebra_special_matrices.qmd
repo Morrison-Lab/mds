@@ -166,6 +166,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-condition-number.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-pd-inverse.qmd >}}
 
 {{< slidebreak >}}
