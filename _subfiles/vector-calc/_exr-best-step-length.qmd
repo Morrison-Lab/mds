@@ -2,7 +2,8 @@
 
 #### The best step length for eigenvalues 1 and 9
 
-A fixed step length in [gradient descent](optimization.qmd#def-gradient-descent) converges slowly if it is too short and diverges if it is too long.
+In [gradient descent](optimization.qmd#def-gradient-descent), a fixed [step length](optimization.qmd#def-gradient-descent) that is too short [converges](algebra.qmd#def-convergent-sequence) slowly,
+and one that is too long [diverges](algebra.qmd#def-divergent-sequence).
 @thm-best-constant-step gives the best one from the [eigenvalues](linear-algebra.qmd#def-eigenvalue) of $\matr{S}$.
 
 Let $\matr{S} = \sbmat{ 1 & 0 \\ 0 & 9 }$.
