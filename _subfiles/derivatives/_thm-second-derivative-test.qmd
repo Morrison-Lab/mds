@@ -4,10 +4,8 @@
 Let $c$ be a [flat point](#def-flat-point) of $f$,
 where the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''(c)$ is defined.
 
-- If $f''(c) > 0$, then $f(x) > f(c)$ for every $x \ne c$ in some [open interval](sets.qmd#def-open-interval) around $c$,
-  so $c$ is a [local minimizer](algebra.qmd#def-local-minimizer).
-- If $f''(c) < 0$, then $f(x) < f(c)$ for every $x \ne c$ in some open interval around $c$,
-  so $f$ is largest at $c$ among the points near $c$.
+- If $f''(c) > 0$, then $f(x) > f(c)$ for every $x \ne c$ in some [open interval](sets.qmd#def-open-interval) around $c$.
+- If $f''(c) < 0$, then $f(x) < f(c)$ for every $x \ne c$ in some open interval around $c$.
 
 :::
 
