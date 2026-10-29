@@ -1,5 +1,10 @@
 ## Measures
 
+```{r}
+#| include: false
+reticulate::py_require(c("numpy", "matplotlib"))
+```
+
 {{< include mds/_subfiles/measures/_def-measure.qmd >}}
 
 {{< slidebreak >}}
@@ -65,6 +70,8 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-almost-everywhere.qmd >}}
+
+{{< include mds/_subfiles/measures/_fig-almost-everywhere.qmd >}}
 
 {{< slidebreak >}}
 

@@ -1,0 +1,65 @@
+::: {#fig-almost-everywhere}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: almost-everywhere-r
+#| fig-alt: >-
+#|   Plot of a function for x from minus 3 to 3. A blue parabola, x squared,
+#|   opens upward with its lowest value 0 at x of 0. At each of the integers
+#|   minus 3 to 3, the parabola has an open circle, and a vermilion filled
+#|   point sits below the axis at the value minus 1.
+#| fig-height: 3.5
+#| fig-width: 5
+aeg_x_pf <- seq(-3, 3, length.out = 301)
+aeg_curve_pf <- tibble::tibble(x = aeg_x_pf, y = aeg_x_pf^2)
+aeg_ints_pf <- -3:3
+aeg_open_pf <- tibble::tibble(x = aeg_ints_pf, y = aeg_ints_pf^2)
+aeg_dots_pf <- tibble::tibble(x = aeg_ints_pf, y = -1)
+aeg_aes_pf <- ggplot2::aes(x, y)
+ggplot2::ggplot(aeg_curve_pf, aeg_aes_pf) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(data = aeg_open_pf, shape = 1, size = 3) +
+  ggplot2::geom_point(data = aeg_dots_pf, colour = "#D55E00", size = 3) +
+  ggplot2::geom_hline(yintercept = 0, linetype = "dashed") +
+  ggplot2::labs(x = "x", y = "g(x)")
+```
+
+### Python
+
+```{python}
+#| label: almost-everywhere-python
+#| fig-alt: >-
+#|   Plot of a function for x from minus 3 to 3. A blue parabola, x squared,
+#|   opens upward with its lowest value 0 at x of 0. At each of the integers
+#|   minus 3 to 3, the parabola has an open circle, and a vermilion filled
+#|   point sits below the axis at the value minus 1.
+#| fig-height: 3.5
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+aeg_x_pf = np.linspace(-3, 3, 301)
+aeg_ints_pf = np.arange(-3, 4)
+fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
+ax.plot(aeg_x_pf, aeg_x_pf**2, color="#0072B2")
+ax.plot(aeg_ints_pf, aeg_ints_pf**2, linestyle="", marker="o",
+        markerfacecolor="white", color="black")
+ax.plot(aeg_ints_pf, -np.ones(7), linestyle="", marker="o", color="#D55E00")
+ax.axhline(0, linestyle="dashed", color="black")
+ax.set_xlabel("x")
+ax.set_ylabel("g(x)")
+plt.show()
+```
+
+:::
+
+The function $g$ in @exm-almost-everywhere, on $[-3, 3]$.
+It is $x^2$ except at the integers, where it is $-1$.
+It falls below the dashed line $g = 0$ only at those points,
+which together have [measure zero](#def-measure-zero),
+so $g \ge 0$ [almost everywhere](#def-almost-everywhere).
+
+:::
