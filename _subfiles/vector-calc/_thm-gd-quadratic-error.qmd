@@ -22,7 +22,9 @@ $$
 
 Let $\ve^{(t)} \eqdef \iterpoint{\vx}{t} - \vx^*$ be the [error](#def-iterate-error) at step $t$.
 The [gradient](vector-calculus.qmd#def-vector-derivative) of $f$ is $\deriv{\vx} f(\vx) = \matr{S}\vx - \vecf{c}$
-(see the proof of @thm-newton-quadratic), and $\vecf{c} = \matr{S}\vx^*$, so
+(see the proof of @thm-newton-quadratic),
+and $\vecf{c} = \matr{S}\vx^*$,
+so
 
 $$
 \ba
@@ -43,7 +45,8 @@ Write $\matr{S} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$
 ([spectral theorem](linear-algebra.qmd#thm-spectral)).
 Then $\matr{I}_p - \steplen\,\matr{S} = \matr{Q}(\matr{I}_p - \steplen\,\matr{\Eigvals})\tp{\matr{Q}}$
 because $\matr{Q}\tp{\matr{Q}} = \matr{I}_p$,
-and the $t$th [power](linear-algebra.qmd#def-matrix-power) cancels each inner $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$, so
+and the $t$th [power](linear-algebra.qmd#def-matrix-power) cancels each inner $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$,
+so
 
 $$
 \ba
@@ -64,7 +67,8 @@ $$
 
 The length-preserving steps apply
 [orthogonal matrices preserve length](linear-algebra.qmd#thm-orthogonal-norm).
-The [inequality](proof-writing.qmd#def-inequality) holds because $\matr{I}_p - \steplen\,\matr{\Eigvals}$ is diagonal,
+The [inequality](proof-writing.qmd#def-inequality) holds
+because $\matr{I}_p - \steplen\,\matr{\Eigvals}$ is diagonal,
 so its $t$th power multiplies coordinate $i$ by $(1 - \steplen\,\eigval_i)^t$,
 whose [absolute value](algebra.qmd#def-absolute-value) is at most $\convrate(\steplen)^t$.
 

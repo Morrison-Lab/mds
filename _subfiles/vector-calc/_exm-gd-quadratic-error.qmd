@@ -13,7 +13,8 @@ gdq_rho_pe <- max(gdq_abs_pe)
 
 Let $\matr{S} = \sbmat{ 2 & 1 \\ 1 & 2 }$ with [eigenvalues](linear-algebra.qmd#def-eigenvalue) $3$ and $1$
 ([eigenvalue example](linear-algebra.qmd#exm-eigenvalue)),
-and $\vecf{c} = \vzero_{2 \times 1}$, so $\vx^* = \vzero_{2 \times 1}$.
+and $\vecf{c} = \vzero_{2 \times 1}$,
+so $\vx^* = \vzero_{2 \times 1}$.
 With $\steplen = `{r} gdq_s_pe`$, the factors $1 - \steplen\,\eigval_i$ are
 $`{r} gdq_factors_pe[1]`$ and $`{r} gdq_factors_pe[2]`$,
 so $\convrate(\steplen) = `{r} gdq_rho_pe`$ and
