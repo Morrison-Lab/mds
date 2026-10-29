@@ -16,23 +16,23 @@ format:
 
 ::: {.content-visible when-format="html"}
 
-The measure notes are split across these pages:
+The measure notes are split across these pages: <!-- check-term-links: allow -->
 
 - [Sigma-Algebras](measures-sigma-algebras.qmd):
-  $\sigma$-algebras, generated $\sigma$-algebras, and the Borel $\sigma$-algebra.
+  $\sigma$-algebras, generated $\sigma$-algebras, and the Borel $\sigma$-algebra. <!-- check-term-links: allow -->
 - [Additivity](measures-additivity.qmd):
-  finite and countable additivity.
+  finite and countable additivity. <!-- check-term-links: allow -->
 - [Measures and Probability Measures](measures-measure-spaces.qmd):
-  measures, the counting and Lebesgue measures, measure spaces, null sets,
-  $\sigma$-finite measures, probability measures, and probability spaces.
+  measures, the counting and Lebesgue measures, measure spaces, null sets, <!-- check-term-links: allow -->
+  $\sigma$-finite measures, probability measures, and probability spaces. <!-- check-term-links: allow -->
 - [Measurable Functions and Integrals](measures-integrals.qmd):
-  measurable functions, the integral, and absolutely integrable functions.
+  measurable functions, the integral, and absolutely integrable functions. <!-- check-term-links: allow -->
 - [$L^p$ Spaces](measures-lp-spaces.qmd):
-  $L^p$ norms and spaces, the essential supremum, and the Hölder and Minkowski inequalities.
+  $L^p$ norms and spaces, the essential supremum, and the Hölder and Minkowski inequalities. <!-- check-term-links: allow -->
 - [Product Measures](measures-product.qmd):
-  product $\sigma$-algebras and product measures.
+  product $\sigma$-algebras and product measures. <!-- check-term-links: allow -->
 
-A link to a section, theorem or definition on this page from before the split
+A link to a section, theorem or definition on this page from before the split <!-- check-term-links: allow -->
 goes on to the page that now holds it.
 
 :::
