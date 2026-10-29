@@ -1,0 +1,27 @@
+::: {#thm-level-sets-linear}
+
+#### Level sets of a linear function
+
+Let $\modmemf{\vx} = \dprod{\vcoef}{\vx} + \coef{0}$ with $\vcoef \neq \vzero$.
+Every level set $\levelsetof{c}{\modmem}$ of @def-level-set is a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) with normal vector $\vcoef$,
+parallel to the level set $\levelsetof{0}{\modmem}$.
+Its dimension is $p - 1$:
+a point for $p = 1$, a line for $p = 2$, and a two-dimensional plane for $p = 3$.
+
+:::
+
+::: proof
+For any $c$,
+
+$$
+\begin{aligned}
+\levelsetof{c}{\modmem}
+&= \set{ \vx : \dprod{\vcoef}{\vx} + \coef{0} = c } \\
+&= \set{ \vx : \dprod{\vcoef}{\vx} + (\coef{0} - c) = 0 }.
+\end{aligned}
+$$
+
+This is the hyperplane of @def-hyperplane with normal vector $\vcoef$ and offset $\coef{0} - c$.
+Different values of $c$ change only the offset, so the level sets share the normal vector and are parallel.
+A hyperplane in $\reals^p$ has dimension $p - 1$ by @thm-hyperplane-subspace.
+:::

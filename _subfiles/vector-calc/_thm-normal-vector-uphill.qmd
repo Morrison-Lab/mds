@@ -1,0 +1,40 @@
+::: {#thm-normal-vector-uphill}
+
+#### The normal vector points uphill
+
+Let $\modmemf{\vx} = \dprod{\vcoef}{\vx} + \coef{0}$ with $\vcoef \neq \vzero$.
+
+1. For every $\vx \in \reals^p$ and $t \in \reals$, $\modmemf{\vx + t\vcoef} = \modmemf{\vx} + t\norm{\vcoef}^2$.
+2. Among [unit vectors](linear-algebra-vectors.qmd#def-unit-vector) $\vu$ ($\norm{\vu} = 1$), the change $\modmemf{\vx + t\vu} - \modmemf{\vx}$ with $t > 0$ is largest for $\vu = \vcoef / \norm{\vcoef}$.
+
+:::
+
+::: proof
+**Part 1.**
+By linearity of the dot product,
+
+$$
+\begin{aligned}
+\modmemf{\vx + t\vcoef}
+&= \dprod{\vcoef}{\vx + t\vcoef} + \coef{0} \\
+&= \dprod{\vcoef}{\vx} + t\dprod{\vcoef}{\vcoef} + \coef{0} \\
+&= \modmemf{\vx} + t\norm{\vcoef}^2.
+\end{aligned}
+$$
+
+**Part 2.**
+For a unit vector $\vu$,
+
+$$
+\modmemf{\vx + t\vu} - \modmemf{\vx} = t\dprod{\vcoef}{\vu}.
+$$
+
+Since $t > 0$, maximizing this change is the same as maximizing $\dprod{\vcoef}{\vu}$.
+By the [Cauchy-Schwarz inequality](linear-algebra-inner-products.qmd#thm-cauchy-schwarz), $\dprod{\vcoef}{\vu} \le \norm{\vcoef}\norm{\vu} = \norm{\vcoef}$.
+Equality holds exactly when $\vu = \alpha\vcoef$ for some $\alpha > 0$.
+The condition $\norm{\vu} = 1$ then forces $\alpha\norm{\vcoef} = 1$, so
+
+$$
+\vu = \vcoef / \norm{\vcoef}.
+$$
+:::

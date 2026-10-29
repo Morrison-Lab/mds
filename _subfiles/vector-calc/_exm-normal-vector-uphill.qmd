@@ -1,0 +1,11 @@
+::: {#exm-normal-vector-uphill}
+
+#### Stepping along the normal vector
+
+Let $\modmemf{\vx} = 2x_1 + x_2 + 1$ as in @exm-level-sets-linear, so $\vcoef = \tp{(2, 1)}$ and $\norm{\vcoef}^2 = 5$.
+At $\vx = \vzero$, $\modmemf{\vzero} = 1$.
+A step of $t = 1$ along $\vcoef$ lands at $\tp{(2, 1)}$, where $\modmemf{\tp{(2, 1)}} = 4 + 1 + 1 = 6 = 1 + 5$.
+A unit step along the unit vector $\vcoef / \sqrt{5}$ raises the value by $\sqrt{5} \approx 2.24$,
+while a unit step along $\tp{(1, 0)}$ raises it by only $2$.
+
+:::
