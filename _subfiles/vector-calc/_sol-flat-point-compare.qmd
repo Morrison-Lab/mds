@@ -15,7 +15,7 @@ $$
 
 so halving the step quarters that difference.
 
-A step of [gradient descent](optimization.qmd#def-gradient-descent) with step length $s$
+A step of [gradient descent](optimization.qmd#def-gradient-descent) with [step length](optimization.qmd#def-gradient-descent) $s$
 changes $w$ by $\smallconst = -s f'(w)$.
 The linear approximation predicts the change $-s\,f'(w)^2$ in $f$,
 and the difference between $f(w + \smallconst)$ and its linear approximation is
