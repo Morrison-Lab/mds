@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-28 18:09:41 (PDT)
+Last modified: 2026-10-28 20:06:09 (PDT)
 
 > **NOTE:**
 >
@@ -661,27 +661,29 @@ Last modified: 2026-10-28 18:09:41 (PDT)
 >
 > **Definition 22 (Logistic function, sigmoid, expit)** The **logistic function**, also called the **sigmoid** or **expit**, is the [function](#def-function) \\\operatorname{expit}: \mathbb{R}\to (0, 1)\\ with [\[15\]](#ref-wikipedia_logistic_function)
 >
-> \\{\operatorname{expit}\mathopen{}\left(z\right)\mathclose{}} \stackrel{\text{def}}{=}\frac{1}{1 + e^{-z}}.\\
+> \\{\operatorname{expit}\mathopen{}\left(\eta\right)\mathclose{}} \stackrel{\text{def}}{=}\frac{1}{1 + \text{e}^{-\eta}}.\\
 
 > **NOTE:**
 >
-> **Example 16 (Values of the logistic function)** The [logistic function](#def-logistic-function) at \\z = -2\\, \\z = 0\\ or \\z = 2\\ has these [values](#def-value):
+> **Example 16 (Values of the logistic function)** The [logistic function](#def-logistic-function) at \\\eta= -2\\, \\\eta= 0\\ or \\\eta= 2\\ has these [values](#def-value):
 >
 > ``` downlit
-> z <- c(-2, 0, 2)
-> data.frame(z = z, sigmoid = 1 / (1 + exp(-z)))
+> eta <- c(-2, 0, 2)
+> data.frame(eta = eta, sigmoid = 1 / (1 + exp(-eta)))
 > ```
 >
-> The [value](#def-value) at \\z = 0\\ is \\1 / (1 + e^0) = 1/2\\. The values at \\\pm 2\\ add to 1; each lies in \\(0, 1)\\.
+> The [value](#def-value) at \\\eta= 0\\ is \\1 / (1 + \text{e}^{-0}) = 1/2\\. The values at \\\pm 2\\ add to 1; each lies in \\(0, 1)\\.
 
 > **NOTE:**
 >
 > Show R code
 >
 > ``` downlit
-> z_grid <- seq(-6, 6, length.out = 241)
-> logistic_curve <- data.frame(z = z_grid, sigmoid = plogis(z_grid))
-> logistic_points <- data.frame(z = c(-2, 0, 2), sigmoid = plogis(c(-2, 0, 2)))
+> # the Greek letter eta, written as a code point to keep this file ASCII
+> eta_symbol <- intToUtf8(0x3b7)
+> eta_grid <- seq(-6, 6, length.out = 241)
+> logistic_curve <- data.frame(eta = eta_grid, sigmoid = plogis(eta_grid))
+> logistic_points <- data.frame(eta = c(-2, 0, 2), sigmoid = plogis(c(-2, 0, 2)))
 > logistic_points$label <- sprintf("%.3f", logistic_points$sigmoid)
 >
 > logistic_function_plot <- ggplot2::ggplot() +
@@ -692,24 +694,27 @@ Last modified: 2026-10-28 18:09:41 (PDT)
 >   ) +
 >   ggplot2::geom_line(
 >     data = logistic_curve,
->     ggplot2::aes(x = z, y = sigmoid),
+>     ggplot2::aes(x = eta, y = sigmoid),
 >     colour = "#0072B2"
 >   ) +
 >   ggplot2::geom_point(
 >     data = logistic_points,
->     ggplot2::aes(x = z, y = sigmoid),
+>     ggplot2::aes(x = eta, y = sigmoid),
 >     size = 3,
 >     colour = "#D55E00"
 >   ) +
 >   ggplot2::geom_text(
 >     data = logistic_points,
->     ggplot2::aes(x = z, y = sigmoid, label = label),
+>     ggplot2::aes(x = eta, y = sigmoid, label = label),
 >     nudge_x = 0.2,
 >     nudge_y = -0.06,
 >     hjust = 0
 >   ) +
 >   ggplot2::scale_x_continuous(breaks = seq(-6, 6, 2)) +
->   ggplot2::labs(x = "Log-odds, z", y = "Probability, logistic(z)") +
+>   ggplot2::labs(
+>     x = paste0("Log-odds, ", eta_symbol),
+>     y = paste0("Probability, logistic(", eta_symbol, ")")
+>   ) +
 >   ggplot2::theme_minimal()
 >
 > if (knitr::is_html_output()) {
@@ -723,7 +728,7 @@ Last modified: 2026-10-28 18:09:41 (PDT)
 > }
 > ```
 >
-> Figure 9: The [logistic function](#def-logistic-function) for \\z\\ from \\-6\\ to \\6\\. Its [values](#def-value) lie strictly between \\0\\ and \\1\\, and the marked points are the values at \\z = -2\\, \\0\\ and \\2\\ from [Example 16](#exm-logistic-function).
+> Figure 9: The [logistic function](#def-logistic-function) for \\\eta\\ from \\-6\\ to \\6\\. Its [values](#def-value) lie strictly between \\0\\ and \\1\\, and the marked points are the values at \\\eta= -2\\, \\0\\ and \\2\\ from [Example 16](#exm-logistic-function).
 
 ## 2 Countable sets
 
