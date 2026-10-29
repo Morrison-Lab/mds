@@ -4512,6 +4512,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-condition-number",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-condition-number",
+   "kind": "def",
+   "title": "Condition number of a positive definite matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-conjugate-transpose",
    "site": "mds",
    "page": "linear-algebra",
@@ -8517,6 +8526,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-special-matrices#def-condition-number",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-condition-number",
+   "kind": "def",
+   "title": "Condition number of a positive definite matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-special-matrices#def-determinant",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -10377,6 +10395,15 @@
    "div": "thm-flat-point-critical",
    "kind": "thm",
    "title": "Every flat point is a critical point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#thm-gd-quadratic-error",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-gd-quadratic-error",
+   "kind": "thm",
+   "title": "A bound on the error of gradient descent on a quadratic",
    "external": false
   },
   {
@@ -13779,6 +13806,18 @@
    "mds/algebra#def-complex-number"
   ],
   [
+   "mds/linear-algebra#def-condition-number",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra#def-condition-number",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra#def-condition-number",
+   "mds/linear-algebra#thm-definite-eigenvalues"
+  ],
+  [
    "mds/linear-algebra#def-consistent-system",
    "mds/linear-algebra#def-linear-system"
   ],
@@ -15415,6 +15454,18 @@
    "mds/linear-algebra-special-matrices#def-positive-definite"
   ],
   [
+   "mds/linear-algebra-special-matrices#def-condition-number",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-condition-number",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-condition-number",
+   "mds/linear-algebra#thm-definite-eigenvalues"
+  ],
+  [
    "mds/linear-algebra-special-matrices#def-eigendecomposition",
    "mds/linear-algebra-special-matrices#def-diagonal-matrix"
   ],
@@ -16717,6 +16768,30 @@
   [
    "mds/optimization#thm-flat-point-critical",
    "mds/optimization#def-flat-point"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/optimization#def-iterate-error"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/optimization#thm-newton-quadratic"
   ],
   [
    "mds/optimization#thm-newton-model",
