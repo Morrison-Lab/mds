@@ -2,7 +2,8 @@
 
 ```{r}
 #| include: false
-reticulate::py_require(c("numpy", "matplotlib"))
+py_packages <- c("numpy", "matplotlib")
+reticulate::py_require(py_packages)
 ```
 
 {{< include mds/_subfiles/measures/_def-measurable-function.qmd >}}
