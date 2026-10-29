@@ -53,10 +53,11 @@ plt.show()
 
 :::
 
-The function in @exm-essential-supremum-norm:
+The [function](functions.qmd#def-function) in @exm-essential-supremum-norm:
 $f(s) = s$ except $f(0) = 5$.
-The supremum is $5$, reached only at the single point $s = 0$,
+The [supremum](algebra.qmd#def-supremum) is $5$,
+reached only at the single point $s = 0$,
 which has [measure zero](#def-measure-zero),
-so the essential supremum norm is the dashed height $1$.
+so the [essential supremum norm](#def-essential-supremum-norm) is the dashed height $1$.
 
 :::

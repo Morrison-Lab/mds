@@ -76,8 +76,8 @@ plt.show()
 :::
 
 The area under $\abs{f}^p$ for $f(x) = x^{-1/2}$ on $(0, 1)$ in @exm-lp-space.
-The curve for $p = 1$ has finite area $2$, so $f \in \mathcal{L}^1$.
-The curve for $p = 2$ climbs without bound near $0$ and its area is infinite,
+The curve for $p = 1$ has area $2$, so $f \in \mathcal{L}^1$.
+The curve for $p = 2$ keeps climbing toward $x = 0$ and its area is $\infty$,
 so $f \notin \mathcal{L}^2$.
 The plots cut the curves off at $10$.
 
