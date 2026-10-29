@@ -1,0 +1,68 @@
+::: {#fig-lp-norm-areas}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: lp-norm-areas-r
+#| fig-alt: >-
+#|   Two side-by-side plots of a curve over x from 0 to 1, each with the area
+#|   under the curve shaded blue. The left plot, titled p equals 1, shows the
+#|   straight line from 0 at x of 0 to 1 at x of 1, with a shaded triangle of
+#|   area one half. The right plot, titled p equals 2, shows the parabola from
+#|   0 to 1, with the shaded region under it of area one third.
+#| fig-height: 3.5
+#| fig-width: 7
+lpna_x_pf <- seq(0, 1, length.out = 201)
+lpna_p1_pf <- tibble::tibble(
+  x = lpna_x_pf, y = lpna_x_pf, panel = "p = 1: area = 1/2"
+)
+lpna_sq_pf <- lpna_x_pf^2
+lpna_p2_pf <- tibble::tibble(
+  x = lpna_x_pf, y = lpna_sq_pf, panel = "p = 2: area = 1/3"
+)
+lpna_curves_pf <- dplyr::bind_rows(lpna_p1_pf, lpna_p2_pf)
+lpna_aes_pf <- ggplot2::aes(x, y)
+ggplot2::ggplot(lpna_curves_pf, lpna_aes_pf) +
+  ggplot2::geom_area(fill = "#0072B2", alpha = 0.3) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::facet_wrap(ggplot2::vars(panel)) +
+  ggplot2::labs(x = "x", y = "|f(x)|^p")
+```
+
+### Python
+
+```{python}
+#| label: lp-norm-areas-python
+#| fig-alt: >-
+#|   Two side-by-side plots of a curve over x from 0 to 1, each with the area
+#|   under the curve shaded blue. The left plot, titled p equals 1, shows the
+#|   straight line from 0 at x of 0 to 1 at x of 1, with a shaded triangle of
+#|   area one half. The right plot, titled p equals 2, shows the parabola from
+#|   0 to 1, with the shaded region under it of area one third.
+#| fig-height: 3.5
+#| fig-width: 7
+import matplotlib.pyplot as plt
+import numpy as np
+
+lpna_x_pf = np.linspace(0, 1, 201)
+fig, axes = plt.subplots(1, 2, figsize=(7, 3.5), sharey=True,
+                         layout="constrained")
+for ax, p, title in zip(axes, [1, 2], ["p = 1: area = 1/2", "p = 2: area = 1/3"]):
+    ax.fill_between(lpna_x_pf, lpna_x_pf**p, color="#0072B2", alpha=0.3)
+    ax.plot(lpna_x_pf, lpna_x_pf**p, color="#0072B2")
+    ax.set_title(title)
+    ax.set_xlabel("x")
+axes[0].set_ylabel("|f(x)|^p")
+plt.show()
+```
+
+:::
+
+The area under $\abs{f}^p$ for $f(x) = x$ on $[0, 1]$
+in @exm-lp-norm.
+The area is $\norm{f}_p^p$: $1/2$ for $p = 1$ and $1/3$ for $p = 2$,
+so $\norm{f}_2 = \sqrt{1/3}$.
+
+:::

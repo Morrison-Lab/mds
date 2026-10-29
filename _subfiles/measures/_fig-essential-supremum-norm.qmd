@@ -1,0 +1,63 @@
+::: {#fig-essential-supremum-norm}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: essential-supremum-norm-r
+#| fig-alt: >-
+#|   Plot of a function on x from 0 to 1. A solid blue diagonal line rises
+#|   from an open circle at the origin to the point 1 at x of 1.
+#|   A single vermilion filled point sits far above, at the value 5 at x of 0.
+#|   A dashed horizontal line at height 1 marks the essential supremum.
+#| fig-height: 3.5
+#| fig-width: 5
+esn_x_pf <- seq(0, 1, length.out = 101)
+esn_line_pf <- tibble::tibble(x = esn_x_pf, y = esn_x_pf)
+esn_open_pf <- tibble::tibble(x = 0, y = 0)
+esn_spike_pf <- tibble::tibble(x = 0, y = 5)
+esn_aes_pf <- ggplot2::aes(x, y)
+ggplot2::ggplot(esn_line_pf, esn_aes_pf) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(data = esn_open_pf, shape = 1, size = 3) +
+  ggplot2::geom_point(data = esn_spike_pf, colour = "#D55E00", size = 3) +
+  ggplot2::geom_hline(yintercept = 1, linetype = "dashed") +
+  ggplot2::labs(x = "s", y = "f(s)")
+```
+
+### Python
+
+```{python}
+#| label: essential-supremum-norm-python
+#| fig-alt: >-
+#|   Plot of a function on x from 0 to 1. A solid blue diagonal line rises
+#|   from an open circle at the origin to the point 1 at x of 1.
+#|   A single vermilion filled point sits far above, at the value 5 at x of 0.
+#|   A dashed horizontal line at height 1 marks the essential supremum.
+#| fig-height: 3.5
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+esn_x_pf = np.linspace(0, 1, 101)
+fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
+ax.plot(esn_x_pf, esn_x_pf, color="#0072B2")
+ax.plot(0, 0, marker="o", markerfacecolor="white", color="black")
+ax.plot(0, 5, marker="o", color="#D55E00")
+ax.axhline(1, linestyle="dashed", color="black")
+ax.set_xlabel("s")
+ax.set_ylabel("f(s)")
+plt.show()
+```
+
+:::
+
+The [function](functions.qmd#def-function) in @exm-essential-supremum-norm:
+$f(s) = s$ except $f(0) = 5$.
+The [supremum](algebra.qmd#def-supremum) is $5$,
+reached only at the single point $s = 0$,
+which has [measure zero](#def-measure-zero),
+so the [essential supremum norm](#def-essential-supremum-norm) is the dashed height $1$.
+
+:::
