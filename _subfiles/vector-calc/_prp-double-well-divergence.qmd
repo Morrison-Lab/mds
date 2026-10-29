@@ -1,0 +1,48 @@
+:::{#prp-double-well-divergence}
+#### Divergence of gradient descent on the double-well function
+
+Let $f(x) = x^4 - 2x^2$,
+and run [gradient descent](#def-gradient-descent)
+with a fixed [step length](#def-gradient-descent) $\steplen > 0$.
+If $\iterpoint{x}{0}$ satisfies
+
+$$
+\iterpoint{x}{0}^2 > 1 + \frac{1}{2\steplen},
+$$
+
+then $\abs{\iterpoint{x}{t}} \to \infty$
+as $t \to \infty$.
+
+:::
+
+::: proof
+
+The [derivative](calculus-derivatives.qmd#def-derivative) is $\deriv{x} f(x) = 4x^3 - 4x$,
+so one step of [gradient descent](#def-gradient-descent) gives
+
+$$
+\ba
+\iterpoint{x}{t+1}
+&= \iterpoint{x}{t} - \steplen\,\paren{4 \iterpoint{x}{t}^3 - 4 \iterpoint{x}{t}}
+&& \text{(gradient descent step)}
+\\
+&= -\iterpoint{x}{t}\,\paren{4\steplen \iterpoint{x}{t}^2 - 4\steplen - 1}.
+&& \text{(factor out } -\iterpoint{x}{t} \text{)}
+\ea
+$$
+
+Write $m(x) \eqdef 4\steplen x^2 - 4\steplen - 1$.
+Then $\abs{\iterpoint{x}{t+1}} = \abs{\iterpoint{x}{t}}\, m(\iterpoint{x}{t})$
+whenever $m(\iterpoint{x}{t}) \ge 0$.
+Now $m(x) > 1$ exactly when $x^2 > 1 + 1 / (2\steplen)$,
+and $m(x)$ increases with $x^2$.
+So if $\iterpoint{x}{t}$ satisfies the condition,
+then $\abs{\iterpoint{x}{t+1}} > \abs{\iterpoint{x}{t}}$,
+and $\iterpoint{x}{t+1}$ satisfies it too.
+By [induction](proof-writing.qmd#def-proof-by-induction) on $t$,
+every iterate satisfies it,
+so $\iterpoint{x}{t}^2 \ge \iterpoint{x}{0}^2$ and $m(\iterpoint{x}{t}) \ge m(\iterpoint{x}{0}) > 1$.
+Hence $\abs{\iterpoint{x}{t}} \ge m(\iterpoint{x}{0})^t \abs{\iterpoint{x}{0}}$,
+which tends to $\infty$.
+
+:::
