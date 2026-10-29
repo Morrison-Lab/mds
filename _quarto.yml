@@ -68,10 +68,19 @@ page-xrefs:
   # optimization.qmd, so links to its ids on the calculus pages go on there.
   - index: calculus-derivatives.qmd
     pages:
-      - optimization.qmd
+      - optimization-critical-points.qmd
   - index: calculus.qmd
     pages:
-      - optimization.qmd
+      - optimization-critical-points.qmd
+  # optimization.qmd was split into the pages below.
+  - index: optimization.qmd
+    pages:
+      - optimization-critical-points.qmd
+      - optimization-convexity.qmd
+      - optimization-constrained.qmd
+      - optimization-newton.qmd
+      - optimization-gradient-descent.qmd
+      - optimization-quasi-newton.qmd
   # linear-algebra-subspaces.qmd was split again, so links to it from before
   # the second split (index#id) go on to the page now holding #id.
   - index: linear-algebra-subspaces.qmd

@@ -104,7 +104,15 @@ website:
       - text: "Vector Calculus"
         href: vector-calculus.qmd
       - text: "Optimization"
-        href: optimization.qmd
+        menu:
+          - text: "Overview"
+            href: optimization.qmd
+          - optimization-critical-points.qmd
+          - optimization-convexity.qmd
+          - optimization-constrained.qmd
+          - optimization-newton.qmd
+          - optimization-gradient-descent.qmd
+          - optimization-quasi-newton.qmd
       - text: "Proof Writing"
         href: proof-writing.qmd
       - text: "Induction and Recursion"
@@ -173,7 +181,15 @@ website:
           - linear-algebra-diagonalization.qmd
           - linear-algebra-complex.qmd
       - vector-calculus.qmd
-      - optimization.qmd
+      - section: "Optimization"
+        href: optimization.qmd
+        contents:
+          - optimization-critical-points.qmd
+          - optimization-convexity.qmd
+          - optimization-constrained.qmd
+          - optimization-newton.qmd
+          - optimization-gradient-descent.qmd
+          - optimization-quasi-newton.qmd
       - proof-writing.qmd
       - induction.qmd
 

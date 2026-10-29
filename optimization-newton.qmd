@@ -1,0 +1,21 @@
+---
+title: "Newton's Method"
+format:
+  html: default
+  revealjs:
+    output-file: optimization-newton-slides.html
+  pdf:
+    output-file: optimization-newton-handout.pdf
+  docx:
+    output-file: optimization-newton.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+```{r}
+#| include: false
+py_packages <- c("numpy", "pandas", "matplotlib")
+reticulate::py_require(py_packages)
+```
+
+{{< include mds/_subfiles/_sec_optimization_newton.qmd >}}
