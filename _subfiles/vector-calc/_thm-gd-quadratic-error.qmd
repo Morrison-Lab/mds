@@ -1,5 +1,5 @@
 :::{#thm-gd-quadratic-error}
-#### The error of gradient descent on a quadratic shrinks geometrically
+#### A bound on the error of gradient descent on a quadratic
 
 Let $\matr{S}$ be a $p \times p$
 [positive definite matrix](linear-algebra.qmd#def-positive-definite)
@@ -8,7 +8,7 @@ let $\vecf{c} \in \reals^p$,
 and let $f(\vx) = \tfrac{1}{2}\,\qform{\matr{S}}{\vx} - \dprod{\vecf{c}}{\vx}$,
 whose unique [minimizer](algebra.qmd#def-global-minimizer) is $\vx^* = \matr{S}^{-1} \vecf{c}$ (@thm-newton-quadratic).
 [Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $\steplen > 0$
-from any $\iterpoint{\vx}{0}$ has [errors](#def-iterate-error) satisfying
+from any $\iterpoint{\vx}{0}$ has [errors](#def-iterate-error) satisfying, for $t = 1, 2, \ldots$,
 
 $$
 \norm{\iterpoint{\vx}{t} - \vx^*} \le \convrate(\steplen)^t\,\norm{\iterpoint{\vx}{0} - \vx^*},

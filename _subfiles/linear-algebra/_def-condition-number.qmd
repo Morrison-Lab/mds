@@ -12,8 +12,9 @@ $$
 \condnum(\matr{S}) \eqdef \frac{\eigval_{\max}}{\eigval_{\min}}.
 $$
 
-It satisfies $\condnum(\matr{S}) \ge 1$,
-with $\condnum(\matr{S}) = 1$ exactly when all eigenvalues coincide.
+The condition number is at least $1$, that is, $\condnum(\matr{S}) \ge 1$,
+because $\eigval_{\max} \ge \eigval_{\min} > 0$,
+and $\condnum(\matr{S}) = 1$ exactly when all eigenvalues coincide.
 
 :::
 
