@@ -1,0 +1,40 @@
+:::{#thm-projection-diagonal-bounds}
+#### The diagonal of an orthogonal projection matrix lies between 0 and 1
+
+Let $\matr{P}$ be an $n \times n$ [orthogonal projection matrix](#def-projection-matrix) with entries $p_{ij}$.
+Then
+
+$$
+0 \le p_{ii} \le 1
+\qquad \text{for every } i = 1, \dots, n.
+$$
+
+:::
+
+:::{.proof}
+Since $\matr{P}$ is [idempotent](#def-idempotent-matrix) and [symmetric](#def-symmetric-matrix),
+$p_{ij} = p_{ji}$ and $\matr{P}^2 = \matr{P}$.
+Compare the $(i, i)$ entries of $\matr{P}^2$ and $\matr{P}$:
+
+$$
+\ba
+p_{ii}
+&= (\matr{P}^2)_{ii}
+&& \text{(idempotent)}
+\\
+&= \sumto{j}{n} p_{ij}\, p_{ji}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \sumto{j}{n} p_{ij}^2
+&& \text{(symmetric)}
+\\
+&= p_{ii}^2 + \sum_{j \ne i} p_{ij}^2.
+&& \text{(separate the term } j = i \text{)}
+\ea
+$$
+
+Each $p_{ij}^2$ is non-negative, so $p_{ii} \ge 0$.
+The same equation also gives $p_{ii} \ge p_{ii}^2$,
+so $p_{ii}(1 - p_{ii}) \ge 0$.
+Since $p_{ii} \ge 0$, this requires $p_{ii} \le 1$.
+:::
