@@ -13,12 +13,11 @@ based on the sign of the [second derivative](calculus-derivatives.qmd#def-second
 positive for a local minimum, negative for a local maximum.
 If it is zero, the test does not decide.
 
-The [cubic](algebra.qmd#def-cubic-polynomial)
+Consider the [cubic](algebra.qmd#def-cubic-polynomial)
 
-$$f(x) = 4x^3 - 3x^2$$
+$$f(x) = 4x^3 - 3x^2.$$
 
-has critical points of the kinds the test can detect.
-Find them,
+Find its critical points,
 and decide whether each is a local maximum, a local minimum, or an inflection point,
 where the [graph](functions.qmd#def-graph) changes between curving up and curving down.
 :::
