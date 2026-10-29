@@ -56,7 +56,8 @@ plt.show()
 :::
 
 The [tangent line](calculus.qmd#def-tangent-line) $s = 2x - 1$ of $f(x) = x^2$ at $y = 1$ (@exm-tangent-plane).
-It touches the [graph](functions.qmd#def-graph) at $(1, 1)$ and lies below it everywhere else,
+It touches the [graph](functions.qmd#def-graph) at $(1, 1)$
+and lies below it everywhere else,
 as in @exm-convex-first-order.
 
 :::

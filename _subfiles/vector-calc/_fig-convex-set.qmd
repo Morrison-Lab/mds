@@ -63,6 +63,7 @@ plt.show()
 :::
 
 The [closed ball](vector-calculus.qmd#def-closed-ball) of @exm-convex-set in $\reals^2$ with $r = 1$.
-The segment between two of its points stays in the ball, as a [convex set](#def-convex-set) requires.
+The segment between two of its points stays in the ball,
+as a [convex set](#def-convex-set) requires.
 
 :::
