@@ -23,9 +23,12 @@ x_ic
 x_new_ic
 
 # Relative changes, measured with the Euclidean length
-length_ic <- function(v) v^2 |> sum() |> sqrt()
-rel_b_ic <- length_ic(b_new_ic - b_ic) / length_ic(b_ic)
-rel_x_ic <- length_ic(x_new_ic - x_ic) / length_ic(x_ic)
+db_ic <- (b_new_ic - b_ic)^2 |> sum() |> sqrt()
+nb_ic <- b_ic^2 |> sum() |> sqrt()
+dx_ic <- (x_new_ic - x_ic)^2 |> sum() |> sqrt()
+nx_ic <- x_ic^2 |> sum() |> sqrt()
+rel_b_ic <- db_ic / nb_ic
+rel_x_ic <- dx_ic / nx_ic
 c(rel_b_ic, rel_x_ic, rel_x_ic / rel_b_ic)
 ```
 
