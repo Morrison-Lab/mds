@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 01:38:31 (PDT)
+Last modified: 2026-10-29 07:45:31 (PDT)
 
 ## 1 Critical points and optimization
 
@@ -1576,7 +1576,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f2a3d206c10>]
+> #> [<matplotlib.lines.Line2D object at 0x7f465a00ac10>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -1588,18 +1588,18 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f2a3d206d50>]
-> #> [<matplotlib.lines.Line2D object at 0x7f2a3d206e90>]
-> #> [<matplotlib.lines.Line2D object at 0x7f2a3d206fd0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f2a3d207110>]
-> #> [<matplotlib.lines.Line2D object at 0x7f2a3d207250>]
-> #> [<matplotlib.lines.Line2D object at 0x7f2a3d207390>]
+> #> [<matplotlib.lines.Line2D object at 0x7f465a00ad50>]
+> #> [<matplotlib.lines.Line2D object at 0x7f465a00ae90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f465a00afd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f465a00b110>]
+> #> [<matplotlib.lines.Line2D object at 0x7f465a00b250>]
+> #> [<matplotlib.lines.Line2D object at 0x7f465a00b390>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f2a3d2074d0>
+> #> <matplotlib.legend.Legend object at 0x7f465a00b4d0>
 > plt.show()
 > ```
 >
@@ -1664,10 +1664,10 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f2a3d2fbc50>]
+> #> [<matplotlib.lines.Line2D object at 0x7f465a0dfc50>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7f2a3d2fbd90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f465a0dfd90>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -1734,6 +1734,88 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 >
 > Along the [eigenvector](linear-algebra-special-matrices.llms.md#def-eigenvector) for \\\lambda= 3\\ the [error](#def-iterate-error) shrinks fast, and along the eigenvector for \\\lambda= 1\\ it shrinks slowly; the [bound](sets.llms.md#def-bound) follows the slower one.
 
+> **NOTE:**
+>
+> **Theorem 17 (The best constant step length)** In the setting of [Theorem 16](#thm-gd-quadratic-error), let \\\lambda\_{\min}\\ and \\\lambda\_{\max}\\ be the smallest and largest [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of \\\mathbf{S}\\. The factor \\\rho(s) = \max_i \mathopen{}\left\|1 - s\\\lambda_i\right\|\mathclose{}\\ of [Theorem 16](#thm-gd-quadratic-error) is smallest over \\s\> 0\\ at
+>
+> \\ s^\* = \frac{2}{\lambda\_{\min} + \lambda\_{\max}}, \\
+>
+> where
+>
+> \\ \rho(s^\*) = \frac{\kappa- 1}{\kappa+ 1}, \qquad \kappa= \kappa(\mathbf{S}), \\
+>
+> the [condition number](linear-algebra-special-matrices.llms.md#def-condition-number) of \\\mathbf{S}\\.
+
+> **NOTE:**
+>
+> *Proof*. For \\s\> 0\\, each \\1 - s\\\lambda_i\\ lies between \\u\_{\min} \stackrel{\text{def}}{=}1 - s\\\lambda\_{\max}\\ and \\u\_{\max} \stackrel{\text{def}}{=}1 - s\\\lambda\_{\min}\\, so \\\mathopen{}\left\|1 - s\\\lambda_i\right\|\mathclose{} \le {\max\mathopen{}\left(u\_{\max}, -u\_{\min}\right)\mathclose{}}\\. Both \\\lambda\_{\min}\\ and \\\lambda\_{\max}\\ occur among the \\\lambda_i\\, and \\\mathopen{}\left\|u\_{\max}\right\|\mathclose{} \ge u\_{\max}\\ and \\\mathopen{}\left\|u\_{\min}\right\|\mathclose{} \ge -u\_{\min}\\, so the [maximum](algebra-basics.llms.md#def-maximum) is attained:
+>
+> \\ \rho(s) = {\max\mathopen{}\left(1 - s\\\lambda\_{\min},\\ s\\\lambda\_{\max} - 1\right)\mathclose{}}. \\
+>
+> The first [expression](expressions-algorithms.llms.md#def-expression) is strictly decreasing in \\s\\, and the second is strictly increasing, and they coincide when
+>
+> \\ \begin{aligned} 1 - s\\\lambda\_{\min} &= s\\\lambda\_{\max} - 1 && \text{(set the two expressions equal)} \\ 2 &= s\\(\lambda\_{\min} + \lambda\_{\max}) && \text{(collect the terms in } s\text{)} \\ s&= \frac{2}{\lambda\_{\min} + \lambda\_{\max}} = s^\*. && \text{(divide)} \end{aligned} \\
+>
+> For \\s\< s^\*\\, \\\rho(s)\\ is at least the decreasing expression, which exceeds its [value](functions.llms.md#def-value) at \\s^\*\\. For \\s\> s^\*\\, \\\rho(s)\\ is at least the increasing expression, which exceeds its value at \\s^\*\\. So \\s^\*\\ is the [minimizer](algebra-basics.llms.md#def-global-minimizer), and
+>
+> \\ \begin{aligned} \rho(s^\*) &= 1 - \frac{2\\\lambda\_{\min}}{\lambda\_{\min} + \lambda\_{\max}} && \text{(first expression at } s^\* \text{)} \\ &= \frac{\lambda\_{\max} - \lambda\_{\min}}{\lambda\_{\max} + \lambda\_{\min}} && \text{(common denominator)} \\ &= \frac{\kappa- 1}{\kappa+ 1}. && \text{(divide the numerator and denominator by } \lambda\_{\min} \text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 58 (The best step length for eigenvalues 3 and 1)** For \\\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) \\3\\ and \\1\\, [Theorem 17](#thm-best-constant-step) gives \\s^\* = 2 / (3 + 1) = 0.5\\, \\\kappa= 3\\ ([condition number example](linear-algebra-special-matrices.llms.md#exm-condition-number)), and \\\rho(s^\*) = (3 - 1) / (3 + 1) = 0.5\\. A grid search over \\s= 0.01, 0.02, \ldots, 1\\ finds the smallest \\\rho(s)\\ at \\s= 0.5\\, the same [step length](#def-gradient-descent). Each step then multiplies the [error](#def-iterate-error) by at most \\0.5\\.
+
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> bcs_grid_pf <- seq(0, 1, length.out = 401)
+> bcs_first_pf <- abs(1 - 3 * bcs_grid_pf)
+> bcs_second_pf <- abs(1 - bcs_grid_pf)
+> bcs_rho_pf <- pmax(bcs_first_pf, bcs_second_pf)
+> bcs_curve_pf <- tibble::tibble(s = bcs_grid_pf, rho = bcs_rho_pf)
+> bcs_aes_pf <- ggplot2::aes(s, rho)
+> ggplot2::ggplot(bcs_curve_pf, bcs_aes_pf) +
+>   ggplot2::geom_line(colour = "#0072B2") +
+>   ggplot2::geom_hline(yintercept = 1, linetype = "dotted") +
+>   ggplot2::geom_vline(
+>     xintercept = 0.5, colour = "#D55E00", linetype = "dashed"
+>   ) +
+>   ggplot2::labs(x = "Step length", y = "Error factor")
+> ```
+>
+> Show R code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> bcs_grid_pf = np.linspace(0, 1, 401)
+> bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
+> fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+> ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
+> #> [<matplotlib.lines.Line2D object at 0x7f4659d23250>]
+> ax.axhline(1, color="black", linestyle=":")
+> #> <matplotlib.lines.Line2D object at 0x7f4659d23390>
+> ax.axvline(0.5, color="#D55E00", linestyle="--")
+> #> <matplotlib.lines.Line2D object at 0x7f4659d234d0>
+> ax.set_xlabel("Step length")
+> #> Text(0.5, 0, 'Step length')
+> ax.set_ylabel("Error factor")
+> #> Text(0, 0.5, 'Error factor')
+> plt.show()
+> ```
+>
+> ## R
+>
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization_files/figure-html/best-constant-step-plot-r-1.png)](optimization_files/figure-html/best-constant-step-plot-r-1.png "Figure 4: The factor \rho(s) of Example 58 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+>
+> ## Python
+>
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization_files/figure-html/best-constant-step-plot-python-1.png)](optimization_files/figure-html/best-constant-step-plot-python-1.png "Figure 4: The factor \rho(s) of Example 58 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+>
+> Figure 4: The factor \\\rho(s)\\ of [Example 58](#exm-best-constant-step) against the [step length](#def-gradient-descent) \\s\\ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](sets.llms.md#def-bound) on the [error](#def-iterate-error) shrinks only where the curve is below \\1\\ (dotted).
+
 ## 6 Quasi-Newton methods
 
 > **NOTE:**
@@ -1758,7 +1840,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 58 (The Hessian of a quadratic function satisfies the secant condition)** Let \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q}\\ [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Then \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so for any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+\\
+> **Example 59 (The Hessian of a quadratic function satisfies the secant condition)** Let \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q}\\ [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Then \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so for any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+\\
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} &= (\mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) - (\mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) && \text{(gradient at each point)} \\ &= \mathbf{Q} (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) && \text{(collect terms)} \\ &= \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}. && \text{(definition of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \text{)} \end{aligned} \\
 >
@@ -1774,7 +1856,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 59 (One quasi-Newton step on a quadratic function)** Take \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\\ ([Example 58](#exm-secant-condition)), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ and \\\mathbf{H}^{(0)} = \mathbf{I}\_2\\. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes \\f\\ along a [direction](vector-calculus.llms.md#def-direction) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\ is \\\alpha = -\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} / {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\.
+> **Example 60 (One quasi-Newton step on a quadratic function)** Take \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\\ ([Example 59](#exm-secant-condition)), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ and \\\mathbf{H}^{(0)} = \mathbf{I}\_2\\. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes \\f\\ along a [direction](vector-calculus.llms.md#def-direction) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\ is \\\alpha = -\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} / {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\.
 >
 > ``` downlit
 > Q <- matrix(c(4, 1, 1, 3), nrow = 2)
@@ -1804,7 +1886,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 60 (A BFGS update from the quasi-Newton step)** Continue [Example 59](#exm-quasi-newton-step) with \\\mathbf{H} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)}\\.
+> **Example 61 (A BFGS update from the quasi-Newton step)** Continue [Example 60](#exm-quasi-newton-step) with \\\mathbf{H} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)}\\.
 >
 > ``` downlit
 > rho <- 1 / sum(y * s)
@@ -1834,7 +1916,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 61 (L-BFGS applies the update without forming the matrix)** Continue [Example 60](#exm-bfgs-step) with \\m = 1\\ stored pair \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)})\\ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{I}\_2\\. Below, \\\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)})\\ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
+> **Example 62 (L-BFGS applies the update without forming the matrix)** Continue [Example 61](#exm-bfgs-step) with \\m = 1\\ stored pair \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)})\\ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{I}\_2\\. Below, \\\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)})\\ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
 >
 > ``` downlit
 > g1 <- grad(x1)

@@ -10317,6 +10317,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#thm-best-constant-step",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-best-constant-step",
+   "kind": "thm",
+   "title": "The best constant step length",
+   "external": false
+  },
+  {
    "id": "mds/optimization#thm-convex-first-order",
    "site": "mds",
    "page": "optimization",
@@ -16672,6 +16681,18 @@
   [
    "mds/optimization#lem-qf-eigen-bound",
    "mds/linear-algebra#def-eigendecomposition"
+  ],
+  [
+   "mds/optimization#thm-best-constant-step",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/optimization#thm-best-constant-step",
+   "mds/linear-algebra-special-matrices#def-condition-number"
+  ],
+  [
+   "mds/optimization#thm-best-constant-step",
+   "mds/optimization#thm-gd-quadratic-error"
   ],
   [
    "mds/optimization#thm-convex-first-order",

@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-29 01:38:31 (PDT)</p>
+  <p class="date">Last modified: 2026-10-29 07:45:31 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-critical-points" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Critical points and optimization</h2>
 <div id="def-flat-point" class="theorem definition">
@@ -2645,7 +2645,7 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb15-7"><a aria-label="7"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb15-8"><a aria-label="8"></a>grid_bf <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.6</span>, <span class="fl">1.6</span>, <span class="dv">321</span>)</span>
 <span id="cb15-9"><a aria-label="9"></a>ax.plot(grid_bf, basin_cost_bf(grid_bf), color<span class="op">=</span><span class="st">"grey"</span>)</span>
-<span id="cb15-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f2a3d206c10&gt;]</span></span>
+<span id="cb15-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00ac10&gt;]</span></span>
 <span id="cb15-11"><a aria-label="11"></a><span class="cf">for</span> start <span class="kw">in</span> <span class="bu">sorted</span>(basin_starts_bs[:<span class="dv">6</span>], reverse<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb15-12"><a aria-label="12"></a>    x <span class="op">=</span> [start]</span>
 <span id="cb15-13"><a aria-label="13"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">30</span>):</span>
@@ -2657,18 +2657,18 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb15-19"><a aria-label="19"></a>            marker<span class="op">=</span><span class="st">"o"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"^"</span>,</span>
 <span id="cb15-20"><a aria-label="20"></a>            label<span class="op">=</span>(<span class="st">"start above 0"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"start below 0"</span>)</span>
 <span id="cb15-21"><a aria-label="21"></a>            <span class="cf">if</span> <span class="bu">abs</span>(start) <span class="op">==</span> <span class="fl">0.1</span> <span class="cf">else</span> <span class="va">None</span>)</span>
-<span id="cb15-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f2a3d206d50&gt;]</span></span>
-<span id="cb15-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f2a3d206e90&gt;]</span></span>
-<span id="cb15-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f2a3d206fd0&gt;]</span></span>
-<span id="cb15-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f2a3d207110&gt;]</span></span>
-<span id="cb15-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f2a3d207250&gt;]</span></span>
-<span id="cb15-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f2a3d207390&gt;]</span></span>
+<span id="cb15-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00ad50&gt;]</span></span>
+<span id="cb15-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00ae90&gt;]</span></span>
+<span id="cb15-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00afd0&gt;]</span></span>
+<span id="cb15-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00b110&gt;]</span></span>
+<span id="cb15-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00b250&gt;]</span></span>
+<span id="cb15-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00b390&gt;]</span></span>
 <span id="cb15-28"><a aria-label="28"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb15-29"><a aria-label="29"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
 <span id="cb15-30"><a aria-label="30"></a>ax.set_ylabel(<span class="st">"f(x)"</span>)</span>
 <span id="cb15-31"><a aria-label="31"></a><span class="co">#&gt; Text(0, 0.5, 'f(x)')</span></span>
 <span id="cb15-32"><a aria-label="32"></a>fig.legend(loc<span class="op">=</span><span class="st">"outside lower center"</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb15-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7f2a3d2074d0&gt;</span></span>
+<span id="cb15-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7f465a00b4d0&gt;</span></span>
 <span id="cb15-34"><a aria-label="34"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-basin-of-attraction" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-basin-of-attraction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2746,10 +2746,10 @@ function or its scalar variable, and the basin example writes f(x) the same way.
 <span id="cb17-5"><a aria-label="5"></a>plateau_marks_pf <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">10</span>])</span>
 <span id="cb17-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb17-7"><a aria-label="7"></a>ax.plot(plateau_grid_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_grid_pf)), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
-<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f2a3d2fbc50&gt;]</span></span>
+<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a0dfc50&gt;]</span></span>
 <span id="cb17-9"><a aria-label="9"></a>ax.plot(plateau_marks_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_marks_pf)),</span>
 <span id="cb17-10"><a aria-label="10"></a>        color<span class="op">=</span><span class="st">"#D55E00"</span>, marker<span class="op">=</span><span class="st">"^"</span>, markersize<span class="op">=</span><span class="dv">8</span>, linestyle<span class="op">=</span><span class="st">""</span>)</span>
-<span id="cb17-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f2a3d2fbd90&gt;]</span></span>
+<span id="cb17-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a0dfd90&gt;]</span></span>
 <span id="cb17-12"><a aria-label="12"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
 <span id="cb17-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb17-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
@@ -2871,6 +2871,120 @@ s &amp;\le 3/4.
 \]</span></p>
 <p>Along the <a href="./linear-algebra-special-matrices.html#def-eigenvector">eigenvector</a> for <span class="math inline">\(\lambda= 3\)</span> the <a href="#/def-iterate-error">error</a> shrinks fast, and along the eigenvector for <span class="math inline">\(\lambda= 1\)</span> it shrinks slowly; the <a href="./sets.html#def-bound">bound</a> follows the slower one.</p>
 </div>
+</section><section class="slide level2"><div id="thm-best-constant-step" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 17 (The best constant step length)</strong></span> In the setting of <a href="#/thm-gd-quadratic-error" class="quarto-xref">Theorem&nbsp;16</a>, let <span class="math inline">\(\lambda_{\min}\)</span> and <span class="math inline">\(\lambda_{\max}\)</span> be the smallest and largest <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalues</a> of <span class="math inline">\(\mathbf{S}\)</span>. The factor <span class="math inline">\(\rho(s) = \max_i \mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{}\)</span> of <a href="#/thm-gd-quadratic-error" class="quarto-xref">Theorem&nbsp;16</a> is smallest over <span class="math inline">\(s&gt; 0\)</span> at</p>
+<p><span class="math display">\[
+s^* = \frac{2}{\lambda_{\min} + \lambda_{\max}},
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\rho(s^*) = \frac{\kappa- 1}{\kappa+ 1},
+\qquad
+\kappa= \kappa(\mathbf{S}),
+\]</span></p>
+<p>the <a href="./linear-algebra-special-matrices.html#def-condition-number">condition number</a> of <span class="math inline">\(\mathbf{S}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For <span class="math inline">\(s&gt; 0\)</span>, each <span class="math inline">\(1 - s\,\lambda_i\)</span> lies between <span class="math inline">\(u_{\min} \stackrel{\text{def}}{=}1 - s\,\lambda_{\max}\)</span> and <span class="math inline">\(u_{\max} \stackrel{\text{def}}{=}1 - s\,\lambda_{\min}\)</span>, so <span class="math inline">\(\mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{} \le {\max\mathopen{}\left(u_{\max}, -u_{\min}\right)\mathclose{}}\)</span>. Both <span class="math inline">\(\lambda_{\min}\)</span> and <span class="math inline">\(\lambda_{\max}\)</span> occur among the <span class="math inline">\(\lambda_i\)</span>, and <span class="math inline">\(\mathopen{}\left|u_{\max}\right|\mathclose{} \ge u_{\max}\)</span> and <span class="math inline">\(\mathopen{}\left|u_{\min}\right|\mathclose{} \ge -u_{\min}\)</span>, so the <a href="./algebra-basics.html#def-maximum">maximum</a> is attained:</p>
+<p><span class="math display">\[
+\rho(s) = {\max\mathopen{}\left(1 - s\,\lambda_{\min},\ s\,\lambda_{\max} - 1\right)\mathclose{}}.
+\]</span></p>
+<p>The first <a href="./expressions-algorithms.html#def-expression">expression</a> is strictly decreasing in <span class="math inline">\(s\)</span>, and the second is strictly increasing, and they coincide when</p>
+<p><span class="math display">\[
+\begin{aligned}
+1 - s\,\lambda_{\min} &amp;= s\,\lambda_{\max} - 1
+&amp;&amp; \text{(set the two expressions equal)}
+\\
+2 &amp;= s\,(\lambda_{\min} + \lambda_{\max})
+&amp;&amp; \text{(collect the terms in } s\text{)}
+\\
+s&amp;= \frac{2}{\lambda_{\min} + \lambda_{\max}} = s^*.
+&amp;&amp; \text{(divide)}
+\end{aligned}
+\]</span></p>
+<p>For <span class="math inline">\(s&lt; s^*\)</span>, <span class="math inline">\(\rho(s)\)</span> is at least the decreasing expression, which exceeds its <a href="./functions.html#def-value">value</a> at <span class="math inline">\(s^*\)</span>. For <span class="math inline">\(s&gt; s^*\)</span>, <span class="math inline">\(\rho(s)\)</span> is at least the increasing expression, which exceeds its value at <span class="math inline">\(s^*\)</span>. So <span class="math inline">\(s^*\)</span> is the <a href="./algebra-basics.html#def-global-minimizer">minimizer</a>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\rho(s^*)
+&amp;= 1 - \frac{2\,\lambda_{\min}}{\lambda_{\min} + \lambda_{\max}}
+&amp;&amp; \text{(first expression at } s^* \text{)}
+\\
+&amp;= \frac{\lambda_{\max} - \lambda_{\min}}{\lambda_{\max} + \lambda_{\min}}
+&amp;&amp; \text{(common denominator)}
+\\
+&amp;= \frac{\kappa- 1}{\kappa+ 1}.
+&amp;&amp; \text{(divide the numerator and denominator by } \lambda_{\min} \text{)}
+\end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exm-best-constant-step" class="theorem example">
+<p><span class="theorem-title"><strong>Example 58 (The best step length for eigenvalues 3 and 1)</strong></span> For <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> with <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalues</a> <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span>, <a href="#/thm-best-constant-step" class="quarto-xref">Theorem&nbsp;17</a> gives <span class="math inline">\(s^* = 2 / (3 + 1) = 0.5\)</span>, <span class="math inline">\(\kappa= 3\)</span> (<a href="./linear-algebra-special-matrices.html#exm-condition-number">condition number example</a>), and <span class="math inline">\(\rho(s^*) = (3 - 1) / (3 + 1) = 0.5\)</span>. A grid search over <span class="math inline">\(s= 0.01, 0.02, \ldots, 1\)</span> finds the smallest <span class="math inline">\(\rho(s)\)</span> at <span class="math inline">\(s= 0.5\)</span>, the same <a href="#/def-gradient-descent">step length</a>. Each step then multiplies the <a href="#/def-iterate-error">error</a> by at most <span class="math inline">\(0.5\)</span>.</p>
+</div>
+</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-label="1"></a>bcs_grid_pf <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">401</span>)</span>
+<span id="cb18-2"><a aria-label="2"></a>bcs_first_pf <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">-</span> <span class="dv">3</span> <span class="sc">*</span> bcs_grid_pf)</span>
+<span id="cb18-3"><a aria-label="3"></a>bcs_second_pf <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">-</span> bcs_grid_pf)</span>
+<span id="cb18-4"><a aria-label="4"></a>bcs_rho_pf <span class="ot">&lt;-</span> <span class="fu">pmax</span>(bcs_first_pf, bcs_second_pf)</span>
+<span id="cb18-5"><a aria-label="5"></a>bcs_curve_pf <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">s =</span> bcs_grid_pf, <span class="at">rho =</span> bcs_rho_pf)</span>
+<span id="cb18-6"><a aria-label="6"></a>bcs_aes_pf <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">aes</span>(s, rho)</span>
+<span id="cb18-7"><a aria-label="7"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(bcs_curve_pf, bcs_aes_pf) <span class="sc">+</span></span>
+<span id="cb18-8"><a aria-label="8"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"#0072B2"</span>) <span class="sc">+</span></span>
+<span id="cb18-9"><a aria-label="9"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>) <span class="sc">+</span></span>
+<span id="cb18-10"><a aria-label="10"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_vline</span>(</span>
+<span id="cb18-11"><a aria-label="11"></a>    <span class="at">xintercept =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"#D55E00"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span></span>
+<span id="cb18-12"><a aria-label="12"></a>  ) <span class="sc">+</span></span>
+<span id="cb18-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Step length"</span>, <span class="at">y =</span> <span class="st">"Error factor"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb19-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb19-3"><a aria-label="3"></a></span>
+<span id="cb19-4"><a aria-label="4"></a>bcs_grid_pf <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">401</span>)</span>
+<span id="cb19-5"><a aria-label="5"></a>bcs_rho_pf <span class="op">=</span> np.maximum(np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> <span class="dv">3</span> <span class="op">*</span> bcs_grid_pf), np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> bcs_grid_pf))</span>
+<span id="cb19-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb19-7"><a aria-label="7"></a>ax.plot(bcs_grid_pf, bcs_rho_pf, color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb19-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f4659d23250&gt;]</span></span>
+<span id="cb19-9"><a aria-label="9"></a>ax.axhline(<span class="dv">1</span>, color<span class="op">=</span><span class="st">"black"</span>, linestyle<span class="op">=</span><span class="st">":"</span>)</span>
+<span id="cb19-10"><a aria-label="10"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f4659d23390&gt;</span></span>
+<span id="cb19-11"><a aria-label="11"></a>ax.axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb19-12"><a aria-label="12"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f4659d234d0&gt;</span></span>
+<span id="cb19-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"Step length"</span>)</span>
+<span id="cb19-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'Step length')</span></span>
+<span id="cb19-15"><a aria-label="15"></a>ax.set_ylabel(<span class="st">"Error factor"</span>)</span>
+<span id="cb19-16"><a aria-label="16"></a><span class="co">#&gt; Text(0, 0.5, 'Error factor')</span></span>
+<span id="cb19-17"><a aria-label="17"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-best-constant-step" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-best-constant-step-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: The factor <span class="math inline">\(\rho(s)\)</span> of <a href="#/exm-best-constant-step" class="quarto-xref">Example&nbsp;58</a> against the <a href="#/def-gradient-descent">step length</a> <span class="math inline">\(s\)</span> (solid). The best step length (dashed) is where the curve is lowest, and the <a href="./sets.html#def-bound">bound</a> on the <a href="#/def-iterate-error">error</a> shrinks only where the curve is below <span class="math inline">\(1\)</span> (dotted).
+</figcaption><div aria-describedby="fig-best-constant-step-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-7" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-7-1">R</a></li>
+<li><a href="#tabset-7-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-7-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization_files/figure-html/best-constant-step-plot-r-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;4: The factor \rho(s) of Example&nbsp;58 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted)."><img data-src="optimization_files/figure-html/best-constant-step-plot-r-1.png" alt="Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization_files/figure-html/best-constant-step-plot-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;4: The factor \rho(s) of Example&nbsp;58 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted)."><img data-src="optimization_files/figure-html/best-constant-step-plot-python-1.png" alt="Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
 </section><section id="sec-quasi-newton" class="slide level2" data-number="6"><h2>
 <span class="header-section-number">6</span> Quasi-Newton methods</h2>
 <!-- check-term-links: ignore-file -->
@@ -2902,7 +3016,7 @@ s &amp;\le 3/4.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-secant-condition" class="theorem example">
-<p><span class="theorem-title"><strong>Example 58 (The Hessian of a quadratic function satisfies the secant condition)</strong></span> Let <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{Q}\)</span> <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a>. Then <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so for any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+\)</span></p>
+<p><span class="theorem-title"><strong>Example 59 (The Hessian of a quadratic function satisfies the secant condition)</strong></span> Let <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{Q}\)</span> <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a>. Then <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so for any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
@@ -2926,19 +3040,19 @@ s &amp;\le 3/4.
 <p>where <span class="math inline">\(\alpha^{(t)} &gt; 0\)</span> is a <a href="#/def-gradient-descent">step length</a> chosen by a <a href="#/def-line-search">line search</a>, and <span class="math inline">\(\mathbf{H}^{(t+1)}\)</span> is a <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a> positive definite matrix whose <a href="./linear-algebra-special-matrices.html#def-matrix-inverse">inverse</a> satisfies the <a href="#/def-secant-condition">secant condition</a>, that is, <span class="math inline">\(\mathbf{H}^{(t+1)} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(t)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(t)}\)</span>, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(t)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(t)} = \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)}) - \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-quasi-newton-step" class="theorem example">
-<p><span class="theorem-title"><strong>Example 59 (One quasi-Newton step on a quadratic function)</strong></span> Take <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{Q} = \begin{bmatrix} 4 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\)</span> (<a href="#/exm-secant-condition" class="quarto-xref">Example&nbsp;58</a>), <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathbf{H}^{(0)} = \mathbf{I}_2\)</span>. For a <a href="./algebra-exponentials.html#def-quadratic-polynomial">quadratic function</a>, the <a href="#/def-gradient-descent">step length</a> that minimizes <span class="math inline">\(f\)</span> along a <a href="./vector-calculus.html#def-direction">direction</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span> is <span class="math inline">\(\alpha = -\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} / {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 60 (One quasi-Newton step on a quadratic function)</strong></span> Take <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{Q} = \begin{bmatrix} 4 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\)</span> (<a href="#/exm-secant-condition" class="quarto-xref">Example&nbsp;59</a>), <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathbf{H}^{(0)} = \mathbf{I}_2\)</span>. For a <a href="./algebra-exponentials.html#def-quadratic-polynomial">quadratic function</a>, the <a href="#/def-gradient-descent">step length</a> that minimizes <span class="math inline">\(f\)</span> along a <a href="./vector-calculus.html#def-direction">direction</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span> is <span class="math inline">\(\alpha = -\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} / {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-label="1"></a>Q <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
-<span id="cb18-2"><a aria-label="2"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb18-3"><a aria-label="3"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">sum</span>(x <span class="sc">*</span> (Q <span class="sc">%*%</span> x)) <span class="sc">-</span> <span class="fu">sum</span>(b <span class="sc">*</span> x)</span>
-<span id="cb18-4"><a aria-label="4"></a>grad <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">drop</span>(Q <span class="sc">%*%</span> x <span class="sc">-</span> b)</span>
-<span id="cb18-5"><a aria-label="5"></a>x0 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
-<span id="cb18-6"><a aria-label="6"></a>H0 <span class="ot">&lt;-</span> <span class="fu">diag</span>(<span class="dv">2</span>)</span>
-<span id="cb18-7"><a aria-label="7"></a>d <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">drop</span>(H0 <span class="sc">%*%</span> <span class="fu">grad</span>(x0))</span>
-<span id="cb18-8"><a aria-label="8"></a>step <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">sum</span>(<span class="fu">grad</span>(x0) <span class="sc">*</span> d) <span class="sc">/</span> <span class="fu">drop</span>(<span class="fu">t</span>(d) <span class="sc">%*%</span> Q <span class="sc">%*%</span> d)</span>
-<span id="cb18-9"><a aria-label="9"></a>x1 <span class="ot">&lt;-</span> x0 <span class="sc">+</span> step <span class="sc">*</span> d</span>
-<span id="cb18-10"><a aria-label="10"></a>s <span class="ot">&lt;-</span> x1 <span class="sc">-</span> x0</span>
-<span id="cb18-11"><a aria-label="11"></a>y <span class="ot">&lt;-</span> <span class="fu">grad</span>(x1) <span class="sc">-</span> <span class="fu">grad</span>(x0)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a aria-label="1"></a>Q <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb20-2"><a aria-label="2"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb20-3"><a aria-label="3"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">sum</span>(x <span class="sc">*</span> (Q <span class="sc">%*%</span> x)) <span class="sc">-</span> <span class="fu">sum</span>(b <span class="sc">*</span> x)</span>
+<span id="cb20-4"><a aria-label="4"></a>grad <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">drop</span>(Q <span class="sc">%*%</span> x <span class="sc">-</span> b)</span>
+<span id="cb20-5"><a aria-label="5"></a>x0 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb20-6"><a aria-label="6"></a>H0 <span class="ot">&lt;-</span> <span class="fu">diag</span>(<span class="dv">2</span>)</span>
+<span id="cb20-7"><a aria-label="7"></a>d <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">drop</span>(H0 <span class="sc">%*%</span> <span class="fu">grad</span>(x0))</span>
+<span id="cb20-8"><a aria-label="8"></a>step <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">sum</span>(<span class="fu">grad</span>(x0) <span class="sc">*</span> d) <span class="sc">/</span> <span class="fu">drop</span>(<span class="fu">t</span>(d) <span class="sc">%*%</span> Q <span class="sc">%*%</span> d)</span>
+<span id="cb20-9"><a aria-label="9"></a>x1 <span class="ot">&lt;-</span> x0 <span class="sc">+</span> step <span class="sc">*</span> d</span>
+<span id="cb20-10"><a aria-label="10"></a>s <span class="ot">&lt;-</span> x1 <span class="sc">-</span> x0</span>
+<span id="cb20-11"><a aria-label="11"></a>y <span class="ot">&lt;-</span> <span class="fu">grad</span>(x1) <span class="sc">-</span> <span class="fu">grad</span>(x0)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The step length is 0.25, which moves the <a href="#/def-iterate">iterate</a> to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = (0.25, 0.5)\)</span> and lowers <span class="math inline">\(f\)</span> from 0 to -0.625. The difference of the <a href="./vector-calculus.html#def-vector-derivative">gradients</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)} = (1.5, 1.75)\)</span>, is <span class="math inline">\(\mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}\)</span> (<a href="#/def-secant-condition">the secant condition</a> for a quadratic function).</p>
 </div>
@@ -2956,17 +3070,17 @@ s &amp;\le 3/4.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-bfgs-step" class="theorem example">
-<p><span class="theorem-title"><strong>Example 60 (A BFGS update from the quasi-Newton step)</strong></span> Continue <a href="#/exm-quasi-newton-step" class="quarto-xref">Example&nbsp;59</a> with <span class="math inline">\(\mathbf{H} = \mathbf{I}_2\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 61 (A BFGS update from the quasi-Newton step)</strong></span> Continue <a href="#/exm-quasi-newton-step" class="quarto-xref">Example&nbsp;60</a> with <span class="math inline">\(\mathbf{H} = \mathbf{I}_2\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)}\)</span>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a aria-label="1"></a>rho <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="fu">sum</span>(y <span class="sc">*</span> s)</span>
-<span id="cb19-2"><a aria-label="2"></a>left <span class="ot">&lt;-</span> <span class="fu">diag</span>(<span class="dv">2</span>) <span class="sc">-</span> rho <span class="sc">*</span> s <span class="sc">%*%</span> <span class="fu">t</span>(y)</span>
-<span id="cb19-3"><a aria-label="3"></a>H1 <span class="ot">&lt;-</span> left <span class="sc">%*%</span> H0 <span class="sc">%*%</span> <span class="fu">t</span>(left) <span class="sc">+</span> rho <span class="sc">*</span> s <span class="sc">%*%</span> <span class="fu">t</span>(s)</span>
-<span id="cb19-4"><a aria-label="4"></a>H1</span>
-<span id="cb19-5"><a aria-label="5"></a><span class="co">#&gt;         [,1]   [,2]</span></span>
-<span id="cb19-6"><a aria-label="6"></a><span class="co">#&gt; [1,]  0.6625 -0.425</span></span>
-<span id="cb19-7"><a aria-label="7"></a><span class="co">#&gt; [2,] -0.4250  0.650</span></span>
-<span id="cb19-8"><a aria-label="8"></a><span class="fu">drop</span>(H1 <span class="sc">%*%</span> y)</span>
-<span id="cb19-9"><a aria-label="9"></a><span class="co">#&gt; [1] 0.25 0.50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a aria-label="1"></a>rho <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="fu">sum</span>(y <span class="sc">*</span> s)</span>
+<span id="cb21-2"><a aria-label="2"></a>left <span class="ot">&lt;-</span> <span class="fu">diag</span>(<span class="dv">2</span>) <span class="sc">-</span> rho <span class="sc">*</span> s <span class="sc">%*%</span> <span class="fu">t</span>(y)</span>
+<span id="cb21-3"><a aria-label="3"></a>H1 <span class="ot">&lt;-</span> left <span class="sc">%*%</span> H0 <span class="sc">%*%</span> <span class="fu">t</span>(left) <span class="sc">+</span> rho <span class="sc">*</span> s <span class="sc">%*%</span> <span class="fu">t</span>(s)</span>
+<span id="cb21-4"><a aria-label="4"></a>H1</span>
+<span id="cb21-5"><a aria-label="5"></a><span class="co">#&gt;         [,1]   [,2]</span></span>
+<span id="cb21-6"><a aria-label="6"></a><span class="co">#&gt; [1,]  0.6625 -0.425</span></span>
+<span id="cb21-7"><a aria-label="7"></a><span class="co">#&gt; [2,] -0.4250  0.650</span></span>
+<span id="cb21-8"><a aria-label="8"></a><span class="fu">drop</span>(H1 <span class="sc">%*%</span> y)</span>
+<span id="cb21-9"><a aria-label="9"></a><span class="co">#&gt; [1] 0.25 0.50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Here <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = 1.25 &gt; 0\)</span>, so <span class="math inline">\(\rho = 0.8\)</span>. The updated <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> satisfies <span class="math inline">\(\mathbf{H}^+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0.25, 0.5)\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = (0.25, 0.5)\)</span>, and its smallest <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalue</a> is 0.231204, so <span class="math inline">\(\mathbf{H}^+\)</span> is <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>.</p>
 </div>
@@ -2984,18 +3098,18 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <p><span class="theorem-title"><strong>Definition 44 (Limited-memory BFGS (L-BFGS))</strong></span> <strong>Limited-memory BFGS</strong> (<strong>L-BFGS</strong>) <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[23, Ch. 7]</a></span> is the <a href="#/def-quasi-newton-method">quasi-Newton method</a> that never forms <span class="math inline">\(\mathbf{H}^{(t)}\)</span>. It stores only the <span class="math inline">\(m\)</span> most recent pairs <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(j)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(j)})\)</span>, with <span class="math inline">\(m\)</span> small, such as <span class="math inline">\(5\)</span> or <span class="math inline">\(20\)</span>, and obtains <span class="math inline">\(\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\)</span> implicitly, through a few vector operations, as if the <a href="#/def-bfgs-update">BFGS update</a> for those <span class="math inline">\(m\)</span> pairs were applied to a simple starting <a href="./linear-algebra-matrices.html#def-matrix">matrix</a>, such as a multiple of <span class="math inline">\(\mathbf{I}_p\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-lbfgs-step" class="theorem example">
-<p><span class="theorem-title"><strong>Example 61 (L-BFGS applies the update without forming the matrix)</strong></span> Continue <a href="#/exm-bfgs-step" class="quarto-xref">Example&nbsp;60</a> with <span class="math inline">\(m = 1\)</span> stored pair <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})\)</span> and starting <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{I}_2\)</span>. Below, <span class="math inline">\(\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})\)</span> is formed from vectors alone, starting from <code>H0</code>, then compared with the <a href="./linear-algebra-matrices.html#def-matrix-mult">matrix product</a>.</p>
+<p><span class="theorem-title"><strong>Example 62 (L-BFGS applies the update without forming the matrix)</strong></span> Continue <a href="#/exm-bfgs-step" class="quarto-xref">Example&nbsp;61</a> with <span class="math inline">\(m = 1\)</span> stored pair <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})\)</span> and starting <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{I}_2\)</span>. Below, <span class="math inline">\(\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})\)</span> is formed from vectors alone, starting from <code>H0</code>, then compared with the <a href="./linear-algebra-matrices.html#def-matrix-mult">matrix product</a>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a aria-label="1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">grad</span>(x1)</span>
-<span id="cb20-2"><a aria-label="2"></a>alpha <span class="ot">&lt;-</span> rho <span class="sc">*</span> <span class="fu">sum</span>(s <span class="sc">*</span> g1)</span>
-<span id="cb20-3"><a aria-label="3"></a>q <span class="ot">&lt;-</span> g1 <span class="sc">-</span> alpha <span class="sc">*</span> y</span>
-<span id="cb20-4"><a aria-label="4"></a>r <span class="ot">&lt;-</span> <span class="fu">drop</span>(H0 <span class="sc">%*%</span> q)</span>
-<span id="cb20-5"><a aria-label="5"></a>beta <span class="ot">&lt;-</span> rho <span class="sc">*</span> <span class="fu">sum</span>(y <span class="sc">*</span> r)</span>
-<span id="cb20-6"><a aria-label="6"></a>r <span class="ot">&lt;-</span> r <span class="sc">+</span> s <span class="sc">*</span> (alpha <span class="sc">-</span> beta)</span>
-<span id="cb20-7"><a aria-label="7"></a><span class="fu">rbind</span>(<span class="at">from_vectors =</span> r, <span class="at">from_matrix =</span> <span class="fu">drop</span>(H1 <span class="sc">%*%</span> g1))</span>
-<span id="cb20-8"><a aria-label="8"></a><span class="co">#&gt;                [,1]   [,2]</span></span>
-<span id="cb20-9"><a aria-label="9"></a><span class="co">#&gt; from_vectors 0.4375 -0.375</span></span>
-<span id="cb20-10"><a aria-label="10"></a><span class="co">#&gt; from_matrix  0.4375 -0.375</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a aria-label="1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">grad</span>(x1)</span>
+<span id="cb22-2"><a aria-label="2"></a>alpha <span class="ot">&lt;-</span> rho <span class="sc">*</span> <span class="fu">sum</span>(s <span class="sc">*</span> g1)</span>
+<span id="cb22-3"><a aria-label="3"></a>q <span class="ot">&lt;-</span> g1 <span class="sc">-</span> alpha <span class="sc">*</span> y</span>
+<span id="cb22-4"><a aria-label="4"></a>r <span class="ot">&lt;-</span> <span class="fu">drop</span>(H0 <span class="sc">%*%</span> q)</span>
+<span id="cb22-5"><a aria-label="5"></a>beta <span class="ot">&lt;-</span> rho <span class="sc">*</span> <span class="fu">sum</span>(y <span class="sc">*</span> r)</span>
+<span id="cb22-6"><a aria-label="6"></a>r <span class="ot">&lt;-</span> r <span class="sc">+</span> s <span class="sc">*</span> (alpha <span class="sc">-</span> beta)</span>
+<span id="cb22-7"><a aria-label="7"></a><span class="fu">rbind</span>(<span class="at">from_vectors =</span> r, <span class="at">from_matrix =</span> <span class="fu">drop</span>(H1 <span class="sc">%*%</span> g1))</span>
+<span id="cb22-8"><a aria-label="8"></a><span class="co">#&gt;                [,1]   [,2]</span></span>
+<span id="cb22-9"><a aria-label="9"></a><span class="co">#&gt; from_vectors 0.4375 -0.375</span></span>
+<span id="cb22-10"><a aria-label="10"></a><span class="co">#&gt; from_matrix  0.4375 -0.375</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The two rows agree to within 5.6e-17, although the first never forms the matrix. BFGS stores a dense <span class="math inline">\(p \times p\)</span> matrix and spends about <span class="math inline">\(p^2\)</span> operations per iteration; L-BFGS stores <span class="math inline">\(2m\)</span> vectors with <span class="math inline">\(p\)</span> entries and spends about <span class="math inline">\(m p\)</span> operations per iteration, so it remains usable when <span class="math inline">\(p\)</span> is in the millions.</p>
 </div>
