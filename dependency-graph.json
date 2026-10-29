@@ -13736,6 +13736,18 @@
    "mds/linear-algebra#def-inner-product-space"
   ],
   [
+   "mds/linear-algebra#def-design-matrix",
+   "mds/algebra-exponentials#def-intercept"
+  ],
+  [
+   "mds/linear-algebra#def-design-matrix",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra#def-design-matrix",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra#def-diagonal-entry",
    "mds/linear-algebra#def-main-diagonal"
   ],
@@ -15106,6 +15118,18 @@
   [
    "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "mds/linear-algebra-matrices#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-projections#def-design-matrix",
+   "mds/algebra-exponentials#def-intercept"
+  ],
+  [
+   "mds/linear-algebra-projections#def-design-matrix",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-projections#def-design-matrix",
+   "mds/linear-algebra-matrices#def-matrix"
   ],
   [
    "mds/linear-algebra-projections#def-hat-matrix",
