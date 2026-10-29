@@ -12,4 +12,9 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
+```{r}
+#| include: false
+reticulate::py_require(c("numpy", "pandas", "matplotlib"))
+```
+
 {{< include mds/_subfiles/_sec_optimization_convexity.qmd >}}
