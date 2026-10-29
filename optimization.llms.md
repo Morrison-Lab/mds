@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-28 16:00:43 (PDT)
+Last modified: 2026-10-28 17:04:35 (PDT)
 
 ## 1 Critical points and optimization
 
@@ -21,46 +21,79 @@ Last modified: 2026-10-28 16:00:43 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 1 (Find the flat point, and check the approximation)** Let \\f(w) = w^2 - 4w + 7\\.
+> **Exercise 1 (Differentiate a quadratic)** Let \\f(w) = w^2 - 4w + 7\\.
 >
-> 1.  Differentiate \\f\\.
-> 2.  Find the flat point \\w\\ of \\f\\, and say whether \\f(w)\\ is the [minimum](algebra-basics.llms.md#def-minimum) or the [maximum](algebra-basics.llms.md#def-maximum) of the values of \\f\\.
-> 3.  Evaluate the [derivative](calculus-derivatives.llms.md#def-derivative) at \\w = 1\\.
-> 4.  Use the [linear approximation](calculus-derivatives.llms.md#eq-linear-approx) to predict \\f(1.01)\\.
-> 5.  Compute \\f(1.01)\\ exactly.
-> 6.  Compare the exact [value](functions.llms.md#def-value) with the prediction.
+> Differentiate \\f\\.
 
 > **NOTE:**
 >
-> *Solution 1*. **1.** Term by term:
+> *Solution 1*. Differentiating each [term](algebra-sums.llms.md#def-term):
 >
 > \\\frac{df}{dw} = 2w - 4\\
+
+> **NOTE:**
 >
-> **2.** Set it to zero: \\2w - 4 = 0\\ gives \\w = 2\\.
+> **Exercise 2 (Find the flat point)** In the setting of [Exercise 1](#exr-flat-point), find the [flat point](#def-flat-point) \\w\\ of \\f\\.
+
+> **NOTE:**
 >
-> \\ \begin{aligned} f(2) &= 4 - 8 + 7 \\ &= 3 \end{aligned} \\
+> *Solution 2*. The [derivative](calculus-derivatives.llms.md#def-derivative) is zero where \\2w - 4 = 0\\, which gives \\w = 2\\.
+
+> **NOTE:**
 >
-> is the minimum of the values of \\f\\. Completing the square, \\f(w) = (w - 2)^2 + 3\\, since
+> **Exercise 3 (Classify the flat point)** In the setting of [Exercise 1](#exr-flat-point), say whether \\f(w)\\ at the [flat point](#def-flat-point) is the [minimum](algebra-basics.llms.md#def-minimum) or the [maximum](algebra-basics.llms.md#def-maximum) of the values of \\f\\.
+
+> **NOTE:**
+>
+> *Solution 3*. The [flat point](#def-flat-point) is \\w = 2\\, from [Solution 2](#sol-flat-point-find). Evaluating \\f\\ there gives
+>
+> \\ \begin{aligned} f(2) &= 4 - 8 + 7 \\ &= 3. \end{aligned} \\
+>
+> This is the [minimum](algebra-basics.llms.md#def-minimum) of the [values](functions.llms.md#def-value) of \\f\\. Completing the square, \\f(w) = (w - 2)^2 + 3\\, since
 >
 > \\ \begin{aligned} (w - 2)^2 + 3 &= w^2 - 4w + 4 + 3 \\ &= w^2 - 4w + 7, \end{aligned} \\
 >
-> and \\(w - 2)^2 \ge 0\\, so \\f(w) \ge 3 = f(2)\\ for every \\w\\. Equivalently, the derivative is negative below \\w = 2\\ and positive above it, so the function falls into that point and rises out of it.
+> and \\(w - 2)^2 \ge 0\\, so \\f(w) \ge 3 = f(2)\\ for every \\w\\. Equivalently, the [derivative](calculus-derivatives.llms.md#def-derivative) is negative below \\w = 2\\ and positive above it, so the function falls into that point and rises out of it.
+
+> **NOTE:**
 >
-> **3.** At \\w = 1\\ the derivative is \\2(1) - 4 = -2\\, so \\f\\ is falling there.
+> **Exercise 4 (Slope at \\w = 1\\)** In the setting of [Exercise 1](#exr-flat-point), evaluate the [derivative](calculus-derivatives.llms.md#def-derivative) at \\w = 1\\.
+
+> **NOTE:**
 >
-> **4.** With \\\varepsilon= 0.01\\, the [linear approximation](calculus-derivatives.llms.md#eq-linear-approx) predicts a change of \\(0.01)(-2) = -0.02\\, from
+> *Solution 4*. At \\w = 1\\ the [derivative](calculus-derivatives.llms.md#def-derivative) is \\2(1) - 4 = -2\\, so \\f\\ is falling there.
+
+> **NOTE:**
+>
+> **Exercise 5 (Predict a nearby value)** In the setting of [Exercise 1](#exr-flat-point), use the [linear approximation](calculus-derivatives.llms.md#eq-linear-approx) and the [derivative](calculus-derivatives.llms.md#def-derivative) at \\w = 1\\ from [Exercise 4](#exr-flat-point-slope) to predict \\f(1.01)\\.
+
+> **NOTE:**
+>
+> *Solution 5*. With \\\varepsilon= 0.01\\, the [linear approximation](calculus-derivatives.llms.md#eq-linear-approx) predicts a change of \\(0.01)(-2) = -0.02\\, from
 >
 > \\ \begin{aligned} f(1) &= 1 - 4 + 7 \\ &= 4 \end{aligned} \\
 >
 > to \\3.98\\.
+
+> **NOTE:**
 >
-> **5.** The exact [value](functions.llms.md#def-value) is
+> **Exercise 6 (Exact value)** In the setting of [Exercise 1](#exr-flat-point), find the exact [value](functions.llms.md#def-value) of \\f(1.01)\\.
+
+> **NOTE:**
+>
+> *Solution 6*. The exact [value](functions.llms.md#def-value) is
 >
 > \\ \begin{aligned} f(1.01) &= (1.01)^2 - 4(1.01) + 7 \\ &= 1.0201 - 4.04 + 7 \\ &= 3.9801 \end{aligned} \\
 >
-> a change of \\-0.0199\\.
+> a change of \\-0.0199\\ from \\f(1) = 4\\.
+
+> **NOTE:**
 >
-> **6.** The prediction is off by \\0.0001\\, which is \\\varepsilon^2\\: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of [gradient descent](optimization.llms.md#def-gradient-descent), the step-by-step method of fitting models defined on the optimization page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.
+> **Exercise 7 (Check the prediction)** Compare the prediction in [Exercise 5](#exr-flat-point-predict) with the exact [value](functions.llms.md#def-value) of \\f(1.01)\\ from [Exercise 6](#exr-flat-point-exact).
+
+> **NOTE:**
+>
+> *Solution 7*. The prediction \\3.98\\ ([Solution 5](#sol-flat-point-predict)) and the exact [value](functions.llms.md#def-value) \\3.9801\\ ([Solution 6](#sol-flat-point-exact)) differ by \\0.0001\\, which is \\\varepsilon^2\\. The [linear approximation](calculus-derivatives.llms.md#def-linear-approximation) drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of [gradient descent](optimization.llms.md#def-gradient-descent), the step-by-step method of fitting models that the optimization page defines. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.
 
 > **NOTE:**
 >
@@ -112,7 +145,7 @@ Last modified: 2026-10-28 16:00:43 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 2 (Maximizing a gamma-family kernel)** Adapted from Miller [\[2\]](#ref-problifesavercalc), Question 1.1.10.
+> **Exercise 8 (Maximizing a gamma-family kernel)** Adapted from Miller [\[2\]](#ref-problifesavercalc), Question 1.1.10.
 >
 > Find the maximum value of
 >
@@ -122,7 +155,7 @@ Last modified: 2026-10-28 16:00:43 (PDT)
 
 > **NOTE:**
 >
-> *Solution 2*. Differentiate using the product rule:
+> *Solution 8*. Differentiate using the product rule:
 >
 > \\ \begin{aligned} f'(x) &= 4x^3 e^{-x} - x^4 e^{-x} \\ &= x^3 e^{-x}(4 - x) \end{aligned} \\
 >
@@ -142,7 +175,7 @@ Last modified: 2026-10-28 16:00:43 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 3 (Classifying critical points with the second derivative test)** Adapted from Miller [\[2\]](#ref-problifesavercalc), Question 1.1.11.
+> **Exercise 9 (Classifying critical points with the second derivative test)** Adapted from Miller [\[2\]](#ref-problifesavercalc), Question 1.1.11.
 >
 > Find the critical points of
 >
@@ -152,7 +185,7 @@ Last modified: 2026-10-28 16:00:43 (PDT)
 
 > **NOTE:**
 >
-> *Solution 3*. Compute the first derivative:
+> *Solution 9*. Compute the first derivative:
 >
 > \\ \begin{aligned} f'(x) &= 12x^2 - 6x \\ &= 6x(2x - 1) \end{aligned} \\
 >
@@ -1298,13 +1331,137 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 36 (Armijo condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\. A step length \\s \> 0\\ satisfies the **Armijo condition** [\[19\]](#ref-wikipedia_backtracking_line_search) with constant \\c \in (0, 1)\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ if
+> **Definition 36 (Rosenbrock function)** The **Rosenbrock function** on \\\mathbb{R}^2\\ is
+>
+> \\ f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \stackrel{\text{def}}{=}100\mathopen{}\left(x_2 - x_1^2\right)\mathclose{}^2 + \mathopen{}\left(1 - x_1\right)\mathclose{}^2, \qquad \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= {(x_1, x_2)}^{\top}. \\
+>
+> It is a standard test problem for optimizers [\[19\]](#ref-wikipedia_rosenbrock_function).
+
+> **NOTE:**
+>
+> **Example 52 (Values of the Rosenbrock function)** We evaluate the [Rosenbrock function](#def-rosenbrock-function) at the [minimizer](algebra-basics.llms.md#def-global-minimizer) \\(1, 1)\\, at the origin, and at the standard starting point \\(-1.2, 1)\\. Then we evaluate it along the curve \\x_2 = x_1^2\\, which is the floor of a narrow, curved valley.
+>
+> ## R
+>
+> ``` downlit
+> rosenbrock_rf <- function(x1, x2) 100 * (x2 - x1^2)^2 + (1 - x1)^2
+>
+> points_rf <- list(minimizer = c(1, 1), origin = c(0, 0), start = c(-1.2, 1))
+> sapply(points_rf, function(p) round(rosenbrock_rf(p[1], p[2]), 3))
+> #> minimizer    origin     start 
+> #>       0.0       1.0      24.2
+>
+> # On the curve x2 = x1^2 the first term vanishes, leaving (1 - x1)^2.
+> x_curve_rf <- c(-1, 0, 0.5, 1, 2)
+> rbind(
+>   on_curve = rosenbrock_rf(x_curve_rf, x_curve_rf^2),
+>   formula = (1 - x_curve_rf)^2
+> )
+> #>          [,1] [,2] [,3] [,4] [,5]
+> #> on_curve    4    1 0.25    0    1
+> #> formula     4    1 0.25    0    1
+> ```
+>
+> ## Python
+>
+> ``` python
+> import numpy as np
+>
+> def rosenbrock_rf(x1, x2):
+>     return 100 * (x2 - x1 ** 2) ** 2 + (1 - x1) ** 2
+>
+> points_rf = {"minimizer": (1, 1), "origin": (0, 0), "start": (-1.2, 1)}
+> print({name: round(rosenbrock_rf(*p), 3) for name, p in points_rf.items()})
+> #> {'minimizer': 0, 'origin': 1, 'start': 24.2}
+>
+> # On the curve x2 = x1^2 the first term vanishes, leaving (1 - x1)^2.
+> x_curve_rf = np.array([-1.0, 0.0, 0.5, 1.0, 2.0])
+> print("on_curve:", rosenbrock_rf(x_curve_rf, x_curve_rf ** 2))
+> #> on_curve: [4.   1.   0.25 0.   1.  ]
+> print("formula: ", (1 - x_curve_rf) ** 2)
+> #> formula:  [4.   1.   0.25 0.   1.  ]
+> ```
+>
+> The [function](functions.llms.md#def-function) is \\0\\ at \\(1, 1)\\ and positive everywhere else, because both of its parts are non-negative and vanish together only when \\x_1 = 1\\ and \\x_2 = 1\\. So \\(1, 1)\\ is the [global minimizer](algebra-basics.llms.md#def-global-minimizer). At the starting point the [value](functions.llms.md#def-value) is 24.2, mostly from the first [term](algebra-sums.llms.md#def-term), because \\(-1.2, 1)\\ is off the curve \\x_2 = x_1^2\\. On the curve the function is \\(1 - x_1)^2\\, which varies slowly compared with the steep walls.
+
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> library(ggplot2)
+> rf_grid <- expand.grid(
+>   x1 = seq(-2, 2, length.out = 201),
+>   x2 = seq(-1, 3, length.out = 201)
+> )
+> rf_grid$f <- rosenbrock_rf(rf_grid$x1, rf_grid$x2)
+> rf_points <- data.frame(
+>   name = names(points_rf),
+>   x1 = sapply(points_rf, `[`, 1),
+>   x2 = sapply(points_rf, `[`, 2)
+> )
+> rf_curve <- data.frame(x1 = seq(-2, 1.7, length.out = 200))
+> rf_curve$x2 <- rf_curve$x1^2
+> ggplot(rf_grid, aes(x1, x2)) +
+>   geom_contour(
+>     aes(z = f),
+>     colour = "grey60",
+>     breaks = c(1, 3, 10, 30, 100, 300, 1000)
+>   ) +
+>   geom_line(data = rf_curve, linetype = "dashed") +
+>   geom_point(aes(colour = name, shape = name), data = rf_points, size = 3) +
+>   scale_colour_manual(
+>     values = c(minimizer = "#0072B2", origin = "#009E73", start = "#D55E00")
+>   ) +
+>   scale_shape_manual(values = c(minimizer = 16, origin = 15, start = 17)) +
+>   coord_cartesian(xlim = c(-2, 2), ylim = c(-1, 3)) +
+>   labs(x = "x1", y = "x2", colour = NULL, shape = NULL) +
+>   theme(legend.position = "bottom")
+> ```
+>
+> Show R code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> g1_rf, g2_rf = np.meshgrid(np.linspace(-2, 2, 201), np.linspace(-1, 3, 201))
+> fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+> ax.contour(g1_rf, g2_rf, rosenbrock_rf(g1_rf, g2_rf), levels=[1, 3, 10, 30, 100, 300, 1000], colors="grey")
+> t_rf = np.linspace(-2, 1.7, 200)
+> ax.plot(t_rf, t_rf ** 2, color="black", linestyle="--")
+> style_rf = {"minimizer": ("#0072B2", "o"), "origin": ("#009E73", "s"), "start": ("#D55E00", "^")}
+> for name, p in points_rf.items():
+>     ax.plot(*p, color=style_rf[name][0], marker=style_rf[name][1], linestyle="", markersize=8, label=name)
+> ax.set_xlim(-2, 2)
+> #> (-2.0, 2.0)
+> ax.set_ylim(-1, 3)
+> #> (-1.0, 3.0)
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> fig.legend(loc="outside lower center", ncol=3)
+> plt.show()
+> ```
+>
+> ## R
+>
+> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization_files/figure-html/rosenbrock-contours-r-1.png)](optimization_files/figure-html/rosenbrock-contours-r-1.png "Figure 1: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
+>
+> ## Python
+>
+> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization_files/figure-html/rosenbrock-contours-python-1.png)](optimization_files/figure-html/rosenbrock-contours-python-1.png "Figure 1: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
+>
+> Figure 1: [Level curves](vector-calculus.llms.md#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function), with the curve \\x_2 = x_1^2\\ (dashed) along the floor of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
+
+> **NOTE:**
+>
+> **Definition 37 (Armijo condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\. A step length \\s \> 0\\ satisfies the **Armijo condition** [\[20\]](#ref-wikipedia_backtracking_line_search) with constant \\c \in (0, 1)\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ if
 >
 > \\ f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- s \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}) \le f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) - c\\ s\\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}\right\rVert\mathclose{}^2. \\
 
 > **NOTE:**
 >
-> **Example 52 (The Armijo condition on a parabola)** Let \\f(x) = x^2\\ and \\x = 2\\, so \\g = f'(2) = 4\\ and \\\mathopen{}\left\lVert g\right\rVert\mathclose{}^2 = 16\\. With \\c = 1/4\\, the condition on a step length \\s \> 0\\ is
+> **Example 53 (The Armijo condition on a parabola)** Let \\f(x) = x^2\\ and \\x = 2\\, so \\g = f'(2) = 4\\ and \\\mathopen{}\left\lVert g\right\rVert\mathclose{}^2 = 16\\. With \\c = 1/4\\, the condition on a step length \\s \> 0\\ is
 >
 > \\ \begin{aligned} (2 - 4s)^2 &\le 4 - 4s && \text{(} f(2 - 4s) \le f(2) - c\\ s\\ \mathopen{}\left\lVert g\right\rVert\mathclose{}^2 \text{)} \\ 4 - 16 s + 16 s^2 &\le 4 - 4s && \text{(expand the square)} \\ 16 s^2 &\le 12 s && \text{(add } 16 s - 4 \text{ to both sides)} \\ s &\le 3/4. && \text{(divide by } 16 s \> 0 \text{)} \end{aligned} \\
 >
@@ -1312,17 +1469,17 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 37 (Backtracking line search)** Let \\s_0 \> 0\\ be an initial step length, \\\beta \in (0, 1)\\ a shrink factor, and \\c \in (0, 1)\\. **Backtracking line search** [\[19\]](#ref-wikipedia_backtracking_line_search) is the [line search](#def-line-search) that chooses \\s^{(t)}\\ to be the largest of \\s_0, \beta s_0, \beta^2 s_0, \ldots\\ that satisfies the [Armijo condition](#def-armijo-condition) with constant \\c\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}\\.
+> **Definition 38 (Backtracking line search)** Let \\s_0 \> 0\\ be an initial step length, \\\beta \in (0, 1)\\ a shrink factor, and \\c \in (0, 1)\\. **Backtracking line search** [\[20\]](#ref-wikipedia_backtracking_line_search) is the [line search](#def-line-search) that chooses \\s^{(t)}\\ to be the largest of \\s_0, \beta s_0, \beta^2 s_0, \ldots\\ that satisfies the [Armijo condition](#def-armijo-condition) with constant \\c\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}\\.
 
 > **NOTE:**
 >
-> **Example 53 (Backtracking on a parabola)** For \\f(x) = x^2\\ at \\x = 2\\ with \\c = 1/4\\, the Armijo condition holds exactly when \\s \le 3/4\\ ([Example 52](#exm-armijo-condition)). With \\s_0 = 1\\ and \\\beta = 1/2\\, the trial step lengths are \\1, 1/2, 1/4, \ldots\\. The first, \\s = 1\\, exceeds \\3/4\\ and is rejected. The second, \\s = 1/2\\, is at most \\3/4\\ and is accepted. So backtracking chooses \\s^{(0)} = 1/2\\, after two evaluations of \\f\\.
+> **Example 54 (Backtracking on a parabola)** For \\f(x) = x^2\\ at \\x = 2\\ with \\c = 1/4\\, the Armijo condition holds exactly when \\s \le 3/4\\ ([Example 53](#exm-armijo-condition)). With \\s_0 = 1\\ and \\\beta = 1/2\\, the trial step lengths are \\1, 1/2, 1/4, \ldots\\. The first, \\s = 1\\, exceeds \\3/4\\ and is rejected. The second, \\s = 1/2\\, is at most \\3/4\\ and is accepted. So backtracking chooses \\s^{(0)} = 1/2\\, after two evaluations of \\f\\.
 
 ## 6 Quasi-Newton methods
 
 > **NOTE:**
 >
-> This section is adapted from the quasi-Newton lecture of Zhou [\[20\]](#ref-zhou2025quasinewton), used under the MIT License. The license text is:
+> This section is adapted from the quasi-Newton lecture of Zhou [\[21\]](#ref-zhou2025quasinewton), used under the MIT License. The license text is:
 >
 > > Copyright (c) 2025 ucla-biostat-257
 > >
@@ -1336,13 +1493,13 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 38 (Secant condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ \in \mathbb{R}^p\\. Write \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ for the step and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+) - \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ for the change in the [gradient](vector-calculus.llms.md#def-vector-derivative). A [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) \\\mathbf{B}\\ satisfies the **secant condition** [\[21, Ch. 6\]](#ref-nocedal2006numerical) for \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ when
+> **Definition 39 (Secant condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ \in \mathbb{R}^p\\. Write \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ for the step and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+) - \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ for the change in the [gradient](vector-calculus.llms.md#def-vector-derivative). A [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) \\\mathbf{B}\\ satisfies the **secant condition** [\[22, Ch. 6\]](#ref-nocedal2006numerical) for \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ when
 >
 > \\ \mathbf{B} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}. \\
 
 > **NOTE:**
 >
-> **Example 54 (The Hessian of a quadratic function satisfies the secant condition)** Let \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q}\\ [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Then \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so for any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+\\
+> **Example 55 (The Hessian of a quadratic function satisfies the secant condition)** Let \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q}\\ [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Then \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so for any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+\\
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} &= (\mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) - (\mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) && \text{(gradient at each point)} \\ &= \mathbf{Q} (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) && \text{(collect terms)} \\ &= \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}. && \text{(definition of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \text{)} \end{aligned} \\
 >
@@ -1350,7 +1507,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 39 (Quasi-Newton method)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point, and let \\\mathbf{H}^{(0)}\\ be a [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite). A **quasi-Newton method** [\[21, Ch. 6\]](#ref-nocedal2006numerical) produces, for \\t = 0, 1, 2, \ldots\\,
+> **Definition 40 (Quasi-Newton method)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point, and let \\\mathbf{H}^{(0)}\\ be a [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite). A **quasi-Newton method** [\[22, Ch. 6\]](#ref-nocedal2006numerical) produces, for \\t = 0, 1, 2, \ldots\\,
 >
 > \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t+1)} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)} - \alpha^{(t)} \mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}), \\
 >
@@ -1358,7 +1515,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 55 (One quasi-Newton step on a quadratic function)** Take \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\\ ([Example 54](#exm-secant-condition)), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ and \\\mathbf{H}^{(0)} = \mathbf{I}\_2\\. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes \\f\\ along a [direction](vector-calculus.llms.md#def-direction) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\ is \\\alpha = -\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} / {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\.
+> **Example 56 (One quasi-Newton step on a quadratic function)** Take \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\\ ([Example 55](#exm-secant-condition)), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ and \\\mathbf{H}^{(0)} = \mathbf{I}\_2\\. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes \\f\\ along a [direction](vector-calculus.llms.md#def-direction) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\ is \\\alpha = -\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} / {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\.
 >
 > ``` downlit
 > Q <- matrix(c(4, 1, 1, 3), nrow = 2)
@@ -1378,17 +1535,17 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> *Remark 5* (Why a quasi-Newton method is used). Because \\\mathbf{H}^{(t)}\\ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), \\-\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)})\\ is a [descent direction](#def-descent-direction), so, when the [gradient](vector-calculus.llms.md#def-vector-derivative) is not \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, a [line search](#def-line-search) finds a step that decreases \\f\\. [Newton’s method](#def-newton-method) needs the Hessian and the solution of a system of equations at every iteration, which costs about \\p^3\\ operations for a dense \\p \times p\\ Hessian, and requires the formulas for its entries. A quasi-Newton method needs only the [gradient](vector-calculus.llms.md#def-vector-derivative) and an update of \\\mathbf{H}^{(t)}\\ costing about \\p^2\\ operations. Near a minimizer the method speeds up superlinearly: faster than [gradient descent](#def-gradient-descent), slower than Newton’s method [\[21, Ch. 6\]](#ref-nocedal2006numerical). Replacing \\\mathbf{H}^{(t)}\\ by \\\mathbf{I}\_p\\ in the step formula gives [gradient descent](#def-gradient-descent).
+> *Remark 5* (Why a quasi-Newton method is used). Because \\\mathbf{H}^{(t)}\\ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), \\-\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)})\\ is a [descent direction](#def-descent-direction), so, when the [gradient](vector-calculus.llms.md#def-vector-derivative) is not \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, a [line search](#def-line-search) finds a step that decreases \\f\\. [Newton’s method](#def-newton-method) needs the Hessian and the solution of a system of equations at every iteration, which costs about \\p^3\\ operations for a dense \\p \times p\\ Hessian, and requires the formulas for its entries. A quasi-Newton method needs only the [gradient](vector-calculus.llms.md#def-vector-derivative) and an update of \\\mathbf{H}^{(t)}\\ costing about \\p^2\\ operations. Near a minimizer the method speeds up superlinearly: faster than [gradient descent](#def-gradient-descent), slower than Newton’s method [\[22, Ch. 6\]](#ref-nocedal2006numerical). Replacing \\\mathbf{H}^{(t)}\\ by \\\mathbf{I}\_p\\ in the step formula gives [gradient descent](#def-gradient-descent).
 
 > **NOTE:**
 >
-> **Definition 40 (BFGS update (Broyden-Fletcher-Goldfarb-Shanno))** Let \\\mathbf{H}\\, an approximation of the [inverse](linear-algebra-special-matrices.llms.md#def-matrix-inverse) Hessian, be a \\p \times p\\ [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ satisfy \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \> 0\\. With \\\rho \stackrel{\text{def}}{=}1 / \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\, the **BFGS update** [\[21, Ch. 6\]](#ref-nocedal2006numerical) of \\\mathbf{H}\\ is
+> **Definition 41 (BFGS update (Broyden-Fletcher-Goldfarb-Shanno))** Let \\\mathbf{H}\\, an approximation of the [inverse](linear-algebra-special-matrices.llms.md#def-matrix-inverse) Hessian, be a \\p \times p\\ [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ satisfy \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \> 0\\. With \\\rho \stackrel{\text{def}}{=}1 / \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\, the **BFGS update** [\[22, Ch. 6\]](#ref-nocedal2006numerical) of \\\mathbf{H}\\ is
 >
 > \\ \mathbf{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left(\mathbf{I}\_p - \rho \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\top}\right)\mathclose{} \mathbf{H} \mathopen{}\left(\mathbf{I}\_p - \rho \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}}^{\top}\right)\mathclose{} + \rho \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}}^{\top}. \\
 
 > **NOTE:**
 >
-> **Example 56 (A BFGS update from the quasi-Newton step)** Continue [Example 55](#exm-quasi-newton-step) with \\\mathbf{H} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)}\\.
+> **Example 57 (A BFGS update from the quasi-Newton step)** Continue [Example 56](#exm-quasi-newton-step) with \\\mathbf{H} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)}\\.
 >
 > ``` downlit
 > rho <- 1 / sum(y * s)
@@ -1410,15 +1567,15 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 >
 > \\ f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+) + f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \> f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) + f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+) + \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} - \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}, \\
 >
-> so \\0 \> -\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\. For a general \\f\\, a [line search](#def-line-search) that enforces a curvature condition on the [step length](#def-gradient-descent) (the Wolfe conditions [\[21, Ch. 3\]](#ref-nocedal2006numerical)) guarantees \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \> 0\\. Such a step can be found along a [descent direction](#def-descent-direction) when \\f\\ cannot keep decreasing forever.
+> so \\0 \> -\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\. For a general \\f\\, a [line search](#def-line-search) that enforces a curvature condition on the [step length](#def-gradient-descent) (the Wolfe conditions [\[22, Ch. 3\]](#ref-nocedal2006numerical)) guarantees \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \> 0\\. Such a step can be found along a [descent direction](#def-descent-direction) when \\f\\ cannot keep decreasing forever.
 
 > **NOTE:**
 >
-> **Definition 41 (Limited-memory BFGS (L-BFGS))** **Limited-memory BFGS** (**L-BFGS**) [\[21, Ch. 7\]](#ref-nocedal2006numerical) is the [quasi-Newton method](#def-quasi-newton-method) that never forms \\\mathbf{H}^{(t)}\\. It stores only the \\m\\ most recent pairs \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(j)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(j)})\\, with \\m\\ small, such as \\5\\ or \\20\\, and obtains \\\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)})\\ implicitly, through a few vector operations, as if the [BFGS update](#def-bfgs-update) for those \\m\\ pairs were applied to a simple starting [matrix](linear-algebra-matrices.llms.md#def-matrix), such as a multiple of \\\mathbf{I}\_p\\.
+> **Definition 42 (Limited-memory BFGS (L-BFGS))** **Limited-memory BFGS** (**L-BFGS**) [\[22, Ch. 7\]](#ref-nocedal2006numerical) is the [quasi-Newton method](#def-quasi-newton-method) that never forms \\\mathbf{H}^{(t)}\\. It stores only the \\m\\ most recent pairs \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(j)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(j)})\\, with \\m\\ small, such as \\5\\ or \\20\\, and obtains \\\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)})\\ implicitly, through a few vector operations, as if the [BFGS update](#def-bfgs-update) for those \\m\\ pairs were applied to a simple starting [matrix](linear-algebra-matrices.llms.md#def-matrix), such as a multiple of \\\mathbf{I}\_p\\.
 
 > **NOTE:**
 >
-> **Example 57 (L-BFGS applies the update without forming the matrix)** Continue [Example 56](#exm-bfgs-step) with \\m = 1\\ stored pair \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)})\\ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{I}\_2\\. Below, \\\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)})\\ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
+> **Example 58 (L-BFGS applies the update without forming the matrix)** Continue [Example 57](#exm-bfgs-step) with \\m = 1\\ stored pair \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)})\\ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{I}\_2\\. Below, \\\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)})\\ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
 >
 > ``` downlit
 > g1 <- grad(x1)
@@ -1437,8 +1594,8 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 ## 7 Further reading
 
-- Boyd and Vandenberghe [\[22\]](#ref-boyd2004convex) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
-- Nocedal and Wright [\[21\]](#ref-nocedal2006numerical) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
+- Boyd and Vandenberghe [\[23\]](#ref-boyd2004convex) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
+- Nocedal and Wright [\[22\]](#ref-nocedal2006numerical) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
 - [Hua Zhou](https://hua-zhou.github.io/)’s [course page for “UCLA Biostat 257 - Statistical Computing” (2025 Spring)](https://ucla-biostat-257.github.io/2025spring/) has lectures on optimization, from root finding to constrained problems. Its source is [on GitHub](https://github.com/ucla-biostat-257/2025spring) under the MIT License.
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)](https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html)
 - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.
@@ -1519,17 +1676,21 @@ Wikipedia contributors, “Line search — Wikipedia, the free encyclopedia.” 
 
 \[19\]
 
-Wikipedia contributors, “Backtracking line search — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Backtracking_line_search>
+Wikipedia contributors, “Rosenbrock function — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Rosenbrock_function>
 
 \[20\]
 
-H. Zhou, “Quasi-Newton methods.” Lecture notes for Biostat 257, Statistical Computing, University of California, Los Angeles, 2025. Accessed: Oct. 26, 2026. \[Online\]. Available: <https://ucla-biostat-257.github.io/2025spring/slides/24-quasinewton/quasinewton.html>
+Wikipedia contributors, “Backtracking line search — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Backtracking_line_search>
 
 \[21\]
 
-J. Nocedal and S. J. Wright, *Numerical optimization*, 2nd ed. in Springer series in operations research and financial engineering. Springer, 2006. doi: [10.1007/978-0-387-40065-5](https://doi.org/10.1007/978-0-387-40065-5).
+H. Zhou, “Quasi-Newton methods.” Lecture notes for Biostat 257, Statistical Computing, University of California, Los Angeles, 2025. Accessed: Oct. 26, 2026. \[Online\]. Available: <https://ucla-biostat-257.github.io/2025spring/slides/24-quasinewton/quasinewton.html>
 
 \[22\]
+
+J. Nocedal and S. J. Wright, *Numerical optimization*, 2nd ed. in Springer series in operations research and financial engineering. Springer, 2006. doi: [10.1007/978-0-387-40065-5](https://doi.org/10.1007/978-0-387-40065-5).
+
+\[23\]
 
 S. Boyd and L. Vandenberghe, *Convex optimization*. Cambridge University Press, 2004. doi: [10.1017/CBO9780511804441](https://doi.org/10.1017/CBO9780511804441).
 

@@ -9,7 +9,10 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.19">
 <title>Math for Data Science – Optimization</title>
@@ -353,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-28 16:00:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-28 17:04:35 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-critical-points" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Critical points and optimization</h2>
 <div id="def-flat-point" class="theorem definition">
@@ -368,37 +371,51 @@
 <span class="math inline">\(h(w) = w^2\)</span> has <span class="math inline">\(h'(1) = 2 \ne 0\)</span>, so <span class="math inline">\(1\)</span> is not a flat point.</li>
 </ul>
 </div>
-</section><section class="slide level2 scrollable"><div id="exr-flat-point" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Find the flat point, and check the approximation)</strong></span> Let <span class="math inline">\(f(w) = w^2 - 4w + 7\)</span>.</p>
-<ol type="1">
-<li>Differentiate <span class="math inline">\(f\)</span>.</li>
-<li>Find the flat point <span class="math inline">\(w\)</span> of <span class="math inline">\(f\)</span>, and say whether <span class="math inline">\(f(w)\)</span> is the <a href="./algebra-basics.html#def-minimum">minimum</a> or the <a href="./algebra-basics.html#def-maximum">maximum</a> of the values of <span class="math inline">\(f\)</span>.</li>
-<li>Evaluate the <a href="./calculus-derivatives.html#def-derivative">derivative</a> at <span class="math inline">\(w = 1\)</span>.</li>
-<li>Use the <a href="./calculus-derivatives.html#eq-linear-approx">linear approximation</a> to predict <span class="math inline">\(f(1.01)\)</span>.</li>
-<li>Compute <span class="math inline">\(f(1.01)\)</span> exactly.</li>
-<li>Compare the exact <a href="./functions.html#def-value">value</a> with the prediction.</li>
-</ol>
+</section><section class="slide level2"><div id="exr-flat-point" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (Differentiate a quadratic)</strong></span> Let <span class="math inline">\(f(w) = w^2 - 4w + 7\)</span>.</p>
+<p>Differentiate <span class="math inline">\(f\)</span>.</p>
 </div>
-<div id="sol-flat-point" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span><strong>1.</strong> Term by term:</p>
+</section><section class="slide level2"><div id="sol-flat-point" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span>Differentiating each <a href="./algebra-sums.html#def-term">term</a>:</p>
 <p><span class="math display">\[\frac{df}{dw} = 2w - 4\]</span></p>
-<p><strong>2.</strong> Set it to zero: <span class="math inline">\(2w - 4 = 0\)</span> gives <span class="math inline">\(w = 2\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-flat-point-find" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Find the flat point)</strong></span> In the setting of <a href="#/exr-flat-point" class="quarto-xref">Exercise&nbsp;1</a>, find the <a href="#/def-flat-point">flat point</a> <span class="math inline">\(w\)</span> of <span class="math inline">\(f\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-flat-point-find" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span>The <a href="./calculus-derivatives.html#def-derivative">derivative</a> is zero where <span class="math inline">\(2w - 4 = 0\)</span>, which gives <span class="math inline">\(w = 2\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-flat-point-minimum" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Classify the flat point)</strong></span> In the setting of <a href="#/exr-flat-point" class="quarto-xref">Exercise&nbsp;1</a>, say whether <span class="math inline">\(f(w)\)</span> at the <a href="#/def-flat-point">flat point</a> is the <a href="./algebra-basics.html#def-minimum">minimum</a> or the <a href="./algebra-basics.html#def-maximum">maximum</a> of the values of <span class="math inline">\(f\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-flat-point-minimum" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>The <a href="#/def-flat-point">flat point</a> is <span class="math inline">\(w = 2\)</span>, from <a href="#/sol-flat-point-find" class="quarto-xref">Solution&nbsp;2</a>. Evaluating <span class="math inline">\(f\)</span> there gives</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(2) &amp;= 4 - 8 + 7 \\
-&amp;= 3
+&amp;= 3.
 \end{aligned}
 \]</span></p>
-<p>is the minimum of the values of <span class="math inline">\(f\)</span>. Completing the square, <span class="math inline">\(f(w) = (w - 2)^2 + 3\)</span>, since</p>
+<p>This is the <a href="./algebra-basics.html#def-minimum">minimum</a> of the <a href="./functions.html#def-value">values</a> of <span class="math inline">\(f\)</span>. Completing the square, <span class="math inline">\(f(w) = (w - 2)^2 + 3\)</span>, since</p>
 <p><span class="math display">\[
 \begin{aligned}
 (w - 2)^2 + 3 &amp;= w^2 - 4w + 4 + 3 \\
 &amp;= w^2 - 4w + 7,
 \end{aligned}
 \]</span></p>
-<p>and <span class="math inline">\((w - 2)^2 \ge 0\)</span>, so <span class="math inline">\(f(w) \ge 3 = f(2)\)</span> for every <span class="math inline">\(w\)</span>. Equivalently, the derivative is negative below <span class="math inline">\(w = 2\)</span> and positive above it, so the function falls into that point and rises out of it.</p>
-<p><strong>3.</strong> At <span class="math inline">\(w = 1\)</span> the derivative is <span class="math inline">\(2(1) - 4 = -2\)</span>, so <span class="math inline">\(f\)</span> is falling there.</p>
-<p><strong>4.</strong> With <span class="math inline">\(\varepsilon= 0.01\)</span>, the <a href="./calculus-derivatives.html#eq-linear-approx">linear approximation</a> predicts a change of <span class="math inline">\((0.01)(-2) = -0.02\)</span>, from</p>
+<p>and <span class="math inline">\((w - 2)^2 \ge 0\)</span>, so <span class="math inline">\(f(w) \ge 3 = f(2)\)</span> for every <span class="math inline">\(w\)</span>. Equivalently, the <a href="./calculus-derivatives.html#def-derivative">derivative</a> is negative below <span class="math inline">\(w = 2\)</span> and positive above it, so the function falls into that point and rises out of it.</p>
+</div>
+</section><section class="slide level2"><div id="exr-flat-point-slope" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (Slope at <span class="math inline">\(w = 1\)</span>)</strong></span> In the setting of <a href="#/exr-flat-point" class="quarto-xref">Exercise&nbsp;1</a>, evaluate the <a href="./calculus-derivatives.html#def-derivative">derivative</a> at <span class="math inline">\(w = 1\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-flat-point-slope" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>At <span class="math inline">\(w = 1\)</span> the <a href="./calculus-derivatives.html#def-derivative">derivative</a> is <span class="math inline">\(2(1) - 4 = -2\)</span>, so <span class="math inline">\(f\)</span> is falling there.</p>
+</div>
+</section><section class="slide level2"><div id="exr-flat-point-predict" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Predict a nearby value)</strong></span> In the setting of <a href="#/exr-flat-point" class="quarto-xref">Exercise&nbsp;1</a>, use the <a href="./calculus-derivatives.html#eq-linear-approx">linear approximation</a> and the <a href="./calculus-derivatives.html#def-derivative">derivative</a> at <span class="math inline">\(w = 1\)</span> from <a href="#/exr-flat-point-slope" class="quarto-xref">Exercise&nbsp;4</a> to predict <span class="math inline">\(f(1.01)\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-flat-point-predict" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span>With <span class="math inline">\(\varepsilon= 0.01\)</span>, the <a href="./calculus-derivatives.html#eq-linear-approx">linear approximation</a> predicts a change of <span class="math inline">\((0.01)(-2) = -0.02\)</span>, from</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(1) &amp;= 1 - 4 + 7 \\
@@ -406,7 +423,12 @@ f(1) &amp;= 1 - 4 + 7 \\
 \end{aligned}
 \]</span></p>
 <p>to <span class="math inline">\(3.98\)</span>.</p>
-<p><strong>5.</strong> The exact <a href="./functions.html#def-value">value</a> is</p>
+</div>
+</section><section class="slide level2"><div id="exr-flat-point-exact" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Exact value)</strong></span> In the setting of <a href="#/exr-flat-point" class="quarto-xref">Exercise&nbsp;1</a>, find the exact <a href="./functions.html#def-value">value</a> of <span class="math inline">\(f(1.01)\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-flat-point-exact" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span>The exact <a href="./functions.html#def-value">value</a> is</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(1.01)
@@ -415,8 +437,13 @@ f(1.01)
 &amp;= 3.9801
 \end{aligned}
 \]</span></p>
-<p>a change of <span class="math inline">\(-0.0199\)</span>.</p>
-<p><strong>6.</strong> The prediction is off by <span class="math inline">\(0.0001\)</span>, which is <span class="math inline">\(\varepsilon^2\)</span>: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of <a href="./optimization.html#def-gradient-descent">gradient descent</a>, the step-by-step method of fitting models defined on the optimization page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.</p>
+<p>a change of <span class="math inline">\(-0.0199\)</span> from <span class="math inline">\(f(1) = 4\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-flat-point-compare" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (Check the prediction)</strong></span> Compare the prediction in <a href="#/exr-flat-point-predict" class="quarto-xref">Exercise&nbsp;5</a> with the exact <a href="./functions.html#def-value">value</a> of <span class="math inline">\(f(1.01)\)</span> from <a href="#/exr-flat-point-exact" class="quarto-xref">Exercise&nbsp;6</a>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-flat-point-compare" class="proof solution">
+<p><span class="proof-title"><em>Solution 7</em>. </span>The prediction <span class="math inline">\(3.98\)</span> (<a href="#/sol-flat-point-predict" class="quarto-xref">Solution&nbsp;5</a>) and the exact <a href="./functions.html#def-value">value</a> <span class="math inline">\(3.9801\)</span> (<a href="#/sol-flat-point-exact" class="quarto-xref">Solution&nbsp;6</a>) differ by <span class="math inline">\(0.0001\)</span>, which is <span class="math inline">\(\varepsilon^2\)</span>. The <a href="./calculus-derivatives.html#def-linear-approximation">linear approximation</a> drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of <a href="./optimization.html#def-gradient-descent">gradient descent</a>, the step-by-step method of fitting models that the optimization page defines. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.</p>
 </div>
 </section><section class="slide level2"><div id="def-critical-point" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Critical point)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined on an <a href="./sets.html#def-open-interval">open interval</a> containing <span class="math inline">\(c\)</span>. The point <span class="math inline">\(c\)</span> is a <strong>critical point</strong> of <span class="math inline">\(f\)</span> if either <span class="math inline">\(f'(c) = 0\)</span> or <span class="math inline">\(f\)</span> is not differentiable at <span class="math inline">\(c\)</span> (<a href="./calculus-derivatives.html#def-differentiable">Definition&nbsp;6 in Derivatives and Taylor Series</a>).</p>
@@ -465,13 +492,13 @@ f'(0) &amp;= 3 \cdot 0^2 \\
 <p>The derivative is <span class="math inline">\(0\)</span> at 2 of the 5 points, namely <span class="math inline">\(w = -1\)</span> and <span class="math inline">\(w = 1\)</span>. These are flat points of <span class="math inline">\(f\)</span>, so by <a href="#/thm-flat-point-critical" class="quarto-xref">Theorem&nbsp;1</a> they are critical points. The difference quotients of <span class="math inline">\(g\)</span> at <span class="math inline">\(0\)</span> are -1 from the left and 1 from the right, so <span class="math inline">\(g\)</span> has no derivative at <span class="math inline">\(0\)</span>. Thus <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;2</a>), but not a flat point.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-opt-gamma-kernel" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (Maximizing a gamma-family kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[2]</a></span>, Question 1.1.10.</p>
+<p><span class="theorem-title"><strong>Exercise 8 (Maximizing a gamma-family kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[2]</a></span>, Question 1.1.10.</p>
 <p>Find the maximum value of</p>
 <p><span class="math display">\[f(x) = x^4 e^{-x}\]</span></p>
 <p>on the interval <span class="math inline">\([0, \infty)\)</span>.</p>
 </div>
 <div id="sol-miller-deriv-opt-gamma-kernel" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span>Differentiate using the product rule:</p>
+<p><span class="proof-title"><em>Solution 8</em>. </span>Differentiate using the product rule:</p>
 <p><span class="math display">\[
 \begin{aligned}
 f'(x)
@@ -498,13 +525,13 @@ f(4) &amp;= 4^4 e^{-4} \\
 <p>Since <span class="math inline">\(f(x) \ge 0\)</span> for all <span class="math inline">\(x \ge 0\)</span> and <span class="math inline">\(f(4) &gt; 0\)</span>, the global maximum occurs at <span class="math inline">\(x = 4\)</span>, with maximum value <span class="math inline">\(256/e^4\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-classify-critical-points" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Classifying critical points with the second derivative test)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[2]</a></span>, Question 1.1.11.</p>
+<p><span class="theorem-title"><strong>Exercise 9 (Classifying critical points with the second derivative test)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[2]</a></span>, Question 1.1.11.</p>
 <p>Find the critical points of</p>
 <p><span class="math display">\[f(x) = 4x^3 - 3x^2\]</span></p>
 <p>and decide whether each is a local maximum, a local minimum, or an inflection point.</p>
 </div>
 <div id="sol-miller-deriv-classify-critical-points" class="proof solution">
-<p><span class="proof-title"><em>Solution 3</em>. </span>Compute the first derivative:</p>
+<p><span class="proof-title"><em>Solution 9</em>. </span>Compute the first derivative:</p>
 <p><span class="math display">\[
 \begin{aligned}
 f'(x)
@@ -2357,14 +2384,155 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <li>With <span class="math inline">\(b = 0.01\)</span>, <span class="math inline">\(r^2 = (0.99 / 1.01)^2 \approx 0.96\)</span>, so <span class="math inline">\(f\)</span> shrinks by only about <span class="math inline">\(4\%\)</span> per step. Newton’s method reaches the minimizer of any such <span class="math inline">\(f\)</span> in one step (<a href="#/thm-newton-quadratic" class="quarto-xref">Theorem&nbsp;14</a>).</li>
 </ul>
 </div>
+</section><section class="slide level2"><div id="def-rosenbrock-function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 36 (Rosenbrock function)</strong></span> The <strong>Rosenbrock function</strong> on <span class="math inline">\(\mathbb{R}^2\)</span> is</p>
+<p><span class="math display">\[
+f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \stackrel{\text{def}}{=}100\mathopen{}\left(x_2 - x_1^2\right)\mathclose{}^2 + \mathopen{}\left(1 - x_1\right)\mathclose{}^2,
+\qquad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(x_1, x_2)}^{\top}.
+\]</span></p>
+<p>It is a standard test problem for optimizers <span class="citation" data-cites="wikipedia_rosenbrock_function"><a href="#/references" role="doc-biblioref" onclick="">[19]</a></span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-rosenbrock-function" class="theorem example">
+<p><span class="theorem-title"><strong>Example 52 (Values of the Rosenbrock function)</strong></span> We evaluate the <a href="#/def-rosenbrock-function">Rosenbrock function</a> at the <a href="./algebra-basics.html#def-global-minimizer">minimizer</a> <span class="math inline">\((1, 1)\)</span>, at the origin, and at the standard starting point <span class="math inline">\((-1.2, 1)\)</span>. Then we evaluate it along the curve <span class="math inline">\(x_2 = x_1^2\)</span>, which is the floor of a narrow, curved valley.</p>
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">R</a></li>
+<li><a href="#tabset-2-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>rosenbrock_rf <span class="ot">&lt;-</span> <span class="cf">function</span>(x1, x2) <span class="dv">100</span> <span class="sc">*</span> (x2 <span class="sc">-</span> x1<span class="sc">^</span><span class="dv">2</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">-</span> x1)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb7-2"><a aria-label="2"></a></span>
+<span id="cb7-3"><a aria-label="3"></a>points_rf <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">minimizer =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>), <span class="at">origin =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">start =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.2</span>, <span class="dv">1</span>))</span>
+<span id="cb7-4"><a aria-label="4"></a><span class="fu">sapply</span>(points_rf, <span class="cf">function</span>(p) <span class="fu">round</span>(<span class="fu">rosenbrock_rf</span>(p[<span class="dv">1</span>], p[<span class="dv">2</span>]), <span class="dv">3</span>))</span>
+<span id="cb7-5"><a aria-label="5"></a><span class="co">#&gt; minimizer    origin     start </span></span>
+<span id="cb7-6"><a aria-label="6"></a><span class="co">#&gt;       0.0       1.0      24.2</span></span>
+<span id="cb7-7"><a aria-label="7"></a></span>
+<span id="cb7-8"><a aria-label="8"></a><span class="co"># On the curve x2 = x1^2 the first term vanishes, leaving (1 - x1)^2.</span></span>
+<span id="cb7-9"><a aria-label="9"></a>x_curve_rf <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb7-10"><a aria-label="10"></a><span class="fu">rbind</span>(</span>
+<span id="cb7-11"><a aria-label="11"></a>  <span class="at">on_curve =</span> <span class="fu">rosenbrock_rf</span>(x_curve_rf, x_curve_rf<span class="sc">^</span><span class="dv">2</span>),</span>
+<span id="cb7-12"><a aria-label="12"></a>  <span class="at">formula =</span> (<span class="dv">1</span> <span class="sc">-</span> x_curve_rf)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb7-13"><a aria-label="13"></a>)</span>
+<span id="cb7-14"><a aria-label="14"></a><span class="co">#&gt;          [,1] [,2] [,3] [,4] [,5]</span></span>
+<span id="cb7-15"><a aria-label="15"></a><span class="co">#&gt; on_curve    4    1 0.25    0    1</span></span>
+<span id="cb7-16"><a aria-label="16"></a><span class="co">#&gt; formula     4    1 0.25    0    1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a aria-label="1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-2"><a aria-label="2"></a></span>
+<span id="cb8-3"><a aria-label="3"></a><span class="kw">def</span> rosenbrock_rf(x1, x2):</span>
+<span id="cb8-4"><a aria-label="4"></a>    <span class="cf">return</span> <span class="dv">100</span> <span class="op">*</span> (x2 <span class="op">-</span> x1 <span class="op">**</span> <span class="dv">2</span>) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> x1) <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb8-5"><a aria-label="5"></a></span>
+<span id="cb8-6"><a aria-label="6"></a>points_rf <span class="op">=</span> {<span class="st">"minimizer"</span>: (<span class="dv">1</span>, <span class="dv">1</span>), <span class="st">"origin"</span>: (<span class="dv">0</span>, <span class="dv">0</span>), <span class="st">"start"</span>: (<span class="op">-</span><span class="fl">1.2</span>, <span class="dv">1</span>)}</span>
+<span id="cb8-7"><a aria-label="7"></a><span class="bu">print</span>({name: <span class="bu">round</span>(rosenbrock_rf(<span class="op">*</span>p), <span class="dv">3</span>) <span class="cf">for</span> name, p <span class="kw">in</span> points_rf.items()})</span>
+<span id="cb8-8"><a aria-label="8"></a><span class="co">#&gt; {'minimizer': 0, 'origin': 1, 'start': 24.2}</span></span>
+<span id="cb8-9"><a aria-label="9"></a></span>
+<span id="cb8-10"><a aria-label="10"></a><span class="co"># On the curve x2 = x1^2 the first term vanishes, leaving (1 - x1)^2.</span></span>
+<span id="cb8-11"><a aria-label="11"></a>x_curve_rf <span class="op">=</span> np.array([<span class="op">-</span><span class="fl">1.0</span>, <span class="fl">0.0</span>, <span class="fl">0.5</span>, <span class="fl">1.0</span>, <span class="fl">2.0</span>])</span>
+<span id="cb8-12"><a aria-label="12"></a><span class="bu">print</span>(<span class="st">"on_curve:"</span>, rosenbrock_rf(x_curve_rf, x_curve_rf <span class="op">**</span> <span class="dv">2</span>))</span>
+<span id="cb8-13"><a aria-label="13"></a><span class="co">#&gt; on_curve: [4.   1.   0.25 0.   1.  ]</span></span>
+<span id="cb8-14"><a aria-label="14"></a><span class="bu">print</span>(<span class="st">"formula: "</span>, (<span class="dv">1</span> <span class="op">-</span> x_curve_rf) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb8-15"><a aria-label="15"></a><span class="co">#&gt; formula:  [4.   1.   0.25 0.   1.  ]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>The <a href="./functions.html#def-function">function</a> is <span class="math inline">\(0\)</span> at <span class="math inline">\((1, 1)\)</span> and positive everywhere else, because both of its parts are non-negative and vanish together only when <span class="math inline">\(x_1 = 1\)</span> and <span class="math inline">\(x_2 = 1\)</span>. So <span class="math inline">\((1, 1)\)</span> is the <a href="./algebra-basics.html#def-global-minimizer">global minimizer</a>. At the starting point the <a href="./functions.html#def-value">value</a> is 24.2, mostly from the first <a href="./algebra-sums.html#def-term">term</a>, because <span class="math inline">\((-1.2, 1)\)</span> is off the curve <span class="math inline">\(x_2 = x_1^2\)</span>. On the curve the function is <span class="math inline">\((1 - x_1)^2\)</span>, which varies slowly compared with the steep walls.</p>
+</div>
+</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-2"><a aria-label="2"></a>rf_grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb9-3"><a aria-label="3"></a>  <span class="at">x1 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">201</span>),</span>
+<span id="cb9-4"><a aria-label="4"></a>  <span class="at">x2 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
+<span id="cb9-5"><a aria-label="5"></a>)</span>
+<span id="cb9-6"><a aria-label="6"></a>rf_grid<span class="sc">$</span>f <span class="ot">&lt;-</span> <span class="fu">rosenbrock_rf</span>(rf_grid<span class="sc">$</span>x1, rf_grid<span class="sc">$</span>x2)</span>
+<span id="cb9-7"><a aria-label="7"></a>rf_points <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb9-8"><a aria-label="8"></a>  <span class="at">name =</span> <span class="fu">names</span>(points_rf),</span>
+<span id="cb9-9"><a aria-label="9"></a>  <span class="at">x1 =</span> <span class="fu">sapply</span>(points_rf, <span class="st">`</span><span class="at">[</span><span class="st">`</span>, <span class="dv">1</span>),</span>
+<span id="cb9-10"><a aria-label="10"></a>  <span class="at">x2 =</span> <span class="fu">sapply</span>(points_rf, <span class="st">`</span><span class="at">[</span><span class="st">`</span>, <span class="dv">2</span>)</span>
+<span id="cb9-11"><a aria-label="11"></a>)</span>
+<span id="cb9-12"><a aria-label="12"></a>rf_curve <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="fl">1.7</span>, <span class="at">length.out =</span> <span class="dv">200</span>))</span>
+<span id="cb9-13"><a aria-label="13"></a>rf_curve<span class="sc">$</span>x2 <span class="ot">&lt;-</span> rf_curve<span class="sc">$</span>x1<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb9-14"><a aria-label="14"></a><span class="fu">ggplot</span>(rf_grid, <span class="fu">aes</span>(x1, x2)) <span class="sc">+</span></span>
+<span id="cb9-15"><a aria-label="15"></a>  <span class="fu">geom_contour</span>(</span>
+<span id="cb9-16"><a aria-label="16"></a>    <span class="fu">aes</span>(<span class="at">z =</span> f),</span>
+<span id="cb9-17"><a aria-label="17"></a>    <span class="at">colour =</span> <span class="st">"grey60"</span>,</span>
+<span id="cb9-18"><a aria-label="18"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">100</span>, <span class="dv">300</span>, <span class="dv">1000</span>)</span>
+<span id="cb9-19"><a aria-label="19"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-20"><a aria-label="20"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> rf_curve, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb9-21"><a aria-label="21"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> name, <span class="at">shape =</span> name), <span class="at">data =</span> rf_points, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb9-22"><a aria-label="22"></a>  <span class="fu">scale_colour_manual</span>(</span>
+<span id="cb9-23"><a aria-label="23"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="at">minimizer =</span> <span class="st">"#0072B2"</span>, <span class="at">origin =</span> <span class="st">"#009E73"</span>, <span class="at">start =</span> <span class="st">"#D55E00"</span>)</span>
+<span id="cb9-24"><a aria-label="24"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-25"><a aria-label="25"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="at">minimizer =</span> <span class="dv">16</span>, <span class="at">origin =</span> <span class="dv">15</span>, <span class="at">start =</span> <span class="dv">17</span>)) <span class="sc">+</span></span>
+<span id="cb9-26"><a aria-label="26"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb9-27"><a aria-label="27"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x1"</span>, <span class="at">y =</span> <span class="st">"x2"</span>, <span class="at">colour =</span> <span class="cn">NULL</span>, <span class="at">shape =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb9-28"><a aria-label="28"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-3"><a aria-label="3"></a></span>
+<span id="cb10-4"><a aria-label="4"></a>g1_rf, g2_rf <span class="op">=</span> np.meshgrid(np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">201</span>), np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">201</span>))</span>
+<span id="cb10-5"><a aria-label="5"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb10-6"><a aria-label="6"></a>ax.contour(g1_rf, g2_rf, rosenbrock_rf(g1_rf, g2_rf), levels<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">100</span>, <span class="dv">300</span>, <span class="dv">1000</span>], colors<span class="op">=</span><span class="st">"grey"</span>)</span>
+<span id="cb10-7"><a aria-label="7"></a>t_rf <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="fl">1.7</span>, <span class="dv">200</span>)</span>
+<span id="cb10-8"><a aria-label="8"></a>ax.plot(t_rf, t_rf <span class="op">**</span> <span class="dv">2</span>, color<span class="op">=</span><span class="st">"black"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb10-9"><a aria-label="9"></a>style_rf <span class="op">=</span> {<span class="st">"minimizer"</span>: (<span class="st">"#0072B2"</span>, <span class="st">"o"</span>), <span class="st">"origin"</span>: (<span class="st">"#009E73"</span>, <span class="st">"s"</span>), <span class="st">"start"</span>: (<span class="st">"#D55E00"</span>, <span class="st">"^"</span>)}</span>
+<span id="cb10-10"><a aria-label="10"></a><span class="cf">for</span> name, p <span class="kw">in</span> points_rf.items():</span>
+<span id="cb10-11"><a aria-label="11"></a>    ax.plot(<span class="op">*</span>p, color<span class="op">=</span>style_rf[name][<span class="dv">0</span>], marker<span class="op">=</span>style_rf[name][<span class="dv">1</span>], linestyle<span class="op">=</span><span class="st">""</span>, markersize<span class="op">=</span><span class="dv">8</span>, label<span class="op">=</span>name)</span>
+<span id="cb10-12"><a aria-label="12"></a>ax.set_xlim(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb10-13"><a aria-label="13"></a><span class="co">#&gt; (-2.0, 2.0)</span></span>
+<span id="cb10-14"><a aria-label="14"></a>ax.set_ylim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb10-15"><a aria-label="15"></a><span class="co">#&gt; (-1.0, 3.0)</span></span>
+<span id="cb10-16"><a aria-label="16"></a>ax.set_xlabel(<span class="st">"x1"</span>)</span>
+<span id="cb10-17"><a aria-label="17"></a>ax.set_ylabel(<span class="st">"x2"</span>)</span>
+<span id="cb10-18"><a aria-label="18"></a>fig.legend(loc<span class="op">=</span><span class="st">"outside lower center"</span>, ncol<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb10-19"><a aria-label="19"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-rosenbrock-function" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-rosenbrock-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a> of the <a href="#/def-rosenbrock-function">Rosenbrock function</a>, with the curve <span class="math inline">\(x_2 = x_1^2\)</span> (dashed) along the floor of the valley. The <a href="./algebra-basics.html#def-global-minimizer">minimizer</a>, the origin and the starting point are marked.
+</figcaption><div aria-describedby="fig-rosenbrock-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-3" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-3-1">R</a></li>
+<li><a href="#tabset-3-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-3-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization_files/figure-html/rosenbrock-contours-r-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked."><img data-src="optimization_files/figure-html/rosenbrock-contours-r-1.png" alt="Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization_files/figure-html/rosenbrock-contours-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked."><img data-src="optimization_files/figure-html/rosenbrock-contours-python-1.png" alt="Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
 </section><section class="slide level2"><div id="def-armijo-condition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 36 (Armijo condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span>. A step length <span class="math inline">\(s &gt; 0\)</span> satisfies the <strong>Armijo condition</strong> <span class="citation" data-cites="wikipedia_backtracking_line_search"><a href="#/references" role="doc-biblioref" onclick="">[19]</a></span> with constant <span class="math inline">\(c \in (0, 1)\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> if</p>
+<p><span class="theorem-title"><strong>Definition 37 (Armijo condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span>. A step length <span class="math inline">\(s &gt; 0\)</span> satisfies the <strong>Armijo condition</strong> <span class="citation" data-cites="wikipedia_backtracking_line_search"><a href="#/references" role="doc-biblioref" onclick="">[20]</a></span> with constant <span class="math inline">\(c \in (0, 1)\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> if</p>
 <p><span class="math display">\[
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) \le f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - c\, s\, \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}\right\rVert\mathclose{}^2.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-armijo-condition" class="theorem example">
-<p><span class="theorem-title"><strong>Example 52 (The Armijo condition on a parabola)</strong></span> Let <span class="math inline">\(f(x) = x^2\)</span> and <span class="math inline">\(x = 2\)</span>, so <span class="math inline">\(g = f'(2) = 4\)</span> and <span class="math inline">\(\mathopen{}\left\lVert g\right\rVert\mathclose{}^2 = 16\)</span>. With <span class="math inline">\(c = 1/4\)</span>, the condition on a step length <span class="math inline">\(s &gt; 0\)</span> is</p>
+<p><span class="theorem-title"><strong>Example 53 (The Armijo condition on a parabola)</strong></span> Let <span class="math inline">\(f(x) = x^2\)</span> and <span class="math inline">\(x = 2\)</span>, so <span class="math inline">\(g = f'(2) = 4\)</span> and <span class="math inline">\(\mathopen{}\left\lVert g\right\rVert\mathclose{}^2 = 16\)</span>. With <span class="math inline">\(c = 1/4\)</span>, the condition on a step length <span class="math inline">\(s &gt; 0\)</span> is</p>
 <p><span class="math display">\[
 \begin{aligned}
 (2 - 4s)^2 &amp;\le 4 - 4s
@@ -2383,10 +2551,10 @@ s &amp;\le 3/4.
 <p>So <span class="math inline">\(s = 1/2\)</span> satisfies the condition: <span class="math inline">\(f(0) = 0 \le 4 - 2 = 2\)</span>. And <span class="math inline">\(s = 1\)</span> does not: <span class="math inline">\(f(-2) = 4 &gt; 4 - 4 = 0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-backtracking-line-search" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 37 (Backtracking line search)</strong></span> Let <span class="math inline">\(s_0 &gt; 0\)</span> be an initial step length, <span class="math inline">\(\beta \in (0, 1)\)</span> a shrink factor, and <span class="math inline">\(c \in (0, 1)\)</span>. <strong>Backtracking line search</strong> <span class="citation" data-cites="wikipedia_backtracking_line_search"><a href="#/references" role="doc-biblioref" onclick="">[19]</a></span> is the <a href="#/def-line-search">line search</a> that chooses <span class="math inline">\(s^{(t)}\)</span> to be the largest of <span class="math inline">\(s_0, \beta s_0, \beta^2 s_0, \ldots\)</span> that satisfies the <a href="#/def-armijo-condition">Armijo condition</a> with constant <span class="math inline">\(c\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 38 (Backtracking line search)</strong></span> Let <span class="math inline">\(s_0 &gt; 0\)</span> be an initial step length, <span class="math inline">\(\beta \in (0, 1)\)</span> a shrink factor, and <span class="math inline">\(c \in (0, 1)\)</span>. <strong>Backtracking line search</strong> <span class="citation" data-cites="wikipedia_backtracking_line_search"><a href="#/references" role="doc-biblioref" onclick="">[20]</a></span> is the <a href="#/def-line-search">line search</a> that chooses <span class="math inline">\(s^{(t)}\)</span> to be the largest of <span class="math inline">\(s_0, \beta s_0, \beta^2 s_0, \ldots\)</span> that satisfies the <a href="#/def-armijo-condition">Armijo condition</a> with constant <span class="math inline">\(c\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-backtracking-line-search" class="theorem example">
-<p><span class="theorem-title"><strong>Example 53 (Backtracking on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(x = 2\)</span> with <span class="math inline">\(c = 1/4\)</span>, the Armijo condition holds exactly when <span class="math inline">\(s \le 3/4\)</span> (<a href="#/exm-armijo-condition" class="quarto-xref">Example&nbsp;52</a>). With <span class="math inline">\(s_0 = 1\)</span> and <span class="math inline">\(\beta = 1/2\)</span>, the trial step lengths are <span class="math inline">\(1, 1/2, 1/4, \ldots\)</span>. The first, <span class="math inline">\(s = 1\)</span>, exceeds <span class="math inline">\(3/4\)</span> and is rejected. The second, <span class="math inline">\(s = 1/2\)</span>, is at most <span class="math inline">\(3/4\)</span> and is accepted. So backtracking chooses <span class="math inline">\(s^{(0)} = 1/2\)</span>, after two evaluations of <span class="math inline">\(f\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 54 (Backtracking on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(x = 2\)</span> with <span class="math inline">\(c = 1/4\)</span>, the Armijo condition holds exactly when <span class="math inline">\(s \le 3/4\)</span> (<a href="#/exm-armijo-condition" class="quarto-xref">Example&nbsp;53</a>). With <span class="math inline">\(s_0 = 1\)</span> and <span class="math inline">\(\beta = 1/2\)</span>, the trial step lengths are <span class="math inline">\(1, 1/2, 1/4, \ldots\)</span>. The first, <span class="math inline">\(s = 1\)</span>, exceeds <span class="math inline">\(3/4\)</span> and is rejected. The second, <span class="math inline">\(s = 1/2\)</span>, is at most <span class="math inline">\(3/4\)</span> and is accepted. So backtracking chooses <span class="math inline">\(s^{(0)} = 1/2\)</span>, after two evaluations of <span class="math inline">\(f\)</span>.</p>
 </div>
 </section><section id="sec-quasi-newton" class="slide level2" data-number="6"><h2>
 <span class="header-section-number">6</span> Quasi-Newton methods</h2>
@@ -2401,7 +2569,7 @@ s &amp;\le 3/4.
 <p><strong>Source and license</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from the quasi-Newton lecture of <span class="citation" data-cites="zhou2025quasinewton">Zhou <a href="#/references" role="doc-biblioref" onclick="">[20]</a></span>, used under the MIT License. The license text is:</p>
+<p>This section is adapted from the quasi-Newton lecture of <span class="citation" data-cites="zhou2025quasinewton">Zhou <a href="#/references" role="doc-biblioref" onclick="">[21]</a></span>, used under the MIT License. The license text is:</p>
 <blockquote>
 <p>Copyright (c) 2025 ucla-biostat-257</p>
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
@@ -2413,13 +2581,13 @@ s &amp;\le 3/4.
 </div>
 </div>
 <div id="def-secant-condition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 38 (Secant condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first <a href="./vector-calculus.html#def-partial-derivative">partial derivatives</a>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+ \in \mathbb{R}^p\)</span>. Write <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+ - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for the step and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+) - \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> for the change in the <a href="./vector-calculus.html#def-vector-derivative">gradient</a>. A <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric matrix</a> <span class="math inline">\(\mathbf{B}\)</span> satisfies the <strong>secant condition</strong> <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[21, Ch. 6]</a></span> for <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> when</p>
+<p><span class="theorem-title"><strong>Definition 39 (Secant condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first <a href="./vector-calculus.html#def-partial-derivative">partial derivatives</a>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+ \in \mathbb{R}^p\)</span>. Write <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+ - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for the step and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+) - \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> for the change in the <a href="./vector-calculus.html#def-vector-derivative">gradient</a>. A <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric matrix</a> <span class="math inline">\(\mathbf{B}\)</span> satisfies the <strong>secant condition</strong> <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[22, Ch. 6]</a></span> for <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> when</p>
 <p><span class="math display">\[
 \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-secant-condition" class="theorem example">
-<p><span class="theorem-title"><strong>Example 54 (The Hessian of a quadratic function satisfies the secant condition)</strong></span> Let <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{Q}\)</span> <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a>. Then <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so for any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+\)</span></p>
+<p><span class="theorem-title"><strong>Example 55 (The Hessian of a quadratic function satisfies the secant condition)</strong></span> Let <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{Q}\)</span> <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a>. Then <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, so for any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
@@ -2436,34 +2604,34 @@ s &amp;\le 3/4.
 <p>So the Hessian <span class="math inline">\(\mathbf{Q}\)</span> of the <a href="./algebra-exponentials.html#def-quadratic-polynomial">quadratic function</a> satisfies the secant condition for every step. For a general <span class="math inline">\(f\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\approx \mathbf{H}_f \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span> holds for a short step, with <span class="math inline">\(\mathbf{H}_f\)</span> the Hessian of <span class="math inline">\(f\)</span> near the step, which is why a <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> that satisfies the secant condition is a reasonable stand-in for the Hessian.</p>
 </div>
 </section><section class="slide level2"><div id="def-quasi-newton-method" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 39 (Quasi-Newton method)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first <a href="./vector-calculus.html#def-partial-derivative">partial derivatives</a>, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> be a starting point, and let <span class="math inline">\(\mathbf{H}^{(0)}\)</span> be a <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite matrix</a>. A <strong>quasi-Newton method</strong> <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[21, Ch. 6]</a></span> produces, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 40 (Quasi-Newton method)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first <a href="./vector-calculus.html#def-partial-derivative">partial derivatives</a>, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> be a starting point, and let <span class="math inline">\(\mathbf{H}^{(0)}\)</span> be a <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite matrix</a>. A <strong>quasi-Newton method</strong> <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[22, Ch. 6]</a></span> produces, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>,</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - \alpha^{(t)} \mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}),
 \]</span></p>
 <p>where <span class="math inline">\(\alpha^{(t)} &gt; 0\)</span> is a <a href="#/def-gradient-descent">step length</a> chosen by a <a href="#/def-line-search">line search</a>, and <span class="math inline">\(\mathbf{H}^{(t+1)}\)</span> is a <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a> positive definite matrix whose <a href="./linear-algebra-special-matrices.html#def-matrix-inverse">inverse</a> satisfies the <a href="#/def-secant-condition">secant condition</a>, that is, <span class="math inline">\(\mathbf{H}^{(t+1)} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(t)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(t)}\)</span>, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(t)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(t)} = \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)}) - \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-quasi-newton-step" class="theorem example">
-<p><span class="theorem-title"><strong>Example 55 (One quasi-Newton step on a quadratic function)</strong></span> Take <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{Q} = \begin{bmatrix} 4 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\)</span> (<a href="#/exm-secant-condition" class="quarto-xref">Example&nbsp;54</a>), <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathbf{H}^{(0)} = \mathbf{I}_2\)</span>. For a <a href="./algebra-exponentials.html#def-quadratic-polynomial">quadratic function</a>, the <a href="#/def-gradient-descent">step length</a> that minimizes <span class="math inline">\(f\)</span> along a <a href="./vector-calculus.html#def-direction">direction</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span> is <span class="math inline">\(\alpha = -\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} / {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 56 (One quasi-Newton step on a quadratic function)</strong></span> Take <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{Q} = \begin{bmatrix} 4 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\)</span> (<a href="#/exm-secant-condition" class="quarto-xref">Example&nbsp;55</a>), <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(\mathbf{H}^{(0)} = \mathbf{I}_2\)</span>. For a <a href="./algebra-exponentials.html#def-quadratic-polynomial">quadratic function</a>, the <a href="#/def-gradient-descent">step length</a> that minimizes <span class="math inline">\(f\)</span> along a <a href="./vector-calculus.html#def-direction">direction</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span> is <span class="math inline">\(\alpha = -\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} / {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\)</span>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>Q <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
-<span id="cb7-2"><a aria-label="2"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb7-3"><a aria-label="3"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">sum</span>(x <span class="sc">*</span> (Q <span class="sc">%*%</span> x)) <span class="sc">-</span> <span class="fu">sum</span>(b <span class="sc">*</span> x)</span>
-<span id="cb7-4"><a aria-label="4"></a>grad <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">drop</span>(Q <span class="sc">%*%</span> x <span class="sc">-</span> b)</span>
-<span id="cb7-5"><a aria-label="5"></a>x0 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
-<span id="cb7-6"><a aria-label="6"></a>H0 <span class="ot">&lt;-</span> <span class="fu">diag</span>(<span class="dv">2</span>)</span>
-<span id="cb7-7"><a aria-label="7"></a>d <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">drop</span>(H0 <span class="sc">%*%</span> <span class="fu">grad</span>(x0))</span>
-<span id="cb7-8"><a aria-label="8"></a>step <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">sum</span>(<span class="fu">grad</span>(x0) <span class="sc">*</span> d) <span class="sc">/</span> <span class="fu">drop</span>(<span class="fu">t</span>(d) <span class="sc">%*%</span> Q <span class="sc">%*%</span> d)</span>
-<span id="cb7-9"><a aria-label="9"></a>x1 <span class="ot">&lt;-</span> x0 <span class="sc">+</span> step <span class="sc">*</span> d</span>
-<span id="cb7-10"><a aria-label="10"></a>s <span class="ot">&lt;-</span> x1 <span class="sc">-</span> x0</span>
-<span id="cb7-11"><a aria-label="11"></a>y <span class="ot">&lt;-</span> <span class="fu">grad</span>(x1) <span class="sc">-</span> <span class="fu">grad</span>(x0)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-label="1"></a>Q <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb11-2"><a aria-label="2"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb11-3"><a aria-label="3"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">sum</span>(x <span class="sc">*</span> (Q <span class="sc">%*%</span> x)) <span class="sc">-</span> <span class="fu">sum</span>(b <span class="sc">*</span> x)</span>
+<span id="cb11-4"><a aria-label="4"></a>grad <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">drop</span>(Q <span class="sc">%*%</span> x <span class="sc">-</span> b)</span>
+<span id="cb11-5"><a aria-label="5"></a>x0 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb11-6"><a aria-label="6"></a>H0 <span class="ot">&lt;-</span> <span class="fu">diag</span>(<span class="dv">2</span>)</span>
+<span id="cb11-7"><a aria-label="7"></a>d <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">drop</span>(H0 <span class="sc">%*%</span> <span class="fu">grad</span>(x0))</span>
+<span id="cb11-8"><a aria-label="8"></a>step <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">sum</span>(<span class="fu">grad</span>(x0) <span class="sc">*</span> d) <span class="sc">/</span> <span class="fu">drop</span>(<span class="fu">t</span>(d) <span class="sc">%*%</span> Q <span class="sc">%*%</span> d)</span>
+<span id="cb11-9"><a aria-label="9"></a>x1 <span class="ot">&lt;-</span> x0 <span class="sc">+</span> step <span class="sc">*</span> d</span>
+<span id="cb11-10"><a aria-label="10"></a>s <span class="ot">&lt;-</span> x1 <span class="sc">-</span> x0</span>
+<span id="cb11-11"><a aria-label="11"></a>y <span class="ot">&lt;-</span> <span class="fu">grad</span>(x1) <span class="sc">-</span> <span class="fu">grad</span>(x0)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The step length is 0.25, which moves the <a href="#/def-iterate">iterate</a> to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = (0.25, 0.5)\)</span> and lowers <span class="math inline">\(f\)</span> from 0 to -0.625. The difference of the <a href="./vector-calculus.html#def-vector-derivative">gradients</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)} = (1.5, 1.75)\)</span>, is <span class="math inline">\(\mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}\)</span> (<a href="#/def-secant-condition">the secant condition</a> for a quadratic function).</p>
 </div>
 </section><section class="slide level2"><div id="rem-quasi-newton-cost" class="proof remark">
-<p><span class="proof-title"><em>Remark 5</em> (Why a quasi-Newton method is used). </span>Because <span class="math inline">\(\mathbf{H}^{(t)}\)</span> is <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>, <span class="math inline">\(-\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\)</span> is a <a href="#/def-descent-direction">descent direction</a>, so, when the <a href="./vector-calculus.html#def-vector-derivative">gradient</a> is not <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, a <a href="#/def-line-search">line search</a> finds a step that decreases <span class="math inline">\(f\)</span>. <a href="#/def-newton-method">Newton’s method</a> needs the Hessian and the solution of a system of equations at every iteration, which costs about <span class="math inline">\(p^3\)</span> operations for a dense <span class="math inline">\(p \times p\)</span> Hessian, and requires the formulas for its entries. A quasi-Newton method needs only the <a href="./vector-calculus.html#def-vector-derivative">gradient</a> and an update of <span class="math inline">\(\mathbf{H}^{(t)}\)</span> costing about <span class="math inline">\(p^2\)</span> operations. Near a minimizer the method speeds up superlinearly: faster than <a href="#/def-gradient-descent">gradient descent</a>, slower than Newton’s method <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[21, Ch. 6]</a></span>. Replacing <span class="math inline">\(\mathbf{H}^{(t)}\)</span> by <span class="math inline">\(\mathbf{I}_p\)</span> in the step formula gives <a href="#/def-gradient-descent">gradient descent</a>.</p>
+<p><span class="proof-title"><em>Remark 5</em> (Why a quasi-Newton method is used). </span>Because <span class="math inline">\(\mathbf{H}^{(t)}\)</span> is <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>, <span class="math inline">\(-\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\)</span> is a <a href="#/def-descent-direction">descent direction</a>, so, when the <a href="./vector-calculus.html#def-vector-derivative">gradient</a> is not <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, a <a href="#/def-line-search">line search</a> finds a step that decreases <span class="math inline">\(f\)</span>. <a href="#/def-newton-method">Newton’s method</a> needs the Hessian and the solution of a system of equations at every iteration, which costs about <span class="math inline">\(p^3\)</span> operations for a dense <span class="math inline">\(p \times p\)</span> Hessian, and requires the formulas for its entries. A quasi-Newton method needs only the <a href="./vector-calculus.html#def-vector-derivative">gradient</a> and an update of <span class="math inline">\(\mathbf{H}^{(t)}\)</span> costing about <span class="math inline">\(p^2\)</span> operations. Near a minimizer the method speeds up superlinearly: faster than <a href="#/def-gradient-descent">gradient descent</a>, slower than Newton’s method <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[22, Ch. 6]</a></span>. Replacing <span class="math inline">\(\mathbf{H}^{(t)}\)</span> by <span class="math inline">\(\mathbf{I}_p\)</span> in the step formula gives <a href="#/def-gradient-descent">gradient descent</a>.</p>
 </div>
 </section><section class="slide level2"><div id="def-bfgs-update" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 40 (BFGS update (Broyden-Fletcher-Goldfarb-Shanno))</strong></span> Let <span class="math inline">\(\mathbf{H}\)</span>, an approximation of the <a href="./linear-algebra-special-matrices.html#def-matrix-inverse">inverse</a> Hessian, be a <span class="math inline">\(p \times p\)</span> <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite matrix</a>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> satisfy <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} &gt; 0\)</span>. With <span class="math inline">\(\rho \stackrel{\text{def}}{=}1 / \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span>, the <strong>BFGS update</strong> <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[21, Ch. 6]</a></span> of <span class="math inline">\(\mathbf{H}\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 41 (BFGS update (Broyden-Fletcher-Goldfarb-Shanno))</strong></span> Let <span class="math inline">\(\mathbf{H}\)</span>, an approximation of the <a href="./linear-algebra-special-matrices.html#def-matrix-inverse">inverse</a> Hessian, be a <span class="math inline">\(p \times p\)</span> <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite matrix</a>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> satisfy <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} &gt; 0\)</span>. With <span class="math inline">\(\rho \stackrel{\text{def}}{=}1 / \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span>, the <strong>BFGS update</strong> <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[22, Ch. 6]</a></span> of <span class="math inline">\(\mathbf{H}\)</span> is</p>
 <p><span class="math display">\[
 \mathbf{H}^+
 \stackrel{\text{def}}{=}\mathopen{}\left(\mathbf{I}_p - \rho \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\right)\mathclose{}
@@ -2473,17 +2641,17 @@ s &amp;\le 3/4.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-bfgs-step" class="theorem example">
-<p><span class="theorem-title"><strong>Example 56 (A BFGS update from the quasi-Newton step)</strong></span> Continue <a href="#/exm-quasi-newton-step" class="quarto-xref">Example&nbsp;55</a> with <span class="math inline">\(\mathbf{H} = \mathbf{I}_2\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 57 (A BFGS update from the quasi-Newton step)</strong></span> Continue <a href="#/exm-quasi-newton-step" class="quarto-xref">Example&nbsp;56</a> with <span class="math inline">\(\mathbf{H} = \mathbf{I}_2\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)}\)</span>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-label="1"></a>rho <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="fu">sum</span>(y <span class="sc">*</span> s)</span>
-<span id="cb8-2"><a aria-label="2"></a>left <span class="ot">&lt;-</span> <span class="fu">diag</span>(<span class="dv">2</span>) <span class="sc">-</span> rho <span class="sc">*</span> s <span class="sc">%*%</span> <span class="fu">t</span>(y)</span>
-<span id="cb8-3"><a aria-label="3"></a>H1 <span class="ot">&lt;-</span> left <span class="sc">%*%</span> H0 <span class="sc">%*%</span> <span class="fu">t</span>(left) <span class="sc">+</span> rho <span class="sc">*</span> s <span class="sc">%*%</span> <span class="fu">t</span>(s)</span>
-<span id="cb8-4"><a aria-label="4"></a>H1</span>
-<span id="cb8-5"><a aria-label="5"></a><span class="co">#&gt;         [,1]   [,2]</span></span>
-<span id="cb8-6"><a aria-label="6"></a><span class="co">#&gt; [1,]  0.6625 -0.425</span></span>
-<span id="cb8-7"><a aria-label="7"></a><span class="co">#&gt; [2,] -0.4250  0.650</span></span>
-<span id="cb8-8"><a aria-label="8"></a><span class="fu">drop</span>(H1 <span class="sc">%*%</span> y)</span>
-<span id="cb8-9"><a aria-label="9"></a><span class="co">#&gt; [1] 0.25 0.50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-label="1"></a>rho <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="fu">sum</span>(y <span class="sc">*</span> s)</span>
+<span id="cb12-2"><a aria-label="2"></a>left <span class="ot">&lt;-</span> <span class="fu">diag</span>(<span class="dv">2</span>) <span class="sc">-</span> rho <span class="sc">*</span> s <span class="sc">%*%</span> <span class="fu">t</span>(y)</span>
+<span id="cb12-3"><a aria-label="3"></a>H1 <span class="ot">&lt;-</span> left <span class="sc">%*%</span> H0 <span class="sc">%*%</span> <span class="fu">t</span>(left) <span class="sc">+</span> rho <span class="sc">*</span> s <span class="sc">%*%</span> <span class="fu">t</span>(s)</span>
+<span id="cb12-4"><a aria-label="4"></a>H1</span>
+<span id="cb12-5"><a aria-label="5"></a><span class="co">#&gt;         [,1]   [,2]</span></span>
+<span id="cb12-6"><a aria-label="6"></a><span class="co">#&gt; [1,]  0.6625 -0.425</span></span>
+<span id="cb12-7"><a aria-label="7"></a><span class="co">#&gt; [2,] -0.4250  0.650</span></span>
+<span id="cb12-8"><a aria-label="8"></a><span class="fu">drop</span>(H1 <span class="sc">%*%</span> y)</span>
+<span id="cb12-9"><a aria-label="9"></a><span class="co">#&gt; [1] 0.25 0.50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Here <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = 1.25 &gt; 0\)</span>, so <span class="math inline">\(\rho = 0.8\)</span>. The updated <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> satisfies <span class="math inline">\(\mathbf{H}^+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0.25, 0.5)\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = (0.25, 0.5)\)</span>, and its smallest <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalue</a> is 0.231204, so <span class="math inline">\(\mathbf{H}^+\)</span> is <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>.</p>
 </div>
@@ -2495,24 +2663,24 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 + \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}
 - \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^+) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}},
 \]</span></p>
-<p>so <span class="math inline">\(0 &gt; -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span>. For a general <span class="math inline">\(f\)</span>, a <a href="#/def-line-search">line search</a> that enforces a curvature condition on the <a href="#/def-gradient-descent">step length</a> (the Wolfe conditions <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[21, Ch. 3]</a></span>) guarantees <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} &gt; 0\)</span>. Such a step can be found along a <a href="#/def-descent-direction">descent direction</a> when <span class="math inline">\(f\)</span> cannot keep decreasing forever.</p>
+<p>so <span class="math inline">\(0 &gt; -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span>. For a general <span class="math inline">\(f\)</span>, a <a href="#/def-line-search">line search</a> that enforces a curvature condition on the <a href="#/def-gradient-descent">step length</a> (the Wolfe conditions <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[22, Ch. 3]</a></span>) guarantees <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} &gt; 0\)</span>. Such a step can be found along a <a href="#/def-descent-direction">descent direction</a> when <span class="math inline">\(f\)</span> cannot keep decreasing forever.</p>
 </div>
 </section><section class="slide level2"><div id="def-lbfgs" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 41 (Limited-memory BFGS (L-BFGS))</strong></span> <strong>Limited-memory BFGS</strong> (<strong>L-BFGS</strong>) <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[21, Ch. 7]</a></span> is the <a href="#/def-quasi-newton-method">quasi-Newton method</a> that never forms <span class="math inline">\(\mathbf{H}^{(t)}\)</span>. It stores only the <span class="math inline">\(m\)</span> most recent pairs <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(j)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(j)})\)</span>, with <span class="math inline">\(m\)</span> small, such as <span class="math inline">\(5\)</span> or <span class="math inline">\(20\)</span>, and obtains <span class="math inline">\(\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\)</span> implicitly, through a few vector operations, as if the <a href="#/def-bfgs-update">BFGS update</a> for those <span class="math inline">\(m\)</span> pairs were applied to a simple starting <a href="./linear-algebra-matrices.html#def-matrix">matrix</a>, such as a multiple of <span class="math inline">\(\mathbf{I}_p\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 42 (Limited-memory BFGS (L-BFGS))</strong></span> <strong>Limited-memory BFGS</strong> (<strong>L-BFGS</strong>) <span class="citation" data-cites="nocedal2006numerical"><a href="#/references" role="doc-biblioref" onclick="">[22, Ch. 7]</a></span> is the <a href="#/def-quasi-newton-method">quasi-Newton method</a> that never forms <span class="math inline">\(\mathbf{H}^{(t)}\)</span>. It stores only the <span class="math inline">\(m\)</span> most recent pairs <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(j)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(j)})\)</span>, with <span class="math inline">\(m\)</span> small, such as <span class="math inline">\(5\)</span> or <span class="math inline">\(20\)</span>, and obtains <span class="math inline">\(\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})\)</span> implicitly, through a few vector operations, as if the <a href="#/def-bfgs-update">BFGS update</a> for those <span class="math inline">\(m\)</span> pairs were applied to a simple starting <a href="./linear-algebra-matrices.html#def-matrix">matrix</a>, such as a multiple of <span class="math inline">\(\mathbf{I}_p\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-lbfgs-step" class="theorem example">
-<p><span class="theorem-title"><strong>Example 57 (L-BFGS applies the update without forming the matrix)</strong></span> Continue <a href="#/exm-bfgs-step" class="quarto-xref">Example&nbsp;56</a> with <span class="math inline">\(m = 1\)</span> stored pair <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})\)</span> and starting <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{I}_2\)</span>. Below, <span class="math inline">\(\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})\)</span> is formed from vectors alone, starting from <code>H0</code>, then compared with the <a href="./linear-algebra-matrices.html#def-matrix-mult">matrix product</a>.</p>
+<p><span class="theorem-title"><strong>Example 58 (L-BFGS applies the update without forming the matrix)</strong></span> Continue <a href="#/exm-bfgs-step" class="quarto-xref">Example&nbsp;57</a> with <span class="math inline">\(m = 1\)</span> stored pair <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})\)</span> and starting <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{I}_2\)</span>. Below, <span class="math inline">\(\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})\)</span> is formed from vectors alone, starting from <code>H0</code>, then compared with the <a href="./linear-algebra-matrices.html#def-matrix-mult">matrix product</a>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">grad</span>(x1)</span>
-<span id="cb9-2"><a aria-label="2"></a>alpha <span class="ot">&lt;-</span> rho <span class="sc">*</span> <span class="fu">sum</span>(s <span class="sc">*</span> g1)</span>
-<span id="cb9-3"><a aria-label="3"></a>q <span class="ot">&lt;-</span> g1 <span class="sc">-</span> alpha <span class="sc">*</span> y</span>
-<span id="cb9-4"><a aria-label="4"></a>r <span class="ot">&lt;-</span> <span class="fu">drop</span>(H0 <span class="sc">%*%</span> q)</span>
-<span id="cb9-5"><a aria-label="5"></a>beta <span class="ot">&lt;-</span> rho <span class="sc">*</span> <span class="fu">sum</span>(y <span class="sc">*</span> r)</span>
-<span id="cb9-6"><a aria-label="6"></a>r <span class="ot">&lt;-</span> r <span class="sc">+</span> s <span class="sc">*</span> (alpha <span class="sc">-</span> beta)</span>
-<span id="cb9-7"><a aria-label="7"></a><span class="fu">rbind</span>(<span class="at">from_vectors =</span> r, <span class="at">from_matrix =</span> <span class="fu">drop</span>(H1 <span class="sc">%*%</span> g1))</span>
-<span id="cb9-8"><a aria-label="8"></a><span class="co">#&gt;                [,1]   [,2]</span></span>
-<span id="cb9-9"><a aria-label="9"></a><span class="co">#&gt; from_vectors 0.4375 -0.375</span></span>
-<span id="cb9-10"><a aria-label="10"></a><span class="co">#&gt; from_matrix  0.4375 -0.375</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-label="1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">grad</span>(x1)</span>
+<span id="cb13-2"><a aria-label="2"></a>alpha <span class="ot">&lt;-</span> rho <span class="sc">*</span> <span class="fu">sum</span>(s <span class="sc">*</span> g1)</span>
+<span id="cb13-3"><a aria-label="3"></a>q <span class="ot">&lt;-</span> g1 <span class="sc">-</span> alpha <span class="sc">*</span> y</span>
+<span id="cb13-4"><a aria-label="4"></a>r <span class="ot">&lt;-</span> <span class="fu">drop</span>(H0 <span class="sc">%*%</span> q)</span>
+<span id="cb13-5"><a aria-label="5"></a>beta <span class="ot">&lt;-</span> rho <span class="sc">*</span> <span class="fu">sum</span>(y <span class="sc">*</span> r)</span>
+<span id="cb13-6"><a aria-label="6"></a>r <span class="ot">&lt;-</span> r <span class="sc">+</span> s <span class="sc">*</span> (alpha <span class="sc">-</span> beta)</span>
+<span id="cb13-7"><a aria-label="7"></a><span class="fu">rbind</span>(<span class="at">from_vectors =</span> r, <span class="at">from_matrix =</span> <span class="fu">drop</span>(H1 <span class="sc">%*%</span> g1))</span>
+<span id="cb13-8"><a aria-label="8"></a><span class="co">#&gt;                [,1]   [,2]</span></span>
+<span id="cb13-9"><a aria-label="9"></a><span class="co">#&gt; from_vectors 0.4375 -0.375</span></span>
+<span id="cb13-10"><a aria-label="10"></a><span class="co">#&gt; from_matrix  0.4375 -0.375</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The two rows agree to within 5.6e-17, although the first never forms the matrix. BFGS stores a dense <span class="math inline">\(p \times p\)</span> matrix and spends about <span class="math inline">\(p^2\)</span> operations per iteration; L-BFGS stores <span class="math inline">\(2m\)</span> vectors with <span class="math inline">\(p\)</span> entries and spends about <span class="math inline">\(m p\)</span> operations per iteration, so it remains usable when <span class="math inline">\(p\)</span> is in the millions.</p>
 </div>
@@ -2520,9 +2688,9 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <span class="header-section-number">7</span> Further reading</h2>
 <ul>
 <li>
-<span class="citation" data-cites="boyd2004convex">Boyd and Vandenberghe <a href="#/references" role="doc-biblioref" onclick="">[22]</a></span> is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.</li>
+<span class="citation" data-cites="boyd2004convex">Boyd and Vandenberghe <a href="#/references" role="doc-biblioref" onclick="">[23]</a></span> is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.</li>
 <li>
-<span class="citation" data-cites="nocedal2006numerical">Nocedal and Wright <a href="#/references" role="doc-biblioref" onclick="">[21]</a></span> is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.</li>
+<span class="citation" data-cites="nocedal2006numerical">Nocedal and Wright <a href="#/references" role="doc-biblioref" onclick="">[22]</a></span> is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.</li>
 <li>
 <a href="https://hua-zhou.github.io/">Hua Zhou</a>’s <a href="https://ucla-biostat-257.github.io/2025spring/">course page for “UCLA Biostat 257 - Statistical Computing” (2025 Spring)</a> has lectures on optimization, from root finding to constrained problems. Its source is <a href="https://github.com/ucla-biostat-257/2025spring">on GitHub</a> under the MIT License.</li>
 <li>
@@ -2621,22 +2789,27 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div class="csl-right-inline">Wikipedia contributors, <span>“Line search — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Line_search">https://en.wikipedia.org/wiki/Line_search</a>
 </div>
 </div>
-<div id="ref-wikipedia_backtracking_line_search" class="csl-entry" role="listitem">
+<div id="ref-wikipedia_rosenbrock_function" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[19] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Rosenbrock function — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Rosenbrock_function">https://en.wikipedia.org/wiki/Rosenbrock_function</a>
+</div>
+</div>
+<div id="ref-wikipedia_backtracking_line_search" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[20] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Backtracking line search — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Backtracking_line_search">https://en.wikipedia.org/wiki/Backtracking_line_search</a>
 </div>
 </div>
 <div id="ref-zhou2025quasinewton" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[20] </div>
+<div class="csl-left-margin">[21] </div>
 <div class="csl-right-inline">H. Zhou, <span>“Quasi-<span>Newton</span> methods.”</span> Lecture notes for Biostat 257, Statistical Computing, University of California, Los Angeles, 2025. Accessed: Oct. 26, 2026. [Online]. Available: <a href="https://ucla-biostat-257.github.io/2025spring/slides/24-quasinewton/quasinewton.html">https://ucla-biostat-257.github.io/2025spring/slides/24-quasinewton/quasinewton.html</a>
 </div>
 </div>
 <div id="ref-nocedal2006numerical" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[21] </div>
+<div class="csl-left-margin">[22] </div>
 <div class="csl-right-inline">J. Nocedal and S. J. Wright, <em>Numerical optimization</em>, 2nd ed. in Springer series in operations research and financial engineering. Springer, 2006. doi: <a href="https://doi.org/10.1007/978-0-387-40065-5">10.1007/978-0-387-40065-5</a>.</div>
 </div>
 <div id="ref-boyd2004convex" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[22] </div>
+<div class="csl-left-margin">[23] </div>
 <div class="csl-right-inline">S. Boyd and L. Vandenberghe, <em>Convex optimization</em>. Cambridge University Press, 2004. doi: <a href="https://doi.org/10.1017/CBO9780511804441">10.1017/CBO9780511804441</a>.</div>
 </div>
 </div>
@@ -3194,7 +3367,38 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           }
         }
       });
-      </script>
+      </script><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
 
 
 </body></html>

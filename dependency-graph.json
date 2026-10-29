@@ -10155,6 +10155,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-rosenbrock-function",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-rosenbrock-function",
+   "kind": "def",
+   "title": "Rosenbrock function",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-saddle-point",
    "site": "mds",
    "page": "optimization",

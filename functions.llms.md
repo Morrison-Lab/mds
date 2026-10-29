@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-28 16:00:43 (PDT)
+Last modified: 2026-10-28 17:04:35 (PDT)
 
 > **NOTE:**
 >
@@ -625,7 +625,7 @@ Last modified: 2026-10-28 16:00:43 (PDT)
 >   ggplot2::geom_point(size = 2.5, colour = "#0072B2") +
 >   ggplot2::facet_wrap(~sequence, scales = "free_y") +
 >   ggplot2::scale_x_continuous(breaks = n) +
->   ggplot2::labs(x = "Index, n", y = "term") +
+>   ggplot2::labs(x = "Index, n", y = "Term value") +
 >   ggplot2::theme_minimal()
 >
 > if (knitr::is_html_output()) {
@@ -709,7 +709,7 @@ Last modified: 2026-10-28 16:00:43 (PDT)
 >     hjust = 0
 >   ) +
 >   ggplot2::scale_x_continuous(breaks = seq(-6, 6, 2)) +
->   ggplot2::labs(x = "Score, z", y = "logistic(z)") +
+>   ggplot2::labs(x = "Log-odds, z", y = "Probability, logistic(z)") +
 >   ggplot2::theme_minimal()
 >
 > if (knitr::is_html_output()) {
