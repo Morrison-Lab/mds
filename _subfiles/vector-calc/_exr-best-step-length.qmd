@@ -1,0 +1,8 @@
+:::{#exr-best-step-length}
+
+#### The best step length for eigenvalues 1 and 9
+
+Let $\matr{S} = \sbmat{ 1 & 0 \\ 0 & 9 }$.
+Using @thm-best-constant-step, find $\steplen^*$.
+
+:::

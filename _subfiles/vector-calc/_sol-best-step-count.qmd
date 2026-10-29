@@ -1,0 +1,24 @@
+:::{#sol-best-step-count}
+
+```{r}
+#| label: best-step-count-r
+#| echo: false
+bsc_eigs_ps <- c(1, 9)
+bsc_kappa_ps <- max(bsc_eigs_ps) / min(bsc_eigs_ps)
+bsc_rho_ps <- (bsc_kappa_ps - 1) / (bsc_kappa_ps + 1)
+bsc_log_tenth_ps <- log(0.1)
+bsc_log_rho_ps <- log(bsc_rho_ps)
+bsc_bound_ps <- bsc_log_tenth_ps / bsc_log_rho_ps
+bsc_bound_sig_ps <- signif(bsc_bound_ps, 4)
+bsc_t_ps <- ceiling(bsc_bound_ps)
+```
+
+From @sol-best-step-factor, $\convrate(\steplen^*) = `{r} bsc_rho_ps`$.
+Taking logarithms, $\convrate(\steplen^*)^t \le 0.1$ becomes
+$t \ln \convrate(\steplen^*) \le \ln 0.1$.
+Here $\ln \convrate(\steplen^*) < 0$,
+so dividing by it flips the [inequality](proof-writing.qmd#def-inequality):
+$t \ge \ln 0.1 / \ln \convrate(\steplen^*) \approx `{r} bsc_bound_sig_ps`$.
+The smallest such $t$ is $`{r} bsc_t_ps`$.
+
+:::

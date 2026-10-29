@@ -272,6 +272,38 @@
 
 {{< include mds/_subfiles/vector-calc/_fig-best-constant-step.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-step-length-range.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-step-length-range.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-best-step-length.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-best-step-length.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-best-step-factor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-best-step-factor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-best-step-count.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-best-step-count.qmd >}}
+
 ## Quasi-Newton methods {#sec-quasi-newton}
 
 {{< include mds/_subfiles/vector-calc/_prose-quasinewton-attribution.qmd >}}

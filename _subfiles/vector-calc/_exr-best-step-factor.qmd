@@ -1,0 +1,8 @@
+:::{#exr-best-step-factor}
+
+#### The best error factor for eigenvalues 1 and 9
+
+In the setting of @exr-best-step-length,
+find $\convrate(\steplen^*)$.
+
+:::
