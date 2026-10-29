@@ -28,10 +28,9 @@ for (i in 1:30) {
 basin_side_bf <- ifelse(
   basin_starts_bs[1:6] > 0, "start above 0", "start below 0"
 )
-basin_paths_bf <- tibble::tibble(
-  x = as.vector(basin_runs_bf),
-  side = rep(basin_side_bf, each = 31)
-)
+basin_x_bf <- as.vector(basin_runs_bf)
+basin_side_all_bf <- rep(basin_side_bf, each = 31)
+basin_paths_bf <- tibble::tibble(x = basin_x_bf, side = basin_side_all_bf)
 basin_paths_bf$cost <- basin_paths_bf$x^4 - 2 * basin_paths_bf$x^2
 basin_grid_bf <- seq(-1.6, 1.6, length.out = 321)
 basin_curve_bf <- tibble::tibble(
