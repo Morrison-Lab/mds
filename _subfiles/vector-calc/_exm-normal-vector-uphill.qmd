@@ -1,0 +1,9 @@
+::: {#exm-normal-vector-uphill}
+
+#### A step along the normal vector
+
+Let $\modmemf{\vx} = 2x_1 + x_2 + 1$, so $\vcoef = \tp{(2, 1)}$ and $\normsq{\vcoef} = 5$.
+At $\vx = \vzero$, $\modmemf{\vzero} = 1$.
+A step of $t = 1$ along $\vcoef$ lands at $\tp{(2, 1)}$, where $\modmemf{\tp{(2, 1)}} = 4 + 1 + 1 = 6 = 1 + 5$.
+
+:::

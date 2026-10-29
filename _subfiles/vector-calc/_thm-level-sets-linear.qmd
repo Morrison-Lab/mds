@@ -1,0 +1,31 @@
+::: {#thm-level-sets-linear}
+
+#### Level sets of a linear function
+
+Let $\modmemf{\vx} = \dprod{\vcoef}{\vx} + \intcoef$ with $\vcoef \neq \vzero$.
+Every [level set](#def-level-set) $\levelsetof{c}{\modmem}$ is a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane)
+with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $\vcoef$,
+parallel to the level set $\levelsetof{0}{\modmem}$.
+Its [dimension](linear-algebra-subspaces.qmd#def-dimension) is $p - 1$:
+a point for $p = 1$, a line for $p = 2$, and a two-dimensional plane for $p = 3$.
+
+:::
+
+::: proof
+For any $c$,
+
+$$
+\begin{aligned}
+\levelsetof{c}{\modmem}
+&= \set{ \vx : \dprod{\vcoef}{\vx} + \intcoef = c } \\
+&= \set{ \vx : \dprod{\vcoef}{\vx} + (\intcoef - c) = 0 }.
+\end{aligned}
+$$
+
+This is the [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $\vcoef$
+and [offset](linear-algebra-matrices.qmd#def-affine-offset) $\intcoef - c$.
+Changing $c$ changes only the offset, so the [level sets](#def-level-set) share the normal vector and are parallel.
+A hyperplane in $\reals^p$ has [dimension](linear-algebra-subspaces.qmd#def-dimension) $p - 1$
+by [the hyperplane theorem](linear-algebra-rank-nullity.qmd#thm-hyperplane-subspace),
+which gives the point, line and plane cases for $p = 1, 2, 3$.
+:::

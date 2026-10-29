@@ -1,0 +1,10 @@
+::: {#exm-level-sets-linear}
+
+#### Parallel level lines
+
+Let $\modmemf{\vx} = 2x_1 + x_2 + 1$, so $\vcoef = \tp{(2, 1)}$ and $\intcoef = 1$.
+The [level set](#def-level-set) at $c$ is the line $x_2 = c - 1 - 2x_1$.
+For $c = -1, 0, 1$ the lines are $x_2 = -2 - 2x_1$, $x_2 = -1 - 2x_1$ and $x_2 = -2x_1$.
+They all have [slope](algebra-exponentials.qmd#def-slope) $-2$ and differ only in the [intercept](algebra-exponentials.qmd#def-intercept), so they are parallel.
+
+:::
