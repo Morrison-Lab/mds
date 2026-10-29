@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 10:33:15 (PDT)
+Last modified: 2026-10-29 11:51:41 (PDT)
 
 ## 1 Critical points and optimization
 
@@ -376,7 +376,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 9.471535e-12 6.662049e-11
+> #> [1] 1.071498e-11 1.673470e-10
 > #> 
 > #> 
 > #> $zero_vector
@@ -395,7 +395,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 3](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 3](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
@@ -1576,7 +1576,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06990>]
+> #> [<matplotlib.lines.Line2D object at 0x7f8864092990>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -1588,18 +1588,18 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06ad0>]
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06c10>]
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06d50>]
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06e90>]
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06fd0>]
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66d07110>]
+> #> [<matplotlib.lines.Line2D object at 0x7f8864092ad0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f8864092c10>]
+> #> [<matplotlib.lines.Line2D object at 0x7f8864092d50>]
+> #> [<matplotlib.lines.Line2D object at 0x7f8864092e90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f8864092fd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f8864093110>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7fcc66d07250>
+> #> <matplotlib.legend.Legend object at 0x7f8864093250>
 > plt.show()
 > ```
 >
@@ -1615,6 +1615,36 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
+> **Proposition 1 (Divergence of gradient descent on the double-well function)** Let \\f(x) = x^4 - 2x^2\\, and run [gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) \\s\> 0\\. If \\{{x}^{(0)}}\\ satisfies
+>
+> \\ {{x}^{(0)}}^2 \> 1 + \frac{1}{2s}, \\
+>
+> then \\\mathopen{}\left\|{{x}^{(t)}}\right\|\mathclose{} \to \infty\\ as \\t \to \infty\\.
+
+> **NOTE:**
+>
+> *Proof*. The [derivative](calculus-derivatives.llms.md#def-derivative) is \\\frac{\partial}{\partial x} f(x) = 4x^3 - 4x\\, so one step of [gradient descent](#def-gradient-descent) gives
+>
+> \\ \begin{aligned} {{x}^{(t+1)}} &= {{x}^{(t)}} - s\\\mathopen{}\left(4 {{x}^{(t)}}^3 - 4 {{x}^{(t)}}\right)\mathclose{} && \text{(gradient descent step)} \\ &= -{{x}^{(t)}}\\\mathopen{}\left(4s{{x}^{(t)}}^2 - 4s- 1\right)\mathclose{}. && \text{(factor out } -{{x}^{(t)}} \text{)} \end{aligned} \\
+>
+> Write \\m(x) \stackrel{\text{def}}{=}4sx^2 - 4s- 1\\. Then \\\mathopen{}\left\|{{x}^{(t+1)}}\right\|\mathclose{} = \mathopen{}\left\|{{x}^{(t)}}\right\|\mathclose{}\\ m({{x}^{(t)}})\\ whenever \\m({{x}^{(t)}}) \ge 0\\. Now \\m(x) \> 1\\ exactly when \\x^2 \> 1 + 1 / (2s)\\, and \\m(x)\\ increases with \\x^2\\. So if \\{{x}^{(t)}}\\ satisfies the condition, then \\\mathopen{}\left\|{{x}^{(t+1)}}\right\|\mathclose{} \> \mathopen{}\left\|{{x}^{(t)}}\right\|\mathclose{}\\, and \\{{x}^{(t+1)}}\\ satisfies it too. By [induction](proof-writing.llms.md#def-proof-by-induction) on \\t\\, every [iterate](#def-iterate) satisfies it. Since \\\mathopen{}\left\|{{x}^{(t)}}\right\|\mathclose{}\\ increases at every step, \\{{x}^{(t)}}^2 \ge {{x}^{(0)}}^2\\, and so \\m({{x}^{(t)}}) \ge m({{x}^{(0)}}) \> 1\\. Hence \\\mathopen{}\left\|{{x}^{(t)}}\right\|\mathclose{} \ge m({{x}^{(0)}})^t \mathopen{}\left\|{{x}^{(0)}}\right\|\mathclose{}\\, which tends to \\\infty\\.
+
+> **NOTE:**
+>
+> **Corollary 3 (Basins of the double-well function are bounded)** Let \\f(x) = x^4 - 2x^2\\, and run [gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) \\s\> 0\\. Every start \\{{x}^{(0)}}\\ in the [basin of attraction](#def-basin-of-attraction) of a [local minimizer](algebra-basics.llms.md#def-local-minimizer) of \\f\\ satisfies
+>
+> \\ {{x}^{(0)}}^2 \le 1 + \frac{1}{2s}. \\
+
+> **NOTE:**
+>
+> *Proof*. The [iterates](#def-iterate) from a start in the basin [converge](#def-vector-sequence-limit) to a [local minimizer](algebra-basics.llms.md#def-local-minimizer), so they do not [diverge to \\\infty\\](algebra-exponentials.llms.md#def-diverges-to-infinity). By [Proposition 1](#prp-double-well-divergence), the start therefore does not satisfy \\{{x}^{(0)}}^2 \> 1 + 1 / (2s)\\.
+
+> **NOTE:**
+>
+> **Example 54 (Divergent starts on the double-well function for three step lengths)** For \\f(x) = x^4 - 2x^2\\, [Proposition 1](#prp-double-well-divergence) says that [gradient descent](#def-gradient-descent) [diverges to \\\infty\\](algebra-exponentials.llms.md#def-diverges-to-infinity) from every start with \\\mathopen{}\left\|{{x}^{(0)}}\right\|\mathclose{}\\ above \\\sqrt{1 + 1 / (2s)}\\. This [bound](sets.llms.md#def-bound) is \\7.14\\ for \\s= 0.01\\, \\3.32\\ for \\s= 0.05\\, and \\2.45\\ for \\s= 0.1\\. The [derivative](calculus-derivatives.llms.md#def-derivative) \\4x^3 - 4x\\ is unbounded, as is the [second derivative](calculus-derivatives.llms.md#def-second-derivative) \\12x^2 - 4\\, so the step \\s\frac{\partial}{\partial x} f(x)\\ grows without bound with \\x\\, and a far start overshoots. By [Proposition 1](#prp-double-well-divergence), every fixed [step length](#def-gradient-descent) fails to [converge](#def-vector-sequence-limit) from some starts. A larger step length lowers the bound, so more starts are guaranteed to diverge. By [Corollary 3](#cor-double-well-basin-bound), each [basin of attraction](#def-basin-of-attraction) lies within the same [bounded](algebra-sums.llms.md#def-bounded) [interval](sets.llms.md#def-interval), which narrows as \\s\\ grows. In the earlier [basin example](#exm-basin-of-attraction), \\s= 0.05\\, and the start \\4\\ lies above the bound \\3.32\\, which is why its [iterates](#def-iterate) grow.
+
+> **NOTE:**
+>
 > **Definition 38 (Plateau)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [function](functions.llms.md#def-function) with a [gradient](vector-calculus.llms.md#def-vector-derivative) at every point of a region, and let \\\epsilon \> 0\\ be a tolerance. The region is a **plateau** of \\f\\ if the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the gradient satisfies
 >
 > \\ 0 \< \mathopen{}\left\lVert\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right\rVert\mathclose{} \< \epsilon \\
@@ -1623,7 +1653,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 54 (A cost with no stationary point)**  
+> **Example 55 (A cost with no stationary point)**  
 >
 > Let \\f(x) = \log\mathopen{}\left(1 + \text{e}^{-x}\right)\mathclose{}\\. Its [derivative](calculus-derivatives.llms.md#def-derivative) is \\\frac{\partial}{\partial x} f(x) = -1 / (1 + \text{e}^{x})\\, which is negative for every \\x\\, so \\f\\ has no [stationary point](#def-stationary-point) at all.
 >
@@ -1664,10 +1694,10 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66dd79d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f88641579d0>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66dd7b10>]
+> #> [<matplotlib.lines.Line2D object at 0x7f8864157b10>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -1678,13 +1708,13 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 >
 > ## R
 >
-> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization_files/figure-html/plateau-size-r-1.png)](optimization_files/figure-html/plateau-size-r-1.png "Figure 3: The size of the gradient of the function in Example 54, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization_files/figure-html/plateau-size-r-1.png)](optimization_files/figure-html/plateau-size-r-1.png "Figure 3: The size of the gradient of the function in Example 55, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
 > ## Python
 >
-> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization_files/figure-html/plateau-size-python-1.png)](optimization_files/figure-html/plateau-size-python-1.png "Figure 3: The size of the gradient of the function in Example 54, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization_files/figure-html/plateau-size-python-1.png)](optimization_files/figure-html/plateau-size-python-1.png "Figure 3: The size of the gradient of the function in Example 55, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
-> Figure 3: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](functions.llms.md#def-function) in [Example 54](#exm-plateau), with \\x = 0\\ and \\x = 10\\ marked. The size shrinks toward \\0\\ as \\x\\ grows but is never \\0\\, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](#def-stationary-point).
+> Figure 3: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](functions.llms.md#def-function) in [Example 55](#exm-plateau), with \\x = 0\\ and \\x = 10\\ marked. The size shrinks toward \\0\\ as \\x\\ grows but is never \\0\\, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](#def-stationary-point).
 
 > **NOTE:**
 >
@@ -1694,7 +1724,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 55 (The Armijo condition on a parabola)** Let \\f(x) = x^2\\ and \\x = 2\\, so \\g = f'(2) = 4\\ and \\\mathopen{}\left\lVert g\right\rVert\mathclose{}^2 = 16\\. With \\c = 1/4\\, the condition on a step length \\s \> 0\\ is
+> **Example 56 (The Armijo condition on a parabola)** Let \\f(x) = x^2\\ and \\x = 2\\, so \\g = f'(2) = 4\\ and \\\mathopen{}\left\lVert g\right\rVert\mathclose{}^2 = 16\\. With \\c = 1/4\\, the condition on a step length \\s \> 0\\ is
 >
 > \\ \begin{aligned} (2 - 4s)^2 &\le 4 - 4s && \text{(} f(2 - 4s) \le f(2) - c\\ s\\ \mathopen{}\left\lVert g\right\rVert\mathclose{}^2 \text{)} \\ 4 - 16 s + 16 s^2 &\le 4 - 4s && \text{(expand the square)} \\ 16 s^2 &\le 12 s && \text{(add } 16 s - 4 \text{ to both sides)} \\ s &\le 3/4. && \text{(divide by } 16 s \> 0 \text{)} \end{aligned} \\
 >
@@ -1706,7 +1736,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 56 (Backtracking on a parabola)** For \\f(x) = x^2\\ at \\x = 2\\ with \\c = 1/4\\, the Armijo condition holds exactly when \\s \le 3/4\\ ([Example 55](#exm-armijo-condition)). With \\s_0 = 1\\ and \\\beta = 1/2\\, the trial step lengths are \\1, 1/2, 1/4, \ldots\\. The first, \\s = 1\\, exceeds \\3/4\\ and is rejected. The second, \\s = 1/2\\, is at most \\3/4\\ and is accepted. So backtracking chooses \\s^{(0)} = 1/2\\, after two evaluations of \\f\\.
+> **Example 57 (Backtracking on a parabola)** For \\f(x) = x^2\\ at \\x = 2\\ with \\c = 1/4\\, the Armijo condition holds exactly when \\s \le 3/4\\ ([Example 56](#exm-armijo-condition)). With \\s_0 = 1\\ and \\\beta = 1/2\\, the trial step lengths are \\1, 1/2, 1/4, \ldots\\. The first, \\s = 1\\, exceeds \\3/4\\ and is rejected. The second, \\s = 1/2\\, is at most \\3/4\\ and is accepted. So backtracking chooses \\s^{(0)} = 1/2\\, after two evaluations of \\f\\.
 
 > **NOTE:**
 >
@@ -1728,7 +1758,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 57 (The error multiplier for a step length of one quarter)** Let \\\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) \\3\\ and \\1\\ ([eigenvalue example](linear-algebra-special-matrices.llms.md#exm-eigenvalue)), and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\* = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}\\. With \\s= 0.25\\, the factors \\1 - s\\\lambda_i\\ are \\0.25\\ and \\0.75\\, so \\\rho(s) = 0.75\\ and
+> **Example 58 (The error multiplier for a step length of one quarter)** Let \\\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) \\3\\ and \\1\\ ([eigenvalue example](linear-algebra-special-matrices.llms.md#exm-eigenvalue)), and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\* = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}\\. With \\s= 0.25\\, the factors \\1 - s\\\lambda_i\\ are \\0.25\\ and \\0.75\\, so \\\rho(s) = 0.75\\ and
 >
 > \\ \mathopen{}\left\lVert{{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{(t)}}\right\rVert\mathclose{} \le 0.75^t\\\mathopen{}\left\lVert{{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{(0)}}\right\rVert\mathclose{}. \\
 >
@@ -1762,7 +1792,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 58 (The best step length for eigenvalues 3 and 1)** For \\\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) \\3\\ and \\1\\, [Theorem 17](#thm-best-constant-step) gives \\s^\* = 2 / (3 + 1) = 0.5\\, \\\kappa= 3\\ ([condition number example](linear-algebra-special-matrices.llms.md#exm-condition-number)), and \\\rho(s^\*) = (3 - 1) / (3 + 1) = 0.5\\. A grid search over \\s= 0.01, 0.02, \ldots, 1\\ finds the smallest \\\rho(s)\\ at \\s= 0.5\\, the same [step length](#def-gradient-descent). Each step then multiplies the [error](#def-iterate-error) by at most \\0.5\\.
+> **Example 59 (The best step length for eigenvalues 3 and 1)** For \\\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) \\3\\ and \\1\\, [Theorem 17](#thm-best-constant-step) gives \\s^\* = 2 / (3 + 1) = 0.5\\, \\\kappa= 3\\ ([condition number example](linear-algebra-special-matrices.llms.md#exm-condition-number)), and \\\rho(s^\*) = (3 - 1) / (3 + 1) = 0.5\\. A grid search over \\s= 0.01, 0.02, \ldots, 1\\ finds the smallest \\\rho(s)\\ at \\s= 0.5\\, the same [step length](#def-gradient-descent). Each step then multiplies the [error](#def-iterate-error) by at most \\0.5\\.
 
 > **NOTE:**
 >
@@ -1794,11 +1824,11 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7fcc66a7afd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f885fd6afd0>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7fcc66a7b110>
+> #> <matplotlib.lines.Line2D object at 0x7f885fd6b110>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7fcc66a7b250>
+> #> <matplotlib.lines.Line2D object at 0x7f885fd6b250>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -1808,13 +1838,13 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 >
 > ## R
 >
-> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization_files/figure-html/best-constant-step-plot-r-1.png)](optimization_files/figure-html/best-constant-step-plot-r-1.png "Figure 4: The factor \rho(s) of Example 58 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization_files/figure-html/best-constant-step-plot-r-1.png)](optimization_files/figure-html/best-constant-step-plot-r-1.png "Figure 4: The factor \rho(s) of Example 59 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
 >
 > ## Python
 >
-> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization_files/figure-html/best-constant-step-plot-python-1.png)](optimization_files/figure-html/best-constant-step-plot-python-1.png "Figure 4: The factor \rho(s) of Example 58 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization_files/figure-html/best-constant-step-plot-python-1.png)](optimization_files/figure-html/best-constant-step-plot-python-1.png "Figure 4: The factor \rho(s) of Example 59 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
 >
-> Figure 4: The factor \\\rho(s)\\ of [Example 58](#exm-best-constant-step) against the [step length](#def-gradient-descent) \\s\\ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](sets.llms.md#def-bound) on the [error](#def-iterate-error) shrinks only where the curve is below \\1\\ (dotted).
+> Figure 4: The factor \\\rho(s)\\ of [Example 59](#exm-best-constant-step) against the [step length](#def-gradient-descent) \\s\\ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](sets.llms.md#def-bound) on the [error](#def-iterate-error) shrinks only where the curve is below \\1\\ (dotted).
 
 > **NOTE:**
 >
@@ -1878,7 +1908,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 59 (The Hessian of a quadratic function satisfies the secant condition)** Let \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q}\\ [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Then \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so for any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+\\
+> **Example 60 (The Hessian of a quadratic function satisfies the secant condition)** Let \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q}\\ [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Then \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so for any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+\\
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} &= (\mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) - (\mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) && \text{(gradient at each point)} \\ &= \mathbf{Q} (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) && \text{(collect terms)} \\ &= \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}. && \text{(definition of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \text{)} \end{aligned} \\
 >
@@ -1894,7 +1924,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 60 (One quasi-Newton step on a quadratic function)** Take \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\\ ([Example 59](#exm-secant-condition)), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ and \\\mathbf{H}^{(0)} = \mathbf{I}\_2\\. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes \\f\\ along a [direction](vector-calculus.llms.md#def-direction) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\ is \\\alpha = -\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} / {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\.
+> **Example 61 (One quasi-Newton step on a quadratic function)** Take \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\\ ([Example 60](#exm-secant-condition)), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ and \\\mathbf{H}^{(0)} = \mathbf{I}\_2\\. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes \\f\\ along a [direction](vector-calculus.llms.md#def-direction) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\ is \\\alpha = -\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} / {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\.
 >
 > ``` downlit
 > Q <- matrix(c(4, 1, 1, 3), nrow = 2)
@@ -1924,7 +1954,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 61 (A BFGS update from the quasi-Newton step)** Continue [Example 60](#exm-quasi-newton-step) with \\\mathbf{H} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)}\\.
+> **Example 62 (A BFGS update from the quasi-Newton step)** Continue [Example 61](#exm-quasi-newton-step) with \\\mathbf{H} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)}\\.
 >
 > ``` downlit
 > rho <- 1 / sum(y * s)
@@ -1954,7 +1984,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 62 (L-BFGS applies the update without forming the matrix)** Continue [Example 61](#exm-bfgs-step) with \\m = 1\\ stored pair \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)})\\ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{I}\_2\\. Below, \\\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)})\\ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
+> **Example 63 (L-BFGS applies the update without forming the matrix)** Continue [Example 62](#exm-bfgs-step) with \\m = 1\\ stored pair \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)})\\ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{I}\_2\\. Below, \\\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)})\\ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
 >
 > ``` downlit
 > g1 <- grad(x1)

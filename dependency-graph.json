@@ -6501,6 +6501,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-projection-diagonal-bounds",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-projection-diagonal-bounds",
+   "kind": "thm",
+   "title": "The diagonal of an orthogonal projection matrix lies between 0 and 1",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-projection-matrix-projects",
    "site": "mds",
    "page": "linear-algebra",
@@ -8967,6 +8976,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-special-matrices#thm-projection-diagonal-bounds",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "thm-projection-diagonal-bounds",
+   "kind": "thm",
+   "title": "The diagonal of an orthogonal projection matrix lies between 0 and 1",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-special-matrices#thm-projection-orthogonal",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -9966,6 +9984,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#cor-double-well-basin-bound",
+   "site": "mds",
+   "page": "optimization",
+   "div": "cor-double-well-basin-bound",
+   "kind": "cor",
+   "title": "Basins of the double-well function are bounded",
+   "external": false
+  },
+  {
    "id": "mds/optimization#cor-qp-sensitivity",
    "site": "mds",
    "page": "optimization",
@@ -10386,6 +10413,15 @@
    "div": "lem-qf-entry-bound",
    "kind": "lem",
    "title": "A quadratic form with small entries is small",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#prp-double-well-divergence",
+   "site": "mds",
+   "page": "optimization",
+   "div": "prp-double-well-divergence",
+   "kind": "prp",
+   "title": "Divergence of gradient descent on the double-well function",
    "external": false
   },
   {
@@ -14859,6 +14895,10 @@
    "mds/linear-algebra#def-projection-matrix"
   ],
   [
+   "mds/linear-algebra#thm-projection-diagonal-bounds",
+   "mds/linear-algebra#def-projection-matrix"
+  ],
+  [
    "mds/linear-algebra#thm-projection-matrix-projects",
    "mds/linear-algebra#def-orthogonal-projection"
   ],
@@ -15783,6 +15823,10 @@
    "mds/linear-algebra-special-matrices#def-projection-matrix"
   ],
   [
+   "mds/linear-algebra-special-matrices#thm-projection-diagonal-bounds",
+   "mds/linear-algebra-special-matrices#def-projection-matrix"
+  ],
+  [
    "mds/linear-algebra-special-matrices#thm-projection-orthogonal",
    "mds/linear-algebra-special-matrices#def-projection-matrix"
   ],
@@ -16591,6 +16635,18 @@
    "mds/optimization#thm-convex-first-order"
   ],
   [
+   "mds/optimization#cor-double-well-basin-bound",
+   "mds/algebra-basics#def-local-minimizer"
+  ],
+  [
+   "mds/optimization#cor-double-well-basin-bound",
+   "mds/optimization#def-basin-of-attraction"
+  ],
+  [
+   "mds/optimization#cor-double-well-basin-bound",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
    "mds/optimization#cor-qp-sensitivity",
    "mds/optimization#def-sensitivity"
   ],
@@ -16857,6 +16913,10 @@
   [
    "mds/optimization#lem-qf-eigen-bound",
    "mds/linear-algebra#def-eigendecomposition"
+  ],
+  [
+   "mds/optimization#prp-double-well-divergence",
+   "mds/optimization#def-gradient-descent"
   ],
   [
    "mds/optimization#thm-best-constant-step",
