@@ -1,5 +1,11 @@
 ## Measurable functions and integrals
 
+```{r}
+#| include: false
+py_packages <- c("numpy", "matplotlib")
+reticulate::py_require(py_packages)
+```
+
 {{< include mds/_subfiles/measures/_def-measurable-function.qmd >}}
 
 {{< slidebreak >}}
@@ -25,6 +31,8 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-integral.qmd >}}
+
+{{< include mds/_subfiles/measures/_fig-positive-negative-parts.qmd >}}
 
 {{< slidebreak >}}
 

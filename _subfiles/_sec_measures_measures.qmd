@@ -1,5 +1,11 @@
 ## Measures
 
+```{r}
+#| include: false
+py_packages <- c("numpy", "matplotlib")
+reticulate::py_require(py_packages)
+```
+
 {{< include mds/_subfiles/measures/_def-measure.qmd >}}
 
 {{< slidebreak >}}
@@ -65,6 +71,8 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-almost-everywhere.qmd >}}
+
+{{< include mds/_subfiles/measures/_fig-almost-everywhere.qmd >}}
 
 {{< slidebreak >}}
 

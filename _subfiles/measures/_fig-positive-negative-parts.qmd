@@ -1,0 +1,86 @@
+::: {#fig-positive-negative-parts}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: positive-negative-parts-r
+#| fig-alt: >-
+#|   Three bar charts side by side, each with the die rolls 1 to 6 on the
+#|   horizontal axis. The left chart, f, has bars of height minus 2, minus 1,
+#|   0, 1, 2 and 3, the first two below the axis. The middle chart, the
+#|   positive part, has bars of height 0, 0, 0, 1, 2 and 3, which sum to 6.
+#|   The right chart, the negative part, has bars of height 2, 1, 0, 0, 0
+#|   and 0, which sum to 3.
+#| fig-height: 3.5
+#| fig-width: 7
+pnp_rolls_pf <- 1:6
+pnp_f_pf <- pnp_rolls_pf - 3
+pnp_plus_pf <- pmax(pnp_f_pf, 0)
+pnp_minus_pf <- pmax(-pnp_f_pf, 0)
+pnp_f_tbl_pf <- tibble::tibble(
+  x = pnp_rolls_pf, value = pnp_f_pf, panel = "f (sum = 3)"
+)
+pnp_plus_tbl_pf <- tibble::tibble(
+  x = pnp_rolls_pf, value = pnp_plus_pf, panel = "f+ (sum = 6)"
+)
+pnp_minus_tbl_pf <- tibble::tibble(
+  x = pnp_rolls_pf, value = pnp_minus_pf, panel = "f- (sum = 3)"
+)
+pnp_bars_pf <- dplyr::bind_rows(pnp_f_tbl_pf, pnp_plus_tbl_pf, pnp_minus_tbl_pf)
+pnp_aes_pf <- ggplot2::aes(x, value, fill = panel)
+pnp_colours_pf <- c("#0072B2", "#009E73", "#D55E00")
+ggplot2::ggplot(pnp_bars_pf, pnp_aes_pf) +
+  ggplot2::geom_col() +
+  ggplot2::facet_wrap(ggplot2::vars(panel)) +
+  ggplot2::scale_fill_manual(values = pnp_colours_pf) +
+  ggplot2::scale_x_continuous(breaks = pnp_rolls_pf) +
+  ggplot2::guides(fill = "none") +
+  ggplot2::labs(x = "Die roll x", y = "Value")
+```
+
+### Python
+
+```{python}
+#| label: positive-negative-parts-python
+#| fig-alt: >-
+#|   Three bar charts side by side, each with the die rolls 1 to 6 on the
+#|   horizontal axis. The left chart, f, has bars of height minus 2, minus 1,
+#|   0, 1, 2 and 3, the first two below the axis. The middle chart, the
+#|   positive part, has bars of height 0, 0, 0, 1, 2 and 3, which sum to 6.
+#|   The right chart, the negative part, has bars of height 2, 1, 0, 0, 0
+#|   and 0, which sum to 3.
+#| fig-height: 3.5
+#| fig-width: 7
+import matplotlib.pyplot as plt
+import numpy as np
+
+pnp_rolls_pf = np.arange(1, 7)
+pnp_f_pf = pnp_rolls_pf - 3
+pnp_panels_pf = [
+    ("f (sum = 3)", pnp_f_pf, "#0072B2"),
+    ("f+ (sum = 6)", np.maximum(pnp_f_pf, 0), "#009E73"),
+    ("f- (sum = 3)", np.maximum(-pnp_f_pf, 0), "#D55E00"),
+]
+fig, axes = plt.subplots(1, 3, figsize=(7, 3.5), sharey=True,
+                         layout="constrained")
+for ax, (title, values, colour) in zip(axes, pnp_panels_pf):
+    ax.bar(pnp_rolls_pf, values, color=colour)
+    ax.set_title(title)
+    ax.set_xlabel("Die roll x")
+axes[0].set_ylabel("Value")
+plt.show()
+```
+
+:::
+
+Let $D$ be the die rolls of @exm-integral.
+The plot shows the [function](functions.qmd#def-function) $f(x) = x - 3$ on $D$,
+its [positive part](algebra.qmd#def-positive-negative-parts),
+and its [negative part](algebra.qmd#def-negative-part).
+With the [counting measure](#def-counting-measure),
+each [integral](#def-integral) is the [sum](algebra.qmd#def-summation) of the bar heights,
+and $6 - 3 = 3$ is the integral of $f$.
+
+:::
