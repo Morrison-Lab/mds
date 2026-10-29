@@ -75,8 +75,10 @@ plt.show()
 
 :::
 
-The [function](functions.qmd#def-function) $f(x) = x - 3$ on the die rolls in @exm-integral,
-and its [positive part](algebra.qmd#def-positive-negative-parts) and [negative part](algebra.qmd#def-negative-part).
+Let $D$ be the die rolls of @exm-integral.
+The plot shows the [function](functions.qmd#def-function) $f(x) = x - 3$ on $D$,
+its [positive part](algebra.qmd#def-positive-negative-parts),
+and its [negative part](algebra.qmd#def-negative-part).
 With the [counting measure](#def-counting-measure),
 each [integral](#def-integral) is the [sum](algebra.qmd#def-summation) of the bar heights,
 and $6 - 3 = 3$ is the integral of $f$.

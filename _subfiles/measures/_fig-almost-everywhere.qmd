@@ -56,8 +56,9 @@ plt.show()
 
 :::
 
-The [function](functions.qmd#def-function) $g$ in @exm-almost-everywhere, on $[-3, 3]$.
-It is $x^2$ except at the [integers](number-systems.qmd#def-integers), where it is $-1$.
+The plot shows the [function](functions.qmd#def-function) $g$ of @exm-almost-everywhere on $[-3, 3]$.
+It is $x^2$ except at the [integers](number-systems.qmd#def-integers),
+where it is $-1$.
 It falls below the dashed line $g = 0$ only at those points,
 which together have [measure zero](#def-measure-zero),
 so $g \ge 0$ [almost everywhere](#def-almost-everywhere).
