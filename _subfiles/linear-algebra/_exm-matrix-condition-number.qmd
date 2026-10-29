@@ -14,8 +14,11 @@ then repeat after multiplying every entry by $1000$:
 #| label: matrix-condition-number-r
 #| code-fold: false
 a_mcn <- matrix(c(1, 1, 1, 1.01), nrow = 2)
-sv_mcn <- svd(a_mcn)$d
-sv_mcn_scaled <- svd(1000 * a_mcn)$d
+svd_mcn <- svd(a_mcn)
+sv_mcn <- svd_mcn$d
+a_mcn_scaled <- 1000 * a_mcn
+svd_mcn_scaled <- svd(a_mcn_scaled)
+sv_mcn_scaled <- svd_mcn_scaled$d
 sv_mcn
 sv_mcn[1] / sv_mcn[2]
 sv_mcn_scaled[1] / sv_mcn_scaled[2]

@@ -11,6 +11,7 @@ $$
 \condnum(\matr{A}) \eqdef \frac{\singval_{\max}}{\singval_{\min}} = \frac{\singval_1}{\singval_{\min(n,p)}}.
 $$
 
+This generalizes @def-condition-number, which covers [positive definite matrices](linear-algebra-special-matrices.qmd#def-positive-definite).
 For a nonzero matrix, $\condnum(\matr{A}) \ge 1$.
 When the columns of a tall matrix $\matr{A}$ ($n \ge p$) are [linearly dependent](linear-algebra-subspaces.qmd#def-linearly-independent),
 its smallest singular value is $0$,

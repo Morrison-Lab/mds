@@ -1,9 +1,11 @@
 :::{#exm-ill-conditioned}
 #### A small change in the right-hand side moves the solution a long way
 
-Let $\matr{A}$ be the [matrix](linear-algebra-matrices.qmd#def-matrix) from @exm-matrix-condition-number, and let $\vec{b} = (2, 2.01)$.
+Let $\matr{A}$ be the [matrix](linear-algebra-matrices.qmd#def-matrix) from @exm-matrix-condition-number,
+and let $\vec{b} = (2, 2.01)$.
 The system $\matr{A}\vx = \vec{b}$ has solution $\vx = (1, 1)$.
-Change the second entry of $\vec{b}$ from $2.01$ to $2.011$, and solve again:
+Change the second entry of $\vec{b}$ from $2.01$ to $2.011$,
+and solve again:
 
 ::: {.panel-tabset group="language"}
 
@@ -12,6 +14,7 @@ Change the second entry of $\vec{b}$ from $2.01$ to $2.011$, and solve again:
 ```{r}
 #| label: ill-conditioned-r
 #| code-fold: false
+# Uses a_mcn and sv_mcn from the previous example
 b_ic <- c(2, 2.01)
 b_new_ic <- c(2, 2.011)
 x_ic <- solve(a_mcn, b_ic)
@@ -20,7 +23,7 @@ x_ic
 x_new_ic
 
 # Relative changes, measured with the Euclidean length
-length_ic <- function(v) sqrt(sum(v^2))
+length_ic <- function(v) v^2 |> sum() |> sqrt()
 rel_b_ic <- length_ic(b_new_ic - b_ic) / length_ic(b_ic)
 rel_x_ic <- length_ic(x_new_ic - x_ic) / length_ic(x_ic)
 c(rel_b_ic, rel_x_ic, rel_x_ic / rel_b_ic)
@@ -31,6 +34,7 @@ c(rel_b_ic, rel_x_ic, rel_x_ic / rel_b_ic)
 ```{python}
 #| label: ill-conditioned-python
 #| code-fold: false
+# Uses a_mcn and sv_mcn from the previous example
 b_ic = np.array([2.0, 2.01])
 b_new_ic = np.array([2.0, 2.011])
 x_ic = np.linalg.solve(a_mcn, b_ic)

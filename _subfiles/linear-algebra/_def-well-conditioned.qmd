@@ -1,0 +1,8 @@
+:::{#def-well-conditioned}
+#### Well-conditioned matrix
+
+A [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$ is **well-conditioned**
+when its [condition number](#def-matrix-condition-number) is close to $1$,
+so it is not [ill-conditioned](#def-ill-conditioned).
+
+:::

@@ -1,7 +1,7 @@
 :::{#thm-condition-number-gram}
 #### Forming $\tp{\matr{A}}\matr{A}$ squares the condition number
 
-Let $\matr{A}$ be an $n \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) with $n \ge p$.
+Let $\matr{A}$ be a nonzero $n \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) with $n \ge p$.
 Then
 
 $$
