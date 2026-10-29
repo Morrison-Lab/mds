@@ -61,8 +61,8 @@ plt.show()
 :::
 
 The size of the [gradient](vector-calculus.qmd#def-vector-derivative)
-of the function of @exm-plateau,
-with the two values of $x$ from the example marked.
+of the [function](functions.qmd#def-function) of @exm-plateau,
+with $x = 0$ and $x = 10$ marked.
 It shrinks toward $0$ as $x$ grows but is never $0$,
 which is why descent slows down on a [plateau](#def-plateau)
 without stopping at a [stationary point](#def-stationary-point).
