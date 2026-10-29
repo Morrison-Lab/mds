@@ -15,6 +15,6 @@ From @sol-best-step-factor, $\convrate(\steplen^*) = `{r} bsc_rho_ps`$.
 Taking logarithms, $\convrate^t \le 0.1$ becomes $t \ln \convrate \le \ln 0.1$.
 Both $\ln \convrate$ and $\ln 0.1$ are negative, so dividing flips the [inequality](proof-writing.qmd#def-inequality):
 $t \ge \ln 0.1 / \ln \convrate = `{r} bsc_bound_sig_ps`$.
-The smallest whole number is $t = `{r} bsc_t_ps`$.
+The smallest whole $t$ is $`{r} bsc_t_ps`$.
 
 :::
