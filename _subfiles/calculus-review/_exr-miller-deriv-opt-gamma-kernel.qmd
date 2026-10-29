@@ -6,23 +6,24 @@ Adapted from @problifesavercalc, Question 1.1.10.
 The [gamma distribution](https://en.wikipedia.org/wiki/Gamma_distribution)
 is a standard model for positive, right-skewed quantities such as waiting times.
 Its [density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf)
-with shape parameter $a > 0$ is proportional to $x^{a-1} e^{-x}$ on $[0, \infty)$.
-This factor is the density's kernel: the part that depends on $x$.
-The other factor is a constant that makes the density integrate to 1,
-and computing it takes an integral.
+with shape parameter $a > 0$ is [proportional](algebra.qmd#def-proportional)
+to $x^{a-1} e^{-x}$ on $[0, \infty)$.
+This factor is the density's kernel: the part that depends on $x$. <!-- check-term-links: allow -->
+The other factor is fixed and makes the density integrate to 1,
+and finding it takes an integral. <!-- check-term-links: allow -->
 
-A constant factor does not move the peak of a curve,
+Scaling a curve by a fixed factor does not move its peak,
 so the kernel and the density have the same maximizer,
-called the mode: the most likely value of the variable.
-Maximizing the kernel finds the mode without computing the constant.
-That is useful whenever a density is known only up to its constant,
+called the mode: the point where the density peaks.
+Maximizing the kernel finds the mode without computing that factor.
+That is useful whenever a density is known only up to such a factor,
 as with many Bayesian posterior distributions.
 
 For shape $a = 5$, the kernel is
 
 $$f(x) = x^4 e^{-x}.$$
 
-Find the [maximum](algebra.qmd#def-maximum) value of $f$ on the interval $[0, \infty)$.
+Find the [maximum](algebra.qmd#def-maximum) of $f$ on $[0, \infty)$.
 :::
 
 ::: {#sol-miller-deriv-opt-gamma-kernel}

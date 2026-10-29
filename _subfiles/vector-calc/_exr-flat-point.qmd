@@ -2,12 +2,14 @@
 
 #### Differentiate a quadratic
 
-A [flat point](#def-flat-point) of a function is where its [derivative](calculus-derivatives.qmd#def-derivative) is zero.
-To see what that means, take a simple function with a minimum,
-the quadratic $f(w) = w^2 - 4w + 7$,
-whose graph is a [parabola](algebra.qmd#def-parabola).
+A [flat point](#def-flat-point) of a [function](functions.qmd#def-function)
+is where its [derivative](calculus-derivatives.qmd#def-derivative) is zero.
+To see what that looks like, take a simple function with a [minimum](algebra.qmd#def-minimum),
+the quadratic $f(w) = w^2 - 4w + 7$, <!-- check-term-links: allow -->
+whose [graph](functions.qmd#def-graph) is a [parabola](algebra.qmd#def-parabola).
 The next exercises use it to find where $f$ is flat
-and to compare a linear prediction of a nearby value with the exact value.
+and to compare a [linear approximation](calculus.qmd#eq-linear-approx)
+of a nearby [value](functions.qmd#def-value) with the exact value.
 
 Differentiate $f$.
 
