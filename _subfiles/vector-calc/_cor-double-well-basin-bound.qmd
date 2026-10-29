@@ -16,8 +16,9 @@ $$
 ::: proof
 
 The [iterates](#def-iterate) from a start in the basin
-[converge](#def-vector-sequence-limit) to a local minimizer,
-so they do not diverge to $\infty$.
+[converge](#def-vector-sequence-limit) to a
+[local minimizer](algebra-basics.qmd#def-local-minimizer),
+so they do not [diverge to $\infty$](algebra.qmd#def-diverges-to-infinity).
 By @prp-double-well-divergence, the start therefore does not satisfy
 $\iterpoint{x}{0}^2 > 1 + 1 / (2\steplen)$.
 
