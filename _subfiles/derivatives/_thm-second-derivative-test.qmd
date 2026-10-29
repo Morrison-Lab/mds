@@ -1,14 +1,11 @@
 :::{#thm-second-derivative-test}
 #### Second derivative test
 
-Let $c$ be a [flat point](#def-flat-point) of $f$ where the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''(c)$ is defined.
+Let $c$ be a [flat point](#def-flat-point) of $f$,
+where the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''(c)$ is defined.
 
-- If $f''(c) > 0$, then $c$ is a [strict local minimizer](optimization.qmd#def-strict-local-minimizer) of $f$.
-- If $f''(c) < 0$, then $c$ is a [strict local maximizer](optimization.qmd#def-local-maximizer) of $f$.
-
-If $f''(c) = 0$, the test does not decide.
-
-The several-variable version for a [minimizer](algebra.qmd#def-local-minimizer) is @thm-second-order-condition.
+- If $f''(c) > 0$, then $f(x) > f(c)$ for every $x \ne c$ in some [open interval](sets.qmd#def-open-interval) around $c$, so $c$ is a [local minimizer](algebra.qmd#def-local-minimizer).
+- If $f''(c) < 0$, then $f(x) < f(c)$ for every $x \ne c$ in some open interval around $c$, so $c$ is a local maximizer.
 
 :::
 
@@ -23,12 +20,15 @@ Because $f'(c) = 0$, the [derivative](calculus-derivatives.qmd#def-derivative) o
 
 $$f''(c) = \lim_{x \to c} \frac{f'(x)}{x - c}.$$
 
-A [limit](calculus-derivatives.qmd#def-limit) that is positive forces the [quotient](algebra.qmd#def-quotient) to be positive near $c$.
-So $f'(x)$ has the same sign as $x - c$ on some [open interval](sets.qmd#def-open-interval) around $c$.
-Hence $f$ is decreasing to the left of $c$ and increasing to the right of $c$,
-which makes $c$ a [strict local minimizer](optimization.qmd#def-strict-local-minimizer).
+A [limit](calculus-derivatives.qmd#def-limit) that is positive forces the [quotient](algebra.qmd#def-quotient) $f'(x)/(x - c)$ to be positive for $x$ near $c$.
+So $f'(x)$ has the same sign as $x - c$ on some open interval around $c$.
+Hence $f' < 0$ to the left of $c$ and $f' > 0$ to the right of $c$,
+so $f$ is decreasing to the left of $c$ and increasing to the right of $c$.
+Therefore $f(x) > f(c)$ for every $x \ne c$ in that interval.
 
-The case $f''(c) < 0$ follows by applying the same reasoning to $-f$.
+For $f''(c) < 0$, apply the same reasoning to $-f$,
+since $(-f)''(c) = -f''(c) > 0$.
+Then $-f(x) > -f(c)$ near $c$, which says $f(x) < f(c)$ near $c$.
 
 :::
 

@@ -1,0 +1,8 @@
+:::{#exm-inflection-point}
+#### An inflection point of $x^3$
+
+For $f(x) = x^3$, the [second derivative](calculus-derivatives.qmd#def-second-derivative) is $f''(x) = 6x$,
+which is negative for $x < 0$ and positive for $x > 0$.
+So $0$ is an [inflection point](#def-inflection-point) of $f$.
+
+:::

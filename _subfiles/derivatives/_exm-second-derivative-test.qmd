@@ -1,0 +1,12 @@
+:::{#exm-second-derivative-test}
+#### Second derivative test for powers of $x$
+
+The [function](functions.qmd#def-function) $f(x) = x^2$ has the [flat point](#def-flat-point) $c = 0$ and $f''(0) = 2 > 0$,
+so $0$ is a local minimizer by @thm-second-derivative-test.
+
+The functions $x^3$ and $x^4$ both have the flat point $0$ and second derivative $0$ there,
+so the test does not decide.
+Yet $x^4$ has a minimizer at $0$,
+while $x^3$ has neither a minimizer nor a maximizer at $0$.
+
+:::
