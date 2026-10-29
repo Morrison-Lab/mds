@@ -26,10 +26,10 @@ and by @prp-double-well-divergence every fixed [step length](#def-gradient-desce
 fails to [converge](#def-vector-sequence-limit) from some starts.
 A larger step length lowers the bound,
 so more starts are guaranteed to diverge.
-A start in the [basin of attraction](#def-basin-of-attraction)
-of a [local minimizer](algebra-basics.qmd#def-local-minimizer) does not diverge,
-so the basin lies within the interval where $x^2$ is at most $1 + 1 / (2\steplen)$,
-a bounded interval that narrows as $\steplen$ grows.
+By @cor-double-well-basin-bound,
+each [basin of attraction](#def-basin-of-attraction) lies within the same
+[bounded](algebra.qmd#def-bounded) [interval](sets.qmd#def-interval),
+which narrows as $\steplen$ grows.
 In the earlier [basin example](#exm-basin-of-attraction),
 $\steplen = 0.05$,
 and the start $4$ lies above the bound $`{r} dwd_cut_round_pe[2]`$,

@@ -238,6 +238,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_cor-double-well-basin-bound.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_exm-double-well-divergence.qmd >}}
 
 {{< slidebreak >}}

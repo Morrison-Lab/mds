@@ -1,0 +1,24 @@
+:::{#cor-double-well-basin-bound}
+#### Basins of the double-well function are bounded
+
+Let $f(x) = x^4 - 2x^2$,
+and run [gradient descent](#def-gradient-descent)
+with a fixed [step length](#def-gradient-descent) $\steplen > 0$.
+Every start $\iterpoint{x}{0}$ in the [basin of attraction](#def-basin-of-attraction)
+of a [local minimizer](algebra-basics.qmd#def-local-minimizer) of $f$ satisfies
+
+$$
+\iterpoint{x}{0}^2 \le 1 + \frac{1}{2\steplen}.
+$$
+
+:::
+
+::: proof
+
+The [iterates](#def-iterate) from a start in the basin
+[converge](#def-vector-sequence-limit) to a local minimizer,
+so they do not diverge to $\infty$.
+By @prp-double-well-divergence, the start therefore does not satisfy
+$\iterpoint{x}{0}^2 > 1 + 1 / (2\steplen)$.
+
+:::
