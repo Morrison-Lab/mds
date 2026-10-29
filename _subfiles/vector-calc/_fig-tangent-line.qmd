@@ -1,0 +1,63 @@
+::: {#fig-tangent-line}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: tangent-line-r
+#| fig-alt: >-
+#|   Plot of the parabola f of x equals x squared for x from -1 to 3, in blue,
+#|   and the straight line s equals 2 x minus 1 in dashed vermilion. The line
+#|   touches the parabola at the point (1, 1), marked by a vermilion circle,
+#|   and lies below the parabola everywhere else.
+#| fig-height: 4
+#| fig-width: 5
+tl_x_ft <- seq(-1, 3, length.out = 201)
+tl_curve_ft <- tibble::tibble(x = tl_x_ft, s = tl_x_ft^2)
+tl_line_ft <- tibble::tibble(x = tl_x_ft, s = 2 * tl_x_ft - 1)
+tl_point_ft <- tibble::tibble(x = 1, s = 1)
+tl_aes_ft <- ggplot2::aes(x, s)
+ggplot2::ggplot(tl_curve_ft, tl_aes_ft) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_line(
+    data = tl_line_ft, colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::geom_point(data = tl_point_ft, colour = "#D55E00", size = 3) +
+  ggplot2::labs(x = "x", y = "s")
+```
+
+### Python
+
+```{python}
+#| label: tangent-line-python
+#| fig-alt: >-
+#|   Plot of the parabola f of x equals x squared for x from -1 to 3, in blue,
+#|   and the straight line s equals 2 x minus 1 in dashed vermilion. The line
+#|   touches the parabola at the point (1, 1), marked by a vermilion circle,
+#|   and lies below the parabola everywhere else.
+#| fig-height: 4
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+tl_x_ft = np.linspace(-1, 3, 201)
+fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+ax.plot(tl_x_ft, tl_x_ft**2, color="#0072B2", label="f(x) = x^2")
+ax.plot(tl_x_ft, 2 * tl_x_ft - 1, "--", color="#D55E00",
+        label="tangent line at 1")
+ax.plot(1, 1, "o", color="#D55E00", markersize=8)
+ax.set_xlabel("x")
+ax.set_ylabel("s")
+ax.legend(loc="upper center")
+plt.show()
+```
+
+:::
+
+The [tangent line](calculus.qmd#def-tangent-line) $s = 2x - 1$ of $f(x) = x^2$ at $y = 1$ (@exm-tangent-plane).
+It touches the [graph](functions.qmd#def-graph) at $(1, 1)$
+and lies below it everywhere else,
+as in @exm-convex-first-order.
+
+:::
