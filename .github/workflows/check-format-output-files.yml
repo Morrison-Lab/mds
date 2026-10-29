@@ -1,0 +1,23 @@
+# Thin caller of Morrison-Lab/gha's reusable format-output-files check.
+#
+# publish.yml renders each format with `quarto render --to FORMAT`, which
+# renders every page, even one whose front matter omits FORMAT, and names the
+# output after the page. A page with no `revealjs` entry therefore had its deck
+# written over its own HTML (algebra, calculus and linear-algebra, fixed in
+# mds#508). The check fails a page that omits a rendered format or gives it no
+# `output-file`.
+name: Check Format Output Files
+
+on:
+  pull_request:
+    paths:
+      - '**.qmd'
+      - '.github/workflows/publish.yml'
+      - '.github/workflows/check-format-output-files.yml'
+  workflow_dispatch:
+
+jobs:
+  check-format-output-files:
+    permissions:
+      contents: read
+    uses: Morrison-Lab/gha/.github/workflows/check-format-output-files.yml@v3
