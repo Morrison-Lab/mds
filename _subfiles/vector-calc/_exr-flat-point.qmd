@@ -4,14 +4,10 @@
 
 A [flat point](#def-flat-point) of a [function](functions.qmd#def-function)
 is where its [derivative](calculus-derivatives.qmd#def-derivative) is zero.
-To see this,
-take a simple function with a [minimum](algebra.qmd#def-minimum),
-the quadratic $f(w) = w^2 - 4w + 7$, <!-- check-term-links: allow -->
-whose [graph](functions.qmd#def-graph) is a [parabola](algebra.qmd#def-parabola).
-The next exercises use it
+The next exercises use the [parabola](algebra.qmd#def-parabola) $f(w) = w^2 - 4w + 7$
 to find where $f$ is flat
 and to compare a [linear approximation](calculus.qmd#eq-linear-approx)
-of a nearby [value](functions.qmd#def-value) with the exact value.
+with the exact [value](functions.qmd#def-value).
 
 Differentiate $f$.
 
