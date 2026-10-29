@@ -25,9 +25,11 @@ The [second derivative](calculus.qmd#def-second-derivative) $12x^2 - 4$ is unbou
 and by @prp-double-well-divergence every fixed [step length](#def-gradient-descent)
 fails to [converge](#def-vector-sequence-limit) from some starts.
 A larger step length lowers the bound,
-so more starts diverge,
-and the [basin of attraction](#def-basin-of-attraction)
-of each [local minimizer](algebra-basics.qmd#def-local-minimizer) shrinks.
+so more starts are guaranteed to diverge.
+A start in the [basin of attraction](#def-basin-of-attraction)
+of a [local minimizer](algebra-basics.qmd#def-local-minimizer) does not diverge,
+so the basin lies within the interval where $x^2$ is at most $1 + 1 / (2\steplen)$,
+a bounded interval that narrows as $\steplen$ grows.
 In the earlier [basin example](#exm-basin-of-attraction),
 $\steplen = 0.05$,
 and the start $4$ lies above the bound $`{r} dwd_cut_round_pe[2]`$,
