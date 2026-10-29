@@ -1,0 +1,27 @@
+:::{#exm-best-constant-step}
+#### The best step length for eigenvalues 3 and 1
+
+```{r}
+#| label: best-constant-step-r
+#| echo: false
+bcs_eigs_pe <- c(3, 1)
+bcs_sum_pe <- sum(bcs_eigs_pe)
+bcs_s_star_pe <- 2 / bcs_sum_pe
+bcs_kappa_pe <- max(bcs_eigs_pe) / min(bcs_eigs_pe)
+bcs_rho_pe <- (bcs_kappa_pe - 1) / (bcs_kappa_pe + 1)
+bcs_grid_pe <- seq(0.01, 1, by = 0.01)
+bcs_first_pe <- abs(1 - bcs_grid_pe * 3)
+bcs_second_pe <- abs(1 - bcs_grid_pe * 1)
+bcs_rho_grid_pe <- pmax(bcs_first_pe, bcs_second_pe)
+bcs_s_grid_pe <- bcs_grid_pe[which.min(bcs_rho_grid_pe)]
+```
+
+For $\matr{S} = \sbmat{ 2 & 1 \\ 1 & 2 }$ with [eigenvalues](linear-algebra.qmd#def-eigenvalue) $3$ and $1$,
+@thm-best-constant-step gives $\steplen^* = 2 / (3 + 1) = `{r} bcs_s_star_pe`$,
+$\condnum = `{r} bcs_kappa_pe`$ ([condition number example](linear-algebra-special-matrices.qmd#exm-condition-number)),
+and $\convrate(\steplen^*) = (`{r} bcs_kappa_pe` - 1) / (`{r} bcs_kappa_pe` + 1) = `{r} bcs_rho_pe`$.
+A grid search over $\steplen = 0.01, 0.02, \ldots, 1$ finds the smallest $\convrate(\steplen)$ at
+$\steplen = `{r} bcs_s_grid_pe`$, the same [step length](#def-gradient-descent).
+Each step then multiplies the [error](#def-iterate-error) by at most $`{r} bcs_rho_pe`$.
+
+:::
