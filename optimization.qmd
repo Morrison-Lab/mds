@@ -24,21 +24,21 @@ reticulate::py_require(c("numpy", "pandas", "matplotlib"))
 The optimization notes are split across these pages:
 
 - [Critical Points and Optimality Conditions](optimization-critical-points.qmd):
-  flat points and critical points, Fermat's theorem, Taylor approximations,
-  and the first- and second-order conditions in several variables.
+  flat points and critical points, Fermat's theorem, Taylor approximations, <!-- check-term-links: allow -->
+  and the first- and second-order conditions in several variables. <!-- check-term-links: allow -->
 - [Convexity in Several Variables](optimization-convexity.qmd):
-  convex sets and functions, epigraphs, tangent planes,
-  and the first-order and Hessian characterizations of convexity.
+  convex sets and functions, epigraphs, tangent planes, <!-- check-term-links: allow -->
+  and the first-order and Hessian characterizations of convexity. <!-- check-term-links: allow -->
 - [Quadratic Minimization under Linear Constraints](optimization-constrained.qmd):
-  minimization problems, optimization algorithms, the Lagrangian,
-  and the sensitivity of the minimum to the constraints.
+  minimization problems, optimization algorithms, the Lagrangian, <!-- check-term-links: allow -->
+  and the sensitivity of the minimum to the constraints. <!-- check-term-links: allow -->
 - [Newton's Method](optimization-newton.qmd):
-  iterative methods, the quadratic model, and quadratic convergence.
+  iterative methods, the quadratic model, and quadratic convergence. <!-- check-term-links: allow -->
 - [Gradient Descent](optimization-gradient-descent.qmd):
-  descent directions, line search, step lengths, and the failure modes
-  of gradient descent on the Rosenbrock function, double wells, and plateaus.
+  descent directions, line search, step lengths, and the failure modes <!-- check-term-links: allow -->
+  of gradient descent on the Rosenbrock function, double wells, and plateaus. <!-- check-term-links: allow -->
 - [Quasi-Newton Methods](optimization-quasi-newton.qmd):
-  the secant condition, the BFGS update, and L-BFGS.
+  the secant condition, the BFGS update, and L-BFGS. <!-- check-term-links: allow -->
 
 A link to a section, theorem or definition on this page from before the split
 goes on to the page that now holds it.
