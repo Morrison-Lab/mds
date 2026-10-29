@@ -4827,6 +4827,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-ill-conditioned",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-ill-conditioned",
+   "kind": "def",
+   "title": "Ill-conditioned matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-indicator-vector",
    "site": "mds",
    "page": "linear-algebra",
@@ -4995,6 +5004,15 @@
    "div": "def-matrix-addition",
    "kind": "def",
    "title": "Matrix addition",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-matrix-condition-number",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-matrix-condition-number",
+   "kind": "def",
+   "title": "Condition number of a matrix",
    "external": false
   },
   {
@@ -5583,6 +5601,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-well-conditioned",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-well-conditioned",
+   "kind": "def",
+   "title": "Well-conditioned matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-zero-matrix",
    "site": "mds",
    "page": "linear-algebra",
@@ -5733,6 +5760,15 @@
    "div": "thm-complement-null-space",
    "kind": "thm",
    "title": "The orthogonal complement of a column space is a null space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#thm-condition-number-gram",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-condition-number-gram",
+   "kind": "thm",
+   "title": "Forming $\\tp{\\matr{A}}\\matr{A}$ squares the condition number",
    "external": false
   },
   {
@@ -8607,12 +8643,30 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-special-matrices#def-ill-conditioned",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-ill-conditioned",
+   "kind": "def",
+   "title": "Ill-conditioned matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-special-matrices#def-invertible-matrix",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
    "div": "def-invertible-matrix",
    "kind": "def",
    "title": "Invertible matrix, non-singular matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#def-matrix-condition-number",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-matrix-condition-number",
+   "kind": "def",
+   "title": "Condition number of a matrix",
    "external": false
   },
   {
@@ -8766,6 +8820,24 @@
    "div": "def-trace",
    "kind": "def",
    "title": "Trace",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#def-well-conditioned",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-well-conditioned",
+   "kind": "def",
+   "title": "Well-conditioned matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#thm-condition-number-gram",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "thm-condition-number-gram",
+   "kind": "thm",
+   "title": "Forming $\\tp{\\matr{A}}\\matr{A}$ squares the condition number",
    "external": false
   },
   {
@@ -13959,6 +14031,18 @@
    "mds/linear-algebra#def-main-diagonal"
   ],
   [
+   "mds/linear-algebra#def-ill-conditioned",
+   "mds/linear-algebra#def-matrix-condition-number"
+  ],
+  [
+   "mds/linear-algebra#def-ill-conditioned",
+   "mds/linear-algebra-matrices#def-linear-system"
+  ],
+  [
+   "mds/linear-algebra#def-ill-conditioned",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra#def-infinity-norm",
    "mds/linear-algebra#def-vector-p-norm"
   ],
@@ -14001,6 +14085,30 @@
   [
    "mds/linear-algebra#def-lu",
    "mds/linear-algebra#def-unit-lower-triangular-matrix"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-condition-number",
+   "mds/algebra-sums#def-ratio"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-condition-number",
+   "mds/linear-algebra#def-condition-number"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-condition-number",
+   "mds/linear-algebra#def-singular-values"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-condition-number",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-condition-number",
+   "mds/linear-algebra-special-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-condition-number",
+   "mds/linear-algebra-subspaces#def-linearly-independent"
   ],
   [
    "mds/linear-algebra#def-matrix-induced-inner-product",
@@ -14239,6 +14347,18 @@
    "mds/number-systems#def-real-numbers"
   ],
   [
+   "mds/linear-algebra#def-well-conditioned",
+   "mds/linear-algebra#def-ill-conditioned"
+  ],
+  [
+   "mds/linear-algebra#def-well-conditioned",
+   "mds/linear-algebra#def-matrix-condition-number"
+  ],
+  [
+   "mds/linear-algebra#def-well-conditioned",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra#thm-add-outside-span",
    "mds/linear-algebra#def-linearly-independent"
   ],
@@ -14301,6 +14421,10 @@
   [
    "mds/linear-algebra#thm-closest-point",
    "mds/linear-algebra#def-orthogonal-projection"
+  ],
+  [
+   "mds/linear-algebra#thm-condition-number-gram",
+   "mds/linear-algebra-matrices#def-matrix"
   ],
   [
    "mds/linear-algebra#thm-consistency",
@@ -15499,6 +15623,42 @@
    "mds/linear-algebra-special-matrices#def-matrix-inner-product"
   ],
   [
+   "mds/linear-algebra-special-matrices#def-ill-conditioned",
+   "mds/linear-algebra-matrices#def-linear-system"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-ill-conditioned",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-ill-conditioned",
+   "mds/linear-algebra-special-matrices#def-matrix-condition-number"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
+   "mds/algebra-sums#def-ratio"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-special-matrices#def-condition-number"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-special-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-special-matrices#def-singular-values"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-subspaces#def-linearly-independent"
+  ],
+  [
    "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
    "mds/linear-algebra-special-matrices#def-positive-definite"
   ],
@@ -15549,6 +15709,22 @@
   [
    "mds/linear-algebra-special-matrices#def-svd",
    "mds/linear-algebra-special-matrices#thm-svd"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-well-conditioned",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-well-conditioned",
+   "mds/linear-algebra-special-matrices#def-ill-conditioned"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-well-conditioned",
+   "mds/linear-algebra-special-matrices#def-matrix-condition-number"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
+   "mds/linear-algebra-matrices#def-matrix"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-definite-eigenvalues",

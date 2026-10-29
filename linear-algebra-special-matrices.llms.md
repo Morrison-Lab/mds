@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 09:12:46 (PDT)
+Last modified: 2026-10-29 10:33:15 (PDT)
 
 ## 1 Special Matrices
 
@@ -1002,7 +1002,166 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Theorem 18 (A positive definite matrix has a positive definite inverse)** Let \\\mathbf{A}\\ be a \\p \times p\\ positive definite matrix ([Definition 22](#def-positive-definite)) with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 18](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\. Then \\\mathbf{A}\\ is invertible ([Definition 6](#def-invertible-matrix)),
+> **Definition 24 (Condition number of a matrix)** The **condition number** of an \\n \times p\\ [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{A}\\ is the [ratio](algebra-sums.llms.md#def-ratio) of its largest to its smallest [singular value](#def-singular-values), counting all \\\min(n, p)\\ [singular values](#def-singular-values) of \\\mathbf{A}\\, zeros included ([Remark 17](#rem-svd-zero-singular-values)) [\[13\]](#ref-wikipedia_condition_number):
+>
+> \\ \kappa(\mathbf{A}) \stackrel{\text{def}}{=}\frac{\sigma\_{\max}}{\sigma\_{\min}} = \frac{\sigma_1}{\sigma\_{\min(n,p)}}. \\
+>
+> This generalizes [Definition 23](#def-condition-number), which covers [positive definite matrices](linear-algebra-special-matrices.llms.md#def-positive-definite). For a nonzero matrix, \\\kappa(\mathbf{A}) \ge 1\\. When the columns of a tall matrix \\\mathbf{A}\\ (\\n \ge p\\) are [linearly dependent](linear-algebra-subspaces.llms.md#def-linearly-independent), its smallest singular value is \\0\\, and \\\kappa(\mathbf{A}) = \infty\\.
+
+> **NOTE:**
+>
+> **Example 35 (The condition number of a matrix with nearly parallel columns)** Let \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 1.01 \end{bmatrix}\\. Its columns, \\(1, 1)\\ and \\(1, 1.01)\\, are nearly parallel. We find its [singular values](#def-singular-values) and their [ratio](algebra-sums.llms.md#def-ratio), then repeat after multiplying every entry by \\1000\\:
+>
+> ## R
+>
+> ``` downlit
+> entries_mcn <- c(1, 1, 1, 1.01)
+> a_mcn <- matrix(entries_mcn, nrow = 2)
+> svd_mcn <- svd(a_mcn)
+> sv_mcn <- svd_mcn$d
+> a_mcn_scaled <- 1000 * a_mcn
+> svd_mcn_scaled <- svd(a_mcn_scaled)
+> sv_mcn_scaled <- svd_mcn_scaled$d
+> sv_mcn
+> #> [1] 2.0050125 0.0049875
+> sv_mcn[1] / sv_mcn[2]
+> #> [1] 402.0075
+> sv_mcn_scaled[1] / sv_mcn_scaled[2]
+> #> [1] 402.0075
+> ```
+>
+> ## Python
+>
+> ``` python
+> import numpy as np
+>
+> a_mcn = np.array([[1.0, 1.0], [1.0, 1.01]])
+> sv_mcn = np.linalg.svd(a_mcn, compute_uv=False)
+> sv_mcn_scaled = np.linalg.svd(1000 * a_mcn, compute_uv=False)
+> print(sv_mcn)
+> #> [2.0050125 0.0049875]
+> print(sv_mcn[0] / sv_mcn[1])
+> #> 402.0075124842948
+> print(sv_mcn_scaled[0] / sv_mcn_scaled[1])
+> #> 402.00751248429236
+> ```
+>
+> The [singular values](#def-singular-values) are 2.005 and 0.005, so \\\kappa(\mathbf{A}) =\\ 402. Multiplying every entry by \\1000\\ multiplies both singular values by \\1000\\, so the [condition number](#def-matrix-condition-number) is still 402.
+
+> **NOTE:**
+>
+> *Remark 20* (Other condition numbers). Other [norms](linear-algebra-inner-products.llms.md#def-norm) give other [condition numbers](#def-matrix-condition-number). This definition uses the 2-norm, which is the one built from the [singular values](#def-singular-values). For a [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite), the singular values are the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue), and this definition agrees with the [ratio](algebra-sums.llms.md#def-ratio) of its largest to its smallest [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue) in [Definition 23](#def-condition-number).
+
+> **NOTE:**
+>
+> **Theorem 18 (Forming \\{\mathbf{A}}^{\top}\mathbf{A}\\ squares the condition number)** Let \\\mathbf{A}\\ be a nonzero \\n \times p\\ [matrix](linear-algebra-matrices.llms.md#def-matrix) with \\n \ge p\\. Then
+>
+> \\ \kappa({\mathbf{A}}^{\top}\mathbf{A}) = \kappa(\mathbf{A})^2. \\
+
+> **NOTE:**
+>
+> *Proof*. By [Theorem 15](#thm-svd-evd), the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of the [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) \\{\mathbf{A}}^{\top}\mathbf{A}\\ are \\\sigma_1^2 \ge \cdots \ge \sigma_p^2\\, where \\\sigma_1 \ge \cdots \ge \sigma_p\\ are the [singular values](#def-singular-values) of \\\mathbf{A}\\, with zeros counted ([Remark 17](#rem-svd-zero-singular-values)). These eigenvalues are non-negative, so for the symmetric matrix \\{\mathbf{A}}^{\top}\mathbf{A}\\ they are also its singular values. Therefore
+>
+> \\ \kappa({\mathbf{A}}^{\top}\mathbf{A}) = \frac{\sigma_1^2}{\sigma_p^2} = \mathopen{}\left(\frac{\sigma_1}{\sigma_p}\right)\mathclose{}^2 = \kappa(\mathbf{A})^2. \\
+>
+> If \\\sigma_p = 0\\, both sides are \\\infty\\.
+
+> **NOTE:**
+>
+> **Example 36 (Squaring the condition number)** For the [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{A}\\ from [Example 35](#exm-matrix-condition-number), compare \\\kappa(\mathbf{A})\\ with \\\kappa({\mathbf{A}}^{\top}\mathbf{A})\\:
+>
+> ## R
+>
+> ``` downlit
+> # Uses a_mcn and sv_mcn from the earlier example
+> gram_cng <- crossprod(a_mcn)
+> kappa_a_cng <- sv_mcn[1] / sv_mcn[2]
+> svd_gram_cng <- svd(gram_cng)
+> sv_gram_cng <- svd_gram_cng$d
+> sv_gram_cng[1] / sv_gram_cng[2]
+> #> [1] 161610
+> kappa_a_cng^2
+> #> [1] 161610
+> ```
+>
+> ## Python
+>
+> ``` python
+> # Uses a_mcn and sv_mcn from the earlier example
+> gram_cng = a_mcn.T @ a_mcn
+> kappa_a_cng = sv_mcn[0] / sv_mcn[1]
+> sv_gram_cng = np.linalg.svd(gram_cng, compute_uv=False)
+> print(sv_gram_cng[0] / sv_gram_cng[1])
+> #> 161610.0400912735
+> print(kappa_a_cng ** 2)
+> #> 161610.04009381044
+> ```
+>
+> The [condition number](#def-matrix-condition-number) of \\{\mathbf{A}}^{\top}\mathbf{A}\\ is 161610, and \\\kappa(\mathbf{A})^2 =\\ 161610, as [Theorem 18](#thm-condition-number-gram) says.
+
+> **NOTE:**
+>
+> **Definition 25 (Ill-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{A}\\ is **ill-conditioned** when its [condition number](#def-matrix-condition-number) is so large that small relative changes in its entries, such as those from rounding, can change the solution of a [linear system](linear-algebra-matrices.llms.md#def-linear-system) by a much larger relative amount. The relative change in the solution can be up to \\\kappa(\mathbf{A})\\ times the relative change in the entries. A solution computed with \\\kappa(\mathbf{A}) \approx 10^k\\ therefore loses about \\k\\ of the digits that the floating-point arithmetic carries [\[14\]](#ref-trefethen1997numerical), Lecture 12.
+>
+> There is no sharp threshold: how large is too large depends on how many accurate digits the answer needs.
+
+> **NOTE:**
+>
+> **Definition 26 (Well-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{A}\\ is **well-conditioned** when its [condition number](#def-matrix-condition-number) is close to \\1\\, so it is not [ill-conditioned](#def-ill-conditioned).
+
+> **NOTE:**
+>
+> **Example 37 (A small change in the right-hand side moves the solution a long way)** Let \\\mathbf{A}\\ be the [matrix](linear-algebra-matrices.llms.md#def-matrix) from [Example 35](#exm-matrix-condition-number), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 2.01)\\. The system \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ has solution \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 1)\\. Change the second entry of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ from \\2.01\\ to \\2.011\\, and solve again:
+>
+> ## R
+>
+> ``` downlit
+> # Uses a_mcn and sv_mcn from the previous example
+> b_ic <- c(2, 2.01)
+> b_new_ic <- c(2, 2.011)
+> x_ic <- solve(a_mcn, b_ic)
+> x_new_ic <- solve(a_mcn, b_new_ic)
+> x_ic
+> #> [1] 1 1
+> x_new_ic
+> #> [1] 0.9 1.1
+>
+> # Relative changes, measured with the Euclidean length
+> db_ic <- (b_new_ic - b_ic)^2 |> sum() |> sqrt()
+> nb_ic <- b_ic^2 |> sum() |> sqrt()
+> dx_ic <- (x_new_ic - x_ic)^2 |> sum() |> sqrt()
+> nx_ic <- x_ic^2 |> sum() |> sqrt()
+> rel_b_ic <- db_ic / nb_ic
+> rel_x_ic <- dx_ic / nx_ic
+> c(rel_b_ic, rel_x_ic, rel_x_ic / rel_b_ic)
+> #> [1] 3.526706e-04 1.000000e-01 2.835507e+02
+> ```
+>
+> ## Python
+>
+> ``` python
+> # Uses a_mcn and sv_mcn from the previous example
+> b_ic = np.array([2.0, 2.01])
+> b_new_ic = np.array([2.0, 2.011])
+> x_ic = np.linalg.solve(a_mcn, b_ic)
+> x_new_ic = np.linalg.solve(a_mcn, b_new_ic)
+> print(x_ic)
+> #> [1. 1.]
+> print(x_new_ic)
+> #> [0.9 1.1]
+>
+> # Relative changes, measured with the Euclidean length
+> rel_b_ic = np.linalg.norm(b_new_ic - b_ic) / np.linalg.norm(b_ic)
+> rel_x_ic = np.linalg.norm(x_new_ic - x_ic) / np.linalg.norm(x_ic)
+> print(rel_b_ic, rel_x_ic, rel_x_ic / rel_b_ic)
+> #> 0.0003526706147110207 0.1000000000000334 283.55070093371313
+> ```
+>
+> The right-hand side changes by a relative amount of 0.00035, and the solution changes by a relative amount of 0.100, about 284 times as much. That amplification is what [Definition 25](#def-ill-conditioned) describes, and it cannot exceed \\\kappa(\mathbf{A}) =\\ 402.0.
+
+> **NOTE:**
+>
+> **Theorem 19 (A positive definite matrix has a positive definite inverse)** Let \\\mathbf{A}\\ be a \\p \times p\\ positive definite matrix ([Definition 22](#def-positive-definite)) with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 18](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\. Then \\\mathbf{A}\\ is invertible ([Definition 6](#def-invertible-matrix)),
 >
 > \\ \mathbf{A}^{-1} = \mathbf{Q}\\\mathbf{\Lambda}^{-1}\\{\mathbf{Q}}^{\top}, \qquad \mathbf{\Lambda}^{-1} = \begin{bmatrix} 1/\lambda_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & 1/\lambda_p \end{bmatrix}, \\
 >
@@ -1028,7 +1187,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Example 35 (Inverting a positive definite matrix)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\, [Example 27](#exm-spectral) gives \\\mathbf{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}\\ and eigenvalues \\3\\ and \\1\\, so:
+> **Example 38 (Inverting a positive definite matrix)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\, [Example 27](#exm-spectral) gives \\\mathbf{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}\\ and eigenvalues \\3\\ and \\1\\, so:
 >
 > \\ \begin{aligned} \mathbf{A}^{-1} &= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} 1/3 & 0 \\ 0 & 1 \end{bmatrix} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} && \text{(substitute; } \mathbf{Q} \text{ is symmetric)} \\ &= \frac{1}{2} \begin{bmatrix} 1/3 & 1 \\ 1/3 & -1 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} && \text{(multiply the first two matrices)} \\ &= \frac{1}{2} \begin{bmatrix} 4/3 & -2/3 \\ -2/3 & 4/3 \end{bmatrix} && \text{(multiply)} \\ &= \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} && \text{(simplify)} \end{aligned} \\
 >
@@ -1038,7 +1197,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 24 (Paraboloid)** A **paraboloid** [\[13\]](#ref-wikipedia_paraboloid) in \\\mathbb{R}^{p+1}\\ is the graph \\{\mathopen{}\left\\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})) \mid \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\right\\\mathclose{}}\\ of a function
+> **Definition 27 (Paraboloid)** A **paraboloid** [\[15\]](#ref-wikipedia_paraboloid) in \\\mathbb{R}^{p+1}\\ is the graph \\{\mathopen{}\left\\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})) \mid \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\right\\\mathclose{}}\\ of a function
 >
 > \\ f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + c, \\
 >
@@ -1046,11 +1205,11 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 25 (Elliptic paraboloid)** The paraboloid of [Definition 24](#def-paraboloid) is **elliptic** if \\\mathbf{S}\\ is positive definite ([Definition 22](#def-positive-definite)); it is then a bowl that opens upward.
+> **Definition 28 (Elliptic paraboloid)** The paraboloid of [Definition 27](#def-paraboloid) is **elliptic** if \\\mathbf{S}\\ is positive definite ([Definition 22](#def-positive-definite)); it is then a bowl that opens upward.
 
 > **NOTE:**
 >
-> **Example 36 (A bowl with its lowest point at the origin)** Take \\p = 2\\, \\\mathbf{S} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}\\ and \\c = 0\\. Then \\\mathbf{S}\\ is positive definite ([Example 32](#exm-positive-definite)), so the graph of
+> **Example 39 (A bowl with its lowest point at the origin)** Take \\p = 2\\, \\\mathbf{S} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}\\ and \\c = 0\\. Then \\\mathbf{S}\\ is positive definite ([Example 32](#exm-positive-definite)), so the graph of
 >
 > \\ \begin{aligned} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) &= {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{I}\_2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \\ &= x_1^2 + x_2^2 \end{aligned} \\
 >
@@ -1077,13 +1236,13 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 26 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 22](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \> 0\\ for all nonzero \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ by
+> **Definition 29 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 22](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \> 0\\ for all nonzero \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ by
 >
 > \\ {\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}\_{\mathbf{A}} \stackrel{\text{def}}{=}{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}. \\
 
 > **NOTE:**
 >
-> **Example 37 (A matrix-induced inner product calculation)** Consider the symmetric matrix
+> **Example 40 (A matrix-induced inner product calculation)** Consider the symmetric matrix
 >
 > \\ \mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}. \\
 >
@@ -1109,7 +1268,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Theorem 19 (Properties of the matrix-induced inner product)** For every \\p \times p\\ symmetric positive definite matrix \\\mathbf{A}\\, the function \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}\_{\mathbf{A}} = {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ satisfies the four inner product axioms ([Definition 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product)): positivity, definiteness, linearity in the first slot, and symmetry. Thus \\(\mathbb{R}^p, {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}\_{\mathbf{A}})\\ is an inner product space ([Definition 2 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product-space)).
+> **Theorem 20 (Properties of the matrix-induced inner product)** For every \\p \times p\\ symmetric positive definite matrix \\\mathbf{A}\\, the function \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}\_{\mathbf{A}} = {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ satisfies the four inner product axioms ([Definition 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product)): positivity, definiteness, linearity in the first slot, and symmetry. Thus \\(\mathbb{R}^p, {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}\_{\mathbf{A}})\\ is an inner product space ([Definition 2 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product-space)).
 >
 > Taking \\\mathbf{A} = \mathbf{I}\_p\\ recovers the standard dot product ([Example 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-dot-product-inner-product)), while taking \\\mathbf{A} = \operatorname{diag}(c_1, \ldots, c_p)\\ recovers the weighted inner product ([Example 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-weighted-inner-product)).
 >
@@ -1142,7 +1301,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Example 38 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ from [Example 37](#exm-matrix-induced-inner-product), the vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 2)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (3, -1)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}} = (0, 4)\\, and the numbers \\a = 2\\ and \\b = -3\\. The code computes both sides of each axiom in [Theorem 19](#thm-matrix-induced-inner-product), and then the numbers \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_i, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\right\rangle\mathclose{}}\_{\mathbf{A}}\\ for the standard basis vectors.
+> **Example 41 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ from [Example 40](#exm-matrix-induced-inner-product), the vectors \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (1, 2)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (3, -1)\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{z}}\vphantom{z}} = (0, 4)\\, and the numbers \\a = 2\\ and \\b = -3\\. The code computes both sides of each axiom in [Theorem 20](#thm-matrix-induced-inner-product), and then the numbers \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_i, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\right\rangle\mathclose{}}\_{\mathbf{A}}\\ for the standard basis vectors.
 >
 > ``` downlit
 > A <- matrix(c(2, 1, 1, 2), nrow = 2)
@@ -1172,7 +1331,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > #> [2,]    1    2
 > ```
 >
-> The inner product of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with itself is 14, which is positive. The two orders give the same number, 7 and 7. Both sides of the linearity axiom equal 28. The matrix of numbers \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_i, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\right\rangle\mathclose{}}\_{\mathbf{A}}\\ is equal to \\\mathbf{A}\\, as the converse in [Theorem 19](#thm-matrix-induced-inner-product) says.
+> The inner product of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with itself is 14, which is positive. The two orders give the same number, 7 and 7. Both sides of the linearity axiom equal 28. The matrix of numbers \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_i, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_j\right\rangle\mathclose{}}\_{\mathbf{A}}\\ is equal to \\\mathbf{A}\\, as the converse in [Theorem 20](#thm-matrix-induced-inner-product) says.
 
 > **NOTE:**
 >
@@ -1188,7 +1347,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Theorem 20 (A matrix-induced inner product is a dot product of transformed vectors)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix, and let \\\mathbf{W}\\ be any \\p \times p\\ matrix with \\\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}\\. Then for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\, the \\\mathbf{A}\\-inner product ([Definition 26](#def-matrix-induced-inner-product)) satisfies
+> **Theorem 21 (A matrix-induced inner product is a dot product of transformed vectors)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix, and let \\\mathbf{W}\\ be any \\p \times p\\ matrix with \\\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}\\. Then for all \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\, the \\\mathbf{A}\\-inner product ([Definition 29](#def-matrix-induced-inner-product)) satisfies
 >
 > \\ {\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}\_{\mathbf{A}} = (\mathbf{W}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot (\mathbf{W}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}). \\
 
@@ -1198,9 +1357,9 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> *Remark 20* (Inner product spaces in machine learning). In machine learning and statistics, choosing or learning an inner product space tailors geometric notions of distance, angle, and projection to the structure of the data:
+> *Remark 21* (Inner product spaces in machine learning). In machine learning and statistics, choosing or learning an inner product space tailors geometric notions of distance, angle, and projection to the structure of the data:
 >
-> 1.  **Mahalanobis metric and whitening**: Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences. If data features have a symmetric positive definite covariance matrix \\\mathbf{\Sigma}\\ ([Definition 22](#def-positive-definite)), the precision matrix \\\mathbf{A} = \mathbf{\Sigma}^{-1}\\ ([Theorem 18](#thm-pd-inverse)) defines the Mahalanobis inner product \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}\_{\mathbf{\Sigma}^{-1}} = {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{\Sigma}^{-1} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\. The induced distance \\d\_{\mathbf{\Sigma}^{-1}}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = \sqrt{{(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})}^{\top}\mathbf{\Sigma}^{-1}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})}\\ measures statistical distance normalized by variance along each principal direction. Factoring \\\mathbf{\Sigma}^{-1} = {\mathbf{W}}^{\top}\mathbf{W}\\ (via Cholesky or spectral decomposition, [Corollary 3](#cor-pd-transpose-product)), this inner product is the Euclidean dot product of the whitened vectors \\\mathbf{W}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathbf{W}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ ([Theorem 20](#thm-whitening-inner-product)).
+> 1.  **Mahalanobis metric and whitening**: Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences. If data features have a symmetric positive definite covariance matrix \\\mathbf{\Sigma}\\ ([Definition 22](#def-positive-definite)), the precision matrix \\\mathbf{A} = \mathbf{\Sigma}^{-1}\\ ([Theorem 19](#thm-pd-inverse)) defines the Mahalanobis inner product \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}\_{\mathbf{\Sigma}^{-1}} = {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{\Sigma}^{-1} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\. The induced distance \\d\_{\mathbf{\Sigma}^{-1}}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}) = \sqrt{{(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})}^{\top}\mathbf{\Sigma}^{-1}(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})}\\ measures statistical distance normalized by variance along each principal direction. Factoring \\\mathbf{\Sigma}^{-1} = {\mathbf{W}}^{\top}\mathbf{W}\\ (via Cholesky or spectral decomposition, [Corollary 3](#cor-pd-transpose-product)), this inner product is the Euclidean dot product of the whitened vectors \\\mathbf{W}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathbf{W}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ ([Theorem 21](#thm-whitening-inner-product)).
 >
 > 2.  **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**: Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products \\{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_i, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_j\right\rangle\mathclose{}}\\. By mapping data into a higher- or infinite-dimensional inner product space via a feature map \\D: \mathbb{R}^p \to \mathcal{H}\\, the kernel trick replaces the computation of \\D(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_i)\\ with an evaluation of a positive definite kernel function: \\ k(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_i, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_j) \stackrel{\text{def}}{=}{\mathopen{}\left\langle D(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_i), D(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_j)\right\rangle\mathclose{}}\_{\mathcal{H}}. \\ Mercer’s theorem guarantees that every symmetric positive definite kernel function implicitly defines a valid inner product space \\\mathcal{H}\\ (a reproducing kernel Hilbert space) without requiring explicit coordinate representations.
 >
@@ -1212,14 +1371,14 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 27 (Determinant)** The **determinant** [\[14\]](#ref-wikipedia_determinant) of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
+> **Definition 30 (Determinant)** The **determinant** [\[16\]](#ref-wikipedia_determinant) of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
 >
 > - For \\p = 1\\, \\\det(\mathbf{A}) = a\_{11}\\.
 > - For \\p \ge 2\\, \\ \det(\mathbf{A}) = \sum\_{j=1}^p(-1)^{1+j}\\ a\_{1j} {\det\mathopen{}\left(\mathbf{A}\_{(1j)}\right)\mathclose{}}, \\ where \\\mathbf{A}\_{(1j)}\\ is the \\(p-1) \times (p-1)\\ matrix left after deleting row \\1\\ and column \\j\\ of \\\mathbf{A}\\.
 
 > **NOTE:**
 >
-> **Example 39 (Determinant of a \\2 \times 2\\ matrix)** For \\\mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}\\, deleting row 1 and column 1 leaves \\\begin{bmatrix} d \end{bmatrix}\\, and deleting row 1 and column 2 leaves \\\begin{bmatrix} c \end{bmatrix}\\. So:
+> **Example 42 (Determinant of a \\2 \times 2\\ matrix)** For \\\mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}\\, deleting row 1 and column 1 leaves \\\begin{bmatrix} d \end{bmatrix}\\, and deleting row 1 and column 2 leaves \\\begin{bmatrix} c \end{bmatrix}\\. So:
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= (-1)^{1+1}\\ a {\det\mathopen{}\left(\begin{bmatrix} d \end{bmatrix}\right)\mathclose{}} + (-1)^{1+2}\\ b {\det\mathopen{}\left(\begin{bmatrix} c \end{bmatrix}\right)\mathclose{}} && \text{(definition, } p = 2 \text{)} \\ &= a d - b c && \text{(definition, } p = 1 \text{)} \end{aligned} \\
 >
@@ -1229,13 +1388,13 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> *Remark 21* (Cofactor expansion). The recursive formula in [Definition 27](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree [\[6\]](#ref-banerjee2014linear).
+> *Remark 22* (Cofactor expansion). The recursive formula in [Definition 30](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree [\[6\]](#ref-banerjee2014linear).
 >
 > Each ordering picks one entry from each row, from the column that the ordering assigns to that row, and multiplies them. Its sign is \\+1\\ if the ordering takes an even number of swaps of two columns to reach from \\(1, 2, \ldots, p)\\, and \\-1\\ if it takes an odd number.
 >
-> For \\p = 2\\, the columns have two orderings. The ordering \\(1, 2)\\ keeps each column in place, picks the entries \\a\_{11}\\ and \\a\_{22}\\, and has sign \\+1\\. The ordering \\(2, 1)\\ swaps the two columns, picks the entries \\a\_{12}\\ and \\a\_{21}\\, and has sign \\-1\\. The sum \\a\_{11} a\_{22} - a\_{12} a\_{21}\\ is the value \\a d - b c\\ from [Example 39](#exm-determinant).
+> For \\p = 2\\, the columns have two orderings. The ordering \\(1, 2)\\ keeps each column in place, picks the entries \\a\_{11}\\ and \\a\_{22}\\, and has sign \\+1\\. The ordering \\(2, 1)\\ swaps the two columns, picks the entries \\a\_{12}\\ and \\a\_{21}\\, and has sign \\-1\\. The sum \\a\_{11} a\_{22} - a\_{12} a\_{21}\\ is the value \\a d - b c\\ from [Example 42](#exm-determinant).
 
-See also [\[14\]](#ref-wikipedia_determinant).
+See also [\[16\]](#ref-wikipedia_determinant).
 
 > **TIP:**
 >
@@ -1245,7 +1404,7 @@ See also [\[14\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Theorem 21 (Determinant of a diagonal matrix)** The determinant ([Definition 27](#def-determinant)) of a \\p \times p\\ diagonal matrix ([Definition 4](#def-diagonal-matrix)) is the product of its diagonal entries:
+> **Theorem 22 (Determinant of a diagonal matrix)** The determinant ([Definition 30](#def-determinant)) of a \\p \times p\\ diagonal matrix ([Definition 4](#def-diagonal-matrix)) is the product of its diagonal entries:
 >
 > \\ {\det\mathopen{}\left( \begin{bmatrix} d_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & d_p \end{bmatrix} \right)\mathclose{}} = \prod\_{i=1}^p d_i \\
 
@@ -1259,17 +1418,17 @@ See also [\[14\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Example 40 (Determinant of a scaled identity matrix)** For a number \\c\\, \\c\\\mathbf{I}\_p\\ is diagonal with every diagonal entry equal to \\c\\, so \\\det(c\\\mathbf{I}\_p) = c^p\\. In particular, \\\det(\mathbf{I}\_p) = 1\\.
+> **Example 43 (Determinant of a scaled identity matrix)** For a number \\c\\, \\c\\\mathbf{I}\_p\\ is diagonal with every diagonal entry equal to \\c\\, so \\\det(c\\\mathbf{I}\_p) = c^p\\. In particular, \\\det(\mathbf{I}\_p) = 1\\.
 
 > **NOTE:**
 >
-> **Theorem 22 (Determinant of a product)** For \\p \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\,
+> **Theorem 23 (Determinant of a product)** For \\p \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\,
 >
 > \\ \det(\mathbf{A}\mathbf{B}) = \det(\mathbf{A}) \det(\mathbf{B}). \\
 
 > **NOTE:**
 >
-> **Example 41 (Checking the product rule)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}\\, [Example 39](#exm-determinant) gives
+> **Example 44 (Checking the product rule)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}\\, [Example 42](#exm-determinant) gives
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= 2 \cdot 1 - 1 \cdot 0 \\ &= 2 \end{aligned} \\
 >
@@ -1287,13 +1446,13 @@ See also [\[14\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> *Remark 22* (An example is not a proof). [Example 41](#exm-det-product) checks [Theorem 22](#thm-det-product) for one pair of \\2 \times 2\\ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy [\[6\]](#ref-banerjee2014linear).
+> *Remark 23* (An example is not a proof). [Example 44](#exm-det-product) checks [Theorem 23](#thm-det-product) for one pair of \\2 \times 2\\ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy [\[6\]](#ref-banerjee2014linear).
 
-See also [\[14\]](#ref-wikipedia_determinant).
+See also [\[16\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Theorem 23 (The determinant of a symmetric matrix is the product of its eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 18](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then
+> **Theorem 24 (The determinant of a symmetric matrix is the product of its eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 18](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then
 >
 > \\ \det(\mathbf{A}) = \prod\_{i=1}^p \lambda_i. \\
 
@@ -1307,7 +1466,7 @@ See also [\[14\]](#ref-wikipedia_determinant).
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= \det(\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}) && \text{(substitute the eigendecomposition)} \\ &= \det(\mathbf{Q}) \det(\mathbf{\Lambda}) \det({\mathbf{Q}}^{\top}) && \text{(determinant of a product, twice)} \\ &= \det(\mathbf{\Lambda}) \cdot\det({\mathbf{Q}}^{\top})\det(\mathbf{Q}) && \text{(reorder the three numbers)} \\ &= \det(\mathbf{\Lambda}) && \text{(the first display)} \\ &= \prod\_{i=1}^p \lambda_i && \text{(determinant of a diagonal matrix)} \end{aligned} \\
 >
-> The product steps are [Theorem 22](#thm-det-product), the orthogonality step is [Definition 10](#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 21](#thm-det-diagonal) and [Example 40](#exm-det-diagonal).
+> The product steps are [Theorem 23](#thm-det-product), the orthogonality step is [Definition 10](#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 22](#thm-det-diagonal) and [Example 43](#exm-det-diagonal).
 
 > **NOTE:**
 >
@@ -1315,15 +1474,15 @@ See also [\[14\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> *Proof*. By [Theorem 17](#thm-definite-eigenvalues), every eigenvalue of \\\mathbf{A}\\ is positive, so their product, which is \\\det(\mathbf{A})\\ by [Theorem 23](#thm-det-eigenvalues), is positive.
+> *Proof*. By [Theorem 17](#thm-definite-eigenvalues), every eigenvalue of \\\mathbf{A}\\ is positive, so their product, which is \\\det(\mathbf{A})\\ by [Theorem 24](#thm-det-eigenvalues), is positive.
 
 > **NOTE:**
 >
-> **Example 42 (Two ways to the same determinant)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([Example 24](#exm-eigenvalue)), so [Theorem 23](#thm-det-eigenvalues) gives
+> **Example 45 (Two ways to the same determinant)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([Example 24](#exm-eigenvalue)), so [Theorem 24](#thm-det-eigenvalues) gives
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= 3 \cdot 1 \\ &= 3, \end{aligned} \\
 >
-> matching \\2 \cdot 2 - 1 \cdot 1 = 3\\ from [Example 39](#exm-determinant).
+> matching \\2 \cdot 2 - 1 \cdot 1 = 3\\ from [Example 42](#exm-determinant).
 
 Back to top
 
@@ -1379,8 +1538,16 @@ Wikipedia contributors, “Definite matrix — Wikipedia, the free encyclopedia.
 
 \[13\]
 
-Wikipedia contributors, “Paraboloid — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Paraboloid>
+Wikipedia contributors, “Condition number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Condition_number>
 
 \[14\]
+
+L. N. Trefethen and D. Bau III, *Numerical linear algebra*. SIAM, 1997. doi: [10.1137/1.9780898719574](https://doi.org/10.1137/1.9780898719574).
+
+\[15\]
+
+Wikipedia contributors, “Paraboloid — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Paraboloid>
+
+\[16\]
 
 Wikipedia contributors, “Determinant — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Determinant>

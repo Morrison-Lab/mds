@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 09:12:46 (PDT)
+Last modified: 2026-10-29 10:33:15 (PDT)
 
 ## 1 Critical points and optimization
 
@@ -1576,7 +1576,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f465a00ac10>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06990>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -1588,18 +1588,18 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f465a00ad50>]
-> #> [<matplotlib.lines.Line2D object at 0x7f465a00ae90>]
-> #> [<matplotlib.lines.Line2D object at 0x7f465a00afd0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f465a00b110>]
-> #> [<matplotlib.lines.Line2D object at 0x7f465a00b250>]
-> #> [<matplotlib.lines.Line2D object at 0x7f465a00b390>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06ad0>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06c10>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06d50>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06e90>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66d06fd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66d07110>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f465a00b4d0>
+> #> <matplotlib.legend.Legend object at 0x7fcc66d07250>
 > plt.show()
 > ```
 >
@@ -1664,10 +1664,10 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f465a0dfc50>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66dd79d0>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7f465a0dfd90>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66dd7b10>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -1794,11 +1794,11 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f4659d23250>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcc66a7afd0>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7f4659d23390>
+> #> <matplotlib.lines.Line2D object at 0x7fcc66a7b110>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7f4659d234d0>
+> #> <matplotlib.lines.Line2D object at 0x7fcc66a7b250>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -1815,6 +1815,44 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization_files/figure-html/best-constant-step-plot-python-1.png)](optimization_files/figure-html/best-constant-step-plot-python-1.png "Figure 4: The factor \rho(s) of Example 58 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
 >
 > Figure 4: The factor \\\rho(s)\\ of [Example 58](#exm-best-constant-step) against the [step length](#def-gradient-descent) \\s\\ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](sets.llms.md#def-bound) on the [error](#def-iterate-error) shrinks only where the curve is below \\1\\ (dotted).
+
+> **NOTE:**
+>
+> **Exercise 10 (Which step lengths shrink the error bound)** In the setting of [Theorem 16](#thm-gd-quadratic-error), find all \\s\> 0\\ with \\\rho(s) \< 1\\, and write the answer as a condition on \\s\\ that involves \\\lambda\_{\max}\\.
+
+> **NOTE:**
+>
+> *Solution 10*. \\\rho(s) \< 1\\ says that \\\mathopen{}\left\|1 - s\\\lambda_i\right\|\mathclose{} \< 1\\ for every \\i\\, which is \\-1 \< 1 - s\\\lambda_i \< 1\\. The right [inequality](proof-writing.llms.md#def-inequality) holds for every \\s\> 0\\ because \\\lambda_i \> 0\\. The left inequality is \\s\\\lambda_i \< 2\\, that is, \\s\< 2 / \lambda_i\\. These \\p\\ [inequalities](proof-writing.llms.md#def-inequality), one for each [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue), all hold exactly when the inequality for the largest eigenvalue holds, since it is the most restrictive:
+>
+> \\ 0 \< s\< \frac{2}{\lambda\_{\max}}. \\
+
+> **NOTE:**
+>
+> **Exercise 11 (The best step length for eigenvalues 1 and 9)** Let \\\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 9 \end{bmatrix}\\. Using [Theorem 17](#thm-best-constant-step), find \\s^\*\\.
+
+> **NOTE:**
+>
+> *Solution 11*. \\\mathbf{S}\\ is diagonal, so its [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) are its [diagonal entries](linear-algebra-matrices.llms.md#def-main-diagonal) \\1\\ and \\9\\. Then
+>
+> \\ s^\* = \frac{2}{1 + 9} = 0.2. \\
+
+> **NOTE:**
+>
+> **Exercise 12 (The best error factor for eigenvalues 1 and 9)** In the setting of [Exercise 11](#exr-best-step-length), find \\\rho(s^\*)\\.
+
+> **NOTE:**
+>
+> *Solution 12*. The [condition number](linear-algebra-special-matrices.llms.md#def-condition-number) is \\\kappa(\mathbf{S}) = 9 / 1 = 9\\, so by [Theorem 17](#thm-best-constant-step)
+>
+> \\ \rho(s^\*) = \frac{9 - 1}{9 + 1} = 0.8. \\
+
+> **NOTE:**
+>
+> **Exercise 13 (Steps to cut the error bound by a factor of ten)** In the setting of [Exercise 11](#exr-best-step-length) and [Exercise 12](#exr-best-step-factor), find the smallest \\t = 1, 2, \ldots\\ with \\\rho(s^\*)^t \le 0.1\\.
+
+> **NOTE:**
+>
+> *Solution 13*. From [Solution 12](#sol-best-step-factor), \\\rho(s^\*) = 0.8\\. Taking logarithms, \\\rho(s^\*)^t \le 0.1\\ becomes \\t \ln \rho(s^\*) \le \ln 0.1\\. Here \\\ln \rho(s^\*) \< 0\\, so dividing by it flips the [inequality](proof-writing.llms.md#def-inequality): \\t \ge \ln 0.1 / \ln \rho(s^\*) \approx 10.32\\. The smallest such \\t\\ is \\11\\.
 
 ## 6 Quasi-Newton methods
 

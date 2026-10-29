@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-29 09:12:46 (PDT)</p>
+  <p class="date">Last modified: 2026-10-29 10:33:15 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-critical-points" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Critical points and optimization</h2>
 <div id="def-flat-point" class="theorem definition">
@@ -2645,7 +2645,7 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb15-7"><a aria-label="7"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb15-8"><a aria-label="8"></a>grid_bf <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.6</span>, <span class="fl">1.6</span>, <span class="dv">321</span>)</span>
 <span id="cb15-9"><a aria-label="9"></a>ax.plot(grid_bf, basin_cost_bf(grid_bf), color<span class="op">=</span><span class="st">"grey"</span>)</span>
-<span id="cb15-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00ac10&gt;]</span></span>
+<span id="cb15-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66d06990&gt;]</span></span>
 <span id="cb15-11"><a aria-label="11"></a><span class="cf">for</span> start <span class="kw">in</span> <span class="bu">sorted</span>(basin_starts_bs[:<span class="dv">6</span>], reverse<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb15-12"><a aria-label="12"></a>    x <span class="op">=</span> [start]</span>
 <span id="cb15-13"><a aria-label="13"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">30</span>):</span>
@@ -2657,18 +2657,18 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb15-19"><a aria-label="19"></a>            marker<span class="op">=</span><span class="st">"o"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"^"</span>,</span>
 <span id="cb15-20"><a aria-label="20"></a>            label<span class="op">=</span>(<span class="st">"start above 0"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"start below 0"</span>)</span>
 <span id="cb15-21"><a aria-label="21"></a>            <span class="cf">if</span> <span class="bu">abs</span>(start) <span class="op">==</span> <span class="fl">0.1</span> <span class="cf">else</span> <span class="va">None</span>)</span>
-<span id="cb15-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00ad50&gt;]</span></span>
-<span id="cb15-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00ae90&gt;]</span></span>
-<span id="cb15-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00afd0&gt;]</span></span>
-<span id="cb15-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00b110&gt;]</span></span>
-<span id="cb15-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00b250&gt;]</span></span>
-<span id="cb15-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a00b390&gt;]</span></span>
+<span id="cb15-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66d06ad0&gt;]</span></span>
+<span id="cb15-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66d06c10&gt;]</span></span>
+<span id="cb15-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66d06d50&gt;]</span></span>
+<span id="cb15-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66d06e90&gt;]</span></span>
+<span id="cb15-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66d06fd0&gt;]</span></span>
+<span id="cb15-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66d07110&gt;]</span></span>
 <span id="cb15-28"><a aria-label="28"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb15-29"><a aria-label="29"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
 <span id="cb15-30"><a aria-label="30"></a>ax.set_ylabel(<span class="st">"f(x)"</span>)</span>
 <span id="cb15-31"><a aria-label="31"></a><span class="co">#&gt; Text(0, 0.5, 'f(x)')</span></span>
 <span id="cb15-32"><a aria-label="32"></a>fig.legend(loc<span class="op">=</span><span class="st">"outside lower center"</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb15-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7f465a00b4d0&gt;</span></span>
+<span id="cb15-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7fcc66d07250&gt;</span></span>
 <span id="cb15-34"><a aria-label="34"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-basin-of-attraction" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-basin-of-attraction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2746,10 +2746,10 @@ function or its scalar variable, and the basin example writes f(x) the same way.
 <span id="cb17-5"><a aria-label="5"></a>plateau_marks_pf <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">10</span>])</span>
 <span id="cb17-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb17-7"><a aria-label="7"></a>ax.plot(plateau_grid_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_grid_pf)), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
-<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a0dfc50&gt;]</span></span>
+<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66dd79d0&gt;]</span></span>
 <span id="cb17-9"><a aria-label="9"></a>ax.plot(plateau_marks_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_marks_pf)),</span>
 <span id="cb17-10"><a aria-label="10"></a>        color<span class="op">=</span><span class="st">"#D55E00"</span>, marker<span class="op">=</span><span class="st">"^"</span>, markersize<span class="op">=</span><span class="dv">8</span>, linestyle<span class="op">=</span><span class="st">""</span>)</span>
-<span id="cb17-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f465a0dfd90&gt;]</span></span>
+<span id="cb17-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66dd7b10&gt;]</span></span>
 <span id="cb17-12"><a aria-label="12"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
 <span id="cb17-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb17-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
@@ -2940,11 +2940,11 @@ s&amp;= \frac{2}{\lambda_{\min} + \lambda_{\max}} = s^*.
 <span id="cb19-5"><a aria-label="5"></a>bcs_rho_pf <span class="op">=</span> np.maximum(np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> <span class="dv">3</span> <span class="op">*</span> bcs_grid_pf), np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> bcs_grid_pf))</span>
 <span id="cb19-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb19-7"><a aria-label="7"></a>ax.plot(bcs_grid_pf, bcs_rho_pf, color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
-<span id="cb19-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f4659d23250&gt;]</span></span>
+<span id="cb19-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fcc66a7afd0&gt;]</span></span>
 <span id="cb19-9"><a aria-label="9"></a>ax.axhline(<span class="dv">1</span>, color<span class="op">=</span><span class="st">"black"</span>, linestyle<span class="op">=</span><span class="st">":"</span>)</span>
-<span id="cb19-10"><a aria-label="10"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f4659d23390&gt;</span></span>
+<span id="cb19-10"><a aria-label="10"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7fcc66a7b110&gt;</span></span>
 <span id="cb19-11"><a aria-label="11"></a>ax.axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
-<span id="cb19-12"><a aria-label="12"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f4659d234d0&gt;</span></span>
+<span id="cb19-12"><a aria-label="12"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7fcc66a7b250&gt;</span></span>
 <span id="cb19-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"Step length"</span>)</span>
 <span id="cb19-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'Step length')</span></span>
 <span id="cb19-15"><a aria-label="15"></a>ax.set_ylabel(<span class="st">"Error factor"</span>)</span>
@@ -2984,6 +2984,39 @@ Figure&nbsp;4: The factor <span class="math inline">\(\rho(s)\)</span> of <a hre
 </div>
 </div>
 </figure>
+</div>
+</section><section class="slide level2"><div id="exr-step-length-range" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10 (Which step lengths shrink the error bound)</strong></span> In the setting of <a href="#/thm-gd-quadratic-error" class="quarto-xref">Theorem&nbsp;16</a>, find all <span class="math inline">\(s&gt; 0\)</span> with <span class="math inline">\(\rho(s) &lt; 1\)</span>, and write the answer as a condition on <span class="math inline">\(s\)</span> that involves <span class="math inline">\(\lambda_{\max}\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-step-length-range" class="proof solution">
+<p><span class="proof-title"><em>Solution 10</em>. </span><span class="math inline">\(\rho(s) &lt; 1\)</span> says that <span class="math inline">\(\mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{} &lt; 1\)</span> for every <span class="math inline">\(i\)</span>, which is <span class="math inline">\(-1 &lt; 1 - s\,\lambda_i &lt; 1\)</span>. The right <a href="./proof-writing.html#def-inequality">inequality</a> holds for every <span class="math inline">\(s&gt; 0\)</span> because <span class="math inline">\(\lambda_i &gt; 0\)</span>. The left inequality is <span class="math inline">\(s\,\lambda_i &lt; 2\)</span>, that is, <span class="math inline">\(s&lt; 2 / \lambda_i\)</span>. These <span class="math inline">\(p\)</span> <a href="./proof-writing.html#def-inequality">inequalities</a>, one for each <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalue</a>, all hold exactly when the inequality for the largest eigenvalue holds, since it is the most restrictive:</p>
+<p><span class="math display">\[
+0 &lt; s&lt; \frac{2}{\lambda_{\max}}.
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-best-step-length" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 11 (The best step length for eigenvalues 1 and 9)</strong></span> Let <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 9 \end{bmatrix}\)</span>. Using <a href="#/thm-best-constant-step" class="quarto-xref">Theorem&nbsp;17</a>, find <span class="math inline">\(s^*\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-best-step-length" class="proof solution">
+<p><span class="proof-title"><em>Solution 11</em>. </span><span class="math inline">\(\mathbf{S}\)</span> is diagonal, so its <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalues</a> are its <a href="./linear-algebra-matrices.html#def-main-diagonal">diagonal entries</a> <span class="math inline">\(1\)</span> and <span class="math inline">\(9\)</span>. Then</p>
+<p><span class="math display">\[
+s^* = \frac{2}{1 + 9} = 0.2.
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-best-step-factor" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 12 (The best error factor for eigenvalues 1 and 9)</strong></span> In the setting of <a href="#/exr-best-step-length" class="quarto-xref">Exercise&nbsp;11</a>, find <span class="math inline">\(\rho(s^*)\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-best-step-factor" class="proof solution">
+<p><span class="proof-title"><em>Solution 12</em>. </span>The <a href="./linear-algebra-special-matrices.html#def-condition-number">condition number</a> is <span class="math inline">\(\kappa(\mathbf{S}) = 9 / 1 = 9\)</span>, so by <a href="#/thm-best-constant-step" class="quarto-xref">Theorem&nbsp;17</a></p>
+<p><span class="math display">\[
+\rho(s^*) = \frac{9 - 1}{9 + 1} = 0.8.
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-best-step-count" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 13 (Steps to cut the error bound by a factor of ten)</strong></span> In the setting of <a href="#/exr-best-step-length" class="quarto-xref">Exercise&nbsp;11</a> and <a href="#/exr-best-step-factor" class="quarto-xref">Exercise&nbsp;12</a>, find the smallest <span class="math inline">\(t = 1, 2, \ldots\)</span> with <span class="math inline">\(\rho(s^*)^t \le 0.1\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="sol-best-step-count" class="proof solution">
+<p><span class="proof-title"><em>Solution 13</em>. </span>From <a href="#/sol-best-step-factor" class="quarto-xref">Solution&nbsp;12</a>, <span class="math inline">\(\rho(s^*) = 0.8\)</span>. Taking logarithms, <span class="math inline">\(\rho(s^*)^t \le 0.1\)</span> becomes <span class="math inline">\(t \ln \rho(s^*) \le \ln 0.1\)</span>. Here <span class="math inline">\(\ln \rho(s^*) &lt; 0\)</span>, so dividing by it flips the <a href="./proof-writing.html#def-inequality">inequality</a>: <span class="math inline">\(t \ge \ln 0.1 / \ln \rho(s^*) \approx 10.32\)</span>. The smallest such <span class="math inline">\(t\)</span> is <span class="math inline">\(11\)</span>.</p>
 </div>
 </section><section id="sec-quasi-newton" class="slide level2" data-number="6"><h2>
 <span class="header-section-number">6</span> Quasi-Newton methods</h2>
