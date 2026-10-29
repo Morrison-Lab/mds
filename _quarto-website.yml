@@ -129,6 +129,9 @@ website:
   # page-navigation.html (included under format.html) corrects that.
   sidebar:
     style: docked
+    # sections are collapsible and start folded; the current page's section
+    # stays open (collapse-level 1 folds every depth, default 2 opens depth 1)
+    collapse-level: 1
     search: false # the navbar already has search
     contents:
       - text: "Home"
