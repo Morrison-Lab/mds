@@ -4,11 +4,11 @@
 Let $c$ be a [flat point](#def-flat-point) of $f$ where the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''(c)$ is defined.
 
 - If $f''(c) > 0$, then $c$ is a [strict local minimizer](optimization.qmd#def-strict-local-minimizer) of $f$.
-- If $f''(c) < 0$, then $c$ is a strict local maximizer of $f$.
+- If $f''(c) < 0$, then $c$ is a [strict local maximizer](optimization.qmd#def-local-maximizer) of $f$.
 
 If $f''(c) = 0$, the test does not decide.
 
-The several-variable version for a minimum is @thm-second-order-condition.
+The several-variable version for a minimizer is @thm-second-order-condition.
 
 :::
 
@@ -26,7 +26,7 @@ $$f''(c) = \lim_{x \to c} \frac{f'(x)}{x - c}.$$
 A [limit](calculus-derivatives.qmd#def-limit) that is positive forces the [quotient](algebra.qmd#def-quotient) to be positive near $c$.
 So $f'(x)$ has the same sign as $x - c$ on some [open interval](sets.qmd#def-open-interval) around $c$.
 Hence $f$ is decreasing to the left of $c$ and increasing to the right of $c$,
-which makes $c$ a strict local minimizer.
+which makes $c$ a [strict local minimizer](optimization.qmd#def-strict-local-minimizer).
 
 The case $f''(c) < 0$ follows by applying the same reasoning to $-f$.
 
