@@ -4,6 +4,5 @@
 An **inflection point** of a [function](functions.qmd#def-function) $f$ is a point $c$
 such that, on some [open interval](sets.qmd#def-open-interval) around $c$,
 the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''$ is positive on one side of $c$ and negative on the other.
-At an inflection point, the [graph](functions.qmd#def-graph) changes between curving up and curving down.
 
 :::
