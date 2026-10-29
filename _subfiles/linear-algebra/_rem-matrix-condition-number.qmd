@@ -1,0 +1,10 @@
+:::{#rem-matrix-condition-number}
+#### Other condition numbers
+
+Other [norms](linear-algebra-inner-products.qmd#def-norm) give other [condition numbers](#def-matrix-condition-number).
+This definition uses the 2-norm, which is the one built from the [singular values](#def-singular-values).
+For a [positive definite matrix](linear-algebra-special-matrices.qmd#def-positive-definite),
+the singular values are the [eigenvalues](linear-algebra-special-matrices.qmd#def-eigenvalue),
+and this definition agrees with the [ratio](algebra-sums.qmd#def-ratio) of its largest to its smallest [eigenvalue](linear-algebra-special-matrices.qmd#def-eigenvalue) in @def-condition-number.
+
+:::

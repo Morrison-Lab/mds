@@ -1,0 +1,27 @@
+:::{#thm-condition-number-gram}
+#### Forming $\tp{\matr{A}}\matr{A}$ squares the condition number
+
+Let $\matr{A}$ be an $n \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) with $n \ge p$.
+Then
+
+$$
+\condnum(\tp{\matr{A}}\matr{A}) = \condnum(\matr{A})^2.
+$$
+
+:::
+
+:::{.proof}
+By @thm-svd-evd, the [eigenvalues](linear-algebra-special-matrices.qmd#def-eigenvalue) of the [symmetric matrix](linear-algebra-special-matrices.qmd#def-symmetric-matrix) $\tp{\matr{A}}\matr{A}$
+are $\singval_1^2 \ge \cdots \ge \singval_p^2$,
+where $\singval_1 \ge \cdots \ge \singval_p$ are the [singular values](#def-singular-values) of $\matr{A}$,
+with zeros counted (@rem-svd-zero-singular-values).
+These eigenvalues are non-negative,
+so for the symmetric matrix $\tp{\matr{A}}\matr{A}$ they are also its singular values.
+Therefore
+
+$$
+\condnum(\tp{\matr{A}}\matr{A}) = \frac{\singval_1^2}{\singval_p^2} = \paren{\frac{\singval_1}{\singval_p}}^2 = \condnum(\matr{A})^2.
+$$
+
+If $\singval_p = 0$, both sides are $\infty$.
+:::
