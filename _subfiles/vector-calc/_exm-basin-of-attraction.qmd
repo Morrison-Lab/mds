@@ -68,11 +68,10 @@ print([round(v, 1) for v in basin_far_bs])
 
 :::
 
-Each start from $-1.5$ to $1.5$ ends at the
-[minimizer](algebra-basics.qmd#def-local-minimizer)
-on its own side of $0$,
+Each start from $-1.5$ to $1.5$ ends at $-1$ or $1$,
+whichever lies on its own side of $0$,
 so near $0$ the sign of the starting point
-decides which minimizer the run reaches.
+decides which of the two the run reaches.
 The [basin of attraction](#def-basin-of-attraction) of $1$
 is not all of $(0, \infty)$:
 the first step from $\iterpoint{x}{0} = 3$ lands at
@@ -90,7 +89,7 @@ and so the step $\steplen \deriv{x} f(x)$ is long.
 From $\iterpoint{x}{0} = 3$ that step has length $`{r} 4 * 3^3 - 4 * 3`\,\steplen$,
 so the first step stays on the positive side of $0$
 only when the [step length](#def-gradient-descent) is below `{r} 3 / (4 * 3^3 - 4 * 3)`.
-So the basin of $1$ depends on the step length,
-and with $\steplen = 0.05$ it is not a half-line.
+So the basin of $1$ depends on $\steplen$,
+and with $\steplen = 0.05$ the basin is not a half-line.
 
 :::
