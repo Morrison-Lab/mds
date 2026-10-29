@@ -34,7 +34,7 @@ basin_end_bs <- signif(basin_final_bs, 3)
 tibble::tibble(start = basin_starts_bs, end = basin_end_bs)
 
 # The first step from 3.
-basin_next_3_bs <- 3 - basin_step_bs * (4 * 3^3 - 4 * 3)
+basin_from_three_bs <- 3 - basin_step_bs * (4 * 3^3 - 4 * 3)
 
 # Three steps from 4: the iterates grow in size.
 basin_far_bs <- numeric(4)
@@ -84,7 +84,7 @@ because $\deriv{x} f(0) = 0$.
 The [basin of attraction](#def-basin-of-attraction) of $1$
 is not all of $(0, \infty)$:
 the first step from $\iterpoint{x}{0} = 3$ lands at
-$`{r} round(basin_next_3_bs, 1)`$,
+$`{r} round(basin_from_three_bs, 1)`$,
 on the other side of $0$,
 and the run ends at
 $`{r} round(basin_final_bs[basin_starts_bs == 3])`$.
