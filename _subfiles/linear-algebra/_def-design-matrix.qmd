@@ -7,10 +7,10 @@ the **design matrix**
 (or **model matrix**) $\mX$
 is the $n \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) whose $i$-th row $\tp{\vx_i}$ holds,
 for observation $i$,
-the $p$ numbers the model uses.
+the $p$ entries the model uses.
 These can be covariates, a $1$ for the [intercept](algebra-exponentials.qmd#def-intercept),
 $0/1$ columns for categories,
-or numbers computed from covariates, such as $x^2$.
+or functions of covariates, such as $x^2$.
 For a straight-line fit, for example, the first column is all 1s,
 which allows the intercept to be estimated
 [@wikipedia_design_matrix; @dobson4e, Section 2.4].
