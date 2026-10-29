@@ -11,8 +11,6 @@ where the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f
 
 {{< slidebreak >}}
 
-::: {.content-hidden when-format="revealjs"}
-
 ::: proof
 
 Suppose $f''(c) > 0$.
@@ -30,7 +28,5 @@ For $f''(c) < 0$, apply the same reasoning to $-f$,
 since $(-f)''(c) = -f''(c) > 0$.
 Then $-f(x) > -f(c)$ near $c$,
 which says $f(x) < f(c)$ near $c$.
-
-:::
 
 :::
