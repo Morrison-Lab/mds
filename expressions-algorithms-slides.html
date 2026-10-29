@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-29 11:51:41 (PDT)</p>
+  <p class="date">Last modified: 2026-10-29 13:28:16 (PDT)</p>
 </section><section class="slide level2"><div class="proof remark">
 <p><span class="proof-title"><em>Remark</em>. </span>A function can be written down as an expression and computed by an algorithm. This page defines expressions, which write down the <a href="./functions.html">functions</a> in the Morrison Lab’s probability and statistics notes, the parse trees of expressions, and algorithms, which compute those functions.</p>
 </div>
@@ -391,7 +391,7 @@ x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a},
 \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({D}^{\top} D\right)\mathclose{}}^{-1} {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}},
 \]</span></p>
 <p>whose right-hand side is a <a href="#/def-closed-form-expression">closed-form expression</a>, so <a href="./linear-algebra-projections.html#def-least-squares">least squares</a> has a <a href="#/def-closed-form-solution">closed-form solution</a>.</p>
-<p>For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>, so that problem has no known closed-form solution. When a minimizer exists, an <a href="./optimization.html#def-iterative-method">iterative method</a> approximates it. <!-- check-term-links: allow --></p>
+<p>For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>, so that problem has no known closed-form solution. When a minimizer exists, an <a href="./optimization-newton.html#def-iterative-method">iterative method</a> approximates it. <!-- check-term-links: allow --></p>
 </div>
 </section><section class="slide level2"><div id="def-parse-tree" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Parse tree)</strong></span> The <strong>parse tree</strong> <span class="citation" data-cites="wikipedia_parse_tree"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> of an <a href="#/def-expression">expression</a> is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.</p>

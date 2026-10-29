@@ -9885,6 +9885,402 @@
    "external": false
   },
   {
+   "id": "mds/measures-additivity#def-countable-additivity",
+   "site": "mds",
+   "page": "measures-additivity",
+   "div": "def-countable-additivity",
+   "kind": "def",
+   "title": "Countable additivity ($\\sigma$-additivity)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-additivity#def-finite-additivity",
+   "site": "mds",
+   "page": "measures-additivity",
+   "div": "def-finite-additivity",
+   "kind": "def",
+   "title": "Finite additivity",
+   "external": false
+  },
+  {
+   "id": "mds/measures-additivity#lem-countable-additivity-empty",
+   "site": "mds",
+   "page": "measures-additivity",
+   "div": "lem-countable-additivity-empty",
+   "kind": "lem",
+   "title": "Countable additivity and the empty set",
+   "external": false
+  },
+  {
+   "id": "mds/measures-additivity#thm-countable-implies-finite",
+   "site": "mds",
+   "page": "measures-additivity",
+   "div": "thm-countable-implies-finite",
+   "kind": "thm",
+   "title": "Countable additivity implies finite additivity",
+   "external": false
+  },
+  {
+   "id": "mds/measures-integrals#def-absolutely-integrable",
+   "site": "mds",
+   "page": "measures-integrals",
+   "div": "def-absolutely-integrable",
+   "kind": "def",
+   "title": "Absolutely integrable function, integrable function",
+   "external": false
+  },
+  {
+   "id": "mds/measures-integrals#def-integral",
+   "site": "mds",
+   "page": "measures-integrals",
+   "div": "def-integral",
+   "kind": "def",
+   "title": "Integral of a real-valued function",
+   "external": false
+  },
+  {
+   "id": "mds/measures-integrals#def-integral-nonneg",
+   "site": "mds",
+   "page": "measures-integrals",
+   "div": "def-integral-nonneg",
+   "kind": "def",
+   "title": "Integral of a non-negative function",
+   "external": false
+  },
+  {
+   "id": "mds/measures-integrals#def-measurable-function",
+   "site": "mds",
+   "page": "measures-integrals",
+   "div": "def-measurable-function",
+   "kind": "def",
+   "title": "Measurable function",
+   "external": false
+  },
+  {
+   "id": "mds/measures-lp-spaces#def-equal-almost-everywhere",
+   "site": "mds",
+   "page": "measures-lp-spaces",
+   "div": "def-equal-almost-everywhere",
+   "kind": "def",
+   "title": "Equal almost everywhere ($f = g$ $\\measure$-a.e.)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-lp-spaces#def-essential-supremum-norm",
+   "site": "mds",
+   "page": "measures-lp-spaces",
+   "div": "def-essential-supremum-norm",
+   "kind": "def",
+   "title": "Essential supremum norm ($L^\\infty$ norm)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-lp-spaces#def-linf-function-space",
+   "site": "mds",
+   "page": "measures-lp-spaces",
+   "div": "def-linf-function-space",
+   "kind": "def",
+   "title": "$\\mathcal{L}^\\infty$ space ($\\mathcal{L}^\\infty(S, \\salg, \\measure)$)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-lp-spaces#def-linf-space",
+   "site": "mds",
+   "page": "measures-lp-spaces",
+   "div": "def-linf-space",
+   "kind": "def",
+   "title": "$L^\\infty$ space ($L^\\infty(S, \\salg, \\measure)$, $L^\\infty(\\measure)$)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-lp-spaces#def-lp-function-space",
+   "site": "mds",
+   "page": "measures-lp-spaces",
+   "div": "def-lp-function-space",
+   "kind": "def",
+   "title": "$\\mathcal{L}^p$ space ($\\mathcal{L}^p(S, \\salg, \\measure)$)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-lp-spaces#def-lp-norm",
+   "site": "mds",
+   "page": "measures-lp-spaces",
+   "div": "def-lp-norm",
+   "kind": "def",
+   "title": "$L^p$ norm ($p$-norm of a function)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-lp-spaces#def-lp-space",
+   "site": "mds",
+   "page": "measures-lp-spaces",
+   "div": "def-lp-space",
+   "kind": "def",
+   "title": "$L^p$ space ($L^p(S, \\salg, \\measure)$, $L^p(\\measure)$)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-lp-spaces#thm-holder-inequality",
+   "site": "mds",
+   "page": "measures-lp-spaces",
+   "div": "thm-holder-inequality",
+   "kind": "thm",
+   "title": "Holder's inequality",
+   "external": false
+  },
+  {
+   "id": "mds/measures-lp-spaces#thm-minkowski-inequality",
+   "site": "mds",
+   "page": "measures-lp-spaces",
+   "div": "thm-minkowski-inequality",
+   "kind": "thm",
+   "title": "Minkowski's inequality ($L^p$ triangle inequality)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#cor-measure-finitely-additive",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "cor-measure-finitely-additive",
+   "kind": "cor",
+   "title": "Measures are finitely additive",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-almost-everywhere",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-almost-everywhere",
+   "kind": "def",
+   "title": "Almost everywhere ($\\measure$-almost everywhere, $\\measure$-a.e.)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-counting-measure",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-counting-measure",
+   "kind": "def",
+   "title": "Counting measure",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-event",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-event",
+   "kind": "def",
+   "title": "Event",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-finite-measure",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-finite-measure",
+   "kind": "def",
+   "title": "Finite measure",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-lebesgue-measure",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-lebesgue-measure",
+   "kind": "def",
+   "title": "Lebesgue measure",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-lebesgue-measure-interval",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-lebesgue-measure-interval",
+   "kind": "def",
+   "title": "Lebesgue measure on an interval",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-measurable-set",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-measurable-set",
+   "kind": "def",
+   "title": "Measurable set",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-measurable-space",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-measurable-space",
+   "kind": "def",
+   "title": "Measurable space",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-measure",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-measure",
+   "kind": "def",
+   "title": "Measure",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-measure-space",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-measure-space",
+   "kind": "def",
+   "title": "Measure space",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-measure-zero",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-measure-zero",
+   "kind": "def",
+   "title": "Measure zero, null set",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-outcome",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-outcome",
+   "kind": "def",
+   "title": "Outcome",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-probability-measure",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-probability-measure",
+   "kind": "def",
+   "title": "Probability measure",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-probability-space",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-probability-space",
+   "kind": "def",
+   "title": "Probability space",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-sample-space",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-sample-space",
+   "kind": "def",
+   "title": "Sample space",
+   "external": false
+  },
+  {
+   "id": "mds/measures-measure-spaces#def-sigma-finite",
+   "site": "mds",
+   "page": "measures-measure-spaces",
+   "div": "def-sigma-finite",
+   "kind": "def",
+   "title": "$\\sigma$-finite measure",
+   "external": false
+  },
+  {
+   "id": "mds/measures-product#def-measurable-rectangle",
+   "site": "mds",
+   "page": "measures-product",
+   "div": "def-measurable-rectangle",
+   "kind": "def",
+   "title": "Measurable rectangle",
+   "external": false
+  },
+  {
+   "id": "mds/measures-product#def-product-measure",
+   "site": "mds",
+   "page": "measures-product",
+   "div": "def-product-measure",
+   "kind": "def",
+   "title": "Product measure",
+   "external": false
+  },
+  {
+   "id": "mds/measures-product#def-product-sigma-algebra",
+   "site": "mds",
+   "page": "measures-product",
+   "div": "def-product-sigma-algebra",
+   "kind": "def",
+   "title": "Product $\\sigma$-algebra",
+   "external": false
+  },
+  {
+   "id": "mds/measures-sigma-algebras#def-borel-set",
+   "site": "mds",
+   "page": "measures-sigma-algebras",
+   "div": "def-borel-set",
+   "kind": "def",
+   "title": "Borel set",
+   "external": false
+  },
+  {
+   "id": "mds/measures-sigma-algebras#def-borel-sigma-algebra",
+   "site": "mds",
+   "page": "measures-sigma-algebras",
+   "div": "def-borel-sigma-algebra",
+   "kind": "def",
+   "title": "Borel $\\sigma$-algebra",
+   "external": false
+  },
+  {
+   "id": "mds/measures-sigma-algebras#def-generated-sigma-algebra",
+   "site": "mds",
+   "page": "measures-sigma-algebras",
+   "div": "def-generated-sigma-algebra",
+   "kind": "def",
+   "title": "$\\sigma$-algebra generated by a collection",
+   "external": false
+  },
+  {
+   "id": "mds/measures-sigma-algebras#def-sigma-algebra",
+   "site": "mds",
+   "page": "measures-sigma-algebras",
+   "div": "def-sigma-algebra",
+   "kind": "def",
+   "title": "$\\sigma$-algebra ($\\sigma$-field, Borel field)",
+   "external": false
+  },
+  {
+   "id": "mds/measures-sigma-algebras#thm-power-set-sigma-algebra",
+   "site": "mds",
+   "page": "measures-sigma-algebras",
+   "div": "thm-power-set-sigma-algebra",
+   "kind": "thm",
+   "title": "All subsets form a $\\sigma$-algebra",
+   "external": false
+  },
+  {
+   "id": "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "site": "mds",
+   "page": "measures-sigma-algebras",
+   "div": "thm-sigma-algebra-closure",
+   "kind": "thm",
+   "title": "Closure properties of a $\\sigma$-algebra",
+   "external": false
+  },
+  {
+   "id": "mds/measures-sigma-algebras#thm-sigma-algebra-intersection",
+   "site": "mds",
+   "page": "measures-sigma-algebras",
+   "div": "thm-sigma-algebra-intersection",
+   "kind": "thm",
+   "title": "An intersection of $\\sigma$-algebras is a $\\sigma$-algebra",
+   "external": false
+  },
+  {
    "id": "mds/number-systems#def-even-odd",
    "site": "mds",
    "page": "number-systems",
@@ -10575,6 +10971,609 @@
    "div": "thm-taylor-mv",
    "kind": "thm",
    "title": "Second-order Taylor theorem in several variables",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#cor-qp-sensitivity",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "cor-qp-sensitivity",
+   "kind": "cor",
+   "title": "The multiplier is the sensitivity of the minimum value",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-constraints",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-constraints",
+   "kind": "def",
+   "title": "Constraints",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-feasible-set",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-feasible-set",
+   "kind": "def",
+   "title": "Feasible set",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-lagrange-multipliers",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-lagrange-multipliers",
+   "kind": "def",
+   "title": "Lagrange multipliers",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-lagrangian",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-lagrangian",
+   "kind": "def",
+   "title": "Lagrangian",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-minimization-problem",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-minimization-problem",
+   "kind": "def",
+   "title": "Minimization problem",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-minimizer-over-feasible-set",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-minimizer-over-feasible-set",
+   "kind": "def",
+   "title": "Minimizer over a feasible set",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-objective-function",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-objective-function",
+   "kind": "def",
+   "title": "Objective function, objective",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-optimization-algorithm",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-optimization-algorithm",
+   "kind": "def",
+   "title": "Optimization algorithm",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-sensitivity",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-sensitivity",
+   "kind": "def",
+   "title": "Sensitivity",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#thm-qp-equality",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "thm-qp-equality",
+   "kind": "thm",
+   "title": "Minimizing a positive definite quadratic under linear constraints",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#cor-convex-stationary",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "cor-convex-stationary",
+   "kind": "cor",
+   "title": "Stationary points of a convex function are global minimizers",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-concave",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-concave",
+   "kind": "def",
+   "title": "Concave function",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-convex-set",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-convex-set",
+   "kind": "def",
+   "title": "Convex set",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-epigraph",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-epigraph",
+   "kind": "def",
+   "title": "Epigraph",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-half-space",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-half-space",
+   "kind": "def",
+   "title": "Half-space",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-strictly-concave",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-strictly-concave",
+   "kind": "def",
+   "title": "Strictly concave function",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-strictly-convex",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-strictly-convex",
+   "kind": "def",
+   "title": "Strictly convex function",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-tangent-plane",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-tangent-plane",
+   "kind": "def",
+   "title": "Tangent plane",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-convex-first-order",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-convex-first-order",
+   "kind": "thm",
+   "title": "First-order characterization of convexity",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-convex-hessian",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-convex-hessian",
+   "kind": "thm",
+   "title": "Second-derivative test for convexity",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-convex-intersection",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-convex-intersection",
+   "kind": "thm",
+   "title": "An intersection of convex sets is convex",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-convex-max",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-convex-max",
+   "kind": "thm",
+   "title": "The maximum of convex functions is convex",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-epigraph",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-epigraph",
+   "kind": "thm",
+   "title": "Convexity through the epigraph",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#def-critical-point",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "def-critical-point",
+   "kind": "def",
+   "title": "Critical point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#def-flat-point",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "def-flat-point",
+   "kind": "def",
+   "title": "Flat point (stationary point)",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#def-local-maximizer",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "def-local-maximizer",
+   "kind": "def",
+   "title": "Local maximizer",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#def-saddle-point",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "def-saddle-point",
+   "kind": "def",
+   "title": "Saddle point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#def-stationary-point",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "def-stationary-point",
+   "kind": "def",
+   "title": "Stationary point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#def-strict-local-minimizer",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "def-strict-local-minimizer",
+   "kind": "def",
+   "title": "Strict local minimizer",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#lem-qf-eigen-bound",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "lem-qf-eigen-bound",
+   "kind": "lem",
+   "title": "A quadratic form is at least the smallest eigenvalue times the squared length",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#lem-qf-entry-bound",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "lem-qf-entry-bound",
+   "kind": "lem",
+   "title": "A quadratic form with small entries is small",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#thm-fermat",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "thm-fermat",
+   "kind": "thm",
+   "title": "A minimizer has derivative zero",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#thm-first-order-condition",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "thm-first-order-condition",
+   "kind": "thm",
+   "title": "First-order necessary condition",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#thm-flat-point-critical",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "thm-flat-point-critical",
+   "kind": "thm",
+   "title": "Every flat point is a critical point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#thm-second-order-condition",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "thm-second-order-condition",
+   "kind": "thm",
+   "title": "Second-order sufficient condition",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#thm-taylor-1d",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "thm-taylor-1d",
+   "kind": "thm",
+   "title": "Taylor's theorem with a second-order remainder",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#thm-taylor-mv",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "thm-taylor-mv",
+   "kind": "thm",
+   "title": "Second-order Taylor theorem in several variables",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#cor-double-well-basin-bound",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "cor-double-well-basin-bound",
+   "kind": "cor",
+   "title": "Basins of the double-well function are bounded",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-armijo-condition",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-armijo-condition",
+   "kind": "def",
+   "title": "Armijo condition",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-backtracking-line-search",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-backtracking-line-search",
+   "kind": "def",
+   "title": "Backtracking line search",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-basin-of-attraction",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-basin-of-attraction",
+   "kind": "def",
+   "title": "Basin of attraction",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-descent-direction",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-descent-direction",
+   "kind": "def",
+   "title": "Descent direction",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-exact-line-search",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-exact-line-search",
+   "kind": "def",
+   "title": "Exact line search",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-gradient-ascent",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-gradient-ascent",
+   "kind": "def",
+   "title": "Gradient ascent",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-gradient-descent",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-gradient-descent",
+   "kind": "def",
+   "title": "Gradient descent",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-line-search",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-line-search",
+   "kind": "def",
+   "title": "Line search",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-plateau",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-plateau",
+   "kind": "def",
+   "title": "Plateau",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-rosenbrock-function",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-rosenbrock-function",
+   "kind": "def",
+   "title": "Rosenbrock function",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#prp-double-well-divergence",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "prp-double-well-divergence",
+   "kind": "prp",
+   "title": "Divergence of gradient descent on the double-well function",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#thm-best-constant-step",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "thm-best-constant-step",
+   "kind": "thm",
+   "title": "The best constant step length",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#thm-descent-direction",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "thm-descent-direction",
+   "kind": "thm",
+   "title": "A short enough step downhill decreases the function",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "thm-gd-quadratic-error",
+   "kind": "thm",
+   "title": "A bound on the error of gradient descent on a quadratic",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#def-iterate",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "def-iterate",
+   "kind": "def",
+   "title": "Iterate",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#def-iterate-error",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "def-iterate-error",
+   "kind": "def",
+   "title": "Error of an iterate",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#def-iterative-method",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "def-iterative-method",
+   "kind": "def",
+   "title": "Iterative method",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#def-newton-method",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "def-newton-method",
+   "kind": "def",
+   "title": "Newton's method for minimization",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#def-newton-step",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "def-newton-step",
+   "kind": "def",
+   "title": "Newton step",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#def-quadratic-convergence",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "def-quadratic-convergence",
+   "kind": "def",
+   "title": "Quadratic convergence",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#def-quadratic-model",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "def-quadratic-model",
+   "kind": "def",
+   "title": "Quadratic model, second-order Taylor polynomial",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#def-vector-sequence-limit",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "def-vector-sequence-limit",
+   "kind": "def",
+   "title": "Convergence of a sequence of vectors",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#thm-newton-model",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "thm-newton-model",
+   "kind": "thm",
+   "title": "The Newton step minimizes the quadratic model",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#thm-newton-quadratic",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "thm-newton-quadratic",
+   "kind": "thm",
+   "title": "Newton's method minimizes a quadratic in one step",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-quasi-newton#def-bfgs-update",
+   "site": "mds",
+   "page": "optimization-quasi-newton",
+   "div": "def-bfgs-update",
+   "kind": "def",
+   "title": "BFGS update (Broyden-Fletcher-Goldfarb-Shanno)",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-quasi-newton#def-lbfgs",
+   "site": "mds",
+   "page": "optimization-quasi-newton",
+   "div": "def-lbfgs",
+   "kind": "def",
+   "title": "Limited-memory BFGS (L-BFGS)",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-quasi-newton#def-quasi-newton-method",
+   "site": "mds",
+   "page": "optimization-quasi-newton",
+   "div": "def-quasi-newton-method",
+   "kind": "def",
+   "title": "Quasi-Newton method",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-quasi-newton#def-secant-condition",
+   "site": "mds",
+   "page": "optimization-quasi-newton",
+   "div": "def-secant-condition",
+   "kind": "def",
+   "title": "Secant condition",
    "external": false
   },
   {
@@ -16587,6 +17586,350 @@
    "mds/sets#def-intersection"
   ],
   [
+   "mds/measures-additivity#def-countable-additivity",
+   "mds/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures-additivity#def-countable-additivity",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures-additivity#def-finite-additivity",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/measures-additivity#def-finite-additivity",
+   "mds/sets#def-extended-nonneg-reals"
+  ],
+  [
+   "mds/measures-additivity#def-finite-additivity",
+   "mds/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures-additivity#def-finite-additivity",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures-additivity#lem-countable-additivity-empty",
+   "mds/measures-additivity#def-countable-additivity"
+  ],
+  [
+   "mds/measures-additivity#thm-countable-implies-finite",
+   "mds/measures-additivity#def-countable-additivity"
+  ],
+  [
+   "mds/measures-additivity#thm-countable-implies-finite",
+   "mds/measures-additivity#def-finite-additivity"
+  ],
+  [
+   "mds/measures-integrals#def-absolutely-integrable",
+   "mds/algebra#def-absolute-value"
+  ],
+  [
+   "mds/measures-integrals#def-absolutely-integrable",
+   "mds/measures-integrals#def-measurable-function"
+  ],
+  [
+   "mds/measures-integrals#def-integral",
+   "mds/algebra#def-negative-part"
+  ],
+  [
+   "mds/measures-integrals#def-integral",
+   "mds/algebra#def-positive-negative-parts"
+  ],
+  [
+   "mds/measures-integrals#def-integral",
+   "mds/measures-integrals#def-integral-nonneg"
+  ],
+  [
+   "mds/measures-integrals#def-integral",
+   "mds/measures-integrals#def-measurable-function"
+  ],
+  [
+   "mds/measures-integrals#def-integral-nonneg",
+   "mds/algebra#def-infimum"
+  ],
+  [
+   "mds/measures-integrals#def-integral-nonneg",
+   "mds/algebra#def-supremum"
+  ],
+  [
+   "mds/measures-integrals#def-integral-nonneg",
+   "mds/measures-integrals#def-measurable-function"
+  ],
+  [
+   "mds/measures-integrals#def-integral-nonneg",
+   "mds/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures-integrals#def-integral-nonneg",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures-integrals#def-measurable-function",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/measures-lp-spaces#def-equal-almost-everywhere",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/measures-lp-spaces#def-linf-function-space",
+   "mds/measures-lp-spaces#def-essential-supremum-norm"
+  ],
+  [
+   "mds/measures-lp-spaces#def-linf-function-space",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures-lp-spaces#def-linf-space",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/measures-lp-spaces#def-linf-space",
+   "mds/linear-algebra#def-norm"
+  ],
+  [
+   "mds/measures-lp-spaces#def-linf-space",
+   "mds/measures-lp-spaces#def-equal-almost-everywhere"
+  ],
+  [
+   "mds/measures-lp-spaces#def-linf-space",
+   "mds/measures-lp-spaces#def-essential-supremum-norm"
+  ],
+  [
+   "mds/measures-lp-spaces#def-linf-space",
+   "mds/measures-lp-spaces#def-linf-function-space"
+  ],
+  [
+   "mds/measures-lp-spaces#def-linf-space",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-function-space",
+   "mds/measures-lp-spaces#def-lp-norm"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-function-space",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-function-space",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-norm",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-space",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-space",
+   "mds/linear-algebra#def-norm"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-space",
+   "mds/measures-lp-spaces#def-equal-almost-everywhere"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-space",
+   "mds/measures-lp-spaces#def-lp-function-space"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-space",
+   "mds/measures-lp-spaces#def-lp-norm"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-space",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-space",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures-lp-spaces#thm-holder-inequality",
+   "mds/measures-lp-spaces#def-lp-space"
+  ],
+  [
+   "mds/measures-lp-spaces#thm-minkowski-inequality",
+   "mds/linear-algebra#def-norm"
+  ],
+  [
+   "mds/measures-lp-spaces#thm-minkowski-inequality",
+   "mds/measures-lp-spaces#def-lp-space"
+  ],
+  [
+   "mds/measures-measure-spaces#cor-measure-finitely-additive",
+   "mds/measures-measure-spaces#def-measure"
+  ],
+  [
+   "mds/measures-measure-spaces#def-almost-everywhere",
+   "mds/measures-measure-spaces#def-measure-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-almost-everywhere",
+   "mds/measures-measure-spaces#def-measure-zero"
+  ],
+  [
+   "mds/measures-measure-spaces#def-almost-everywhere",
+   "mds/sets#def-subset"
+  ],
+  [
+   "mds/measures-measure-spaces#def-counting-measure",
+   "mds/measures-measure-spaces#def-measure"
+  ],
+  [
+   "mds/measures-measure-spaces#def-event",
+   "mds/measures-measure-spaces#def-probability-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-finite-measure",
+   "mds/measures-measure-spaces#def-measure-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-lebesgue-measure",
+   "mds/measures-measure-spaces#def-measure"
+  ],
+  [
+   "mds/measures-measure-spaces#def-lebesgue-measure",
+   "mds/sets#def-interval"
+  ],
+  [
+   "mds/measures-measure-spaces#def-lebesgue-measure-interval",
+   "mds/measures-measure-spaces#def-lebesgue-measure"
+  ],
+  [
+   "mds/measures-measure-spaces#def-measurable-set",
+   "mds/measures-measure-spaces#def-measurable-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-measure-space",
+   "mds/measures-measure-spaces#def-measurable-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-measure-space",
+   "mds/measures-measure-spaces#def-measure"
+  ],
+  [
+   "mds/measures-measure-spaces#def-measure-zero",
+   "mds/measures-measure-spaces#def-measure-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-outcome",
+   "mds/measures-measure-spaces#def-probability-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-outcome",
+   "mds/measures-measure-spaces#def-sample-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-probability-measure",
+   "mds/measures-measure-spaces#def-measurable-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-probability-measure",
+   "mds/measures-measure-spaces#def-measure"
+  ],
+  [
+   "mds/measures-measure-spaces#def-probability-space",
+   "mds/measures-measure-spaces#def-measurable-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-probability-space",
+   "mds/measures-measure-spaces#def-probability-measure"
+  ],
+  [
+   "mds/measures-measure-spaces#def-sample-space",
+   "mds/measures-measure-spaces#def-probability-space"
+  ],
+  [
+   "mds/measures-measure-spaces#def-sigma-finite",
+   "mds/measures-measure-spaces#def-measure-space"
+  ],
+  [
+   "mds/measures-product#def-measurable-rectangle",
+   "mds/sets#def-cartesian-product"
+  ],
+  [
+   "mds/measures-product#def-product-measure",
+   "mds/measures-product#def-product-sigma-algebra"
+  ],
+  [
+   "mds/measures-product#def-product-sigma-algebra",
+   "mds/measures-product#def-measurable-rectangle"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-borel-set",
+   "mds/measures-sigma-algebras#def-borel-sigma-algebra"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-borel-set",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-borel-sigma-algebra",
+   "mds/measures-sigma-algebras#def-generated-sigma-algebra"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-borel-sigma-algebra",
+   "mds/sets#def-interval"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-generated-sigma-algebra",
+   "mds/sets#def-collection"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-sigma-algebra",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-sigma-algebra",
+   "mds/sets#def-collection"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-sigma-algebra",
+   "mds/sets#def-complement"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-sigma-algebra",
+   "mds/sets#def-subset"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-power-set-sigma-algebra",
+   "mds/measures-sigma-algebras#def-sigma-algebra"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "mds/functions#def-closed-under"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "mds/functions#def-finite-set"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "mds/measures-sigma-algebras#def-sigma-algebra"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "mds/sets#def-empty-set"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "mds/sets#def-union"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-intersection",
+   "mds/measures-sigma-algebras#def-sigma-algebra"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-intersection",
+   "mds/sets#def-intersection"
+  ],
+  [
    "mds/number-systems#def-even-odd",
    "mds/number-systems#def-integers"
   ],
@@ -17101,6 +18444,454 @@
   [
    "mds/optimization#thm-taylor-mv",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-constrained#cor-qp-sensitivity",
+   "mds/optimization-constrained#def-sensitivity"
+  ],
+  [
+   "mds/optimization-constrained#cor-qp-sensitivity",
+   "mds/optimization-constrained#thm-qp-equality"
+  ],
+  [
+   "mds/optimization-constrained#def-constraints",
+   "mds/optimization-constrained#def-feasible-set"
+  ],
+  [
+   "mds/optimization-constrained#def-lagrange-multipliers",
+   "mds/optimization-constrained#def-lagrangian"
+  ],
+  [
+   "mds/optimization-constrained#def-minimization-problem",
+   "mds/optimization-constrained#def-constraints"
+  ],
+  [
+   "mds/optimization-constrained#def-minimization-problem",
+   "mds/optimization-constrained#def-minimizer-over-feasible-set"
+  ],
+  [
+   "mds/optimization-constrained#def-minimization-problem",
+   "mds/optimization-constrained#def-objective-function"
+  ],
+  [
+   "mds/optimization-constrained#def-minimizer-over-feasible-set",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization-constrained#def-minimizer-over-feasible-set",
+   "mds/optimization-constrained#def-objective-function"
+  ],
+  [
+   "mds/optimization-constrained#def-objective-function",
+   "mds/optimization-constrained#def-feasible-set"
+  ],
+  [
+   "mds/optimization-constrained#def-optimization-algorithm",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/optimization-constrained#def-optimization-algorithm",
+   "mds/optimization-constrained#def-feasible-set"
+  ],
+  [
+   "mds/optimization-constrained#def-optimization-algorithm",
+   "mds/optimization-constrained#def-objective-function"
+  ],
+  [
+   "mds/optimization-constrained#def-sensitivity",
+   "mds/optimization-constrained#def-minimization-problem"
+  ],
+  [
+   "mds/optimization-constrained#def-sensitivity",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
+   "mds/optimization-constrained#def-sensitivity",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization-constrained#thm-qp-equality",
+   "mds/linear-algebra#def-linearly-independent"
+  ],
+  [
+   "mds/optimization-constrained#thm-qp-equality",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-stationary",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-stationary",
+   "mds/optimization-convexity#thm-convex-first-order"
+  ],
+  [
+   "mds/optimization-convexity#def-concave",
+   "mds/algebra#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#def-epigraph",
+   "mds/functions#def-graph"
+  ],
+  [
+   "mds/optimization-convexity#def-strictly-concave",
+   "mds/optimization-convexity#def-strictly-convex"
+  ],
+  [
+   "mds/optimization-convexity#def-tangent-plane",
+   "mds/functions#def-graph"
+  ],
+  [
+   "mds/optimization-convexity#def-tangent-plane",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-first-order",
+   "mds/algebra#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-first-order",
+   "mds/optimization-convexity#def-strictly-convex"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-first-order",
+   "mds/optimization-convexity#def-tangent-plane"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-first-order",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian",
+   "mds/algebra#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian",
+   "mds/linear-algebra#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian",
+   "mds/optimization-convexity#def-strictly-convex"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-intersection",
+   "mds/optimization-convexity#def-convex-set"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-max",
+   "mds/algebra#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-epigraph",
+   "mds/algebra#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-epigraph",
+   "mds/optimization-convexity#def-convex-set"
+  ],
+  [
+   "mds/optimization-convexity#thm-epigraph",
+   "mds/optimization-convexity#def-epigraph"
+  ],
+  [
+   "mds/optimization-critical-points#def-critical-point",
+   "mds/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization-critical-points#def-flat-point",
+   "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization-critical-points#def-saddle-point",
+   "mds/algebra#def-local-minimizer"
+  ],
+  [
+   "mds/optimization-critical-points#def-saddle-point",
+   "mds/optimization-critical-points#def-local-maximizer"
+  ],
+  [
+   "mds/optimization-critical-points#def-saddle-point",
+   "mds/optimization-critical-points#def-stationary-point"
+  ],
+  [
+   "mds/optimization-critical-points#lem-qf-eigen-bound",
+   "mds/linear-algebra#def-eigendecomposition"
+  ],
+  [
+   "mds/optimization-critical-points#thm-fermat",
+   "mds/algebra#def-local-minimizer"
+  ],
+  [
+   "mds/optimization-critical-points#thm-fermat",
+   "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization-critical-points#thm-fermat",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/optimization-critical-points#thm-fermat",
+   "mds/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization-critical-points#thm-first-order-condition",
+   "mds/algebra#def-local-minimizer"
+  ],
+  [
+   "mds/optimization-critical-points#thm-first-order-condition",
+   "mds/optimization-critical-points#def-stationary-point"
+  ],
+  [
+   "mds/optimization-critical-points#thm-flat-point-critical",
+   "mds/optimization-critical-points#def-critical-point"
+  ],
+  [
+   "mds/optimization-critical-points#thm-flat-point-critical",
+   "mds/optimization-critical-points#def-flat-point"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/optimization-critical-points#def-stationary-point"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/optimization-critical-points#def-strict-local-minimizer"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-1d",
+   "mds/calculus#def-continuous"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-1d",
+   "mds/calculus#def-second-derivative"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-gradient-descent#cor-double-well-basin-bound",
+   "mds/algebra-basics#def-local-minimizer"
+  ],
+  [
+   "mds/optimization-gradient-descent#cor-double-well-basin-bound",
+   "mds/optimization-gradient-descent#def-basin-of-attraction"
+  ],
+  [
+   "mds/optimization-gradient-descent#cor-double-well-basin-bound",
+   "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-backtracking-line-search",
+   "mds/optimization-gradient-descent#def-armijo-condition"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-backtracking-line-search",
+   "mds/optimization-gradient-descent#def-line-search"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-basin-of-attraction",
+   "mds/algebra-basics#def-local-minimizer"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-basin-of-attraction",
+   "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-basin-of-attraction",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-descent-direction",
+   "mds/vector-calculus#def-direction"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-exact-line-search",
+   "mds/optimization-gradient-descent#def-line-search"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-gradient-ascent",
+   "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-gradient-ascent",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-line-search",
+   "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-plateau",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-plateau",
+   "mds/linear-algebra-vectors#def-euclidean-norm"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-plateau",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization-gradient-descent#prp-double-well-divergence",
+   "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-best-constant-step",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-best-constant-step",
+   "mds/linear-algebra-special-matrices#def-condition-number"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-best-constant-step",
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-descent-direction",
+   "mds/optimization-gradient-descent#def-descent-direction"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-descent-direction",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-newton#def-iterate",
+   "mds/optimization-newton#def-iterative-method"
+  ],
+  [
+   "mds/optimization-newton#def-iterate-error",
+   "mds/optimization-newton#def-iterate"
+  ],
+  [
+   "mds/optimization-newton#def-iterate-error",
+   "mds/optimization-newton#def-iterative-method"
+  ],
+  [
+   "mds/optimization-newton#def-newton-step",
+   "mds/optimization-newton#def-newton-method"
+  ],
+  [
+   "mds/optimization-newton#def-quadratic-convergence",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/optimization-newton#def-quadratic-convergence",
+   "mds/optimization-newton#def-vector-sequence-limit"
+  ],
+  [
+   "mds/optimization-newton#def-quadratic-model",
+   "mds/optimization-newton#def-newton-method"
+  ],
+  [
+   "mds/optimization-newton#def-vector-sequence-limit",
+   "mds/algebra#def-convergent-sequence"
+  ],
+  [
+   "mds/optimization-newton#def-vector-sequence-limit",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-model",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-model",
+   "mds/optimization-newton#def-quadratic-model"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-quadratic",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-quadratic",
+   "mds/optimization-newton#def-newton-method"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-bfgs-update",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-bfgs-update",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-lbfgs",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-lbfgs",
+   "mds/optimization-quasi-newton#def-bfgs-update"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-lbfgs",
+   "mds/optimization-quasi-newton#def-quasi-newton-method"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-quasi-newton-method",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-quasi-newton-method",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-quasi-newton-method",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-quasi-newton-method",
+   "mds/optimization-quasi-newton#def-secant-condition"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-quasi-newton-method",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-secant-condition",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-secant-condition",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
+   "mds/optimization-quasi-newton#def-secant-condition",
+   "mds/vector-calculus#def-vector-derivative"
   ],
   [
    "mds/proof-writing#def-and",

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 11:51:41 (PDT)
+Last modified: 2026-10-29 13:28:16 (PDT)
 
 > **NOTE:**
 >
@@ -86,7 +86,7 @@ Last modified: 2026-10-29 11:51:41 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (Other notation for the empty set). Other sources write \\{\mathopen{}\left\\\right\\\mathclose{}}\\ for \\\emptyset\\ [\[4\]](#ref-wikipedia_empty_set). Some sources call it the **null set**, but in measure theory a “null set” usually means a set of [measure zero](measures.llms.md#def-measure-zero), which need not be empty. For example, the interval \\\[0, 0\] = {\mathopen{}\left\\0\right\\\mathclose{}}\\ has length \\0 - 0 = 0\\, so it is a null set in that sense, but it is not empty, because \\0 \in {\mathopen{}\left\\0\right\\\mathclose{}}\\.
+> *Remark 5* (Other notation for the empty set). Other sources write \\{\mathopen{}\left\\\right\\\mathclose{}}\\ for \\\emptyset\\ [\[4\]](#ref-wikipedia_empty_set). Some sources call it the **null set**, but in measure theory a “null set” usually means a set of [measure zero](measures-measure-spaces.llms.md#def-measure-zero), which need not be empty. For example, the interval \\\[0, 0\] = {\mathopen{}\left\\0\right\\\mathclose{}}\\ has length \\0 - 0 = 0\\, so it is a null set in that sense, but it is not empty, because \\0 \in {\mathopen{}\left\\0\right\\\mathclose{}}\\.
 
 > **NOTE:**
 >

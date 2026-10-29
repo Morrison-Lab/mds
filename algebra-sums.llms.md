@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 11:51:41 (PDT)
+Last modified: 2026-10-29 13:28:16 (PDT)
 
 ## 1 Convex functions
 
@@ -130,7 +130,7 @@ Last modified: 2026-10-29 11:51:41 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (The inequality reverses for concave functions). If \\f\\ is [concave](optimization.llms.md#def-concave), then \\-f\\ is convex, and applying [Theorem 2](#thm-jensen) to \\-f\\ reverses the inequality: \\f\mathopen{}\left(\sum_i w_i x_i\right)\mathclose{} \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 5](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
+> *Remark 2* (The inequality reverses for concave functions). If \\f\\ is [concave](optimization-convexity.llms.md#def-concave), then \\-f\\ is convex, and applying [Theorem 2](#thm-jensen) to \\-f\\ reverses the inequality: \\f\mathopen{}\left(\sum_i w_i x_i\right)\mathclose{} \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 5](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
 
 ## 2 Infimum and supremum
 

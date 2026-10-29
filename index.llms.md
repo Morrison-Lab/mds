@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 11:51:41 (PDT)
+Last modified: 2026-10-29 13:28:16 (PDT)
 
 ## Welcome
 
@@ -22,7 +22,7 @@ These notes collect the mathematics that data science courses assume: mathematic
   - [Expressions and Algorithms](expressions-algorithms.llms.md): expressions, parse trees, and algorithms
   - [Indicator Functions](indicator-functions.llms.md): set and predicate indicators, the Iverson bracket, the Kronecker delta, and their algebraic properties
 - [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
-- [Measures](measures.llms.md): \\\sigma\\-algebras, [finite](functions.llms.md#def-finite-set) and [countable additivity](measures.llms.md#def-countable-additivity), measures, and the counting measure
+- [Measures](measures.llms.md): \\\sigma\\-algebras, [finite](functions.llms.md#def-finite-set) and [countable additivity](measures-additivity.llms.md#def-countable-additivity), measures, and the counting measure
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule

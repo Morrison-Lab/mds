@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 11:51:41 (PDT)
+Last modified: 2026-10-29 13:28:16 (PDT)
 
 > **NOTE:**
 >
@@ -50,7 +50,7 @@ Last modified: 2026-10-29 11:51:41 (PDT)
 >
 > whose right-hand side is a [closed-form expression](#def-closed-form-expression), so [least squares](linear-algebra-projections.llms.md#def-least-squares) has a [closed-form solution](#def-closed-form-solution).
 >
-> For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, so that problem has no known closed-form solution. When a minimizer exists, an [iterative method](optimization.llms.md#def-iterative-method) approximates it.
+> For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, so that problem has no known closed-form solution. When a minimizer exists, an [iterative method](optimization-newton.llms.md#def-iterative-method) approximates it.
 
 > **NOTE:**
 >
