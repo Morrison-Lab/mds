@@ -1,0 +1,59 @@
+::: {#fig-flat-point-critical}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: flat-point-critical-r
+#| fig-alt: >-
+#|   Plot of w cubed minus 3w for w from -2.5 to 2.5. The blue curve rises to a
+#|   local peak of 2 at w of -1, falls to a local trough of -2 at w of 1, then
+#|   rises again. Vermilion circles mark the two flat points at w of -1 and w of
+#|   1.
+#| fig-height: 4
+#| fig-width: 5
+fpc_w_fk <- seq(-2.5, 2.5, length.out = 201)
+fpc_curve_fk <- tibble::tibble(w = fpc_w_fk, value = fpc_w_fk^3 - 3 * fpc_w_fk)
+fpc_flat_w_fk <- c(-1, 1)
+fpc_flat_value_fk <- fpc_flat_w_fk^3 - 3 * fpc_flat_w_fk
+fpc_flat_fk <- tibble::tibble(w = fpc_flat_w_fk, value = fpc_flat_value_fk)
+fpc_aes_fk <- ggplot2::aes(w, value)
+ggplot2::ggplot(fpc_curve_fk, fpc_aes_fk) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(data = fpc_flat_fk, colour = "#D55E00", size = 3) +
+  ggplot2::labs(x = "w", y = "f(w)")
+```
+
+### Python
+
+```{python}
+#| label: flat-point-critical-python
+#| fig-alt: >-
+#|   Plot of w cubed minus 3w for w from -2.5 to 2.5. The blue curve rises to a
+#|   local peak of 2 at w of -1, falls to a local trough of -2 at w of 1, then
+#|   rises again. Vermilion circles mark the two flat points at w of -1 and w of
+#|   1.
+#| fig-height: 4
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+fpc_w_fk = np.linspace(-2.5, 2.5, 201)
+fpc_flat_fk = np.array([-1, 1])
+fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+ax.plot(fpc_w_fk, fpc_w_fk**3 - 3 * fpc_w_fk, color="#0072B2")
+ax.plot(fpc_flat_fk, fpc_flat_fk**3 - 3 * fpc_flat_fk, "o",
+        color="#D55E00", markersize=8)
+ax.set_xlabel("w")
+ax.set_ylabel("f(w)")
+plt.show()
+```
+
+:::
+
+The cubic $f(w) = w^3 - 3w$ of @exm-flat-point-critical.
+Its [flat points](#def-flat-point), where $f'(w) = 3w^2 - 3 = 0$, are $w = -1$ and $w = 1$ (circles):
+a local peak and a local trough.
+
+:::

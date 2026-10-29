@@ -1,0 +1,76 @@
+::: {#fig-stationary-point}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: stationary-point-r
+#| fig-alt: >-
+#|   Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3
+#|   and x2 from -2 to 2. The level curves are nested blue circles centered at
+#|   the point (1, 0), which is marked by a vermilion circle and is the
+#|   stationary point. A vermilion triangle marks the origin, which is not
+#|   stationary.
+#| fig-height: 4
+#| fig-width: 5
+sp_x1_fs <- seq(-1, 3, length.out = 101)
+sp_x2_fs <- seq(-2, 2, length.out = 101)
+sp_grid_fs <- expand.grid(x1 = sp_x1_fs, x2 = sp_x2_fs)
+sp_grid_fs$value <- sp_grid_fs$x1^2 + sp_grid_fs$x2^2 - 2 * sp_grid_fs$x1
+sp_marks_x1_fs <- c(1, 0)
+sp_marks_kind_fs <- c("stationary point", "not stationary")
+sp_marks_fs <- tibble::tibble(
+  x1 = sp_marks_x1_fs, x2 = 0, kind = sp_marks_kind_fs
+)
+sp_aes_fs <- ggplot2::aes(x1, x2, z = value)
+sp_marks_aes_fs <- ggplot2::aes(x1, x2, shape = kind, z = NULL)
+sp_shapes_fs <- c("stationary point" = 16, "not stationary" = 17)
+ggplot2::ggplot(sp_grid_fs, sp_aes_fs) +
+  ggplot2::geom_contour(colour = "#0072B2") +
+  ggplot2::geom_point(
+    data = sp_marks_fs, mapping = sp_marks_aes_fs,
+    colour = "#D55E00", size = 3, inherit.aes = FALSE
+  ) +
+  ggplot2::scale_shape_manual(values = sp_shapes_fs) +
+  ggplot2::coord_fixed() +
+  ggplot2::labs(x = "x1", y = "x2", shape = NULL)
+```
+
+### Python
+
+```{python}
+#| label: stationary-point-python
+#| fig-alt: >-
+#|   Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3
+#|   and x2 from -2 to 2. The level curves are nested blue circles centered at
+#|   the point (1, 0), which is marked by a vermilion circle and is the
+#|   stationary point. A vermilion triangle marks the origin, which is not
+#|   stationary.
+#| fig-height: 4
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+sp_x1_fs = np.linspace(-1, 3, 101)
+sp_x2_fs = np.linspace(-2, 2, 101)
+sp_x1_grid_fs, sp_x2_grid_fs = np.meshgrid(sp_x1_fs, sp_x2_fs)
+sp_value_fs = sp_x1_grid_fs**2 + sp_x2_grid_fs**2 - 2 * sp_x1_grid_fs
+fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+ax.contour(sp_x1_grid_fs, sp_x2_grid_fs, sp_value_fs, colors="#0072B2")
+ax.plot(1, 0, "o", color="#D55E00", markersize=8, label="stationary point")
+ax.plot(0, 0, "^", color="#D55E00", markersize=8, label="not stationary")
+ax.set_aspect("equal")
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+ax.legend(loc="upper right")
+plt.show()
+```
+
+:::
+
+Level curves of the function of @exm-stationary-point.
+The gradient is $\vzero$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle).
+At the origin (triangle) the gradient is $\tp{(-2, 0)}$, which is not $\vzero$.
+
+:::

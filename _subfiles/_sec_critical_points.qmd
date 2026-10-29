@@ -29,6 +29,10 @@ then $c$ is a **flat point** of $f$ (also called a **stationary point**)
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_fig-flat-point.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_exr-flat-point.qmd >}}
 
 {{< slidebreak >}}
@@ -93,11 +97,19 @@ then $c$ is a **flat point** of $f$ (also called a **stationary point**)
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_fig-critical-point.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/derivatives/_thm-flat-point-critical.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/derivatives/_exm-flat-point-critical.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_fig-flat-point-critical.qmd >}}
 
 {{< slidebreak >}}
 
