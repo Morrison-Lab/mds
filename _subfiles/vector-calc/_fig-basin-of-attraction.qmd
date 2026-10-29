@@ -77,7 +77,7 @@ def basin_cost_bf(x):
 fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 grid_bf = np.linspace(-1.6, 1.6, 321)
 ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-for start in basin_starts_bs[:6]:
+for start in sorted(basin_starts_bs[:6], reverse=True):
     x = [start]
     for _ in range(30):
         x.append(basin_next_bs(x[-1]))
