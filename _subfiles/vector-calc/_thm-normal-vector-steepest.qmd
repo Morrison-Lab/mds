@@ -9,7 +9,7 @@ the change $\modmemf{\vx + t\vu} - \modmemf{\vx}$ with $t > 0$ is largest for $\
 :::
 
 ::: proof
-For a unit vector $\vu$,
+For a [unit vector](linear-algebra-vectors.qmd#def-unit-vector) $\vu$,
 
 $$
 \modmemf{\vx + t\vu} - \modmemf{\vx} = t\dprod{\vcoef}{\vu}.

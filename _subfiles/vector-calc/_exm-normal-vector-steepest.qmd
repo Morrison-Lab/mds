@@ -3,7 +3,7 @@
 #### Two unit steps compared
 
 Let $\modmemf{\vx} = 2x_1 + x_2 + 1$, so $\vcoef = \tp{(2, 1)}$ and $\norm{\vcoef} = \sqrt{5}$.
-A step of length $1$ along the [unit vector](linear-algebra-vectors.qmd#def-unit-vector) $\vcoef / \sqrt{5}$ raises $\modmem$ by $\dprod{\vcoef}{\vcoef} / \sqrt{5} = \sqrt{5} \approx 2.24$.
-A step of length $1$ along $\tp{(1, 0)}$ raises it by only $\dprod{\vcoef}{\tp{(1, 0)}} = 2$.
+A step of size $1$ along the [unit vector](linear-algebra-vectors.qmd#def-unit-vector) $\vcoef / \sqrt{5}$ raises $\modmem$ by $\dprod{\vcoef}{\vcoef} / \sqrt{5} = \sqrt{5} \approx 2.24$.
+A step of size $1$ along $\tp{(1, 0)}$ raises it by only $\dprod{\vcoef}{\tp{(1, 0)}} = 2$.
 
 :::
