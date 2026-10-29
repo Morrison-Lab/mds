@@ -8,16 +8,16 @@ $$\dprod{\vx}{\vy} = \norm{\vx}_2 \norm{\vy}_2 \cos\angpar,$$
 
 so:
 
-- $\dprod{\vx}{\vy} > 0$ when the vectors point broadly in the same direction ($\angpar < \pi/2$).
-- $\dprod{\vx}{\vy} = 0$ exactly when the vectors are orthogonal ($\angpar = \pi/2$).
+- $\dprod{\vx}{\vy} > 0$ when the vectors point broadly in the same [direction](vector-calculus.qmd#def-direction) ($\angpar < \pi/2$).
+- $\dprod{\vx}{\vy} = 0$ exactly when the vectors are [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) ($\angpar = \pi/2$).
 - $\dprod{\vx}{\vy} < 0$ when the vectors point broadly in opposing directions ($\angpar > \pi/2$).
 
 :::
 
 ::: proof
-By the definition of the angle, $\cos\angpar = \dprod{\vx}{\vy} / (\norm{\vx}_2 \norm{\vy}_2)$,
-which gives the identity.
-The product $\norm{\vx}_2 \norm{\vy}_2$ is positive because both vectors are nonzero,
-so $\dprod{\vx}{\vy}$ has the sign of $\cos\angpar$.
-On $[0, \pi]$, the cosine is positive for $\angpar < \pi/2$, zero at $\pi/2$ and negative for $\angpar > \pi/2$.
+By the definition of the [angle](#def-angle), $\cos\angpar = \dprod{\vx}{\vy} / (\norm{\vx}_2 \norm{\vy}_2)$,
+which gives the displayed equation.
+Both vectors are nonzero, so their [norms](linear-algebra-inner-products.qmd#def-norm) are positive,
+and $\dprod{\vx}{\vy}$ has the sign of $\cos\angpar$.
+On $[0, \pi]$, the [cosine](algebra-trigonometry.qmd#def-cosine-sine) is positive for $\angpar < \pi/2$, zero at $\pi/2$ and negative for $\angpar > \pi/2$.
 :::

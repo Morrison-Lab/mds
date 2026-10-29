@@ -11,7 +11,7 @@ Let $\modmemf{\vx} = \dprod{\vcoef}{\vx} + \coef{0}$ with $\vcoef \neq \vzero$.
 
 ::: proof
 **Part 1.**
-By linearity of the dot product,
+By linearity of the [dot product](linear-algebra-vectors.qmd#def-dot-product),
 
 $$
 \begin{aligned}
@@ -23,7 +23,7 @@ $$
 $$
 
 **Part 2.**
-For a unit vector $\vu$,
+For a [unit vector](linear-algebra-vectors.qmd#def-unit-vector) $\vu$,
 
 $$
 \modmemf{\vx + t\vu} - \modmemf{\vx} = t\dprod{\vcoef}{\vu}.

@@ -4,7 +4,7 @@
 
 Take the pairs of @exm-angle.
 
-- $(1, 0)$ and $(1, 1)$ have inner product $1 > 0$ and angle $\pi/4 < \pi/2$.
+- $(1, 0)$ and $(1, 1)$ have [inner product](#def-inner-product) $1 > 0$ and [angle](#def-angle) $\pi/4 < \pi/2$.
 - $(1, 2)$ and $(-2, 1)$ have inner product $-2 + 2 = 0$ and angle $\pi/2$.
 - $(1, 0)$ and $(-3, 0)$ have inner product $-3 < 0$ and angle $\pi > \pi/2$.
 

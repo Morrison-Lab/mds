@@ -3,9 +3,9 @@
 #### Level sets of a linear function
 
 Let $\modmemf{\vx} = \dprod{\vcoef}{\vx} + \coef{0}$ with $\vcoef \neq \vzero$.
-Every level set $\levelsetof{c}{\modmem}$ of @def-level-set is a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) with normal vector $\vcoef$,
+Every [level set](#def-level-set) $\levelsetof{c}{\modmem}$ is a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $\vcoef$,
 parallel to the level set $\levelsetof{0}{\modmem}$.
-Its dimension is $p - 1$:
+Its [dimension](linear-algebra-subspaces.qmd#def-dimension) is $p - 1$:
 a point for $p = 1$, a line for $p = 2$, and a two-dimensional plane for $p = 3$.
 
 :::
@@ -21,7 +21,7 @@ $$
 \end{aligned}
 $$
 
-This is the hyperplane of @def-hyperplane with normal vector $\vcoef$ and offset $\coef{0} - c$.
-Different values of $c$ change only the offset, so the level sets share the normal vector and are parallel.
-A hyperplane in $\reals^p$ has dimension $p - 1$ by @thm-hyperplane-subspace.
+This is the [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) of @def-hyperplane with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $\vcoef$ and [offset](linear-algebra-matrices.qmd#def-affine-offset) $\coef{0} - c$.
+Changing $c$ changes only the offset, so the [level sets](#def-level-set) share the normal vector and are parallel.
+A hyperplane in $\reals^p$ has [dimension](linear-algebra-subspaces.qmd#def-dimension) $p - 1$ by @thm-hyperplane-subspace.
 :::
