@@ -234,6 +234,18 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-plateau.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-plateau.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-plateau.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-armijo-condition.qmd >}}
 
 {{< slidebreak >}}

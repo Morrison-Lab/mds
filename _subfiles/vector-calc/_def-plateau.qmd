@@ -1,0 +1,13 @@
+::: {#def-plateau}
+#### Plateau
+
+For a function $f : \reals^p \to \reals$,
+a **plateau** is a region where the
+[Euclidean norm](linear-algebra-vectors.qmd#def-euclidean-norm)
+of the [gradient](vector-calculus.qmd#def-vector-derivative),
+$\norm{\deriv{\vx} f(\vx)}$,
+is small but nonzero.
+The surface is then nearly flat
+without containing a [stationary point](#def-stationary-point).
+
+:::

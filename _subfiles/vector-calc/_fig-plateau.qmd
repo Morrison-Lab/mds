@@ -1,0 +1,70 @@
+::: {#fig-plateau}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: plateau-size-r
+#| fig-alt: >-
+#|   Plot of the size of the gradient of the function log of 1 plus e to the
+#|   minus x, against x from -5 to 15, on a logarithmic vertical axis.
+#|   A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003
+#|   at x of 15. It is always positive and never reaches 0.
+#|   Two vermilion triangles mark x of 0, where the size is 0.5,
+#|   and x of 10, where it is about 0.00005.
+#| fig-height: 4
+#| fig-width: 5
+plateau_grid_pf <- seq(-5, 15, length.out = 401)
+plateau_size_pf <- 1 / (1 + exp(plateau_grid_pf))
+plateau_curve_pf <- tibble::tibble(x = plateau_grid_pf, size = plateau_size_pf)
+plateau_marks_x_pf <- c(0, 10)
+plateau_marks_size_pf <- 1 / (1 + exp(plateau_marks_x_pf))
+plateau_marks_pf <- tibble::tibble(x = plateau_marks_x_pf, size = plateau_marks_size_pf)
+ggplot2::ggplot(plateau_curve_pf, ggplot2::aes(x, size)) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(
+    data = plateau_marks_pf, colour = "#D55E00", shape = 17, size = 3
+  ) +
+  ggplot2::scale_y_log10() +
+  ggplot2::labs(x = "x", y = "Size of the gradient (log scale)")
+```
+
+### Python
+
+```{python}
+#| label: plateau-size-python
+#| fig-alt: >-
+#|   Plot of the size of the gradient of the function log of 1 plus e to the
+#|   minus x, against x from -5 to 15, on a logarithmic vertical axis.
+#|   A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003
+#|   at x of 15. It is always positive and never reaches 0.
+#|   Two vermilion triangles mark x of 0, where the size is 0.5,
+#|   and x of 10, where it is about 0.00005.
+#| fig-height: 4
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+plateau_grid_pf = np.linspace(-5, 15, 401)
+plateau_marks_pf = np.array([0, 10])
+fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
+ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
+        color="#D55E00", marker="^", markersize=8, linestyle="")
+ax.set_yscale("log")
+ax.set_xlabel("x")
+ax.set_ylabel("Size of the gradient (log scale)")
+plt.show()
+```
+
+:::
+
+The size of the [gradient](vector-calculus.qmd#def-vector-derivative)
+of the function of @exm-plateau,
+with the two values of $x$ from the example marked.
+It shrinks toward $0$ as $x$ grows but is never $0$,
+which is why descent slows down on a [plateau](#def-plateau)
+without stopping at a [stationary point](#def-stationary-point).
+
+:::

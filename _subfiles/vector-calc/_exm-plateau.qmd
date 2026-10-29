@@ -1,0 +1,30 @@
+::: {#exm-plateau}
+#### A cost with no stationary point
+
+```{r}
+#| label: plateau-sizes-r
+#| echo: false
+plateau_size_zero_pe <- 1 / (1 + exp(0))
+plateau_size_ten_pe <- 1 / (1 + exp(10))
+plateau_size_ten_sig_pe <- signif(plateau_size_ten_pe, 3)
+```
+
+Let $f(x) = \log\paren{1 + \e{-x}}$.
+Its [derivative](calculus-derivatives.qmd#def-derivative) is
+$\deriv{x} f(x) = -1 / (1 + \e{x})$,
+which is negative for every $x$,
+so $f$ has no [stationary point](#def-stationary-point) at all.
+
+At $x = 0$ the [gradient](vector-calculus.qmd#def-vector-derivative)
+has size $`{r} plateau_size_zero_pe`$.
+At $x = 10$ it has size $`{r} plateau_size_ten_sig_pe`$,
+which is small but not zero.
+A step of [gradient descent](#def-gradient-descent)
+is the gradient times the [step length](#def-gradient-descent),
+so the [iterates](#def-iterate) keep moving to the right,
+more and more slowly.
+The region to the right of $x = 10$ is a plateau (@def-plateau).
+A run that enters it has not converged;
+it has only slowed down.
+
+:::
