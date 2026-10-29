@@ -5,8 +5,15 @@ In a regression model with $n$ observations and $p$ predictors,
 the **design matrix**
 [@wikipedia_design_matrix]
 (or **model matrix**) $\mX$
-is the $n \times p$ matrix whose $i$-th row is the covariate vector $\tp{\vx_i}$
-for observation $i$:
+is the $n \times p$ matrix whose $i$-th row $\tp{\vx_i}$ holds,
+for observation $i$,
+the values of the $p$ explanatory variables the model uses.
+These can be covariates, a constant $1$ for the intercept,
+indicator (dummy) variables for categories,
+or values computed from covariates, such as $x^2$.
+For a straight-line fit, for example, the first column is all 1s,
+which allows the intercept to be estimated [@wikipedia_design_matrix; @dobson4e, Section 2.4].
+In symbols,
 
 $$
 \begin{aligned}
