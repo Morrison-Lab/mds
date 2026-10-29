@@ -1,0 +1,105 @@
+:::{#exm-basin-of-attraction}
+#### Basins of a double-well function
+
+Let $f(x) = x^4 - 2x^2$,
+so $\deriv{x} f(x) = 4x(x - 1)(x + 1)$
+and the [stationary points](#def-stationary-point) are $-1$, $0$ and $1$.
+Both $-1$ and $1$ are
+[local minimizers](algebra-basics.qmd#def-local-minimizer),
+with $f(\pm 1) = -1$,
+and $0$ is a [local maximizer](#def-local-maximizer).
+We run [gradient descent](#def-gradient-descent)
+with the fixed [step length](#def-gradient-descent) $\steplen = 0.05$
+for 200 steps
+from the starting points $-1.5$, $-0.5$, $-0.1$, $0.1$, $0.5$, $1.5$ and $3$,
+and for three steps from $\iterpoint{x}{0} = 4$.
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: basin-runs-r
+#| code-fold: false
+basin_step_bs <- 0.05
+basin_starts_bs <- c(-1.5, -0.5, -0.1, 0.1, 0.5, 1.5, 3)
+
+# 200 steps from every starting point at once.
+basin_final_bs <- basin_starts_bs
+for (i in 1:200) {
+  basin_slope_bs <- 4 * basin_final_bs^3 - 4 * basin_final_bs
+  basin_final_bs <- basin_final_bs - basin_step_bs * basin_slope_bs
+}
+basin_end_bs <- signif(basin_final_bs, 3)
+tibble::tibble(start = basin_starts_bs, end = basin_end_bs)
+
+# The first step from 3.
+basin_from_three_bs <- 3 - basin_step_bs * (4 * 3^3 - 4 * 3)
+
+# Three steps from 4: the iterates grow in size.
+basin_far_bs <- numeric(4)
+basin_far_bs[1] <- 4
+for (i in 1:3) {
+  basin_slope_bs <- 4 * basin_far_bs[i]^3 - 4 * basin_far_bs[i]
+  basin_far_bs[i + 1] <- basin_far_bs[i] - basin_step_bs * basin_slope_bs
+}
+signif(basin_far_bs, 3)
+```
+
+### Python
+
+```{python}
+#| label: basin-runs-python
+#| code-fold: false
+basin_step_bs = 0.05
+
+def basin_next_bs(x):
+    return x - basin_step_bs * (4 * x ** 3 - 4 * x)
+
+def basin_gd_bs(x0, n_steps=200):
+    x = x0
+    for _ in range(n_steps):
+        x = basin_next_bs(x)
+    return x
+
+basin_starts_bs = [-1.5, -0.5, -0.1, 0.1, 0.5, 1.5, 3]
+for start in basin_starts_bs:
+    print(start, float(f"{basin_gd_bs(start):.3g}"))
+
+# Three steps from 4: the iterates grow in size.
+basin_far_bs = [4.0]
+for _ in range(3):
+    basin_far_bs.append(basin_next_bs(basin_far_bs[-1]))
+print([float(f"{v:.3g}") for v in basin_far_bs])
+```
+
+:::
+
+Each of the six starts between $-1.5$ and $1.5$ ends at $-1$ or $1$,
+whichever lies on its own side of $0$,
+so for these starts the sign of the starting point
+decides which of the two the run reaches.
+A run from $0$ itself never moves,
+because $\deriv{x} f(0) = 0$.
+The [basin of attraction](#def-basin-of-attraction) of $1$
+is not all of $(0, \infty)$:
+the first step from $\iterpoint{x}{0} = 3$ lands at
+$`{r} round(basin_from_three_bs, 1)`$,
+on the other side of $0$,
+and the run ends at
+$`{r} round(basin_final_bs[basin_starts_bs == 3])`$.
+From $\iterpoint{x}{0} = 4$ the [iterates](#def-iterate),
+starting with $\iterpoint{x}{0}$ itself, are
+$`{r} signif(basin_far_bs[1], 3)`$, $`{r} signif(basin_far_bs[2], 3)`$,
+$`{r} signif(basin_far_bs[3], 3)`$ and $`{r} signif(basin_far_bs[4], 3)`$,
+which grow in [absolute value](algebra-basics.qmd#def-absolute-value) at every step shown.
+Both of these starts are far from $0$,
+where the [derivative](calculus-derivatives.qmd#def-derivative) is large
+and so the step $\steplen \deriv{x} f(x)$ is long.
+From $\iterpoint{x}{0} = 3$ that step is $`{r} 4 * 3^3 - 4 * 3`\,\steplen$ long,
+so the first step stays on the positive side of $0$
+only when $\steplen$ is below $`{r} 3 / (4 * 3^3 - 4 * 3)`$.
+So the basin of $1$ depends on $\steplen$,
+and with $\steplen = 0.05$ the basin is not a half-line.
+
+:::

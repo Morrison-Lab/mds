@@ -1,0 +1,13 @@
+:::{#def-basin-of-attraction}
+#### Basin of attraction
+
+For given [step lengths](#def-gradient-descent),
+the **basin of attraction** of a
+[local minimizer](algebra-basics.qmd#def-local-minimizer) $\vx^*$
+under [gradient descent](#def-gradient-descent)
+is the [set](sets.qmd#def-set) of starting points $\iterpoint{\vx}{0}$
+from which the [iterates](#def-iterate)
+[converge](#def-vector-sequence-limit) to $\vx^*$
+[@wikipedia_attractor].
+
+:::

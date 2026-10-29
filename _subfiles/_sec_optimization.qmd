@@ -222,6 +222,18 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-basin-of-attraction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-basin-of-attraction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-basin-of-attraction.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-armijo-condition.qmd >}}
 
 {{< slidebreak >}}

@@ -1,0 +1,103 @@
+::: {#fig-basin-of-attraction}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: basin-iterates-r
+#| fig-alt: >-
+#|   Plot of the double-well function x to the fourth minus 2 x squared
+#|   for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1
+#|   at x of -1 and 1 and a local maximum of 0 at x of 0.
+#|   Points mark the gradient descent iterates from six starting values,
+#|   three positive and three negative.
+#|   Positive starts, drawn as blue circles, slide down the right well to 1.
+#|   Negative starts, drawn as orange triangles,
+#|   slide down the left well to -1.
+#| fig-height: 4
+#| fig-width: 5
+# Uses basin_step_bs and basin_starts_bs from the example above.
+basin_runs_bf <- matrix(0, nrow = 31, ncol = 6)
+basin_runs_bf[1, ] <- basin_starts_bs[1:6]
+for (i in 1:30) {
+  basin_prev_bf <- basin_runs_bf[i, ]
+  basin_slope_bf <- 4 * basin_prev_bf^3 - 4 * basin_prev_bf
+  basin_runs_bf[i + 1, ] <- basin_prev_bf - basin_step_bs * basin_slope_bf
+}
+basin_side_bf <- ifelse(
+  basin_starts_bs[1:6] > 0, "start above 0", "start below 0"
+)
+basin_x_bf <- as.vector(basin_runs_bf)
+basin_side_all_bf <- rep(basin_side_bf, each = 31)
+basin_paths_bf <- tibble::tibble(x = basin_x_bf, side = basin_side_all_bf)
+basin_paths_bf$cost <- basin_paths_bf$x^4 - 2 * basin_paths_bf$x^2
+basin_grid_bf <- seq(-1.6, 1.6, length.out = 321)
+basin_curve_bf <- tibble::tibble(
+  x = basin_grid_bf, cost = basin_grid_bf^4 - 2 * basin_grid_bf^2
+)
+basin_colours_bf <- c("start above 0" = "#0072B2", "start below 0" = "#D55E00")
+ggplot2::ggplot(basin_curve_bf, ggplot2::aes(x, cost)) +
+  ggplot2::geom_line(colour = "grey60") +
+  ggplot2::geom_point(
+    data = basin_paths_bf,
+    ggplot2::aes(colour = side, shape = side), alpha = 0.7
+  ) +
+  ggplot2::scale_colour_manual(values = basin_colours_bf) +
+  ggplot2::labs(x = "x", y = "f(x)", colour = NULL, shape = NULL) +
+  ggplot2::theme(legend.position = "bottom")
+```
+
+### Python
+
+```{python}
+#| label: basin-iterates-python
+#| fig-alt: >-
+#|   Plot of the double-well function x to the fourth minus 2 x squared
+#|   for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1
+#|   at x of -1 and 1 and a local maximum of 0 at x of 0.
+#|   Points mark the gradient descent iterates from six starting values,
+#|   three positive and three negative.
+#|   Positive starts, drawn as blue circles, slide down the right well to 1.
+#|   Negative starts, drawn as orange triangles,
+#|   slide down the left well to -1.
+#| fig-height: 4
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+def basin_cost_bf(x):
+    return x ** 4 - 2 * x ** 2
+
+fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+grid_bf = np.linspace(-1.6, 1.6, 321)
+ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
+for start in sorted(basin_starts_bs[:6], reverse=True):
+    x = [start]
+    for _ in range(30):
+        x.append(basin_next_bs(x[-1]))
+    x = np.array(x)
+    above = start > 0
+    ax.plot(x, basin_cost_bf(x), linestyle="", alpha=0.7,
+            color="#0072B2" if above else "#D55E00",
+            marker="o" if above else "^",
+            label=("start above 0" if above else "start below 0")
+            if abs(start) == 0.1 else None)
+ax.set_xlabel("x")
+ax.set_ylabel("f(x)")
+fig.legend(loc="outside lower center", ncol=2)
+plt.show()
+```
+
+:::
+
+[Gradient descent](#def-gradient-descent)
+with [step length](#def-gradient-descent) $`{r} basin_step_bs`$
+on the double-well [function](functions.qmd#def-function)
+of @exm-basin-of-attraction,
+from six starting points
+between $-1.5$ and $1.5$.
+Each run settles at the [local minimizer](algebra-basics.qmd#def-local-minimizer)
+on its own side of the [local maximizer](#def-local-maximizer) at $0$.
+
+:::
