@@ -71,7 +71,15 @@ website:
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
       - text: "Measures"
-        href: measures.qmd
+        menu:
+          - text: "Overview"
+            href: measures.qmd
+          - measures-sigma-algebras.qmd
+          - measures-additivity.qmd
+          - measures-measure-spaces.qmd
+          - measures-integrals.qmd
+          - measures-lp-spaces.qmd
+          - measures-product.qmd
       - text: "Calculus"
         menu:
           - text: "Overview"
@@ -136,7 +144,15 @@ website:
           - algebra-exponentials.qmd
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
-      - measures.qmd
+      - section: "Measures"
+        href: measures.qmd
+        contents:
+          - measures-sigma-algebras.qmd
+          - measures-additivity.qmd
+          - measures-measure-spaces.qmd
+          - measures-integrals.qmd
+          - measures-lp-spaces.qmd
+          - measures-product.qmd
       - section: "Calculus"
         href: calculus.qmd
         contents:

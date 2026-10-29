@@ -1,0 +1,15 @@
+---
+title: "Sigma-Algebras"
+format:
+  html: default
+  revealjs:
+    output-file: measures-sigma-algebras-slides.html
+  pdf:
+    output-file: measures-sigma-algebras-handout.pdf
+  docx:
+    output-file: measures-sigma-algebras.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_measures_sigma_algebras.qmd >}}
