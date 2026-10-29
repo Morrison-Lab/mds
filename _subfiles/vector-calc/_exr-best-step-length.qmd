@@ -2,7 +2,13 @@
 
 #### The best step length for eigenvalues 1 and 9
 
-Let $\matr{S} = \sbmat{ 1 & 0 \\ 0 & 9 }$.
+Gradient descent with a constant step length converges slowly if the step is too small
+and diverges if it is too large.
+@thm-best-constant-step gives the step length that shrinks the error bound fastest,
+from the smallest and largest [eigenvalues](linear-algebra.qmd#def-eigenvalue) of $\matr{S}$.
+
+Let $\matr{S} = \sbmat{ 1 & 0 \\ 0 & 9 }$,
+a diagonal matrix, so its eigenvalues are its diagonal entries, 1 and 9.
 Using @thm-best-constant-step, find $\steplen^*$.
 
 :::

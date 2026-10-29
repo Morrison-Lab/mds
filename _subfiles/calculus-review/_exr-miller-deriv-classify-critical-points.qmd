@@ -3,11 +3,21 @@
 
 Adapted from @problifesavercalc, Question 1.1.11.
 
-Find the critical points of
+Optimization algorithms such as Newton's method and gradient descent stop at a [critical point](#def-critical-point),
+but a critical point can be a local maximum, a local minimum, or neither.
+The second derivative test tells these apart
+from the sign of the [second derivative](calculus-derivatives.qmd#def-second-derivative) there:
+positive for a local minimum, negative for a local maximum.
+When the second derivative is zero, the test does not decide.
+
+The [cubic](algebra.qmd#def-cubic-polynomial)
 
 $$f(x) = 4x^3 - 3x^2$$
 
-and decide whether each is a local maximum, a local minimum, or an inflection point.
+has critical points of the kinds the test can detect.
+Find them,
+and decide whether each is a local maximum, a local minimum, or an inflection point,
+where the graph changes between curving up and curving down.
 :::
 
 ::: {#sol-miller-deriv-classify-critical-points}
