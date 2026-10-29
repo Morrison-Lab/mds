@@ -1,10 +1,17 @@
 ## $L^p$ spaces
 
+```{r}
+#| include: false
+reticulate::py_require(c("numpy", "matplotlib"))
+```
+
 {{< include mds/_subfiles/measures/_def-lp-norm.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-lp-norm.qmd >}}
+
+{{< include mds/_subfiles/measures/_fig-lp-norm-areas.qmd >}}
 
 {{< slidebreak >}}
 
@@ -13,6 +20,8 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-lp-space.qmd >}}
+
+{{< include mds/_subfiles/measures/_fig-lp-space-singularity.qmd >}}
 
 {{< slidebreak >}}
 
@@ -37,6 +46,8 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-essential-supremum-norm.qmd >}}
+
+{{< include mds/_subfiles/measures/_fig-essential-supremum-norm.qmd >}}
 
 {{< slidebreak >}}
 

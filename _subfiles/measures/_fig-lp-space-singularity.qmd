@@ -1,0 +1,84 @@
+::: {#fig-lp-space-singularity}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: lp-space-singularity-r
+#| fig-alt: >-
+#|   Two side-by-side plots over x from 0 to 1, with the vertical axis cut off
+#|   at 10. The left plot, titled p equals 1, shows the curve one over the
+#|   square root of x falling steeply from 10 at x of 0.01 to 1 at x of
+#|   1, with the area under it shaded blue; the area is 2. The right plot,
+#|   titled p equals 2, shows the curve one over x, which rises past 10 at x of 0.1 and
+#|   keeps climbing toward x of 0, with the area under it shaded vermilion and running off
+#|   the top of the plot, because its area is infinite.
+#| fig-height: 3.5
+#| fig-width: 7
+lpss_x_pf <- seq(0.01, 1, length.out = 400)
+lpss_root_pf <- lpss_x_pf^(-1 / 2)
+lpss_p1_pf <- tibble::tibble(
+  x = lpss_x_pf, y = lpss_root_pf, panel = "p = 1: area = 2"
+)
+lpss_inv_pf <- 1 / lpss_x_pf
+lpss_p2_pf <- tibble::tibble(
+  x = lpss_x_pf, y = lpss_inv_pf, panel = "p = 2: area = infinity"
+)
+lpss_curves_pf <- dplyr::bind_rows(lpss_p1_pf, lpss_p2_pf)
+lpss_aes_pf <- ggplot2::aes(x, y, fill = panel, colour = panel)
+lpss_colours_pf <- c("#0072B2", "#D55E00")
+ggplot2::ggplot(lpss_curves_pf, lpss_aes_pf) +
+  ggplot2::geom_area(alpha = 0.3, colour = NA) +
+  ggplot2::geom_line() +
+  ggplot2::facet_wrap(ggplot2::vars(panel)) +
+  ggplot2::scale_fill_manual(values = lpss_colours_pf) +
+  ggplot2::scale_colour_manual(values = lpss_colours_pf) +
+  ggplot2::coord_cartesian(ylim = c(0, 10)) +
+  ggplot2::guides(fill = "none", colour = "none") +
+  ggplot2::labs(x = "x", y = "|f(x)|^p")
+```
+
+### Python
+
+```{python}
+#| label: lp-space-singularity-python
+#| fig-alt: >-
+#|   Two side-by-side plots over x from 0 to 1, with the vertical axis cut off
+#|   at 10. The left plot, titled p equals 1, shows the curve one over the
+#|   square root of x falling steeply from 10 at x of 0.01 to 1 at x of
+#|   1, with the area under it shaded blue; the area is 2. The right plot,
+#|   titled p equals 2, shows the curve one over x, which rises past 10 at x of 0.1 and
+#|   keeps climbing toward x of 0, with the area under it shaded vermilion and running off
+#|   the top of the plot, because its area is infinite.
+#| fig-height: 3.5
+#| fig-width: 7
+import matplotlib.pyplot as plt
+import numpy as np
+
+lpss_x_pf = np.linspace(0.01, 1, 400)
+lpss_curves_pf = [
+    ("p = 1: area = 2", lpss_x_pf ** (-1 / 2), "#0072B2"),
+    ("p = 2: area = infinity", 1 / lpss_x_pf, "#D55E00"),
+]
+fig, axes = plt.subplots(1, 2, figsize=(7, 3.5), sharey=True,
+                         layout="constrained")
+for ax, (title, y, colour) in zip(axes, lpss_curves_pf):
+    ax.fill_between(lpss_x_pf, y, color=colour, alpha=0.3)
+    ax.plot(lpss_x_pf, y, color=colour)
+    ax.set_title(title)
+    ax.set_xlabel("x")
+    ax.set_ylim(0, 10)
+axes[0].set_ylabel("|f(x)|^p")
+plt.show()
+```
+
+:::
+
+The area under $\abs{f}^p$ for $f(x) = x^{-1/2}$ on $(0, 1)$ in @exm-lp-space.
+The curve for $p = 1$ has finite area $2$, so $f \in \mathcal{L}^1$.
+The curve for $p = 2$ climbs without bound near $0$ and its area is infinite,
+so $f \notin \mathcal{L}^2$.
+The plots cut the curves off at $10$.
+
+:::
