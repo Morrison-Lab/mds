@@ -1,0 +1,32 @@
+:::{#thm-second-derivative-test}
+#### Second derivative test
+
+Let $c$ be a [flat point](#def-flat-point) of $f$,
+where the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''(c)$ is defined.
+
+- If $f''(c) > 0$, then $f(x) > f(c)$ for every $x \ne c$ in some [open interval](sets.qmd#def-open-interval) around $c$.
+- If $f''(c) < 0$, then $f(x) < f(c)$ for every $x \ne c$ in some open interval around $c$.
+
+:::
+
+{{< slidebreak >}}
+
+::: proof
+
+Suppose $f''(c) > 0$.
+Because $f'(c) = 0$, the [derivative](calculus-derivatives.qmd#def-derivative) of $f'$ at $c$ is
+
+$$f''(c) = \lim_{x \to c} \frac{f'(x)}{x - c}.$$
+
+A [limit](calculus-derivatives.qmd#def-limit) that is positive forces the [quotient](algebra.qmd#def-quotient) $f'(x)/(x - c)$ to be positive for $x$ near $c$.
+So $f'(x)$ has the same sign as $x - c$ on some [open interval](sets.qmd#def-open-interval) around $c$.
+Hence $f' < 0$ to the left of $c$ and $f' > 0$ to the right of $c$,
+so $f$ is decreasing to the left of $c$ and increasing to the right of $c$.
+Therefore $f(x) > f(c)$ for every $x \ne c$ in that open interval.
+
+For $f''(c) < 0$, apply the same reasoning to $-f$,
+since $(-f)''(c) = -f''(c) > 0$.
+Then $-f(x) > -f(c)$ near $c$,
+which says $f(x) < f(c)$ near $c$.
+
+:::

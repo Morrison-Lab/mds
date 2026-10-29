@@ -113,6 +113,26 @@ then $c$ is a **flat point** of $f$ (also called a **stationary point**)
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_thm-second-derivative-test.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-second-derivative-test.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-inflection-point.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_rem-inflection-point.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-inflection-point.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/calculus-review/_exr-miller-deriv-opt-gamma-kernel.qmd >}}
 
 {{< slidebreak >}}

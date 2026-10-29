@@ -3,24 +3,12 @@
 
 Adapted from @problifesavercalc, Question 1.1.10.
 
-The [gamma distribution](https://en.wikipedia.org/wiki/Gamma_distribution)
-is a standard model for positive, right-skewed quantities such as waiting times.
-The gamma distributions form a family indexed by a shape parameter $a > 0$.
-The [density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf)
-of the member with shape $a$ is [proportional](algebra.qmd#def-proportional)
-to $x^{a-1} e^{-x}$ on $[0, \infty)$.
-This factor is the density's kernel: <!-- check-term-links: allow -->
-the part that depends on $x$.
-The other factor is fixed and makes the density integrate to 1,
-and finding it takes an integral. <!-- check-term-links: allow -->
-
-Scaling a curve by a fixed factor does not move its peak,
-so the kernel and the density have the same maximizer,
-called the mode: the point where the density peaks.
-Maximizing the kernel finds the mode without computing that factor.
-That is useful
-whenever a density is known only up to such a factor,
-as with many Bayesian posterior distributions.
+The [gamma distribution](https://en.wikipedia.org/wiki/Gamma_distribution) with shape $a > 0$
+has the [kernel](https://morrison-lab.github.io/pds/random-variables.html#def-kernel) $x^{a-1} e^{-x}$ on $[0, \infty)$.
+A kernel has the same [mode](https://morrison-lab.github.io/pds/random-variables.html#def-mode) as its density
+([why](https://morrison-lab.github.io/pds/random-variables.html#thm-kernel-same-mode)),
+so maximizing it finds the mode without computing the
+[normalizing constant](https://morrison-lab.github.io/pds/random-variables.html#def-normalizing-constant).
 
 For shape $a = 5$, the kernel is
 
