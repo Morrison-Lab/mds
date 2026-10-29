@@ -9,8 +9,8 @@ The gamma distributions form a family indexed by a shape parameter $a > 0$.
 The [density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf)
 of the member with shape $a$ is [proportional](algebra.qmd#def-proportional)
 to $x^{a-1} e^{-x}$ on $[0, \infty)$.
-This factor is the density's kernel:
-the part that depends on $x$. <!-- check-term-links: allow -->
+This factor is the density's kernel: <!-- check-term-links: allow -->
+the part that depends on $x$.
 The other factor is fixed and makes the density integrate to 1,
 and finding it takes an integral. <!-- check-term-links: allow -->
 

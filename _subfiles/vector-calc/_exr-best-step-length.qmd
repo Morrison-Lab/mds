@@ -3,7 +3,7 @@
 #### The best step length for eigenvalues 1 and 9
 
 [Gradient descent](optimization.qmd#def-gradient-descent) with a fixed step length <!-- check-term-links: allow -->
-converges slowly if the step is too short
+converges slowly if the step is too short <!-- check-term-links: allow -->
 and diverges if it is too long. <!-- check-term-links: allow -->
 @thm-best-constant-step gives the step length that shrinks the error bound fastest, <!-- check-term-links: allow -->
 from the smallest and largest [eigenvalues](linear-algebra.qmd#def-eigenvalue) of $\matr{S}$.
