@@ -2,16 +2,19 @@
 #### Diagonal of a projection onto a line
 
 Let $\vecf{u} = (1, 1, 0)$.
-The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{P} = \frac{\vecf{u}\tp{\vecf{u}}}{\tp{\vecf{u}}\vecf{u}}$ is the [orthogonal projection](linear-algebra-projections.qmd#def-orthogonal-projection) onto the line through $\vecf{u}$
-([projecting with an orthonormal basis](linear-algebra-projections.qmd#thm-projector-onb)):
+The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{P} = \frac{\vecf{u}\tp{\vecf{u}}}{\tp{\vecf{u}}\vecf{u}}$
+is the [orthogonal projection](linear-algebra-projections.qmd#def-orthogonal-projection) onto the line through $\vecf{u}$.
+To see this, take the [unit vector](linear-algebra-vectors.qmd#def-unit-vector) $\vecf{q} = \vecf{u}/\sqrt{2}$,
+for which $\vecf{q}\tp{\vecf{q}} = \matr{P}$,
+and apply [projecting with an orthonormal basis](linear-algebra-projections.qmd#thm-projector-onb):
 
 $$
 \matr{P} = \frac{1}{2}
 \begin{bmatrix} 1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 0 \end{bmatrix}.
 $$
 
-Its diagonal is $(\frac{1}{2}, \frac{1}{2}, 0)$,
-and each entry is between $0$ and $1$, as @thm-projection-diagonal-bounds says.
+Its diagonal is $(\frac{1}{2}, \frac{1}{2}, 0)$.
+Each entry is between $0$ and $1$, as @thm-projection-diagonal-bounds says.
 The entry $0$ belongs to a coordinate that $\vecf{u}$ does not involve.
 For $\matr{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ from @exm-projection-matrix the diagonal is $(1, 0)$,
 so $p_{ii}$ can be $0$ and can be $1$.
