@@ -22,7 +22,9 @@ $`{r} dwd_cut_round_pe[1]`$ for $\steplen = `{r} dwd_steps_pe[1]`$,
 $`{r} dwd_cut_round_pe[2]`$ for $\steplen = `{r} dwd_steps_pe[2]`$,
 and $`{r} dwd_cut_round_pe[3]`$ for $\steplen = `{r} dwd_steps_pe[3]`$.
 The [second derivative](calculus.qmd#def-second-derivative) $12x^2 - 4$ is unbounded,
-and by @prp-double-well-divergence every fixed [step length](#def-gradient-descent)
+so the step $\steplen \deriv{x} f(x)$ grows without bound with $x$,
+and a far start overshoots.
+By @prp-double-well-divergence, every fixed [step length](#def-gradient-descent)
 fails to [converge](#def-vector-sequence-limit) from some starts.
 A larger step length lowers the bound,
 so more starts are guaranteed to diverge.
