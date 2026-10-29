@@ -1,0 +1,11 @@
+:::{#exm-well-conditioned}
+#### A well-conditioned matrix
+
+The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A} = \sbmat{ 2 & 0 \\ 0 & 1 }$
+has [singular values](#def-singular-values) $2$ and $1$,
+so $\condnum(\matr{A}) = 2$.
+Its columns are [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors),
+so a small relative change in $\vec{b}$
+changes the solution of $\matr{A}\vx = \vec{b}$ by at most twice that relative amount.
+
+:::
