@@ -9,8 +9,8 @@
 #| fig-alt: >-
 #|   Plot of w cubed minus 3w for w from -2.5 to 2.5. The blue curve rises to a
 #|   local peak of 2 at w of -1, falls to a local trough of -2 at w of 1, then
-#|   rises again. Vermilion circles mark the two flat points at w of -1 and w of
-#|   1.
+#|   rises again. Vermilion circles mark the two flat points at w of -1 and w
+#|   of 1.
 #| fig-height: 4
 #| fig-width: 5
 fpc_w_fk <- seq(-2.5, 2.5, length.out = 201)
@@ -32,8 +32,8 @@ ggplot2::ggplot(fpc_curve_fk, fpc_aes_fk) +
 #| fig-alt: >-
 #|   Plot of w cubed minus 3w for w from -2.5 to 2.5. The blue curve rises to a
 #|   local peak of 2 at w of -1, falls to a local trough of -2 at w of 1, then
-#|   rises again. Vermilion circles mark the two flat points at w of -1 and w of
-#|   1.
+#|   rises again. Vermilion circles mark the two flat points at w of -1 and w
+#|   of 1.
 #| fig-height: 4
 #| fig-width: 5
 import matplotlib.pyplot as plt
@@ -53,7 +53,9 @@ plt.show()
 :::
 
 The [cubic](algebra.qmd#def-cubic-polynomial) $f(w) = w^3 - 3w$ of @exm-flat-point-critical.
-Its [flat points](#def-flat-point), where $f'(w) = 3w^2 - 3 = 0$, are $w = -1$ and $w = 1$ (circles):
+Its [flat points](#def-flat-point),
+where $f'(w) = 3w^2 - 3 = 0$,
+are $w = -1$ and $w = 1$ (circles):
 a local peak and a local trough.
 
 :::

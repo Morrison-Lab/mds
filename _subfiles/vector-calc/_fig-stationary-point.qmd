@@ -70,7 +70,8 @@ plt.show()
 :::
 
 [Level curves](vector-calculus.qmd#def-level-curve) of the [function](functions.qmd#def-function) of @exm-stationary-point.
-The [gradient](vector-calculus.qmd#def-vector-derivative) is $\vzero$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle).
+The [gradient](vector-calculus.qmd#def-vector-derivative) is $\vzero$ only at the center $(1, 0)$ of the circles,
+the [stationary point](#def-stationary-point) (circle).
 At the origin (triangle) the gradient is $\tp{(-2, 0)}$, which is not $\vzero$.
 
 :::
