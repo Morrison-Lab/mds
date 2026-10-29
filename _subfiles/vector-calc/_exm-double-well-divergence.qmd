@@ -12,19 +12,23 @@ dwd_cut_round_pe <- round(dwd_cut_pe, 2)
 ```
 
 For $f(x) = x^4 - 2x^2$,
-@prp-double-well-divergence says that gradient descent diverges from every start with
+@prp-double-well-divergence says that
+[gradient descent](#def-gradient-descent)
+[diverges to $\infty$](algebra.qmd#def-diverges-to-infinity)
+from every start with
 $\abs{\iterpoint{x}{0}}$ above $\sqrt{1 + 1 / (2\steplen)}$.
-This bound is
+This [bound](sets.qmd#def-bound) is
 $`{r} dwd_cut_round_pe[1]`$ for $\steplen = `{r} dwd_steps_pe[1]`$,
 $`{r} dwd_cut_round_pe[2]`$ for $\steplen = `{r} dwd_steps_pe[2]`$,
 and $`{r} dwd_cut_round_pe[3]`$ for $\steplen = `{r} dwd_steps_pe[3]`$.
 The [second derivative](calculus.qmd#def-second-derivative) $12x^2 - 4$ is unbounded,
-so no fixed step length suits every start.
+so no fixed [step length](#def-gradient-descent) suits every start.
 A larger step length lowers the bound,
 so more starts diverge,
-and the [basin of attraction](#def-basin-of-attraction) of each minimizer shrinks.
+and the [basin of attraction](#def-basin-of-attraction)
+of each [local minimizer](algebra-basics.qmd#def-local-minimizer) shrinks.
 In the earlier [basin example](#exm-basin-of-attraction),
 $\steplen = 0.05$ and the start $4$ lies above the bound $`{r} dwd_cut_round_pe[2]`$,
-which is why its iterates grow.
+which is why its [iterates](#def-iterate) grow.
 
 :::
