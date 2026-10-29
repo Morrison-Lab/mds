@@ -203,10 +203,6 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_exm-well-conditioned.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_exm-ill-conditioned.qmd >}}
 
 {{< slidebreak >}}
