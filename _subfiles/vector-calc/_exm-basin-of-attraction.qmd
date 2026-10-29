@@ -88,7 +88,7 @@ where the [derivative](calculus-derivatives.qmd#def-derivative) is large
 and so the step $\steplen \deriv{x} f(x)$ is long.
 From $\iterpoint{x}{0} = 3$ that step is $`{r} 4 * 3^3 - 4 * 3`\,\steplen$ long,
 so the first step stays on the positive side of $0$
-only when the step length is below `{r} 3 / (4 * 3^3 - 4 * 3)`.
+only when $\steplen$ is below `{r} 3 / (4 * 3^3 - 4 * 3)`.
 So the basin of $1$ depends on $\steplen$,
 and with $\steplen = 0.05$ the basin is not a half-line.
 
