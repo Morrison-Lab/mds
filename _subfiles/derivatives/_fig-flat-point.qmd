@@ -71,8 +71,8 @@ plt.show()
 
 :::
 
-The functions of @exm-flat-point.
-The slope of $f(w) = w^3$ is $0$ at $w = 0$, so $0$ is a [flat point](#def-flat-point),
+The [functions](functions.qmd#def-function) of @exm-flat-point.
+The [slope](algebra.qmd#def-slope) of $f(w) = w^3$ is $0$ at $w = 0$, so $0$ is a [flat point](#def-flat-point),
 yet $f$ keeps rising through it.
 The slope of $h(w) = w^2$ at $w = 1$ is $2$, so $1$ is not a flat point.
 

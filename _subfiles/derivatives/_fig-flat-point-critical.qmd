@@ -52,7 +52,7 @@ plt.show()
 
 :::
 
-The cubic $f(w) = w^3 - 3w$ of @exm-flat-point-critical.
+The [cubic](algebra.qmd#def-cubic-polynomial) $f(w) = w^3 - 3w$ of @exm-flat-point-critical.
 Its [flat points](#def-flat-point), where $f'(w) = 3w^2 - 3 = 0$, are $w = -1$ and $w = 1$ (circles):
 a local peak and a local trough.
 
