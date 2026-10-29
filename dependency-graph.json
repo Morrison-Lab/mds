@@ -10155,6 +10155,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-plateau",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-plateau",
+   "kind": "def",
+   "title": "Plateau",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-quadratic-convergence",
    "site": "mds",
    "page": "optimization",
@@ -16496,6 +16505,22 @@
   [
    "mds/optimization#def-optimization-algorithm",
    "mds/optimization#def-objective-function"
+  ],
+  [
+   "mds/optimization#def-plateau",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/optimization#def-plateau",
+   "mds/linear-algebra-vectors#def-euclidean-norm"
+  ],
+  [
+   "mds/optimization#def-plateau",
+   "mds/optimization#def-stationary-point"
+  ],
+  [
+   "mds/optimization#def-plateau",
+   "mds/vector-calculus#def-vector-derivative"
   ],
   [
    "mds/optimization#def-quadratic-convergence",

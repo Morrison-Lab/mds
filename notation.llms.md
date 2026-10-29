@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-28 23:05:07 (PDT)
+Last modified: 2026-10-29 00:14:30 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 

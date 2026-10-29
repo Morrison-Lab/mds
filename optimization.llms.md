@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-28 23:05:07 (PDT)
+Last modified: 2026-10-29 00:14:30 (PDT)
 
 ## 1 Critical points and optimization
 
@@ -376,7 +376,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 9.471535e-12 6.662049e-11
+> #> [1] 1.071498e-11 1.673470e-10
 > #> 
 > #> 
 > #> $zero_vector
@@ -395,7 +395,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 3](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 3](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
@@ -1576,7 +1576,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f732870a990>]
+> #> [<matplotlib.lines.Line2D object at 0x7f870d90ac10>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -1588,18 +1588,18 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f732870aad0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f732870ac10>]
-> #> [<matplotlib.lines.Line2D object at 0x7f732870ad50>]
-> #> [<matplotlib.lines.Line2D object at 0x7f732870ae90>]
-> #> [<matplotlib.lines.Line2D object at 0x7f732870afd0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f732870b110>]
+> #> [<matplotlib.lines.Line2D object at 0x7f870d90ad50>]
+> #> [<matplotlib.lines.Line2D object at 0x7f870d90ae90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f870d90afd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f870d90b110>]
+> #> [<matplotlib.lines.Line2D object at 0x7f870d90b250>]
+> #> [<matplotlib.lines.Line2D object at 0x7f870d90b390>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f732870b250>
+> #> <matplotlib.legend.Legend object at 0x7f870d90b4d0>
 > plt.show()
 > ```
 >
@@ -1615,13 +1615,86 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 38 (Armijo condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\. A step length \\s \> 0\\ satisfies the **Armijo condition** [\[21\]](#ref-wikipedia_backtracking_line_search) with constant \\c \in (0, 1)\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ if
+> **Definition 38 (Plateau)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [function](functions.llms.md#def-function) with a [gradient](vector-calculus.llms.md#def-vector-derivative) at every point of a region, and let \\\epsilon \> 0\\ be a tolerance. The region is a **plateau** of \\f\\ if the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the gradient satisfies
+>
+> \\ 0 \< \mathopen{}\left\lVert\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right\rVert\mathclose{} \< \epsilon \\
+>
+> at every point \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ of the region. The function is then nearly flat on the region, and the region contains no [stationary point](#def-stationary-point).
+
+> **NOTE:**
+>
+> **Example 54 (A cost with no stationary point)**  
+>
+> Let \\f(x) = \log\mathopen{}\left(1 + \text{e}^{-x}\right)\mathclose{}\\. Its [derivative](calculus-derivatives.llms.md#def-derivative) is \\\frac{\partial}{\partial x} f(x) = -1 / (1 + \text{e}^{x})\\, which is negative for every \\x\\, so \\f\\ has no [stationary point](#def-stationary-point) at all.
+>
+> At \\x = 0\\ the [gradient](vector-calculus.llms.md#def-vector-derivative) has size \\0.5\\. At \\x = 10\\ it has size \\4.54\times 10^{-5}\\, which is small but not zero. A step of [gradient descent](#def-gradient-descent) subtracts the gradient times the [step length](#def-gradient-descent). The gradient is negative, so the [iterates](#def-iterate) keep moving to the right, more and more slowly. With tolerance \\\epsilon = 10^{-4}\\, the region \\x \ge 10\\ is a plateau ([Definition 38](#def-plateau)). A run that enters this plateau has not converged; the run has only slowed down.
+
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> plateau_grid_pf <- seq(-5, 15, length.out = 401)
+> plateau_exp_pf <- exp(plateau_grid_pf)
+> plateau_size_pf <- 1 / (1 + plateau_exp_pf)
+> plateau_curve_pf <- tibble::tibble(x = plateau_grid_pf, size = plateau_size_pf)
+> plateau_marks_x_pf <- c(0, 10)
+> plateau_marks_exp_pf <- exp(plateau_marks_x_pf)
+> plateau_marks_size_pf <- 1 / (1 + plateau_marks_exp_pf)
+> plateau_marks_pf <- tibble::tibble(
+>   x = plateau_marks_x_pf, size = plateau_marks_size_pf
+> )
+> plateau_aes_pf <- ggplot2::aes(x, size)
+> ggplot2::ggplot(plateau_curve_pf, plateau_aes_pf) +
+>   ggplot2::geom_line(colour = "#0072B2") +
+>   ggplot2::geom_point(
+>     data = plateau_marks_pf, colour = "#D55E00", shape = 17, size = 3
+>   ) +
+>   ggplot2::scale_y_log10() +
+>   ggplot2::labs(x = "x", y = "Size of the gradient (log scale)")
+> ```
+>
+> Show R code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> plateau_grid_pf = np.linspace(-5, 15, 401)
+> plateau_marks_pf = np.array([0, 10])
+> fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+> ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
+> #> [<matplotlib.lines.Line2D object at 0x7f870d9e7c50>]
+> ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
+>         color="#D55E00", marker="^", markersize=8, linestyle="")
+> #> [<matplotlib.lines.Line2D object at 0x7f870d9e7d90>]
+> ax.set_yscale("log")
+> ax.set_xlabel("x")
+> #> Text(0.5, 0, 'x')
+> ax.set_ylabel("Size of the gradient (log scale)")
+> #> Text(0, 0.5, 'Size of the gradient (log scale)')
+> plt.show()
+> ```
+>
+> ## R
+>
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization_files/figure-html/plateau-size-r-1.png)](optimization_files/figure-html/plateau-size-r-1.png "Figure 3: The size of the gradient of the function in Example 54, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+>
+> ## Python
+>
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization_files/figure-html/plateau-size-python-1.png)](optimization_files/figure-html/plateau-size-python-1.png "Figure 3: The size of the gradient of the function in Example 54, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+>
+> Figure 3: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](functions.llms.md#def-function) in [Example 54](#exm-plateau), with \\x = 0\\ and \\x = 10\\ marked. The size shrinks toward \\0\\ as \\x\\ grows but is never \\0\\, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](#def-stationary-point).
+
+> **NOTE:**
+>
+> **Definition 39 (Armijo condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\. A step length \\s \> 0\\ satisfies the **Armijo condition** [\[21\]](#ref-wikipedia_backtracking_line_search) with constant \\c \in (0, 1)\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ if
 >
 > \\ f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- s \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}) \le f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) - c\\ s\\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}\right\rVert\mathclose{}^2. \\
 
 > **NOTE:**
 >
-> **Example 54 (The Armijo condition on a parabola)** Let \\f(x) = x^2\\ and \\x = 2\\, so \\g = f'(2) = 4\\ and \\\mathopen{}\left\lVert g\right\rVert\mathclose{}^2 = 16\\. With \\c = 1/4\\, the condition on a step length \\s \> 0\\ is
+> **Example 55 (The Armijo condition on a parabola)** Let \\f(x) = x^2\\ and \\x = 2\\, so \\g = f'(2) = 4\\ and \\\mathopen{}\left\lVert g\right\rVert\mathclose{}^2 = 16\\. With \\c = 1/4\\, the condition on a step length \\s \> 0\\ is
 >
 > \\ \begin{aligned} (2 - 4s)^2 &\le 4 - 4s && \text{(} f(2 - 4s) \le f(2) - c\\ s\\ \mathopen{}\left\lVert g\right\rVert\mathclose{}^2 \text{)} \\ 4 - 16 s + 16 s^2 &\le 4 - 4s && \text{(expand the square)} \\ 16 s^2 &\le 12 s && \text{(add } 16 s - 4 \text{ to both sides)} \\ s &\le 3/4. && \text{(divide by } 16 s \> 0 \text{)} \end{aligned} \\
 >
@@ -1629,11 +1702,11 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 39 (Backtracking line search)** Let \\s_0 \> 0\\ be an initial step length, \\\beta \in (0, 1)\\ a shrink factor, and \\c \in (0, 1)\\. **Backtracking line search** [\[21\]](#ref-wikipedia_backtracking_line_search) is the [line search](#def-line-search) that chooses \\s^{(t)}\\ to be the largest of \\s_0, \beta s_0, \beta^2 s_0, \ldots\\ that satisfies the [Armijo condition](#def-armijo-condition) with constant \\c\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}\\.
+> **Definition 40 (Backtracking line search)** Let \\s_0 \> 0\\ be an initial step length, \\\beta \in (0, 1)\\ a shrink factor, and \\c \in (0, 1)\\. **Backtracking line search** [\[21\]](#ref-wikipedia_backtracking_line_search) is the [line search](#def-line-search) that chooses \\s^{(t)}\\ to be the largest of \\s_0, \beta s_0, \beta^2 s_0, \ldots\\ that satisfies the [Armijo condition](#def-armijo-condition) with constant \\c\\ at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}\\.
 
 > **NOTE:**
 >
-> **Example 55 (Backtracking on a parabola)** For \\f(x) = x^2\\ at \\x = 2\\ with \\c = 1/4\\, the Armijo condition holds exactly when \\s \le 3/4\\ ([Example 54](#exm-armijo-condition)). With \\s_0 = 1\\ and \\\beta = 1/2\\, the trial step lengths are \\1, 1/2, 1/4, \ldots\\. The first, \\s = 1\\, exceeds \\3/4\\ and is rejected. The second, \\s = 1/2\\, is at most \\3/4\\ and is accepted. So backtracking chooses \\s^{(0)} = 1/2\\, after two evaluations of \\f\\.
+> **Example 56 (Backtracking on a parabola)** For \\f(x) = x^2\\ at \\x = 2\\ with \\c = 1/4\\, the Armijo condition holds exactly when \\s \le 3/4\\ ([Example 55](#exm-armijo-condition)). With \\s_0 = 1\\ and \\\beta = 1/2\\, the trial step lengths are \\1, 1/2, 1/4, \ldots\\. The first, \\s = 1\\, exceeds \\3/4\\ and is rejected. The second, \\s = 1/2\\, is at most \\3/4\\ and is accepted. So backtracking chooses \\s^{(0)} = 1/2\\, after two evaluations of \\f\\.
 
 ## 6 Quasi-Newton methods
 
@@ -1653,13 +1726,13 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 40 (Secant condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ \in \mathbb{R}^p\\. Write \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ for the step and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+) - \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ for the change in the [gradient](vector-calculus.llms.md#def-vector-derivative). A [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) \\\mathbf{B}\\ satisfies the **secant condition** [\[23, Ch. 6\]](#ref-nocedal2006numerical) for \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ when
+> **Definition 41 (Secant condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ \in \mathbb{R}^p\\. Write \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ for the step and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+) - \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\\ for the change in the [gradient](vector-calculus.llms.md#def-vector-derivative). A [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) \\\mathbf{B}\\ satisfies the **secant condition** [\[23, Ch. 6\]](#ref-nocedal2006numerical) for \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ when
 >
 > \\ \mathbf{B} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}. \\
 
 > **NOTE:**
 >
-> **Example 56 (The Hessian of a quadratic function satisfies the secant condition)** Let \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q}\\ [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Then \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so for any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+\\
+> **Example 57 (The Hessian of a quadratic function satisfies the secant condition)** Let \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q}\\ [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Then \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so for any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+\\
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} &= (\mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) - (\mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) && \text{(gradient at each point)} \\ &= \mathbf{Q} (\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^+ - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) && \text{(collect terms)} \\ &= \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}. && \text{(definition of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \text{)} \end{aligned} \\
 >
@@ -1667,7 +1740,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 41 (Quasi-Newton method)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point, and let \\\mathbf{H}^{(0)}\\ be a [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite). A **quasi-Newton method** [\[23, Ch. 6\]](#ref-nocedal2006numerical) produces, for \\t = 0, 1, 2, \ldots\\,
+> **Definition 42 (Quasi-Newton method)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point, and let \\\mathbf{H}^{(0)}\\ be a [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite). A **quasi-Newton method** [\[23, Ch. 6\]](#ref-nocedal2006numerical) produces, for \\t = 0, 1, 2, \ldots\\,
 >
 > \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t+1)} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)} - \alpha^{(t)} \mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)}), \\
 >
@@ -1675,7 +1748,7 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Example 57 (One quasi-Newton step on a quadratic function)** Take \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\\ ([Example 56](#exm-secant-condition)), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ and \\\mathbf{H}^{(0)} = \mathbf{I}\_2\\. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes \\f\\ along a [direction](vector-calculus.llms.md#def-direction) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\ is \\\alpha = -\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} / {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\.
+> **Example 58 (One quasi-Newton step on a quadratic function)** Take \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ with \\\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}\\ ([Example 57](#exm-secant-condition)), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ and \\\mathbf{H}^{(0)} = \mathbf{I}\_2\\. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes \\f\\ along a [direction](vector-calculus.llms.md#def-direction) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\ is \\\alpha = -\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} / {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\\.
 >
 > ``` downlit
 > Q <- matrix(c(4, 1, 1, 3), nrow = 2)
@@ -1699,13 +1772,13 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 42 (BFGS update (Broyden-Fletcher-Goldfarb-Shanno))** Let \\\mathbf{H}\\, an approximation of the [inverse](linear-algebra-special-matrices.llms.md#def-matrix-inverse) Hessian, be a \\p \times p\\ [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ satisfy \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \> 0\\. With \\\rho \stackrel{\text{def}}{=}1 / \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\, the **BFGS update** [\[23, Ch. 6\]](#ref-nocedal2006numerical) of \\\mathbf{H}\\ is
+> **Definition 43 (BFGS update (Broyden-Fletcher-Goldfarb-Shanno))** Let \\\mathbf{H}\\, an approximation of the [inverse](linear-algebra-special-matrices.llms.md#def-matrix-inverse) Hessian, be a \\p \times p\\ [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^p\\ satisfy \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} \> 0\\. With \\\rho \stackrel{\text{def}}{=}1 / \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}\\, the **BFGS update** [\[23, Ch. 6\]](#ref-nocedal2006numerical) of \\\mathbf{H}\\ is
 >
 > \\ \mathbf{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left(\mathbf{I}\_p - \rho \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}}^{\top}\right)\mathclose{} \mathbf{H} \mathopen{}\left(\mathbf{I}\_p - \rho \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}}^{\top}\right)\mathclose{} + \rho \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}}^{\top}. \\
 
 > **NOTE:**
 >
-> **Example 58 (A BFGS update from the quasi-Newton step)** Continue [Example 57](#exm-quasi-newton-step) with \\\mathbf{H} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)}\\.
+> **Example 59 (A BFGS update from the quasi-Newton step)** Continue [Example 58](#exm-quasi-newton-step) with \\\mathbf{H} = \mathbf{I}\_2\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}\\, and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)}\\.
 >
 > ``` downlit
 > rho <- 1 / sum(y * s)
@@ -1731,11 +1804,11 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 43 (Limited-memory BFGS (L-BFGS))** **Limited-memory BFGS** (**L-BFGS**) [\[23, Ch. 7\]](#ref-nocedal2006numerical) is the [quasi-Newton method](#def-quasi-newton-method) that never forms \\\mathbf{H}^{(t)}\\. It stores only the \\m\\ most recent pairs \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(j)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(j)})\\, with \\m\\ small, such as \\5\\ or \\20\\, and obtains \\\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)})\\ implicitly, through a few vector operations, as if the [BFGS update](#def-bfgs-update) for those \\m\\ pairs were applied to a simple starting [matrix](linear-algebra-matrices.llms.md#def-matrix), such as a multiple of \\\mathbf{I}\_p\\.
+> **Definition 44 (Limited-memory BFGS (L-BFGS))** **Limited-memory BFGS** (**L-BFGS**) [\[23, Ch. 7\]](#ref-nocedal2006numerical) is the [quasi-Newton method](#def-quasi-newton-method) that never forms \\\mathbf{H}^{(t)}\\. It stores only the \\m\\ most recent pairs \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(j)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(j)})\\, with \\m\\ small, such as \\5\\ or \\20\\, and obtains \\\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)})\\ implicitly, through a few vector operations, as if the [BFGS update](#def-bfgs-update) for those \\m\\ pairs were applied to a simple starting [matrix](linear-algebra-matrices.llms.md#def-matrix), such as a multiple of \\\mathbf{I}\_p\\.
 
 > **NOTE:**
 >
-> **Example 59 (L-BFGS applies the update without forming the matrix)** Continue [Example 58](#exm-bfgs-step) with \\m = 1\\ stored pair \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)})\\ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{I}\_2\\. Below, \\\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)})\\ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
+> **Example 60 (L-BFGS applies the update without forming the matrix)** Continue [Example 59](#exm-bfgs-step) with \\m = 1\\ stored pair \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}^{(0)})\\ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{I}\_2\\. Below, \\\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)})\\ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
 >
 > ``` downlit
 > g1 <- grad(x1)
