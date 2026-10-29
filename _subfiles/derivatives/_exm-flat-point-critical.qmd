@@ -21,7 +21,7 @@ quotients
 
 The derivative is $0$ at `{r} sum(derivs$f_prime == 0)` of the `{r} nrow(derivs)` points,
 namely $w = `{r} flat[1]`$ and $w = `{r} flat[2]`$.
-Both points are flat points of $f$, so by @thm-flat-point-critical they are critical points.
+Both points are [flat points](#def-flat-point) of $f$, since the derivative is $0$ there, so by @thm-flat-point-critical they are critical points.
 The difference quotients of $g$ at $0$ are `{r} quotients[1]` from the left and `{r} quotients[2]` from the right,
 so $g$ has no derivative at $0$.
 Thus $0$ is a critical point of $g$ (@def-critical-point), but not a flat point.
