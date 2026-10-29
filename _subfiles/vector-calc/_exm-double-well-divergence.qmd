@@ -22,13 +22,15 @@ $`{r} dwd_cut_round_pe[1]`$ for $\steplen = `{r} dwd_steps_pe[1]`$,
 $`{r} dwd_cut_round_pe[2]`$ for $\steplen = `{r} dwd_steps_pe[2]`$,
 and $`{r} dwd_cut_round_pe[3]`$ for $\steplen = `{r} dwd_steps_pe[3]`$.
 The [second derivative](calculus.qmd#def-second-derivative) $12x^2 - 4$ is unbounded,
-so no fixed [step length](#def-gradient-descent) suits every start.
+and by @prp-double-well-divergence every fixed [step length](#def-gradient-descent)
+fails to [converge](#def-vector-sequence-limit) from some starts.
 A larger step length lowers the bound,
 so more starts diverge,
 and the [basin of attraction](#def-basin-of-attraction)
 of each [local minimizer](algebra-basics.qmd#def-local-minimizer) shrinks.
 In the earlier [basin example](#exm-basin-of-attraction),
-$\steplen = 0.05$ and the start $4$ lies above the bound $`{r} dwd_cut_round_pe[2]`$,
+$\steplen = 0.05$,
+and the start $4$ lies above the bound $`{r} dwd_cut_round_pe[2]`$,
 which is why its [iterates](#def-iterate) grow.
 
 :::
