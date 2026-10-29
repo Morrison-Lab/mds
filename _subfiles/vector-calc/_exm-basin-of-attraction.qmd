@@ -9,10 +9,10 @@ Both $-1$ and $1$ are
 with $f(\pm 1) = -1$,
 and $0$ is a [local maximizer](#def-local-maximizer).
 We run [gradient descent](#def-gradient-descent)
-with the fixed [step length](#def-gradient-descent) $s = 0.05$
+with the fixed [step length](#def-gradient-descent) $\steplen = 0.05$
 for 200 steps
 from the starting points $-1.5$, $-0.5$, $-0.1$, $0.1$, $0.5$, $1.5$ and $3$,
-and for three steps from $x^{(0)} = 4$.
+and for three steps from $\iterpoint{x}{0} = 4$.
 
 ::: {.panel-tabset group="language"}
 
@@ -75,18 +75,18 @@ so near $0$ the sign of the starting point
 decides which minimizer the run reaches.
 The [basin of attraction](#def-basin-of-attraction) of $1$
 is not all of $(0, \infty)$:
-the first step from $x^{(0)} = 3$ lands at
+the first step from $\iterpoint{x}{0} = 3$ lands at
 `{r} sprintf("%.1f", basin_next_bs(3))`,
 on the other side of $0$,
 and the run ends at
 `{r} sprintf("%.0f", basin_final_bs[basin_starts_bs == 3])`.
-From $x^{(0)} = 4$ the [iterates](#def-iterate),
-starting with $x^{(0)}$ itself, are
+From $\iterpoint{x}{0} = 4$ the [iterates](#def-iterate),
+starting with $\iterpoint{x}{0}$ itself, are
 `{r} paste(sprintf("%.0f", basin_far_bs), collapse = ", ")`,
 which grow in size at every step shown.
 Both of these starts are far from $0$,
 where the [derivative](calculus-derivatives.qmd#def-derivative) is large
-and so the step $s \deriv{x} f(x)$ is long.
+and so the step $\steplen \deriv{x} f(x)$ is long.
 So the basin depends on the [step length](#def-gradient-descent),
 and it is not a half-line.
 

@@ -5,7 +5,7 @@ For [gradient descent](#def-gradient-descent) with given
 [step lengths](#def-gradient-descent),
 the **basin of attraction** of a
 [local minimizer](algebra-basics.qmd#def-local-minimizer) $\vx^*$
-is the [set](sets.qmd#def-set) of starting points $\vx^{(0)}$
+is the [set](sets.qmd#def-set) of starting points $\iterpoint{\vx}{0}$
 from which the [iterates](#def-iterate)
 [converge](#def-vector-sequence-limit) to $\vx^*$
 [@wikipedia_attractor].
