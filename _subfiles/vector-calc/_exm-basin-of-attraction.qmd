@@ -86,7 +86,7 @@ which grow in size at every step shown.
 Both of these starts are far from $0$,
 where the [derivative](calculus-derivatives.qmd#def-derivative) is large
 and so the step $\steplen \deriv{x} f(x)$ is long.
-From $\iterpoint{x}{0} = 3$ that step has length $`{r} 4 * 3^3 - 4 * 3`\,\steplen$,
+From $\iterpoint{x}{0} = 3$ that step is $`{r} 4 * 3^3 - 4 * 3`\,\steplen$ long,
 so the first step stays on the positive side of $0$
 only when the [step length](#def-gradient-descent) is below `{r} 3 / (4 * 3^3 - 4 * 3)`.
 So the basin of $1$ depends on $\steplen$,
