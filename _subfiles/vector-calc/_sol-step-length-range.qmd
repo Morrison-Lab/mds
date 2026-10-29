@@ -6,8 +6,8 @@ The right [inequality](proof-writing.qmd#def-inequality) holds for every $\stepl
 because $\eigval_i > 0$.
 The left inequality is $\steplen\,\eigval_i < 2$, that is, $\steplen < 2 / \eigval_i$.
 These $p$ [inequalities](proof-writing.qmd#def-inequality),
-one for each [eigenvalue](linear-algebra.qmd#def-eigenvalue), all hold exactly when
-the inequality for the largest eigenvalue holds,
+one for each [eigenvalue](linear-algebra.qmd#def-eigenvalue), all hold exactly
+when the inequality for the largest eigenvalue holds,
 since it is the most restrictive:
 
 $$

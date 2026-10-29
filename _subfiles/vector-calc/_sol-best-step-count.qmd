@@ -19,6 +19,6 @@ $t \ln \convrate(\steplen^*) \le \ln 0.1$.
 Here $\ln \convrate(\steplen^*) < 0$,
 so dividing by it flips the [inequality](proof-writing.qmd#def-inequality):
 $t \ge \ln 0.1 / \ln \convrate(\steplen^*) \approx `{r} bsc_bound_sig_ps`$.
-The smallest whole $t$ is $`{r} bsc_t_ps`$.
+The smallest such $t$ is $`{r} bsc_t_ps`$.
 
 :::
