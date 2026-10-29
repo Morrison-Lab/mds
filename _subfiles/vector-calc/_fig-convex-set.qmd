@@ -1,0 +1,64 @@
+::: {#fig-convex-set}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-set-r
+#| fig-alt: >-
+#|   A blue-outlined disk of radius 1 centered at the origin, shaded light blue.
+#|   Two vermilion circles mark points x and y inside it, joined by a vermilion
+#|   segment that stays inside the disk.
+#| fig-height: 4
+#| fig-width: 4
+cs_angle_fc <- seq(0, 2 * pi, length.out = 201)
+cs_disk_fc <- tibble::tibble(x1 = cos(cs_angle_fc), x2 = sin(cs_angle_fc))
+cs_points_fc <- tibble::tibble(x1 = c(-0.7, 0.6), x2 = c(-0.4, 0.5))
+cs_segment_fc <- tibble::tibble(
+  x1 = -0.7, x2 = -0.4, x1_end = 0.6, x2_end = 0.5
+)
+cs_aes_fc <- ggplot2::aes(x1, x2)
+cs_seg_aes_fc <- ggplot2::aes(xend = x1_end, yend = x2_end)
+ggplot2::ggplot(cs_disk_fc, cs_aes_fc) +
+  ggplot2::geom_polygon(fill = "#0072B2", alpha = 0.15, colour = "#0072B2") +
+  ggplot2::geom_segment(
+    data = cs_segment_fc, mapping = cs_seg_aes_fc, colour = "#D55E00"
+  ) +
+  ggplot2::geom_point(data = cs_points_fc, colour = "#D55E00", size = 3) +
+  ggplot2::coord_fixed() +
+  ggplot2::labs(x = "x1", y = "x2")
+```
+
+### Python
+
+```{python}
+#| label: convex-set-python
+#| fig-alt: >-
+#|   A blue-outlined disk of radius 1 centered at the origin, shaded light blue.
+#|   Two vermilion circles mark points x and y inside it, joined by a vermilion
+#|   segment that stays inside the disk.
+#| fig-height: 4
+#| fig-width: 4
+import matplotlib.pyplot as plt
+import numpy as np
+
+cs_angle_fc = np.linspace(0, 2 * np.pi, 201)
+cs_x1_fc = np.array([-0.7, 0.6])
+cs_x2_fc = np.array([-0.4, 0.5])
+fig, ax = plt.subplots(figsize=(4, 4), layout="constrained")
+ax.fill(np.cos(cs_angle_fc), np.sin(cs_angle_fc), color="#0072B2", alpha=0.15)
+ax.plot(np.cos(cs_angle_fc), np.sin(cs_angle_fc), color="#0072B2")
+ax.plot(cs_x1_fc, cs_x2_fc, "o-", color="#D55E00", markersize=8)
+ax.set_aspect("equal")
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+plt.show()
+```
+
+:::
+
+The closed ball of @exm-convex-set in $\reals^2$ with $r = 1$.
+The segment between two of its points stays in the ball, as a [convex set](#def-convex-set) requires.
+
+:::

@@ -1,0 +1,90 @@
+::: {#fig-convex-max}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-max-r
+#| fig-alt: >-
+#|   Two panels over x. Left: the lines x and x squared in thin grey and their
+#|   pointwise maximum in blue, a curve that is convex. Right: the curve g of x,
+#|   the smaller of x squared and x minus 2 squared, in blue, a double dip with a
+#|   peak of 1 at x of 1. A vermilion segment along the x-axis joins the points
+#|   (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above
+#|   that segment.
+#| fig-height: 3.5
+#| fig-width: 7
+cm_x_fm <- seq(-1, 3, length.out = 201)
+cm_levels_fm <- c("max{x, x^2}", "min{x^2, (x - 2)^2}")
+cm_max_value_fm <- pmax(cm_x_fm, cm_x_fm^2)
+cm_min_value_fm <- pmin(cm_x_fm^2, (cm_x_fm - 2)^2)
+cm_max_fm <- tibble::tibble(x = cm_x_fm, value = cm_max_value_fm, panel = cm_levels_fm[1])
+cm_min_fm <- tibble::tibble(x = cm_x_fm, value = cm_min_value_fm, panel = cm_levels_fm[2])
+cm_main_fm <- rbind(cm_max_fm, cm_min_fm)
+cm_main_fm$panel <- factor(cm_main_fm$panel, levels = cm_levels_fm)
+cm_line_fm <- tibble::tibble(x = cm_x_fm, value = cm_x_fm, panel = cm_levels_fm[1])
+cm_square_fm <- tibble::tibble(x = cm_x_fm, value = cm_x_fm^2, panel = cm_levels_fm[1])
+cm_line_fm$part <- "x"
+cm_square_fm$part <- "x^2"
+cm_parts_fm <- rbind(cm_line_fm, cm_square_fm)
+cm_parts_fm$panel <- factor(cm_parts_fm$panel, levels = cm_levels_fm)
+cm_chord_fm <- tibble::tibble(x = 0, xend = 2, value = 0, panel = cm_levels_fm[2])
+cm_chord_fm$panel <- factor(cm_chord_fm$panel, levels = cm_levels_fm)
+cm_mid_fm <- tibble::tibble(x = 1, value = 1, panel = cm_levels_fm[2])
+cm_mid_fm$panel <- factor(cm_mid_fm$panel, levels = cm_levels_fm)
+cm_aes_fm <- ggplot2::aes(x, value)
+cm_parts_aes_fm <- ggplot2::aes(group = part)
+cm_chord_aes_fm <- ggplot2::aes(xend = xend, yend = value)
+ggplot2::ggplot(cm_main_fm, cm_aes_fm) +
+  ggplot2::geom_line(
+    data = cm_parts_fm, mapping = cm_parts_aes_fm,
+    colour = "grey60", linewidth = 0.4
+  ) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_segment(
+    data = cm_chord_fm, mapping = cm_chord_aes_fm, colour = "#D55E00"
+  ) +
+  ggplot2::geom_point(data = cm_mid_fm, colour = "#D55E00", size = 3) +
+  ggplot2::facet_wrap(~panel, scales = "free_y") +
+  ggplot2::labs(x = "x", y = NULL)
+```
+
+### Python
+
+```{python}
+#| label: convex-max-python
+#| fig-alt: >-
+#|   Two panels over x. Left: the lines x and x squared in thin grey and their
+#|   pointwise maximum in blue, a curve that is convex. Right: the curve g of x,
+#|   the smaller of x squared and x minus 2 squared, in blue, a double dip with a
+#|   peak of 1 at x of 1. A vermilion segment along the x-axis joins the points
+#|   (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above
+#|   that segment.
+#| fig-height: 3.5
+#| fig-width: 7
+import matplotlib.pyplot as plt
+import numpy as np
+
+cm_x_fm = np.linspace(-1, 3, 201)
+fig, axes = plt.subplots(1, 2, figsize=(7, 3.5), layout="constrained")
+axes[0].plot(cm_x_fm, cm_x_fm, color="grey", linewidth=0.8)
+axes[0].plot(cm_x_fm, cm_x_fm**2, color="grey", linewidth=0.8)
+axes[0].plot(cm_x_fm, np.maximum(cm_x_fm, cm_x_fm**2), color="#0072B2")
+axes[0].set_title("max{x, x^2}")
+axes[1].plot(cm_x_fm, np.minimum(cm_x_fm**2, (cm_x_fm - 2)**2), color="#0072B2")
+axes[1].plot([0, 2], [0, 0], "o-", color="#D55E00", markersize=6)
+axes[1].plot(1, 1, "o", color="#D55E00", markersize=8)
+axes[1].set_title("min{x^2, (x - 2)^2}")
+for ax in axes:
+    ax.set_xlabel("x")
+plt.show()
+```
+
+:::
+
+The functions of @exm-convex-max.
+The maximum of the two [convex functions](algebra.qmd#def-convex-function) on the left is convex.
+The minimum on the right is not: $g(1) = 1$ is above the average $0$ of $g(0)$ and $g(2)$, the height of the segment.
+
+:::

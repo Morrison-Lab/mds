@@ -8,6 +8,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-convex-set.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-half-space.qmd >}}
 
 {{< slidebreak >}}
@@ -24,7 +28,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-convex-max.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-epigraph.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-epigraph.qmd >}}
 
 {{< slidebreak >}}
 
@@ -41,6 +53,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_thm-convex-first-order.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-tangent-line.qmd >}}
 
 {{< slidebreak >}}
 

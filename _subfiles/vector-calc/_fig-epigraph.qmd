@@ -1,0 +1,73 @@
+::: {#fig-epigraph}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: epigraph-r
+#| fig-alt: >-
+#|   Plot of the parabola s equals x squared for x from -2 to 2. The region on
+#|   and above the parabola is shaded light blue. A vermilion filled circle at
+#|   (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below
+#|   the parabola, outside it.
+#| fig-height: 4
+#| fig-width: 5
+ep_x_fe <- seq(-2, 2, length.out = 201)
+ep_curve_fe <- tibble::tibble(x = ep_x_fe, s = ep_x_fe^2, top = 5)
+ep_marks_x_fe <- c(1, 2)
+ep_marks_s_fe <- c(2, 1)
+ep_marks_kind_fe <- c("in the epigraph", "not in the epigraph")
+ep_marks_fe <- tibble::tibble(
+  x = ep_marks_x_fe, s = ep_marks_s_fe, kind = ep_marks_kind_fe
+)
+ep_aes_fe <- ggplot2::aes(x, s)
+ep_ribbon_aes_fe <- ggplot2::aes(ymin = s, ymax = top)
+ep_marks_aes_fe <- ggplot2::aes(shape = kind)
+ep_shapes_fe <- c("in the epigraph" = 16, "not in the epigraph" = 4)
+ggplot2::ggplot(ep_curve_fe, ep_aes_fe) +
+  ggplot2::geom_ribbon(
+    mapping = ep_ribbon_aes_fe, fill = "#0072B2", alpha = 0.15
+  ) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(
+    data = ep_marks_fe, mapping = ep_marks_aes_fe,
+    colour = "#D55E00", size = 3
+  ) +
+  ggplot2::scale_shape_manual(values = ep_shapes_fe) +
+  ggplot2::labs(x = "x", y = "s", shape = NULL)
+```
+
+### Python
+
+```{python}
+#| label: epigraph-python
+#| fig-alt: >-
+#|   Plot of the parabola s equals x squared for x from -2 to 2. The region on
+#|   and above the parabola is shaded light blue. A vermilion filled circle at
+#|   (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below
+#|   the parabola, outside it.
+#| fig-height: 4
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+ep_x_fe = np.linspace(-2, 2, 201)
+fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+ax.fill_between(ep_x_fe, ep_x_fe**2, 5, color="#0072B2", alpha=0.15)
+ax.plot(ep_x_fe, ep_x_fe**2, color="#0072B2")
+ax.plot(1, 2, "o", color="#D55E00", markersize=8, label="in the epigraph")
+ax.plot(2, 1, "x", color="#D55E00", markersize=8, label="not in the epigraph")
+ax.set_ylim(0, 5)
+ax.set_xlabel("x")
+ax.set_ylabel("s")
+ax.legend(loc="upper center")
+plt.show()
+```
+
+:::
+
+The [epigraph](#def-epigraph) of $f(x) = x^2$ (@exm-def-epigraph): the shaded points on or above the parabola.
+$(1, 2)$ is in it, and $(2, 1)$ is not.
+
+:::
