@@ -19,7 +19,37 @@ resources:
 reticulate::py_require(c("numpy", "pandas", "matplotlib"))
 ```
 
+::: {.content-visible when-format="html"}
+
+The optimization notes are split across these pages:
+
+- [Critical Points and Optimality Conditions](optimization-critical-points.qmd):
+  flat points and critical points, Fermat's theorem, Taylor approximations,
+  and the first- and second-order conditions in several variables.
+- [Convexity in Several Variables](optimization-convexity.qmd):
+  convex sets and functions, epigraphs, tangent planes,
+  and the first-order and Hessian characterizations of convexity.
+- [Quadratic Minimization under Linear Constraints](optimization-constrained.qmd):
+  minimization problems, optimization algorithms, the Lagrangian,
+  and the sensitivity of the minimum to the constraints.
+- [Newton's Method](optimization-newton.qmd):
+  iterative methods, the quadratic model, and quadratic convergence.
+- [Gradient Descent](optimization-gradient-descent.qmd):
+  descent directions, line search, step lengths, and the failure modes
+  of gradient descent on the Rosenbrock function, double wells, and plateaus.
+- [Quasi-Newton Methods](optimization-quasi-newton.qmd):
+  the secant condition, the BFGS update, and L-BFGS.
+
+A link to a section, theorem or definition on this page from before the split
+goes on to the page that now holds it.
+
+:::
+
+::: {.content-visible unless-format="html"}
+
 {{< include mds/_subfiles/_sec_optimization.qmd >}}
+
+:::
 
 ## Further reading {#sec-additional-resources}
 

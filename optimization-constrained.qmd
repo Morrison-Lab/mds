@@ -1,0 +1,15 @@
+---
+title: "Quadratic Minimization under Linear Constraints"
+format:
+  html: default
+  revealjs:
+    output-file: optimization-constrained-slides.html
+  pdf:
+    output-file: optimization-constrained-handout.pdf
+  docx:
+    output-file: optimization-constrained.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_optimization_constrained.qmd >}}

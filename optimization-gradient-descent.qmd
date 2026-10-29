@@ -1,0 +1,20 @@
+---
+title: "Gradient Descent"
+format:
+  html: default
+  revealjs:
+    output-file: optimization-gradient-descent-slides.html
+  pdf:
+    output-file: optimization-gradient-descent-handout.pdf
+  docx:
+    output-file: optimization-gradient-descent.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+```{r}
+#| include: false
+reticulate::py_require(c("numpy", "pandas", "matplotlib"))
+```
+
+{{< include mds/_subfiles/_sec_optimization_gradient_descent.qmd >}}

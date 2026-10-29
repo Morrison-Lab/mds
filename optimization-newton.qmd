@@ -1,0 +1,15 @@
+---
+title: "Newton's Method"
+format:
+  html: default
+  revealjs:
+    output-file: optimization-newton-slides.html
+  pdf:
+    output-file: optimization-newton-handout.pdf
+  docx:
+    output-file: optimization-newton.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_optimization_newton.qmd >}}

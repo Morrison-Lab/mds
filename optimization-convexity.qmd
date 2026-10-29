@@ -1,0 +1,15 @@
+---
+title: "Convexity in Several Variables"
+format:
+  html: default
+  revealjs:
+    output-file: optimization-convexity-slides.html
+  pdf:
+    output-file: optimization-convexity-handout.pdf
+  docx:
+    output-file: optimization-convexity.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_optimization_convexity.qmd >}}

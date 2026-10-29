@@ -1,0 +1,20 @@
+---
+title: "Quasi-Newton Methods"
+format:
+  html: default
+  revealjs:
+    output-file: optimization-quasi-newton-slides.html
+  pdf:
+    output-file: optimization-quasi-newton-handout.pdf
+  docx:
+    output-file: optimization-quasi-newton.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+```{r}
+#| include: false
+reticulate::py_require(c("numpy", "pandas", "matplotlib"))
+```
+
+{{< include mds/_subfiles/_sec_optimization_quasi_newton.qmd >}}
