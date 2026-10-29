@@ -84,7 +84,7 @@ plt.show()
 :::
 
 The [functions](functions.qmd#def-function) of @exm-convex-max.
-The [maximum](algebra.qmd#def-maximum) of the two [convex functions](algebra.qmd#def-convex-function) on the left is convex.
+The [maximum](algebra.qmd#def-maximum) of the two [convex functions](algebra.qmd#def-convex-function) on the left is again one.
 The [minimum](algebra.qmd#def-minimum) on the right is not: $g(1) = 1$ is above $\tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$, the height of the segment.
 
 :::
