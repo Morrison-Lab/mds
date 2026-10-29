@@ -2,7 +2,7 @@
 
 #### Steps to cut the error bound by a factor of ten
 
-In the setting of @exr-best-step-length,
+In the setting of @exr-best-step-length and @exr-best-step-factor,
 find the smallest whole $t$ with $\convrate(\steplen^*)^t \le 0.1$.
 
 :::
