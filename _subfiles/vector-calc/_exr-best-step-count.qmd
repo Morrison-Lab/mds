@@ -3,7 +3,7 @@
 #### Steps to cut the error bound by a factor of ten
 
 In the setting of @exr-best-step-evaluate,
-find the smallest number of steps $t$ with $\convrate(\steplen)^t \le 0.1$
+find the smallest whole count of steps $t$ with $\convrate(\steplen)^t \le 0.1$
 at $\steplen = \steplen^*$ and at $\steplen = 0.1$.
 
 :::

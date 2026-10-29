@@ -59,8 +59,8 @@ plt.show()
 
 :::
 
-The factor $\convrate(\steplen)$ of @exm-best-constant-step against the step length $\steplen$ (solid).
+The factor $\convrate(\steplen)$ of @exm-best-constant-step against the [step length](#def-gradient-descent) $\steplen$ (solid).
 The best step length (dashed) is where the curve is lowest,
-and the error bound shrinks only where the curve is below $1$ (dotted).
+and the [bound](sets.qmd#def-bound) on the [error](#def-iterate-error) shrinks only where the curve is below $1$ (dotted).
 
 :::

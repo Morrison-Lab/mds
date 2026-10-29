@@ -2,8 +2,9 @@
 #### The best constant step length
 
 In the setting of @thm-gd-quadratic-error,
-let $\eigval_{\min}$ and $\eigval_{\max}$ be the smallest and largest eigenvalues of $\matr{S}$.
-The bound's factor $\convrate(\steplen) = \max_i \abs{1 - \steplen\,\eigval_i}$
+let $\eigval_{\min}$ and $\eigval_{\max}$ be the smallest and largest
+[eigenvalues](linear-algebra.qmd#def-eigenvalue) of $\matr{S}$.
+The factor $\convrate(\steplen) = \max_i \abs{1 - \steplen\,\eigval_i}$ of @thm-gd-quadratic-error
 is smallest over $\steplen > 0$ at
 
 $$
@@ -26,17 +27,17 @@ the [condition number](linear-algebra-special-matrices.qmd#def-condition-number)
 
 For $\steplen > 0$, each $1 - \steplen\,\eigval_i$ lies between
 $u_{\min} \eqdef 1 - \steplen\,\eigval_{\max}$ and $u_{\max} \eqdef 1 - \steplen\,\eigval_{\min}$,
-so $\abs{1 - \steplen\,\eigval_i} \le \max(u_{\max}, -u_{\min})$.
-The two eigenvalues $\eigval_{\min}$ and $\eigval_{\max}$ are among the $\eigval_i$,
+so $\abs{1 - \steplen\,\eigval_i} \le \maxf{u_{\max}, -u_{\min}}$.
+Both $\eigval_{\min}$ and $\eigval_{\max}$ occur among the $\eigval_i$,
 and $\abs{u_{\max}} \ge u_{\max}$ and $\abs{u_{\min}} \ge -u_{\min}$,
-so the maximum is attained:
+so the [maximum](algebra.qmd#def-maximum) is attained:
 
 $$
-\convrate(\steplen) = \max\paren{1 - \steplen\,\eigval_{\min},\ \steplen\,\eigval_{\max} - 1}.
+\convrate(\steplen) = \maxf{1 - \steplen\,\eigval_{\min},\ \steplen\,\eigval_{\max} - 1}.
 $$
 
-The first expression is strictly decreasing in $\steplen$ and the second is strictly increasing,
-and they are equal when
+The first [expression](expressions-algorithms.qmd#def-expression) is strictly decreasing in $\steplen$ and the second is strictly increasing,
+and they coincide when
 
 $$
 \ba
@@ -52,10 +53,10 @@ $$
 $$
 
 For $\steplen < \steplen^*$, $\convrate(\steplen)$ is at least the decreasing expression,
-which exceeds its value at $\steplen^*$.
+which exceeds its [value](functions.qmd#def-value) at $\steplen^*$.
 For $\steplen > \steplen^*$, $\convrate(\steplen)$ is at least the increasing expression,
 which exceeds its value at $\steplen^*$.
-So $\steplen^*$ is the minimizer, and
+So $\steplen^*$ is the [minimizer](algebra.qmd#def-global-minimizer), and
 
 $$
 \ba

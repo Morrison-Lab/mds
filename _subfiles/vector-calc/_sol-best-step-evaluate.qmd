@@ -9,7 +9,8 @@ bse_kappa_ps <- max(bse_eigs_ps) / min(bse_eigs_ps)
 bse_rho_ps <- (bse_kappa_ps - 1) / (bse_kappa_ps + 1)
 ```
 
-$\matr{S}$ is diagonal, so its eigenvalues are its diagonal entries $1$ and $9$.
+$\matr{S}$ is diagonal, so its [eigenvalues](linear-algebra.qmd#def-eigenvalue) are its
+[diagonal entries](linear-algebra.qmd#def-main-diagonal) $1$ and $9$.
 Then
 
 $$

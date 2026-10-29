@@ -11,7 +11,7 @@ gdq_abs_pe <- abs(gdq_factors_pe)
 gdq_rho_pe <- max(gdq_abs_pe)
 ```
 
-Let $\matr{S} = \sbmat{ 2 & 1 \\ 1 & 2 }$ with eigenvalues $3$ and $1$
+Let $\matr{S} = \sbmat{ 2 & 1 \\ 1 & 2 }$ with [eigenvalues](linear-algebra.qmd#def-eigenvalue) $3$ and $1$
 ([eigenvalue example](linear-algebra.qmd#exm-eigenvalue)),
 and $\vecf{c} = \vzero_{2 \times 1}$, so $\vx^* = \vzero_{2 \times 1}$.
 With $\steplen = `{r} gdq_s_pe`$, the factors $1 - \steplen\,\eigval_i$ are
@@ -22,8 +22,8 @@ $$
 \norm{\iterpoint{\vx}{t}} \le `{r} gdq_rho_pe`^t\,\norm{\iterpoint{\vx}{0}}.
 $$
 
-The error along the eigenvector for $\eigval = 3$ shrinks fast,
-and the error along the eigenvector for $\eigval = 1$ shrinks slowly;
-the bound follows the slower one.
+Along the [eigenvector](linear-algebra.qmd#def-eigenvector) for $\eigval = 3$ the [error](#def-iterate-error) shrinks fast,
+and along the eigenvector for $\eigval = 1$ it shrinks slowly;
+the [bound](sets.qmd#def-bound) follows the slower one.
 
 :::
