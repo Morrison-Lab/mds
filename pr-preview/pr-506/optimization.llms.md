@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-28 16:26:59 (PDT)
+Last modified: 2026-10-28 18:33:08 (PDT)
 
 ## 1 Critical points and optimization
 
@@ -376,7 +376,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 9.471535e-12 6.662049e-11
+> #> [1] 1.071498e-11 1.673470e-10
 > #> 
 > #> 
 > #> $zero_vector
@@ -395,7 +395,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 3](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 3](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
@@ -1455,11 +1455,11 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 
 > **NOTE:**
 >
-> **Definition 37 (Basin of attraction)** For [gradient descent](#def-gradient-descent) with given [step lengths](#def-gradient-descent), the **basin of attraction** of a [local minimizer](algebra-basics.llms.md#def-local-minimizer) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\\ is the [set](sets.llms.md#def-set) of starting points \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ from which the [iterates](#def-iterate) [converge](#def-vector-sequence-limit) to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\\ [\[20\]](#ref-wikipedia_attractor).
+> **Definition 37 (Basin of attraction)** For given [step lengths](#def-gradient-descent), the **basin of attraction** of a [local minimizer](algebra-basics.llms.md#def-local-minimizer) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\\ under [gradient descent](#def-gradient-descent) is the [set](sets.llms.md#def-set) of starting points \\{{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}^{(0)}}\\ from which the [iterates](#def-iterate) [converge](#def-vector-sequence-limit) to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^\*\\ [\[20\]](#ref-wikipedia_attractor).
 
 > **NOTE:**
 >
-> **Example 53 (Basins of a double-well function)** Let \\f(x) = x^4 - 2x^2\\, so \\\frac{\partial}{\partial x} f(x) = 4x(x - 1)(x + 1)\\ and the [stationary points](#def-stationary-point) are \\-1\\, \\0\\ and \\1\\. Both \\-1\\ and \\1\\ are [local minimizers](algebra-basics.llms.md#def-local-minimizer), with \\f(\pm 1) = -1\\, and \\0\\ is a [local maximizer](#def-local-maximizer). We run [gradient descent](#def-gradient-descent) with the fixed [step length](#def-gradient-descent) \\s = 0.05\\ for 200 steps from the starting points \\-1.5\\, \\-0.5\\, \\-0.1\\, \\0.1\\, \\0.5\\, \\1.5\\ and \\3\\, and for three steps from \\x^{(0)} = 4\\.
+> **Example 53 (Basins of a double-well function)** Let \\f(x) = x^4 - 2x^2\\, so \\\frac{\partial}{\partial x} f(x) = 4x(x - 1)(x + 1)\\ and the [stationary points](#def-stationary-point) are \\-1\\, \\0\\ and \\1\\. Both \\-1\\ and \\1\\ are [local minimizers](algebra-basics.llms.md#def-local-minimizer), with \\f(\pm 1) = -1\\, and \\0\\ is a [local maximizer](#def-local-maximizer). We run [gradient descent](#def-gradient-descent) with the fixed [step length](#def-gradient-descent) \\s= 0.05\\ for 200 steps from the starting points \\-1.5\\, \\-0.5\\, \\-0.1\\, \\0.1\\, \\0.5\\, \\1.5\\ and \\3\\, and for three steps from \\{{x}^{(0)}} = 4\\.
 >
 > ## R
 >
@@ -1482,8 +1482,8 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > basin_far_bs <- Reduce(
 >   function(x, i) basin_next_bs(x), 1:3, 4, accumulate = TRUE
 > )
-> basin_far_bs
-> #> [1]       4.0      -8.0      92.8 -159724.4
+> signif(basin_far_bs, 3)
+> #> [1]       4.0      -8.0      92.8 -160000.0
 > ```
 >
 > ## Python
@@ -1515,11 +1515,11 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > basin_far_bs = [4.0]
 > for _ in range(3):
 >     basin_far_bs.append(basin_next_bs(basin_far_bs[-1]))
-> print(basin_far_bs)
-> #> [4.0, -8.0, 92.80000000000001, -159724.3904000001]
+> print([float(f"{v:.3g}") for v in basin_far_bs])
+> #> [4.0, -8.0, 92.8, -160000.0]
 > ```
 >
-> Each start from \\-1.5\\ to \\1.5\\ ends at the [minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of \\0\\, so near \\0\\ the sign of the starting point decides which minimizer the run reaches. The [basin of attraction](#def-basin-of-attraction) of \\1\\ is not all of \\(0, \infty)\\: the first step from \\x^{(0)} = 3\\ lands at -1.8, on the other side of \\0\\, and the run ends at -1. From \\x^{(0)} = 4\\ the [iterates](#def-iterate), starting with \\x^{(0)}\\ itself, are 4, -8, 93, -159724, which grow in size at every step shown. Both of these starts are far from \\0\\, where the [derivative](calculus-derivatives.llms.md#def-derivative) is large and so the step \\s \frac{\partial}{\partial x} f(x)\\ is long. So the basin depends on the [step length](#def-gradient-descent), and it is not a half-line.
+> Each of the six starts between \\-1.5\\ and \\1.5\\ ends at \\-1\\ or \\1\\, whichever lies on its own side of \\0\\, so for these starts the sign of the starting point decides which of the two the run reaches. A run from \\0\\ itself never moves, because \\\frac{\partial}{\partial x} f(0) = 0\\. The [basin of attraction](#def-basin-of-attraction) of \\1\\ is not all of \\(0, \infty)\\: the first step from \\{{x}^{(0)}} = 3\\ lands at \\-1.8\\, on the other side of \\0\\, and the run ends at \\-1\\. From \\{{x}^{(0)}} = 4\\ the [iterates](#def-iterate), starting with \\{{x}^{(0)}}\\ itself, are \\4\\, \\-8\\, \\92.8\\ and \\-1.6\times 10^{5}\\, which grow in [absolute value](algebra-basics.llms.md#def-absolute-value) at every step shown. Both of these starts are far from \\0\\, where the [derivative](calculus-derivatives.llms.md#def-derivative) is large and so the step \\s\frac{\partial}{\partial x} f(x)\\ is long. From \\{{x}^{(0)}} = 3\\ that step is \\96\\s\\ long, so the first step stays on the positive side of \\0\\ only when \\s\\ is below \\0.03125\\. So the basin of \\1\\ depends on \\s\\, and with \\s= 0.05\\ the basin is not a half-line.
 
 > **NOTE:**
 >
@@ -1574,8 +1574,8 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f4a20e92990>]
-> for start in basin_starts_bs[:6]:
+> #> [<matplotlib.lines.Line2D object at 0x7fcdc3c02990>]
+> for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
 >         x.append(basin_next_bs(x[-1]))
@@ -1586,30 +1586,30 @@ Here the objective ([Definition 16](#def-objective-function)) is a quadratic \\
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f4a20e92ad0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4a20e92c10>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4a20e92d50>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4a20e92e90>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4a20e92fd0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4a20e93110>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcdc3c02ad0>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcdc3c02c10>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcdc3c02d50>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcdc3c02e90>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcdc3c02fd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7fcdc3c03110>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f4a20e93250>
+> #> <matplotlib.legend.Legend object at 0x7fcdc3c03250>
 > plt.show()
 > ```
 >
 > ## R
 >
-> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization_files/figure-html/basin-iterates-r-1.png)](optimization_files/figure-html/basin-iterates-r-1.png "Figure 2: Gradient descent with step length 0.05 on the double-well function of Example 53, from the six starting values from -1.5 to 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
+> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization_files/figure-html/basin-iterates-r-1.png)](optimization_files/figure-html/basin-iterates-r-1.png "Figure 2: Gradient descent with step length 0.05 on the double-well function of Example 53, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
 > ## Python
 >
-> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization_files/figure-html/basin-iterates-python-1.png)](optimization_files/figure-html/basin-iterates-python-1.png "Figure 2: Gradient descent with step length 0.05 on the double-well function of Example 53, from the six starting values from -1.5 to 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
+> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization_files/figure-html/basin-iterates-python-1.png)](optimization_files/figure-html/basin-iterates-python-1.png "Figure 2: Gradient descent with step length 0.05 on the double-well function of Example 53, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
-> Figure 2: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) \\0.05\\ on the double-well [function](functions.llms.md#def-function) of [Example 53](#exm-basin-of-attraction), from the six starting [values](functions.llms.md#def-value) from \\-1.5\\ to \\1.5\\. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](#def-local-maximizer) at \\0\\.
+> Figure 2: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) \\0.05\\ on the double-well [function](functions.llms.md#def-function) of [Example 53](#exm-basin-of-attraction), from six starting points between \\-1.5\\ and \\1.5\\. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](#def-local-maximizer) at \\0\\.
 
 > **NOTE:**
 >
