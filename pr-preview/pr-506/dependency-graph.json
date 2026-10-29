@@ -6051,6 +6051,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-inner-product-sign",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-inner-product-sign",
+   "kind": "thm",
+   "title": "The sign of the inner product",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-inverse-product",
    "site": "mds",
    "page": "linear-algebra",
@@ -7434,6 +7443,15 @@
    "div": "thm-gram-schmidt",
    "kind": "thm",
    "title": "What Gram-Schmidt produces",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#thm-inner-product-sign",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "thm-inner-product-sign",
+   "kind": "thm",
+   "title": "The sign of the inner product",
    "external": false
   },
   {
@@ -11442,6 +11460,33 @@
    "external": false
   },
   {
+   "id": "mds/vector-calculus#thm-level-sets-linear",
+   "site": "mds",
+   "page": "vector-calculus",
+   "div": "thm-level-sets-linear",
+   "kind": "thm",
+   "title": "Level sets of a linear function",
+   "external": false
+  },
+  {
+   "id": "mds/vector-calculus#thm-normal-vector-steepest",
+   "site": "mds",
+   "page": "vector-calculus",
+   "div": "thm-normal-vector-steepest",
+   "kind": "thm",
+   "title": "The normal vector is the steepest direction",
+   "external": false
+  },
+  {
+   "id": "mds/vector-calculus#thm-normal-vector-uphill",
+   "site": "mds",
+   "page": "vector-calculus",
+   "div": "thm-normal-vector-uphill",
+   "kind": "thm",
+   "title": "Stepping along the normal vector",
+   "external": false
+  },
+  {
    "id": "mds/vector-calculus#thm-pderiv-normal-parameters",
    "site": "mds",
    "page": "vector-calculus",
@@ -13745,6 +13790,18 @@
    "mds/linear-algebra#def-inner-product-space"
   ],
   [
+   "mds/linear-algebra#def-design-matrix",
+   "mds/algebra-exponentials#def-intercept"
+  ],
+  [
+   "mds/linear-algebra#def-design-matrix",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra#def-design-matrix",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra#def-diagonal-entry",
    "mds/linear-algebra#def-main-diagonal"
   ],
@@ -14393,6 +14450,18 @@
    "mds/linear-algebra#def-null-space"
   ],
   [
+   "mds/linear-algebra#thm-inner-product-sign",
+   "mds/linear-algebra#def-angle"
+  ],
+  [
+   "mds/linear-algebra#thm-inner-product-sign",
+   "mds/linear-algebra-vectors#def-orthogonal-vectors"
+  ],
+  [
+   "mds/linear-algebra#thm-inner-product-sign",
+   "mds/vector-calculus#def-direction"
+  ],
+  [
    "mds/linear-algebra#thm-invertible-cancel",
    "mds/linear-algebra#def-invertible-matrix"
   ],
@@ -15001,6 +15070,18 @@
    "mds/linear-algebra-inner-products#def-orthonormal-basis"
   ],
   [
+   "mds/linear-algebra-inner-products#thm-inner-product-sign",
+   "mds/linear-algebra-inner-products#def-angle"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-inner-product-sign",
+   "mds/linear-algebra-vectors#def-orthogonal-vectors"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-inner-product-sign",
+   "mds/vector-calculus#def-direction"
+  ],
+  [
    "mds/linear-algebra-inner-products#thm-orthonormal-expansion",
    "mds/linear-algebra-inner-products#def-orthonormal-basis"
   ],
@@ -15115,6 +15196,18 @@
   [
    "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "mds/linear-algebra-matrices#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-projections#def-design-matrix",
+   "mds/algebra-exponentials#def-intercept"
+  ],
+  [
+   "mds/linear-algebra-projections#def-design-matrix",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-projections#def-design-matrix",
+   "mds/linear-algebra-matrices#def-matrix"
   ],
   [
    "mds/linear-algebra-projections#def-hat-matrix",
@@ -17243,6 +17336,26 @@
   [
    "mds/vector-calculus#thm-hessian-symmetric",
    "mds/vector-calculus#def-hessian"
+  ],
+  [
+   "mds/vector-calculus#thm-level-sets-linear",
+   "mds/linear-algebra-matrices#def-hyperplane"
+  ],
+  [
+   "mds/vector-calculus#thm-level-sets-linear",
+   "mds/linear-algebra-matrices#def-normal-vector"
+  ],
+  [
+   "mds/vector-calculus#thm-level-sets-linear",
+   "mds/linear-algebra-subspaces#def-dimension"
+  ],
+  [
+   "mds/vector-calculus#thm-level-sets-linear",
+   "mds/vector-calculus#def-level-set"
+  ],
+  [
+   "mds/vector-calculus#thm-normal-vector-steepest",
+   "mds/linear-algebra-vectors#def-unit-vector"
   ],
   [
    "mds/vector-calculus#thm-quadratic-form",
