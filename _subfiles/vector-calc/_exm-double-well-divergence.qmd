@@ -21,7 +21,8 @@ This [bound](sets.qmd#def-bound) is
 $`{r} dwd_cut_round_pe[1]`$ for $\steplen = `{r} dwd_steps_pe[1]`$,
 $`{r} dwd_cut_round_pe[2]`$ for $\steplen = `{r} dwd_steps_pe[2]`$,
 and $`{r} dwd_cut_round_pe[3]`$ for $\steplen = `{r} dwd_steps_pe[3]`$.
-The [second derivative](calculus.qmd#def-second-derivative) $12x^2 - 4$ is unbounded,
+The [derivative](calculus-derivatives.qmd#def-derivative) $4x^3 - 4x$ is unbounded,
+as is the [second derivative](calculus.qmd#def-second-derivative) $12x^2 - 4$,
 so the step $\steplen \deriv{x} f(x)$ grows without bound with $x$,
 and a far start overshoots.
 By @prp-double-well-divergence, every fixed [step length](#def-gradient-descent)
