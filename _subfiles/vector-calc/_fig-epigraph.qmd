@@ -67,7 +67,7 @@ plt.show()
 
 :::
 
-The [epigraph](#def-epigraph) of $f(x) = x^2$ (@exm-def-epigraph): the shaded points on or above the parabola.
+The [epigraph](#def-epigraph) of $f(x) = x^2$ (@exm-def-epigraph): the shaded points on or above the [parabola](algebra.qmd#def-parabola).
 $(1, 2)$ is in it, and $(2, 1)$ is not.
 
 :::
