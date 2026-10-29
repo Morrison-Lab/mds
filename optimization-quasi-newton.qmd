@@ -14,7 +14,8 @@ format:
 
 ```{r}
 #| include: false
-reticulate::py_require(c("numpy", "pandas", "matplotlib"))
+py_packages <- c("numpy", "pandas", "matplotlib")
+reticulate::py_require(py_packages)
 ```
 
 {{< include mds/_subfiles/_sec_optimization_quasi_newton.qmd >}}
