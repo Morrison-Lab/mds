@@ -17,7 +17,9 @@ changes $w$ by $\smallconst = -s f'(w)$.
 The linear approximation predicts the change $-s\,f'(w)^2$ in $f$,
 and that difference is $\smallconst^2 = s^2 f'(w)^2$,
 so the actual change is $-s\,f'(w)^2\,(1 - s)$.
-This change is negative, that is, $f$ decreases, exactly when $0 < s < 1$, for $f'(w) \ne 0$:
-the difference is smaller than the predicted decrease only for a short enough step.
+This change is negative, so $f$ decreases,
+exactly when $0 < s < 1$, for $f'(w) \ne 0$.
+For this $f$, the difference is smaller than the predicted decrease only when $s < 1$:
+the step must be short enough.
 
 :::
