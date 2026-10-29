@@ -1,0 +1,50 @@
+:::{#exm-matrix-condition-number}
+#### The condition number of a matrix with nearly parallel columns
+
+Let $\matr{A} = \sbmat{ 1 & 1 \\ 1 & 1.01 }$.
+Its columns, $(1, 1)$ and $(1, 1.01)$, are nearly parallel.
+We find its [singular values](#def-singular-values) and their [ratio](algebra-sums.qmd#def-ratio),
+then repeat after multiplying every entry by $1000$:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: matrix-condition-number-r
+#| code-fold: false
+entries_mcn <- c(1, 1, 1, 1.01)
+a_mcn <- matrix(entries_mcn, nrow = 2)
+svd_mcn <- svd(a_mcn)
+sv_mcn <- svd_mcn$d
+a_mcn_scaled <- 1000 * a_mcn
+svd_mcn_scaled <- svd(a_mcn_scaled)
+sv_mcn_scaled <- svd_mcn_scaled$d
+sv_mcn
+sv_mcn[1] / sv_mcn[2]
+sv_mcn_scaled[1] / sv_mcn_scaled[2]
+```
+
+### Python
+
+```{python}
+#| label: matrix-condition-number-python
+#| code-fold: false
+import numpy as np
+
+a_mcn = np.array([[1.0, 1.0], [1.0, 1.01]])
+sv_mcn = np.linalg.svd(a_mcn, compute_uv=False)
+sv_mcn_scaled = np.linalg.svd(1000 * a_mcn, compute_uv=False)
+print(sv_mcn)
+print(sv_mcn[0] / sv_mcn[1])
+print(sv_mcn_scaled[0] / sv_mcn_scaled[1])
+```
+
+:::
+
+The [singular values](#def-singular-values) are `r round(sv_mcn[1], 3)` and `r round(sv_mcn[2], 4)`,
+so $\condnum(\matr{A}) =$ `r round(sv_mcn[1] / sv_mcn[2], 1)`.
+Multiplying every entry by $1000$ multiplies both singular values by $1000$,
+so the [condition number](#def-matrix-condition-number) is still `r round(sv_mcn_scaled[1] / sv_mcn_scaled[2], 1)`.
+
+:::

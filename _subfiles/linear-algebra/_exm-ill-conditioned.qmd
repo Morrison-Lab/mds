@@ -1,0 +1,62 @@
+:::{#exm-ill-conditioned}
+#### A small change in the right-hand side moves the solution a long way
+
+Let $\matr{A}$ be the [matrix](linear-algebra-matrices.qmd#def-matrix) from @exm-matrix-condition-number,
+and let $\vec{b} = (2, 2.01)$.
+The system $\matr{A}\vx = \vec{b}$ has solution $\vx = (1, 1)$.
+Change the second entry of $\vec{b}$ from $2.01$ to $2.011$,
+and solve again:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: ill-conditioned-r
+#| code-fold: false
+# Uses a_mcn and sv_mcn from the previous example
+b_ic <- c(2, 2.01)
+b_new_ic <- c(2, 2.011)
+x_ic <- solve(a_mcn, b_ic)
+x_new_ic <- solve(a_mcn, b_new_ic)
+x_ic
+x_new_ic
+
+# Relative changes, measured with the Euclidean length
+db_ic <- (b_new_ic - b_ic)^2 |> sum() |> sqrt()
+nb_ic <- b_ic^2 |> sum() |> sqrt()
+dx_ic <- (x_new_ic - x_ic)^2 |> sum() |> sqrt()
+nx_ic <- x_ic^2 |> sum() |> sqrt()
+rel_b_ic <- db_ic / nb_ic
+rel_x_ic <- dx_ic / nx_ic
+c(rel_b_ic, rel_x_ic, rel_x_ic / rel_b_ic)
+```
+
+### Python
+
+```{python}
+#| label: ill-conditioned-python
+#| code-fold: false
+# Uses a_mcn and sv_mcn from the previous example
+b_ic = np.array([2.0, 2.01])
+b_new_ic = np.array([2.0, 2.011])
+x_ic = np.linalg.solve(a_mcn, b_ic)
+x_new_ic = np.linalg.solve(a_mcn, b_new_ic)
+print(x_ic)
+print(x_new_ic)
+
+# Relative changes, measured with the Euclidean length
+rel_b_ic = np.linalg.norm(b_new_ic - b_ic) / np.linalg.norm(b_ic)
+rel_x_ic = np.linalg.norm(x_new_ic - x_ic) / np.linalg.norm(x_ic)
+print(rel_b_ic, rel_x_ic, rel_x_ic / rel_b_ic)
+```
+
+:::
+
+The right-hand side changes by a relative amount of `r sprintf("%.5f", rel_b_ic)`,
+and the solution changes by a relative amount of `r sprintf("%.3f", rel_x_ic)`,
+about `r sprintf("%.0f", rel_x_ic / rel_b_ic)` times as much.
+That amplification is what @def-ill-conditioned describes,
+and it cannot exceed $\condnum(\matr{A}) =$ `r sprintf("%.1f", sv_mcn[1] / sv_mcn[2])`.
+
+:::

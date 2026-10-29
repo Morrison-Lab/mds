@@ -1,0 +1,42 @@
+:::{#exm-condition-number-gram}
+#### Squaring the condition number
+
+For the [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$ from @exm-matrix-condition-number,
+compare $\condnum(\matr{A})$ with $\condnum(\tp{\matr{A}}\matr{A})$:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: condition-number-gram-r
+#| code-fold: false
+# Uses a_mcn and sv_mcn from the earlier example
+gram_cng <- crossprod(a_mcn)
+kappa_a_cng <- sv_mcn[1] / sv_mcn[2]
+svd_gram_cng <- svd(gram_cng)
+sv_gram_cng <- svd_gram_cng$d
+sv_gram_cng[1] / sv_gram_cng[2]
+kappa_a_cng^2
+```
+
+### Python
+
+```{python}
+#| label: condition-number-gram-python
+#| code-fold: false
+# Uses a_mcn and sv_mcn from the earlier example
+gram_cng = a_mcn.T @ a_mcn
+kappa_a_cng = sv_mcn[0] / sv_mcn[1]
+sv_gram_cng = np.linalg.svd(gram_cng, compute_uv=False)
+print(sv_gram_cng[0] / sv_gram_cng[1])
+print(kappa_a_cng ** 2)
+```
+
+:::
+
+The [condition number](#def-matrix-condition-number) of $\tp{\matr{A}}\matr{A}$ is `r sprintf("%.0f", sv_gram_cng[1] / sv_gram_cng[2])`,
+and $\condnum(\matr{A})^2 =$ `r sprintf("%.0f", kappa_a_cng^2)`,
+as @thm-condition-number-gram says.
+
+:::

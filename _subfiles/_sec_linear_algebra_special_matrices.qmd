@@ -1,5 +1,10 @@
 ## Special Matrices
 
+```{r}
+#| include: false
+reticulate::py_require("numpy")
+```
+
 {{< include mds/_subfiles/linear-algebra/_note-special-matrices-intro.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix-order.qmd >}}
@@ -167,6 +172,38 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-condition-number.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-condition-number.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-matrix-condition-number.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-matrix-condition-number.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-condition-number-gram.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-condition-number-gram.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-ill-conditioned.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-well-conditioned.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-ill-conditioned.qmd >}}
 
 {{< slidebreak >}}
 

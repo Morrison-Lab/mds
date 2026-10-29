@@ -1,0 +1,15 @@
+:::{#def-ill-conditioned}
+#### Ill-conditioned matrix
+
+A [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$ is **ill-conditioned** when its [condition number](#def-matrix-condition-number) is so large
+that small relative changes in its entries, such as those from rounding,
+can change the solution of a [linear system](linear-algebra-matrices.qmd#def-linear-system) by a much larger relative amount.
+The relative change in the solution can be up to $\condnum(\matr{A})$ times the relative change in the entries.
+A solution computed with $\condnum(\matr{A}) \approx 10^k$ therefore loses about $k$ of the digits
+that the floating-point arithmetic carries
+[@trefethen1997numerical, Lecture 12].
+
+There is no sharp threshold:
+how large is too large depends on how many accurate digits the answer needs.
+
+:::

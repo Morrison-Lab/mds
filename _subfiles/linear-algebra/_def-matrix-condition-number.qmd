@@ -1,0 +1,21 @@
+:::{#def-matrix-condition-number}
+#### Condition number of a matrix
+
+The **condition number** of an $n \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$
+is the [ratio](algebra-sums.qmd#def-ratio) of its largest to its smallest [singular value](#def-singular-values),
+counting all $\min(n, p)$ [singular values](#def-singular-values) of $\matr{A}$, zeros included
+(@rem-svd-zero-singular-values)
+[@wikipedia_condition_number]:
+
+$$
+\condnum(\matr{A}) \eqdef \frac{\singval_{\max}}{\singval_{\min}} = \frac{\singval_1}{\singval_{\min(n,p)}}.
+$$
+
+This generalizes @def-condition-number,
+which covers [positive definite matrices](linear-algebra-special-matrices.qmd#def-positive-definite).
+For a nonzero matrix, $\condnum(\matr{A}) \ge 1$.
+When the columns of a tall matrix $\matr{A}$ ($n \ge p$) are [linearly dependent](linear-algebra-subspaces.qmd#def-linearly-independent),
+its smallest singular value is $0$,
+and $\condnum(\matr{A}) = \infty$.
+
+:::
