@@ -96,6 +96,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_rem-second-derivative-test-zero.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/derivatives/_exm-second-derivative-test.qmd >}}
 
 {{< slidebreak >}}
