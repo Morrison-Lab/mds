@@ -20,12 +20,13 @@ has size $`{r} plateau_size_zero_pe`$.
 At $x = 10$ it has size $`{r} plateau_size_ten_sig_pe`$,
 which is small but not zero.
 A step of [gradient descent](#def-gradient-descent)
-is the gradient times the [step length](#def-gradient-descent),
+subtracts the gradient times the [step length](#def-gradient-descent).
+The gradient is negative,
 so the [iterates](#def-iterate) keep moving to the right,
 more and more slowly.
 With tolerance $\epsilon = 10^{-4}$,
 the region $x \ge 10$ is a plateau (@def-plateau).
-A run that enters it has not converged;
-it has only slowed down.
+A run that enters this plateau has not converged;
+the run has only slowed down.
 
 :::
