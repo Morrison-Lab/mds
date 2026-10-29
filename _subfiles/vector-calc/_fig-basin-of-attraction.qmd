@@ -18,37 +18,33 @@
 #| fig-height: 4
 #| fig-width: 5
 # Uses basin_step_bs and basin_starts_bs from the example above.
-basin_cost_bf <- function(x) x^4 - 2 * x^2
-basin_iterates_bf <- function(x0, step, n_steps) {
-  x <- numeric(n_steps + 1)
-  x[1] <- x0
-  for (i in seq_len(n_steps)) {
-    x[i + 1] <- x[i] - step * (4 * x[i]^3 - 4 * x[i])
-  }
-  x
+basin_runs_bf <- matrix(0, nrow = 31, ncol = 6)
+basin_runs_bf[1, ] <- basin_starts_bs[1:6]
+for (i in 1:30) {
+  basin_prev_bf <- basin_runs_bf[i, ]
+  basin_slope_bf <- 4 * basin_prev_bf^3 - 4 * basin_prev_bf
+  basin_runs_bf[i + 1, ] <- basin_prev_bf - basin_step_bs * basin_slope_bf
 }
-basin_runs_bf <- lapply(
-  basin_starts_bs[1:6], basin_iterates_bf,
-  step = basin_step_bs, n_steps = 30
+basin_side_bf <- ifelse(
+  basin_starts_bs[1:6] > 0, "start above 0", "start below 0"
 )
-basin_paths_bf <- data.frame(
-  x = unlist(basin_runs_bf),
-  side = rep(
-    ifelse(basin_starts_bs[1:6] > 0, "start above 0", "start below 0"),
-    each = 31
-  )
+basin_paths_bf <- tibble::tibble(
+  x = as.vector(basin_runs_bf),
+  side = rep(basin_side_bf, each = 31)
 )
-basin_paths_bf$cost <- basin_cost_bf(basin_paths_bf$x)
-ggplot2::ggplot(basin_paths_bf, ggplot2::aes(x, cost)) +
-  ggplot2::geom_function(
-    fun = basin_cost_bf, colour = "grey60", xlim = c(-1.6, 1.6)
-  ) +
+basin_paths_bf$cost <- basin_paths_bf$x^4 - 2 * basin_paths_bf$x^2
+basin_grid_bf <- seq(-1.6, 1.6, length.out = 321)
+basin_curve_bf <- tibble::tibble(
+  x = basin_grid_bf, cost = basin_grid_bf^4 - 2 * basin_grid_bf^2
+)
+basin_colours_bf <- c("start above 0" = "#0072B2", "start below 0" = "#D55E00")
+ggplot2::ggplot(basin_curve_bf, ggplot2::aes(x, cost)) +
+  ggplot2::geom_line(colour = "grey60") +
   ggplot2::geom_point(
+    data = basin_paths_bf,
     ggplot2::aes(colour = side, shape = side), alpha = 0.7
   ) +
-  ggplot2::scale_colour_manual(
-    values = c("start above 0" = "#0072B2", "start below 0" = "#D55E00")
-  ) +
+  ggplot2::scale_colour_manual(values = basin_colours_bf) +
   ggplot2::labs(x = "x", y = "f(x)", colour = NULL, shape = NULL) +
   ggplot2::theme(legend.position = "bottom")
 ```
