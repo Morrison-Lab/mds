@@ -260,6 +260,18 @@
 
 {{< include mds/_subfiles/vector-calc/_exm-gd-quadratic-error.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-best-constant-step.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-best-constant-step.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-best-constant-step.qmd >}}
+
 ## Quasi-Newton methods {#sec-quasi-newton}
 
 {{< include mds/_subfiles/vector-calc/_prose-quasinewton-attribution.qmd >}}
