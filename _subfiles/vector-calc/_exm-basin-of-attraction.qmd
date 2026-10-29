@@ -83,7 +83,7 @@ From $\iterpoint{x}{0} = 4$ the [iterates](#def-iterate),
 starting with $\iterpoint{x}{0}$ itself, are
 $`{r} signif(basin_far_bs[1], 3)`$, $`{r} signif(basin_far_bs[2], 3)`$,
 $`{r} signif(basin_far_bs[3], 3)`$ and $`{r} signif(basin_far_bs[4], 3)`$,
-which grow in [absolute value](algebra.qmd#def-absolute-value) at every step shown.
+which grow in [absolute value](algebra-basics.qmd#def-absolute-value) at every step shown.
 Both of these starts are far from $0$,
 where the [derivative](calculus-derivatives.qmd#def-derivative) is large
 and so the step $\steplen \deriv{x} f(x)$ is long.
