@@ -2,6 +2,8 @@
 title: "Calculus"
 format:
   html: default
+  revealjs:
+    output-file: calculus-slides.html
   pdf:
     output-file: calculus-handout.pdf
   docx:
