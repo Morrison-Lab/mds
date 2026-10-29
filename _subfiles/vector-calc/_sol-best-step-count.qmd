@@ -1,0 +1,29 @@
+:::{#sol-best-step-count}
+
+```{r}
+#| label: best-step-count-r
+#| echo: false
+bsc_eigs_ps <- c(1, 9)
+bsc_s_star_ps <- 2 / sum(bsc_eigs_ps)
+bsc_rho_star_ps <- max(abs(1 - bsc_s_star_ps * bsc_eigs_ps))
+bsc_rho_tenth_ps <- max(abs(1 - 0.1 * bsc_eigs_ps))
+bsc_bound_star_ps <- log(0.1) / log(bsc_rho_star_ps)
+bsc_bound_tenth_ps <- log(0.1) / log(bsc_rho_tenth_ps)
+bsc_bound_star_sig_ps <- signif(bsc_bound_star_ps, 4)
+bsc_bound_tenth_sig_ps <- signif(bsc_bound_tenth_ps, 4)
+bsc_t_star_ps <- ceiling(bsc_bound_star_ps)
+bsc_t_tenth_ps <- ceiling(bsc_bound_tenth_ps)
+```
+
+Taking logarithms, $\convrate^t \le 0.1$ is $t \ln \convrate \le \ln 0.1$.
+Both $\ln \convrate$ and $\ln 0.1$ are negative, so dividing flips the inequality:
+$t \ge \ln 0.1 / \ln \convrate$.
+
+- At $\steplen^* = `{r} bsc_s_star_ps`$, $\convrate = `{r} bsc_rho_star_ps`$,
+  so $t \ge `{r} bsc_bound_star_sig_ps`$, and the smallest whole number is $`{r} bsc_t_star_ps`$.
+- At $\steplen = 0.1$, $\convrate = \max(\abs{1 - 0.1}, \abs{1 - 0.9}) = `{r} bsc_rho_tenth_ps`$,
+  so $t \ge `{r} bsc_bound_tenth_sig_ps`$, and the smallest whole number is $`{r} bsc_t_tenth_ps`$.
+
+The best step length needs about half as many steps.
+
+:::

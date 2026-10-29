@@ -1,0 +1,66 @@
+::: {#fig-best-constant-step}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: best-constant-step-plot-r
+#| fig-alt: >-
+#|   Plot of the error factor against the step length, from 0 to 1.
+#|   A solid blue curve falls in a straight line from 1 at a step length of 0
+#|   to a sharp minimum of 0.5 at a step length of 0.5,
+#|   then rises in a straight line, crossing 1 at a step length of 0.667
+#|   and reaching 2 at a step length of 1.
+#|   A dotted horizontal line marks 1, and a dashed vermilion vertical line marks 0.5.
+#| fig-height: 4
+#| fig-width: 5
+bcs_grid_pf <- seq(0, 1, length.out = 401)
+bcs_first_pf <- abs(1 - 3 * bcs_grid_pf)
+bcs_second_pf <- abs(1 - bcs_grid_pf)
+bcs_rho_pf <- pmax(bcs_first_pf, bcs_second_pf)
+bcs_curve_pf <- tibble::tibble(s = bcs_grid_pf, rho = bcs_rho_pf)
+bcs_aes_pf <- ggplot2::aes(s, rho)
+ggplot2::ggplot(bcs_curve_pf, bcs_aes_pf) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_hline(yintercept = 1, linetype = "dotted") +
+  ggplot2::geom_vline(
+    xintercept = 0.5, colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::labs(x = "Step length", y = "Error factor")
+```
+
+### Python
+
+```{python}
+#| label: best-constant-step-plot-python
+#| fig-alt: >-
+#|   Plot of the error factor against the step length, from 0 to 1.
+#|   A solid blue curve falls in a straight line from 1 at a step length of 0
+#|   to a sharp minimum of 0.5 at a step length of 0.5,
+#|   then rises in a straight line, crossing 1 at a step length of 0.667
+#|   and reaching 2 at a step length of 1.
+#|   A dotted horizontal line marks 1, and a dashed vermilion vertical line marks 0.5.
+#| fig-height: 4
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+bcs_grid_pf = np.linspace(0, 1, 401)
+bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
+fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
+ax.axhline(1, color="black", linestyle=":")
+ax.axvline(0.5, color="#D55E00", linestyle="--")
+ax.set_xlabel("Step length")
+ax.set_ylabel("Error factor")
+plt.show()
+```
+
+:::
+
+The factor $\convrate(\steplen)$ of @exm-best-constant-step against the step length $\steplen$ (solid).
+The best step length (dashed) is where the curve is lowest,
+and the error bound shrinks only where the curve is below $1$ (dotted).
+
+:::

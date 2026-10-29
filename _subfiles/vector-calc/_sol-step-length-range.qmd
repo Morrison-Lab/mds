@@ -1,0 +1,13 @@
+:::{#sol-step-length-range}
+
+$\convrate(\steplen) < 1$ means $\abs{1 - \steplen\,\eigval_i} < 1$ for every $i$,
+which is $-1 < 1 - \steplen\,\eigval_i < 1$.
+The right inequality holds for every $\steplen > 0$ because $\eigval_i > 0$.
+The left inequality is $\steplen\,\eigval_i < 2$, that is, $\steplen < 2 / \eigval_i$.
+All $p$ of these hold exactly when the one for the largest eigenvalue holds, since it is the smallest bound:
+
+$$
+0 < \steplen < \frac{2}{\eigval_{\max}}.
+$$
+
+:::

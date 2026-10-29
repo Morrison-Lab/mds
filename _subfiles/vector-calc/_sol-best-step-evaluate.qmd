@@ -1,0 +1,28 @@
+:::{#sol-best-step-evaluate}
+
+```{r}
+#| label: best-step-evaluate-r
+#| echo: false
+bse_eigs_ps <- c(1, 9)
+bse_s_star_ps <- 2 / sum(bse_eigs_ps)
+bse_kappa_ps <- max(bse_eigs_ps) / min(bse_eigs_ps)
+bse_rho_ps <- (bse_kappa_ps - 1) / (bse_kappa_ps + 1)
+```
+
+$\matr{S}$ is diagonal, so its eigenvalues are its diagonal entries $1$ and $9$.
+Then
+
+$$
+\ba
+\steplen^* &= \frac{2}{1 + 9} = `{r} bse_s_star_ps`,
+&& \text{(best constant step length)}
+\\
+\condnum(\matr{S}) &= \frac{9}{1} = `{r} bse_kappa_ps`,
+&& \text{(condition number)}
+\\
+\convrate(\steplen^*) &= \frac{`{r} bse_kappa_ps` - 1}{`{r} bse_kappa_ps` + 1} = `{r} bse_rho_ps`.
+&& \text{(best factor)}
+\ea
+$$
+
+:::

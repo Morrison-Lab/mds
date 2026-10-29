@@ -1,0 +1,29 @@
+:::{#exm-gd-quadratic-error}
+#### The error multiplier for a step length of one quarter
+
+```{r}
+#| label: gd-quadratic-error-r
+#| echo: false
+gdq_s_pe <- 0.25
+gdq_eigs_pe <- c(3, 1)
+gdq_factors_pe <- 1 - gdq_s_pe * gdq_eigs_pe
+gdq_abs_pe <- abs(gdq_factors_pe)
+gdq_rho_pe <- max(gdq_abs_pe)
+```
+
+Let $\matr{S} = \sbmat{ 2 & 1 \\ 1 & 2 }$ with eigenvalues $3$ and $1$
+([eigenvalue example](linear-algebra.qmd#exm-eigenvalue)),
+and $\vecf{c} = \vzero_{2 \times 1}$, so $\vx^* = \vzero_{2 \times 1}$.
+With $\steplen = `{r} gdq_s_pe`$, the factors $1 - \steplen\,\eigval_i$ are
+$`{r} gdq_factors_pe[1]`$ and $`{r} gdq_factors_pe[2]`$,
+so $\convrate(\steplen) = `{r} gdq_rho_pe`$ and
+
+$$
+\norm{\iterpoint{\vx}{t}} \le `{r} gdq_rho_pe`^t\,\norm{\iterpoint{\vx}{0}}.
+$$
+
+The error along the eigenvector for $\eigval = 3$ shrinks fast,
+and the error along the eigenvector for $\eigval = 1$ shrinks slowly;
+the bound follows the slower one.
+
+:::

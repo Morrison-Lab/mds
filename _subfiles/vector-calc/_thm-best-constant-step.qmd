@@ -1,0 +1,74 @@
+:::{#thm-best-constant-step}
+#### The best constant step length
+
+In the setting of @thm-gd-quadratic-error,
+let $\eigval_{\min}$ and $\eigval_{\max}$ be the smallest and largest eigenvalues of $\matr{S}$.
+The bound's factor $\convrate(\steplen) = \max_i \abs{1 - \steplen\,\eigval_i}$
+is smallest over $\steplen > 0$ at
+
+$$
+\steplen^* = \frac{2}{\eigval_{\min} + \eigval_{\max}},
+$$
+
+where
+
+$$
+\convrate(\steplen^*) = \frac{\condnum - 1}{\condnum + 1},
+\qquad
+\condnum = \condnum(\matr{S}),
+$$
+
+the [condition number](linear-algebra-special-matrices.qmd#def-condition-number) of $\matr{S}$.
+
+:::
+
+::: proof
+
+For $\steplen > 0$, each $1 - \steplen\,\eigval_i$ lies between
+$u_{\min} \eqdef 1 - \steplen\,\eigval_{\max}$ and $u_{\max} \eqdef 1 - \steplen\,\eigval_{\min}$,
+so $\abs{1 - \steplen\,\eigval_i} \le \max(u_{\max}, -u_{\min})$.
+The two eigenvalues $\eigval_{\min}$ and $\eigval_{\max}$ are among the $\eigval_i$,
+and $\abs{u_{\max}} \ge u_{\max}$ and $\abs{u_{\min}} \ge -u_{\min}$,
+so the maximum is attained:
+
+$$
+\convrate(\steplen) = \max\paren{1 - \steplen\,\eigval_{\min},\ \steplen\,\eigval_{\max} - 1}.
+$$
+
+The first expression is strictly decreasing in $\steplen$ and the second is strictly increasing,
+and they are equal when
+
+$$
+\ba
+1 - \steplen\,\eigval_{\min} &= \steplen\,\eigval_{\max} - 1
+&& \text{(set the two expressions equal)}
+\\
+2 &= \steplen\,(\eigval_{\min} + \eigval_{\max})
+&& \text{(collect the terms in } \steplen \text{)}
+\\
+\steplen &= \frac{2}{\eigval_{\min} + \eigval_{\max}} = \steplen^*.
+&& \text{(divide)}
+\ea
+$$
+
+For $\steplen < \steplen^*$, $\convrate(\steplen)$ is at least the decreasing expression,
+which exceeds its value at $\steplen^*$.
+For $\steplen > \steplen^*$, $\convrate(\steplen)$ is at least the increasing expression,
+which exceeds its value at $\steplen^*$.
+So $\steplen^*$ is the minimizer, and
+
+$$
+\ba
+\convrate(\steplen^*)
+&= 1 - \frac{2\,\eigval_{\min}}{\eigval_{\min} + \eigval_{\max}}
+&& \text{(first expression at } \steplen^* \text{)}
+\\
+&= \frac{\eigval_{\max} - \eigval_{\min}}{\eigval_{\max} + \eigval_{\min}}
+&& \text{(common denominator)}
+\\
+&= \frac{\condnum - 1}{\condnum + 1}.
+&& \text{(divide the numerator and denominator by } \eigval_{\min} \text{)}
+\ea
+$$
+
+:::
