@@ -36,7 +36,7 @@ data.frame(start = basin_starts_bs, end = signif(basin_final_bs, 3))
 basin_far_bs <- Reduce(
   function(x, i) basin_next_bs(x), 1:3, 4, accumulate = TRUE
 )
-basin_far_bs
+signif(basin_far_bs, 3)
 ```
 
 ### Python
