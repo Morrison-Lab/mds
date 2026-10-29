@@ -1,40 +1,27 @@
 ::: {#thm-normal-vector-uphill}
 
-#### The normal vector points uphill
+#### Stepping along the normal vector
 
-Let $\modmemf{\vx} = \dprod{\vcoef}{\vx} + \coef{0}$ with $\vcoef \neq \vzero$.
+Let $\modmemf{\vx} = \dprod{\vcoef}{\vx} + \intcoef$ with $\vcoef \neq \vzero$.
+For every $\vx \in \reals^p$ and $t \in \reals$,
 
-1. For every $\vx \in \reals^p$ and $t \in \reals$, $\modmemf{\vx + t\vcoef} = \modmemf{\vx} + t\norm{\vcoef}^2$.
-2. Among [unit vectors](linear-algebra-vectors.qmd#def-unit-vector) $\vu$ ($\norm{\vu} = 1$), the change $\modmemf{\vx + t\vu} - \modmemf{\vx}$ with $t > 0$ is largest for $\vu = \vcoef / \norm{\vcoef}$.
+$$
+\modmemf{\vx + t\vcoef} = \modmemf{\vx} + t\normsq{\vcoef}.
+$$
+
+So a step along $\vcoef$ with $t > 0$ increases $\modmem$.
 
 :::
 
 ::: proof
-**Part 1.**
 By linearity of the [dot product](linear-algebra-vectors.qmd#def-dot-product),
 
 $$
 \begin{aligned}
 \modmemf{\vx + t\vcoef}
-&= \dprod{\vcoef}{\vx + t\vcoef} + \coef{0} \\
-&= \dprod{\vcoef}{\vx} + t\dprod{\vcoef}{\vcoef} + \coef{0} \\
-&= \modmemf{\vx} + t\norm{\vcoef}^2.
+&= \dprod{\vcoef}{\vx + t\vcoef} + \intcoef \\
+&= \dprod{\vcoef}{\vx} + t\dprod{\vcoef}{\vcoef} + \intcoef \\
+&= \modmemf{\vx} + t\normsq{\vcoef}.
 \end{aligned}
-$$
-
-**Part 2.**
-For a [unit vector](linear-algebra-vectors.qmd#def-unit-vector) $\vu$,
-
-$$
-\modmemf{\vx + t\vu} - \modmemf{\vx} = t\dprod{\vcoef}{\vu}.
-$$
-
-Since $t > 0$, maximizing this change is the same as maximizing $\dprod{\vcoef}{\vu}$.
-By the [Cauchy-Schwarz inequality](linear-algebra-inner-products.qmd#thm-cauchy-schwarz), $\dprod{\vcoef}{\vu} \le \norm{\vcoef}\norm{\vu} = \norm{\vcoef}$.
-Equality holds exactly when $\vu = \alpha\vcoef$ for some $\alpha > 0$.
-The condition $\norm{\vu} = 1$ then forces $\alpha\norm{\vcoef} = 1$, so
-
-$$
-\vu = \vcoef / \norm{\vcoef}.
 $$
 :::
