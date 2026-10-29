@@ -75,6 +75,14 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-projection-diagonal-bounds.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-projection-diagonal-bounds.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-orthogonal-matrix.qmd >}}
 
 {{< slidebreak >}}
