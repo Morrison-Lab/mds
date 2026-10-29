@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-28 21:37:44 (PDT)
+Last modified: 2026-10-28 23:05:07 (PDT)
 
 ## 1 Derivatives
 
@@ -791,29 +791,45 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > Let \\f(x) = 4x + \sqrt{2}\cos x\\.
 >
-> 1.  Compute \\f'(x)\\.
-> 2.  Find the equation of the tangent line to the curve \\y = f(x)\\ at \\x = \pi/4\\.
-> 3.  Use the tangent line to approximate \\f(\pi/4 + 0.01)\\, and compare that approximation with the exact value.
+> Find \\f'(x)\\.
 
 > **NOTE:**
 >
-> *Solution 13*. **1.** Differentiate term by term:
+> *Solution 13*. Differentiate each [term](algebra-sums.llms.md#def-term):
 >
 > \\f'(x) = 4 - \sqrt{2}\sin x\\
+
+> **NOTE:**
 >
-> **2.** Evaluate \\f\\ and \\f'\\ at \\x_0 = \pi/4\\:
+> **Exercise 14 (Tangent line at a point)** In the setting of [Exercise 13](#exr-miller-deriv-tangent-line-approx), find the equation of the [tangent line](#def-tangent-line) to the curve \\y = f(x)\\ at \\x = \pi/4\\.
+
+> **NOTE:**
+>
+> *Solution 14*. Evaluate \\f\\ and \\f'\\ at \\x_0 = \pi/4\\:
 >
 > \\\begin{aligned} f(\pi/4) &= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{}} \\ &= \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} \\ &= \pi + 1 \\ f'(\pi/4) &= 4 - \sqrt{2}{\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{}} \\ &= 4 - \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} \\ &= 4 - 1 \\ &= 3 \end{aligned}\\
 >
 > Using the point-slope formula, the tangent line at \\(\pi/4, \pi + 1)\\ is:
 >
 > \\y - (\pi + 1) = 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{} \implies y = \pi + 1 + 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{}\\
+
+> **NOTE:**
 >
-> **3.** At \\x = \pi/4 + 0.01\\, the linear approximation ([Equation 1](#eq-linear-approx)) gives:
+> **Exercise 15 (Approximate with the tangent line)** Use the [tangent line](#def-tangent-line) from [Exercise 14](#exr-miller-deriv-tangent-line-approx-tangent) to approximate \\f(\pi/4 + 0.01)\\.
+
+> **NOTE:**
+>
+> *Solution 15*. At \\x = \pi/4 + 0.01\\, the [linear approximation](#def-linear-approximation) ([Equation 1](#eq-linear-approx)) gives:
 >
 > \\f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593\\
+
+> **NOTE:**
 >
-> The exact value is:
+> **Exercise 16 (Check the approximation)** Compare the approximation in [Exercise 15](#exr-miller-deriv-tangent-line-approx-approx) with the exact [value](functions.llms.md#def-value) of \\f(\pi/4 + 0.01)\\.
+
+> **NOTE:**
+>
+> *Solution 16*. The exact [value](functions.llms.md#def-value) is:
 >
 > \\f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{}} \approx 4.171543\\
 >
@@ -857,7 +873,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 14 (Taylor polynomial of a polynomial at the origin)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.16.
+> **Exercise 17 (Taylor polynomial of a polynomial at the origin)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.16.
 >
 > Find the first five terms (up to degree 4) of the Taylor series for
 >
@@ -867,7 +883,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 14*. Evaluate \\f\\ and its first four derivatives at \\x = 0\\:
+> *Solution 17*. Evaluate \\f\\ and its first four derivatives at \\x = 0\\:
 >
 > \\\begin{aligned} f(x) &= x^8 + x^4 + 3 &\implies f(0) &= 3 \\ f'(x) &= 8x^7 + 4x^3 &\implies f'(0) &= 0 \\ f''(x) &= 56x^6 + 12x^2 &\implies f''(0) &= 0 \\ f'''(x) &= 336x^5 + 24x &\implies f'''(0) &= 0 \\ f^{(4)}(x) &= 1680x^4 + 24 &\implies f^{(4)}(0) &= 24 \end{aligned}\\
 >
@@ -879,7 +895,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 15 (Taylor expansion of a polynomial at a nonzero point)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.17.
+> **Exercise 18 (Taylor expansion of a polynomial at a nonzero point)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.17.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
 >
@@ -889,7 +905,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 15*. Evaluate \\f\\ and its first two derivatives at \\x_0 = 1\\:
+> *Solution 18*. Evaluate \\f\\ and its first two derivatives at \\x_0 = 1\\:
 >
 > \\\begin{aligned} f(1) &= 1^8 + 1^4 + 3 \\ &= 5 \\ f'(1) &= 8(1)^7 + 4(1)^3 \\ &= 12 \\ f''(1) &= 56(1)^6 + 12(1)^2 \\ &= 68 \end{aligned}\\
 >
@@ -915,7 +931,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 16 (Taylor expansion of a scaled cosine)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.18.
+> **Exercise 19 (Taylor expansion of a scaled cosine)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.18.
 >
 > Find the terms up to degree 4 in the Taylor series for
 >
@@ -925,7 +941,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 16*. Recall the standard Maclaurin series for cosine:
+> *Solution 19*. Recall the standard Maclaurin series for cosine:
 >
 > \\\cos u = 1 - \frac{u^2}{2!} + \frac{u^4}{4!} - \dots\\
 >
@@ -937,7 +953,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 17 (Taylor series of a power of a function)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.19.
+> **Exercise 20 (Taylor series of a power of a function)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.19.
 >
 > Find the terms up to degree 4 in the Taylor series for
 >
@@ -947,7 +963,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 17*. From [Exercise 16](#exr-miller-taylor-cos-scaled), the expansion of \\\cos(5x)\\ up to order \\x^4\\ is:
+> *Solution 20*. From [Exercise 19](#exr-miller-taylor-cos-scaled), the expansion of \\\cos(5x)\\ up to order \\x^4\\ is:
 >
 > \\\cos(5x) = 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 + O(x^6)\\
 >
@@ -957,7 +973,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 18 (Linear Taylor polynomial of the exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.20.
+> **Exercise 21 (Linear Taylor polynomial of the exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.20.
 >
 > Find the first two terms (degree 1) of the Taylor series for
 >
@@ -967,7 +983,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 18*. Since
+> *Solution 21*. Since
 >
 > \\ \begin{aligned} f(0) &= e^0 \\ &= 1 \end{aligned} \\
 >
@@ -983,7 +999,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 19 (Taylor series of a composite exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.21.
+> **Exercise 22 (Taylor series of a composite exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.21.
 >
 > Find the first six terms (up to degree 5) of the Taylor series for
 >
@@ -993,7 +1009,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 19*. Substitute \\u = x^8\\ into \\e^u = 1 + u + \frac{u^2}{2!} + \dots\\:
+> *Solution 22*. Substitute \\u = x^8\\ into \\e^u = 1 + u + \frac{u^2}{2!} + \dots\\:
 >
 > \\{\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}} = 1 + x^8 + \frac{x^{16}}{2} + \dots\\
 >
@@ -1003,7 +1019,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 20 (Taylor expansion of the normal density)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.22.
+> **Exercise 23 (Taylor expansion of the normal density)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.22.
 >
 > Find the terms up to degree 3 of the Taylor series for the standard normal density
 >
@@ -1013,7 +1029,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 20*. Using \\e^u = 1 + u + O(u^2)\\ with \\u = -x^2/2\\:
+> *Solution 23*. Using \\e^u = 1 + u + O(u^2)\\ with \\u = -x^2/2\\:
 >
 > \\{\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}} = 1 - \frac{x^2}{2} + O(x^4)\\
 >
@@ -1033,11 +1049,11 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Proof*. This is the solution to [Exercise 20](#exr-miller-taylor-normal-density), worked in [Solution 20](#sol-miller-taylor-normal-density).
+> *Proof*. This is the solution to [Exercise 23](#exr-miller-taylor-normal-density), worked in [Solution 23](#sol-miller-taylor-normal-density).
 
 > **NOTE:**
 >
-> **Exercise 21 (Taylor expansion of the square root)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.23.
+> **Exercise 24 (Taylor expansion of the square root)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.23.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
 >
@@ -1047,7 +1063,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 21*. Compute the values at \\x_0 = 1/3\\:
+> *Solution 24*. Compute the values at \\x_0 = 1/3\\:
 >
 > \\\begin{aligned} f(1/3) &= \mathopen{}\left(\frac{1}{3}\right)\mathclose{}^{1/2} \\ &= \frac{1}{\sqrt{3}} \\ &= \frac{\sqrt{3}}{3} \\ f'(x) &= \frac{1}{2}x^{-1/2} \\ \implies f'(1/3) &= \frac{1}{2}\sqrt{3} \\ &= \frac{\sqrt{3}}{2} \\ f''(x) &= -\frac{1}{4}x^{-3/2} \\ \implies f''(1/3) &= -\frac{1}{4} \cdot 3\sqrt{3} \\ &= -\frac{3\sqrt{3}}{4} \end{aligned}\\
 >
@@ -1057,7 +1073,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 22 (Taylor expansion of a fractional power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.24.
+> **Exercise 25 (Taylor expansion of a fractional power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.24.
 >
 > Find the first three terms of the Taylor series for
 >
@@ -1067,7 +1083,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 22*. At \\x_0 = 1/2\\, \\1 + x_0 = 3/2\\:
+> *Solution 25*. At \\x_0 = 1/2\\, \\1 + x_0 = 3/2\\:
 >
 > \\\begin{aligned} f(1/2) &= \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3} \\ f'(x) &= \frac{1}{3}(1 + x)^{-2/3} \\ \implies f'(1/2) &= \frac{1}{3}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-2/3} \\ &= \frac{1}{3}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{2/3} \\ f''(x) &= -\frac{2}{9}(1 + x)^{-5/3} \\ \implies f''(1/2) &= -\frac{2}{9}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-5/3} \\ &= -\frac{2}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3} \end{aligned}\\
 >
@@ -1077,7 +1093,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 23 (Taylor expansion of \\x \log x\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.25.
+> **Exercise 26 (Taylor expansion of \\x \log x\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.25.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
 >
@@ -1087,7 +1103,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 23*. Evaluate derivatives at \\x_0 = 1\\:
+> *Solution 26*. Evaluate derivatives at \\x_0 = 1\\:
 >
 > \\\begin{aligned} f(1) &= 1 \log 1 \\ &= 0 \\ f'(x) &= \log x + 1 \\ \implies f'(1) &= 0 + 1 \\ &= 1 \\ f''(x) &= \frac{1}{x} \implies f''(1) = 1 \end{aligned}\\
 >
@@ -1097,7 +1113,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 24 (Maclaurin series of \\\log(1 + x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.26.
+> **Exercise 27 (Maclaurin series of \\\log(1 + x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.26.
 >
 > Find the first three terms of the Taylor series for
 >
@@ -1107,7 +1123,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 24*. Differentiating repeatedly at \\x_0 = 0\\:
+> *Solution 27*. Differentiating repeatedly at \\x_0 = 0\\:
 >
 > \\\begin{aligned} f(0) &= \log 1 \\ &= 0 \\ f'(x) &= (1 + x)^{-1} \implies f'(0) = 1 \\ f''(x) &= -(1 + x)^{-2} \implies f''(0) = -1 \\ f'''(x) &= 2(1 + x)^{-3} \implies f'''(0) = 2 \end{aligned}\\
 >
@@ -1123,11 +1139,11 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Proof*. This is the solution to [Exercise 24](#exr-miller-taylor-log-one-plus-x), worked in [Solution 24](#sol-miller-taylor-log-one-plus-x).
+> *Proof*. This is the solution to [Exercise 27](#exr-miller-taylor-log-one-plus-x), worked in [Solution 27](#sol-miller-taylor-log-one-plus-x).
 
 > **NOTE:**
 >
-> **Exercise 25 (Maclaurin series of \\\log(1 - x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.27.
+> **Exercise 28 (Maclaurin series of \\\log(1 - x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.27.
 >
 > Find the terms up to degree 3 of the Taylor series for
 >
@@ -1137,7 +1153,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 25*. Substitute \\u = -x\\ into the expansion for \\\log(1 + u)\\ from [Theorem 14](#thm-taylor-log-one-plus-x):
+> *Solution 28*. Substitute \\u = -x\\ into the expansion for \\\log(1 + u)\\ from [Theorem 14](#thm-taylor-log-one-plus-x):
 >
 > \\ \begin{aligned} \log(1 - x) &= (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots \\ &= -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots \end{aligned} \\
 
@@ -1149,11 +1165,11 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Proof*. This is the solution to [Exercise 25](#exr-miller-taylor-log-one-minus-x), worked in [Solution 25](#sol-miller-taylor-log-one-minus-x).
+> *Proof*. This is the solution to [Exercise 28](#exr-miller-taylor-log-one-minus-x), worked in [Solution 28](#sol-miller-taylor-log-one-minus-x).
 
 > **NOTE:**
 >
-> **Exercise 26 (Taylor series of \\\log((1 - x)e^x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.28.
+> **Exercise 29 (Taylor series of \\\log((1 - x)e^x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.28.
 >
 > Find the first two non-zero terms of the Taylor series for
 >
@@ -1163,7 +1179,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 26*. Expand using logarithm properties:
+> *Solution 29*. Expand using logarithm properties:
 >
 > \\ \begin{aligned} f(x) &= \log(1 - x) + \log(e^x) \\ &= \log(1 - x) + x \end{aligned} \\
 >
@@ -1177,7 +1193,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 27 (Taylor series of a product of known expansions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.29.
+> **Exercise 30 (Taylor series of a product of known expansions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.29.
 >
 > Find the terms up to degree 2 of the Taylor series for
 >
@@ -1187,7 +1203,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 27*. Multiply the known Maclaurin expansions:
+> *Solution 30*. Multiply the known Maclaurin expansions:
 >
 > \\\begin{aligned} \cos x &= 1 - \frac{x^2}{2} + O(x^4) \\ \log(1 + x) &= x - \frac{x^2}{2} + O(x^3) \end{aligned}\\
 >
@@ -1197,7 +1213,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Exercise 28 (Taylor series of \\\log(1 + 2x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.30.
+> **Exercise 31 (Taylor series of \\\log(1 + 2x)\\)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.30.
 >
 > Find the first two non-zero terms of the Taylor series for
 >
@@ -1207,7 +1223,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 28*. Substitute \\u = 2x\\ into the Maclaurin series \\\log(1 + u) = u - \frac{u^2}{2} + \dots\\:
+> *Solution 31*. Substitute \\u = 2x\\ into the Maclaurin series \\\log(1 + u) = u - \frac{u^2}{2} + \dots\\:
 >
 > \\ \begin{aligned} \log(1 + 2x) &= (2x) - \frac{(2x)^2}{2} + \dots \\ &= 2x - 2x^2 + \dots \end{aligned} \\
 

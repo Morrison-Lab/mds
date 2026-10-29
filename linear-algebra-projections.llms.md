@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-28 21:37:44 (PDT)
+Last modified: 2026-10-28 23:05:07 (PDT)
 
 ## 1 Design Matrix
 
 > **NOTE:**
 >
-> **Definition 1 (Design matrix, model matrix)** In a regression model with \\n\\ observations and \\p\\ predictors, the **design matrix** [\[1\]](#ref-wikipedia_design_matrix) (or **model matrix**) \\\mathbf{X}\\ is the \\n \times p\\ matrix whose \\i\\-th row is the covariate vector \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_i}^{\top}\\ for observation \\i\\:
+> **Definition 1 (Design matrix, model matrix)** In a regression model with \\n\\ observations and \\p\\ predictors, the **design matrix** [\[1\]](#ref-wikipedia_design_matrix) (or **model matrix**) \\\mathbf{X}\\ is the \\n \times p\\ [matrix](linear-algebra-matrices.llms.md#def-matrix) whose \\i\\-th row \\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_i}^{\top}\\ holds, for observation \\i\\, the \\p\\ entries the model uses. These can be covariates, a \\1\\ for the [intercept](algebra-exponentials.llms.md#def-intercept), \\0/1\\ columns for categories, or [functions](functions.llms.md#def-function) of covariates, such as \\x^2\\. For a straight-line fit, for example, the design matrix has a first column of 1s, which allows the intercept to be estimated [\[1\]](#ref-wikipedia_design_matrix), [\[2, Sec. 2.4\]](#ref-dobson4e). In symbols,
 >
 > \\ \begin{aligned} \mathbf{X} &= \begin{bmatrix} {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_1}^{\top} \\ {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_2}^{\top} \\ \vdots \\ {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_n}^{\top} \end{bmatrix} \\ &= \begin{bmatrix} x\_{11} & x\_{12} & \cdots & x\_{1p} \\ x\_{21} & x\_{22} & \cdots & x\_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ x\_{n1} & x\_{n2} & \cdots & x\_{np} \end{bmatrix} \end{aligned} \\
 
@@ -40,7 +40,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 >
 > \\ \begin{aligned} 0 &= {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}}^{\top}\\{\mathbf{X}}^{\top}\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} && \text{(multiply } {\mathbf{X}}^{\top}\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\text{ on the left by } {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}}^{\top} \text{)} \\ &= {\mathopen{}\left(\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\right)\mathclose{}}^{\top}\mathopen{}\left(\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\right)\mathclose{} && \text{(transpose of a product)} \\ &= \mathopen{}\left\lVert\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}}\right\rVert\mathclose{}^2 && \text{(definition of the Euclidean norm)} \end{aligned} \\
 >
-> so \\\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\. Because \\\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = c_1 (\text{column } 1) + \cdots + c_p (\text{column } p)\\ and the columns of \\\mathbf{X}\\ are linearly independent, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\. So the only solution of \\{\mathbf{X}}^{\top}\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, which says that the columns of the square matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ are linearly independent, and a square matrix with linearly independent columns is invertible [\[2\]](#ref-banerjee2014linear), Corollary 5.7, p. 143.
+> so \\\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\. Because \\\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = c_1 (\text{column } 1) + \cdots + c_p (\text{column } p)\\ and the columns of \\\mathbf{X}\\ are linearly independent, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\. So the only solution of \\{\mathbf{X}}^{\top}\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ is \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{c}}\vphantom{c}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, which says that the columns of the square matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ are linearly independent, and a square matrix with linearly independent columns is invertible [\[3\]](#ref-banerjee2014linear), Corollary 5.7, p. 143.
 
 > **NOTE:**
 >
@@ -52,7 +52,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Hat matrix)** For an \\n \times p\\ design matrix \\\mathbf{X}\\ ([Definition 1](#def-design-matrix)) with \\\operatorname{rank}(\mathbf{X}) = p\\, the **hat matrix** [\[3\]](#ref-wikipedia_projection_matrix) is the \\n \times n\\ matrix
+> **Definition 2 (Hat matrix)** For an \\n \times p\\ design matrix \\\mathbf{X}\\ ([Definition 1](#def-design-matrix)) with \\\operatorname{rank}(\mathbf{X}) = p\\, the **hat matrix** [\[4\]](#ref-wikipedia_projection_matrix) is the \\n \times n\\ matrix
 >
 > \\ \underbrace{\mathbf{H}}\_{n \times n} \stackrel{\text{def}}{=} \underbrace{\mathbf{X}}\_{n \times p} \underbrace{({\mathbf{X}}^{\top}\mathbf{X})^{-1}}\_{p \times p} \underbrace{{\mathbf{X}}^{\top}}\_{p \times n} \\
 >
@@ -102,7 +102,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> This section is adapted from the second half of Zhou [\[4\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum).
+> This section is adapted from the second half of Zhou [\[5\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum).
 
 > **NOTE:**
 >
@@ -255,7 +255,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[5\]](#ref-zhou2024matinv), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 15 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover. [Theorem 13](#thm-moore-penrose-full-rank) restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in [Theorem 14](#thm-consistency) restores the source’s rank test for consistency. These parts of the source are not part of this section:
+> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 15 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover. [Theorem 13](#thm-moore-penrose-full-rank) restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in [Theorem 14](#thm-consistency) restores the source’s rank test for consistency. These parts of the source are not part of this section:
 >
 > - the QR forms of the full-rank formulas
 > - \\\operatorname{rank}(\mathbf{A}^-) \ge \operatorname{rank}(\mathbf{A})\\, \\\mathcal{C}(\mathbf{A}) = \mathcal{C}(\mathbf{A}\mathbf{A}^-)\\, \\\operatorname{rank}(\mathbf{A}) = \operatorname{rank}(\mathbf{A}\mathbf{A}^-) = \operatorname{rank}(\mathbf{A}^-\mathbf{A})\\, and \\\operatorname{rank}(\mathbf{A}^+) = \operatorname{rank}(\mathbf{A})\\
@@ -299,7 +299,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Generalized inverse)** A **generalized inverse** [\[6\]](#ref-wikipedia_generalized_inverse) of an \\m \times n\\ matrix \\\mathbf{A}\\ is an \\n \times m\\ matrix \\\mathbf{G}\\ such that
+> **Definition 4 (Generalized inverse)** A **generalized inverse** [\[7\]](#ref-wikipedia_generalized_inverse) of an \\m \times n\\ matrix \\\mathbf{A}\\ is an \\n \times m\\ matrix \\\mathbf{G}\\ such that
 >
 > \\ \underbrace{\mathbf{A}}\_{m \times n}\\ \underbrace{\mathbf{G}}\_{n \times m}\\ \underbrace{\mathbf{A}}\_{m \times n} = \mathbf{A}. \\
 
@@ -343,7 +343,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Moore-Penrose inverse)** A **Moore-Penrose inverse** [\[7\]](#ref-wikipedia_moore_penrose_inverse) of an \\m \times n\\ matrix \\\mathbf{A}\\ is an \\n \times m\\ matrix \\\mathbf{G}\\ satisfying all four conditions
+> **Definition 5 (Moore-Penrose inverse)** A **Moore-Penrose inverse** [\[8\]](#ref-wikipedia_moore_penrose_inverse) of an \\m \times n\\ matrix \\\mathbf{A}\\ is an \\n \times m\\ matrix \\\mathbf{G}\\ satisfying all four conditions
 >
 > 1.  \\\mathbf{A} \mathbf{G} \mathbf{A} = \mathbf{A}\\;
 > 2.  \\\mathbf{G} \mathbf{A} \mathbf{G} = \mathbf{G}\\;
@@ -524,7 +524,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Consistent linear system)** A linear system ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, with \\\mathbf{A}\\ an \\m \times n\\ matrix and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\, is **consistent** [\[8\]](#ref-wikipedia_consistent_and_inconsistent_equations) if it has at least one solution \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^n\\, and **inconsistent** otherwise.
+> **Definition 6 (Consistent linear system)** A linear system ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, with \\\mathbf{A}\\ an \\m \times n\\ matrix and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\, is **consistent** [\[9\]](#ref-wikipedia_consistent_and_inconsistent_equations) if it has at least one solution \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^n\\, and **inconsistent** otherwise.
 
 > **NOTE:**
 >
@@ -669,7 +669,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[5\]](#ref-zhou2024matinv) and Zhou [\[9\]](#ref-zhou2024ls), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The first source states that every invertible matrix has an LU factorization; that is false without reordering rows (the \\2 \times 2\\ row swap \\\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ has none), so this section states only how an LU factorization, when one exists, solves a system. The least squares results are proved here from the closest-point theorem ([Theorem 3](#thm-closest-point)) rather than by differentiating, and the QR factorization is derived from Gram-Schmidt ([Theorem 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt)). These parts of the source are not part of this section:
+> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv) and Zhou [\[10\]](#ref-zhou2024ls), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The first source states that every invertible matrix has an LU factorization; that is false without reordering rows (the \\2 \times 2\\ row swap \\\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ has none), so this section states only how an LU factorization, when one exists, solves a system. The least squares results are proved here from the closest-point theorem ([Theorem 3](#thm-closest-point)) rather than by differentiating, and the QR factorization is derived from Gram-Schmidt ([Theorem 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt)). These parts of the source are not part of this section:
 >
 > - the operation counts for the triangular solves, LU and QR
 > - solving a system by inverting a matrix through its QR factorization, and the comparison of that with solving it directly
@@ -677,7 +677,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Upper triangular matrix)** A square matrix \\\mathbf{U}\\ is **upper triangular** [\[10\]](#ref-wikipedia_triangular_matrix) if every entry below the diagonal is \\0\\: \\u\_{ij} = 0\\ whenever \\i \> j\\.
+> **Definition 7 (Upper triangular matrix)** A square matrix \\\mathbf{U}\\ is **upper triangular** [\[11\]](#ref-wikipedia_triangular_matrix) if every entry below the diagonal is \\0\\: \\u\_{ij} = 0\\ whenever \\i \> j\\.
 
 > **NOTE:**
 >
@@ -764,7 +764,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Least squares solution)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\. A **least squares solution** [\[11\]](#ref-wikipedia_least_squares) of \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ is a vector \\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} \in \mathbb{R}^n\\ such that
+> **Definition 10 (Least squares solution)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\. A **least squares solution** [\[12\]](#ref-wikipedia_least_squares) of \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ is a vector \\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} \in \mathbb{R}^n\\ such that
 >
 > \\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{A} \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \quad \text{for every } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^n. \\
 
@@ -778,7 +778,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Normal equations)** For \\\mathbf{A}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ as in [Definition 10](#def-least-squares), the equations \\{\mathbf{A}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = {\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ are the **normal equations** [\[12\]](#ref-wikipedia_normal_equations).
+> **Definition 11 (Normal equations)** For \\\mathbf{A}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ as in [Definition 10](#def-least-squares), the equations \\{\mathbf{A}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = {\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ are the **normal equations** [\[13\]](#ref-wikipedia_normal_equations).
 
 > **NOTE:**
 >
@@ -873,7 +873,7 @@ Last modified: 2026-10-28 21:37:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (LU factorization)** An **LU factorization** [\[13\]](#ref-wikipedia_lu_decomposition) of an \\n \times n\\ matrix \\\mathbf{A}\\ is a product \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ with \\\mathbf{L}\\ unit lower triangular ([Definition 9](#def-unit-lower-triangular-matrix)) and \\\mathbf{U}\\ upper triangular ([Definition 7](#def-triangular-matrix)).
+> **Definition 12 (LU factorization)** An **LU factorization** [\[14\]](#ref-wikipedia_lu_decomposition) of an \\n \times n\\ matrix \\\mathbf{A}\\ is a product \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ with \\\mathbf{L}\\ unit lower triangular ([Definition 9](#def-unit-lower-triangular-matrix)) and \\\mathbf{U}\\ upper triangular ([Definition 7](#def-triangular-matrix)).
 
 > **NOTE:**
 >
@@ -925,48 +925,52 @@ Wikipedia contributors, “Design matrix — Wikipedia, the free encyclopedia.�
 
 \[2\]
 
-S. Banerjee and A. Roy, *Linear algebra and matrix analysis for statistics*, vol. 181. Crc Press Boca Raton, 2014. Available: <https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388>
+A. J. Dobson and A. G. Barnett, *An introduction to generalized linear models*, 4th ed. CRC press, 2018. doi: [10.1201/9781315182780](https://doi.org/10.1201/9781315182780).
 
 \[3\]
 
-Wikipedia contributors, “Projection matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Projection_matrix>
+S. Banerjee and A. Roy, *Linear algebra and matrix analysis for statistics*, vol. 181. Crc Press Boca Raton, 2014. Available: <https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388>
 
 \[4\]
 
-H. Zhou, “Orthogonal projections.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html>
+Wikipedia contributors, “Projection matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Projection_matrix>
 
 \[5\]
 
-H. Zhou, “Linear equations and matrix inverses.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/07-matinv/07-matinv.html>
+H. Zhou, “Orthogonal projections.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html>
 
 \[6\]
 
-Wikipedia contributors, “Generalized inverse — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Generalized_inverse>
+H. Zhou, “Linear equations and matrix inverses.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/07-matinv/07-matinv.html>
 
 \[7\]
 
-Wikipedia contributors, “Moore–penrose inverse — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse>
+Wikipedia contributors, “Generalized inverse — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Generalized_inverse>
 
 \[8\]
 
-Wikipedia contributors, “Consistent and inconsistent equations — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Consistent_and_inconsistent_equations>
+Wikipedia contributors, “Moore–penrose inverse — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse>
 
 \[9\]
 
-H. Zhou, “Least squares.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/08-ls/08-ls.html>
+Wikipedia contributors, “Consistent and inconsistent equations — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Consistent_and_inconsistent_equations>
 
 \[10\]
 
-Wikipedia contributors, “Triangular matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Triangular_matrix>
+H. Zhou, “Least squares.” Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles, 2024. Accessed: Oct. 05, 2026. \[Online\]. Available: <https://ucla-biostat-216.github.io/2024fall/slides/08-ls/08-ls.html>
 
 \[11\]
 
-Wikipedia contributors, “Least squares — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Least_squares>
+Wikipedia contributors, “Triangular matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Triangular_matrix>
 
 \[12\]
 
-Wikipedia contributors, “Normal equations — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Normal_equations>
+Wikipedia contributors, “Least squares — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Least_squares>
 
 \[13\]
+
+Wikipedia contributors, “Normal equations — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Normal_equations>
+
+\[14\]
 
 Wikipedia contributors, “LU decomposition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/LU_decomposition>

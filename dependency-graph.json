@@ -9903,6 +9903,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-basin-of-attraction",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-basin-of-attraction",
+   "kind": "def",
+   "title": "Basin of attraction",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-bfgs-update",
    "site": "mds",
    "page": "optimization",
@@ -16351,6 +16360,26 @@
   [
    "mds/optimization#def-backtracking-line-search",
    "mds/optimization#def-line-search"
+  ],
+  [
+   "mds/optimization#def-basin-of-attraction",
+   "mds/algebra-basics#def-local-minimizer"
+  ],
+  [
+   "mds/optimization#def-basin-of-attraction",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#def-basin-of-attraction",
+   "mds/optimization#def-iterate"
+  ],
+  [
+   "mds/optimization#def-basin-of-attraction",
+   "mds/optimization#def-vector-sequence-limit"
+  ],
+  [
+   "mds/optimization#def-basin-of-attraction",
+   "mds/sets#def-set"
   ],
   [
    "mds/optimization#def-bfgs-update",

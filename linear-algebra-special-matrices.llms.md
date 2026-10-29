@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-28 21:37:44 (PDT)
+Last modified: 2026-10-28 23:05:07 (PDT)
 
 ## 1 Special Matrices
 
@@ -1055,9 +1055,9 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > > plotly::plot_ly(x = ~axis_values, y = ~axis_values, z = ~t(height)) |>
 > >   plotly::add_surface(showscale = FALSE) |>
 > >   plotly::layout(scene = list(
-> >     xaxis = list(title = "x1"),
-> >     yaxis = list(title = "x2"),
-> >     zaxis = list(title = "f(x)")
+> >     xaxis = list(title = "First coordinate, x1"),
+> >     yaxis = list(title = "Second coordinate, x2"),
+> >     zaxis = list(title = "Height, f(x)")
 > >   ))
 > > ```
 > >

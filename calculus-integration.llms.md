@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-28 21:37:44 (PDT)
+Last modified: 2026-10-28 23:05:07 (PDT)
 
 ## 1 Integration
 
@@ -378,7 +378,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 > > ggplot2::ggplot() +
 > >   ggplot2::geom_function(fun = abs, xlim = c(-2, 2), linewidth = 1) +
 > >   ggplot2::geom_point(ggplot2::aes(x = 0, y = 0), size = 3) +
-> >   ggplot2::labs(x = "x", y = expression(f(x) == abs(x))) +
+> >   ggplot2::labs(x = "Input, x", y = expression("Output, " * f(x) == abs(x))) +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -432,7 +432,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 > >     labels = c("0", "1/2", "1")
 > >   ) +
 > >   ggplot2::scale_y_continuous(limits = c(-0.1, 1.2)) +
-> >   ggplot2::labs(x = "x", y = "f(x)") +
+> >   ggplot2::labs(x = "Input, x", y = "Output, f(x)") +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -768,7 +768,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > >     ggplot2::aes(xintercept = x, color = factor(x)),
 > >     linetype = "dashed", linewidth = 0.6
 > >   ) +
-> >   ggplot2::labs(x = "t", y = "f(t) = 2t", color = "x") +
+> >   ggplot2::labs(x = "Input, t", y = "Output, f(t) = 2t", color = "x") +
 > >   ggplot2::theme_minimal() +
 > >   ggplot2::theme(legend.position = "bottom")
 > > ```
@@ -802,7 +802,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > >     ),
 > >     linewidth = 0.8
 > >   ) +
-> >   ggplot2::labs(x = "x", y = expression(F(x) == x^2), color = "x") +
+> >   ggplot2::labs(
+> >     x = "Upper limit, x",
+> >     y = expression("Accumulated area, " * F(x) == x^2),
+> >     color = "x"
+> >   ) +
 > >   ggplot2::theme_minimal() +
 > >   ggplot2::theme(legend.position = "bottom")
 > > ```
@@ -854,7 +858,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > >     fun = \(t) lambda * exp(-lambda * t),
 > >     xlim = c(0, t_max), linewidth = 1
 > >   ) +
-> >   ggplot2::labs(x = "t", y = "f(t)") +
+> >   ggplot2::labs(x = "Time, t", y = "Density, f(t)") +
 > >   ggplot2::theme_minimal()
 > > ```
 > >
@@ -882,7 +886,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > >     ggplot2::aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
 > >     linetype = "dashed", color = "steelblue"
 > >   ) +
-> >   ggplot2::labs(x = "t", y = "F(t)") +
+> >   ggplot2::labs(x = "Time, t", y = "Cumulative probability, F(t)") +
 > >   ggplot2::theme_minimal()
 > > ```
 > >

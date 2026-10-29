@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-28 21:37:44 (PDT)</p>
+  <p class="date">Last modified: 2026-10-28 23:05:07 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-integration" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Integration</h2>
 <p>Integration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability.</p>
@@ -873,7 +873,7 @@ S_2
 <details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb3-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(<span class="at">fun =</span> abs, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <span id="cb3-3"><a aria-label="3"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb3-4"><a aria-label="4"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">f</span>(x) <span class="sc">==</span> <span class="fu">abs</span>(x))) <span class="sc">+</span></span>
+<span id="cb3-4"><a aria-label="4"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"Output, "</span> <span class="sc">*</span> <span class="fu">f</span>(x) <span class="sc">==</span> <span class="fu">abs</span>(x))) <span class="sc">+</span></span>
 <span id="cb3-5"><a aria-label="5"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-abs-value" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-abs-value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -933,7 +933,7 @@ Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\math
 <span id="cb4-21"><a aria-label="21"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"0"</span>, <span class="st">"1/2"</span>, <span class="st">"1"</span>)</span>
 <span id="cb4-22"><a aria-label="22"></a>  ) <span class="sc">+</span></span>
 <span id="cb4-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.1</span>, <span class="fl">1.2</span>)) <span class="sc">+</span></span>
-<span id="cb4-24"><a aria-label="24"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"f(x)"</span>) <span class="sc">+</span></span>
+<span id="cb4-24"><a aria-label="24"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="st">"Output, f(x)"</span>) <span class="sc">+</span></span>
 <span id="cb4-25"><a aria-label="25"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-step" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-step-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1359,7 +1359,7 @@ Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2
 <span id="cb5-10"><a aria-label="10"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">xintercept =</span> x, <span class="at">color =</span> <span class="fu">factor</span>(x)),</span>
 <span id="cb5-11"><a aria-label="11"></a>    <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span></span>
 <span id="cb5-12"><a aria-label="12"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"t"</span>, <span class="at">y =</span> <span class="st">"f(t) = 2t"</span>, <span class="at">color =</span> <span class="st">"x"</span>) <span class="sc">+</span></span>
+<span id="cb5-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, t"</span>, <span class="at">y =</span> <span class="st">"Output, f(t) = 2t"</span>, <span class="at">color =</span> <span class="st">"x"</span>) <span class="sc">+</span></span>
 <span id="cb5-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb5-15"><a aria-label="15"></a>  ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-ftc-part1-left" class="quarto-float quarto-figure quarto-figure-center">
@@ -1401,9 +1401,13 @@ Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2
 <span id="cb6-20"><a aria-label="20"></a>    ),</span>
 <span id="cb6-21"><a aria-label="21"></a>    <span class="at">linewidth =</span> <span class="fl">0.8</span></span>
 <span id="cb6-22"><a aria-label="22"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="fu">expression</span>(<span class="fu">F</span>(x) <span class="sc">==</span> x<span class="sc">^</span><span class="dv">2</span>), <span class="at">color =</span> <span class="st">"x"</span>) <span class="sc">+</span></span>
-<span id="cb6-24"><a aria-label="24"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb6-25"><a aria-label="25"></a>  ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
+<span id="cb6-24"><a aria-label="24"></a>    <span class="at">x =</span> <span class="st">"Upper limit, x"</span>,</span>
+<span id="cb6-25"><a aria-label="25"></a>    <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"Accumulated area, "</span> <span class="sc">*</span> <span class="fu">F</span>(x) <span class="sc">==</span> x<span class="sc">^</span><span class="dv">2</span>),</span>
+<span id="cb6-26"><a aria-label="26"></a>    <span class="at">color =</span> <span class="st">"x"</span></span>
+<span id="cb6-27"><a aria-label="27"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-28"><a aria-label="28"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb6-29"><a aria-label="29"></a>  ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-ftc-part1-right" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig"><figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-ftc-part1-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) <span class="math inline">\(F(x) = x^2\)</span>; tangent slope at each marked <span class="math inline">\(x\)</span> equals <span class="math inline">\(f(x) = 2x\)</span>.
@@ -1522,7 +1526,7 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 <span id="cb7-8"><a aria-label="8"></a>    <span class="at">fun =</span> \(t) lambda <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>lambda <span class="sc">*</span> t),</span>
 <span id="cb7-9"><a aria-label="9"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, t_max), <span class="at">linewidth =</span> <span class="dv">1</span></span>
 <span id="cb7-10"><a aria-label="10"></a>  ) <span class="sc">+</span></span>
-<span id="cb7-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"t"</span>, <span class="at">y =</span> <span class="st">"f(t)"</span>) <span class="sc">+</span></span>
+<span id="cb7-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time, t"</span>, <span class="at">y =</span> <span class="st">"Density, f(t)"</span>) <span class="sc">+</span></span>
 <span id="cb7-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-exp-pdf-cdf-pdf" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig"><figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-exp-pdf-cdf-pdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1558,7 +1562,7 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 <span id="cb8-15"><a aria-label="15"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> t_focus, <span class="at">y =</span> F_at_focus, <span class="at">yend =</span> F_at_focus),</span>
 <span id="cb8-16"><a aria-label="16"></a>    <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"steelblue"</span></span>
 <span id="cb8-17"><a aria-label="17"></a>  ) <span class="sc">+</span></span>
-<span id="cb8-18"><a aria-label="18"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"t"</span>, <span class="at">y =</span> <span class="st">"F(t)"</span>) <span class="sc">+</span></span>
+<span id="cb8-18"><a aria-label="18"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time, t"</span>, <span class="at">y =</span> <span class="st">"Cumulative probability, F(t)"</span>) <span class="sc">+</span></span>
 <span id="cb8-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-exp-pdf-cdf-cdf" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig"><figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-exp-pdf-cdf-cdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
