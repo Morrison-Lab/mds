@@ -2,6 +2,6 @@
 #### The second derivative test can fail to decide
 
 If $f''(c) = 0$ at a [flat point](#def-flat-point) $c$, the test does not decide:
-$c$ may be a minimizer, a maximizer, or neither.
+$f$ may be smallest at $c$ among nearby points, largest there, or neither.
 
 :::

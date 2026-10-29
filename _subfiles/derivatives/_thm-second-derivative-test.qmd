@@ -5,7 +5,7 @@ Let $c$ be a [flat point](#def-flat-point) of $f$,
 where the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''(c)$ is defined.
 
 - If $f''(c) > 0$, then $f(x) > f(c)$ for every $x \ne c$ in some [open interval](sets.qmd#def-open-interval) around $c$, so $c$ is a [local minimizer](algebra.qmd#def-local-minimizer).
-- If $f''(c) < 0$, then $f(x) < f(c)$ for every $x \ne c$ in some open interval around $c$, so $c$ is a local maximizer.
+- If $f''(c) < 0$, then $f(x) < f(c)$ for every $x \ne c$ in some open interval around $c$, so $f$ is largest at $c$ among the points near $c$.
 
 :::
 
@@ -21,10 +21,10 @@ Because $f'(c) = 0$, the [derivative](calculus-derivatives.qmd#def-derivative) o
 $$f''(c) = \lim_{x \to c} \frac{f'(x)}{x - c}.$$
 
 A [limit](calculus-derivatives.qmd#def-limit) that is positive forces the [quotient](algebra.qmd#def-quotient) $f'(x)/(x - c)$ to be positive for $x$ near $c$.
-So $f'(x)$ has the same sign as $x - c$ on some open interval around $c$.
+So $f'(x)$ has the same sign as $x - c$ on some [open interval](sets.qmd#def-open-interval) around $c$.
 Hence $f' < 0$ to the left of $c$ and $f' > 0$ to the right of $c$,
 so $f$ is decreasing to the left of $c$ and increasing to the right of $c$.
-Therefore $f(x) > f(c)$ for every $x \ne c$ in that interval.
+Therefore $f(x) > f(c)$ for every $x \ne c$ in that open interval.
 
 For $f''(c) < 0$, apply the same reasoning to $-f$,
 since $(-f)''(c) = -f''(c) > 0$.
