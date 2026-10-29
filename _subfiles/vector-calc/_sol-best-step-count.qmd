@@ -1,0 +1,20 @@
+:::{#sol-best-step-count}
+
+```{r}
+#| label: best-step-count-r
+#| echo: false
+bsc_rho_ps <- 0.8
+bsc_log_tenth_ps <- log(0.1)
+bsc_log_rho_ps <- log(bsc_rho_ps)
+bsc_bound_ps <- bsc_log_tenth_ps / bsc_log_rho_ps
+bsc_bound_sig_ps <- signif(bsc_bound_ps, 4)
+bsc_t_ps <- ceiling(bsc_bound_ps)
+```
+
+From @sol-best-step-factor, $\convrate(\steplen^*) = `{r} bsc_rho_ps`$.
+Taking logarithms, $\convrate^t \le 0.1$ becomes $t \ln \convrate \le \ln 0.1$.
+Both $\ln \convrate$ and $\ln 0.1$ are negative, so dividing flips the [inequality](proof-writing.qmd#def-inequality):
+$t \ge \ln 0.1 / \ln \convrate = `{r} bsc_bound_sig_ps`$.
+The smallest whole number is $t = `{r} bsc_t_ps`$.
+
+:::

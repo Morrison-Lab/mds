@@ -1,0 +1,18 @@
+:::{#sol-best-step-length}
+
+```{r}
+#| label: best-step-length-r
+#| echo: false
+bsl_eigs_ps <- c(1, 9)
+bsl_s_star_ps <- 2 / sum(bsl_eigs_ps)
+```
+
+$\matr{S}$ is diagonal, so its [eigenvalues](linear-algebra.qmd#def-eigenvalue) are its
+[diagonal entries](linear-algebra.qmd#def-main-diagonal) $1$ and $9$.
+Then
+
+$$
+\steplen^* = \frac{2}{1 + 9} = `{r} bsl_s_star_ps`.
+$$
+
+:::
