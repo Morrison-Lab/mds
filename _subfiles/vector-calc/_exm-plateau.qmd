@@ -4,10 +4,17 @@
 ```{r}
 #| label: plateau-sizes-r
 #| echo: false
-plateau_size_zero_pe <- 1 / (1 + exp(0))
-plateau_size_ten_pe <- 1 / (1 + exp(10))
+plateau_exp_zero_pe <- exp(0)
+plateau_size_zero_pe <- 1 / (1 + plateau_exp_zero_pe)
+plateau_exp_ten_pe <- exp(10)
+plateau_size_ten_pe <- 1 / (1 + plateau_exp_ten_pe)
 plateau_size_ten_sig_pe <- signif(plateau_size_ten_pe, 3)
 ```
+
+<!--
+Bare f and x on purpose: latex-macros/macros.qmd has no macro for a scalar
+function or its scalar variable, and the basin example writes f(x) the same way.
+-->
 
 Let $f(x) = \log\paren{1 + \e{-x}}$.
 Its [derivative](calculus-derivatives.qmd#def-derivative) is
