@@ -1,12 +1,16 @@
 ::: {#def-plateau}
 #### Plateau
 
-For a [function](functions.qmd#def-function) $f : \reals^p \to \reals$,
-a **plateau** is a region where the
+Let $f : \reals^p \to \reals$ be a [function](functions.qmd#def-function)
+and let $\epsilon > 0$ be a tolerance.
+A **plateau** of $f$ is a region on which the
 [Euclidean norm](linear-algebra-vectors.qmd#def-euclidean-norm)
-of the [gradient](vector-calculus.qmd#def-vector-derivative),
-$\norm{\deriv{\vx} f(\vx)}$,
-is small but nonzero.
+of the [gradient](vector-calculus.qmd#def-vector-derivative) satisfies
+
+$$
+0 < \norm{\deriv{\vx} f(\vx)} < \epsilon.
+$$
+
 The surface is then nearly flat
 without containing a [stationary point](#def-stationary-point).
 

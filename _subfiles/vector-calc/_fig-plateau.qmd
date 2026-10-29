@@ -20,7 +20,9 @@ plateau_size_pf <- 1 / (1 + exp(plateau_grid_pf))
 plateau_curve_pf <- tibble::tibble(x = plateau_grid_pf, size = plateau_size_pf)
 plateau_marks_x_pf <- c(0, 10)
 plateau_marks_size_pf <- 1 / (1 + exp(plateau_marks_x_pf))
-plateau_marks_pf <- tibble::tibble(x = plateau_marks_x_pf, size = plateau_marks_size_pf)
+plateau_marks_pf <- tibble::tibble(
+  x = plateau_marks_x_pf, size = plateau_marks_size_pf
+)
 ggplot2::ggplot(plateau_curve_pf, ggplot2::aes(x, size)) +
   ggplot2::geom_line(colour = "#0072B2") +
   ggplot2::geom_point(
