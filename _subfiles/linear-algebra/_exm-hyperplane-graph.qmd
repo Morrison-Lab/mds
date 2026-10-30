@@ -1,0 +1,47 @@
+:::{#exm-hyperplane-graph}
+#### The graph of a line is a line in the plane
+
+Take $p = 1$, $\vw = 2$, $b = 1$.
+The [graph](functions.qmd#def-graph) of $y = 2x + 1$ is the [set](sets.qmd#def-set) of points $(x, y)$ in $\reals^2$ with $2x - y + 1 = 0$.
+By @thm-hyperplane-graph, this is a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $(2, -1)$.
+The point $(0, 1)$ is on it,
+since $2 \cdot 0 - 1 + 1 = 0$.
+The point $(0, 0)$ is off it,
+since $2 \cdot 0 - 0 + 1 = 1 \ne 0$.
+@fig-hyperplane-graph shows the line, the two points, and the normal vector drawn from $(0, 1)$.
+
+```{r}
+#| label: fig-hyperplane-graph
+#| fig-cap: >-
+#|   The graph of $y = 2x + 1$, a line in the plane,
+#|   with its normal vector $(2, -1)$ drawn from the point $(0, 1)$ on it
+#|   and the point $(0, 0)$ off it
+#| fig-alt: >-
+#|   A straight line rising to the right through the point (0, 1).
+#|   An arrow from (0, 1) points right and down, perpendicular to the line.
+#|   A second point at the origin lies below the line.
+arrow_length <- grid::unit(0.15, "inches")
+normal_arrow <- grid::arrow(length = arrow_length)
+point_x <- c(0, 0)
+point_y <- c(1, 0)
+point_label <- c("on the line", "off the line")
+points <- tibble::tibble(x = point_x, y = point_y, label = point_label)
+normal <- tibble::tibble(x = 0, y = 1, xend = 2, yend = 0)
+normal_aes <- ggplot2::aes(x = x, y = y, xend = xend, yend = yend)
+x_limits <- c(-2, 3)
+y_limits <- c(-2, 4)
+ggplot2::ggplot(points) +
+  ggplot2::aes(x = x, y = y, colour = label) +
+  ggplot2::geom_abline(intercept = 1, slope = 2) +
+  ggplot2::geom_segment(
+    mapping = normal_aes,
+    data = normal,
+    arrow = normal_arrow,
+    inherit.aes = FALSE
+  ) +
+  ggplot2::geom_point(size = 3) +
+  ggplot2::coord_fixed(xlim = x_limits, ylim = y_limits) +
+  ggplot2::labs(x = "x", y = "y", colour = NULL)
+```
+
+:::
