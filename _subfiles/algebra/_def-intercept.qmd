@@ -1,7 +1,8 @@
 :::{#def-intercept}
-#### Intercept
+#### Intercept, y-intercept
 
 In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
-$b$ is called the **intercept** of $f$.
+$b$ is called the **intercept** (or **y-intercept**) of $f$,
+because it is $f(0)$.
 
 :::

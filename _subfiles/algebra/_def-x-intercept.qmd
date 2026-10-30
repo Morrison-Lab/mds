@@ -1,0 +1,8 @@
+:::{#def-x-intercept}
+#### x-intercept
+
+For an affine function $f(x) = m x + b$ (@def-affine-function) with $m \ne 0$,
+the **x-intercept** of $f$ is the $x$ with $f(x) = 0$,
+which is $-b / m$.
+
+:::

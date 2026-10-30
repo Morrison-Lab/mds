@@ -76,6 +76,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-x-intercept.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-linear-function.qmd >}}
 
 {{< slidebreak >}}
