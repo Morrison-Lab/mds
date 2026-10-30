@@ -1,11 +1,7 @@
 :::{#rem-matrix-analysis}
 #### Linear algebra and matrix analysis
 
-*[Matrix](linear-algebra-matrices.qmd#def-matrix) analysis* is the study of matrices and their algebraic properties,
-with operations on matrices, [functions](functions.qmd#def-function) of matrices
-and the [eigenvalues](linear-algebra.qmd#def-eigenvalue) of matrices as example topics
-[@wikipedia_matrix_analysis].
-It is usually placed within [linear](algebra.qmd#def-linear-function) algebra and its applications
+[Matrix analysis](#def-matrix-analysis) is usually placed within [linear](algebra.qmd#def-linear-function) algebra and its applications
 [@wikipedia_matrix_analysis],
 and these notes do not treat it as a separate subject:
 they use the name *linear algebra* for the whole of the matrix material in the pages that follow.

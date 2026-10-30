@@ -10,6 +10,8 @@ format:
     output-file: linear-algebra.docx
 ---
 
+{{< include mds/_subfiles/linear-algebra/_def-matrix-analysis.qmd >}}
+
 {{< include mds/_subfiles/linear-algebra/_rem-matrix-analysis.qmd >}}
 
 ::: {.content-visible when-format="html"}
