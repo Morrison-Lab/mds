@@ -1,5 +1,3 @@
-## Quasi-Newton methods {#sec-quasi-newton}
-
 {{< include mds/_subfiles/vector-calc/_prose-quasinewton-attribution.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_def-secant-condition.qmd >}}

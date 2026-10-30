@@ -1,5 +1,3 @@
-## Complex vectors and matrices {#sec-complex-vectors-matrices}
-
 {{< include mds/_subfiles/linear-algebra/_def-complex-vector.qmd >}}
 
 {{< slidebreak >}}

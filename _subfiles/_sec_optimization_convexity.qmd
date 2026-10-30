@@ -1,5 +1,3 @@
-## Convexity in several variables {#sec-convexity-vector}
-
 {{< include mds/_subfiles/vector-calc/_prose-convexity-attribution.qmd >}}
 
 {{< slidebreak >}}

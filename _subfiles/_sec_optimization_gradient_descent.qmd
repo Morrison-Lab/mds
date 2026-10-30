@@ -1,5 +1,3 @@
-## Gradient descent {#sec-gradient-descent}
-
 {{< include mds/_subfiles/vector-calc/_def-gradient-descent.qmd >}}
 
 {{< slidebreak >}}

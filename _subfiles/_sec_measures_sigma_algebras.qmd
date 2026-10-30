@@ -1,5 +1,3 @@
-## $\sigma$-algebras
-
 {{< include mds/_subfiles/measures/_def-sigma-algebra.qmd >}}
 
 {{< slidebreak >}}
