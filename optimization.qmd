@@ -59,7 +59,7 @@ goes on to the page that now holds it.
   is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
 - [M/CS 335, Linear Optimization](https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=126769)
   at Western Washington University
-  covers optimizing linear functions under linear constraints, including linear programming and duality.
+  covers optimizing [linear functions](algebra.qmd#def-linear-function) under linear [constraints](#def-constraints), including linear programming and duality.
 - [M/CS 375, Numerical Computation](https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=126770)
   at Western Washington University
   is a further course on computing numerical answers by computer.
