@@ -1,12 +1,12 @@
 :::{#exm-matrix-analysis}
 #### Eigenvalues of a small matrix
 
-The matrix $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has the eigenvalues
+The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has the [eigenvalues](linear-algebra.qmd#def-eigenvalue)
 ```{r}
 #| echo: false
 eigen(matrix(c(2, 1, 1, 2), nrow = 2))$values
 ```
-Finding these eigenvalues is a question about the matrix $\matr{A}$ alone, so it is a topic of matrix analysis.
+Finding these eigenvalues is a question about $\matr{A}$ alone, so it is a topic of [matrix analysis](#def-matrix-analysis).
 <!-- no-figure: the example is two numbers -->
 
 :::
