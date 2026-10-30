@@ -1,0 +1,71 @@
+:::{#thm-moore-penrose-minimum-norm}
+#### The Moore-Penrose inverse gives the least squares solution of smallest norm
+
+Let $\matr{A}$ be $m \times n$ and $\vecf{b} \in \reals^m$.
+If $\vecf{x}$ is a least squares solution (@def-least-squares) of $\matr{A}\vecf{x} = \vecf{b}$, then
+
+$$
+\norm{\vecf{x}}^2 = \norm{\matr{A}^+\vecf{b}}^2 + \norm{\vecf{x} - \matr{A}^+\vecf{b}}^2.
+$$
+
+So $\norm{\vecf{x}} \ge \norm{\matr{A}^+\vecf{b}}$, with equality only if $\vecf{x} = \matr{A}^+\vecf{b}$.
+
+:::
+
+::: proof
+
+Let $\vecf{d} = \vecf{x} - \matr{A}^+\vecf{b}$.
+By @thm-moore-penrose-least-squares, $\matr{A}\vecf{x} = \matr{A}\matr{A}^+\vecf{b}$, so $\matr{A}\vecf{d} = \vecf{0}$.
+
+Let $\vecf{w} = \tp{(\matr{A}^+)}\matr{A}^+\vecf{b}$.
+Then
+
+$$
+\ba
+\matr{A}^+\vecf{b}
+&= \matr{A}^+\matr{A}\matr{A}^+\vecf{b}
+&& \text{(condition 2 of @def-moore-penrose)}
+\\
+&= \tp{(\matr{A}^+\matr{A})}\matr{A}^+\vecf{b}
+&& \text{(condition 4 of @def-moore-penrose)}
+\\
+&= \tp{\matr{A}}\,\tp{(\matr{A}^+)}\matr{A}^+\vecf{b}
+&& \text{(@thm-transpose-product)}
+\\
+&= \tp{\matr{A}}\vecf{w}.
+&& \text{(definition of } \vecf{w} \text{)}
+\ea
+$$
+
+Therefore
+
+$$
+\ba
+\dprod{\matr{A}^+\vecf{b}}{\vecf{d}}
+&= \dprod{\tp{\matr{A}}\vecf{w}}{\vecf{d}}
+&& (\matr{A}^+\vecf{b} = \tp{\matr{A}}\vecf{w})
+\\
+&= \dprod{\vecf{w}}{\matr{A}\vecf{d}}
+&& \text{(@thm-transpose-product)}
+\\
+&= 0.
+&& (\matr{A}\vecf{d} = \vecf{0})
+\ea
+$$
+
+Expanding $\norm{\vecf{x}}^2 = \norm{\matr{A}^+\vecf{b} + \vecf{d}}^2$ then gives
+
+$$
+\ba
+\norm{\vecf{x}}^2
+&= \norm{\matr{A}^+\vecf{b}}^2 + 2\,\dprod{\matr{A}^+\vecf{b}}{\vecf{d}} + \norm{\vecf{d}}^2
+&& \text{(expanding)}
+\\
+&= \norm{\matr{A}^+\vecf{b}}^2 + \norm{\vecf{d}}^2.
+&& (\dprod{\matr{A}^+\vecf{b}}{\vecf{d}} = 0)
+\ea
+$$
+
+Equality in $\norm{\vecf{x}} \ge \norm{\matr{A}^+\vecf{b}}$ holds only if $\norm{\vecf{d}} = 0$, that is, $\vecf{x} = \matr{A}^+\vecf{b}$.
+
+:::

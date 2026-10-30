@@ -1,0 +1,72 @@
+:::{#thm-moore-penrose-least-squares}
+#### The Moore-Penrose inverse gives a least squares solution
+
+Let $\matr{A}$ be $m \times n$ and $\vecf{b} \in \reals^m$.
+Then $\matr{A}^+\vecf{b}$ is a least squares solution (@def-least-squares) of $\matr{A}\vecf{x} = \vecf{b}$.
+Moreover, a vector $\vecf{x} \in \reals^n$ is a least squares solution [if and only if](proof-writing.qmd#def-iff)
+
+$$
+\matr{A}\vecf{x} = \matr{A}\matr{A}^+\vecf{b}.
+$$
+
+:::
+
+::: proof
+
+Let $\matr{P} = \matr{A}\matr{A}^+$.
+By conditions 3 and 1 of @def-moore-penrose, $\tp{\matr{P}} = \matr{P}$ and $\matr{P}\matr{A} = \matr{A}$.
+Hence
+
+$$
+\ba
+\tp{\matr{A}}(\matr{I} - \matr{P})
+&= \tp{\matr{A}} - \tp{\matr{A}}\matr{P}
+&& \text{(distributing)}
+\\
+&= \tp{\matr{A}} - \tp{\matr{A}}\,\tp{\matr{P}}
+&& (\tp{\matr{P}} = \matr{P})
+\\
+&= \tp{\matr{A}} - \tp{(\matr{P}\matr{A})}
+&& \text{(@thm-transpose-product)}
+\\
+&= \tp{\matr{A}} - \tp{\matr{A}}
+&& (\matr{P}\matr{A} = \matr{A})
+\\
+&= \matr{0}.
+\ea
+$$
+
+For every $\vecf{x} \in \reals^n$, write $\vecf{b} - \matr{A}\vecf{x} = \vecf{u} + \vecf{v}$ with
+
+$$
+\vecf{u} = \vecf{b} - \matr{P}\vecf{b}
+\qquad \text{and} \qquad
+\vecf{v} = \matr{P}\vecf{b} - \matr{A}\vecf{x} = \matr{A}(\matr{A}^+\vecf{b} - \vecf{x}).
+$$
+
+Their [inner product](linear-algebra-inner-products.qmd#def-inner-product) is
+
+$$
+\ba
+\dprod{\vecf{v}}{\vecf{u}}
+&= \tp{(\matr{A}^+\vecf{b} - \vecf{x})}\,\tp{\matr{A}}(\matr{I} - \matr{P})\vecf{b}
+&& \text{(@thm-transpose-product)}
+\\
+&= 0,
+&& (\tp{\matr{A}}(\matr{I} - \matr{P}) = \matr{0})
+\ea
+$$
+
+so $\norm{\vecf{b} - \matr{A}\vecf{x}}^2 = \norm{\vecf{u}}^2 + \norm{\vecf{v}}^2$.
+That is,
+
+$$
+\norm{\vecf{b} - \matr{A}\vecf{x}}^2
+= \norm{\vecf{b} - \matr{P}\vecf{b}}^2 + \norm{\matr{A}(\matr{A}^+\vecf{b} - \vecf{x})}^2.
+$$
+
+The first summand does not involve $\vecf{x}$, and the second is nonnegative, with a zero at $\vecf{x} = \matr{A}^+\vecf{b}$.
+So $\matr{A}^+\vecf{b}$ minimizes $\norm{\vecf{b} - \matr{A}\vecf{x}}$, and the smallest [norm](linear-algebra-inner-products.qmd#def-norm) is $\norm{\vecf{b} - \matr{P}\vecf{b}}$.
+A vector $\vecf{x}$ attains that norm [if and only if](proof-writing.qmd#def-iff) $\matr{A}(\matr{A}^+\vecf{b} - \vecf{x}) = \vecf{0}$, which is $\matr{A}\vecf{x} = \matr{A}\matr{A}^+\vecf{b}$.
+
+:::
