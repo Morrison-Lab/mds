@@ -1,12 +1,18 @@
 :::{#exm-matrix-analysis}
 #### Eigenvalues of a small matrix
 
-The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has the [eigenvalues](linear-algebra.qmd#def-eigenvalue)
 ```{r}
-#| echo: false
-eigen(matrix(c(2, 1, 1, 2), nrow = 2))$values
+#| include: false
+entries <- c(2, 1, 1, 2)
+A <- matrix(entries, nrow = 2)
+decomposition <- eigen(A)
+lambda <- decomposition$values
 ```
-Finding these eigenvalues is a question about $\matr{A}$ alone, so it is a topic of [matrix analysis](#def-matrix-analysis).
+
+The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has the [eigenvalues](linear-algebra.qmd#def-eigenvalue)
+$`{r} lambda[1]`$ and $`{r} lambda[2]`$.
+Finding these eigenvalues is a question about $\matr{A}$ alone,
+so it is a topic of [matrix analysis](#def-matrix-analysis).
 <!-- no-figure: the example is two numbers -->
 
 :::
