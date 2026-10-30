@@ -2,10 +2,11 @@
 #### The Gram matrix and a cross-product as sums of outer products
 
 Let $\matr{A} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}$,
-$\matr{B} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$
-from @exm-cross-product-matrix,
-so $\vecf{r}_1 = (1, 0)$, $\vecf{r}_2 = (1, 1)$, $\vecf{r}_3 = (0, 1)$.
-With $\matr{B} = \matr{A}$, the [Gram matrix](#def-gram-matrix) is the [sum](algebra.qmd#def-summation) of the [outer products](linear-algebra-inner-products.qmd#def-outer-product) of the rows with themselves:
+$\matr{B} =\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$
+be the matrices of @exm-cross-product-matrix.
+The rows of $\matr{A}$ are $\vecf{r}_1 = (1, 0)$, $\vecf{r}_2 = (1, 1)$, $\vecf{r}_3 = (0, 1)$.
+Taking $\matr{B} = \matr{A}$ in @thm-cross-product-sum-outer,
+the [Gram matrix](#def-gram-matrix) is the [sum](algebra.qmd#def-summation) of the [outer products](linear-algebra-inner-products.qmd#def-outer-product) of the rows with themselves:
 
 $$
 \ba
@@ -24,7 +25,8 @@ $$
 $$
 
 This is the Gram matrix of @exm-gram-matrix.
-For the column $\matr{B}$, the rows are the [numbers](number-systems.qmd#def-real-numbers) $s_i = 1, 2, 3$, so
+Now keep the column $\matr{B}$ above.
+Its rows are the 1-vectors $\vecf{s}_1 = (1)$, $\vecf{s}_2 = (2)$, $\vecf{s}_3 = (3)$, so
 
 $$
 \ba
