@@ -62,7 +62,7 @@ goes on to the page that now holds it.
   covers optimizing linear functions under linear constraints, including linear programming and duality.
 - [M/CS 375, Numerical Computation](https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=126770)
   at Western Washington University
-  is a further course on computing with numbers on a computer.
+  is a further course on computing numerical answers by computer.
 - [Hua Zhou](https://hua-zhou.github.io/)'s [course page for "UCLA Biostat 257 - Statistical Computing" (2025 Spring)](https://ucla-biostat-257.github.io/2025spring/)
   has lectures on optimization, from root finding to constrained problems.
   Its source is [on GitHub](https://github.com/ucla-biostat-257/2025spring) under the MIT License.
