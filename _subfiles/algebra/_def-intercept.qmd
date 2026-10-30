@@ -1,0 +1,8 @@
+:::{#def-intercept}
+#### Intercept, y-intercept
+
+The **intercept** (or **y-intercept**) of a [function](functions.qmd#def-function) $f$ whose [domain](functions.qmd#def-domain) contains $0$
+is $f(0)$,
+the height at which the [graph](functions.qmd#def-graph) of $f$ crosses the vertical axis.
+
+:::

@@ -64,6 +64,26 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-slope.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-intercept.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-intercept-term.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-x-intercept.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-intercepts-affine.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-linear-function.qmd >}}
 
 {{< slidebreak >}}
