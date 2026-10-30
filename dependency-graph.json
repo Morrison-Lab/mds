@@ -5781,6 +5781,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-cross-product-sum-outer",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-cross-product-sum-outer",
+   "kind": "thm",
+   "title": "The cross-product matrix is the sum of the outer products of the rows",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-definite-eigenvalues",
    "site": "mds",
    "page": "linear-algebra",
@@ -8415,6 +8424,15 @@
    "div": "thm-column-space-span",
    "kind": "thm",
    "title": "The column space is the span of the columns",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
+   "site": "mds",
+   "page": "linear-algebra-rank-nullity",
+   "div": "thm-cross-product-sum-outer",
+   "kind": "thm",
+   "title": "The cross-product matrix is the sum of the outer products of the rows",
    "external": false
   },
   {
@@ -15514,6 +15532,14 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
+   "mds/linear-algebra#thm-cross-product-sum-outer",
+   "mds/linear-algebra#def-cross-product-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-cross-product-sum-outer",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra#thm-definite-eigenvalues",
    "mds/linear-algebra#def-eigendecomposition"
   ],
@@ -16628,6 +16654,14 @@
   [
    "mds/linear-algebra-rank-nullity#def-nullity",
    "mds/linear-algebra-rank-nullity#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
+   "mds/linear-algebra-rank-nullity#def-cross-product-matrix"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-half-space-dimension",

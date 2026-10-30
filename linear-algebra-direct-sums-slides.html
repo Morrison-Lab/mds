@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 00:52:40 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 02:22:19 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -311,7 +311,7 @@
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section, <a href="#/sec-orthogonal-complements" class="quarto-xref">Section&nbsp;2</a> and <a href="#/sec-fundamental-theorem" class="quarto-xref">Section&nbsp;3</a> are adapted from <span class="citation" data-cites="zhou2024orthproj">Zhou <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source proves that a subspace and its orthogonal complement together make up <span class="math inline">\(\mathbb{R}^p\)</span> by extending an orthonormal basis; the proof here uses the rank-nullity theorem (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>) instead. The source defines the orthogonal complement inside an ambient vector space <span class="math inline">\(V \subseteq \mathbb{R}^m\)</span>; here the ambient space is always <span class="math inline">\(\mathbb{R}^p\)</span>, which is all that the fundamental theorem and the projections need.</p>
+<p>This section, <a href="#/sec-orthogonal-complements" class="quarto-xref">Section&nbsp;2</a> and <a href="#/sec-fundamental-theorem" class="quarto-xref">Section&nbsp;3</a> are adapted from <span class="citation" data-cites="zhou2024orthproj">Zhou <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source proves that a subspace and its orthogonal complement together make up <span class="math inline">\(\mathbb{R}^p\)</span> by extending an orthonormal basis; the proof here uses the rank-nullity theorem (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>) instead. The source defines the orthogonal complement inside an ambient vector space <span class="math inline">\(V \subseteq \mathbb{R}^m\)</span>; here the ambient space is always <span class="math inline">\(\mathbb{R}^p\)</span>, which is all that the fundamental theorem and the projections need.</p>
 </div>
 </div>
 </div>
@@ -500,7 +500,7 @@ a &amp;= b \\
 \begin{aligned}
 \operatorname{rank}(\mathbf{A} + \mathbf{B})
 &amp;= \dim\mathopen{}\left(\mathcal{C}(\mathbf{A} + \mathbf{B})\right)\mathclose{}
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~6 in Column Space, Null Space and Rank-Nullity}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{)}
 \\
 &amp;\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A}) + \mathcal{C}(\mathbf{B})\right)\mathclose{}
 &amp;&amp; \text{(the containment, and part 2 of }\href{linear-algebra-subspaces.qmd#thm-dim-bound}{\text{Theorem~10 in Subspaces and Rank}}\text{)}
@@ -509,7 +509,7 @@ a &amp;= b \\
 &amp;&amp; \text{(}\href{#cor-dim-subadditive}{\text{Corollary~1}}\text{)}
 \\
 &amp;= \operatorname{rank}(\mathbf{A}) + \operatorname{rank}(\mathbf{B}).
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~6 in Column Space, Null Space and Rank-Nullity}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{)}
 \end{aligned}
 \]</span></p>
 </div>
@@ -519,7 +519,7 @@ a &amp;= b \\
 <div id="exm-rank-subadditive" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Subadditivity with equality and without)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>. Each has one nonzero column and one zero column. The nonzero column on its own is linearly independent (<span class="math inline">\(c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> forces <span class="math inline">\(c = 0\)</span>), and the two columns together are not, since <span class="math inline">\(1\)</span> times the zero column is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>; so each matrix has rank <span class="math inline">\(1\)</span> (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>). By the same argument, <span class="math inline">\(-\mathbf{A}\)</span> has rank <span class="math inline">\(1\)</span>.</p>
 <ul>
-<li><span class="math inline">\(\mathbf{A} + \mathbf{B}\)</span> is the <span class="math inline">\(2 \times 2\)</span> identity matrix, which has rank <span class="math inline">\(2\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-nullity">Example&nbsp;12 in Column Space, Null Space and Rank-Nullity</a>), so the bound <span class="math inline">\(2 \le 1 + 1\)</span> holds with equality.</li>
+<li><span class="math inline">\(\mathbf{A} + \mathbf{B}\)</span> is the <span class="math inline">\(2 \times 2\)</span> identity matrix, which has rank <span class="math inline">\(2\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-nullity">Example&nbsp;13 in Column Space, Null Space and Rank-Nullity</a>), so the bound <span class="math inline">\(2 \le 1 + 1\)</span> holds with equality.</li>
 <li><span class="math inline">\(\mathbf{A} + (-\mathbf{A})\)</span> is the <span class="math inline">\(2 \times 2\)</span> zero matrix, which has rank <span class="math inline">\(0\)</span>: any nonempty list of its columns contains <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>, and <span class="math inline">\(1 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>. So the bound <span class="math inline">\(0 \le \operatorname{rank}(\mathbf{A}) + \operatorname{rank}(-\mathbf{A}) = 1 + 1\)</span> is strict.</li>
 </ul>
 </div>
@@ -970,13 +970,13 @@ u_1 &amp;= u_2 \\
 &amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#def-nullity}{\text{Definition~7 in Column Space, Null Space and Rank-Nullity}}\text{)}
 \\
 &amp;= p - \operatorname{rank}({\mathbf{A}}^{\top})
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-nullity}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{, for the } p \text{ columns of } {\mathbf{A}}^{\top} \text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-nullity}{\text{Theorem~8 in Column Space, Null Space and Rank-Nullity}}\text{, for the } p \text{ columns of } {\mathbf{A}}^{\top} \text{)}
 \\
 &amp;= p - \operatorname{rank}(\mathbf{A})
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~9 in Column Space, Null Space and Rank-Nullity}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~10 in Column Space, Null Space and Rank-Nullity}}\text{)}
 \\
 &amp;= p - \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{}
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~6 in Column Space, Null Space and Rank-Nullity}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{)}
 \\
 &amp;= p - d.
 &amp;&amp; \text{(} \mathcal{C}(\mathbf{A}) = \mathcal{S} \text{)}
@@ -1129,17 +1129,17 @@ a &amp;= c \\
 \end{aligned}
 \]</span></p>
 <p><strong>Part 3.</strong> Apply parts 2 and 1 to the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span>, using <span class="math inline">\({({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\)</span>: part 2 gives <span class="math inline">\(\mathcal{C}({\mathbf{A}}^{\top}) = \mathcal{N}(\mathbf{A})^\perp\)</span>, and part 1 gives <span class="math inline">\(\mathbb{R}^n = \mathcal{C}({\mathbf{A}}^{\top}) \oplus \mathcal{N}(\mathbf{A})\)</span>.</p>
-<p><strong>Part 4.</strong> <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = \operatorname{rank}({\mathbf{A}}^{\top})\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>, and that is <span class="math inline">\(r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;9 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(n\)</span> columns, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#def-nullity">Definition&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>, <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> has <span class="math inline">\(m\)</span> columns and rank <span class="math inline">\(r\)</span>, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\)</span> in the same way.</p>
+<p><strong>Part 4.</strong> <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = \operatorname{rank}({\mathbf{A}}^{\top})\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>, and that is <span class="math inline">\(r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;10 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(n\)</span> columns, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#def-nullity">Definition&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>, <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> has <span class="math inline">\(m\)</span> columns and rank <span class="math inline">\(r\)</span>, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\)</span> in the same way.</p>
 </div>
 </section>
 <section class="slide level2 smaller scrollable" id="references">
 
 <div id="exm-fundamental-subspaces" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (The four subspaces of the matrix in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>, <span class="math inline">\(m = 2\)</span>, <span class="math inline">\(n = 3\)</span> and <span class="math inline">\(r = 1\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-dim">Example&nbsp;10 in Column Space, Null Space and Rank-Nullity</a>).</p>
+<p><span class="theorem-title"><strong>Example 18 (The four subspaces of the matrix in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>, <span class="math inline">\(m = 2\)</span>, <span class="math inline">\(n = 3\)</span> and <span class="math inline">\(r = 1\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-dim">Example&nbsp;11 in Column Space, Null Space and Rank-Nullity</a>).</p>
 <ul>
 <li><p><strong>In <span class="math inline">\(\mathbb{R}^3\)</span>:</strong> the row space <span class="math inline">\(\mathcal{C}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(1, -2, -2)\right\}\mathclose{}\)</span></p>
 <ol class="example" type="1">
-<li>has dimension <span class="math inline">\(1 = r\)</span>, and <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(2 = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-nullity">Example&nbsp;11 in Column Space, Null Space and Rank-Nullity</a>). The spanning vectors are orthogonal:</li>
+<li>has dimension <span class="math inline">\(1 = r\)</span>, and <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(2 = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-nullity">Example&nbsp;12 in Column Space, Null Space and Rank-Nullity</a>). The spanning vectors are orthogonal:</li>
 </ol>
 <p><span class="math display">\[
 \begin{aligned}
