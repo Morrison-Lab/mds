@@ -142,6 +142,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-moore-penrose-minimum-norm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-lu.qmd >}}
 
 {{< slidebreak >}}

@@ -65,8 +65,12 @@ $$
 = \norm{\vecf{b} - \matr{P}\vecf{b}}^2 + \norm{\matr{A}(\matr{A}^+\vecf{b} - \vecf{x})}^2.
 $$
 
-The first summand does not involve $\vecf{x}$, and the second is nonnegative, with a zero at $\vecf{x} = \matr{A}^+\vecf{b}$.
-So $\matr{A}^+\vecf{b}$ minimizes $\norm{\vecf{b} - \matr{A}\vecf{x}}$, and the smallest [norm](linear-algebra-inner-products.qmd#def-norm) is $\norm{\vecf{b} - \matr{P}\vecf{b}}$.
-A vector $\vecf{x}$ attains that norm [if and only if](proof-writing.qmd#def-iff) $\matr{A}(\matr{A}^+\vecf{b} - \vecf{x}) = \vecf{0}$, which is $\matr{A}\vecf{x} = \matr{A}\matr{A}^+\vecf{b}$.
+The first summand does not involve $\vecf{x}$,
+and the second is nonnegative,
+with a zero at $\vecf{x} = \matr{A}^+\vecf{b}$.
+So $\matr{A}^+\vecf{b}$ minimizes $\norm{\vecf{b} - \matr{A}\vecf{x}}$,
+and the smallest [norm](linear-algebra-inner-products.qmd#def-norm) is $\norm{\vecf{b} - \matr{P}\vecf{b}}$.
+A vector $\vecf{x}$ attains that norm [if and only if](proof-writing.qmd#def-iff) $\matr{A}(\matr{A}^+\vecf{b} - \vecf{x}) = \vecf{0}$,
+which is $\matr{A}\vecf{x} = \matr{A}\matr{A}^+\vecf{b}$.
 
 :::

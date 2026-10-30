@@ -8,14 +8,16 @@ $$
 \norm{\vecf{x}}^2 = \norm{\matr{A}^+\vecf{b}}^2 + \norm{\vecf{x} - \matr{A}^+\vecf{b}}^2.
 $$
 
-So $\norm{\vecf{x}} \ge \norm{\matr{A}^+\vecf{b}}$, with equality only if $\vecf{x} = \matr{A}^+\vecf{b}$.
+So $\norm{\vecf{x}} \ge \norm{\matr{A}^+\vecf{b}}$,
+with equality only if $\vecf{x} = \matr{A}^+\vecf{b}$.
 
 :::
 
 ::: proof
 
 Let $\vecf{d} = \vecf{x} - \matr{A}^+\vecf{b}$.
-By @thm-moore-penrose-least-squares, $\matr{A}\vecf{x} = \matr{A}\matr{A}^+\vecf{b}$, so $\matr{A}\vecf{d} = \vecf{0}$.
+By @thm-moore-penrose-least-squares, $\matr{A}\vecf{x} = \matr{A}\matr{A}^+\vecf{b}$,
+so $\matr{A}\vecf{d} = \vecf{0}$.
 
 Let $\vecf{w} = \tp{(\matr{A}^+)}\matr{A}^+\vecf{b}$.
 Then
@@ -66,6 +68,7 @@ $$
 \ea
 $$
 
-Equality in $\norm{\vecf{x}} \ge \norm{\matr{A}^+\vecf{b}}$ holds only if $\norm{\vecf{d}} = 0$, that is, $\vecf{x} = \matr{A}^+\vecf{b}$.
+Equality in $\norm{\vecf{x}} \ge \norm{\matr{A}^+\vecf{b}}$ holds only if $\norm{\vecf{d}} = 0$,
+that is, $\vecf{x} = \matr{A}^+\vecf{b}$.
 
 :::
