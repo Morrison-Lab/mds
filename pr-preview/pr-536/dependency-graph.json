@@ -18467,10 +18467,6 @@
   ],
   [
    "mds/optimization#thm-second-derivative-test",
-   "mds/algebra#def-local-minimizer"
-  ],
-  [
-   "mds/optimization#thm-second-derivative-test",
    "mds/calculus-derivatives#def-second-derivative"
   ],
   [
@@ -18732,10 +18728,6 @@
   [
    "mds/optimization-critical-points#thm-flat-point-critical",
    "mds/optimization-critical-points#def-flat-point"
-  ],
-  [
-   "mds/optimization-critical-points#thm-second-derivative-test",
-   "mds/algebra#def-local-minimizer"
   ],
   [
    "mds/optimization-critical-points#thm-second-derivative-test",
