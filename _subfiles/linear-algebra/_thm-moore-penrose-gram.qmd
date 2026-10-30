@@ -22,13 +22,13 @@ $$
 \ba
 \tp{\matr{A}}\,\matr{A}\matr{A}^+
 &= \tp{\matr{A}}\,\tp{(\matr{A}\matr{A}^+)}
-&& \text{(condition 3)}
+&& \text{(condition 3 for } \matr{A}^+ \text{)}
 \\
 &= \tp{(\matr{A}\matr{A}^+\matr{A})}
 && \text{(@thm-transpose-product)}
 \\
 &= \tp{\matr{A}}.
-&& \text{(condition 1)}
+&& \text{(condition 1 for } \matr{A}^+ \text{)}
 \ea
 $$
 
@@ -48,8 +48,10 @@ $$
 \ea
 $$
 
-which is $\matr{A}^+\matr{A}$ by condition 4.
-Hence $\matr{M}\matr{G} = \matr{A}^+\matr{A}$, and it is symmetric, which is condition 3 for $\matr{G}$.
+which is $\matr{A}^+\matr{A}$ by condition 4 for $\matr{A}^+$.
+Hence $\matr{M}\matr{G} = \matr{A}^+\matr{A}$,
+and it is symmetric,
+which is condition 3 for $\matr{G}$.
 
 For the other order,
 
@@ -63,14 +65,15 @@ $$
 && \text{(@thm-transpose-product)}
 \\
 &= \matr{A}^+\matr{A}\matr{A}^+\matr{A}
-&& \text{(condition 3)}
+&& \text{(condition 3 for } \matr{A}^+ \text{)}
 \\
 &= \matr{A}^+\matr{A},
-&& \text{(condition 1)}
+&& \text{(condition 1 for } \matr{A}^+ \text{)}
 \ea
 $$
 
-so $\matr{G}\matr{M} = \matr{A}^+\matr{A}$ is symmetric, which is condition 4.
+so $\matr{G}\matr{M} = \matr{A}^+\matr{A}$ is symmetric,
+which is condition 4 for $\matr{G}$.
 
 **Conditions 1 and 2.**
 
@@ -81,13 +84,13 @@ $$
 && (\matr{M}\matr{G} = \matr{A}^+\matr{A})
 \\
 &= \tp{(\matr{A}^+\matr{A})}\,\tp{\matr{A}}\matr{A}
-&& \text{(condition 4)}
+&& \text{(condition 4 for } \matr{A}^+ \text{)}
 \\
 &= \tp{(\matr{A}\matr{A}^+\matr{A})}\,\matr{A}
 && \text{(@thm-transpose-product)}
 \\
 &= \tp{\matr{A}}\matr{A}
-&& \text{(condition 1)}
+&& \text{(condition 1 for } \matr{A}^+ \text{)}
 \\
 &= \matr{M},
 && \text{(definition of } \matr{M} \text{)}
@@ -97,7 +100,7 @@ $$
 && (\matr{G}\matr{M} = \matr{A}^+\matr{A})
 \\
 &= \matr{A}^+\,\tp{(\matr{A}^+)}
-&& \text{(condition 2)}
+&& \text{(condition 2 for } \matr{A}^+ \text{)}
 \\
 &= \matr{G}.
 && \text{(definition of } \matr{G} \text{)}
