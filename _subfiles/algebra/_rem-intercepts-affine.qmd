@@ -1,0 +1,10 @@
+:::{#rem-intercepts-affine}
+#### Intercepts of an affine function
+
+For an affine function $f(x) = m x + b$ (@def-affine-function):
+
+- the [intercept term](#def-intercept-term) is $b$,
+- the [intercept](#def-intercept) is $f(0) = b$,
+- if $m \ne 0$, the only [x-intercept](#def-x-intercept) is $-b / m$.
+
+:::

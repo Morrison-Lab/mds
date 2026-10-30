@@ -1,9 +1,8 @@
 :::{#def-intercept-term}
 #### Intercept term
 
-In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
-the **intercept term** of $f$ is the summand $b$,
-the one with no factor of $x$.
-The intercept (@def-intercept) of $f$ is $b$.
+When a [function](functions.qmd#def-function) is written as [terms](algebra-sums.qmd#def-term) added together,
+its **intercept term** is the [term](algebra-sums.qmd#def-term) with no factor of the [input](functions.qmd#def-argument).
+The intercept (@def-intercept) of the function is the [value](functions.qmd#def-value) of that term at input $0$.
 
 :::

@@ -80,6 +80,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_rem-intercepts-affine.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-linear-function.qmd >}}
 
 {{< slidebreak >}}

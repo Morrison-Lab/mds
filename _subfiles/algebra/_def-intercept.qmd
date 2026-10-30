@@ -1,8 +1,8 @@
 :::{#def-intercept}
 #### Intercept, y-intercept
 
-In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
-$b$ is called the **intercept** (or **y-intercept**) of $f$,
-because it is $f(0)$.
+The **intercept** (or **y-intercept**) of a [function](functions.qmd#def-function) $f$ whose [domain](functions.qmd#def-domain) contains $0$
+is $f(0)$,
+the height at which the [graph](functions.qmd#def-graph) of $f$ crosses the vertical axis.
 
 :::

@@ -1,8 +1,8 @@
 :::{#def-x-intercept}
 #### x-intercept
 
-For an affine function $f(x) = m x + b$ (@def-affine-function) with $m \ne 0$,
-the **x-intercept** of $f$ is the $x$ with $f(x) = 0$,
-which is $-b / m$.
+An **x-intercept** of a [function](functions.qmd#def-function) $f$ is an [input](functions.qmd#def-argument) $x$ with $f(x) = 0$,
+a point where the [graph](functions.qmd#def-graph) of $f$ crosses the horizontal axis.
+A function can have no x-intercept, one, or many.
 
 :::
