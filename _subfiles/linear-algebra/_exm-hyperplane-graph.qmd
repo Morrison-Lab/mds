@@ -20,7 +20,8 @@ since $2 \cdot 0 - 0 + 1 = 1 \ne 0$.
 #|   A straight line rising to the right through the point (0, 1).
 #|   An arrow from (0, 1) points right and down, perpendicular to the line.
 #|   A second point at the origin lies below the line.
-normal_arrow <- grid::arrow(length = grid::unit(0.15, "inches"))
+arrow_length <- grid::unit(0.15, "inches")
+normal_arrow <- grid::arrow(length = arrow_length)
 points <- data.frame(x = c(0, 0), y = c(1, 0), label = c("on the line", "off the line"))
 ggplot2::ggplot() +
   ggplot2::geom_abline(intercept = 1, slope = 2) +
