@@ -1,0 +1,30 @@
+:::{#exm-convex-hessian-converse}
+#### A strictly convex function whose second derivative is zero at a point
+
+Let $f(x) = x^4$ on $\reals$.
+Its [second derivative](calculus-derivatives.qmd#def-second-derivative) is $12 x^2$, which is $0$ at $x = 0$,
+so the Hessian is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite) everywhere, as @thm-convex-hessian-converse requires,
+but not [positive definite](linear-algebra-special-matrices.qmd#def-positive-definite) at $0$.
+
+Yet $f$ is strictly convex (@def-strictly-convex).
+For $x \ne y$, the gap between $f$ and its tangent plane (@def-tangent-plane) in @thm-convex-first-order is
+
+$$
+\ba
+f(x) - f(y) - f'(y)\,(x - y)
+&= x^4 - y^4 - 4 y^3 (x - y)
+&& \text{(} f'(y) = 4 y^3 \text{)}
+\\
+&= x^4 - 4 x y^3 + 3 y^4
+&& \text{(expanding)}
+\\
+&= (x - y)^2 \paren{(x + y)^2 + 2 y^2},
+&& \text{(factoring)}
+\ea
+$$
+
+which is positive: $(x - y)^2 > 0$, and $(x + y)^2 + 2 y^2 > 0$ unless $y = 0$ and $x = 0$.
+So the Hessian of a strictly convex function (@def-strictly-convex) can be positive semidefinite without being positive definite.
+Part 2 of @thm-convex-hessian therefore has no [converse](proof-writing.qmd#def-converse).
+
+:::
