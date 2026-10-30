@@ -1,8 +1,8 @@
 :::{#exm-cross-product-sum-outer}
 #### The Gram matrix and a cross-product as sums of outer products
 
-Let $\matr{A} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}$,
-$\matr{B} =\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$
+Let $\matr{A} = \sbmat{1 & 0 \\ 1 & 1 \\ 0 & 1}$,
+$\matr{B} = \sbmat{1 \\ 2 \\ 3}$
 be the matrices of @exm-cross-product-matrix.
 The rows of $\matr{A}$ are $\vecf{r}_1 = (1, 0)$, $\vecf{r}_2 = (1, 1)$, $\vecf{r}_3 = (0, 1)$.
 Taking $\matr{B} = \matr{A}$ in @thm-cross-product-sum-outer,
@@ -14,12 +14,12 @@ $$
 &= \vecf{r}_1\,\tp{\vecf{r}_1} + \vecf{r}_2\,\tp{\vecf{r}_2} + \vecf{r}_3\,\tp{\vecf{r}_3}
 && \text{(@thm-cross-product-sum-outer)}
 \\
-&= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}
-+ \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}
-+ \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}
+&= \sbmat{1 & 0 \\ 0 & 0}
++ \sbmat{1 & 1 \\ 1 & 1}
++ \sbmat{0 & 0 \\ 0 & 1}
 && \text{(@def-outer-product)}
 \\
-&= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}.
+&= \sbmat{2 & 1 \\ 1 & 2}.
 && \text{(add)}
 \ea
 $$
@@ -34,12 +34,12 @@ $$
 &= 1 \vecf{r}_1 + 2 \vecf{r}_2 + 3 \vecf{r}_3
 && \text{(@thm-cross-product-sum-outer)}
 \\
-&= \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-+ \begin{bmatrix} 2 \\ 2 \end{bmatrix}
-+ \begin{bmatrix} 0 \\ 3 \end{bmatrix}
+&= \sbmat{1 \\ 0}
++ \sbmat{2 \\ 2}
++ \sbmat{0 \\ 3}
 && \text{(scalar multiples)}
 \\
-&= \begin{bmatrix} 3 \\ 5 \end{bmatrix},
+&= \sbmat{3 \\ 5},
 && \text{(add)}
 \ea
 $$
