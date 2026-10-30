@@ -1,0 +1,58 @@
+:::{#thm-convex-hessian-converse}
+#### A convex function has a positive semidefinite Hessian
+
+Let $f : \reals^p \to \reals$ have first and [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative)
+that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$.
+If $f$ is [convex](algebra-sums.qmd#def-convex-function),
+then the Hessian $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite) for every $\vx \in \reals^p$.
+
+:::
+
+::: proof
+
+Fix $\vx, \vecf{v} \in \reals^p$.
+Let $h > 0$.
+By @thm-taylor-mv applied with $\vecf{z} = \vx$ and $\vecf{h} = h\vecf{v}$,
+and again with $\vecf{h} = -h\vecf{v}$,
+there are $\midpt_+, \midpt_- \in (0, 1)$ with
+
+$$
+\ba
+f(\vx + h\vecf{v})
+&= f(\vx) + h\,\tp{\paren{\deriv{\vx} f(\vx)}} \vecf{v} + \frac{h^2}{2}\,\tp{\vecf{v}}\,\matr{H}_f(\vecf{w}_+)\,\vecf{v}
+&& \text{(@thm-taylor-mv)}
+\\
+f(\vx - h\vecf{v})
+&= f(\vx) - h\,\tp{\paren{\deriv{\vx} f(\vx)}} \vecf{v} + \frac{h^2}{2}\,\tp{\vecf{v}}\,\matr{H}_f(\vecf{w}_-)\,\vecf{v},
+&& \text{(@thm-taylor-mv)}
+\ea
+$$
+
+where $\vecf{w}_\pm = \vx \pm \midpt_\pm h\vecf{v}$.
+Adding the two equations cancels the first-order summands:
+
+$$
+f(\vx + h\vecf{v}) + f(\vx - h\vecf{v}) - 2 f(\vx)
+= \frac{h^2}{2}\,\tp{\vecf{v}}\paren{\matr{H}_f(\vecf{w}_+) + \matr{H}_f(\vecf{w}_-)}\vecf{v}.
+$$
+
+Since $f$ is [convex](algebra-sums.qmd#def-convex-function) and $\vx = \frac{1}{2}(\vx + h\vecf{v}) + \frac{1}{2}(\vx - h\vecf{v})$,
+
+$$
+f(\vx) \le \frac{1}{2} f(\vx + h\vecf{v}) + \frac{1}{2} f(\vx - h\vecf{v}),
+$$
+
+so the left side of the previous display is nonnegative.
+Dividing by $h^2 / 2$ gives
+
+$$
+\tp{\vecf{v}}\paren{\matr{H}_f(\vecf{w}_+) + \matr{H}_f(\vecf{w}_-)}\vecf{v} \ge 0
+\qquad \text{for every } h > 0.
+$$
+
+As $h \to 0$, both $\vecf{w}_+$ and $\vecf{w}_-$ approach $\vx$,
+and the entries of $\matr{H}_f$ are [continuous](vector-calculus.qmd#def-continuous-several),
+so the left side approaches $2\,\tp{\vecf{v}}\,\matr{H}_f(\vx)\,\vecf{v}$.
+Therefore $\tp{\vecf{v}}\,\matr{H}_f(\vx)\,\vecf{v} \ge 0$ for every $\vecf{v}$.
+
+:::

@@ -64,4 +64,8 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_thm-convex-hessian-converse.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_cor-convex-stationary.qmd >}}
