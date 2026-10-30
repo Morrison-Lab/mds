@@ -9,7 +9,7 @@ $\matr{A}\vecf{x} = (x_1, 0) = (2, 0)$,
 that is, $x_1 = 2$ with $x_2$ arbitrary.
 Each of them leaves the same residual $\vecf{b} - \matr{A}\vecf{x} = (0, 3)$, of [norm](linear-algebra-inner-products.qmd#def-norm) $3$.
 
-Their squared lengths are
+For these solutions,
 
 $$
 \norm{\vecf{x}}^2 = 4 + x_2^2
