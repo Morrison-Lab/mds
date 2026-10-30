@@ -1,0 +1,35 @@
+:::{#thm-cross-product-sum-outer}
+#### The cross-product matrix is the sum of the outer products of the rows
+
+Let $\matr{A}$ be an $m \times n$ [matrix](linear-algebra-matrices.qmd#def-matrix) with rows $\tp{\vecf{r}_1}, \ldots, \tp{\vecf{r}_m}$.
+Let $\matr{B}$ be an $m \times q$ matrix with rows $\tp{\vecf{s}_1}, \ldots, \tp{\vecf{s}_m}$.
+Then the [cross-product matrix](#def-cross-product-matrix) of $\matr{A}$ with $\matr{B}$ is
+
+$$
+\tprod{\matr{A}}{\matr{B}} = \sumto{i}{m} \vecf{r}_i\,\tp{\vecf{s}_i}.
+$$
+
+:::
+
+:::{.proof}
+Compare entry $(j, k)$ of each side.
+
+$$
+\ba
+\paren{\tprod{\matr{A}}{\matr{B}}}_{jk}
+&= \sumto{i}{m} \paren{\matr{A}}_{ij} \paren{\matr{B}}_{ik}
+&& \text{(@def-matrix-mult)}
+\\
+&= \sumto{i}{m} \paren{\vecf{r}_i}_j \paren{\vecf{s}_i}_k
+&& \text{(entries of the rows)}
+\\
+&= \sumto{i}{m} \paren{\vecf{r}_i\,\tp{\vecf{s}_i}}_{jk}
+&& \text{(@def-outer-product)}
+\\
+&= \paren{\sumto{i}{m} \vecf{r}_i\,\tp{\vecf{s}_i}}_{jk}.
+&& \text{(entries of a sum)}
+\ea
+$$
+
+Every entry agrees, so the two matrices agree.
+:::

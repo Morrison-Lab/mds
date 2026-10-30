@@ -1,0 +1,49 @@
+:::{#exm-cross-product-sum-outer}
+#### The Gram matrix and a cross-product as sums of outer products
+
+Let $\matr{A} = \sbmat{1 & 0 \\ 1 & 1 \\ 0 & 1}$,
+$\matr{B} = \sbmat{1 \\ 2 \\ 3}$
+be the matrices of @exm-cross-product-matrix.
+The rows of $\matr{A}$ are $\vecf{r}_1 = (1, 0)$, $\vecf{r}_2 = (1, 1)$, $\vecf{r}_3 = (0, 1)$.
+Taking $\matr{B} = \matr{A}$ in @thm-cross-product-sum-outer,
+the [Gram matrix](#def-gram-matrix) is the [sum](algebra.qmd#def-summation) of the [outer products](linear-algebra-inner-products.qmd#def-outer-product) of the rows with themselves:
+
+$$
+\ba
+\tprod{\matr{A}}{\matr{A}}
+&= \vecf{r}_1\,\tp{\vecf{r}_1} + \vecf{r}_2\,\tp{\vecf{r}_2} + \vecf{r}_3\,\tp{\vecf{r}_3}
+&& \text{(@thm-cross-product-sum-outer)}
+\\
+&= \sbmat{1 & 0 \\ 0 & 0}
++ \sbmat{1 & 1 \\ 1 & 1}
++ \sbmat{0 & 0 \\ 0 & 1}
+&& \text{(@def-outer-product)}
+\\
+&= \sbmat{2 & 1 \\ 1 & 2}.
+&& \text{(add)}
+\ea
+$$
+
+This is the Gram matrix of @exm-gram-matrix.
+Now keep the column $\matr{B}$ above.
+Its rows are the 1-vectors $\vecf{s}_1 = (1)$, $\vecf{s}_2 = (2)$, $\vecf{s}_3 = (3)$, so
+
+$$
+\ba
+\tprod{\matr{A}}{\matr{B}}
+&= 1 \vecf{r}_1 + 2 \vecf{r}_2 + 3 \vecf{r}_3
+&& \text{(@thm-cross-product-sum-outer)}
+\\
+&= \sbmat{1 \\ 0}
++ \sbmat{2 \\ 2}
++ \sbmat{0 \\ 3}
+&& \text{(scalar multiples)}
+\\
+&= \sbmat{3 \\ 5},
+&& \text{(add)}
+\ea
+$$
+
+the same as in @exm-cross-product-matrix.
+
+:::
