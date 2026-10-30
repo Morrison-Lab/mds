@@ -10542,6 +10542,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-inflection-point",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-inflection-point",
+   "kind": "def",
+   "title": "Inflection point",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-iterate",
    "site": "mds",
    "page": "optimization",
@@ -10947,6 +10956,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#thm-second-derivative-test",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-second-derivative-test",
+   "kind": "thm",
+   "title": "Second derivative test",
+   "external": false
+  },
+  {
    "id": "mds/optimization#thm-second-order-condition",
    "site": "mds",
    "page": "optimization",
@@ -11208,6 +11226,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization-critical-points#def-inflection-point",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "def-inflection-point",
+   "kind": "def",
+   "title": "Inflection point",
+   "external": false
+  },
+  {
    "id": "mds/optimization-critical-points#def-local-maximizer",
    "site": "mds",
    "page": "optimization-critical-points",
@@ -11286,6 +11313,15 @@
    "div": "thm-flat-point-critical",
    "kind": "thm",
    "title": "Every flat point is a critical point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-critical-points#thm-second-derivative-test",
+   "site": "mds",
+   "page": "optimization-critical-points",
+   "div": "thm-second-derivative-test",
+   "kind": "thm",
+   "title": "Second derivative test",
    "external": false
   },
   {
@@ -18070,6 +18106,18 @@
    "mds/vector-calculus#def-partial-derivative"
   ],
   [
+   "mds/optimization#def-inflection-point",
+   "mds/calculus-derivatives#def-second-derivative"
+  ],
+  [
+   "mds/optimization#def-inflection-point",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/optimization#def-inflection-point",
+   "mds/sets#def-open-interval"
+  ],
+  [
    "mds/optimization#def-iterate",
    "mds/optimization#def-iterative-method"
   ],
@@ -18418,6 +18466,18 @@
    "mds/linear-algebra#def-positive-definite"
   ],
   [
+   "mds/optimization#thm-second-derivative-test",
+   "mds/calculus-derivatives#def-second-derivative"
+  ],
+  [
+   "mds/optimization#thm-second-derivative-test",
+   "mds/optimization#def-flat-point"
+  ],
+  [
+   "mds/optimization#thm-second-derivative-test",
+   "mds/sets#def-open-interval"
+  ],
+  [
    "mds/optimization#thm-second-order-condition",
    "mds/linear-algebra#def-positive-definite"
   ],
@@ -18610,6 +18670,18 @@
    "mds/calculus#def-differentiable"
   ],
   [
+   "mds/optimization-critical-points#def-inflection-point",
+   "mds/calculus-derivatives#def-second-derivative"
+  ],
+  [
+   "mds/optimization-critical-points#def-inflection-point",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/optimization-critical-points#def-inflection-point",
+   "mds/sets#def-open-interval"
+  ],
+  [
    "mds/optimization-critical-points#def-saddle-point",
    "mds/algebra#def-local-minimizer"
   ],
@@ -18656,6 +18728,18 @@
   [
    "mds/optimization-critical-points#thm-flat-point-critical",
    "mds/optimization-critical-points#def-flat-point"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-derivative-test",
+   "mds/calculus-derivatives#def-second-derivative"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-derivative-test",
+   "mds/optimization-critical-points#def-flat-point"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-derivative-test",
+   "mds/sets#def-open-interval"
   ],
   [
    "mds/optimization-critical-points#thm-second-order-condition",
