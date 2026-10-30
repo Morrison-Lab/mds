@@ -9,7 +9,7 @@ It is usually placed within linear algebra and its applications
 and these notes do not treat it as a separate subject:
 they use the name *linear algebra* for all of the matrix material in the pages that follow.
 @banerjee2014linear pairs the two names in its title.
-Its preface says that its last chapters cover convergence of matrices and Hilbert spaces
+Its preface says that its last chapters cover convergence of matrices and Hilbert [spaces](linear-algebra-inner-products.qmd#def-inner-product-space)
 [@banerjee2014linear, p. xvi].
 
 :::
