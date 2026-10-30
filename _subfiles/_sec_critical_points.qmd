@@ -100,6 +100,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_rem-second-derivative-test-zero.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/derivatives/_def-inflection-point.qmd >}}
 
 {{< slidebreak >}}
