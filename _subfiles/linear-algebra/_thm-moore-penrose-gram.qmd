@@ -1,0 +1,107 @@
+:::{#thm-moore-penrose-gram}
+#### The Moore-Penrose inverse of a Gram matrix
+
+For every $m \times n$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$,
+
+$$
+(\tp{\matr{A}}\matr{A})^+ = \matr{A}^+\,\tp{(\matr{A}^+)}.
+$$
+
+:::
+
+::: proof
+
+Let $\matr{M} = \tp{\matr{A}}\matr{A}$ and $\matr{G} = \matr{A}^+\,\tp{(\matr{A}^+)}$.
+By @thm-moore-penrose-unique, it is enough to show that $\matr{G}$ satisfies the four conditions of @def-moore-penrose for $\matr{M}$.
+
+**Two identities.**
+Conditions 3 and 4 for $\matr{A}^+$ say that $\matr{A}\matr{A}^+$ and $\matr{A}^+\matr{A}$ are [symmetric](linear-algebra-special-matrices.qmd#def-symmetric-matrix).
+Using condition 1 for $\matr{A}^+$,
+
+$$
+\ba
+\tp{\matr{A}}\,\matr{A}\matr{A}^+
+&= \tp{\matr{A}}\,\tp{(\matr{A}\matr{A}^+)}
+&& \text{(condition 3)}
+\\
+&= \tp{(\matr{A}\matr{A}^+\matr{A})}
+&& \text{(@thm-transpose-product)}
+\\
+&= \tp{\matr{A}}.
+&& \text{(condition 1)}
+\ea
+$$
+
+So
+
+$$
+\ba
+\matr{M}\matr{G}
+&= \tp{\matr{A}}\,\matr{A}\matr{A}^+\,\tp{(\matr{A}^+)}
+&& \text{(definitions of } \matr{M} \text{ and } \matr{G} \text{)}
+\\
+&= \tp{\matr{A}}\,\tp{(\matr{A}^+)}
+&& (\tp{\matr{A}}\,\matr{A}\matr{A}^+ = \tp{\matr{A}})
+\\
+&= \tp{(\matr{A}^+\matr{A})},
+&& \text{(@thm-transpose-product)}
+\ea
+$$
+
+which is $\matr{A}^+\matr{A}$ by condition 4.
+Hence $\matr{M}\matr{G} = \matr{A}^+\matr{A}$, and it is symmetric, which is condition 3 for $\matr{G}$.
+
+For the other order,
+
+$$
+\ba
+\matr{G}\matr{M}
+&= \matr{A}^+\,\tp{(\matr{A}^+)}\,\tp{\matr{A}}\,\matr{A}
+&& \text{(definitions of } \matr{G} \text{ and } \matr{M} \text{)}
+\\
+&= \matr{A}^+\,\tp{(\matr{A}\matr{A}^+)}\,\matr{A}
+&& \text{(@thm-transpose-product)}
+\\
+&= \matr{A}^+\matr{A}\matr{A}^+\matr{A}
+&& \text{(condition 3)}
+\\
+&= \matr{A}^+\matr{A},
+&& \text{(condition 1)}
+\ea
+$$
+
+so $\matr{G}\matr{M} = \matr{A}^+\matr{A}$ is symmetric, which is condition 4.
+
+**Conditions 1 and 2.**
+
+$$
+\ba
+\matr{M}\matr{G}\matr{M}
+&= \matr{A}^+\matr{A}\,\tp{\matr{A}}\matr{A}
+&& (\matr{M}\matr{G} = \matr{A}^+\matr{A})
+\\
+&= \tp{(\matr{A}^+\matr{A})}\,\tp{\matr{A}}\matr{A}
+&& \text{(condition 4)}
+\\
+&= \tp{(\matr{A}\matr{A}^+\matr{A})}\,\matr{A}
+&& \text{(@thm-transpose-product)}
+\\
+&= \tp{\matr{A}}\matr{A}
+&& \text{(condition 1)}
+\\
+&= \matr{M},
+&& \text{(definition of } \matr{M} \text{)}
+\\
+\matr{G}\matr{M}\matr{G}
+&= \matr{A}^+\matr{A}\,\matr{A}^+\,\tp{(\matr{A}^+)}
+&& (\matr{G}\matr{M} = \matr{A}^+\matr{A})
+\\
+&= \matr{A}^+\,\tp{(\matr{A}^+)}
+&& \text{(condition 2)}
+\\
+&= \matr{G}.
+&& \text{(definition of } \matr{G} \text{)}
+\ea
+$$
+
+:::

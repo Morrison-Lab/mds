@@ -1,0 +1,79 @@
+:::{#thm-moore-penrose-eigendecomposition}
+#### The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition
+
+Let $\matr{S} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$ be an eigendecomposition (@def-eigendecomposition) of a [symmetric matrix](linear-algebra-special-matrices.qmd#def-symmetric-matrix) $\matr{S}$,
+with [diagonal entries](linear-algebra-matrices.qmd#def-diagonal-entry) $\eigval_1, \ldots, \eigval_p$ in the [diagonal matrix](linear-algebra-special-matrices.qmd#def-diagonal-matrix) $\matr{\Eigvals}$.
+Let $\matr{\Eigvals}^+$ be the diagonal matrix with $j$th [diagonal entry](linear-algebra-matrices.qmd#def-diagonal-entry) $1/\eigval_j$ if $\eigval_j \ne 0$ and $0$ if $\eigval_j = 0$.
+Then
+
+$$
+\matr{S}^+ = \matr{Q}\matr{\Eigvals}^+\tp{\matr{Q}}.
+$$
+
+:::
+
+::: proof
+
+Let $\matr{G} = \matr{Q}\matr{\Eigvals}^+\tp{\matr{Q}}$.
+By @thm-moore-penrose-unique, it is enough to show that $\matr{G}$ satisfies the four conditions of @def-moore-penrose for $\matr{S}$.
+
+**Two facts about the diagonal matrices.**
+The $j$th [diagonal entry](linear-algebra-matrices.qmd#def-diagonal-entry) of $\matr{\Eigvals}\matr{\Eigvals}^+\matr{\Eigvals}$ is $\eigval_j \cdot (1/\eigval_j) \cdot \eigval_j = \eigval_j$ if $\eigval_j \ne 0$, and $0 = \eigval_j$ if $\eigval_j = 0$.
+So $\matr{\Eigvals}\matr{\Eigvals}^+\matr{\Eigvals} = \matr{\Eigvals}$.
+In the same way, $\matr{\Eigvals}^+\matr{\Eigvals}\matr{\Eigvals}^+ = \matr{\Eigvals}^+$.
+Both $\matr{\Eigvals}\matr{\Eigvals}^+$ and $\matr{\Eigvals}^+\matr{\Eigvals}$ are diagonal, so each is [symmetric](linear-algebra-special-matrices.qmd#def-symmetric-matrix).
+
+**Conditions 1 and 2.**
+
+$$
+\ba
+\matr{S}\matr{G}\matr{S}
+&= \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}\,\matr{Q}\matr{\Eigvals}^+\tp{\matr{Q}}\,\matr{Q}\matr{\Eigvals}\tp{\matr{Q}}
+&& \text{(definitions of } \matr{S} \text{ and } \matr{G} \text{)}
+\\
+&= \matr{Q}\matr{\Eigvals}\matr{\Eigvals}^+\matr{\Eigvals}\tp{\matr{Q}}
+&& (\tp{\matr{Q}}\matr{Q} = \matr{I}, \text{ twice})
+\\
+&= \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}
+&& (\matr{\Eigvals}\matr{\Eigvals}^+\matr{\Eigvals} = \matr{\Eigvals})
+\\
+&= \matr{S},
+&& \text{(definition of } \matr{S} \text{)}
+\ea
+$$
+
+and likewise
+
+$$
+\ba
+\matr{G}\matr{S}\matr{G}
+&= \matr{Q}\matr{\Eigvals}^+\matr{\Eigvals}\matr{\Eigvals}^+\tp{\matr{Q}}
+&& (\tp{\matr{Q}}\matr{Q} = \matr{I}, \text{ twice})
+\\
+&= \matr{Q}\matr{\Eigvals}^+\tp{\matr{Q}}
+&& (\matr{\Eigvals}^+\matr{\Eigvals}\matr{\Eigvals}^+ = \matr{\Eigvals}^+)
+\\
+&= \matr{G}.
+&& \text{(definition of } \matr{G} \text{)}
+\ea
+$$
+
+**Conditions 3 and 4.**
+
+$$
+\ba
+\matr{S}\matr{G}
+&= \matr{Q}\matr{\Eigvals}\matr{\Eigvals}^+\tp{\matr{Q}}
+&& (\tp{\matr{Q}}\matr{Q} = \matr{I})
+\\
+&= \tp{\paren{\matr{Q}\matr{\Eigvals}\matr{\Eigvals}^+\tp{\matr{Q}}}}
+&& (\matr{\Eigvals}\matr{\Eigvals}^+ \text{ is diagonal, so equals its transpose})
+\\
+&= \tp{(\matr{S}\matr{G})},
+&& \text{(just shown, in the other order)}
+\ea
+$$
+
+and the same steps with $\matr{\Eigvals}^+\matr{\Eigvals}$ in place of $\matr{\Eigvals}\matr{\Eigvals}^+$ give $\matr{G}\matr{S} = \tp{(\matr{G}\matr{S})}$.
+
+:::
