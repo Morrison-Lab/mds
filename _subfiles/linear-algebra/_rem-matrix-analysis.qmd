@@ -1,10 +1,10 @@
 :::{#rem-matrix-analysis}
 #### Linear algebra and matrix analysis
 
-[Matrix analysis](#def-matrix-analysis) is usually placed within [linear](algebra.qmd#def-linear-function) algebra and its applications
+[Matrix analysis](#def-matrix-analysis) is usually placed within [linear algebra](linear-algebra.qmd) and its applications
 [@wikipedia_matrix_analysis],
 and these notes do not treat it as a separate subject:
-they use the name *linear algebra* for the material in the pages that follow.
+they use the name *linear algebra* for the material in the pages above.
 @banerjee2014linear pairs the two names in its title.
 Its preface says that its last chapters cover
 [convergence](algebra.qmd#def-convergent-sequence) of [matrices](linear-algebra-matrices.qmd#def-matrix) and Hilbert [spaces](linear-algebra-inner-products.qmd#def-inner-product-space)
