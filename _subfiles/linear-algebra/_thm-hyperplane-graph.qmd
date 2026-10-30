@@ -1,15 +1,15 @@
 :::{#thm-hyperplane-graph}
 #### The graph of an affine function is a hyperplane
 
-Let $\vec{w} \in \reals^p$, $b \in \reals$.
-The [graph](functions.qmd#def-graph) of the [function](functions.qmd#def-function) $\vx \mapsto \dprod{\vec{w}}{\vx} + b$ is the [set](sets.qmd#def-set)
+Let $\vw \in \reals^p$, $b \in \reals$.
+The [graph](functions.qmd#def-graph) of the [function](functions.qmd#def-function) $\vx \mapsto \dprod{\vw}{\vx} + b$ is the [set](sets.qmd#def-set)
 
 $$
-\cb{\sbmat{\vx \\ y} \in \reals^{p+1} : y = \dprod{\vec{w}}{\vx} + b}.
+\cb{\sbmat{\vx \\ y} \in \reals^{p+1} : y = \dprod{\vw}{\vx} + b}.
 $$
 
 This set is a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) in $\reals^{p+1}$,
-with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $\sbmat{\vec{w} \\ -1}$.
+with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $\sbmat{\vw \\ -1}$.
 
 :::
 
@@ -18,15 +18,17 @@ For $\sbmat{\vx \\ y} \in \reals^{p+1}$,
 
 $$
 \ba
-y = \dprod{\vec{w}}{\vx} + b
-&\iff \dprod{\vec{w}}{\vx} - y + b = 0
+y = \dprod{\vw}{\vx} + b
+&\iff \dprod{\vw}{\vx} - y + b = 0
 && \text{(subtract } y \text{ from both sides)}
 \\
-&\iff \dprod{\sbmat{\vec{w} \\ -1}}{\sbmat{\vx \\ y}} + b = 0.
+&\iff \dprod{\sbmat{\vw \\ -1}}{\sbmat{\vx \\ y}} + b = 0.
 && \text{(dot product of stacked vectors)}
 \ea
 $$
 
-So the [set](sets.qmd#def-set) is the solution set of the equation in @def-hyperplane, with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $\sbmat{\vec{w} \\ -1}$.
-That vector is nonzero, because its last entry is $-1$.
+So the [set](sets.qmd#def-set) is the solution set of the equation of a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane),
+with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $\sbmat{\vw \\ -1}$.
+That vector is nonzero,
+because its last entry is $-1$.
 :::
