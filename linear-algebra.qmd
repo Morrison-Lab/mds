@@ -51,6 +51,12 @@ goes on to the page that now holds it.
 
 :::
 
+{{< include mds/_subfiles/linear-algebra/_def-matrix-analysis.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-matrix-analysis.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-matrix-analysis.qmd >}}
+
 ## Further reading {#sec-additional-resources}
 
 - @strang2023linear
