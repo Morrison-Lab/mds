@@ -1,7 +1,8 @@
 :::{#exm-moore-penrose-gram-cor}
 #### Recovering the Moore-Penrose inverse of a column of ones
 
-For $\matr{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$, @exm-moore-penrose-gram found $(\tp{\matr{A}}\matr{A})^+ = \begin{bmatrix} 1/2 \end{bmatrix}$.
+For $\matr{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$,
+@exm-moore-penrose-gram found $(\tp{\matr{A}}\matr{A})^+ = \begin{bmatrix} 1/2 \end{bmatrix}$.
 Then
 
 $$
