@@ -3,6 +3,7 @@
 
 When a [function](functions.qmd#def-function) is written as [terms](algebra-sums.qmd#def-term) added together,
 its **intercept term** is the [term](algebra-sums.qmd#def-term) with no factor of the [input](functions.qmd#def-argument).
-When every other term has a factor of the input, the intercept (@def-intercept) of the function is this term.
+When every other term has a factor of the input,
+the intercept (@def-intercept) of the function is this term.
 
 :::
