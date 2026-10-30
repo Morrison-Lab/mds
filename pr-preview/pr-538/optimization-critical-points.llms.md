@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 14:41:42 (PDT)
+Last modified: 2026-10-29 17:04:36 (PDT)
 
 ## 1 Critical points and optimization
 
@@ -323,8 +323,8 @@ Last modified: 2026-10-29 14:41:42 (PDT)
 >
 > **Theorem 2 (Second derivative test)** Let \\c\\ be a [flat point](#def-flat-point) of \\f\\, where the [second derivative](calculus-derivatives.llms.md#def-second-derivative) \\f''(c)\\ is defined.
 >
-> - If \\f''(c) \> 0\\, then \\f(x) \> f(c)\\ for every \\x \ne c\\ in some [open interval](sets.llms.md#def-open-interval) around \\c\\, so \\c\\ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
-> - If \\f''(c) \< 0\\, then \\f(x) \< f(c)\\ for every \\x \ne c\\ in some open interval around \\c\\, so \\f\\ is largest at \\c\\ among the points near \\c\\.
+> - If \\f''(c) \> 0\\, then \\f(x) \> f(c)\\ for every \\x \ne c\\ in some [open interval](sets.llms.md#def-open-interval) around \\c\\.
+> - If \\f''(c) \< 0\\, then \\f(x) \< f(c)\\ for every \\x \ne c\\ in some open interval around \\c\\.
 
 > **NOTE:**
 >
@@ -338,13 +338,13 @@ Last modified: 2026-10-29 14:41:42 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (The second derivative test can fail to decide). If \\f''(c) = 0\\ at a [flat point](#def-flat-point) \\c\\, the [second derivative test](#thm-second-derivative-test) does not decide: \\f\\ may be smallest at \\c\\ among nearby points, largest there, or neither ([Example 4](#exm-second-derivative-test)).
-
-> **NOTE:**
->
 > **Example 4 (Second derivative test for powers of \\x\\)** The [function](functions.llms.md#def-function) \\f(x) = x^2\\ has the [flat point](#def-flat-point) \\c = 0\\ and [second derivative](calculus-derivatives.llms.md#def-second-derivative) \\f''(0) = 2 \> 0\\, so \\0\\ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) by [Theorem 2](#thm-second-derivative-test).
 >
 > The [functions](functions.llms.md#def-function) \\x^3\\ and \\x^4\\ both have the flat point \\0\\ and second derivative \\0\\ there, so the test does not decide. Yet \\x^4\\ is smallest at \\0\\ among nearby points, while \\x^3\\ is smaller to the left of \\0\\ and larger to the right of \\0\\.
+
+> **NOTE:**
+>
+> *Remark 1* (The second derivative test can fail to decide). If \\f''(c) = 0\\ at a [flat point](#def-flat-point) \\c\\, the [second derivative test](#thm-second-derivative-test) does not decide: \\f\\ may be smallest at \\c\\ among nearby points, largest there, or neither ([Example 4](#exm-second-derivative-test)).
 
 > **NOTE:**
 >
