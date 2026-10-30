@@ -10,7 +10,8 @@ then the Hessian $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-spe
 
 ::: proof
 
-Fix $\vx, \vecf{v} \in \reals^p$ and let $h > 0$.
+Fix $\vx, \vecf{v} \in \reals^p$.
+Let $h > 0$.
 By @thm-taylor-mv applied with $\vecf{z} = \vx$ and $\vecf{h} = h\vecf{v}$,
 and again with $\vecf{h} = -h\vecf{v}$,
 there are $\midpt_+, \midpt_- \in (0, 1)$ with
