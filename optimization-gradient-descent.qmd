@@ -18,4 +18,6 @@ py_packages <- c("numpy", "pandas", "matplotlib")
 reticulate::py_require(py_packages)
 ```
 
+[]{#sec-gradient-descent}
+
 {{< include mds/_subfiles/_sec_optimization_gradient_descent.qmd >}}
