@@ -1,0 +1,34 @@
+:::{#exm-moore-penrose-eigendecomposition}
+#### The Moore-Penrose inverse of a rank-one symmetric matrix
+
+For the [symmetric matrix](linear-algebra-special-matrices.qmd#def-symmetric-matrix) $\matr{S} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$,
+an [eigendecomposition](linear-algebra-special-matrices.qmd#def-eigendecomposition) is
+
+$$
+\matr{S}
+= \underbrace{\frac{1}{\sqrt{2}}\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}}_{\matr{Q}}
+  \underbrace{\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}}_{\matr{\Eigvals}}
+  \tp{\matr{Q}}.
+$$
+
+Inverting only the nonzero [eigenvalue](linear-algebra-special-matrices.qmd#def-eigenvalue) gives $\matr{\Eigvals}^+ = \begin{bmatrix} 1/2 & 0 \\ 0 & 0 \end{bmatrix}$, so
+
+$$
+\ba
+\matr{S}^+
+&= \matr{Q}\matr{\Eigvals}^+\tp{\matr{Q}}
+&& \text{(@thm-moore-penrose-eigendecomposition)}
+\\
+&= \frac{1}{2}\cdot\frac{1}{2}\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}
+&& \text{(only the first column of } \matr{Q} \text{ contributes)}
+\\
+&= \frac{1}{4}\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}.
+\ea
+$$
+
+Condition 1 of @def-moore-penrose holds:
+$\matr{S}\matr{S}^+ = \frac{1}{2}\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$,
+and multiplying by $\matr{S}$ again gives $\matr{S}$.
+An [inverse](linear-algebra-special-matrices.qmd#def-matrix-inverse) of $\matr{S}$ itself does not exist, because $\matr{S}$ has a zero eigenvalue.
+
+:::

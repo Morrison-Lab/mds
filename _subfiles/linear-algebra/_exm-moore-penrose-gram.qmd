@@ -1,0 +1,22 @@
+:::{#exm-moore-penrose-gram}
+#### The Moore-Penrose inverse of the Gram matrix of a column of ones
+
+For $\matr{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$, the [Gram matrix](linear-algebra-rank-nullity.qmd#def-gram-matrix) is $\tp{\matr{A}}\matr{A} = \begin{bmatrix} 2 \end{bmatrix}$,
+so $(\tp{\matr{A}}\matr{A})^+ = \begin{bmatrix} 1/2 \end{bmatrix}$.
+By @thm-moore-penrose-full-rank, $\matr{A}^+ = \inv{(\tp{\matr{A}}\matr{A})}\,\tp{\matr{A}} = \begin{bmatrix} 1/2 & 1/2 \end{bmatrix}$.
+Then
+
+$$
+\ba
+\matr{A}^+\,\tp{(\matr{A}^+)}
+&= \begin{bmatrix} 1/2 & 1/2 \end{bmatrix}\begin{bmatrix} 1/2 \\ 1/2 \end{bmatrix}
+\\
+&= \frac{1}{4} + \frac{1}{4}
+\\
+&= \frac{1}{2},
+\ea
+$$
+
+which is $(\tp{\matr{A}}\matr{A})^+$, as @thm-moore-penrose-gram states.
+
+:::
