@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 13:38:16 (PDT)
+Last modified: 2026-10-30 15:48:34 (PDT)
 
 ## 0.1 Sums and direct sums
 

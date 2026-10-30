@@ -13011,15 +13011,31 @@
   ],
   [
    "mds/algebra#def-intercept",
-   "mds/algebra#def-affine-function"
+   "mds/functions#def-domain"
   ],
   [
-   "mds/algebra#def-intercept-term",
-   "mds/algebra#def-affine-function"
+   "mds/algebra#def-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra#def-intercept",
+   "mds/functions#def-graph"
   ],
   [
    "mds/algebra#def-intercept-term",
    "mds/algebra#def-intercept"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/algebra-sums#def-term"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra#def-like-terms",
@@ -13303,7 +13319,15 @@
   ],
   [
    "mds/algebra#def-x-intercept",
-   "mds/algebra#def-affine-function"
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra#def-x-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra#def-x-intercept",
+   "mds/functions#def-graph"
   ],
   [
    "mds/algebra#lem-nonneg-series",
@@ -13551,15 +13575,31 @@
   ],
   [
    "mds/algebra-exponentials#def-intercept",
-   "mds/algebra-exponentials#def-affine-function"
+   "mds/functions#def-domain"
   ],
   [
-   "mds/algebra-exponentials#def-intercept-term",
-   "mds/algebra-exponentials#def-affine-function"
+   "mds/algebra-exponentials#def-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept",
+   "mds/functions#def-graph"
   ],
   [
    "mds/algebra-exponentials#def-intercept-term",
    "mds/algebra-exponentials#def-intercept"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/algebra-sums#def-term"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra-exponentials#def-linear-function",
@@ -13679,7 +13719,15 @@
   ],
   [
    "mds/algebra-exponentials#def-x-intercept",
-   "mds/algebra-exponentials#def-affine-function"
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra-exponentials#def-x-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-x-intercept",
+   "mds/functions#def-graph"
   ],
   [
    "mds/algebra-exponentials#lem-nonneg-series",

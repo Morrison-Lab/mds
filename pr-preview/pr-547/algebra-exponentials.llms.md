@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 13:38:16 (PDT)
+Last modified: 2026-10-30 15:48:34 (PDT)
 
 ## 0.1 Polynomials
 
@@ -144,15 +144,23 @@ Last modified: 2026-10-30 13:38:16 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Intercept, y-intercept)** In the formula \\f(x) = m x + b\\ for an affine function \\f\\ ([Definition 11](#def-affine-function)), \\b\\ is called the **intercept** (or **y-intercept**) of \\f\\, because it is \\f(0)\\.
+> **Definition 13 (Intercept, y-intercept)** The **intercept** (or **y-intercept**) of a [function](functions.llms.md#def-function) \\f\\ whose [domain](functions.llms.md#def-domain) contains \\0\\ is \\f(0)\\, the height at which the [graph](functions.llms.md#def-graph) of \\f\\ crosses the vertical axis.
 
 > **NOTE:**
 >
-> **Definition 14 (Intercept term)** In the formula \\f(x) = m x + b\\ for an affine function \\f\\ ([Definition 11](#def-affine-function)), the **intercept term** of \\f\\ is the summand \\b\\, the one with no factor of \\x\\. The intercept ([Definition 13](#def-intercept)) of \\f\\ is \\b\\.
+> **Definition 14 (Intercept term)** When a [function](functions.llms.md#def-function) is written as [terms](algebra-sums.llms.md#def-term) added together, its **intercept term** is the [term](algebra-sums.llms.md#def-term) with no factor of the [input](functions.llms.md#def-argument). When every other term has a factor of the input, the intercept ([Definition 13](#def-intercept)) of the function is this term.
 
 > **NOTE:**
 >
-> **Definition 15 (x-intercept)** For an affine function \\f(x) = m x + b\\ ([Definition 11](#def-affine-function)) with \\m \ne 0\\, the **x-intercept** of \\f\\ is the \\x\\ with \\f(x) = 0\\, which is \\-b / m\\.
+> **Definition 15 (x-intercept)** An **x-intercept** of a [function](functions.llms.md#def-function) \\f\\ is an [input](functions.llms.md#def-argument) \\x\\ with \\f(x) = 0\\, a point where the [graph](functions.llms.md#def-graph) of \\f\\ crosses the horizontal axis. A function can have no x-intercept, one, or many.
+
+> **NOTE:**
+>
+> *Remark 2* (Intercepts of an affine function). For an affine function \\f(x) = m x + b\\ ([Definition 11](#def-affine-function)):
+>
+> - the [intercept term](#def-intercept-term) is \\b\\,
+> - the [intercept](#def-intercept) is \\f(0) = b\\,
+> - if \\m \ne 0\\, the only [x-intercept](#def-x-intercept) is \\-b / m\\.
 
 > **NOTE:**
 >
@@ -198,7 +206,7 @@ Last modified: 2026-10-30 13:38:16 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra-matrices.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra-matrices.llms.md#thm-linear-map-zero)).
+> *Remark 3* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra-matrices.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra-matrices.llms.md#thm-linear-map-zero)).
 
 ## 0.3 Limits of sequences
 
@@ -336,7 +344,7 @@ Last modified: 2026-10-30 13:38:16 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (Other notations for the natural logarithm). In these notes, \\{\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 25](#def-euler-number)) [\[14\]](#ref-wikipedia_logarithm). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+> *Remark 4* (Other notations for the natural logarithm). In these notes, \\{\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 25](#def-euler-number)) [\[14\]](#ref-wikipedia_logarithm). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
 
 > **NOTE:**
 >
@@ -508,7 +516,7 @@ Last modified: 2026-10-30 13:38:16 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[15\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
+> *Remark 5* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[15\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
 >
 > - sums are symmetric and associative ([Theorem 5 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-symmetric), [Theorem 6 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-assoc));
 > - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 7 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-one), [Theorem 8 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-symmetric), [Theorem 9 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-assoc), [Theorem 11 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-distr));
@@ -516,7 +524,7 @@ Last modified: 2026-10-30 13:38:16 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 4](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
+> *Remark 6* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 5](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
 
 > **NOTE:**
 >
@@ -582,7 +590,7 @@ Last modified: 2026-10-30 13:38:16 (PDT)
 
 > **NOTE:**
 >
-> *Remark 6* (Contour lines on a plot of a surface). On a plot of the surface \\z = g(b, c)\\, the [contour line](#def-contour-line) is the curve along which the surface has height \\k\\.
+> *Remark 7* (Contour lines on a plot of a surface). On a plot of the surface \\z = g(b, c)\\, the [contour line](#def-contour-line) is the curve along which the surface has height \\k\\.
 
 > **NOTE:**
 >
