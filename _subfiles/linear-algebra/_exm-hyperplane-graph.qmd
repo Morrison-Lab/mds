@@ -1,0 +1,10 @@
+:::{#exm-hyperplane-graph}
+#### The graph of a line is a line in the plane
+
+Take $p = 1$, $\vec{w} = 2$, $b = 1$.
+The [graph](functions.qmd#def-graph) of $y = 2x + 1$ is the [set](sets.qmd#def-set) of points $(x, y)$ in $\reals^2$ with $2x - y + 1 = 0$.
+By @thm-hyperplane-graph, this is a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $(2, -1)$.
+The point $(0, 1)$ is on it, since $2 \cdot 0 - 1 + 1 = 0$.
+The point $(0, 0)$ is off it, since $2 \cdot 0 - 0 + 1 = 1 \ne 0$.
+
+:::
