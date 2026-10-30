@@ -24,9 +24,9 @@ $m$ is called the **slope** of $f$
 {{< slidebreak >}}
 
 :::{#def-intercept}
-#### Intercept
+#### Intercept, intercept term
 
 In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
-$b$ is called the **intercept** of $f$.
+$b$ is called the **intercept** of $f$, or its **intercept term**.
 
 :::
