@@ -22,6 +22,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-cross-product-sum-outer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-cross-product-sum-outer.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-null-gram.qmd >}}
 
 ## Rank-nullity and rank factorization {#sec-rank-nullity}
