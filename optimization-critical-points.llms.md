@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 16:45:03 (PDT)
+Last modified: 2026-10-29 20:01:11 (PDT)
 
 ## 1 Critical points and optimization
 
@@ -344,11 +344,15 @@ Last modified: 2026-10-29 16:45:03 (PDT)
 
 > **NOTE:**
 >
+> *Remark 1* (The second derivative test can fail to decide). If \\f''(c) = 0\\ at a [flat point](#def-flat-point) \\c\\, the [second derivative test](#thm-second-derivative-test) does not decide: \\f\\ may be smallest at \\c\\ among nearby points, largest there, or neither ([Example 4](#exm-second-derivative-test)).
+
+> **NOTE:**
+>
 > **Definition 3 (Inflection point)** An **inflection point** of a [function](functions.llms.md#def-function) \\f\\ is a point \\c\\ such that, on some [open interval](sets.llms.md#def-open-interval) around \\c\\, the [second derivative](calculus-derivatives.llms.md#def-second-derivative) \\f''\\ is positive on one side of \\c\\ and negative on the other.
 
 > **NOTE:**
 >
-> *Remark 1* (Inflection points change the curvature). At an [inflection point](#def-inflection-point), the [graph](functions.llms.md#def-graph) changes between curving up and curving down.
+> *Remark 2* (Inflection points change the curvature). At an [inflection point](#def-inflection-point), the [graph](functions.llms.md#def-graph) changes between curving up and curving down.
 
 > **NOTE:**
 >
@@ -543,7 +547,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 
 > **NOTE:**
 >
-> *Remark 2* (Stationary points in one variable). For \\p = 1\\, a [stationary point](#def-stationary-point) is a flat point ([Definition 1](#def-flat-point)).
+> *Remark 3* (Stationary points in one variable). For \\p = 1\\, a [stationary point](#def-stationary-point) is a flat point ([Definition 1](#def-flat-point)).
 
 > **NOTE:**
 >
@@ -650,7 +654,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 9.471535e-12 6.662049e-11
+> #> [1] 1.071498e-11 1.673470e-10
 > #> 
 > #> 
 > #> $zero_vector
@@ -669,7 +673,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
