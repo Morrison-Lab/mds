@@ -1,10 +1,10 @@
 :::{#def-cauchy-sequence}
 #### Cauchy sequence
 
-A [sequence](functions.qmd#def-sequence) $(\vx_n)$ of vectors in a real [inner product space](linear-algebra-inner-products.qmd#def-inner-product-space) $V$
+A [sequence](functions.qmd#def-sequence) $(\vx_n)$ of vectors in a [real inner product space](linear-algebra-inner-products.qmd#def-inner-product-space) $V$
 is a **Cauchy sequence**
 [@wikipedia_cauchy_sequence]
-if for every $\tolout > 0$ there is a natural number $N$ such that
+if for every $\tolout > 0$ there is a [natural number](number-systems.qmd#def-natural-numbers) $N$ such that
 
 $$\norm{\vx_m - \vx_n} < \tolout \quad \text{for all } m, n \ge N,$$
 

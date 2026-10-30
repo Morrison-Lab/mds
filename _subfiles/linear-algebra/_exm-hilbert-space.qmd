@@ -1,14 +1,14 @@
 :::{#exm-hilbert-space}
 #### Real coordinate space is a Hilbert space
 
-The Euclidean space $\reals^2$ with the dot product (@exm-inner-product-space) is a Hilbert space.
-Let $(\vx_n)$ with $\vx_n = (x_{n,1}, x_{n,2})$ be a Cauchy sequence in it.
-Each coordinate sequence is a Cauchy sequence of real numbers,
+The Euclidean [space](linear-algebra-vectors.qmd#def-real-coordinate-space) $\reals^2$ with the [dot product](linear-algebra-vectors.qmd#def-dot-product) (@exm-inner-product-space) is a [Hilbert space](#def-hilbert-space).
+Let $(\vx_n)$ with $\vx_n = (x_{n,1}, x_{n,2})$ be a [Cauchy sequence](#def-cauchy-sequence) in it.
+Each coordinate [sequence](functions.qmd#def-sequence) is a Cauchy sequence of [real numbers](number-systems.qmd#def-real-numbers),
 because $\abs{x_{m,j} - x_{n,j}} \le \norm{\vx_m - \vx_n}$ for $j = 1, 2$.
-Each coordinate sequence then converges to a real number $y_j$,
-because the real numbers are complete [@wikipedia_complete_metric_space],
+Each coordinate sequence then [converges](algebra.qmd#def-convergent-sequence) to a [real number](number-systems.qmd#def-real-numbers) $y_j$,
+because every Cauchy sequence of real numbers converges [@wikipedia_complete_metric_space],
 and $\vy = (y_1, y_2)$ satisfies the condition of @def-complete-inner-product-space.
-For example, $\vx_n = (\frac{1}{n}, 1 + \frac{1}{n})$ is a Cauchy sequence with limit $\vy = (0, 1)$.
+For example, $\vx_n = (\frac{1}{n}, 1 + \frac{1}{n})$ is a Cauchy sequence with [limit](algebra.qmd#def-sequence-limit) $\vy = (0, 1)$.
 <!-- no-figure: the example is a convergence argument about one sequence -->
 
 :::

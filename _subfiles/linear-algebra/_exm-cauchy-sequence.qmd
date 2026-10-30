@@ -1,11 +1,12 @@
 :::{#exm-cauchy-sequence}
 #### A Cauchy sequence of real numbers
 
-The real numbers $\reals$ with the inner product $\iprod{x}{y} = x\,y$ form an inner product space,
+The [real numbers](number-systems.qmd#def-real-numbers) $\reals$ with the [inner product](linear-algebra-inner-products.qmd#def-inner-product) $\iprod{x}{y} = x\,y$
+form an [inner product space](linear-algebra-inner-products.qmd#def-inner-product-space),
 and $\norm{x} = \abs{x}$ in it.
-The sequence $x_n = \frac{1}{n}$ is a Cauchy sequence.
-Given $\tolout > 0$, take $N$ to be any natural number larger than $\frac{1}{\tolout}$.
-For all $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$,
+The [sequence](functions.qmd#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence).
+Given $\tolout > 0$, take $N$ to be any [natural number](number-systems.qmd#def-natural-numbers) larger than $\frac{1}{\tolout}$.
+[For all](proof-writing.qmd#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$,
 so $\abs{\frac{1}{m} - \frac{1}{n}} < \frac{1}{N} < \tolout$.
 For example, with $\tolout = 0.01$, take $N = 101$:
 all $m, n \ge 101$ have $\abs{\frac{1}{m} - \frac{1}{n}} < \frac{1}{101} < 0.01$.

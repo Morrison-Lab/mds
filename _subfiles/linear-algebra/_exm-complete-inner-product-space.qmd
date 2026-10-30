@@ -1,12 +1,13 @@
 :::{#exm-complete-inner-product-space}
 #### Polynomials are not complete
 
-Let $V$ be the real vector space of polynomials on $[0, 1]$ with the inner product $\iprod{f}{g} = \int_0^1 f(t)\,g(t)\,dt$.
-The partial sums $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a Cauchy sequence in $V$,
-because they converge uniformly on $[0, 1]$ to $e^t$.
-The only candidate for a limit is $e^t$, which is not a polynomial,
+Let $V$ be the [set](sets.qmd#def-set) of [polynomials](algebra.qmd#def-polynomial) on $[0, 1]$,
+with the [inner product](linear-algebra-inner-products.qmd#def-inner-product) $\iprod{f}{g} = \int_0^1 f(t)\,g(t)\,dt$.
+The [partial sums](algebra.qmd#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$,
+because they [converge](algebra.qmd#def-convergent-sequence) uniformly on $[0, 1]$ to $e^t$.
+The only candidate for a [limit](algebra.qmd#def-sequence-limit) is $e^t$, which is not a [polynomial](algebra.qmd#def-polynomial),
 so no polynomial $\vy \in V$ satisfies the condition of @def-complete-inner-product-space,
-and $V$ is not complete.
+and $V$ is not [complete](#def-complete-inner-product-space).
 <!-- no-figure: the example is a convergence argument about one sequence -->
 
 :::
