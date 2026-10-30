@@ -2,7 +2,8 @@
 #### A rank-deficient least squares problem
 
 Let $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ and $\vecf{b} = (2, 3)$.
-By @exm-moore-penrose, $\matr{A}^+ = \matr{A}$, so $\matr{A}^+\vecf{b} = (2, 0)$ and $\matr{A}\matr{A}^+\vecf{b} = (2, 0)$.
+By @exm-moore-penrose, $\matr{A}^+ = \matr{A}$,
+so $\matr{A}^+\vecf{b} = (2, 0)$ and $\matr{A}\matr{A}^+\vecf{b} = (2, 0)$.
 
 By @thm-moore-penrose-least-squares, $\vecf{x} = (x_1, x_2)$ is a least squares solution (@def-least-squares) [if and only if](proof-writing.qmd#def-iff)
 $\matr{A}\vecf{x} = (x_1, 0) = (2, 0)$,
@@ -17,6 +18,7 @@ $$
 $$
 
 as @thm-moore-penrose-minimum-norm states.
-The smallest is $4$, at $x_2 = 0$, which is $\matr{A}^+\vecf{b} = (2, 0)$.
+The smallest is $4$, at $x_2 = 0$,
+which is $\matr{A}^+\vecf{b} = (2, 0)$.
 
 :::
