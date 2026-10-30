@@ -1,0 +1,9 @@
+:::{#def-intercept-term}
+#### Intercept term
+
+In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
+the **intercept term** of $f$ is the summand $b$,
+the one that does not depend on $x$.
+Its value is the intercept (@def-intercept) of $f$.
+
+:::
