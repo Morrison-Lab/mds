@@ -9,24 +9,3 @@ if there are numbers $m$ and $b$ such that
 $$f(x) = m x + b \quad \text{for all } x \in \reals$$
 
 :::
-
-{{< slidebreak >}}
-
-:::{#def-slope}
-#### Slope
-
-In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
-$m$ is called the **slope** of $f$
-[@wikipedia_slope].
-
-:::
-
-{{< slidebreak >}}
-
-:::{#def-intercept}
-#### Intercept, intercept term
-
-In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
-$b$ is called the **intercept** of $f$, or its **intercept term**.
-
-:::
