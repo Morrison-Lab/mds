@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 09:38:40 (PDT)
+Last modified: 2026-10-30 11:24:28 (PDT)
 
 ## 0.1 Newton’s method
 
