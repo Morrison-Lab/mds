@@ -6,8 +6,9 @@
 and these notes do not treat it as a separate subject:
 they use the name *linear algebra* for the material in the pages above.
 @banerjee2014linear pairs the two names in its title.
-Its preface says that one of its last chapters covers
+Its preface says that its last two chapters cover
 [convergence](algebra.qmd#def-convergent-sequence) of [matrices](linear-algebra-matrices.qmd#def-matrix)
+and [Hilbert spaces](linear-algebra-inner-products.qmd#def-hilbert-space)
 [@banerjee2014linear, p. xvi].
 
 :::
