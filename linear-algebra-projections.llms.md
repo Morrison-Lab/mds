@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 02:22:19 (PDT)
+Last modified: 2026-10-30 12:07:09 (PDT)
 
 ## 0.1 Design Matrix
 
@@ -255,7 +255,7 @@ Last modified: 2026-10-30 02:22:19 (PDT)
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 16 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover. [Theorem 13](#thm-moore-penrose-full-rank) restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in [Theorem 14](#thm-consistency) restores the source’s rank test for consistency. These parts of the source are not part of this section:
+> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 17 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover. [Theorem 13](#thm-moore-penrose-full-rank) restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in [Theorem 14](#thm-consistency) restores the source’s rank test for consistency. These parts of the source are not part of this section:
 >
 > - the QR forms of the full-rank formulas
 > - \\\operatorname{rank}(\mathbf{A}^-) \ge \operatorname{rank}(\mathbf{A})\\, \\\mathcal{C}(\mathbf{A}) = \mathcal{C}(\mathbf{A}\mathbf{A}^-)\\, \\\operatorname{rank}(\mathbf{A}) = \operatorname{rank}(\mathbf{A}\mathbf{A}^-) = \operatorname{rank}(\mathbf{A}^-\mathbf{A})\\, and \\\operatorname{rank}(\mathbf{A}^+) = \operatorname{rank}(\mathbf{A})\\
@@ -429,7 +429,7 @@ Last modified: 2026-10-30 02:22:19 (PDT)
 >
 > **The zero matrix.** With \\\mathbf{A} = \mathbf{0}\_{m \times n}\\ and \\\mathbf{G} = \mathbf{0}\_{n \times m}\\, every product in conditions 1 to 4 is a zero matrix, and a zero matrix equals its own transpose, so all four conditions hold.
 >
-> **The two inverses exist.** Now suppose \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A rank factorization exists ([Theorem 16 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)). \\\mathbf{C}\\ is \\m \times r\\ and \\\mathbf{R}\\ is \\r \times n\\. Both have rank \\r\\:
+> **The two inverses exist.** Now suppose \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A rank factorization exists ([Theorem 17 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)). \\\mathbf{C}\\ is \\m \times r\\ and \\\mathbf{R}\\ is \\r \times n\\. Both have rank \\r\\:
 >
 > \\ \begin{aligned} r &= \operatorname{rank}(\mathbf{C} \mathbf{R}) && \text{(} \mathbf{A} = \mathbf{C} \mathbf{R} \text{)} \\ &\le \operatorname{rank}(\mathbf{C}) && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-product}{\text{Theorem~9 in Column Space, Null Space and Rank-Nullity}}\text{)} \\ &\le r, && \text{(}\href{linear-algebra-rank-nullity.qmd#cor-rank-bound}{\text{Corollary~1 in Column Space, Null Space and Rank-Nullity}}\text{, } \mathbf{C} \text{ has } r \text{ columns)} \end{aligned} \\
 >
@@ -465,7 +465,7 @@ Last modified: 2026-10-30 02:22:19 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (The Moore-Penrose inverse of a rank-one matrix)** For \\\mathbf{A}\\ in [Example 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-column-space), the rank factorization \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\, \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\ ([Example 26 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-rank-factorization)) gives
+> **Example 17 (The Moore-Penrose inverse of a rank-one matrix)** For \\\mathbf{A}\\ in [Example 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-column-space), the rank factorization \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\, \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\ ([Example 27 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-rank-factorization)) gives
 >
 > \\ \begin{aligned} {\mathbf{C}}^{\top} \mathbf{C} &= 1 + 9 \\ &= 10 \end{aligned} \\
 >

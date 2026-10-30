@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.10.20">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Column Space, Null Space and Rank-Nullity – Math for Data Science</title>
 <style>
@@ -97,9 +97,9 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-32175d0f72e0e491c1b088dc3edaaf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -228,26 +228,6 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -258,15 +238,15 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-tbl.callout {
+  border-left-color: #757575;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -278,25 +258,25 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-fig.callout {
-  border-left-color: #757575;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -307,6 +287,16 @@ div.callout-prp.callout-style-default .callout-header {
 div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -328,15 +318,25 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-tbl.callout {
+div.callout-fig.callout {
   border-left-color: #757575;
 }
-div.callout-tbl.callout-style-default .callout-header {
+div.callout-fig.callout-style-default .callout-header {
   background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -1143,7 +1143,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-30 02:22:19 (PDT)</p>
+      <p class="date">Last modified: 2026-10-30 12:07:09 (PDT)</p>
     </div>
   </div>
   
@@ -2995,8 +2995,120 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
+<div class="callouty-titled callout callout-style-default callout-lem callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-67-contents" aria-controls="callout-67" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-hyperplane-graph" class="quarto-xref">Theorem&nbsp;15</a> (The graph of an affine function is a hyperplane)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-67" class="callout-67-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="thm-hyperplane-graph" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 15 (The graph of an affine function is a hyperplane)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\in \mathbb{R}^p\)</span>, <span class="math inline">\(b \in \mathbb{R}\)</span>. The <a href="./functions.html#def-graph">graph</a> of the <a href="./functions.html#def-function">function</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> is the <a href="./sets.html#def-set">set</a></p>
+<p><span class="math display">\[
+\mathopen{}\left\{\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\\ y\end{bmatrix} \in \mathbb{R}^{p+1} : y = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\right\}\mathclose{}.
+\]</span></p>
+<p>This set is a <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a> in <span class="math inline">\(\mathbb{R}^{p+1}\)</span>, with <a href="./linear-algebra-matrices.html#def-normal-vector">normal vector</a> <span class="math inline">\(\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\\ -1\end{bmatrix}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-68-contents" aria-controls="callout-68" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-68" class="callout-68-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For <span class="math inline">\(\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\\ y\end{bmatrix} \in \mathbb{R}^{p+1}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+y = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b
+&amp;\iff \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - y + b = 0
+&amp;&amp; \text{(subtract } y \text{ from both sides)}
+\\
+&amp;\iff \begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\\ -1\end{bmatrix} \cdot \begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\\ y\end{bmatrix} + b = 0.
+&amp;&amp; \text{(dot product of stacked vectors)}
+\end{aligned}
+\]</span></p>
+<p>So the <a href="./sets.html#def-set">set</a> is the solution set of the equation of a <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a>, with <a href="./linear-algebra-matrices.html#def-normal-vector">normal vector</a> <span class="math inline">\(\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\\ -1\end{bmatrix}\)</span>. That vector is nonzero, because its last entry is <span class="math inline">\(-1\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-69-contents" aria-controls="callout-69" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-hyperplane-graph" class="quarto-xref">Example&nbsp;24</a> (The graph of a line is a line in the plane)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-69" class="callout-69-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exm-hyperplane-graph" class="theorem example">
+<p><span class="theorem-title"><strong>Example 24 (The graph of a line is a line in the plane)</strong></span> Take <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}= 2\)</span>, <span class="math inline">\(b = 1\)</span>. The <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(y = 2x + 1\)</span> is the <a href="./sets.html#def-set">set</a> of points <span class="math inline">\((x, y)\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> with <span class="math inline">\(2x - y + 1 = 0\)</span>. By <a href="#thm-hyperplane-graph" class="quarto-xref">Theorem&nbsp;15</a>, this is a <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a> with <a href="./linear-algebra-matrices.html#def-normal-vector">normal vector</a> <span class="math inline">\((2, -1)\)</span>. The point <span class="math inline">\((0, 1)\)</span> is on it, since <span class="math inline">\(2 \cdot 0 - 1 + 1 = 0\)</span>. The point <span class="math inline">\((0, 0)\)</span> is off it, since <span class="math inline">\(2 \cdot 0 - 0 + 1 = 1 \ne 0\)</span>. <a href="#fig-hyperplane-graph" class="quarto-xref">Figure&nbsp;1</a> shows the line, the two points, and the normal vector drawn from <span class="math inline">\((0, 1)\)</span>.</p>
+<div class="cell">
+<details class="code-fold"><summary>Show R code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arrow_length</span> <span class="op">&lt;-</span> <span class="fu">grid</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">0.15</span>, <span class="st">"inches"</span><span class="op">)</span></span>
+<span><span class="va">normal_arrow</span> <span class="op">&lt;-</span> <span class="fu">grid</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grid/arrow.html">arrow</a></span><span class="op">(</span>length <span class="op">=</span> <span class="va">arrow_length</span><span class="op">)</span></span>
+<span><span class="va">point_x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span><span class="va">point_y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span><span class="va">point_label</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"on the line"</span>, <span class="st">"off the line"</span><span class="op">)</span></span>
+<span><span class="va">points</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">point_x</span>, y <span class="op">=</span> <span class="va">point_y</span>, label <span class="op">=</span> <span class="va">point_label</span><span class="op">)</span></span>
+<span><span class="va">normal</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">0</span>, y <span class="op">=</span> <span class="fl">1</span>, xend <span class="op">=</span> <span class="fl">2</span>, yend <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<span><span class="va">normal_aes</span> <span class="op">&lt;-</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span>, xend <span class="op">=</span> <span class="va">xend</span>, yend <span class="op">=</span> <span class="va">yend</span><span class="op">)</span></span>
+<span><span class="va">x_limits</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span>
+<span><span class="va">y_limits</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">points</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span>, colour <span class="op">=</span> <span class="va">label</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_abline</a></span><span class="op">(</span>intercept <span class="op">=</span> <span class="fl">1</span>, slope <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span></span>
+<span>    mapping <span class="op">=</span> <span class="va">normal_aes</span>,</span>
+<span>    data <span class="op">=</span> <span class="va">normal</span>,</span>
+<span>    arrow <span class="op">=</span> <span class="va">normal_arrow</span>,</span>
+<span>    inherit.aes <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_fixed.html">coord_fixed</a></span><span class="op">(</span>xlim <span class="op">=</span> <span class="va">x_limits</span>, ylim <span class="op">=</span> <span class="va">y_limits</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"x"</span>, y <span class="op">=</span> <span class="st">"y"</span>, colour <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output-display">
+<div class="callout callout-style-simple callout-fig no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="fig-hyperplane-graph" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A straight line rising to the right through the point (0, 1). An arrow from (0, 1) points right and down, perpendicular to the line. A second point at the origin lies below the line.">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hyperplane-graph-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The graph of <span class="math inline">\(y = 2x + 1\)</span>, a line in the plane, with its normal vector <span class="math inline">\((2, -1)\)</span> drawn from the point <span class="math inline">\((0, 1)\)</span> on it and the point <span class="math inline">\((0, 0)\)</span> off it
+</figcaption><div aria-describedby="fig-hyperplane-graph-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="linear-algebra-rank-nullity_files/figure-html/fig-hyperplane-graph-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The graph of y = 2x + 1, a line in the plane, with its normal vector (2, -1) drawn from the point (0, 1) on it and the point (0, 0) off it"><img src="linear-algebra-rank-nullity_files/figure-html/fig-hyperplane-graph-1.png" class="img-fluid figure-img" alt="A straight line rising to the right through the point (0, 1). An arrow from (0, 1) points right and down, perpendicular to the line. A second point at the origin lies below the line." width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-def callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-70-contents" aria-controls="callout-70" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3005,7 +3117,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-67" class="callout-67-contents callout-collapse collapse show">
+<div id="callout-70" class="callout-70-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-half-space" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Open half-space)</strong></span> Let <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\right\}\mathclose{}\)</span> be a hyperplane (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>). The two <strong>open half-spaces</strong> <span class="citation" data-cites="wikipedia_half_space_geometry"><a href="#ref-wikipedia_half_space_geometry" role="doc-biblioref">[6]</a></span> of <span class="math inline">\(\mathcal{H}\)</span> are</p>
@@ -3019,7 +3131,7 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-68-contents" aria-controls="callout-68" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-71-contents" aria-controls="callout-71" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3028,7 +3140,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-68" class="callout-68-contents callout-collapse collapse show">
+<div id="callout-71" class="callout-71-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-closed-half-space" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10 (Closed half-space)</strong></span> The <strong>closed half-spaces</strong> of the hyperplane <span class="math inline">\(\mathcal{H}\)</span> of <a href="#def-half-space" class="quarto-xref">Definition&nbsp;9</a> also include <span class="math inline">\(\mathcal{H}\)</span> itself: <span class="math inline">\(\mathcal{H}^+ \cup \mathcal{H}\)</span> and <span class="math inline">\(\mathcal{H}^- \cup \mathcal{H}\)</span>.</p>
@@ -3037,7 +3149,7 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-69-contents" aria-controls="callout-69" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-72-contents" aria-controls="callout-72" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3046,7 +3158,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-69" class="callout-69-contents callout-collapse collapse show">
+<div id="callout-72" class="callout-72-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div class="notes proof remark">
 <p><span class="proof-title"><em>Remark</em>. </span>Replacing <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}, b)\)</span> by <span class="math inline">\((-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}, -b)\)</span> describes the same hyperplane but swaps the names <span class="math inline">\(\mathcal{H}^+\)</span> and <span class="math inline">\(\mathcal{H}^-\)</span>. The sign of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> tells you which side of the hyperplane <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is on. A linear classifier uses this sign to assign one of two labels.</p>
@@ -3055,19 +3167,19 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-70-contents" aria-controls="callout-70" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-73-contents" aria-controls="callout-73" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-half-space-plane" class="quarto-xref">Example&nbsp;24</a> (Half-spaces of a line in the plane)
+<span class="screen-reader-only">Exm</span><a href="#exm-half-space-plane" class="quarto-xref">Example&nbsp;25</a> (Half-spaces of a line in the plane)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-70" class="callout-70-contents callout-collapse collapse show">
+<div id="callout-73" class="callout-73-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-half-space-plane" class="theorem example">
-<p><span class="theorem-title"><strong>Example 24 (Half-spaces of a line in the plane)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the line in <span class="math inline">\(\mathbb{R}^2\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 2)\)</span> and <span class="math inline">\(b = -2\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>), so <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\}\mathclose{}\)</span>. Evaluate <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> at three points (<a href="#def-half-space" class="quarto-xref">Definition&nbsp;9</a>):</p>
+<p><span class="theorem-title"><strong>Example 25 (Half-spaces of a line in the plane)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the line in <span class="math inline">\(\mathbb{R}^2\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 2)\)</span> and <span class="math inline">\(b = -2\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>), so <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\}\mathclose{}\)</span>. Evaluate <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> at three points (<a href="#def-half-space" class="quarto-xref">Definition&nbsp;9</a>):</p>
 <ul>
 <li>At <span class="math inline">\((0, 0)\)</span> it equals <span class="math inline">\(0 + 0 - 2 = -2 &lt; 0\)</span>, so <span class="math inline">\((0, 0) \in \mathcal{H}^-\)</span>.</li>
 <li>At <span class="math inline">\((2, 0)\)</span> it equals <span class="math inline">\(2 + 0 - 2 = 0\)</span>, so <span class="math inline">\((2, 0) \in \mathcal{H}\)</span>.</li>
@@ -3079,7 +3191,7 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-71-contents" aria-controls="callout-71" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-74-contents" aria-controls="callout-74" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3088,7 +3200,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-71" class="callout-71-contents callout-collapse collapse show">
+<div id="callout-74" class="callout-74-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-half-space-sides" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em> (The two sides of a hyperplane). </span>Every point of <span class="math inline">\(\mathbb{R}^p\)</span> is in exactly one of <span class="math inline">\(\mathcal{H}^+\)</span>, <span class="math inline">\(\mathcal{H}\)</span> and <span class="math inline">\(\mathcal{H}^-\)</span>, because the number <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> is positive, zero or negative. The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> points into <span class="math inline">\(\mathcal{H}^+\)</span>: the number <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> goes up when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> moves in the direction <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>.</p>
@@ -3097,19 +3209,19 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-72-contents" aria-controls="callout-72" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-75-contents" aria-controls="callout-75" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Lem</span><a href="#thm-half-space-dimension" class="quarto-xref">Theorem&nbsp;15</a> (Differences of points in a hyperplane and in a half-space)
+<span class="screen-reader-only">Lem</span><a href="#thm-half-space-dimension" class="quarto-xref">Theorem&nbsp;16</a> (Differences of points in a hyperplane and in a half-space)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-72" class="callout-72-contents callout-collapse collapse show">
+<div id="callout-75" class="callout-75-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-half-space-dimension" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 15 (Differences of points in a hyperplane and in a half-space)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span> be nonzero, let <span class="math inline">\(b \in \mathbb{R}\)</span>, and let <span class="math inline">\(\mathcal{H}\)</span>, <span class="math inline">\(\mathcal{H}^+\)</span> be the hyperplane and open half-space of <a href="#def-half-space" class="quarto-xref">Definition&nbsp;9</a>. For a set <span class="math inline">\(S \subseteq \mathbb{R}^p\)</span>, let <span class="math inline">\(D(S) \stackrel{\text{def}}{=}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in S\right\}\mathclose{}\)</span> be the set of differences of its points.</p>
+<p><span class="theorem-title"><strong>Theorem 16 (Differences of points in a hyperplane and in a half-space)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span> be nonzero, let <span class="math inline">\(b \in \mathbb{R}\)</span>, and let <span class="math inline">\(\mathcal{H}\)</span>, <span class="math inline">\(\mathcal{H}^+\)</span> be the hyperplane and open half-space of <a href="#def-half-space" class="quarto-xref">Definition&nbsp;9</a>. For a set <span class="math inline">\(S \subseteq \mathbb{R}^p\)</span>, let <span class="math inline">\(D(S) \stackrel{\text{def}}{=}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in S\right\}\mathclose{}\)</span> be the set of differences of its points.</p>
 <ol type="1">
 <li>
 <span class="math inline">\(D(\mathcal{H}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = 0\right\}\mathclose{}\)</span>, a subspace of dimension <span class="math inline">\(p - 1\)</span>.</li>
@@ -3122,7 +3234,7 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-73-contents" aria-controls="callout-73" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-76-contents" aria-controls="callout-76" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3131,7 +3243,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-73" class="callout-73-contents callout-collapse collapse">
+<div id="callout-76" class="callout-76-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathcal{H}\)</span>. By <a href="#thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;13</a> part 3, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 0\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = 0\right\}\mathclose{}\)</span>. Conversely, take any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}\)</span> (<a href="#thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;13</a> part 2 gives such a point). For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\)</span>, the point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span> is in <span class="math inline">\(\mathcal{H}\)</span> by the same part, and <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span>. So <span class="math inline">\(D(\mathcal{H}) = \mathcal{H}_0\)</span>, which has dimension <span class="math inline">\(p - 1\)</span> by <a href="#thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;13</a> part 1.</p>
@@ -3164,21 +3276,21 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-74-contents" aria-controls="callout-74" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-77-contents" aria-controls="callout-77" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-half-space-iris" class="quarto-xref">Example&nbsp;25</a> (Two iris species on either side of a line)
+<span class="screen-reader-only">Exm</span><a href="#exm-half-space-iris" class="quarto-xref">Example&nbsp;26</a> (Two iris species on either side of a line)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-74" class="callout-74-contents callout-collapse collapse show">
+<div id="callout-77" class="callout-77-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-half-space-iris" class="theorem example">
-<p><span class="theorem-title"><strong>Example 25 (Two iris species on either side of a line)</strong></span> The <code>iris</code> data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)\)</span> be the petal length and petal width of one flower. A logistic regression of the species on <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> gives a coefficient vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and an intercept <span class="math inline">\(b\)</span>. The line <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\)</span> is a hyperplane in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>), and the two species mostly fall in its two open half-spaces (<a href="#def-half-space" class="quarto-xref">Definition&nbsp;9</a>). <a href="#fig-half-space-iris" class="quarto-xref">Figure&nbsp;1</a> shows the line and the flowers.</p>
+<p><span class="theorem-title"><strong>Example 26 (Two iris species on either side of a line)</strong></span> The <code>iris</code> data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)\)</span> be the petal length and petal width of one flower. A logistic regression of the species on <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> gives a coefficient vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and an intercept <span class="math inline">\(b\)</span>. The line <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\)</span> is a hyperplane in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>), and the two species mostly fall in its two open half-spaces (<a href="#def-half-space" class="quarto-xref">Definition&nbsp;9</a>). <a href="#fig-half-space-iris" class="quarto-xref">Figure&nbsp;2</a> shows the line and the flowers.</p>
 <div class="cell">
-<details class="code-fold"><summary>Show R code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">two_species</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">iris</span>, <span class="va">Species</span> <span class="op">!=</span> <span class="st">"setosa"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/droplevels.html">droplevels</a></span><span class="op">(</span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show R code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">two_species</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">iris</span>, <span class="va">Species</span> <span class="op">!=</span> <span class="st">"setosa"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/droplevels.html">droplevels</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span></span>
 <span>  <span class="va">Species</span> <span class="op">~</span> <span class="va">Petal.Length</span> <span class="op">+</span> <span class="va">Petal.Width</span>,</span>
 <span>  family <span class="op">=</span> <span class="va">binomial</span>,</span>
@@ -3204,9 +3316,9 @@ c_1 &amp;= c_2 \\
 <div class="callout-body-container">
 <div id="fig-half-space-iris" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Scatter plot of petal width against petal length for 100 irises. Versicolor points, in one color, are mostly to the lower left. Virginica points, in another color, are mostly to the upper right. A straight line runs between the two groups and separates most of them.">
 <figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-half-space-iris-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species
+Figure&nbsp;2: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species
 </figcaption><div aria-describedby="fig-half-space-iris-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species"><img src="linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png" class="img-fluid figure-img" alt="Scatter plot of petal width against petal length for 100 irises. Versicolor points, in one color, are mostly to the lower left. Virginica points, in another color, are mostly to the upper right. A straight line runs between the two groups and separates most of them." width="672"></a>
+<a href="linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species"><img src="linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png" class="img-fluid figure-img" alt="Scatter plot of petal width against petal length for 100 irises. Versicolor points, in one color, are mostly to the lower left. Virginica points, in another color, are mostly to the upper right. A straight line runs between the two groups and separates most of them." width="672"></a>
 </div>
 </figure>
 </div>
@@ -3216,19 +3328,19 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">two_species</span><span class="op">$</span><span class="va">Species</span>, <span class="va">two_species</span><span class="op">$</span><span class="va">side</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">two_species</span><span class="op">$</span><span class="va">Species</span>, <span class="va">two_species</span><span class="op">$</span><span class="va">side</span><span class="op">)</span></span>
 <span><span class="co">#&gt;             </span></span>
 <span><span class="co">#&gt;              negative positive</span></span>
 <span><span class="co">#&gt;   versicolor       47        3</span></span>
 <span><span class="co">#&gt;   virginica         3       47</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> points toward the virginica side, so the positive half-space <span class="math inline">\(\mathcal{H}^+\)</span> holds 50 of the 100 flowers, and 47 of them are virginica. The line is a set of dimension <span class="math inline">\(p - 1 = 1\)</span>, and each side is a region of the plane of dimension <span class="math inline">\(p = 2\)</span> (<a href="#thm-half-space-dimension" class="quarto-xref">Theorem&nbsp;15</a>).</p>
+<p>The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> points toward the virginica side, so the positive half-space <span class="math inline">\(\mathcal{H}^+\)</span> holds 50 of the 100 flowers, and 47 of them are virginica. The line is a set of dimension <span class="math inline">\(p - 1 = 1\)</span>, and each side is a region of the plane of dimension <span class="math inline">\(p = 2\)</span> (<a href="#thm-half-space-dimension" class="quarto-xref">Theorem&nbsp;16</a>).</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-75-contents" aria-controls="callout-75" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-78-contents" aria-controls="callout-78" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3237,21 +3349,21 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-75" class="callout-75-contents callout-collapse collapse show">
+<div id="callout-78" class="callout-78-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-half-space-sides" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Which side of the plane?)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the plane in <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span> (<a href="#exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;22</a>).</p>
 <ol type="1">
 <li>For each point, say whether it is in <span class="math inline">\(\mathcal{H}^+\)</span>, <span class="math inline">\(\mathcal{H}\)</span> or <span class="math inline">\(\mathcal{H}^-\)</span> (<a href="#def-half-space" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\((0, 0, 0)\)</span>, <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((1, 1, 1)\)</span>.</li>
 <li>Write the plane and its half-spaces using <span class="math inline">\(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and <span class="math inline">\(-b\)</span>. Which points from part 1 change sides?</li>
-<li>State the dimension of <span class="math inline">\(D(\mathcal{H})\)</span> and of <span class="math inline">\(D(\mathcal{H}^+)\)</span> (<a href="#thm-half-space-dimension" class="quarto-xref">Theorem&nbsp;15</a>).</li>
+<li>State the dimension of <span class="math inline">\(D(\mathcal{H})\)</span> and of <span class="math inline">\(D(\mathcal{H}^+)\)</span> (<a href="#thm-half-space-dimension" class="quarto-xref">Theorem&nbsp;16</a>).</li>
 </ol>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-76-contents" aria-controls="callout-76" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-79-contents" aria-controls="callout-79" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -3260,7 +3372,7 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-76" class="callout-76-contents callout-collapse collapse">
+<div id="callout-79" class="callout-79-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-half-space-sides" class="proof solution">
 <p><span class="proof-title"><em>Solution 1</em>. </span></p>
@@ -3281,7 +3393,7 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-77-contents" aria-controls="callout-77" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-80-contents" aria-controls="callout-80" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3290,7 +3402,7 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-77" class="callout-77-contents callout-collapse collapse show">
+<div id="callout-80" class="callout-80-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-rank-factorization" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11 (Rank factorization)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> matrix with <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r \ge 1\)</span>. A <strong>rank factorization</strong> <span class="citation" data-cites="wikipedia_rank_factorization"><a href="#ref-wikipedia_rank_factorization" role="doc-biblioref">[7]</a></span> of <span class="math inline">\(\mathbf{A}\)</span> is a product</p>
@@ -3303,19 +3415,19 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-78-contents" aria-controls="callout-78" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-81-contents" aria-controls="callout-81" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-rank-factorization" class="quarto-xref">Example&nbsp;26</a> (A rank factorization of a rank-one matrix)
+<span class="screen-reader-only">Exm</span><a href="#exm-rank-factorization" class="quarto-xref">Example&nbsp;27</a> (A rank factorization of a rank-one matrix)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-78" class="callout-78-contents callout-collapse collapse show">
+<div id="callout-81" class="callout-81-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-rank-factorization" class="theorem example">
-<p><span class="theorem-title"><strong>Example 26 (A rank factorization of a rank-one matrix)</strong></span> The matrix <span class="math inline">\(\mathbf{A}\)</span> in <a href="#exm-column-space" class="quarto-xref">Example&nbsp;1</a> has rank <span class="math inline">\(1\)</span> (<a href="#exm-rank-dim" class="quarto-xref">Example&nbsp;11</a>), and</p>
+<p><span class="theorem-title"><strong>Example 27 (A rank factorization of a rank-one matrix)</strong></span> The matrix <span class="math inline">\(\mathbf{A}\)</span> in <a href="#exm-column-space" class="quarto-xref">Example&nbsp;1</a> has rank <span class="math inline">\(1\)</span> (<a href="#exm-rank-dim" class="quarto-xref">Example&nbsp;11</a>), and</p>
 <p><span class="math display">\[
 \begin{aligned}
 \begin{bmatrix} 1 \\ 3 \end{bmatrix}
@@ -3330,25 +3442,25 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-79-contents" aria-controls="callout-79" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-82-contents" aria-controls="callout-82" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Lem</span><a href="#thm-rank-factorization" class="quarto-xref">Theorem&nbsp;16</a> (Every nonzero matrix has a rank factorization)
+<span class="screen-reader-only">Lem</span><a href="#thm-rank-factorization" class="quarto-xref">Theorem&nbsp;17</a> (Every nonzero matrix has a rank factorization)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-79" class="callout-79-contents callout-collapse collapse show">
+<div id="callout-82" class="callout-82-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-rank-factorization" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 16 (Every nonzero matrix has a rank factorization)</strong></span> Every <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r \ge 1\)</span> has a rank factorization (<a href="#def-rank-factorization" class="quarto-xref">Definition&nbsp;11</a>). One is given by taking the columns of <span class="math inline">\(\mathbf{C}\)</span> to be any basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 17 (Every nonzero matrix has a rank factorization)</strong></span> Every <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r \ge 1\)</span> has a rank factorization (<a href="#def-rank-factorization" class="quarto-xref">Definition&nbsp;11</a>). One is given by taking the columns of <span class="math inline">\(\mathbf{C}\)</span> to be any basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-80-contents" aria-controls="callout-80" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-83-contents" aria-controls="callout-83" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3357,7 +3469,7 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-80" class="callout-80-contents callout-collapse collapse">
+<div id="callout-83" class="callout-83-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> has dimension <span class="math inline">\(r\)</span> (<a href="#thm-rank-dim" class="quarto-xref">Theorem&nbsp;7</a>), so it has a basis <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>); let <span class="math inline">\(\mathbf{C}\)</span> be the <span class="math inline">\(m \times r\)</span> matrix with these columns. Each column <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\)</span> of <span class="math inline">\(\mathbf{A}\)</span> is in <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = r_{1j} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1 + \cdots + r_{rj} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r\)</span> for some numbers <span class="math inline">\(r_{ij}\)</span>, because the basis spans <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. Let <span class="math inline">\(\mathbf{R}\)</span> be the <span class="math inline">\(r \times n\)</span> matrix with entries <span class="math inline">\(r_{ij}\)</span>, whose column <span class="math inline">\(j\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_j = (r_{1j}, \ldots, r_{rj})\)</span>. Then column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{C} \mathbf{R}\)</span> is</p>
@@ -3377,19 +3489,19 @@ Figure&nbsp;1: Petal length and width of versicolor and virginica irises, with t
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-81-contents" aria-controls="callout-81" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-84-contents" aria-controls="callout-84" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-rank-factorization-construct" class="quarto-xref">Example&nbsp;27</a> (Building a rank factorization from a basis)
+<span class="screen-reader-only">Exm</span><a href="#exm-rank-factorization-construct" class="quarto-xref">Example&nbsp;28</a> (Building a rank factorization from a basis)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-81" class="callout-81-contents callout-collapse collapse show">
+<div id="callout-84" class="callout-84-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-rank-factorization-construct" class="theorem example">
-<p><span class="theorem-title"><strong>Example 27 (Building a rank factorization from a basis)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\((1, 3)\)</span> spans <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="#exm-column-space-span" class="quarto-xref">Example&nbsp;2</a>), and it is linearly independent because it is nonzero (<span class="math inline">\(c\,(1, 3) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> forces <span class="math inline">\(c = 0\)</span>), so it is a basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. The columns of <span class="math inline">\(\mathbf{A}\)</span> are <span class="math inline">\((1, 3) = 1 \cdot(1, 3)\)</span>, <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span> and <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span>, so the construction in <a href="#thm-rank-factorization" class="quarto-xref">Theorem&nbsp;16</a> gives <span class="math inline">\(\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; -2 &amp; -2 \end{bmatrix}\)</span>, the factorization in <a href="#exm-rank-factorization" class="quarto-xref">Example&nbsp;26</a>.</p>
+<p><span class="theorem-title"><strong>Example 28 (Building a rank factorization from a basis)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\((1, 3)\)</span> spans <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="#exm-column-space-span" class="quarto-xref">Example&nbsp;2</a>), and it is linearly independent because it is nonzero (<span class="math inline">\(c\,(1, 3) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> forces <span class="math inline">\(c = 0\)</span>), so it is a basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. The columns of <span class="math inline">\(\mathbf{A}\)</span> are <span class="math inline">\((1, 3) = 1 \cdot(1, 3)\)</span>, <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span> and <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span>, so the construction in <a href="#thm-rank-factorization" class="quarto-xref">Theorem&nbsp;17</a> gives <span class="math inline">\(\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; -2 &amp; -2 \end{bmatrix}\)</span>, the factorization in <a href="#exm-rank-factorization" class="quarto-xref">Example&nbsp;27</a>.</p>
 </div>
 </div>
 </div>
@@ -4440,21 +4552,21 @@ document.querySelectorAll("main table").forEach(function (t) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Column Space, Null Space and Rank-Nullity"</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: linear-algebra-rank-nullity-slides.html</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: linear-algebra-rank-nullity-handout.pdf</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: linear-algebra-rank-nullity.docx</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_linear_algebra_rank_nullity.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Column Space, Null Space and Rank-Nullity"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: linear-algebra-rank-nullity-slides.html</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: linear-algebra-rank-nullity-handout.pdf</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: linear-algebra-rank-nullity.docx</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_linear_algebra_rank_nullity.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">

@@ -6060,6 +6060,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-hyperplane-graph",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-hyperplane-graph",
+   "kind": "thm",
+   "title": "The graph of an affine function is a hyperplane",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-hyperplane-origin",
    "site": "mds",
    "page": "linear-algebra",
@@ -8442,6 +8451,15 @@
    "div": "thm-half-space-dimension",
    "kind": "thm",
    "title": "Differences of points in a hyperplane and in a half-space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
+   "site": "mds",
+   "page": "linear-algebra-rank-nullity",
+   "div": "thm-hyperplane-graph",
+   "kind": "thm",
+   "title": "The graph of an affine function is a hyperplane",
    "external": false
   },
   {
@@ -15692,6 +15710,26 @@
    "mds/linear-algebra#def-skew-hermitian-matrix"
   ],
   [
+   "mds/linear-algebra#thm-hyperplane-graph",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-graph",
+   "mds/functions#def-graph"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-graph",
+   "mds/linear-algebra-matrices#def-hyperplane"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-graph",
+   "mds/linear-algebra-matrices#def-normal-vector"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-graph",
+   "mds/sets#def-set"
+  ],
+  [
    "mds/linear-algebra#thm-hyperplane-origin",
    "mds/linear-algebra#def-hyperplane"
   ],
@@ -16666,6 +16704,26 @@
   [
    "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
    "mds/linear-algebra-rank-nullity#def-half-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
+   "mds/functions#def-graph"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
+   "mds/linear-algebra-matrices#def-hyperplane"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
+   "mds/linear-algebra-matrices#def-normal-vector"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
+   "mds/sets#def-set"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",

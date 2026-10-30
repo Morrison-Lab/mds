@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 02:22:19 (PDT)
+Last modified: 2026-10-30 12:07:09 (PDT)
 
 ## 0.1 Column space and null space
 
@@ -586,6 +586,59 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
+> **Theorem 15 (The graph of an affine function is a hyperplane)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\in \mathbb{R}^p\\, \\b \in \mathbb{R}\\. The [graph](functions.llms.md#def-graph) of the [function](functions.llms.md#def-function) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\mapsto \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b\\ is the [set](sets.llms.md#def-set)
+>
+> \\ \mathopen{}\left\\\begin{bmatrix}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ y\end{bmatrix} \in \mathbb{R}^{p+1} : y = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b\right\\\mathclose{}. \\
+>
+> This set is a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) in \\\mathbb{R}^{p+1}\\, with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) \\\begin{bmatrix}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ -1\end{bmatrix}\\.
+
+> **NOTE:**
+>
+> *Proof*. For \\\begin{bmatrix}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ y\end{bmatrix} \in \mathbb{R}^{p+1}\\,
+>
+> \\ \begin{aligned} y = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b &\iff \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - y + b = 0 && \text{(subtract } y \text{ from both sides)} \\ &\iff \begin{bmatrix}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ -1\end{bmatrix} \cdot \begin{bmatrix}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ y\end{bmatrix} + b = 0. && \text{(dot product of stacked vectors)} \end{aligned} \\
+>
+> So the [set](sets.llms.md#def-set) is the solution set of the equation of a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane), with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) \\\begin{bmatrix}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ -1\end{bmatrix}\\. That vector is nonzero, because its last entry is \\-1\\.
+
+> **NOTE:**
+>
+> **Example 24 (The graph of a line is a line in the plane)** Take \\p = 1\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}= 2\\, \\b = 1\\. The [graph](functions.llms.md#def-graph) of \\y = 2x + 1\\ is the [set](sets.llms.md#def-set) of points \\(x, y)\\ in \\\mathbb{R}^2\\ with \\2x - y + 1 = 0\\. By [Theorem 15](#thm-hyperplane-graph), this is a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) \\(2, -1)\\. The point \\(0, 1)\\ is on it, since \\2 \cdot 0 - 1 + 1 = 0\\. The point \\(0, 0)\\ is off it, since \\2 \cdot 0 - 0 + 1 = 1 \ne 0\\. [Figure 1](#fig-hyperplane-graph) shows the line, the two points, and the normal vector drawn from \\(0, 1)\\.
+>
+> Show R code
+>
+> ``` downlit
+> arrow_length <- grid::unit(0.15, "inches")
+> normal_arrow <- grid::arrow(length = arrow_length)
+> point_x <- c(0, 0)
+> point_y <- c(1, 0)
+> point_label <- c("on the line", "off the line")
+> points <- tibble::tibble(x = point_x, y = point_y, label = point_label)
+> normal <- tibble::tibble(x = 0, y = 1, xend = 2, yend = 0)
+> normal_aes <- ggplot2::aes(x = x, y = y, xend = xend, yend = yend)
+> x_limits <- c(-2, 3)
+> y_limits <- c(-2, 4)
+> ggplot2::ggplot(points) +
+>   ggplot2::aes(x = x, y = y, colour = label) +
+>   ggplot2::geom_abline(intercept = 1, slope = 2) +
+>   ggplot2::geom_segment(
+>     mapping = normal_aes,
+>     data = normal,
+>     arrow = normal_arrow,
+>     inherit.aes = FALSE
+>   ) +
+>   ggplot2::geom_point(size = 3) +
+>   ggplot2::coord_fixed(xlim = x_limits, ylim = y_limits) +
+>   ggplot2::labs(x = "x", y = "y", colour = NULL)
+> ```
+>
+> > **NOTE:**
+> >
+> > [![A straight line rising to the right through the point (0, 1). An arrow from (0, 1) points right and down, perpendicular to the line. A second point at the origin lies below the line.](linear-algebra-rank-nullity_files/figure-html/fig-hyperplane-graph-1.png)](linear-algebra-rank-nullity_files/figure-html/fig-hyperplane-graph-1.png "Figure 1: The graph of y = 2x + 1, a line in the plane, with its normal vector (2, -1) drawn from the point (0, 1) on it and the point (0, 0) off it")
+> >
+> > Figure 1: The graph of \\y = 2x + 1\\, a line in the plane, with its normal vector \\(2, -1)\\ drawn from the point \\(0, 1)\\ on it and the point \\(0, 0)\\ off it
+
+> **NOTE:**
+>
 > **Definition 9 (Open half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** [\[6\]](#ref-wikipedia_half_space_geometry) of \\\mathcal{H}\\ are
 >
 > \\ \mathcal{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b \> 0\right\\\mathclose{} \quad \text{and} \quad \mathcal{H}^- \stackrel{\text{def}}{=}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b \< 0\right\\\mathclose{}. \tag{1}\\
@@ -600,7 +653,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 24 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 2)\\ and \\b = -2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b\\ at three points ([Definition 9](#def-half-space)):
+> **Example 25 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = (1, 2)\\ and \\b = -2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b\\ at three points ([Definition 9](#def-half-space)):
 >
 > - At \\(0, 0)\\ it equals \\0 + 0 - 2 = -2 \< 0\\, so \\(0, 0) \in \mathcal{H}^-\\.
 > - At \\(2, 0)\\ it equals \\2 + 0 - 2 = 0\\, so \\(2, 0) \in \mathcal{H}\\.
@@ -614,7 +667,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Theorem 15 (Differences of points in a hyperplane and in a half-space)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, and let \\\mathcal{H}\\, \\\mathcal{H}^+\\ be the hyperplane and open half-space of [Definition 9](#def-half-space). For a set \\S \subseteq \mathbb{R}^p\\, let \\D(S) \stackrel{\text{def}}{=}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in S\right\\\mathclose{}\\ be the set of differences of its points.
+> **Theorem 16 (Differences of points in a hyperplane and in a half-space)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, and let \\\mathcal{H}\\, \\\mathcal{H}^+\\ be the hyperplane and open half-space of [Definition 9](#def-half-space). For a set \\S \subseteq \mathbb{R}^p\\, let \\D(S) \stackrel{\text{def}}{=}\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}: \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in S\right\\\mathclose{}\\ be the set of differences of its points.
 >
 > 1.  \\D(\mathcal{H}) = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} : \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{s}}\vphantom{s}} = 0\right\\\mathclose{}\\, a subspace of dimension \\p - 1\\.
 > 2.  \\D(\mathcal{H}^+) = \mathbb{R}^p\\, a subspace of dimension \\p\\.
@@ -639,7 +692,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 25 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ gives a coefficient vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ and an intercept \\b\\. The line \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 9](#def-half-space)). [Figure 1](#fig-half-space-iris) shows the line and the flowers.
+> **Example 26 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ gives a coefficient vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ and an intercept \\b\\. The line \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 9](#def-half-space)). [Figure 2](#fig-half-space-iris) shows the line and the flowers.
 >
 > Show R code
 >
@@ -665,9 +718,9 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > > **NOTE:**
 > >
-> > [![Scatter plot of petal width against petal length for 100 irises. Versicolor points, in one color, are mostly to the lower left. Virginica points, in another color, are mostly to the upper right. A straight line runs between the two groups and separates most of them.](linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png)](linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png "Figure 1: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species")
+> > [![Scatter plot of petal width against petal length for 100 irises. Versicolor points, in one color, are mostly to the lower left. Virginica points, in another color, are mostly to the upper right. A straight line runs between the two groups and separates most of them.](linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png)](linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png "Figure 2: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species")
 > >
-> > Figure 1: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species
+> > Figure 2: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species
 >
 > ``` downlit
 > table(two_species$Species, two_species$side)
@@ -677,7 +730,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 > #>   virginica         3       47
 > ```
 >
-> The vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ points toward the virginica side, so the positive half-space \\\mathcal{H}^+\\ holds 50 of the 100 flowers, and 47 of them are virginica. The line is a set of dimension \\p - 1 = 1\\, and each side is a region of the plane of dimension \\p = 2\\ ([Theorem 15](#thm-half-space-dimension)).
+> The vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ points toward the virginica side, so the positive half-space \\\mathcal{H}^+\\ holds 50 of the 100 flowers, and 47 of them are virginica. The line is a set of dimension \\p - 1 = 1\\, and each side is a region of the plane of dimension \\p = 2\\ ([Theorem 16](#thm-half-space-dimension)).
 
 > **NOTE:**
 >
@@ -685,7 +738,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > 1.  For each point, say whether it is in \\\mathcal{H}^+\\, \\\mathcal{H}\\ or \\\mathcal{H}^-\\ ([Definition 9](#def-half-space)): \\(0, 0, 0)\\, \\(1, 0, 0)\\ and \\(1, 1, 1)\\.
 > 2.  Write the plane and its half-spaces using \\-\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ and \\-b\\. Which points from part 1 change sides?
-> 3.  State the dimension of \\D(\mathcal{H})\\ and of \\D(\mathcal{H}^+)\\ ([Theorem 15](#thm-half-space-dimension)).
+> 3.  State the dimension of \\D(\mathcal{H})\\ and of \\D(\mathcal{H}^+)\\ ([Theorem 16](#thm-half-space-dimension)).
 
 > **NOTE:**
 >
@@ -709,7 +762,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 26 (A rank factorization of a rank-one matrix)** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has rank \\1\\ ([Example 11](#exm-rank-dim)), and
+> **Example 27 (A rank factorization of a rank-one matrix)** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has rank \\1\\ ([Example 11](#exm-rank-dim)), and
 >
 > \\ \begin{aligned} \begin{bmatrix} 1 \\ 3 \end{bmatrix} \begin{bmatrix} 1 & -2 & -2 \end{bmatrix} &= \begin{bmatrix} 1 \cdot 1 & 1 \cdot(-2) & 1 \cdot(-2) \\ 3 \cdot 1 & 3 \cdot(-2) & 3 \cdot(-2) \end{bmatrix} \\ &= \begin{bmatrix} 1 & -2 & -2 \\ 3 & -6 & -6 \end{bmatrix}, \end{aligned} \\
 >
@@ -717,7 +770,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Theorem 16 (Every nonzero matrix has a rank factorization)** Every \\m \times n\\ matrix \\\mathbf{A}\\ with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ has a rank factorization ([Definition 11](#def-rank-factorization)). One is given by taking the columns of \\\mathbf{C}\\ to be any basis of \\\mathcal{C}(\mathbf{A})\\.
+> **Theorem 17 (Every nonzero matrix has a rank factorization)** Every \\m \times n\\ matrix \\\mathbf{A}\\ with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ has a rank factorization ([Definition 11](#def-rank-factorization)). One is given by taking the columns of \\\mathbf{C}\\ to be any basis of \\\mathcal{C}(\mathbf{A})\\.
 
 > **NOTE:**
 >
@@ -729,7 +782,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 27 (Building a rank factorization from a basis)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\(1, 3)\\ spans \\\mathcal{C}(\mathbf{A})\\ ([Example 2](#exm-column-space-span)), and it is linearly independent because it is nonzero (\\c\\(1, 3) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_2\\ forces \\c = 0\\), so it is a basis of \\\mathcal{C}(\mathbf{A})\\. The columns of \\\mathbf{A}\\ are \\(1, 3) = 1 \cdot(1, 3)\\, \\(-2, -6) = -2 \cdot(1, 3)\\ and \\(-2, -6) = -2 \cdot(1, 3)\\, so the construction in [Theorem 16](#thm-rank-factorization) gives \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\ and \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\, the factorization in [Example 26](#exm-rank-factorization).
+> **Example 28 (Building a rank factorization from a basis)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\(1, 3)\\ spans \\\mathcal{C}(\mathbf{A})\\ ([Example 2](#exm-column-space-span)), and it is linearly independent because it is nonzero (\\c\\(1, 3) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_2\\ forces \\c = 0\\), so it is a basis of \\\mathcal{C}(\mathbf{A})\\. The columns of \\\mathbf{A}\\ are \\(1, 3) = 1 \cdot(1, 3)\\, \\(-2, -6) = -2 \cdot(1, 3)\\ and \\(-2, -6) = -2 \cdot(1, 3)\\, so the construction in [Theorem 17](#thm-rank-factorization) gives \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\ and \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\, the factorization in [Example 27](#exm-rank-factorization).
 
 # Definitions on this page
 
