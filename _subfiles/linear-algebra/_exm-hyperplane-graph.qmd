@@ -8,5 +8,29 @@ The point $(0, 1)$ is on it,
 since $2 \cdot 0 - 1 + 1 = 0$.
 The point $(0, 0)$ is off it,
 since $2 \cdot 0 - 0 + 1 = 1 \ne 0$.
+@fig-hyperplane-graph shows the line, the two points, and the normal vector drawn from $(0, 1)$.
+
+```{r}
+#| label: fig-hyperplane-graph
+#| fig-cap: >-
+#|   The graph of $y = 2x + 1$, a line in the plane,
+#|   with its normal vector $(2, -1)$ drawn from the point $(0, 1)$ on it
+#|   and the point $(0, 0)$ off it
+#| fig-alt: >-
+#|   A straight line rising to the right through the point (0, 1).
+#|   An arrow from (0, 1) points right and down, perpendicular to the line.
+#|   A second point at the origin lies below the line.
+normal_arrow <- grid::arrow(length = grid::unit(0.15, "inches"))
+points <- data.frame(x = c(0, 0), y = c(1, 0), label = c("on the line", "off the line"))
+ggplot2::ggplot() +
+  ggplot2::geom_abline(intercept = 1, slope = 2) +
+  ggplot2::geom_segment(
+    ggplot2::aes(x = 0, y = 1, xend = 2, yend = 0),
+    arrow = normal_arrow
+  ) +
+  ggplot2::geom_point(ggplot2::aes(x = x, y = y, colour = label), data = points, size = 3) +
+  ggplot2::coord_fixed(xlim = c(-2, 3), ylim = c(-2, 4)) +
+  ggplot2::labs(x = "x", y = "y", colour = NULL)
+```
 
 :::
