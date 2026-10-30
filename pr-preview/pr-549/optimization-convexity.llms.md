@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 14:11:06 (PDT)
+Last modified: 2026-10-30 15:41:32 (PDT)
 
 ## 0.1 Convexity in several variables
 
