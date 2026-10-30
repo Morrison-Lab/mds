@@ -5,10 +5,13 @@ The [real numbers](number-systems.qmd#def-real-numbers) $\reals$ with the [inner
 form an [inner product space](linear-algebra-inner-products.qmd#def-inner-product-space),
 and $\norm{x} = \abs{x}$ in it.
 The [sequence](functions.qmd#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence).
-Given $\tolout > 0$, take $N$ to be any [natural number](number-systems.qmd#def-natural-numbers) larger than $\frac{1}{\tolout}$.
-[For all](proof-writing.qmd#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$,
+Given $\tolout > 0$,
+take $N$ to be any [natural number](number-systems.qmd#def-natural-numbers) larger than $\frac{1}{\tolout}$.
+[For all](proof-writing.qmd#def-universal-quantifier) $m, n \ge N$,
+both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$,
 so $\abs{\frac{1}{m} - \frac{1}{n}} < \frac{1}{N} < \tolout$.
-For example, with $\tolout = 0.01$, take $N = 101$:
+For example, with $\tolout = 0.01$,
+take $N = 101$:
 all $m, n \ge 101$ have $\abs{\frac{1}{m} - \frac{1}{n}} < \frac{1}{101} < 0.01$.
 <!-- no-figure: a sequence of numbers checked at one tolerance -->
 
