@@ -10,6 +10,8 @@ format:
     output-file: linear-algebra.docx
 ---
 
+{{< include mds/_subfiles/linear-algebra/_rem-matrix-analysis.qmd >}}
+
 ::: {.content-visible when-format="html"}
 
 The linear algebra notes are split across these pages:

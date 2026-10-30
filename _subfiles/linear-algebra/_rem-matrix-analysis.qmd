@@ -1,0 +1,15 @@
+:::{#rem-matrix-analysis}
+#### Linear algebra and matrix analysis
+
+*Matrix analysis* is the study of matrices and their algebraic properties,
+with operations on matrices, functions of matrices and the eigenvalues of matrices as example topics
+[@wikipedia_matrix_analysis].
+It is usually placed within linear algebra and its applications
+[@wikipedia_matrix_analysis],
+and these notes do not treat it as a separate subject:
+they use the name *linear algebra* for all of the matrix material in the pages that follow.
+@banerjee2014linear pairs the two names in its title.
+Its preface says that its last chapters cover convergence of matrices and Hilbert spaces
+[@banerjee2014linear, p. xvi].
+
+:::
