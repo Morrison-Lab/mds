@@ -67,8 +67,8 @@ goes on to the page that now holds it.
   covers computer arithmetic,
   solving nonlinear equations,
   optimization in a single variable,
-  matrix factorization,
-  and iterative methods for matrices.
+  [matrix](linear-algebra-matrices.qmd#def-matrix) factorization,
+  and [iterative methods](optimization-newton.qmd#def-iterative-method) for matrices.
 - [Hua Zhou](https://hua-zhou.github.io/)'s [course page for "UCLA Biostat 257 - Statistical Computing" (2025 Spring)](https://ucla-biostat-257.github.io/2025spring/)
   has lectures on optimization, from root finding to constrained problems.
   Its source is [on GitHub](https://github.com/ucla-biostat-257/2025spring) under the MIT License.
