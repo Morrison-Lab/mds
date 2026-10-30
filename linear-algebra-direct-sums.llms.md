@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Sums and direct sums
+## 0.1 Sums and direct sums
 
 > **NOTE:**
 >
-> This section, [Section 2](#sec-orthogonal-complements) and [Section 3](#sec-fundamental-theorem) are adapted from Zhou [\[1\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)) instead. The source defines the orthogonal complement inside an ambient vector space \\V \subseteq \mathbb{R}^m\\; here the ambient space is always \\\mathbb{R}^p\\, which is all that the fundamental theorem and the projections need.
+> This section, [Section 0.2](#sec-orthogonal-complements) and [Section 0.3](#sec-fundamental-theorem) are adapted from Zhou [\[1\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)) instead. The source defines the orthogonal complement inside an ambient vector space \\V \subseteq \mathbb{R}^m\\; here the ambient space is always \\\mathbb{R}^p\\, which is all that the fundamental theorem and the projections need.
 
 > **NOTE:**
 >
@@ -238,7 +238,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > ([Definition 3](#def-direct-sum), [Theorem 4](#thm-direct-sum-equiv)). The same vector has a different projection onto the same subspace when the complement changes.
 
-## 2 Orthogonal complements
+## 0.2 Orthogonal complements
 
 > **NOTE:**
 >
@@ -454,7 +454,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > **Example 17 (A set that is not a subspace does not come back)** The one-element set \\\mathcal{X} = \mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ is not a subspace. Its orthogonal complement is the same as that of \\\mathcal{S}\\ in [Example 16](#exm-double-complement), since both are defined by the single condition \\u_1 + u_2 = 0\\, so \\(\mathcal{X}^\perp)^\perp = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, which contains \\(2, 2, 0) \notin \mathcal{X}\\. [Theorem 9](#thm-double-complement) needs \\\mathcal{S}\\ to be a subspace.
 
-## 3 The fundamental theorem of linear algebra
+## 0.3 The fundamental theorem of linear algebra
 
 > **NOTE:**
 >
@@ -507,6 +507,14 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > so \\t = \frac{1}{9}\\. The row-space part is \\\mathopen{}\left(\frac{1}{9}, -\frac{2}{9}, -\frac{2}{9}\right)\mathclose{}\\ and the null-space part is \\\mathopen{}\left(\frac{8}{9}, \frac{2}{9}, \frac{2}{9}\right)\mathclose{}\\; as a check, row 1 of \\\mathbf{A}\\ gives \\\frac{8}{9} - 2 \cdot\frac{2}{9} - 2 \cdot\frac{2}{9} = 0\\, and row 2 is \\3\\ times row 1, so \\\mathbf{A}\\ sends the null-space part to \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_2\\.
 >
 > These four statements are the fundamental theorem of linear algebra [\[6\]](#ref-wikipedia_fundamental_theorem_of_linear_algebra).
+
+# Definitions on this page
+
+- [Definition 1 (Sum of subspaces)](#def-subspace-sum)
+- [Definition 2 (Complementary subspaces)](#def-complementary-subspaces)
+- [Definition 3 (Direct sum)](#def-direct-sum)
+- [Definition 4 (Projection onto a subspace along a complement)](#def-projection)
+- [Definition 5 (Orthogonal complement)](#def-orthogonal-complement)
 
 Back to top
 

@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Additivity
+## 0.1 Additivity
 
 > **NOTE:**
 >
@@ -117,6 +117,11 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > **NOTE:**
 >
 > *Remark 3* (Finite additivity does not imply countable additivity). [Example 6](#exm-finite-not-countable) shows that the [converse](proof-writing.llms.md#def-converse) of [Theorem 1](#thm-countable-implies-finite) fails, even when \\\mu(\emptyset) = 0\\: a finitely additive function need not be countably additive [\[1\]](#ref-wikipedia_sigma_additive_set_function). The function \\\mu\\ in [Example 6](#exm-finite-not-countable) has \\\mu(\emptyset) = 0\\, because \\\emptyset\\ is finite.
+
+# Definitions on this page
+
+- [Definition 1 (Finite additivity)](#def-finite-additivity)
+- [Definition 2 (Countable additivity (\\\sigma\\-additivity))](#def-countable-additivity)
 
 Back to top
 

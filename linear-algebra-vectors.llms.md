@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Vectors
+## 0.1 Vectors
 
 > **NOTE:**
 >
@@ -187,7 +187,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Proof*. \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} &= \sum\_{i=1}^px_i y_i && \text{(definition of the dot product)} \\ &= \sum\_{i=1}^py_i x_i && \text{(products of numbers are symmetric)} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} && \text{(definition of the dot product)} \end{aligned} \\
 
-### 1.1 Special vectors
+### 0.1.1 Special vectors
 
 > **NOTE:**
 >
@@ -293,7 +293,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Example 13 (Expanding a vector in indicator vectors)** \\ \begin{aligned} \begin{bmatrix}4 \\ -1 \\ 2\end{bmatrix} &= 4 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + (-1) \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 2 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \\ &= 4 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + 2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3 \end{aligned} \\
 
-### 1.2 Orthogonality
+### 0.1.2 Orthogonality
 
 > **NOTE:**
 >
@@ -465,6 +465,32 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > **TIP:**
 >
 > Hutchinson’s [Linear Function Basics](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics) (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)) and [level sets](vector-calculus.llms.md#def-level-set) [\[12\]](#ref-hutchinson_wwu_ml_videos). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
+
+# Definitions on this page
+
+- [Definition 1 (Column vector)](#def-column-vector)
+- [Definition 2 (The set \\\mathbb{R}^p\\)](#def-real-coordinate-space)
+- [Definition 3 (Scalar)](#def-scalar)
+- [Definition 4 (Real-valued function, scalar-valued function)](#def-real-vector-valued)
+- [Definition 5 (Vector-valued function)](#def-vector-valued)
+- [Definition 6 (Transpose)](#def-transpose)
+- [Definition 7 (Vector addition)](#def-vector-addition)
+- [Definition 8 (Dot product)](#def-dot-product)
+- [Definition 9 (Linear combination)](#def-linear-combination)
+- [Definition 10 (Coefficients of a linear combination)](#def-lincom-coefficient)
+- [Definition 11 (Weighted sum)](#def-weighted-sum)
+- [Definition 12 (Weight)](#def-weight)
+- [Definition 13 (Weighted average, weighted mean)](#def-weighted-average)
+- [Definition 14 (Zero vector)](#def-zero-vector)
+- [Definition 15 (Mean, average)](#def-mean)
+- [Definition 16 (Ones vector)](#def-ones-vector)
+- [Definition 17 (Sum of the elements of a vector)](#def-sum-of-elements)
+- [Definition 18 (Indicator vector, standard basis vector)](#def-indicator-vector)
+- [Definition 19 (Orthogonal vectors)](#def-orthogonal-vectors)
+- [Definition 20 (Euclidean norm (length, \\L_2\\ norm))](#def-euclidean-norm)
+- [Definition 21 (Unit vector)](#def-unit-vector)
+- [Definition 22 (Euclidean distance)](#def-euclidean-distance)
+- [Definition 23 (Orthonormal vectors)](#def-orthonormal-vectors)
 
 Back to top
 

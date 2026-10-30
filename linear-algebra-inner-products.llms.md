@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Inner products
+## 0.1 Inner products
 
 > **NOTE:**
 >
@@ -127,7 +127,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > *Remark 2* (Orthogonality for the dot product). With the dot product as the inner product ([Example 1](#exm-dot-product-inner-product)), the condition of [Definition 3](#def-orthogonal-inner-product) is orthogonality as in [Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors).
 
-## 2 Cauchy-Schwarz and the triangle inequality
+## 0.2 Cauchy-Schwarz and the triangle inequality
 
 > **NOTE:**
 >
@@ -579,11 +579,11 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > so the angle is \\\theta= \pi/3\\.
 
-## 3 Orthonormal bases and Gram-Schmidt
+## 0.3 Orthonormal bases and Gram-Schmidt
 
 > **NOTE:**
 >
-> Like [Section 2](#sec-cauchy-schwarz), this section is adapted from Zhou [\[4\]](#ref-zhou2024vector), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.
+> Like [Section 0.2](#sec-cauchy-schwarz), this section is adapted from Zhou [\[4\]](#ref-zhou2024vector), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.
 
 > **NOTE:**
 >
@@ -815,7 +815,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > The result is the orthonormal basis of [Example 20](#exm-orthonormal-basis), in a different order.
 
-## 4 Outer product
+## 0.4 Outer product
 
 > **NOTE:**
 >
@@ -860,6 +860,21 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > **NOTE:**
 >
 > **Example 28 (The rank of an outer product)** In [Example 27](#exm-outer-product), the second column \\(5, 10, 15)\\ of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ is \\\frac{5}{4}\\ times the first column \\(4, 8, 12)\\, because the columns are \\v_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 4\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ and \\v_2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 5\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\. So the two columns are not linearly independent, and the \\3 \times 2\\ matrix has rank \\1\\.
+
+# Definitions on this page
+
+- [Definition 1 (Inner product)](#def-inner-product)
+- [Definition 2 (Inner product space)](#def-inner-product-space)
+- [Definition 3 (Orthogonality in an inner product space)](#def-orthogonal-inner-product)
+- [Definition 4 (Norm (normed vector space, normed space))](#def-norm)
+- [Definition 5 (Vector \\p\\-norm (\\\ell_p\\ norm, \\\ell_1\\ norm, taxicab norm, Manhattan norm, \\\ell_2\\ norm, infinity norm))](#def-vector-p-norm)
+- [Definition 6 (Infinity norm (\\\ell\_\infty\\ norm, maximum norm, Chebyshev norm))](#def-infinity-norm)
+- [Definition 7 (Cosine similarity)](#def-cosine-similarity)
+- [Definition 8 (Angle between two vectors)](#def-angle)
+- [Definition 9 (Cosine similarity in an inner product space)](#def-cosine-similarity-inner-product-space)
+- [Definition 10 (Orthonormal basis)](#def-orthonormal-basis)
+- [Definition 11 (Gram-Schmidt process)](#def-gram-schmidt)
+- [Definition 12 (Outer product)](#def-outer-product)
 
 Back to top
 

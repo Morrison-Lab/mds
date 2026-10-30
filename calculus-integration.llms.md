@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Integration
+## 0.1 Integration
 
 Integration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability.
 
@@ -17,7 +17,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > - [Intro to Integral Calculus](https://www.youtube.com/watch?v=PNdKPsiaPhU&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [What Integral Calculus Is](https://www.youtube.com/watch?v=O7TuAb_jHTs&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-### 1.1 Antiderivatives
+### 0.1.1 Antiderivatives
 
 > **NOTE:**
 >
@@ -131,7 +131,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > - [The Integral Calculus Rules](https://www.youtube.com/watch?v=d-pyobAQ0iI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Indefinite Integral Exercises](https://www.youtube.com/watch?v=PoTWa8X_EpI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-### 1.2 Regularity Conditions
+### 0.1.2 Regularity Conditions
 
 > **NOTE:**
 >
@@ -464,7 +464,7 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 >
 > So \\S\_{10} = 0.55\\, \\S\_{100} = 0.505\\, \\S\_{1000} = 0.5005\\, and \\S_n \to \frac{1}{2}\\ as \\n \to \infty\\. By [Theorem 4](#thm-riemann-general), \\\int_0^1 x\\dx = \frac{1}{2}\\.
 
-### 1.3 Fundamental Theorem of Calculus
+### 0.1.3 Fundamental Theorem of Calculus
 
 > **NOTE:**
 >
@@ -981,6 +981,26 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > - [Definite Integrals](https://www.youtube.com/watch?v=lhtoBu51N7k&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Definite Integral Exercise](https://www.youtube.com/watch?v=kSZWX3j2u2U&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+
+# Definitions on this page
+
+- [Definition 1 (Antiderivative)](#def-antiderivative)
+- [Definition 2 (Indefinite integral)](#def-indefinite-integral)
+- [Definition 3 (Differentiable on an interval)](#def-differentiable-on)
+- [Definition 4 (Continuous function)](#def-continuous)
+- [Definition 5 (Discontinuous function)](#def-discontinuous)
+- [Definition 6 (Jump discontinuity)](#def-jump-discontinuity)
+- [Definition 7 (Continuous on a closed interval)](#def-continuous-on)
+- [Definition 8 (Partition of an interval)](#def-partition)
+- [Definition 9 (Mesh of a partition)](#def-mesh)
+- [Definition 10 (Sample point)](#def-sample-point)
+- [Definition 11 (Riemann sum)](#def-riemann-sum)
+- [Definition 12 (Riemann integral (definite integral))](#def-riemann-integral)
+- [Definition 13 (Riemann integrable)](#def-integrable)
+- [Definition 14 (Integrand)](#def-integrand)
+- [Definition 15 (Equal-width Riemann sum)](#def-riemann-sum-equal-width)
+- [Definition 16 (Accumulation function)](#def-accumulation-function)
+- [Definition 17 (Evaluation bracket)](#def-evaluation-bracket)
 
 Back to top
 

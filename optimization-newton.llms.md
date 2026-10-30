@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Newton’s method
+## 0.1 Newton’s method
 
 > **NOTE:**
 >
@@ -168,6 +168,17 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(1)} &= {(3, 1)}^{\top} - {(3, 1)}^{\top} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}, \end{aligned} \\
 >
 > the minimizer.
+
+# Definitions on this page
+
+- [Definition 1 (Iterative method)](#def-iterative-method)
+- [Definition 2 (Iterate)](#def-iterate)
+- [Definition 3 (Error of an iterate)](#def-iterate-error)
+- [Definition 4 (Convergence of a sequence of vectors)](#def-vector-sequence-limit)
+- [Definition 5 (Newton’s method for minimization)](#def-newton-method)
+- [Definition 6 (Newton step)](#def-newton-step)
+- [Definition 7 (Quadratic model, second-order Taylor polynomial)](#def-quadratic-model)
+- [Definition 8 (Quadratic convergence)](#def-quadratic-convergence)
 
 Back to top
 

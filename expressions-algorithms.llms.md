@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
 > **NOTE:**
 >
 > *Remark*. A function can be written down as an expression and computed by an algorithm. This page defines expressions, which write down the [functions](functions.llms.md) in the Morrison Lab’s probability and statistics notes, the parse trees of expressions, and algorithms, which compute those functions.
 
-## 1 Expressions
+## 0.1 Expressions
 
 > **NOTE:**
 >
@@ -187,7 +187,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree ([Definition 5](#def-parse-tree)).
 
-## 2 Algorithms
+## 0.2 Algorithms
 
 > **NOTE:**
 >
@@ -265,7 +265,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > **Example 6 (A minimizer with no known formula)** The minimizer \\\arg \min\_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\\ is well defined, because \\x - \cos x\\ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
 
-## 3 Exercises
+## 0.3 Exercises
 
 > **NOTE:**
 >
@@ -314,6 +314,16 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > **NOTE:**
 >
 > *Solution 5*. \\(a x + b)\\x + c\\, Horner’s form. It uses two multiplications and two additions, where the first form, with \\x^2\\ computed as \\x \cdot x\\, uses three multiplications and two additions. The two [expressions](#def-expression) denote the same [function](functions.llms.md#def-function) and describe different [algorithms](#def-algorithm).
+
+# Definitions on this page
+
+- [Definition 1 (Expression)](#def-expression)
+- [Definition 2 (Denotes)](#def-denotes)
+- [Definition 3 (Closed-form expression (formula))](#def-closed-form-expression)
+- [Definition 4 (Closed-form solution)](#def-closed-form-solution)
+- [Definition 5 (Parse tree)](#def-parse-tree)
+- [Definition 6 (Algorithm)](#def-algorithm)
+- [Definition 7 (Computes)](#def-computes)
 
 Back to top
 

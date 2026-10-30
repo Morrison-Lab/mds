@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Indicator functions
+## 0.1 Indicator functions
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:
 
@@ -50,7 +50,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 >
 > In the same way, every indicator is a binary variable, and every binary variable \\X\\ is the indicator of its own value being \\1\\: \\X = {\mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}}\\, since both sides are \\1\\ when \\X = 1\\ and \\0\\ when \\X = 0\\.
 
-### 1.1 Two primary notational paradigms: set vs. predicate notation
+### 0.1.1 Two primary notational paradigms: set vs. predicate notation
 
 The vast majority of indicator notations belong to one of two families: set notation or predicate notation.
 
@@ -109,7 +109,7 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 
 Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 6](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\{\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}}\\.
 
-### 1.2 Iverson bracket notation
+### 0.1.2 Iverson bracket notation
 
 In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the Iverson bracket [\[3\]](#ref-wikipedia_iverson_bracket).
 
@@ -157,7 +157,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 >
 > - \\ \begin{aligned} \delta\_{23} &= \[2 = 3\] \\ &= 0. \end{aligned} \\
 
-### 1.3 Strengths and limitations of the Iverson bracket
+### 0.1.3 Strengths and limitations of the Iverson bracket
 
 The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if \\U\\ is a [finite set](functions.llms.md#def-finite-set) that contains \\A\\, then:
 
@@ -167,7 +167,7 @@ With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\U =
 
 However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets.llms.md#def-closed-interval) \\\[a, b\]\\, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) \\\mathbb{E}\[Y \mid X\]\\ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
 
-### 1.4 Summary of indicator notations
+### 0.1.4 Summary of indicator notations
 
 [Table 1](#tbl-indicator-notations) compares the major notations encountered across the literature.
 
@@ -184,7 +184,7 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 >
 > Table 1: Notations for indicator functions across mathematical and statistical literature
 
-### 1.5 Conventions in this book
+### 0.1.5 Conventions in this book
 
 In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros defined in `latex-macros/macros.qmd`:
 
@@ -195,7 +195,7 @@ In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros 
 
 Blackboard bold \\\mathbb{1}\\ is preferred because it avoids all common collisions: it is visually distinct from the scalar \\1\\, the identity matrix \\I\\, and the observed and expected Fisher information matrices (\\I\\, \\\mathcal{I}\\).
 
-### 1.6 Key algebraic properties
+### 0.1.6 Key algebraic properties
 
 Indicator functions translate the logical connectives ([definition](proof-writing.llms.md#def-logical-connective)) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:
 
@@ -236,6 +236,18 @@ This [identity](algebra-basics.llms.md#def-identity) turns probabilities into ex
 - empirical proportions;
 - estimators of survival curves, the probability of no event by each time;
 - regression models for binary outcomes.
+
+# Definitions on this page
+
+- [Definition 1 (Indicator function, set indicator)](#def-indicator-function)
+- [Definition 2 (Predicate indicator)](#def-predicate-indicator)
+- [Definition 3 (Binary variable)](#def-binary-variable)
+- [Definition 4 (Set notation for indicators)](#def-set-predicate-notation)
+- [Definition 5 (Predicate notation for indicators)](#def-predicate-notation)
+- [Definition 6 (Support of a distribution)](#def-support)
+- [Definition 7 (Iverson bracket)](#def-iverson-bracket)
+- [Definition 8 (Kronecker delta)](#def-kronecker-delta)
+- [Definition 9 (Idempotent)](#def-idempotent)
 
 Back to top
 

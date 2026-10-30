@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Equalities
+## 0.1 Equalities
 
 Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra) (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference.
 
@@ -40,7 +40,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > - \\2(x + 1) = 2x + 2\\ is an identity: it holds for every real \\x\\. For example, at \\x = 3\\, both sides equal \\8\\.
 > - \\x + 1 = 3\\ is not an identity: it holds at \\x = 2\\, but at \\x = 0\\ the left side is \\1\\ and the right side is \\3\\.
 
-## 2 Inequalities
+## 0.2 Inequalities
 
 > **NOTE:**
 >
@@ -77,7 +77,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 6 (Negation is multiplication by \\-1\\)** \\-a = (-1)\*a\\
 
-## 3 Powers, square roots, and absolute values
+## 0.3 Powers, square roots, and absolute values
 
 > **NOTE:**
 >
@@ -169,7 +169,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Remark 2* (Absolute value as distance). For real numbers \\a\\ and \\b\\, \\\mathopen{}\left\|a - b\right\|\mathclose{}\\ is the distance between \\a\\ and \\b\\ on the number line.
 
-## 4 Percent
+## 0.4 Percent
 
 The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” [\[7\]](#ref-wikipedia_percentage).
 
@@ -189,7 +189,7 @@ The word “percent” comes from the Latin “per centum”; “centum” is La
 
 You are welcome to switch between decimal and percent notation freely; just make sure you execute it correctly.
 
-## 5 Minimum, maximum, argmin and argmax
+## 0.5 Minimum, maximum, argmin and argmax
 
 > **NOTE:**
 >
@@ -280,7 +280,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 >
 > **Example 11 (The negative part of the identity function)** For \\f(x) = x\\ on \\\mathbb{R}\\, the [negative part](#def-negative-part) is \\f^{-}(x) = \max\mathopen{}\left\\-x, 0\right\\\mathclose{}\\. At \\x = 3\\, \\f^{-}(3) = \max\mathopen{}\left\\-3, 0\right\\\mathclose{} = 0\\, and at \\x = -2\\, \\f^{-}(-2) = \max\mathopen{}\left\\2, 0\right\\\mathclose{} = 2\\.
 
-## 6 Global and local minimizers
+## 0.6 Global and local minimizers
 
 > **NOTE:**
 >
@@ -344,6 +344,29 @@ You are welcome to switch between decimal and percent notation freely; just make
 > and \\t^2 (t - 3) \< 0\\ whenever \\t \ne 0\\ and \\t \< 3\\. So whatever \\\delta\> 0\\ is, the point \\x = -1 + t\\ with \\t = \min\mathopen{}\left\\\delta/ 2, 1\right\\\mathclose{}\\ satisfies \\\mathopen{}\left\|x - (-1)\right\|\mathclose{} \< \delta\\ and \\f(x) \< f(-1)\\. For example,
 >
 > \\ \begin{aligned} f(-0.9) &= -0.729 + 2.7 \\ &= 1.971 \\ &\< 2. \end{aligned} \\
+
+# Definitions on this page
+
+- [Definition 1 (Transitive relation)](#def-transitive)
+- [Definition 2 (Identity)](#def-identity)
+- [Definition 3 (Strict inequalities)](#def-strict-inequality)
+- [Definition 4 (Non-strict inequalities)](#def-non-strict-inequality)
+- [Definition 5 (Power)](#def-power)
+- [Definition 6 (Base of a power)](#def-power-base)
+- [Definition 7 (Exponent of a power)](#def-power-exponent)
+- [Definition 8 (Square)](#def-square)
+- [Definition 9 (Powers with exponent zero or a negative integer)](#def-power-integer)
+- [Definition 10 (Square root)](#def-square-root)
+- [Definition 11 (Absolute value of a real number)](#def-absolute-value)
+- [Definition 12 (Percent)](#def-percent)
+- [Definition 13 (Minimum)](#def-minimum)
+- [Definition 14 (Maximum)](#def-maximum)
+- [Definition 15 (Argmin)](#def-argmin)
+- [Definition 16 (Argmax)](#def-argmax)
+- [Definition 17 (Positive part of a function)](#def-positive-negative-parts)
+- [Definition 18 (Negative part of a function)](#def-negative-part)
+- [Definition 19 (Global minimizer)](#def-global-minimizer)
+- [Definition 20 (Local minimizer)](#def-local-minimizer)
 
 Back to top
 

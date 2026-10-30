@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Minimizing a quadratic under linear constraints
+## 0.1 Minimizing a quadratic under linear constraints
 
 > **NOTE:**
 >
@@ -214,6 +214,18 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic \\\
 > \\ \begin{aligned} \tfrac{10}{25} &= 0.4 \\ &= -\lambda^\*: \end{aligned} \\
 >
 > moving the line \\3 x_1 + 4 x_2 = b\\ outward by a small step \\\varepsilon\\ in \\b\\ raises the minimum value by about \\0.4\\\varepsilon\\.
+
+# Definitions on this page
+
+- [Definition 1 (Feasible set)](#def-feasible-set)
+- [Definition 2 (Constraints)](#def-constraints)
+- [Definition 3 (Objective function, objective)](#def-objective-function)
+- [Definition 4 (Minimizer over a feasible set)](#def-minimizer-over-feasible-set)
+- [Definition 5 (Minimization problem)](#def-minimization-problem)
+- [Definition 6 (Optimization algorithm)](#def-optimization-algorithm)
+- [Definition 7 (Lagrangian)](#def-lagrangian)
+- [Definition 8 (Lagrange multipliers)](#def-lagrange-multipliers)
+- [Definition 9 (Sensitivity)](#def-sensitivity)
 
 Back to top
 

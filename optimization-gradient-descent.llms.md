@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Gradient descent
+## 0.1 Gradient descent
 
 > **NOTE:**
 >
@@ -672,6 +672,19 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > **NOTE:**
 >
 > *Solution 4*. From [Solution 3](#sol-best-step-factor), \\\rho(s^\*) = 0.8\\. Taking logarithms, \\\rho(s^\*)^t \le 0.1\\ becomes \\t \ln \rho(s^\*) \le \ln 0.1\\. Here \\\ln \rho(s^\*) \< 0\\, so dividing by it flips the [inequality](proof-writing.llms.md#def-inequality): \\t \ge \ln 0.1 / \ln \rho(s^\*) \approx 10.32\\. The smallest such \\t\\ is \\11\\.
+
+# Definitions on this page
+
+- [Definition 1 (Gradient descent)](#def-gradient-descent)
+- [Definition 2 (Gradient ascent)](#def-gradient-ascent)
+- [Definition 3 (Line search)](#def-line-search)
+- [Definition 4 (Exact line search)](#def-exact-line-search)
+- [Definition 5 (Descent direction)](#def-descent-direction)
+- [Definition 6 (Rosenbrock function)](#def-rosenbrock-function)
+- [Definition 7 (Basin of attraction)](#def-basin-of-attraction)
+- [Definition 8 (Plateau)](#def-plateau)
+- [Definition 9 (Armijo condition)](#def-armijo-condition)
+- [Definition 10 (Backtracking line search)](#def-backtracking-line-search)
 
 Back to top
 

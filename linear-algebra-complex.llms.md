@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Complex vectors and matrices
+## 0.1 Complex vectors and matrices
 
 > **NOTE:**
 >
@@ -246,6 +246,15 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > Subtracting the two equations gives \\\mathbf{A} - \mathbf{A}^{\mathsf{H}} = 2\mathbf{S}'\\, so
 >
 > \\ \begin{aligned} \mathbf{S}' &= \frac{1}{2}(\mathbf{A} - \mathbf{A}^{\mathsf{H}}) \\ &= \mathbf{S}. \end{aligned} \\
+
+# Definitions on this page
+
+- [Definition 1 (Complex vector)](#def-complex-vector)
+- [Definition 2 (Complex matrix)](#def-complex-matrix)
+- [Definition 3 (Complex conjugate of a complex vector or matrix)](#def-complex-conjugate-matrix)
+- [Definition 4 (Conjugate transpose, Hermitian adjoint, Hermitian conjugate, transjugate)](#def-conjugate-transpose)
+- [Definition 5 (Hermitian matrix, self-adjoint matrix)](#def-hermitian-matrix)
+- [Definition 6 (Skew-Hermitian matrix, anti-Hermitian matrix)](#def-skew-hermitian-matrix)
 
 Back to top
 

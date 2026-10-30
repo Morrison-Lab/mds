@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Cosine and sine
+## 0.1 Cosine and sine
 
 > **NOTE:**
 >
@@ -185,6 +185,16 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > - The [arccosine](#def-arccosine) of one is \\\arccos 1 = 0\\, because the [cosine](#def-cosine-sine) of zero is \\\cos 0 = 1\\.
 > - The arccosine of zero is \\\arccos 0 = \pi/2\\, because the cosine of a quarter turn is \\\cos(\pi/2) = 0\\.
 > - The arccosine of minus one is \\\arccos(-1) = \pi\\, because the cosine of a half turn is \\\cos\pi = -1\\.
+
+# Definitions on this page
+
+- [Definition 1 (Unit circle)](#def-unit-circle)
+- [Definition 2 (The number \\\pi\\)](#def-pi)
+- [Definition 3 (Angle on the unit circle)](#def-angle-unit-circle)
+- [Definition 4 (Radian)](#def-radian)
+- [Definition 5 (Cosine)](#def-cosine-sine)
+- [Definition 6 (Sine)](#def-sine)
+- [Definition 7 (Arccosine)](#def-arccosine)
 
 Back to top
 

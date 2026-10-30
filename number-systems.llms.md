@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
 > **NOTE:**
 >
 > *Remark*. Probability and statistics count with the integers and natural numbers and measure with the real numbers. This page defines those number systems. It also defines the words that sort their members: even and odd integers, and rational and irrational real numbers.
 
-## 1 Natural numbers
+## 0.1 Natural numbers
 
 > **NOTE:**
 >
@@ -100,7 +100,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > Source: [Wikipedia, “Natural number”, “Terminology and notation” and “Zero as natural number”](https://en.wikipedia.org/w/index.php?title=Natural_number&oldid=1375965996), which cites ISO 80000-2:2019 and the textbooks using each notation.
 
-## 2 Rational, real, and irrational numbers
+## 0.2 Rational, real, and irrational numbers
 
 > **NOTE:**
 >
@@ -144,6 +144,19 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > - \\\sqrt{2} = 1.41421\ldots\\, the [square root](algebra-basics.llms.md#def-square-root) of \\2\\, is irrational: no fraction of integers \\\frac{a}{b}\\ squares to \\2\\ [\[8\]](#ref-wikipedia_square_root_of_2).
 > - \\\pi = 3.14159\ldots\\ is irrational [\[9\]](#ref-wikipedia_proof_that_pi_is_irrational).
 > - \\1.5\\ is not irrational, because \\1.5 = \frac{3}{2}\\ is rational.
+
+# Definitions on this page
+
+- [Definition 1 (Integers)](#def-integers)
+- [Definition 2 (Positive integers)](#def-positive-integer)
+- [Definition 3 (Negative integers)](#def-negative-integer)
+- [Definition 4 (Even integer)](#def-even-odd)
+- [Definition 5 (Odd integer)](#def-odd)
+- [Definition 6 (Natural numbers (our convention))](#def-natural-numbers)
+- [Definition 7 (Non-negative integers)](#def-nonnegative-integers)
+- [Definition 8 (Rational numbers)](#def-rational-numbers)
+- [Definition 9 (Real numbers)](#def-real-numbers)
+- [Definition 10 (Irrational numbers)](#def-irrational-numbers)
 
 Back to top
 

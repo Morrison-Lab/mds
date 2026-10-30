@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -167,7 +167,7 @@ Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\
 > - [Advanced Partial-Derivative Exercises](https://www.youtube.com/watch?v=WFmUDiABfUI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Partial Derivative Notation](https://www.youtube.com/watch?v=kIKVHguEpvA&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-## 1 Checking a gradient by its shape
+## 0.1 Checking a gradient by its shape
 
 The gradient always has the same shape as the input it is taken with respect to, because it holds exactly one partial derivative per component of that input:
 
@@ -931,7 +931,7 @@ See Felippa [\[12\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 >
 > *Proof*. This is the solution to [Exercise 7](#exr-gradient-of-linear), worked in [Solution 7](#sol-gradient-of-linear), where \\m = 2\\, \\n = 3\\, and the entries of \\A\\ are given. The same argument works for every \\A\\: each \\W\_{ij}\\ appears in exactly one term, multiplied by \\A\_{ij}\\, so \\\frac{\partial g}{\partial W\_{ij}} = A\_{ij}\\.
 
-## 2 Second partial derivatives and the Hessian
+## 0.2 Second partial derivatives and the Hessian
 
 > **NOTE:**
 >
@@ -1236,7 +1236,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 >
 > \\ \begin{aligned} \mathbf{H}\_f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) &= \begin{bmatrix} \frac{\partial}{\partial x_1} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_1} (2 x_1 + 4 x_2) \\ \frac{\partial}{\partial x_2} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_2} (2 x_1 + 4 x_2) \end{bmatrix} \\ &= \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}. \end{aligned} \\
 
-## 3 Further reading
+## 0.3 Further reading
 
 - Marsden and Tromba [\[17\]](#ref-marsden2013vector) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.
 
@@ -1324,5 +1324,31 @@ J. E. Marsden and A. Tromba, *Vector calculus*, 6th ed. Macmillan Learning, 2013
 \[18\]
 
 K. B. Petersen and M. S. Pedersen, “The matrix cookbook,” Technical University of Denmark, Nov. 2012. Available: <https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf>
+
+# Definitions on this page
+
+- [Definition 1 (Partial derivative)](#def-partial-derivative)
+- [Definition 2 (Vector derivative, gradient)](#def-vector-derivative)
+- [Definition 3 (Direction)](#def-direction)
+- [Definition 4 (Level set)](#def-level-set)
+- [Definition 5 (Level curve)](#def-level-curve)
+- [Definition 6 (Row-vector derivative)](#def-row-vector-derivative)
+- [Definition 7 (Derivative of a vector-valued function)](#def-vector-valued-derivative)
+- [Definition 8 (Denominator layout)](#def-denominator-layout)
+- [Definition 9 (Jacobian matrix)](#def-jacobian-matrix)
+- [Definition 10 (Numerator layout)](#def-numerator-layout)
+- [Definition 11 (Constant)](#def-constant-wrt-vector)
+- [Definition 12 (Residual vector and residuals)](#def-residual)
+- [Definition 13 (Squared error)](#def-squared-error)
+- [Definition 14 (Residual sum of squares)](#def-residual-sum-of-squares)
+- [Definition 15 (Matrix derivative (gradient))](#def-matrix-derivative)
+- [Definition 16 (Open ball)](#def-ball)
+- [Definition 17 (Closed ball)](#def-closed-ball)
+- [Definition 18 (Unit ball)](#def-unit-ball)
+- [Definition 19 (Second partial derivative)](#def-second-partial-derivative)
+- [Definition 20 (Mixed partial derivative)](#def-mixed-partial-derivative)
+- [Definition 21 (Hessian matrix)](#def-hessian)
+- [Definition 22 (Continuity at a point in several variables)](#def-continuous-several)
+- [Definition 23 (Continuity on a set in several variables)](#def-continuous-on)
 
 Back to top

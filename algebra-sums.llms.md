@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Convex functions
+## 0.1 Convex functions
 
 > **NOTE:**
 >
@@ -132,7 +132,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > *Remark 2* (The inequality reverses for concave functions). If \\f\\ is [concave](optimization-convexity.llms.md#def-concave), then \\-f\\ is convex, and applying [Theorem 2](#thm-jensen) to \\-f\\ reverses the inequality: \\f\mathopen{}\left(\sum_i w_i x_i\right)\mathclose{} \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 5](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
 
-## 2 Infimum and supremum
+## 0.2 Infimum and supremum
 
 > **NOTE:**
 >
@@ -238,7 +238,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > - \\\sup\\t \ge 0 : t \< 0.5\\ = 0.5\\, even though \\0.5\\ itself is not in the set.
 > - \\\sup\\1, 2, 3, \ldots\\ = +\infty\\, because no real number is greater than or equal to every element of that set.
 
-## 3 Sums
+## 0.3 Sums
 
 > **NOTE:**
 >
@@ -323,7 +323,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > \\ \begin{aligned} 2 + (3 + 4) &= 2 + 7 \\ &= 9. \end{aligned} \\
 
-## 4 Products
+## 0.4 Products
 
 > **NOTE:**
 >
@@ -337,7 +337,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > **Theorem 9 (Products are associative)** \\(a \times b) \times c = a \times (b \times c)\\
 
-## 5 Division
+## 0.5 Division
 
 > **NOTE:**
 >
@@ -345,7 +345,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > \\\frac {a}{b} = a \times \frac{1}{b}\\
 
-## 6 Sums and products together
+## 0.6 Sums and products together
 
 > **NOTE:**
 >
@@ -465,7 +465,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > \\ \begin{aligned} 5^2 - 2 \cdot 5 \cdot 3 + 3^2 &= 25 - 30 + 9 \\ &= 4. \end{aligned} \\
 
-## 7 Summation notation
+## 0.7 Summation notation
 
 > **NOTE:**
 >
@@ -623,7 +623,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > **Example 19 (A sum over the empty set)** For example, \\\sum\_{x \in \mathopen{}\left\\\right\\\mathclose{}} x^2 = 0\\.
 
-## 8 Quotients
+## 0.8 Quotients
 
 > **NOTE:**
 >
@@ -719,7 +719,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
-## 9 Limits of sums and notational shorthands
+## 0.9 Limits of sums and notational shorthands
 
 > **NOTE:**
 >
@@ -796,6 +796,47 @@ For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\ma
 > **Example 27 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
 >
 > \\ \begin{aligned} \sum\_{i=1}^{3} x_i &= x_1 + x_2 + x_3 && \text{(definition of summation notation)} \\ &= 2 + 5 + 1 && \text{(substitute the values)} \\ &= 8 && \text{(add)} \end{aligned} \\
+
+# Definitions on this page
+
+- [Definition 1 (Line segment)](#def-line-segment)
+- [Definition 2 (Chord)](#def-chord)
+- [Definition 3 (Convex function)](#def-convex-function)
+- [Definition 4 (Upper bound)](#def-upper-bound)
+- [Definition 5 (Lower bound)](#def-lower-bound)
+- [Definition 6 (Bounded above)](#def-bounded-above)
+- [Definition 7 (Bounded below)](#def-bounded-below)
+- [Definition 8 (Bounded)](#def-bounded)
+- [Definition 9 (Infimum, greatest lower bound)](#def-infimum)
+- [Definition 10 (Supremum, least upper bound)](#def-supremum)
+- [Definition 11 (Term of a sum)](#def-term)
+- [Definition 12 (Identity element)](#def-identity-element)
+- [Definition 13 (Commutative operation)](#def-commutative)
+- [Definition 14 (Associative operation)](#def-associative)
+- [Definition 15 (Distributes over)](#def-distributes-over)
+- [Definition 16 (Distributive law)](#def-distributive)
+- [Definition 17 (Like terms)](#def-like-terms)
+- [Definition 18 (Collecting like terms)](#def-collect-like-terms)
+- [Definition 19 (Summation notation)](#def-summation)
+- [Definition 20 (Index of a sum)](#def-summation-index)
+- [Definition 21 (Empty sum)](#def-empty-sum)
+- [Definition 22 (Sum over a finite set)](#def-sum-over-set)
+- [Definition 23 (Quotient)](#def-quotient)
+- [Definition 24 (Fraction)](#def-fraction)
+- [Definition 25 (Numerator)](#def-numerator)
+- [Definition 26 (Denominator)](#def-denominator)
+- [Definition 27 (Follow-up)](#def-follow-up)
+- [Definition 28 (Person-years)](#def-person-years)
+- [Definition 29 (Rate)](#def-rate)
+- [Definition 30 (Ratios)](#def-ratio)
+- [Definition 31 (Proportion)](#def-proportion)
+- [Definition 32 (Proportional)](#def-proportional)
+- [Definition 33 (Lower limit of a sum or integral)](#def-lower-upper-limits)
+- [Definition 34 (Upper limit of a sum or integral)](#def-upper-limit)
+- [Definition 35 (Limits of integration)](#def-limits-of-integration)
+- [Definition 36 (Notational shorthand)](#def-notational-shorthand)
+- [Definition 37 (Full form)](#def-full-form)
+- [Definition 38 (Range of a variable)](#def-range-of-variable)
 
 Back to top
 

@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Critical points and optimization
+## 0.1 Critical points and optimization
 
 > **NOTE:**
 >
@@ -426,7 +426,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > Inflection points occur where the second derivative changes sign (\\f''(x) = 0\\ at \\x = 1/4\\). Because \\f''\\ is non-zero at both critical points, neither is an inflection point.
 
-## 2 Optimality conditions in several variables
+## 0.2 Optimality conditions in several variables
 
 > **NOTE:**
 >
@@ -852,6 +852,16 @@ This theorem is the case \\n = 2\\ of [\[6\]](#ref-rudin1976principles), Theorem
 > \\ \begin{aligned} f(t, 0) &= t^2 && \text{(substitute)} \\ &\> 0 && \text{(} t \ne 0 \text{)} \\ &= f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}), && \text{(substitute)} \\ f(0, t) &= -t^2 && \text{(substitute)} \\ &\< 0 && \text{(} t \ne 0 \text{)} \\ &= f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}). && \text{(substitute)} \end{aligned} \\
 >
 > So every ball around \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}\\ contains a point with a larger value of \\f\\ and a point with a smaller one. Hence \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_{2 \times 1}\\ is neither a local minimizer nor a local maximizer, and it is a saddle point.
+
+# Definitions on this page
+
+- [Definition 1 (Flat point (stationary point))](#def-flat-point)
+- [Definition 2 (Critical point)](#def-critical-point)
+- [Definition 3 (Inflection point)](#def-inflection-point)
+- [Definition 4 (Stationary point)](#def-stationary-point)
+- [Definition 5 (Strict local minimizer)](#def-strict-local-minimizer)
+- [Definition 6 (Local maximizer)](#def-local-maximizer)
+- [Definition 7 (Saddle point)](#def-saddle-point)
 
 Back to top
 

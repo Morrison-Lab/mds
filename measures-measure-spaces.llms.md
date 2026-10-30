@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Measures
+## 0.1 Measures
 
 > **NOTE:**
 >
@@ -195,7 +195,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > - Lebesgue measure on \\\mathbb{R}\\ is not finite, since \\\lambda(\mathbb{R}) = \infty\\, but it is \\\sigma\\-finite: \\\mathbb{R}\\ is the union of the intervals \\A_i = \[-i, i\]\\, each with \\\lambda(A_i) = 2i \< \infty\\.
 
-## 2 Probability measures
+## 0.2 Probability measures
 
 > **NOTE:**
 >
@@ -242,6 +242,25 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > **NOTE:**
 >
 > *Remark 3* (Mutually exclusive events). In [probability](#def-probability-measure), [pairwise disjoint](sets.llms.md#def-pairwise-disjoint) [events](#def-probability-measure) are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](number-systems.llms.md#def-even-odd)”, \\{\mathopen{}\left\\2, 4, 6\right\\\mathclose{}}\\, and “the roll is odd”, \\{\mathopen{}\left\\1, 3, 5\right\\\mathclose{}}\\, are mutually exclusive: no roll is both even and odd.
+
+# Definitions on this page
+
+- [Definition 1 (Measure)](#def-measure)
+- [Definition 2 (Counting measure)](#def-counting-measure)
+- [Definition 3 (Measurable space)](#def-measurable-space)
+- [Definition 4 (Measurable set)](#def-measurable-set)
+- [Definition 5 (Measure space)](#def-measure-space)
+- [Definition 6 (Lebesgue measure)](#def-lebesgue-measure)
+- [Definition 7 (Lebesgue measure on an interval)](#def-lebesgue-measure-interval)
+- [Definition 8 (Measure zero, null set)](#def-measure-zero)
+- [Definition 9 (Almost everywhere (\\\mu\\-almost everywhere, \\\mu\\-a.e.))](#def-almost-everywhere)
+- [Definition 10 (Finite measure)](#def-finite-measure)
+- [Definition 11 (\\\sigma\\-finite measure)](#def-sigma-finite)
+- [Definition 12 (Probability measure)](#def-probability-measure)
+- [Definition 13 (Probability space)](#def-probability-space)
+- [Definition 14 (Sample space)](#def-sample-space)
+- [Definition 15 (Outcome)](#def-outcome)
+- [Definition 16 (Event)](#def-event)
 
 Back to top
 

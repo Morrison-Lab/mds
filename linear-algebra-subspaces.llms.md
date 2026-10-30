@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Rank
+## 0.1 Rank
 
 > **NOTE:**
 >
@@ -47,7 +47,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > An \\n \times p\\ matrix can have full column rank only when \\p \le n\\, because more than \\n\\ vectors of length \\n\\ are never linearly independent. For example, the \\2 \times 3\\ matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ has \\3\\ columns of length \\2\\, and \\1 \cdot(1, 0) + 1 \cdot(0, 1) - 1 \cdot(1, 1) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, with coefficients that are not all zero. So its \\3\\ columns are not linearly independent, and its rank is less than \\3\\.
 
-## 2 Subspaces
+## 0.2 Subspaces
 
 > **NOTE:**
 >
@@ -381,6 +381,18 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > **NOTE:**
 >
 > **Example 21 (Equal dimensions without containment)** The lines \\\operatorname{span}\mathopen{}\left\\(1, 0, 0)\right\\\mathclose{}\\ and \\\operatorname{span}\mathopen{}\left\\(0, 1, 0)\right\\\mathclose{}\\ in \\\mathbb{R}^3\\ both have dimension \\1\\, but they are not equal: \\(1, 0, 0)\\ is in the first and not the second. [Theorem 11](#thm-subspace-equal-dim) does not apply, because neither line contains the other.
+
+# Definitions on this page
+
+- [Definition 1 (Linearly independent vectors)](#def-linearly-independent)
+- [Definition 2 (Rank)](#def-rank)
+- [Definition 3 (Full column rank)](#def-full-column-rank)
+- [Definition 4 (Subspace, linear subspace)](#def-subspace)
+- [Definition 5 (Span)](#def-span)
+- [Definition 6 (Basis)](#def-basis)
+- [Definition 7 (Coordinates in a basis)](#def-coordinates)
+- [Definition 8 (Coordinate vector)](#def-coordinate-vector)
+- [Definition 9 (Dimension)](#def-dimension)
 
 Back to top
 

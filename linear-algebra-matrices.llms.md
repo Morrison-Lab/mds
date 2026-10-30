@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Matrices
+## 0.1 Matrices
 
 > **NOTE:**
 >
@@ -32,7 +32,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > **Example 1 (Vectors, matrices and images as tensors)** A vector of length \\p\\ is a tensor of order \\1\\, and an \\m \times n\\ [matrix](#def-matrix) is a tensor of order \\2\\. A \\28 \times 28\\ grayscale image is a matrix: the entry \\a\_{ij}\\ is the brightness of the pixel in row \\i\\ and column \\j\\. A \\28 \times 28\\ color image stores three numbers per pixel (red, green, blue), so it is an order-3 tensor with dimensions \\28 \times 28 \times 3\\, and \\a\_{ijc}\\ is the value of color channel \\c\\ at the pixel in row \\i\\ and column \\j\\. It has \\28 \cdot 28 \cdot 3 = 2352\\ entries.
 
-### 1.1 Matrix transpose
+### 0.1.1 Matrix transpose
 
 > **NOTE:**
 >
@@ -48,7 +48,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > a \\3 \times 2\\ matrix. For instance, entry \\(1, 2)\\ of the transpose is \\a\_{21} = 4\\.
 
-### 1.2 Matrix addition
+### 0.1.2 Matrix addition
 
 > **NOTE:**
 >
@@ -98,7 +98,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > \\\mathbf{A} + (-\mathbf{A}) = \mathbf{0}\_{m \times n}\\
 
-### 1.3 Scalar multiplication
+### 0.1.3 Scalar multiplication
 
 > **NOTE:**
 >
@@ -110,7 +110,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > **Example 5 (A scalar multiple)** \\ \begin{aligned} 3 \begin{bmatrix} 1 & -2 \\ 0 & 4 \end{bmatrix} &= \begin{bmatrix} 3 \cdot 1 & 3 \cdot(-2) \\ 3 \cdot 0 & 3 \cdot 4 \end{bmatrix} \\ &= \begin{bmatrix} 3 & -6 \\ 0 & 12 \end{bmatrix}. \end{aligned} \\
 
-### 1.4 Matrix multiplication
+### 0.1.4 Matrix multiplication
 
 > **NOTE:**
 >
@@ -198,7 +198,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > The last two use the same two vectors and differ only in order, and they return objects of different kinds. Reading a transpose as decoration rather than as a shape change is the commonest way to lose track of an expression.
 
-### 1.5 Square and identity matrices
+### 0.1.5 Square and identity matrices
 
 > **NOTE:**
 >
@@ -251,7 +251,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > \\\mathbf{I}\_m\\\mathbf{A} = \mathbf{A}\\
 
-### 1.6 Matrix-vector multiplication
+### 0.1.6 Matrix-vector multiplication
 
 > **NOTE:**
 >
@@ -277,7 +277,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > The vector \\(1, 2)\\ is not a solution: its first equation holds, since \\1 + 2 \cdot 2 = 5\\, but its second gives \\3 \cdot 1 + 4 \cdot 2 = 11 \ne 6\\.
 
-### 1.7 Linear and affine maps
+### 0.1.7 Linear and affine maps
 
 > **NOTE:**
 >
@@ -735,7 +735,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > Items 1, 2 and 5 are affine and items 3 and 4 are not, which is the split that matters: a *model* can be affine in its weights while the *quantity we minimize* is not. Squared error and the norm penalty are both curved in \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\, and that curvature is what makes fitting an optimization problem at all: there is always a downhill direction to follow. Curvature alone does not promise a *single* answer. The squared error of one observation is completely flat along a whole line of weight vectors, every one of which fits that observation exactly, and pinning down one of them is part of what the norm penalty is added for in week 3.
 
-### 1.8 Transposes of sums and products
+### 0.1.8 Transposes of sums and products
 
 > **NOTE:**
 >
@@ -804,6 +804,32 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > \\ {\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\{\mathbf{M}}^{\top}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 3 \cdot 1 + (-1) \cdot 8 = -5. \\
 >
 > The two products are equal, as the theorem says. In least squares, this is why the two cross terms of \\{(\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})}^{\top}(\mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}- \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}})\\ are equal and can be combined.
+
+# Definitions on this page
+
+- [Definition 1 (Matrix)](#def-matrix)
+- [Definition 2 (Tensor)](#def-tensor)
+- [Definition 3 (Matrix transpose)](#def-matrix-transpose)
+- [Definition 4 (Zero matrix)](#def-zero-matrix)
+- [Definition 5 (Matrix addition)](#def-matrix-addition)
+- [Definition 6 (Scalar multiplication)](#def-scalar-mult)
+- [Definition 7 (Matrix multiplication)](#def-matrix-mult)
+- [Definition 8 (Square matrix)](#def-square-matrix)
+- [Definition 9 (Main diagonal)](#def-main-diagonal)
+- [Definition 10 (Diagonal entry)](#def-diagonal-entry)
+- [Definition 11 (Off-diagonal entry)](#def-off-diagonal-entry)
+- [Definition 12 (Identity matrix)](#def-identity-matrix)
+- [Definition 13 (Matrix-vector multiplication)](#def-matvec-mult)
+- [Definition 14 (Linear system, system of linear equations)](#def-linear-system)
+- [Definition 15 (Linear map, linear transformation, linear function)](#def-linear-map)
+- [Definition 16 (Linear operator)](#def-linear-operator)
+- [Definition 17 (Matrix of a linear map)](#def-matrix-of-linear-map)
+- [Definition 18 (Translation)](#def-translation)
+- [Definition 19 (Affine map, affine transformation, affine function)](#def-affine-map)
+- [Definition 20 (Offset of an affine map, intercept, bias)](#def-affine-offset)
+- [Definition 21 (Augmented vector)](#def-augmented-vector)
+- [Definition 22 (Hyperplane)](#def-hyperplane)
+- [Definition 23 (Normal vector of a hyperplane)](#def-normal-vector)
 
 Back to top
 

@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Measurable functions and integrals
+## 0.1 Measurable functions and integrals
 
 > **NOTE:**
 >
@@ -177,6 +177,13 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >   \\ \begin{aligned} \int\_{\mathbb{N}} \mathopen{}\left\|h\right\|\mathclose{} \\ d\mu&= \int\_{\mathbb{N}} h \\ d\mu\\ &= \infty \end{aligned} \\
 >
 >   ([Example 2](#exm-integral-nonneg)).
+
+# Definitions on this page
+
+- [Definition 1 (Measurable function)](#def-measurable-function)
+- [Definition 2 (Integral of a non-negative function)](#def-integral-nonneg)
+- [Definition 3 (Integral of a real-valued function)](#def-integral)
+- [Definition 4 (Absolutely integrable function, integrable function)](#def-absolutely-integrable)
 
 Back to top
 

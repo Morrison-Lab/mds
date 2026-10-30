@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Convexity in several variables
+## 0.1 Convexity in several variables
 
 > **NOTE:**
 >
@@ -521,6 +521,16 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > - \\f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1\\ is convex by [Theorem 5](#thm-convex-hessian), since its Hessian is \\2 \mathbf{I}\_2\\ ([Example 15 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-second-order-condition)), so its stationary point \\{(1, 0)}^{\top}\\ ([Example 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-stationary-point)) is a global minimizer, as completing the square showed in [Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition).
 > - Without convexity, a stationary point need not be a minimizer at all: \\x_1^2 - x_2^2\\ has the stationary point \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, which is not a minimizer ([Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
 > - The corollary says nothing about whether a minimizer exists: \\e^{2x_1 + x_2} - x_1\\ is convex ([Example 11](#exm-convex-hessian)) but has no stationary point, and so no local minimizer ([Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
+
+# Definitions on this page
+
+- [Definition 1 (Convex set)](#def-convex-set)
+- [Definition 2 (Half-space)](#def-half-space)
+- [Definition 3 (Strictly convex function)](#def-strictly-convex)
+- [Definition 4 (Concave function)](#def-concave)
+- [Definition 5 (Strictly concave function)](#def-strictly-concave)
+- [Definition 6 (Epigraph)](#def-epigraph)
+- [Definition 7 (Tangent plane)](#def-tangent-plane)
 
 Back to top
 

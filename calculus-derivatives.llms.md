@@ -14,11 +14,11 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Derivatives
+## 0.1 Derivatives
 
-### 1.1 Limits and derivatives
+### 0.1.1 Limits and derivatives
 
 > **NOTE:**
 >
@@ -175,7 +175,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > So \\f''(2) = 12\\, \\f''(0) = 0\\, and \\f''(-1) = -6\\.
 
-### 1.2 Derivative rules
+### 0.1.2 Derivative rules
 
 > **NOTE:**
 >
@@ -579,7 +579,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > \\ \begin{aligned} f''(x) &= -x^{-2} \\ &= -\frac{1}{x^2} \end{aligned} \\
 
-### 1.3 Studying a new function
+### 0.1.3 Studying a new function
 
 > **NOTE:**
 >
@@ -689,7 +689,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > >
 > > Figure 1: The logistic function, its derivative and its logarithm
 
-### 1.4 Tangent lines
+### 0.1.4 Tangent lines
 
 > **NOTE:**
 >
@@ -707,7 +707,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > At \\x = 1.1\\ the tangent line has height \\2(1.1) - 1 = 1.2\\, close to the curve’s height \\f(1.1) = 1.21\\; the gap, \\1.21 - 1.2 = 0.01\\, is \\(1.1 - 1)^2\\.
 
-### 1.5 Linear approximation
+### 0.1.5 Linear approximation
 
 For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
@@ -835,7 +835,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > The approximation error is \\\|4.171593 - 4.171543\| \approx 0.00005\\, on the order of \\(0.01)^2 = 10^{-4}\\.
 
-### 1.6 Taylor series
+### 0.1.6 Taylor series
 
 > **NOTE:**
 >
@@ -1226,6 +1226,29 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 > *Solution 31*. Substitute \\u = 2x\\ into the Maclaurin series \\\log(1 + u) = u - \frac{u^2}{2} + \dots\\:
 >
 > \\ \begin{aligned} \log(1 + 2x) &= (2x) - \frac{(2x)^2}{2} + \dots \\ &= 2x - 2x^2 + \dots \end{aligned} \\
+
+# Definitions on this page
+
+- [Definition 1 (Limit of a function at a point)](#def-limit)
+- [Definition 2 (Right-hand limit)](#def-right-hand-limit)
+- [Definition 3 (Left-hand limit)](#def-left-hand-limit)
+- [Definition 4 (One-sided limits)](#def-one-sided-limit)
+- [Definition 5 (Difference quotient)](#def-difference-quotient)
+- [Definition 6 (Differentiable function)](#def-differentiable)
+- [Definition 7 (Derivative)](#def-derivative)
+- [Definition 8 (Lagrange’s notation)](#def-lagrange-notation)
+- [Definition 9 (Leibniz notation)](#def-leibniz-notation)
+- [Definition 10 (Right-hand derivative)](#def-right-hand-derivative)
+- [Definition 11 (Left-hand derivative)](#def-left-hand-derivative)
+- [Definition 12 (One-sided derivatives)](#def-one-sided-derivative)
+- [Definition 13 (Second derivative)](#def-second-derivative)
+- [Definition 14 (Logarithmic derivative)](#def-logarithmic-derivative)
+- [Definition 15 (Profile of a function)](#def-function-profile)
+- [Definition 16 (Tangent line)](#def-tangent-line)
+- [Definition 17 (Linear approximation (first-order Taylor approximation))](#def-linear-approximation)
+- [Definition 18 (Taylor polynomial)](#def-taylor-polynomial)
+- [Definition 19 (Maclaurin polynomial)](#def-maclaurin-polynomial)
+- [Definition 20 (Taylor series)](#def-taylor-series)
 
 Back to top
 

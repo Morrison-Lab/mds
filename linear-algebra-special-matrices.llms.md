@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Special Matrices
+## 0.1 Special Matrices
 
 Some special matrices appeared earlier:
 
@@ -371,7 +371,7 @@ Some special matrices appeared earlier:
 >
 > which is \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = 5\\.
 
-## 2 Quadratic Forms
+## 0.2 Quadratic Forms
 
 > **NOTE:**
 >
@@ -460,7 +460,7 @@ Some special matrices appeared earlier:
 >
 > Both quadratic forms equal the sum of their matrix’s entries, because every entry of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is \\1\\.
 
-## 3 Trace and Matrix Inner Product
+## 0.3 Trace and Matrix Inner Product
 
 > **NOTE:**
 >
@@ -612,7 +612,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 >
 > which matches \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F = \sqrt{30}\\ from [Example 23](#exm-frobenius-norm).
 
-## 4 Matrix Decompositions
+## 0.4 Matrix Decompositions
 
 > **NOTE:**
 >
@@ -902,7 +902,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 >
 > For example, in [Example 30](#exm-svd-evd) the eigenvalues of \\{\mathbf{A}}^{\top}\mathbf{A}\\ are \\4\\ and \\2\\, and \\\sqrt{4} = 2\\ and \\\sqrt{2}\\ are the singular values \\\sigma_1\\ and \\\sigma_2\\ of \\\mathbf{A}\\ from [Example 29](#exm-svd).
 
-## 5 Definite Matrices
+## 0.5 Definite Matrices
 
 > **NOTE:**
 >
@@ -1389,7 +1389,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 >
 > 4.  **Weighted and generalized least squares**: In linear regression \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\approx \mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, when observation errors have unequal variances or known correlations with positive definite covariance matrix \\\mathbf{\Omega}\\, ordinary least squares is inefficient. Generalized least squares minimizes the residual norm in the inner product space induced by \\\mathbf{W} = \mathbf{\Omega}^{-1}\\: \\ \min\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}} \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}\_{\mathbf{W}}^2 = \min\_{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}} {\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\right\rangle\mathclose{}}\_{\mathbf{W}}. \\
 
-## 6 Determinants
+## 0.6 Determinants
 
 > **NOTE:**
 >
@@ -1505,6 +1505,39 @@ See also [\[16\]](#ref-wikipedia_determinant).
 > \\ \begin{aligned} \det(\mathbf{A}) &= 3 \cdot 1 \\ &= 3, \end{aligned} \\
 >
 > matching \\2 \cdot 2 - 1 \cdot 1 = 3\\ from [Example 43](#exm-determinant).
+
+# Definitions on this page
+
+- [Definition 1 (Order of a square matrix)](#def-matrix-order)
+- [Definition 2 (Matrix power)](#def-matrix-power)
+- [Definition 3 (Symmetric matrix)](#def-symmetric-matrix)
+- [Definition 4 (Diagonal matrix)](#def-diagonal-matrix)
+- [Definition 5 (Matrix inverse)](#def-matrix-inverse)
+- [Definition 6 (Invertible matrix, non-singular matrix)](#def-invertible-matrix)
+- [Definition 7 (Idempotent matrix)](#def-idempotent-matrix)
+- [Definition 8 (Orthogonal projection matrix)](#def-projection-matrix)
+- [Definition 9 (Oblique projection)](#def-oblique-projection)
+- [Definition 10 (Orthogonal matrix)](#def-orthogonal-matrix)
+- [Definition 11 (Quadratic form)](#def-quadratic-form)
+- [Definition 12 (Symmetric part of a square matrix)](#def-symmetric-part)
+- [Definition 13 (Trace)](#def-trace)
+- [Definition 14 (Matrix inner product)](#def-matrix-inner-product)
+- [Definition 15 (Frobenius norm)](#def-frobenius-norm)
+- [Definition 16 (Eigenvalue)](#def-eigenvalue)
+- [Definition 17 (Eigenvector)](#def-eigenvector)
+- [Definition 18 (Eigendecomposition, spectral decomposition)](#def-eigendecomposition)
+- [Definition 19 (Singular value decomposition)](#def-svd)
+- [Definition 20 (Singular values)](#def-singular-values)
+- [Definition 21 (Positive semidefinite matrix)](#def-positive-semidefinite)
+- [Definition 22 (Positive definite matrix)](#def-positive-definite)
+- [Definition 23 (Condition number of a positive definite matrix)](#def-condition-number)
+- [Definition 24 (Condition number of a matrix)](#def-matrix-condition-number)
+- [Definition 25 (Ill-conditioned matrix)](#def-ill-conditioned)
+- [Definition 26 (Well-conditioned matrix)](#def-well-conditioned)
+- [Definition 27 (Paraboloid)](#def-paraboloid)
+- [Definition 28 (Elliptic paraboloid)](#def-elliptic-paraboloid)
+- [Definition 29 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))](#def-matrix-induced-inner-product)
+- [Definition 30 (Determinant)](#def-determinant)
 
 Back to top
 

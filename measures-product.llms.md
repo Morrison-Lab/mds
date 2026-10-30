@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Product measures
+## 0.1 Product measures
 
 > **NOTE:**
 >
@@ -46,6 +46,12 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >   \\ \begin{aligned} (\lambda\otimes \lambda)(\[0, 2\] \times \[0, 3\]) &= 2 \cdot 3 \\ &= 6, \end{aligned} \\
 >
 >   the area of the rectangle.
+
+# Definitions on this page
+
+- [Definition 1 (Measurable rectangle)](#def-measurable-rectangle)
+- [Definition 2 (Product \\\sigma\\-algebra)](#def-product-sigma-algebra)
+- [Definition 3 (Product measure)](#def-product-measure)
 
 Back to top
 

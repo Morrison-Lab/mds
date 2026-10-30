@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 \\L^p\\ spaces
+## 0.1 \\L^p\\ spaces
 
 > **NOTE:**
 >
@@ -295,5 +295,15 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >     - **\\L^2\\ loss (population mean squared error (pMSE), or sample mean squared error (sMSE) on a sample)**: penalizes large errors quadratically, yielding the conditional mean; sensitive to outliers.
 >     - **\\L^1\\ loss (population mean absolute error (pMAE), or sample mean absolute error (sMAE) on a sample)**: penalizes errors linearly, yielding the conditional median; robust to heavy tails and outliers.
 >     - **\\L^\infty\\ loss (Chebyshev criterion)**: minimizes the worst-case maximum error across all instances.
+
+# Definitions on this page
+
+- [Definition 1 (\\L^p\\ norm (\\p\\-norm of a function))](#def-lp-norm)
+- [Definition 2 (\\\mathcal{L}^p\\ space (\\\mathcal{L}^p(S, \mathcal{S}, \mu)\\))](#def-lp-function-space)
+- [Definition 3 (Equal almost everywhere (\\f = g\\ \\\mu\\-a.e.))](#def-equal-almost-everywhere)
+- [Definition 4 (\\L^p\\ space (\\L^p(S, \mathcal{S}, \mu)\\, \\L^p(\mu)\\))](#def-lp-space)
+- [Definition 5 (Essential supremum norm (\\L^\infty\\ norm))](#def-essential-supremum-norm)
+- [Definition 6 (\\\mathcal{L}^\infty\\ space (\\\mathcal{L}^\infty(S, \mathcal{S}, \mu)\\))](#def-linf-function-space)
+- [Definition 7 (\\L^\infty\\ space (\\L^\infty(S, \mathcal{S}, \mu)\\, \\L^\infty(\mu)\\))](#def-linf-space)
 
 Back to top

@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
 > **NOTE:**
 >
 > *Remark*. A [relation](functions.llms.md#def-relation) says which pairs of elements of a [set](sets.llms.md#def-set) are related. This page defines the properties that make a relation behave like equality, and the groups of elements that such a relation puts together.
 
-## 1 Properties of relations
+## 0.1 Properties of relations
 
 > **NOTE:**
 >
@@ -28,7 +28,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > **Example 2 (Symmetric and non-symmetric relations on the real numbers)** On \\\mathbb{R}\\, the [relation](functions.llms.md#def-relation) \\=\\ is [symmetric](#def-symmetric-relation): whenever \\a = b\\, also \\b = a\\. The relation \\\le\\ is not symmetric, since \\2 \le 5\\ is true but \\5 \le 2\\ is false.
 
-## 2 Equivalence relations
+## 0.2 Equivalence relations
 
 > **NOTE:**
 >
@@ -79,5 +79,12 @@ Wikipedia contributors, “Equivalence relation — Wikipedia, the free encyclop
 \[4\]
 
 Wikipedia contributors, “Equivalence class — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Equivalence_class>
+
+# Definitions on this page
+
+- [Definition 1 (Reflexive relation)](#def-reflexive)
+- [Definition 2 (Symmetric relation)](#def-symmetric-relation)
+- [Definition 3 (Equivalence relation)](#def-equivalence-relation)
+- [Definition 4 (Equivalence class)](#def-equivalence-class)
 
 Back to top

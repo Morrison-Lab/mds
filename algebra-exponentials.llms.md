@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Polynomials
+## 0.1 Polynomials
 
 > **NOTE:**
 >
@@ -130,7 +130,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > - The [constant](#def-constant-function) [monomial](#def-monomial) \\1\\ has degree \\0\\.
 > - With one variable, the monomial \\x^n\\ has degree \\n\\, which is the [degree](#def-polynomial-degree) of the one-term [polynomial](#def-polynomial) \\f(x) = x^n\\.
 
-## 2 Affine and linear functions of one variable
+## 0.2 Affine and linear functions of one variable
 
 > **NOTE:**
 >
@@ -192,7 +192,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > *Remark 2* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra-matrices.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra-matrices.llms.md#thm-linear-map-zero)).
 
-## 3 Limits of sequences
+## 0.3 Limits of sequences
 
 > **NOTE:**
 >
@@ -224,7 +224,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > **Definition 18 (Divergence of a sequence to infinity)** A [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
 
-## 4 Series
+## 0.4 Series
 
 > **NOTE:**
 >
@@ -289,7 +289,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](number-systems.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](#def-convergent-sequence) to a finite number [\[10\]](#ref-wikipedia_monotone_convergence_theorem). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
 
-## 5 Exponentials and Logarithms
+## 0.5 Exponentials and Logarithms
 
 > **NOTE:**
 >
@@ -802,6 +802,36 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > **NOTE:**
 >
 > *Proof*. This is the solution to [Exercise 3](#exr-double-exponential), worked in [Solution 3](#sol-double-exponential).
+
+# Definitions on this page
+
+- [Definition 1 (Constant function)](#def-constant-function)
+- [Definition 2 (Polynomial)](#def-polynomial)
+- [Definition 3 (Coefficients of a polynomial)](#def-polynomial-coefficient)
+- [Definition 4 (Degree of a polynomial)](#def-polynomial-degree)
+- [Definition 5 (Leading coefficient)](#def-polynomial-leading-coefficient)
+- [Definition 6 (Quadratic polynomial)](#def-quadratic-polynomial)
+- [Definition 7 (Cubic polynomial)](#def-cubic-polynomial)
+- [Definition 8 (Parabola)](#def-parabola)
+- [Definition 9 (Monomial (power product))](#def-monomial)
+- [Definition 10 (Degree of a monomial)](#def-monomial-degree)
+- [Definition 11 (Affine function of one variable)](#def-affine-function)
+- [Definition 12 (Slope)](#def-slope)
+- [Definition 13 (Intercept)](#def-intercept)
+- [Definition 14 (Linear function of one variable)](#def-linear-function)
+- [Definition 15 (Limit of a sequence)](#def-sequence-limit)
+- [Definition 16 (Convergent sequence (converges))](#def-convergent-sequence)
+- [Definition 17 (Divergent sequence (diverges))](#def-divergent-sequence)
+- [Definition 18 (Divergence of a sequence to infinity)](#def-diverges-to-infinity)
+- [Definition 19 (Non-decreasing sequence)](#def-non-decreasing)
+- [Definition 20 (Partial sum)](#def-partial-sum)
+- [Definition 21 (Infinite sum, series)](#def-infinite-sum)
+- [Definition 22 (Exponential function)](#def-exponential-function)
+- [Definition 23 (Euler’s number)](#def-euler-number)
+- [Definition 24 (Natural logarithm)](#def-natural-log)
+- [Definition 25 (Power with a real exponent)](#def-real-power)
+- [Definition 26 (Real powers of zero and of negative numbers)](#def-power-nonpositive-base)
+- [Definition 27 (Contour line)](#def-contour-line)
 
 Back to top
 

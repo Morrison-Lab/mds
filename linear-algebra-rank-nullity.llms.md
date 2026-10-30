@@ -14,9 +14,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Column space and null space
+## 0.1 Column space and null space
 
 > **NOTE:**
 >
@@ -208,7 +208,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > Every row is a multiple of \\(1, -2, -2)\\, so \\{\mathbf{A}}^{\top} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_3\\ exactly when \\x_1 - 2x_2 - 2x_3 = 0\\, the same condition as for \\\mathcal{N}(\mathbf{A})\\ in [Example 3](#exm-null-space).
 
-## 2 Rank-nullity and rank factorization
+## 0.2 Rank-nullity and rank factorization
 
 > **NOTE:**
 >
@@ -704,6 +704,20 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 > **NOTE:**
 >
 > **Example 26 (Building a rank factorization from a basis)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\(1, 3)\\ spans \\\mathcal{C}(\mathbf{A})\\ ([Example 2](#exm-column-space-span)), and it is linearly independent because it is nonzero (\\c\\(1, 3) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_2\\ forces \\c = 0\\), so it is a basis of \\\mathcal{C}(\mathbf{A})\\. The columns of \\\mathbf{A}\\ are \\(1, 3) = 1 \cdot(1, 3)\\, \\(-2, -6) = -2 \cdot(1, 3)\\ and \\(-2, -6) = -2 \cdot(1, 3)\\, so the construction in [Theorem 15](#thm-rank-factorization) gives \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\ and \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\, the factorization in [Example 25](#exm-rank-factorization).
+
+# Definitions on this page
+
+- [Definition 1 (Column space, range, image)](#def-column-space)
+- [Definition 2 (Row space)](#def-row-space)
+- [Definition 3 (Null space, kernel)](#def-null-space)
+- [Definition 4 (Left null space)](#def-left-null-space)
+- [Definition 5 (Cross-product matrix)](#def-cross-product-matrix)
+- [Definition 6 (Gram matrix)](#def-gram-matrix)
+- [Definition 7 (Nullity)](#def-nullity)
+- [Definition 8 (Affine subspace)](#def-affine-subspace)
+- [Definition 9 (Open half-space)](#def-half-space)
+- [Definition 10 (Closed half-space)](#def-closed-half-space)
+- [Definition 11 (Rank factorization)](#def-rank-factorization)
 
 Back to top
 

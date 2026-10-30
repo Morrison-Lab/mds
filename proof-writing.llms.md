@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
-## 1 Definitions for proofs
+## 0.1 Definitions for proofs
 
 > **NOTE:**
 >
@@ -469,7 +469,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 >
 > The hypotheses of [Theorem 4](#thm-proof-by-contradiction) hold in 1 of the 4 rows, and in 1 of them \\P\\ is true. So whenever the hypotheses hold, \\P\\ is true.
 
-## 2 Don’t skip steps
+## 0.2 Don’t skip steps
 
 Show every step of the [derivation](#def-derivation). Each line should follow from the previous line by a single, identifiable move:
 
@@ -479,7 +479,7 @@ Show every step of the [derivation](#def-derivation). Each line should follow fr
 
 When you skip steps, you force the reader to reconstruct your reasoning, which is exactly the work the proof was supposed to do *for* them. A step that feels “obvious” while you are writing it is often the step a reader gets stuck on. Phrases like “it can be shown that” or “clearly” usually mark a skipped step; show the step instead.
 
-## 3 Annotate each step
+## 0.3 Annotate each step
 
 For each step, note the definition, [theorem](#def-theorem), or algebraic rule that justifies it. A brief annotation to the right of the line is usually enough. Annotations make the proof checkable, and they teach the reader which tool to reach for next time.
 
@@ -489,7 +489,7 @@ For example, here is a derivation that the [hat matrix](linear-algebra-projectio
 
 The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page uses this derivation to show that \\\mathbf{H}\\ is a [projection matrix](linear-algebra-special-matrices.llms.md#def-projection-matrix). The probability notes derive the variance identity \\{\operatorname{Var}\mathopen{}\left(X\right)\mathclose{}} = {\mathbb{E}\mathopen{}\left\[X^2\right\]\mathclose{}} - {\mathopen{}\left({\mathbb{E}\mathopen{}\left\[X\right\]\mathclose{}}\right)\mathclose{}}^{2}\\ [in the same annotated style](https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance).
 
-## 4 Direct proof
+## 0.4 Direct proof
 
 > **NOTE:**
 >
@@ -515,7 +515,7 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 >
 > The proof above that [the sum of two even integers is even](#exm-proof) is also a [direct proof](#def-direct-proof).
 
-## 5 Proof by contrapositive
+## 0.5 Proof by contrapositive
 
 > **NOTE:**
 >
@@ -533,7 +533,7 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 >
 > That proves the contrapositive, so by [Theorem 3](#thm-contrapositive) the claim holds. For example, \\x = -1\\ gives \\x^2 + 3x = 1 - 3 = -2 \< 0\\, and indeed \\x \< 0\\.
 
-## 6 Proof by cases
+## 0.6 Proof by cases
 
 > **NOTE:**
 >
@@ -555,13 +555,13 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 >
 > The claim holds in both cases, so it holds for every real number \\x\\.
 
-## 7 Follow the golden rule
+## 0.7 Follow the golden rule
 
 In general, follow the golden rule: treat your readers the way you want to be treated as a reader.
 
 When you read someone else’s proof, you want to be able to follow every step without guessing, to know which [result](#def-result) is being used at each line, and to never be left wondering where a quantity came from. Write your own [proofs](#def-proof) to meet that same standard.
 
-## 8 Proof by induction
+## 0.8 Proof by induction
 
 Many proofs in these notes show that a statement holds for every [natural number](number-systems.llms.md#def-natural-numbers) \\n\\, or for every integer \\n\\ from some starting value on. Checking the statement one \\n\\ at a time would never finish; induction proves it for all of them with two arguments.
 
@@ -610,7 +610,7 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 >
 > which is \\P(n)\\. By [Definition 32](#def-proof-by-induction), the equation holds for every \\n \in \mathbb{N}\\.
 
-## 9 Formal logic
+## 0.9 Formal logic
 
 > **NOTE:**
 >
@@ -646,7 +646,7 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 > 2.  \\P \Rightarrow Q\\ (assumption)
 > 3.  \\Q\\ (from steps 1 and 2, by the rule above)
 
-## 10 Further reading
+## 0.10 Further reading
 
 - Velleman [\[31\]](#ref-velleman2019prove) is a structured introduction to proof techniques such as [direct proof](#def-direct-proof), [proof by contradiction](proof-writing.llms.md#def-proof-by-contradiction), and induction.
 - Barker-Plummer et al. [\[32\]](#ref-barkerplummer2011language) treats proofs as [formal proofs](#def-formal-proof) in [propositional logic](#def-propositional-logic) and [first-order logic](#def-first-order-logic).
@@ -786,5 +786,43 @@ D. J. Velleman, *How to prove it: A structured approach*, 3rd ed. Cambridge Univ
 \[32\]
 
 D. Barker-Plummer, J. Barwise, and J. Etchemendy, *Language, proof and logic*, 2nd ed. Stanford, CA: CSLI Publications, 2011. Available: <https://www.amazon.com/dp/1575866323>
+
+# Definitions on this page
+
+- [Definition 1 (Proposition, statement)](#def-proposition)
+- [Definition 2 (Predicate)](#def-predicate)
+- [Definition 3 (Logical connective)](#def-logical-connective)
+- [Definition 4 (Not)](#def-not)
+- [Definition 5 (And)](#def-and)
+- [Definition 6 (Or)](#def-or)
+- [Definition 7 (Implies)](#def-implies)
+- [Definition 8 (If and only if)](#def-iff)
+- [Definition 9 (Truth table)](#def-truth-table)
+- [Definition 10 (Logically equivalent)](#def-logically-equivalent)
+- [Definition 11 (Quantifier)](#def-quantifier)
+- [Definition 12 (Universal quantifier)](#def-universal-quantifier)
+- [Definition 13 (Existential quantifier)](#def-existential-quantifier)
+- [Definition 14 (Inequality)](#def-inequality)
+- [Definition 15 (Logical entailment, logical consequence, deductive consequence)](#def-logical-entailment)
+- [Definition 16 (Proof)](#def-proof)
+- [Definition 17 (Derivation)](#def-derivation)
+- [Definition 18 (Result)](#def-result)
+- [Definition 19 (Theorem)](#def-theorem)
+- [Definition 20 (Lemma)](#def-lemma)
+- [Definition 21 (Corollary)](#def-corollary)
+- [Definition 22 (Counterexample)](#def-counterexample)
+- [Definition 23 (Converse)](#def-converse)
+- [Definition 24 (Contrapositive)](#def-contrapositive)
+- [Definition 25 (Sufficient condition)](#def-sufficient-condition)
+- [Definition 26 (Necessary condition)](#def-necessary-condition)
+- [Definition 27 (Necessary and sufficient condition)](#def-necessary-sufficient)
+- [Definition 28 (Proof by contradiction)](#def-proof-by-contradiction)
+- [Definition 29 (Direct proof)](#def-direct-proof)
+- [Definition 30 (Proof by contrapositive)](#def-proof-by-contrapositive)
+- [Definition 31 (Proof by cases, proof by exhaustion)](#def-proof-by-cases)
+- [Definition 32 (Proof by induction)](#def-proof-by-induction)
+- [Definition 33 (Propositional logic)](#def-propositional-logic)
+- [Definition 34 (First-order logic)](#def-first-order-logic)
+- [Definition 35 (Formal proof)](#def-formal-proof)
 
 Back to top

@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Similarity and diagonalization
+## 0.1 Similarity and diagonalization
 
 > **NOTE:**
 >
@@ -353,7 +353,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > For \\k = 2\\ this gives \\\tfrac{1}{2} \begin{bmatrix} 10 & 8 \\ 8 & 10 \end{bmatrix} = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}\\, which matches \\\mathbf{A}^2\\ in [Example 5](#exm-eigen-shift-power).
 
-## 2 Gram matrices, Schur complements and Cholesky
+## 0.2 Gram matrices, Schur complements and Cholesky
 
 > **NOTE:**
 >
@@ -707,6 +707,16 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >   \\ \begin{aligned} \ell\_{22}^2 &= 1 - 4 \\ &= -3 \end{aligned} \\
 >
 >   has no real solution, matching the failure of the Schur complement test ([Example 24](#exm-schur-test)).
+
+# Definitions on this page
+
+- [Definition 1 (Eigenspace)](#def-eigenspace)
+- [Definition 2 (Geometric multiplicity)](#def-geometric-multiplicity)
+- [Definition 3 (Similar matrices)](#def-similar)
+- [Definition 4 (Diagonalizable matrix)](#def-diagonalizable)
+- [Definition 5 (Block matrix)](#def-block-matrix)
+- [Definition 6 (Leading block of a square matrix, top-left block)](#def-leading-block)
+- [Definition 7 (Schur complement)](#def-schur-complement)
 
 Back to top
 

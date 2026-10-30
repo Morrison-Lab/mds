@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Quasi-Newton methods
+## 0.1 Quasi-Newton methods
 
 > **NOTE:**
 >
@@ -122,6 +122,13 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > ```
 >
 > The two rows agree to within 5.6e-17, although the first never forms the matrix. BFGS stores a dense \\p \times p\\ matrix and spends about \\p^2\\ operations per iteration; L-BFGS stores \\2m\\ vectors with \\p\\ entries and spends about \\m p\\ operations per iteration, so it remains usable when \\p\\ is in the millions.
+
+# Definitions on this page
+
+- [Definition 1 (Secant condition)](#def-secant-condition)
+- [Definition 2 (Quasi-Newton method)](#def-quasi-newton-method)
+- [Definition 3 (BFGS update (Broyden-Fletcher-Goldfarb-Shanno))](#def-bfgs-update)
+- [Definition 4 (Limited-memory BFGS (L-BFGS))](#def-lbfgs)
 
 Back to top
 

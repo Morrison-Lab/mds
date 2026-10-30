@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Design Matrix
+## 0.1 Design Matrix
 
 > **NOTE:**
 >
@@ -98,7 +98,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > Multiplying by \\\mathbf{H}\\ “puts a hat” on \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\, which is where the name comes from. In [Example 2](#exm-hat-matrix), \\\mathbf{H}\\ puts a hat on \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ by replacing each \\y_i\\ with the sample mean \\\bar{y}\\.
 
-### 1.1 Orthogonal projection onto a subspace
+### 0.1.1 Orthogonal projection onto a subspace
 
 > **NOTE:**
 >
@@ -251,7 +251,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > since \\2\bar{y} = y_1 + y_2\\.
 
-### 1.2 Generalized inverses and linear systems
+### 0.1.2 Generalized inverses and linear systems
 
 > **NOTE:**
 >
@@ -665,7 +665,7 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 >
 > the hat matrix of the intercept-only model ([Example 2](#exm-hat-matrix)). Another generalized inverse, \\\mathbf{G}' = \begin{bmatrix} 0 & 0 \\ 0 & \frac{1}{2} \end{bmatrix}\\, which is one because \\({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}' = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}\\ and that times \\{\mathbf{X}}^{\top} \mathbf{X}\\ is again \\\begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\, gives \\\mathbf{X}\mathbf{G}' = \begin{bmatrix} 0 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{bmatrix}\\ and the same \\\mathbf{X}\mathbf{G}' {\mathbf{X}}^{\top} = \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}\\, as [Theorem 16](#thm-projector-generalized-inverse) says it must. Both project onto \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, the column space of the intercept-only design.
 
-### 1.3 Solving linear systems and least squares
+### 0.1.3 Solving linear systems and least squares
 
 > **NOTE:**
 >
@@ -914,6 +914,21 @@ Last modified: 2026-10-29 20:01:11 (PDT)
 > Back substitution on \\\mathbf{U} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (8, 1, 1)\\ is [Example 25](#exm-back-substitution), which gives \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (2, 3, -1)\\. As a check,
 >
 > \\ \begin{aligned} \mathbf{A}\\(2, 3, -1) &= (4 + 3 + 1,\\ -6 - 3 - 2,\\ -4 + 3 - 2) \\ &= (8, -11, -3). \end{aligned} \\
+
+# Definitions on this page
+
+- [Definition 1 (Design matrix, model matrix)](#def-design-matrix)
+- [Definition 2 (Hat matrix)](#def-hat-matrix)
+- [Definition 3 (Orthogonal projection onto a subspace)](#def-orthogonal-projection)
+- [Definition 4 (Generalized inverse)](#def-generalized-inverse)
+- [Definition 5 (Moore-Penrose inverse)](#def-moore-penrose)
+- [Definition 6 (Consistent linear system)](#def-consistent-system)
+- [Definition 7 (Upper triangular matrix)](#def-triangular-matrix)
+- [Definition 8 (Lower triangular matrix)](#def-lower-triangular-matrix)
+- [Definition 9 (Unit lower triangular matrix)](#def-unit-lower-triangular-matrix)
+- [Definition 10 (Least squares solution)](#def-least-squares)
+- [Definition 11 (Normal equations)](#def-normal-equations)
+- [Definition 12 (LU factorization)](#def-lu)
 
 Back to top
 

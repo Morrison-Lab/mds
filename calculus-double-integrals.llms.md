@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Double Integrals
+## 0.1 Double Integrals
 
 The **Fubini–Tonelli theorem** states conditions under which the order of integration in a double integral can be exchanged [\[1\]](#ref-wikipedia_tonelli_s_theorem). We state them in two settings: the Riemann version ([Theorem 1](#thm-fubini)) is what applied courses usually use for double integrals of continuous functions on simple regions; the [\\\sigma\\-finite](measures-measure-spaces.llms.md#def-sigma-finite) measure-theoretic versions ([Theorem 4](#thm-tonelli-measure) and [Theorem 5](#thm-fubini-measure)) are included to make the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science* follow from a stated theorem rather than from an aside.
 
@@ -576,6 +576,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 ## Further reading
 
 - Wikipedia contributors [\[5\]](#ref-wp:fubini) — Fubini’s theorem, in the Riemann and Lebesgue settings
+
+# Definitions on this page
+
+- [Definition 1 (Double integral)](#def-double-integral)
+- [Definition 2 (Iterated integral)](#def-iterated-integral)
 
 Back to top
 

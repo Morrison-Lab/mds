@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-29 20:01:11 (PDT)
+Last modified: 2026-10-30 00:52:40 (PDT)
 
-## 1 Complex numbers
+## 0.1 Complex numbers
 
 > **NOTE:**
 >
@@ -232,6 +232,16 @@ Axler [\[2\]](#ref-axler2024linear), result 4.4, p. 121 lists this identity amo
 > **Example 9 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} &(3 + 4\\i)(3 - 4\\i) \\ &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~1}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
 >
 > which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 8](#exm-complex-modulus), as [Theorem 4](#thm-conj-product) says.
+
+# Definitions on this page
+
+- [Definition 1 (Imaginary unit)](#def-imaginary-unit)
+- [Definition 2 (Complex number)](#def-complex-number)
+- [Definition 3 (Real part)](#def-real-part)
+- [Definition 4 (Imaginary part)](#def-imaginary-part)
+- [Definition 5 (Equal complex numbers)](#def-complex-equality)
+- [Definition 6 (Complex conjugate)](#def-complex-conjugate)
+- [Definition 7 (Absolute value of a complex number, modulus)](#def-complex-modulus)
 
 Back to top
 
