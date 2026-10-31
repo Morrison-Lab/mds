@@ -1,0 +1,19 @@
+:::{#def-momentum}
+#### Momentum (heavy-ball method)
+
+Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.qmd#def-partial-derivative),
+let $\vx^{(0)}$ be a starting point,
+let $\steplen > 0$ be a [step length](#def-gradient-descent),
+and let $\beta \in [0, 1)$ be a [momentum coefficient](#def-momentum-coefficient).
+**Momentum** (the **heavy-ball method**) updates, for $t = 1, 2, \ldots$, by
+
+$$
+\begin{aligned}
+\vv^{(t)} &\eqdef \beta\,\vv^{(t-1)} + \deriv{\vx} f(\vx^{(t-1)}) \\
+\vx^{(t)} &\eqdef \vx^{(t-1)} - \steplen\,\vv^{(t)},
+\end{aligned}
+$$
+
+with $\vv^{(0)} \eqdef \vzero$.
+
+:::

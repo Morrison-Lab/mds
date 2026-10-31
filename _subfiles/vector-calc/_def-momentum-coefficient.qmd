@@ -1,0 +1,14 @@
+:::{#def-momentum-coefficient}
+#### Momentum coefficient
+
+Let $\vg^{(1)}, \vg^{(2)}, \ldots$ be vectors in $\reals^p$,
+and let $\vv^{(t)}$ be a running **velocity** built from them.
+The **momentum coefficient** $\beta \in [0, 1)$ is the factor that multiplies the previous velocity in
+
+$$
+\vv^{(t)} \eqdef \beta\,\vv^{(t-1)} + \vg^{(t)},
+$$
+
+for $t = 1, 2, \ldots$, with $\vv^{(0)} \eqdef \vzero$.
+
+:::

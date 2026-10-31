@@ -153,3 +153,19 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_sol-best-step-count.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-momentum-coefficient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-momentum-coefficient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-momentum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-momentum.qmd >}}
