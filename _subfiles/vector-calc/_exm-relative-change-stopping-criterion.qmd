@@ -46,7 +46,7 @@ print(t_rc, change_rc);
 
 :::
 
-The criterion first holds at $t = $ `r t_rc`, where the relative change is `r signif(change_rc, 3)`.
+The criterion first holds at $t = `r t_rc`$, where the relative change is `r signif(change_rc, 3)`.
 
 <!-- no-figure: one stopping time -->
 
