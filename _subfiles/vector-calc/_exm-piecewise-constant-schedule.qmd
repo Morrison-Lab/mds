@@ -16,8 +16,10 @@ s0_pc <- 0.1
 decay_pc <- 0.1
 drops_pc <- c(30, 60)
 t_pc <- c(0, 29, 30, 59, 60, 90)
-k_pc <- colSums(outer(drops_pc, t_pc, "<="))
-data.frame(t = t_pc, step_length = s0_pc * decay_pc^k_pc)
+dropped_pc <- outer(drops_pc, t_pc, "<=")
+k_pc <- colSums(dropped_pc)
+step_pc <- s0_pc * decay_pc^k_pc
+tibble::tibble(t = t_pc, step_length = step_pc)
 ```
 
 ### Python

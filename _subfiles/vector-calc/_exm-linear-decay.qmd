@@ -12,11 +12,12 @@ The [step length](#def-linear-decay) at $t = 0, 45, 90, 120$ is:
 #| label: linear-decay-r
 #| code-fold: false
 s0_ld <- 0.1
-sT_ld <- 0.001
+s_end_ld <- 0.001
 tau_ld <- 90
 t_ld <- c(0, 45, 90, 120)
 frac_ld <- pmin(t_ld / tau_ld, 1)
-data.frame(t = t_ld, step_length = (1 - frac_ld) * s0_ld + frac_ld * sT_ld)
+step_ld <- (1 - frac_ld) * s0_ld + frac_ld * s_end_ld
+tibble::tibble(t = t_ld, step_length = step_ld)
 ```
 
 ### Python
