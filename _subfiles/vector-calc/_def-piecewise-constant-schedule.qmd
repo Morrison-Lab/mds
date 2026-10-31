@@ -1,7 +1,7 @@
 :::{#def-piecewise-constant-schedule}
 #### Piecewise constant schedule
 
-Let $\iterpoint{\steplen}{0} > 0$ be the [step length](#def-gradient-descent) of the first update,
+Let $\iterpoint{\steplen}{0} > 0$ be the [step length](#def-gradient-descent) before update $1$,
 let $\decay \in (0, 1)$ be a drop factor,
 and let $t_1 < t_2 < \cdots$ be update counts.
 The **piecewise constant schedule** is

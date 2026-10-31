@@ -1,8 +1,8 @@
 :::{#def-linear-decay}
 #### Linear decay
 
-Let $\iterpoint{\steplen}{0}, \iterpoint{\steplen}{\schedlen} > 0$ be the [step lengths](#def-gradient-descent) of the first update and of update $\schedlen$,
-and let $\schedlen$ be a number of updates. <!-- check-term-links: allow -->
+Let $\schedlen$ be a number of updates, <!-- check-term-links: allow -->
+and let $\iterpoint{\steplen}{0}, \iterpoint{\steplen}{\schedlen} > 0$ be the [step lengths](#def-gradient-descent) before update $1$ and after update $\schedlen$.
 The **linear decay** schedule is
 
 $$

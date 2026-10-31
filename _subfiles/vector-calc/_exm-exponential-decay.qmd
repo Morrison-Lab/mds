@@ -2,7 +2,7 @@
 #### The same factor over two run lengths
 
 Take $\iterpoint{\steplen}{0} = 0.1$ and $\decay = 0.99$.
-The [step length](#def-exponential-decay) after $1000$ updates and after $100000$ updates is:
+The [step length](#def-exponential-decay) at $t = 1000$ and at $t = 100000$ is:
 
 ::: {.panel-tabset group="language"}
 
@@ -30,8 +30,8 @@ for t_ed in [1000, 100000]:
 
 :::
 
-After $1000$ updates the step length is about $4.3 \times 10^{-6}$. <!-- check-term-links: allow -->
-After $100000$ updates it is $0$ in floating-point arithmetic.
+At $t = 1000$ the step length is about $4.3 \times 10^{-6}$. <!-- check-term-links: allow -->
+At $t = 100000$ it is $0$ in floating-point arithmetic.
 One factor gives two very different schedules.
 
 <!-- no-figure: the example tabulates two step lengths -->

@@ -1,7 +1,7 @@
 :::{#def-exponential-decay}
 #### Exponential decay
 
-Let $\iterpoint{\steplen}{0} > 0$ be the [step length](#def-gradient-descent) of the first update,
+Let $\iterpoint{\steplen}{0} > 0$ be the [step length](#def-gradient-descent) before update $1$,
 and let $\decay \in (0, 1)$ be a decay factor.
 The **exponential decay** schedule is
 

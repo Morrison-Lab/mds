@@ -34,7 +34,7 @@ for t_ld in [0, 45, 90, 120]:
 :::
 
 The step length falls by the same amount at each update. <!-- check-term-links: allow -->
-It then stays at $0.001$ after update $\schedlen$.
+It then stays at $0.001$ for $t \ge \schedlen$.
 
 <!-- no-figure: the example tabulates four step lengths -->
 
