@@ -218,56 +218,6 @@ cookieconsent.run({
 <script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><link href="site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
 <script src="site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -277,26 +227,6 @@ div.callout-proof.callout-style-default .callout-header {
 div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cnj.callout {
   border-left-color: #558B2F;
@@ -318,6 +248,26 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-fig.callout {
   border-left-color: #757575;
 }
@@ -337,6 +287,56 @@ div.callout-tbl.callout-style-default .callout-header {
 div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -1149,19 +1149,6 @@ window.Quarto = {
         <strong>📋 Other Formats:</strong> <a href="algebra-exponentials-slides.html">🎞️ Slides</a>
     </p>
 </div>
-
-<!-- gha-preview-page-banner:start -->
-<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
-    <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~7% of content changed).
-        <br>
-        <strong>🎨 Highlighting Legend:</strong> 
-        <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
-        <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 3px; border-radius: 2px;">added text (green)</mark> shows new content, and 
-        <mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 3px; border-radius: 2px;">new sections (blue)</mark> highlight entirely new paragraphs.
-    </p>
-</div>
-<!-- gha-preview-page-banner:end -->
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./algebra.html">Algebra</a></li><li class="breadcrumb-item"><a href="./algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Polynomials, Exponentials and Logarithms</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
@@ -1174,7 +1161,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-30 17:42:12 (PDT)</p>
+      <p class="date">Last modified: 2026-10-30 18:35:00 (PDT)</p>
     </div>
   </div>
   
@@ -1670,7 +1657,7 @@ x_1^{a_1} x_2^{a_2} \cdots x_p^{a_p}
 <div id="callout-23" class="callout-23-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-intercept" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Intercept,</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">y-intercept)</mark></strong></span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">The</mark> <strong><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">intercept</mark></strong> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(or</mark> <strong><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">y-intercept</mark></strong><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">of</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">a</mark> <a href="./functions.html#def-function">function</a> <span class="math inline">\(f\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">whose</mark> <a href="./functions.html#def-domain"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">domain</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> contains </mark><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(0\)</mark></span> is <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(f(0)\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> the <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">height at which the </mark><a href="./functions.html#def-graph"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">graph</mark></a> of <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(f\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> crosses the vertical axis.</mark></p>
+<p><span class="theorem-title"><strong>Definition 13 (Intercept, y-intercept)</strong></span> The <strong>intercept</strong> (or <strong>y-intercept</strong>) of a <a href="./functions.html#def-function">function</a> <span class="math inline">\(f\)</span> whose <a href="./functions.html#def-domain">domain</a> contains <span class="math inline">\(0\)</span> is <span class="math inline">\(f(0)\)</span>, the height at which the <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> crosses the vertical axis.</p>
 </div>
 </div>
 </div>
@@ -1688,7 +1675,7 @@ x_1^{a_1} x_2^{a_2} \cdots x_p^{a_p}
 <div id="callout-24" class="callout-24-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-intercept-term" class="theorem definition">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Definition 14 (Intercept term)</strong></span> When a <a href="./functions.html#def-function">function</a> is written as <a href="./algebra-sums.html#def-term">terms</a> added together, its <strong>intercept term</strong> is the <a href="./algebra-sums.html#def-term">term</a> with no factor of the <a href="./functions.html#def-argument">input</a>. When every other term has a factor of the input, the intercept (<a href="#def-intercept" class="quarto-xref">Definition&nbsp;13</a>) of the function is this term.</mark></p>
+<p><span class="theorem-title"><strong>Definition 14 (Intercept term)</strong></span> When a <a href="./functions.html#def-function">function</a> is written as <a href="./algebra-sums.html#def-term">terms</a> added together, its <strong>intercept term</strong> is the <a href="./algebra-sums.html#def-term">term</a> with no factor of the <a href="./functions.html#def-argument">input</a>. When every other term has a factor of the input, the intercept (<a href="#def-intercept" class="quarto-xref">Definition&nbsp;13</a>) of the function is this term.</p>
 </div>
 </div>
 </div>
@@ -1706,7 +1693,7 @@ x_1^{a_1} x_2^{a_2} \cdots x_p^{a_p}
 <div id="callout-25" class="callout-25-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-x-intercept" class="theorem definition">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Definition 15 (x-intercept)</strong></span> An <strong>x-intercept</strong> of a <a href="./functions.html#def-function">function</a> <span class="math inline">\(f\)</span> is an <a href="./functions.html#def-argument">input</a> <span class="math inline">\(x\)</span> with <span class="math inline">\(f(x) = 0\)</span>, a point where the <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> crosses the horizontal axis. A function can have no x-intercept, one, or many.</mark></p>
+<p><span class="theorem-title"><strong>Definition 15 (x-intercept)</strong></span> An <strong>x-intercept</strong> of a <a href="./functions.html#def-function">function</a> <span class="math inline">\(f\)</span> is an <a href="./functions.html#def-argument">input</a> <span class="math inline">\(x\)</span> with <span class="math inline">\(f(x) = 0\)</span>, a point where the <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> crosses the horizontal axis. A function can have no x-intercept, one, or many.</p>
 </div>
 </div>
 </div>
@@ -1724,11 +1711,11 @@ x_1^{a_1} x_2^{a_2} \cdots x_p^{a_p}
 <div id="callout-26" class="callout-26-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-intercepts-affine" class="proof remark">
-<p><span class="proof-title"><em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Remark</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">2</mark></em> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Intercepts</mark> of an affine <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">function).</mark> </span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">For an affine function</mark> <span class="math inline">\(f(x) = m x + b\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-affine-function" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;11</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">):</mark></p>
+<p><span class="proof-title"><em>Remark 2</em> (Intercepts of an affine function). </span>For an affine function <span class="math inline">\(f(x) = m x + b\)</span> (<a href="#def-affine-function" class="quarto-xref">Definition&nbsp;11</a>):</p>
 <ul>
-<li><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">the</mark> <a href="#def-intercept-term">intercept <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 2px; border-radius: 2px;">term</mark></a><mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 2px; border-radius: 2px;"> </mark>is <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(b\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark></li>
-<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">the <a href="#def-intercept">intercept</a> is <span class="math inline">\(f(0) = b\)</span>,</mark></li>
-<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">if <span class="math inline">\(m \ne 0\)</span>, the only <a href="#def-x-intercept">x-intercept</a> is <span class="math inline">\(-b / m\)</span>.</mark></li>
+<li>the <a href="#def-intercept-term">intercept term</a> is <span class="math inline">\(b\)</span>,</li>
+<li>the <a href="#def-intercept">intercept</a> is <span class="math inline">\(f(0) = b\)</span>,</li>
+<li>if <span class="math inline">\(m \ne 0\)</span>, the only <a href="#def-x-intercept">x-intercept</a> is <span class="math inline">\(-b / m\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -1747,7 +1734,7 @@ x_1^{a_1} x_2^{a_2} \cdots x_p^{a_p}
 <div id="callout-27" class="callout-27-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-linear-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">16</mark> (Linear function of one variable)</strong></span> A function <span class="math inline">\(f: \mathbb{R}\to \mathbb{R}\)</span> is <strong>linear</strong> <span class="citation" data-cites="wikipedia_linear_function"><a href="#ref-wikipedia_linear_function" role="doc-biblioref">[7]</a></span> if it is affine (<a href="#def-affine-function" class="quarto-xref">Definition&nbsp;11</a>) with intercept <span class="math inline">\(0\)</span>; that is, if there is a number <span class="math inline">\(m\)</span> such that</p>
+<p><span class="theorem-title"><strong>Definition 16 (Linear function of one variable)</strong></span> A function <span class="math inline">\(f: \mathbb{R}\to \mathbb{R}\)</span> is <strong>linear</strong> <span class="citation" data-cites="wikipedia_linear_function"><a href="#ref-wikipedia_linear_function" role="doc-biblioref">[7]</a></span> if it is affine (<a href="#def-affine-function" class="quarto-xref">Definition&nbsp;11</a>) with intercept <span class="math inline">\(0\)</span>; that is, if there is a number <span class="math inline">\(m\)</span> such that</p>
 <p><span class="math display">\[f(x) = m x \quad \text{for all } x \in \mathbb{R}\]</span></p>
 </div>
 </div>
@@ -1766,9 +1753,9 @@ x_1^{a_1} x_2^{a_2} \cdots x_p^{a_p}
 <div id="callout-28" class="callout-28-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-affine-function-props" class="theorem">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Theorem 1 (Intercept and slope of an affine function)</strong></span> Let <span class="math inline">\(f(x) = m x + b\)</span> be an affine function (<a href="#def-affine-function" class="quarto-xref">Definition&nbsp;11</a>).</mark></p>
+<p><span class="theorem-title"><strong>Theorem 1 (Intercept and slope of an affine function)</strong></span> Let <span class="math inline">\(f(x) = m x + b\)</span> be an affine function (<a href="#def-affine-function" class="quarto-xref">Definition&nbsp;11</a>).</p>
 <ol type="1">
-<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">The intercept is the value at zero: <span class="math inline">\(f(0) = b\)</span>.</mark></li>
+<li>The intercept is the value at zero: <span class="math inline">\(f(0) = b\)</span>.</li>
 <li>The slope is the change in <span class="math inline">\(f\)</span> per unit change in <span class="math inline">\(x\)</span>: for any <span class="math inline">\(x_1 \neq x_2\)</span>, <span class="math display">\[\frac{f(x_2) - f(x_1)}{x_2 - x_1} = m\]</span>
 </li>
 <li>So <span class="math inline">\(f\)</span> determines its slope and intercept: if also <span class="math inline">\(f(x) = m' x + b'\)</span> for all <span class="math inline">\(x\)</span>, then <span class="math inline">\(m' = m\)</span> and <span class="math inline">\(b' = b\)</span>.</li>
@@ -1896,7 +1883,7 @@ m &amp;= f(1) - f(0) \\
 <div id="callout-31" class="callout-31-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-linear-function-terminology" class="proof remark">
-<p><span class="proof-title"><em>Remark <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">3</mark></em> (Elementary algebra calls <span class="math inline">\(m x + b\)</span> “linear”). </span>Elementary algebra usually calls <span class="math inline">\(f(x) = m x + b\)</span> a <em>linear function</em>, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case <span class="math inline">\(b = 0\)</span>, because that is the sense used in linear algebra, where a <a href="./linear-algebra-matrices.html#def-linear-map">linear map</a> must send <span class="math inline">\(0\)</span> to <span class="math inline">\(0\)</span> (<a href="./linear-algebra-matrices.html#thm-linear-map-zero">theorem</a>).</p>
+<p><span class="proof-title"><em>Remark 3</em> (Elementary algebra calls <span class="math inline">\(m x + b\)</span> “linear”). </span>Elementary algebra usually calls <span class="math inline">\(f(x) = m x + b\)</span> a <em>linear function</em>, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case <span class="math inline">\(b = 0\)</span>, because that is the sense used in linear algebra, where a <a href="./linear-algebra-matrices.html#def-linear-map">linear map</a> must send <span class="math inline">\(0\)</span> to <span class="math inline">\(0\)</span> (<a href="./linear-algebra-matrices.html#thm-linear-map-zero">theorem</a>).</p>
 </div>
 </div>
 </div>
@@ -1916,7 +1903,7 @@ m &amp;= f(1) - f(0) \\
 <div id="callout-32" class="callout-32-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-sequence-limit" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">17</mark> (Limit of a sequence)</strong></span> A real number <span class="math inline">\(L\)</span> is the <strong>limit</strong> of a <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\((a_n)\)</span> of real numbers <span class="citation" data-cites="wikipedia_limit_of_a_sequence"><a href="#ref-wikipedia_limit_of_a_sequence" role="doc-biblioref">[8]</a></span>, written <span class="math inline">\(\lim_{n \to \infty} a_n = L\)</span> or <span class="math inline">\(a_n \to L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a natural number <span class="math inline">\(N\)</span> such that</p>
+<p><span class="theorem-title"><strong>Definition 17 (Limit of a sequence)</strong></span> A real number <span class="math inline">\(L\)</span> is the <strong>limit</strong> of a <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\((a_n)\)</span> of real numbers <span class="citation" data-cites="wikipedia_limit_of_a_sequence"><a href="#ref-wikipedia_limit_of_a_sequence" role="doc-biblioref">[8]</a></span>, written <span class="math inline">\(\lim_{n \to \infty} a_n = L\)</span> or <span class="math inline">\(a_n \to L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a natural number <span class="math inline">\(N\)</span> such that</p>
 <p><span class="math display">\[\mathopen{}\left|a_n - L\right|\mathclose{} &lt; \varepsilon\quad \text{for every } n \ge N.\]</span></p>
 </div>
 </div>
@@ -1953,7 +1940,7 @@ m &amp;= f(1) - f(0) \\
 <div id="callout-34" class="callout-34-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-convergent-sequence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">18</mark> (Convergent sequence (converges))</strong></span> A sequence <span class="math inline">\((a_n)\)</span> of real numbers <strong>converges</strong> to a real number <span class="math inline">\(L\)</span> if <span class="math inline">\(L\)</span> is its limit <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-sequence-limit" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;17</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark> A sequence that converges to some real number is <strong>convergent</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 18 (Convergent sequence (converges))</strong></span> A sequence <span class="math inline">\((a_n)\)</span> of real numbers <strong>converges</strong> to a real number <span class="math inline">\(L\)</span> if <span class="math inline">\(L\)</span> is its limit (<a href="#def-sequence-limit" class="quarto-xref">Definition&nbsp;17</a>). A sequence that converges to some real number is <strong>convergent</strong>.</p>
 </div>
 </div>
 </div>
@@ -1989,7 +1976,7 @@ m &amp;= f(1) - f(0) \\
 <div id="callout-36" class="callout-36-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-divergent-sequence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">19</mark> (Divergent sequence (diverges))</strong></span> A sequence that does not converge <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-convergent-sequence" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;18</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> to any real number <strong>diverges</strong>, and a sequence that diverges is <strong>divergent</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 19 (Divergent sequence (diverges))</strong></span> A sequence that does not converge (<a href="#def-convergent-sequence" class="quarto-xref">Definition&nbsp;18</a>) to any real number <strong>diverges</strong>, and a sequence that diverges is <strong>divergent</strong>.</p>
 </div>
 </div>
 </div>
@@ -2025,7 +2012,7 @@ m &amp;= f(1) - f(0) \\
 <div id="callout-38" class="callout-38-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-diverges-to-infinity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">20</mark> (Divergence of a sequence to infinity)</strong></span> A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\((a_n)\)</span> of real numbers <strong>diverges to <span class="math inline">\(\infty\)</span></strong>, written <span class="math inline">\(\lim_{n \to \infty} a_n = \infty\)</span>, if for every real number <span class="math inline">\(M\)</span> there is a natural number <span class="math inline">\(N\)</span> such that <span class="math inline">\(a_n &gt; M\)</span> for every <span class="math inline">\(n \ge N\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 20 (Divergence of a sequence to infinity)</strong></span> A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\((a_n)\)</span> of real numbers <strong>diverges to <span class="math inline">\(\infty\)</span></strong>, written <span class="math inline">\(\lim_{n \to \infty} a_n = \infty\)</span>, if for every real number <span class="math inline">\(M\)</span> there is a natural number <span class="math inline">\(N\)</span> such that <span class="math inline">\(a_n &gt; M\)</span> for every <span class="math inline">\(n \ge N\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2045,7 +2032,7 @@ m &amp;= f(1) - f(0) \\
 <div id="callout-39" class="callout-39-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-non-decreasing" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">21</mark> (Non-decreasing sequence)</strong></span> A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(a_1, a_2, \ldots\)</span> of real numbers or of <a href="./sets.html#def-extended-nonneg-reals">extended non-negative reals</a> is <strong>non-decreasing</strong> if each term is at least as large as the one before it:</p>
+<p><span class="theorem-title"><strong>Definition 21 (Non-decreasing sequence)</strong></span> A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(a_1, a_2, \ldots\)</span> of real numbers or of <a href="./sets.html#def-extended-nonneg-reals">extended non-negative reals</a> is <strong>non-decreasing</strong> if each term is at least as large as the one before it:</p>
 <p><span class="math display">\[a_n \le a_{n+1} \quad \text{for every } n \in \mathbb{N}\]</span></p>
 </div>
 </div>
@@ -2096,7 +2083,7 @@ a_2 &amp;= \frac{1}{2} \\
 <div id="callout-41" class="callout-41-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-partial-sum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">22</mark> (Partial sum)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a <a href="./functions.html#def-sequence">sequence</a> of real numbers or of <a href="./sets.html#def-extended-nonneg-reals">extended non-negative reals</a>. For each <span class="math inline">\(n \in \mathbb{N}\)</span>, its <span class="math inline">\(n\)</span>th <strong>partial sum</strong> <span class="citation" data-cites="wikipedia_series_mathematics"><a href="#ref-wikipedia_series_mathematics" role="doc-biblioref">[9]</a></span> is the <a href="./algebra-sums.html#def-summation">sum</a> of its first <span class="math inline">\(n\)</span> terms:</p>
+<p><span class="theorem-title"><strong>Definition 22 (Partial sum)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a <a href="./functions.html#def-sequence">sequence</a> of real numbers or of <a href="./sets.html#def-extended-nonneg-reals">extended non-negative reals</a>. For each <span class="math inline">\(n \in \mathbb{N}\)</span>, its <span class="math inline">\(n\)</span>th <strong>partial sum</strong> <span class="citation" data-cites="wikipedia_series_mathematics"><a href="#ref-wikipedia_series_mathematics" role="doc-biblioref">[9]</a></span> is the <a href="./algebra-sums.html#def-summation">sum</a> of its first <span class="math inline">\(n\)</span> terms:</p>
 <p><span class="math display">\[s_n \stackrel{\text{def}}{=}\sum_{i=1}^na_i = a_1 + \cdots + a_n\]</span></p>
 </div>
 </div>
@@ -2147,7 +2134,7 @@ s_3 &amp;= \frac{3}{4} + \frac{1}{8} \\
 <div id="callout-43" class="callout-43-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-infinite-sum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">23</mark> (Infinite sum, series)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a sequence in <span class="math inline">\([0, \infty]\)</span>, with partial sums <span class="math inline">\(s_n\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-partial-sum" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;22</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark> The <strong>infinite sum</strong> (also called a <strong>series</strong>) <span class="citation" data-cites="wikipedia_series_mathematics"><a href="#ref-wikipedia_series_mathematics" role="doc-biblioref">[9]</a></span> <span class="math inline">\(\sum_{i=1}^{\infty} a_i\)</span> is the limit of the partial sums:</p>
+<p><span class="theorem-title"><strong>Definition 23 (Infinite sum, series)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a sequence in <span class="math inline">\([0, \infty]\)</span>, with partial sums <span class="math inline">\(s_n\)</span> (<a href="#def-partial-sum" class="quarto-xref">Definition&nbsp;22</a>). The <strong>infinite sum</strong> (also called a <strong>series</strong>) <span class="citation" data-cites="wikipedia_series_mathematics"><a href="#ref-wikipedia_series_mathematics" role="doc-biblioref">[9]</a></span> <span class="math inline">\(\sum_{i=1}^{\infty} a_i\)</span> is the limit of the partial sums:</p>
 <p><span class="math display">\[\sum_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim_{n \to \infty} s_n\]</span></p>
 <p>Here the limit is a real number when the partial sums are real numbers that <a href="#def-convergent-sequence">converge</a> to it, and it is <span class="math inline">\(\infty\)</span> when the partial sums <a href="#def-diverges-to-infinity">diverge to <span class="math inline">\(\infty\)</span></a> or some partial sum is <span class="math inline">\(\infty\)</span>. <!-- check-term-links: allow --> Sums with other index ranges, such as <span class="math inline">\(\sum_{k=0}^{\infty} a_k\)</span>, are defined the same way.</p>
 </div>
@@ -2189,7 +2176,7 @@ s_3 &amp;= \frac{3}{4} + \frac{1}{8} \\
 <div id="callout-45" class="callout-45-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="lem-nonneg-series" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 1 (Sums of non-negative terms)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be values in <span class="math inline">\([0, \infty]\)</span>, with partial sums <span class="math inline">\(s_n\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-partial-sum" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;22</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">),</mark> where <span class="math inline">\(x + \infty = \infty\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\([0, \infty]\)</span>. Then the partial sums are <a href="#def-non-decreasing">non-decreasing</a>, <span class="math inline">\(s_1 \le s_2 \le \cdots\)</span>, so their <a href="#def-sequence-limit">limit</a>, the infinite sum <span class="math inline">\(\sum_{i=1}^{\infty} a_i\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-infinite-sum" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;23</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">),</mark> always exists, and it is either a finite number or <span class="math inline">\(\infty\)</span>.</p>
+<p><span class="theorem-title"><strong>Lemma 1 (Sums of non-negative terms)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be values in <span class="math inline">\([0, \infty]\)</span>, with partial sums <span class="math inline">\(s_n\)</span> (<a href="#def-partial-sum" class="quarto-xref">Definition&nbsp;22</a>), where <span class="math inline">\(x + \infty = \infty\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\([0, \infty]\)</span>. Then the partial sums are <a href="#def-non-decreasing">non-decreasing</a>, <span class="math inline">\(s_1 \le s_2 \le \cdots\)</span>, so their <a href="#def-sequence-limit">limit</a>, the infinite sum <span class="math inline">\(\sum_{i=1}^{\infty} a_i\)</span> (<a href="#def-infinite-sum" class="quarto-xref">Definition&nbsp;23</a>), always exists, and it is either a finite number or <span class="math inline">\(\infty\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2237,7 +2224,7 @@ s_{n+1}
 <div id="callout-47" class="callout-47-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-exponential-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">24</mark> (Exponential function)</strong></span> The <strong>exponential function</strong> <span class="citation" data-cites="wikipedia_exponential_function"><a href="#ref-wikipedia_exponential_function" role="doc-biblioref">[11]</a></span> <span class="math inline">\(\operatorname{exp}: \mathbb{R}\to (0, \infty)\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 24 (Exponential function)</strong></span> The <strong>exponential function</strong> <span class="citation" data-cites="wikipedia_exponential_function"><a href="#ref-wikipedia_exponential_function" role="doc-biblioref">[11]</a></span> <span class="math inline">\(\operatorname{exp}: \mathbb{R}\to (0, \infty)\)</span> is</p>
 <p><span class="math display">\[{\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} \stackrel{\text{def}}{=}\lim_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\]</span></p>
 <p>the <a href="#def-sequence-limit">limit</a> of the <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(\mathopen{}\left(1 + \frac{x}{1}\right)\mathclose{}^1, \mathopen{}\left(1 + \frac{x}{2}\right)\mathclose{}^2, \mathopen{}\left(1 + \frac{x}{3}\right)\mathclose{}^3, \ldots\)</span>. That limit exists for every real number <span class="math inline">\(x\)</span>, and it is positive.</p>
 </div>
@@ -2300,7 +2287,7 @@ s_{n+1}
 <div id="callout-49" class="callout-49-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-euler-number" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">25</mark> (Euler’s number)</strong></span> <strong>Euler’s number</strong> <span class="citation" data-cites="wikipedia_e_mathematical_constant"><a href="#ref-wikipedia_e_mathematical_constant" role="doc-biblioref">[12]</a></span> is</p>
+<p><span class="theorem-title"><strong>Definition 25 (Euler’s number)</strong></span> <strong>Euler’s number</strong> <span class="citation" data-cites="wikipedia_e_mathematical_constant"><a href="#ref-wikipedia_e_mathematical_constant" role="doc-biblioref">[12]</a></span> is</p>
 <p><span class="math display">\[e \stackrel{\text{def}}{=}{\operatorname{exp}\mathopen{}\left\{1\right\}\mathclose{}} = 2.71828\ldots\]</span></p>
 </div>
 </div>
@@ -2337,7 +2324,7 @@ s_{n+1}
 <div id="callout-51" class="callout-51-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-natural-log" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">26</mark> (Natural logarithm)</strong></span> For a real number <span class="math inline">\(a &gt; 0\)</span>, the <strong>natural logarithm</strong> of <span class="math inline">\(a\)</span>, written <span class="math inline">\({\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}\)</span> <span class="citation" data-cites="wikipedia_natural_logarithm"><a href="#ref-wikipedia_natural_logarithm" role="doc-biblioref">[13]</a></span>, is the real number <span class="math inline">\(y\)</span> with <span class="math inline">\({\operatorname{exp}\mathopen{}\left\{y\right\}\mathclose{}} = a\)</span>. The exponential function takes each positive value at exactly one input, so there is exactly one such <span class="math inline">\(y\)</span>, and <span class="math inline">\(\log : (0, \infty) \to \mathbb{R}\)</span> is the <a href="./functions.html#def-inverse-function">inverse function</a> of <span class="math inline">\(\operatorname{exp}\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-exponential-function" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;24</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark></p>
+<p><span class="theorem-title"><strong>Definition 26 (Natural logarithm)</strong></span> For a real number <span class="math inline">\(a &gt; 0\)</span>, the <strong>natural logarithm</strong> of <span class="math inline">\(a\)</span>, written <span class="math inline">\({\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}\)</span> <span class="citation" data-cites="wikipedia_natural_logarithm"><a href="#ref-wikipedia_natural_logarithm" role="doc-biblioref">[13]</a></span>, is the real number <span class="math inline">\(y\)</span> with <span class="math inline">\({\operatorname{exp}\mathopen{}\left\{y\right\}\mathclose{}} = a\)</span>. The exponential function takes each positive value at exactly one input, so there is exactly one such <span class="math inline">\(y\)</span>, and <span class="math inline">\(\log : (0, \infty) \to \mathbb{R}\)</span> is the <a href="./functions.html#def-inverse-function">inverse function</a> of <span class="math inline">\(\operatorname{exp}\)</span> (<a href="#def-exponential-function" class="quarto-xref">Definition&nbsp;24</a>).</p>
 </div>
 </div>
 </div>
@@ -2355,7 +2342,7 @@ s_{n+1}
 <div id="callout-52" class="callout-52-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-log-notation" class="proof remark">
-<p><span class="proof-title"><em>Remark <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">4</mark></em> (Other notations for the natural logarithm). </span>In these notes, <span class="math inline">\({\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}}\)</span> is always the natural logarithm, the logarithm with base <span class="math inline">\(e\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-euler-number" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;25</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">)</mark> <span class="citation" data-cites="wikipedia_logarithm"><a href="#ref-wikipedia_logarithm" role="doc-biblioref">[14]</a></span>. Some sources write <span class="math inline">\(\ln x\)</span> for the natural logarithm and reserve <span class="math inline">\(\log x\)</span> for the logarithm with base 10.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Other notations for the natural logarithm). </span>In these notes, <span class="math inline">\({\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}}\)</span> is always the natural logarithm, the logarithm with base <span class="math inline">\(e\)</span> (<a href="#def-euler-number" class="quarto-xref">Definition&nbsp;25</a>) <span class="citation" data-cites="wikipedia_logarithm"><a href="#ref-wikipedia_logarithm" role="doc-biblioref">[14]</a></span>. Some sources write <span class="math inline">\(\ln x\)</span> for the natural logarithm and reserve <span class="math inline">\(\log x\)</span> for the logarithm with base 10.</p>
 </div>
 </div>
 </div>
@@ -2378,7 +2365,7 @@ s_{n+1}
 <li>
 <span class="math inline">\({\operatorname{log}\mathopen{}\left\{1\right\}\mathclose{}} = 0\)</span>, because <span class="math inline">\({\operatorname{exp}\mathopen{}\left\{0\right\}\mathclose{}} = 1\)</span> (<a href="#exm-exponential-function" class="quarto-xref">Example&nbsp;15</a>).</li>
 <li>
-<span class="math inline">\({\operatorname{log}\mathopen{}\left\{e\right\}\mathclose{}} = 1\)</span>, because <span class="math inline">\({\operatorname{exp}\mathopen{}\left\{1\right\}\mathclose{}} = e\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-euler-number" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;25</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark></li>
+<span class="math inline">\({\operatorname{log}\mathopen{}\left\{e\right\}\mathclose{}} = 1\)</span>, because <span class="math inline">\({\operatorname{exp}\mathopen{}\left\{1\right\}\mathclose{}} = e\)</span> (<a href="#def-euler-number" class="quarto-xref">Definition&nbsp;25</a>).</li>
 <li>
 <span class="math inline">\({\operatorname{log}\mathopen{}\left\{0\right\}\mathclose{}}\)</span> and <span class="math inline">\({\operatorname{log}\mathopen{}\left\{-2\right\}\mathclose{}}\)</span> are not defined, because <span class="math inline">\({\operatorname{exp}\mathopen{}\left\{y\right\}\mathclose{}} &gt; 0\)</span> for every real <span class="math inline">\(y\)</span>.</li>
 </ul>
@@ -2399,7 +2386,7 @@ s_{n+1}
 <div id="callout-54" class="callout-54-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-real-power" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">27</mark> (Power with a real exponent)</strong></span> For a real number <span class="math inline">\(a &gt; 0\)</span> and a real number <span class="math inline">\(b\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 27 (Power with a real exponent)</strong></span> For a real number <span class="math inline">\(a &gt; 0\)</span> and a real number <span class="math inline">\(b\)</span>,</p>
 <p><span class="math display">\[a^b \stackrel{\text{def}}{=}{\operatorname{exp}\mathopen{}\left\{b \cdot{\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}\right\}\mathclose{}}.\]</span></p>
 <p>When <span class="math inline">\(b\)</span> is an integer, this agrees with <a href="./algebra-basics.html#def-power">Definition&nbsp;5 in Equalities, Inequalities and Minimizers</a> and <a href="./algebra-basics.html#def-power-integer">Definition&nbsp;9 in Equalities, Inequalities and Minimizers</a>.</p>
 </div>
@@ -2433,8 +2420,8 @@ s_{n+1}
 </li>
 <li><p><span class="math inline">\(2^{1/2} = {\operatorname{exp}\mathopen{}\left\{\frac{1}{2} \cdot{\operatorname{log}\mathopen{}\left\{2\right\}\mathclose{}}\right\}\mathclose{}} \approx {\operatorname{exp}\mathopen{}\left\{0.34657\right\}\mathclose{}} \approx 1.41421\)</span>, which is <span class="math inline">\(\sqrt{2}\)</span> (<a href="./algebra-basics.html#def-square-root">Definition&nbsp;10 in Equalities, Inequalities and Minimizers</a>).</p></li>
 <li>
-<p>For every real <span class="math inline">\(x\)</span>, with base <span class="math inline">\(e\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-euler-number" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;25</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">):</mark></p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p>For every real <span class="math inline">\(x\)</span>, with base <span class="math inline">\(e\)</span> (<a href="#def-euler-number" class="quarto-xref">Definition&nbsp;25</a>):</p>
+<p><span class="math display">\[
 \begin{aligned}
 e^x
 &amp;= {\operatorname{exp}\mathopen{}\left\{x \cdot{\operatorname{log}\mathopen{}\left\{e\right\}\mathclose{}}\right\}\mathclose{}}
@@ -2446,7 +2433,7 @@ e^x
 &amp;= {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}}
 &amp;&amp; \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)}
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>So <span class="math inline">\(e^x\)</span> and <span class="math inline">\({\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}}\)</span> are two names for the same number.</p>
 </li>
 </ul>
@@ -2467,7 +2454,7 @@ e^x
 <div id="callout-56" class="callout-56-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-power-nonpositive-base" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">28</mark> (Real powers of zero and of negative numbers)</strong></span> <a href="./algebra-basics.html#def-power">Definition&nbsp;5 in Equalities, Inequalities and Minimizers</a>, <a href="./algebra-basics.html#def-power-integer">Definition&nbsp;9 in Equalities, Inequalities and Minimizers</a> and <a href="#def-real-power" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;27</mark></a> leave some powers <span class="math inline">\(b^c\)</span> with <span class="math inline">\(b \le 0\)</span> unassigned. We complete them as follows.</p>
+<p><span class="theorem-title"><strong>Definition 28 (Real powers of zero and of negative numbers)</strong></span> <a href="./algebra-basics.html#def-power">Definition&nbsp;5 in Equalities, Inequalities and Minimizers</a>, <a href="./algebra-basics.html#def-power-integer">Definition&nbsp;9 in Equalities, Inequalities and Minimizers</a> and <a href="#def-real-power" class="quarto-xref">Definition&nbsp;27</a> leave some powers <span class="math inline">\(b^c\)</span> with <span class="math inline">\(b \le 0\)</span> unassigned. We complete them as follows.</p>
 <ul>
 <li>For a real number <span class="math inline">\(c &gt; 0\)</span>, <span class="math inline">\(0^c \stackrel{\text{def}}{=}0\)</span>. For a natural number <span class="math inline">\(c\)</span>, this agrees with <a href="./algebra-basics.html#def-power">Definition&nbsp;5 in Equalities, Inequalities and Minimizers</a>.</li>
 <li>For <span class="math inline">\(b &lt; 0\)</span>, <span class="math inline">\(b^c\)</span> is defined only when <span class="math inline">\(c\)</span> is an <a href="./number-systems.html#def-integers">integer</a>, by <a href="./algebra-basics.html#def-power">Definition&nbsp;5 in Equalities, Inequalities and Minimizers</a> and <a href="./algebra-basics.html#def-power-integer">Definition&nbsp;9 in Equalities, Inequalities and Minimizers</a>; for <span class="math inline">\(b &lt; 0\)</span> and a non-integer <span class="math inline">\(c\)</span>, <span class="math inline">\(b^c\)</span> is undefined.</li>
@@ -2912,7 +2899,7 @@ a^{bc}
 <div id="callout-75" class="callout-75-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-tarski-identities" class="proof remark">
-<p><span class="proof-title"><em>Remark <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">5</mark></em> (Tarski’s high school identities). </span>Restricted to positive integers, the following results are Tarski’s eleven “high school” identities <span class="citation" data-cites="wikipedia_tarskis_high_school_algebra_problem"><a href="#ref-wikipedia_tarskis_high_school_algebra_problem" role="doc-biblioref">[15]</a></span>:</p>
+<p><span class="proof-title"><em>Remark 5</em> (Tarski’s high school identities). </span>Restricted to positive integers, the following results are Tarski’s eleven “high school” identities <span class="citation" data-cites="wikipedia_tarskis_high_school_algebra_problem"><a href="#ref-wikipedia_tarskis_high_school_algebra_problem" role="doc-biblioref">[15]</a></span>:</p>
 <ul>
 <li>sums are symmetric and associative (<a href="./algebra-sums.html#thm-sum-symmetric">Theorem&nbsp;5 in Convexity, Infimum and Sums</a>, <a href="./algebra-sums.html#thm-sum-assoc">Theorem&nbsp;6 in Convexity, Infimum and Sums</a>);</li>
 <li>multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive (<a href="./algebra-sums.html#thm-mult-one">Theorem&nbsp;7 in Convexity, Infimum and Sums</a>, <a href="./algebra-sums.html#thm-prod-symmetric">Theorem&nbsp;8 in Convexity, Infimum and Sums</a>, <a href="./algebra-sums.html#thm-prod-assoc">Theorem&nbsp;9 in Convexity, Infimum and Sums</a>, <a href="./algebra-sums.html#thm-mult-distr">Theorem&nbsp;11 in Convexity, Infimum and Sums</a>);</li>
@@ -2936,7 +2923,7 @@ a^{bc}
 <div id="callout-76" class="callout-76-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-tarski-incomplete" class="proof remark">
-<p><span class="proof-title"><em>Remark <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">6</mark></em> (Tarski’s identities are not complete). </span>Tarski asked whether every identity in <span class="math inline">\(+\)</span>, <span class="math inline">\(\times\)</span>, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in <a href="#rem-tarski-identities" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Remark&nbsp;5</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.</p>
+<p><span class="proof-title"><em>Remark 6</em> (Tarski’s identities are not complete). </span>Tarski asked whether every identity in <span class="math inline">\(+\)</span>, <span class="math inline">\(\times\)</span>, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in <a href="#rem-tarski-identities" class="quarto-xref">Remark&nbsp;5</a>. It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.</p>
 </div>
 </div>
 </div>
@@ -2954,7 +2941,7 @@ a^{bc}
 <div id="callout-77" class="callout-77-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-contour-line" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">29</mark> (Contour line)</strong></span> For a function <span class="math inline">\(g\)</span> of two real variables <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> and a number <span class="math inline">\(k\)</span>, the <strong>contour line</strong> <span class="citation" data-cites="wikipedia_contour_line"><a href="#ref-wikipedia_contour_line" role="doc-biblioref">[16]</a></span> of <span class="math inline">\(g\)</span> at height <span class="math inline">\(k\)</span> is the set of points where <span class="math inline">\(g\)</span> equals <span class="math inline">\(k\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 29 (Contour line)</strong></span> For a function <span class="math inline">\(g\)</span> of two real variables <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> and a number <span class="math inline">\(k\)</span>, the <strong>contour line</strong> <span class="citation" data-cites="wikipedia_contour_line"><a href="#ref-wikipedia_contour_line" role="doc-biblioref">[16]</a></span> of <span class="math inline">\(g\)</span> at height <span class="math inline">\(k\)</span> is the set of points where <span class="math inline">\(g\)</span> equals <span class="math inline">\(k\)</span>:</p>
 <p><span class="math display">\[\mathopen{}\left\{(b, c) : g(b, c) = k\right\}\mathclose{}\]</span></p>
 </div>
 </div>
@@ -3064,7 +3051,7 @@ Figure&nbsp;1: The contour lines of <span class="math inline">\(g(b, c) = b^2 + 
 <div id="callout-79" class="callout-79-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-contour-line-surface" class="proof remark">
-<p><span class="proof-title"><em>Remark <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">7</mark></em> (Contour lines on a plot of a surface). </span>On a plot of the surface <span class="math inline">\(z = g(b, c)\)</span>, the <a href="#def-contour-line">contour line</a> is the curve along which the surface has height <span class="math inline">\(k\)</span>.</p>
+<p><span class="proof-title"><em>Remark 7</em> (Contour lines on a plot of a surface). </span>On a plot of the surface <span class="math inline">\(z = g(b, c)\)</span>, the <a href="#def-contour-line">contour line</a> is the curve along which the surface has height <span class="math inline">\(k\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3100,7 +3087,7 @@ Figure&nbsp;1: The contour lines of <span class="math inline">\(g(b, c) = b^2 + 
 <div id="callout-81" class="callout-81-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-exp-vs-mult" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span>We only count a pair <span class="math inline">\((b, c)\)</span> when <span class="math inline">\(b^c\)</span> is defined, so for <span class="math inline">\(b &lt; 0\)</span> we only consider integer <span class="math inline">\(c\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-power-nonpositive-base" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;28</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark> With that convention, <span class="math inline">\(bc = b^c\)</span> in each of the following cases:</p>
+<p><span class="proof-title"><em>Solution 2</em>. </span>We only count a pair <span class="math inline">\((b, c)\)</span> when <span class="math inline">\(b^c\)</span> is defined, so for <span class="math inline">\(b &lt; 0\)</span> we only consider integer <span class="math inline">\(c\)</span> (<a href="#def-power-nonpositive-base" class="quarto-xref">Definition&nbsp;28</a>). With that convention, <span class="math inline">\(bc = b^c\)</span> in each of the following cases:</p>
 <ol type="1">
 <li><p><span class="math inline">\(c = 1\)</span>, for every <span class="math inline">\(b\)</span>.</p></li>
 <li>
@@ -3311,7 +3298,7 @@ Figure&nbsp;3: <strong>Graph of <span class="math inline">\(b^c - b*c\)</span></
 <div id="callout-82" class="callout-82-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-exp-vs-mult" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (When exponentiation equals multiplication)</strong></span> Let <span class="math inline">\(b, c \in \mathbb{R}\)</span>, where <span class="math inline">\(b^c\)</span> is defined (for <span class="math inline">\(b &lt; 0\)</span>, only integer <span class="math inline">\(c\)</span> is allowed; <a href="#def-power-nonpositive-base" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;28</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">).</mark> Then <span class="math inline">\(b^c = bc\)</span> if and only if one of the following holds:</p>
+<p><span class="theorem-title"><strong>Theorem 10 (When exponentiation equals multiplication)</strong></span> Let <span class="math inline">\(b, c \in \mathbb{R}\)</span>, where <span class="math inline">\(b^c\)</span> is defined (for <span class="math inline">\(b &lt; 0\)</span>, only integer <span class="math inline">\(c\)</span> is allowed; <a href="#def-power-nonpositive-base" class="quarto-xref">Definition&nbsp;28</a>). Then <span class="math inline">\(b^c = bc\)</span> if and only if one of the following holds:</p>
 <ol type="1">
 <li>
 <span class="math inline">\(c = 1\)</span>;</li>
@@ -3399,7 +3386,7 @@ bc \cdot {\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}} &amp;= b^c\
 <li>
 <span class="math inline">\(bc = b^c\)</span> (see <a href="#thm-exp-vs-mult" class="quarto-xref">Theorem&nbsp;10</a>).</li>
 </ol>
-<p><strong>Case <span class="math inline">\(a = 0\)</span>.</strong> Here we cannot take logarithms, so we work from the values of powers of <span class="math inline">\(0\)</span>: <span class="math inline">\(0^s = 0\)</span> for <span class="math inline">\(s &gt; 0\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-power-nonpositive-base" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;28</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">),</mark> <span class="math inline">\(0^0 = 1\)</span>, and <span class="math inline">\(0^s\)</span> is undefined for <span class="math inline">\(s &lt; 0\)</span>.</p>
+<p><strong>Case <span class="math inline">\(a = 0\)</span>.</strong> Here we cannot take logarithms, so we work from the values of powers of <span class="math inline">\(0\)</span>: <span class="math inline">\(0^s = 0\)</span> for <span class="math inline">\(s &gt; 0\)</span> (<a href="#def-power-nonpositive-base" class="quarto-xref">Definition&nbsp;28</a>), <span class="math inline">\(0^0 = 1\)</span>, and <span class="math inline">\(0^s\)</span> is undefined for <span class="math inline">\(s &lt; 0\)</span>.</p>
 <ul>
 <li><p>If <span class="math inline">\(b &lt; 0\)</span>, then <span class="math inline">\(0^b\)</span> is undefined, so <span class="math inline">\((a^b)^c\)</span> is undefined.</p></li>
 <li><p>If <span class="math inline">\(b &gt; 0\)</span>, then <span class="math inline">\((0^b)^c = 0^c\)</span> and <span class="math inline">\(b^c &gt; 0\)</span>, so <span class="math inline">\(0^{(b^c)} = 0\)</span>; the two sides agree exactly when <span class="math inline">\(c &gt; 0\)</span>.</p></li>
@@ -3753,23 +3740,23 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <li><a href="#def-monomial-degree"><span class="quarto-xref">Definition&nbsp;10</span> (Degree of a monomial)</a></li>
 <li><a href="#def-affine-function"><span class="quarto-xref">Definition&nbsp;11</span> (Affine function of one variable)</a></li>
 <li><a href="#def-slope"><span class="quarto-xref">Definition&nbsp;12</span> (Slope)</a></li>
-<li><a href="#def-intercept"><span class="quarto-xref">Definition&nbsp;13</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Intercept, y-intercept)</mark></a></li>
-<li><a href="#def-intercept-term"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;14</mark></span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Intercept</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">term)</mark></a></li>
-<li><a href="#def-x-intercept"><span class="quarto-xref">Definition&nbsp;15</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(x-intercept)</mark></a></li>
-<li><a href="#def-linear-function"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;16</mark></span> (Linear function of one variable)</a></li>
-<li><a href="#def-sequence-limit"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;17</mark></span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Limit of a</mark> sequence)</a></li>
-<li><a href="#def-convergent-sequence"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;18</mark></span> (Convergent sequence (converges))</a></li>
-<li><a href="#def-divergent-sequence"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;19</mark></span> (Divergent sequence (diverges))</a></li>
-<li><a href="#def-diverges-to-infinity"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;20</mark></span> (Divergence of a sequence to infinity)</a></li>
-<li><a href="#def-non-decreasing"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;21</mark></span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Non-decreasing</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">sequence)</mark></a></li>
-<li><a href="#def-partial-sum"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;22</mark></span> (Partial sum)</a></li>
-<li><a href="#def-infinite-sum"><span class="quarto-xref">Definition&nbsp;23</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Infinite</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">sum, series)</mark></a></li>
-<li><a href="#def-exponential-function"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;24</mark></span> (Exponential function)</a></li>
-<li><a href="#def-euler-number"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;25</mark></span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Euler’s</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">number)</mark></a></li>
-<li><a href="#def-natural-log"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;26</mark></span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Natural</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">logarithm)</mark></a></li>
-<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><a href="#def-real-power"><span class="quarto-xref">Definition&nbsp;27</span> (Power with a real exponent)</a></mark></li>
-<li><a href="#def-power-nonpositive-base"><span class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;28</mark></span> (Real powers of zero and of negative numbers)</a></li>
-<li><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><a href="#def-contour-line"><span class="quarto-xref">Definition&nbsp;29</span> (Contour line)</a></mark></li>
+<li><a href="#def-intercept"><span class="quarto-xref">Definition&nbsp;13</span> (Intercept, y-intercept)</a></li>
+<li><a href="#def-intercept-term"><span class="quarto-xref">Definition&nbsp;14</span> (Intercept term)</a></li>
+<li><a href="#def-x-intercept"><span class="quarto-xref">Definition&nbsp;15</span> (x-intercept)</a></li>
+<li><a href="#def-linear-function"><span class="quarto-xref">Definition&nbsp;16</span> (Linear function of one variable)</a></li>
+<li><a href="#def-sequence-limit"><span class="quarto-xref">Definition&nbsp;17</span> (Limit of a sequence)</a></li>
+<li><a href="#def-convergent-sequence"><span class="quarto-xref">Definition&nbsp;18</span> (Convergent sequence (converges))</a></li>
+<li><a href="#def-divergent-sequence"><span class="quarto-xref">Definition&nbsp;19</span> (Divergent sequence (diverges))</a></li>
+<li><a href="#def-diverges-to-infinity"><span class="quarto-xref">Definition&nbsp;20</span> (Divergence of a sequence to infinity)</a></li>
+<li><a href="#def-non-decreasing"><span class="quarto-xref">Definition&nbsp;21</span> (Non-decreasing sequence)</a></li>
+<li><a href="#def-partial-sum"><span class="quarto-xref">Definition&nbsp;22</span> (Partial sum)</a></li>
+<li><a href="#def-infinite-sum"><span class="quarto-xref">Definition&nbsp;23</span> (Infinite sum, series)</a></li>
+<li><a href="#def-exponential-function"><span class="quarto-xref">Definition&nbsp;24</span> (Exponential function)</a></li>
+<li><a href="#def-euler-number"><span class="quarto-xref">Definition&nbsp;25</span> (Euler’s number)</a></li>
+<li><a href="#def-natural-log"><span class="quarto-xref">Definition&nbsp;26</span> (Natural logarithm)</a></li>
+<li><a href="#def-real-power"><span class="quarto-xref">Definition&nbsp;27</span> (Power with a real exponent)</a></li>
+<li><a href="#def-power-nonpositive-base"><span class="quarto-xref">Definition&nbsp;28</span> (Real powers of zero and of negative numbers)</a></li>
+<li><a href="#def-contour-line"><span class="quarto-xref">Definition&nbsp;29</span> (Contour line)</a></li>
 </ul>
 
 </section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
