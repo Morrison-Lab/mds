@@ -17,7 +17,7 @@ k_mc <- 10
 weight_mc <- beta_mc^k_mc
 memory_mc <- 1 / (1 - beta_mc)
 weight_rounded_mc <- signif(weight_mc, 2)
-rbind(beta = beta_mc, weight = weight_rounded_mc, memory = memory_mc)
+rbind(beta = beta_mc, weight = weight_rounded_mc, memory = memory_mc) # nolint: undesirable_function_linter.
 ```
 
 ### Python
