@@ -2,7 +2,7 @@
 #### Early adaptive methods
 
 RMSProp is an early example of an [adaptive method](#def-adaptive-method) [@wikipedia_stochastic_gradient_descent].
-AdaGrad is its limit as $\rho \to 1$,
-with $u_j^{(t)}$ a plain sum of squared gradients rather than an exponentially weighted average.
+AdaGrad is its limit as $\rho \to 1$, <!-- check-term-links: allow -->
+with $u_j^{(t)}$ a plain sum of squared gradients rather than an exponentially weighted average. <!-- check-term-links: allow -->
 
 :::
