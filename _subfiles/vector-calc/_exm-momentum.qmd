@@ -1,0 +1,56 @@
+:::{#exm-momentum}
+#### Momentum on a one-dimensional quadratic
+
+Let $f(x) = \tfrac{1}{2} x^2$, so $\deriv{x} f(x) = x$.
+Start at $x^{(0)} = 1$ with $\steplen = 0.1$,
+and take $20$ updates with $\beta = 0$, which is plain [gradient descent](#def-gradient-descent), and with $\beta = 0.9$:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: momentum-r
+#| code-fold: false
+x0_mo <- 1
+s_mo <- 0.1
+beta_mo <- c(plain = 0, momentum = 0.9)
+n_mo <- 20
+x_mo <- rep(x0_mo, 2)
+v_mo <- c(0, 0)
+path_mo <- matrix(NA_real_, nrow = n_mo, ncol = 2)
+for (k_mo in seq_len(n_mo)) {
+  v_mo <- beta_mo * v_mo + x_mo
+  x_mo <- x_mo - s_mo * v_mo
+  path_mo[k_mo, ] <- x_mo
+}
+last_mo <- path_mo[n_mo, ]
+lowest_mo <- apply(path_mo, 2, min)
+summary_mo <- rbind(last = last_mo, lowest = lowest_mo)
+round(summary_mo, 4)
+```
+
+### Python
+
+```{python}
+#| label: momentum-python
+#| code-fold: false
+s_mo, n_mo = 0.1, 20
+for beta_mo in (0.0, 0.9):
+    x_mo, v_mo, path_mo = 1.0, 0.0, []
+    for _ in range(n_mo):
+        v_mo = beta_mo * v_mo + x_mo
+        x_mo = x_mo - s_mo * v_mo
+        path_mo.append(x_mo)
+    print(beta_mo, round(path_mo[-1], 4), round(min(path_mo), 4));
+```
+
+:::
+
+After $20$ updates, plain descent has reached `r signif(last_mo[1], 3)` and momentum `r signif(last_mo[2], 3)`.
+Momentum overshoots the minimizer $0$, down to `r signif(lowest_mo[2], 3)` at update `r which.min(path_mo[, 2])`, and then swings back.
+On a cost this simple, with a small step length, the swing makes momentum slower than plain descent.
+
+<!-- no-figure: a one-dimensional run summarized in two numbers per method -->
+
+:::
