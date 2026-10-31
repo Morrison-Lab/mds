@@ -2,7 +2,7 @@
 #### Early adaptive methods
 
 RMSProp is an early example of an [adaptive method](#def-adaptive-method) [@wikipedia_stochastic_gradient_descent].
-AdaGrad, an earlier method, replaces the exponentially weighted average by a plain sum of squared gradients,
+AdaGrad, an earlier method, replaces the exponentially weighted average by a plain sum of squared gradients, <!-- check-term-links: allow -->
 $u_j^{(t)} = u_j^{(t-1)} + \paren{g_j^{(t)}}^2$. <!-- check-term-links: allow -->
 
 :::
