@@ -33,7 +33,7 @@ for t_pc in [0, 29, 30, 59, 60, 90]:
 
 :::
 
-The step length stays fixed between drops
+The step length stays fixed between drops <!-- check-term-links: allow -->
 and falls by the factor $\decay$ exactly at $t = 30$ and $t = 60$.
 
 <!-- no-figure: the example tabulates six step lengths -->

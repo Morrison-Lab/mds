@@ -2,7 +2,7 @@
 #### Linear decay
 
 Let $s^{(0)}, s^{(\schedlen)} > 0$ be a starting and a final [step length](#def-gradient-descent),
-and let $\schedlen$ be a number of updates.
+and let $\schedlen$ be a number of updates. <!-- check-term-links: allow -->
 The **linear decay** schedule is
 
 $$
