@@ -1,9 +1,9 @@
 :::{#exm-momentum-coefficient}
 #### How far back the velocity remembers
 
-Unrolling the recursion, the vector $\vg^{(t-k)}$ enters $\vv^{(t)}$ with factor $\beta^k$.
-These factors add up to at most $1 / (1 - \beta)$,
-so the velocity remembers roughly the last $1 / (1 - \beta)$ vectors.
+Unrolling the recursion, the vector $\vg^{(t-k)}$ enters $\vv^{(t)}$ with factor $\beta^k$, for $k < t$.
+These factors add up to at most $\sum_{k=0}^{\infty} \beta^k = 1 / (1 - \beta)$.
+As a rule of thumb, the [velocity](#def-momentum-coefficient) is therefore dominated by the last $1 / (1 - \beta)$ vectors.
 
 ::: {.panel-tabset group="language"}
 
@@ -33,7 +33,7 @@ for b_mc in beta_mc:
 
 :::
 
-At $\beta = 0$ the velocity is the current vector alone,
+At $\beta = 0$ the [velocity](#def-momentum-coefficient) is the current vector alone,
 and at $\beta = 0.99$ it combines about `r round(memory_mc[4])` vectors.
 
 <!-- no-figure: the example tabulates weights -->

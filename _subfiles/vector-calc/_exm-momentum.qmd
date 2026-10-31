@@ -1,7 +1,8 @@
 :::{#exm-momentum}
 #### Momentum on a one-dimensional quadratic
 
-Let $f(x) = \tfrac{1}{2} x^2$, so $\deriv{x} f(x) = x$.
+Let $f(x) = \tfrac{1}{2} x^2$,
+so $\deriv{x} f(x) = x$.
 Start at $x^{(0)} = 1$ with $\steplen = 0.1$,
 and take $20$ updates with $\beta = 0$, which is plain [gradient descent](#def-gradient-descent), and with $\beta = 0.9$:
 
@@ -49,7 +50,7 @@ for beta_mo in (0.0, 0.9):
 
 After $20$ updates, plain descent has reached `r signif(last_mo[1], 3)` and [momentum](#def-momentum) `r signif(last_mo[2], 3)`.
 Momentum overshoots the [minimizer](algebra.qmd#def-global-minimizer) $0$, down to `r signif(lowest_mo[2], 3)` at update `r which.min(path_mo[, 2])`, and then swings back.
-On a cost this simple, with a small [step length](#def-gradient-descent), the swing makes momentum slower than plain descent.
+In this run, with a small [step length](#def-gradient-descent), the swing leaves momentum behind plain descent after $20$ updates.
 
 <!-- no-figure: a one-dimensional run summarized in two numbers per method -->
 
