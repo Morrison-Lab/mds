@@ -145,3 +145,27 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-outer-product-rank.qmd >}}
+
+## Hilbert spaces {#sec-hilbert-spaces}
+
+{{< include mds/_subfiles/linear-algebra/_def-cauchy-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-cauchy-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-complete-inner-product-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-complete-inner-product-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-hilbert-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-hilbert-space.qmd >}}

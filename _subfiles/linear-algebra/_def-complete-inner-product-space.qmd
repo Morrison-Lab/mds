@@ -1,0 +1,13 @@
+:::{#def-complete-inner-product-space}
+#### Complete inner product space
+
+A [real inner product space](linear-algebra-inner-products.qmd#def-inner-product-space) $V$
+is **complete**
+[@wikipedia_complete_metric_space]
+if for every [Cauchy sequence](#def-cauchy-sequence) $(\vx_n)$ in $V$
+there is a vector $\vy \in V$ such that
+for every $\tolout > 0$ there is a [natural number](number-systems.qmd#def-natural-numbers) $N$ with
+
+$$\norm{\vx_n - \vy} < \tolout \quad \text{for every } n \ge N.$$
+
+:::

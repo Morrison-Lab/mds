@@ -1,0 +1,9 @@
+:::{#def-hilbert-space}
+#### Hilbert space
+
+A **Hilbert space**
+[@wikipedia_hilbert_space]
+is a [complete](#def-complete-inner-product-space) [real inner product space](linear-algebra-inner-products.qmd#def-inner-product-space)
+[@banerjee2014linear, Section 16.8, Definition 16.8, p. 547].
+
+:::
