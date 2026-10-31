@@ -1,0 +1,22 @@
+:::{#def-adam}
+#### Adam
+
+Let $f$, $\vx^{(0)}$, $\steplen$ and $\epsilon$ be as in an [adaptive method](#def-adaptive-method),
+and let $\beta_1, \beta_2 \in [0, 1)$,
+where $\beta_2$ plays the role of the decay factor $\rho$.
+Write $\vg^{(t)}$ for $\deriv{\vx} f(\vx^{(t-1)})$.
+The **Adam** method [@kingma2015adam] is defined, for $t = 1, 2, \ldots$,
+
+$$
+\begin{aligned}
+\vm^{(t)} &\eqdef \beta_1\,\vm^{(t-1)} + (1 - \beta_1)\,\vg^{(t)} \\
+u_j^{(t)} &\eqdef \beta_2\,u_j^{(t-1)} + (1 - \beta_2)\,\paren{g_j^{(t)}}^2 \\
+\est{\vm}^{(t)} &\eqdef \frac{\vm^{(t)}}{1 - \beta_1^t} \\
+\est{u}_j^{(t)} &\eqdef \frac{u_j^{(t)}}{1 - \beta_2^t} \\
+x_j^{(t)} &\eqdef x_j^{(t-1)} - \steplen\,\frac{\est{m}_j^{(t)}}{\sqrt{\est{u}_j^{(t)}} + \epsilon},
+\end{aligned}
+$$
+
+for each coordinate $j = 1, \ldots, p$, with $\vm^{(0)} \eqdef \vzero$ and $u_j^{(0)} \eqdef 0$.
+
+:::

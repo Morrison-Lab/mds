@@ -1,4 +1,5 @@
 3Blue1Brown
+AdaGrad
 additivity
 adjugate
 antiderivative
@@ -96,6 +97,7 @@ qwt
 Rayleigh
 RevealJS
 RKHS
+RMSProp
 Roch
 rulesets
 salg

@@ -1,0 +1,21 @@
+:::{#def-adaptive-method}
+#### Adaptive method
+
+Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.qmd#def-partial-derivative),
+let $\vx^{(0)}$ be a starting point,
+let $\steplen > 0$ be a [step length](#def-gradient-descent),
+let $\rho \in [0, 1)$ be a decay factor,
+and let $\epsilon > 0$.
+Write $g_j^{(t)}$ for coordinate $j$ of $\deriv{\vx} f(\vx^{(t-1)})$.
+An **adaptive method** is defined, for $t = 1, 2, \ldots$ and each coordinate $j = 1, \ldots, p$,
+
+$$
+\begin{aligned}
+u_j^{(t)} &\eqdef \rho\,u_j^{(t-1)} + (1 - \rho)\,\paren{g_j^{(t)}}^2 \\
+x_j^{(t)} &\eqdef x_j^{(t-1)} - \steplen\,\frac{g_j^{(t)}}{\sqrt{u_j^{(t)}} + \epsilon},
+\end{aligned}
+$$
+
+with $u_j^{(0)} \eqdef 0$.
+
+:::
