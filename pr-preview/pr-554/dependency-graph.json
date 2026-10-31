@@ -6375,6 +6375,24 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-moore-penrose-least-squares",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse gives a least squares solution",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#thm-moore-penrose-minimum-norm",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-moore-penrose-minimum-norm",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse gives the least squares solution of smallest norm",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-moore-penrose-unique",
    "site": "mds",
    "page": "linear-algebra",
@@ -8262,6 +8280,24 @@
    "div": "thm-moore-penrose-gram",
    "kind": "thm",
    "title": "The Moore-Penrose inverse of a Gram matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "site": "mds",
+   "page": "linear-algebra-projections",
+   "div": "thm-moore-penrose-least-squares",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse gives a least squares solution",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-projections#thm-moore-penrose-minimum-norm",
+   "site": "mds",
+   "page": "linear-algebra-projections",
+   "div": "thm-moore-penrose-minimum-norm",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse gives the least squares solution of smallest norm",
    "external": false
   },
   {
@@ -10947,6 +10983,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#thm-convex-hessian-converse",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-convex-hessian-converse",
+   "kind": "thm",
+   "title": "A convex function has a positive semidefinite Hessian",
+   "external": false
+  },
+  {
    "id": "mds/optimization#thm-convex-intersection",
    "site": "mds",
    "page": "optimization",
@@ -11268,6 +11313,15 @@
    "div": "thm-convex-hessian",
    "kind": "thm",
    "title": "Second-derivative test for convexity",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-convex-hessian-converse",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-convex-hessian-converse",
+   "kind": "thm",
+   "title": "A convex function has a positive semidefinite Hessian",
    "external": false
   },
   {
@@ -15956,6 +16010,18 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
+   "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "mds/linear-algebra#def-least-squares"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "mds/proof-writing#def-iff"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-minimum-norm",
+   "mds/linear-algebra#def-least-squares"
+  ],
+  [
    "mds/linear-algebra#thm-moore-penrose-unique",
    "mds/linear-algebra#def-moore-penrose"
   ],
@@ -16714,6 +16780,18 @@
   [
    "mds/linear-algebra-projections#thm-moore-penrose-gram",
    "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "mds/linear-algebra-projections#def-least-squares"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "mds/proof-writing#def-iff"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-minimum-norm",
+   "mds/linear-algebra-projections#def-least-squares"
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-unique",
@@ -18548,6 +18626,22 @@
    "mds/vector-calculus#def-continuous-on"
   ],
   [
+   "mds/optimization#thm-convex-hessian-converse",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian-converse",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-second-partial-derivative"
+  ],
+  [
    "mds/optimization#thm-convex-intersection",
    "mds/optimization#def-convex-set"
   ],
@@ -18830,6 +18924,22 @@
   [
    "mds/optimization-convexity#thm-convex-hessian",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-second-partial-derivative"
   ],
   [
    "mds/optimization-convexity#thm-convex-intersection",

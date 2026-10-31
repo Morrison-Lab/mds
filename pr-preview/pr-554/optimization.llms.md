@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 15:21:28 (PDT)
+Last modified: 2026-10-30 16:28:50 (PDT)
 
 The optimization notes are split across these pages:
 
@@ -21,6 +21,8 @@ A link to a section, theorem or definition on this page from before the split go
 
 - Boyd and Vandenberghe [\[1\]](#ref-boyd2004convex) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
 - Nocedal and Wright [\[2\]](#ref-nocedal2006numerical) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
+- [M/CS 335, Linear Optimization](https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=126769) at Western Washington University covers optimizing [linear functions](algebra-exponentials.llms.md#def-linear-function) under linear [constraints](optimization-constrained.llms.md#def-constraints), including linear programming and duality.
+- [M/CS 375, Numerical Computation](https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=126770) at Western Washington University covers computer arithmetic, solving nonlinear equations, optimization in a single variable, [matrix](linear-algebra-matrices.llms.md#def-matrix) factorization, and [iterative methods](optimization-newton.llms.md#def-iterative-method) for matrices.
 - [Hua Zhou](https://hua-zhou.github.io/)’s [course page for “UCLA Biostat 257 - Statistical Computing” (2025 Spring)](https://ucla-biostat-257.github.io/2025spring/) has lectures on optimization, from root finding to constrained problems. Its source is [on GitHub](https://github.com/ucla-biostat-257/2025spring) under the MIT License.
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)](https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html)
 - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.
