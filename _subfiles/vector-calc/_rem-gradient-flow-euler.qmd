@@ -4,7 +4,7 @@
 [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $\steplen$ updates $\iterpoint{\vx}{t+1} = \iterpoint{\vx}{t} - \steplen\,\deriv{\vx} f(\iterpoint{\vx}{t})$.
 This is Euler's method with time step $\steplen$ for the [gradient flow](#def-gradient-flow) equation.
 For a [linear function](algebra.qmd#def-linear-function) $f$, the velocity of the flow is the negative [normal vector](linear-algebra-matrices.qmd#def-normal-vector),
-which is orthogonal to every [level set](#def-level-set) (@thm-level-sets-linear),
-so the flow crosses the level sets at right angles.
+which is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to every [level set](#def-level-set) (@thm-level-sets-linear),
+so the flow crosses the level sets at right angles. <!-- check-term-links: allow -->
 
 :::
