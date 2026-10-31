@@ -30,7 +30,8 @@ t_gf <- 1
 s_gf <- c(0.5, 0.01)
 descent_gf <- x0_gf * (1 - s_gf)^(t_gf / s_gf)
 flow_gf <- x0_gf * exp(-t_gf)
-round(c(descent_gf, flow = flow_gf), 4)
+values_gf <- c(descent_gf, flow = flow_gf)
+round(values_gf, 4)
 ```
 
 ### Python

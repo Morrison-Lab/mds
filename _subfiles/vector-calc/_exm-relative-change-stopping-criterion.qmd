@@ -11,13 +11,16 @@ Each step [maps](functions.qmd#def-function) $x$ to $x - 0.25 \cdot 2x = x/2$:
 ```{r}
 #| label: relative-change-r
 #| code-fold: false
-f_rc <- function(x) x^2 + 1
 x_rc <- 2
 tol_rc <- 0.01
 for (t_rc in 0:100) {
   x_next_rc <- x_rc - 0.25 * 2 * x_rc
-  change_rc <- abs(f_rc(x_next_rc) - f_rc(x_rc)) / abs(f_rc(x_rc))
-  if (change_rc < tol_rc) break
+  cost_rc <- x_rc^2 + 1
+  cost_next_rc <- x_next_rc^2 + 1
+  diff_rc <- cost_next_rc - cost_rc
+  change_rc <- abs(diff_rc) / cost_rc
+  below_tol_rc <- change_rc < tol_rc
+  if (below_tol_rc) break
   x_rc <- x_next_rc
 }
 c(t = t_rc, change = change_rc)
