@@ -8,7 +8,7 @@ The **linear decay** schedule is
 $$
 s^{(t)} \eqdef \paren{1 - \schedfrac}\,s^{(0)} + \schedfrac\,s^{(\schedlen)},
 \qquad
-\schedfrac \eqdef \min\paren{\frac{t}{\schedlen}, 1}.
+\schedfrac \eqdef \minf{\frac{t}{\schedlen}, 1}.
 $$
 
 :::
