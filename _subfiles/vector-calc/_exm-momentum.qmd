@@ -27,7 +27,9 @@ for (k_mo in seq_len(n_mo)) {
 }
 last_mo <- path_mo[n_mo, ]
 lowest_mo <- apply(path_mo, 2, min)
-summary_mo <- rbind(last = last_mo, lowest = lowest_mo) # nolint: undesirable_function_linter.
+# nolint start: undesirable_function_linter.
+summary_mo <- rbind(last = last_mo, lowest = lowest_mo)
+# nolint end
 round(summary_mo, 4)
 ```
 
