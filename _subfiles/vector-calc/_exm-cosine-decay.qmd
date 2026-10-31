@@ -33,7 +33,8 @@ for t_cd in [0, 15, 45, 75, 90]:
 
 :::
 
-The step length is $0.1$ at the start, half of that at $t = 45$, and zero at $t = 90$.
+The step length is $0.1$ at the start, <!-- check-term-links: allow -->
+half of that at $t = 45$, and zero at $t = 90$.
 It changes slowly near both ends and fastest in the middle.
 
 <!-- no-figure: the example tabulates five step lengths -->
