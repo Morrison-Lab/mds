@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 21:18:12 (PDT)
+Last modified: 2026-10-31 00:08:50 (PDT)
 
 ## 0.1 Gradient descent
 
@@ -467,7 +467,7 @@ Last modified: 2026-10-30 21:18:12 (PDT)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f44ab2c0050>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc050>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -479,18 +479,18 @@ Last modified: 2026-10-30 21:18:12 (PDT)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f44ab2c0190>]
-> #> [<matplotlib.lines.Line2D object at 0x7f44ab2c02d0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f44ab2c0410>]
-> #> [<matplotlib.lines.Line2D object at 0x7f44ab2c0550>]
-> #> [<matplotlib.lines.Line2D object at 0x7f44ab2c0690>]
-> #> [<matplotlib.lines.Line2D object at 0x7f44ab2c07d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc190>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc2d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc410>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc550>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc690>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc7d0>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f44ab2c0910>
+> #> <matplotlib.legend.Legend object at 0x7fe53a6bc910>
 > plt.show()
 > ```
 >
@@ -585,10 +585,10 @@ Last modified: 2026-10-30 21:18:12 (PDT)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f44ab219090>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe53a615090>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7f44ab2191d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe53a6151d0>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -715,11 +715,11 @@ Last modified: 2026-10-30 21:18:12 (PDT)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f44a8d39e50>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe5380c9310>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7f44a8c81310>
+> #> <matplotlib.lines.Line2D object at 0x7fe5380c9450>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7f44a8c81450>
+> #> <matplotlib.lines.Line2D object at 0x7fe5380c9590>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -777,6 +777,105 @@ Last modified: 2026-10-30 21:18:12 (PDT)
 >
 > *Solution 4*. From [Solution 3](#sol-best-step-factor), \\\rho(s^\*) = 0.8\\. Taking logarithms, \\\rho(s^\*)^t \le 0.1\\ becomes \\t \ln \rho(s^\*) \le \ln 0.1\\. Here \\\ln \rho(s^\*) \< 0\\, so dividing by it flips the [inequality](proof-writing.llms.md#def-inequality): \\t \ge \ln 0.1 / \ln \rho(s^\*) \approx 10.32\\. The smallest such \\t\\ is \\11\\.
 
+> **NOTE:**
+>
+> **Definition 13 (Momentum coefficient)** Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}^{(1)}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}^{(2)}, \ldots\\ be vectors in \\\mathbb{R}^p\\, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}^{(t)}\\ be a running **velocity** built from them. The **momentum coefficient** \\\beta \in \[0, 1)\\ is the factor that multiplies the previous velocity in
+>
+> \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}^{(t)} \stackrel{\text{def}}{=}\beta\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}^{(t-1)} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}^{(t)}, \\
+>
+> for \\t = 1, 2, \ldots\\, with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}^{(0)} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\.
+
+> **NOTE:**
+>
+> **Example 17 (How far back the velocity remembers)** Unrolling the recursion, the vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}^{(t-k)}\\ enters \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}^{(t)}\\ with factor \\\beta^k\\, for \\k \< t\\. These factors add up to at most \\\sum\_{k=0}^{\infty} \beta^k = 1 / (1 - \beta)\\. As a rule of thumb, the [velocity](#def-momentum-coefficient) is therefore dominated by the last \\1 / (1 - \beta)\\ vectors.
+>
+> ## R
+>
+> ``` downlit
+> beta_mc <- c(0, 0.5, 0.9, 0.99)
+> k_mc <- 10
+> weight_mc <- beta_mc^k_mc
+> memory_mc <- 1 / (1 - beta_mc)
+> weight_rounded_mc <- signif(weight_mc, 2)
+> # nolint start: undesirable_function_linter.
+> rbind(beta = beta_mc, weight = weight_rounded_mc, memory = memory_mc)
+> #>        [,1]    [,2]  [,3]   [,4]
+> #> beta      0 0.50000  0.90   0.99
+> #> weight    0 0.00098  0.35   0.90
+> #> memory    1 2.00000 10.00 100.00
+> # nolint end
+> ```
+>
+> ## Python
+>
+> ``` python
+> beta_mc = [0, 0.5, 0.9, 0.99]
+> k_mc = 10
+> for b_mc in beta_mc:
+>     print(b_mc, float(f"{b_mc**k_mc:.2g}"), round(1 / (1 - b_mc)));
+> #> 0 0.0 1
+> #> 0.5 0.00098 2
+> #> 0.9 0.35 10
+> #> 0.99 0.9 100
+> ```
+>
+> At \\\beta = 0\\ the [velocity](#def-momentum-coefficient) is the current vector alone, and at \\\beta = 0.99\\ it combines about 100 vectors.
+
+> **NOTE:**
+>
+> **Definition 14 (Momentum (heavy-ball method))** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point, let \\s\> 0\\ be a [step length](#def-gradient-descent), and let \\\beta \in \[0, 1)\\ be a [momentum coefficient](#def-momentum-coefficient). **Momentum** (the **heavy-ball method**) updates, for \\t = 1, 2, \ldots\\, by
+>
+> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}^{(t)} &\stackrel{\text{def}}{=}\beta\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}^{(t-1)} + \frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t-1)}) \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t)} &\stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t-1)} - s\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}^{(t)}, \end{aligned} \\
+>
+> with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}^{(0)} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\.
+
+> **NOTE:**
+>
+> **Example 18 (Momentum on a one-dimensional quadratic)** Let \\f(x) = \tfrac{1}{2} x^2\\, so \\\frac{\partial}{\partial x} f(x) = x\\. Start at \\x^{(0)} = 1\\ with \\s= 0.1\\, and take \\20\\ updates with \\\beta = 0\\, which is plain [gradient descent](#def-gradient-descent), and with \\\beta = 0.9\\:
+>
+> ## R
+>
+> ``` downlit
+> x0_mo <- 1
+> s_mo <- 0.1
+> beta_mo <- c(plain = 0, momentum = 0.9)
+> n_mo <- 20
+> x_mo <- rep(x0_mo, 2)
+> v_mo <- c(0, 0)
+> path_mo <- matrix(NA_real_, nrow = n_mo, ncol = 2)
+> for (k_mo in seq_len(n_mo)) {
+>   v_mo <- beta_mo * v_mo + x_mo
+>   x_mo <- x_mo - s_mo * v_mo
+>   path_mo[k_mo, ] <- x_mo
+> }
+> last_mo <- path_mo[n_mo, ]
+> lowest_mo <- apply(path_mo, 2, min)
+> # nolint start: undesirable_function_linter.
+> summary_mo <- rbind(last = last_mo, lowest = lowest_mo)
+> # nolint end
+> round(summary_mo, 4)
+> #>          [,1]    [,2]
+> #> last   0.1216  0.3447
+> #> lowest 0.1216 -0.6037
+> ```
+>
+> ## Python
+>
+> ``` python
+> s_mo, n_mo = 0.1, 20
+> for beta_mo in (0.0, 0.9):
+>     x_mo, v_mo, path_mo = 1.0, 0.0, []
+>     for _ in range(n_mo):
+>         v_mo = beta_mo * v_mo + x_mo
+>         x_mo = x_mo - s_mo * v_mo
+>         path_mo.append(x_mo)
+>     print(beta_mo, round(path_mo[-1], 4), round(min(path_mo), 4));
+> #> 0.0 0.1216 0.1216
+> #> 0.9 0.3447 -0.6037
+> ```
+>
+> After \\20\\ updates, plain descent has reached 0.122 and [momentum](#def-momentum) 0.345. Momentum overshoots the [minimizer](algebra-basics.llms.md#def-global-minimizer) \\0\\, down to -0.604 at update 9, and then swings back. In this run, with a small [step length](#def-gradient-descent), the swing leaves momentum behind plain descent after \\20\\ updates.
+
 # Definitions on this page
 
 - [Definition 1 (Gradient descent)](#def-gradient-descent)
@@ -791,6 +890,8 @@ Last modified: 2026-10-30 21:18:12 (PDT)
 - [Definition 10 (Plateau)](#def-plateau)
 - [Definition 11 (Armijo condition)](#def-armijo-condition)
 - [Definition 12 (Backtracking line search)](#def-backtracking-line-search)
+- [Definition 13 (Momentum coefficient)](#def-momentum-coefficient)
+- [Definition 14 (Momentum (heavy-ball method))](#def-momentum)
 
 Back to top
 

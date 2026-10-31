@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 21:18:12 (PDT)</p>
+  <p class="date">Last modified: 2026-10-31 00:08:50 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-gradient-descent" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Gradient descent</h2>
 <div id="def-gradient-descent" class="theorem definition">
@@ -910,7 +910,7 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb13-7"><a aria-label="7"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb13-8"><a aria-label="8"></a>grid_bf <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.6</span>, <span class="fl">1.6</span>, <span class="dv">321</span>)</span>
 <span id="cb13-9"><a aria-label="9"></a>ax.plot(grid_bf, basin_cost_bf(grid_bf), color<span class="op">=</span><span class="st">"grey"</span>)</span>
-<span id="cb13-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44ab2c0050&gt;]</span></span>
+<span id="cb13-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc050&gt;]</span></span>
 <span id="cb13-11"><a aria-label="11"></a><span class="cf">for</span> start <span class="kw">in</span> <span class="bu">sorted</span>(basin_starts_bs[:<span class="dv">6</span>], reverse<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb13-12"><a aria-label="12"></a>    x <span class="op">=</span> [start]</span>
 <span id="cb13-13"><a aria-label="13"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">30</span>):</span>
@@ -922,18 +922,18 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb13-19"><a aria-label="19"></a>            marker<span class="op">=</span><span class="st">"o"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"^"</span>,</span>
 <span id="cb13-20"><a aria-label="20"></a>            label<span class="op">=</span>(<span class="st">"start above 0"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"start below 0"</span>)</span>
 <span id="cb13-21"><a aria-label="21"></a>            <span class="cf">if</span> <span class="bu">abs</span>(start) <span class="op">==</span> <span class="fl">0.1</span> <span class="cf">else</span> <span class="va">None</span>)</span>
-<span id="cb13-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44ab2c0190&gt;]</span></span>
-<span id="cb13-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44ab2c02d0&gt;]</span></span>
-<span id="cb13-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44ab2c0410&gt;]</span></span>
-<span id="cb13-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44ab2c0550&gt;]</span></span>
-<span id="cb13-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44ab2c0690&gt;]</span></span>
-<span id="cb13-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44ab2c07d0&gt;]</span></span>
+<span id="cb13-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc190&gt;]</span></span>
+<span id="cb13-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc2d0&gt;]</span></span>
+<span id="cb13-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc410&gt;]</span></span>
+<span id="cb13-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc550&gt;]</span></span>
+<span id="cb13-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc690&gt;]</span></span>
+<span id="cb13-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc7d0&gt;]</span></span>
 <span id="cb13-28"><a aria-label="28"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb13-29"><a aria-label="29"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
 <span id="cb13-30"><a aria-label="30"></a>ax.set_ylabel(<span class="st">"f(x)"</span>)</span>
 <span id="cb13-31"><a aria-label="31"></a><span class="co">#&gt; Text(0, 0.5, 'f(x)')</span></span>
 <span id="cb13-32"><a aria-label="32"></a>fig.legend(loc<span class="op">=</span><span class="st">"outside lower center"</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb13-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7f44ab2c0910&gt;</span></span>
+<span id="cb13-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7fe53a6bc910&gt;</span></span>
 <span id="cb13-34"><a aria-label="34"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-basin-of-attraction" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-basin-of-attraction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1044,10 +1044,10 @@ function or its scalar variable, and the basin example writes f(x) the same way.
 <span id="cb15-5"><a aria-label="5"></a>plateau_marks_pf <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">10</span>])</span>
 <span id="cb15-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb15-7"><a aria-label="7"></a>ax.plot(plateau_grid_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_grid_pf)), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
-<span id="cb15-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44ab219090&gt;]</span></span>
+<span id="cb15-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a615090&gt;]</span></span>
 <span id="cb15-9"><a aria-label="9"></a>ax.plot(plateau_marks_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_marks_pf)),</span>
 <span id="cb15-10"><a aria-label="10"></a>        color<span class="op">=</span><span class="st">"#D55E00"</span>, marker<span class="op">=</span><span class="st">"^"</span>, markersize<span class="op">=</span><span class="dv">8</span>, linestyle<span class="op">=</span><span class="st">""</span>)</span>
-<span id="cb15-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44ab2191d0&gt;]</span></span>
+<span id="cb15-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6151d0&gt;]</span></span>
 <span id="cb15-12"><a aria-label="12"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
 <span id="cb15-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb15-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
@@ -1238,11 +1238,11 @@ s&amp;= \frac{2}{\lambda_{\min} + \lambda_{\max}} = s^*.
 <span id="cb17-5"><a aria-label="5"></a>bcs_rho_pf <span class="op">=</span> np.maximum(np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> <span class="dv">3</span> <span class="op">*</span> bcs_grid_pf), np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> bcs_grid_pf))</span>
 <span id="cb17-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb17-7"><a aria-label="7"></a>ax.plot(bcs_grid_pf, bcs_rho_pf, color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
-<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f44a8d39e50&gt;]</span></span>
+<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe5380c9310&gt;]</span></span>
 <span id="cb17-9"><a aria-label="9"></a>ax.axhline(<span class="dv">1</span>, color<span class="op">=</span><span class="st">"black"</span>, linestyle<span class="op">=</span><span class="st">":"</span>)</span>
-<span id="cb17-10"><a aria-label="10"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f44a8c81310&gt;</span></span>
+<span id="cb17-10"><a aria-label="10"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7fe5380c9450&gt;</span></span>
 <span id="cb17-11"><a aria-label="11"></a>ax.axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
-<span id="cb17-12"><a aria-label="12"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f44a8c81450&gt;</span></span>
+<span id="cb17-12"><a aria-label="12"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7fe5380c9590&gt;</span></span>
 <span id="cb17-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"Step length"</span>)</span>
 <span id="cb17-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'Step length')</span></span>
 <span id="cb17-15"><a aria-label="15"></a>ax.set_ylabel(<span class="st">"Error factor"</span>)</span>
@@ -1314,8 +1314,118 @@ s^* = \frac{2}{1 + 9} = 0.2.
 </section><section class="slide level2"><div id="exr-best-step-count" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4 (Steps to cut the error bound by a factor of ten)</strong></span> In the setting of <a href="#/exr-best-step-length" class="quarto-xref">Exercise&nbsp;2</a> and <a href="#/exr-best-step-factor" class="quarto-xref">Exercise&nbsp;3</a>, find the smallest <span class="math inline">\(t = 1, 2, \ldots\)</span> with <span class="math inline">\(\rho(s^*)^t \le 0.1\)</span>.</p>
 </div>
-</section><section class="slide level2 smaller scrollable" id="references"><div id="sol-best-step-count" class="proof solution">
+</section><section class="slide level2"><div id="sol-best-step-count" class="proof solution">
 <p><span class="proof-title"><em>Solution 4</em>. </span>From <a href="#/sol-best-step-factor" class="quarto-xref">Solution&nbsp;3</a>, <span class="math inline">\(\rho(s^*) = 0.8\)</span>. Taking logarithms, <span class="math inline">\(\rho(s^*)^t \le 0.1\)</span> becomes <span class="math inline">\(t \ln \rho(s^*) \le \ln 0.1\)</span>. Here <span class="math inline">\(\ln \rho(s^*) &lt; 0\)</span>, so dividing by it flips the <a href="./proof-writing.html#def-inequality">inequality</a>: <span class="math inline">\(t \ge \ln 0.1 / \ln \rho(s^*) \approx 10.32\)</span>. The smallest such <span class="math inline">\(t\)</span> is <span class="math inline">\(11\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="def-momentum-coefficient" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Momentum coefficient)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}^{(1)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}^{(2)}, \ldots\)</span> be vectors in <span class="math inline">\(\mathbb{R}^p\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(t)}\)</span> be a running <strong>velocity</strong> built from them. The <strong>momentum coefficient</strong> <span class="math inline">\(\beta \in [0, 1)\)</span> is the factor that multiplies the previous velocity in</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(t)} \stackrel{\text{def}}{=}\beta\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(t-1)} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}^{(t)},
+\]</span></p>
+<p>for <span class="math inline">\(t = 1, 2, \ldots\)</span>, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(0)} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-momentum-coefficient" class="theorem example">
+<p><span class="theorem-title"><strong>Example 17 (How far back the velocity remembers)</strong></span> Unrolling the recursion, the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}^{(t-k)}\)</span> enters <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(t)}\)</span> with factor <span class="math inline">\(\beta^k\)</span>, for <span class="math inline">\(k &lt; t\)</span>. These factors add up to at most <span class="math inline">\(\sum_{k=0}^{\infty} \beta^k = 1 / (1 - \beta)\)</span>. As a rule of thumb, the <a href="#/def-momentum-coefficient">velocity</a> is therefore dominated by the last <span class="math inline">\(1 / (1 - \beta)\)</span> vectors.</p>
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-9" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-9-1">R</a></li>
+<li><a href="#tabset-9-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-9-1">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-label="1"></a>beta_mc <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.9</span>, <span class="fl">0.99</span>)</span>
+<span id="cb18-2"><a aria-label="2"></a>k_mc <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb18-3"><a aria-label="3"></a>weight_mc <span class="ot">&lt;-</span> beta_mc<span class="sc">^</span>k_mc</span>
+<span id="cb18-4"><a aria-label="4"></a>memory_mc <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> beta_mc)</span>
+<span id="cb18-5"><a aria-label="5"></a>weight_rounded_mc <span class="ot">&lt;-</span> <span class="fu">signif</span>(weight_mc, <span class="dv">2</span>)</span>
+<span id="cb18-6"><a aria-label="6"></a><span class="co"># nolint start: undesirable_function_linter.</span></span>
+<span id="cb18-7"><a aria-label="7"></a><span class="fu">rbind</span>(<span class="at">beta =</span> beta_mc, <span class="at">weight =</span> weight_rounded_mc, <span class="at">memory =</span> memory_mc)</span>
+<span id="cb18-8"><a aria-label="8"></a><span class="co">#&gt;        [,1]    [,2]  [,3]   [,4]</span></span>
+<span id="cb18-9"><a aria-label="9"></a><span class="co">#&gt; beta      0 0.50000  0.90   0.99</span></span>
+<span id="cb18-10"><a aria-label="10"></a><span class="co">#&gt; weight    0 0.00098  0.35   0.90</span></span>
+<span id="cb18-11"><a aria-label="11"></a><span class="co">#&gt; memory    1 2.00000 10.00 100.00</span></span>
+<span id="cb18-12"><a aria-label="12"></a><span class="co"># nolint end</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-9-2">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a aria-label="1"></a>beta_mc <span class="op">=</span> [<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.9</span>, <span class="fl">0.99</span>]</span>
+<span id="cb19-2"><a aria-label="2"></a>k_mc <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb19-3"><a aria-label="3"></a><span class="cf">for</span> b_mc <span class="kw">in</span> beta_mc:</span>
+<span id="cb19-4"><a aria-label="4"></a>    <span class="bu">print</span>(b_mc, <span class="bu">float</span>(<span class="ss">f"</span><span class="sc">{</span>b_mc<span class="op">**</span>k_mc<span class="sc">:.2g}</span><span class="ss">"</span>), <span class="bu">round</span>(<span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> b_mc)))<span class="op">;</span></span>
+<span id="cb19-5"><a aria-label="5"></a><span class="co">#&gt; 0 0.0 1</span></span>
+<span id="cb19-6"><a aria-label="6"></a><span class="co">#&gt; 0.5 0.00098 2</span></span>
+<span id="cb19-7"><a aria-label="7"></a><span class="co">#&gt; 0.9 0.35 10</span></span>
+<span id="cb19-8"><a aria-label="8"></a><span class="co">#&gt; 0.99 0.9 100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>At <span class="math inline">\(\beta = 0\)</span> the <a href="#/def-momentum-coefficient">velocity</a> is the current vector alone, and at <span class="math inline">\(\beta = 0.99\)</span> it combines about 100 vectors.</p>
+<!-- no-figure: the example tabulates weights -->
+</div>
+</section><section class="slide level2"><div id="def-momentum" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Momentum (heavy-ball method))</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first <a href="./vector-calculus.html#def-partial-derivative">partial derivatives</a>, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> be a starting point, let <span class="math inline">\(s&gt; 0\)</span> be a <a href="#/def-gradient-descent">step length</a>, and let <span class="math inline">\(\beta \in [0, 1)\)</span> be a <a href="#/def-momentum-coefficient">momentum coefficient</a>. <strong>Momentum</strong> (the <strong>heavy-ball method</strong>) updates, for <span class="math inline">\(t = 1, 2, \ldots\)</span>, by</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(t)} &amp;\stackrel{\text{def}}{=}\beta\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(t-1)} + \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t-1)}) \\
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} &amp;\stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t-1)} - s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(t)},
+\end{aligned}
+\]</span></p>
+<p>with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(0)} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+</div>
+</section><section class="slide level2 smaller scrollable" id="references"><div id="exm-momentum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18 (Momentum on a one-dimensional quadratic)</strong></span> Let <span class="math inline">\(f(x) = \tfrac{1}{2} x^2\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x} f(x) = x\)</span>. Start at <span class="math inline">\(x^{(0)} = 1\)</span> with <span class="math inline">\(s= 0.1\)</span>, and take <span class="math inline">\(20\)</span> updates with <span class="math inline">\(\beta = 0\)</span>, which is plain <a href="#/def-gradient-descent">gradient descent</a>, and with <span class="math inline">\(\beta = 0.9\)</span>:</p>
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-10" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-10-1">R</a></li>
+<li><a href="#tabset-10-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-10-1">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a aria-label="1"></a>x0_mo <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb20-2"><a aria-label="2"></a>s_mo <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
+<span id="cb20-3"><a aria-label="3"></a>beta_mo <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">plain =</span> <span class="dv">0</span>, <span class="at">momentum =</span> <span class="fl">0.9</span>)</span>
+<span id="cb20-4"><a aria-label="4"></a>n_mo <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb20-5"><a aria-label="5"></a>x_mo <span class="ot">&lt;-</span> <span class="fu">rep</span>(x0_mo, <span class="dv">2</span>)</span>
+<span id="cb20-6"><a aria-label="6"></a>v_mo <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb20-7"><a aria-label="7"></a>path_mo <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="cn">NA_real_</span>, <span class="at">nrow =</span> n_mo, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb20-8"><a aria-label="8"></a><span class="cf">for</span> (k_mo <span class="cf">in</span> <span class="fu">seq_len</span>(n_mo)) {</span>
+<span id="cb20-9"><a aria-label="9"></a>  v_mo <span class="ot">&lt;-</span> beta_mo <span class="sc">*</span> v_mo <span class="sc">+</span> x_mo</span>
+<span id="cb20-10"><a aria-label="10"></a>  x_mo <span class="ot">&lt;-</span> x_mo <span class="sc">-</span> s_mo <span class="sc">*</span> v_mo</span>
+<span id="cb20-11"><a aria-label="11"></a>  path_mo[k_mo, ] <span class="ot">&lt;-</span> x_mo</span>
+<span id="cb20-12"><a aria-label="12"></a>}</span>
+<span id="cb20-13"><a aria-label="13"></a>last_mo <span class="ot">&lt;-</span> path_mo[n_mo, ]</span>
+<span id="cb20-14"><a aria-label="14"></a>lowest_mo <span class="ot">&lt;-</span> <span class="fu">apply</span>(path_mo, <span class="dv">2</span>, min)</span>
+<span id="cb20-15"><a aria-label="15"></a><span class="co"># nolint start: undesirable_function_linter.</span></span>
+<span id="cb20-16"><a aria-label="16"></a>summary_mo <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="at">last =</span> last_mo, <span class="at">lowest =</span> lowest_mo)</span>
+<span id="cb20-17"><a aria-label="17"></a><span class="co"># nolint end</span></span>
+<span id="cb20-18"><a aria-label="18"></a><span class="fu">round</span>(summary_mo, <span class="dv">4</span>)</span>
+<span id="cb20-19"><a aria-label="19"></a><span class="co">#&gt;          [,1]    [,2]</span></span>
+<span id="cb20-20"><a aria-label="20"></a><span class="co">#&gt; last   0.1216  0.3447</span></span>
+<span id="cb20-21"><a aria-label="21"></a><span class="co">#&gt; lowest 0.1216 -0.6037</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-10-2">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a aria-label="1"></a>s_mo, n_mo <span class="op">=</span> <span class="fl">0.1</span>, <span class="dv">20</span></span>
+<span id="cb21-2"><a aria-label="2"></a><span class="cf">for</span> beta_mo <span class="kw">in</span> (<span class="fl">0.0</span>, <span class="fl">0.9</span>):</span>
+<span id="cb21-3"><a aria-label="3"></a>    x_mo, v_mo, path_mo <span class="op">=</span> <span class="fl">1.0</span>, <span class="fl">0.0</span>, []</span>
+<span id="cb21-4"><a aria-label="4"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_mo):</span>
+<span id="cb21-5"><a aria-label="5"></a>        v_mo <span class="op">=</span> beta_mo <span class="op">*</span> v_mo <span class="op">+</span> x_mo</span>
+<span id="cb21-6"><a aria-label="6"></a>        x_mo <span class="op">=</span> x_mo <span class="op">-</span> s_mo <span class="op">*</span> v_mo</span>
+<span id="cb21-7"><a aria-label="7"></a>        path_mo.append(x_mo)</span>
+<span id="cb21-8"><a aria-label="8"></a>    <span class="bu">print</span>(beta_mo, <span class="bu">round</span>(path_mo[<span class="op">-</span><span class="dv">1</span>], <span class="dv">4</span>), <span class="bu">round</span>(<span class="bu">min</span>(path_mo), <span class="dv">4</span>))<span class="op">;</span></span>
+<span id="cb21-9"><a aria-label="9"></a><span class="co">#&gt; 0.0 0.1216 0.1216</span></span>
+<span id="cb21-10"><a aria-label="10"></a><span class="co">#&gt; 0.9 0.3447 -0.6037</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>After <span class="math inline">\(20\)</span> updates, plain descent has reached 0.122 and <a href="#/def-momentum">momentum</a> 0.345. Momentum overshoots the <a href="./algebra-basics.html#def-global-minimizer">minimizer</a> <span class="math inline">\(0\)</span>, down to -0.604 at update 9, and then swings back. In this run, with a small <a href="#/def-gradient-descent">step length</a>, the swing leaves momentum behind plain descent after <span class="math inline">\(20\)</span> updates.</p>
+<!-- no-figure: a one-dimensional run summarized in two numbers per method -->
 </div>
 
 

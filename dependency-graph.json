@@ -10875,6 +10875,24 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-momentum",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-momentum",
+   "kind": "def",
+   "title": "Momentum (heavy-ball method)",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-momentum-coefficient",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-momentum-coefficient",
+   "kind": "def",
+   "title": "Momentum coefficient",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-newton-method",
    "site": "mds",
    "page": "optimization",
@@ -11700,6 +11718,24 @@
    "div": "def-line-search",
    "kind": "def",
    "title": "Line search",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-momentum",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-momentum",
+   "kind": "def",
+   "title": "Momentum (heavy-ball method)",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-momentum-coefficient",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-momentum-coefficient",
+   "kind": "def",
+   "title": "Momentum coefficient",
    "external": false
   },
   {
@@ -18729,6 +18765,18 @@
    "mds/optimization#def-objective-function"
   ],
   [
+   "mds/optimization#def-momentum",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#def-momentum",
+   "mds/optimization#def-momentum-coefficient"
+  ],
+  [
+   "mds/optimization#def-momentum",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
    "mds/optimization#def-newton-step",
    "mds/optimization#def-newton-method"
   ],
@@ -19423,6 +19471,18 @@
   [
    "mds/optimization-gradient-descent#def-line-search",
    "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-momentum",
+   "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-momentum",
+   "mds/optimization-gradient-descent#def-momentum-coefficient"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-momentum",
+   "mds/vector-calculus#def-partial-derivative"
   ],
   [
    "mds/optimization-gradient-descent#def-plateau",
