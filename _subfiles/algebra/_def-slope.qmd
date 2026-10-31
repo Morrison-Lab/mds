@@ -1,0 +1,8 @@
+:::{#def-slope}
+#### Slope
+
+In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
+$m$ is called the **slope** of $f$
+[@wikipedia_slope].
+
+:::

@@ -1,0 +1,9 @@
+:::{#def-matrix-analysis}
+#### Matrix analysis
+
+**Matrix analysis** is the study of [matrices](linear-algebra-matrices.qmd#def-matrix) and their algebraic properties,
+with operations on matrices, [functions](functions.qmd#def-function) of matrices
+and the [eigenvalues](linear-algebra.qmd#def-eigenvalue) of matrices as example topics
+[@wikipedia_matrix_analysis].
+
+:::
