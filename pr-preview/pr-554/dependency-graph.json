@@ -404,7 +404,16 @@
    "page": "algebra",
    "div": "def-intercept",
    "kind": "def",
-   "title": "Intercept",
+   "title": "Intercept, y-intercept",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-intercept-term",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-intercept-term",
+   "kind": "def",
+   "title": "Intercept term",
    "external": false
   },
   {
@@ -918,6 +927,15 @@
    "div": "def-upper-limit",
    "kind": "def",
    "title": "Upper limit of a sum or integral",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-x-intercept",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-x-intercept",
+   "kind": "def",
+   "title": "x-intercept",
    "external": false
   },
   {
@@ -1736,7 +1754,16 @@
    "page": "algebra-exponentials",
    "div": "def-intercept",
    "kind": "def",
-   "title": "Intercept",
+   "title": "Intercept, y-intercept",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#def-intercept-term",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-intercept-term",
+   "kind": "def",
+   "title": "Intercept term",
    "external": false
   },
   {
@@ -1881,6 +1908,15 @@
    "div": "def-slope",
    "kind": "def",
    "title": "Slope",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#def-x-intercept",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-x-intercept",
+   "kind": "def",
+   "title": "x-intercept",
    "external": false
   },
   {
@@ -5013,6 +5049,15 @@
    "div": "def-matrix-addition",
    "kind": "def",
    "title": "Matrix addition",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-matrix-analysis",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-matrix-analysis",
+   "kind": "def",
+   "title": "Matrix analysis",
    "external": false
   },
   {
@@ -13083,7 +13128,31 @@
   ],
   [
    "mds/algebra#def-intercept",
-   "mds/algebra#def-affine-function"
+   "mds/functions#def-domain"
+  ],
+  [
+   "mds/algebra#def-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra#def-intercept",
+   "mds/functions#def-graph"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/algebra#def-intercept"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/algebra-sums#def-term"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra#def-like-terms",
@@ -13366,6 +13435,18 @@
    "mds/calculus#def-riemann-integral"
   ],
   [
+   "mds/algebra#def-x-intercept",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra#def-x-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra#def-x-intercept",
+   "mds/functions#def-graph"
+  ],
+  [
    "mds/algebra#lem-nonneg-series",
    "mds/algebra#def-infinite-sum"
   ],
@@ -13611,7 +13692,31 @@
   ],
   [
    "mds/algebra-exponentials#def-intercept",
-   "mds/algebra-exponentials#def-affine-function"
+   "mds/functions#def-domain"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept",
+   "mds/functions#def-graph"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/algebra-exponentials#def-intercept"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/algebra-sums#def-term"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra-exponentials#def-linear-function",
@@ -13728,6 +13833,18 @@
   [
    "mds/algebra-exponentials#def-slope",
    "mds/algebra-exponentials#def-affine-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-x-intercept",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra-exponentials#def-x-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-x-intercept",
+   "mds/functions#def-graph"
   ],
   [
    "mds/algebra-exponentials#lem-nonneg-series",
@@ -15304,6 +15421,18 @@
   [
    "mds/linear-algebra#def-lu",
    "mds/linear-algebra#def-unit-lower-triangular-matrix"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-analysis",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-analysis",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-analysis",
+   "mds/linear-algebra-matrices#def-matrix"
   ],
   [
    "mds/linear-algebra#def-matrix-condition-number",
