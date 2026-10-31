@@ -1,0 +1,41 @@
+:::{#exm-linear-decay}
+#### Linear decay between two step lengths
+
+Take $\iterpoint{\steplen}{0} = 0.1$, $\iterpoint{\steplen}{\schedlen} = 0.001$ and $\schedlen = 90$.
+The [step length](#def-linear-decay) at $t = 0, 45, 90, 120$ is:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: linear-decay-r
+#| code-fold: false
+s0_ld <- 0.1
+s_end_ld <- 0.001
+tau_ld <- 90
+t_ld <- c(0, 45, 90, 120)
+frac_ld <- pmin(t_ld / tau_ld, 1)
+step_ld <- (1 - frac_ld) * s0_ld + frac_ld * s_end_ld
+tibble::tibble(t = t_ld, step_length = step_ld)
+```
+
+### Python
+
+```{python}
+#| label: linear-decay-python
+#| code-fold: false
+s0_ld, sT_ld, tau_ld = 0.1, 0.001, 90
+for t_ld in [0, 45, 90, 120]:
+    frac_ld = min(t_ld / tau_ld, 1)
+    print(t_ld, round((1 - frac_ld) * s0_ld + frac_ld * sT_ld, 6));
+```
+
+:::
+
+The step length falls by the same amount at each update. <!-- check-term-links: allow -->
+It then stays at $0.001$ for $t \ge \schedlen$.
+
+<!-- no-figure: the example tabulates four step lengths -->
+
+:::

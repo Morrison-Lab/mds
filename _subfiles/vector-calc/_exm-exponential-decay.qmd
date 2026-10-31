@@ -1,0 +1,39 @@
+:::{#exm-exponential-decay}
+#### The same factor over two run lengths
+
+Take $\iterpoint{\steplen}{0} = 0.1$ and $\decay = 0.99$.
+The [step length](#def-exponential-decay) at $t = 1000$ and at $t = 100000$ is:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: exponential-decay-r
+#| code-fold: false
+s0_ed <- 0.1
+decay_ed <- 0.99
+t_ed <- c(1000, 100000)
+step_ed <- s0_ed * decay_ed^t_ed
+tibble::tibble(t = t_ed, step_length = step_ed)
+```
+
+### Python
+
+```{python}
+#| label: exponential-decay-python
+#| code-fold: false
+s0_ed, decay_ed = 0.1, 0.99
+for t_ed in [1000, 100000]:
+    print(t_ed, s0_ed * decay_ed ** t_ed);
+```
+
+:::
+
+At $t = 1000$ the step length is about $4.3 \times 10^{-6}$. <!-- check-term-links: allow -->
+At $t = 100000$ it is $0$ in floating-point arithmetic.
+One factor gives two very different schedules.
+
+<!-- no-figure: the example tabulates two step lengths -->
+
+:::

@@ -1,0 +1,14 @@
+:::{#def-linear-decay}
+#### Linear decay
+
+Let $\schedlen$ be a number of updates, <!-- check-term-links: allow -->
+and let $\iterpoint{\steplen}{0}, \iterpoint{\steplen}{\schedlen} > 0$ be the [step lengths](#def-gradient-descent) before update $1$ and after update $\schedlen$.
+The **linear decay** schedule is
+
+$$
+\iterpoint{\steplen}{t} \eqdef \paren{1 - \schedfrac}\,\iterpoint{\steplen}{0} + \schedfrac\,\iterpoint{\steplen}{\schedlen},
+\qquad
+\schedfrac \eqdef \minf{\frac{t}{\schedlen}, 1}.
+$$
+
+:::

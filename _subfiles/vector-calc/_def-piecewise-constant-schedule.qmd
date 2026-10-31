@@ -1,0 +1,15 @@
+:::{#def-piecewise-constant-schedule}
+#### Piecewise constant schedule
+
+Let $\iterpoint{\steplen}{0} > 0$ be the [step length](#def-gradient-descent) before update $1$,
+let $\decay \in (0, 1)$ be a drop factor,
+and let $t_1 < t_2 < \cdots$ be update counts.
+The **piecewise constant schedule** is
+
+$$
+\iterpoint{\steplen}{t} \eqdef \iterpoint{\steplen}{0}\,\decay^{k(t)},
+\qquad
+k(t) \eqdef \card{\set{j : t_j \le t}}.
+$$
+
+:::
