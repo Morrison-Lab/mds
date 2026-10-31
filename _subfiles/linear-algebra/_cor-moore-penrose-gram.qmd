@@ -1,0 +1,31 @@
+:::{#cor-moore-penrose-gram}
+#### The Moore-Penrose inverse from the Gram matrix
+
+For every $m \times n$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$,
+
+$$
+\matr{A}^+ = (\tp{\matr{A}}\matr{A})^+\,\tp{\matr{A}}.
+$$
+
+:::
+
+::: proof
+
+$$
+\ba
+(\tp{\matr{A}}\matr{A})^+\,\tp{\matr{A}}
+&= \matr{A}^+\,\tp{(\matr{A}^+)}\,\tp{\matr{A}}
+&& \text{(@thm-moore-penrose-gram)}
+\\
+&= \matr{A}^+\,\tp{(\matr{A}\matr{A}^+)}
+&& \text{(@thm-transpose-product)}
+\\
+&= \matr{A}^+\matr{A}\matr{A}^+
+&& \text{(condition 3 of @def-moore-penrose)}
+\\
+&= \matr{A}^+.
+&& \text{(condition 2 of @def-moore-penrose)}
+\ea
+$$
+
+:::
