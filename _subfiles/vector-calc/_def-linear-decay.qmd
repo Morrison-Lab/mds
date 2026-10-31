@@ -1,0 +1,14 @@
+:::{#def-linear-decay}
+#### Linear decay
+
+Let $s^{(0)}, s^{(\schedlen)} > 0$ be a starting and a final [step length](#def-gradient-descent),
+and let $\schedlen$ be a number of updates.
+The **linear decay** schedule is
+
+$$
+s^{(t)} \eqdef \paren{1 - \schedfrac}\,s^{(0)} + \schedfrac\,s^{(\schedlen)},
+\qquad
+\schedfrac \eqdef \min\paren{\frac{t}{\schedlen}, 1}.
+$$
+
+:::

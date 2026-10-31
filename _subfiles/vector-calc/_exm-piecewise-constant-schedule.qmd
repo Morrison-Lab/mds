@@ -1,0 +1,41 @@
+:::{#exm-piecewise-constant-schedule}
+#### A ten-fold drop twice
+
+Take $s^{(0)} = 0.1$ and $\decay = 0.1$,
+with drops at $t_1 = 30$ and $t_2 = 60$.
+The [step length](#def-piecewise-constant-schedule) just before and at each drop is:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: piecewise-constant-schedule-r
+#| code-fold: false
+s0_pc <- 0.1
+decay_pc <- 0.1
+drops_pc <- c(30, 60)
+t_pc <- c(0, 29, 30, 59, 60, 90)
+k_pc <- colSums(outer(drops_pc, t_pc, "<="))
+data.frame(t = t_pc, step_length = s0_pc * decay_pc^k_pc)
+```
+
+### Python
+
+```{python}
+#| label: piecewise-constant-schedule-python
+#| code-fold: false
+s0_pc, decay_pc, drops_pc = 0.1, 0.1, [30, 60]
+for t_pc in [0, 29, 30, 59, 60, 90]:
+    k_pc = sum(d_pc <= t_pc for d_pc in drops_pc)
+    print(t_pc, round(s0_pc * decay_pc ** k_pc, 6));
+```
+
+:::
+
+The step length stays fixed between drops
+and falls by the factor $\decay$ exactly at $t = 30$ and $t = 60$.
+
+<!-- no-figure: the example tabulates six step lengths -->
+
+:::
