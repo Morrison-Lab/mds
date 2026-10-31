@@ -1,7 +1,9 @@
 :::{#exm-relative-change-stopping-criterion}
 #### Stopping a descent on $f(x) = x^2 + 1$
 
-Run [gradient descent](#def-gradient-descent) from $\iterpoint{x}{0} = 2$ with [step length](#def-gradient-descent) $\steplen = 0.25$, and stop at tolerance $\epsilon = 0.01$.
+Let $f(x) = x^2 + 1$.
+Run [gradient descent](#def-gradient-descent) on $f$ from $\iterpoint{x}{0} = 2$ with [step length](#def-gradient-descent) $\steplen = 0.25$,
+and stop at tolerance $\epsilon = 0.01$.
 Each step [maps](functions.qmd#def-function) $x$ to $x - 0.25 \cdot 2x = x/2$:
 
 ::: {.panel-tabset group="language"}
