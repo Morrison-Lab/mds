@@ -50,7 +50,8 @@ print(np.round(factor_am, 3));
 
 Plain [gradient descent](#def-gradient-descent) would move the first coordinate $`r s_am[1] / s_am[2]`$ times as far as the second.
 The factors are the same for both coordinates, so the scale of a coordinate no longer matters. <!-- check-term-links: allow -->
-They also shrink from `r round(factor_am[1, 1], 2)` to `r round(factor_am[n_am, 1], 2)`, because the running average still holds the earlier, larger values. <!-- check-term-links: allow -->
+They also shrink from `r round(factor_am[1, 1], 2)` to `r round(factor_am[n_am, 1], 2)`,
+because the running average still holds the earlier, larger values. <!-- check-term-links: allow -->
 Dividing by the current gradient alone would give a factor of $1$ at every update. <!-- check-term-links: allow -->
 
 <!-- no-figure: the example tabulates five updates -->

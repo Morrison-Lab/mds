@@ -2,9 +2,10 @@
 #### The first Adam step ignores the size of the gradient
 
 Let $f(x) = \tfrac{1}{2} x^2$, so $\deriv{x} f(x) = x$, and take $\steplen = 0.1$, $\beta_1 = 0.9$, $\beta_2 = 0.999$ and $\epsilon = 10^{-8}$.
-At $t = 1$ the [bias](https://morrison-lab.github.io/sds/estimation.html#def-bias) corrections cancel the factors $1 - \beta_1$ and $1 - \beta_2$,
+At $t = 1$ the corrections for the zero start of $\vm$ and $u_j$ cancel the factors $1 - \beta_1$ and $1 - \beta_2$,
 so $\est{m}^{(1)} = g^{(1)}$ and $\est{u}^{(1)} = \paren{g^{(1)}}^2$.
-The first step is then $\steplen\, g^{(1)} / (|g^{(1)}| + \epsilon)$, which is about $\steplen$ in size.
+The first step is then $\steplen\, g^{(1)} / (|g^{(1)}| + \epsilon)$,
+which is about $\steplen$ in size.
 Start at $x^{(0)} = 2$ and at $x^{(0)} = 2000$:
 
 ::: {.panel-tabset group="language"}
@@ -44,7 +45,8 @@ print(np.round(s_ad * m_hat_ad / (np.sqrt(u_hat_ad) + eps_ad), 4));
 
 :::
 
-Both first steps have size `r round(step_ad[1], 2)`, though the gradients differ by a factor of `r x0_ad[2] / x0_ad[1]`. <!-- check-term-links: allow -->
+Both first steps have size `r round(step_ad[1], 2)`,
+though the gradients differ by a factor of `r x0_ad[2] / x0_ad[1]`. <!-- check-term-links: allow -->
 Plain [gradient descent](#def-gradient-descent) would move $\steplen\,g^{(1)}$, which is $0.2$ and $200$.
 
 <!-- no-figure: the example compares two first steps -->

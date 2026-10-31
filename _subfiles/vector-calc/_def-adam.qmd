@@ -2,7 +2,8 @@
 #### Adam
 
 Let $f$, $\vx^{(0)}$, $\steplen$ and $\epsilon$ be as in an [adaptive method](#def-adaptive-method),
-and let $\beta_1, \beta_2 \in [0, 1)$.
+and let $\beta_1, \beta_2 \in [0, 1)$,
+where $\beta_2$ plays the role of the decay factor $\rho$.
 Write $\vg^{(t)}$ for $\deriv{\vx} f(\vx^{(t-1)})$.
 The **Adam** method [@kingma2015adam] is defined, for $t = 1, 2, \ldots$,
 
