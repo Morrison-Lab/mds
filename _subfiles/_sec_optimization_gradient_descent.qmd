@@ -28,6 +28,22 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-gradient-flow.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-gradient-flow.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-relative-change-stopping-criterion.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-relative-change-stopping-criterion.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-rosenbrock-function.qmd >}}
 
 {{< slidebreak >}}
