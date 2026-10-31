@@ -1,0 +1,14 @@
+:::{#def-cosine-decay}
+#### Cosine decay
+
+Let $\schedlen$ be a number of updates, <!-- check-term-links: allow -->
+and let $\iterpoint{\steplen}{0} > 0$ be the [step length](#def-gradient-descent) before update $1$.
+The **cosine decay** schedule [@loshchilov2017sgdr] is
+
+$$
+\iterpoint{\steplen}{t} \eqdef \frac{\iterpoint{\steplen}{0}}{2}\paren{1 + \cos\frac{\pi t}{\schedlen}},
+\qquad
+t = 0, 1, \ldots, \schedlen.
+$$
+
+:::

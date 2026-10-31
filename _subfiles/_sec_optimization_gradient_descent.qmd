@@ -213,3 +213,15 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_exm-exponential-decay.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-cosine-decay.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-cosine-decay.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_rem-cosine-restarts.qmd >}}
