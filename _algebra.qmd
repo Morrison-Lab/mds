@@ -6,6 +6,10 @@
 
 {{< include mds/_subfiles/_sec_algebra_exponentials.qmd >}}
 
+## Cosine and sine {#sec-cosine-sine}
+
 {{< include mds/_subfiles/_sec_algebra_trigonometry.qmd >}}
+
+## Complex numbers {#sec-complex-numbers}
 
 {{< include mds/_subfiles/_sec_algebra_complex.qmd >}}

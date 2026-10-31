@@ -12,4 +12,6 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
+[]{#sec-cosine-sine}
+
 {{< include mds/_subfiles/_sec_algebra_trigonometry.qmd >}}

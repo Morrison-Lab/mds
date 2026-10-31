@@ -1,5 +1,3 @@
-## Minimizing a quadratic under linear constraints {#sec-lagrange}
-
 {{< include mds/_subfiles/vector-calc/_prose-lagrange-attribution.qmd >}}
 
 {{< slidebreak >}}

@@ -1,5 +1,3 @@
-## Newton's method {#sec-newton-method}
-
 {{< include mds/_subfiles/vector-calc/_prose-descent-attribution.qmd >}}
 
 {{< slidebreak >}}

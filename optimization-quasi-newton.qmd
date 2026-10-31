@@ -18,4 +18,6 @@ py_packages <- c("numpy", "pandas", "matplotlib")
 reticulate::py_require(py_packages)
 ```
 
+[]{#sec-quasi-newton}
+
 {{< include mds/_subfiles/_sec_optimization_quasi_newton.qmd >}}

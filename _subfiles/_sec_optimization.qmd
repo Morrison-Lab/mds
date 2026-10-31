@@ -4,12 +4,22 @@
 
 {{< include mds/_subfiles/_sec_optimization_optimality.qmd >}}
 
+## Convexity in several variables {#sec-convexity-vector}
+
 {{< include mds/_subfiles/_sec_optimization_convexity.qmd >}}
+
+## Minimizing a quadratic under linear constraints {#sec-lagrange}
 
 {{< include mds/_subfiles/_sec_optimization_constrained.qmd >}}
 
+## Newton's method {#sec-newton-method}
+
 {{< include mds/_subfiles/_sec_optimization_newton.qmd >}}
 
+## Gradient descent {#sec-gradient-descent}
+
 {{< include mds/_subfiles/_sec_optimization_gradient_descent.qmd >}}
+
+## Quasi-Newton methods {#sec-quasi-newton}
 
 {{< include mds/_subfiles/_sec_optimization_quasi_newton.qmd >}}
