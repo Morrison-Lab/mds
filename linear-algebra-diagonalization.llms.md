@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 15:46:06 (PDT)
+Last modified: 2026-10-30 17:15:43 (PDT)
 
 ## 0.1 Similarity and diagonalization
 
@@ -126,7 +126,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 >
 > *Proof*. \\\mathbf{U} - \lambda\\\mathbf{I}\_p\\ is upper triangular, with diagonal entries \\u\_{ii} - \lambda\\ ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix), [Definition 5 in Matrices](linear-algebra-matrices.llms.md#def-matrix-addition)).
 >
-> **If \\\lambda\\ is not a diagonal entry,** every \\u\_{ii} - \lambda\ne 0\\, so \\(\mathbf{U} - \lambda\\\mathbf{I}\_p)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ has exactly one solution, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ ([Theorem 17 in Projections and Linear Systems](linear-algebra-projections.llms.md#thm-back-substitution)), and \\\lambda\\ is not an eigenvalue ([Theorem 2](#thm-eigenvalue-singular)).
+> **If \\\lambda\\ is not a diagonal entry,** every \\u\_{ii} - \lambda\ne 0\\, so \\(\mathbf{U} - \lambda\\\mathbf{I}\_p)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ has exactly one solution, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ ([Theorem 19 in Projections and Linear Systems](linear-algebra-projections.llms.md#thm-back-substitution)), and \\\lambda\\ is not an eigenvalue ([Theorem 2](#thm-eigenvalue-singular)).
 >
 > **If \\\lambda\\ is a diagonal entry,** let \\k\\ be the smallest index with \\u\_{kk} = \lambda\\, and write \\\mathbf{M} = \mathbf{U} - \lambda\\\mathbf{I}\_p\\, so \\m\_{kk} = 0\\ and \\m\_{ii} \ne 0\\ for \\i \< k\\. Look for \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ with \\v_k = 1\\ and \\v_j = 0\\ for \\j \> k\\. Entry \\i\\ of \\\mathbf{M} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ is
 >
@@ -136,13 +136,13 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 >
 > - for \\i \> k\\ entry \\i\\ is \\0\\;
 > - for \\i = k\\ it is \\m\_{kk}\\v_k = 0\\;
-> - for \\i \< k\\ it is \\0\\ exactly when \\v_i = -\frac{1}{m\_{ii}} \sum\_{j=i+1}^{k} m\_{ij}\\v_j\\, and these equations fix \\v\_{k-1}, \ldots, v_1\\ in turn, as in [Theorem 17 in Projections and Linear Systems](linear-algebra-projections.llms.md#thm-back-substitution).
+> - for \\i \< k\\ it is \\0\\ exactly when \\v_i = -\frac{1}{m\_{ii}} \sum\_{j=i+1}^{k} m\_{ij}\\v_j\\, and these equations fix \\v\_{k-1}, \ldots, v_1\\ in turn, as in [Theorem 19 in Projections and Linear Systems](linear-algebra-projections.llms.md#thm-back-substitution).
 >
 > So \\\mathbf{M} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ with \\v_k = 1\\, hence \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \ne \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, and \\\lambda\\ is an eigenvalue.
 
 > **NOTE:**
 >
-> **Example 6 (Eigenvalues read off the diagonal)** \\\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ of [Example 24 in Projections and Linear Systems](linear-algebra-projections.llms.md#exm-triangular-matrix) has eigenvalues \\2\\, \\\tfrac{1}{2}\\ and \\-1\\. For \\\lambda= \tfrac{1}{2}\\ (so \\k = 2\\), take \\v_2 = 1\\, \\v_3 = 0\\; row 1 of \\(\mathbf{U} - \tfrac{1}{2}\\\mathbf{I}\_3)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ is \\\tfrac{3}{2}\\v_1 + 1 = 0\\, so \\v_1 = -\tfrac{2}{3}\\. Check:
+> **Example 6 (Eigenvalues read off the diagonal)** \\\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ of [Example 26 in Projections and Linear Systems](linear-algebra-projections.llms.md#exm-triangular-matrix) has eigenvalues \\2\\, \\\tfrac{1}{2}\\ and \\-1\\. For \\\lambda= \tfrac{1}{2}\\ (so \\k = 2\\), take \\v_2 = 1\\, \\v_3 = 0\\; row 1 of \\(\mathbf{U} - \tfrac{1}{2}\\\mathbf{I}\_3)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ is \\\tfrac{3}{2}\\v_1 + 1 = 0\\, so \\v_1 = -\tfrac{2}{3}\\. Check:
 >
 > \\ \begin{aligned} \mathbf{U}\\(-\tfrac{2}{3}, 1, 0) &= (-\tfrac{4}{3} + 1, \tfrac{1}{2}, 0) \\ &= \tfrac{1}{2}\\(-\tfrac{2}{3}, 1, 0). \end{aligned} \\
 >
@@ -652,7 +652,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. **If.** \\{\mathbf{L}}^{\top}\\ is upper triangular with positive diagonal ([Definition 3 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)), so \\{\mathbf{L}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ only for \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ ([Theorem 17 in Projections and Linear Systems](linear-algebra-projections.llms.md#thm-back-substitution)), and the columns of \\{\mathbf{L}}^{\top}\\ are linearly independent ([Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns), [Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)). So \\\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\\{\mathbf{L}}^{\top}\\ ([Definition 3 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)) is positive definite ([Theorem 10](#thm-pd-gram), part 2).
+> *Proof*. **If.** \\{\mathbf{L}}^{\top}\\ is upper triangular with positive diagonal ([Definition 3 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)), so \\{\mathbf{L}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ only for \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ ([Theorem 19 in Projections and Linear Systems](linear-algebra-projections.llms.md#thm-back-substitution)), and the columns of \\{\mathbf{L}}^{\top}\\ are linearly independent ([Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns), [Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)). So \\\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\\{\mathbf{L}}^{\top}\\ ([Definition 3 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)) is positive definite ([Theorem 10](#thm-pd-gram), part 2).
 >
 > **Only if, with uniqueness, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\.** For \\p = 1\\, \\\mathbf{A} = \[a\]\\ with \\a \> 0\\ ([Theorem 14](#thm-pd-submatrix)), and \\\[c\]\\\[c\] = \[a\]\\ with \\c \> 0\\ holds exactly for \\c = \sqrt{a}\\. For \\p \> 1\\, assume every \\(p - 1) \times (p - 1)\\ positive definite matrix has exactly one such factor, and split off the first row and column. \\\mathbf{A}\\ is symmetric, so its first row is the transpose of its first column:
 >

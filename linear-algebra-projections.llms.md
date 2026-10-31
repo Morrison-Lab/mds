@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 15:46:06 (PDT)
+Last modified: 2026-10-30 17:15:43 (PDT)
 
 ## 0.1 Design Matrix
 
@@ -255,7 +255,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 17 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover. [Theorem 13](#thm-moore-penrose-full-rank) restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in [Theorem 14](#thm-consistency) restores the source’s rank test for consistency. These parts of the source are not part of this section:
+> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 17 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover. [Theorem 13](#thm-moore-penrose-full-rank) restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in [Theorem 16](#thm-consistency) restores the source’s rank test for consistency. These parts of the source are not part of this section:
 >
 > - the QR forms of the full-rank formulas
 > - \\\operatorname{rank}(\mathbf{A}^-) \ge \operatorname{rank}(\mathbf{A})\\, \\\mathcal{C}(\mathbf{A}) = \mathcal{C}(\mathbf{A}\mathbf{A}^-)\\, \\\operatorname{rank}(\mathbf{A}) = \operatorname{rank}(\mathbf{A}\mathbf{A}^-) = \operatorname{rank}(\mathbf{A}^-\mathbf{A})\\, and \\\operatorname{rank}(\mathbf{A}^+) = \operatorname{rank}(\mathbf{A})\\
@@ -524,18 +524,94 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
+> **Theorem 14 (The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition)** Let \\\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ be an eigendecomposition ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigendecomposition)) of a [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) \\\mathbf{S}\\, with [diagonal entries](linear-algebra-matrices.llms.md#def-diagonal-entry) \\\lambda_1, \ldots, \lambda_p\\ in the [diagonal matrix](linear-algebra-special-matrices.llms.md#def-diagonal-matrix) \\\mathbf{\Lambda}\\. Let \\\mathbf{\Lambda}^+\\ be the diagonal matrix with \\j\\th [diagonal entry](linear-algebra-matrices.llms.md#def-diagonal-entry) \\1/\lambda_j\\ if \\\lambda_j \ne 0\\ and \\0\\ if \\\lambda_j = 0\\. Then
+>
+> \\ \mathbf{S}^+ = \mathbf{Q}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top}. \\
+
+> **NOTE:**
+>
+> *Proof*. Let \\\mathbf{G} = \mathbf{Q}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top}\\. By [Theorem 11](#thm-moore-penrose-unique), it is enough to show that \\\mathbf{G}\\ satisfies the four conditions of [Definition 5](#def-moore-penrose) for \\\mathbf{S}\\.
+>
+> **Two facts about the diagonal matrices.** The \\j\\th [diagonal entry](linear-algebra-matrices.llms.md#def-diagonal-entry) of \\\mathbf{\Lambda}\mathbf{\Lambda}^+\mathbf{\Lambda}\\ is \\\lambda_j \cdot (1/\lambda_j) \cdot \lambda_j = \lambda_j\\ if \\\lambda_j \ne 0\\, and \\0 = \lambda_j\\ if \\\lambda_j = 0\\. So \\\mathbf{\Lambda}\mathbf{\Lambda}^+\mathbf{\Lambda} = \mathbf{\Lambda}\\. In the same way, \\\mathbf{\Lambda}^+\mathbf{\Lambda}\mathbf{\Lambda}^+ = \mathbf{\Lambda}^+\\. Both \\\mathbf{\Lambda}\mathbf{\Lambda}^+\\ and \\\mathbf{\Lambda}^+\mathbf{\Lambda}\\ are diagonal, so each is [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix).
+>
+> **Conditions 1 and 2.**
+>
+> \\ \begin{aligned} \mathbf{S}\mathbf{G}\mathbf{S} &= \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\\mathbf{Q}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top}\\\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top} && \text{(definitions of } \mathbf{S} \text{ and } \mathbf{G} \text{)} \\ &= \mathbf{Q}\mathbf{\Lambda}\mathbf{\Lambda}^+\mathbf{\Lambda}{\mathbf{Q}}^{\top} && ({\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}, \text{ twice}) \\ &= \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top} && (\mathbf{\Lambda}\mathbf{\Lambda}^+\mathbf{\Lambda} = \mathbf{\Lambda}) \\ &= \mathbf{S}, && \text{(definition of } \mathbf{S} \text{)} \end{aligned} \\
+>
+> and likewise
+>
+> \\ \begin{aligned} \mathbf{G}\mathbf{S}\mathbf{G} &= \mathbf{Q}\mathbf{\Lambda}^+\mathbf{\Lambda}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top} && ({\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}, \text{ twice}) \\ &= \mathbf{Q}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top} && (\mathbf{\Lambda}^+\mathbf{\Lambda}\mathbf{\Lambda}^+ = \mathbf{\Lambda}^+) \\ &= \mathbf{G}. && \text{(definition of } \mathbf{G} \text{)} \end{aligned} \\
+>
+> **Conditions 3 and 4.**
+>
+> \\ \begin{aligned} \mathbf{S}\mathbf{G} &= \mathbf{Q}\mathbf{\Lambda}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top} && ({\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}) \\ &= {\mathopen{}\left(\mathbf{Q}\mathbf{\Lambda}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top}\right)\mathclose{}}^{\top} && (\mathbf{\Lambda}\mathbf{\Lambda}^+ \text{ is diagonal, so equals its transpose}) \\ &= {(\mathbf{S}\mathbf{G})}^{\top}, && \text{(just shown, in the other order)} \end{aligned} \\
+>
+> and the same steps with \\\mathbf{\Lambda}^+\mathbf{\Lambda}\\ in place of \\\mathbf{\Lambda}\mathbf{\Lambda}^+\\ give \\\mathbf{G}\mathbf{S} = {(\mathbf{G}\mathbf{S})}^{\top}\\.
+
+> **NOTE:**
+>
+> **Example 19 (The Moore-Penrose inverse of a rank-one symmetric matrix)** For the [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) \\\mathbf{S} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, an [eigendecomposition](linear-algebra-special-matrices.llms.md#def-eigendecomposition) is
+>
+> \\ \mathbf{S} = \underbrace{\frac{1}{\sqrt{2}}\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}}\_{\mathbf{Q}} \underbrace{\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}}\_{\mathbf{\Lambda}} {\mathbf{Q}}^{\top}. \\
+>
+> Inverting only the nonzero [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue) gives \\\mathbf{\Lambda}^+ = \begin{bmatrix} 1/2 & 0 \\ 0 & 0 \end{bmatrix}\\, so
+>
+> \\ \begin{aligned} \mathbf{S}^+ &= \mathbf{Q}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top} && \text{(}\href{#thm-moore-penrose-eigendecomposition}{\text{Theorem~14}}\text{)} \\ &= \frac{1}{2}\cdot\frac{1}{2}\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} && \text{(only the first column of } \mathbf{Q} \text{ contributes)} \\ &= \frac{1}{4}\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}. \end{aligned} \\
+>
+> Condition 1 of [Definition 5](#def-moore-penrose) holds: \\\mathbf{S}\mathbf{S}^+ = \frac{1}{2}\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, and multiplying by \\\mathbf{S}\\ again gives \\\mathbf{S}\\. An [inverse](linear-algebra-special-matrices.llms.md#def-matrix-inverse) of \\\mathbf{S}\\ itself does not exist, because \\\mathbf{S}\\ has a zero eigenvalue.
+
+> **NOTE:**
+>
+> **Theorem 15 (The Moore-Penrose inverse of a Gram matrix)** For every \\m \times n\\ [matrix](linear-algebra-matrices.llms.md#def-matrix) \\\mathbf{A}\\,
+>
+> \\ ({\mathbf{A}}^{\top}\mathbf{A})^+ = \mathbf{A}^+\\{(\mathbf{A}^+)}^{\top}. \\
+
+> **NOTE:**
+>
+> *Proof*. Let \\\mathbf{M} = {\mathbf{A}}^{\top}\mathbf{A}\\ and \\\mathbf{G} = \mathbf{A}^+\\{(\mathbf{A}^+)}^{\top}\\. By [Theorem 11](#thm-moore-penrose-unique), it is enough to show that \\\mathbf{G}\\ satisfies the four conditions of [Definition 5](#def-moore-penrose) for \\\mathbf{M}\\.
+>
+> **Two identities.** Conditions 3 and 4 for \\\mathbf{A}^+\\ say that \\\mathbf{A}\mathbf{A}^+\\ and \\\mathbf{A}^+\mathbf{A}\\ are [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Using condition 1 for \\\mathbf{A}^+\\,
+>
+> \\ \begin{aligned} {\mathbf{A}}^{\top}\\\mathbf{A}\mathbf{A}^+ &= {\mathbf{A}}^{\top}\\{(\mathbf{A}\mathbf{A}^+)}^{\top} && \text{(condition 3 for } \mathbf{A}^+ \text{)} \\ &= {(\mathbf{A}\mathbf{A}^+\mathbf{A})}^{\top} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= {\mathbf{A}}^{\top}. && \text{(condition 1 for } \mathbf{A}^+ \text{)} \end{aligned} \\
+>
+> So
+>
+> \\ \begin{aligned} \mathbf{M}\mathbf{G} &= {\mathbf{A}}^{\top}\\\mathbf{A}\mathbf{A}^+\\{(\mathbf{A}^+)}^{\top} && \text{(definitions of } \mathbf{M} \text{ and } \mathbf{G} \text{)} \\ &= {\mathbf{A}}^{\top}\\{(\mathbf{A}^+)}^{\top} && ({\mathbf{A}}^{\top}\\\mathbf{A}\mathbf{A}^+ = {\mathbf{A}}^{\top}) \\ &= {(\mathbf{A}^+\mathbf{A})}^{\top}, && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \end{aligned} \\
+>
+> which is \\\mathbf{A}^+\mathbf{A}\\ by condition 4 for \\\mathbf{A}^+\\. Hence \\\mathbf{M}\mathbf{G} = \mathbf{A}^+\mathbf{A}\\, and it is symmetric, which is condition 3 for \\\mathbf{G}\\.
+>
+> For the other order,
+>
+> \\ \begin{aligned} \mathbf{G}\mathbf{M} &= \mathbf{A}^+\\{(\mathbf{A}^+)}^{\top}\\{\mathbf{A}}^{\top}\\\mathbf{A} && \text{(definitions of } \mathbf{G} \text{ and } \mathbf{M} \text{)} \\ &= \mathbf{A}^+\\{(\mathbf{A}\mathbf{A}^+)}^{\top}\\\mathbf{A} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= \mathbf{A}^+\mathbf{A}\mathbf{A}^+\mathbf{A} && \text{(condition 3 for } \mathbf{A}^+ \text{)} \\ &= \mathbf{A}^+\mathbf{A}, && \text{(condition 1 for } \mathbf{A}^+ \text{)} \end{aligned} \\
+>
+> so \\\mathbf{G}\mathbf{M} = \mathbf{A}^+\mathbf{A}\\ is symmetric, which is condition 4 for \\\mathbf{G}\\.
+>
+> **Conditions 1 and 2.**
+>
+> \\ \begin{aligned} \mathbf{M}\mathbf{G}\mathbf{M} &= \mathbf{A}^+\mathbf{A}\\{\mathbf{A}}^{\top}\mathbf{A} && (\mathbf{M}\mathbf{G} = \mathbf{A}^+\mathbf{A}) \\ &= {(\mathbf{A}^+\mathbf{A})}^{\top}\\{\mathbf{A}}^{\top}\mathbf{A} && \text{(condition 4 for } \mathbf{A}^+ \text{)} \\ &= {(\mathbf{A}\mathbf{A}^+\mathbf{A})}^{\top}\\\mathbf{A} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= {\mathbf{A}}^{\top}\mathbf{A} && \text{(condition 1 for } \mathbf{A}^+ \text{)} \\ &= \mathbf{M}, && \text{(definition of } \mathbf{M} \text{)} \\ \mathbf{G}\mathbf{M}\mathbf{G} &= \mathbf{A}^+\mathbf{A}\\\mathbf{A}^+\\{(\mathbf{A}^+)}^{\top} && (\mathbf{G}\mathbf{M} = \mathbf{A}^+\mathbf{A}) \\ &= \mathbf{A}^+\\{(\mathbf{A}^+)}^{\top} && \text{(condition 2 for } \mathbf{A}^+ \text{)} \\ &= \mathbf{G}. && \text{(definition of } \mathbf{G} \text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 20 (The Moore-Penrose inverse of the Gram matrix of a column of ones)** For \\\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\, the [Gram matrix](linear-algebra-rank-nullity.llms.md#def-gram-matrix) is \\{\mathbf{A}}^{\top}\mathbf{A} = \begin{bmatrix} 2 \end{bmatrix}\\, so \\({\mathbf{A}}^{\top}\mathbf{A})^+ = \begin{bmatrix} 1/2 \end{bmatrix}\\. By [Theorem 13](#thm-moore-penrose-full-rank), \\\mathbf{A}^+ = {\mathopen{}\left(({\mathbf{A}}^{\top}\mathbf{A})\right)\mathclose{}}^{-1}\\{\mathbf{A}}^{\top} = \begin{bmatrix} 1/2 & 1/2 \end{bmatrix}\\. Then
+>
+> \\ \begin{aligned} \mathbf{A}^+\\{(\mathbf{A}^+)}^{\top} &= \begin{bmatrix} 1/2 & 1/2 \end{bmatrix}\begin{bmatrix} 1/2 \\ 1/2 \end{bmatrix} \\ &= \frac{1}{4} + \frac{1}{4} \\ &= \frac{1}{2}, \end{aligned} \\
+>
+> which is \\({\mathbf{A}}^{\top}\mathbf{A})^+\\, as [Theorem 15](#thm-moore-penrose-gram) states.
+
+> **NOTE:**
+>
 > **Definition 6 (Consistent linear system)** A linear system ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, with \\\mathbf{A}\\ an \\m \times n\\ matrix and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\, is **consistent** [\[9\]](#ref-wikipedia_consistent_and_inconsistent_equations) if it has at least one solution \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^n\\, and **inconsistent** otherwise.
 
 > **NOTE:**
 >
-> **Example 19 (A consistent system and an inconsistent one)** With \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{A}\\(x_1, x_2) = (x_1, 0)\\ ([Definition 13 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)).
+> **Example 21 (A consistent system and an inconsistent one)** With \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{A}\\(x_1, x_2) = (x_1, 0)\\ ([Definition 13 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)).
 >
 > - \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (2, 0)\\ is consistent: \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (2, 0)\\ is a solution.
 > - \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (2, 1)\\ is inconsistent: the second entry of \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is always \\0\\, never \\1\\.
 
 > **NOTE:**
 >
-> **Theorem 14 (When a linear system has a solution)** Let \\\mathbf{A}\\ be \\m \times n\\, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\, and let \\\mathbf{G}\\ be any generalized inverse of \\\mathbf{A}\\ ([Definition 4](#def-generalized-inverse)). The following statements are equivalent:
+> **Theorem 16 (When a linear system has a solution)** Let \\\mathbf{A}\\ be \\m \times n\\, let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\, and let \\\mathbf{G}\\ be any generalized inverse of \\\mathbf{A}\\ ([Definition 4](#def-generalized-inverse)). The following statements are equivalent:
 >
 > 1.  \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ is consistent ([Definition 6](#def-consistent-system));
 > 2.  \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathcal{C}(\mathbf{A})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space));
@@ -557,7 +633,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 20 (Testing consistency with a generalized inverse)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and the generalized inverse \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\, \\\mathbf{A} \mathbf{G} = \begin{bmatrix} 1 & 5 \\ 0 & 0 \end{bmatrix}\\.
+> **Example 22 (Testing consistency with a generalized inverse)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and the generalized inverse \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\, \\\mathbf{A} \mathbf{G} = \begin{bmatrix} 1 & 5 \\ 0 & 0 \end{bmatrix}\\.
 >
 > - \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 0)\\:
 >
@@ -571,7 +647,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 15 (All solutions of a linear system)** Let \\\mathbf{A}\\ be \\m \times n\\ with a generalized inverse \\\mathbf{G}\\ ([Definition 4](#def-generalized-inverse)).
+> **Theorem 17 (All solutions of a linear system)** Let \\\mathbf{A}\\ be \\m \times n\\ with a generalized inverse \\\mathbf{G}\\ ([Definition 4](#def-generalized-inverse)).
 >
 > 1.  \\\mathcal{N}(\mathbf{A}) = \mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\: \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ solves \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_m\\ exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\\ for some \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}} \in \mathbb{R}^n\\.
 > 2.  If \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ is consistent ([Definition 6](#def-consistent-system)), then \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is a solution exactly when \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} + (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}} \quad \text{for some } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}} \in \mathbb{R}^n: \\ one particular solution plus a vector of \\\mathcal{N}(\mathbf{A})\\.
@@ -590,13 +666,13 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 >
 > **Part 2.** \\\mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ is a solution ([Theorem 9](#thm-generalized-inverse-solves)). For any \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\,
 >
-> \\ \begin{aligned} \mathbf{A}\\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) &= \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{A}\\(\mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{A} \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}, && \text{(}\href{#thm-consistency}{\text{Theorem~14}}\text{, statement 3)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{A}\\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) &= \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{A}\\(\mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{A} \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}, && \text{(}\href{#thm-consistency}{\text{Theorem~16}}\text{, statement 3)} \end{aligned} \\
 >
 > so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ solves \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathcal{N}(\mathbf{A})\\, that is, by part 1, exactly when \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\\ for some \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\\.
 
 > **NOTE:**
 >
-> **Example 21 (All solutions of a consistent system)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 0)\\: \\\mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 14)\\, \\\mathbf{G} \mathbf{A} = \begin{bmatrix} 1 & 0 \\ 7 & 0 \end{bmatrix}\\, and \\\mathbf{I}\_2 - \mathbf{G} \mathbf{A} = \begin{bmatrix} 0 & 0 \\ -7 & 1 \end{bmatrix}\\, so
+> **Example 23 (All solutions of a consistent system)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 0)\\: \\\mathbf{G} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 14)\\, \\\mathbf{G} \mathbf{A} = \begin{bmatrix} 1 & 0 \\ 7 & 0 \end{bmatrix}\\, and \\\mathbf{I}\_2 - \mathbf{G} \mathbf{A} = \begin{bmatrix} 0 & 0 \\ -7 & 1 \end{bmatrix}\\, so
 >
 > \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (2, 14) + (0, -7 q_1 + q_2), \qquad q_1, q_2 \in \mathbb{R}. \\
 >
@@ -615,13 +691,13 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** By [Theorem 14](#thm-consistency), the system is consistent for every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ exactly when \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\. \\\mathcal{C}(\mathbf{A})\\ is a subspace of \\\mathbb{R}^m\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with dimension \\\operatorname{rank}(\mathbf{A})\\ ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), and \\\dim(\mathbb{R}^m) = m\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). If the dimension is \\m\\, then \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)); if \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\, the dimension is \\m\\.
+> *Proof*. **Part 1.** By [Theorem 16](#thm-consistency), the system is consistent for every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ exactly when \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\. \\\mathcal{C}(\mathbf{A})\\ is a subspace of \\\mathbb{R}^m\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with dimension \\\operatorname{rank}(\mathbf{A})\\ ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), and \\\dim(\mathbb{R}^m) = m\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). If the dimension is \\m\\, then \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)); if \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\, the dimension is \\m\\.
 >
-> **Part 2.** By [Theorem 15](#thm-solution-set), the solutions are a particular solution plus the vectors of \\\mathcal{N}(\mathbf{A})\\, so there is exactly one solution exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_n\right\\\mathclose{}\\, that is, when \\\operatorname{nullity}(\mathbf{A}) = 0\\ (a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\, by [Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension) and [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span); and \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\ has dimension \\0\\, by [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). By [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), that is when \\\operatorname{rank}(\mathbf{A}) = n\\.
+> **Part 2.** By [Theorem 17](#thm-solution-set), the solutions are a particular solution plus the vectors of \\\mathcal{N}(\mathbf{A})\\, so there is exactly one solution exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\_n\right\\\mathclose{}\\, that is, when \\\operatorname{nullity}(\mathbf{A}) = 0\\ (a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\, by [Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension) and [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span); and \\\mathopen{}\left\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\right\\\mathclose{}\\ has dimension \\0\\, by [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). By [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), that is when \\\operatorname{rank}(\mathbf{A}) = n\\.
 
 > **NOTE:**
 >
-> **Example 22 (Three systems)**  
+> **Example 24 (Three systems)**  
 >
 > - The \\2 \times 3\\ matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ of [Example 16 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-rank-bound) has rank \\2 = m\\, so every system with it is consistent, but \\2 \< 3 = n\\, so the solutions are never unique.
 >
@@ -635,7 +711,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 16 (The projection onto a column space, with any generalized inverse)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix of any rank, and let \\\mathbf{G}\\ be any generalized inverse of \\{\mathbf{X}}^{\top} \mathbf{X}\\ ([Definition 4](#def-generalized-inverse)). Then for every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^n\\, \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ is the orthogonal projection of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ onto \\\mathcal{C}(\mathbf{X})\\ ([Definition 3](#def-orthogonal-projection)). So the matrix \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ is the same for every choice of \\\mathbf{G}\\, and when \\\operatorname{rank}(\mathbf{X}) = p\\ it is the hat matrix \\\mathbf{H}\\ ([Definition 2](#def-hat-matrix)).
+> **Theorem 18 (The projection onto a column space, with any generalized inverse)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix of any rank, and let \\\mathbf{G}\\ be any generalized inverse of \\{\mathbf{X}}^{\top} \mathbf{X}\\ ([Definition 4](#def-generalized-inverse)). Then for every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in \mathbb{R}^n\\, \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ is the orthogonal projection of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ onto \\\mathcal{C}(\mathbf{X})\\ ([Definition 3](#def-orthogonal-projection)). So the matrix \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ is the same for every choice of \\\mathbf{G}\\, and when \\\operatorname{rank}(\mathbf{X}) = p\\ it is the hat matrix \\\mathbf{H}\\ ([Definition 2](#def-hat-matrix)).
 
 > **NOTE:**
 >
@@ -655,7 +731,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 23 (A design matrix with a repeated column)** Let \\\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, an intercept column entered twice, so \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ and \\{\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\ is not invertible: its rank is \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ ([Theorem 10 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-transpose)), while an invertible \\2 \times 2\\ matrix has rank \\2\\ ([Example 22](#exm-solution-unique)). The matrix \\\mathbf{G} = \begin{bmatrix} \frac{1}{2} & 0 \\ 0 & 0 \end{bmatrix}\\ is a generalized inverse of it:
+> **Example 25 (A design matrix with a repeated column)** Let \\\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, an intercept column entered twice, so \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ and \\{\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\ is not invertible: its rank is \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ ([Theorem 10 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-transpose)), while an invertible \\2 \times 2\\ matrix has rank \\2\\ ([Example 24](#exm-solution-unique)). The matrix \\\mathbf{G} = \begin{bmatrix} \frac{1}{2} & 0 \\ 0 & 0 \end{bmatrix}\\ is a generalized inverse of it:
 >
 > \\ \begin{aligned} ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X}) &= \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{, for the first product)} \\ &= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}. && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \end{aligned} \\
 >
@@ -663,7 +739,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 >
 > \\ \begin{aligned} \mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} &= \begin{bmatrix} \frac{1}{2} & 0 \\ \frac{1}{2} & 0 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{, for } \mathbf{X}\mathbf{G} \text{)} \\ &= \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}, && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \end{aligned} \\
 >
-> the hat matrix of the intercept-only model ([Example 2](#exm-hat-matrix)). Another generalized inverse, \\\mathbf{G}' = \begin{bmatrix} 0 & 0 \\ 0 & \frac{1}{2} \end{bmatrix}\\, which is one because \\({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}' = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}\\ and that times \\{\mathbf{X}}^{\top} \mathbf{X}\\ is again \\\begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\, gives \\\mathbf{X}\mathbf{G}' = \begin{bmatrix} 0 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{bmatrix}\\ and the same \\\mathbf{X}\mathbf{G}' {\mathbf{X}}^{\top} = \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}\\, as [Theorem 16](#thm-projector-generalized-inverse) says it must. Both project onto \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, the column space of the intercept-only design.
+> the hat matrix of the intercept-only model ([Example 2](#exm-hat-matrix)). Another generalized inverse, \\\mathbf{G}' = \begin{bmatrix} 0 & 0 \\ 0 & \frac{1}{2} \end{bmatrix}\\, which is one because \\({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}' = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}\\ and that times \\{\mathbf{X}}^{\top} \mathbf{X}\\ is again \\\begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\, gives \\\mathbf{X}\mathbf{G}' = \begin{bmatrix} 0 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{bmatrix}\\ and the same \\\mathbf{X}\mathbf{G}' {\mathbf{X}}^{\top} = \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}\\, as [Theorem 18](#thm-projector-generalized-inverse) says it must. Both project onto \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, the column space of the intercept-only design.
 
 ### 0.1.3 Solving linear systems and least squares
 
@@ -673,7 +749,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 >
 > - the operation counts for the triangular solves, LU and QR
 > - solving a system by inverting a matrix through its QR factorization, and the comparison of that with solving it directly
-> - the pivoted factorization \\\mathbf{P}\mathbf{A} = \mathbf{L}\mathbf{U}\\, which [Example 32](#exm-not-lu) only touches
+> - the pivoted factorization \\\mathbf{P}\mathbf{A} = \mathbf{L}\mathbf{U}\\, which [Example 35](#exm-not-lu) only touches
 
 > **NOTE:**
 >
@@ -689,7 +765,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 24 (Triangular and not)**  
+> **Example 26 (Triangular and not)**  
 >
 > - \\\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ is upper triangular: its entries below the diagonal, in positions \\(2, 1)\\, \\(3, 1)\\ and \\(3, 2)\\, are \\0\\.
 > - \\\begin{bmatrix} 1 & 0 \\ 4 & 1 \end{bmatrix}\\ is unit lower triangular.
@@ -698,7 +774,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 17 (Solving a triangular system by substitution)** Let \\\mathbf{U}\\ be an \\n \times n\\ upper triangular matrix ([Definition 7](#def-triangular-matrix)) whose diagonal entries \\u\_{11}, \ldots, u\_{nn}\\ are all nonzero. For every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^n\\, the system \\\mathbf{U} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ has exactly one solution, given for \\i = n, n - 1, \ldots, 1\\ in turn by
+> **Theorem 19 (Solving a triangular system by substitution)** Let \\\mathbf{U}\\ be an \\n \times n\\ upper triangular matrix ([Definition 7](#def-triangular-matrix)) whose diagonal entries \\u\_{11}, \ldots, u\_{nn}\\ are all nonzero. For every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^n\\, the system \\\mathbf{U} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ has exactly one solution, given for \\i = n, n - 1, \ldots, 1\\ in turn by
 >
 > \\ x_i = \frac{1}{u\_{ii}} \mathopen{}\left(b_i - \sum\_{j=i+1}^{n} u\_{ij}\\x_j\right)\mathclose{} \\
 >
@@ -718,7 +794,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 25 (Back substitution on a \\3 \times 3\\ system)** Solve \\\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \begin{bmatrix} 8 \\ 1 \\ 1 \end{bmatrix}\\:
+> **Example 27 (Back substitution on a \\3 \times 3\\ system)** Solve \\\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \begin{bmatrix} 8 \\ 1 \\ 1 \end{bmatrix}\\:
 >
 > 1.  \\ \begin{aligned} x_3 &= \frac{1}{-1} \cdot 1 \\ &= -1; \end{aligned} \\
 >
@@ -730,7 +806,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 18 (QR factorization)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = n\\. Then
+> **Theorem 20 (QR factorization)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = n\\. Then
 >
 > \\ \underbrace{\mathbf{A}}\_{m \times n} = \underbrace{\mathbf{Q}}\_{m \times n}\\\underbrace{\mathbf{R}}\_{n \times n}, \\
 >
@@ -750,7 +826,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 26 (A QR factorization from Gram-Schmidt)** For \\\mathbf{A}\\ with columns \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 = (1, 1, 0)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_2 = (1, 0, 1)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_3 = (0, 1, 1)\\, [Example 23 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-gram-schmidt) and [Example 25 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-thm-gram-schmidt) found \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2 = \tfrac{1}{\sqrt{6}}\\(1, -1, 2)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\, with \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_1\right\rVert\mathclose{} = \sqrt{2}\\, \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_2\right\rVert\mathclose{} = \sqrt{3/2}\\, \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_3\right\rVert\mathclose{} = 2/\sqrt{3}\\,
+> **Example 28 (A QR factorization from Gram-Schmidt)** For \\\mathbf{A}\\ with columns \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_1 = (1, 1, 0)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_2 = (1, 0, 1)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_3 = (0, 1, 1)\\, [Example 23 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-gram-schmidt) and [Example 25 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-thm-gram-schmidt) found \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_2 = \tfrac{1}{\sqrt{6}}\\(1, -1, 2)\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\, with \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_1\right\rVert\mathclose{} = \sqrt{2}\\, \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_2\right\rVert\mathclose{} = \sqrt{3/2}\\, \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}'\_3\right\rVert\mathclose{} = 2/\sqrt{3}\\,
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_2 &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{a}}\vphantom{a}}\_3 \\ &= \tfrac{1}{\sqrt{2}} \end{aligned} \\
 >
@@ -770,7 +846,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 27 (Fitting a constant)** Let \\\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (1, 3)\\. The system \\x\\(1, 1) = (1, 3)\\ is inconsistent ([Definition 6](#def-consistent-system)): its first entry needs \\x = 1\\ and its second needs \\x = 3\\. For any number \\x\\,
+> **Example 29 (Fitting a constant)** Let \\\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (1, 3)\\. The system \\x\\(1, 1) = (1, 3)\\ is inconsistent ([Definition 6](#def-consistent-system)): its first entry needs \\x = 1\\ and its second needs \\x = 3\\. For any number \\x\\,
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{A} x\right\rVert\mathclose{}^2 &= (1 - x)^2 + (3 - x)^2 \\ &= 2\\(x - 2)^2 + 2, \end{aligned} \\
 >
@@ -782,7 +858,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 19 (Least squares solutions solve the normal equations)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\.
+> **Theorem 21 (Least squares solutions solve the normal equations)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\.
 >
 > 1.  \\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}\\ is a least squares solution ([Definition 10](#def-least-squares)) exactly when it solves the normal equations \\{\mathbf{A}}^{\top} \mathbf{A} \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} = {\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\.
 > 2.  The normal equations are consistent ([Definition 6](#def-consistent-system)).
@@ -811,7 +887,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 28 (A least squares line)** Fit \\y = x_1 + x_2\\t\\ to the points \\(t, y) = (1, 1), (2, 2), (3, 2)\\: \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ (the \\\mathbf{X}\\ of [Example 1](#exm-gram-invertible)) and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (1, 2, 2)\\. \\\mathbf{A}\\ has rank \\2\\ ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)), so the solution is unique (part 4). \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}\\ has inverse \\\frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix}\\ ([Example 1](#exm-gram-invertible)), and
+> **Example 30 (A least squares line)** Fit \\y = x_1 + x_2\\t\\ to the points \\(t, y) = (1, 1), (2, 2), (3, 2)\\: \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ (the \\\mathbf{X}\\ of [Example 1](#exm-gram-invertible)) and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (1, 2, 2)\\. \\\mathbf{A}\\ has rank \\2\\ ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)), so the solution is unique (part 4). \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}\\ has inverse \\\frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix}\\ ([Example 1](#exm-gram-invertible)), and
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} &= (1 + 2 + 2,\\ 1 + 4 + 6) \\ &= (5, 11), \end{aligned} \\
 >
@@ -823,7 +899,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 29 (Many least squares solutions, one fitted vector)** With the rank-\\1\\ matrix \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}\\ ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)) and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (1, 2, 2)\\, \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix}\\ and \\{\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (5, 10)\\, so both normal equations say \\3 x_1 + 6 x_2 = 5\\, that is, \\x_1 + 2 x_2 = \tfrac{5}{3}\\. There are infinitely many least squares solutions, such as \\(\tfrac{5}{3}, 0)\\ and \\(0, \tfrac{5}{6})\\, as part 4 predicts for \\\operatorname{rank}(\mathbf{A}) = 1 \< 2\\; but every one gives the same fitted vector
+> **Example 31 (Many least squares solutions, one fitted vector)** With the rank-\\1\\ matrix \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}\\ ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)) and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (1, 2, 2)\\, \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix}\\ and \\{\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (5, 10)\\, so both normal equations say \\3 x_1 + 6 x_2 = 5\\, that is, \\x_1 + 2 x_2 = \tfrac{5}{3}\\. There are infinitely many least squares solutions, such as \\(\tfrac{5}{3}, 0)\\ and \\(0, \tfrac{5}{6})\\, as part 4 predicts for \\\operatorname{rank}(\mathbf{A}) = 1 \< 2\\; but every one gives the same fitted vector
 >
 > \\ \begin{aligned} \mathbf{A} \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} &= (x_1 + 2 x_2)\\(1, 1, 1) \\ &= \tfrac{5}{3}\\(1, 1, 1), \end{aligned} \\
 >
@@ -831,19 +907,19 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 20 (Solving least squares by QR)** Let \\\mathbf{A}\\ be \\m \times n\\ with \\\operatorname{rank}(\mathbf{A}) = n\\, with QR factorization \\\mathbf{A} = \mathbf{Q} \mathbf{R}\\ ([Theorem 18](#thm-qr)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\. The least squares solution ([Definition 10](#def-least-squares)) is the unique solution of
+> **Theorem 22 (Solving least squares by QR)** Let \\\mathbf{A}\\ be \\m \times n\\ with \\\operatorname{rank}(\mathbf{A}) = n\\, with QR factorization \\\mathbf{A} = \mathbf{Q} \mathbf{R}\\ ([Theorem 20](#thm-qr)), and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\. The least squares solution ([Definition 10](#def-least-squares)) is the unique solution of
 >
 > \\ \underbrace{\mathbf{R}}\_{n \times n}\\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} = \underbrace{{\mathbf{Q}}^{\top}}\_{n \times m}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}, \\
 >
-> which back substitution computes ([Theorem 17](#thm-back-substitution)). When \\m = n\\, it is the unique solution of \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\.
+> which back substitution computes ([Theorem 19](#thm-back-substitution)). When \\m = n\\, it is the unique solution of \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\.
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{R}\\ is upper triangular with positive diagonal, so \\\mathbf{R} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = {\mathbf{Q}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ has exactly one solution \\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}\\ ([Theorem 17](#thm-back-substitution)). \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n\\, as in the proof of [Theorem 4](#thm-projector-onb). Then
+> *Proof*. \\\mathbf{R}\\ is upper triangular with positive diagonal, so \\\mathbf{R} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = {\mathbf{Q}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ has exactly one solution \\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}\\ ([Theorem 19](#thm-back-substitution)). \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n\\, as in the proof of [Theorem 4](#thm-projector-onb). Then
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} &= {(\mathbf{Q} \mathbf{R})}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} && \text{(substitute } \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \\ &= {\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \mathbf{Q})\\(\mathbf{R} \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {\mathbf{R}}^{\top}\\\mathbf{I}\_n\\(\mathbf{R} \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}) && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n \text{)} \\ &= {\mathbf{R}}^{\top}\\(\mathbf{R} \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}) && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~8 in Matrices}}\text{)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}) && \text{(} \mathbf{R} \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} = {\mathbf{Q}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \text{)} \\ &= ({\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top})\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= {(\mathbf{Q} \mathbf{R})}^{\top}\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= {\mathbf{A}}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}, && \text{(} \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \end{aligned} \\
 >
-> so \\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}\\ solves the normal equations and is the least squares solution ([Theorem 19](#thm-normal-equations)), which is unique because \\\operatorname{rank}(\mathbf{A}) = n\\. When \\m = n\\,
+> so \\\hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}}\\ solves the normal equations and is the least squares solution ([Theorem 21](#thm-normal-equations)), which is unique because \\\operatorname{rank}(\mathbf{A}) = n\\. When \\m = n\\,
 >
 > \\ \begin{aligned} \operatorname{rank}(\mathbf{A}) &= n \\ &= m, \end{aligned} \\
 >
@@ -851,7 +927,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 30 (The least squares line by QR)** For \\\mathbf{A}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ of [Example 28](#exm-normal-equations), Gram-Schmidt gives \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 = \tfrac{1}{\sqrt{3}}\\(1, 1, 1)\\; then
+> **Example 32 (The least squares line by QR)** For \\\mathbf{A}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ of [Example 30](#exm-normal-equations), Gram-Schmidt gives \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 = \tfrac{1}{\sqrt{3}}\\(1, 1, 1)\\; then
 >
 > \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{q}}\vphantom{q}}\_1 \cdot (1, 2, 3) &= \tfrac{6}{\sqrt{3}} \\ &= 2\sqrt{3}, \end{aligned} \\
 >
@@ -869,7 +945,71 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 >
 > \\ \begin{aligned} x_1 &= \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} \cdot \tfrac{1}{2}\right)\mathclose{} \\ &= \tfrac{5}{3} - 1 \\ &= \tfrac{2}{3}, \end{aligned} \\
 >
-> the solution found in [Example 28](#exm-normal-equations).
+> the solution found in [Example 30](#exm-normal-equations).
+
+> **NOTE:**
+>
+> **Theorem 23 (The Moore-Penrose inverse gives a least squares solution)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\. Then \\\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ is a least squares solution ([Definition 10](#def-least-squares)) of \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\. Moreover, a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^n\\ is a least squares solution [if and only if](proof-writing.llms.md#def-iff)
+>
+> \\ \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathbf{A}\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}. \\
+
+> **NOTE:**
+>
+> *Proof*. Let \\\mathbf{P} = \mathbf{A}\mathbf{A}^+\\. By conditions 3 and 1 of [Definition 5](#def-moore-penrose), \\{\mathbf{P}}^{\top} = \mathbf{P}\\ and \\\mathbf{P}\mathbf{A} = \mathbf{A}\\. Hence
+>
+> \\ \begin{aligned} {\mathbf{A}}^{\top}(\mathbf{I} - \mathbf{P}) &= {\mathbf{A}}^{\top} - {\mathbf{A}}^{\top}\mathbf{P} && \text{(distributing)} \\ &= {\mathbf{A}}^{\top} - {\mathbf{A}}^{\top}\\{\mathbf{P}}^{\top} && ({\mathbf{P}}^{\top} = \mathbf{P}) \\ &= {\mathbf{A}}^{\top} - {(\mathbf{P}\mathbf{A})}^{\top} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= {\mathbf{A}}^{\top} - {\mathbf{A}}^{\top} && (\mathbf{P}\mathbf{A} = \mathbf{A}) \\ &= \mathbf{0}. \end{aligned} \\
+>
+> For every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} \in \mathbb{R}^n\\, write \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\\ with
+>
+> \\ \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{P}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \qquad \text{and} \qquad \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} = \mathbf{P}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathbf{A}(\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}). \\
+>
+> Their [inner product](linear-algebra-inner-products.llms.md#def-inner-product) is
+>
+> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} &= {(\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})}^{\top}\\{\mathbf{A}}^{\top}(\mathbf{I} - \mathbf{P})\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= 0, && ({\mathbf{A}}^{\top}(\mathbf{I} - \mathbf{P}) = \mathbf{0}) \end{aligned} \\
+>
+> so \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}\right\rVert\mathclose{}^2\\. That is,
+>
+> \\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{P}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathbf{A}(\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}})\right\rVert\mathclose{}^2. \\
+>
+> The first summand does not involve \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\, and the second is nonnegative, with a zero at \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\. So \\\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ minimizes \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\\, and the smallest [norm](linear-algebra-inner-products.llms.md#def-norm) is \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{P}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}\\. A vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ attains that norm [if and only if](proof-writing.llms.md#def-iff) \\\mathbf{A}(\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\, which is \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathbf{A}\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\.
+
+> **NOTE:**
+>
+> **Theorem 24 (The Moore-Penrose inverse gives the least squares solution of smallest norm)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^m\\. If \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ is a least squares solution ([Definition 10](#def-least-squares)) of \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, then
+>
+> \\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}^2. \\
+>
+> So \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \ge \mathopen{}\left\lVert\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}\\, with equality only if \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\.
+
+> **NOTE:**
+>
+> *Proof*. Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\. By [Theorem 23](#thm-moore-penrose-least-squares), \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathbf{A}\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\, so \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\.
+>
+> Let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} = {(\mathbf{A}^+)}^{\top}\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\. Then
+>
+> \\ \begin{aligned} \mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} &= \mathbf{A}^+\mathbf{A}\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} && \text{(condition 2 of }\href{#def-moore-penrose}{\text{Definition~5}}\text{)} \\ &= {(\mathbf{A}^+\mathbf{A})}^{\top}\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} && \text{(condition 4 of }\href{#def-moore-penrose}{\text{Definition~5}}\text{)} \\ &= {\mathbf{A}}^{\top}\\{(\mathbf{A}^+)}^{\top}\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= {\mathbf{A}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}. && \text{(definition of } \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \text{)} \end{aligned} \\
+>
+> Therefore
+>
+> \\ \begin{aligned} \mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} &= {\mathbf{A}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} && (\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = {\mathbf{A}}^{\top}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}) \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~17 in Matrices}}\text{)} \\ &= 0. && (\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}) \end{aligned} \\
+>
+> Expanding \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} + \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\right\rVert\mathclose{}^2\\ then gives
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}^2 + 2\\\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} + \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\right\rVert\mathclose{}^2 && \text{(expanding)} \\ &= \mathopen{}\left\lVert\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\right\rVert\mathclose{}^2. && (\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}} = 0) \end{aligned} \\
+>
+> Equality in \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \ge \mathopen{}\left\lVert\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}\\ holds only if \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{d}}\vphantom{d}}\right\rVert\mathclose{} = 0\\, that is, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\.
+
+> **NOTE:**
+>
+> **Example 33 (A rank-deficient least squares problem)** Let \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 3)\\. By [Example 14](#exm-moore-penrose), \\\mathbf{A}^+ = \mathbf{A}\\, so \\\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 0)\\ and \\\mathbf{A}\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 0)\\.
+>
+> By [Theorem 23](#thm-moore-penrose-least-squares), \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (x_1, x_2)\\ is a least squares solution ([Definition 10](#def-least-squares)) [if and only if](proof-writing.llms.md#def-iff) \\\mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (x_1, 0) = (2, 0)\\, that is, \\x_1 = 2\\ with \\x_2\\ arbitrary. Each of them leaves the same residual \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (0, 3)\\, of [norm](linear-algebra-inner-products.llms.md#def-norm) \\3\\.
+>
+> For each such \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\,
+>
+> \\ \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 = 4 + x_2^2 = \mathopen{}\left\lVert\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} - \mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\right\rVert\mathclose{}^2, \\
+>
+> as [Theorem 24](#thm-moore-penrose-minimum-norm) states. The smallest is \\4\\, at \\x_2 = 0\\, which is \\\mathbf{A}^+\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} = (2, 0)\\.
 
 > **NOTE:**
 >
@@ -877,11 +1017,11 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 31 (An LU factorization of a \\3 \times 3\\ matrix)** Let \\\mathbf{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}\\, \\\mathbf{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}\\ (unit lower triangular) and \\\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ (upper triangular). By [Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult), entry \\(i, j)\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\u\_{kj}\\, so row \\i\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\ times row \\k\\ of \\\mathbf{U}\\. Row 1 is \\1 \cdot(2, 1, -1) = (2, 1, -1)\\; row 2 is \\-\tfrac{3}{2}\\(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)\\, and row 3 is \\-(2, 1, -1) + 4\\(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)\\. These are the rows of \\\mathbf{A}\\, so \\\mathbf{L} \mathbf{U} = \mathbf{A}\\ is an LU factorization. The below-diagonal entries of \\\mathbf{L}\\ are the negatives of the multiples of earlier rows that Gaussian elimination adds to reduce \\\mathbf{A}\\ to \\\mathbf{U}\\.
+> **Example 34 (An LU factorization of a \\3 \times 3\\ matrix)** Let \\\mathbf{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}\\, \\\mathbf{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}\\ (unit lower triangular) and \\\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ (upper triangular). By [Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult), entry \\(i, j)\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\u\_{kj}\\, so row \\i\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\ times row \\k\\ of \\\mathbf{U}\\. Row 1 is \\1 \cdot(2, 1, -1) = (2, 1, -1)\\; row 2 is \\-\tfrac{3}{2}\\(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)\\, and row 3 is \\-(2, 1, -1) + 4\\(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)\\. These are the rows of \\\mathbf{A}\\, so \\\mathbf{L} \mathbf{U} = \mathbf{A}\\ is an LU factorization. The below-diagonal entries of \\\mathbf{L}\\ are the negatives of the multiples of earlier rows that Gaussian elimination adds to reduce \\\mathbf{A}\\ to \\\mathbf{U}\\.
 
 > **NOTE:**
 >
-> **Example 32 (An invertible matrix with no LU factorization)** \\\mathbf{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ is invertible: \\\mathbf{P}^2 = \mathbf{I}\_2\\, so \\\mathbf{P}^{-1} = \mathbf{P}\\ ([Definition 5 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-matrix-inverse)); but it has no LU factorization. If \\\mathbf{P} = \mathbf{L} \mathbf{U}\\, the \\(1, 1)\\ entry gives \\0 = 1 \cdot u\_{11}\\, so \\u\_{11} = 0\\, and then the \\(2, 1)\\ entry gives
+> **Example 35 (An invertible matrix with no LU factorization)** \\\mathbf{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ is invertible: \\\mathbf{P}^2 = \mathbf{I}\_2\\, so \\\mathbf{P}^{-1} = \mathbf{P}\\ ([Definition 5 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-matrix-inverse)); but it has no LU factorization. If \\\mathbf{P} = \mathbf{L} \mathbf{U}\\, the \\(1, 1)\\ entry gives \\0 = 1 \cdot u\_{11}\\, so \\u\_{11} = 0\\, and then the \\(2, 1)\\ entry gives
 >
 > \\ \begin{aligned} 1 &= \ell\_{21}\\u\_{11} \\ &= 0, \end{aligned} \\
 >
@@ -889,11 +1029,11 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 21 (Solving a system with an LU factorization)** If \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ is an LU factorization ([Definition 12](#def-lu)) and the diagonal entries of \\\mathbf{U}\\ are all nonzero, then for every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^n\\ the system \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ has exactly one solution: solve \\\mathbf{L} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ by forward substitution, then \\\mathbf{U} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ by back substitution ([Theorem 17](#thm-back-substitution)).
+> **Theorem 25 (Solving a system with an LU factorization)** If \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ is an LU factorization ([Definition 12](#def-lu)) and the diagonal entries of \\\mathbf{U}\\ are all nonzero, then for every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \in \mathbb{R}^n\\ the system \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ has exactly one solution: solve \\\mathbf{L} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}}\\ by forward substitution, then \\\mathbf{U} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ by back substitution ([Theorem 19](#thm-back-substitution)).
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{L}\\ has diagonal entries \\1\\ and \\\mathbf{U}\\ has nonzero ones, so each of the two triangular systems has exactly one solution ([Theorem 17](#thm-back-substitution)). If \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ are those solutions, then
+> *Proof*. \\\mathbf{L}\\ has diagonal entries \\1\\ and \\\mathbf{U}\\ has nonzero ones, so each of the two triangular systems has exactly one solution ([Theorem 19](#thm-back-substitution)). If \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\ and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ are those solutions, then
 >
 > \\ \begin{aligned} \mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} &= \mathbf{L}\\(\mathbf{U} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}) \\ &= \mathbf{L} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{b}}\vphantom{b}} \end{aligned} \\
 >
@@ -905,13 +1045,13 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Example 33 (Two triangular solves)** With \\\mathbf{L}\\ and \\\mathbf{U}\\ of [Example 31](#exm-lu), solve \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (8, -11, -3)\\. Forward substitution on \\\mathbf{L} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = (8, -11, -3)\\ gives \\y_1 = 8\\,
+> **Example 36 (Two triangular solves)** With \\\mathbf{L}\\ and \\\mathbf{U}\\ of [Example 34](#exm-lu), solve \\\mathbf{A} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (8, -11, -3)\\. Forward substitution on \\\mathbf{L} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} = (8, -11, -3)\\ gives \\y_1 = 8\\,
 >
 > \\ \begin{aligned} y_2 &= -11 + \tfrac{3}{2} \cdot 8 \\ &= 1, \end{aligned} \\
 >
 > \\ \begin{aligned} y_3 &= -3 + 8 - 4 \cdot 1 \\ &= 1. \end{aligned} \\
 >
-> Back substitution on \\\mathbf{U} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (8, 1, 1)\\ is [Example 25](#exm-back-substitution), which gives \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (2, 3, -1)\\. As a check,
+> Back substitution on \\\mathbf{U} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (8, 1, 1)\\ is [Example 27](#exm-back-substitution), which gives \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} = (2, 3, -1)\\. As a check,
 >
 > \\ \begin{aligned} \mathbf{A}\\(2, 3, -1) &= (4 + 3 + 1,\\ -6 - 3 - 2,\\ -4 + 3 - 2) \\ &= (8, -11, -3). \end{aligned} \\
 

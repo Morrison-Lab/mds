@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 15:46:06 (PDT)
+Last modified: 2026-10-30 17:15:43 (PDT)
 
 ## 0.1 Polynomials
 
@@ -144,11 +144,27 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Intercept)** In the formula \\f(x) = m x + b\\ for an affine function \\f\\ ([Definition 11](#def-affine-function)), \\b\\ is called the **intercept** of \\f\\.
+> **Definition 13 (Intercept, y-intercept)** The **intercept** (or **y-intercept**) of a [function](functions.llms.md#def-function) \\f\\ whose [domain](functions.llms.md#def-domain) contains \\0\\ is \\f(0)\\, the height at which the [graph](functions.llms.md#def-graph) of \\f\\ crosses the vertical axis.
 
 > **NOTE:**
 >
-> **Definition 14 (Linear function of one variable)** A function \\f: \mathbb{R}\to \mathbb{R}\\ is **linear** [\[7\]](#ref-wikipedia_linear_function) if it is affine ([Definition 11](#def-affine-function)) with intercept \\0\\; that is, if there is a number \\m\\ such that
+> **Definition 14 (Intercept term)** When a [function](functions.llms.md#def-function) is written as [terms](algebra-sums.llms.md#def-term) added together, its **intercept term** is the [term](algebra-sums.llms.md#def-term) with no factor of the [input](functions.llms.md#def-argument). When every other term has a factor of the input, the intercept ([Definition 13](#def-intercept)) of the function is this term.
+
+> **NOTE:**
+>
+> **Definition 15 (x-intercept)** An **x-intercept** of a [function](functions.llms.md#def-function) \\f\\ is an [input](functions.llms.md#def-argument) \\x\\ with \\f(x) = 0\\, a point where the [graph](functions.llms.md#def-graph) of \\f\\ crosses the horizontal axis. A function can have no x-intercept, one, or many.
+
+> **NOTE:**
+>
+> *Remark 2* (Intercepts of an affine function). For an affine function \\f(x) = m x + b\\ ([Definition 11](#def-affine-function)):
+>
+> - the [intercept term](#def-intercept-term) is \\b\\,
+> - the [intercept](#def-intercept) is \\f(0) = b\\,
+> - if \\m \ne 0\\, the only [x-intercept](#def-x-intercept) is \\-b / m\\.
+
+> **NOTE:**
+>
+> **Definition 16 (Linear function of one variable)** A function \\f: \mathbb{R}\to \mathbb{R}\\ is **linear** [\[7\]](#ref-wikipedia_linear_function) if it is affine ([Definition 11](#def-affine-function)) with intercept \\0\\; that is, if there is a number \\m\\ such that
 >
 > \\f(x) = m x \quad \text{for all } x \in \mathbb{R}\\
 
@@ -190,13 +206,13 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra-matrices.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra-matrices.llms.md#thm-linear-map-zero)).
+> *Remark 3* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra-matrices.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra-matrices.llms.md#thm-linear-map-zero)).
 
 ## 0.3 Limits of sequences
 
 > **NOTE:**
 >
-> **Definition 15 (Limit of a sequence)** A real number \\L\\ is the **limit** of a [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers [\[8\]](#ref-wikipedia_limit_of_a_sequence), written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
+> **Definition 17 (Limit of a sequence)** A real number \\L\\ is the **limit** of a [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers [\[8\]](#ref-wikipedia_limit_of_a_sequence), written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
 >
 > \\\mathopen{}\left\|a_n - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } n \ge N.\\
 
@@ -206,7 +222,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Convergent sequence (converges))** A sequence \\(a_n)\\ of real numbers **converges** to a real number \\L\\ if \\L\\ is its limit ([Definition 15](#def-sequence-limit)). A sequence that converges to some real number is **convergent**.
+> **Definition 18 (Convergent sequence (converges))** A sequence \\(a_n)\\ of real numbers **converges** to a real number \\L\\ if \\L\\ is its limit ([Definition 17](#def-sequence-limit)). A sequence that converges to some real number is **convergent**.
 
 > **NOTE:**
 >
@@ -214,7 +230,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Divergent sequence (diverges))** A sequence that does not converge ([Definition 16](#def-convergent-sequence)) to any real number **diverges**, and a sequence that diverges is **divergent**.
+> **Definition 19 (Divergent sequence (diverges))** A sequence that does not converge ([Definition 18](#def-convergent-sequence)) to any real number **diverges**, and a sequence that diverges is **divergent**.
 
 > **NOTE:**
 >
@@ -222,13 +238,13 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Divergence of a sequence to infinity)** A [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
+> **Definition 20 (Divergence of a sequence to infinity)** A [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
 
 ## 0.4 Series
 
 > **NOTE:**
 >
-> **Definition 19 (Non-decreasing sequence)** A [sequence](functions.llms.md#def-sequence) \\a_1, a_2, \ldots\\ of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals) is **non-decreasing** if each term is at least as large as the one before it:
+> **Definition 21 (Non-decreasing sequence)** A [sequence](functions.llms.md#def-sequence) \\a_1, a_2, \ldots\\ of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals) is **non-decreasing** if each term is at least as large as the one before it:
 >
 > \\a_n \le a\_{n+1} \quad \text{for every } n \in \mathbb{N}\\
 
@@ -246,7 +262,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Partial sum)** Let \\a_1, a_2, \ldots\\ be a [sequence](functions.llms.md#def-sequence) of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals). For each \\n \in \mathbb{N}\\, its \\n\\th **partial sum** [\[9\]](#ref-wikipedia_series_mathematics) is the [sum](algebra-sums.llms.md#def-summation) of its first \\n\\ terms:
+> **Definition 22 (Partial sum)** Let \\a_1, a_2, \ldots\\ be a [sequence](functions.llms.md#def-sequence) of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals). For each \\n \in \mathbb{N}\\, its \\n\\th **partial sum** [\[9\]](#ref-wikipedia_series_mathematics) is the [sum](algebra-sums.llms.md#def-summation) of its first \\n\\ terms:
 >
 > \\s_n \stackrel{\text{def}}{=}\sum\_{i=1}^na_i = a_1 + \cdots + a_n\\
 
@@ -264,7 +280,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 21 (Infinite sum, series)** Let \\a_1, a_2, \ldots\\ be a sequence in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 20](#def-partial-sum)). The **infinite sum** (also called a **series**) [\[9\]](#ref-wikipedia_series_mathematics) \\\sum\_{i=1}^{\infty} a_i\\ is the limit of the partial sums:
+> **Definition 23 (Infinite sum, series)** Let \\a_1, a_2, \ldots\\ be a sequence in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 22](#def-partial-sum)). The **infinite sum** (also called a **series**) [\[9\]](#ref-wikipedia_series_mathematics) \\\sum\_{i=1}^{\infty} a_i\\ is the limit of the partial sums:
 >
 > \\\sum\_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim\_{n \to \infty} s_n\\
 >
@@ -279,7 +295,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Lemma 1 (Sums of non-negative terms)** Let \\a_1, a_2, \ldots\\ be values in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 20](#def-partial-sum)), where \\x + \infty = \infty\\ for every \\x\\ in \\\[0, \infty\]\\. Then the partial sums are [non-decreasing](#def-non-decreasing), \\s_1 \le s_2 \le \cdots\\, so their [limit](#def-sequence-limit), the infinite sum \\\sum\_{i=1}^{\infty} a_i\\ ([Definition 21](#def-infinite-sum)), always exists, and it is either a finite number or \\\infty\\.
+> **Lemma 1 (Sums of non-negative terms)** Let \\a_1, a_2, \ldots\\ be values in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 22](#def-partial-sum)), where \\x + \infty = \infty\\ for every \\x\\ in \\\[0, \infty\]\\. Then the partial sums are [non-decreasing](#def-non-decreasing), \\s_1 \le s_2 \le \cdots\\, so their [limit](#def-sequence-limit), the infinite sum \\\sum\_{i=1}^{\infty} a_i\\ ([Definition 23](#def-infinite-sum)), always exists, and it is either a finite number or \\\infty\\.
 
 > **NOTE:**
 >
@@ -293,7 +309,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Exponential function)** The **exponential function** [\[11\]](#ref-wikipedia_exponential_function) \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
+> **Definition 24 (Exponential function)** The **exponential function** [\[11\]](#ref-wikipedia_exponential_function) \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
 >
 > \\{\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
@@ -314,7 +330,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 23 (Euler’s number)** **Euler’s number** [\[12\]](#ref-wikipedia_e_mathematical_constant) is
+> **Definition 25 (Euler’s number)** **Euler’s number** [\[12\]](#ref-wikipedia_e_mathematical_constant) is
 >
 > \\e \stackrel{\text{def}}{=}{\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}} = 2.71828\ldots\\
 
@@ -324,23 +340,23 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}}\\ [\[13\]](#ref-wikipedia_natural_logarithm), is the real number \\y\\ with \\{\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{}} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 22](#def-exponential-function)).
+> **Definition 26 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}}\\ [\[13\]](#ref-wikipedia_natural_logarithm), is the real number \\y\\ with \\{\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{}} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 24](#def-exponential-function)).
 
 > **NOTE:**
 >
-> *Remark 3* (Other notations for the natural logarithm). In these notes, \\{\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 23](#def-euler-number)) [\[14\]](#ref-wikipedia_logarithm). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+> *Remark 4* (Other notations for the natural logarithm). In these notes, \\{\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 25](#def-euler-number)) [\[14\]](#ref-wikipedia_logarithm). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
 
 > **NOTE:**
 >
 > **Example 17 (Natural logarithms)**  
 >
 > - \\{\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{}} = 0\\, because \\{\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{}} = 1\\ ([Example 15](#exm-exponential-function)).
-> - \\{\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}} = 1\\, because \\{\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}} = e\\ ([Definition 23](#def-euler-number)).
+> - \\{\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}} = 1\\, because \\{\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}} = e\\ ([Definition 25](#def-euler-number)).
 > - \\{\operatorname{log}\mathopen{}\left\\0\right\\\mathclose{}}\\ and \\{\operatorname{log}\mathopen{}\left\\-2\right\\\mathclose{}}\\ are not defined, because \\{\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{}} \> 0\\ for every real \\y\\.
 
 > **NOTE:**
 >
-> **Definition 25 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
+> **Definition 27 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
 >
 > \\a^b \stackrel{\text{def}}{=}{\operatorname{exp}\mathopen{}\left\\b \cdot{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}}\right\\\mathclose{}}.\\
 >
@@ -358,15 +374,15 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 >
 > - \\2^{1/2} = {\operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot{\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}}\right\\\mathclose{}} \approx {\operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{}} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 >
-> - For every real \\x\\, with base \\e\\ ([Definition 23](#def-euler-number)):
+> - For every real \\x\\, with base \\e\\ ([Definition 25](#def-euler-number)):
 >
->   \\ \begin{aligned} e^x &= {\operatorname{exp}\mathopen{}\left\\x \cdot{\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}}\right\\\mathclose{}} && \text{(}\href{#def-real-power}{\text{Definition~25}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= {\operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{}} && \text{(}{\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~17}}\text{)} \\ &= {\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
+>   \\ \begin{aligned} e^x &= {\operatorname{exp}\mathopen{}\left\\x \cdot{\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}}\right\\\mathclose{}} && \text{(}\href{#def-real-power}{\text{Definition~27}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= {\operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{}} && \text{(}{\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~17}}\text{)} \\ &= {\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
 >
 >   So \\e^x\\ and \\{\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}}\\ are two names for the same number.
 
 > **NOTE:**
 >
-> **Definition 26 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 25](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
+> **Definition 28 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 27](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
 >
 > - For a real number \\c \> 0\\, \\0^c \stackrel{\text{def}}{=}0\\. For a natural number \\c\\, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
 > - For \\b \< 0\\, \\b^c\\ is defined only when \\c\\ is an [integer](number-systems.llms.md#def-integers), by [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for \\b \< 0\\ and a non-integer \\c\\, \\b^c\\ is undefined.
@@ -500,7 +516,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[15\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
+> *Remark 5* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[15\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
 >
 > - sums are symmetric and associative ([Theorem 5 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-symmetric), [Theorem 6 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-assoc));
 > - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 7 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-one), [Theorem 8 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-symmetric), [Theorem 9 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-assoc), [Theorem 11 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-distr));
@@ -508,11 +524,11 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 4](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
+> *Remark 6* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 5](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
 
 > **NOTE:**
 >
-> **Definition 27 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** [\[16\]](#ref-wikipedia_contour_line) of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
+> **Definition 29 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** [\[16\]](#ref-wikipedia_contour_line) of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
 >
 > \\\mathopen{}\left\\(b, c) : g(b, c) = k\right\\\mathclose{}\\
 
@@ -574,7 +590,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> *Remark 6* (Contour lines on a plot of a surface). On a plot of the surface \\z = g(b, c)\\, the [contour line](#def-contour-line) is the curve along which the surface has height \\k\\.
+> *Remark 7* (Contour lines on a plot of a surface). On a plot of the surface \\z = g(b, c)\\, the [contour line](#def-contour-line) is the curve along which the surface has height \\k\\.
 
 > **NOTE:**
 >
@@ -582,7 +598,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> *Solution 2*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 26](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 2*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 28](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 >
@@ -735,7 +751,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 10 (When exponentiation equals multiplication)** Let \\b, c \in \mathbb{R}\\, where \\b^c\\ is defined (for \\b \< 0\\, only integer \\c\\ is allowed; [Definition 26](#def-power-nonpositive-base)). Then \\b^c = bc\\ if and only if one of the following holds:
+> **Theorem 10 (When exponentiation equals multiplication)** Let \\b, c \in \mathbb{R}\\, where \\b^c\\ is defined (for \\b \< 0\\, only integer \\c\\ is allowed; [Definition 28](#def-power-nonpositive-base)). Then \\b^c = bc\\ if and only if one of the following holds:
 >
 > 1.  \\c = 1\\;
 > 2.  \\b = 0\\ and \\c \> 0\\;
@@ -768,7 +784,7 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 > 1.  \\a = 1\\ (so that \\{\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}} = 0\\), or
 > 2.  \\bc = b^c\\ (see [Theorem 10](#thm-exp-vs-mult)).
 >
-> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 26](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
+> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 28](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
 > - If \\b \< 0\\, then \\0^b\\ is undefined, so \\(a^b)^c\\ is undefined.
 >
@@ -817,21 +833,23 @@ Last modified: 2026-10-30 15:46:06 (PDT)
 - [Definition 10 (Degree of a monomial)](#def-monomial-degree)
 - [Definition 11 (Affine function of one variable)](#def-affine-function)
 - [Definition 12 (Slope)](#def-slope)
-- [Definition 13 (Intercept)](#def-intercept)
-- [Definition 14 (Linear function of one variable)](#def-linear-function)
-- [Definition 15 (Limit of a sequence)](#def-sequence-limit)
-- [Definition 16 (Convergent sequence (converges))](#def-convergent-sequence)
-- [Definition 17 (Divergent sequence (diverges))](#def-divergent-sequence)
-- [Definition 18 (Divergence of a sequence to infinity)](#def-diverges-to-infinity)
-- [Definition 19 (Non-decreasing sequence)](#def-non-decreasing)
-- [Definition 20 (Partial sum)](#def-partial-sum)
-- [Definition 21 (Infinite sum, series)](#def-infinite-sum)
-- [Definition 22 (Exponential function)](#def-exponential-function)
-- [Definition 23 (Euler’s number)](#def-euler-number)
-- [Definition 24 (Natural logarithm)](#def-natural-log)
-- [Definition 25 (Power with a real exponent)](#def-real-power)
-- [Definition 26 (Real powers of zero and of negative numbers)](#def-power-nonpositive-base)
-- [Definition 27 (Contour line)](#def-contour-line)
+- [Definition 13 (Intercept, y-intercept)](#def-intercept)
+- [Definition 14 (Intercept term)](#def-intercept-term)
+- [Definition 15 (x-intercept)](#def-x-intercept)
+- [Definition 16 (Linear function of one variable)](#def-linear-function)
+- [Definition 17 (Limit of a sequence)](#def-sequence-limit)
+- [Definition 18 (Convergent sequence (converges))](#def-convergent-sequence)
+- [Definition 19 (Divergent sequence (diverges))](#def-divergent-sequence)
+- [Definition 20 (Divergence of a sequence to infinity)](#def-diverges-to-infinity)
+- [Definition 21 (Non-decreasing sequence)](#def-non-decreasing)
+- [Definition 22 (Partial sum)](#def-partial-sum)
+- [Definition 23 (Infinite sum, series)](#def-infinite-sum)
+- [Definition 24 (Exponential function)](#def-exponential-function)
+- [Definition 25 (Euler’s number)](#def-euler-number)
+- [Definition 26 (Natural logarithm)](#def-natural-log)
+- [Definition 27 (Power with a real exponent)](#def-real-power)
+- [Definition 28 (Real powers of zero and of negative numbers)](#def-power-nonpositive-base)
+- [Definition 29 (Contour line)](#def-contour-line)
 
 Back to top
 

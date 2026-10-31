@@ -291,7 +291,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 15:46:06 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
 </section><section class="slide level2"><p>The linear algebra notes are split across these pages:</p>
 <ul>
 <li>
@@ -316,59 +316,73 @@
 <a href="./linear-algebra-complex.html">Complex Vectors and Matrices</a>: conjugate transposes and Hermitian matrices.</li>
 </ul>
 <p>A link to a section, theorem or definition on this page from before the split goes on to the page that now holds it.</p>
+<div id="def-matrix-analysis" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Matrix analysis)</strong></span> <strong>Matrix analysis</strong> is the study of <a href="./linear-algebra-matrices.html#def-matrix">matrices</a> and their algebraic properties, with operations on matrices, <a href="./functions.html#def-function">functions</a> of matrices and the <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalues</a> of matrices as example topics <span class="citation" data-cites="wikipedia_matrix_analysis"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>.</p>
+</div>
+<div id="exm-matrix-analysis" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Eigenvalues of a small matrix)</strong></span> The <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> has the <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalues</a> <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span>. Finding these eigenvalues is a question about <span class="math inline">\(\mathbf{A}\)</span> alone, so it is a topic of <a href="#/def-matrix-analysis">matrix analysis</a>. <!-- no-figure: the example is two numbers --></p>
+</div>
+<div id="rem-matrix-analysis" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (Linear algebra and matrix analysis). </span><a href="#/def-matrix-analysis">Matrix analysis</a> is usually placed within <a href="./linear-algebra.html">linear algebra</a> and its applications <span class="citation" data-cites="wikipedia_matrix_analysis"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, and these notes do not treat it as a separate subject: they use the name <em>linear algebra</em> for the material in the pages above. <span class="citation" data-cites="banerjee2014linear">Banerjee and Roy <a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> pairs the two names in its title. Its preface says that one of its last chapters covers <a href="./algebra-exponentials.html#def-convergent-sequence">convergence</a> of <a href="./linear-algebra-matrices.html#def-matrix">matrices</a> <span class="citation" data-cites="banerjee2014linear"><a href="#/references" role="doc-biblioref" onclick="">[2, p. xvi]</a></span>.</p>
+</div>
 </section><section id="sec-additional-resources" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Further reading</h2>
 <ul>
 <li>
-<span class="citation" data-cites="strang2023linear">Strang <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.</li>
+<span class="citation" data-cites="strang2023linear">Strang <a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.</li>
 <li>
-<span class="citation" data-cites="axler2024linear">Axler <a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> is a proof-based treatment centered on vector spaces and linear maps. A free electronic version is available from the publisher.</li>
+<span class="citation" data-cites="axler2024linear">Axler <a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> is a proof-based treatment centered on vector spaces and linear maps. A free electronic version is available from the publisher.</li>
 <li>
-<span class="citation" data-cites="lange2010numerical">Lange <a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> covers computing <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalues</a> and <a href="./linear-algebra-special-matrices.html#def-eigenvector">eigenvectors</a>, including Jacobi’s method (Chapter 8), and the singular value decomposition, its properties, and its applications (Chapter 9).</li>
-<li><span class="citation" data-cites="fieller2018basics">Fieller <a href="#/references" role="doc-biblioref" onclick="">[4]</a></span></li>
-<li><span class="citation" data-cites="banerjee2014linear">Banerjee and Roy <a href="#/references" role="doc-biblioref" onclick="">[5]</a></span></li>
-<li><span class="citation" data-cites="searle2017matrix">Searle and Khuri <a href="#/references" role="doc-biblioref" onclick="">[6]</a></span></li>
+<span class="citation" data-cites="lange2010numerical">Lange <a href="#/references" role="doc-biblioref" onclick="">[5]</a></span> covers computing <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalues</a> and <a href="./linear-algebra-special-matrices.html#def-eigenvector">eigenvectors</a>, including Jacobi’s method (Chapter 8), and the singular value decomposition, its properties, and its applications (Chapter 9).</li>
+<li><span class="citation" data-cites="fieller2018basics">Fieller <a href="#/references" role="doc-biblioref" onclick="">[6]</a></span></li>
+<li><span class="citation" data-cites="banerjee2014linear">Banerjee and Roy <a href="#/references" role="doc-biblioref" onclick="">[2]</a></span></li>
+<li><span class="citation" data-cites="searle2017matrix">Searle and Khuri <a href="#/references" role="doc-biblioref" onclick="">[7]</a></span></li>
 <li>
-<span class="citation" data-cites="petersen2012matrix">Petersen and Pedersen <a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and <a href="./calculus-derivatives.html#def-derivative">derivatives</a> of vectors and matrices, so it is a quick place to look up a formula these pages prove.</li>
+<span class="citation" data-cites="petersen2012matrix">Petersen and Pedersen <a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and <a href="./calculus-derivatives.html#def-derivative">derivatives</a> of vectors and matrices, so it is a quick place to look up a formula these pages prove.</li>
 <li>
-<span class="citation" data-cites="stanford2024ee278notes">Stanford University <a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> (Stanford EE 278, taught by Tsachy Weissman) applies this page’s tools to probability and inference. Its “MMSE Geometry” lecture treats the best estimate as an orthogonal <a href="./linear-algebra-projections.html">projection</a>, and its lectures on spectral decomposition, the Karhunen-Loeve expansion and principal component analysis treat <a href="./linear-algebra-diagonalization.html">diagonalization</a> of a covariance matrix.</li>
+<span class="citation" data-cites="stanford2024ee278notes">Stanford University <a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> (Stanford EE 278, taught by Tsachy Weissman) applies this page’s tools to probability and inference. Its “MMSE Geometry” lecture treats the best estimate as an orthogonal <a href="./linear-algebra-projections.html">projection</a>, and its lectures on spectral decomposition, the Karhunen-Loeve expansion and principal component analysis treat <a href="./linear-algebra-diagonalization.html">diagonalization</a> of a covariance matrix.</li>
 <li>
 <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a> is a 16-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops visual and geometric intuition for vectors, linear combinations, spans, linear transformations, matrix multiplication, determinants, inverses, dot and cross products, change of basis, and eigenvectors and eigenvalues.</li>
 </ul></section><section id="references" class="slide level2 unnumbered smaller scrollable"><h2>References</h2>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-strang2023linear" class="csl-entry" role="listitem">
+<div id="ref-wikipedia_matrix_analysis" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Matrix analysis — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Matrix_analysis">https://en.wikipedia.org/wiki/Matrix_analysis</a>
+</div>
+</div>
+<div id="ref-banerjee2014linear" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">S. Banerjee and A. Roy, <em>Linear algebra and matrix analysis for statistics</em>, vol. 181. Crc Press Boca Raton, 2014. Available: <a href="https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388">https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388</a>
+</div>
+</div>
+<div id="ref-strang2023linear" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div>
 <div class="csl-right-inline">G. Strang, <em>Introduction to linear algebra</em>, 6th ed. Wellesley, MA: Wellesley-Cambridge Press, 2023. Available: <a href="https://math.mit.edu/~gs/linearalgebra/">https://math.mit.edu/~gs/linearalgebra/</a>
 </div>
 </div>
 <div id="ref-axler2024linear" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div>
+<div class="csl-left-margin">[4] </div>
 <div class="csl-right-inline">S. Axler, <em>Linear algebra done right</em>, 4th ed. in Undergraduate texts in mathematics. Springer, 2024. doi: <a href="https://doi.org/10.1007/978-3-031-41026-0">10.1007/978-3-031-41026-0</a>.</div>
 </div>
 <div id="ref-lange2010numerical" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div>
+<div class="csl-left-margin">[5] </div>
 <div class="csl-right-inline">K. Lange, <em>Numerical analysis for statisticians</em>, 2nd ed. in Statistics and computing. Springer, 2010. doi: <a href="https://doi.org/10.1007/978-1-4419-5945-4">10.1007/978-1-4419-5945-4</a>.</div>
 </div>
 <div id="ref-fieller2018basics" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div>
+<div class="csl-left-margin">[6] </div>
 <div class="csl-right-inline">N. Fieller, <em>Basics of matrix algebra for statistics with <span>R</span></em>. Chapman; Hall/CRC, 2016. doi: <a href="https://doi.org/10.1201/9781315370200">10.1201/9781315370200</a>.</div>
 </div>
-<div id="ref-banerjee2014linear" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div>
-<div class="csl-right-inline">S. Banerjee and A. Roy, <em>Linear algebra and matrix analysis for statistics</em>, vol. 181. Crc Press Boca Raton, 2014. Available: <a href="https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388">https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388</a>
-</div>
-</div>
 <div id="ref-searle2017matrix" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div>
+<div class="csl-left-margin">[7] </div>
 <div class="csl-right-inline">S. R. Searle and A. I. Khuri, <em>Matrix algebra useful for statistics</em>. John Wiley &amp; Sons, 2017.</div>
 </div>
 <div id="ref-petersen2012matrix" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[7] </div>
+<div class="csl-left-margin">[8] </div>
 <div class="csl-right-inline">K. B. Petersen and M. S. Pedersen, <span>“The matrix cookbook,”</span> Technical University of Denmark, Nov. 2012. Available: <a href="https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf">https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf</a>
 </div>
 </div>
 <div id="ref-stanford2024ee278notes" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[8] </div>
+<div class="csl-left-margin">[9] </div>
 <div class="csl-right-inline">Stanford University, <span>“<span>EE</span> 278, probability and statistical inference: Fall 2024 lecture notes.”</span> Handwritten lecture notes, 2024. Available: <a href="https://web.stanford.edu/class/ee278/lectures.html">https://web.stanford.edu/class/ee278/lectures.html</a>
 </div>
 </div>

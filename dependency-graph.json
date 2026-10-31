@@ -404,7 +404,16 @@
    "page": "algebra",
    "div": "def-intercept",
    "kind": "def",
-   "title": "Intercept",
+   "title": "Intercept, y-intercept",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-intercept-term",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-intercept-term",
+   "kind": "def",
+   "title": "Intercept term",
    "external": false
   },
   {
@@ -918,6 +927,15 @@
    "div": "def-upper-limit",
    "kind": "def",
    "title": "Upper limit of a sum or integral",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-x-intercept",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-x-intercept",
+   "kind": "def",
+   "title": "x-intercept",
    "external": false
   },
   {
@@ -1736,7 +1754,16 @@
    "page": "algebra-exponentials",
    "div": "def-intercept",
    "kind": "def",
-   "title": "Intercept",
+   "title": "Intercept, y-intercept",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#def-intercept-term",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-intercept-term",
+   "kind": "def",
+   "title": "Intercept term",
    "external": false
   },
   {
@@ -1881,6 +1908,15 @@
    "div": "def-slope",
    "kind": "def",
    "title": "Slope",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#def-x-intercept",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-x-intercept",
+   "kind": "def",
+   "title": "x-intercept",
    "external": false
   },
   {
@@ -5007,6 +5043,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-matrix-analysis",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-matrix-analysis",
+   "kind": "def",
+   "title": "Matrix analysis",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-matrix-condition-number",
    "site": "mds",
    "page": "linear-algebra",
@@ -6321,6 +6366,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-moore-penrose-eigendecomposition",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-moore-penrose-eigendecomposition",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-moore-penrose-exists",
    "site": "mds",
    "page": "linear-algebra",
@@ -6345,6 +6399,33 @@
    "div": "thm-moore-penrose-generalized-inverse",
    "kind": "thm",
    "title": "A Moore-Penrose inverse is a generalized inverse",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#thm-moore-penrose-gram",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-moore-penrose-gram",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse of a Gram matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-moore-penrose-least-squares",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse gives a least squares solution",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#thm-moore-penrose-minimum-norm",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-moore-penrose-minimum-norm",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse gives the least squares solution of smallest norm",
    "external": false
   },
   {
@@ -8184,6 +8265,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-projections#thm-moore-penrose-eigendecomposition",
+   "site": "mds",
+   "page": "linear-algebra-projections",
+   "div": "thm-moore-penrose-eigendecomposition",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-projections#thm-moore-penrose-exists",
    "site": "mds",
    "page": "linear-algebra-projections",
@@ -8208,6 +8298,33 @@
    "div": "thm-moore-penrose-generalized-inverse",
    "kind": "thm",
    "title": "A Moore-Penrose inverse is a generalized inverse",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-projections#thm-moore-penrose-gram",
+   "site": "mds",
+   "page": "linear-algebra-projections",
+   "div": "thm-moore-penrose-gram",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse of a Gram matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "site": "mds",
+   "page": "linear-algebra-projections",
+   "div": "thm-moore-penrose-least-squares",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse gives a least squares solution",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-projections#thm-moore-penrose-minimum-norm",
+   "site": "mds",
+   "page": "linear-algebra-projections",
+   "div": "thm-moore-penrose-minimum-norm",
+   "kind": "thm",
+   "title": "The Moore-Penrose inverse gives the least squares solution of smallest norm",
    "external": false
   },
   {
@@ -10893,6 +11010,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#thm-convex-hessian-converse",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-convex-hessian-converse",
+   "kind": "thm",
+   "title": "A convex function has a positive semidefinite Hessian",
+   "external": false
+  },
+  {
    "id": "mds/optimization#thm-convex-intersection",
    "site": "mds",
    "page": "optimization",
@@ -11214,6 +11340,15 @@
    "div": "thm-convex-hessian",
    "kind": "thm",
    "title": "Second-derivative test for convexity",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-convex-hessian-converse",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-convex-hessian-converse",
+   "kind": "thm",
+   "title": "A convex function has a positive semidefinite Hessian",
    "external": false
   },
   {
@@ -12975,7 +13110,31 @@
   ],
   [
    "mds/algebra#def-intercept",
-   "mds/algebra#def-affine-function"
+   "mds/functions#def-domain"
+  ],
+  [
+   "mds/algebra#def-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra#def-intercept",
+   "mds/functions#def-graph"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/algebra#def-intercept"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/algebra-sums#def-term"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra#def-intercept-term",
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra#def-like-terms",
@@ -13258,6 +13417,18 @@
    "mds/calculus#def-riemann-integral"
   ],
   [
+   "mds/algebra#def-x-intercept",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra#def-x-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra#def-x-intercept",
+   "mds/functions#def-graph"
+  ],
+  [
    "mds/algebra#lem-nonneg-series",
    "mds/algebra#def-infinite-sum"
   ],
@@ -13503,7 +13674,31 @@
   ],
   [
    "mds/algebra-exponentials#def-intercept",
-   "mds/algebra-exponentials#def-affine-function"
+   "mds/functions#def-domain"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept",
+   "mds/functions#def-graph"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/algebra-exponentials#def-intercept"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/algebra-sums#def-term"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra-exponentials#def-intercept-term",
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra-exponentials#def-linear-function",
@@ -13620,6 +13815,18 @@
   [
    "mds/algebra-exponentials#def-slope",
    "mds/algebra-exponentials#def-affine-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-x-intercept",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/algebra-exponentials#def-x-intercept",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-x-intercept",
+   "mds/functions#def-graph"
   ],
   [
    "mds/algebra-exponentials#lem-nonneg-series",
@@ -15194,6 +15401,18 @@
    "mds/linear-algebra#def-unit-lower-triangular-matrix"
   ],
   [
+   "mds/linear-algebra#def-matrix-analysis",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-analysis",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-analysis",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra#def-matrix-condition-number",
    "mds/algebra-sums#def-ratio"
   ],
@@ -15846,6 +16065,22 @@
    "mds/linear-algebra#def-linear-map"
   ],
   [
+   "mds/linear-algebra#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra#def-eigendecomposition"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra-matrices#def-diagonal-entry"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra-special-matrices#def-diagonal-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
    "mds/linear-algebra#thm-moore-penrose-exists",
    "mds/linear-algebra#def-moore-penrose"
   ],
@@ -15876,6 +16111,22 @@
   [
    "mds/linear-algebra#thm-moore-penrose-generalized-inverse",
    "mds/linear-algebra#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-gram",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "mds/linear-algebra#def-least-squares"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "mds/proof-writing#def-iff"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-minimum-norm",
+   "mds/linear-algebra#def-least-squares"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-unique",
@@ -16594,6 +16845,18 @@
    "mds/linear-algebra-projections#thm-back-substitution"
   ],
   [
+   "mds/linear-algebra-projections#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra-matrices#def-diagonal-entry"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra-special-matrices#def-diagonal-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
    "mds/linear-algebra-projections#thm-moore-penrose-exists",
    "mds/linear-algebra-projections#def-moore-penrose"
   ],
@@ -16616,6 +16879,22 @@
   [
    "mds/linear-algebra-projections#thm-moore-penrose-generalized-inverse",
    "mds/linear-algebra-projections#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-gram",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "mds/linear-algebra-projections#def-least-squares"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "mds/proof-writing#def-iff"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-minimum-norm",
+   "mds/linear-algebra-projections#def-least-squares"
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-unique",
@@ -18450,6 +18729,22 @@
    "mds/vector-calculus#def-continuous-on"
   ],
   [
+   "mds/optimization#thm-convex-hessian-converse",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian-converse",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-second-partial-derivative"
+  ],
+  [
    "mds/optimization#thm-convex-intersection",
    "mds/optimization#def-convex-set"
   ],
@@ -18732,6 +19027,22 @@
   [
    "mds/optimization-convexity#thm-convex-hessian",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-second-partial-derivative"
   ],
   [
    "mds/optimization-convexity#thm-convex-intersection",
