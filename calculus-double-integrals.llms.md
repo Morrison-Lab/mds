@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Double Integrals
 
@@ -72,7 +72,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > region <- tibble::tibble(x = c(0, 1, 1), y = c(0, 0, 1))
@@ -127,7 +127,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > n_grid <- 51
@@ -242,7 +242,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > n_grid <- 81
@@ -298,7 +298,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > ggplot2::ggplot() +
@@ -344,7 +344,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > n_grid <- 41

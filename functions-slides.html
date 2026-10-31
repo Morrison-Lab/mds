@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 18:45:42 (PDT)</p>
 </section><section class="slide level2"><div class="proof remark">
 <p><span class="proof-title"><em>Remark</em>. </span>Random variables, densities, and measures are functions. This page collects the definitions of functions, sequences, and countable sets that the Morrison Lab’s probability and statistics notes build on. The functions here go between the sets defined on the <a href="./sets.html">Sets</a> page.</p>
 </div>
@@ -405,7 +405,7 @@
 </section><section class="slide level2"><div id="exm-preimage" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (The preimage of a set of doubled die rolls)</strong></span> For the <a href="#/def-function">function</a> <span class="math inline">\(f : {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}} \to \mathbb{R}\)</span> with <span class="math inline">\(f(a) = 2a\)</span> from <a href="#/exm-function" class="quarto-xref">Example&nbsp;1</a>, the <a href="#/def-preimage">preimage</a> of <span class="math inline">\({\mathopen{}\left\{4, 6\right\}\mathclose{}}\)</span> is <span class="math inline">\({\mathopen{}\left\{2, 3\right\}\mathclose{}}\)</span>, because <span class="math inline">\(f(2) = 4\)</span> and <span class="math inline">\(f(3) = 6\)</span>. The preimage of <span class="math inline">\({\mathopen{}\left\{3\right\}\mathclose{}}\)</span> is the <a href="./sets.html#def-empty-set">empty set</a>, because <span class="math inline">\(2a = 3\)</span> has no solution among the die rolls.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>rolls <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">roll =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">double =</span> <span class="dv">2</span> <span class="sc">*</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>))</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>rolls <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">roll =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">double =</span> <span class="dv">2</span> <span class="sc">*</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>))</span>
 <span id="cb1-2"><a aria-label="2"></a>levels_shown <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb1-3"><a aria-label="3"></a>  <span class="at">height =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">6</span>),</span>
 <span id="cb1-4"><a aria-label="4"></a>  <span class="at">hits =</span> <span class="fu">c</span>(</span>
@@ -498,7 +498,7 @@ Figure&nbsp;1: The <a href="#/def-preimage">preimage</a> of a <a href="./sets.ht
 </section><section class="slide level2"><div id="exm-graph" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (The graph of a function on three points)</strong></span> Let <span class="math inline">\(f : {\mathopen{}\left\{-1, 0, 2\right\}\mathclose{}} \to \mathbb{R}\)</span> with <span class="math inline">\(f(a) = a^2\)</span>. Then <span class="math inline">\(f(-1) = 1\)</span>, <span class="math inline">\(f(0) = 0\)</span>, and <span class="math inline">\(f(2) = 4\)</span>, so the graph of <span class="math inline">\(f\)</span> is <span class="math inline">\({\mathopen{}\left\{(-1, 1), (0, 0), (2, 4)\right\}\mathclose{}}\)</span>. The pair <span class="math inline">\((1, 1)\)</span> is not in the graph, because <span class="math inline">\(1\)</span> is not in the domain of <span class="math inline">\(f\)</span>.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>graph_points <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>), <span class="at">value =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>)<span class="sc">^</span><span class="dv">2</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>graph_points <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>), <span class="at">value =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>)<span class="sc">^</span><span class="dv">2</span>)</span>
 <span id="cb2-2"><a aria-label="2"></a>parabola <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">2.5</span>, <span class="at">length.out =</span> <span class="dv">201</span>))</span>
 <span id="cb2-3"><a aria-label="3"></a>parabola<span class="sc">$</span>value <span class="ot">&lt;-</span> parabola<span class="sc">$</span>a<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb2-4"><a aria-label="4"></a></span>
@@ -553,7 +553,7 @@ Figure&nbsp;2: The <a href="#/def-graph">graph</a> of <span class="math inline">
 </div>
 </figure>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>rolls <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">roll =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">double =</span> <span class="dv">2</span> <span class="sc">*</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>))</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>rolls <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">roll =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">double =</span> <span class="dv">2</span> <span class="sc">*</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>))</span>
 <span id="cb3-2"><a aria-label="2"></a></span>
 <span id="cb3-3"><a aria-label="3"></a>doubling_die_plot <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(rolls) <span class="sc">+</span></span>
 <span id="cb3-4"><a aria-label="4"></a>  ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> roll, <span class="at">y =</span> double) <span class="sc">+</span></span>
@@ -612,7 +612,7 @@ Figure&nbsp;3: The <a href="#/def-function">function</a> <span class="math inlin
 </section><section class="slide level2"><div id="rem-graph-real-function" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (The graph of a real function is a curve). </span>For a function <span class="math inline">\(f : \mathbb{R}\to \mathbb{R}\)</span>, the graph is a curve in the plane, with <span class="math inline">\(a\)</span> on the horizontal axis and <span class="math inline">\(f(a)\)</span> on the vertical axis.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>curve_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>, <span class="at">length.out =</span> <span class="dv">201</span>))</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>curve_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>, <span class="at">length.out =</span> <span class="dv">201</span>))</span>
 <span id="cb4-2"><a aria-label="2"></a>curve_data<span class="sc">$</span>value <span class="ot">&lt;-</span> curve_data<span class="sc">$</span>a<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb4-3"><a aria-label="3"></a>marked <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>), <span class="at">value =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>)<span class="sc">^</span><span class="dv">2</span>)</span>
 <span id="cb4-4"><a aria-label="4"></a>marked<span class="sc">$</span>label <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"(%d, %d)"</span>, marked<span class="sc">$</span>a, marked<span class="sc">$</span>value)</span>
@@ -717,7 +717,7 @@ Figure&nbsp;4: The <a href="#/def-graph">graph</a> of <span class="math inline">
 </ul>
 <p>Since <span class="math inline">\(9 \ne 5\)</span>, <span class="math inline">\(f \circ g\)</span> and <span class="math inline">\(g \circ f\)</span> are different functions.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>x_grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">241</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>x_grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">241</span>)</span>
 <span id="cb5-2"><a aria-label="2"></a>fg_label <span class="ot">&lt;-</span> <span class="st">"f(g(x)) = (x + 1)^2"</span></span>
 <span id="cb5-3"><a aria-label="3"></a>gf_label <span class="ot">&lt;-</span> <span class="st">"g(f(x)) = x^2 + 1"</span></span>
 <span id="cb5-4"><a aria-label="4"></a>compositions <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -805,7 +805,7 @@ f^{-1}(7) &amp;= \frac{7 - 1}{2} \\
 <li><p>Let <span class="math inline">\(h : \mathbb{R}\to \mathbb{R}\)</span> with <span class="math inline">\(h(x) = x^2\)</span>. Then <span class="math inline">\(h(-2) = 4\)</span> and <span class="math inline">\(h(2) = 4\)</span>, so an inverse function would need <span class="math inline">\(h^{-1}(4)\)</span> to equal both <span class="math inline">\(-2\)</span> and <span class="math inline">\(2\)</span>. So <span class="math inline">\(h\)</span> is not invertible.</p></li>
 </ul>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a>x_f <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a>x_f <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
 <span id="cb6-2"><a aria-label="2"></a>x_inverse <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">9</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
 <span id="cb6-3"><a aria-label="3"></a>lines_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb6-4"><a aria-label="4"></a>  <span class="at">x =</span> <span class="fu">c</span>(x_f, x_inverse, x_inverse),</span>
@@ -867,7 +867,7 @@ Figure&nbsp;6: The <a href="#/def-graph">graph</a> of the <a href="#/def-inverse
 </div>
 </figure>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>x_square <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>x_square <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
 <span id="cb7-2"><a aria-label="2"></a>square_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x_square, <span class="at">y =</span> x_square<span class="sc">^</span><span class="dv">2</span>)</span>
 <span id="cb7-3"><a aria-label="3"></a>marked <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>))</span>
 <span id="cb7-4"><a aria-label="4"></a></span>
@@ -981,7 +981,7 @@ f^{\odot}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\
 <li>The die rolls <span class="math inline">\(4, 1, 4\)</span> form a finite sequence of length <span class="math inline">\(3\)</span>, with <span class="math inline">\(a_1 = 4\)</span>, <span class="math inline">\(a_2 = 1\)</span>, and <span class="math inline">\(a_3 = 4\)</span>. As a set, <span class="math inline">\({\mathopen{}\left\{4, 1, 4\right\}\mathclose{}} = {\mathopen{}\left\{1, 4\right\}\mathclose{}}\)</span>, but as a sequence, the order and the repeats matter.</li>
 </ul>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a>n <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a>n <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
 <span id="cb9-2"><a aria-label="2"></a>sequence_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a_n = 1/n"</span>, <span class="st">"b_n = (-1)^n"</span>)</span>
 <span id="cb9-3"><a aria-label="3"></a>sequences <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb9-4"><a aria-label="4"></a>  <span class="at">n =</span> <span class="fu">rep</span>(n, <span class="dv">2</span>),</span>
@@ -1057,7 +1057,7 @@ Figure&nbsp;8: The first ten <a href="#/def-sequence-term">terms</a> of the <a h
 </div>
 <p>The <a href="#/def-value">value</a> at <span class="math inline">\(\eta= 0\)</span> is <span class="math inline">\(1 / (1 + \text{e}^{-0}) = 1/2\)</span>. The values at <span class="math inline">\(\pm 2\)</span> add to 1; each lies in <span class="math inline">\((0, 1)\)</span>.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-label="1"></a><span class="co"># the Greek letter eta, written as a code point to keep this file ASCII</span></span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-label="1"></a><span class="co"># the Greek letter eta, written as a code point to keep this file ASCII</span></span>
 <span id="cb11-2"><a aria-label="2"></a>eta_symbol <span class="ot">&lt;-</span> <span class="fu">intToUtf8</span>(<span class="dv">0x3b7</span>)</span>
 <span id="cb11-3"><a aria-label="3"></a>eta_grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">6</span>, <span class="dv">6</span>, <span class="at">length.out =</span> <span class="dv">241</span>)</span>
 <span id="cb11-4"><a aria-label="4"></a>logistic_curve <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">eta =</span> eta_grid, <span class="at">sigmoid =</span> <span class="fu">plogis</span>(eta_grid))</span>
@@ -1655,6 +1655,50 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script><script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

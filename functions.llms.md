@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 > **NOTE:**
 >
@@ -74,7 +74,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > rolls <- data.frame(roll = 1:6, double = 2 * (1:6))
@@ -168,7 +168,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > graph_points <- data.frame(a = c(-1, 0, 2), value = c(-1, 0, 2)^2)
@@ -217,7 +217,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > rolls <- data.frame(roll = 1:6, double = 2 * (1:6))
@@ -271,7 +271,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > curve_data <- data.frame(a = seq(-2.5, 2.5, length.out = 201))
@@ -359,7 +359,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > x_grid <- seq(-3, 3, length.out = 241)
@@ -436,7 +436,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > x_f <- seq(-2, 4, length.out = 101)
@@ -492,7 +492,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > x_square <- seq(-3, 3, length.out = 101)
@@ -606,7 +606,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > n <- 1:10
@@ -676,7 +676,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > # the Greek letter eta, written as a code point to keep this file ASCII

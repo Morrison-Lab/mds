@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Derivatives
 
@@ -664,7 +664,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >
 > Each entry of `checks` is the largest discrepancy between a formula above and a numerical computation; every one is below \\10^{-14}\\ (the chunk stops with an error otherwise), which is rounding error. The key values are \\f(0) =\\ 0.5 and \\f(1) \approx\\ 0.7311. At \\x = 10\\ and \\x = -10\\ the function is already close to its limits, \\f(10) \approx\\ 0.99995 and \\f(-10) \approx\\ 0.0000454. [Figure 1](#fig-function-profile-logistic) graphs \\f\\, \\f'\\ and \\{\operatorname{log}\mathopen{}\left\\f\right\\\mathclose{}}\\.
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > grid <- seq(-6, 6, length.out = 241)
@@ -727,7 +727,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` js
 > tanF = (w) => w * w - 4 * w + 7
@@ -736,14 +736,14 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 > tanExact = tanF(tanW + tanEps)
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` js
 > viewof tanW = Inputs.range([-1, 4], {value: 1, step: 0.05, label: "w"})
 > viewof tanEps = Inputs.range([0.01, 2], {value: 0.5, transform: Math.log, label: "step \u03b5", format: d3.format(".3~f")})
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` js
 > md`At w = ${tanW.toFixed(2)}, f(w) = ${tanF(tanW).toFixed(4)} and f\u2032(w) = ${tanDf(tanW).toFixed(2)}.
@@ -755,7 +755,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 > - error ${(tanExact - tanPred).toPrecision(3)}, and error / \u03b5\u00b2 = ${((tanExact - tanPred) / tanEps ** 2).toFixed(3)}.`
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` js
 > Plot.plot({

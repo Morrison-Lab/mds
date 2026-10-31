@@ -362,7 +362,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 18:45:42 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -1320,14 +1320,14 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <details class="code-fold">
-<summary>[R code]</summary>
+<summary>[Code]</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="0" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb1-0"><a aria-label="0"></a>viewof planeW1 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">1.5</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w1"</span>})</span>
 <span id="cb1-1"><a aria-label="1"></a>viewof planeW2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">1.5</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w2"</span>})</span>
 <span id="cb1-2"><a aria-label="2"></a>viewof planeB <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"b"</span>})</span>
 <span id="cb1-3"><a aria-label="3"></a>viewof planeTurn <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">360</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"turn the view"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <details class="code-fold">
-<summary>[R code]</summary>
+<summary>[Code]</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb2--1"><a aria-label="-1"></a>{</span>
 <span id="cb2-0"><a aria-label="0"></a>  <span class="kw">const</span> sign <span class="op">=</span> (v) <span class="kw">=&gt;</span> (v <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">"</span><span class="sc">\u2212</span><span class="st">"</span> <span class="op">:</span> <span class="st">"+"</span>)<span class="op">;</span></span>
 <span id="cb2-1"><a aria-label="1"></a>  <span class="kw">const</span> fmt <span class="op">=</span> (v) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(v)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="op">;</span></span>
@@ -1338,7 +1338,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <span id="cb2-6"><a aria-label="6"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <details class="code-fold">
-<summary>[R code]</summary>
+<summary>[Code]</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb3--1"><a aria-label="-1"></a><span class="co">// The graph z = f(x1, x2) over the square [-2, 2] x [-2, 2], drawn in 3-D:</span></span>
 <span id="cb3-0"><a aria-label="0"></a><span class="co">// turn the square about the vertical axis, then look down on it from 30 degrees.</span></span>
 <span id="cb3-1"><a aria-label="1"></a>planeView <span class="op">=</span> {</span>
@@ -1390,7 +1390,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <span id="cb3-47"><a aria-label="47"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <details class="code-fold">
-<summary>[R code]</summary>
+<summary>[Code]</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb4--1"><a aria-label="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
 <span id="cb4-0"><a aria-label="0"></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">'Contour map of the same plane seen from directly above, '</span> <span class="op">+</span></span>
 <span id="cb4-1"><a aria-label="1"></a>    <span class="st">'with x1 across and x2 up, '</span> <span class="op">+</span></span>
@@ -2155,6 +2155,51 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script>
+    <script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
     </script>
     <script type="ojs-module-contents">
     eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBwbGFuZVcxID0gSW5wdXRzLnJhbmdlKFstMS41LCAxLjVdLCB7dmFsdWU6IDEsIHN0ZXA6IDAuMSwgbGFiZWw6IFwidzFcIn0pXG52aWV3b2YgcGxhbmVXMiA9IElucHV0cy5yYW5nZShbLTEuNSwgMS41XSwge3ZhbHVlOiAwLjUsIHN0ZXA6IDAuMSwgbGFiZWw6IFwidzJcIn0pXG52aWV3b2YgcGxhbmVCID0gSW5wdXRzLnJhbmdlKFstMiwgMl0sIHt2YWx1ZTogMCwgc3RlcDogMC4xLCBsYWJlbDogXCJiXCJ9KVxudmlld29mIHBsYW5lVHVybiA9IElucHV0cy5yYW5nZShbMCwgMzYwXSwge3ZhbHVlOiAzMCwgc3RlcDogNSwgbGFiZWw6IFwidHVybiB0aGUgdmlld1wifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3Qgc2lnbiA9ICh2KSA9PiAodiA8IDAgPyBcIlxcdTIyMTJcIiA6IFwiK1wiKTtcbiAgY29uc3QgZm10ID0gKHYpID0+IE1hdGguYWJzKHYpLnRvRml4ZWQoMSk7XG4gIHJldHVybiBtZGBmKHgxLCB4MikgPSAke3BsYW5lVzEudG9GaXhlZCgxKX0geDEgJHtzaWduKHBsYW5lVzIpfSAke2ZtdChwbGFuZVcyKX0geDIgJHtzaWduKHBsYW5lQil9ICR7Zm10KHBsYW5lQil9LlxuVGhlIG9yYW5nZSBzbGljZSwgYWxvbmcgeDEgd2l0aCB4MiA9IDAsIHJpc2VzICR7cGxhbmVXMS50b0ZpeGVkKDEpfSBmb3IgZWFjaCB1bml0IG9mIHgxO1xudGhlIGdyZWVuIHNsaWNlLCBhbG9uZyB4MiwgcmlzZXMgJHtwbGFuZVcyLnRvRml4ZWQoMSl9IGZvciBlYWNoIHVuaXQgb2YgeDIuXG5Cb3RoIHNsaWNlcyBjcm9zcyB0aGUgdmVydGljYWwgYXhpcyBhdCBoZWlnaHQgYiA9ICR7cGxhbmVCLnRvRml4ZWQoMSl9LmA7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiIvLyBUaGUgZ3JhcGggeiA9IGYoeDEsIHgyKSBvdmVyIHRoZSBzcXVhcmUgWy0yLCAyXSB4IFstMiwgMl0sIGRyYXduIGluIDMtRDpcbi8vIHR1cm4gdGhlIHNxdWFyZSBhYm91dCB0aGUgdmVydGljYWwgYXhpcywgdGhlbiBsb29rIGRvd24gb24gaXQgZnJvbSAzMCBkZWdyZWVzLlxucGxhbmVWaWV3ID0ge1xuICBjb25zdCBmID0gKHgxLCB4MikgPT4gcGxhbmVXMSAqIHgxICsgcGxhbmVXMiAqIHgyICsgcGxhbmVCO1xuICBjb25zdCB3ID0gMzQwLCBoID0gMzAwLCBzID0gMzgsIHN6ID0gMTYsIGVsZXYgPSAzMCAqIE1hdGguUEkgLyAxODA7XG4gIGNvbnN0IHR1cm4gPSBwbGFuZVR1cm4gKiBNYXRoLlBJIC8gMTgwO1xuICBjb25zdCBhdCA9ICh4MSwgeDIsIHopID0+IHtcbiAgICBjb25zdCB1ID0geDEgKiBNYXRoLmNvcyh0dXJuKSAtIHgyICogTWF0aC5zaW4odHVybik7XG4gICAgY29uc3QgdiA9IHgxICogTWF0aC5zaW4odHVybikgKyB4MiAqIE1hdGguY29zKHR1cm4pO1xuICAgIHJldHVybiBbdyAvIDIgKyBzICogdSwgaCAvIDIgLSBzICogTWF0aC5zaW4oZWxldikgKiB2IC0gc3ogKiBNYXRoLmNvcyhlbGV2KSAqIHpdO1xuICB9O1xuICBjb25zdCBwYXRoID0gKHB0cykgPT4gZDMubGluZSgpKHB0cy5tYXAoKFthLCBiLCB6XSkgPT4gYXQoYSwgYiwgeikpKTtcbiAgY29uc3Qgc3ZnID0gZDMuY3JlYXRlKFwic3ZnXCIpLmF0dHIoXCJ3aWR0aFwiLCB3KS5hdHRyKFwiaGVpZ2h0XCIsIGgpXG4gICAgLmF0dHIoXCJyb2xlXCIsIFwiaW1nXCIpXG4gICAgLmF0dHIoXCJhcmlhLWxhYmVsXCIsIFwiQSB0aWx0ZWQgcGxhbmUgZHJhd24gaW4gdGhyZWUgZGltZW5zaW9ucyBvdmVyIGEgc3F1YXJlIG9mIGlucHV0cywgXCIgK1xuICAgICAgXCJ3aXRoIGl0cyB0d28gc2xpY2VzIHRocm91Z2ggdGhlIG9yaWdpbiBoaWdobGlnaHRlZCwgXCIgK1xuICAgICAgXCJhbmQgYSB2ZXJ0aWNhbCBtYXJrZXIgYXQgdGhlIG9yaWdpbiBzaG93aW5nIHRoZSBoZWlnaHQgYi5cIik7XG4gIGNvbnN0IHRpY2tzID0gZDMucmFuZ2UoLTIsIDIuMDEsIDAuNSk7XG4gIGNvbnN0IGNvcm5lcnMgPSBbWy0yLCAtMl0sIFsyLCAtMl0sIFsyLCAyXSwgWy0yLCAyXSwgWy0yLCAtMl1dO1xuICAvLyB0aGUgZmxvb3IsIHogPSAwLCBhbmQgdGhlIHRocmVlIGF4ZXNcbiAgc3ZnLmFwcGVuZChcInBhdGhcIikuYXR0cihcImRcIiwgcGF0aChjb3JuZXJzLm1hcCgoW2EsIGJdKSA9PiBbYSwgYiwgMF0pKSlcbiAgICAuYXR0cihcImZpbGxcIiwgXCIjZWVlXCIpLmF0dHIoXCJzdHJva2VcIiwgXCIjYmJiXCIpO1xuICBjb25zdCBheGlzID0gKHAsIHEsIG5hbWUpID0+IHtcbiAgICBzdmcuYXBwZW5kKFwicGF0aFwiKS5hdHRyKFwiZFwiLCBwYXRoKFtwLCBxXSkpLmF0dHIoXCJzdHJva2VcIiwgXCIjODg4XCIpO1xuICAgIGNvbnN0IFt0eCwgdHldID0gYXQoLi4ucSk7XG4gICAgc3ZnLmFwcGVuZChcInRleHRcIikuYXR0cihcInhcIiwgdHggKyA0KS5hdHRyKFwieVwiLCB0eSkuYXR0cihcImZvbnQtc2l6ZVwiLCAxMykudGV4dChuYW1lKTtcbiAgfTtcbiAgYXhpcyhbMCwgMCwgMF0sIFsyLjYsIDAsIDBdLCBcIngxXCIpO1xuICBheGlzKFswLCAwLCAwXSwgWzAsIDIuNiwgMF0sIFwieDJcIik7XG4gIGF4aXMoWzAsIDAsIC04XSwgWzAsIDAsIDhdLCBcImZcIik7XG4gIC8vIHRoZSBwbGFuZSBpdHNlbGYsIGFzIGEgbWVzaCBvZiBsaW5lcyBhbG9uZyBlYWNoIGlucHV0XG4gIHN2Zy5hcHBlbmQoXCJwYXRoXCIpLmF0dHIoXCJkXCIsIHBhdGgoY29ybmVycy5tYXAoKFthLCBiXSkgPT4gW2EsIGIsIGYoYSwgYildKSkpXG4gICAgLmF0dHIoXCJmaWxsXCIsIFwiIzFmNzdiNFwiKS5hdHRyKFwiZmlsbC1vcGFjaXR5XCIsIDAuMTgpLmF0dHIoXCJzdHJva2VcIiwgXCIjMWY3N2I0XCIpO1xuICBmb3IgKGNvbnN0IHQgb2YgdGlja3MpIHtcbiAgICBzdmcuYXBwZW5kKFwicGF0aFwiKS5hdHRyKFwiZFwiLCBwYXRoKFtbdCwgLTIsIGYodCwgLTIpXSwgW3QsIDIsIGYodCwgMildXSkpXG4gICAgICAuYXR0cihcInN0cm9rZVwiLCBcIiMxZjc3YjRcIikuYXR0cihcInN0cm9rZS1vcGFjaXR5XCIsIDAuMzUpLmF0dHIoXCJmaWxsXCIsIFwibm9uZVwiKTtcbiAgICBzdmcuYXBwZW5kKFwicGF0aFwiKS5hdHRyKFwiZFwiLCBwYXRoKFtbLTIsIHQsIGYoLTIsIHQpXSwgWzIsIHQsIGYoMiwgdCldXSkpXG4gICAgICAuYXR0cihcInN0cm9rZVwiLCBcIiMxZjc3YjRcIikuYXR0cihcInN0cm9rZS1vcGFjaXR5XCIsIDAuMzUpLmF0dHIoXCJmaWxsXCIsIFwibm9uZVwiKTtcbiAgfVxuICAvLyB0aGUgc2xpY2UgYWxvbmcgeDEgKHgyID0gMCkgaGFzIHNsb3BlIHcxOyB0aGUgc2xpY2UgYWxvbmcgeDIgaGFzIHNsb3BlIHcyXG4gIHN2Zy5hcHBlbmQoXCJwYXRoXCIpLmF0dHIoXCJkXCIsIHBhdGgoW1stMiwgMCwgZigtMiwgMCldLCBbMiwgMCwgZigyLCAwKV1dKSlcbiAgICAuYXR0cihcInN0cm9rZVwiLCBcIiNmZjdmMGVcIikuYXR0cihcInN0cm9rZS13aWR0aFwiLCAzKTtcbiAgc3ZnLmFwcGVuZChcInBhdGhcIikuYXR0cihcImRcIiwgcGF0aChbWzAsIC0yLCBmKDAsIC0yKV0sIFswLCAyLCBmKDAsIDIpXV0pKVxuICAgIC5hdHRyKFwic3Ryb2tlXCIsIFwiIzJjYTAyY1wiKS5hdHRyKFwic3Ryb2tlLXdpZHRoXCIsIDMpO1xuICBjb25zdCBbb3gsIG95XSA9IGF0KDAsIDAsIHBsYW5lQik7XG4gIHN2Zy5hcHBlbmQoXCJjaXJjbGVcIikuYXR0cihcImN4XCIsIG94KS5hdHRyKFwiY3lcIiwgb3kpLmF0dHIoXCJyXCIsIDQpLmF0dHIoXCJmaWxsXCIsIFwiIzIyMlwiKTtcbiAgc3ZnLmFwcGVuZChcInRleHRcIikuYXR0cihcInhcIiwgb3ggKyA2KS5hdHRyKFwieVwiLCBveSAtIDYpLmF0dHIoXCJmb250LXNpemVcIiwgMTMpLnRleHQoXCJiXCIpO1xuICByZXR1cm4gc3ZnLm5vZGUoKTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGFyaWFMYWJlbDogJ0NvbnRvdXIgbWFwIG9mIHRoZSBzYW1lIHBsYW5lIHNlZW4gZnJvbSBkaXJlY3RseSBhYm92ZSwgJyArXG4gICAgJ3dpdGggeDEgYWNyb3NzIGFuZCB4MiB1cCwgJyArXG4gICAgJ3NoYWRlZCBieSB0aGUgdmFsdWUgb2YgZiwgJyArXG4gICAgJ3dpdGggc3RyYWlnaHQgbGV2ZWwgbGluZXMgb25lIHVuaXQgb2YgZiBhcGFydC4nLFxuICB3aWR0aDogMzAwLCBoZWlnaHQ6IDMwMCwgbWFyZ2luTGVmdDogNDAsXG4gIHg6IHtkb21haW46IFstMiwgMl0sIGxhYmVsOiBcIngxXCJ9LFxuICB5OiB7ZG9tYWluOiBbLTIsIDJdLCBsYWJlbDogXCJ4MlwifSxcbiAgY29sb3I6IHt0eXBlOiBcImRpdmVyZ2luZ1wiLCBzY2hlbWU6IFwiUmRCdVwiLCBkb21haW46IFstOCwgOF0sIGxlZ2VuZDogdHJ1ZSwgbGFiZWw6IFwiZih4MSwgeDIpXCJ9LFxuICBtYXJrczogW1xuICAgIFBsb3QuY29udG91cih7XG4gICAgICB4MTogLTIsIHkxOiAtMiwgeDI6IDIsIHkyOiAyLFxuICAgICAgZmlsbDogKHgxLCB4MikgPT4gcGxhbmVXMSAqIHgxICsgcGxhbmVXMiAqIHgyICsgcGxhbmVCLFxuICAgICAgdGhyZXNob2xkczogZDMucmFuZ2UoLTgsIDguMDEsIDEpLCBzdHJva2U6IFwiIzMzM1wiLCBzdHJva2VPcGFjaXR5OiAwLjVcbiAgICB9KSxcbiAgICBQbG90LnJ1bGVZKFswXSwge3N0cm9rZTogXCIjZmY3ZjBlXCIsIHN0cm9rZVdpZHRoOiAzfSksXG4gICAgUGxvdC5ydWxlWChbMF0sIHtzdHJva2U6IFwiIzJjYTAyY1wiLCBzdHJva2VXaWR0aDogM30pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3BsYW5lVzEnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncGxhbmVXMicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdwbGFuZUInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncGxhbmVUdXJuJykifV19

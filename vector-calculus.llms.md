@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -267,7 +267,7 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 >
 > **Example 8 (Two unit steps compared)** Let \\{h\mathopen{}\left(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right)\mathclose{}} = 2x_1 + x_2 + 1\\, so \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}= {(2, 1)}^{\top}\\ and \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{} = \sqrt{5}\\. A step of size \\1\\ along the [unit vector](linear-algebra-vectors.llms.md#def-unit-vector) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}/ \sqrt{5}\\ raises \\h\\ by \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}} / \sqrt{5} = \sqrt{5} \approx 2.24\\. A step of size \\1\\ along \\{(1, 0)}^{\top}\\ raises it by only \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}} \cdot {(1, 0)}^{\top} = 2\\.
 
-Show R code
+Show code
 
 ``` js
 gradFns = ({
@@ -294,7 +294,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` js
 > viewof gradWhich = Inputs.radio(Object.keys(gradFns), {value: "3 w1 w2 + w2^3 - 5 w1", label: "f(w) ="})
@@ -303,7 +303,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 > viewof gradTheta = Inputs.range([0, 359], {value: 0, step: 1, label: "step direction (degrees)"})
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` js
 > {
@@ -316,7 +316,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 > }
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` js
 > {
@@ -347,7 +347,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 > }
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` js
 > Plot.plot({

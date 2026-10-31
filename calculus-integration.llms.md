@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Integration
 
@@ -51,7 +51,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > ggplot2::ggplot() +
@@ -64,7 +64,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > >
 > > \(a\) The function \\f(x) = x^2\\.
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
@@ -372,7 +372,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > ggplot2::ggplot() +
@@ -406,7 +406,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > step_df <- tibble::tibble(
@@ -753,7 +753,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > ggplot2::ggplot() +
@@ -777,7 +777,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > >
 > > \(a\) \\f(t) = 2t\\; shaded area equals \\F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\.
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > slope_df <- tibble::tibble(
@@ -845,7 +845,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > ggplot2::ggplot() +
@@ -866,7 +866,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > >
 > > \(a\) PDF with \\{\lambda}= 1\\; shaded area equals \\F(2) \approx 0.865\\.
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > ggplot2::ggplot() +

@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 18:45:42 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-column-null-space" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Column space and null space</h2>
 <div id="def-column-space" class="theorem definition">
@@ -1237,7 +1237,7 @@ y = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphant
 </section><section class="slide level2"><div id="exm-hyperplane-graph" class="theorem example">
 <p><span class="theorem-title"><strong>Example 24 (The graph of a line is a line in the plane)</strong></span> Take <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}= 2\)</span>, <span class="math inline">\(b = 1\)</span>. The <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(y = 2x + 1\)</span> is the <a href="./sets.html#def-set">set</a> of points <span class="math inline">\((x, y)\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> with <span class="math inline">\(2x - y + 1 = 0\)</span>. By <a href="#/thm-hyperplane-graph" class="quarto-xref">Theorem&nbsp;15</a>, this is a <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a> with <a href="./linear-algebra-matrices.html#def-normal-vector">normal vector</a> <span class="math inline">\((2, -1)\)</span>. The point <span class="math inline">\((0, 1)\)</span> is on it, since <span class="math inline">\(2 \cdot 0 - 1 + 1 = 0\)</span>. The point <span class="math inline">\((0, 0)\)</span> is off it, since <span class="math inline">\(2 \cdot 0 - 0 + 1 = 1 \ne 0\)</span>. <a href="#/fig-hyperplane-graph" class="quarto-xref">Figure&nbsp;1</a> shows the line, the two points, and the normal vector drawn from <span class="math inline">\((0, 1)\)</span>.</p>
 <div class="cell">
-<details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>arrow_length <span class="ot">&lt;-</span> grid<span class="sc">::</span><span class="fu">unit</span>(<span class="fl">0.15</span>, <span class="st">"inches"</span>)</span>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>arrow_length <span class="ot">&lt;-</span> grid<span class="sc">::</span><span class="fu">unit</span>(<span class="fl">0.15</span>, <span class="st">"inches"</span>)</span>
 <span id="cb2-2"><a aria-label="2"></a>normal_arrow <span class="ot">&lt;-</span> grid<span class="sc">::</span><span class="fu">arrow</span>(<span class="at">length =</span> arrow_length)</span>
 <span id="cb2-3"><a aria-label="3"></a>point_x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
 <span id="cb2-4"><a aria-label="4"></a>point_y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>)</span>
@@ -1345,7 +1345,7 @@ Figure&nbsp;1: The graph of <span class="math inline">\(y = 2x + 1\)</span>, a l
 </section><section class="slide level2"><div id="exm-half-space-iris" class="theorem example">
 <p><span class="theorem-title"><strong>Example 26 (Two iris species on either side of a line)</strong></span> The <code>iris</code> data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)\)</span> be the petal length and petal width of one flower. A logistic regression of the species on <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> gives a coefficient vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and an intercept <span class="math inline">\(b\)</span>. The line <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\)</span> is a hyperplane in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;22 in Matrices</a>), and the two species mostly fall in its two open half-spaces (<a href="#/def-half-space" class="quarto-xref">Definition&nbsp;9</a>). <a href="#/fig-half-space-iris" class="quarto-xref">Figure&nbsp;2</a> shows the line and the flowers.</p>
 <div class="cell">
-<details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>two_species <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(iris, Species <span class="sc">!=</span> <span class="st">"setosa"</span>) <span class="sc">|&gt;</span> <span class="fu">droplevels</span>()</span>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>two_species <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(iris, Species <span class="sc">!=</span> <span class="st">"setosa"</span>) <span class="sc">|&gt;</span> <span class="fu">droplevels</span>()</span>
 <span id="cb3-2"><a aria-label="2"></a>fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
 <span id="cb3-3"><a aria-label="3"></a>  Species <span class="sc">~</span> Petal.Length <span class="sc">+</span> Petal.Width,</span>
 <span id="cb3-4"><a aria-label="4"></a>  <span class="at">family =</span> binomial,</span>
@@ -1868,6 +1868,50 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script><script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

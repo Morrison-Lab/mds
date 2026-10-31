@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Measures
 
@@ -125,7 +125,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > aeg_x_pf <- seq(-3, 3, length.out = 301)
@@ -142,7 +142,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "x", y = "g(x)")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt

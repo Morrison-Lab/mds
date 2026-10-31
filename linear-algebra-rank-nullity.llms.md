@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Column space and null space
 
@@ -604,7 +604,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > **Example 24 (The graph of a line is a line in the plane)** Take \\p = 1\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}= 2\\, \\b = 1\\. The [graph](functions.llms.md#def-graph) of \\y = 2x + 1\\ is the [set](sets.llms.md#def-set) of points \\(x, y)\\ in \\\mathbb{R}^2\\ with \\2x - y + 1 = 0\\. By [Theorem 15](#thm-hyperplane-graph), this is a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) \\(2, -1)\\. The point \\(0, 1)\\ is on it, since \\2 \cdot 0 - 1 + 1 = 0\\. The point \\(0, 0)\\ is off it, since \\2 \cdot 0 - 0 + 1 = 1 \ne 0\\. [Figure 1](#fig-hyperplane-graph) shows the line, the two points, and the normal vector drawn from \\(0, 1)\\.
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > arrow_length <- grid::unit(0.15, "inches")
@@ -694,7 +694,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > **Example 26 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\\ gives a coefficient vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}}\\ and an intercept \\b\\. The line \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{w}}\vphantom{w}} \cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} + b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 9](#def-half-space)). [Figure 2](#fig-half-space-iris) shows the line and the flowers.
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > two_species <- dplyr::filter(iris, Species != "setosa") |> droplevels()

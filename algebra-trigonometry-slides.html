@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 18:45:42 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-cosine-sine" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Cosine and sine</h2>
 <div id="def-unit-circle" class="theorem definition">
@@ -464,7 +464,7 @@
 \end{aligned}
 \]</span></p>
 <p>so <span class="math inline">\(\cos(\pi/3) = x_1 = \tfrac{1}{2}\)</span>, and then <span class="math inline">\(\sin(\pi/3) = \sqrt{1 - \tfrac{1}{4}} = \tfrac{\sqrt{3}}{2}\)</span>. To three decimal places these are 0.5 and 0.866. As <a href="#/thm-cosine-sine-identity" class="quarto-xref">Theorem&nbsp;1</a> says, the squared coordinates add to 1.</p>
-<details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="co"># angle in radians, and the point it reaches on the unit circle</span></span>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="co"># angle in radians, and the point it reaches on the unit circle</span></span>
 <span id="cb1-2"><a aria-label="2"></a>angle <span class="ot">&lt;-</span> pi <span class="sc">/</span> <span class="dv">3</span></span>
 <span id="cb1-3"><a aria-label="3"></a>point <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="fu">cos</span>(angle), <span class="at">x2 =</span> <span class="fu">sin</span>(angle))</span>
 <span id="cb1-4"><a aria-label="4"></a></span>
@@ -956,6 +956,50 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script><script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

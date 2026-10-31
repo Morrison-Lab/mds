@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 18:45:42 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-critical-points" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Critical points and optimization</h2>
 <div id="def-flat-point" class="theorem definition">
@@ -371,7 +371,7 @@
 <span class="math inline">\(h(w) = w^2\)</span> has <span class="math inline">\(h'(1) = 2 \ne 0\)</span>, so <span class="math inline">\(1\)</span> is not a flat point.</li>
 </ul>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>fp_w_ff <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>fp_w_ff <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
 <span id="cb1-2"><a aria-label="2"></a>fp_cube_ff <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
 <span id="cb1-3"><a aria-label="3"></a>  <span class="at">w =</span> fp_w_ff, <span class="at">value =</span> fp_w_ff<span class="sc">^</span><span class="dv">3</span>, <span class="at">panel =</span> <span class="st">"f(w) = w^3"</span></span>
 <span id="cb1-4"><a aria-label="4"></a>)</span>
@@ -398,7 +398,7 @@
 <span id="cb1-25"><a aria-label="25"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_shape_manual</span>(<span class="at">values =</span> fp_shapes_ff) <span class="sc">+</span></span>
 <span id="cb1-26"><a aria-label="26"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>panel, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
 <span id="cb1-27"><a aria-label="27"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"w"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">shape =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a aria-label="3"></a></span>
 <span id="cb2-4"><a aria-label="4"></a>fp_w_ff <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">201</span>)</span>
@@ -548,7 +548,7 @@ f'(0) &amp;= 3 \cdot 0^2 \\
 <li><p><span class="math inline">\(h(w) = w^2\)</span> is differentiable everywhere, with <span class="math inline">\(h'(w) = 2w\)</span>, which is <span class="math inline">\(0\)</span> only at <span class="math inline">\(w = 0\)</span>. So <span class="math inline">\(0\)</span> is the only critical point of <span class="math inline">\(h\)</span>. For example, <span class="math inline">\(h'(1) = 2 \ne 0\)</span>, so <span class="math inline">\(1\)</span> is not one.</p></li>
 </ul>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>cp_w_fc <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>cp_w_fc <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
 <span id="cb3-2"><a aria-label="2"></a>cp_abs_value_fc <span class="ot">&lt;-</span> <span class="fu">abs</span>(cp_w_fc)</span>
 <span id="cb3-3"><a aria-label="3"></a>cp_abs_fc <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">w =</span> cp_w_fc, <span class="at">value =</span> cp_abs_value_fc, <span class="at">panel =</span> <span class="st">"|w|"</span>)</span>
 <span id="cb3-4"><a aria-label="4"></a>cp_cube_fc <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">w =</span> cp_w_fc, <span class="at">value =</span> cp_w_fc<span class="sc">^</span><span class="dv">3</span>, <span class="at">panel =</span> <span class="st">"w^3"</span>)</span>
@@ -573,7 +573,7 @@ f'(0) &amp;= 3 \cdot 0^2 \\
 <span id="cb3-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_shape_manual</span>(<span class="at">values =</span> cp_shapes_fc) <span class="sc">+</span></span>
 <span id="cb3-24"><a aria-label="24"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>panel, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
 <span id="cb3-25"><a aria-label="25"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"w"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">shape =</span> <span class="st">"critical point"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a aria-label="3"></a></span>
 <span id="cb4-4"><a aria-label="4"></a>cp_w_fc <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">201</span>)</span>
@@ -648,7 +648,7 @@ Figure&nbsp;2: These are the <a href="./functions.html#def-function">functions</
 </div>
 <p>The derivative is <span class="math inline">\(0\)</span> at 2 of the 5 points, namely <span class="math inline">\(w = -1\)</span> and <span class="math inline">\(w = 1\)</span>. Both points are <a href="#/def-flat-point">flat points</a> of <span class="math inline">\(f\)</span>, since the derivative is <span class="math inline">\(0\)</span> there, so by <a href="#/thm-flat-point-critical" class="quarto-xref">Theorem&nbsp;1</a> they are <a href="#/def-critical-point">critical points</a>. The difference quotients of <span class="math inline">\(g\)</span> at <span class="math inline">\(0\)</span> are -1 from the left and 1 from the right, so <span class="math inline">\(g\)</span> has no derivative at <span class="math inline">\(0\)</span>. Thus <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;2</a>), but not a flat point.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>fpc_w_fk <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>fpc_w_fk <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
 <span id="cb7-2"><a aria-label="2"></a>fpc_curve_fk <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">w =</span> fpc_w_fk, <span class="at">value =</span> fpc_w_fk<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span> <span class="dv">3</span> <span class="sc">*</span> fpc_w_fk)</span>
 <span id="cb7-3"><a aria-label="3"></a>fpc_flat_w_fk <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
 <span id="cb7-4"><a aria-label="4"></a>fpc_flat_value_fk <span class="ot">&lt;-</span> fpc_flat_w_fk<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span> <span class="dv">3</span> <span class="sc">*</span> fpc_flat_w_fk</span>
@@ -658,7 +658,7 @@ Figure&nbsp;2: These are the <a href="./functions.html#def-function">functions</
 <span id="cb7-8"><a aria-label="8"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"#0072B2"</span>) <span class="sc">+</span></span>
 <span id="cb7-9"><a aria-label="9"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> fpc_flat_fk, <span class="at">colour =</span> <span class="st">"#D55E00"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
 <span id="cb7-10"><a aria-label="10"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"w"</span>, <span class="at">y =</span> <span class="st">"f(w)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb8-3"><a aria-label="3"></a></span>
 <span id="cb8-4"><a aria-label="4"></a>fpc_w_fk <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>, <span class="dv">201</span>)</span>
@@ -884,7 +884,7 @@ g(-h) &amp;= -h^3 \\
 </section><section class="slide level2"><div id="exm-stationary-point" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (A stationary point, and a point that is not one)</strong></span> Let <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1\)</span>. Its gradient is <span class="math inline">\({(2 x_1 - 2,\ 2 x_2)}^{\top}\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}\)</span> exactly when <span class="math inline">\(x_1 = 1\)</span> and <span class="math inline">\(x_2 = 0\)</span>. So <span class="math inline">\({(1, 0)}^{\top}\)</span> is its only stationary point, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> is not one: the gradient there is <span class="math inline">\({(-2, 0)}^{\top}\)</span>.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a>sp_x1_fs <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a>sp_x1_fs <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
 <span id="cb9-2"><a aria-label="2"></a>sp_x2_fs <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
 <span id="cb9-3"><a aria-label="3"></a>sp_grid_fs <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">x1 =</span> sp_x1_fs, <span class="at">x2 =</span> sp_x2_fs)</span>
 <span id="cb9-4"><a aria-label="4"></a>sp_grid_fs<span class="sc">$</span>value <span class="ot">&lt;-</span> sp_grid_fs<span class="sc">$</span>x1<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> sp_grid_fs<span class="sc">$</span>x2<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> sp_grid_fs<span class="sc">$</span>x1</span>
@@ -905,7 +905,7 @@ g(-h) &amp;= -h^3 \\
 <span id="cb9-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_shape_manual</span>(<span class="at">values =</span> sp_shapes_fs) <span class="sc">+</span></span>
 <span id="cb9-20"><a aria-label="20"></a>  ggplot2<span class="sc">::</span><span class="fu">coord_fixed</span>() <span class="sc">+</span></span>
 <span id="cb9-21"><a aria-label="21"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x1"</span>, <span class="at">y =</span> <span class="st">"x2"</span>, <span class="at">shape =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb10-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-3"><a aria-label="3"></a></span>
 <span id="cb10-4"><a aria-label="4"></a>sp_x1_fs <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">101</span>)</span>
@@ -1872,6 +1872,50 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script><script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

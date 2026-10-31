@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Matrices
 
@@ -571,7 +571,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` js
 > viewof planeW1 = Inputs.range([-1.5, 1.5], {value: 1, step: 0.1, label: "w1"})
@@ -580,7 +580,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 > viewof planeTurn = Inputs.range([0, 360], {value: 30, step: 5, label: "turn the view"})
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` js
 > {
@@ -593,7 +593,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 > }
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` js
 > // The graph z = f(x1, x2) over the square [-2, 2] x [-2, 2], drawn in 3-D:
@@ -647,7 +647,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 > }
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` js
 > Plot.plot({

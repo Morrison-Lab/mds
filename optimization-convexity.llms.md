@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Convexity in several variables
 
@@ -38,7 +38,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > cs_angle_fc <- seq(0, 2 * pi, length.out = 201)
@@ -63,7 +63,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "x1", y = "x2")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -168,7 +168,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > cm_x_fm <- seq(-1, 3, length.out = 201)
@@ -216,7 +216,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "x", y = NULL)
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -261,7 +261,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > ep_x_fe <- seq(-2, 2, length.out = 201)
@@ -289,7 +289,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "x", y = "s", shape = NULL)
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -412,7 +412,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > tl_x_ft <- seq(-1, 3, length.out = 201)
@@ -429,7 +429,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "x", y = "s")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt

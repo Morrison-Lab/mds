@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 The linear algebra notes are split across these pages:
 
@@ -31,7 +31,7 @@ A link to a section, theorem or definition on this page from before the split go
 
 > **NOTE:**
 >
-> *Remark 1* (Linear algebra and matrix analysis). [Matrix analysis](#def-matrix-analysis) is usually placed within [linear algebra](linear-algebra.llms.md) and its applications [\[1\]](#ref-wikipedia_matrix_analysis), and these notes do not treat it as a separate subject: they use the name *linear algebra* for the material in the pages above. Banerjee and Roy [\[2\]](#ref-banerjee2014linear) pairs the two names in its title. Its preface says that one of its last chapters covers [convergence](algebra-exponentials.llms.md#def-convergent-sequence) of [matrices](linear-algebra-matrices.llms.md#def-matrix) [\[2, p. xvi\]](#ref-banerjee2014linear).
+> *Remark 1* (Linear algebra and matrix analysis). [Matrix analysis](#def-matrix-analysis) is usually placed within [linear algebra](linear-algebra.llms.md) and its applications [\[1\]](#ref-wikipedia_matrix_analysis), and these notes do not treat it as a separate subject: they use the name *linear algebra* for the material in the pages above. Banerjee and Roy [\[2\]](#ref-banerjee2014linear) pairs the two names in its title. Its preface says that its last two chapters cover [convergence](algebra-exponentials.llms.md#def-convergent-sequence) of [matrices](linear-algebra-matrices.llms.md#def-matrix) and [Hilbert spaces](linear-algebra-inner-products.llms.md#def-hilbert-space) [\[2, p. xvi\]](#ref-banerjee2014linear).
 
 ## 0.1 Further reading
 

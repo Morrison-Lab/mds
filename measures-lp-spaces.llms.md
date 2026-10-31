@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 \\L^p\\ spaces
 
@@ -26,7 +26,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > lpna_x_pf <- seq(0, 1, length.out = 201)
@@ -46,7 +46,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "x", y = "|f(x)|^p")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -89,7 +89,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > lpss_x_pf <- seq(0.01, 1, length.out = 400)
@@ -116,7 +116,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "x", y = "|f(x)|^p")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -187,7 +187,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > esn_x_pf <- seq(0, 1, length.out = 101)
@@ -203,7 +203,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "s", y = "f(s)")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt

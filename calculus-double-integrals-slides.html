@@ -359,7 +359,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 18:45:42 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-double-integrals" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Double Integrals</h2>
 <p>The <strong>Fubini–Tonelli theorem</strong> states conditions under which the order of integration in a double integral can be exchanged <span class="citation" data-cites="wikipedia_tonelli_s_theorem"><a href="#/further-reading" role="doc-biblioref" onclick="">[1]</a></span>. We state them in two settings: the Riemann version (<a href="#/thm-fubini" class="quarto-xref">Theorem&nbsp;1</a>) is what applied courses usually use for double integrals of continuous functions on simple regions; the <a href="./measures-measure-spaces.html#def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measure-theoretic versions (<a href="#/thm-tonelli-measure" class="quarto-xref">Theorem&nbsp;4</a> and <a href="#/thm-fubini-measure" class="quarto-xref">Theorem&nbsp;5</a>) are included to make the <a href="https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint">joint-distribution form</a> corollary in <em>Probability for Data Science</em> follow from a stated theorem rather than from an aside.</p>
@@ -443,7 +443,7 @@
 <p><span class="math display">\[{\mathbb{E}\mathopen{}\left[g(X, Y)\right]\mathclose{}} = \iint_{[0, 1]^2} g(x, y)\,dA.\]</span></p>
 <p>The <a href="./indicator-functions.html#def-indicator-function">indicator</a> factor <span class="math inline">\({\mathbb{1}\mathopen{}\left(y \le x\right)\mathclose{}}\)</span> equals <span class="math inline">\(1\)</span> on the triangular region where <span class="math inline">\(y \le x\)</span> and <span class="math inline">\(0\)</span> elsewhere, so only that region, namely <span class="math inline">\(D = \{(x, y) : x \in [0, 1],\; y \in [0, x]\}\)</span> (<a href="#/fig-fubini-nonrect-region" class="quarto-xref">Figure&nbsp;1</a>), contributes, and there <span class="math inline">\(g(x, y) = \text{e}^{-x^2}\)</span>:</p>
 <p><span class="math display">\[{\mathbb{E}\mathopen{}\left[g(X, Y)\right]\mathclose{}} = \iint_D \text{e}^{-x^2}\,dA.\]</span></p>
-<details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>region <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>region <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
 <span id="cb1-2"><a aria-label="2"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(region, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
 <span id="cb1-3"><a aria-label="3"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_polygon</span>(</span>
 <span id="cb1-4"><a aria-label="4"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span></span>
@@ -527,7 +527,7 @@ Figure&nbsp;1: Triangular integration region <span class="math inline">\(D = \{(
 \end{aligned}
 \]</span></p>
 <p>The solid whose volume equals this integral is shown in <a href="#/fig-fubini-nonrect" class="quarto-xref">Figure&nbsp;2</a>.</p>
-<details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>n_grid <span class="ot">&lt;-</span> <span class="dv">51</span></span>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>n_grid <span class="ot">&lt;-</span> <span class="dv">51</span></span>
 <span id="cb2-2"><a aria-label="2"></a>x_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> n_grid)</span>
 <span id="cb2-3"><a aria-label="3"></a>y_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> n_grid)</span>
 <span id="cb2-4"><a aria-label="4"></a></span>
@@ -670,7 +670,7 @@ Figure&nbsp;2: Surface <span class="math inline">\(z = e^{-x^2}\)</span> over th
 <p><strong>Why <a href="#/thm-fubini" class="quarto-xref">Theorem&nbsp;1</a>’s condition fails:</strong> <a href="#/thm-fubini" class="quarto-xref">Theorem&nbsp;1</a> requires <span class="math inline">\(f\)</span> to be <strong>continuous</strong> on <span class="math inline">\(R\)</span>. The denominator <span class="math inline">\((x^2 + y^2)^2\)</span> vanishes at the origin <span class="math inline">\((0, 0) \in R\)</span>, so <span class="math inline">\(f\)</span> is <em>not even defined</em> there — let alone continuous — and the theorem does not apply.</p>
 <p><span class="citation" data-cites="wp:fubini"><a href="#/further-reading" role="doc-biblioref" onclick="">[5]</a></span></p>
 <p><a href="#/fig-fubini-fail" class="quarto-xref">Figure&nbsp;3</a> shows the surface. The failure comes from the origin, where <span class="math inline">\(f\)</span> is undefined and unbounded.</p>
-<details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>n_grid <span class="ot">&lt;-</span> <span class="dv">81</span></span>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>n_grid <span class="ot">&lt;-</span> <span class="dv">81</span></span>
 <span id="cb3-2"><a aria-label="2"></a>eps <span class="ot">&lt;-</span> <span class="fl">0.04</span></span>
 <span id="cb3-3"><a aria-label="3"></a>x_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(eps, <span class="dv">1</span>, <span class="at">length.out =</span> n_grid)</span>
 <span id="cb3-4"><a aria-label="4"></a>y_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(eps, <span class="dv">1</span>, <span class="at">length.out =</span> n_grid)</span>
@@ -728,7 +728,7 @@ Figure&nbsp;3: Surface <span class="math inline">\(f(x, y) = (x^2 - y^2)/(x^2 + 
 <p>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be <a href="https://morrison-lab.github.io/pds/independence.html#def-indpt">independent</a> <a href="https://morrison-lab.github.io/pds/random-variables.html#def-uniform"><span class="math inline">\(\operatorname{Uniform}(0, 1)\)</span></a> <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variables</a>, with <a href="https://morrison-lab.github.io/pds/random-variables.html#def-pdf">joint density</a> <span class="math inline">\(f(x, y) = 1\)</span> on the unit square <span class="math inline">\(R = \{(x, y) : x \in [0, 1],\; y \in [0, 1]\}\)</span> (<a href="#/fig-fubini-rect-region" class="quarto-xref">Figure&nbsp;4</a>). Define the function <span class="math inline">\(g(x, y) = x^2 + y^2\)</span>, and compute its <a href="https://morrison-lab.github.io/pds/expectation.html#def-expectation">expectation</a> <span class="math inline">\({\mathbb{E}\mathopen{}\left[g(X, Y)\right]\mathclose{}}\)</span>.</p>
 <p>Because the joint density equals <span class="math inline">\(1\)</span> on <span class="math inline">\(R\)</span>, this expectation is the double integral of <span class="math inline">\(g\)</span> over <span class="math inline">\(R\)</span>:</p>
 <p><span class="math display">\[{\mathbb{E}\mathopen{}\left[g(X, Y)\right]\mathclose{}} = \iint_R \mathopen{}\left(x^2 + y^2\right)\mathclose{}\,dA.\]</span></p>
-<details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb4-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">annotate</span>(</span>
 <span id="cb4-3"><a aria-label="3"></a>    <span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="dv">1</span>, <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="dv">1</span>,</span>
 <span id="cb4-4"><a aria-label="4"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span></span>
@@ -797,7 +797,7 @@ Figure&nbsp;4: Integration region <span class="math inline">\(R = [0, 1]^2\)</sp
 \end{aligned}
 \]</span></p>
 <p>The solid whose volume equals this integral is shown in <a href="#/fig-fubini-rect" class="quarto-xref">Figure&nbsp;5</a>.</p>
-<details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>n_grid <span class="ot">&lt;-</span> <span class="dv">41</span></span>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>n_grid <span class="ot">&lt;-</span> <span class="dv">41</span></span>
 <span id="cb5-2"><a aria-label="2"></a>x_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> n_grid)</span>
 <span id="cb5-3"><a aria-label="3"></a>y_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> n_grid)</span>
 <span id="cb5-4"><a aria-label="4"></a>z_mat <span class="ot">&lt;-</span> <span class="fu">outer</span>(x_seq, y_seq, <span class="cf">function</span>(x, y) x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> y<span class="sc">^</span><span class="dv">2</span>)</span>
@@ -1520,6 +1520,50 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script><script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

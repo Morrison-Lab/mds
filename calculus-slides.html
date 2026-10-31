@@ -291,7 +291,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 18:45:42 (PDT)</p>
 </section><section class="slide level2"><p>The calculus notes are split across these pages:</p>
 <ul>
 <li>
@@ -739,6 +739,50 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script><script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
     </script><script type="ojs-module-contents">
     eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIGYodykgPSB3XjIgLSA0dyArIDcgYW5kIGl0cyBkZXJpdmF0aXZlLCBmcm9tIHRoZSBmbGF0LXBvaW50IGV4ZXJjaXNlXG50YW5GID0gKHcpID0+IHcgKiB3IC0gNCAqIHcgKyA3XG50YW5EZiA9ICh3KSA9PiAyICogdyAtIDRcbnRhblByZWQgPSB0YW5GKHRhblcpICsgdGFuRXBzICogdGFuRGYodGFuVylcbnRhbkV4YWN0ID0gdGFuRih0YW5XICsgdGFuRXBzKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHRhblcgPSBJbnB1dHMucmFuZ2UoWy0xLCA0XSwge3ZhbHVlOiAxLCBzdGVwOiAwLjA1LCBsYWJlbDogXCJ3XCJ9KVxudmlld29mIHRhbkVwcyA9IElucHV0cy5yYW5nZShbMC4wMSwgMl0sIHt2YWx1ZTogMC41LCB0cmFuc2Zvcm06IE1hdGgubG9nLCBsYWJlbDogXCJzdGVwIFxcdTAzYjVcIiwgZm9ybWF0OiBkMy5mb3JtYXQoXCIuM35mXCIpfSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1kYEF0IHcgPSAke3RhblcudG9GaXhlZCgyKX0sIGYodykgPSAke3RhbkYodGFuVykudG9GaXhlZCg0KX0gYW5kIGZcXHUyMDMyKHcpID0gJHt0YW5EZih0YW5XKS50b0ZpeGVkKDIpfS5cblxuQSBzdGVwIG9mIFxcdTAzYjUgPSAke3RhbkVwcy50b0ZpeGVkKDMpfTpcblxuLSBwcmVkaWN0ZWQgYnkgdGhlIHRhbmdlbnQgbGluZSwgZih3KSArIFxcdTAzYjUgZlxcdTIwMzIodykgPSAke3RhblByZWQudG9GaXhlZCg0KX07XG4tIGV4YWN0LCBmKHcgKyBcXHUwM2I1KSA9ICR7dGFuRXhhY3QudG9GaXhlZCg0KX07XG4tIGVycm9yICR7KHRhbkV4YWN0IC0gdGFuUHJlZCkudG9QcmVjaXNpb24oMyl9LCBhbmQgZXJyb3IgLyBcXHUwM2I1XFx1MDBiMiA9ICR7KCh0YW5FeGFjdCAtIHRhblByZWQpIC8gdGFuRXBzICoqIDIpLnRvRml4ZWQoMyl9LmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGFyaWFMYWJlbDogJ1RoZSBwYXJhYm9sYSBmIG9mIHcsICcgK1xuICAgICd3aXRoIHRoZSB0YW5nZW50IGxpbmUgYXQgdGhlIGNob3NlbiB3LCAnICtcbiAgICAnYW5kIHR3byBwb2ludHMgYWJvdmUgdyBwbHVzIGVwc2lsb246ICcgK1xuICAgICdvbmUgb24gdGhlIHRhbmdlbnQgbGluZSAodGhlIHByZWRpY3Rpb24pIGFuZCBvbmUgb24gdGhlIGN1cnZlICh0aGUgZXhhY3QgdmFsdWUpLCAnICtcbiAgICAnam9pbmVkIGJ5IGEgcmVkIHNlZ21lbnQgc2hvd2luZyB0aGUgZXJyb3IuJyxcbiAgd2lkdGg6IDQ2MCwgaGVpZ2h0OiAzNDAsIGdyaWQ6IHRydWUsXG4gIHg6IHtkb21haW46IFstMS41LCA2LjVdLCBsYWJlbDogXCJ3XCJ9LFxuICB5OiB7ZG9tYWluOiBbMCwgMjBdLCBsYWJlbDogXCJmKHcpXCJ9LFxuICBtYXJrczogW1xuICAgIFBsb3QubGluZShkMy5yYW5nZSgtMS41LCA2LjUxLCAwLjA1KSwge3g6ICh3KSA9PiB3LCB5OiB0YW5GLCBzdHJva2U6IFwiIzU1NVwiLCBzdHJva2VXaWR0aDogMiwgY2xpcDogdHJ1ZX0pLFxuICAgIFBsb3QubGluZShbLTEuNSwgNi41XSwge3g6ICh3KSA9PiB3LCB5OiAodykgPT4gdGFuRih0YW5XKSArICh3IC0gdGFuVykgKiB0YW5EZih0YW5XKSxcbiAgICAgICAgICAgICAgICAgICAgICAgIHN0cm9rZTogXCIjMWY3N2I0XCIsIHN0cm9rZVdpZHRoOiAyLCBzdHJva2VEYXNoYXJyYXk6IFwiNiw0XCIsIGNsaXA6IHRydWV9KSxcbiAgICBQbG90LnJ1bGVYKFt0YW5XICsgdGFuRXBzXSwge3N0cm9rZTogXCIjYmJiXCIsIHN0cm9rZURhc2hhcnJheTogXCIyLDNcIn0pLFxuICAgIFBsb3QubGluayhbMF0sIHt4MTogdGFuVyArIHRhbkVwcywgeDI6IHRhblcgKyB0YW5FcHMsIHkxOiB0YW5QcmVkLCB5MjogdGFuRXhhY3QsXG4gICAgICAgICAgICAgICAgICAgIHN0cm9rZTogXCIjZDYyNzI4XCIsIHN0cm9rZVdpZHRoOiAzLCBjbGlwOiB0cnVlfSksXG4gICAgUGxvdC5kb3QoW1t0YW5XLCB0YW5GKHRhblcpXV0sIHt4OiAoZCkgPT4gZFswXSwgeTogKGQpID0+IGRbMV0sIHI6IDUsIGZpbGw6IFwiIzIyMlwifSksXG4gICAgUGxvdC5kb3QoW1t0YW5XICsgdGFuRXBzLCB0YW5QcmVkXV0sIHt4OiAoZCkgPT4gZFswXSwgeTogKGQpID0+IGRbMV0sIHI6IDQsIGZpbGw6IFwiIzFmNzdiNFwiLCBjbGlwOiB0cnVlfSksXG4gICAgUGxvdC5kb3QoW1t0YW5XICsgdGFuRXBzLCB0YW5FeGFjdF1dLCB7eDogKGQpID0+IGRbMF0sIHk6IChkKSA9PiBkWzFdLCByOiA0LCBmaWxsOiBcIiM1NTVcIiwgY2xpcDogdHJ1ZX0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3RhblcnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndGFuRXBzJykifV19
     </script><script type="module">

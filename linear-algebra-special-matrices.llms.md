@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Special Matrices
 
@@ -1239,7 +1239,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > axis_values <- seq(-2, 2, length.out = 41)

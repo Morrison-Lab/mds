@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 18:45:42 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-gradient-descent" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Gradient descent</h2>
 <div id="def-gradient-descent" class="theorem definition">
@@ -599,7 +599,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <p>The <a href="./functions.html#def-function">function</a> is <span class="math inline">\(0\)</span> at <span class="math inline">\((1, 1)\)</span> and positive everywhere else, because both of its parts are non-negative and vanish together only when <span class="math inline">\(x_1 = 1\)</span> and <span class="math inline">\(x_2 = 1\)</span>. So <span class="math inline">\((1, 1)\)</span> is the <a href="./algebra-basics.html#def-global-minimizer">global minimizer</a>. At the starting point the <a href="./functions.html#def-value">value</a> is 24.2, mostly from the first <a href="./algebra-sums.html#def-term">term</a>, because <span class="math inline">\((-1.2, 1)\)</span> is off the curve <span class="math inline">\(x_2 = x_1^2\)</span>. On the curve the function is <span class="math inline">\((1 - x_1)^2\)</span>, which varies slowly compared with the steep walls.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="fu">library</span>(ggplot2)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb3-2"><a aria-label="2"></a>rf_grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
 <span id="cb3-3"><a aria-label="3"></a>  <span class="at">x1 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">201</span>),</span>
 <span id="cb3-4"><a aria-label="4"></a>  <span class="at">x2 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
@@ -627,7 +627,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <span id="cb3-26"><a aria-label="26"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
 <span id="cb3-27"><a aria-label="27"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x1"</span>, <span class="at">y =</span> <span class="st">"x2"</span>, <span class="at">colour =</span> <span class="cn">NULL</span>, <span class="at">shape =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
 <span id="cb3-28"><a aria-label="28"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a aria-label="3"></a></span>
 <span id="cb4-4"><a aria-label="4"></a>g1_rf, g2_rf <span class="op">=</span> np.meshgrid(np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">201</span>), np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">201</span>))</span>
@@ -763,7 +763,7 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 </div>
 <p>Each of the six starts between <span class="math inline">\(-1.5\)</span> and <span class="math inline">\(1.5\)</span> ends at <span class="math inline">\(-1\)</span> or <span class="math inline">\(1\)</span>, whichever lies on its own side of <span class="math inline">\(0\)</span>, so for these starts the sign of the starting point decides which of the two the run reaches. A run from <span class="math inline">\(0\)</span> itself never moves, because <span class="math inline">\(\frac{\partial}{\partial x} f(0) = 0\)</span>. The <a href="#/def-basin-of-attraction">basin of attraction</a> of <span class="math inline">\(1\)</span> is not all of <span class="math inline">\((0, \infty)\)</span>: the first step from <span class="math inline">\({{x}^{(0)}} = 3\)</span> lands at <span class="math inline">\(-1.8\)</span>, on the other side of <span class="math inline">\(0\)</span>, and the run ends at <span class="math inline">\(-1\)</span>. From <span class="math inline">\({{x}^{(0)}} = 4\)</span> the <a href="./optimization-newton.html#def-iterate">iterates</a>, starting with <span class="math inline">\({{x}^{(0)}}\)</span> itself, are <span class="math inline">\(4\)</span>, <span class="math inline">\(-8\)</span>, <span class="math inline">\(92.8\)</span> and <span class="math inline">\(-1.6\times 10^{5}\)</span>, which grow in <a href="./algebra-basics.html#def-absolute-value">absolute value</a> at every step shown. Both of these starts are far from <span class="math inline">\(0\)</span>, where the <a href="./calculus-derivatives.html#def-derivative">derivative</a> is large and so the step <span class="math inline">\(s\frac{\partial}{\partial x} f(x)\)</span> is long. From <span class="math inline">\({{x}^{(0)}} = 3\)</span> that step is <span class="math inline">\(96\,s\)</span> long, so the first step stays on the positive side of <span class="math inline">\(0\)</span> only when <span class="math inline">\(s\)</span> is below <span class="math inline">\(0.03125\)</span>. So the basin of <span class="math inline">\(1\)</span> depends on <span class="math inline">\(s\)</span>, and with <span class="math inline">\(s= 0.05\)</span> the basin is not a half-line.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-label="1"></a><span class="co"># Uses basin_step_bs and basin_starts_bs from the example above.</span></span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-label="1"></a><span class="co"># Uses basin_step_bs and basin_starts_bs from the example above.</span></span>
 <span id="cb8-2"><a aria-label="2"></a>basin_runs_bf <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, <span class="at">nrow =</span> <span class="dv">31</span>, <span class="at">ncol =</span> <span class="dv">6</span>)</span>
 <span id="cb8-3"><a aria-label="3"></a>basin_runs_bf[<span class="dv">1</span>, ] <span class="ot">&lt;-</span> basin_starts_bs[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>]</span>
 <span id="cb8-4"><a aria-label="4"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>) {</span>
@@ -792,7 +792,7 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb8-27"><a aria-label="27"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_colour_manual</span>(<span class="at">values =</span> basin_colours_bf) <span class="sc">+</span></span>
 <span id="cb8-28"><a aria-label="28"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"f(x)"</span>, <span class="at">colour =</span> <span class="cn">NULL</span>, <span class="at">shape =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
 <span id="cb8-29"><a aria-label="29"></a>  ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb9-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-3"><a aria-label="3"></a></span>
 <span id="cb9-4"><a aria-label="4"></a><span class="kw">def</span> basin_cost_bf(x):</span>
@@ -910,7 +910,7 @@ function or its scalar variable, and the basin example writes f(x) the same way.
 <p>Let <span class="math inline">\(f(x) = \log\mathopen{}\left(1 + \text{e}^{-x}\right)\mathclose{}\)</span>. Its <a href="./calculus-derivatives.html#def-derivative">derivative</a> is <span class="math inline">\(\frac{\partial}{\partial x} f(x) = -1 / (1 + \text{e}^{x})\)</span>, which is negative for every <span class="math inline">\(x\)</span>, so <span class="math inline">\(f\)</span> has no <a href="./optimization-critical-points.html#def-stationary-point">stationary point</a> at all.</p>
 <p>At <span class="math inline">\(x = 0\)</span> the <a href="./vector-calculus.html#def-vector-derivative">gradient</a> has size <span class="math inline">\(0.5\)</span>. At <span class="math inline">\(x = 10\)</span> it has size <span class="math inline">\(4.54\times 10^{-5}\)</span>, which is small but not zero. A step of <a href="#/def-gradient-descent">gradient descent</a> subtracts the gradient times the <a href="#/def-gradient-descent">step length</a>. The gradient is negative, so the <a href="./optimization-newton.html#def-iterate">iterates</a> keep moving to the right, more and more slowly. With tolerance <span class="math inline">\(\epsilon = 10^{-4}\)</span>, the region <span class="math inline">\(x \ge 10\)</span> is a plateau (<a href="#/def-plateau" class="quarto-xref">Definition&nbsp;8</a>). A run that enters this plateau has not converged; the run has only slowed down.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-label="1"></a>plateau_grid_pf <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">15</span>, <span class="at">length.out =</span> <span class="dv">401</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-label="1"></a>plateau_grid_pf <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">15</span>, <span class="at">length.out =</span> <span class="dv">401</span>)</span>
 <span id="cb10-2"><a aria-label="2"></a>plateau_exp_pf <span class="ot">&lt;-</span> <span class="fu">exp</span>(plateau_grid_pf)</span>
 <span id="cb10-3"><a aria-label="3"></a>plateau_size_pf <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> plateau_exp_pf)</span>
 <span id="cb10-4"><a aria-label="4"></a>plateau_curve_pf <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> plateau_grid_pf, <span class="at">size =</span> plateau_size_pf)</span>
@@ -928,7 +928,7 @@ function or its scalar variable, and the basin example writes f(x) the same way.
 <span id="cb10-16"><a aria-label="16"></a>  ) <span class="sc">+</span></span>
 <span id="cb10-17"><a aria-label="17"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
 <span id="cb10-18"><a aria-label="18"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"Size of the gradient (log scale)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-3"><a aria-label="3"></a></span>
 <span id="cb11-4"><a aria-label="4"></a>plateau_grid_pf <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">401</span>)</span>
@@ -1109,7 +1109,7 @@ s&amp;= \frac{2}{\lambda_{\min} + \lambda_{\max}} = s^*.
 </section><section class="slide level2"><div id="exm-best-constant-step" class="theorem example">
 <p><span class="theorem-title"><strong>Example 14 (The best step length for eigenvalues 3 and 1)</strong></span> For <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> with <a href="./linear-algebra-special-matrices.html#def-eigenvalue">eigenvalues</a> <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span>, <a href="#/thm-best-constant-step" class="quarto-xref">Theorem&nbsp;3</a> gives <span class="math inline">\(s^* = 2 / (3 + 1) = 0.5\)</span>, <span class="math inline">\(\kappa= 3\)</span> (<a href="./linear-algebra-special-matrices.html#exm-condition-number">condition number example</a>), and <span class="math inline">\(\rho(s^*) = (3 - 1) / (3 + 1) = 0.5\)</span>. A grid search over <span class="math inline">\(s= 0.01, 0.02, \ldots, 1\)</span> finds the smallest <span class="math inline">\(\rho(s)\)</span> at <span class="math inline">\(s= 0.5\)</span>, the same <a href="#/def-gradient-descent">step length</a>. Each step then multiplies the <a href="./optimization-newton.html#def-iterate-error">error</a> by at most <span class="math inline">\(0.5\)</span>.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-label="1"></a>bcs_grid_pf <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">401</span>)</span>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-label="1"></a>bcs_grid_pf <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">401</span>)</span>
 <span id="cb12-2"><a aria-label="2"></a>bcs_first_pf <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">-</span> <span class="dv">3</span> <span class="sc">*</span> bcs_grid_pf)</span>
 <span id="cb12-3"><a aria-label="3"></a>bcs_second_pf <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">-</span> bcs_grid_pf)</span>
 <span id="cb12-4"><a aria-label="4"></a>bcs_rho_pf <span class="ot">&lt;-</span> <span class="fu">pmax</span>(bcs_first_pf, bcs_second_pf)</span>
@@ -1122,7 +1122,7 @@ s&amp;= \frac{2}{\lambda_{\min} + \lambda_{\max}} = s^*.
 <span id="cb12-11"><a aria-label="11"></a>    <span class="at">xintercept =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"#D55E00"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span></span>
 <span id="cb12-12"><a aria-label="12"></a>  ) <span class="sc">+</span></span>
 <span id="cb12-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Step length"</span>, <span class="at">y =</span> <span class="st">"Error factor"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb13-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb13-3"><a aria-label="3"></a></span>
 <span id="cb13-4"><a aria-label="4"></a>bcs_grid_pf <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">401</span>)</span>
@@ -1621,6 +1621,50 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script><script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

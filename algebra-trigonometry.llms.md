@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Cosine and sine
 
@@ -112,7 +112,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > # angle in radians, and the point it reaches on the unit circle

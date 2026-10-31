@@ -4350,6 +4350,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#cor-moore-penrose-gram",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "cor-moore-penrose-gram",
+   "kind": "cor",
+   "title": "The Moore-Penrose inverse from the Gram matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#cor-orthonormal-basis-exists",
    "site": "mds",
    "page": "linear-algebra",
@@ -4485,6 +4494,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-cauchy-sequence",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-cauchy-sequence",
+   "kind": "def",
+   "title": "Cauchy sequence",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-closed-half-space",
    "site": "mds",
    "page": "linear-algebra",
@@ -4518,6 +4536,15 @@
    "div": "def-complementary-subspaces",
    "kind": "def",
    "title": "Complementary subspaces",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-complete-inner-product-space",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-complete-inner-product-space",
+   "kind": "def",
+   "title": "Complete inner product space",
    "external": false
   },
   {
@@ -4833,6 +4860,15 @@
    "div": "def-hermitian-matrix",
    "kind": "def",
    "title": "Hermitian matrix, self-adjoint matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-hilbert-space",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-hilbert-space",
+   "kind": "def",
+   "title": "Hilbert space",
    "external": false
   },
   {
@@ -7473,6 +7509,24 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#def-cauchy-sequence",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-cauchy-sequence",
+   "kind": "def",
+   "title": "Cauchy sequence",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#def-complete-inner-product-space",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-complete-inner-product-space",
+   "kind": "def",
+   "title": "Complete inner product space",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#def-cosine-similarity",
    "site": "mds",
    "page": "linear-algebra-inner-products",
@@ -7497,6 +7551,15 @@
    "div": "def-gram-schmidt",
    "kind": "def",
    "title": "Gram-Schmidt process",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#def-hilbert-space",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-hilbert-space",
+   "kind": "def",
+   "title": "Hilbert space",
    "external": false
   },
   {
@@ -8064,6 +8127,15 @@
    "div": "thm-transpose-sum",
    "kind": "thm",
    "title": "Transpose of a sum",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-projections#cor-moore-penrose-gram",
+   "site": "mds",
+   "page": "linear-algebra-projections",
+   "div": "cor-moore-penrose-gram",
+   "kind": "cor",
+   "title": "The Moore-Penrose inverse from the Gram matrix",
    "external": false
   },
   {
@@ -15097,6 +15169,10 @@
    "mds/linear-algebra#def-linear-map"
   ],
   [
+   "mds/linear-algebra#cor-moore-penrose-gram",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra#cor-orthonormal-basis-exists",
    "mds/linear-algebra#def-orthonormal-basis"
   ],
@@ -15181,6 +15257,18 @@
    "mds/linear-algebra#def-subspace"
   ],
   [
+   "mds/linear-algebra#def-cauchy-sequence",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/linear-algebra#def-cauchy-sequence",
+   "mds/linear-algebra-inner-products#def-inner-product-space"
+  ],
+  [
+   "mds/linear-algebra#def-cauchy-sequence",
+   "mds/number-systems#def-natural-numbers"
+  ],
+  [
    "mds/linear-algebra#def-closed-half-space",
    "mds/linear-algebra#def-half-space"
   ],
@@ -15191,6 +15279,18 @@
   [
    "mds/linear-algebra#def-complementary-subspaces",
    "mds/linear-algebra#def-subspace-sum"
+  ],
+  [
+   "mds/linear-algebra#def-complete-inner-product-space",
+   "mds/linear-algebra#def-cauchy-sequence"
+  ],
+  [
+   "mds/linear-algebra#def-complete-inner-product-space",
+   "mds/linear-algebra-inner-products#def-inner-product-space"
+  ],
+  [
+   "mds/linear-algebra#def-complete-inner-product-space",
+   "mds/number-systems#def-natural-numbers"
   ],
   [
    "mds/linear-algebra#def-complex-conjugate-matrix",
@@ -15339,6 +15439,14 @@
   [
    "mds/linear-algebra#def-hermitian-matrix",
    "mds/linear-algebra#def-conjugate-transpose"
+  ],
+  [
+   "mds/linear-algebra#def-hilbert-space",
+   "mds/linear-algebra#def-complete-inner-product-space"
+  ],
+  [
+   "mds/linear-algebra#def-hilbert-space",
+   "mds/linear-algebra-inner-products#def-inner-product-space"
   ],
   [
    "mds/linear-algebra#def-identity-matrix",
@@ -16617,7 +16725,39 @@
    "mds/linear-algebra-inner-products#def-cosine-similarity"
   ],
   [
+   "mds/linear-algebra-inner-products#def-cauchy-sequence",
+   "mds/functions#def-sequence"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-cauchy-sequence",
+   "mds/linear-algebra-inner-products#def-inner-product-space"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-cauchy-sequence",
+   "mds/number-systems#def-natural-numbers"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-complete-inner-product-space",
+   "mds/linear-algebra-inner-products#def-cauchy-sequence"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-complete-inner-product-space",
+   "mds/linear-algebra-inner-products#def-inner-product-space"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-complete-inner-product-space",
+   "mds/number-systems#def-natural-numbers"
+  ],
+  [
    "mds/linear-algebra-inner-products#def-cosine-similarity-inner-product-space",
+   "mds/linear-algebra-inner-products#def-inner-product-space"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-hilbert-space",
+   "mds/linear-algebra-inner-products#def-complete-inner-product-space"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-hilbert-space",
    "mds/linear-algebra-inner-products#def-inner-product-space"
   ],
   [
@@ -16767,6 +16907,10 @@
   [
    "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "mds/linear-algebra-matrices#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-projections#cor-moore-penrose-gram",
+   "mds/linear-algebra-matrices#def-matrix"
   ],
   [
    "mds/linear-algebra-projections#def-design-matrix",

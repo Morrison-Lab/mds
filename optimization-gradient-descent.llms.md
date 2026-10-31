@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Gradient descent
 
@@ -175,7 +175,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > library(ggplot2)
@@ -208,7 +208,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   theme(legend.position = "bottom")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -319,7 +319,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > # Uses basin_step_bs and basin_starts_bs from the example above.
@@ -353,7 +353,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::theme(legend.position = "bottom")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -450,7 +450,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > plateau_grid_pf <- seq(-5, 15, length.out = 401)
@@ -473,7 +473,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "x", y = "Size of the gradient (log scale)")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -585,7 +585,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > bcs_grid_pf <- seq(0, 1, length.out = 401)
@@ -603,7 +603,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "Step length", y = "Error factor")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt

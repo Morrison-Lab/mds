@@ -353,7 +353,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-30 17:15:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-30 18:45:42 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-inner-products" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Inner products</h2>
 <div id="def-inner-product" class="theorem definition">
@@ -1677,8 +1677,31 @@ v_k\,(v_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\
 \]</span></p>
 <p>Either way, every pair of columns has a combination with coefficients that are not all zero and that equals <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. Now take any set of two or more columns. It contains a pair <span class="math inline">\(j \neq k\)</span>. Use that pair’s coefficients for columns <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and the coefficient <span class="math inline">\(0\)</span> for every other column in the set. This combination equals <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, and its coefficients are not all zero, so the set is not linearly independent (<a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>). The largest linearly independent set of columns therefore has one column.</p>
 </div>
-</section><section class="slide level2 smaller scrollable" id="references"><div id="exm-outer-product-rank" class="theorem example">
+</section><section class="slide level2"><div id="exm-outer-product-rank" class="theorem example">
 <p><span class="theorem-title"><strong>Example 28 (The rank of an outer product)</strong></span> In <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;27</a>, the second column <span class="math inline">\((5, 10, 15)\)</span> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\)</span> is <span class="math inline">\(\frac{5}{4}\)</span> times the first column <span class="math inline">\((4, 8, 12)\)</span>, because the columns are <span class="math inline">\(v_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 4\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> and <span class="math inline">\(v_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 5\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>. So the two columns are not linearly independent, and the <span class="math inline">\(3 \times 2\)</span> matrix has rank <span class="math inline">\(1\)</span>.</p>
+</div>
+</section><section id="sec-hilbert-spaces" class="slide level2" data-number="5"><h2>
+<span class="header-section-number">5</span> Hilbert spaces</h2>
+<div id="def-cauchy-sequence" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Cauchy sequence)</strong></span> A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)\)</span> of vectors in a <a href="./linear-algebra-inner-products.html#def-inner-product-space">real inner product space</a> <span class="math inline">\(V\)</span> is a <strong>Cauchy sequence</strong> <span class="citation" data-cites="wikipedia_cauchy_sequence"><a href="#/references" role="doc-biblioref" onclick="">[15]</a></span> if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <a href="./number-systems.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that</p>
+<p><span class="math display">\[\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{} &lt; \varepsilon\quad \text{for all } m, n \ge N,\]</span></p>
+<p>where <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \sqrt{{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}}\)</span> for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in V\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-cauchy-sequence" class="theorem example">
+<p><span class="theorem-title"><strong>Example 29 (A Cauchy sequence of real numbers)</strong></span> The <a href="./number-systems.html#def-real-numbers">real numbers</a> <span class="math inline">\(\mathbb{R}\)</span> with the <a href="./linear-algebra-inner-products.html#def-inner-product">inner product</a> <span class="math inline">\({\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\,y\)</span> form an <a href="./linear-algebra-inner-products.html#def-inner-product-space">inner product space</a>, and <span class="math inline">\(\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left|x\right|\mathclose{}\)</span> in it. The <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(x_n = \frac{1}{n}\)</span> is a <a href="#/def-cauchy-sequence">Cauchy sequence</a>. Given <span class="math inline">\(\varepsilon&gt; 0\)</span>, take <span class="math inline">\(N\)</span> to be any <a href="./number-systems.html#def-natural-numbers">natural number</a> larger than <span class="math inline">\(\frac{1}{\varepsilon}\)</span>. <a href="./proof-writing.html#def-universal-quantifier">For all</a> <span class="math inline">\(m, n \ge N\)</span>, both <span class="math inline">\(\frac{1}{m}\)</span> and <span class="math inline">\(\frac{1}{n}\)</span> lie in <span class="math inline">\((0, \frac{1}{N}]\)</span>, so <span class="math inline">\(\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} &lt; \frac{1}{N} &lt; \varepsilon\)</span>. For example, with <span class="math inline">\(\varepsilon= 0.01\)</span>, take <span class="math inline">\(N = 101\)</span>: all <span class="math inline">\(m, n \ge 101\)</span> have <span class="math inline">\(\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} &lt; \frac{1}{101} &lt; 0.01\)</span>. <!-- no-figure: a sequence of numbers checked at one tolerance --></p>
+</div>
+</section><section class="slide level2"><div id="def-complete-inner-product-space" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Complete inner product space)</strong></span> A <a href="./linear-algebra-inner-products.html#def-inner-product-space">real inner product space</a> <span class="math inline">\(V\)</span> is <strong>complete</strong> <span class="citation" data-cites="wikipedia_complete_metric_space"><a href="#/references" role="doc-biblioref" onclick="">[16]</a></span> if for every <a href="#/def-cauchy-sequence">Cauchy sequence</a> <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)\)</span> in <span class="math inline">\(V\)</span> there is a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V\)</span> such that for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <a href="./number-systems.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> with</p>
+<p><span class="math display">\[\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} &lt; \varepsilon\quad \text{for every } n \ge N.\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exm-complete-inner-product-space" class="theorem example">
+<p><span class="theorem-title"><strong>Example 30 (Polynomials are not complete)</strong></span> Let <span class="math inline">\(V\)</span> be the <a href="./sets.html#def-set">set</a> of <a href="./algebra-exponentials.html#def-polynomial">polynomials</a> on <span class="math inline">\([0, 1]\)</span>, with the <a href="./linear-algebra-inner-products.html#def-inner-product">inner product</a> <span class="math inline">\({\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\,g(t)\,dt\)</span>. The <a href="./algebra-exponentials.html#def-partial-sum">partial sums</a> <span class="math inline">\(p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}\)</span> are a <a href="#/def-cauchy-sequence">Cauchy sequence</a> in <span class="math inline">\(V\)</span>, because they <a href="./algebra-exponentials.html#def-convergent-sequence">converge</a> uniformly on <span class="math inline">\([0, 1]\)</span> to <span class="math inline">\(\text{e}^{t}\)</span>. The only candidate for a <a href="./algebra-exponentials.html#def-sequence-limit">limit</a> is <span class="math inline">\(\text{e}^{t}\)</span>, which is not a <a href="./algebra-exponentials.html#def-polynomial">polynomial</a>, so no polynomial <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V\)</span> satisfies the condition of <a href="#/def-complete-inner-product-space" class="quarto-xref">Definition&nbsp;14</a>, and <span class="math inline">\(V\)</span> is not <a href="#/def-complete-inner-product-space">complete</a>. <!-- no-figure: the example is a convergence argument about one sequence --></p>
+</div>
+</section><section class="slide level2"><div id="def-hilbert-space" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 (Hilbert space)</strong></span> A <strong>Hilbert space</strong> <span class="citation" data-cites="wikipedia_hilbert_space"><a href="#/references" role="doc-biblioref" onclick="">[17]</a></span> is a <a href="#/def-complete-inner-product-space">complete</a> <a href="./linear-algebra-inner-products.html#def-inner-product-space">real inner product space</a> <span class="citation" data-cites="banerjee2014linear"><a href="#/references" role="doc-biblioref" onclick="">[3, Sec. 16.8]</a>, Definition 16.8, p.&nbsp;547</span>.</p>
+</div>
+</section><section class="slide level2 smaller scrollable" id="references"><div id="exm-hilbert-space" class="theorem example">
+<p><span class="theorem-title"><strong>Example 31 (Real coordinate space is a Hilbert space)</strong></span> The Euclidean <a href="./linear-algebra-vectors.html#def-real-coordinate-space">space</a> <span class="math inline">\(\mathbb{R}^2\)</span> with the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> (<a href="#/exm-inner-product-space" class="quarto-xref">Example&nbsp;2</a>) is a <a href="#/def-hilbert-space">Hilbert space</a>. Let <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (x_{n,1}, x_{n,2})\)</span> be a <a href="#/def-cauchy-sequence">Cauchy sequence</a> in it. Each coordinate <a href="./functions.html#def-sequence">sequence</a> is a Cauchy sequence of <a href="./number-systems.html#def-real-numbers">real numbers</a>, because <span class="math inline">\(\mathopen{}\left|x_{m,j} - x_{n,j}\right|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{}\)</span> for <span class="math inline">\(j = 1, 2\)</span>. Each coordinate sequence then <a href="./algebra-exponentials.html#def-convergent-sequence">converges</a> to a <a href="./number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(y_j\)</span>, because every Cauchy sequence of real numbers converges <span class="citation" data-cites="wikipedia_complete_metric_space"><a href="#/references" role="doc-biblioref" onclick="">[16]</a></span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, y_2)\)</span> satisfies the condition of <a href="#/def-complete-inner-product-space" class="quarto-xref">Definition&nbsp;14</a>. For example, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (\frac{1}{n}, 1 + \frac{1}{n})\)</span> is a Cauchy sequence with <a href="./algebra-exponentials.html#def-sequence-limit">limit</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)\)</span>. <!-- no-figure: the example is a convergence argument about one sequence --></p>
 </div>
 
 
@@ -1938,6 +1961,21 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <div class="csl-right-inline">Wikipedia contributors, <span>“Outer product — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Outer_product">https://en.wikipedia.org/wiki/Outer_product</a>
 </div>
 </div>
+<div id="ref-wikipedia_cauchy_sequence" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Cauchy sequence — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Cauchy_sequence">https://en.wikipedia.org/wiki/Cauchy_sequence</a>
+</div>
+</div>
+<div id="ref-wikipedia_complete_metric_space" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Complete metric space — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Complete_metric_space">https://en.wikipedia.org/wiki/Complete_metric_space</a>
+</div>
+</div>
+<div id="ref-wikipedia_hilbert_space" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Hilbert space — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Hilbert_space">https://en.wikipedia.org/wiki/Hilbert_space</a>
+</div>
+</div>
 </div>
 </section>
 </div>
@@ -2138,6 +2176,50 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script><script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

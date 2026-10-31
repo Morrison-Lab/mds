@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Critical points and optimization
 
@@ -21,7 +21,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > fp_w_ff <- seq(-2, 2, length.out = 201)
@@ -53,7 +53,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "w", y = NULL, shape = NULL)
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -186,7 +186,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > cp_w_fc <- seq(-2, 2, length.out = 201)
@@ -216,7 +216,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "w", y = NULL, shape = "critical point")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -277,7 +277,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > fpc_w_fk <- seq(-2.5, 2.5, length.out = 201)
@@ -292,7 +292,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >   ggplot2::labs(x = "w", y = "f(w)")
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt
@@ -488,7 +488,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > sp_x1_fs <- seq(-1, 3, length.out = 101)
@@ -514,7 +514,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >   ggplot2::labs(x = "x1", y = "x2", shape = NULL)
 > ```
 >
-> Show R code
+> Show code
 >
 > ``` python
 > import matplotlib.pyplot as plt

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Inner products
 
@@ -861,6 +861,38 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >
 > **Example 28 (The rank of an outer product)** In [Example 27](#exm-outer-product), the second column \\(5, 10, 15)\\ of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{v}}\vphantom{v}}}^{\top}\\ is \\\frac{5}{4}\\ times the first column \\(4, 8, 12)\\, because the columns are \\v_1 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 4\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\ and \\v_2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}} = 5\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{u}}\vphantom{u}}\\. So the two columns are not linearly independent, and the \\3 \times 2\\ matrix has rank \\1\\.
 
+## 0.5 Hilbert spaces
+
+> **NOTE:**
+>
+> **Definition 13 (Cauchy sequence)** A [sequence](functions.llms.md#def-sequence) \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_n)\\ of vectors in a [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) \\V\\ is a **Cauchy sequence** [\[15\]](#ref-wikipedia_cauchy_sequence) if for every \\\varepsilon\> 0\\ there is a [natural number](number-systems.llms.md#def-natural-numbers) \\N\\ such that
+>
+> \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_m - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_n\right\rVert\mathclose{} \< \varepsilon\quad \text{for all } m, n \ge N,\\
+>
+> where \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \sqrt{{\mathopen{}\left\langle \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}, \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}}\\ for every \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\in V\\.
+
+> **NOTE:**
+>
+> **Example 29 (A Cauchy sequence of real numbers)** The [real numbers](number-systems.llms.md#def-real-numbers) \\\mathbb{R}\\ with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) \\{\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\\y\\ form an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), and \\\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left\|x\right\|\mathclose{}\\ in it. The [sequence](functions.llms.md#def-sequence) \\x_n = \frac{1}{n}\\ is a [Cauchy sequence](#def-cauchy-sequence). Given \\\varepsilon\> 0\\, take \\N\\ to be any [natural number](number-systems.llms.md#def-natural-numbers) larger than \\\frac{1}{\varepsilon}\\. [For all](proof-writing.llms.md#def-universal-quantifier) \\m, n \ge N\\, both \\\frac{1}{m}\\ and \\\frac{1}{n}\\ lie in \\(0, \frac{1}{N}\]\\, so \\\mathopen{}\left\|\frac{1}{m} - \frac{1}{n}\right\|\mathclose{} \< \frac{1}{N} \< \varepsilon\\. For example, with \\\varepsilon= 0.01\\, take \\N = 101\\: all \\m, n \ge 101\\ have \\\mathopen{}\left\|\frac{1}{m} - \frac{1}{n}\right\|\mathclose{} \< \frac{1}{101} \< 0.01\\.
+
+> **NOTE:**
+>
+> **Definition 14 (Complete inner product space)** A [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) \\V\\ is **complete** [\[16\]](#ref-wikipedia_complete_metric_space) if for every [Cauchy sequence](#def-cauchy-sequence) \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_n)\\ in \\V\\ there is a vector \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in V\\ such that for every \\\varepsilon\> 0\\ there is a [natural number](number-systems.llms.md#def-natural-numbers) \\N\\ with
+>
+> \\\mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_n - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\right\rVert\mathclose{} \< \varepsilon\quad \text{for every } n \ge N.\\
+
+> **NOTE:**
+>
+> **Example 30 (Polynomials are not complete)** Let \\V\\ be the [set](sets.llms.md#def-set) of [polynomials](algebra-exponentials.llms.md#def-polynomial) on \\\[0, 1\]\\, with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) \\{\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\\g(t)\\dt\\. The [partial sums](algebra-exponentials.llms.md#def-partial-sum) \\p_n(t) = \sum\_{k=0}^{n} \frac{t^k}{k!}\\ are a [Cauchy sequence](#def-cauchy-sequence) in \\V\\, because they [converge](algebra-exponentials.llms.md#def-convergent-sequence) uniformly on \\\[0, 1\]\\ to \\\text{e}^{t}\\. The only candidate for a [limit](algebra-exponentials.llms.md#def-sequence-limit) is \\\text{e}^{t}\\, which is not a [polynomial](algebra-exponentials.llms.md#def-polynomial), so no polynomial \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\in V\\ satisfies the condition of [Definition 14](#def-complete-inner-product-space), and \\V\\ is not [complete](#def-complete-inner-product-space).
+
+> **NOTE:**
+>
+> **Definition 15 (Hilbert space)** A **Hilbert space** [\[17\]](#ref-wikipedia_hilbert_space) is a [complete](#def-complete-inner-product-space) [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) [\[3, Sec. 16.8\]](#ref-banerjee2014linear), Definition 16.8, p. 547.
+
+> **NOTE:**
+>
+> **Example 31 (Real coordinate space is a Hilbert space)** The Euclidean [space](linear-algebra-vectors.llms.md#def-real-coordinate-space) \\\mathbb{R}^2\\ with the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ([Example 2](#exm-inner-product-space)) is a [Hilbert space](#def-hilbert-space). Let \\(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_n)\\ with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_n = (x\_{n,1}, x\_{n,2})\\ be a [Cauchy sequence](#def-cauchy-sequence) in it. Each coordinate [sequence](functions.llms.md#def-sequence) is a Cauchy sequence of [real numbers](number-systems.llms.md#def-real-numbers), because \\\mathopen{}\left\|x\_{m,j} - x\_{n,j}\right\|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_m - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_n\right\rVert\mathclose{}\\ for \\j = 1, 2\\. Each coordinate sequence then [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a [real number](number-systems.llms.md#def-real-numbers) \\y_j\\, because every Cauchy sequence of real numbers converges [\[16\]](#ref-wikipedia_complete_metric_space), and \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (y_1, y_2)\\ satisfies the condition of [Definition 14](#def-complete-inner-product-space). For example, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\_n = (\frac{1}{n}, 1 + \frac{1}{n})\\ is a Cauchy sequence with [limit](algebra-exponentials.llms.md#def-sequence-limit) \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}= (0, 1)\\.
+
 # Definitions on this page
 
 - [Definition 1 (Inner product)](#def-inner-product)
@@ -875,6 +907,9 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 - [Definition 10 (Orthonormal basis)](#def-orthonormal-basis)
 - [Definition 11 (Gram-Schmidt process)](#def-gram-schmidt)
 - [Definition 12 (Outer product)](#def-outer-product)
+- [Definition 13 (Cauchy sequence)](#def-cauchy-sequence)
+- [Definition 14 (Complete inner product space)](#def-complete-inner-product-space)
+- [Definition 15 (Hilbert space)](#def-hilbert-space)
 
 Back to top
 
@@ -935,3 +970,15 @@ Wikipedia contributors, “Gram–schmidt process — Wikipedia, the free encycl
 \[14\]
 
 Wikipedia contributors, “Outer product — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Outer_product>
+
+\[15\]
+
+Wikipedia contributors, “Cauchy sequence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cauchy_sequence>
+
+\[16\]
+
+Wikipedia contributors, “Complete metric space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Complete_metric_space>
+
+\[17\]
+
+Wikipedia contributors, “Hilbert space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Hilbert_space>

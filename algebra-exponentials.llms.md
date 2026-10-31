@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-30 17:15:43 (PDT)
+Last modified: 2026-10-30 18:45:42 (PDT)
 
 ## 0.1 Polynomials
 
@@ -546,7 +546,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 >
 > > **NOTE:**
 > >
-> > Show R code
+> > Show code
 > >
 > > ``` downlit
 > > library(ggplot2)
@@ -626,7 +626,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > mult_f <- function(b, c) b * c
@@ -700,7 +700,7 @@ Last modified: 2026-10-30 17:15:43 (PDT)
 
 > **NOTE:**
 >
-> Show R code
+> Show code
 >
 > ``` downlit
 > pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
