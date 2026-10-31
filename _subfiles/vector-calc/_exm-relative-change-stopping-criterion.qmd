@@ -1,0 +1,53 @@
+:::{#exm-relative-change-stopping-criterion}
+#### Stopping a descent on $f(x) = x^2 + 1$
+
+Let $f(x) = x^2 + 1$.
+Run [gradient descent](#def-gradient-descent) on $f$ from $\iterpoint{x}{0} = 2$ with [step length](#def-gradient-descent) $\steplen = 0.25$,
+and stop at tolerance $\epsilon = 0.01$.
+Each step [maps](functions.qmd#def-function) $x$ to $x - 0.25 \cdot 2x = x/2$:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: relative-change-r
+#| code-fold: false
+x_rc <- 2
+tol_rc <- 0.01
+for (t_rc in 0:100) {
+  x_next_rc <- x_rc - 0.25 * 2 * x_rc
+  cost_rc <- x_rc^2 + 1
+  cost_next_rc <- x_next_rc^2 + 1
+  diff_rc <- cost_next_rc - cost_rc
+  change_rc <- abs(diff_rc) / cost_rc
+  below_tol_rc <- change_rc < tol_rc
+  if (below_tol_rc) break
+  x_rc <- x_next_rc
+}
+c(t = t_rc, change = change_rc)
+```
+
+### Python
+
+```{python}
+#| label: relative-change-python
+#| code-fold: false
+f_rc = lambda x: x**2 + 1
+x_rc, tol_rc = 2.0, 0.01
+for t_rc in range(101):
+    x_next_rc = x_rc - 0.25 * 2 * x_rc
+    change_rc = abs(f_rc(x_next_rc) - f_rc(x_rc)) / abs(f_rc(x_rc))
+    if change_rc < tol_rc:
+        break
+    x_rc = x_next_rc
+print(t_rc, change_rc);
+```
+
+:::
+
+The criterion first holds at $t = `r t_rc`$, where the relative change is `r signif(change_rc, 3)`.
+
+<!-- no-figure: one stopping time -->
+
+:::

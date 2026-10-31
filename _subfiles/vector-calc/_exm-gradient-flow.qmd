@@ -1,0 +1,60 @@
+:::{#exm-gradient-flow}
+#### Gradient descent follows the gradient flow
+
+Let $f(x) = \tfrac{1}{2} x^2$ on $\reals$, so $\deriv{x} f(x) = x$.
+The gradient flow (@def-gradient-flow) from $x(0) = x_0$ solves $\dif{x(t)}{t} = -x(t)$,
+whose solution is
+
+$$
+x(t) = x_0\,\expf{-t}.
+$$
+
+[Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $\steplen$ multiplies $x$ by $1 - \steplen$ at each step,
+so after $k$ steps it has reached time $t = k\steplen$ with
+
+$$
+\iterpoint{x}{k} = x_0\,(1 - \steplen)^k.
+$$
+
+Start at $x_0 = 1$ and run to time $t = 1$:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: gradient-flow-r
+#| code-fold: false
+x0_gf <- 1
+t_gf <- 1
+s_gf <- c(0.5, 0.01)
+descent_gf <- x0_gf * (1 - s_gf)^(t_gf / s_gf)
+flow_gf <- x0_gf * exp(-t_gf)
+values_gf <- c(descent_gf, flow = flow_gf)
+round(values_gf, 4)
+```
+
+### Python
+
+```{python}
+#| label: gradient-flow-python
+#| code-fold: false
+import numpy as np
+
+x0_gf, t_gf = 1.0, 1.0
+s_gf = np.array([0.5, 0.01])
+descent_gf = x0_gf * (1 - s_gf) ** (t_gf / s_gf)
+flow_gf = x0_gf * np.exp(-t_gf)
+print(np.round(np.append(descent_gf, flow_gf), 4));
+```
+
+:::
+
+With [step length](#def-gradient-descent) $\steplen = 0.5$ the descent reaches `r round(descent_gf[1], 4)`,
+and with $\steplen = 0.01$ it reaches `r round(descent_gf[2], 4)`,
+against `r round(flow_gf, 4)` for the flow.
+The smaller the step length, the closer the descent stays to the flow.
+
+<!-- no-figure: three numbers compared at one time -->
+
+:::

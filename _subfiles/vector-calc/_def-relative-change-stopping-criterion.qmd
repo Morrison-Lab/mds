@@ -1,0 +1,13 @@
+:::{#def-relative-change-stopping-criterion}
+#### Relative change stopping criterion
+
+Let $f$ and $\iterpoint{\vx}{0}, \iterpoint{\vx}{1}, \ldots$ be as in [gradient descent](#def-gradient-descent),
+and let $\epsilon > 0$.
+The **relative change stopping criterion** with tolerance $\epsilon$ stops the iteration
+at the first $t$ for which $f(\iterpoint{\vx}{t}) \ne 0$ and
+
+$$
+\frac{\abs{f(\iterpoint{\vx}{t+1}) - f(\iterpoint{\vx}{t})}}{\abs{f(\iterpoint{\vx}{t})}} < \epsilon.
+$$
+
+:::

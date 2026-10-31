@@ -1,0 +1,15 @@
+:::{#rem-gradient-flow-euler}
+#### Gradient descent is Euler's method for the gradient flow
+
+[Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $\steplen$ updates
+$\iterpoint{\vx}{t+1} = \iterpoint{\vx}{t} - \steplen\,\deriv{\vx} f(\iterpoint{\vx}{t})$.
+This is Euler's method with time step $\steplen$ for the [gradient flow](#def-gradient-flow) equation.
+
+For a [linear function](algebra.qmd#def-linear-function) $f$,
+the velocity of the flow is the negative [normal vector](linear-algebra-matrices.qmd#def-normal-vector).
+
+By [this theorem](vector-calculus.qmd#thm-level-sets-linear),
+that vector is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to every [level set](vector-calculus.qmd#def-level-set),
+so the flow is too.
+
+:::
