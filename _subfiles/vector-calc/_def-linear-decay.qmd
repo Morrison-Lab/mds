@@ -1,12 +1,12 @@
 :::{#def-linear-decay}
 #### Linear decay
 
-Let $s^{(0)}, s^{(\schedlen)} > 0$ be a starting and a final [step length](#def-gradient-descent),
+Let $\iterpoint{\steplen}{0}, \iterpoint{\steplen}{\schedlen} > 0$ be the [step lengths](#def-gradient-descent) of the first update and of update $\schedlen$,
 and let $\schedlen$ be a number of updates. <!-- check-term-links: allow -->
 The **linear decay** schedule is
 
 $$
-s^{(t)} \eqdef \paren{1 - \schedfrac}\,s^{(0)} + \schedfrac\,s^{(\schedlen)},
+\iterpoint{\steplen}{t} \eqdef \paren{1 - \schedfrac}\,\iterpoint{\steplen}{0} + \schedfrac\,\iterpoint{\steplen}{\schedlen},
 \qquad
 \schedfrac \eqdef \minf{\frac{t}{\schedlen}, 1}.
 $$

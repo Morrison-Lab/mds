@@ -1,7 +1,7 @@
 :::{#exm-linear-decay}
 #### Linear decay between two step lengths
 
-Take $s^{(0)} = 0.1$, $s^{(\schedlen)} = 0.001$ and $\schedlen = 90$.
+Take $\iterpoint{\steplen}{0} = 0.1$, $\iterpoint{\steplen}{\schedlen} = 0.001$ and $\schedlen = 90$.
 The [step length](#def-linear-decay) at $t = 0, 45, 90, 120$ is:
 
 ::: {.panel-tabset group="language"}
@@ -33,8 +33,8 @@ for t_ld in [0, 45, 90, 120]:
 
 :::
 
-The step length falls by the same amount at each update, <!-- check-term-links: allow -->
-then stays at $0.001$ after update $\schedlen$.
+The step length falls by the same amount at each update. <!-- check-term-links: allow -->
+It then stays at $0.001$ after update $\schedlen$.
 
 <!-- no-figure: the example tabulates four step lengths -->
 

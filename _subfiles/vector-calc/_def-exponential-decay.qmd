@@ -1,12 +1,12 @@
 :::{#def-exponential-decay}
 #### Exponential decay
 
-Let $s^{(0)} > 0$ be a starting [step length](#def-gradient-descent),
+Let $\iterpoint{\steplen}{0} > 0$ be the [step length](#def-gradient-descent) of the first update,
 and let $\decay \in (0, 1)$ be a decay factor.
 The **exponential decay** schedule is
 
 $$
-s^{(t)} \eqdef s^{(0)}\,\decay^t.
+\iterpoint{\steplen}{t} \eqdef \iterpoint{\steplen}{0}\,\decay^t.
 $$
 
 :::

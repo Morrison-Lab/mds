@@ -1,7 +1,7 @@
 :::{#exm-piecewise-constant-schedule}
 #### A ten-fold drop twice
 
-Take $s^{(0)} = 0.1$ and $\decay = 0.1$,
+Take $\iterpoint{\steplen}{0} = 0.1$ and $\decay = 0.1$,
 with drops at $t_1 = 30$ and $t_2 = 60$.
 The [step length](#def-piecewise-constant-schedule) just before and at each drop is:
 
@@ -35,8 +35,8 @@ for t_pc in [0, 29, 30, 59, 60, 90]:
 
 :::
 
-The step length stays fixed between drops <!-- check-term-links: allow -->
-and falls by the factor $\decay$ exactly at $t = 30$ and $t = 60$.
+The step length stays fixed between drops. <!-- check-term-links: allow -->
+It falls by the factor $\decay$ exactly at $t = 30$ and $t = 60$.
 
 <!-- no-figure: the example tabulates six step lengths -->
 
