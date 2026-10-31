@@ -7,7 +7,7 @@ let $\steplen > 0$ be a [step length](#def-gradient-descent),
 let $\rho \in [0, 1)$ be a decay factor,
 and let $\epsilon > 0$.
 Write $g_j^{(t)}$ for coordinate $j$ of $\deriv{\vx} f(\vx^{(t-1)})$.
-An **adaptive method** computes, for $t = 1, 2, \ldots$ and each coordinate $j = 1, \ldots, p$,
+An **adaptive method** is defined, for $t = 1, 2, \ldots$ and each coordinate $j = 1, \ldots, p$,
 
 $$
 \begin{aligned}

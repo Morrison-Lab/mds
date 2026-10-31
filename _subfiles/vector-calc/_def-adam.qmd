@@ -4,7 +4,7 @@
 Let $f$, $\vx^{(0)}$, $\steplen$ and $\epsilon$ be as in an [adaptive method](#def-adaptive-method),
 and let $\beta_1, \beta_2 \in [0, 1)$.
 Write $\vg^{(t)}$ for $\deriv{\vx} f(\vx^{(t-1)})$.
-**Adam** [@kingma2015adam] computes, for $t = 1, 2, \ldots$,
+The **Adam** method [@kingma2015adam] is defined, for $t = 1, 2, \ldots$,
 
 $$
 \begin{aligned}

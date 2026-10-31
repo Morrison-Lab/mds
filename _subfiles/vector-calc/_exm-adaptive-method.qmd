@@ -1,10 +1,10 @@
 :::{#exm-adaptive-method}
 #### Two coordinates on very different scales
 
-Suppose the two coordinates of the gradient start at $g_1^{(1)} = 100$ and $g_2^{(1)} = 0.01$,
+Suppose the two coordinates of the gradient start at $g_1^{(1)} = 100$ and $g_2^{(1)} = 0.01$, <!-- check-term-links: allow -->
 and both shrink by a factor of $0.5$ at each update.
 Take $\rho = 0.9$, and look at the first $5$ updates.
-Dividing by the root of the running average gives the factor $g_j^{(t)} / \sqrt{u_j^{(t)}}$ that multiplies $\steplen$ in the update of each coordinate:
+Dividing by the root of the running average gives the factor $g_j^{(t)} / \sqrt{u_j^{(t)}}$ that multiplies $\steplen$ in the update of each coordinate: <!-- check-term-links: allow -->
 
 ::: {.panel-tabset group="language"}
 
@@ -49,9 +49,9 @@ print(np.round(factor_am, 3));
 :::
 
 Plain [gradient descent](#def-gradient-descent) would move the first coordinate $`r s_am[1] / s_am[2]`$ times as far as the second.
-The factors are the same for both coordinates, so the scale of a coordinate no longer matters.
-They also shrink from `r round(factor_am[1, 1], 2)` to `r round(factor_am[n_am, 1], 2)`, because the running average still holds the earlier, larger values.
-Dividing by the current gradient alone would give a factor of $1$ at every update.
+The factors are the same for both coordinates, so the scale of a coordinate no longer matters. <!-- check-term-links: allow -->
+They also shrink from `r round(factor_am[1, 1], 2)` to `r round(factor_am[n_am, 1], 2)`, because the running average still holds the earlier, larger values. <!-- check-term-links: allow -->
+Dividing by the current gradient alone would give a factor of $1$ at every update. <!-- check-term-links: allow -->
 
 <!-- no-figure: the example tabulates five updates -->
 

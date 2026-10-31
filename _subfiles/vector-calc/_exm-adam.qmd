@@ -44,7 +44,7 @@ print(np.round(s_ad * m_hat_ad / (np.sqrt(u_hat_ad) + eps_ad), 4));
 
 :::
 
-Both first steps have size `r round(step_ad[1], 2)`, though the gradients differ by a factor of `r x0_ad[2] / x0_ad[1]`.
+Both first steps have size `r round(step_ad[1], 2)`, though the gradients differ by a factor of `r x0_ad[2] / x0_ad[1]`. <!-- check-term-links: allow -->
 Plain [gradient descent](#def-gradient-descent) would move $\steplen\,g^{(1)}$, which is $0.2$ and $200$.
 
 <!-- no-figure: the example compares two first steps -->
