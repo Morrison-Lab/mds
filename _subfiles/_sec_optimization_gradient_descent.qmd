@@ -169,3 +169,23 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_exm-momentum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-adaptive-method.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-adaptive-method.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_rem-adaptive-method-history.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-adam.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-adam.qmd >}}

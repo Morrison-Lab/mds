@@ -1,0 +1,58 @@
+:::{#exm-adaptive-method}
+#### Two coordinates on very different scales
+
+Suppose the two coordinates of the gradient start at $g_1^{(1)} = 100$ and $g_2^{(1)} = 0.01$,
+and both shrink by a factor of $0.5$ at each update.
+Take $\rho = 0.9$, and look at the first $5$ updates.
+Dividing by the root of the running average gives the factor $g_j^{(t)} / \sqrt{u_j^{(t)}}$ that multiplies $\steplen$ in the update of each coordinate:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: adaptive-method-r
+#| code-fold: false
+s_am <- c(100, 0.01)
+rho_am <- 0.9
+q_am <- 0.5
+n_am <- 5
+k_am <- seq_len(n_am) - 1
+g_am <- outer(q_am^k_am, s_am)
+u_am <- matrix(0, n_am, 2)
+u_prev_am <- c(0, 0)
+for (t_am in seq_len(n_am)) {
+  u_prev_am <- rho_am * u_prev_am + (1 - rho_am) * g_am[t_am, ]^2
+  u_am[t_am, ] <- u_prev_am
+}
+factor_am <- g_am / sqrt(u_am)
+round(factor_am, 3)
+```
+
+### Python
+
+```{python}
+#| label: adaptive-method-python
+#| code-fold: false
+import numpy as np
+
+s_am, rho_am, q_am, n_am = [100, 0.01], 0.9, 0.5, 5
+g_am = np.outer(q_am ** np.arange(n_am), s_am)
+u_am = np.zeros(2)
+factor_am = []
+for t_am in range(n_am):
+    u_am = rho_am * u_am + (1 - rho_am) * g_am[t_am] ** 2
+    factor_am.append(g_am[t_am] / np.sqrt(u_am))
+print(np.round(factor_am, 3));
+```
+
+:::
+
+Plain [gradient descent](#def-gradient-descent) would move the first coordinate $`r s_am[1] / s_am[2]`$ times as far as the second.
+The factors are the same for both coordinates, so the scale of a coordinate no longer matters.
+They also shrink from `r round(factor_am[1, 1], 2)` to `r round(factor_am[n_am, 1], 2)`, because the running average still holds the earlier, larger values.
+Dividing by the current gradient alone would give a factor of $1$ at every update.
+
+<!-- no-figure: the example tabulates five updates -->
+
+:::

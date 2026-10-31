@@ -1,0 +1,6 @@
+:::{#rem-adaptive-method-history}
+#### Early adaptive methods
+
+AdaGrad and RMSProp are early examples of an [adaptive method](#def-adaptive-method) [@wikipedia_stochastic_gradient_descent].
+
+:::
