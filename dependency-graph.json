@@ -10758,6 +10758,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-gradient-flow",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-gradient-flow",
+   "kind": "def",
+   "title": "Gradient flow",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-half-space",
    "site": "mds",
    "page": "optimization",
@@ -10935,6 +10944,15 @@
    "div": "def-quasi-newton-method",
    "kind": "def",
    "title": "Quasi-Newton method",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-relative-change-stopping-criterion",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-relative-change-stopping-criterion",
+   "kind": "def",
+   "title": "Relative change stopping criterion",
    "external": false
   },
   {
@@ -11667,6 +11685,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization-gradient-descent#def-gradient-flow",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-gradient-flow",
+   "kind": "def",
+   "title": "Gradient flow",
+   "external": false
+  },
+  {
    "id": "mds/optimization-gradient-descent#def-line-search",
    "site": "mds",
    "page": "optimization-gradient-descent",
@@ -11682,6 +11709,15 @@
    "div": "def-plateau",
    "kind": "def",
    "title": "Plateau",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-relative-change-stopping-criterion",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-relative-change-stopping-criterion",
+   "kind": "def",
+   "title": "Relative change stopping criterion",
    "external": false
   },
   {
@@ -18621,6 +18657,14 @@
    "mds/vector-calculus#def-partial-derivative"
   ],
   [
+   "mds/optimization#def-gradient-flow",
+   "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization#def-gradient-flow",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
    "mds/optimization#def-inflection-point",
    "mds/calculus-derivatives#def-second-derivative"
   ],
@@ -18759,6 +18803,10 @@
   [
    "mds/optimization#def-quasi-newton-method",
    "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
+   "mds/optimization#def-relative-change-stopping-criterion",
+   "mds/optimization#def-gradient-descent"
   ],
   [
    "mds/optimization#def-saddle-point",
@@ -19365,6 +19413,14 @@
    "mds/vector-calculus#def-partial-derivative"
   ],
   [
+   "mds/optimization-gradient-descent#def-gradient-flow",
+   "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-gradient-flow",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
    "mds/optimization-gradient-descent#def-line-search",
    "mds/optimization-gradient-descent#def-gradient-descent"
   ],
@@ -19379,6 +19435,10 @@
   [
    "mds/optimization-gradient-descent#def-plateau",
    "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-relative-change-stopping-criterion",
+   "mds/optimization-gradient-descent#def-gradient-descent"
   ],
   [
    "mds/optimization-gradient-descent#prp-double-well-divergence",
