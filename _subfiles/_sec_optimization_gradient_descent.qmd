@@ -36,6 +36,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_rem-gradient-flow-euler.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-relative-change-stopping-criterion.qmd >}}
 
 {{< slidebreak >}}

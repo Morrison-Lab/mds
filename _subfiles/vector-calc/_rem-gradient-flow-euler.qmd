@@ -1,0 +1,10 @@
+:::{#rem-gradient-flow-euler}
+#### Gradient descent is Euler's method for the gradient flow
+
+[Gradient descent](#def-gradient-descent) with step length $\steplen$ computes $\iterpoint{\vx}{t+1} = \iterpoint{\vx}{t} - \steplen\,\deriv{\vx} f(\iterpoint{\vx}{t})$.
+This is Euler's method with time step $\steplen$ for the [gradient flow](#def-gradient-flow) equation.
+For a linear function $f$, the velocity of the flow is its negative normal vector,
+which is normal to every [level set](#def-level-set) (@thm-level-sets-linear),
+so the flow crosses the level sets at a right angle.
+
+:::
