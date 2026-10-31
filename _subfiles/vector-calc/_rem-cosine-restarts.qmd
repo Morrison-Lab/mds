@@ -1,0 +1,8 @@
+:::{#rem-cosine-restarts}
+#### Restarting the cosine schedule
+
+Restarting the schedule periodically is a common variant of [cosine decay](#def-cosine-decay) [@loshchilov2017sgdr]:
+jump the step length back to $\iterpoint{\steplen}{0}$ and decay again.
+The argument for it is that the jump can move the iterates out of one [basin of attraction](#def-basin-of-attraction) and into a better one.
+
+:::

@@ -1,0 +1,41 @@
+:::{#exm-cosine-decay}
+#### Cosine decay over a fixed run
+
+Take $\iterpoint{\steplen}{0} = 0.1$ and $\schedlen = 90$.
+The [step length](#def-cosine-decay) at $t = 0, 15, 45, 75, 90$ is:
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: cosine-decay-r
+#| code-fold: false
+s0_cd <- 0.1
+tau_cd <- 90
+t_cd <- c(0, 15, 45, 75, 90)
+angle_cd <- pi * t_cd / tau_cd
+step_cd <- s0_cd / 2 * (1 + cos(angle_cd))
+tibble::tibble(t = t_cd, step_length = step_cd)
+```
+
+### Python
+
+```{python}
+#| label: cosine-decay-python
+#| code-fold: false
+import math
+
+s0_cd, tau_cd = 0.1, 90
+for t_cd in [0, 15, 45, 75, 90]:
+    print(t_cd, round(s0_cd / 2 * (1 + math.cos(math.pi * t_cd / tau_cd)), 6));
+```
+
+:::
+
+The step length is $0.1$ at the start, half of that at $t = 45$, and zero at $t = 90$.
+It changes slowly near both ends and fastest in the middle.
+
+<!-- no-figure: the example tabulates five step lengths -->
+
+:::
