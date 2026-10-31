@@ -3,7 +3,7 @@
 
 Let $\vg^{(0)}, \vg^{(1)}, \ldots$ be vectors in $\reals^p$,
 and let $\vv^{(t)}$ be a running velocity built from them.
-The **momentum coefficient** $\beta \in [0, 1)$ is the weight on the previous velocity in
+The **momentum coefficient** $\beta \in [0, 1)$ is the factor that multiplies the previous velocity in
 
 $$
 \vv^{(t)} \eqdef \beta\,\vv^{(t-1)} + \vg^{(t)},
