@@ -9,7 +9,7 @@ $$
 x(t) = x_0\,\expf{-t}.
 $$
 
-[Gradient descent](#def-gradient-descent) with a fixed step length $\steplen$ multiplies $x$ by $1 - \steplen$ at each step,
+[Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $\steplen$ multiplies $x$ by $1 - \steplen$ at each step,
 so after $k$ steps it has reached time $t = k\steplen$ with
 
 $$
@@ -49,10 +49,10 @@ print(np.round(np.append(descent_gf, flow_gf), 4));
 
 :::
 
-With step length $\steplen = 0.5$ the descent reaches `r round(descent_gf[1], 4)`,
+With [step length](#def-gradient-descent) $\steplen = 0.5$ the descent reaches `r round(descent_gf[1], 4)`,
 and with $\steplen = 0.01$ it reaches `r round(descent_gf[2], 4)`,
 against `r round(flow_gf, 4)` for the flow.
-The smaller the step length, the closer gradient descent stays to the flow.
+The smaller the step length, the closer the descent stays to the flow.
 
 <!-- no-figure: three numbers compared at one time -->
 

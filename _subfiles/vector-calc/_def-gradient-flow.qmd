@@ -1,8 +1,8 @@
 :::{#def-gradient-flow}
 #### Gradient flow
 
-Let $f : \reals^p \to \reals$ have first partial derivatives.
-A **gradient flow** of $f$ is a differentiable curve $\vx : [0, \infty) \to \reals^p$ that satisfies
+Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.qmd#def-partial-derivative).
+A **gradient flow** of $f$ is a [differentiable](calculus.qmd#def-differentiable) curve $\vx : [0, \infty) \to \reals^p$ that satisfies
 
 $$
 \dif{\vx(t)}{t} = -\deriv{\vx} f(\vx(t)).
