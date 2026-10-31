@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-31 00:08:50 (PDT)
+Last modified: 2026-10-31 06:43:52 (PDT)
 
 ## 0.1 Gradient descent
 
@@ -467,7 +467,7 @@ Last modified: 2026-10-31 00:08:50 (PDT)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc050>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14bb8050>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -479,18 +479,18 @@ Last modified: 2026-10-31 00:08:50 (PDT)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc190>]
-> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc2d0>]
-> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc410>]
-> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc550>]
-> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc690>]
-> #> [<matplotlib.lines.Line2D object at 0x7fe53a6bc7d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14bb8190>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14bb82d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14bb8410>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14bb8550>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14bb8690>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14bb87d0>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7fe53a6bc910>
+> #> <matplotlib.legend.Legend object at 0x7f9b14bb8910>
 > plt.show()
 > ```
 >
@@ -585,10 +585,10 @@ Last modified: 2026-10-31 00:08:50 (PDT)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7fe53a615090>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14b19090>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7fe53a6151d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14b191d0>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -715,11 +715,11 @@ Last modified: 2026-10-31 00:08:50 (PDT)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7fe5380c9310>]
+> #> [<matplotlib.lines.Line2D object at 0x7f9b14691310>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7fe5380c9450>
+> #> <matplotlib.lines.Line2D object at 0x7f9b14691450>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7fe5380c9590>
+> #> <matplotlib.lines.Line2D object at 0x7f9b14691590>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -876,6 +876,114 @@ Last modified: 2026-10-31 00:08:50 (PDT)
 >
 > After \\20\\ updates, plain descent has reached 0.122 and [momentum](#def-momentum) 0.345. Momentum overshoots the [minimizer](algebra-basics.llms.md#def-global-minimizer) \\0\\, down to -0.604 at update 9, and then swings back. In this run, with a small [step length](#def-gradient-descent), the swing leaves momentum behind plain descent after \\20\\ updates.
 
+> **NOTE:**
+>
+> **Definition 15 (Adaptive method)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), let \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\ be a starting point, let \\s\> 0\\ be a [step length](#def-gradient-descent), let \\\rho \in \[0, 1)\\ be a decay factor, and let \\\epsilon \> 0\\. Write \\g_j^{(t)}\\ for coordinate \\j\\ of \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t-1)})\\. An **adaptive method** is defined, for \\t = 1, 2, \ldots\\ and each coordinate \\j = 1, \ldots, p\\,
+>
+> \\ \begin{aligned} u_j^{(t)} &\stackrel{\text{def}}{=}\rho\\u_j^{(t-1)} + (1 - \rho)\\\mathopen{}\left(g_j^{(t)}\right)\mathclose{}^2 \\ x_j^{(t)} &\stackrel{\text{def}}{=}x_j^{(t-1)} - s\\\frac{g_j^{(t)}}{\sqrt{u_j^{(t)}} + \epsilon}, \end{aligned} \\
+>
+> with \\u_j^{(0)} \stackrel{\text{def}}{=}0\\.
+
+> **NOTE:**
+>
+> **Example 19 (Two coordinates on very different scales)** Suppose the two coordinates of the gradient start at \\g_1^{(1)} = 100\\ and \\g_2^{(1)} = 0.01\\, and both shrink by a factor of \\0.5\\ at each update. Take \\\rho = 0.9\\, and look at the first \\5\\ updates. Dividing by the root of the running average gives the factor \\g_j^{(t)} / \sqrt{u_j^{(t)}}\\ that multiplies \\s\\ in the update of each coordinate:
+>
+> ## R
+>
+> ``` downlit
+> s_am <- c(100, 0.01)
+> rho_am <- 0.9
+> q_am <- 0.5
+> n_am <- 5
+> k_am <- seq_len(n_am) - 1
+> g_am <- outer(q_am^k_am, s_am)
+> u_am <- matrix(0, n_am, 2)
+> u_prev_am <- c(0, 0)
+> for (t_am in seq_len(n_am)) {
+>   u_prev_am <- rho_am * u_prev_am + (1 - rho_am) * g_am[t_am, ]^2
+>   u_am[t_am, ] <- u_prev_am
+> }
+> factor_am <- g_am / sqrt(u_am)
+> round(factor_am, 3)
+> #>       [,1]  [,2]
+> #> [1,] 3.162 3.162
+> #> [2,] 1.474 1.474
+> #> [3,] 0.755 0.755
+> #> [4,] 0.395 0.395
+> #> [5,] 0.208 0.208
+> ```
+>
+> ## Python
+>
+> ``` python
+> import numpy as np
+>
+> s_am, rho_am, q_am, n_am = [100, 0.01], 0.9, 0.5, 5
+> g_am = np.outer(q_am ** np.arange(n_am), s_am)
+> u_am = np.zeros(2)
+> factor_am = []
+> for t_am in range(n_am):
+>     u_am = rho_am * u_am + (1 - rho_am) * g_am[t_am] ** 2
+>     factor_am.append(g_am[t_am] / np.sqrt(u_am))
+> print(np.round(factor_am, 3));
+> #> [[3.162 3.162]
+> #>  [1.474 1.474]
+> #>  [0.755 0.755]
+> #>  [0.395 0.395]
+> #>  [0.208 0.208]]
+> ```
+>
+> Plain [gradient descent](#def-gradient-descent) would move the first coordinate \\10^{4}\\ times as far as the second. The factors are the same for both coordinates, so the scale of a coordinate no longer matters. They also shrink from 3.16 to 0.21, because the running average still holds the earlier, larger values. Dividing by the current gradient alone would give a factor of \\1\\ at every update.
+
+> **NOTE:**
+>
+> *Remark 3* (Early adaptive methods). RMSProp is an early example of an [adaptive method](#def-adaptive-method) [\[6\]](#ref-wikipedia_stochastic_gradient_descent). AdaGrad, an earlier method, replaces the exponentially weighted average by a plain sum of squared gradients, \\u_j^{(t)} = u_j^{(t-1)} + \mathopen{}\left(g_j^{(t)}\right)\mathclose{}^2\\.
+
+> **NOTE:**
+>
+> **Definition 16 (Adam)** Let \\f\\, \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(0)}\\, \\s\\ and \\\epsilon\\ be as in an [adaptive method](#def-adaptive-method), and let \\\beta_1, \beta_2 \in \[0, 1)\\, where \\\beta_2\\ plays the role of the decay factor \\\rho\\. Write \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}^{(t)}\\ for \\\frac{\partial}{\partial \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}} f(\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}^{(t-1)})\\. The **Adam** method [\[7\]](#ref-kingma2015adam) is defined, for \\t = 1, 2, \ldots\\,
+>
+> \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\mu}}\vphantom{\mu}}^{(t)} &\stackrel{\text{def}}{=}\beta_1\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\mu}}\vphantom{\mu}}^{(t-1)} + (1 - \beta_1)\\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{g}}\vphantom{g}}^{(t)} \\ u_j^{(t)} &\stackrel{\text{def}}{=}\beta_2\\u_j^{(t-1)} + (1 - \beta_2)\\\mathopen{}\left(g_j^{(t)}\right)\mathclose{}^2 \\ \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\mu}}\vphantom{\mu}}}^{(t)} &\stackrel{\text{def}}{=}\frac{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\mu}}\vphantom{\mu}}^{(t)}}{1 - \beta_1^t} \\ \hat{u}\_j^{(t)} &\stackrel{\text{def}}{=}\frac{u_j^{(t)}}{1 - \beta_2^t} \\ x_j^{(t)} &\stackrel{\text{def}}{=}x_j^{(t-1)} - s\\\frac{\hat{m}\_j^{(t)}}{\sqrt{\hat{u}\_j^{(t)}} + \epsilon}, \end{aligned} \\
+>
+> for each coordinate \\j = 1, \ldots, p\\, with \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\mu}}\vphantom{\mu}}^{(0)} \stackrel{\text{def}}{=}\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{0}}\vphantom{0}}\\ and \\u_j^{(0)} \stackrel{\text{def}}{=}0\\.
+
+> **NOTE:**
+>
+> **Example 20 (The first Adam step ignores the size of the gradient)** Let \\f(x) = \tfrac{1}{2} x^2\\, so \\\frac{\partial}{\partial x} f(x) = x\\, and take \\s= 0.1\\, \\\beta_1 = 0.9\\, \\\beta_2 = 0.999\\ and \\\epsilon = 10^{-8}\\. At \\t = 1\\ the corrections for the zero start of \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\mu}}\vphantom{\mu}}\\ and \\u_j\\ cancel the factors \\1 - \beta_1\\ and \\1 - \beta_2\\, so \\\hat{m}^{(1)} = g^{(1)}\\ and \\\hat{u}^{(1)} = \mathopen{}\left(g^{(1)}\right)\mathclose{}^2\\. The first step is then \\s\\ g^{(1)} / (\|g^{(1)}\| + \epsilon)\\, which is about \\s\\ in size. Start at \\x^{(0)} = 2\\ and at \\x^{(0)} = 2000\\:
+>
+> ## R
+>
+> ``` downlit
+> s_ad <- 0.1
+> beta1_ad <- 0.9
+> beta2_ad <- 0.999
+> eps_ad <- 1e-8
+> x0_ad <- c(2, 2000)
+> g_ad <- x0_ad
+> m_ad <- (1 - beta1_ad) * g_ad
+> u_ad <- (1 - beta2_ad) * g_ad^2
+> m_hat_ad <- m_ad / (1 - beta1_ad)
+> u_hat_ad <- u_ad / (1 - beta2_ad)
+> step_ad <- s_ad * m_hat_ad / (sqrt(u_hat_ad) + eps_ad)
+> round(step_ad, 4)
+> #> [1] 0.1 0.1
+> ```
+>
+> ## Python
+>
+> ``` python
+> import numpy as np
+>
+> s_ad, beta1_ad, beta2_ad, eps_ad = 0.1, 0.9, 0.999, 1e-8
+> g_ad = np.array([2.0, 2000.0])
+> m_hat_ad = (1 - beta1_ad) * g_ad / (1 - beta1_ad)
+> u_hat_ad = (1 - beta2_ad) * g_ad ** 2 / (1 - beta2_ad)
+> print(np.round(s_ad * m_hat_ad / (np.sqrt(u_hat_ad) + eps_ad), 4));
+> #> [0.1 0.1]
+> ```
+>
+> Both first steps have size 0.1, though the gradients differ by a factor of 1000. Plain [gradient descent](#def-gradient-descent) would move \\s\\g^{(1)}\\, which is \\0.2\\ and \\200\\.
+
 # Definitions on this page
 
 - [Definition 1 (Gradient descent)](#def-gradient-descent)
@@ -892,6 +1000,8 @@ Last modified: 2026-10-31 00:08:50 (PDT)
 - [Definition 12 (Backtracking line search)](#def-backtracking-line-search)
 - [Definition 13 (Momentum coefficient)](#def-momentum-coefficient)
 - [Definition 14 (Momentum (heavy-ball method))](#def-momentum)
+- [Definition 15 (Adaptive method)](#def-adaptive-method)
+- [Definition 16 (Adam)](#def-adam)
 
 Back to top
 
@@ -916,3 +1026,11 @@ Wikipedia contributors, “Attractor — Wikipedia, the free encyclopedia.” 20
 \[5\]
 
 Wikipedia contributors, “Backtracking line search — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Backtracking_line_search>
+
+\[6\]
+
+Wikipedia contributors, “Stochastic gradient descent — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Stochastic_gradient_descent>
+
+\[7\]
+
+D. P. Kingma and J. Ba, “Adam: A method for stochastic optimization,” in *3rd international conference on learning representations*, 2015. doi: [10.48550/arXiv.1412.6980](https://doi.org/10.48550/arXiv.1412.6980).

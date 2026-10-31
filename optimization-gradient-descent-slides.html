@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-31 00:08:50 (PDT)</p>
+  <p class="date">Last modified: 2026-10-31 06:43:52 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-gradient-descent" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Gradient descent</h2>
 <div id="def-gradient-descent" class="theorem definition">
@@ -910,7 +910,7 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb13-7"><a aria-label="7"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb13-8"><a aria-label="8"></a>grid_bf <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.6</span>, <span class="fl">1.6</span>, <span class="dv">321</span>)</span>
 <span id="cb13-9"><a aria-label="9"></a>ax.plot(grid_bf, basin_cost_bf(grid_bf), color<span class="op">=</span><span class="st">"grey"</span>)</span>
-<span id="cb13-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc050&gt;]</span></span>
+<span id="cb13-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14bb8050&gt;]</span></span>
 <span id="cb13-11"><a aria-label="11"></a><span class="cf">for</span> start <span class="kw">in</span> <span class="bu">sorted</span>(basin_starts_bs[:<span class="dv">6</span>], reverse<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb13-12"><a aria-label="12"></a>    x <span class="op">=</span> [start]</span>
 <span id="cb13-13"><a aria-label="13"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">30</span>):</span>
@@ -922,18 +922,18 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb13-19"><a aria-label="19"></a>            marker<span class="op">=</span><span class="st">"o"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"^"</span>,</span>
 <span id="cb13-20"><a aria-label="20"></a>            label<span class="op">=</span>(<span class="st">"start above 0"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"start below 0"</span>)</span>
 <span id="cb13-21"><a aria-label="21"></a>            <span class="cf">if</span> <span class="bu">abs</span>(start) <span class="op">==</span> <span class="fl">0.1</span> <span class="cf">else</span> <span class="va">None</span>)</span>
-<span id="cb13-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc190&gt;]</span></span>
-<span id="cb13-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc2d0&gt;]</span></span>
-<span id="cb13-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc410&gt;]</span></span>
-<span id="cb13-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc550&gt;]</span></span>
-<span id="cb13-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc690&gt;]</span></span>
-<span id="cb13-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6bc7d0&gt;]</span></span>
+<span id="cb13-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14bb8190&gt;]</span></span>
+<span id="cb13-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14bb82d0&gt;]</span></span>
+<span id="cb13-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14bb8410&gt;]</span></span>
+<span id="cb13-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14bb8550&gt;]</span></span>
+<span id="cb13-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14bb8690&gt;]</span></span>
+<span id="cb13-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14bb87d0&gt;]</span></span>
 <span id="cb13-28"><a aria-label="28"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb13-29"><a aria-label="29"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
 <span id="cb13-30"><a aria-label="30"></a>ax.set_ylabel(<span class="st">"f(x)"</span>)</span>
 <span id="cb13-31"><a aria-label="31"></a><span class="co">#&gt; Text(0, 0.5, 'f(x)')</span></span>
 <span id="cb13-32"><a aria-label="32"></a>fig.legend(loc<span class="op">=</span><span class="st">"outside lower center"</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb13-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7fe53a6bc910&gt;</span></span>
+<span id="cb13-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7f9b14bb8910&gt;</span></span>
 <span id="cb13-34"><a aria-label="34"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-basin-of-attraction" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-basin-of-attraction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1044,10 +1044,10 @@ function or its scalar variable, and the basin example writes f(x) the same way.
 <span id="cb15-5"><a aria-label="5"></a>plateau_marks_pf <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">10</span>])</span>
 <span id="cb15-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb15-7"><a aria-label="7"></a>ax.plot(plateau_grid_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_grid_pf)), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
-<span id="cb15-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a615090&gt;]</span></span>
+<span id="cb15-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14b19090&gt;]</span></span>
 <span id="cb15-9"><a aria-label="9"></a>ax.plot(plateau_marks_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_marks_pf)),</span>
 <span id="cb15-10"><a aria-label="10"></a>        color<span class="op">=</span><span class="st">"#D55E00"</span>, marker<span class="op">=</span><span class="st">"^"</span>, markersize<span class="op">=</span><span class="dv">8</span>, linestyle<span class="op">=</span><span class="st">""</span>)</span>
-<span id="cb15-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe53a6151d0&gt;]</span></span>
+<span id="cb15-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14b191d0&gt;]</span></span>
 <span id="cb15-12"><a aria-label="12"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
 <span id="cb15-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb15-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
@@ -1238,11 +1238,11 @@ s&amp;= \frac{2}{\lambda_{\min} + \lambda_{\max}} = s^*.
 <span id="cb17-5"><a aria-label="5"></a>bcs_rho_pf <span class="op">=</span> np.maximum(np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> <span class="dv">3</span> <span class="op">*</span> bcs_grid_pf), np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> bcs_grid_pf))</span>
 <span id="cb17-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb17-7"><a aria-label="7"></a>ax.plot(bcs_grid_pf, bcs_rho_pf, color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
-<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7fe5380c9310&gt;]</span></span>
+<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f9b14691310&gt;]</span></span>
 <span id="cb17-9"><a aria-label="9"></a>ax.axhline(<span class="dv">1</span>, color<span class="op">=</span><span class="st">"black"</span>, linestyle<span class="op">=</span><span class="st">":"</span>)</span>
-<span id="cb17-10"><a aria-label="10"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7fe5380c9450&gt;</span></span>
+<span id="cb17-10"><a aria-label="10"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f9b14691450&gt;</span></span>
 <span id="cb17-11"><a aria-label="11"></a>ax.axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
-<span id="cb17-12"><a aria-label="12"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7fe5380c9590&gt;</span></span>
+<span id="cb17-12"><a aria-label="12"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f9b14691590&gt;</span></span>
 <span id="cb17-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"Step length"</span>)</span>
 <span id="cb17-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'Step length')</span></span>
 <span id="cb17-15"><a aria-label="15"></a>ax.set_ylabel(<span class="st">"Error factor"</span>)</span>
@@ -1375,7 +1375,7 @@ s^* = \frac{2}{1 + 9} = 0.2.
 \]</span></p>
 <p>with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(0)} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
 </div>
-</section><section class="slide level2 smaller scrollable" id="references"><div id="exm-momentum" class="theorem example">
+</section><section class="slide level2"><div id="exm-momentum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Momentum on a one-dimensional quadratic)</strong></span> Let <span class="math inline">\(f(x) = \tfrac{1}{2} x^2\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x} f(x) = x\)</span>. Start at <span class="math inline">\(x^{(0)} = 1\)</span> with <span class="math inline">\(s= 0.1\)</span>, and take <span class="math inline">\(20\)</span> updates with <span class="math inline">\(\beta = 0\)</span>, which is plain <a href="#/def-gradient-descent">gradient descent</a>, and with <span class="math inline">\(\beta = 0.9\)</span>:</p>
 <div class="panel-tabset" data-group="language">
 <ul id="tabset-10" class="panel-tabset-tabby">
@@ -1426,6 +1426,130 @@ s^* = \frac{2}{1 + 9} = 0.2.
 </div>
 <p>After <span class="math inline">\(20\)</span> updates, plain descent has reached 0.122 and <a href="#/def-momentum">momentum</a> 0.345. Momentum overshoots the <a href="./algebra-basics.html#def-global-minimizer">minimizer</a> <span class="math inline">\(0\)</span>, down to -0.604 at update 9, and then swings back. In this run, with a small <a href="#/def-gradient-descent">step length</a>, the swing leaves momentum behind plain descent after <span class="math inline">\(20\)</span> updates.</p>
 <!-- no-figure: a one-dimensional run summarized in two numbers per method -->
+</div>
+</section><section class="slide level2"><div id="def-adaptive-method" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 (Adaptive method)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first <a href="./vector-calculus.html#def-partial-derivative">partial derivatives</a>, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> be a starting point, let <span class="math inline">\(s&gt; 0\)</span> be a <a href="#/def-gradient-descent">step length</a>, let <span class="math inline">\(\rho \in [0, 1)\)</span> be a decay factor, and let <span class="math inline">\(\epsilon &gt; 0\)</span>. Write <span class="math inline">\(g_j^{(t)}\)</span> for coordinate <span class="math inline">\(j\)</span> of <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t-1)})\)</span>. An <strong>adaptive method</strong> is defined, for <span class="math inline">\(t = 1, 2, \ldots\)</span> and each coordinate <span class="math inline">\(j = 1, \ldots, p\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+u_j^{(t)} &amp;\stackrel{\text{def}}{=}\rho\,u_j^{(t-1)} + (1 - \rho)\,\mathopen{}\left(g_j^{(t)}\right)\mathclose{}^2 \\
+x_j^{(t)} &amp;\stackrel{\text{def}}{=}x_j^{(t-1)} - s\,\frac{g_j^{(t)}}{\sqrt{u_j^{(t)}} + \epsilon},
+\end{aligned}
+\]</span></p>
+<p>with <span class="math inline">\(u_j^{(0)} \stackrel{\text{def}}{=}0\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-adaptive-method" class="theorem example">
+<p><span class="theorem-title"><strong>Example 19 (Two coordinates on very different scales)</strong></span> Suppose the two coordinates of the gradient start at <span class="math inline">\(g_1^{(1)} = 100\)</span> and <span class="math inline">\(g_2^{(1)} = 0.01\)</span>, <!-- check-term-links: allow --> and both shrink by a factor of <span class="math inline">\(0.5\)</span> at each update. Take <span class="math inline">\(\rho = 0.9\)</span>, and look at the first <span class="math inline">\(5\)</span> updates. Dividing by the root of the running average gives the factor <span class="math inline">\(g_j^{(t)} / \sqrt{u_j^{(t)}}\)</span> that multiplies <span class="math inline">\(s\)</span> in the update of each coordinate: <!-- check-term-links: allow --></p>
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-11" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-11-1">R</a></li>
+<li><a href="#tabset-11-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-11-1">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a aria-label="1"></a>s_am <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="fl">0.01</span>)</span>
+<span id="cb22-2"><a aria-label="2"></a>rho_am <span class="ot">&lt;-</span> <span class="fl">0.9</span></span>
+<span id="cb22-3"><a aria-label="3"></a>q_am <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb22-4"><a aria-label="4"></a>n_am <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb22-5"><a aria-label="5"></a>k_am <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(n_am) <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb22-6"><a aria-label="6"></a>g_am <span class="ot">&lt;-</span> <span class="fu">outer</span>(q_am<span class="sc">^</span>k_am, s_am)</span>
+<span id="cb22-7"><a aria-label="7"></a>u_am <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, n_am, <span class="dv">2</span>)</span>
+<span id="cb22-8"><a aria-label="8"></a>u_prev_am <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb22-9"><a aria-label="9"></a><span class="cf">for</span> (t_am <span class="cf">in</span> <span class="fu">seq_len</span>(n_am)) {</span>
+<span id="cb22-10"><a aria-label="10"></a>  u_prev_am <span class="ot">&lt;-</span> rho_am <span class="sc">*</span> u_prev_am <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">-</span> rho_am) <span class="sc">*</span> g_am[t_am, ]<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb22-11"><a aria-label="11"></a>  u_am[t_am, ] <span class="ot">&lt;-</span> u_prev_am</span>
+<span id="cb22-12"><a aria-label="12"></a>}</span>
+<span id="cb22-13"><a aria-label="13"></a>factor_am <span class="ot">&lt;-</span> g_am <span class="sc">/</span> <span class="fu">sqrt</span>(u_am)</span>
+<span id="cb22-14"><a aria-label="14"></a><span class="fu">round</span>(factor_am, <span class="dv">3</span>)</span>
+<span id="cb22-15"><a aria-label="15"></a><span class="co">#&gt;       [,1]  [,2]</span></span>
+<span id="cb22-16"><a aria-label="16"></a><span class="co">#&gt; [1,] 3.162 3.162</span></span>
+<span id="cb22-17"><a aria-label="17"></a><span class="co">#&gt; [2,] 1.474 1.474</span></span>
+<span id="cb22-18"><a aria-label="18"></a><span class="co">#&gt; [3,] 0.755 0.755</span></span>
+<span id="cb22-19"><a aria-label="19"></a><span class="co">#&gt; [4,] 0.395 0.395</span></span>
+<span id="cb22-20"><a aria-label="20"></a><span class="co">#&gt; [5,] 0.208 0.208</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-11-2">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a aria-label="1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb23-2"><a aria-label="2"></a></span>
+<span id="cb23-3"><a aria-label="3"></a>s_am, rho_am, q_am, n_am <span class="op">=</span> [<span class="dv">100</span>, <span class="fl">0.01</span>], <span class="fl">0.9</span>, <span class="fl">0.5</span>, <span class="dv">5</span></span>
+<span id="cb23-4"><a aria-label="4"></a>g_am <span class="op">=</span> np.outer(q_am <span class="op">**</span> np.arange(n_am), s_am)</span>
+<span id="cb23-5"><a aria-label="5"></a>u_am <span class="op">=</span> np.zeros(<span class="dv">2</span>)</span>
+<span id="cb23-6"><a aria-label="6"></a>factor_am <span class="op">=</span> []</span>
+<span id="cb23-7"><a aria-label="7"></a><span class="cf">for</span> t_am <span class="kw">in</span> <span class="bu">range</span>(n_am):</span>
+<span id="cb23-8"><a aria-label="8"></a>    u_am <span class="op">=</span> rho_am <span class="op">*</span> u_am <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> rho_am) <span class="op">*</span> g_am[t_am] <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb23-9"><a aria-label="9"></a>    factor_am.append(g_am[t_am] <span class="op">/</span> np.sqrt(u_am))</span>
+<span id="cb23-10"><a aria-label="10"></a><span class="bu">print</span>(np.<span class="bu">round</span>(factor_am, <span class="dv">3</span>))<span class="op">;</span></span>
+<span id="cb23-11"><a aria-label="11"></a><span class="co">#&gt; [[3.162 3.162]</span></span>
+<span id="cb23-12"><a aria-label="12"></a><span class="co">#&gt;  [1.474 1.474]</span></span>
+<span id="cb23-13"><a aria-label="13"></a><span class="co">#&gt;  [0.755 0.755]</span></span>
+<span id="cb23-14"><a aria-label="14"></a><span class="co">#&gt;  [0.395 0.395]</span></span>
+<span id="cb23-15"><a aria-label="15"></a><span class="co">#&gt;  [0.208 0.208]]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>Plain <a href="#/def-gradient-descent">gradient descent</a> would move the first coordinate <span class="math inline">\(10^{4}\)</span> times as far as the second. The factors are the same for both coordinates, so the scale of a coordinate no longer matters. <!-- check-term-links: allow --> They also shrink from 3.16 to 0.21, because the running average still holds the earlier, larger values. <!-- check-term-links: allow --> Dividing by the current gradient alone would give a factor of <span class="math inline">\(1\)</span> at every update. <!-- check-term-links: allow --></p>
+<!-- no-figure: the example tabulates five updates -->
+</div>
+</section><section class="slide level2"><div id="rem-adaptive-method-history" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (Early adaptive methods). </span>RMSProp is an early example of an <a href="#/def-adaptive-method">adaptive method</a> <span class="citation" data-cites="wikipedia_stochastic_gradient_descent"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>. AdaGrad, an earlier method, replaces the exponentially weighted average by a plain sum of squared gradients, <!-- check-term-links: allow --> <span class="math inline">\(u_j^{(t)} = u_j^{(t-1)} + \mathopen{}\left(g_j^{(t)}\right)\mathclose{}^2\)</span>. <!-- check-term-links: allow --></p>
+</div>
+</section><section class="slide level2"><div id="def-adam" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 16 (Adam)</strong></span> Let <span class="math inline">\(f\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span>, <span class="math inline">\(s\)</span> and <span class="math inline">\(\epsilon\)</span> be as in an <a href="#/def-adaptive-method">adaptive method</a>, and let <span class="math inline">\(\beta_1, \beta_2 \in [0, 1)\)</span>, where <span class="math inline">\(\beta_2\)</span> plays the role of the decay factor <span class="math inline">\(\rho\)</span>. Write <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}^{(t)}\)</span> for <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t-1)})\)</span>. The <strong>Adam</strong> method <span class="citation" data-cites="kingma2015adam"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is defined, for <span class="math inline">\(t = 1, 2, \ldots\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\mu}}\vphantom{\mu}}^{(t)} &amp;\stackrel{\text{def}}{=}\beta_1\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\mu}}\vphantom{\mu}}^{(t-1)} + (1 - \beta_1)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}^{(t)} \\
+u_j^{(t)} &amp;\stackrel{\text{def}}{=}\beta_2\,u_j^{(t-1)} + (1 - \beta_2)\,\mathopen{}\left(g_j^{(t)}\right)\mathclose{}^2 \\
+\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\mu}}\vphantom{\mu}}}^{(t)} &amp;\stackrel{\text{def}}{=}\frac{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\mu}}\vphantom{\mu}}^{(t)}}{1 - \beta_1^t} \\
+\hat{u}_j^{(t)} &amp;\stackrel{\text{def}}{=}\frac{u_j^{(t)}}{1 - \beta_2^t} \\
+x_j^{(t)} &amp;\stackrel{\text{def}}{=}x_j^{(t-1)} - s\,\frac{\hat{m}_j^{(t)}}{\sqrt{\hat{u}_j^{(t)}} + \epsilon},
+\end{aligned}
+\]</span></p>
+<p>for each coordinate <span class="math inline">\(j = 1, \ldots, p\)</span>, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\mu}}\vphantom{\mu}}^{(0)} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and <span class="math inline">\(u_j^{(0)} \stackrel{\text{def}}{=}0\)</span>.</p>
+</div>
+</section><section class="slide level2 smaller scrollable" id="references"><div id="exm-adam" class="theorem example">
+<p><span class="theorem-title"><strong>Example 20 (The first Adam step ignores the size of the gradient)</strong></span> Let <span class="math inline">\(f(x) = \tfrac{1}{2} x^2\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x} f(x) = x\)</span>, and take <span class="math inline">\(s= 0.1\)</span>, <span class="math inline">\(\beta_1 = 0.9\)</span>, <span class="math inline">\(\beta_2 = 0.999\)</span> and <span class="math inline">\(\epsilon = 10^{-8}\)</span>. At <span class="math inline">\(t = 1\)</span> the corrections for the zero start of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\mu}}\vphantom{\mu}}\)</span> and <span class="math inline">\(u_j\)</span> cancel the factors <span class="math inline">\(1 - \beta_1\)</span> and <span class="math inline">\(1 - \beta_2\)</span>, so <span class="math inline">\(\hat{m}^{(1)} = g^{(1)}\)</span> and <span class="math inline">\(\hat{u}^{(1)} = \mathopen{}\left(g^{(1)}\right)\mathclose{}^2\)</span>. The first step is then <span class="math inline">\(s\, g^{(1)} / (|g^{(1)}| + \epsilon)\)</span>, which is about <span class="math inline">\(s\)</span> in size. Start at <span class="math inline">\(x^{(0)} = 2\)</span> and at <span class="math inline">\(x^{(0)} = 2000\)</span>:</p>
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-12" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-12-1">R</a></li>
+<li><a href="#tabset-12-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-12-1">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a aria-label="1"></a>s_ad <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
+<span id="cb24-2"><a aria-label="2"></a>beta1_ad <span class="ot">&lt;-</span> <span class="fl">0.9</span></span>
+<span id="cb24-3"><a aria-label="3"></a>beta2_ad <span class="ot">&lt;-</span> <span class="fl">0.999</span></span>
+<span id="cb24-4"><a aria-label="4"></a>eps_ad <span class="ot">&lt;-</span> <span class="fl">1e-8</span></span>
+<span id="cb24-5"><a aria-label="5"></a>x0_ad <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2000</span>)</span>
+<span id="cb24-6"><a aria-label="6"></a>g_ad <span class="ot">&lt;-</span> x0_ad</span>
+<span id="cb24-7"><a aria-label="7"></a>m_ad <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> beta1_ad) <span class="sc">*</span> g_ad</span>
+<span id="cb24-8"><a aria-label="8"></a>u_ad <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> beta2_ad) <span class="sc">*</span> g_ad<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb24-9"><a aria-label="9"></a>m_hat_ad <span class="ot">&lt;-</span> m_ad <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> beta1_ad)</span>
+<span id="cb24-10"><a aria-label="10"></a>u_hat_ad <span class="ot">&lt;-</span> u_ad <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> beta2_ad)</span>
+<span id="cb24-11"><a aria-label="11"></a>step_ad <span class="ot">&lt;-</span> s_ad <span class="sc">*</span> m_hat_ad <span class="sc">/</span> (<span class="fu">sqrt</span>(u_hat_ad) <span class="sc">+</span> eps_ad)</span>
+<span id="cb24-12"><a aria-label="12"></a><span class="fu">round</span>(step_ad, <span class="dv">4</span>)</span>
+<span id="cb24-13"><a aria-label="13"></a><span class="co">#&gt; [1] 0.1 0.1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-12-2">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a aria-label="1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb25-2"><a aria-label="2"></a></span>
+<span id="cb25-3"><a aria-label="3"></a>s_ad, beta1_ad, beta2_ad, eps_ad <span class="op">=</span> <span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="fl">0.999</span>, <span class="fl">1e-8</span></span>
+<span id="cb25-4"><a aria-label="4"></a>g_ad <span class="op">=</span> np.array([<span class="fl">2.0</span>, <span class="fl">2000.0</span>])</span>
+<span id="cb25-5"><a aria-label="5"></a>m_hat_ad <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> beta1_ad) <span class="op">*</span> g_ad <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> beta1_ad)</span>
+<span id="cb25-6"><a aria-label="6"></a>u_hat_ad <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> beta2_ad) <span class="op">*</span> g_ad <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> beta2_ad)</span>
+<span id="cb25-7"><a aria-label="7"></a><span class="bu">print</span>(np.<span class="bu">round</span>(s_ad <span class="op">*</span> m_hat_ad <span class="op">/</span> (np.sqrt(u_hat_ad) <span class="op">+</span> eps_ad), <span class="dv">4</span>))<span class="op">;</span></span>
+<span id="cb25-8"><a aria-label="8"></a><span class="co">#&gt; [0.1 0.1]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>Both first steps have size 0.1, though the gradients differ by a factor of 1000. <!-- check-term-links: allow --> Plain <a href="#/def-gradient-descent">gradient descent</a> would move <span class="math inline">\(s\,g^{(1)}\)</span>, which is <span class="math inline">\(0.2\)</span> and <span class="math inline">\(200\)</span>.</p>
+<!-- no-figure: the example compares two first steps -->
 </div>
 
 
@@ -1640,6 +1764,15 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <div class="csl-left-margin">[5] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Backtracking line search — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Backtracking_line_search">https://en.wikipedia.org/wiki/Backtracking_line_search</a>
 </div>
+</div>
+<div id="ref-wikipedia_stochastic_gradient_descent" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Stochastic gradient descent — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">https://en.wikipedia.org/wiki/Stochastic_gradient_descent</a>
+</div>
+</div>
+<div id="ref-kingma2015adam" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">D. P. Kingma and J. Ba, <span>“Adam: A method for stochastic optimization,”</span> in <em>3rd international conference on learning representations</em>, 2015. doi: <a href="https://doi.org/10.48550/arXiv.1412.6980">10.48550/arXiv.1412.6980</a>.</div>
 </div>
 </div>
 </section>

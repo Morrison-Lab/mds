@@ -10623,6 +10623,24 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-adam",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-adam",
+   "kind": "def",
+   "title": "Adam",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-adaptive-method",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-adaptive-method",
+   "kind": "def",
+   "title": "Adaptive method",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-armijo-condition",
    "site": "mds",
    "page": "optimization",
@@ -11637,6 +11655,24 @@
    "div": "cor-double-well-basin-bound",
    "kind": "cor",
    "title": "Basins of the double-well function are bounded",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-adam",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-adam",
+   "kind": "def",
+   "title": "Adam",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-gradient-descent#def-adaptive-method",
+   "site": "mds",
+   "page": "optimization-gradient-descent",
+   "div": "def-adaptive-method",
+   "kind": "def",
+   "title": "Adaptive method",
    "external": false
   },
   {
@@ -18621,6 +18657,18 @@
    "mds/optimization#thm-qp-equality"
   ],
   [
+   "mds/optimization#def-adam",
+   "mds/optimization#def-adaptive-method"
+  ],
+  [
+   "mds/optimization#def-adaptive-method",
+   "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#def-adaptive-method",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
    "mds/optimization#def-backtracking-line-search",
    "mds/optimization#def-armijo-condition"
   ],
@@ -19423,6 +19471,18 @@
   [
    "mds/optimization-gradient-descent#cor-double-well-basin-bound",
    "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-adam",
+   "mds/optimization-gradient-descent#def-adaptive-method"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-adaptive-method",
+   "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-adaptive-method",
+   "mds/vector-calculus#def-partial-derivative"
   ],
   [
    "mds/optimization-gradient-descent#def-backtracking-line-search",
