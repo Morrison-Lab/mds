@@ -5,7 +5,7 @@ Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.q
 let $\vx^{(0)}$ be a starting point,
 let $\steplen > 0$ be a [step length](#def-gradient-descent),
 and let $\beta \in [0, 1)$ be a [momentum coefficient](#def-momentum-coefficient).
-**Momentum** (the **heavy-ball method**) is the sequence given, for $t = 1, 2, \ldots$, by
+**Momentum** (the **heavy-ball method**) updates, for $t = 1, 2, \ldots$, by
 
 $$
 \begin{aligned}
