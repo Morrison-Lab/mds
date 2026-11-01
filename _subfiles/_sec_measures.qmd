@@ -1,13 +1,23 @@
 {{< include latex-macros/macros.qmd >}}
 
+## $\sigma$-algebras
+
 {{< include mds/_subfiles/_sec_measures_sigma_algebras.qmd >}}
+
+## Additivity
 
 {{< include mds/_subfiles/_sec_measures_additivity.qmd >}}
 
 {{< include mds/_subfiles/_sec_measures_measures.qmd >}}
 
+## Measurable functions and integrals
+
 {{< include mds/_subfiles/_sec_measures_integrals.qmd >}}
 
+## $L^p$ spaces
+
 {{< include mds/_subfiles/_sec_measures_lp_spaces.qmd >}}
+
+## Product measures
 
 {{< include mds/_subfiles/_sec_measures_product.qmd >}}

@@ -1,5 +1,3 @@
-## Additivity
-
 {{< include mds/_subfiles/measures/_def-finite-additivity.qmd >}}
 
 {{< slidebreak >}}

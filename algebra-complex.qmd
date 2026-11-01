@@ -12,4 +12,6 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
+[]{#sec-complex-numbers}
+
 {{< include mds/_subfiles/_sec_algebra_complex.qmd >}}

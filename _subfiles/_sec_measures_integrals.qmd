@@ -1,5 +1,3 @@
-## Measurable functions and integrals
-
 ```{r}
 #| include: false
 py_packages <- c("numpy", "matplotlib")

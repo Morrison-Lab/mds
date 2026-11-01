@@ -1,5 +1,3 @@
-## Cosine and sine {#sec-cosine-sine}
-
 {{< include mds/_subfiles/algebra/_def-unit-circle.qmd >}}
 
 {{< slidebreak >}}

@@ -1,5 +1,3 @@
-## Complex numbers {#sec-complex-numbers}
-
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-imaginary-unit.qmd >}}
