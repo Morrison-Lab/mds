@@ -14,7 +14,7 @@ format:
 
 {{< include mds/_subfiles/_sec_vector_calc.qmd >}}
 
-## Further reading {#sec-additional-resources}
+# Further reading {#sec-additional-resources}
 
 - @marsden2013vector
   is a standard textbook on multivariable and vector calculus.
@@ -38,7 +38,7 @@ further reading](linear-algebra.qmd#sec-additional-resources).
   its chapters on gradient descent and backpropagation calculus visually illustrate
   how gradients of multivariate cost functions are computed and used for optimization.
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::
