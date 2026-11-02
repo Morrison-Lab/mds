@@ -45,7 +45,10 @@ plt.show();
 :::
 
 The first case of @exm-qp-equality-fails:
-along the constraint $x_1 = 1$, the [value](functions.qmd#def-value) $f(1, x_2)$ falls without [bound](sets.qmd#def-bound) as $\abs{x_2}$ grows,
-so there is no [minimizer](algebra.qmd#def-global-minimizer) when $\matr{S}$ is not [positive definite](linear-algebra.qmd#def-positive-definite).
+with $\matr{S} = \diag(1, -1)$, which is not [positive definite](linear-algebra.qmd#def-positive-definite),
+the [value](functions.qmd#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$
+falls without [bound](sets.qmd#def-bound)
+as $\abs{x_2}$ grows,
+so this problem has no [minimizer](algebra.qmd#def-global-minimizer).
 
 :::
