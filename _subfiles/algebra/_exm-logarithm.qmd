@@ -20,7 +20,8 @@ the first of these two facts.
 #|   rising more slowly. A dot marks the point (8, 3).
 
 x <- seq(0.1, 10, length.out = 200)
-curve <- data.frame(x = x, y = log2(x))
+y <- log2(x)
+curve <- data.frame(x = x, y = y)
 marked <- data.frame(x = 8, y = 3)
 
 log_plot <- ggplot2::ggplot(curve, ggplot2::aes(x = x, y = y)) +
