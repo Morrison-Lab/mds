@@ -21,8 +21,8 @@ the first of these two facts.
 
 x <- seq(0.1, 10, length.out = 200)
 y <- log2(x)
-curve <- data.frame(x = x, y = y)
-marked <- data.frame(x = 8, y = 3)
+curve <- tibble::tibble(x = x, y = y)
+marked <- tibble::tibble(x = 8, y = 3)
 
 log_plot <- ggplot2::ggplot(curve, ggplot2::aes(x = x, y = y)) +
   ggplot2::geom_line() +

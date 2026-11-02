@@ -23,7 +23,7 @@ and stops just short of the next integer, at an open dot.
 
 # one step per integer k, from x = k to x = k + 1 at height k
 k <- -3:2
-steps <- data.frame(x = k, xend = k + 1, y = k)
+steps <- tibble::tibble(x = k, xend = k + 1, y = k)
 
 floor_plot <- ggplot2::ggplot(steps) +
   ggplot2::geom_segment(ggplot2::aes(x = x, xend = xend, y = y, yend = y)) +
