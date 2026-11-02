@@ -78,6 +78,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-second-order-condition.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_exm-second-order-inconclusive.qmd >}}
 
 {{< slidebreak >}}
