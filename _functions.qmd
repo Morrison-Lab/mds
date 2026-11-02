@@ -201,7 +201,7 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 {{< include mds/_subfiles/functions/_fig-logistic-function.qmd >}}
 
-## Countable sets
+# Countable sets
 
 {{< include mds/_subfiles/functions/_def-finite-set.qmd >}}
 

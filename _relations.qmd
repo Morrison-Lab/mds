@@ -8,7 +8,7 @@ and the groups of elements that such a relation puts together.
 
 :::
 
-## Properties of relations
+# Properties of relations
 
 {{< include mds/_subfiles/relations/_def-reflexive.qmd >}}
 
@@ -24,7 +24,7 @@ and the groups of elements that such a relation puts together.
 
 {{< include mds/_subfiles/relations/_exm-symmetric-relation.qmd >}}
 
-## Equivalence relations
+# Equivalence relations
 
 {{< include mds/_subfiles/relations/_def-equivalence-relation.qmd >}}
 

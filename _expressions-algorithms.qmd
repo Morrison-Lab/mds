@@ -9,7 +9,7 @@ the parse trees of expressions, and algorithms, which compute those functions.
 
 :::
 
-## Expressions
+# Expressions
 
 {{< include mds/_subfiles/expressions-algorithms/_def-expression.qmd >}}
 
@@ -53,7 +53,7 @@ the parse trees of expressions, and algorithms, which compute those functions.
 
 {{< include mds/_subfiles/expressions-algorithms/_rem-expression-parse-tree.qmd >}}
 
-## Algorithms
+# Algorithms
 
 {{< include mds/_subfiles/expressions-algorithms/_def-algorithm.qmd >}}
 
@@ -81,7 +81,7 @@ the parse trees of expressions, and algorithms, which compute those functions.
 
 {{< include mds/_subfiles/expressions-algorithms/_exm-no-known-algorithm.qmd >}}
 
-## Exercises
+# Exercises
 
 {{< include mds/_subfiles/expressions-algorithms/_exr-expression-or-algorithm.qmd >}}
 
