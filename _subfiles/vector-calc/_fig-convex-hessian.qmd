@@ -20,8 +20,10 @@ ch_grid_ch <- tidyr::expand_grid(x1 = ch_x1_ch, x2 = ch_x2_ch)
 ch_u_ch <- 2 * ch_grid_ch$x1 + ch_grid_ch$x2
 ch_grid_ch$z <- exp(ch_u_ch) - ch_grid_ch$x1
 ch_line_ch <- tibble::tibble(x1 = c(-1, 1), x2 = c(2, -2))
-ggplot2::ggplot(ch_grid_ch, ggplot2::aes(x1, x2)) +
-  ggplot2::geom_contour(ggplot2::aes(z = z), colour = "#0072B2", bins = 12) +
+ch_aes_ch <- ggplot2::aes(x1, x2)
+ch_z_aes_ch <- ggplot2::aes(z = z)
+ggplot2::ggplot(ch_grid_ch, ch_aes_ch) +
+  ggplot2::geom_contour(ch_z_aes_ch, colour = "#0072B2", bins = 12) +
   ggplot2::geom_line(
     data = ch_line_ch, colour = "#D55E00", linetype = "dashed"
   ) +
