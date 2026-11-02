@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:49:14 (PST)
+Last modified: 2026-11-02 14:33:46 (PST)
 
 > **NOTE:**
 >
@@ -111,7 +111,7 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 >
 > $$L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + {\mathopen{}\left({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\right)\mathclose{}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}.$$
 >
-> The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) for the first term, [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for the second ($\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}$ is constant in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$), and [constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector) for the third,
+> The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, the [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) applies to the first [term](algebra-sums.llms.md#def-term), the [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) to the second ($\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}$ is constant in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$), and the third is [constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector),
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})
@@ -125,7 +125,7 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 > && \text{(simplify)}
 > \end{aligned}$$
 >
-> Using the second form, in which $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ and ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ are constant in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}$, and [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) again,
+> Using the second form, in which $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ and ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ are constant in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}$, and the [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) again,
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}} L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})
@@ -164,7 +164,7 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 >
 > *Proof*. The steps marked “transpose of a product” use the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product), and $\mathbf{S}$ is symmetric because it is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite).
 >
-> $\mathbf{M}$ is invertible. $\mathbf{S}^{-1}$ exists and is positive definite ([positive definite inverse](linear-algebra-special-matrices.llms.md#thm-pd-inverse)), so $\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}$ is positive definite ([operations that preserve definiteness](linear-algebra-diagonalization.llms.md#thm-pd-operations), part 1), and so invertible (positive definite inverse again). $\mathbf{S}^{-1}$ and $\mathbf{M}^{-1}$ are symmetric ([inverse of a symmetric matrix](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)), because $\mathbf{S}$ and $\mathbf{M}$ are.
+> $\mathbf{M}$ is invertible. $\mathbf{S}^{-1}$ is positive definite, by the [positive definite inverse theorem](linear-algebra-special-matrices.llms.md#thm-pd-inverse), so $\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}$ is positive definite, by [operations that preserve definiteness](linear-algebra-diagonalization.llms.md#thm-pd-operations) (part 1), and so invertible, again by the positive definite inverse. $\mathbf{S}^{-1}$ and $\mathbf{M}^{-1}$ are symmetric, by the [inverse of a symmetric matrix](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric), because $\mathbf{S}$ and $\mathbf{M}$ are.
 >
 > $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ satisfies the constraint, and the pair solves [Equation 2](#eq-kkt).
 >
@@ -335,7 +335,7 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 >   &= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix},
 >   \end{aligned}$$
 >
->   whose columns are equal. So $\mathbf{M} {(1, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, and $\mathbf{M}$ is not invertible ([a square matrix is invertible exactly when its null space is zero](linear-algebra-diagonalization.llms.md#thm-invertible-rank)). The two constraints both read $x_1 + x_2 = b_i$, so they have no solution at all when $b_1 \ne b_2$. When $b_1 = b_2$ a unique minimizer still exists,
+>   whose columns are equal. So $\mathbf{M} {(1, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, and $\mathbf{M}$ is not [invertible](linear-algebra-diagonalization.llms.md#thm-invertible-rank), since a [square matrix](linear-algebra-matrices.llms.md#def-square-matrix) is invertible exactly when its [null space](linear-algebra-rank-nullity.llms.md#def-null-space) is zero. The two constraints both read $x_1 + x_2 = b_i$, so they have no solution at all when $b_1 \ne b_2$. When $b_1 = b_2$ a unique minimizer still exists,
 >
 >   $$\begin{aligned}
 >   x_1 &= x_2 \\
@@ -346,7 +346,7 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 
 > **NOTE:**
 >
-> **Definition 9 (Sensitivity)** Suppose a minimization problem ([Definition 5](#def-minimization-problem)) depends on a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, and let $f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})$ be its minimum value, as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. When the gradient $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})$ exists ([gradient](vector-calculus.llms.md#def-vector-derivative)), it is the **sensitivity** of the minimum value to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$: by [partial derivative](vector-calculus.llms.md#def-partial-derivative), its entry $i$ is the limit, as a change in $b_i$ alone shrinks to $0$, of the resulting change in the minimum value divided by the change in $b_i$.
+> **Definition 9 (Sensitivity)** Suppose a minimization problem ([Definition 5](#def-minimization-problem)) depends on a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, and let $f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})$ be its minimum value, as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Where $f^*$ has a [gradient](vector-calculus.llms.md#def-vector-derivative) $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})$, that gradient is the **sensitivity** of the minimum value to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$: by the definition of a [partial derivative](vector-calculus.llms.md#def-partial-derivative), its entry $i$ is the [limit](calculus-derivatives.llms.md#def-limit) as a change in $b_i$ alone shrinks to $0$, of the resulting change in the minimum value divided by the change in $b_i$.
 
 > **NOTE:**
 >

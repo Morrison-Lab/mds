@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:49:14 (PST)
+Last modified: 2026-11-02 14:33:46 (PST)
 
 > **NOTE:**
 >
@@ -72,7 +72,7 @@ Last modified: 2026-11-02 13:49:14 (PST)
 
 > **NOTE:**
 >
-> **Definition 5 (Descent direction)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. A direction $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ ([direction](vector-calculus.llms.md#def-direction)) is a **descent direction** for $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} < 0$. When $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ is a descent direction, since $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot (-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) =-\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}\right\rVert\mathclose{}^2 < 0$.
+> **Definition 5 (Descent direction)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. A [direction](vector-calculus.llms.md#def-direction) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ is a **descent direction** for $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} < 0$. When $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ is a descent direction, since $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot (-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) = -\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}\right\rVert\mathclose{}^2 < 0$.
 
 > **NOTE:**
 >
@@ -97,11 +97,11 @@ Last modified: 2026-11-02 13:49:14 (PST)
 
 > **NOTE:**
 >
-> **Theorem 1 (A short enough step downhill decreases the function)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first partial derivatives that are continuous on $\mathbb{R}^p$ ([continuity](vector-calculus.llms.md#def-continuous-on)), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ be a point with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$. Then there is an $\bar{s} > 0$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) < f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ for every $s \in (0, \bar{s})$: a short enough step in the descent direction $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ ([Definition 5](#def-descent-direction)) decreases $f$.
+> **Theorem 1 (A short enough step downhill decreases the function)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ be a point with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$. Then there is an $\bar{s} > 0$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) < f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ for every $s \in (0, \bar{s})$: a short enough step in the descent direction $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ ([Definition 5](#def-descent-direction)) decreases $f$.
 
 > **NOTE:**
 >
-> *Proof*. Let $h(s) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}})$. The inner function $s \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ has derivative $-{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}}^{\top}$ ([vector-valued derivative](vector-calculus.llms.md#def-vector-valued-derivative)), so by the vector chain rule ([vector chain rule](vector-calculus.llms.md#thm-chain-vec))
+> *Proof*. Let $h(s) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}})$. The [inner function](functions.llms.md#def-inner-function) $s \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ has [derivative](vector-calculus.llms.md#def-vector-valued-derivative) $-{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}}^{\top}$, so by the [vector chain rule](vector-calculus.llms.md#thm-chain-vec)
 >
 > $$\begin{aligned}
 > h'(s)
@@ -247,7 +247,7 @@ Last modified: 2026-11-02 13:49:14 (PST)
 >
 > For a [linear function](algebra-exponentials.llms.md#def-linear-function) $f$, the velocity of the flow is the negative [normal vector](linear-algebra-matrices.llms.md#def-normal-vector).
 >
-> By [this theorem](vector-calculus.llms.md#thm-level-sets-linear), that vector is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every [level set](vector-calculus.llms.md#def-level-set), so the flow is too.
+> By the [level sets of a linear function](vector-calculus.llms.md#thm-level-sets-linear), that vector is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every [level set](vector-calculus.llms.md#def-level-set), so the flow is too.
 
 > **NOTE:**
 >
@@ -544,7 +544,7 @@ Last modified: 2026-11-02 13:49:14 (PST)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f08518d7750>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3888bdf750>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -556,18 +556,18 @@ Last modified: 2026-11-02 13:49:14 (PST)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f08518d7890>]
-> #> [<matplotlib.lines.Line2D object at 0x7f08518d79d0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f08518d7b10>]
-> #> [<matplotlib.lines.Line2D object at 0x7f08518d7c50>]
-> #> [<matplotlib.lines.Line2D object at 0x7f08518d7d90>]
-> #> [<matplotlib.lines.Line2D object at 0x7f08518d7ed0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3888bdf890>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3888bdf9d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3888bdfb10>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3888bdfc50>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3888bdfd90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3888bdfed0>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f0851904050>
+> #> <matplotlib.legend.Legend object at 0x7f3888c0c050>
 > plt.show()
 > ```
 >
@@ -669,10 +669,10 @@ Last modified: 2026-11-02 13:49:14 (PST)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f08517807d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3888a887d0>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7f0851780910>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3888a88910>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -735,7 +735,7 @@ Last modified: 2026-11-02 13:49:14 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} \stackrel{\text{def}}{=}{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ be the [error](optimization-newton.llms.md#def-iterate-error) at step $t$. The [gradient](vector-calculus.llms.md#def-vector-derivative) of $f$ is $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ (see the proof of [Theorem 2 in Newton’s Method](optimization-newton.llms.md#thm-newton-quadratic)), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$, so
+> *Proof*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} \stackrel{\text{def}}{=}{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ be the [error](optimization-newton.llms.md#def-iterate-error) at step $t$. The [gradient](vector-calculus.llms.md#def-vector-derivative) of $f$ is $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ (as in the proof of [Theorem 2 in Newton’s Method](optimization-newton.llms.md#thm-newton-quadratic)), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$, so
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t+1)}
@@ -749,7 +749,7 @@ Last modified: 2026-11-02 13:49:14 (PST)
 > && \text{(collect the terms in } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} \text{)}
 > \end{aligned}$$
 >
-> By [induction](proof-writing.llms.md#def-proof-by-induction) on $t$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} = (\mathbf{I}_p - s\,\mathbf{S})^t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(0)}$. Write $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ ([spectral theorem](linear-algebra-special-matrices.llms.md#thm-spectral)). Then $\mathbf{I}_p - s\,\mathbf{S} = \mathbf{Q}(\mathbf{I}_p - s\,\mathbf{\Lambda}){\mathbf{Q}}^{\top}$ because $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, and the $t$th [power](linear-algebra-special-matrices.llms.md#def-matrix-power) cancels each inner ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$, so
+> By [induction](proof-writing.llms.md#def-proof-by-induction) on $t$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} = (\mathbf{I}_p - s\,\mathbf{S})^t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(0)}$. By the [spectral theorem](linear-algebra-special-matrices.llms.md#thm-spectral), write $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$. Then $\mathbf{I}_p - s\,\mathbf{S} = \mathbf{Q}(\mathbf{I}_p - s\,\mathbf{\Lambda}){\mathbf{Q}}^{\top}$ because $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, and the $t$th [power](linear-algebra-special-matrices.llms.md#def-matrix-power) cancels each inner ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$, so
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)}\right\rVert\mathclose{}
@@ -770,7 +770,7 @@ Last modified: 2026-11-02 13:49:14 (PST)
 
 > **NOTE:**
 >
-> **Example 15 (The error multiplier for a step length of one quarter)** Let $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$ ([eigenvalue example](linear-algebra-special-matrices.llms.md#exm-eigenvalue)), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. With $s= 0.25$, the factors $1 - s\,\lambda_i$ are $0.25$ and $0.75$, so $\rho(s) = 0.75$ and
+> **Example 15 (The error multiplier for a step length of one quarter)** Let $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. With $s= 0.25$, the factors $1 - s\,\lambda_i$ are $0.25$ and $0.75$, so $\rho(s) = 0.75$ and
 >
 > $$\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}}\right\rVert\mathclose{} \le 0.75^t\,\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}\right\rVert\mathclose{}.$$
 >
@@ -825,7 +825,7 @@ Last modified: 2026-11-02 13:49:14 (PST)
 
 > **NOTE:**
 >
-> **Example 16 (The best step length for eigenvalues 3 and 1)** For $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$, [Theorem 3](#thm-best-constant-step) gives $s^* = 2 / (3 + 1) = 0.5$, $\kappa= 3$ ([condition number example](linear-algebra-special-matrices.llms.md#exm-condition-number)), and $\rho(s^*) = (3 - 1) / (3 + 1) = 0.5$. A grid search over $s= 0.01, 0.02, \ldots, 1$ finds the smallest $\rho(s)$ at $s= 0.5$, the same [step length](#def-gradient-descent). Each step then multiplies the [error](optimization-newton.llms.md#def-iterate-error) by at most $0.5$.
+> **Example 16 (The best step length for eigenvalues 3 and 1)** For $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$, [Theorem 3](#thm-best-constant-step) gives $s^* = 2 / (3 + 1) = 0.5$, the [condition number](linear-algebra-special-matrices.llms.md#def-condition-number) $\kappa= 3$, and $\rho(s^*) = (3 - 1) / (3 + 1) = 0.5$. A grid search over $s= 0.01, 0.02, \ldots, 1$ finds the smallest $\rho(s)$ at $s= 0.5$, the same [step length](#def-gradient-descent). Each step then multiplies the [error](optimization-newton.llms.md#def-iterate-error) by at most $0.5$.
 
 > **NOTE:**
 >
@@ -857,11 +857,11 @@ Last modified: 2026-11-02 13:49:14 (PST)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f0851647d90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f388894fd90>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7f0851647ed0>
+> #> <matplotlib.lines.Line2D object at 0x7f388894fed0>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7f0851580050>
+> #> <matplotlib.lines.Line2D object at 0x7f3888884050>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")

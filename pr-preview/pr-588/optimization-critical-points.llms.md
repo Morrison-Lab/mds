@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:49:14 (PST)
+Last modified: 2026-11-02 14:33:46 (PST)
 
 ## 0.1 Critical points and optimization
 
@@ -188,7 +188,7 @@ Last modified: 2026-11-02 13:49:14 (PST)
 >
 > **Example 2 (Critical points that are and are not flat points)**  
 >
-> - $g(w) = \mathopen{}\left|w\right|\mathclose{}$ has no derivative at $w = 0$: its [one-sided derivatives](calculus-derivatives.llms.md#def-one-sided-derivative) there are $1$ and $-1$ ([worked example](calculus-derivatives.llms.md#exm-one-sided-derivative)). So the [difference quotient](calculus-derivatives.llms.md#def-difference-quotient) $\tfrac{\mathopen{}\left|h\right|\mathclose{} - 0}{h}$ has no [limit](calculus-derivatives.llms.md#def-limit) as $h \to 0$, because the limits from the left and from the right ([one-sided limits](calculus-derivatives.llms.md#def-one-sided-limit)) differ. So $0$ is a critical point of $g$ but not a flat point.
+> - $g(w) = \mathopen{}\left|w\right|\mathclose{}$ has no derivative at $w = 0$: its [one-sided derivatives](calculus-derivatives.llms.md#def-one-sided-derivative) there are $1$ and $-1$ (see the [one-sided derivative example](calculus-derivatives.llms.md#exm-one-sided-derivative)). So the [difference quotient](calculus-derivatives.llms.md#def-difference-quotient) $\tfrac{\mathopen{}\left|h\right|\mathclose{} - 0}{h}$ has no [limit](calculus-derivatives.llms.md#def-limit) as $h \to 0$, because the [one-sided limits](calculus-derivatives.llms.md#def-one-sided-limit) from the left and from the right differ. So $0$ is a critical point of $g$ but not a flat point.
 >
 > - $f(w) = w^3$ has
 >
@@ -549,7 +549,7 @@ Last modified: 2026-11-02 13:49:14 (PST)
 > - Lagrange multipliers
 > - Newton’s method and gradient descent
 
-A local minimizer of a differentiable function on an open interval is a flat point ([Definition 1](#def-flat-point)), and, at a flat point, a positive [second derivative](calculus-derivatives.llms.md#def-second-derivative) guarantees a strict local minimum. This section extends both facts to a function $f$ of a $p \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$: the gradient $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ ([gradient](vector-calculus.llms.md#def-vector-derivative)) takes the place of the first derivative, and a $p \times p$ matrix of second partial derivatives takes the place of the second; both facts are proved in this section, for every $p \ge 1$. Throughout, $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}})$ means the gradient evaluated at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$.
+A local minimizer of a differentiable function on an open interval is a flat point ([Definition 1](#def-flat-point)), and, at a flat point, a positive [second derivative](calculus-derivatives.llms.md#def-second-derivative) guarantees a strict local minimum. This section extends both facts to a function $f$ of a $p \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$: the [gradient](vector-calculus.llms.md#def-vector-derivative) $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ takes the place of the first [derivative](calculus-derivatives.llms.md#def-derivative), and a $p \times p$ matrix of second partial derivatives takes the place of the second; both facts are proved in this section, for every $p \ge 1$. Throughout, $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}})$ means the gradient evaluated at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$.
 
 > **NOTE:**
 >
@@ -697,7 +697,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > &= 0.
 > \end{aligned}$$
 >
-> The equation $g_i'(0) = 0$ holds for every $i$, so every entry of the gradient at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ is $0$ ([vector derivative](vector-calculus.llms.md#def-vector-derivative)).
+> The equation $g_i'(0) = 0$ holds for every $i$, so every entry of the [gradient](vector-calculus.llms.md#def-vector-derivative) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ is $0$.
 
 > **NOTE:**
 >
@@ -711,7 +711,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >   &= f(1, 0).
 >   \end{aligned}$$
 >
-> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ of [Example](vector-calculus.llms.md#exm-hessian), the second entry of the gradient is $e^{2x_1 + x_2} > 0$, so $f$ has no stationary point, and so no local minimizer.
+> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ of the [Hessian example](vector-calculus.llms.md#exm-hessian), the second entry of the gradient is $e^{2x_1 + x_2} > 0$, so $f$ has no stationary point, and so no local minimizer.
 >
 > - The converse fails: $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$ has gradient ${(2 x_1,\ -2 x_2)}^{\top}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is a stationary point, but
 >
@@ -819,7 +819,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >
 > $$g(b) = g(a) + g'(a)\,(b - a) + \frac{1}{2}\,g''(\tau)\,(b - a)^2.$$
 
-This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15; its proof uses the mean value theorem, which these notes do not develop.
+This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, whose proof uses the mean value theorem, which these notes do not develop.
 
 > **NOTE:**
 >
@@ -838,11 +838,11 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 > &= 1.43656,
 > \end{aligned}$$
 >
-> so $\tau= \log 1.43656 \approx 0.362$ ([natural logarithm](algebra-exponentials.llms.md#def-natural-log)), which is in $(0, 1)$.
+> so $\tau= \log 1.43656 \approx 0.362$, where $\log$ is the [natural logarithm](algebra-exponentials.llms.md#def-natural-log). This $\tau$ is in $(0, 1)$.
 
 > **NOTE:**
 >
-> **Theorem 6 (Second-order Taylor theorem in several variables)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and second partial derivatives that are continuous on $\mathbb{R}^p$ ([continuity](vector-calculus.llms.md#def-continuous-on)), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \in \mathbb{R}^p$. Then there is a $\tau\in (0, 1)$ with [\[5\]](#ref-wikipedia_taylors_theorem)
+> **Theorem 6 (Second-order Taylor theorem in several variables)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and second partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \in \mathbb{R}^p$. Then there is a $\tau\in (0, 1)$ with [\[5\]](#ref-wikipedia_taylors_theorem)
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})
 > = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}})
@@ -851,7 +851,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> *Proof*. Let $g(t) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})$ for $t \in \mathbb{R}$, the values of $f$ along the line through $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$ in the direction $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$. The [inner function](functions.llms.md#def-inner-function) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}(t) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$ has entries $y_j = z_j + t h_j$, so $\frac{\partial}{\partial t} y_j = h_j$, and its derivative ([vector-valued derivative](vector-calculus.llms.md#def-vector-valued-derivative)) is the $1 \times p$ matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top}$. By the vector chain rule ([vector chain rule](vector-calculus.llms.md#thm-chain-vec), with its input $t$ of length $1$, its inner function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}(t) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$, and its outer function $f$),
+> *Proof*. Let $g(t) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})$ for $t \in \mathbb{R}$, the values of $f$ along the line through $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$ in the direction $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$. The [inner function](functions.llms.md#def-inner-function) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}(t) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$ has entries $y_j = z_j + t h_j$, so $\frac{\partial}{\partial t} y_j = h_j$, and its [derivative](vector-calculus.llms.md#def-vector-valued-derivative) is the $1 \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top}$. By the [vector chain rule](vector-calculus.llms.md#thm-chain-vec) applied with the [argument](functions.llms.md#def-argument) $t$, the inner function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}(t) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$, and the [outer function](functions.llms.md#def-outer-function) $f$,
 >
 > $$\begin{aligned}
 > g'(t)
@@ -862,7 +862,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 > && \text{(matrix product)}
 > \end{aligned}$$
 >
-> The second step writes out the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult). $g'$ is continuous ([continuity](vector-calculus.llms.md#def-continuous-several)): $t \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$ is continuous, since $\mathopen{}\left\lVert(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}) - (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right\rVert\mathclose{} = \mathopen{}\left|s - t\right|\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}$, each $\frac{\partial}{\partial x_j} f$ is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each $\frac{\partial}{\partial x_j} f$ has continuous partial derivatives, the second partial derivatives of $f$, so the same chain-rule computation applies to it: $\frac{\partial}{\partial t} \mathopen{}\left[\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right]\mathclose{} = \sum_{i=1}^ph_i\,\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right)\mathclose{}$. So
+> The second step writes out the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult). $g'$ is [continuous](vector-calculus.llms.md#def-continuous-several): $t \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$ is continuous, since $\mathopen{}\left\lVert(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}) - (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right\rVert\mathclose{} = \mathopen{}\left|s - t\right|\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}$, each $\frac{\partial}{\partial x_j} f$ is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each $\frac{\partial}{\partial x_j} f$ has continuous partial derivatives, the second partial derivatives of $f$, so the same chain-rule computation applies to it: $\frac{\partial}{\partial t} \mathopen{}\left[\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right]\mathclose{} = \sum_{i=1}^ph_i\,\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right)\mathclose{}$. So
 >
 > $$\begin{aligned}
 > g''(t)
@@ -898,7 +898,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 12 (For a quadratic form the expansion is exact)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. Its gradient is $2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric)) and its Hessian is $2 \mathbf{S}$ at every point ([Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever $\tau$ is, [Theorem 6](#thm-taylor-mv) reads
+> **Example 12 (For a quadratic form the expansion is exact)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is $2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([quadratic form gradient](vector-calculus.llms.md#cor-quadratic-form-symmetric)) and its [Hessian](vector-calculus.llms.md#def-hessian) is $2 \mathbf{S}$ at every point ([quadratic form Hessian](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever $\tau$ is, [Theorem 6](#thm-taylor-mv) reads
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})
@@ -946,11 +946,11 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Lemma 1 (A quadratic form is at least the smallest eigenvalue times the squared length)** Let $\mathbf{A}$ be a symmetric $p \times p$ matrix, and let $\lambda_{\min}$ be the smallest of its eigenvalues ([eigendecomposition](linear-algebra-special-matrices.llms.md#def-eigendecomposition)). Then ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \ge \lambda_{\min}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}^2$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \in \mathbb{R}^p$.
+> **Lemma 1 (A quadratic form is at least the smallest eigenvalue times the squared length)** Let $\mathbf{A}$ be a symmetric $p \times p$ matrix, and let $\lambda_{\min}$ be the smallest of its [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue). Then ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \ge \lambda_{\min}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}^2$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \in \mathbb{R}^p$.
 
 > **NOTE:**
 >
-> *Proof*. Write $\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}$ with $\mathbf{Q}$ orthogonal and $\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)$ ([spectral theorem](linear-algebra-special-matrices.llms.md#thm-spectral)), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \stackrel{\text{def}}{=}{\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$. Then
+> *Proof*. By the [spectral theorem](linear-algebra-special-matrices.llms.md#thm-spectral), write $\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}$ with $\mathbf{Q}$ an [orthogonal matrix](linear-algebra-special-matrices.llms.md#def-orthogonal-matrix) and $\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$. Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}
@@ -973,18 +973,13 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 > && \text{(orthogonal matrices preserve length)}
 > \end{aligned}$$
 >
-> The second step is the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product). The last step applies [orthogonal matrices preserve length](linear-algebra-special-matrices.llms.md#thm-orthogonal-norm) to ${\mathbf{Q}}^{\top}$, which is orthogonal because
+> The second step is the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product). The last step applies [orthogonal matrices preserve length](linear-algebra-special-matrices.llms.md#thm-orthogonal-norm) to ${\mathbf{Q}}^{\top}$. That theorem applies because ${\mathbf{Q}}^{\top}$ is an [orthogonal matrix](linear-algebra-special-matrices.llms.md#def-orthogonal-matrix): since $\mathbf{Q}$ is [square](linear-algebra-matrices.llms.md#def-square-matrix) with ${\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_p$, also $\mathbf{Q} {\mathbf{Q}}^{\top} = \mathbf{I}_p$, so
 >
-> $$\begin{aligned}
-> {\mathbf{Q}}^{\top} \mathbf{Q} &= \mathbf{Q} {\mathbf{Q}}^{\top} \\
-> &= \mathbf{I}_p
-> \end{aligned}$$
->
-> ([orthogonal matrix](linear-algebra-special-matrices.llms.md#def-orthogonal-matrix)).
+> $${({\mathbf{Q}}^{\top})}^{\top} {\mathbf{Q}}^{\top} = \mathbf{Q} {\mathbf{Q}}^{\top} = \mathbf{I}_p.$$
 
 > **NOTE:**
 >
-> **Example 14 (Checking the bound)** $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has eigenvalues $3$ and $1$ ([eigenvalue example](linear-algebra-special-matrices.llms.md#exm-eigenvalue)), so $\lambda_{\min} = 1$. At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, 0)}^{\top}$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = 2 \ge 1 \cdot 1$. At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, -1)}^{\top}$,
+> **Example 14 (Checking the bound)** $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$, so $\lambda_{\min} = 1$. At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, 0)}^{\top}$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = 2 \ge 1 \cdot 1$. At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, -1)}^{\top}$,
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} &= 2 - 1 - 1 + 2 \\
@@ -1000,7 +995,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> *Proof*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \stackrel{\text{def}}{=}{(\mathopen{}\left|h_1\right|\mathclose{}, \ldots, \mathopen{}\left|h_p\right|\mathclose{})}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} \stackrel{\text{def}}{=}{(1, \ldots, 1)}^{\top}$, both in $\mathbb{R}^p$. Then
+> *Proof*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = {(\mathopen{}\left|h_1\right|\mathclose{}, \ldots, \mathopen{}\left|h_p\right|\mathclose{})}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = {(1, \ldots, 1)}^{\top}$, both in $\mathbb{R}^p$. Then
 >
 > $$\begin{aligned}
 > \mathopen{}\left|{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{E} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right|\mathclose{}
@@ -1030,7 +1025,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 15 (Checking the bound)** Let $\mathbf{E} = \begin{bmatrix} 0.1 & -0.2 \\ -0.2 & 0.1 \end{bmatrix}$, so $m = 0.2$ works, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, 1)}^{\top}$, so $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}^2 = 2$. Then
+> **Example 15 (Checking the bound)** Let $\mathbf{E} = \begin{bmatrix} 0.1 & -0.2 \\ -0.2 & 0.1 \end{bmatrix}$, so $m = 0.2$ works. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, 1)}^{\top}$, so $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}^2 = 2$. Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{E} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} &= 0.1 - 0.2 - 0.2 + 0.1 \\
@@ -1047,11 +1042,11 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Theorem 7 (Second-order sufficient condition)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and second partial derivatives that are continuous on $\mathbb{R}^p$ ([continuity](vector-calculus.llms.md#def-continuous-on)). If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ is a stationary point of $f$ ([Definition 4](#def-stationary-point)) and $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*)$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ is a strict local minimizer of $f$ ([Definition 5](#def-strict-local-minimizer)).
+> **Theorem 7 (Second-order sufficient condition)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and second partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ is a stationary point of $f$ ([Definition 4](#def-stationary-point)) and $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*)$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ is a strict local minimizer of $f$ ([Definition 5](#def-strict-local-minimizer)).
 
 > **NOTE:**
 >
-> *Proof*. $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*)$ is positive definite, and so symmetric, so its smallest eigenvalue $\lambda$ is positive ([definiteness and eigenvalues](linear-algebra-special-matrices.llms.md#thm-definite-eigenvalues)). Each of the $p^2$ entries of $\mathbf{H}_f$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ ([continuity](vector-calculus.llms.md#def-continuous-several)): for $\varepsilon= \lambda/ (2p)$ there is a $\delta_{ij} > 0$ with $\mathopen{}\left|\mathopen{}\left[\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right]\mathclose{}_{ij} - \mathopen{}\left[\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*)\right]\mathclose{}_{ij}\right|\mathclose{} < \lambda/ (2p)$ whenever $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} < \delta_{ij}$. Let $\delta$ be the smallest of these $p^2$ numbers.
+> *Proof*. $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*)$ is positive definite, and so symmetric, so its smallest [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue) $\lambda$ is positive, by the [eigenvalue test for definiteness](linear-algebra-special-matrices.llms.md#thm-definite-eigenvalues). Each of the $p^2$ entries of $\mathbf{H}_f$ is [continuous at](vector-calculus.llms.md#def-continuous-several) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$: for $\varepsilon= \lambda/ (2p)$ there is a $\delta_{ij} > 0$ with $\mathopen{}\left|\mathopen{}\left[\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right]\mathclose{}_{ij} - \mathopen{}\left[\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*)\right]\mathclose{}_{ij}\right|\mathclose{} < \lambda/ (2p)$ whenever $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} < \delta_{ij}$. Let $\delta$ be the smallest of these $p^2$ numbers.
 >
 > Now let $0 < \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{} < \delta$. By [Theorem 6](#thm-taylor-mv) there is a $\tau\in (0, 1)$ for which the first step of the next display holds; let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* + \tau\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$ and $\mathbf{E} \stackrel{\text{def}}{=}\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) - \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*)$. Since $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} = \tau\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{} < \delta$, every entry of $\mathbf{E}$ has absolute value less than $\lambda/ (2p)$, so [Lemma 2](#lem-qf-entry-bound) applies with $m = \lambda/ (2p)$:
 >
@@ -1095,9 +1090,9 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 >   &= 2 \mathbf{I}_2,
 >   \end{aligned}$$
 >
->   which is positive definite, so ${(1, 0)}^{\top}$ is a strict local minimizer.
+>   which is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), so ${(1, 0)}^{\top}$ is a [strict local minimizer](#def-strict-local-minimizer).
 >
-> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$ has the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and Hessian $\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}$, which is not positive definite (${(0, 1)}^{\top}$ gives $-2$), and indeed $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a local minimizer ([Example 9](#exm-first-order-condition)).
+> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$ has the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and Hessian $\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}$, which is not positive definite (${(0, 1)}^{\top}$ gives $-2$). Indeed, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer) ([Example 9](#exm-first-order-condition)).
 
 > **NOTE:**
 >
