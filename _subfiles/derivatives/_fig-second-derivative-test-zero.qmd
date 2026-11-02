@@ -18,10 +18,12 @@
 sdz_x_fk <- seq(-1, 1, length.out = 201)
 sdz_labels_fk <- c("x^4", "-x^4", "x^3")
 sdz_values_fk <- c(sdz_x_fk^4, -sdz_x_fk^4, sdz_x_fk^3)
-sdz_fn_fk <- rep(sdz_labels_fk, each = length(sdz_x_fk))
+sdz_n_fk <- length(sdz_x_fk)
+sdz_fn_fk <- rep(sdz_labels_fk, each = sdz_n_fk)
 sdz_fn_fk <- factor(sdz_fn_fk, levels = sdz_labels_fk)
+sdz_x_rep_fk <- rep(sdz_x_fk, 3)
 sdz_curves_fk <- tibble::tibble(
-  x = rep(sdz_x_fk, 3), value = sdz_values_fk, fn = sdz_fn_fk
+  x = sdz_x_rep_fk, value = sdz_values_fk, fn = sdz_fn_fk
 )
 sdz_origin_fn_fk <- factor(sdz_labels_fk, levels = sdz_labels_fk)
 sdz_origin_fk <- tibble::tibble(x = 0, value = 0, fn = sdz_origin_fn_fk)
@@ -64,7 +66,7 @@ plt.show()
 
 :::
 
-The [functions](functions.qmd#def-function) $x^4$, $-x^4$ and $x^3$ of @exm-second-derivative-test-zero.
+This figure graphs the [functions](functions.qmd#def-function) $x^4$, $-x^4$ and $x^3$ of @exm-second-derivative-test-zero.
 All three have a [flat point](#def-flat-point) at $x = 0$ (circles)
 where the [second derivative](calculus-derivatives.qmd#def-second-derivative) is $0$:
 a [local minimizer](algebra.qmd#def-local-minimizer),
