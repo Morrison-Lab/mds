@@ -2,7 +2,7 @@
 #### Second-order Taylor theorem in several variables
 
 Let $f : \reals^p \to \reals$ have first and second partial derivatives
-that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-on)),
+that are [continuous](vector-calculus.qmd#def-continuous-on) on $\reals^p$,
 and let $\vecf{z}, \vecf{h} \in \reals^p$.
 Then there is a $\midpt \in (0, 1)$ with
 [@wikipedia_taylors_theorem]
@@ -21,8 +21,8 @@ $$
 Let $g(t) \eqdef f(\vecf{z} + t \vecf{h})$ for $t \in \reals$,
 the values of $f$ along the line through $\vecf{z}$ in the direction $\vecf{h}$.
 The [inner function](functions.qmd#def-inner-function) $\vy(t) = \vecf{z} + t \vecf{h}$ has entries $y_j = z_j + t h_j$,
-so $\deriv{t} y_j = h_j$, and its derivative ([vector-valued derivative](vector-calculus.qmd#def-vector-valued-derivative)) is the $1 \times p$ matrix $\tp{\vecf{h}}$.
-By the vector chain rule ([vector chain rule](vector-calculus.qmd#thm-chain-vec), with its input $t$ of length $1$,
+so $\deriv{t} y_j = h_j$, and its [derivative](vector-calculus.qmd#def-vector-valued-derivative) is the $1 \times p$ matrix $\tp{\vecf{h}}$.
+By the [vector chain rule](vector-calculus.qmd#thm-chain-vec) (with its input $t$ of length $1$,
 its inner function $\vy(t) = \vecf{z} + t \vecf{h}$, and its outer function $f$),
 
 $$
@@ -37,7 +37,7 @@ g'(t)
 $$
 
 The second step writes out the [matrix product](linear-algebra.qmd#def-matrix-mult).
-$g'$ is continuous ([continuity](vector-calculus.qmd#def-continuous-several)):
+$g'$ is [continuous](vector-calculus.qmd#def-continuous-several):
 $t \mapsto \vecf{z} + t \vecf{h}$ is continuous, since $\norm{(\vecf{z} + s \vecf{h}) - (\vecf{z} + t \vecf{h})} = \abs{s - t}\,\norm{\vecf{h}}$,
 each $\deriv{x_j} f$ is continuous by assumption,
 and compositions, sums and constant multiples of continuous functions are continuous.
@@ -92,8 +92,8 @@ $$
 #### For a quadratic form the expansion is exact
 
 Let $f(\vx) = \qform{\matr{S}}{\vx}$ with $\matr{S}$ symmetric and constant.
-Its gradient is $2 \matr{S} \vx$ ([derivative of a quadratic form](vector-calculus.qmd#cor-quadratic-form-symmetric))
-and its Hessian is $2 \matr{S}$ at every point ([Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic)),
+Its [gradient](vector-calculus.qmd#cor-quadratic-form-symmetric) is $2 \matr{S} \vx$
+and its [Hessian](vector-calculus.qmd#thm-hessian-quadratic) is $2 \matr{S}$ at every point,
 so whatever $\midpt$ is, @thm-taylor-mv reads
 
 $$

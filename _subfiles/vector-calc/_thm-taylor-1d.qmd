@@ -14,7 +14,7 @@ $$
 :::
 
 This theorem is the case $n = 2$ of [@rudin1976principles, Theorem 5.15];
-its proof uses the mean value theorem, which these notes do not develop.
+its proof uses the mean value theorem.
 
 {{< slidebreak >}}
 
@@ -41,6 +41,6 @@ e^{\midpt} &= 2 (e - 2) \\
 \end{aligned}
 $$
 
-so $\midpt = \log 1.43656 \approx 0.362$ ([natural logarithm](algebra.qmd#def-natural-log)), which is in $(0, 1)$.
+so $\midpt = \log 1.43656 \approx 0.362$, the [natural logarithm](algebra.qmd#def-natural-log), which is in $(0, 1)$.
 
 :::

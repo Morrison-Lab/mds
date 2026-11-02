@@ -2,18 +2,18 @@
 #### A quadratic form is at least the smallest eigenvalue times the squared length
 
 Let $\matr{A}$ be a symmetric $p \times p$ matrix,
-and let $\eigval_{\min}$ be the smallest of its eigenvalues
-([eigendecomposition](linear-algebra.qmd#def-eigendecomposition)).
+and let $\eigval_{\min}$ be the smallest of its [eigenvalues](linear-algebra.qmd#def-eigenvalue).
 Then $\tp{\vecf{h}} \matr{A} \vecf{h} \ge \eigval_{\min}\,\norm{\vecf{h}}^2$ for every $\vecf{h} \in \reals^p$.
 
 :::
 
 ::: proof
 
-Write $\matr{A} = \matr{Q} \matr{\Eigvals} \tp{\matr{Q}}$ with $\matr{Q}$ orthogonal
-and $\matr{\Eigvals} = \diag(\eigval_1, \ldots, \eigval_p)$
-([spectral theorem](linear-algebra.qmd#thm-spectral)),
-and let $\vecf{y} \eqdef \tp{\matr{Q}} \vecf{h}$. Then
+By the [spectral theorem](linear-algebra.qmd#thm-spectral),
+write $\matr{A} = \matr{Q} \matr{\Eigvals} \tp{\matr{Q}}$ with $\matr{Q}$ orthogonal
+and $\matr{\Eigvals} = \diag(\eigval_1, \ldots, \eigval_p)$,
+and let $\vecf{y} \eqdef \tp{\matr{Q}} \vecf{h}$.
+Then
 
 $$
 \ba
@@ -39,17 +39,13 @@ $$
 $$
 
 The second step is the [transpose of a product](linear-algebra.qmd#thm-transpose-product).
-The last step applies [orthogonal matrices preserve length](linear-algebra.qmd#thm-orthogonal-norm) to $\tp{\matr{Q}}$,
-which is orthogonal because
+The last step applies [orthogonal matrices preserve length](linear-algebra.qmd#thm-orthogonal-norm) to $\tp{\matr{Q}}$.
+That theorem applies because $\tp{\matr{Q}}$ is an [orthogonal matrix](linear-algebra.qmd#def-orthogonal-matrix):
+since $\matr{Q}$ is square with $\tp{\matr{Q}} \matr{Q} = \matr{I}_p$, also $\matr{Q} \tp{\matr{Q}} = \matr{I}_p$, so
 
 $$
-\begin{aligned}
-\tp{\matr{Q}} \matr{Q} &= \matr{Q} \tp{\matr{Q}} \\
-&= \matr{I}_p
-\end{aligned}
+\tp{(\tp{\matr{Q}})} \tp{\matr{Q}} = \matr{Q} \tp{\matr{Q}} = \matr{I}_p.
 $$
-
-([orthogonal matrix](linear-algebra.qmd#def-orthogonal-matrix)).
 
 :::
 
@@ -58,8 +54,7 @@ $$
 :::{#exm-qf-eigen-bound}
 #### Checking the bound
 
-$\matr{A} = \sbmat{ 2 & 1 \\ 1 & 2 }$ has eigenvalues $3$ and $1$
-([eigenvalue example](linear-algebra.qmd#exm-eigenvalue)), so $\eigval_{\min} = 1$.
+$\matr{A} = \sbmat{ 2 & 1 \\ 1 & 2 }$ has [eigenvalues](linear-algebra.qmd#def-eigenvalue) $3$ and $1$, so $\eigval_{\min} = 1$.
 At $\vecf{h} = \tp{(1, 0)}$, $\tp{\vecf{h}} \matr{A} \vecf{h} = 2 \ge 1 \cdot 1$.
 At $\vecf{h} = \tp{(1, -1)}$,
 

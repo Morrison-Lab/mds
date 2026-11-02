@@ -47,7 +47,7 @@ $$
 \end{aligned}
 $$
 
-The equation $g_i'(0) = 0$ holds for every $i$, so every entry of the gradient at $\vx^*$ is $0$ ([vector derivative](vector-calculus.qmd#def-vector-derivative)).
+The equation $g_i'(0) = 0$ holds for every $i$, so every entry of the [gradient](vector-calculus.qmd#def-vector-derivative) at $\vx^*$ is $0$.
 
 :::
 
@@ -68,7 +68,7 @@ The equation $g_i'(0) = 0$ holds for every $i$, so every entry of the gradient a
   \end{aligned}
   $$
 
-- For $f(\vx) = e^{2x_1 + x_2} - x_1$ of [Example](vector-calculus.qmd#exm-hessian),
+- For $f(\vx) = e^{2x_1 + x_2} - x_1$ of the [Hessian example](vector-calculus.qmd#exm-hessian),
   the second entry of the gradient is $e^{2x_1 + x_2} > 0$,
   so $f$ has no stationary point, and so no local minimizer.
 - The converse fails: $f(\vx) = x_1^2 - x_2^2$ has gradient $\tp{(2 x_1,\ -2 x_2)}$,
