@@ -11,8 +11,8 @@
   \end{aligned}
   $$
 
-  which is positive definite,
-  so $\tp{(1, 0)}$ is a strict local minimizer.
+  which is [positive definite](linear-algebra.qmd#def-positive-definite),
+  so $\tp{(1, 0)}$ is a [strict local minimizer](#def-strict-local-minimizer).
 - $f(\vx) = x_1^2 - x_2^2$ has the stationary point $\vzero$
   and Hessian $\sbmat{ 2 & 0 \\ 0 & -2 }$,
   which is not positive definite
