@@ -34,6 +34,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-gd-zigzag.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-gradient-flow.qmd >}}
 
 {{< slidebreak >}}
