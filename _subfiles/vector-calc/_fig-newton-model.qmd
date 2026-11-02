@@ -77,9 +77,9 @@ plt.show();
 
 :::
 
-The cubic $f(x) = \tfrac{1}{3} x^3 - 4x$ and its [quadratic model](#def-quadratic-model) at $x = 2.5$.
+The [cubic](algebra.qmd#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ and its [quadratic model](#def-quadratic-model) at $x = 2.5$.
 The model touches $f$ at $2.5$ (circle),
 and its minimizer $2.05$ (triangle) is the [Newton step](#def-newton-step) taken from $2.5$ (@exm-newton-model).
-It lies close to the minimizer $2$ of $f$ (square).
+It lies close to the [minimizer](algebra.qmd#def-global-minimizer) $2$ of $f$ (blue marker).
 
 :::

@@ -70,8 +70,8 @@ plt.show();
 
 :::
 
-The first four iterates of gradient descent with exact line search on $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$ from $\tp{(3, 1)}$ (@exm-gd-zigzag with $b = 3$),
-drawn over the level curves of $f$.
-The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the minimizer $\vzero$ (triangle).
+The first four [iterates](#def-iterate) of [gradient descent](#def-gradient-descent) with [exact line search](#def-exact-line-search) on $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$ from $\tp{(3, 1)}$ (@exm-gd-zigzag with $b = 3$),
+drawn over the [level curves](vector-calculus.qmd#def-level-curve) of $f$.
+The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the [minimizer](algebra.qmd#def-global-minimizer) $\vzero$ (triangle).
 
 :::

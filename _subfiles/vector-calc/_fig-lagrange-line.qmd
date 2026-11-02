@@ -77,8 +77,8 @@ plt.show();
 
 :::
 
-The level curves $x_1^2 + x_2^2 = c$ of the objective (circles) and the constraint line $3 x_1 + 4 x_2 = 5$.
-The line touches the circle $c = 1$ at the minimizer $\tp{(0.6, 0.8)}$ (@exm-qp-equality),
-and the gradient there, the arrow, is perpendicular to the line.
+The [level curves](vector-calculus.qmd#def-level-curve) $x_1^2 + x_2^2 = c$ of the [objective](#def-objective-function) (circles) and the constraint line $3 x_1 + 4 x_2 = 5$.
+The line touches the circle $c = 1$ at the [minimizer](#def-minimizer-over-feasible-set) $\tp{(0.6, 0.8)}$ (@exm-qp-equality),
+and the [gradient](vector-calculus.qmd#def-vector-derivative) there, the arrow, is perpendicular to the line.
 
 :::
