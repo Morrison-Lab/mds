@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 10:29:56 (PST)
+Last modified: 2026-11-02 13:44:45 (PST)
 
 ## 0.1 Critical points and optimization
 
@@ -182,7 +182,7 @@ Last modified: 2026-11-02 10:29:56 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Critical point)** Let $f$ be a function defined on an [open interval](sets.llms.md#def-open-interval) containing $c$. The point $c$ is a **critical point** of $f$ if either $f'(c) = 0$ or $f$ is not differentiable at $c$ ([Definition 6 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-differentiable)).
+> **Definition 2 (Critical point)** Let $f$ be a function defined on an [open interval](sets.llms.md#def-open-interval) containing $c$. The point $c$ is a **critical point** of $f$ if either $f'(c) = 0$ or $f$ is not [differentiable at](calculus-derivatives.llms.md#def-differentiable) $c$.
 
 > **NOTE:**
 >
@@ -356,12 +356,88 @@ Last modified: 2026-11-02 10:29:56 (PST)
 > **NOTE:**
 >
 > **Example 4 (Second derivative test for powers of** $x$) The [function](functions.llms.md#def-function) $f(x) = x^2$ has the [flat point](#def-flat-point) $c = 0$ and [second derivative](calculus-derivatives.llms.md#def-second-derivative) $f''(0) = 2 > 0$, so $0$ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) by [Theorem 2](#thm-second-derivative-test).
->
-> The [functions](functions.llms.md#def-function) $x^3$ and $x^4$ both have the flat point $0$ and second derivative $0$ there, so the test does not decide. Yet $x^4$ is smallest at $0$ among nearby points, while $x^3$ is smaller to the left of $0$ and larger to the right of $0$.
 
 > **NOTE:**
 >
-> *Remark 1* (The second derivative test can fail to decide). If $f''(c) = 0$ at a [flat point](#def-flat-point) $c$, the [second derivative test](#thm-second-derivative-test) does not decide: $f$ may be smallest at $c$ among nearby points, largest there, or neither ([Example 4](#exm-second-derivative-test)).
+> *Remark 1* (The second derivative test can fail to decide). If $f''(c) = 0$ at a [flat point](#def-flat-point) $c$, the [second derivative test](#thm-second-derivative-test) does not decide: $f$ may be smallest at $c$ among nearby points, largest there, or neither ([Example 5](#exm-second-derivative-test-zero)).
+
+> **NOTE:**
+>
+> **Example 5 (Three functions with second derivative** $0$ at a flat point) Take $f(x) = x^4$, $g(x) = -x^4$ and $h(x) = x^3$. Each has the [derivative](calculus-derivatives.llms.md#def-derivative) $0$ at $x = 0$:
+>
+> $$\begin{aligned}
+> f'(x) &= 4x^3, & f'(0) &= 0, \\
+> g'(x) &= -4x^3, & g'(0) &= 0, \\
+> h'(x) &= 3x^2, & h'(0) &= 0.
+> \end{aligned}$$
+>
+> So $0$ is a [flat point](#def-flat-point) of all three. Each has the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $0$ there:
+>
+> $$\begin{aligned}
+> f''(x) &= 12x^2, & f''(0) &= 0, \\
+> g''(x) &= -12x^2, & g''(0) &= 0, \\
+> h''(x) &= 6x, & h''(0) &= 0.
+> \end{aligned}$$
+>
+> Because the second derivative is $0$ in all three cases, [Theorem 2](#thm-second-derivative-test) does not decide any of them. Yet the three behave differently near $0$ ([Figure 4](#fig-second-derivative-test-zero)):
+>
+> - $f(x) = x^4 > 0 = f(0)$ for every $x \ne 0$, so $0$ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
+> - $g(x) = -x^4 < 0 = g(0)$ for every $x \ne 0$, so $0$ is a [local maximizer](#def-local-maximizer).
+> - $h(x) = x^3$ is negative for $x < 0$ and positive for $x > 0$, so $h(x) < h(0)$ to the left of $0$ and $h(x) > h(0)$ to the right of $0$. Thus $0$ is neither a local minimizer nor a local maximizer.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > sdz_x_fk <- seq(-1, 1, length.out = 201)
+> > sdz_labels_fk <- c("x^4", "-x^4", "x^3")
+> > sdz_values_fk <- c(sdz_x_fk^4, -sdz_x_fk^4, sdz_x_fk^3)
+> > sdz_n_fk <- length(sdz_x_fk)
+> > sdz_fn_fk <- rep(sdz_labels_fk, each = sdz_n_fk)
+> > sdz_fn_fk <- factor(sdz_fn_fk, levels = sdz_labels_fk)
+> > sdz_x_rep_fk <- rep(sdz_x_fk, 3)
+> > sdz_curves_fk <- tibble::tibble(
+> >   x = sdz_x_rep_fk, value = sdz_values_fk, fn = sdz_fn_fk
+> > )
+> > sdz_origin_fn_fk <- factor(sdz_labels_fk, levels = sdz_labels_fk)
+> > sdz_origin_fk <- tibble::tibble(x = 0, value = 0, fn = sdz_origin_fn_fk)
+> > sdz_aes_fk <- ggplot2::aes(x, value)
+> > ggplot2::ggplot(sdz_curves_fk, sdz_aes_fk) +
+> >   ggplot2::geom_line(colour = "#0072B2") +
+> >   ggplot2::geom_point(data = sdz_origin_fk, colour = "#D55E00", size = 3) +
+> >   ggplot2::facet_wrap(ggplot2::vars(fn)) +
+> >   ggplot2::labs(x = "x", y = "function value")
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > sdz_x_fk = np.linspace(-1, 1, 201)
+> > sdz_curves_fk = [sdz_x_fk**4, -(sdz_x_fk**4), sdz_x_fk**3]
+> > sdz_titles_fk = ["$x^4$", "$-x^4$", "$x^3$"]
+> > fig, axes = plt.subplots(1, 3, figsize=(7, 3), layout="constrained")
+> > for ax, curve, title in zip(axes, sdz_curves_fk, sdz_titles_fk):
+> >     ax.plot(sdz_x_fk, curve, color="#0072B2")
+> >     ax.plot(0, 0, "o", color="#D55E00", markersize=8)
+> >     ax.set_title(title)
+> >     ax.set_xlabel("x")
+> > axes[0].set_ylabel("function value")
+> > plt.show()
+> > ```
+> >
+> > ## R
+> >
+> > [![Three side-by-side plots of a function on x from -1 to 1, each with a vermilion circle at the origin. The first, x to the fourth, is a blue U-shaped curve with its lowest point at the origin. The second, minus x to the fourth, is an upside-down U with its highest point at the origin. The third, x cubed, rises steadily from lower left to upper right, flattening at the origin without turning.](optimization-critical-points_files/figure-html/second-derivative-test-zero-r-3.png)](optimization-critical-points_files/figure-html/second-derivative-test-zero-r-3.png "Figure 4: This figure shows the functions x^4, -x^4 and x^3 of Example 5. All three have a flat point at x = 0 (circles) where the second derivative is 0: a local minimizer, a local maximizer, and neither.")
+> >
+> > ## Python
+> >
+> > [![Three side-by-side plots of a function on x from -1 to 1, each with a vermilion circle at the origin. The first, x to the fourth, is a blue U-shaped curve with its lowest point at the origin. The second, minus x to the fourth, is an upside-down U with its highest point at the origin. The third, x cubed, rises steadily from lower left to upper right, flattening at the origin without turning.](optimization-critical-points_files/figure-html/second-derivative-test-zero-python-1.png)](optimization-critical-points_files/figure-html/second-derivative-test-zero-python-1.png "Figure 4: This figure shows the functions x^4, -x^4 and x^3 of Example 5. All three have a flat point at x = 0 (circles) where the second derivative is 0: a local minimizer, a local maximizer, and neither.")
+> >
+> > Figure 4: This figure shows the [functions](functions.llms.md#def-function) $x^4$, $-x^4$ and $x^3$ of [Example 5](#exm-second-derivative-test-zero). All three have a [flat point](#def-flat-point) at $x = 0$ (circles) where the [second derivative](calculus-derivatives.llms.md#def-second-derivative) is $0$: a [local minimizer](algebra-basics.llms.md#def-local-minimizer), a [local maximizer](#def-local-maximizer), and neither.
 
 > **NOTE:**
 >
@@ -373,13 +449,13 @@ Last modified: 2026-11-02 10:29:56 (PST)
 
 > **NOTE:**
 >
-> **Example 5 (An inflection point of** $x^3$) For $f(x) = x^3$, the [second derivative](calculus-derivatives.llms.md#def-second-derivative) is $f''(x) = 6x$, which is negative for $x < 0$ and positive for $x > 0$. So $0$ is an [inflection point](#def-inflection-point) of $f$.
+> **Example 6 (An inflection point of** $x^3$) For $f(x) = x^3$, the [second derivative](calculus-derivatives.llms.md#def-second-derivative) is $f''(x) = 6x$, which is negative for $x < 0$ and positive for $x > 0$. So $0$ is an [inflection point](#def-inflection-point) of $f$.
 
 > **NOTE:**
 >
 > **Exercise 8 (Maximizing a gamma-family kernel)** Adapted from Miller [\[2\]](#ref-problifesavercalc), Question 1.1.10.
 >
-> The [gamma distribution](https://en.wikipedia.org/wiki/Gamma_distribution) with shape $a > 0$ has the [kernel](https://morrison-lab.github.io/pds/random-variables.html#def-kernel) $x^{a-1} e^{-x}$ on $[0, \infty)$. A kernel has the same [mode](https://morrison-lab.github.io/pds/random-variables.html#def-mode) as its density ([why](https://morrison-lab.github.io/pds/random-variables.html#thm-kernel-same-mode)), so maximizing it finds the mode without computing the [normalizing constant](https://morrison-lab.github.io/pds/random-variables.html#def-normalizing-constant).
+> The [gamma distribution](https://en.wikipedia.org/wiki/Gamma_distribution) with shape $a > 0$ has the [kernel](https://morrison-lab.github.io/pds/random-variables.html#def-kernel) $x^{a-1} e^{-x}$ on $[0, \infty)$. [A kernel has the same mode as its density](https://morrison-lab.github.io/pds/random-variables.html#thm-kernel-same-mode), so maximizing it finds the mode without computing the [normalizing constant](https://morrison-lab.github.io/pds/random-variables.html#def-normalizing-constant).
 >
 > For shape $a = 5$, the kernel is
 >
@@ -489,7 +565,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 
 > **NOTE:**
 >
-> **Example 6 (Applying the test, and its limits)**  
+> **Example 7 (Applying the test, and its limits)**  
 >
 > - $g(x) = (x - 2)^2$ has its minimizer at $c = 2$, and
 >
@@ -527,7 +603,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 
 > **NOTE:**
 >
-> **Example 7 (A stationary point, and a point that is not one)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$. Its gradient is ${(2 x_1 - 2,\ 2 x_2)}^{\top}$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ exactly when $x_1 = 1$ and $x_2 = 0$. So ${(1, 0)}^{\top}$ is its only stationary point, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not one: the gradient there is ${(-2, 0)}^{\top}$.
+> **Example 8 (A stationary point, and a point that is not one)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$. Its gradient is ${(2 x_1 - 2,\ 2 x_2)}^{\top}$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ exactly when $x_1 = 1$ and $x_2 = 0$. So ${(1, 0)}^{\top}$ is its only stationary point, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not one: the gradient there is ${(-2, 0)}^{\top}$.
 
 > **NOTE:**
 >
@@ -580,13 +656,13 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >
 > ## R
 >
-> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-r-3.png)](optimization-critical-points_files/figure-html/stationary-point-r-3.png "Figure 4: Level curves of the function of Example 7. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
+> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-r-3.png)](optimization-critical-points_files/figure-html/stationary-point-r-3.png "Figure 5: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
 >
 > ## Python
 >
-> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-python-1.png "Figure 4: Level curves of the function of Example 7. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
+> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-python-1.png "Figure 5: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
 >
-> Figure 4: [Level curves](vector-calculus.llms.md#def-level-curve) of the [function](functions.llms.md#def-function) of [Example 7](#exm-stationary-point). The [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). At the origin (triangle) the gradient is ${(-2, 0)}^{\top}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> Figure 5: [Level curves](vector-calculus.llms.md#def-level-curve) of the [function](functions.llms.md#def-function) of [Example 8](#exm-stationary-point). The [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). At the origin (triangle) the gradient is ${(-2, 0)}^{\top}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
@@ -625,9 +701,9 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 
 > **NOTE:**
 >
-> **Example 8 (Using the condition to locate, and to rule out, minimizers)**  
+> **Example 9 (Using the condition to locate, and to rule out, minimizers)**  
 >
-> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ of [Example 7](#exm-stationary-point), any local minimizer must be the stationary point ${(1, 0)}^{\top}$. It is one: completing the square,
+> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ of [Example 8](#exm-stationary-point), any local minimizer must be the stationary point ${(1, 0)}^{\top}$. It is one: completing the square,
 >
 >   $$\begin{aligned}
 >   f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) &= (x_1 - 1)^2 + x_2^2 - 1 \\
@@ -649,7 +725,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 
 > **NOTE:**
 >
-> **Example 9 (A stationary point of the sum of squared errors, on real data)** The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book *An Introduction to Statistical Learning*, in the Python package [`ISLP`](https://islp.readthedocs.io/) (`ISLP.load_data("Auto")`) and the R package [`ISLR2`](https://cran.r-project.org/package=ISLR2) (`ISLR2::Auto`). This site has a copy at [`data/auto.csv`](data/auto.csv), and both code tabs below read that file.
+> **Example 10 (A stationary point of the sum of squared errors, on real data)** The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book *An Introduction to Statistical Learning*, in the Python package [`ISLP`](https://islp.readthedocs.io/) (`ISLP.load_data("Auto")`) and the R package [`ISLR2`](https://cran.r-project.org/package=ISLR2) (`ISLR2::Auto`). This site has a copy at [`data/auto.csv`](data/auto.csv), and both code tabs below read that file.
 >
 > Let $y_i$ be the miles per gallon and $x_i$ the horsepower of car $i$. To predict miles per gallon from horsepower with a line, write $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {(\beta_{0}, \beta_{1})}^{\top}$ and let $\mathbf{X}$ be the matrix whose row $i$ is $(1, x_i)$. The sum of squared errors is
 >
@@ -716,7 +792,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 1.071498e-11 1.673470e-10
+> #> [1] 9.471535e-12 6.662049e-11
 > #> 
 > #> 
 > #> $zero_vector
@@ -735,7 +811,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
@@ -747,7 +823,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 10 (The remainder point for** $e^x$) Take $g(x) = e^x$ on $[0, 1]$, so
+> **Example 11 (The remainder point for** $e^x$) Take $g(x) = e^x$ on $[0, 1]$, so
 >
 > $$\begin{aligned}
 > g' &= g'' \\
@@ -822,7 +898,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 11 (For a quadratic form the expansion is exact)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. Its gradient is $2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric)) and its Hessian is $2 \mathbf{S}$ at every point ([Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever $\tau$ is, [Theorem 6](#thm-taylor-mv) reads
+> **Example 12 (For a quadratic form the expansion is exact)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. Its gradient is $2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric)) and its Hessian is $2 \mathbf{S}$ at every point ([Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever $\tau$ is, [Theorem 6](#thm-taylor-mv) reads
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})
@@ -854,7 +930,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 12 (Strict and non-strict local minimizers)**  
+> **Example 13 (Strict and non-strict local minimizers)**  
 >
 > - $f(x) = (x - 2)^2$ has
 >
@@ -908,7 +984,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 13 (Checking the bound)** $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has eigenvalues $3$ and $1$ ([eigenvalue example](linear-algebra-special-matrices.llms.md#exm-eigenvalue)), so $\lambda_{\min} = 1$. At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, 0)}^{\top}$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = 2 \ge 1 \cdot 1$. At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, -1)}^{\top}$,
+> **Example 14 (Checking the bound)** $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has eigenvalues $3$ and $1$ ([eigenvalue example](linear-algebra-special-matrices.llms.md#exm-eigenvalue)), so $\lambda_{\min} = 1$. At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, 0)}^{\top}$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = 2 \ge 1 \cdot 1$. At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, -1)}^{\top}$,
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} &= 2 - 1 - 1 + 2 \\
@@ -954,7 +1030,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 14 (Checking the bound)** Let $\mathbf{E} = \begin{bmatrix} 0.1 & -0.2 \\ -0.2 & 0.1 \end{bmatrix}$, so $m = 0.2$ works, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, 1)}^{\top}$, so $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}^2 = 2$. Then
+> **Example 15 (Checking the bound)** Let $\mathbf{E} = \begin{bmatrix} 0.1 & -0.2 \\ -0.2 & 0.1 \end{bmatrix}$, so $m = 0.2$ works, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = {(1, 1)}^{\top}$, so $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}^2 = 2$. Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{E} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} &= 0.1 - 0.2 - 0.2 + 0.1 \\
@@ -1010,9 +1086,9 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 15 (Classifying stationary points)**  
+> **Example 16 (Classifying stationary points)**  
 >
-> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ has the stationary point ${(1, 0)}^{\top}$ ([Example 7](#exm-stationary-point)), and its Hessian is
+> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ has the stationary point ${(1, 0)}^{\top}$ ([Example 8](#exm-stationary-point)), and its Hessian is
 >
 >   $$\begin{aligned}
 >   \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) &= \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \\
@@ -1021,11 +1097,11 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 >
 >   which is positive definite, so ${(1, 0)}^{\top}$ is a strict local minimizer.
 >
-> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$ has the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and Hessian $\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}$, which is not positive definite (${(0, 1)}^{\top}$ gives $-2$), and indeed $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a local minimizer ([Example 8](#exm-first-order-condition)).
+> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$ has the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and Hessian $\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}$, which is not positive definite (${(0, 1)}^{\top}$ gives $-2$), and indeed $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a local minimizer ([Example 9](#exm-first-order-condition)).
 
 > **NOTE:**
 >
-> **Example 16 (The condition is sufficient, not necessary)** $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^4$ and $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^4$ both have gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and the same Hessian there, $\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}$, since
+> **Example 17 (The condition is sufficient, not necessary)** $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^4$ and $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^4$ both have gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and the same Hessian there, $\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}$, since
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} &= \pm 12 x_2^2 \\
@@ -1048,7 +1124,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 17 (A local maximizer)** Let $f(x) = 1 - x^2$. For every $x \in \mathbb{R}$,
+> **Example 18 (A local maximizer)** Let $f(x) = 1 - x^2$. For every $x \in \mathbb{R}$,
 >
 > $$\begin{aligned}
 > f(0) - f(x)
@@ -1070,7 +1146,7 @@ This theorem is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5
 
 > **NOTE:**
 >
-> **Example 18 (A saddle point)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$. Its gradient is ${(2 x_1,\ -2 x_2)}^{\top}$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ only at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ is a stationary point. For every $t \ne 0$,
+> **Example 19 (A saddle point)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$. Its gradient is ${(2 x_1,\ -2 x_2)}^{\top}$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ only at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ is a stationary point. For every $t \ne 0$,
 >
 > $$\begin{aligned}
 > f(t, 0)

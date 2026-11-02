@@ -18845,6 +18845,10 @@
   ],
   [
    "mds/optimization#def-critical-point",
+   "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization#def-critical-point",
    "mds/sets#def-open-interval"
   ],
   [
@@ -19494,6 +19498,10 @@
   [
    "mds/optimization-convexity#thm-epigraph",
    "mds/optimization-convexity#def-epigraph"
+  ],
+  [
+   "mds/optimization-critical-points#def-critical-point",
+   "mds/calculus#def-differentiable"
   ],
   [
    "mds/optimization-critical-points#def-critical-point",
