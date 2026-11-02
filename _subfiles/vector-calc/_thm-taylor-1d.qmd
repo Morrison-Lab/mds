@@ -13,4 +13,4 @@ $$
 
 :::
 
-This theorem is the case $n = 2$ of [@rudin1976principles, Theorem 5.15].
+This is the case $n = 2$ of [@rudin1976principles, Theorem 5.15].
