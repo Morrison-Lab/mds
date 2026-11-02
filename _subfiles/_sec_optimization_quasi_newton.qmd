@@ -25,3 +25,7 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-lbfgs.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-lbfgs-step.qmd >}}
