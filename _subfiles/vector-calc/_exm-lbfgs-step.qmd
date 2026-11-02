@@ -1,6 +1,8 @@
 ::: {#exm-lbfgs-step}
 #### L-BFGS applies the update without forming the matrix
 
+<!-- no-figure: the example compares two numerically equal vectors, and a plot of identical points shows nothing the printed table does not -->
+
 Continue @exm-bfgs-step with $m = 1$ stored pair $(\vecf{s}^{(0)}, \vy^{(0)})$ and starting [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{I}_2$.
 Below, $\matr{H}^+ \deriv{\vx} f(\vx^{(1)})$ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra.qmd#def-matrix-mult).
 

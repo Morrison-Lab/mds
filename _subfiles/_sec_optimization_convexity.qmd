@@ -86,6 +86,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-convex-hessian.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_exm-convex-hessian-not-necessary.qmd >}}
 
 {{< slidebreak >}}

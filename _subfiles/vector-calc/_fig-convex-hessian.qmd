@@ -1,0 +1,64 @@
+::: {#fig-convex-hessian}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-hessian-fig-r
+#| fig-alt: >-
+#|   Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2
+#|   from -3 to 3. The level curves are long parallel curves that run along
+#|   the direction (1, -2), crowded together on the upper right and spread
+#|   out on the lower left. A dashed vermilion line along that direction
+#|   through the origin marks where f is linear.
+#| fig-height: 4
+#| fig-width: 5
+ch_x1_ch <- seq(-1, 1, length.out = 101)
+ch_x2_ch <- seq(-3, 3, length.out = 101)
+ch_grid_ch <- tidyr::expand_grid(x1 = ch_x1_ch, x2 = ch_x2_ch)
+ch_u_ch <- 2 * ch_grid_ch$x1 + ch_grid_ch$x2
+ch_grid_ch$z <- exp(ch_u_ch) - ch_grid_ch$x1
+ch_line_ch <- tibble::tibble(x1 = c(-1, 1), x2 = c(2, -2))
+ggplot2::ggplot(ch_grid_ch, ggplot2::aes(x1, x2)) +
+  ggplot2::geom_contour(ggplot2::aes(z = z), colour = "#0072B2", bins = 12) +
+  ggplot2::geom_line(
+    data = ch_line_ch, colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::labs(x = "x1", y = "x2")
+```
+
+### Python
+
+```{python}
+#| label: convex-hessian-fig-python
+#| fig-alt: >-
+#|   Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2
+#|   from -3 to 3. The level curves are long parallel curves that run along
+#|   the direction (1, -2), crowded together on the upper right and spread
+#|   out on the lower left. A dashed vermilion line along that direction
+#|   through the origin marks where f is linear.
+#| fig-height: 4
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+ch_x1_ax = np.linspace(-1, 1, 101)
+ch_x2_ax = np.linspace(-3, 3, 101)
+ch_xx_ax, ch_yy_ax = np.meshgrid(ch_x1_ax, ch_x2_ax)
+ch_z_ax = np.exp(2 * ch_xx_ax + ch_yy_ax) - ch_xx_ax
+fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+ax.contour(ch_xx_ax, ch_yy_ax, ch_z_ax, levels=12, colors="#0072B2")
+ax.plot([-1, 1], [2, -2], "--", color="#D55E00")
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+plt.show();
+```
+
+:::
+
+Level curves of the third function in @exm-convex-hessian.
+Along the dashed line through the origin in the direction $\tp{(1, -2)}$ the function is linear,
+so the function is [convex](algebra.qmd#def-convex-function) but not [strictly convex](#def-strictly-convex).
+
+:::
