@@ -2,7 +2,7 @@
 #### First-order characterization of convexity
 
 Let $f : \reals^p \to \reals$ have first partial derivatives
-that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-on)).
+that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$.
 Then $f$ is [convex](algebra.qmd#def-convex-function) if and only if
 
 $$
@@ -20,8 +20,8 @@ If the inequality is strict whenever $\vx \ne \vy$, then $f$ is strictly convex 
 **Only if.**
 Let $\vx, \vy \in \reals^p$, let $\vecf{d} \eqdef \vx - \vy$,
 and let $g(t) \eqdef f(\vy + t \vecf{d})$.
-The inner function $t \mapsto \vy + t \vecf{d}$ has derivative $\tp{\vecf{d}}$ ([vector-valued derivative](vector-calculus.qmd#def-vector-valued-derivative)),
-so the vector chain rule ([vector chain rule](vector-calculus.qmd#thm-chain-vec)) gives
+The [inner function](functions.qmd#def-inner-function) $t \mapsto \vy + t \vecf{d}$ has [derivative](vector-calculus.qmd#def-vector-valued-derivative) $\tp{\vecf{d}}$,
+so the [vector chain rule](vector-calculus.qmd#thm-chain-vec) gives
 
 $$
 \ba
@@ -101,28 +101,5 @@ then:
 - so both inequalities at $\vecf{z}$ are strict;
 - both multipliers $t$ and $1 - t$ are positive, so the first step of the display is strict,
   and $f$ is strictly convex.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-convex-first-order}
-#### Tangent lines under a parabola
-
-For $f(x) = x^2$, the right side of @eq-supporting-hyperplane is
-$y^2 + 2y (x - y) = 2xy - y^2$, and
-
-$$
-\begin{aligned}
-f(x) - (2xy - y^2)
-&= x^2 - 2xy + y^2 \\
-&= (x - y)^2 \\
-&\ge 0,
-\end{aligned}
-$$
-
-with equality only at $x = y$, confirming that $x^2$ is strictly convex.
-For $g(x) = -x^2$ the inequality fails:
-at $y = 0$ the tangent line is $s = 0$, and $g(1) = -1 < 0$.
 
 :::

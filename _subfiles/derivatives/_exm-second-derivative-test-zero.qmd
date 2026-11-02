@@ -1,0 +1,40 @@
+:::{#exm-second-derivative-test-zero}
+#### Three functions with second derivative $0$ at a flat point
+
+Take $f(x) = x^4$, $g(x) = -x^4$ and $h(x) = x^3$.
+Each has the [derivative](calculus-derivatives.qmd#def-derivative) $0$ at $x = 0$:
+
+$$
+\begin{aligned}
+f'(x) &= 4x^3, & f'(0) &= 0, \\
+g'(x) &= -4x^3, & g'(0) &= 0, \\
+h'(x) &= 3x^2, & h'(0) &= 0.
+\end{aligned}
+$$
+
+So $0$ is a [flat point](#def-flat-point) of all three.
+Each has the [second derivative](calculus-derivatives.qmd#def-second-derivative) $0$ there:
+
+$$
+\begin{aligned}
+f''(x) &= 12x^2, & f''(0) &= 0, \\
+g''(x) &= -12x^2, & g''(0) &= 0, \\
+h''(x) &= 6x, & h''(0) &= 0.
+\end{aligned}
+$$
+
+Because the second derivative is $0$ in all three cases,
+@thm-second-derivative-test does not decide any of them.
+Yet the three behave differently near $0$ (@fig-second-derivative-test-zero):
+
+- $f(x) = x^4 > 0 = f(0)$ for every $x \ne 0$,
+  so $0$ is a [local minimizer](algebra.qmd#def-local-minimizer).
+- $g(x) = -x^4 < 0 = g(0)$ for every $x \ne 0$,
+  so $0$ is a [local maximizer](#def-local-maximizer).
+- $h(x) = x^3$ is negative for $x < 0$ and positive for $x > 0$,
+  so $h(x) < h(0)$ to the left of $0$ and $h(x) > h(0)$ to the right of $0$.
+  Thus $0$ is neither a local minimizer nor a local maximizer.
+
+{{< include mds/_subfiles/derivatives/_fig-second-derivative-test-zero.qmd >}}
+
+:::
