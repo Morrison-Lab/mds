@@ -8,6 +8,8 @@ format:
     output-file: indicator-functions-handout.pdf
   docx:
     output-file: indicator-functions.docx
+filters:
+  - split-page-headings.lua
 ---
 
 {{< include mds/_indicator-functions.qmd >}}

@@ -8,6 +8,8 @@ format:
     output-file: linear-algebra-matrices-handout.pdf
   docx:
     output-file: linear-algebra-matrices.docx
+filters:
+  - split-page-headings.lua
 ---
 
 {{< include latex-macros/macros.qmd >}}
