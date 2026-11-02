@@ -18790,6 +18790,10 @@
   ],
   [
    "mds/optimization#def-critical-point",
+   "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization#def-critical-point",
    "mds/sets#def-open-interval"
   ],
   [
@@ -19054,7 +19058,7 @@
   ],
   [
    "mds/optimization#lem-qf-eigen-bound",
-   "mds/linear-algebra#def-eigendecomposition"
+   "mds/linear-algebra#def-eigenvalue"
   ],
   [
    "mds/optimization#prp-double-well-divergence",
@@ -19450,6 +19454,10 @@
   ],
   [
    "mds/optimization-critical-points#def-critical-point",
+   "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization-critical-points#def-critical-point",
    "mds/sets#def-open-interval"
   ],
   [
@@ -19482,7 +19490,7 @@
   ],
   [
    "mds/optimization-critical-points#lem-qf-eigen-bound",
-   "mds/linear-algebra#def-eigendecomposition"
+   "mds/linear-algebra#def-eigenvalue"
   ],
   [
    "mds/optimization-critical-points#thm-fermat",
