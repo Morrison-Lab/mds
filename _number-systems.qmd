@@ -7,8 +7,9 @@ and measure with the real numbers.
 This page defines those number systems.
 It also defines the words that sort their members:
 even and odd integers, and rational and irrational real numbers.
-Finally, it defines divisibility, primes, congruence,
-the factorial of a non-negative integer and the floor of a real number.
+Finally, it defines divisibility, [primes](#def-prime), congruence,
+the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative-integers)
+and the [floor](#def-floor) of a [real number](#def-real-numbers).
 
 :::
 

@@ -1,7 +1,7 @@
 :::{#def-congruence}
 #### Congruence modulo $n$
 
-Let $a$ and $b$ be integers (@def-integers), and let $n$ be a positive integer.
+Let $a$ and $b$ be [integers](#def-integers), and let $n$ be a [positive integer](#def-positive-integer).
 We say that $a$ is **congruent to $b$ modulo $n$**,
 written $a \equiv b \pmod{n}$,
 if $n \mid (a - b)$ (@def-divides)
