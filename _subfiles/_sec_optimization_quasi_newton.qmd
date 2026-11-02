@@ -12,6 +12,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-quasi-newton-step.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_rem-quasi-newton-cost.qmd >}}
 
 {{< slidebreak >}}
