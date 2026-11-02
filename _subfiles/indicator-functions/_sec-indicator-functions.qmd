@@ -54,7 +54,7 @@ set notation or predicate notation.
 
 {{< include mds/_subfiles/indicator-functions/_exm-set-predicate-notation.qmd >}}
 
-#### Set notation
+### Set notation
 
 In set notation,
 the indicator is tied to a set $A$,
@@ -72,7 +72,7 @@ the set of functions $f$ for which $\int \abs{f(x)}^p \, dx$ is finite),
 authors often omit the argument $x$,
 writing simply $\mathbf{1}_A$, $\indic{A}$, or $I_A$.
 
-#### Predicate notation
+### Predicate notation
 
 In predicate notation,
 the indicator takes a logical condition,
@@ -90,7 +90,7 @@ where indicators frequently depend on inequalities ([definition](proof-writing.q
 such as $\indicp{T_i \le t}$ (an event occurring before time $t$)
 or $\indicp{Y_i = 1}$ (a binary outcome).
 
-#### Equivalence between paradigms
+### Equivalence between paradigms
 
 The two paradigms are connected by evaluating the predicate indicator
 at the membership statement $x \in A$:
