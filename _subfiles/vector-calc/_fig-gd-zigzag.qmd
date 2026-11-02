@@ -15,19 +15,21 @@
 #|   marked by a vermilion triangle.
 #| fig-height: 4
 #| fig-width: 6
-gz_grid_gz <- expand.grid(
-  x1 = seq(-0.5, 3.5, length.out = 201),
-  x2 = seq(-1, 1.2, length.out = 201)
-)
+gz_x1_gz <- seq(-0.5, 3.5, length.out = 201)
+gz_x2_gz <- seq(-1, 1.2, length.out = 201)
+gz_grid_gz <- expand.grid(x1 = gz_x1_gz, x2 = gz_x2_gz)
 gz_grid_gz$f <- 0.5 * (gz_grid_gz$x1^2 + 3 * gz_grid_gz$x2^2)
-gz_path_gz <- tibble::tibble(
-  x1 = 3 * 0.5^(0:3),
-  x2 = c(1, -0.5, 0.25, -0.125)
-)
+gz_steps_gz <- 0:3
+gz_path_x1_gz <- 3 * 0.5^gz_steps_gz
+gz_path_x2_gz <- c(1, -0.5, 0.25, -0.125)
+gz_path_gz <- tibble::tibble(x1 = gz_path_x1_gz, x2 = gz_path_x2_gz)
 gz_origin_gz <- tibble::tibble(x1 = 0, x2 = 0)
-ggplot2::ggplot(gz_grid_gz, ggplot2::aes(x1, x2)) +
+gz_aes_gz <- ggplot2::aes(x1, x2)
+gz_aes_z_gz <- ggplot2::aes(z = f)
+gz_breaks_gz <- c(0.25, 1, 2.25, 4, 6)
+ggplot2::ggplot(gz_grid_gz, gz_aes_gz) +
   ggplot2::geom_contour(
-    ggplot2::aes(z = f), colour = "grey60", breaks = c(0.25, 1, 2.25, 4, 6)
+    gz_aes_z_gz, colour = "grey60", breaks = gz_breaks_gz
   ) +
   ggplot2::geom_path(data = gz_path_gz, colour = "#0072B2") +
   ggplot2::geom_point(data = gz_path_gz, colour = "#0072B2", size = 3) +
@@ -72,6 +74,7 @@ plt.show();
 
 The first four [iterates](#def-iterate) of [gradient descent](#def-gradient-descent) with [exact line search](#def-exact-line-search) on $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$ from $\tp{(3, 1)}$ (@exm-gd-zigzag with $b = 3$),
 drawn over the [level curves](vector-calculus.qmd#def-level-curve) of $f$.
-The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the [minimizer](algebra.qmd#def-global-minimizer) $\vzero$ (triangle).
+The second entry changes sign at every step,
+so the path zigzags across the long axis of the ellipses toward the [minimizer](algebra.qmd#def-global-minimizer) $\vzero$ (triangle).
 
 :::
