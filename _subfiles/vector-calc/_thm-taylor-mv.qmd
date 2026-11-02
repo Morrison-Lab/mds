@@ -21,7 +21,8 @@ $$
 Let $g(t) \eqdef f(\vecf{z} + t \vecf{h})$ for $t \in \reals$,
 the values of $f$ along the line through $\vecf{z}$ in the direction $\vecf{h}$.
 The [inner function](functions.qmd#def-inner-function) $\vy(t) = \vecf{z} + t \vecf{h}$ has entries $y_j = z_j + t h_j$,
-so $\deriv{t} y_j = h_j$, and its [derivative](vector-calculus.qmd#def-vector-valued-derivative) is the $1 \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\tp{\vecf{h}}$.
+so $\deriv{t} y_j = h_j$,
+and its [derivative](vector-calculus.qmd#def-vector-valued-derivative) is the $1 \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\tp{\vecf{h}}$.
 By the [vector chain rule](vector-calculus.qmd#thm-chain-vec) applied with the [argument](functions.qmd#def-argument) $t$,
 the inner function $\vy(t) = \vecf{z} + t \vecf{h}$, and the [outer function](functions.qmd#def-outer-function) $f$,
 

@@ -2,8 +2,10 @@
 #### For a quadratic form the expansion is exact
 
 Let $f(\vx) = \qform{\matr{S}}{\vx}$ with $\matr{S}$ symmetric and constant.
-Its [gradient](vector-calculus.qmd#cor-quadratic-form-symmetric) is $2 \matr{S} \vx$
-and its [Hessian](vector-calculus.qmd#thm-hessian-quadratic) is $2 \matr{S}$ at every point,
+Its [gradient](vector-calculus.qmd#def-vector-derivative) is $2 \matr{S} \vx$
+([quadratic form gradient](vector-calculus.qmd#cor-quadratic-form-symmetric))
+and its [Hessian](vector-calculus.qmd#def-hessian) is $2 \matr{S}$ at every point
+([quadratic form Hessian](vector-calculus.qmd#thm-hessian-quadratic)),
 so whatever $\midpt$ is, @thm-taylor-mv reads
 
 $$

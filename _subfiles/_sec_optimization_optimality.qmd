@@ -30,6 +30,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-stationary-least-squares.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-taylor-1d.qmd >}}
 
 {{< slidebreak >}}

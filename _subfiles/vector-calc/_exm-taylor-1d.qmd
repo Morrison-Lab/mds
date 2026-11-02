@@ -21,7 +21,8 @@ e^{\midpt} &= 2 (e - 2) \\
 \end{aligned}
 $$
 
-so $\midpt = \log 1.43656 \approx 0.362$, where $\log$ is the [natural logarithm](algebra.qmd#def-natural-log),
-which is in $(0, 1)$.
+so $\midpt = \log 1.43656 \approx 0.362$,
+where $\log$ is the [natural logarithm](algebra.qmd#def-natural-log).
+This $\midpt$ is in $(0, 1)$.
 
 :::

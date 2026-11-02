@@ -13,8 +13,9 @@
 
   which is positive definite, so $\tp{(1, 0)}$ is a strict local minimizer.
 - $f(\vx) = x_1^2 - x_2^2$ has the stationary point $\vzero$
-  and Hessian $\sbmat{ 2 & 0 \\ 0 & -2 }$, which is not positive definite
-  ($\tp{(0, 1)}$ gives $-2$),
-  and indeed $\vzero$ is not a local minimizer (@exm-first-order-condition).
+  and Hessian $\sbmat{ 2 & 0 \\ 0 & -2 }$,
+  which is not positive definite
+  ($\tp{(0, 1)}$ gives $-2$).
+  Indeed, $\vzero$ is not a local minimizer (@exm-first-order-condition).
 
 :::

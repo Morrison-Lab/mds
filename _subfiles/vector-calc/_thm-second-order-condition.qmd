@@ -12,7 +12,8 @@ then $\vx^*$ is a strict local minimizer of $f$ (@def-strict-local-minimizer).
 ::: proof
 
 $\matr{H}_f(\vx^*)$ is positive definite, and so symmetric,
-so its smallest [eigenvalue](linear-algebra.qmd#thm-definite-eigenvalues) $\eigval$ is positive.
+so its smallest [eigenvalue](linear-algebra.qmd#def-eigenvalue) $\eigval$ is positive,
+by the [eigenvalue test for definiteness](linear-algebra.qmd#thm-definite-eigenvalues).
 Each of the $p^2$ entries of $\matr{H}_f$ is [continuous at](vector-calculus.qmd#def-continuous-several) $\vx^*$:
 for $\tolout = \eigval / (2p)$ there is a $\tolin_{ij} > 0$ with
 $\abs{\sb{\matr{H}_f(\vy)}_{ij} - \sb{\matr{H}_f(\vx^*)}_{ij}} < \eigval / (2p)$

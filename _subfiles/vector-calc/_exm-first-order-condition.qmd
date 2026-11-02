@@ -32,5 +32,3 @@
   so $\vzero$ is not a local minimizer.
 
 :::
-
-{{< include mds/_subfiles/vector-calc/_exm-stationary-least-squares.qmd >}}

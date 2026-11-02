@@ -40,8 +40,11 @@ $$
 
 The second step is the [transpose of a product](linear-algebra.qmd#thm-transpose-product).
 The last step applies [orthogonal matrices preserve length](linear-algebra.qmd#thm-orthogonal-norm) to $\tp{\matr{Q}}$.
-That theorem applies because $\tp{\matr{Q}}$ is an [orthogonal matrix](linear-algebra.qmd#def-orthogonal-matrix):
-since $\matr{Q}$ is [square](linear-algebra.qmd#def-square-matrix) with $\tp{\matr{Q}} \matr{Q} = \matr{I}_p$, also $\matr{Q} \tp{\matr{Q}} = \matr{I}_p$, so
+That theorem applies
+because $\tp{\matr{Q}}$ is an [orthogonal matrix](linear-algebra.qmd#def-orthogonal-matrix):
+since $\matr{Q}$ is [square](linear-algebra.qmd#def-square-matrix) with $\tp{\matr{Q}} \matr{Q} = \matr{I}_p$,
+also $\matr{Q} \tp{\matr{Q}} = \matr{I}_p$,
+so
 
 $$
 \tp{(\tp{\matr{Q}})} \tp{\matr{Q}} = \matr{Q} \tp{\matr{Q}} = \matr{I}_p.
