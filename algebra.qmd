@@ -39,7 +39,7 @@ goes on to the page that now holds it.
 
 :::
 
-## Further reading {#sec-further-reading}
+# Further reading {#sec-further-reading}
 
 - @abramson2021algebra
   is a free online textbook on algebra and trigonometry.
@@ -49,7 +49,7 @@ goes on to the page that now holds it.
   develops the real numbers, including the least upper bound property
   behind the infimum and supremum.
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::
