@@ -52,33 +52,3 @@ $$
 which is greater than $q(\stepvec^*)$ for every $\vecf{d} \ne \vzero_{p \times 1}$, since $\matr{H}$ is positive definite.
 
 :::
-
-{{< slidebreak >}}
-
-:::{#exm-newton-model}
-#### The Newton step at $x = 2.5$
-
-For the model $q(\step) = f(2.5) + 2.25\,\step + 2.5\,\step^2$ of @exm-quadratic-model,
-$H = [5]$ is positive definite, so by @thm-newton-model its minimizer is
-
-$$
-\begin{aligned}
-\step^* &= -H^{-1} g \\
-&= -2.25 / 5 \\
-&= -0.45.
-\end{aligned}
-$$
-
-Setting the derivative $2.25 + 5 \step$ to $0$ gives the same $\step^*$,
-and
-
-$$
-\begin{aligned}
-2.5 - 0.45 &= 2.05 \\
-&= x^{(1)}
-\end{aligned}
-$$
-
-(@exm-newton-method).
-
-:::

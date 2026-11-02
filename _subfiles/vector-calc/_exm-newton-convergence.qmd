@@ -29,22 +29,3 @@ when near that minimizer the Hessian changes by at most a constant times the dis
 which is not proved here.
 
 :::
-
-{{< slidebreak >}}
-
-:::{#exm-newton-maximum}
-#### Newton's method can find a maximum
-
-From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$.
-But $-2$ is not a minimizer of $f$:
-it is a stationary point of $-f$, whose second derivative there is $-f''(-2) = 4 > 0$,
-so it is a strict local minimizer of $-f$ (@thm-second-order-condition),
-that is, $f$ is strictly larger at $-2$ than at all nearby points.
-Newton's method looks only for a stationary point,
-and here the Hessian $f''(x) = 2x$ is negative along the way,
-so the quadratic model has no minimizer
-(with $H < 0$, $q(\step) = f + g\,\step + \tfrac{1}{2} H \step^2$ decreases without bound)
-and @thm-newton-model does not apply:
-the positive definite hypothesis there is needed.
-
-:::

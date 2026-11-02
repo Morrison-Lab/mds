@@ -1,0 +1,33 @@
+:::{#exm-qp-equality-fails}
+#### The hypotheses are needed
+
+- If $\matr{S}$ is not positive definite there may be no minimizer:
+  with $\matr{S} = \sbmat{ 1 & 0 \\ 0 & -1 }$ and the constraint $x_1 = 1$
+  ($\matr{A} = \tp{(1, 0)}$, $\vecf{b} = [1]$),
+  $f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)$ decreases without bound as $x_2$ grows.
+- If the columns of $\matr{A}$ are dependent, $\matr{M}$ is not invertible:
+  with $\matr{S} = \matr{I}_2$ and $\matr{A} = \sbmat{ 1 & 1 \\ 1 & 1 }$,
+
+  $$
+  \begin{aligned}
+  \matr{M} &= \tp{\matr{A}} \matr{A} \\
+  &= \sbmat{ 2 & 2 \\ 2 & 2 },
+  \end{aligned}
+  $$
+
+  whose columns are equal.
+  So $\matr{M} \tp{(1, -1)} = \vzero_{2 \times 1}$, and $\matr{M}$ is not [invertible](linear-algebra.qmd#thm-invertible-rank), since a square matrix is invertible exactly when its null space is zero.
+  The two constraints both read $x_1 + x_2 = b_i$,
+  so they have no solution at all when $b_1 \ne b_2$.
+  When $b_1 = b_2$ a unique minimizer still exists,
+
+  $$
+  \begin{aligned}
+  x_1 &= x_2 \\
+  &= b_1 / 2,
+  \end{aligned}
+  $$
+
+  but the formula of @thm-qp-equality cannot produce it.
+
+:::
