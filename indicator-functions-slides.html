@@ -294,14 +294,11 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-31 15:22:31 (PDT)</p>
+  <p class="date">Last modified: 2026-11-01 19:14:07 (PST)</p>
 </section>
 <section class="slide level2">
 
-
-</section>
-<section id="sec-indicator-functions" class="slide level2" data-number="1">
-<h2><span class="header-section-number">1</span> Indicator functions</h2>
+<p><span id="sec-indicator-functions"></span></p>
 <p>An <strong>indicator function</strong> is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:</p>
 <ul>
 <li>binary variables, which take only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> (<a href="#/def-binary-variable" class="quarto-xref">Definition&nbsp;3</a>);</li>
@@ -365,7 +362,9 @@
 <p><span class="theorem-title"><strong>Example 2 (A binary variable is an indicator)</strong></span> In a study of <span class="math inline">\(n\)</span> people, let <span class="math inline">\(s_i = 1\)</span> if person <span class="math inline">\(i\)</span> smokes and <span class="math inline">\(s_i = 0\)</span> otherwise, for <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>. Then <span class="math inline">\(s_i\)</span> is a binary variable (<a href="#/def-binary-variable" class="quarto-xref">Definition&nbsp;3</a>). It is also the predicate indicator (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;1</a>) of the proposition “person <span class="math inline">\(i\)</span> smokes”: <span class="math inline">\(s_i = {\mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}}\)</span>.</p>
 <p>In the same way, every indicator is a binary variable, and every binary variable <span class="math inline">\(X\)</span> is the indicator of its own value being <span class="math inline">\(1\)</span>: <span class="math inline">\(X = {\mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}}\)</span>, since both sides are <span class="math inline">\(1\)</span> when <span class="math inline">\(X = 1\)</span> and <span class="math inline">\(0\)</span> when <span class="math inline">\(X = 0\)</span>.</p>
 </div>
-<h3 id="two-primary-notational-paradigms-set-vs.-predicate-notation">Two primary notational paradigms: set vs.&nbsp;predicate notation</h3>
+</section>
+<section id="two-primary-notational-paradigms-set-vs.-predicate-notation" class="slide level2" data-number="1">
+<h2><span class="header-section-number">1</span> Two primary notational paradigms: set vs.&nbsp;predicate notation</h2>
 <p>The vast majority of indicator notations belong to one of two families: set notation or predicate notation.</p>
 </section>
 <section class="slide level2">
@@ -385,7 +384,7 @@
 <div id="exm-set-predicate-notation" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (One indicator in both notations)</strong></span> Let <span class="math inline">\(A = [0, \infty)\)</span>, the nonnegative real numbers. The indicator of <span class="math inline">\(A\)</span> is <span class="math inline">\(\mathbb{1}_{A}(x)\)</span> in set notation, and <span class="math inline">\({\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}\)</span> or <span class="math inline">\({\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}}\)</span> in predicate notation (<a href="#/def-set-predicate-notation" class="quarto-xref">Definition&nbsp;4</a>, <a href="#/def-predicate-notation" class="quarto-xref">Definition&nbsp;5</a>). At <span class="math inline">\(x = 3.5\)</span>, all three equal <span class="math inline">\(1\)</span>; at <span class="math inline">\(x = -2.1\)</span>, all three equal <span class="math inline">\(0\)</span>.</p>
 </div>
-<h4 id="set-notation">Set notation</h4>
+<h3 id="set-notation">Set notation</h3>
 <p>In set notation, the indicator is tied to a set <span class="math inline">\(A\)</span>, which appears as a subscript:</p>
 <ul>
 <li><span class="math inline">\(\mathbf{1}_A(x)\)</span> (bold numeral one)</li>
@@ -395,7 +394,7 @@
 <li><span class="math inline">\(\chi_A(x)\)</span> (Greek letter chi, historically termed the <em>characteristic function</em>)</li>
 </ul>
 <p>When the function is viewed as a mathematical object in its own right (for instance, as an element of an <span class="math inline">\(L^p\)</span> function space, the set of functions <span class="math inline">\(f\)</span> for which <span class="math inline">\(\int \mathopen{}\left|f(x)\right|\mathclose{}^p \, dx\)</span> is finite), authors often omit the argument <span class="math inline">\(x\)</span>, writing simply <span class="math inline">\(\mathbf{1}_A\)</span>, <span class="math inline">\(\mathbb{1}_{A}\)</span>, or <span class="math inline">\(I_A\)</span>.</p>
-<h4 id="predicate-notation">Predicate notation</h4>
+<h3 id="predicate-notation">Predicate notation</h3>
 <p>In predicate notation, the indicator takes a logical condition, relation, or proposition <span class="math inline">\(P\)</span> directly as its argument or subscript:</p>
 <ul>
 <li><span class="math inline">\(\mathbb{I}(x \in A)\)</span> or <span class="math inline">\(\mathbb{I}(P)\)</span></li>
@@ -405,7 +404,7 @@
 <li><span class="math inline">\(I(x \in A)\)</span> or <span class="math inline">\(I(P)\)</span></li>
 </ul>
 <p>Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities (<a href="./proof-writing.html#def-inequality">definition</a>) involving random variables, such as <span class="math inline">\({\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}}\)</span> (an event occurring before time <span class="math inline">\(t\)</span>) or <span class="math inline">\({\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}}\)</span> (a binary outcome).</p>
-<h4 id="equivalence-between-paradigms">Equivalence between paradigms</h4>
+<h3 id="equivalence-between-paradigms">Equivalence between paradigms</h3>
 <p>The two paradigms are connected by evaluating the predicate indicator at the membership statement <span class="math inline">\(x \in A\)</span>:</p>
 <p><span class="math display">\[
 \mathbf{1}_A(x) = \mathbb{I}(x \in A)
@@ -427,7 +426,9 @@
 <section class="slide level2">
 
 <p>Set notation is more natural when the underlying set <span class="math inline">\(A\)</span> has a standard name (such as the support of a distribution (<a href="#/def-support" class="quarto-xref">Definition&nbsp;6</a>), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as <span class="math inline">\({\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}}\)</span>.</p>
-<h3 id="iverson-bracket-notation">Iverson bracket notation</h3>
+</section>
+<section id="iverson-bracket-notation" class="slide level2" data-number="2">
+<h2><span class="header-section-number">2</span> Iverson bracket notation</h2>
 <p>In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the Iverson bracket <span class="citation" data-cites="wikipedia_iverson_bracket"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span>.</p>
 </section>
 <section class="slide level2">
@@ -511,14 +512,18 @@
 \]</span></p></li>
 </ul>
 </div>
-<h3 id="strengths-and-limitations-of-the-iverson-bracket">Strengths and limitations of the Iverson bracket</h3>
+</section>
+<section id="strengths-and-limitations-of-the-iverson-bracket" class="slide level2" data-number="3">
+<h2><span class="header-section-number">3</span> Strengths and limitations of the Iverson bracket</h2>
 <p>The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if <span class="math inline">\(U\)</span> is a <a href="./functions.html#def-finite-set">finite set</a> that contains <span class="math inline">\(A\)</span>, then:</p>
 <p><span class="math display">\[
 \sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]
 \]</span></p>
 <p>With <span class="math inline">\(A = \mathopen{}\left\{2, 4\right\}\mathclose{}\)</span>, <span class="math inline">\(f(x) = x\)</span>, and <span class="math inline">\(U = \mathopen{}\left\{1, 2, 3, 4, 5\right\}\mathclose{}\)</span>, both sides equal <span class="math inline">\(2 + 4 = 6\)</span>.</p>
 <p>However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote <a href="./sets.html#def-closed-interval">closed intervals</a> <span class="math inline">\([a, b]\)</span>, <a href="https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation">conditional expectations</a> <span class="math inline">\(\mathbb{E}[Y \mid X]\)</span> (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses <span class="math inline">\(\mathbb{1}\)</span> or <span class="math inline">\(I\)</span> rather than the bare Iverson bracket.</p>
-<h3 id="summary-of-indicator-notations">Summary of indicator notations</h3>
+</section>
+<section id="summary-of-indicator-notations" class="slide level2" data-number="4">
+<h2><span class="header-section-number">4</span> Summary of indicator notations</h2>
 <p><a href="#/tbl-indicator-notations" class="quarto-xref">Table&nbsp;1</a> compares the major notations encountered across the literature.</p>
 <div id="tbl-indicator-notations" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
@@ -583,7 +588,9 @@ Table&nbsp;1: Notations for indicator functions across mathematical and statisti
 </div>
 </figure>
 </div>
-<h3 id="conventions-in-this-book">Conventions in this book</h3>
+</section>
+<section id="conventions-in-this-book" class="slide level2" data-number="5">
+<h2><span class="header-section-number">5</span> Conventions in this book</h2>
 <p>In these notes, we standardize on blackboard bold <span class="math inline">\(\mathbb{1}\)</span> via the macros defined in <code>latex-macros/macros.qmd</code>:</p>
 <ul>
 <li><code>\indic{A}</code> produces <span class="math inline">\(\mathbb{1}_{A}\)</span> (set subscript)</li>
@@ -592,7 +599,9 @@ Table&nbsp;1: Notations for indicator functions across mathematical and statisti
 <li><code>\1{P}</code> produces <span class="math inline">\(\text{1}_{P}\)</span> (text numeral with subscript, used in legacy formulas)</li>
 </ul>
 <p>Blackboard bold <span class="math inline">\(\mathbb{1}\)</span> is preferred because it avoids all common collisions: it is visually distinct from the scalar <span class="math inline">\(1\)</span>, the identity matrix <span class="math inline">\(I\)</span>, and the observed and expected Fisher information matrices (<span class="math inline">\(I\)</span>, <span class="math inline">\(\mathcal{I}\)</span>).</p>
-<h3 id="key-algebraic-properties">Key algebraic properties</h3>
+</section>
+<section id="key-algebraic-properties" class="slide level2" data-number="6">
+<h2><span class="header-section-number">6</span> Key algebraic properties</h2>
 <p>Indicator functions translate the logical connectives (<a href="./proof-writing.html#def-logical-connective">definition</a>) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:</p>
 <div id="def-idempotent" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Idempotent)</strong></span> A number <span class="math inline">\(a\)</span> is <strong>idempotent</strong> <span class="citation" data-cites="wikipedia_idempotence"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span> if <span class="math inline">\(a \cdot a = a\)</span>. A function <span class="math inline">\(f\)</span> with real values is <strong>idempotent</strong> if <span class="math inline">\(f(x) \cdot f(x) = f(x)\)</span> for every <span class="math inline">\(x\)</span> in its <a href="./functions.html#def-domain">domain</a>.</p>

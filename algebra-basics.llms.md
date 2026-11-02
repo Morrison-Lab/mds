@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-31 15:22:31 (PDT)
+Last modified: 2026-11-01 19:14:07 (PST)
 
 ## 0.1 Equalities
 
@@ -139,7 +139,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > - \\\sqrt{9} = 3\\. Although \\(-3)^2 = 9\\ too, \\-3\\ is negative, so \\\sqrt{9}\\ is not \\-3\\.
 > - \\\sqrt{0} = 0\\.
 > - \\\sqrt{2} \approx 1.41421\\.
-> - \\\sqrt{-4}\\ is not a real number, because no real number squares to \\-4\\ (see [Section 1 in Complex Numbers](algebra-complex.llms.md#sec-complex-numbers)).
+> - \\\sqrt{-4}\\ is not a real number, because no real number squares to \\-4\\ (see **?@sec-complex-numbers**).
 
 > **NOTE:**
 >

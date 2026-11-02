@@ -4,9 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-31 15:22:31 (PDT)
-
-## 0.1 Gradient descent
+Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
@@ -467,7 +465,7 @@ Last modified: 2026-10-31 15:22:31 (PDT)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe9028050>]
+> #> [<matplotlib.lines.Line2D object at 0x7f112a8bf890>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -479,18 +477,18 @@ Last modified: 2026-10-31 15:22:31 (PDT)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe9028190>]
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe90282d0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe9028410>]
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe9028550>]
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe9028690>]
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe90287d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f112a8bf9d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f112a8bfb10>]
+> #> [<matplotlib.lines.Line2D object at 0x7f112a8bfc50>]
+> #> [<matplotlib.lines.Line2D object at 0x7f112a8bfd90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f112a8bfed0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f112a8e4050>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f7fe9028910>
+> #> <matplotlib.legend.Legend object at 0x7f112a8e4190>
 > plt.show()
 > ```
 >
@@ -585,10 +583,10 @@ Last modified: 2026-10-31 15:22:31 (PDT)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe8c3d090>]
+> #> [<matplotlib.lines.Line2D object at 0x7f112871c910>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe8c3d1d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f112871ca50>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -715,11 +713,11 @@ Last modified: 2026-10-31 15:22:31 (PDT)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f7fe8ab9310>]
+> #> [<matplotlib.lines.Line2D object at 0x7f11287e3ed0>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7f7fe8ab9450>
+> #> <matplotlib.lines.Line2D object at 0x7f112851c050>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7f7fe8ab9590>
+> #> <matplotlib.lines.Line2D object at 0x7f112851c190>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")

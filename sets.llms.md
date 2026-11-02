@@ -4,13 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-10-31 15:22:31 (PDT)
+Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
 > *Remark*. Probability and statistics describe events, outcomes, and parameters as sets. This page collects the definitions of sets that the Morrison Lab’s probability and statistics notes build on. The [Functions](functions.llms.md) page defines functions between sets, and the [Expressions and Algorithms](expressions-algorithms.llms.md) page defines the expressions that write functions down and the algorithms that compute them.
-
-## 0.1 Sets
 
 > **NOTE:**
 >
@@ -193,7 +191,7 @@ Last modified: 2026-10-31 15:22:31 (PDT)
 >
 > **Example 11 (Indexed families)** The entries \\x_1, \ldots, x_n\\ of a vector are an indexed family of numbers, with index set \\\\1, \ldots, n\\\\. The functions \\f\_\theta\\, one for each parameter value \\\theta\\ in a parameter set, are an indexed family of functions.
 
-## 0.2 Combining sets
+## 0.1 Combining sets
 
 > **NOTE:**
 >
@@ -327,7 +325,7 @@ Last modified: 2026-10-31 15:22:31 (PDT)
 > - The results of rolling a die twice form \\{\mathopen{}\left\\1, \ldots, 6\right\\\mathclose{}} \times {\mathopen{}\left\\1, \ldots, 6\right\\\mathclose{}}\\, which has \\6 \cdot 6 = 36\\ elements, such as \\(3, 5)\\: a 3 on the first roll and a 5 on the second.
 > - \\\[0, 2\] \times \[0, 3\]\\ is the set of points \\(x, y)\\ in the plane with \\0 \le x \le 2\\ and \\0 \le y \le 3\\: a rectangle of width \\2\\ and height \\3\\.
 
-## 0.3 Extended non-negative real numbers
+## 0.2 Extended non-negative real numbers
 
 > **NOTE:**
 >
@@ -349,7 +347,7 @@ Last modified: 2026-10-31 15:22:31 (PDT)
 >
 > **Example 19 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
 
-## 0.4 Further reading
+## 0.3 Further reading
 
 These books and articles treat sets and the logic behind them in more depth.
 

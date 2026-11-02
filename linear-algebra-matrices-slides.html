@@ -362,14 +362,11 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-31 15:22:31 (PDT)</p>
+  <p class="date">Last modified: 2026-11-01 19:14:07 (PST)</p>
 </section>
 <section class="slide level2">
 
-
-</section>
-<section id="matrices" class="slide level2" data-number="1">
-<h2><span class="header-section-number">1</span> Matrices</h2>
+<p><span id="matrices"></span></p>
 <div id="def-matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Matrix)</strong></span> A <strong>matrix</strong> <span class="citation" data-cites="wikipedia_matrix_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> of dimensions <span class="math inline">\(m \times n\)</span> is a rectangular array of <span class="math inline">\(m \cdot n\)</span> numbers, arranged in <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns:</p>
 <p><span class="math display">\[
@@ -420,7 +417,9 @@ not taken from that page.
 <div id="exm-tensor" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Vectors, matrices and images as tensors)</strong></span> A vector of length <span class="math inline">\(p\)</span> is a tensor of order <span class="math inline">\(1\)</span>, and an <span class="math inline">\(m \times n\)</span> <a href="#/def-matrix">matrix</a> is a tensor of order <span class="math inline">\(2\)</span>. A <span class="math inline">\(28 \times 28\)</span> grayscale image is a matrix: the entry <span class="math inline">\(a_{ij}\)</span> is the brightness of the pixel in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span>. A <span class="math inline">\(28 \times 28\)</span> color image stores three numbers per pixel (red, green, blue), so it is an order-3 tensor with dimensions <span class="math inline">\(28 \times 28 \times 3\)</span>, and <span class="math inline">\(a_{ijc}\)</span> is the value of color channel <span class="math inline">\(c\)</span> at the pixel in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span>. It has <span class="math inline">\(28 \cdot 28 \cdot 3 = 2352\)</span> entries.</p>
 </div>
-<h3 id="sec-matrix-transpose">Matrix transpose</h3>
+</section>
+<section id="sec-matrix-transpose" class="slide level2" data-number="1">
+<h2><span class="header-section-number">1</span> Matrix transpose</h2>
 <div id="def-matrix-transpose" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Matrix transpose)</strong></span> The <strong>transpose</strong> <span class="citation" data-cites="wikipedia_transpose"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span> obtained by swapping the rows and columns of <span class="math inline">\(\mathbf{A}\)</span>:</p>
 <p><span class="math display">\[({\mathbf{A}}^{\top})_{ij} = a_{ji}\]</span></p>
@@ -436,7 +435,9 @@ not taken from that page.
 \]</span></p>
 <p>a <span class="math inline">\(3 \times 2\)</span> matrix. For instance, entry <span class="math inline">\((1, 2)\)</span> of the transpose is <span class="math inline">\(a_{21} = 4\)</span>.</p>
 </div>
-<h3 id="matrix-addition">Matrix addition</h3>
+</section>
+<section id="matrix-addition" class="slide level2" data-number="2">
+<h2><span class="header-section-number">2</span> Matrix addition</h2>
 <div id="def-zero-matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Zero matrix)</strong></span> The <span class="math inline">\(m \times n\)</span> <strong>zero matrix</strong> <span class="citation" data-cites="wikipedia_zero_matrix"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> <span class="math inline">\(\mathbf{0}_{m \times n}\)</span> (or <span class="math inline">\(\mathbf{0}\)</span> when dimensions are clear from context) has all entries equal to zero:</p>
 <p><span class="math display">\[
@@ -512,7 +513,9 @@ not taken from that page.
 <p><span class="theorem-title"><strong>Theorem 4 (Additive inverse)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(-\mathbf{A}\)</span> (defined by <span class="math inline">\((-\mathbf{A})_{ij} = -a_{ij}\)</span>) satisfies:</p>
 <p><span class="math display">\[\mathbf{A} + (-\mathbf{A}) = \mathbf{0}_{m \times n}\]</span></p>
 </div>
-<h3 id="scalar-multiplication">Scalar multiplication</h3>
+</section>
+<section id="scalar-multiplication" class="slide level2" data-number="3">
+<h2><span class="header-section-number">3</span> Scalar multiplication</h2>
 <div id="def-scalar-mult" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Scalar multiplication)</strong></span> The <strong>scalar multiple</strong> <span class="citation" data-cites="wikipedia_scalar_multiplication"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span> of a matrix <span class="math inline">\(\mathbf{A}\)</span> by a scalar <span class="math inline">\(c\)</span> is:</p>
 <p><span class="math display">\[(c\mathbf{A})_{ij} = c \cdot a_{ij}\]</span></p>
@@ -529,7 +532,9 @@ not taken from that page.
 \end{aligned}
 \]</span></p>
 </div>
-<h3 id="matrix-multiplication">Matrix multiplication</h3>
+</section>
+<section id="matrix-multiplication" class="slide level2" data-number="4">
+<h2><span class="header-section-number">4</span> Matrix multiplication</h2>
 <div id="def-matrix-mult" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Matrix multiplication)</strong></span> The <strong>product</strong> <span class="citation" data-cites="wikipedia_matrix_multiplication"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> of an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> is the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{C} = \mathbf{A}\mathbf{B}\)</span> with entries:</p>
 <p><span class="math display">\[c_{ij} = \sum_{s=1}^{k} a_{is}\, b_{sj}\]</span></p>
@@ -682,7 +687,9 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 </ol>
 <p>The last two use the same two vectors and differ only in order, and they return objects of different kinds. Reading a transpose as decoration rather than as a shape change is the commonest way to lose track of an expression.</p>
 </div>
-<h3 id="square-and-identity-matrices">Square and identity matrices</h3>
+</section>
+<section id="square-and-identity-matrices" class="slide level2" data-number="5">
+<h2><span class="header-section-number">5</span> Square and identity matrices</h2>
 <div id="def-square-matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8 (Square matrix)</strong></span> A matrix is <strong>square</strong> <span class="citation" data-cites="wikipedia_square_matrix"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> if it has the same number of rows as columns.</p>
 </div>
@@ -761,7 +768,9 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <p><span class="math display">\[\mathbf{A}\,\mathbf{I}_p = \mathbf{A}\]</span></p>
 <p><span class="math display">\[\mathbf{I}_m\,\mathbf{A} = \mathbf{A}\]</span></p>
 </div>
-<h3 id="matrix-vector-multiplication">Matrix-vector multiplication</h3>
+</section>
+<section id="matrix-vector-multiplication" class="slide level2" data-number="6">
+<h2><span class="header-section-number">6</span> Matrix-vector multiplication</h2>
 <div id="def-matvec-mult" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 13 (Matrix-vector multiplication)</strong></span> The <strong>matrix-vector product</strong> of an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(p \times 1\)</span> column vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the <span class="math inline">\(m \times 1\)</span> column vector <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with entries:</p>
 <p><span class="math display">\[(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_i = \sum_{j=1}^pa_{ij}\, x_j\]</span></p>
@@ -789,7 +798,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <p><span class="theorem-title"><strong>Definition 14 (Linear system, system of linear equations)</strong></span> A <strong>linear system</strong> <span class="citation" data-cites="wikipedia_system_of_linear_equations"><a href="#/references" role="doc-biblioref" onclick="">[11]</a></span> (or <strong>system of linear equations</strong>) with <span class="math inline">\(m\)</span> equations in <span class="math inline">\(n\)</span> unknowns is an equation <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> in which the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span> are given. A <strong>solution</strong> of the system is a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^n\)</span> for which <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> holds.</p>
 </div>
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="exm-linear-system" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (Two equations in two unknowns)</strong></span> By <a href="#/def-matvec-mult" class="quarto-xref">Definition&nbsp;13</a>, row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is the equation <span class="math inline">\(a_{i1} x_1 + \cdots + a_{in} x_n = b_i\)</span>. So the two equations <span class="math inline">\(x_1 + 2 x_2 = 5\)</span> and <span class="math inline">\(3 x_1 + 4 x_2 = 6\)</span> form the linear system <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 5 \\ 6 \end{bmatrix}\)</span>. The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (-4, 4.5)\)</span> is a solution:</p>
@@ -809,7 +818,9 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 \]</span></p>
 <p>The vector <span class="math inline">\((1, 2)\)</span> is not a solution: its first equation holds, since <span class="math inline">\(1 + 2 \cdot 2 = 5\)</span>, but its second gives <span class="math inline">\(3 \cdot 1 + 4 \cdot 2 = 11 \ne 6\)</span>.</p>
 </div>
-<h3 id="linear-and-affine-maps">Linear and affine maps</h3>
+</section>
+<section id="linear-and-affine-maps" class="slide level2 scrollable" data-number="7">
+<h2><span class="header-section-number">7</span> Linear and affine maps</h2>
 <div id="def-linear-map" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Linear map, linear transformation, linear function)</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> <span class="citation" data-cites="wikipedia_linear_map"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it preserves vector addition and scalar multiplication: for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
 <ol type="1">
@@ -1574,7 +1585,9 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </ol>
 <p>Items 1, 2 and 5 are affine and items 3 and 4 are not, which is the split that matters: a <em>model</em> can be affine in its weights while the <em>quantity we minimize</em> is not. Squared error and the norm penalty are both curved in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, and that curvature is what makes fitting an optimization problem at all: there is always a downhill direction to follow. Curvature alone does not promise a <em>single</em> answer. The squared error of one observation is completely flat along a whole line of weight vectors, every one of which fits that observation exactly, and pinning down one of them is part of what the norm penalty is added for in week 3.</p>
 </div>
-<h3 id="transposes-of-sums-and-products">Transposes of sums and products</h3>
+</section>
+<section id="transposes-of-sums-and-products" class="slide level2" data-number="8">
+<h2><span class="header-section-number">8</span> Transposes of sums and products</h2>
 <!-- heading shares the slide; do not re-flag -->
 <div id="thm-transpose-sum" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 16 (Transpose of a sum)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>

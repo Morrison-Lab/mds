@@ -4,13 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-10-31 15:22:31 (PDT)
+Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
 > *Remark*. Random variables, densities, and measures are functions. This page collects the definitions of functions, sequences, and countable sets that the Morrison Lab’s probability and statistics notes build on. The functions here go between the sets defined on the [Sets](sets.llms.md) page.
-
-## 0.1 Functions
 
 > **NOTE:**
 >
@@ -730,7 +728,7 @@ Last modified: 2026-10-31 15:22:31 (PDT)
 >
 > Figure 9: The [logistic function](#def-logistic-function) for \\\eta\\ from \\-6\\ to \\6\\. Its [values](#def-value) lie strictly between \\0\\ and \\1\\, and the marked points are the values at \\\eta= -2\\, \\0\\ and \\2\\ from [Example 16](#exm-logistic-function).
 
-## 0.2 Countable sets
+## 0.1 Countable sets
 
 > **NOTE:**
 >

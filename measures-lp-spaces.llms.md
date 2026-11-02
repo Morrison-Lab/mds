@@ -4,9 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-31 15:22:31 (PDT)
-
-## 0.1 \\L^p\\ spaces
+Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
@@ -135,13 +133,13 @@ Last modified: 2026-10-31 15:22:31 (PDT)
 >     ax.set_title(title)
 >     ax.set_xlabel("x")
 >     ax.set_ylim(0, 10)
-> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f5dc77c2490>
-> #> [<matplotlib.lines.Line2D object at 0x7f5dc77c25d0>]
+> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f9ccdf59a90>
+> #> [<matplotlib.lines.Line2D object at 0x7f9ccdf59bd0>]
 > #> Text(0.5, 1.0, 'p = 1: area = 2')
 > #> Text(0.5, 0, 'x')
 > #> (0.0, 10.0)
-> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f5dc77c2710>
-> #> [<matplotlib.lines.Line2D object at 0x7f5dc77c2850>]
+> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f9ccdf59d10>
+> #> [<matplotlib.lines.Line2D object at 0x7f9ccdf59e50>]
 > #> Text(0.5, 1.0, 'p = 2: area = infinity')
 > #> Text(0.5, 0, 'x')
 > #> (0.0, 10.0)

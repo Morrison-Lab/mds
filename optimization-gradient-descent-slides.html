@@ -356,9 +356,8 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-31 15:22:31 (PDT)</p>
-</section><section class="slide level2"></section><section id="sec-gradient-descent" class="slide level2" data-number="1"><h2>
-<span class="header-section-number">1</span> Gradient descent</h2>
+  <p class="date">Last modified: 2026-11-01 19:14:07 (PST)</p>
+</section><section class="slide level2"><p><span id="sec-gradient-descent"></span></p>
 <div id="def-gradient-descent" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Gradient descent)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span> be a starting point, and let <span class="math inline">\(s^{(0)}, s^{(1)}, \ldots\)</span> be positive <strong>step lengths</strong>. <strong>Gradient descent</strong> <span class="citation" data-cites="wikipedia_gradient_descent"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>,</p>
 <p><span class="math display">\[
@@ -910,7 +909,7 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb13-7"><a aria-label="7"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb13-8"><a aria-label="8"></a>grid_bf <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.6</span>, <span class="fl">1.6</span>, <span class="dv">321</span>)</span>
 <span id="cb13-9"><a aria-label="9"></a>ax.plot(grid_bf, basin_cost_bf(grid_bf), color<span class="op">=</span><span class="st">"grey"</span>)</span>
-<span id="cb13-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe9028050&gt;]</span></span>
+<span id="cb13-10"><a aria-label="10"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f112a8bf890&gt;]</span></span>
 <span id="cb13-11"><a aria-label="11"></a><span class="cf">for</span> start <span class="kw">in</span> <span class="bu">sorted</span>(basin_starts_bs[:<span class="dv">6</span>], reverse<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb13-12"><a aria-label="12"></a>    x <span class="op">=</span> [start]</span>
 <span id="cb13-13"><a aria-label="13"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">30</span>):</span>
@@ -922,18 +921,18 @@ Figure&nbsp;1: <a href="./vector-calculus.html#def-level-curve">Level curves</a>
 <span id="cb13-19"><a aria-label="19"></a>            marker<span class="op">=</span><span class="st">"o"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"^"</span>,</span>
 <span id="cb13-20"><a aria-label="20"></a>            label<span class="op">=</span>(<span class="st">"start above 0"</span> <span class="cf">if</span> above <span class="cf">else</span> <span class="st">"start below 0"</span>)</span>
 <span id="cb13-21"><a aria-label="21"></a>            <span class="cf">if</span> <span class="bu">abs</span>(start) <span class="op">==</span> <span class="fl">0.1</span> <span class="cf">else</span> <span class="va">None</span>)</span>
-<span id="cb13-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe9028190&gt;]</span></span>
-<span id="cb13-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe90282d0&gt;]</span></span>
-<span id="cb13-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe9028410&gt;]</span></span>
-<span id="cb13-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe9028550&gt;]</span></span>
-<span id="cb13-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe9028690&gt;]</span></span>
-<span id="cb13-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe90287d0&gt;]</span></span>
+<span id="cb13-22"><a aria-label="22"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f112a8bf9d0&gt;]</span></span>
+<span id="cb13-23"><a aria-label="23"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f112a8bfb10&gt;]</span></span>
+<span id="cb13-24"><a aria-label="24"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f112a8bfc50&gt;]</span></span>
+<span id="cb13-25"><a aria-label="25"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f112a8bfd90&gt;]</span></span>
+<span id="cb13-26"><a aria-label="26"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f112a8bfed0&gt;]</span></span>
+<span id="cb13-27"><a aria-label="27"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f112a8e4050&gt;]</span></span>
 <span id="cb13-28"><a aria-label="28"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb13-29"><a aria-label="29"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
 <span id="cb13-30"><a aria-label="30"></a>ax.set_ylabel(<span class="st">"f(x)"</span>)</span>
 <span id="cb13-31"><a aria-label="31"></a><span class="co">#&gt; Text(0, 0.5, 'f(x)')</span></span>
 <span id="cb13-32"><a aria-label="32"></a>fig.legend(loc<span class="op">=</span><span class="st">"outside lower center"</span>, ncol<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb13-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7f7fe9028910&gt;</span></span>
+<span id="cb13-33"><a aria-label="33"></a><span class="co">#&gt; &lt;matplotlib.legend.Legend object at 0x7f112a8e4190&gt;</span></span>
 <span id="cb13-34"><a aria-label="34"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-basin-of-attraction" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-basin-of-attraction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1044,10 +1043,10 @@ function or its scalar variable, and the basin example writes f(x) the same way.
 <span id="cb15-5"><a aria-label="5"></a>plateau_marks_pf <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">10</span>])</span>
 <span id="cb15-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb15-7"><a aria-label="7"></a>ax.plot(plateau_grid_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_grid_pf)), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
-<span id="cb15-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe8c3d090&gt;]</span></span>
+<span id="cb15-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f112871c910&gt;]</span></span>
 <span id="cb15-9"><a aria-label="9"></a>ax.plot(plateau_marks_pf, <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(plateau_marks_pf)),</span>
 <span id="cb15-10"><a aria-label="10"></a>        color<span class="op">=</span><span class="st">"#D55E00"</span>, marker<span class="op">=</span><span class="st">"^"</span>, markersize<span class="op">=</span><span class="dv">8</span>, linestyle<span class="op">=</span><span class="st">""</span>)</span>
-<span id="cb15-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe8c3d1d0&gt;]</span></span>
+<span id="cb15-11"><a aria-label="11"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f112871ca50&gt;]</span></span>
 <span id="cb15-12"><a aria-label="12"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
 <span id="cb15-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
 <span id="cb15-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'x')</span></span>
@@ -1238,11 +1237,11 @@ s&amp;= \frac{2}{\lambda_{\min} + \lambda_{\max}} = s^*.
 <span id="cb17-5"><a aria-label="5"></a>bcs_rho_pf <span class="op">=</span> np.maximum(np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> <span class="dv">3</span> <span class="op">*</span> bcs_grid_pf), np.<span class="bu">abs</span>(<span class="dv">1</span> <span class="op">-</span> bcs_grid_pf))</span>
 <span id="cb17-6"><a aria-label="6"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
 <span id="cb17-7"><a aria-label="7"></a>ax.plot(bcs_grid_pf, bcs_rho_pf, color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
-<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f7fe8ab9310&gt;]</span></span>
+<span id="cb17-8"><a aria-label="8"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f11287e3ed0&gt;]</span></span>
 <span id="cb17-9"><a aria-label="9"></a>ax.axhline(<span class="dv">1</span>, color<span class="op">=</span><span class="st">"black"</span>, linestyle<span class="op">=</span><span class="st">":"</span>)</span>
-<span id="cb17-10"><a aria-label="10"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f7fe8ab9450&gt;</span></span>
+<span id="cb17-10"><a aria-label="10"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f112851c050&gt;</span></span>
 <span id="cb17-11"><a aria-label="11"></a>ax.axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
-<span id="cb17-12"><a aria-label="12"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f7fe8ab9590&gt;</span></span>
+<span id="cb17-12"><a aria-label="12"></a><span class="co">#&gt; &lt;matplotlib.lines.Line2D object at 0x7f112851c190&gt;</span></span>
 <span id="cb17-13"><a aria-label="13"></a>ax.set_xlabel(<span class="st">"Step length"</span>)</span>
 <span id="cb17-14"><a aria-label="14"></a><span class="co">#&gt; Text(0.5, 0, 'Step length')</span></span>
 <span id="cb17-15"><a aria-label="15"></a>ax.set_ylabel(<span class="st">"Error factor"</span>)</span>

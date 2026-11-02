@@ -4,9 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-31 15:22:31 (PDT)
-
-## 0.1 Vectors
+Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
@@ -187,7 +185,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Proof*. \\ \begin{aligned} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}} &= \sum\_{i=1}^px_i y_i && \text{(definition of the dot product)} \\ &= \sum\_{i=1}^py_i x_i && \text{(products of numbers are symmetric)} \\ &= \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\cdot \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{x}}\vphantom{x}} && \text{(definition of the dot product)} \end{aligned} \\
 
-### 0.1.1 Special vectors
+## 0.1 Special vectors
 
 > **NOTE:**
 >
@@ -293,7 +291,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Example 13 (Expanding a vector in indicator vectors)** \\ \begin{aligned} \begin{bmatrix}4 \\ -1 \\ 2\end{bmatrix} &= 4 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + (-1) \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 2 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \\ &= 4 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_1 - \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_2 + 2 \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{e}}\vphantom{e}}\_3 \end{aligned} \\
 
-### 0.1.2 Orthogonality
+## 0.2 Orthogonality
 
 > **NOTE:**
 >
