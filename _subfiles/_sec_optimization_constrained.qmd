@@ -46,6 +46,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-qp-equality-fails.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-sensitivity.qmd >}}
 
 {{< slidebreak >}}
