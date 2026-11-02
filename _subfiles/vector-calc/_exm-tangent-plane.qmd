@@ -1,0 +1,37 @@
+:::{#exm-tangent-plane}
+#### A tangent line and a tangent plane
+
+- For $f(x) = x^2$ at $y = 1$, $f(1) = 1$ and $f'(1) = 2$, so the tangent line is
+
+  $$
+  \ba
+  s
+  &= 1 + 2\,(x - 1)
+  && \text{(substitute } f(1) \text{ and } f'(1) \text{)}
+  \\
+  &= 1 + 2x - 2
+  && \text{(distribute)}
+  \\
+  &= 2x - 1.
+  && \text{(} 1 - 2 = -1 \text{)}
+  \ea
+  $$
+
+- For $f(\vx) = x_1^2 + x_2^2$ at $\vy = \tp{(1, 1)}$,
+  $f(\vy) = 2$ and the gradient is $\tp{(2 y_1,\ 2 y_2)} = \tp{(2, 2)}$, so the tangent plane is
+
+  $$
+  \ba
+  s
+  &= 2 + 2\,(x_1 - 1) + 2\,(x_2 - 1)
+  && \text{(substitute } f(\vy) \text{ and the gradient)}
+  \\
+  &= 2 + 2 x_1 - 2 + 2 x_2 - 2
+  && \text{(distribute)}
+  \\
+  &= 2 x_1 + 2 x_2 - 2.
+  && \text{(} 2 - 2 - 2 = -2 \text{)}
+  \ea
+  $$
+
+:::

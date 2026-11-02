@@ -1,0 +1,8 @@
+:::{#exm-not-convex-set}
+#### A set that is not convex
+
+$K = \cb{x \in \reals : \abs{x} \ge 1}$ is not convex:
+$-1$ and $1$ are in $K$,
+but with $t = \tfrac{1}{2}$ the point $\tfrac{1}{2}(-1) + \tfrac{1}{2}(1) = 0$ is not.
+
+:::
