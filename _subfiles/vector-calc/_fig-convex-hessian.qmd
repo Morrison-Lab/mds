@@ -19,7 +19,9 @@ ch_x2_ch <- seq(-3, 3, length.out = 101)
 ch_grid_ch <- tidyr::expand_grid(x1 = ch_x1_ch, x2 = ch_x2_ch)
 ch_u_ch <- 2 * ch_grid_ch$x1 + ch_grid_ch$x2
 ch_grid_ch$z <- exp(ch_u_ch) - ch_grid_ch$x1
-ch_line_ch <- tibble::tibble(x1 = c(-1, 1), x2 = c(2, -2))
+ch_line_x1_ch <- c(-1, 1)
+ch_line_x2_ch <- c(2, -2)
+ch_line_ch <- tibble::tibble(x1 = ch_line_x1_ch, x2 = ch_line_x2_ch)
 ch_aes_ch <- ggplot2::aes(x1, x2)
 ch_z_aes_ch <- ggplot2::aes(z = z)
 ggplot2::ggplot(ch_grid_ch, ch_aes_ch) +
