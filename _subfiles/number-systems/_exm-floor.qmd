@@ -9,7 +9,7 @@
 
 The [graph](functions.qmd#def-graph) of $\floor{x}$ is a staircase:
 each step starts at an integer, with a filled dot,
-and stops just short of the next integer, at an open dot.
+and stops before the next integer, at an open dot.
 
 ```{r}
 #| code-fold: true
@@ -19,7 +19,7 @@ and stops just short of the next integer, at an open dot.
 #| fig-alt: >-
 #|   The graph of the floor function from -3 to 3. It is a staircase of
 #|   horizontal steps one unit long. Each step starts with a filled dot at an
-#|   integer k at height k and ends with an open dot just before k + 1.
+#|   integer k at height k and ends with an open dot at k + 1.
 
 # one step per integer k, from x = k to x = k + 1 at height k
 k <- -3:2
