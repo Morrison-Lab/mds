@@ -2,7 +2,7 @@
 #### Second-order Taylor theorem in several variables
 
 Let $f : \reals^p \to \reals$ have first and second partial derivatives
-that are [continuous](vector-calculus.qmd#def-continuous-on) on $\reals^p$,
+that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$,
 and let $\vecf{z}, \vecf{h} \in \reals^p$.
 Then there is a $\midpt \in (0, 1)$ with
 [@wikipedia_taylors_theorem]
