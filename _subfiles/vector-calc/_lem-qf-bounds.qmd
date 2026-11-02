@@ -12,7 +12,7 @@ Then $\tp{\vecf{h}} \matr{A} \vecf{h} \ge \eigval_{\min}\,\norm{\vecf{h}}^2$ for
 By the [spectral theorem](linear-algebra.qmd#thm-spectral),
 write $\matr{A} = \matr{Q} \matr{\Eigvals} \tp{\matr{Q}}$ with $\matr{Q}$ an [orthogonal matrix](linear-algebra.qmd#def-orthogonal-matrix)
 and $\matr{\Eigvals} = \diag(\eigval_1, \ldots, \eigval_p)$,
-and let $\vecf{y} \eqdef \tp{\matr{Q}} \vecf{h}$.
+and let $\vecf{y} = \tp{\matr{Q}} \vecf{h}$.
 Then
 
 $$
