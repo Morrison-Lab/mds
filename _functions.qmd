@@ -9,7 +9,7 @@ The functions here go between the sets defined on the [Sets](sets.qmd) page.
 
 :::
 
-## Functions
+[]{#functions}
 
 {{< include mds/_subfiles/functions/_def-function.qmd >}}
 
