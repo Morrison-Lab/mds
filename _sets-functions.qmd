@@ -5,7 +5,11 @@ introduction, so in a host page each introduction follows the previous fragment'
 section and links to pages (sets.qmd and the others) that the host may not have. No host
 site includes this shim today; new host pages should include the three fragments directly. -->
 
+## Sets
+
 {{< include mds/_sets.qmd >}}
+
+## Functions
 
 {{< include mds/_functions.qmd >}}
 

@@ -26,6 +26,9 @@ function Pandoc(doc)
       blocks:insert(block)
     end
   end
+  if not dropped then
+    io.stderr:write("split-page-headings.lua: no level 2 heading matches the title '" .. title .. "'\n")
+  end
   doc.blocks = blocks
   return doc
 end
