@@ -22,11 +22,35 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-lagrange-multipliers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-lagrangian.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-qp-equality.qmd >}}
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-qp-equality.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-lagrange-line.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-qp-equality-fails.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-sensitivity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-sensitivity.qmd >}}
 
 {{< slidebreak >}}
 

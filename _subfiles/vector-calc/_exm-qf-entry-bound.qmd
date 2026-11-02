@@ -1,0 +1,27 @@
+:::{#exm-qf-entry-bound}
+#### Checking the bound
+
+Let $\matr{E} = \sbmat{ 0.1 & -0.2 \\ -0.2 & 0.1 }$,
+so $m = 0.2$ works.
+Let $\vecf{h} = \tp{(1, 1)}$,
+so $\norm{\vecf{h}}^2 = 2$.
+Then
+
+$$
+\begin{aligned}
+\tp{\vecf{h}} \matr{E} \vecf{h} &= 0.1 - 0.2 - 0.2 + 0.1 \\
+&= -0.2,
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\abs{-0.2} &= 0.2 \\
+&\le 2 \cdot 0.2 \cdot 2 \\
+&= 0.8.
+\end{aligned}
+$$
+
+:::

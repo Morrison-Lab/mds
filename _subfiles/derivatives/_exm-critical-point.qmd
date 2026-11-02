@@ -2,13 +2,11 @@
 #### Critical points that are and are not flat points
 
 - $g(w) = \abs{w}$ has no derivative at $w = 0$:
-  its [one-sided derivatives](calculus.qmd#def-one-sided-derivative) there are $1$ and $-1$
-  ([worked example](calculus.qmd#exm-one-sided-derivative)).
+  its [one-sided derivatives](calculus.qmd#def-one-sided-derivative) there are $1$ and $-1$ (see the [one-sided derivative example](calculus.qmd#exm-one-sided-derivative)).
   So the [difference quotient](calculus.qmd#def-difference-quotient)
   $\tfrac{\abs{h} - 0}{h}$
   has no [limit](calculus.qmd#def-limit) as $h \to 0$,
-  because the limits from the left and from the right
-  ([one-sided limits](calculus.qmd#def-one-sided-limit)) differ.
+  because the [one-sided limits](calculus.qmd#def-one-sided-limit) from the left and from the right differ.
   So $0$ is a critical point of $g$ but not a flat point.
 - $f(w) = w^3$ has
 

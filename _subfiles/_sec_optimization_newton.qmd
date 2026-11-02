@@ -26,6 +26,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-newton-model.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-newton-model.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-quadratic-convergence.qmd >}}
 
 {{< slidebreak >}}
@@ -34,4 +42,12 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-newton-maximum.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-newton-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-newton-quadratic.qmd >}}
