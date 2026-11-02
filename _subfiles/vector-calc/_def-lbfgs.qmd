@@ -25,7 +25,7 @@ Below, $\matr{H}^+ \deriv{\vx} f(\vx^{(1)})$ is formed from vectors alone, start
 ```{r}
 #| label: lbfgs-step
 #| code-fold: false
-g1 <- grad(x1)
+g1 <- grad1
 alpha <- rho * sum(s * g1)
 q <- g1 - alpha * y
 r <- drop(H0 %*% q)
