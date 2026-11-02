@@ -8,7 +8,8 @@ Then $\abs{\tp{\vecf{h}} \matr{E} \vecf{h}} \le p\,m\,\norm{\vecf{h}}^2$ for eve
 
 ::: proof
 
-Let $\vecf{a} \eqdef \tp{(\abs{h_1}, \ldots, \abs{h_p})}$ and $\vecf{1} \eqdef \tp{(1, \ldots, 1)}$, both in $\reals^p$. Then
+Let $\vecf{a} = \tp{(\abs{h_1}, \ldots, \abs{h_p})}$ and $\vecf{1} = \tp{(1, \ldots, 1)}$, both in $\reals^p$.
+Then
 
 $$
 \ba

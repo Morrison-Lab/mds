@@ -18,7 +18,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-descent-directions.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-descent-direction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-descent-direction.qmd >}}
 
 {{< slidebreak >}}
 
