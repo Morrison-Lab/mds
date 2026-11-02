@@ -2,11 +2,22 @@
 #### The logarithm to base $b$ through the natural logarithm
 
 For each $x > 0$, exactly one $y$ satisfies @def-logarithm,
-namely $y = \frac{\logf{x}}{\logf{b}}$.
-By @def-real-power, $b^y = \expf{y \cd \logf{b}}$.
-By @thm-exp-log-inverse, $\expf{y \cd \logf{b}} = x$
-holds exactly when $y \cd \logf{b} = \logf{x}$.
-Since $b \ne 1$, $\logf{b} \ne 0$,
-so we can divide by it.
+and
+$$\log_b x = \frac{\logf{x}}{\logf{b}}.$$
+
+To see why,
+note that by @def-real-power, $b^y = \expf{y \cd \logf{b}}$,
+so we need $\expf{y \cd \logf{b}} = x$.
+If $y \cd \logf{b} = \logf{x}$,
+then $\expf{y \cd \logf{b}} = \expf{\logf{x}} = x$,
+by part 1 of @thm-exp-log-inverse.
+Conversely, if $\expf{y \cd \logf{b}} = x$,
+then applying $\logt$ to both sides gives
+$y \cd \logf{b} = \logf{x}$,
+by part 2 of @thm-exp-log-inverse.
+Since $b \ne 1$,
+$\logf{b} \ne 0$,
+so we can divide by it,
+and $y = \frac{\logf{x}}{\logf{b}}$ is the only solution.
 
 :::

@@ -168,10 +168,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/algebra/_rem-logarithm-formula.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/algebra/_def-power-nonpositive-base.qmd >}}
 
 {{< slidebreak >}}
@@ -181,6 +177,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-exp-log-inverse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-logarithm-formula.qmd >}}
 
 {{< slidebreak >}}
 
