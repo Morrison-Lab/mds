@@ -7,11 +7,8 @@ and measure with the real numbers.
 This page defines those number systems.
 It also defines the words that sort their members:
 even and odd integers, and rational and irrational real numbers.
-Finally, it defines these:
-
-- divisibility, [primes](#def-prime) and congruence;
-- the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative-integers);
-- the [floor](#def-floor) of a [real number](#def-real-numbers).
+Finally, it defines divisibility, [primes](#def-prime) and congruence,
+and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative-integers).
 
 :::
 
@@ -102,14 +99,6 @@ Finally, it defines these:
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/number-systems/_exm-real-numbers.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/number-systems/_def-floor.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/number-systems/_exm-floor.qmd >}}
 
 {{< slidebreak >}}
 
