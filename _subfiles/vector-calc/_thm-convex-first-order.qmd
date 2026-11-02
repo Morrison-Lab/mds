@@ -103,26 +103,3 @@ then:
   and $f$ is strictly convex.
 
 :::
-
-{{< slidebreak >}}
-
-:::{#exm-convex-first-order}
-#### Tangent lines under a parabola
-
-For $f(x) = x^2$, the right side of @eq-supporting-hyperplane is
-$y^2 + 2y (x - y) = 2xy - y^2$, and
-
-$$
-\begin{aligned}
-f(x) - (2xy - y^2)
-&= x^2 - 2xy + y^2 \\
-&= (x - y)^2 \\
-&\ge 0,
-\end{aligned}
-$$
-
-with equality only at $x = y$, confirming that $x^2$ is strictly convex.
-For $g(x) = -x^2$ the inequality fails:
-at $y = 0$ the tangent line is $s = 0$, and $g(1) = -1 < 0$.
-
-:::
