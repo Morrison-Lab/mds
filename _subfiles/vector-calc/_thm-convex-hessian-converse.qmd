@@ -2,7 +2,7 @@
 #### A convex function has a positive semidefinite Hessian
 
 Let $f : \reals^p \to \reals$ have first and [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative)
-that are [continuous](vector-calculus.qmd#def-continuous-on) on $\reals^p$.
+that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$.
 If $f$ is [convex](algebra-sums.qmd#def-convex-function),
 then the Hessian $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite) for every $\vx \in \reals^p$.
 
