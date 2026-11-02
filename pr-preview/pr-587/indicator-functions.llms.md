@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:47:11 (PST)
+Last modified: 2026-11-02 14:31:03 (PST)
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:
 
@@ -70,7 +70,7 @@ The vast majority of indicator notations belong to one of two families: set nota
 >
 > **Example 3 (One indicator in both notations)** Let $A = [0, \infty)$, the nonnegative real numbers. The indicator of $A$ is $\mathbb{1}_{A}(x)$ in set notation, and ${\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}$ or ${\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}}$ in predicate notation ([Definition 4](#def-set-predicate-notation), [Definition 5](#def-predicate-notation)). At $x = 3.5$, all three equal $1$; at $x = -2.1$, all three equal $0$.
 
-### 1.0.1 Set notation
+## 1.1 Set notation
 
 In set notation, the indicator is tied to a set $A$, which appears as a subscript:
 
@@ -82,7 +82,7 @@ In set notation, the indicator is tied to a set $A$, which appears as a subscrip
 
 When the function is viewed as a mathematical object in its own right (for instance, as an element of an $L^p$ function space, the set of functions $f$ for which $\int \mathopen{}\left|f(x)\right|\mathclose{}^p \, dx$ is finite), authors often omit the argument $x$, writing simply $\mathbf{1}_A$, $\mathbb{1}_{A}$, or $I_A$.
 
-### 1.0.2 Predicate notation
+## 1.2 Predicate notation
 
 In predicate notation, the indicator takes a logical condition, relation, or proposition $P$ directly as its argument or subscript:
 
@@ -94,7 +94,7 @@ In predicate notation, the indicator takes a logical condition, relation, or pro
 
 Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities ([definition](proof-writing.llms.md#def-inequality)) involving random variables, such as ${\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}}$ (an event occurring before time $t$) or ${\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}}$ (a binary outcome).
 
-### 1.0.3 Equivalence between paradigms
+## 1.3 Equivalence between paradigms
 
 The two paradigms are connected by evaluating the predicate indicator at the membership statement $x \in A$:
 
