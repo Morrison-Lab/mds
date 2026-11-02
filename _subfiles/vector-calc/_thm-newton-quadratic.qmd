@@ -12,7 +12,8 @@ the unique minimizer of $f$.
 ::: proof
 
 Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives,
-so by [derivative of a quadratic form](vector-calculus.qmd#cor-quadratic-form-symmetric) for $\tfrac{1}{2}\,\qform{\matr{S}}{\vx}$ and [derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) for $\dprod{\vecf{c}}{\vx}$,
+so the [derivative of a quadratic form](vector-calculus.qmd#cor-quadratic-form-symmetric) applies to $\tfrac{1}{2}\,\qform{\matr{S}}{\vx}$
+and the [derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) to $\dprod{\vecf{c}}{\vx}$:
 
 $$
 \begin{aligned}
@@ -21,10 +22,10 @@ $$
 \end{aligned}
 $$
 
-by [Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic) with $\tfrac{1}{2} \matr{S}$ in place of $\matr{S}$,
-and because the gradient $-\vecf{c}$ of the linear term is constant ([constant with respect to a vector](vector-calculus.qmd#def-constant-wrt-vector)),
+by the [Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic) with $\tfrac{1}{2} \matr{S}$ in place of $\matr{S}$,
+and because the gradient $-\vecf{c}$ of the linear term is [constant](vector-calculus.qmd#def-constant-wrt-vector),
 $\matr{H}_f(\vx) = \matr{S}$,
-which is invertible ([positive definite inverse](linear-algebra.qmd#thm-pd-inverse)).
+which is [invertible](linear-algebra.qmd#thm-pd-inverse).
 So
 
 $$

@@ -26,7 +26,7 @@ and every iterate from $2.5$ is at least $2$, since the identity makes $x^{(t+1)
 @zhou2024optim states such a bound for Newton's method in general;
 it holds from starting points close enough to a minimizer where the Hessian is positive definite,
 when near that minimizer the Hessian changes by at most a constant times the distance moved,
-which these notes do not prove.
+which is not proved here.
 
 :::
 

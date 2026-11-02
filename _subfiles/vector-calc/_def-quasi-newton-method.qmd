@@ -51,7 +51,8 @@ y <- grad(x1) - grad(x0)
 
 The step length is `{r} step`, which moves the [iterate](#def-iterate) to $\vx^{(1)} = (`{r} x1[1]`, `{r} x1[2]`)$
 and lowers $f$ from `{r} f(x0)` to `{r} f(x1)`.
-The difference of the [gradients](vector-calculus.qmd#def-vector-derivative), $\vy^{(0)} = (`{r} y[1]`, `{r} y[2]`)$, is $\matr{Q} \vecf{s}^{(0)}$ ([the secant condition](#def-secant-condition) for a quadratic function).
+The difference of the [gradients](vector-calculus.qmd#def-vector-derivative), $\vy^{(0)} = (`{r} y[1]`, `{r} y[2]`)$, is $\matr{Q} \vecf{s}^{(0)}$,
+which is the [secant condition](#def-secant-condition) for a quadratic function.
 
 :::
 

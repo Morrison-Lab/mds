@@ -10,7 +10,7 @@ Its unique minimizer is the Newton step $\stepvec^* = -\matr{H}^{-1} \vecf{g}$.
 ::: proof
 
 $\matr{H}$ is symmetric, by the definition of [positive definite](linear-algebra.qmd#def-positive-definite),
-and invertible ([positive definite inverse](linear-algebra.qmd#thm-pd-inverse)),
+and [invertible](linear-algebra.qmd#thm-pd-inverse),
 so $\stepvec^*$ exists and $\matr{H} \stepvec^* = -\vecf{g}$.
 For any $\vecf{d} \in \reals^p$, first
 
