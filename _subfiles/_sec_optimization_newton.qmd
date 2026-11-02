@@ -26,6 +26,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-newton-model.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-quadratic-convergence.qmd >}}
 
 {{< slidebreak >}}

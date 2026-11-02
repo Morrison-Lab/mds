@@ -1,0 +1,84 @@
+::: {#fig-lagrange-line}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: lagrange-line-r
+#| fig-alt: >-
+#|   Plot over the plane of concentric circles centered at the origin, in
+#|   grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2
+#|   equals 5 running from upper left to lower right. The line touches the
+#|   circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle,
+#|   and stays outside the circle everywhere else. A vermilion arrow from the
+#|   origin to that point is perpendicular to the line.
+#| fig-height: 4
+#| fig-width: 5
+ll_theta_ll <- seq(0, 2 * pi, length.out = 201)
+ll_circles_ll <- expand.grid(theta = ll_theta_ll, radius = c(0.5, 1, 1.5))
+ll_circles_ll$x1 <- ll_circles_ll$radius * cos(ll_circles_ll$theta)
+ll_circles_ll$x2 <- ll_circles_ll$radius * sin(ll_circles_ll$theta)
+ll_line_ll <- tibble::tibble(x1 = c(-0.5, 2), x2 = (5 - 3 * c(-0.5, 2)) / 4)
+ll_point_ll <- tibble::tibble(x1 = 0.6, x2 = 0.8)
+ggplot2::ggplot() +
+  ggplot2::geom_path(
+    data = ll_circles_ll,
+    ggplot2::aes(x1, x2, group = radius), colour = "grey60"
+  ) +
+  ggplot2::geom_line(
+    data = ll_line_ll, ggplot2::aes(x1, x2), colour = "#0072B2"
+  ) +
+  ggplot2::geom_segment(
+    ggplot2::aes(x = 0, y = 0, xend = 0.6, yend = 0.8),
+    colour = "#D55E00",
+    arrow = grid::arrow(length = grid::unit(0.15, "inches"))
+  ) +
+  ggplot2::geom_point(
+    data = ll_point_ll, ggplot2::aes(x1, x2), colour = "#D55E00", size = 3
+  ) +
+  ggplot2::coord_fixed(xlim = c(-1.6, 2), ylim = c(-1.6, 2)) +
+  ggplot2::labs(x = "x1", y = "x2")
+```
+
+### Python
+
+```{python}
+#| label: lagrange-line-python
+#| fig-alt: >-
+#|   Plot over the plane of concentric circles centered at the origin, in
+#|   grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2
+#|   equals 5 running from upper left to lower right. The line touches the
+#|   circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle,
+#|   and stays outside the circle everywhere else. A vermilion arrow from the
+#|   origin to that point is perpendicular to the line.
+#| fig-height: 4
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+ll_theta_ll = np.linspace(0, 2 * np.pi, 201)
+fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+for ll_radius_ll in (0.5, 1, 1.5):
+    ax.plot(ll_radius_ll * np.cos(ll_theta_ll),
+            ll_radius_ll * np.sin(ll_theta_ll), color="grey")
+ll_x1_ll = np.array([-0.5, 2])
+ax.plot(ll_x1_ll, (5 - 3 * ll_x1_ll) / 4, color="#0072B2")
+ax.annotate("", xy=(0.6, 0.8), xytext=(0, 0),
+            arrowprops={"arrowstyle": "->", "color": "#D55E00"})
+ax.plot(0.6, 0.8, "o", color="#D55E00", markersize=8)
+ax.set_xlim(-1.6, 2)
+ax.set_ylim(-1.6, 2)
+ax.set_aspect("equal")
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+plt.show();
+```
+
+:::
+
+The level curves $x_1^2 + x_2^2 = c$ of the objective (circles) and the constraint line $3 x_1 + 4 x_2 = 5$.
+The line touches the circle $c = 1$ at the minimizer $\tp{(0.6, 0.8)}$ (@exm-qp-equality),
+and the gradient there, the arrow, is perpendicular to the line.
+
+:::

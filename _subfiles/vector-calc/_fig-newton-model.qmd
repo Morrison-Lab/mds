@@ -1,0 +1,85 @@
+::: {#fig-newton-model}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: newton-model-r
+#| fig-alt: >-
+#|   Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5
+#|   to 4, in blue, and its quadratic model at x equal to 2.5 in dashed
+#|   vermilion. The model touches the cubic at 2.5, is a parabola opening
+#|   upward, and has its lowest point at 2.05, marked by a vermilion triangle.
+#|   A vermilion circle marks the starting point 2.5, and a blue square marks
+#|   the minimizer 2 of the cubic.
+#| fig-height: 4
+#| fig-width: 6
+nm_x_fn <- seq(0.5, 4, length.out = 301)
+nm_f_fn <- function(x) x^3 / 3 - 4 * x
+nm_q_fn <- function(x) {
+  nm_f_fn(2.5) + 2.25 * (x - 2.5) + 2.5 * (x - 2.5)^2
+}
+nm_curve_fn <- tibble::tibble(x = nm_x_fn, y = nm_f_fn(nm_x_fn))
+nm_model_fn <- tibble::tibble(x = nm_x_fn, y = nm_q_fn(nm_x_fn))
+nm_start_fn <- tibble::tibble(x = 2.5, y = nm_f_fn(2.5))
+nm_step_fn <- tibble::tibble(x = 2.05, y = nm_q_fn(2.05))
+nm_min_fn <- tibble::tibble(x = 2, y = nm_f_fn(2))
+nm_aes_fn <- ggplot2::aes(x, y)
+ggplot2::ggplot(nm_curve_fn, nm_aes_fn) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_line(
+    data = nm_model_fn, colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::geom_point(data = nm_start_fn, colour = "#D55E00", size = 3) +
+  ggplot2::geom_point(
+    data = nm_step_fn, colour = "#D55E00", size = 3, shape = 17
+  ) +
+  ggplot2::geom_point(
+    data = nm_min_fn, colour = "#0072B2", size = 3, shape = 15
+  ) +
+  ggplot2::coord_cartesian(ylim = c(-8, 0)) +
+  ggplot2::labs(x = "x", y = "value")
+```
+
+### Python
+
+```{python}
+#| label: newton-model-python
+#| fig-alt: >-
+#|   Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5
+#|   to 4, in blue, and its quadratic model at x equal to 2.5 in dashed
+#|   vermilion. The model touches the cubic at 2.5, is a parabola opening
+#|   upward, and has its lowest point at 2.05, marked by a vermilion triangle.
+#|   A vermilion circle marks the starting point 2.5, and a blue square marks
+#|   the minimizer 2 of the cubic.
+#| fig-height: 4
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+nm_x_fn = np.linspace(0.5, 4, 301)
+nm_f_fn = lambda x: x**3 / 3 - 4 * x
+nm_q_fn = lambda x: nm_f_fn(2.5) + 2.25 * (x - 2.5) + 2.5 * (x - 2.5) ** 2
+fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
+ax.plot(nm_x_fn, nm_f_fn(nm_x_fn), color="#0072B2", label="f")
+ax.plot(nm_x_fn, nm_q_fn(nm_x_fn), "--", color="#D55E00",
+        label="quadratic model at 2.5")
+ax.plot(2.5, nm_f_fn(2.5), "o", color="#D55E00", markersize=8)
+ax.plot(2.05, nm_q_fn(2.05), "^", color="#D55E00", markersize=8)
+ax.plot(2, nm_f_fn(2), "s", color="#0072B2", markersize=8)
+ax.set_ylim(-8, 0)
+ax.set_xlabel("x")
+ax.set_ylabel("value")
+ax.legend(loc="upper center")
+plt.show();
+```
+
+:::
+
+The cubic $f(x) = \tfrac{1}{3} x^3 - 4x$ and its [quadratic model](#def-quadratic-model) at $x = 2.5$.
+The model touches $f$ at $2.5$ (circle),
+and its minimizer $2.05$ (triangle) is the [Newton step](#def-newton-step) taken from $2.5$ (@exm-newton-model).
+It lies close to the minimizer $2$ of $f$ (square).
+
+:::

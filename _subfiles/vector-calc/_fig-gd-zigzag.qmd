@@ -1,0 +1,77 @@
+::: {#fig-gd-zigzag}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: gd-zigzag-r
+#| fig-alt: >-
+#|   Plot over the plane of nested elliptical level curves of f of x equal to
+#|   one half of x1 squared plus 3 x2 squared, in grey, elongated along the
+#|   x1 axis. A blue path of line segments with circles starts at the point
+#|   (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125),
+#|   crossing the x1 axis at every step and closing in on the origin, which is
+#|   marked by a vermilion triangle.
+#| fig-height: 4
+#| fig-width: 6
+gz_grid_gz <- expand.grid(
+  x1 = seq(-0.5, 3.5, length.out = 201),
+  x2 = seq(-1, 1.2, length.out = 201)
+)
+gz_grid_gz$f <- 0.5 * (gz_grid_gz$x1^2 + 3 * gz_grid_gz$x2^2)
+gz_path_gz <- tibble::tibble(
+  x1 = 3 * 0.5^(0:3),
+  x2 = c(1, -0.5, 0.25, -0.125)
+)
+gz_origin_gz <- tibble::tibble(x1 = 0, x2 = 0)
+ggplot2::ggplot(gz_grid_gz, ggplot2::aes(x1, x2)) +
+  ggplot2::geom_contour(
+    ggplot2::aes(z = f), colour = "grey60", breaks = c(0.25, 1, 2.25, 4, 6)
+  ) +
+  ggplot2::geom_path(data = gz_path_gz, colour = "#0072B2") +
+  ggplot2::geom_point(data = gz_path_gz, colour = "#0072B2", size = 3) +
+  ggplot2::geom_point(
+    data = gz_origin_gz, colour = "#D55E00", size = 3, shape = 17
+  ) +
+  ggplot2::labs(x = "x1", y = "x2")
+```
+
+### Python
+
+```{python}
+#| label: gd-zigzag-python
+#| fig-alt: >-
+#|   Plot over the plane of nested elliptical level curves of f of x equal to
+#|   one half of x1 squared plus 3 x2 squared, in grey, elongated along the
+#|   x1 axis. A blue path of line segments with circles starts at the point
+#|   (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125),
+#|   crossing the x1 axis at every step and closing in on the origin, which is
+#|   marked by a vermilion triangle.
+#| fig-height: 4
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+gz_x1_gz, gz_x2_gz = np.meshgrid(np.linspace(-0.5, 3.5, 201),
+                                 np.linspace(-1, 1.2, 201))
+gz_f_gz = 0.5 * (gz_x1_gz**2 + 3 * gz_x2_gz**2)
+gz_path_x1_gz = 3 * 0.5 ** np.arange(4)
+gz_path_x2_gz = np.array([1, -0.5, 0.25, -0.125])
+fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
+ax.contour(gz_x1_gz, gz_x2_gz, gz_f_gz, levels=[0.25, 1, 2.25, 4, 6],
+           colors="grey")
+ax.plot(gz_path_x1_gz, gz_path_x2_gz, "o-", color="#0072B2")
+ax.plot(0, 0, "^", color="#D55E00", markersize=8)
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+plt.show();
+```
+
+:::
+
+The first four iterates of gradient descent with exact line search on $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$ from $\tp{(3, 1)}$ (@exm-gd-zigzag with $b = 3$),
+drawn over the level curves of $f$.
+The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the minimizer $\vzero$ (triangle).
+
+:::
