@@ -54,7 +54,7 @@ plt.show();
 
 :::
 
-The error $x^{(t)} - 2$ of @exm-newton-convergence on a logarithmic scale.
+The [error](#def-iterate-error) $x^{(t)} - 2$ of @exm-newton-convergence on a logarithmic scale.
 Each drop is steeper than the one before,
 because the error is roughly squared at every step,
 which is [quadratic convergence](#def-quadratic-convergence).
