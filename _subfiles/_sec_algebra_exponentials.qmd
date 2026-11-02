@@ -160,6 +160,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-logarithm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-power-nonpositive-base.qmd >}}
 
 {{< slidebreak >}}
