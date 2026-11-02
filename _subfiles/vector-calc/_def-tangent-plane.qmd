@@ -1,7 +1,7 @@
 :::{#def-tangent-plane}
 #### Tangent plane
 
-Let $f : \reals^p \to \reals$ have a gradient at $\vy$ ([gradient](vector-calculus.qmd#def-vector-derivative)).
+Let $f : \reals^p \to \reals$ have a [gradient](vector-calculus.qmd#def-vector-derivative) at $\vy$.
 The **tangent plane**
 [@wikipedia_tangent_space]
 to the [graph](functions.qmd#def-graph) of $f$ at $\vy$
