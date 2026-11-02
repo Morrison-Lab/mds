@@ -1,0 +1,76 @@
+::: {#fig-second-derivative-test-zero}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: second-derivative-test-zero-r
+#| fig-alt: >-
+#|   Three side-by-side plots of a function on x from -1 to 1, each with a
+#|   vermilion circle at the origin. The first, x to the fourth, is a blue
+#|   U-shaped curve with its lowest point at the origin. The second, minus x
+#|   to the fourth, is an upside-down U with its highest point at the origin.
+#|   The third, x cubed, rises steadily from lower left to upper right,
+#|   flattening at the origin without turning.
+#| fig-height: 3
+#| fig-width: 7
+sdz_x_fk <- seq(-1, 1, length.out = 201)
+sdz_labels_fk <- c("x^4", "-x^4", "x^3")
+sdz_values_fk <- c(sdz_x_fk^4, -sdz_x_fk^4, sdz_x_fk^3)
+sdz_n_fk <- length(sdz_x_fk)
+sdz_fn_fk <- rep(sdz_labels_fk, each = sdz_n_fk)
+sdz_fn_fk <- factor(sdz_fn_fk, levels = sdz_labels_fk)
+sdz_x_rep_fk <- rep(sdz_x_fk, 3)
+sdz_curves_fk <- tibble::tibble(
+  x = sdz_x_rep_fk, value = sdz_values_fk, fn = sdz_fn_fk
+)
+sdz_origin_fn_fk <- factor(sdz_labels_fk, levels = sdz_labels_fk)
+sdz_origin_fk <- tibble::tibble(x = 0, value = 0, fn = sdz_origin_fn_fk)
+sdz_aes_fk <- ggplot2::aes(x, value)
+ggplot2::ggplot(sdz_curves_fk, sdz_aes_fk) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(data = sdz_origin_fk, colour = "#D55E00", size = 3) +
+  ggplot2::facet_wrap(ggplot2::vars(fn)) +
+  ggplot2::labs(x = "x", y = "function value")
+```
+
+### Python
+
+```{python}
+#| label: second-derivative-test-zero-python
+#| fig-alt: >-
+#|   Three side-by-side plots of a function on x from -1 to 1, each with a
+#|   vermilion circle at the origin. The first, x to the fourth, is a blue
+#|   U-shaped curve with its lowest point at the origin. The second, minus x
+#|   to the fourth, is an upside-down U with its highest point at the origin.
+#|   The third, x cubed, rises steadily from lower left to upper right,
+#|   flattening at the origin without turning.
+#| fig-height: 3
+#| fig-width: 7
+import matplotlib.pyplot as plt
+import numpy as np
+
+sdz_x_fk = np.linspace(-1, 1, 201)
+sdz_curves_fk = [sdz_x_fk**4, -(sdz_x_fk**4), sdz_x_fk**3]
+sdz_titles_fk = ["$x^4$", "$-x^4$", "$x^3$"]
+fig, axes = plt.subplots(1, 3, figsize=(7, 3), layout="constrained")
+for ax, curve, title in zip(axes, sdz_curves_fk, sdz_titles_fk):
+    ax.plot(sdz_x_fk, curve, color="#0072B2")
+    ax.plot(0, 0, "o", color="#D55E00", markersize=8)
+    ax.set_title(title)
+    ax.set_xlabel("x")
+axes[0].set_ylabel("function value")
+plt.show()
+```
+
+:::
+
+This figure shows the [functions](functions.qmd#def-function) $x^4$, $-x^4$ and $x^3$ of @exm-second-derivative-test-zero.
+All three have a [flat point](#def-flat-point) at $x = 0$ (circles)
+where the [second derivative](calculus-derivatives.qmd#def-second-derivative) is $0$:
+a [local minimizer](algebra.qmd#def-local-minimizer),
+a [local maximizer](#def-local-maximizer),
+and neither.
+
+:::
