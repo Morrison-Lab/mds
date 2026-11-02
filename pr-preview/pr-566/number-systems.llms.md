@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 09:20:39 (PST)
+Last modified: 2026-11-02 10:29:56 (PST)
 
 > **NOTE:**
 >
@@ -155,7 +155,7 @@ Last modified: 2026-11-02 09:20:39 (PST)
 > - $\mathopen{}\left\lfloor 3\right\rfloor\mathclose{} = 3$, because $3$ is already an [integer](#def-integers).
 > - $\mathopen{}\left\lfloor-1.5\right\rfloor\mathclose{} = -2$, because $-2 \le -1.5 < -1$.
 >
-> The [graph](functions.llms.md#def-graph) of $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ is a staircase: each step starts at an integer, with a filled dot, and stops just short of the next integer, at an open dot.
+> The [graph](functions.llms.md#def-graph) of $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ is a staircase: each step starts at an integer, with a filled dot, and stops before the next integer, at an open dot.
 >
 > Show code
 >
@@ -176,7 +176,7 @@ Last modified: 2026-11-02 09:20:39 (PST)
 > floor_plot
 > ```
 >
-> [![The graph of the floor function from -3 to 3. It is a staircase of horizontal steps one unit long. Each step starts with a filled dot at an integer k at height k and ends with an open dot just before k + 1.](number-systems_files/figure-html/unnamed-chunk-1-1.png)](number-systems_files/figure-html/unnamed-chunk-1-1.png)
+> [![The graph of the floor function from -3 to 3. It is a staircase of horizontal steps one unit long. Each step starts with a filled dot at an integer k at height k and ends with an open dot at k + 1.](number-systems_files/figure-html/unnamed-chunk-1-1.png)](number-systems_files/figure-html/unnamed-chunk-1-1.png)
 
 > **NOTE:**
 >
