@@ -68,6 +68,14 @@ even and odd integers, and rational and irrational real numbers.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/number-systems/_def-floor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_exm-floor.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/number-systems/_def-irrational-numbers.qmd >}}
 
 {{< slidebreak >}}
