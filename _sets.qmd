@@ -123,7 +123,7 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< include mds/_subfiles/sets/_exm-indexed-family.qmd >}}
 
-## Combining sets
+# Combining sets
 
 {{< include mds/_subfiles/sets/_def-union.qmd >}}
 
@@ -191,7 +191,7 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< include mds/_subfiles/sets/_exm-cartesian-product.qmd >}}
 
-## Extended non-negative real numbers
+# Extended non-negative real numbers
 
 {{< include mds/_subfiles/sets/_def-extended-nonneg-reals.qmd >}}
 

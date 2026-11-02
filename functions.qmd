@@ -13,7 +13,7 @@ format:
 {{< include mds/_functions.qmd >}}
 
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::
