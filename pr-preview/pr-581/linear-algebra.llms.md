@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 12:36:15 (PST)
+Last modified: 2026-11-02 14:24:05 (PST)
 
 The linear algebra notes are split across these pages:
 
