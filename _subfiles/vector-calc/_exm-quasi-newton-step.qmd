@@ -13,19 +13,24 @@ $\alpha = -\dprod{\deriv{\vx} f(\vx)}{\vecf{d}} / \qform{\matr{Q}}{\vecf{d}}$.
 #| code-fold: false
 Q <- matrix(c(4, 1, 1, 3), nrow = 2)
 b <- c(1, 2)
-f <- function(x) 0.5 * sum(x * (Q %*% x)) - sum(b * x)
-grad <- function(x) drop(Q %*% x - b)
 x0 <- c(0, 0)
 H0 <- diag(2)
-d <- -drop(H0 %*% grad(x0))
-step <- -sum(grad(x0) * d) / drop(t(d) %*% Q %*% d)
+Qx0 <- drop(Q %*% x0)
+grad0 <- Qx0 - b
+d <- -drop(H0 %*% grad0)
+Qd <- drop(Q %*% d)
+step <- -sum(grad0 * d) / sum(d * Qd)
 x1 <- x0 + step * d
+Qx1 <- drop(Q %*% x1)
+grad1 <- Qx1 - b
+f0 <- 0.5 * sum(x0 * Qx0) - sum(b * x0)
+f1 <- 0.5 * sum(x1 * Qx1) - sum(b * x1)
 s <- x1 - x0
-y <- grad(x1) - grad(x0)
+y <- grad1 - grad0
 ```
 
 The step length is `{r} step`, which moves the [iterate](#def-iterate) to $\vx^{(1)} = (`{r} x1[1]`, `{r} x1[2]`)$
-and lowers $f$ from `{r} f(x0)` to `{r} f(x1)`.
+and lowers $f$ from `{r} f0` to `{r} f1`.
 The difference of the [gradients](vector-calculus.qmd#def-vector-derivative), $\vy^{(0)} = (`{r} y[1]`, `{r} y[2]`)$, is $\matr{Q} \vecf{s}^{(0)}$,
 which is the [secant condition](#def-secant-condition) for a quadratic function.
 
