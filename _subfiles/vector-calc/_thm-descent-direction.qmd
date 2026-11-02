@@ -42,15 +42,3 @@ such that $(h(s) - h(0)) / s < h'(0) + \abs{h'(0)} = 0$ for $0 < s < \bar{s}$.
 Multiplying by $s > 0$, $h(s) < h(0)$, that is, $f(\vx - s \vecf{g}) < f(\vx)$.
 
 :::
-
-{{< slidebreak >}}
-
-:::{#exm-descent-direction}
-#### How short is short enough
-
-In @exm-gradient-descent, $f(x) = x^2$ at $x \ne 0$ has $g = 2x$, and
-$f(x - 2 s x) = (1 - 2s)^2 x^2 < x^2$ exactly when $\abs{1 - 2s} < 1$, that is, when $0 < s < 1$.
-So @thm-descent-direction holds with $\bar{s} = 1$,
-and the step $s = 1.5$ of that example was too long.
-
-:::
