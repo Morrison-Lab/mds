@@ -2,7 +2,7 @@ A local minimizer of a differentiable function on an open interval
 is a flat point (@def-flat-point),
 and, at a flat point, a positive [second derivative](calculus.qmd#def-second-derivative) guarantees a strict local minimum.
 This section extends both facts to a function $f$ of a $p \times 1$ vector $\vx$:
-the [gradient](vector-calculus.qmd#def-vector-derivative) $\deriv{\vx} f(\vx)$ takes the place of the first derivative,
+the [gradient](vector-calculus.qmd#def-vector-derivative) $\deriv{\vx} f(\vx)$ takes the place of the first [derivative](calculus-derivatives.qmd#def-derivative),
 and a $p \times p$ matrix of second partial derivatives takes the place of the second;
 both facts are proved in this section, for every $p \ge 1$.
 Throughout, $\deriv{\vx} f(\vecf{z})$ means the gradient evaluated at $\vx = \vecf{z}$.

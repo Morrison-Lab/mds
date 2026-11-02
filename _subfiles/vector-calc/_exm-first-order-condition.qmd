@@ -1,0 +1,36 @@
+:::{#exm-first-order-condition}
+#### Using the condition to locate, and to rule out, minimizers
+
+- For $f(\vx) = x_1^2 + x_2^2 - 2 x_1$ of @exm-stationary-point,
+  any local minimizer must be the stationary point $\tp{(1, 0)}$.
+  It is one: completing the square,
+
+  $$
+  \begin{aligned}
+  f(\vx) &= (x_1 - 1)^2 + x_2^2 - 1 \\
+  &\ge -1 \\
+  &= f(1, 0).
+  \end{aligned}
+  $$
+
+- For $f(\vx) = e^{2x_1 + x_2} - x_1$ of the [Hessian example](vector-calculus.qmd#exm-hessian),
+  the second entry of the gradient is $e^{2x_1 + x_2} > 0$,
+  so $f$ has no stationary point, and so no local minimizer.
+- The converse fails: $f(\vx) = x_1^2 - x_2^2$ has gradient $\tp{(2 x_1,\ -2 x_2)}$,
+  so $\vzero$ is a stationary point,
+  but
+
+  $$
+  \begin{aligned}
+  f(0, t) &= -t^2 \\
+  &< 0 \\
+  &= f(\vzero)
+  \end{aligned}
+  $$
+
+  for every $t \ne 0$,
+  so $\vzero$ is not a local minimizer.
+
+:::
+
+{{< include mds/_subfiles/vector-calc/_exm-stationary-least-squares.qmd >}}

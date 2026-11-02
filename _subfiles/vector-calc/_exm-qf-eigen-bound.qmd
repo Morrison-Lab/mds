@@ -1,0 +1,18 @@
+:::{#exm-qf-eigen-bound}
+#### Checking the bound
+
+$\matr{A} = \sbmat{ 2 & 1 \\ 1 & 2 }$ has [eigenvalues](linear-algebra.qmd#def-eigenvalue) $3$ and $1$, so $\eigval_{\min} = 1$.
+At $\vecf{h} = \tp{(1, 0)}$, $\tp{\vecf{h}} \matr{A} \vecf{h} = 2 \ge 1 \cdot 1$.
+At $\vecf{h} = \tp{(1, -1)}$,
+
+$$
+\begin{aligned}
+\tp{\vecf{h}} \matr{A} \vecf{h} &= 2 - 1 - 1 + 2 \\
+&= 2 \\
+&= 1 \cdot 2:
+\end{aligned}
+$$
+
+the bound holds with equality, since this $\vecf{h}$ is an eigenvector for $\eigval_{\min}$.
+
+:::

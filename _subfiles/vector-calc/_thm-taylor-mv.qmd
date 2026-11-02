@@ -21,9 +21,9 @@ $$
 Let $g(t) \eqdef f(\vecf{z} + t \vecf{h})$ for $t \in \reals$,
 the values of $f$ along the line through $\vecf{z}$ in the direction $\vecf{h}$.
 The [inner function](functions.qmd#def-inner-function) $\vy(t) = \vecf{z} + t \vecf{h}$ has entries $y_j = z_j + t h_j$,
-so $\deriv{t} y_j = h_j$, and its [derivative](vector-calculus.qmd#def-vector-valued-derivative) is the $1 \times p$ matrix $\tp{\vecf{h}}$.
-By the [vector chain rule](vector-calculus.qmd#thm-chain-vec) (with its input $t$ of length $1$,
-its inner function $\vy(t) = \vecf{z} + t \vecf{h}$, and its outer function $f$),
+so $\deriv{t} y_j = h_j$, and its [derivative](vector-calculus.qmd#def-vector-valued-derivative) is the $1 \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\tp{\vecf{h}}$.
+By the [vector chain rule](vector-calculus.qmd#thm-chain-vec) applied with the [argument](functions.qmd#def-argument) $t$,
+the inner function $\vy(t) = \vecf{z} + t \vecf{h}$, and the outer function $f$,
 
 $$
 \ba
@@ -81,48 +81,6 @@ f(\vecf{z} + \vecf{h})
 \\
 &= f(\vecf{z}) + \tp{\paren{\deriv{\vx} f(\vecf{z})}} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \midpt \vecf{h})\,\vecf{h}.
 && \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
-\ea
-$$
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-taylor-mv}
-#### For a quadratic form the expansion is exact
-
-Let $f(\vx) = \qform{\matr{S}}{\vx}$ with $\matr{S}$ symmetric and constant.
-Its [gradient](vector-calculus.qmd#cor-quadratic-form-symmetric) is $2 \matr{S} \vx$
-and its [Hessian](vector-calculus.qmd#thm-hessian-quadratic) is $2 \matr{S}$ at every point,
-so whatever $\midpt$ is, @thm-taylor-mv reads
-
-$$
-\begin{aligned}
-f(\vecf{z} + \vecf{h})
-&= \tp{\vecf{z}} \matr{S} \vecf{z} + \tp{(2 \matr{S} \vecf{z})} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}} (2 \matr{S}) \vecf{h} \\
-&= \tp{\vecf{z}} \matr{S} \vecf{z} + 2\,\tp{\vecf{z}} \matr{S} \vecf{h} + \tp{\vecf{h}} \matr{S} \vecf{h},
-\end{aligned}
-$$
-
-using
-
-$$
-\begin{aligned}
-\tp{(2 \matr{S} \vecf{z})} &= 2\,\tp{\vecf{z}}\,\tp{\matr{S}} \\
-&= 2\,\tp{\vecf{z}} \matr{S}.
-\end{aligned}
-$$
-
-Multiplying out directly gives the same:
-
-$$
-\ba
-\tp{(\vecf{z} + \vecf{h})} \matr{S} (\vecf{z} + \vecf{h})
-&= \tp{\vecf{z}} \matr{S} \vecf{z} + \tp{\vecf{z}} \matr{S} \vecf{h} + \tp{\vecf{h}} \matr{S} \vecf{z} + \tp{\vecf{h}} \matr{S} \vecf{h}
-&& \text{(distribute)}
-\\
-&= \tp{\vecf{z}} \matr{S} \vecf{z} + 2\,\tp{\vecf{z}} \matr{S} \vecf{h} + \tp{\vecf{h}} \matr{S} \vecf{h}.
-&& \text{(} \tp{\vecf{h}} \matr{S} \vecf{z} = \tp{(\tp{\vecf{h}} \matr{S} \vecf{z})} \text{, which equals } \tp{\vecf{z}} \matr{S} \vecf{h} \text{)}
 \ea
 $$
 

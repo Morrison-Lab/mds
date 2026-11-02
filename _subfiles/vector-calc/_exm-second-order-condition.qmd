@@ -1,0 +1,20 @@
+:::{#exm-second-order-condition}
+#### Classifying stationary points
+
+- $f(\vx) = x_1^2 + x_2^2 - 2 x_1$ has the stationary point $\tp{(1, 0)}$ (@exm-stationary-point),
+  and its Hessian is
+
+  $$
+  \begin{aligned}
+  \matr{H}_f(\vx) &= \sbmat{ 2 & 0 \\ 0 & 2 } \\
+  &= 2 \matr{I}_2,
+  \end{aligned}
+  $$
+
+  which is positive definite, so $\tp{(1, 0)}$ is a strict local minimizer.
+- $f(\vx) = x_1^2 - x_2^2$ has the stationary point $\vzero$
+  and Hessian $\sbmat{ 2 & 0 \\ 0 & -2 }$, which is not positive definite
+  ($\tp{(0, 1)}$ gives $-2$),
+  and indeed $\vzero$ is not a local minimizer (@exm-first-order-condition).
+
+:::
