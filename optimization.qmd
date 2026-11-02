@@ -51,7 +51,7 @@ goes on to the page that now holds it.
 
 :::
 
-## Further reading {#sec-additional-resources}
+# Further reading {#sec-additional-resources}
 
 - @boyd2004convex
   is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
@@ -78,7 +78,7 @@ goes on to the page that now holds it.
   its chapters on gradient descent and backpropagation calculus visually illustrate
   how gradients of multivariate cost functions are computed and used for optimization.
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::
