@@ -1,0 +1,43 @@
+:::{#exm-convex-hessian-not-necessary}
+#### Strictly convex with a singular Hessian
+
+Part 2 is sufficient but not necessary.
+$f(x) = x^4$ has
+
+$$
+\begin{aligned}
+f''(0) &= 12 \cdot 0^2 \\
+&= 0,
+\end{aligned}
+$$
+
+so $\matr{H}_f(0) = [0]$ is [singular](linear-algebra.qmd#def-invertible-matrix) and not positive definite.
+Yet $f$ is strictly convex, by the strict form of @eq-supporting-hyperplane: for $x \ne y$,
+
+$$
+\ba
+x^4 - y^4 - 4 y^3 (x - y)
+&= (x - y)(x^3 + x^2 y + x y^2 + y^3) - 4 y^3 (x - y)
+&& \text{(factor } x^4 - y^4 \text{)}
+\\
+&= (x - y)(x^3 + x^2 y + x y^2 - 3 y^3)
+&& \text{(collect the } y^3 \text{ terms)}
+\\
+&= (x - y)^2 (x^2 + 2 x y + 3 y^2)
+&& \text{(} (x - y)(x^2 + 2 x y + 3 y^2) = x^3 + x^2 y + x y^2 - 3 y^3 \text{)}
+\\
+&= (x - y)^2 \paren{(x + y)^2 + 2 y^2},
+&& \text{(complete the square)}
+\ea
+$$
+
+which is positive: $(x - y)^2 > 0$, and $(x + y)^2 + 2 y^2 = 0$ would need $y = 0$ and then
+
+$$
+\begin{aligned}
+x &= 0 \\
+&= y.
+\end{aligned}
+$$
+
+:::
