@@ -1,0 +1,38 @@
+::: {#exm-quasi-newton-step}
+#### One quasi-Newton step on a quadratic function
+
+Take $f(\vx) = \tfrac{1}{2} \qform{\matr{Q}}{\vx} - \dprod{\vecf{b}}{\vx}$
+with $\matr{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}$ and $\vecf{b} = \tp{(1, 2)}$
+(@exm-secant-condition),
+$\vx^{(0)} = \vzero$ and $\matr{H}^{(0)} = \matr{I}_2$.
+For a [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial), the [step length](#def-gradient-descent) that minimizes $f$ along a [direction](vector-calculus.qmd#def-direction) $\vecf{d}$ is
+$\alpha = -\dprod{\deriv{\vx} f(\vx)}{\vecf{d}} / \qform{\matr{Q}}{\vecf{d}}$.
+
+```{r}
+#| label: quasi-newton-step
+#| code-fold: false
+q_entries <- c(4, 1, 1, 3)
+Q <- matrix(q_entries, nrow = 2)
+b <- c(1, 2)
+x0 <- c(0, 0)
+H0 <- diag(2)
+q_x0 <- drop(Q %*% x0)
+grad0 <- q_x0 - b
+d <- -drop(H0 %*% grad0)
+q_d <- drop(Q %*% d)
+step <- -sum(grad0 * d) / sum(d * q_d)
+x1 <- x0 + step * d
+q_x1 <- drop(Q %*% x1)
+grad1 <- q_x1 - b
+f0 <- 0.5 * sum(x0 * q_x0) - sum(b * x0)
+f1 <- 0.5 * sum(x1 * q_x1) - sum(b * x1)
+s <- x1 - x0
+y <- grad1 - grad0
+```
+
+The step length is `{r} step`, which moves the [iterate](#def-iterate) to $\vx^{(1)} = (`{r} x1[1]`, `{r} x1[2]`)$
+and lowers $f$ from `{r} f0` to `{r} f1`.
+The difference of the [gradients](vector-calculus.qmd#def-vector-derivative), $\vy^{(0)} = (`{r} y[1]`, `{r} y[2]`)$, is $\matr{Q} \vecf{s}^{(0)}$,
+which is the [secant condition](#def-secant-condition) for a quadratic function.
+
+:::

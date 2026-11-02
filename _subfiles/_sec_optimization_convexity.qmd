@@ -6,6 +6,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-convex-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-not-convex-set.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_fig-convex-set.qmd >}}
 
 {{< slidebreak >}}
@@ -15,6 +23,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_thm-convex-intersection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-convex-intersection.qmd >}}
 
 {{< slidebreak >}}
 
@@ -46,6 +58,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-tangent-plane.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_rem-tangent-plane-one-variable.qmd >}}
 
 {{< slidebreak >}}
@@ -54,11 +70,23 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-convex-first-order.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_fig-tangent-line.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_thm-convex-hessian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-convex-hessian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-convex-hessian-not-necessary.qmd >}}
 
 {{< slidebreak >}}
 
