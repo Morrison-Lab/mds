@@ -1,4 +1,4 @@
-## Vectors
+# Vectors
 
 ```{r}
 #| include: false
@@ -45,7 +45,7 @@ reticulate::py_require("numpy")
 
 {{< include mds/_subfiles/_def_lincom.qmd >}}
 
-### Special vectors
+## Special vectors
 
 {{< include mds/_subfiles/linear-algebra/_def-zero-vector.qmd >}}
 
@@ -87,7 +87,7 @@ reticulate::py_require("numpy")
 
 {{< include mds/_subfiles/linear-algebra/_thm-standard-basis-expansion.qmd >}}
 
-### Orthogonality
+## Orthogonality
 
 {{< include mds/_subfiles/linear-algebra/_def-orthogonal-vectors.qmd >}}
 
