@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 11:38:11 (PST)
+Last modified: 2026-11-02 14:23:25 (PST)
 
 > **NOTE:**
 >
@@ -57,20 +57,26 @@ Last modified: 2026-11-02 11:38:11 (PST)
 > **Example 2 (One quasi-Newton step on a quadratic function)** Take $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}$ ([Example 1](#exm-secant-condition)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathbf{H}^{(0)} = \mathbf{I}_2$. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](optimization-gradient-descent.llms.md#def-gradient-descent) that minimizes $f$ along a [direction](vector-calculus.llms.md#def-direction) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ is $\alpha = -\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} / {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$.
 >
 > ``` downlit
-> Q <- matrix(c(4, 1, 1, 3), nrow = 2)
+> q_entries <- c(4, 1, 1, 3)
+> Q <- matrix(q_entries, nrow = 2)
 > b <- c(1, 2)
-> f <- function(x) 0.5 * sum(x * (Q %*% x)) - sum(b * x)
-> grad <- function(x) drop(Q %*% x - b)
 > x0 <- c(0, 0)
 > H0 <- diag(2)
-> d <- -drop(H0 %*% grad(x0))
-> step <- -sum(grad(x0) * d) / drop(t(d) %*% Q %*% d)
+> q_x0 <- drop(Q %*% x0)
+> grad0 <- q_x0 - b
+> d <- -drop(H0 %*% grad0)
+> q_d <- drop(Q %*% d)
+> step <- -sum(grad0 * d) / sum(d * q_d)
 > x1 <- x0 + step * d
+> q_x1 <- drop(Q %*% x1)
+> grad1 <- q_x1 - b
+> f0 <- 0.5 * sum(x0 * q_x0) - sum(b * x0)
+> f1 <- 0.5 * sum(x1 * q_x1) - sum(b * x1)
 > s <- x1 - x0
-> y <- grad(x1) - grad(x0)
+> y <- grad1 - grad0
 > ```
 >
-> The step length is 0.25, which moves the [iterate](optimization-newton.llms.md#def-iterate) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = (0.25, 0.5)$ and lowers $f$ from 0 to -0.625. The difference of the [gradients](vector-calculus.llms.md#def-vector-derivative), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)} = (1.5, 1.75)$, is $\mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}$ ([the secant condition](#def-secant-condition) for a quadratic function).
+> The step length is 0.25, which moves the [iterate](optimization-newton.llms.md#def-iterate) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = (0.25, 0.5)$ and lowers $f$ from 0 to -0.625. The difference of the [gradients](vector-calculus.llms.md#def-vector-derivative), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)} = (1.5, 1.75)$, is $\mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}$, which is the [secant condition](#def-secant-condition) for a quadratic function.
 
 > **NOTE:**
 >
@@ -124,19 +130,18 @@ Last modified: 2026-11-02 11:38:11 (PST)
 > **Example 4 (L-BFGS applies the update without forming the matrix)** Continue [Example 3](#exm-bfgs-step) with $m = 1$ stored pair $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})$ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{I}_2$. Below, $\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})$ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
 >
 > ``` downlit
-> g1 <- grad(x1)
+> g1 <- grad1
 > alpha <- rho * sum(s * g1)
 > q <- g1 - alpha * y
 > r <- drop(H0 %*% q)
 > beta <- rho * sum(y * r)
 > r <- r + s * (alpha - beta)
-> rbind(from_vectors = r, from_matrix = drop(H1 %*% g1))
-> #>                [,1]   [,2]
-> #> from_vectors 0.4375 -0.375
-> #> from_matrix  0.4375 -0.375
+> h1_g1 <- H1 %*% g1
+> from_matrix <- drop(h1_g1)
+> tibble::tibble(from_vectors = r, from_matrix = from_matrix)
 > ```
 >
-> The two rows agree to within 5.6e-17, although the first never forms the matrix. BFGS stores a dense $p \times p$ matrix and spends about $p^2$ operations per iteration; L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$ operations per iteration, so it remains usable when $p$ is in the millions.
+> The two columns agree to within 5.6e-17, although the first never forms the matrix. BFGS stores a dense $p \times p$ matrix and spends about $p^2$ operations per iteration; L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$ operations per iteration, so it remains usable when $p$ is in the millions.
 
 # Definitions on this page
 
