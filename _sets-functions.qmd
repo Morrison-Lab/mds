@@ -3,13 +3,16 @@ include mds/_sets-functions.qmd keep rendering. It includes the three fragments 
 replaced it, one after another. Each fragment includes the macros and opens with its own
 introduction, so in a host page each introduction follows the previous fragment's last
 section and links to pages (sets.qmd and the others) that the host may not have. No host
-site includes this shim today; new host pages should include the three fragments directly. -->
+site includes this shim today; new host pages should include the three fragments directly.
+The sets and functions fragments no longer open with a section heading,
+so a host page that includes them writes its own Sets and Functions headings;
+the shim writes them here, with ids that differ from the fragments' own anchors. -->
 
-## Sets
+## Sets {#sec-shim-sets}
 
 {{< include mds/_sets.qmd >}}
 
-## Functions
+## Functions {#sec-shim-functions}
 
 {{< include mds/_functions.qmd >}}
 

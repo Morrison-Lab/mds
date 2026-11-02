@@ -1,8 +1,9 @@
 -- For a page that renders one section fragment on its own.
 -- The fragment opens with a level 2 heading that repeats the page title,
 -- because the combined Linear Algebra page includes the same fragment as a section.
--- Drop that heading and move every later heading up one level,
+-- Drop that heading and move every later heading deeper than level 2 up one level,
 -- so the page body starts at level 2 under the title.
+-- The fragments that use this filter have no other level 2 heading.
 function Pandoc(doc)
   local title = pandoc.utils.stringify(doc.meta.title or "")
   local dropped = false
