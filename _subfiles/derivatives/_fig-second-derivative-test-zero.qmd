@@ -66,7 +66,7 @@ plt.show()
 
 :::
 
-This figure graphs the [functions](functions.qmd#def-function) $x^4$, $-x^4$ and $x^3$ of @exm-second-derivative-test-zero.
+This figure shows the [functions](functions.qmd#def-function) $x^4$, $-x^4$ and $x^3$ of @exm-second-derivative-test-zero.
 All three have a [flat point](#def-flat-point) at $x = 0$ (circles)
 where the [second derivative](calculus-derivatives.qmd#def-second-derivative) is $0$:
 a [local minimizer](algebra.qmd#def-local-minimizer),
