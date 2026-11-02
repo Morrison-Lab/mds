@@ -1,0 +1,12 @@
+:::{#rem-logarithm-formula}
+#### The logarithm to base $b$ through the natural logarithm
+
+For each $x > 0$, exactly one $y$ satisfies @def-logarithm,
+namely $y = \frac{\logf{x}}{\logf{b}}$.
+By @def-real-power, $b^y = \expf{y \cd \logf{b}}$.
+By @thm-exp-log-inverse, $\expf{y \cd \logf{b}} = x$
+holds exactly when $y \cd \logf{b} = \logf{x}$.
+Since $b \ne 1$, $\logf{b} \ne 0$,
+so we can divide by it.
+
+:::

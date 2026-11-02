@@ -164,6 +164,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_exm-logarithm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-logarithm-formula.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-power-nonpositive-base.qmd >}}
 
 {{< slidebreak >}}
