@@ -13,10 +13,13 @@ q <- g1 - alpha * y
 r <- drop(H0 %*% q)
 beta <- rho * sum(y * r)
 r <- r + s * (alpha - beta)
-rbind(from_vectors = r, from_matrix = drop(H1 %*% g1))
+h1_g1 <- H1 %*% g1
+from_matrix <- drop(h1_g1)
+tibble::tibble(from_vectors = r, from_matrix = from_matrix)
 ```
 
-The two rows agree to within `{r} format(max(abs(r - H1 %*% g1)), digits = 2)`, although the first never forms the matrix.
+The two columns agree to within `{r} format(max(abs(r - from_matrix)), digits = 2)`,
+although the first never forms the matrix.
 BFGS stores a dense $p \times p$ matrix and spends about $p^2$ operations per iteration;
 L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$ operations per iteration, so it remains usable when $p$ is in the millions.
 
