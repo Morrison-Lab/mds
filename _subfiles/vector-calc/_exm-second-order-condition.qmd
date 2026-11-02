@@ -16,6 +16,6 @@
   and Hessian $\sbmat{ 2 & 0 \\ 0 & -2 }$,
   which is not positive definite
   ($\tp{(0, 1)}$ gives $-2$).
-  Indeed, $\vzero$ is not a local minimizer (@exm-first-order-condition).
+  Indeed, $\vzero$ is not a [local minimizer](algebra.qmd#def-local-minimizer) (@exm-first-order-condition).
 
 :::
