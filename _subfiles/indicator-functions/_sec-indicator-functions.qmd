@@ -23,69 +23,15 @@ This section summarizes the principal notational conventions.
 
 {{< slidebreak >}}
 
-:::{#def-indicator-function}
-#### Indicator function, set indicator
-
-For any subset $A \subseteq \universe$ of a universal set $\universe$,
-the **indicator function** of $A$,
-[@wikipedia_indicator_function]
-or **set indicator**,
-is the function
-$\indic{A} : \universe \to \{0, 1\}$ defined by:
-
-$$
-\indic{A}(x) \eqdef \begin{cases}
-1, & x \in A \\
-0, & x \notin A
-\end{cases}
-$$
-
-:::
+{{< include mds/_subfiles/indicator-functions/_def-indicator-function.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#def-predicate-indicator}
-#### Predicate indicator
-
-For any logical proposition or predicate $P$,
-the **indicator** of $P$,
-or **predicate indicator**,
-takes the value $1$ when $P$ is true
-and $0$ when $P$ is false:
-
-$$
-\indicp{P} \eqdef \begin{cases}
-1, & \text{if } P \text{ is true} \\
-0, & \text{if } P \text{ is false}
-\end{cases}
-$$
-
-:::
+{{< include mds/_subfiles/indicator-functions/_def-predicate-indicator.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#exm-indicator-numerical}
-#### Evaluating set and predicate indicators
-
-Consider the real line $\universe = \reals$,
-the set of nonnegative numbers $A = [0, \infty)$,
-and a continuous
-[random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable)
-$Y$ (defined in the Morrison Lab's probability notes).
-
-1. Set indicator $\indic{A}(x)$:
-   - For $x = 3.5$: since $3.5 \in [0, \infty)$, $\indic{A}(3.5) = 1$.
-   - For $x = -2.1$: since $-2.1 \notin [0, \infty)$, $\indic{A}(-2.1) = 0$.
-
-2. Predicate indicator $\indicp{Y > 5}$:
-   - If an observation yields $Y = 7.2$,
-     the predicate $7.2 > 5$ is true,
-     so $\indicp{7.2 > 5} = 1$.
-   - If an observation yields $Y = 4.1$,
-     the predicate $4.1 > 5$ is false,
-     so $\indicp{4.1 > 5} = 0$.
-
-:::
+{{< include mds/_subfiles/indicator-functions/_exm-indicator-numerical.qmd >}}
 
 {{< slidebreak >}}
 
@@ -95,7 +41,7 @@ $Y$ (defined in the Morrison Lab's probability notes).
 
 {{< include mds/_subfiles/indicator-functions/_exm-binary-variable.qmd >}}
 
-### Two primary notational paradigms: set vs. predicate notation
+## Two primary notational paradigms: set vs. predicate notation
 
 The vast majority of indicator notations belong to one of two families:
 set notation or predicate notation.
@@ -163,7 +109,7 @@ or a geometric region).
 Predicate notation is more natural when the condition involves compound inequalities,
 such as $\indicp{0 \le t \le u}$.
 
-### Iverson bracket notation
+## Iverson bracket notation
 
 In 1962,
 Kenneth Iverson introduced a compact notation in the programming language APL,
@@ -173,117 +119,25 @@ the Iverson bracket
 
 {{< slidebreak >}}
 
-:::{#def-iverson-bracket}
-#### Iverson bracket
-
-For any logical proposition $P$,
-the **Iverson bracket** of $P$ is
-[@wikipedia_iverson_bracket]
-
-$$
-[P] \eqdef \begin{cases}
-1, & \text{if } P \text{ is true} \\
-0, & \text{if } P \text{ is false}
-\end{cases}
-$$
-
-:::
+{{< include mds/_subfiles/indicator-functions/_def-iverson-bracket.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#exm-iverson-bracket}
-#### Evaluating Iverson brackets
-
-- $[3 > 2] = 1$, because $3 > 2$ is true.
-- $[2 > 3] = 0$, because $2 > 3$ is false.
-- $[4 \in \cb{1, 2}] = 0$, because $4$ is not an element of $\cb{1, 2}$.
-
-:::
+{{< include mds/_subfiles/indicator-functions/_exm-iverson-bracket.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#rem-iverson-indicator}
-#### The Iverson bracket is the predicate indicator
-
-The Iverson bracket $[P]$ is the predicate indicator $\indicp{P}$
-(@def-indicator-function) in different notation.
-Under this notation,
-set membership is written $[x \in A]$,
-so $[x \in A] = \indic{A}(x)$.
-For example, the values in @exm-indicator-numerical become
-
-$$
-\begin{aligned}
-[7.2 > 5] &= \indicp{7.2 > 5} \\
-&= 1
-\end{aligned}
-$$
-
-and, with $A = [0, \infty)$,
-
-$$
-\begin{aligned}
-[-2.1 \in A] &= \indic{A}(-2.1) \\
-&= 0.
-\end{aligned}
-$$
-
-:::
+{{< include mds/_subfiles/indicator-functions/_rem-iverson-indicator.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#def-kronecker-delta}
-#### Kronecker delta
-
-For integers $i$ and $j$,
-the **Kronecker delta** is
-[@wikipedia_kronecker_delta]
-
-$$\kron_{ij} \eqdef [i = j]$$
-
-that is,
-$\kron_{ij} = 1$ when $i = j$
-and $\kron_{ij} = 0$ when $i \neq j$
-(@def-iverson-bracket).
-
-:::
+{{< include mds/_subfiles/indicator-functions/_def-kronecker-delta.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#exm-kronecker-delta}
-#### Evaluating the Kronecker delta
+{{< include mds/_subfiles/indicator-functions/_exm-kronecker-delta.qmd >}}
 
-- $$
-  \begin{aligned}
-  \kron_{11} &= [1 = 1] \\
-  &= 1.
-  \end{aligned}
-  $$
-
-- $$
-  \begin{aligned}
-  \kron_{12} &= [1 = 2] \\
-  &= 0.
-  \end{aligned}
-  $$
-
-- $$
-  \begin{aligned}
-  \kron_{22} &= [2 = 2] \\
-  &= 1.
-  \end{aligned}
-  $$
-
-- $$
-  \begin{aligned}
-  \kron_{23} &= [2 = 3] \\
-  &= 0.
-  \end{aligned}
-  $$
-
-:::
-
-### Strengths and limitations of the Iverson bracket
+## Strengths and limitations of the Iverson bracket
 
 The primary advantage of the Iverson bracket is algebraic conciseness:
 it turns a sum or integral over a subset
@@ -309,7 +163,7 @@ To prevent visual confusion with expectation brackets or intervals,
 statistical literature predominantly uses $\mathbb{1}$ or $I$
 rather than the bare Iverson bracket.
 
-### Summary of indicator notations
+## Summary of indicator notations
 
 @tbl-indicator-notations compares the major notations encountered across the literature.
 
@@ -324,7 +178,7 @@ rather than the bare Iverson bracket.
 
 : Notations for indicator functions across mathematical and statistical literature {#tbl-indicator-notations}
 
-### Conventions in this book
+## Conventions in this book
 
 In these notes,
 we standardize on blackboard bold $\mathbb{1}$
@@ -340,7 +194,7 @@ it is visually distinct from the scalar $1$,
 the identity matrix $I$,
 and the observed and expected Fisher information matrices ($\oinf$, $\einf$).
 
-### Key algebraic properties
+## Key algebraic properties
 
 Indicator functions translate the logical connectives ([definition](proof-writing.qmd#def-logical-connective))
 "and", "or", and "not", applied to set membership,

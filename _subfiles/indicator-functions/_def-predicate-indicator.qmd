@@ -1,0 +1,17 @@
+:::{#def-predicate-indicator}
+#### Predicate indicator
+
+For any logical proposition or predicate $P$,
+the **indicator** of $P$,
+or **predicate indicator**,
+takes the value $1$ when $P$ is true
+and $0$ when $P$ is false:
+
+$$
+\indicp{P} \eqdef \begin{cases}
+1, & \text{if } P \text{ is true} \\
+0, & \text{if } P \text{ is false}
+\end{cases}
+$$
+
+:::
