@@ -23,7 +23,7 @@ L(\vx, \vlagmult) = \tfrac{1}{2}\,\qform{\matr{S}}{\vx} + \tp{\paren{\tp{\matr{A
 $$
 
 The partial derivatives of a sum are the sums of the partial derivatives, entry by entry.
-Using the first of these forms, the [derivative of a quadratic form](vector-calculus.qmd#cor-quadratic-form-symmetric) applies to the first term,
+Using the first of these forms, the [derivative of a quadratic form](vector-calculus.qmd#cor-quadratic-form-symmetric) applies to the first [term](algebra-sums.qmd#def-term),
 the [derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) to the second ($\matr{A} \vlagmult$ is constant in $\vx$),
 and the third is [constant with respect to a vector](vector-calculus.qmd#def-constant-wrt-vector),
 

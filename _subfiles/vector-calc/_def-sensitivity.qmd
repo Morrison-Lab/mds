@@ -4,9 +4,9 @@
 Suppose a minimization problem (@def-minimization-problem)
 depends on a vector $\vecf{b} \in \reals^m$,
 and let $f^*(\vecf{b})$ be its minimum value, as a function of $\vecf{b}$.
-When the [gradient](vector-calculus.qmd#def-vector-derivative) $\deriv{\vecf{b}} f^*(\vecf{b})$ exists,
-it is the **sensitivity** of the minimum value to $\vecf{b}$:
-by the definition of a [partial derivative](vector-calculus.qmd#def-partial-derivative), its entry $i$ is the limit
+Where $f^*$ has a [gradient](vector-calculus.qmd#def-vector-derivative) $\deriv{\vecf{b}} f^*(\vecf{b})$,
+that gradient is the **sensitivity** of the minimum value to $\vecf{b}$:
+by the definition of a [partial derivative](vector-calculus.qmd#def-partial-derivative), its entry $i$ is the [limit](calculus.qmd#def-limit)
 as a change in $b_i$ alone shrinks to $0$,
 of the resulting change in the minimum value divided by the change in $b_i$.
 

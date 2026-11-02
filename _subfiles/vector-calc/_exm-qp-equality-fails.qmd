@@ -16,7 +16,7 @@
   $$
 
   whose columns are equal.
-  So $\matr{M} \tp{(1, -1)} = \vzero_{2 \times 1}$, and $\matr{M}$ is not [invertible](linear-algebra.qmd#thm-invertible-rank), since a square matrix is invertible exactly when its null space is zero.
+  So $\matr{M} \tp{(1, -1)} = \vzero_{2 \times 1}$, and $\matr{M}$ is not [invertible](linear-algebra.qmd#thm-invertible-rank), since a [square matrix](linear-algebra.qmd#def-square-matrix) is invertible exactly when its [null space](linear-algebra.qmd#def-null-space) is zero.
   The two constraints both read $x_1 + x_2 = b_i$,
   so they have no solution at all when $b_1 \ne b_2$.
   When $b_1 = b_2$ a unique minimizer still exists,

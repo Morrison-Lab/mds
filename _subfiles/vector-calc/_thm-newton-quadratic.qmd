@@ -23,7 +23,7 @@ $$
 $$
 
 by the [Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic) with $\tfrac{1}{2} \matr{S}$ in place of $\matr{S}$,
-and because the gradient $-\vecf{c}$ of the linear term is [constant](vector-calculus.qmd#def-constant-wrt-vector),
+and because the [gradient](vector-calculus.qmd#def-vector-derivative) $-\vecf{c}$ of the [linear](linear-algebra.qmd#def-linear-function) [term](algebra-sums.qmd#def-term) is [constant](vector-calculus.qmd#def-constant-wrt-vector),
 $\matr{H}_f(\vx) = \matr{S}$,
 which is [invertible](linear-algebra.qmd#thm-pd-inverse).
 So

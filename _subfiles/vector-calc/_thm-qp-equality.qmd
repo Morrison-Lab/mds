@@ -24,7 +24,7 @@ The steps marked "transpose of a product" use the [transpose of a product](linea
 and $\matr{S}$ is symmetric because it is [positive definite](linear-algebra.qmd#def-positive-definite).
 
 **$\matr{M}$ is invertible.**
-$\matr{S}^{-1}$ exists and is positive definite, by the [positive definite inverse](linear-algebra.qmd#thm-pd-inverse) theorem,
+$\matr{S}^{-1}$ is positive definite, by the [positive definite inverse](linear-algebra.qmd#thm-pd-inverse) result,
 so $\matr{M} = \tp{\matr{A}} \matr{S}^{-1} \matr{A}$ is positive definite, by [operations that preserve definiteness](linear-algebra.qmd#thm-pd-operations) (part 1),
 and so invertible, by the positive definite inverse theorem again.
 $\matr{S}^{-1}$ and $\matr{M}^{-1}$ are symmetric, by the [inverse of a symmetric matrix](linear-algebra.qmd#cor-inverse-symmetric),
