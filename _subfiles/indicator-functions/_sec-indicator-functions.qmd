@@ -41,7 +41,7 @@ This section summarizes the principal notational conventions.
 
 {{< include mds/_subfiles/indicator-functions/_exm-binary-variable.qmd >}}
 
-### Two primary notational paradigms: set vs. predicate notation
+## Two primary notational paradigms: set vs. predicate notation
 
 The vast majority of indicator notations belong to one of two families:
 set notation or predicate notation.
@@ -109,7 +109,7 @@ or a geometric region).
 Predicate notation is more natural when the condition involves compound inequalities,
 such as $\indicp{0 \le t \le u}$.
 
-### Iverson bracket notation
+## Iverson bracket notation
 
 In 1962,
 Kenneth Iverson introduced a compact notation in the programming language APL,
@@ -163,7 +163,7 @@ $$
 
 {{< include mds/_subfiles/indicator-functions/_exm-kronecker-delta.qmd >}}
 
-### Strengths and limitations of the Iverson bracket
+## Strengths and limitations of the Iverson bracket
 
 The primary advantage of the Iverson bracket is algebraic conciseness:
 it turns a sum or integral over a subset
@@ -189,7 +189,7 @@ To prevent visual confusion with expectation brackets or intervals,
 statistical literature predominantly uses $\mathbb{1}$ or $I$
 rather than the bare Iverson bracket.
 
-### Summary of indicator notations
+## Summary of indicator notations
 
 @tbl-indicator-notations compares the major notations encountered across the literature.
 
@@ -204,7 +204,7 @@ rather than the bare Iverson bracket.
 
 : Notations for indicator functions across mathematical and statistical literature {#tbl-indicator-notations}
 
-### Conventions in this book
+## Conventions in this book
 
 In these notes,
 we standardize on blackboard bold $\mathbb{1}$
@@ -220,7 +220,7 @@ it is visually distinct from the scalar $1$,
 the identity matrix $I$,
 and the observed and expected Fisher information matrices ($\oinf$, $\einf$).
 
-### Key algebraic properties
+## Key algebraic properties
 
 Indicator functions translate the logical connectives ([definition](proof-writing.qmd#def-logical-connective))
 "and", "or", and "not", applied to set membership,
