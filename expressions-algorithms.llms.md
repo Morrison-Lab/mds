@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-01 19:14:07 (PST)
+Last modified: 2026-11-02 10:28:57 (PST)
 
 > **NOTE:**
 >
@@ -22,9 +22,9 @@ Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
-> **Example 1 (Two expressions for one function)** The [expressions](#def-expression) \\a x^2 + b x + c\\ and \\(a x + b)\\x + c\\ [denote](#def-denotes) the same [function](functions.llms.md#def-function) of \\x\\ for any fixed \\a\\, \\b\\ and \\c\\, because they give the same value at every \\x\\.
+> **Example 1 (Two expressions for one function)** The [expressions](#def-expression) $a x^2 + b x + c$ and $(a x + b)\,x + c$ [denote](#def-denotes) the same [function](functions.llms.md#def-function) of $x$ for any fixed $a$, $b$ and $c$, because they give the same value at every $x$.
 >
-> Precedence parses \\a x^2 + b x + c\\ as a sum of three terms: the power \\x^2\\ is applied first, then \\a\\ multiplies \\x^2\\ and \\b\\ multiplies \\x\\, and the three products are added. The parentheses in \\(a x + b)\\x + c\\ force a different tree: \\a\\ multiplies \\x\\, \\b\\ is added, the sum multiplies \\x\\, and \\c\\ is added.
+> Precedence parses $a x^2 + b x + c$ as a sum of three terms: the power $x^2$ is applied first, then $a$ multiplies $x^2$ and $b$ multiplies $x$, and the three products are added. The parentheses in $(a x + b)\,x + c$ force a different tree: $a$ multiplies $x$, $b$ is added, the sum multiplies $x$, and $c$ is added.
 
 > **NOTE:**
 >
@@ -32,11 +32,11 @@ Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
-> **Example 2 (The quadratic formula)** For \\a \neq 0\\ with \\b^2 - 4 a c \ge 0\\, the roots of \\a x^2 + b x + c = 0\\ are
+> **Example 2 (The quadratic formula)** For $a \neq 0$ with $b^2 - 4 a c \ge 0$, the roots of $a x^2 + b x + c = 0$ are
 >
-> \\ x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a}, \\
+> $$x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a},$$
 >
-> where the right-hand side is a [closed-form expression](#def-closed-form-expression) in \\a\\, \\b\\, and \\c\\. By contrast, no closed-form expression is known for the root of \\x - \cos x = 0\\.
+> where the right-hand side is a [closed-form expression](#def-closed-form-expression) in $a$, $b$, and $c$. By contrast, no closed-form expression is known for the root of $x - \cos x = 0$.
 
 > **NOTE:**
 >
@@ -44,13 +44,13 @@ Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (Least squares versus logistic regression)** Minimizing the [squared-error](vector-calculus.llms.md#def-squared-error) cost of a [linear](algebra-exponentials.llms.md#def-linear-function) model over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\ gives the [normal equations](linear-algebra-projections.llms.md#def-normal-equations) \\{D}^{\top} D \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}= {D}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}\\. When \\{D}^{\top} D\\ is [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse), the unique minimizer is
+> **Example 3 (Least squares versus logistic regression)** Minimizing the [squared-error](vector-calculus.llms.md#def-squared-error) cost of a [linear](algebra-exponentials.llms.md#def-linear-function) model over $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ gives the [normal equations](linear-algebra-projections.llms.md#def-normal-equations) ${D}^{\top} D \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. When ${D}^{\top} D$ is [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse), the unique minimizer is
 >
-> \\ \hat{\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({D}^{\top} D\right)\mathclose{}}^{-1} {D}^{\top} \mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{y}}\vphantom{y}}, \\
+> $$\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({D}^{\top} D\right)\mathclose{}}^{-1} {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}},$$
 >
 > whose right-hand side is a [closed-form expression](#def-closed-form-expression), so [least squares](linear-algebra-projections.llms.md#def-least-squares) has a [closed-form solution](#def-closed-form-solution).
 >
-> For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over \\\mathord{\smash\[b\]{\underset{\raise.3ex\hbox{\$\scriptstyle\sim\$}}{\beta}}\vphantom{\beta}}\\, so that problem has no known closed-form solution. When a minimizer exists, an [iterative method](optimization-newton.llms.md#def-iterative-method) approximates it.
+> For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, so that problem has no known closed-form solution. When a minimizer exists, an [iterative method](optimization-newton.llms.md#def-iterative-method) approximates it.
 
 > **NOTE:**
 >
@@ -58,17 +58,17 @@ Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
-> **Example 4 (The parse tree of a polynomial)** The [parse tree](#def-parse-tree) of \\(a x + b)\\x + c\\, with each operation having two children, is drawn in [Figure 1](#fig-parse-trees) (left) and written out as a list here:
+> **Example 4 (The parse tree of a polynomial)** The [parse tree](#def-parse-tree) of $(a x + b)\,x + c$, with each operation having two children, is drawn in [Figure 1](#fig-parse-trees) (left) and written out as a list here:
 >
-> - the root \\+\\, whose children are
->   - the node \\\times\\, whose children are
->     - the node \\+\\, whose children are
->       - the node \\\times\\, whose children are the leaves \\a\\ and \\x\\,
->       - the leaf \\b\\;
->     - the leaf \\x\\;
->   - the leaf \\c\\.
+> - the root $+$, whose children are
+>   - the node $\times$, whose children are
+>     - the node $+$, whose children are
+>       - the node $\times$, whose children are the leaves $a$ and $x$,
+>       - the leaf $b$;
+>     - the leaf $x$;
+>   - the leaf $c$.
 >
-> Read from the leaves up, the tree says to multiply \\a\\ by \\x\\, add \\b\\, multiply by \\x\\, and add \\c\\. The [expression](#def-expression) \\a x^2 + b x + c\\ has a different tree ([Figure 1](#fig-parse-trees), right). Its root is the \\+\\ whose children are \\a x^2 + b x\\ and \\c\\, and the first of these is a \\+\\ whose children are \\a x^2\\ and \\b x\\.
+> Read from the leaves up, the tree says to multiply $a$ by $x$, add $b$, multiply by $x$, and add $c$. The [expression](#def-expression) $a x^2 + b x + c$ has a different tree ([Figure 1](#fig-parse-trees), right). Its root is the $+$ whose children are $a x^2 + b x$ and $c$, and the first of these is a $+$ whose children are $a x^2$ and $b x$.
 
 > **NOTE:**
 >
@@ -179,7 +179,7 @@ Last modified: 2026-11-01 19:14:07 (PST)
 >
 > [![Two parse trees, drawn with the root at the top. In the left tree the root plus has children times and the leaf c. That times has children plus and the leaf x. The plus below it has children times and the leaf b, and that times has the leaves a and x. In the right tree the root plus has children plus and the leaf c. That plus has two children, both times. The first times has the leaf a and a power node with leaves x and 2. The second times has the leaves b and x.](expressions-algorithms_files/figure-html/parse-trees-plot-1.png)](expressions-algorithms_files/figure-html/parse-trees-plot-1.png "Figure 1: The parse trees of (a x + b)\,x + c and a x^2 + b x + c. Each operation is a node with one child per argument, and the leaves are the symbols that are not operations. The caret is the power operation, which takes a base and an exponent.")
 >
-> Figure 1: The [parse trees](#def-parse-tree) of \\(a x + b)\\x + c\\ and \\a x^2 + b x + c\\. Each operation is a node with one child per [argument](functions.llms.md#def-argument), and the leaves are the symbols that are not operations. The caret is the [power](algebra-basics.llms.md#def-power) operation, which takes a [base](algebra-basics.llms.md#def-power-base) and an [exponent](algebra-basics.llms.md#def-power-exponent).
+> Figure 1: The [parse trees](#def-parse-tree) of $(a x + b)\,x + c$ and $a x^2 + b x + c$. Each operation is a node with one child per [argument](functions.llms.md#def-argument), and the leaves are the symbols that are not operations. The caret is the [power](algebra-basics.llms.md#def-power) operation, which takes a [base](algebra-basics.llms.md#def-power-base) and an [exponent](algebra-basics.llms.md#def-power-exponent).
 
 > **NOTE:**
 >
@@ -199,7 +199,7 @@ Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
-> **Example 5 (Two algorithms for one function)** Take the [function](functions.llms.md#def-function) that [Example 1](#exm-expression) writes two ways. Evaluating the tree of \\a x^2 + b x + c\\, with \\x^2\\ computed as \\x \cdot x\\, takes three multiplications and two additions. Evaluating the tree of Horner’s form \\(a x + b)\\x + c\\ takes two multiplications and two additions. We evaluate both forms at \\a = 2\\, \\b = -3\\, \\c = 5\\ and \\x = 1.5\\, in R and in Python, and give each intermediate quantity a name. (The code calls \\c\\ `c0`, because `c` is a built-in function in R.) The two [algorithms](#def-algorithm) [compute](#def-computes) the same function, so the two [values](functions.llms.md#def-value) must agree.
+> **Example 5 (Two algorithms for one function)** Take the [function](functions.llms.md#def-function) that [Example 1](#exm-expression) writes two ways. Evaluating the tree of $a x^2 + b x + c$, with $x^2$ computed as $x \cdot x$, takes three multiplications and two additions. Evaluating the tree of Horner’s form $(a x + b)\,x + c$ takes two multiplications and two additions. We evaluate both forms at $a = 2$, $b = -3$, $c = 5$ and $x = 1.5$, in R and in Python, and give each intermediate quantity a name. (The code calls $c$ `c0`, because `c` is a built-in function in R.) The two [algorithms](#def-algorithm) [compute](#def-computes) the same function, so the two [values](functions.llms.md#def-value) must agree.
 >
 > ## R
 >
@@ -259,11 +259,11 @@ Last modified: 2026-11-01 19:14:07 (PST)
 
 > **NOTE:**
 >
-> *Remark 4* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and [expressions](#def-expression) that [denote](#def-denotes) them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
+> *Remark 4* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and [expressions](#def-expression) that [denote](#def-denotes) them, such as a limit, a supremum, an integral with no closed form, or an $\arg \min$ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
 
 > **NOTE:**
 >
-> **Example 6 (A minimizer with no known formula)** The minimizer \\\arg \min\_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\\ is well defined, because \\x - \cos x\\ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
+> **Example 6 (A minimizer with no known formula)** The minimizer $\arg \min_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2$ is well defined, because $x - \cos x$ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
 
 ## 0.3 Exercises
 
@@ -279,7 +279,7 @@ Last modified: 2026-11-01 19:14:07 (PST)
 >
 > **Exercise 2 (Is an expression an algorithm? (part 2))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
 >
-> Which of the three does \\a x^2 + b x + c\\ name: a [function](functions.llms.md#def-function), an [expression](#def-expression) or an [algorithm](#def-algorithm)?
+> Which of the three does $a x^2 + b x + c$ name: a [function](functions.llms.md#def-function), an [expression](#def-expression) or an [algorithm](#def-algorithm)?
 
 > **NOTE:**
 >
@@ -289,31 +289,31 @@ Last modified: 2026-11-01 19:14:07 (PST)
 >
 > **Exercise 3 (Is an expression an algorithm? (part 3))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
 >
-> Does the [expression](#def-expression) \\a x^2 + b x + c\\ tell you which arithmetic steps to carry out?
+> Does the [expression](#def-expression) $a x^2 + b x + c$ tell you which arithmetic steps to carry out?
 
 > **NOTE:**
 >
-> *Solution 3*. Not by itself. The [expression](#def-expression) says *what* to compute, not *how* to compute it. Once \\a\\, \\b\\, \\c\\ and \\x\\ are known, evaluating its [parse tree](#def-parse-tree) from the leaves up is an [algorithm](#def-algorithm).
+> *Solution 3*. Not by itself. The [expression](#def-expression) says *what* to compute, not *how* to compute it. Once $a$, $b$, $c$ and $x$ are known, evaluating its [parse tree](#def-parse-tree) from the leaves up is an [algorithm](#def-algorithm).
 
 > **NOTE:**
 >
 > **Exercise 4 (Is an expression an algorithm? (part 4))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
 >
-> What do the rules of precedence (PEMDAS) contribute to the [expression](#def-expression) \\a x^2 + b x + c\\?
+> What do the rules of precedence (PEMDAS) contribute to the [expression](#def-expression) $a x^2 + b x + c$?
 
 > **NOTE:**
 >
-> *Solution 4*. Precedence resolves how the symbols group: \\a x^2 + b x + c\\ groups into three parts added together, with \\x^2\\ evaluated before the multiplication by \\a\\, and that grouping is a [tree](#def-parse-tree). Precedence is a rule for reading the [expression](#def-expression), not a step in an [algorithm](#def-algorithm) that evaluates it.
+> *Solution 4*. Precedence resolves how the symbols group: $a x^2 + b x + c$ groups into three parts added together, with $x^2$ evaluated before the multiplication by $a$, and that grouping is a [tree](#def-parse-tree). Precedence is a rule for reading the [expression](#def-expression), not a step in an [algorithm](#def-algorithm) that evaluates it.
 
 > **NOTE:**
 >
 > **Exercise 5 (Is an expression an algorithm? (part 5))** Use the setup of [Exercise 1](#exr-expression-or-algorithm).
 >
-> Write a second [expression](#def-expression) that [denotes](#def-denotes) the same [function](functions.llms.md#def-function) as \\a x^2 + b x + c\\ and needs fewer multiplications.
+> Write a second [expression](#def-expression) that [denotes](#def-denotes) the same [function](functions.llms.md#def-function) as $a x^2 + b x + c$ and needs fewer multiplications.
 
 > **NOTE:**
 >
-> *Solution 5*. \\(a x + b)\\x + c\\, Horner’s form. It uses two multiplications and two additions, where the first form, with \\x^2\\ computed as \\x \cdot x\\, uses three multiplications and two additions. The two [expressions](#def-expression) denote the same [function](functions.llms.md#def-function) and describe different [algorithms](#def-algorithm).
+> *Solution 5*. $(a x + b)\,x + c$, Horner’s form. It uses two multiplications and two additions, where the first form, with $x^2$ computed as $x \cdot x$, uses three multiplications and two additions. The two [expressions](#def-expression) denote the same [function](functions.llms.md#def-function) and describe different [algorithms](#def-algorithm).
 
 # Definitions on this page
 

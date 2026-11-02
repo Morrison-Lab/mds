@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-01 19:14:07 (PST)
+Last modified: 2026-11-02 10:28:57 (PST)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 
@@ -12,24 +12,24 @@ Mathematical notation is not standardized. This section states the conventions t
 >
 > | symbol | meaning | LaTeX |
 > |----|----|----|
-> | \\\neg\\ | [not](proof-writing.llms.md#def-not) | `\neg` |
-> | \\\forall\\ | [for all](proof-writing.llms.md#def-universal-quantifier) | `\forall` |
-> | \\\exists\\ | [there exists](proof-writing.llms.md#def-existential-quantifier) | `\exists` |
-> | \\\cup\\ | union, “or” | `\cup` |
-> | \\\cap\\ | intersection, “and” | `\cap` |
-> | \\\mid\\ | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|` |
-> | \\\sum\\ | [sum](algebra-sums.llms.md#sec-summation) | `\sum` |
-> | \\\prod\\ | product | `\prod` |
-> | \\\mu\\ | population mean, \\\mathbb{E}\[X\]\\, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ | `\mu` |
-> | \\\mathbb{E}\\ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
-> | \\x^{\top}\\ | transpose of \\x\\ | `x\'` |
-> | \\'\\ | transpose or [derivative](calculus-derivatives.llms.md#def-derivative)[^1] | `'` |
-> | \\\perp\\\\\\\perp\\ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
-> | \\\therefore\\ | [therefore](proof-writing.llms.md#def-logical-entailment), thus | `\therefore` |
-> | \\\eta\\ | [linear predictor](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") of a generalized linear model[^2] | `\eta` |
-> | \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\ | floor of \\x\\: largest [integer](number-systems.llms.md#def-integers) less than or equal to \\x\\ | `\lfloor x \rfloor` |
-> | \\{\mathopen{}\left\lceil x\right\rceil\mathclose{}}\\ | ceiling of \\x\\: smallest [integer](number-systems.llms.md#def-integers) greater than or equal to \\x\\ | `\lceil x \rceil` |
-> | \\\mathbb{1}\_{A}(x)\\, \\{\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}\\ | indicator function ([definition](indicator-functions.llms.md#def-indicator-function)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
+> | $\neg$ | [not](proof-writing.llms.md#def-not) | `\neg` |
+> | $\forall$ | [for all](proof-writing.llms.md#def-universal-quantifier) | `\forall` |
+> | $\exists$ | [there exists](proof-writing.llms.md#def-existential-quantifier) | `\exists` |
+> | $\cup$ | union, “or” | `\cup` |
+> | $\cap$ | intersection, “and” | `\cap` |
+> | $\mid$ | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|` |
+> | $\sum$ | [sum](algebra-sums.llms.md#sec-summation) | `\sum` |
+> | $\prod$ | product | `\prod` |
+> | $\mu$ | population mean, $\mathbb{E}[X]$, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$ | `\mu` |
+> | $\mathbb{E}$ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
+> | $x^{\top}$ | transpose of $x$ | `x\'` |
+> | $'$ | transpose or [derivative](calculus-derivatives.llms.md#def-derivative)[^1] | `'` |
+> | $\perp\!\!\!\perp$ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
+> | $\therefore$ | [therefore](proof-writing.llms.md#def-logical-entailment), thus | `\therefore` |
+> | $\eta$ | [linear predictor](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") of a generalized linear model[^2] | `\eta` |
+> | $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ | floor of $x$: largest [integer](number-systems.llms.md#def-integers) less than or equal to $x$ | `\lfloor x \rfloor` |
+> | ${\mathopen{}\left\lceil x\right\rceil\mathclose{}}$ | ceiling of $x$: smallest [integer](number-systems.llms.md#def-integers) greater than or equal to $x$ | `\lceil x \rceil` |
+> | $\mathbb{1}_{A}(x)$, ${\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}$ | indicator function ([definition](indicator-functions.llms.md#def-indicator-function)): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 >
 > Table 1: Notation used in this book
 
@@ -37,7 +37,7 @@ The links for conditioning, random variables, expectation, and independence go t
 
 ## 1 Writing math in Quarto
 
-The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in `$x^2$`, and displayed equations between double dollar signs, as in `$$x^2$$`. The [equations section of Quarto’s Markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#equations) shows the details. These notes also use shorthand macros, such as `\floor{x}` for \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\, defined in the `latex-macros` submodule’s `macros.qmd`.
+The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in `$x^2$`, and displayed equations between double dollar signs, as in `$$x^2$$`. The [equations section of Quarto’s Markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#equations) shows the details. These notes also use shorthand macros, such as `\floor{x}` for $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$, defined in the `latex-macros` submodule’s `macros.qmd`.
 
 ## 2 Subscripts and parentheses
 
@@ -45,16 +45,16 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > *Remark 1* (Our convention for subscripts and parentheses). Subscripts and parentheses both attach extra information to a symbol, and sources divide the work between them differently. These notes follow two rules of thumb:
 >
-> - A subscript names which member of an [indexed family](sets.llms.md#def-indexed-family) we mean. It holds an index, such as the \\i\\ in \\x_i\\, or a parameter that picks one [function](functions.llms.md#def-function) or distribution out of the family, such as the \\\theta\\ in \\f\_\theta\\.
-> - Parentheses hold the input a function is evaluated at, as in \\f(x)\\.
+> - A subscript names which member of an [indexed family](sets.llms.md#def-indexed-family) we mean. It holds an index, such as the $i$ in $x_i$, or a parameter that picks one [function](functions.llms.md#def-function) or distribution out of the family, such as the $\theta$ in $f_\theta$.
+> - Parentheses hold the input a function is evaluated at, as in $f(x)$.
 >
-> Under these rules, \\f\_\theta(x)\\ reads “the member of the family labeled \\\theta\\, evaluated at \\x\\”. The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-subscripts-parentheses) gives the reason for this split and explains how to read a source that divides the work differently.
+> Under these rules, $f_\theta(x)$ reads “the member of the family labeled $\theta$, evaluated at $x$”. The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-subscripts-parentheses) gives the reason for this split and explains how to read a source that divides the work differently.
 
 The [Notation Across Sources page](https://morrison-lab.github.io/macros/notation-across-sources.html#sec-notation-subscripts) of the macros site tabulates our form of each object beside the other forms you may encounter.
 
 > **NOTE:**
 >
-> **Example 1 (Reading \\X_t(\omega)\\)** Let \\X_t\\ be the position of a particle at time \\t \ge 0\\. Then \\X_3\\ is the random position at time 3, and \\X_3(\omega)\\ is its value when the experiment’s [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) is \\\omega\\. Holding \\\omega\\ fixed and letting \\t\\ vary gives the particle’s whole path for that outcome. A source that writes \\X(t, \omega)\\ means the same thing, with both arguments in parentheses.
+> **Example 1 (Reading** $X_t(\omega)$) Let $X_t$ be the position of a particle at time $t \ge 0$. Then $X_3$ is the random position at time 3, and $X_3(\omega)$ is its value when the experiment’s [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) is $\omega$. Holding $\omega$ fixed and letting $t$ vary gives the particle’s whole path for that outcome. A source that writes $X(t, \omega)$ means the same thing, with both arguments in parentheses.
 
 ## 3 Why is notation in probability and statistics so inconsistent and disorganized?
 
@@ -91,4 +91,4 @@ Back to top
 
 [^1]: depending on whether it is applied to a matrix or a function
 
-[^2]: A generalized linear model (GLM) is a regression model in which a chosen function \\g\\, the link function, of the population mean \\\mu\\ of the outcome equals the linear predictor \\\eta = x^{\top} \beta\\, a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of the predictor values \\x\\ with coefficients \\\beta\\: \\g(\mu) = \eta\\.
+[^2]: A generalized linear model (GLM) is a regression model in which a chosen function $g$, the link function, of the population mean $\mu$ of the outcome equals the linear predictor $\eta = x^{\top} \beta$, a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of the predictor values $x$ with coefficients $\beta$: $g(\mu) = \eta$.
