@@ -24,7 +24,13 @@ mathematical notation, algebra
 (including exponentials and logarithms),
 univariate calculus, linear algebra, vector calculus, optimization, and proof writing.
 Some key results are listed here,
-organized by topic:
+organized by topic.
+
+The first six topics are the foundations.
+They assume no calculus,
+so a course on discrete math,
+such as [Math for Computer Science](https://morrison-lab.github.io/mcs/),
+can build on them directly:
 
 - [Notation](notation.qmd):
   common symbols
@@ -46,6 +52,13 @@ organized by topic:
 - [Algebra](algebra.qmd):
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
   percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
+- [Proof Writing](proof-writing.qmd):
+  propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.qmd#def-derivation)
+- [Induction and Recursion](induction.qmd):
+  recursively defined sequences and strong induction
+
+The remaining topics build on the foundations and on each other:
+
 - [Measures](measures.qmd):
   $\sigma$-algebras, [finite](functions.qmd#def-finite-set) and [countable additivity](measures.qmd#def-countable-additivity),
   measures, and the counting measure
@@ -65,8 +78,6 @@ organized by topic:
 - [Optimization](optimization.qmd):
   optimality conditions, Taylor approximations, convexity in several variables,
   Lagrange multipliers, Newton's method, and gradient descent
-- [Proof Writing](proof-writing.qmd):
-  propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.qmd#def-derivation)
 
 ## Further reading {.unnumbered}
 
