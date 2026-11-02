@@ -93,7 +93,8 @@ the [Hessian](vector-calculus.qmd#def-hessian) is [positive definite](linear-alg
 The level curves close around a [strict local minimizer](#def-strict-local-minimizer).
 At the stationary point $\vzero$ of $x_1^2 - x_2^2$ (vermilion triangle),
 the Hessian is not positive definite.
-The value of $x_1^2 - x_2^2$ rises along the first coordinate axis and falls along the second.
+Along the first coordinate axis, $x_1^2 - x_2^2$ rises,
+and along the second it falls.
 So $\vzero$ is not a [local minimizer](algebra.qmd#def-local-minimizer).
 
 :::
