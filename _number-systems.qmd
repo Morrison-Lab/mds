@@ -8,7 +8,7 @@ This page defines those number systems.
 It also defines the words that sort their members:
 even and odd integers, and rational and irrational real numbers.
 Finally, it defines divisibility, primes, congruence,
-the factorial and the floor of a number.
+the factorial of a non-negative integer and the floor of a real number.
 
 :::
 
@@ -56,7 +56,7 @@ the factorial and the floor of a number.
 
 {{< include mds/_subfiles/number-systems/_def-factorial.qmd >}}
 
-## Divisibility {#sec-number-systems-divisibility}
+## Divisibility, primes and congruence {#sec-number-systems-divisibility}
 
 {{< include mds/_subfiles/number-systems/_def-divides.qmd >}}
 

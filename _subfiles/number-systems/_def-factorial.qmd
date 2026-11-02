@@ -1,7 +1,8 @@
 :::{#def-factorial}
 #### Factorial
 
-For a natural number (@def-natural-numbers) $n$, the **factorial** of $n$ [@wikipedia_factorial], written $n!$,
+For a non-negative integer (@def-nonnegative-integers) $n$, the **factorial** of $n$ [@wikipedia_factorial], written $\factorial{n}$,
 is the product $1 \cdot 2 \cdots n$ of the natural numbers from 1 to $n$.
+For $n = 0$ that product has no factors, and $\factorial{0} = 1$.
 
 :::
