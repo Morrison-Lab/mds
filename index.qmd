@@ -27,7 +27,8 @@ Some key results are listed here,
 organized by topic.
 
 The first six topics are the foundations.
-They assume no calculus,
+Apart from a few remarks on limits and integral notation in Algebra,
+they assume no calculus,
 so a course on discrete math,
 such as [Math for Computer Science](https://morrison-lab.github.io/mcs/),
 can build on them directly:
