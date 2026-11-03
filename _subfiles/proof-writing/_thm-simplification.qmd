@@ -14,7 +14,8 @@ $$
 
 Suppose the [premise](#def-premise) is true.
 By the definition of [and](#def-and),
-$P \land Q$ is true only if $P$ and $Q$ are both true.
+$P \land Q$ is true
+only if $P$ and $Q$ are both true.
 So the [conclusion](#def-conclusion) $P$ is true.
 
 :::
