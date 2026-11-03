@@ -102,6 +102,14 @@ and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/number-systems/_def-floor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_exm-floor.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/number-systems/_def-irrational-numbers.qmd >}}
 
 {{< slidebreak >}}
