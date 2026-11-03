@@ -81,6 +81,14 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/sets/_def-power-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-power-set.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/sets/_def-interval.qmd >}}
 
 {{< slidebreak >}}
@@ -190,6 +198,22 @@ the expressions that write functions down and the algorithms that compute them.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/sets/_exm-cartesian-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_def-tuple.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-tuple.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_def-cartesian-product-many.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-cartesian-product-many.qmd >}}
 
 # Extended non-negative real numbers
 
