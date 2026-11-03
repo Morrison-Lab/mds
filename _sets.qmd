@@ -21,11 +21,27 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/sets/_def-roster-notation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-roster-notation.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/sets/_def-set-builder.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/sets/_exm-set-builder.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_def-set-builder-expression.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets/_exm-set-builder-expression.qmd >}}
 
 {{< slidebreak >}}
 
