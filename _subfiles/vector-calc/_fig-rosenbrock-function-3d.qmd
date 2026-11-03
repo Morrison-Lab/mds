@@ -39,7 +39,7 @@ rf_pts_sf <- tibble::tibble(
 rf_pz_sf <- 100 * (rf_pts_sf$x2 - rf_pts_sf$x1^2)^2
 rf_pts_sf$z <- rf_pz_sf + (1 - rf_pts_sf$x1)^2
 rf_marker_sf <- list(color = ~color, size = 6, symbol = ~symbol)
-rf_c_x1_sf <- seq(-2, 1.7, length.out = 200)
+rf_c_x1_sf <- seq(-1.7, 1.7, length.out = 200)
 rf_curve_sf <- tibble::tibble(x1 = rf_c_x1_sf)
 rf_curve_sf$x2 <- rf_curve_sf$x1^2
 rf_curve_sf$z <- (1 - rf_curve_sf$x1)^2
@@ -127,7 +127,7 @@ def rf_f_3d(x1, x2):
     return 100 * (x2 - x1**2) ** 2 + (1 - x1) ** 2
 
 
-rf_curve_x1_3d = np.linspace(-2, 1.7, 200)
+rf_curve_x1_3d = np.linspace(-1.7, 1.7, 200)
 rf_curve_x2_3d = rf_curve_x1_3d**2
 fig = plt.figure(figsize=(6, 4.5))
 ax = fig.add_subplot(projection="3d")

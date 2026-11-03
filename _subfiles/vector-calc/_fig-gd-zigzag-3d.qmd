@@ -129,6 +129,7 @@ The [graph](functions.qmd#def-graph) of $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)
 the surface whose [level curves](vector-calculus.qmd#def-level-curve) are in @fig-gd-zigzag,
 with the same four [iterates](#def-iterate) of [gradient descent](#def-gradient-descent) lifted onto it.
 The surface is steeper along the $x_2$ axis than along the $x_1$ axis,
-so each step overshoots the bottom of the valley and the path zigzags down toward the [minimizer](algebra.qmd#def-global-minimizer) $\vzero$ (diamond).
+so each step overshoots the bottom of the valley and
+the path zigzags down toward the [minimizer](algebra.qmd#def-global-minimizer) $\vzero$ (diamond).
 
 :::
