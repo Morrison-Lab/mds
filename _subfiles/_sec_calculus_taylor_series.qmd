@@ -1,3 +1,99 @@
 # Taylor series {#sec-taylor-series}
 
-{{< include mds/_calc-taylor-series.qmd >}}
+{{< include mds/_subfiles/derivatives/_def-taylor-polynomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-exponential.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-maclaurin-polynomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-taylor-series.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-taylor-series.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-poly-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-poly-nonzero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-cosine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-sine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-cos-scaled.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-cos-cubed.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-exp-base.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-exp-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-normal-density.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_thm-taylor-normal-density.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-sqrt.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-cube-root.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-x-log-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-one-plus-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_thm-taylor-log-one-plus-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-one-minus-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_thm-taylor-log-one-minus-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-product-exp.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-product-cos-log.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-scaled.qmd >}}
