@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:49:34 (PST)
+Last modified: 2026-11-02 22:06:16 (PST)
 
 > **NOTE:**
 >
-> This section is adapted from the convexity part of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of [Section 2 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#sec-optimality-vector). The source defines both concave and strictly concave as “$-f$ is strictly convex”; here $f$ is concave when $-f$ is convex. The source states that an intersection of convex sets is convex and that a maximum of convex functions is convex for any finite number of them; here each is stated for two and the general case follows by induction. These parts of the source are not part of this section:
+> This section is adapted from the convexity part of Zhou [\[1\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of [Section  in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#sec-optimality-vector). The source defines both concave and strictly concave as “$-f$ is strictly convex”; here $f$ is concave when $-f$ is convex. The source states that an intersection of convex sets is convex and that a maximum of convex functions is convex for any finite number of them; here each is stated for two and the general case follows by induction. These parts of the source are not part of this section:
 >
 > - its catalogs of convex sets and convex functions, including the positive semidefinite matrices and $-\log \det$
 > - intersections of infinitely many convex sets, and suprema of infinitely many convex functions
@@ -24,7 +24,7 @@ Last modified: 2026-11-02 13:49:34 (PST)
 >
 > - $\mathbb{R}^p$ is convex, and so is any set with at most one point.
 >
-> - The closed ball ([closed ball](vector-calculus.llms.md#def-closed-ball)) $B = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \le r\right\}\mathclose{}$ is convex: for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in B$ and $t \in [0, 1]$,
+> - The [closed ball](vector-calculus.llms.md#def-closed-ball) $B = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \le r\right\}\mathclose{}$ is convex: for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in B$ and $t \in [0, 1]$,
 >
 >   $$\begin{aligned}
 >   \mathopen{}\left\lVert t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}
@@ -121,7 +121,7 @@ Last modified: 2026-11-02 13:49:34 (PST)
 
 > **NOTE:**
 >
-> **Example 4 (Intersecting a ball with a half-plane)** The closed unit ball ([unit ball](vector-calculus.llms.md#def-unit-ball)) in $\mathbb{R}^2$ is convex ([Example 1](#exm-convex-set)), and so is the half-plane ([Definition 2](#def-half-space)) $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 \ge 0\right\}\mathclose{}$: if $x_1 \ge 0$ and $y_1 \ge 0$, then $t x_1 + (1 - t) y_1 \ge 0$ for $t \in [0, 1]$. By [Theorem 1](#thm-convex-intersection), the closed half-disk $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \le 1,\ x_1 \ge 0\right\}\mathclose{}$ is convex. A union need not be convex: $\mathopen{}\left\{x \in \mathbb{R}: x \le -1\right\}\mathclose{}$ and $\mathopen{}\left\{x \in \mathbb{R}: x \ge 1\right\}\mathclose{}$ are convex, but their union is the set of [Example 2](#exm-not-convex-set).
+> **Example 4 (Intersecting a ball with a half-plane)** The closed [unit ball](vector-calculus.llms.md#def-unit-ball) in $\mathbb{R}^2$ is [convex](optimization-convexity.llms.md#def-convex-set) ([Example 1](#exm-convex-set)), and so is the half-plane ([Definition 2](#def-half-space)) $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 \ge 0\right\}\mathclose{}$: if $x_1 \ge 0$ and $y_1 \ge 0$, then $t x_1 + (1 - t) y_1 \ge 0$ for $t \in [0, 1]$. By [Theorem 1](#thm-convex-intersection), the closed half-disk $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \le 1,\ x_1 \ge 0\right\}\mathclose{}$ is convex. A union need not be convex: $\mathopen{}\left\{x \in \mathbb{R}: x \le -1\right\}\mathclose{}$ and $\mathopen{}\left\{x \in \mathbb{R}: x \ge 1\right\}\mathclose{}$ are convex, but their union is the set of [Example 2](#exm-not-convex-set).
 
 > **NOTE:**
 >
@@ -392,7 +392,7 @@ Last modified: 2026-11-02 13:49:34 (PST)
 
 > **NOTE:**
 >
-> **Definition 7 (Tangent plane)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a gradient at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ ([gradient](vector-calculus.llms.md#def-vector-derivative)). The **tangent plane** [\[4\]](#ref-wikipedia_tangent_space) to the [graph](functions.llms.md#def-graph) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the graph of the function
+> **Definition 7 (Tangent plane)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a [gradient](vector-calculus.llms.md#def-vector-derivative) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The **tangent plane** [\[4\]](#ref-wikipedia_tangent_space) to the [graph](functions.llms.md#def-graph) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the graph of the function
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right)\mathclose{}}^{\top} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}),$$
 >
@@ -436,7 +436,7 @@ Last modified: 2026-11-02 13:49:34 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (First-order characterization of convexity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first partial derivatives that are continuous on $\mathbb{R}^p$ ([continuity](vector-calculus.llms.md#def-continuous-on)). Then $f$ is [convex](algebra-sums.llms.md#def-convex-function) if and only if
+> **Theorem 4 (First-order characterization of convexity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. Then $f$ is [convex](algebra-sums.llms.md#def-convex-function) if and only if
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \ge f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right)\mathclose{}}^{\top} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
 > \qquad \text{for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p:
@@ -446,7 +446,7 @@ Last modified: 2026-11-02 13:49:34 (PST)
 
 > **NOTE:**
 >
-> *Proof*. **Only if.** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, and let $g(t) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}})$. The inner function $t \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ has derivative ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top}$ ([vector-valued derivative](vector-calculus.llms.md#def-vector-valued-derivative)), so the vector chain rule ([vector chain rule](vector-calculus.llms.md#thm-chain-vec)) gives
+> *Proof*. **Only if.** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, and let $g(t) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}})$. The [inner function](functions.llms.md#def-inner-function) $t \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ has [derivative](vector-calculus.llms.md#def-vector-valued-derivative) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top}$, so the [vector chain rule](vector-calculus.llms.md#thm-chain-vec) gives
 >
 > $$\begin{aligned}
 > g'(0)
@@ -570,7 +570,7 @@ Last modified: 2026-11-02 13:49:34 (PST)
 
 > **NOTE:**
 >
-> **Theorem 5 (Second-derivative test for convexity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and second partial derivatives that are continuous on $\mathbb{R}^p$ ([continuity](vector-calculus.llms.md#def-continuous-on)).
+> **Theorem 5 (Second-derivative test for convexity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and second partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$.
 >
 > 1.  If $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f$ is [convex](algebra-sums.llms.md#def-convex-function).
 > 2.  If $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f$ is strictly convex ([Definition 3](#def-strictly-convex)).
@@ -594,11 +594,11 @@ Last modified: 2026-11-02 13:49:34 (PST)
 >
 > **Example 11 (Using the Hessian to show convexity)**  
 >
-> - For a symmetric positive semidefinite $\mathbf{A}$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has Hessian $2 \mathbf{A}$ ([Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), which is positive semidefinite because ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} (2 \mathbf{A}) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = 2\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \ge 0$; so $f$ is convex.
+> - For a symmetric positive semidefinite $\mathbf{A}$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has [Hessian](vector-calculus.llms.md#def-hessian) $2 \mathbf{A}$ (by the [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), which is positive semidefinite because ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} (2 \mathbf{A}) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = 2\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \ge 0$; so $f$ is convex.
 >
 > - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ has Hessian $2 \mathbf{I}_2$ ([Example 16 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-second-order-condition)), which is positive definite, so $f$ is strictly convex.
 >
-> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ has Hessian $e^{u} \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}$ with $u = 2x_1 + x_2$ ([Example](vector-calculus.llms.md#exm-hessian)), and
+> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ has Hessian $e^{u} \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}$ with $u = 2x_1 + x_2$ (the [Hessian example](vector-calculus.llms.md#exm-hessian)), and
 >
 >   $$\begin{aligned}
 >   {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top}\,\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}
@@ -615,6 +615,57 @@ Last modified: 2026-11-02 13:49:34 (PST)
 >   \end{aligned}$$
 >
 >   and $f = 1 - t$ is linear in $t$, so the convexity inequality holds with equality there.
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> ch_x1_ch <- seq(-1, 1, length.out = 101)
+> ch_x2_ch <- seq(-3, 3, length.out = 101)
+> ch_grid_ch <- tidyr::expand_grid(x1 = ch_x1_ch, x2 = ch_x2_ch)
+> ch_u_ch <- 2 * ch_grid_ch$x1 + ch_grid_ch$x2
+> ch_grid_ch$z <- exp(ch_u_ch) - ch_grid_ch$x1
+> ch_line_x1_ch <- c(-1, 1)
+> ch_line_x2_ch <- c(2, -2)
+> ch_line_ch <- tibble::tibble(x1 = ch_line_x1_ch, x2 = ch_line_x2_ch)
+> ch_aes_ch <- ggplot2::aes(x1, x2)
+> ch_z_aes_ch <- ggplot2::aes(z = z)
+> ggplot2::ggplot(ch_grid_ch, ch_aes_ch) +
+>   ggplot2::geom_contour(ch_z_aes_ch, colour = "#0072B2", bins = 12) +
+>   ggplot2::geom_line(
+>     data = ch_line_ch, colour = "#D55E00", linetype = "dashed"
+>   ) +
+>   ggplot2::labs(x = "x1", y = "x2")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> ch_x1_ax = np.linspace(-1, 1, 101)
+> ch_x2_ax = np.linspace(-3, 3, 101)
+> ch_xx_ax, ch_yy_ax = np.meshgrid(ch_x1_ax, ch_x2_ax)
+> ch_z_ax = np.exp(2 * ch_xx_ax + ch_yy_ax) - ch_xx_ax
+> fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+> ax.contour(ch_xx_ax, ch_yy_ax, ch_z_ax, levels=12, colors="#0072B2")
+> ax.plot([-1, 1], [2, -2], "--", color="#D55E00")
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png)](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png "Figure 5: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
+>
+> ## Python
+>
+> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png "Figure 5: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
+>
+> Figure 5: [Level curves](vector-calculus.llms.md#def-level-set) of the third [function](functions.llms.md#def-function) in [Example 11](#exm-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the function is [linear](algebra-exponentials.llms.md#def-linear-function), so the function is [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
 
 > **NOTE:**
 >

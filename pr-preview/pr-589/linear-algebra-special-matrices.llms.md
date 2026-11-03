@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:49:34 (PST)
+Last modified: 2026-11-02 22:06:16 (PST)
 
-## 0.1 Special Matrices
+# 1 Special Matrices
 
 Some special matrices appeared earlier:
 
@@ -652,7 +652,7 @@ Some special matrices appeared earlier:
 >
 > which is $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = 5$.
 
-## 0.2 Quadratic Forms
+# 2 Quadratic Forms
 
 > **NOTE:**
 >
@@ -797,7 +797,7 @@ Some special matrices appeared earlier:
 >
 > Both quadratic forms equal the sum of their matrix’s entries, because every entry of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $1$.
 
-## 0.3 Trace and Matrix Inner Product
+# 3 Trace and Matrix Inner Product
 
 > **NOTE:**
 >
@@ -1139,7 +1139,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 >
 > which matches $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F = \sqrt{30}$ from [Example 23](#exm-frobenius-norm).
 
-## 0.4 Matrix Decompositions
+# 4 Matrix Decompositions
 
 > **NOTE:**
 >
@@ -2093,7 +2093,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 >
 > For example, in [Example 30](#exm-svd-evd) the eigenvalues of ${\mathbf{A}}^{\top}\mathbf{A}$ are $4$ and $2$, and $\sqrt{4} = 2$ and $\sqrt{2}$ are the singular values $\sigma_1$ and $\sigma_2$ of $\mathbf{A}$ from [Example 29](#exm-svd).
 
-## 0.5 Definite Matrices
+# 5 Definite Matrices
 
 > **NOTE:**
 >
@@ -2321,9 +2321,9 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > print(sv_mcn)
 > #> [2.0050125 0.0049875]
 > print(sv_mcn[0] / sv_mcn[1])
-> #> 402.0075124842952
+> #> 402.0075124842948
 > print(sv_mcn_scaled[0] / sv_mcn_scaled[1])
-> #> 402.00751248429384
+> #> 402.00751248429236
 > ```
 >
 > The [singular values](#def-singular-values) are 2.005 and 0.005, so $\kappa(\mathbf{A}) =$ 402. Multiplying every entry by $1000$ multiplies both singular values by $1000$, so the [condition number](#def-matrix-condition-number) is still 402.
@@ -2372,9 +2372,9 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > kappa_a_cng = sv_mcn[0] / sv_mcn[1]
 > sv_gram_cng = np.linalg.svd(gram_cng, compute_uv=False)
 > print(sv_gram_cng[0] / sv_gram_cng[1])
-> #> 161610.04009142585
+> #> 161610.0400912735
 > print(kappa_a_cng ** 2)
-> #> 161610.04009381076
+> #> 161610.04009381044
 > ```
 >
 > The [condition number](#def-matrix-condition-number) of ${\mathbf{A}}^{\top}\mathbf{A}$ is 161610, and $\kappa(\mathbf{A})^2 =$ 161610, as [Theorem 19](#thm-condition-number-gram) says.
@@ -2796,7 +2796,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 >
 > 4.  **Weighted and generalized least squares**: In linear regression $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\approx \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, when observation errors have unequal variances or known correlations with positive definite covariance matrix $\mathbf{\Omega}$, ordinary least squares is inefficient. Generalized least squares minimizes the residual norm in the inner product space induced by $\mathbf{W} = \mathbf{\Omega}^{-1}$: $$\min_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}_{\mathbf{W}}^2 = \min_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} {\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rangle\mathclose{}}_{\mathbf{W}}.$$
 
-## 0.6 Determinants
+# 6 Determinants
 
 > **NOTE:**
 >

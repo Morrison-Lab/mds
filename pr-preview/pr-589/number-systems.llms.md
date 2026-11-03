@@ -2,15 +2,25 @@
 
 Code
 
+- [Show All Code](javascript:void(0))
+
+- [Hide All Code](javascript:void(0))
+
+- 
+
+  ------------------------------------------------------------------------
+
+- [View Source](javascript:void(0))
+
 Published
 
-Last modified: 2026-11-02 13:49:34 (PST)
+Last modified: 2026-11-02 22:06:16 (PST)
 
 > **NOTE:**
 >
-> *Remark*. Probability and statistics count with the integers and natural numbers and measure with the real numbers. This page defines those number systems. It also defines the words that sort their members: even and odd integers, and rational and irrational real numbers.
+> *Remark*. Probability and statistics count with the integers and natural numbers and measure with the real numbers. This page defines those number systems. It also defines the words that sort their members: even and odd integers, and rational and irrational real numbers. Finally, it defines divisibility, [primes](#def-prime) and congruence, and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative-integers).
 
-## 0.1 Natural numbers
+# 1 Natural numbers
 
 > **NOTE:**
 >
@@ -100,17 +110,66 @@ Last modified: 2026-11-02 13:49:34 (PST)
 >
 > Source: [Wikipedia, “Natural number”, “Terminology and notation” and “Zero as natural number”](https://en.wikipedia.org/w/index.php?title=Natural_number&oldid=1375965996), which cites ISO 80000-2:2019 and the textbooks using each notation.
 
-## 0.2 Rational, real, and irrational numbers
+> **NOTE:**
+>
+> **Definition 8 (Factorial)** For a [non-negative integer](#def-nonnegative-integers) $n$, the **factorial** of $n$ [\[4\]](#ref-wikipedia_factorial), written ${{n}!}$, is $1 \cdot 2 \cdots n$, the [natural numbers](#def-natural-numbers) from 1 to $n$ multiplied together. For $n = 0$ there is nothing to multiply, and ${{0}!} = 1$.
 
 > **NOTE:**
 >
-> **Definition 8 (Rational numbers)** A **rational number** [\[4\]](#ref-wikipedia_rational_number) is a number that can be written as a fraction $\frac{a}{b}$, where $a$ and $b$ are integers ([Definition 1](#def-integers)) and $b \ne 0$. The set of rational numbers is written $\mathbb{Q}$:
+> **Example 4 (Factorials)**  
+>
+> - ${{3}!} = 1 \cdot 2 \cdot 3 = 6$.
+> - ${{4}!} = 1 \cdot 2 \cdot 3 \cdot 4 = 24$.
+> - ${{0}!} = 1$, by the [definition of the factorial](#def-factorial).
+
+# 2 Divisibility, primes and congruence
+
+> **NOTE:**
+>
+> **Definition 9 (Divides)** Let $a$ and $b$ each be an [integer](#def-integers). We say that $a$ **divides** $b$, written $a \mid b$, if $b = a c$ for some integer $c$. When $a$ does not divide $b$, we write $a \nmid b$.
+
+> **NOTE:**
+>
+> **Example 5 (Divisors and non-divisors)**  
+>
+> - $3$ [divides](#def-divides) $12$, $3 \mid 12$, because $12 = 3 \cdot 4$ and $4$ is an [integer](#def-integers).
+> - $5 \nmid 12$, because $5 \cdot 2 = 10 < 12 < 15 = 5 \cdot 3$, so no integer $c$ has $5 c = 12$.
+> - Every integer $a$ [divides](#def-divides) $0$, because $0 = a \cdot 0$.
+
+> **NOTE:**
+>
+> **Definition 10 (Prime number)** An [integer](#def-integers) $n \ge 2$ is **prime** if no [positive integer](#def-positive-integer) other than $1$ and $n$ [divides](#def-divides) it [\[5\]](#ref-wikipedia_prime_number).
+
+> **NOTE:**
+>
+> **Example 6 (Primes and non-primes)**  
+>
+> - $7$ is [prime](#def-prime): none of $2$, $3$, $4$, $5$ and $6$ [divides](#def-divides) $7$, and no [integer](#def-integers) above $7$ does, so its only positive divisors are $1$ and $7$.
+> - $9$ is not prime, because $3$ divides $9$.
+> - $1$ is not prime, because the definition requires $n \ge 2$.
+
+> **NOTE:**
+>
+> **Definition 11 (Congruence modulo** $n$) Let $a$ and $b$ be [integers](#def-integers), and let $n$ be a [positive integer](#def-positive-integer). We say that $a$ is **congruent to** $b$ modulo $n$, written $a \equiv b \pmod{n}$, if $n$ [divides](#def-divides) $a - b$, written $n \mid (a - b)$, [\[6\]](#ref-wikipedia_modular_arithmetic). When $a$ is not congruent to $b$ modulo $n$, we write $a \not\equiv b \pmod{n}$.
+
+> **NOTE:**
+>
+> **Example 7 (Clock arithmetic)**  
+>
+> - $17$ is [congruent to](#def-congruence) $5$ modulo $12$, $17 \equiv 5 \pmod{12}$, because $17 - 5 = 12$ and $12 \mid 12$. On a 12-hour clock, hour 17 is 5 o’clock.
+> - $17 \not\equiv 4 \pmod{12}$, because $17 - 4 = 13$ and $12 \nmid 13$.
+
+# 3 Rational, real, and irrational numbers
+
+> **NOTE:**
+>
+> **Definition 12 (Rational numbers)** A **rational number** [\[7\]](#ref-wikipedia_rational_number) is a number that can be written as a fraction $\frac{a}{b}$, where $a$ and $b$ are integers ([Definition 1](#def-integers)) and $b \ne 0$. The set of rational numbers is written $\mathbb{Q}$:
 >
 > $$\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\{\frac{a}{b} : a \in \mathbb{Z},\ b \in \mathbb{Z},\ b \ne 0\right\}\mathclose{}$$
 
 > **NOTE:**
 >
-> **Example 4 (Rational numbers)**  
+> **Example 8 (Rational numbers)**  
 >
 > - $\frac{3}{4}$ is rational, with $a = 3$ and $b = 4$.
 > - $0.75$ is rational, because $0.75 = \frac{3}{4}$.
@@ -119,30 +178,65 @@ Last modified: 2026-11-02 13:49:34 (PST)
 
 > **NOTE:**
 >
-> **Definition 9 (Real numbers)** A **real number** [\[5\]](#ref-wikipedia_real_number) is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written $\mathbb{R}$.
+> **Definition 13 (Real numbers)** A **real number** [\[8\]](#ref-wikipedia_real_number) is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written $\mathbb{R}$.
 
 > **NOTE:**
 >
-> *Remark 1* (A working definition). [Definition 9](#def-real-numbers) is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. Rudin [\[6\]](#ref-rudin1976principles), Appendix to Chapter 1 constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, $0.999\ldots$ and $1.000\ldots$ are the same real number, $1$.
+> *Remark 1* (A working definition). [Definition 13](#def-real-numbers) is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. Rudin [\[9\]](#ref-rudin1976principles), Appendix to Chapter 1 constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, $0.999\ldots$ and $1.000\ldots$ are the same real number, $1$.
 
 > **NOTE:**
 >
-> **Example 5 (Real numbers)**  
+> **Example 9 (Real numbers)**  
 >
 > - $3$, $-0.5$, and $\frac{1}{3} = 0.333\ldots$ are real numbers.
 > - $\pi = 3.14159\ldots$ is a real number.
-> - Every rational number ([Definition 8](#def-rational-numbers)) is a real number, so $\mathbb{N}\subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}$.
+> - Every rational number ([Definition 12](#def-rational-numbers)) is a real number, so $\mathbb{N}\subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}$.
 
 > **NOTE:**
 >
-> **Definition 10 (Irrational numbers)** An **irrational number** [\[7\]](#ref-wikipedia_irrational_number) is a real number ([Definition 9](#def-real-numbers)) that is not rational ([Definition 8](#def-rational-numbers)).
+> **Definition 14 (Floor)** The **floor** $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ of a [real number](#def-real-numbers) $x$ [\[10\]](#ref-wikipedia_floor_ceiling) is the largest [integer](#def-integers) that is at most $x$.
 
 > **NOTE:**
 >
-> **Example 6 (Irrational numbers)**  
+> **Example 10 (Floors)**  
 >
-> - $\sqrt{2} = 1.41421\ldots$, the [square root](algebra-basics.llms.md#def-square-root) of $2$, is irrational: no fraction of integers $\frac{a}{b}$ squares to $2$ [\[8\]](#ref-wikipedia_square_root_of_2).
-> - $\pi = 3.14159\ldots$ is irrational [\[9\]](#ref-wikipedia_proof_that_pi_is_irrational).
+> - $\mathopen{}\left\lfloor 2.7\right\rfloor\mathclose{} = 2$, by the [definition of the floor](#def-floor).
+> - $\mathopen{}\left\lfloor 3\right\rfloor\mathclose{} = 3$, because $3$ is already an [integer](#def-integers).
+> - $\mathopen{}\left\lfloor-1.5\right\rfloor\mathclose{} = -2$, because $-2 \le -1.5 < -1$.
+>
+> The [graph](functions.llms.md#def-graph) of $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ is a staircase: each step starts at an integer, with a filled dot, and stops before the next integer, at an open dot.
+>
+> Show code
+>
+> ``` downlit
+> # one step per integer k, from x = k to x = k + 1 at height k
+> k <- -3:2
+> steps <- tibble::tibble(x = k, xend = k + 1, y = k)
+>
+> floor_plot <- ggplot2::ggplot(steps) +
+>   ggplot2::geom_segment(ggplot2::aes(x = x, xend = xend, y = y, yend = y)) +
+>   ggplot2::geom_point(ggplot2::aes(x = x, y = y), size = 2) +
+>   ggplot2::geom_point(
+>     ggplot2::aes(x = xend, y = y),
+>     size = 2, shape = 21, fill = "white"
+>   ) +
+>   ggplot2::labs(x = "x", y = "floor of x")
+>
+> floor_plot
+> ```
+>
+> [![The graph of the floor function from -3 to 3. It is a staircase of horizontal steps one unit long. Each step starts with a filled dot at an integer k at height k and ends with an open dot at k + 1.](number-systems_files/figure-html/unnamed-chunk-1-1.png)](number-systems_files/figure-html/unnamed-chunk-1-1.png)
+
+> **NOTE:**
+>
+> **Definition 15 (Irrational numbers)** An **irrational number** [\[11\]](#ref-wikipedia_irrational_number) is a real number ([Definition 13](#def-real-numbers)) that is not rational ([Definition 12](#def-rational-numbers)).
+
+> **NOTE:**
+>
+> **Example 11 (Irrational numbers)**  
+>
+> - $\sqrt{2} = 1.41421\ldots$, the [square root](algebra-basics.llms.md#def-square-root) of $2$, is irrational: no fraction of integers $\frac{a}{b}$ squares to $2$ [\[12\]](#ref-wikipedia_square_root_of_2).
+> - $\pi = 3.14159\ldots$ is irrational [\[13\]](#ref-wikipedia_proof_that_pi_is_irrational).
 > - $1.5$ is not irrational, because $1.5 = \frac{3}{2}$ is rational.
 
 # Definitions on this page
@@ -154,9 +248,14 @@ Last modified: 2026-11-02 13:49:34 (PST)
 - [Definition 5 (Odd integer)](#def-odd)
 - [Definition 6 (Natural numbers (our convention))](#def-natural-numbers)
 - [Definition 7 (Non-negative integers)](#def-nonnegative-integers)
-- [Definition 8 (Rational numbers)](#def-rational-numbers)
-- [Definition 9 (Real numbers)](#def-real-numbers)
-- [Definition 10 (Irrational numbers)](#def-irrational-numbers)
+- [Definition 8 (Factorial)](#def-factorial)
+- [Definition 9 (Divides)](#def-divides)
+- [Definition 10 (Prime number)](#def-prime)
+- [Definition 11 (Congruence modulo](#def-congruence) $n$)
+- [Definition 12 (Rational numbers)](#def-rational-numbers)
+- [Definition 13 (Real numbers)](#def-real-numbers)
+- [Definition 14 (Floor)](#def-floor)
+- [Definition 15 (Irrational numbers)](#def-irrational-numbers)
 
 Back to top
 
@@ -176,24 +275,40 @@ Wikipedia contributors, “Natural number — Wikipedia, the free encyclopedia.�
 
 \[4\]
 
-Wikipedia contributors, “Rational number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Rational_number>
+Wikipedia contributors, “Factorial — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Factorial>
 
 \[5\]
 
-Wikipedia contributors, “Real number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Real_number>
+Wikipedia contributors, “Prime number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Prime_number>
 
 \[6\]
 
-W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.
+Wikipedia contributors, “Modular arithmetic — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Modular_arithmetic>
 
 \[7\]
 
-Wikipedia contributors, “Irrational number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Irrational_number>
+Wikipedia contributors, “Rational number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Rational_number>
 
 \[8\]
 
-Wikipedia contributors, “Square root of 2 — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Square_root_of_2>
+Wikipedia contributors, “Real number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Real_number>
 
 \[9\]
+
+W. Rudin, *Principles of mathematical analysis*, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.
+
+\[10\]
+
+Wikipedia contributors, “Floor and ceiling functions — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Floor_and_ceiling_functions>
+
+\[11\]
+
+Wikipedia contributors, “Irrational number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Irrational_number>
+
+\[12\]
+
+Wikipedia contributors, “Square root of 2 — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Square_root_of_2>
+
+\[13\]
 
 Wikipedia contributors, “Proof that pi is irrational — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational>

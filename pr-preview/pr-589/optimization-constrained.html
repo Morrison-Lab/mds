@@ -108,7 +108,10 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-afcad65dfbb5ead0cc214e61744c3688.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
-<link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -216,15 +219,15 @@ cookieconsent.run({
 })();
 </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -236,56 +239,6 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -296,25 +249,15 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-tbl.callout {
+  border-left-color: #757575;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -335,6 +278,66 @@ div.callout-prp.callout-style-default .callout-header {
 div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -618,6 +621,14 @@ window.Quarto = {
   </li>  
     </ul>
 </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./proof-writing.html"> 
+<span class="menu-text">Proof Writing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./induction.html"> 
+<span class="menu-text">Induction and Recursion</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-measures" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Measures</span>
@@ -767,12 +778,8 @@ window.Quarto = {
     </ul>
 </li>
   <li class="nav-item">
-    <a class="nav-link" href="./proof-writing.html"> 
-<span class="menu-text">Proof Writing</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./induction.html"> 
-<span class="menu-text">Induction and Recursion</span></a>
+    <a class="nav-link" href="./dependency-tree.html"> 
+<span class="menu-text">Dependency Tree</span></a>
   </li>  
 </ul>
 <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -910,6 +917,18 @@ window.Quarto = {
   </div>
 </li>
       </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./proof-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proof Writing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./induction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Induction and Recursion</span></a>
+  </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -1113,14 +1132,8 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./proof-writing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Proof Writing</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./induction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Induction and Recursion</span></a>
+  <a href="./dependency-tree.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dependency Tree</span></a>
   </div>
 </li>
     </ul>
@@ -1138,7 +1151,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content" tabindex="-1"><!-- qwt-page-banners -->
 <div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>, <a href="algebra-sums.html">Convexity, Infimum and Sums</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives and Taylor Series</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus.html">Calculus</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="growth-rates.html">Growth Rates</a>, <a href="index.html">Math for Data Science</a>, <a href="indicator-functions.html">Indicator Functions</a>, <a href="induction.html">Induction and Recursion</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Column Space, Null Space and Rank-Nullity</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures-additivity.html">Additivity</a>, <a href="measures-integrals.html">Measurable Functions and Integrals</a>, <a href="measures-lp-spaces.html">\(L^p\) Spaces</a>, <a href="measures-measure-spaces.html">Measures and Probability Measures</a>, <a href="measures-product.html">Product Measures</a>, <a href="measures-sigma-algebras.html">Sigma-Algebras</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization-constrained.html">Quadratic Minimization under Linear Constraints</a>, <a href="optimization-convexity.html">Convexity in Several Variables</a>, <a href="optimization-critical-points.html">Critical Points and Optimality Conditions</a>, <a href="optimization-gradient-descent.html">Gradient Descent</a>, <a href="optimization-newton.html">Newton’s Method</a>, <a href="optimization-quasi-newton.html">Quasi-Newton Methods</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="relations.html">Relations</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="vector-calculus.html">Vector Calculus</a>
+        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>, <a href="algebra-sums.html">Convexity, Infimum and Sums</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives and Taylor Series</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus.html">Calculus</a>, <a href="dependency-tree.html">Dependency Tree</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="growth-rates.html">Growth Rates</a>, <a href="index.html">Math for Data Science</a>, <a href="indicator-functions.html">Indicator Functions</a>, <a href="induction.html">Induction and Recursion</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Column Space, Null Space and Rank-Nullity</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures-additivity.html">Additivity</a>, <a href="measures-integrals.html">Measurable Functions and Integrals</a>, <a href="measures-lp-spaces.html">\(L^p\) Spaces</a>, <a href="measures-measure-spaces.html">Measures and Probability Measures</a>, <a href="measures-product.html">Product Measures</a>, <a href="measures-sigma-algebras.html">Sigma-Algebras</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization-constrained.html">Quadratic Minimization under Linear Constraints</a>, <a href="optimization-convexity.html">Convexity in Several Variables</a>, <a href="optimization-critical-points.html">Critical Points and Optimality Conditions</a>, <a href="optimization-gradient-descent.html">Gradient Descent</a>, <a href="optimization-newton.html">Newton’s Method</a>, <a href="optimization-quasi-newton.html">Quasi-Newton Methods</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="relations.html">Relations</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="vector-calculus.html">Vector Calculus</a>
         <br>
         <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
     </p>
@@ -1150,6 +1163,19 @@ window.Quarto = {
         <strong>📋 Other Formats:</strong> <a href="optimization-constrained-slides.html">🎞️ Slides</a>
     </p>
 </div>
+
+<!-- gha-preview-page-banner:start -->
+<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~5% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
+        <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 3px; border-radius: 2px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 3px; border-radius: 2px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
+<!-- gha-preview-page-banner:end -->
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./optimization.html">Optimization</a></li><li class="breadcrumb-item"><a href="./optimization-constrained.html">Quadratic Minimization under Linear Constraints</a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Quadratic Minimization under Linear Constraints</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
@@ -1162,7 +1188,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-02 13:49:34 (PST)</p>
+      <p class="date">Last modified: 2026-11-02 22:06:16 (PST)</p>
     </div>
   </div>
   
@@ -1456,7 +1482,7 @@ L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <p><span class="math display">\[
 L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + {\mathopen{}\left({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\right)\mathclose{}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}.
 \]</span></p>
-<p>The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, <a href="./vector-calculus.html#cor-quadratic-form-symmetric">derivative of a quadratic form</a> for the first term, <a href="./vector-calculus.html#cor-deriv-lincom-tp">derivative of a linear combination</a> for the second (<span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}\)</span> is constant in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>), and <a href="./vector-calculus.html#def-constant-wrt-vector">constant with respect to a vector</a> for the third,</p>
+<p>The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, the <a href="./vector-calculus.html#cor-quadratic-form-symmetric">derivative of a quadratic form</a> applies to the first <a href="./algebra-sums.html#def-term">term</a>, the <a href="./vector-calculus.html#cor-deriv-lincom-tp">derivative of a linear combination</a> to the second (<span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}\)</span> is constant in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>), and the third is <a href="./vector-calculus.html#def-constant-wrt-vector">constant with respect to a vector</a>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})
@@ -1470,7 +1496,7 @@ L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;&amp; \text{(simplify)}
 \end{aligned}
 \]</span></p>
-<p>Using the second form, in which <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> and <span class="math inline">\({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> are constant in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}\)</span>, and <a href="./vector-calculus.html#cor-deriv-lincom-tp">derivative of a linear combination</a> again,</p>
+<p>Using the second form, in which <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> and <span class="math inline">\({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> are constant in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}\)</span>, and the <a href="./vector-calculus.html#cor-deriv-lincom-tp">derivative of a linear combination</a> again,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}} L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})
@@ -1535,7 +1561,7 @@ L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The steps marked “transpose of a product” use the <a href="./linear-algebra-matrices.html#thm-transpose-product">transpose of a product</a>, and <span class="math inline">\(\mathbf{S}\)</span> is symmetric because it is <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>.</p>
-<p><strong><span class="math inline">\(\mathbf{M}\)</span> is invertible.</strong> <span class="math inline">\(\mathbf{S}^{-1}\)</span> exists and is positive definite (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">positive definite inverse</a>), so <span class="math inline">\(\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> is positive definite (<a href="./linear-algebra-diagonalization.html#thm-pd-operations">operations that preserve definiteness</a>, part 1), and so invertible (positive definite inverse again). <span class="math inline">\(\mathbf{S}^{-1}\)</span> and <span class="math inline">\(\mathbf{M}^{-1}\)</span> are symmetric (<a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">inverse of a symmetric matrix</a>), because <span class="math inline">\(\mathbf{S}\)</span> and <span class="math inline">\(\mathbf{M}\)</span> are.</p>
+<p><strong><span class="math inline">\(\mathbf{M}\)</span> is invertible.</strong> <span class="math inline">\(\mathbf{S}^{-1}\)</span> is positive definite, by the <a href="./linear-algebra-special-matrices.html#thm-pd-inverse">positive definite inverse theorem</a>, so <span class="math inline">\(\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> is positive definite, by <a href="./linear-algebra-diagonalization.html#thm-pd-operations">operations that preserve definiteness</a> (part 1), and so invertible, again by the positive definite inverse. <span class="math inline">\(\mathbf{S}^{-1}\)</span> and <span class="math inline">\(\mathbf{M}^{-1}\)</span> are symmetric, by the <a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">inverse of a symmetric matrix</a>, because <span class="math inline">\(\mathbf{S}\)</span> and <span class="math inline">\(\mathbf{M}\)</span> are.</p>
 <p><strong><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\)</span> satisfies the constraint, and the pair solves <a href="#eq-kkt" class="quarto-xref">Equation&nbsp;2</a>.</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1716,6 +1742,103 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 </div>
+<div class="callout callout-style-simple callout-fig no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ll_theta_ll</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span> <span class="op">*</span> <span class="va">pi</span>, length.out <span class="op">=</span> <span class="fl">201</span><span class="op">)</span></span>
+<span><span class="va">ll_radii_ll</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1</span>, <span class="fl">1.5</span><span class="op">)</span></span>
+<span><span class="va">ll_circles_ll</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html">expand.grid</a></span><span class="op">(</span>theta <span class="op">=</span> <span class="va">ll_theta_ll</span>, radius <span class="op">=</span> <span class="va">ll_radii_ll</span><span class="op">)</span></span>
+<span><span class="va">ll_circles_ll</span><span class="op">$</span><span class="va">x1</span> <span class="op">&lt;-</span> <span class="va">ll_circles_ll</span><span class="op">$</span><span class="va">radius</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">cos</a></span><span class="op">(</span><span class="va">ll_circles_ll</span><span class="op">$</span><span class="va">theta</span><span class="op">)</span></span>
+<span><span class="va">ll_circles_ll</span><span class="op">$</span><span class="va">x2</span> <span class="op">&lt;-</span> <span class="va">ll_circles_ll</span><span class="op">$</span><span class="va">radius</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="va">ll_circles_ll</span><span class="op">$</span><span class="va">theta</span><span class="op">)</span></span>
+<span><span class="va">ll_line_x1_ll</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.5</span>, <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="va">ll_line_x2_ll</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="fl">5</span> <span class="op">-</span> <span class="fl">3</span> <span class="op">*</span> <span class="va">ll_line_x1_ll</span><span class="op">)</span> <span class="op">/</span> <span class="fl">4</span></span>
+<span><span class="va">ll_line_ll</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x1 <span class="op">=</span> <span class="va">ll_line_x1_ll</span>, x2 <span class="op">=</span> <span class="va">ll_line_x2_ll</span><span class="op">)</span></span>
+<span><span class="va">ll_point_ll</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x1 <span class="op">=</span> <span class="fl">0.6</span>, x2 <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span></span>
+<span><span class="va">ll_arrow_ll</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">0</span>, y <span class="op">=</span> <span class="fl">0</span>, xend <span class="op">=</span> <span class="fl">0.6</span>, yend <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span></span>
+<span><span class="va">ll_aes_ll</span> <span class="op">&lt;-</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span></span>
+<span><span class="va">ll_aes_circle_ll</span> <span class="op">&lt;-</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span>, group <span class="op">=</span> <span class="va">radius</span><span class="op">)</span></span>
+<span><span class="va">ll_aes_arrow_ll</span> <span class="op">&lt;-</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span>, xend <span class="op">=</span> <span class="va">xend</span>, yend <span class="op">=</span> <span class="va">yend</span><span class="op">)</span></span>
+<span><span class="va">ll_head_length_ll</span> <span class="op">&lt;-</span> <span class="fu">grid</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">0.15</span>, <span class="st">"inches"</span><span class="op">)</span></span>
+<span><span class="va">ll_head_ll</span> <span class="op">&lt;-</span> <span class="fu">grid</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grid/arrow.html">arrow</a></span><span class="op">(</span>length <span class="op">=</span> <span class="va">ll_head_length_ll</span><span class="op">)</span></span>
+<span><span class="va">ll_lim_ll</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.6</span>, <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_path</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">ll_circles_ll</span>, mapping <span class="op">=</span> <span class="va">ll_aes_circle_ll</span>, colour <span class="op">=</span> <span class="st">"grey60"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">ll_line_ll</span>, mapping <span class="op">=</span> <span class="va">ll_aes_ll</span>, colour <span class="op">=</span> <span class="st">"#0072B2"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">ll_arrow_ll</span>, mapping <span class="op">=</span> <span class="va">ll_aes_arrow_ll</span>,</span>
+<span>    colour <span class="op">=</span> <span class="st">"#D55E00"</span>, arrow <span class="op">=</span> <span class="va">ll_head_ll</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">ll_point_ll</span>, mapping <span class="op">=</span> <span class="va">ll_aes_ll</span>, colour <span class="op">=</span> <span class="st">"#D55E00"</span>, size <span class="op">=</span> <span class="fl">3</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_fixed.html">coord_fixed</a></span><span class="op">(</span>xlim <span class="op">=</span> <span class="va">ll_lim_ll</span>, ylim <span class="op">=</span> <span class="va">ll_lim_ll</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"x1"</span>, y <span class="op">=</span> <span class="st">"x2"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ll_theta_ll <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">201</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ll_radius_ll <span class="kw">in</span> (<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    ax.plot(ll_radius_ll <span class="op">*</span> np.cos(ll_theta_ll),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            ll_radius_ll <span class="op">*</span> np.sin(ll_theta_ll), color<span class="op">=</span><span class="st">"grey"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>ll_x1_ll <span class="op">=</span> np.array([<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">2</span>])</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>ax.plot(ll_x1_ll, (<span class="dv">5</span> <span class="op">-</span> <span class="dv">3</span> <span class="op">*</span> ll_x1_ll) <span class="op">/</span> <span class="dv">4</span>, color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">""</span>, xy<span class="op">=</span>(<span class="fl">0.6</span>, <span class="fl">0.8</span>), xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>),</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span>{<span class="st">"arrowstyle"</span>: <span class="st">"-&gt;"</span>, <span class="st">"color"</span>: <span class="st">"#D55E00"</span>})</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ax.plot(<span class="fl">0.6</span>, <span class="fl">0.8</span>, <span class="st">"o"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, markersize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">1.6</span>, <span class="dv">2</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; (-1.6, 2.0)</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">1.6</span>, <span class="dv">2</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; (-1.6, 2.0)</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x1"</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"x2"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-lagrange-line" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-lagrange-line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The <a href="./vector-calculus.html#def-level-curve">level curves</a> <span class="math inline">\(x_1^2 + x_2^2 = c\)</span> of the <a href="#def-objective-function">objective</a> (circles) and the constraint line <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>. The line touches the circle <span class="math inline">\(c = 1\)</span> at the <a href="#def-minimizer-over-feasible-set">minimizer</a> <span class="math inline">\({(0.6, 0.8)}^{\top}\)</span> (<a href="#exm-qp-equality" class="quarto-xref">Example&nbsp;5</a>), and the arrow from the origin to that point points along the <a href="./vector-calculus.html#def-vector-derivative">gradient</a> there, which is perpendicular to the line.
+</figcaption><div aria-describedby="fig-lagrange-line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="optimization-constrained_files/figure-html/lagrange-line-r-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example&nbsp;5), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line."><img src="optimization-constrained_files/figure-html/lagrange-line-r-1.png" class="img-fluid figure-img" alt="Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="optimization-constrained_files/figure-html/lagrange-line-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example&nbsp;5), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line."><img src="optimization-constrained_files/figure-html/lagrange-line-python-1.png" class="img-fluid figure-img" alt="Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1740,7 +1863,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix},
 \end{aligned}
 \]</span></p>
-<p>whose columns are equal. So <span class="math inline">\(\mathbf{M} {(1, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}\)</span>, and <span class="math inline">\(\mathbf{M}\)</span> is not invertible (<a href="./linear-algebra-diagonalization.html#thm-invertible-rank">a square matrix is invertible exactly when its null space is zero</a>). The two constraints both read <span class="math inline">\(x_1 + x_2 = b_i\)</span>, so they have no solution at all when <span class="math inline">\(b_1 \ne b_2\)</span>. When <span class="math inline">\(b_1 = b_2\)</span> a unique minimizer still exists,</p>
+<p>whose columns are equal. So <span class="math inline">\(\mathbf{M} {(1, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}\)</span>, and <span class="math inline">\(\mathbf{M}\)</span> is not <a href="./linear-algebra-diagonalization.html#thm-invertible-rank">invertible</a>, since a <a href="./linear-algebra-matrices.html#def-square-matrix">square matrix</a> is invertible exactly when its <a href="./linear-algebra-rank-nullity.html#def-null-space">null space</a> is zero. The two constraints both read <span class="math inline">\(x_1 + x_2 = b_i\)</span>, so they have no solution at all when <span class="math inline">\(b_1 \ne b_2\)</span>. When <span class="math inline">\(b_1 = b_2\)</span> a unique minimizer still exists,</p>
 <p><span class="math display">\[
 \begin{aligned}
 x_1 &amp;= x_2 \\
@@ -1750,6 +1873,64 @@ x_1 &amp;= x_2 \\
 <p>but the formula of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;1</a> cannot produce it.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-fig no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">qf_x2_qf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">3</span>, <span class="fl">3</span>, length.out <span class="op">=</span> <span class="fl">201</span><span class="op">)</span></span>
+<span><span class="va">qf_curve_qf</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x2 <span class="op">=</span> <span class="va">qf_x2_qf</span>, f <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">qf_x2_qf</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">qf_curve_qf</span>, <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">x2</span>, <span class="va">f</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"#0072B2"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"x2"</span>, y <span class="op">=</span> <span class="st">"f(1, x2)"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>qf_x2_ax <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">201</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">3</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>ax.plot(qf_x2_ax, <span class="fl">0.5</span> <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> qf_x2_ax<span class="op">**</span><span class="dv">2</span>), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x2"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"f(1, x2)"</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-qp-equality-fails" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-qp-equality-fails-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The first case of <a href="#exm-qp-equality-fails" class="quarto-xref">Example&nbsp;6</a>: with <span class="math inline">\(\mathbf{S} = \operatorname{diag}(1, -1)\)</span>, which is not <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>, the <a href="./functions.html#def-value">value</a> <span class="math inline">\(f(1, x_2)\)</span> along the constraint <span class="math inline">\(x_1 = 1\)</span> falls without <a href="./sets.html#def-bound">bound</a> as <span class="math inline">\(\mathopen{}\left|x_2\right|\mathclose{}\)</span> grows, so this problem has no <a href="./algebra-basics.html#def-global-minimizer">minimizer</a>.
+</figcaption><div aria-describedby="fig-qp-equality-fails-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></mark></li>
+<li class="nav-item" role="presentation"><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></mark></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: The first case of Example&nbsp;6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer."><img src="optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png" class="img-fluid figure-img" alt="Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;2: The first case of Example&nbsp;6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer."><img src="optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png" class="img-fluid figure-img" alt="Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
 </div>
 </div>
 </div>
@@ -1767,7 +1948,7 @@ x_1 &amp;= x_2 \\
 <div id="callout-18" class="callout-18-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-sensitivity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Sensitivity)</strong></span> Suppose a minimization problem (<a href="#def-minimization-problem" class="quarto-xref">Definition&nbsp;5</a>) depends on a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, and let <span class="math inline">\(f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})\)</span> be its minimum value, as a function of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. When the gradient <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})\)</span> exists (<a href="./vector-calculus.html#def-vector-derivative">gradient</a>), it is the <strong>sensitivity</strong> of the minimum value to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>: by <a href="./vector-calculus.html#def-partial-derivative">partial derivative</a>, its entry <span class="math inline">\(i\)</span> is the limit, as a change in <span class="math inline">\(b_i\)</span> alone shrinks to <span class="math inline">\(0\)</span>, of the resulting change in the minimum value divided by the change in <span class="math inline">\(b_i\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Sensitivity)</strong></span> Suppose a minimization problem (<a href="#def-minimization-problem" class="quarto-xref">Definition&nbsp;5</a>) depends on a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, and let <span class="math inline">\(f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})\)</span> be its minimum value, as a function of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. Where <span class="math inline">\(f^*\)</span> has a <a href="./vector-calculus.html#def-vector-derivative">gradient</a> <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})\)</span>, that gradient is the <strong>sensitivity</strong> of the minimum value to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>: by the definition of a <a href="./vector-calculus.html#def-partial-derivative">partial derivative</a>, its entry <span class="math inline">\(i\)</span> is the <a href="./calculus-derivatives.html#def-limit">limit</a> as a change in <span class="math inline">\(b_i\)</span> alone shrinks to <span class="math inline">\(0\)</span>, of the resulting change in the minimum value divided by the change in <span class="math inline">\(b_i\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3064,25 +3245,25 @@ document.querySelectorAll("main table").forEach(function (t) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Quadratic Minimization under Linear Constraints"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization-constrained-slides.html</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>py_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"numpy"</span>, <span class="st">"pandas"</span>, <span class="st">"matplotlib"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_require</span>(py_packages)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>[]{#sec-lagrange}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_optimization_constrained.qmd &gt;}}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Quadratic Minimization under Linear Constraints"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization-constrained-slides.html</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>py_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"numpy"</span>, <span class="st">"pandas"</span>, <span class="st">"matplotlib"</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_require</span>(py_packages)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>[]{#sec-lagrange}</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_optimization_constrained.qmd &gt;}}</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
@@ -3097,7 +3278,38 @@ document.querySelectorAll("main table").forEach(function (t) {
       &nbsp;
     </div>
   </div>
-</footer><script src="dependency-graph.js" defer=""></script>
+</footer><script src="dependency-graph.js" defer=""></script><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 </body></html>

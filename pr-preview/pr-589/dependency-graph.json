@@ -1,5 +1,6 @@
 {
  "site": "mds",
+ "base": "https://morrison-lab.github.io/mds/",
  "meaning": "edge [A, B] means A uses B: B is a prerequisite of A, A a postrequisite of B",
  "nodes": [
   {
@@ -459,6 +460,15 @@
    "div": "def-local-minimizer",
    "kind": "def",
    "title": "Local minimizer",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-logarithm",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-logarithm",
+   "kind": "def",
+   "title": "Logarithm",
    "external": false
   },
   {
@@ -1773,6 +1783,15 @@
    "div": "def-linear-function",
    "kind": "def",
    "title": "Linear function of one variable",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-exponentials#def-logarithm",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "def-logarithm",
+   "kind": "def",
+   "title": "Logarithm",
    "external": false
   },
   {
@@ -10506,12 +10525,48 @@
    "external": false
   },
   {
+   "id": "mds/number-systems#def-congruence",
+   "site": "mds",
+   "page": "number-systems",
+   "div": "def-congruence",
+   "kind": "def",
+   "title": "Congruence modulo $n$",
+   "external": false
+  },
+  {
+   "id": "mds/number-systems#def-divides",
+   "site": "mds",
+   "page": "number-systems",
+   "div": "def-divides",
+   "kind": "def",
+   "title": "Divides",
+   "external": false
+  },
+  {
    "id": "mds/number-systems#def-even-odd",
    "site": "mds",
    "page": "number-systems",
    "div": "def-even-odd",
    "kind": "def",
    "title": "Even integer",
+   "external": false
+  },
+  {
+   "id": "mds/number-systems#def-factorial",
+   "site": "mds",
+   "page": "number-systems",
+   "div": "def-factorial",
+   "kind": "def",
+   "title": "Factorial",
+   "external": false
+  },
+  {
+   "id": "mds/number-systems#def-floor",
+   "site": "mds",
+   "page": "number-systems",
+   "div": "def-floor",
+   "kind": "def",
+   "title": "Floor",
    "external": false
   },
   {
@@ -10575,6 +10630,15 @@
    "div": "def-positive-integer",
    "kind": "def",
    "title": "Positive integers",
+   "external": false
+  },
+  {
+   "id": "mds/number-systems#def-prime",
+   "site": "mds",
+   "page": "number-systems",
+   "div": "def-prime",
+   "kind": "def",
+   "title": "Prime number",
    "external": false
   },
   {
@@ -13417,6 +13481,18 @@
    "mds/linear-algebra#def-euclidean-norm"
   ],
   [
+   "mds/algebra#def-logarithm",
+   "mds/algebra#def-power-base"
+  ],
+  [
+   "mds/algebra#def-logarithm",
+   "mds/algebra#def-real-power"
+  ],
+  [
+   "mds/algebra#def-logarithm",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
    "mds/algebra#def-lower-upper-limits",
    "mds/algebra#def-summation"
   ],
@@ -13955,6 +14031,14 @@
   [
    "mds/algebra-exponentials#def-linear-function",
    "mds/algebra-exponentials#def-affine-function"
+  ],
+  [
+   "mds/algebra-exponentials#def-logarithm",
+   "mds/algebra-exponentials#def-real-power"
+  ],
+  [
+   "mds/algebra-exponentials#def-logarithm",
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/algebra-exponentials#def-monomial",
@@ -18661,8 +18745,40 @@
    "mds/sets#def-intersection"
   ],
   [
+   "mds/number-systems#def-congruence",
+   "mds/number-systems#def-divides"
+  ],
+  [
+   "mds/number-systems#def-congruence",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/number-systems#def-congruence",
+   "mds/number-systems#def-positive-integer"
+  ],
+  [
+   "mds/number-systems#def-divides",
+   "mds/number-systems#def-integers"
+  ],
+  [
    "mds/number-systems#def-even-odd",
    "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/number-systems#def-factorial",
+   "mds/number-systems#def-natural-numbers"
+  ],
+  [
+   "mds/number-systems#def-factorial",
+   "mds/number-systems#def-nonnegative-integers"
+  ],
+  [
+   "mds/number-systems#def-floor",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/number-systems#def-floor",
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/number-systems#def-irrational-numbers",
@@ -18691,6 +18807,18 @@
   [
    "mds/number-systems#def-positive-integer",
    "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/number-systems#def-prime",
+   "mds/number-systems#def-divides"
+  ],
+  [
+   "mds/number-systems#def-prime",
+   "mds/number-systems#def-integers"
+  ],
+  [
+   "mds/number-systems#def-prime",
+   "mds/number-systems#def-positive-integer"
   ],
   [
    "mds/number-systems#def-rational-numbers",
@@ -19022,6 +19150,10 @@
   ],
   [
    "mds/optimization#def-sensitivity",
+   "mds/calculus#def-limit"
+  ],
+  [
+   "mds/optimization#def-sensitivity",
    "mds/optimization#def-minimization-problem"
   ],
   [
@@ -19054,7 +19186,7 @@
   ],
   [
    "mds/optimization#lem-qf-eigen-bound",
-   "mds/linear-algebra#def-eigendecomposition"
+   "mds/linear-algebra#def-eigenvalue"
   ],
   [
    "mds/optimization#prp-double-well-divergence",
@@ -19326,6 +19458,10 @@
   ],
   [
    "mds/optimization-constrained#def-sensitivity",
+   "mds/calculus#def-limit"
+  ],
+  [
+   "mds/optimization-constrained#def-sensitivity",
    "mds/optimization-constrained#def-minimization-problem"
   ],
   [
@@ -19482,7 +19618,7 @@
   ],
   [
    "mds/optimization-critical-points#lem-qf-eigen-bound",
-   "mds/linear-algebra#def-eigendecomposition"
+   "mds/linear-algebra#def-eigenvalue"
   ],
   [
    "mds/optimization-critical-points#thm-fermat",

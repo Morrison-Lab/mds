@@ -9,7 +9,10 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.11.9">
 <title>Math for Data Science – Newton’s Method</title>
@@ -36,6 +39,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -287,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 13:49:34 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 22:06:16 (PST)</p>
 </section><section class="slide level2"><p><span id="sec-newton-method"></span></p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -412,7 +481,7 @@ H &amp;= [2 \cdot 2.5] \\
 <p><span class="theorem-title"><strong>Theorem 1 (The Newton step minimizes the quadratic model)</strong></span> Let <span class="math inline">\(q\)</span> be the quadratic model of <span class="math inline">\(f\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#/def-quadratic-model" class="quarto-xref">Definition&nbsp;7</a>), with <span class="math inline">\(\mathbf{H} = \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>. Its unique minimizer is the Newton step <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{H}\)</span> is symmetric, by the definition of <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>, and invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">positive definite inverse</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*\)</span> exists and <span class="math inline">\(\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}\)</span>. For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \in \mathbb{R}^p\)</span>, first</p>
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{H}\)</span> is symmetric, by the definition of <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>, and <a href="./linear-algebra-special-matrices.html#thm-pd-inverse">invertible</a>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*\)</span> exists and <span class="math inline">\(\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}\)</span>. For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \in \mathbb{R}^p\)</span>, first</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*
@@ -465,6 +534,85 @@ q(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vph
 \]</span></p>
 <p>(<a href="#/exm-newton-method" class="quarto-xref">Example&nbsp;2</a>).</p>
 </div>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>nm_x_nm <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.5</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">301</span>)</span>
+<span id="cb1-2"><a aria-label="2"></a>nm_f_nm <span class="ot">&lt;-</span> nm_x_nm<span class="sc">^</span><span class="dv">3</span> <span class="sc">/</span> <span class="dv">3</span> <span class="sc">-</span> <span class="dv">4</span> <span class="sc">*</span> nm_x_nm</span>
+<span id="cb1-3"><a aria-label="3"></a>nm_f0_nm <span class="ot">&lt;-</span> <span class="fl">2.5</span><span class="sc">^</span><span class="dv">3</span> <span class="sc">/</span> <span class="dv">3</span> <span class="sc">-</span> <span class="dv">4</span> <span class="sc">*</span> <span class="fl">2.5</span></span>
+<span id="cb1-4"><a aria-label="4"></a>nm_q_nm <span class="ot">&lt;-</span> nm_f0_nm <span class="sc">+</span> <span class="fl">2.25</span> <span class="sc">*</span> (nm_x_nm <span class="sc">-</span> <span class="fl">2.5</span>) <span class="sc">+</span> <span class="fl">2.5</span> <span class="sc">*</span> (nm_x_nm <span class="sc">-</span> <span class="fl">2.5</span>)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb1-5"><a aria-label="5"></a>nm_q_step_nm <span class="ot">&lt;-</span> nm_f0_nm <span class="sc">+</span> <span class="fl">2.25</span> <span class="sc">*</span> (<span class="fl">2.05</span> <span class="sc">-</span> <span class="fl">2.5</span>) <span class="sc">+</span> <span class="fl">2.5</span> <span class="sc">*</span> (<span class="fl">2.05</span> <span class="sc">-</span> <span class="fl">2.5</span>)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb1-6"><a aria-label="6"></a>nm_f_min_nm <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">^</span><span class="dv">3</span> <span class="sc">/</span> <span class="dv">3</span> <span class="sc">-</span> <span class="dv">4</span> <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb1-7"><a aria-label="7"></a>nm_curve_nm <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> nm_x_nm, <span class="at">y =</span> nm_f_nm)</span>
+<span id="cb1-8"><a aria-label="8"></a>nm_model_nm <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> nm_x_nm, <span class="at">y =</span> nm_q_nm)</span>
+<span id="cb1-9"><a aria-label="9"></a>nm_start_nm <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fl">2.5</span>, <span class="at">y =</span> nm_f0_nm)</span>
+<span id="cb1-10"><a aria-label="10"></a>nm_step_nm <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fl">2.05</span>, <span class="at">y =</span> nm_q_step_nm)</span>
+<span id="cb1-11"><a aria-label="11"></a>nm_min_nm <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> nm_f_min_nm)</span>
+<span id="cb1-12"><a aria-label="12"></a>nm_aes_nm <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">aes</span>(x, y)</span>
+<span id="cb1-13"><a aria-label="13"></a>nm_ylim_nm <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">8</span>, <span class="dv">0</span>)</span>
+<span id="cb1-14"><a aria-label="14"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(nm_curve_nm, nm_aes_nm) <span class="sc">+</span></span>
+<span id="cb1-15"><a aria-label="15"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"#0072B2"</span>) <span class="sc">+</span></span>
+<span id="cb1-16"><a aria-label="16"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(</span>
+<span id="cb1-17"><a aria-label="17"></a>    <span class="at">data =</span> nm_model_nm, <span class="at">colour =</span> <span class="st">"#D55E00"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span></span>
+<span id="cb1-18"><a aria-label="18"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> nm_start_nm, <span class="at">colour =</span> <span class="st">"#D55E00"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-20"><a aria-label="20"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(</span>
+<span id="cb1-21"><a aria-label="21"></a>    <span class="at">data =</span> nm_step_nm, <span class="at">colour =</span> <span class="st">"#D55E00"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">shape =</span> <span class="dv">17</span></span>
+<span id="cb1-22"><a aria-label="22"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(</span>
+<span id="cb1-24"><a aria-label="24"></a>    <span class="at">data =</span> nm_min_nm, <span class="at">colour =</span> <span class="st">"#0072B2"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">shape =</span> <span class="dv">15</span></span>
+<span id="cb1-25"><a aria-label="25"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-26"><a aria-label="26"></a>  ggplot2<span class="sc">::</span><span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> nm_ylim_nm) <span class="sc">+</span></span>
+<span id="cb1-27"><a aria-label="27"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"value"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a aria-label="3"></a></span>
+<span id="cb2-4"><a aria-label="4"></a>nm_x_fn <span class="op">=</span> np.linspace(<span class="fl">0.5</span>, <span class="dv">4</span>, <span class="dv">301</span>)</span>
+<span id="cb2-5"><a aria-label="5"></a>nm_f_fn <span class="op">=</span> <span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> <span class="dv">3</span> <span class="op">-</span> <span class="dv">4</span> <span class="op">*</span> x</span>
+<span id="cb2-6"><a aria-label="6"></a>nm_q_fn <span class="op">=</span> <span class="kw">lambda</span> x: nm_f_fn(<span class="fl">2.5</span>) <span class="op">+</span> <span class="fl">2.25</span> <span class="op">*</span> (x <span class="op">-</span> <span class="fl">2.5</span>) <span class="op">+</span> <span class="fl">2.5</span> <span class="op">*</span> (x <span class="op">-</span> <span class="fl">2.5</span>) <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb2-7"><a aria-label="7"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb2-8"><a aria-label="8"></a>ax.plot(nm_x_fn, nm_f_fn(nm_x_fn), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb2-9"><a aria-label="9"></a>ax.plot(nm_x_fn, nm_q_fn(nm_x_fn), <span class="st">"--"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>)</span>
+<span id="cb2-10"><a aria-label="10"></a>ax.plot(<span class="fl">2.5</span>, nm_f_fn(<span class="fl">2.5</span>), <span class="st">"o"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, markersize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb2-11"><a aria-label="11"></a>ax.plot(<span class="fl">2.05</span>, nm_q_fn(<span class="fl">2.05</span>), <span class="st">"^"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, markersize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb2-12"><a aria-label="12"></a>ax.plot(<span class="dv">2</span>, nm_f_fn(<span class="dv">2</span>), <span class="st">"s"</span>, color<span class="op">=</span><span class="st">"#0072B2"</span>, markersize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb2-13"><a aria-label="13"></a>ax.set_ylim(<span class="op">-</span><span class="dv">8</span>, <span class="dv">0</span>)</span>
+<span id="cb2-14"><a aria-label="14"></a><span class="co">#&gt; (-8.0, 0.0)</span></span>
+<span id="cb2-15"><a aria-label="15"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb2-16"><a aria-label="16"></a>ax.set_ylabel(<span class="st">"value"</span>)</span>
+<span id="cb2-17"><a aria-label="17"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-newton-model" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-newton-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The <a href="./algebra-exponentials.html#def-cubic-polynomial">cubic</a> <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span> (blue) and its <a href="#/def-quadratic-model">quadratic model</a> at <span class="math inline">\(x = 2.5\)</span> (dashed). The model touches <span class="math inline">\(f\)</span> at <span class="math inline">\(2.5\)</span> (circle), and its <a href="./algebra-basics.html#def-global-minimizer">minimizer</a> <span class="math inline">\(2.05\)</span> (triangle) is the <a href="#/def-iterate">iterate</a> after one <a href="#/def-newton-step">Newton step</a> from <span class="math inline">\(2.5\)</span> (<a href="#/exm-newton-model" class="quarto-xref">Example&nbsp;4</a>). It lies close to the minimizer <span class="math inline">\(2\)</span> of <span class="math inline">\(f\)</span> (blue marker).
+</figcaption><div aria-describedby="fig-newton-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">R</a></li>
+<li><a href="#tabset-1-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-newton_files/figure-html/newton-model-r-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example&nbsp;4). It lies close to the minimizer 2 of f (blue marker)."><img data-src="optimization-newton_files/figure-html/newton-model-r-1.png" alt="Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic." width="576"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-newton_files/figure-html/newton-model-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example&nbsp;4). It lies close to the minimizer 2 of f (blue marker)."><img data-src="optimization-newton_files/figure-html/newton-model-python-1.png" alt="Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic." width="576"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
 </section><section class="slide level2"><div id="def-quadratic-convergence" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8 (Quadratic convergence)</strong></span> A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> that converges (<a href="#/def-vector-sequence-limit" class="quarto-xref">Definition&nbsp;4</a>) to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\)</span> <strong>converges quadratically</strong> <span class="citation" data-cites="wikipedia_rate_of_convergence"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> if there is a constant <span class="math inline">\(C\)</span> with</p>
 <p><span class="math display">\[
@@ -490,7 +638,70 @@ x^{(t+1)} - 2
 &amp;&amp; \text{(the numerator is a perfect square)}
 \end{aligned}
 \]</span></p>
-<p>So near <span class="math inline">\(2\)</span> the error is roughly squared and divided by <span class="math inline">\(4\)</span> at each step: the errors are <span class="math inline">\(0.05\)</span>, then <span class="math inline">\(0.00061\)</span>, then <span class="math inline">\(0.000000093\)</span>, and <span class="math inline">\(0.05^2 / (2 \cdot 2.05) \approx 0.00061\)</span>. The iterates converge quadratically (<a href="#/def-quadratic-convergence" class="quarto-xref">Definition&nbsp;8</a>): <span class="math inline">\(C = \tfrac{1}{2}\)</span> works for every <span class="math inline">\(x^{(t)} \ge 1\)</span>, since then <span class="math inline">\(\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\)</span>, and every iterate from <span class="math inline">\(2.5\)</span> is at least <span class="math inline">\(2\)</span>, since the identity makes <span class="math inline">\(x^{(t+1)} - 2 \ge 0\)</span> whenever <span class="math inline">\(x^{(t)} &gt; 0\)</span>. <span class="citation" data-cites="zhou2024optim">Zhou <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.</p>
+<p>So near <span class="math inline">\(2\)</span> the error is roughly squared and divided by <span class="math inline">\(4\)</span> at each step: the errors are <span class="math inline">\(0.05\)</span>, then <span class="math inline">\(0.00061\)</span>, then <span class="math inline">\(0.000000093\)</span>, and <span class="math inline">\(0.05^2 / (2 \cdot 2.05) \approx 0.00061\)</span>. The iterates converge quadratically (<a href="#/def-quadratic-convergence" class="quarto-xref">Definition&nbsp;8</a>): <span class="math inline">\(C = \tfrac{1}{2}\)</span> works for every <span class="math inline">\(x^{(t)} \ge 1\)</span>, since then <span class="math inline">\(\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\)</span>, and every iterate from <span class="math inline">\(2.5\)</span> is at least <span class="math inline">\(2\)</span>, since the identity makes <span class="math inline">\(x^{(t+1)} - 2 \ge 0\)</span> whenever <span class="math inline">\(x^{(t)} &gt; 0\)</span>. <span class="citation" data-cites="zhou2024optim">Zhou <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which is not proved here.</p>
+</div>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>nc_x_nc <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">4</span>)</span>
+<span id="cb3-2"><a aria-label="2"></a>nc_x_nc[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
+<span id="cb3-3"><a aria-label="3"></a><span class="cf">for</span> (nc_t_nc <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) {</span>
+<span id="cb3-4"><a aria-label="4"></a>  nc_prev_nc <span class="ot">&lt;-</span> nc_x_nc[nc_t_nc]</span>
+<span id="cb3-5"><a aria-label="5"></a>  nc_x_nc[nc_t_nc <span class="sc">+</span> <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fl">0.5</span> <span class="sc">*</span> (nc_prev_nc <span class="sc">+</span> <span class="dv">4</span> <span class="sc">/</span> nc_prev_nc)</span>
+<span id="cb3-6"><a aria-label="6"></a>}</span>
+<span id="cb3-7"><a aria-label="7"></a>nc_steps_nc <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">t =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">error =</span> nc_x_nc <span class="sc">-</span> <span class="dv">2</span>)</span>
+<span id="cb3-8"><a aria-label="8"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(nc_steps_nc, ggplot2<span class="sc">::</span><span class="fu">aes</span>(t, error)) <span class="sc">+</span></span>
+<span id="cb3-9"><a aria-label="9"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"#0072B2"</span>) <span class="sc">+</span></span>
+<span id="cb3-10"><a aria-label="10"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">"#0072B2"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb3-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb3-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"iteration t"</span>, <span class="at">y =</span> <span class="st">"error of the iterate"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-2"><a aria-label="2"></a></span>
+<span id="cb4-3"><a aria-label="3"></a>nc_x_ax <span class="op">=</span> [<span class="fl">2.5</span>]</span>
+<span id="cb4-4"><a aria-label="4"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb4-5"><a aria-label="5"></a>    nc_x_ax.append(<span class="fl">0.5</span> <span class="op">*</span> (nc_x_ax[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> <span class="dv">4</span> <span class="op">/</span> nc_x_ax[<span class="op">-</span><span class="dv">1</span>]))</span>
+<span id="cb4-6"><a aria-label="6"></a>nc_err_ax <span class="op">=</span> [x <span class="op">-</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> nc_x_ax]</span>
+<span id="cb4-7"><a aria-label="7"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="fl">3.5</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb4-8"><a aria-label="8"></a>ax.semilogy(<span class="bu">range</span>(<span class="dv">4</span>), nc_err_ax, <span class="st">"o-"</span>, color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb4-9"><a aria-label="9"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f5ed6d3a490&gt;]</span></span>
+<span id="cb4-10"><a aria-label="10"></a>ax.set_xlabel(<span class="st">"iteration t"</span>)</span>
+<span id="cb4-11"><a aria-label="11"></a><span class="co">#&gt; Text(0.5, 0, 'iteration t')</span></span>
+<span id="cb4-12"><a aria-label="12"></a>ax.set_ylabel(<span class="st">"error of the iterate"</span>)</span>
+<span id="cb4-13"><a aria-label="13"></a><span class="co">#&gt; Text(0, 0.5, 'error of the iterate')</span></span>
+<span id="cb4-14"><a aria-label="14"></a>ax.set_xticks(<span class="bu">range</span>(<span class="dv">4</span>))</span>
+<span id="cb4-15"><a aria-label="15"></a><span class="co">#&gt; [&lt;matplotlib.axis.XTick object at 0x7f5ed9063ed0&gt;, &lt;matplotlib.axis.XTick object at 0x7f5ed9063610&gt;, &lt;matplotlib.axis.XTick object at 0x7f5ed6d3ac10&gt;, &lt;matplotlib.axis.XTick object at 0x7f5ed6d3b390&gt;]</span></span>
+<span id="cb4-16"><a aria-label="16"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-newton-convergence" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-newton-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The <a href="#/def-iterate-error">error</a> <span class="math inline">\(x^{(t)} - 2\)</span> of <a href="#/exm-newton-convergence" class="quarto-xref">Example&nbsp;6</a> on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is <a href="#/def-quadratic-convergence">quadratic convergence</a>.
+</figcaption><div aria-describedby="fig-newton-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">R</a></li>
+<li><a href="#tabset-2-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-newton_files/figure-html/newton-convergence-fig-r-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: The error x^{(t)} - 2 of Example&nbsp;6 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence."><img data-src="optimization-newton_files/figure-html/newton-convergence-fig-r-3.png" alt="Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-newton_files/figure-html/newton-convergence-fig-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;2: The error x^{(t)} - 2 of Example&nbsp;6 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence."><img data-src="optimization-newton_files/figure-html/newton-convergence-fig-python-1.png" alt="Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
 </div>
 </section><section class="slide level2"><div id="exm-newton-maximum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (Newton’s method can find a maximum)</strong></span> From <span class="math inline">\(x^{(0)} = -2.5\)</span> the same iteration gives <span class="math inline">\(-2.05\)</span>, <span class="math inline">\(-2.000610\)</span>, <span class="math inline">\(-2.0000001\)</span>, approaching <span class="math inline">\(-2\)</span>. But <span class="math inline">\(-2\)</span> is not a minimizer of <span class="math inline">\(f\)</span>: it is a stationary point of <span class="math inline">\(-f\)</span>, whose second derivative there is <span class="math inline">\(-f''(-2) = 4 &gt; 0\)</span>, so it is a strict local minimizer of <span class="math inline">\(-f\)</span> (<a href="./optimization-critical-points.html#thm-second-order-condition">Theorem&nbsp;7 in Critical Points and Optimality Conditions</a>), that is, <span class="math inline">\(f\)</span> is strictly larger at <span class="math inline">\(-2\)</span> than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian <span class="math inline">\(f''(x) = 2x\)</span> is negative along the way, so the quadratic model has no minimizer (with <span class="math inline">\(H &lt; 0\)</span>, <span class="math inline">\(q(\delta) = f + g\,\delta+ \tfrac{1}{2} H \delta^2\)</span> decreases without bound) and <a href="#/thm-newton-model" class="quarto-xref">Theorem&nbsp;1</a> does not apply: the positive definite hypothesis there is needed.</p>
@@ -499,14 +710,14 @@ x^{(t+1)} - 2
 <p><span class="theorem-title"><strong>Theorem 2 (Newton’s method minimizes a quadratic in one step)</strong></span> Let <span class="math inline">\(\mathbf{S}\)</span> be a <span class="math inline">\(p \times p\)</span> <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a> matrix, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p\)</span>, and <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. From any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}\)</span>, Newton’s method (<a href="#/def-newton-method" class="quarto-xref">Definition&nbsp;5</a>) gives <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}\)</span>, the unique minimizer of <span class="math inline">\(f\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by <a href="./vector-calculus.html#cor-quadratic-form-symmetric">derivative of a quadratic form</a> for <span class="math inline">\(\tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <a href="./vector-calculus.html#cor-deriv-lincom-tp">derivative of a linear combination</a> for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>,</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so the <a href="./vector-calculus.html#cor-quadratic-form-symmetric">derivative of a quadratic form</a> applies to <span class="math inline">\(\tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and the <a href="./vector-calculus.html#cor-deriv-lincom-tp">derivative of a linear combination</a> to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) &amp;= \tfrac{1}{2} (2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \\
 &amp;= \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}};
 \end{aligned}
 \]</span></p>
-<p>by <a href="./vector-calculus.html#thm-hessian-quadratic">Hessian of a quadratic form</a> with <span class="math inline">\(\tfrac{1}{2} \mathbf{S}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>, and because the gradient <span class="math inline">\(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}\)</span> of the linear term is constant (<a href="./vector-calculus.html#def-constant-wrt-vector">constant with respect to a vector</a>), <span class="math inline">\(\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}\)</span>, which is invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">positive definite inverse</a>). So</p>
+<p>by the <a href="./vector-calculus.html#thm-hessian-quadratic">Hessian of a quadratic form</a> with <span class="math inline">\(\tfrac{1}{2} \mathbf{S}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>, and because the <a href="./vector-calculus.html#def-vector-derivative">gradient</a> <span class="math inline">\(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}\)</span> of the <a href="./algebra-exponentials.html#def-linear-function">linear</a> <a href="./algebra-sums.html#def-term">term</a> is <a href="./vector-calculus.html#def-constant-wrt-vector">constant</a>, <span class="math inline">\(\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}\)</span>, which is <a href="./linear-algebra-special-matrices.html#thm-pd-inverse">invertible</a>. So</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}
@@ -1218,7 +1429,38 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           }
         }
       });
-      </script>
+      </script><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
 
 
 </body></html>

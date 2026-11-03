@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:49:34 (PST)
+Last modified: 2026-11-02 22:06:16 (PST)
 
-## 0.1 Design Matrix
+# 1 Design Matrix
 
 > **NOTE:**
 >
@@ -191,11 +191,11 @@ Last modified: 2026-11-02 13:49:34 (PST)
 >
 > Multiplying by $\mathbf{H}$ “puts a hat” on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, which is where the name comes from. In [Example 2](#exm-hat-matrix), $\mathbf{H}$ puts a hat on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ by replacing each $y_i$ with the sample mean $\bar{y}$.
 
-### 0.1.1 Orthogonal projection onto a subspace
+## 1.1 Orthogonal projection onto a subspace
 
 > **NOTE:**
 >
-> This section is adapted from the second half of Zhou [\[5\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum).
+> This section is adapted from the second half of Zhou [\[5\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum).
 
 > **NOTE:**
 >
@@ -463,11 +463,11 @@ Last modified: 2026-11-02 13:49:34 (PST)
 >
 > since $2\bar{y} = y_1 + y_2$.
 
-### 0.1.2 Generalized inverses and linear systems
+## 1.2 Generalized inverses and linear systems
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 17 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection $\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}$ for any generalized inverse $\mathbf{G}$ of ${\mathbf{X}}^{\top} \mathbf{X}$, which the source does not cover. [Theorem 13](#thm-moore-penrose-full-rank) restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in [Theorem 16](#thm-consistency) restores the source’s rank test for consistency. These parts of the source are not part of this section:
+> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 17 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection $\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}$ for any generalized inverse $\mathbf{G}$ of ${\mathbf{X}}^{\top} \mathbf{X}$, which the source does not cover. [Theorem 13](#thm-moore-penrose-full-rank) restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in [Theorem 16](#thm-consistency) restores the source’s rank test for consistency. These parts of the source are not part of this section:
 >
 > - the QR forms of the full-rank formulas
 > - $\operatorname{rank}(\mathbf{A}^-) \ge \operatorname{rank}(\mathbf{A})$, $\mathcal{C}(\mathbf{A}) = \mathcal{C}(\mathbf{A}\mathbf{A}^-)$, $\operatorname{rank}(\mathbf{A}) = \operatorname{rank}(\mathbf{A}\mathbf{A}^-) = \operatorname{rank}(\mathbf{A}^-\mathbf{A})$, and $\operatorname{rank}(\mathbf{A}^+) = \operatorname{rank}(\mathbf{A})$
@@ -1522,11 +1522,11 @@ Last modified: 2026-11-02 13:49:34 (PST)
 >
 > the hat matrix of the intercept-only model ([Example 2](#exm-hat-matrix)). Another generalized inverse, $\mathbf{G}' = \begin{bmatrix} 0 & 0 \\ 0 & \frac{1}{2} \end{bmatrix}$, which is one because $({\mathbf{X}}^{\top} \mathbf{X})\,\mathbf{G}' = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}$ and that times ${\mathbf{X}}^{\top} \mathbf{X}$ is again $\begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}$, gives $\mathbf{X}\mathbf{G}' = \begin{bmatrix} 0 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{bmatrix}$ and the same $\mathbf{X}\mathbf{G}' {\mathbf{X}}^{\top} = \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}$, as [Theorem 18](#thm-projector-generalized-inverse) says it must. Both project onto $\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}$, the column space of the intercept-only design.
 
-### 0.1.3 Solving linear systems and least squares
+## 1.3 Solving linear systems and least squares
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv) and Zhou [\[10\]](#ref-zhou2024ls), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The first source states that every invertible matrix has an LU factorization; that is false without reordering rows (the $2 \times 2$ row swap $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ has none), so this section states only how an LU factorization, when one exists, solves a system. The least squares results are proved here from the closest-point theorem ([Theorem 3](#thm-closest-point)) rather than by differentiating, and the QR factorization is derived from Gram-Schmidt ([Theorem 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt)). These parts of the source are not part of this section:
+> This section is adapted from Zhou [\[6\]](#ref-zhou2024matinv) and Zhou [\[10\]](#ref-zhou2024ls), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The first source states that every invertible matrix has an LU factorization; that is false without reordering rows (the $2 \times 2$ row swap $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ has none), so this section states only how an LU factorization, when one exists, solves a system. The least squares results are proved here from the closest-point theorem ([Theorem 3](#thm-closest-point)) rather than by differentiating, and the QR factorization is derived from Gram-Schmidt ([Theorem 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt)). These parts of the source are not part of this section:
 >
 > - the operation counts for the triangular solves, LU and QR
 > - solving a system by inverting a matrix through its QR factorization, and the comparison of that with solving it directly
