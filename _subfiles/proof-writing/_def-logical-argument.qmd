@@ -1,0 +1,9 @@
+:::{#def-logical-argument}
+#### Logical argument
+
+A **logical argument** is a list of [propositions](#def-proposition),
+called its **premises**,
+together with one more [proposition](#def-proposition), called its **conclusion**.
+It is written with "so" or $\therefore$ before its conclusion.
+
+:::

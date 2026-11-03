@@ -24,6 +24,10 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_def-domain-of-discourse.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-logical-connective.qmd >}}
 
 {{< slidebreak >}}
@@ -92,6 +96,10 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_thm-biconditional-split.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-quantifier.qmd >}}
 
 {{< slidebreak >}}
@@ -113,6 +121,10 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/proof-writing/_exm-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-negate-quantifiers.qmd >}}
 
 {{< slidebreak >}}
 
@@ -142,6 +154,22 @@ $P$ entails $Q$ exactly when $P \Rightarrow Q$ is true
 for every choice of values for the variables in $P$ and $Q$.
 
 Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-convergent-sequence) results.
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-logical-argument.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-rule-of-inference.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-inference-rules.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-equivalent-cycle.qmd >}}
 
 {{< slidebreak >}}
 
