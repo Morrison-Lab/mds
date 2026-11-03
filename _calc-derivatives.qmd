@@ -1,4 +1,4 @@
-### Limits and derivatives {#sec-limits-derivatives}
+## Limits and derivatives {#sec-limits-derivatives}
 
 {{< include mds/_subfiles/derivatives/_def-limit.qmd >}}
 
@@ -62,7 +62,7 @@
 
 {{< include mds/_subfiles/derivatives/_exm-second-derivative.qmd >}}
 
-### Derivative rules {#sec-derivative-rules}
+## Derivative rules {#sec-derivative-rules}
 
 :::{#thm-deriv-const}
 #### Constant rule
@@ -313,7 +313,7 @@ $$
 
 {{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-log-constant.qmd >}}
 
-### Studying a new function {#sec-function-profile}
+## Studying a new function {#sec-function-profile}
 
 {{< include mds/_subfiles/derivatives/_def-function-profile.qmd >}}
 
@@ -323,7 +323,7 @@ $$
 
 {{< slidebreak >}}
 
-### Tangent lines {#sec-tangent-lines}
+## Tangent lines {#sec-tangent-lines}
 
 {{< include mds/_subfiles/derivatives/_def-tangent-line.qmd >}}
 
@@ -333,7 +333,7 @@ $$
 
 {{< slidebreak >}}
 
-### Linear approximation {#sec-linear-approximation}
+## Linear approximation {#sec-linear-approximation}
 
 For a differentiable function $f$ and a small step $\smallconst$,
 
@@ -411,7 +411,7 @@ as an affine function for functions of several variables as well.
 
 {{< slidebreak >}}
 
-### Taylor series {#sec-taylor-series}
+## Taylor series {#sec-taylor-series}
 
 {{< include mds/_subfiles/derivatives/_def-taylor-polynomial.qmd >}}
 

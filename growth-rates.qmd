@@ -12,7 +12,7 @@ format:
 
 {{< include mds/_growth-rates.qmd >}}
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::

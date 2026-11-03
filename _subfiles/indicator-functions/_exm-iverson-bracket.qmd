@@ -1,0 +1,8 @@
+:::{#exm-iverson-bracket}
+#### Evaluating Iverson brackets
+
+- $[3 > 2] = 1$, because $3 > 2$ is true.
+- $[2 > 3] = 0$, because $2 > 3$ is false.
+- $[4 \in \cb{1, 2}] = 0$, because $4$ is not an element of $\cb{1, 2}$.
+
+:::

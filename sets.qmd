@@ -12,7 +12,7 @@ format:
 
 {{< include mds/_sets.qmd >}}
 
-## Further reading {#sec-further-reading}
+# Further reading {#sec-further-reading}
 
 These books and articles treat sets and the logic behind them in more depth.
 
@@ -31,7 +31,7 @@ These books and articles treat sets and the logic behind them in more depth.
   teaches propositional and first-order logic,
   the language behind statements such as "for every set $A$ there exists...".
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::

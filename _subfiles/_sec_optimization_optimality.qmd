@@ -1,4 +1,4 @@
-## Optimality conditions in several variables {#sec-optimality-vector}
+# Optimality conditions in several variables {#sec-optimality-vector}
 
 {{< include mds/_subfiles/vector-calc/_prose-optim-attribution.qmd >}}
 

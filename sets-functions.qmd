@@ -33,7 +33,7 @@ format:
 </script>
 ```
 
-## The pages {#sec-split-pages}
+# The pages {#sec-split-pages}
 
 The definitions that were on this page are now on three pages:
 
