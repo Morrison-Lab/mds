@@ -1,0 +1,32 @@
+:::{#exm-kronecker-delta}
+#### Evaluating the Kronecker delta
+
+- $$
+  \begin{aligned}
+  \kron_{11} &= [1 = 1] \\
+  &= 1.
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \kron_{12} &= [1 = 2] \\
+  &= 0.
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \kron_{22} &= [2 = 2] \\
+  &= 1.
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \kron_{23} &= [2 = 3] \\
+  &= 0.
+  \end{aligned}
+  $$
+
+:::

@@ -239,7 +239,7 @@
 {{< include mds/_subfiles/vector-calc/_thm-gradient-of-linear.qmd >}}
 
 
-## Second partial derivatives and the Hessian {#sec-second-derivatives}
+# Second partial derivatives and the Hessian {#sec-second-derivatives}
 
 {{< include mds/_subfiles/vector-calc/_def-ball.qmd >}}
 

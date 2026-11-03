@@ -36,7 +36,7 @@ format:
 
 {{< include mds/_notation.qmd >}}
 
-## Further reading {#sec-further-reading}
+# Further reading {#sec-further-reading}
 
 For the logical symbols and proof conventions used in these notes
 (whose definitions are on the [Proof Writing](proof-writing.qmd#sec-proof-definitions) page):
@@ -52,7 +52,7 @@ For the logical symbols and proof conventions used in these notes
 
 For set and function notation, see the [Sets](sets.qmd), [Functions](functions.qmd), and [Expressions and Algorithms](expressions-algorithms.qmd) pages.
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::

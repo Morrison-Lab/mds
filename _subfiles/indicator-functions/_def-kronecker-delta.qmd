@@ -1,0 +1,15 @@
+:::{#def-kronecker-delta}
+#### Kronecker delta
+
+For integers $i$ and $j$,
+the **Kronecker delta** is
+[@wikipedia_kronecker_delta]
+
+$$\kron_{ij} \eqdef [i = j]$$
+
+that is,
+$\kron_{ij} = 1$ when $i = j$
+and $\kron_{ij} = 0$ when $i \neq j$
+(@def-iverson-bracket).
+
+:::

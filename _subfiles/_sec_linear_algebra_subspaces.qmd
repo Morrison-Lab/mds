@@ -1,4 +1,4 @@
-## Rank
+# Rank
 
 {{< include mds/_subfiles/linear-algebra/_def-linearly-independent.qmd >}}
 
@@ -6,7 +6,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-rank.qmd >}}
 
-## Subspaces {#sec-subspaces}
+# Subspaces {#sec-subspaces}
 
 {{< include mds/_subfiles/linear-algebra/_prose-subspaces-attribution.qmd >}}
 

@@ -1,4 +1,4 @@
-## Measures
+# Measures
 
 ```{r}
 #| include: false
@@ -82,7 +82,7 @@ reticulate::py_require(py_packages)
 
 {{< include mds/_subfiles/measures/_exm-sigma-finite.qmd >}}
 
-## Probability measures
+# Probability measures
 
 {{< include mds/_subfiles/measures/_def-probability-measure.qmd >}}
 

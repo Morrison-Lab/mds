@@ -1,4 +1,4 @@
-## Column space and null space {#sec-column-null-space}
+# Column space and null space {#sec-column-null-space}
 
 {{< include mds/_subfiles/linear-algebra/_def-column-space.qmd >}}
 
@@ -32,7 +32,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-null-gram.qmd >}}
 
-## Rank-nullity and rank factorization {#sec-rank-nullity}
+# Rank-nullity and rank factorization {#sec-rank-nullity}
 
 {{< include mds/_subfiles/linear-algebra/_prose-rank-nullity-attribution.qmd >}}
 

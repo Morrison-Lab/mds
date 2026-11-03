@@ -43,7 +43,7 @@ goes on to the page that now holds it.
 
 :::
 
-## Further reading {#sec-further-reading}
+# Further reading {#sec-further-reading}
 
 - @billingsley1995probability
   develops measure theory and builds probability on it.
@@ -55,7 +55,7 @@ goes on to the page that now holds it.
   is a graduate course in probability
   that opens with a chapter on introductory measure theory.
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::
