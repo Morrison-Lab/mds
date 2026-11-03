@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:15:39 (PST)
+Last modified: 2026-11-02 16:09:48 (PST)
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:
 
@@ -54,7 +54,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 >
 > In the same way, every indicator is a binary variable, and every binary variable $X$ is the indicator of its own value being $1$: $X = {\mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}}$, since both sides are $1$ when $X = 1$ and $0$ when $X = 0$.
 
-## 0.1 Two primary notational paradigms: set vs. predicate notation
+# 1 Two primary notational paradigms: set vs. predicate notation
 
 The vast majority of indicator notations belong to one of two families: set notation or predicate notation.
 
@@ -70,7 +70,7 @@ The vast majority of indicator notations belong to one of two families: set nota
 >
 > **Example 3 (One indicator in both notations)** Let $A = [0, \infty)$, the nonnegative real numbers. The indicator of $A$ is $\mathbb{1}_{A}(x)$ in set notation, and ${\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}$ or ${\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}}$ in predicate notation ([Definition 4](#def-set-predicate-notation), [Definition 5](#def-predicate-notation)). At $x = 3.5$, all three equal $1$; at $x = -2.1$, all three equal $0$.
 
-### 0.1.1 Set notation
+## 1.1 Set notation
 
 In set notation, the indicator is tied to a set $A$, which appears as a subscript:
 
@@ -82,7 +82,7 @@ In set notation, the indicator is tied to a set $A$, which appears as a subscrip
 
 When the function is viewed as a mathematical object in its own right (for instance, as an element of an $L^p$ function space, the set of functions $f$ for which $\int \mathopen{}\left|f(x)\right|\mathclose{}^p \, dx$ is finite), authors often omit the argument $x$, writing simply $\mathbf{1}_A$, $\mathbb{1}_{A}$, or $I_A$.
 
-### 0.1.2 Predicate notation
+## 1.2 Predicate notation
 
 In predicate notation, the indicator takes a logical condition, relation, or proposition $P$ directly as its argument or subscript:
 
@@ -94,7 +94,7 @@ In predicate notation, the indicator takes a logical condition, relation, or pro
 
 Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities ([definition](proof-writing.llms.md#def-inequality)) involving random variables, such as ${\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}}$ (an event occurring before time $t$) or ${\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}}$ (a binary outcome).
 
-### 0.1.3 Equivalence between paradigms
+## 1.3 Equivalence between paradigms
 
 The two paradigms are connected by evaluating the predicate indicator at the membership statement $x \in A$:
 
@@ -113,7 +113,7 @@ $$\mathbf{1}_A(x) = \mathbb{I}(x \in A)$$
 
 Set notation is more natural when the underlying set $A$ has a standard name (such as the support of a distribution ([Definition 6](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as ${\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}}$.
 
-## 0.2 Iverson bracket notation
+# 2 Iverson bracket notation
 
 In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the Iverson bracket [\[3\]](#ref-wikipedia_iverson_bracket).
 
@@ -182,7 +182,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 >   &= 0.
 >   \end{aligned}$$
 
-## 0.3 Strengths and limitations of the Iverson bracket
+# 3 Strengths and limitations of the Iverson bracket
 
 The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if $U$ is a [finite set](functions.llms.md#def-finite-set) that contains $A$, then:
 
@@ -192,7 +192,7 @@ With $A = \mathopen{}\left\{2, 4\right\}\mathclose{}$, $f(x) = x$, and $U = \mat
 
 However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets.llms.md#def-closed-interval) $[a, b]$, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) $\mathbb{E}[Y \mid X]$ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses $\mathbb{1}$ or $I$ rather than the bare Iverson bracket.
 
-## 0.4 Summary of indicator notations
+# 4 Summary of indicator notations
 
 [Table 1](#tbl-indicator-notations) compares the major notations encountered across the literature.
 
@@ -209,7 +209,7 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 >
 > Table 1: Notations for indicator functions across mathematical and statistical literature
 
-## 0.5 Conventions in this book
+# 5 Conventions in this book
 
 In these notes, we standardize on blackboard bold $\mathbb{1}$ via the macros defined in `latex-macros/macros.qmd`:
 
@@ -220,7 +220,7 @@ In these notes, we standardize on blackboard bold $\mathbb{1}$ via the macros de
 
 Blackboard bold $\mathbb{1}$ is preferred because it avoids all common collisions: it is visually distinct from the scalar $1$, the identity matrix $I$, and the observed and expected Fisher information matrices ($I$, $\mathcal{I}$).
 
-## 0.6 Key algebraic properties
+# 6 Key algebraic properties
 
 Indicator functions translate the logical connectives ([definition](proof-writing.llms.md#def-logical-connective)) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:
 

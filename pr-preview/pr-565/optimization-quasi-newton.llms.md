@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:15:39 (PST)
+Last modified: 2026-11-02 16:09:48 (PST)
 
 > **NOTE:**
 >
@@ -77,6 +77,91 @@ Last modified: 2026-11-02 15:15:39 (PST)
 > ```
 >
 > The step length is 0.25, which moves the [iterate](optimization-newton.llms.md#def-iterate) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = (0.25, 0.5)$ and lowers $f$ from 0 to -0.625. The difference of the [gradients](vector-calculus.llms.md#def-vector-derivative), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)} = (1.5, 1.75)$, is $\mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}$, which is the [secant condition](#def-secant-condition) for a quadratic function.
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> qn_x_qn <- seq(-0.4, 0.6, length.out = 101)
+> qn_y_qn <- seq(-0.2, 1, length.out = 101)
+> qn_grid_qn <- tidyr::expand_grid(x = qn_x_qn, y = qn_y_qn)
+> qn_gx_qn <- qn_grid_qn$x
+> qn_gy_qn <- qn_grid_qn$y
+> qn_quad_qn <- 0.5 * (4 * qn_gx_qn^2 + 2 * qn_gx_qn * qn_gy_qn + 3 * qn_gy_qn^2)
+> qn_lin_qn <- qn_gx_qn + 2 * qn_gy_qn
+> qn_grid_qn$z <- qn_quad_qn - qn_lin_qn
+> qn_star_qn <- c(1, 7) / 11
+> qn_start_qn <- tibble::tibble(x = 0, y = 0)
+> qn_next_qn <- tibble::tibble(x = 0.25, y = 0.5)
+> qn_min_qn <- tibble::tibble(x = qn_star_qn[1], y = qn_star_qn[2])
+> qn_step_qn <- tibble::tibble(x = 0, y = 0, xend = 0.25, yend = 0.5)
+> qn_rest_qn <- tibble::tibble(
+>   x = 0.25, y = 0.5, xend = qn_star_qn[1], yend = qn_star_qn[2]
+> )
+> qn_len_qn <- grid::unit(0.15, "inches")
+> qn_arrow_qn <- grid::arrow(length = qn_len_qn)
+> qn_aes_qn <- ggplot2::aes(x, y)
+> qn_seg_qn <- ggplot2::aes(xend = xend, yend = yend)
+> ggplot2::ggplot(qn_grid_qn, qn_aes_qn) +
+>   ggplot2::geom_contour(ggplot2::aes(z = z), colour = "grey70", bins = 12) +
+>   ggplot2::geom_segment(
+>     data = qn_step_qn, mapping = qn_seg_qn, colour = "#0072B2",
+>     arrow = qn_arrow_qn
+>   ) +
+>   ggplot2::geom_segment(
+>     data = qn_rest_qn, mapping = qn_seg_qn, colour = "#D55E00",
+>     linetype = "dashed", arrow = qn_arrow_qn
+>   ) +
+>   ggplot2::geom_point(data = qn_start_qn, colour = "#0072B2", size = 3) +
+>   ggplot2::geom_point(data = qn_next_qn, colour = "#D55E00", size = 3) +
+>   ggplot2::geom_point(
+>     data = qn_min_qn, colour = "#0072B2", size = 3, shape = 15
+>   ) +
+>   ggplot2::coord_equal() +
+>   ggplot2::labs(x = "first coordinate", y = "second coordinate")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> qn_x_ax = np.linspace(-0.4, 0.6, 101)
+> qn_y_ax = np.linspace(-0.2, 1, 101)
+> qn_xx_ax, qn_yy_ax = np.meshgrid(qn_x_ax, qn_y_ax)
+> qn_quad_ax = 0.5 * (4 * qn_xx_ax**2 + 2 * qn_xx_ax * qn_yy_ax + 3 * qn_yy_ax**2)
+> qn_z_ax = qn_quad_ax - qn_xx_ax - 2 * qn_yy_ax
+> qn_star_ax = np.array([1, 7]) / 11
+> fig, ax = plt.subplots(figsize=(6, 4.5), layout="constrained")
+> ax.contour(
+>     qn_xx_ax, qn_yy_ax, qn_z_ax, levels=12, colors="0.7",
+>     negative_linestyles="solid",
+> )
+> ax.annotate("", xy=(0.25, 0.5), xytext=(0, 0), arrowprops={"arrowstyle": "->", "color": "#0072B2"})
+> ax.annotate(
+>     "", xy=qn_star_ax, xytext=(0.25, 0.5),
+>     arrowprops={"arrowstyle": "->", "color": "#D55E00", "linestyle": "dashed"},
+> )
+> ax.plot(0, 0, "o", color="#0072B2", markersize=8)
+> ax.plot(0.25, 0.5, "o", color="#D55E00", markersize=8)
+> ax.plot(qn_star_ax[0], qn_star_ax[1], "s", color="#0072B2", markersize=8)
+> ax.set_aspect("equal")
+> ax.set_xlabel("first coordinate")
+> ax.set_ylabel("second coordinate")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Contour plot of the quadratic function f with level curves that are tilted ellipses, centred near the point (0.09, 0.64). A blue circle at the origin marks the starting point, and a solid blue arrow runs from it to a vermilion circle at (0.25, 0.5), the iterate after one step. A dashed vermilion arrow runs from that iterate to a blue square at (0.09, 0.64), the minimizer, which is the ellipses' centre.](optimization-quasi-newton_files/figure-html/quasi-newton-step-fig-r-1.png)](optimization-quasi-newton_files/figure-html/quasi-newton-step-fig-r-1.png "Figure 1: Level curves of the quadratic function f from Example 2. The first step (solid arrow) moves from \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (blue circle) to \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} (vermilion circle) in the steepest-descent direction, because \mathbf{H}^{(0)} = \mathbf{I}_2. The minimizer (blue square) is the centre of the ellipses.  The dashed arrow shows the step that remains. A quasi-Newton matrix that approximates \mathbf{Q}^{-1} would aim the next step at that centre rather than along the gradient.")
+>
+> ## Python
+>
+> [![Contour plot of the quadratic function f with level curves that are tilted ellipses, centred near the point (0.09, 0.64). A blue circle at the origin marks the starting point, and a solid blue arrow runs from it to a vermilion circle at (0.25, 0.5), the iterate after one step. A dashed vermilion arrow runs from that iterate to a blue square at (0.09, 0.64), the minimizer, which is the ellipses' centre.](optimization-quasi-newton_files/figure-html/quasi-newton-step-fig-python-1.png)](optimization-quasi-newton_files/figure-html/quasi-newton-step-fig-python-1.png "Figure 1: Level curves of the quadratic function f from Example 2. The first step (solid arrow) moves from \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (blue circle) to \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} (vermilion circle) in the steepest-descent direction, because \mathbf{H}^{(0)} = \mathbf{I}_2. The minimizer (blue square) is the centre of the ellipses.  The dashed arrow shows the step that remains. A quasi-Newton matrix that approximates \mathbf{Q}^{-1} would aim the next step at that centre rather than along the gradient.")
+>
+> Figure 1: [Level curves](vector-calculus.llms.md#def-level-set) of the [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial) $f$ from [Example 2](#exm-quasi-newton-step). The first step (solid arrow) moves from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (blue circle) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}$ (vermilion circle) in the [steepest-descent](optimization-gradient-descent.llms.md#def-gradient-descent) [direction](vector-calculus.llms.md#def-direction), because $\mathbf{H}^{(0)} = \mathbf{I}_2$. The [minimizer](algebra-basics.llms.md#def-global-minimizer) (blue square) is the centre of the ellipses. The dashed arrow shows the step that remains. A [quasi-Newton](#def-quasi-newton-method) [matrix](linear-algebra-matrices.llms.md#def-matrix) that approximates $\mathbf{Q}^{-1}$ would aim the next step at that centre rather than along the [gradient](vector-calculus.llms.md#def-vector-derivative).
 
 > **NOTE:**
 >

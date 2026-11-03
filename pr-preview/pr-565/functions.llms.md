@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:15:39 (PST)
+Last modified: 2026-11-02 16:09:48 (PST)
 
 > **NOTE:**
 >
@@ -742,7 +742,7 @@ Last modified: 2026-11-02 15:15:39 (PST)
 >
 > Figure 9: The [logistic function](#def-logistic-function) for $\eta$ from $-6$ to $6$. Its [values](#def-value) lie strictly between $0$ and $1$, and the marked points are the values at $\eta= -2$, $0$ and $2$ from [Example 16](#exm-logistic-function).
 
-## 0.1 Countable sets
+# 1 Countable sets
 
 > **NOTE:**
 >
@@ -793,7 +793,37 @@ Last modified: 2026-11-02 15:15:39 (PST)
 >
 > *Remark 8* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in $[0, 1]$, it builds a number in $[0, 1]$ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the $n$th number’s in the $n$th digit (its $n$th decimal place, one of $0, 1, \ldots, 9$), so the sequence misses it [\[20\]](#ref-wikipedia_cantors_diagonal_argument). One way to choose the $n$th digit is to use $5$, unless the $n$th number’s $n$th digit is $5$, in which case use $4$. For example, if the sequence starts $0.1234\ldots$, $0.3579\ldots$, $0.2468\ldots$, the diagonal digits are $1$, $5$, and $6$, so the new number starts $0.545\ldots$, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
 
-## References
+# Definitions on this page
+
+- [Definition 1 (Function, map, mapping, transformation)](#def-function)
+- [Definition 2 (Argument, input)](#def-argument)
+- [Definition 3 (Value, output)](#def-value)
+- [Definition 4 (Relation)](#def-relation)
+- [Definition 5 (Domain)](#def-domain)
+- [Definition 6 (Codomain)](#def-codomain)
+- [Definition 7 (Image)](#def-image)
+- [Definition 8 (Preimage, inverse image)](#def-preimage)
+- [Definition 9 (Range)](#def-range)
+- [Definition 10 (Graph of a function)](#def-graph)
+- [Definition 11 (Composition)](#def-composition)
+- [Definition 12 (Inner function)](#def-inner-function)
+- [Definition 13 (Outer function)](#def-outer-function)
+- [Definition 14 (Inverse function)](#def-inverse-function)
+- [Definition 15 (Elementwise application of a function to a vector)](#def-elementwise-function)
+- [Definition 16 (Operator)](#def-operator)
+- [Definition 17 (Functional)](#def-functional)
+- [Definition 18 (Sequence)](#def-sequence)
+- [Definition 19 (Term of a sequence)](#def-sequence-term)
+- [Definition 20 (Finite sequence)](#def-finite-sequence)
+- [Definition 21 (Closed under an operation)](#def-closed-under)
+- [Definition 22 (Logistic function, sigmoid, expit)](#def-logistic-function)
+- [Definition 23 (Finite set)](#def-finite-set)
+- [Definition 24 (Cardinality)](#def-cardinality)
+- [Definition 25 (Infinite set)](#def-infinite-set)
+- [Definition 26 (Countable set)](#def-countable-set)
+- [Definition 27 (Countably infinite set)](#def-countably-infinite)
+
+# References
 
 \[1\]
 
@@ -874,35 +904,5 @@ Wikipedia contributors, “Countable set — Wikipedia, the free encyclopedia.�
 \[20\]
 
 Wikipedia contributors, “Cantor’s diagonal argument — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument>
-
-# Definitions on this page
-
-- [Definition 1 (Function, map, mapping, transformation)](#def-function)
-- [Definition 2 (Argument, input)](#def-argument)
-- [Definition 3 (Value, output)](#def-value)
-- [Definition 4 (Relation)](#def-relation)
-- [Definition 5 (Domain)](#def-domain)
-- [Definition 6 (Codomain)](#def-codomain)
-- [Definition 7 (Image)](#def-image)
-- [Definition 8 (Preimage, inverse image)](#def-preimage)
-- [Definition 9 (Range)](#def-range)
-- [Definition 10 (Graph of a function)](#def-graph)
-- [Definition 11 (Composition)](#def-composition)
-- [Definition 12 (Inner function)](#def-inner-function)
-- [Definition 13 (Outer function)](#def-outer-function)
-- [Definition 14 (Inverse function)](#def-inverse-function)
-- [Definition 15 (Elementwise application of a function to a vector)](#def-elementwise-function)
-- [Definition 16 (Operator)](#def-operator)
-- [Definition 17 (Functional)](#def-functional)
-- [Definition 18 (Sequence)](#def-sequence)
-- [Definition 19 (Term of a sequence)](#def-sequence-term)
-- [Definition 20 (Finite sequence)](#def-finite-sequence)
-- [Definition 21 (Closed under an operation)](#def-closed-under)
-- [Definition 22 (Logistic function, sigmoid, expit)](#def-logistic-function)
-- [Definition 23 (Finite set)](#def-finite-set)
-- [Definition 24 (Cardinality)](#def-cardinality)
-- [Definition 25 (Infinite set)](#def-infinite-set)
-- [Definition 26 (Countable set)](#def-countable-set)
-- [Definition 27 (Countably infinite set)](#def-countably-infinite)
 
 Back to top

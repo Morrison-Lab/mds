@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:15:39 (PST)
+Last modified: 2026-11-02 16:09:48 (PST)
 
-## 0.1 Critical points and optimization
+# 1 Critical points and optimization
 
 > **NOTE:**
 >
@@ -535,7 +535,7 @@ Last modified: 2026-11-02 15:15:39 (PST)
 >
 > Inflection points occur where the second derivative changes sign ($f''(x) = 0$ at $x = 1/4$). Because $f''$ is non-zero at both critical points, neither is an inflection point.
 
-## 0.2 Optimality conditions in several variables
+# 2 Optimality conditions in several variables
 
 > **NOTE:**
 >
@@ -1093,6 +1093,79 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 >   which is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), so ${(1, 0)}^{\top}$ is a [strict local minimizer](#def-strict-local-minimizer).
 >
 > - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$ has the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and Hessian $\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}$, which is not positive definite (${(0, 1)}^{\top}$ gives $-2$). Indeed, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer) ([Example 9](#exm-first-order-condition)).
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> so_x_so <- seq(-1.5, 2.5, length.out = 101)
+> so_y_so <- seq(-1.5, 1.5, length.out = 101)
+> so_grid_so <- tidyr::expand_grid(x = so_x_so, y = so_y_so)
+> so_gx_so <- so_grid_so$x
+> so_gy_so <- so_grid_so$y
+> so_bowl_so <- so_gx_so^2 + so_gy_so^2 - 2 * so_gx_so
+> so_saddle_so <- so_gx_so^2 - so_gy_so^2
+> so_bowl_tbl_so <- dplyr::mutate(
+>   so_grid_so, z = so_bowl_so, panel = "positive definite Hessian"
+> )
+> so_saddle_tbl_so <- dplyr::mutate(
+>   so_grid_so, z = so_saddle_so, panel = "indefinite Hessian"
+> )
+> so_all_so <- dplyr::bind_rows(so_bowl_tbl_so, so_saddle_tbl_so)
+> so_order_so <- c("positive definite Hessian", "indefinite Hessian")
+> so_all_so$panel <- factor(so_all_so$panel, levels = so_order_so)
+> so_min_panel_so <- factor(so_order_so[1], levels = so_order_so)
+> so_sad_panel_so <- factor(so_order_so[2], levels = so_order_so)
+> so_min_so <- tibble::tibble(x = 1, y = 0, panel = so_min_panel_so)
+> so_sad_so <- tibble::tibble(x = 0, y = 0, panel = so_sad_panel_so)
+> so_aes_so <- ggplot2::aes(x, y)
+> ggplot2::ggplot(so_all_so, so_aes_so) +
+>   ggplot2::geom_contour(ggplot2::aes(z = z), colour = "grey70", bins = 12) +
+>   ggplot2::geom_point(data = so_min_so, colour = "#0072B2", size = 3) +
+>   ggplot2::geom_point(
+>     data = so_sad_so, colour = "#D55E00", size = 3, shape = 17
+>   ) +
+>   ggplot2::facet_wrap(~panel) +
+>   ggplot2::coord_equal() +
+>   ggplot2::labs(x = "first coordinate", y = "second coordinate")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> so_x_ax = np.linspace(-1.5, 2.5, 101)
+> so_y_ax = np.linspace(-1.5, 1.5, 101)
+> so_xx_ax, so_yy_ax = np.meshgrid(so_x_ax, so_y_ax)
+> so_bowl_ax = so_xx_ax**2 + so_yy_ax**2 - 2 * so_xx_ax
+> so_saddle_ax = so_xx_ax**2 - so_yy_ax**2
+> fig, axes = plt.subplots(1, 2, figsize=(7, 3.5), layout="constrained")
+> so_style_ax = {"levels": 12, "colors": "0.7", "negative_linestyles": "solid"}
+> axes[0].contour(so_xx_ax, so_yy_ax, so_bowl_ax, **so_style_ax)
+> axes[0].plot(1, 0, "o", color="#0072B2", markersize=8)
+> axes[0].set_title("positive definite Hessian")
+> axes[1].contour(so_xx_ax, so_yy_ax, so_saddle_ax, **so_style_ax)
+> axes[1].plot(0, 0, "^", color="#D55E00", markersize=8)
+> axes[1].set_title("indefinite Hessian")
+> for ax in axes:
+>     ax.set_aspect("equal")
+>     ax.set_xlabel("first coordinate")
+>     ax.set_ylabel("second coordinate")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-r-1.png)](optimization-critical-points_files/figure-html/second-order-condition-r-1.png "Figure 6: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
+>
+> ## Python
+>
+> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-python-1.png)](optimization-critical-points_files/figure-html/second-order-condition-python-1.png "Figure 6: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
+>
+> Figure 6: [Level curves](vector-calculus.llms.md#def-level-set) of the two [functions](functions.llms.md#def-function) in [Example 16](#exm-second-order-condition). At the [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ of $x_1^2 + x_2^2 - 2 x_1$ (blue circle), the [Hessian](vector-calculus.llms.md#def-hessian) is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). The level curves close around a [strict local minimizer](#def-strict-local-minimizer). At the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of $x_1^2 - x_2^2$ (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, $x_1^2 - x_2^2$ rises, and along the second it falls. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
 
 > **NOTE:**
 >

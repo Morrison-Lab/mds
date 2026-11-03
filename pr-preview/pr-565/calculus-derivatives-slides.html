@@ -357,10 +357,11 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 15:15:39 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 16:09:48 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-derivatives" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Derivatives</h2>
-<h3 id="sec-limits-derivatives">Limits and derivatives</h3>
+</section><section class="slide level2"><h3 data-number="1.1" id="sec-limits-derivatives">
+<span class="header-section-number">1.1</span> Limits and derivatives</h3>
 <div id="def-limit" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Limit of a function at a point)</strong></span> Let <span class="math inline">\(f\)</span> be a <a href="./functions.html#def-function">function</a> defined at every point of an <a href="./sets.html#def-open-interval">open interval</a> around <span class="math inline">\(c\)</span>, except possibly at <span class="math inline">\(c\)</span> itself, and let <span class="math inline">\(L\)</span> be a <a href="./number-systems.html#def-real-numbers">real number</a>. The <strong>limit</strong> of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span> <span class="citation" data-cites="wikipedia_limit_of_a_function"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, written <span class="math inline">\(\lim_{x \to c} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that</p>
 <p><span class="math display">\[\mathopen{}\left|f(x) - L\right|\mathclose{} &lt; \varepsilon\quad \text{for every } x \text{ with } 0 &lt; \mathopen{}\left|x - c\right|\mathclose{} &lt; \delta.\]</span></p>
@@ -572,7 +573,8 @@ f''(x) &amp;= 3 \cdot 2x \\
 \]</span></p>
 <p>So <span class="math inline">\(f''(2) = 12\)</span>, <span class="math inline">\(f''(0) = 0\)</span>, and <span class="math inline">\(f''(-1) = -6\)</span>.</p>
 </div>
-<h3 id="sec-derivative-rules">Derivative rules</h3>
+<h3 data-number="1.2" id="sec-derivative-rules">
+<span class="header-section-number">1.2</span> Derivative rules</h3>
 <div id="thm-deriv-const" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Constant rule)</strong></span> If <span class="math inline">\(c\)</span> is constant with respect to <span class="math inline">\(x\)</span>, then</p>
 <p><span class="math display">\[\frac{\partial}{\partial x}c = 0\]</span></p>
@@ -1057,7 +1059,8 @@ f''(x)
 \end{aligned}
 \]</span></p>
 </div>
-<h3 id="sec-function-profile">Studying a new function</h3>
+<h3 data-number="1.3" id="sec-function-profile">
+<span class="header-section-number">1.3</span> Studying a new function</h3>
 <div id="def-logarithmic-derivative" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 14 (Logarithmic derivative)</strong></span> The <strong>logarithmic derivative</strong> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span> of a function <span class="math inline">\(f\)</span> of a real variable equals <span class="math inline">\(\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}\)</span> by <a href="#/cor-deriv-log-chain" class="quarto-xref">Corollary&nbsp;1</a> and measures the rate of change of <span class="math inline">\(f\)</span> relative to its size; it needs <span class="math inline">\(f(x) &gt; 0\)</span>, and for <span class="math inline">\(f(x) &lt; 0\)</span> the same expression is the derivative of <span class="math inline">\({\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}}\)</span>.</p>
 </div>
@@ -1172,7 +1175,8 @@ Figure&nbsp;1: The logistic function, its derivative and its logarithm
 </div>
 </div>
 </div>
-</section><section class="slide level2"><h3 id="sec-tangent-lines">Tangent lines</h3>
+</section><section class="slide level2"><h3 data-number="1.4" id="sec-tangent-lines">
+<span class="header-section-number">1.4</span> Tangent lines</h3>
 <div id="def-tangent-line" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Tangent line)</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;6</a>). The <strong>tangent line</strong> to the <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the graph of the <a href="./algebra-exponentials.html#def-affine-function">affine function</a></p>
 <p><span class="math display">\[x \mapsto f(c) + f'(c)\,(x - c),\]</span></p>
@@ -1192,7 +1196,8 @@ x
 \]</span></p>
 <p>At <span class="math inline">\(x = 1.1\)</span> the tangent line has height <span class="math inline">\(2(1.1) - 1 = 1.2\)</span>, close to the curve’s height <span class="math inline">\(f(1.1) = 1.21\)</span>; the gap, <span class="math inline">\(1.21 - 1.2 = 0.01\)</span>, is <span class="math inline">\((1.1 - 1)^2\)</span>.</p>
 </div>
-</section><section class="slide level2"><h3 id="sec-linear-approximation">Linear approximation</h3>
+</section><section class="slide level2"><h3 data-number="1.5" id="sec-linear-approximation">
+<span class="header-section-number">1.5</span> Linear approximation</h3>
 <p>For a differentiable function <span class="math inline">\(f\)</span> and a small step <span class="math inline">\(\varepsilon\)</span>,</p>
 <p><span id="eq-linear-approx"><span class="math display">\[f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}\]</span></span></p>
 </section><section class="slide level2"><div id="def-linear-approximation" class="theorem definition">
@@ -1351,7 +1356,8 @@ f'(\pi/4) &amp;= 4 - \sqrt{2}{\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclos
 <p><span class="math display">\[f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{}} \approx 4.171543\]</span></p>
 <p>The approximation error is <span class="math inline">\(|4.171593 - 4.171543| \approx 0.00005\)</span>, on the order of <span class="math inline">\((0.01)^2 = 10^{-4}\)</span>.</p>
 </div>
-</section><section class="slide level2"><h3 id="sec-taylor-series">Taylor series</h3>
+</section><section class="slide level2"><h3 data-number="1.6" id="sec-taylor-series">
+<span class="header-section-number">1.6</span> Taylor series</h3>
 <div id="def-taylor-polynomial" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 18 (Taylor polynomial)</strong></span> Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> of degree <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
 <p><span id="eq-taylor-poly-def"><span class="math display">\[

@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:15:39 (PST)
+Last modified: 2026-11-02 16:09:48 (PST)
 
-## 0.1 Rank
+# 1 Rank
 
 > **NOTE:**
 >
@@ -51,7 +51,7 @@ Last modified: 2026-11-02 15:15:39 (PST)
 >
 > An $n \times p$ matrix can have full column rank only when $p \le n$, because more than $n$ vectors of length $n$ are never linearly independent. For example, the $2 \times 3$ matrix $\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}$ has $3$ columns of length $2$, and $1 \cdot(1, 0) + 1 \cdot(0, 1) - 1 \cdot(1, 1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, with coefficients that are not all zero. So its $3$ columns are not linearly independent, and its rank is less than $3$.
 
-## 0.2 Subspaces
+# 2 Subspaces
 
 > **NOTE:**
 >

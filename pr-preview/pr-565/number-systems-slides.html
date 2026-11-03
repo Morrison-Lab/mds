@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 15:15:39 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 16:09:48 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -304,6 +304,9 @@
 </section>
 <section id="sec-notation-naturals" class="slide level2" data-number="1">
 <h2><span class="header-section-number">1</span> Natural numbers</h2>
+</section>
+<section class="slide level2">
+
 <div id="exr-naturals-below-three" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Which numbers are natural?)</strong></span> List the elements of the set <span class="math inline">\(\mathopen{}\left\{n \in \mathbb{N}: n &lt; 3\right\}\mathclose{}\)</span>. Is your answer the same in every textbook?</p>
 </div>
@@ -427,7 +430,7 @@
 <section class="slide level2">
 
 <div id="def-factorial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Factorial)</strong></span> For a non-negative integer (<a href="#/def-nonnegative-integers" class="quarto-xref">Definition&nbsp;7</a>) <span class="math inline">\(n\)</span>, the <strong>factorial</strong> of <span class="math inline">\(n\)</span> <span class="citation" data-cites="wikipedia_factorial"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span>, written <span class="math inline">\({{n}!}\)</span>, is <span class="math inline">\(1 \cdot 2 \cdots n\)</span>, the <a href="#/def-natural-numbers">natural numbers</a> from 1 to <span class="math inline">\(n\)</span> multiplied together. For <span class="math inline">\(n = 0\)</span> there is nothing to multiply, and <span class="math inline">\({{0}!} = 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Factorial)</strong></span> For a <a href="#/def-nonnegative-integers">non-negative integer</a> <span class="math inline">\(n\)</span>, the <strong>factorial</strong> of <span class="math inline">\(n\)</span> <span class="citation" data-cites="wikipedia_factorial"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span>, written <span class="math inline">\({{n}!}\)</span>, is <span class="math inline">\(1 \cdot 2 \cdots n\)</span>, the <a href="#/def-natural-numbers">natural numbers</a> from 1 to <span class="math inline">\(n\)</span> multiplied together. For <span class="math inline">\(n = 0\)</span> there is nothing to multiply, and <span class="math inline">\({{0}!} = 1\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -437,13 +440,16 @@
 <ul>
 <li><span class="math inline">\({{3}!} = 1 \cdot 2 \cdot 3 = 6\)</span>.</li>
 <li><span class="math inline">\({{4}!} = 1 \cdot 2 \cdot 3 \cdot 4 = 24\)</span>.</li>
-<li><span class="math inline">\({{0}!} = 1\)</span> (<a href="#/def-factorial" class="quarto-xref">Definition&nbsp;8</a>).</li>
+<li><span class="math inline">\({{0}!} = 1\)</span>, by the <a href="#/def-factorial">definition of the factorial</a>.</li>
 </ul>
 <!-- no-figure: three single values -->
 </div>
 </section>
 <section id="sec-number-systems-divisibility" class="slide level2" data-number="2">
 <h2><span class="header-section-number">2</span> Divisibility, primes and congruence</h2>
+</section>
+<section class="slide level2">
+
 <div id="def-divides" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Divides)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> each be an <a href="#/def-integers">integer</a>. We say that <span class="math inline">\(a\)</span> <strong>divides</strong> <span class="math inline">\(b\)</span>, written <span class="math inline">\(a \mid b\)</span>, if <span class="math inline">\(b = a c\)</span> for some integer <span class="math inline">\(c\)</span>. When <span class="math inline">\(a\)</span> does not divide <span class="math inline">\(b\)</span>, we write <span class="math inline">\(a \nmid b\)</span>.</p>
 </div>
@@ -453,7 +459,7 @@
 <div id="exm-divides" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Divisors and non-divisors)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(3 \mid 12\)</span> (<a href="#/def-divides" class="quarto-xref">Definition&nbsp;9</a>), because <span class="math inline">\(12 = 3 \cdot 4\)</span> and <span class="math inline">\(4\)</span> is an <a href="#/def-integers">integer</a>.</li>
+<li><span class="math inline">\(3\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(12\)</span>, <span class="math inline">\(3 \mid 12\)</span>, because <span class="math inline">\(12 = 3 \cdot 4\)</span> and <span class="math inline">\(4\)</span> is an <a href="#/def-integers">integer</a>.</li>
 <li><span class="math inline">\(5 \nmid 12\)</span>, because <span class="math inline">\(5 \cdot 2 = 10 &lt; 12 &lt; 15 = 5 \cdot 3\)</span>, so no integer <span class="math inline">\(c\)</span> has <span class="math inline">\(5 c = 12\)</span>.</li>
 <li>Every integer <span class="math inline">\(a\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(0\)</span>, because <span class="math inline">\(0 = a \cdot 0\)</span>.</li>
 </ul>
@@ -463,7 +469,7 @@
 <section class="slide level2">
 
 <div id="def-prime" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Prime number)</strong></span> An <a href="#/def-integers">integer</a> <span class="math inline">\(n \ge 2\)</span> is <strong>prime</strong> if its only positive divisors (<a href="#/def-divides" class="quarto-xref">Definition&nbsp;9</a>) are <span class="math inline">\(1\)</span> and <span class="math inline">\(n\)</span> <span class="citation" data-cites="wikipedia_prime_number"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span>.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Prime number)</strong></span> An <a href="#/def-integers">integer</a> <span class="math inline">\(n \ge 2\)</span> is <strong>prime</strong> if no <a href="#/def-positive-integer">positive integer</a> other than <span class="math inline">\(1\)</span> and <span class="math inline">\(n\)</span> <a href="#/def-divides">divides</a> it <span class="citation" data-cites="wikipedia_prime_number"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -471,7 +477,7 @@
 <div id="exm-prime" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Primes and non-primes)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(7\)</span> is prime (<a href="#/def-prime" class="quarto-xref">Definition&nbsp;10</a>): none of <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span> and <span class="math inline">\(6\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(7\)</span>, and no <a href="#/def-integers">integer</a> above <span class="math inline">\(7\)</span> does, so its only positive divisors are <span class="math inline">\(1\)</span> and <span class="math inline">\(7\)</span>.</li>
+<li><span class="math inline">\(7\)</span> is <a href="#/def-prime">prime</a>: none of <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span> and <span class="math inline">\(6\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(7\)</span>, and no <a href="#/def-integers">integer</a> above <span class="math inline">\(7\)</span> does, so its only positive divisors are <span class="math inline">\(1\)</span> and <span class="math inline">\(7\)</span>.</li>
 <li><span class="math inline">\(9\)</span> is not prime, because <span class="math inline">\(3\)</span> divides <span class="math inline">\(9\)</span>.</li>
 <li><span class="math inline">\(1\)</span> is not prime, because the definition requires <span class="math inline">\(n \ge 2\)</span>.</li>
 </ul>
@@ -481,7 +487,7 @@
 <section class="slide level2">
 
 <div id="def-congruence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Congruence modulo <span class="math inline">\(n\)</span>)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be <a href="#/def-integers">integers</a>, and let <span class="math inline">\(n\)</span> be a <a href="#/def-positive-integer">positive integer</a>. We say that <span class="math inline">\(a\)</span> is <strong>congruent to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(n\)</span></strong>, written <span class="math inline">\(a \equiv b \pmod{n}\)</span>, if <span class="math inline">\(n \mid (a - b)\)</span> (<a href="#/def-divides" class="quarto-xref">Definition&nbsp;9</a>) <span class="citation" data-cites="wikipedia_modular_arithmetic"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>. When <span class="math inline">\(a\)</span> is not congruent to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(n\)</span>, we write <span class="math inline">\(a \not\equiv b \pmod{n}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Congruence modulo <span class="math inline">\(n\)</span>)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be <a href="#/def-integers">integers</a>, and let <span class="math inline">\(n\)</span> be a <a href="#/def-positive-integer">positive integer</a>. We say that <span class="math inline">\(a\)</span> is <strong>congruent to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(n\)</span></strong>, written <span class="math inline">\(a \equiv b \pmod{n}\)</span>, if <span class="math inline">\(n\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(a - b\)</span>, written <span class="math inline">\(n \mid (a - b)\)</span>, <span class="citation" data-cites="wikipedia_modular_arithmetic"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>. When <span class="math inline">\(a\)</span> is not congruent to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(n\)</span>, we write <span class="math inline">\(a \not\equiv b \pmod{n}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -489,7 +495,7 @@
 <div id="exm-congruence" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (Clock arithmetic)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(17 \equiv 5 \pmod{12}\)</span> (<a href="#/def-congruence" class="quarto-xref">Definition&nbsp;11</a>), because <span class="math inline">\(17 - 5 = 12\)</span> and <span class="math inline">\(12 \mid 12\)</span>. On a 12-hour clock, hour 17 is 5 o’clock.</li>
+<li><span class="math inline">\(17\)</span> is <a href="#/def-congruence">congruent to <span class="math inline">\(5\)</span> modulo <span class="math inline">\(12\)</span></a>, <span class="math inline">\(17 \equiv 5 \pmod{12}\)</span>, because <span class="math inline">\(17 - 5 = 12\)</span> and <span class="math inline">\(12 \mid 12\)</span>. On a 12-hour clock, hour 17 is 5 o’clock.</li>
 <li><span class="math inline">\(17 \not\equiv 4 \pmod{12}\)</span>, because <span class="math inline">\(17 - 4 = 13\)</span> and <span class="math inline">\(12 \nmid 13\)</span>.</li>
 </ul>
 <!-- no-figure: two single congruences -->
@@ -497,6 +503,9 @@
 </section>
 <section id="sec-notation-reals" class="slide level2" data-number="3">
 <h2><span class="header-section-number">3</span> Rational, real, and irrational numbers</h2>
+</section>
+<section class="slide level2">
+
 <div id="def-rational-numbers" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 12 (Rational numbers)</strong></span> A <strong>rational number</strong> <span class="citation" data-cites="wikipedia_rational_number"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is a number that can be written as a fraction <span class="math inline">\(\frac{a}{b}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(b \ne 0\)</span>. The set of rational numbers is written <span class="math inline">\(\mathbb{Q}\)</span>:</p>
 <p><span class="math display">\[\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\{\frac{a}{b} : a \in \mathbb{Z},\ b \in \mathbb{Z},\ b \ne 0\right\}\mathclose{}\]</span></p>

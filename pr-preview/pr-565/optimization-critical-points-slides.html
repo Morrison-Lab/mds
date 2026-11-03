@@ -356,10 +356,10 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 15:15:39 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 16:09:48 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-critical-points" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Critical points and optimization</h2>
-<div id="def-flat-point" class="theorem definition">
+</section><section class="slide level2"><div id="def-flat-point" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Flat point (stationary point))</strong></span> Let <span class="math inline">\(f\)</span> be <a href="./calculus-derivatives.html#def-differentiable">differentiable at</a> <span class="math inline">\(c\)</span>. If <span class="math inline">\(f'(c) = 0\)</span>, then <span class="math inline">\(c\)</span> is a <strong>flat point</strong> of <span class="math inline">\(f\)</span> (also called a <strong>stationary point</strong>) <span class="citation" data-cites="wikipedia_stationary_point"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-flat-point" class="theorem example">
@@ -899,7 +899,7 @@ f''(1/2) &amp;= 24(1/2) - 6 \\
 </div>
 </section><section class="slide level2"></section><section id="sec-optimality-vector" class="slide level2" data-number="2"><h2>
 <span class="header-section-number">2</span> Optimality conditions in several variables</h2>
-<div class="callout callout-note callout-titled callout-style-default">
+</section><section class="slide level2"><div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -1469,6 +1469,92 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </li>
 <li><p><span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2\)</span> has the stationary point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and Hessian <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -2 \end{bmatrix}\)</span>, which is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(-2\)</span>). Indeed, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> is not a <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a> (<a href="#/exm-first-order-condition" class="quarto-xref">Example&nbsp;9</a>).</p></li>
 </ul>
+</div>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a aria-label="1"></a>so_x_so <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">2.5</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
+<span id="cb17-2"><a aria-label="2"></a>so_y_so <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
+<span id="cb17-3"><a aria-label="3"></a>so_grid_so <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">expand_grid</span>(<span class="at">x =</span> so_x_so, <span class="at">y =</span> so_y_so)</span>
+<span id="cb17-4"><a aria-label="4"></a>so_gx_so <span class="ot">&lt;-</span> so_grid_so<span class="sc">$</span>x</span>
+<span id="cb17-5"><a aria-label="5"></a>so_gy_so <span class="ot">&lt;-</span> so_grid_so<span class="sc">$</span>y</span>
+<span id="cb17-6"><a aria-label="6"></a>so_bowl_so <span class="ot">&lt;-</span> so_gx_so<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> so_gy_so<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> so_gx_so</span>
+<span id="cb17-7"><a aria-label="7"></a>so_saddle_so <span class="ot">&lt;-</span> so_gx_so<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> so_gy_so<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb17-8"><a aria-label="8"></a>so_bowl_tbl_so <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb17-9"><a aria-label="9"></a>  so_grid_so, <span class="at">z =</span> so_bowl_so, <span class="at">panel =</span> <span class="st">"positive definite Hessian"</span></span>
+<span id="cb17-10"><a aria-label="10"></a>)</span>
+<span id="cb17-11"><a aria-label="11"></a>so_saddle_tbl_so <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb17-12"><a aria-label="12"></a>  so_grid_so, <span class="at">z =</span> so_saddle_so, <span class="at">panel =</span> <span class="st">"indefinite Hessian"</span></span>
+<span id="cb17-13"><a aria-label="13"></a>)</span>
+<span id="cb17-14"><a aria-label="14"></a>so_all_so <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(so_bowl_tbl_so, so_saddle_tbl_so)</span>
+<span id="cb17-15"><a aria-label="15"></a>so_order_so <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"positive definite Hessian"</span>, <span class="st">"indefinite Hessian"</span>)</span>
+<span id="cb17-16"><a aria-label="16"></a>so_all_so<span class="sc">$</span>panel <span class="ot">&lt;-</span> <span class="fu">factor</span>(so_all_so<span class="sc">$</span>panel, <span class="at">levels =</span> so_order_so)</span>
+<span id="cb17-17"><a aria-label="17"></a>so_min_panel_so <span class="ot">&lt;-</span> <span class="fu">factor</span>(so_order_so[<span class="dv">1</span>], <span class="at">levels =</span> so_order_so)</span>
+<span id="cb17-18"><a aria-label="18"></a>so_sad_panel_so <span class="ot">&lt;-</span> <span class="fu">factor</span>(so_order_so[<span class="dv">2</span>], <span class="at">levels =</span> so_order_so)</span>
+<span id="cb17-19"><a aria-label="19"></a>so_min_so <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">panel =</span> so_min_panel_so)</span>
+<span id="cb17-20"><a aria-label="20"></a>so_sad_so <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">panel =</span> so_sad_panel_so)</span>
+<span id="cb17-21"><a aria-label="21"></a>so_aes_so <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">aes</span>(x, y)</span>
+<span id="cb17-22"><a aria-label="22"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(so_all_so, so_aes_so) <span class="sc">+</span></span>
+<span id="cb17-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_contour</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">z =</span> z), <span class="at">colour =</span> <span class="st">"grey70"</span>, <span class="at">bins =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb17-24"><a aria-label="24"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> so_min_so, <span class="at">colour =</span> <span class="st">"#0072B2"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb17-25"><a aria-label="25"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(</span>
+<span id="cb17-26"><a aria-label="26"></a>    <span class="at">data =</span> so_sad_so, <span class="at">colour =</span> <span class="st">"#D55E00"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">shape =</span> <span class="dv">17</span></span>
+<span id="cb17-27"><a aria-label="27"></a>  ) <span class="sc">+</span></span>
+<span id="cb17-28"><a aria-label="28"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>panel) <span class="sc">+</span></span>
+<span id="cb17-29"><a aria-label="29"></a>  ggplot2<span class="sc">::</span><span class="fu">coord_equal</span>() <span class="sc">+</span></span>
+<span id="cb17-30"><a aria-label="30"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"first coordinate"</span>, <span class="at">y =</span> <span class="st">"second coordinate"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb18-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb18-3"><a aria-label="3"></a></span>
+<span id="cb18-4"><a aria-label="4"></a>so_x_ax <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">2.5</span>, <span class="dv">101</span>)</span>
+<span id="cb18-5"><a aria-label="5"></a>so_y_ax <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="dv">101</span>)</span>
+<span id="cb18-6"><a aria-label="6"></a>so_xx_ax, so_yy_ax <span class="op">=</span> np.meshgrid(so_x_ax, so_y_ax)</span>
+<span id="cb18-7"><a aria-label="7"></a>so_bowl_ax <span class="op">=</span> so_xx_ax<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> so_yy_ax<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> so_xx_ax</span>
+<span id="cb18-8"><a aria-label="8"></a>so_saddle_ax <span class="op">=</span> so_xx_ax<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> so_yy_ax<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb18-9"><a aria-label="9"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="fl">3.5</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb18-10"><a aria-label="10"></a>so_style_ax <span class="op">=</span> {<span class="st">"levels"</span>: <span class="dv">12</span>, <span class="st">"colors"</span>: <span class="st">"0.7"</span>, <span class="st">"negative_linestyles"</span>: <span class="st">"solid"</span>}</span>
+<span id="cb18-11"><a aria-label="11"></a>axes[<span class="dv">0</span>].contour(so_xx_ax, so_yy_ax, so_bowl_ax, <span class="op">**</span>so_style_ax)</span>
+<span id="cb18-12"><a aria-label="12"></a>axes[<span class="dv">0</span>].plot(<span class="dv">1</span>, <span class="dv">0</span>, <span class="st">"o"</span>, color<span class="op">=</span><span class="st">"#0072B2"</span>, markersize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb18-13"><a aria-label="13"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"positive definite Hessian"</span>)</span>
+<span id="cb18-14"><a aria-label="14"></a>axes[<span class="dv">1</span>].contour(so_xx_ax, so_yy_ax, so_saddle_ax, <span class="op">**</span>so_style_ax)</span>
+<span id="cb18-15"><a aria-label="15"></a>axes[<span class="dv">1</span>].plot(<span class="dv">0</span>, <span class="dv">0</span>, <span class="st">"^"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, markersize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb18-16"><a aria-label="16"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"indefinite Hessian"</span>)</span>
+<span id="cb18-17"><a aria-label="17"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
+<span id="cb18-18"><a aria-label="18"></a>    ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb18-19"><a aria-label="19"></a>    ax.set_xlabel(<span class="st">"first coordinate"</span>)</span>
+<span id="cb18-20"><a aria-label="20"></a>    ax.set_ylabel(<span class="st">"second coordinate"</span>)</span>
+<span id="cb18-21"><a aria-label="21"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-second-order-condition" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-second-order-condition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: <a href="./vector-calculus.html#def-level-set">Level curves</a> of the two <a href="./functions.html#def-function">functions</a> in <a href="#/exm-second-order-condition" class="quarto-xref">Example&nbsp;16</a>. At the <a href="#/def-stationary-point">stationary point</a> <span class="math inline">\({(1, 0)}^{\top}\)</span> of <span class="math inline">\(x_1^2 + x_2^2 - 2 x_1\)</span> (blue circle), the <a href="./vector-calculus.html#def-hessian">Hessian</a> is <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>. The level curves close around a <a href="#/def-strict-local-minimizer">strict local minimizer</a>. At the stationary point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> of <span class="math inline">\(x_1^2 - x_2^2\)</span> (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, <span class="math inline">\(x_1^2 - x_2^2\)</span> rises, and along the second it falls. So <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> is not a <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a>.
+</figcaption><div aria-describedby="fig-second-order-condition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-7" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-7-1">R</a></li>
+<li><a href="#tabset-7-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-7-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-critical-points_files/figure-html/second-order-condition-r-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;6: Level curves of the two functions in Example&nbsp;16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer."><img data-src="optimization-critical-points_files/figure-html/second-order-condition-r-1.png" alt="Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it." width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-critical-points_files/figure-html/second-order-condition-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;6: Level curves of the two functions in Example&nbsp;16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer."><img data-src="optimization-critical-points_files/figure-html/second-order-condition-python-1.png" alt="Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it." width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
 </div>
 </section><section class="slide level2"><div id="exm-second-order-inconclusive" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (The condition is sufficient, not necessary)</strong></span> <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^4\)</span> and <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^4\)</span> both have gradient <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> and the same Hessian there, <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span>, since</p>

@@ -18761,6 +18761,10 @@
    "mds/number-systems#def-integers"
   ],
   [
+   "mds/number-systems#def-prime",
+   "mds/number-systems#def-positive-integer"
+  ],
+  [
    "mds/number-systems#def-rational-numbers",
    "mds/number-systems#def-integers"
   ],

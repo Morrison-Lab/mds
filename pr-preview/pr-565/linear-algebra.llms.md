@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:15:39 (PST)
+Last modified: 2026-11-02 16:09:48 (PST)
 
 The linear algebra notes are split across these pages:
 
@@ -33,7 +33,7 @@ A link to a section, theorem or definition on this page from before the split go
 >
 > *Remark 1* (Linear algebra and matrix analysis). [Matrix analysis](#def-matrix-analysis) is usually placed within [linear algebra](linear-algebra.llms.md) and its applications [\[1\]](#ref-wikipedia_matrix_analysis), and these notes do not treat it as a separate subject: they use the name *linear algebra* for the material in the pages above. Banerjee and Roy [\[2\]](#ref-banerjee2014linear) pairs the two names in its title. Its preface says that its last two chapters cover [convergence](algebra-exponentials.llms.md#def-convergent-sequence) of [matrices](linear-algebra-matrices.llms.md#def-matrix) and [Hilbert spaces](linear-algebra-inner-products.llms.md#def-hilbert-space) [\[2, p. xvi\]](#ref-banerjee2014linear).
 
-## 0.1 Further reading
+# 1 Further reading
 
 - Strang [\[3\]](#ref-strang2023linear) is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.
 - Axler [\[4\]](#ref-axler2024linear) is a proof-based treatment centered on vector spaces and linear maps. A free electronic version is available from the publisher.
@@ -45,7 +45,11 @@ A link to a section, theorem or definition on this page from before the split go
 - Stanford University [\[9\]](#ref-stanford2024ee278notes) (Stanford EE 278, taught by Tsachy Weissman) applies this page’s tools to probability and inference. Its “MMSE Geometry” lecture treats the best estimate as an orthogonal [projection](linear-algebra-projections.llms.md), and its lectures on spectral decomposition, the Karhunen-Loeve expansion and principal component analysis treat [diagonalization](linear-algebra-diagonalization.llms.md) of a covariance matrix.
 - [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) is a 16-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops visual and geometric intuition for vectors, linear combinations, spans, linear transformations, matrix multiplication, determinants, inverses, dot and cross products, change of basis, and eigenvectors and eigenvalues.
 
-## References
+# Definitions on this page
+
+- [Definition 1 (Matrix analysis)](#def-matrix-analysis)
+
+# References
 
 \[1\]
 
@@ -82,9 +86,5 @@ K. B. Petersen and M. S. Pedersen, “The matrix cookbook,” Technical Universi
 \[9\]
 
 Stanford University, “EE 278, probability and statistical inference: Fall 2024 lecture notes.” Handwritten lecture notes, 2024. Available: <https://web.stanford.edu/class/ee278/lectures.html>
-
-# Definitions on this page
-
-- [Definition 1 (Matrix analysis)](#def-matrix-analysis)
 
 Back to top

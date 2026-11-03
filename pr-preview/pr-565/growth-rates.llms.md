@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:15:39 (PST)
+Last modified: 2026-11-02 16:09:48 (PST)
 
 > **NOTE:**
 >
 > *Remark*. The running time of an [algorithm](expressions-algorithms.llms.md#def-algorithm) is a [function](functions.llms.md#def-function) of the size $n$ of its [input](functions.llms.md#def-argument). To compare running times, we ignore fixed factors and small inputs. This page defines the notation for that comparison.
 
-## 0.1 Upper bounds
+# 1 Upper bounds
 
 > **NOTE:**
 >
@@ -37,7 +37,7 @@ Last modified: 2026-11-02 15:15:39 (PST)
 >
 > which is the [inequality](proof-writing.llms.md#def-inequality) in [Definition 1](#def-big-o) with $c = 4$. Hence $3n + 5 = O(n)$.
 
-## 0.2 Lower bounds
+# 2 Lower bounds
 
 > **NOTE:**
 >
@@ -61,7 +61,7 @@ Last modified: 2026-11-02 15:15:39 (PST)
 >
 > which is the [inequality](proof-writing.llms.md#def-inequality) in [Definition 2](#def-big-omega) with $c = 3$. Hence $3n + 5 = \Omega(n)$.
 
-## 0.3 Matching bounds
+# 3 Matching bounds
 
 > **NOTE:**
 >
@@ -71,16 +71,16 @@ Last modified: 2026-11-02 15:15:39 (PST)
 >
 > **Example 3 (The function** $3n + 5$ is big-Theta of $n$) Let $f(n) = 3n + 5$ and $g(n) = n$. By [Example 1](#exm-big-o), $f(n) = O(n)$, and by [Example 2](#exm-big-omega), $f(n) = \Omega(n)$. Therefore $f(n) = \Theta(n)$ by [Definition 3](#def-big-theta).
 
-## References
-
-\[1\]
-
-Wikipedia contributors, “Big O notation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Big_O_notation>
-
 # Definitions on this page
 
 - [Definition 1 (Big-O)](#def-big-o)
 - [Definition 2 (Big-Omega)](#def-big-omega)
 - [Definition 3 (Big-Theta)](#def-big-theta)
+
+# References
+
+\[1\]
+
+Wikipedia contributors, “Big O notation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Big_O_notation>
 
 Back to top

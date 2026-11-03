@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:15:39 (PST)
+Last modified: 2026-11-02 16:09:48 (PST)
 
 > **NOTE:**
 >
 > *Remark*. Probability and statistics count with the integers and natural numbers and measure with the real numbers. This page defines those number systems. It also defines the words that sort their members: even and odd integers, and rational and irrational real numbers. Finally, it defines divisibility, [primes](#def-prime) and congruence, and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative-integers).
 
-## 0.1 Natural numbers
+# 1 Natural numbers
 
 > **NOTE:**
 >
@@ -102,7 +102,7 @@ Last modified: 2026-11-02 15:15:39 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Factorial)** For a non-negative integer ([Definition 7](#def-nonnegative-integers)) $n$, the **factorial** of $n$ [\[4\]](#ref-wikipedia_factorial), written ${{n}!}$, is $1 \cdot 2 \cdots n$, the [natural numbers](#def-natural-numbers) from 1 to $n$ multiplied together. For $n = 0$ there is nothing to multiply, and ${{0}!} = 1$.
+> **Definition 8 (Factorial)** For a [non-negative integer](#def-nonnegative-integers) $n$, the **factorial** of $n$ [\[4\]](#ref-wikipedia_factorial), written ${{n}!}$, is $1 \cdot 2 \cdots n$, the [natural numbers](#def-natural-numbers) from 1 to $n$ multiplied together. For $n = 0$ there is nothing to multiply, and ${{0}!} = 1$.
 
 > **NOTE:**
 >
@@ -110,9 +110,9 @@ Last modified: 2026-11-02 15:15:39 (PST)
 >
 > - ${{3}!} = 1 \cdot 2 \cdot 3 = 6$.
 > - ${{4}!} = 1 \cdot 2 \cdot 3 \cdot 4 = 24$.
-> - ${{0}!} = 1$ ([Definition 8](#def-factorial)).
+> - ${{0}!} = 1$, by the [definition of the factorial](#def-factorial).
 
-## 0.2 Divisibility, primes and congruence
+# 2 Divisibility, primes and congruence
 
 > **NOTE:**
 >
@@ -122,34 +122,34 @@ Last modified: 2026-11-02 15:15:39 (PST)
 >
 > **Example 5 (Divisors and non-divisors)**  
 >
-> - $3 \mid 12$ ([Definition 9](#def-divides)), because $12 = 3 \cdot 4$ and $4$ is an [integer](#def-integers).
+> - $3$ [divides](#def-divides) $12$, $3 \mid 12$, because $12 = 3 \cdot 4$ and $4$ is an [integer](#def-integers).
 > - $5 \nmid 12$, because $5 \cdot 2 = 10 < 12 < 15 = 5 \cdot 3$, so no integer $c$ has $5 c = 12$.
 > - Every integer $a$ [divides](#def-divides) $0$, because $0 = a \cdot 0$.
 
 > **NOTE:**
 >
-> **Definition 10 (Prime number)** An [integer](#def-integers) $n \ge 2$ is **prime** if its only positive divisors ([Definition 9](#def-divides)) are $1$ and $n$ [\[5\]](#ref-wikipedia_prime_number).
+> **Definition 10 (Prime number)** An [integer](#def-integers) $n \ge 2$ is **prime** if no [positive integer](#def-positive-integer) other than $1$ and $n$ [divides](#def-divides) it [\[5\]](#ref-wikipedia_prime_number).
 
 > **NOTE:**
 >
 > **Example 6 (Primes and non-primes)**  
 >
-> - $7$ is prime ([Definition 10](#def-prime)): none of $2$, $3$, $4$, $5$ and $6$ [divides](#def-divides) $7$, and no [integer](#def-integers) above $7$ does, so its only positive divisors are $1$ and $7$.
+> - $7$ is [prime](#def-prime): none of $2$, $3$, $4$, $5$ and $6$ [divides](#def-divides) $7$, and no [integer](#def-integers) above $7$ does, so its only positive divisors are $1$ and $7$.
 > - $9$ is not prime, because $3$ divides $9$.
 > - $1$ is not prime, because the definition requires $n \ge 2$.
 
 > **NOTE:**
 >
-> **Definition 11 (Congruence modulo** $n$) Let $a$ and $b$ be [integers](#def-integers), and let $n$ be a [positive integer](#def-positive-integer). We say that $a$ is **congruent to** $b$ modulo $n$, written $a \equiv b \pmod{n}$, if $n \mid (a - b)$ ([Definition 9](#def-divides)) [\[6\]](#ref-wikipedia_modular_arithmetic). When $a$ is not congruent to $b$ modulo $n$, we write $a \not\equiv b \pmod{n}$.
+> **Definition 11 (Congruence modulo** $n$) Let $a$ and $b$ be [integers](#def-integers), and let $n$ be a [positive integer](#def-positive-integer). We say that $a$ is **congruent to** $b$ modulo $n$, written $a \equiv b \pmod{n}$, if $n$ [divides](#def-divides) $a - b$, written $n \mid (a - b)$, [\[6\]](#ref-wikipedia_modular_arithmetic). When $a$ is not congruent to $b$ modulo $n$, we write $a \not\equiv b \pmod{n}$.
 
 > **NOTE:**
 >
 > **Example 7 (Clock arithmetic)**  
 >
-> - $17 \equiv 5 \pmod{12}$ ([Definition 11](#def-congruence)), because $17 - 5 = 12$ and $12 \mid 12$. On a 12-hour clock, hour 17 is 5 o’clock.
+> - $17$ is [congruent to](#def-congruence) $5$ modulo $12$, $17 \equiv 5 \pmod{12}$, because $17 - 5 = 12$ and $12 \mid 12$. On a 12-hour clock, hour 17 is 5 o’clock.
 > - $17 \not\equiv 4 \pmod{12}$, because $17 - 4 = 13$ and $12 \nmid 13$.
 
-## 0.3 Rational, real, and irrational numbers
+# 3 Rational, real, and irrational numbers
 
 > **NOTE:**
 >

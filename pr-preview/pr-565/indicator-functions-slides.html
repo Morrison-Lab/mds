@@ -294,11 +294,14 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 15:15:39 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 16:09:48 (PST)</p>
 </section>
 <section class="slide level2">
 
 <p><span id="sec-indicator-functions"></span></p>
+</section>
+<section class="slide level2">
+
 <p>An <strong>indicator function</strong> is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:</p>
 <ul>
 <li>binary variables, which take only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> (<a href="#/def-binary-variable" class="quarto-xref">Definition&nbsp;3</a>);</li>
@@ -384,7 +387,7 @@
 <div id="exm-set-predicate-notation" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (One indicator in both notations)</strong></span> Let <span class="math inline">\(A = [0, \infty)\)</span>, the nonnegative real numbers. The indicator of <span class="math inline">\(A\)</span> is <span class="math inline">\(\mathbb{1}_{A}(x)\)</span> in set notation, and <span class="math inline">\({\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}\)</span> or <span class="math inline">\({\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}}\)</span> in predicate notation (<a href="#/def-set-predicate-notation" class="quarto-xref">Definition&nbsp;4</a>, <a href="#/def-predicate-notation" class="quarto-xref">Definition&nbsp;5</a>). At <span class="math inline">\(x = 3.5\)</span>, all three equal <span class="math inline">\(1\)</span>; at <span class="math inline">\(x = -2.1\)</span>, all three equal <span class="math inline">\(0\)</span>.</p>
 </div>
-<h3 id="set-notation">Set notation</h3>
+<h3 data-number="1.1" id="set-notation"><span class="header-section-number">1.1</span> Set notation</h3>
 <p>In set notation, the indicator is tied to a set <span class="math inline">\(A\)</span>, which appears as a subscript:</p>
 <ul>
 <li><span class="math inline">\(\mathbf{1}_A(x)\)</span> (bold numeral one)</li>
@@ -394,7 +397,7 @@
 <li><span class="math inline">\(\chi_A(x)\)</span> (Greek letter chi, historically termed the <em>characteristic function</em>)</li>
 </ul>
 <p>When the function is viewed as a mathematical object in its own right (for instance, as an element of an <span class="math inline">\(L^p\)</span> function space, the set of functions <span class="math inline">\(f\)</span> for which <span class="math inline">\(\int \mathopen{}\left|f(x)\right|\mathclose{}^p \, dx\)</span> is finite), authors often omit the argument <span class="math inline">\(x\)</span>, writing simply <span class="math inline">\(\mathbf{1}_A\)</span>, <span class="math inline">\(\mathbb{1}_{A}\)</span>, or <span class="math inline">\(I_A\)</span>.</p>
-<h3 id="predicate-notation">Predicate notation</h3>
+<h3 data-number="1.2" id="predicate-notation"><span class="header-section-number">1.2</span> Predicate notation</h3>
 <p>In predicate notation, the indicator takes a logical condition, relation, or proposition <span class="math inline">\(P\)</span> directly as its argument or subscript:</p>
 <ul>
 <li><span class="math inline">\(\mathbb{I}(x \in A)\)</span> or <span class="math inline">\(\mathbb{I}(P)\)</span></li>
@@ -404,7 +407,7 @@
 <li><span class="math inline">\(I(x \in A)\)</span> or <span class="math inline">\(I(P)\)</span></li>
 </ul>
 <p>Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities (<a href="./proof-writing.html#def-inequality">definition</a>) involving random variables, such as <span class="math inline">\({\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}}\)</span> (an event occurring before time <span class="math inline">\(t\)</span>) or <span class="math inline">\({\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}}\)</span> (a binary outcome).</p>
-<h3 id="equivalence-between-paradigms">Equivalence between paradigms</h3>
+<h3 data-number="1.3" id="equivalence-between-paradigms"><span class="header-section-number">1.3</span> Equivalence between paradigms</h3>
 <p>The two paradigms are connected by evaluating the predicate indicator at the membership statement <span class="math inline">\(x \in A\)</span>:</p>
 <p><span class="math display">\[
 \mathbf{1}_A(x) = \mathbb{I}(x \in A)

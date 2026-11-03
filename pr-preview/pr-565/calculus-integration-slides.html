@@ -356,10 +356,10 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 15:15:39 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 16:09:48 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-integration" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Integration</h2>
-<p>Integration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability.</p>
+</section><section class="slide level2"><p>Integration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability.</p>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -377,7 +377,8 @@
 </div>
 </div>
 </div>
-</section><section class="slide level2"><h3 id="antiderivatives">Antiderivatives</h3>
+</section><section class="slide level2"><h3 data-number="1.1" id="antiderivatives">
+<span class="header-section-number">1.1</span> Antiderivatives</h3>
 <div id="def-antiderivative" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Antiderivative)</strong></span> A function <span class="math inline">\(F\)</span> is an <strong>antiderivative</strong> of <span class="math inline">\(f\)</span> on an interval <span class="math inline">\(I\)</span> <span class="citation" data-cites="wikipedia_antiderivative"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> if:</p>
 <p><span class="math display">\[\frac{\partial}{\partial x} F(x) = f(x), \quad \forall x \in I\]</span></p>
@@ -563,7 +564,8 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<h3 id="regularity-conditions">Regularity Conditions</h3>
+<h3 data-number="1.2" id="regularity-conditions">
+<span class="header-section-number">1.2</span> Regularity Conditions</h3>
 <div id="def-differentiable-on" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Differentiable on an interval)</strong></span> A function <span class="math inline">\(f\)</span> is <strong>differentiable on</strong> an interval if it is differentiable (<a href="./calculus-derivatives.html#def-differentiable">Definition&nbsp;6 in Derivatives and Taylor Series</a>) at every point of the interval other than its <a href="./sets.html#def-interval">endpoints</a>, and, at each endpoint that belongs to the interval, it has the one-sided derivative (<a href="./calculus-derivatives.html#def-one-sided-derivative">Definition&nbsp;12 in Derivatives and Taylor Series</a>) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.</p>
 <p><span class="citation" data-cites="larsonCalc11e"><a href="#/references" role="doc-biblioref" onclick="">[2, Sec. 2.1]</a>, p.&nbsp;100</span></p>
@@ -975,7 +977,8 @@ S_n
 \]</span></p>
 <p>So <span class="math inline">\(S_{10} = 0.55\)</span>, <span class="math inline">\(S_{100} = 0.505\)</span>, <span class="math inline">\(S_{1000} = 0.5005\)</span>, and <span class="math inline">\(S_n \to \frac{1}{2}\)</span> as <span class="math inline">\(n \to \infty\)</span>. By <a href="#/thm-riemann-general" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\int_0^1 x\,dx = \frac{1}{2}\)</span>.</p>
 </div>
-<h3 id="fundamental-theorem-of-calculus">Fundamental Theorem of Calculus</h3>
+<h3 data-number="1.3" id="fundamental-theorem-of-calculus">
+<span class="header-section-number">1.3</span> Fundamental Theorem of Calculus</h3>
 <div id="def-accumulation-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Accumulation function)</strong></span> Let <span class="math inline">\(f\)</span> be Riemann integrable on <span class="math inline">\([a, b]\)</span> (<a href="#/def-integrable" class="quarto-xref">Definition&nbsp;13</a>). The <strong>accumulation function</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> is the function <span class="math inline">\(F\)</span> on <span class="math inline">\([a, b]\)</span> with <span class="math inline">\(F(a) \stackrel{\text{def}}{=}0\)</span> and</p>
 <p><span class="math display">\[F(x) \stackrel{\text{def}}{=}\int_a^x f(t)\,dt \quad \text{for } a &lt; x \le b.\]</span></p>

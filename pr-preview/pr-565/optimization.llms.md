@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:15:39 (PST)
+Last modified: 2026-11-02 16:09:48 (PST)
 
 The optimization notes are split across these pages:
 
@@ -17,7 +17,7 @@ The optimization notes are split across these pages:
 
 A link to a section, theorem or definition on this page from before the split goes on to the page that now holds it.
 
-## 1 Further reading
+# 1 Further reading
 
 - Boyd and Vandenberghe [\[1\]](#ref-boyd2004convex) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
 - Nocedal and Wright [\[2\]](#ref-nocedal2006numerical) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
@@ -27,7 +27,7 @@ A link to a section, theorem or definition on this page from before the split go
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)](https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html)
 - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.
 
-## References
+# References
 
 \[1\]
 
