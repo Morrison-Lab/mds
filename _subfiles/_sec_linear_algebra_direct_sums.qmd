@@ -1,4 +1,4 @@
-## Sums and direct sums {#sec-direct-sums}
+# Sums and direct sums {#sec-direct-sums}
 
 {{< include mds/_subfiles/linear-algebra/_prose-direct-sums-attribution.qmd >}}
 
@@ -30,7 +30,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-projection.qmd >}}
 
-## Orthogonal complements {#sec-orthogonal-complements}
+# Orthogonal complements {#sec-orthogonal-complements}
 
 {{< include mds/_subfiles/linear-algebra/_thm-dot-linear.qmd >}}
 
@@ -58,6 +58,6 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-double-complement.qmd >}}
 
-## The fundamental theorem of linear algebra {#sec-fundamental-theorem}
+# The fundamental theorem of linear algebra {#sec-fundamental-theorem}
 
 {{< include mds/_subfiles/linear-algebra/_thm-fundamental-subspaces.qmd >}}

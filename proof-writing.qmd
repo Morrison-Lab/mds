@@ -14,7 +14,7 @@ format:
 
 {{< include mds/_proof-writing.qmd >}}
 
-## Further reading {#sec-further-reading}
+# Further reading {#sec-further-reading}
 
 - @velleman2019prove
   is a structured introduction to proof techniques
@@ -35,7 +35,7 @@ Free course materials on formal logic:
 - Eric Pacuit's [Phil 151: First Order Logic](https://cs.stanford.edu/~epacuit/classes/phil151winter09.html)
   (Stanford, Winter 2009) posts a syllabus, a modal logic study guide and problem sets.
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::

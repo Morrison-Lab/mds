@@ -1,0 +1,33 @@
+:::{#exm-second-order-inconclusive}
+#### The condition is sufficient, not necessary
+
+$f(\vx) = x_1^2 + x_2^4$ and $g(\vx) = x_1^2 - x_2^4$
+both have gradient $\vzero$ at $\vzero$
+and the same Hessian there, $\sbmat{ 2 & 0 \\ 0 & 0 }$,
+since
+
+$$
+\begin{aligned}
+\deriv{x_2} \paren{\deriv{x_2} (\pm x_2^4)} &= \pm 12 x_2^2 \\
+&= 0
+\end{aligned}
+$$
+
+at $x_2 = 0$.
+That Hessian is not positive definite ($\tp{(0, 1)}$ gives $0$),
+so @thm-second-order-condition says nothing about either function.
+In fact $\vzero$ is a strict local minimizer of $f$,
+since $f(\vx) > 0 = f(\vzero)$ for $\vx \ne \vzero$,
+but not a local minimizer of $g$, since
+
+$$
+\begin{aligned}
+g(0, t) &= -t^4 \\
+&< 0 \\
+&= g(\vzero)
+\end{aligned}
+$$
+
+for $t \ne 0$.
+
+:::

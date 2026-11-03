@@ -2,7 +2,7 @@
 #### Second-derivative test for convexity
 
 Let $f : \reals^p \to \reals$ have first and second partial derivatives
-that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-on)).
+that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$.
 
 1. If $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra.qmd#def-positive-semidefinite) for every $\vx$,
    then $f$ is [convex](algebra.qmd#def-convex-function).
@@ -32,91 +32,5 @@ This inequality is @eq-supporting-hyperplane, so $f$ is convex by @thm-convex-fi
 Under the hypothesis of part 2 and with $\vx \ne \vy$,
 the quadratic-form term is positive, so the inequality is strict,
 and $f$ is strictly convex by the last sentence of @thm-convex-first-order.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-convex-hessian}
-#### Using the Hessian to show convexity
-
-- For a symmetric positive semidefinite $\matr{A}$, $f(\vx) = \qform{\matr{A}}{\vx}$
-  has Hessian $2 \matr{A}$ ([Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic)),
-  which is positive semidefinite because $\tp{\vecf{h}} (2 \matr{A}) \vecf{h} = 2\,\tp{\vecf{h}} \matr{A} \vecf{h} \ge 0$;
-  so $f$ is convex.
-- $f(\vx) = x_1^2 + x_2^2 - 2 x_1$ has Hessian $2 \matr{I}_2$ (@exm-second-order-condition),
-  which is positive definite, so $f$ is strictly convex.
-- $f(\vx) = e^{2x_1 + x_2} - x_1$ has Hessian $e^{u} \sbmat{ 4 & 2 \\ 2 & 1 }$ with $u = 2x_1 + x_2$ ([Example](vector-calculus.qmd#exm-hessian)), and
-
-  $$
-  \begin{aligned}
-  \tp{\vecf{h}}\,\matr{H}_f(\vx)\,\vecf{h}
-  &= e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2) \\
-  &= e^{u} (2 h_1 + h_2)^2 \\
-  &\ge 0,
-  \end{aligned}
-  $$
-
-  so $f$ is convex.
-  The Hessian is not positive definite ($\vecf{h} = \tp{(1, -2)}$ gives $0$),
-  so part 2 does not apply,
-  and in fact $f$ is not strictly convex:
-  along $\vx = t\,\tp{(1, -2)}$,
-
-  $$
-  \begin{aligned}
-  u &= 2t - 2t \\
-  &= 0
-  \end{aligned}
-  $$
-
-  and $f = 1 - t$ is linear in $t$,
-  so the convexity inequality holds with equality there.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-convex-hessian-not-necessary}
-#### Strictly convex with a singular Hessian
-
-Part 2 is sufficient but not necessary.
-$f(x) = x^4$ has
-
-$$
-\begin{aligned}
-f''(0) &= 12 \cdot 0^2 \\
-&= 0,
-\end{aligned}
-$$
-
-so $\matr{H}_f(0) = [0]$ is [singular](linear-algebra.qmd#def-invertible-matrix) and not positive definite.
-Yet $f$ is strictly convex, by the strict form of @eq-supporting-hyperplane: for $x \ne y$,
-
-$$
-\ba
-x^4 - y^4 - 4 y^3 (x - y)
-&= (x - y)(x^3 + x^2 y + x y^2 + y^3) - 4 y^3 (x - y)
-&& \text{(factor } x^4 - y^4 \text{)}
-\\
-&= (x - y)(x^3 + x^2 y + x y^2 - 3 y^3)
-&& \text{(collect the } y^3 \text{ terms)}
-\\
-&= (x - y)^2 (x^2 + 2 x y + 3 y^2)
-&& \text{(} (x - y)(x^2 + 2 x y + 3 y^2) = x^3 + x^2 y + x y^2 - 3 y^3 \text{)}
-\\
-&= (x - y)^2 \paren{(x + y)^2 + 2 y^2},
-&& \text{(complete the square)}
-\ea
-$$
-
-which is positive: $(x - y)^2 > 0$, and $(x + y)^2 + 2 y^2 = 0$ would need $y = 0$ and then
-
-$$
-\begin{aligned}
-x &= 0 \\
-&= y.
-\end{aligned}
-$$
 
 :::

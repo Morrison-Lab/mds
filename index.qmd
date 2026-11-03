@@ -10,7 +10,7 @@ format:
     output-file: index.docx
 ---
 
-## Welcome {.unnumbered}
+# Welcome {.unnumbered}
 
 > Math is not just a way of calculating numerical answers;
 it is a way of thinking,
@@ -24,7 +24,14 @@ mathematical notation, algebra
 (including exponentials and logarithms),
 univariate calculus, linear algebra, vector calculus, optimization, and proof writing.
 Some key results are listed here,
-organized by topic:
+organized by topic.
+
+The first six topics are the foundations.
+Apart from a few remarks in Algebra that touch on calculus,
+they assume no calculus,
+so a course on discrete math,
+such as [Math for Computer Science](https://morrison-lab.github.io/mcs/),
+can build on them directly:
 
 - [Notation](notation.qmd):
   common symbols
@@ -46,6 +53,13 @@ organized by topic:
 - [Algebra](algebra.qmd):
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
   percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
+- [Proof Writing](proof-writing.qmd):
+  propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.qmd#def-derivation)
+- [Induction and Recursion](induction.qmd):
+  [recursively defined sequences](induction.qmd#def-recursive-sequence) and [strong induction](induction.qmd#def-strong-induction)
+
+The remaining topics build on the foundations and on each other:
+
 - [Measures](measures.qmd):
   $\sigma$-algebras, [finite](functions.qmd#def-finite-set) and [countable additivity](measures.qmd#def-countable-additivity),
   measures, and the counting measure
@@ -65,10 +79,8 @@ organized by topic:
 - [Optimization](optimization.qmd):
   optimality conditions, Taylor approximations, convexity in several variables,
   Lagrange multipliers, Newton's method, and gradient descent
-- [Proof Writing](proof-writing.qmd):
-  propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.qmd#def-derivation)
 
-## Further reading {.unnumbered}
+# Further reading {.unnumbered}
 
 These resources cover related material.
 
@@ -111,7 +123,7 @@ These resources cover related material.
   - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
     covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our [vector calculus](vector-calculus.qmd) and [optimization](optimization.qmd) pages.
 
-## Using these notes in another site {.unnumbered}
+# Using these notes in another site {.unnumbered}
 
 Course sites link to these pages by URL;
 they do not include this repository as a git submodule.
@@ -148,7 +160,7 @@ Quarto resolves `@id` cross-references only within one rendered page,
 so a host site that links to a result here
 uses an explicit link, `[text](notation.qmd#id)`.
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::

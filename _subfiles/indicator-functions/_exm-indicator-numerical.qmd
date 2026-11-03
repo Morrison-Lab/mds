@@ -1,0 +1,22 @@
+:::{#exm-indicator-numerical}
+#### Evaluating set and predicate indicators
+
+Consider the real line $\universe = \reals$,
+the set of nonnegative numbers $A = [0, \infty)$,
+and a continuous
+[random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable)
+$Y$ (defined in the Morrison Lab's probability notes).
+
+1. Set indicator $\indic{A}(x)$:
+   - For $x = 3.5$: since $3.5 \in [0, \infty)$, $\indic{A}(3.5) = 1$.
+   - For $x = -2.1$: since $-2.1 \notin [0, \infty)$, $\indic{A}(-2.1) = 0$.
+
+2. Predicate indicator $\indicp{Y > 5}$:
+   - If an observation yields $Y = 7.2$,
+     the predicate $7.2 > 5$ is true,
+     so $\indicp{7.2 > 5} = 1$.
+   - If an observation yields $Y = 4.1$,
+     the predicate $4.1 > 5$ is false,
+     so $\indicp{4.1 > 5} = 0$.
+
+:::

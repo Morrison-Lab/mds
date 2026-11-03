@@ -8,11 +8,11 @@ The sets and functions fragments no longer open with a section heading,
 so a host page that includes them writes its own Sets and Functions headings;
 the shim writes them here, with ids that differ from the fragments' own anchors. -->
 
-## Sets {#sec-shim-sets}
+# Sets {#sec-shim-sets}
 
 {{< include mds/_sets.qmd >}}
 
-## Functions {#sec-shim-functions}
+# Functions {#sec-shim-functions}
 
 {{< include mds/_functions.qmd >}}
 

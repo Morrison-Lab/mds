@@ -14,6 +14,6 @@ format:
 
 {{< include mds/_subfiles/_sec_calculus_double_integrals.qmd >}}
 
-## Further reading {.unnumbered}
+# Further reading {.unnumbered}
 
 -   @wp:fubini --- Fubini's theorem, in the Riemann and Lebesgue settings

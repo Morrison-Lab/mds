@@ -10,7 +10,7 @@ even and odd integers, and rational and irrational real numbers.
 
 :::
 
-## Natural numbers {#sec-notation-naturals}
+# Natural numbers {#sec-notation-naturals}
 
 {{< include mds/_subfiles/number-systems/_exr-naturals-below-three.qmd >}}
 
@@ -50,7 +50,7 @@ even and odd integers, and rational and irrational real numbers.
 
 {{< include mds/_subfiles/number-systems/_note-natural-numbers-other-conventions.qmd >}}
 
-## Rational, real, and irrational numbers {#sec-notation-reals}
+# Rational, real, and irrational numbers {#sec-notation-reals}
 
 {{< include mds/_subfiles/number-systems/_def-rational-numbers.qmd >}}
 

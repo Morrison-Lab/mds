@@ -1,0 +1,54 @@
+::: {#fig-qp-equality-fails}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: qp-equality-fails-fig-r
+#| fig-alt: >-
+#|   Graph of the value of f along the constraint line x1 equals 1, against
+#|   x2 from -3 to 3. The blue curve is a downward-opening parabola with its
+#|   peak of 0.5 at x2 equal to 0, and it falls without bound on both sides,
+#|   so it has no lowest point.
+#| fig-height: 3
+#| fig-width: 5
+qf_x2_qf <- seq(-3, 3, length.out = 201)
+qf_curve_qf <- tibble::tibble(x2 = qf_x2_qf, f = 0.5 * (1 - qf_x2_qf^2))
+ggplot2::ggplot(qf_curve_qf, ggplot2::aes(x2, f)) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::labs(x = "x2", y = "f(1, x2)")
+```
+
+### Python
+
+```{python}
+#| label: qp-equality-fails-fig-python
+#| fig-alt: >-
+#|   Graph of the value of f along the constraint line x1 equals 1, against
+#|   x2 from -3 to 3. The blue curve is a downward-opening parabola with its
+#|   peak of 0.5 at x2 equal to 0, and it falls without bound on both sides,
+#|   so it has no lowest point.
+#| fig-height: 3
+#| fig-width: 5
+import matplotlib.pyplot as plt
+import numpy as np
+
+qf_x2_ax = np.linspace(-3, 3, 201)
+fig, ax = plt.subplots(figsize=(5, 3), layout="constrained")
+ax.plot(qf_x2_ax, 0.5 * (1 - qf_x2_ax**2), color="#0072B2")
+ax.set_xlabel("x2")
+ax.set_ylabel("f(1, x2)")
+plt.show();
+```
+
+:::
+
+The first case of @exm-qp-equality-fails:
+with $\matr{S} = \diag(1, -1)$, which is not [positive definite](linear-algebra.qmd#def-positive-definite),
+the [value](functions.qmd#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$
+falls without [bound](sets.qmd#def-bound)
+as $\abs{x_2}$ grows,
+so this problem has no [minimizer](algebra.qmd#def-global-minimizer).
+
+:::

@@ -22,7 +22,7 @@ $$
 
 Let $\ve^{(t)} \eqdef \iterpoint{\vx}{t} - \vx^*$ be the [error](#def-iterate-error) at step $t$.
 The [gradient](vector-calculus.qmd#def-vector-derivative) of $f$ is $\deriv{\vx} f(\vx) = \matr{S}\vx - \vecf{c}$
-(see the proof of @thm-newton-quadratic),
+(as in the proof of @thm-newton-quadratic),
 and $\vecf{c} = \matr{S}\vx^*$,
 so
 
@@ -41,8 +41,7 @@ $$
 $$
 
 By [induction](proof-writing.qmd#def-proof-by-induction) on $t$, $\ve^{(t)} = (\matr{I}_p - \steplen\,\matr{S})^t\,\ve^{(0)}$.
-Write $\matr{S} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$
-([spectral theorem](linear-algebra.qmd#thm-spectral)).
+By the [spectral theorem](linear-algebra.qmd#thm-spectral), write $\matr{S} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$.
 Then $\matr{I}_p - \steplen\,\matr{S} = \matr{Q}(\matr{I}_p - \steplen\,\matr{\Eigvals})\tp{\matr{Q}}$
 because $\matr{Q}\tp{\matr{Q}} = \matr{I}_p$,
 and the $t$th [power](linear-algebra.qmd#def-matrix-power) cancels each inner $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$,
