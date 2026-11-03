@@ -1,0 +1,15 @@
+:::{#thm-deriv-log}
+
+#### Derivative of natural logarithm
+
+For every $x > 0$,
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [natural logarithm](algebra.qmd#def-natural-log) is:
+
+$$
+\begin{aligned}
+\dlogf{x}
+&= \frac{1}{x} \\
+&= x^{-1}
+\end{aligned}
+$$
+:::

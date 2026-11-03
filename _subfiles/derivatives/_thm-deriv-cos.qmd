@@ -1,0 +1,8 @@
+:::{#thm-deriv-cos}
+#### Derivative of cosine
+
+For every [real](number-systems.qmd#def-real-numbers) $x$,
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [cosine](algebra-trigonometry.qmd#def-cosine-sine) [function](functions.qmd#def-function) is:
+
+$$\deriv{x}\cos x = -\sin x$$
+:::

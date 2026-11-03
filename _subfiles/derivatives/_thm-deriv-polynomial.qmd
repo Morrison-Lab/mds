@@ -1,0 +1,13 @@
+:::{#thm-deriv-polynomial}
+#### Power rule
+
+For every [real number](number-systems.qmd#def-real-numbers) $q$ and every $x > 0$
+[@wikipedia_power_rule],
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [power](algebra.qmd#def-real-power) $x^q$ is:
+
+$$\deriv{x}x^q = qx^{q-1}$$
+
+When $q$ is a [positive integer](number-systems.qmd#def-positive-integer),
+the same [formula](expressions-algorithms.qmd#def-closed-form-expression) holds for every [real](number-systems.qmd#def-real-numbers) $x$.
+
+:::

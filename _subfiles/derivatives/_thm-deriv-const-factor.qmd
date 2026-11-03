@@ -1,0 +1,8 @@
+:::{#thm-deriv-const-factor}
+#### Constant multiple rule
+
+If $a$ is [constant with respect to](vector-calculus.qmd#def-constant-wrt-vector) $x$
+and $y$ is a [differentiable function](calculus-derivatives.qmd#def-differentiable) of $x$, then:
+$$\deriv{x}ay = a \derivf{y}{x}$$
+
+:::

@@ -1,0 +1,9 @@
+:::{#thm-quotient-rule}
+#### Quotient rule
+
+If $a$ and $b$ are [differentiable functions](calculus-derivatives.qmd#def-differentiable) of $x$
+[@wikipedia_quotient_rule]
+and $b \neq 0$, then
+
+$$(a/b)' = a'/b - (a/b^2)b'$$
+:::

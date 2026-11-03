@@ -4,37 +4,11 @@ $$f(w + \smallconst) \approx f(w) + \smallconst\,\dif{}{w}f(w)$$ {#eq-linear-app
 
 {{< slidebreak >}}
 
-:::{#def-linear-approximation}
-#### Linear approximation (first-order Taylor approximation)
-
-For a [function](functions.qmd#def-function) $f$ that is [differentiable at](calculus-derivatives.qmd#def-differentiable) $w$,
-the **linear approximation** of $f$ at $w$
-[@wikipedia_linear_approximation]
-(also called the **first-order Taylor approximation**)
-is the function of the step $\smallconst$
-
-$$\hat{f}_w(\smallconst) = f(w) + \smallconst\,\dif{}{w}f(w)$$
-
-so @eq-linear-approx says $f(w + \smallconst) \approx \hat{f}_w(\smallconst)$ for small $\smallconst$.
-@fig-linear-approx illustrates this approximation interactively for a [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial).
-
-:::
+{{< include mds/_subfiles/derivatives/_def-linear-approximation.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#rem-linear-approx-affine}
-#### The "linear" approximation is affine
-
-The linear approximation $\hat{f}_w$ (@def-linear-approximation)
-is an [affine function](algebra.qmd#def-affine-function) of the step $\smallconst$:
-its [slope](algebra.qmd#def-slope) is $\dif{}{w}f(w)$ and its [intercept](algebra-exponentials.qmd#def-intercept) is $f(w)$.
-It is [linear](algebra.qmd#def-linear-function) in $\smallconst$ only when $f(w) = 0$.
-The name "linear approximation" uses "linear" in the looser sense of elementary algebra
-([remark](algebra.qmd#rem-linear-function-terminology)).
-@boyd2018vmls, section 2.2, treats the first-order Taylor approximation
-as an affine function for [functions](functions.qmd#def-function) of several variables as well.
-
-:::
+{{< include mds/_subfiles/derivatives/_rem-linear-approx-affine.qmd >}}
 
 {{< slidebreak >}}
 

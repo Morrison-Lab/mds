@@ -1,0 +1,8 @@
+:::{#thm-product-rule}
+#### Product rule
+
+If $a$ and $b$ are [differentiable functions](calculus-derivatives.qmd#def-differentiable) of $x$
+[@wikipedia_product_rule], then
+
+$$(ab)' = ab' + ba'$$
+:::

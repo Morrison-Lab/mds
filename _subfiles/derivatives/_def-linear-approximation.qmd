@@ -1,0 +1,15 @@
+:::{#def-linear-approximation}
+#### Linear approximation (first-order Taylor approximation)
+
+For a [function](functions.qmd#def-function) $f$ that is [differentiable at](calculus-derivatives.qmd#def-differentiable) $w$,
+the **linear approximation** of $f$ at $w$
+[@wikipedia_linear_approximation]
+(also called the **first-order Taylor approximation**)
+is the function of the step $\smallconst$
+
+$$\hat{f}_w(\smallconst) = f(w) + \smallconst\,\dif{}{w}f(w)$$
+
+so @eq-linear-approx says $f(w + \smallconst) \approx \hat{f}_w(\smallconst)$ for small $\smallconst$.
+@fig-linear-approx illustrates this approximation interactively for a [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial).
+
+:::

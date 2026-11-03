@@ -1,0 +1,29 @@
+:::{#cor-deriv-log-chain}
+
+#### Chain rule for logarithms
+
+If $f$ is [differentiable at](calculus-derivatives.qmd#def-differentiable) $x$ and $f(x) > 0$, then
+
+$$
+\dif{}{x}\logf{f(x)} = \frac{f'(x)}{f(x)}
+$$
+
+:::
+
+::: proof
+Apply @thm-chain-rule and @thm-deriv-log:
+
+$$
+\ba
+\dif{}{x}\logf{f(x)}
+&= f'(x) \cd \dlogf{f(x)}
+&& \text{(chain rule, with } g = f \text{ and outer function } \log \text{)}
+\\
+&= f'(x) \cd \frac{1}{f(x)}
+&& \text{(derivative of } \log \text{, valid because } f(x) > 0 \text{)}
+\\
+&= \frac{f'(x)}{f(x)}
+&& \text{(multiply)}
+\ea
+$$
+:::
