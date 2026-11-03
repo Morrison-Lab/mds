@@ -1,0 +1,17 @@
+{{< include mds/_subfiles/derivatives/_def-taylor-polynomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-exponential.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-maclaurin-polynomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-taylor-series.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-taylor-series.qmd >}}
