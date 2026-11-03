@@ -12577,6 +12577,15 @@
    "external": false
   },
   {
+   "id": "mds/sets#def-cartesian-product-many",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-cartesian-product-many",
+   "kind": "def",
+   "title": "Cartesian product of several sets",
+   "external": false
+  },
+  {
    "id": "mds/sets#def-closed-interval",
    "site": "mds",
    "page": "sets",
@@ -12730,6 +12739,15 @@
    "external": false
   },
   {
+   "id": "mds/sets#def-power-set",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-power-set",
+   "kind": "def",
+   "title": "Power set",
+   "external": false
+  },
+  {
    "id": "mds/sets#def-set",
    "site": "mds",
    "page": "sets",
@@ -12790,6 +12808,15 @@
    "div": "def-superset",
    "kind": "def",
    "title": "Superset",
+   "external": false
+  },
+  {
+   "id": "mds/sets#def-tuple",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-tuple",
+   "kind": "def",
+   "title": "Tuple",
    "external": false
   },
   {
@@ -20393,6 +20420,18 @@
    "mds/sets#def-subset"
   ],
   [
+   "mds/sets#def-cartesian-product-many",
+   "mds/number-systems#def-natural-numbers"
+  ],
+  [
+   "mds/sets#def-cartesian-product-many",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/sets#def-cartesian-product-many",
+   "mds/sets#def-tuple"
+  ],
+  [
    "mds/sets#def-closed-interval",
    "mds/number-systems#def-real-numbers"
   ],
@@ -20477,6 +20516,14 @@
    "mds/sets#def-set"
   ],
   [
+   "mds/sets#def-power-set",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/sets#def-power-set",
+   "mds/sets#def-subset"
+  ],
+  [
    "mds/sets#def-strict-subset",
    "mds/sets#def-set"
   ],
@@ -20487,6 +20534,10 @@
   [
    "mds/sets#def-strict-superset",
    "mds/sets#def-superset"
+  ],
+  [
+   "mds/sets#def-tuple",
+   "mds/number-systems#def-natural-numbers"
   ],
   [
    "mds/sets#def-unbounded-interval",
