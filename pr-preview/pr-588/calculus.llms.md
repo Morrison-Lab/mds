@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:14:20 (PST)
+Last modified: 2026-11-02 16:03:39 (PST)
 
 The calculus notes are split across these pages:
 
@@ -14,7 +14,7 @@ The calculus notes are split across these pages:
 
 A link to a section, theorem or definition on this page from before the split goes on to the page that now holds it.
 
-## 1 Further reading
+# 1 Further reading
 
 - Kaplan [\[1\]](#ref-mosaiccalc)
 - Khuri [\[2\]](#ref-khuri2003advanced)
@@ -26,7 +26,7 @@ A link to a section, theorem or definition on this page from before the split go
 - Grinberg [\[6\]](#ref-realanalysislifesaver) (the rigorous foundations behind these results)
 - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) is a 12-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops geometric and visual intuition for limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series.
 
-## References
+# References
 
 \[1\]
 

@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:14:20 (PST)
+Last modified: 2026-11-02 16:03:39 (PST)
 
 > **NOTE:**
 >
 > *Remark*. Probability and statistics count with the integers and natural numbers and measure with the real numbers. This page defines those number systems. It also defines the words that sort their members: even and odd integers, and rational and irrational real numbers.
 
-## 0.1 Natural numbers
+# 1 Natural numbers
 
 > **NOTE:**
 >
@@ -100,7 +100,7 @@ Last modified: 2026-11-02 15:14:20 (PST)
 >
 > Source: [Wikipedia, “Natural number”, “Terminology and notation” and “Zero as natural number”](https://en.wikipedia.org/w/index.php?title=Natural_number&oldid=1375965996), which cites ISO 80000-2:2019 and the textbooks using each notation.
 
-## 0.2 Rational, real, and irrational numbers
+# 2 Rational, real, and irrational numbers
 
 > **NOTE:**
 >

@@ -345,6 +345,19 @@
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
+<!-- gha-preview-page-banner:start -->
+<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~2% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
+        <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 3px; border-radius: 2px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 3px; border-radius: 2px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
+<!-- gha-preview-page-banner:end -->
+
   <div class="reveal">
     <div class="slides">
 
@@ -353,10 +366,10 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 15:14:20 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 16:03:39 (PST)</p>
 </section><section class="slide level2"></section><section id="design-matrix" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Design Matrix</h2>
-<div id="def-design-matrix" class="theorem definition">
+</section><section class="slide level2"><div id="def-design-matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Design matrix, model matrix)</strong></span> In a regression model with <span class="math inline">\(n\)</span> observations and <span class="math inline">\(p\)</span> predictors, the <strong>design matrix</strong> <span class="citation" data-cites="wikipedia_design_matrix"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> (or <strong>model matrix</strong>) <span class="math inline">\(\mathbf{X}\)</span> is the <span class="math inline">\(n \times p\)</span> <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> whose <span class="math inline">\(i\)</span>-th row <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i}^{\top}\)</span> holds, for observation <span class="math inline">\(i\)</span>, the <span class="math inline">\(p\)</span> entries the model uses. These can be covariates, a <span class="math inline">\(1\)</span> for the <a href="./algebra-exponentials.html#def-intercept">intercept</a>, <span class="math inline">\(0/1\)</span> columns for categories, or <a href="./functions.html#def-function">functions</a> of covariates, such as <span class="math inline">\(x^2\)</span>. For a straight-line fit, for example, the design matrix has a first column of 1s, which allows the intercept to be estimated <span class="citation" data-cites="wikipedia_design_matrix dobson4e"><a href="#/references" role="doc-biblioref" onclick="">[1]</a>, <a href="#/references" role="doc-biblioref" onclick="">[2, Sec. 2.4]</a></span>. In symbols,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -527,7 +540,8 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \]</span></p>
 <p>Multiplying by <span class="math inline">\(\mathbf{H}\)</span> “puts a hat” on <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>, which is where the name comes from. In <a href="#/exm-hat-matrix" class="quarto-xref">Example&nbsp;2</a>, <span class="math inline">\(\mathbf{H}\)</span> puts a hat on <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> by replacing each <span class="math inline">\(y_i\)</span> with the sample mean <span class="math inline">\(\bar{y}\)</span>.</p>
 </div>
-<h3 id="sec-orthogonal-projection">Orthogonal projection onto a subspace</h3>
+<h3 data-number="1.1" id="sec-orthogonal-projection">
+<span class="header-section-number">1.1</span> Orthogonal projection onto a subspace</h3>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -537,7 +551,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from the second half of <span class="citation" data-cites="zhou2024orthproj">Zhou <a href="#/references" role="doc-biblioref" onclick="">[5]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). It connects the orthogonal projection matrices of <a href="./linear-algebra-special-matrices.html#def-projection-matrix">Definition&nbsp;8 in Special Matrices and Decompositions</a>, defined by an algebraic property, to the geometric decomposition of <a href="./linear-algebra-direct-sums.html#thm-orthogonal-direct-sum">Theorem&nbsp;8 in Direct Sums and Orthogonal Complements</a>.</p>
+<p>This section is adapted from the second half of <span class="citation" data-cites="zhou2024orthproj">Zhou <a href="#/references" role="doc-biblioref" onclick="">[5]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Section&nbsp;</mark> in Subspaces and Rank</a>). It connects the orthogonal projection matrices of <a href="./linear-algebra-special-matrices.html#def-projection-matrix">Definition&nbsp;8 in Special Matrices and Decompositions</a>, defined by an algebraic property, to the geometric decomposition of <a href="./linear-algebra-direct-sums.html#thm-orthogonal-direct-sum">Theorem&nbsp;8 in Direct Sums and Orthogonal Complements</a>.</p>
 </div>
 </div>
 </div>
@@ -787,7 +801,8 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \]</span></p>
 <p>since <span class="math inline">\(2\bar{y} = y_1 + y_2\)</span>.</p>
 </div>
-<h3 id="sec-generalized-inverse">Generalized inverses and linear systems</h3>
+<h3 data-number="1.2" id="sec-generalized-inverse">
+<span class="header-section-number">1.2</span> Generalized inverses and linear systems</h3>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -797,7 +812,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024matinv">Zhou <a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization (<a href="./linear-algebra-rank-nullity.html#thm-rank-factorization">Theorem&nbsp;17 in Column Space, Null Space and Rank-Nullity</a>) instead, and the section adds the projection <span class="math inline">\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\)</span> for any generalized inverse <span class="math inline">\(\mathbf{G}\)</span> of <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}\)</span>, which the source does not cover. <a href="#/thm-moore-penrose-full-rank" class="quarto-xref">Theorem&nbsp;13</a> restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in <a href="#/thm-consistency" class="quarto-xref">Theorem&nbsp;16</a> restores the source’s rank test for consistency. These parts of the source are not part of this section:</p>
+<p>This section is adapted from <span class="citation" data-cites="zhou2024matinv">Zhou <a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp; in Subspaces and Rank</a>). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization (<a href="./linear-algebra-rank-nullity.html#thm-rank-factorization">Theorem&nbsp;17 in Column Space, Null Space and Rank-Nullity</a>) instead, and the section adds the projection <span class="math inline">\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\)</span> for any generalized inverse <span class="math inline">\(\mathbf{G}\)</span> of <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}\)</span>, which the source does not cover. <a href="#/thm-moore-penrose-full-rank" class="quarto-xref">Theorem&nbsp;13</a> restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in <a href="#/thm-consistency" class="quarto-xref">Theorem&nbsp;16</a> restores the source’s rank test for consistency. These parts of the source are not part of this section:</p>
 <ul>
 <li>the QR forms of the full-rank formulas</li>
 <li>
@@ -1833,7 +1848,8 @@ r
 \]</span></p>
 <p>the hat matrix of the intercept-only model (<a href="#/exm-hat-matrix" class="quarto-xref">Example&nbsp;2</a>). Another generalized inverse, <span class="math inline">\(\mathbf{G}' = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; \frac{1}{2} \end{bmatrix}\)</span>, which is one because <span class="math inline">\(({\mathbf{X}}^{\top} \mathbf{X})\,\mathbf{G}' = \begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span> and that times <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}\)</span> is again <span class="math inline">\(\begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}\)</span>, gives <span class="math inline">\(\mathbf{X}\mathbf{G}' = \begin{bmatrix} 0 &amp; \frac{1}{2} \\ 0 &amp; \frac{1}{2} \end{bmatrix}\)</span> and the same <span class="math inline">\(\mathbf{X}\mathbf{G}' {\mathbf{X}}^{\top} = \begin{bmatrix} \frac{1}{2} &amp; \frac{1}{2} \\ \frac{1}{2} &amp; \frac{1}{2} \end{bmatrix}\)</span>, as <a href="#/thm-projector-generalized-inverse" class="quarto-xref">Theorem&nbsp;18</a> says it must. Both project onto <span class="math inline">\(\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}\)</span>, the column space of the intercept-only design.</p>
 </div>
-<h3 id="sec-solving-linear-systems">Solving linear systems and least squares</h3>
+<h3 data-number="1.3" id="sec-solving-linear-systems">
+<span class="header-section-number">1.3</span> Solving linear systems and least squares</h3>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1843,7 +1859,7 @@ r
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024matinv">Zhou <a href="#/references" role="doc-biblioref" onclick="">[6]</a></span> and <span class="citation" data-cites="zhou2024ls">Zhou <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The first source states that every invertible matrix has an LU factorization; that is false without reordering rows (the <span class="math inline">\(2 \times 2\)</span> row swap <span class="math inline">\(\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span> has none), so this section states only how an LU factorization, when one exists, solves a system. The least squares results are proved here from the closest-point theorem (<a href="#/thm-closest-point" class="quarto-xref">Theorem&nbsp;3</a>) rather than by differentiating, and the QR factorization is derived from Gram-Schmidt (<a href="./linear-algebra-inner-products.html#thm-gram-schmidt">Theorem&nbsp;11 in Inner Products and Orthogonality</a>). These parts of the source are not part of this section:</p>
+<p>This section is adapted from <span class="citation" data-cites="zhou2024matinv">Zhou <a href="#/references" role="doc-biblioref" onclick="">[6]</a></span> and <span class="citation" data-cites="zhou2024ls">Zhou <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp; in Subspaces and Rank</a>). The first source states that every invertible matrix has an LU factorization; that is false without reordering rows (the <span class="math inline">\(2 \times 2\)</span> row swap <span class="math inline">\(\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span> has none), so this section states only how an LU factorization, when one exists, solves a system. The least squares results are proved here from the closest-point theorem (<a href="#/thm-closest-point" class="quarto-xref">Theorem&nbsp;3</a>) rather than by differentiating, and the QR factorization is derived from Gram-Schmidt (<a href="./linear-algebra-inner-products.html#thm-gram-schmidt">Theorem&nbsp;11 in Inner Products and Orthogonality</a>). These parts of the source are not part of this section:</p>
 <ul>
 <li>the operation counts for the triangular solves, LU and QR</li>
 <li>solving a system by inverting a matrix through its QR factorization, and the comparison of that with solving it directly</li>

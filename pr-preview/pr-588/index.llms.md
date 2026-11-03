@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:14:20 (PST)
+Last modified: 2026-11-02 16:03:39 (PST)
 
-## Welcome
+# Welcome
 
 > Math is not just a way of calculating numerical answers; it is a way of thinking, using clear definitions for concepts and rigorous logic to organize our thoughts and back up our assertions.
 
@@ -35,7 +35,7 @@ The remaining topics build on the foundations and on each other:
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
 - [Optimization](optimization.llms.md): optimality conditions, Taylor approximations, convexity in several variables, Lagrange multipliers, Newton’s method, and gradient descent
 
-## Further reading
+# Further reading
 
 These resources cover related material.
 
@@ -51,7 +51,7 @@ These resources cover related material.
   - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) covers limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series, overlapping with our [calculus](calculus.llms.md) page.
   - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our [vector calculus](vector-calculus.llms.md) and [optimization](optimization.llms.md) pages.
 
-## Using these notes in another site
+# Using these notes in another site
 
 Course sites link to these pages by URL; they do not include this repository as a git submodule. A host site that keeps a copy of this repository at its root, named `mds`, can still include fragments with paths that start with `mds/`, for example `{{< include mds/_notation.qmd >}}`. This site includes its own fragments the same way, through a `mds` symlink that points at the repository root.
 
@@ -77,7 +77,7 @@ Each page is a thin wrapper around one or more fragments:
 
 Quarto resolves `@id` cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, `[text](notation.qmd#id)`.
 
-## References
+# References
 
 \[1\]
 

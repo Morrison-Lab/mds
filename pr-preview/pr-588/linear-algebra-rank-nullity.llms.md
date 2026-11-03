@@ -14,9 +14,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:14:20 (PST)
+Last modified: 2026-11-02 16:03:39 (PST)
 
-## 0.1 Column space and null space
+# 1 Column space and null space
 
 > **NOTE:**
 >
@@ -388,11 +388,11 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 >
 > Every row is a multiple of $(1, -2, -2)$, so ${\mathbf{A}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ exactly when $x_1 - 2x_2 - 2x_3 = 0$, the same condition as for $\mathcal{N}(\mathbf{A})$ in [Example 3](#exm-null-space).
 
-## 0.2 Rank-nullity and rank factorization
+# 2 Rank-nullity and rank factorization
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[3\]](#ref-zhou2024rank), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). [Theorem 11](#thm-rank-product-right) and [Corollary 2](#cor-rank-product-full-rank) restore the source’s statements that a product has rank at most the rank of either factor, and that multiplying by a matrix of full column rank or by a matrix whose rank is its number of rows does not change the rank. These parts of the source are not part of this section:
+> This section is adapted from Zhou [\[3\]](#ref-zhou2024rank), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). [Theorem 11](#thm-rank-product-right) and [Corollary 2](#cor-rank-product-full-rank) restore the source’s statements that a product has rank at most the rank of either factor, and that multiplying by a matrix of full column rank or by a matrix whose rank is its number of rows does not change the rank. These parts of the source are not part of this section:
 >
 > - the names “full row rank”, “full rank” and “singular”
 > - the statement that $\mathcal{C}(\mathbf{C}) \subseteq \mathcal{C}(\mathbf{A})$ exactly when $\mathbf{C} = \mathbf{A}\mathbf{B}$ for some $\mathbf{B}$, and its row space version, and the containment $\mathcal{N}(\mathbf{B}) \subseteq \mathcal{N}(\mathbf{A}\mathbf{B})$

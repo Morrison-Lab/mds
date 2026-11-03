@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 15:14:20 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 16:03:39 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -304,6 +304,9 @@
 </section>
 <section id="upper-bounds" class="slide level2" data-number="1">
 <h2><span class="header-section-number">1</span> Upper bounds</h2>
+</section>
+<section class="slide level2">
+
 <div id="def-big-o" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Big-O)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="./functions.html#def-function">functions</a> from the <a href="./number-systems.html#def-natural-numbers">natural numbers</a> to the <a href="./number-systems.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-O</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, written <span class="math inline">\(f(n) = O(g(n))\)</span>, when there exist a <a href="./number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="./number-systems.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
 |f(n)| \le c \, |g(n)|.
@@ -335,6 +338,9 @@
 </section>
 <section id="lower-bounds" class="slide level2" data-number="2">
 <h2><span class="header-section-number">2</span> Lower bounds</h2>
+</section>
+<section class="slide level2">
+
 <div id="def-big-omega" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Big-Omega)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="./functions.html#def-function">functions</a> from the <a href="./number-systems.html#def-natural-numbers">natural numbers</a> to the <a href="./number-systems.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Omega</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, written <span class="math inline">\(f(n) = \Omega(g(n))\)</span>, when there exist a <a href="./number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="./number-systems.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
 |f(n)| \ge c \, |g(n)|.
@@ -363,6 +369,9 @@
 </section>
 <section id="matching-bounds" class="slide level2" data-number="3">
 <h2><span class="header-section-number">3</span> Matching bounds</h2>
+</section>
+<section class="slide level2">
+
 <div id="def-big-theta" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Big-Theta)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="./functions.html#def-function">functions</a> from the <a href="./number-systems.html#def-natural-numbers">natural numbers</a> to the <a href="./number-systems.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Theta</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, written <span class="math inline">\(f(n) = \Theta(g(n))\)</span>, when both <span class="math inline">\(f(n) = O(g(n))\)</span> (<a href="#/def-big-o">big-O</a>) and <span class="math inline">\(f(n) = \Omega(g(n))\)</span> (<a href="#/def-big-omega">big-Omega</a>). In words, <span class="math inline">\(f(n)\)</span> and <span class="math inline">\(g(n)\)</span> are within fixed multiples of each other, from some point on.</p>
 </div>
@@ -373,8 +382,11 @@
 <p><span class="theorem-title"><strong>Example 3 (The function <span class="math inline">\(3n + 5\)</span> is big-Theta of <span class="math inline">\(n\)</span>)</strong></span> Let <span class="math inline">\(f(n) = 3n + 5\)</span> and <span class="math inline">\(g(n) = n\)</span>. By <a href="#/exm-big-o" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\(f(n) = O(n)\)</span>, and by <a href="#/exm-big-omega" class="quarto-xref">Example&nbsp;2</a>, <span class="math inline">\(f(n) = \Omega(n)\)</span>. Therefore <span class="math inline">\(f(n) = \Theta(n)\)</span> by <a href="#/def-big-theta" class="quarto-xref">Definition&nbsp;3</a>.</p>
 </div>
 </section>
-<section id="references" class="slide level2 unnumbered smaller scrollable">
+<section id="references" class="slide level2 unnumbered">
 <h2>References</h2>
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
 <div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-wikipedia_big_o_notation" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Big <span>O</span> notation — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Big_O_notation">https://en.wikipedia.org/wiki/Big_O_notation</a></div>

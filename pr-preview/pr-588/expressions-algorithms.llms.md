@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:14:20 (PST)
+Last modified: 2026-11-02 16:03:39 (PST)
 
 > **NOTE:**
 >
 > *Remark*. A function can be written down as an expression and computed by an algorithm. This page defines expressions, which write down the [functions](functions.llms.md) in the Morrison Lab’s probability and statistics notes, the parse trees of expressions, and algorithms, which compute those functions.
 
-## 0.1 Expressions
+# 1 Expressions
 
 > **NOTE:**
 >
@@ -187,7 +187,7 @@ Last modified: 2026-11-02 15:14:20 (PST)
 >
 > The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree ([Definition 5](#def-parse-tree)).
 
-## 0.2 Algorithms
+# 2 Algorithms
 
 > **NOTE:**
 >
@@ -265,7 +265,7 @@ Last modified: 2026-11-02 15:14:20 (PST)
 >
 > **Example 6 (A minimizer with no known formula)** The minimizer $\arg \min_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2$ is well defined, because $x - \cos x$ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
 
-## 0.3 Exercises
+# 3 Exercises
 
 > **NOTE:**
 >

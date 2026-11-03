@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-02 15:14:20 (PST)
+Last modified: 2026-11-02 16:03:39 (PST)
 
 > **NOTE:**
 >
 > *Remark*. A [relation](functions.llms.md#def-relation) says which pairs of elements of a [set](sets.llms.md#def-set) are related. This page defines the properties that make a relation behave like equality, and the groups of elements that such a relation puts together.
 
-## 0.1 Properties of relations
+# 1 Properties of relations
 
 > **NOTE:**
 >
@@ -28,7 +28,7 @@ Last modified: 2026-11-02 15:14:20 (PST)
 >
 > **Example 2 (Symmetric and non-symmetric relations on the real numbers)** On $\mathbb{R}$, the [relation](functions.llms.md#def-relation) $=$ is [symmetric](#def-symmetric-relation): whenever $a = b$, also $b = a$. The relation $\le$ is not symmetric, since $2 \le 5$ is true but $5 \le 2$ is false.
 
-## 0.2 Equivalence relations
+# 2 Equivalence relations
 
 > **NOTE:**
 >
@@ -82,7 +82,14 @@ Last modified: 2026-11-02 15:14:20 (PST)
 >
 > **Example 4 (Equivalence classes of integers with an even difference)** Let $\sim$ be the [equivalence relation](#def-equivalence-relation) of [Example 3](#exm-equivalence-relation) on the [integers](number-systems.llms.md#def-integers). The [equivalence class](#def-equivalence-class) $[0]$ holds the integers $b$ with $b - 0$ even, which are the [even integers](number-systems.llms.md#def-even-odd): $[0] = \mathopen{}\left\{\ldots, -4, -2, 0, 2, 4, \ldots\right\}\mathclose{}$. The class $[1]$ holds the integers $b$ with $b - 1$ even, which are the [odd integers](number-systems.llms.md#def-odd): $[1] = \mathopen{}\left\{\ldots, -3, -1, 1, 3, 5, \ldots\right\}\mathclose{}$. The class $[2]$ is the same [set](sets.llms.md#def-set) as $[0]$, since $2 \sim 0$.
 
-## References
+# Definitions on this page
+
+- [Definition 1 (Reflexive relation)](#def-reflexive)
+- [Definition 2 (Symmetric relation)](#def-symmetric-relation)
+- [Definition 3 (Equivalence relation)](#def-equivalence-relation)
+- [Definition 4 (Equivalence class)](#def-equivalence-class)
+
+# References
 
 \[1\]
 
@@ -99,12 +106,5 @@ Wikipedia contributors, “Equivalence relation — Wikipedia, the free encyclop
 \[4\]
 
 Wikipedia contributors, “Equivalence class — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Equivalence_class>
-
-# Definitions on this page
-
-- [Definition 1 (Reflexive relation)](#def-reflexive)
-- [Definition 2 (Symmetric relation)](#def-symmetric-relation)
-- [Definition 3 (Equivalence relation)](#def-equivalence-relation)
-- [Definition 4 (Equivalence class)](#def-equivalence-class)
 
 Back to top
