@@ -16,7 +16,7 @@ The calculus notes are split across these pages:
 
 - [Derivatives](calculus-derivatives.qmd):
   [limits](calculus-derivatives.qmd#def-limit) and [derivatives](calculus-derivatives.qmd#def-derivative),
-  derivative rules, [tangent lines](calculus-derivatives.qmd#def-tangent-line),
+  [derivative](calculus-derivatives.qmd#def-derivative) rules, [tangent lines](calculus-derivatives.qmd#def-tangent-line),
   and [linear approximation](calculus-derivatives.qmd#def-linear-approximation).
 - [Taylor Series](calculus-taylor-series.qmd):
   Taylor and [Maclaurin polynomials](calculus-taylor-series.qmd#def-maclaurin-polynomial),
