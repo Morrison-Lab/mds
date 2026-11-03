@@ -42,6 +42,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-newton-convergence.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_exm-newton-maximum.qmd >}}
 
 {{< slidebreak >}}
