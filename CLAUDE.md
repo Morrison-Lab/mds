@@ -50,7 +50,8 @@ Mirrors [`.github/copilot-instructions.md`](.github/copilot-instructions.md). Ke
 - **Page, section and subsection files nest by heading level** (Ezra, 2026-11-03): a page's top-level `.qmd` holds the YAML header, the macros include, every first-level heading, and an include of each first-level section's body.
   A section body holds its second-level headings and an include of each subsection's body, and so on down.
   Only the file for the level above holds a heading, so no file is a wrapper that adds one heading and one include.
-  Apply it to a page when you touch it, not as a sweep; see psw's page structure rule.
+  Apply it to a page when you touch it, not as a sweep.
+  The rule is in psw's [Writing for code review and software](https://morrison-lab.github.io/psw/chapters/software-text.html#nest-document-source-files-by-heading-level).
 - **One term per `#def-` div**: define a single term in each definition div, and give each further term its own div and id, placed right after the first (or before it, if the first uses it) and linking to it. Aliases of one term ("also called ...") stay in the same div, in bold and in the div title. Put commentary in a separate `#rem-` div and each example in an `#exm-` div after the definition it illustrates. A theorem-type div states one result. Keep the old id on the original term (Ezra, 2026-10-12); see psw's [Writing for teaching](https://morrison-lab.github.io/psw/chapters/teaching.html).
 
 ## Working in this repo

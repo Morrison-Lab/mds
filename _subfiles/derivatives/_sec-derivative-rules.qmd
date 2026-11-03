@@ -1,7 +1,7 @@
 :::{#thm-deriv-const}
 #### Constant rule
 
-If $c$ is constant with respect to $x$, then
+If $c$ is [constant with respect to](vector-calculus.qmd#def-constant-wrt-vector) $x$, then
 
 $$\deriv{x}c = 0$$
 
@@ -16,8 +16,8 @@ $$\deriv{x}c = 0$$
 :::{#thm-deriv-const-factor}
 #### Constant multiple rule
 
-If $a$ is constant with respect to $x$
-and $y$ is a differentiable function of $x$, then:
+If $a$ is [constant with respect to](vector-calculus.qmd#def-constant-wrt-vector) $x$
+and $y$ is a [differentiable function](calculus-derivatives.qmd#def-differentiable) of $x$, then:
 $$\deriv{x}ay = a \derivf{y}{x}$$
 
 :::
@@ -31,14 +31,14 @@ $$\deriv{x}ay = a \derivf{y}{x}$$
 :::{#thm-deriv-polynomial}
 #### Power rule
 
-For every real number $q$ and every $x > 0$
+For every [real number](number-systems.qmd#def-real-numbers) $q$ and every $x > 0$
 [@wikipedia_power_rule],
-the derivative of the [power](algebra.qmd#def-real-power) $x^q$ is:
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [power](algebra.qmd#def-real-power) $x^q$ is:
 
 $$\deriv{x}x^q = qx^{q-1}$$
 
-When $q$ is a positive [integer](number-systems.qmd#def-integers),
-the same formula holds for every real $x$.
+When $q$ is a [positive integer](number-systems.qmd#def-positive-integer),
+the same [formula](expressions-algorithms.qmd#def-closed-form-expression) holds for every [real](number-systems.qmd#def-real-numbers) $x$.
 
 :::
 
@@ -61,7 +61,7 @@ the same formula holds for every real $x$.
 #### Derivative of natural logarithm
 
 For every $x > 0$,
-the derivative of the [natural logarithm](algebra.qmd#def-natural-log) is:
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [natural logarithm](algebra.qmd#def-natural-log) is:
 
 $$
 \begin{aligned}
@@ -81,8 +81,8 @@ $$
 :::{#thm-deriv-exp}
 #### Derivative of exponential
 
-For every real $x$,
-the derivative of the [exponential function](algebra.qmd#def-exponential-function) is:
+For every [real](number-systems.qmd#def-real-numbers) $x$,
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [exponential function](algebra.qmd#def-exponential-function) is:
 
 $$\dexpf{x} = \expf{x}$$
 :::
@@ -92,8 +92,8 @@ $$\dexpf{x} = \expf{x}$$
 :::{#thm-deriv-sin}
 #### Derivative of sine
 
-For every real $x$,
-the derivative of the sine function is:
+For every [real](number-systems.qmd#def-real-numbers) $x$,
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [sine](algebra-trigonometry.qmd#def-sine) [function](functions.qmd#def-function) is:
 
 $$\deriv{x}\sin x = \cos x$$
 :::
@@ -103,8 +103,8 @@ $$\deriv{x}\sin x = \cos x$$
 :::{#thm-deriv-cos}
 #### Derivative of cosine
 
-For every real $x$,
-the derivative of the cosine function is:
+For every [real](number-systems.qmd#def-real-numbers) $x$,
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [cosine](algebra-trigonometry.qmd#def-cosine-sine) [function](functions.qmd#def-function) is:
 
 $$\deriv{x}\cos x = -\sin x$$
 :::
@@ -114,7 +114,7 @@ $$\deriv{x}\cos x = -\sin x$$
 :::{#thm-product-rule}
 #### Product rule
 
-If $a$ and $b$ are differentiable functions of $x$
+If $a$ and $b$ are [differentiable functions](calculus-derivatives.qmd#def-differentiable) of $x$
 [@wikipedia_product_rule], then
 
 $$(ab)' = ab' + ba'$$
@@ -137,7 +137,7 @@ $$(ab)' = ab' + ba'$$
 :::{#thm-quotient-rule}
 #### Quotient rule
 
-If $a$ and $b$ are differentiable functions of $x$
+If $a$ and $b$ are [differentiable functions](calculus-derivatives.qmd#def-differentiable) of $x$
 [@wikipedia_quotient_rule]
 and $b \neq 0$, then
 
@@ -157,7 +157,7 @@ $$(a/b)' = a'/b - (a/b^2)b'$$
 :::{#thm-chain-rule}
 #### Chain rule
 
-If $a$ is a differentiable function of $b$
+If $a$ is a [differentiable function](calculus-derivatives.qmd#def-differentiable) of $b$
 [@wikipedia_chain_rule],
 and $b$ is a differentiable function of $c$,
 then $a$ is a differentiable function of $c$, and
@@ -171,10 +171,10 @@ $$\ba
 $$
 
 or in Lagrange's notation (@def-derivative),
-if $g$ is differentiable at $x$
+if $g$ is [differentiable at](calculus-derivatives.qmd#def-differentiable) $x$
 and $f$ is differentiable at $g(x)$,
 then for the [composition](functions.qmd#def-composition) $f \circ g$,
-with inner function $g$ and outer function $f$:
+with [inner function](functions.qmd#def-inner-function) $g$ and [outer function](functions.qmd#def-outer-function) $f$:
 
 $$(f(g(x)))' = g'(x) f'(g(x))$$
 :::
@@ -209,7 +209,7 @@ $$(f(g(x)))' = g'(x) f'(g(x))$$
 
 #### Chain rule for logarithms
 
-If $f$ is differentiable at $x$ and $f(x) > 0$, then
+If $f$ is [differentiable at](calculus-derivatives.qmd#def-differentiable) $x$ and $f(x) > 0$, then
 
 $$
 \dif{}{x}\logf{f(x)} = \frac{f'(x)}{f(x)}
