@@ -9,58 +9,72 @@
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
 #| fig-alt: >-
-#|   Surface plot of the quadratic function f over first coordinates from -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface whose lowest point is above the point (0.09, 0.64).
-#|   Three markers lie on the surface.
-#|   A blue circle at the origin is the starting point, a vermilion circle above (0.25, 0.5) is the iterate after one step, and a blue square above (0.09, 0.64) is the minimizer, at the bottom of the bowl.
-qn3_x_3d <- seq(-0.4, 0.6, length.out = 101)
-qn3_y_3d <- seq(-0.2, 1, length.out = 101)
-qn3_f_3d <- function(x, y) {
-  quad <- 0.5 * (4 * x^2 + 2 * x * y + 3 * y^2)
-  quad - x - 2 * y
-}
-qn3_z_3d <- outer(qn3_y_3d, qn3_x_3d, qn3_f_3d)
-qn3_x_pts_3d <- c(0, 0.25, 1 / 11)
-qn3_y_pts_3d <- c(0, 0.5, 7 / 11)
-qn3_z_pts_3d <- qn3_f_3d(qn3_x_pts_3d, qn3_y_pts_3d)
-qn3_labels_3d <- c("start", "after one step", "minimizer")
-qn3_pts_3d <- tibble::tibble(
-  x = qn3_x_pts_3d,
-  y = qn3_y_pts_3d,
-  z = qn3_z_pts_3d,
-  label = qn3_labels_3d,
-  color = c("#0072B2", "#D55E00", "#0072B2"),
-  symbol = c("circle", "circle", "square")
+#|   Surface plot of the quadratic function f over first coordinates from
+#|   -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface
+#|   whose lowest point is above the point (0.09, 0.64). Three markers lie on
+#|   the surface. A blue circle at the origin is the starting point, a
+#|   vermilion circle above (0.25, 0.5) is the iterate after one step, and a
+#|   blue square above (0.09, 0.64) is the minimizer, at the bottom of the
+#|   bowl.
+qn_x_sf <- seq(-0.4, 0.6, length.out = 101)
+qn_y_sf <- seq(-0.2, 1, length.out = 101)
+qn_grid_sf <- tidyr::expand_grid(x = qn_x_sf, y = qn_y_sf)
+qn_quad_sf <- 4 * qn_grid_sf$x^2 + 2 * qn_grid_sf$x * qn_grid_sf$y
+qn_quad_sf <- 0.5 * (qn_quad_sf + 3 * qn_grid_sf$y^2)
+qn_value_sf <- qn_quad_sf - qn_grid_sf$x - 2 * qn_grid_sf$y
+qn_ny_sf <- length(qn_y_sf)
+qn_z_sf <- matrix(qn_value_sf, nrow = qn_ny_sf)
+qn_p_x_sf <- c(0, 0.25, 1 / 11)
+qn_p_y_sf <- c(0, 0.5, 7 / 11)
+qn_p_label_sf <- c("start", "after one step", "minimizer")
+qn_p_color_sf <- c("#0072B2", "#D55E00", "#0072B2")
+qn_p_symbol_sf <- c("circle", "circle", "square")
+qn_pts_sf <- tibble::tibble(
+  x = qn_p_x_sf,
+  y = qn_p_y_sf,
+  label = qn_p_label_sf,
+  color = qn_p_color_sf,
+  symbol = qn_p_symbol_sf
 )
-qn3_marker_3d <- list(color = ~color, size = 6, symbol = ~symbol)
-
+qn_pq_sf <- 4 * qn_pts_sf$x^2 + 2 * qn_pts_sf$x * qn_pts_sf$y
+qn_pq_sf <- 0.5 * (qn_pq_sf + 3 * qn_pts_sf$y^2)
+qn_pts_sf$z <- qn_pq_sf - qn_pts_sf$x - 2 * qn_pts_sf$y
+qn_marker_sf <- list(color = ~color, size = 6, symbol = ~symbol)
+qn_stops_sf <- c(0, 1)
+qn_cols_sf <- c("#E5E5E5", "#808080")
+qn_scale_sf <- list(qn_stops_sf, qn_cols_sf)
+qn_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+qn_camera_sf <- list(eye = qn_eye_sf)
+qn_xaxis_sf <- list(title = "first coordinate")
+qn_yaxis_sf <- list(title = "second coordinate")
+qn_zaxis_sf <- list(title = "f(x)")
+qn_scene_sf <- list(
+  xaxis = qn_xaxis_sf,
+  yaxis = qn_yaxis_sf,
+  zaxis = qn_zaxis_sf,
+  camera = qn_camera_sf
+)
+qn_legend_sf <- list(orientation = "h")
 plotly::plot_ly() |>
   plotly::add_surface(
-    x = qn3_x_3d,
-    y = qn3_y_3d,
-    z = qn3_z_3d,
-    colorscale = list(c(0, 1), c("#E5E5E5", "#808080")),
+    x = qn_x_sf,
+    y = qn_y_sf,
+    z = qn_z_sf,
+    colorscale = qn_scale_sf,
     showscale = FALSE,
     opacity = 0.7
   ) |>
   plotly::add_markers(
-    data = qn3_pts_3d,
+    data = qn_pts_sf,
     x = ~x,
     y = ~y,
     z = ~z,
     text = ~label,
     hoverinfo = "text",
     showlegend = FALSE,
-    marker = qn3_marker_3d
+    marker = qn_marker_sf
   ) |>
-  plotly::layout(
-    scene = list(
-      xaxis = list(title = "first coordinate"),
-      yaxis = list(title = "second coordinate"),
-      zaxis = list(title = "f(x)"),
-      camera = list(eye = list(x = 1.6, y = -1.6, z = 0.9))
-    ),
-    legend = list(orientation = "h")
-  )
+  plotly::layout(scene = qn_scene_sf, legend = qn_legend_sf)
 ```
 
 ```{r}

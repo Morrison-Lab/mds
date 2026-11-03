@@ -9,75 +9,86 @@
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
 #| fig-alt: >-
-#|   Surface plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3.
-#|   The surface is a long curved valley with steep walls on both sides, floored by a narrow parabola-shaped channel along the dashed curve x2 equals x1 squared.
-#|   Three marked points lie on the surface.
-#|   The minimizer at (1, 1) on the valley floor is a blue circle, the origin on the valley floor is a green square, and the standard starting point (-1.2, 1) is an orange diamond, on the left wall just outside the channel.
-rf3_x1_3d <- seq(-2, 2, length.out = 101)
-rf3_x2_3d <- seq(-1, 3, length.out = 101)
-rf3_f_3d <- function(x1, x2) 100 * (x2 - x1^2)^2 + (1 - x1)^2
-rf3_z_3d <- outer(rf3_x2_3d, rf3_x1_3d, rf3_f_3d)
-rf3_names_3d <- c("minimizer", "origin", "start")
-rf3_x1_pts_3d <- c(1, 0, -1.2)
-rf3_x2_pts_3d <- c(1, 0, 1)
-rf3_z_pts_3d <- rf3_f_3d(rf3_x1_pts_3d, rf3_x2_pts_3d)
-rf3_pts_3d <- tibble::tibble(
-  x1 = rf3_x1_pts_3d,
-  x2 = rf3_x2_pts_3d,
-  z = rf3_z_pts_3d,
-  name = rf3_names_3d,
-  color = c("#0072B2", "#009E73", "#D55E00"),
-  symbol = c("circle", "square", "diamond")
+#|   Surface plot of the Rosenbrock function over first coordinates from -2
+#|   to 2 and second coordinates from -1 to 3. The surface is a long curved
+#|   valley with steep walls on both sides, floored by a narrow parabola-
+#|   shaped channel along the dashed curve x2 equals x1 squared. Three marked
+#|   points lie on the surface. The minimizer at (1, 1) on the valley floor
+#|   is a blue circle, the origin on the valley floor is a green square, and
+#|   the standard starting point (-1.2, 1) is an orange diamond, on the left
+#|   wall just outside the channel.
+rf_x1_sf <- seq(-2, 2, length.out = 101)
+rf_x2_sf <- seq(-1, 3, length.out = 101)
+rf_grid_sf <- tidyr::expand_grid(x1 = rf_x1_sf, x2 = rf_x2_sf)
+rf_value_sf <- 100 * (rf_grid_sf$x2 - rf_grid_sf$x1^2)^2
+rf_value_sf <- rf_value_sf + (1 - rf_grid_sf$x1)^2
+rf_n2_sf <- length(rf_x2_sf)
+rf_z_sf <- matrix(rf_value_sf, nrow = rf_n2_sf)
+rf_p_name_sf <- c("minimizer", "origin", "start")
+rf_p_x1_sf <- c(1, 0, -1.2)
+rf_p_x2_sf <- c(1, 0, 1)
+rf_p_color_sf <- c("#0072B2", "#009E73", "#D55E00")
+rf_p_symbol_sf <- c("circle", "square", "diamond")
+rf_pts_sf <- tibble::tibble(
+  name = rf_p_name_sf,
+  x1 = rf_p_x1_sf,
+  x2 = rf_p_x2_sf,
+  color = rf_p_color_sf,
+  symbol = rf_p_symbol_sf
 )
-rf3_marker_3d <- list(color = ~color, size = 6, symbol = ~symbol)
-
-rf3_curve_x1_3d <- seq(-2, 1.7, length.out = 200)
-rf3_curve_x2_3d <- rf3_curve_x1_3d^2
-rf3_curve_z_3d <- rf3_f_3d(rf3_curve_x1_3d, rf3_curve_x2_3d)
-rf3_curve_3d <- tibble::tibble(
-  x1 = rf3_curve_x1_3d,
-  x2 = rf3_curve_x2_3d,
-  z = rf3_curve_z_3d
+rf_pz_sf <- 100 * (rf_pts_sf$x2 - rf_pts_sf$x1^2)^2
+rf_pts_sf$z <- rf_pz_sf + (1 - rf_pts_sf$x1)^2
+rf_marker_sf <- list(color = ~color, size = 6, symbol = ~symbol)
+rf_c_x1_sf <- seq(-2, 1.7, length.out = 200)
+rf_curve_sf <- tibble::tibble(x1 = rf_c_x1_sf)
+rf_curve_sf$x2 <- rf_curve_sf$x1^2
+rf_curve_sf$z <- (1 - rf_curve_sf$x1)^2
+rf_dash_sf <- list(color = "black", dash = "dash", width = 4)
+rf_stops_sf <- c(0, 1)
+rf_cols_sf <- c("#E5E5E5", "#808080")
+rf_scale_sf <- list(rf_stops_sf, rf_cols_sf)
+rf_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+rf_camera_sf <- list(eye = rf_eye_sf)
+rf_xaxis_sf <- list(title = "x1")
+rf_yaxis_sf <- list(title = "x2")
+rf_zaxis_sf <- list(title = "f(x)")
+rf_scene_sf <- list(
+  xaxis = rf_xaxis_sf,
+  yaxis = rf_yaxis_sf,
+  zaxis = rf_zaxis_sf,
+  camera = rf_camera_sf
 )
-rf3_dash_3d <- list(color = "black", dash = "dash", width = 4)
+rf_legend_sf <- list(orientation = "h")
 plotly::plot_ly() |>
   plotly::add_surface(
-    x = rf3_x1_3d,
-    y = rf3_x2_3d,
-    z = rf3_z_3d,
-    colorscale = list(c(0, 1), c("#E5E5E5", "#808080")),
+    x = rf_x1_sf,
+    y = rf_x2_sf,
+    z = rf_z_sf,
+    colorscale = rf_scale_sf,
     showscale = FALSE,
     opacity = 0.7
   ) |>
   plotly::add_trace(
-    data = rf3_curve_3d,
+    data = rf_curve_sf,
     x = ~x1,
     y = ~x2,
     z = ~z,
     type = "scatter3d",
     mode = "lines",
-    line = rf3_dash_3d,
+    line = rf_dash_sf,
     name = "valley floor"
   ) |>
   plotly::add_markers(
-    data = rf3_pts_3d,
+    data = rf_pts_sf,
     x = ~x1,
     y = ~x2,
     z = ~z,
     text = ~name,
     hoverinfo = "text",
     showlegend = FALSE,
-    marker = rf3_marker_3d
+    marker = rf_marker_sf
   ) |>
-  plotly::layout(
-    scene = list(
-      xaxis = list(title = "x1"),
-      yaxis = list(title = "x2"),
-      zaxis = list(title = "f(x)"),
-      camera = list(eye = list(x = 1.6, y = -1.6, z = 0.9))
-    ),
-    legend = list(orientation = "h")
-  )
+  plotly::layout(scene = rf_scene_sf, legend = rf_legend_sf)
 ```
 
 ```{r}

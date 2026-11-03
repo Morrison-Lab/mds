@@ -9,61 +9,68 @@
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
 #| fig-alt: >-
-#|   Surface plot of x1 squared plus x2 squared over x1 and x2 from -1.6 to 2, a bowl opening upward with its lowest point at the origin.
-#|   A blue curve on the bowl lies above the straight line 3 x1 plus 4 x2 equals 5, running from upper left to lower right.
-#|   Its lowest point, above (0.6, 0.8) at height 1, is marked by a vermilion circle.
-#|   That height is the smallest value of x1 squared plus x2 squared on the line.
-ll3_x1_3d <- seq(-1.6, 2, length.out = 101)
-ll3_x2_3d <- seq(-1.6, 2, length.out = 101)
-ll3_f_3d <- function(x1, x2) x1^2 + x2^2
-ll3_z_3d <- outer(ll3_x2_3d, ll3_x1_3d, ll3_f_3d)
-ll3_line_x1_3d <- seq(-0.5, 2, length.out = 101)
-ll3_line_x2_3d <- (5 - 3 * ll3_line_x1_3d) / 4
-ll3_line_z_3d <- ll3_f_3d(ll3_line_x1_3d, ll3_line_x2_3d)
-ll3_line_3d <- tibble::tibble(
-  x1 = ll3_line_x1_3d,
-  x2 = ll3_line_x2_3d,
-  z = ll3_line_z_3d
+#|   Surface plot of x1 squared plus x2 squared over x1 and x2 from -1.6 to
+#|   2, a bowl opening upward with its lowest point at the origin. A blue
+#|   curve on the bowl lies above the straight line 3 x1 plus 4 x2 equals 5,
+#|   running from upper left to lower right. Its lowest point, above (0.6,
+#|   0.8) at height 1, is marked by a vermilion circle. That height is the
+#|   smallest value of x1 squared plus x2 squared on the line.
+ll_x1_sf <- seq(-1.6, 2, length.out = 101)
+ll_x2_sf <- seq(-1.6, 2, length.out = 101)
+ll_grid_sf <- tidyr::expand_grid(x1 = ll_x1_sf, x2 = ll_x2_sf)
+ll_value_sf <- ll_grid_sf$x1^2 + ll_grid_sf$x2^2
+ll_n2_sf <- length(ll_x2_sf)
+ll_z_sf <- matrix(ll_value_sf, nrow = ll_n2_sf)
+ll_l_x1_sf <- seq(-0.5, 2, length.out = 101)
+ll_line_sf <- tibble::tibble(x1 = ll_l_x1_sf)
+ll_line_sf$x2 <- (5 - 3 * ll_line_sf$x1) / 4
+ll_line_sf$z <- ll_line_sf$x1^2 + ll_line_sf$x2^2
+ll_point_sf <- tibble::tibble(x1 = 0.6, x2 = 0.8, z = 1)
+ll_line_style_sf <- list(color = "#0072B2", width = 5)
+ll_mark_sf <- list(color = "#D55E00", size = 6, symbol = "circle")
+ll_stops_sf <- c(0, 1)
+ll_cols_sf <- c("#E5E5E5", "#808080")
+ll_scale_sf <- list(ll_stops_sf, ll_cols_sf)
+ll_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+ll_camera_sf <- list(eye = ll_eye_sf)
+ll_xaxis_sf <- list(title = "x1")
+ll_yaxis_sf <- list(title = "x2")
+ll_zaxis_sf <- list(title = "f(x)")
+ll_scene_sf <- list(
+  xaxis = ll_xaxis_sf,
+  yaxis = ll_yaxis_sf,
+  zaxis = ll_zaxis_sf,
+  camera = ll_camera_sf
 )
-ll3_point_3d <- tibble::tibble(x1 = 0.6, x2 = 0.8, z = 1)
-ll3_line_style_3d <- list(color = "#0072B2", width = 5)
-ll3_mark_3d <- list(color = "#D55E00", size = 6, symbol = "circle")
+ll_legend_sf <- list(orientation = "h")
 plotly::plot_ly() |>
   plotly::add_surface(
-    x = ll3_x1_3d,
-    y = ll3_x2_3d,
-    z = ll3_z_3d,
-    colorscale = list(c(0, 1), c("#E5E5E5", "#808080")),
+    x = ll_x1_sf,
+    y = ll_x2_sf,
+    z = ll_z_sf,
+    colorscale = ll_scale_sf,
     showscale = FALSE,
     opacity = 0.7
   ) |>
   plotly::add_trace(
-    data = ll3_line_3d,
+    data = ll_line_sf,
     x = ~x1,
     y = ~x2,
     z = ~z,
     type = "scatter3d",
     mode = "lines",
-    line = ll3_line_style_3d,
+    line = ll_line_style_sf,
     name = "constraint"
   ) |>
   plotly::add_markers(
-    data = ll3_point_3d,
+    data = ll_point_sf,
     x = ~x1,
     y = ~x2,
     z = ~z,
-    marker = ll3_mark_3d,
+    marker = ll_mark_sf,
     name = "minimizer"
   ) |>
-  plotly::layout(
-    scene = list(
-      xaxis = list(title = "x1"),
-      yaxis = list(title = "x2"),
-      zaxis = list(title = "f(x)"),
-      camera = list(eye = list(x = 1.6, y = -1.6, z = 0.9))
-    ),
-    legend = list(orientation = "h")
-  )
+  plotly::layout(scene = ll_scene_sf, legend = ll_legend_sf)
 ```
 
 ```{r}

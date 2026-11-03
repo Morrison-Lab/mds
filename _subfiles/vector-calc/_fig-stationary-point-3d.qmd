@@ -9,54 +9,65 @@
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
 #| fig-alt: >-
-#|   Surface plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2, a bowl-shaped surface opening upward.
-#|   The lowest point of the bowl, at (1, 0) and height -1, is marked by a vermilion circle and is the stationary point.
-#|   A vermilion diamond marks the point of the surface above the origin, at height 0, where the surface is not flat.
-sp3_x1_3d <- seq(-1, 3, length.out = 101)
-sp3_x2_3d <- seq(-2, 2, length.out = 101)
-sp3_f_3d <- function(x1, x2) x1^2 + x2^2 - 2 * x1
-sp3_z_3d <- outer(sp3_x2_3d, sp3_x1_3d, sp3_f_3d)
-sp3_x1_marks_3d <- c(1, 0)
-sp3_x2_marks_3d <- c(0, 0)
-sp3_z_marks_3d <- sp3_f_3d(sp3_x1_marks_3d, sp3_x2_marks_3d)
-sp3_kind_3d <- c("stationary point", "not stationary")
-sp3_symbol_3d <- c("circle", "diamond")
-sp3_marks_3d <- tibble::tibble(
-  x1 = sp3_x1_marks_3d,
-  x2 = sp3_x2_marks_3d,
-  z = sp3_z_marks_3d,
-  kind = sp3_kind_3d,
-  symbol = sp3_symbol_3d
+#|   Surface plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to
+#|   3 and x2 from -2 to 2, a bowl-shaped surface opening upward. The lowest
+#|   point of the bowl, at (1, 0) and height -1, is marked by a vermilion
+#|   circle and is the stationary point. A vermilion diamond marks the point
+#|   of the surface above the origin, at height 0, where the surface is not
+#|   flat.
+sp_x1_sf <- seq(-1, 3, length.out = 101)
+sp_x2_sf <- seq(-2, 2, length.out = 101)
+sp_grid_sf <- tidyr::expand_grid(x1 = sp_x1_sf, x2 = sp_x2_sf)
+sp_value_sf <- sp_grid_sf$x1^2 + sp_grid_sf$x2^2 - 2 * sp_grid_sf$x1
+sp_n2_sf <- length(sp_x2_sf)
+sp_z_sf <- matrix(sp_value_sf, nrow = sp_n2_sf)
+sp_m_x1_sf <- c(1, 0)
+sp_m_x2_sf <- c(0, 0)
+sp_m_kind_sf <- c("stationary point", "not stationary")
+sp_m_symbol_sf <- c("circle", "diamond")
+sp_marks_sf <- tibble::tibble(
+  x1 = sp_m_x1_sf,
+  x2 = sp_m_x2_sf,
+  kind = sp_m_kind_sf,
+  symbol = sp_m_symbol_sf
 )
-sp3_marker_3d <- list(color = "#D55E00", size = 6, symbol = ~symbol)
+sp_marks_sf$z <- sp_marks_sf$x1^2 + sp_marks_sf$x2^2 - 2 * sp_marks_sf$x1
+sp_marker_sf <- list(color = "#D55E00", size = 6, symbol = ~symbol)
+sp_stops_sf <- c(0, 1)
+sp_cols_sf <- c("#CCE0F0", "#0072B2")
+sp_scale_sf <- list(sp_stops_sf, sp_cols_sf)
+sp_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+sp_camera_sf <- list(eye = sp_eye_sf)
+sp_xaxis_sf <- list(title = "x1")
+sp_yaxis_sf <- list(title = "x2")
+sp_zaxis_sf <- list(title = "f(x)")
+sp_scene_sf <- list(
+  xaxis = sp_xaxis_sf,
+  yaxis = sp_yaxis_sf,
+  zaxis = sp_zaxis_sf,
+  camera = sp_camera_sf
+)
+sp_legend_sf <- list(orientation = "h")
 plotly::plot_ly() |>
   plotly::add_surface(
-    x = sp3_x1_3d,
-    y = sp3_x2_3d,
-    z = sp3_z_3d,
-    colorscale = list(c(0, 1), c("#CCE0F0", "#0072B2")),
+    x = sp_x1_sf,
+    y = sp_x2_sf,
+    z = sp_z_sf,
+    colorscale = sp_scale_sf,
     showscale = FALSE,
     opacity = 0.8
   ) |>
   plotly::add_markers(
-    data = sp3_marks_3d,
+    data = sp_marks_sf,
     x = ~x1,
     y = ~x2,
     z = ~z,
     text = ~kind,
     hoverinfo = "text",
     showlegend = FALSE,
-    marker = sp3_marker_3d
+    marker = sp_marker_sf
   ) |>
-  plotly::layout(
-    scene = list(
-      xaxis = list(title = "x1"),
-      yaxis = list(title = "x2"),
-      zaxis = list(title = "f(x)"),
-      camera = list(eye = list(x = 1.6, y = -1.6, z = 0.9))
-    ),
-    legend = list(orientation = "h")
-  )
+  plotly::layout(scene = sp_scene_sf, legend = sp_legend_sf)
 ```
 
 ```{r}

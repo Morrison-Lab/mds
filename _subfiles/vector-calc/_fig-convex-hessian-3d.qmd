@@ -9,50 +9,59 @@
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
 #| fig-alt: >-
-#|   Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3.
-#|   The surface is a trough that rises steeply toward the upper right, where 2 x1 plus x2 is large, and is nearly flat on the lower left.
-#|   A dashed vermilion straight line along the direction (1, -2) through the origin lies on the surface, because f is linear there.
-ch3_x1_3d <- seq(-1, 1, length.out = 101)
-ch3_x2_3d <- seq(-3, 3, length.out = 101)
-ch3_f_3d <- function(x1, x2) exp(2 * x1 + x2) - x1
-ch3_z_3d <- outer(ch3_x2_3d, ch3_x1_3d, ch3_f_3d)
-ch3_line_x1_3d <- seq(-1, 1, length.out = 21)
-ch3_line_x2_3d <- -2 * ch3_line_x1_3d
-ch3_line_z_3d <- ch3_f_3d(ch3_line_x1_3d, ch3_line_x2_3d)
-ch3_line_3d <- tibble::tibble(
-  x1 = ch3_line_x1_3d,
-  x2 = ch3_line_x2_3d,
-  z = ch3_line_z_3d
+#|   Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2
+#|   from -3 to 3. The surface is a trough that rises steeply toward the
+#|   upper right, where 2 x1 plus x2 is large, and is nearly flat on the
+#|   lower left. A dashed vermilion straight line along the direction (1, -2)
+#|   through the origin lies on the surface, because f is linear there.
+ch_x1_sf <- seq(-1, 1, length.out = 101)
+ch_x2_sf <- seq(-3, 3, length.out = 101)
+ch_grid_sf <- tidyr::expand_grid(x1 = ch_x1_sf, x2 = ch_x2_sf)
+ch_u_sf <- 2 * ch_grid_sf$x1 + ch_grid_sf$x2
+ch_value_sf <- exp(ch_u_sf) - ch_grid_sf$x1
+ch_n2_sf <- length(ch_x2_sf)
+ch_z_sf <- matrix(ch_value_sf, nrow = ch_n2_sf)
+ch_l_x1_sf <- seq(-1, 1, length.out = 21)
+ch_line_sf <- tibble::tibble(x1 = ch_l_x1_sf)
+ch_line_sf$x2 <- -2 * ch_line_sf$x1
+ch_lu_sf <- 2 * ch_line_sf$x1 + ch_line_sf$x2
+ch_line_sf$z <- exp(ch_lu_sf) - ch_line_sf$x1
+ch_dash_sf <- list(color = "#D55E00", dash = "dash", width = 5)
+ch_stops_sf <- c(0, 1)
+ch_cols_sf <- c("#CCE0F0", "#0072B2")
+ch_scale_sf <- list(ch_stops_sf, ch_cols_sf)
+ch_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+ch_camera_sf <- list(eye = ch_eye_sf)
+ch_xaxis_sf <- list(title = "x1")
+ch_yaxis_sf <- list(title = "x2")
+ch_zaxis_sf <- list(title = "f(x)")
+ch_scene_sf <- list(
+  xaxis = ch_xaxis_sf,
+  yaxis = ch_yaxis_sf,
+  zaxis = ch_zaxis_sf,
+  camera = ch_camera_sf
 )
-ch3_dash_3d <- list(color = "#D55E00", dash = "dash", width = 5)
+ch_legend_sf <- list(orientation = "h")
 plotly::plot_ly() |>
   plotly::add_surface(
-    x = ch3_x1_3d,
-    y = ch3_x2_3d,
-    z = ch3_z_3d,
-    colorscale = list(c(0, 1), c("#CCE0F0", "#0072B2")),
+    x = ch_x1_sf,
+    y = ch_x2_sf,
+    z = ch_z_sf,
+    colorscale = ch_scale_sf,
     showscale = FALSE,
     opacity = 0.8
   ) |>
   plotly::add_trace(
-    data = ch3_line_3d,
+    data = ch_line_sf,
     x = ~x1,
     y = ~x2,
     z = ~z,
     type = "scatter3d",
     mode = "lines",
-    line = ch3_dash_3d,
+    line = ch_dash_sf,
     name = "f is linear"
   ) |>
-  plotly::layout(
-    scene = list(
-      xaxis = list(title = "x1"),
-      yaxis = list(title = "x2"),
-      zaxis = list(title = "f(x)"),
-      camera = list(eye = list(x = 1.6, y = -1.6, z = 0.9))
-    ),
-    legend = list(orientation = "h")
-  )
+  plotly::layout(scene = ch_scene_sf, legend = ch_legend_sf)
 ```
 
 ```{r}

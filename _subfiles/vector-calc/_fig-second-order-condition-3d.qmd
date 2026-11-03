@@ -9,19 +9,24 @@
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
 #| fig-alt: >-
-#|   Two surface plots side by side.
-#|   The left plot, titled positive definite Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5 and y from -1.5 to 1.5, a bowl opening upward whose lowest point, at (1, 0), is marked by a blue circle.
-#|   The right plot, titled indefinite Hessian, shows x squared minus y squared over the same region, a saddle that rises along the x axis and falls along the y axis.
-#|   The origin, at the middle of the saddle, is marked by a vermilion diamond.
-so3_x_3d <- seq(-1.5, 2.5, length.out = 101)
-so3_y_3d <- seq(-1.5, 1.5, length.out = 101)
-so3_bowl_f_3d <- function(x, y) x^2 + y^2 - 2 * x
-so3_saddle_f_3d <- function(x, y) x^2 - y^2
-so3_bowl_3d <- outer(so3_y_3d, so3_x_3d, so3_bowl_f_3d)
-so3_saddle_3d <- outer(so3_y_3d, so3_x_3d, so3_saddle_f_3d)
-so3_bowl_min_3d <- list(color = "#0072B2", size = 6, symbol = "circle")
-so3_saddle_pt_3d <- list(color = "#D55E00", size = 6, symbol = "diamond")
-so3_title_left_3d <- list(
+#|   Two surface plots side by side. The left plot, titled positive definite
+#|   Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5
+#|   and y from -1.5 to 1.5, a bowl opening upward whose lowest point, at (1,
+#|   0), is marked by a blue circle. The right plot, titled indefinite
+#|   Hessian, shows x squared minus y squared over the same region, a saddle
+#|   that rises along the x axis and falls along the y axis. The origin, at
+#|   the middle of the saddle, is marked by a vermilion diamond.
+so_x_sf <- seq(-1.5, 2.5, length.out = 101)
+so_y_sf <- seq(-1.5, 1.5, length.out = 101)
+so_grid_sf <- tidyr::expand_grid(x = so_x_sf, y = so_y_sf)
+so_bowl_value_sf <- so_grid_sf$x^2 + so_grid_sf$y^2 - 2 * so_grid_sf$x
+so_saddle_value_sf <- so_grid_sf$x^2 - so_grid_sf$y^2
+so_ny_sf <- length(so_y_sf)
+so_bowl_sf <- matrix(so_bowl_value_sf, nrow = so_ny_sf)
+so_saddle_sf <- matrix(so_saddle_value_sf, nrow = so_ny_sf)
+so_min_sf <- list(color = "#0072B2", size = 6, symbol = "circle")
+so_pt_sf <- list(color = "#D55E00", size = 6, symbol = "diamond")
+so_title_left_sf <- list(
   text = "positive definite Hessian",
   x = 0.22,
   y = 1,
@@ -29,7 +34,7 @@ so3_title_left_3d <- list(
   yref = "paper",
   showarrow = FALSE
 )
-so3_title_right_3d <- list(
+so_title_right_sf <- list(
   text = "indefinite Hessian",
   x = 0.78,
   y = 1,
@@ -37,29 +42,48 @@ so3_title_right_3d <- list(
   yref = "paper",
   showarrow = FALSE
 )
-so3_axes_3d <- list(
-  xaxis = list(title = "x"),
-  yaxis = list(title = "y"),
-  zaxis = list(title = "f"),
-  camera = list(eye = list(x = 1.6, y = -1.6, z = 0.9))
+so_titles_sf <- list(so_title_left_sf, so_title_right_sf)
+so_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+so_camera_sf <- list(eye = so_eye_sf)
+so_xaxis_sf <- list(title = "x")
+so_yaxis_sf <- list(title = "y")
+so_zaxis_sf <- list(title = "f")
+so_left_sf <- c(0, 0.5)
+so_right_sf <- c(0.5, 1)
+so_dom_left_sf <- list(x = so_left_sf)
+so_dom_right_sf <- list(x = so_right_sf)
+so_scene_left_sf <- list(
+  xaxis = so_xaxis_sf,
+  yaxis = so_yaxis_sf,
+  zaxis = so_zaxis_sf,
+  camera = so_camera_sf,
+  domain = so_dom_left_sf
 )
-so3_scene_left_3d <- c(so3_axes_3d, list(domain = list(x = c(0, 0.5))))
-so3_scene_right_3d <- c(so3_axes_3d, list(domain = list(x = c(0.5, 1))))
+so_scene_right_sf <- list(
+  xaxis = so_xaxis_sf,
+  yaxis = so_yaxis_sf,
+  zaxis = so_zaxis_sf,
+  camera = so_camera_sf,
+  domain = so_dom_right_sf
+)
+so_stops_sf <- c(0, 1)
+so_cols_sf <- c("#CCE0F0", "#0072B2")
+so_scale_sf <- list(so_stops_sf, so_cols_sf)
 plotly::plot_ly() |>
   plotly::add_surface(
-    x = so3_x_3d,
-    y = so3_y_3d,
-    z = so3_bowl_3d,
-    colorscale = list(c(0, 1), c("#CCE0F0", "#0072B2")),
+    x = so_x_sf,
+    y = so_y_sf,
+    z = so_bowl_sf,
+    colorscale = so_scale_sf,
     showscale = FALSE,
     opacity = 0.8,
     scene = "scene"
   ) |>
   plotly::add_surface(
-    x = so3_x_3d,
-    y = so3_y_3d,
-    z = so3_saddle_3d,
-    colorscale = list(c(0, 1), c("#CCE0F0", "#0072B2")),
+    x = so_x_sf,
+    y = so_y_sf,
+    z = so_saddle_sf,
+    colorscale = so_scale_sf,
     showscale = FALSE,
     opacity = 0.8,
     scene = "scene2"
@@ -68,20 +92,20 @@ plotly::plot_ly() |>
     x = 1,
     y = 0,
     z = -1,
-    marker = so3_bowl_min_3d,
+    marker = so_min_sf,
     scene = "scene"
   ) |>
   plotly::add_markers(
     x = 0,
     y = 0,
     z = 0,
-    marker = so3_saddle_pt_3d,
+    marker = so_pt_sf,
     scene = "scene2"
   ) |>
   plotly::layout(
-    scene = so3_scene_left_3d,
-    scene2 = so3_scene_right_3d,
-    annotations = list(so3_title_left_3d, so3_title_right_3d),
+    scene = so_scene_left_sf,
+    scene2 = so_scene_right_sf,
+    annotations = so_titles_sf,
     showlegend = FALSE
   )
 ```
