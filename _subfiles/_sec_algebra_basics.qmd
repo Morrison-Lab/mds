@@ -128,6 +128,34 @@ just make sure you execute it correctly.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_exr-argmax-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-argmax-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-argmax-scaled-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-argmax-scaled-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-argmax-positive-multiple.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_proof-thm-argmax-positive-multiple.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-argmax-positive-multiple.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-positive-negative-parts.qmd >}}
 
 {{< slidebreak >}}

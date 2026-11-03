@@ -1,0 +1,7 @@
+:::{#exr-argmax-quadratic}
+#### The argmax of a quadratic
+
+Let $g(x) = x(4 - x)$ for $x \in [0, 4]$.
+Find the [argmax](#def-argmax) of $g$ over $[0, 4]$.
+
+:::
