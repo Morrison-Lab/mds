@@ -1,18 +1,18 @@
 :::{.proof}
-Let $x \in A$.
-By @def-argmax, $x \in \argmax_{x \in A} c\,g(x)$
+Let $x^* \in A$.
+By @def-argmax, $x^*$ is in the argmax of $c\,g$
 [if and only if](proof-writing.qmd#def-iff)
-$c\,g(a) \le c\,g(x)$ for every $a \in A$.
+$c\,g(a) \le c\,g(x^*)$ for every $a \in A$.
 
-Suppose $g(a) \le g(x)$.
-If $g(a) = g(x)$, then $c\,g(a) = c\,g(x)$.
-If $g(a) < g(x)$, then $c\,g(a) < c\,g(x)$ by @thm-mult-ineq.
-Either way, $c\,g(a) \le c\,g(x)$.
+Suppose $g(a) \le g(x^*)$.
+If $g(a) = g(x^*)$, then $c\,g(a) = c\,g(x^*)$.
+If $g(a) < g(x^*)$, then $c\,g(a) < c\,g(x^*)$ by @thm-mult-ineq.
+Either way, $c\,g(a) \le c\,g(x^*)$.
 
-Conversely, suppose $c\,g(a) \le c\,g(x)$.
-Apply the same reasoning with $1/c > 0$ in place of $c$:
-this gives $g(a) \le g(x)$.
+Conversely, suppose $c\,g(a) \le c\,g(x^*)$.
+The number $1/c$ is positive, and $(1/c)\,(c\,g) = g$,
+so the same reasoning applied to the function $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
 
-So $c\,g(a) \le c\,g(x)$ for every $a \in A$ if and only if $g(a) \le g(x)$ for every $a \in A$.
-Hence $x$ is in the [argmax](#def-argmax) of $c\,g$ exactly when it is in the argmax of $g$.
+So $c\,g(a) \le c\,g(x^*)$ for every $a \in A$ if and only if $g(a) \le g(x^*)$ for every $a \in A$.
+Hence $x^*$ is in the [argmax](#def-argmax) of $c\,g$ exactly when it is in the argmax of $g$.
 :::

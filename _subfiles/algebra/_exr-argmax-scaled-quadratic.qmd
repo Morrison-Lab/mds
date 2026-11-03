@@ -1,0 +1,7 @@
+:::{#exr-argmax-scaled-quadratic}
+#### The argmax of a scaled quadratic
+
+Let $f(x) = 5\,x(4 - x)$ for $x \in [0, 4]$.
+Find the [argmax](#def-argmax) of $f$ over $[0, 4]$.
+
+:::

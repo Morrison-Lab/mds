@@ -1,0 +1,12 @@
+:::{#exm-argmax-positive-multiple}
+#### A quadratic and its positive multiple
+
+With $g(x) = x(4 - x)$ of @exr-argmax-quadratic and $f = 5\,g$ of @exr-argmax-scaled-quadratic,
+@thm-argmax-positive-multiple (with $c = 5$) gives $\argmax_{x \in [0, 4]} f(x) = \argmax_{x \in [0, 4]} g(x) = \cb{2}$,
+as the two solutions found.
+The largest values differ, $f(2) = 20$ and $g(2) = 4$,
+so only the argmax is unchanged by the multiple.
+
+<!-- no-figure: the example compares two numbers, and the two curves differ only by the factor 5 -->
+
+:::

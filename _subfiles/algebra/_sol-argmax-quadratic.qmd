@@ -1,0 +1,17 @@
+:::{#sol-argmax-quadratic}
+
+Completing the [square](algebra.qmd#def-square) gives
+
+$$
+\begin{aligned}
+g(x) &= 4x - x^2 \\
+&= 4 - (x - 2)^2.
+\end{aligned}
+$$
+
+The square $(x - 2)^2$ is never negative and is $0$ only at $x = 2$,
+so $g(x) \le 4 = g(2)$ for every $x \in [0, 4]$,
+with equality only at $x = 2$.
+So $\argmax_{x \in [0, 4]} g(x) = \cb{2}$.
+
+:::
