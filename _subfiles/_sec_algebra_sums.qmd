@@ -1,4 +1,4 @@
-## Convex functions {#sec-convexity}
+# Convex functions {#sec-convexity}
 
 {{< include mds/_subfiles/algebra/_exr-convex-chord.qmd >}}
 
@@ -46,7 +46,7 @@
 
 {{< include mds/_subfiles/algebra/_exm-jensen.qmd >}}
 
-## Infimum and supremum
+# Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-bounded.qmd >}}
 
@@ -78,7 +78,7 @@
 
 {{< include mds/_subfiles/algebra/_exm-supremum.qmd >}}
 
-## Sums
+# Sums
 
 {{< include mds/_subfiles/algebra/_def-term.qmd >}}
 
@@ -122,7 +122,7 @@
 
 {{< include mds/_subfiles/algebra/_thm-sum-assoc.qmd >}}
 
-## Products
+# Products
 
 <!-- heading shares the slide; do not re-flag -->
 
@@ -136,11 +136,11 @@
 
 {{< include mds/_subfiles/algebra/_thm-prod-assoc.qmd >}}
 
-## Division
+# Division
 
 {{< include mds/_subfiles/algebra/_thm-prod-div.qmd >}}
 
-## Sums and products together
+# Sums and products together
 
 <!-- heading shares the slide; do not re-flag -->
 
@@ -190,7 +190,7 @@
 
 {{< include mds/_subfiles/algebra/_thm-square-of-a-sum.qmd >}}
 
-## Summation notation {#sec-summation}
+# Summation notation {#sec-summation}
 
 {{< include mds/_subfiles/algebra/_exr-expand-a-sum.qmd >}}
 
@@ -266,7 +266,7 @@
 
 {{< include mds/_subfiles/algebra/_exm-sum-over-empty-set.qmd >}}
 
-## Quotients
+# Quotients
 
 {{< include mds/_subfiles/algebra/_def-quotient.qmd >}}
 
@@ -286,6 +286,6 @@
 
 {{< include mds/_subfiles/algebra/_prose-proportion-reference.qmd >}}
 
-## Limits of sums and notational shorthands {#sec-notational-shorthands}
+# Limits of sums and notational shorthands {#sec-notational-shorthands}
 
 {{< include mds/_subfiles/algebra/_sec-notational-shorthands.qmd >}}

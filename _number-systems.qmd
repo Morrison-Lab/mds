@@ -12,7 +12,7 @@ and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative
 
 :::
 
-## Natural numbers {#sec-notation-naturals}
+# Natural numbers {#sec-notation-naturals}
 
 {{< include mds/_subfiles/number-systems/_exr-naturals-below-three.qmd >}}
 
@@ -60,7 +60,7 @@ and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative
 
 {{< include mds/_subfiles/number-systems/_exm-factorial.qmd >}}
 
-## Divisibility, primes and congruence {#sec-number-systems-divisibility}
+# Divisibility, primes and congruence {#sec-number-systems-divisibility}
 
 {{< include mds/_subfiles/number-systems/_def-divides.qmd >}}
 
@@ -84,7 +84,7 @@ and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative
 
 {{< include mds/_subfiles/number-systems/_exm-congruence.qmd >}}
 
-## Rational, real, and irrational numbers {#sec-notation-reals}
+# Rational, real, and irrational numbers {#sec-notation-reals}
 
 {{< include mds/_subfiles/number-systems/_def-rational-numbers.qmd >}}
 

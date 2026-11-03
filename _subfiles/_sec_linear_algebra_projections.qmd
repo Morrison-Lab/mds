@@ -1,4 +1,4 @@
-## Design Matrix
+# Design Matrix
 
 {{< include mds/_subfiles/linear-algebra/_def-design-matrix.qmd >}}
 
@@ -16,7 +16,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_note-thm-hat-matrix.qmd >}}
 
-### Orthogonal projection onto a subspace {#sec-orthogonal-projection}
+## Orthogonal projection onto a subspace {#sec-orthogonal-projection}
 
 {{< include mds/_subfiles/linear-algebra/_prose-orthogonal-projection-attribution.qmd >}}
 
@@ -40,7 +40,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-hat-matrix-projects.qmd >}}
 
-### Generalized inverses and linear systems {#sec-generalized-inverse}
+## Generalized inverses and linear systems {#sec-generalized-inverse}
 
 {{< include mds/_subfiles/linear-algebra/_prose-generalized-inverse-attribution.qmd >}}
 
@@ -124,7 +124,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-projector-generalized-inverse.qmd >}}
 
-### Solving linear systems and least squares {#sec-solving-linear-systems}
+## Solving linear systems and least squares {#sec-solving-linear-systems}
 
 {{< include mds/_subfiles/linear-algebra/_prose-linear-systems-attribution.qmd >}}
 

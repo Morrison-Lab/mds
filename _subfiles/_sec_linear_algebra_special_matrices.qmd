@@ -1,4 +1,4 @@
-## Special Matrices
+# Special Matrices
 
 ```{r}
 #| include: false
@@ -89,7 +89,7 @@ reticulate::py_require("numpy")
 
 {{< include mds/_subfiles/linear-algebra/_thm-orthogonal-norm.qmd >}}
 
-## Quadratic Forms
+# Quadratic Forms
 
 {{< include mds/_subfiles/linear-algebra/_def-quadratic-form.qmd >}}
 
@@ -107,7 +107,7 @@ reticulate::py_require("numpy")
 
 {{< include mds/_subfiles/linear-algebra/_thm-quadratic-form-symmetric.qmd >}}
 
-## Trace and Matrix Inner Product
+# Trace and Matrix Inner Product
 
 {{< include mds/_subfiles/linear-algebra/_def-trace.qmd >}}
 
@@ -131,7 +131,7 @@ reticulate::py_require("numpy")
 
 {{< include mds/_subfiles/linear-algebra/_thm-frobenius-norm-columns.qmd >}}
 
-## Matrix Decompositions
+# Matrix Decompositions
 
 {{< include mds/_subfiles/linear-algebra/_def-eigenvalue.qmd >}}
 
@@ -163,7 +163,7 @@ reticulate::py_require("numpy")
 
 {{< include mds/_subfiles/linear-algebra/_thm-svd-evd.qmd >}}
 
-## Definite Matrices
+# Definite Matrices
 
 {{< include mds/_subfiles/linear-algebra/_def-positive-semidefinite.qmd >}}
 
@@ -249,7 +249,7 @@ reticulate::py_require("numpy")
 
 {{< include mds/_subfiles/linear-algebra/_rem-inner-products-machine-learning.qmd >}}
 
-## Determinants
+# Determinants
 
 {{< include mds/_subfiles/linear-algebra/_def-determinant.qmd >}}
 

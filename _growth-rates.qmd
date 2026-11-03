@@ -8,7 +8,7 @@ This page defines the notation for that comparison.
 
 :::
 
-## Upper bounds
+# Upper bounds
 
 {{< include mds/_subfiles/growth-rates/_def-big-o.qmd >}}
 
@@ -16,7 +16,7 @@ This page defines the notation for that comparison.
 
 {{< include mds/_subfiles/growth-rates/_exm-big-o.qmd >}}
 
-## Lower bounds
+# Lower bounds
 
 {{< include mds/_subfiles/growth-rates/_def-big-omega.qmd >}}
 
@@ -24,7 +24,7 @@ This page defines the notation for that comparison.
 
 {{< include mds/_subfiles/growth-rates/_exm-big-omega.qmd >}}
 
-## Matching bounds
+# Matching bounds
 
 {{< include mds/_subfiles/growth-rates/_def-big-theta.qmd >}}
 
