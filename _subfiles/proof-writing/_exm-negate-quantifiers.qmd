@@ -5,7 +5,7 @@
 Let $S$ be the [integers](number-systems.qmd#def-integers),
 and let $P(x)$ be "$x$ is [even](number-systems.qmd#def-even-odd)".
 By the first of [De Morgan's laws for quantifiers](#thm-negate-quantifiers),
-the negation of "every [integer](number-systems.qmd#def-integers) is even"
+the [negation](#def-not) of "every [integer](number-systems.qmd#def-integers) is even"
 is "some integer is not even".
 The second law says that the negation of "some integer is even"
 is "no integer is even".
