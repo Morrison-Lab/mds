@@ -18,7 +18,7 @@ There are two cases.
   so they all have the same truth value. <!-- check-term-links: allow -->
 - Some $P_i$ is true.
   By the definition of [implies](#def-implies),
-  a true conditional with a true hypothesis has a true conclusion.
+  if $P \Rightarrow Q$ and $P$ are both true, then $Q$ is true.
   So $P_i \Rightarrow P_{i+1}$ makes $P_{i+1}$ true,
   then $P_{i+1} \Rightarrow P_{i+2}$ makes $P_{i+2}$ true,
   and so on around the cycle,
