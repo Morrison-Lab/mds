@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 08:54:42 (PST)
+Last modified: 2026-11-03 10:38:05 (PST)
 
 > **NOTE:**
 >
@@ -116,27 +116,43 @@ Last modified: 2026-11-03 08:54:42 (PST)
 
 > **NOTE:**
 >
-> **Definition 9 (Lower bound and upper bound)** For a [subset](#def-subset) $S \subseteq \mathbb{R}$ of the [real numbers](number-systems.llms.md#def-real-numbers), a [real number](number-systems.llms.md#def-real-numbers) $a$ is a **lower bound** of $S$ if $a \le x$ for every $x \in S$, and a real number $b$ is an **upper bound** of $S$ if $x \le b$ for every $x \in S$; each is a **bound** of $S$.
+> **Definition 9 (Power set)** The **power set** [\[6\]](#ref-wikipedia_power_set) of a [set](#def-set) $A$, written ${\mathcal{P}\mathopen{}\left(A\right)\mathclose{}}$, is the set of all [subsets](#def-subset) of $A$:
+>
+> $${\mathcal{P}\mathopen{}\left(A\right)\mathclose{}} \stackrel{\text{def}}{=}{\mathopen{}\left\{S : S \subseteq A\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
-> **Definition 10 (Interval)** An **interval** [\[6\]](#ref-wikipedia_interval_mathematics) is a [subset](#def-subset) of the [real numbers](number-systems.llms.md#def-real-numbers) that consists of all real numbers between two bounds $a \le b$ ([Definition 9](#def-bound)), possibly including one or both bounds, or of all real numbers on one side of a single bound, or all of $\mathbb{R}$. The bounds $a$ and $b$ that define the interval are its **endpoints**.
+> **Example 7 (The power set of a two-element set)**  
+>
+> The [power set](#def-power-set) of ${\mathopen{}\left\{0, 1\right\}\mathclose{}}$ has four elements:
+>
+> $${\mathcal{P}\mathopen{}\left({\mathopen{}\left\{0, 1\right\}\mathclose{}}\right)\mathclose{}} = {\mathopen{}\left\{\emptyset, {\mathopen{}\left\{0\right\}\mathclose{}}, {\mathopen{}\left\{1\right\}\mathclose{}}, {\mathopen{}\left\{0, 1\right\}\mathclose{}}\right\}\mathclose{}}$$
+>
+> It contains the [empty set](#def-empty-set), since the empty set is a [subset](#def-subset) of every [set](#def-set) by [Theorem 3](#thm-empty-subset), and it contains ${\mathopen{}\left\{0, 1\right\}\mathclose{}}$ itself, by [Theorem 1](#thm-subset-reflexive). Its elements are [sets](#def-set): ${\mathopen{}\left\{0\right\}\mathclose{}} \in {\mathcal{P}\mathopen{}\left({\mathopen{}\left\{0, 1\right\}\mathclose{}}\right)\mathclose{}}$, but $0 \notin {\mathcal{P}\mathopen{}\left({\mathopen{}\left\{0, 1\right\}\mathclose{}}\right)\mathclose{}}$.
 
 > **NOTE:**
 >
-> **Definition 11 (Closed interval)** For [real numbers](number-systems.llms.md#def-real-numbers) $a \le b$, the **closed interval** is the interval ([Definition 10](#def-interval)) $[a, b] \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: a \le x \le b\right\}\mathclose{}}$ that includes both bounds ([Definition 9](#def-bound)).
+> **Definition 10 (Lower bound and upper bound)** For a [subset](#def-subset) $S \subseteq \mathbb{R}$ of the [real numbers](number-systems.llms.md#def-real-numbers), a [real number](number-systems.llms.md#def-real-numbers) $a$ is a **lower bound** of $S$ if $a \le x$ for every $x \in S$, and a real number $b$ is an **upper bound** of $S$ if $x \le b$ for every $x \in S$; each is a **bound** of $S$.
 
 > **NOTE:**
 >
-> **Definition 12 (Open interval)** For [real numbers](number-systems.llms.md#def-real-numbers) $a \le b$, the **open interval** is the interval ([Definition 10](#def-interval)) $(a, b) \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: a < x < b\right\}\mathclose{}}$ that includes neither bound ([Definition 9](#def-bound)).
+> **Definition 11 (Interval)** An **interval** [\[7\]](#ref-wikipedia_interval_mathematics) is a [subset](#def-subset) of the [real numbers](number-systems.llms.md#def-real-numbers) that consists of all real numbers between two bounds $a \le b$ ([Definition 10](#def-bound)), possibly including one or both bounds, or of all real numbers on one side of a single bound, or all of $\mathbb{R}$. The bounds $a$ and $b$ that define the interval are its **endpoints**.
 
 > **NOTE:**
 >
-> **Definition 13 (Half-open intervals)** For [real numbers](number-systems.llms.md#def-real-numbers) $a \le b$, the **half-open intervals** are the intervals ([Definition 10](#def-interval)) $[a, b) \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: a \le x < b\right\}\mathclose{}}$ and $(a, b] \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: a < x \le b\right\}\mathclose{}}$ that include one bound ([Definition 9](#def-bound)) and not the other.
+> **Definition 12 (Closed interval)** For [real numbers](number-systems.llms.md#def-real-numbers) $a \le b$, the **closed interval** is the interval ([Definition 11](#def-interval)) $[a, b] \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: a \le x \le b\right\}\mathclose{}}$ that includes both bounds ([Definition 10](#def-bound)).
 
 > **NOTE:**
 >
-> **Definition 14 (Unbounded intervals)** For [real numbers](number-systems.llms.md#def-real-numbers) $a$ and $b$, the **unbounded intervals** are the intervals ([Definition 10](#def-interval)) with at most one bound ([Definition 9](#def-bound)):
+> **Definition 13 (Open interval)** For [real numbers](number-systems.llms.md#def-real-numbers) $a \le b$, the **open interval** is the interval ([Definition 11](#def-interval)) $(a, b) \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: a < x < b\right\}\mathclose{}}$ that includes neither bound ([Definition 10](#def-bound)).
+
+> **NOTE:**
+>
+> **Definition 14 (Half-open intervals)** For [real numbers](number-systems.llms.md#def-real-numbers) $a \le b$, the **half-open intervals** are the intervals ([Definition 11](#def-interval)) $[a, b) \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: a \le x < b\right\}\mathclose{}}$ and $(a, b] \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: a < x \le b\right\}\mathclose{}}$ that include one bound ([Definition 10](#def-bound)) and not the other.
+
+> **NOTE:**
+>
+> **Definition 15 (Unbounded intervals)** For [real numbers](number-systems.llms.md#def-real-numbers) $a$ and $b$, the **unbounded intervals** are the intervals ([Definition 11](#def-interval)) with at most one bound ([Definition 10](#def-bound)):
 >
 > - $[a, \infty) \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: x \ge a\right\}\mathclose{}}$ and $(a, \infty) \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: x > a\right\}\mathclose{}}$;
 > - $(-\infty, b] \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: x \le b\right\}\mathclose{}}$ and $(-\infty, b) \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in \mathbb{R}: x < b\right\}\mathclose{}}$;
@@ -148,7 +164,7 @@ Last modified: 2026-11-03 08:54:42 (PST)
 
 > **NOTE:**
 >
-> **Example 7 (Which numbers are in an interval)**  
+> **Example 8 (Which numbers are in an interval)**  
 >
 > - $1 \in [1, 2]$, but $1 \notin (1, 2)$.
 > - $2 \in (1, 2]$, but $2 \notin [1, 2)$.
@@ -157,11 +173,11 @@ Last modified: 2026-11-03 08:54:42 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Collection of sets, family of sets)** A **collection of sets** (also called a **family of sets**) [\[7\]](#ref-wikipedia_family_of_sets) is a set whose elements are themselves sets.
+> **Definition 16 (Collection of sets, family of sets)** A **collection of sets** (also called a **family of sets**) [\[8\]](#ref-wikipedia_family_of_sets) is a set whose elements are themselves sets.
 
 > **NOTE:**
 >
-> **Example 8 (The collection of all subsets of a two-element set)** The subsets of ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ are $\emptyset$, ${\mathopen{}\left\{1\right\}\mathclose{}}$, ${\mathopen{}\left\{2\right\}\mathclose{}}$, and ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ ([Theorem 3](#thm-empty-subset) and [Theorem 1](#thm-subset-reflexive) give the first and the last), so the collection of all subsets of ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ is
+> **Example 9 (The collection of all subsets of a two-element set)** The subsets of ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ are $\emptyset$, ${\mathopen{}\left\{1\right\}\mathclose{}}$, ${\mathopen{}\left\{2\right\}\mathclose{}}$, and ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ ([Theorem 3](#thm-empty-subset) and [Theorem 1](#thm-subset-reflexive) give the first and the last), so the collection of all subsets of ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ is
 >
 > $${\mathopen{}\left\{\emptyset, {\mathopen{}\left\{1\right\}\mathclose{}}, {\mathopen{}\left\{2\right\}\mathclose{}}, {\mathopen{}\left\{1, 2\right\}\mathclose{}}\right\}\mathclose{}}$$
 >
@@ -169,65 +185,65 @@ Last modified: 2026-11-03 08:54:42 (PST)
 
 > **NOTE:**
 >
-> **Definition 16 (Label)** A **label** is a name or symbol attached to an object, so that we can refer to the object and tell it apart from other objects.
+> **Definition 17 (Label)** A **label** is a name or symbol attached to an object, so that we can refer to the object and tell it apart from other objects.
 
 > **NOTE:**
 >
-> **Example 9 (Labels)** The numbers $1, 2, 3$ can label three students in a class list. Then “student 2” refers to one particular student. The letters $A$ and $B$ can label two sets.
+> **Example 10 (Labels)** The numbers $1, 2, 3$ can label three students in a class list. Then “student 2” refers to one particular student. The letters $A$ and $B$ can label two sets.
 
 > **NOTE:**
 >
-> **Definition 17 (Index set)** An **index set** [\[8\]](#ref-wikipedia_index_set) is a set whose elements are used as [labels](#def-label) for objects. Each element of the index set is called an index.
+> **Definition 18 (Index set)** An **index set** [\[9\]](#ref-wikipedia_index_set) is a set whose elements are used as [labels](#def-label) for objects. Each element of the index set is called an index.
 
 > **NOTE:**
 >
-> **Example 10 (Index sets)** The set $\{1, \ldots, n\}$ labels the entries of a vector with $n$ entries. The set of nonnegative real numbers can label moments in time.
+> **Example 11 (Index sets)** The set $\{1, \ldots, n\}$ labels the entries of a vector with $n$ entries. The set of nonnegative real numbers can label moments in time.
 
 > **NOTE:**
 >
-> **Definition 18 (Indexed family)** An **indexed family** [\[9\]](#ref-wikipedia_indexed_family) is a collection of objects, one for each element of a given [index set](#def-index-set). The object for the index $i$ is written $a_i$.
+> **Definition 19 (Indexed family)** An **indexed family** [\[10\]](#ref-wikipedia_indexed_family) is a collection of objects, one for each element of a given [index set](#def-index-set). The object for the index $i$ is written $a_i$.
 
 > **NOTE:**
 >
-> **Example 11 (Indexed families)** The entries $x_1, \ldots, x_n$ of a vector are an indexed family of numbers, with index set $\{1, \ldots, n\}$. The functions $f_\theta$, one for each parameter value $\theta$ in a parameter set, are an indexed family of functions.
+> **Example 12 (Indexed families)** The entries $x_1, \ldots, x_n$ of a vector are an indexed family of numbers, with index set $\{1, \ldots, n\}$. The functions $f_\theta$, one for each parameter value $\theta$ in a parameter set, are an indexed family of functions.
 
 # 1 Combining sets
 
 > **NOTE:**
 >
-> **Definition 19 (Union)** The **union** [\[10\]](#ref-wikipedia_union_set_theory) of sets $A$ and $B$, written $A \cup B$, is the set of elements that are in $A$, in $B$, or in both:
+> **Definition 20 (Union)** The **union** [\[11\]](#ref-wikipedia_union_set_theory) of sets $A$ and $B$, written $A \cup B$, is the set of elements that are in $A$, in $B$, or in both:
 >
 > $$A \cup B \stackrel{\text{def}}{=}{\mathopen{}\left\{x : x \in A \text{ or } x \in B\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
-> **Definition 20 (Union of a family of sets)** Let $I$ be a set of indices, such as $\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}$ or $\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}$, and let $A_i$ be a set for each $i \in I$. The **union** of the sets $A_i$, written $\bigcup_{i \in I} A_i$, is the set of elements that are in at least one $A_i$. For $I = \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}$, it is also written $\bigcup_{i=1}^{n} A_i$ or $A_1 \cup \cdots \cup A_n$, and for $I = \mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}$, it is written $\bigcup_{i=1}^{\infty} A_i$.
+> **Definition 21 (Union of a family of sets)** Let $I$ be a set of indices, such as $\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}$ or $\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}$, and let $A_i$ be a set for each $i \in I$. The **union** of the sets $A_i$, written $\bigcup_{i \in I} A_i$, is the set of elements that are in at least one $A_i$. For $I = \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}$, it is also written $\bigcup_{i=1}^{n} A_i$ or $A_1 \cup \cdots \cup A_n$, and for $I = \mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}$, it is written $\bigcup_{i=1}^{\infty} A_i$.
 
 > **NOTE:**
 >
-> **Definition 21 (Intersection)** The **intersection** [\[11\]](#ref-wikipedia_intersection_set_theory) of sets $A$ and $B$, written $A \cap B$, is the set of elements that are in both $A$ and $B$:
+> **Definition 22 (Intersection)** The **intersection** [\[12\]](#ref-wikipedia_intersection_set_theory) of sets $A$ and $B$, written $A \cap B$, is the set of elements that are in both $A$ and $B$:
 >
 > $$A \cap B \stackrel{\text{def}}{=}{\mathopen{}\left\{x : x \in A \text{ and } x \in B\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
-> **Definition 22 (Intersection of a family of sets)** Let $I$ be a nonempty set of indices, such as $\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}$ or $\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}$, and let $A_i$ be a set for each $i \in I$. The **intersection** of the sets $A_i$, written $\bigcap_{i \in I} A_i$, is the set of elements that are in every $A_i$. For $I = \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}$, it is also written $\bigcap_{i=1}^{n} A_i$ or $A_1 \cap \cdots \cap A_n$, and for $I = \mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}$, it is written $\bigcap_{i=1}^{\infty} A_i$.
+> **Definition 23 (Intersection of a family of sets)** Let $I$ be a nonempty set of indices, such as $\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}$ or $\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}$, and let $A_i$ be a set for each $i \in I$. The **intersection** of the sets $A_i$, written $\bigcap_{i \in I} A_i$, is the set of elements that are in every $A_i$. For $I = \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}$, it is also written $\bigcap_{i=1}^{n} A_i$ or $A_1 \cap \cdots \cap A_n$, and for $I = \mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}$, it is written $\bigcap_{i=1}^{\infty} A_i$.
 
 > **NOTE:**
 >
-> **Definition 23 (Set difference)** The **set difference** [\[12\]](#ref-wikipedia_complement_set_theory) of sets $A$ and $B$, written $A \setminus B$, is the set of elements of $A$ that are not in $B$:
+> **Definition 24 (Set difference)** The **set difference** [\[13\]](#ref-wikipedia_complement_set_theory) of sets $A$ and $B$, written $A \setminus B$, is the set of elements of $A$ that are not in $B$:
 >
 > $$A \setminus B \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in A : x \notin B\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
-> **Definition 24 (Complement)** Let $A$ be a [subset](#def-subset) of a set $S$. The **complement** [\[12\]](#ref-wikipedia_complement_set_theory) of $A$ in $S$ is the set difference ([Definition 23](#def-set-difference)) $S \setminus A$: the elements of $S$ that are not in $A$. When the set $S$ is clear from context, the complement of $A$ is written $A^c$:
+> **Definition 25 (Complement)** Let $A$ be a [subset](#def-subset) of a set $S$. The **complement** [\[13\]](#ref-wikipedia_complement_set_theory) of $A$ in $S$ is the set difference ([Definition 24](#def-set-difference)) $S \setminus A$: the elements of $S$ that are not in $A$. When the set $S$ is clear from context, the complement of $A$ is written $A^c$:
 >
 > $$A^c \stackrel{\text{def}}{=}S \setminus A = {\mathopen{}\left\{x \in S : x \notin A\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
-> **Example 12 (Complements of sets of die rolls)** Let $S = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ be the possible rolls of a die.
+> **Example 13 (Complements of sets of die rolls)** Let $S = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ be the possible rolls of a die.
 >
 > - The complement of the even rolls $A = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ is $A^c = {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}$, the odd rolls.
 > - The complement of $S$ itself is $S^c = \emptyset$, and the complement of $\emptyset$ is $\emptyset^c = S$.
@@ -236,7 +252,7 @@ Last modified: 2026-11-03 08:54:42 (PST)
 
 > **NOTE:**
 >
-> **Example 13 (Combining sets of die rolls)** Let $A = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ (the even rolls) and $B = {\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}$ (the rolls of at most 3). Then:
+> **Example 14 (Combining sets of die rolls)** Let $A = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ (the even rolls) and $B = {\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}$ (the rolls of at most 3). Then:
 >
 > - $A \cup B = {\mathopen{}\left\{1, 2, 3, 4, 6\right\}\mathclose{}}$, the rolls that are even or at most 3;
 > - $A \cap B = {\mathopen{}\left\{2\right\}\mathclose{}}$, the only roll that is both;
@@ -245,7 +261,7 @@ Last modified: 2026-11-03 08:54:42 (PST)
 
 > **NOTE:**
 >
-> **Example 14 (Unions and intersections of many sets)**  
+> **Example 15 (Unions and intersections of many sets)**  
 >
 > - $$\begin{aligned}
 >   \bigcup_{i=1}^{3} {\mathopen{}\left\{i, i + 1\right\}\mathclose{}} &= {\mathopen{}\left\{1, 2\right\}\mathclose{}} \cup {\mathopen{}\left\{2, 3\right\}\mathclose{}} \cup {\mathopen{}\left\{3, 4\right\}\mathclose{}} \\
@@ -258,14 +274,14 @@ Last modified: 2026-11-03 08:54:42 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (De Morgan’s laws)** Let $S$ be a set, let $I$ be a nonempty set of indices, and let $A_i$ be a [subset](#def-subset) of $S$ for each $i \in I$. Then the complement of a union is the intersection of the complements, [\[13\]](#ref-wikipedia_de_morgans_laws) and the complement of an intersection is the union of the complements:
+> **Theorem 4 (De Morgan’s laws)** Let $S$ be a set, let $I$ be a nonempty set of indices, and let $A_i$ be a [subset](#def-subset) of $S$ for each $i \in I$. Then the complement of a union is the intersection of the complements, [\[14\]](#ref-wikipedia_de_morgans_laws) and the complement of an intersection is the union of the complements:
 >
 > $$\begin{aligned}
 > S \setminus \bigcup_{i \in I} A_i &= \bigcap_{i \in I} (S \setminus A_i) \\
 > S \setminus \bigcap_{i \in I} A_i &= \bigcup_{i \in I} (S \setminus A_i)
 > \end{aligned}$$
 >
-> With the complement notation of [Definition 24](#def-complement), these read $\mathopen{}\left(\bigcup_{i \in I} A_i\right)\mathclose{}^c = \bigcap_{i \in I} A_i^c$ and $\mathopen{}\left(\bigcap_{i \in I} A_i\right)\mathclose{}^c = \bigcup_{i \in I} A_i^c$.
+> With the complement notation of [Definition 25](#def-complement), these read $\mathopen{}\left(\bigcup_{i \in I} A_i\right)\mathclose{}^c = \bigcap_{i \in I} A_i^c$ and $\mathopen{}\left(\bigcap_{i \in I} A_i\right)\mathclose{}^c = \bigcup_{i \in I} A_i^c$.
 
 > **NOTE:**
 >
@@ -274,13 +290,13 @@ Last modified: 2026-11-03 08:54:42 (PST)
 > $$\begin{aligned}
 > x \in S \setminus \bigcup_{i \in I} A_i
 > &\iff x \in S \text{ and } x \notin \bigcup_{i \in I} A_i
-> && \text{(}\href{#def-set-difference}{\text{Definition~23}}\text{)} \\
+> && \text{(}\href{#def-set-difference}{\text{Definition~24}}\text{)} \\
 > &\iff x \in S \text{ and } x \notin A_i \text{ for every } i \in I
-> && \text{(}\href{#def-union}{\text{Definition~19}}\text{)} \\
+> && \text{(}\href{#def-union}{\text{Definition~20}}\text{)} \\
 > &\iff x \in S \setminus A_i \text{ for every } i \in I
-> && \text{(}\href{#def-set-difference}{\text{Definition~23}}\text{)} \\
+> && \text{(}\href{#def-set-difference}{\text{Definition~24}}\text{)} \\
 > &\iff x \in \bigcap_{i \in I} (S \setminus A_i)
-> && \text{(}\href{#def-intersection}{\text{Definition~21}}\text{)}
+> && \text{(}\href{#def-intersection}{\text{Definition~22}}\text{)}
 > \end{aligned}$$
 >
 > For the second law:
@@ -288,18 +304,18 @@ Last modified: 2026-11-03 08:54:42 (PST)
 > $$\begin{aligned}
 > x \in S \setminus \bigcap_{i \in I} A_i
 > &\iff x \in S \text{ and } x \notin \bigcap_{i \in I} A_i
-> && \text{(}\href{#def-set-difference}{\text{Definition~23}}\text{)} \\
+> && \text{(}\href{#def-set-difference}{\text{Definition~24}}\text{)} \\
 > &\iff x \in S \text{ and } x \notin A_i \text{ for some } i \in I
-> && \text{(}\href{#def-intersection}{\text{Definition~21}}\text{)} \\
+> && \text{(}\href{#def-intersection}{\text{Definition~22}}\text{)} \\
 > &\iff x \in S \setminus A_i \text{ for some } i \in I
-> && \text{(}\href{#def-set-difference}{\text{Definition~23}}\text{)} \\
+> && \text{(}\href{#def-set-difference}{\text{Definition~24}}\text{)} \\
 > &\iff x \in \bigcup_{i \in I} (S \setminus A_i)
-> && \text{(}\href{#def-union}{\text{Definition~19}}\text{)}
+> && \text{(}\href{#def-union}{\text{Definition~20}}\text{)}
 > \end{aligned}$$
 
 > **NOTE:**
 >
-> **Example 15 (De Morgan’s laws for die rolls)** In $S = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$, let $A = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ and $B = {\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}$, as in [Example 13](#exm-set-operations), so $A^c = {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}$ and $B^c = {\mathopen{}\left\{4, 5, 6\right\}\mathclose{}}$.
+> **Example 16 (De Morgan’s laws for die rolls)** In $S = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$, let $A = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ and $B = {\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}$, as in [Example 14](#exm-set-operations), so $A^c = {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}$ and $B^c = {\mathopen{}\left\{4, 5, 6\right\}\mathclose{}}$.
 >
 > - $$\begin{aligned}
 >   (A \cup B)^c &= {\mathopen{}\left\{1, 2, 3, 4, 6\right\}\mathclose{}}^c \\
@@ -327,47 +343,73 @@ Last modified: 2026-11-03 08:54:42 (PST)
 
 > **NOTE:**
 >
-> **Definition 25 (Disjoint sets)** Two [sets](#def-set) $A$ and $B$ are **disjoint** if their [intersection](#def-intersection) is the [empty set](#def-empty-set):
+> **Definition 26 (Disjoint sets)** Two [sets](#def-set) $A$ and $B$ are **disjoint** if their [intersection](#def-intersection) is the [empty set](#def-empty-set):
 >
 > $$A \cap B = \emptyset$$
 
 > **NOTE:**
 >
-> **Example 16 (Two disjoint sets of die rolls)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](#exm-set)), the sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are disjoint: no roll is in both. The sets ${\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ and ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ are not, because $2$ is in both.
+> **Example 17 (Two disjoint sets of die rolls)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](#exm-set)), the sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are disjoint: no roll is in both. The sets ${\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ and ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ are not, because $2$ is in both.
 
 > **NOTE:**
 >
-> **Definition 26 (Pairwise disjoint sets, mutually disjoint sets)** Some [sets](#def-set) $A_1, A_2, \ldots$ (a list that may end or go on without end) are **pairwise disjoint** [\[14\]](#ref-wikipedia_disjoint_sets) (also called **mutually disjoint**) when every two of them are [disjoint](#def-disjoint-sets):
+> **Definition 27 (Pairwise disjoint sets, mutually disjoint sets)** Some [sets](#def-set) $A_1, A_2, \ldots$ (a list that may end or go on without end) are **pairwise disjoint** [\[15\]](#ref-wikipedia_disjoint_sets) (also called **mutually disjoint**) when every two of them are [disjoint](#def-disjoint-sets):
 >
 > $$A_i \cap A_j = \emptyset \quad \text{for all } i \neq j$$
 
 > **NOTE:**
 >
-> **Example 17 (Low, middle and high die rolls)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](#exm-set)), the sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$, ${\mathopen{}\left\{3, 4\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are [pairwise disjoint](#def-pairwise-disjoint): no roll is in more than one of them. The sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$, ${\mathopen{}\left\{3, 4\right\}\mathclose{}}$ and ${\mathopen{}\left\{2, 5\right\}\mathclose{}}$ are not, because $2$ is in both the first and the third.
+> **Example 18 (Low, middle and high die rolls)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](#exm-set)), the sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$, ${\mathopen{}\left\{3, 4\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are [pairwise disjoint](#def-pairwise-disjoint): no roll is in more than one of them. The sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$, ${\mathopen{}\left\{3, 4\right\}\mathclose{}}$ and ${\mathopen{}\left\{2, 5\right\}\mathclose{}}$ are not, because $2$ is in both the first and the third.
 
 > **NOTE:**
 >
-> **Definition 27 (Ordered pair)** An **ordered pair** [\[15\]](#ref-wikipedia_ordered_pair) $(a, b)$ is a pair of objects listed in order, with $a$ first and $b$ second; two ordered pairs are equal, $(a, b) = (c, d)$, when $a = c$ and $b = d$.
+> **Definition 28 (Ordered pair)** An **ordered pair** [\[16\]](#ref-wikipedia_ordered_pair) $(a, b)$ is a pair of objects listed in order, with $a$ first and $b$ second; two ordered pairs are equal, $(a, b) = (c, d)$, when $a = c$ and $b = d$.
 
 > **NOTE:**
 >
-> **Definition 28 (Cartesian product)** The **Cartesian product** [\[16\]](#ref-wikipedia_cartesian_product) of sets $A$ and $B$, written $A \times B$, is the set of ordered pairs whose first entry is in $A$ and whose second entry is in $B$:
+> **Definition 29 (Cartesian product)** The **Cartesian product** [\[17\]](#ref-wikipedia_cartesian_product) of sets $A$ and $B$, written $A \times B$, is the set of ordered pairs whose first entry is in $A$ and whose second entry is in $B$:
 >
 > $$A \times B \stackrel{\text{def}}{=}{\mathopen{}\left\{(a, b) : a \in A \text{ and } b \in B\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
-> **Example 18 (Cartesian products)**  
+> **Example 19 (Cartesian products)**  
 >
 > - ${\mathopen{}\left\{1, 2\right\}\mathclose{}} \times {\mathopen{}\left\{5, 6\right\}\mathclose{}} = {\mathopen{}\left\{(1, 5), (1, 6), (2, 5), (2, 6)\right\}\mathclose{}}$. The pair $(5, 1)$ is not in it, because its first entry, $5$, is not in ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$; so $(1, 5) \ne (5, 1)$.
 > - The results of rolling a die twice form ${\mathopen{}\left\{1, \ldots, 6\right\}\mathclose{}} \times {\mathopen{}\left\{1, \ldots, 6\right\}\mathclose{}}$, which has $6 \cdot 6 = 36$ elements, such as $(3, 5)$: a 3 on the first roll and a 5 on the second.
 > - $[0, 2] \times [0, 3]$ is the set of points $(x, y)$ in the plane with $0 \le x \le 2$ and $0 \le y \le 3$: a rectangle of width $2$ and height $3$.
 
+> **NOTE:**
+>
+> **Definition 30 (Tuple)** For a [natural number](number-systems.llms.md#def-natural-numbers) $n$, an $n$-tuple [\[18\]](#ref-wikipedia_tuple) $(a_1, a_2, \ldots, a_n)$ is a list of $n$ objects in order. Two $n$-tuples are equal when their entries are equal in each position.
+
+> **NOTE:**
+>
+> **Example 20 (Dates as tuples)**  
+>
+> A calendar date can be written as a $3$-[tuple](#def-tuple) (year, month, day), such as $(2027, 1, 4)$ for 4 January 2027. The $3$-tuples $(2027, 1, 4)$ and $(2027, 4, 1)$ are not the same, because their second entries differ, and they name different days. An [ordered pair](#def-ordered-pair) is a $2$-tuple.
+
+> **NOTE:**
+>
+> **Definition 31 (Cartesian product of several sets)** For a [natural number](number-systems.llms.md#def-natural-numbers) $n$ and [sets](#def-set) $A_1, A_2, \ldots, A_n$, the **Cartesian product** [\[17\]](#ref-wikipedia_cartesian_product) $A_1 \times A_2 \times \cdots \times A_n$ is the [set](#def-set) of $n$-[tuples](#def-tuple) whose $i$th entry is in $A_i$ for each $i$:
+>
+> $$A_1 \times \cdots \times A_n \stackrel{\text{def}}{=}{\mathopen{}\left\{(a_1, \ldots, a_n) : a_i \in A_i \text{ for each } i\right\}\mathclose{}}$$
+
+> **NOTE:**
+>
+> **Example 21 (Three coin flips)**  
+>
+> Let $C = {\mathopen{}\left\{H, T\right\}\mathclose{}}$ be the faces of a coin. The ways three flips can come out form the [Cartesian product](#def-cartesian-product-many) $C \times C \times C$, whose elements are the eight $3$-[tuples](#def-tuple)
+>
+> $$(H, H, H), (H, H, T), (H, T, H), (H, T, T), (T, H, H), (T, H, T), (T, T, H), (T, T, T).$$
+>
+> For example, $(H, T, T)$ is heads on the first flip and tails on the second and third.
+
 # 2 Extended non-negative real numbers
 
 > **NOTE:**
 >
-> **Definition 29 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written $[0, \infty]$, are the non-negative real numbers together with an extra element $\infty$ that is greater than every real number:
+> **Definition 32 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written $[0, \infty]$, are the non-negative real numbers together with an extra element $\infty$ that is greater than every real number:
 >
 > $$[0, \infty] \stackrel{\text{def}}{=}[0, \infty) \cup {\mathopen{}\left\{\infty\right\}\mathclose{}}$$
 >
@@ -382,20 +424,20 @@ Last modified: 2026-11-03 08:54:42 (PST)
 
 > **NOTE:**
 >
-> *Remark 7* (Arithmetic with $\infty$). $\infty$ is not a real number, so some real-number arithmetic does not extend to it: $\infty - \infty$ is left undefined, and $\infty + 1 = \infty + 2$ does not imply $1 = 2$. Measure theory uses $[0, \infty]$ because the size of a set, such as the length of the whole real line, can be infinite [\[17\]](#ref-wikipedia_extended_real_number_line).
+> *Remark 7* (Arithmetic with $\infty$). $\infty$ is not a real number, so some real-number arithmetic does not extend to it: $\infty - \infty$ is left undefined, and $\infty + 1 = \infty + 2$ does not imply $1 = 2$. Measure theory uses $[0, \infty]$ because the size of a set, such as the length of the whole real line, can be infinite [\[19\]](#ref-wikipedia_extended_real_number_line).
 
 > **NOTE:**
 >
-> **Example 19 (Adding with** $\infty$) In $[0, \infty]$, $2 + 3 = 5$ as usual, while $2 + \infty = \infty$ and $\infty + \infty = \infty$.
+> **Example 22 (Adding with** $\infty$) In $[0, \infty]$, $2 + 3 = 5$ as usual, while $2 + \infty = \infty$ and $\infty + \infty = \infty$.
 
 # 3 Further reading
 
 These books and articles treat sets and the logic behind them in more depth.
 
-- Devlin [\[18\]](#ref-devlin1993joy) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions in these notes.
-- Halmos [\[19\]](#ref-halmos1974naive) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.
-- Enderton [\[20\]](#ref-enderton2001logic) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.
-- Barker-Plummer et al. [\[21\]](#ref-barkerplummer2011language) teaches propositional and first-order logic, the language behind statements such as “for every set $A$ there exists…”.
+- Devlin [\[20\]](#ref-devlin1993joy) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions in these notes.
+- Halmos [\[21\]](#ref-halmos1974naive) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.
+- Enderton [\[22\]](#ref-enderton2001logic) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.
+- Barker-Plummer et al. [\[23\]](#ref-barkerplummer2011language) teaches propositional and first-order logic, the language behind statements such as “for every set $A$ there exists…”.
 
 # Definitions on this page
 
@@ -407,27 +449,30 @@ These books and articles treat sets and the logic behind them in more depth.
 - [Definition 6 (Strict superset)](#def-strict-superset)
 - [Definition 7 (Empty set)](#def-empty-set)
 - [Definition 8 (Vacuous truth)](#def-vacuous-truth)
-- [Definition 9 (Lower bound and upper bound)](#def-bound)
-- [Definition 10 (Interval)](#def-interval)
-- [Definition 11 (Closed interval)](#def-closed-interval)
-- [Definition 12 (Open interval)](#def-open-interval)
-- [Definition 13 (Half-open intervals)](#def-half-open-interval)
-- [Definition 14 (Unbounded intervals)](#def-unbounded-interval)
-- [Definition 15 (Collection of sets, family of sets)](#def-collection)
-- [Definition 16 (Label)](#def-label)
-- [Definition 17 (Index set)](#def-index-set)
-- [Definition 18 (Indexed family)](#def-indexed-family)
-- [Definition 19 (Union)](#def-union)
-- [Definition 20 (Union of a family of sets)](#def-indexed-union)
-- [Definition 21 (Intersection)](#def-intersection)
-- [Definition 22 (Intersection of a family of sets)](#def-indexed-intersection)
-- [Definition 23 (Set difference)](#def-set-difference)
-- [Definition 24 (Complement)](#def-complement)
-- [Definition 25 (Disjoint sets)](#def-disjoint-sets)
-- [Definition 26 (Pairwise disjoint sets, mutually disjoint sets)](#def-pairwise-disjoint)
-- [Definition 27 (Ordered pair)](#def-ordered-pair)
-- [Definition 28 (Cartesian product)](#def-cartesian-product)
-- [Definition 29 (Extended non-negative real numbers)](#def-extended-nonneg-reals)
+- [Definition 9 (Power set)](#def-power-set)
+- [Definition 10 (Lower bound and upper bound)](#def-bound)
+- [Definition 11 (Interval)](#def-interval)
+- [Definition 12 (Closed interval)](#def-closed-interval)
+- [Definition 13 (Open interval)](#def-open-interval)
+- [Definition 14 (Half-open intervals)](#def-half-open-interval)
+- [Definition 15 (Unbounded intervals)](#def-unbounded-interval)
+- [Definition 16 (Collection of sets, family of sets)](#def-collection)
+- [Definition 17 (Label)](#def-label)
+- [Definition 18 (Index set)](#def-index-set)
+- [Definition 19 (Indexed family)](#def-indexed-family)
+- [Definition 20 (Union)](#def-union)
+- [Definition 21 (Union of a family of sets)](#def-indexed-union)
+- [Definition 22 (Intersection)](#def-intersection)
+- [Definition 23 (Intersection of a family of sets)](#def-indexed-intersection)
+- [Definition 24 (Set difference)](#def-set-difference)
+- [Definition 25 (Complement)](#def-complement)
+- [Definition 26 (Disjoint sets)](#def-disjoint-sets)
+- [Definition 27 (Pairwise disjoint sets, mutually disjoint sets)](#def-pairwise-disjoint)
+- [Definition 28 (Ordered pair)](#def-ordered-pair)
+- [Definition 29 (Cartesian product)](#def-cartesian-product)
+- [Definition 30 (Tuple)](#def-tuple)
+- [Definition 31 (Cartesian product of several sets)](#def-cartesian-product-many)
+- [Definition 32 (Extended non-negative real numbers)](#def-extended-nonneg-reals)
 
 # References
 
@@ -453,65 +498,73 @@ Wikipedia contributors, “Vacuous truth — Wikipedia, the free encyclopedia.�
 
 \[6\]
 
-Wikipedia contributors, “Interval (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Interval_(mathematics)>
+Wikipedia contributors, “Power set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Power_set>
 
 \[7\]
 
-Wikipedia contributors, “Family of sets — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Family_of_sets>
+Wikipedia contributors, “Interval (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Interval_(mathematics)>
 
 \[8\]
 
-Wikipedia contributors, “Index set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Index_set>
+Wikipedia contributors, “Family of sets — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Family_of_sets>
 
 \[9\]
 
-Wikipedia contributors, “Indexed family — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Indexed_family>
+Wikipedia contributors, “Index set — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Index_set>
 
 \[10\]
 
-Wikipedia contributors, “Union (set theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Union_(set_theory)>
+Wikipedia contributors, “Indexed family — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Indexed_family>
 
 \[11\]
 
-Wikipedia contributors, “Intersection (set theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Intersection_(set_theory)>
+Wikipedia contributors, “Union (set theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Union_(set_theory)>
 
 \[12\]
 
-Wikipedia contributors, “Complement (set theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Complement_(set_theory)>
+Wikipedia contributors, “Intersection (set theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Intersection_(set_theory)>
 
 \[13\]
 
-Wikipedia contributors, “De morgan’s laws — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/De_Morgan%27s_laws>
+Wikipedia contributors, “Complement (set theory) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Complement_(set_theory)>
 
 \[14\]
 
-Wikipedia contributors, “Disjoint sets — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Disjoint_sets>
+Wikipedia contributors, “De morgan’s laws — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/De_Morgan%27s_laws>
 
 \[15\]
 
-Wikipedia contributors, “Ordered pair — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Ordered_pair>
+Wikipedia contributors, “Disjoint sets — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Disjoint_sets>
 
 \[16\]
 
-Wikipedia contributors, “Cartesian product — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cartesian_product>
+Wikipedia contributors, “Ordered pair — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Ordered_pair>
 
 \[17\]
 
-Wikipedia contributors, “Extended real number line — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Extended_real_number_line>
+Wikipedia contributors, “Cartesian product — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cartesian_product>
 
 \[18\]
 
-K. Devlin, *The joy of sets: Fundamentals of contemporary set theory*, 2nd ed. in Undergraduate texts in mathematics. New York: Springer, 1993. doi: [10.1007/978-1-4612-0903-4](https://doi.org/10.1007/978-1-4612-0903-4).
+Wikipedia contributors, “Tuple — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tuple>
 
 \[19\]
 
-P. R. Halmos, *Naive set theory*. in Undergraduate texts in mathematics. New York: Springer, 1974. doi: [10.1007/978-1-4757-1645-0](https://doi.org/10.1007/978-1-4757-1645-0).
+Wikipedia contributors, “Extended real number line — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Extended_real_number_line>
 
 \[20\]
 
-H. B. Enderton, *A mathematical introduction to logic*, 2nd ed. San Diego, CA: Academic Press, 2001. doi: [10.1016/C2009-0-22107-6](https://doi.org/10.1016/C2009-0-22107-6).
+K. Devlin, *The joy of sets: Fundamentals of contemporary set theory*, 2nd ed. in Undergraduate texts in mathematics. New York: Springer, 1993. doi: [10.1007/978-1-4612-0903-4](https://doi.org/10.1007/978-1-4612-0903-4).
 
 \[21\]
+
+P. R. Halmos, *Naive set theory*. in Undergraduate texts in mathematics. New York: Springer, 1974. doi: [10.1007/978-1-4757-1645-0](https://doi.org/10.1007/978-1-4757-1645-0).
+
+\[22\]
+
+H. B. Enderton, *A mathematical introduction to logic*, 2nd ed. San Diego, CA: Academic Press, 2001. doi: [10.1016/C2009-0-22107-6](https://doi.org/10.1016/C2009-0-22107-6).
+
+\[23\]
 
 D. Barker-Plummer, J. Barwise, and J. Etchemendy, *Language, proof and logic*, 2nd ed. Stanford, CA: CSLI Publications, 2011. Available: <https://www.amazon.com/dp/1575866323>
 
