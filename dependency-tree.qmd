@@ -2,6 +2,12 @@
 title: "Dependency Tree"
 format:
   html: default
+  revealjs:
+    output-file: dependency-tree-slides.html
+  pdf:
+    output-file: dependency-tree-handout.pdf
+  docx:
+    output-file: dependency-tree.docx
 ---
 
 # How to read the tree {.unnumbered}
