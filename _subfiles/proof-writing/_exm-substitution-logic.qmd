@@ -4,7 +4,8 @@
 
 By [double negation](#thm-double-negation),
 $\neg \neg Q \equiv Q$.
-Take $F$ to be $\neg P \lor \neg \neg Q$, with $A = \neg \neg Q$ and $B = Q$.
+Take $F$ to be $\neg P \lor \neg \neg Q$,
+with $A = \neg \neg Q$ and $B = Q$.
 By [replacing a part by an equivalent part](#thm-substitution-logic),
 
 $$
