@@ -1,0 +1,9 @@
+:::{#thm-argmax-positive-multiple}
+#### A positive multiple has the same argmax
+
+Let $g : A \to \reals$ be a [function](functions.qmd#def-function) and let $c > 0$.
+Then
+
+$$\argmax_{x \in A} c\,g(x) = \argmax_{x \in A} g(x).$$
+
+:::

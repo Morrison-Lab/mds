@@ -1,0 +1,79 @@
+::: {.content-hidden when-format="revealjs"}
+
+:::{#sol-argmax-positive-multiple}
+
+1. Completing the square gives
+
+   $$
+   \begin{aligned}
+   g(x) &= 4x - x^2 \\
+   &= 4 - (x - 2)^2.
+   \end{aligned}
+   $$
+
+   The square $(x - 2)^2$ is never negative and is $0$ only at $x = 2$,
+   so $g(x) \le 4 = g(2)$ for every $x \in [0, 4]$,
+   with equality only at $x = 2$.
+   So $\argmax_{x \in [0, 4]} g(x) = \cb{2}$.
+
+2. Multiplying by $5$ gives
+
+   $$
+   \begin{aligned}
+   f(x) &= 5\,g(x) \\
+   &= 20 - 5\,(x - 2)^2.
+   \end{aligned}
+   $$
+
+   By the same reasoning, $f(x) \le 20 = f(2)$ with equality only at $x = 2$,
+   so $\argmax_{x \in [0, 4]} f(x) = \cb{2}$.
+   This is the same set as for $g$.
+   The largest value changes from $4$ to $20$,
+   so the largest value is not the same.
+
+:::
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+:::{#sol-argmax-positive-multiple}
+
+1. Completing the square gives
+
+   $$
+   \begin{aligned}
+   g(x) &= 4x - x^2 \\
+   &= 4 - (x - 2)^2.
+   \end{aligned}
+   $$
+
+   The square $(x - 2)^2$ is never negative and is $0$ only at $x = 2$,
+   so $g(x) \le 4 = g(2)$ for every $x \in [0, 4]$,
+   with equality only at $x = 2$.
+   So $\argmax_{x \in [0, 4]} g(x) = \cb{2}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{.solution}
+
+2. Multiplying by $5$ gives
+
+   $$
+   \begin{aligned}
+   f(x) &= 5\,g(x) \\
+   &= 20 - 5\,(x - 2)^2.
+   \end{aligned}
+   $$
+
+   By the same reasoning, $f(x) \le 20 = f(2)$ with equality only at $x = 2$,
+   so $\argmax_{x \in [0, 4]} f(x) = \cb{2}$.
+   This is the same set as for $g$.
+   The largest value changes from $4$ to $20$,
+   so the largest value is not the same.
+
+:::
+
+:::

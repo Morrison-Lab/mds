@@ -1,0 +1,13 @@
+:::{#exr-argmax-positive-multiple}
+#### Scaling a function by a positive number
+
+Let $g(x) = x(4 - x)$ for $x \in [0, 4]$.
+
+1. Write $g(x)$ as a constant minus a square.
+   Use it to find the [argmax](#def-argmax) of $g$ over $[0, 4]$.
+2. Let $f(x) = 5\,g(x)$ on $[0, 4]$.
+   Find the argmax of $f$ over $[0, 4]$.
+   Is it the same set as the argmax of $g$?
+   Is the largest value of $f$ the same as the largest value of $g$?
+
+:::
