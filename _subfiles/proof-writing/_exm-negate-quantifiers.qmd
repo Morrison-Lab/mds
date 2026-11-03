@@ -8,6 +8,6 @@ By the first of [De Morgan's laws for quantifiers](#thm-negate-quantifiers),
 the negation of "every [integer](number-systems.qmd#def-integers) is even"
 is "some integer is not even".
 The second law says that the negation of "some integer is even"
-is "every integer is not even".
+is "no integer is even".
 
 :::
