@@ -3,10 +3,10 @@
 
 Adapted from @problifesavercalc, Question 1.1.10.
 
-The [gamma distribution](https://en.wikipedia.org/wiki/Gamma_distribution) with shape $a > 0$
+The [gamma density](https://en.wikipedia.org/wiki/Gamma_distribution) with shape $a > 0$
 has the [kernel](https://morrison-lab.github.io/pds/random-variables.html#def-kernel) $x^{a-1} e^{-x}$ on $[0, \infty)$.
 [A kernel has the same mode as its density](https://morrison-lab.github.io/pds/random-variables.html#thm-kernel-same-mode),
-so maximizing it finds the mode without computing the
+so maximizing the kernel finds the [mode](https://morrison-lab.github.io/pds/random-variables.html#def-mode) of the gamma density without computing the
 [normalizing constant](https://morrison-lab.github.io/pds/random-variables.html#def-normalizing-constant).
 
 For shape $a = 5$, the kernel is
