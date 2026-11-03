@@ -3,7 +3,7 @@
 
 Let $g(x) = x(4 - x)$ for $x \in [0, 4]$.
 
-1. Complete the [square](algebra.qmd#def-square) to rewrite $g(x)$.
+1. Rewrite $g(x)$ using the [square](algebra.qmd#def-square) $(x - 2)^2$.
    Use it to find the [argmax](#def-argmax) of $g$ over $[0, 4]$.
 2. Let $f(x) = 5\,g(x)$ on $[0, 4]$.
    Find the argmax of $f$ over $[0, 4]$.
