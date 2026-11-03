@@ -1,0 +1,107 @@
+::: {#fig-convex-hessian-3d fig-alt="Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3.
+The surface is a trough that rises steeply toward the upper right, where 2 x1 plus x2 is large, and is nearly flat on the lower left.
+A dashed vermilion straight line along the direction (1, -2) through the origin lies on the surface, because f is linear there."}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-hessian-3d-r
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+ch3_x1_3d <- seq(-1, 1, length.out = 101)
+ch3_x2_3d <- seq(-3, 3, length.out = 101)
+ch3_f_3d <- function(x1, x2) exp(2 * x1 + x2) - x1
+ch3_z_3d <- outer(ch3_x2_3d, ch3_x1_3d, ch3_f_3d)
+ch3_line_x1_3d <- seq(-1, 1, length.out = 21)
+ch3_line_x2_3d <- -2 * ch3_line_x1_3d
+ch3_line_z_3d <- ch3_f_3d(ch3_line_x1_3d, ch3_line_x2_3d)
+ch3_line_3d <- tibble::tibble(
+  x1 = ch3_line_x1_3d,
+  x2 = ch3_line_x2_3d,
+  z = ch3_line_z_3d
+)
+ch3_dash_3d <- list(color = "#D55E00", dash = "dash", width = 5)
+plotly::plot_ly() |>
+  plotly::add_surface(
+    x = ch3_x1_3d,
+    y = ch3_x2_3d,
+    z = ch3_z_3d,
+    colorscale = list(c(0, 1), c("#CCE0F0", "#0072B2")),
+    showscale = FALSE,
+    opacity = 0.8
+  ) |>
+  plotly::add_trace(
+    data = ch3_line_3d,
+    x = ~x1,
+    y = ~x2,
+    z = ~z,
+    type = "scatter3d",
+    mode = "lines",
+    line = ch3_dash_3d,
+    name = "f is linear"
+  ) |>
+  plotly::layout(
+    scene = list(
+      xaxis = list(title = "x1"),
+      yaxis = list(title = "x2"),
+      zaxis = list(title = "f(x)"),
+      camera = list(eye = list(x = 1.6, y = -1.6, z = 0.9))
+    ),
+    legend = list(orientation = "h")
+  )
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
+```
+
+### Python
+
+```{python}
+#| label: convex-hessian-3d-python
+#| fig-alt: >-
+#|   Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2
+#|   from -3 to 3. The surface is a trough that rises steeply toward the
+#|   upper right, where 2 x1 plus x2 is large, and is nearly flat on the
+#|   lower left. A dashed vermilion straight line along the direction (1, -2)
+#|   through the origin lies on the surface, because f is linear there.
+#| fig-height: 4.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+ch_x1_3d, ch_x2_3d = np.meshgrid(np.linspace(-1, 1, 101),
+                                 np.linspace(-3, 3, 101))
+ch_z_3d = np.exp(2 * ch_x1_3d + ch_x2_3d) - ch_x1_3d
+ch_line_x1_3d = np.linspace(-1, 1, 21)
+ch_line_x2_3d = -2 * ch_line_x1_3d
+ch_line_z_3d = np.exp(2 * ch_line_x1_3d + ch_line_x2_3d) - ch_line_x1_3d
+fig = plt.figure(figsize=(6, 4.5))
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(ch_x1_3d, ch_x2_3d, ch_z_3d, color="#0072B2", alpha=0.6)
+ax.plot(ch_line_x1_3d, ch_line_x2_3d, ch_line_z_3d, "--", color="#D55E00",
+        label="f is linear")
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+ax.set_zlabel("f(x)")
+ax.legend(loc="upper right")
+plt.show();
+```
+
+:::
+
+The [graph](functions.qmd#def-graph) of the third [function](functions.qmd#def-function) in @exm-convex-hessian,
+the surface whose [level curves](vector-calculus.qmd#def-level-set) are in @fig-convex-hessian.
+Along the dashed line through the origin in the [direction](vector-calculus.qmd#def-direction) $\tp{(1, -2)}$ the surface is a straight line,
+the function is [linear](algebra.qmd#def-linear-function) there,
+so the function is [convex](algebra.qmd#def-convex-function) but not [strictly convex](#def-strictly-convex).
+
+:::

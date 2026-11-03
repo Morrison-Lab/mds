@@ -40,6 +40,8 @@
 
 {{< include mds/_subfiles/vector-calc/_fig-lagrange-line.qmd >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-lagrange-line-3d.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_exm-qp-equality-fails.qmd >}}

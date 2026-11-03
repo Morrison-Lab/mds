@@ -1,0 +1,128 @@
+::: {#fig-quasi-newton-step-3d fig-alt="Surface plot of the quadratic function f over first coordinates from -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface whose lowest point is above the point (0.09, 0.64).
+Three markers lie on the surface.
+A blue circle at the origin is the starting point, a vermilion circle above (0.25, 0.5) is the iterate after one step, and a blue square above (0.09, 0.64) is the minimizer, at the bottom of the bowl."}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: quasi-newton-step-3d-r
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+qn3_x_3d <- seq(-0.4, 0.6, length.out = 101)
+qn3_y_3d <- seq(-0.2, 1, length.out = 101)
+qn3_f_3d <- function(x, y) {
+  quad <- 0.5 * (4 * x^2 + 2 * x * y + 3 * y^2)
+  quad - x - 2 * y
+}
+qn3_z_3d <- outer(qn3_y_3d, qn3_x_3d, qn3_f_3d)
+qn3_x_pts_3d <- c(0, 0.25, 1 / 11)
+qn3_y_pts_3d <- c(0, 0.5, 7 / 11)
+qn3_z_pts_3d <- qn3_f_3d(qn3_x_pts_3d, qn3_y_pts_3d)
+qn3_labels_3d <- c("start", "after one step", "minimizer")
+qn3_pts_3d <- tibble::tibble(
+  x = qn3_x_pts_3d,
+  y = qn3_y_pts_3d,
+  z = qn3_z_pts_3d,
+  label = qn3_labels_3d,
+  color = c("#0072B2", "#D55E00", "#0072B2"),
+  symbol = c("circle", "circle", "square")
+)
+qn3_marker_3d <- list(color = ~color, size = 6, symbol = ~symbol)
+
+plotly::plot_ly() |>
+  plotly::add_surface(
+    x = qn3_x_3d,
+    y = qn3_y_3d,
+    z = qn3_z_3d,
+    colorscale = list(c(0, 1), c("#E5E5E5", "#808080")),
+    showscale = FALSE,
+    opacity = 0.7
+  ) |>
+  plotly::add_markers(
+    data = qn3_pts_3d,
+    x = ~x,
+    y = ~y,
+    z = ~z,
+    text = ~label,
+    hoverinfo = "text",
+    showlegend = FALSE,
+    marker = qn3_marker_3d
+  ) |>
+  plotly::layout(
+    scene = list(
+      xaxis = list(title = "first coordinate"),
+      yaxis = list(title = "second coordinate"),
+      zaxis = list(title = "f(x)"),
+      camera = list(eye = list(x = 1.6, y = -1.6, z = 0.9))
+    ),
+    legend = list(orientation = "h")
+  )
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
+```
+
+### Python
+
+```{python}
+#| label: quasi-newton-step-3d-python
+#| fig-alt: >-
+#|   Surface plot of the quadratic function f over first coordinates from
+#|   -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface
+#|   whose lowest point is above the point (0.09, 0.64). Three markers lie on
+#|   the surface. A blue circle at the origin is the starting point, a
+#|   vermilion circle above (0.25, 0.5) is the iterate after one step, and a
+#|   blue square above (0.09, 0.64) is the minimizer, at the bottom of the
+#|   bowl.
+#| fig-height: 4.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+qn_x_3d = np.linspace(-0.4, 0.6, 101)
+qn_y_3d = np.linspace(-0.2, 1, 101)
+qn_xx_3d, qn_yy_3d = np.meshgrid(qn_x_3d, qn_y_3d)
+
+
+def qn_f_3d(x, y):
+    return 0.5 * (4 * x**2 + 2 * x * y + 3 * y**2) - x - 2 * y
+
+
+qn_pts_x_3d = np.array([0, 0.25, 1 / 11])
+qn_pts_y_3d = np.array([0, 0.5, 7 / 11])
+qn_pts_z_3d = qn_f_3d(qn_pts_x_3d, qn_pts_y_3d)
+fig = plt.figure(figsize=(6, 4.5))
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(qn_xx_3d, qn_yy_3d, qn_f_3d(qn_xx_3d, qn_yy_3d),
+                color="grey", alpha=0.4)
+ax.scatter(qn_pts_x_3d[0], qn_pts_y_3d[0], qn_pts_z_3d[0], marker="o",
+           color="#0072B2", s=50, label="start")
+ax.scatter(qn_pts_x_3d[1], qn_pts_y_3d[1], qn_pts_z_3d[1], marker="o",
+           color="#D55E00", s=50, label="after one step")
+ax.scatter(qn_pts_x_3d[2], qn_pts_y_3d[2], qn_pts_z_3d[2], marker="s",
+           color="#0072B2", s=50, label="minimizer")
+ax.set_xlabel("first coordinate")
+ax.set_ylabel("second coordinate")
+ax.set_zlabel("f(x)")
+ax.legend(loc="upper right")
+plt.show();
+```
+
+:::
+
+The [graph](functions.qmd#def-graph) of the [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial) $f$ from @exm-quasi-newton-step,
+the surface whose [level curves](vector-calculus.qmd#def-level-set) are in @fig-quasi-newton-step.
+The start $\vx^{(0)} = \vzero$ (blue circle),
+the iterate $\vx^{(1)}$ after one [steepest-descent](#def-gradient-descent) step (vermilion circle),
+and the [minimizer](algebra.qmd#def-global-minimizer) (blue square) at the bottom of the bowl are marked on the surface.
+
+:::

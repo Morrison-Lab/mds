@@ -36,6 +36,8 @@
 
 {{< include mds/_subfiles/vector-calc/_fig-gd-zigzag.qmd >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-gd-zigzag-3d.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-gradient-flow.qmd >}}
@@ -67,6 +69,8 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_fig-rosenbrock-function.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-rosenbrock-function-3d.qmd >}}
 
 {{< slidebreak >}}
 
