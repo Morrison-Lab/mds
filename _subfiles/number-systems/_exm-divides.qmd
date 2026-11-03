@@ -1,7 +1,7 @@
 :::{#exm-divides}
 #### Divisors and non-divisors
 
-- $3 \mid 12$ (@def-divides),
+- $3$ [divides](#def-divides) $12$, $3 \mid 12$,
   because $12 = 3 \cdot 4$
   and $4$ is an [integer](#def-integers).
 - $5 \nmid 12$,

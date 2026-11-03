@@ -1,7 +1,7 @@
 :::{#def-factorial}
 #### Factorial
 
-For a non-negative integer (@def-nonnegative-integers) $n$,
+For a [non-negative integer](#def-nonnegative-integers) $n$,
 the **factorial** of $n$ [@wikipedia_factorial],
 written $\factorial{n}$,
 is $1 \cdot 2 \cdots n$,
