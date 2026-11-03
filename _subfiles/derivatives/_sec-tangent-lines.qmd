@@ -1,0 +1,5 @@
+{{< include mds/_subfiles/derivatives/_def-tangent-line.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-tangent-line.qmd >}}

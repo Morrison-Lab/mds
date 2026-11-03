@@ -1,0 +1,13 @@
+:::{#rem-linear-approx-affine}
+#### The "linear" approximation is affine
+
+The linear approximation $\hat{f}_w$ (@def-linear-approximation)
+is an [affine function](algebra.qmd#def-affine-function) of the step $\smallconst$:
+its [slope](algebra.qmd#def-slope) is $\dif{}{w}f(w)$ and its [intercept](algebra-exponentials.qmd#def-intercept) is $f(w)$.
+It is [linear](algebra.qmd#def-linear-function) in $\smallconst$ only when $f(w) = 0$.
+The name "linear approximation" uses "linear" in the looser sense of elementary algebra
+([remark](algebra.qmd#rem-linear-function-terminology)).
+@boyd2018vmls, section 2.2, treats the [first-order Taylor approximation](#def-linear-approximation)
+as an affine function for [functions](functions.qmd#def-function) of several variables as well.
+
+:::

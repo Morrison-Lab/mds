@@ -89,6 +89,7 @@ website:
           - text: "Overview"
             href: calculus.qmd
           - calculus-derivatives.qmd
+          - calculus-taylor-series.qmd
           - calculus-integration.qmd
           - calculus-double-integrals.qmd
       - text: "Linear Algebra"
@@ -172,6 +173,7 @@ website:
         href: calculus.qmd
         contents:
           - calculus-derivatives.qmd
+          - calculus-taylor-series.qmd
           - calculus-integration.qmd
           - calculus-double-integrals.qmd
       - section: "Linear Algebra"

@@ -1,3 +1,0 @@
-# Derivatives {#sec-derivatives}
-
-{{< include mds/_calc-derivatives.qmd >}}

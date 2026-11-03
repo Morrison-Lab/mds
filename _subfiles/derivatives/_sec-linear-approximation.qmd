@@ -1,0 +1,47 @@
+For a [differentiable function](calculus-derivatives.qmd#def-differentiable) $f$ and a small step $\smallconst$,
+
+$$f(w + \smallconst) \approx f(w) + \smallconst\,\dif{}{w}f(w)$$ {#eq-linear-approx}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-linear-approximation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_rem-linear-approx-affine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-linear-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx-tangent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx-tangent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx-compare.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_sol-miller-deriv-tangent-line-approx-compare.qmd >}}

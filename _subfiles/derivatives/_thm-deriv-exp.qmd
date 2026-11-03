@@ -1,0 +1,8 @@
+:::{#thm-deriv-exp}
+#### Derivative of exponential
+
+For every [real](number-systems.qmd#def-real-numbers) $x$,
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [exponential function](algebra.qmd#def-exponential-function) is:
+
+$$\dexpf{x} = \expf{x}$$
+:::

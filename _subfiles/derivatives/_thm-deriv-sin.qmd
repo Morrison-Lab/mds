@@ -1,0 +1,8 @@
+:::{#thm-deriv-sin}
+#### Derivative of sine
+
+For every [real](number-systems.qmd#def-real-numbers) $x$,
+the [derivative](calculus-derivatives.qmd#def-derivative) of the [sine](algebra-trigonometry.qmd#def-sine) [function](functions.qmd#def-function) is:
+
+$$\deriv{x}\sin x = \cos x$$
+:::

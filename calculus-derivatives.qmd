@@ -1,5 +1,5 @@
 ---
-title: "Derivatives and Taylor Series"
+title: "Derivatives"
 format:
   html: default
   revealjs:
@@ -12,4 +12,22 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
-{{< include mds/_subfiles/_sec_calculus_derivatives.qmd >}}
+# Limits and derivatives {#sec-limits-derivatives}
+
+{{< include mds/_subfiles/derivatives/_sec-limits-derivatives.qmd >}}
+
+# Derivative rules {#sec-derivative-rules}
+
+{{< include mds/_subfiles/derivatives/_sec-derivative-rules.qmd >}}
+
+# Studying a new function {#sec-function-profile}
+
+{{< include mds/_subfiles/derivatives/_sec-function-profile.qmd >}}
+
+# Tangent lines {#sec-tangent-lines}
+
+{{< include mds/_subfiles/derivatives/_sec-tangent-lines.qmd >}}
+
+# Linear approximation {#sec-linear-approximation}
+
+{{< include mds/_subfiles/derivatives/_sec-linear-approximation.qmd >}}

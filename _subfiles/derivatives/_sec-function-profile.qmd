@@ -1,0 +1,5 @@
+{{< include mds/_subfiles/derivatives/_def-function-profile.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-function-profile-logistic.qmd >}}
