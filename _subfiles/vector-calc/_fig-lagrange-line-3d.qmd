@@ -1,7 +1,4 @@
-::: {#fig-lagrange-line-3d fig-alt="Surface plot of x1 squared plus x2 squared over x1 and x2 from -1.6 to 2, a bowl opening upward with its lowest point at the origin.
-A blue curve on the bowl lies above the straight line 3 x1 plus 4 x2 equals 5, running from upper left to lower right.
-Its lowest point, above (0.6, 0.8) at height 1, is marked by a vermilion circle.
-That height is the smallest value of x1 squared plus x2 squared on the line."}
+::: {#fig-lagrange-line-3d}
 
 ::: {.panel-tabset group="language"}
 
@@ -11,6 +8,11 @@ That height is the smallest value of x1 squared plus x2 squared on the line."}
 #| label: lagrange-line-3d-r
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Surface plot of x1 squared plus x2 squared over x1 and x2 from -1.6 to 2, a bowl opening upward with its lowest point at the origin.
+#|   A blue curve on the bowl lies above the straight line 3 x1 plus 4 x2 equals 5, running from upper left to lower right.
+#|   Its lowest point, above (0.6, 0.8) at height 1, is marked by a vermilion circle.
+#|   That height is the smallest value of x1 squared plus x2 squared on the line.
 ll3_x1_3d <- seq(-1.6, 2, length.out = 101)
 ll3_x2_3d <- seq(-1.6, 2, length.out = 101)
 ll3_f_3d <- function(x1, x2) x1^2 + x2^2

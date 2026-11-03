@@ -1,6 +1,4 @@
-::: {#fig-stationary-point-3d fig-alt="Surface plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2, a bowl-shaped surface opening upward.
-The lowest point of the bowl, at (1, 0) and height -1, is marked by a vermilion circle and is the stationary point.
-A vermilion diamond marks the point of the surface above the origin, at height 0, where the surface is not flat."}
+::: {#fig-stationary-point-3d}
 
 ::: {.panel-tabset group="language"}
 
@@ -10,6 +8,10 @@ A vermilion diamond marks the point of the surface above the origin, at height 0
 #| label: stationary-point-3d-r
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Surface plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2, a bowl-shaped surface opening upward.
+#|   The lowest point of the bowl, at (1, 0) and height -1, is marked by a vermilion circle and is the stationary point.
+#|   A vermilion diamond marks the point of the surface above the origin, at height 0, where the surface is not flat.
 sp3_x1_3d <- seq(-1, 3, length.out = 101)
 sp3_x2_3d <- seq(-2, 2, length.out = 101)
 sp3_f_3d <- function(x1, x2) x1^2 + x2^2 - 2 * x1
@@ -108,6 +110,6 @@ The [graph](functions.qmd#def-graph) of the [function](functions.qmd#def-functio
 the surface whose [level curves](vector-calculus.qmd#def-level-curve) are in @fig-stationary-point.
 The surface is flat, with [gradient](vector-calculus.qmd#def-vector-derivative) $\vzero$, only at the bottom of the bowl above the center $(1, 0)$ of the circles,
 the [stationary point](#def-stationary-point) (circle).
-Above the origin (diamond) the surface slopes downward toward the stationary point.
+Above the origin (diamond) the surface descends toward the stationary point.
 
 :::

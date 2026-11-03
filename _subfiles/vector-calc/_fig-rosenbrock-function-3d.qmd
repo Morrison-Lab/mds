@@ -1,7 +1,4 @@
-::: {#fig-rosenbrock-function-3d fig-alt="Surface plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3.
-The surface is a long curved valley with steep walls on both sides, floored by a narrow parabola-shaped channel along the dashed curve x2 equals x1 squared.
-Three marked points lie on the surface.
-The minimizer at (1, 1) on the valley floor is a blue circle, the origin on the valley floor is a green square, and the standard starting point (-1.2, 1) is an orange diamond, on the left wall just outside the channel."}
+::: {#fig-rosenbrock-function-3d}
 
 ::: {.panel-tabset group="language"}
 
@@ -11,6 +8,11 @@ The minimizer at (1, 1) on the valley floor is a blue circle, the origin on the 
 #| label: rosenbrock-function-3d-r
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Surface plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3.
+#|   The surface is a long curved valley with steep walls on both sides, floored by a narrow parabola-shaped channel along the dashed curve x2 equals x1 squared.
+#|   Three marked points lie on the surface.
+#|   The minimizer at (1, 1) on the valley floor is a blue circle, the origin on the valley floor is a green square, and the standard starting point (-1.2, 1) is an orange diamond, on the left wall just outside the channel.
 rf3_x1_3d <- seq(-2, 2, length.out = 101)
 rf3_x2_3d <- seq(-1, 3, length.out = 101)
 rf3_f_3d <- function(x1, x2) 100 * (x2 - x1^2)^2 + (1 - x1)^2
@@ -139,7 +141,7 @@ plt.show();
 
 The [graph](functions.qmd#def-graph) of the [Rosenbrock function](#def-rosenbrock-function),
 the surface whose [level curves](vector-calculus.qmd#def-level-curve) are in @fig-rosenbrock-function,
-with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley.
+with the curve $x_2 = x_1^2$ (dashed) along the bottom of the valley.
 The [minimizer](algebra-basics.qmd#def-global-minimizer), the origin and the starting point are marked.
 
 :::

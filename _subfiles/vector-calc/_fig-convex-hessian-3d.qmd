@@ -1,6 +1,4 @@
-::: {#fig-convex-hessian-3d fig-alt="Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3.
-The surface is a trough that rises steeply toward the upper right, where 2 x1 plus x2 is large, and is nearly flat on the lower left.
-A dashed vermilion straight line along the direction (1, -2) through the origin lies on the surface, because f is linear there."}
+::: {#fig-convex-hessian-3d}
 
 ::: {.panel-tabset group="language"}
 
@@ -10,6 +8,10 @@ A dashed vermilion straight line along the direction (1, -2) through the origin 
 #| label: convex-hessian-3d-r
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3.
+#|   The surface is a trough that rises steeply toward the upper right, where 2 x1 plus x2 is large, and is nearly flat on the lower left.
+#|   A dashed vermilion straight line along the direction (1, -2) through the origin lies on the surface, because f is linear there.
 ch3_x1_3d <- seq(-1, 1, length.out = 101)
 ch3_x2_3d <- seq(-3, 3, length.out = 101)
 ch3_f_3d <- function(x1, x2) exp(2 * x1 + x2) - x1

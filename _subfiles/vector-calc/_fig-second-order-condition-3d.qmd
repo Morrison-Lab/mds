@@ -1,7 +1,4 @@
-::: {#fig-second-order-condition-3d fig-alt="Two surface plots side by side.
-The left plot, titled positive definite Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5 and y from -1.5 to 1.5, a bowl opening upward whose lowest point, at (1, 0), is marked by a blue circle.
-The right plot, titled indefinite Hessian, shows x squared minus y squared over the same region, a saddle that rises along the x axis and falls along the y axis.
-The origin, at the middle of the saddle, is marked by a vermilion diamond."}
+::: {#fig-second-order-condition-3d}
 
 ::: {.panel-tabset group="language"}
 
@@ -11,6 +8,11 @@ The origin, at the middle of the saddle, is marked by a vermilion diamond."}
 #| label: second-order-condition-3d-r
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Two surface plots side by side.
+#|   The left plot, titled positive definite Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5 and y from -1.5 to 1.5, a bowl opening upward whose lowest point, at (1, 0), is marked by a blue circle.
+#|   The right plot, titled indefinite Hessian, shows x squared minus y squared over the same region, a saddle that rises along the x axis and falls along the y axis.
+#|   The origin, at the middle of the saddle, is marked by a vermilion diamond.
 so3_x_3d <- seq(-1.5, 2.5, length.out = 101)
 so3_y_3d <- seq(-1.5, 1.5, length.out = 101)
 so3_bowl_f_3d <- function(x, y) x^2 + y^2 - 2 * x

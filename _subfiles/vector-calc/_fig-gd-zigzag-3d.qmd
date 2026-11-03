@@ -1,6 +1,4 @@
-::: {#fig-gd-zigzag-3d fig-alt="Surface plot of f of x equal to one half of x1 squared plus 3 x2 squared over x1 from -0.5 to 3.5 and x2 from -1 to 1.2, a bowl that is steeper along the x2 axis than along the x1 axis.
-A blue path of line segments with circles lies on the bowl.
-It starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), alternating between the two sides of the valley floor and descending toward the origin, which is marked by a vermilion diamond at the bottom of the bowl."}
+::: {#fig-gd-zigzag-3d}
 
 ::: {.panel-tabset group="language"}
 
@@ -10,6 +8,10 @@ It starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.37
 #| label: gd-zigzag-3d-r
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Surface plot of f of x equal to one half of x1 squared plus 3 x2 squared over x1 from -0.5 to 3.5 and x2 from -1 to 1.2, a bowl that is steeper along the x2 axis than along the x1 axis.
+#|   A blue path of line segments with circles lies on the bowl.
+#|   It starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), alternating between the two sides of the valley floor and descending toward the origin, which is marked by a vermilion diamond at the bottom of the bowl.
 gz3_x1_3d <- seq(-0.5, 3.5, length.out = 101)
 gz3_x2_3d <- seq(-1, 1.2, length.out = 101)
 gz3_f_3d <- function(x1, x2) 0.5 * (x1^2 + 3 * x2^2)
@@ -117,7 +119,7 @@ plt.show();
 The [graph](functions.qmd#def-graph) of $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$,
 the surface whose [level curves](vector-calculus.qmd#def-level-curve) are in @fig-gd-zigzag,
 with the same four [iterates](#def-iterate) of [gradient descent](#def-gradient-descent) lifted onto it.
-The surface is steeper in the $x_2$ direction than in the $x_1$ direction,
-so each step overshoots the valley floor and the path zigzags down toward the [minimizer](algebra.qmd#def-global-minimizer) $\vzero$ (diamond).
+The surface is steeper along the $x_2$ axis than along the $x_1$ axis,
+so each step overshoots the bottom of the valley and the path zigzags down toward the [minimizer](algebra.qmd#def-global-minimizer) $\vzero$ (diamond).
 
 :::

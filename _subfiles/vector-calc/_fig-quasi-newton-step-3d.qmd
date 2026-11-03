@@ -1,6 +1,4 @@
-::: {#fig-quasi-newton-step-3d fig-alt="Surface plot of the quadratic function f over first coordinates from -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface whose lowest point is above the point (0.09, 0.64).
-Three markers lie on the surface.
-A blue circle at the origin is the starting point, a vermilion circle above (0.25, 0.5) is the iterate after one step, and a blue square above (0.09, 0.64) is the minimizer, at the bottom of the bowl."}
+::: {#fig-quasi-newton-step-3d}
 
 ::: {.panel-tabset group="language"}
 
@@ -10,6 +8,10 @@ A blue circle at the origin is the starting point, a vermilion circle above (0.2
 #| label: quasi-newton-step-3d-r
 #| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Surface plot of the quadratic function f over first coordinates from -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface whose lowest point is above the point (0.09, 0.64).
+#|   Three markers lie on the surface.
+#|   A blue circle at the origin is the starting point, a vermilion circle above (0.25, 0.5) is the iterate after one step, and a blue square above (0.09, 0.64) is the minimizer, at the bottom of the bowl.
 qn3_x_3d <- seq(-0.4, 0.6, length.out = 101)
 qn3_y_3d <- seq(-0.2, 1, length.out = 101)
 qn3_f_3d <- function(x, y) {
@@ -122,7 +124,7 @@ plt.show();
 The [graph](functions.qmd#def-graph) of the [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial) $f$ from @exm-quasi-newton-step,
 the surface whose [level curves](vector-calculus.qmd#def-level-set) are in @fig-quasi-newton-step.
 The start $\vx^{(0)} = \vzero$ (blue circle),
-the iterate $\vx^{(1)}$ after one [steepest-descent](#def-gradient-descent) step (vermilion circle),
-and the [minimizer](algebra.qmd#def-global-minimizer) (blue square) at the bottom of the bowl are marked on the surface.
+the point $\vx^{(1)}$ reached after one [steepest-descent](#def-gradient-descent) step (vermilion circle),
+and the [minimizer](algebra.qmd#def-global-minimizer) (blue square) at the bottom of the bowl are marked on the surface. <!-- check-term-links: allow -->
 
 :::
