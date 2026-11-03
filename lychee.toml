@@ -32,6 +32,9 @@ exclude = [
   "https://wwu.instructure.com/.*",
   # Stanford returned 503 for this page on 2026-10-22 (cs.stanford.edu and ai.stanford.edu); remove once it answers again
   "https://cs.stanford.edu/~epacuit/classes/phil151winter09.html",
+  # lychee reports "SSL certificate not trusted" for web.stanford.edu on every PR
+  # since 2026-11-03 (mds#589, mds#593); remove once its chain verifies again
+  "https://web.stanford.edu/~icard/phil150",
 ]
 
 # `mds` is a symlink to the repository root, so include paths read
