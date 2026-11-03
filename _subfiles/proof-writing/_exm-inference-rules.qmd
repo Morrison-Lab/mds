@@ -10,7 +10,8 @@ Suppose these three [premises](#def-premise) are true:
 
 By [modus tollens](#thm-modus-tollens) on the second and third premises,
 "the game is not cancelled" is true.
-By modus tollens again, on the first [premise](#def-premise) and the statement just derived,
+By modus tollens again,
+on the first [premise](#def-premise) and the fact derived from them,
 "it does not rain" is true.
 So the [conclusion](#def-conclusion) "it does not rain" follows from the premises.
 
