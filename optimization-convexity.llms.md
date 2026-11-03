@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 10:28:57 (PST)
+Last modified: 2026-11-02 14:12:36 (PST)
 
 > **NOTE:**
 >
@@ -596,7 +596,7 @@ Last modified: 2026-11-02 10:28:57 (PST)
 >
 > - For a symmetric positive semidefinite $\mathbf{A}$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has Hessian $2 \mathbf{A}$ ([Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), which is positive semidefinite because ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} (2 \mathbf{A}) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = 2\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \ge 0$; so $f$ is convex.
 >
-> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ has Hessian $2 \mathbf{I}_2$ ([Example 15 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-second-order-condition)), which is positive definite, so $f$ is strictly convex.
+> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ has Hessian $2 \mathbf{I}_2$ ([Example 16 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-second-order-condition)), which is positive definite, so $f$ is strictly convex.
 >
 > - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ has Hessian $e^{u} \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}$ with $u = 2x_1 + x_2$ ([Example](vector-calculus.llms.md#exm-hessian)), and
 >
@@ -707,9 +707,9 @@ Last modified: 2026-11-02 10:28:57 (PST)
 >
 > **Example 13 (A convex function, and a non-convex one)**  
 >
-> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ is convex by [Theorem 5](#thm-convex-hessian), since its Hessian is $2 \mathbf{I}_2$ ([Example 15 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-second-order-condition)), so its stationary point ${(1, 0)}^{\top}$ ([Example 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-stationary-point)) is a global minimizer, as completing the square showed in [Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition).
-> - Without convexity, a stationary point need not be a minimizer at all: $x_1^2 - x_2^2$ has the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is not a minimizer ([Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
-> - The corollary says nothing about whether a minimizer exists: $e^{2x_1 + x_2} - x_1$ is convex ([Example 11](#exm-convex-hessian)) but has no stationary point, and so no local minimizer ([Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
+> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ is convex by [Theorem 5](#thm-convex-hessian), since its Hessian is $2 \mathbf{I}_2$ ([Example 16 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-second-order-condition)), so its stationary point ${(1, 0)}^{\top}$ ([Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-stationary-point)) is a global minimizer, as completing the square showed in [Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition).
+> - Without convexity, a stationary point need not be a minimizer at all: $x_1^2 - x_2^2$ has the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is not a minimizer ([Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
+> - The corollary says nothing about whether a minimizer exists: $e^{2x_1 + x_2} - x_1$ is convex ([Example 11](#exm-convex-hessian)) but has no stationary point, and so no local minimizer ([Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
 
 # Definitions on this page
 
