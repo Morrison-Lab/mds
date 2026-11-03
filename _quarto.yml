@@ -50,6 +50,7 @@ page-xrefs:
   - index: calculus.qmd
     pages:
       - calculus-derivatives.qmd
+      - calculus-taylor-series.qmd
       - calculus-integration.qmd
       - calculus-double-integrals.qmd
   - index: linear-algebra.qmd
@@ -66,8 +67,11 @@ page-xrefs:
       - linear-algebra-complex.qmd
   # The critical points section moved from calculus-derivatives.qmd to
   # optimization.qmd, so links to its ids on the calculus pages go on there.
+  # The Taylor series section moved from calculus-derivatives.qmd to
+  # calculus-taylor-series.qmd, so links to its ids go on there.
   - index: calculus-derivatives.qmd
     pages:
+      - calculus-taylor-series.qmd
       - optimization-critical-points.qmd
   - index: calculus.qmd
     pages:

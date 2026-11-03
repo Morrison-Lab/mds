@@ -14,9 +14,11 @@ format:
 
 The calculus notes are split across these pages:
 
-- [Derivatives and Taylor Series](calculus-derivatives.qmd):
-  limits and derivatives, derivative rules, tangent lines, linear approximation,
-  and Taylor series.
+- [Derivatives](calculus-derivatives.qmd):
+  limits and derivatives, derivative rules, tangent lines,
+  and linear approximation.
+- [Taylor Series](calculus-taylor-series.qmd):
+  Taylor and Maclaurin polynomials, and Taylor series.
 - [Integrals and the Fundamental Theorem of Calculus](calculus-integration.qmd):
   antiderivatives, regularity conditions,
   and the Fundamental Theorem of Calculus.

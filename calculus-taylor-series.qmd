@@ -1,0 +1,15 @@
+---
+title: "Taylor Series"
+format:
+  html: default
+  revealjs:
+    output-file: calculus-taylor-series-slides.html
+  pdf:
+    output-file: calculus-taylor-series-handout.pdf
+  docx:
+    output-file: calculus-taylor-series.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_calculus_taylor_series.qmd >}}

@@ -1,0 +1,3 @@
+# Taylor series {#sec-taylor-series}
+
+{{< include mds/_calc-taylor-series.qmd >}}
