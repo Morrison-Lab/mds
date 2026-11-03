@@ -19090,6 +19090,10 @@
   ],
   [
    "mds/optimization#def-sensitivity",
+   "mds/calculus#def-limit"
+  ],
+  [
+   "mds/optimization#def-sensitivity",
    "mds/optimization#def-minimization-problem"
   ],
   [
@@ -19122,7 +19126,7 @@
   ],
   [
    "mds/optimization#lem-qf-eigen-bound",
-   "mds/linear-algebra#def-eigendecomposition"
+   "mds/linear-algebra#def-eigenvalue"
   ],
   [
    "mds/optimization#prp-double-well-divergence",
@@ -19394,6 +19398,10 @@
   ],
   [
    "mds/optimization-constrained#def-sensitivity",
+   "mds/calculus#def-limit"
+  ],
+  [
+   "mds/optimization-constrained#def-sensitivity",
    "mds/optimization-constrained#def-minimization-problem"
   ],
   [
@@ -19550,7 +19558,7 @@
   ],
   [
    "mds/optimization-critical-points#lem-qf-eigen-bound",
-   "mds/linear-algebra#def-eigendecomposition"
+   "mds/linear-algebra#def-eigenvalue"
   ],
   [
    "mds/optimization-critical-points#thm-fermat",
