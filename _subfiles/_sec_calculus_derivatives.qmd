@@ -1,3 +1,19 @@
-# Derivatives {#sec-derivatives}
+## Limits and derivatives {#sec-limits-derivatives}
 
-{{< include mds/_calc-derivatives.qmd >}}
+{{< include mds/_subfiles/derivatives/_sec-limits-derivatives.qmd >}}
+
+## Derivative rules {#sec-derivative-rules}
+
+{{< include mds/_subfiles/derivatives/_sec-derivative-rules.qmd >}}
+
+## Studying a new function {#sec-function-profile}
+
+{{< include mds/_subfiles/derivatives/_sec-function-profile.qmd >}}
+
+## Tangent lines {#sec-tangent-lines}
+
+{{< include mds/_subfiles/derivatives/_sec-tangent-lines.qmd >}}
+
+## Linear approximation {#sec-linear-approximation}
+
+{{< include mds/_subfiles/derivatives/_sec-linear-approximation.qmd >}}

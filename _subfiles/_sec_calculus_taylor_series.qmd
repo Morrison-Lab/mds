@@ -1,5 +1,3 @@
-# Taylor series {#sec-taylor-series}
-
 {{< include mds/_subfiles/derivatives/_def-taylor-polynomial.qmd >}}
 
 {{< slidebreak >}}

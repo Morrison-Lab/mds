@@ -12,4 +12,6 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
+# Taylor series {#sec-taylor-series}
+
 {{< include mds/_subfiles/_sec_calculus_taylor_series.qmd >}}

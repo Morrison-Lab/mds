@@ -145,7 +145,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Indicator Functions](indicator-functions.qmd) | `mds/_indicator-functions.qmd` |
 | [Algebra](algebra.qmd) | `mds/_algebra.qmd` |
 | [Measures](measures.qmd) | `mds/_measures.qmd` |
-| [Calculus](calculus.qmd) | `mds/_calc-derivatives.qmd`, `mds/_subfiles/_sec_calculus_taylor_series.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` | <!-- check-term-links: allow -->
+| [Calculus](calculus.qmd) | `mds/_subfiles/_sec_calculus_derivatives.qmd`, `mds/_subfiles/_sec_calculus_taylor_series.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` | <!-- check-term-links: allow -->
 | [Linear Algebra](linear-algebra.qmd) | `mds/_subfiles/_sec_linear_algebra.qmd` |
 | [Vector Calculus](vector-calculus.qmd) | `mds/_subfiles/_sec_vector_calc.qmd` |
 | [Optimization](optimization.qmd) | `mds/_subfiles/_sec_optimization.qmd` |
