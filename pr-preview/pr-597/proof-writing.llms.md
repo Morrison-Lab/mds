@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 09:00:28 (PST)
+Last modified: 2026-11-03 12:32:28 (PST)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -41,7 +41,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 >
 > **Example 3 (The domain changes the truth value)**  
 >
-> Let $P(x)$ be the [predicate](#def-predicate) “$x^2 = 2$”. If its [domain of discourse](#def-domain-of-discourse) is the [real numbers](number-systems.llms.md#def-real-numbers), then $\exists x, P(x)$ is true, since $x = \sqrt{2}$ works. If its domain of discourse is the [integers](number-systems.llms.md#def-integers), then $\exists x, P(x)$ is false, since the [squares](algebra-basics.llms.md#def-square) of the [integers](number-systems.llms.md#def-integers) are $0, 1, 4, 9, \ldots$, and none of them is $2$.
+> Let $P(x)$ be the [predicate](#def-predicate) “$x^2 = 2$”. If its [domain of discourse](#def-domain-of-discourse) is the [real numbers](number-systems.llms.md#def-real-numbers), then $P(x)$ is true for $x = \sqrt{2}$. If its domain of discourse is the [integers](number-systems.llms.md#def-integers), then $P(x)$ is false for every $x$, since the [squares](algebra-basics.llms.md#def-square) of the [integers](number-systems.llms.md#def-integers) are $0, 1, 4, 9, \ldots$, and none of them is $2$.
 
 > **NOTE:**
 >
@@ -183,7 +183,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 > *Proof*. There are two cases.
 >
 > - None of $P_1, \ldots, P_k$ is true. Then all of them are false, so they all have the same truth value.
-> - Some $P_i$ is true. By the definition of [implies](#def-implies), a true conditional with a true hypothesis has a true conclusion. So $P_i \Rightarrow P_{i+1}$ makes $P_{i+1}$ true, then $P_{i+1} \Rightarrow P_{i+2}$ makes $P_{i+2}$ true, and so on around the cycle, with $P_k \Rightarrow P_1$ carrying the truth of $P_k$ back to $P_1$. After at most $k - 1$ steps, every [proposition](#def-proposition) in the list is true.
+> - Some $P_i$ is true. By the definition of [implies](#def-implies), for any $P$ and $Q$, if $P \Rightarrow Q$ and $P$ are both true, then $Q$ is true. So $P_i \Rightarrow P_{i+1}$ makes $P_{i+1}$ true, then $P_{i+1} \Rightarrow P_{i+2}$ makes $P_{i+2}$ true, and so on around the cycle, with $P_k \Rightarrow P_1$ carrying the truth of $P_k$ back to $P_1$. After at most $k - 1$ steps, every [proposition](#def-proposition) in the list is true.
 
 > **NOTE:**
 >
@@ -221,33 +221,113 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 12 (Quantifier)** A **quantifier** [\[12\]](#ref-wikipedia_quantifier_logic) turns a predicate $P(x)$ ([Definition 2](#def-predicate)) about the elements $x$ of a set $S$ into a proposition ([Definition 1](#def-proposition)). There are two, each defined next: the universal quantifier and the existential quantifier.
+> **Definition 12 (Tautology)** A **tautology** is a [proposition](#def-proposition) that is true in every row of its [truth table](#def-truth-table).
 
 > **NOTE:**
 >
-> **Definition 13 (Universal quantifier)** The **universal quantifier** [\[13\]](#ref-wikipedia_universal_quantification) “for all” is a quantifier ([Definition 12](#def-quantifier)): $\forall x \in S, P(x)$ (“for every $x$ in $S$, $P(x)$”) is true when $P(x)$ is true for every element $x$ of $S$, and false otherwise.
+> **Example 14 (**$P \lor \neg P$ is a tautology)  
+>
+> By the definitions of [or](#def-or) and [not](#def-not), the [truth table](#def-truth-table) of $P \lor \neg P$ is:
+>
+> | $P$ | $\neg P$ | $P \lor \neg P$ |
+> |:---:|:--------:|:---------------:|
+> |  T  |    F     |        T        |
+> |  F  |    T     |        T        |
+>
+> The last column is true in every row, so $P \lor \neg P$ is a [tautology](#def-tautology).
 
 > **NOTE:**
 >
-> **Example 14 (A universally quantified proposition)** Let $P(x)$ be the predicate “$x$ is [even](number-systems.llms.md#def-even-odd)”.
+> **Definition 13 (Contradiction)** A **contradiction** is a [proposition](#def-proposition) that is false in every row of its [truth table](#def-truth-table).
+
+> **NOTE:**
+>
+> **Example 15 (**$P \land \neg P$ is a contradiction)  
+>
+> By the definitions of [and](#def-and) and [not](#def-not), the [truth table](#def-truth-table) of $P \land \neg P$ is:
+>
+> | $P$ | $\neg P$ | $P \land \neg P$ |
+> |:---:|:--------:|:----------------:|
+> |  T  |    F     |        F         |
+> |  F  |    T     |        F         |
+>
+> The last column is false in every row, so $P \land \neg P$ is a [contradiction](#def-contradiction).
+
+> **NOTE:**
+>
+> **Theorem 4 (Equivalence is a tautological biconditional)** For [propositions](#def-proposition) $A$ and $B$, $A$ and $B$ are [logically equivalent](#def-logically-equivalent) exactly when $A \Leftrightarrow B$ is a [tautology](#def-tautology).
+
+> **NOTE:**
+>
+> *Proof*. By the definition of [if and only if](#def-iff), $A \Leftrightarrow B$ is true in a row of the [truth table](#def-truth-table) exactly when $A$ and $B$ have the same truth value in that row. So $A \Leftrightarrow B$ is true in every row exactly when $A$ and $B$ have the same truth value in every row, which is the definition of $A \equiv B$.
+
+> **NOTE:**
+>
+> **Example 16 (A tautological biconditional)**  
+>
+> [Example 11](#exm-logically-equivalent) showed that $P \Rightarrow Q$ and $\neg P \lor Q$ are [logically equivalent](#def-logically-equivalent). Adding a column for the biconditional to its [truth table](#def-truth-table) gives:
+>
+> | $P$ | $Q$ | $\neg P \lor Q$ | $P \Rightarrow Q$ | $(P \Rightarrow Q) \Leftrightarrow (\neg P \lor Q)$ |
+> |:--:|:--:|:--:|:--:|:--:|
+> | T | T | T | T | T |
+> | T | F | F | F | T |
+> | F | T | T | T | T |
+> | F | F | T | T | T |
+>
+> The last column is true in every row, so the biconditional is a [tautology](#def-tautology), as [equivalence as a tautological biconditional](#thm-equivalence-iff) says it must be.
+
+> **NOTE:**
+>
+> **Theorem 5 (Double negation)** For a [proposition](#def-proposition) $P$,
+>
+> $$\neg \neg P \equiv P.$$
+
+> **NOTE:**
+>
+> *Proof*. By the definition of [not](#def-not), the [truth table](#def-truth-table) is:
+>
+> | $P$ | $\neg P$ | $\neg \neg P$ |
+> |:---:|:--------:|:-------------:|
+> |  T  |    F     |       T       |
+> |  F  |    T     |       F       |
+>
+> The first and last columns match in both rows, so the two sides are [logically equivalent](#def-logically-equivalent).
+
+> **NOTE:**
+>
+> **Example 17 (Removing a double negation)**  
+>
+> Let $P$ be the [proposition](#def-proposition) “$7$ is [odd](number-systems.llms.md#def-odd)”. Then $\neg \neg P$ is “it is not the case that $7$ is not odd”. By [double negation](#thm-double-negation), $\neg \neg P$ says the same thing as $P$: $7$ is odd.
+
+> **NOTE:**
+>
+> **Definition 14 (Quantifier)** A **quantifier** [\[12\]](#ref-wikipedia_quantifier_logic) turns a predicate $P(x)$ ([Definition 2](#def-predicate)) about the elements $x$ of a set $S$ into a proposition ([Definition 1](#def-proposition)). There are two, each defined next: the universal quantifier and the existential quantifier.
+
+> **NOTE:**
+>
+> **Definition 15 (Universal quantifier)** The **universal quantifier** [\[13\]](#ref-wikipedia_universal_quantification) “for all” is a quantifier ([Definition 14](#def-quantifier)): $\forall x \in S, P(x)$ (“for every $x$ in $S$, $P(x)$”) is true when $P(x)$ is true for every element $x$ of $S$, and false otherwise.
+
+> **NOTE:**
+>
+> **Example 18 (A universally quantified proposition)** Let $P(x)$ be the predicate “$x$ is [even](number-systems.llms.md#def-even-odd)”.
 >
 > - “$\forall x \in \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, P(x)$” is true, because $2$, $4$, and $6$ are all even.
 > - “$\forall x \in \mathopen{}\left\{2, 3, 4\right\}\mathclose{}, P(x)$” is false, because $P(3)$ is false.
 
 > **NOTE:**
 >
-> **Definition 14 (Existential quantifier)** The **existential quantifier** [\[14\]](#ref-wikipedia_existential_quantification) “there exists” is a quantifier ([Definition 12](#def-quantifier)): $\exists x \in S, P(x)$ (“there is an $x$ in $S$ such that $P(x)$”) is true when $P(x)$ is true for at least one element $x$ of $S$, and false otherwise.
+> **Definition 16 (Existential quantifier)** The **existential quantifier** [\[14\]](#ref-wikipedia_existential_quantification) “there exists” is a quantifier ([Definition 14](#def-quantifier)): $\exists x \in S, P(x)$ (“there is an $x$ in $S$ such that $P(x)$”) is true when $P(x)$ is true for at least one element $x$ of $S$, and false otherwise.
 
 > **NOTE:**
 >
-> **Example 15 (An existentially quantified proposition)** Let $P(x)$ be the predicate “$x$ is [even](number-systems.llms.md#def-even-odd)”.
+> **Example 19 (An existentially quantified proposition)** Let $P(x)$ be the predicate “$x$ is [even](number-systems.llms.md#def-even-odd)”.
 >
 > - “$\exists x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)$” is true, because $P(2)$ is true.
 > - “$\exists x \in \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, P(x)$” is false, because none of $1$, $3$, and $5$ is even.
 
 > **NOTE:**
 >
-> **Example 16 (Quantified propositions)** Let $P(x)$ be the predicate “$x > 2$”, for [integers](number-systems.llms.md#def-integers) $x$.
+> **Example 20 (Quantified propositions)** Let $P(x)$ be the predicate “$x > 2$”, for [integers](number-systems.llms.md#def-integers) $x$.
 >
 > - “$\exists x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)$” is true, because $P(3)$ is true.
 > - “$\forall x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)$” is false, because $P(1)$ is false.
@@ -255,7 +335,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Theorem 4 (De Morgan’s laws for quantifiers)** For a [set](#def-set) $S$ and a [predicate](#def-predicate) $P(x)$ whose [domain of discourse](#def-domain-of-discourse) is $S$:
+> **Theorem 6 (De Morgan’s laws for quantifiers)** For a [set](#def-set) $S$ and a [predicate](#def-predicate) $P(x)$ whose [domain of discourse](#def-domain-of-discourse) is $S$:
 >
 > $$\begin{aligned}
 > \neg (\forall x \in S, P(x)) &\equiv \exists x \in S, \neg P(x) \\
@@ -271,17 +351,17 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> *Remark 1* (Why the two laws share a theorem). The two laws in [De Morgan’s laws for quantifiers](#thm-negate-quantifiers) are one rule seen from each side: negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$ and moves the negation onto the [predicate](#def-predicate). [De Morgan’s laws for propositions](#thm-de-morgan-logic) pair their two laws the same way, and these laws extend them from two propositions to a whole [set](#def-set) of them.
+> *Remark 1* (Why the two laws share a theorem). The two laws in [De Morgan’s laws for quantifiers](#thm-negate-quantifiers) are one rule seen from each side: negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$ and moves the [negation](#def-not) onto the [predicate](#def-predicate). [De Morgan’s laws for propositions](#thm-de-morgan-logic) pair their two laws the same way, and these laws extend them from two propositions to a whole [set](#def-set) of them.
 
 > **NOTE:**
 >
-> **Example 17 (Negating “every integer is even”)**  
+> **Example 21 (Negating “every integer is even”)**  
 >
-> Let $S$ be the [integers](number-systems.llms.md#def-integers), and let $P(x)$ be “$x$ is [even](number-systems.llms.md#def-even-odd)”. By the first of [De Morgan’s laws for quantifiers](#thm-negate-quantifiers), the negation of “every [integer](number-systems.llms.md#def-integers) is even” is “some integer is not even”. The second law says that the negation of “some integer is even” is “no integer is even”.
+> Let $S$ be the [integers](number-systems.llms.md#def-integers), and let $P(x)$ be “$x$ is [even](number-systems.llms.md#def-even-odd)”. By the first of [De Morgan’s laws for quantifiers](#thm-negate-quantifiers), $\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)$: the [negation](#def-not) of “every [integer](number-systems.llms.md#def-integers) is even” is “some integer is not even”. By the second law, $\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)$: the negation of “some integer is even” is “no integer is even”.
 
 > **NOTE:**
 >
-> **Definition 15 (Inequality)** An **inequality** is a proposition ([Definition 1](#def-proposition)) or a predicate ([Definition 2](#def-predicate)) that compares two expressions $a$ and $b$ whose values are [real numbers](number-systems.llms.md#def-real-numbers), in one of the forms:
+> **Definition 17 (Inequality)** An **inequality** is a proposition ([Definition 1](#def-proposition)) or a predicate ([Definition 2](#def-predicate)) that compares two expressions $a$ and $b$ whose values are [real numbers](number-systems.llms.md#def-real-numbers), in one of the forms:
 >
 > - $a < b$ (“$a$ is less than $b$”);
 > - $a \le b$ (“$a$ is less than or equal to $b$”);
@@ -290,7 +370,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Example 18 (Inequalities)**  
+> **Example 22 (Inequalities)**  
 >
 > - “$3 < 5$” is an inequality, and it is true.
 > - “$5 \le 3$” is an inequality, and it is false.
@@ -299,11 +379,11 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 16 (Logical entailment, logical consequence, deductive consequence)** Propositions or predicates $P_1, \ldots, P_n$ ([Definition 1](#def-proposition), [Definition 2](#def-predicate)) **logically entail** [\[15\]](#ref-wikipedia_logical_consequence) a proposition or predicate $Q$ when every choice of values for their variables that makes all of $P_1, \ldots, P_n$ true also makes $Q$ true. Then $Q$ is a **logical consequence**, or **deductive consequence**, of $P_1, \ldots, P_n$.
+> **Definition 18 (Logical entailment, logical consequence, deductive consequence)** Propositions or predicates $P_1, \ldots, P_n$ ([Definition 1](#def-proposition), [Definition 2](#def-predicate)) **logically entail** [\[15\]](#ref-wikipedia_logical_consequence) a proposition or predicate $Q$ when every choice of values for their variables that makes all of $P_1, \ldots, P_n$ true also makes $Q$ true. Then $Q$ is a **logical consequence**, or **deductive consequence**, of $P_1, \ldots, P_n$.
 
 > **NOTE:**
 >
-> **Example 19 (Entailment, and its failure)** Let $x$ be an [integer](number-systems.llms.md#def-integers).
+> **Example 23 (Entailment, and its failure)** Let $x$ be an [integer](number-systems.llms.md#def-integers).
 >
 > - “$x = 2$” entails “$x^2 = 4$”: the only value that makes “$x = 2$” true is $x = 2$, and $2^2 = 4$.
 > - “$x > 3$” and “$x < 5$” together entail “$x = 4$”: $4$ is the only integer greater than $3$ and less than $5$.
@@ -315,13 +395,47 @@ We can use any of:
 - $\Rightarrow$ (`\Rightarrow`),
 - $\models$ (`\models`)
 
-to denote logical entailment ([Definition 16](#def-logical-entailment)). $\Rightarrow$ also writes the connective “implies” ([Definition 8](#def-implies)); $P$ entails $Q$ exactly when $P \Rightarrow Q$ is true for every choice of values for the variables in $P$ and $Q$.
+to denote logical entailment ([Definition 18](#def-logical-entailment)). $\Rightarrow$ also writes the connective “implies” ([Definition 8](#def-implies)); $P$ entails $Q$ exactly when $P \Rightarrow Q$ is true for every choice of values for the variables in $P$ and $Q$.
 
 Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponentials.llms.md#def-convergent-sequence) results.
 
 > **NOTE:**
 >
-> **Definition 17 (Proof)** A **proof** [\[16\]](#ref-wikipedia_mathematical_proof) of a proposition ([Definition 1](#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
+> **Definition 19 (Logical argument)** A **logical argument** is a list of [propositions](#def-proposition) $P_1, \ldots, P_n$ together with one more [proposition](#def-proposition) $Q$. It is written with “so” or $\therefore$ before $Q$.
+
+> **NOTE:**
+>
+> **Definition 20 (Premise)** The **premises** of a [logical argument](#def-logical-argument) $P_1, \ldots, P_n \therefore Q$ are the [propositions](#def-proposition) $P_1, \ldots, P_n$.
+
+> **NOTE:**
+>
+> **Definition 21 (Conclusion)** The **conclusion** of a [logical argument](#def-logical-argument) $P_1, \ldots, P_n \therefore Q$ is the [proposition](#def-proposition) $Q$.
+
+> **NOTE:**
+>
+> **Example 24 (A logical argument)**  
+>
+> “If $n$ is [even](number-systems.llms.md#def-even-odd), then $n^2$ is even. $n$ is even. So $n^2$ is even.” is a [logical argument](#def-logical-argument). Its [premises](#def-premise) are “if $n$ is even, then $n^2$ is even” and “$n$ is even”. Its [conclusion](#def-conclusion) is “$n^2$ is even”.
+
+> **NOTE:**
+>
+> **Definition 22 (Rule of inference)** A **rule of inference** is a pattern of [logical argument](#def-logical-argument), written with [propositions](#def-proposition) $P, Q, \ldots$ as placeholders, whose [premises](#def-premise) [logically entail](#def-logical-entailment) its [conclusion](#def-conclusion) whatever propositions are put in place of $P, Q, \ldots$. It is written with its premises above a line and its conclusion below:
+>
+> $$\frac{P_1, \ldots, P_n}{Q}.$$
+
+> **NOTE:**
+>
+> **Example 25 (A pattern that is not a rule of inference)**  
+>
+> The pattern
+>
+> $$\frac{P \Rightarrow Q, \quad Q}{P}$$
+>
+> is not a [rule of inference](#def-rule-of-inference). In the row of the [truth table](#def-truth-table) where $P$ is false and $Q$ is true, both [premises](#def-premise) are true, by the definition of [implies](#def-implies), but the [conclusion](#def-conclusion) $P$ is false. For example, “if $n = 2$, then $n$ is [even](number-systems.llms.md#def-even-odd)” and “$n$ is even” are both true for $n = 4$, but “$n = 2$” is false.
+
+> **NOTE:**
+>
+> **Definition 23 (Proof)** A **proof** [\[16\]](#ref-wikipedia_mathematical_proof) of a proposition ([Definition 1](#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
 >
 > - an assumption,
 > - a definition,
@@ -330,7 +444,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 20 (The sum of two even integers is even)** Let $a$ and $b$ be even integers ([definition](number-systems.llms.md#def-even-odd)). Then $a = 2j$ and $b = 2k$ for some integers $j$ and $k$, and
+> **Example 26 (The sum of two even integers is even)** Let $a$ and $b$ be even integers ([definition](number-systems.llms.md#def-even-odd)). Then $a = 2j$ and $b = 2k$ for some integers $j$ and $k$, and
 >
 > $$\begin{aligned}
 > a + b
@@ -351,11 +465,11 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Definition 18 (Derivation)** A **derivation** is a proof ([Definition 17](#def-proof)), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by $=$ or by an inequality sign ([Definition 15](#def-inequality)), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra.
+> **Definition 24 (Derivation)** A **derivation** is a proof ([Definition 23](#def-proof)), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by $=$ or by an inequality sign ([Definition 17](#def-inequality)), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra.
 
 > **NOTE:**
 >
-> **Example 21 (A derivation with equalities and inequalities)** For every real number $x$:
+> **Example 27 (A derivation with equalities and inequalities)** For every real number $x$:
 >
 > $$\begin{aligned}
 > (x + 1)^2
@@ -373,7 +487,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Theorem 5 (What a derivation shows)** Consider a derivation ([Definition 18](#def-derivation)) with expressions $E_0, E_1, \ldots, E_n$, where each line $E_j$ is joined to the line $E_{j-1}$ before it by $=$, $\le$ or $<$.
+> **Theorem 7 (What a derivation shows)** Consider a derivation ([Definition 24](#def-derivation)) with expressions $E_0, E_1, \ldots, E_n$, where each line $E_j$ is joined to the line $E_{j-1}$ before it by $=$, $\le$ or $<$.
 >
 > 1.  If every step is $=$, then $E_0 = E_n$.
 > 2.  If every step is $=$ or $\le$, then $E_0 \le E_n$.
@@ -401,7 +515,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 22 (Checking a derivation line by line)** The derivation in [Example 21](#exm-derivation) has the steps $=$, $\ge$ and $>$, so by [Theorem 5](#thm-derivation-chain) it shows $(x + 1)^2 > 2x$. The code evaluates the four lines of that derivation at several values of $x$, and checks each step and the comparison of the first line with the last.
+> **Example 28 (Checking a derivation line by line)** The derivation in [Example 27](#exm-derivation) has the steps $=$, $\ge$ and $>$, so by [Theorem 7](#thm-derivation-chain) it shows $(x + 1)^2 > 2x$. The code evaluates the four lines of that derivation at several values of $x$, and checks each step and the comparison of the first line with the last.
 >
 > ``` downlit
 > x <- c(-3, -1, 0, 2, 3)
@@ -429,15 +543,15 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 > steps
 > ```
 >
-> At all 5 values of $x$, the three steps hold in 5, 5 and 5 cases, and the first line exceeds the last in 5 cases, as [Theorem 5](#thm-derivation-chain) says. At $x = 0$, for example, the first line is 1 and the last is 0.
+> At all 5 values of $x$, the three steps hold in 5, 5 and 5 cases, and the first line exceeds the last in 5 cases, as [Theorem 7](#thm-derivation-chain) says. At $x = 0$, for example, the first line is 1 and the last is 0.
 
 > **NOTE:**
 >
-> **Definition 19 (Result)** A **result** is a proposition ([Definition 1](#def-proposition)) that has a proof ([Definition 17](#def-proof)). These notes label each result by its role: as a theorem, a lemma, or a corollary, each defined next.
+> **Definition 25 (Result)** A **result** is a proposition ([Definition 1](#def-proposition)) that has a proof ([Definition 23](#def-proof)). These notes label each result by its role: as a theorem, a lemma, or a corollary, each defined next.
 
 > **NOTE:**
 >
-> **Example 23 (A proposition that is a result, and one that is not)** “$2 + 3 = 5$” is a proposition ([Definition 1](#def-proposition)) that has a proof, the computation of $2 + 3$, so it is a result. “$7$ is [even](number-systems.llms.md#def-even-odd)” is a proposition that is false, so it has no proof and is not a result.
+> **Example 29 (A proposition that is a result, and one that is not)** “$2 + 3 = 5$” is a proposition ([Definition 1](#def-proposition)) that has a proof, the computation of $2 + 3$, so it is a result. “$7$ is [even](number-systems.llms.md#def-even-odd)” is a proposition that is false, so it has no proof and is not a result.
 
 > **NOTE:**
 >
@@ -445,27 +559,27 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Definition 20 (Theorem)** A **theorem** [\[17\]](#ref-wikipedia_theorem) is a result ([Definition 19](#def-result)) of interest in its own right.
+> **Definition 26 (Theorem)** A **theorem** [\[17\]](#ref-wikipedia_theorem) is a result ([Definition 25](#def-result)) of interest in its own right.
 
 > **NOTE:**
 >
-> **Example 24 (A theorem)** “The sum of two even integers is even” is a result: [Example 20](#exm-proof) proves it. It is of interest in its own right, since it applies whenever two even integers are added, as in $2 + 4 = 6$, so it is a theorem.
+> **Example 30 (A theorem)** “The sum of two even integers is even” is a result: [Example 26](#exm-proof) proves it. It is of interest in its own right, since it applies whenever two even integers are added, as in $2 + 4 = 6$, so it is a theorem.
 
 > **NOTE:**
 >
-> **Definition 21 (Lemma)** A **lemma** [\[18\]](#ref-wikipedia_lemma_mathematics) is a result ([Definition 19](#def-result)) proved mainly as a step in the proof of another result.
+> **Definition 27 (Lemma)** A **lemma** [\[18\]](#ref-wikipedia_lemma_mathematics) is a result ([Definition 25](#def-result)) proved mainly as a step in the proof of another result.
 
 > **NOTE:**
 >
-> **Example 25 (A lemma in the proof of a larger result)** To show that the sum of four even integers $a$, $b$, $c$, and $d$ is even, write $a + b + c + d = (a + b) + (c + d)$. By the result of [Example 20](#exm-proof), $a + b$ and $c + d$ are even, and applying that result again to these two sums shows that their sum is even. Here that result is proved mainly as a step in the proof of another result, so it serves as a lemma. For example, $2 + 4 + 6 + 8 = (2 + 4) + (6 + 8) = 6 + 14 = 20$, which is even.
+> **Example 31 (A lemma in the proof of a larger result)** To show that the sum of four even integers $a$, $b$, $c$, and $d$ is even, write $a + b + c + d = (a + b) + (c + d)$. By the result of [Example 26](#exm-proof), $a + b$ and $c + d$ are even, and applying that result again to these two sums shows that their sum is even. Here that result is proved mainly as a step in the proof of another result, so it serves as a lemma. For example, $2 + 4 + 6 + 8 = (2 + 4) + (6 + 8) = 6 + 14 = 20$, which is even.
 
 > **NOTE:**
 >
-> **Definition 22 (Corollary)** A **corollary** [\[19\]](#ref-wikipedia_corollary) is a result ([Definition 19](#def-result)) that follows from a theorem with little extra work.
+> **Definition 28 (Corollary)** A **corollary** [\[19\]](#ref-wikipedia_corollary) is a result ([Definition 25](#def-result)) that follows from a theorem with little extra work.
 
 > **NOTE:**
 >
-> **Example 26 (A corollary of a result)** [Example 20](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers $a$, $b$, and $c$ is even, because $a + b + c = (a + b) + c$, $a + b$ is even by that result, and applying the result again to the even integers $a + b$ and $c$ shows that $(a + b) + c$ is even. For example,
+> **Example 32 (A corollary of a result)** [Example 26](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers $a$, $b$, and $c$ is even, because $a + b + c = (a + b) + c$, $a + b$ is even by that result, and applying the result again to the even integers $a + b$ and $c$ shows that $(a + b) + c$ is even. For example,
 >
 > $$\begin{aligned}
 > 2 + 4 + 6 &= (2 + 4) + 6 \\
@@ -477,19 +591,59 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Definition 23 (Counterexample)** A **counterexample** [\[20\]](#ref-wikipedia_counterexample) to a proposition of the form “for every $x$ in $A$, $P(x)$”, where $P(x)$ is a predicate ([Definition 2](#def-predicate)), is an element $x$ of $A$ for which $P(x)$ is false. A single counterexample shows that the proposition is false.
+> **Definition 29 (Counterexample)** A **counterexample** [\[20\]](#ref-wikipedia_counterexample) to a proposition of the form “for every $x$ in $A$, $P(x)$”, where $P(x)$ is a predicate ([Definition 2](#def-predicate)), is an element $x$ of $A$ for which $P(x)$ is false. A single counterexample shows that the proposition is false.
 
 > **NOTE:**
 >
-> **Example 27 (A counterexample)** The proposition “for every integer $n$, $n + n > n$” is false. The integer $n = 0$ is a counterexample: $0 + 0 = 0$, and $0 > 0$ is false. The proposition is true for some integers, such as $n = 3$, since $3 + 3 = 6 > 3$, but one counterexample is enough to make it false.
+> **Example 33 (A counterexample)** The proposition “for every integer $n$, $n + n > n$” is false. The integer $n = 0$ is a counterexample: $0 + 0 = 0$, and $0 > 0$ is false. The proposition is true for some integers, such as $n = 3$, since $3 + 3 = 6 > 3$, but one counterexample is enough to make it false.
 
 > **NOTE:**
 >
-> **Definition 24 (Converse)** The **converse** [\[21\]](#ref-wikipedia_converse_logic) of the proposition “if $P$, then $Q$” is the proposition “if $Q$, then $P$”.
+> **Definition 30 (Disproof)** A **disproof** of a [proposition](#def-proposition) $P$ is a [proof](#def-proof) of its [negation](#def-not), $\neg P$.
 
 > **NOTE:**
 >
-> **Example 28 (A true proposition with a false converse)** For an integer $n$, call $n$ a multiple of $4$ if $n = 4k$ for some integer $k$.
+> **Example 34 (A disproof)** Claim: every [prime](number-systems.llms.md#def-prime) is [odd](number-systems.llms.md#def-odd).
+>
+> [Disproof](#def-disproof): the [integer](number-systems.llms.md#def-integers) $2$ is prime, and $2$ is not odd, since $2 = 2k + 1$ would need $k = 1/2$, which is not an integer. So there is a prime that is not odd, which is the [negation](#def-not) of the claim.
+>
+> This disproof gives a [counterexample](#def-counterexample), $2$.
+
+> **NOTE:**
+>
+> **Definition 31 (Constructive proof)** A **constructive proof** [\[21\]](#ref-wikipedia_constructive_proof) of a [proposition](#def-proposition) $\exists x \in S,\ P(x)$ with an [existential quantifier](#def-existential-quantifier) names a particular element of $S$ and shows that $P$ is true of it.
+
+> **NOTE:**
+>
+> *Remark 3* (Several existential quantifiers). A [proposition](#def-proposition) can open with several [existential quantifiers](#def-existential-quantifier). A [constructive proof](#def-constructive-proof) of it names one element for each [quantifier](#def-quantifier).
+
+> **NOTE:**
+>
+> **Example 35 (A constructive proof)** Claim: there are [integers](number-systems.llms.md#def-integers) $m$ and $n$ with $m + n = 1$.
+>
+> Proof: take $m = 0$ and $n = 1$. Then $m + n = 0 + 1 = 1$.
+>
+> This [proof](#def-proof) is a [constructive proof](#def-constructive-proof), since it names an [integer](number-systems.llms.md#def-integers) for each of the two [existential quantifiers](#def-existential-quantifier).
+
+> **NOTE:**
+>
+> **Definition 32 (Non-constructive proof)** A **non-constructive proof** [\[21\]](#ref-wikipedia_constructive_proof) of a [proposition](#def-proposition) $\exists x \in S,\ P(x)$ shows that it is true without naming any element $x$ of $S$ for which $P(x)$ is true. It is a [proof](#def-proof) that is not a [constructive proof](#def-constructive-proof).
+
+> **NOTE:**
+>
+> **Example 36 (A non-constructive proof)** Claim: among any three [integers](number-systems.llms.md#def-integers), there are two that are both [even](number-systems.llms.md#def-even-odd) or both [odd](number-systems.llms.md#def-odd).
+>
+> Proof: each [integer](number-systems.llms.md#def-integers) is even or odd. If at most one of the three integers were even, and at most one were odd, there would be at most two integers in all. So at least two of the three are even, or at least two are odd.
+>
+> This [proof](#def-proof) is a [non-constructive proof](#def-nonconstructive-proof), since it does not say which two of the integers share their parity.
+
+> **NOTE:**
+>
+> **Definition 33 (Converse)** The **converse** [\[22\]](#ref-wikipedia_converse_logic) of the proposition “if $P$, then $Q$” is the proposition “if $Q$, then $P$”.
+
+> **NOTE:**
+>
+> **Example 37 (A true proposition with a false converse)** For an integer $n$, call $n$ a multiple of $4$ if $n = 4k$ for some integer $k$.
 >
 > - “If $n$ is a multiple of $4$, then $n$ is even” is true:
 >
@@ -500,17 +654,17 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 >
 >   and $2k$ is an integer.
 >
-> - Its converse, “if $n$ is even, then $n$ is a multiple of $4$”, is false. The integer $n = 2$ is a counterexample ([Definition 23](#def-counterexample)): $2$ is even, but $2 = 4k$ only for $k = \frac{1}{2}$, which is not an integer.
+> - Its converse, “if $n$ is even, then $n$ is a multiple of $4$”, is false. The integer $n = 2$ is a counterexample ([Definition 29](#def-counterexample)): $2$ is even, but $2 = 4k$ only for $k = \frac{1}{2}$, which is not an integer.
 >
 > So a proposition can be true while its converse is false.
 
 > **NOTE:**
 >
-> **Definition 25 (Contrapositive)** The **contrapositive** [\[22\]](#ref-wikipedia_contraposition) of the [proposition](#def-proposition) “if $P$, then $Q$” is the proposition “if $\neg Q$, then $\neg P$”.
+> **Definition 34 (Contrapositive)** The **contrapositive** [\[23\]](#ref-wikipedia_contraposition) of the [proposition](#def-proposition) “if $P$, then $Q$” is the proposition “if $\neg Q$, then $\neg P$”.
 
 > **NOTE:**
 >
-> **Theorem 6 (A conditional is equivalent to its contrapositive)** For any [propositions](#def-proposition) $P$ and $Q$,
+> **Theorem 8 (A conditional is equivalent to its contrapositive)** For any [propositions](#def-proposition) $P$ and $Q$,
 >
 > $$(P \Rightarrow Q) \equiv (\neg Q \Rightarrow \neg P).$$
 
@@ -520,34 +674,34 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 29 (The contrapositive versus the converse)** The [proposition](#def-proposition) “if $n$ is a multiple of $4$, then $n$ is even” from [Example 28](#exm-converse) has:
+> **Example 38 (The contrapositive versus the converse)** The [proposition](#def-proposition) “if $n$ is a multiple of $4$, then $n$ is even” from [Example 37](#exm-converse) has:
 >
-> - converse ([Definition 24](#def-converse)): “if $n$ is even, then $n$ is a multiple of $4$”, which is false;
-> - contrapositive ([Definition 25](#def-contrapositive)): “if $n$ is not even, then $n$ is not a multiple of $4$”, which is true, by [Theorem 6](#thm-contrapositive), because the original proposition is true.
+> - converse ([Definition 33](#def-converse)): “if $n$ is even, then $n$ is a multiple of $4$”, which is false;
+> - contrapositive ([Definition 34](#def-contrapositive)): “if $n$ is not even, then $n$ is not a multiple of $4$”, which is true, by [Theorem 8](#thm-contrapositive), because the original proposition is true.
 
 > **NOTE:**
 >
-> **Definition 26 (Sufficient condition)** When the proposition “if $P$, then $Q$” is true, $P$ is a **sufficient condition** [\[23\]](#ref-wikipedia_necessity_and_sufficiency) for $Q$.
+> **Definition 35 (Sufficient condition)** When the proposition “if $P$, then $Q$” is true, $P$ is a **sufficient condition** [\[24\]](#ref-wikipedia_necessity_and_sufficiency) for $Q$.
 
 > **NOTE:**
 >
-> **Example 30 (A sufficient condition)** For a real number $x$, “if $x > 5$, then $x > 2$” is true, because a number greater than $5$ is greater than $2$. So $x > 5$ is a sufficient condition for $x > 2$: knowing that $x = 6$ satisfies $x > 5$ is enough to conclude that $6 > 2$.
+> **Example 39 (A sufficient condition)** For a real number $x$, “if $x > 5$, then $x > 2$” is true, because a number greater than $5$ is greater than $2$. So $x > 5$ is a sufficient condition for $x > 2$: knowing that $x = 6$ satisfies $x > 5$ is enough to conclude that $6 > 2$.
 
 > **NOTE:**
 >
-> **Definition 27 (Necessary condition)** When the proposition “if $P$, then $Q$” is true, $Q$ is a **necessary condition** [\[23\]](#ref-wikipedia_necessity_and_sufficiency) for $P$.
+> **Definition 36 (Necessary condition)** When the proposition “if $P$, then $Q$” is true, $Q$ is a **necessary condition** [\[24\]](#ref-wikipedia_necessity_and_sufficiency) for $P$.
 
 > **NOTE:**
 >
-> **Example 31 (A necessary condition)** For an integer $n$, “if $n$ is a multiple of $6$, then $n$ is a multiple of $3$” is true, because $6k = 3 \cdot(2k)$ for every integer $k$. So being a multiple of $3$ is a necessary condition for being a multiple of $6$: $12 = 6 \cdot 2$ is a multiple of $6$, and it is also a multiple of $3$, since $12 = 3 \cdot 4$.
+> **Example 40 (A necessary condition)** For an integer $n$, “if $n$ is a multiple of $6$, then $n$ is a multiple of $3$” is true, because $6k = 3 \cdot(2k)$ for every integer $k$. So being a multiple of $3$ is a necessary condition for being a multiple of $6$: $12 = 6 \cdot 2$ is a multiple of $6$, and it is also a multiple of $3$, since $12 = 3 \cdot 4$.
 
 > **NOTE:**
 >
-> **Definition 28 (Necessary and sufficient condition)** When both “if $P$, then $Q$” and its converse ([Definition 24](#def-converse)) are true, $P$ is a **necessary and sufficient condition** [\[23\]](#ref-wikipedia_necessity_and_sufficiency) for $Q$ ([Definition 26](#def-sufficient-condition), [Definition 27](#def-necessary-condition)), written “$P$ if and only if $Q$”.
+> **Definition 37 (Necessary and sufficient condition)** When both “if $P$, then $Q$” and its converse ([Definition 33](#def-converse)) are true, $P$ is a **necessary and sufficient condition** [\[24\]](#ref-wikipedia_necessity_and_sufficiency) for $Q$ ([Definition 35](#def-sufficient-condition), [Definition 36](#def-necessary-condition)), written “$P$ if and only if $Q$”.
 
 > **NOTE:**
 >
-> **Example 32 (Necessary but not sufficient)** In [Example 28](#exm-converse), “if $n$ is a multiple of $4$, then $n$ is even” is true, so:
+> **Example 41 (Necessary but not sufficient)** In [Example 37](#exm-converse), “if $n$ is a multiple of $4$, then $n$ is even” is true, so:
 >
 > - being a multiple of $4$ is a sufficient condition for $n$ to be even;
 > - being even is a necessary condition for $n$ to be a multiple of $4$.
@@ -556,11 +710,11 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Definition 29 (Proof by contradiction)** A **proof by contradiction** [\[24\]](#ref-wikipedia_proof_by_contradiction) of a proposition $P$ assumes that $P$ is false, and derives from that assumption a proposition that is known to be false.
+> **Definition 38 (Proof by contradiction)** A **proof by contradiction** [\[25\]](#ref-wikipedia_proof_by_contradiction) of a proposition $P$ assumes that $P$ is false, and derives from that assumption a proposition that is known to be false.
 
 > **NOTE:**
 >
-> **Example 33 (No integer is both even and odd)** Suppose, for contradiction, that some integer $n$ is both even and odd ([definition](number-systems.llms.md#def-even-odd)). Then $n = 2j$ and $n = 2k + 1$ for some integers $j$ and $k$, and
+> **Example 42 (No integer is both even and odd)** Suppose, for contradiction, that some integer $n$ is both even and odd ([definition](number-systems.llms.md#def-even-odd)). Then $n = 2j$ and $n = 2k + 1$ for some integers $j$ and $k$, and
 >
 > $$\begin{aligned}
 > 2j &= 2k + 1
@@ -580,7 +734,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Theorem 7 (A proof by contradiction proves its proposition)** Let $P$ and $Q$ be propositions ([Definition 1](#def-proposition)). If $\neg P \Rightarrow Q$ is true and $Q$ is false, then $P$ is true.
+> **Theorem 9 (A proof by contradiction proves its proposition)** Let $P$ and $Q$ be propositions ([Definition 1](#def-proposition)). If $\neg P \Rightarrow Q$ is true and $Q$ is false, then $P$ is true.
 
 > **NOTE:**
 >
@@ -588,7 +742,26 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 34 (A truth table for a proof by contradiction)** There are only four ways to assign truth values to $P$ and $Q$. The code lists them, with the truth value of $\neg P \Rightarrow Q$, and marks the rows where $\neg P \Rightarrow Q$ is true and $Q$ is false.
+> **Theorem 10 (Why a proof by contradiction works)** For [propositions](#def-proposition) $P$ and $C$,
+>
+> $$P \equiv \mathopen{}\left(\neg P \Rightarrow (C \land \neg C)\right)\mathclose{}.$$
+
+> **NOTE:**
+>
+> *Proof*. By the definitions of [and](#def-and) and [not](#def-not), $C \land \neg C$ is false in every row, so it is a [contradiction](#def-contradiction). So, by the definition of [implies](#def-implies), $\neg P \Rightarrow (C \land \neg C)$ is true exactly in the rows where $\neg P$ is false, which are the rows where $P$ is true:
+>
+> | $P$ | $C$ | $\neg P$ | $C \land \neg C$ | $\neg P \Rightarrow (C \land \neg C)$ |
+> |:---:|:---:|:--------:|:----------------:|:-------------------------------------:|
+> |  T  |  T  |    F     |        F         |                   T                   |
+> |  T  |  F  |    F     |        F         |                   T                   |
+> |  F  |  T  |    T     |        F         |                   F                   |
+> |  F  |  F  |    T     |        F         |                   F                   |
+>
+> The first and last columns match in every row, so the two are [logically equivalent](#def-logically-equivalent).
+
+> **NOTE:**
+>
+> **Example 43 (A truth table for a proof by contradiction)** There are only four ways to assign truth values to $P$ and $Q$. The code lists them, with the truth value of $\neg P \Rightarrow Q$, and marks the rows where $\neg P \Rightarrow Q$ is true and $Q$ is false.
 >
 > ``` downlit
 > tt <- expand.grid(Q = c(TRUE, FALSE), P = c(TRUE, FALSE))
@@ -597,7 +770,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 > tt
 > ```
 >
-> The hypotheses of [Theorem 7](#thm-proof-by-contradiction) hold in 1 of the 4 rows, and in 1 of them $P$ is true. So whenever the hypotheses hold, $P$ is true.
+> The hypotheses of [Theorem 9](#thm-proof-by-contradiction) hold in 1 of the 4 rows, and in 1 of them $P$ is true. So whenever the hypotheses hold, $P$ is true.
 
 # 2 Don’t skip steps
 
@@ -642,11 +815,11 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 
 > **NOTE:**
 >
-> **Definition 30 (Direct proof)** A **direct proof** [\[25\]](#ref-wikipedia_direct_proof) of a [proposition](#def-proposition) $Q$ starts from the assumptions that $Q$ is stated under, if any, and reaches $Q$ through a chain of steps, each of which applies a definition, a previously proved [result](#def-result), or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that $Q$ is false; compare [proof by contradiction](#def-proof-by-contradiction), which does.
+> **Definition 39 (Direct proof)** A **direct proof** [\[26\]](#ref-wikipedia_direct_proof) of a [proposition](#def-proposition) $Q$ starts from the assumptions that $Q$ is stated under, if any, and reaches $Q$ through a chain of steps, each of which applies a definition, a previously proved [result](#def-result), or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that $Q$ is false; compare [proof by contradiction](#def-proof-by-contradiction), which does.
 
 > **NOTE:**
 >
-> **Example 35 (The square of an odd integer is odd)** Claim: if $n$ is an [odd](number-systems.llms.md#def-odd) [integer](number-systems.llms.md#def-integers), then $n^2$ is odd.
+> **Example 44 (The square of an odd integer is odd)** Claim: if $n$ is an [odd](number-systems.llms.md#def-odd) [integer](number-systems.llms.md#def-integers), then $n^2$ is odd.
 >
 > Since $n$ is odd, there is an integer $k$ with $n = 2k + 1$. Then
 >
@@ -684,13 +857,13 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 
 > **NOTE:**
 >
-> **Definition 31 (Proof by contrapositive)** A **proof by contrapositive** [\[22\]](#ref-wikipedia_contraposition) of a [proposition](#def-proposition) “if $P$, then $Q$” is a [direct proof](#def-direct-proof) of its [contrapositive](#def-contrapositive), “if $\neg Q$, then $\neg P$”: it assumes that $Q$ is false and reaches the conclusion that $P$ is false. By [Theorem 6](#thm-contrapositive), proving the contrapositive proves the original proposition.
+> **Definition 40 (Proof by contrapositive)** A **proof by contrapositive** [\[23\]](#ref-wikipedia_contraposition) of a [proposition](#def-proposition) “if $P$, then $Q$” is a [direct proof](#def-direct-proof) of its [contrapositive](#def-contrapositive), “if $\neg Q$, then $\neg P$”: it assumes that $Q$ is false and reaches the conclusion that $P$ is false. By [Theorem 8](#thm-contrapositive), proving the contrapositive proves the original proposition.
 
 > **NOTE:**
 >
-> **Example 36 (If** $x^2 + 3x < 0$, then $x < 0$) Claim: for every [real number](number-systems.llms.md#def-real-numbers) $x$, if $x^2 + 3x < 0$, then $x < 0$.
+> **Example 45 (If** $x^2 + 3x < 0$, then $x < 0$) Claim: for every [real number](number-systems.llms.md#def-real-numbers) $x$, if $x^2 + 3x < 0$, then $x < 0$.
 >
-> A [direct proof](#def-direct-proof) would have to start from the [inequality](#def-inequality) $x^2 + 3x < 0$, which says little about $x$ on its own. The contrapositive ([Definition 25](#def-contrapositive)) is “if $x \ge 0$, then $x^2 + 3x \ge 0$”, and its assumption is easier to use.
+> A [direct proof](#def-direct-proof) would have to start from the [inequality](#def-inequality) $x^2 + 3x < 0$, which says little about $x$ on its own. The contrapositive ([Definition 34](#def-contrapositive)) is “if $x \ge 0$, then $x^2 + 3x \ge 0$”, and its assumption is easier to use.
 >
 > Suppose $x \ge 0$. Then $x^2 = x \cdot x \ge 0$, because a product of two nonnegative numbers is nonnegative, and $3x \ge 0$, because $3 > 0$ and $x \ge 0$. So
 >
@@ -702,17 +875,17 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 > && \text{(arithmetic)}
 > \end{aligned}$$
 >
-> That proves the contrapositive, so by [Theorem 6](#thm-contrapositive) the claim holds. For example, $x = -1$ gives $x^2 + 3x = 1 - 3 = -2 < 0$, and indeed $x < 0$.
+> That proves the contrapositive, so by [Theorem 8](#thm-contrapositive) the claim holds. For example, $x = -1$ gives $x^2 + 3x = 1 - 3 = -2 < 0$, and indeed $x < 0$.
 
 # 6 Proof by cases
 
 > **NOTE:**
 >
-> **Definition 32 (Proof by cases, proof by exhaustion)** A **proof by cases** [\[26\]](#ref-wikipedia_proof_by_exhaustion), also called a **proof by exhaustion**, of a [proposition](#def-proposition) $Q$ lists [propositions](#def-proposition) $C_1, \ldots, C_k$, the *cases*, shows that at least one of them is true, and proves $C_i \Rightarrow Q$ for each $i$.
+> **Definition 41 (Proof by cases, proof by exhaustion)** A **proof by cases** [\[27\]](#ref-wikipedia_proof_by_exhaustion), also called a **proof by exhaustion**, of a [proposition](#def-proposition) $Q$ lists [propositions](#def-proposition) $C_1, \ldots, C_k$, the *cases*, shows that at least one of them is true, and proves $C_i \Rightarrow Q$ for each $i$.
 
 > **NOTE:**
 >
-> **Example 37 (The square of a real number is nonnegative)** Claim: for every [real number](number-systems.llms.md#def-real-numbers) $x$, $x^2 \ge 0$.
+> **Example 46 (The square of a real number is nonnegative)** Claim: for every [real number](number-systems.llms.md#def-real-numbers) $x$, $x^2 \ge 0$.
 >
 > Every real number $x$ satisfies $x \ge 0$ or $x < 0$, so these two cases cover every $x$.
 >
@@ -744,7 +917,7 @@ Many proofs in these notes show that a statement holds for every [natural number
 
 > **NOTE:**
 >
-> **Definition 33 (Proof by induction)** Let $n_0$ be an [integer](number-systems.llms.md#def-integers), and let $P(n)$ be a [predicate](proof-writing.llms.md#def-predicate) about the integers $n \ge n_0$. A **proof by induction** [\[27\]](#ref-wikipedia_mathematical_induction) on $n$ shows that $P(n)$ holds for every integer $n \ge n_0$ by showing two things:
+> **Definition 42 (Proof by induction)** Let $n_0$ be an [integer](number-systems.llms.md#def-integers), and let $P(n)$ be a [predicate](proof-writing.llms.md#def-predicate) about the integers $n \ge n_0$. A **proof by induction** [\[28\]](#ref-wikipedia_mathematical_induction) on $n$ shows that $P(n)$ holds for every integer $n \ge n_0$ by showing two things:
 >
 > 1.  **Base case:** $P(n_0)$ holds.
 > 2.  **Inductive step:** for every integer $n > n_0$, if $P(n - 1)$ holds, then $P(n)$ holds.
@@ -753,7 +926,7 @@ Many proofs in these notes show that a statement holds for every [natural number
 
 > **NOTE:**
 >
-> *Remark 3* (Why the two steps suffice). The base case gives $P(n_0)$. The inductive step with $n = n_0 + 1$ then gives $P(n_0 + 1)$, with $n = n_0 + 2$ it gives $P(n_0 + 2)$, and so on: each integer $n \ge n_0$ is reached after $n - n_0$ uses of the inductive step.
+> *Remark 4* (Why the two steps suffice). The base case gives $P(n_0)$. The inductive step with $n = n_0 + 1$ then gives $P(n_0 + 1)$, with $n = n_0 + 2$ it gives $P(n_0 + 2)$, and so on: each integer $n \ge n_0$ is reached after $n - n_0$ uses of the inductive step.
 >
 > When $P(n)$ is needed only for $n_0 \le n \le r$, it is enough to show the inductive step for $n_0 < n \le r$; the same chain then stops at $P(r)$.
 
@@ -761,11 +934,11 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 > **NOTE:**
 >
-> **Example 38 (Sum of the first** $n$ natural numbers) For every $n \in \mathbb{N}$,
+> **Example 47 (Sum of the first** $n$ natural numbers) For every $n \in \mathbb{N}$,
 >
 > $$\sum_{i=1}^ni = \frac{n(n+1)}{2}.$$
 >
-> For example, with $n = 3$, $1 + 2 + 3 = 6$ and $\frac{3 \cdot 4}{2} = 6$. To prove the equation for every $n$, let $P(n)$ be the equation and use [Definition 33](#def-proof-by-induction) with $n_0 = 1$.
+> For example, with $n = 3$, $1 + 2 + 3 = 6$ and $\frac{3 \cdot 4}{2} = 6$. To prove the equation for every $n$, let $P(n)$ be the equation and use [Definition 42](#def-proof-by-induction) with $n_0 = 1$.
 >
 > **Base case,** $n = 1$. The sum has one term:
 >
@@ -830,21 +1003,21 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 > && \text{(commutative law)}
 > \end{aligned}$$
 >
-> which is $P(n)$. By [Definition 33](#def-proof-by-induction), the equation holds for every $n \in \mathbb{N}$.
+> which is $P(n)$. By [Definition 42](#def-proof-by-induction), the equation holds for every $n \in \mathbb{N}$.
 
 # 9 Formal logic
 
 > **NOTE:**
 >
-> **Definition 34 (Propositional logic)** **Propositional logic** [\[28\]](#ref-wikipedia_propositional_calculus) is the study of [logical entailment](#def-logical-entailment) among [propositions](#def-proposition) built from basic propositions $P, Q, R, \ldots$ using only the [logical connectives](#def-logical-connective). Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.
+> **Definition 43 (Propositional logic)** **Propositional logic** [\[29\]](#ref-wikipedia_propositional_calculus) is the study of [logical entailment](#def-logical-entailment) among [propositions](#def-proposition) built from basic propositions $P, Q, R, \ldots$ using only the [logical connectives](#def-logical-connective). Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.
 
 > **NOTE:**
 >
-> **Example 39 (**$P$ and $P \Rightarrow Q$ entail $Q$) Suppose $P$ is true and $P \Rightarrow Q$ is true. If $Q$ were false, then $P \Rightarrow Q$ would have a true $P$ and a false $Q$, so $P \Rightarrow Q$ would be false, which contradicts the assumption. So $Q$ is true. This holds whatever $P$ and $Q$ say, so $P$ and $P \Rightarrow Q$ [logically entail](#def-logical-entailment) $Q$.
+> **Example 48 (**$P$ and $P \Rightarrow Q$ entail $Q$) Suppose $P$ is true and $P \Rightarrow Q$ is true. If $Q$ were false, then $P \Rightarrow Q$ would have a true $P$ and a false $Q$, so $P \Rightarrow Q$ would be false, which contradicts the assumption. So $Q$ is true. This holds whatever $P$ and $Q$ say, so $P$ and $P \Rightarrow Q$ [logically entail](#def-logical-entailment) $Q$.
 
 > **NOTE:**
 >
-> **Definition 35 (First-order logic)** **First-order logic** [\[29\]](#ref-wikipedia_first_order_logic) extends propositional logic ([Definition 34](#def-propositional-logic)) by also allowing:
+> **Definition 44 (First-order logic)** **First-order logic** [\[30\]](#ref-wikipedia_first_order_logic) extends propositional logic ([Definition 43](#def-propositional-logic)) by also allowing:
 >
 > - variables $x, y, \ldots$ that stand for elements of a [set](sets.llms.md#def-set);
 > - [predicates](#def-predicate) of one or more of those variables, such as $P(x)$ or $x < y$;
@@ -854,15 +1027,15 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 > **NOTE:**
 >
-> **Example 40 (From “for all” to one element)** Let $P(x)$ be a [predicate](#def-predicate) about the elements of a [set](sets.llms.md#def-set) $S$, and let $a \in S$. The [propositions](#def-proposition) $\forall x \in S, P(x)$ and $a \in S$ [logically entail](#def-logical-entailment) $P(a)$: if $P(x)$ is true for every element $x$ of $S$, then it is true for the element $a$. For example, $\forall x \in \mathbb{Z}, x^2 \ge 0$ entails $3^2 \ge 0$. [Propositional logic](#def-propositional-logic) alone cannot express this entailment, because it has no way to refer to the elements of $S$.
+> **Example 49 (From “for all” to one element)** Let $P(x)$ be a [predicate](#def-predicate) about the elements of a [set](sets.llms.md#def-set) $S$, and let $a \in S$. The [propositions](#def-proposition) $\forall x \in S, P(x)$ and $a \in S$ [logically entail](#def-logical-entailment) $P(a)$: if $P(x)$ is true for every element $x$ of $S$, then it is true for the element $a$. For example, $\forall x \in \mathbb{Z}, x^2 \ge 0$ entails $3^2 \ge 0$. [Propositional logic](#def-propositional-logic) alone cannot express this entailment, because it has no way to refer to the elements of $S$.
 
 > **NOTE:**
 >
-> **Definition 36 (Formal proof)** A **formal proof** [\[30\]](#ref-wikipedia_formal_proof) is a [proof](#def-proof) written in propositional logic ([Definition 34](#def-propositional-logic)) or first-order logic ([Definition 35](#def-first-order-logic)) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its [propositions](#def-proposition) say.
+> **Definition 45 (Formal proof)** A **formal proof** [\[31\]](#ref-wikipedia_formal_proof) is a [proof](#def-proof) written in propositional logic ([Definition 43](#def-propositional-logic)) or first-order logic ([Definition 44](#def-first-order-logic)) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its [propositions](#def-proposition) say.
 
 > **NOTE:**
 >
-> **Example 41 (A three-step formal proof)** Suppose the allowed rules include “from $P$ and $P \Rightarrow Q$, conclude $Q$”. Then this is a [formal proof](#def-formal-proof) of $Q$ from the assumptions $P$ and $P \Rightarrow Q$:
+> **Example 50 (A three-step formal proof)** Suppose the allowed rules include “from $P$ and $P \Rightarrow Q$, conclude $Q$”. Then this is a [formal proof](#def-formal-proof) of $Q$ from the assumptions $P$ and $P \Rightarrow Q$:
 >
 > 1.  $P$ (assumption)
 > 2.  $P \Rightarrow Q$ (assumption)
@@ -870,8 +1043,8 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 # 10 Further reading
 
-- Velleman [\[31\]](#ref-velleman2019prove) is a structured introduction to proof techniques such as [direct proof](#def-direct-proof), [proof by contradiction](proof-writing.llms.md#def-proof-by-contradiction), and induction.
-- Barker-Plummer et al. [\[32\]](#ref-barkerplummer2011language) treats proofs as [formal proofs](#def-formal-proof) in [propositional logic](#def-propositional-logic) and [first-order logic](#def-first-order-logic).
+- Velleman [\[32\]](#ref-velleman2019prove) is a structured introduction to proof techniques such as [direct proof](#def-direct-proof), [proof by contradiction](proof-writing.llms.md#def-proof-by-contradiction), and induction.
+- Barker-Plummer et al. [\[33\]](#ref-barkerplummer2011language) treats proofs as [formal proofs](#def-formal-proof) in [propositional logic](#def-propositional-logic) and [first-order logic](#def-first-order-logic).
 
 Free course materials on formal logic:
 
@@ -892,31 +1065,40 @@ Free course materials on formal logic:
 - [Definition 9 (If and only if)](#def-iff)
 - [Definition 10 (Truth table)](#def-truth-table)
 - [Definition 11 (Logically equivalent)](#def-logically-equivalent)
-- [Definition 12 (Quantifier)](#def-quantifier)
-- [Definition 13 (Universal quantifier)](#def-universal-quantifier)
-- [Definition 14 (Existential quantifier)](#def-existential-quantifier)
-- [Definition 15 (Inequality)](#def-inequality)
-- [Definition 16 (Logical entailment, logical consequence, deductive consequence)](#def-logical-entailment)
-- [Definition 17 (Proof)](#def-proof)
-- [Definition 18 (Derivation)](#def-derivation)
-- [Definition 19 (Result)](#def-result)
-- [Definition 20 (Theorem)](#def-theorem)
-- [Definition 21 (Lemma)](#def-lemma)
-- [Definition 22 (Corollary)](#def-corollary)
-- [Definition 23 (Counterexample)](#def-counterexample)
-- [Definition 24 (Converse)](#def-converse)
-- [Definition 25 (Contrapositive)](#def-contrapositive)
-- [Definition 26 (Sufficient condition)](#def-sufficient-condition)
-- [Definition 27 (Necessary condition)](#def-necessary-condition)
-- [Definition 28 (Necessary and sufficient condition)](#def-necessary-sufficient)
-- [Definition 29 (Proof by contradiction)](#def-proof-by-contradiction)
-- [Definition 30 (Direct proof)](#def-direct-proof)
-- [Definition 31 (Proof by contrapositive)](#def-proof-by-contrapositive)
-- [Definition 32 (Proof by cases, proof by exhaustion)](#def-proof-by-cases)
-- [Definition 33 (Proof by induction)](#def-proof-by-induction)
-- [Definition 34 (Propositional logic)](#def-propositional-logic)
-- [Definition 35 (First-order logic)](#def-first-order-logic)
-- [Definition 36 (Formal proof)](#def-formal-proof)
+- [Definition 12 (Tautology)](#def-tautology)
+- [Definition 13 (Contradiction)](#def-contradiction)
+- [Definition 14 (Quantifier)](#def-quantifier)
+- [Definition 15 (Universal quantifier)](#def-universal-quantifier)
+- [Definition 16 (Existential quantifier)](#def-existential-quantifier)
+- [Definition 17 (Inequality)](#def-inequality)
+- [Definition 18 (Logical entailment, logical consequence, deductive consequence)](#def-logical-entailment)
+- [Definition 19 (Logical argument)](#def-logical-argument)
+- [Definition 20 (Premise)](#def-premise)
+- [Definition 21 (Conclusion)](#def-conclusion)
+- [Definition 22 (Rule of inference)](#def-rule-of-inference)
+- [Definition 23 (Proof)](#def-proof)
+- [Definition 24 (Derivation)](#def-derivation)
+- [Definition 25 (Result)](#def-result)
+- [Definition 26 (Theorem)](#def-theorem)
+- [Definition 27 (Lemma)](#def-lemma)
+- [Definition 28 (Corollary)](#def-corollary)
+- [Definition 29 (Counterexample)](#def-counterexample)
+- [Definition 30 (Disproof)](#def-disproof)
+- [Definition 31 (Constructive proof)](#def-constructive-proof)
+- [Definition 32 (Non-constructive proof)](#def-nonconstructive-proof)
+- [Definition 33 (Converse)](#def-converse)
+- [Definition 34 (Contrapositive)](#def-contrapositive)
+- [Definition 35 (Sufficient condition)](#def-sufficient-condition)
+- [Definition 36 (Necessary condition)](#def-necessary-condition)
+- [Definition 37 (Necessary and sufficient condition)](#def-necessary-sufficient)
+- [Definition 38 (Proof by contradiction)](#def-proof-by-contradiction)
+- [Definition 39 (Direct proof)](#def-direct-proof)
+- [Definition 40 (Proof by contrapositive)](#def-proof-by-contrapositive)
+- [Definition 41 (Proof by cases, proof by exhaustion)](#def-proof-by-cases)
+- [Definition 42 (Proof by induction)](#def-proof-by-induction)
+- [Definition 43 (Propositional logic)](#def-propositional-logic)
+- [Definition 44 (First-order logic)](#def-first-order-logic)
+- [Definition 45 (Formal proof)](#def-formal-proof)
 
 # References
 
@@ -1002,49 +1184,53 @@ Wikipedia contributors, “Counterexample — Wikipedia, the free encyclopedia.�
 
 \[21\]
 
-Wikipedia contributors, “Converse (logic) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Converse_(logic)>
+Wikipedia contributors, “Constructive proof — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Constructive_proof>
 
 \[22\]
 
-Wikipedia contributors, “Contraposition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Contraposition>
+Wikipedia contributors, “Converse (logic) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Converse_(logic)>
 
 \[23\]
 
-Wikipedia contributors, “Necessity and sufficiency — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Necessity_and_sufficiency>
+Wikipedia contributors, “Contraposition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Contraposition>
 
 \[24\]
 
-Wikipedia contributors, “Proof by contradiction — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Proof_by_contradiction>
+Wikipedia contributors, “Necessity and sufficiency — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Necessity_and_sufficiency>
 
 \[25\]
 
-Wikipedia contributors, “Direct proof — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Direct_proof>
+Wikipedia contributors, “Proof by contradiction — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Proof_by_contradiction>
 
 \[26\]
 
-Wikipedia contributors, “Proof by exhaustion — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Proof_by_exhaustion>
+Wikipedia contributors, “Direct proof — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Direct_proof>
 
 \[27\]
 
-Wikipedia contributors, “Mathematical induction — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Mathematical_induction>
+Wikipedia contributors, “Proof by exhaustion — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Proof_by_exhaustion>
 
 \[28\]
 
-Wikipedia contributors, “Propositional calculus — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Propositional_calculus>
+Wikipedia contributors, “Mathematical induction — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Mathematical_induction>
 
 \[29\]
 
-Wikipedia contributors, “First-order logic — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/First-order_logic>
+Wikipedia contributors, “Propositional calculus — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Propositional_calculus>
 
 \[30\]
 
-Wikipedia contributors, “Formal proof — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Formal_proof>
+Wikipedia contributors, “First-order logic — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/First-order_logic>
 
 \[31\]
 
-D. J. Velleman, *How to prove it: A structured approach*, 3rd ed. Cambridge University Press, 2019. doi: [10.1017/9781108539890](https://doi.org/10.1017/9781108539890).
+Wikipedia contributors, “Formal proof — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Formal_proof>
 
 \[32\]
+
+D. J. Velleman, *How to prove it: A structured approach*, 3rd ed. Cambridge University Press, 2019. doi: [10.1017/9781108539890](https://doi.org/10.1017/9781108539890).
+
+\[33\]
 
 D. Barker-Plummer, J. Barwise, and J. Etchemendy, *Language, proof and logic*, 2nd ed. Stanford, CA: CSLI Publications, 2011. Available: <https://www.amazon.com/dp/1575866323>
 

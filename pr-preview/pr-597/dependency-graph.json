@@ -12109,6 +12109,33 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-conclusion",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-conclusion",
+   "kind": "def",
+   "title": "Conclusion",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#def-constructive-proof",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-constructive-proof",
+   "kind": "def",
+   "title": "Constructive proof",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#def-contradiction",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-contradiction",
+   "kind": "def",
+   "title": "Contradiction",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-contrapositive",
    "site": "mds",
    "page": "proof-writing",
@@ -12160,6 +12187,15 @@
    "div": "def-direct-proof",
    "kind": "def",
    "title": "Direct proof",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#def-disproof",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-disproof",
+   "kind": "def",
+   "title": "Disproof",
    "external": false
   },
   {
@@ -12235,6 +12271,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-logical-argument",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-logical-argument",
+   "kind": "def",
+   "title": "Logical argument",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-logical-connective",
    "site": "mds",
    "page": "proof-writing",
@@ -12280,6 +12325,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-nonconstructive-proof",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-nonconstructive-proof",
+   "kind": "def",
+   "title": "Non-constructive proof",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-not",
    "site": "mds",
    "page": "proof-writing",
@@ -12304,6 +12358,15 @@
    "div": "def-predicate",
    "kind": "def",
    "title": "Predicate",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#def-premise",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-premise",
+   "kind": "def",
+   "title": "Premise",
    "external": false
   },
   {
@@ -12388,12 +12451,30 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-rule-of-inference",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-rule-of-inference",
+   "kind": "def",
+   "title": "Rule of inference",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-sufficient-condition",
    "site": "mds",
    "page": "proof-writing",
    "div": "def-sufficient-condition",
    "kind": "def",
    "title": "Sufficient condition",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#def-tautology",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-tautology",
+   "kind": "def",
+   "title": "Tautology",
    "external": false
   },
   {
@@ -12433,6 +12514,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-contradiction-works",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-contradiction-works",
+   "kind": "thm",
+   "title": "Why a proof by contradiction works",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-contrapositive",
    "site": "mds",
    "page": "proof-writing",
@@ -12457,6 +12547,24 @@
    "div": "thm-derivation-chain",
    "kind": "thm",
    "title": "What a derivation shows",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-double-negation",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-double-negation",
+   "kind": "thm",
+   "title": "Double negation",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-equivalence-iff",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-equivalence-iff",
+   "kind": "thm",
+   "title": "Equivalence is a tautological biconditional",
    "external": false
   },
   {
@@ -12538,6 +12646,15 @@
    "div": "def-cartesian-product",
    "kind": "def",
    "title": "Cartesian product",
+   "external": false
+  },
+  {
+   "id": "mds/sets#def-cartesian-product-many",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-cartesian-product-many",
+   "kind": "def",
+   "title": "Cartesian product of several sets",
    "external": false
   },
   {
@@ -12694,6 +12811,24 @@
    "external": false
   },
   {
+   "id": "mds/sets#def-power-set",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-power-set",
+   "kind": "def",
+   "title": "Power set",
+   "external": false
+  },
+  {
+   "id": "mds/sets#def-roster-notation",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-roster-notation",
+   "kind": "def",
+   "title": "Roster notation",
+   "external": false
+  },
+  {
    "id": "mds/sets#def-set",
    "site": "mds",
    "page": "sets",
@@ -12709,6 +12844,15 @@
    "div": "def-set-builder",
    "kind": "def",
    "title": "Set-builder notation",
+   "external": false
+  },
+  {
+   "id": "mds/sets#def-set-builder-expression",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-set-builder-expression",
+   "kind": "def",
+   "title": "Set-builder notation with an expression",
    "external": false
   },
   {
@@ -12754,6 +12898,15 @@
    "div": "def-superset",
    "kind": "def",
    "title": "Superset",
+   "external": false
+  },
+  {
+   "id": "mds/sets#def-tuple",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-tuple",
+   "kind": "def",
+   "title": "Tuple",
    "external": false
   },
   {
@@ -19993,6 +20146,30 @@
    "mds/proof-writing#def-logical-connective"
   ],
   [
+   "mds/proof-writing#def-conclusion",
+   "mds/proof-writing#def-logical-argument"
+  ],
+  [
+   "mds/proof-writing#def-conclusion",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-constructive-proof",
+   "mds/proof-writing#def-existential-quantifier"
+  ],
+  [
+   "mds/proof-writing#def-constructive-proof",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-contradiction",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-contradiction",
+   "mds/proof-writing#def-truth-table"
+  ],
+  [
    "mds/proof-writing#def-contrapositive",
    "mds/proof-writing#def-proposition"
   ],
@@ -20023,6 +20200,18 @@
   [
    "mds/proof-writing#def-direct-proof",
    "mds/proof-writing#def-result"
+  ],
+  [
+   "mds/proof-writing#def-disproof",
+   "mds/proof-writing#def-not"
+  ],
+  [
+   "mds/proof-writing#def-disproof",
+   "mds/proof-writing#def-proof"
+  ],
+  [
+   "mds/proof-writing#def-disproof",
+   "mds/proof-writing#def-proposition"
   ],
   [
    "mds/proof-writing#def-domain-of-discourse",
@@ -20093,6 +20282,10 @@
    "mds/proof-writing#def-result"
   ],
   [
+   "mds/proof-writing#def-logical-argument",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#def-logical-connective",
    "mds/proof-writing#def-proposition"
   ],
@@ -20129,6 +20322,18 @@
    "mds/proof-writing#def-sufficient-condition"
   ],
   [
+   "mds/proof-writing#def-nonconstructive-proof",
+   "mds/proof-writing#def-constructive-proof"
+  ],
+  [
+   "mds/proof-writing#def-nonconstructive-proof",
+   "mds/proof-writing#def-proof"
+  ],
+  [
+   "mds/proof-writing#def-nonconstructive-proof",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#def-not",
    "mds/proof-writing#def-logical-connective"
   ],
@@ -20138,6 +20343,14 @@
   ],
   [
    "mds/proof-writing#def-predicate",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-premise",
+   "mds/proof-writing#def-logical-argument"
+  ],
+  [
+   "mds/proof-writing#def-premise",
    "mds/proof-writing#def-proposition"
   ],
   [
@@ -20201,6 +20414,34 @@
    "mds/proof-writing#def-proposition"
   ],
   [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-conclusion"
+  ],
+  [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-logical-argument"
+  ],
+  [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-logical-entailment"
+  ],
+  [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-premise"
+  ],
+  [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-tautology",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-tautology",
+   "mds/proof-writing#def-truth-table"
+  ],
+  [
    "mds/proof-writing#def-theorem",
    "mds/proof-writing#def-result"
   ],
@@ -20221,6 +20462,10 @@
    "mds/proof-writing#def-proposition"
   ],
   [
+   "mds/proof-writing#thm-contradiction-works",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#thm-contrapositive",
    "mds/proof-writing#def-proposition"
   ],
@@ -20231,6 +20476,22 @@
   [
    "mds/proof-writing#thm-derivation-chain",
    "mds/proof-writing#def-derivation"
+  ],
+  [
+   "mds/proof-writing#thm-double-negation",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-equivalence-iff",
+   "mds/proof-writing#def-logically-equivalent"
+  ],
+  [
+   "mds/proof-writing#thm-equivalence-iff",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-equivalence-iff",
+   "mds/proof-writing#def-tautology"
   ],
   [
    "mds/proof-writing#thm-equivalent-cycle",
@@ -20307,6 +20568,18 @@
   [
    "mds/sets#def-bound",
    "mds/sets#def-subset"
+  ],
+  [
+   "mds/sets#def-cartesian-product-many",
+   "mds/number-systems#def-natural-numbers"
+  ],
+  [
+   "mds/sets#def-cartesian-product-many",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/sets#def-cartesian-product-many",
+   "mds/sets#def-tuple"
   ],
   [
    "mds/sets#def-closed-interval",
@@ -20393,6 +20666,22 @@
    "mds/sets#def-set"
   ],
   [
+   "mds/sets#def-power-set",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/sets#def-power-set",
+   "mds/sets#def-subset"
+  ],
+  [
+   "mds/sets#def-roster-notation",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/sets#def-set-builder-expression",
+   "mds/sets#def-set"
+  ],
+  [
    "mds/sets#def-strict-subset",
    "mds/sets#def-set"
   ],
@@ -20403,6 +20692,10 @@
   [
    "mds/sets#def-strict-superset",
    "mds/sets#def-superset"
+  ],
+  [
+   "mds/sets#def-tuple",
+   "mds/number-systems#def-natural-numbers"
   ],
   [
    "mds/sets#def-unbounded-interval",
