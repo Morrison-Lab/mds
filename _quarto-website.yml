@@ -117,6 +117,8 @@ website:
         href: proof-writing.qmd
       - text: "Induction and Recursion"
         href: induction.qmd
+      - text: "Dependency Tree"
+        href: dependency-tree.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mds
@@ -195,6 +197,7 @@ website:
           - optimization-quasi-newton.qmd
       - proof-writing.qmd
       - induction.qmd
+      - dependency-tree.qmd
 
 # Each type below gets a title bar (type, number, name) apart from the body,
 # and folds, open by default: the callouty-theorem defaults since 1.4.0.
