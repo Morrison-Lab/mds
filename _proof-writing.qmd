@@ -92,6 +92,38 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_def-tautology.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-tautology.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-equivalence-iff.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-equivalence-iff.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-double-negation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-double-negation.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-quantifier.qmd >}}
 
 {{< slidebreak >}}
@@ -294,6 +326,10 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-conve
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/proof-writing/_thm-proof-by-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-contradiction-works.qmd >}}
 
 {{< slidebreak >}}
 
