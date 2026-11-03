@@ -1,7 +1,7 @@
 :::{#cor-mode-positive-multiple}
 #### A positive multiple has the same modes
 
-Let $g : A \to \reals$ be a function and let $c > 0$.
-Then $c\,g$ and $g$ have the same modes.
+Let $g : A \to \reals$ be a [function](functions.qmd#def-function) and let $c > 0$.
+Then $c\,g$ and $g$ have the same [modes](#def-mode).
 
 :::

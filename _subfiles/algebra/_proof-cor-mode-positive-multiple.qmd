@@ -1,5 +1,5 @@
 :::{.proof}
-By @def-mode, the modes of $c\,g$ are the elements of $\argmax_{x \in A} c\,g(x)$,
+By @def-mode, the [modes](#def-mode) of $c\,g$ are the elements of $\argmax_{x \in A} c\,g(x)$,
 and the modes of $g$ are the elements of $\argmax_{x \in A} g(x)$.
-These two sets are equal by @thm-argmax-positive-multiple.
+By @thm-argmax-positive-multiple, these have the same elements.
 :::
