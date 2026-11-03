@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:33:46 (PST)
+Last modified: 2026-11-02 15:14:20 (PST)
 
 > **NOTE:**
 >
@@ -193,6 +193,66 @@ Last modified: 2026-11-02 14:33:46 (PST)
 > - With $b = 3$, $r = \tfrac{1}{2}$: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = {(1.5, -0.5)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(2)} = {(0.75, 0.25)}^{\top}$, and $f$ falls from $6$ to $1.5$ to $0.375$, a quarter at each step.
 > - With $b = 1$, $r = 0$ and one step reaches the minimizer.
 > - With $b = 0.01$, $r^2 = (0.99 / 1.01)^2 \approx 0.96$, so $f$ shrinks by only about $4\%$ per step. Newton’s method reaches the minimizer of any such $f$ in one step ([Theorem 2 in Newton’s Method](optimization-newton.llms.md#thm-newton-quadratic)).
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> gz_x1_gz <- seq(-0.5, 3.5, length.out = 201)
+> gz_x2_gz <- seq(-1, 1.2, length.out = 201)
+> gz_grid_gz <- expand.grid(x1 = gz_x1_gz, x2 = gz_x2_gz)
+> gz_grid_gz$f <- 0.5 * (gz_grid_gz$x1^2 + 3 * gz_grid_gz$x2^2)
+> gz_steps_gz <- 0:3
+> gz_path_x1_gz <- 3 * 0.5^gz_steps_gz
+> gz_path_x2_gz <- c(1, -0.5, 0.25, -0.125)
+> gz_path_gz <- tibble::tibble(x1 = gz_path_x1_gz, x2 = gz_path_x2_gz)
+> gz_origin_gz <- tibble::tibble(x1 = 0, x2 = 0)
+> gz_aes_gz <- ggplot2::aes(x1, x2)
+> gz_aes_z_gz <- ggplot2::aes(z = f)
+> gz_breaks_gz <- c(0.25, 1, 2.25, 4, 6)
+> ggplot2::ggplot(gz_grid_gz, gz_aes_gz) +
+>   ggplot2::geom_contour(
+>     gz_aes_z_gz, colour = "grey60", breaks = gz_breaks_gz
+>   ) +
+>   ggplot2::geom_path(data = gz_path_gz, colour = "#0072B2") +
+>   ggplot2::geom_point(data = gz_path_gz, colour = "#0072B2", size = 3) +
+>   ggplot2::geom_point(
+>     data = gz_origin_gz, colour = "#D55E00", size = 3, shape = 17
+>   ) +
+>   ggplot2::labs(x = "x1", y = "x2")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> gz_x1_gz, gz_x2_gz = np.meshgrid(np.linspace(-0.5, 3.5, 201),
+>                                  np.linspace(-1, 1.2, 201))
+> gz_f_gz = 0.5 * (gz_x1_gz**2 + 3 * gz_x2_gz**2)
+> gz_path_x1_gz = 3 * 0.5 ** np.arange(4)
+> gz_path_x2_gz = np.array([1, -0.5, 0.25, -0.125])
+> fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
+> ax.contour(gz_x1_gz, gz_x2_gz, gz_f_gz, levels=[0.25, 1, 2.25, 4, 6],
+>            colors="grey")
+> ax.plot(gz_path_x1_gz, gz_path_x2_gz, "o-", color="#0072B2")
+> ax.plot(0, 0, "^", color="#D55E00", markersize=8)
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Plot over the plane of nested elliptical level curves of f of x equal to one half of x1 squared plus 3 x2 squared, in grey, elongated along the x1 axis. A blue path of line segments with circles starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), crossing the x1 axis at every step and closing in on the origin, which is marked by a vermilion triangle.](optimization-gradient-descent_files/figure-html/gd-zigzag-r-1.png)](optimization-gradient-descent_files/figure-html/gd-zigzag-r-1.png "Figure 1: The first four iterates of gradient descent with exact line search on f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2) from {(3, 1)}^{\top} (Example 6 with b = 3), drawn over the level curves of f. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the minimizer \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (triangle).")
+>
+> ## Python
+>
+> [![Plot over the plane of nested elliptical level curves of f of x equal to one half of x1 squared plus 3 x2 squared, in grey, elongated along the x1 axis. A blue path of line segments with circles starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), crossing the x1 axis at every step and closing in on the origin, which is marked by a vermilion triangle.](optimization-gradient-descent_files/figure-html/gd-zigzag-python-1.png)](optimization-gradient-descent_files/figure-html/gd-zigzag-python-1.png "Figure 1: The first four iterates of gradient descent with exact line search on f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2) from {(3, 1)}^{\top} (Example 6 with b = 3), drawn over the level curves of f. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the minimizer \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (triangle).")
+>
+> Figure 1: The first four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) with [exact line search](#def-exact-line-search) on $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$ from ${(3, 1)}^{\top}$ ([Example 6](#exm-gd-zigzag) with $b = 3$), drawn over the [level curves](vector-calculus.llms.md#def-level-curve) of $f$. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (triangle).
 
 > **NOTE:**
 >
@@ -413,13 +473,13 @@ Last modified: 2026-11-02 14:33:46 (PST)
 >
 > ## R
 >
-> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png "Figure 1: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
+> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png "Figure 2: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
 >
 > ## Python
 >
-> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png "Figure 1: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
+> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png "Figure 2: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
 >
-> Figure 1: [Level curves](vector-calculus.llms.md#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
+> Figure 2: [Level curves](vector-calculus.llms.md#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
 
 > **NOTE:**
 >
@@ -544,7 +604,7 @@ Last modified: 2026-11-02 14:33:46 (PST)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f3888bdf750>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884ca0b750>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -556,30 +616,30 @@ Last modified: 2026-11-02 14:33:46 (PST)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f3888bdf890>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3888bdf9d0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3888bdfb10>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3888bdfc50>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3888bdfd90>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3888bdfed0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884ca0b890>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884ca0b9d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884ca0bb10>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884ca0bc50>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884ca0bd90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884ca0bed0>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f3888c0c050>
+> #> <matplotlib.legend.Legend object at 0x7f885d31de50>
 > plt.show()
 > ```
 >
 > ## R
 >
-> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png "Figure 2: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
+> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png "Figure 3: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
 > ## Python
 >
-> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png "Figure 2: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
+> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png "Figure 3: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
-> Figure 2: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](functions.llms.md#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-critical-points.llms.md#def-local-maximizer) at $0$.
+> Figure 3: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](functions.llms.md#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-critical-points.llms.md#def-local-maximizer) at $0$.
 
 > **NOTE:**
 >
@@ -669,10 +729,10 @@ Last modified: 2026-11-02 14:33:46 (PST)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f3888a887d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884ed8d090>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7f3888a88910>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884ed8cf50>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -683,13 +743,13 @@ Last modified: 2026-11-02 14:33:46 (PST)
 >
 > ## R
 >
-> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png "Figure 3: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png "Figure 4: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
 > ## Python
 >
-> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png "Figure 3: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png "Figure 4: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
-> Figure 3: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](functions.llms.md#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-critical-points.llms.md#def-stationary-point).
+> Figure 4: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](functions.llms.md#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-critical-points.llms.md#def-stationary-point).
 
 > **NOTE:**
 >
@@ -857,11 +917,11 @@ Last modified: 2026-11-02 14:33:46 (PST)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f388894fd90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f884c8987d0>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7f388894fed0>
+> #> <matplotlib.lines.Line2D object at 0x7f884c898910>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7f3888884050>
+> #> <matplotlib.lines.Line2D object at 0x7f884c898a50>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -871,13 +931,13 @@ Last modified: 2026-11-02 14:33:46 (PST)
 >
 > ## R
 >
-> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png "Figure 4: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png "Figure 5: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
 >
 > ## Python
 >
-> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png "Figure 4: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png "Figure 5: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
 >
-> Figure 4: The factor $\rho(s)$ of [Example 16](#exm-best-constant-step) against the [step length](#def-gradient-descent) $s$ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](sets.llms.md#def-bound) on the [error](optimization-newton.llms.md#def-iterate-error) shrinks only where the curve is below $1$ (dotted).
+> Figure 5: The factor $\rho(s)$ of [Example 16](#exm-best-constant-step) against the [step length](#def-gradient-descent) $s$ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](sets.llms.md#def-bound) on the [error](optimization-newton.llms.md#def-iterate-error) shrinks only where the curve is below $1$ (dotted).
 
 > **NOTE:**
 >

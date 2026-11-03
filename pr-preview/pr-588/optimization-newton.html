@@ -108,7 +108,10 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-afcad65dfbb5ead0cc214e61744c3688.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
-<link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -216,26 +219,6 @@ cookieconsent.run({
 })();
 </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -245,16 +228,6 @@ div.callout-proof.callout-style-default .callout-header {
 div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -266,16 +239,6 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-exr.callout {
   border-left-color: #FFA500;
 }
@@ -286,25 +249,15 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cnj.callout {
   border-left-color: #558B2F;
@@ -316,6 +269,36 @@ div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -325,6 +308,26 @@ div.callout-solution.callout-style-default .callout-header {
 div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-tbl.callout {
   border-left-color: #757575;
@@ -1154,7 +1157,7 @@ window.Quarto = {
 <!-- gha-preview-page-banner:start -->
 <div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
     <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~1% of content changed).
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~14% of content changed).
         <br>
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
@@ -1175,7 +1178,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-02 14:33:46 (PST)</p>
+      <p class="date">Last modified: 2026-11-02 15:14:20 (PST)</p>
     </div>
   </div>
   
@@ -1570,6 +1573,94 @@ q(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vph
 \end{aligned}
 \]</span></p>
 <p>(<a href="#exm-newton-method" class="quarto-xref">Example&nbsp;2</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-fig no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nm_x_nm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">4</span>, length.out <span class="op">=</span> <span class="fl">301</span><span class="op">)</span></span>
+<span><span class="va">nm_f_nm</span> <span class="op">&lt;-</span> <span class="va">nm_x_nm</span><span class="op">^</span><span class="fl">3</span> <span class="op">/</span> <span class="fl">3</span> <span class="op">-</span> <span class="fl">4</span> <span class="op">*</span> <span class="va">nm_x_nm</span></span>
+<span><span class="va">nm_f0_nm</span> <span class="op">&lt;-</span> <span class="fl">2.5</span><span class="op">^</span><span class="fl">3</span> <span class="op">/</span> <span class="fl">3</span> <span class="op">-</span> <span class="fl">4</span> <span class="op">*</span> <span class="fl">2.5</span></span>
+<span><span class="va">nm_q_nm</span> <span class="op">&lt;-</span> <span class="va">nm_f0_nm</span> <span class="op">+</span> <span class="fl">2.25</span> <span class="op">*</span> <span class="op">(</span><span class="va">nm_x_nm</span> <span class="op">-</span> <span class="fl">2.5</span><span class="op">)</span> <span class="op">+</span> <span class="fl">2.5</span> <span class="op">*</span> <span class="op">(</span><span class="va">nm_x_nm</span> <span class="op">-</span> <span class="fl">2.5</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span></span>
+<span><span class="va">nm_q_step_nm</span> <span class="op">&lt;-</span> <span class="va">nm_f0_nm</span> <span class="op">+</span> <span class="fl">2.25</span> <span class="op">*</span> <span class="op">(</span><span class="fl">2.05</span> <span class="op">-</span> <span class="fl">2.5</span><span class="op">)</span> <span class="op">+</span> <span class="fl">2.5</span> <span class="op">*</span> <span class="op">(</span><span class="fl">2.05</span> <span class="op">-</span> <span class="fl">2.5</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span></span>
+<span><span class="va">nm_f_min_nm</span> <span class="op">&lt;-</span> <span class="fl">2</span><span class="op">^</span><span class="fl">3</span> <span class="op">/</span> <span class="fl">3</span> <span class="op">-</span> <span class="fl">4</span> <span class="op">*</span> <span class="fl">2</span></span>
+<span><span class="va">nm_curve_nm</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">nm_x_nm</span>, y <span class="op">=</span> <span class="va">nm_f_nm</span><span class="op">)</span></span>
+<span><span class="va">nm_model_nm</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">nm_x_nm</span>, y <span class="op">=</span> <span class="va">nm_q_nm</span><span class="op">)</span></span>
+<span><span class="va">nm_start_nm</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2.5</span>, y <span class="op">=</span> <span class="va">nm_f0_nm</span><span class="op">)</span></span>
+<span><span class="va">nm_step_nm</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2.05</span>, y <span class="op">=</span> <span class="va">nm_q_step_nm</span><span class="op">)</span></span>
+<span><span class="va">nm_min_nm</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2</span>, y <span class="op">=</span> <span class="va">nm_f_min_nm</span><span class="op">)</span></span>
+<span><span class="va">nm_aes_nm</span> <span class="op">&lt;-</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
+<span><span class="va">nm_ylim_nm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">8</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">nm_curve_nm</span>, <span class="va">nm_aes_nm</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"#0072B2"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">nm_model_nm</span>, colour <span class="op">=</span> <span class="st">"#D55E00"</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">nm_start_nm</span>, colour <span class="op">=</span> <span class="st">"#D55E00"</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">nm_step_nm</span>, colour <span class="op">=</span> <span class="st">"#D55E00"</span>, size <span class="op">=</span> <span class="fl">3</span>, shape <span class="op">=</span> <span class="fl">17</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">nm_min_nm</span>, colour <span class="op">=</span> <span class="st">"#0072B2"</span>, size <span class="op">=</span> <span class="fl">3</span>, shape <span class="op">=</span> <span class="fl">15</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>ylim <span class="op">=</span> <span class="va">nm_ylim_nm</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"x"</span>, y <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>nm_x_fn <span class="op">=</span> np.linspace(<span class="fl">0.5</span>, <span class="dv">4</span>, <span class="dv">301</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>nm_f_fn <span class="op">=</span> <span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> <span class="dv">3</span> <span class="op">-</span> <span class="dv">4</span> <span class="op">*</span> x</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>nm_q_fn <span class="op">=</span> <span class="kw">lambda</span> x: nm_f_fn(<span class="fl">2.5</span>) <span class="op">+</span> <span class="fl">2.25</span> <span class="op">*</span> (x <span class="op">-</span> <span class="fl">2.5</span>) <span class="op">+</span> <span class="fl">2.5</span> <span class="op">*</span> (x <span class="op">-</span> <span class="fl">2.5</span>) <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>ax.plot(nm_x_fn, nm_f_fn(nm_x_fn), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>ax.plot(nm_x_fn, nm_q_fn(nm_x_fn), <span class="st">"--"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>ax.plot(<span class="fl">2.5</span>, nm_f_fn(<span class="fl">2.5</span>), <span class="st">"o"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, markersize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>ax.plot(<span class="fl">2.05</span>, nm_q_fn(<span class="fl">2.05</span>), <span class="st">"^"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>, markersize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>ax.plot(<span class="dv">2</span>, nm_f_fn(<span class="dv">2</span>), <span class="st">"s"</span>, color<span class="op">=</span><span class="st">"#0072B2"</span>, markersize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">8</span>, <span class="dv">0</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; (-8.0, 0.0)</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"value"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-newton-model" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-newton-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The <a href="./algebra-exponentials.html#def-cubic-polynomial">cubic</a> <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span> (blue) and its <a href="#def-quadratic-model">quadratic model</a> at <span class="math inline">\(x = 2.5\)</span> (dashed). The model touches <span class="math inline">\(f\)</span> at <span class="math inline">\(2.5\)</span> (circle), and its <a href="./algebra-basics.html#def-global-minimizer">minimizer</a> <span class="math inline">\(2.05\)</span> (triangle) is the <a href="#def-iterate">iterate</a> after one <a href="#def-newton-step">Newton step</a> from <span class="math inline">\(2.5\)</span> (<a href="#exm-newton-model" class="quarto-xref">Example&nbsp;4</a>). It lies close to the minimizer <span class="math inline">\(2\)</span> of <span class="math inline">\(f\)</span> (blue marker).
+</figcaption><div aria-describedby="fig-newton-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></mark></li>
+<li class="nav-item" role="presentation"><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></mark></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="optimization-newton_files/figure-html/newton-model-r-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example&nbsp;4). It lies close to the minimizer 2 of f (blue marker)."><img src="optimization-newton_files/figure-html/newton-model-r-1.png" class="img-fluid figure-img" alt="Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic." width="576"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="optimization-newton_files/figure-html/newton-model-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example&nbsp;4). It lies close to the minimizer 2 of f (blue marker)."><img src="optimization-newton_files/figure-html/newton-model-python-1.png" class="img-fluid figure-img" alt="Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic." width="576"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
 </div>
 </div>
 </div>
@@ -2931,25 +3022,25 @@ document.querySelectorAll("main table").forEach(function (t) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Newton's Method"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization-newton-slides.html</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>py_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"numpy"</span>, <span class="st">"pandas"</span>, <span class="st">"matplotlib"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_require</span>(py_packages)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>[]{#sec-newton-method}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_optimization_newton.qmd &gt;}}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Newton's Method"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization-newton-slides.html</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>py_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"numpy"</span>, <span class="st">"pandas"</span>, <span class="st">"matplotlib"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_require</span>(py_packages)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>[]{#sec-newton-method}</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_optimization_newton.qmd &gt;}}</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
@@ -2964,7 +3055,38 @@ document.querySelectorAll("main table").forEach(function (t) {
       &nbsp;
     </div>
   </div>
-</footer><script src="dependency-graph.js" defer=""></script>
+</footer><script src="dependency-graph.js" defer=""></script><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 </body></html>

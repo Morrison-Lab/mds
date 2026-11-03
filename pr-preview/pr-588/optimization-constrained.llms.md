@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:33:46 (PST)
+Last modified: 2026-11-02 15:14:20 (PST)
 
 > **NOTE:**
 >
@@ -321,6 +321,81 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 >   \end{aligned}$$
 >
 > Geometrically, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ is the point of the line nearest the origin, at distance $1$.
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> ll_theta_ll <- seq(0, 2 * pi, length.out = 201)
+> ll_radii_ll <- c(0.5, 1, 1.5)
+> ll_circles_ll <- expand.grid(theta = ll_theta_ll, radius = ll_radii_ll)
+> ll_circles_ll$x1 <- ll_circles_ll$radius * cos(ll_circles_ll$theta)
+> ll_circles_ll$x2 <- ll_circles_ll$radius * sin(ll_circles_ll$theta)
+> ll_line_x1_ll <- c(-0.5, 2)
+> ll_line_x2_ll <- (5 - 3 * ll_line_x1_ll) / 4
+> ll_line_ll <- tibble::tibble(x1 = ll_line_x1_ll, x2 = ll_line_x2_ll)
+> ll_point_ll <- tibble::tibble(x1 = 0.6, x2 = 0.8)
+> ll_arrow_ll <- tibble::tibble(x = 0, y = 0, xend = 0.6, yend = 0.8)
+> ll_aes_ll <- ggplot2::aes(x1, x2)
+> ll_aes_circle_ll <- ggplot2::aes(x1, x2, group = radius)
+> ll_aes_arrow_ll <- ggplot2::aes(x = x, y = y, xend = xend, yend = yend)
+> ll_head_length_ll <- grid::unit(0.15, "inches")
+> ll_head_ll <- grid::arrow(length = ll_head_length_ll)
+> ll_lim_ll <- c(-1.6, 2)
+> ggplot2::ggplot() +
+>   ggplot2::geom_path(
+>     data = ll_circles_ll, mapping = ll_aes_circle_ll, colour = "grey60"
+>   ) +
+>   ggplot2::geom_line(
+>     data = ll_line_ll, mapping = ll_aes_ll, colour = "#0072B2"
+>   ) +
+>   ggplot2::geom_segment(
+>     data = ll_arrow_ll, mapping = ll_aes_arrow_ll,
+>     colour = "#D55E00", arrow = ll_head_ll
+>   ) +
+>   ggplot2::geom_point(
+>     data = ll_point_ll, mapping = ll_aes_ll, colour = "#D55E00", size = 3
+>   ) +
+>   ggplot2::coord_fixed(xlim = ll_lim_ll, ylim = ll_lim_ll) +
+>   ggplot2::labs(x = "x1", y = "x2")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> ll_theta_ll = np.linspace(0, 2 * np.pi, 201)
+> fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+> for ll_radius_ll in (0.5, 1, 1.5):
+>     ax.plot(ll_radius_ll * np.cos(ll_theta_ll),
+>             ll_radius_ll * np.sin(ll_theta_ll), color="grey")
+> ll_x1_ll = np.array([-0.5, 2])
+> ax.plot(ll_x1_ll, (5 - 3 * ll_x1_ll) / 4, color="#0072B2")
+> ax.annotate("", xy=(0.6, 0.8), xytext=(0, 0),
+>             arrowprops={"arrowstyle": "->", "color": "#D55E00"})
+> ax.plot(0.6, 0.8, "o", color="#D55E00", markersize=8)
+> ax.set_xlim(-1.6, 2)
+> #> (-1.6, 2.0)
+> ax.set_ylim(-1.6, 2)
+> #> (-1.6, 2.0)
+> ax.set_aspect("equal")
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-r-1.png)](optimization-constrained_files/figure-html/lagrange-line-r-1.png "Figure 1: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 5), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
+>
+> ## Python
+>
+> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-python-1.png)](optimization-constrained_files/figure-html/lagrange-line-python-1.png "Figure 1: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 5), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
+>
+> Figure 1: The [level curves](vector-calculus.llms.md#def-level-curve) $x_1^2 + x_2^2 = c$ of the [objective](#def-objective-function) (circles) and the constraint line $3 x_1 + 4 x_2 = 5$. The line touches the circle $c = 1$ at the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 5](#exm-qp-equality)), and the arrow from the origin to that point points along the [gradient](vector-calculus.llms.md#def-vector-derivative) there, which is perpendicular to the line.
 
 > **NOTE:**
 >

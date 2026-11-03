@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:33:46 (PST)
+Last modified: 2026-11-02 15:14:20 (PST)
 
 > **NOTE:**
 >
@@ -181,6 +181,72 @@ Last modified: 2026-11-02 14:33:46 (PST)
 > \end{aligned}$$
 >
 > ([Example 2](#exm-newton-method)).
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> nm_x_nm <- seq(0.5, 4, length.out = 301)
+> nm_f_nm <- nm_x_nm^3 / 3 - 4 * nm_x_nm
+> nm_f0_nm <- 2.5^3 / 3 - 4 * 2.5
+> nm_q_nm <- nm_f0_nm + 2.25 * (nm_x_nm - 2.5) + 2.5 * (nm_x_nm - 2.5)^2
+> nm_q_step_nm <- nm_f0_nm + 2.25 * (2.05 - 2.5) + 2.5 * (2.05 - 2.5)^2
+> nm_f_min_nm <- 2^3 / 3 - 4 * 2
+> nm_curve_nm <- tibble::tibble(x = nm_x_nm, y = nm_f_nm)
+> nm_model_nm <- tibble::tibble(x = nm_x_nm, y = nm_q_nm)
+> nm_start_nm <- tibble::tibble(x = 2.5, y = nm_f0_nm)
+> nm_step_nm <- tibble::tibble(x = 2.05, y = nm_q_step_nm)
+> nm_min_nm <- tibble::tibble(x = 2, y = nm_f_min_nm)
+> nm_aes_nm <- ggplot2::aes(x, y)
+> nm_ylim_nm <- c(-8, 0)
+> ggplot2::ggplot(nm_curve_nm, nm_aes_nm) +
+>   ggplot2::geom_line(colour = "#0072B2") +
+>   ggplot2::geom_line(
+>     data = nm_model_nm, colour = "#D55E00", linetype = "dashed"
+>   ) +
+>   ggplot2::geom_point(data = nm_start_nm, colour = "#D55E00", size = 3) +
+>   ggplot2::geom_point(
+>     data = nm_step_nm, colour = "#D55E00", size = 3, shape = 17
+>   ) +
+>   ggplot2::geom_point(
+>     data = nm_min_nm, colour = "#0072B2", size = 3, shape = 15
+>   ) +
+>   ggplot2::coord_cartesian(ylim = nm_ylim_nm) +
+>   ggplot2::labs(x = "x", y = "value")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> nm_x_fn = np.linspace(0.5, 4, 301)
+> nm_f_fn = lambda x: x**3 / 3 - 4 * x
+> nm_q_fn = lambda x: nm_f_fn(2.5) + 2.25 * (x - 2.5) + 2.5 * (x - 2.5) ** 2
+> fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
+> ax.plot(nm_x_fn, nm_f_fn(nm_x_fn), color="#0072B2")
+> ax.plot(nm_x_fn, nm_q_fn(nm_x_fn), "--", color="#D55E00")
+> ax.plot(2.5, nm_f_fn(2.5), "o", color="#D55E00", markersize=8)
+> ax.plot(2.05, nm_q_fn(2.05), "^", color="#D55E00", markersize=8)
+> ax.plot(2, nm_f_fn(2), "s", color="#0072B2", markersize=8)
+> ax.set_ylim(-8, 0)
+> #> (-8.0, 0.0)
+> ax.set_xlabel("x")
+> ax.set_ylabel("value")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic.](optimization-newton_files/figure-html/newton-model-r-1.png)](optimization-newton_files/figure-html/newton-model-r-1.png "Figure 1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example 4). It lies close to the minimizer 2 of f (blue marker).")
+>
+> ## Python
+>
+> [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic.](optimization-newton_files/figure-html/newton-model-python-1.png)](optimization-newton_files/figure-html/newton-model-python-1.png "Figure 1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example 4). It lies close to the minimizer 2 of f (blue marker).")
+>
+> Figure 1: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ (blue) and its [quadratic model](#def-quadratic-model) at $x = 2.5$ (dashed). The model touches $f$ at $2.5$ (circle), and its [minimizer](algebra-basics.llms.md#def-global-minimizer) $2.05$ (triangle) is the [iterate](#def-iterate) after one [Newton step](#def-newton-step) from $2.5$ ([Example 4](#exm-newton-model)). It lies close to the minimizer $2$ of $f$ (blue marker).
 
 > **NOTE:**
 >
