@@ -92,6 +92,38 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_thm-distributive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-distributive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-substitution-logic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-substitution-logic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-negate-conditional.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-negate-conditional.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_cor-conditional-as-or.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-conditional-as-or.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-quantifier.qmd >}}
 
 {{< slidebreak >}}

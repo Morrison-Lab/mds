@@ -1,0 +1,14 @@
+:::{#exm-negate-conditional}
+#### Negating "if prime, then odd"
+<!-- no-figure: a rewording of one sentence; nothing to plot -->
+
+Let $n$ be an [integer](number-systems.qmd#def-integers),
+and let $P$ be "$n$ is [prime](number-systems.qmd#def-prime)"
+and $Q$ be "$n$ is [odd](number-systems.qmd#def-odd)".
+By [negating a conditional](#thm-negate-conditional),
+the negation of "if $n$ is prime, then $n$ is odd"
+is "$n$ is prime, and $n$ is not odd".
+For $n = 2$, the negation is true,
+so the conditional is false.
+
+:::
