@@ -1,6 +1,7 @@
 :::{.proof}
 Let $x \in A$.
-By @def-argmax, $x \in \argmax_{x \in A} c\,g(x)$ if and only if
+By @def-argmax, $x \in \argmax_{x \in A} c\,g(x)$
+[if and only if](proof-writing.qmd#def-iff)
 $c\,g(a) \le c\,g(x)$ for every $a \in A$.
 
 Suppose $g(a) \le g(x)$.
@@ -9,9 +10,9 @@ If $g(a) < g(x)$, then $c\,g(a) < c\,g(x)$ by @thm-mult-ineq.
 Either way, $c\,g(a) \le c\,g(x)$.
 
 Conversely, suppose $c\,g(a) \le c\,g(x)$.
-Apply the same argument with the positive number $1/c$ in place of $c$:
+Apply the same reasoning with $1/c > 0$ in place of $c$:
 this gives $g(a) \le g(x)$.
 
 So $c\,g(a) \le c\,g(x)$ for every $a \in A$ if and only if $g(a) \le g(x)$ for every $a \in A$.
-Hence the two argmax sets contain the same inputs $x$.
+Hence $x$ is in the [argmax](#def-argmax) of $c\,g$ exactly when it is in the argmax of $g$.
 :::
