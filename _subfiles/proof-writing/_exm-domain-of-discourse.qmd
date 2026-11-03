@@ -1,0 +1,14 @@
+:::{#exm-domain-of-discourse}
+#### The domain changes the truth value
+<!-- no-figure: two short cases; nothing to plot -->
+
+Let $P(x)$ be the [predicate](#def-predicate) "$x^2 = 2$".
+If its [domain of discourse](#def-domain-of-discourse) is the [real numbers](number-systems.qmd#def-real-numbers),
+then $\exists x, P(x)$ is true,
+since $x = \sqrt{2}$ works.
+If its domain of discourse is the [integers](number-systems.qmd#def-integers),
+then $\exists x, P(x)$ is false,
+since the [squares](algebra.qmd#def-square) of the [integers](number-systems.qmd#def-integers) are $0, 1, 4, 9, \ldots$,
+and none of them is $2$.
+
+:::

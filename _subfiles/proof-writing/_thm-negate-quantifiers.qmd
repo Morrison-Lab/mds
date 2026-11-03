@@ -1,5 +1,5 @@
 :::{#thm-negate-quantifiers}
-#### Negating a quantifier
+#### De Morgan's laws for quantifiers
 
 For a [set](#def-set) $S$ and a [predicate](#def-predicate) $P(x)$
 whose [domain of discourse](#def-domain-of-discourse) is $S$:
@@ -18,11 +18,13 @@ $$
 ::: proof
 
 1. By the definition of the [universal quantifier](#def-universal-quantifier),
-   $\forall x \in S, P(x)$ is false exactly when $P(x)$ is false for at least one $x$ in $S$.
+   $\forall x \in S, P(x)$ is false
+   exactly when $P(x)$ is false for at least one $x$ in $S$.
    By the definition of the [existential quantifier](#def-existential-quantifier),
    that is exactly when $\exists x \in S, \neg P(x)$ is true.
 2. By the definition of the existential quantifier,
-   $\exists x \in S, P(x)$ is false exactly when $P(x)$ is false for every $x$ in $S$.
+   $\exists x \in S, P(x)$ is false
+   exactly when $P(x)$ is false for every $x$ in $S$.
    By the definition of the universal quantifier,
    that is exactly when $\forall x \in S, \neg P(x)$ is true.
 

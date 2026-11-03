@@ -11,15 +11,20 @@ then $P_1, \ldots, P_k$ all have the same truth value. <!-- check-term-links: al
 
 ::: proof
 
-Suppose one of the [propositions](#def-proposition), $P_i$, is true.
-By modus ponens ([common rules of inference](#thm-inference-rules)),
-$P_i \Rightarrow P_{i+1}$ makes $P_{i+1}$ true,
-then $P_{i+1} \Rightarrow P_{i+2}$ makes $P_{i+2}$ true,
-and so on around the cycle,
-with $P_k \Rightarrow P_1$ taking the truth of $P_k$ back to $P_1$,
-until every [proposition](#def-proposition) in the list is true.
-So either all of $P_1, \ldots, P_k$ are true,
-or none of them is true, and then all of them are false.
+There are two cases.
+
+- None of $P_1, \ldots, P_k$ is true.
+  Then all of them are false,
+  so they all have the same truth value. <!-- check-term-links: allow -->
+- Some $P_i$ is true.
+  By the definition of [implies](#def-implies),
+  a true conditional with a true hypothesis has a true conclusion.
+  So $P_i \Rightarrow P_{i+1}$ makes $P_{i+1}$ true,
+  then $P_{i+1} \Rightarrow P_{i+2}$ makes $P_{i+2}$ true,
+  and so on around the cycle,
+  with $P_k \Rightarrow P_1$ carrying the truth of $P_k$ back to $P_1$.
+  After at most $k - 1$ steps,
+  every [proposition](#def-proposition) in the list is true.
 
 :::
 

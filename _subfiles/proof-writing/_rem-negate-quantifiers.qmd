@@ -1,0 +1,12 @@
+:::{#rem-negate-quantifiers}
+#### Why the two laws share a theorem
+
+The two laws in [De Morgan's laws for quantifiers](#thm-negate-quantifiers)
+are one rule seen from each side:
+negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$
+and moves the negation onto the [predicate](#def-predicate).
+They are stated together for the same reason as
+[De Morgan's laws for propositions](#thm-de-morgan-logic),
+which they extend from two propositions to a whole [set](#def-set) of them.
+
+:::
