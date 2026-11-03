@@ -14,11 +14,11 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:12:36 (PST)
+Last modified: 2026-11-02 16:04:44 (PST)
 
-## 0.1 Derivatives
+# 1 Derivatives
 
-### 0.1.1 Limits and derivatives
+## 1.1 Limits and derivatives
 
 > **NOTE:**
 >
@@ -236,7 +236,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > So $f''(2) = 12$, $f''(0) = 0$, and $f''(-1) = -6$.
 
-### 0.1.2 Derivative rules
+## 1.2 Derivative rules
 
 > **NOTE:**
 >
@@ -761,7 +761,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 > &= -\frac{1}{x^2}
 > \end{aligned}$$
 
-### 0.1.3 Studying a new function
+## 1.3 Studying a new function
 
 > **NOTE:**
 >
@@ -883,7 +883,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 > >
 > > Figure 1: The logistic function, its derivative and its logarithm
 
-### 0.1.4 Tangent lines
+## 1.4 Tangent lines
 
 > **NOTE:**
 >
@@ -908,7 +908,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > At $x = 1.1$ the tangent line has height $2(1.1) - 1 = 1.2$, close to the curve’s height $f(1.1) = 1.21$; the gap, $1.21 - 1.2 = 0.01$, is $(1.1 - 1)^2$.
 
-### 0.1.5 Linear approximation
+## 1.5 Linear approximation
 
 For a differentiable function $f$ and a small step $\varepsilon$,
 
@@ -1045,7 +1045,7 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 >
 > The approximation error is $|4.171593 - 4.171543| \approx 0.00005$, on the order of $(0.01)^2 = 10^{-4}$.
 
-### 0.1.6 Taylor series
+## 1.6 Taylor series
 
 > **NOTE:**
 >

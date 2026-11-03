@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:12:36 (PST)
+Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
@@ -250,7 +250,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > && \text{(definition of the dot product)}
 > \end{aligned}$$
 
-## 0.1 Special vectors
+# 1 Special vectors
 
 > **NOTE:**
 >
@@ -453,7 +453,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > &= 4 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3
 > \end{aligned}$$
 
-## 0.2 Orthogonality
+# 2 Orthogonality
 
 > **NOTE:**
 >

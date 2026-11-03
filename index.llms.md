@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:12:36 (PST)
+Last modified: 2026-11-02 16:04:44 (PST)
 
-## Welcome
+# Welcome
 
 > Math is not just a way of calculating numerical answers; it is a way of thinking, using clear definitions for concepts and rigorous logic to organize our thoughts and back up our assertions.
 
@@ -29,7 +29,7 @@ These notes collect the mathematics that data science courses assume: mathematic
 - [Optimization](optimization.llms.md): optimality conditions, Taylor approximations, convexity in several variables, Lagrange multipliers, Newton’s method, and gradient descent
 - [Proof Writing](proof-writing.llms.md): propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.llms.md#def-derivation)
 
-## Further reading
+# Further reading
 
 These resources cover related material.
 
@@ -45,7 +45,7 @@ These resources cover related material.
   - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) covers limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series, overlapping with our [calculus](calculus.llms.md) page.
   - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our [vector calculus](vector-calculus.llms.md) and [optimization](optimization.llms.md) pages.
 
-## Using these notes in another site
+# Using these notes in another site
 
 Course sites link to these pages by URL; they do not include this repository as a git submodule. A host site that keeps a copy of this repository at its root, named `mds`, can still include fragments with paths that start with `mds/`, for example `{{< include mds/_notation.qmd >}}`. This site includes its own fragments the same way, through a `mds` symlink that points at the repository root.
 
@@ -71,7 +71,7 @@ Each page is a thin wrapper around one or more fragments:
 
 Quarto resolves `@id` cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, `[text](notation.qmd#id)`.
 
-## References
+# References
 
 \[1\]
 

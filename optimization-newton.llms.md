@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:12:36 (PST)
+Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
@@ -128,7 +128,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 
 > **NOTE:**
 >
-> *Proof*. $\mathbf{H}$ is symmetric, by the definition of [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), and invertible ([positive definite inverse](linear-algebra-special-matrices.llms.md#thm-pd-inverse)), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*$ exists and $\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \in \mathbb{R}^p$, first
+> *Proof*. $\mathbf{H}$ is symmetric, by the definition of [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), and [invertible](linear-algebra-special-matrices.llms.md#thm-pd-inverse), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*$ exists and $\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \in \mathbb{R}^p$, first
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*
@@ -184,6 +184,72 @@ Last modified: 2026-11-02 14:12:36 (PST)
 
 > **NOTE:**
 >
+> Show code
+>
+> ``` downlit
+> nm_x_nm <- seq(0.5, 4, length.out = 301)
+> nm_f_nm <- nm_x_nm^3 / 3 - 4 * nm_x_nm
+> nm_f0_nm <- 2.5^3 / 3 - 4 * 2.5
+> nm_q_nm <- nm_f0_nm + 2.25 * (nm_x_nm - 2.5) + 2.5 * (nm_x_nm - 2.5)^2
+> nm_q_step_nm <- nm_f0_nm + 2.25 * (2.05 - 2.5) + 2.5 * (2.05 - 2.5)^2
+> nm_f_min_nm <- 2^3 / 3 - 4 * 2
+> nm_curve_nm <- tibble::tibble(x = nm_x_nm, y = nm_f_nm)
+> nm_model_nm <- tibble::tibble(x = nm_x_nm, y = nm_q_nm)
+> nm_start_nm <- tibble::tibble(x = 2.5, y = nm_f0_nm)
+> nm_step_nm <- tibble::tibble(x = 2.05, y = nm_q_step_nm)
+> nm_min_nm <- tibble::tibble(x = 2, y = nm_f_min_nm)
+> nm_aes_nm <- ggplot2::aes(x, y)
+> nm_ylim_nm <- c(-8, 0)
+> ggplot2::ggplot(nm_curve_nm, nm_aes_nm) +
+>   ggplot2::geom_line(colour = "#0072B2") +
+>   ggplot2::geom_line(
+>     data = nm_model_nm, colour = "#D55E00", linetype = "dashed"
+>   ) +
+>   ggplot2::geom_point(data = nm_start_nm, colour = "#D55E00", size = 3) +
+>   ggplot2::geom_point(
+>     data = nm_step_nm, colour = "#D55E00", size = 3, shape = 17
+>   ) +
+>   ggplot2::geom_point(
+>     data = nm_min_nm, colour = "#0072B2", size = 3, shape = 15
+>   ) +
+>   ggplot2::coord_cartesian(ylim = nm_ylim_nm) +
+>   ggplot2::labs(x = "x", y = "value")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> nm_x_fn = np.linspace(0.5, 4, 301)
+> nm_f_fn = lambda x: x**3 / 3 - 4 * x
+> nm_q_fn = lambda x: nm_f_fn(2.5) + 2.25 * (x - 2.5) + 2.5 * (x - 2.5) ** 2
+> fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
+> ax.plot(nm_x_fn, nm_f_fn(nm_x_fn), color="#0072B2")
+> ax.plot(nm_x_fn, nm_q_fn(nm_x_fn), "--", color="#D55E00")
+> ax.plot(2.5, nm_f_fn(2.5), "o", color="#D55E00", markersize=8)
+> ax.plot(2.05, nm_q_fn(2.05), "^", color="#D55E00", markersize=8)
+> ax.plot(2, nm_f_fn(2), "s", color="#0072B2", markersize=8)
+> ax.set_ylim(-8, 0)
+> #> (-8.0, 0.0)
+> ax.set_xlabel("x")
+> ax.set_ylabel("value")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic.](optimization-newton_files/figure-html/newton-model-r-1.png)](optimization-newton_files/figure-html/newton-model-r-1.png "Figure 1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example 4). It lies close to the minimizer 2 of f (blue marker).")
+>
+> ## Python
+>
+> [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic.](optimization-newton_files/figure-html/newton-model-python-1.png)](optimization-newton_files/figure-html/newton-model-python-1.png "Figure 1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example 4). It lies close to the minimizer 2 of f (blue marker).")
+>
+> Figure 1: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ (blue) and its [quadratic model](#def-quadratic-model) at $x = 2.5$ (dashed). The model touches $f$ at $2.5$ (circle), and its [minimizer](algebra-basics.llms.md#def-global-minimizer) $2.05$ (triangle) is the [iterate](#def-iterate) after one [Newton step](#def-newton-step) from $2.5$ ([Example 4](#exm-newton-model)). It lies close to the minimizer $2$ of $f$ (blue marker).
+
+> **NOTE:**
+>
 > **Definition 8 (Quadratic convergence)** A [sequence](functions.llms.md#def-sequence) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots$ in $\mathbb{R}^p$ that converges ([Definition 4](#def-vector-sequence-limit)) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ **converges quadratically** [\[4\]](#ref-wikipedia_rate_of_convergence) if there is a constant $C$ with
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} \le C\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{}^2
@@ -209,7 +275,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 > && \text{(the numerator is a perfect square)}
 > \end{aligned}$$
 >
-> So near $2$ the error is roughly squared and divided by $4$ at each step: the errors are $0.05$, then $0.00061$, then $0.000000093$, and $0.05^2 / (2 \cdot 2.05) \approx 0.00061$. The iterates converge quadratically ([Definition 8](#def-quadratic-convergence)): $C = \tfrac{1}{2}$ works for every $x^{(t)} \ge 1$, since then $\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}$, and every iterate from $2.5$ is at least $2$, since the identity makes $x^{(t+1)} - 2 \ge 0$ whenever $x^{(t)} > 0$. Zhou [\[1\]](#ref-zhou2024optim) states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.
+> So near $2$ the error is roughly squared and divided by $4$ at each step: the errors are $0.05$, then $0.00061$, then $0.000000093$, and $0.05^2 / (2 \cdot 2.05) \approx 0.00061$. The iterates converge quadratically ([Definition 8](#def-quadratic-convergence)): $C = \tfrac{1}{2}$ works for every $x^{(t)} \ge 1$, since then $\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}$, and every iterate from $2.5$ is at least $2$, since the identity makes $x^{(t+1)} - 2 \ge 0$ whenever $x^{(t)} > 0$. Zhou [\[1\]](#ref-zhou2024optim) states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which is not proved here.
 
 > **NOTE:**
 >
@@ -221,14 +287,14 @@ Last modified: 2026-11-02 14:12:36 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) for $\tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$,
+> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so the [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) applies to $\tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and the [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$:
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) &= \tfrac{1}{2} (2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \\
 > &= \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}};
 > \end{aligned}$$
 >
-> by [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic) with $\tfrac{1}{2} \mathbf{S}$ in place of $\mathbf{S}$, and because the gradient $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ of the linear term is constant ([constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector)), $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}$, which is invertible ([positive definite inverse](linear-algebra-special-matrices.llms.md#thm-pd-inverse)). So
+> by the [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic) with $\tfrac{1}{2} \mathbf{S}$ in place of $\mathbf{S}$, and because the [gradient](vector-calculus.llms.md#def-vector-derivative) $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ of the [linear](algebra-exponentials.llms.md#def-linear-function) [term](algebra-sums.llms.md#def-term) is [constant](vector-calculus.llms.md#def-constant-wrt-vector), $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}$, which is [invertible](linear-algebra-special-matrices.llms.md#thm-pd-inverse). So
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}

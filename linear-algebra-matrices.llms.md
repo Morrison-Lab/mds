@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:12:36 (PST)
+Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
@@ -41,7 +41,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > **Example 1 (Vectors, matrices and images as tensors)** A vector of length $p$ is a tensor of order $1$, and an $m \times n$ [matrix](#def-matrix) is a tensor of order $2$. A $28 \times 28$ grayscale image is a matrix: the entry $a_{ij}$ is the brightness of the pixel in row $i$ and column $j$. A $28 \times 28$ color image stores three numbers per pixel (red, green, blue), so it is an order-3 tensor with dimensions $28 \times 28 \times 3$, and $a_{ijc}$ is the value of color channel $c$ at the pixel in row $i$ and column $j$. It has $28 \cdot 28 \cdot 3 = 2352$ entries.
 
-## 0.1 Matrix transpose
+# 1 Matrix transpose
 
 > **NOTE:**
 >
@@ -58,7 +58,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > a $3 \times 2$ matrix. For instance, entry $(1, 2)$ of the transpose is $a_{21} = 4$.
 
-## 0.2 Matrix addition
+# 2 Matrix addition
 
 > **NOTE:**
 >
@@ -124,7 +124,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > $$\mathbf{A} + (-\mathbf{A}) = \mathbf{0}_{m \times n}$$
 
-## 0.3 Scalar multiplication
+# 3 Scalar multiplication
 
 > **NOTE:**
 >
@@ -140,7 +140,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 > &= \begin{bmatrix} 3 & -6 \\ 0 & 12 \end{bmatrix}.
 > \end{aligned}$$
 
-## 0.4 Matrix multiplication
+# 4 Matrix multiplication
 
 > **NOTE:**
 >
@@ -281,7 +281,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > The last two use the same two vectors and differ only in order, and they return objects of different kinds. Reading a transpose as decoration rather than as a shape change is the commonest way to lose track of an expression.
 
-## 0.5 Square and identity matrices
+# 5 Square and identity matrices
 
 > **NOTE:**
 >
@@ -346,7 +346,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > $$\mathbf{I}_m\,\mathbf{A} = \mathbf{A}$$
 
-## 0.6 Matrix-vector multiplication
+# 6 Matrix-vector multiplication
 
 > **NOTE:**
 >
@@ -390,7 +390,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > The vector $(1, 2)$ is not a solution: its first equation holds, since $1 + 2 \cdot 2 = 5$, but its second gives $3 \cdot 1 + 4 \cdot 2 = 11 \ne 6$.
 
-## 0.7 Linear and affine maps
+# 7 Linear and affine maps
 
 > **NOTE:**
 >
@@ -1005,7 +1005,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > Items 1, 2 and 5 are affine and items 3 and 4 are not, which is the split that matters: a *model* can be affine in its weights while the *quantity we minimize* is not. Squared error and the norm penalty are both curved in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, and that curvature is what makes fitting an optimization problem at all: there is always a downhill direction to follow. Curvature alone does not promise a *single* answer. The squared error of one observation is completely flat along a whole line of weight vectors, every one of which fits that observation exactly, and pinning down one of them is part of what the norm penalty is added for in week 3.
 
-## 0.8 Transposes of sums and products
+# 8 Transposes of sums and products
 
 > **NOTE:**
 >

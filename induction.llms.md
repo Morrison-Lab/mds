@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:12:36 (PST)
+Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
 > *Remark*. A [proof by induction](proof-writing.llms.md#def-proof-by-induction) proves a [proposition](proof-writing.llms.md#def-proposition) about every [integer](number-systems.llms.md#def-integers) from some starting integer on. A [sequence](functions.llms.md#def-sequence) defined by a rule on its earlier [terms](functions.llms.md#def-sequence-term) is the usual place to use it. This page defines such [sequences](functions.llms.md#def-sequence), then adds the stronger form, [strong induction](induction.llms.md#def-strong-induction), that they often need.
 
-## 0.1 Recursively defined sequences
+# 1 Recursively defined sequences
 
 > **NOTE:**
 >
@@ -33,7 +33,7 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > **Example 2 (The first Fibonacci numbers)** $F_3 = F_2 + F_1 = 1 + 1 = 2$, $F_4 = F_3 + F_2 = 2 + 1 = 3$, $F_5 = F_4 + F_3 = 3 + 2 = 5$, and $F_6 = F_5 + F_4 = 5 + 3 = 8$. So the [sequence](functions.llms.md#def-sequence) begins $1, 1, 2, 3, 5, 8, \ldots$
 
-## 0.2 Strong induction
+# 2 Strong induction
 
 > **NOTE:**
 >
@@ -79,11 +79,17 @@ Last modified: 2026-11-02 14:12:36 (PST)
 >
 > which is $P(n)$. By [Definition 3](#def-strong-induction), $F_n < 2^n$ for every $n \in \mathbb{N}$.
 
-## 0.3 Further reading
+# 3 Further reading
 
 - Velleman [\[4\]](#ref-velleman2019prove) is a structured introduction to proof techniques, including [proof by induction](proof-writing.llms.md#def-proof-by-induction).
 
-## References
+# Definitions on this page
+
+- [Definition 1 (Recursively defined sequence)](#def-recursive-sequence)
+- [Definition 2 (Fibonacci sequence)](#def-fibonacci-sequence)
+- [Definition 3 (Proof by strong induction)](#def-strong-induction)
+
+# References
 
 \[1\]
 
@@ -100,11 +106,5 @@ Wikipedia contributors, “Mathematical induction — Wikipedia, the free encycl
 \[4\]
 
 D. J. Velleman, *How to prove it: A structured approach*, 3rd ed. Cambridge University Press, 2019. doi: [10.1017/9781108539890](https://doi.org/10.1017/9781108539890).
-
-# Definitions on this page
-
-- [Definition 1 (Recursively defined sequence)](#def-recursive-sequence)
-- [Definition 2 (Fibonacci sequence)](#def-fibonacci-sequence)
-- [Definition 3 (Proof by strong induction)](#def-strong-induction)
 
 Back to top

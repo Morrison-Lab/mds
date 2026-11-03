@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:12:36 (PST)
+Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
@@ -57,20 +57,111 @@ Last modified: 2026-11-02 14:12:36 (PST)
 > **Example 2 (One quasi-Newton step on a quadratic function)** Take $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{Q} = \begin{bmatrix} 4 & 1 \\ 1 & 3 \end{bmatrix}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, 2)}^{\top}$ ([Example 1](#exm-secant-condition)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathbf{H}^{(0)} = \mathbf{I}_2$. For a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial), the [step length](optimization-gradient-descent.llms.md#def-gradient-descent) that minimizes $f$ along a [direction](vector-calculus.llms.md#def-direction) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ is $\alpha = -\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} / {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$.
 >
 > ``` downlit
-> Q <- matrix(c(4, 1, 1, 3), nrow = 2)
+> q_entries <- c(4, 1, 1, 3)
+> Q <- matrix(q_entries, nrow = 2)
 > b <- c(1, 2)
-> f <- function(x) 0.5 * sum(x * (Q %*% x)) - sum(b * x)
-> grad <- function(x) drop(Q %*% x - b)
 > x0 <- c(0, 0)
 > H0 <- diag(2)
-> d <- -drop(H0 %*% grad(x0))
-> step <- -sum(grad(x0) * d) / drop(t(d) %*% Q %*% d)
+> q_x0 <- drop(Q %*% x0)
+> grad0 <- q_x0 - b
+> d <- -drop(H0 %*% grad0)
+> q_d <- drop(Q %*% d)
+> step <- -sum(grad0 * d) / sum(d * q_d)
 > x1 <- x0 + step * d
+> q_x1 <- drop(Q %*% x1)
+> grad1 <- q_x1 - b
+> f0 <- 0.5 * sum(x0 * q_x0) - sum(b * x0)
+> f1 <- 0.5 * sum(x1 * q_x1) - sum(b * x1)
 > s <- x1 - x0
-> y <- grad(x1) - grad(x0)
+> y <- grad1 - grad0
 > ```
 >
-> The step length is 0.25, which moves the [iterate](optimization-newton.llms.md#def-iterate) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = (0.25, 0.5)$ and lowers $f$ from 0 to -0.625. The difference of the [gradients](vector-calculus.llms.md#def-vector-derivative), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)} = (1.5, 1.75)$, is $\mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}$ ([the secant condition](#def-secant-condition) for a quadratic function).
+> The step length is 0.25, which moves the [iterate](optimization-newton.llms.md#def-iterate) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = (0.25, 0.5)$ and lowers $f$ from 0 to -0.625. The difference of the [gradients](vector-calculus.llms.md#def-vector-derivative), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)} = (1.5, 1.75)$, is $\mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}$, which is the [secant condition](#def-secant-condition) for a quadratic function.
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> qn_x_qn <- seq(-0.4, 0.6, length.out = 101)
+> qn_y_qn <- seq(-0.2, 1, length.out = 101)
+> qn_grid_qn <- tidyr::expand_grid(x = qn_x_qn, y = qn_y_qn)
+> qn_gx_qn <- qn_grid_qn$x
+> qn_gy_qn <- qn_grid_qn$y
+> qn_quad_qn <- 0.5 * (4 * qn_gx_qn^2 + 2 * qn_gx_qn * qn_gy_qn + 3 * qn_gy_qn^2)
+> qn_lin_qn <- qn_gx_qn + 2 * qn_gy_qn
+> qn_grid_qn$z <- qn_quad_qn - qn_lin_qn
+> qn_star_qn <- c(1, 7) / 11
+> qn_start_qn <- tibble::tibble(x = 0, y = 0)
+> qn_next_qn <- tibble::tibble(x = 0.25, y = 0.5)
+> qn_min_qn <- tibble::tibble(x = qn_star_qn[1], y = qn_star_qn[2])
+> qn_step_qn <- tibble::tibble(x = 0, y = 0, xend = 0.25, yend = 0.5)
+> qn_rest_qn <- tibble::tibble(
+>   x = 0.25, y = 0.5, xend = qn_star_qn[1], yend = qn_star_qn[2]
+> )
+> qn_len_qn <- grid::unit(0.15, "inches")
+> qn_arrow_qn <- grid::arrow(length = qn_len_qn)
+> qn_aes_qn <- ggplot2::aes(x, y)
+> qn_seg_qn <- ggplot2::aes(xend = xend, yend = yend)
+> ggplot2::ggplot(qn_grid_qn, qn_aes_qn) +
+>   ggplot2::geom_contour(ggplot2::aes(z = z), colour = "grey70", bins = 12) +
+>   ggplot2::geom_segment(
+>     data = qn_step_qn, mapping = qn_seg_qn, colour = "#0072B2",
+>     arrow = qn_arrow_qn
+>   ) +
+>   ggplot2::geom_segment(
+>     data = qn_rest_qn, mapping = qn_seg_qn, colour = "#D55E00",
+>     linetype = "dashed", arrow = qn_arrow_qn
+>   ) +
+>   ggplot2::geom_point(data = qn_start_qn, colour = "#0072B2", size = 3) +
+>   ggplot2::geom_point(data = qn_next_qn, colour = "#D55E00", size = 3) +
+>   ggplot2::geom_point(
+>     data = qn_min_qn, colour = "#0072B2", size = 3, shape = 15
+>   ) +
+>   ggplot2::coord_equal() +
+>   ggplot2::labs(x = "first coordinate", y = "second coordinate")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> qn_x_ax = np.linspace(-0.4, 0.6, 101)
+> qn_y_ax = np.linspace(-0.2, 1, 101)
+> qn_xx_ax, qn_yy_ax = np.meshgrid(qn_x_ax, qn_y_ax)
+> qn_quad_ax = 0.5 * (4 * qn_xx_ax**2 + 2 * qn_xx_ax * qn_yy_ax + 3 * qn_yy_ax**2)
+> qn_z_ax = qn_quad_ax - qn_xx_ax - 2 * qn_yy_ax
+> qn_star_ax = np.array([1, 7]) / 11
+> fig, ax = plt.subplots(figsize=(6, 4.5), layout="constrained")
+> ax.contour(
+>     qn_xx_ax, qn_yy_ax, qn_z_ax, levels=12, colors="0.7",
+>     negative_linestyles="solid",
+> )
+> ax.annotate("", xy=(0.25, 0.5), xytext=(0, 0), arrowprops={"arrowstyle": "->", "color": "#0072B2"})
+> ax.annotate(
+>     "", xy=qn_star_ax, xytext=(0.25, 0.5),
+>     arrowprops={"arrowstyle": "->", "color": "#D55E00", "linestyle": "dashed"},
+> )
+> ax.plot(0, 0, "o", color="#0072B2", markersize=8)
+> ax.plot(0.25, 0.5, "o", color="#D55E00", markersize=8)
+> ax.plot(qn_star_ax[0], qn_star_ax[1], "s", color="#0072B2", markersize=8)
+> ax.set_aspect("equal")
+> ax.set_xlabel("first coordinate")
+> ax.set_ylabel("second coordinate")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Contour plot of the quadratic function f with level curves that are tilted ellipses, centred near the point (0.09, 0.64). A blue circle at the origin marks the starting point, and a solid blue arrow runs from it to a vermilion circle at (0.25, 0.5), the iterate after one step. A dashed vermilion arrow runs from that iterate to a blue square at (0.09, 0.64), the minimizer, which is the ellipses' centre.](optimization-quasi-newton_files/figure-html/quasi-newton-step-fig-r-1.png)](optimization-quasi-newton_files/figure-html/quasi-newton-step-fig-r-1.png "Figure 1: Level curves of the quadratic function f from Example 2. The first step (solid arrow) moves from \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (blue circle) to \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} (vermilion circle) in the steepest-descent direction, because \mathbf{H}^{(0)} = \mathbf{I}_2. The minimizer (blue square) is the centre of the ellipses.  The dashed arrow shows the step that remains. A quasi-Newton matrix that approximates \mathbf{Q}^{-1} would aim the next step at that centre rather than along the gradient.")
+>
+> ## Python
+>
+> [![Contour plot of the quadratic function f with level curves that are tilted ellipses, centred near the point (0.09, 0.64). A blue circle at the origin marks the starting point, and a solid blue arrow runs from it to a vermilion circle at (0.25, 0.5), the iterate after one step. A dashed vermilion arrow runs from that iterate to a blue square at (0.09, 0.64), the minimizer, which is the ellipses' centre.](optimization-quasi-newton_files/figure-html/quasi-newton-step-fig-python-1.png)](optimization-quasi-newton_files/figure-html/quasi-newton-step-fig-python-1.png "Figure 1: Level curves of the quadratic function f from Example 2. The first step (solid arrow) moves from \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (blue circle) to \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} (vermilion circle) in the steepest-descent direction, because \mathbf{H}^{(0)} = \mathbf{I}_2. The minimizer (blue square) is the centre of the ellipses.  The dashed arrow shows the step that remains. A quasi-Newton matrix that approximates \mathbf{Q}^{-1} would aim the next step at that centre rather than along the gradient.")
+>
+> Figure 1: [Level curves](vector-calculus.llms.md#def-level-set) of the [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial) $f$ from [Example 2](#exm-quasi-newton-step). The first step (solid arrow) moves from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (blue circle) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}$ (vermilion circle) in the [steepest-descent](optimization-gradient-descent.llms.md#def-gradient-descent) [direction](vector-calculus.llms.md#def-direction), because $\mathbf{H}^{(0)} = \mathbf{I}_2$. The [minimizer](algebra-basics.llms.md#def-global-minimizer) (blue square) is the centre of the ellipses. The dashed arrow shows the step that remains. A [quasi-Newton](#def-quasi-newton-method) [matrix](linear-algebra-matrices.llms.md#def-matrix) that approximates $\mathbf{Q}^{-1}$ would aim the next step at that centre rather than along the [gradient](vector-calculus.llms.md#def-vector-derivative).
 
 > **NOTE:**
 >
@@ -124,19 +215,18 @@ Last modified: 2026-11-02 14:12:36 (PST)
 > **Example 4 (L-BFGS applies the update without forming the matrix)** Continue [Example 3](#exm-bfgs-step) with $m = 1$ stored pair $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})$ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{I}_2$. Below, $\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})$ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
 >
 > ``` downlit
-> g1 <- grad(x1)
+> g1 <- grad1
 > alpha <- rho * sum(s * g1)
 > q <- g1 - alpha * y
 > r <- drop(H0 %*% q)
 > beta <- rho * sum(y * r)
 > r <- r + s * (alpha - beta)
-> rbind(from_vectors = r, from_matrix = drop(H1 %*% g1))
-> #>                [,1]   [,2]
-> #> from_vectors 0.4375 -0.375
-> #> from_matrix  0.4375 -0.375
+> h1_g1 <- H1 %*% g1
+> from_matrix <- drop(h1_g1)
+> tibble::tibble(from_vectors = r, from_matrix = from_matrix)
 > ```
 >
-> The two rows agree to within 5.6e-17, although the first never forms the matrix. BFGS stores a dense $p \times p$ matrix and spends about $p^2$ operations per iteration; L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$ operations per iteration, so it remains usable when $p$ is in the millions.
+> The two columns agree to within 5.6e-17, although the first never forms the matrix. BFGS stores a dense $p \times p$ matrix and spends about $p^2$ operations per iteration; L-BFGS stores $2m$ vectors with $p$ entries and spends about $m p$ operations per iteration, so it remains usable when $p$ is in the millions.
 
 # Definitions on this page
 

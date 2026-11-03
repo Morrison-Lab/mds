@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 14:12:36 (PST)
+Last modified: 2026-11-02 16:04:44 (PST)
 
-## 0.1 Integration
+# 1 Integration
 
 Integration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability.
 
@@ -17,7 +17,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > - [Intro to Integral Calculus](https://www.youtube.com/watch?v=PNdKPsiaPhU&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [What Integral Calculus Is](https://www.youtube.com/watch?v=O7TuAb_jHTs&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-### 0.1.1 Antiderivatives
+## 1.1 Antiderivatives
 
 > **NOTE:**
 >
@@ -141,7 +141,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > - [The Integral Calculus Rules](https://www.youtube.com/watch?v=d-pyobAQ0iI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Indefinite Integral Exercises](https://www.youtube.com/watch?v=PoTWa8X_EpI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-### 0.1.2 Regularity Conditions
+## 1.2 Regularity Conditions
 
 > **NOTE:**
 >
@@ -573,7 +573,7 @@ $$\text{differentiable on } [a, b] \;\Rightarrow\; \text{continuous on } [a, b] 
 >
 > So $S_{10} = 0.55$, $S_{100} = 0.505$, $S_{1000} = 0.5005$, and $S_n \to \frac{1}{2}$ as $n \to \infty$. By [Theorem 4](#thm-riemann-general), $\int_0^1 x\,dx = \frac{1}{2}$.
 
-### 0.1.3 Fundamental Theorem of Calculus
+## 1.3 Fundamental Theorem of Calculus
 
 > **NOTE:**
 >
