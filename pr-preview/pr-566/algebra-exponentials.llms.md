@@ -14,9 +14,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:44:45 (PST)
+Last modified: 2026-11-02 17:05:17 (PST)
 
-## 0.1 Polynomials
+# 1 Polynomials
 
 > **NOTE:**
 >
@@ -144,7 +144,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 > - The [constant](#def-constant-function) [monomial](#def-monomial) $1$ has degree $0$.
 > - With one variable, the monomial $x^n$ has degree $n$, which is the [degree](#def-polynomial-degree) of the one-term [polynomial](#def-polynomial) $f(x) = x^n$.
 
-## 0.2 Affine and linear functions of one variable
+# 2 Affine and linear functions of one variable
 
 > **NOTE:**
 >
@@ -272,7 +272,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > *Remark 3* (Elementary algebra calls $m x + b$ “linear”). Elementary algebra usually calls $f(x) = m x + b$ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case $b = 0$, because that is the sense used in linear algebra, where a [linear map](linear-algebra-matrices.llms.md#def-linear-map) must send $0$ to $0$ ([theorem](linear-algebra-matrices.llms.md#thm-linear-map-zero)).
 
-## 0.3 Limits of sequences
+# 3 Limits of sequences
 
 > **NOTE:**
 >
@@ -304,7 +304,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > **Definition 20 (Divergence of a sequence to infinity)** A [sequence](functions.llms.md#def-sequence) $(a_n)$ of real numbers **diverges to** $\infty$, written $\lim_{n \to \infty} a_n = \infty$, if for every real number $M$ there is a natural number $N$ such that $a_n > M$ for every $n \ge N$.
 
-## 0.4 Series
+# 4 Series
 
 > **NOTE:**
 >
@@ -385,7 +385,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > If some partial sum $s_N$ is $\infty$, then $s_n = \infty$ for every $n \ge N$, so the limit is $\infty$. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](number-systems.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](#def-convergent-sequence) to a finite number [\[10\]](#ref-wikipedia_monotone_convergence_theorem). If it is not bounded above, then for every number $M$ some $s_N$ exceeds $M$, and so does every later $s_n \ge s_N$; the limit is $\infty$.
 
-## 0.5 Exponentials and Logarithms
+# 5 Exponentials and Logarithms
 
 > **NOTE:**
 >
@@ -475,13 +475,13 @@ Last modified: 2026-11-02 13:44:45 (PST)
 
 > **NOTE:**
 >
-> **Definition 28 (Logarithm)** Let $b$ be a positive [real number](number-systems.llms.md#def-real-numbers) with $b \ne 1$. For every real number $x > 0$, the **logarithm** of $x$ to the [base](algebra-basics.llms.md#def-power-base) $b$ [\[14\]](#ref-wikipedia_logarithm), written $\log_b x$, is the real number $y$ with $b^y = x$ ([Definition 27](#def-real-power)).
+> **Definition 28 (Logarithm)** Let $b$ be a positive [real number](number-systems.llms.md#def-real-numbers) with $b \ne 1$. For every real number $x > 0$, the **logarithm** of $x$ to the [base](algebra-basics.llms.md#def-power-base) $b$ [\[14\]](#ref-wikipedia_logarithm), written $\log_b x$, is the real number $y$ for which the [real power](#def-real-power) $b^y$ is $x$.
 
 > **NOTE:**
 >
 > **Example 19 (Logarithms to other bases)**  
 >
-> - $\log_2 8 = 3$ ([Definition 28](#def-logarithm)), because $2^3 = 8$.
+> - $\log_2 8 = 3$ by the [definition of the logarithm](#def-logarithm), because $2^3 = 8$.
 > - $\log_{10} 0.01 = -2$, because $10^{-2} = 0.01$.
 >
 > The [graph](functions.llms.md#def-graph) of $\log_2 x$ passes through $(8, 3)$, the first of these two facts.

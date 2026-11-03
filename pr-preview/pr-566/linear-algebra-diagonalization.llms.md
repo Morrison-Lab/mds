@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:44:45 (PST)
+Last modified: 2026-11-02 17:05:17 (PST)
 
-## 0.1 Similarity and diagonalization
+# 1 Similarity and diagonalization
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[1\]](#ref-zhou2024eig), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). These notes take eigenvalues to be real numbers ([Definition 16 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)), so the source’s complex eigenvalues are left out, and eigenvalues are characterized through null spaces rather than through the characteristic polynomial. Only the source’s material on similarity, diagonalization and the basic eigenvalue properties is adapted; its characteristic polynomial and algebraic multiplicity, its trace and determinant identities, and the part of its section on symmetric matrices that builds bases of the column space and null space from eigenvectors are left out. The rest of that section is covered by [Theorem 13 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral) and [Theorem 14 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-symmetric-eigenvectors-orthogonal). Its result that eigenvalues of orthogonal matrices have modulus $1$ appears here in the real form $\pm 1$. Three other parts of the source are not part of this section:
+> This section is adapted from Zhou [\[1\]](#ref-zhou2024eig), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). These notes take eigenvalues to be real numbers ([Definition 16 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)), so the source’s complex eigenvalues are left out, and eigenvalues are characterized through null spaces rather than through the characteristic polynomial. Only the source’s material on similarity, diagonalization and the basic eigenvalue properties is adapted; its characteristic polynomial and algebraic multiplicity, its trace and determinant identities, and the part of its section on symmetric matrices that builds bases of the column space and null space from eigenvectors are left out. The rest of that section is covered by [Theorem 13 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral) and [Theorem 14 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-symmetric-eigenvectors-orthogonal). Its result that eigenvalues of orthogonal matrices have modulus $1$ appears here in the real form $\pm 1$. Three other parts of the source are not part of this section:
 >
 > - its statement that the eigenvalues of a lower triangular matrix are also its diagonal entries ([Theorem 4](#thm-eigen-triangular) states the upper triangular case)
 > - its three further examples of matrices with geometric multiplicity smaller than algebraic multiplicity ([Example 2](#exm-eigenspace) gives one nilpotent example)
@@ -644,11 +644,11 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > For $k = 2$ this gives $\tfrac{1}{2} \begin{bmatrix} 10 & 8 \\ 8 & 10 \end{bmatrix} = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$, which matches $\mathbf{A}^2$ in [Example 5](#exm-eigen-shift-power).
 
-## 0.2 Gram matrices, Schur complements and Cholesky
+# 2 Gram matrices, Schur complements and Cholesky
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[5\]](#ref-zhou2024pd), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already ([Theorem 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-definite-eigenvalues)). These parts of the source are left out:
+> This section is adapted from Zhou [\[5\]](#ref-zhou2024pd), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already ([Theorem 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-definite-eigenvalues)). These parts of the source are left out:
 >
 > - its covariance test, which needs probability
 > - its material on minimization

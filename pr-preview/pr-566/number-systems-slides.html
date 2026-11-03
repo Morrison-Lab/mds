@@ -356,13 +356,13 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 13:44:45 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 17:05:17 (PST)</p>
 </section><section class="slide level2"><div class="proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>Probability and statistics count with the integers and natural numbers and measure with the real numbers. This page defines those number systems. It also defines the words that sort their members: even and odd integers, and rational and irrational real numbers.</p>
+<p><span class="proof-title"><em>Remark</em>. </span>Probability and statistics count with the integers and natural numbers and measure with the real numbers. This page defines those number systems. It also defines the words that sort their members: even and odd integers, and rational and irrational real numbers. Finally, it defines divisibility, <a href="#/def-prime">primes</a> and congruence, and the <a href="#/def-factorial">factorial</a> of a <a href="#/def-nonnegative-integers">non-negative integer</a>.</p>
 </div>
 </section><section id="sec-notation-naturals" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Natural numbers</h2>
-<div id="exr-naturals-below-three" class="theorem exercise">
+</section><section class="slide level2"><div id="exr-naturals-below-three" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Which numbers are natural?)</strong></span> List the elements of the set <span class="math inline">\(\mathopen{}\left\{n \in \mathbb{N}: n &lt; 3\right\}\mathclose{}\)</span>. Is your answer the same in every textbook?</p>
 </div>
 </section><section class="slide level2"><div id="sol-naturals-below-three" class="proof solution">
@@ -453,14 +453,73 @@
 </div>
 </div>
 </div>
-</section><section id="sec-notation-reals" class="slide level2" data-number="2"><h2>
-<span class="header-section-number">2</span> Rational, real, and irrational numbers</h2>
-<div id="def-rational-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Rational numbers)</strong></span> A <strong>rational number</strong> <span class="citation" data-cites="wikipedia_rational_number"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> is a number that can be written as a fraction <span class="math inline">\(\frac{a}{b}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(b \ne 0\)</span>. The set of rational numbers is written <span class="math inline">\(\mathbb{Q}\)</span>:</p>
+</section><section class="slide level2"><div id="def-factorial" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Factorial)</strong></span> For a <a href="#/def-nonnegative-integers">non-negative integer</a> <span class="math inline">\(n\)</span>, the <strong>factorial</strong> of <span class="math inline">\(n\)</span> <span class="citation" data-cites="wikipedia_factorial"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span>, written <span class="math inline">\({{n}!}\)</span>, is <span class="math inline">\(1 \cdot 2 \cdots n\)</span>, the <a href="#/def-natural-numbers">natural numbers</a> from 1 to <span class="math inline">\(n\)</span> multiplied together. For <span class="math inline">\(n = 0\)</span> there is nothing to multiply, and <span class="math inline">\({{0}!} = 1\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-factorial" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (Factorials)</strong></span> &nbsp;</p>
+<ul>
+<li>
+<span class="math inline">\({{3}!} = 1 \cdot 2 \cdot 3 = 6\)</span>.</li>
+<li>
+<span class="math inline">\({{4}!} = 1 \cdot 2 \cdot 3 \cdot 4 = 24\)</span>.</li>
+<li>
+<span class="math inline">\({{0}!} = 1\)</span>, by the <a href="#/def-factorial">definition of the factorial</a>.</li>
+</ul>
+<!-- no-figure: three single values -->
+</div>
+</section><section id="sec-number-systems-divisibility" class="slide level2" data-number="2"><h2>
+<span class="header-section-number">2</span> Divisibility, primes and congruence</h2>
+</section><section class="slide level2"><div id="def-divides" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Divides)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> each be an <a href="#/def-integers">integer</a>. We say that <span class="math inline">\(a\)</span> <strong>divides</strong> <span class="math inline">\(b\)</span>, written <span class="math inline">\(a \mid b\)</span>, if <span class="math inline">\(b = a c\)</span> for some integer <span class="math inline">\(c\)</span>. When <span class="math inline">\(a\)</span> does not divide <span class="math inline">\(b\)</span>, we write <span class="math inline">\(a \nmid b\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-divides" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Divisors and non-divisors)</strong></span> &nbsp;</p>
+<ul>
+<li>
+<span class="math inline">\(3\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(12\)</span>, <span class="math inline">\(3 \mid 12\)</span>, because <span class="math inline">\(12 = 3 \cdot 4\)</span> and <span class="math inline">\(4\)</span> is an <a href="#/def-integers">integer</a>.</li>
+<li>
+<span class="math inline">\(5 \nmid 12\)</span>, because <span class="math inline">\(5 \cdot 2 = 10 &lt; 12 &lt; 15 = 5 \cdot 3\)</span>, so no integer <span class="math inline">\(c\)</span> has <span class="math inline">\(5 c = 12\)</span>.</li>
+<li>Every integer <span class="math inline">\(a\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(0\)</span>, because <span class="math inline">\(0 = a \cdot 0\)</span>.</li>
+</ul>
+<!-- no-figure: three single divisibility facts -->
+</div>
+</section><section class="slide level2"><div id="def-prime" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Prime number)</strong></span> An <a href="#/def-integers">integer</a> <span class="math inline">\(n \ge 2\)</span> is <strong>prime</strong> if no <a href="#/def-positive-integer">positive integer</a> other than <span class="math inline">\(1\)</span> and <span class="math inline">\(n\)</span> <a href="#/def-divides">divides</a> it <span class="citation" data-cites="wikipedia_prime_number"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-prime" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Primes and non-primes)</strong></span> &nbsp;</p>
+<ul>
+<li>
+<span class="math inline">\(7\)</span> is <a href="#/def-prime">prime</a>: none of <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span> and <span class="math inline">\(6\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(7\)</span>, and no <a href="#/def-integers">integer</a> above <span class="math inline">\(7\)</span> does, so its only positive divisors are <span class="math inline">\(1\)</span> and <span class="math inline">\(7\)</span>.</li>
+<li>
+<span class="math inline">\(9\)</span> is not prime, because <span class="math inline">\(3\)</span> divides <span class="math inline">\(9\)</span>.</li>
+<li>
+<span class="math inline">\(1\)</span> is not prime, because the definition requires <span class="math inline">\(n \ge 2\)</span>.</li>
+</ul>
+<!-- no-figure: three single numbers -->
+</div>
+</section><section class="slide level2"><div id="def-congruence" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Congruence modulo <span class="math inline">\(n\)</span>)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be <a href="#/def-integers">integers</a>, and let <span class="math inline">\(n\)</span> be a <a href="#/def-positive-integer">positive integer</a>. We say that <span class="math inline">\(a\)</span> is <strong>congruent to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(n\)</span></strong>, written <span class="math inline">\(a \equiv b \pmod{n}\)</span>, if <span class="math inline">\(n\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(a - b\)</span>, written <span class="math inline">\(n \mid (a - b)\)</span>, <span class="citation" data-cites="wikipedia_modular_arithmetic"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>. When <span class="math inline">\(a\)</span> is not congruent to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(n\)</span>, we write <span class="math inline">\(a \not\equiv b \pmod{n}\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-congruence" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (Clock arithmetic)</strong></span> &nbsp;</p>
+<ul>
+<li>
+<span class="math inline">\(17\)</span> is <a href="#/def-congruence">congruent to <span class="math inline">\(5\)</span> modulo <span class="math inline">\(12\)</span></a>, <span class="math inline">\(17 \equiv 5 \pmod{12}\)</span>, because <span class="math inline">\(17 - 5 = 12\)</span> and <span class="math inline">\(12 \mid 12\)</span>. On a 12-hour clock, hour 17 is 5 o’clock.</li>
+<li>
+<span class="math inline">\(17 \not\equiv 4 \pmod{12}\)</span>, because <span class="math inline">\(17 - 4 = 13\)</span> and <span class="math inline">\(12 \nmid 13\)</span>.</li>
+</ul>
+<!-- no-figure: two single congruences -->
+</div>
+</section><section id="sec-notation-reals" class="slide level2" data-number="3"><h2>
+<span class="header-section-number">3</span> Rational, real, and irrational numbers</h2>
+</section><section class="slide level2"><div id="def-rational-numbers" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Rational numbers)</strong></span> A <strong>rational number</strong> <span class="citation" data-cites="wikipedia_rational_number"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is a number that can be written as a fraction <span class="math inline">\(\frac{a}{b}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(b \ne 0\)</span>. The set of rational numbers is written <span class="math inline">\(\mathbb{Q}\)</span>:</p>
 <p><span class="math display">\[\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\{\frac{a}{b} : a \in \mathbb{Z},\ b \in \mathbb{Z},\ b \ne 0\right\}\mathclose{}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-rational-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (Rational numbers)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 8 (Rational numbers)</strong></span> &nbsp;</p>
 <ul>
 <li>
 <span class="math inline">\(\frac{3}{4}\)</span> is rational, with <span class="math inline">\(a = 3\)</span> and <span class="math inline">\(b = 4\)</span>.</li>
@@ -472,29 +531,29 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-real-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Real numbers)</strong></span> A <strong>real number</strong> <span class="citation" data-cites="wikipedia_real_number"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span> is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Real numbers)</strong></span> A <strong>real number</strong> <span class="citation" data-cites="wikipedia_real_number"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written <span class="math inline">\(\mathbb{R}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-real-numbers-working-definition" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (A working definition). </span><a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;9</a> is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. <span class="citation" data-cites="rudin1976principles">Rudin <a href="#/references" role="doc-biblioref" onclick="">[6]</a>, Appendix to Chapter 1</span> constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, <span class="math inline">\(0.999\ldots\)</span> and <span class="math inline">\(1.000\ldots\)</span> are the same real number, <span class="math inline">\(1\)</span>.</p>
+<p><span class="proof-title"><em>Remark 1</em> (A working definition). </span><a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;13</a> is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. <span class="citation" data-cites="rudin1976principles">Rudin <a href="#/references" role="doc-biblioref" onclick="">[9]</a>, Appendix to Chapter 1</span> constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, <span class="math inline">\(0.999\ldots\)</span> and <span class="math inline">\(1.000\ldots\)</span> are the same real number, <span class="math inline">\(1\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-real-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (Real numbers)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 9 (Real numbers)</strong></span> &nbsp;</p>
 <ul>
 <li>
 <span class="math inline">\(3\)</span>, <span class="math inline">\(-0.5\)</span>, and <span class="math inline">\(\frac{1}{3} = 0.333\ldots\)</span> are real numbers.</li>
 <li>
 <span class="math inline">\(\pi = 3.14159\ldots\)</span> is a real number.</li>
-<li>Every rational number (<a href="#/def-rational-numbers" class="quarto-xref">Definition&nbsp;8</a>) is a real number, so <span class="math inline">\(\mathbb{N}\subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\)</span>.</li>
+<li>Every rational number (<a href="#/def-rational-numbers" class="quarto-xref">Definition&nbsp;12</a>) is a real number, so <span class="math inline">\(\mathbb{N}\subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\)</span>.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-floor" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Floor)</strong></span> The <strong>floor</strong> <span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span> of a real number (<a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;9</a>) <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_floor_ceiling"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is the largest integer (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) that is at most <span class="math inline">\(x\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Floor)</strong></span> The <strong>floor</strong> <span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span> of a <a href="#/def-real-numbers">real number</a> <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_floor_ceiling"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span> is the largest <a href="#/def-integers">integer</a> that is at most <span class="math inline">\(x\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-floor" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Floors)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 10 (Floors)</strong></span> &nbsp;</p>
 <ul>
 <li>
-<span class="math inline">\(\mathopen{}\left\lfloor 2.7\right\rfloor\mathclose{} = 2\)</span> (<a href="#/def-floor" class="quarto-xref">Definition&nbsp;10</a>).</li>
+<span class="math inline">\(\mathopen{}\left\lfloor 2.7\right\rfloor\mathclose{} = 2\)</span>, by the <a href="#/def-floor">definition of the floor</a>.</li>
 <li>
 <span class="math inline">\(\mathopen{}\left\lfloor 3\right\rfloor\mathclose{} = 3\)</span>, because <span class="math inline">\(3\)</span> is already an <a href="#/def-integers">integer</a>.</li>
 <li>
@@ -525,15 +584,15 @@
 </div>
 </div>
 </section><section class="slide level2"><div id="def-irrational-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Irrational numbers)</strong></span> An <strong>irrational number</strong> <span class="citation" data-cites="wikipedia_irrational_number"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> is a real number (<a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;9</a>) that is not rational (<a href="#/def-rational-numbers" class="quarto-xref">Definition&nbsp;8</a>).</p>
+<p><span class="theorem-title"><strong>Definition 15 (Irrational numbers)</strong></span> An <strong>irrational number</strong> <span class="citation" data-cites="wikipedia_irrational_number"><a href="#/references" role="doc-biblioref" onclick="">[11]</a></span> is a real number (<a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;13</a>) that is not rational (<a href="#/def-rational-numbers" class="quarto-xref">Definition&nbsp;12</a>).</p>
 </div>
 </section><section class="slide level2 smaller scrollable" id="references"><div id="exm-irrational-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Irrational numbers)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 11 (Irrational numbers)</strong></span> &nbsp;</p>
 <ul>
 <li>
-<span class="math inline">\(\sqrt{2} = 1.41421\ldots\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a> of <span class="math inline">\(2\)</span>, is irrational: no fraction of integers <span class="math inline">\(\frac{a}{b}\)</span> squares to <span class="math inline">\(2\)</span> <span class="citation" data-cites="wikipedia_square_root_of_2"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span>.</li>
+<span class="math inline">\(\sqrt{2} = 1.41421\ldots\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a> of <span class="math inline">\(2\)</span>, is irrational: no fraction of integers <span class="math inline">\(\frac{a}{b}\)</span> squares to <span class="math inline">\(2\)</span> <span class="citation" data-cites="wikipedia_square_root_of_2"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span>.</li>
 <li>
-<span class="math inline">\(\pi = 3.14159\ldots\)</span> is irrational <span class="citation" data-cites="wikipedia_proof_that_pi_is_irrational"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>.</li>
+<span class="math inline">\(\pi = 3.14159\ldots\)</span> is irrational <span class="citation" data-cites="wikipedia_proof_that_pi_is_irrational"><a href="#/references" role="doc-biblioref" onclick="">[13]</a></span>.</li>
 <li>
 <span class="math inline">\(1.5\)</span> is not irrational, because <span class="math inline">\(1.5 = \frac{3}{2}\)</span> is rational.</li>
 </ul>
@@ -742,37 +801,52 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <div class="csl-right-inline">Wikipedia contributors, <span>“Natural number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Natural_number">https://en.wikipedia.org/wiki/Natural_number</a>
 </div>
 </div>
-<div id="ref-wikipedia_rational_number" class="csl-entry" role="listitem">
+<div id="ref-wikipedia_factorial" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Factorial — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Factorial">https://en.wikipedia.org/wiki/Factorial</a>
+</div>
+</div>
+<div id="ref-wikipedia_prime_number" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Prime number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Prime_number">https://en.wikipedia.org/wiki/Prime_number</a>
+</div>
+</div>
+<div id="ref-wikipedia_modular_arithmetic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Modular arithmetic — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Modular_arithmetic">https://en.wikipedia.org/wiki/Modular_arithmetic</a>
+</div>
+</div>
+<div id="ref-wikipedia_rational_number" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Rational number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Rational_number">https://en.wikipedia.org/wiki/Rational_number</a>
 </div>
 </div>
 <div id="ref-wikipedia_real_number" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div>
+<div class="csl-left-margin">[8] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Real number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Real_number">https://en.wikipedia.org/wiki/Real_number</a>
 </div>
 </div>
 <div id="ref-rudin1976principles" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div>
+<div class="csl-left-margin">[9] </div>
 <div class="csl-right-inline">W. Rudin, <em>Principles of mathematical analysis</em>, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.</div>
 </div>
 <div id="ref-wikipedia_floor_ceiling" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[7] </div>
+<div class="csl-left-margin">[10] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Floor and ceiling functions — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Floor_and_ceiling_functions">https://en.wikipedia.org/wiki/Floor_and_ceiling_functions</a>
 </div>
 </div>
 <div id="ref-wikipedia_irrational_number" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[8] </div>
+<div class="csl-left-margin">[11] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Irrational number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Irrational_number">https://en.wikipedia.org/wiki/Irrational_number</a>
 </div>
 </div>
 <div id="ref-wikipedia_square_root_of_2" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[9] </div>
+<div class="csl-left-margin">[12] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Square root of 2 — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Square_root_of_2">https://en.wikipedia.org/wiki/Square_root_of_2</a>
 </div>
 </div>
 <div id="ref-wikipedia_proof_that_pi_is_irrational" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[10] </div>
+<div class="csl-left-margin">[13] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Proof that pi is irrational — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational">https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational</a>
 </div>
 </div>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:44:45 (PST)
+Last modified: 2026-11-02 17:05:17 (PST)
 
 > **NOTE:**
 >
@@ -21,13 +21,13 @@ The measure notes are split across these pages:
 
 A link to a section, theorem or definition on this page from before the split goes on to the page that now holds it.
 
-## 1 Further reading
+# 1 Further reading
 
 - Billingsley [\[1\]](#ref-billingsley1995probability) develops measure theory and builds probability on it. Its early chapters define $\sigma$-algebras, measures, and their basic properties.
 - Folland [\[2\]](#ref-folland1999real) is a graduate text on measure and integration; its first chapters treat $\sigma$-algebras and measures.
 - Gut [\[3\]](#ref-gut2013) is a graduate course in probability that opens with a chapter on introductory measure theory.
 
-## References
+# References
 
 \[1\]
 

@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:44:45 (PST)
+Last modified: 2026-11-02 17:05:17 (PST)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -231,7 +231,7 @@ Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphan
 > - [Advanced Partial-Derivative Exercises](https://www.youtube.com/watch?v=WFmUDiABfUI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Partial Derivative Notation](https://www.youtube.com/watch?v=kIKVHguEpvA&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-## 0.1 Checking a gradient by its shape
+# 1 Checking a gradient by its shape
 
 The gradient always has the same shape as the input it is taken with respect to, because it holds exactly one partial derivative per component of that input:
 
@@ -1361,7 +1361,7 @@ See Felippa [\[12\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 >
 > *Proof*. This is the solution to [Exercise 7](#exr-gradient-of-linear), worked in [Solution 7](#sol-gradient-of-linear), where $m = 2$, $n = 3$, and the entries of $A$ are given. The same argument works for every $A$: each $W_{ij}$ appears in exactly one term, multiplied by $A_{ij}$, so $\frac{\partial g}{\partial W_{ij}} = A_{ij}$.
 
-## 0.2 Second partial derivatives and the Hessian
+# 2 Second partial derivatives and the Hessian
 
 > **NOTE:**
 >
@@ -1820,7 +1820,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 > &= \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}.
 > \end{aligned}$$
 
-## 0.3 Further reading
+# 3 Further reading
 
 - Marsden and Tromba [\[17\]](#ref-marsden2013vector) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.
 
@@ -1835,7 +1835,33 @@ See also the [Linear Algebra and Vector Calculus further reading](#sec-additiona
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)](https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html)
 - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.
 
-## References
+# Definitions on this page
+
+- [Definition 1 (Partial derivative)](#def-partial-derivative)
+- [Definition 2 (Vector derivative, gradient)](#def-vector-derivative)
+- [Definition 3 (Direction)](#def-direction)
+- [Definition 4 (Level set)](#def-level-set)
+- [Definition 5 (Level curve)](#def-level-curve)
+- [Definition 6 (Row-vector derivative)](#def-row-vector-derivative)
+- [Definition 7 (Derivative of a vector-valued function)](#def-vector-valued-derivative)
+- [Definition 8 (Denominator layout)](#def-denominator-layout)
+- [Definition 9 (Jacobian matrix)](#def-jacobian-matrix)
+- [Definition 10 (Numerator layout)](#def-numerator-layout)
+- [Definition 11 (Constant)](#def-constant-wrt-vector)
+- [Definition 12 (Residual vector and residuals)](#def-residual)
+- [Definition 13 (Squared error)](#def-squared-error)
+- [Definition 14 (Residual sum of squares)](#def-residual-sum-of-squares)
+- [Definition 15 (Matrix derivative (gradient))](#def-matrix-derivative)
+- [Definition 16 (Open ball)](#def-ball)
+- [Definition 17 (Closed ball)](#def-closed-ball)
+- [Definition 18 (Unit ball)](#def-unit-ball)
+- [Definition 19 (Second partial derivative)](#def-second-partial-derivative)
+- [Definition 20 (Mixed partial derivative)](#def-mixed-partial-derivative)
+- [Definition 21 (Hessian matrix)](#def-hessian)
+- [Definition 22 (Continuity at a point in several variables)](#def-continuous-several)
+- [Definition 23 (Continuity on a set in several variables)](#def-continuous-on)
+
+# References
 
 \[1\]
 
@@ -1908,31 +1934,5 @@ J. E. Marsden and A. Tromba, *Vector calculus*, 6th ed. Macmillan Learning, 2013
 \[18\]
 
 K. B. Petersen and M. S. Pedersen, “The matrix cookbook,” Technical University of Denmark, Nov. 2012. Available: <https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf>
-
-# Definitions on this page
-
-- [Definition 1 (Partial derivative)](#def-partial-derivative)
-- [Definition 2 (Vector derivative, gradient)](#def-vector-derivative)
-- [Definition 3 (Direction)](#def-direction)
-- [Definition 4 (Level set)](#def-level-set)
-- [Definition 5 (Level curve)](#def-level-curve)
-- [Definition 6 (Row-vector derivative)](#def-row-vector-derivative)
-- [Definition 7 (Derivative of a vector-valued function)](#def-vector-valued-derivative)
-- [Definition 8 (Denominator layout)](#def-denominator-layout)
-- [Definition 9 (Jacobian matrix)](#def-jacobian-matrix)
-- [Definition 10 (Numerator layout)](#def-numerator-layout)
-- [Definition 11 (Constant)](#def-constant-wrt-vector)
-- [Definition 12 (Residual vector and residuals)](#def-residual)
-- [Definition 13 (Squared error)](#def-squared-error)
-- [Definition 14 (Residual sum of squares)](#def-residual-sum-of-squares)
-- [Definition 15 (Matrix derivative (gradient))](#def-matrix-derivative)
-- [Definition 16 (Open ball)](#def-ball)
-- [Definition 17 (Closed ball)](#def-closed-ball)
-- [Definition 18 (Unit ball)](#def-unit-ball)
-- [Definition 19 (Second partial derivative)](#def-second-partial-derivative)
-- [Definition 20 (Mixed partial derivative)](#def-mixed-partial-derivative)
-- [Definition 21 (Hessian matrix)](#def-hessian)
-- [Definition 22 (Continuity at a point in several variables)](#def-continuous-several)
-- [Definition 23 (Continuity on a set in several variables)](#def-continuous-on)
 
 Back to top

@@ -348,6 +348,19 @@
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
+<!-- gha-preview-page-banner:start -->
+<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~1% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
+        <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 3px; border-radius: 2px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 3px; border-radius: 2px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
+<!-- gha-preview-page-banner:end -->
+
   <div class="reveal">
     <div class="slides">
 
@@ -356,10 +369,10 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 13:44:45 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 17:05:17 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-column-null-space" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Column space and null space</h2>
-<div id="def-column-space" class="theorem definition">
+</section><section class="slide level2"><div id="def-column-space" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Column space, range, image)</strong></span> The <strong>column space</strong> <span class="citation" data-cites="wikipedia_row_and_column_spaces"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is</p>
 <p><span class="math display">\[
 \mathcal{C}(\mathbf{A})
@@ -714,7 +727,7 @@
 </div>
 </section><section id="sec-rank-nullity" class="slide level2" data-number="2"><h2>
 <span class="header-section-number">2</span> Rank-nullity and rank factorization</h2>
-<div class="callout callout-note callout-titled callout-style-default">
+</section><section class="slide level2"><div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -723,7 +736,7 @@
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024rank">Zhou <a href="#/references" role="doc-biblioref" onclick="">[3]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). <a href="#/thm-rank-product-right" class="quarto-xref">Theorem&nbsp;11</a> and <a href="#/cor-rank-product-full-rank" class="quarto-xref">Corollary&nbsp;2</a> restore the source’s statements that a product has rank at most the rank of either factor, and that multiplying by a matrix of full column rank or by a matrix whose rank is its number of rows does not change the rank. These parts of the source are not part of this section:</p>
+<p>This section is adapted from <span class="citation" data-cites="zhou2024rank">Zhou <a href="#/references" role="doc-biblioref" onclick="">[3]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Section&nbsp;</mark> in Subspaces and Rank</a>). <a href="#/thm-rank-product-right" class="quarto-xref">Theorem&nbsp;11</a> and <a href="#/cor-rank-product-full-rank" class="quarto-xref">Corollary&nbsp;2</a> restore the source’s statements that a product has rank at most the rank of either factor, and that multiplying by a matrix of full column rank or by a matrix whose rank is its number of rows does not change the rank. These parts of the source are not part of this section:</p>
 <ul>
 <li>the names “full row rank”, “full rank” and “singular”</li>
 <li>the statement that <span class="math inline">\(\mathcal{C}(\mathbf{C}) \subseteq \mathcal{C}(\mathbf{A})\)</span> exactly when <span class="math inline">\(\mathbf{C} = \mathbf{A}\mathbf{B}\)</span> for some <span class="math inline">\(\mathbf{B}\)</span>, and its row space version, and the containment <span class="math inline">\(\mathcal{N}(\mathbf{B}) \subseteq \mathcal{N}(\mathbf{A}\mathbf{B})\)</span>

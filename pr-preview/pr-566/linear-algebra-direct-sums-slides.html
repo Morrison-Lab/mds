@@ -285,6 +285,19 @@
   </script>
 </head>
 <body class="quarto-light">
+<!-- gha-preview-page-banner:start -->
+<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~1% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
+        <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 3px; border-radius: 2px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 3px; border-radius: 2px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
+<!-- gha-preview-page-banner:end -->
+
   <div class="reveal">
     <div class="slides">
 
@@ -294,7 +307,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 13:44:45 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 17:05:17 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -302,6 +315,9 @@
 </section>
 <section id="sec-direct-sums" class="slide level2" data-number="1">
 <h2><span class="header-section-number">1</span> Sums and direct sums</h2>
+</section>
+<section class="slide level2">
+
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -311,7 +327,7 @@
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section, <a href="#/sec-orthogonal-complements" class="quarto-xref">Section&nbsp;2</a> and <a href="#/sec-fundamental-theorem" class="quarto-xref">Section&nbsp;3</a> are adapted from <span class="citation" data-cites="zhou2024orthproj">Zhou <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source proves that a subspace and its orthogonal complement together make up <span class="math inline">\(\mathbb{R}^p\)</span> by extending an orthonormal basis; the proof here uses the rank-nullity theorem (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>) instead. The source defines the orthogonal complement inside an ambient vector space <span class="math inline">\(V \subseteq \mathbb{R}^m\)</span>; here the ambient space is always <span class="math inline">\(\mathbb{R}^p\)</span>, which is all that the fundamental theorem and the projections need.</p>
+<p>This section, <a href="#/sec-orthogonal-complements" class="quarto-xref">Section&nbsp;2</a> and <a href="#/sec-fundamental-theorem" class="quarto-xref">Section&nbsp;3</a> are adapted from <span class="citation" data-cites="zhou2024orthproj">Zhou <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Section&nbsp;</mark> in Subspaces and Rank</a>). The source proves that a subspace and its orthogonal complement together make up <span class="math inline">\(\mathbb{R}^p\)</span> by extending an orthonormal basis; the proof here uses the rank-nullity theorem (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>) instead. The source defines the orthogonal complement inside an ambient vector space <span class="math inline">\(V \subseteq \mathbb{R}^m\)</span>; here the ambient space is always <span class="math inline">\(\mathbb{R}^p\)</span>, which is all that the fundamental theorem and the projections need.</p>
 </div>
 </div>
 </div>
@@ -663,6 +679,9 @@ a &amp;= b \\
 </section>
 <section id="sec-orthogonal-complements" class="slide level2" data-number="2">
 <h2><span class="header-section-number">2</span> Orthogonal complements</h2>
+</section>
+<section class="slide level2">
+
 <div id="thm-dot-linear" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (The dot product is linear in each slot)</strong></span> For vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span> and numbers <span class="math inline">\(a, b\)</span>,</p>
 <p><span class="math display">\[
@@ -1088,8 +1107,11 @@ a &amp;= c \\
 <p><span class="theorem-title"><strong>Example 17 (A set that is not a subspace does not come back)</strong></span> The one-element set <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> is not a subspace. Its orthogonal complement is the same as that of <span class="math inline">\(\mathcal{S}\)</span> in <a href="#/exm-double-complement" class="quarto-xref">Example&nbsp;16</a>, since both are defined by the single condition <span class="math inline">\(u_1 + u_2 = 0\)</span>, so <span class="math inline">\((\mathcal{X}^\perp)^\perp = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span>, which contains <span class="math inline">\((2, 2, 0) \notin \mathcal{X}\)</span>. <a href="#/thm-double-complement" class="quarto-xref">Theorem&nbsp;9</a> needs <span class="math inline">\(\mathcal{S}\)</span> to be a subspace.</p>
 </div>
 </section>
-<section id="sec-fundamental-theorem" class="slide level2 scrollable" data-number="3">
+<section id="sec-fundamental-theorem" class="slide level2" data-number="3">
 <h2><span class="header-section-number">3</span> The fundamental theorem of linear algebra</h2>
+</section>
+<section class="slide level2 scrollable">
+
 <div id="thm-fundamental-subspaces" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 10 (Fundamental theorem of linear algebra)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> matrix with <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r\)</span>. Then</p>
 <ol type="1">

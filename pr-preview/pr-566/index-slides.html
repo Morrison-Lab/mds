@@ -294,15 +294,19 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 13:44:45 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 17:05:17 (PST)</p>
 </section>
 <section id="welcome" class="slide level2 unnumbered">
 <h2>Welcome</h2>
+</section>
+<section class="slide level2">
+
 <blockquote>
 <p>Math is not just a way of calculating numerical answers; it is a way of thinking, using clear definitions for concepts and rigorous logic to organize our thoughts and back up our assertions.</p>
 </blockquote>
 <p><span class="citation" data-cites="cheng2025math">Cheng <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span></p>
-<p>These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:</p>
+<p>These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic.</p>
+<p>The first six topics are the foundations. Apart from a few remarks in Algebra that touch on calculus, they assume no calculus, so a course on discrete math, such as <a href="https://morrison-lab.github.io/mcs/">Math for Computer Science</a>, can build on them directly:</p>
 <ul>
 <li><a href="./notation.html">Notation</a>: common symbols</li>
 <li><a href="./number-systems.html">Number Systems</a>: the integers, natural numbers, even and odd numbers, and the rational, real, and irrational numbers</li>
@@ -314,16 +318,23 @@
 <li><a href="./indicator-functions.html">Indicator Functions</a>: set and predicate indicators, the Iverson bracket, the Kronecker delta, and their algebraic properties</li>
 </ul></li>
 <li><a href="./algebra.html">Algebra</a>: equalities and <a href="./proof-writing.html#def-inequality">inequalities</a>, infimum and supremum, percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms</li>
+<li><a href="./proof-writing.html">Proof Writing</a>: propositions, quantifiers, proofs and derivations, and showing and annotating every step of a <a href="./proof-writing.html#def-derivation">derivation</a></li>
+<li><a href="./induction.html">Induction and Recursion</a>: <a href="./induction.html#def-recursive-sequence">recursively defined sequences</a> and <a href="./induction.html#def-strong-induction">strong induction</a></li>
+</ul>
+<p>The remaining topics build on the foundations and on each other:</p>
+<ul>
 <li><a href="./measures.html">Measures</a>: <span class="math inline">\(\sigma\)</span>-algebras, <a href="./functions.html#def-finite-set">finite</a> and <a href="./measures-additivity.html#def-countable-additivity">countable additivity</a>, measures, and the counting measure</li>
 <li><a href="./calculus.html">Calculus</a>: derivative rules, antiderivatives, regularity conditions (the <a href="./calculus-integration.html#def-continuous">continuity</a>, <a href="./calculus-derivatives.html#def-differentiable">differentiability</a>, and <a href="./calculus-integration.html#def-integrable">integrability</a> that results assume), the Fundamental Theorem of Calculus, and double integrals</li>
 <li><a href="./linear-algebra.html">Linear Algebra</a>: vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix</li>
 <li><a href="./vector-calculus.html">Vector Calculus</a>: derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule</li>
 <li><a href="./optimization.html">Optimization</a>: optimality conditions, Taylor approximations, convexity in several variables, Lagrange multipliers, Newton’s method, and gradient descent</li>
-<li><a href="./proof-writing.html">Proof Writing</a>: propositions, quantifiers, proofs and derivations, and showing and annotating every step of a <a href="./proof-writing.html#def-derivation">derivation</a></li>
 </ul>
 </section>
 <section id="further-reading" class="slide level2 unnumbered">
 <h2>Further reading</h2>
+</section>
+<section class="slide level2">
+
 <p>These resources cover related material.</p>
 <ul>
 <li><p><a href="https://mmids-textbook.github.io/index.html">Mathematical Methods in Data Science (MMiDS)</a> by Sebastien Roch (University of Wisconsin-Madison), is available online and in print from Cambridge University Press. It grew out of MATH 535, a one-semester advanced undergraduate and master’s course at the University of Wisconsin-Madison. It is written as an invitation to data science and AI for math students, and as a mathematical companion to machine learning, AI, and statistics courses. Its chapters treat least squares, optimization (finding where a function is smallest or largest), the singular value decomposition, spectral graph theory, probabilistic models, random walks on graphs, and neural networks, so they overlap with our linear algebra and vector calculus pages.</p></li>
@@ -339,6 +350,9 @@
 </section>
 <section id="using-these-notes-in-another-site" class="slide level2 unnumbered">
 <h2>Using these notes in another site</h2>
+</section>
+<section class="slide level2">
+
 <p>Course sites link to these pages by URL; they do not include this repository as a git submodule. A host site that keeps a copy of this repository at its root, named <code>mds</code>, can still include fragments with paths that start with <code>mds/</code>, for example <code>{{&lt; include mds/_notation.qmd &gt;}}</code>. This site includes its own fragments the same way, through a <code>mds</code> symlink that points at the repository root.</p>
 <p>Each page is a thin wrapper around one or more fragments:</p>
 <table class="caption-top">
@@ -406,8 +420,11 @@
 <p><code>_notation.qmd</code>, <code>_number-systems.qmd</code>, <code>_sets.qmd</code>, <code>_functions.qmd</code>, <code>_expressions-algorithms.qmd</code>, <code>_indicator-functions.qmd</code>, <code>_algebra.qmd</code>, <code>_measures.qmd</code>, and <code>_subfiles/_sec_linear_algebra.qmd</code> include <code>latex-macros/macros.qmd</code> themselves; a host page that includes any of the other fragments must include <code>latex-macros/macros.qmd</code> first, as the pages of this site do.</p>
 <p>Quarto resolves <code>@id</code> cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, <code>[text](notation.qmd#id)</code>.</p>
 </section>
-<section id="references" class="slide level2 unnumbered smaller scrollable">
+<section id="references" class="slide level2 unnumbered">
 <h2>References</h2>
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
 <div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-cheng2025math" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">E. Cheng, <span>“Opinion | how math turned me from a <span>D.E.I.</span> Skeptic to a supporter,”</span> <em>The New York Times</em>, 2025, Accessed: Sep. 05, 2025. [Online]. Available: <a href="https://www.nytimes.com/2025/09/05/opinion/math-dei.html">https://www.nytimes.com/2025/09/05/opinion/math-dei.html</a></div>

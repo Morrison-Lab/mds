@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:44:45 (PST)
+Last modified: 2026-11-02 17:05:17 (PST)
 
-## 0.1 Measures
+# 1 Measures
 
 > **NOTE:**
 >
@@ -224,7 +224,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > - Lebesgue measure on $\mathbb{R}$ is not finite, since $\lambda(\mathbb{R}) = \infty$, but it is $\sigma$-finite: $\mathbb{R}$ is the union of the intervals $A_i = [-i, i]$, each with $\lambda(A_i) = 2i < \infty$.
 
-## 0.2 Probability measures
+# 2 Probability measures
 
 > **NOTE:**
 >

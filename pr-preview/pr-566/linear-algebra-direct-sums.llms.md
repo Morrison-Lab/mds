@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:44:45 (PST)
+Last modified: 2026-11-02 17:05:17 (PST)
 
-## 0.1 Sums and direct sums
+# 1 Sums and direct sums
 
 > **NOTE:**
 >
-> This section, [Section 0.2](#sec-orthogonal-complements) and [Section 0.3](#sec-fundamental-theorem) are adapted from Zhou [\[1\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up $\mathbb{R}^p$ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)) instead. The source defines the orthogonal complement inside an ambient vector space $V \subseteq \mathbb{R}^m$; here the ambient space is always $\mathbb{R}^p$, which is all that the fundamental theorem and the projections need.
+> This section, [Section 2](#sec-orthogonal-complements) and [Section 3](#sec-fundamental-theorem) are adapted from Zhou [\[1\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up $\mathbb{R}^p$ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)) instead. The source defines the orthogonal complement inside an ambient vector space $V \subseteq \mathbb{R}^m$; here the ambient space is always $\mathbb{R}^p$, which is all that the fundamental theorem and the projections need.
 
 > **NOTE:**
 >
@@ -326,7 +326,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > ([Definition 3](#def-direct-sum), [Theorem 4](#thm-direct-sum-equiv)). The same vector has a different projection onto the same subspace when the complement changes.
 
-## 0.2 Orthogonal complements
+# 2 Orthogonal complements
 
 > **NOTE:**
 >
@@ -734,7 +734,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > **Example 17 (A set that is not a subspace does not come back)** The one-element set $\mathcal{X} = \mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ is not a subspace. Its orthogonal complement is the same as that of $\mathcal{S}$ in [Example 16](#exm-double-complement), since both are defined by the single condition $u_1 + u_2 = 0$, so $(\mathcal{X}^\perp)^\perp = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$, which contains $(2, 2, 0) \notin \mathcal{X}$. [Theorem 9](#thm-double-complement) needs $\mathcal{S}$ to be a subspace.
 
-## 0.3 The fundamental theorem of linear algebra
+# 3 The fundamental theorem of linear algebra
 
 > **NOTE:**
 >

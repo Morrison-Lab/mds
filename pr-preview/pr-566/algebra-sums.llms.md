@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:44:45 (PST)
+Last modified: 2026-11-02 17:05:17 (PST)
 
-## 0.1 Convex functions
+# 1 Convex functions
 
 > **NOTE:**
 >
@@ -169,7 +169,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > *Remark 2* (The inequality reverses for concave functions). If $f$ is [concave](optimization-convexity.llms.md#def-concave), then $-f$ is convex, and applying [Theorem 2](#thm-jensen) to $-f$ reverses the inequality: $f\mathopen{}\left(\sum_i w_i x_i\right)\mathclose{} \ge \sum_i w_i f(x_i)$. For $f(x) = -x^2$ and the points in [Example 5](#exm-jensen), $f(3) = -9 \ge -\tfrac{41}{3}$.
 
-## 0.2 Infimum and supremum
+# 2 Infimum and supremum
 
 > **NOTE:**
 >
@@ -287,7 +287,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 > - $\sup\{t \ge 0 : t < 0.5\} = 0.5$, even though $0.5$ itself is not in the set.
 > - $\sup\{1, 2, 3, \ldots\} = +\infty$, because no real number is greater than or equal to every element of that set.
 
-## 0.3 Sums
+# 3 Sums
 
 > **NOTE:**
 >
@@ -393,7 +393,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 > &= 9.
 > \end{aligned}$$
 
-## 0.4 Products
+# 4 Products
 
 > **NOTE:**
 >
@@ -407,7 +407,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > **Theorem 9 (Products are associative)** $$(a \times b) \times c = a \times (b \times c)$$
 
-## 0.5 Division
+# 5 Division
 
 > **NOTE:**
 >
@@ -415,7 +415,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > $$\frac {a}{b} = a \times \frac{1}{b}$$
 
-## 0.6 Sums and products together
+# 6 Sums and products together
 
 > **NOTE:**
 >
@@ -588,7 +588,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 > &= 4.
 > \end{aligned}$$
 
-## 0.7 Summation notation
+# 7 Summation notation
 
 > **NOTE:**
 >
@@ -783,7 +783,7 @@ Last modified: 2026-11-02 13:44:45 (PST)
 >
 > **Example 19 (A sum over the empty set)** For example, $\sum_{x \in \mathopen{}\left\{\right\}\mathclose{}} x^2 = 0$.
 
-## 0.8 Quotients
+# 8 Quotients
 
 > **NOTE:**
 >
@@ -886,7 +886,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
-## 0.9 Limits of sums and notational shorthands
+# 9 Limits of sums and notational shorthands
 
 > **NOTE:**
 >

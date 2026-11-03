@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-02 13:44:45 (PST)
+Last modified: 2026-11-02 17:05:17 (PST)
 
-## 0.1 Equalities
+# 1 Equalities
 
 Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra) (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference.
 
@@ -40,7 +40,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > - $2(x + 1) = 2x + 2$ is an identity: it holds for every real $x$. For example, at $x = 3$, both sides equal $8$.
 > - $x + 1 = 3$ is not an identity: it holds at $x = 2$, but at $x = 0$ the left side is $1$ and the right side is $3$.
 
-## 0.2 Inequalities
+# 2 Inequalities
 
 > **NOTE:**
 >
@@ -77,7 +77,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 6 (Negation is multiplication by** $-1$) $$-a = (-1)*a$$
 
-## 0.3 Powers, square roots, and absolute values
+# 3 Powers, square roots, and absolute values
 
 > **NOTE:**
 >
@@ -191,7 +191,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Remark 2* (Absolute value as distance). For real numbers $a$ and $b$, $\mathopen{}\left|a - b\right|\mathclose{}$ is the distance between $a$ and $b$ on the number line.
 
-## 0.4 Percent
+# 4 Percent
 
 The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” [\[7\]](#ref-wikipedia_percentage).
 
@@ -216,7 +216,7 @@ The word “percent” comes from the Latin “per centum”; “centum” is La
 
 You are welcome to switch between decimal and percent notation freely; just make sure you execute it correctly.
 
-## 0.5 Minimum, maximum, argmin and argmax
+# 5 Minimum, maximum, argmin and argmax
 
 > **NOTE:**
 >
@@ -307,7 +307,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 >
 > **Example 11 (The negative part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [negative part](#def-negative-part) is $f^{-}(x) = \max\mathopen{}\left\{-x, 0\right\}\mathclose{}$. At $x = 3$, $f^{-}(3) = \max\mathopen{}\left\{-3, 0\right\}\mathclose{} = 0$, and at $x = -2$, $f^{-}(-2) = \max\mathopen{}\left\{2, 0\right\}\mathclose{} = 2$.
 
-## 0.6 Global and local minimizers
+# 6 Global and local minimizers
 
 > **NOTE:**
 >
