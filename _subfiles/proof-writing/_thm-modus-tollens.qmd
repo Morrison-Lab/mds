@@ -10,8 +10,6 @@ $$
 
 :::
 
-::: {.content-hidden when-format="revealjs"}
-
 ::: proof
 
 Suppose both [premises](#def-premise) are true.
@@ -21,7 +19,5 @@ By the definition of [implies](#def-implies),
 a true $P \Rightarrow Q$ with a false $Q$ needs a false $P$.
 So $P$ is false,
 and the [conclusion](#def-conclusion) $\neg P$ is true.
-
-:::
 
 :::

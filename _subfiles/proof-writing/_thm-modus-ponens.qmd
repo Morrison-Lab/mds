@@ -10,8 +10,6 @@ $$
 
 :::
 
-::: {.content-hidden when-format="revealjs"}
-
 ::: proof
 
 By the definition of [implies](#def-implies),
@@ -21,7 +19,5 @@ Both [premises](#def-premise) are true,
 so $P$ is true and $P \Rightarrow Q$ is true.
 So $Q$ is not false,
 and the [conclusion](#def-conclusion) $Q$ is true.
-
-:::
 
 :::

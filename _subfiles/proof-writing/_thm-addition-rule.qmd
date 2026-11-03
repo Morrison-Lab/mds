@@ -10,15 +10,11 @@ $$
 
 :::
 
-::: {.content-hidden when-format="revealjs"}
-
 ::: proof
 
 Suppose the [premise](#def-premise) is true.
 By the definition of [or](#def-or),
 $P \lor Q$ is true when $P$ is true.
 So the [conclusion](#def-conclusion) $P \lor Q$ is true.
-
-:::
 
 :::

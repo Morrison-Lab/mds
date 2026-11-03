@@ -10,8 +10,6 @@ $$
 
 :::
 
-::: {.content-hidden when-format="revealjs"}
-
 ::: proof
 
 Suppose both [premises](#def-premise) are true.
@@ -20,7 +18,5 @@ $P$ is false.
 By the definition of [or](#def-or),
 $P \lor Q$ is true only if $P$ is true or $Q$ is true.
 So the [conclusion](#def-conclusion) $Q$ is true.
-
-:::
 
 :::
