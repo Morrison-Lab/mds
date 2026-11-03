@@ -24,6 +24,14 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_def-domain-of-discourse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-domain-of-discourse.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-logical-connective.qmd >}}
 
 {{< slidebreak >}}
@@ -88,6 +96,22 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_thm-biconditional-split.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-biconditional-split.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-equivalent-cycle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-equivalent-cycle.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_thm-de-morgan-logic.qmd >}}
 
 {{< slidebreak >}}
@@ -145,6 +169,18 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/proof-writing/_exm-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-negate-quantifiers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_rem-negate-quantifiers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-negate-quantifiers.qmd >}}
 
 {{< slidebreak >}}
 
