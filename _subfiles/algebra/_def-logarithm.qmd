@@ -5,6 +5,6 @@ Let $b$ be a positive [real number](number-systems.qmd#def-real-numbers) with $b
 For every real number $x > 0$,
 the **logarithm** of $x$ to the [base](#def-power-base) $b$ [@wikipedia_logarithm],
 written $\log_b x$,
-is the real number $y$ with $b^y = x$ (@def-real-power).
+is the real number $y$ for which the [real power](#def-real-power) $b^y$ is $x$.
 
 :::

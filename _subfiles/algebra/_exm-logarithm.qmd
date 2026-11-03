@@ -1,7 +1,7 @@
 :::{#exm-logarithm}
 #### Logarithms to other bases
 
-- $\log_2 8 = 3$ (@def-logarithm),
+- $\log_2 8 = 3$ by the [definition of the logarithm](#def-logarithm),
   because $2^3 = 8$.
 - $\log_{10} 0.01 = -2$,
   because $10^{-2} = 0.01$.

@@ -1,7 +1,7 @@
 :::{#exm-floor}
 #### Floors
 
-- $\floor{2.7} = 2$ (@def-floor).
+- $\floor{2.7} = 2$, by the [definition of the floor](#def-floor).
 - $\floor{3} = 3$,
   because $3$ is already an [integer](#def-integers).
 - $\floor{-1.5} = -2$,
