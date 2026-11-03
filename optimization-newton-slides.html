@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 16:04:44 (PST)</p>
+  <p class="date">Last modified: 2026-11-03 00:10:49 (PST)</p>
 </section><section class="slide level2"><p><span id="sec-newton-method"></span></p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -639,6 +639,69 @@ x^{(t+1)} - 2
 \end{aligned}
 \]</span></p>
 <p>So near <span class="math inline">\(2\)</span> the error is roughly squared and divided by <span class="math inline">\(4\)</span> at each step: the errors are <span class="math inline">\(0.05\)</span>, then <span class="math inline">\(0.00061\)</span>, then <span class="math inline">\(0.000000093\)</span>, and <span class="math inline">\(0.05^2 / (2 \cdot 2.05) \approx 0.00061\)</span>. The iterates converge quadratically (<a href="#/def-quadratic-convergence" class="quarto-xref">Definition&nbsp;8</a>): <span class="math inline">\(C = \tfrac{1}{2}\)</span> works for every <span class="math inline">\(x^{(t)} \ge 1\)</span>, since then <span class="math inline">\(\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\)</span>, and every iterate from <span class="math inline">\(2.5\)</span> is at least <span class="math inline">\(2\)</span>, since the identity makes <span class="math inline">\(x^{(t+1)} - 2 \ge 0\)</span> whenever <span class="math inline">\(x^{(t)} &gt; 0\)</span>. <span class="citation" data-cites="zhou2024optim">Zhou <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which is not proved here.</p>
+</div>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>nc_x_nc <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">4</span>)</span>
+<span id="cb3-2"><a aria-label="2"></a>nc_x_nc[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
+<span id="cb3-3"><a aria-label="3"></a><span class="cf">for</span> (nc_t_nc <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) {</span>
+<span id="cb3-4"><a aria-label="4"></a>  nc_prev_nc <span class="ot">&lt;-</span> nc_x_nc[nc_t_nc]</span>
+<span id="cb3-5"><a aria-label="5"></a>  nc_x_nc[nc_t_nc <span class="sc">+</span> <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fl">0.5</span> <span class="sc">*</span> (nc_prev_nc <span class="sc">+</span> <span class="dv">4</span> <span class="sc">/</span> nc_prev_nc)</span>
+<span id="cb3-6"><a aria-label="6"></a>}</span>
+<span id="cb3-7"><a aria-label="7"></a>nc_steps_nc <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">t =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">error =</span> nc_x_nc <span class="sc">-</span> <span class="dv">2</span>)</span>
+<span id="cb3-8"><a aria-label="8"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(nc_steps_nc, ggplot2<span class="sc">::</span><span class="fu">aes</span>(t, error)) <span class="sc">+</span></span>
+<span id="cb3-9"><a aria-label="9"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"#0072B2"</span>) <span class="sc">+</span></span>
+<span id="cb3-10"><a aria-label="10"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">"#0072B2"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb3-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb3-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"iteration t"</span>, <span class="at">y =</span> <span class="st">"error of the iterate"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-2"><a aria-label="2"></a></span>
+<span id="cb4-3"><a aria-label="3"></a>nc_x_ax <span class="op">=</span> [<span class="fl">2.5</span>]</span>
+<span id="cb4-4"><a aria-label="4"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb4-5"><a aria-label="5"></a>    nc_x_ax.append(<span class="fl">0.5</span> <span class="op">*</span> (nc_x_ax[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> <span class="dv">4</span> <span class="op">/</span> nc_x_ax[<span class="op">-</span><span class="dv">1</span>]))</span>
+<span id="cb4-6"><a aria-label="6"></a>nc_err_ax <span class="op">=</span> [x <span class="op">-</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> nc_x_ax]</span>
+<span id="cb4-7"><a aria-label="7"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="fl">3.5</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb4-8"><a aria-label="8"></a>ax.semilogy(<span class="bu">range</span>(<span class="dv">4</span>), nc_err_ax, <span class="st">"o-"</span>, color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb4-9"><a aria-label="9"></a><span class="co">#&gt; [&lt;matplotlib.lines.Line2D object at 0x7f5f7cd62490&gt;]</span></span>
+<span id="cb4-10"><a aria-label="10"></a>ax.set_xlabel(<span class="st">"iteration t"</span>)</span>
+<span id="cb4-11"><a aria-label="11"></a><span class="co">#&gt; Text(0.5, 0, 'iteration t')</span></span>
+<span id="cb4-12"><a aria-label="12"></a>ax.set_ylabel(<span class="st">"error of the iterate"</span>)</span>
+<span id="cb4-13"><a aria-label="13"></a><span class="co">#&gt; Text(0, 0.5, 'error of the iterate')</span></span>
+<span id="cb4-14"><a aria-label="14"></a>ax.set_xticks(<span class="bu">range</span>(<span class="dv">4</span>))</span>
+<span id="cb4-15"><a aria-label="15"></a><span class="co">#&gt; [&lt;matplotlib.axis.XTick object at 0x7f5f7cd0bed0&gt;, &lt;matplotlib.axis.XTick object at 0x7f5f7cd0b610&gt;, &lt;matplotlib.axis.XTick object at 0x7f5f7cd62c10&gt;, &lt;matplotlib.axis.XTick object at 0x7f5f7cd63390&gt;]</span></span>
+<span id="cb4-16"><a aria-label="16"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-newton-convergence" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-newton-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The <a href="#/def-iterate-error">error</a> <span class="math inline">\(x^{(t)} - 2\)</span> of <a href="#/exm-newton-convergence" class="quarto-xref">Example&nbsp;6</a> on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is <a href="#/def-quadratic-convergence">quadratic convergence</a>.
+</figcaption><div aria-describedby="fig-newton-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">R</a></li>
+<li><a href="#tabset-2-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-newton_files/figure-html/newton-convergence-fig-r-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: The error x^{(t)} - 2 of Example&nbsp;6 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence."><img data-src="optimization-newton_files/figure-html/newton-convergence-fig-r-3.png" alt="Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-newton_files/figure-html/newton-convergence-fig-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;2: The error x^{(t)} - 2 of Example&nbsp;6 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence."><img data-src="optimization-newton_files/figure-html/newton-convergence-fig-python-1.png" alt="Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
 </div>
 </section><section class="slide level2"><div id="exm-newton-maximum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (Newton’s method can find a maximum)</strong></span> From <span class="math inline">\(x^{(0)} = -2.5\)</span> the same iteration gives <span class="math inline">\(-2.05\)</span>, <span class="math inline">\(-2.000610\)</span>, <span class="math inline">\(-2.0000001\)</span>, approaching <span class="math inline">\(-2\)</span>. But <span class="math inline">\(-2\)</span> is not a minimizer of <span class="math inline">\(f\)</span>: it is a stationary point of <span class="math inline">\(-f\)</span>, whose second derivative there is <span class="math inline">\(-f''(-2) = 4 &gt; 0\)</span>, so it is a strict local minimizer of <span class="math inline">\(-f\)</span> (<a href="./optimization-critical-points.html#thm-second-order-condition">Theorem&nbsp;7 in Critical Points and Optimality Conditions</a>), that is, <span class="math inline">\(f\)</span> is strictly larger at <span class="math inline">\(-2\)</span> than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian <span class="math inline">\(f''(x) = 2x\)</span> is negative along the way, so the quadratic model has no minimizer (with <span class="math inline">\(H &lt; 0\)</span>, <span class="math inline">\(q(\delta) = f + g\,\delta+ \tfrac{1}{2} H \delta^2\)</span> decreases without bound) and <a href="#/thm-newton-model" class="quarto-xref">Theorem&nbsp;1</a> does not apply: the positive definite hypothesis there is needed.</p>

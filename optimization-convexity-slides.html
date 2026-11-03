@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 16:04:44 (PST)</p>
+  <p class="date">Last modified: 2026-11-03 00:10:49 (PST)</p>
 </section><section class="slide level2"><p><span id="sec-convexity-vector"></span></p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -1020,6 +1020,70 @@ u &amp;= 2t - 2t \\
 <p>and <span class="math inline">\(f = 1 - t\)</span> is linear in <span class="math inline">\(t\)</span>, so the convexity inequality holds with equality there.</p>
 </li>
 </ul>
+</div>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a>ch_x1_ch <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
+<span id="cb9-2"><a aria-label="2"></a>ch_x2_ch <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">101</span>)</span>
+<span id="cb9-3"><a aria-label="3"></a>ch_grid_ch <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">expand_grid</span>(<span class="at">x1 =</span> ch_x1_ch, <span class="at">x2 =</span> ch_x2_ch)</span>
+<span id="cb9-4"><a aria-label="4"></a>ch_u_ch <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> ch_grid_ch<span class="sc">$</span>x1 <span class="sc">+</span> ch_grid_ch<span class="sc">$</span>x2</span>
+<span id="cb9-5"><a aria-label="5"></a>ch_grid_ch<span class="sc">$</span>z <span class="ot">&lt;-</span> <span class="fu">exp</span>(ch_u_ch) <span class="sc">-</span> ch_grid_ch<span class="sc">$</span>x1</span>
+<span id="cb9-6"><a aria-label="6"></a>ch_line_x1_ch <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb9-7"><a aria-label="7"></a>ch_line_x2_ch <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">2</span>)</span>
+<span id="cb9-8"><a aria-label="8"></a>ch_line_ch <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x1 =</span> ch_line_x1_ch, <span class="at">x2 =</span> ch_line_x2_ch)</span>
+<span id="cb9-9"><a aria-label="9"></a>ch_aes_ch <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">aes</span>(x1, x2)</span>
+<span id="cb9-10"><a aria-label="10"></a>ch_z_aes_ch <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">z =</span> z)</span>
+<span id="cb9-11"><a aria-label="11"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(ch_grid_ch, ch_aes_ch) <span class="sc">+</span></span>
+<span id="cb9-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_contour</span>(ch_z_aes_ch, <span class="at">colour =</span> <span class="st">"#0072B2"</span>, <span class="at">bins =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb9-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(</span>
+<span id="cb9-14"><a aria-label="14"></a>    <span class="at">data =</span> ch_line_ch, <span class="at">colour =</span> <span class="st">"#D55E00"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span></span>
+<span id="cb9-15"><a aria-label="15"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-16"><a aria-label="16"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x1"</span>, <span class="at">y =</span> <span class="st">"x2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-3"><a aria-label="3"></a></span>
+<span id="cb10-4"><a aria-label="4"></a>ch_x1_ax <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">101</span>)</span>
+<span id="cb10-5"><a aria-label="5"></a>ch_x2_ax <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">101</span>)</span>
+<span id="cb10-6"><a aria-label="6"></a>ch_xx_ax, ch_yy_ax <span class="op">=</span> np.meshgrid(ch_x1_ax, ch_x2_ax)</span>
+<span id="cb10-7"><a aria-label="7"></a>ch_z_ax <span class="op">=</span> np.exp(<span class="dv">2</span> <span class="op">*</span> ch_xx_ax <span class="op">+</span> ch_yy_ax) <span class="op">-</span> ch_xx_ax</span>
+<span id="cb10-8"><a aria-label="8"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb10-9"><a aria-label="9"></a>ax.contour(ch_xx_ax, ch_yy_ax, ch_z_ax, levels<span class="op">=</span><span class="dv">12</span>, colors<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb10-10"><a aria-label="10"></a>ax.plot([<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>], <span class="st">"--"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>)</span>
+<span id="cb10-11"><a aria-label="11"></a>ax.set_xlabel(<span class="st">"x1"</span>)</span>
+<span id="cb10-12"><a aria-label="12"></a>ax.set_ylabel(<span class="st">"x2"</span>)</span>
+<span id="cb10-13"><a aria-label="13"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-convex-hessian" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-convex-hessian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: <a href="./vector-calculus.html#def-level-set">Level curves</a> of the third <a href="./functions.html#def-function">function</a> in <a href="#/exm-convex-hessian" class="quarto-xref">Example&nbsp;11</a>. Along the dashed line through the origin in the <a href="./vector-calculus.html#def-direction">direction</a> <span class="math inline">\({(1, -2)}^{\top}\)</span> the function is <a href="./algebra-exponentials.html#def-linear-function">linear</a>, so the function is <a href="./algebra-sums.html#def-convex-function">convex</a> but not <a href="#/def-strictly-convex">strictly convex</a>.
+</figcaption><div aria-describedby="fig-convex-hessian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-5" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-5-1">R</a></li>
+<li><a href="#tabset-5-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-5-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;5: Level curves of the third function in Example&nbsp;11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex."><img data-src="optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png" alt="Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-5-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;5: Level curves of the third function in Example&nbsp;11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex."><img data-src="optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png" alt="Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
 </div>
 </section><section class="slide level2"><div id="exm-convex-hessian-not-necessary" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (Strictly convex with a singular Hessian)</strong></span> Part 2 is sufficient but not necessary. <span class="math inline">\(f(x) = x^4\)</span> has</p>

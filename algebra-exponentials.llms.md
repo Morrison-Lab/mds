@@ -2,9 +2,19 @@
 
 Code
 
+- [Show All Code](javascript:void(0))
+
+- [Hide All Code](javascript:void(0))
+
+- 
+
+  ------------------------------------------------------------------------
+
+- [View Source](javascript:void(0))
+
 Published
 
-Last modified: 2026-11-02 16:04:44 (PST)
+Last modified: 2026-11-03 00:10:49 (PST)
 
 # 1 Polynomials
 
@@ -465,14 +475,45 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> **Definition 28 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 27](#def-real-power) leave some powers $b^c$ with $b \le 0$ unassigned. We complete them as follows.
+> **Definition 28 (Logarithm)** Let $b$ be a positive [real number](number-systems.llms.md#def-real-numbers) with $b \ne 1$. For every real number $x > 0$, the **logarithm** of $x$ to the [base](algebra-basics.llms.md#def-power-base) $b$ [\[14\]](#ref-wikipedia_logarithm), written $\log_b x$, is the real number $y$ for which the [real power](#def-real-power) $b^y$ is $x$.
+
+> **NOTE:**
+>
+> **Example 19 (Logarithms to other bases)**  
+>
+> - $\log_2 8 = 3$ by the [definition of the logarithm](#def-logarithm), because $2^3 = 8$.
+> - $\log_{10} 0.01 = -2$, because $10^{-2} = 0.01$.
+>
+> The [graph](functions.llms.md#def-graph) of $\log_2 x$ passes through $(8, 3)$, the first of these two facts.
+>
+> Show code
+>
+> ``` downlit
+> x <- seq(0.1, 10, length.out = 200)
+> y <- log2(x)
+> curve <- tibble::tibble(x = x, y = y)
+> marked <- tibble::tibble(x = 8, y = 3)
+>
+> log_plot <- ggplot2::ggplot(curve, ggplot2::aes(x = x, y = y)) +
+>   ggplot2::geom_line() +
+>   ggplot2::geom_point(data = marked, colour = "firebrick", size = 2) +
+>   ggplot2::labs(x = "x", y = "log base 2 of x")
+>
+> log_plot
+> ```
+>
+> [![The graph of the logarithm to base 2 for x from 0.1 to 10. The curve rises steeply near 0, crosses the horizontal axis at x = 1, and keeps rising more slowly. A dot marks the point (8, 3).](algebra-exponentials_files/figure-html/unnamed-chunk-1-1.png)](algebra-exponentials_files/figure-html/unnamed-chunk-1-1.png)
+
+> **NOTE:**
+>
+> **Definition 29 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 27](#def-real-power) leave some powers $b^c$ with $b \le 0$ unassigned. We complete them as follows.
 >
 > - For a real number $c > 0$, $0^c \stackrel{\text{def}}{=}0$. For a natural number $c$, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
 > - For $b < 0$, $b^c$ is defined only when $c$ is an [integer](number-systems.llms.md#def-integers), by [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for $b < 0$ and a non-integer $c$, $b^c$ is undefined.
 
 > **NOTE:**
 >
-> **Example 19 (Powers of zero and of negative numbers)**  
+> **Example 20 (Powers of zero and of negative numbers)**  
 >
 > - $0^{1/2} = 0$, which agrees with $\sqrt{0} = 0$ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 > - $(-8)^2 = 64$ and $(-8)^{-1} = -\tfrac{1}{8}$ are defined, since the exponents are integers.
@@ -484,6 +525,12 @@ Last modified: 2026-11-02 16:04:44 (PST)
 >
 > 1.  For every $a > 0$: ${\operatorname{exp}\mathopen{}\left\{{\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}\right\}\mathclose{}} = a$.
 > 2.  For every $a \in \mathbb{R}$: ${\operatorname{log}\mathopen{}\left\{{\operatorname{exp}\mathopen{}\left\{a\right\}\mathclose{}}\right\}\mathclose{}} = a$.
+
+> **NOTE:**
+>
+> *Remark 5* (The logarithm to base $b$ through the natural logarithm). For each $x > 0$, exactly one $y$ satisfies [Definition 28](#def-logarithm), and $$\log_b x = \frac{{\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}}}{{\operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}}}.$$
+>
+> To see why, note that by [Definition 27](#def-real-power), $b^y = {\operatorname{exp}\mathopen{}\left\{y \cdot{\operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}}\right\}\mathclose{}}$, so we need ${\operatorname{exp}\mathopen{}\left\{y \cdot{\operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}}\right\}\mathclose{}} = x$. If $y \cdot{\operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}} = {\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}}$, then ${\operatorname{exp}\mathopen{}\left\{y \cdot{\operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}}\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{{\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}}\right\}\mathclose{}} = x$, by part 1 of [Theorem 2](#thm-exp-log-inverse). Conversely, if ${\operatorname{exp}\mathopen{}\left\{y \cdot{\operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}}\right\}\mathclose{}} = x$, then applying $\operatorname{log}$ to both sides gives $y \cdot{\operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}} = {\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}}$, by part 2 of [Theorem 2](#thm-exp-log-inverse). Since $b \ne 1$, ${\operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}} \ne 0$, so we can divide by it, and $y = \frac{{\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}}}{{\operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}}}$ is the only solution.
 
 > **NOTE:**
 >
@@ -526,7 +573,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> **Example 20 (Exponential of a sum)** With $a = 2$ and $b = 3$, ${\operatorname{exp}\mathopen{}\left\{2 + 3\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{}} \approx 148.41$, and ${\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{}} \cdot{\operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{}} \approx 7.3891 \cdot 20.0855 \approx 148.41$.
+> **Example 21 (Exponential of a sum)** With $a = 2$ and $b = 3$, ${\operatorname{exp}\mathopen{}\left\{2 + 3\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{}} \approx 148.41$, and ${\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{}} \cdot{\operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{}} \approx 7.3891 \cdot 20.0855 \approx 148.41$.
 
 > **NOTE:**
 >
@@ -536,7 +583,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> **Example 21 (Exponential of a difference)** With $a = 5$ and $b = 2$, ${\operatorname{exp}\mathopen{}\left\{5 - 2\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{}} \approx 20.09$, and $\frac{{\operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{}}}{{\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{}}} \approx \frac{148.4132}{7.3891} \approx 20.09$.
+> **Example 22 (Exponential of a difference)** With $a = 5$ and $b = 2$, ${\operatorname{exp}\mathopen{}\left\{5 - 2\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{}} \approx 20.09$, and $\frac{{\operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{}}}{{\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{}}} \approx \frac{148.4132}{7.3891} \approx 20.09$.
 
 > **NOTE:**
 >
@@ -556,7 +603,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> **Example 22 (Power of a sum)** With $a = 2$, $b = 3$, and $c = 4$,
+> **Example 23 (Power of a sum)** With $a = 2$, $b = 3$, and $c = 4$,
 >
 > $$\begin{aligned}
 > 2^{3+4} &= 2^7 \\
@@ -580,7 +627,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> **Example 23 (Power of a product)** With $a = 2$, $b = 3$, and $c = 2$,
+> **Example 24 (Power of a product)** With $a = 2$, $b = 3$, and $c = 2$,
 >
 > $$\begin{aligned}
 > (2 \cdot 3)^2 &= 6^2 \\
@@ -606,7 +653,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> **Example 24 (A negative base)** With $a = -1$, $b = 2$, and $c = \frac{1}{2}$:
+> **Example 25 (A negative base)** With $a = -1$, $b = 2$, and $c = \frac{1}{2}$:
 >
 > $$\begin{aligned}
 > a^{bc}
@@ -640,7 +687,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> *Remark 5* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[15\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
+> *Remark 6* (Tarski’s high school identities). Restricted to positive integers, the following results are Tarski’s eleven “high school” identities [\[15\]](#ref-wikipedia_tarskis_high_school_algebra_problem):
 >
 > - sums are symmetric and associative ([Theorem 5 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-symmetric), [Theorem 6 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-sum-assoc));
 > - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 7 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-one), [Theorem 8 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-symmetric), [Theorem 9 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-prod-assoc), [Theorem 11 in Convexity, Infimum and Sums](algebra-sums.llms.md#thm-mult-distr));
@@ -648,17 +695,17 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> *Remark 6* (Tarski’s identities are not complete). Tarski asked whether every identity in $+$, $\times$, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 5](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
+> *Remark 7* (Tarski’s identities are not complete). Tarski asked whether every identity in $+$, $\times$, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 6](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
 
 > **NOTE:**
 >
-> **Definition 29 (Contour line)** For a function $g$ of two real variables $b$ and $c$ and a number $k$, the **contour line** [\[16\]](#ref-wikipedia_contour_line) of $g$ at height $k$ is the set of points where $g$ equals $k$:
+> **Definition 30 (Contour line)** For a function $g$ of two real variables $b$ and $c$ and a number $k$, the **contour line** [\[16\]](#ref-wikipedia_contour_line) of $g$ at height $k$ is the set of points where $g$ equals $k$:
 >
 > $$\mathopen{}\left\{(b, c) : g(b, c) = k\right\}\mathclose{}$$
 
 > **NOTE:**
 >
-> **Example 25 (Contour lines of a bowl)** For $g(b, c) = b^2 + c^2$, the contour line at height $k = 4$ is $\mathopen{}\left\{(b, c) : b^2 + c^2 = 4\right\}\mathclose{}$, the circle of radius $2$ around $(0, 0)$: for example,
+> **Example 26 (Contour lines of a bowl)** For $g(b, c) = b^2 + c^2$, the contour line at height $k = 4$ is $\mathopen{}\left\{(b, c) : b^2 + c^2 = 4\right\}\mathclose{}$, the circle of radius $2$ around $(0, 0)$: for example,
 >
 > $$\begin{aligned}
 > g(2, 0) &= 4 + 0 \\
@@ -720,7 +767,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> *Remark 7* (Contour lines on a plot of a surface). On a plot of the surface $z = g(b, c)$, the [contour line](#def-contour-line) is the curve along which the surface has height $k$.
+> *Remark 8* (Contour lines on a plot of a surface). On a plot of the surface $z = g(b, c)$, the [contour line](#def-contour-line) is the curve along which the surface has height $k$.
 
 > **NOTE:**
 >
@@ -728,7 +775,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> *Solution 2*. We only count a pair $(b, c)$ when $b^c$ is defined, so for $b < 0$ we only consider integer $c$ ([Definition 28](#def-power-nonpositive-base)). With that convention, $bc = b^c$ in each of the following cases:
+> *Solution 2*. We only count a pair $(b, c)$ when $b^c$ is defined, so for $b < 0$ we only consider integer $c$ ([Definition 29](#def-power-nonpositive-base)). With that convention, $bc = b^c$ in each of the following cases:
 >
 > 1.  $c = 1$, for every $b$.
 >
@@ -893,7 +940,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 > **NOTE:**
 >
-> **Theorem 10 (When exponentiation equals multiplication)** Let $b, c \in \mathbb{R}$, where $b^c$ is defined (for $b < 0$, only integer $c$ is allowed; [Definition 28](#def-power-nonpositive-base)). Then $b^c = bc$ if and only if one of the following holds:
+> **Theorem 10 (When exponentiation equals multiplication)** Let $b, c \in \mathbb{R}$, where $b^c$ is defined (for $b < 0$, only integer $c$ is allowed; [Definition 29](#def-power-nonpositive-base)). Then $b^c = bc$ if and only if one of the following holds:
 >
 > 1.  $c = 1$;
 > 2.  $b = 0$ and $c > 0$;
@@ -935,7 +982,7 @@ Last modified: 2026-11-02 16:04:44 (PST)
 > 1.  $a = 1$ (so that ${\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}} = 0$), or
 > 2.  $bc = b^c$ (see [Theorem 10](#thm-exp-vs-mult)).
 >
-> **Case** $a = 0$. Here we cannot take logarithms, so we work from the values of powers of $0$: $0^s = 0$ for $s > 0$ ([Definition 28](#def-power-nonpositive-base)), $0^0 = 1$, and $0^s$ is undefined for $s < 0$.
+> **Case** $a = 0$. Here we cannot take logarithms, so we work from the values of powers of $0$: $0^s = 0$ for $s > 0$ ([Definition 29](#def-power-nonpositive-base)), $0^0 = 1$, and $0^s$ is undefined for $s < 0$.
 >
 > - If $b < 0$, then $0^b$ is undefined, so $(a^b)^c$ is undefined.
 >
@@ -1017,8 +1064,9 @@ Last modified: 2026-11-02 16:04:44 (PST)
 - [Definition 25 (Euler’s number)](#def-euler-number)
 - [Definition 26 (Natural logarithm)](#def-natural-log)
 - [Definition 27 (Power with a real exponent)](#def-real-power)
-- [Definition 28 (Real powers of zero and of negative numbers)](#def-power-nonpositive-base)
-- [Definition 29 (Contour line)](#def-contour-line)
+- [Definition 28 (Logarithm)](#def-logarithm)
+- [Definition 29 (Real powers of zero and of negative numbers)](#def-power-nonpositive-base)
+- [Definition 30 (Contour line)](#def-contour-line)
 
 Back to top
 

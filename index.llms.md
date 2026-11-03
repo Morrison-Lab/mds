@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 16:04:44 (PST)
+Last modified: 2026-11-03 00:10:49 (PST)
 
 # Welcome
 
@@ -12,7 +12,9 @@ Last modified: 2026-11-02 16:04:44 (PST)
 
 Cheng [\[1\]](#ref-cheng2025math)
 
-These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:
+These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic.
+
+The first six topics are the foundations. Apart from a few remarks in Algebra that touch on calculus, they assume no calculus, so a course on discrete math, such as [Math for Computer Science](https://morrison-lab.github.io/mcs/), can build on them directly:
 
 - [Notation](notation.llms.md): common symbols
 - [Number Systems](number-systems.llms.md): the integers, natural numbers, even and odd numbers, and the rational, real, and irrational numbers
@@ -22,12 +24,16 @@ These notes collect the mathematics that data science courses assume: mathematic
   - [Expressions and Algorithms](expressions-algorithms.llms.md): expressions, parse trees, and algorithms
   - [Indicator Functions](indicator-functions.llms.md): set and predicate indicators, the Iverson bracket, the Kronecker delta, and their algebraic properties
 - [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
+- [Proof Writing](proof-writing.llms.md): propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.llms.md#def-derivation)
+- [Induction and Recursion](induction.llms.md): [recursively defined sequences](induction.llms.md#def-recursive-sequence) and [strong induction](induction.llms.md#def-strong-induction)
+
+The remaining topics build on the foundations and on each other:
+
 - [Measures](measures.llms.md): $\sigma$-algebras, [finite](functions.llms.md#def-finite-set) and [countable additivity](measures-additivity.llms.md#def-countable-additivity), measures, and the counting measure
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
 - [Optimization](optimization.llms.md): optimality conditions, Taylor approximations, convexity in several variables, Lagrange multipliers, Newton’s method, and gradient descent
-- [Proof Writing](proof-writing.llms.md): propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.llms.md#def-derivation)
 
 # Further reading
 

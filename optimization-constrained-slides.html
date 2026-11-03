@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 16:04:44 (PST)</p>
+  <p class="date">Last modified: 2026-11-03 00:10:49 (PST)</p>
 </section><section class="slide level2"><p><span id="sec-lagrange"></span></p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -784,6 +784,55 @@ x_1 &amp;= x_2 \\
 <p>but the formula of <a href="#/thm-qp-equality" class="quarto-xref">Theorem&nbsp;1</a> cannot produce it.</p>
 </li>
 </ul>
+</div>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>qf_x2_qf <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
+<span id="cb3-2"><a aria-label="2"></a>qf_curve_qf <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x2 =</span> qf_x2_qf, <span class="at">f =</span> <span class="fl">0.5</span> <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> qf_x2_qf<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb3-3"><a aria-label="3"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(qf_curve_qf, ggplot2<span class="sc">::</span><span class="fu">aes</span>(x2, f)) <span class="sc">+</span></span>
+<span id="cb3-4"><a aria-label="4"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"#0072B2"</span>) <span class="sc">+</span></span>
+<span id="cb3-5"><a aria-label="5"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x2"</span>, <span class="at">y =</span> <span class="st">"f(1, x2)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a aria-label="3"></a></span>
+<span id="cb4-4"><a aria-label="4"></a>qf_x2_ax <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">201</span>)</span>
+<span id="cb4-5"><a aria-label="5"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">3</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb4-6"><a aria-label="6"></a>ax.plot(qf_x2_ax, <span class="fl">0.5</span> <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> qf_x2_ax<span class="op">**</span><span class="dv">2</span>), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb4-7"><a aria-label="7"></a>ax.set_xlabel(<span class="st">"x2"</span>)</span>
+<span id="cb4-8"><a aria-label="8"></a>ax.set_ylabel(<span class="st">"f(1, x2)"</span>)</span>
+<span id="cb4-9"><a aria-label="9"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-qp-equality-fails" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-qp-equality-fails-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The first case of <a href="#/exm-qp-equality-fails" class="quarto-xref">Example&nbsp;6</a>: with <span class="math inline">\(\mathbf{S} = \operatorname{diag}(1, -1)\)</span>, which is not <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>, the <a href="./functions.html#def-value">value</a> <span class="math inline">\(f(1, x_2)\)</span> along the constraint <span class="math inline">\(x_1 = 1\)</span> falls without <a href="./sets.html#def-bound">bound</a> as <span class="math inline">\(\mathopen{}\left|x_2\right|\mathclose{}\)</span> grows, so this problem has no <a href="./algebra-basics.html#def-global-minimizer">minimizer</a>.
+</figcaption><div aria-describedby="fig-qp-equality-fails-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">R</a></li>
+<li><a href="#tabset-2-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: The first case of Example&nbsp;6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer."><img data-src="optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png" alt="Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;2: The first case of Example&nbsp;6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer."><img data-src="optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png" alt="Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point." width="480"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
 </div>
 </section><section class="slide level2"><div id="def-sensitivity" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Sensitivity)</strong></span> Suppose a minimization problem (<a href="#/def-minimization-problem" class="quarto-xref">Definition&nbsp;5</a>) depends on a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, and let <span class="math inline">\(f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})\)</span> be its minimum value, as a function of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. Where <span class="math inline">\(f^*\)</span> has a <a href="./vector-calculus.html#def-vector-derivative">gradient</a> <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})\)</span>, that gradient is the <strong>sensitivity</strong> of the minimum value to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>: by the definition of a <a href="./vector-calculus.html#def-partial-derivative">partial derivative</a>, its entry <span class="math inline">\(i\)</span> is the <a href="./calculus-derivatives.html#def-limit">limit</a> as a change in <span class="math inline">\(b_i\)</span> alone shrinks to <span class="math inline">\(0\)</span>, of the resulting change in the minimum value divided by the change in <span class="math inline">\(b_i\)</span>.</p>

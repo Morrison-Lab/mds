@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 16:04:44 (PST)
+Last modified: 2026-11-03 00:10:49 (PST)
 
 > **NOTE:**
 >
@@ -615,6 +615,57 @@ Last modified: 2026-11-02 16:04:44 (PST)
 >   \end{aligned}$$
 >
 >   and $f = 1 - t$ is linear in $t$, so the convexity inequality holds with equality there.
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> ch_x1_ch <- seq(-1, 1, length.out = 101)
+> ch_x2_ch <- seq(-3, 3, length.out = 101)
+> ch_grid_ch <- tidyr::expand_grid(x1 = ch_x1_ch, x2 = ch_x2_ch)
+> ch_u_ch <- 2 * ch_grid_ch$x1 + ch_grid_ch$x2
+> ch_grid_ch$z <- exp(ch_u_ch) - ch_grid_ch$x1
+> ch_line_x1_ch <- c(-1, 1)
+> ch_line_x2_ch <- c(2, -2)
+> ch_line_ch <- tibble::tibble(x1 = ch_line_x1_ch, x2 = ch_line_x2_ch)
+> ch_aes_ch <- ggplot2::aes(x1, x2)
+> ch_z_aes_ch <- ggplot2::aes(z = z)
+> ggplot2::ggplot(ch_grid_ch, ch_aes_ch) +
+>   ggplot2::geom_contour(ch_z_aes_ch, colour = "#0072B2", bins = 12) +
+>   ggplot2::geom_line(
+>     data = ch_line_ch, colour = "#D55E00", linetype = "dashed"
+>   ) +
+>   ggplot2::labs(x = "x1", y = "x2")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> ch_x1_ax = np.linspace(-1, 1, 101)
+> ch_x2_ax = np.linspace(-3, 3, 101)
+> ch_xx_ax, ch_yy_ax = np.meshgrid(ch_x1_ax, ch_x2_ax)
+> ch_z_ax = np.exp(2 * ch_xx_ax + ch_yy_ax) - ch_xx_ax
+> fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
+> ax.contour(ch_xx_ax, ch_yy_ax, ch_z_ax, levels=12, colors="#0072B2")
+> ax.plot([-1, 1], [2, -2], "--", color="#D55E00")
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png)](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png "Figure 5: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
+>
+> ## Python
+>
+> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png "Figure 5: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
+>
+> Figure 5: [Level curves](vector-calculus.llms.md#def-level-set) of the third [function](functions.llms.md#def-function) in [Example 11](#exm-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the function is [linear](algebra-exponentials.llms.md#def-linear-function), so the function is [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
 
 > **NOTE:**
 >

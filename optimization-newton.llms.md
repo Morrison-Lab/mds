@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 16:04:44 (PST)
+Last modified: 2026-11-03 00:10:49 (PST)
 
 > **NOTE:**
 >
@@ -276,6 +276,56 @@ Last modified: 2026-11-02 16:04:44 (PST)
 > \end{aligned}$$
 >
 > So near $2$ the error is roughly squared and divided by $4$ at each step: the errors are $0.05$, then $0.00061$, then $0.000000093$, and $0.05^2 / (2 \cdot 2.05) \approx 0.00061$. The iterates converge quadratically ([Definition 8](#def-quadratic-convergence)): $C = \tfrac{1}{2}$ works for every $x^{(t)} \ge 1$, since then $\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}$, and every iterate from $2.5$ is at least $2$, since the identity makes $x^{(t+1)} - 2 \ge 0$ whenever $x^{(t)} > 0$. Zhou [\[1\]](#ref-zhou2024optim) states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which is not proved here.
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> nc_x_nc <- numeric(4)
+> nc_x_nc[1] <- 2.5
+> for (nc_t_nc in 1:3) {
+>   nc_prev_nc <- nc_x_nc[nc_t_nc]
+>   nc_x_nc[nc_t_nc + 1] <- 0.5 * (nc_prev_nc + 4 / nc_prev_nc)
+> }
+> nc_steps_nc <- tibble::tibble(t = 0:3, error = nc_x_nc - 2)
+> ggplot2::ggplot(nc_steps_nc, ggplot2::aes(t, error)) +
+>   ggplot2::geom_line(colour = "#0072B2") +
+>   ggplot2::geom_point(colour = "#0072B2", size = 3) +
+>   ggplot2::scale_y_log10() +
+>   ggplot2::labs(x = "iteration t", y = "error of the iterate")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+>
+> nc_x_ax = [2.5]
+> for _ in range(3):
+>     nc_x_ax.append(0.5 * (nc_x_ax[-1] + 4 / nc_x_ax[-1]))
+> nc_err_ax = [x - 2 for x in nc_x_ax]
+> fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
+> ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
+> #> [<matplotlib.lines.Line2D object at 0x7f5f7cd62490>]
+> ax.set_xlabel("iteration t")
+> #> Text(0.5, 0, 'iteration t')
+> ax.set_ylabel("error of the iterate")
+> #> Text(0, 0.5, 'error of the iterate')
+> ax.set_xticks(range(4))
+> #> [<matplotlib.axis.XTick object at 0x7f5f7cd0bed0>, <matplotlib.axis.XTick object at 0x7f5f7cd0b610>, <matplotlib.axis.XTick object at 0x7f5f7cd62c10>, <matplotlib.axis.XTick object at 0x7f5f7cd63390>]
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last.](optimization-newton_files/figure-html/newton-convergence-fig-r-3.png)](optimization-newton_files/figure-html/newton-convergence-fig-r-3.png "Figure 2: The error x^{(t)} - 2 of Example 6 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence.")
+>
+> ## Python
+>
+> [![Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last.](optimization-newton_files/figure-html/newton-convergence-fig-python-1.png)](optimization-newton_files/figure-html/newton-convergence-fig-python-1.png "Figure 2: The error x^{(t)} - 2 of Example 6 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence.")
+>
+> Figure 2: The [error](#def-iterate-error) $x^{(t)} - 2$ of [Example 6](#exm-newton-convergence) on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is [quadratic convergence](#def-quadratic-convergence).
 
 > **NOTE:**
 >

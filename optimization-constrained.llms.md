@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 16:04:44 (PST)
+Last modified: 2026-11-03 00:10:49 (PST)
 
 > **NOTE:**
 >
@@ -418,6 +418,42 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 >   \end{aligned}$$
 >
 >   but the formula of [Theorem 1](#thm-qp-equality) cannot produce it.
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> qf_x2_qf <- seq(-3, 3, length.out = 201)
+> qf_curve_qf <- tibble::tibble(x2 = qf_x2_qf, f = 0.5 * (1 - qf_x2_qf^2))
+> ggplot2::ggplot(qf_curve_qf, ggplot2::aes(x2, f)) +
+>   ggplot2::geom_line(colour = "#0072B2") +
+>   ggplot2::labs(x = "x2", y = "f(1, x2)")
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> qf_x2_ax = np.linspace(-3, 3, 201)
+> fig, ax = plt.subplots(figsize=(5, 3), layout="constrained")
+> ax.plot(qf_x2_ax, 0.5 * (1 - qf_x2_ax**2), color="#0072B2")
+> ax.set_xlabel("x2")
+> ax.set_ylabel("f(1, x2)")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png "Figure 2: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
+>
+> ## Python
+>
+> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png "Figure 2: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
+>
+> Figure 2: The first case of [Example 6](#exm-qp-equality-fails): with $\mathbf{S} = \operatorname{diag}(1, -1)$, which is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), the [value](functions.llms.md#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$ falls without [bound](sets.llms.md#def-bound) as $\mathopen{}\left|x_2\right|\mathclose{}$ grows, so this problem has no [minimizer](algebra-basics.llms.md#def-global-minimizer).
 
 > **NOTE:**
 >
