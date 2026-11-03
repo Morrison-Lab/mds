@@ -95,6 +95,33 @@ rme will drop those appendices and point readers here
   Check what you port, fix what is wrong, and bring it up to the current rules.
 - Keep rme's `#id`s, so rme's links can be repointed by changing only the path.
 
+## Relationship to mcs
+
+[`Morrison-Lab/mcs`](https://github.com/Morrison-Lab/mcs) holds the notes for CSCI 201 (math for computer science).
+mds is the shared home for the general mathematics the two sites have in common (decided by Ezra, 2026-11-03):
+
+- Definitions, theorems and proofs that are not specific to CSCI 201 live here, one unit per subfile,
+  including logic, proof writing, sets, number systems and number theory.
+- mcs includes those subfiles from its `mds/` submodule (`{{< include ../mds/_subfiles/... >}}`) rather than copying them,
+  and keeps its own examples, exercises and course pages.
+- When mcs needs a general result that mds lacks, add it here first, then switch mcs to the include.
+
+Two alternatives were considered and rejected:
+
+- **mcs as the shared home.**
+  Its pages are a course site, with a syllabus and a calendar,
+  and mds already holds the shared pages that the other course sites link to.
+- **A three-way split.**
+  In this option mcs would hold the shared basics, mds the topics only data science uses,
+  and a new repository the topics only CSCI 201 uses.
+  It was rejected for three reasons:
+  - It would undo the pages already moved here.
+  - It would break incoming links to this site's paths and `#id`s, which GitHub Pages cannot redirect.
+  - A boundary drawn by which course uses a topic keeps shifting:
+    logic, induction and number theory serve both courses.
+
+One idea is still open: retitling this site with a neutral name, such as "math foundations", while keeping its URL.
+
 ## Things to avoid
 
 - Reformatting unrelated files.
