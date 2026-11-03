@@ -96,7 +96,15 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_exm-tautology.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-contradiction.qmd >}}
 
 {{< slidebreak >}}
 
@@ -104,23 +112,15 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_exm-equivalence-iff.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_thm-double-negation.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/proof-writing/_thm-distributive.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/proof-writing/_thm-substitution-logic.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/proof-writing/_thm-negate-conditional.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/proof-writing/_cor-conditional-as-or.qmd >}}
+{{< include mds/_subfiles/proof-writing/_exm-double-negation.qmd >}}
 
 {{< slidebreak >}}
 

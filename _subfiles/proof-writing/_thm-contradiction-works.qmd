@@ -17,7 +17,8 @@ By the definitions of [and](#def-and) and [not](#def-not),
 $C \land \neg C$ is false in every row,
 so it is a [contradiction](#def-contradiction).
 So, by the definition of [implies](#def-implies),
-$\neg P \Rightarrow (C \land \neg C)$ is true exactly in the rows where $\neg P$ is false,
+$\neg P \Rightarrow (C \land \neg C)$ is true exactly in the rows
+where $\neg P$ is false,
 which are the rows where $P$ is true:
 
 | $P$ | $C$ | $\neg P$ | $C \land \neg C$ | $\neg P \Rightarrow (C \land \neg C)$ |
