@@ -1,4 +1,4 @@
-## Polynomials {#sec-polynomials}
+# Polynomials {#sec-polynomials}
 
 {{< include mds/_subfiles/algebra/_exr-polynomial-degree.qmd >}}
 
@@ -58,7 +58,7 @@
 
 {{< include mds/_subfiles/algebra/_exm-monomial-degree.qmd >}}
 
-## Affine and linear functions of one variable {#sec-affine-linear-functions}
+# Affine and linear functions of one variable {#sec-affine-linear-functions}
 
 {{< include mds/_subfiles/algebra/_def-affine-function.qmd >}}
 
@@ -90,7 +90,7 @@
 
 {{< include mds/_subfiles/algebra/_thm-affine-function-props.qmd >}}
 
-## Limits of sequences {#sec-sequence-limits}
+# Limits of sequences {#sec-sequence-limits}
 
 {{< include mds/_subfiles/algebra/_def-sequence-limit.qmd >}}
 
@@ -98,7 +98,7 @@
 
 {{< include mds/_subfiles/algebra/_def-diverges-to-infinity.qmd >}}
 
-## Series {#sec-series}
+# Series {#sec-series}
 
 {{< include mds/_subfiles/algebra/_def-non-decreasing.qmd >}}
 
@@ -126,7 +126,7 @@
 
 {{< include mds/_subfiles/algebra/_lem-nonneg-series.qmd >}}
 
-## Exponentials and Logarithms
+# Exponentials and Logarithms
 
 {{< include mds/_subfiles/algebra/_def-exponential-function.qmd >}}
 
@@ -160,6 +160,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-logarithm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-logarithm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-power-nonpositive-base.qmd >}}
 
 {{< slidebreak >}}
@@ -169,6 +177,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-exp-log-inverse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-logarithm-formula.qmd >}}
 
 {{< slidebreak >}}
 

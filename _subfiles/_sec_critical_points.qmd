@@ -1,4 +1,4 @@
-## Critical points and optimization {#sec-critical-points}
+# Critical points and optimization {#sec-critical-points}
 
 {{< include mds/_subfiles/derivatives/_def-flat-point.qmd >}}
 

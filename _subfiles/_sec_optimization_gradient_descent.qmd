@@ -18,11 +18,23 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-descent-directions.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-descent-direction.qmd >}}
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-descent-direction.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_exm-gd-zigzag.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-gd-zigzag.qmd >}}
 
 {{< slidebreak >}}
 

@@ -43,7 +43,7 @@ which define those terms.
     of the predictor values $x$ with coefficients $\beta$:
     $g(\mu) = \eta$.
 
-## Writing math in Quarto {#sec-writing-math-quarto}
+# Writing math in Quarto {#sec-writing-math-quarto}
 
 The third column of @tbl-notation-collected
 gives the LaTeX command for each symbol.
@@ -56,7 +56,7 @@ These notes also use shorthand macros,
 such as `\floor{x}` for $\floor{x}$,
 defined in the `latex-macros` submodule's `macros.qmd`.
 
-## Subscripts and parentheses {#sec-subscripts-parentheses}
+# Subscripts and parentheses {#sec-subscripts-parentheses}
 
 {{< include mds/_subfiles/notation/_rem-subscript-parentheses-convention.qmd >}}
 
@@ -68,7 +68,7 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 {{< include mds/_subfiles/notation/_exm-process-notation.qmd >}}
 
-## Why is notation in probability and statistics so inconsistent and disorganized?
+# Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, 
 we are asked to learn

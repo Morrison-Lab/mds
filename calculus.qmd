@@ -35,7 +35,7 @@ goes on to the page that now holds it.
 
 :::
 
-## Further reading {#sec-additional-resources}
+# Further reading {#sec-additional-resources}
 
 - @mosaiccalc
 - @khuri2003advanced
@@ -49,7 +49,7 @@ goes on to the page that now holds it.
 - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
   is a 12-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops geometric and visual intuition for limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series.
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::

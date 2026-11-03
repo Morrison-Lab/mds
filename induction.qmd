@@ -12,12 +12,12 @@ format:
 
 {{< include mds/_induction.qmd >}}
 
-## Further reading {#sec-further-reading}
+# Further reading {#sec-further-reading}
 
 - @velleman2019prove
   is a structured introduction to proof techniques, including [proof by induction](proof-writing.qmd#def-proof-by-induction).
 
-## References {.unnumbered}
+# References {.unnumbered}
 
 ::: {#refs}
 :::

@@ -1,4 +1,4 @@
-## Optimality conditions in several variables {#sec-optimality-vector}
+# Optimality conditions in several variables {#sec-optimality-vector}
 
 {{< include mds/_subfiles/vector-calc/_prose-optim-attribution.qmd >}}
 
@@ -26,11 +26,27 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-first-order-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-stationary-least-squares.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-taylor-1d.qmd >}}
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-taylor-1d.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-taylor-mv.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-taylor-mv.qmd >}}
 
 {{< slidebreak >}}
 
@@ -42,7 +58,31 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-qf-eigen-bound.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_lem-qf-entry-bound.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-qf-entry-bound.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-second-order-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-second-order-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-second-order-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-second-order-inconclusive.qmd >}}
 
 {{< slidebreak >}}
 

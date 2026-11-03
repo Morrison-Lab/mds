@@ -1,0 +1,15 @@
+:::{#def-iverson-bracket}
+#### Iverson bracket
+
+For any logical proposition $P$,
+the **Iverson bracket** of $P$ is
+[@wikipedia_iverson_bracket]
+
+$$
+[P] \eqdef \begin{cases}
+1, & \text{if } P \text{ is true} \\
+0, & \text{if } P \text{ is false}
+\end{cases}
+$$
+
+:::

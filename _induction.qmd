@@ -9,7 +9,7 @@ then adds the stronger form, [strong induction](induction.qmd#def-strong-inducti
 
 :::
 
-## Recursively defined sequences
+# Recursively defined sequences
 
 {{< include mds/_subfiles/induction/_def-recursive-sequence.qmd >}}
 
@@ -25,7 +25,7 @@ then adds the stronger form, [strong induction](induction.qmd#def-strong-inducti
 
 {{< include mds/_subfiles/induction/_exm-fibonacci-sequence.qmd >}}
 
-## Strong induction
+# Strong induction
 
 {{< include mds/_subfiles/induction/_def-strong-induction.qmd >}}
 

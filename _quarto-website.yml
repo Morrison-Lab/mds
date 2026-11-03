@@ -70,6 +70,10 @@ website:
           - algebra-exponentials.qmd
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
+      - text: "Proof Writing"
+        href: proof-writing.qmd
+      - text: "Induction and Recursion"
+        href: induction.qmd
       - text: "Measures"
         menu:
           - text: "Overview"
@@ -113,10 +117,6 @@ website:
           - optimization-newton.qmd
           - optimization-gradient-descent.qmd
           - optimization-quasi-newton.qmd
-      - text: "Proof Writing"
-        href: proof-writing.qmd
-      - text: "Induction and Recursion"
-        href: induction.qmd
       - text: "Dependency Tree"
         href: dependency-tree.qmd
     right:
@@ -157,6 +157,8 @@ website:
           - algebra-exponentials.qmd
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
+      - proof-writing.qmd
+      - induction.qmd
       - section: "Measures"
         href: measures.qmd
         contents:
@@ -195,8 +197,6 @@ website:
           - optimization-newton.qmd
           - optimization-gradient-descent.qmd
           - optimization-quasi-newton.qmd
-      - proof-writing.qmd
-      - induction.qmd
       - dependency-tree.qmd
 
 # Each type below gets a title bar (type, number, name) apart from the body,
@@ -352,7 +352,7 @@ format:
     incremental: false
     df-print: paged
     number-depth: 2
-    shift-heading-level-by: 0
+    shift-heading-level-by: 1
     slide-level: 2
     scrollable: true
     echo: true

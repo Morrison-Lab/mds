@@ -1,4 +1,4 @@
-## Matrices
+# Matrices
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix.qmd >}}
 
@@ -8,11 +8,11 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-tensor.qmd >}}
 
-### Matrix transpose {#sec-matrix-transpose}
+## Matrix transpose {#sec-matrix-transpose}
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix-transpose.qmd >}}
 
-### Matrix addition
+## Matrix addition
 
 {{< include mds/_subfiles/linear-algebra/_def-zero-matrix.qmd >}}
 
@@ -36,11 +36,11 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-matadd-inverse.qmd >}}
 
-### Scalar multiplication
+## Scalar multiplication
 
 {{< include mds/_subfiles/linear-algebra/_def-scalar-mult.qmd >}}
 
-### Matrix multiplication
+## Matrix multiplication
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix-mult.qmd >}}
 
@@ -72,7 +72,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_sol-shape-rule.qmd >}}
 
-### Square and identity matrices
+## Square and identity matrices
 
 {{< include mds/_subfiles/linear-algebra/_def-square-matrix.qmd >}}
 
@@ -90,7 +90,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-identity.qmd >}}
 
-### Matrix-vector multiplication
+## Matrix-vector multiplication
 
 {{< include mds/_subfiles/linear-algebra/_def-matvec-mult.qmd >}}
 
@@ -100,7 +100,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-linear-system.qmd >}}
 
-### Linear and affine maps
+## Linear and affine maps
 
 {{< include mds/_subfiles/linear-algebra/_def-linear-map.qmd >}}
 
@@ -202,7 +202,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_sol-which-are-linear.qmd >}}
 
-### Transposes of sums and products
+## Transposes of sums and products
 
 <!-- heading shares the slide; do not re-flag -->
 
