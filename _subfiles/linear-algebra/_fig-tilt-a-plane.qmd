@@ -1,5 +1,3 @@
-<!-- no-3d: the figure already draws the plane in three dimensions beside its contour map. -->
-
 ::: {.content-visible when-format="html"}
 
 ::: {#fig-tilt-a-plane}
