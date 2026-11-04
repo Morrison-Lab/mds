@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 16:50:19 (PST)
+Last modified: 2026-11-03 18:52:21 (PST)
 
 # 1 Polynomials
 
@@ -767,6 +767,110 @@ Last modified: 2026-11-03 16:50:19 (PST)
 
 > **NOTE:**
 >
+> Show code
+>
+> ``` downlit
+> cl_b_sf <- seq(-3.5, 3.5, length.out = 101)
+> cl_c_sf <- seq(-3.5, 3.5, length.out = 101)
+> cl_grid_sf <- tidyr::expand_grid(b = cl_b_sf, c = cl_c_sf)
+> cl_value_sf <- cl_grid_sf$b^2 + cl_grid_sf$c^2
+> cl_n_sf <- length(cl_c_sf)
+> cl_z_sf <- matrix(cl_value_sf, nrow = cl_n_sf)
+> cl_angle_sf <- seq(0, 2 * pi, length.out = 101)
+> cl_heights_sf <- c(1, 4, 9)
+> cl_rings_sf <- tidyr::expand_grid(k = cl_heights_sf, angle = cl_angle_sf)
+> cl_rings_sf$radius <- sqrt(cl_rings_sf$k)
+> cl_rings_sf$b <- cl_rings_sf$radius * cos(cl_rings_sf$angle)
+> cl_rings_sf$c <- cl_rings_sf$radius * sin(cl_rings_sf$angle)
+> cl_marks_b_sf <- c(2, 0)
+> cl_marks_c_sf <- c(0, -2)
+> cl_marks_z_sf <- c(4, 4)
+> cl_marks_sf <- tibble::tibble(
+>   b = cl_marks_b_sf,
+>   c = cl_marks_c_sf,
+>   z = cl_marks_z_sf
+> )
+> cl_ring_line_sf <- list(color = "#D55E00", width = 5)
+> cl_marker_sf <- list(color = "black", size = 5)
+> cl_stops_sf <- c(0, 1)
+> cl_cols_sf <- c("#CCE0F0", "#0072B2")
+> cl_scale_sf <- list(cl_stops_sf, cl_cols_sf)
+> cl_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> cl_camera_sf <- list(eye = cl_eye_sf)
+> cl_xaxis_sf <- list(title = "b")
+> cl_yaxis_sf <- list(title = "c")
+> cl_zaxis_sf <- list(title = "g(b, c)")
+> cl_scene_sf <- list(
+>   xaxis = cl_xaxis_sf,
+>   yaxis = cl_yaxis_sf,
+>   zaxis = cl_zaxis_sf,
+>   camera = cl_camera_sf
+> )
+> plotly::plot_ly() |>
+>   plotly::add_surface(
+>     x = cl_b_sf,
+>     y = cl_c_sf,
+>     z = cl_z_sf,
+>     colorscale = cl_scale_sf,
+>     showscale = FALSE,
+>     opacity = 0.8
+>   ) |>
+>   plotly::add_trace(
+>     data = cl_rings_sf,
+>     x = ~b,
+>     y = ~c,
+>     z = ~k,
+>     split = ~k,
+>     type = "scatter3d",
+>     mode = "lines",
+>     line = cl_ring_line_sf,
+>     showlegend = FALSE
+>   ) |>
+>   plotly::add_markers(
+>     data = cl_marks_sf,
+>     x = ~b,
+>     y = ~c,
+>     z = ~z,
+>     showlegend = FALSE,
+>     marker = cl_marker_sf
+>   ) |>
+>   plotly::layout(scene = cl_scene_sf)
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> cl_b_3d, cl_c_3d = np.meshgrid(np.linspace(-3.5, 3.5, 101),
+>                                np.linspace(-3.5, 3.5, 101))
+> cl_g_3d = cl_b_3d**2 + cl_c_3d**2
+> cl_angle_3d = np.linspace(0, 2 * np.pi, 101)
+> fig = plt.figure(figsize=(6, 4.5))
+> ax = fig.add_subplot(projection="3d")
+> ax.plot_surface(cl_b_3d, cl_c_3d, cl_g_3d, color="#0072B2", alpha=0.6)
+> for k in [1, 4, 9]:
+>     ax.plot(np.sqrt(k) * np.cos(cl_angle_3d),
+>             np.sqrt(k) * np.sin(cl_angle_3d),
+>             k, color="#D55E00", linewidth=2)
+> ax.scatter([2, 0], [0, -2], [4, 4], color="black")
+> ax.set_xlabel("b")
+> ax.set_ylabel("c")
+> ax.set_zlabel("g(b, c)")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Surface plot of g(b, c) = b squared plus c squared for b and c from -3.5 to 3.5. The surface is a bowl with its lowest point at the origin. Red circles of radius 1, 2 and 3 around the vertical axis, at heights 1, 4 and 9, mark the contour lines. Two dots on the circle at height 4 mark the points (2, 0) and (0, -2).](algebra-exponentials_files/figure-html/contour-line-3d-python-1.png)](algebra-exponentials_files/figure-html/contour-line-3d-python-1.png "Figure 2: The graph of g(b, c) = b^2 + c^2, the surface whose contour lines are in Figure 1. The red circles are the contour lines at heights 1, 4 and 9, and the dots are the points (2, 0) and (0, -2) of Example 26 on the one at height 4.")
+>
+> ## Python
+>
+> Figure 2: The [graph](functions.llms.md#def-graph) of $g(b, c) = b^2 + c^2$, the surface whose [contour lines](#def-contour-line) are in [Figure 1](#fig-contour-line). The red circles are the contour lines at heights $1$, $4$ and $9$, and the dots are the points $(2, 0)$ and $(0, -2)$ of [Example 26](#exm-contour-line) on the one at height $4$.
+
+> **NOTE:**
+>
 > *Remark 8* (Contour lines on a plot of a surface). On a plot of the surface $z = g(b, c)$, the [contour line](#def-contour-line) is the curve along which the surface has height $k$.
 
 > **NOTE:**
@@ -811,7 +915,7 @@ Last modified: 2026-11-03 16:50:19 (PST)
 >
 > For $b < 0$, cases 4 and 5 come from $b^{c-1} = c$ as well: when $c - 1$ is even, $b^{c-1} > 0$, so $c$ must be positive; when $c - 1$ is odd, $b^{c-1} < 0$, so $c$ must be negative.
 >
-> See the red contours in [Figure 3](#fig-double-exponential2) for a visualization of the $b \ge 0$ cases.
+> See the red contours in [Figure 4](#fig-double-exponential2) for a visualization of the $b \ge 0$ cases.
 
 > **NOTE:**
 >
@@ -885,7 +989,7 @@ Last modified: 2026-11-03 16:50:19 (PST)
 >   )
 > ```
 >
-> Figure 2: Graph of $b*c$ and $b^c$
+> Figure 3: Graph of $b*c$ and $b^c$
 
 > **NOTE:**
 >
@@ -936,7 +1040,7 @@ Last modified: 2026-11-03 16:50:19 (PST)
 >   )
 > ```
 >
-> Figure 3: **Graph of** $b^c - b*c$. The red [contour lines](#def-contour-line) are at heights $0$ and $1$; the ones at height $0$ show where $b^c = b*c$.
+> Figure 4: **Graph of** $b^c - b*c$. The red [contour lines](#def-contour-line) are at heights $0$ and $1$; the ones at height $0$ show where $b^c = b*c$.
 
 > **NOTE:**
 >

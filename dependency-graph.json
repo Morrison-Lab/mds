@@ -31,15 +31,6 @@
    "external": false
   },
   {
-   "id": "mds/algebra#cor-mode-positive-multiple",
-   "site": "mds",
-   "page": "algebra",
-   "div": "cor-mode-positive-multiple",
-   "kind": "cor",
-   "title": "A positive multiple has the same modes",
-   "external": false
-  },
-  {
    "id": "mds/algebra#def-absolute-value",
    "site": "mds",
    "page": "algebra",
@@ -514,15 +505,6 @@
    "div": "def-minimum",
    "kind": "def",
    "title": "Minimum",
-   "external": false
-  },
-  {
-   "id": "mds/algebra#def-mode",
-   "site": "mds",
-   "page": "algebra",
-   "div": "def-mode",
-   "kind": "def",
-   "title": "Mode of a function",
    "external": false
   },
   {
@@ -1336,15 +1318,6 @@
    "external": false
   },
   {
-   "id": "mds/algebra-basics#cor-mode-positive-multiple",
-   "site": "mds",
-   "page": "algebra-basics",
-   "div": "cor-mode-positive-multiple",
-   "kind": "cor",
-   "title": "A positive multiple has the same modes",
-   "external": false
-  },
-  {
    "id": "mds/algebra-basics#def-absolute-value",
    "site": "mds",
    "page": "algebra-basics",
@@ -1414,15 +1387,6 @@
    "div": "def-minimum",
    "kind": "def",
    "title": "Minimum",
-   "external": false
-  },
-  {
-   "id": "mds/algebra-basics#def-mode",
-   "site": "mds",
-   "page": "algebra-basics",
-   "div": "def-mode",
-   "kind": "def",
-   "title": "Mode of a function",
    "external": false
   },
   {
@@ -13498,14 +13462,6 @@
  ],
  "edges": [
   [
-   "mds/algebra#cor-mode-positive-multiple",
-   "mds/algebra#def-mode"
-  ],
-  [
-   "mds/algebra#cor-mode-positive-multiple",
-   "mds/functions#def-function"
-  ],
-  [
    "mds/algebra#def-affine-function",
    "mds/functions#def-function"
   ],
@@ -13804,14 +13760,6 @@
   [
    "mds/algebra#def-lower-upper-limits",
    "mds/calculus#def-riemann-integral"
-  ],
-  [
-   "mds/algebra#def-mode",
-   "mds/algebra#def-argmax"
-  ],
-  [
-   "mds/algebra#def-mode",
-   "mds/functions#def-function"
   ],
   [
    "mds/algebra#def-monomial",
@@ -14154,14 +14102,6 @@
    "mds/algebra#thm-prod-symmetric"
   ],
   [
-   "mds/algebra-basics#cor-mode-positive-multiple",
-   "mds/algebra-basics#def-mode"
-  ],
-  [
-   "mds/algebra-basics#cor-mode-positive-multiple",
-   "mds/functions#def-function"
-  ],
-  [
    "mds/algebra-basics#def-argmax",
    "mds/functions#def-function"
   ],
@@ -14184,14 +14124,6 @@
   [
    "mds/algebra-basics#def-local-minimizer",
    "mds/linear-algebra#def-euclidean-norm"
-  ],
-  [
-   "mds/algebra-basics#def-mode",
-   "mds/algebra-basics#def-argmax"
-  ],
-  [
-   "mds/algebra-basics#def-mode",
-   "mds/functions#def-function"
   ],
   [
    "mds/algebra-basics#def-negative-part",

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 16:50:19 (PST)
+Last modified: 2026-11-03 18:52:21 (PST)
 
 # 1 Equalities
 
@@ -339,41 +339,23 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 17 (Mode of a function)** Let $h : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). A **mode** of $h$ is an element of the [argmax](#def-argmax) of $h$ over $A$:
->
-> $$x^* \text{ is a mode of } h \iff x^* \in \arg \max_{x \in A} h(x).$$
-
-> **NOTE:**
->
-> **Example 11 (The mode of a quadratic, and a function with two modes)** The [function](functions.llms.md#def-function) $g(x) = x(4 - x)$ on $[0, 4]$ of [Exercise 2](#exr-argmax-quadratic) has $\arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, so $2$ is its only [mode](#def-mode). The function $h(x) = x^2$ on $\mathopen{}\left\{-2, 0, 2\right\}\mathclose{}$ has $\arg \max_{x \in \mathopen{}\left\{-2, 0, 2\right\}\mathclose{}} h(x) = \mathopen{}\left\{-2, 2\right\}\mathclose{}$, so it has two [modes](#def-mode), $-2$ and $2$.
-
-> **NOTE:**
->
-> **Corollary 1 (A positive multiple has the same modes)** Let $g : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function) and let $c > 0$. Then $c\,g$ and $g$ have the same [modes](#def-mode).
-
-> **NOTE:**
->
-> *Proof*. By [Definition 17](#def-mode), the [modes](#def-mode) of $c\,g$ are the elements of $\arg \max_{x \in A} c\,g(x)$, and the modes of $g$ are the elements of $\arg \max_{x \in A} g(x)$. By [Theorem 7](#thm-argmax-positive-multiple), these have the same elements.
-
-> **NOTE:**
->
-> **Definition 18 (Positive part of a function)** Let $S$ be a [set](sets.llms.md#def-set), and let $f : S \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **positive part** of $f$ is the non-negative function
+> **Definition 17 (Positive part of a function)** Let $S$ be a [set](sets.llms.md#def-set), and let $f : S \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **positive part** of $f$ is the non-negative function
 >
 > $$f^{+}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f(s), 0\right\}\mathclose{}.$$
 
 > **NOTE:**
 >
-> **Example 12 (The positive part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [positive part](#def-positive-negative-parts) is $f^{+}(x) = \max\mathopen{}\left\{x, 0\right\}\mathclose{}$. At $x = 3$, $f^{+}(3) = \max\mathopen{}\left\{3, 0\right\}\mathclose{} = 3$, and at $x = -2$, $f^{+}(-2) = \max\mathopen{}\left\{-2, 0\right\}\mathclose{} = 0$.
+> **Example 11 (The positive part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [positive part](#def-positive-negative-parts) is $f^{+}(x) = \max\mathopen{}\left\{x, 0\right\}\mathclose{}$. At $x = 3$, $f^{+}(3) = \max\mathopen{}\left\{3, 0\right\}\mathclose{} = 3$, and at $x = -2$, $f^{+}(-2) = \max\mathopen{}\left\{-2, 0\right\}\mathclose{} = 0$.
 
 > **NOTE:**
 >
-> **Definition 19 (Negative part of a function)** For $f$ as in [Definition 18](#def-positive-negative-parts), the **negative part** of $f$ is the non-negative [function](functions.llms.md#def-function)
+> **Definition 18 (Negative part of a function)** For $f$ as in [Definition 17](#def-positive-negative-parts), the **negative part** of $f$ is the non-negative [function](functions.llms.md#def-function)
 >
 > $$f^{-}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mathclose{}.$$
 
 > **NOTE:**
 >
-> **Example 13 (The negative part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [negative part](#def-negative-part) is $f^{-}(x) = \max\mathopen{}\left\{-x, 0\right\}\mathclose{}$. At $x = 3$, $f^{-}(3) = \max\mathopen{}\left\{-3, 0\right\}\mathclose{} = 0$, and at $x = -2$, $f^{-}(-2) = \max\mathopen{}\left\{2, 0\right\}\mathclose{} = 2$.
+> **Example 12 (The negative part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [negative part](#def-negative-part) is $f^{-}(x) = \max\mathopen{}\left\{-x, 0\right\}\mathclose{}$. At $x = 3$, $f^{-}(3) = \max\mathopen{}\left\{-3, 0\right\}\mathclose{} = 0$, and at $x = -2$, $f^{-}(-2) = \max\mathopen{}\left\{2, 0\right\}\mathclose{} = 2$.
 
 # 6 Global and local minimizers
 
@@ -427,7 +409,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 20 (Global minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). A point $x^* \in A$ is a **global minimizer** of $f$ over $A$ if $f(x^*) \le f(x)$ for all $x \in A$.
+> **Definition 19 (Global minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). A point $x^* \in A$ is a **global minimizer** of $f$ over $A$ if $f(x^*) \le f(x)$ for all $x \in A$.
 
 > **NOTE:**
 >
@@ -435,19 +417,19 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 21 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ for all $x \in A$ with $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$, where $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}$ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
+> **Definition 20 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ for all $x \in A$ with $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$, where $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}$ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
 
 > **NOTE:**
 >
 > *Remark 6* (Local and global minimizers). For $p = 1$, $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} = \mathopen{}\left|x - x^*\right|\mathclose{}$. For example, with $x^* = 1$ and $\delta= 1$, the condition $\mathopen{}\left|x - 1\right|\mathclose{} < 1$ means $0 < x < 2$.
 >
-> Every global minimizer ([Definition 20](#def-global-minimizer)) is a local minimizer: take any $\delta> 0$. For example, $x^* = 0$ is a global minimizer of $f(x) = x^2$ on $\mathbb{R}$, so it is also a local minimizer.
+> Every global minimizer ([Definition 19](#def-global-minimizer)) is a local minimizer: take any $\delta> 0$. For example, $x^* = 0$ is a global minimizer of $f(x) = x^2$ on $\mathbb{R}$, so it is also a local minimizer.
 >
 > The [converse](proof-writing.llms.md#def-converse) fails. In [Exercise 4](#exr-local-vs-global-min), $x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\delta= 1$), but not a global one.
 
 > **NOTE:**
 >
-> **Example 14 (A point that is not a local minimizer)** For $f(x) = x^3 - 3x$, the point $x = -1$ is not a local minimizer. For any $t$,
+> **Example 13 (A point that is not a local minimizer)** For $f(x) = x^3 - 3x$, the point $x = -1$ is not a local minimizer. For any $t$,
 >
 > $$\begin{aligned}
 > f(-1 + t)
@@ -496,11 +478,10 @@ You are welcome to switch between decimal and percent notation freely; just make
 - [Definition 14 (Maximum)](#def-maximum)
 - [Definition 15 (Argmin)](#def-argmin)
 - [Definition 16 (Argmax)](#def-argmax)
-- [Definition 17 (Mode of a function)](#def-mode)
-- [Definition 18 (Positive part of a function)](#def-positive-negative-parts)
-- [Definition 19 (Negative part of a function)](#def-negative-part)
-- [Definition 20 (Global minimizer)](#def-global-minimizer)
-- [Definition 21 (Local minimizer)](#def-local-minimizer)
+- [Definition 17 (Positive part of a function)](#def-positive-negative-parts)
+- [Definition 18 (Negative part of a function)](#def-negative-part)
+- [Definition 19 (Global minimizer)](#def-global-minimizer)
+- [Definition 20 (Local minimizer)](#def-local-minimizer)
 
 Back to top
 
