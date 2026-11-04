@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 13:55:30 (PST)
+Last modified: 2026-11-03 15:43:49 (PST)
 
 # 1 Equalities
 
@@ -289,13 +289,63 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
+> **Exercise 2 (The argmax of a quadratic)** Let $g(x) = x(4 - x)$ for $x \in [0, 4]$. Find the [argmax](#def-argmax) of $g$ over $[0, 4]$.
+
+> **NOTE:**
+>
+> *Solution 2*. Completing the [square](#def-square) gives
+>
+> $$\begin{aligned}
+> g(x) &= 4x - x^2 \\
+> &= 4 - (x - 2)^2.
+> \end{aligned}$$
+>
+> The square $(x - 2)^2$ is never negative and is $0$ only at $x = 2$, so $g(x) \le 4 = g(2)$ for every $x \in [0, 4]$, with equality only at $x = 2$. So $\arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$.
+
+> **NOTE:**
+>
+> **Exercise 3 (The argmax of a scaled quadratic)** Let $f(x) = 5\,x(4 - x)$ for $x \in [0, 4]$. Find the [argmax](#def-argmax) of $f$ over $[0, 4]$.
+
+> **NOTE:**
+>
+> *Solution 3*. Completing the [square](#def-square) gives
+>
+> $$\begin{aligned}
+> f(x) &= 5\,(4x - x^2) \\
+> &= 20 - 5\,(x - 2)^2.
+> \end{aligned}$$
+>
+> The square $(x - 2)^2$ is never negative and is $0$ only at $x = 2$, so $f(x) \le 20 = f(2)$ for every $x \in [0, 4]$, with equality only at $x = 2$. So $\arg \max_{x \in [0, 4]} f(x) = \mathopen{}\left\{2\right\}\mathclose{}$.
+
+> **NOTE:**
+>
+> **Theorem 7 (A positive multiple has the same argmax)** Let $g : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function) and let $c > 0$. Then
+>
+> $$\arg \max_{x \in A} c\,g(x) = \arg \max_{x \in A} g(x).$$
+
+> **NOTE:**
+>
+> *Proof*. Let $x^* \in A$. By [Definition 16](#def-argmax), $x^*$ is in the [argmax](#def-argmax) of $c\,g$ [if and only if](proof-writing.llms.md#def-iff) $c\,g(a) \le c\,g(x^*)$ for every $a \in A$.
+>
+> Suppose $g(a) \le g(x^*)$. If $g(a) = g(x^*)$, then $c\,g(a) = c\,g(x^*)$. If $g(a) < g(x^*)$, then $c\,g(a) < c\,g(x^*)$ by [Theorem 5](#thm-mult-ineq). Either way, $c\,g(a) \le c\,g(x^*)$.
+>
+> Conversely, suppose $c\,g(a) \le c\,g(x^*)$. Since $1/c > 0$ and $(1/c)\,(c\,g) = g$, the same reasoning applied to the [function](functions.llms.md#def-function) $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
+>
+> So $c\,g(a) \le c\,g(x^*)$ for every $a \in A$ if and only if $g(a) \le g(x^*)$ for every $a \in A$. Hence $x^*$ is in the argmax of $c\,g$ exactly when it is in the argmax of $g$.
+
+> **NOTE:**
+>
+> **Example 10 (A quadratic and its positive multiple)** With $g(x) = x(4 - x)$ of [Exercise 2](#exr-argmax-quadratic) and $f = 5\,g$ of [Exercise 3](#exr-argmax-scaled-quadratic), [Theorem 7](#thm-argmax-positive-multiple) (with $c = 5$) gives $\arg \max_{x \in [0, 4]} f(x) = \arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, the same [argmax](#def-argmax) as the exercises found. The largest [values](functions.llms.md#def-value) differ, $f(2) = 20$ and $g(2) = 4$, so only the argmax is unchanged by the multiple.
+
+> **NOTE:**
+>
 > **Definition 17 (Positive part of a function)** Let $S$ be a [set](sets.llms.md#def-set), and let $f : S \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **positive part** of $f$ is the non-negative function
 >
 > $$f^{+}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f(s), 0\right\}\mathclose{}.$$
 
 > **NOTE:**
 >
-> **Example 10 (The positive part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [positive part](#def-positive-negative-parts) is $f^{+}(x) = \max\mathopen{}\left\{x, 0\right\}\mathclose{}$. At $x = 3$, $f^{+}(3) = \max\mathopen{}\left\{3, 0\right\}\mathclose{} = 3$, and at $x = -2$, $f^{+}(-2) = \max\mathopen{}\left\{-2, 0\right\}\mathclose{} = 0$.
+> **Example 11 (The positive part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [positive part](#def-positive-negative-parts) is $f^{+}(x) = \max\mathopen{}\left\{x, 0\right\}\mathclose{}$. At $x = 3$, $f^{+}(3) = \max\mathopen{}\left\{3, 0\right\}\mathclose{} = 3$, and at $x = -2$, $f^{+}(-2) = \max\mathopen{}\left\{-2, 0\right\}\mathclose{} = 0$.
 
 > **NOTE:**
 >
@@ -305,13 +355,13 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 11 (The negative part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [negative part](#def-negative-part) is $f^{-}(x) = \max\mathopen{}\left\{-x, 0\right\}\mathclose{}$. At $x = 3$, $f^{-}(3) = \max\mathopen{}\left\{-3, 0\right\}\mathclose{} = 0$, and at $x = -2$, $f^{-}(-2) = \max\mathopen{}\left\{2, 0\right\}\mathclose{} = 2$.
+> **Example 12 (The negative part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [negative part](#def-negative-part) is $f^{-}(x) = \max\mathopen{}\left\{-x, 0\right\}\mathclose{}$. At $x = 3$, $f^{-}(3) = \max\mathopen{}\left\{-3, 0\right\}\mathclose{} = 0$, and at $x = -2$, $f^{-}(-2) = \max\mathopen{}\left\{2, 0\right\}\mathclose{} = 2$.
 
 # 6 Global and local minimizers
 
 > **NOTE:**
 >
-> **Exercise 2 (A dip that is not the bottom)** Let $f(x) = x^3 - 3x$ for $x \in \mathbb{R}$.
+> **Exercise 4 (A dip that is not the bottom)** Let $f(x) = x^3 - 3x$ for $x \in \mathbb{R}$.
 >
 > 1.  Factor $f(x) - f(1)$ completely.
 > 2.  Use part 1 to compare $f(x)$ with $f(1)$ for every $x$ in the interval $(0, 2)$. Is $f(x)$ larger than, smaller than, or equal to $f(1)$, and for which $x$?
@@ -320,7 +370,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> *Solution 2*.
+> *Solution 4*.
 >
 > 1.  Since
 >
@@ -375,11 +425,11 @@ You are welcome to switch between decimal and percent notation freely; just make
 >
 > Every global minimizer ([Definition 19](#def-global-minimizer)) is a local minimizer: take any $\delta> 0$. For example, $x^* = 0$ is a global minimizer of $f(x) = x^2$ on $\mathbb{R}$, so it is also a local minimizer.
 >
-> The [converse](proof-writing.llms.md#def-converse) fails. In [Exercise 2](#exr-local-vs-global-min), $x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\delta= 1$), but not a global one.
+> The [converse](proof-writing.llms.md#def-converse) fails. In [Exercise 4](#exr-local-vs-global-min), $x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\delta= 1$), but not a global one.
 
 > **NOTE:**
 >
-> **Example 12 (A point that is not a local minimizer)** For $f(x) = x^3 - 3x$, the point $x = -1$ is not a local minimizer. For any $t$,
+> **Example 13 (A point that is not a local minimizer)** For $f(x) = x^3 - 3x$, the point $x = -1$ is not a local minimizer. For any $t$,
 >
 > $$\begin{aligned}
 > f(-1 + t)

@@ -994,6 +994,15 @@
    "external": false
   },
   {
+   "id": "mds/algebra#thm-argmax-positive-multiple",
+   "site": "mds",
+   "page": "algebra",
+   "div": "thm-argmax-positive-multiple",
+   "kind": "thm",
+   "title": "A positive multiple has the same argmax",
+   "external": false
+  },
+  {
    "id": "mds/algebra#thm-completeness",
    "site": "mds",
    "page": "algebra",
@@ -1495,6 +1504,15 @@
    "div": "thm-add-ineq",
    "kind": "thm",
    "title": "Adding to both sides of an inequality",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-basics#thm-argmax-positive-multiple",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "thm-argmax-positive-multiple",
+   "kind": "thm",
+   "title": "A positive multiple has the same argmax",
    "external": false
   },
   {
@@ -12199,6 +12217,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-domain-of-discourse",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-domain-of-discourse",
+   "kind": "def",
+   "title": "Domain of discourse, universe of discourse",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-existential-quantifier",
    "site": "mds",
    "page": "proof-writing",
@@ -12496,6 +12523,33 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-addition-rule",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-addition-rule",
+   "kind": "thm",
+   "title": "Addition",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-biconditional-split",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-biconditional-split",
+   "kind": "thm",
+   "title": "A biconditional is two conditionals",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-conjunction-rule",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-conjunction-rule",
+   "kind": "thm",
+   "title": "Conjunction",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-contradiction-works",
    "site": "mds",
    "page": "proof-writing",
@@ -12532,6 +12586,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-disjunctive-syllogism",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-disjunctive-syllogism",
+   "kind": "thm",
+   "title": "Disjunctive syllogism",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-double-negation",
    "site": "mds",
    "page": "proof-writing",
@@ -12550,12 +12613,57 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-equivalent-cycle",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-equivalent-cycle",
+   "kind": "thm",
+   "title": "A cycle of conditionals",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-modus-ponens",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-modus-ponens",
+   "kind": "thm",
+   "title": "Modus ponens",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-modus-tollens",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-modus-tollens",
+   "kind": "thm",
+   "title": "Modus tollens",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-negate-quantifiers",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-negate-quantifiers",
+   "kind": "thm",
+   "title": "De Morgan's laws for quantifiers",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-proof-by-contradiction",
    "site": "mds",
    "page": "proof-writing",
    "div": "thm-proof-by-contradiction",
    "kind": "thm",
    "title": "A proof by contradiction proves its proposition",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-simplification",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-simplification",
+   "kind": "thm",
+   "title": "Simplification",
    "external": false
   },
   {
@@ -13942,6 +14050,10 @@
    "mds/algebra#def-affine-function"
   ],
   [
+   "mds/algebra#thm-argmax-positive-multiple",
+   "mds/functions#def-function"
+  ],
+  [
    "mds/algebra#thm-completeness",
    "mds/algebra#def-bounded-above"
   ],
@@ -14068,6 +14180,10 @@
   [
    "mds/algebra-basics#def-transitive",
    "mds/functions#def-relation"
+  ],
+  [
+   "mds/algebra-basics#thm-argmax-positive-multiple",
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra-basics#thm-equal-trans",
@@ -20178,6 +20294,10 @@
    "mds/proof-writing#def-proposition"
   ],
   [
+   "mds/proof-writing#def-domain-of-discourse",
+   "mds/proof-writing#def-predicate"
+  ],
+  [
    "mds/proof-writing#def-existential-quantifier",
    "mds/proof-writing#def-quantifier"
   ],
@@ -20418,6 +20538,26 @@
    "mds/proof-writing#def-quantifier"
   ],
   [
+   "mds/proof-writing#thm-addition-rule",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-addition-rule",
+   "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mds/proof-writing#thm-biconditional-split",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-conjunction-rule",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-conjunction-rule",
+   "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
    "mds/proof-writing#thm-contradiction-works",
    "mds/proof-writing#def-proposition"
   ],
@@ -20432,6 +20572,14 @@
   [
    "mds/proof-writing#thm-derivation-chain",
    "mds/proof-writing#def-derivation"
+  ],
+  [
+   "mds/proof-writing#thm-disjunctive-syllogism",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-disjunctive-syllogism",
+   "mds/proof-writing#def-rule-of-inference"
   ],
   [
    "mds/proof-writing#thm-double-negation",
@@ -20450,8 +20598,44 @@
    "mds/proof-writing#def-tautology"
   ],
   [
+   "mds/proof-writing#thm-equivalent-cycle",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-modus-ponens",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-modus-ponens",
+   "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mds/proof-writing#thm-modus-tollens",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-modus-tollens",
+   "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mds/proof-writing#thm-negate-quantifiers",
+   "mds/proof-writing#def-domain-of-discourse"
+  ],
+  [
+   "mds/proof-writing#thm-negate-quantifiers",
+   "mds/proof-writing#def-predicate"
+  ],
+  [
    "mds/proof-writing#thm-proof-by-contradiction",
    "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-simplification",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-simplification",
+   "mds/proof-writing#def-rule-of-inference"
   ],
   [
    "mds/relations#def-equivalence-class",

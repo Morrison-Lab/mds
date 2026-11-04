@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 13:55:30 (PST)
+Last modified: 2026-11-03 15:43:49 (PST)
 
 # 1 Convex functions
 
@@ -85,7 +85,7 @@ Last modified: 2026-11-03 13:55:30 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (A function that is not convex)** The function in [Exercise 2 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#exr-local-vs-global-min), $f(x) = x^3 - 3x$, is not convex. Take $x = -2$, $y = 0$, $t = \tfrac{1}{2}$. The point is $\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1$, where the graph has height
+> **Example 3 (A function that is not convex)** The function in [Exercise 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#exr-local-vs-global-min), $f(x) = x^3 - 3x$, is not convex. Take $x = -2$, $y = 0$, $t = \tfrac{1}{2}$. The point is $\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1$, where the graph has height
 >
 > $$\begin{aligned}
 > f(-1) &= -1 + 3 \\
@@ -113,7 +113,7 @@ Last modified: 2026-11-03 13:55:30 (PST)
 >
 > for every $x$.
 >
-> Without convexity, a local minimizer need not be global: $f(x) = x^3 - 3x$ is not convex ([Example 3](#exm-cubic-not-convex)), and it has a local minimizer at $x^* = 1$ that is not global ([Exercise 2 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#exr-local-vs-global-min)).
+> Without convexity, a local minimizer need not be global: $f(x) = x^3 - 3x$ is not convex ([Example 3](#exm-cubic-not-convex)), and it has a local minimizer at $x^* = 1$ that is not global ([Exercise 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#exr-local-vs-global-min)).
 
 > **NOTE:**
 >
