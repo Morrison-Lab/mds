@@ -12109,6 +12109,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-conclusion",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-conclusion",
+   "kind": "def",
+   "title": "Conclusion",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-constructive-proof",
    "site": "mds",
    "page": "proof-writing",
@@ -12253,6 +12262,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-logical-argument",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-logical-argument",
+   "kind": "def",
+   "title": "Logical argument",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-logical-connective",
    "site": "mds",
    "page": "proof-writing",
@@ -12331,6 +12349,15 @@
    "div": "def-predicate",
    "kind": "def",
    "title": "Predicate",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#def-premise",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-premise",
+   "kind": "def",
+   "title": "Premise",
    "external": false
   },
   {
@@ -12415,6 +12442,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-rule-of-inference",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-rule-of-inference",
+   "kind": "def",
+   "title": "Rule of inference",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-sufficient-condition",
    "site": "mds",
    "page": "proof-writing",
@@ -12460,6 +12496,24 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-addition-rule",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-addition-rule",
+   "kind": "thm",
+   "title": "Addition",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-conjunction-rule",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-conjunction-rule",
+   "kind": "thm",
+   "title": "Conjunction",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-contradiction-works",
    "site": "mds",
    "page": "proof-writing",
@@ -12496,6 +12550,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-disjunctive-syllogism",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-disjunctive-syllogism",
+   "kind": "thm",
+   "title": "Disjunctive syllogism",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-double-negation",
    "site": "mds",
    "page": "proof-writing",
@@ -12514,12 +12577,39 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-modus-ponens",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-modus-ponens",
+   "kind": "thm",
+   "title": "Modus ponens",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-modus-tollens",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-modus-tollens",
+   "kind": "thm",
+   "title": "Modus tollens",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-proof-by-contradiction",
    "site": "mds",
    "page": "proof-writing",
    "div": "thm-proof-by-contradiction",
    "kind": "thm",
    "title": "A proof by contradiction proves its proposition",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-simplification",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-simplification",
+   "kind": "thm",
+   "title": "Simplification",
    "external": false
   },
   {
@@ -12748,6 +12838,15 @@
    "external": false
   },
   {
+   "id": "mds/sets#def-roster-notation",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-roster-notation",
+   "kind": "def",
+   "title": "Roster notation",
+   "external": false
+  },
+  {
    "id": "mds/sets#def-set",
    "site": "mds",
    "page": "sets",
@@ -12763,6 +12862,15 @@
    "div": "def-set-builder",
    "kind": "def",
    "title": "Set-builder notation",
+   "external": false
+  },
+  {
+   "id": "mds/sets#def-set-builder-expression",
+   "site": "mds",
+   "page": "sets",
+   "div": "def-set-builder-expression",
+   "kind": "def",
+   "title": "Set-builder notation with an expression",
    "external": false
   },
   {
@@ -20056,6 +20164,14 @@
    "mds/proof-writing#def-logical-connective"
   ],
   [
+   "mds/proof-writing#def-conclusion",
+   "mds/proof-writing#def-logical-argument"
+  ],
+  [
+   "mds/proof-writing#def-conclusion",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#def-constructive-proof",
    "mds/proof-writing#def-existential-quantifier"
   ],
@@ -20180,6 +20296,10 @@
    "mds/proof-writing#def-result"
   ],
   [
+   "mds/proof-writing#def-logical-argument",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#def-logical-connective",
    "mds/proof-writing#def-proposition"
   ],
@@ -20237,6 +20357,14 @@
   ],
   [
    "mds/proof-writing#def-predicate",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#def-premise",
+   "mds/proof-writing#def-logical-argument"
+  ],
+  [
+   "mds/proof-writing#def-premise",
    "mds/proof-writing#def-proposition"
   ],
   [
@@ -20300,6 +20428,26 @@
    "mds/proof-writing#def-proposition"
   ],
   [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-conclusion"
+  ],
+  [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-logical-argument"
+  ],
+  [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-logical-entailment"
+  ],
+  [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-premise"
+  ],
+  [
+   "mds/proof-writing#def-rule-of-inference",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#def-tautology",
    "mds/proof-writing#def-proposition"
   ],
@@ -20324,6 +20472,22 @@
    "mds/proof-writing#def-quantifier"
   ],
   [
+   "mds/proof-writing#thm-addition-rule",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-addition-rule",
+   "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mds/proof-writing#thm-conjunction-rule",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-conjunction-rule",
+   "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
    "mds/proof-writing#thm-contradiction-works",
    "mds/proof-writing#def-proposition"
   ],
@@ -20338,6 +20502,14 @@
   [
    "mds/proof-writing#thm-derivation-chain",
    "mds/proof-writing#def-derivation"
+  ],
+  [
+   "mds/proof-writing#thm-disjunctive-syllogism",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-disjunctive-syllogism",
+   "mds/proof-writing#def-rule-of-inference"
   ],
   [
    "mds/proof-writing#thm-double-negation",
@@ -20356,8 +20528,32 @@
    "mds/proof-writing#def-tautology"
   ],
   [
+   "mds/proof-writing#thm-modus-ponens",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-modus-ponens",
+   "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mds/proof-writing#thm-modus-tollens",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-modus-tollens",
+   "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
    "mds/proof-writing#thm-proof-by-contradiction",
    "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-simplification",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-simplification",
+   "mds/proof-writing#def-rule-of-inference"
   ],
   [
    "mds/relations#def-equivalence-class",
@@ -20522,6 +20718,14 @@
   [
    "mds/sets#def-power-set",
    "mds/sets#def-subset"
+  ],
+  [
+   "mds/sets#def-roster-notation",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/sets#def-set-builder-expression",
+   "mds/sets#def-set"
   ],
   [
    "mds/sets#def-strict-subset",
