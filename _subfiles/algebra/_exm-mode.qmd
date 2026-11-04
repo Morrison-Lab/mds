@@ -1,0 +1,11 @@
+:::{#exm-mode}
+#### The mode of a quadratic, and a function with two modes
+
+The [function](functions.qmd#def-function) $g(x) = x(4 - x)$ on $[0, 4]$ of @exr-argmax-quadratic has $\argmax_{x \in [0, 4]} g(x) = \cb{2}$,
+so $2$ is its only [mode](#def-mode).
+The function $h(x) = x^2$ on $\cb{-2, 0, 2}$ has $\argmax_{x \in \cb{-2, 0, 2}} h(x) = \cb{-2, 2}$,
+so it has two [modes](#def-mode), $-2$ and $2$.
+
+<!-- no-figure: the example reads off two argmax sets from values already computed -->
+
+:::
