@@ -29,5 +29,6 @@ exclusions <- list(
   ),
   `_subfiles/linear-algebra/_fig-tilt-a-plane.qmd` = Inf,
   `_subfiles/vector-calc/_fig-linear-approx.qmd` = Inf,
-  `_subfiles/vector-calc/_fig-gradient-explorer.qmd` = Inf
+  `_subfiles/vector-calc/_fig-gradient-explorer.qmd` = Inf,
+  `_subfiles/vector-calc/_fig-gradient-explorer-3d.qmd` = Inf
 )
