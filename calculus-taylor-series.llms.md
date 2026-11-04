@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-04 11:18:12 (PST)
+Last modified: 2026-11-04 13:27:44 (PST)
 
 # 1 Taylor polynomials and series
 
 > **NOTE:**
 >
-> **Definition 1 (Taylor polynomial)** Let $f$ be a function that has at least $n$ derivatives at a point $x_0$. The **Taylor polynomial** of degree $n$ for $f$ centered at $x_0$ is:
+> **Definition 1 (Taylor polynomial (Taylor expansion))** Let $f$ be a function that has at least $n$ derivatives at a point $x_0$. The **Taylor polynomial** (also called the **Taylor expansion**) of [degree](algebra-exponentials.llms.md#def-polynomial-degree) $n$ for $f$ centered at $x_0$ is:
 >
 > $$\begin{aligned}
 > P_n(x)
@@ -568,7 +568,7 @@ Last modified: 2026-11-04 11:18:12 (PST)
 
 # Definitions on this page
 
-- [Definition 1 (Taylor polynomial)](#def-taylor-polynomial)
+- [Definition 1 (Taylor polynomial (Taylor expansion))](#def-taylor-polynomial)
 - [Definition 2 (Maclaurin polynomial)](#def-maclaurin-polynomial)
 - [Definition 3 (Taylor series)](#def-taylor-series)
 

@@ -2853,7 +2853,7 @@
    "page": "calculus",
    "div": "def-linear-approximation",
    "kind": "def",
-   "title": "Linear approximation (first-order Taylor approximation)",
+   "title": "Linear approximation (first-order Taylor approximation, first-order Taylor expansion)",
    "external": false
   },
   {
@@ -2988,7 +2988,7 @@
    "page": "calculus",
    "div": "def-taylor-polynomial",
    "kind": "def",
-   "title": "Taylor polynomial",
+   "title": "Taylor polynomial (Taylor expansion)",
    "external": false
   },
   {
@@ -3339,7 +3339,7 @@
    "page": "calculus-derivatives",
    "div": "def-linear-approximation",
    "kind": "def",
-   "title": "Linear approximation (first-order Taylor approximation)",
+   "title": "Linear approximation (first-order Taylor approximation, first-order Taylor expansion)",
    "external": false
   },
   {
@@ -3816,7 +3816,7 @@
    "page": "calculus-taylor-series",
    "div": "def-taylor-polynomial",
    "kind": "def",
-   "title": "Taylor polynomial",
+   "title": "Taylor polynomial (Taylor expansion)",
    "external": false
   },
   {
@@ -14990,6 +14990,10 @@
    "mds/functions#def-graph"
   ],
   [
+   "mds/calculus#def-taylor-polynomial",
+   "mds/algebra-exponentials#def-polynomial-degree"
+  ],
+  [
    "mds/calculus#def-taylor-series",
    "mds/calculus#def-taylor-polynomial"
   ],
@@ -15644,6 +15648,10 @@
   [
    "mds/calculus-taylor-series#def-maclaurin-polynomial",
    "mds/calculus-taylor-series#def-taylor-polynomial"
+  ],
+  [
+   "mds/calculus-taylor-series#def-taylor-polynomial",
+   "mds/algebra-exponentials#def-polynomial-degree"
   ],
   [
    "mds/calculus-taylor-series#def-taylor-series",
