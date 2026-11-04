@@ -1,4 +1,4 @@
-# Derivatives and Taylor Series
+# Derivatives
 
 Code
 
@@ -14,11 +14,9 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
-# 1 Derivatives
-
-## 1.1 Limits and derivatives
+# 1 Limits and derivatives
 
 > **NOTE:**
 >
@@ -236,11 +234,11 @@ Last modified: 2026-11-03 14:53:06 (PST)
 >
 > So $f''(2) = 12$, $f''(0) = 0$, and $f''(-1) = -6$.
 
-## 1.2 Derivative rules
+# 2 Derivative rules
 
 > **NOTE:**
 >
-> **Theorem 1 (Constant rule)** If $c$ is constant with respect to $x$, then
+> **Theorem 1 (Constant rule)** If $c$ is [constant with respect to](vector-calculus.llms.md#def-constant-wrt-vector) $x$, then
 >
 > $$\frac{\partial}{\partial x}c = 0$$
 
@@ -252,7 +250,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (Constant multiple rule)** If $a$ is constant with respect to $x$ and $y$ is a differentiable function of $x$, then: $$\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}$$
+> **Theorem 2 (Constant multiple rule)** If $a$ is [constant with respect to](vector-calculus.llms.md#def-constant-wrt-vector) $x$ and $y$ is a [differentiable function](#def-differentiable) of $x$, then: $$\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}$$
 
 > **TIP:**
 >
@@ -262,11 +260,11 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (Power rule)** For every real number $q$ and every $x > 0$ [\[9\]](#ref-wikipedia_power_rule), the derivative of the [power](algebra-exponentials.llms.md#def-real-power) $x^q$ is:
+> **Theorem 3 (Power rule)** For every [real number](number-systems.llms.md#def-real-numbers) $q$ and every $x > 0$ [\[9\]](#ref-wikipedia_power_rule), the [derivative](#def-derivative) of the [power](algebra-exponentials.llms.md#def-real-power) $x^q$ is:
 >
 > $$\frac{\partial}{\partial x}x^q = qx^{q-1}$$
 >
-> When $q$ is a positive [integer](number-systems.llms.md#def-integers), the same formula holds for every real $x$.
+> When $q$ is a [positive integer](number-systems.llms.md#def-positive-integer), the same [formula](expressions-algorithms.llms.md#def-closed-form-expression) holds for every [real](number-systems.llms.md#def-real-numbers) $x$.
 
 > **TIP:**
 >
@@ -369,7 +367,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (Derivative of natural logarithm)** For every $x > 0$, the derivative of the [natural logarithm](algebra-exponentials.llms.md#def-natural-log) is:
+> **Theorem 4 (Derivative of natural logarithm)** For every $x > 0$, the [derivative](#def-derivative) of the [natural logarithm](algebra-exponentials.llms.md#def-natural-log) is:
 >
 > $$\begin{aligned}
 > {\operatorname{log}'\mathopen{}\left\{x\right\}\mathclose{}}
@@ -413,25 +411,25 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> **Theorem 5 (Derivative of exponential)** For every real $x$, the derivative of the [exponential function](algebra-exponentials.llms.md#def-exponential-function) is:
+> **Theorem 5 (Derivative of exponential)** For every [real](number-systems.llms.md#def-real-numbers) $x$, the [derivative](#def-derivative) of the [exponential function](algebra-exponentials.llms.md#def-exponential-function) is:
 >
 > $${\operatorname{exp}'\mathopen{}\left\{x\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
-> **Theorem 6 (Derivative of sine)** For every real $x$, the derivative of the sine function is:
+> **Theorem 6 (Derivative of sine)** For every [real](number-systems.llms.md#def-real-numbers) $x$, the [derivative](#def-derivative) of the [sine](algebra-trigonometry.llms.md#def-sine) [function](functions.llms.md#def-function) is:
 >
 > $$\frac{\partial}{\partial x}\sin x = \cos x$$
 
 > **NOTE:**
 >
-> **Theorem 7 (Derivative of cosine)** For every real $x$, the derivative of the cosine function is:
+> **Theorem 7 (Derivative of cosine)** For every [real](number-systems.llms.md#def-real-numbers) $x$, the [derivative](#def-derivative) of the [cosine](algebra-trigonometry.llms.md#def-cosine-sine) [function](functions.llms.md#def-function) is:
 >
 > $$\frac{\partial}{\partial x}\cos x = -\sin x$$
 
 > **NOTE:**
 >
-> **Theorem 8 (Product rule)** If $a$ and $b$ are differentiable functions of $x$ [\[11\]](#ref-wikipedia_product_rule), then
+> **Theorem 8 (Product rule)** If $a$ and $b$ are [differentiable functions](#def-differentiable) of $x$ [\[11\]](#ref-wikipedia_product_rule), then
 >
 > $$(ab)' = ab' + ba'$$
 
@@ -499,7 +497,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> **Theorem 9 (Quotient rule)** If $a$ and $b$ are differentiable functions of $x$ [\[12\]](#ref-wikipedia_quotient_rule) and $b \neq 0$, then
+> **Theorem 9 (Quotient rule)** If $a$ and $b$ are [differentiable functions](#def-differentiable) of $x$ [\[12\]](#ref-wikipedia_quotient_rule) and $b \neq 0$, then
 >
 > $$(a/b)' = a'/b - (a/b^2)b'$$
 
@@ -545,7 +543,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> **Theorem 10 (Chain rule)** If $a$ is a differentiable function of $b$ [\[13\]](#ref-wikipedia_chain_rule), and $b$ is a differentiable function of $c$, then $a$ is a differentiable function of $c$, and
+> **Theorem 10 (Chain rule)** If $a$ is a [differentiable function](#def-differentiable) of $b$ [\[13\]](#ref-wikipedia_chain_rule), and $b$ is a differentiable function of $c$, then $a$ is a differentiable function of $c$, and
 >
 > $$\begin{aligned}
 > \frac{d a}{d c} &=
@@ -554,7 +552,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 > &= \frac{d b}{d c} \frac{d a}{d b}
 > \end{aligned}$$
 >
-> or in Lagrange’s notation ([Definition 7](#def-derivative)), if $g$ is differentiable at $x$ and $f$ is differentiable at $g(x)$, then for the [composition](functions.llms.md#def-composition) $f \circ g$, with inner function $g$ and outer function $f$:
+> or in Lagrange’s notation ([Definition 7](#def-derivative)), if $g$ is [differentiable at](#def-differentiable) $x$ and $f$ is differentiable at $g(x)$, then for the [composition](functions.llms.md#def-composition) $f \circ g$, with [inner function](functions.llms.md#def-inner-function) $g$ and [outer function](functions.llms.md#def-outer-function) $f$:
 >
 > $$(f(g(x)))' = g'(x) f'(g(x))$$
 
@@ -683,7 +681,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> **Corollary 1 (Chain rule for logarithms)** If $f$ is differentiable at $x$ and $f(x) > 0$, then
+> **Corollary 1 (Chain rule for logarithms)** If $f$ is [differentiable at](#def-differentiable) $x$ and $f(x) > 0$, then
 >
 > $$\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}} = \frac{f'(x)}{f(x)}$$
 
@@ -761,7 +759,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 > &= -\frac{1}{x^2}
 > \end{aligned}$$
 
-## 1.3 Studying a new function
+# 3 Studying a new function
 
 > **NOTE:**
 >
@@ -883,7 +881,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 > >
 > > Figure 1: The logistic function, its derivative and its logarithm
 
-## 1.4 Tangent lines
+# 4 Tangent lines
 
 > **NOTE:**
 >
@@ -908,23 +906,23 @@ Last modified: 2026-11-03 14:53:06 (PST)
 >
 > At $x = 1.1$ the tangent line has height $2(1.1) - 1 = 1.2$, close to the curve’s height $f(1.1) = 1.21$; the gap, $1.21 - 1.2 = 0.01$, is $(1.1 - 1)^2$.
 
-## 1.5 Linear approximation
+# 5 Linear approximation
 
-For a differentiable function $f$ and a small step $\varepsilon$,
+For a [differentiable function](#def-differentiable) $f$ and a small step $\varepsilon$,
 
 $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 
 > **NOTE:**
 >
-> **Definition 17 (Linear approximation (first-order Taylor approximation))** For a function $f$ that is differentiable at $w$, the **linear approximation** of $f$ at $w$ [\[14\]](#ref-wikipedia_linear_approximation) (also called the **first-order Taylor approximation**) is the function of the step $\varepsilon$
+> **Definition 17 (Linear approximation (first-order Taylor approximation))** For a [function](functions.llms.md#def-function) $f$ that is [differentiable at](#def-differentiable) $w$, the **linear approximation** of $f$ at $w$ [\[14\]](#ref-wikipedia_linear_approximation) (also called the **first-order Taylor approximation**) is the function of the step $\varepsilon$
 >
 > $$\hat{f}_w(\varepsilon) = f(w) + \varepsilon\,\frac{d }{d w}f(w)$$
 >
-> so [Equation 1](#eq-linear-approx) says $f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)$ for small $\varepsilon$. [Figure 2](#fig-linear-approx) illustrates this approximation interactively for a quadratic function.
+> so [Equation 1](#eq-linear-approx) says $f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)$ for small $\varepsilon$. [Figure 2](#fig-linear-approx) illustrates this approximation interactively for a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial).
 
 > **NOTE:**
 >
-> *Remark 2* (The “linear” approximation is affine). The linear approximation $\hat{f}_w$ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step $\varepsilon$: its slope is $\frac{d }{d w}f(w)$ and its intercept is $f(w)$. It is [linear](algebra-exponentials.llms.md#def-linear-function) in $\varepsilon$ only when $f(w) = 0$. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
+> *Remark 2* (The “linear” approximation is affine). The linear approximation $\hat{f}_w$ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step $\varepsilon$: its [slope](algebra-exponentials.llms.md#def-slope) is $\frac{d }{d w}f(w)$ and its [intercept](algebra-exponentials.llms.md#def-intercept) is $f(w)$. It is [linear](algebra-exponentials.llms.md#def-linear-function) in $\varepsilon$ only when $f(w) = 0$. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), section 2.2, treats the [first-order Taylor approximation](#def-linear-approximation) as an affine function for [functions](functions.llms.md#def-function) of several variables as well.
 
 > **NOTE:**
 >
@@ -1045,562 +1043,6 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 >
 > The approximation error is $|4.171593 - 4.171543| \approx 0.00005$, on the order of $(0.01)^2 = 10^{-4}$.
 
-## 1.6 Taylor series
-
-> **NOTE:**
->
-> **Definition 18 (Taylor polynomial)** Let $f$ be a function that has at least $n$ derivatives at a point $x_0$. The **Taylor polynomial** of degree $n$ for $f$ centered at $x_0$ is:
->
-> $$\begin{aligned}
-> P_n(x)
-> &= \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k \\
-> &= f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n
-> \end{aligned}
-> \tag{2}$$
-
-> **NOTE:**
->
-> **Example 10 (Taylor series of the exponential function)** For $f(x) = e^x$ centered at $x_0 = 0$, every derivative is
->
-> $$\begin{aligned}
-> f^{(k)}(0) &= e^0 \\
-> &= 1.
-> \end{aligned}$$
->
-> The degree-$n$ Maclaurin polynomial is:
->
-> $$\begin{aligned}
-> P_n(x)
-> &= 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} \\
-> &= \sum_{k=0}^n \frac{x^k}{k!}
-> \end{aligned}$$
->
-> Because the remainder $R_n(x) \to 0$ as $n \to \infty$ for all $x \in \mathbb{R}$, the Taylor series converges everywhere to $e^x$:
->
-> $$e^x = \sum_{k=0}^\infty \frac{x^k}{k!}$$
-
-> **NOTE:**
->
-> **Definition 19 (Maclaurin polynomial)** When $x_0 = 0$, the Taylor polynomial $P_n(x)$ ([Definition 18](#def-taylor-polynomial)) is called the **Maclaurin polynomial**.
-
-> **NOTE:**
->
-> **Definition 20 (Taylor series)** Let $f$ and $x_0$ be as in [Definition 18](#def-taylor-polynomial). When $f$ is infinitely differentiable and the series converges to $f(x)$ on an open interval containing $x_0$, the infinite sum $\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k$ is the **Taylor series** of $f$ centered at $x_0$.
-
-> **TIP:**
->
-> Chapter 11 of the [*Essence of calculus*](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:
->
-> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 18](#def-taylor-polynomial)).
-
-> **NOTE:**
->
-> **Exercise 17 (Taylor polynomial of a polynomial at the origin)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.16.
->
-> Find the first five terms (up to degree 4) of the Taylor series for
->
-> $$f(x) = x^8 + x^4 + 3$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 17*. Evaluate $f$ and its first four derivatives at $x = 0$:
->
-> $$\begin{aligned}
-> f(x) &= x^8 + x^4 + 3 &\implies f(0) &= 3
-> \\
-> f'(x) &= 8x^7 + 4x^3 &\implies f'(0) &= 0
-> \\
-> f''(x) &= 56x^6 + 12x^2 &\implies f''(0) &= 0
-> \\
-> f'''(x) &= 336x^5 + 24x &\implies f'''(0) &= 0
-> \\
-> f^{(4)}(x) &= 1680x^4 + 24 &\implies f^{(4)}(0) &= 24
-> \end{aligned}$$
->
-> By [Equation 2](#eq-taylor-poly-def):
->
-> $$\begin{aligned}
-> P_4(x)
-> &= 3 + 0x + \frac{0}{2!}x^2 + \frac{0}{3!}x^3 + \frac{24}{4!}x^4 \\
-> &= 3 + x^4
-> \end{aligned}$$
->
-> Because $f$ is already a polynomial centered at $0$, its Taylor polynomial of degree 4 simply collects its terms of degree at most 4.
-
-> **NOTE:**
->
-> **Exercise 18 (Taylor expansion of a polynomial at a nonzero point)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.17.
->
-> Find the first three terms (up to degree 2) of the Taylor series for
->
-> $$f(x) = x^8 + x^4 + 3$$
->
-> at $x_0 = 1$.
-
-> **NOTE:**
->
-> *Solution 18*. Evaluate $f$ and its first two derivatives at $x_0 = 1$:
->
-> $$\begin{aligned}
-> f(1) &= 1^8 + 1^4 + 3 \\
-> &= 5
-> \\
-> f'(1) &= 8(1)^7 + 4(1)^3 \\
-> &= 12
-> \\
-> f''(1) &= 56(1)^6 + 12(1)^2 \\
-> &= 68
-> \end{aligned}$$
->
-> The degree-2 Taylor polynomial is:
->
-> $$\begin{aligned}
-> P_2(x)
-> &= f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 \\
-> &= 5 + 12(x - 1) + 34(x - 1)^2
-> \end{aligned}$$
-
-> **NOTE:**
->
-> **Example 11 (Taylor series of the cosine function)** For $f(x) = \cos x$ centered at $x_0 = 0$, the derivatives follow a repeating cycle of length 4:
->
-> $$\begin{aligned}
-> f(0) &= \cos(0) \\
-> &= 1, \\
-> f'(0) &= -\sin(0) \\
-> &= 0, \\
-> f''(0) &= -\cos(0) \\
-> &= -1, \\
-> f'''(0) &= \sin(0) \\
-> &= 0,
-> \end{aligned}$$
->
-> and in general $f^{(2k)}(0) = (-1)^k$ and $f^{(2k+1)}(0) = 0$ for all $k \ge 0$. The Taylor series (Maclaurin series) converges everywhere to $\cos x$:
->
-> $$\begin{aligned}
-> \cos x
-> &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots \\
-> &= \sum_{k=0}^\infty \frac{(-1)^k}{(2k)!}x^{2k}
-> \end{aligned}$$
-
-> **NOTE:**
->
-> **Example 12 (Taylor series of the sine function)** For $f(x) = \sin x$ centered at $x_0 = 0$, the derivatives evaluate at $0$ to $f^{(2k)}(0) = 0$ and $f^{(2k+1)}(0) = (-1)^k$ for all $k \ge 0$. The Taylor series converges everywhere to $\sin x$:
->
-> $$\begin{aligned}
-> \sin x
-> &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots \\
-> &= \sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}x^{2k+1}
-> \end{aligned}$$
-
-> **NOTE:**
->
-> **Exercise 19 (Taylor expansion of a scaled cosine)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.18.
->
-> Find the terms up to degree 4 in the Taylor series for
->
-> $$f(x) = \cos(5x)$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 19*. Recall the standard Maclaurin series for cosine:
->
-> $$\cos u = 1 - \frac{u^2}{2!} + \frac{u^4}{4!} - \dots$$
->
-> Substitute $u = 5x$:
->
-> $$\begin{aligned}
-> \cos(5x)
-> &= 1 - \frac{(5x)^2}{2!} + \frac{(5x)^4}{4!} - \dots \\
-> &= 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 - \dots
-> \end{aligned}$$
->
-> *Remark:* Substituting into known Taylor expansions avoids computing high-order derivatives by hand.
-
-> **NOTE:**
->
-> **Exercise 20 (Taylor series of a power of a function)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.19.
->
-> Find the terms up to degree 4 in the Taylor series for
->
-> $$f(x) = \cos^3(5x)$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 20*. From [Exercise 19](#exr-miller-taylor-cos-scaled), the expansion of $\cos(5x)$ up to order $x^4$ is:
->
-> $$\cos(5x) = 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 + O(x^6)$$
->
-> Cube this expansion using $(1 - y)^3 = 1 - 3y + 3y^2 - y^3$ with $y = \frac{25}{2}x^2 - \frac{625}{24}x^4$:
->
-> $$\begin{aligned}
-> \cos^3(5x) &= 1 - 3\mathopen{}\left(\frac{25}{2}x^2 - \frac{625}{24}x^4\right)\mathclose{} + 3\mathopen{}\left(\frac{25}{2}x^2\right)\mathclose{}^2 + O(x^6)
-> \\
-> &= 1 - \frac{75}{2}x^2 + \frac{625}{8}x^4 + \frac{1875}{4}x^4 + O(x^6)
-> \\
-> &= 1 - \frac{75}{2}x^2 + \frac{4375}{8}x^4 + O(x^6)
-> \end{aligned}$$
-
-> **NOTE:**
->
-> **Exercise 21 (Linear Taylor polynomial of the exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.20.
->
-> Find the first two terms (degree 1) of the Taylor series for
->
-> $$f(x) = e^x$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 21*. Since
->
-> $$\begin{aligned}
-> f(0) &= e^0 \\
-> &= 1
-> \end{aligned}$$
->
-> and
->
-> $$\begin{aligned}
-> f'(0) &= e^0 \\
-> &= 1:
-> \end{aligned}$$
->
-> $$\begin{aligned}
-> P_1(x)
-> &= f(0) + f'(0)x \\
-> &= 1 + x
-> \end{aligned}$$
->
-> The full Taylor series is
->
-> $$\begin{aligned}
-> e^x &= \sum_{n=0}^\infty \frac{x^n}{n!} \\
-> &= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \dots.
-> \end{aligned}$$
-
-> **NOTE:**
->
-> **Exercise 22 (Taylor series of a composite exponential)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.21.
->
-> Find the first six terms (up to degree 5) of the Taylor series for
->
-> $$f(x) = {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 22*. Substitute $u = x^8$ into $e^u = 1 + u + \frac{u^2}{2!} + \dots$:
->
-> $${\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}} = 1 + x^8 + \frac{x^{16}}{2} + \dots$$
->
-> Because the lowest-order variable term is $x^8$, all coefficients for powers $x^1, x^2, x^3, x^4, x^5$ are zero:
->
-> $$\begin{aligned}
-> P_5(x)
-> &= 1 + 0x + 0x^2 + 0x^3 + 0x^4 + 0x^5 \\
-> &= 1
-> \end{aligned}$$
-
-> **NOTE:**
->
-> **Exercise 23 (Taylor expansion of the normal density)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.22.
->
-> Find the terms up to degree 3 of the Taylor series for the standard normal density
->
-> $$\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 23*. Using $e^u = 1 + u + O(u^2)$ with $u = -x^2/2$:
->
-> $${\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}} = 1 - \frac{x^2}{2} + O(x^4)$$
->
-> Multiplying by the normalization constant $1/\sqrt{2\pi}$:
->
-> $$\phi(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}} + O(x^4)$$
->
-> Up to degree 3, the odd powers vanish by symmetry, so:
->
-> $$P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}$$
-
-> **NOTE:**
->
-> **Theorem 13 (Maclaurin polynomial of the standard normal density)** The Maclaurin polynomial ([Definition 19](#def-maclaurin-polynomial)) of degree 3 of the standard normal density $\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}$ is
->
-> $$P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}$$
-
-> **NOTE:**
->
-> *Proof*. This is the solution to [Exercise 23](#exr-miller-taylor-normal-density), worked in [Solution 23](#sol-miller-taylor-normal-density).
-
-> **NOTE:**
->
-> **Exercise 24 (Taylor expansion of the square root)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.23.
->
-> Find the first three terms (up to degree 2) of the Taylor series for
->
-> $$f(x) = \sqrt{x}$$
->
-> at $x_0 = 1/3$.
-
-> **NOTE:**
->
-> *Solution 24*. Compute the values at $x_0 = 1/3$:
->
-> $$\begin{aligned}
-> f(1/3) &= \mathopen{}\left(\frac{1}{3}\right)\mathclose{}^{1/2}
-> \\
-> &= \frac{1}{\sqrt{3}}
-> \\
-> &= \frac{\sqrt{3}}{3}
-> \\
-> f'(x) &= \frac{1}{2}x^{-1/2}
-> \\
-> \implies f'(1/3) &= \frac{1}{2}\sqrt{3}
-> \\
-> &= \frac{\sqrt{3}}{2}
-> \\
-> f''(x) &= -\frac{1}{4}x^{-3/2}
-> \\
-> \implies f''(1/3) &= -\frac{1}{4} \cdot 3\sqrt{3}
-> \\
-> &= -\frac{3\sqrt{3}}{4}
-> \end{aligned}$$
->
-> The degree-2 Taylor polynomial is:
->
-> $$P_2(x) = \frac{\sqrt{3}}{3} + \frac{\sqrt{3}}{2}\mathopen{}\left(x - \frac{1}{3}\right)\mathclose{} - \frac{3\sqrt{3}}{8}\mathopen{}\left(x - \frac{1}{3}\right)\mathclose{}^2$$
-
-> **NOTE:**
->
-> **Exercise 25 (Taylor expansion of a fractional power)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.24.
->
-> Find the first three terms of the Taylor series for
->
-> $$f(x) = (1 + x)^{1/3}$$
->
-> at $x_0 = 1/2$.
-
-> **NOTE:**
->
-> *Solution 25*. At $x_0 = 1/2$, $1 + x_0 = 3/2$:
->
-> $$\begin{aligned}
-> f(1/2) &= \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3}
-> \\
-> f'(x) &= \frac{1}{3}(1 + x)^{-2/3}
-> \\
-> \implies f'(1/2) &= \frac{1}{3}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-2/3}
-> \\
-> &= \frac{1}{3}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{2/3}
-> \\
-> f''(x) &= -\frac{2}{9}(1 + x)^{-5/3}
-> \\
-> \implies f''(1/2) &= -\frac{2}{9}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-5/3}
-> \\
-> &= -\frac{2}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3}
-> \end{aligned}$$
->
-> Dividing $f''(1/2)$ by $2!$ gives $-\frac{1}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3}$. The Taylor polynomial is:
->
-> $$P_2(x) = \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3} + \frac{1}{3}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{2/3}\mathopen{}\left(x - \frac{1}{2}\right)\mathclose{} - \frac{1}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3}\mathopen{}\left(x - \frac{1}{2}\right)\mathclose{}^2$$
-
-> **NOTE:**
->
-> **Exercise 26 (Taylor expansion of** $x \log x$) Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.25.
->
-> Find the first three terms (up to degree 2) of the Taylor series for
->
-> $$f(x) = x\log x$$
->
-> at $x_0 = 1$.
-
-> **NOTE:**
->
-> *Solution 26*. Evaluate derivatives at $x_0 = 1$:
->
-> $$\begin{aligned}
-> f(1) &= 1 \log 1
-> \\
-> &= 0
-> \\
-> f'(x) &= \log x + 1
-> \\
-> \implies f'(1) &= 0 + 1
-> \\
-> &= 1
-> \\
-> f''(x) &= \frac{1}{x} \implies f''(1) = 1
-> \end{aligned}$$
->
-> Therefore:
->
-> $$\begin{aligned}
-> P_2(x)
-> &= f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 \\
-> &= (x - 1) + \frac{1}{2}(x - 1)^2
-> \end{aligned}$$
-
-> **NOTE:**
->
-> **Exercise 27 (Maclaurin series of** $\log(1 + x)$) Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.26.
->
-> Find the first three terms of the Taylor series for
->
-> $$f(x) = \log(1 + x)$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 27*. Differentiating repeatedly at $x_0 = 0$:
->
-> $$\begin{aligned}
-> f(0) &= \log 1 \\
-> &= 0
-> \\
-> f'(x) &= (1 + x)^{-1} \implies f'(0) = 1
-> \\
-> f''(x) &= -(1 + x)^{-2} \implies f''(0) = -1
-> \\
-> f'''(x) &= 2(1 + x)^{-3} \implies f'''(0) = 2
-> \end{aligned}$$
->
-> The Taylor polynomial of degree 3 is:
->
-> $$P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}$$
-
-> **NOTE:**
->
-> **Theorem 14 (Maclaurin polynomial of** $\log(1 + x)$) The Maclaurin polynomial ([Definition 19](#def-maclaurin-polynomial)) of degree 3 of $f(x) = \log(1 + x)$ is
->
-> $$P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}$$
-
-> **NOTE:**
->
-> *Proof*. This is the solution to [Exercise 27](#exr-miller-taylor-log-one-plus-x), worked in [Solution 27](#sol-miller-taylor-log-one-plus-x).
-
-> **NOTE:**
->
-> **Exercise 28 (Maclaurin series of** $\log(1 - x)$) Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.27.
->
-> Find the terms up to degree 3 of the Taylor series for
->
-> $$f(x) = \log(1 - x)$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 28*. Substitute $u = -x$ into the expansion for $\log(1 + u)$ from [Theorem 14](#thm-taylor-log-one-plus-x):
->
-> $$\begin{aligned}
-> \log(1 - x)
-> &= (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots \\
-> &= -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots
-> \end{aligned}$$
-
-> **NOTE:**
->
-> **Theorem 15 (Maclaurin polynomial of** $\log(1 - x)$) The Maclaurin polynomial ([Definition 19](#def-maclaurin-polynomial)) of degree 3 of $f(x) = \log(1 - x)$ is
->
-> $$P_3(x) = -x - \frac{x^2}{2} - \frac{x^3}{3}$$
-
-> **NOTE:**
->
-> *Proof*. This is the solution to [Exercise 28](#exr-miller-taylor-log-one-minus-x), worked in [Solution 28](#sol-miller-taylor-log-one-minus-x).
-
-> **NOTE:**
->
-> **Exercise 29 (Taylor series of** $\log((1 - x)e^x)$) Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.28.
->
-> Find the first two non-zero terms of the Taylor series for
->
-> $$f(x) = \log((1 - x)e^x)$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 29*. Expand using logarithm properties:
->
-> $$\begin{aligned}
-> f(x)
-> &= \log(1 - x) + \log(e^x) \\
-> &= \log(1 - x) + x
-> \end{aligned}$$
->
-> Substitute the series for $\log(1 - x)$ from [Theorem 15](#thm-taylor-log-one-minus-x):
->
-> $$\begin{aligned}
-> f(x)
-> &= \mathopen{}\left(-x - \frac{x^2}{2} - \frac{x^3}{3} - \dots\right)\mathclose{} + x \\
-> &= -\frac{x^2}{2} - \frac{x^3}{3} - \dots
-> \end{aligned}$$
->
-> The constant and linear terms vanish ($f(0) = 0$, $f'(0) = 0$). The first two non-zero terms are:
->
-> $$-\frac{x^2}{2} - \frac{x^3}{3}$$
-
-> **NOTE:**
->
-> **Exercise 30 (Taylor series of a product of known expansions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.29.
->
-> Find the terms up to degree 2 of the Taylor series for
->
-> $$f(x) = \cos(x)\log(1 + x)$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 30*. Multiply the known Maclaurin expansions:
->
-> $$\begin{aligned}
-> \cos x &= 1 - \frac{x^2}{2} + O(x^4)
-> \\
-> \log(1 + x) &= x - \frac{x^2}{2} + O(x^3)
-> \end{aligned}$$
->
-> Multiplying and dropping terms of order $x^3$ and higher:
->
-> $$\begin{aligned}
-> f(x)
-> &= \mathopen{}\left(1 - \frac{x^2}{2} + \dots\right)\mathclose{}\mathopen{}\left(x - \frac{x^2}{2} + \dots\right)\mathclose{} \\
-> &= x - \frac{x^2}{2} + O(x^3)
-> \end{aligned}$$
-
-> **NOTE:**
->
-> **Exercise 31 (Taylor series of** $\log(1 + 2x)$) Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.30.
->
-> Find the first two non-zero terms of the Taylor series for
->
-> $$f(x) = \log(1 + 2x)$$
->
-> at $x_0 = 0$.
-
-> **NOTE:**
->
-> *Solution 31*. Substitute $u = 2x$ into the Maclaurin series $\log(1 + u) = u - \frac{u^2}{2} + \dots$:
->
-> $$\begin{aligned}
-> \log(1 + 2x)
-> &= (2x) - \frac{(2x)^2}{2} + \dots \\
-> &= 2x - 2x^2 + \dots
-> \end{aligned}$$
-
 # Definitions on this page
 
 - [Definition 1 (Limit of a function at a point)](#def-limit)
@@ -1620,9 +1062,6 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 - [Definition 15 (Profile of a function)](#def-function-profile)
 - [Definition 16 (Tangent line)](#def-tangent-line)
 - [Definition 17 (Linear approximation (first-order Taylor approximation))](#def-linear-approximation)
-- [Definition 18 (Taylor polynomial)](#def-taylor-polynomial)
-- [Definition 19 (Maclaurin polynomial)](#def-maclaurin-polynomial)
-- [Definition 20 (Taylor series)](#def-taylor-series)
 
 Back to top
 

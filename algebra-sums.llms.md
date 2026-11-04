@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 # 1 Convex functions
 
@@ -85,7 +85,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (A function that is not convex)** The function in [Exercise 2 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#exr-local-vs-global-min), $f(x) = x^3 - 3x$, is not convex. Take $x = -2$, $y = 0$, $t = \tfrac{1}{2}$. The point is $\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1$, where the graph has height
+> **Example 3 (A function that is not convex)** The function in [Exercise 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#exr-local-vs-global-min), $f(x) = x^3 - 3x$, is not convex. Take $x = -2$, $y = 0$, $t = \tfrac{1}{2}$. The point is $\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1$, where the graph has height
 >
 > $$\begin{aligned}
 > f(-1) &= -1 + 3 \\
@@ -113,7 +113,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 >
 > for every $x$.
 >
-> Without convexity, a local minimizer need not be global: $f(x) = x^3 - 3x$ is not convex ([Example 3](#exm-cubic-not-convex)), and it has a local minimizer at $x^* = 1$ that is not global ([Exercise 2 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#exr-local-vs-global-min)).
+> Without convexity, a local minimizer need not be global: $f(x) = x^3 - 3x$ is not convex ([Example 3](#exm-cubic-not-convex)), and it has a local minimizer at $x^* = 1$ that is not global ([Exercise 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#exr-local-vs-global-min)).
 
 > **NOTE:**
 >
@@ -121,7 +121,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Let $x^*$ be a local minimizer of $f$, so there is a $\delta> 0$ with $f(x^*) \le f(x)$ whenever $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$ ([Definition 20 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose $x^*$ is not a global minimizer ([Definition 19 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some $y \in \mathbb{R}^p$ has $f(y) < f(x^*)$, and in particular $y \ne x^*$.
+> *Proof*. Let $x^*$ be a local minimizer of $f$, so there is a $\delta> 0$ with $f(x^*) \le f(x)$ whenever $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$ ([Definition 21 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose $x^*$ is not a global minimizer ([Definition 20 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some $y \in \mathbb{R}^p$ has $f(y) < f(x^*)$, and in particular $y \ne x^*$.
 >
 > Let $t = \min{\mathopen{}\left\{\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{}}\right\}\mathclose{}}$, so $t \in (0, 1)$, and let $z = t y + (1 - t) x^*$. Then $z - x^* = t (y - x^*)$, so $\mathopen{}\left\lVert z - x^*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{} \le \delta/ 2 < \delta$.
 >

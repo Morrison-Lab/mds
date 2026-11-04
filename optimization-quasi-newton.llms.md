@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 > **NOTE:**
 >
@@ -165,6 +165,115 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
+> Show code
+>
+> ``` downlit
+> qn_x_sf <- seq(-0.4, 0.6, length.out = 101)
+> qn_y_sf <- seq(-0.2, 1, length.out = 101)
+> qn_grid_sf <- tidyr::expand_grid(x = qn_x_sf, y = qn_y_sf)
+> qn_quad_sf <- 4 * qn_grid_sf$x^2 + 2 * qn_grid_sf$x * qn_grid_sf$y
+> qn_quad_sf <- 0.5 * (qn_quad_sf + 3 * qn_grid_sf$y^2)
+> qn_value_sf <- qn_quad_sf - qn_grid_sf$x - 2 * qn_grid_sf$y
+> qn_ny_sf <- length(qn_y_sf)
+> qn_z_sf <- matrix(qn_value_sf, nrow = qn_ny_sf)
+> qn_p_x_sf <- c(0, 0.25, 1 / 11)
+> qn_p_y_sf <- c(0, 0.5, 7 / 11)
+> qn_p_label_sf <- c("start", "after one step", "minimizer")
+> qn_p_color_sf <- c("#0072B2", "#D55E00", "#0072B2")
+> qn_p_symbol_sf <- c("circle", "circle", "square")
+> qn_pts_sf <- tibble::tibble(
+>   x = qn_p_x_sf,
+>   y = qn_p_y_sf,
+>   label = qn_p_label_sf,
+>   color = qn_p_color_sf,
+>   symbol = qn_p_symbol_sf
+> )
+> qn_pq_sf <- 4 * qn_pts_sf$x^2 + 2 * qn_pts_sf$x * qn_pts_sf$y
+> qn_pq_sf <- 0.5 * (qn_pq_sf + 3 * qn_pts_sf$y^2)
+> qn_pts_sf$z <- qn_pq_sf - qn_pts_sf$x - 2 * qn_pts_sf$y
+> qn_marker_sf <- list(color = ~color, size = 6, symbol = ~symbol)
+> qn_stops_sf <- c(0, 1)
+> qn_cols_sf <- c("#E5E5E5", "#808080")
+> qn_scale_sf <- list(qn_stops_sf, qn_cols_sf)
+> qn_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> qn_camera_sf <- list(eye = qn_eye_sf)
+> qn_xaxis_sf <- list(title = "first coordinate")
+> qn_yaxis_sf <- list(title = "second coordinate")
+> qn_zaxis_sf <- list(title = "f(x)")
+> qn_scene_sf <- list(
+>   xaxis = qn_xaxis_sf,
+>   yaxis = qn_yaxis_sf,
+>   zaxis = qn_zaxis_sf,
+>   camera = qn_camera_sf
+> )
+> qn_legend_sf <- list(orientation = "h")
+> plotly::plot_ly() |>
+>   plotly::add_surface(
+>     x = qn_x_sf,
+>     y = qn_y_sf,
+>     z = qn_z_sf,
+>     colorscale = qn_scale_sf,
+>     showscale = FALSE,
+>     opacity = 0.7
+>   ) |>
+>   plotly::add_markers(
+>     data = qn_pts_sf,
+>     x = ~x,
+>     y = ~y,
+>     z = ~z,
+>     text = ~label,
+>     hoverinfo = "text",
+>     showlegend = FALSE,
+>     marker = qn_marker_sf
+>   ) |>
+>   plotly::layout(scene = qn_scene_sf, legend = qn_legend_sf)
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> qn_x_3d = np.linspace(-0.4, 0.6, 101)
+> qn_y_3d = np.linspace(-0.2, 1, 101)
+> qn_xx_3d, qn_yy_3d = np.meshgrid(qn_x_3d, qn_y_3d)
+>
+>
+> def qn_f_3d(x, y):
+>     return 0.5 * (4 * x**2 + 2 * x * y + 3 * y**2) - x - 2 * y
+>
+>
+> qn_pts_x_3d = np.array([0, 0.25, 1 / 11])
+> qn_pts_y_3d = np.array([0, 0.5, 7 / 11])
+> qn_pts_z_3d = qn_f_3d(qn_pts_x_3d, qn_pts_y_3d)
+> fig = plt.figure(figsize=(6, 4.5))
+> ax = fig.add_subplot(projection="3d")
+> ax.plot_surface(qn_xx_3d, qn_yy_3d, qn_f_3d(qn_xx_3d, qn_yy_3d),
+>                 color="grey", alpha=0.4)
+> ax.scatter(qn_pts_x_3d[0], qn_pts_y_3d[0], qn_pts_z_3d[0], marker="o",
+>            color="#0072B2", s=50, label="start")
+> ax.scatter(qn_pts_x_3d[1], qn_pts_y_3d[1], qn_pts_z_3d[1], marker="o",
+>            color="#D55E00", s=50, label="after one step")
+> ax.scatter(qn_pts_x_3d[2], qn_pts_y_3d[2], qn_pts_z_3d[2], marker="s",
+>            color="#0072B2", s=50, label="minimizer")
+> ax.set_xlabel("first coordinate")
+> ax.set_ylabel("second coordinate")
+> ax.set_zlabel("f(x)")
+> ax.legend(loc="upper right")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Surface plot of the quadratic function f over first coordinates from -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface whose lowest point is above the point (0.09, 0.64). Three markers lie on the surface. A blue circle at the origin is the starting point, a vermilion circle above (0.25, 0.5) is the iterate after one step, and a blue square above (0.09, 0.64) is the minimizer, at the bottom of the bowl.](optimization-quasi-newton_files/figure-html/quasi-newton-step-3d-python-1.png)](optimization-quasi-newton_files/figure-html/quasi-newton-step-3d-python-1.png "Figure 2: The graph of the quadratic function f from Example 2, the surface whose level curves are in Figure 1. The start \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (blue circle), the point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} reached after one steepest-descent step (vermilion circle), and the minimizer (blue square) at the bottom of the bowl are marked on the surface. ")
+>
+> ## Python
+>
+> Figure 2: The [graph](functions.llms.md#def-graph) of the [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial) $f$ from [Example 2](#exm-quasi-newton-step), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 1](#fig-quasi-newton-step). The start $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (blue circle), the point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}$ reached after one [steepest-descent](optimization-gradient-descent.llms.md#def-gradient-descent) step (vermilion circle), and the [minimizer](algebra-basics.llms.md#def-global-minimizer) (blue square) at the bottom of the bowl are marked on the surface.
+
+> **NOTE:**
+>
 > *Remark 1* (Why a quasi-Newton method is used). Because $\mathbf{H}^{(t)}$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), $-\mathbf{H}^{(t)} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)})$ is a [descent direction](optimization-gradient-descent.llms.md#def-descent-direction), so, when the [gradient](vector-calculus.llms.md#def-vector-derivative) is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, a [line search](optimization-gradient-descent.llms.md#def-line-search) finds a step that decreases $f$. [Newton’s method](optimization-newton.llms.md#def-newton-method) needs the Hessian and the solution of a system of equations at every iteration, which costs about $p^3$ operations for a dense $p \times p$ Hessian, and requires the formulas for its entries. A quasi-Newton method needs only the [gradient](vector-calculus.llms.md#def-vector-derivative) and an update of $\mathbf{H}^{(t)}$ costing about $p^2$ operations. Near a minimizer the method speeds up superlinearly: faster than [gradient descent](optimization-gradient-descent.llms.md#def-gradient-descent), slower than Newton’s method [\[2, Ch. 6\]](#ref-nocedal2006numerical). Replacing $\mathbf{H}^{(t)}$ by $\mathbf{I}_p$ in the step formula gives [gradient descent](optimization-gradient-descent.llms.md#def-gradient-descent).
 
 > **NOTE:**
@@ -212,7 +321,9 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
-> **Example 4 (L-BFGS applies the update without forming the matrix)** Continue [Example 3](#exm-bfgs-step) with $m = 1$ stored pair $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})$ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{I}_2$. Below, $\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})$ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
+> **Example 4 (L-BFGS applies the update without forming the matrix)**  
+>
+> Continue [Example 3](#exm-bfgs-step) with $m = 1$ stored pair $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})$ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{I}_2$. Below, $\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})$ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
 >
 > ``` downlit
 > g1 <- grad1

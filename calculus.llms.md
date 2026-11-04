@@ -4,11 +4,12 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 The calculus notes are split across these pages:
 
-- [Derivatives and Taylor Series](calculus-derivatives.llms.md): limits and derivatives, derivative rules, tangent lines, linear approximation, and Taylor series.
+- [Derivatives](calculus-derivatives.llms.md): [limits](calculus-derivatives.llms.md#def-limit) and [derivatives](calculus-derivatives.llms.md#def-derivative), [derivative](calculus-derivatives.llms.md#def-derivative) rules, [tangent lines](calculus-derivatives.llms.md#def-tangent-line), and [linear approximation](calculus-derivatives.llms.md#def-linear-approximation).
+- [Taylor Series](calculus-taylor-series.llms.md): Taylor and [Maclaurin polynomials](calculus-taylor-series.llms.md#def-maclaurin-polynomial), and [Taylor series](calculus-taylor-series.llms.md#def-taylor-series).
 - [Integrals and the Fundamental Theorem of Calculus](calculus-integration.llms.md): antiderivatives, regularity conditions, and the Fundamental Theorem of Calculus.
 - [Double Integrals and Fubini’s Theorem](calculus-double-integrals.llms.md): double integrals over rectangles and non-rectangular regions, and Fubini’s and Tonelli’s theorems.
 

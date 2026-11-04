@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 # 1 Double Integrals
 
@@ -152,7 +152,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > && \text{(} \textstyle\int_0^x dy = x \text{)}
 > \end{aligned}$$
 >
-> To antidifferentiate $x\,\text{e}^{-x^2}$, let $u = x^2$ be the inner function. By the chain rule ([Theorem 10 in Derivatives and Taylor Series](calculus-derivatives.llms.md#thm-chain-rule)), with $\frac{d u}{d x} = 2x$,
+> To antidifferentiate $x\,\text{e}^{-x^2}$, let $u = x^2$ be the inner function. By the chain rule ([Theorem 10 in Derivatives](calculus-derivatives.llms.md#thm-chain-rule)), with $\frac{d u}{d x} = 2x$,
 >
 > $$\begin{aligned}
 > \frac{d }{d x}\mathopen{}\left(-\frac{1}{2}\,\text{e}^{-u}\right)\mathclose{}
@@ -299,7 +299,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > **Integrating** $y$ first, then $x$:
 >
-> Holding $x$ fixed and differentiating in $y$ (by the quotient rule, [Theorem 9 in Derivatives and Taylor Series](calculus-derivatives.llms.md#thm-quotient-rule)),
+> Holding $x$ fixed and differentiating in $y$ (by the quotient rule, [Theorem 9 in Derivatives](calculus-derivatives.llms.md#thm-quotient-rule)),
 >
 > $$\begin{aligned}
 > \frac{d }{d y}\frac{y}{x^2 + y^2} &= \frac{(x^2 + y^2) - y \cdot 2y}{(x^2 + y^2)^2} \\

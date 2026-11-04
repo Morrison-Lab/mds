@@ -31,6 +31,15 @@
    "external": false
   },
   {
+   "id": "mds/algebra#cor-mode-positive-multiple",
+   "site": "mds",
+   "page": "algebra",
+   "div": "cor-mode-positive-multiple",
+   "kind": "cor",
+   "title": "A positive multiple has the same modes",
+   "external": false
+  },
+  {
    "id": "mds/algebra#def-absolute-value",
    "site": "mds",
    "page": "algebra",
@@ -505,6 +514,15 @@
    "div": "def-minimum",
    "kind": "def",
    "title": "Minimum",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#def-mode",
+   "site": "mds",
+   "page": "algebra",
+   "div": "def-mode",
+   "kind": "def",
+   "title": "Mode of a function",
    "external": false
   },
   {
@@ -994,6 +1012,15 @@
    "external": false
   },
   {
+   "id": "mds/algebra#thm-argmax-positive-multiple",
+   "site": "mds",
+   "page": "algebra",
+   "div": "thm-argmax-positive-multiple",
+   "kind": "thm",
+   "title": "A positive multiple has the same argmax",
+   "external": false
+  },
+  {
    "id": "mds/algebra#thm-completeness",
    "site": "mds",
    "page": "algebra",
@@ -1309,6 +1336,15 @@
    "external": false
   },
   {
+   "id": "mds/algebra-basics#cor-mode-positive-multiple",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "cor-mode-positive-multiple",
+   "kind": "cor",
+   "title": "A positive multiple has the same modes",
+   "external": false
+  },
+  {
    "id": "mds/algebra-basics#def-absolute-value",
    "site": "mds",
    "page": "algebra-basics",
@@ -1378,6 +1414,15 @@
    "div": "def-minimum",
    "kind": "def",
    "title": "Minimum",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-basics#def-mode",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "def-mode",
+   "kind": "def",
+   "title": "Mode of a function",
    "external": false
   },
   {
@@ -1495,6 +1540,15 @@
    "div": "thm-add-ineq",
    "kind": "thm",
    "title": "Adding to both sides of an inequality",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-basics#thm-argmax-positive-multiple",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "thm-argmax-positive-multiple",
+   "kind": "thm",
+   "title": "A positive multiple has the same argmax",
    "external": false
   },
   {
@@ -3334,15 +3388,6 @@
    "external": false
   },
   {
-   "id": "mds/calculus-derivatives#def-maclaurin-polynomial",
-   "site": "mds",
-   "page": "calculus-derivatives",
-   "div": "def-maclaurin-polynomial",
-   "kind": "def",
-   "title": "Maclaurin polynomial",
-   "external": false
-  },
-  {
    "id": "mds/calculus-derivatives#def-one-sided-derivative",
    "site": "mds",
    "page": "calculus-derivatives",
@@ -3394,24 +3439,6 @@
    "div": "def-tangent-line",
    "kind": "def",
    "title": "Tangent line",
-   "external": false
-  },
-  {
-   "id": "mds/calculus-derivatives#def-taylor-polynomial",
-   "site": "mds",
-   "page": "calculus-derivatives",
-   "div": "def-taylor-polynomial",
-   "kind": "def",
-   "title": "Taylor polynomial",
-   "external": false
-  },
-  {
-   "id": "mds/calculus-derivatives#def-taylor-series",
-   "site": "mds",
-   "page": "calculus-derivatives",
-   "div": "def-taylor-series",
-   "kind": "def",
-   "title": "Taylor series",
    "external": false
   },
   {
@@ -3520,33 +3547,6 @@
    "div": "thm-quotient-rule",
    "kind": "thm",
    "title": "Quotient rule",
-   "external": false
-  },
-  {
-   "id": "mds/calculus-derivatives#thm-taylor-log-one-minus-x",
-   "site": "mds",
-   "page": "calculus-derivatives",
-   "div": "thm-taylor-log-one-minus-x",
-   "kind": "thm",
-   "title": "Maclaurin polynomial of $\\log(1 - x)$",
-   "external": false
-  },
-  {
-   "id": "mds/calculus-derivatives#thm-taylor-log-one-plus-x",
-   "site": "mds",
-   "page": "calculus-derivatives",
-   "div": "thm-taylor-log-one-plus-x",
-   "kind": "thm",
-   "title": "Maclaurin polynomial of $\\log(1 + x)$",
-   "external": false
-  },
-  {
-   "id": "mds/calculus-derivatives#thm-taylor-normal-density",
-   "site": "mds",
-   "page": "calculus-derivatives",
-   "div": "thm-taylor-normal-density",
-   "kind": "thm",
-   "title": "Maclaurin polynomial of the standard normal density",
    "external": false
   },
   {
@@ -3835,6 +3835,60 @@
    "div": "thm-riemann-general",
    "kind": "thm",
    "title": "Equal-width Riemann sums converge to the integral",
+   "external": false
+  },
+  {
+   "id": "mds/calculus-taylor-series#def-maclaurin-polynomial",
+   "site": "mds",
+   "page": "calculus-taylor-series",
+   "div": "def-maclaurin-polynomial",
+   "kind": "def",
+   "title": "Maclaurin polynomial",
+   "external": false
+  },
+  {
+   "id": "mds/calculus-taylor-series#def-taylor-polynomial",
+   "site": "mds",
+   "page": "calculus-taylor-series",
+   "div": "def-taylor-polynomial",
+   "kind": "def",
+   "title": "Taylor polynomial",
+   "external": false
+  },
+  {
+   "id": "mds/calculus-taylor-series#def-taylor-series",
+   "site": "mds",
+   "page": "calculus-taylor-series",
+   "div": "def-taylor-series",
+   "kind": "def",
+   "title": "Taylor series",
+   "external": false
+  },
+  {
+   "id": "mds/calculus-taylor-series#thm-taylor-log-one-minus-x",
+   "site": "mds",
+   "page": "calculus-taylor-series",
+   "div": "thm-taylor-log-one-minus-x",
+   "kind": "thm",
+   "title": "Maclaurin polynomial of $\\log(1 - x)$",
+   "external": false
+  },
+  {
+   "id": "mds/calculus-taylor-series#thm-taylor-log-one-plus-x",
+   "site": "mds",
+   "page": "calculus-taylor-series",
+   "div": "thm-taylor-log-one-plus-x",
+   "kind": "thm",
+   "title": "Maclaurin polynomial of $\\log(1 + x)$",
+   "external": false
+  },
+  {
+   "id": "mds/calculus-taylor-series#thm-taylor-normal-density",
+   "site": "mds",
+   "page": "calculus-taylor-series",
+   "div": "thm-taylor-normal-density",
+   "kind": "thm",
+   "title": "Maclaurin polynomial of the standard normal density",
    "external": false
   },
   {
@@ -12199,6 +12253,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-domain-of-discourse",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-domain-of-discourse",
+   "kind": "def",
+   "title": "Domain of discourse, universe of discourse",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-existential-quantifier",
    "site": "mds",
    "page": "proof-writing",
@@ -12505,6 +12568,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-biconditional-split",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-biconditional-split",
+   "kind": "thm",
+   "title": "A biconditional is two conditionals",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-conjunction-rule",
    "site": "mds",
    "page": "proof-writing",
@@ -12577,6 +12649,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-equivalent-cycle",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-equivalent-cycle",
+   "kind": "thm",
+   "title": "A cycle of conditionals",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-modus-ponens",
    "site": "mds",
    "page": "proof-writing",
@@ -12592,6 +12673,15 @@
    "div": "thm-modus-tollens",
    "kind": "thm",
    "title": "Modus tollens",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-negate-quantifiers",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-negate-quantifiers",
+   "kind": "thm",
+   "title": "De Morgan's laws for quantifiers",
    "external": false
   },
   {
@@ -13408,6 +13498,14 @@
  ],
  "edges": [
   [
+   "mds/algebra#cor-mode-positive-multiple",
+   "mds/algebra#def-mode"
+  ],
+  [
+   "mds/algebra#cor-mode-positive-multiple",
+   "mds/functions#def-function"
+  ],
+  [
    "mds/algebra#def-affine-function",
    "mds/functions#def-function"
   ],
@@ -13708,6 +13806,14 @@
    "mds/calculus#def-riemann-integral"
   ],
   [
+   "mds/algebra#def-mode",
+   "mds/algebra#def-argmax"
+  ],
+  [
+   "mds/algebra#def-mode",
+   "mds/functions#def-function"
+  ],
+  [
    "mds/algebra#def-monomial",
    "mds/algebra-basics#def-power"
   ],
@@ -13996,6 +14102,10 @@
    "mds/algebra#def-affine-function"
   ],
   [
+   "mds/algebra#thm-argmax-positive-multiple",
+   "mds/functions#def-function"
+  ],
+  [
    "mds/algebra#thm-completeness",
    "mds/algebra#def-bounded-above"
   ],
@@ -14044,6 +14154,14 @@
    "mds/algebra#thm-prod-symmetric"
   ],
   [
+   "mds/algebra-basics#cor-mode-positive-multiple",
+   "mds/algebra-basics#def-mode"
+  ],
+  [
+   "mds/algebra-basics#cor-mode-positive-multiple",
+   "mds/functions#def-function"
+  ],
+  [
    "mds/algebra-basics#def-argmax",
    "mds/functions#def-function"
   ],
@@ -14066,6 +14184,14 @@
   [
    "mds/algebra-basics#def-local-minimizer",
    "mds/linear-algebra#def-euclidean-norm"
+  ],
+  [
+   "mds/algebra-basics#def-mode",
+   "mds/algebra-basics#def-argmax"
+  ],
+  [
+   "mds/algebra-basics#def-mode",
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra-basics#def-negative-part",
@@ -14122,6 +14248,10 @@
   [
    "mds/algebra-basics#def-transitive",
    "mds/functions#def-relation"
+  ],
+  [
+   "mds/algebra-basics#thm-argmax-positive-multiple",
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra-basics#thm-equal-trans",
@@ -14616,6 +14746,10 @@
    "mds/algebra-trigonometry#def-unit-circle"
   ],
   [
+   "mds/calculus#cor-deriv-log-chain",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
    "mds/calculus#cor-fubini-rect",
    "mds/calculus#thm-fubini"
   ],
@@ -14736,6 +14870,18 @@
    "mds/sets#def-open-interval"
   ],
   [
+   "mds/calculus#def-linear-approximation",
+   "mds/algebra-exponentials#def-quadratic-polynomial"
+  ],
+  [
+   "mds/calculus#def-linear-approximation",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus#def-linear-approximation",
+   "mds/functions#def-function"
+  ],
+  [
    "mds/calculus#def-logarithmic-derivative",
    "mds/calculus#cor-deriv-log-chain"
   ],
@@ -14837,15 +14983,67 @@
   ],
   [
    "mds/calculus#thm-chain-rule",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus#thm-chain-rule",
    "mds/functions#def-composition"
+  ],
+  [
+   "mds/calculus#thm-chain-rule",
+   "mds/functions#def-inner-function"
+  ],
+  [
+   "mds/calculus#thm-chain-rule",
+   "mds/functions#def-outer-function"
+  ],
+  [
+   "mds/calculus#thm-deriv-const",
+   "mds/vector-calculus#def-constant-wrt-vector"
+  ],
+  [
+   "mds/calculus#thm-deriv-const-factor",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus#thm-deriv-const-factor",
+   "mds/vector-calculus#def-constant-wrt-vector"
+  ],
+  [
+   "mds/calculus#thm-deriv-cos",
+   "mds/algebra-trigonometry#def-cosine-sine"
+  ],
+  [
+   "mds/calculus#thm-deriv-cos",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/calculus#thm-deriv-cos",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/calculus#thm-deriv-cos",
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/calculus#thm-deriv-exp",
    "mds/algebra#def-exponential-function"
   ],
   [
+   "mds/calculus#thm-deriv-exp",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/calculus#thm-deriv-exp",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
    "mds/calculus#thm-deriv-log",
    "mds/algebra#def-natural-log"
+  ],
+  [
+   "mds/calculus#thm-deriv-log",
+   "mds/calculus-derivatives#def-derivative"
   ],
   [
    "mds/calculus#thm-deriv-polynomial",
@@ -14853,7 +15051,35 @@
   ],
   [
    "mds/calculus#thm-deriv-polynomial",
-   "mds/number-systems#def-integers"
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/calculus#thm-deriv-polynomial",
+   "mds/expressions-algorithms#def-closed-form-expression"
+  ],
+  [
+   "mds/calculus#thm-deriv-polynomial",
+   "mds/number-systems#def-positive-integer"
+  ],
+  [
+   "mds/calculus#thm-deriv-polynomial",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/calculus#thm-deriv-sin",
+   "mds/algebra-trigonometry#def-sine"
+  ],
+  [
+   "mds/calculus#thm-deriv-sin",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/calculus#thm-deriv-sin",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/calculus#thm-deriv-sin",
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/calculus#thm-ftc-part1",
@@ -14904,6 +15130,14 @@
    "mds/calculus#def-antiderivative"
   ],
   [
+   "mds/calculus#thm-product-rule",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus#thm-quotient-rule",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
    "mds/calculus#thm-riemann-general",
    "mds/calculus#def-integrable"
   ],
@@ -14950,6 +15184,10 @@
   [
    "mds/calculus#thm-tonelli-measure",
    "mds/measures#def-sigma-finite"
+  ],
+  [
+   "mds/calculus-derivatives#cor-deriv-log-chain",
+   "mds/calculus-derivatives#def-differentiable"
   ],
   [
    "mds/calculus-derivatives#def-derivative",
@@ -15008,12 +15246,20 @@
    "mds/sets#def-open-interval"
   ],
   [
-   "mds/calculus-derivatives#def-logarithmic-derivative",
-   "mds/calculus-derivatives#cor-deriv-log-chain"
+   "mds/calculus-derivatives#def-linear-approximation",
+   "mds/algebra-exponentials#def-quadratic-polynomial"
   ],
   [
-   "mds/calculus-derivatives#def-maclaurin-polynomial",
-   "mds/calculus-derivatives#def-taylor-polynomial"
+   "mds/calculus-derivatives#def-linear-approximation",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus-derivatives#def-linear-approximation",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/calculus-derivatives#def-logarithmic-derivative",
+   "mds/calculus-derivatives#cor-deriv-log-chain"
   ],
   [
    "mds/calculus-derivatives#def-one-sided-derivative",
@@ -15068,24 +15314,72 @@
    "mds/functions#def-graph"
   ],
   [
-   "mds/calculus-derivatives#def-taylor-series",
-   "mds/calculus-derivatives#def-taylor-polynomial"
+   "mds/calculus-derivatives#thm-chain-rule",
+   "mds/calculus-derivatives#def-derivative"
   ],
   [
    "mds/calculus-derivatives#thm-chain-rule",
-   "mds/calculus-derivatives#def-derivative"
+   "mds/calculus-derivatives#def-differentiable"
   ],
   [
    "mds/calculus-derivatives#thm-chain-rule",
    "mds/functions#def-composition"
   ],
   [
+   "mds/calculus-derivatives#thm-chain-rule",
+   "mds/functions#def-inner-function"
+  ],
+  [
+   "mds/calculus-derivatives#thm-chain-rule",
+   "mds/functions#def-outer-function"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-const",
+   "mds/vector-calculus#def-constant-wrt-vector"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-const-factor",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-const-factor",
+   "mds/vector-calculus#def-constant-wrt-vector"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-cos",
+   "mds/algebra-trigonometry#def-cosine-sine"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-cos",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-cos",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-cos",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
    "mds/calculus-derivatives#thm-deriv-exp",
    "mds/algebra#def-exponential-function"
   ],
   [
+   "mds/calculus-derivatives#thm-deriv-exp",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-exp",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
    "mds/calculus-derivatives#thm-deriv-log",
    "mds/algebra#def-natural-log"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-log",
+   "mds/calculus-derivatives#def-derivative"
   ],
   [
    "mds/calculus-derivatives#thm-deriv-polynomial",
@@ -15093,19 +15387,43 @@
   ],
   [
    "mds/calculus-derivatives#thm-deriv-polynomial",
-   "mds/number-systems#def-integers"
+   "mds/calculus-derivatives#def-derivative"
   ],
   [
-   "mds/calculus-derivatives#thm-taylor-log-one-minus-x",
-   "mds/calculus-derivatives#def-maclaurin-polynomial"
+   "mds/calculus-derivatives#thm-deriv-polynomial",
+   "mds/expressions-algorithms#def-closed-form-expression"
   ],
   [
-   "mds/calculus-derivatives#thm-taylor-log-one-plus-x",
-   "mds/calculus-derivatives#def-maclaurin-polynomial"
+   "mds/calculus-derivatives#thm-deriv-polynomial",
+   "mds/number-systems#def-positive-integer"
   ],
   [
-   "mds/calculus-derivatives#thm-taylor-normal-density",
-   "mds/calculus-derivatives#def-maclaurin-polynomial"
+   "mds/calculus-derivatives#thm-deriv-polynomial",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-sin",
+   "mds/algebra-trigonometry#def-sine"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-sin",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-sin",
+   "mds/functions#def-function"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-sin",
+   "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/calculus-derivatives#thm-product-rule",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus-derivatives#thm-quotient-rule",
+   "mds/calculus-derivatives#def-differentiable"
   ],
   [
    "mds/calculus-double-integrals#cor-fubini-rect",
@@ -15274,6 +15592,26 @@
   [
    "mds/calculus-integration#thm-riemann-general",
    "mds/calculus-integration#def-riemann-sum-equal-width"
+  ],
+  [
+   "mds/calculus-taylor-series#def-maclaurin-polynomial",
+   "mds/calculus-taylor-series#def-taylor-polynomial"
+  ],
+  [
+   "mds/calculus-taylor-series#def-taylor-series",
+   "mds/calculus-taylor-series#def-taylor-polynomial"
+  ],
+  [
+   "mds/calculus-taylor-series#thm-taylor-log-one-minus-x",
+   "mds/calculus-taylor-series#def-maclaurin-polynomial"
+  ],
+  [
+   "mds/calculus-taylor-series#thm-taylor-log-one-plus-x",
+   "mds/calculus-taylor-series#def-maclaurin-polynomial"
+  ],
+  [
+   "mds/calculus-taylor-series#thm-taylor-normal-density",
+   "mds/calculus-taylor-series#def-maclaurin-polynomial"
   ],
   [
    "mds/expressions-algorithms#def-closed-form-expression",
@@ -20232,6 +20570,10 @@
    "mds/proof-writing#def-proposition"
   ],
   [
+   "mds/proof-writing#def-domain-of-discourse",
+   "mds/proof-writing#def-predicate"
+  ],
+  [
    "mds/proof-writing#def-existential-quantifier",
    "mds/proof-writing#def-quantifier"
   ],
@@ -20480,6 +20822,10 @@
    "mds/proof-writing#def-rule-of-inference"
   ],
   [
+   "mds/proof-writing#thm-biconditional-split",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#thm-conjunction-rule",
    "mds/proof-writing#def-proposition"
   ],
@@ -20528,6 +20874,10 @@
    "mds/proof-writing#def-tautology"
   ],
   [
+   "mds/proof-writing#thm-equivalent-cycle",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#thm-modus-ponens",
    "mds/proof-writing#def-proposition"
   ],
@@ -20542,6 +20892,14 @@
   [
    "mds/proof-writing#thm-modus-tollens",
    "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mds/proof-writing#thm-negate-quantifiers",
+   "mds/proof-writing#def-domain-of-discourse"
+  ],
+  [
+   "mds/proof-writing#thm-negate-quantifiers",
+   "mds/proof-writing#def-predicate"
   ],
   [
    "mds/proof-writing#thm-proof-by-contradiction",

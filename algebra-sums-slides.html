@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-03 14:53:06 (PST)</p>
+  <p class="date">Last modified: 2026-11-03 16:50:19 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -411,7 +411,7 @@ f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y)
 <section class="slide level2">
 
 <div id="exm-cubic-not-convex" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (A function that is not convex)</strong></span> The function in <a href="./algebra-basics.html#exr-local-vs-global-min">Exercise&nbsp;2 in Equalities, Inequalities and Minimizers</a>, <span class="math inline">\(f(x) = x^3 - 3x\)</span>, is not convex. Take <span class="math inline">\(x = -2\)</span>, <span class="math inline">\(y = 0\)</span>, <span class="math inline">\(t = \tfrac{1}{2}\)</span>. The point is <span class="math inline">\(\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1\)</span>, where the graph has height</p>
+<p><span class="theorem-title"><strong>Example 3 (A function that is not convex)</strong></span> The function in <a href="./algebra-basics.html#exr-local-vs-global-min">Exercise&nbsp;4 in Equalities, Inequalities and Minimizers</a>, <span class="math inline">\(f(x) = x^3 - 3x\)</span>, is not convex. Take <span class="math inline">\(x = -2\)</span>, <span class="math inline">\(y = 0\)</span>, <span class="math inline">\(t = \tfrac{1}{2}\)</span>. The point is <span class="math inline">\(\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1\)</span>, where the graph has height</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(-1) &amp;= -1 + 3 \\
@@ -440,7 +440,7 @@ f(x) &amp;= (x - 2)^2 \\
 \end{aligned}
 \]</span></p>
 <p>for every <span class="math inline">\(x\)</span>.</p>
-<p>Without convexity, a local minimizer need not be global: <span class="math inline">\(f(x) = x^3 - 3x\)</span> is not convex (<a href="#/exm-cubic-not-convex" class="quarto-xref">Example&nbsp;3</a>), and it has a local minimizer at <span class="math inline">\(x^* = 1\)</span> that is not global (<a href="./algebra-basics.html#exr-local-vs-global-min">Exercise&nbsp;2 in Equalities, Inequalities and Minimizers</a>).</p>
+<p>Without convexity, a local minimizer need not be global: <span class="math inline">\(f(x) = x^3 - 3x\)</span> is not convex (<a href="#/exm-cubic-not-convex" class="quarto-xref">Example&nbsp;3</a>), and it has a local minimizer at <span class="math inline">\(x^* = 1\)</span> that is not global (<a href="./algebra-basics.html#exr-local-vs-global-min">Exercise&nbsp;4 in Equalities, Inequalities and Minimizers</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -459,7 +459,7 @@ The [proof](proof-writing.qmd#def-proof) is the standard argument from the chord
 <section class="slide level2">
 
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x^*\)</span> be a local minimizer of <span class="math inline">\(f\)</span>, so there is a <span class="math inline">\(\delta&gt; 0\)</span> with <span class="math inline">\(f(x^*) \le f(x)\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span> (<a href="./algebra-basics.html#def-local-minimizer">Definition&nbsp;20 in Equalities, Inequalities and Minimizers</a>). Suppose <span class="math inline">\(x^*\)</span> is not a global minimizer (<a href="./algebra-basics.html#def-global-minimizer">Definition&nbsp;19 in Equalities, Inequalities and Minimizers</a>). Then some <span class="math inline">\(y \in \mathbb{R}^p\)</span> has <span class="math inline">\(f(y) &lt; f(x^*)\)</span>, and in particular <span class="math inline">\(y \ne x^*\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x^*\)</span> be a local minimizer of <span class="math inline">\(f\)</span>, so there is a <span class="math inline">\(\delta&gt; 0\)</span> with <span class="math inline">\(f(x^*) \le f(x)\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span> (<a href="./algebra-basics.html#def-local-minimizer">Definition&nbsp;21 in Equalities, Inequalities and Minimizers</a>). Suppose <span class="math inline">\(x^*\)</span> is not a global minimizer (<a href="./algebra-basics.html#def-global-minimizer">Definition&nbsp;20 in Equalities, Inequalities and Minimizers</a>). Then some <span class="math inline">\(y \in \mathbb{R}^p\)</span> has <span class="math inline">\(f(y) &lt; f(x^*)\)</span>, and in particular <span class="math inline">\(y \ne x^*\)</span>.</p>
 <p>Let <span class="math inline">\(t = \min{\mathopen{}\left\{\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{}}\right\}\mathclose{}}\)</span>, so <span class="math inline">\(t \in (0, 1)\)</span>, and let <span class="math inline">\(z = t y + (1 - t) x^*\)</span>. Then <span class="math inline">\(z - x^* = t (y - x^*)\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert z - x^*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{} \le \delta/ 2 &lt; \delta\)</span>.</p>
 <p>By convexity, <span class="math display">\[
 f(z) \le t f(y) + (1 - t) f(x^*) &lt; t f(x^*) + (1 - t) f(x^*) = f(x^*),

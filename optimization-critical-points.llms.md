@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 # 1 Critical points and optimization
 
@@ -455,7 +455,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 >
 > **Exercise 8 (Maximizing a gamma-family kernel)** Adapted from Miller [\[2\]](#ref-problifesavercalc), Question 1.1.10.
 >
-> The [gamma distribution](https://en.wikipedia.org/wiki/Gamma_distribution) with shape $a > 0$ has the [kernel](https://morrison-lab.github.io/pds/random-variables.html#def-kernel) $x^{a-1} e^{-x}$ on $[0, \infty)$. [A kernel has the same mode as its density](https://morrison-lab.github.io/pds/random-variables.html#thm-kernel-same-mode), so maximizing it finds the mode without computing the [normalizing constant](https://morrison-lab.github.io/pds/random-variables.html#def-normalizing-constant).
+> The [gamma density](https://en.wikipedia.org/wiki/Gamma_distribution) with shape $a > 0$ has the [kernel](https://morrison-lab.github.io/pds/random-variables.html#def-kernel) $x^{a-1} e^{-x}$ on $[0, \infty)$. [A kernel has the same mode as its density](https://morrison-lab.github.io/pds/random-variables.html#thm-kernel-same-mode), so maximizing the kernel finds the [mode](https://morrison-lab.github.io/pds/random-variables.html#def-mode) of the gamma density without computing the [normalizing constant](https://morrison-lab.github.io/pds/random-variables.html#def-normalizing-constant).
 >
 > For shape $a = 5$, the kernel is
 >
@@ -663,6 +663,99 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-python-1.png "Figure 5: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
 >
 > Figure 5: [Level curves](vector-calculus.llms.md#def-level-curve) of the [function](functions.llms.md#def-function) of [Example 8](#exm-stationary-point). The [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). At the origin (triangle) the gradient is ${(-2, 0)}^{\top}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> sp_x1_sf <- seq(-1, 3, length.out = 101)
+> sp_x2_sf <- seq(-2, 2, length.out = 101)
+> sp_grid_sf <- tidyr::expand_grid(x1 = sp_x1_sf, x2 = sp_x2_sf)
+> sp_value_sf <- sp_grid_sf$x1^2 + sp_grid_sf$x2^2 - 2 * sp_grid_sf$x1
+> sp_n2_sf <- length(sp_x2_sf)
+> sp_z_sf <- matrix(sp_value_sf, nrow = sp_n2_sf)
+> sp_m_x1_sf <- c(1, 0)
+> sp_m_x2_sf <- c(0, 0)
+> sp_m_kind_sf <- c("stationary point", "not stationary")
+> sp_m_symbol_sf <- c("circle", "diamond")
+> sp_marks_sf <- tibble::tibble(
+>   x1 = sp_m_x1_sf,
+>   x2 = sp_m_x2_sf,
+>   kind = sp_m_kind_sf,
+>   symbol = sp_m_symbol_sf
+> )
+> sp_marks_sf$z <- sp_marks_sf$x1^2 + sp_marks_sf$x2^2 - 2 * sp_marks_sf$x1
+> sp_marker_sf <- list(color = "#D55E00", size = 6, symbol = ~symbol)
+> sp_stops_sf <- c(0, 1)
+> sp_cols_sf <- c("#CCE0F0", "#0072B2")
+> sp_scale_sf <- list(sp_stops_sf, sp_cols_sf)
+> sp_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> sp_camera_sf <- list(eye = sp_eye_sf)
+> sp_xaxis_sf <- list(title = "x1")
+> sp_yaxis_sf <- list(title = "x2")
+> sp_zaxis_sf <- list(title = "f(x)")
+> sp_scene_sf <- list(
+>   xaxis = sp_xaxis_sf,
+>   yaxis = sp_yaxis_sf,
+>   zaxis = sp_zaxis_sf,
+>   camera = sp_camera_sf
+> )
+> sp_legend_sf <- list(orientation = "h")
+> plotly::plot_ly() |>
+>   plotly::add_surface(
+>     x = sp_x1_sf,
+>     y = sp_x2_sf,
+>     z = sp_z_sf,
+>     colorscale = sp_scale_sf,
+>     showscale = FALSE,
+>     opacity = 0.8
+>   ) |>
+>   plotly::add_markers(
+>     data = sp_marks_sf,
+>     x = ~x1,
+>     y = ~x2,
+>     z = ~z,
+>     text = ~kind,
+>     hoverinfo = "text",
+>     showlegend = FALSE,
+>     marker = sp_marker_sf
+>   ) |>
+>   plotly::layout(scene = sp_scene_sf, legend = sp_legend_sf)
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> sp_x1_3d = np.linspace(-1, 3, 101)
+> sp_x2_3d = np.linspace(-2, 2, 101)
+> sp_x1_grid_3d, sp_x2_grid_3d = np.meshgrid(sp_x1_3d, sp_x2_3d)
+> sp_value_3d = sp_x1_grid_3d**2 + sp_x2_grid_3d**2 - 2 * sp_x1_grid_3d
+> fig = plt.figure(figsize=(6, 4.5))
+> ax = fig.add_subplot(projection="3d")
+> ax.plot_surface(sp_x1_grid_3d, sp_x2_grid_3d, sp_value_3d,
+>                 color="#0072B2", alpha=0.6)
+> ax.scatter([1], [0], [-1], marker="o", color="#D55E00", s=50,
+>            label="stationary point")
+> ax.scatter([0], [0], [0], marker="D", color="#D55E00", s=50,
+>            label="not stationary")
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> ax.set_zlabel("f(x)")
+> ax.legend(loc="upper right")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Surface plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2, a bowl-shaped surface opening upward. The lowest point of the bowl, at (1, 0) and height -1, is marked by a vermilion circle and is the stationary point. A vermilion diamond marks the point of the surface above the origin, at height 0, where the surface is not flat.](optimization-critical-points_files/figure-html/stationary-point-3d-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-3d-python-1.png "Figure 6: The graph of the function of Example 8, the surface whose level curves are in Figure 5. The surface is flat, with gradient \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}, only at the bottom of the bowl above the center (1, 0) of the circles, the stationary point (circle). Above the origin (diamond) the surface descends toward the stationary point.")
+>
+> ## Python
+>
+> Figure 6: The [graph](functions.llms.md#def-graph) of the [function](functions.llms.md#def-function) of [Example 8](#exm-stationary-point), the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 5](#fig-stationary-point). The surface is flat, with [gradient](vector-calculus.llms.md#def-vector-derivative) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, only at the bottom of the bowl above the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). Above the origin (diamond) the surface descends toward the stationary point.
 
 > **NOTE:**
 >
@@ -1159,13 +1252,148 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 >
 > ## R
 >
-> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-r-1.png)](optimization-critical-points_files/figure-html/second-order-condition-r-1.png "Figure 6: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
+> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-r-1.png)](optimization-critical-points_files/figure-html/second-order-condition-r-1.png "Figure 7: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
 >
 > ## Python
 >
-> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-python-1.png)](optimization-critical-points_files/figure-html/second-order-condition-python-1.png "Figure 6: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
+> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-python-1.png)](optimization-critical-points_files/figure-html/second-order-condition-python-1.png "Figure 7: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
 >
-> Figure 6: [Level curves](vector-calculus.llms.md#def-level-set) of the two [functions](functions.llms.md#def-function) in [Example 16](#exm-second-order-condition). At the [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ of $x_1^2 + x_2^2 - 2 x_1$ (blue circle), the [Hessian](vector-calculus.llms.md#def-hessian) is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). The level curves close around a [strict local minimizer](#def-strict-local-minimizer). At the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of $x_1^2 - x_2^2$ (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, $x_1^2 - x_2^2$ rises, and along the second it falls. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
+> Figure 7: [Level curves](vector-calculus.llms.md#def-level-set) of the two [functions](functions.llms.md#def-function) in [Example 16](#exm-second-order-condition). At the [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ of $x_1^2 + x_2^2 - 2 x_1$ (blue circle), the [Hessian](vector-calculus.llms.md#def-hessian) is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). The level curves close around a [strict local minimizer](#def-strict-local-minimizer). At the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of $x_1^2 - x_2^2$ (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, $x_1^2 - x_2^2$ rises, and along the second it falls. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> so_x_sf <- seq(-1.5, 2.5, length.out = 101)
+> so_y_sf <- seq(-1.5, 1.5, length.out = 101)
+> so_grid_sf <- tidyr::expand_grid(x = so_x_sf, y = so_y_sf)
+> so_bowl_value_sf <- so_grid_sf$x^2 + so_grid_sf$y^2 - 2 * so_grid_sf$x
+> so_saddle_value_sf <- so_grid_sf$x^2 - so_grid_sf$y^2
+> so_ny_sf <- length(so_y_sf)
+> so_bowl_sf <- matrix(so_bowl_value_sf, nrow = so_ny_sf)
+> so_saddle_sf <- matrix(so_saddle_value_sf, nrow = so_ny_sf)
+> so_min_sf <- list(color = "#0072B2", size = 6, symbol = "circle")
+> so_pt_sf <- list(color = "#D55E00", size = 6, symbol = "diamond")
+> so_title_left_sf <- list(
+>   text = "positive definite Hessian",
+>   x = 0.22,
+>   y = 1,
+>   xref = "paper",
+>   yref = "paper",
+>   showarrow = FALSE
+> )
+> so_title_right_sf <- list(
+>   text = "indefinite Hessian",
+>   x = 0.78,
+>   y = 1,
+>   xref = "paper",
+>   yref = "paper",
+>   showarrow = FALSE
+> )
+> so_titles_sf <- list(so_title_left_sf, so_title_right_sf)
+> so_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> so_camera_sf <- list(eye = so_eye_sf)
+> so_xaxis_sf <- list(title = "x")
+> so_yaxis_sf <- list(title = "y")
+> so_zaxis_sf <- list(title = "f")
+> so_left_sf <- c(0, 0.5)
+> so_right_sf <- c(0.5, 1)
+> so_dom_left_sf <- list(x = so_left_sf)
+> so_dom_right_sf <- list(x = so_right_sf)
+> so_scene_left_sf <- list(
+>   xaxis = so_xaxis_sf,
+>   yaxis = so_yaxis_sf,
+>   zaxis = so_zaxis_sf,
+>   camera = so_camera_sf,
+>   domain = so_dom_left_sf
+> )
+> so_scene_right_sf <- list(
+>   xaxis = so_xaxis_sf,
+>   yaxis = so_yaxis_sf,
+>   zaxis = so_zaxis_sf,
+>   camera = so_camera_sf,
+>   domain = so_dom_right_sf
+> )
+> so_stops_sf <- c(0, 1)
+> so_cols_sf <- c("#CCE0F0", "#0072B2")
+> so_scale_sf <- list(so_stops_sf, so_cols_sf)
+> plotly::plot_ly() |>
+>   plotly::add_surface(
+>     x = so_x_sf,
+>     y = so_y_sf,
+>     z = so_bowl_sf,
+>     colorscale = so_scale_sf,
+>     showscale = FALSE,
+>     opacity = 0.8,
+>     scene = "scene"
+>   ) |>
+>   plotly::add_surface(
+>     x = so_x_sf,
+>     y = so_y_sf,
+>     z = so_saddle_sf,
+>     colorscale = so_scale_sf,
+>     showscale = FALSE,
+>     opacity = 0.8,
+>     scene = "scene2"
+>   ) |>
+>   plotly::add_markers(
+>     x = 1,
+>     y = 0,
+>     z = -1,
+>     marker = so_min_sf,
+>     scene = "scene"
+>   ) |>
+>   plotly::add_markers(
+>     x = 0,
+>     y = 0,
+>     z = 0,
+>     marker = so_pt_sf,
+>     scene = "scene2"
+>   ) |>
+>   plotly::layout(
+>     scene = so_scene_left_sf,
+>     scene2 = so_scene_right_sf,
+>     annotations = so_titles_sf,
+>     showlegend = FALSE
+>   )
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> so_x_3d = np.linspace(-1.5, 2.5, 101)
+> so_y_3d = np.linspace(-1.5, 1.5, 101)
+> so_xx_3d, so_yy_3d = np.meshgrid(so_x_3d, so_y_3d)
+> so_bowl_3d = so_xx_3d**2 + so_yy_3d**2 - 2 * so_xx_3d
+> so_saddle_3d = so_xx_3d**2 - so_yy_3d**2
+> fig = plt.figure(figsize=(7, 3.5))
+> ax_bowl = fig.add_subplot(1, 2, 1, projection="3d")
+> ax_bowl.plot_surface(so_xx_3d, so_yy_3d, so_bowl_3d, color="#0072B2", alpha=0.6)
+> ax_bowl.scatter([1], [0], [-1], marker="o", color="#0072B2", s=50)
+> ax_bowl.set_title("positive definite Hessian")
+> ax_saddle = fig.add_subplot(1, 2, 2, projection="3d")
+> ax_saddle.plot_surface(so_xx_3d, so_yy_3d, so_saddle_3d, color="#0072B2",
+>                        alpha=0.6)
+> ax_saddle.scatter([0], [0], [0], marker="D", color="#D55E00", s=50)
+> ax_saddle.set_title("indefinite Hessian")
+> for ax in (ax_bowl, ax_saddle):
+>     ax.set_xlabel("x")
+>     ax.set_ylabel("y")
+>     ax.set_zlabel("f")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Two surface plots side by side. The left plot, titled positive definite Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5 and y from -1.5 to 1.5, a bowl opening upward whose lowest point, at (1, 0), is marked by a blue circle. The right plot, titled indefinite Hessian, shows x squared minus y squared over the same region, a saddle that rises along the x axis and falls along the y axis. The origin, at the middle of the saddle, is marked by a vermilion diamond.](optimization-critical-points_files/figure-html/second-order-condition-3d-python-1.png)](optimization-critical-points_files/figure-html/second-order-condition-3d-python-1.png "Figure 8: The graphs of the two functions in Example 16, the surfaces whose level curves are in Figure 7. The surface of x_1^2 + x_2^2 - 2 x_1 is a bowl, and its stationary point {(1, 0)}^{\top} (circle) is the bottom, a strict local minimizer. The surface of x_1^2 - x_2^2 is a saddle: it rises along the first coordinate axis and falls along the second, so the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (diamond) is not a local minimizer.")
+>
+> ## Python
+>
+> Figure 8: The [graphs](functions.llms.md#def-graph) of the two [functions](functions.llms.md#def-function) in [Example 16](#exm-second-order-condition), the surfaces whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 7](#fig-second-order-condition). The surface of $x_1^2 + x_2^2 - 2 x_1$ is a bowl, and its [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ (circle) is the bottom, a [strict local minimizer](#def-strict-local-minimizer). The surface of $x_1^2 - x_2^2$ is a saddle: it rises along the first coordinate axis and falls along the second, so the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond) is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
 
 > **NOTE:**
 >

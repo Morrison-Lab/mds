@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 # Welcome
 
@@ -30,7 +30,7 @@ The first six topics are the foundations. Apart from a few remarks in Algebra th
 The remaining topics build on the foundations and on each other:
 
 - [Measures](measures.llms.md): $\sigma$-algebras, [finite](functions.llms.md#def-finite-set) and [countable additivity](measures-additivity.llms.md#def-countable-additivity), measures, and the counting measure
-- [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
+- [Calculus](calculus.llms.md): [derivative](calculus-derivatives.llms.md#def-derivative) rules, [Taylor series](calculus-taylor-series.llms.md#def-taylor-series), [antiderivatives](calculus-integration.llms.md#def-antiderivative), regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
 - [Optimization](optimization.llms.md): optimality conditions, Taylor approximations, convexity in several variables, Lagrange multipliers, Newton’s method, and gradient descent
@@ -67,7 +67,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Indicator Functions](indicator-functions.llms.md) | `mds/_indicator-functions.qmd` |
 | [Algebra](algebra.llms.md) | `mds/_algebra.qmd` |
 | [Measures](measures.llms.md) | `mds/_measures.qmd` |
-| [Calculus](calculus.llms.md) | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
+| [Calculus](calculus.llms.md) | `mds/_subfiles/derivatives/_sec-*.qmd`, `mds/_subfiles/derivatives/_sec-taylor-*.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
 | [Linear Algebra](linear-algebra.llms.md) | `mds/_subfiles/_sec_linear_algebra.qmd` |
 | [Vector Calculus](vector-calculus.llms.md) | `mds/_subfiles/_sec_vector_calc.qmd` |
 | [Optimization](optimization.llms.md) | `mds/_subfiles/_sec_optimization.qmd` |

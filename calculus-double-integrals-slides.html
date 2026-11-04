@@ -359,7 +359,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-03 14:53:06 (PST)</p>
+  <p class="date">Last modified: 2026-11-03 16:50:19 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-double-integrals" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Double Integrals</h2>
 </section><section class="slide level2"><p>The <strong>Fubini–Tonelli theorem</strong> states conditions under which the order of integration in a double integral can be exchanged <span class="citation" data-cites="wikipedia_tonelli_s_theorem"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>. We state them in two settings: the Riemann version (<a href="#/thm-fubini" class="quarto-xref">Theorem&nbsp;1</a>) is what applied courses usually use for double integrals of continuous functions on simple regions; the <a href="./measures-measure-spaces.html#def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measure-theoretic versions (<a href="#/thm-tonelli-measure" class="quarto-xref">Theorem&nbsp;4</a> and <a href="#/thm-fubini-measure" class="quarto-xref">Theorem&nbsp;5</a>) are included to make the <a href="https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint">joint-distribution form</a> corollary in <em>Probability for Data Science</em> follow from a stated theorem rather than from an aside.</p>
@@ -497,7 +497,7 @@ Figure&nbsp;1: Triangular integration region <span class="math inline">\(D = \{(
 &amp;&amp; \text{(} \textstyle\int_0^x dy = x \text{)}
 \end{aligned}
 \]</span></p>
-<p>To antidifferentiate <span class="math inline">\(x\,\text{e}^{-x^2}\)</span>, let <span class="math inline">\(u = x^2\)</span> be the inner function. By the chain rule (<a href="./calculus-derivatives.html#thm-chain-rule">Theorem&nbsp;10 in Derivatives and Taylor Series</a>), with <span class="math inline">\(\frac{d u}{d x} = 2x\)</span>,</p>
+<p>To antidifferentiate <span class="math inline">\(x\,\text{e}^{-x^2}\)</span>, let <span class="math inline">\(u = x^2\)</span> be the inner function. By the chain rule (<a href="./calculus-derivatives.html#thm-chain-rule">Theorem&nbsp;10 in Derivatives</a>), with <span class="math inline">\(\frac{d u}{d x} = 2x\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{d }{d x}\mathopen{}\left(-\frac{1}{2}\,\text{e}^{-u}\right)\mathclose{}
@@ -632,7 +632,7 @@ Figure&nbsp;2: Surface <span class="math inline">\(z = e^{-x^2}\)</span> over th
 <p><span class="theorem-title"><strong>Example 4 (When conditions fail: a counterexample)</strong></span> The conditions in <a href="#/thm-fubini" class="quarto-xref">Theorem&nbsp;1</a> are not merely technical — when they fail, iterated integrals can exist yet disagree.</p>
 <p>Let <span class="math display">\[f(x, y) = \frac{x^2 - y^2}{(x^2 + y^2)^2}\]</span> on the unit square <span class="math inline">\(R = [0, 1] \times [0, 1]\)</span>. Strictly, <span class="math inline">\(f\)</span> is defined on <span class="math inline">\(R \setminus \{(0, 0)\}\)</span>: the denominator vanishes at the origin, so <span class="math inline">\(f\)</span> is undefined there (we return to this point in the condition check).</p>
 <p><strong>Integrating <span class="math inline">\(y\)</span> first, then <span class="math inline">\(x\)</span>:</strong></p>
-<p>Holding <span class="math inline">\(x\)</span> fixed and differentiating in <span class="math inline">\(y\)</span> (by the quotient rule, <a href="./calculus-derivatives.html#thm-quotient-rule">Theorem&nbsp;9 in Derivatives and Taylor Series</a>),</p>
+<p>Holding <span class="math inline">\(x\)</span> fixed and differentiating in <span class="math inline">\(y\)</span> (by the quotient rule, <a href="./calculus-derivatives.html#thm-quotient-rule">Theorem&nbsp;9 in Derivatives</a>),</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{d }{d y}\frac{y}{x^2 + y^2} &amp;= \frac{(x^2 + y^2) - y \cdot 2y}{(x^2 + y^2)^2} \\

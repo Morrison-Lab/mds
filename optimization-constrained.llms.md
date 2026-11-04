@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 > **NOTE:**
 >
@@ -399,6 +399,103 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 
 > **NOTE:**
 >
+> Show code
+>
+> ``` downlit
+> ll_x1_sf <- seq(-1.6, 2, length.out = 101)
+> ll_x2_sf <- seq(-1.6, 2, length.out = 101)
+> ll_grid_sf <- tidyr::expand_grid(x1 = ll_x1_sf, x2 = ll_x2_sf)
+> ll_value_sf <- ll_grid_sf$x1^2 + ll_grid_sf$x2^2
+> ll_n2_sf <- length(ll_x2_sf)
+> ll_z_sf <- matrix(ll_value_sf, nrow = ll_n2_sf)
+> ll_l_x1_sf <- seq(-0.5, 2, length.out = 101)
+> ll_line_sf <- tibble::tibble(x1 = ll_l_x1_sf)
+> ll_line_sf$x2 <- (5 - 3 * ll_line_sf$x1) / 4
+> ll_line_sf$z <- ll_line_sf$x1^2 + ll_line_sf$x2^2
+> ll_point_sf <- tibble::tibble(x1 = 0.6, x2 = 0.8, z = 1)
+> ll_line_style_sf <- list(color = "#0072B2", width = 5)
+> ll_mark_sf <- list(color = "#D55E00", size = 6, symbol = "circle")
+> ll_stops_sf <- c(0, 1)
+> ll_cols_sf <- c("#E5E5E5", "#808080")
+> ll_scale_sf <- list(ll_stops_sf, ll_cols_sf)
+> ll_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> ll_camera_sf <- list(eye = ll_eye_sf)
+> ll_xaxis_sf <- list(title = "x1")
+> ll_yaxis_sf <- list(title = "x2")
+> ll_zaxis_sf <- list(title = "f(x)")
+> ll_scene_sf <- list(
+>   xaxis = ll_xaxis_sf,
+>   yaxis = ll_yaxis_sf,
+>   zaxis = ll_zaxis_sf,
+>   camera = ll_camera_sf
+> )
+> ll_legend_sf <- list(orientation = "h")
+> plotly::plot_ly() |>
+>   plotly::add_surface(
+>     x = ll_x1_sf,
+>     y = ll_x2_sf,
+>     z = ll_z_sf,
+>     colorscale = ll_scale_sf,
+>     showscale = FALSE,
+>     opacity = 0.7
+>   ) |>
+>   plotly::add_trace(
+>     data = ll_line_sf,
+>     x = ~x1,
+>     y = ~x2,
+>     z = ~z,
+>     type = "scatter3d",
+>     mode = "lines",
+>     line = ll_line_style_sf,
+>     name = "constraint"
+>   ) |>
+>   plotly::add_markers(
+>     data = ll_point_sf,
+>     x = ~x1,
+>     y = ~x2,
+>     z = ~z,
+>     marker = ll_mark_sf,
+>     name = "minimizer"
+>   ) |>
+>   plotly::layout(scene = ll_scene_sf, legend = ll_legend_sf)
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> ll_x1_3d, ll_x2_3d = np.meshgrid(np.linspace(-1.6, 2, 101),
+>                                  np.linspace(-1.6, 2, 101))
+> ll_line_x1_3d = np.linspace(-0.5, 2, 101)
+> ll_line_x2_3d = (5 - 3 * ll_line_x1_3d) / 4
+> ll_line_z_3d = ll_line_x1_3d**2 + ll_line_x2_3d**2
+> fig = plt.figure(figsize=(6, 4.5))
+> ax = fig.add_subplot(projection="3d")
+> ax.plot_surface(ll_x1_3d, ll_x2_3d, ll_x1_3d**2 + ll_x2_3d**2,
+>                 color="grey", alpha=0.4)
+> ax.plot(ll_line_x1_3d, ll_line_x2_3d, ll_line_z_3d, color="#0072B2",
+>         label="constraint")
+> ax.scatter([0.6], [0.8], [1], marker="o", color="#D55E00", s=50,
+>            label="minimizer")
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> ax.set_zlabel("f(x)")
+> ax.legend(loc="upper right")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Surface plot of x1 squared plus x2 squared over x1 and x2 from -1.6 to 2, a bowl opening upward with its lowest point at the origin. A blue curve on the bowl lies above the straight line 3 x1 plus 4 x2 equals 5, running from upper left to lower right. Its lowest point, above (0.6, 0.8) at height 1, is marked by a vermilion circle. That height is the smallest value of x1 squared plus x2 squared on the line.](optimization-constrained_files/figure-html/lagrange-line-3d-python-1.png)](optimization-constrained_files/figure-html/lagrange-line-3d-python-1.png "Figure 2: The graph of the objective x_1^2 + x_2^2, the surface whose level curves (circles) are in Figure 1, with the constraint line 3 x_1 + 4 x_2 = 5 lifted onto it. Along the constraint the objective is lowest above the minimizer {(0.6, 0.8)}^{\top} (Example 5), where the line touches the circle c = 1.")
+>
+> ## Python
+>
+> Figure 2: The [graph](functions.llms.md#def-graph) of the [objective](#def-objective-function) $x_1^2 + x_2^2$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) (circles) are in [Figure 1](#fig-lagrange-line), with the constraint line $3 x_1 + 4 x_2 = 5$ lifted onto it. Along the constraint the objective is lowest above the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 5](#exm-qp-equality)), where the line touches the circle $c = 1$.
+
+> **NOTE:**
+>
 > **Example 6 (The hypotheses are needed)**  
 >
 > - If $\mathbf{S}$ is not positive definite there may be no minimizer: with $\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$ and the constraint $x_1 = 1$ ($\mathbf{A} = {(1, 0)}^{\top}$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = [1]$), $f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)$ decreases without bound as $x_2$ grows.
@@ -447,13 +544,13 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 >
 > ## R
 >
-> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png "Figure 2: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
+> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png "Figure 3: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
 >
 > ## Python
 >
-> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png "Figure 2: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
+> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png "Figure 3: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
 >
-> Figure 2: The first case of [Example 6](#exm-qp-equality-fails): with $\mathbf{S} = \operatorname{diag}(1, -1)$, which is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), the [value](functions.llms.md#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$ falls without [bound](sets.llms.md#def-bound) as $\mathopen{}\left|x_2\right|\mathclose{}$ grows, so this problem has no [minimizer](algebra-basics.llms.md#def-global-minimizer).
+> Figure 3: The first case of [Example 6](#exm-qp-equality-fails): with $\mathbf{S} = \operatorname{diag}(1, -1)$, which is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), the [value](functions.llms.md#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$ falls without [bound](sets.llms.md#def-bound) as $\mathopen{}\left|x_2\right|\mathclose{}$ grows, so this problem has no [minimizer](algebra-basics.llms.md#def-global-minimizer).
 
 > **NOTE:**
 >

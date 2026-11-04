@@ -15,7 +15,7 @@
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.11.9">
-<title>Math for Data Science – Derivatives and Taylor Series</title>
+<title>Math for Data Science – Derivatives</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -352,17 +352,15 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">Derivatives and Taylor Series</h1>
+<section id="title-slide" class="quarto-title-block center"><h1 class="title">Derivatives</h1>
 
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-03 14:53:06 (PST)</p>
-</section><section class="slide level2"></section><section id="sec-derivatives" class="slide level2" data-number="1"><h2>
-<span class="header-section-number">1</span> Derivatives</h2>
-</section><section class="slide level2"><h3 data-number="1.1" id="sec-limits-derivatives">
-<span class="header-section-number">1.1</span> Limits and derivatives</h3>
-<div id="def-limit" class="theorem definition">
+  <p class="date">Last modified: 2026-11-03 16:50:19 (PST)</p>
+</section><section class="slide level2"></section><section id="sec-limits-derivatives" class="slide level2" data-number="1"><h2>
+<span class="header-section-number">1</span> Limits and derivatives</h2>
+</section><section class="slide level2"><div id="def-limit" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Limit of a function at a point)</strong></span> Let <span class="math inline">\(f\)</span> be a <a href="./functions.html#def-function">function</a> defined at every point of an <a href="./sets.html#def-open-interval">open interval</a> around <span class="math inline">\(c\)</span>, except possibly at <span class="math inline">\(c\)</span> itself, and let <span class="math inline">\(L\)</span> be a <a href="./number-systems.html#def-real-numbers">real number</a>. The <strong>limit</strong> of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span> <span class="citation" data-cites="wikipedia_limit_of_a_function"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, written <span class="math inline">\(\lim_{x \to c} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that</p>
 <p><span class="math display">\[\mathopen{}\left|f(x) - L\right|\mathclose{} &lt; \varepsilon\quad \text{for every } x \text{ with } 0 &lt; \mathopen{}\left|x - c\right|\mathclose{} &lt; \delta.\]</span></p>
 <p>Here <span class="math inline">\(\mathopen{}\left|\cdot\right|\mathclose{}\)</span> is the <a href="./algebra-basics.html#def-absolute-value">absolute value</a>. When such a real number <span class="math inline">\(L\)</span> exists, the limit <strong>exists</strong>; otherwise, the limit does not exist. The value <span class="math inline">\(f(c)\)</span>, if it is defined, plays no role.</p>
@@ -573,10 +571,10 @@ f''(x) &amp;= 3 \cdot 2x \\
 \]</span></p>
 <p>So <span class="math inline">\(f''(2) = 12\)</span>, <span class="math inline">\(f''(0) = 0\)</span>, and <span class="math inline">\(f''(-1) = -6\)</span>.</p>
 </div>
-<h3 data-number="1.2" id="sec-derivative-rules">
-<span class="header-section-number">1.2</span> Derivative rules</h3>
-<div id="thm-deriv-const" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (Constant rule)</strong></span> If <span class="math inline">\(c\)</span> is constant with respect to <span class="math inline">\(x\)</span>, then</p>
+</section><section id="sec-derivative-rules" class="slide level2" data-number="2"><h2>
+<span class="header-section-number">2</span> Derivative rules</h2>
+</section><section class="slide level2"><div id="thm-deriv-const" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Constant rule)</strong></span> If <span class="math inline">\(c\)</span> is <a href="./vector-calculus.html#def-constant-wrt-vector">constant with respect to</a> <span class="math inline">\(x\)</span>, then</p>
 <p><span class="math display">\[\frac{\partial}{\partial x}c = 0\]</span></p>
 </div>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
@@ -596,7 +594,7 @@ f''(x) &amp;= 3 \cdot 2x \\
 </div>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-const-factor" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (Constant multiple rule)</strong></span> If <span class="math inline">\(a\)</span> is constant with respect to <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is a differentiable function of <span class="math inline">\(x\)</span>, then: <span class="math display">\[\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 2 (Constant multiple rule)</strong></span> If <span class="math inline">\(a\)</span> is <a href="./vector-calculus.html#def-constant-wrt-vector">constant with respect to</a> <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is a <a href="#/def-differentiable">differentiable function</a> of <span class="math inline">\(x\)</span>, then: <span class="math display">\[\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}\]</span></p>
 </div>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -615,9 +613,9 @@ f''(x) &amp;= 3 \cdot 2x \\
 </div>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-polynomial" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (Power rule)</strong></span> For every real number <span class="math inline">\(q\)</span> and every <span class="math inline">\(x &gt; 0\)</span> <span class="citation" data-cites="wikipedia_power_rule"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span>, the derivative of the <a href="./algebra-exponentials.html#def-real-power">power</a> <span class="math inline">\(x^q\)</span> is:</p>
+<p><span class="theorem-title"><strong>Theorem 3 (Power rule)</strong></span> For every <a href="./number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(q\)</span> and every <span class="math inline">\(x &gt; 0\)</span> <span class="citation" data-cites="wikipedia_power_rule"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span>, the <a href="#/def-derivative">derivative</a> of the <a href="./algebra-exponentials.html#def-real-power">power</a> <span class="math inline">\(x^q\)</span> is:</p>
 <p><span class="math display">\[\frac{\partial}{\partial x}x^q = qx^{q-1}\]</span></p>
-<p>When <span class="math inline">\(q\)</span> is a positive <a href="./number-systems.html#def-integers">integer</a>, the same formula holds for every real <span class="math inline">\(x\)</span>.</p>
+<p>When <span class="math inline">\(q\)</span> is a <a href="./number-systems.html#def-positive-integer">positive integer</a>, the same <a href="./expressions-algorithms.html#def-closed-form-expression">formula</a> holds for every <a href="./number-systems.html#def-real-numbers">real</a> <span class="math inline">\(x\)</span>.</p>
 </div>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -717,7 +715,7 @@ x
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-log" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (Derivative of natural logarithm)</strong></span> For every <span class="math inline">\(x &gt; 0\)</span>, the derivative of the <a href="./algebra-exponentials.html#def-natural-log">natural logarithm</a> is:</p>
+<p><span class="theorem-title"><strong>Theorem 4 (Derivative of natural logarithm)</strong></span> For every <span class="math inline">\(x &gt; 0\)</span>, the <a href="#/def-derivative">derivative</a> of the <a href="./algebra-exponentials.html#def-natural-log">natural logarithm</a> is:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\operatorname{log}'\mathopen{}\left\{x\right\}\mathclose{}}
@@ -754,19 +752,19 @@ f(x)
 <p>simplifying algebraically first is faster and prevents arithmetic errors.</p>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-exp" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5 (Derivative of exponential)</strong></span> For every real <span class="math inline">\(x\)</span>, the derivative of the <a href="./algebra-exponentials.html#def-exponential-function">exponential function</a> is:</p>
+<p><span class="theorem-title"><strong>Theorem 5 (Derivative of exponential)</strong></span> For every <a href="./number-systems.html#def-real-numbers">real</a> <span class="math inline">\(x\)</span>, the <a href="#/def-derivative">derivative</a> of the <a href="./algebra-exponentials.html#def-exponential-function">exponential function</a> is:</p>
 <p><span class="math display">\[{\operatorname{exp}'\mathopen{}\left\{x\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-sin" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (Derivative of sine)</strong></span> For every real <span class="math inline">\(x\)</span>, the derivative of the sine function is:</p>
+<p><span class="theorem-title"><strong>Theorem 6 (Derivative of sine)</strong></span> For every <a href="./number-systems.html#def-real-numbers">real</a> <span class="math inline">\(x\)</span>, the <a href="#/def-derivative">derivative</a> of the <a href="./algebra-trigonometry.html#def-sine">sine</a> <a href="./functions.html#def-function">function</a> is:</p>
 <p><span class="math display">\[\frac{\partial}{\partial x}\sin x = \cos x\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-cos" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (Derivative of cosine)</strong></span> For every real <span class="math inline">\(x\)</span>, the derivative of the cosine function is:</p>
+<p><span class="theorem-title"><strong>Theorem 7 (Derivative of cosine)</strong></span> For every <a href="./number-systems.html#def-real-numbers">real</a> <span class="math inline">\(x\)</span>, the <a href="#/def-derivative">derivative</a> of the <a href="./algebra-trigonometry.html#def-cosine-sine">cosine</a> <a href="./functions.html#def-function">function</a> is:</p>
 <p><span class="math display">\[\frac{\partial}{\partial x}\cos x = -\sin x\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-product-rule" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (Product rule)</strong></span> If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are differentiable functions of <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_product_rule"><a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, then</p>
+<p><span class="theorem-title"><strong>Theorem 8 (Product rule)</strong></span> If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <a href="#/def-differentiable">differentiable functions</a> of <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_product_rule"><a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, then</p>
 <p><span class="math display">\[(ab)' = ab' + ba'\]</span></p>
 </div>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
@@ -824,7 +822,7 @@ f''(x) &amp;= \mathopen{}\left[(12x^2 + 6) - (x^4 + 3x^2 + 8)\right]\mathclose{}
 \end{aligned}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-quotient-rule" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (Quotient rule)</strong></span> If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are differentiable functions of <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_quotient_rule"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span> and <span class="math inline">\(b \neq 0\)</span>, then</p>
+<p><span class="theorem-title"><strong>Theorem 9 (Quotient rule)</strong></span> If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <a href="#/def-differentiable">differentiable functions</a> of <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_quotient_rule"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span> and <span class="math inline">\(b \neq 0\)</span>, then</p>
 <p><span class="math display">\[(a/b)' = a'/b - (a/b^2)b'\]</span></p>
 </div>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
@@ -872,7 +870,7 @@ f'(x)
 <p>Both methods yield <span class="math inline">\(1\)</span>, but factoring first eliminates tedious algebraic simplification.</p>
 </div>
 </section><section class="slide level2"><div id="thm-chain-rule" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (Chain rule)</strong></span> If <span class="math inline">\(a\)</span> is a differentiable function of <span class="math inline">\(b\)</span> <span class="citation" data-cites="wikipedia_chain_rule"><a href="#/references" role="doc-biblioref" onclick="">[13]</a></span>, and <span class="math inline">\(b\)</span> is a differentiable function of <span class="math inline">\(c\)</span>, then <span class="math inline">\(a\)</span> is a differentiable function of <span class="math inline">\(c\)</span>, and</p>
+<p><span class="theorem-title"><strong>Theorem 10 (Chain rule)</strong></span> If <span class="math inline">\(a\)</span> is a <a href="#/def-differentiable">differentiable function</a> of <span class="math inline">\(b\)</span> <span class="citation" data-cites="wikipedia_chain_rule"><a href="#/references" role="doc-biblioref" onclick="">[13]</a></span>, and <span class="math inline">\(b\)</span> is a differentiable function of <span class="math inline">\(c\)</span>, then <span class="math inline">\(a\)</span> is a differentiable function of <span class="math inline">\(c\)</span>, and</p>
 <p><span class="math display">\[\begin{aligned}
 \frac{d a}{d c} &amp;=
 \frac{d a}{d b} \frac{d b}{d c}
@@ -880,7 +878,7 @@ f'(x)
 &amp;= \frac{d b}{d c} \frac{d a}{d b}
 \end{aligned}
 \]</span></p>
-<p>or in Lagrange’s notation (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;7</a>), if <span class="math inline">\(g\)</span> is differentiable at <span class="math inline">\(x\)</span> and <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(g(x)\)</span>, then for the <a href="./functions.html#def-composition">composition</a> <span class="math inline">\(f \circ g\)</span>, with inner function <span class="math inline">\(g\)</span> and outer function <span class="math inline">\(f\)</span>:</p>
+<p>or in Lagrange’s notation (<a href="#/def-derivative" class="quarto-xref">Definition&nbsp;7</a>), if <span class="math inline">\(g\)</span> is <a href="#/def-differentiable">differentiable at</a> <span class="math inline">\(x\)</span> and <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(g(x)\)</span>, then for the <a href="./functions.html#def-composition">composition</a> <span class="math inline">\(f \circ g\)</span>, with <a href="./functions.html#def-inner-function">inner function</a> <span class="math inline">\(g\)</span> and <a href="./functions.html#def-outer-function">outer function</a> <span class="math inline">\(f\)</span>:</p>
 <p><span class="math display">\[(f(g(x)))' = g'(x) f'(g(x))\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-gaussian-kernel" class="theorem exercise">
@@ -979,7 +977,7 @@ f'(x)
 <p><em>Remark:</em> Omitting the inner derivative <span class="math inline">\(g'(x) = 5\)</span> is a frequent mistake when applying the generalized power rule.</p>
 </div>
 </section><section class="slide level2"><div id="cor-deriv-log-chain" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 1 (Chain rule for logarithms)</strong></span> If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(x\)</span> and <span class="math inline">\(f(x) &gt; 0\)</span>, then</p>
+<p><span class="theorem-title"><strong>Corollary 1 (Chain rule for logarithms)</strong></span> If <span class="math inline">\(f\)</span> is <a href="#/def-differentiable">differentiable at</a> <span class="math inline">\(x\)</span> and <span class="math inline">\(f(x) &gt; 0\)</span>, then</p>
 <p><span class="math display">\[
 \frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}} = \frac{f'(x)}{f(x)}
 \]</span></p>
@@ -1059,9 +1057,9 @@ f''(x)
 \end{aligned}
 \]</span></p>
 </div>
-<h3 data-number="1.3" id="sec-function-profile">
-<span class="header-section-number">1.3</span> Studying a new function</h3>
-<div id="def-logarithmic-derivative" class="theorem definition">
+</section><section id="sec-function-profile" class="slide level2" data-number="3"><h2>
+<span class="header-section-number">3</span> Studying a new function</h2>
+</section><section class="slide level2"><div id="def-logarithmic-derivative" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 14 (Logarithmic derivative)</strong></span> The <strong>logarithmic derivative</strong> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span> of a function <span class="math inline">\(f\)</span> of a real variable equals <span class="math inline">\(\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}\)</span> by <a href="#/cor-deriv-log-chain" class="quarto-xref">Corollary&nbsp;1</a> and measures the rate of change of <span class="math inline">\(f\)</span> relative to its size; it needs <span class="math inline">\(f(x) &gt; 0\)</span>, and for <span class="math inline">\(f(x) &lt; 0\)</span> the same expression is the derivative of <span class="math inline">\({\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-function-profile" class="theorem definition">
@@ -1175,9 +1173,9 @@ Figure&nbsp;1: The logistic function, its derivative and its logarithm
 </div>
 </div>
 </div>
-</section><section class="slide level2"><h3 data-number="1.4" id="sec-tangent-lines">
-<span class="header-section-number">1.4</span> Tangent lines</h3>
-<div id="def-tangent-line" class="theorem definition">
+</section><section id="sec-tangent-lines" class="slide level2" data-number="4"><h2>
+<span class="header-section-number">4</span> Tangent lines</h2>
+</section><section class="slide level2"><div id="def-tangent-line" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Tangent line)</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;6</a>). The <strong>tangent line</strong> to the <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the graph of the <a href="./algebra-exponentials.html#def-affine-function">affine function</a></p>
 <p><span class="math display">\[x \mapsto f(c) + f'(c)\,(x - c),\]</span></p>
 <p>the line through the point <span class="math inline">\((c, f(c))\)</span> with <a href="./algebra-exponentials.html#def-slope">slope</a> <span class="math inline">\(f'(c)\)</span>. The slope <span class="math inline">\(f'(c)\)</span> is also called the <strong>tangent slope</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
@@ -1196,17 +1194,17 @@ x
 \]</span></p>
 <p>At <span class="math inline">\(x = 1.1\)</span> the tangent line has height <span class="math inline">\(2(1.1) - 1 = 1.2\)</span>, close to the curve’s height <span class="math inline">\(f(1.1) = 1.21\)</span>; the gap, <span class="math inline">\(1.21 - 1.2 = 0.01\)</span>, is <span class="math inline">\((1.1 - 1)^2\)</span>.</p>
 </div>
-</section><section class="slide level2"><h3 data-number="1.5" id="sec-linear-approximation">
-<span class="header-section-number">1.5</span> Linear approximation</h3>
-<p>For a differentiable function <span class="math inline">\(f\)</span> and a small step <span class="math inline">\(\varepsilon\)</span>,</p>
+</section><section id="sec-linear-approximation" class="slide level2" data-number="5"><h2>
+<span class="header-section-number">5</span> Linear approximation</h2>
+</section><section class="slide level2"><p>For a <a href="#/def-differentiable">differentiable function</a> <span class="math inline">\(f\)</span> and a small step <span class="math inline">\(\varepsilon\)</span>,</p>
 <p><span id="eq-linear-approx"><span class="math display">\[f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}\]</span></span></p>
 </section><section class="slide level2"><div id="def-linear-approximation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Linear approximation (first-order Taylor approximation))</strong></span> For a function <span class="math inline">\(f\)</span> that is differentiable at <span class="math inline">\(w\)</span>, the <strong>linear approximation</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(w\)</span> <span class="citation" data-cites="wikipedia_linear_approximation"><a href="#/references" role="doc-biblioref" onclick="">[14]</a></span> (also called the <strong>first-order Taylor approximation</strong>) is the function of the step <span class="math inline">\(\varepsilon\)</span></p>
+<p><span class="theorem-title"><strong>Definition 17 (Linear approximation (first-order Taylor approximation))</strong></span> For a <a href="./functions.html#def-function">function</a> <span class="math inline">\(f\)</span> that is <a href="#/def-differentiable">differentiable at</a> <span class="math inline">\(w\)</span>, the <strong>linear approximation</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(w\)</span> <span class="citation" data-cites="wikipedia_linear_approximation"><a href="#/references" role="doc-biblioref" onclick="">[14]</a></span> (also called the <strong>first-order Taylor approximation</strong>) is the function of the step <span class="math inline">\(\varepsilon\)</span></p>
 <p><span class="math display">\[\hat{f}_w(\varepsilon) = f(w) + \varepsilon\,\frac{d }{d w}f(w)\]</span></p>
-<p>so <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> says <span class="math inline">\(f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)\)</span> for small <span class="math inline">\(\varepsilon\)</span>. <a href="#/fig-linear-approx" class="quarto-xref">Figure&nbsp;2</a> illustrates this approximation interactively for a quadratic function.</p>
+<p>so <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> says <span class="math inline">\(f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)\)</span> for small <span class="math inline">\(\varepsilon\)</span>. <a href="#/fig-linear-approx" class="quarto-xref">Figure&nbsp;2</a> illustrates this approximation interactively for a <a href="./algebra-exponentials.html#def-quadratic-polynomial">quadratic function</a>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-linear-approx-affine" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (The “linear” approximation is affine). </span>The linear approximation <span class="math inline">\(\hat{f}_w\)</span> (<a href="#/def-linear-approximation" class="quarto-xref">Definition&nbsp;17</a>) is an <a href="./algebra-exponentials.html#def-affine-function">affine function</a> of the step <span class="math inline">\(\varepsilon\)</span>: its slope is <span class="math inline">\(\frac{d }{d w}f(w)\)</span> and its intercept is <span class="math inline">\(f(w)\)</span>. It is <a href="./algebra-exponentials.html#def-linear-function">linear</a> in <span class="math inline">\(\varepsilon\)</span> only when <span class="math inline">\(f(w) = 0\)</span>. The name “linear approximation” uses “linear” in the looser sense of elementary algebra (<a href="./algebra-exponentials.html#rem-linear-function-terminology">remark</a>). <span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe <a href="#/references" role="doc-biblioref" onclick="">[15]</a></span>, section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.</p>
+<p><span class="proof-title"><em>Remark 2</em> (The “linear” approximation is affine). </span>The linear approximation <span class="math inline">\(\hat{f}_w\)</span> (<a href="#/def-linear-approximation" class="quarto-xref">Definition&nbsp;17</a>) is an <a href="./algebra-exponentials.html#def-affine-function">affine function</a> of the step <span class="math inline">\(\varepsilon\)</span>: its <a href="./algebra-exponentials.html#def-slope">slope</a> is <span class="math inline">\(\frac{d }{d w}f(w)\)</span> and its <a href="./algebra-exponentials.html#def-intercept">intercept</a> is <span class="math inline">\(f(w)\)</span>. It is <a href="./algebra-exponentials.html#def-linear-function">linear</a> in <span class="math inline">\(\varepsilon\)</span> only when <span class="math inline">\(f(w) = 0\)</span>. The name “linear approximation” uses “linear” in the looser sense of elementary algebra (<a href="./algebra-exponentials.html#rem-linear-function-terminology">remark</a>). <span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe <a href="#/references" role="doc-biblioref" onclick="">[15]</a></span>, section 2.2, treats the <a href="#/def-linear-approximation">first-order Taylor approximation</a> as an affine function for <a href="./functions.html#def-function">functions</a> of several variables as well.</p>
 </div>
 </section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="2" data-source-offset="-72"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1;"><span id="cb3-2"><a aria-label="2"></a>tanF <span class="op">=</span> (w) <span class="kw">=&gt;</span> w <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span> <span class="op">*</span> w <span class="op">+</span> <span class="dv">7</span></span>
 <span id="cb3-3"><a aria-label="3"></a>tanDf <span class="op">=</span> (w) <span class="kw">=&gt;</span> <span class="dv">2</span> <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span></span>
@@ -1351,464 +1349,10 @@ f'(\pi/4) &amp;= 4 - \sqrt{2}{\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclos
 </section><section class="slide level2"><div id="exr-miller-deriv-tangent-line-approx-compare" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 16 (Check the approximation)</strong></span> Compare the approximation in <a href="#/exr-miller-deriv-tangent-line-approx-approx" class="quarto-xref">Exercise&nbsp;15</a> with the exact <a href="./functions.html#def-value">value</a> of <span class="math inline">\(f(\pi/4 + 0.01)\)</span>.</p>
 </div>
-</section><section class="slide level2"><div id="sol-miller-deriv-tangent-line-approx-compare" class="proof solution">
+</section><section class="slide level2 smaller scrollable" id="references"><div id="sol-miller-deriv-tangent-line-approx-compare" class="proof solution">
 <p><span class="proof-title"><em>Solution 16</em>. </span>The exact <a href="./functions.html#def-value">value</a> is:</p>
 <p><span class="math display">\[f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{}} \approx 4.171543\]</span></p>
 <p>The approximation error is <span class="math inline">\(|4.171593 - 4.171543| \approx 0.00005\)</span>, on the order of <span class="math inline">\((0.01)^2 = 10^{-4}\)</span>.</p>
-</div>
-</section><section class="slide level2"><h3 data-number="1.6" id="sec-taylor-series">
-<span class="header-section-number">1.6</span> Taylor series</h3>
-<div id="def-taylor-polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Taylor polynomial)</strong></span> Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> of degree <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
-<p><span id="eq-taylor-poly-def"><span class="math display">\[
-\begin{aligned}
-P_n(x)
-&amp;= \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k \\
-&amp;= f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n
-\end{aligned}
-\tag{2}\]</span></span></p>
-</div>
-</section><section class="slide level2"><div id="exm-taylor-polynomial-exponential" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (Taylor series of the exponential function)</strong></span> For <span class="math inline">\(f(x) = e^x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, every derivative is</p>
-<p><span class="math display">\[
-\begin{aligned}
-f^{(k)}(0) &amp;= e^0 \\
-&amp;= 1.
-\end{aligned}
-\]</span></p>
-<p>The degree-<span class="math inline">\(n\)</span> Maclaurin polynomial is:</p>
-<p><span class="math display">\[
-\begin{aligned}
-P_n(x)
-&amp;= 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} \\
-&amp;= \sum_{k=0}^n \frac{x^k}{k!}
-\end{aligned}
-\]</span></p>
-<p>Because the remainder <span class="math inline">\(R_n(x) \to 0\)</span> as <span class="math inline">\(n \to \infty\)</span> for all <span class="math inline">\(x \in \mathbb{R}\)</span>, the Taylor series converges everywhere to <span class="math inline">\(e^x\)</span>:</p>
-<p><span class="math display">\[e^x = \sum_{k=0}^\infty \frac{x^k}{k!}\]</span></p>
-</div>
-</section><section class="slide level2"><div id="def-maclaurin-polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Maclaurin polynomial)</strong></span> When <span class="math inline">\(x_0 = 0\)</span>, the Taylor polynomial <span class="math inline">\(P_n(x)\)</span> (<a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;18</a>) is called the <strong>Maclaurin polynomial</strong>.</p>
-</div>
-</section><section class="slide level2"><div id="def-taylor-series" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Taylor series)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(x_0\)</span> be as in <a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;18</a>. When <span class="math inline">\(f\)</span> is infinitely differentiable and the series converges to <span class="math inline">\(f(x)\)</span> on an open interval containing <span class="math inline">\(x_0\)</span>, the infinite sum <span class="math inline">\(\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\)</span> is the <strong>Taylor series</strong> of <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span>.</p>
-</div>
-</section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Video</strong></p>
-</div>
-<div class="callout-content">
-<p>Chapter 11 of the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"><em>Essence of calculus</em></a> series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:</p>
-<ul>
-<li>
-<a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor series</a> shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations (<a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;18</a>).</li>
-</ul>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-poly-zero" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 17 (Taylor polynomial of a polynomial at the origin)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.16.</p>
-<p>Find the first five terms (up to degree 4) of the Taylor series for</p>
-<p><span class="math display">\[f(x) = x^8 + x^4 + 3\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-poly-zero" class="proof solution">
-<p><span class="proof-title"><em>Solution 17</em>. </span>Evaluate <span class="math inline">\(f\)</span> and its first four derivatives at <span class="math inline">\(x = 0\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
-f(x) &amp;= x^8 + x^4 + 3 &amp;\implies f(0) &amp;= 3
-\\
-f'(x) &amp;= 8x^7 + 4x^3 &amp;\implies f'(0) &amp;= 0
-\\
-f''(x) &amp;= 56x^6 + 12x^2 &amp;\implies f''(0) &amp;= 0
-\\
-f'''(x) &amp;= 336x^5 + 24x &amp;\implies f'''(0) &amp;= 0
-\\
-f^{(4)}(x) &amp;= 1680x^4 + 24 &amp;\implies f^{(4)}(0) &amp;= 24
-\end{aligned}\]</span></p>
-<p>By <a href="#/eq-taylor-poly-def" class="quarto-xref">Equation&nbsp;2</a>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-P_4(x)
-&amp;= 3 + 0x + \frac{0}{2!}x^2 + \frac{0}{3!}x^3 + \frac{24}{4!}x^4 \\
-&amp;= 3 + x^4
-\end{aligned}
-\]</span></p>
-<p>Because <span class="math inline">\(f\)</span> is already a polynomial centered at <span class="math inline">\(0\)</span>, its Taylor polynomial of degree 4 simply collects its terms of degree at most 4.</p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-poly-nonzero" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18 (Taylor expansion of a polynomial at a nonzero point)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.17.</p>
-<p>Find the first three terms (up to degree 2) of the Taylor series for</p>
-<p><span class="math display">\[f(x) = x^8 + x^4 + 3\]</span></p>
-<p>at <span class="math inline">\(x_0 = 1\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-poly-nonzero" class="proof solution">
-<p><span class="proof-title"><em>Solution 18</em>. </span>Evaluate <span class="math inline">\(f\)</span> and its first two derivatives at <span class="math inline">\(x_0 = 1\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
-f(1) &amp;= 1^8 + 1^4 + 3 \\
-&amp;= 5
-\\
-f'(1) &amp;= 8(1)^7 + 4(1)^3 \\
-&amp;= 12
-\\
-f''(1) &amp;= 56(1)^6 + 12(1)^2 \\
-&amp;= 68
-\end{aligned}\]</span></p>
-<p>The degree-2 Taylor polynomial is:</p>
-<p><span class="math display">\[
-\begin{aligned}
-P_2(x)
-&amp;= f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 \\
-&amp;= 5 + 12(x - 1) + 34(x - 1)^2
-\end{aligned}
-\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exm-taylor-polynomial-cosine" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (Taylor series of the cosine function)</strong></span> For <span class="math inline">\(f(x) = \cos x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives follow a repeating cycle of length 4:</p>
-<p><span class="math display">\[\begin{aligned}
-f(0) &amp;= \cos(0) \\
-&amp;= 1, \\
-f'(0) &amp;= -\sin(0) \\
-&amp;= 0, \\
-f''(0) &amp;= -\cos(0) \\
-&amp;= -1, \\
-f'''(0) &amp;= \sin(0) \\
-&amp;= 0,
-\end{aligned}\]</span></p>
-<p>and in general <span class="math inline">\(f^{(2k)}(0) = (-1)^k\)</span> and <span class="math inline">\(f^{(2k+1)}(0) = 0\)</span> for all <span class="math inline">\(k \ge 0\)</span>. The Taylor series (Maclaurin series) converges everywhere to <span class="math inline">\(\cos x\)</span>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\cos x
-&amp;= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots \\
-&amp;= \sum_{k=0}^\infty \frac{(-1)^k}{(2k)!}x^{2k}
-\end{aligned}
-\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exm-taylor-polynomial-sine" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (Taylor series of the sine function)</strong></span> For <span class="math inline">\(f(x) = \sin x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives evaluate at <span class="math inline">\(0\)</span> to <span class="math inline">\(f^{(2k)}(0) = 0\)</span> and <span class="math inline">\(f^{(2k+1)}(0) = (-1)^k\)</span> for all <span class="math inline">\(k \ge 0\)</span>. The Taylor series converges everywhere to <span class="math inline">\(\sin x\)</span>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\sin x
-&amp;= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots \\
-&amp;= \sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}x^{2k+1}
-\end{aligned}
-\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-cos-scaled" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 19 (Taylor expansion of a scaled cosine)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.18.</p>
-<p>Find the terms up to degree 4 in the Taylor series for</p>
-<p><span class="math display">\[f(x) = \cos(5x)\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-cos-scaled" class="proof solution">
-<p><span class="proof-title"><em>Solution 19</em>. </span>Recall the standard Maclaurin series for cosine:</p>
-<p><span class="math display">\[\cos u = 1 - \frac{u^2}{2!} + \frac{u^4}{4!} - \dots\]</span></p>
-<p>Substitute <span class="math inline">\(u = 5x\)</span>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\cos(5x)
-&amp;= 1 - \frac{(5x)^2}{2!} + \frac{(5x)^4}{4!} - \dots \\
-&amp;= 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 - \dots
-\end{aligned}
-\]</span></p>
-<p><em>Remark:</em> Substituting into known Taylor expansions avoids computing high-order derivatives by hand.</p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-cos-cubed" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 20 (Taylor series of a power of a function)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.19.</p>
-<p>Find the terms up to degree 4 in the Taylor series for</p>
-<p><span class="math display">\[f(x) = \cos^3(5x)\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-cos-cubed" class="proof solution">
-<p><span class="proof-title"><em>Solution 20</em>. </span>From <a href="#/exr-miller-taylor-cos-scaled" class="quarto-xref">Exercise&nbsp;19</a>, the expansion of <span class="math inline">\(\cos(5x)\)</span> up to order <span class="math inline">\(x^4\)</span> is:</p>
-<p><span class="math display">\[\cos(5x) = 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 + O(x^6)\]</span></p>
-<p>Cube this expansion using <span class="math inline">\((1 - y)^3 = 1 - 3y + 3y^2 - y^3\)</span> with <span class="math inline">\(y = \frac{25}{2}x^2 - \frac{625}{24}x^4\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
-\cos^3(5x) &amp;= 1 - 3\mathopen{}\left(\frac{25}{2}x^2 - \frac{625}{24}x^4\right)\mathclose{} + 3\mathopen{}\left(\frac{25}{2}x^2\right)\mathclose{}^2 + O(x^6)
-\\
-&amp;= 1 - \frac{75}{2}x^2 + \frac{625}{8}x^4 + \frac{1875}{4}x^4 + O(x^6)
-\\
-&amp;= 1 - \frac{75}{2}x^2 + \frac{4375}{8}x^4 + O(x^6)
-\end{aligned}\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-exp-base" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 21 (Linear Taylor polynomial of the exponential)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.20.</p>
-<p>Find the first two terms (degree 1) of the Taylor series for</p>
-<p><span class="math display">\[f(x) = e^x\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-exp-base" class="proof solution">
-<p><span class="proof-title"><em>Solution 21</em>. </span>Since</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(0) &amp;= e^0 \\
-&amp;= 1
-\end{aligned}
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-\begin{aligned}
-f'(0) &amp;= e^0 \\
-&amp;= 1:
-\end{aligned}
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-P_1(x)
-&amp;= f(0) + f'(0)x \\
-&amp;= 1 + x
-\end{aligned}
-\]</span></p>
-<p>The full Taylor series is</p>
-<p><span class="math display">\[
-\begin{aligned}
-e^x &amp;= \sum_{n=0}^\infty \frac{x^n}{n!} \\
-&amp;= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \dots.
-\end{aligned}
-\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-exp-power" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 22 (Taylor series of a composite exponential)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.21.</p>
-<p>Find the first six terms (up to degree 5) of the Taylor series for</p>
-<p><span class="math display">\[f(x) = {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-exp-power" class="proof solution">
-<p><span class="proof-title"><em>Solution 22</em>. </span>Substitute <span class="math inline">\(u = x^8\)</span> into <span class="math inline">\(e^u = 1 + u + \frac{u^2}{2!} + \dots\)</span>:</p>
-<p><span class="math display">\[{\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}} = 1 + x^8 + \frac{x^{16}}{2} + \dots\]</span></p>
-<p>Because the lowest-order variable term is <span class="math inline">\(x^8\)</span>, all coefficients for powers <span class="math inline">\(x^1, x^2, x^3, x^4, x^5\)</span> are zero:</p>
-<p><span class="math display">\[
-\begin{aligned}
-P_5(x)
-&amp;= 1 + 0x + 0x^2 + 0x^3 + 0x^4 + 0x^5 \\
-&amp;= 1
-\end{aligned}
-\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-normal-density" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 23 (Taylor expansion of the normal density)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.22.</p>
-<p>Find the terms up to degree 3 of the Taylor series for the standard normal density</p>
-<p><span class="math display">\[\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-normal-density" class="proof solution">
-<p><span class="proof-title"><em>Solution 23</em>. </span>Using <span class="math inline">\(e^u = 1 + u + O(u^2)\)</span> with <span class="math inline">\(u = -x^2/2\)</span>:</p>
-<p><span class="math display">\[{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}} = 1 - \frac{x^2}{2} + O(x^4)\]</span></p>
-<p>Multiplying by the normalization constant <span class="math inline">\(1/\sqrt{2\pi}\)</span>:</p>
-<p><span class="math display">\[\phi(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}} + O(x^4)\]</span></p>
-<p>Up to degree 3, the odd powers vanish by symmetry, so:</p>
-<p><span class="math display">\[P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\]</span></p>
-</div>
-</section><section class="slide level2"><div id="thm-taylor-normal-density" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 13 (Maclaurin polynomial of the standard normal density)</strong></span> The Maclaurin polynomial (<a href="#/def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;19</a>) of degree 3 of the standard normal density <span class="math inline">\(\phi(x) = \frac{1}{\sqrt{2\pi}}{\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\)</span> is</p>
-<p><span class="math display">\[P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\]</span></p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-taylor-normal-density" class="quarto-xref">Exercise&nbsp;23</a>, worked in <a href="#/sol-miller-taylor-normal-density" class="quarto-xref">Solution&nbsp;23</a>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-sqrt" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 24 (Taylor expansion of the square root)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.23.</p>
-<p>Find the first three terms (up to degree 2) of the Taylor series for</p>
-<p><span class="math display">\[f(x) = \sqrt{x}\]</span></p>
-<p>at <span class="math inline">\(x_0 = 1/3\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-sqrt" class="proof solution">
-<p><span class="proof-title"><em>Solution 24</em>. </span>Compute the values at <span class="math inline">\(x_0 = 1/3\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
-f(1/3) &amp;= \mathopen{}\left(\frac{1}{3}\right)\mathclose{}^{1/2}
-\\
-&amp;= \frac{1}{\sqrt{3}}
-\\
-&amp;= \frac{\sqrt{3}}{3}
-\\
-f'(x) &amp;= \frac{1}{2}x^{-1/2}
-\\
-\implies f'(1/3) &amp;= \frac{1}{2}\sqrt{3}
-\\
-&amp;= \frac{\sqrt{3}}{2}
-\\
-f''(x) &amp;= -\frac{1}{4}x^{-3/2}
-\\
-\implies f''(1/3) &amp;= -\frac{1}{4} \cdot 3\sqrt{3}
-\\
-&amp;= -\frac{3\sqrt{3}}{4}
-\end{aligned}\]</span></p>
-<p>The degree-2 Taylor polynomial is:</p>
-<p><span class="math display">\[P_2(x) = \frac{\sqrt{3}}{3} + \frac{\sqrt{3}}{2}\mathopen{}\left(x - \frac{1}{3}\right)\mathclose{} - \frac{3\sqrt{3}}{8}\mathopen{}\left(x - \frac{1}{3}\right)\mathclose{}^2\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-cube-root" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 25 (Taylor expansion of a fractional power)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.24.</p>
-<p>Find the first three terms of the Taylor series for</p>
-<p><span class="math display">\[f(x) = (1 + x)^{1/3}\]</span></p>
-<p>at <span class="math inline">\(x_0 = 1/2\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-cube-root" class="proof solution">
-<p><span class="proof-title"><em>Solution 25</em>. </span>At <span class="math inline">\(x_0 = 1/2\)</span>, <span class="math inline">\(1 + x_0 = 3/2\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
-f(1/2) &amp;= \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3}
-\\
-f'(x) &amp;= \frac{1}{3}(1 + x)^{-2/3}
-\\
-\implies f'(1/2) &amp;= \frac{1}{3}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-2/3}
-\\
-&amp;= \frac{1}{3}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{2/3}
-\\
-f''(x) &amp;= -\frac{2}{9}(1 + x)^{-5/3}
-\\
-\implies f''(1/2) &amp;= -\frac{2}{9}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-5/3}
-\\
-&amp;= -\frac{2}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3}
-\end{aligned}\]</span></p>
-<p>Dividing <span class="math inline">\(f''(1/2)\)</span> by <span class="math inline">\(2!\)</span> gives <span class="math inline">\(-\frac{1}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3}\)</span>. The Taylor polynomial is:</p>
-<p><span class="math display">\[P_2(x) = \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3} + \frac{1}{3}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{2/3}\mathopen{}\left(x - \frac{1}{2}\right)\mathclose{} - \frac{1}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3}\mathopen{}\left(x - \frac{1}{2}\right)\mathclose{}^2\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-x-log-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 26 (Taylor expansion of <span class="math inline">\(x \log x\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.25.</p>
-<p>Find the first three terms (up to degree 2) of the Taylor series for</p>
-<p><span class="math display">\[f(x) = x\log x\]</span></p>
-<p>at <span class="math inline">\(x_0 = 1\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-x-log-x" class="proof solution">
-<p><span class="proof-title"><em>Solution 26</em>. </span>Evaluate derivatives at <span class="math inline">\(x_0 = 1\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
-f(1) &amp;= 1 \log 1
-\\
-&amp;= 0
-\\
-f'(x) &amp;= \log x + 1
-\\
-\implies f'(1) &amp;= 0 + 1
-\\
-&amp;= 1
-\\
-f''(x) &amp;= \frac{1}{x} \implies f''(1) = 1
-\end{aligned}\]</span></p>
-<p>Therefore:</p>
-<p><span class="math display">\[
-\begin{aligned}
-P_2(x)
-&amp;= f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 \\
-&amp;= (x - 1) + \frac{1}{2}(x - 1)^2
-\end{aligned}
-\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-log-one-plus-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 27 (Maclaurin series of <span class="math inline">\(\log(1 + x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.26.</p>
-<p>Find the first three terms of the Taylor series for</p>
-<p><span class="math display">\[f(x) = \log(1 + x)\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-log-one-plus-x" class="proof solution">
-<p><span class="proof-title"><em>Solution 27</em>. </span>Differentiating repeatedly at <span class="math inline">\(x_0 = 0\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
-f(0) &amp;= \log 1 \\
-&amp;= 0
-\\
-f'(x) &amp;= (1 + x)^{-1} \implies f'(0) = 1
-\\
-f''(x) &amp;= -(1 + x)^{-2} \implies f''(0) = -1
-\\
-f'''(x) &amp;= 2(1 + x)^{-3} \implies f'''(0) = 2
-\end{aligned}\]</span></p>
-<p>The Taylor polynomial of degree 3 is:</p>
-<p><span class="math display">\[P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}\]</span></p>
-</div>
-</section><section class="slide level2"><div id="thm-taylor-log-one-plus-x" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (Maclaurin polynomial of <span class="math inline">\(\log(1 + x)\)</span>)</strong></span> The Maclaurin polynomial (<a href="#/def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;19</a>) of degree 3 of <span class="math inline">\(f(x) = \log(1 + x)\)</span> is</p>
-<p><span class="math display">\[P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}\]</span></p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-taylor-log-one-plus-x" class="quarto-xref">Exercise&nbsp;27</a>, worked in <a href="#/sol-miller-taylor-log-one-plus-x" class="quarto-xref">Solution&nbsp;27</a>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-log-one-minus-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 28 (Maclaurin series of <span class="math inline">\(\log(1 - x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.27.</p>
-<p>Find the terms up to degree 3 of the Taylor series for</p>
-<p><span class="math display">\[f(x) = \log(1 - x)\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-log-one-minus-x" class="proof solution">
-<p><span class="proof-title"><em>Solution 28</em>. </span>Substitute <span class="math inline">\(u = -x\)</span> into the expansion for <span class="math inline">\(\log(1 + u)\)</span> from <a href="#/thm-taylor-log-one-plus-x" class="quarto-xref">Theorem&nbsp;14</a>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\log(1 - x)
-&amp;= (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots \\
-&amp;= -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots
-\end{aligned}
-\]</span></p>
-</div>
-</section><section class="slide level2"><div id="thm-taylor-log-one-minus-x" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 15 (Maclaurin polynomial of <span class="math inline">\(\log(1 - x)\)</span>)</strong></span> The Maclaurin polynomial (<a href="#/def-maclaurin-polynomial" class="quarto-xref">Definition&nbsp;19</a>) of degree 3 of <span class="math inline">\(f(x) = \log(1 - x)\)</span> is</p>
-<p><span class="math display">\[P_3(x) = -x - \frac{x^2}{2} - \frac{x^3}{3}\]</span></p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-taylor-log-one-minus-x" class="quarto-xref">Exercise&nbsp;28</a>, worked in <a href="#/sol-miller-taylor-log-one-minus-x" class="quarto-xref">Solution&nbsp;28</a>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-log-product-exp" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 29 (Taylor series of <span class="math inline">\(\log((1 - x)e^x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.28.</p>
-<p>Find the first two non-zero terms of the Taylor series for</p>
-<p><span class="math display">\[f(x) = \log((1 - x)e^x)\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-log-product-exp" class="proof solution">
-<p><span class="proof-title"><em>Solution 29</em>. </span>Expand using logarithm properties:</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(x)
-&amp;= \log(1 - x) + \log(e^x) \\
-&amp;= \log(1 - x) + x
-\end{aligned}
-\]</span></p>
-<p>Substitute the series for <span class="math inline">\(\log(1 - x)\)</span> from <a href="#/thm-taylor-log-one-minus-x" class="quarto-xref">Theorem&nbsp;15</a>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(x)
-&amp;= \mathopen{}\left(-x - \frac{x^2}{2} - \frac{x^3}{3} - \dots\right)\mathclose{} + x \\
-&amp;= -\frac{x^2}{2} - \frac{x^3}{3} - \dots
-\end{aligned}
-\]</span></p>
-<p>The constant and linear terms vanish (<span class="math inline">\(f(0) = 0\)</span>, <span class="math inline">\(f'(0) = 0\)</span>). The first two non-zero terms are:</p>
-<p><span class="math display">\[-\frac{x^2}{2} - \frac{x^3}{3}\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exr-miller-taylor-product-cos-log" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 30 (Taylor series of a product of known expansions)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.29.</p>
-<p>Find the terms up to degree 2 of the Taylor series for</p>
-<p><span class="math display">\[f(x) = \cos(x)\log(1 + x)\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-product-cos-log" class="proof solution">
-<p><span class="proof-title"><em>Solution 30</em>. </span>Multiply the known Maclaurin expansions:</p>
-<p><span class="math display">\[\begin{aligned}
-\cos x &amp;= 1 - \frac{x^2}{2} + O(x^4)
-\\
-\log(1 + x) &amp;= x - \frac{x^2}{2} + O(x^3)
-\end{aligned}\]</span></p>
-<p>Multiplying and dropping terms of order <span class="math inline">\(x^3\)</span> and higher:</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(x)
-&amp;= \mathopen{}\left(1 - \frac{x^2}{2} + \dots\right)\mathclose{}\mathopen{}\left(x - \frac{x^2}{2} + \dots\right)\mathclose{} \\
-&amp;= x - \frac{x^2}{2} + O(x^3)
-\end{aligned}
-\]</span></p>
-</div>
-</section><section class="slide level2 smaller scrollable" id="references"><div id="exr-miller-taylor-log-scaled" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 31 (Taylor series of <span class="math inline">\(\log(1 + 2x)\)</span>)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.30.</p>
-<p>Find the first two non-zero terms of the Taylor series for</p>
-<p><span class="math display">\[f(x) = \log(1 + 2x)\]</span></p>
-<p>at <span class="math inline">\(x_0 = 0\)</span>.</p>
-</div>
-<div id="sol-miller-taylor-log-scaled" class="proof solution">
-<p><span class="proof-title"><em>Solution 31</em>. </span>Substitute <span class="math inline">\(u = 2x\)</span> into the Maclaurin series <span class="math inline">\(\log(1 + u) = u - \frac{u^2}{2} + \dots\)</span>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\log(1 + 2x)
-&amp;= (2x) - \frac{(2x)^2}{2} + \dots \\
-&amp;= 2x - 2x^2 + \dots
-\end{aligned}
-\]</span></p>
 </div>
 
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 # 1 Integration
 
@@ -145,7 +145,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 3 (Differentiable on an interval)** A function $f$ is **differentiable on** an interval if it is differentiable ([Definition 6 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-differentiable)) at every point of the interval other than its [endpoints](sets.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 12 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
+> **Definition 3 (Differentiable on an interval)** A function $f$ is **differentiable on** an interval if it is differentiable ([Definition 6 in Derivatives](calculus-derivatives.llms.md#def-differentiable)) at every point of the interval other than its [endpoints](sets.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 12 in Derivatives](calculus-derivatives.llms.md#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
 >
 > [\[2, Sec. 2.1\]](#ref-larsonCalc11e), p. 100
 
@@ -153,8 +153,8 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Example 3 (Differentiable on one interval but not another)**  
 >
-> - $f(x) = x^2$ is differentiable on $[0, 1]$: the computation of [Example 4 in Derivatives and Taylor Series](calculus-derivatives.llms.md#exm-differentiable) with $3$ replaced by any $c$ gives $\tfrac{f(c + h) - f(c)}{h} = 2c + h$, which tends to $2c$, including the one-sided limits at the endpoints $0$ and $1$.
-> - $g(x) = \sqrt[3]{x}$ is differentiable on $[1, 2]$, but not on $[-1, 1]$: the point $0$ is in $[-1, 1]$ and is not an endpoint, and [Example 4 in Derivatives and Taylor Series](calculus-derivatives.llms.md#exm-differentiable) shows $g$ is not differentiable there.
+> - $f(x) = x^2$ is differentiable on $[0, 1]$: the computation of [Example 4 in Derivatives](calculus-derivatives.llms.md#exm-differentiable) with $3$ replaced by any $c$ gives $\tfrac{f(c + h) - f(c)}{h} = 2c + h$, which tends to $2c$, including the one-sided limits at the endpoints $0$ and $1$.
+> - $g(x) = \sqrt[3]{x}$ is differentiable on $[1, 2]$, but not on $[-1, 1]$: the point $0$ is in $[-1, 1]$ and is not an endpoint, and [Example 4 in Derivatives](calculus-derivatives.llms.md#exm-differentiable) shows $g$ is not differentiable there.
 
 > **NOTE:**
 >
@@ -198,13 +198,13 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 6 (Jump discontinuity)** A function $f$ has a **jump discontinuity** at $c$ [\[4\]](#ref-wikipedia_classification_of_discontinuities) if both one-sided limits ([Definition 4 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-limit)) $\lim_{x \to c^-} f(x)$ and $\lim_{x \to c^+} f(x)$ exist but are not equal. Then $\lim_{x \to c} f(x)$ does not exist, so $f$ is discontinuous at $c$ ([Definition 5](#def-discontinuous)).
+> **Definition 6 (Jump discontinuity)** A function $f$ has a **jump discontinuity** at $c$ [\[4\]](#ref-wikipedia_classification_of_discontinuities) if both one-sided limits ([Definition 4 in Derivatives](calculus-derivatives.llms.md#def-one-sided-limit)) $\lim_{x \to c^-} f(x)$ and $\lim_{x \to c^+} f(x)$ exist but are not equal. Then $\lim_{x \to c} f(x)$ does not exist, so $f$ is discontinuous at $c$ ([Definition 5](#def-discontinuous)).
 
 > **NOTE:**
 >
 > **Example 5 (A jump discontinuity, and a discontinuity that is not a jump)**  
 >
-> - The step function $H$ of [Example 2 in Derivatives and Taylor Series](calculus-derivatives.llms.md#exm-one-sided-limit) has a jump discontinuity at $0$: $\lim_{x \to 0^-} H(x) = 0$ and $\lim_{x \to 0^+} H(x) = 1$ both exist, and $0 \ne 1$. The size of the jump is $1 - 0 = 1$.
+> - The step function $H$ of [Example 2 in Derivatives](calculus-derivatives.llms.md#exm-one-sided-limit) has a jump discontinuity at $0$: $\lim_{x \to 0^-} H(x) = 0$ and $\lim_{x \to 0^+} H(x) = 1$ both exist, and $0 \ne 1$. The size of the jump is $1 - 0 = 1$.
 > - $g(x) = \tfrac{x^2 - 1}{x - 1}$ of [Example 4](#exm-continuous) is discontinuous at $1$, because $g(1)$ is not defined, but it does not have a jump discontinuity there: for $x \ne 1$, $g(x) = x + 1$, so both one-sided limits at $1$ equal $1 + 1 = 2$.
 
 > **NOTE:**
@@ -457,7 +457,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 > &= \mathopen{}\left|0\right|\mathclose{},
 > \end{aligned}$$
 >
-> but it is not differentiable at $x = 0$: its left-hand derivative there is $-1$ and its right-hand derivative is $+1$ ([Example 6 in Derivatives and Taylor Series](calculus-derivatives.llms.md#exm-one-sided-derivative)).
+> but it is not differentiable at $x = 0$: its left-hand derivative there is $-1$ and its right-hand derivative is $+1$ ([Example 6 in Derivatives](calculus-derivatives.llms.md#exm-one-sided-derivative)).
 >
 > This [counterexample](proof-writing.llms.md#def-counterexample) shows that the [converse](proof-writing.llms.md#def-converse) of [Theorem 2](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 2](#fig-abs-value).
 >

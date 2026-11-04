@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 > **NOTE:**
 >
@@ -666,6 +666,93 @@ Last modified: 2026-11-03 14:53:06 (PST)
 > [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png "Figure 5: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
 >
 > Figure 5: [Level curves](vector-calculus.llms.md#def-level-set) of the third [function](functions.llms.md#def-function) in [Example 11](#exm-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the function is [linear](algebra-exponentials.llms.md#def-linear-function), so the function is [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> ch_x1_sf <- seq(-1, 1, length.out = 101)
+> ch_x2_sf <- seq(-3, 3, length.out = 101)
+> ch_grid_sf <- tidyr::expand_grid(x1 = ch_x1_sf, x2 = ch_x2_sf)
+> ch_u_sf <- 2 * ch_grid_sf$x1 + ch_grid_sf$x2
+> ch_value_sf <- exp(ch_u_sf) - ch_grid_sf$x1
+> ch_n2_sf <- length(ch_x2_sf)
+> ch_z_sf <- matrix(ch_value_sf, nrow = ch_n2_sf)
+> ch_l_x1_sf <- seq(-1, 1, length.out = 21)
+> ch_line_sf <- tibble::tibble(x1 = ch_l_x1_sf)
+> ch_line_sf$x2 <- -2 * ch_line_sf$x1
+> ch_lu_sf <- 2 * ch_line_sf$x1 + ch_line_sf$x2
+> ch_line_sf$z <- exp(ch_lu_sf) - ch_line_sf$x1
+> ch_dash_sf <- list(color = "#D55E00", dash = "dash", width = 5)
+> ch_stops_sf <- c(0, 1)
+> ch_cols_sf <- c("#CCE0F0", "#0072B2")
+> ch_scale_sf <- list(ch_stops_sf, ch_cols_sf)
+> ch_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> ch_camera_sf <- list(eye = ch_eye_sf)
+> ch_xaxis_sf <- list(title = "x1")
+> ch_yaxis_sf <- list(title = "x2")
+> ch_zaxis_sf <- list(title = "f(x)")
+> ch_scene_sf <- list(
+>   xaxis = ch_xaxis_sf,
+>   yaxis = ch_yaxis_sf,
+>   zaxis = ch_zaxis_sf,
+>   camera = ch_camera_sf
+> )
+> ch_legend_sf <- list(orientation = "h")
+> plotly::plot_ly() |>
+>   plotly::add_surface(
+>     x = ch_x1_sf,
+>     y = ch_x2_sf,
+>     z = ch_z_sf,
+>     colorscale = ch_scale_sf,
+>     showscale = FALSE,
+>     opacity = 0.8
+>   ) |>
+>   plotly::add_trace(
+>     data = ch_line_sf,
+>     x = ~x1,
+>     y = ~x2,
+>     z = ~z,
+>     type = "scatter3d",
+>     mode = "lines",
+>     line = ch_dash_sf,
+>     name = "f is linear"
+>   ) |>
+>   plotly::layout(scene = ch_scene_sf, legend = ch_legend_sf)
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> ch_x1_3d, ch_x2_3d = np.meshgrid(np.linspace(-1, 1, 101),
+>                                  np.linspace(-3, 3, 101))
+> ch_z_3d = np.exp(2 * ch_x1_3d + ch_x2_3d) - ch_x1_3d
+> ch_line_x1_3d = np.linspace(-1, 1, 21)
+> ch_line_x2_3d = -2 * ch_line_x1_3d
+> ch_line_z_3d = np.exp(2 * ch_line_x1_3d + ch_line_x2_3d) - ch_line_x1_3d
+> fig = plt.figure(figsize=(6, 4.5))
+> ax = fig.add_subplot(projection="3d")
+> ax.plot_surface(ch_x1_3d, ch_x2_3d, ch_z_3d, color="#0072B2", alpha=0.6)
+> ax.plot(ch_line_x1_3d, ch_line_x2_3d, ch_line_z_3d, "--", color="#D55E00",
+>         label="f is linear")
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> ax.set_zlabel("f(x)")
+> ax.legend(loc="upper right")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The surface is a trough that rises steeply toward the upper right, where 2 x1 plus x2 is large, and is nearly flat on the lower left. A dashed vermilion straight line along the direction (1, -2) through the origin lies on the surface, because f is linear there.](optimization-convexity_files/figure-html/convex-hessian-3d-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-3d-python-1.png "Figure 6: The graph of the third function in Example 11, the surface whose level curves are in Figure 5. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the surface is a straight line, so the function is linear there. The function is therefore convex but not strictly convex.")
+>
+> ## Python
+>
+> Figure 6: The [graph](functions.llms.md#def-graph) of the third [function](functions.llms.md#def-function) in [Example 11](#exm-convex-hessian), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 5](#fig-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the surface is a straight line, so the function is [linear](algebra-exponentials.llms.md#def-linear-function) there. The function is therefore [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
 
 > **NOTE:**
 >

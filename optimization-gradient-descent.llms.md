@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:53:06 (PST)
+Last modified: 2026-11-03 16:50:19 (PST)
 
 > **NOTE:**
 >
@@ -256,6 +256,105 @@ Last modified: 2026-11-03 14:53:06 (PST)
 
 > **NOTE:**
 >
+> Show code
+>
+> ``` downlit
+> gz_x1_sf <- seq(-0.5, 3.5, length.out = 101)
+> gz_x2_sf <- seq(-1, 1.2, length.out = 101)
+> gz_grid_sf <- tidyr::expand_grid(x1 = gz_x1_sf, x2 = gz_x2_sf)
+> gz_value_sf <- 0.5 * (gz_grid_sf$x1^2 + 3 * gz_grid_sf$x2^2)
+> gz_n2_sf <- length(gz_x2_sf)
+> gz_z_sf <- matrix(gz_value_sf, nrow = gz_n2_sf)
+> gz_steps_sf <- 0:3
+> gz_path_x1_sf <- 3 * 0.5^gz_steps_sf
+> gz_path_x2_sf <- c(1, -0.5, 0.25, -0.125)
+> gz_path_sf <- tibble::tibble(x1 = gz_path_x1_sf, x2 = gz_path_x2_sf)
+> gz_path_sf$z <- 0.5 * (gz_path_sf$x1^2 + 3 * gz_path_sf$x2^2)
+> gz_origin_sf <- tibble::tibble(x1 = 0, x2 = 0, z = 0)
+> gz_line_sf <- list(color = "#0072B2", width = 5)
+> gz_dot_sf <- list(color = "#0072B2", size = 4)
+> gz_mark_sf <- list(color = "#D55E00", size = 6, symbol = "diamond")
+> gz_stops_sf <- c(0, 1)
+> gz_cols_sf <- c("#E5E5E5", "#808080")
+> gz_scale_sf <- list(gz_stops_sf, gz_cols_sf)
+> gz_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> gz_camera_sf <- list(eye = gz_eye_sf)
+> gz_xaxis_sf <- list(title = "x1")
+> gz_yaxis_sf <- list(title = "x2")
+> gz_zaxis_sf <- list(title = "f(x)")
+> gz_scene_sf <- list(
+>   xaxis = gz_xaxis_sf,
+>   yaxis = gz_yaxis_sf,
+>   zaxis = gz_zaxis_sf,
+>   camera = gz_camera_sf
+> )
+> gz_legend_sf <- list(orientation = "h")
+> plotly::plot_ly() |>
+>   plotly::add_surface(
+>     x = gz_x1_sf,
+>     y = gz_x2_sf,
+>     z = gz_z_sf,
+>     colorscale = gz_scale_sf,
+>     showscale = FALSE,
+>     opacity = 0.7
+>   ) |>
+>   plotly::add_trace(
+>     data = gz_path_sf,
+>     x = ~x1,
+>     y = ~x2,
+>     z = ~z,
+>     type = "scatter3d",
+>     mode = "lines+markers",
+>     line = gz_line_sf,
+>     marker = gz_dot_sf,
+>     name = "iterates"
+>   ) |>
+>   plotly::add_markers(
+>     data = gz_origin_sf,
+>     x = ~x1,
+>     y = ~x2,
+>     z = ~z,
+>     marker = gz_mark_sf,
+>     name = "minimizer"
+>   ) |>
+>   plotly::layout(scene = gz_scene_sf, legend = gz_legend_sf)
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> gz_x1_3d, gz_x2_3d = np.meshgrid(np.linspace(-0.5, 3.5, 101),
+>                                  np.linspace(-1, 1.2, 101))
+> gz_f_3d = 0.5 * (gz_x1_3d**2 + 3 * gz_x2_3d**2)
+> gz_path_x1_3d = 3 * 0.5 ** np.arange(4)
+> gz_path_x2_3d = np.array([1, -0.5, 0.25, -0.125])
+> gz_path_f_3d = 0.5 * (gz_path_x1_3d**2 + 3 * gz_path_x2_3d**2)
+> fig = plt.figure(figsize=(6, 4.5))
+> ax = fig.add_subplot(projection="3d")
+> ax.plot_surface(gz_x1_3d, gz_x2_3d, gz_f_3d, color="grey", alpha=0.4)
+> ax.plot(gz_path_x1_3d, gz_path_x2_3d, gz_path_f_3d, "o-", color="#0072B2",
+>         label="iterates")
+> ax.scatter([0], [0], [0], marker="D", color="#D55E00", s=50, label="minimizer")
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> ax.set_zlabel("f(x)")
+> ax.legend(loc="upper right")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Surface plot of f of x equal to one half of x1 squared plus 3 x2 squared over x1 from -0.5 to 3.5 and x2 from -1 to 1.2, a bowl that is steeper along the x2 axis than along the x1 axis. A blue path of line segments with circles lies on the bowl. It starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), alternating between the two sides of the valley floor and descending toward the origin, which is marked by a vermilion diamond at the bottom of the bowl.](optimization-gradient-descent_files/figure-html/gd-zigzag-3d-python-1.png)](optimization-gradient-descent_files/figure-html/gd-zigzag-3d-python-1.png "Figure 2: The graph of f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2), the surface whose level curves are in Figure 1, with the same four iterates of gradient descent lifted onto it. The surface is steeper along the x_2 axis than along the x_1 axis, so each step overshoots the bottom of the valley and the path zigzags down toward the minimizer \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (diamond).")
+>
+> ## Python
+>
+> Figure 2: The [graph](functions.llms.md#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 1](#fig-gd-zigzag), with the same four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) lifted onto it. The surface is steeper along the $x_2$ axis than along the $x_1$ axis, so each step overshoots the bottom of the valley and the path zigzags down toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond).
+
+> **NOTE:**
+>
 > **Definition 6 (Gradient flow)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative). A **gradient flow** of $f$ is a [differentiable](calculus-derivatives.llms.md#def-differentiable) curve $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: [0, \infty) \to \mathbb{R}^p$ that satisfies
 >
 > $$\frac{d \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}(t)}{d t} = -\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}(t)).$$
@@ -473,13 +572,135 @@ Last modified: 2026-11-03 14:53:06 (PST)
 >
 > ## R
 >
-> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png "Figure 2: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
+> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png "Figure 3: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
 >
 > ## Python
 >
-> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png "Figure 2: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
+> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png "Figure 3: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
 >
-> Figure 2: [Level curves](vector-calculus.llms.md#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
+> Figure 3: [Level curves](vector-calculus.llms.md#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
+
+> **NOTE:**
+>
+> Show code
+>
+> ``` downlit
+> rf_x1_sf <- seq(-2, 2, length.out = 101)
+> rf_x2_sf <- seq(-1, 3, length.out = 101)
+> rf_grid_sf <- tidyr::expand_grid(x1 = rf_x1_sf, x2 = rf_x2_sf)
+> rf_value_sf <- 100 * (rf_grid_sf$x2 - rf_grid_sf$x1^2)^2
+> rf_value_sf <- rf_value_sf + (1 - rf_grid_sf$x1)^2
+> rf_n2_sf <- length(rf_x2_sf)
+> rf_z_sf <- matrix(rf_value_sf, nrow = rf_n2_sf)
+> rf_p_name_sf <- c("minimizer", "origin", "start")
+> rf_p_x1_sf <- c(1, 0, -1.2)
+> rf_p_x2_sf <- c(1, 0, 1)
+> rf_p_color_sf <- c("#0072B2", "#009E73", "#D55E00")
+> rf_p_symbol_sf <- c("circle", "square", "diamond")
+> rf_pts_sf <- tibble::tibble(
+>   name = rf_p_name_sf,
+>   x1 = rf_p_x1_sf,
+>   x2 = rf_p_x2_sf,
+>   color = rf_p_color_sf,
+>   symbol = rf_p_symbol_sf
+> )
+> rf_pz_sf <- 100 * (rf_pts_sf$x2 - rf_pts_sf$x1^2)^2
+> rf_pts_sf$z <- rf_pz_sf + (1 - rf_pts_sf$x1)^2
+> rf_marker_sf <- list(color = ~color, size = 6, symbol = ~symbol)
+> rf_c_x1_sf <- seq(-1.7, 1.7, length.out = 200)
+> rf_curve_sf <- tibble::tibble(x1 = rf_c_x1_sf)
+> rf_curve_sf$x2 <- rf_curve_sf$x1^2
+> rf_curve_sf$z <- (1 - rf_curve_sf$x1)^2
+> rf_dash_sf <- list(color = "black", dash = "dash", width = 4)
+> rf_stops_sf <- c(0, 1)
+> rf_cols_sf <- c("#E5E5E5", "#808080")
+> rf_scale_sf <- list(rf_stops_sf, rf_cols_sf)
+> rf_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> rf_camera_sf <- list(eye = rf_eye_sf)
+> rf_xaxis_sf <- list(title = "x1")
+> rf_yaxis_sf <- list(title = "x2")
+> rf_zaxis_sf <- list(title = "f(x)")
+> rf_scene_sf <- list(
+>   xaxis = rf_xaxis_sf,
+>   yaxis = rf_yaxis_sf,
+>   zaxis = rf_zaxis_sf,
+>   camera = rf_camera_sf
+> )
+> rf_legend_sf <- list(orientation = "h")
+> plotly::plot_ly() |>
+>   plotly::add_surface(
+>     x = rf_x1_sf,
+>     y = rf_x2_sf,
+>     z = rf_z_sf,
+>     colorscale = rf_scale_sf,
+>     showscale = FALSE,
+>     opacity = 0.7
+>   ) |>
+>   plotly::add_trace(
+>     data = rf_curve_sf,
+>     x = ~x1,
+>     y = ~x2,
+>     z = ~z,
+>     type = "scatter3d",
+>     mode = "lines",
+>     line = rf_dash_sf,
+>     name = "valley floor"
+>   ) |>
+>   plotly::add_markers(
+>     data = rf_pts_sf,
+>     x = ~x1,
+>     y = ~x2,
+>     z = ~z,
+>     text = ~name,
+>     hoverinfo = "text",
+>     showlegend = FALSE,
+>     marker = rf_marker_sf
+>   ) |>
+>   plotly::layout(scene = rf_scene_sf, legend = rf_legend_sf)
+> ```
+>
+> Show code
+>
+> ``` python
+> import matplotlib.pyplot as plt
+> import numpy as np
+>
+> rf_x1_3d, rf_x2_3d = np.meshgrid(np.linspace(-2, 2, 101),
+>                                  np.linspace(-1, 3, 101))
+>
+>
+> def rf_f_3d(x1, x2):
+>     return 100 * (x2 - x1**2) ** 2 + (1 - x1) ** 2
+>
+>
+> rf_curve_x1_3d = np.linspace(-1.7, 1.7, 200)
+> rf_curve_x2_3d = rf_curve_x1_3d**2
+> fig = plt.figure(figsize=(6, 4.5))
+> ax = fig.add_subplot(projection="3d")
+> ax.plot_surface(rf_x1_3d, rf_x2_3d, rf_f_3d(rf_x1_3d, rf_x2_3d),
+>                 color="grey", alpha=0.4)
+> ax.plot(rf_curve_x1_3d, rf_curve_x2_3d,
+>         rf_f_3d(rf_curve_x1_3d, rf_curve_x2_3d), "--", color="black")
+> rf_style_3d = {"minimizer": ("#0072B2", "o", (1, 1)),
+>                "origin": ("#009E73", "s", (0, 0)),
+>                "start": ("#D55E00", "D", (-1.2, 1))}
+> for name, (color, marker, p) in rf_style_3d.items():
+>     ax.scatter(p[0], p[1], rf_f_3d(*p), color=color, marker=marker, s=50,
+>                label=name)
+> ax.set_xlabel("x1")
+> ax.set_ylabel("x2")
+> ax.set_zlabel("f(x)")
+> ax.legend(loc="upper right")
+> plt.show();
+> ```
+>
+> ## R
+>
+> [![Surface plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The surface is a long curved valley with steep walls on both sides, floored by a narrow parabola- shaped channel along the dashed curve x2 equals x1 squared. Three marked points lie on the surface. The minimizer at (1, 1) on the valley floor is a blue circle, the origin on the valley floor is a green square, and the standard starting point (-1.2, 1) is an orange diamond, on the left wall just outside the channel.](optimization-gradient-descent_files/figure-html/rosenbrock-function-3d-python-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-function-3d-python-1.png "Figure 4: The graph of the Rosenbrock function, the surface whose level curves are in Figure 3, with the curve x_2 = x_1^2 (dashed) along the bottom of the valley. The minimizer, the origin and the starting point are marked.")
+>
+> ## Python
+>
+> Figure 4: The [graph](functions.llms.md#def-graph) of the [Rosenbrock function](#def-rosenbrock-function), the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 3](#fig-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the bottom of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
 
 > **NOTE:**
 >
@@ -604,7 +825,7 @@ Last modified: 2026-11-03 14:53:06 (PST)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f3701d07610>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff676d3d590>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -616,30 +837,30 @@ Last modified: 2026-11-03 14:53:06 (PST)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f3701d07750>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3701d07890>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3701d079d0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3701d07b10>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3701d07c50>]
-> #> [<matplotlib.lines.Line2D object at 0x7f3701d07d90>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff676d3d6d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff676d3d810>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff676d3d950>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff676d3da90>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff676d3dbd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff676d3dd10>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f371211de50>
+> #> <matplotlib.legend.Legend object at 0x7ff676d3de50>
 > plt.show()
 > ```
 >
 > ## R
 >
-> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png "Figure 3: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
+> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png "Figure 5: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
 > ## Python
 >
-> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png "Figure 3: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
+> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png "Figure 5: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
-> Figure 3: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](functions.llms.md#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-critical-points.llms.md#def-local-maximizer) at $0$.
+> Figure 5: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](functions.llms.md#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-critical-points.llms.md#def-local-maximizer) at $0$.
 
 > **NOTE:**
 >
@@ -729,10 +950,10 @@ Last modified: 2026-11-03 14:53:06 (PST)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f3704066c10>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff676ce1a90>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7f3704064910>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff676ce20d0>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -743,13 +964,13 @@ Last modified: 2026-11-03 14:53:06 (PST)
 >
 > ## R
 >
-> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png "Figure 4: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png "Figure 6: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
 > ## Python
 >
-> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png "Figure 4: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png "Figure 6: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
-> Figure 4: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](functions.llms.md#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-critical-points.llms.md#def-stationary-point).
+> Figure 6: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](functions.llms.md#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-critical-points.llms.md#def-stationary-point).
 
 > **NOTE:**
 >
@@ -917,11 +1138,11 @@ Last modified: 2026-11-03 14:53:06 (PST)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f3701bb8690>]
+> #> [<matplotlib.lines.Line2D object at 0x7ff66e95d1d0>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7f3701bb87d0>
+> #> <matplotlib.lines.Line2D object at 0x7ff66e95d310>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7f3701bb8910>
+> #> <matplotlib.lines.Line2D object at 0x7ff66e95d450>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -931,13 +1152,13 @@ Last modified: 2026-11-03 14:53:06 (PST)
 >
 > ## R
 >
-> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png "Figure 5: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png "Figure 7: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
 >
 > ## Python
 >
-> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png "Figure 5: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png "Figure 7: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
 >
-> Figure 5: The factor $\rho(s)$ of [Example 16](#exm-best-constant-step) against the [step length](#def-gradient-descent) $s$ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](sets.llms.md#def-bound) on the [error](optimization-newton.llms.md#def-iterate-error) shrinks only where the curve is below $1$ (dotted).
+> Figure 7: The factor $\rho(s)$ of [Example 16](#exm-best-constant-step) against the [step length](#def-gradient-descent) $s$ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](sets.llms.md#def-bound) on the [error](optimization-newton.llms.md#def-iterate-error) shrinks only where the curve is below $1$ (dotted).
 
 > **NOTE:**
 >
