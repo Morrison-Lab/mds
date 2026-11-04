@@ -156,22 +156,6 @@ just make sure you execute it correctly.
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/algebra/_def-mode.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/algebra/_exm-mode.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/algebra/_cor-mode-positive-multiple.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/algebra/_proof-cor-mode-positive-multiple.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/algebra/_def-positive-negative-parts.qmd >}}
 
 {{< slidebreak >}}
