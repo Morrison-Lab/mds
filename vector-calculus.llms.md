@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 18:52:21 (PST)
+Last modified: 2026-11-04 04:52:39 (PST)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -440,6 +440,78 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 > ```
 >
 > Figure 1: A gradient explorer: the red arrow points along the gradient at the chosen point, and the blue arrow along the chosen step direction ([Definition 3](#def-direction)).
+
+Show code
+
+``` js
+viewof gradTurn = Inputs.range([0, 360], {value: 30, step: 5, label: "turn the view"})
+```
+
+Show code
+
+``` js
+// The graph z = f(w1, w2) of the function chosen in @fig-gradient-explorer, drawn in 3-D:
+// turn the square about the vertical axis, then look down on it from 30 degrees.
+{
+  const n = 41, lim = 3, w = 380, h = 320, s = 36, elev = 30 * Math.PI / 180;
+  const turn = gradTurn * Math.PI / 180;
+  const grid = d3.range(n).map((i) => d3.range(n).map((j) => {
+    const a = -lim + 2 * lim * i / (n - 1);
+    const b = -lim + 2 * lim * j / (n - 1);
+    return gradF(a, b);
+  }));
+  const top = d3.max(grid.flat().map(Math.abs)) || 1;
+  const sz = 2.5 / top;
+  const at = (a, b, z) => {
+    const u = a * Math.cos(turn) - b * Math.sin(turn);
+    const v = a * Math.sin(turn) + b * Math.cos(turn);
+    return [w / 2 + s * u, h / 2 - s * Math.sin(elev) * v - s * Math.cos(elev) * z * sz];
+  };
+  const path = (pts) => d3.line()(pts.map(([a, b, z]) => at(a, b, z)));
+  const svg = d3.create("svg").attr("width", w).attr("height", h)
+    .attr("role", "img")
+    .attr("aria-label", "The graph of the chosen function drawn in three dimensions over a square of inputs, " +
+      "with the chosen point lifted onto the surface, " +
+      "the level curve through it at constant height, " +
+      "a red arrow along the gradient and a blue arrow in the chosen step direction, " +
+      "each rising at its rate of change.");
+  const ticks = d3.range(-lim, lim + 0.01, 1);
+  const fill = "none";
+  for (const t of ticks) {
+    svg.append("path").attr("d", path(d3.range(n).map((j) => [t, -lim + 2 * lim * j / (n - 1), gradF(t, -lim + 2 * lim * j / (n - 1))])))
+      .attr("stroke", "#1f77b4").attr("stroke-opacity", 0.45).attr("fill", fill);
+    svg.append("path").attr("d", path(d3.range(n).map((i) => [-lim + 2 * lim * i / (n - 1), t, gradF(-lim + 2 * lim * i / (n - 1), t)])))
+      .attr("stroke", "#1f77b4").attr("stroke-opacity", 0.45).attr("fill", fill);
+  }
+  // The level curve through the chosen point, at the point's height.
+  const fv = gradF(gradW1, gradW2);
+  const flat = d3.range(n * n).map((k) => grid[k % n][Math.floor(k / n)]);
+  const level = d3.contours().size([n, n]).thresholds([fv])(flat)[0];
+  for (const polygon of level.coordinates) {
+    for (const ring of polygon) {
+      const pts = ring.map(([i, j]) => [-lim + 2 * lim * i / (n - 1), -lim + 2 * lim * j / (n - 1), fv]);
+      svg.append("path").attr("d", path(pts)).attr("stroke", "#222").attr("stroke-width", 2).attr("fill", fill);
+    }
+  }
+  // Arrows from the point: one unit step in the plane, rising by the rate of change along it.
+  const u = [Math.cos(gradTheta * Math.PI / 180), Math.sin(gradTheta * Math.PI / 180)];
+  const g = gradLen > 1e-9 ? gradG.map((v) => v / gradLen) : [0, 0];
+  const arrow = (dir, rise, color) => {
+    svg.append("path")
+      .attr("d", path([[gradW1, gradW2, fv], [gradW1 + dir[0], gradW2 + dir[1], fv + rise]]))
+      .attr("stroke", color).attr("stroke-width", 3).attr("fill", fill);
+    const [x, y] = at(gradW1 + dir[0], gradW2 + dir[1], fv + rise);
+    svg.append("circle").attr("cx", x).attr("cy", y).attr("r", 3.5).attr("fill", color);
+  };
+  arrow(u, gradRate(gradTheta), "#1f77b4");
+  arrow(g, gradLen, "#d62728");
+  const [px, py] = at(gradW1, gradW2, fv);
+  svg.append("circle").attr("cx", px).attr("cy", py).attr("r", 5).attr("fill", "#222");
+  return svg.node();
+}
+```
+
+The [graph](functions.llms.md#def-graph) of the [function](functions.llms.md#def-function) in the [gradient explorer](#fig-gradient-explorer), with the same point, [level curve](#def-level-set) and arrows. Each arrow takes one unit step in the plane, and its height gain is the amount $f$ changes along that step.
 
 > **NOTE:**
 >
