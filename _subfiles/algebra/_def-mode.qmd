@@ -1,9 +1,0 @@
-:::{#def-mode}
-#### Mode of a function
-
-Let $h : A \to \reals$ be a [function](functions.qmd#def-function).
-A **mode** of $h$ is an element of the [argmax](#def-argmax) of $h$ over $A$:
-
-$$x^* \text{ is a mode of } h \iff x^* \in \argmax_{x \in A} h(x).$$
-
-:::
