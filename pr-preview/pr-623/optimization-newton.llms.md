@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-04 02:43:34 (PST)
+Last modified: 2026-11-04 03:42:37 (PST)
 
 > **NOTE:**
 >
@@ -307,13 +307,13 @@ Last modified: 2026-11-04 02:43:34 (PST)
 > nc_err_ax = [x - 2 for x in nc_x_ax]
 > fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
 > ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7febe6676490>]
+> #> [<matplotlib.lines.Line2D object at 0x7fe0a4a6e490>]
 > ax.set_xlabel("iteration t")
 > #> Text(0.5, 0, 'iteration t')
 > ax.set_ylabel("error of the iterate")
 > #> Text(0, 0.5, 'error of the iterate')
 > ax.set_xticks(range(4))
-> #> [<matplotlib.axis.XTick object at 0x7febe681fed0>, <matplotlib.axis.XTick object at 0x7febe681f610>, <matplotlib.axis.XTick object at 0x7febe6676c10>, <matplotlib.axis.XTick object at 0x7febe6677390>]
+> #> [<matplotlib.axis.XTick object at 0x7fe0a4c13ed0>, <matplotlib.axis.XTick object at 0x7fe0a4c13610>, <matplotlib.axis.XTick object at 0x7fe0a4a6ec10>, <matplotlib.axis.XTick object at 0x7fe0a4a6f390>]
 > plt.show();
 > ```
 >
