@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-03 14:02:48 (PST)
+Last modified: 2026-11-03 15:17:00 (PST)
 
 The optimization notes are split across these pages:
 

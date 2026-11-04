@@ -12199,6 +12199,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#def-domain-of-discourse",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "def-domain-of-discourse",
+   "kind": "def",
+   "title": "Domain of discourse, universe of discourse",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#def-existential-quantifier",
    "site": "mds",
    "page": "proof-writing",
@@ -12505,6 +12514,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-biconditional-split",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-biconditional-split",
+   "kind": "thm",
+   "title": "A biconditional is two conditionals",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-conjunction-rule",
    "site": "mds",
    "page": "proof-writing",
@@ -12577,6 +12595,15 @@
    "external": false
   },
   {
+   "id": "mds/proof-writing#thm-equivalent-cycle",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-equivalent-cycle",
+   "kind": "thm",
+   "title": "A cycle of conditionals",
+   "external": false
+  },
+  {
    "id": "mds/proof-writing#thm-modus-ponens",
    "site": "mds",
    "page": "proof-writing",
@@ -12592,6 +12619,15 @@
    "div": "thm-modus-tollens",
    "kind": "thm",
    "title": "Modus tollens",
+   "external": false
+  },
+  {
+   "id": "mds/proof-writing#thm-negate-quantifiers",
+   "site": "mds",
+   "page": "proof-writing",
+   "div": "thm-negate-quantifiers",
+   "kind": "thm",
+   "title": "De Morgan's laws for quantifiers",
    "external": false
   },
   {
@@ -20232,6 +20268,10 @@
    "mds/proof-writing#def-proposition"
   ],
   [
+   "mds/proof-writing#def-domain-of-discourse",
+   "mds/proof-writing#def-predicate"
+  ],
+  [
    "mds/proof-writing#def-existential-quantifier",
    "mds/proof-writing#def-quantifier"
   ],
@@ -20480,6 +20520,10 @@
    "mds/proof-writing#def-rule-of-inference"
   ],
   [
+   "mds/proof-writing#thm-biconditional-split",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#thm-conjunction-rule",
    "mds/proof-writing#def-proposition"
   ],
@@ -20528,6 +20572,10 @@
    "mds/proof-writing#def-tautology"
   ],
   [
+   "mds/proof-writing#thm-equivalent-cycle",
+   "mds/proof-writing#def-proposition"
+  ],
+  [
    "mds/proof-writing#thm-modus-ponens",
    "mds/proof-writing#def-proposition"
   ],
@@ -20542,6 +20590,14 @@
   [
    "mds/proof-writing#thm-modus-tollens",
    "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mds/proof-writing#thm-negate-quantifiers",
+   "mds/proof-writing#def-domain-of-discourse"
+  ],
+  [
+   "mds/proof-writing#thm-negate-quantifiers",
+   "mds/proof-writing#def-predicate"
   ],
   [
    "mds/proof-writing#thm-proof-by-contradiction",
