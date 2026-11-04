@@ -14019,6 +14019,14 @@
   ],
   [
    "mds/algebra#lem-nonneg-series",
+   "mds/algebra#def-bounded-above"
+  ],
+  [
+   "mds/algebra#lem-nonneg-series",
+   "mds/algebra#def-convergent-sequence"
+  ],
+  [
+   "mds/algebra#lem-nonneg-series",
    "mds/algebra#def-infinite-sum"
   ],
   [
@@ -14032,6 +14040,10 @@
   [
    "mds/algebra#lem-nonneg-series",
    "mds/algebra#def-sequence-limit"
+  ],
+  [
+   "mds/algebra#lem-nonneg-series",
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/algebra#prp-angle-unit-circle-range",
@@ -14050,6 +14062,38 @@
    "mds/algebra#def-affine-function"
   ],
   [
+   "mds/algebra#thm-affine-function-props",
+   "mds/algebra#thm-add-ident"
+  ],
+  [
+   "mds/algebra#thm-affine-function-props",
+   "mds/algebra#thm-mult-distr"
+  ],
+  [
+   "mds/algebra#thm-affine-function-props",
+   "mds/algebra#thm-mult-one"
+  ],
+  [
+   "mds/algebra#thm-affine-function-props",
+   "mds/algebra#thm-negative-one"
+  ],
+  [
+   "mds/algebra#thm-affine-function-props",
+   "mds/algebra#thm-prod-assoc"
+  ],
+  [
+   "mds/algebra#thm-affine-function-props",
+   "mds/algebra#thm-prod-div"
+  ],
+  [
+   "mds/algebra#thm-affine-function-props",
+   "mds/algebra#thm-sum-assoc"
+  ],
+  [
+   "mds/algebra#thm-affine-function-props",
+   "mds/algebra#thm-sum-symmetric"
+  ],
+  [
    "mds/algebra#thm-argmax-positive-multiple",
    "mds/functions#def-function"
   ],
@@ -14066,6 +14110,10 @@
    "mds/algebra#def-minimum"
   ],
   [
+   "mds/algebra#thm-completeness",
+   "mds/algebra#thm-neg-ineq"
+  ],
+  [
    "mds/algebra#thm-convex-local-global",
    "mds/algebra#def-convex-function"
   ],
@@ -14076,6 +14124,10 @@
   [
    "mds/algebra#thm-convex-local-global",
    "mds/algebra#def-local-minimizer"
+  ],
+  [
+   "mds/algebra#thm-cosine-sine-identity",
+   "mds/algebra#def-unit-circle"
   ],
   [
    "mds/algebra#thm-equal-trans",
@@ -14100,6 +14152,10 @@
   [
    "mds/algebra#thm-power-product",
    "mds/algebra#thm-prod-symmetric"
+  ],
+  [
+   "mds/algebra#thm-product-of-sums",
+   "mds/algebra#thm-mult-distr"
   ],
   [
    "mds/algebra-basics#def-argmax",
@@ -14435,6 +14491,14 @@
   ],
   [
    "mds/algebra-exponentials#lem-nonneg-series",
+   "mds/algebra#def-bounded-above"
+  ],
+  [
+   "mds/algebra-exponentials#lem-nonneg-series",
+   "mds/algebra#def-convergent-sequence"
+  ],
+  [
+   "mds/algebra-exponentials#lem-nonneg-series",
    "mds/algebra#def-sequence-limit"
   ],
   [
@@ -14448,6 +14512,10 @@
   [
    "mds/algebra-exponentials#lem-nonneg-series",
    "mds/algebra-exponentials#def-partial-sum"
+  ],
+  [
+   "mds/algebra-exponentials#lem-nonneg-series",
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/algebra-exponentials#thm-affine-function-props",
@@ -14630,6 +14698,10 @@
    "mds/algebra-sums#def-convex-function"
   ],
   [
+   "mds/algebra-sums#thm-product-of-sums",
+   "mds/algebra-sums#thm-mult-distr"
+  ],
+  [
    "mds/algebra-trigonometry#def-angle-unit-circle",
    "mds/algebra-trigonometry#def-unit-circle"
   ],
@@ -14676,6 +14748,18 @@
   [
    "mds/algebra-trigonometry#prp-angle-unit-circle-range",
    "mds/algebra-trigonometry#def-unit-circle"
+  ],
+  [
+   "mds/algebra-trigonometry#thm-cosine-sine-identity",
+   "mds/algebra-trigonometry#def-unit-circle"
+  ],
+  [
+   "mds/calculus#cor-deriv-log-chain",
+   "mds/calculus#thm-chain-rule"
+  ],
+  [
+   "mds/calculus#cor-deriv-log-chain",
+   "mds/calculus#thm-deriv-log"
   ],
   [
    "mds/calculus#cor-deriv-log-chain",
@@ -15014,6 +15098,10 @@
    "mds/number-systems#def-real-numbers"
   ],
   [
+   "mds/calculus#thm-diff-implies-cont",
+   "mds/calculus#def-continuous"
+  ],
+  [
    "mds/calculus#thm-ftc-part1",
    "mds/calculus#def-accumulation-function"
   ],
@@ -15075,6 +15163,14 @@
   ],
   [
    "mds/calculus#thm-riemann-general",
+   "mds/calculus#def-mesh"
+  ],
+  [
+   "mds/calculus#thm-riemann-general",
+   "mds/calculus#def-riemann-integral"
+  ],
+  [
+   "mds/calculus#thm-riemann-general",
    "mds/calculus#def-riemann-sum-equal-width"
   ],
   [
@@ -15120,6 +15216,14 @@
   [
    "mds/calculus-derivatives#cor-deriv-log-chain",
    "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus-derivatives#cor-deriv-log-chain",
+   "mds/calculus-derivatives#thm-chain-rule"
+  ],
+  [
+   "mds/calculus-derivatives#cor-deriv-log-chain",
+   "mds/calculus-derivatives#thm-deriv-log"
   ],
   [
    "mds/calculus-derivatives#def-derivative",
@@ -15494,6 +15598,10 @@
    "mds/calculus-integration#def-partition"
   ],
   [
+   "mds/calculus-integration#thm-diff-implies-cont",
+   "mds/calculus-integration#def-continuous"
+  ],
+  [
    "mds/calculus-integration#thm-ftc-part1",
    "mds/calculus-integration#def-accumulation-function"
   ],
@@ -15520,6 +15628,14 @@
   [
    "mds/calculus-integration#thm-riemann-general",
    "mds/calculus-integration#def-integrable"
+  ],
+  [
+   "mds/calculus-integration#thm-riemann-general",
+   "mds/calculus-integration#def-mesh"
+  ],
+  [
+   "mds/calculus-integration#thm-riemann-general",
+   "mds/calculus-integration#def-riemann-integral"
   ],
   [
    "mds/calculus-integration#thm-riemann-general",
@@ -15879,11 +15995,39 @@
   ],
   [
    "mds/linear-algebra#cor-cosine-similarity-unit-vectors",
+   "mds/linear-algebra#def-cosine-similarity-inner-product-space"
+  ],
+  [
+   "mds/linear-algebra#cor-cosine-similarity-unit-vectors",
    "mds/linear-algebra#def-inner-product-space"
   ],
   [
    "mds/linear-algebra#cor-det-pd",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra#cor-det-pd",
+   "mds/linear-algebra#thm-definite-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra#cor-det-pd",
+   "mds/linear-algebra#thm-det-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra#cor-dim-subadditive",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#cor-dim-subadditive",
+   "mds/linear-algebra#thm-dim-sum"
+  ],
+  [
+   "mds/linear-algebra#cor-distinct-diagonalizable",
+   "mds/linear-algebra#thm-diagonalizable"
+  ],
+  [
+   "mds/linear-algebra#cor-distinct-diagonalizable",
+   "mds/linear-algebra#thm-eigenvectors-independent"
   ],
   [
    "mds/linear-algebra#cor-gram-invertible-iff",
@@ -15892,6 +16036,22 @@
   [
    "mds/linear-algebra#cor-gram-invertible-iff",
    "mds/linear-algebra#def-invertible-matrix"
+  ],
+  [
+   "mds/linear-algebra#cor-gram-invertible-iff",
+   "mds/linear-algebra#thm-independent-null-space"
+  ],
+  [
+   "mds/linear-algebra#cor-gram-invertible-iff",
+   "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#cor-gram-invertible-iff",
+   "mds/linear-algebra#thm-null-gram"
+  ],
+  [
+   "mds/linear-algebra#cor-inverse-symmetric",
+   "mds/linear-algebra#thm-inverse-transpose"
   ],
   [
    "mds/linear-algebra#cor-invertible-cancel-right",
@@ -15906,8 +16066,32 @@
    "mds/linear-algebra#def-linear-map"
   ],
   [
+   "mds/linear-algebra#cor-linear-is-affine",
+   "mds/linear-algebra#thm-linear-map-matrix"
+  ],
+  [
    "mds/linear-algebra#cor-linear-scalar",
    "mds/linear-algebra#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra#cor-linear-scalar",
+   "mds/linear-algebra#thm-linear-map-matrix"
+  ],
+  [
+   "mds/linear-algebra#cor-linear-scalar",
+   "mds/linear-algebra#thm-matrix-map-linear"
+  ],
+  [
+   "mds/linear-algebra#cor-moore-penrose-gram",
+   "mds/linear-algebra#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra#cor-moore-penrose-gram",
+   "mds/linear-algebra#thm-moore-penrose-gram"
+  ],
+  [
+   "mds/linear-algebra#cor-moore-penrose-gram",
+   "mds/linear-algebra#thm-transpose-product"
   ],
   [
    "mds/linear-algebra#cor-moore-penrose-gram",
@@ -15918,8 +16102,36 @@
    "mds/linear-algebra#def-orthonormal-basis"
   ],
   [
+   "mds/linear-algebra#cor-orthonormal-basis-exists",
+   "mds/linear-algebra#thm-extend-basis"
+  ],
+  [
+   "mds/linear-algebra#cor-orthonormal-basis-exists",
+   "mds/linear-algebra#thm-gram-schmidt"
+  ],
+  [
+   "mds/linear-algebra#cor-orthonormal-basis-exists",
+   "mds/linear-algebra#thm-orthonormal-independent"
+  ],
+  [
+   "mds/linear-algebra#cor-orthonormal-basis-exists",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
    "mds/linear-algebra#cor-pd-transpose-product",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra#cor-pd-transpose-product",
+   "mds/linear-algebra#thm-definite-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra#cor-pd-transpose-product",
+   "mds/linear-algebra#thm-inverse-product"
+  ],
+  [
+   "mds/linear-algebra#cor-pd-transpose-product",
+   "mds/linear-algebra#thm-spectral"
   ],
   [
    "mds/linear-algebra#cor-pearson-angle",
@@ -15934,8 +16146,64 @@
    "sds/exploratory-descriptive#def-pearson-r"
   ],
   [
+   "mds/linear-algebra#cor-rank-bound",
+   "mds/linear-algebra#def-rank"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-bound",
+   "mds/linear-algebra#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
    "mds/linear-algebra#cor-rank-product-full-rank",
    "mds/linear-algebra#def-full-column-rank"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra#def-null-space"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra#def-nullity"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra#thm-independent-null-space"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra#thm-subspace-equal-dim"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra-subspaces#def-dimension"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra-subspaces#def-full-column-rank"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra-subspaces#def-rank"
+  ],
+  [
+   "mds/linear-algebra#cor-rank-product-full-rank",
+   "mds/linear-algebra-subspaces#def-subspace"
   ],
   [
    "mds/linear-algebra#cor-right-angle-orthogonal",
@@ -15943,11 +16211,59 @@
   ],
   [
    "mds/linear-algebra#cor-right-angle-orthogonal",
+   "mds/linear-algebra#def-cosine-similarity"
+  ],
+  [
+   "mds/linear-algebra#cor-right-angle-orthogonal",
    "mds/linear-algebra#def-orthogonal-vectors"
+  ],
+  [
+   "mds/linear-algebra#cor-right-angle-orthogonal",
+   "mds/linear-algebra#thm-norm-properties"
   ],
   [
    "mds/linear-algebra#cor-sample-covariance-singular",
    "mds/linear-algebra#thm-centered-data-rank"
+  ],
+  [
+   "mds/linear-algebra#cor-sample-covariance-singular",
+   "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#cor-sample-covariance-singular",
+   "mds/linear-algebra#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra#cor-solution-unique",
+   "mds/linear-algebra#def-dimension"
+  ],
+  [
+   "mds/linear-algebra#cor-solution-unique",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#cor-solution-unique",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#cor-solution-unique",
+   "mds/linear-algebra#thm-consistency"
+  ],
+  [
+   "mds/linear-algebra#cor-solution-unique",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#cor-solution-unique",
+   "mds/linear-algebra#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra#cor-solution-unique",
+   "mds/linear-algebra#thm-solution-set"
+  ],
+  [
+   "mds/linear-algebra#cor-solution-unique",
+   "mds/linear-algebra#thm-subspace-equal-dim"
   ],
   [
    "mds/linear-algebra#def-affine-map",
@@ -16550,12 +16866,52 @@
    "mds/linear-algebra#def-linear-map"
   ],
   [
+   "mds/linear-algebra#thm-affine-linear-iff",
+   "mds/linear-algebra#thm-affine-map-zero"
+  ],
+  [
+   "mds/linear-algebra#thm-affine-linear-iff",
+   "mds/linear-algebra#thm-linear-map-zero"
+  ],
+  [
+   "mds/linear-algebra#thm-affine-linear-iff",
+   "mds/linear-algebra#thm-matrix-map-linear"
+  ],
+  [
    "mds/linear-algebra#thm-affine-map-unique",
    "mds/linear-algebra#def-affine-map"
   ],
   [
+   "mds/linear-algebra#thm-affine-map-unique",
+   "mds/linear-algebra#def-matrix-of-linear-map"
+  ],
+  [
+   "mds/linear-algebra#thm-affine-map-unique",
+   "mds/linear-algebra#thm-affine-map-zero"
+  ],
+  [
+   "mds/linear-algebra#thm-affine-map-unique",
+   "mds/linear-algebra#thm-linear-map-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-affine-map-unique",
+   "mds/linear-algebra#thm-matrix-map-linear"
+  ],
+  [
    "mds/linear-algebra#thm-affine-map-zero",
    "mds/linear-algebra#def-affine-map"
+  ],
+  [
+   "mds/linear-algebra#thm-affine-map-zero",
+   "mds/linear-algebra#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-affine-map-zero",
+   "mds/linear-algebra#def-vector-addition"
+  ],
+  [
+   "mds/linear-algebra#thm-back-substitution",
+   "mds/linear-algebra#def-matvec-mult"
   ],
   [
    "mds/linear-algebra#thm-back-substitution",
@@ -16566,8 +16922,44 @@
    "mds/linear-algebra#def-basis"
   ],
   [
+   "mds/linear-algebra#thm-basis-size",
+   "mds/linear-algebra#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra#thm-basis-size",
+   "mds/linear-algebra#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-basis-size",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#thm-basis-size",
+   "mds/linear-algebra#thm-many-vectors-dependent"
+  ],
+  [
+   "mds/linear-algebra#thm-basis-size",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-basis-size",
+   "mds/linear-algebra#thm-matvec-columns"
+  ],
+  [
    "mds/linear-algebra#thm-basis-unique",
    "mds/linear-algebra#def-basis"
+  ],
+  [
+   "mds/linear-algebra#thm-basis-unique",
+   "mds/linear-algebra#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra#thm-basis-unique",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#cor-inverse-symmetric"
   ],
   [
    "mds/linear-algebra#thm-block-quadratic",
@@ -16575,15 +16967,87 @@
   ],
   [
    "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#def-matrix-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
    "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#thm-dot-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#thm-scalar-matmul"
+  ],
+  [
+   "mds/linear-algebra#thm-block-quadratic",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-cauchy-schwarz",
+   "mds/linear-algebra#def-dot-product"
   ],
   [
    "mds/linear-algebra#thm-cauchy-schwarz",
    "mds/linear-algebra#def-linearly-independent"
   ],
   [
+   "mds/linear-algebra#thm-cauchy-schwarz",
+   "mds/linear-algebra#thm-dot-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-cauchy-schwarz",
+   "mds/linear-algebra#thm-norm-properties"
+  ],
+  [
+   "mds/linear-algebra#thm-cauchy-schwarz",
+   "mds/linear-algebra#thm-norm-sum-square"
+  ],
+  [
    "mds/linear-algebra#thm-centered-data-rank",
    "mds/linear-algebra#def-ones-vector"
+  ],
+  [
+   "mds/linear-algebra#thm-centered-data-rank",
+   "mds/linear-algebra#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra#thm-centered-data-rank",
+   "mds/linear-algebra#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra#thm-centered-data-rank",
+   "mds/linear-algebra#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#def-linearly-independent"
   ],
   [
    "mds/linear-algebra#thm-cholesky",
@@ -16591,15 +17055,127 @@
   ],
   [
    "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#def-matrix-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#def-schur-complement"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#thm-back-substitution"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#thm-matvec-columns"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#thm-pd-gram"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#thm-pd-submatrix"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#thm-scalar-matmul"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/linear-algebra#thm-schur-test"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-closest-point",
+   "mds/linear-algebra#def-orthogonal-complement"
   ],
   [
    "mds/linear-algebra#thm-closest-point",
    "mds/linear-algebra#def-orthogonal-projection"
   ],
   [
+   "mds/linear-algebra#thm-closest-point",
+   "mds/linear-algebra#def-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-closest-point",
+   "mds/linear-algebra#thm-norm-properties"
+  ],
+  [
+   "mds/linear-algebra#thm-closest-point",
+   "mds/linear-algebra#thm-norm-sum-square"
+  ],
+  [
+   "mds/linear-algebra#thm-column-space-span",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
+   "mds/linear-algebra#thm-column-space-span",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#thm-column-space-span",
+   "mds/linear-algebra#thm-matvec-columns"
+  ],
+  [
+   "mds/linear-algebra#thm-column-space-span",
+   "mds/linear-algebra#thm-span-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-complement-null-space",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
+   "mds/linear-algebra#thm-complement-null-space",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra#thm-complement-null-space",
+   "mds/linear-algebra#def-matrix-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-complement-null-space",
+   "mds/linear-algebra#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-complement-null-space",
+   "mds/linear-algebra#def-null-space"
+  ],
+  [
+   "mds/linear-algebra#thm-complement-null-space",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#thm-condition-number-gram",
+   "mds/linear-algebra#def-singular-values"
+  ],
+  [
+   "mds/linear-algebra#thm-condition-number-gram",
+   "mds/linear-algebra#thm-svd-evd"
+  ],
+  [
    "mds/linear-algebra#thm-condition-number-gram",
    "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-condition-number-gram",
+   "mds/linear-algebra-special-matrices#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra#thm-condition-number-gram",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
    "mds/linear-algebra#thm-consistency",
@@ -16615,11 +17191,43 @@
   ],
   [
    "mds/linear-algebra#thm-consistency",
+   "mds/linear-algebra#thm-generalized-inverse-solves"
+  ],
+  [
+   "mds/linear-algebra#thm-consistency",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-consistency",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-consistency",
+   "mds/linear-algebra#thm-subspace-equal-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-consistency",
    "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-consistency",
+   "mds/linear-algebra-subspaces#def-dimension"
+  ],
+  [
+   "mds/linear-algebra#thm-consistency",
+   "mds/linear-algebra-subspaces#def-rank"
   ],
   [
    "mds/linear-algebra#thm-cross-product-sum-outer",
    "mds/linear-algebra#def-cross-product-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-cross-product-sum-outer",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-cross-product-sum-outer",
+   "mds/linear-algebra#def-outer-product"
   ],
   [
    "mds/linear-algebra#thm-cross-product-sum-outer",
@@ -16628,6 +17236,10 @@
   [
    "mds/linear-algebra#thm-definite-eigenvalues",
    "mds/linear-algebra#def-eigendecomposition"
+  ],
+  [
+   "mds/linear-algebra#thm-definite-eigenvalues",
+   "mds/linear-algebra#def-orthogonal-matrix"
   ],
   [
    "mds/linear-algebra#thm-definite-eigenvalues",
@@ -16638,6 +17250,10 @@
    "mds/linear-algebra#def-positive-semidefinite"
   ],
   [
+   "mds/linear-algebra#thm-definite-eigenvalues",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
    "mds/linear-algebra#thm-det-diagonal",
    "mds/linear-algebra#def-determinant"
   ],
@@ -16646,24 +17262,180 @@
    "mds/linear-algebra#def-diagonal-matrix"
   ],
   [
+   "mds/linear-algebra#thm-det-diagonal",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
    "mds/linear-algebra#thm-det-eigenvalues",
    "mds/linear-algebra#def-eigendecomposition"
+  ],
+  [
+   "mds/linear-algebra#thm-det-eigenvalues",
+   "mds/linear-algebra#def-orthogonal-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-det-eigenvalues",
+   "mds/linear-algebra#thm-det-diagonal"
+  ],
+  [
+   "mds/linear-algebra#thm-det-eigenvalues",
+   "mds/linear-algebra#thm-det-product"
   ],
   [
    "mds/linear-algebra#thm-diagonalizable",
    "mds/linear-algebra#def-diagonalizable"
   ],
   [
+   "mds/linear-algebra#thm-diagonalizable",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable",
+   "mds/linear-algebra#def-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable",
+   "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable",
+   "mds/linear-algebra#thm-matvec-columns"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable",
+   "mds/linear-algebra#thm-scalar-matmul"
+  ],
+  [
    "mds/linear-algebra#thm-diagonalizable-powers",
    "mds/linear-algebra#def-diagonalizable"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable-powers",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable-powers",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable-powers",
+   "mds/linear-algebra#def-matrix-power"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable-powers",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable-powers",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable-powers",
+   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-dim-bound",
    "mds/linear-algebra#def-dimension"
   ],
   [
+   "mds/linear-algebra#thm-dim-bound",
+   "mds/linear-algebra#thm-extend-basis"
+  ],
+  [
+   "mds/linear-algebra#thm-dim-bound",
+   "mds/linear-algebra#thm-many-vectors-dependent"
+  ],
+  [
+   "mds/linear-algebra#thm-dim-sum",
+   "mds/linear-algebra#def-basis"
+  ],
+  [
+   "mds/linear-algebra#thm-dim-sum",
+   "mds/linear-algebra#def-dimension"
+  ],
+  [
+   "mds/linear-algebra#thm-dim-sum",
+   "mds/linear-algebra#thm-basis-size"
+  ],
+  [
+   "mds/linear-algebra#thm-dim-sum",
+   "mds/linear-algebra#thm-extend-basis"
+  ],
+  [
+   "mds/linear-algebra#thm-dim-sum",
+   "mds/linear-algebra#thm-sum-intersection-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-direct-sum-equiv",
+   "mds/linear-algebra#cor-dim-subadditive"
+  ],
+  [
    "mds/linear-algebra#thm-direct-sum-equiv",
    "mds/linear-algebra#def-direct-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-direct-sum-equiv",
+   "mds/linear-algebra#thm-subspace-zero"
+  ],
+  [
+   "mds/linear-algebra#thm-dot-linear",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra#thm-dot-linear",
+   "mds/linear-algebra#def-scalar-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-dot-linear",
+   "mds/linear-algebra#def-vector-addition"
+  ],
+  [
+   "mds/linear-algebra#thm-dot-linear",
+   "mds/linear-algebra#thm-lincom-symmetric"
+  ],
+  [
+   "mds/linear-algebra#thm-dot-linear-sum",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra#thm-dot-linear-sum",
+   "mds/linear-algebra#def-linear-combination"
+  ],
+  [
+   "mds/linear-algebra#thm-double-complement",
+   "mds/linear-algebra#def-orthogonal-complement"
+  ],
+  [
+   "mds/linear-algebra#thm-double-complement",
+   "mds/linear-algebra#thm-lincom-symmetric"
+  ],
+  [
+   "mds/linear-algebra#thm-double-complement",
+   "mds/linear-algebra#thm-orthogonal-complement-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-double-complement",
+   "mds/linear-algebra#thm-orthogonal-direct-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-double-complement",
+   "mds/linear-algebra#thm-subspace-equal-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-idempotent-orthogonal",
+   "mds/linear-algebra#def-eigenvalue"
   ],
   [
    "mds/linear-algebra#thm-eigen-idempotent-orthogonal",
@@ -16674,6 +17446,18 @@
    "mds/linear-algebra#def-orthogonal-matrix"
   ],
   [
+   "mds/linear-algebra#thm-eigen-idempotent-orthogonal",
+   "mds/linear-algebra#thm-eigen-shift-power"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-idempotent-orthogonal",
+   "mds/linear-algebra#thm-norm-properties"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-idempotent-orthogonal",
+   "mds/linear-algebra#thm-orthogonal-norm"
+  ],
+  [
    "mds/linear-algebra#thm-eigen-shift-power",
    "mds/linear-algebra#def-eigenvalue"
   ],
@@ -16682,12 +17466,48 @@
    "mds/linear-algebra#def-matrix-power"
   ],
   [
+   "mds/linear-algebra#thm-eigen-shift-power",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-shift-power",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-shift-power",
+   "mds/linear-algebra#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-shift-power",
+   "mds/linear-algebra#thm-scalar-matmul"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-shift-power",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
    "mds/linear-algebra#thm-eigen-triangular",
    "mds/linear-algebra#def-eigenvalue"
   ],
   [
    "mds/linear-algebra#thm-eigen-triangular",
+   "mds/linear-algebra#def-identity-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-triangular",
+   "mds/linear-algebra#def-matrix-addition"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-triangular",
    "mds/linear-algebra#def-triangular-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-triangular",
+   "mds/linear-algebra#thm-back-substitution"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-triangular",
+   "mds/linear-algebra#thm-eigenvalue-singular"
   ],
   [
    "mds/linear-algebra#thm-eigenvalue-singular",
@@ -16702,8 +17522,36 @@
    "mds/linear-algebra#def-invertible-matrix"
   ],
   [
+   "mds/linear-algebra#thm-eigenvalue-singular",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-eigenvalue-singular",
+   "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-eigenvalue-singular",
+   "mds/linear-algebra#thm-null-space-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-eigenvalue-singular",
+   "mds/linear-algebra#thm-scalar-matmul"
+  ],
+  [
    "mds/linear-algebra#thm-eigenvectors-independent",
    "mds/linear-algebra#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra#thm-eigenvectors-independent",
+   "mds/linear-algebra#thm-eigen-shift-power"
+  ],
+  [
+   "mds/linear-algebra#thm-eigenvectors-independent",
+   "mds/linear-algebra#thm-matvec-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-eigenvectors-independent",
+   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-extend-basis",
@@ -16715,15 +17563,83 @@
   ],
   [
    "mds/linear-algebra#thm-extend-basis",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#thm-extend-basis",
    "mds/linear-algebra#def-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-extend-basis",
+   "mds/linear-algebra#thm-add-outside-span"
+  ],
+  [
+   "mds/linear-algebra#thm-extend-basis",
+   "mds/linear-algebra#thm-many-vectors-dependent"
+  ],
+  [
+   "mds/linear-algebra#thm-frobenius-norm-columns",
+   "mds/linear-algebra#def-euclidean-norm"
+  ],
+  [
+   "mds/linear-algebra#thm-fundamental-subspaces",
+   "mds/linear-algebra#def-nullity"
+  ],
+  [
+   "mds/linear-algebra#thm-fundamental-subspaces",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#thm-fundamental-subspaces",
+   "mds/linear-algebra#thm-complement-null-space"
+  ],
+  [
+   "mds/linear-algebra#thm-fundamental-subspaces",
+   "mds/linear-algebra#thm-double-complement"
+  ],
+  [
+   "mds/linear-algebra#thm-fundamental-subspaces",
+   "mds/linear-algebra#thm-orthogonal-direct-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-fundamental-subspaces",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-fundamental-subspaces",
+   "mds/linear-algebra#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra#thm-fundamental-subspaces",
+   "mds/linear-algebra#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-generalized-inverse-invertible",
+   "mds/linear-algebra#def-generalized-inverse"
   ],
   [
    "mds/linear-algebra#thm-generalized-inverse-invertible",
    "mds/linear-algebra#def-invertible-matrix"
   ],
   [
+   "mds/linear-algebra#thm-generalized-inverse-invertible",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-generalized-inverse-invertible",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-generalized-inverse-invertible",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
    "mds/linear-algebra#thm-generalized-inverse-solves",
    "mds/linear-algebra#def-generalized-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-generalized-inverse-solves",
+   "mds/linear-algebra#thm-matmul-assoc"
   ],
   [
    "mds/linear-algebra#thm-gram-invertible",
@@ -16742,6 +17658,10 @@
    "mds/linear-algebra#def-symmetric-matrix"
   ],
   [
+   "mds/linear-algebra#thm-gram-properties",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
    "mds/linear-algebra#thm-gram-schmidt",
    "mds/linear-algebra#def-gram-schmidt"
   ],
@@ -16750,8 +17670,64 @@
    "mds/linear-algebra#def-orthonormal-basis"
   ],
   [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#def-orthonormal-vectors"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#thm-add-outside-span"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#thm-dot-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#thm-dot-linear-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#thm-lincom-symmetric"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#thm-norm-properties"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#thm-orthonormal-expansion"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#thm-orthonormal-independent"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/linear-algebra#thm-span-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-half-space-dimension",
+   "mds/linear-algebra#def-dimension"
+  ],
+  [
    "mds/linear-algebra#thm-half-space-dimension",
    "mds/linear-algebra#def-half-space"
+  ],
+  [
+   "mds/linear-algebra#thm-half-space-dimension",
+   "mds/linear-algebra#thm-hyperplane-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix",
+   "mds/linear-algebra#cor-inverse-symmetric"
   ],
   [
    "mds/linear-algebra#thm-hat-matrix",
@@ -16762,8 +17738,48 @@
    "mds/linear-algebra#def-projection-matrix"
   ],
   [
+   "mds/linear-algebra#thm-hat-matrix",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix-projects",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix-projects",
+   "mds/linear-algebra#def-dimension"
+  ],
+  [
    "mds/linear-algebra#thm-hat-matrix-projects",
    "mds/linear-algebra#def-hat-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix-projects",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix-projects",
+   "mds/linear-algebra#thm-hat-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix-projects",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix-projects",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix-projects",
+   "mds/linear-algebra#thm-projection-matrix-projects"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix-projects",
+   "mds/linear-algebra#thm-projector-onb"
+  ],
+  [
+   "mds/linear-algebra#thm-hat-matrix-projects",
+   "mds/linear-algebra#thm-rank-dim"
   ],
   [
    "mds/linear-algebra#thm-hermitian-adjoint-properties",
@@ -16803,6 +17819,10 @@
   ],
   [
    "mds/linear-algebra#thm-hyperplane-subspace",
+   "mds/linear-algebra#cor-rank-bound"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-subspace",
    "mds/linear-algebra#def-affine-subspace"
   ],
   [
@@ -16815,11 +17835,39 @@
   ],
   [
    "mds/linear-algebra#thm-hyperplane-subspace",
+   "mds/linear-algebra#def-null-space"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-subspace",
+   "mds/linear-algebra#def-nullity"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-subspace",
    "mds/linear-algebra#def-orthogonal-vectors"
   ],
   [
    "mds/linear-algebra#thm-hyperplane-subspace",
+   "mds/linear-algebra#def-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-subspace",
    "mds/linear-algebra#def-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-subspace",
+   "mds/linear-algebra#thm-matrix-map-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-subspace",
+   "mds/linear-algebra#thm-matvec-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-subspace",
+   "mds/linear-algebra#thm-null-space-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-subspace",
+   "mds/linear-algebra#thm-rank-nullity"
   ],
   [
    "mds/linear-algebra#thm-independent-null-space",
@@ -16835,7 +17883,19 @@
   ],
   [
    "mds/linear-algebra#thm-inner-product-sign",
+   "mds/algebra-trigonometry#def-cosine-sine"
+  ],
+  [
+   "mds/linear-algebra#thm-inner-product-sign",
    "mds/linear-algebra#def-angle"
+  ],
+  [
+   "mds/linear-algebra#thm-inner-product-sign",
+   "mds/linear-algebra#def-cosine-similarity"
+  ],
+  [
+   "mds/linear-algebra#thm-inner-product-sign",
+   "mds/linear-algebra-inner-products#def-norm"
   ],
   [
    "mds/linear-algebra#thm-inner-product-sign",
@@ -16846,8 +17906,48 @@
    "mds/vector-calculus#def-direction"
   ],
   [
+   "mds/linear-algebra#thm-inverse-product",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-inverse-product",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-inverse-product",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-inverse-transpose",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-inverse-transpose",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
    "mds/linear-algebra#thm-invertible-cancel",
    "mds/linear-algebra#def-invertible-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-cancel",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-cancel",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-cancel",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#cor-solution-unique"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#def-dimension"
   ],
   [
    "mds/linear-algebra#thm-invertible-rank",
@@ -16855,11 +17955,51 @@
   ],
   [
    "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#def-indicator-vector"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
    "mds/linear-algebra#def-invertible-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra#thm-invertible-rank",
+   "mds/linear-algebra#thm-scalar-matmul"
   ],
   [
    "mds/linear-algebra#thm-linear-map-lincom",
    "mds/linear-algebra#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra#thm-linear-map-lincom",
+   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-linear-map-matrix",
@@ -16867,11 +18007,31 @@
   ],
   [
    "mds/linear-algebra#thm-linear-map-matrix",
+   "mds/linear-algebra#def-linear-combination"
+  ],
+  [
+   "mds/linear-algebra#thm-linear-map-matrix",
    "mds/linear-algebra#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra#thm-linear-map-matrix",
+   "mds/linear-algebra#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-linear-map-matrix",
+   "mds/linear-algebra#thm-linear-map-lincom"
+  ],
+  [
+   "mds/linear-algebra#thm-linear-map-matrix",
+   "mds/linear-algebra#thm-standard-basis-expansion"
   ],
   [
    "mds/linear-algebra#thm-linear-map-zero",
    "mds/linear-algebra#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra#thm-linear-map-zero",
+   "mds/linear-algebra#def-scalar-mult"
   ],
   [
    "mds/linear-algebra#thm-lu-solve",
@@ -16882,8 +18042,20 @@
    "mds/linear-algebra#thm-back-substitution"
   ],
   [
+   "mds/linear-algebra#thm-lu-solve",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
    "mds/linear-algebra#thm-many-vectors-dependent",
    "mds/linear-algebra#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra#thm-many-vectors-dependent",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-many-vectors-dependent",
+   "mds/proof-writing#def-theorem"
   ],
   [
    "mds/linear-algebra#thm-matadd-assoc",
@@ -16894,8 +18066,16 @@
    "mds/algebra#def-commutative"
   ],
   [
+   "mds/linear-algebra#thm-matmul-assoc",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
    "mds/linear-algebra#thm-matmul-distrib",
    "mds/algebra#def-distributes-over"
+  ],
+  [
+   "mds/linear-algebra#thm-matmul-product-of-sums",
+   "mds/linear-algebra#thm-matmul-distrib"
   ],
   [
    "mds/linear-algebra#thm-matrix-induced-inner-product",
@@ -16911,11 +18091,59 @@
   ],
   [
    "mds/linear-algebra#thm-matrix-map-linear",
+   "mds/algebra#thm-mult-distr"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-map-linear",
+   "mds/algebra#thm-prod-symmetric"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-map-linear",
+   "mds/algebra#thm-sum-constant-factor"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-map-linear",
+   "mds/algebra#thm-sum-of-sums"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-map-linear",
    "mds/linear-algebra#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-map-linear",
+   "mds/linear-algebra#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-map-linear",
+   "mds/linear-algebra#def-scalar-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-map-linear",
+   "mds/linear-algebra#def-vector-addition"
+  ],
+  [
+   "mds/linear-algebra#thm-matvec-columns",
+   "mds/linear-algebra#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-matvec-linear",
+   "mds/linear-algebra#thm-linear-map-lincom"
+  ],
+  [
+   "mds/linear-algebra#thm-matvec-linear",
+   "mds/linear-algebra#thm-matrix-map-linear"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-eigendecomposition",
    "mds/linear-algebra#def-eigendecomposition"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra#thm-moore-penrose-unique"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-eigendecomposition",
@@ -16931,7 +18159,27 @@
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#cor-inverse-symmetric"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#cor-rank-bound"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#def-matrix-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
    "mds/linear-algebra#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#def-rank"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-exists",
@@ -16939,11 +18187,71 @@
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#thm-gram-invertible"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
    "mds/linear-algebra#thm-moore-penrose-unique"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#thm-rank-factorization"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#thm-rank-product"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-exists",
+   "mds/linear-algebra#thm-transpose-product"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-full-rank",
    "mds/linear-algebra#def-full-column-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#thm-gram-invertible"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#thm-inverse-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#thm-moore-penrose-unique"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#thm-transpose-product"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-full-rank",
@@ -16952,6 +18260,10 @@
   [
    "mds/linear-algebra#thm-moore-penrose-full-rank",
    "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-generalized-inverse",
@@ -16963,11 +18275,43 @@
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-gram",
+   "mds/linear-algebra#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-gram",
+   "mds/linear-algebra#thm-moore-penrose-unique"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-gram",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-gram",
    "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-gram",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-least-squares",
    "mds/linear-algebra#def-least-squares"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "mds/linear-algebra#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "mds/linear-algebra-inner-products#def-inner-product"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "mds/linear-algebra-inner-products#def-norm"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-least-squares",
@@ -16978,12 +18322,52 @@
    "mds/linear-algebra#def-least-squares"
   ],
   [
+   "mds/linear-algebra#thm-moore-penrose-minimum-norm",
+   "mds/linear-algebra#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-minimum-norm",
+   "mds/linear-algebra#thm-moore-penrose-least-squares"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-minimum-norm",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
    "mds/linear-algebra#thm-moore-penrose-unique",
    "mds/linear-algebra#def-moore-penrose"
   ],
   [
+   "mds/linear-algebra#thm-moore-penrose-unique",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-unique",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-norm-properties",
+   "mds/linear-algebra#def-scalar-mult"
+  ],
+  [
    "mds/linear-algebra#thm-norm-sum-square",
    "mds/linear-algebra#def-orthogonal-vectors"
+  ],
+  [
+   "mds/linear-algebra#thm-norm-sum-square",
+   "mds/linear-algebra#thm-dot-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-norm-sum-square",
+   "mds/linear-algebra#thm-lincom-symmetric"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#cor-solution-unique"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#def-column-space"
   ],
   [
    "mds/linear-algebra#thm-normal-equations",
@@ -16995,7 +18379,51 @@
   ],
   [
    "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
    "mds/linear-algebra#def-orthogonal-projection"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#thm-closest-point"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#thm-complement-null-space"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#thm-gram-invertible"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#thm-orthogonal-direct-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-normal-equations",
+   "mds/linear-algebra#thm-scalar-matmul"
+  ],
+  [
+   "mds/linear-algebra#thm-null-gram",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-null-gram",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-null-space-subspace",
+   "mds/linear-algebra#def-matvec-mult"
   ],
   [
    "mds/linear-algebra#thm-null-space-subspace",
@@ -17006,6 +18434,10 @@
    "mds/linear-algebra#def-subspace"
   ],
   [
+   "mds/linear-algebra#thm-null-space-subspace",
+   "mds/linear-algebra#thm-matmul-distrib"
+  ],
+  [
    "mds/linear-algebra#thm-orthogonal-complement-subspace",
    "mds/linear-algebra#def-orthogonal-complement"
   ],
@@ -17014,20 +18446,96 @@
    "mds/linear-algebra#def-subspace"
   ],
   [
+   "mds/linear-algebra#thm-orthogonal-complement-subspace",
+   "mds/linear-algebra#thm-dot-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#def-dimension"
+  ],
+  [
    "mds/linear-algebra#thm-orthogonal-direct-sum",
    "mds/linear-algebra#def-direct-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#def-nullity"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-complement-null-space"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-dim-sum"
   ],
   [
    "mds/linear-algebra#thm-orthogonal-direct-sum",
    "mds/linear-algebra#thm-direct-sum-equiv"
   ],
   [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-extend-basis"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-orthogonal-complement-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-subspace-equal-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-subspace-zero"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-direct-sum",
+   "mds/linear-algebra#thm-sum-intersection-subspace"
+  ],
+  [
    "mds/linear-algebra#thm-orthogonal-norm",
    "mds/linear-algebra#def-orthogonal-matrix"
   ],
   [
+   "mds/linear-algebra#thm-orthogonal-norm",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-orthogonal-norm",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
    "mds/linear-algebra#thm-orthonormal-expansion",
    "mds/linear-algebra#def-orthonormal-basis"
+  ],
+  [
+   "mds/linear-algebra#thm-orthonormal-expansion",
+   "mds/linear-algebra#def-orthonormal-vectors"
+  ],
+  [
+   "mds/linear-algebra#thm-orthonormal-expansion",
+   "mds/linear-algebra#thm-dot-linear-sum"
   ],
   [
    "mds/linear-algebra#thm-orthonormal-independent",
@@ -17038,8 +18546,24 @@
    "mds/linear-algebra#def-orthonormal-vectors"
   ],
   [
+   "mds/linear-algebra#thm-orthonormal-independent",
+   "mds/linear-algebra#thm-dot-linear-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-outer-product-rank",
+   "mds/linear-algebra#def-linearly-independent"
+  ],
+  [
    "mds/linear-algebra#thm-outer-product-rank",
    "mds/linear-algebra#def-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#def-matrix-transpose"
   ],
   [
    "mds/linear-algebra#thm-pd-gram",
@@ -17048,6 +18572,50 @@
   [
    "mds/linear-algebra#thm-pd-gram",
    "mds/linear-algebra#def-positive-semidefinite"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#def-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#thm-definite-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#thm-diagonalizable-powers"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#thm-inverse-product"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#thm-matvec-columns"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#thm-norm-properties"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#thm-spectral"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-gram",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-inverse",
+   "mds/linear-algebra#cor-inverse-symmetric"
   ],
   [
    "mds/linear-algebra#thm-pd-inverse",
@@ -17059,7 +18627,23 @@
   ],
   [
    "mds/linear-algebra#thm-pd-inverse",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-inverse",
+   "mds/linear-algebra#def-orthogonal-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-inverse",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-inverse",
+   "mds/linear-algebra#thm-definite-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-inverse",
+   "mds/linear-algebra#thm-identity"
   ],
   [
    "mds/linear-algebra#thm-pd-invertible",
@@ -17070,12 +18654,68 @@
    "mds/linear-algebra#def-positive-definite"
   ],
   [
+   "mds/linear-algebra#thm-pd-invertible",
+   "mds/linear-algebra#def-quadratic-form"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-invertible",
+   "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-operations",
+   "mds/linear-algebra#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-operations",
+   "mds/linear-algebra#def-matrix-transpose"
+  ],
+  [
    "mds/linear-algebra#thm-pd-operations",
    "mds/linear-algebra#def-positive-definite"
   ],
   [
+   "mds/linear-algebra#thm-pd-operations",
+   "mds/linear-algebra#def-scalar-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-operations",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-operations",
+   "mds/linear-algebra#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-operations",
+   "mds/linear-algebra#thm-matvec-columns"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-operations",
+   "mds/linear-algebra#thm-scalar-matmul"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-operations",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-operations",
+   "mds/linear-algebra#thm-transpose-sum"
+  ],
+  [
    "mds/linear-algebra#thm-pd-submatrix",
    "mds/linear-algebra#def-block-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-submatrix",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-submatrix",
+   "mds/linear-algebra#def-indicator-vector"
+  ],
+  [
+   "mds/linear-algebra#thm-pd-submatrix",
+   "mds/linear-algebra#def-matvec-mult"
   ],
   [
    "mds/linear-algebra#thm-pd-submatrix",
@@ -17095,7 +18735,27 @@
   ],
   [
    "mds/linear-algebra#thm-projection-diagonal-bounds",
+   "mds/linear-algebra#def-idempotent-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-projection-diagonal-bounds",
    "mds/linear-algebra#def-projection-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-projection-diagonal-bounds",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-projection-matrix-projects",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
+   "mds/linear-algebra#thm-projection-matrix-projects",
+   "mds/linear-algebra#def-indicator-vector"
+  ],
+  [
+   "mds/linear-algebra#thm-projection-matrix-projects",
+   "mds/linear-algebra#def-matrix-power"
   ],
   [
    "mds/linear-algebra#thm-projection-matrix-projects",
@@ -17106,8 +18766,32 @@
    "mds/linear-algebra#def-projection-matrix"
   ],
   [
+   "mds/linear-algebra#thm-projection-matrix-projects",
+   "mds/linear-algebra#thm-complement-null-space"
+  ],
+  [
+   "mds/linear-algebra#thm-projection-matrix-projects",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-projection-matrix-projects",
+   "mds/linear-algebra#thm-matvec-columns"
+  ],
+  [
+   "mds/linear-algebra#thm-projection-matrix-projects",
+   "mds/linear-algebra#thm-matvec-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-projection-matrix-projects",
+   "mds/linear-algebra#thm-orthogonal-direct-sum"
+  ],
+  [
    "mds/linear-algebra#thm-projection-orthogonal",
    "mds/linear-algebra#def-projection-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#def-column-space"
   ],
   [
    "mds/linear-algebra#thm-projector-generalized-inverse",
@@ -17122,8 +18806,72 @@
    "mds/linear-algebra#def-orthogonal-projection"
   ],
   [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-complement-null-space"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-generalized-inverse-invertible"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-gram-invertible"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-matvec-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-orthogonal-direct-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-projection-matrix-projects"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-generalized-inverse",
+   "mds/linear-algebra#thm-subspace-equal-dim"
+  ],
+  [
    "mds/linear-algebra#thm-projector-onb",
    "mds/linear-algebra#cor-orthonormal-basis-exists"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#def-identity-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#def-matrix-transpose"
   ],
   [
    "mds/linear-algebra#thm-projector-onb",
@@ -17131,7 +18879,43 @@
   ],
   [
    "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#def-orthonormal-vectors"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
    "mds/linear-algebra#def-projection-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#thm-complement-null-space"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#thm-matvec-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#thm-orthogonal-direct-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-projector-onb",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-psd-plus-multiple-identity",
+   "mds/linear-algebra#def-matrix-transpose"
   ],
   [
    "mds/linear-algebra#thm-psd-plus-multiple-identity",
@@ -17143,7 +18927,39 @@
   ],
   [
    "mds/linear-algebra#thm-psd-plus-multiple-identity",
+   "mds/linear-algebra#def-scalar-mult"
+  ],
+  [
+   "mds/linear-algebra#thm-psd-plus-multiple-identity",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-psd-plus-multiple-identity",
+   "mds/linear-algebra#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra#thm-psd-plus-multiple-identity",
    "mds/linear-algebra#thm-pd-invertible"
+  ],
+  [
+   "mds/linear-algebra#thm-psd-plus-multiple-identity",
+   "mds/linear-algebra#thm-scalar-matmul"
+  ],
+  [
+   "mds/linear-algebra#thm-psd-plus-multiple-identity",
+   "mds/linear-algebra#thm-transpose-sum"
+  ],
+  [
+   "mds/linear-algebra#thm-qr",
+   "mds/linear-algebra#def-full-column-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-qr",
+   "mds/linear-algebra#def-gram-schmidt"
+  ],
+  [
+   "mds/linear-algebra#thm-qr",
+   "mds/linear-algebra#def-matrix-mult"
   ],
   [
    "mds/linear-algebra#thm-qr",
@@ -17152,6 +18968,18 @@
   [
    "mds/linear-algebra#thm-qr",
    "mds/linear-algebra#def-triangular-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-qr",
+   "mds/linear-algebra#thm-gram-schmidt"
+  ],
+  [
+   "mds/linear-algebra#thm-qr",
+   "mds/linear-algebra#thm-matvec-columns"
+  ],
+  [
+   "mds/linear-algebra#thm-qr-least-squares",
+   "mds/linear-algebra#cor-solution-unique"
   ],
   [
    "mds/linear-algebra#thm-qr-least-squares",
@@ -17163,15 +18991,211 @@
   ],
   [
    "mds/linear-algebra#thm-qr-least-squares",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-qr-least-squares",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-qr-least-squares",
+   "mds/linear-algebra#thm-normal-equations"
+  ],
+  [
+   "mds/linear-algebra#thm-qr-least-squares",
+   "mds/linear-algebra#thm-projector-onb"
+  ],
+  [
+   "mds/linear-algebra#thm-qr-least-squares",
    "mds/linear-algebra#thm-qr"
+  ],
+  [
+   "mds/linear-algebra#thm-qr-least-squares",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-quadratic-form-additive",
+   "mds/linear-algebra#thm-matmul-distrib"
   ],
   [
    "mds/linear-algebra#thm-quadratic-form-symmetric",
    "mds/linear-algebra#def-symmetric-part"
   ],
   [
+   "mds/linear-algebra#thm-quadratic-form-symmetric",
+   "mds/linear-algebra#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra#thm-quadratic-form-symmetric",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-dim",
+   "mds/linear-algebra#def-basis"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-dim",
+   "mds/linear-algebra#def-dimension"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-dim",
+   "mds/linear-algebra#def-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-dim",
+   "mds/linear-algebra#thm-add-outside-span"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-dim",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-dim",
+   "mds/linear-algebra#thm-span-subspace"
+  ],
+  [
    "mds/linear-algebra#thm-rank-factorization",
    "mds/linear-algebra#def-rank-factorization"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-factorization",
+   "mds/linear-algebra#thm-extend-basis"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-factorization",
+   "mds/linear-algebra#thm-matvec-columns"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-factorization",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-nullity",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-nullity",
+   "mds/linear-algebra#thm-basis-size"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-nullity",
+   "mds/linear-algebra#thm-extend-basis"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-nullity",
+   "mds/linear-algebra#thm-matvec-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-nullity",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-product",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-product",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-product",
+   "mds/linear-algebra#thm-dim-bound"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-product",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-product",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-product-right",
+   "mds/linear-algebra#thm-rank-product"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-product-right",
+   "mds/linear-algebra#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-product-right",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-subadditive",
+   "mds/linear-algebra#cor-dim-subadditive"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-subadditive",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-subadditive",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-subadditive",
+   "mds/linear-algebra#thm-dim-bound"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-subadditive",
+   "mds/linear-algebra#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-subadditive",
+   "mds/linear-algebra#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-subadditive",
+   "mds/linear-algebra#thm-sum-intersection-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-transpose",
+   "mds/linear-algebra#def-nullity"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-transpose",
+   "mds/linear-algebra#thm-null-gram"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-transpose",
+   "mds/linear-algebra#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra#thm-rank-transpose",
+   "mds/linear-algebra#thm-rank-product"
+  ],
+  [
+   "mds/linear-algebra#thm-row-null-disjoint",
+   "mds/linear-algebra#def-column-space"
+  ],
+  [
+   "mds/linear-algebra#thm-row-null-disjoint",
+   "mds/linear-algebra#def-null-space"
+  ],
+  [
+   "mds/linear-algebra#thm-row-null-disjoint",
+   "mds/linear-algebra#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra#thm-row-null-disjoint",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-row-null-disjoint",
+   "mds/linear-algebra#thm-null-space-subspace"
+  ],
+  [
+   "mds/linear-algebra#thm-row-null-disjoint",
+   "mds/linear-algebra#thm-subspace-zero"
+  ],
+  [
+   "mds/linear-algebra#thm-row-null-disjoint",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-scalar-matmul",
+   "mds/linear-algebra#def-matrix-mult"
   ],
   [
    "mds/linear-algebra#thm-scalar-matmul",
@@ -17180,6 +19204,22 @@
   [
    "mds/linear-algebra#thm-scalar-matmul",
    "mds/linear-algebra#thm-matadd-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-scalar-matmul",
+   "mds/linear-algebra#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra#thm-scalar-transpose",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-schur-test",
+   "mds/linear-algebra#cor-inverse-symmetric"
+  ],
+  [
+   "mds/linear-algebra#thm-schur-test",
+   "mds/linear-algebra#def-matrix-transpose"
   ],
   [
    "mds/linear-algebra#thm-schur-test",
@@ -17194,8 +19234,40 @@
    "mds/linear-algebra#thm-block-quadratic"
   ],
   [
+   "mds/linear-algebra#thm-schur-test",
+   "mds/linear-algebra#thm-pd-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-schur-test",
+   "mds/linear-algebra#thm-pd-submatrix"
+  ],
+  [
+   "mds/linear-algebra#thm-schur-test",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-similar-eigenvalues",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-similar-eigenvalues",
+   "mds/linear-algebra#def-matvec-mult"
+  ],
+  [
    "mds/linear-algebra#thm-similar-eigenvalues",
    "mds/linear-algebra#def-similar"
+  ],
+  [
+   "mds/linear-algebra#thm-similar-eigenvalues",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-similar-eigenvalues",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-similar-eigenvalues",
+   "mds/linear-algebra#thm-scalar-matmul"
   ],
   [
    "mds/linear-algebra#thm-solution-set",
@@ -17204,6 +19276,30 @@
   [
    "mds/linear-algebra#thm-solution-set",
    "mds/linear-algebra#def-generalized-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-solution-set",
+   "mds/linear-algebra#thm-consistency"
+  ],
+  [
+   "mds/linear-algebra#thm-solution-set",
+   "mds/linear-algebra#thm-generalized-inverse-solves"
+  ],
+  [
+   "mds/linear-algebra#thm-solution-set",
+   "mds/linear-algebra#thm-identity"
+  ],
+  [
+   "mds/linear-algebra#thm-solution-set",
+   "mds/linear-algebra#thm-matmul-assoc"
+  ],
+  [
+   "mds/linear-algebra#thm-solution-set",
+   "mds/linear-algebra#thm-matvec-linear"
+  ],
+  [
+   "mds/linear-algebra#thm-solution-set",
+   "mds/linear-algebra#thm-scalar-matmul"
   ],
   [
    "mds/linear-algebra#thm-span-subspace",
@@ -17242,6 +19338,22 @@
    "mds/linear-algebra#def-dimension"
   ],
   [
+   "mds/linear-algebra#thm-subspace-equal-dim",
+   "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#thm-subspace-equal-dim",
+   "mds/linear-algebra#thm-add-outside-span"
+  ],
+  [
+   "mds/linear-algebra#thm-subspace-equal-dim",
+   "mds/linear-algebra#thm-dim-bound"
+  ],
+  [
+   "mds/linear-algebra#thm-subspace-equal-dim",
+   "mds/linear-algebra#thm-extend-basis"
+  ],
+  [
    "mds/linear-algebra#thm-subspace-zero",
    "mds/linear-algebra#def-subspace"
   ],
@@ -17266,6 +19378,10 @@
    "mds/linear-algebra#def-subspace-sum"
   ],
   [
+   "mds/linear-algebra#thm-sum-intersection-subspace",
+   "mds/linear-algebra#thm-subspace-zero"
+  ],
+  [
    "mds/linear-algebra#thm-svd",
    "mds/linear-algebra#def-orthogonal-matrix"
   ],
@@ -17279,11 +19395,27 @@
   ],
   [
    "mds/linear-algebra#thm-svd-evd",
+   "mds/linear-algebra#def-indicator-vector"
+  ],
+  [
+   "mds/linear-algebra#thm-svd-evd",
+   "mds/linear-algebra#def-matrix-transpose"
+  ],
+  [
+   "mds/linear-algebra#thm-svd-evd",
    "mds/linear-algebra#def-svd"
   ],
   [
    "mds/linear-algebra#thm-svd-evd",
    "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-svd-evd",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra#def-dot-product"
   ],
   [
    "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
@@ -17299,11 +19431,27 @@
   ],
   [
    "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
    "mds/linear-algebra-special-matrices#def-eigenvalue"
   ],
   [
    "mds/linear-algebra#thm-symmetric-eigenvectors-orthogonal",
    "mds/linear-algebra-special-matrices#def-eigenvector"
+  ],
+  [
+   "mds/linear-algebra#thm-triangle-inequality",
+   "mds/linear-algebra#thm-cauchy-schwarz"
+  ],
+  [
+   "mds/linear-algebra#thm-triangle-inequality",
+   "mds/linear-algebra#thm-norm-properties"
+  ],
+  [
+   "mds/linear-algebra#thm-triangle-inequality",
+   "mds/linear-algebra#thm-norm-sum-square"
   ],
   [
    "mds/linear-algebra#thm-vector-p-norm",
@@ -17316,6 +19464,18 @@
   [
    "mds/linear-algebra#thm-whitening-inner-product",
    "mds/linear-algebra#def-matrix-induced-inner-product"
+  ],
+  [
+   "mds/linear-algebra#thm-zhz-sum-squares",
+   "mds/algebra#def-complex-modulus"
+  ],
+  [
+   "mds/linear-algebra#thm-zhz-sum-squares",
+   "mds/algebra#thm-conj-product"
+  ],
+  [
+   "mds/linear-algebra#thm-zhz-sum-squares",
+   "mds/linear-algebra#def-conjugate-transpose"
   ],
   [
    "mds/linear-algebra-complex#def-complex-conjugate-matrix",
@@ -17346,6 +19506,30 @@
    "mds/linear-algebra-complex#def-skew-hermitian-matrix"
   ],
   [
+   "mds/linear-algebra-complex#thm-zhz-sum-squares",
+   "mds/algebra#def-complex-modulus"
+  ],
+  [
+   "mds/linear-algebra-complex#thm-zhz-sum-squares",
+   "mds/algebra#thm-conj-product"
+  ],
+  [
+   "mds/linear-algebra-complex#thm-zhz-sum-squares",
+   "mds/linear-algebra-complex#def-conjugate-transpose"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#cor-distinct-diagonalizable",
+   "mds/linear-algebra-diagonalization#thm-diagonalizable"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#cor-distinct-diagonalizable",
+   "mds/linear-algebra-diagonalization#thm-eigenvectors-independent"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#cor-gram-invertible-iff",
+   "mds/linear-algebra-diagonalization#thm-invertible-rank"
+  ],
+  [
    "mds/linear-algebra-diagonalization#def-diagonalizable",
    "mds/linear-algebra-diagonalization#def-similar"
   ],
@@ -17366,16 +19550,80 @@
    "mds/linear-algebra-diagonalization#def-block-matrix"
   ],
   [
+   "mds/linear-algebra-diagonalization#thm-cholesky",
+   "mds/linear-algebra-diagonalization#def-schur-complement"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-cholesky",
+   "mds/linear-algebra-diagonalization#thm-pd-gram"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-cholesky",
+   "mds/linear-algebra-diagonalization#thm-pd-submatrix"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-cholesky",
+   "mds/linear-algebra-diagonalization#thm-schur-test"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-cholesky",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
    "mds/linear-algebra-diagonalization#thm-diagonalizable",
    "mds/linear-algebra-diagonalization#def-diagonalizable"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-diagonalizable",
+   "mds/linear-algebra-diagonalization#thm-invertible-rank"
   ],
   [
    "mds/linear-algebra-diagonalization#thm-diagonalizable-powers",
    "mds/linear-algebra-diagonalization#def-diagonalizable"
   ],
   [
+   "mds/linear-algebra-diagonalization#thm-diagonalizable-powers",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-eigen-idempotent-orthogonal",
+   "mds/linear-algebra-diagonalization#thm-eigen-shift-power"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-eigen-shift-power",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-eigen-triangular",
+   "mds/linear-algebra-diagonalization#thm-eigenvalue-singular"
+  ],
+  [
    "mds/linear-algebra-diagonalization#thm-eigenvalue-singular",
    "mds/linear-algebra-diagonalization#def-eigenspace"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-eigenvalue-singular",
+   "mds/linear-algebra-diagonalization#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-eigenvectors-independent",
+   "mds/linear-algebra-diagonalization#thm-eigen-shift-power"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-eigenvectors-independent",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-pd-gram",
+   "mds/linear-algebra-diagonalization#thm-diagonalizable-powers"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-pd-gram",
+   "mds/linear-algebra-diagonalization#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-pd-invertible",
+   "mds/linear-algebra-diagonalization#thm-invertible-rank"
   ],
   [
    "mds/linear-algebra-diagonalization#thm-pd-submatrix",
@@ -17394,8 +19642,16 @@
    "mds/linear-algebra-diagonalization#thm-block-quadratic"
   ],
   [
+   "mds/linear-algebra-diagonalization#thm-schur-test",
+   "mds/linear-algebra-diagonalization#thm-pd-submatrix"
+  ],
+  [
    "mds/linear-algebra-diagonalization#thm-similar-eigenvalues",
    "mds/linear-algebra-diagonalization#def-similar"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#cor-dim-subadditive",
+   "mds/linear-algebra-direct-sums#thm-dim-sum"
   ],
   [
    "mds/linear-algebra-direct-sums#def-complementary-subspaces",
@@ -17414,24 +19670,88 @@
    "mds/linear-algebra-direct-sums#thm-direct-sum-equiv"
   ],
   [
+   "mds/linear-algebra-direct-sums#thm-dim-sum",
+   "mds/linear-algebra-direct-sums#thm-sum-intersection-subspace"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-direct-sum-equiv",
+   "mds/linear-algebra-direct-sums#cor-dim-subadditive"
+  ],
+  [
    "mds/linear-algebra-direct-sums#thm-direct-sum-equiv",
    "mds/linear-algebra-direct-sums#def-direct-sum"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-double-complement",
+   "mds/linear-algebra-direct-sums#def-orthogonal-complement"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-double-complement",
+   "mds/linear-algebra-direct-sums#thm-orthogonal-complement-subspace"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-double-complement",
+   "mds/linear-algebra-direct-sums#thm-orthogonal-direct-sum"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-fundamental-subspaces",
+   "mds/linear-algebra-direct-sums#thm-complement-null-space"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-fundamental-subspaces",
+   "mds/linear-algebra-direct-sums#thm-double-complement"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-fundamental-subspaces",
+   "mds/linear-algebra-direct-sums#thm-orthogonal-direct-sum"
   ],
   [
    "mds/linear-algebra-direct-sums#thm-orthogonal-complement-subspace",
    "mds/linear-algebra-direct-sums#def-orthogonal-complement"
   ],
   [
+   "mds/linear-algebra-direct-sums#thm-orthogonal-complement-subspace",
+   "mds/linear-algebra-direct-sums#thm-dot-linear"
+  ],
+  [
    "mds/linear-algebra-direct-sums#thm-orthogonal-direct-sum",
    "mds/linear-algebra-direct-sums#def-direct-sum"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-orthogonal-direct-sum",
+   "mds/linear-algebra-direct-sums#thm-complement-null-space"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-orthogonal-direct-sum",
+   "mds/linear-algebra-direct-sums#thm-dim-sum"
   ],
   [
    "mds/linear-algebra-direct-sums#thm-orthogonal-direct-sum",
    "mds/linear-algebra-direct-sums#thm-direct-sum-equiv"
   ],
   [
+   "mds/linear-algebra-direct-sums#thm-orthogonal-direct-sum",
+   "mds/linear-algebra-direct-sums#thm-orthogonal-complement-subspace"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-orthogonal-direct-sum",
+   "mds/linear-algebra-direct-sums#thm-sum-intersection-subspace"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-rank-subadditive",
+   "mds/linear-algebra-direct-sums#cor-dim-subadditive"
+  ],
+  [
+   "mds/linear-algebra-direct-sums#thm-rank-subadditive",
+   "mds/linear-algebra-direct-sums#thm-sum-intersection-subspace"
+  ],
+  [
    "mds/linear-algebra-direct-sums#thm-sum-intersection-subspace",
    "mds/linear-algebra-direct-sums#def-subspace-sum"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-cosine-similarity-unit-vectors",
+   "mds/linear-algebra-inner-products#def-cosine-similarity-inner-product-space"
   ],
   [
    "mds/linear-algebra-inner-products#cor-cosine-similarity-unit-vectors",
@@ -17440,6 +19760,18 @@
   [
    "mds/linear-algebra-inner-products#cor-orthonormal-basis-exists",
    "mds/linear-algebra-inner-products#def-orthonormal-basis"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-orthonormal-basis-exists",
+   "mds/linear-algebra-inner-products#thm-gram-schmidt"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-orthonormal-basis-exists",
+   "mds/linear-algebra-inner-products#thm-orthonormal-independent"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-orthonormal-basis-exists",
+   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra-inner-products#cor-pearson-angle",
@@ -17456,6 +19788,14 @@
   [
    "mds/linear-algebra-inner-products#cor-right-angle-orthogonal",
    "mds/linear-algebra-inner-products#def-angle"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-right-angle-orthogonal",
+   "mds/linear-algebra-inner-products#def-cosine-similarity"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-right-angle-orthogonal",
+   "mds/linear-algebra-inner-products#thm-norm-properties"
   ],
   [
    "mds/linear-algebra-inner-products#def-angle",
@@ -17514,6 +19854,14 @@
    "mds/linear-algebra-inner-products#def-inner-product-space"
   ],
   [
+   "mds/linear-algebra-inner-products#thm-cauchy-schwarz",
+   "mds/linear-algebra-inner-products#thm-norm-properties"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-cauchy-schwarz",
+   "mds/linear-algebra-inner-products#thm-norm-sum-square"
+  ],
+  [
    "mds/linear-algebra-inner-products#thm-gram-schmidt",
    "mds/linear-algebra-inner-products#def-gram-schmidt"
   ],
@@ -17522,8 +19870,40 @@
    "mds/linear-algebra-inner-products#def-orthonormal-basis"
   ],
   [
+   "mds/linear-algebra-inner-products#thm-gram-schmidt",
+   "mds/linear-algebra-inner-products#thm-dot-linear-sum"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-gram-schmidt",
+   "mds/linear-algebra-inner-products#thm-norm-properties"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-gram-schmidt",
+   "mds/linear-algebra-inner-products#thm-orthonormal-expansion"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-gram-schmidt",
+   "mds/linear-algebra-inner-products#thm-orthonormal-independent"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-gram-schmidt",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-inner-product-sign",
+   "mds/algebra-trigonometry#def-cosine-sine"
+  ],
+  [
    "mds/linear-algebra-inner-products#thm-inner-product-sign",
    "mds/linear-algebra-inner-products#def-angle"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-inner-product-sign",
+   "mds/linear-algebra-inner-products#def-cosine-similarity"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-inner-product-sign",
+   "mds/linear-algebra-inner-products#def-norm"
   ],
   [
    "mds/linear-algebra-inner-products#thm-inner-product-sign",
@@ -17538,12 +19918,32 @@
    "mds/linear-algebra-inner-products#def-orthonormal-basis"
   ],
   [
+   "mds/linear-algebra-inner-products#thm-orthonormal-expansion",
+   "mds/linear-algebra-inner-products#thm-dot-linear-sum"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-orthonormal-independent",
+   "mds/linear-algebra-inner-products#thm-dot-linear-sum"
+  ],
+  [
    "mds/linear-algebra-inner-products#thm-pearson-cosine-centered",
    "mds/linear-algebra-inner-products#def-cosine-similarity"
   ],
   [
    "mds/linear-algebra-inner-products#thm-pearson-cosine-centered",
    "sds/exploratory-descriptive#def-pearson-r"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-triangle-inequality",
+   "mds/linear-algebra-inner-products#thm-cauchy-schwarz"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-triangle-inequality",
+   "mds/linear-algebra-inner-products#thm-norm-properties"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-triangle-inequality",
+   "mds/linear-algebra-inner-products#thm-norm-sum-square"
   ],
   [
    "mds/linear-algebra-inner-products#thm-vector-p-norm",
@@ -17558,8 +19958,20 @@
    "mds/linear-algebra-matrices#def-linear-map"
   ],
   [
+   "mds/linear-algebra-matrices#cor-linear-is-affine",
+   "mds/linear-algebra-matrices#thm-linear-map-matrix"
+  ],
+  [
    "mds/linear-algebra-matrices#cor-linear-scalar",
    "mds/linear-algebra-matrices#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-matrices#cor-linear-scalar",
+   "mds/linear-algebra-matrices#thm-linear-map-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#cor-linear-scalar",
+   "mds/linear-algebra-matrices#thm-matrix-map-linear"
   ],
   [
    "mds/linear-algebra-matrices#def-affine-map",
@@ -17614,24 +20026,72 @@
    "mds/linear-algebra-matrices#def-linear-map"
   ],
   [
+   "mds/linear-algebra-matrices#thm-affine-linear-iff",
+   "mds/linear-algebra-matrices#thm-affine-map-zero"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-affine-linear-iff",
+   "mds/linear-algebra-matrices#thm-linear-map-zero"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-affine-linear-iff",
+   "mds/linear-algebra-matrices#thm-matrix-map-linear"
+  ],
+  [
    "mds/linear-algebra-matrices#thm-affine-map-unique",
    "mds/linear-algebra-matrices#def-affine-map"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-affine-map-unique",
+   "mds/linear-algebra-matrices#def-matrix-of-linear-map"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-affine-map-unique",
+   "mds/linear-algebra-matrices#thm-affine-map-zero"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-affine-map-unique",
+   "mds/linear-algebra-matrices#thm-linear-map-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-affine-map-unique",
+   "mds/linear-algebra-matrices#thm-matrix-map-linear"
   ],
   [
    "mds/linear-algebra-matrices#thm-affine-map-zero",
    "mds/linear-algebra-matrices#def-affine-map"
   ],
   [
+   "mds/linear-algebra-matrices#thm-affine-map-zero",
+   "mds/linear-algebra-matrices#def-matvec-mult"
+  ],
+  [
    "mds/linear-algebra-matrices#thm-linear-map-lincom",
    "mds/linear-algebra-matrices#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-linear-map-lincom",
+   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra-matrices#thm-linear-map-matrix",
    "mds/linear-algebra-matrices#def-linear-map"
   ],
   [
+   "mds/linear-algebra-matrices#thm-linear-map-matrix",
+   "mds/linear-algebra-matrices#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-linear-map-matrix",
+   "mds/linear-algebra-matrices#thm-linear-map-lincom"
+  ],
+  [
    "mds/linear-algebra-matrices#thm-linear-map-zero",
    "mds/linear-algebra-matrices#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-linear-map-zero",
+   "mds/linear-algebra-matrices#def-scalar-mult"
   ],
   [
    "mds/linear-algebra-matrices#thm-matadd-assoc",
@@ -17642,16 +20102,68 @@
    "mds/algebra#def-commutative"
   ],
   [
+   "mds/linear-algebra-matrices#thm-matmul-assoc",
+   "mds/linear-algebra-matrices#def-matrix-mult"
+  ],
+  [
    "mds/linear-algebra-matrices#thm-matmul-distrib",
    "mds/algebra#def-distributes-over"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matmul-product-of-sums",
+   "mds/linear-algebra-matrices#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-map-linear",
+   "mds/algebra#thm-mult-distr"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-map-linear",
+   "mds/algebra#thm-prod-symmetric"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-map-linear",
+   "mds/algebra#thm-sum-constant-factor"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-map-linear",
+   "mds/algebra#thm-sum-of-sums"
   ],
   [
    "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "mds/linear-algebra-matrices#def-linear-map"
   ],
   [
+   "mds/linear-algebra-matrices#thm-matrix-map-linear",
+   "mds/linear-algebra-matrices#def-matvec-mult"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-map-linear",
+   "mds/linear-algebra-matrices#def-scalar-mult"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-scalar-transpose",
+   "mds/linear-algebra-matrices#thm-transpose-product"
+  ],
+  [
    "mds/linear-algebra-projections#cor-moore-penrose-gram",
    "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#cor-moore-penrose-gram",
+   "mds/linear-algebra-projections#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra-projections#cor-moore-penrose-gram",
+   "mds/linear-algebra-projections#thm-moore-penrose-gram"
+  ],
+  [
+   "mds/linear-algebra-projections#cor-solution-unique",
+   "mds/linear-algebra-projections#thm-consistency"
+  ],
+  [
+   "mds/linear-algebra-projections#cor-solution-unique",
+   "mds/linear-algebra-projections#thm-solution-set"
   ],
   [
    "mds/linear-algebra-projections#def-design-matrix",
@@ -17710,6 +20222,22 @@
    "mds/linear-algebra-projections#def-generalized-inverse"
   ],
   [
+   "mds/linear-algebra-projections#thm-consistency",
+   "mds/linear-algebra-projections#thm-generalized-inverse-solves"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-consistency",
+   "mds/linear-algebra-subspaces#def-dimension"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-consistency",
+   "mds/linear-algebra-subspaces#def-rank"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-generalized-inverse-invertible",
+   "mds/linear-algebra-projections#def-generalized-inverse"
+  ],
+  [
    "mds/linear-algebra-projections#thm-generalized-inverse-solves",
    "mds/linear-algebra-projections#def-generalized-inverse"
   ],
@@ -17720,6 +20248,18 @@
   [
    "mds/linear-algebra-projections#thm-hat-matrix-projects",
    "mds/linear-algebra-projections#def-hat-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-hat-matrix-projects",
+   "mds/linear-algebra-projections#thm-hat-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-hat-matrix-projects",
+   "mds/linear-algebra-projections#thm-projection-matrix-projects"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-hat-matrix-projects",
+   "mds/linear-algebra-projections#thm-projector-onb"
   ],
   [
    "mds/linear-algebra-projections#thm-lu-solve",
@@ -17735,6 +20275,14 @@
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra-projections#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-eigendecomposition",
+   "mds/linear-algebra-projections#thm-moore-penrose-unique"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-eigendecomposition",
    "mds/linear-algebra-special-matrices#def-diagonal-matrix"
   ],
   [
@@ -17747,6 +20295,10 @@
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-exists",
+   "mds/linear-algebra-projections#thm-gram-invertible"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-exists",
    "mds/linear-algebra-projections#thm-moore-penrose-unique"
   ],
   [
@@ -17755,7 +20307,23 @@
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-full-rank",
+   "mds/linear-algebra-projections#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-full-rank",
+   "mds/linear-algebra-projections#thm-gram-invertible"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-full-rank",
+   "mds/linear-algebra-projections#thm-moore-penrose-unique"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-full-rank",
    "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-full-rank",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-generalized-inverse",
@@ -17770,8 +20338,32 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
+   "mds/linear-algebra-projections#thm-moore-penrose-gram",
+   "mds/linear-algebra-projections#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-gram",
+   "mds/linear-algebra-projections#thm-moore-penrose-unique"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-gram",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "mds/linear-algebra-inner-products#def-inner-product"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "mds/linear-algebra-inner-products#def-norm"
+  ],
+  [
    "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
    "mds/linear-algebra-projections#def-least-squares"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "mds/linear-algebra-projections#def-moore-penrose"
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
@@ -17782,8 +20374,20 @@
    "mds/linear-algebra-projections#def-least-squares"
   ],
   [
+   "mds/linear-algebra-projections#thm-moore-penrose-minimum-norm",
+   "mds/linear-algebra-projections#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-minimum-norm",
+   "mds/linear-algebra-projections#thm-moore-penrose-least-squares"
+  ],
+  [
    "mds/linear-algebra-projections#thm-moore-penrose-unique",
    "mds/linear-algebra-projections#def-moore-penrose"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-normal-equations",
+   "mds/linear-algebra-projections#cor-solution-unique"
   ],
   [
    "mds/linear-algebra-projections#thm-normal-equations",
@@ -17796,6 +20400,18 @@
   [
    "mds/linear-algebra-projections#thm-normal-equations",
    "mds/linear-algebra-projections#def-orthogonal-projection"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-normal-equations",
+   "mds/linear-algebra-projections#thm-closest-point"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-normal-equations",
+   "mds/linear-algebra-projections#thm-gram-invertible"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-normal-equations",
+   "mds/linear-algebra-projections#thm-scalar-matmul"
   ],
   [
    "mds/linear-algebra-projections#thm-projection-matrix-projects",
@@ -17814,8 +20430,24 @@
    "mds/linear-algebra-projections#def-orthogonal-projection"
   ],
   [
+   "mds/linear-algebra-projections#thm-projector-generalized-inverse",
+   "mds/linear-algebra-projections#thm-generalized-inverse-invertible"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-projector-generalized-inverse",
+   "mds/linear-algebra-projections#thm-gram-invertible"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-projector-generalized-inverse",
+   "mds/linear-algebra-projections#thm-projection-matrix-projects"
+  ],
+  [
    "mds/linear-algebra-projections#thm-qr",
    "mds/linear-algebra-projections#def-triangular-matrix"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-qr-least-squares",
+   "mds/linear-algebra-projections#cor-solution-unique"
   ],
   [
    "mds/linear-algebra-projections#thm-qr-least-squares",
@@ -17824,6 +20456,14 @@
   [
    "mds/linear-algebra-projections#thm-qr-least-squares",
    "mds/linear-algebra-projections#thm-back-substitution"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-qr-least-squares",
+   "mds/linear-algebra-projections#thm-normal-equations"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-qr-least-squares",
+   "mds/linear-algebra-projections#thm-projector-onb"
   ],
   [
    "mds/linear-algebra-projections#thm-qr-least-squares",
@@ -17838,8 +20478,72 @@
    "mds/linear-algebra-projections#def-generalized-inverse"
   ],
   [
+   "mds/linear-algebra-projections#thm-solution-set",
+   "mds/linear-algebra-projections#thm-consistency"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-solution-set",
+   "mds/linear-algebra-projections#thm-generalized-inverse-solves"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-solution-set",
+   "mds/linear-algebra-projections#thm-scalar-matmul"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-bound",
+   "mds/linear-algebra-rank-nullity#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-rank-nullity#def-column-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-rank-nullity#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-rank-nullity#def-nullity"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-rank-nullity#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-rank-nullity#thm-independent-null-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-rank-nullity#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-rank-nullity#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-subspaces#def-dimension"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-subspaces#def-full-column-rank"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-subspaces#def-rank"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
+   "mds/linear-algebra-subspaces#def-subspace"
+  ],
+  [
    "mds/linear-algebra-rank-nullity#cor-sample-covariance-singular",
    "mds/linear-algebra-rank-nullity#thm-centered-data-rank"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#cor-sample-covariance-singular",
+   "mds/linear-algebra-rank-nullity#thm-rank-transpose"
   ],
   [
    "mds/linear-algebra-rank-nullity#def-affine-subspace",
@@ -17858,6 +20562,18 @@
    "mds/linear-algebra-rank-nullity#def-null-space"
   ],
   [
+   "mds/linear-algebra-rank-nullity#thm-centered-data-rank",
+   "mds/linear-algebra-rank-nullity#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-centered-data-rank",
+   "mds/linear-algebra-rank-nullity#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-column-space-span",
+   "mds/linear-algebra-rank-nullity#def-column-space"
+  ],
+  [
    "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
    "mds/linear-algebra-matrices#def-matrix"
   ],
@@ -17868,6 +20584,10 @@
   [
    "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
    "mds/linear-algebra-rank-nullity#def-half-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
@@ -17891,7 +20611,27 @@
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
+   "mds/linear-algebra-rank-nullity#cor-rank-bound"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
    "mds/linear-algebra-rank-nullity#def-affine-subspace"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
+   "mds/linear-algebra-rank-nullity#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
+   "mds/linear-algebra-rank-nullity#def-nullity"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
+   "mds/linear-algebra-rank-nullity#thm-null-space-subspace"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
+   "mds/linear-algebra-rank-nullity#thm-rank-nullity"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-independent-null-space",
@@ -17902,12 +20642,92 @@
    "mds/linear-algebra-rank-nullity#def-null-space"
   ],
   [
+   "mds/linear-algebra-rank-nullity#thm-rank-dim",
+   "mds/linear-algebra-rank-nullity#thm-column-space-span"
+  ],
+  [
    "mds/linear-algebra-rank-nullity#thm-rank-factorization",
    "mds/linear-algebra-rank-nullity#def-rank-factorization"
   ],
   [
+   "mds/linear-algebra-rank-nullity#thm-rank-factorization",
+   "mds/linear-algebra-rank-nullity#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-nullity",
+   "mds/linear-algebra-rank-nullity#def-column-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-nullity",
+   "mds/linear-algebra-rank-nullity#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-product",
+   "mds/linear-algebra-rank-nullity#def-column-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-product",
+   "mds/linear-algebra-rank-nullity#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-product",
+   "mds/linear-algebra-rank-nullity#thm-rank-dim"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-product-right",
+   "mds/linear-algebra-rank-nullity#thm-rank-product"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-product-right",
+   "mds/linear-algebra-rank-nullity#thm-rank-transpose"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-transpose",
+   "mds/linear-algebra-rank-nullity#def-nullity"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-transpose",
+   "mds/linear-algebra-rank-nullity#thm-null-gram"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-transpose",
+   "mds/linear-algebra-rank-nullity#thm-rank-nullity"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-rank-transpose",
+   "mds/linear-algebra-rank-nullity#thm-rank-product"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
+   "mds/linear-algebra-rank-nullity#def-column-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
+   "mds/linear-algebra-rank-nullity#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
+   "mds/linear-algebra-rank-nullity#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
+   "mds/linear-algebra-rank-nullity#thm-null-space-subspace"
+  ],
+  [
    "mds/linear-algebra-special-matrices#cor-det-pd",
    "mds/linear-algebra-special-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-det-pd",
+   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-det-pd",
+   "mds/linear-algebra-special-matrices#thm-det-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-inverse-symmetric",
+   "mds/linear-algebra-special-matrices#thm-inverse-transpose"
   ],
   [
    "mds/linear-algebra-special-matrices#cor-invertible-cancel-right",
@@ -17916,6 +20736,18 @@
   [
    "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
    "mds/linear-algebra-special-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
+   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
+   "mds/linear-algebra-special-matrices#thm-inverse-product"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
+   "mds/linear-algebra-special-matrices#thm-spectral"
   ],
   [
    "mds/linear-algebra-special-matrices#def-condition-number",
@@ -18058,8 +20890,28 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
+   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
+   "mds/linear-algebra-special-matrices#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
+   "mds/linear-algebra-special-matrices#def-singular-values"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
+   "mds/linear-algebra-special-matrices#thm-svd-evd"
+  ],
+  [
    "mds/linear-algebra-special-matrices#thm-definite-eigenvalues",
    "mds/linear-algebra-special-matrices#def-eigendecomposition"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues",
+   "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-definite-eigenvalues",
@@ -18078,8 +20930,24 @@
    "mds/linear-algebra-special-matrices#def-diagonal-matrix"
   ],
   [
+   "mds/linear-algebra-special-matrices#thm-det-diagonal",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
    "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
    "mds/linear-algebra-special-matrices#def-eigendecomposition"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
+   "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
+   "mds/linear-algebra-special-matrices#thm-det-diagonal"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
+   "mds/linear-algebra-special-matrices#thm-det-product"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-gram-properties",
@@ -18090,12 +20958,28 @@
    "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
+   "mds/linear-algebra-special-matrices#thm-inverse-product",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-inverse-transpose",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
    "mds/linear-algebra-special-matrices#thm-invertible-cancel",
    "mds/linear-algebra-special-matrices#def-invertible-matrix"
   ],
   [
+   "mds/linear-algebra-special-matrices#thm-invertible-cancel",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
    "mds/linear-algebra-special-matrices#thm-orthogonal-norm",
    "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-pd-inverse",
+   "mds/linear-algebra-special-matrices#cor-inverse-symmetric"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-pd-inverse",
@@ -18107,7 +20991,19 @@
   ],
   [
    "mds/linear-algebra-special-matrices#thm-pd-inverse",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-pd-inverse",
+   "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-pd-inverse",
    "mds/linear-algebra-special-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-pd-inverse",
+   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-projection-complement",
@@ -18115,7 +21011,15 @@
   ],
   [
    "mds/linear-algebra-special-matrices#thm-projection-diagonal-bounds",
+   "mds/linear-algebra-special-matrices#def-idempotent-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-projection-diagonal-bounds",
    "mds/linear-algebra-special-matrices#def-projection-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-projection-diagonal-bounds",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-projection-orthogonal",
@@ -18230,14 +21134,46 @@
    "mds/linear-algebra-subspaces#def-basis"
   ],
   [
+   "mds/linear-algebra-subspaces#thm-basis-size",
+   "mds/linear-algebra-subspaces#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-basis-size",
+   "mds/linear-algebra-subspaces#def-span"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-basis-size",
+   "mds/linear-algebra-subspaces#thm-many-vectors-dependent"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-basis-size",
+   "mds/linear-algebra-subspaces#thm-matvec-columns"
+  ],
+  [
    "mds/linear-algebra-subspaces#thm-basis-unique",
    "mds/linear-algebra-subspaces#def-basis"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-basis-unique",
+   "mds/linear-algebra-subspaces#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-basis-unique",
+   "mds/linear-algebra-subspaces#def-span"
   ],
   [
    "mds/linear-algebra-subspaces#thm-dim-bound",
    "mds/linear-algebra-subspaces#def-dimension"
   ],
   [
+   "mds/linear-algebra-subspaces#thm-dim-bound",
+   "mds/linear-algebra-subspaces#thm-extend-basis"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-dim-bound",
+   "mds/linear-algebra-subspaces#thm-many-vectors-dependent"
+  ],
+  [
    "mds/linear-algebra-subspaces#thm-extend-basis",
    "mds/linear-algebra-subspaces#def-basis"
   ],
@@ -18247,11 +21183,31 @@
   ],
   [
    "mds/linear-algebra-subspaces#thm-extend-basis",
+   "mds/linear-algebra-subspaces#def-span"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-extend-basis",
    "mds/linear-algebra-subspaces#def-subspace"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-extend-basis",
+   "mds/linear-algebra-subspaces#thm-add-outside-span"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-extend-basis",
+   "mds/linear-algebra-subspaces#thm-many-vectors-dependent"
   ],
   [
    "mds/linear-algebra-subspaces#thm-many-vectors-dependent",
    "mds/linear-algebra-subspaces#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-many-vectors-dependent",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-many-vectors-dependent",
+   "mds/proof-writing#def-theorem"
   ],
   [
    "mds/linear-algebra-subspaces#thm-span-subspace",
@@ -18264,6 +21220,22 @@
   [
    "mds/linear-algebra-subspaces#thm-subspace-equal-dim",
    "mds/linear-algebra-subspaces#def-dimension"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-subspace-equal-dim",
+   "mds/linear-algebra-subspaces#def-span"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-subspace-equal-dim",
+   "mds/linear-algebra-subspaces#thm-add-outside-span"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-subspace-equal-dim",
+   "mds/linear-algebra-subspaces#thm-dim-bound"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-subspace-equal-dim",
+   "mds/linear-algebra-subspaces#thm-extend-basis"
   ],
   [
    "mds/linear-algebra-subspaces#thm-subspace-zero",
@@ -18395,6 +21367,10 @@
   ],
   [
    "mds/linear-algebra-vectors#thm-sum-dot-ones",
+   "mds/linear-algebra-vectors#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra-vectors#thm-sum-dot-ones",
    "mds/linear-algebra-vectors#def-ones-vector"
   ],
   [
@@ -18408,6 +21384,10 @@
   [
    "mds/measures#cor-measure-finitely-additive",
    "mds/measures#def-measure"
+  ],
+  [
+   "mds/measures#cor-measure-finitely-additive",
+   "mds/measures#thm-countable-implies-finite"
   ],
   [
    "mds/measures#def-absolutely-integrable",
@@ -18810,6 +21790,10 @@
    "mds/measures#def-sigma-algebra"
   ],
   [
+   "mds/measures#lem-countable-additivity-empty",
+   "mds/proof-writing#def-proof-by-contradiction"
+  ],
+  [
    "mds/measures#thm-countable-implies-finite",
    "mds/measures#def-countable-additivity"
   ],
@@ -18870,6 +21854,10 @@
    "mds/sets#def-union"
   ],
   [
+   "mds/measures#thm-sigma-algebra-closure",
+   "mds/sets#thm-de-morgan"
+  ],
+  [
    "mds/measures#thm-sigma-algebra-intersection",
    "mds/measures#def-sigma-algebra"
   ],
@@ -18904,6 +21892,10 @@
   [
    "mds/measures-additivity#lem-countable-additivity-empty",
    "mds/measures-additivity#def-countable-additivity"
+  ],
+  [
+   "mds/measures-additivity#lem-countable-additivity-empty",
+   "mds/proof-writing#def-proof-by-contradiction"
   ],
   [
    "mds/measures-additivity#thm-countable-implies-finite",
@@ -19214,6 +22206,10 @@
    "mds/sets#def-union"
   ],
   [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "mds/sets#thm-de-morgan"
+  ],
+  [
    "mds/measures-sigma-algebras#thm-sigma-algebra-intersection",
    "mds/measures-sigma-algebras#def-sigma-algebra"
   ],
@@ -19315,6 +22311,10 @@
   ],
   [
    "mds/optimization#cor-double-well-basin-bound",
+   "mds/algebra#def-diverges-to-infinity"
+  ],
+  [
+   "mds/optimization#cor-double-well-basin-bound",
    "mds/algebra-basics#def-local-minimizer"
   ],
   [
@@ -19326,12 +22326,28 @@
    "mds/optimization#def-gradient-descent"
   ],
   [
+   "mds/optimization#cor-double-well-basin-bound",
+   "mds/optimization#def-iterate"
+  ],
+  [
+   "mds/optimization#cor-double-well-basin-bound",
+   "mds/optimization#def-vector-sequence-limit"
+  ],
+  [
+   "mds/optimization#cor-double-well-basin-bound",
+   "mds/optimization#prp-double-well-divergence"
+  ],
+  [
    "mds/optimization#cor-qp-sensitivity",
    "mds/optimization#def-sensitivity"
   ],
   [
    "mds/optimization#cor-qp-sensitivity",
    "mds/optimization#thm-qp-equality"
+  ],
+  [
+   "mds/optimization#cor-qp-sensitivity",
+   "mds/vector-calculus#cor-quadratic-form-symmetric"
   ],
   [
    "mds/optimization#def-adam",
@@ -19666,8 +22682,68 @@
    "mds/linear-algebra#def-eigenvalue"
   ],
   [
+   "mds/optimization#lem-qf-eigen-bound",
+   "mds/linear-algebra#def-orthogonal-matrix"
+  ],
+  [
+   "mds/optimization#lem-qf-eigen-bound",
+   "mds/linear-algebra#def-square-matrix"
+  ],
+  [
+   "mds/optimization#lem-qf-eigen-bound",
+   "mds/linear-algebra#thm-orthogonal-norm"
+  ],
+  [
+   "mds/optimization#lem-qf-eigen-bound",
+   "mds/linear-algebra#thm-spectral"
+  ],
+  [
+   "mds/optimization#lem-qf-eigen-bound",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/optimization#lem-qf-entry-bound",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/optimization#lem-qf-entry-bound",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/optimization#lem-qf-entry-bound",
+   "mds/linear-algebra#thm-cauchy-schwarz"
+  ],
+  [
+   "mds/optimization#prp-double-well-divergence",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
    "mds/optimization#prp-double-well-divergence",
    "mds/optimization#def-gradient-descent"
+  ],
+  [
+   "mds/optimization#prp-double-well-divergence",
+   "mds/optimization#def-iterate"
+  ],
+  [
+   "mds/optimization#prp-double-well-divergence",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/optimization#thm-best-constant-step",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization#thm-best-constant-step",
+   "mds/algebra#def-maximum"
+  ],
+  [
+   "mds/optimization#thm-best-constant-step",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/optimization#thm-best-constant-step",
+   "mds/functions#def-value"
   ],
   [
    "mds/optimization#thm-best-constant-step",
@@ -19687,6 +22763,10 @@
   ],
   [
    "mds/optimization#thm-convex-first-order",
+   "mds/functions#def-inner-function"
+  ],
+  [
+   "mds/optimization#thm-convex-first-order",
    "mds/optimization#def-strictly-convex"
   ],
   [
@@ -19696,6 +22776,14 @@
   [
    "mds/optimization#thm-convex-first-order",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization#thm-convex-first-order",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/optimization#thm-convex-first-order",
+   "mds/vector-calculus#thm-chain-vec"
   ],
   [
    "mds/optimization#thm-convex-hessian",
@@ -19715,6 +22803,14 @@
   ],
   [
    "mds/optimization#thm-convex-hessian",
+   "mds/optimization#thm-convex-first-order"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian",
+   "mds/optimization#thm-taylor-mv"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian",
    "mds/vector-calculus#def-continuous-on"
   ],
   [
@@ -19727,7 +22823,15 @@
   ],
   [
    "mds/optimization#thm-convex-hessian-converse",
+   "mds/optimization#thm-taylor-mv"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian-converse",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-continuous-several"
   ],
   [
    "mds/optimization#thm-convex-hessian-converse",
@@ -19743,11 +22847,23 @@
   ],
   [
    "mds/optimization#thm-descent-direction",
+   "mds/functions#def-inner-function"
+  ],
+  [
+   "mds/optimization#thm-descent-direction",
    "mds/optimization#def-descent-direction"
   ],
   [
    "mds/optimization#thm-descent-direction",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization#thm-descent-direction",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/optimization#thm-descent-direction",
+   "mds/vector-calculus#thm-chain-vec"
   ],
   [
    "mds/optimization#thm-epigraph",
@@ -19771,6 +22887,10 @@
   ],
   [
    "mds/optimization#thm-fermat",
+   "mds/calculus#def-one-sided-limit"
+  ],
+  [
+   "mds/optimization#thm-fermat",
    "mds/number-systems#def-real-numbers"
   ],
   [
@@ -19786,12 +22906,24 @@
    "mds/optimization#def-stationary-point"
   ],
   [
+   "mds/optimization#thm-first-order-condition",
+   "mds/optimization#thm-fermat"
+  ],
+  [
+   "mds/optimization#thm-first-order-condition",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
    "mds/optimization#thm-flat-point-critical",
    "mds/optimization#def-critical-point"
   ],
   [
    "mds/optimization#thm-flat-point-critical",
    "mds/optimization#def-flat-point"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/algebra#def-absolute-value"
   ],
   [
    "mds/optimization#thm-gd-quadratic-error",
@@ -19803,7 +22935,19 @@
   ],
   [
    "mds/optimization#thm-gd-quadratic-error",
+   "mds/linear-algebra#def-matrix-power"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/linear-algebra#thm-orthogonal-norm"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/linear-algebra#thm-spectral"
   ],
   [
    "mds/optimization#thm-gd-quadratic-error",
@@ -19818,8 +22962,24 @@
    "mds/optimization#thm-newton-quadratic"
   ],
   [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/proof-writing#def-inequality"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
    "mds/optimization#thm-newton-model",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#thm-newton-model",
+   "mds/linear-algebra#thm-pd-inverse"
   ],
   [
    "mds/optimization#thm-newton-model",
@@ -19827,11 +22987,55 @@
   ],
   [
    "mds/optimization#thm-newton-quadratic",
+   "mds/algebra-sums#def-term"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
    "mds/linear-algebra#def-positive-definite"
   ],
   [
    "mds/optimization#thm-newton-quadratic",
+   "mds/linear-algebra#thm-pd-inverse"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
+   "mds/optimization#cor-convex-stationary"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
    "mds/optimization#def-newton-method"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
+   "mds/optimization#def-strictly-convex"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
+   "mds/optimization#thm-convex-hessian"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
+   "mds/vector-calculus#cor-deriv-lincom-tp"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
+   "mds/vector-calculus#cor-quadratic-form-symmetric"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
+   "mds/vector-calculus#def-constant-wrt-vector"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization#thm-newton-quadratic",
+   "mds/vector-calculus#thm-hessian-quadratic"
+  ],
+  [
+   "mds/optimization#thm-qp-equality",
+   "mds/linear-algebra#cor-inverse-symmetric"
   ],
   [
    "mds/optimization#thm-qp-equality",
@@ -19840,6 +23044,18 @@
   [
    "mds/optimization#thm-qp-equality",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#thm-qp-equality",
+   "mds/linear-algebra#thm-pd-inverse"
+  ],
+  [
+   "mds/optimization#thm-qp-equality",
+   "mds/linear-algebra#thm-pd-operations"
+  ],
+  [
+   "mds/optimization#thm-qp-equality",
+   "mds/linear-algebra#thm-transpose-product"
   ],
   [
    "mds/optimization#thm-second-derivative-test",
@@ -19855,7 +23071,15 @@
   ],
   [
    "mds/optimization#thm-second-order-condition",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/optimization#thm-second-order-condition",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization#thm-second-order-condition",
+   "mds/linear-algebra#thm-definite-eigenvalues"
   ],
   [
    "mds/optimization#thm-second-order-condition",
@@ -19867,7 +23091,23 @@
   ],
   [
    "mds/optimization#thm-second-order-condition",
+   "mds/optimization#lem-qf-eigen-bound"
+  ],
+  [
+   "mds/optimization#thm-second-order-condition",
+   "mds/optimization#lem-qf-entry-bound"
+  ],
+  [
+   "mds/optimization#thm-second-order-condition",
+   "mds/optimization#thm-taylor-mv"
+  ],
+  [
+   "mds/optimization#thm-second-order-condition",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization#thm-second-order-condition",
+   "mds/vector-calculus#def-continuous-several"
   ],
   [
    "mds/optimization#thm-taylor-1d",
@@ -19879,7 +23119,43 @@
   ],
   [
    "mds/optimization#thm-taylor-mv",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/optimization#thm-taylor-mv",
+   "mds/functions#def-inner-function"
+  ],
+  [
+   "mds/optimization#thm-taylor-mv",
+   "mds/functions#def-outer-function"
+  ],
+  [
+   "mds/optimization#thm-taylor-mv",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/optimization#thm-taylor-mv",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/optimization#thm-taylor-mv",
+   "mds/optimization#thm-taylor-1d"
+  ],
+  [
+   "mds/optimization#thm-taylor-mv",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization#thm-taylor-mv",
+   "mds/vector-calculus#def-continuous-several"
+  ],
+  [
+   "mds/optimization#thm-taylor-mv",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/optimization#thm-taylor-mv",
+   "mds/vector-calculus#thm-chain-vec"
   ],
   [
    "mds/optimization-constrained#cor-qp-sensitivity",
@@ -19888,6 +23164,10 @@
   [
    "mds/optimization-constrained#cor-qp-sensitivity",
    "mds/optimization-constrained#thm-qp-equality"
+  ],
+  [
+   "mds/optimization-constrained#cor-qp-sensitivity",
+   "mds/vector-calculus#cor-quadratic-form-symmetric"
   ],
   [
    "mds/optimization-constrained#def-constraints",
@@ -19951,11 +23231,27 @@
   ],
   [
    "mds/optimization-constrained#thm-qp-equality",
+   "mds/linear-algebra#cor-inverse-symmetric"
+  ],
+  [
+   "mds/optimization-constrained#thm-qp-equality",
    "mds/linear-algebra#def-linearly-independent"
   ],
   [
    "mds/optimization-constrained#thm-qp-equality",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-constrained#thm-qp-equality",
+   "mds/linear-algebra#thm-pd-inverse"
+  ],
+  [
+   "mds/optimization-constrained#thm-qp-equality",
+   "mds/linear-algebra#thm-pd-operations"
+  ],
+  [
+   "mds/optimization-constrained#thm-qp-equality",
+   "mds/linear-algebra#thm-transpose-product"
   ],
   [
    "mds/optimization-convexity#cor-convex-stationary",
@@ -19991,6 +23287,10 @@
   ],
   [
    "mds/optimization-convexity#thm-convex-first-order",
+   "mds/functions#def-inner-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-first-order",
    "mds/optimization-convexity#def-strictly-convex"
   ],
   [
@@ -20000,6 +23300,14 @@
   [
    "mds/optimization-convexity#thm-convex-first-order",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-first-order",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-first-order",
+   "mds/vector-calculus#thm-chain-vec"
   ],
   [
    "mds/optimization-convexity#thm-convex-hessian",
@@ -20019,6 +23327,10 @@
   ],
   [
    "mds/optimization-convexity#thm-convex-hessian",
+   "mds/optimization-convexity#thm-convex-first-order"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian",
    "mds/vector-calculus#def-continuous-on"
   ],
   [
@@ -20032,6 +23344,10 @@
   [
    "mds/optimization-convexity#thm-convex-hessian-converse",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-continuous-several"
   ],
   [
    "mds/optimization-convexity#thm-convex-hessian-converse",
@@ -20098,12 +23414,48 @@
    "mds/linear-algebra#def-eigenvalue"
   ],
   [
+   "mds/optimization-critical-points#lem-qf-eigen-bound",
+   "mds/linear-algebra#def-orthogonal-matrix"
+  ],
+  [
+   "mds/optimization-critical-points#lem-qf-eigen-bound",
+   "mds/linear-algebra#def-square-matrix"
+  ],
+  [
+   "mds/optimization-critical-points#lem-qf-eigen-bound",
+   "mds/linear-algebra#thm-orthogonal-norm"
+  ],
+  [
+   "mds/optimization-critical-points#lem-qf-eigen-bound",
+   "mds/linear-algebra#thm-spectral"
+  ],
+  [
+   "mds/optimization-critical-points#lem-qf-eigen-bound",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/optimization-critical-points#lem-qf-entry-bound",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/optimization-critical-points#lem-qf-entry-bound",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/optimization-critical-points#lem-qf-entry-bound",
+   "mds/linear-algebra#thm-cauchy-schwarz"
+  ],
+  [
    "mds/optimization-critical-points#thm-fermat",
    "mds/algebra#def-local-minimizer"
   ],
   [
    "mds/optimization-critical-points#thm-fermat",
    "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization-critical-points#thm-fermat",
+   "mds/calculus#def-one-sided-limit"
   ],
   [
    "mds/optimization-critical-points#thm-fermat",
@@ -20120,6 +23472,14 @@
   [
    "mds/optimization-critical-points#thm-first-order-condition",
    "mds/optimization-critical-points#def-stationary-point"
+  ],
+  [
+   "mds/optimization-critical-points#thm-first-order-condition",
+   "mds/optimization-critical-points#thm-fermat"
+  ],
+  [
+   "mds/optimization-critical-points#thm-first-order-condition",
+   "mds/vector-calculus#def-vector-derivative"
   ],
   [
    "mds/optimization-critical-points#thm-flat-point-critical",
@@ -20143,7 +23503,15 @@
   ],
   [
    "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/linear-algebra#def-eigenvalue"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
    "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/linear-algebra#thm-definite-eigenvalues"
   ],
   [
    "mds/optimization-critical-points#thm-second-order-condition",
@@ -20155,7 +23523,23 @@
   ],
   [
    "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/optimization-critical-points#lem-qf-eigen-bound"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/optimization-critical-points#lem-qf-entry-bound"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/optimization-critical-points#thm-taylor-mv"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-order-condition",
+   "mds/vector-calculus#def-continuous-several"
   ],
   [
    "mds/optimization-critical-points#thm-taylor-1d",
@@ -20167,7 +23551,47 @@
   ],
   [
    "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/functions#def-argument"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/functions#def-inner-function"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/functions#def-outer-function"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/linear-algebra#def-matrix-mult"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/optimization-critical-points#thm-taylor-1d"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/vector-calculus#def-continuous-several"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/optimization-critical-points#thm-taylor-mv",
+   "mds/vector-calculus#thm-chain-vec"
+  ],
+  [
+   "mds/optimization-gradient-descent#cor-double-well-basin-bound",
+   "mds/algebra#def-diverges-to-infinity"
   ],
   [
    "mds/optimization-gradient-descent#cor-double-well-basin-bound",
@@ -20180,6 +23604,10 @@
   [
    "mds/optimization-gradient-descent#cor-double-well-basin-bound",
    "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#cor-double-well-basin-bound",
+   "mds/optimization-gradient-descent#prp-double-well-divergence"
   ],
   [
    "mds/optimization-gradient-descent#def-adam",
@@ -20287,7 +23715,31 @@
   ],
   [
    "mds/optimization-gradient-descent#prp-double-well-divergence",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/optimization-gradient-descent#prp-double-well-divergence",
    "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#prp-double-well-divergence",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-best-constant-step",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-best-constant-step",
+   "mds/algebra#def-maximum"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-best-constant-step",
+   "mds/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-best-constant-step",
+   "mds/functions#def-value"
   ],
   [
    "mds/optimization-gradient-descent#thm-best-constant-step",
@@ -20303,11 +23755,27 @@
   ],
   [
    "mds/optimization-gradient-descent#thm-descent-direction",
+   "mds/functions#def-inner-function"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-descent-direction",
    "mds/optimization-gradient-descent#def-descent-direction"
   ],
   [
    "mds/optimization-gradient-descent#thm-descent-direction",
    "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-descent-direction",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-descent-direction",
+   "mds/vector-calculus#thm-chain-vec"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/algebra#def-absolute-value"
   ],
   [
    "mds/optimization-gradient-descent#thm-gd-quadratic-error",
@@ -20319,11 +23787,35 @@
   ],
   [
    "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/linear-algebra#def-matrix-power"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
    "mds/linear-algebra#def-positive-definite"
   ],
   [
    "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/linear-algebra#thm-orthogonal-norm"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/linear-algebra#thm-spectral"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
    "mds/optimization-gradient-descent#def-gradient-descent"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/proof-writing#def-inequality"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mds/vector-calculus#def-vector-derivative"
   ],
   [
    "mds/optimization-newton#def-iterate",
@@ -20367,7 +23859,15 @@
   ],
   [
    "mds/optimization-newton#thm-newton-model",
+   "mds/linear-algebra#thm-pd-inverse"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-model",
    "mds/optimization-newton#def-quadratic-model"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-quadratic",
+   "mds/algebra-sums#def-term"
   ],
   [
    "mds/optimization-newton#thm-newton-quadratic",
@@ -20375,7 +23875,31 @@
   ],
   [
    "mds/optimization-newton#thm-newton-quadratic",
+   "mds/linear-algebra#thm-pd-inverse"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-quadratic",
    "mds/optimization-newton#def-newton-method"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-quadratic",
+   "mds/vector-calculus#cor-deriv-lincom-tp"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-quadratic",
+   "mds/vector-calculus#cor-quadratic-form-symmetric"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-quadratic",
+   "mds/vector-calculus#def-constant-wrt-vector"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-quadratic",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-quadratic",
+   "mds/vector-calculus#thm-hessian-quadratic"
   ],
   [
    "mds/optimization-quasi-newton#def-bfgs-update",
@@ -20747,6 +24271,18 @@
   ],
   [
    "mds/proof-writing#thm-addition-rule",
+   "mds/proof-writing#def-conclusion"
+  ],
+  [
+   "mds/proof-writing#thm-addition-rule",
+   "mds/proof-writing#def-or"
+  ],
+  [
+   "mds/proof-writing#thm-addition-rule",
+   "mds/proof-writing#def-premise"
+  ],
+  [
+   "mds/proof-writing#thm-addition-rule",
    "mds/proof-writing#def-proposition"
   ],
   [
@@ -20756,6 +24292,18 @@
   [
    "mds/proof-writing#thm-biconditional-split",
    "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-conjunction-rule",
+   "mds/proof-writing#def-and"
+  ],
+  [
+   "mds/proof-writing#thm-conjunction-rule",
+   "mds/proof-writing#def-conclusion"
+  ],
+  [
+   "mds/proof-writing#thm-conjunction-rule",
+   "mds/proof-writing#def-premise"
   ],
   [
    "mds/proof-writing#thm-conjunction-rule",
@@ -20780,6 +24328,22 @@
   [
    "mds/proof-writing#thm-derivation-chain",
    "mds/proof-writing#def-derivation"
+  ],
+  [
+   "mds/proof-writing#thm-disjunctive-syllogism",
+   "mds/proof-writing#def-conclusion"
+  ],
+  [
+   "mds/proof-writing#thm-disjunctive-syllogism",
+   "mds/proof-writing#def-not"
+  ],
+  [
+   "mds/proof-writing#thm-disjunctive-syllogism",
+   "mds/proof-writing#def-or"
+  ],
+  [
+   "mds/proof-writing#thm-disjunctive-syllogism",
+   "mds/proof-writing#def-premise"
   ],
   [
    "mds/proof-writing#thm-disjunctive-syllogism",
@@ -20811,11 +24375,39 @@
   ],
   [
    "mds/proof-writing#thm-modus-ponens",
+   "mds/proof-writing#def-conclusion"
+  ],
+  [
+   "mds/proof-writing#thm-modus-ponens",
+   "mds/proof-writing#def-implies"
+  ],
+  [
+   "mds/proof-writing#thm-modus-ponens",
+   "mds/proof-writing#def-premise"
+  ],
+  [
+   "mds/proof-writing#thm-modus-ponens",
    "mds/proof-writing#def-proposition"
   ],
   [
    "mds/proof-writing#thm-modus-ponens",
    "mds/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mds/proof-writing#thm-modus-tollens",
+   "mds/proof-writing#def-conclusion"
+  ],
+  [
+   "mds/proof-writing#thm-modus-tollens",
+   "mds/proof-writing#def-implies"
+  ],
+  [
+   "mds/proof-writing#thm-modus-tollens",
+   "mds/proof-writing#def-not"
+  ],
+  [
+   "mds/proof-writing#thm-modus-tollens",
+   "mds/proof-writing#def-premise"
   ],
   [
    "mds/proof-writing#thm-modus-tollens",
@@ -20836,6 +24428,18 @@
   [
    "mds/proof-writing#thm-proof-by-contradiction",
    "mds/proof-writing#def-proposition"
+  ],
+  [
+   "mds/proof-writing#thm-simplification",
+   "mds/proof-writing#def-and"
+  ],
+  [
+   "mds/proof-writing#thm-simplification",
+   "mds/proof-writing#def-conclusion"
+  ],
+  [
+   "mds/proof-writing#thm-simplification",
+   "mds/proof-writing#def-premise"
   ],
   [
    "mds/proof-writing#thm-simplification",
@@ -21051,11 +24655,75 @@
   ],
   [
    "mds/sets#thm-de-morgan",
+   "mds/proof-writing#def-necessary-sufficient"
+  ],
+  [
+   "mds/sets#thm-de-morgan",
    "mds/sets#def-complement"
   ],
   [
    "mds/sets#thm-de-morgan",
+   "mds/sets#def-intersection"
+  ],
+  [
+   "mds/sets#thm-de-morgan",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/sets#thm-de-morgan",
+   "mds/sets#def-set-difference"
+  ],
+  [
+   "mds/sets#thm-de-morgan",
    "mds/sets#def-subset"
+  ],
+  [
+   "mds/sets#thm-de-morgan",
+   "mds/sets#def-union"
+  ],
+  [
+   "mds/sets#thm-empty-set-unique",
+   "mds/sets#def-set"
+  ],
+  [
+   "mds/sets#thm-empty-set-unique",
+   "mds/sets#def-vacuous-truth"
+  ],
+  [
+   "mds/sets#thm-empty-subset",
+   "mds/sets#def-empty-set"
+  ],
+  [
+   "mds/sets#thm-empty-subset",
+   "mds/sets#def-subset"
+  ],
+  [
+   "mds/sets#thm-subset-reflexive",
+   "mds/sets#def-subset"
+  ],
+  [
+   "mds/vector-calculus#cor-chain-qf",
+   "mds/vector-calculus#cor-deriv-normsq"
+  ],
+  [
+   "mds/vector-calculus#cor-chain-qf",
+   "mds/vector-calculus#thm-chain-vec"
+  ],
+  [
+   "mds/vector-calculus#cor-deriv-lincom-tp",
+   "mds/linear-algebra#def-dot-product"
+  ],
+  [
+   "mds/vector-calculus#cor-deriv-lincom-tp",
+   "mds/vector-calculus#thm-deriv-lincom"
+  ],
+  [
+   "mds/vector-calculus#cor-deriv-lincom-tp",
+   "mds/vector-calculus#thm-deriv-matrix-vector"
+  ],
+  [
+   "mds/vector-calculus#cor-deriv-normsq",
+   "mds/vector-calculus#cor-quadratic-form-symmetric"
   ],
   [
    "mds/vector-calculus#cor-quadratic-form-symmetric",
@@ -21206,12 +24874,44 @@
    "mds/vector-calculus#def-continuous-several"
   ],
   [
+   "mds/vector-calculus#thm-deriv-linear-map",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/vector-calculus#thm-deriv-matrix-product-vector",
+   "mds/linear-algebra#thm-transpose-product"
+  ],
+  [
+   "mds/vector-calculus#thm-deriv-matrix-product-vector",
+   "mds/vector-calculus#thm-deriv-matrix-vector"
+  ],
+  [
+   "mds/vector-calculus#thm-deriv-matrix-vector",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
    "mds/vector-calculus#thm-hessian-forms",
    "mds/vector-calculus#def-hessian"
   ],
   [
    "mds/vector-calculus#thm-hessian-forms",
    "mds/vector-calculus#def-row-vector-derivative"
+  ],
+  [
+   "mds/vector-calculus#thm-hessian-quadratic",
+   "mds/vector-calculus#cor-quadratic-form-symmetric"
+  ],
+  [
+   "mds/vector-calculus#thm-hessian-quadratic",
+   "mds/vector-calculus#def-hessian"
+  ],
+  [
+   "mds/vector-calculus#thm-hessian-quadratic",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/vector-calculus#thm-hessian-quadratic",
+   "mds/vector-calculus#thm-deriv-matrix-vector"
   ],
   [
    "mds/vector-calculus#thm-hessian-symmetric",
@@ -21231,11 +24931,19 @@
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",
+   "mds/linear-algebra-matrices#def-affine-offset"
+  ],
+  [
+   "mds/vector-calculus#thm-level-sets-linear",
    "mds/linear-algebra-matrices#def-hyperplane"
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",
    "mds/linear-algebra-matrices#def-normal-vector"
+  ],
+  [
+   "mds/vector-calculus#thm-level-sets-linear",
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace"
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",
@@ -21247,13 +24955,42 @@
   ],
   [
    "mds/vector-calculus#thm-normal-vector-steepest",
+   "mds/linear-algebra-inner-products#thm-cauchy-schwarz"
+  ],
+  [
+   "mds/vector-calculus#thm-normal-vector-steepest",
    "mds/linear-algebra-vectors#def-unit-vector"
+  ],
+  [
+   "mds/vector-calculus#thm-normal-vector-uphill",
+   "mds/linear-algebra-vectors#def-dot-product"
   ],
   [
    "mds/vector-calculus#thm-quadratic-form",
    "mds/linear-algebra#def-quadratic-form"
+  ],
+  [
+   "mds/vector-calculus#thm-row-deriv-tp-col-deriv",
+   "mds/vector-calculus#def-row-vector-derivative"
+  ],
+  [
+   "mds/vector-calculus#thm-row-deriv-tp-col-deriv",
+   "mds/vector-calculus#def-vector-derivative"
   ]
  ],
  "cycles": [],
- "forwardReferences": []
+ "forwardReferences": [
+  [
+   "mds/linear-algebra#cor-sample-covariance-singular",
+   "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#thm-cross-product-sum-outer",
+   "mds/linear-algebra#def-outer-product"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-full-rank",
+   "mds/linear-algebra#thm-invertible-rank"
+  ]
+ ]
 }
