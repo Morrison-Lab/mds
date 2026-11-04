@@ -232,7 +232,7 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/algebra/_def-contour-line-3d.qmd >}}
+{{< include mds/_subfiles/algebra/_fig-contour-line-3d.qmd >}}
 
 {{< slidebreak >}}
 
