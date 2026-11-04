@@ -1,0 +1,135 @@
+::: {#fig-gd-zigzag-3d}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: gd-zigzag-3d-r
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Surface plot of f of x equal to one half of x1 squared plus 3 x2 squared
+#|   over x1 from -0.5 to 3.5 and x2 from -1 to 1.2, a bowl that is steeper
+#|   along the x2 axis than along the x1 axis. A blue path of line segments
+#|   with circles lies on the bowl. It starts at the point (3, 1), then goes
+#|   to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), alternating between
+#|   the two sides of the valley floor and descending toward the origin,
+#|   which is marked by a vermilion diamond at the bottom of the bowl.
+gz_x1_sf <- seq(-0.5, 3.5, length.out = 101)
+gz_x2_sf <- seq(-1, 1.2, length.out = 101)
+gz_grid_sf <- tidyr::expand_grid(x1 = gz_x1_sf, x2 = gz_x2_sf)
+gz_value_sf <- 0.5 * (gz_grid_sf$x1^2 + 3 * gz_grid_sf$x2^2)
+gz_n2_sf <- length(gz_x2_sf)
+gz_z_sf <- matrix(gz_value_sf, nrow = gz_n2_sf)
+gz_steps_sf <- 0:3
+gz_path_x1_sf <- 3 * 0.5^gz_steps_sf
+gz_path_x2_sf <- c(1, -0.5, 0.25, -0.125)
+gz_path_sf <- tibble::tibble(x1 = gz_path_x1_sf, x2 = gz_path_x2_sf)
+gz_path_sf$z <- 0.5 * (gz_path_sf$x1^2 + 3 * gz_path_sf$x2^2)
+gz_origin_sf <- tibble::tibble(x1 = 0, x2 = 0, z = 0)
+gz_line_sf <- list(color = "#0072B2", width = 5)
+gz_dot_sf <- list(color = "#0072B2", size = 4)
+gz_mark_sf <- list(color = "#D55E00", size = 6, symbol = "diamond")
+gz_stops_sf <- c(0, 1)
+gz_cols_sf <- c("#E5E5E5", "#808080")
+gz_scale_sf <- list(gz_stops_sf, gz_cols_sf)
+gz_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+gz_camera_sf <- list(eye = gz_eye_sf)
+gz_xaxis_sf <- list(title = "x1")
+gz_yaxis_sf <- list(title = "x2")
+gz_zaxis_sf <- list(title = "f(x)")
+gz_scene_sf <- list(
+  xaxis = gz_xaxis_sf,
+  yaxis = gz_yaxis_sf,
+  zaxis = gz_zaxis_sf,
+  camera = gz_camera_sf
+)
+gz_legend_sf <- list(orientation = "h")
+plotly::plot_ly() |>
+  plotly::add_surface(
+    x = gz_x1_sf,
+    y = gz_x2_sf,
+    z = gz_z_sf,
+    colorscale = gz_scale_sf,
+    showscale = FALSE,
+    opacity = 0.7
+  ) |>
+  plotly::add_trace(
+    data = gz_path_sf,
+    x = ~x1,
+    y = ~x2,
+    z = ~z,
+    type = "scatter3d",
+    mode = "lines+markers",
+    line = gz_line_sf,
+    marker = gz_dot_sf,
+    name = "iterates"
+  ) |>
+  plotly::add_markers(
+    data = gz_origin_sf,
+    x = ~x1,
+    y = ~x2,
+    z = ~z,
+    marker = gz_mark_sf,
+    name = "minimizer"
+  ) |>
+  plotly::layout(scene = gz_scene_sf, legend = gz_legend_sf)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
+```
+
+### Python
+
+```{python}
+#| label: gd-zigzag-3d-python
+#| fig-alt: >-
+#|   Surface plot of f of x equal to one half of x1 squared plus 3 x2 squared
+#|   over x1 from -0.5 to 3.5 and x2 from -1 to 1.2, a bowl that is steeper
+#|   along the x2 axis than along the x1 axis. A blue path of line segments
+#|   with circles lies on the bowl. It starts at the point (3, 1), then goes
+#|   to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), alternating between
+#|   the two sides of the valley floor and descending toward the origin,
+#|   which is marked by a vermilion diamond at the bottom of the bowl.
+#| fig-height: 4.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+gz_x1_3d, gz_x2_3d = np.meshgrid(np.linspace(-0.5, 3.5, 101),
+                                 np.linspace(-1, 1.2, 101))
+gz_f_3d = 0.5 * (gz_x1_3d**2 + 3 * gz_x2_3d**2)
+gz_path_x1_3d = 3 * 0.5 ** np.arange(4)
+gz_path_x2_3d = np.array([1, -0.5, 0.25, -0.125])
+gz_path_f_3d = 0.5 * (gz_path_x1_3d**2 + 3 * gz_path_x2_3d**2)
+fig = plt.figure(figsize=(6, 4.5))
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(gz_x1_3d, gz_x2_3d, gz_f_3d, color="grey", alpha=0.4)
+ax.plot(gz_path_x1_3d, gz_path_x2_3d, gz_path_f_3d, "o-", color="#0072B2",
+        label="iterates")
+ax.scatter([0], [0], [0], marker="D", color="#D55E00", s=50, label="minimizer")
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+ax.set_zlabel("f(x)")
+ax.legend(loc="upper right")
+plt.show();
+```
+
+:::
+
+The [graph](functions.qmd#def-graph) of $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$,
+the surface whose [level curves](vector-calculus.qmd#def-level-curve) are in @fig-gd-zigzag,
+with the same four [iterates](#def-iterate) of [gradient descent](#def-gradient-descent) lifted onto it.
+The surface is steeper along the $x_2$ axis than along the $x_1$ axis,
+so each step overshoots the bottom of the valley and
+the path zigzags down toward the [minimizer](algebra.qmd#def-global-minimizer) $\vzero$ (diamond).
+
+:::

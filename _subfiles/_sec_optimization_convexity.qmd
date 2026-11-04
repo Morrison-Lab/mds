@@ -88,6 +88,8 @@
 
 {{< include mds/_subfiles/vector-calc/_fig-convex-hessian.qmd >}}
 
+{{< include mds/_subfiles/vector-calc/_fig-convex-hessian-3d.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_exm-convex-hessian-not-necessary.qmd >}}
