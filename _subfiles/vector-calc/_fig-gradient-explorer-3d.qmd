@@ -67,6 +67,7 @@ viewof gradTurn = Inputs.range([0, 360], {value: 30, step: 5, label: "turn the v
 ```
 
 The [graph](functions.qmd#def-graph) of the [function](functions.qmd#def-function) in @fig-gradient-explorer, with the same point, [level curve](#def-level-set) and arrows.
-Each arrow takes one unit step in the plane, and its height gain is the amount $f$ changes along that step.
+Each arrow takes one unit step in the plane,
+and its height gain is the amount $f$ changes along that step.
 
 :::
