@@ -1,6 +1,7 @@
 ```{r}
 #| include: false
-reticulate::py_require(c("numpy", "matplotlib"))
+cl_py_packages <- c("numpy", "matplotlib")
+reticulate::py_require(cl_py_packages)
 ```
 
 ::: {#fig-contour-line-3d}
@@ -31,7 +32,14 @@ cl_rings_sf <- tidyr::expand_grid(k = cl_heights_sf, angle = cl_angle_sf)
 cl_rings_sf$radius <- sqrt(cl_rings_sf$k)
 cl_rings_sf$b <- cl_rings_sf$radius * cos(cl_rings_sf$angle)
 cl_rings_sf$c <- cl_rings_sf$radius * sin(cl_rings_sf$angle)
-cl_marks_sf <- tibble::tibble(b = c(2, 0), c = c(0, -2), z = c(4, 4))
+cl_marks_b_sf <- c(2, 0)
+cl_marks_c_sf <- c(0, -2)
+cl_marks_z_sf <- c(4, 4)
+cl_marks_sf <- tibble::tibble(
+  b = cl_marks_b_sf,
+  c = cl_marks_c_sf,
+  z = cl_marks_z_sf
+)
 cl_ring_line_sf <- list(color = "#D55E00", width = 5)
 cl_marker_sf <- list(color = "black", size = 5)
 cl_stops_sf <- c(0, 1)
