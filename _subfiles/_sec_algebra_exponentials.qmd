@@ -232,6 +232,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-contour-line-3d.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_rem-contour-line-surface.qmd >}}
 
 {{< slidebreak >}}
