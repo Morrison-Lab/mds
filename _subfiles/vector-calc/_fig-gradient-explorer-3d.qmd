@@ -75,3 +75,7 @@ and its height gain is the amount $f$ changes along that step.
 :::
 
 :::
+
+::: {.content-visible unless-format="html"}
+The course website's version of this page has an interactive 3D plot here.
+:::
