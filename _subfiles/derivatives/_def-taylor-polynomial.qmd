@@ -1,8 +1,9 @@
 ::: {#def-taylor-polynomial}
-#### Taylor polynomial
+#### Taylor polynomial (Taylor expansion)
 
 Let $f$ be a function that has at least $n$ derivatives at a point $x_0$.
-The **Taylor polynomial** of degree $n$ for $f$ centered at $x_0$ is:
+The **Taylor polynomial** (also called the **Taylor expansion**)
+of [degree](algebra-exponentials.qmd#def-polynomial-degree) $n$ for $f$ centered at $x_0$ is:
 
 $$
 \begin{aligned}

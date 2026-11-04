@@ -1,10 +1,11 @@
 :::{#def-linear-approximation}
-#### Linear approximation (first-order Taylor approximation)
+#### Linear approximation (first-order Taylor approximation, first-order Taylor expansion)
 
 For a [function](functions.qmd#def-function) $f$ that is [differentiable at](calculus-derivatives.qmd#def-differentiable) $w$,
 the **linear approximation** of $f$ at $w$
 [@wikipedia_linear_approximation]
-(also called the **first-order Taylor approximation**)
+(also called the **first-order Taylor approximation**
+or the **first-order Taylor expansion**)
 is the function of the step $\smallconst$
 
 $$\hat{f}_w(\smallconst) = f(w) + \smallconst\,\dif{}{w}f(w)$$
