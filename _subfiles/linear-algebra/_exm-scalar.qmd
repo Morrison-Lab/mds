@@ -1,0 +1,9 @@
+:::{#exm-scalar}
+#### Scalars and a vector
+
+The numbers $5$ and $-0.2$ are scalars.
+The column vector $(5, -0.2)$ is not a scalar:
+it has $2$ entries, so it is in $\reals^2$ (@def-real-coordinate-space),
+and each of its $2$ entries is a scalar.
+
+:::

@@ -4,7 +4,7 @@
 Let $f$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
 defined at every point of an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $c$,
 except possibly at $c$ itself,
-and let $L$ be a [real number](number-systems.qmd#def-real-numbers).
+and let $L$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
 The **limit** of $f(x)$ as $x$ approaches $c$ is $L$
 [@wikipedia_limit_of_a_function],
 written $\lim_{x \to c} f(x) = L$,

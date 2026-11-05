@@ -2,7 +2,7 @@
 #### Non-decreasing sequence
 
 A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $a_1, a_2, \ldots$
-of [real numbers](number-systems.qmd#def-real-numbers) or of [extended non-negative reals](https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals)
+of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) or of [extended non-negative reals](https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals)
 is **non-decreasing**
 if each term is at least as large as the one before it:
 

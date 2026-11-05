@@ -30,6 +30,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-non-strict-inequality.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_exm-strict-inequality.qmd >}}
 
 {{< slidebreak >}}
@@ -51,6 +55,18 @@
 # Powers, square roots, and absolute values {#sec-powers-roots-abs}
 
 {{< include mds/_subfiles/algebra/_def-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-power-base.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-power-exponent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-square.qmd >}}
 
 {{< slidebreak >}}
 

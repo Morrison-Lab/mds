@@ -10,4 +10,13 @@ format:
     output-file: number-systems.docx
 ---
 
-{{< include mds/_number-systems.qmd >}}
+```{=html}
+<meta http-equiv="refresh" content="5; url=https://morrison-lab.github.io/mcs/number-systems.html">
+<script>
+// This page moved to the Math for Computer Science notes (https://github.com/Morrison-Lab/mcs/issues/60).
+// Send the reader, with any #id, to the same page there; the ids did not change.
+location.replace("https://morrison-lab.github.io/mcs/number-systems.html" + location.search + location.hash);
+</script>
+```
+
+This page moved to [Number Systems](https://morrison-lab.github.io/mcs/number-systems.html) in the Math for Computer Science notes.

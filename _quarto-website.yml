@@ -51,8 +51,6 @@ website:
     left:
       - text: "Notation"
         href: notation.qmd
-      - text: "Number Systems"
-        href: number-systems.qmd
       - text: "Sets and Functions"
         menu:
           - indicator-functions.qmd
@@ -133,7 +131,6 @@ website:
       - text: "Home"
         href: index.qmd
       - notation.qmd
-      - number-systems.qmd
       - section: "Sets and Functions"
         href: sets-functions.qmd
         contents:

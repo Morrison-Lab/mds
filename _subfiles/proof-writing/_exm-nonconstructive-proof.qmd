@@ -1,11 +1,11 @@
 :::{#exm-nonconstructive-proof}
 #### A non-constructive proof
 
-Claim: among any three [integers](number-systems.qmd#def-integers),
-there are two that are both [even](number-systems.qmd#def-even-odd)
-or both [odd](number-systems.qmd#def-odd).
+Claim: among any three [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers),
+there are two that are both [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)
+or both [odd](https://morrison-lab.github.io/mcs/number-systems.html#def-odd).
 
-Proof: each [integer](number-systems.qmd#def-integers) is even or odd.
+Proof: each [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) is even or odd.
 If at most one of the three integers were even,
 and at most one were odd,
 there would be at most two integers in all.

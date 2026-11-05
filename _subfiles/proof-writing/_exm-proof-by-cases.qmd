@@ -1,7 +1,7 @@
 :::{#exm-proof-by-cases}
 #### The square of a real number is nonnegative
 
-Claim: for every [real number](number-systems.qmd#def-real-numbers) $x$, $x^2 \ge 0$.
+Claim: for every [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$, $x^2 \ge 0$.
 
 Every real number $x$ satisfies $x \ge 0$ or $x < 0$,
 so these two cases cover every $x$.

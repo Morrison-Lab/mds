@@ -500,7 +500,7 @@ $\Var{X} = \E{X^2} - \sqf{\E{X}}$
 # Proof by induction {#sec-proof-by-induction}
 
 Many proofs in these notes show that a statement holds
-for every [natural number](number-systems.qmd#def-natural-numbers) $n$,
+for every [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $n$,
 or for every integer $n$ from some starting value on.
 Checking the statement one $n$ at a time would never finish;
 induction proves it for all of them with two arguments.

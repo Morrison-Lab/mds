@@ -1,0 +1,11 @@
+:::{#def-non-strict-inequality}
+#### Non-strict inequalities
+
+For [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a$ and $b$,
+the **non-strict inequalities** also allow equality,
+unlike the strict inequalities (@def-strict-inequality):
+
+- $a \le b$ means $a < b$ or $a = b$;
+- $a \ge b$ means $a > b$ or $a = b$.
+
+:::

@@ -1,7 +1,7 @@
 :::{#exm-proof-by-contrapositive}
 #### If $x^2 + 3x < 0$, then $x < 0$
 
-Claim: for every [real number](number-systems.qmd#def-real-numbers) $x$,
+Claim: for every [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$,
 if $x^2 + 3x < 0$, then $x < 0$.
 
 A [direct proof](#def-direct-proof) would have to start from the [inequality](#def-inequality) $x^2 + 3x < 0$,

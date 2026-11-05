@@ -5,6 +5,6 @@ An **identity**
 [@wikipedia_identity_mathematics]
 is an equation between two expressions
 that holds for every value of its variables
-in a stated set, such as the [real numbers](number-systems.qmd#def-real-numbers).
+in a stated set, such as the [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
 
 :::

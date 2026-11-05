@@ -25,7 +25,15 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-real-coordinate-space-notation.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-scalar.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-scalar.qmd >}}
 
 {{< slidebreak >}}
 

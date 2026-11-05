@@ -64,6 +64,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-level-curve.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-level-sets-linear.qmd >}}
 
 {{< slidebreak >}}
