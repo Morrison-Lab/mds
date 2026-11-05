@@ -11,7 +11,7 @@ whose entry $(i, j)$ is the dot product $\vecf{a}_i \cdot \vecf{b}_j$.
 
 ::: notes
 Each entry pairs a column of $\matr{A}$ with a column of $\matr{B}$, so we can call it a column-column [product](linear-algebra.qmd#def-matrix-mult).
-Ordinary [matrix multiplication](linear-algebra.qmd#def-matrix-mult) instead pairs a row of the left factor with a column of the right factor.
+Ordinary [matrix multiplication](linear-algebra.qmd#def-matrix-mult) instead pairs a row of the left factor with a column of the right factor, a row-by-column product [@northwestern_linalg_chap1, Section 2].
 
 This is what R's `crossprod(A, B)` computes, and `crossprod(A)` is $\tprod{\matr{A}}{\matr{A}}$.
 In NumPy it has no name of its own: write `A.T @ B`.
