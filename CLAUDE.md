@@ -66,6 +66,16 @@ Mirrors [`.github/copilot-instructions.md`](.github/copilot-instructions.md). Ke
   unless the PR carries the label `preview:pdf` or `preview:docx`.
   The publish on `main` builds both.
   With only the PDFs skipped, a preview took 89 of its 90 minutes, so the preview cap is 120 minutes (decided 2026-10-22, mds#447).
+- **The Quarto freeze cache is kept across runs, and a changed subfile invalidates it** (checked 2026-11-05 against `Morrison-Lab/gha` `v3`, mds#631).
+  Both `publish.yml` (`freeze-cache: true`) and the preview workflow restore `_freeze` with `actions/cache`, from the newest cache whose key matches.
+  `freeze: auto` hashes only a page's own file, so a changed subfile would otherwise keep serving stale results.
+  gha's `preview/prune-stale-freeze.py` runs after the restore in both workflows.
+  It reads the commit SHA out of the restored key and diffs that commit against `HEAD`.
+  It deletes the frozen results of every page that changed, that includes a changed file through any chain of `{{< include >}}`, or that mentions the file name of a changed non-page file (a data file, script or the `latex-macros` pin).
+  It resolves every path with `Path.resolve()`, so an include written `mds/_subfiles/...` reaches `_subfiles/...` through the `mds -> .` symlink and counts as a dependency.
+  If the key names no commit, or the commit cannot be fetched, it deletes the whole freeze.
+  Before relying on it for a new include style (a `{{< include >}}` with a shortcode or variable in the path), check that `INCLUDE_RE` in that script matches it.
+  The `clear freezer` label discards the cache; a subfile edit no longer needs it.
 - **Dependencies**: Dependabot auto-updates the `latex-macros` submodule and GitHub Actions (see `.github/dependabot.yml`); don't bump those by hand unless a PR needs it.
 
 ## Pull request expectations
