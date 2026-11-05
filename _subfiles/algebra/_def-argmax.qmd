@@ -25,6 +25,6 @@ we write $\hat{x} = \argmax_{x \in A} f(x)$.
 - Let $f(x) = x$ on $[0, 1)$.
   As in @exm-maximum, for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value,
   so no input attains a largest value, and $\argmax_{x \in [0, 1)} f(x)$ is the
-  [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set).
+  [empty set](sets.qmd#def-empty-set).
 
 :::
