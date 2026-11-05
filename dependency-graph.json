@@ -4,6 +4,26 @@
  "meaning": "edge [A, B] means A uses B: B is a prerequisite of A, A a postrequisite of B",
  "nodes": [
   {
+   "id": "mcs/expressions-algorithms#def-closed-form-expression",
+   "site": "mcs",
+   "page": "expressions-algorithms",
+   "div": "def-closed-form-expression",
+   "kind": "def",
+   "title": "closed form expression",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-closed-form-expression"
+  },
+  {
+   "id": "mcs/expressions-algorithms#def-expression",
+   "site": "mcs",
+   "page": "expressions-algorithms",
+   "div": "def-expression",
+   "kind": "def",
+   "title": "expression",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression"
+  },
+  {
    "id": "mds/algebra#cor-exp-ab",
    "site": "mds",
    "page": "algebra",
@@ -3853,69 +3873,6 @@
    "div": "thm-taylor-normal-density",
    "kind": "thm",
    "title": "Maclaurin polynomial of the standard normal density",
-   "external": false
-  },
-  {
-   "id": "mds/expressions-algorithms#def-algorithm",
-   "site": "mds",
-   "page": "expressions-algorithms",
-   "div": "def-algorithm",
-   "kind": "def",
-   "title": "Algorithm",
-   "external": false
-  },
-  {
-   "id": "mds/expressions-algorithms#def-closed-form-expression",
-   "site": "mds",
-   "page": "expressions-algorithms",
-   "div": "def-closed-form-expression",
-   "kind": "def",
-   "title": "Closed-form expression (formula)",
-   "external": false
-  },
-  {
-   "id": "mds/expressions-algorithms#def-closed-form-solution",
-   "site": "mds",
-   "page": "expressions-algorithms",
-   "div": "def-closed-form-solution",
-   "kind": "def",
-   "title": "Closed-form solution",
-   "external": false
-  },
-  {
-   "id": "mds/expressions-algorithms#def-computes",
-   "site": "mds",
-   "page": "expressions-algorithms",
-   "div": "def-computes",
-   "kind": "def",
-   "title": "Computes",
-   "external": false
-  },
-  {
-   "id": "mds/expressions-algorithms#def-denotes",
-   "site": "mds",
-   "page": "expressions-algorithms",
-   "div": "def-denotes",
-   "kind": "def",
-   "title": "Denotes",
-   "external": false
-  },
-  {
-   "id": "mds/expressions-algorithms#def-expression",
-   "site": "mds",
-   "page": "expressions-algorithms",
-   "div": "def-expression",
-   "kind": "def",
-   "title": "Expression",
-   "external": false
-  },
-  {
-   "id": "mds/expressions-algorithms#def-parse-tree",
-   "site": "mds",
-   "page": "expressions-algorithms",
-   "div": "def-parse-tree",
-   "kind": "def",
-   "title": "Parse tree",
    "external": false
   },
   {
@@ -13673,6 +13630,10 @@
   ],
   [
    "mds/algebra#def-monomial",
+   "mcs/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/algebra#def-monomial",
    "mds/algebra-basics#def-power"
   ],
   [
@@ -13682,10 +13643,6 @@
   [
    "mds/algebra#def-monomial",
    "mds/algebra-basics#def-power-integer"
-  ],
-  [
-   "mds/algebra#def-monomial",
-   "mds/expressions-algorithms#def-expression"
   ],
   [
    "mds/algebra#def-monomial",
@@ -14277,6 +14234,10 @@
   ],
   [
    "mds/algebra-exponentials#def-monomial",
+   "mcs/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/algebra-exponentials#def-monomial",
    "mds/algebra-basics#def-power"
   ],
   [
@@ -14286,10 +14247,6 @@
   [
    "mds/algebra-exponentials#def-monomial",
    "mds/algebra-basics#def-power-integer"
-  ],
-  [
-   "mds/algebra-exponentials#def-monomial",
-   "mds/expressions-algorithms#def-expression"
   ],
   [
    "mds/algebra-exponentials#def-monomial",
@@ -14977,15 +14934,15 @@
   ],
   [
    "mds/calculus#thm-deriv-polynomial",
+   "mcs/expressions-algorithms#def-closed-form-expression"
+  ],
+  [
+   "mds/calculus#thm-deriv-polynomial",
    "mds/algebra#def-real-power"
   ],
   [
    "mds/calculus#thm-deriv-polynomial",
    "mds/calculus-derivatives#def-derivative"
-  ],
-  [
-   "mds/calculus#thm-deriv-polynomial",
-   "mds/expressions-algorithms#def-closed-form-expression"
   ],
   [
    "mds/calculus#thm-deriv-polynomial",
@@ -15333,15 +15290,15 @@
   ],
   [
    "mds/calculus-derivatives#thm-deriv-polynomial",
+   "mcs/expressions-algorithms#def-closed-form-expression"
+  ],
+  [
+   "mds/calculus-derivatives#thm-deriv-polynomial",
    "mds/algebra#def-real-power"
   ],
   [
    "mds/calculus-derivatives#thm-deriv-polynomial",
    "mds/calculus-derivatives#def-derivative"
-  ],
-  [
-   "mds/calculus-derivatives#thm-deriv-polynomial",
-   "mds/expressions-algorithms#def-closed-form-expression"
   ],
   [
    "mds/calculus-derivatives#thm-deriv-polynomial",
@@ -15578,62 +15535,6 @@
   [
    "mds/calculus-taylor-series#thm-taylor-normal-density",
    "mds/calculus-taylor-series#def-maclaurin-polynomial"
-  ],
-  [
-   "mds/expressions-algorithms#def-closed-form-expression",
-   "mds/algebra-basics#def-power"
-  ],
-  [
-   "mds/expressions-algorithms#def-closed-form-expression",
-   "mds/expressions-algorithms#def-expression"
-  ],
-  [
-   "mds/expressions-algorithms#def-closed-form-expression",
-   "mds/functions#def-function"
-  ],
-  [
-   "mds/expressions-algorithms#def-closed-form-solution",
-   "mds/expressions-algorithms#def-closed-form-expression"
-  ],
-  [
-   "mds/expressions-algorithms#def-closed-form-solution",
-   "mds/functions#def-function"
-  ],
-  [
-   "mds/expressions-algorithms#def-computes",
-   "mds/expressions-algorithms#def-algorithm"
-  ],
-  [
-   "mds/expressions-algorithms#def-computes",
-   "mds/functions#def-argument"
-  ],
-  [
-   "mds/expressions-algorithms#def-computes",
-   "mds/functions#def-function"
-  ],
-  [
-   "mds/expressions-algorithms#def-computes",
-   "mds/functions#def-value"
-  ],
-  [
-   "mds/expressions-algorithms#def-denotes",
-   "mds/expressions-algorithms#def-expression"
-  ],
-  [
-   "mds/expressions-algorithms#def-denotes",
-   "mds/functions#def-argument"
-  ],
-  [
-   "mds/expressions-algorithms#def-denotes",
-   "mds/functions#def-function"
-  ],
-  [
-   "mds/expressions-algorithms#def-denotes",
-   "mds/functions#def-value"
-  ],
-  [
-   "mds/expressions-algorithms#def-parse-tree",
-   "mds/expressions-algorithms#def-expression"
   ],
   [
    "mds/functions#def-argument",
@@ -22549,15 +22450,15 @@
   ],
   [
    "mds/optimization#thm-best-constant-step",
+   "mcs/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/optimization#thm-best-constant-step",
    "mds/algebra#def-global-minimizer"
   ],
   [
    "mds/optimization#thm-best-constant-step",
    "mds/algebra#def-maximum"
-  ],
-  [
-   "mds/optimization#thm-best-constant-step",
-   "mds/expressions-algorithms#def-expression"
   ],
   [
    "mds/optimization#thm-best-constant-step",
@@ -23545,15 +23446,15 @@
   ],
   [
    "mds/optimization-gradient-descent#thm-best-constant-step",
+   "mcs/expressions-algorithms#def-expression"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-best-constant-step",
    "mds/algebra#def-global-minimizer"
   ],
   [
    "mds/optimization-gradient-descent#thm-best-constant-step",
    "mds/algebra#def-maximum"
-  ],
-  [
-   "mds/optimization-gradient-descent#thm-best-constant-step",
-   "mds/expressions-algorithms#def-expression"
   ],
   [
    "mds/optimization-gradient-descent#thm-best-constant-step",

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 10:15:02 (PST)
+Last modified: 2026-11-05 11:51:36 (PST)
 
 # Welcome
 
@@ -21,7 +21,7 @@ The first six topics are the foundations. Apart from a few remarks in Algebra th
 - [Sets and Functions](sets-functions.llms.md), on four pages:
   - [Sets](sets.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, and the extended non-negative real numbers
   - [Functions](functions.llms.md): functions with their domains, codomains, and images, sequences, and countable sets
-  - [Expressions and Algorithms](expressions-algorithms.llms.md): expressions, parse trees, and algorithms
+  - [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html): expressions, parse trees, and algorithms
   - [Indicator Functions](indicator-functions.llms.md): set and predicate indicators, the Iverson bracket, the Kronecker delta, and their algebraic properties
 - [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Proof Writing](proof-writing.llms.md): propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.llms.md#def-derivation)
@@ -63,7 +63,6 @@ Each page is a thin wrapper around one or more fragments:
 | [Number Systems](number-systems.llms.md) | `mds/_number-systems.qmd` |
 | [Sets](sets.llms.md) | `mds/_sets.qmd` |
 | [Functions](functions.llms.md) | `mds/_functions.qmd` |
-| [Expressions and Algorithms](expressions-algorithms.llms.md) | `mds/_expressions-algorithms.qmd` |
 | [Indicator Functions](indicator-functions.llms.md) | `mds/_indicator-functions.qmd` |
 | [Algebra](algebra.llms.md) | `mds/_algebra.qmd` |
 | [Measures](measures.llms.md) | `mds/_measures.qmd` |
@@ -73,7 +72,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Optimization](optimization.llms.md) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.llms.md) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
+`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
 
 Quarto resolves `@id` cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, `[text](notation.qmd#id)`.
 

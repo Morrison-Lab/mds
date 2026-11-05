@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 10:15:02 (PST)
+Last modified: 2026-11-05 11:51:36 (PST)
 
 # 1 Critical points and optimization
 
@@ -885,7 +885,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 1.071498e-11 1.673470e-10
+> #> [1] 9.471535e-12 6.662049e-11
 > #> 
 > #> 
 > #> $zero_vector
@@ -904,7 +904,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
@@ -1466,7 +1466,113 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > && \text{(substitute)}
 > \end{aligned}$$
 >
-> So every ball around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ contains a point with a larger value of $f$ and a point with a smaller one. Hence $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ is neither a local minimizer nor a local maximizer, and it is a saddle point.
+> So every ball around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ contains a point with a larger value of $f$ and a point with a smaller one. Hence $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ is neither a local minimizer nor a local maximizer, and it is a saddle point. [Figure 9](#fig-saddle-point) shows the surface: the curve $t \mapsto f(t, 0)$ rises from the origin along the $x_1$ axis, and the curve $t \mapsto f(0, t)$ falls from the origin along the $x_2$ axis.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > sp_x_sf <- seq(-1, 1, length.out = 61)
+> > sp_grid_sf <- tidyr::expand_grid(x1 = sp_x_sf, x2 = sp_x_sf)
+> > sp_value_sf <- sp_grid_sf$x1^2 - sp_grid_sf$x2^2
+> > sp_n_sf <- length(sp_x_sf)
+> > sp_z_sf <- matrix(sp_value_sf, nrow = sp_n_sf)
+> > sp_up_sf <- tibble::tibble(x1 = sp_x_sf, x2 = 0, z = sp_x_sf^2)
+> > sp_down_sf <- tibble::tibble(x1 = 0, x2 = sp_x_sf, z = -sp_x_sf^2)
+> > sp_origin_sf <- tibble::tibble(x1 = 0, x2 = 0, z = 0)
+> > sp_solid_sf <- list(color = "#D55E00", width = 5)
+> > sp_dash_sf <- list(color = "#D55E00", dash = "dash", width = 5)
+> > sp_marker_sf <- list(color = "#000000", size = 5)
+> > sp_stops_sf <- c(0, 1)
+> > sp_cols_sf <- c("#CCE0F0", "#0072B2")
+> > sp_scale_sf <- list(sp_stops_sf, sp_cols_sf)
+> > sp_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> > sp_camera_sf <- list(eye = sp_eye_sf)
+> > sp_xaxis_sf <- list(title = "x1")
+> > sp_yaxis_sf <- list(title = "x2")
+> > sp_zaxis_sf <- list(title = "f(x)")
+> > sp_scene_sf <- list(
+> >   xaxis = sp_xaxis_sf,
+> >   yaxis = sp_yaxis_sf,
+> >   zaxis = sp_zaxis_sf,
+> >   camera = sp_camera_sf
+> > )
+> > sp_legend_sf <- list(orientation = "h")
+> > plotly::plot_ly() |>
+> >   plotly::add_surface(
+> >     x = sp_x_sf,
+> >     y = sp_x_sf,
+> >     z = sp_z_sf,
+> >     colorscale = sp_scale_sf,
+> >     showscale = FALSE,
+> >     opacity = 0.8
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = sp_up_sf,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "lines",
+> >     line = sp_solid_sf,
+> >     name = "f(t, 0) = t^2"
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = sp_down_sf,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "lines",
+> >     line = sp_dash_sf,
+> >     name = "f(0, t) = -t^2"
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = sp_origin_sf,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "markers",
+> >     marker = sp_marker_sf,
+> >     name = "saddle point"
+> >   ) |>
+> >   plotly::layout(scene = sp_scene_sf, legend = sp_legend_sf)
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > sp_t_3d = np.linspace(-1, 1, 61)
+> > sp_x1_3d, sp_x2_3d = np.meshgrid(sp_t_3d, sp_t_3d)
+> > sp_z_3d = sp_x1_3d**2 - sp_x2_3d**2
+> > sp_zero_3d = np.zeros_like(sp_t_3d)
+> > fig = plt.figure(figsize=(6, 4.5))
+> > ax = fig.add_subplot(projection="3d")
+> > ax.plot_surface(sp_x1_3d, sp_x2_3d, sp_z_3d, color="#0072B2", alpha=0.6)
+> > ax.plot(sp_t_3d, sp_zero_3d, sp_t_3d**2, color="#D55E00",
+> >         label="f(t, 0) = t^2")
+> > ax.plot(sp_zero_3d, sp_t_3d, -sp_t_3d**2, "--", color="#D55E00",
+> >         label="f(0, t) = -t^2")
+> > ax.scatter([0], [0], [0], color="black", label="saddle point")
+> > ax.set_xlabel("x1")
+> > ax.set_ylabel("x2")
+> > ax.set_zlabel("f(x)")
+> > ax.legend(loc="upper right")
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Surface plot of f(x) = x1^2 - x2^2 for x1 and x2 from -1 to 1. The surface is shaped like a saddle: it curves upward along the x1 axis and downward along the x2 axis. A solid vermilion curve along the x1 axis rises away from the origin, a dashed vermilion curve along the x2 axis falls away from it, and a point marks the saddle point at the origin.](optimization-critical-points_files/figure-html/saddle-point-3d-python-1.png)](optimization-critical-points_files/figure-html/saddle-point-3d-python-1.png "Figure 9: The graph of f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2. Along the x_1 axis (solid curve) the surface rises away from the origin, and along the x_2 axis (dashed curve) it falls away, so the origin is neither the lowest nor the highest point nearby.")
+> >
+> > ## Python
+> >
+> > Figure 9: The [graph](functions.llms.md#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$. Along the $x_1$ axis (solid curve) the surface rises away from the origin, and along the $x_2$ axis (dashed curve) it falls away, so the origin is neither the lowest nor the highest point nearby.
 
 # Definitions on this page
 

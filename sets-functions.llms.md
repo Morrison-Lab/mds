@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 10:15:02 (PST)
+Last modified: 2026-11-05 11:51:36 (PST)
 
 # 1 The pages
 
@@ -12,6 +12,6 @@ The definitions that were on this page are now on three pages:
 
 - [Sets](sets.llms.md): sets, subsets, unions, intersections, complements, Cartesian products, and the extended non-negative real numbers.
 - [Functions](functions.llms.md): functions with their domains, codomains, and images, composition, inverses, sequences, and countable sets.
-- [Expressions and Algorithms](expressions-algorithms.llms.md): expressions, parse trees, and algorithms.
+- [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html): expressions, parse trees, and algorithms.
 
 Back to top
