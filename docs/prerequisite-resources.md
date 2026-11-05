@@ -11,8 +11,10 @@ The work is tracked in [#638](https://github.com/Morrison-Lab/mds/issues/638).
 
 ## How to read the tables
 
-- **Status** `fetched` means the author's page (or, where noted, the book's own PDF) was read in this survey.
-  `search only` means a search result described it and the page has not been read.
+- **Status** `fetched` means the author's page
+  (or, where noted, the book's own PDF) was read in this survey.
+  `search only` means a search result described it,
+  and the page has not been read.
   `unchanged` means the page was tried in the second pass and could not be read,
   so the row still carries what the first pass reported.
   Check a `search only` or `unchanged` entry before copying it into a page's Further reading section.
@@ -98,7 +100,7 @@ The search found no free optimization-for-machine-learning lecture notes.
 
 ## Already in the project library
 
-The private project library (`/mnt/project-files/books/`) holds copies of
+The lab's private library holds copies of
 Billingsley, *Probability and Measure* (3rd ed.);
 Gut, *Probability: A Graduate Course* (2nd ed.);
 Grinstead and Snell, *Introduction to Probability*;
@@ -107,7 +109,8 @@ Wasserman, *All of Statistics*;
 Casella and Berger, *Statistical Inference* (2nd ed.);
 Denton and Waldron, *Linear Algebra in Twenty-Five Lectures*;
 and Tao's author preliminary version of *An Introduction to Measure Theory*.
-Only the file names were read, not the texts, and the library is private,
+Only the file names were read, not the texts.
+The library is private,
 so each needs a public link and a license check before it appears on a page.
 
 ## Named but not yet checked
@@ -119,6 +122,6 @@ so each needs a public link and a license check before it appears on a page.
 - `https://www.probabilitybook.net/` redirects to a Google Drive sign-in.
 - Sergei Treil's *Linear Algebra Done Wrong*: the Brown URLs tried did not resolve, so the page is still unread.
 - Polyanskiy and Wu: no book page was reached, so the row rests on the PDF front matter.
-- The first pass could not resolve `measure.axler.net`, `www.jirka.org`, `probability4datascience.com`,
-  `www.inference.org.uk`, `mml-book.com`, `mlstory.org`, `www.di.ens.fr` and the Stanford and Cornell pages;
-  all of them were read in the second pass.
+- The first pass could not resolve several author hosts,
+  such as `measure.axler.net`, `www.jirka.org` and `mml-book.com`.
+  All of them were read in the second pass.
