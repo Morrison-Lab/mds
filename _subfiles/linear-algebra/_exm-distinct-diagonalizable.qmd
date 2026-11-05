@@ -1,0 +1,11 @@
+:::{#exm-distinct-diagonalizable}
+#### A triangular matrix with distinct diagonal entries
+
+$\matr{U}$ of @exm-eigen-triangular has the three different eigenvalues $2$, $\tfrac{1}{2}$ and $-1$
+(@thm-eigen-triangular), so it is diagonalizable,
+even though it is not symmetric, so @thm-spectral does not apply to it.
+The converse fails: $\matr{I}_2$ is diagonal, hence diagonalizable
+($\matr{I}_2 = \matr{I}_2\,\matr{I}_2\,\matr{I}_2^{-1}$),
+but has only the eigenvalue $1$.
+
+:::

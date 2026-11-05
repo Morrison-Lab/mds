@@ -40,7 +40,7 @@ $$
 \ea
 $$
 
-By [induction](proof-writing.qmd#def-proof-by-induction) on $t$, $\ve^{(t)} = (\matr{I}_p - \steplen\,\matr{S})^t\,\ve^{(0)}$.
+By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $t$, $\ve^{(t)} = (\matr{I}_p - \steplen\,\matr{S})^t\,\ve^{(0)}$.
 By the [spectral theorem](linear-algebra.qmd#thm-spectral), write $\matr{S} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$.
 Then $\matr{I}_p - \steplen\,\matr{S} = \matr{Q}(\matr{I}_p - \steplen\,\matr{\Eigvals})\tp{\matr{Q}}$
 because $\matr{Q}\tp{\matr{Q}} = \matr{I}_p$,
@@ -66,7 +66,7 @@ $$
 
 The length-preserving steps apply
 [orthogonal matrices preserve length](linear-algebra.qmd#thm-orthogonal-norm).
-The [inequality](proof-writing.qmd#def-inequality) holds
+The [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds
 because $\matr{I}_p - \steplen\,\matr{\Eigvals}$ is diagonal,
 so its $t$th power multiplies coordinate $i$ by $(1 - \steplen\,\eigval_i)^t$,
 whose [absolute value](algebra.qmd#def-absolute-value) is at most $\convrate(\steplen)^t$.

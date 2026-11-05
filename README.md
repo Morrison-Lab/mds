@@ -27,7 +27,6 @@ or more fragments, which are what a host site includes:
 | [Linear Algebra](linear-algebra.qmd)                     | `mds/_subfiles/_sec_linear_algebra.qmd`                                                                                |
 | [Vector Calculus](vector-calculus.qmd)                   | `mds/_subfiles/_sec_vector_calc.qmd`                                                                                   |
 | [Optimization](optimization.qmd)                         | `mds/_subfiles/_sec_optimization.qmd`                                                                                  |
-| [Proof Writing](proof-writing.qmd)                       | `mds/_proof-writing.qmd`                                                                                               |
 
 The sets, functions, and expressions and algorithms fragments of the old
 Sets and Functions page moved to the

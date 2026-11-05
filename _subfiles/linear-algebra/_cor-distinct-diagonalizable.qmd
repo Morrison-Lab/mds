@@ -1,0 +1,14 @@
+:::{#cor-distinct-diagonalizable}
+#### Distinct eigenvalues make a matrix diagonalizable
+
+A $p \times p$ matrix with $p$ different eigenvalues is diagonalizable.
+
+:::
+
+::: proof
+
+Choose one eigenvector for each eigenvalue.
+These $p$ eigenvectors are linearly independent (@thm-eigenvectors-independent),
+so the matrix is diagonalizable (@thm-diagonalizable).
+
+:::

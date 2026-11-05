@@ -148,7 +148,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-thm-gram-schmidt.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_cor-orthonormal-basis-exists.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-orthonormal-basis-exists.qmd >}}
 
 # Outer product
 

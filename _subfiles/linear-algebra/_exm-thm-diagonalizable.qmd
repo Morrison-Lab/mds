@@ -1,0 +1,17 @@
+:::{#exm-thm-diagonalizable}
+#### Building the diagonalization from eigenvectors
+
+The eigenvectors $(1, 1)$ and $(1, -1)$ of $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+are linearly independent (@exm-eigenvectors-independent),
+so with $\matr{X} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$ and $\matr{\Eigvals} = \diag(3, 1)$,
+$\matr{A} = \matr{X} \matr{\Eigvals} \matr{X}^{-1}$;
+by @rem-similar-both-ways this is the similarity of @exm-similar, with $\matr{X} = \matr{P}$.
+Because $\matr{A}$ is symmetric, @thm-spectral even gives such a factorization with orthonormal eigenvectors
+(@def-eigendecomposition):
+dividing each column of $\matr{X}$ by its length $\sqrt{2}$ gives one.
+By contrast, every eigenvector of $\matr{J}$ in @exm-eigenspace has the form $(t, 0)$,
+so any two of them are multiples of each other,
+and $\matr{J}$ has no two linearly independent eigenvectors:
+another way to see that it is not diagonalizable.
+
+:::

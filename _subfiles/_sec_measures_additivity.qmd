@@ -43,3 +43,7 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-finite-not-countable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_rem-finite-not-countable-converse.qmd >}}

@@ -145,6 +145,10 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-spectral-equivalent-form.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-symmetric-eigenvectors-orthogonal.qmd >}}
 
 {{< slidebreak >}}
@@ -260,6 +264,10 @@ reticulate::py_require("numpy")
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-det-diagonal.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-det-diagonal.qmd >}}
 
 {{< slidebreak >}}
 

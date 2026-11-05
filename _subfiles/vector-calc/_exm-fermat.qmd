@@ -10,7 +10,7 @@
   \end{aligned}
   $$
 
-- The [converse](proof-writing.qmd#def-converse) fails: $g(x) = x^3$ has
+- The [converse](https://morrison-lab.github.io/mcs/proof-writing.html#def-converse) fails: $g(x) = x^3$ has
 
   $$
   \begin{aligned}

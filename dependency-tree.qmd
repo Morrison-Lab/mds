@@ -12,7 +12,7 @@ format:
 
 # How to read the tree {.unnumbered}
 
-Every definition and [theorem](proof-writing.qmd#def-theorem) in these notes is one box, colored by kind.
+Every definition and [theorem](https://morrison-lab.github.io/mcs/proof-writing.html#def-theorem) in these notes is one box, colored by kind.
 A box sits below each definition and theorem it uses,
 so the ones that use no others are at the top.
 Hover over a box to see its name,

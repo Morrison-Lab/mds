@@ -1,0 +1,11 @@
+:::{#rem-finite-not-countable-converse}
+#### Finite additivity does not imply countable additivity
+
+@exm-finite-not-countable shows that the [converse](https://morrison-lab.github.io/mcs/proof-writing.html#def-converse) of @thm-countable-implies-finite fails,
+even when $\measure(\emptyset) = 0$:
+a finitely additive function need not be countably additive
+[@wikipedia_sigma_additive_set_function].
+The function $\measure$ in @exm-finite-not-countable has $\measure(\emptyset) = 0$,
+because $\emptyset$ is finite.
+
+:::

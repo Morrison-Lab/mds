@@ -1,0 +1,53 @@
+:::{#thm-diagonalizable-powers}
+#### Powers of a diagonalizable matrix
+
+If $\matr{A} = \matr{X} \matr{\Eigvals} \matr{X}^{-1}$ (@def-diagonalizable)
+with $\matr{\Eigvals} = \diag(\eigval_1, \ldots, \eigval_p)$,
+then for every positive integer $k$,
+$\matr{A}^k = \matr{X} \matr{\Eigvals}^k \matr{X}^{-1}$
+and $\matr{\Eigvals}^k = \diag(\eigval_1^k, \ldots, \eigval_p^k)$.
+
+:::
+
+::: proof
+
+**Powers of $\matr{\Eigvals}$.**
+If $\matr{D} = \diag(d_1, \ldots, d_p)$ and $\matr{E} = \diag(e_1, \ldots, e_p)$,
+with entries $d_{il}$ and $e_{lj}$ (so $d_{ii} = d_i$ and $e_{jj} = e_j$),
+entry $(i, j)$ of $\matr{D} \matr{E}$ is $\sum_l d_{il}\,e_{lj}$ (@def-matrix-mult),
+where $d_{il} = 0$ unless $l = i$ and $e_{lj} = 0$ unless $l = j$.
+For $i \ne j$ no term survives, so the entry is $0$;
+for $i = j$ only $l = i$ survives, giving $d_i\,e_i$.
+So $\matr{D} \matr{E} = \diag(d_1 e_1, \ldots, d_p e_p)$,
+and [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $k$ gives $\matr{\Eigvals}^k = \diag(\eigval_1^k, \ldots, \eigval_p^k)$.
+
+**Powers of $\matr{A}$, by induction on $k$.**
+$k = 1$ is the assumption. If it holds for $k - 1$,
+
+$$
+\ba
+\matr{A}^k
+&= \matr{A}^{k-1} \matr{A}
+&& \text{(@def-matrix-power, @thm-matmul-assoc)}
+\\
+&= \matr{X} \matr{\Eigvals}^{k-1} \matr{X}^{-1}\,\matr{A}
+&& \text{(induction hypothesis)}
+\\
+&= \matr{X} \matr{\Eigvals}^{k-1} \matr{X}^{-1}\,\matr{X} \matr{\Eigvals} \matr{X}^{-1}
+&& \text{(the assumption)}
+\\
+&= \matr{X} \matr{\Eigvals}^{k-1}\,(\matr{X}^{-1} \matr{X})\,\matr{\Eigvals} \matr{X}^{-1}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{X} \matr{\Eigvals}^{k-1}\,\matr{I}_p\,\matr{\Eigvals} \matr{X}^{-1}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{X} \matr{\Eigvals}^{k-1} \matr{\Eigvals} \matr{X}^{-1}
+&& \text{(@thm-identity)}
+\\
+&= \matr{X} \matr{\Eigvals}^{k} \matr{X}^{-1}.
+&& \text{(@def-matrix-power)}
+\ea
+$$
+
+:::

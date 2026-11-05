@@ -7,7 +7,7 @@ and $\norm{x} = \abs{x}$ in it.
 The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence).
 Given $\tolout > 0$,
 take $N$ to be any [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) larger than $\frac{1}{\tolout}$.
-[For all](proof-writing.qmd#def-universal-quantifier) $m, n \ge N$,
+[For all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $m, n \ge N$,
 both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$,
 so $\abs{\frac{1}{m} - \frac{1}{n}} < \frac{1}{N} < \tolout$.
 For example, with $\tolout = 0.01$,

@@ -20,6 +20,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-eigen-shift-power.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-eigen-triangular.qmd >}}
 
 {{< slidebreak >}}
@@ -40,11 +44,35 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-eigenvectors-independent.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-diagonalizable.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-diagonalizable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-thm-diagonalizable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-distinct-diagonalizable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-distinct-diagonalizable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-diagonalizable-powers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-diagonalizable-powers.qmd >}}
 
 # Gram matrices, Schur complements and Cholesky {#sec-cholesky}
 
@@ -97,3 +125,7 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-cholesky.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-cholesky.qmd >}}

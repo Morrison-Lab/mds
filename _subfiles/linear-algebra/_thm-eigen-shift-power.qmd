@@ -34,7 +34,7 @@ $$
 \ea
 $$
 
-**Part 2, by [induction](proof-writing.qmd#def-proof-by-induction) on $k$.**
+**Part 2, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $k$.**
 For $k = 1$ it is the assumption.
 If $\matr{A}^{k-1} \vecf{v} = \eigval^{k-1} \vecf{v}$, then
 
@@ -59,24 +59,5 @@ $$
 $$
 
 In both parts $\vecf{v} \ne \vzero$, so $\vecf{v}$ is an eigenvector.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-eigen-shift-power}
-#### Shifting and squaring
-
-For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with eigenvector $(1, 1)$ for $3$ (@exm-eigenvalue):
-
-- $\matr{A} - 2\,\matr{I}_2 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ sends $(1, 1)$ to $(1, 1) = (3 - 2)\,(1, 1)$;
-- $$
-  \begin{aligned}
-  \matr{A}^2 &= \begin{bmatrix} 2 \cd 2 + 1 \cd 1 & 2 \cd 1 + 1 \cd 2 \\ 1 \cd 2 + 2 \cd 1 & 1 \cd 1 + 2 \cd 2 \end{bmatrix} \\
-  &= \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}
-  \end{aligned}
-  $$
-
-  (@def-matrix-mult) sends $(1, 1)$ to $(9, 9) = 3^2\,(1, 1)$.
 
 :::

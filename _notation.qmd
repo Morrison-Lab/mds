@@ -6,9 +6,9 @@ and the alternatives you may encounter in other sources.
 
 | symbol | meaning | LaTeX
 |-------------|--------------------------------------------------|-----------
-| $\neg$      | [not](proof-writing.qmd#def-not)                   | `\neg`
-| $\forall$   | [for all](proof-writing.qmd#def-universal-quantifier)                       | `\forall`
-| $\exists$   | [there exists](proof-writing.qmd#def-existential-quantifier)                  | `\exists`
+| $\neg$      | [not](https://morrison-lab.github.io/mcs/proof-writing.html#def-not)                   | `\neg`
+| $\forall$   | [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier)                       | `\forall`
+| $\exists$   | [there exists](https://morrison-lab.github.io/mcs/proof-writing.html#def-existential-quantifier)                  | `\exists`
 | $\cup$      | union, "or"                                      | `\cup`
 | $\cap$      | intersection, "and"                              | `\cap`
 | $\mid$      | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|`
@@ -19,7 +19,7 @@ and the alternatives you may encounter in other sources.
 | $x\'$  | transpose of $x$                                 | `x\'`
 | $'$         | transpose or [derivative](calculus.qmd#def-derivative)[^3] | `'`
 | $\ind$      | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)         | `\perp\!\!\!\perp`
-| $\tf$       | [therefore](proof-writing.qmd#def-logical-entailment), thus       | `\therefore`
+| $\tf$       | [therefore](https://morrison-lab.github.io/mcs/proof-writing.html#def-logical-entailment), thus       | `\therefore`
 | $\eta$      | [linear predictor][eta] of a generalized linear model[^4] | `\eta`
 | $\floor{x}$ | floor of $x$: largest [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) less than or equal to $x$ | `\lfloor x \rfloor` <!-- check-term-links: allow -->
 | $\ceil{x}$  | ceiling of $x$: smallest [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) greater than or equal to $x$ | `\lceil x \rceil`

@@ -51,10 +51,10 @@ can build on them directly:
     set and predicate indicators, the Iverson bracket, the Kronecker delta,
     and their algebraic properties
 - [Algebra](algebra.qmd):
-  equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
+  equalities and [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), infimum and supremum,
   percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
-- [Proof Writing](proof-writing.qmd):
-  propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.qmd#def-derivation)
+- [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html):
+  propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation)
 - [Induction and Recursion](https://morrison-lab.github.io/mcs/induction.html) in the Math for Computer Science notes:
   [recursively defined sequences](https://morrison-lab.github.io/mcs/induction.html#def-recursive-sequence) and [strong induction](https://morrison-lab.github.io/mcs/induction.html#def-strong-induction)
 
@@ -145,7 +145,6 @@ Each page is a thin wrapper around one or more fragments:
 | [Linear Algebra](linear-algebra.qmd) | `mds/_subfiles/_sec_linear_algebra.qmd` |
 | [Vector Calculus](vector-calculus.qmd) | `mds/_subfiles/_sec_vector_calc.qmd` |
 | [Optimization](optimization.qmd) | `mds/_subfiles/_sec_optimization.qmd` |
-| [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
 `_notation.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
 a host page that includes any of the other fragments

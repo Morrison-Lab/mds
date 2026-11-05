@@ -63,8 +63,6 @@ website:
           - algebra-exponentials.qmd
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
-      - text: "Proof Writing"
-        href: proof-writing.qmd
       - text: "Measures"
         menu:
           - text: "Overview"
@@ -143,7 +141,6 @@ website:
           - algebra-exponentials.qmd
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
-      - proof-writing.qmd
       - section: "Measures"
         href: measures.qmd
         contents:
