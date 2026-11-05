@@ -82,6 +82,20 @@ The search found no free optimization-for-machine-learning lecture notes.
 | --- | --- | --- | --- | --- |
 | [*Information Theory, Inference, and Learning Algorithms*](https://www.inference.org.uk/itila/book.html) | David J. C. MacKay | Undergraduate to master's; self-study with over 400 exercises | The publisher and a 2003 announcement say the full book is free to view on screen; the page was not reachable here, so confirm the link and the terms | search only |
 
+## Already in the project library
+
+The private project library (`/mnt/project-files/books/`) holds copies of
+Billingsley, *Probability and Measure* (3rd ed.);
+Gut, *Probability: A Graduate Course* (2nd ed.);
+Grinstead and Snell, *Introduction to Probability*;
+Cover and Thomas, *Elements of Information Theory* (2nd ed.);
+Wasserman, *All of Statistics*;
+Casella and Berger, *Statistical Inference* (2nd ed.);
+Denton and Waldron, *Linear Algebra in Twenty-Five Lectures*;
+and Tao's author preliminary version of *An Introduction to Measure Theory*.
+Only the file names were read, not the texts, and the library is private,
+so each needs a public link and a license check before it appears on a page.
+
 ## Named but not yet checked
 
 These come from memory, not from this survey, so none has been read.
@@ -91,7 +105,6 @@ Confirm each page, license and level before adding it to a page.
 - Bass, *Real Analysis for Graduate Students*.
 - Durrett, *Probability: Theory and Examples*.
 - Blitzstein and Hwang, *Introduction to Probability*.
-- Grinstead and Snell, *Introduction to Probability*.
 - Blum, Hopcroft and Kannan, *Foundations of Data Science*.
 - Hardt and Recht, *Patterns, Predictions, and Actions*.
 - Bach, *Learning Theory from First Principles*.
