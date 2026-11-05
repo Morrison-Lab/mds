@@ -10,14 +10,13 @@ format:
     output-file: induction.docx
 ---
 
-{{< include mds/_induction.qmd >}}
+```{=html}
+<meta http-equiv="refresh" content="5; url=https://morrison-lab.github.io/mcs/induction.html">
+<script>
+// This page moved to the Math for Computer Science notes (https://github.com/Morrison-Lab/mcs/issues/60).
+// Send the reader, with any #id, to the same page there; the ids did not change.
+location.replace("https://morrison-lab.github.io/mcs/induction.html" + location.search + location.hash);
+</script>
+```
 
-# Further reading {#sec-further-reading}
-
-- @velleman2019prove
-  is a structured introduction to proof techniques, including [proof by induction](proof-writing.qmd#def-proof-by-induction).
-
-# References {.unnumbered}
-
-::: {#refs}
-:::
+This page moved to [Induction and Recursion](https://morrison-lab.github.io/mcs/induction.html) in the Math for Computer Science notes.
