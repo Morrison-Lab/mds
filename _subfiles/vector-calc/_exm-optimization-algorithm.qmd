@@ -5,7 +5,7 @@ Let $f(\vx) = x_1^2 + x_2^2$,
 with the [feasible set](#def-feasible-set) the three points
 $\cb{\tp{(1, 0.5)}, \tp{(3, -1)}, \tp{(-1, 2)}}$ of the line of @exm-feasible-set.
 The procedure "evaluate $f$ at every feasible point;
-return the point with the smallest [value](functions.qmd#def-value)"
+return the point with the smallest [value](https://morrison-lab.github.io/mcs/functions.html#def-value)"
 is an [optimization algorithm](#def-optimization-algorithm).
 Computing $f$ at each point gives
 

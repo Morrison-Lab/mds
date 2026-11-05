@@ -3,7 +3,7 @@
 
 A **parabola**
 [@wikipedia_parabola]
-is the [graph](functions.qmd#def-graph)
+is the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph)
 of a quadratic polynomial (@def-quadratic-polynomial).
 
 :::

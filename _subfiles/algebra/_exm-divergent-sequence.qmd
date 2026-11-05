@@ -1,0 +1,13 @@
+:::{#exm-divergent-sequence}
+#### A divergent sequence
+
+$c_n = n$ diverges.
+For any real number $L$ and $\tolout = 1$,
+every $n > L + 1$ has $\abs{n - L} > 1$,
+so no $N$ works.
+For example, with $L = 5$, every $n \ge 7$ has $\abs{n - 5} \ge 2$.
+It diverges to $\infty$:
+for every real number $M$, every $n \ge N$ has $c_n = n > M$
+when $N$ is a natural number larger than $M$.
+
+:::

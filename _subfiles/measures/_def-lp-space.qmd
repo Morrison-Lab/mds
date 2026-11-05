@@ -4,7 +4,7 @@
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
 Let $p \ge 1$ be a [real number](number-systems.qmd#def-real-numbers).
 For each $f$ in the [$\mathcal{L}^p$ space](#def-lp-function-space),
-let $[f]$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of all [functions](functions.qmd#def-function) in $\mathcal{L}^p(S, \salg, \measure)$ that are
+let $[f]$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of all [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in $\mathcal{L}^p(S, \salg, \measure)$ that are
 [equal almost everywhere](#def-equal-almost-everywhere) to $f$.
 The **$L^p$ space** $L^p(S, \salg, \measure)$ (or simply **$L^p(\measure)$**)
 is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of all such [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $[f]$,

@@ -1,7 +1,7 @@
 :::{#def-cauchy-sequence}
 #### Cauchy sequence
 
-A [sequence](functions.qmd#def-sequence) $(\vx_n)$ of vectors in a [real inner product space](linear-algebra-inner-products.qmd#def-inner-product-space) $V$
+A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(\vx_n)$ of vectors in a [real inner product space](linear-algebra-inner-products.qmd#def-inner-product-space) $V$
 is a **Cauchy sequence**
 [@wikipedia_cauchy_sequence]
 if for every $\tolout > 0$ there is a [natural number](number-systems.qmd#def-natural-numbers) $N$ such that

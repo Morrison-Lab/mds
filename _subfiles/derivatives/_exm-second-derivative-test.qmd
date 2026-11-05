@@ -1,7 +1,7 @@
 :::{#exm-second-derivative-test}
 #### Second derivative test for powers of $x$
 
-The [function](functions.qmd#def-function) $f(x) = x^2$ has the [flat point](#def-flat-point) $c = 0$ and [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''(0) = 2 > 0$,
+The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f(x) = x^2$ has the [flat point](#def-flat-point) $c = 0$ and [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''(0) = 2 > 0$,
 so $0$ is a [local minimizer](algebra.qmd#def-local-minimizer) by @thm-second-derivative-test.
 
 :::

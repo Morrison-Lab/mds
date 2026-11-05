@@ -143,7 +143,7 @@ The primary advantage of the Iverson bracket is algebraic conciseness:
 it turns a sum or integral over a subset
 into a sum or integral over a larger, fixed set.
 For example,
-if $U$ is a [finite set](functions.qmd#def-finite-set) that contains $A$, then:
+if $U$ is a [finite set](https://morrison-lab.github.io/mcs/functions.html#def-finite-set) that contains $A$, then:
 
 $$
 \sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]

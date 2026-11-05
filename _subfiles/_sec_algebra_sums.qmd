@@ -28,6 +28,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_rem-convex-chord-above-graph.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-cubic-not-convex.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_thm-convex-local-global.qmd >}}
 
 {{< slidebreak >}}
@@ -47,6 +55,22 @@
 {{< include mds/_subfiles/algebra/_exm-jensen.qmd >}}
 
 # Infimum and supremum
+
+{{< include mds/_subfiles/algebra/_def-upper-bound.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-lower-bound.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-bounded-above.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-bounded-below.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-bounded.qmd >}}
 

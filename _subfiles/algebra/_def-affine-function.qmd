@@ -1,7 +1,7 @@
 :::{#def-affine-function}
 #### Affine function of one variable
 
-A [function](functions.qmd#def-function) $f: \reals \to \reals$
+A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \reals \to \reals$
 is **affine**
 [@wikipedia_affine_transformation]
 if there are numbers $m$ and $b$ such that

@@ -121,7 +121,7 @@ plt.show();
 
 :::
 
-The [graph](functions.qmd#def-graph) of the [objective](#def-objective-function) $x_1^2 + x_2^2$,
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [objective](#def-objective-function) $x_1^2 + x_2^2$,
 the surface whose [level curves](vector-calculus.qmd#def-level-curve) (circles) are in @fig-lagrange-line,
 with the constraint line $3 x_1 + 4 x_2 = 5$ lifted onto it.
 Along the constraint the objective is lowest above the [minimizer](#def-minimizer-over-feasible-set) $\tp{(0.6, 0.8)}$ (@exm-qp-equality),

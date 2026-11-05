@@ -132,7 +132,7 @@ plt.show();
 
 :::
 
-The [graph](functions.qmd#def-graph) of $g(b, c) = b^2 + c^2$, the surface whose [contour lines](#def-contour-line) are in @fig-contour-line.
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $g(b, c) = b^2 + c^2$, the surface whose [contour lines](#def-contour-line) are in @fig-contour-line.
 The red circles are the contour lines at heights $1$, $4$ and $9$,
 and the dots are the points $(2, 0)$ and $(0, -2)$ of @exm-contour-line on the one at height $4$.
 

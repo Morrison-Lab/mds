@@ -1,0 +1,10 @@
+:::{#exm-sequence-limit}
+#### The limit of a sequence
+
+$a_n = \frac{1}{n}$ has limit $0$.
+Given $\tolout > 0$, take $N$ to be any natural number larger than $\frac{1}{\tolout}$.
+For every $n \ge N$, $\abs{\frac{1}{n} - 0} = \frac{1}{n} \le \frac{1}{N} < \tolout$.
+For example, with $\tolout = 0.01$, take $N = 101$:
+every $n \ge 101$ has $\frac{1}{n} \le \frac{1}{101} < 0.01$.
+
+:::

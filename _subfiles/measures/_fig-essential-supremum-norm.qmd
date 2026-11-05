@@ -53,7 +53,7 @@ plt.show()
 
 :::
 
-The [function](functions.qmd#def-function) in @exm-essential-supremum-norm:
+The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in @exm-essential-supremum-norm:
 $f(s) = s$ except $f(0) = 5$.
 The [supremum](algebra.qmd#def-supremum) is $5$,
 reached only at the single point $s = 0$,

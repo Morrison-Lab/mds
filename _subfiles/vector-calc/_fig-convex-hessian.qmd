@@ -61,7 +61,7 @@ plt.show();
 
 :::
 
-[Level curves](vector-calculus.qmd#def-level-set) of the third [function](functions.qmd#def-function) in @exm-convex-hessian.
+[Level curves](vector-calculus.qmd#def-level-set) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in @exm-convex-hessian.
 Along the dashed line through the origin in the [direction](vector-calculus.qmd#def-direction) $\tp{(1, -2)}$ the function is [linear](algebra.qmd#def-linear-function),
 so the function is [convex](algebra.qmd#def-convex-function) but not [strictly convex](#def-strictly-convex).
 

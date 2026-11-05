@@ -4,7 +4,7 @@
 Let $f : \reals^p \to \reals$ have a [gradient](vector-calculus.qmd#def-vector-derivative) at $\vy$.
 The **tangent plane**
 [@wikipedia_tangent_space]
-to the [graph](functions.qmd#def-graph) of $f$ at $\vy$
+to the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ at $\vy$
 is the graph of the function
 
 $$

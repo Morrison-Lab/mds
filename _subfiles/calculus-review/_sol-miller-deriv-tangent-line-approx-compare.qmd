@@ -1,6 +1,6 @@
 :::{#sol-miller-deriv-tangent-line-approx-compare}
 
-The exact [value](functions.qmd#def-value) is:
+The exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value) is:
 
 $$f(\pi/4 + 0.01) = 4\paren{\frac{\pi}{4} + 0.01} + \sqrt{2}\cosf{\frac{\pi}{4} + 0.01} \approx 4.171543$$
 

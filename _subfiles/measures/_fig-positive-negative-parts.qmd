@@ -76,7 +76,7 @@ plt.show()
 :::
 
 Let $D$ be the die rolls of @exm-integral.
-The plot shows the [function](functions.qmd#def-function) $f(x) = x - 3$ on $D$,
+The plot shows the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f(x) = x - 3$ on $D$,
 its [positive part](algebra.qmd#def-positive-negative-parts),
 and its [negative part](algebra.qmd#def-negative-part).
 With the [counting measure](#def-counting-measure),

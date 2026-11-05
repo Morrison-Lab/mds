@@ -1,7 +1,7 @@
 ::: {#def-plateau}
 #### Plateau
 
-Let $f : \reals^p \to \reals$ be a [function](functions.qmd#def-function)
+Let $f : \reals^p \to \reals$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
 with a [gradient](vector-calculus.qmd#def-vector-derivative)
 at every point of a region,
 and let $\epsilon > 0$ be a tolerance.

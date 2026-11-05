@@ -56,7 +56,7 @@ plt.show()
 
 :::
 
-The plot shows the [function](functions.qmd#def-function) $g$ of @exm-almost-everywhere on $[-3, 3]$.
+The plot shows the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $g$ of @exm-almost-everywhere on $[-3, 3]$.
 It is $x^2$ except at the [integers](number-systems.qmd#def-integers),
 where it is $-1$.
 It falls below the dashed line $g = 0$ only at those points,

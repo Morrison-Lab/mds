@@ -1,7 +1,7 @@
 :::{#def-argmin}
 #### Argmin
 
-Let $f : A \to \reals$ be a [function](functions.qmd#def-function).
+Let $f : A \to \reals$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function).
 The **argmin** of $f$ over $A$
 [@wikipedia_arg_max]
 is the set of inputs where $f$ takes its smallest value:
@@ -10,24 +10,5 @@ $$\argmin_{x \in A} f(x) \eqdef \cb{x \in A : \all a \in A,\ f(x) \le f(a)}$$
 
 When this set has exactly one element $\hat{x}$,
 we write $\hat{x} = \argmin_{x \in A} f(x)$.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#rem-argmin-vs-minimum}
-#### Smallest value versus where it occurs
-
-The smallest value itself is $\min f(A)$,
-the minimum (@def-minimum)
-of the [image](functions.qmd#def-image) of $f$,
-and the argmin is where that value is attained.
-For example, let $f(x) = x^2$ on $A = \cb{-1, 0, 2}$.
-The image is $f(A) = \cb{1, 0, 4}$,
-so the smallest value is $\min f(A) = 0$,
-and $\argmin_{x \in A} f(x) = \cb{0}$.
-
-The argmin is empty when $f$ has no smallest value,
-for example $f(x) = x$ on $(0, 1]$.
 
 :::

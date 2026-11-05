@@ -1,6 +1,6 @@
 :::{#rem-inflection-point}
 #### Inflection points change the curvature
 
-At an [inflection point](#def-inflection-point), the [graph](functions.qmd#def-graph) changes between curving up and curving down.
+At an [inflection point](#def-inflection-point), the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) changes between curving up and curving down.
 
 :::

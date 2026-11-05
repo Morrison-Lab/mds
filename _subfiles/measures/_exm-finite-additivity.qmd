@@ -3,7 +3,7 @@
 
 For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](https://morrison-lab.github.io/mcs/sets.html#exm-set)),
 let $\measure(A) \eqdef \abs{A}$, the number of elements of $A$
-([cardinality](functions.qmd#def-cardinality)),
+([cardinality](https://morrison-lab.github.io/mcs/functions.html#def-cardinality)),
 for each set $A$ in the $\sigma$-algebra of all subsets of $D$
 (@exm-sigma-algebra).
 The sets $\set{1, 2}$ and $\set{5, 6}$ are pairwise disjoint
