@@ -1,0 +1,28 @@
+:::{#exm-equal-width-sum}
+#### An equal-width Riemann sum
+
+Let $f(x) = x^2$ on $[0, 1]$, with $n = 2$,
+so $\change x = 1/2$,
+and take each sample point at the right end of its subinterval:
+$x_1^* = \frac{1}{2}$ and $x_2^* = 1$.
+Then
+
+$$
+\ba
+S_2
+&= f\paren{\tfrac{1}{2}} \cd \tfrac{1}{2} + f(1) \cd \tfrac{1}{2}
+&& \text{(equal-width Riemann sum with } n = 2 \text{)}
+\\
+&= \tfrac{1}{4} \cd \tfrac{1}{2} + 1 \cd \tfrac{1}{2}
+&& \text{(evaluate } f(x) = x^2 \text{)}
+\\
+&= \tfrac{5}{8}
+&& \text{(add)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-riemann-sums.qmd >}}

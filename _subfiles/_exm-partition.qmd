@@ -1,0 +1,8 @@
+:::{#exm-partition}
+#### A partition of $\lbrack 0, 1\rbrack$
+
+The points $0 < 0.25 < 0.5 < 1$ form a partition of $[0, 1]$
+with $n = 3$ subintervals,
+of widths $\change x_1 = 0.25$, $\change x_2 = 0.25$, and $\change x_3 = 0.5$.
+
+:::

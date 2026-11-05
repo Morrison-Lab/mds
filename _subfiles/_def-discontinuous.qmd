@@ -1,0 +1,8 @@
+:::{#def-discontinuous}
+#### Discontinuous function
+
+If any of the three conditions of @def-continuous fails, $f$ is **discontinuous** at $c$.
+
+[@larsonCalc11e, Section 1.4, p. 73]
+
+:::

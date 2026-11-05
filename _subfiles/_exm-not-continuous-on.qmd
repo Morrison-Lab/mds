@@ -1,0 +1,18 @@
+:::{#exm-not-continuous-on}
+#### A function not continuous on $\lbrack 0, 1\rbrack$
+
+Let $f(x) = 0$ for $0 \le x < 1$ and $f(1) = 2$.
+Conditions 1 and 2 of @def-continuous-on hold,
+but
+
+$$
+\begin{aligned}
+\lim_{x \to 1^-} f(x) &= 0 \\
+&\ne 2 \\
+&= f(1),
+\end{aligned}
+$$
+
+so condition 3 fails and $f$ is not continuous on $[0, 1]$.
+
+:::

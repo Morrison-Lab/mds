@@ -1,7 +1,7 @@
 :::{#exm-complete-inner-product-space}
 #### Polynomials are not complete
 
-Let $V$ be the [set](sets.qmd#def-set) of [polynomials](algebra.qmd#def-polynomial) on $[0, 1]$,
+Let $V$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [polynomials](algebra.qmd#def-polynomial) on $[0, 1]$,
 with the [inner product](linear-algebra-inner-products.qmd#def-inner-product) $\iprod{f}{g} = \int_0^1 f(t)\,g(t)\,dt$.
 The [partial sums](algebra.qmd#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$,
 because they [converge](algebra.qmd#def-convergent-sequence) uniformly on $[0, 1]$ to $\e{t}$.

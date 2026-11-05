@@ -76,6 +76,18 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-angle-well-defined.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-right-angle-orthogonal.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-angle.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-inner-product-sign.qmd >}}
 
 {{< slidebreak >}}

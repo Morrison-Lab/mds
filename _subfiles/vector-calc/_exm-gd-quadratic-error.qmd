@@ -24,6 +24,6 @@ $$
 
 Along the [eigenvector](linear-algebra.qmd#def-eigenvector) for $\eigval = 3$ the [error](#def-iterate-error) shrinks fast,
 and along the eigenvector for $\eigval = 1$ it shrinks slowly;
-the [bound](sets.qmd#def-bound) follows the slower one.
+the [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) follows the slower one.
 
 :::

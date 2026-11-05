@@ -2,7 +2,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_rem-borel-field.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_exm-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-not-sigma-algebra.qmd >}}
 
 {{< slidebreak >}}
 
@@ -23,6 +31,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_def-generated-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_rem-generated-sigma-algebra-smallest.qmd >}}
 
 {{< slidebreak >}}
 

@@ -55,7 +55,6 @@ website:
         href: number-systems.qmd
       - text: "Sets and Functions"
         menu:
-          - sets.qmd
           - functions.qmd
           - indicator-functions.qmd
       - text: "Algebra"
@@ -139,7 +138,6 @@ website:
       - section: "Sets and Functions"
         href: sets-functions.qmd
         contents:
-          - sets.qmd
           - functions.qmd
           - indicator-functions.qmd
       - section: "Algebra"

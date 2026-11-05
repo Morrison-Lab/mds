@@ -6,7 +6,7 @@
   so $0$ is a flat point.
   Yet $f(0) = 0$ is neither the [minimum](algebra.qmd#def-minimum)
   nor the [maximum](algebra.qmd#def-maximum)
-  of the [values](functions.qmd#def-value) $f$ takes on any [open interval](sets.qmd#def-open-interval) around $0$:
+  of the [values](functions.qmd#def-value) $f$ takes on any [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $0$:
   $f(w) < 0$ for $w < 0$,
   and $f(w) > 0$ for $w > 0$.
 - $h(w) = w^2$ has $h'(1) = 2 \ne 0$,

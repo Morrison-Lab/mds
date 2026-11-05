@@ -1,0 +1,28 @@
+:::{#exm-continuous-on-sqrt}
+#### Continuity on $\lbrack 0, 1\rbrack$ uses one-sided limits at the endpoints
+
+Let $f(x) = \sqrt{x}$, the [square root](algebra.qmd#def-square-root), defined for $x \ge 0$.
+Because $f$ is undefined for $x < 0$,
+only the right-hand limit of $f$ at $0$ makes sense,
+and @def-continuous-on asks only for that one-sided limit at the endpoint $0$.
+Here $f$ is continuous at every point of $(0, 1)$,
+
+$$
+\begin{aligned}
+\lim_{x \to 0^+} \sqrt{x} &= 0 \\
+&= f(0),
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\lim_{x \to 1^-} \sqrt{x} &= 1 \\
+&= f(1),
+\end{aligned}
+$$
+
+so $f$ is continuous on $[0, 1]$ (@def-continuous-on).
+
+:::

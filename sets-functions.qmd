@@ -37,7 +37,7 @@ format:
 
 The definitions that were on this page are now on three pages:
 
-- [Sets](sets.qmd):
+- [Sets](https://morrison-lab.github.io/mcs/sets.html):
   sets, subsets, unions, intersections, complements, Cartesian products,
   and the extended non-negative real numbers.
 - [Functions](functions.qmd):

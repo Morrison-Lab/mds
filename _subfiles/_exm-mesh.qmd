@@ -1,0 +1,16 @@
+:::{#exm-mesh}
+#### The mesh of a partition of $\lbrack 0, 1\rbrack$
+
+For the partition of $[0, 1]$ in @exm-partition,
+with widths $\change x_1 = 0.25$, $\change x_2 = 0.25$, and $\change x_3 = 0.5$,
+the mesh is the largest of these widths, $\norm{\mathcal{P}} = 0.5$.
+
+:::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_def-riemann-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_exm-riemann-sum.qmd >}}

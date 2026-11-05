@@ -1,0 +1,10 @@
+:::{#rem-lebesgue-measure-exists}
+#### Lebesgue measure exists
+
+Exactly one measure on $\borel$ assigns every interval its length;
+constructing it takes more measure theory than these notes cover
+[@wikipedia_lebesgue_measure],
+which also extends $\lebesgue$ to a larger $\sigma$-algebra,
+the Lebesgue-measurable sets, with the same values on Borel sets.
+
+:::

@@ -4,7 +4,7 @@
 For the [function](#def-function) $f : \set{1, 2, 3, 4, 5, 6} \to \reals$ with $f(a) = 2a$ from @exm-function,
 the [preimage](#def-preimage) of $\set{4, 6}$ is $\set{2, 3}$,
 because $f(2) = 4$ and $f(3) = 6$.
-The preimage of $\set{3}$ is the [empty set](sets.qmd#def-empty-set),
+The preimage of $\set{3}$ is the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set),
 because $2a = 3$ has no solution among the die rolls.
 
 :::

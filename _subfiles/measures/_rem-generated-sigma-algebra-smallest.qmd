@@ -1,0 +1,11 @@
+:::{#rem-generated-sigma-algebra-smallest}
+#### The smallest $\sigma$-algebra containing $\coll$
+
+$\gensalg{\coll}$ is a $\sigma$-algebra by @thm-sigma-algebra-intersection
+(the collection of all subsets of $S$ is one of the $\sigma$-algebras intersected,
+by @thm-power-set-sigma-algebra, so there is at least one).
+It contains every set in $\coll$,
+and it is contained in every other $\sigma$-algebra on $S$ that does,
+so it is the smallest $\sigma$-algebra on $S$ that contains $\coll$.
+
+:::
