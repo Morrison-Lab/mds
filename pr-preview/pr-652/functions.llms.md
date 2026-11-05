@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> *Remark*. Random variables, densities, and measures are functions. This page collects the definitions of functions, sequences, and countable sets that the Morrison Lab’s probability and statistics notes build on. The functions here go between the sets defined on the [Sets](sets.llms.md) page.
+> *Remark*. Random variables, densities, and measures are functions. This page collects the definitions of functions, sequences, and countable sets that the Morrison Lab’s probability and statistics notes build on. The functions here go between the [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) defined on the [Sets](https://morrison-lab.github.io/mcs/sets.html) page.
 
 > **NOTE:**
 >
@@ -38,7 +38,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Relation)** A **relation** $\sim$ on a set $S$ [\[2\]](#ref-wikipedia_binary_relation) is a rule that, for each [ordered pair](sets.llms.md#def-ordered-pair) of elements $a, b \in S$, says whether $a \sim b$ holds (“$a$ is related to $b$”).
+> **Definition 4 (Relation)** A **relation** $\sim$ on a set $S$ [\[2\]](#ref-wikipedia_binary_relation) is a rule that, for each [ordered pair](https://morrison-lab.github.io/mcs/sets.html#def-ordered-pair) of elements $a, b \in S$, says whether $a \sim b$ holds (“$a$ is related to $b$”).
 
 > **NOTE:**
 >
@@ -62,13 +62,13 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Preimage, inverse image)** Let $f : A \to B$ be a [function](#def-function), and let $S$ be a [subset](sets.llms.md#def-subset) of $B$. The **preimage** [\[5\]](#ref-wikipedia_image_mathematics) (also called the **inverse image**) of $S$ under $f$ is the [set](sets.llms.md#def-set) of elements of $A$ whose [values](#def-value) are in $S$:
+> **Definition 8 (Preimage, inverse image)** Let $f : A \to B$ be a [function](#def-function), and let $S$ be a [subset](https://morrison-lab.github.io/mcs/sets.html#def-subset) of $B$. The **preimage** [\[5\]](#ref-wikipedia_image_mathematics) (also called the **inverse image**) of $S$ under $f$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of elements of $A$ whose [values](#def-value) are in $S$:
 >
 > $$f^{-1}(S) \stackrel{\text{def}}{=}{\mathopen{}\left\{a \in A : f(a) \in S\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
-> **Example 5 (The preimage of a set of doubled die rolls)** For the [function](#def-function) $f : {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}} \to \mathbb{R}$ with $f(a) = 2a$ from [Example 1](#exm-function), the [preimage](#def-preimage) of ${\mathopen{}\left\{4, 6\right\}\mathclose{}}$ is ${\mathopen{}\left\{2, 3\right\}\mathclose{}}$, because $f(2) = 4$ and $f(3) = 6$. The preimage of ${\mathopen{}\left\{3\right\}\mathclose{}}$ is the [empty set](sets.llms.md#def-empty-set), because $2a = 3$ has no solution among the die rolls.
+> **Example 5 (The preimage of a set of doubled die rolls)** For the [function](#def-function) $f : {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}} \to \mathbb{R}$ with $f(a) = 2a$ from [Example 1](#exm-function), the [preimage](#def-preimage) of ${\mathopen{}\left\{4, 6\right\}\mathclose{}}$ is ${\mathopen{}\left\{2, 3\right\}\mathclose{}}$, because $f(2) = 4$ and $f(3) = 6$. The preimage of ${\mathopen{}\left\{3\right\}\mathclose{}}$ is the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set), because $2a = 3$ has no solution among the die rolls.
 
 > **NOTE:**
 >
@@ -125,7 +125,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 > }
 > ```
 >
-> Figure 1: The [preimage](#def-preimage) of a [set](sets.llms.md#def-set) of [values](#def-value) is the set of rolls whose points lie at those heights. The heights $4$ and $6$ are reached at the rolls $2$ and $3$, so the preimage of ${\mathopen{}\left\{4, 6\right\}\mathclose{}}$ is ${\mathopen{}\left\{2, 3\right\}\mathclose{}}$. The height $3$ is reached by no roll, so its preimage is empty.
+> Figure 1: The [preimage](#def-preimage) of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [values](#def-value) is the set of rolls whose points lie at those heights. The heights $4$ and $6$ are reached at the rolls $2$ and $3$, so the preimage of ${\mathopen{}\left\{4, 6\right\}\mathclose{}}$ is ${\mathopen{}\left\{2, 3\right\}\mathclose{}}$. The height $3$ is reached by no roll, so its preimage is empty.
 
 > **NOTE:**
 >
@@ -156,7 +156,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 10 (Graph of a function)** The **graph** [\[7\]](#ref-wikipedia_graph_of_a_function) of a [function](#def-function) $f : A \to B$ is the set of [ordered pairs](sets.llms.md#def-ordered-pair) $(a, f(a))$, one for each element $a$ of its domain:
+> **Definition 10 (Graph of a function)** The **graph** [\[7\]](#ref-wikipedia_graph_of_a_function) of a [function](#def-function) $f : A \to B$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [ordered pairs](https://morrison-lab.github.io/mcs/sets.html#def-ordered-pair) $(a, f(a))$, one for each element $a$ of its [domain](#def-domain):
 >
 > $${\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}}$$
 
@@ -312,7 +312,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (What a function is fundamentally). [Definition 1](#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](sets.llms.md#def-ordered-pair) and its graph ([Definition 10](#def-graph)): the set of pairs $G = {\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}} \subseteq A \times B$. Authors define a function formally in one of two ways:
+> *Remark 3* (What a function is fundamentally). [Definition 1](#def-function) defines what a function *does*: it assigns an output to each input. In formal [set](https://morrison-lab.github.io/mcs/sets.html#def-set) theory, what a function *is* is described in terms of [ordered pairs](https://morrison-lab.github.io/mcs/sets.html#def-ordered-pair) and its graph ([Definition 10](#def-graph)): the set of pairs $G = {\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}} \subseteq A \times B$. Authors define a function formally in one of two ways:
 >
 > 1.  **As its graph** [\[8, Sec. 8\]](#ref-halmos1974naive), p. 30: a function is a subset of $A \times B$ containing exactly one pair $(a, b)$ for each $a \in A$, where $b = f(a)$, and the statement $f(a) = b$ is notation for $(a, b) \in f$. Under this convention, the codomain $B$ is specified alongside the graph in the declaration $f : A \to B$.
 > 2.  **As a triple** $(A, B, G)$: the function consists of the domain $A$, the codomain $B$, and the graph $G \subseteq A \times B$. This explicit packaging retains the codomain $B$ as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into $\mathbb{R}$ versus into integers).
@@ -540,7 +540,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 >
 > $$f^{\odot}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}}^{\top}.$$
 >
-> It is a function $f^{\odot} : A^n \to B^n$, where $A^n$ is the $n$-fold Cartesian product of $A$ with itself ([definition](sets.llms.md#def-cartesian-product)).
+> It is a function $f^{\odot} : A^n \to B^n$, where $A^n$ is the $n$-fold [Cartesian product](https://morrison-lab.github.io/mcs/sets.html#def-cartesian-product) of $A$ with itself.
 
 > **NOTE:**
 >
@@ -667,7 +667,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 >
 > - The [even](number-systems.llms.md#def-even-odd) integers are closed under addition: for example, $2 + 4 = 6$ is even, and $2m + 2n = 2(m + n)$ is even for all integers $m$ and $n$.
 > - The odd integers are not closed under addition: $1$ and $3$ are odd, but $1 + 3 = 4$ is even.
-> - The [collection](sets.llms.md#def-collection) of all [subsets](sets.llms.md#def-subset) of a [set](sets.llms.md#def-set) $S$ is closed under [union](sets.llms.md#def-union): the union of two subsets of $S$ is again a [subset](sets.llms.md#def-subset) of $S$.
+> - The [collection](https://morrison-lab.github.io/mcs/sets.html#def-collection) of all [subsets](https://morrison-lab.github.io/mcs/sets.html#def-subset) of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ is closed under [union](https://morrison-lab.github.io/mcs/sets.html#def-union): the union of two subsets of $S$ is again a [subset](https://morrison-lab.github.io/mcs/sets.html#def-subset) of $S$.
 
 > **NOTE:**
 >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 # 1 Equalities
 
@@ -245,7 +245,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> *Remark 3* (Not every set has a minimum). The set $\mathopen{}\left\{3, 1, 4\right\}\mathclose{}$ has minimum $1$, and the [interval](sets.llms.md#def-interval) $[0, 1]$ has minimum $0$. The interval $(0, 1]$ has no minimum: every element $a$ of it has a smaller element, $a/2$, also in it.
+> *Remark 3* (Not every set has a minimum). The set $\mathopen{}\left\{3, 1, 4\right\}\mathclose{}$ has minimum $1$, and the [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval) $[0, 1]$ has minimum $0$. The interval $(0, 1]$ has no minimum: every element $a$ of it has a smaller element, $a/2$, also in it.
 
 > **NOTE:**
 >
@@ -285,7 +285,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 > **Example 9 (An argmax with two points, and an empty one)**  
 >
 > - Let $g(x) = x^2$ on $A = \mathopen{}\left\{-2, 0, 1, 2\right\}\mathclose{}$. The values are $g(-2) = 4$, $g(0) = 0$, $g(1) = 1$ and $g(2) = 4$, so the largest value is $4$ and $\arg \max_{x \in A} g(x) = \mathopen{}\left\{-2, 2\right\}\mathclose{}$. This argmax has two elements, so it is not written as a single $\hat{x}$.
-> - Let $f(x) = x$ on $[0, 1)$. As in [Example 8](#exm-maximum), for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value, so no input attains a largest value, and $\arg \max_{x \in [0, 1)} f(x)$ is the [empty set](sets.llms.md#def-empty-set).
+> - Let $f(x) = x$ on $[0, 1)$. As in [Example 8](#exm-maximum), for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value, so no input attains a largest value, and $\arg \max_{x \in [0, 1)} f(x)$ is the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set).
 
 > **NOTE:**
 >
@@ -339,7 +339,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 17 (Positive part of a function)** Let $S$ be a [set](sets.llms.md#def-set), and let $f : S \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **positive part** of $f$ is the non-negative function
+> **Definition 17 (Positive part of a function)** Let $S$ be a [set](https://morrison-lab.github.io/mcs/sets.html#def-set), and let $f : S \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **positive part** of $f$ is the non-negative function
 >
 > $$f^{+}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f(s), 0\right\}\mathclose{}.$$
 

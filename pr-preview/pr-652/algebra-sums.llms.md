@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 # 1 Convex functions
 
@@ -56,7 +56,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Example 1 (A line segment in** $\mathbb{R}$) For $p = 1$, $x = 0$ and $y = 4$, the line segment from $x$ to $y$ is the [interval](sets.llms.md#def-interval) $[0, 4]$. The value $t = \tfrac{1}{4}$ gives the point $\tfrac{1}{4} \cdot 0 + \tfrac{3}{4} \cdot 4 = 3$.
+> **Example 1 (A line segment in** $\mathbb{R}$) For $p = 1$, $x = 0$ and $y = 4$, the [line segment](#def-line-segment) from $x$ to $y$ is the [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval) $[0, 4]$. The value $t = \tfrac{1}{4}$ gives the point $\tfrac{1}{4} \cdot 0 + \tfrac{3}{4} \cdot 4 = 3$.
 
 > **NOTE:**
 >
@@ -763,7 +763,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 22 (Sum over a finite set)** Let $A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}$ be a [finite](functions.llms.md#def-finite-set) [set](sets.llms.md#def-set) with $k \ge 1$ different elements. Let $f$ be a [function](functions.llms.md#def-function) that gives a number $f(x)$ for each element $x$ of $A$. The **sum of** $f$ over $A$ is
+> **Definition 22 (Sum over a finite set)** Let $A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}$ be a [finite set](functions.llms.md#def-finite-set) with $k \ge 1$ different elements. Let $f$ be a [function](functions.llms.md#def-function) that gives a number $f(x)$ for each element $x$ of $A$. The **sum of** $f$ over $A$ is
 >
 > $$\sum_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k)$$
 >

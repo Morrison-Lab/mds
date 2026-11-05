@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Measurable rectangle)** Let $(S, \mathcal{S})$ and $(T, \mathcal{T})$ be [measurable spaces](measures-measure-spaces.llms.md#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets.llms.md#def-cartesian-product) $A \times B$ with $A \in \mathcal{S}$ and $B \in \mathcal{T}$.
+> **Definition 1 (Measurable rectangle)** Let $(S, \mathcal{S})$ and $(T, \mathcal{T})$ be [measurable spaces](measures-measure-spaces.llms.md#def-measurable-space). A **measurable rectangle** is a [Cartesian product](https://morrison-lab.github.io/mcs/sets.html#def-cartesian-product) $A \times B$ with $A \in \mathcal{S}$ and $B \in \mathcal{T}$.
 
 > **NOTE:**
 >

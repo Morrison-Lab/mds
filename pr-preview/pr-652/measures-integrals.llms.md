@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
@@ -27,12 +27,16 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Integral of a non-negative function)** Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space), and let $f : S \to [0, \infty)$ be [measurable](#def-measurable-function). The **integral** of $f$ with respect to $\mu$ is [\[2\]](#ref-wikipedia_lebesgue_integration)
+> **Definition 2**  
+>
+> #### Integral of a non-negative function
+>
+> Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space), and let $f : S \to [0, \infty)$ be [measurable](#def-measurable-function). The **integral** of $f$ with respect to $\mu$ is [\[2\]](#ref-wikipedia_lebesgue_integration)
 >
 > $$\int_S f \, d\mu\stackrel{\text{def}}{=}
 > \sup {\mathopen{}\left\{\sum_{i=1}^n\mathopen{}\left(\inf_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\}\mathclose{}}$$
 >
-> where the [supremum](algebra-sums.llms.md#def-supremum) is over all ways of writing $S$ as the union of finitely many nonempty [pairwise disjoint](sets.llms.md#def-pairwise-disjoint) [sets](sets.llms.md#def-set) $A_1, \ldots, A_n$ in $\mathcal{S}$, and each $\inf_{s \in A_i} f(s)$ is the [infimum](algebra-sums.llms.md#def-infimum) of the values of $f$ on $A_i$. In the sums, $0 \cdot \infty \stackrel{\text{def}}{=}0$, and $x \cdot \infty \stackrel{\text{def}}{=}\infty$ for $x > 0$; the supremum is $\infty$ if some sum is $\infty$. The integral is also written $\int_S f(s) \, d\mu(s)$.
+> where the [supremum](algebra-sums.llms.md#def-supremum) is over all ways of writing $S$ as the union of finitely many nonempty [pairwise disjoint](https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint) [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $A_1, \ldots, A_n$ in $\mathcal{S}$, and each $\inf_{s \in A_i} f(s)$ is the [infimum](algebra-sums.llms.md#def-infimum) of the values of $f$ on $A_i$. In the sums, $0 \cdot \infty \stackrel{\text{def}}{=}0$, and $x \cdot \infty \stackrel{\text{def}}{=}\infty$ for $x > 0$; the supremum is $\infty$ if some sum is $\infty$. The integral is also written $\int_S f(s) \, d\mu(s)$.
 >
 > [\[3, Sec. 15\]](#ref-billingsley1995probability)
 
@@ -207,7 +211,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 # Definitions on this page
 
 - [Definition 1 (Measurable function)](#def-measurable-function)
-- [Definition 2 (Integral of a non-negative function)](#def-integral-nonneg)
+- [Definition 2](#def-integral-nonneg)
 - [Definition 3 (Integral of a real-valued function)](#def-integral)
 - [Definition 4 (Absolutely integrable function, integrable function)](#def-absolutely-integrable)
 

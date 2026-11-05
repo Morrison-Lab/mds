@@ -4,14 +4,14 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (**$\sigma$-algebra ($\sigma$-field, Borel field)) A $\sigma$-algebra [\[1\]](#ref-wikipedia_sigma_algebra) (also called a $\sigma$-field [\[2\]](#ref-billingsley1995probability) or a **Borel field** [\[3\]](#ref-CaseBerg01), Definition 1.2.1) on a set $S$ is a [collection](sets.llms.md#def-collection) $\mathcal{S}$ of [subsets](sets.llms.md#def-subset) of $S$ that satisfies:
+> **Definition 1 (**$\sigma$-algebra ($\sigma$-field, Borel field)) A $\sigma$-algebra [\[1\]](#ref-wikipedia_sigma_algebra) (also called a $\sigma$-field [\[2\]](#ref-billingsley1995probability) or a **Borel field** [\[3\]](#ref-CaseBerg01), Definition 1.2.1) on a set $S$ is a [collection](https://morrison-lab.github.io/mcs/sets.html#def-collection) $\mathcal{S}$ of [subsets](https://morrison-lab.github.io/mcs/sets.html#def-subset) of $S$ that satisfies:
 >
 > - $\mathcal{S}$ contains $S$ itself.
-> - For each set $A$ in $\mathcal{S}$, $\mathcal{S}$ contains its [complement](sets.llms.md#def-complement) $S \setminus A$.
+> - For each set $A$ in $\mathcal{S}$, $\mathcal{S}$ contains its [complement](https://morrison-lab.github.io/mcs/sets.html#def-complement) $S \setminus A$.
 > - For each [sequence](functions.llms.md#def-sequence) $A_1, A_2, \ldots$ of sets in $\mathcal{S}$, $\mathcal{S}$ contains their union $\bigcup_{i=1}^{\infty} A_i$.
 
 > **NOTE:**
@@ -20,7 +20,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Example 1 (**$\sigma$-algebras for die rolls) For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](sets.llms.md#exm-set)), the collection of all subsets of $D$ is a $\sigma$-algebra on $D$, since complements and unions of subsets of $D$ are again subsets of $D$. So is the smaller collection
+> **Example 1 (**$\sigma$-algebras for die rolls) For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](https://morrison-lab.github.io/mcs/sets.html#exm-set)), the collection of all subsets of $D$ is a $\sigma$-algebra on $D$, since complements and unions of subsets of $D$ are again subsets of $D$. So is the smaller collection
 >
 > $${\mathopen{}\left\{\emptyset, {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}, {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}, D\right\}\mathclose{}}$$
 >
@@ -32,17 +32,15 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (A** $\sigma$-algebra is closed under complements and countable unions) A $\sigma$-algebra $\mathcal{S}$ on a [set](sets.llms.md#def-set) $S$ is [closed under](functions.llms.md#def-closed-under) [complements](sets.llms.md#def-complement) in $S$ and under [unions](sets.llms.md#def-union) of [sequences](functions.llms.md#def-sequence) of its [sets](sets.llms.md#def-set), because [Definition 1](#def-sigma-algebra) requires both. The [collection](sets.llms.md#def-collection) in [Example 2](#exm-not-sigma-algebra) is not closed under complements.
+> **Example 3 (A** $\sigma$-algebra is closed under complements and countable unions) A $\sigma$-algebra $\mathcal{S}$ on a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ is [closed under](functions.llms.md#def-closed-under) [complements](https://morrison-lab.github.io/mcs/sets.html#def-complement) in $S$ and under [unions](https://morrison-lab.github.io/mcs/sets.html#def-union) of [sequences](functions.llms.md#def-sequence) of its [sets](https://morrison-lab.github.io/mcs/sets.html#def-set), because [Definition 1](#def-sigma-algebra) requires both. The [collection](https://morrison-lab.github.io/mcs/sets.html#def-collection) in [Example 2](#exm-not-sigma-algebra) is not closed under complements.
 
 > **NOTE:**
 >
 > **Theorem 1 (Closure properties of a** $\sigma$-algebra) If $\mathcal{S}$ is a $\sigma$-algebra on a set $S$, then $\mathcal{S}$ contains:
 >
-> - the [empty set](sets.llms.md#def-empty-set) $\emptyset$;
+> - the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set) $\emptyset$;
 > - the union $A_1 \cup \cdots \cup A_n$ of any [finitely many](functions.llms.md#def-finite-set) sets $A_1, \ldots, A_n$ in $\mathcal{S}$;
 > - the intersection $\bigcap_{i=1}^{\infty} A_i$ of any sequence $A_1, A_2, \ldots$ of sets in $\mathcal{S}$.
->
-> So $\mathcal{S}$ is [closed under](functions.llms.md#def-closed-under) [finite](functions.llms.md#def-finite-set) [unions](sets.llms.md#def-union) and under intersections of sequences of its sets.
 
 > **NOTE:**
 >
@@ -68,7 +66,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 >
 > and $\mathcal{S}$ contains $\bigcup_{i=1}^{\infty} A_i$ by the union rule of [Definition 1](#def-sigma-algebra).
 >
-> *Countable intersections.* Each $A_i$ is a subset of $S$, so an element of $S$ is outside $S \setminus A_i$ exactly when it is in $A_i$; that is, $S \setminus (S \setminus A_i) = A_i$. So, by [De Morgan’s laws](sets.llms.md#thm-de-morgan):
+> *Countable intersections.* Each $A_i$ is a subset of $S$, so an element of $S$ is outside $S \setminus A_i$ exactly when it is in $A_i$; that is, $S \setminus (S \setminus A_i) = A_i$. So, by [De Morgan’s laws](https://morrison-lab.github.io/mcs/sets.html#thm-de-morgan):
 >
 > $$\begin{aligned}
 > S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
@@ -79,6 +77,8 @@ Last modified: 2026-11-05 11:40:16 (PST)
 > \end{aligned}$$
 >
 > Each $S \setminus A_i$ is in $\mathcal{S}$ by the complement rule, so their union is in $\mathcal{S}$ by the union rule, and the complement of that union is in $\mathcal{S}$ by the complement rule again.
+>
+> So $\mathcal{S}$ is [closed under](functions.llms.md#def-closed-under) [finite](functions.llms.md#def-finite-set) [unions](https://morrison-lab.github.io/mcs/sets.html#def-union) and under intersections of sequences of its sets.
 
 > **NOTE:**
 >
@@ -94,7 +94,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (An intersection of** $\sigma$-algebras is a $\sigma$-algebra) Let $\mathcal{S}_j$ be a $\sigma$-algebra on a set $S$ for each $j$ in a nonempty set of indices $J$. Then their [intersection](sets.llms.md#def-intersection) $\bigcap_{j \in J} \mathcal{S}_j$, the collection of subsets of $S$ that are in every $\mathcal{S}_j$, is a $\sigma$-algebra on $S$.
+> **Theorem 3 (An intersection of** $\sigma$-algebras is a $\sigma$-algebra) Let $\mathcal{S}_j$ be a $\sigma$-algebra on a set $S$ for each $j$ in a nonempty set of indices $J$. Then their [intersection](https://morrison-lab.github.io/mcs/sets.html#def-intersection) $\bigcap_{j \in J} \mathcal{S}_j$, the collection of subsets of $S$ that are in every $\mathcal{S}_j$, is a $\sigma$-algebra on $S$.
 
 > **NOTE:**
 >
@@ -106,7 +106,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (**$\sigma$-algebra generated by a collection) Let $\mathcal{C}$ be a [collection](sets.llms.md#def-collection) of subsets of a set $S$. The $\sigma$-algebra generated by $\mathcal{C}$, written ${\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}}$, is the intersection of all the $\sigma$-algebras on $S$ that contain every set in $\mathcal{C}$.
+> **Definition 2 (**$\sigma$-algebra generated by a collection) Let $\mathcal{C}$ be a [collection](https://morrison-lab.github.io/mcs/sets.html#def-collection) of [subsets](https://morrison-lab.github.io/mcs/sets.html#def-subset) of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$. The $\sigma$-algebra generated by $\mathcal{C}$, written ${\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}}$, is the intersection of all the $\sigma$-algebras on $S$ that contain every set in $\mathcal{C}$.
 
 > **NOTE:**
 >
@@ -118,24 +118,24 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Borel** $\sigma$-algebra) The **Borel** $\sigma$-algebra on $\mathbb{R}$, written $\mathcal{B}$, is the $\sigma$-algebra generated by ([Definition 2](#def-generated-sigma-algebra)) the collection of all [intervals](sets.llms.md#def-interval).
+> **Definition 3 (Borel** $\sigma$-algebra) The **Borel** $\sigma$-algebra on $\mathbb{R}$, written $\mathcal{B}$, is the $\sigma$-algebra generated by ([Definition 2](#def-generated-sigma-algebra)) the [collection](https://morrison-lab.github.io/mcs/sets.html#def-collection) of all [intervals](https://morrison-lab.github.io/mcs/sets.html#def-interval).
 
 > **NOTE:**
 >
-> **Example 5 (The Borel** $\sigma$-algebra contains $\mathbb{R}$ and the half-lines) The [interval](sets.llms.md#def-interval) $(-\infty, 0)$ is in $\mathcal{B}$ by [Definition 3](#def-borel-sigma-algebra). So is its [complement](sets.llms.md#def-complement) $[0, \infty)$, because $\mathcal{B}$ is a $\sigma$-algebra ([Definition 1](#def-sigma-algebra)). The [set](sets.llms.md#def-set) $\mathbb{R}$ is in $\mathcal{B}$ too: a $\sigma$-algebra on $\mathbb{R}$ contains $\mathbb{R}$ itself.
+> **Example 5 (The Borel** $\sigma$-algebra contains $\mathbb{R}$ and the half-lines) The [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval) $(-\infty, 0)$ is in $\mathcal{B}$ by [Definition 3](#def-borel-sigma-algebra). So is its [complement](https://morrison-lab.github.io/mcs/sets.html#def-complement) $[0, \infty)$, because $\mathcal{B}$ is a $\sigma$-algebra ([Definition 1](#def-sigma-algebra)). The [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $\mathbb{R}$ is in $\mathcal{B}$ too: a $\sigma$-algebra on $\mathbb{R}$ contains $\mathbb{R}$ itself.
 
 > **NOTE:**
 >
-> **Definition 4 (Borel set)** A **Borel set** [\[4\]](#ref-wikipedia_borel_set) is a [set](sets.llms.md#def-set) in the [Borel](#def-borel-sigma-algebra) $\sigma$-algebra $\mathcal{B}$.
+> **Definition 4 (Borel set)** A **Borel set** [\[4\]](#ref-wikipedia_borel_set) is a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) in the [Borel](#def-borel-sigma-algebra) $\sigma$-algebra $\mathcal{B}$.
 
 > **NOTE:**
 >
 > **Example 6 (Some Borel sets)**  
 >
-> - Every [interval](sets.llms.md#def-interval), such as $[0, 1]$, $(2, 5)$, or $[0, \infty)$, is a [Borel set](#def-borel-set).
+> - Every [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval), such as $[0, 1]$, $(2, 5)$, or $[0, \infty)$, is a [Borel set](#def-borel-set).
 > - A single point ${\mathopen{}\left\{a\right\}\mathclose{}} = [a, a]$ is an interval, so it is a Borel set.
-> - The [integers](number-systems.llms.md#def-integers) are a Borel set: they are the [union](sets.llms.md#def-union) of the [sequence](functions.llms.md#def-sequence) of single points ${\mathopen{}\left\{0\right\}\mathclose{}}, {\mathopen{}\left\{1\right\}\mathclose{}}, {\mathopen{}\left\{-1\right\}\mathclose{}}, {\mathopen{}\left\{2\right\}\mathclose{}}, {\mathopen{}\left\{-2\right\}\mathclose{}}, \ldots$ ([countable and uncountable sets](functions.llms.md#exm-countable-set) lists them this way), and $\mathcal{B}$ contains that union by [Definition 1](#def-sigma-algebra).
-> - The [complement](sets.llms.md#def-complement) $\mathbb{R}\setminus [0, 1]$ is a Borel set, because $\mathcal{B}$ contains the complement of each of its sets.
+> - The [integers](number-systems.llms.md#def-integers) are a Borel set: they are the [union](https://morrison-lab.github.io/mcs/sets.html#def-union) of the [sequence](functions.llms.md#def-sequence) of single points ${\mathopen{}\left\{0\right\}\mathclose{}}, {\mathopen{}\left\{1\right\}\mathclose{}}, {\mathopen{}\left\{-1\right\}\mathclose{}}, {\mathopen{}\left\{2\right\}\mathclose{}}, {\mathopen{}\left\{-2\right\}\mathclose{}}, \ldots$ ([countable and uncountable sets](functions.llms.md#exm-countable-set) lists them this way), and $\mathcal{B}$ contains that union by [Definition 1](#def-sigma-algebra).
+> - The [complement](https://morrison-lab.github.io/mcs/sets.html#def-complement) $\mathbb{R}\setminus [0, 1]$ is a Borel set, because $\mathcal{B}$ contains the complement of each of its sets.
 
 # Definitions on this page
 

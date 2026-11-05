@@ -24,6 +24,146 @@
    "url": "https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression"
   },
   {
+   "id": "mcs/sets#def-cartesian-product",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-cartesian-product",
+   "kind": "def",
+   "title": "cartesian product",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-cartesian-product"
+  },
+  {
+   "id": "mcs/sets#def-collection",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-collection",
+   "kind": "def",
+   "title": "collection",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-collection"
+  },
+  {
+   "id": "mcs/sets#def-complement",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-complement",
+   "kind": "def",
+   "title": "complement",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-complement"
+  },
+  {
+   "id": "mcs/sets#def-empty-set",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-empty-set",
+   "kind": "def",
+   "title": "empty set",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-empty-set"
+  },
+  {
+   "id": "mcs/sets#def-extended-nonneg-reals",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-extended-nonneg-reals",
+   "kind": "def",
+   "title": "extended nonneg reals",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals"
+  },
+  {
+   "id": "mcs/sets#def-intersection",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-intersection",
+   "kind": "def",
+   "title": "intersection",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-intersection"
+  },
+  {
+   "id": "mcs/sets#def-interval",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-interval",
+   "kind": "def",
+   "title": "interval",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-interval"
+  },
+  {
+   "id": "mcs/sets#def-open-interval",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-open-interval",
+   "kind": "def",
+   "title": "open interval",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-open-interval"
+  },
+  {
+   "id": "mcs/sets#def-ordered-pair",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-ordered-pair",
+   "kind": "def",
+   "title": "ordered pair",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-ordered-pair"
+  },
+  {
+   "id": "mcs/sets#def-pairwise-disjoint",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-pairwise-disjoint",
+   "kind": "def",
+   "title": "pairwise disjoint",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint"
+  },
+  {
+   "id": "mcs/sets#def-set",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-set",
+   "kind": "def",
+   "title": "set",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-set"
+  },
+  {
+   "id": "mcs/sets#def-subset",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-subset",
+   "kind": "def",
+   "title": "subset",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-subset"
+  },
+  {
+   "id": "mcs/sets#def-union",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-union",
+   "kind": "def",
+   "title": "union",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#def-union"
+  },
+  {
+   "id": "mcs/sets#thm-de-morgan",
+   "site": "mcs",
+   "page": "sets",
+   "div": "thm-de-morgan",
+   "kind": "thm",
+   "title": "de morgan",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/sets.html#thm-de-morgan"
+  },
+  {
    "id": "mds/algebra#cor-exp-ab",
    "site": "mds",
    "page": "algebra",
@@ -12570,348 +12710,6 @@
    "external": false
   },
   {
-   "id": "mds/sets#def-bound",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-bound",
-   "kind": "def",
-   "title": "Lower bound and upper bound",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-cartesian-product",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-cartesian-product",
-   "kind": "def",
-   "title": "Cartesian product",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-cartesian-product-many",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-cartesian-product-many",
-   "kind": "def",
-   "title": "Cartesian product of several sets",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-closed-interval",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-closed-interval",
-   "kind": "def",
-   "title": "Closed interval",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-collection",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-collection",
-   "kind": "def",
-   "title": "Collection of sets, family of sets",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-complement",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-complement",
-   "kind": "def",
-   "title": "Complement",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-disjoint-sets",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-disjoint-sets",
-   "kind": "def",
-   "title": "Disjoint sets",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-empty-set",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-empty-set",
-   "kind": "def",
-   "title": "Empty set",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-extended-nonneg-reals",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-extended-nonneg-reals",
-   "kind": "def",
-   "title": "Extended non-negative real numbers",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-half-open-interval",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-half-open-interval",
-   "kind": "def",
-   "title": "Half-open intervals",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-index-set",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-index-set",
-   "kind": "def",
-   "title": "Index set",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-indexed-family",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-indexed-family",
-   "kind": "def",
-   "title": "Indexed family",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-indexed-intersection",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-indexed-intersection",
-   "kind": "def",
-   "title": "Intersection of a family of sets",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-indexed-union",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-indexed-union",
-   "kind": "def",
-   "title": "Union of a family of sets",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-intersection",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-intersection",
-   "kind": "def",
-   "title": "Intersection",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-interval",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-interval",
-   "kind": "def",
-   "title": "Interval",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-label",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-label",
-   "kind": "def",
-   "title": "Label",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-open-interval",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-open-interval",
-   "kind": "def",
-   "title": "Open interval",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-ordered-pair",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-ordered-pair",
-   "kind": "def",
-   "title": "Ordered pair",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-pairwise-disjoint",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-pairwise-disjoint",
-   "kind": "def",
-   "title": "Pairwise disjoint sets, mutually disjoint sets",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-power-set",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-power-set",
-   "kind": "def",
-   "title": "Power set",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-roster-notation",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-roster-notation",
-   "kind": "def",
-   "title": "Roster notation",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-set",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-set",
-   "kind": "def",
-   "title": "Set",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-set-builder",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-set-builder",
-   "kind": "def",
-   "title": "Set-builder notation",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-set-builder-expression",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-set-builder-expression",
-   "kind": "def",
-   "title": "Set-builder notation with an expression",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-set-difference",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-set-difference",
-   "kind": "def",
-   "title": "Set difference",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-strict-subset",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-strict-subset",
-   "kind": "def",
-   "title": "Strict subset, proper subset",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-strict-superset",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-strict-superset",
-   "kind": "def",
-   "title": "Strict superset",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-subset",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-subset",
-   "kind": "def",
-   "title": "Subset",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-superset",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-superset",
-   "kind": "def",
-   "title": "Superset",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-tuple",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-tuple",
-   "kind": "def",
-   "title": "Tuple",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-unbounded-interval",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-unbounded-interval",
-   "kind": "def",
-   "title": "Unbounded intervals",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-union",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-union",
-   "kind": "def",
-   "title": "Union",
-   "external": false
-  },
-  {
-   "id": "mds/sets#def-vacuous-truth",
-   "site": "mds",
-   "page": "sets",
-   "div": "def-vacuous-truth",
-   "kind": "def",
-   "title": "Vacuous truth",
-   "external": false
-  },
-  {
-   "id": "mds/sets#thm-de-morgan",
-   "site": "mds",
-   "page": "sets",
-   "div": "thm-de-morgan",
-   "kind": "thm",
-   "title": "De Morgan's laws",
-   "external": false
-  },
-  {
-   "id": "mds/sets#thm-empty-set-unique",
-   "site": "mds",
-   "page": "sets",
-   "div": "thm-empty-set-unique",
-   "kind": "thm",
-   "title": "There is only one empty set",
-   "external": false
-  },
-  {
-   "id": "mds/sets#thm-empty-subset",
-   "site": "mds",
-   "page": "sets",
-   "div": "thm-empty-subset",
-   "kind": "thm",
-   "title": "The empty set is a subset of every set",
-   "external": false
-  },
-  {
-   "id": "mds/sets#thm-subset-reflexive",
-   "site": "mds",
-   "page": "sets",
-   "div": "thm-subset-reflexive",
-   "kind": "thm",
-   "title": "Every set is a subset of itself",
-   "external": false
-  },
-  {
    "id": "mds/vector-calculus#cor-chain-qf",
    "site": "mds",
    "page": "vector-calculus",
@@ -13678,11 +13476,15 @@
   ],
   [
    "mds/algebra#def-non-decreasing",
+   "mcs/sets#def-extended-nonneg-reals"
+  ],
+  [
+   "mds/algebra#def-non-decreasing",
    "mds/functions#def-sequence"
   ],
   [
    "mds/algebra#def-non-decreasing",
-   "mds/sets#def-extended-nonneg-reals"
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/algebra#def-non-strict-inequality",
@@ -13706,6 +13508,10 @@
   ],
   [
    "mds/algebra#def-partial-sum",
+   "mcs/sets#def-extended-nonneg-reals"
+  ],
+  [
+   "mds/algebra#def-partial-sum",
    "mds/algebra#def-summation"
   ],
   [
@@ -13714,7 +13520,7 @@
   ],
   [
    "mds/algebra#def-partial-sum",
-   "mds/sets#def-extended-nonneg-reals"
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/algebra#def-person-years",
@@ -13750,11 +13556,11 @@
   ],
   [
    "mds/algebra#def-positive-negative-parts",
-   "mds/functions#def-function"
+   "mcs/sets#def-set"
   ],
   [
    "mds/algebra#def-positive-negative-parts",
-   "mds/sets#def-set"
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra#def-power",
@@ -13847,10 +13653,6 @@
   [
    "mds/algebra#def-sum-over-set",
    "mds/functions#def-function"
-  ],
-  [
-   "mds/algebra#def-sum-over-set",
-   "mds/sets#def-set"
   ],
   [
    "mds/algebra#def-summation-index",
@@ -14066,11 +13868,11 @@
   ],
   [
    "mds/algebra-basics#def-positive-negative-parts",
-   "mds/functions#def-function"
+   "mcs/sets#def-set"
   ],
   [
    "mds/algebra-basics#def-positive-negative-parts",
-   "mds/sets#def-set"
+   "mds/functions#def-function"
   ],
   [
    "mds/algebra-basics#def-power",
@@ -14274,11 +14076,15 @@
   ],
   [
    "mds/algebra-exponentials#def-non-decreasing",
+   "mcs/sets#def-extended-nonneg-reals"
+  ],
+  [
+   "mds/algebra-exponentials#def-non-decreasing",
    "mds/functions#def-sequence"
   ],
   [
    "mds/algebra-exponentials#def-non-decreasing",
-   "mds/sets#def-extended-nonneg-reals"
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/algebra-exponentials#def-parabola",
@@ -14290,6 +14096,10 @@
   ],
   [
    "mds/algebra-exponentials#def-partial-sum",
+   "mcs/sets#def-extended-nonneg-reals"
+  ],
+  [
+   "mds/algebra-exponentials#def-partial-sum",
    "mds/algebra#def-summation"
   ],
   [
@@ -14298,7 +14108,7 @@
   ],
   [
    "mds/algebra-exponentials#def-partial-sum",
-   "mds/sets#def-extended-nonneg-reals"
+   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/algebra-exponentials#def-polynomial",
@@ -14533,10 +14343,6 @@
    "mds/functions#def-function"
   ],
   [
-   "mds/algebra-sums#def-sum-over-set",
-   "mds/sets#def-set"
-  ],
-  [
    "mds/algebra-sums#def-summation-index",
    "mds/algebra-sums#def-summation"
   ],
@@ -14662,15 +14468,15 @@
   ],
   [
    "mds/calculus#def-differentiable-on",
+   "mcs/sets#def-interval"
+  ],
+  [
+   "mds/calculus#def-differentiable-on",
    "mds/calculus#def-differentiable"
   ],
   [
    "mds/calculus#def-differentiable-on",
    "mds/calculus#def-one-sided-derivative"
-  ],
-  [
-   "mds/calculus#def-differentiable-on",
-   "mds/sets#def-interval"
   ],
   [
    "mds/calculus#def-discontinuous",
@@ -14738,6 +14544,10 @@
   ],
   [
    "mds/calculus#def-limit",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/calculus#def-limit",
    "mds/algebra#def-absolute-value"
   ],
   [
@@ -14747,10 +14557,6 @@
   [
    "mds/calculus#def-limit",
    "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/calculus#def-limit",
-   "mds/sets#def-open-interval"
   ],
   [
    "mds/calculus#def-linear-approximation",
@@ -14830,15 +14636,15 @@
   ],
   [
    "mds/calculus#def-second-derivative",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/calculus#def-second-derivative",
    "mds/calculus#def-derivative"
   ],
   [
    "mds/calculus#def-second-derivative",
    "mds/calculus#def-differentiable"
-  ],
-  [
-   "mds/calculus#def-second-derivative",
-   "mds/sets#def-open-interval"
   ],
   [
    "mds/calculus#def-tangent-line",
@@ -15138,6 +14944,10 @@
   ],
   [
    "mds/calculus-derivatives#def-limit",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/calculus-derivatives#def-limit",
    "mds/algebra#def-absolute-value"
   ],
   [
@@ -15147,10 +14957,6 @@
   [
    "mds/calculus-derivatives#def-limit",
    "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/calculus-derivatives#def-limit",
-   "mds/sets#def-open-interval"
   ],
   [
    "mds/calculus-derivatives#def-linear-approximation",
@@ -15194,15 +15000,15 @@
   ],
   [
    "mds/calculus-derivatives#def-second-derivative",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/calculus-derivatives#def-second-derivative",
    "mds/calculus-derivatives#def-derivative"
   ],
   [
    "mds/calculus-derivatives#def-second-derivative",
    "mds/calculus-derivatives#def-differentiable"
-  ],
-  [
-   "mds/calculus-derivatives#def-second-derivative",
-   "mds/sets#def-open-interval"
   ],
   [
    "mds/calculus-derivatives#def-tangent-line",
@@ -15398,7 +15204,7 @@
   ],
   [
    "mds/calculus-integration#def-differentiable-on",
-   "mds/sets#def-interval"
+   "mcs/sets#def-interval"
   ],
   [
    "mds/calculus-integration#def-discontinuous",
@@ -15570,11 +15376,11 @@
   ],
   [
    "mds/functions#def-elementwise-function",
-   "mds/functions#def-function"
+   "mcs/sets#def-cartesian-product"
   ],
   [
    "mds/functions#def-elementwise-function",
-   "mds/sets#def-cartesian-product"
+   "mds/functions#def-function"
   ],
   [
    "mds/functions#def-finite-set",
@@ -15594,11 +15400,19 @@
   ],
   [
    "mds/functions#def-graph",
-   "mds/functions#def-function"
+   "mcs/sets#def-ordered-pair"
   ],
   [
    "mds/functions#def-graph",
-   "mds/sets#def-ordered-pair"
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/functions#def-graph",
+   "mds/functions#def-domain"
+  ],
+  [
+   "mds/functions#def-graph",
+   "mds/functions#def-function"
   ],
   [
    "mds/functions#def-image",
@@ -15638,19 +15452,19 @@
   ],
   [
    "mds/functions#def-preimage",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/functions#def-preimage",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mds/functions#def-preimage",
    "mds/functions#def-function"
   ],
   [
    "mds/functions#def-preimage",
    "mds/functions#def-value"
-  ],
-  [
-   "mds/functions#def-preimage",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/functions#def-preimage",
-   "mds/sets#def-subset"
   ],
   [
    "mds/functions#def-range",
@@ -15666,7 +15480,7 @@
   ],
   [
    "mds/functions#def-relation",
-   "mds/sets#def-ordered-pair"
+   "mcs/sets#def-ordered-pair"
   ],
   [
    "mds/functions#def-sequence",
@@ -17514,6 +17328,10 @@
   ],
   [
    "mds/linear-algebra#thm-hyperplane-graph",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/linear-algebra#thm-hyperplane-graph",
    "mds/functions#def-function"
   ],
   [
@@ -17527,10 +17345,6 @@
   [
    "mds/linear-algebra#thm-hyperplane-graph",
    "mds/linear-algebra-matrices#def-normal-vector"
-  ],
-  [
-   "mds/linear-algebra#thm-hyperplane-graph",
-   "mds/sets#def-set"
   ],
   [
    "mds/linear-algebra#thm-hyperplane-origin",
@@ -20310,6 +20124,10 @@
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
    "mds/functions#def-function"
   ],
   [
@@ -20323,10 +20141,6 @@
   [
    "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
    "mds/linear-algebra-matrices#def-normal-vector"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mds/sets#def-set"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
@@ -21122,6 +20936,10 @@
   ],
   [
    "mds/measures#def-almost-everywhere",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mds/measures#def-almost-everywhere",
    "mds/measures#def-measure-space"
   ],
   [
@@ -21129,36 +20947,36 @@
    "mds/measures#def-measure-zero"
   ],
   [
-   "mds/measures#def-almost-everywhere",
-   "mds/sets#def-subset"
+   "mds/measures#def-borel-set",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures#def-borel-set",
    "mds/measures#def-borel-sigma-algebra"
   ],
   [
-   "mds/measures#def-borel-set",
-   "mds/sets#def-set"
+   "mds/measures#def-borel-sigma-algebra",
+   "mcs/sets#def-collection"
+  ],
+  [
+   "mds/measures#def-borel-sigma-algebra",
+   "mcs/sets#def-interval"
   ],
   [
    "mds/measures#def-borel-sigma-algebra",
    "mds/measures#def-generated-sigma-algebra"
   ],
   [
-   "mds/measures#def-borel-sigma-algebra",
-   "mds/sets#def-interval"
+   "mds/measures#def-countable-additivity",
+   "mcs/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures#def-countable-additivity",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures#def-countable-additivity",
    "mds/measures#def-sigma-algebra"
-  ],
-  [
-   "mds/measures#def-countable-additivity",
-   "mds/sets#def-pairwise-disjoint"
-  ],
-  [
-   "mds/measures#def-countable-additivity",
-   "mds/sets#def-set"
   ],
   [
    "mds/measures#def-counting-measure",
@@ -21198,6 +21016,18 @@
   ],
   [
    "mds/measures#def-finite-additivity",
+   "mcs/sets#def-extended-nonneg-reals"
+  ],
+  [
+   "mds/measures#def-finite-additivity",
+   "mcs/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures#def-finite-additivity",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/measures#def-finite-additivity",
    "mds/functions#def-function"
   ],
   [
@@ -21205,24 +21035,20 @@
    "mds/measures#def-sigma-algebra"
   ],
   [
-   "mds/measures#def-finite-additivity",
-   "mds/sets#def-extended-nonneg-reals"
-  ],
-  [
-   "mds/measures#def-finite-additivity",
-   "mds/sets#def-pairwise-disjoint"
-  ],
-  [
-   "mds/measures#def-finite-additivity",
-   "mds/sets#def-set"
-  ],
-  [
    "mds/measures#def-finite-measure",
    "mds/measures#def-measure-space"
   ],
   [
    "mds/measures#def-generated-sigma-algebra",
-   "mds/sets#def-collection"
+   "mcs/sets#def-collection"
+  ],
+  [
+   "mds/measures#def-generated-sigma-algebra",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/measures#def-generated-sigma-algebra",
+   "mcs/sets#def-subset"
   ],
   [
    "mds/measures#def-integral",
@@ -21246,6 +21072,14 @@
   ],
   [
    "mds/measures#def-integral-nonneg",
+   "mcs/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures#def-integral-nonneg",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/measures#def-integral-nonneg",
    "mds/algebra#def-infimum"
   ],
   [
@@ -21261,12 +21095,8 @@
    "mds/measures#def-measure-space"
   ],
   [
-   "mds/measures#def-integral-nonneg",
-   "mds/sets#def-pairwise-disjoint"
-  ],
-  [
-   "mds/measures#def-integral-nonneg",
-   "mds/sets#def-set"
+   "mds/measures#def-lebesgue-measure",
+   "mcs/sets#def-interval"
   ],
   [
    "mds/measures#def-lebesgue-measure",
@@ -21277,12 +21107,12 @@
    "mds/measures#def-measure"
   ],
   [
-   "mds/measures#def-lebesgue-measure",
-   "mds/sets#def-interval"
-  ],
-  [
    "mds/measures#def-lebesgue-measure-interval",
    "mds/measures#def-lebesgue-measure"
+  ],
+  [
+   "mds/measures#def-linf-function-space",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures#def-linf-function-space",
@@ -21297,8 +21127,8 @@
    "mds/measures#def-measure-space"
   ],
   [
-   "mds/measures#def-linf-function-space",
-   "mds/sets#def-set"
+   "mds/measures#def-linf-space",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures#def-linf-space",
@@ -21325,8 +21155,8 @@
    "mds/measures#def-measure-space"
   ],
   [
-   "mds/measures#def-linf-space",
-   "mds/sets#def-set"
+   "mds/measures#def-lp-function-space",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures#def-lp-function-space",
@@ -21345,10 +21175,6 @@
    "mds/number-systems#def-real-numbers"
   ],
   [
-   "mds/measures#def-lp-function-space",
-   "mds/sets#def-set"
-  ],
-  [
    "mds/measures#def-lp-norm",
    "mds/measures#def-measurable-function"
   ],
@@ -21359,6 +21185,10 @@
   [
    "mds/measures#def-lp-norm",
    "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/measures#def-lp-space",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures#def-lp-space",
@@ -21389,10 +21219,6 @@
    "mds/number-systems#def-real-numbers"
   ],
   [
-   "mds/measures#def-lp-space",
-   "mds/sets#def-set"
-  ],
-  [
    "mds/measures#def-measurable-function",
    "mds/functions#def-function"
   ],
@@ -21402,11 +21228,11 @@
   ],
   [
    "mds/measures#def-measurable-rectangle",
-   "mds/measures#def-measurable-space"
+   "mcs/sets#def-cartesian-product"
   ],
   [
    "mds/measures#def-measurable-rectangle",
-   "mds/sets#def-cartesian-product"
+   "mds/measures#def-measurable-space"
   ],
   [
    "mds/measures#def-measurable-set",
@@ -21482,19 +21308,19 @@
   ],
   [
    "mds/measures#def-sigma-algebra",
+   "mcs/sets#def-collection"
+  ],
+  [
+   "mds/measures#def-sigma-algebra",
+   "mcs/sets#def-complement"
+  ],
+  [
+   "mds/measures#def-sigma-algebra",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mds/measures#def-sigma-algebra",
    "mds/functions#def-sequence"
-  ],
-  [
-   "mds/measures#def-sigma-algebra",
-   "mds/sets#def-collection"
-  ],
-  [
-   "mds/measures#def-sigma-algebra",
-   "mds/sets#def-complement"
-  ],
-  [
-   "mds/measures#def-sigma-algebra",
-   "mds/sets#def-subset"
   ],
   [
    "mds/measures#def-sigma-finite",
@@ -21554,6 +21380,18 @@
   ],
   [
    "mds/measures#thm-sigma-algebra-closure",
+   "mcs/sets#def-empty-set"
+  ],
+  [
+   "mds/measures#thm-sigma-algebra-closure",
+   "mcs/sets#def-union"
+  ],
+  [
+   "mds/measures#thm-sigma-algebra-closure",
+   "mcs/sets#thm-de-morgan"
+  ],
+  [
+   "mds/measures#thm-sigma-algebra-closure",
    "mds/functions#def-closed-under"
   ],
   [
@@ -21565,48 +21403,36 @@
    "mds/measures#def-sigma-algebra"
   ],
   [
-   "mds/measures#thm-sigma-algebra-closure",
-   "mds/sets#def-empty-set"
-  ],
-  [
-   "mds/measures#thm-sigma-algebra-closure",
-   "mds/sets#def-union"
-  ],
-  [
-   "mds/measures#thm-sigma-algebra-closure",
-   "mds/sets#thm-de-morgan"
+   "mds/measures#thm-sigma-algebra-intersection",
+   "mcs/sets#def-intersection"
   ],
   [
    "mds/measures#thm-sigma-algebra-intersection",
    "mds/measures#def-sigma-algebra"
   ],
   [
-   "mds/measures#thm-sigma-algebra-intersection",
-   "mds/sets#def-intersection"
+   "mds/measures-additivity#def-countable-additivity",
+   "mcs/sets#def-pairwise-disjoint"
   ],
   [
    "mds/measures-additivity#def-countable-additivity",
-   "mds/sets#def-pairwise-disjoint"
+   "mcs/sets#def-set"
   ],
   [
-   "mds/measures-additivity#def-countable-additivity",
-   "mds/sets#def-set"
+   "mds/measures-additivity#def-finite-additivity",
+   "mcs/sets#def-extended-nonneg-reals"
+  ],
+  [
+   "mds/measures-additivity#def-finite-additivity",
+   "mcs/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures-additivity#def-finite-additivity",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures-additivity#def-finite-additivity",
    "mds/functions#def-function"
-  ],
-  [
-   "mds/measures-additivity#def-finite-additivity",
-   "mds/sets#def-extended-nonneg-reals"
-  ],
-  [
-   "mds/measures-additivity#def-finite-additivity",
-   "mds/sets#def-pairwise-disjoint"
-  ],
-  [
-   "mds/measures-additivity#def-finite-additivity",
-   "mds/sets#def-set"
   ],
   [
    "mds/measures-additivity#lem-countable-additivity-empty",
@@ -21650,6 +21476,14 @@
   ],
   [
    "mds/measures-integrals#def-integral-nonneg",
+   "mcs/sets#def-pairwise-disjoint"
+  ],
+  [
+   "mds/measures-integrals#def-integral-nonneg",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/measures-integrals#def-integral-nonneg",
    "mds/algebra#def-infimum"
   ],
   [
@@ -21661,14 +21495,6 @@
    "mds/measures-integrals#def-measurable-function"
   ],
   [
-   "mds/measures-integrals#def-integral-nonneg",
-   "mds/sets#def-pairwise-disjoint"
-  ],
-  [
-   "mds/measures-integrals#def-integral-nonneg",
-   "mds/sets#def-set"
-  ],
-  [
    "mds/measures-integrals#def-measurable-function",
    "mds/functions#def-function"
   ],
@@ -21678,11 +21504,15 @@
   ],
   [
    "mds/measures-lp-spaces#def-linf-function-space",
-   "mds/measures-lp-spaces#def-essential-supremum-norm"
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures-lp-spaces#def-linf-function-space",
-   "mds/sets#def-set"
+   "mds/measures-lp-spaces#def-essential-supremum-norm"
+  ],
+  [
+   "mds/measures-lp-spaces#def-linf-space",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures-lp-spaces#def-linf-space",
@@ -21705,8 +21535,8 @@
    "mds/measures-lp-spaces#def-linf-function-space"
   ],
   [
-   "mds/measures-lp-spaces#def-linf-space",
-   "mds/sets#def-set"
+   "mds/measures-lp-spaces#def-lp-function-space",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures-lp-spaces#def-lp-function-space",
@@ -21717,12 +21547,12 @@
    "mds/number-systems#def-real-numbers"
   ],
   [
-   "mds/measures-lp-spaces#def-lp-function-space",
-   "mds/sets#def-set"
-  ],
-  [
    "mds/measures-lp-spaces#def-lp-norm",
    "mds/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/measures-lp-spaces#def-lp-space",
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures-lp-spaces#def-lp-space",
@@ -21749,10 +21579,6 @@
    "mds/number-systems#def-real-numbers"
   ],
   [
-   "mds/measures-lp-spaces#def-lp-space",
-   "mds/sets#def-set"
-  ],
-  [
    "mds/measures-lp-spaces#thm-holder-inequality",
    "mds/measures-lp-spaces#def-lp-space"
   ],
@@ -21770,15 +21596,15 @@
   ],
   [
    "mds/measures-measure-spaces#def-almost-everywhere",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mds/measures-measure-spaces#def-almost-everywhere",
    "mds/measures-measure-spaces#def-measure-space"
   ],
   [
    "mds/measures-measure-spaces#def-almost-everywhere",
    "mds/measures-measure-spaces#def-measure-zero"
-  ],
-  [
-   "mds/measures-measure-spaces#def-almost-everywhere",
-   "mds/sets#def-subset"
   ],
   [
    "mds/measures-measure-spaces#def-counting-measure",
@@ -21794,11 +21620,11 @@
   ],
   [
    "mds/measures-measure-spaces#def-lebesgue-measure",
-   "mds/measures-measure-spaces#def-measure"
+   "mcs/sets#def-interval"
   ],
   [
    "mds/measures-measure-spaces#def-lebesgue-measure",
-   "mds/sets#def-interval"
+   "mds/measures-measure-spaces#def-measure"
   ],
   [
    "mds/measures-measure-spaces#def-lebesgue-measure-interval",
@@ -21854,7 +21680,7 @@
   ],
   [
    "mds/measures-product#def-measurable-rectangle",
-   "mds/sets#def-cartesian-product"
+   "mcs/sets#def-cartesian-product"
   ],
   [
    "mds/measures-product#def-product-measure",
@@ -21866,43 +21692,67 @@
   ],
   [
    "mds/measures-sigma-algebras#def-borel-set",
-   "mds/measures-sigma-algebras#def-borel-sigma-algebra"
+   "mcs/sets#def-set"
   ],
   [
    "mds/measures-sigma-algebras#def-borel-set",
-   "mds/sets#def-set"
+   "mds/measures-sigma-algebras#def-borel-sigma-algebra"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-borel-sigma-algebra",
+   "mcs/sets#def-collection"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-borel-sigma-algebra",
+   "mcs/sets#def-interval"
   ],
   [
    "mds/measures-sigma-algebras#def-borel-sigma-algebra",
    "mds/measures-sigma-algebras#def-generated-sigma-algebra"
   ],
   [
-   "mds/measures-sigma-algebras#def-borel-sigma-algebra",
-   "mds/sets#def-interval"
+   "mds/measures-sigma-algebras#def-generated-sigma-algebra",
+   "mcs/sets#def-collection"
   ],
   [
    "mds/measures-sigma-algebras#def-generated-sigma-algebra",
-   "mds/sets#def-collection"
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-generated-sigma-algebra",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-sigma-algebra",
+   "mcs/sets#def-collection"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-sigma-algebra",
+   "mcs/sets#def-complement"
+  ],
+  [
+   "mds/measures-sigma-algebras#def-sigma-algebra",
+   "mcs/sets#def-subset"
   ],
   [
    "mds/measures-sigma-algebras#def-sigma-algebra",
    "mds/functions#def-sequence"
   ],
   [
-   "mds/measures-sigma-algebras#def-sigma-algebra",
-   "mds/sets#def-collection"
-  ],
-  [
-   "mds/measures-sigma-algebras#def-sigma-algebra",
-   "mds/sets#def-complement"
-  ],
-  [
-   "mds/measures-sigma-algebras#def-sigma-algebra",
-   "mds/sets#def-subset"
-  ],
-  [
    "mds/measures-sigma-algebras#thm-power-set-sigma-algebra",
    "mds/measures-sigma-algebras#def-sigma-algebra"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "mcs/sets#def-empty-set"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "mcs/sets#def-union"
+  ],
+  [
+   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
+   "mcs/sets#thm-de-morgan"
   ],
   [
    "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
@@ -21917,24 +21767,12 @@
    "mds/measures-sigma-algebras#def-sigma-algebra"
   ],
   [
-   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
-   "mds/sets#def-empty-set"
-  ],
-  [
-   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
-   "mds/sets#def-union"
-  ],
-  [
-   "mds/measures-sigma-algebras#thm-sigma-algebra-closure",
-   "mds/sets#thm-de-morgan"
+   "mds/measures-sigma-algebras#thm-sigma-algebra-intersection",
+   "mcs/sets#def-intersection"
   ],
   [
    "mds/measures-sigma-algebras#thm-sigma-algebra-intersection",
    "mds/measures-sigma-algebras#def-sigma-algebra"
-  ],
-  [
-   "mds/measures-sigma-algebras#thm-sigma-algebra-intersection",
-   "mds/sets#def-intersection"
   ],
   [
    "mds/number-systems#def-congruence",
@@ -22090,6 +21928,10 @@
   ],
   [
    "mds/optimization#def-basin-of-attraction",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/optimization#def-basin-of-attraction",
    "mds/algebra-basics#def-local-minimizer"
   ],
   [
@@ -22103,10 +21945,6 @@
   [
    "mds/optimization#def-basin-of-attraction",
    "mds/optimization#def-vector-sequence-limit"
-  ],
-  [
-   "mds/optimization#def-basin-of-attraction",
-   "mds/sets#def-set"
   ],
   [
    "mds/optimization#def-bfgs-update",
@@ -22130,11 +21968,15 @@
   ],
   [
    "mds/optimization#def-critical-point",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization#def-critical-point",
    "mds/calculus#def-differentiable"
   ],
   [
    "mds/optimization#def-critical-point",
-   "mds/sets#def-open-interval"
+   "mds/functions#def-function"
   ],
   [
    "mds/optimization#def-descent-direction",
@@ -22174,15 +22016,15 @@
   ],
   [
    "mds/optimization#def-inflection-point",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization#def-inflection-point",
    "mds/calculus-derivatives#def-second-derivative"
   ],
   [
    "mds/optimization#def-inflection-point",
    "mds/functions#def-function"
-  ],
-  [
-   "mds/optimization#def-inflection-point",
-   "mds/sets#def-open-interval"
   ],
   [
    "mds/optimization#def-iterate",
@@ -22598,6 +22440,10 @@
   ],
   [
    "mds/optimization#thm-fermat",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization#thm-fermat",
    "mds/algebra#def-local-minimizer"
   ],
   [
@@ -22610,11 +22456,7 @@
   ],
   [
    "mds/optimization#thm-fermat",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/optimization#thm-fermat",
-   "mds/sets#def-open-interval"
+   "mds/linear-algebra#def-real-vector-valued"
   ],
   [
    "mds/optimization#thm-first-order-condition",
@@ -22778,15 +22620,15 @@
   ],
   [
    "mds/optimization#thm-second-derivative-test",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization#thm-second-derivative-test",
    "mds/calculus-derivatives#def-second-derivative"
   ],
   [
    "mds/optimization#thm-second-derivative-test",
    "mds/optimization#def-flat-point"
-  ],
-  [
-   "mds/optimization#thm-second-derivative-test",
-   "mds/sets#def-open-interval"
   ],
   [
    "mds/optimization#thm-second-order-condition",
@@ -23094,15 +22936,23 @@
   ],
   [
    "mds/optimization-critical-points#def-critical-point",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization-critical-points#def-critical-point",
    "mds/calculus#def-differentiable"
   ],
   [
    "mds/optimization-critical-points#def-critical-point",
-   "mds/sets#def-open-interval"
+   "mds/functions#def-function"
   ],
   [
    "mds/optimization-critical-points#def-flat-point",
    "mds/calculus#def-differentiable"
+  ],
+  [
+   "mds/optimization-critical-points#def-inflection-point",
+   "mcs/sets#def-open-interval"
   ],
   [
    "mds/optimization-critical-points#def-inflection-point",
@@ -23111,10 +22961,6 @@
   [
    "mds/optimization-critical-points#def-inflection-point",
    "mds/functions#def-function"
-  ],
-  [
-   "mds/optimization-critical-points#def-inflection-point",
-   "mds/sets#def-open-interval"
   ],
   [
    "mds/optimization-critical-points#def-saddle-point",
@@ -23166,6 +23012,10 @@
   ],
   [
    "mds/optimization-critical-points#thm-fermat",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization-critical-points#thm-fermat",
    "mds/algebra#def-local-minimizer"
   ],
   [
@@ -23178,11 +23028,7 @@
   ],
   [
    "mds/optimization-critical-points#thm-fermat",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/optimization-critical-points#thm-fermat",
-   "mds/sets#def-open-interval"
+   "mds/linear-algebra#def-real-vector-valued"
   ],
   [
    "mds/optimization-critical-points#thm-first-order-condition",
@@ -23210,15 +23056,15 @@
   ],
   [
    "mds/optimization-critical-points#thm-second-derivative-test",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization-critical-points#thm-second-derivative-test",
    "mds/calculus-derivatives#def-second-derivative"
   ],
   [
    "mds/optimization-critical-points#thm-second-derivative-test",
    "mds/optimization-critical-points#def-flat-point"
-  ],
-  [
-   "mds/optimization-critical-points#thm-second-derivative-test",
-   "mds/sets#def-open-interval"
   ],
   [
    "mds/optimization-critical-points#thm-second-order-condition",
@@ -23350,15 +23196,15 @@
   ],
   [
    "mds/optimization-gradient-descent#def-basin-of-attraction",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/optimization-gradient-descent#def-basin-of-attraction",
    "mds/algebra-basics#def-local-minimizer"
   ],
   [
    "mds/optimization-gradient-descent#def-basin-of-attraction",
    "mds/optimization-gradient-descent#def-gradient-descent"
-  ],
-  [
-   "mds/optimization-gradient-descent#def-basin-of-attraction",
-   "mds/sets#def-set"
   ],
   [
    "mds/optimization-gradient-descent#def-cosine-decay",
@@ -23746,11 +23592,19 @@
   ],
   [
    "mds/proof-writing#def-domain-of-discourse",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/proof-writing#def-domain-of-discourse",
    "mds/proof-writing#def-predicate"
   ],
   [
    "mds/proof-writing#def-existential-quantifier",
    "mds/proof-writing#def-quantifier"
+  ],
+  [
+   "mds/proof-writing#def-first-order-logic",
+   "mcs/sets#def-set"
   ],
   [
    "mds/proof-writing#def-first-order-logic",
@@ -23767,10 +23621,6 @@
   [
    "mds/proof-writing#def-first-order-logic",
    "mds/proof-writing#def-quantifier"
-  ],
-  [
-   "mds/proof-writing#def-first-order-logic",
-   "mds/sets#def-set"
   ],
   [
    "mds/proof-writing#def-formal-proof",
@@ -24138,6 +23988,10 @@
   ],
   [
    "mds/proof-writing#thm-negate-quantifiers",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/proof-writing#thm-negate-quantifiers",
    "mds/proof-writing#def-domain-of-discourse"
   ],
   [
@@ -24167,206 +24021,6 @@
   [
    "mds/proof-writing#thm-simplification",
    "mds/proof-writing#def-rule-of-inference"
-  ],
-  [
-   "mds/sets#def-bound",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/sets#def-bound",
-   "mds/sets#def-subset"
-  ],
-  [
-   "mds/sets#def-cartesian-product-many",
-   "mds/number-systems#def-natural-numbers"
-  ],
-  [
-   "mds/sets#def-cartesian-product-many",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/sets#def-cartesian-product-many",
-   "mds/sets#def-tuple"
-  ],
-  [
-   "mds/sets#def-closed-interval",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/sets#def-closed-interval",
-   "mds/sets#def-bound"
-  ],
-  [
-   "mds/sets#def-closed-interval",
-   "mds/sets#def-interval"
-  ],
-  [
-   "mds/sets#def-complement",
-   "mds/sets#def-set-difference"
-  ],
-  [
-   "mds/sets#def-complement",
-   "mds/sets#def-subset"
-  ],
-  [
-   "mds/sets#def-disjoint-sets",
-   "mds/sets#def-empty-set"
-  ],
-  [
-   "mds/sets#def-disjoint-sets",
-   "mds/sets#def-intersection"
-  ],
-  [
-   "mds/sets#def-disjoint-sets",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/sets#def-half-open-interval",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/sets#def-half-open-interval",
-   "mds/sets#def-bound"
-  ],
-  [
-   "mds/sets#def-half-open-interval",
-   "mds/sets#def-interval"
-  ],
-  [
-   "mds/sets#def-index-set",
-   "mds/sets#def-label"
-  ],
-  [
-   "mds/sets#def-indexed-family",
-   "mds/sets#def-index-set"
-  ],
-  [
-   "mds/sets#def-interval",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/sets#def-interval",
-   "mds/sets#def-bound"
-  ],
-  [
-   "mds/sets#def-interval",
-   "mds/sets#def-subset"
-  ],
-  [
-   "mds/sets#def-open-interval",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/sets#def-open-interval",
-   "mds/sets#def-bound"
-  ],
-  [
-   "mds/sets#def-open-interval",
-   "mds/sets#def-interval"
-  ],
-  [
-   "mds/sets#def-pairwise-disjoint",
-   "mds/sets#def-disjoint-sets"
-  ],
-  [
-   "mds/sets#def-pairwise-disjoint",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/sets#def-power-set",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/sets#def-power-set",
-   "mds/sets#def-subset"
-  ],
-  [
-   "mds/sets#def-roster-notation",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/sets#def-set-builder-expression",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/sets#def-strict-subset",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/sets#def-strict-subset",
-   "mds/sets#def-subset"
-  ],
-  [
-   "mds/sets#def-strict-superset",
-   "mds/sets#def-superset"
-  ],
-  [
-   "mds/sets#def-tuple",
-   "mds/number-systems#def-natural-numbers"
-  ],
-  [
-   "mds/sets#def-unbounded-interval",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/sets#def-unbounded-interval",
-   "mds/sets#def-bound"
-  ],
-  [
-   "mds/sets#def-unbounded-interval",
-   "mds/sets#def-interval"
-  ],
-  [
-   "mds/sets#def-vacuous-truth",
-   "mds/sets#def-empty-set"
-  ],
-  [
-   "mds/sets#thm-de-morgan",
-   "mds/proof-writing#def-necessary-sufficient"
-  ],
-  [
-   "mds/sets#thm-de-morgan",
-   "mds/sets#def-complement"
-  ],
-  [
-   "mds/sets#thm-de-morgan",
-   "mds/sets#def-intersection"
-  ],
-  [
-   "mds/sets#thm-de-morgan",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/sets#thm-de-morgan",
-   "mds/sets#def-set-difference"
-  ],
-  [
-   "mds/sets#thm-de-morgan",
-   "mds/sets#def-subset"
-  ],
-  [
-   "mds/sets#thm-de-morgan",
-   "mds/sets#def-union"
-  ],
-  [
-   "mds/sets#thm-empty-set-unique",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/sets#thm-empty-set-unique",
-   "mds/sets#def-vacuous-truth"
-  ],
-  [
-   "mds/sets#thm-empty-subset",
-   "mds/sets#def-empty-set"
-  ],
-  [
-   "mds/sets#thm-empty-subset",
-   "mds/sets#def-subset"
-  ],
-  [
-   "mds/sets#thm-subset-reflexive",
-   "mds/sets#def-subset"
   ],
   [
    "mds/vector-calculus#cor-chain-qf",

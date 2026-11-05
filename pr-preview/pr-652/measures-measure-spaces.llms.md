@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 # 1 Measures
 
@@ -70,7 +70,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 6 (Lebesgue measure)** **Lebesgue measure** on $\mathbb{R}$ [\[4\]](#ref-wikipedia_lebesgue_measure) is the [measure](#def-measure) $\lambda$ on the [Borel](measures-sigma-algebras.llms.md#def-borel-sigma-algebra) $\sigma$-algebra $\mathcal{B}$ that assigns each [interval](sets.llms.md#def-interval) its length: for real numbers $a \le b$,
+> **Definition 6 (Lebesgue measure)** **Lebesgue measure** on $\mathbb{R}$ [\[4\]](#ref-wikipedia_lebesgue_measure) is the [measure](#def-measure) $\lambda$ on the [Borel](measures-sigma-algebras.llms.md#def-borel-sigma-algebra) $\sigma$-algebra $\mathcal{B}$ that assigns each [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval) its length: for real numbers $a \le b$,
 >
 > $$\begin{aligned}
 > \lambda([a, b])
@@ -125,7 +125,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> *Remark 2* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 2](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 6](#def-lebesgue-measure)) does, assigning each [interval](sets.llms.md#def-interval) $[a, b]$ its length $b - a$. For example, the counting measure on ${\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}}$ gives ${\mathopen{}\left\{2, 3, 4, 5\right\}\mathclose{}}$ the value $4$, while the Lebesgue measure of the interval $[2, 5]$ is $5 - 2 = 3$. Both can serve as the measures $\mu_1$ and $\mu_2$ in the [Tonelli](calculus-double-integrals.llms.md#thm-tonelli-measure) and [Fubini](calculus-double-integrals.llms.md#thm-fubini-measure) theorems.
+> *Remark 2* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 2](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 6](#def-lebesgue-measure)) does, assigning each [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval) $[a, b]$ its length $b - a$. For example, the counting measure on ${\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}}$ gives ${\mathopen{}\left\{2, 3, 4, 5\right\}\mathclose{}}$ the value $4$, while the Lebesgue measure of the interval $[2, 5]$ is $5 - 2 = 3$. Both can serve as the measures $\mu_1$ and $\mu_2$ in the [Tonelli](calculus-double-integrals.llms.md#thm-tonelli-measure) and [Fubini](calculus-double-integrals.llms.md#thm-fubini-measure) theorems.
 
 > **NOTE:**
 >
@@ -140,7 +140,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 9 (Almost everywhere (**$\mu$-almost everywhere, $\mu$-a.e.)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](#def-measure-space). A statement about the elements of $S$ holds $\mu$-almost everywhere (written $\mu$-a.e., or **almost everywhere** when $\mu$ is clear from context) [\[6\]](#ref-wikipedia_almost_everywhere) if the set of elements for which it fails is a [subset](sets.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
+> **Definition 9 (Almost everywhere (**$\mu$-almost everywhere, $\mu$-a.e.)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](#def-measure-space). A statement about the elements of $S$ holds $\mu$-almost everywhere (written $\mu$-a.e., or **almost everywhere** when $\mu$ is clear from context) [\[6\]](#ref-wikipedia_almost_everywhere) if the set of elements for which it fails is a [subset](https://morrison-lab.github.io/mcs/sets.html#def-subset) of a set of [measure zero](#def-measure-zero).
 
 > **NOTE:**
 >
@@ -279,7 +279,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (Mutually exclusive events). In [probability](#def-probability-measure), [pairwise disjoint](sets.llms.md#def-pairwise-disjoint) [events](#def-probability-measure) are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](number-systems.llms.md#def-even-odd)”, ${\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$, and “the roll is odd”, ${\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}$, are mutually exclusive: no roll is both even and odd.
+> *Remark 3* (Mutually exclusive events). In [probability](#def-probability-measure), [pairwise disjoint](https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint) [events](#def-probability-measure) are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](number-systems.llms.md#def-even-odd)”, ${\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$, and “the roll is odd”, ${\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}$, are mutually exclusive: no roll is both even and odd.
 
 # Definitions on this page
 

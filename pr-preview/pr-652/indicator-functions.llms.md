@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:
 
@@ -190,7 +190,7 @@ $$\sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]$$
 
 With $A = \mathopen{}\left\{2, 4\right\}\mathclose{}$, $f(x) = x$, and $U = \mathopen{}\left\{1, 2, 3, 4, 5\right\}\mathclose{}$, both sides equal $2 + 4 = 6$.
 
-However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets.llms.md#def-closed-interval) $[a, b]$, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) $\mathbb{E}[Y \mid X]$ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses $\mathbb{1}$ or $I$ rather than the bare Iverson bracket.
+However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](https://morrison-lab.github.io/mcs/sets.html#def-closed-interval) $[a, b]$, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) $\mathbb{E}[Y \mid X]$ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses $\mathbb{1}$ or $I$ rather than the bare Iverson bracket.
 
 # 4 Summary of indicator notations
 
@@ -246,7 +246,7 @@ Indicator functions translate the logical connectives ([definition](proof-writin
 >
 > The [idempotent matrices](linear-algebra-special-matrices.llms.md#def-idempotent-matrix) of linear algebra satisfy the same equation with matrix multiplication: $\mathbf{M}^2 = \mathbf{M}$ for a square matrix $\mathbf{M}$.
 
-For subsets $A$ and $B$ of $\Omega$, with [complement](sets.llms.md#def-complement) $A^c \stackrel{\text{def}}{=}\Omega\setminus A$, and for every $x \in \Omega$:
+For subsets $A$ and $B$ of $\Omega$, with [complement](https://morrison-lab.github.io/mcs/sets.html#def-complement) $A^c \stackrel{\text{def}}{=}\Omega\setminus A$, and for every $x \in \Omega$:
 
 - **Intersection (“and”):** $\mathbb{1}_{A \cap B}(x) = \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)$
 

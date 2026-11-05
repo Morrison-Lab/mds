@@ -353,7 +353,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 11:40:16 (PST)</p>
+  <p class="date">Last modified: 2026-11-05 13:32:51 (PST)</p>
 </section><section class="slide level2"><p>This page collects general advice on how to write <a href="#/def-proof">proofs</a> and <a href="#/def-derivation">derivations</a>. The goal of a proof is not just to convince yourself that a <a href="#/def-result">result</a> is true; it is to convince a <em>reader</em>, and to show them <em>why</em> it is true. Each principle on this page serves that goal. The symbols for <a href="#/def-logical-entailment">logical entailment</a> are listed under <a href="#/sec-proof-definitions">Definitions for proofs</a> below.</p>
 </section><section id="sec-proof-definitions" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Definitions for proofs</h2>
@@ -381,7 +381,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-domain-of-discourse" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Domain of discourse, universe of discourse)</strong></span> The <strong>domain of discourse</strong> (or <strong>universe of discourse</strong>) of a <a href="#/def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> is the <a href="#/def-set">set</a> of values its variable <span class="math inline">\(x\)</span> may take. <!-- check-term-links: allow --> A predicate in several variables has a domain of discourse for each variable.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Domain of discourse, universe of discourse)</strong></span> The <strong>domain of discourse</strong> (or <strong>universe of discourse</strong>) of a <a href="#/def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> is the <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> of values its variable <span class="math inline">\(x\)</span> may take. <!-- check-term-links: allow --> A predicate in several variables has a domain of discourse for each variable.</p>
 </div>
 </section><section class="slide level2"><div id="exm-domain-of-discourse" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (The domain changes the truth value)</strong></span> &nbsp;</p>
@@ -744,7 +744,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="thm-negate-quantifiers" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (De Morgan’s laws for quantifiers)</strong></span> For a <a href="#/def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="#/def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="#/def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 6 (De Morgan’s laws for quantifiers)</strong></span> For a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="#/def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="#/def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \neg (\forall x \in S, P(x)) &amp;\equiv \exists x \in S, \neg P(x) \\
@@ -753,7 +753,7 @@
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-negate-quantifiers" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Why the two laws share a theorem). </span>The two laws in <a href="#/thm-negate-quantifiers">De Morgan’s laws for quantifiers</a> are one rule seen from each side: negating a <a href="#/def-quantifier">quantifier</a> swaps <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span> and moves the <a href="#/def-not">negation</a> onto the <a href="#/def-predicate">predicate</a>. <a href="#/thm-de-morgan-logic">De Morgan’s laws for propositions</a> pair their two laws the same way, and these laws extend them from two propositions to a whole <a href="#/def-set">set</a> of them.</p>
+<p><span class="proof-title"><em>Remark 1</em> (Why the two laws share a theorem). </span>The two laws in <a href="#/thm-negate-quantifiers">De Morgan’s laws for quantifiers</a> are one rule seen from each side: negating a <a href="#/def-quantifier">quantifier</a> swaps <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span> and moves the <a href="#/def-not">negation</a> onto the <a href="#/def-predicate">predicate</a>. <a href="#/thm-de-morgan-logic">De Morgan’s laws for propositions</a> pair their two laws the same way, and these laws extend them from two propositions to a whole <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> of them.</p>
 </div>
 </section><section class="slide level2"><div id="exm-negate-quantifiers" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Negating “every integer is even”)</strong></span> &nbsp;</p>
@@ -1391,7 +1391,7 @@ x^2
 </section><section class="slide level2"><div id="def-first-order-logic" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 44 (First-order logic)</strong></span> <strong>First-order logic</strong> <span class="citation" data-cites="wikipedia_first_order_logic"><a href="#/references" role="doc-biblioref" onclick="">[30]</a></span> extends propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;43</a>) by also allowing:</p>
 <ul>
-<li>variables <span class="math inline">\(x, y, \ldots\)</span> that stand for elements of a <a href="./sets.html#def-set">set</a>;</li>
+<li>variables <span class="math inline">\(x, y, \ldots\)</span> that stand for elements of a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a>;</li>
 <li>
 <a href="#/def-predicate">predicates</a> of one or more of those variables, such as <span class="math inline">\(P(x)\)</span> or <span class="math inline">\(x &lt; y\)</span>;</li>
 <li>
@@ -1402,7 +1402,7 @@ x^2
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-first-order-logic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 50 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a <a href="#/def-predicate">predicate</a> about the elements of a <a href="./sets.html#def-set">set</a> <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The <a href="#/def-proposition">propositions</a> <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> <a href="#/def-logical-entailment">logically entail</a> <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. <a href="#/def-propositional-logic">Propositional logic</a> alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 50 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a <a href="#/def-predicate">predicate</a> about the elements of a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The <a href="#/def-proposition">propositions</a> <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> <a href="#/def-logical-entailment">logically entail</a> <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. <a href="#/def-propositional-logic">Propositional logic</a> alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-formal-proof" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 45 (Formal proof)</strong></span> A <strong>formal proof</strong> <span class="citation" data-cites="wikipedia_formal_proof"><a href="#/references" role="doc-biblioref" onclick="">[31]</a></span> is a <a href="#/def-proof">proof</a> written in propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;43</a>) or first-order logic (<a href="#/def-first-order-logic" class="quarto-xref">Definition&nbsp;44</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its <a href="#/def-proposition">propositions</a> say.</p>

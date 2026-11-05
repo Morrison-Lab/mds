@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -35,7 +35,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 3 (Domain of discourse, universe of discourse)** The **domain of discourse** (or **universe of discourse**) of a [predicate](#def-predicate) $P(x)$ is the [set](#def-set) of values its variable $x$ may take. A predicate in several variables has a domain of discourse for each variable.
+> **Definition 3 (Domain of discourse, universe of discourse)** The **domain of discourse** (or **universe of discourse**) of a [predicate](#def-predicate) $P(x)$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of values its variable $x$ may take. A predicate in several variables has a domain of discourse for each variable.
 
 > **NOTE:**
 >
@@ -335,7 +335,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Theorem 6 (De Morgan’s laws for quantifiers)** For a [set](#def-set) $S$ and a [predicate](#def-predicate) $P(x)$ whose [domain of discourse](#def-domain-of-discourse) is $S$:
+> **Theorem 6 (De Morgan’s laws for quantifiers)** For a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ and a [predicate](#def-predicate) $P(x)$ whose [domain of discourse](#def-domain-of-discourse) is $S$:
 >
 > $$\begin{aligned}
 > \neg (\forall x \in S, P(x)) &\equiv \exists x \in S, \neg P(x) \\
@@ -351,7 +351,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> *Remark 1* (Why the two laws share a theorem). The two laws in [De Morgan’s laws for quantifiers](#thm-negate-quantifiers) are one rule seen from each side: negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$ and moves the [negation](#def-not) onto the [predicate](#def-predicate). [De Morgan’s laws for propositions](#thm-de-morgan-logic) pair their two laws the same way, and these laws extend them from two propositions to a whole [set](#def-set) of them.
+> *Remark 1* (Why the two laws share a theorem). The two laws in [De Morgan’s laws for quantifiers](#thm-negate-quantifiers) are one rule seen from each side: negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$ and moves the [negation](#def-not) onto the [predicate](#def-predicate). [De Morgan’s laws for propositions](#thm-de-morgan-logic) pair their two laws the same way, and these laws extend them from two propositions to a whole [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of them.
 
 > **NOTE:**
 >
@@ -1091,7 +1091,7 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 >
 > **Definition 44 (First-order logic)** **First-order logic** [\[30\]](#ref-wikipedia_first_order_logic) extends propositional logic ([Definition 43](#def-propositional-logic)) by also allowing:
 >
-> - variables $x, y, \ldots$ that stand for elements of a [set](sets.llms.md#def-set);
+> - variables $x, y, \ldots$ that stand for elements of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set);
 > - [predicates](#def-predicate) of one or more of those variables, such as $P(x)$ or $x < y$;
 > - [functions](functions.llms.md#def-function) of them, such as $x + y$;
 > - equality between them;
@@ -1099,7 +1099,7 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 > **NOTE:**
 >
-> **Example 50 (From “for all” to one element)** Let $P(x)$ be a [predicate](#def-predicate) about the elements of a [set](sets.llms.md#def-set) $S$, and let $a \in S$. The [propositions](#def-proposition) $\forall x \in S, P(x)$ and $a \in S$ [logically entail](#def-logical-entailment) $P(a)$: if $P(x)$ is true for every element $x$ of $S$, then it is true for the element $a$. For example, $\forall x \in \mathbb{Z}, x^2 \ge 0$ entails $3^2 \ge 0$. [Propositional logic](#def-propositional-logic) alone cannot express this entailment, because it has no way to refer to the elements of $S$.
+> **Example 50 (From “for all” to one element)** Let $P(x)$ be a [predicate](#def-predicate) about the elements of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$, and let $a \in S$. The [propositions](#def-proposition) $\forall x \in S, P(x)$ and $a \in S$ [logically entail](#def-logical-entailment) $P(a)$: if $P(x)$ is true for every element $x$ of $S$, then it is true for the element $a$. For example, $\forall x \in \mathbb{Z}, x^2 \ge 0$ entails $3^2 \ge 0$. [Propositional logic](#def-propositional-logic) alone cannot express this entailment, because it has no way to refer to the elements of $S$.
 
 > **NOTE:**
 >

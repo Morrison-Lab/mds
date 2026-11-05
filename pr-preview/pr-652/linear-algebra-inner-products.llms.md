@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:40:16 (PST)
+Last modified: 2026-11-05 13:32:51 (PST)
 
 # 1 Inner products
 
@@ -747,7 +747,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> *Remark 4* (Why the angle is well defined). The [cosine similarity](#def-cosine-similarity) is defined, because both vectors are nonzero ([Theorem 1](#thm-norm-properties)). By [Theorem 3](#thm-cauchy-schwarz), it lies in the [closed interval](sets.llms.md#def-closed-interval) $[-1, 1]$, which is where the [arccosine](algebra-trigonometry.llms.md#def-arccosine), $\arccos$, is defined. So the angle $\theta$ lies in $[0, \pi]$, with [cosine](algebra-trigonometry.llms.md#def-cosine-sine) $\cos\theta= \operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$.
+> *Remark 4* (Why the angle is well defined). The [cosine similarity](#def-cosine-similarity) is defined, because both vectors are nonzero ([Theorem 1](#thm-norm-properties)). By [Theorem 3](#thm-cauchy-schwarz), it lies in the [closed interval](https://morrison-lab.github.io/mcs/sets.html#def-closed-interval) $[-1, 1]$, which is where the [arccosine](algebra-trigonometry.llms.md#def-arccosine), $\arccos$, is defined. So the angle $\theta$ lies in $[0, \pi]$, with [cosine](algebra-trigonometry.llms.md#def-cosine-sine) $\cos\theta= \operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$.
 
 > **NOTE:**
 >
@@ -1388,7 +1388,7 @@ Last modified: 2026-11-05 11:40:16 (PST)
 
 > **NOTE:**
 >
-> **Example 30 (Polynomials are not complete)** Let $V$ be the [set](sets.llms.md#def-set) of [polynomials](algebra-exponentials.llms.md#def-polynomial) on $[0, 1]$, with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\,g(t)\,dt$. The [partial sums](algebra-exponentials.llms.md#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$, because they [converge](algebra-exponentials.llms.md#def-convergent-sequence) uniformly on $[0, 1]$ to $\text{e}^{t}$. The only candidate for a [limit](algebra-exponentials.llms.md#def-sequence-limit) is $\text{e}^{t}$, which is not a [polynomial](algebra-exponentials.llms.md#def-polynomial), so no polynomial $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ satisfies the condition of [Definition 14](#def-complete-inner-product-space), and $V$ is not [complete](#def-complete-inner-product-space).
+> **Example 30 (Polynomials are not complete)** Let $V$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [polynomials](algebra-exponentials.llms.md#def-polynomial) on $[0, 1]$, with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\,g(t)\,dt$. The [partial sums](algebra-exponentials.llms.md#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$, because they [converge](algebra-exponentials.llms.md#def-convergent-sequence) uniformly on $[0, 1]$ to $\text{e}^{t}$. The only candidate for a [limit](algebra-exponentials.llms.md#def-sequence-limit) is $\text{e}^{t}$, which is not a [polynomial](algebra-exponentials.llms.md#def-polynomial), so no polynomial $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ satisfies the condition of [Definition 14](#def-complete-inner-product-space), and $V$ is not [complete](#def-complete-inner-product-space).
 
 > **NOTE:**
 >
