@@ -45,8 +45,10 @@ The work is tracked in [#638](https://github.com/Morrison-Lab/mds/issues/638).
 | [*Probability: Theory and Examples*](https://services.math.duke.edu/~rtd/PTE/pte.html), 5th ed., version 5 | Rick Durrett | Graduate; the page states no prerequisites | Chapter 1 "Measure Theory": probability spaces, distributions, random variables, integration, properties of the integral, expected value, product measures and Fubini's theorem. Appendix: Carathéodory's extension, measurable sets, Kolmogorov extension, Radon-Nikodym. $L^p$ appears only as "Doob's inequality, $L^p$ convergence" | The page lists the contents only; it states no license or download terms in the text read | fetched |
 
 No free, author-hosted measure theory text aimed at statistics or machine learning came up in the search.
-The free options found so far are real analysis courses and graduate probability books that assume measure theory,
-and Axler, Bass and Durrett are the three read in the second pass whose contents reach measure and integration.
+Three texts read in the second pass reach measure and integration.
+Axler's and Bass's pages say the electronic version is free.
+Durrett's page lists the contents and states no download terms,
+so it is not shown to be free.
 
 ## Linear algebra
 
@@ -79,7 +81,7 @@ The search found no free optimization-for-machine-learning lecture notes.
 | Resource | Author | Level and prerequisites | Measures coverage | Access and license | Status |
 | --- | --- | --- | --- | --- | --- |
 | [*Introduction to Probability for Data Science*](https://probability4datascience.com/), 2nd ed. (Michigan Publishing, 2026) | Stanley H. Chan | The page calls it a free undergraduate textbook; the eBook opens with a chapter of mathematical background | None indicated: the eBook lists set theory, probability space, axioms, random variables, joint distributions, sample statistics, regression, estimation and hypothesis testing, with no $\sigma$-algebra or measure section | The author says the book is free for everyone and links a free PDF and an HTML edition; the page states no license, so read the copyright page of the PDF first | fetched |
-| Blitzstein and Hwang, *Introduction to Probability* ([probabilitybook.net](https://www.probabilitybook.net/)) | Joseph Blitzstein and Jessica Hwang | not read | not read | The page redirects to a Google Drive file titled "Blitzstein Hwang Probability.pdf" behind a sign-in screen, so it states no terms | unchanged |
+| Blitzstein and Hwang, *Introduction to Probability* ([probabilitybook.net](https://www.probabilitybook.net/)) | Joseph Blitzstein and Jessica Hwang | not read | not read | The page redirects to a Google Drive file titled "Blitzstein Hwang Probability.pdf" behind a sign-in screen, so it states no terms | not read |
 | *Probability for Data Science* | Ani Adhikari and Jim Pitman (Berkeley Data 140) | Undergraduate | unchecked | Free online; CC BY-NC-ND 4.0, as reported by search | search only |
 | *Essential Probability Theory for Data Science* (DSCI 500B) | Kuter | Course text | unchecked | Free on LibreTexts | search only |
 | [*Foundations of Data Science*](https://www.cs.cornell.edu/jeh/book.pdf) (draft dated 4 Jan 2018) | Avrim Blum, John Hopcroft and Ravindran Kannan | Graduate-level topics; the PDF states no prerequisites | None in the contents lines read: introduction, high-dimensional space, random walks and Markov chains, machine learning, clustering, random graphs, other topics, appendix | The PDF carries "Copyright 2015. All rights reserved," so the free copy is the authors' posting, not an open license | fetched |
