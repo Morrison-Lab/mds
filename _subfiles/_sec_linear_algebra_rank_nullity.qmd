@@ -18,6 +18,12 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-cross-product-matrix.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-cross-product-matrix.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-gram-matrix.qmd >}}
 
 {{< slidebreak >}}
