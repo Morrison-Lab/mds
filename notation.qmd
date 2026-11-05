@@ -52,6 +52,9 @@ For the logical symbols and proof conventions used in these notes
 
 For set and function notation, see the [Sets](sets.qmd), [Functions](functions.qmd), and [Expressions and Algorithms](expressions-algorithms.qmd) pages.
 
+The [Math for Computer Science notes](https://morrison-lab.github.io/mcs/notation.html) keep a copy of this notation page for discrete mathematics.
+The pages on relations and growth rates have moved there.
+
 # References {.unnumbered}
 
 ::: {#refs}
