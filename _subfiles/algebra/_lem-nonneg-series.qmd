@@ -30,7 +30,7 @@ $$
 If some partial sum $s_N$ is $\infty$,
 then $s_n = \infty$ for every $n \ge N$,
 so the limit is $\infty$.
-Otherwise, the [partial sums](#def-partial-sum) form a [non-decreasing](#def-non-decreasing) sequence of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
+Otherwise, the [partial sums](#def-partial-sum) form a [non-decreasing sequence](#def-non-decreasing) of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
 If that sequence is [bounded above](algebra.qmd#def-bounded-above),
 it [converges](algebra.qmd#def-convergent-sequence) to a finite number
 [@wikipedia_monotone_convergence_theorem].
