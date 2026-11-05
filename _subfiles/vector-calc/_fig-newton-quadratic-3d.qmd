@@ -1,0 +1,119 @@
+::: {#fig-newton-quadratic-3d}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: newton-quadratic-3d-r
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Surface plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2
+#|   from -2 to 2. The surface is a bowl with its lowest point at the origin,
+#|   rising more steeply along x2 than along x1. A vermilion point marks the
+#|   start (3, 1) on the bowl's side and a black point marks the minimizer
+#|   at the origin.
+nq_x1_sf <- seq(-4, 4, length.out = 61)
+nq_x2_sf <- seq(-2, 2, length.out = 61)
+nq_grid_sf <- tidyr::expand_grid(x1 = nq_x1_sf, x2 = nq_x2_sf)
+nq_value_sf <- (nq_grid_sf$x1^2 + 3 * nq_grid_sf$x2^2) / 2
+nq_n2_sf <- length(nq_x2_sf)
+nq_z_sf <- matrix(nq_value_sf, nrow = nq_n2_sf)
+nq_start_sf <- tibble::tibble(x1 = 3, x2 = 1, z = 6)
+nq_min_sf <- tibble::tibble(x1 = 0, x2 = 0, z = 0)
+nq_red_sf <- list(color = "#D55E00", size = 5)
+nq_black_sf <- list(color = "#000000", size = 5)
+nq_stops_sf <- c(0, 1)
+nq_cols_sf <- c("#CCE0F0", "#0072B2")
+nq_scale_sf <- list(nq_stops_sf, nq_cols_sf)
+nq_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+nq_camera_sf <- list(eye = nq_eye_sf)
+nq_xaxis_sf <- list(title = "x1")
+nq_yaxis_sf <- list(title = "x2")
+nq_zaxis_sf <- list(title = "f(x)")
+nq_scene_sf <- list(
+  xaxis = nq_xaxis_sf,
+  yaxis = nq_yaxis_sf,
+  zaxis = nq_zaxis_sf,
+  camera = nq_camera_sf
+)
+nq_legend_sf <- list(orientation = "h")
+plotly::plot_ly() |>
+  plotly::add_surface(
+    x = nq_x1_sf,
+    y = nq_x2_sf,
+    z = nq_z_sf,
+    colorscale = nq_scale_sf,
+    showscale = FALSE,
+    opacity = 0.8
+  ) |>
+  plotly::add_trace(
+    data = nq_start_sf,
+    x = ~x1,
+    y = ~x2,
+    z = ~z,
+    type = "scatter3d",
+    mode = "markers",
+    marker = nq_red_sf,
+    name = "start"
+  ) |>
+  plotly::add_trace(
+    data = nq_min_sf,
+    x = ~x1,
+    y = ~x2,
+    z = ~z,
+    type = "scatter3d",
+    mode = "markers",
+    marker = nq_black_sf,
+    name = "minimizer"
+  ) |>
+  plotly::layout(scene = nq_scene_sf, legend = nq_legend_sf)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
+```
+
+### Python
+
+```{python}
+#| label: newton-quadratic-3d-python
+#| fig-alt: >-
+#|   Surface plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2
+#|   from -2 to 2. The surface is a bowl with its lowest point at the origin,
+#|   rising more steeply along x2 than along x1. A vermilion point marks the
+#|   start (3, 1) on the bowl's side and a black point marks the minimizer
+#|   at the origin.
+#| fig-height: 4.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+nq_x1_3d, nq_x2_3d = np.meshgrid(np.linspace(-4, 4, 61),
+                                 np.linspace(-2, 2, 61))
+nq_z_3d = (nq_x1_3d**2 + 3 * nq_x2_3d**2) / 2
+fig = plt.figure(figsize=(6, 4.5))
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(nq_x1_3d, nq_x2_3d, nq_z_3d, color="#0072B2", alpha=0.6)
+ax.scatter([3], [1], [6], color="#D55E00", label="start")
+ax.scatter([0], [0], [0], color="black", label="minimizer")
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+ax.set_zlabel("f(x)")
+ax.legend(loc="upper right")
+plt.show();
+```
+
+:::
+
+The [graph](functions.qmd#def-graph) of $f$ in @exm-newton-quadratic:
+a bowl whose lowest point is the origin.
+
+:::
