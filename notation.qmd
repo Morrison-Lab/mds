@@ -39,7 +39,7 @@ format:
 # Further reading {#sec-further-reading}
 
 For the logical symbols and proof conventions used in these notes
-(whose definitions are on the [Proof Writing](proof-writing.qmd#sec-proof-definitions) page):
+(whose definitions are on the [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html#sec-proof-definitions) page):
 
 - @velleman2019prove
   explains how mathematical statements are built from
