@@ -37,5 +37,8 @@ In the earlier [basin example](#exm-basin-of-attraction),
 $\steplen = 0.05$,
 and the start $4$ lies above the bound $`{r} dwd_cut_round_pe[2]`$,
 which is why its [iterates](#def-iterate) grow.
+@fig-double-well-divergence shows the three bounds.
+
+{{< include mds/_subfiles/vector-calc/_fig-double-well-divergence.qmd >}}
 
 :::
