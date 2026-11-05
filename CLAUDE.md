@@ -62,6 +62,8 @@ Mirrors [`.github/copilot-instructions.md`](.github/copilot-instructions.md). Ke
 - **Spell check**: words go in `inst/WORDLIST` (see `.github/workflows/check-spelling.yaml`). Update the wordlist instead of disabling the check.
 - **Link check**: tuned in `lychee.toml`; prefer fixing broken links over adding exceptions.
 - **Other CI checks**: workflows also verify bibliography DOIs (`check-bibliography-dois.yml`) and flag non-standard characters (`check-non-standard-chars.yaml`). Fix the flagged source rather than relaxing the check.
+- **A book with no DOI**: add its key to `exclude-keys` in `.github/workflows/check-bibliography-dois.yml` in the same PR as its `references.bib` entry and citations (mds#635).
+  A separate exemption PR is flagged for a key no entry uses, and the entry's PR fails the check without it.
 - **Previews skip the PDFs and Word files**: on a pull request, `tools/skip_pdf_in_previews.py` (a `pre-render` script) removes the `pdf` and `docx` formats
   unless the PR carries the label `preview:pdf` or `preview:docx`.
   The publish on `main` builds both.
