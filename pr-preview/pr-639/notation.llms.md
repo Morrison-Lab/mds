@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 01:20:42 (PST)
+Last modified: 2026-11-05 02:42:34 (PST)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 
@@ -70,6 +70,8 @@ For the logical symbols and proof conventions used in these notes (whose definit
 - Barker-Plummer et al. [\[3\]](#ref-barkerplummer2011language) covers the same symbols as a formal language, with propositional logic (the logic of connectives) and first-order logic (which adds quantifiers).
 
 For set and function notation, see the [Sets](sets.llms.md), [Functions](functions.llms.md), and [Expressions and Algorithms](expressions-algorithms.llms.md) pages.
+
+The [Math for Computer Science notes](https://morrison-lab.github.io/mcs/notation.html) keep a copy of this notation page for discrete mathematics. Two pages have moved there: [Relations](https://morrison-lab.github.io/mcs/relations.html) and [Growth Rates](https://morrison-lab.github.io/mcs/growth-rates.html).
 
 # References
 
