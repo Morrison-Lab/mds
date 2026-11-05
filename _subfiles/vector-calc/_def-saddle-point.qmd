@@ -47,5 +47,10 @@ $$
 So every ball around $\vzero_{2 \times 1}$ contains a point with a larger value of $f$ and a point with a smaller one.
 Hence $\vzero_{2 \times 1}$ is neither a local minimizer nor a local maximizer,
 and it is a saddle point.
+@fig-saddle-point shows the surface:
+the curve $t \mapsto f(t, 0)$ rises from the origin along the $x_1$ axis,
+and the curve $t \mapsto f(0, t)$ falls from the origin along the $x_2$ axis.
+
+{{< include mds/_subfiles/vector-calc/_fig-saddle-point.qmd >}}
 
 :::
