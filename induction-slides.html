@@ -36,27 +36,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-      margin-bottom: 0em;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-9f3199129f1ac5956c3166fe157a3c4b.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
 
@@ -294,122 +274,17 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 07:54:34 (PST)</p>
+  <p class="date">Last modified: 2026-11-05 10:15:02 (PST)</p>
 </section>
 <section class="slide level2">
 
-<div class="proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>A <a href="./proof-writing.html#def-proof-by-induction">proof by induction</a> proves a <a href="./proof-writing.html#def-proposition">proposition</a> about every <a href="./number-systems.html#def-integers">integer</a> from some starting integer on. A <a href="./functions.html#def-sequence">sequence</a> defined by a rule on its earlier <a href="./functions.html#def-sequence-term">terms</a> is the usual place to use it. This page defines such <a href="./functions.html#def-sequence">sequences</a>, then adds the stronger form, <a href="./induction.html#def-strong-induction">strong induction</a>, that they often need.</p>
-</div>
-</section>
-<section id="recursively-defined-sequences" class="slide level2" data-number="1">
-<h2><span class="header-section-number">1</span> Recursively defined sequences</h2>
-</section>
-<section class="slide level2 scrollable">
-
-<div id="def-recursive-sequence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Recursively defined sequence)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./number-systems.html#def-integers">integer</a> and <span class="math inline">\(m\)</span> a positive integer. A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(a_{n_0}, a_{n_0 + 1}, \ldots\)</span> is <strong>recursively defined</strong> <span class="citation" data-cites="wikipedia_recurrence_relation"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> by two things:</p>
-<ol type="1">
-<li><strong>Initial <a href="./functions.html#def-sequence-term">terms</a>:</strong> specific <a href="./functions.html#def-value">values</a> for <span class="math inline">\(a_{n_0}, \ldots, a_{n_0 + m - 1}\)</span>.</li>
-<li><strong>Recurrence:</strong> a rule that gives <span class="math inline">\(a_n\)</span> from the <span class="math inline">\(m\)</span> entries <span class="math inline">\(a_{n-1}, \ldots, a_{n-m}\)</span> just before it, for every integer <span class="math inline">\(n \ge n_0 + m\)</span>.</li>
-</ol>
-<p>The initial terms and the recurrence together fix every <a href="./functions.html#def-sequence-term">term</a>: the first <span class="math inline">\(m\)</span> entries are given, and each later entry follows from the <span class="math inline">\(m\)</span> entries before it.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exm-recursive-sequence" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Powers of 3)</strong></span> The <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(a_0, a_1, \ldots\)</span> with initial <a href="./functions.html#def-sequence-term">term</a> <span class="math inline">\(a_0 = 1\)</span> and recurrence <span class="math inline">\(a_n = 3 a_{n-1}\)</span> for <span class="math inline">\(n \ge 1\)</span> has <span class="math inline">\(m = 1\)</span>, and its <a href="./functions.html#def-sequence-term">terms</a> are <span class="math inline">\(1, 3, 9, 27, \ldots\)</span> A <a href="./proof-writing.html#def-proof-by-induction">proof by induction</a> shows <span class="math inline">\(a_n = 3^n\)</span> for every <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(n \ge 0\)</span>, using the recurrence in the inductive step: if <span class="math inline">\(a_{n-1} = 3^{n-1}\)</span>, then <span class="math inline">\(a_n = 3 \cdot 3^{n-1} = 3^n\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="def-fibonacci-sequence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Fibonacci sequence)</strong></span> The <strong>Fibonacci sequence</strong> <span class="math inline">\(F_1, F_2, \ldots\)</span> <span class="citation" data-cites="wikipedia_fibonacci_sequence"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> is the <a href="#/def-recursive-sequence">recursively defined sequence</a> with <span class="math inline">\(m = 2\)</span>, initial <a href="./functions.html#def-sequence-term">terms</a> <span class="math inline">\(F_1 = 1\)</span> and <span class="math inline">\(F_2 = 1\)</span>, and recurrence <span class="math inline">\(F_n = F_{n-1} + F_{n-2}\)</span> for every <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(n \ge 3\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exm-fibonacci-sequence" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (The first Fibonacci numbers)</strong></span> <span class="math inline">\(F_3 = F_2 + F_1 = 1 + 1 = 2\)</span>, <span class="math inline">\(F_4 = F_3 + F_2 = 2 + 1 = 3\)</span>, <span class="math inline">\(F_5 = F_4 + F_3 = 3 + 2 = 5\)</span>, and <span class="math inline">\(F_6 = F_5 + F_4 = 5 + 3 = 8\)</span>. So the <a href="./functions.html#def-sequence">sequence</a> begins <span class="math inline">\(1, 1, 2, 3, 5, 8, \ldots\)</span></p>
-</div>
-</section>
-<section id="strong-induction" class="slide level2" data-number="2">
-<h2><span class="header-section-number">2</span> Strong induction</h2>
-</section>
-<section class="slide level2">
-
-<div id="def-strong-induction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Proof by strong induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./number-systems.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the <a href="./number-systems.html#def-integers">integers</a> <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by strong induction</strong> <span class="citation" data-cites="wikipedia_mathematical_induction"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing one thing: for every integer <span class="math inline">\(n \ge n_0\)</span>, if <span class="math inline">\(P(k)\)</span> holds for every integer <span class="math inline">\(k\)</span> with <span class="math inline">\(n_0 \le k &lt; n\)</span>, then <span class="math inline">\(P(n)\)</span> holds.</p>
-<p>The assumption that <span class="math inline">\(P(k)\)</span> holds for every integer <span class="math inline">\(k\)</span> with <span class="math inline">\(n_0 \le k &lt; n\)</span> is the <strong>strong induction hypothesis</strong>.</p>
-<p>For <span class="math inline">\(n = n_0\)</span> no integer <span class="math inline">\(k\)</span> satisfies <span class="math inline">\(n_0 \le k &lt; n\)</span>, so the strong induction hypothesis is <a href="./sets.html#def-vacuous-truth">vacuously true</a>, and the proof for <span class="math inline">\(n = n_0\)</span> is a <a href="./proof-writing.html#def-proof-by-induction">base case</a>. When the proof for <span class="math inline">\(n\)</span> needs particular earlier cases that do not exist for the first few <span class="math inline">\(n\)</span>, those few cases are shown separately as further <a href="./proof-writing.html#def-proof-by-induction">base cases</a>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exm-strong-induction" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Every term of the Fibonacci sequence is less than a power of 2)</strong></span> Let <span class="math inline">\(F_1, F_2, \ldots\)</span> be the <a href="#/def-fibonacci-sequence">Fibonacci sequence</a>. To prove <span class="math inline">\(F_n &lt; 2^n\)</span> for every <span class="math inline">\(n \in \mathbb{N}\)</span>, let <span class="math inline">\(P(n)\)</span> be the <a href="./proof-writing.html#def-inequality">inequality</a> <span class="math inline">\(F_n &lt; 2^n\)</span> and use <a href="#/def-strong-induction" class="quarto-xref">Definition&nbsp;3</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
-<p><strong><a href="./proof-writing.html#def-proof-by-induction">Base cases</a>, <span class="math inline">\(n = 1\)</span> and <span class="math inline">\(n = 2\)</span>.</strong> The step below uses the two entries <span class="math inline">\(F_{n-1}\)</span> and <span class="math inline">\(F_{n-2}\)</span> before <span class="math inline">\(F_n\)</span>, which do not exist for <span class="math inline">\(n = 1\)</span> and <span class="math inline">\(n = 2\)</span>, so these two cases are shown directly:</p>
-<p><span class="math display">\[
-\begin{aligned}
-F_1 &amp;= 1 &lt; 2 = 2^1
-&amp;&amp; \text{(} 1 &lt; 2 \text{)}
-\\
-F_2 &amp;= 1 &lt; 4 = 2^2.
-&amp;&amp; \text{(} 1 &lt; 4 \text{)}
-\end{aligned}
-\]</span></p>
-<p><strong>Step of the <a href="#/def-strong-induction">strong induction</a>, <span class="math inline">\(n \ge 3\)</span>.</strong> Let <span class="math inline">\(n \ge 3\)</span>, and suppose <span class="math inline">\(P(k)\)</span> holds for every <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(k\)</span> with <span class="math inline">\(1 \le k &lt; n\)</span>. Then <span class="math inline">\(k = n - 1\)</span> and <span class="math inline">\(k = n - 2\)</span> both satisfy <span class="math inline">\(1 \le k &lt; n\)</span>, so <span class="math inline">\(F_{n-1} &lt; 2^{n-1}\)</span> and <span class="math inline">\(F_{n-2} &lt; 2^{n-2}\)</span>. Therefore</p>
-<p><span class="math display">\[
-\begin{aligned}
-F_n
-&amp;= F_{n-1} + F_{n-2}
-&amp;&amp; \text{(definition of } F_n \text{, since } n \ge 3 \text{)}
-\\
-&amp;&lt; 2^{n-1} + 2^{n-2}
-&amp;&amp; \text{(strong induction hypothesis, twice)}
-\\
-&amp;&lt; 2^{n-1} + 2^{n-1}
-&amp;&amp; \text{(} 2^{n-2} &lt; 2^{n-1} \text{)}
-\\
-&amp;= 2 \cdot 2^{n-1}
-&amp;&amp; \text{(} a + a = 2a \text{)}
-\\
-&amp;= 2^n,
-&amp;&amp; \text{(} 2 \cdot 2^{n-1} = 2^n \text{)}
-\end{aligned}
-\]</span></p>
-<p>which is <span class="math inline">\(P(n)\)</span>. By <a href="#/def-strong-induction" class="quarto-xref">Definition&nbsp;3</a>, <span class="math inline">\(F_n &lt; 2^n\)</span> for every <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</div>
-</section>
-<section id="sec-further-reading" class="slide level2" data-number="3">
-<h2><span class="header-section-number">3</span> Further reading</h2>
-</section>
-<section class="slide level2">
-
-<ul>
-<li><span class="citation" data-cites="velleman2019prove">Velleman <a href="#/references" role="doc-biblioref" onclick="">[4]</a></span> is a structured introduction to proof techniques, including <a href="./proof-writing.html#def-proof-by-induction">proof by induction</a>.</li>
-</ul>
-</section>
-<section id="references" class="slide level2 unnumbered">
-<h2>References</h2>
-</section>
-<section class="slide level2 smaller scrollable" id="references">
-
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-wikipedia_recurrence_relation" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Recurrence relation — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Recurrence_relation">https://en.wikipedia.org/wiki/Recurrence_relation</a></div>
-</div>
-<div id="ref-wikipedia_fibonacci_sequence" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Fibonacci sequence — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">https://en.wikipedia.org/wiki/Fibonacci_sequence</a></div>
-</div>
-<div id="ref-wikipedia_mathematical_induction" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Mathematical induction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Mathematical_induction">https://en.wikipedia.org/wiki/Mathematical_induction</a></div>
-</div>
-<div id="ref-velleman2019prove" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">D. J. Velleman, <em>How to prove it: A structured approach</em>, 3rd ed. Cambridge University Press, 2019. doi: <a href="https://doi.org/10.1017/9781108539890">10.1017/9781108539890</a>.</div>
-</div>
-</div>
+<meta http-equiv="refresh" content="5; url=https://morrison-lab.github.io/mcs/induction.html">
+<script>
+// This page moved to the Math for Computer Science notes (https://github.com/Morrison-Lab/mcs/issues/60).
+// Send the reader, with any #id, to the same page there; the ids did not change.
+location.replace("https://morrison-lab.github.io/mcs/induction.html" + location.search + location.hash);
+</script>
+<p>This page moved to <a href="https://morrison-lab.github.io/mcs/induction.html">Induction and Recursion</a> in the Math for Computer Science notes.</p>
 
 
 <script>

@@ -61,27 +61,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -91,8 +71,6 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./measures.html" rel="next">
-<link href="./proof-writing.html" rel="prev">
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -228,6 +206,16 @@ cookieconsent.run({
 })();
 </script>
 <style>
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-fig.callout {
   border-left-color: #757575;
 }
@@ -248,15 +236,15 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -268,15 +256,15 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-tbl.callout {
-  border-left-color: #757575;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -308,25 +296,15 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-tbl.callout {
+  border-left-color: #757575;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exr.callout {
   border-left-color: #FFA500;
@@ -635,10 +613,6 @@ window.Quarto = {
     <a class="nav-link" href="./proof-writing.html"> 
 <span class="menu-text">Proof Writing</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./induction.html"> 
-<span class="menu-text">Induction and Recursion</span></a>
-  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-measures" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Measures</span>
@@ -820,7 +794,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./induction.html">Induction and Recursion</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item">Induction and Recursion</li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -930,12 +904,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./proof-writing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Proof Writing</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./induction.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Induction and Recursion</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1156,18 +1124,8 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#recursively-defined-sequences" id="toc-recursively-defined-sequences" class="nav-link active" data-scroll-target="#recursively-defined-sequences"><span class="header-section-number">1</span> Recursively defined sequences</a></li>
-  <li><a href="#strong-induction" id="toc-strong-induction" class="nav-link" data-scroll-target="#strong-induction"><span class="header-section-number">2</span> Strong induction</a></li>
-  <li><a href="#sec-further-reading" id="toc-sec-further-reading" class="nav-link" data-scroll-target="#sec-further-reading"><span class="header-section-number">3</span> Further reading</a></li>
-  <li><a href="#def-list-section" id="toc-def-list-section" class="nav-link" data-scroll-target="#def-list-section">Definitions on this page</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/induction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/induction.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="induction-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="induction-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="induction.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
-    </div>
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="induction-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="induction-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="induction.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
 
@@ -1185,7 +1143,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-05 07:54:34 (PST)</p>
+      <p class="date">Last modified: 2026-11-05 10:15:02 (PST)</p>
     </div>
   </div>
   
@@ -1197,206 +1155,13 @@ window.Quarto = {
 </header>
 
 
-<div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Remark</span>Remark
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div class="proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>A <a href="./proof-writing.html#def-proof-by-induction">proof by induction</a> proves a <a href="./proof-writing.html#def-proposition">proposition</a> about every <a href="./number-systems.html#def-integers">integer</a> from some starting integer on. A <a href="./functions.html#def-sequence">sequence</a> defined by a rule on its earlier <a href="./functions.html#def-sequence-term">terms</a> is the usual place to use it. This page defines such <a href="./functions.html#def-sequence">sequences</a>, then adds the stronger form, <a href="./induction.html#def-strong-induction">strong induction</a>, that they often need.</p>
-</div>
-</div>
-</div>
-</div>
-<section id="recursively-defined-sequences" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Recursively defined sequences</h1>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-recursive-sequence" class="quarto-xref">Definition&nbsp;1</a> (Recursively defined sequence)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-recursive-sequence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Recursively defined sequence)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./number-systems.html#def-integers">integer</a> and <span class="math inline">\(m\)</span> a positive integer. A <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(a_{n_0}, a_{n_0 + 1}, \ldots\)</span> is <strong>recursively defined</strong> <span class="citation" data-cites="wikipedia_recurrence_relation"><a href="#ref-wikipedia_recurrence_relation" role="doc-biblioref">[1]</a></span> by two things:</p>
-<ol type="1">
-<li><strong>Initial <a href="./functions.html#def-sequence-term">terms</a>:</strong> specific <a href="./functions.html#def-value">values</a> for <span class="math inline">\(a_{n_0}, \ldots, a_{n_0 + m - 1}\)</span>.</li>
-<li><strong>Recurrence:</strong> a rule that gives <span class="math inline">\(a_n\)</span> from the <span class="math inline">\(m\)</span> entries <span class="math inline">\(a_{n-1}, \ldots, a_{n-m}\)</span> just before it, for every integer <span class="math inline">\(n \ge n_0 + m\)</span>.</li>
-</ol>
-<p>The initial terms and the recurrence together fix every <a href="./functions.html#def-sequence-term">term</a>: the first <span class="math inline">\(m\)</span> entries are given, and each later entry follows from the <span class="math inline">\(m\)</span> entries before it.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-recursive-sequence" class="quarto-xref">Example&nbsp;1</a> (Powers of 3)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-recursive-sequence" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Powers of 3)</strong></span> The <a href="./functions.html#def-sequence">sequence</a> <span class="math inline">\(a_0, a_1, \ldots\)</span> with initial <a href="./functions.html#def-sequence-term">term</a> <span class="math inline">\(a_0 = 1\)</span> and recurrence <span class="math inline">\(a_n = 3 a_{n-1}\)</span> for <span class="math inline">\(n \ge 1\)</span> has <span class="math inline">\(m = 1\)</span>, and its <a href="./functions.html#def-sequence-term">terms</a> are <span class="math inline">\(1, 3, 9, 27, \ldots\)</span> A <a href="./proof-writing.html#def-proof-by-induction">proof by induction</a> shows <span class="math inline">\(a_n = 3^n\)</span> for every <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(n \ge 0\)</span>, using the recurrence in the inductive step: if <span class="math inline">\(a_{n-1} = 3^{n-1}\)</span>, then <span class="math inline">\(a_n = 3 \cdot 3^{n-1} = 3^n\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-fibonacci-sequence" class="quarto-xref">Definition&nbsp;2</a> (Fibonacci sequence)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-fibonacci-sequence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Fibonacci sequence)</strong></span> The <strong>Fibonacci sequence</strong> <span class="math inline">\(F_1, F_2, \ldots\)</span> <span class="citation" data-cites="wikipedia_fibonacci_sequence"><a href="#ref-wikipedia_fibonacci_sequence" role="doc-biblioref">[2]</a></span> is the <a href="#def-recursive-sequence">recursively defined sequence</a> with <span class="math inline">\(m = 2\)</span>, initial <a href="./functions.html#def-sequence-term">terms</a> <span class="math inline">\(F_1 = 1\)</span> and <span class="math inline">\(F_2 = 1\)</span>, and recurrence <span class="math inline">\(F_n = F_{n-1} + F_{n-2}\)</span> for every <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(n \ge 3\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-fibonacci-sequence" class="quarto-xref">Example&nbsp;2</a> (The first Fibonacci numbers)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-fibonacci-sequence" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (The first Fibonacci numbers)</strong></span> <span class="math inline">\(F_3 = F_2 + F_1 = 1 + 1 = 2\)</span>, <span class="math inline">\(F_4 = F_3 + F_2 = 2 + 1 = 3\)</span>, <span class="math inline">\(F_5 = F_4 + F_3 = 3 + 2 = 5\)</span>, and <span class="math inline">\(F_6 = F_5 + F_4 = 5 + 3 = 8\)</span>. So the <a href="./functions.html#def-sequence">sequence</a> begins <span class="math inline">\(1, 1, 2, 3, 5, 8, \ldots\)</span></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="strong-induction" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Strong induction</h1>
-<div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-strong-induction" class="quarto-xref">Definition&nbsp;3</a> (Proof by strong induction)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="def-strong-induction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Proof by strong induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./number-systems.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the <a href="./number-systems.html#def-integers">integers</a> <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by strong induction</strong> <span class="citation" data-cites="wikipedia_mathematical_induction"><a href="#ref-wikipedia_mathematical_induction" role="doc-biblioref">[3]</a></span> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing one thing: for every integer <span class="math inline">\(n \ge n_0\)</span>, if <span class="math inline">\(P(k)\)</span> holds for every integer <span class="math inline">\(k\)</span> with <span class="math inline">\(n_0 \le k &lt; n\)</span>, then <span class="math inline">\(P(n)\)</span> holds.</p>
-<p>The assumption that <span class="math inline">\(P(k)\)</span> holds for every integer <span class="math inline">\(k\)</span> with <span class="math inline">\(n_0 \le k &lt; n\)</span> is the <strong>strong induction hypothesis</strong>.</p>
-<p>For <span class="math inline">\(n = n_0\)</span> no integer <span class="math inline">\(k\)</span> satisfies <span class="math inline">\(n_0 \le k &lt; n\)</span>, so the strong induction hypothesis is <a href="./sets.html#def-vacuous-truth">vacuously true</a>, and the proof for <span class="math inline">\(n = n_0\)</span> is a <a href="./proof-writing.html#def-proof-by-induction">base case</a>. When the proof for <span class="math inline">\(n\)</span> needs particular earlier cases that do not exist for the first few <span class="math inline">\(n\)</span>, those few cases are shown separately as further <a href="./proof-writing.html#def-proof-by-induction">base cases</a>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-strong-induction" class="quarto-xref">Example&nbsp;3</a> (Every term of the Fibonacci sequence is less than a power of 2)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div id="exm-strong-induction" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Every term of the Fibonacci sequence is less than a power of 2)</strong></span> Let <span class="math inline">\(F_1, F_2, \ldots\)</span> be the <a href="#def-fibonacci-sequence">Fibonacci sequence</a>. To prove <span class="math inline">\(F_n &lt; 2^n\)</span> for every <span class="math inline">\(n \in \mathbb{N}\)</span>, let <span class="math inline">\(P(n)\)</span> be the <a href="./proof-writing.html#def-inequality">inequality</a> <span class="math inline">\(F_n &lt; 2^n\)</span> and use <a href="#def-strong-induction" class="quarto-xref">Definition&nbsp;3</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
-<p><strong><a href="./proof-writing.html#def-proof-by-induction">Base cases</a>, <span class="math inline">\(n = 1\)</span> and <span class="math inline">\(n = 2\)</span>.</strong> The step below uses the two entries <span class="math inline">\(F_{n-1}\)</span> and <span class="math inline">\(F_{n-2}\)</span> before <span class="math inline">\(F_n\)</span>, which do not exist for <span class="math inline">\(n = 1\)</span> and <span class="math inline">\(n = 2\)</span>, so these two cases are shown directly:</p>
-<p><span class="math display">\[
-\begin{aligned}
-F_1 &amp;= 1 &lt; 2 = 2^1
-&amp;&amp; \text{(} 1 &lt; 2 \text{)}
-\\
-F_2 &amp;= 1 &lt; 4 = 2^2.
-&amp;&amp; \text{(} 1 &lt; 4 \text{)}
-\end{aligned}
-\]</span></p>
-<p><strong>Step of the <a href="#def-strong-induction">strong induction</a>, <span class="math inline">\(n \ge 3\)</span>.</strong> Let <span class="math inline">\(n \ge 3\)</span>, and suppose <span class="math inline">\(P(k)\)</span> holds for every <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(k\)</span> with <span class="math inline">\(1 \le k &lt; n\)</span>. Then <span class="math inline">\(k = n - 1\)</span> and <span class="math inline">\(k = n - 2\)</span> both satisfy <span class="math inline">\(1 \le k &lt; n\)</span>, so <span class="math inline">\(F_{n-1} &lt; 2^{n-1}\)</span> and <span class="math inline">\(F_{n-2} &lt; 2^{n-2}\)</span>. Therefore</p>
-<p><span class="math display">\[
-\begin{aligned}
-F_n
-&amp;= F_{n-1} + F_{n-2}
-&amp;&amp; \text{(definition of } F_n \text{, since } n \ge 3 \text{)}
-\\
-&amp;&lt; 2^{n-1} + 2^{n-2}
-&amp;&amp; \text{(strong induction hypothesis, twice)}
-\\
-&amp;&lt; 2^{n-1} + 2^{n-1}
-&amp;&amp; \text{(} 2^{n-2} &lt; 2^{n-1} \text{)}
-\\
-&amp;= 2 \cdot 2^{n-1}
-&amp;&amp; \text{(} a + a = 2a \text{)}
-\\
-&amp;= 2^n,
-&amp;&amp; \text{(} 2 \cdot 2^{n-1} = 2^n \text{)}
-\end{aligned}
-\]</span></p>
-<p>which is <span class="math inline">\(P(n)\)</span>. By <a href="#def-strong-induction" class="quarto-xref">Definition&nbsp;3</a>, <span class="math inline">\(F_n &lt; 2^n\)</span> for every <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="sec-further-reading" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Further reading</h1>
-<ul>
-<li><span class="citation" data-cites="velleman2019prove">Velleman <a href="#ref-velleman2019prove" role="doc-biblioref">[4]</a></span> is a structured introduction to proof techniques, including <a href="./proof-writing.html#def-proof-by-induction">proof by induction</a>.</li>
-</ul>
-</section>
-<section id="def-list-section" class="level1 unnumbered">
-<h1 class="unnumbered">Definitions on this page</h1>
-<ul>
-<li><a href="#def-recursive-sequence"><span class="quarto-xref">Definition&nbsp;1</span> (Recursively defined sequence)</a></li>
-<li><a href="#def-fibonacci-sequence"><span class="quarto-xref">Definition&nbsp;2</span> (Fibonacci sequence)</a></li>
-<li><a href="#def-strong-induction"><span class="quarto-xref">Definition&nbsp;3</span> (Proof by strong induction)</a></li>
-</ul>
-</section>
-<section id="references" class="level1 unnumbered">
-<h1 class="unnumbered">References</h1>
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-wikipedia_recurrence_relation" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Recurrence relation — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Recurrence_relation">https://en.wikipedia.org/wiki/Recurrence_relation</a></div>
-</div>
-<div id="ref-wikipedia_fibonacci_sequence" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Fibonacci sequence — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">https://en.wikipedia.org/wiki/Fibonacci_sequence</a></div>
-</div>
-<div id="ref-wikipedia_mathematical_induction" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Mathematical induction — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Mathematical_induction">https://en.wikipedia.org/wiki/Mathematical_induction</a></div>
-</div>
-<div id="ref-velleman2019prove" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">D. J. Velleman, <em>How to prove it: A structured approach</em>, 3rd ed. Cambridge University Press, 2019. doi: <a href="https://doi.org/10.1017/9781108539890">10.1017/9781108539890</a>.</div>
-</div>
-</div>
+<meta http-equiv="refresh" content="5; url=https://morrison-lab.github.io/mcs/induction.html">
+<script>
+// This page moved to the Math for Computer Science notes (https://github.com/Morrison-Lab/mcs/issues/60).
+// Send the reader, with any #id, to the same page there; the ids did not change.
+location.replace("https://morrison-lab.github.io/mcs/induction.html" + location.search + location.hash);
+</script>
+<p>This page moved to <a href="https://morrison-lab.github.io/mcs/induction.html">Induction and Recursion</a> in the Math for Computer Science notes.</p>
 
 
 <!-- -->
@@ -1652,8 +1417,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("load", alignEquationAnchorsWithDefault);
 </script>
-
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script>
@@ -2548,19 +2311,7 @@ document.querySelectorAll("main table").forEach(function (t) {
   </script>
   <script type="application/javascript">
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script>
-<nav class="page-navigation" aria-label="Page">
-  <div class="nav-page nav-page-previous">
-      <a href="./proof-writing.html" class="pagination-link" aria-label="Proof Writing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Proof Writing</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./measures.html" class="pagination-link" aria-label="Measures">
-        <span class="nav-page-text">Measures</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Induction and Recursion"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
@@ -2573,17 +2324,16 @@ document.querySelectorAll("main table").forEach(function (t) {
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: induction.docx</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_induction.qmd &gt;}}</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu"># Further reading {#sec-further-reading}</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@velleman2019prove</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  is a structured introduction to proof techniques, including <span class="co">[</span><span class="ot">proof by induction</span><span class="co">](proof-writing.qmd#def-proof-by-induction)</span>.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;meta http-equiv="refresh" content="5; url=https://morrison-lab.github.io/mcs/induction.html"&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="in">// This page moved to the Math for Computer Science notes (https://github.com/Morrison-Lab/mcs/issues/60).</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">// Send the reader, with any #id, to the same page there; the ids did not change.</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="in">location.replace("https://morrison-lab.github.io/mcs/induction.html" + location.search + location.hash);</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/script&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>This page moved to <span class="co">[</span><span class="ot">Induction and Recursion</span><span class="co">](https://morrison-lab.github.io/mcs/induction.html)</span> in the Math for Computer Science notes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -2593,7 +2343,7 @@ document.querySelectorAll("main table").forEach(function (t) {
     </div>   
     <div class="nav-footer-center">
 <p>Built with <a href="https://quarto.org/">Quarto</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/induction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/induction.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/induction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/induction.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 07:54:34 (PST)
+Last modified: 2026-11-05 10:15:02 (PST)
 
 # Welcome
 
@@ -25,7 +25,7 @@ The first six topics are the foundations. Apart from a few remarks in Algebra th
   - [Indicator Functions](indicator-functions.llms.md): set and predicate indicators, the Iverson bracket, the Kronecker delta, and their algebraic properties
 - [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Proof Writing](proof-writing.llms.md): propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.llms.md#def-derivation)
-- [Induction and Recursion](induction.llms.md): [recursively defined sequences](induction.llms.md#def-recursive-sequence) and [strong induction](induction.llms.md#def-strong-induction)
+- [Induction and Recursion](https://morrison-lab.github.io/mcs/induction.html) in the Math for Computer Science notes: [recursively defined sequences](https://morrison-lab.github.io/mcs/induction.html#def-recursive-sequence) and [strong induction](https://morrison-lab.github.io/mcs/induction.html#def-strong-induction)
 
 The remaining topics build on the foundations and on each other:
 
