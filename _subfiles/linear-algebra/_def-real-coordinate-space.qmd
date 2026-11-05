@@ -1,7 +1,7 @@
 :::{#def-real-coordinate-space}
 #### The set $\reals^p$
 
-For a positive [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) $p$,
+For a [positive integer](https://morrison-lab.github.io/mcs/number-systems.html#def-positive-integer) $p$,
 $\reals^p$ is the set of all
 [column vectors](#def-column-vector) of length $p$
 whose entries are [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).

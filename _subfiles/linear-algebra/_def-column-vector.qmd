@@ -3,7 +3,7 @@
 
 A **column vector**
 [@wikipedia_row_and_column_vectors]
-of length $p$ is an ordered list of $p$ [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers),
+of length $p$ is an ordered list of $p$ [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), <!-- check-term-links: allow -->
 written vertically as a $p \times 1$ array:
 
 $$
