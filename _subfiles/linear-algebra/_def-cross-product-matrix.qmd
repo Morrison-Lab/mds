@@ -10,7 +10,7 @@ whose entry $(i, j)$ is the dot product $\vecf{a}_i \cdot \vecf{b}_j$.
 :::
 
 ::: notes
-Each entry is the [dot product](linear-algebra.qmd#def-dot-product) of a column of $\matr{A}$ with a column of $\matr{B}$, so we can call it a column-column product.
+Each entry pairs a column of $\matr{A}$ with a column of $\matr{B}$, so we can call it a column-column [product](linear-algebra.qmd#def-matrix-mult).
 Ordinary [matrix multiplication](linear-algebra.qmd#def-matrix-mult) instead pairs a row of the left factor with a column of the right factor.
 
 This is what R's `crossprod(A, B)` computes, and `crossprod(A)` is $\tprod{\matr{A}}{\matr{A}}$.
