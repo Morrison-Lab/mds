@@ -24726,10 +24726,6 @@
    "mds/vector-calculus#thm-deriv-lincom"
   ],
   [
-   "mds/vector-calculus#cor-deriv-lincom-tp",
-   "mds/vector-calculus#thm-deriv-matrix-vector"
-  ],
-  [
    "mds/vector-calculus#cor-deriv-normsq",
    "mds/vector-calculus#cor-quadratic-form-symmetric"
   ],
