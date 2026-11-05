@@ -1,0 +1,75 @@
+::: {#fig-double-well-divergence}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: double-well-divergence-fig-r
+#| fig-alt: >-
+#|   Three horizontal bars on a number line from -8 to 8, one for each step
+#|   length 0.01, 0.05 and 0.1. Each bar has a blue middle part, where the
+#|   result gives no guarantee, and vermilion end parts beyond plus and minus
+#|   the bound, where divergence is guaranteed. The bound is about 7.1 for
+#|   0.01, 3.3 for 0.05 and 2.5 for 0.1, so the vermilion parts grow as the
+#|   step length grows. A vertical dotted line at 4 lies in the vermilion
+#|   part for 0.05 and 0.1 and in the blue part for 0.01.
+dwf_step_fg <- c(0.01, 0.05, 0.1)
+dwf_cut_fg <- sqrt(1 + 1 / (2 * dwf_step_fg))
+dwf_level_fg <- factor(dwf_step_fg)
+dwf_bars_fg <- tibble::tibble(step = dwf_level_fg, cut = dwf_cut_fg)
+dwf_aes_fg <- ggplot2::aes(y = step)
+dwf_mid_fg <- ggplot2::aes(x = -cut, xend = cut, yend = step)
+dwf_left_fg <- ggplot2::aes(x = -8, xend = -cut, yend = step)
+dwf_right_fg <- ggplot2::aes(x = cut, xend = 8, yend = step)
+dwf_bars_fg |>
+  ggplot2::ggplot() +
+  dwf_aes_fg +
+  ggplot2::geom_segment(dwf_mid_fg, colour = "#0072B2", linewidth = 4) +
+  ggplot2::geom_segment(dwf_left_fg, colour = "#D55E00", linewidth = 4) +
+  ggplot2::geom_segment(dwf_right_fg, colour = "#D55E00", linewidth = 4) +
+  ggplot2::geom_vline(xintercept = 4, linetype = "dotted") +
+  ggplot2::labs(x = "starting point", y = "step length")
+```
+
+### Python
+
+```{python}
+#| label: double-well-divergence-fig-python
+#| fig-alt: >-
+#|   Three horizontal bars on a number line from -8 to 8, one for each step
+#|   length 0.01, 0.05 and 0.1. Each bar has a blue middle part, where the
+#|   result gives no guarantee, and vermilion end parts beyond plus and minus
+#|   the bound, where divergence is guaranteed. The bound is about 7.1 for
+#|   0.01, 3.3 for 0.05 and 2.5 for 0.1, so the vermilion parts grow as the
+#|   step length grows. A vertical dotted line at 4 lies in the vermilion
+#|   part for 0.05 and 0.1 and in the blue part for 0.01.
+import matplotlib.pyplot as plt
+import numpy as np
+
+dwf_step_py = [0.01, 0.05, 0.1]
+fig, ax = plt.subplots(figsize=(6, 3), layout="constrained")
+for dwf_i_py, dwf_s_py in enumerate(dwf_step_py):
+    dwf_cut_py = np.sqrt(1 + 1 / (2 * dwf_s_py))
+    ax.plot([-dwf_cut_py, dwf_cut_py], [dwf_i_py] * 2, color="#0072B2",
+            lw=8, solid_capstyle="butt")
+    ax.plot([-8, -dwf_cut_py], [dwf_i_py] * 2, color="#D55E00", lw=8,
+            solid_capstyle="butt")
+    ax.plot([dwf_cut_py, 8], [dwf_i_py] * 2, color="#D55E00", lw=8,
+            solid_capstyle="butt")
+ax.axvline(4, linestyle=":", color="black")
+ax.set_yticks(range(3), [str(s) for s in dwf_step_py])
+ax.set_xlabel("starting point")
+ax.set_ylabel("step length")
+plt.show();
+```
+
+:::
+
+For each [step length](#def-gradient-descent), the vermilion parts mark the starting points $x$ with $\abs{x} > \sqrt{1 + 1 / (2\steplen)}$,
+from which @prp-double-well-divergence guarantees divergence;
+the blue part is the rest,
+where it gives no guarantee.
+The dotted line is the start $4$ of the earlier [basin example](#exm-basin-of-attraction).
+
+:::
