@@ -6,7 +6,7 @@ Subscripts and parentheses both attach extra information to a symbol,
 and sources divide the work between them differently.
 These notes follow two rules of thumb:
 
-- A subscript names which member of an [indexed family](https://morrison-lab.github.io/mcs/sets.html#def-indexed-family) we mean.
+- A subscript names which member of an [indexed family](https://morrison-lab.github.io/mcs/sets.html#def-indexed-family) we mean. <!-- check-term-links: allow -->
   It holds an index, such as the $i$ in $x_i$,
   or a parameter that picks one [function](functions.qmd#def-function) or distribution out of the family,
   such as the $\theta$ in $f_\theta$.
