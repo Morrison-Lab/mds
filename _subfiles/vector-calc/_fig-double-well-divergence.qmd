@@ -66,7 +66,7 @@ plt.show();
 
 :::
 
-For each step length, the vermilion parts mark the starting points $x$ with $\abs{x} > \sqrt{1 + 1 / (2\steplen)}$,
+For each [step length](#def-gradient-descent), the vermilion parts mark the starting points $x$ with $\abs{x} > \sqrt{1 + 1 / (2\steplen)}$,
 from which @prp-double-well-divergence guarantees divergence;
 the blue part is the rest, where it gives no guarantee.
 The dotted line is the start $4$ of the earlier [basin example](#exm-basin-of-attraction).
