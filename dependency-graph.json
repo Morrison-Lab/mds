@@ -4171,33 +4171,6 @@
    "external": false
   },
   {
-   "id": "mds/growth-rates#def-big-o",
-   "site": "mds",
-   "page": "growth-rates",
-   "div": "def-big-o",
-   "kind": "def",
-   "title": "Big-O",
-   "external": false
-  },
-  {
-   "id": "mds/growth-rates#def-big-omega",
-   "site": "mds",
-   "page": "growth-rates",
-   "div": "def-big-omega",
-   "kind": "def",
-   "title": "Big-Omega",
-   "external": false
-  },
-  {
-   "id": "mds/growth-rates#def-big-theta",
-   "site": "mds",
-   "page": "growth-rates",
-   "div": "def-big-theta",
-   "kind": "def",
-   "title": "Big-Theta",
-   "external": false
-  },
-  {
    "id": "mds/indicator-functions#def-binary-variable",
    "site": "mds",
    "page": "indicator-functions",
@@ -12667,42 +12640,6 @@
    "external": false
   },
   {
-   "id": "mds/relations#def-equivalence-class",
-   "site": "mds",
-   "page": "relations",
-   "div": "def-equivalence-class",
-   "kind": "def",
-   "title": "Equivalence class",
-   "external": false
-  },
-  {
-   "id": "mds/relations#def-equivalence-relation",
-   "site": "mds",
-   "page": "relations",
-   "div": "def-equivalence-relation",
-   "kind": "def",
-   "title": "Equivalence relation",
-   "external": false
-  },
-  {
-   "id": "mds/relations#def-reflexive",
-   "site": "mds",
-   "page": "relations",
-   "div": "def-reflexive",
-   "kind": "def",
-   "title": "Reflexive relation",
-   "external": false
-  },
-  {
-   "id": "mds/relations#def-symmetric-relation",
-   "site": "mds",
-   "page": "relations",
-   "div": "def-symmetric-relation",
-   "kind": "def",
-   "title": "Symmetric relation",
-   "external": false
-  },
-  {
    "id": "mds/sets#def-bound",
    "site": "mds",
    "page": "sets",
@@ -15880,62 +15817,6 @@
   [
    "mds/functions#thm-interval-uncountable",
    "mds/functions#def-countable-set"
-  ],
-  [
-   "mds/growth-rates#def-big-o",
-   "mds/functions#def-function"
-  ],
-  [
-   "mds/growth-rates#def-big-o",
-   "mds/number-systems#def-natural-numbers"
-  ],
-  [
-   "mds/growth-rates#def-big-o",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/growth-rates#def-big-o",
-   "mds/proof-writing#def-existential-quantifier"
-  ],
-  [
-   "mds/growth-rates#def-big-o",
-   "mds/proof-writing#def-universal-quantifier"
-  ],
-  [
-   "mds/growth-rates#def-big-omega",
-   "mds/functions#def-function"
-  ],
-  [
-   "mds/growth-rates#def-big-omega",
-   "mds/growth-rates#def-big-o"
-  ],
-  [
-   "mds/growth-rates#def-big-omega",
-   "mds/number-systems#def-natural-numbers"
-  ],
-  [
-   "mds/growth-rates#def-big-omega",
-   "mds/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/growth-rates#def-big-theta",
-   "mds/functions#def-function"
-  ],
-  [
-   "mds/growth-rates#def-big-theta",
-   "mds/growth-rates#def-big-o"
-  ],
-  [
-   "mds/growth-rates#def-big-theta",
-   "mds/growth-rates#def-big-omega"
-  ],
-  [
-   "mds/growth-rates#def-big-theta",
-   "mds/number-systems#def-natural-numbers"
-  ],
-  [
-   "mds/growth-rates#def-big-theta",
-   "mds/number-systems#def-real-numbers"
   ],
   [
    "mds/indicator-functions#def-idempotent",
@@ -24456,58 +24337,6 @@
   [
    "mds/proof-writing#thm-simplification",
    "mds/proof-writing#def-rule-of-inference"
-  ],
-  [
-   "mds/relations#def-equivalence-class",
-   "mds/relations#def-equivalence-relation"
-  ],
-  [
-   "mds/relations#def-equivalence-class",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/relations#def-equivalence-relation",
-   "mds/algebra#def-transitive"
-  ],
-  [
-   "mds/relations#def-equivalence-relation",
-   "mds/functions#def-relation"
-  ],
-  [
-   "mds/relations#def-equivalence-relation",
-   "mds/relations#def-reflexive"
-  ],
-  [
-   "mds/relations#def-equivalence-relation",
-   "mds/relations#def-symmetric-relation"
-  ],
-  [
-   "mds/relations#def-equivalence-relation",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/relations#def-reflexive",
-   "mds/functions#def-relation"
-  ],
-  [
-   "mds/relations#def-reflexive",
-   "mds/sets#def-set"
-  ],
-  [
-   "mds/relations#def-symmetric-relation",
-   "mds/functions#def-relation"
-  ],
-  [
-   "mds/relations#def-symmetric-relation",
-   "mds/proof-writing#def-implies"
-  ],
-  [
-   "mds/relations#def-symmetric-relation",
-   "mds/proof-writing#def-universal-quantifier"
-  ],
-  [
-   "mds/relations#def-symmetric-relation",
-   "mds/sets#def-set"
   ],
   [
    "mds/sets#def-bound",
