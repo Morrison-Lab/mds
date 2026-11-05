@@ -2,17 +2,15 @@
 title: "Growth Rates"
 format:
   html: default
-  revealjs:
-    output-file: growth-rates-slides.html
-  pdf:
-    output-file: growth-rates-handout.pdf
-  docx:
-    output-file: growth-rates.docx
 ---
 
-{{< include mds/_growth-rates.qmd >}}
+```{=html}
+<meta http-equiv="refresh" content="5; url=https://morrison-lab.github.io/mcs/growth-rates.html">
+<script>
+// This page moved to the Math for Computer Science notes (https://github.com/Morrison-Lab/mcs/issues/60).
+// Send the reader, with any #id, to the same page there; the ids did not change.
+location.replace("https://morrison-lab.github.io/mcs/growth-rates.html" + location.search + location.hash);
+</script>
+```
 
-# References {.unnumbered}
-
-::: {#refs}
-:::
+This page moved to [Growth Rates](https://morrison-lab.github.io/mcs/growth-rates.html) in the Math for Computer Science notes.
