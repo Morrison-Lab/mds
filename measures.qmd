@@ -55,8 +55,7 @@ goes on to the page that now holds it.
   is a one-quarter graduate introduction to measure and integration theory
   that assumes only an undergraduate analysis course
   and builds the theory through exercises.
-  It treats $\sigma$-algebras, measures and Lebesgue integration,
-  and ends with Fubini and Tonelli's results on iterated sums and integrals.
+  It treats $\sigma$-algebras, measures, and Lebesgue integration.
 - @gut2013
   is a graduate course in probability
   that opens with a chapter on introductory measure theory.
