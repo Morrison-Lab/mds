@@ -10,6 +10,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-fermat.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-stationary-point.qmd >}}
 
 {{< slidebreak >}}

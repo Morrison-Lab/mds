@@ -39,6 +39,10 @@ The functions here go between the [sets](https://morrison-lab.github.io/mcs/sets
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/functions/_exm-relation.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/functions/_def-domain.qmd >}}
 
 {{< slidebreak >}}

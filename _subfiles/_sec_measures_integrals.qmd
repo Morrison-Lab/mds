@@ -16,6 +16,10 @@ reticulate::py_require(py_packages)
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_rem-integral-nonneg-lower-sums.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_exm-integral-nonneg.qmd >}}
 
 {{< slidebreak >}}

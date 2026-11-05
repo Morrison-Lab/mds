@@ -264,6 +264,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_rem-sum-over-set-order.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-sum-without-set.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_exm-sum-over-empty-set.qmd >}}
 
 # Quotients

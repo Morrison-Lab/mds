@@ -1,0 +1,24 @@
+:::{#def-partition}
+#### Partition of an interval
+
+A **partition** $\mathcal{P}$ of a closed interval $[a, b]$
+[@wikipedia_partition_of_an_interval]
+is a finite list of points
+
+$$
+\begin{aligned}
+a
+&= x_0 \\
+&< x_1 \\
+&< \cdots \\
+&< x_n \\
+&= b.
+\end{aligned}
+$$
+
+It splits $[a, b]$ into the $n$ subintervals $[x_{i-1}, x_i]$,
+of widths $\change x_i \eqdef x_i - x_{i-1}$.
+
+[@larsonCalc11e, Section 4.3]
+
+:::

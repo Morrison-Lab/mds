@@ -1,0 +1,12 @@
+:::{#def-riemann-sum-equal-width}
+#### Equal-width Riemann sum
+
+For a bounded function $f$ on $[a, b]$ and a positive integer $n$,
+split $[a, b]$ into $n$ subintervals of equal width
+$\change x \eqdef (b - a)/n$,
+and let $x_i^*$ be any point in the $i$-th subinterval.
+The **equal-width Riemann sum** is
+
+$$S_n \eqdef \sumin f(x_i^*)\,\change x.$$
+
+:::

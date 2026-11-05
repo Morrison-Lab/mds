@@ -1,0 +1,36 @@
+:::{#exm-integrable-constant}
+#### A constant function is integrable
+
+Let $f(x) = 2$ on $[0, 3]$.
+For every partition and every choice of sample points,
+
+$$
+\ba
+\sumin f(x_i^*)\,\change x_i
+&= \sumin 2\,\change x_i
+&& \text{(} f \text{ is } 2 \text{ everywhere)}
+\\
+&= 2 \sumin \change x_i
+&& \text{(factor out the constant)}
+\\
+&= 2 \cd (3 - 0)
+&& \text{(the widths add up to the length of } [0, 3] \text{)}
+\\
+&= 6,
+&& \text{(multiply)}
+\ea
+$$
+
+so the sums have the same limit, $6$, for every choice:
+$f$ is Riemann integrable on $[0, 3]$ (@def-integrable),
+and $\int_0^3 2\,dx = 6$ (@def-riemann-integral).
+
+:::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_def-integrand.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_exm-integrand.qmd >}}

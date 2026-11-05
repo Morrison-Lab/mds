@@ -1,0 +1,12 @@
+:::{#def-mesh}
+#### Mesh of a partition
+
+The **mesh** of a partition $\mathcal{P}$ (@def-partition) is its largest subinterval width,
+
+$$\norm{\mathcal{P}} \eqdef \max_{i \in \cb{1, \ldots, n}} \change x_i,$$
+
+where $n$ is the number of subintervals of $\mathcal{P}$.
+
+[@larsonCalc11e, Section 4.3]
+
+:::
