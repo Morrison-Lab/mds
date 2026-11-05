@@ -51,10 +51,10 @@ can build on them directly:
     set and predicate indicators, the Iverson bracket, the Kronecker delta,
     and their algebraic properties
 - [Algebra](algebra.qmd):
-  equalities and [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), infimum and supremum,
+  equalities and [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), [infimum](algebra.qmd#def-infimum) and [supremum](algebra.qmd#def-supremum),
   percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html):
-  propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation)
+  propositions, quantifiers, proofs and [derivations](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation), and showing and annotating every step of a [derivation](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation)
 - [Induction and Recursion](https://morrison-lab.github.io/mcs/induction.html) in the Math for Computer Science notes:
   [recursively defined sequences](https://morrison-lab.github.io/mcs/induction.html#def-recursive-sequence) and [strong induction](https://morrison-lab.github.io/mcs/induction.html#def-strong-induction)
 

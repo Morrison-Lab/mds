@@ -2,7 +2,7 @@
 #### Predicate notation for indicators
 
 An indicator (@def-indicator-function) is written in **predicate notation**
-when a proposition or predicate $P$ ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-predicate)) appears as its argument,
+when a proposition or predicate $P$ ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-predicate)) appears as its [argument](https://morrison-lab.github.io/mcs/functions.html#def-argument),
 as in $\indicp{P}$ or $\indicp{x \in A}$.
 
 :::

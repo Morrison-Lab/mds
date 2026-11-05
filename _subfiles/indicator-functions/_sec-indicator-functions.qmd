@@ -90,7 +90,7 @@ or proposition $P$ directly as its argument or subscript:
 - $I(x \in A)$ or $I(P)$
 
 Predicate notation is especially common in applied statistics and survival analysis,
-where indicators frequently depend on inequalities ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality)) involving random variables,
+where [indicators](#def-indicator-function) frequently depend on [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) involving [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable),
 such as $\indicp{T_i \le t}$ (an event occurring before time $t$)
 or $\indicp{Y_i = 1}$ (a binary outcome).
 
@@ -200,7 +200,7 @@ and the observed and expected Fisher information matrices ($\oinf$, $\einf$).
 
 ## Key algebraic properties
 
-Indicator functions translate the logical connectives ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-logical-connective))
+[Indicator functions](#def-indicator-function) translate the logical connectives ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-logical-connective))
 "and", "or", and "not", applied to set membership,
 into ordinary arithmetic on real numbers.
 One of the identities below uses idempotence:

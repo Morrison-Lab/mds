@@ -3,7 +3,7 @@
 
 The line $\mathcal{S} = \cb{c\,(1, 2) : c \in \reals}$ in @exm-subspace
 is $\operatorname{span}\cb{(1, 2)}$,
-so @thm-span-subspace gives a second [proof](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof) that it is a subspace.
+so @thm-span-subspace gives a second [proof](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof) that it is a [subspace](#def-subspace).
 Likewise, the plane $z = 0$ in @exm-span is a subspace of $\reals^3$,
 because it is $\operatorname{span}\cb{(1, 0, 0), (0, 1, 0)}$.
 
