@@ -45,7 +45,7 @@ can build on them directly:
     and the extended non-negative real numbers
   - [Functions](functions.qmd):
     functions with their domains, codomains, and images, sequences, and countable sets
-  - [Expressions and Algorithms](expressions-algorithms.qmd):
+  - [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html):
     expressions, parse trees, and algorithms
   - [Indicator Functions](indicator-functions.qmd):
     set and predicate indicators, the Iverson bracket, the Kronecker delta,
@@ -141,7 +141,6 @@ Each page is a thin wrapper around one or more fragments:
 | [Number Systems](number-systems.qmd) | `mds/_number-systems.qmd` |
 | [Sets](sets.qmd) | `mds/_sets.qmd` |
 | [Functions](functions.qmd) | `mds/_functions.qmd` |
-| [Expressions and Algorithms](expressions-algorithms.qmd) | `mds/_expressions-algorithms.qmd` |
 | [Indicator Functions](indicator-functions.qmd) | `mds/_indicator-functions.qmd` |
 | [Algebra](algebra.qmd) | `mds/_algebra.qmd` |
 | [Measures](measures.qmd) | `mds/_measures.qmd` |
@@ -151,7 +150,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Optimization](optimization.qmd) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
+`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
 a host page that includes any of the other fragments
 must include `latex-macros/macros.qmd` first,
 as the pages of this site do.

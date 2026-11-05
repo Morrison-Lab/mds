@@ -36,7 +36,7 @@ $$
 \convrate(\steplen) = \maxf{1 - \steplen\,\eigval_{\min},\ \steplen\,\eigval_{\max} - 1}.
 $$
 
-The first [expression](expressions-algorithms.qmd#def-expression) is strictly decreasing in $\steplen$,
+The first [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) is strictly decreasing in $\steplen$,
 and the second is strictly increasing,
 and they coincide when
 

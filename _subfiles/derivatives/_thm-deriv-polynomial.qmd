@@ -8,6 +8,6 @@ the [derivative](calculus-derivatives.qmd#def-derivative) of the [power](algebra
 $$\deriv{x}x^q = qx^{q-1}$$
 
 When $q$ is a [positive integer](number-systems.qmd#def-positive-integer),
-the same [formula](expressions-algorithms.qmd#def-closed-form-expression) holds for every [real](number-systems.qmd#def-real-numbers) $x$.
+the same [formula](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-closed-form-expression) holds for every [real](number-systems.qmd#def-real-numbers) $x$.
 
 :::

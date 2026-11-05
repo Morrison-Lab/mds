@@ -43,5 +43,5 @@ The definitions that were on this page are now on three pages:
 - [Functions](functions.qmd):
   functions with their domains, codomains, and images,
   composition, inverses, sequences, and countable sets.
-- [Expressions and Algorithms](expressions-algorithms.qmd):
+- [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html):
   expressions, parse trees, and algorithms.
