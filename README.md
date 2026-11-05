@@ -34,7 +34,7 @@ or more fragments, which are what a host site includes:
 `mds/_sets-functions.qmd` still includes the one fragment of the old
 Sets and Functions page that stays here, the functions fragment.
 The sets and the expressions and algorithms fragments moved to
-[mcs](https://github.com/Morrison-Lab/mcs/issues/60).
+[Math for Computer Science notes](https://github.com/Morrison-Lab/mcs/issues/60).
 `_notation.qmd`, `_number-systems.qmd`,
 `_functions.qmd`, `_indicator-functions.qmd`,
 `_algebra.qmd`, and `_measures.qmd`
