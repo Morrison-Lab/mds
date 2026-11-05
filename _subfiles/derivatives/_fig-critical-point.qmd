@@ -71,7 +71,7 @@ plt.show()
 
 :::
 
-These are the [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of @exm-critical-point,
+These are the [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of @exm-critical-point, <!-- check-definite-antecedents: allow -->
 with the [critical point](#def-critical-point) $0$ marked on each.
 The corner of $\abs{w}$ at $0$ is a critical point that is not a [flat point](#def-flat-point) (triangle).
 $w^3$ and $w^2$ are flat at $0$ (circles).

@@ -1,4 +1,5 @@
 :::{#def-design-matrix}
+<!-- def-equiv-ok: the chain spells out the matrix entries that define it -->
 #### Design matrix, model matrix
 
 In a regression model with $n$ observations and $p$ predictors,

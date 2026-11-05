@@ -10,7 +10,7 @@ f(2) &= 4 - 8 + 7 \\
 \end{aligned}
 $$
 
-This is the [minimum](algebra.qmd#def-minimum) of the [values](https://morrison-lab.github.io/mcs/functions.html#def-value) of $f$.
+This value is the [minimum](algebra.qmd#def-minimum) of the [values](https://morrison-lab.github.io/mcs/functions.html#def-value) of $f$.
 Completing the square, $f(w) = (w - 2)^2 + 3$,
 since
 

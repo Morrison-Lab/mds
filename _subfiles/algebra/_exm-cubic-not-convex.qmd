@@ -1,0 +1,27 @@
+:::{#exm-cubic-not-convex}
+#### A function that is not convex
+
+The function in @exr-local-vs-global-min, $f(x) = x^3 - 3x$, is not convex.
+Take $x = -2$, $y = 0$, $t = \tfrac{1}{2}$.
+The point is $\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1$,
+where the graph has height
+
+$$
+\begin{aligned}
+f(-1) &= -1 + 3 \\
+&= 2,
+\end{aligned}
+$$
+
+but the chord has height
+
+$$
+\begin{aligned}
+\tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) &= \tfrac{1}{2} (-8 + 6) + \tfrac{1}{2} \cdot 0 \\
+&= -1,
+\end{aligned}
+$$
+
+and $2 \le -1$ is false.
+
+:::

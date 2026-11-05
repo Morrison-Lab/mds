@@ -20,6 +20,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_rem-polynomial-nonzero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-polynomial-coefficient.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-polynomial-degree.qmd >}}
 
 {{< slidebreak >}}
@@ -96,6 +104,26 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_exm-sequence-limit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-convergent-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-convergent-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-divergent-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-divergent-sequence.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-diverges-to-infinity.qmd >}}
 
 # Series {#sec-series}
@@ -145,6 +173,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-natural-log.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-log-notation.qmd >}}
 
 {{< slidebreak >}}
 

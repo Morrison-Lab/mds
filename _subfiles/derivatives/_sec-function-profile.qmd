@@ -1,3 +1,7 @@
+{{< include mds/_subfiles/derivatives/_def-logarithmic-derivative.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/derivatives/_def-function-profile.qmd >}}
 
 {{< slidebreak >}}

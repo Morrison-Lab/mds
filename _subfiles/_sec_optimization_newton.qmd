@@ -10,6 +10,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-vector-sequence-limit.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-newton-method.qmd >}}
 
 {{< slidebreak >}}
@@ -35,6 +39,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-quadratic-convergence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-not-quadratic-convergence.qmd >}}
 
 {{< slidebreak >}}
 

@@ -1,0 +1,9 @@
+:::{#def-bounded-above}
+#### Bounded above
+
+A set $A \subseteq \reals$ is **bounded above** if it has an upper bound (@def-upper-bound).
+A [real-valued function](linear-algebra.qmd#def-real-vector-valued) is
+bounded above
+if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
+
+:::

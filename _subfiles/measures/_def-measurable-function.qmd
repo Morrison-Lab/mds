@@ -11,20 +11,3 @@ the set of elements where $f$ is at most $c$ is measurable:
 $$\set{s \in S : f(s) \le c} \in \salg$$
 
 :::
-
-{{< slidebreak >}}
-
-:::{#rem-measurable-function-general}
-#### Measurable functions in general
-
-Other sources define a function $f : S \to T$
-between measurable spaces $(S, \salg)$ and $(T, \salgT)$ to be measurable
-when $\set{s \in S : f(s) \in B} \in \salg$ for every $B \in \salgT$.
-For $T = \reals$ with the [Borel $\sigma$-algebra](#def-borel-sigma-algebra),
-that definition is equivalent to @def-measurable-function
-[@wikipedia_measurable_function].
-For example, with $B = (-\infty, c]$,
-the general definition requires $\set{s \in S : f(s) \le c} \in \salg$,
-which is the condition in @def-measurable-function.
-
-:::

@@ -106,6 +106,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-linear-map.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-linear-operator.qmd >}}
 
 {{< slidebreak >}}
@@ -141,6 +145,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-affine-map.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-affine-offset.qmd >}}
 
 {{< slidebreak >}}
 

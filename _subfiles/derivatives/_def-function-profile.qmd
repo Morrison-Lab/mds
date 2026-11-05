@@ -1,16 +1,3 @@
-:::{#def-logarithmic-derivative}
-#### Logarithmic derivative
-
-The **logarithmic derivative** $\frac{f'(x)}{f(x)}$ of a function $f$ of a real variable
-equals $\dif{}{x}\logf{f(x)}$ by @cor-deriv-log-chain
-and measures the rate of change of $f$ relative to its size;
-it needs $f(x) > 0$,
-and for $f(x) < 0$ the same expression is the derivative of $\logf{\abs{f(x)}}$.
-
-:::
-
-{{< slidebreak >}}
-
 :::{#def-function-profile}
 #### Profile of a function
 

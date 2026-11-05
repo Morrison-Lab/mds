@@ -1,0 +1,22 @@
+:::{#exm-affine-subspace}
+#### A line that misses the origin is an affine subspace
+
+The line $\mathcal{T} = \cb{(x, 1) : x \in \reals}$ of @exm-not-subspace is not a subspace,
+but it is an affine subspace,
+with $\vecf{x}_0 = (0, 1)$ and $\mathcal{S} = \operatorname{span}\cb{(1, 0)}$ (@def-span):
+
+$$
+\ba
+(0, 1) + c\,(1, 0)
+&= (0 + c,\; 1 + 0)
+&& \text{(@def-scalar-mult, @def-vector-addition)}
+\\
+&= (c, 1),
+&& \text{(add)}
+\ea
+$$
+
+and as $c$ ranges over $\reals$, $(c, 1)$ ranges over all of $\mathcal{T}$.
+Every subspace $\mathcal{S}$ is also an affine subspace, with $\vecf{x}_0 = \vzero$.
+
+:::

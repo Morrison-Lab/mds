@@ -128,6 +128,10 @@ just make sure you execute it correctly.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_rem-argmin-vs-minimum.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-argmax.qmd >}}
 
 {{< slidebreak >}}
@@ -189,6 +193,10 @@ just make sure you execute it correctly.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-global-minimizer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-global-minimizer-argmin.qmd >}}
 
 {{< slidebreak >}}
 

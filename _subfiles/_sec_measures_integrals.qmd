@@ -8,6 +8,10 @@ reticulate::py_require(py_packages)
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_rem-measurable-function-general.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_exm-measurable-function.qmd >}}
 
 {{< slidebreak >}}

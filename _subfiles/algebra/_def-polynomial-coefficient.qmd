@@ -1,0 +1,7 @@
+:::{#def-polynomial-coefficient}
+#### Coefficients of a polynomial
+
+The constants $a_0, \dsn{a}$ of a polynomial $f$ (@def-polynomial) are the **coefficients** of $f$,
+with $a_k$ the coefficient of $x^k$.
+
+:::
