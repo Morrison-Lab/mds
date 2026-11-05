@@ -15,4 +15,8 @@ $$
 
 the minimizer.
 
+@fig-newton-quadratic shows the step on the level curves of $f$.
+
+{{< include mds/_subfiles/vector-calc/_fig-newton-quadratic.qmd >}}
+
 :::

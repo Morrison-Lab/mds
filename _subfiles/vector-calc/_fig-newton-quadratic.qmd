@@ -1,0 +1,91 @@
+::: {#fig-newton-quadratic}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: newton-quadratic-fig-r
+#| fig-alt: >-
+#|   Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2
+#|   from -2 to 2. The level curves are ellipses centred at the origin,
+#|   wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A
+#|   vermilion arrow runs from that point straight to the origin, which is
+#|   the Newton step. A grey arrow of the same length points along the
+#|   negative gradient, down and left at 45 degrees, and does not reach the
+#|   origin.
+#| fig-height: 3.5
+#| fig-width: 6
+nq_x1_nq <- seq(-4, 4, length.out = 101)
+nq_x2_nq <- seq(-2, 2, length.out = 101)
+nq_grid_nq <- tidyr::expand_grid(x1 = nq_x1_nq, x2 = nq_x2_nq)
+nq_grid_nq$z <- (nq_grid_nq$x1^2 + 3 * nq_grid_nq$x2^2) / 2
+nq_newton_nq <- tibble::tibble(x = 3, y = 1, xend = 0, yend = 0)
+nq_grad_nq <- tibble::tibble(x = 3, y = 1, xend = 0.764, yend = -1.236)
+nq_start_nq <- tibble::tibble(x1 = 3, x2 = 1)
+nq_arrow_nq <- grid::arrow(length = grid::unit(0.15, "inches"))
+nq_aes_nq <- ggplot2::aes(x1, x2)
+nq_z_aes_nq <- ggplot2::aes(z = z)
+nq_seg_aes_nq <- ggplot2::aes(x = x, y = y, xend = xend, yend = yend)
+nq_grid_nq |>
+  ggplot2::ggplot() +
+  nq_aes_nq +
+  ggplot2::geom_contour(nq_z_aes_nq, colour = "#0072B2", bins = 10) +
+  ggplot2::geom_segment(
+    nq_seg_aes_nq,
+    data = nq_grad_nq,
+    colour = "grey50",
+    arrow = nq_arrow_nq
+  ) +
+  ggplot2::geom_segment(
+    nq_seg_aes_nq,
+    data = nq_newton_nq,
+    colour = "#D55E00",
+    arrow = nq_arrow_nq
+  ) +
+  ggplot2::geom_point(data = nq_start_nq, size = 2) +
+  ggplot2::coord_fixed() +
+  ggplot2::labs(x = "x1", y = "x2")
+```
+
+### Python
+
+```{python}
+#| label: newton-quadratic-fig-python
+#| fig-alt: >-
+#|   Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2
+#|   from -2 to 2. The level curves are ellipses centred at the origin,
+#|   wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A
+#|   vermilion arrow runs from that point straight to the origin, which is
+#|   the Newton step. A grey arrow of the same length points along the
+#|   negative gradient, down and left at 45 degrees, and does not reach the
+#|   origin.
+#| fig-height: 3.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+nq_xx_py, nq_yy_py = np.meshgrid(np.linspace(-4, 4, 101),
+                                 np.linspace(-2, 2, 101))
+nq_z_py = (nq_xx_py**2 + 3 * nq_yy_py**2) / 2
+fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
+ax.contour(nq_xx_py, nq_yy_py, nq_z_py, levels=10, colors="#0072B2")
+ax.annotate("", xy=(0.764, -1.236), xytext=(3, 1),
+            arrowprops={"arrowstyle": "->", "color": "grey"})
+ax.annotate("", xy=(0, 0), xytext=(3, 1),
+            arrowprops={"arrowstyle": "->", "color": "#D55E00"})
+ax.plot([3], [1], "ko")
+ax.set_aspect("equal")
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+plt.show();
+```
+
+:::
+
+The level curves of $f$ in @exm-newton-quadratic.
+From the start $\tp{(3, 1)}$, the Newton step (vermilion arrow) goes straight to the minimizer at the origin.
+The negative gradient $-\tp{(3, 3)}$ (grey arrow, drawn at the same length)
+points across the narrow direction of the ellipses and misses it.
+
+:::
