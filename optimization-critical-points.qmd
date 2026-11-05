@@ -16,7 +16,7 @@ resources:
 
 ```{r}
 #| include: false
-py_packages <- c("numpy", "pandas", "matplotlib")
+py_packages <- c("numpy", "pandas", "matplotlib", "plotly")
 reticulate::py_require(py_packages)
 ```
 

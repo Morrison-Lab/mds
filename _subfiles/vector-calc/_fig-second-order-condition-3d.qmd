@@ -124,6 +124,94 @@ cat(
 
 ```{python}
 #| label: second-order-condition-3d-python
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| results: asis
+#| fig-alt: >-
+#|   Two surface plots side by side. The left plot, titled positive definite
+#|   Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5
+#|   and y from -1.5 to 1.5, a bowl opening upward whose lowest point, at (1,
+#|   0), is marked by a blue circle. The right plot, titled indefinite
+#|   Hessian, shows x squared minus y squared over the same region, a saddle
+#|   that rises along the x axis and falls along the y axis. The origin, at
+#|   the middle of the saddle, is marked by a vermilion diamond.
+import numpy as np
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+so_x_3d = np.linspace(-1.5, 2.5, 101)
+so_y_3d = np.linspace(-1.5, 1.5, 101)
+so_xx_3d, so_yy_3d = np.meshgrid(so_x_3d, so_y_3d)
+so_bowl_3d = so_xx_3d**2 + so_yy_3d**2 - 2 * so_xx_3d
+so_saddle_3d = so_xx_3d**2 - so_yy_3d**2
+so_scale_3d = [[0, "#CCE0F0"], [1, "#0072B2"]]
+so_axes_3d = dict(
+    xaxis_title="x",
+    yaxis_title="y",
+    zaxis_title="f",
+    camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+)
+so_fig_3d = make_subplots(
+    rows=1,
+    cols=2,
+    specs=[[{"type": "scene"}, {"type": "scene"}]],
+    subplot_titles=("positive definite Hessian", "indefinite Hessian"),
+)
+so_fig_3d.add_trace(
+    go.Surface(
+        x=so_x_3d,
+        y=so_y_3d,
+        z=so_bowl_3d,
+        colorscale=so_scale_3d,
+        showscale=False,
+        opacity=0.8,
+    ),
+    row=1,
+    col=1,
+);
+so_fig_3d.add_trace(
+    go.Surface(
+        x=so_x_3d,
+        y=so_y_3d,
+        z=so_saddle_3d,
+        colorscale=so_scale_3d,
+        showscale=False,
+        opacity=0.8,
+    ),
+    row=1,
+    col=2,
+);
+so_fig_3d.add_trace(
+    go.Scatter3d(
+        x=[1],
+        y=[0],
+        z=[-1],
+        mode="markers",
+        marker=dict(color="#0072B2", size=4, symbol="circle"),
+    ),
+    row=1,
+    col=1,
+);
+so_fig_3d.add_trace(
+    go.Scatter3d(
+        x=[0],
+        y=[0],
+        z=[0],
+        mode="markers",
+        marker=dict(color="#D55E00", size=4, symbol="diamond"),
+    ),
+    row=1,
+    col=2,
+);
+so_fig_3d.update_layout(scene=so_axes_3d, scene2=so_axes_3d, showlegend=False);
+so_html_3d = so_fig_3d.to_html(full_html=False, include_plotlyjs="cdn")
+print("```{=html}\n" + so_html_3d + "\n```")
+```
+
+```{python}
+#| label: second-order-condition-3d-python-static
+#| echo: !expr isFALSE(knitr::is_html_output())
+#| eval: !expr isFALSE(knitr::is_html_output())
 #| fig-alt: >-
 #|   Two surface plots side by side. The left plot, titled positive definite
 #|   Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5

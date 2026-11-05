@@ -16,7 +16,7 @@ resources:
 
 ```{r}
 #| include: false
-reticulate::py_require(c("numpy", "pandas", "matplotlib"))
+reticulate::py_require(c("numpy", "pandas", "matplotlib", "plotly"))
 ```
 
 ::: {.content-visible when-format="html"}
