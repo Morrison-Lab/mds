@@ -55,8 +55,8 @@ can build on them directly:
   percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Proof Writing](proof-writing.qmd):
   propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.qmd#def-derivation)
-- [Induction and Recursion](induction.qmd):
-  [recursively defined sequences](induction.qmd#def-recursive-sequence) and [strong induction](induction.qmd#def-strong-induction)
+- [Induction and Recursion](https://morrison-lab.github.io/mcs/induction.html) in the Math for Computer Science notes:
+  [recursively defined sequences](https://morrison-lab.github.io/mcs/induction.html#def-recursive-sequence) and [strong induction](https://morrison-lab.github.io/mcs/induction.html#def-strong-induction)
 
 The remaining topics build on the foundations and on each other:
 
