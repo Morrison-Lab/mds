@@ -95,3 +95,7 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-saddle-point.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-saddle-point.qmd >}}
