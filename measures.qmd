@@ -51,6 +51,11 @@ goes on to the page that now holds it.
 - @folland1999real
   is a graduate text on measure and integration;
   its first chapters treat $\sigma$-algebras and measures.
+- @tao2011measure
+  is a one-quarter graduate introduction to measure and integration theory
+  that assumes only undergraduate real analysis,
+  and builds the theory through exercises;
+  it covers $\sigma$-algebras, measures, the Lebesgue integral, product measures and the Fubini-Tonelli theorem.
 - @gut2013
   is a graduate course in probability
   that opens with a chapter on introductory measure theory.
