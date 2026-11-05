@@ -2,6 +2,12 @@
 title: "Relations"
 format:
   html: default
+  revealjs:
+    output-file: relations-slides.html
+  pdf:
+    output-file: relations-handout.pdf
+  docx:
+    output-file: relations.docx
 ---
 
 ```{=html}
