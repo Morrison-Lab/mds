@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 # 1 Equalities
 
@@ -12,7 +12,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 1 (Transitive relation)** Let $\sim$ be a [relation](functions.llms.md#def-relation) on a set $S$. The relation $\sim$ is **transitive** [\[1\]](#ref-wikipedia_transitive_relation) if, for all $a, b, c \in S$, $a \sim b$ and $b \sim c$ together imply $a \sim c$.
+> **Definition 1 (Transitive relation)** Let $\sim$ be a [relation](https://morrison-lab.github.io/mcs/functions.html#def-relation) on a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$. The relation $\sim$ is **transitive** [\[1\]](#ref-wikipedia_transitive_relation) if, for all $a, b, c \in S$, $a \sim b$ and $b \sim c$ together imply $a \sim c$.
 
 > **NOTE:**
 >
@@ -260,7 +260,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 15 (Argmin)** Let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **argmin** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its smallest value:
+> **Definition 15 (Argmin)** Let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **argmin** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its smallest value:
 >
 > $$\arg \min_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(x) \le f(a)\right\}\mathclose{}$$
 >
@@ -268,13 +268,13 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> *Remark 4* (Smallest value versus where it occurs). The smallest value itself is $\min f(A)$, the minimum ([Definition 13](#def-minimum)) of the [image](functions.llms.md#def-image) of $f$, and the argmin is where that value is attained. For example, let $f(x) = x^2$ on $A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}$. The image is $f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}$, so the smallest value is $\min f(A) = 0$, and $\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}$.
+> *Remark 4* (Smallest value versus where it occurs). The smallest value itself is $\min f(A)$, the minimum ([Definition 13](#def-minimum)) of the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $f$, and the argmin is where that value is attained. For example, let $f(x) = x^2$ on $A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}$. The image is $f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}$, so the smallest value is $\min f(A) = 0$, and $\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}$.
 >
 > The argmin is empty when $f$ has no smallest value, for example $f(x) = x$ on $(0, 1]$.
 
 > **NOTE:**
 >
-> **Definition 16 (Argmax)** Let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **argmax** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its largest value:
+> **Definition 16 (Argmax)** Let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **argmax** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its largest value:
 >
 > $$\arg \max_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(a) \le f(x)\right\}\mathclose{}$$
 >
@@ -319,7 +319,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Theorem 7 (A positive multiple has the same argmax)** Let $g : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function) and let $c > 0$. Then
+> **Theorem 7 (A positive multiple has the same argmax)** Let $g : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) and let $c > 0$. Then
 >
 > $$\arg \max_{x \in A} c\,g(x) = \arg \max_{x \in A} g(x).$$
 
@@ -329,17 +329,17 @@ You are welcome to switch between decimal and percent notation freely; just make
 >
 > Suppose $g(a) \le g(x^*)$. If $g(a) = g(x^*)$, then $c\,g(a) = c\,g(x^*)$. If $g(a) < g(x^*)$, then $c\,g(a) < c\,g(x^*)$ by [Theorem 5](#thm-mult-ineq). Either way, $c\,g(a) \le c\,g(x^*)$.
 >
-> Conversely, suppose $c\,g(a) \le c\,g(x^*)$. Since $1/c > 0$ and $(1/c)\,(c\,g) = g$, the same reasoning applied to the [function](functions.llms.md#def-function) $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
+> Conversely, suppose $c\,g(a) \le c\,g(x^*)$. Since $1/c > 0$ and $(1/c)\,(c\,g) = g$, the same reasoning applied to the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
 >
 > So $c\,g(a) \le c\,g(x^*)$ for every $a \in A$ if and only if $g(a) \le g(x^*)$ for every $a \in A$. Hence $x^*$ is in the argmax of $c\,g$ exactly when it is in the argmax of $g$.
 
 > **NOTE:**
 >
-> **Example 10 (A quadratic and its positive multiple)** With $g(x) = x(4 - x)$ of [Exercise 2](#exr-argmax-quadratic) and $f = 5\,g$ of [Exercise 3](#exr-argmax-scaled-quadratic), [Theorem 7](#thm-argmax-positive-multiple) (with $c = 5$) gives $\arg \max_{x \in [0, 4]} f(x) = \arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, the same [argmax](#def-argmax) as the exercises found. The largest [values](functions.llms.md#def-value) differ, $f(2) = 20$ and $g(2) = 4$, so only the argmax is unchanged by the multiple.
+> **Example 10 (A quadratic and its positive multiple)** With $g(x) = x(4 - x)$ of [Exercise 2](#exr-argmax-quadratic) and $f = 5\,g$ of [Exercise 3](#exr-argmax-scaled-quadratic), [Theorem 7](#thm-argmax-positive-multiple) (with $c = 5$) gives $\arg \max_{x \in [0, 4]} f(x) = \arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, the same [argmax](#def-argmax) as the exercises found. The largest [values](https://morrison-lab.github.io/mcs/functions.html#def-value) differ, $f(2) = 20$ and $g(2) = 4$, so only the argmax is unchanged by the multiple.
 
 > **NOTE:**
 >
-> **Definition 17 (Positive part of a function)** Let $S$ be a [set](https://morrison-lab.github.io/mcs/sets.html#def-set), and let $f : S \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **positive part** of $f$ is the non-negative function
+> **Definition 17 (Positive part of a function)** Let $S$ be a [set](https://morrison-lab.github.io/mcs/sets.html#def-set), and let $f : S \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **positive part** of $f$ is the non-negative function
 >
 > $$f^{+}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f(s), 0\right\}\mathclose{}.$$
 
@@ -349,7 +349,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 18 (Negative part of a function)** For $f$ as in [Definition 17](#def-positive-negative-parts), the **negative part** of $f$ is the non-negative [function](functions.llms.md#def-function)
+> **Definition 18 (Negative part of a function)** For $f$ as in [Definition 17](#def-positive-negative-parts), the **negative part** of $f$ is the non-negative [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
 >
 > $$f^{-}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mathclose{}.$$
 
@@ -409,7 +409,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 19 (Global minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). A point $x^* \in A$ is a **global minimizer** of $f$ over $A$ if $f(x^*) \le f(x)$ for all $x \in A$.
+> **Definition 19 (Global minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **global minimizer** of $f$ over $A$ if $f(x^*) \le f(x)$ for all $x \in A$.
 
 > **NOTE:**
 >

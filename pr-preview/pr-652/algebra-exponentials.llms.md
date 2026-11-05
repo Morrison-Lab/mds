@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 # 1 Polynomials
 
@@ -35,7 +35,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Constant function)** A [function](functions.llms.md#def-function) $f : A \to B$ is **constant** if there is some $c \in B$ with $f(x) = c$ for all $x \in A$.
+> **Definition 1 (Constant function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : A \to B$ is **constant** if there is some $c \in B$ with $f(x) = c$ for all $x \in A$.
 
 > **NOTE:**
 >
@@ -46,7 +46,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Polynomial)** A **polynomial** (in one variable $x$) [\[1\]](#ref-wikipedia_polynomial) is a [function](functions.llms.md#def-function) $f : \mathbb{R}\to \mathbb{R}$ that can be written as $$f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$$ for some integer $n \ge 0$ and constants $a_0, a_1, \ldots, a_n \in \mathbb{R}$ with $a_n \ne 0$. The [terms](algebra-sums.llms.md#def-term) of $f$ are $a_n x^n, \ldots, a_1 x, a_0$.
+> **Definition 2 (Polynomial)** A **polynomial** (in one variable $x$) [\[1\]](#ref-wikipedia_polynomial) is a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : \mathbb{R}\to \mathbb{R}$ that can be written as $$f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$$ for some integer $n \ge 0$ and constants $a_0, a_1, \ldots, a_n \in \mathbb{R}$ with $a_n \ne 0$. The [terms](algebra-sums.llms.md#def-term) of $f$ are $a_n x^n, \ldots, a_1 x, a_0$.
 
 > **NOTE:**
 >
@@ -104,7 +104,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Parabola)** A **parabola** [\[3\]](#ref-wikipedia_parabola) is the [graph](functions.llms.md#def-graph) of a quadratic polynomial ([Definition 6](#def-quadratic-polynomial)).
+> **Definition 8 (Parabola)** A **parabola** [\[3\]](#ref-wikipedia_parabola) is the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of a quadratic polynomial ([Definition 6](#def-quadratic-polynomial)).
 
 > **NOTE:**
 >
@@ -148,7 +148,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 11 (Affine function of one variable)** A [function](functions.llms.md#def-function) $f: \mathbb{R}\to \mathbb{R}$ is **affine** [\[5\]](#ref-wikipedia_affine_transformation) if there are numbers $m$ and $b$ such that
+> **Definition 11 (Affine function of one variable)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}\to \mathbb{R}$ is **affine** [\[5\]](#ref-wikipedia_affine_transformation) if there are numbers $m$ and $b$ such that
 >
 > $$f(x) = m x + b \quad \text{for all } x \in \mathbb{R}$$
 
@@ -158,15 +158,15 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 13 (Intercept, y-intercept)** The **intercept** (or **y-intercept**) of a [function](functions.llms.md#def-function) $f$ whose [domain](functions.llms.md#def-domain) contains $0$ is $f(0)$, the height at which the [graph](functions.llms.md#def-graph) of $f$ crosses the vertical axis.
+> **Definition 13 (Intercept, y-intercept)** The **intercept** (or **y-intercept**) of a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ whose [domain](https://morrison-lab.github.io/mcs/functions.html#def-domain) contains $0$ is $f(0)$, the height at which the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ crosses the vertical axis.
 
 > **NOTE:**
 >
-> **Definition 14 (Intercept term)** When a [function](functions.llms.md#def-function) is written as [terms](algebra-sums.llms.md#def-term) added together, its **intercept term** is the [term](algebra-sums.llms.md#def-term) with no factor of the [input](functions.llms.md#def-argument). When every other term has a factor of the input, the intercept ([Definition 13](#def-intercept)) of the function is this term.
+> **Definition 14 (Intercept term)** When a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) is written as [terms](algebra-sums.llms.md#def-term) added together, its **intercept term** is the [term](algebra-sums.llms.md#def-term) with no factor of the [input](https://morrison-lab.github.io/mcs/functions.html#def-argument). When every other term has a factor of the input, the intercept ([Definition 13](#def-intercept)) of the function is this term.
 
 > **NOTE:**
 >
-> **Definition 15 (x-intercept)** An **x-intercept** of a [function](functions.llms.md#def-function) $f$ is an [input](functions.llms.md#def-argument) $x$ with $f(x) = 0$, a point where the [graph](functions.llms.md#def-graph) of $f$ crosses the horizontal axis. A function can have no x-intercept, one, or many.
+> **Definition 15 (x-intercept)** An **x-intercept** of a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ is an [input](https://morrison-lab.github.io/mcs/functions.html#def-argument) $x$ with $f(x) = 0$, a point where the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ crosses the horizontal axis. A function can have no x-intercept, one, or many.
 
 > **NOTE:**
 >
@@ -276,7 +276,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 17 (Limit of a sequence)** A real number $L$ is the **limit** of a [sequence](functions.llms.md#def-sequence) $(a_n)$ of real numbers [\[8\]](#ref-wikipedia_limit_of_a_sequence), written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$, if for every $\varepsilon> 0$ there is a natural number $N$ such that
+> **Definition 17 (Limit of a sequence)** A [real number](number-systems.llms.md#def-real-numbers) $L$ is the **limit** of a [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(a_n)$ of [real numbers](number-systems.llms.md#def-real-numbers) [\[8\]](#ref-wikipedia_limit_of_a_sequence), written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$, if for every $\varepsilon> 0$ there is a natural number $N$ such that
 >
 > $$\mathopen{}\left|a_n - L\right|\mathclose{} < \varepsilon\quad \text{for every } n \ge N.$$
 
@@ -302,13 +302,13 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 20 (Divergence of a sequence to infinity)** A [sequence](functions.llms.md#def-sequence) $(a_n)$ of real numbers **diverges to** $\infty$, written $\lim_{n \to \infty} a_n = \infty$, if for every real number $M$ there is a natural number $N$ such that $a_n > M$ for every $n \ge N$.
+> **Definition 20 (Divergence of a sequence to infinity)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(a_n)$ of [real numbers](number-systems.llms.md#def-real-numbers) **diverges to** $\infty$, written $\lim_{n \to \infty} a_n = \infty$, if for every real number $M$ there is a natural number $N$ such that $a_n > M$ for every $n \ge N$.
 
 # 4 Series
 
 > **NOTE:**
 >
-> **Definition 21 (Non-decreasing sequence)** A [sequence](functions.llms.md#def-sequence) $a_1, a_2, \ldots$ of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals) is **non-decreasing** if each term is at least as large as the one before it:
+> **Definition 21 (Non-decreasing sequence)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $a_1, a_2, \ldots$ of [real numbers](number-systems.llms.md#def-real-numbers) or of [extended non-negative reals](https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals) is **non-decreasing** if each term is at least as large as the one before it:
 >
 > $$a_n \le a_{n+1} \quad \text{for every } n \in \mathbb{N}$$
 
@@ -330,7 +330,11 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 22 (Partial sum)** Let $a_1, a_2, \ldots$ be a [sequence](functions.llms.md#def-sequence) of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals). For each $n \in \mathbb{N}$, its $n$th **partial sum** [\[9\]](#ref-wikipedia_series_mathematics) is the [sum](algebra-sums.llms.md#def-summation) of its first $n$ terms:
+> **Definition 22**  
+>
+> #### Partial sum
+>
+> Let $a_1, a_2, \ldots$ be a [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of [real numbers](number-systems.llms.md#def-real-numbers) or of [extended non-negative reals](https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals). For each $n \in \mathbb{N}$, its $n$th **partial sum** [\[9\]](#ref-wikipedia_series_mathematics) is the [sum](algebra-sums.llms.md#def-summation) of its first $n$ terms:
 >
 > $$s_n \stackrel{\text{def}}{=}\sum_{i=1}^na_i = a_1 + \cdots + a_n$$
 
@@ -393,7 +397,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > $${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} \stackrel{\text{def}}{=}\lim_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,$$
 >
-> the [limit](#def-sequence-limit) of the [sequence](functions.llms.md#def-sequence) $\mathopen{}\left(1 + \frac{x}{1}\right)\mathclose{}^1, \mathopen{}\left(1 + \frac{x}{2}\right)\mathclose{}^2, \mathopen{}\left(1 + \frac{x}{3}\right)\mathclose{}^3, \ldots$. That limit exists for every real number $x$, and it is positive.
+> the [limit](#def-sequence-limit) of the [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $\mathopen{}\left(1 + \frac{x}{1}\right)\mathclose{}^1, \mathopen{}\left(1 + \frac{x}{2}\right)\mathclose{}^2, \mathopen{}\left(1 + \frac{x}{3}\right)\mathclose{}^3, \ldots$. That limit exists for every real number $x$, and it is positive.
 
 > **NOTE:**
 >
@@ -420,7 +424,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 26 (Natural logarithm)** For a real number $a > 0$, the **natural logarithm** of $a$, written ${\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}$ [\[13\]](#ref-wikipedia_natural_logarithm), is the real number $y$ with ${\operatorname{exp}\mathopen{}\left\{y\right\}\mathclose{}} = a$. The exponential function takes each positive value at exactly one input, so there is exactly one such $y$, and $\log : (0, \infty) \to \mathbb{R}$ is the [inverse function](functions.llms.md#def-inverse-function) of $\operatorname{exp}$ ([Definition 24](#def-exponential-function)).
+> **Definition 26 (Natural logarithm)** For a real number $a > 0$, the **natural logarithm** of $a$, written ${\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}$ [\[13\]](#ref-wikipedia_natural_logarithm), is the real number $y$ with ${\operatorname{exp}\mathopen{}\left\{y\right\}\mathclose{}} = a$. The exponential function takes each positive value at exactly one input, so there is exactly one such $y$, and $\log : (0, \infty) \to \mathbb{R}$ is the [inverse function](https://morrison-lab.github.io/mcs/functions.html#def-inverse-function) of $\operatorname{exp}$ ([Definition 24](#def-exponential-function)).
 
 > **NOTE:**
 >
@@ -484,7 +488,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 > - $\log_2 8 = 3$ by the [definition of the logarithm](#def-logarithm), because $2^3 = 8$.
 > - $\log_{10} 0.01 = -2$, because $10^{-2} = 0.01$.
 >
-> The [graph](functions.llms.md#def-graph) of $\log_2 x$ passes through $(8, 3)$, the first of these two facts.
+> The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $\log_2 x$ passes through $(8, 3)$, the first of these two facts.
 >
 > Show code
 >
@@ -867,7 +871,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > ## Python
 >
-> Figure 2: The [graph](functions.llms.md#def-graph) of $g(b, c) = b^2 + c^2$, the surface whose [contour lines](#def-contour-line) are in [Figure 1](#fig-contour-line). The red circles are the contour lines at heights $1$, $4$ and $9$, and the dots are the points $(2, 0)$ and $(0, -2)$ of [Example 26](#exm-contour-line) on the one at height $4$.
+> Figure 2: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $g(b, c) = b^2 + c^2$, the surface whose [contour lines](#def-contour-line) are in [Figure 1](#fig-contour-line). The red circles are the contour lines at heights $1$, $4$ and $9$, and the dots are the points $(2, 0)$ and $(0, -2)$ of [Example 26](#exm-contour-line) on the one at height $4$.
 
 > **NOTE:**
 >
@@ -1162,7 +1166,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 - [Definition 19 (Divergent sequence (diverges))](#def-divergent-sequence)
 - [Definition 20 (Divergence of a sequence to infinity)](#def-diverges-to-infinity)
 - [Definition 21 (Non-decreasing sequence)](#def-non-decreasing)
-- [Definition 22 (Partial sum)](#def-partial-sum)
+- [Definition 22](#def-partial-sum)
 - [Definition 23 (Infinite sum, series)](#def-infinite-sum)
 - [Definition 24 (Exponential function)](#def-exponential-function)
 - [Definition 25 (Euler’s number)](#def-euler-number)

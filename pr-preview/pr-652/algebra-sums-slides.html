@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 13:32:51 (PST)</p>
+  <p class="date">Last modified: 2026-11-05 14:20:19 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -368,7 +368,7 @@ f(4) &amp;= (4 - 2)^2 \\
 <section class="slide level2">
 
 <div id="def-chord" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Chord)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>, and let <span class="math inline">\(x, y \in \mathbb{R}^p\)</span>. The <strong>chord</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span> <span class="citation" data-cites="wikipedia_chord_geometry"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> is the line segment (<a href="#/def-line-segment" class="quarto-xref">Definition&nbsp;1</a>) in <span class="math inline">\(\mathbb{R}^{p+1}\)</span> from the point <span class="math inline">\((x, f(x))\)</span> to the point <span class="math inline">\((y, f(y))\)</span> of the <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span>: <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 2 (Chord)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> be a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a>, and let <span class="math inline">\(x, y \in \mathbb{R}^p\)</span>. The <strong>chord</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span> <span class="citation" data-cites="wikipedia_chord_geometry"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> is the line segment (<a href="#/def-line-segment" class="quarto-xref">Definition&nbsp;1</a>) in <span class="math inline">\(\mathbb{R}^{p+1}\)</span> from the point <span class="math inline">\((x, f(x))\)</span> to the point <span class="math inline">\((y, f(y))\)</span> of the <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span>: <span class="math display">\[
 \mathopen{}\left\{\mathopen{}\left(t x + (1 - t) y,\ t f(x) + (1 - t) f(y)\right)\mathclose{} : t \in [0, 1]\right\}\mathclose{}.
 \]</span> Above the point <span class="math inline">\(t x + (1 - t) y\)</span>, the chord has height <span class="math inline">\(t f(x) + (1 - t) f(y)\)</span>.</p>
 </div>
@@ -389,7 +389,7 @@ Goodfellow, Bengio and Courville (2016), Deep Learning,
 section 4.3, p. 93, describes convex functions through the Hessian instead.
 -->
 <div id="def-convex-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Convex function)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. <span class="math inline">\(f\)</span> is <strong>convex</strong> <span class="citation" data-cites="wikipedia_convex_function"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> if <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 3 (Convex function)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> be a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a>. <span class="math inline">\(f\)</span> is <strong>convex</strong> <span class="citation" data-cites="wikipedia_convex_function"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> if <span class="math display">\[
 f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y)
 \]</span> for all <span class="math inline">\(x, y \in \mathbb{R}^p\)</span> and all <span class="math inline">\(t \in [0, 1]\)</span>.</p>
 </div>
@@ -397,7 +397,7 @@ f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y)
 <section class="slide level2">
 
 <div id="rem-convex-chord-above-graph" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Chords lie on or above the graph). </span>The point <span class="math inline">\(t x + (1 - t) y\)</span> lies on the <a href="#/def-line-segment">line segment</a> from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>, and the right-hand side is the height above that point of the <a href="#/def-chord">chord</a> of <span class="math inline">\(f\)</span> from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>. So <span class="math inline">\(f\)</span> is convex when every chord lies on or above the <a href="./functions.html#def-graph">graph</a>.</p>
+<p><span class="proof-title"><em>Remark 1</em> (Chords lie on or above the graph). </span>The point <span class="math inline">\(t x + (1 - t) y\)</span> lies on the <a href="#/def-line-segment">line segment</a> from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>, and the right-hand side is the height above that point of the <a href="#/def-chord">chord</a> of <span class="math inline">\(f\)</span> from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>. So <span class="math inline">\(f\)</span> is <a href="#/def-convex-function">convex</a> when every chord lies on or above the <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a>.</p>
 <p>For example, take <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(x = -1\)</span>, <span class="math inline">\(y = 3\)</span>, and <span class="math inline">\(t = \tfrac{1}{2}\)</span>. The point is <span class="math inline">\(\tfrac{1}{2} \cdot (-1) + \tfrac{1}{2} \cdot 3 = 1\)</span>, where the graph has height <span class="math inline">\(f(1) = 1\)</span> and the chord has height</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -549,19 +549,19 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-bounded-above" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Bounded above)</strong></span> A set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is <strong>bounded above</strong> if it has an upper bound (<a href="#/def-upper-bound" class="quarto-xref">Definition&nbsp;4</a>). A real-valued <a href="./functions.html#def-function">function</a> is bounded above if its <a href="./functions.html#def-image">image</a> is.</p>
+<p><span class="theorem-title"><strong>Definition 6 (Bounded above)</strong></span> A set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is <strong>bounded above</strong> if it has an upper bound (<a href="#/def-upper-bound" class="quarto-xref">Definition&nbsp;4</a>). A <a href="./linear-algebra-vectors.html#def-real-vector-valued">real-valued function</a> is bounded above if its <a href="https://morrison-lab.github.io/mcs/functions.html#def-image">image</a> is.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-bounded-below" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Bounded below)</strong></span> A set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is <strong>bounded below</strong> if it has a lower bound (<a href="#/def-lower-bound" class="quarto-xref">Definition&nbsp;5</a>). A real-valued <a href="./functions.html#def-function">function</a> is bounded below if its <a href="./functions.html#def-image">image</a> is.</p>
+<p><span class="theorem-title"><strong>Definition 7 (Bounded below)</strong></span> A set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is <strong>bounded below</strong> if it has a lower bound (<a href="#/def-lower-bound" class="quarto-xref">Definition&nbsp;5</a>). A <a href="./linear-algebra-vectors.html#def-real-vector-valued">real-valued function</a> is bounded below if its <a href="https://morrison-lab.github.io/mcs/functions.html#def-image">image</a> is.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-bounded" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Bounded)</strong></span> A set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is <strong>bounded</strong> if it is both bounded above (<a href="#/def-bounded-above" class="quarto-xref">Definition&nbsp;6</a>) and bounded below (<a href="#/def-bounded-below" class="quarto-xref">Definition&nbsp;7</a>). A real-valued <a href="./functions.html#def-function">function</a> is bounded if its <a href="./functions.html#def-image">image</a> is.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Bounded)</strong></span> A set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is <strong>bounded</strong> if it is both bounded above (<a href="#/def-bounded-above" class="quarto-xref">Definition&nbsp;6</a>) and bounded below (<a href="#/def-bounded-below" class="quarto-xref">Definition&nbsp;7</a>). A <a href="./linear-algebra-vectors.html#def-real-vector-valued">real-valued function</a> is bounded if its <a href="https://morrison-lab.github.io/mcs/functions.html#def-image">image</a> is.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1234,7 +1234,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="exr-sum-over-set-value" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6 (Value of a sum over a set)</strong></span> In the setting of <a href="#/exr-sum-over-set" class="quarto-xref">Exercise&nbsp;5</a>, find the <a href="./functions.html#def-value">value</a> of <span class="math inline">\(\sum_{x \in A} f(x)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6 (Value of a sum over a set)</strong></span> In the setting of <a href="#/exr-sum-over-set" class="quarto-xref">Exercise&nbsp;5</a>, find the <a href="https://morrison-lab.github.io/mcs/functions.html#def-value">value</a> of <span class="math inline">\(\sum_{x \in A} f(x)\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1290,7 +1290,7 @@ f(-1) + f(2) + f(5)
 <section class="slide level2">
 
 <div id="def-sum-over-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Sum over a finite set)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}\)</span> be a <a href="./functions.html#def-finite-set">finite set</a> with <span class="math inline">\(k \ge 1\)</span> different elements. Let <span class="math inline">\(f\)</span> be a <a href="./functions.html#def-function">function</a> that gives a number <span class="math inline">\(f(x)\)</span> for each element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span>. The <strong>sum of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span></strong> is</p>
+<p><span class="theorem-title"><strong>Definition 22 (Sum over a finite set)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}\)</span> be a <a href="https://morrison-lab.github.io/mcs/functions.html#def-finite-set">finite set</a> with <span class="math inline">\(k \ge 1\)</span> different elements. Let <span class="math inline">\(f\)</span> be a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> that gives a number <span class="math inline">\(f(x)\)</span> for each element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span>. The <strong>sum of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span></strong> is</p>
 <p><span class="math display">\[
 \sum_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k)
 \]</span></p>

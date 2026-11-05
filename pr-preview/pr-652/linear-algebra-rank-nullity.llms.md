@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 # 1 Column space and null space
 
@@ -754,7 +754,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 >
 > $$\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{S}\right\}\mathclose{}$$
 >
-> for some vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathbb{R}^p$ and some subspace $\mathcal{S}$ of $\mathbb{R}^p$ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)): the [image](functions.llms.md#def-image) of $\mathcal{S}$ under the translation by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ ([Definition 18 in Matrices](linear-algebra-matrices.llms.md#def-translation)).
+> for some vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathbb{R}^p$ and some subspace $\mathcal{S}$ of $\mathbb{R}^p$ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)): the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $\mathcal{S}$ under the translation by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ ([Definition 18 in Matrices](linear-algebra-matrices.llms.md#def-translation)).
 
 > **NOTE:**
 >
@@ -931,7 +931,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Theorem 15 (The graph of an affine function is a hyperplane)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\in \mathbb{R}^p$, $b \in \mathbb{R}$. The [graph](functions.llms.md#def-graph) of the [function](functions.llms.md#def-function) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ is the [set](sets.llms.md#def-set)
+> **Theorem 15 (The graph of an affine function is a hyperplane)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\in \mathbb{R}^p$, $b \in \mathbb{R}$. The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set)
 >
 > $$\mathopen{}\left\{\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\\ y\end{bmatrix} \in \mathbb{R}^{p+1} : y = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\right\}\mathclose{}.$$
 >
@@ -950,11 +950,11 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > && \text{(dot product of stacked vectors)}
 > \end{aligned}$$
 >
-> So the [set](sets.llms.md#def-set) is the solution set of the equation of a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane), with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) $\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\\ -1\end{bmatrix}$. That vector is nonzero, because its last entry is $-1$.
+> So the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) is the solution set of the equation of a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane), with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) $\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\\ -1\end{bmatrix}$. That vector is nonzero, because its last entry is $-1$.
 
 > **NOTE:**
 >
-> **Example 24 (The graph of a line is a line in the plane)** Take $p = 1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}= 2$, $b = 1$. The [graph](functions.llms.md#def-graph) of $y = 2x + 1$ is the [set](sets.llms.md#def-set) of points $(x, y)$ in $\mathbb{R}^2$ with $2x - y + 1 = 0$. By [Theorem 15](#thm-hyperplane-graph), this is a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) $(2, -1)$. The point $(0, 1)$ is on it, since $2 \cdot 0 - 1 + 1 = 0$. The point $(0, 0)$ is off it, since $2 \cdot 0 - 0 + 1 = 1 \ne 0$. [Figure 1](#fig-hyperplane-graph) shows the line, the two points, and the normal vector drawn from $(0, 1)$.
+> **Example 24 (The graph of a line is a line in the plane)** Take $p = 1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}= 2$, $b = 1$. The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $y = 2x + 1$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points $(x, y)$ in $\mathbb{R}^2$ with $2x - y + 1 = 0$. By [Theorem 15](#thm-hyperplane-graph), this is a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) $(2, -1)$. The point $(0, 1)$ is on it, since $2 \cdot 0 - 1 + 1 = 0$. The point $(0, 0)$ is off it, since $2 \cdot 0 - 0 + 1 = 1 \ne 0$. [Figure 1](#fig-hyperplane-graph) shows the line, the two points, and the normal vector drawn from $(0, 1)$.
 >
 > Show code
 >

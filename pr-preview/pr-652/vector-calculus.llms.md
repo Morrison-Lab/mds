@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -261,7 +261,7 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 >
 > $$\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c\right\}\mathclose{},$$
 >
-> the set of points where $f$ takes the value $c$. It is the [preimage](functions.llms.md#def-preimage) of $\mathopen{}\left\{c\right\}\mathclose{}$ under $f$, so we write it ${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}}$. For $p = 2$, a level set is often a curve in the plane.
+> the set of points where $f$ takes the value $c$. It is the [preimage](https://morrison-lab.github.io/mcs/functions.html#def-preimage) of $\mathopen{}\left\{c\right\}\mathclose{}$ under $f$, so we write it ${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}}$. For $p = 2$, a level set is often a curve in the plane.
 
 > **NOTE:**
 >
@@ -513,7 +513,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 > }
 > ```
 >
-> Figure 2: The [graph](functions.llms.md#def-graph) of the [function](functions.llms.md#def-function) in the [gradient explorer](#fig-gradient-explorer), with the same point, [level curve](#def-level-set) and arrows. Each arrow takes one unit step in the plane, and its height gain is the amount $f$ changes along that step.
+> Figure 2: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in the [gradient explorer](#fig-gradient-explorer), with the same point, [level curve](#def-level-set) and arrows. Each arrow takes one unit step in the plane, and its height gain is the amount $f$ changes along that step.
 
 > **NOTE:**
 >

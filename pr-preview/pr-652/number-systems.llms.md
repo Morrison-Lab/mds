@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 > **NOTE:**
 >
@@ -204,7 +204,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 > - $\mathopen{}\left\lfloor 3\right\rfloor\mathclose{} = 3$, because $3$ is already an [integer](#def-integers).
 > - $\mathopen{}\left\lfloor-1.5\right\rfloor\mathclose{} = -2$, because $-2 \le -1.5 < -1$.
 >
-> The [graph](functions.llms.md#def-graph) of $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ is a staircase: each step starts at an integer, with a filled dot, and stops before the next integer, at an open dot.
+> The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ is a staircase: each step starts at an integer, with a filled dot, and stops before the next integer, at an open dot.
 >
 > Show code
 >

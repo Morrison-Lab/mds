@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 The linear algebra notes are split across these pages:
 
@@ -23,7 +23,7 @@ A link to a section, theorem or definition on this page from before the split go
 
 > **NOTE:**
 >
-> **Definition 1 (Matrix analysis)** **Matrix analysis** is the study of [matrices](linear-algebra-matrices.llms.md#def-matrix) and their algebraic properties, with operations on matrices, [functions](functions.llms.md#def-function) of matrices and the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of matrices as example topics [\[1\]](#ref-wikipedia_matrix_analysis).
+> **Definition 1 (Matrix analysis)** **Matrix analysis** is the study of [matrices](linear-algebra-matrices.llms.md#def-matrix) and their algebraic properties, with operations on matrices, [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of matrices and the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of matrices as example topics [\[1\]](#ref-wikipedia_matrix_analysis).
 
 > **NOTE:**
 >

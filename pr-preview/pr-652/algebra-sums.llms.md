@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 # 1 Convex functions
 
@@ -60,7 +60,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Chord)** Let $f : \mathbb{R}^p \to \mathbb{R}$ be a [function](functions.llms.md#def-function), and let $x, y \in \mathbb{R}^p$. The **chord** of $f$ from $x$ to $y$ [\[2\]](#ref-wikipedia_chord_geometry) is the line segment ([Definition 1](#def-line-segment)) in $\mathbb{R}^{p+1}$ from the point $(x, f(x))$ to the point $(y, f(y))$ of the [graph](functions.llms.md#def-graph) of $f$: $$\mathopen{}\left\{\mathopen{}\left(t x + (1 - t) y,\ t f(x) + (1 - t) f(y)\right)\mathclose{} : t \in [0, 1]\right\}\mathclose{}.$$ Above the point $t x + (1 - t) y$, the chord has height $t f(x) + (1 - t) f(y)$.
+> **Definition 2 (Chord)** Let $f : \mathbb{R}^p \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function), and let $x, y \in \mathbb{R}^p$. The **chord** of $f$ from $x$ to $y$ [\[2\]](#ref-wikipedia_chord_geometry) is the line segment ([Definition 1](#def-line-segment)) in $\mathbb{R}^{p+1}$ from the point $(x, f(x))$ to the point $(y, f(y))$ of the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$: $$\mathopen{}\left\{\mathopen{}\left(t x + (1 - t) y,\ t f(x) + (1 - t) f(y)\right)\mathclose{} : t \in [0, 1]\right\}\mathclose{}.$$ Above the point $t x + (1 - t) y$, the chord has height $t f(x) + (1 - t) f(y)$.
 
 > **NOTE:**
 >
@@ -68,11 +68,11 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Convex function)** Let $f : \mathbb{R}^p \to \mathbb{R}$ be a [function](functions.llms.md#def-function). $f$ is **convex** [\[3\]](#ref-wikipedia_convex_function) if $$f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y)$$ for all $x, y \in \mathbb{R}^p$ and all $t \in [0, 1]$.
+> **Definition 3 (Convex function)** Let $f : \mathbb{R}^p \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). $f$ is **convex** [\[3\]](#ref-wikipedia_convex_function) if $$f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y)$$ for all $x, y \in \mathbb{R}^p$ and all $t \in [0, 1]$.
 
 > **NOTE:**
 >
-> *Remark 1* (Chords lie on or above the graph). The point $t x + (1 - t) y$ lies on the [line segment](#def-line-segment) from $x$ to $y$, and the right-hand side is the height above that point of the [chord](#def-chord) of $f$ from $x$ to $y$. So $f$ is convex when every chord lies on or above the [graph](functions.llms.md#def-graph).
+> *Remark 1* (Chords lie on or above the graph). The point $t x + (1 - t) y$ lies on the [line segment](#def-line-segment) from $x$ to $y$, and the right-hand side is the height above that point of the [chord](#def-chord) of $f$ from $x$ to $y$. So $f$ is [convex](#def-convex-function) when every chord lies on or above the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph).
 >
 > For example, take $f(x) = x^2$, $x = -1$, $y = 3$, and $t = \tfrac{1}{2}$. The point is $\tfrac{1}{2} \cdot (-1) + \tfrac{1}{2} \cdot 3 = 1$, where the graph has height $f(1) = 1$ and the chord has height
 >
@@ -181,15 +181,15 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 6 (Bounded above)** A set $A \subseteq \mathbb{R}$ is **bounded above** if it has an upper bound ([Definition 4](#def-upper-bound)). A real-valued [function](functions.llms.md#def-function) is bounded above if its [image](functions.llms.md#def-image) is.
+> **Definition 6 (Bounded above)** A set $A \subseteq \mathbb{R}$ is **bounded above** if it has an upper bound ([Definition 4](#def-upper-bound)). A [real-valued function](linear-algebra-vectors.llms.md#def-real-vector-valued) is bounded above if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
 
 > **NOTE:**
 >
-> **Definition 7 (Bounded below)** A set $A \subseteq \mathbb{R}$ is **bounded below** if it has a lower bound ([Definition 5](#def-lower-bound)). A real-valued [function](functions.llms.md#def-function) is bounded below if its [image](functions.llms.md#def-image) is.
+> **Definition 7 (Bounded below)** A set $A \subseteq \mathbb{R}$ is **bounded below** if it has a lower bound ([Definition 5](#def-lower-bound)). A [real-valued function](linear-algebra-vectors.llms.md#def-real-vector-valued) is bounded below if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
 
 > **NOTE:**
 >
-> **Definition 8 (Bounded)** A set $A \subseteq \mathbb{R}$ is **bounded** if it is both bounded above ([Definition 6](#def-bounded-above)) and bounded below ([Definition 7](#def-bounded-below)). A real-valued [function](functions.llms.md#def-function) is bounded if its [image](functions.llms.md#def-image) is.
+> **Definition 8 (Bounded)** A set $A \subseteq \mathbb{R}$ is **bounded** if it is both bounded above ([Definition 6](#def-bounded-above)) and bounded below ([Definition 7](#def-bounded-below)). A [real-valued function](linear-algebra-vectors.llms.md#def-real-vector-valued) is bounded if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
 
 > **NOTE:**
 >
@@ -724,7 +724,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 6 (Value of a sum over a set)** In the setting of [Exercise 5](#exr-sum-over-set), find the [value](functions.llms.md#def-value) of $\sum_{x \in A} f(x)$.
+> **Exercise 6 (Value of a sum over a set)** In the setting of [Exercise 5](#exr-sum-over-set), find the [value](https://morrison-lab.github.io/mcs/functions.html#def-value) of $\sum_{x \in A} f(x)$.
 
 > **NOTE:**
 >
@@ -763,7 +763,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 22 (Sum over a finite set)** Let $A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}$ be a [finite set](functions.llms.md#def-finite-set) with $k \ge 1$ different elements. Let $f$ be a [function](functions.llms.md#def-function) that gives a number $f(x)$ for each element $x$ of $A$. The **sum of** $f$ over $A$ is
+> **Definition 22 (Sum over a finite set)** Let $A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}$ be a [finite set](https://morrison-lab.github.io/mcs/functions.html#def-finite-set) with $k \ge 1$ different elements. Let $f$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that gives a number $f(x)$ for each element $x$ of $A$. The **sum of** $f$ over $A$ is
 >
 > $$\sum_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k)$$
 >

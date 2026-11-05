@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 > **NOTE:**
 >
@@ -284,11 +284,11 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > [![Two panels over x. Left: the lines x and x squared in thin grey and their pointwise maximum in blue, a curve that is convex. Right: the curve g of x, the smaller of x squared and x minus 2 squared, in blue, a double dip with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above that segment.](optimization-convexity_files/figure-html/convex-max-python-1.png)](optimization-convexity_files/figure-html/convex-max-python-1.png "Figure 2: The functions of Example 6. The maximum of the two convex functions on the left is again one. The minimum on the right is not: g(1) = 1 is above \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0, the height of the segment.")
 >
-> Figure 2: The [functions](functions.llms.md#def-function) of [Example 6](#exm-convex-max). The [maximum](algebra-basics.llms.md#def-maximum) of the two [convex functions](algebra-sums.llms.md#def-convex-function) on the left is again one. The [minimum](algebra-basics.llms.md#def-minimum) on the right is not: $g(1) = 1$ is above $\tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$, the height of the segment.
+> Figure 2: The [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 6](#exm-convex-max). The [maximum](algebra-basics.llms.md#def-maximum) of the two [convex functions](algebra-sums.llms.md#def-convex-function) on the left is again one. The [minimum](algebra-basics.llms.md#def-minimum) on the right is not: $g(1) = 1$ is above $\tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$, the height of the segment.
 
 > **NOTE:**
 >
-> **Definition 6 (Epigraph)** The **epigraph** [\[3\]](#ref-wikipedia_epigraph_mathematics) of $f : \mathbb{R}^p \to \mathbb{R}$ is the set of points on or over its [graph](functions.llms.md#def-graph),
+> **Definition 6 (Epigraph)** The **epigraph** [\[3\]](#ref-wikipedia_epigraph_mathematics) of $f : \mathbb{R}^p \to \mathbb{R}$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points on or over its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph),
 >
 > $$\operatorname{epi} f \stackrel{\text{def}}{=}\mathopen{}\left\{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, s) : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p,\ s \in \mathbb{R},\ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \le s\right\}\mathclose{}.$$
 >
@@ -392,7 +392,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 7 (Tangent plane)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a [gradient](vector-calculus.llms.md#def-vector-derivative) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The **tangent plane** [\[4\]](#ref-wikipedia_tangent_space) to the [graph](functions.llms.md#def-graph) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the graph of the function
+> **Definition 7 (Tangent plane)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a [gradient](vector-calculus.llms.md#def-vector-derivative) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The **tangent plane** [\[4\]](#ref-wikipedia_tangent_space) to the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the graph of the function
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right)\mathclose{}}^{\top} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}),$$
 >
@@ -446,7 +446,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> *Proof*. **Only if.** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, and let $g(t) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}})$. The [inner function](functions.llms.md#def-inner-function) $t \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ has [derivative](vector-calculus.llms.md#def-vector-valued-derivative) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top}$, so the [vector chain rule](vector-calculus.llms.md#thm-chain-vec) gives
+> *Proof*. **Only if.** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, and let $g(t) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}})$. The [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $t \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ has [derivative](vector-calculus.llms.md#def-vector-valued-derivative) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top}$, so the [vector chain rule](vector-calculus.llms.md#thm-chain-vec) gives
 >
 > $$\begin{aligned}
 > g'(0)
@@ -566,7 +566,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > [![Plot of the parabola f of x equals x squared for x from -1 to 3, in blue, and the straight line s equals 2 x minus 1 in dashed vermilion. The line touches the parabola at the point (1, 1), marked by a vermilion circle, and lies below the parabola everywhere else.](optimization-convexity_files/figure-html/tangent-line-python-1.png)](optimization-convexity_files/figure-html/tangent-line-python-1.png "Figure 4: The tangent line s = 2x - 1 of f(x) = x^2 at y = 1 (Example 9). It touches the graph at (1, 1) and lies below it everywhere else, as in Example 10.")
 >
-> Figure 4: The [tangent line](calculus-derivatives.llms.md#def-tangent-line) $s = 2x - 1$ of $f(x) = x^2$ at $y = 1$ ([Example 9](#exm-tangent-plane)). It touches the [graph](functions.llms.md#def-graph) at $(1, 1)$ and lies below it everywhere else, as in [Example 10](#exm-convex-first-order).
+> Figure 4: The [tangent line](calculus-derivatives.llms.md#def-tangent-line) $s = 2x - 1$ of $f(x) = x^2$ at $y = 1$ ([Example 9](#exm-tangent-plane)). It touches the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $(1, 1)$ and lies below it everywhere else, as in [Example 10](#exm-convex-first-order).
 
 > **NOTE:**
 >
@@ -665,7 +665,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png "Figure 5: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
 >
-> Figure 5: [Level curves](vector-calculus.llms.md#def-level-set) of the third [function](functions.llms.md#def-function) in [Example 11](#exm-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the function is [linear](algebra-exponentials.llms.md#def-linear-function), so the function is [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
+> Figure 5: [Level curves](vector-calculus.llms.md#def-level-set) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 11](#exm-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the function is [linear](algebra-exponentials.llms.md#def-linear-function), so the function is [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
 
 > **NOTE:**
 >
@@ -752,7 +752,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > ## Python
 >
-> Figure 6: The [graph](functions.llms.md#def-graph) of the third [function](functions.llms.md#def-function) in [Example 11](#exm-convex-hessian), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 5](#fig-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the surface is a straight line, so the function is [linear](algebra-exponentials.llms.md#def-linear-function) there. The function is therefore [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
+> Figure 6: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 11](#exm-convex-hessian), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 5](#fig-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the surface is a straight line, so the function is [linear](algebra-exponentials.llms.md#def-linear-function) there. The function is therefore [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
 
 > **NOTE:**
 >

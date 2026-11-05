@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 > **NOTE:**
 >
@@ -12,7 +12,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > - $\mathcal{S}$ contains $S$ itself.
 > - For each set $A$ in $\mathcal{S}$, $\mathcal{S}$ contains its [complement](https://morrison-lab.github.io/mcs/sets.html#def-complement) $S \setminus A$.
-> - For each [sequence](functions.llms.md#def-sequence) $A_1, A_2, \ldots$ of sets in $\mathcal{S}$, $\mathcal{S}$ contains their union $\bigcup_{i=1}^{\infty} A_i$.
+> - For each [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $A_1, A_2, \ldots$ of [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) in $\mathcal{S}$, $\mathcal{S}$ contains their union $\bigcup_{i=1}^{\infty} A_i$.
 
 > **NOTE:**
 >
@@ -32,14 +32,14 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (A** $\sigma$-algebra is closed under complements and countable unions) A $\sigma$-algebra $\mathcal{S}$ on a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ is [closed under](functions.llms.md#def-closed-under) [complements](https://morrison-lab.github.io/mcs/sets.html#def-complement) in $S$ and under [unions](https://morrison-lab.github.io/mcs/sets.html#def-union) of [sequences](functions.llms.md#def-sequence) of its [sets](https://morrison-lab.github.io/mcs/sets.html#def-set), because [Definition 1](#def-sigma-algebra) requires both. The [collection](https://morrison-lab.github.io/mcs/sets.html#def-collection) in [Example 2](#exm-not-sigma-algebra) is not closed under complements.
+> **Example 3 (A** $\sigma$-algebra is closed under complements and countable unions) A $\sigma$-algebra $\mathcal{S}$ on a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ is [closed under](https://morrison-lab.github.io/mcs/functions.html#def-closed-under) [complements](https://morrison-lab.github.io/mcs/sets.html#def-complement) in $S$ and under [unions](https://morrison-lab.github.io/mcs/sets.html#def-union) of [sequences](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of its [sets](https://morrison-lab.github.io/mcs/sets.html#def-set), because [Definition 1](#def-sigma-algebra) requires both. The [collection](https://morrison-lab.github.io/mcs/sets.html#def-collection) in [Example 2](#exm-not-sigma-algebra) is not closed under complements.
 
 > **NOTE:**
 >
 > **Theorem 1 (Closure properties of a** $\sigma$-algebra) If $\mathcal{S}$ is a $\sigma$-algebra on a set $S$, then $\mathcal{S}$ contains:
 >
 > - the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set) $\emptyset$;
-> - the union $A_1 \cup \cdots \cup A_n$ of any [finitely many](functions.llms.md#def-finite-set) sets $A_1, \ldots, A_n$ in $\mathcal{S}$;
+> - the [union](https://morrison-lab.github.io/mcs/sets.html#def-union) $A_1 \cup \cdots \cup A_n$ of any [finitely many](https://morrison-lab.github.io/mcs/functions.html#def-finite-set) [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $A_1, \ldots, A_n$ in $\mathcal{S}$;
 > - the intersection $\bigcap_{i=1}^{\infty} A_i$ of any sequence $A_1, A_2, \ldots$ of sets in $\mathcal{S}$.
 
 > **NOTE:**
@@ -78,7 +78,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > Each $S \setminus A_i$ is in $\mathcal{S}$ by the complement rule, so their union is in $\mathcal{S}$ by the union rule, and the complement of that union is in $\mathcal{S}$ by the complement rule again.
 >
-> So $\mathcal{S}$ is [closed under](functions.llms.md#def-closed-under) [finite](functions.llms.md#def-finite-set) [unions](https://morrison-lab.github.io/mcs/sets.html#def-union) and under intersections of sequences of its sets.
+> So $\mathcal{S}$ is [closed under](https://morrison-lab.github.io/mcs/functions.html#def-closed-under) [finite](https://morrison-lab.github.io/mcs/functions.html#def-finite-set) [unions](https://morrison-lab.github.io/mcs/sets.html#def-union) and under intersections of sequences of its sets.
 
 > **NOTE:**
 >
@@ -134,7 +134,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > - Every [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval), such as $[0, 1]$, $(2, 5)$, or $[0, \infty)$, is a [Borel set](#def-borel-set).
 > - A single point ${\mathopen{}\left\{a\right\}\mathclose{}} = [a, a]$ is an interval, so it is a Borel set.
-> - The [integers](number-systems.llms.md#def-integers) are a Borel set: they are the [union](https://morrison-lab.github.io/mcs/sets.html#def-union) of the [sequence](functions.llms.md#def-sequence) of single points ${\mathopen{}\left\{0\right\}\mathclose{}}, {\mathopen{}\left\{1\right\}\mathclose{}}, {\mathopen{}\left\{-1\right\}\mathclose{}}, {\mathopen{}\left\{2\right\}\mathclose{}}, {\mathopen{}\left\{-2\right\}\mathclose{}}, \ldots$ ([countable and uncountable sets](functions.llms.md#exm-countable-set) lists them this way), and $\mathcal{B}$ contains that union by [Definition 1](#def-sigma-algebra).
+> - The [integers](number-systems.llms.md#def-integers) are a Borel set: they are the [union](https://morrison-lab.github.io/mcs/sets.html#def-union) of the [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of single points ${\mathopen{}\left\{0\right\}\mathclose{}}, {\mathopen{}\left\{1\right\}\mathclose{}}, {\mathopen{}\left\{-1\right\}\mathclose{}}, {\mathopen{}\left\{2\right\}\mathclose{}}, {\mathopen{}\left\{-2\right\}\mathclose{}}, \ldots$ ([countable and uncountable sets](https://morrison-lab.github.io/mcs/functions.html#exm-countable-set) lists them this way), and $\mathcal{B}$ contains that union by [Definition 1](#def-sigma-algebra).
 > - The [complement](https://morrison-lab.github.io/mcs/sets.html#def-complement) $\mathbb{R}\setminus [0, 1]$ is a Borel set, because $\mathcal{B}$ contains the complement of each of its sets.
 
 # Definitions on this page

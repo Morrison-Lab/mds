@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 # 1 Measures
 
@@ -194,7 +194,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > [![Plot of a function for x from minus 3 to 3. A blue parabola, x squared, opens upward with its lowest value 0 at x of 0. At each of the integers minus 3 to 3, the parabola has an open circle, and a vermilion filled point sits below the axis at the value minus 1.](measures-measure-spaces_files/figure-html/almost-everywhere-python-1.png)](measures-measure-spaces_files/figure-html/almost-everywhere-python-1.png "Figure 1: The plot shows the function g of Example 7 on [-3, 3]. It is x^2 except at the integers, where it is -1. It falls below the dashed line g = 0 only at those points, which together have measure zero, so g \ge 0 almost everywhere.")
 >
-> Figure 1: The plot shows the [function](functions.llms.md#def-function) $g$ of [Example 7](#exm-almost-everywhere) on $[-3, 3]$. It is $x^2$ except at the [integers](number-systems.llms.md#def-integers), where it is $-1$. It falls below the dashed line $g = 0$ only at those points, which together have [measure zero](#def-measure-zero), so $g \ge 0$ [almost everywhere](#def-almost-everywhere).
+> Figure 1: The plot shows the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $g$ of [Example 7](#exm-almost-everywhere) on $[-3, 3]$. It is $x^2$ except at the [integers](number-systems.llms.md#def-integers), where it is $-1$. It falls below the dashed line $g = 0$ only at those points, which together have [measure zero](#def-measure-zero), so $g \ge 0$ [almost everywhere](#def-almost-everywhere).
 
 > **NOTE:**
 >

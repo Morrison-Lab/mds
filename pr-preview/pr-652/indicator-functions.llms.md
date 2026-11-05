@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:
 
@@ -184,7 +184,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 # 3 Strengths and limitations of the Iverson bracket
 
-The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if $U$ is a [finite set](functions.llms.md#def-finite-set) that contains $A$, then:
+The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if $U$ is a [finite set](https://morrison-lab.github.io/mcs/functions.html#def-finite-set) that contains $A$, then:
 
 $$\sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]$$
 
@@ -226,7 +226,7 @@ Indicator functions translate the logical connectives ([definition](proof-writin
 
 > **NOTE:**
 >
-> **Definition 9 (Idempotent)** A number $a$ is **idempotent** [\[5\]](#ref-wikipedia_idempotence) if $a \cdot a = a$. A function $f$ with real values is **idempotent** if $f(x) \cdot f(x) = f(x)$ for every $x$ in its [domain](functions.llms.md#def-domain).
+> **Definition 9 (Idempotent)** A number $a$ is **idempotent** [\[5\]](#ref-wikipedia_idempotence) if $a \cdot a = a$. A function $f$ with real values is **idempotent** if $f(x) \cdot f(x) = f(x)$ for every $x$ in its [domain](https://morrison-lab.github.io/mcs/functions.html#def-domain).
 
 > **NOTE:**
 >

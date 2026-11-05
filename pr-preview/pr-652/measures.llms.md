@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 > **NOTE:**
 >
-> *Remark*. A measure assigns a size to each set in a [collection of sets](https://morrison-lab.github.io/mcs/sets.html#def-collection): how many elements it has, how long it is, or how likely it is. These notes build measures from $\sigma$-algebras and additivity, using the definitions on the [Sets](https://morrison-lab.github.io/mcs/sets.html) and [Functions](functions.llms.md) pages. One kind of measure, the probability measure ([Definition 12 in Measures and Probability Measures](measures-measure-spaces.llms.md#def-probability-measure)), is the starting point of the Morrison Lab’s probability notes ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
+> *Remark*. A measure assigns a size to each set in a [collection of sets](https://morrison-lab.github.io/mcs/sets.html#def-collection): how many elements it has, how long it is, or how likely it is. These notes build measures from $\sigma$-algebras and additivity, using the definitions on the [Sets](https://morrison-lab.github.io/mcs/sets.html) and [Functions](https://morrison-lab.github.io/mcs/functions.html) pages. One kind of measure, the probability measure ([Definition 12 in Measures and Probability Measures](measures-measure-spaces.llms.md#def-probability-measure)), is the starting point of the Morrison Lab’s probability notes ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
 
 The measure notes are split across these pages:
 

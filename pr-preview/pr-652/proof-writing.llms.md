@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -1093,7 +1093,7 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 >
 > - variables $x, y, \ldots$ that stand for elements of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set);
 > - [predicates](#def-predicate) of one or more of those variables, such as $P(x)$ or $x < y$;
-> - [functions](functions.llms.md#def-function) of them, such as $x + y$;
+> - [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of them, such as $x + y$;
 > - equality between them;
 > - [quantifiers](#def-quantifier) $\forall$ and $\exists$ over them.
 

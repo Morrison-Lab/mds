@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 > **NOTE:**
 >
@@ -75,7 +75,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Real-valued function, scalar-valued function)** A [function](functions.llms.md#def-function) $f : A \to \mathbb{R}$, whose values are numbers, is **real-valued** (also called **scalar-valued**, since its values are [scalars](#def-scalar)).
+> **Definition 4 (Real-valued function, scalar-valued function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : A \to \mathbb{R}$, whose values are numbers, is **real-valued** (also called **scalar-valued**, since its values are [scalars](#def-scalar)).
 
 > **NOTE:**
 >
@@ -91,7 +91,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 6 (Transpose)** The **transpose** of a column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the row vector with the same [sequence](functions.llms.md#def-sequence) of entries, written horizontally:
+> **Definition 6 (Transpose)** The **transpose** of a column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the row vector with the same [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of entries, written horizontally:
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \equiv \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}' \equiv [x_1,\; x_2,\; \ldots,\; x_p]$$
 

@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Measurable function)** Let $(S, \mathcal{S})$ be a [measurable space](measures-measure-spaces.llms.md#def-measurable-space). A [function](functions.llms.md#def-function) $f : S \to \mathbb{R}$ is **measurable** (with respect to $\mathcal{S}$) [\[1\]](#ref-wikipedia_measurable_function) if, for every real number $c$, the set of elements where $f$ is at most $c$ is measurable:
+> **Definition 1 (Measurable function)** Let $(S, \mathcal{S})$ be a [measurable space](measures-measure-spaces.llms.md#def-measurable-space). A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : S \to \mathbb{R}$ is **measurable** (with respect to $\mathcal{S}$) [\[1\]](#ref-wikipedia_measurable_function) if, for every real number $c$, the set of elements where $f$ is at most $c$ is measurable:
 >
 > $${\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{}} \in \mathcal{S}$$
 
@@ -78,7 +78,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (A function in terms of its positive and negative parts). For a [function](functions.llms.md#def-function) $f : S \to \mathbb{R}$, with the [positive part](algebra-basics.llms.md#def-positive-negative-parts) and [negative part](algebra-basics.llms.md#def-negative-part), $f = f^{+} - f^{-}$ and $\mathopen{}\left|f\right|\mathclose{} = f^{+} + f^{-}$. ($f^{+}$, $f^{-}$, and $\mathopen{}\left|f\right|\mathclose{}$ are [measurable](#def-measurable-function) when $f$ is [\[3\]](#ref-billingsley1995probability), Theorem 13.3.)
+> *Remark 3* (A function in terms of its positive and negative parts). For a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : S \to \mathbb{R}$, with the [positive part](algebra-basics.llms.md#def-positive-negative-parts) and [negative part](algebra-basics.llms.md#def-negative-part), $f = f^{+} - f^{-}$ and $\mathopen{}\left|f\right|\mathclose{} = f^{+} + f^{-}$. ($f^{+}$, $f^{-}$, and $\mathopen{}\left|f\right|\mathclose{}$ are [measurable](#def-measurable-function) when $f$ is [\[3\]](#ref-billingsley1995probability), Theorem 13.3.)
 
 > **NOTE:**
 >
@@ -171,7 +171,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 >
 > [![Three bar charts side by side, each with the die rolls 1 to 6 on the horizontal axis. The left chart, f, has bars of height minus 2, minus 1, 0, 1, 2 and 3, the first two below the axis. The middle chart, the positive part, has bars of height 0, 0, 0, 1, 2 and 3, which sum to 6. The right chart, the negative part, has bars of height 2, 1, 0, 0, 0 and 0, which sum to 3.](measures-integrals_files/figure-html/positive-negative-parts-python-1.png)](measures-integrals_files/figure-html/positive-negative-parts-python-1.png "Figure 1: Let D be the die rolls of Example 3. The plot shows the function f(x) = x - 3 on D, its positive part, and its negative part. With the counting measure, each integral is the sum of the bar heights, and 6 - 3 = 3 is the integral of f.")
 >
-> Figure 1: Let $D$ be the die rolls of [Example 3](#exm-integral). The plot shows the [function](functions.llms.md#def-function) $f(x) = x - 3$ on $D$, its [positive part](algebra-basics.llms.md#def-positive-negative-parts), and its [negative part](algebra-basics.llms.md#def-negative-part). With the [counting measure](measures-measure-spaces.llms.md#def-counting-measure), each [integral](#def-integral) is the [sum](algebra-sums.llms.md#def-summation) of the bar heights, and $6 - 3 = 3$ is the integral of $f$.
+> Figure 1: Let $D$ be the die rolls of [Example 3](#exm-integral). The plot shows the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f(x) = x - 3$ on $D$, its [positive part](algebra-basics.llms.md#def-positive-negative-parts), and its [negative part](algebra-basics.llms.md#def-negative-part). With the [counting measure](measures-measure-spaces.llms.md#def-counting-measure), each [integral](#def-integral) is the [sum](algebra-sums.llms.md#def-summation) of the bar heights, and $6 - 3 = 3$ is the integral of $f$.
 
 > **NOTE:**
 >

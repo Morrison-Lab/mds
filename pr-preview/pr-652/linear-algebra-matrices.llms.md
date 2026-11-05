@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 13:32:51 (PST)
+Last modified: 2026-11-05 14:20:19 (PST)
 
 > **NOTE:**
 >
@@ -394,7 +394,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Linear map, linear transformation, linear function)** A [function](functions.llms.md#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map** [\[12\]](#ref-wikipedia_linear_map) (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ and $c \in \mathbb{R}$,
+> **Definition 15 (Linear map, linear transformation, linear function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map** [\[12\]](#ref-wikipedia_linear_map) (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ and $c \in \mathbb{R}$,
 >
 > 1.  $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ (*additivity*)
 > 2.  $f(c\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ (*homogeneity*)
@@ -672,7 +672,11 @@ Last modified: 2026-11-05 13:32:51 (PST)
 
 > **NOTE:**
 >
-> **Definition 19 (Affine map, affine transformation, affine function)** A [function](functions.llms.md#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 18](#def-translation)) (a [composition](functions.llms.md#def-composition), with the matrix product as the inner function): there are an $m \times p$ matrix $\mathbf{A}$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$ such that
+> **Definition 19**  
+>
+> #### Affine map, affine transformation, affine function
+>
+> A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 18](#def-translation)) (a [composition](https://morrison-lab.github.io/mcs/functions.html#def-composition), with the matrix product as the [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function)): there are an $m \times p$ matrix $\mathbf{A}$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$ such that
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
@@ -981,7 +985,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 > &= 58
 > \end{aligned}$$
 >
-> Two things are worth noticing. The [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) are not comparable as they stand. The [weight](linear-algebra-vectors.llms.md#def-weight) on BMI, $1.5$, is $7.5$ times the weight on blood pressure, $0.2$, but the contribution of BMI, $42$, is less than twice the contribution of blood pressure, $26$, because the BMI [value](functions.llms.md#def-value), $28$, is much smaller than the blood pressure value, $130$. So the weight on a feature says nothing on its own about how much that feature contributes to the score. And $b = -30$ changes the score: without it, the score would be $88$ instead of $58$.
+> Two things are worth noticing. The [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) are not comparable as they stand. The [weight](linear-algebra-vectors.llms.md#def-weight) on BMI, $1.5$, is $7.5$ times the weight on blood pressure, $0.2$, but the contribution of BMI, $42$, is less than twice the contribution of blood pressure, $26$, because the BMI [value](https://morrison-lab.github.io/mcs/functions.html#def-value), $28$, is much smaller than the blood pressure value, $130$. So the weight on a feature says nothing on its own about how much that feature contributes to the score. And $b = -30$ changes the score: without it, the score would be $88$ instead of $58$.
 
 > **NOTE:**
 >
@@ -1142,7 +1146,7 @@ Last modified: 2026-11-05 13:32:51 (PST)
 - [Definition 16 (Linear operator)](#def-linear-operator)
 - [Definition 17 (Matrix of a linear map)](#def-matrix-of-linear-map)
 - [Definition 18 (Translation)](#def-translation)
-- [Definition 19 (Affine map, affine transformation, affine function)](#def-affine-map)
+- [Definition 19](#def-affine-map)
 - [Definition 20 (Offset of an affine map, intercept, bias)](#def-affine-offset)
 - [Definition 21 (Augmented vector)](#def-augmented-vector)
 - [Definition 22 (Hyperplane)](#def-hyperplane)
