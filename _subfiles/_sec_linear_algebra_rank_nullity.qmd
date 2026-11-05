@@ -80,6 +80,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-affine-subspace.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-hyperplane-subspace.qmd >}}
 
 {{< slidebreak >}}

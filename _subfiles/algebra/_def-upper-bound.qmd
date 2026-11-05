@@ -1,0 +1,9 @@
+:::{#def-upper-bound}
+#### Upper bound
+
+Let $A \subseteq \reals$.
+A real number $\ubound$ is an **upper bound** for $A$
+[@wikipedia_upper_and_lower_bounds]
+if $a \le \ubound$ for all $a \in A$.
+
+:::

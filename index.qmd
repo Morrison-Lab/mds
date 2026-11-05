@@ -39,11 +39,11 @@ can build on them directly:
   the integers, natural numbers, even and odd numbers,
   and the rational, real, and irrational numbers
 - [Sets and Functions](sets-functions.qmd), on four pages:
-  - [Sets](sets.qmd):
+  - [Sets](https://morrison-lab.github.io/mcs/sets.html):
     sets, subsets and supersets, the empty set,
     unions, intersections, and set differences,
     and the extended non-negative real numbers
-  - [Functions](functions.qmd):
+  - [Functions](https://morrison-lab.github.io/mcs/functions.html):
     functions with their domains, codomains, and images, sequences, and countable sets
   - [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html):
     expressions, parse trees, and algorithms
@@ -61,7 +61,7 @@ can build on them directly:
 The remaining topics build on the foundations and on each other:
 
 - [Measures](measures.qmd):
-  $\sigma$-algebras, [finite](functions.qmd#def-finite-set) and [countable additivity](measures.qmd#def-countable-additivity),
+  $\sigma$-algebras, [finite](https://morrison-lab.github.io/mcs/functions.html#def-finite-set) and [countable additivity](measures.qmd#def-countable-additivity),
   measures, and the counting measure
 - [Calculus](calculus.qmd):
   [derivative](calculus-derivatives.qmd#def-derivative) rules, [Taylor series](calculus-taylor-series.qmd#def-taylor-series), [antiderivatives](calculus.qmd#def-antiderivative),
@@ -139,8 +139,6 @@ Each page is a thin wrapper around one or more fragments:
 |------|------------------------|
 | [Notation](notation.qmd) | `mds/_notation.qmd` |
 | [Number Systems](number-systems.qmd) | `mds/_number-systems.qmd` |
-| [Sets](sets.qmd) | `mds/_sets.qmd` |
-| [Functions](functions.qmd) | `mds/_functions.qmd` |
 | [Indicator Functions](indicator-functions.qmd) | `mds/_indicator-functions.qmd` |
 | [Algebra](algebra.qmd) | `mds/_algebra.qmd` |
 | [Measures](measures.qmd) | `mds/_measures.qmd` |
@@ -150,7 +148,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Optimization](optimization.qmd) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
+`_notation.qmd`, `_number-systems.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
 a host page that includes any of the other fragments
 must include `latex-macros/macros.qmd` first,
 as the pages of this site do.

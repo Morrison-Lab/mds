@@ -1,7 +1,7 @@
 :::{#thm-negate-quantifiers}
 #### De Morgan's laws for quantifiers
 
-For a [set](#def-set) $S$ and a [predicate](#def-predicate) $P(x)$
+For a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ and a [predicate](#def-predicate) $P(x)$
 whose [domain of discourse](#def-domain-of-discourse) is $S$:
 
 $$

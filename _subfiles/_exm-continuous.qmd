@@ -1,0 +1,43 @@
+:::{#exm-continuous}
+#### A continuous function, and one failure of each condition
+
+- $f(x) = x^2$ is continuous at $c = 1$:
+  $f(1) = 1$ is defined, and
+
+  $$
+  \begin{aligned}
+  \lim_{x \to 1} x^2 &= 1 \\
+  &= f(1).
+  \end{aligned}
+  $$
+
+- $g(x) = \tfrac{x^2 - 1}{x - 1}$ fails condition 1 at $c = 1$:
+  $g(1)$ is not defined (it would divide by zero),
+  even though
+
+  $$
+  \begin{aligned}
+  \lim_{x \to 1} g(x) &= \lim_{x \to 1} (x + 1) \\
+  &= 2
+  \end{aligned}
+  $$
+
+  exists
+  ($x^2 - 1 = (x - 1)(x + 1)$, and the factor $x - 1$ cancels for $x \ne 1$).
+- The step function $H(x) = 1$ for $x \ge 0$ and $H(x) = 0$ for $x < 0$
+  fails condition 2 at $c = 0$:
+  values to the left are all $0$ and values to the right are all $1$,
+  so $\lim_{x \to 0} H(x)$ does not exist.
+- $k(x) = x^2$ for $x \ne 1$, with $k(1) = 5$,
+  fails condition 3 at $c = 1$:
+  $\lim_{x \to 1} k(x) = 1$ exists but differs from $k(1) = 5$.
+
+:::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_def-jump-discontinuity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_exm-jump-discontinuity.qmd >}}

@@ -3,7 +3,7 @@
 
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
 Let $f, g : S \to \reals$ be [measurable](#def-measurable-function).
-The [functions](functions.qmd#def-function) $f$ and $g$ are **equal almost everywhere**,
+The [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ and $g$ are **equal almost everywhere**,
 written $f = g$ $\measure$-a.e.,
 if $f(s) = g(s)$ holds [almost everywhere](#def-almost-everywhere).
 

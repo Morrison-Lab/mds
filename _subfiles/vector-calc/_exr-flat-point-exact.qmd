@@ -3,6 +3,6 @@
 #### Exact value
 
 In the setting of @exr-flat-point,
-find the exact [value](functions.qmd#def-value) of $f(1.01)$.
+find the exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value) of $f(1.01)$.
 
 :::

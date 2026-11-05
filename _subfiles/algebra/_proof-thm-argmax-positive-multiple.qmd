@@ -11,7 +11,7 @@ Either way, $c\,g(a) \le c\,g(x^*)$.
 
 Conversely, suppose $c\,g(a) \le c\,g(x^*)$.
 Since $1/c > 0$ and $(1/c)\,(c\,g) = g$,
-the same reasoning applied to the [function](functions.qmd#def-function) $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
+the same reasoning applied to the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
 
 So $c\,g(a) \le c\,g(x^*)$ for every $a \in A$ if and only if $g(a) \le g(x^*)$ for every $a \in A$.
 Hence $x^*$ is in the argmax of $c\,g$ exactly when it is in the argmax of $g$.

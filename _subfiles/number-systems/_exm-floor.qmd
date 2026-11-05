@@ -7,7 +7,7 @@
 - $\floor{-1.5} = -2$,
   because $-2 \le -1.5 < -1$.
 
-The [graph](functions.qmd#def-graph) of $\floor{x}$ is a staircase:
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $\floor{x}$ is a staircase:
 each step starts at an integer, with a filled dot,
 and stops before the next integer, at an open dot.
 

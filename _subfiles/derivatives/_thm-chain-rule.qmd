@@ -17,8 +17,8 @@ $$
 or in Lagrange's notation (@def-derivative),
 if $g$ is [differentiable at](calculus-derivatives.qmd#def-differentiable) $x$
 and $f$ is differentiable at $g(x)$,
-then for the [composition](functions.qmd#def-composition) $f \circ g$,
-with [inner function](functions.qmd#def-inner-function) $g$ and [outer function](functions.qmd#def-outer-function) $f$:
+then for the [composition](https://morrison-lab.github.io/mcs/functions.html#def-composition) $f \circ g$,
+with [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $g$ and [outer function](https://morrison-lab.github.io/mcs/functions.html#def-outer-function) $f$:
 
 $$(f(g(x)))' = g'(x) f'(g(x))$$
 :::

@@ -1,7 +1,7 @@
 :::{#def-linear-map}
 #### Linear map, linear transformation, linear function
 
-A [function](functions.qmd#def-function) $f: \reals^p \to \reals^m$ is a **linear map**
+A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \reals^p \to \reals^m$ is a **linear map**
 [@wikipedia_linear_map]
 (also called a **linear transformation** or **linear function**)
 if it preserves vector addition and scalar multiplication:
@@ -9,35 +9,5 @@ for all $\vx, \vy \in \reals^p$ and $c \in \reals$,
 
 1. $f(\vx + \vy) = f(\vx) + f(\vy)$ (*additivity*)
 2. $f(c\vx) = c f(\vx)$ (*homogeneity*)
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-linear-map}
-#### A linear map, and two functions that are not
-
-- $f(\vx) = (2 x_1,\ x_1 + x_2)$ on $\reals^2$ is linear. For $\vx, \vy \in \reals^2$ and $c \in \reals$:
-
-  $$
-  \begin{aligned}
-  f(\vx + \vy) &= (2 (x_1 + y_1),\ (x_1 + y_1) + (x_2 + y_2)) \\
-  &= f(\vx) + f(\vy)
-  \end{aligned}
-  $$
-
-  and
-
-  $$
-  \begin{aligned}
-  f(c \vx) &= (2 c x_1,\ c x_1 + c x_2) \\
-  &= c f(\vx).
-  \end{aligned}
-  $$
-
-- $g(x) = x + 1$ on $\reals$ is not linear: additivity fails,
-  since $g(0 + 0) = 1$ but $g(0) + g(0) = 2$.
-- $h(x) = x^2$ on $\reals$ is not linear:
-  $h(2 \cd 1) = 4$ but $2\,h(1) = 2$, so $h(c x) \ne c\,h(x)$ for $c = 2$, $x = 1$.
 
 :::

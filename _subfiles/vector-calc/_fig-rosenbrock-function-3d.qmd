@@ -150,7 +150,7 @@ plt.show();
 
 :::
 
-The [graph](functions.qmd#def-graph) of the [Rosenbrock function](#def-rosenbrock-function),
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [Rosenbrock function](#def-rosenbrock-function),
 the surface whose [level curves](vector-calculus.qmd#def-level-curve) are in @fig-rosenbrock-function,
 with the curve $x_2 = x_1^2$ (dashed) along the bottom of the valley.
 The [minimizer](algebra-basics.qmd#def-global-minimizer), the origin and the starting point are marked.

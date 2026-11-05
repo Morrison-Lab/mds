@@ -1,0 +1,7 @@
+:::{#def-divergent-sequence}
+#### Divergent sequence (diverges)
+
+A sequence that does not converge (@def-convergent-sequence) to any real number **diverges**,
+and a sequence that diverges is **divergent**.
+
+:::

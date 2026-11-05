@@ -1,7 +1,7 @@
 :::{#sol-flat-point-compare}
 
 The prediction $3.98$ (@sol-flat-point-predict)
-and the exact [value](functions.qmd#def-value) $3.9801$ (@sol-flat-point-exact)
+and the exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value) $3.9801$ (@sol-flat-point-exact)
 differ by $0.0001$,
 which is $\smallconst^2$.
 For this $f$,

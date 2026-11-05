@@ -46,6 +46,10 @@ reticulate::py_require(py_packages)
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_rem-lebesgue-measure-exists.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_def-lebesgue-measure-interval.qmd >}}
 
 {{< slidebreak >}}

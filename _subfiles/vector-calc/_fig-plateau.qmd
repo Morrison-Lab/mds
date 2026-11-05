@@ -66,7 +66,7 @@ plt.show()
 :::
 
 The size of the [gradient](vector-calculus.qmd#def-vector-derivative)
-of the [function](functions.qmd#def-function) in @exm-plateau,
+of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in @exm-plateau,
 with $x = 0$ and $x = 10$ marked.
 The size shrinks toward $0$ as $x$ grows but is never $0$,
 which is why descent slows down on a [plateau](#def-plateau)

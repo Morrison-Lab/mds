@@ -20,7 +20,7 @@ If the inequality is strict whenever $\vx \ne \vy$, then $f$ is strictly convex 
 **Only if.**
 Let $\vx, \vy \in \reals^p$, let $\vecf{d} \eqdef \vx - \vy$,
 and let $g(t) \eqdef f(\vy + t \vecf{d})$.
-The [inner function](functions.qmd#def-inner-function) $t \mapsto \vy + t \vecf{d}$ has [derivative](vector-calculus.qmd#def-vector-valued-derivative) $\tp{\vecf{d}}$,
+The [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $t \mapsto \vy + t \vecf{d}$ has [derivative](vector-calculus.qmd#def-vector-valued-derivative) $\tp{\vecf{d}}$,
 so the [vector chain rule](vector-calculus.qmd#thm-chain-vec) gives
 
 $$

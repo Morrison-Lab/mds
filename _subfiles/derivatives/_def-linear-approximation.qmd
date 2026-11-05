@@ -1,7 +1,7 @@
 :::{#def-linear-approximation}
 #### Linear approximation (first-order Taylor approximation, first-order Taylor expansion)
 
-For a [function](functions.qmd#def-function) $f$ that is [differentiable at](calculus-derivatives.qmd#def-differentiable) $w$,
+For a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ that is [differentiable at](calculus-derivatives.qmd#def-differentiable) $w$,
 the **linear approximation** of $f$ at $w$
 [@wikipedia_linear_approximation]
 (also called the **first-order Taylor approximation**

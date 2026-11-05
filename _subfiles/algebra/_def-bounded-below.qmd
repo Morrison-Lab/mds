@@ -1,0 +1,9 @@
+:::{#def-bounded-below}
+#### Bounded below
+
+A set $A \subseteq \reals$ is **bounded below** if it has a lower bound (@def-lower-bound).
+A [real-valued function](linear-algebra.qmd#def-real-vector-valued) is
+bounded below
+if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
+
+:::

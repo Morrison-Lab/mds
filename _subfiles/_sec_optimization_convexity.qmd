@@ -46,6 +46,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-def-epigraph.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_fig-epigraph.qmd >}}
 
 {{< slidebreak >}}

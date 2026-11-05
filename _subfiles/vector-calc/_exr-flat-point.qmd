@@ -2,12 +2,12 @@
 
 #### Differentiate a quadratic
 
-A [flat point](#def-flat-point) of a [function](functions.qmd#def-function)
+A [flat point](#def-flat-point) of a [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
 is where its [derivative](calculus-derivatives.qmd#def-derivative) is zero.
 The next exercises use the [parabola](algebra.qmd#def-parabola) $f(w) = w^2 - 4w + 7$
 to find where $f$ is flat
 and to compare a [linear approximation](calculus.qmd#eq-linear-approx)
-with the exact [value](functions.qmd#def-value).
+with the exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value).
 
 Differentiate $f$.
 

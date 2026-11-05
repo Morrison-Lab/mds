@@ -1,0 +1,7 @@
+:::{#exm-convergent-sequence}
+#### A convergent sequence
+
+$a_n = \frac{1}{n}$ converges to $0$, because $0$ is its limit (@exm-sequence-limit),
+so $a_n = \frac{1}{n}$ is convergent.
+
+:::

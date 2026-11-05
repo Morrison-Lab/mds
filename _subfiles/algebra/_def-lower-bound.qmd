@@ -1,0 +1,9 @@
+:::{#def-lower-bound}
+#### Lower bound
+
+Let $A \subseteq \reals$.
+A real number $\lbound$ is a **lower bound** for $A$
+[@wikipedia_upper_and_lower_bounds]
+if $\lbound \le a$ for all $a \in A$.
+
+:::

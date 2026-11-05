@@ -2,6 +2,78 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/_exm-differentiable-on.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_def-continuous.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_def-discontinuous.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm-continuous.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_def-continuous-on.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm-continuous-on-sqrt.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm-not-continuous-on.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_def-partition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm-partition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm-not-partition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_def-mesh.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm-mesh.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_def-riemann-integral.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_def-integrable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm-integrable-constant.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_rem-integrable-integral.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_def-riemann-sum-equal-width.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm-equal-width-sum.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/integrals-regularity/_prose-regularity-intro.qmd >}}
 
 {{< include mds/_subfiles/integrals-regularity/_thm-diff-implies-cont.qmd >}}

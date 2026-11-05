@@ -33,6 +33,14 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-vector-valued.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-real-vector-valued.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-transpose.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-transpose.qmd >}}

@@ -1,7 +1,7 @@
 :::{#exm-first-order-logic}
 #### From "for all" to one element
 
-Let $P(x)$ be a [predicate](#def-predicate) about the elements of a [set](sets.qmd#def-set) $S$,
+Let $P(x)$ be a [predicate](#def-predicate) about the elements of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$,
 and let $a \in S$.
 The [propositions](#def-proposition) $\forall x \in S, P(x)$ and $a \in S$
 [logically entail](#def-logical-entailment) $P(a)$:

@@ -1,0 +1,14 @@
+:::{#def-continuous}
+#### Continuous function
+
+A function $f$ is **continuous at** $x = c$
+[@wikipedia_continuous_function]
+if all three conditions hold:
+
+1. $f(c)$ is defined,
+2. $\lim_{x \to c} f(x)$ exists, and
+3. $\lim_{x \to c} f(x) = f(c)$.
+
+[@larsonCalc11e, Section 1.4, p. 73]
+
+:::

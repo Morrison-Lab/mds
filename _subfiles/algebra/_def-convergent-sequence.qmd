@@ -1,0 +1,7 @@
+:::{#def-convergent-sequence}
+#### Convergent sequence (converges)
+
+A sequence $(a_n)$ of real numbers **converges** to a real number $L$ if $L$ is its limit (@def-sequence-limit).
+A sequence that converges to some real number is **convergent**.
+
+:::

@@ -128,7 +128,7 @@ plt.show();
 
 :::
 
-The [graph](functions.qmd#def-graph) of $f(\vx) = x_1^2 - x_2^2$.
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(\vx) = x_1^2 - x_2^2$.
 Along the $x_1$ axis (solid curve) the surface rises away from the origin,
 and along the $x_2$ axis (dashed curve) it falls away,
 so the origin is neither the lowest nor the highest point nearby.

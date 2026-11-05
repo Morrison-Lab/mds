@@ -1,0 +1,14 @@
+:::{#rem-integral-nonneg-lower-sums}
+#### Each sum is a lower estimate
+
+Each sum in @def-integral-nonneg splits $S$ into pieces
+and weights each piece $A_i$ by the smallest value $f$ approaches on it,
+so each sum is at most the integral.
+For Lebesgue measure on a closed interval $[a, b]$
+and a function $f \ge 0$ that has a
+[Riemann integral](calculus.qmd#def-riemann-integral) on $[a, b]$,
+the two integrals agree:
+$\int_{[a, b]} f \, d\lebesgue = \int_a^b f(x) \, dx$
+[@wikipedia_lebesgue_integration].
+
+:::
