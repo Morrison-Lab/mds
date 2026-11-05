@@ -16,15 +16,15 @@
 #|   part for 0.05 and 0.1 and in the blue part for 0.01.
 dwf_step_fg <- c(0.01, 0.05, 0.1)
 dwf_cut_fg <- sqrt(1 + 1 / (2 * dwf_step_fg))
-dwf_bars_fg <- tibble::tibble(
-  step = factor(dwf_step_fg),
-  cut = dwf_cut_fg
-)
+dwf_level_fg <- factor(dwf_step_fg)
+dwf_bars_fg <- tibble::tibble(step = dwf_level_fg, cut = dwf_cut_fg)
 dwf_aes_fg <- ggplot2::aes(y = step)
 dwf_mid_fg <- ggplot2::aes(x = -cut, xend = cut, yend = step)
 dwf_left_fg <- ggplot2::aes(x = -8, xend = -cut, yend = step)
 dwf_right_fg <- ggplot2::aes(x = cut, xend = 8, yend = step)
-ggplot2::ggplot(dwf_bars_fg, dwf_aes_fg) +
+dwf_bars_fg |>
+  ggplot2::ggplot() +
+  dwf_aes_fg +
   ggplot2::geom_segment(dwf_mid_fg, colour = "#0072B2", linewidth = 4) +
   ggplot2::geom_segment(dwf_left_fg, colour = "#D55E00", linewidth = 4) +
   ggplot2::geom_segment(dwf_right_fg, colour = "#D55E00", linewidth = 4) +
