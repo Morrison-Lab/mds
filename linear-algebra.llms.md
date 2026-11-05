@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 00:56:51 (PST)
+Last modified: 2026-11-05 03:00:12 (PST)
 
 The linear algebra notes are split across these pages:
 
@@ -36,13 +36,14 @@ A link to a section, theorem or definition on this page from before the split go
 # 1 Further reading
 
 - Strang [\[3\]](#ref-strang2023linear) is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.
-- Axler [\[4\]](#ref-axler2024linear) is a proof-based treatment centered on vector spaces and linear maps. A free electronic version is available from the publisher.
-- Lange [\[5\]](#ref-lange2010numerical) covers computing [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) and [eigenvectors](linear-algebra-special-matrices.llms.md#def-eigenvector), including Jacobi’s method (Chapter 8), and the singular value decomposition, its properties, and its applications (Chapter 9).
-- Fieller [\[6\]](#ref-fieller2018basics)
+- Nield [\[4\]](#ref-nield2022essential) is a short, code-driven introduction to the linear algebra used in data science (Chapter 4).
+- Axler [\[5\]](#ref-axler2024linear) is a proof-based treatment centered on vector spaces and linear maps. A free electronic version is available from the publisher.
+- Lange [\[6\]](#ref-lange2010numerical) covers computing [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) and [eigenvectors](linear-algebra-special-matrices.llms.md#def-eigenvector), including Jacobi’s method (Chapter 8), and the singular value decomposition, its properties, and its applications (Chapter 9).
+- Fieller [\[7\]](#ref-fieller2018basics)
 - Banerjee and Roy [\[2\]](#ref-banerjee2014linear)
-- Searle and Khuri [\[7\]](#ref-searle2017matrix)
-- Petersen and Pedersen [\[8\]](#ref-petersen2012matrix) is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and [derivatives](calculus-derivatives.llms.md#def-derivative) of vectors and matrices, so it is a quick place to look up a formula these pages prove.
-- Stanford University [\[9\]](#ref-stanford2024ee278notes) (Stanford EE 278, taught by Tsachy Weissman) applies this page’s tools to probability and inference. Its “MMSE Geometry” lecture treats the best estimate as an orthogonal [projection](linear-algebra-projections.llms.md), and its lectures on spectral decomposition, the Karhunen-Loeve expansion and principal component analysis treat [diagonalization](linear-algebra-diagonalization.llms.md) of a covariance matrix.
+- Searle and Khuri [\[8\]](#ref-searle2017matrix)
+- Petersen and Pedersen [\[9\]](#ref-petersen2012matrix) is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and [derivatives](calculus-derivatives.llms.md#def-derivative) of vectors and matrices, so it is a quick place to look up a formula these pages prove.
+- Stanford University [\[10\]](#ref-stanford2024ee278notes) (Stanford EE 278, taught by Tsachy Weissman) applies this page’s tools to probability and inference. Its “MMSE Geometry” lecture treats the best estimate as an orthogonal [projection](linear-algebra-projections.llms.md), and its lectures on spectral decomposition, the Karhunen-Loeve expansion and principal component analysis treat [diagonalization](linear-algebra-diagonalization.llms.md) of a covariance matrix.
 - [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) is a 16-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops visual and geometric intuition for vectors, linear combinations, spans, linear transformations, matrix multiplication, determinants, inverses, dot and cross products, change of basis, and eigenvectors and eigenvalues.
 
 # Definitions on this page
@@ -65,25 +66,29 @@ G. Strang, *Introduction to linear algebra*, 6th ed. Wellesley, MA: Wellesley-Ca
 
 \[4\]
 
-S. Axler, *Linear algebra done right*, 4th ed. in Undergraduate texts in mathematics. Springer, 2024. doi: [10.1007/978-3-031-41026-0](https://doi.org/10.1007/978-3-031-41026-0).
+T. Nield, *Essential math for data science: Take control of your data with fundamental linear algebra, probability, and statistics*. Sebastopol, CA: O’Reilly Media, 2022.
 
 \[5\]
 
-K. Lange, *Numerical analysis for statisticians*, 2nd ed. in Statistics and computing. Springer, 2010. doi: [10.1007/978-1-4419-5945-4](https://doi.org/10.1007/978-1-4419-5945-4).
+S. Axler, *Linear algebra done right*, 4th ed. in Undergraduate texts in mathematics. Springer, 2024. doi: [10.1007/978-3-031-41026-0](https://doi.org/10.1007/978-3-031-41026-0).
 
 \[6\]
 
-N. Fieller, *Basics of matrix algebra for statistics with R*. Chapman; Hall/CRC, 2016. doi: [10.1201/9781315370200](https://doi.org/10.1201/9781315370200).
+K. Lange, *Numerical analysis for statisticians*, 2nd ed. in Statistics and computing. Springer, 2010. doi: [10.1007/978-1-4419-5945-4](https://doi.org/10.1007/978-1-4419-5945-4).
 
 \[7\]
 
-S. R. Searle and A. I. Khuri, *Matrix algebra useful for statistics*. John Wiley & Sons, 2017.
+N. Fieller, *Basics of matrix algebra for statistics with R*. Chapman; Hall/CRC, 2016. doi: [10.1201/9781315370200](https://doi.org/10.1201/9781315370200).
 
 \[8\]
 
-K. B. Petersen and M. S. Pedersen, “The matrix cookbook,” Technical University of Denmark, Nov. 2012. Available: <https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf>
+S. R. Searle and A. I. Khuri, *Matrix algebra useful for statistics*. John Wiley & Sons, 2017.
 
 \[9\]
+
+K. B. Petersen and M. S. Pedersen, “The matrix cookbook,” Technical University of Denmark, Nov. 2012. Available: <https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf>
+
+\[10\]
 
 Stanford University, “EE 278, probability and statistical inference: Fall 2024 lecture notes.” Handwritten lecture notes, 2024. Available: <https://web.stanford.edu/class/ee278/lectures.html>
 

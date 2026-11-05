@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 00:56:51 (PST)
+Last modified: 2026-11-05 03:00:12 (PST)
 
 > **NOTE:**
 >
@@ -25,7 +25,8 @@ A link to a section, theorem or definition on this page from before the split go
 
 - Billingsley [\[1\]](#ref-billingsley1995probability) develops measure theory and builds probability on it. Its early chapters define $\sigma$-algebras, measures, and their basic properties.
 - Folland [\[2\]](#ref-folland1999real) is a graduate text on measure and integration; its first chapters treat $\sigma$-algebras and measures.
-- Gut [\[3\]](#ref-gut2013) is a graduate course in probability that opens with a chapter on introductory measure theory.
+- Tao [\[3\]](#ref-tao2011measure) is a one-quarter graduate introduction to measure and integration theory that assumes only an undergraduate analysis course and builds the theory through exercises. It treats $\sigma$-algebras, measures, and Lebesgue integration.
+- Gut [\[4\]](#ref-gut2013) is a graduate course in probability that opens with a chapter on introductory measure theory.
 
 # References
 
@@ -38,6 +39,10 @@ P. Billingsley, *Probability and measure*, 3rd ed. in Wiley series in probabilit
 G. B. Folland, *Real analysis: Modern techniques and their applications*, 2nd ed. Wiley, 1999. Available: <https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166>
 
 \[3\]
+
+T. Tao, *An introduction to measure theory*, vol. 126. in Graduate studies in mathematics, vol. 126. Providence, RI: American Mathematical Society, 2011. doi: [10.1090/gsm/126](https://doi.org/10.1090/gsm/126).
+
+\[4\]
 
 A. Gut, *Probability: A graduate course*, 2nd ed. in Springer texts in statistics. New York: Springer, 2013. doi: [10.1007/978-1-4614-4708-5](https://doi.org/10.1007/978-1-4614-4708-5).
 

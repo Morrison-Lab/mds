@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 00:56:51 (PST)
+Last modified: 2026-11-05 03:00:12 (PST)
 
 This page moved to [Relations](https://morrison-lab.github.io/mcs/relations.html) in the Math for Computer Science notes.
 

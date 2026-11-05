@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 00:56:51 (PST)
+Last modified: 2026-11-05 03:00:12 (PST)
 
 The calculus notes are split across these pages:
 
@@ -25,6 +25,7 @@ A link to a section, theorem or definition on this page from before the split go
   - <http://www.youtube.com/watch?v=xYzQL0TUtBA>
   - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - Grinberg [\[6\]](#ref-realanalysislifesaver) (the rigorous foundations behind these results)
+- Nield [\[7\]](#ref-nield2022essential) is a short, code-driven review of the calculus used in data science (Chapter 1), with Python examples and little rigor.
 - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) is a 12-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops geometric and visual intuition for limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series.
 
 # References
@@ -52,5 +53,9 @@ S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Avail
 \[6\]
 
 R. Grinberg, *The real analysis lifesaver: All the tools you need to understand proofs*, 1st ed. in Princeton lifesaver study guides. Princeton: Princeton University Press, 2017. Available: <https://press.princeton.edu/books/paperback/9780691172934/the-real-analysis-lifesaver>
+
+\[7\]
+
+T. Nield, *Essential math for data science: Take control of your data with fundamental linear algebra, probability, and statistics*. Sebastopol, CA: O’Reilly Media, 2022.
 
 Back to top
