@@ -1,7 +1,7 @@
 :::{#def-sequence-limit}
 #### Limit of a sequence
 
-A real number $L$ is the **limit** of a [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(a_n)$ of real numbers
+A [real number](number-systems.qmd#def-real-numbers) $L$ is the **limit** of a [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(a_n)$ of [real numbers](number-systems.qmd#def-real-numbers)
 [@wikipedia_limit_of_a_sequence],
 written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$,
 if for every $\tolout > 0$ there is a natural number $N$ such that

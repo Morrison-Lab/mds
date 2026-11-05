@@ -26,7 +26,7 @@ if $\lbound \le a$ for all $a \in A$.
 #### Bounded above
 
 A set $A \subseteq \reals$ is **bounded above** if it has an upper bound (@def-upper-bound).
-A real-valued [function](https://morrison-lab.github.io/mcs/functions.html#def-function) is
+A [real-valued function](linear-algebra.qmd#def-real-vector-valued) is
 bounded above
 if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
 
@@ -38,7 +38,7 @@ if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
 #### Bounded below
 
 A set $A \subseteq \reals$ is **bounded below** if it has a lower bound (@def-lower-bound).
-A real-valued [function](https://morrison-lab.github.io/mcs/functions.html#def-function) is
+A [real-valued function](linear-algebra.qmd#def-real-vector-valued) is
 bounded below
 if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
 
@@ -51,7 +51,7 @@ if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
 
 A set $A \subseteq \reals$ is **bounded**
 if it is both bounded above (@def-bounded-above) and bounded below (@def-bounded-below).
-A real-valued [function](https://morrison-lab.github.io/mcs/functions.html#def-function) is
+A [real-valued function](linear-algebra.qmd#def-real-vector-valued) is
 bounded
 if its [image](https://morrison-lab.github.io/mcs/functions.html#def-image) is.
 

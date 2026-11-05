@@ -1,7 +1,7 @@
 :::{#def-transitive}
 #### Transitive relation
 
-Let $\sim$ be a [relation](https://morrison-lab.github.io/mcs/functions.html#def-relation) on a set $S$.
+Let $\sim$ be a [relation](https://morrison-lab.github.io/mcs/functions.html#def-relation) on a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$.
 The relation $\sim$ is **transitive**
 [@wikipedia_transitive_relation]
 if,
