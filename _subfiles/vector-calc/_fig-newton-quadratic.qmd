@@ -83,9 +83,9 @@ plt.show();
 
 :::
 
-The level curves of $f$ in @exm-newton-quadratic.
-From the start $\tp{(3, 1)}$, the Newton step (vermilion arrow) goes straight to the minimizer at the origin.
-The negative gradient $-\tp{(3, 3)}$ (grey arrow, drawn at the same length)
-points across the narrow direction of the ellipses and misses it.
+The [level curves](vector-calculus.qmd#def-level-set) of $f$ in @exm-newton-quadratic.
+From the start $\tp{(3, 1)}$, the [Newton step](#def-newton-step) (vermilion arrow) goes straight to the [minimizer](algebra.qmd#def-global-minimizer) at the origin.
+The negative [gradient](vector-calculus.qmd#def-vector-derivative) $-\tp{(3, 3)}$ (grey arrow, drawn as long as the Newton step)
+points across the narrow side of the ellipses and misses the origin.
 
 :::
