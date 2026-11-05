@@ -2,7 +2,7 @@
 #### A saddle point
 
 Let $f(\vx) = x_1^2 - x_2^2$.
-Its gradient is
+Its [gradient](vector-calculus.qmd#def-vector-derivative) is
 
 $$
 \gradf{f}(\vx) = \tp{(2 x_1,\ -2 x_2)}.
