@@ -8,7 +8,7 @@ $$
 \gradf{f}(\vx) = \tp{\paren{2 x_1,\ -2 x_2}}.
 $$
 
-The gradient $\gradf{f}(\vx)$ is $\vzero_{2 \times 1}$ only at $\vx = \vzero_{2 \times 1}$,
+At $\vx = \vzero_{2 \times 1}$, the gradient is $\gradf{f}(\vzero_{2 \times 1}) = \vzero_{2 \times 1}$,
 so $\vzero_{2 \times 1}$ is a stationary point.
 
 For every $t \ne 0$,
