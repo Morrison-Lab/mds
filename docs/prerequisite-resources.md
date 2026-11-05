@@ -55,7 +55,7 @@ so it is not shown to be free.
 | Resource | Author | Level and prerequisites | Measures coverage | Access and license | Status |
 | --- | --- | --- | --- | --- | --- |
 | [*Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares*](https://web.stanford.edu/~boyd/vmls/) | Stephen Boyd and Lieven Vandenberghe | Undergraduate; textbook for Stanford ENGR108 and UCLA EE133A; the page states no prerequisites | None: applied linear algebra | Free book download on the authors' page; the page says Cambridge University Press holds the copyright and agreed to keep the book on the web | fetched |
-| *Linear Algebra Done Wrong* | Sergei Treil | Undergraduate; proof-based | unchecked | Free on the author's page at Brown University | unchanged: the Brown URLs tried did not resolve and a Google Sites page did not mention the book |
+| *Linear Algebra Done Wrong* | Sergei Treil | Undergraduate; proof-based | unchecked | Free on the author's page at Brown University | unchanged |
 | [*Linear Algebra*](https://hefferon.net/linearalgebra/index.html) | Jim Hefferon | First undergraduate course; prerequisite one semester of calculus; the page says it proves all results and builds mathematical maturity | None: linear systems, vector spaces, linear maps, determinants, eigenvalues | Free, including the LaTeX source, through OpenIntro with the price slider at 0; the page links a "License and source" page that returned 404, so the license is unconfirmed (the earlier GFDL or CC BY-SA report is unchecked) | fetched |
 
 Strang's *Linear Algebra and Learning from Data* is the data science book of the Strang books, and it is not free.
@@ -81,7 +81,7 @@ The search found no free optimization-for-machine-learning lecture notes.
 | Resource | Author | Level and prerequisites | Measures coverage | Access and license | Status |
 | --- | --- | --- | --- | --- | --- |
 | [*Introduction to Probability for Data Science*](https://probability4datascience.com/), 2nd ed. (Michigan Publishing, 2026) | Stanley H. Chan | The page calls it a free undergraduate textbook; the eBook opens with a chapter of mathematical background | None indicated: the eBook lists set theory, probability space, axioms, random variables, joint distributions, sample statistics, regression, estimation and hypothesis testing, with no $\sigma$-algebra or measure section | The author says the book is free for everyone and links a free PDF and an HTML edition; the page states no license, so read the copyright page of the PDF first | fetched |
-| Blitzstein and Hwang, *Introduction to Probability* ([probabilitybook.net](https://www.probabilitybook.net/)) | Joseph Blitzstein and Jessica Hwang | not read | not read | The page redirects to a Google Drive file titled "Blitzstein Hwang Probability.pdf" behind a sign-in screen, so it states no terms | not read |
+| Blitzstein and Hwang, *Introduction to Probability* ([probabilitybook.net](https://www.probabilitybook.net/)) | Joseph Blitzstein and Jessica Hwang | unchecked | unchecked | The page redirects to a Google Drive file titled "Blitzstein Hwang Probability.pdf" behind a sign-in screen, so it states no terms | not read |
 | *Probability for Data Science* | Ani Adhikari and Jim Pitman (Berkeley Data 140) | Undergraduate | unchecked | Free online; CC BY-NC-ND 4.0, as reported by search | search only |
 | *Essential Probability Theory for Data Science* (DSCI 500B) | Kuter | Course text | unchecked | Free on LibreTexts | search only |
 | [*Foundations of Data Science*](https://www.cs.cornell.edu/jeh/book.pdf) (draft dated 4 Jan 2018) | Avrim Blum, John Hopcroft and Ravindran Kannan | Graduate-level topics; the PDF states no prerequisites | None in the contents lines read: introduction, high-dimensional space, random walks and Markov chains, machine learning, clustering, random graphs, other topics, appendix | The PDF carries "Copyright 2015. All rights reserved," so the free copy is the authors' posting, not an open license | fetched |
@@ -98,7 +98,7 @@ The search found no free optimization-for-machine-learning lecture notes.
 | Resource | Author | Level and prerequisites | Measures coverage | Access and license | Status |
 | --- | --- | --- | --- | --- | --- |
 | [*Information Theory, Inference, and Learning Algorithms*](https://www.inference.org.uk/itila/book.html) | David J. C. MacKay | Undergraduate to master's; the page states no prerequisites (the contents are on a separate page, not read) | unchecked | The page says the files "will remain viewable" and links PDF copies at Toronto and AIMS. The book is copyright Cambridge University Press, "the same copyright rules will apply to the online copy as … to normal books," and copying the whole book onto paper is not permitted. The page was last modified in 2014 | fetched |
-| *Information Theory: From Coding to Learning* (prepublication PDF, 16 Aug 2024) | Yury Polyanskiy and Yihong Wu | Advanced undergraduate and graduate, per the front matter | None indicated: six parts on information measures, data compression, hypothesis testing and large deviations, channel coding, rate-distortion and metric entropy, and statistical applications | The PDF front matter says the prepublication version is free to view and download for personal use only, not for redistribution, resale or use in derivative works. Only the front matter of the PDF was read, and the author's MIT homepage links no book page | fetched (PDF front matter) |
+| [*Information Theory: From Coding to Learning*](https://people.lids.mit.edu/yp/homepage/data/itbook-export.pdf) (prepublication PDF, 16 Aug 2024, front matter read) | Yury Polyanskiy and Yihong Wu | Advanced undergraduate and graduate, per the front matter | None indicated: six parts on information measures, data compression, hypothesis testing and large deviations, channel coding, rate-distortion and metric entropy, and statistical applications | The PDF front matter says the prepublication version is free to view and download for personal use only, not for redistribution, resale or use in derivative works. Only the front matter of the PDF was read, and the author's MIT homepage links no book page | fetched |
 
 ## Already in the project library
 
@@ -119,7 +119,7 @@ so each needs a public link and a license check before it appears on a page.
 
 - Wasserman's intermediate statistics lecture notes (Carnegie Mellon).
 
-## Pages that could not be read in the second pass
+## Pages that failed to load, by pass
 
 - `https://www.probabilitybook.net/` redirects to a Google Drive sign-in.
 - Sergei Treil's *Linear Algebra Done Wrong*: the Brown URLs tried did not resolve, so the page is still unread.
