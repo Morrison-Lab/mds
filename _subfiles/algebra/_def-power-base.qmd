@@ -1,0 +1,6 @@
+:::{#def-power-base}
+#### Base of a power
+
+In $a^n$ (@def-power), $a$ is the **base**.
+
+:::

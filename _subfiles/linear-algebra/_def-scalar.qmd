@@ -3,19 +3,7 @@
 
 In linear algebra, a **scalar**
 [@wikipedia_scalar_mathematics]
-is a single [real number](number-systems.qmd#def-real-numbers),
+is a single [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers),
 as opposed to a vector or a matrix, which holds several numbers.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-scalar}
-#### Scalars and a vector
-
-The numbers $5$ and $-0.2$ are scalars.
-The column vector $(5, -0.2)$ is not a scalar:
-it has $2$ entries, so it is in $\reals^2$ (@def-real-coordinate-space),
-and each of its $2$ entries is a scalar.
 
 :::

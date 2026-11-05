@@ -3,7 +3,7 @@
 
 The **arccosine** $\arccos : [-1, 1] \to [0, \pi]$
 is the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that sends each [cosine](#def-cosine-sine), $c \in [-1, 1]$,
-to the one [real number](number-systems.qmd#def-real-numbers) $\angpar \in [0, \pi]$ whose cosine is $c$.
+to the one [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\angpar \in [0, \pi]$ whose cosine is $c$.
 By @thm-cosine-bijection, there is just one such $\angpar$.
 
 :::

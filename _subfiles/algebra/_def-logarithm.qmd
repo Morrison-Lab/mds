@@ -1,7 +1,7 @@
 :::{#def-logarithm}
 #### Logarithm
 
-Let $b$ be a positive [real number](number-systems.qmd#def-real-numbers) with $b \ne 1$.
+Let $b$ be a positive [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) with $b \ne 1$.
 For every real number $x > 0$,
 the **logarithm** of $x$ to the [base](#def-power-base) $b$ [@wikipedia_logarithm],
 written $\log_b x$,

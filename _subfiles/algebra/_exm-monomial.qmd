@@ -9,7 +9,7 @@ Take the four variables $x_1, x_2, x_3, x_4$.
 - $x_1 / x_2 = x_1 x_2^{-1}$ is not a monomial,
   because the [exponent](algebra-basics.qmd#def-power-exponent) of $x_2$ is negative.
 - $\sqrt{x_3} = x_3^{1/2}$ is not a monomial,
-  because its exponent is not an [integer](number-systems.qmd#def-integers).
+  because its exponent is not an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers).
 - $x_1 + x_4$ is not a monomial:
   it adds two monomials rather than multiplying [powers](algebra-basics.qmd#def-power).
 

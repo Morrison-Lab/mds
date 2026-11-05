@@ -2,7 +2,7 @@
 #### A logical argument
 <!-- no-figure: three short sentences; nothing to plot -->
 
-"If $n$ is [even](number-systems.qmd#def-even-odd), then $n^2$ is even.
+"If $n$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd), then $n^2$ is even.
 $n$ is even.
 So $n^2$ is even."
 is a [logical argument](#def-logical-argument).

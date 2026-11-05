@@ -2,37 +2,10 @@
 #### Power
 
 Let $a$ be a real number and $n$ a
-[natural number](number-systems.qmd#def-natural-numbers).
+[natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers).
 The $n$th **power** of $a$ is the product of $n$ copies of $a$
 [@wikipedia_exponentiation]:
 
 $$a^n \eqdef \underbrace{a \cd a \cd \cdots \cd a}_{n \text{ factors}}$$
-
-:::
-
-{{< slidebreak >}}
-
-:::{#def-power-base}
-#### Base of a power
-
-In $a^n$ (@def-power), $a$ is the **base**.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#def-power-exponent}
-#### Exponent of a power
-
-In $a^n$ (@def-power), $n$ is the **exponent**.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#def-square}
-#### Square
-
-The second power $a^2$ (@def-power) is the **square** of $a$.
 
 :::

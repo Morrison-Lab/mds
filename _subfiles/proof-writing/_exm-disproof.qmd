@@ -1,9 +1,9 @@
 :::{#exm-disproof}
 #### A disproof
 
-Claim: every [prime](number-systems.qmd#def-prime) is [odd](number-systems.qmd#def-odd).
+Claim: every [prime](https://morrison-lab.github.io/mcs/number-systems.html#def-prime) is [odd](https://morrison-lab.github.io/mcs/number-systems.html#def-odd).
 
-[Disproof](#def-disproof): the [integer](number-systems.qmd#def-integers) $2$ is prime,
+[Disproof](#def-disproof): the [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) $2$ is prime,
 and $2$ is not odd,
 since $2 = 2k + 1$ would need $k = 1/2$,
 which is not an integer.

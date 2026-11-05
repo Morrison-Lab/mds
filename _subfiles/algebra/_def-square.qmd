@@ -1,0 +1,6 @@
+:::{#def-square}
+#### Square
+
+The second power $a^2$ (@def-power) is the **square** of $a$.
+
+:::

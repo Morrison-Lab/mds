@@ -1,7 +1,7 @@
 :::{#def-weighted-sum}
 #### Weighted sum
 
-A **weighted sum** of the [numbers](number-systems.qmd#def-real-numbers) $a_1, \ldots, a_k$
+A **weighted sum** of the [numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a_1, \ldots, a_k$
 is a [linear combination](#def-linear-combination) of them,
 with [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$:
 

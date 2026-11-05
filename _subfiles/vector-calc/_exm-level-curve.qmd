@@ -1,0 +1,7 @@
+:::{#exm-level-curve}
+#### A level curve of $x_1^2 + x_2^2$
+
+Let $f(\vx) = x_1^2 + x_2^2$ for $\vx = \tp{(x_1, x_2)}$.
+The level curve at $4$ is the circle of radius $2$ around $\vzero$.
+
+:::

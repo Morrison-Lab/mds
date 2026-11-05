@@ -1,0 +1,6 @@
+:::{#def-power-exponent}
+#### Exponent of a power
+
+In $a^n$ (@def-power), $n$ is the **exponent**.
+
+:::

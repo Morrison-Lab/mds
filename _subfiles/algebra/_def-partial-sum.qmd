@@ -3,7 +3,7 @@
 #### Partial sum
 
 Let $a_1, a_2, \ldots$ be a [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence)
-of [real numbers](number-systems.qmd#def-real-numbers) or of [extended non-negative reals](https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals).
+of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) or of [extended non-negative reals](https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals).
 For each $n \in \Nat$, its $n$th **partial sum**
 [@wikipedia_series_mathematics]
 is the [sum](algebra.qmd#def-summation) of its first $n$ terms:

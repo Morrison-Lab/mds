@@ -1,7 +1,7 @@
 :::{#exm-direct-proof}
 #### The square of an odd integer is odd
 
-Claim: if $n$ is an [odd](number-systems.qmd#def-odd) [integer](number-systems.qmd#def-integers),
+Claim: if $n$ is an [odd](https://morrison-lab.github.io/mcs/number-systems.html#def-odd) [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers),
 then $n^2$ is odd.
 
 Since $n$ is odd,
@@ -23,7 +23,7 @@ n^2
 $$
 
 and $2k^2 + 2k$ is an integer,
-because adding or multiplying [integers](number-systems.qmd#def-integers) gives an integer.
+because adding or multiplying [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) gives an integer.
 So $n^2 = 2 \cd (\text{an integer}) + 1$, which is the definition of odd.
 For example,
 

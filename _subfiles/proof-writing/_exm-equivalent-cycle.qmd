@@ -2,11 +2,11 @@
 #### Three equivalent statements
 <!-- no-figure: a short chain of implications; nothing to plot -->
 
-Let $n$ be an [integer](number-systems.qmd#def-integers),
+Let $n$ be an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers),
 and let:
 
-- $P_1$ be "$n$ is [even](number-systems.qmd#def-even-odd)";
-- $P_2$ be "$n + 1$ is [odd](number-systems.qmd#def-odd)";
+- $P_1$ be "$n$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)";
+- $P_2$ be "$n + 1$ is [odd](https://morrison-lab.github.io/mcs/number-systems.html#def-odd)";
 - $P_3$ be "$n + 2$ is even".
 
 If $n = 2m$,

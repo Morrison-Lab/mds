@@ -21,8 +21,8 @@ and the alternatives you may encounter in other sources.
 | $\ind$      | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)         | `\perp\!\!\!\perp`
 | $\tf$       | [therefore](proof-writing.qmd#def-logical-entailment), thus       | `\therefore`
 | $\eta$      | [linear predictor][eta] of a generalized linear model[^4] | `\eta`
-| $\floor{x}$ | floor of $x$: largest [integer](number-systems.qmd#def-integers) less than or equal to $x$ | `\lfloor x \rfloor`
-| $\ceil{x}$  | ceiling of $x$: smallest [integer](number-systems.qmd#def-integers) greater than or equal to $x$ | `\lceil x \rceil`
+| $\floor{x}$ | floor of $x$: largest [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) less than or equal to $x$ | `\lfloor x \rfloor` <!-- check-term-links: allow -->
+| $\ceil{x}$  | ceiling of $x$: smallest [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) greater than or equal to $x$ | `\lceil x \rceil`
 | $\indic{A}(x)$, $\indicp{P}$ | indicator function ([definition](indicator-functions.qmd#def-indicator-function)): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 : Notation used in this book {#tbl-notation-collected}
