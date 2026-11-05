@@ -5,7 +5,7 @@ Let $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ and $\vecf{b} = (2
 By @exm-moore-penrose, $\matr{A}^+ = \matr{A}$,
 so $\matr{A}^+\vecf{b} = (2, 0)$ and $\matr{A}\matr{A}^+\vecf{b} = (2, 0)$.
 
-By @thm-moore-penrose-least-squares, $\vecf{x} = (x_1, x_2)$ is a least squares solution (@def-least-squares) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff)
+By @thm-moore-penrose-least-squares, $\vecf{x} = (x_1, x_2)$ is a [least squares solution](#def-least-squares) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff)
 $\matr{A}\vecf{x} = (x_1, 0) = (2, 0)$,
 that is, $x_1 = 2$ with $x_2$ arbitrary.
 Each of them leaves the same residual $\vecf{b} - \matr{A}\vecf{x} = (0, 3)$, of [norm](linear-algebra-inner-products.qmd#def-norm) $3$.

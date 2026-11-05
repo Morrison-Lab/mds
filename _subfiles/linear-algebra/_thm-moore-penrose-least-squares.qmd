@@ -2,8 +2,8 @@
 #### The Moore-Penrose inverse gives a least squares solution
 
 Let $\matr{A}$ be $m \times n$ and $\vecf{b} \in \reals^m$.
-Then $\matr{A}^+\vecf{b}$ is a least squares solution (@def-least-squares) of $\matr{A}\vecf{x} = \vecf{b}$.
-Moreover, a vector $\vecf{x} \in \reals^n$ is a least squares solution [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff)
+Then $\matr{A}^+\vecf{b}$ is a least squares solution (@def-least-squares) of $\matr{A}\vecf{x} = \vecf{b}$,
+and a vector $\vecf{x} \in \reals^n$ is a least squares solution [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff)
 
 $$
 \matr{A}\vecf{x} = \matr{A}\matr{A}^+\vecf{b}.
