@@ -50,7 +50,7 @@ For the logical symbols and proof conventions used in these notes
   with propositional logic (the logic of connectives)
   and first-order logic (which adds quantifiers).
 
-For [set](sets.qmd#def-set) and [function](functions.qmd#def-function) notation, see the [Sets](sets.qmd), [Functions](functions.qmd), and [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html) pages.
+For [set](https://morrison-lab.github.io/mcs/sets.html#def-set) and [function](functions.qmd#def-function) notation, see the [Sets](https://morrison-lab.github.io/mcs/sets.html), [Functions](functions.qmd), and [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html) pages.
 
 The [Math for Computer Science notes](https://morrison-lab.github.io/mcs/notation.html) keep a copy of this notation page for discrete mathematics.
 Two pages have moved there: [Relations](https://morrison-lab.github.io/mcs/relations.html) and [Growth Rates](https://morrison-lab.github.io/mcs/growth-rates.html).

@@ -1,13 +1,13 @@
 :::{#exm-finite-additivity}
 #### Counting elements is finitely additive
 
-For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets.qmd#exm-set)),
+For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](https://morrison-lab.github.io/mcs/sets.html#exm-set)),
 let $\measure(A) \eqdef \abs{A}$, the number of elements of $A$
 ([cardinality](functions.qmd#def-cardinality)),
 for each set $A$ in the $\sigma$-algebra of all subsets of $D$
 (@exm-sigma-algebra).
 The sets $\set{1, 2}$ and $\set{5, 6}$ are pairwise disjoint
-([low, middle and high die rolls](sets.qmd#exm-pairwise-disjoint)), and:
+([low, middle and high die rolls](https://morrison-lab.github.io/mcs/sets.html#exm-pairwise-disjoint)), and:
 
 $$
 \ba

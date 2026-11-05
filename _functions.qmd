@@ -5,7 +5,7 @@
 Random variables, densities, and measures are functions.
 This page collects the definitions of functions, sequences, and countable sets
 that the Morrison Lab's probability and statistics notes build on.
-The functions here go between the sets defined on the [Sets](sets.qmd) page.
+The functions here go between the sets defined on the [Sets](https://morrison-lab.github.io/mcs/sets.html) page.
 
 :::
 
