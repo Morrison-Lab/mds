@@ -1,4 +1,5 @@
 :::{#def-partition}
+<!-- def-equiv-ok: the chain is the defining condition on the points, not a result -->
 #### Partition of an interval
 
 A **partition** $\mathcal{P}$ of a closed interval $[a, b]$
