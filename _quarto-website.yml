@@ -57,7 +57,6 @@ website:
         menu:
           - sets.qmd
           - functions.qmd
-          - expressions-algorithms.qmd
           - indicator-functions.qmd
       - text: "Algebra"
         menu:
@@ -142,7 +141,6 @@ website:
         contents:
           - sets.qmd
           - functions.qmd
-          - expressions-algorithms.qmd
           - indicator-functions.qmd
       - section: "Algebra"
         href: algebra.qmd

@@ -10,4 +10,13 @@ format:
     output-file: expressions-algorithms.docx
 ---
 
-{{< include mds/_expressions-algorithms.qmd >}}
+```{=html}
+<meta http-equiv="refresh" content="5; url=https://morrison-lab.github.io/mcs/expressions-algorithms.html">
+<script>
+// This page moved to the Math for Computer Science notes (https://github.com/Morrison-Lab/mcs/issues/60).
+// Send the reader, with any #id, to the same page there; the ids did not change.
+location.replace("https://morrison-lab.github.io/mcs/expressions-algorithms.html" + location.search + location.hash);
+</script>
+```
+
+This page moved to [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html) in the Math for Computer Science notes.
