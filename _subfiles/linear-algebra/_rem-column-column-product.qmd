@@ -1,0 +1,9 @@
+:::{#rem-column-column-product}
+#### Column-column products
+
+Ordinary [matrix multiplication](linear-algebra.qmd#def-matrix-mult) pairs a row of the left factor with a column of the right factor,
+which makes each entry a [row-by-column product](linear-algebra.qmd#def-matrix-mult) [@northwestern_linalg_chap1, Section 2].
+Each entry of a [cross-product matrix](#def-cross-product-matrix) instead pairs a column of $\matr{A}$ with a column of $\matr{B}$,
+so in these notes we call it a column-column [product](linear-algebra.qmd#def-dot-product).
+
+:::
