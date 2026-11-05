@@ -109,7 +109,7 @@ plt.show();
 
 :::
 
-The [graph](functions.qmd#def-graph) of the third [function](functions.qmd#def-function) in @exm-convex-hessian,
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in @exm-convex-hessian,
 the surface whose [level curves](vector-calculus.qmd#def-level-set) are in @fig-convex-hessian.
 Along the dashed line through the origin in the [direction](vector-calculus.qmd#def-direction) $\tp{(1, -2)}$ the surface is a straight line, so the function is [linear](algebra.qmd#def-linear-function) there.
 The function is therefore [convex](algebra.qmd#def-convex-function) but not [strictly convex](#def-strictly-convex).

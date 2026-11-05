@@ -54,7 +54,7 @@ $$
 $$
 
 For $\steplen < \steplen^*$, $\convrate(\steplen)$ is at least the decreasing expression,
-which exceeds its [value](functions.qmd#def-value) at $\steplen^*$.
+which exceeds its [value](https://morrison-lab.github.io/mcs/functions.html#def-value) at $\steplen^*$.
 For $\steplen > \steplen^*$, $\convrate(\steplen)$ is at least the increasing expression,
 which exceeds its value at $\steplen^*$.
 So $\steplen^*$ is the [minimizer](algebra.qmd#def-global-minimizer), and

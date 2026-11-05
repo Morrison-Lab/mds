@@ -135,7 +135,7 @@ plt.show();
 
 :::
 
-The [graph](functions.qmd#def-graph) of the [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial) $f$ from @exm-quasi-newton-step,
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [quadratic function](algebra-exponentials.qmd#def-quadratic-polynomial) $f$ from @exm-quasi-newton-step,
 the surface whose [level curves](vector-calculus.qmd#def-level-set) are in @fig-quasi-newton-step.
 The start $\vx^{(0)} = \vzero$ (blue circle),
 the point $\vx^{(1)}$ reached after one [steepest-descent](#def-gradient-descent) step (vermilion circle),

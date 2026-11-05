@@ -1,7 +1,7 @@
 :::{#def-real-vector-valued}
 #### Real-valued function, scalar-valued function
 
-A [function](functions.qmd#def-function) $f : A \to \reals$,
+A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : A \to \reals$,
 whose values are numbers,
 is **real-valued** (also called **scalar-valued**, since its values are [scalars](#def-scalar)).
 

@@ -12,7 +12,7 @@ a short enough step in the descent direction $-\vecf{g}$ (@def-descent-direction
 ::: proof
 
 Let $h(s) \eqdef f(\vx - s \vecf{g})$.
-The [inner function](functions.qmd#def-inner-function) $s \mapsto \vx - s \vecf{g}$ has [derivative](vector-calculus.qmd#def-vector-valued-derivative) $-\tp{\vecf{g}}$,
+The [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $s \mapsto \vx - s \vecf{g}$ has [derivative](vector-calculus.qmd#def-vector-valued-derivative) $-\tp{\vecf{g}}$,
 so by the [vector chain rule](vector-calculus.qmd#thm-chain-vec)
 
 $$

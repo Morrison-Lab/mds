@@ -4,8 +4,8 @@
 - Every [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval), such as $[0, 1]$, $(2, 5)$, or $[0, \infty)$, is a [Borel set](#def-borel-set).
 - A single point $\set{a} = [a, a]$ is an interval, so it is a Borel set.
 - The [integers](number-systems.qmd#def-integers) are a Borel set:
-  they are the [union](https://morrison-lab.github.io/mcs/sets.html#def-union) of the [sequence](functions.qmd#def-sequence) of single points $\set{0}, \set{1}, \set{-1}, \set{2}, \set{-2}, \ldots$
-  ([countable and uncountable sets](functions.qmd#exm-countable-set) lists them this way),
+  they are the [union](https://morrison-lab.github.io/mcs/sets.html#def-union) of the [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of single points $\set{0}, \set{1}, \set{-1}, \set{2}, \set{-2}, \ldots$
+  ([countable and uncountable sets](https://morrison-lab.github.io/mcs/functions.html#exm-countable-set) lists them this way),
   and $\borel$ contains that union by @def-sigma-algebra.
 - The [complement](https://morrison-lab.github.io/mcs/sets.html#def-complement) $\reals \setminus [0, 1]$ is a Borel set,
   because $\borel$ contains the complement of each of its sets.

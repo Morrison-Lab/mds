@@ -2,7 +2,7 @@
 #### Measurable function
 
 Let $(S, \salg)$ be a [measurable space](#def-measurable-space).
-A [function](functions.qmd#def-function) $f : S \to \reals$
+A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : S \to \reals$
 is **measurable** (with respect to $\salg$)
 [@wikipedia_measurable_function]
 if, for every real number $c$,

@@ -5,6 +5,6 @@ A number $a$ is **idempotent**
 [@wikipedia_idempotence]
 if $a \cd a = a$.
 A function $f$ with real values is **idempotent** if $f(x) \cd f(x) = f(x)$
-for every $x$ in its [domain](functions.qmd#def-domain).
+for every $x$ in its [domain](https://morrison-lab.github.io/mcs/functions.html#def-domain).
 
 :::

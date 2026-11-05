@@ -1,7 +1,7 @@
 :::{#def-inflection-point}
 #### Inflection point
 
-An **inflection point** of a [function](functions.qmd#def-function) $f$ is a point $c$
+An **inflection point** of a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ is a point $c$
 such that, on some [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $c$,
 the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''$ is positive on one side of $c$ and negative on the other.
 

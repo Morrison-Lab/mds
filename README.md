@@ -21,7 +21,6 @@ or more fragments, which are what a host site includes:
 |----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | [Notation](notation.qmd)                                 | `mds/_notation.qmd`                                                                                                    |
 | [Number Systems](number-systems.qmd)                     | `mds/_number-systems.qmd`                                                                                              |
-| [Functions](functions.qmd)                               | `mds/_functions.qmd`                                                                                                   |
 | [Indicator Functions](indicator-functions.qmd)           | `mds/_indicator-functions.qmd`                                                                                         |
 | [Algebra](algebra.qmd)                                   | `mds/_algebra.qmd`                                                                                                     |
 | [Measures](measures.qmd)                                 | `mds/_measures.qmd`                                                                                                    |
@@ -31,12 +30,11 @@ or more fragments, which are what a host site includes:
 | [Optimization](optimization.qmd)                         | `mds/_subfiles/_sec_optimization.qmd`                                                                                  |
 | [Proof Writing](proof-writing.qmd)                       | `mds/_proof-writing.qmd`                                                                                               |
 
-`mds/_sets-functions.qmd` still includes the one fragment of the old
-Sets and Functions page that stays here, the functions fragment.
-The sets and the expressions and algorithms fragments moved to
-[Math for Computer Science notes](https://github.com/Morrison-Lab/mcs/issues/60).
-`_notation.qmd`, `_number-systems.qmd`,
-`_functions.qmd`, `_indicator-functions.qmd`,
+The sets, functions, and expressions and algorithms fragments of the old
+Sets and Functions page moved to the
+[Math for Computer Science notes](https://github.com/Morrison-Lab/mcs/issues/60),
+and `mds/_sets-functions.qmd` went with them.
+`_notation.qmd`, `_number-systems.qmd`, `_indicator-functions.qmd`,
 `_algebra.qmd`, and `_measures.qmd`
 include `latex-macros/macros.qmd` themselves; a host page that includes
 any of the other fragments must include `latex-macros/macros.qmd` first,

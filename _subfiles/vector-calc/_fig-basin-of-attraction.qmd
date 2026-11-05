@@ -93,7 +93,7 @@ plt.show()
 
 [Gradient descent](#def-gradient-descent)
 with [step length](#def-gradient-descent) $`{r} basin_step_bs`$
-on the double-well [function](functions.qmd#def-function)
+on the double-well [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
 of @exm-basin-of-attraction,
 from six starting points
 between $-1.5$ and $1.5$.

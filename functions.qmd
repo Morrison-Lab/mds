@@ -10,10 +10,13 @@ format:
     output-file: functions.docx
 ---
 
-{{< include mds/_functions.qmd >}}
+```{=html}
+<meta http-equiv="refresh" content="5; url=https://morrison-lab.github.io/mcs/functions.html">
+<script>
+// This page moved to the Math for Computer Science notes (https://github.com/Morrison-Lab/mcs/issues/60).
+// Send the reader, with any #id, to the same page there; the ids did not change.
+location.replace("https://morrison-lab.github.io/mcs/functions.html" + location.search + location.hash);
+</script>
+```
 
-
-# References {.unnumbered}
-
-::: {#refs}
-:::
+This page moved to [Functions](https://morrison-lab.github.io/mcs/functions.html) in the Math for Computer Science notes.

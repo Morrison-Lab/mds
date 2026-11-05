@@ -117,7 +117,7 @@ plt.show();
 
 :::
 
-The [graph](functions.qmd#def-graph) of the [function](functions.qmd#def-function) of @exm-stationary-point,
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of @exm-stationary-point,
 the surface whose [level curves](vector-calculus.qmd#def-level-curve) are in @fig-stationary-point.
 The surface is flat, with [gradient](vector-calculus.qmd#def-vector-derivative) $\vzero$, only at the bottom of the bowl above the center $(1, 0)$ of the circles,
 the [stationary point](#def-stationary-point) (circle).

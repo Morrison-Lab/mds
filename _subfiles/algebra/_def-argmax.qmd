@@ -1,7 +1,7 @@
 :::{#def-argmax}
 #### Argmax
 
-Let $f : A \to \reals$ be a [function](functions.qmd#def-function).
+Let $f : A \to \reals$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function).
 The **argmax** of $f$ over $A$
 [@wikipedia_arg_max]
 is the set of inputs where $f$ takes its largest value:

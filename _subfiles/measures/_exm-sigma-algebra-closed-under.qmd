@@ -2,8 +2,8 @@
 #### A $\sigma$-algebra is closed under complements and countable unions
 
 A [$\sigma$-algebra](#def-sigma-algebra) $\salg$ on a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$
-is [closed under](functions.qmd#def-closed-under) [complements](https://morrison-lab.github.io/mcs/sets.html#def-complement) in $S$
-and under [unions](https://morrison-lab.github.io/mcs/sets.html#def-union) of [sequences](functions.qmd#def-sequence) of its [sets](https://morrison-lab.github.io/mcs/sets.html#def-set),
+is [closed under](https://morrison-lab.github.io/mcs/functions.html#def-closed-under) [complements](https://morrison-lab.github.io/mcs/sets.html#def-complement) in $S$
+and under [unions](https://morrison-lab.github.io/mcs/sets.html#def-union) of [sequences](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of its [sets](https://morrison-lab.github.io/mcs/sets.html#def-set),
 because @def-sigma-algebra requires both.
 The [collection](https://morrison-lab.github.io/mcs/sets.html#def-collection) in @exm-not-sigma-algebra is not closed under complements.
 

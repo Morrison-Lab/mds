@@ -1,9 +1,9 @@
 :::{#def-sum-over-set}
 #### Sum over a finite set
 
-Let $A = \cb{x_1, x_2, \ldots, x_k}$ be a [finite set](functions.qmd#def-finite-set)
+Let $A = \cb{x_1, x_2, \ldots, x_k}$ be a [finite set](https://morrison-lab.github.io/mcs/functions.html#def-finite-set)
 with $k \ge 1$ different elements.
-Let $f$ be a [function](functions.qmd#def-function)
+Let $f$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
 that gives a number $f(x)$ for each element $x$ of $A$.
 The **sum of $f$ over $A$** is
 

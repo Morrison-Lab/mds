@@ -10,7 +10,7 @@ $$
 $$
 
 for some vector $\vecf{x}_0 \in \reals^p$ and some subspace $\mathcal{S}$ of $\reals^p$ (@def-subspace):
-the [image](functions.qmd#def-image) of $\mathcal{S}$
+the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $\mathcal{S}$
 under the translation by $\vecf{x}_0$ (@def-translation).
 
 :::

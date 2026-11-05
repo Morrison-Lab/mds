@@ -10,7 +10,7 @@ for observation $i$,
 the $p$ entries the model uses.
 These can be covariates, a $1$ for the [intercept](algebra-exponentials.qmd#def-intercept),
 $0/1$ columns for categories,
-or [functions](functions.qmd#def-function) of covariates, such as $\predvar^2$.
+or [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of covariates, such as $\predvar^2$.
 For a straight-line fit, for example, the design matrix has a first column of 1s,
 which allows the intercept to be estimated
 [@wikipedia_design_matrix; @dobson4e, Section 2.4].

@@ -1,7 +1,7 @@
 :::{#def-critical-point}
 #### Critical point
 
-Let $f$ be a [function](functions.qmd#def-function) defined on an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) containing $c$.
+Let $f$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) defined on an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) containing $c$.
 The point $c$ is a **critical point** of $f$
 if either $f'(c) = 0$ or $f$ is not [differentiable at](calculus.qmd#def-differentiable) $c$.
 

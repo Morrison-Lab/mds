@@ -4,7 +4,7 @@
 The [real numbers](number-systems.qmd#def-real-numbers) $\reals$ with the [inner product](linear-algebra-inner-products.qmd#def-inner-product) $\iprod{x}{y} = x\,y$
 form an [inner product space](linear-algebra-inner-products.qmd#def-inner-product-space),
 and $\norm{x} = \abs{x}$ in it.
-The [sequence](functions.qmd#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence).
+The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence).
 Given $\tolout > 0$,
 take $N$ to be any [natural number](number-systems.qmd#def-natural-numbers) larger than $\frac{1}{\tolout}$.
 [For all](proof-writing.qmd#def-universal-quantifier) $m, n \ge N$,
