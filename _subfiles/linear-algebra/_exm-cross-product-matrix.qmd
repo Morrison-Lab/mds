@@ -1,0 +1,22 @@
+:::{#exm-cross-product-matrix}
+#### A cross-product matrix
+
+Let $\matr{A} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}$
+and $\matr{B} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$.
+Then $\tprod{\matr{A}}{\matr{B}}$ is $2 \times 1$, and
+
+$$
+\ba
+\tprod{\matr{A}}{\matr{B}}
+&= \begin{bmatrix} \vecf{a}_1 \cdot \vecf{b}_1 \\ \vecf{a}_2 \cdot \vecf{b}_1 \end{bmatrix}
+&& \text{(@def-cross-product-matrix)}
+\\
+&= \begin{bmatrix} 1 + 2 + 0 \\ 0 + 2 + 3 \end{bmatrix}
+&& \text{(multiply and add)}
+\\
+&= \begin{bmatrix} 3 \\ 5 \end{bmatrix}.
+&& \text{(add)}
+\ea
+$$
+
+:::
