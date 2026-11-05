@@ -5,7 +5,7 @@ Let $f(\vx) = x_1^2 - x_2^2$.
 Its [gradient](vector-calculus.qmd#def-vector-derivative) is
 
 $$
-\gradf{f}(\vx) = \tp{(2 x_1,\ -2 x_2)}.
+\gradf{f}(\vx) = \tp{\paren{2 x_1,\ -2 x_2}}.
 $$
 
 The gradient $\gradf{f}(\vx)$ is $\vzero_{2 \times 1}$ only at $\vx = \vzero_{2 \times 1}$,
