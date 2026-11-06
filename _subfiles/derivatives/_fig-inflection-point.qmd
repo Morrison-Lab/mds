@@ -1,0 +1,74 @@
+::: {#fig-inflection-point}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: inflection-point-r
+#| fig-alt: >-
+#|   Two side-by-side plots on x from -1 to 1, each with a vermilion circle
+#|   at the origin. The first, f of x equals x cubed, is a blue curve that
+#|   bends downward for negative x and upward for positive x. The second,
+#|   the second derivative 6 x, is a blue straight line that crosses zero
+#|   at the origin, negative to its left and positive to its right.
+#| fig-height: 3
+#| fig-width: 6
+ip_x_ip <- seq(-1, 1, length.out = 201)
+ip_labels_ip <- c("f(x) = x^3", "f''(x) = 6x")
+ip_values_ip <- c(ip_x_ip^3, 6 * ip_x_ip)
+ip_n_ip <- length(ip_x_ip)
+ip_fn_ip <- rep(ip_labels_ip, each = ip_n_ip)
+ip_fn_ip <- factor(ip_fn_ip, levels = ip_labels_ip)
+ip_x_rep_ip <- rep(ip_x_ip, 2)
+ip_curves_ip <- tibble::tibble(
+  x = ip_x_rep_ip, value = ip_values_ip, fn = ip_fn_ip
+)
+ip_origin_fn_ip <- factor(ip_labels_ip, levels = ip_labels_ip)
+ip_origin_ip <- tibble::tibble(x = 0, value = 0, fn = ip_origin_fn_ip)
+ip_aes_ip <- ggplot2::aes(x, value)
+ip_facet_ip <- ggplot2::vars(fn)
+ip_curves_ip |>
+  ggplot2::ggplot() +
+  ip_aes_ip +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(data = ip_origin_ip, colour = "#D55E00", size = 3) +
+  ggplot2::facet_wrap(ip_facet_ip, scales = "free_y") +
+  ggplot2::labs(x = "x", y = "function value")
+```
+
+### Python
+
+```{python}
+#| label: inflection-point-python
+#| fig-alt: >-
+#|   Two side-by-side plots on x from -1 to 1, each with a vermilion circle
+#|   at the origin. The first, f of x equals x cubed, is a blue curve that
+#|   bends downward for negative x and upward for positive x. The second,
+#|   the second derivative 6 x, is a blue straight line that crosses zero
+#|   at the origin, negative to its left and positive to its right.
+#| fig-height: 3
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+ip_x_py = np.linspace(-1, 1, 201)
+fig, axes = plt.subplots(1, 2, figsize=(6, 3), layout="constrained")
+axes[0].plot(ip_x_py, ip_x_py**3, color="#0072B2")
+axes[0].plot([0], [0], "o", color="#D55E00")
+axes[0].set_title("f(x) = x^3")
+axes[1].plot(ip_x_py, 6 * ip_x_py, color="#0072B2")
+axes[1].plot([0], [0], "o", color="#D55E00")
+axes[1].set_title("f''(x) = 6x")
+for ax in axes:
+    ax.set_xlabel("x")
+plt.show();
+```
+
+:::
+
+The [second derivative](calculus-derivatives.qmd#def-second-derivative) $6x$ of $f(x) = x^3$ in @exm-inflection-point changes sign at $0$,
+from negative to positive.
+So the curve $f$ changes from bending downward to bending upward at the [inflection point](#def-inflection-point) $0$.
+
+:::
