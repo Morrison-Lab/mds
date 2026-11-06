@@ -2,10 +2,6 @@
 
 {{< include mds/_subfiles/algebra/_note-elementary-algebra-prereq.qmd >}}
 
-{{< include mds/_subfiles/algebra/_def-transitive.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/algebra/_exm-transitive.qmd >}}
 
 {{< slidebreak >}}
