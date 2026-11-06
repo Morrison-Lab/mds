@@ -19,7 +19,7 @@ the minimizer.
 
 {{< include mds/_subfiles/vector-calc/_fig-newton-quadratic.qmd >}}
 
-@fig-newton-quadratic-3d shows the same [function](functions.qmd#def-function) as a surface.
+@fig-newton-quadratic-3d shows the same [function](https://morrison-lab.github.io/mcs/functions.html#def-function) as a surface.
 
 {{< include mds/_subfiles/vector-calc/_fig-newton-quadratic-3d.qmd >}}
 
