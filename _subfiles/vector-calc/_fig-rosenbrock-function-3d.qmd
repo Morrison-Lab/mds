@@ -11,8 +11,8 @@
 #| fig-alt: >-
 #|   Surface plot of the Rosenbrock function over first coordinates from -2
 #|   to 2 and second coordinates from -1 to 3. The surface is a long curved
-#|   valley with steep walls on both sides, floored by a narrow parabola-
-#|   shaped channel along the dashed curve x2 equals x1 squared. Three marked
+#|   valley with steep walls on both sides, floored by a narrow parabola-shaped
+#|   channel along the dashed curve x2 equals x1 squared. Three marked
 #|   points lie on the surface. The minimizer at (1, 1) on the valley floor
 #|   is a blue circle, the origin on the valley floor is a green square, and
 #|   the standard starting point (-1.2, 1) is an orange diamond, on the left
@@ -111,14 +111,26 @@ cat(
 #| fig-alt: >-
 #|   Surface plot of the Rosenbrock function over first coordinates from -2
 #|   to 2 and second coordinates from -1 to 3. The surface is a long curved
-#|   valley with steep walls on both sides, floored by a narrow parabola-
-#|   shaped channel along the dashed curve x2 equals x1 squared. Three marked
+#|   valley with steep walls on both sides, floored by a narrow parabola-shaped
+#|   channel along the dashed curve x2 equals x1 squared. Three marked
 #|   points lie on the surface. The minimizer at (1, 1) on the valley floor
 #|   is a blue circle, the origin on the valley floor is a green square, and
 #|   the standard starting point (-1.2, 1) is an orange diamond, on the left
 #|   wall just outside the channel.
+import html
 import numpy as np
 import plotly.graph_objects as go
+
+fig_alt = (
+    "Surface plot of the Rosenbrock function over first coordinates from -2 to "
+    "2 and second coordinates from -1 to 3. The surface is a long curved valley "
+    "with steep walls on both sides, floored by a narrow parabola-shaped "
+    "channel along the dashed curve x2 equals x1 squared. Three marked points "
+    "lie on the surface. The minimizer at (1, 1) on the valley floor is a blue "
+    "circle, the origin on the valley floor is a green square, and the standard "
+    "starting point (-1.2, 1) is an orange diamond, on the left wall just "
+    "outside the channel."
+)
 
 rf_x1_3d = np.linspace(-2, 2, 101)
 rf_x2_3d = np.linspace(-1, 3, 101)
@@ -165,7 +177,12 @@ fig.update_layout(
     ),
     legend=dict(orientation="h"),
 );
-print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+print(
+    "```{=html}\n"
+    + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+    + fig.to_html(full_html=False, include_plotlyjs="cdn")
+    + "\n</div>\n```"
+)
 ```
 
 ```{python}
@@ -175,8 +192,8 @@ print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\
 #| fig-alt: >-
 #|   Surface plot of the Rosenbrock function over first coordinates from -2
 #|   to 2 and second coordinates from -1 to 3. The surface is a long curved
-#|   valley with steep walls on both sides, floored by a narrow parabola-
-#|   shaped channel along the dashed curve x2 equals x1 squared. Three marked
+#|   valley with steep walls on both sides, floored by a narrow parabola-shaped
+#|   channel along the dashed curve x2 equals x1 squared. Three marked
 #|   points lie on the surface. The minimizer at (1, 1) on the valley floor
 #|   is a blue circle, the origin on the valley floor is a green square, and
 #|   the standard starting point (-1.2, 1) is an orange diamond, on the left

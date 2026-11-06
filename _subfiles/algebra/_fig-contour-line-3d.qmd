@@ -110,8 +110,17 @@ cat(
 #|   Red circles of radius 1, 2 and 3 around the vertical axis, at heights
 #|   1, 4 and 9, mark the contour lines. Two dots on the circle at height 4
 #|   mark the points (2, 0) and (0, -2).
+import html
 import numpy as np
 import plotly.graph_objects as go
+
+fig_alt = (
+    "Surface plot of g(b, c) = b squared plus c squared for b and c from -3.5 "
+    "to 3.5. The surface is a bowl with its lowest point at the origin. Red "
+    "circles of radius 1, 2 and 3 around the vertical axis, at heights 1, 4 and "
+    "9, mark the contour lines. Two dots on the circle at height 4 mark the "
+    "points (2, 0) and (0, -2)."
+)
 
 cl_s_3d = np.linspace(-3.5, 3.5, 101)
 cl_b_3d, cl_c_3d = np.meshgrid(cl_s_3d, cl_s_3d)
@@ -146,7 +155,12 @@ fig.update_layout(
     ),
     showlegend=False,
 );
-print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+print(
+    "```{=html}\n"
+    + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+    + fig.to_html(full_html=False, include_plotlyjs="cdn")
+    + "\n</div>\n```"
+)
 ```
 
 ```{python}
