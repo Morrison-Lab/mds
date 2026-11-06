@@ -6,7 +6,7 @@ $f(x - 2 s x) = (1 - 2s)^2 x^2 < x^2$ exactly when $\abs{1 - 2s} < 1$, that is, 
 So @thm-descent-direction holds with $\bar{s} = 1$,
 and the step $s = 1.5$ of that example was too long.
 
-@fig-descent-direction plots the ratio $f(x - 2 s x) / f(x)$ against $s$.
+@fig-descent-direction plots the [ratio](algebra-sums.qmd#def-ratio) $f(x - 2 s x) / f(x)$ against $s$.
 
 {{< include mds/_subfiles/vector-calc/_fig-descent-direction.qmd >}}
 
