@@ -1,0 +1,19 @@
+:::{#exm-expand-index-shorthand}
+#### Writing out an index shorthand
+
+Let $n = 3$ and $(x_1, x_2, x_3) = (2, 5, 1)$.
+A source that writes $\sum_{i} x_i$ means $\sumto{i}{3} x_i$:
+
+$$
+\ba
+\sumto{i}{3} x_i
+&= x_1 + x_2 + x_3
+&& \text{(definition of summation notation)} \\
+&= 2 + 5 + 1
+&& \text{(substitute the values)} \\
+&= 8
+&& \text{(add)}
+\ea
+$$
+
+:::
