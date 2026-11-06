@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 > **NOTE:**
 >
@@ -32,7 +32,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Column vector)** A **column vector** [\[1\]](#ref-wikipedia_row_and_column_vectors) of length $p$ is an ordered list of $p$ [real numbers](number-systems.llms.md#def-real-numbers), written vertically as a $p \times 1$ array:
+> **Definition 1 (Column vector)** A **column vector** [\[1\]](#ref-wikipedia_row_and_column_vectors) of length $p$ is an ordered list of $p$ [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), written vertically as a $p \times 1$ array:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}=
 > \begin{bmatrix}
@@ -59,7 +59,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (The set** $\mathbb{R}^p$) For a positive [integer](number-systems.llms.md#def-integers) $p$, $\mathbb{R}^p$ is the set of all [column vectors](#def-column-vector) of length $p$ whose entries are [real numbers](number-systems.llms.md#def-real-numbers).
+> **Definition 2 (The set** $\mathbb{R}^p$) For a [positive integer](https://morrison-lab.github.io/mcs/number-systems.html#def-positive-integer) $p$, $\mathbb{R}^p$ is the set of all [column vectors](#def-column-vector) of length $p$ whose entries are [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
 
 > **NOTE:**
 >
@@ -67,7 +67,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Scalar)** In linear algebra, a **scalar** [\[2\]](#ref-wikipedia_scalar_mathematics) is a single [real number](number-systems.llms.md#def-real-numbers), as opposed to a vector or a matrix, which holds several numbers.
+> **Definition 3 (Scalar)** In linear algebra, a **scalar** [\[2\]](#ref-wikipedia_scalar_mathematics) is a single [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), as opposed to a vector or a matrix, which holds several numbers.
 
 > **NOTE:**
 >
@@ -75,7 +75,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Real-valued function, scalar-valued function)** A [function](functions.llms.md#def-function) $f : A \to \mathbb{R}$, whose values are numbers, is **real-valued** (also called **scalar-valued**, since its values are [scalars](#def-scalar)).
+> **Definition 4 (Real-valued function, scalar-valued function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : A \to \mathbb{R}$, whose values are numbers, is **real-valued** (also called **scalar-valued**, since its values are [scalars](#def-scalar)).
 
 > **NOTE:**
 >
@@ -91,7 +91,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 6 (Transpose)** The **transpose** of a column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the row vector with the same [sequence](functions.llms.md#def-sequence) of entries, written horizontally:
+> **Definition 6 (Transpose)** The **transpose** of a column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the row vector with the same [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of entries, written horizontally:
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \equiv \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}' \equiv [x_1,\; x_2,\; \ldots,\; x_p]$$
 
@@ -170,7 +170,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 11 (Weighted sum)** A **weighted sum** of the [numbers](number-systems.llms.md#def-real-numbers) $a_1, \ldots, a_k$ is a [linear combination](#def-linear-combination) of them, with [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$:
+> **Definition 11 (Weighted sum)** A **weighted sum** of the [numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a_1, \ldots, a_k$ is a [linear combination](#def-linear-combination) of them, with [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$:
 >
 > $$w_1 a_1 + \cdots + w_k a_k = \sum_{i=1}^{k} w_i a_i$$
 >
@@ -195,7 +195,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 13 (Weighted average, weighted mean)** A **weighted average** (or **weighted mean**) of the [numbers](number-systems.llms.md#def-real-numbers) $a_1, \ldots, a_k$ is a [weighted sum](#def-weighted-sum) of them whose [weights](#def-weight) $w_1, \ldots, w_k$ are non-negative and add to $1$:
+> **Definition 13 (Weighted average, weighted mean)** A **weighted average** (or **weighted mean**) of the [numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a_1, \ldots, a_k$ is a [weighted sum](#def-weighted-sum) of them whose [weights](#def-weight) $w_1, \ldots, w_k$ are non-negative and add to $1$:
 >
 > $$\sum_{i=1}^{k} w_i a_i
 > \quad\text{with}\quad

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 # 1 Equalities
 
@@ -12,7 +12,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 1 (Transitive relation)** Let $\sim$ be a [relation](functions.llms.md#def-relation) on a set $S$. The relation $\sim$ is **transitive** [\[1\]](#ref-wikipedia_transitive_relation) if, for all $a, b, c \in S$, $a \sim b$ and $b \sim c$ together imply $a \sim c$.
+> **Definition 1 (Transitive relation)** Let $\sim$ be a [relation](https://morrison-lab.github.io/mcs/functions.html#def-relation) on a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$. The relation $\sim$ is **transitive** [\[1\]](#ref-wikipedia_transitive_relation) if, for all $a, b, c \in S$, $a \sim b$ and $b \sim c$ together imply $a \sim c$.
 
 > **NOTE:**
 >
@@ -31,7 +31,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 2 (Identity)** An **identity** [\[2\]](#ref-wikipedia_identity_mathematics) is an equation between two expressions that holds for every value of its variables in a stated set, such as the [real numbers](number-systems.llms.md#def-real-numbers).
+> **Definition 2 (Identity)** An **identity** [\[2\]](#ref-wikipedia_identity_mathematics) is an equation between two expressions that holds for every value of its variables in a stated [set](https://morrison-lab.github.io/mcs/sets.html#def-set), such as the [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
 
 > **NOTE:**
 >
@@ -44,11 +44,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 3 (Strict inequalities)** For [real numbers](number-systems.llms.md#def-real-numbers) $a$ and $b$, $a < b$ (“$a$ is less than $b$”) and $a > b$ (“$a$ is greater than $b$”) are **strict inequalities** [\[3\]](#ref-wikipedia_inequality_mathematics).
+> **Definition 3 (Strict inequalities)** For [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a$ and $b$, $a < b$ (“$a$ is less than $b$”) and $a > b$ (“$a$ is greater than $b$”) are **strict inequalities** [\[3\]](#ref-wikipedia_inequality_mathematics).
 
 > **NOTE:**
 >
-> **Definition 4 (Non-strict inequalities)** For [real numbers](number-systems.llms.md#def-real-numbers) $a$ and $b$, the **non-strict inequalities** also allow equality, unlike the strict inequalities ([Definition 3](#def-strict-inequality)):
+> **Definition 4 (Non-strict inequalities)** For [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a$ and $b$, the **non-strict inequalities** also allow equality, unlike the strict inequalities ([Definition 3](#def-strict-inequality)):
 >
 > - $a \le b$ means $a < b$ or $a = b$;
 > - $a \ge b$ means $a > b$ or $a = b$.
@@ -81,7 +81,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 5 (Power)** Let $a$ be a real number and $n$ a [natural number](number-systems.llms.md#def-natural-numbers). The $n$th **power** of $a$ is the product of $n$ copies of $a$ [\[4\]](#ref-wikipedia_exponentiation):
+> **Definition 5 (Power)** Let $a$ be a real number and $n$ a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers). The $n$th **power** of $a$ is the product of $n$ copies of $a$ [\[4\]](#ref-wikipedia_exponentiation):
 >
 > $$a^n \stackrel{\text{def}}{=}\underbrace{a \cdot a \cdot\cdots \cdot a}_{n \text{ factors}}$$
 
@@ -131,7 +131,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 9 (Powers with exponent zero or a negative integer)** For the exponent $0$ and negative [integer](number-systems.llms.md#def-integers) exponents:
+> **Definition 9 (Powers with exponent zero or a negative integer)** For the [exponent](#def-power-exponent) $0$ and negative [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) [exponents](#def-power-exponent):
 >
 > - $a^0 \stackrel{\text{def}}{=}1$, including $0^0 = 1$ by convention;
 > - $a^{-n} \stackrel{\text{def}}{=}\frac{1}{a^n}$, when $a \ne 0$.
@@ -245,7 +245,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> *Remark 3* (Not every set has a minimum). The set $\mathopen{}\left\{3, 1, 4\right\}\mathclose{}$ has minimum $1$, and the [interval](sets.llms.md#def-interval) $[0, 1]$ has minimum $0$. The interval $(0, 1]$ has no minimum: every element $a$ of it has a smaller element, $a/2$, also in it.
+> *Remark 3* (Not every set has a minimum). The set $\mathopen{}\left\{3, 1, 4\right\}\mathclose{}$ has minimum $1$, and the [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval) $[0, 1]$ has minimum $0$. The interval $(0, 1]$ has no minimum: every element $a$ of it has a smaller element, $a/2$, also in it.
 
 > **NOTE:**
 >
@@ -260,7 +260,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 15 (Argmin)** Let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **argmin** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its smallest value:
+> **Definition 15 (Argmin)** Let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **argmin** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its smallest value:
 >
 > $$\arg \min_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(x) \le f(a)\right\}\mathclose{}$$
 >
@@ -268,13 +268,13 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> *Remark 4* (Smallest value versus where it occurs). The smallest value itself is $\min f(A)$, the minimum ([Definition 13](#def-minimum)) of the [image](functions.llms.md#def-image) of $f$, and the argmin is where that value is attained. For example, let $f(x) = x^2$ on $A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}$. The image is $f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}$, so the smallest value is $\min f(A) = 0$, and $\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}$.
+> *Remark 4* (Smallest value versus where it occurs). The smallest value itself is $\min f(A)$, the minimum ([Definition 13](#def-minimum)) of the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $f$, and the argmin is where that value is attained. For example, let $f(x) = x^2$ on $A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}$. The image is $f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}$, so the smallest value is $\min f(A) = 0$, and $\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}$.
 >
 > The argmin is empty when $f$ has no smallest value, for example $f(x) = x$ on $(0, 1]$.
 
 > **NOTE:**
 >
-> **Definition 16 (Argmax)** Let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **argmax** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its largest value:
+> **Definition 16 (Argmax)** Let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **argmax** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its largest value:
 >
 > $$\arg \max_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(a) \le f(x)\right\}\mathclose{}$$
 >
@@ -285,7 +285,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 > **Example 9 (An argmax with two points, and an empty one)**  
 >
 > - Let $g(x) = x^2$ on $A = \mathopen{}\left\{-2, 0, 1, 2\right\}\mathclose{}$. The values are $g(-2) = 4$, $g(0) = 0$, $g(1) = 1$ and $g(2) = 4$, so the largest value is $4$ and $\arg \max_{x \in A} g(x) = \mathopen{}\left\{-2, 2\right\}\mathclose{}$. This argmax has two elements, so it is not written as a single $\hat{x}$.
-> - Let $f(x) = x$ on $[0, 1)$. As in [Example 8](#exm-maximum), for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value, so no input attains a largest value, and $\arg \max_{x \in [0, 1)} f(x)$ is the [empty set](sets.llms.md#def-empty-set).
+> - Let $f(x) = x$ on $[0, 1)$. As in [Example 8](#exm-maximum), for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value, so no input attains a largest value, and $\arg \max_{x \in [0, 1)} f(x)$ is the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set).
 
 > **NOTE:**
 >
@@ -319,7 +319,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Theorem 7 (A positive multiple has the same argmax)** Let $g : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function) and let $c > 0$. Then
+> **Theorem 7 (A positive multiple has the same argmax)** Let $g : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) and let $c > 0$. Then
 >
 > $$\arg \max_{x \in A} c\,g(x) = \arg \max_{x \in A} g(x).$$
 
@@ -329,17 +329,17 @@ You are welcome to switch between decimal and percent notation freely; just make
 >
 > Suppose $g(a) \le g(x^*)$. If $g(a) = g(x^*)$, then $c\,g(a) = c\,g(x^*)$. If $g(a) < g(x^*)$, then $c\,g(a) < c\,g(x^*)$ by [Theorem 5](#thm-mult-ineq). Either way, $c\,g(a) \le c\,g(x^*)$.
 >
-> Conversely, suppose $c\,g(a) \le c\,g(x^*)$. Since $1/c > 0$ and $(1/c)\,(c\,g) = g$, the same reasoning applied to the [function](functions.llms.md#def-function) $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
+> Conversely, suppose $c\,g(a) \le c\,g(x^*)$. Since $1/c > 0$ and $(1/c)\,(c\,g) = g$, the same reasoning applied to the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
 >
 > So $c\,g(a) \le c\,g(x^*)$ for every $a \in A$ if and only if $g(a) \le g(x^*)$ for every $a \in A$. Hence $x^*$ is in the argmax of $c\,g$ exactly when it is in the argmax of $g$.
 
 > **NOTE:**
 >
-> **Example 10 (A quadratic and its positive multiple)** With $g(x) = x(4 - x)$ of [Exercise 2](#exr-argmax-quadratic) and $f = 5\,g$ of [Exercise 3](#exr-argmax-scaled-quadratic), [Theorem 7](#thm-argmax-positive-multiple) (with $c = 5$) gives $\arg \max_{x \in [0, 4]} f(x) = \arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, the same [argmax](#def-argmax) as the exercises found. The largest [values](functions.llms.md#def-value) differ, $f(2) = 20$ and $g(2) = 4$, so only the argmax is unchanged by the multiple.
+> **Example 10 (A quadratic and its positive multiple)** With $g(x) = x(4 - x)$ of [Exercise 2](#exr-argmax-quadratic) and $f = 5\,g$ of [Exercise 3](#exr-argmax-scaled-quadratic), [Theorem 7](#thm-argmax-positive-multiple) (with $c = 5$) gives $\arg \max_{x \in [0, 4]} f(x) = \arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, the same [argmax](#def-argmax) as the exercises found. The largest [values](https://morrison-lab.github.io/mcs/functions.html#def-value) differ, $f(2) = 20$ and $g(2) = 4$, so only the argmax is unchanged by the multiple.
 
 > **NOTE:**
 >
-> **Definition 17 (Positive part of a function)** Let $S$ be a [set](sets.llms.md#def-set), and let $f : S \to \mathbb{R}$ be a [function](functions.llms.md#def-function). The **positive part** of $f$ is the non-negative function
+> **Definition 17 (Positive part of a function)** Let $S$ be a [set](https://morrison-lab.github.io/mcs/sets.html#def-set), and let $f : S \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **positive part** of $f$ is the non-negative function
 >
 > $$f^{+}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f(s), 0\right\}\mathclose{}.$$
 
@@ -349,7 +349,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 18 (Negative part of a function)** For $f$ as in [Definition 17](#def-positive-negative-parts), the **negative part** of $f$ is the non-negative [function](functions.llms.md#def-function)
+> **Definition 18 (Negative part of a function)** For $f$ as in [Definition 17](#def-positive-negative-parts), the **negative part** of $f$ is the non-negative [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
 >
 > $$f^{-}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mathclose{}.$$
 
@@ -409,7 +409,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 19 (Global minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). A point $x^* \in A$ is a **global minimizer** of $f$ over $A$ if $f(x^*) \le f(x)$ for all $x \in A$.
+> **Definition 19 (Global minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **global minimizer** of $f$ over $A$ if $f(x^*) \le f(x)$ for all $x \in A$.
 
 > **NOTE:**
 >

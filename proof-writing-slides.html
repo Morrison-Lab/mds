@@ -353,7 +353,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 11:51:36 (PST)</p>
+  <p class="date">Last modified: 2026-11-05 15:25:17 (PST)</p>
 </section><section class="slide level2"><p>This page collects general advice on how to write <a href="#/def-proof">proofs</a> and <a href="#/def-derivation">derivations</a>. The goal of a proof is not just to convince yourself that a <a href="#/def-result">result</a> is true; it is to convince a <em>reader</em>, and to show them <em>why</em> it is true. Each principle on this page serves that goal. The symbols for <a href="#/def-logical-entailment">logical entailment</a> are listed under <a href="#/sec-proof-definitions">Definitions for proofs</a> below.</p>
 </section><section id="sec-proof-definitions" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Definitions for proofs</h2>
@@ -364,7 +364,7 @@
 <p><span class="theorem-title"><strong>Example 1 (Propositions, and a sentence that is not one)</strong></span> &nbsp;</p>
 <ul>
 <li>“<span class="math inline">\(2 + 3 = 5\)</span>” is a proposition, and it is true.</li>
-<li>“<span class="math inline">\(7\)</span> is <a href="./number-systems.html#def-even-odd">even</a>” is a proposition, and it is false.</li>
+<li>“<span class="math inline">\(7\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a>” is a proposition, and it is false.</li>
 <li>“<span class="math inline">\(x &gt; 2\)</span>” is not a proposition on its own: it is true when <span class="math inline">\(x = 3\)</span> and false when <span class="math inline">\(x = 1\)</span>, so it has no truth value until <span class="math inline">\(x\)</span> is given a value.</li>
 </ul>
 </div>
@@ -381,12 +381,12 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-domain-of-discourse" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Domain of discourse, universe of discourse)</strong></span> The <strong>domain of discourse</strong> (or <strong>universe of discourse</strong>) of a <a href="#/def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> is the <a href="#/def-set">set</a> of values its variable <span class="math inline">\(x\)</span> may take. <!-- check-term-links: allow --> A predicate in several variables has a domain of discourse for each variable.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Domain of discourse, universe of discourse)</strong></span> The <strong>domain of discourse</strong> (or <strong>universe of discourse</strong>) of a <a href="#/def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> is the <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> of values its variable <span class="math inline">\(x\)</span> may take. <!-- check-term-links: allow --> A predicate in several variables has a domain of discourse for each variable.</p>
 </div>
 </section><section class="slide level2"><div id="exm-domain-of-discourse" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (The domain changes the truth value)</strong></span> &nbsp;</p>
 <!-- no-figure: two short cases; nothing to plot -->
-<p>Let <span class="math inline">\(P(x)\)</span> be the <a href="#/def-predicate">predicate</a> “<span class="math inline">\(x^2 = 2\)</span>”. If its <a href="#/def-domain-of-discourse">domain of discourse</a> is the <a href="./number-systems.html#def-real-numbers">real numbers</a>, then <span class="math inline">\(P(x)\)</span> is true for <span class="math inline">\(x = \sqrt{2}\)</span>. If its domain of discourse is the <a href="./number-systems.html#def-integers">integers</a>, then <span class="math inline">\(P(x)\)</span> is false for every <span class="math inline">\(x\)</span>, since the <a href="./algebra-basics.html#def-square">squares</a> of the <a href="./number-systems.html#def-integers">integers</a> are <span class="math inline">\(0, 1, 4, 9, \ldots\)</span>, and none of them is <span class="math inline">\(2\)</span>.</p>
+<p>Let <span class="math inline">\(P(x)\)</span> be the <a href="#/def-predicate">predicate</a> “<span class="math inline">\(x^2 = 2\)</span>”. If its <a href="#/def-domain-of-discourse">domain of discourse</a> is the <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real numbers</a>, then <span class="math inline">\(P(x)\)</span> is true for <span class="math inline">\(x = \sqrt{2}\)</span>. If its domain of discourse is the <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integers</a>, then <span class="math inline">\(P(x)\)</span> is false for every <span class="math inline">\(x\)</span>, since the <a href="./algebra-basics.html#def-square">squares</a> of the <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integers</a> are <span class="math inline">\(0, 1, 4, 9, \ldots\)</span>, and none of them is <span class="math inline">\(2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-logical-connective" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Logical connective)</strong></span> A <strong>logical connective</strong> <span class="citation" data-cites="wikipedia_logical_connective"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> builds a new proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) from one or two propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, with a truth value that depends only on the truth values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. These notes use five, each defined next: not, and, or, implies, and if and only if. <!-- check-term-links: allow --></p>
@@ -447,12 +447,12 @@
 </section><section class="slide level2"><div id="exm-iff" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (“If and only if” with equal and different truth values)</strong></span> Take <span class="math inline">\(x = 4\)</span>.</p>
 <ul>
-<li>“<span class="math inline">\(x\)</span> is <a href="./number-systems.html#def-even-odd">even</a> <span class="math inline">\(\Leftrightarrow x &gt; 3\)</span>” is true: <span class="math inline">\(4\)</span> is even and <span class="math inline">\(4 &gt; 3\)</span>, so both sides are true.</li>
+<li>“<span class="math inline">\(x\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a> <span class="math inline">\(\Leftrightarrow x &gt; 3\)</span>” is true: <span class="math inline">\(4\)</span> is even and <span class="math inline">\(4 &gt; 3\)</span>, so both sides are true.</li>
 <li>“<span class="math inline">\(x &gt; 3 \Leftrightarrow x &gt; 5\)</span>” is false: <span class="math inline">\(4 &gt; 3\)</span> is true, but <span class="math inline">\(4 &gt; 5\)</span> is false.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-logical-connective" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Truth values of connectives)</strong></span> Let <span class="math inline">\(P\)</span> be “<span class="math inline">\(2 + 3 = 5\)</span>”, which is true, and let <span class="math inline">\(Q\)</span> be “<span class="math inline">\(7\)</span> is <a href="./number-systems.html#def-even-odd">even</a>”, which is false.</p>
+<p><span class="theorem-title"><strong>Example 9 (Truth values of connectives)</strong></span> Let <span class="math inline">\(P\)</span> be “<span class="math inline">\(2 + 3 = 5\)</span>”, which is true, and let <span class="math inline">\(Q\)</span> be “<span class="math inline">\(7\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a>”, which is false.</p>
 <ul>
 <li>
 <span class="math inline">\(\neg Q\)</span>, “<span class="math inline">\(7\)</span> is not even”, is true, because <span class="math inline">\(Q\)</span> is false.</li>
@@ -558,7 +558,7 @@
 </section><section class="slide level2"><div id="exm-biconditional-split" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (Proving an “if and only if” in two parts)</strong></span> &nbsp;</p>
 <!-- no-figure: two short conditionals; nothing to plot -->
-<p>Let <span class="math inline">\(n\)</span> be an <a href="./number-systems.html#def-integers">integer</a>. By <a href="#/thm-biconditional-split">a biconditional is two conditionals</a>, to prove “<span class="math inline">\(n\)</span> is <a href="./number-systems.html#def-even-odd">even</a> <a href="#/def-iff">if and only if</a> <span class="math inline">\(n + 2\)</span> is even”, it is enough to prove both conditionals:</p>
+<p>Let <span class="math inline">\(n\)</span> be an <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a>. By <a href="#/thm-biconditional-split">a biconditional is two conditionals</a>, to prove “<span class="math inline">\(n\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a> <a href="#/def-iff">if and only if</a> <span class="math inline">\(n + 2\)</span> is even”, it is enough to prove both conditionals:</p>
 <ul>
 <li>If <span class="math inline">\(n = 2m\)</span>, then <span class="math inline">\(n + 2 = 2(m + 1)\)</span>, which is even.</li>
 <li>If <span class="math inline">\(n + 2 = 2m\)</span>, then <span class="math inline">\(n = 2(m - 1)\)</span>, which is even.</li>
@@ -570,12 +570,12 @@
 </section><section class="slide level2"><div id="exm-equivalent-cycle" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Three equivalent statements)</strong></span> &nbsp;</p>
 <!-- no-figure: a short chain of implications; nothing to plot -->
-<p>Let <span class="math inline">\(n\)</span> be an <a href="./number-systems.html#def-integers">integer</a>, and let:</p>
+<p>Let <span class="math inline">\(n\)</span> be an <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a>, and let:</p>
 <ul>
 <li>
-<span class="math inline">\(P_1\)</span> be “<span class="math inline">\(n\)</span> is <a href="./number-systems.html#def-even-odd">even</a>”;</li>
+<span class="math inline">\(P_1\)</span> be “<span class="math inline">\(n\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a>”;</li>
 <li>
-<span class="math inline">\(P_2\)</span> be “<span class="math inline">\(n + 1\)</span> is <a href="./number-systems.html#def-odd">odd</a>”;</li>
+<span class="math inline">\(P_2\)</span> be “<span class="math inline">\(n + 1\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-odd">odd</a>”;</li>
 <li>
 <span class="math inline">\(P_3\)</span> be “<span class="math inline">\(n + 2\)</span> is even”.</li>
 </ul>
@@ -710,7 +710,7 @@
 </section><section class="slide level2"><div id="exm-double-negation" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (Removing a double negation)</strong></span> &nbsp;</p>
 <!-- no-figure: a one-line rewording; nothing to plot -->
-<p>Let <span class="math inline">\(P\)</span> be the <a href="#/def-proposition">proposition</a> “<span class="math inline">\(7\)</span> is <a href="./number-systems.html#def-odd">odd</a>”. Then <span class="math inline">\(\neg \neg P\)</span> is “it is not the case that <span class="math inline">\(7\)</span> is not odd”. By <a href="#/thm-double-negation">double negation</a>, <span class="math inline">\(\neg \neg P\)</span> says the same thing as <span class="math inline">\(P\)</span>: <span class="math inline">\(7\)</span> is odd.</p>
+<p>Let <span class="math inline">\(P\)</span> be the <a href="#/def-proposition">proposition</a> “<span class="math inline">\(7\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-odd">odd</a>”. Then <span class="math inline">\(\neg \neg P\)</span> is “it is not the case that <span class="math inline">\(7\)</span> is not odd”. By <a href="#/thm-double-negation">double negation</a>, <span class="math inline">\(\neg \neg P\)</span> says the same thing as <span class="math inline">\(P\)</span>: <span class="math inline">\(7\)</span> is odd.</p>
 </div>
 </section><section class="slide level2"><div id="def-quantifier" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 14 (Quantifier)</strong></span> A <strong>quantifier</strong> <span class="citation" data-cites="wikipedia_quantifier_logic"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span> turns a predicate <span class="math inline">\(P(x)\)</span> (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) about the elements <span class="math inline">\(x\)</span> of a set <span class="math inline">\(S\)</span> into a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>). There are two, each defined next: the universal quantifier and the existential quantifier. <!-- check-term-links: allow --></p>
@@ -719,7 +719,7 @@
 <p><span class="theorem-title"><strong>Definition 15 (Universal quantifier)</strong></span> The <strong>universal quantifier</strong> <span class="citation" data-cites="wikipedia_universal_quantification"><a href="#/references" role="doc-biblioref" onclick="">[13]</a></span> “for all” is a quantifier (<a href="#/def-quantifier" class="quarto-xref">Definition&nbsp;14</a>): <span class="math inline">\(\forall x \in S, P(x)\)</span> (“for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>, <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
 </div>
 </section><section class="slide level2"><div id="exm-universal-quantifier" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (A universally quantified proposition)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x\)</span> is <a href="./number-systems.html#def-even-odd">even</a>”.</p>
+<p><span class="theorem-title"><strong>Example 18 (A universally quantified proposition)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the <a href="#/def-predicate">predicate</a> “<span class="math inline">\(x\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a>”.</p>
 <ul>
 <li>“<span class="math inline">\(\forall x \in \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, P(x)\)</span>” is true, because <span class="math inline">\(2\)</span>, <span class="math inline">\(4\)</span>, and <span class="math inline">\(6\)</span> are all even.</li>
 <li>“<span class="math inline">\(\forall x \in \mathopen{}\left\{2, 3, 4\right\}\mathclose{}, P(x)\)</span>” is false, because <span class="math inline">\(P(3)\)</span> is false.</li>
@@ -729,14 +729,14 @@
 <p><span class="theorem-title"><strong>Definition 16 (Existential quantifier)</strong></span> The <strong>existential quantifier</strong> <span class="citation" data-cites="wikipedia_existential_quantification"><a href="#/references" role="doc-biblioref" onclick="">[14]</a></span> “there exists” is a quantifier (<a href="#/def-quantifier" class="quarto-xref">Definition&nbsp;14</a>): <span class="math inline">\(\exists x \in S, P(x)\)</span> (“there is an <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span> such that <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for at least one element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</p>
 </div>
 </section><section class="slide level2"><div id="exm-existential-quantifier" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (An existentially quantified proposition)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x\)</span> is <a href="./number-systems.html#def-even-odd">even</a>”.</p>
+<p><span class="theorem-title"><strong>Example 19 (An existentially quantified proposition)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the <a href="#/def-predicate">predicate</a> “<span class="math inline">\(x\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a>”.</p>
 <ul>
 <li>“<span class="math inline">\(\exists x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)\)</span>” is true, because <span class="math inline">\(P(2)\)</span> is true.</li>
 <li>“<span class="math inline">\(\exists x \in \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, P(x)\)</span>” is false, because none of <span class="math inline">\(1\)</span>, <span class="math inline">\(3\)</span>, and <span class="math inline">\(5\)</span> is even.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-quantifier" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Quantified propositions)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x &gt; 2\)</span>”, for <a href="./number-systems.html#def-integers">integers</a> <span class="math inline">\(x\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 20 (Quantified propositions)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the <a href="#/def-predicate">predicate</a> “<span class="math inline">\(x &gt; 2\)</span>”, for <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integers</a> <span class="math inline">\(x\)</span>.</p>
 <ul>
 <li>“<span class="math inline">\(\exists x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)\)</span>” is true, because <span class="math inline">\(P(3)\)</span> is true.</li>
 <li>“<span class="math inline">\(\forall x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)\)</span>” is false, because <span class="math inline">\(P(1)\)</span> is false.</li>
@@ -744,7 +744,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="thm-negate-quantifiers" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (De Morgan’s laws for quantifiers)</strong></span> For a <a href="#/def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="#/def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="#/def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 6 (De Morgan’s laws for quantifiers)</strong></span> For a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="#/def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="#/def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \neg (\forall x \in S, P(x)) &amp;\equiv \exists x \in S, \neg P(x) \\
@@ -753,15 +753,15 @@
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-negate-quantifiers" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Why the two laws share a theorem). </span>The two laws in <a href="#/thm-negate-quantifiers">De Morgan’s laws for quantifiers</a> are one rule seen from each side: negating a <a href="#/def-quantifier">quantifier</a> swaps <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span> and moves the <a href="#/def-not">negation</a> onto the <a href="#/def-predicate">predicate</a>. <a href="#/thm-de-morgan-logic">De Morgan’s laws for propositions</a> pair their two laws the same way, and these laws extend them from two propositions to a whole <a href="#/def-set">set</a> of them.</p>
+<p><span class="proof-title"><em>Remark 1</em> (Why the two laws share a theorem). </span>The two laws in <a href="#/thm-negate-quantifiers">De Morgan’s laws for quantifiers</a> are one rule seen from each side: negating a <a href="#/def-quantifier">quantifier</a> swaps <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span> and moves the <a href="#/def-not">negation</a> onto the <a href="#/def-predicate">predicate</a>. <a href="#/thm-de-morgan-logic">De Morgan’s laws for propositions</a> pair their two laws the same way, and these laws extend them from two propositions to a whole <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> of them.</p>
 </div>
 </section><section class="slide level2"><div id="exm-negate-quantifiers" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Negating “every integer is even”)</strong></span> &nbsp;</p>
 <!-- no-figure: a rewording of one sentence; nothing to plot -->
-<p>Let <span class="math inline">\(S\)</span> be the <a href="./number-systems.html#def-integers">integers</a>, and let <span class="math inline">\(P(x)\)</span> be “<span class="math inline">\(x\)</span> is <a href="./number-systems.html#def-even-odd">even</a>”. By the first of <a href="#/thm-negate-quantifiers">De Morgan’s laws for quantifiers</a>, <span class="math inline">\(\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)\)</span>: the <a href="#/def-not">negation</a> of “every <a href="./number-systems.html#def-integers">integer</a> is even” is “some integer is not even”. By the second law, <span class="math inline">\(\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)\)</span>: the negation of “some integer is even” is “no integer is even”.</p>
+<p>Let <span class="math inline">\(S\)</span> be the <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integers</a>, and let <span class="math inline">\(P(x)\)</span> be “<span class="math inline">\(x\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a>”. By the first of <a href="#/thm-negate-quantifiers">De Morgan’s laws for quantifiers</a>, <span class="math inline">\(\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)\)</span>: the <a href="#/def-not">negation</a> of “every <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a> is even” is “some integer is not even”. By the second law, <span class="math inline">\(\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)\)</span>: the negation of “some integer is even” is “no integer is even”.</p>
 </div>
 </section><section class="slide level2"><div id="def-inequality" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Inequality)</strong></span> An <strong>inequality</strong> is a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) or a predicate (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) that compares two expressions <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> whose values are <a href="./number-systems.html#def-real-numbers">real numbers</a>, in one of the forms:</p>
+<p><span class="theorem-title"><strong>Definition 17 (Inequality)</strong></span> An <strong>inequality</strong> is a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) or a predicate (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) that compares two expressions <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> whose values are <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real numbers</a>, in one of the forms:</p>
 <ul>
 <li>
 <span class="math inline">\(a &lt; b\)</span> (“<span class="math inline">\(a\)</span> is less than <span class="math inline">\(b\)</span>”);</li>
@@ -786,7 +786,7 @@
 <p><span class="theorem-title"><strong>Definition 18 (Logical entailment, logical consequence, deductive consequence)</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>, <a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) <strong>logically entail</strong> <span class="citation" data-cites="wikipedia_logical_consequence"><a href="#/references" role="doc-biblioref" onclick="">[15]</a></span> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-logical-entailment" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (Entailment, and its failure)</strong></span> Let <span class="math inline">\(x\)</span> be an <a href="./number-systems.html#def-integers">integer</a>.</p>
+<p><span class="theorem-title"><strong>Example 23 (Entailment, and its failure)</strong></span> Let <span class="math inline">\(x\)</span> be an <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a>.</p>
 <ul>
 <li>“<span class="math inline">\(x = 2\)</span>” entails “<span class="math inline">\(x^2 = 4\)</span>”: the only value that makes “<span class="math inline">\(x = 2\)</span>” true is <span class="math inline">\(x = 2\)</span>, and <span class="math inline">\(2^2 = 4\)</span>.</li>
 <li>“<span class="math inline">\(x &gt; 3\)</span>” and “<span class="math inline">\(x &lt; 5\)</span>” together entail “<span class="math inline">\(x = 4\)</span>”: <span class="math inline">\(4\)</span> is the only integer greater than <span class="math inline">\(3\)</span> and less than <span class="math inline">\(5\)</span>.</li>
@@ -816,7 +816,7 @@
 </section><section class="slide level2"><div id="exm-logical-argument" class="theorem example">
 <p><span class="theorem-title"><strong>Example 24 (A logical argument)</strong></span> &nbsp;</p>
 <!-- no-figure: three short sentences; nothing to plot -->
-<p>“If <span class="math inline">\(n\)</span> is <a href="./number-systems.html#def-even-odd">even</a>, then <span class="math inline">\(n^2\)</span> is even. <span class="math inline">\(n\)</span> is even. So <span class="math inline">\(n^2\)</span> is even.” is a <a href="#/def-logical-argument">logical argument</a>. Its <a href="#/def-premise">premises</a> are “if <span class="math inline">\(n\)</span> is even, then <span class="math inline">\(n^2\)</span> is even” and “<span class="math inline">\(n\)</span> is even”. Its <a href="#/def-conclusion">conclusion</a> is “<span class="math inline">\(n^2\)</span> is even”.</p>
+<p>“If <span class="math inline">\(n\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a>, then <span class="math inline">\(n^2\)</span> is even. <span class="math inline">\(n\)</span> is even. So <span class="math inline">\(n^2\)</span> is even.” is a <a href="#/def-logical-argument">logical argument</a>. Its <a href="#/def-premise">premises</a> are “if <span class="math inline">\(n\)</span> is even, then <span class="math inline">\(n^2\)</span> is even” and “<span class="math inline">\(n\)</span> is even”. Its <a href="#/def-conclusion">conclusion</a> is “<span class="math inline">\(n^2\)</span> is even”.</p>
 </div>
 </section><section class="slide level2"><div id="def-rule-of-inference" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 22 (Rule of inference)</strong></span> A <strong>rule of inference</strong> is a pattern of <a href="#/def-logical-argument">logical argument</a>, written with <a href="#/def-proposition">propositions</a> <span class="math inline">\(P, Q, \ldots\)</span> as placeholders, whose <a href="#/def-premise">premises</a> <a href="#/def-logical-entailment">logically entail</a> its <a href="#/def-conclusion">conclusion</a> whatever propositions are put in place of <span class="math inline">\(P, Q, \ldots\)</span>. It is written with its premises above a line and its conclusion below:</p>
@@ -831,7 +831,7 @@
 <p><span class="math display">\[
 \frac{P \Rightarrow Q, \quad Q}{P}
 \]</span></p>
-<p>is not a <a href="#/def-rule-of-inference">rule of inference</a>. In the row of the <a href="#/def-truth-table">truth table</a> where <span class="math inline">\(P\)</span> is false and <span class="math inline">\(Q\)</span> is true, both <a href="#/def-premise">premises</a> are true, by the definition of <a href="#/def-implies">implies</a>, but the <a href="#/def-conclusion">conclusion</a> <span class="math inline">\(P\)</span> is false. For example, “if <span class="math inline">\(n = 2\)</span>, then <span class="math inline">\(n\)</span> is <a href="./number-systems.html#def-even-odd">even</a>” and “<span class="math inline">\(n\)</span> is even” are both true for <span class="math inline">\(n = 4\)</span>, but “<span class="math inline">\(n = 2\)</span>” is false.</p>
+<p>is not a <a href="#/def-rule-of-inference">rule of inference</a>. In the row of the <a href="#/def-truth-table">truth table</a> where <span class="math inline">\(P\)</span> is false and <span class="math inline">\(Q\)</span> is true, both <a href="#/def-premise">premises</a> are true, by the definition of <a href="#/def-implies">implies</a>, but the <a href="#/def-conclusion">conclusion</a> <span class="math inline">\(P\)</span> is false. For example, “if <span class="math inline">\(n = 2\)</span>, then <span class="math inline">\(n\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a>” and “<span class="math inline">\(n\)</span> is even” are both true for <span class="math inline">\(n = 4\)</span>, but “<span class="math inline">\(n = 2\)</span>” is false.</p>
 </div>
 </section><section class="slide level2"><div id="thm-modus-ponens" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 7 (Modus ponens)</strong></span> For <a href="#/def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, this is a <a href="#/def-rule-of-inference">rule of inference</a>:</p>
@@ -908,7 +908,7 @@
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-proof" class="theorem example">
-<p><span class="theorem-title"><strong>Example 27 (The sum of two even integers is even)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be even integers (<a href="./number-systems.html#def-even-odd">definition</a>). Then <span class="math inline">\(a = 2j\)</span> and <span class="math inline">\(b = 2k\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
+<p><span class="theorem-title"><strong>Example 27 (The sum of two even integers is even)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be even <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integers</a> (<a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">definition</a>). Then <span class="math inline">\(a = 2j\)</span> and <span class="math inline">\(b = 2k\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
 <p><span class="math display">\[
 \begin{aligned}
 a + b
@@ -919,7 +919,7 @@ a + b
 &amp;&amp; \text{(distributive law)}
 \end{aligned}
 \]</span></p>
-<p>The second line uses the <a href="./algebra-sums.html#def-distributive">distributive law</a>. Since <span class="math inline">\(j + k\)</span> is an integer, <span class="math inline">\(a + b\)</span> is even (<a href="./number-systems.html#def-even-odd">definition</a>). For example,</p>
+<p>The second line uses the <a href="./algebra-sums.html#def-distributive">distributive law</a>. Since <span class="math inline">\(j + k\)</span> is an <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a>, <span class="math inline">\(a + b\)</span> is even (<a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">definition</a>). For example,</p>
 <p><span class="math display">\[
 \begin{aligned}
 4 + 10 &amp;= 2 \cdot 2 + 2 \cdot 5 \\
@@ -1001,7 +1001,7 @@ a + b
 <p><span class="theorem-title"><strong>Definition 25 (Result)</strong></span> A <strong>result</strong> is a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) that has a proof (<a href="#/def-proof" class="quarto-xref">Definition&nbsp;23</a>). These notes label each result by its role: as a theorem, a lemma, or a corollary, each defined next. <!-- check-term-links: allow --></p>
 </div>
 </section><section class="slide level2"><div id="exm-result" class="theorem example">
-<p><span class="theorem-title"><strong>Example 30 (A proposition that is a result, and one that is not)</strong></span> “<span class="math inline">\(2 + 3 = 5\)</span>” is a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) that has a proof, the computation of <span class="math inline">\(2 + 3\)</span>, so it is a result. “<span class="math inline">\(7\)</span> is <a href="./number-systems.html#def-even-odd">even</a>” is a proposition that is false, so it has no proof and is not a result.</p>
+<p><span class="theorem-title"><strong>Example 30 (A proposition that is a result, and one that is not)</strong></span> “<span class="math inline">\(2 + 3 = 5\)</span>” is a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) that has a proof, the computation of <span class="math inline">\(2 + 3\)</span>, so it is a result. “<span class="math inline">\(7\)</span> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a>” is a proposition that is false, so it has no proof and is not a result.</p>
 </div>
 </section><section class="slide level2"><div id="rem-proposition-as-result" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (“Proposition” as a kind of result). </span>Some sources also call a result of moderate importance a “proposition”. In these notes, “proposition” always means a sentence that is true or false (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>), whether or not it has been proved.</p>
@@ -1042,8 +1042,8 @@ a + b
 <p><span class="theorem-title"><strong>Definition 30 (Disproof)</strong></span> A <strong>disproof</strong> of a <a href="#/def-proposition">proposition</a> <span class="math inline">\(P\)</span> is a <a href="#/def-proof">proof</a> of its <a href="#/def-not">negation</a>, <span class="math inline">\(\neg P\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-disproof" class="theorem example">
-<p><span class="theorem-title"><strong>Example 35 (A disproof)</strong></span> Claim: every <a href="./number-systems.html#def-prime">prime</a> is <a href="./number-systems.html#def-odd">odd</a>.</p>
-<p><a href="#/def-disproof">Disproof</a>: the <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(2\)</span> is prime, and <span class="math inline">\(2\)</span> is not odd, since <span class="math inline">\(2 = 2k + 1\)</span> would need <span class="math inline">\(k = 1/2\)</span>, which is not an integer. So there is a prime that is not odd, which is the <a href="#/def-not">negation</a> of the claim.</p>
+<p><span class="theorem-title"><strong>Example 35 (A disproof)</strong></span> Claim: every <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-prime">prime</a> is <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-odd">odd</a>.</p>
+<p><a href="#/def-disproof">Disproof</a>: the <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a> <span class="math inline">\(2\)</span> is prime, and <span class="math inline">\(2\)</span> is not odd, since <span class="math inline">\(2 = 2k + 1\)</span> would need <span class="math inline">\(k = 1/2\)</span>, which is not an integer. So there is a prime that is not odd, which is the <a href="#/def-not">negation</a> of the claim.</p>
 <p>This disproof gives a <a href="#/def-counterexample">counterexample</a>, <span class="math inline">\(2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-constructive-proof" class="theorem definition">
@@ -1053,16 +1053,16 @@ a + b
 <p><span class="proof-title"><em>Remark 3</em> (Several existential quantifiers). </span>A <a href="#/def-proposition">proposition</a> can open with several <a href="#/def-existential-quantifier">existential quantifiers</a>. A <a href="#/def-constructive-proof">constructive proof</a> of it names one element for each <a href="#/def-quantifier">quantifier</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-constructive-proof" class="theorem example">
-<p><span class="theorem-title"><strong>Example 36 (A constructive proof)</strong></span> Claim: there are <a href="./number-systems.html#def-integers">integers</a> <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> with <span class="math inline">\(m + n = 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 36 (A constructive proof)</strong></span> Claim: there are <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integers</a> <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> with <span class="math inline">\(m + n = 1\)</span>.</p>
 <p>Proof: take <span class="math inline">\(m = 0\)</span> and <span class="math inline">\(n = 1\)</span>. Then <span class="math inline">\(m + n = 0 + 1 = 1\)</span>.</p>
-<p>This <a href="#/def-proof">proof</a> is a <a href="#/def-constructive-proof">constructive proof</a>, since it names an <a href="./number-systems.html#def-integers">integer</a> for each of the two <a href="#/def-existential-quantifier">existential quantifiers</a>.</p>
+<p>This <a href="#/def-proof">proof</a> is a <a href="#/def-constructive-proof">constructive proof</a>, since it names an <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a> for each of the two <a href="#/def-existential-quantifier">existential quantifiers</a>.</p>
 </div>
 </section><section class="slide level2"><div id="def-nonconstructive-proof" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 32 (Non-constructive proof)</strong></span> A <strong>non-constructive proof</strong> <span class="citation" data-cites="wikipedia_constructive_proof"><a href="#/references" role="doc-biblioref" onclick="">[21]</a></span> of a <a href="#/def-proposition">proposition</a> <span class="math inline">\(\exists x \in S,\ P(x)\)</span> shows that it is true without naming any element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span> for which <span class="math inline">\(P(x)\)</span> is true. It is a <a href="#/def-proof">proof</a> that is not a <a href="#/def-constructive-proof">constructive proof</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-nonconstructive-proof" class="theorem example">
-<p><span class="theorem-title"><strong>Example 37 (A non-constructive proof)</strong></span> Claim: among any three <a href="./number-systems.html#def-integers">integers</a>, there are two that are both <a href="./number-systems.html#def-even-odd">even</a> or both <a href="./number-systems.html#def-odd">odd</a>.</p>
-<p>Proof: each <a href="./number-systems.html#def-integers">integer</a> is even or odd. If at most one of the three integers were even, and at most one were odd, there would be at most two integers in all. So at least two of the three are even, or at least two are odd.</p>
+<p><span class="theorem-title"><strong>Example 37 (A non-constructive proof)</strong></span> Claim: among any three <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integers</a>, there are two that are both <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even</a> or both <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-odd">odd</a>.</p>
+<p>Proof: each <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a> is even or odd. If at most one of the three integers were even, and at most one were odd, there would be at most two integers in all. So at least two of the three are even, or at least two are odd.</p>
 <p>This <a href="#/def-proof">proof</a> is a <a href="#/def-nonconstructive-proof">non-constructive proof</a>, since it does not say which two of the integers share their parity.</p>
 </div>
 </section><section class="slide level2"><div id="def-converse" class="theorem definition">
@@ -1128,7 +1128,7 @@ n &amp;= 4k \\
 <p><span class="theorem-title"><strong>Definition 38 (Proof by contradiction)</strong></span> A <strong>proof by contradiction</strong> <span class="citation" data-cites="wikipedia_proof_by_contradiction"><a href="#/references" role="doc-biblioref" onclick="">[25]</a></span> of a proposition <span class="math inline">\(P\)</span> assumes that <span class="math inline">\(P\)</span> is false, and derives from that assumption a proposition that is known to be false.</p>
 </div>
 </section><section class="slide level2"><div id="exm-proof-by-contradiction" class="theorem example">
-<p><span class="theorem-title"><strong>Example 43 (No integer is both even and odd)</strong></span> Suppose, for contradiction, that some integer <span class="math inline">\(n\)</span> is both even and odd (<a href="./number-systems.html#def-even-odd">definition</a>). Then <span class="math inline">\(n = 2j\)</span> and <span class="math inline">\(n = 2k + 1\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
+<p><span class="theorem-title"><strong>Example 43 (No integer is both even and odd)</strong></span> Suppose, for <a href="#/def-contradiction">contradiction</a>, that some <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a> <span class="math inline">\(n\)</span> is both <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd">even and odd</a>. Then <span class="math inline">\(n = 2j\)</span> and <span class="math inline">\(n = 2k + 1\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
 <p><span class="math display">\[
 \begin{aligned}
 2j &amp;= 2k + 1
@@ -1214,7 +1214,7 @@ P \equiv \mathopen{}\left(\neg P \Rightarrow (C \land \neg C)\right)\mathclose{}
 <p><span class="theorem-title"><strong>Definition 39 (Direct proof)</strong></span> A <strong>direct proof</strong> <span class="citation" data-cites="wikipedia_direct_proof"><a href="#/references" role="doc-biblioref" onclick="">[26]</a></span> of a <a href="#/def-proposition">proposition</a> <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved <a href="#/def-result">result</a>, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="#/def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
 </div>
 </section><section class="slide level2"><div id="exm-direct-proof" class="theorem example">
-<p><span class="theorem-title"><strong>Example 45 (The square of an odd integer is odd)</strong></span> Claim: if <span class="math inline">\(n\)</span> is an <a href="./number-systems.html#def-odd">odd</a> <a href="./number-systems.html#def-integers">integer</a>, then <span class="math inline">\(n^2\)</span> is odd.</p>
+<p><span class="theorem-title"><strong>Example 45 (The square of an odd integer is odd)</strong></span> Claim: if <span class="math inline">\(n\)</span> is an <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-odd">odd</a> <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a>, then <span class="math inline">\(n^2\)</span> is odd.</p>
 <p>Since <span class="math inline">\(n\)</span> is odd, there is an integer <span class="math inline">\(k\)</span> with <span class="math inline">\(n = 2k + 1\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1229,7 +1229,7 @@ n^2
 &amp;&amp; \text{(distributive law, read from right to left)}
 \end{aligned}
 \]</span></p>
-<p>and <span class="math inline">\(2k^2 + 2k\)</span> is an integer, because adding or multiplying <a href="./number-systems.html#def-integers">integers</a> gives an integer. So <span class="math inline">\(n^2 = 2 \cdot(\text{an integer}) + 1\)</span>, which is the definition of odd. For example,</p>
+<p>and <span class="math inline">\(2k^2 + 2k\)</span> is an integer, because adding or multiplying <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integers</a> gives an integer. So <span class="math inline">\(n^2 = 2 \cdot(\text{an integer}) + 1\)</span>, which is the definition of odd. For example,</p>
 <p><span class="math display">\[
 \begin{aligned}
 n &amp;= 7 \\
@@ -1252,7 +1252,7 @@ n^2 &amp;= 49 \\
 <p><span class="theorem-title"><strong>Definition 40 (Proof by contrapositive)</strong></span> A <strong>proof by contrapositive</strong> <span class="citation" data-cites="wikipedia_contraposition"><a href="#/references" role="doc-biblioref" onclick="">[23]</a></span> of a <a href="#/def-proposition">proposition</a> “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is a <a href="#/def-direct-proof">direct proof</a> of its <a href="#/def-contrapositive">contrapositive</a>, “if <span class="math inline">\(\neg Q\)</span>, then <span class="math inline">\(\neg P\)</span>”: it assumes that <span class="math inline">\(Q\)</span> is false and reaches the conclusion that <span class="math inline">\(P\)</span> is false. By <a href="#/thm-contrapositive" class="quarto-xref">Theorem&nbsp;14</a>, proving the contrapositive proves the original proposition.</p>
 </div>
 </section><section class="slide level2"><div id="exm-proof-by-contrapositive" class="theorem example">
-<p><span class="theorem-title"><strong>Example 46 (If <span class="math inline">\(x^2 + 3x &lt; 0\)</span>, then <span class="math inline">\(x &lt; 0\)</span>)</strong></span> Claim: for every <a href="./number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(x\)</span>, if <span class="math inline">\(x^2 + 3x &lt; 0\)</span>, then <span class="math inline">\(x &lt; 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 46 (If <span class="math inline">\(x^2 + 3x &lt; 0\)</span>, then <span class="math inline">\(x &lt; 0\)</span>)</strong></span> Claim: for every <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(x\)</span>, if <span class="math inline">\(x^2 + 3x &lt; 0\)</span>, then <span class="math inline">\(x &lt; 0\)</span>.</p>
 <p>A <a href="#/def-direct-proof">direct proof</a> would have to start from the <a href="#/def-inequality">inequality</a> <span class="math inline">\(x^2 + 3x &lt; 0\)</span>, which says little about <span class="math inline">\(x\)</span> on its own. The contrapositive (<a href="#/def-contrapositive" class="quarto-xref">Definition&nbsp;34</a>) is “if <span class="math inline">\(x \ge 0\)</span>, then <span class="math inline">\(x^2 + 3x \ge 0\)</span>”, and its assumption is easier to use.</p>
 <p>Suppose <span class="math inline">\(x \ge 0\)</span>. Then <span class="math inline">\(x^2 = x \cdot x \ge 0\)</span>, because a product of two nonnegative numbers is nonnegative, <!-- check-term-links: allow --> and <span class="math inline">\(3x \ge 0\)</span>, because <span class="math inline">\(3 &gt; 0\)</span> and <span class="math inline">\(x \ge 0\)</span>. So</p>
 <p><span class="math display">\[
@@ -1272,7 +1272,7 @@ x^2 + 3x
 <p><span class="theorem-title"><strong>Definition 41 (Proof by cases, proof by exhaustion)</strong></span> A <strong>proof by cases</strong> <span class="citation" data-cites="wikipedia_proof_by_exhaustion"><a href="#/references" role="doc-biblioref" onclick="">[27]</a></span>, also called a <strong>proof by exhaustion</strong>, of a <a href="#/def-proposition">proposition</a> <span class="math inline">\(Q\)</span> lists <a href="#/def-proposition">propositions</a> <span class="math inline">\(C_1, \ldots, C_k\)</span>, the <em>cases</em>, shows that at least one of them is true, and proves <span class="math inline">\(C_i \Rightarrow Q\)</span> for each <span class="math inline">\(i\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-proof-by-cases" class="theorem example">
-<p><span class="theorem-title"><strong>Example 47 (The square of a real number is nonnegative)</strong></span> Claim: for every <a href="./number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(x\)</span>, <span class="math inline">\(x^2 \ge 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 47 (The square of a real number is nonnegative)</strong></span> Claim: for every <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(x\)</span>, <span class="math inline">\(x^2 \ge 0\)</span>.</p>
 <p>Every real number <span class="math inline">\(x\)</span> satisfies <span class="math inline">\(x \ge 0\)</span> or <span class="math inline">\(x &lt; 0\)</span>, so these two cases cover every <span class="math inline">\(x\)</span>.</p>
 <p><strong>Case 1: <span class="math inline">\(x \ge 0\)</span>.</strong> Then <span class="math inline">\(x^2 = x \cdot x\)</span> is a product of two nonnegative numbers, <!-- check-term-links: allow --> so <span class="math inline">\(x^2 \ge 0\)</span>.</p>
 <p><strong>Case 2: <span class="math inline">\(x &lt; 0\)</span>.</strong> Then <span class="math inline">\(-x &gt; 0\)</span>, and</p>
@@ -1294,9 +1294,9 @@ x^2
 <p>When you read someone else’s proof, you want to be able to follow every step without guessing, to know which <a href="#/def-result">result</a> is being used at each line, and to never be left wondering where a quantity came from. Write your own <a href="#/def-proof">proofs</a> to meet that same standard.</p>
 </section><section id="sec-proof-by-induction" class="slide level2" data-number="8"><h2>
 <span class="header-section-number">8</span> Proof by induction</h2>
-</section><section class="slide level2 scrollable"><p>Many proofs in these notes show that a statement holds for every <a href="./number-systems.html#def-natural-numbers">natural number</a> <span class="math inline">\(n\)</span>, or for every integer <span class="math inline">\(n\)</span> from some starting value on. Checking the statement one <span class="math inline">\(n\)</span> at a time would never finish; induction proves it for all of them with two arguments.</p>
+</section><section class="slide level2 scrollable"><p>Many proofs in these notes show that a statement holds for every <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers">natural number</a> <span class="math inline">\(n\)</span>, or for every integer <span class="math inline">\(n\)</span> from some starting value on. Checking the statement one <span class="math inline">\(n\)</span> at a time would never finish; induction proves it for all of them with two arguments.</p>
 <div id="def-proof-by-induction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 42 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./number-systems.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> <span class="citation" data-cites="wikipedia_mathematical_induction"><a href="#/references" role="doc-biblioref" onclick="">[28]</a></span> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
+<p><span class="theorem-title"><strong>Definition 42 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> <span class="citation" data-cites="wikipedia_mathematical_induction"><a href="#/references" role="doc-biblioref" onclick="">[28]</a></span> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
 <ol type="1">
 <li>
 <strong>Base case:</strong> <span class="math inline">\(P(n_0)\)</span> holds.</li>
@@ -1391,18 +1391,18 @@ x^2
 </section><section class="slide level2"><div id="def-first-order-logic" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 44 (First-order logic)</strong></span> <strong>First-order logic</strong> <span class="citation" data-cites="wikipedia_first_order_logic"><a href="#/references" role="doc-biblioref" onclick="">[30]</a></span> extends propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;43</a>) by also allowing:</p>
 <ul>
-<li>variables <span class="math inline">\(x, y, \ldots\)</span> that stand for elements of a <a href="./sets.html#def-set">set</a>;</li>
+<li>variables <span class="math inline">\(x, y, \ldots\)</span> that stand for elements of a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a>;</li>
 <li>
 <a href="#/def-predicate">predicates</a> of one or more of those variables, such as <span class="math inline">\(P(x)\)</span> or <span class="math inline">\(x &lt; y\)</span>;</li>
 <li>
-<a href="./functions.html#def-function">functions</a> of them, such as <span class="math inline">\(x + y\)</span>;</li>
+<a href="https://morrison-lab.github.io/mcs/functions.html#def-function">functions</a> of them, such as <span class="math inline">\(x + y\)</span>;</li>
 <li>equality between them;</li>
 <li>
 <a href="#/def-quantifier">quantifiers</a> <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span> over them.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-first-order-logic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 50 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a <a href="#/def-predicate">predicate</a> about the elements of a <a href="./sets.html#def-set">set</a> <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The <a href="#/def-proposition">propositions</a> <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> <a href="#/def-logical-entailment">logically entail</a> <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. <a href="#/def-propositional-logic">Propositional logic</a> alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 50 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a <a href="#/def-predicate">predicate</a> about the elements of a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The <a href="#/def-proposition">propositions</a> <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> <a href="#/def-logical-entailment">logically entail</a> <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. <a href="#/def-propositional-logic">Propositional logic</a> alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-formal-proof" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 45 (Formal proof)</strong></span> A <strong>formal proof</strong> <span class="citation" data-cites="wikipedia_formal_proof"><a href="#/references" role="doc-biblioref" onclick="">[31]</a></span> is a <a href="#/def-proof">proof</a> written in propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;43</a>) or first-order logic (<a href="#/def-first-order-logic" class="quarto-xref">Definition&nbsp;44</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its <a href="#/def-proposition">propositions</a> say.</p>

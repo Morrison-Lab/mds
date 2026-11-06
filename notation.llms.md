@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 
@@ -27,8 +27,8 @@ Mathematical notation is not standardized. This section states the conventions t
 > | $\perp\!\!\!\perp$ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
 > | $\therefore$ | [therefore](proof-writing.llms.md#def-logical-entailment), thus | `\therefore` |
 > | $\eta$ | [linear predictor](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") of a generalized linear model[^2] | `\eta` |
-> | $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ | floor of $x$: largest [integer](number-systems.llms.md#def-integers) less than or equal to $x$ | `\lfloor x \rfloor` |
-> | ${\mathopen{}\left\lceil x\right\rceil\mathclose{}}$ | ceiling of $x$: smallest [integer](number-systems.llms.md#def-integers) greater than or equal to $x$ | `\lceil x \rceil` |
+> | $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ | floor of $x$: largest [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) less than or equal to $x$ | `\lfloor x \rfloor` |
+> | ${\mathopen{}\left\lceil x\right\rceil\mathclose{}}$ | ceiling of $x$: smallest [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) greater than or equal to $x$ | `\lceil x \rceil` |
 > | $\mathbb{1}_{A}(x)$, ${\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}$ | indicator function ([definition](indicator-functions.llms.md#def-indicator-function)): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 >
 > Table 1: Notation used in this book
@@ -45,7 +45,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > *Remark 1* (Our convention for subscripts and parentheses). Subscripts and parentheses both attach extra information to a symbol, and sources divide the work between them differently. These notes follow two rules of thumb:
 >
-> - A subscript names which member of an [indexed family](sets.llms.md#def-indexed-family) we mean. It holds an index, such as the $i$ in $x_i$, or a parameter that picks one [function](functions.llms.md#def-function) or distribution out of the family, such as the $\theta$ in $f_\theta$.
+> - A subscript names which member of an [indexed family](https://morrison-lab.github.io/mcs/sets.html#def-indexed-family) we mean. It holds an index, such as the $i$ in $x_i$, or a parameter that picks one [function](https://morrison-lab.github.io/mcs/functions.html#def-function) or distribution out of the family, such as the $\theta$ in $f_\theta$.
 > - Parentheses hold the input a function is evaluated at, as in $f(x)$.
 >
 > Under these rules, $f_\theta(x)$ reads “the member of the family labeled $\theta$, evaluated at $x$”. The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-subscripts-parentheses) gives the reason for this split and explains how to read a source that divides the work differently.
@@ -69,7 +69,7 @@ For the logical symbols and proof conventions used in these notes (whose definit
 - Velleman [\[2\]](#ref-velleman2019prove) explains how mathematical statements are built from logical connectives ([definition](proof-writing.llms.md#def-logical-connective)) and quantifiers ([definition](proof-writing.llms.md#def-quantifier)), and how to read and write them.
 - Barker-Plummer et al. [\[3\]](#ref-barkerplummer2011language) covers the same symbols as a formal language, with propositional logic (the logic of connectives) and first-order logic (which adds quantifiers).
 
-For [set](sets.llms.md#def-set) and [function](functions.llms.md#def-function) notation, see the [Sets](sets.llms.md), [Functions](functions.llms.md), and [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html) pages.
+For [set](https://morrison-lab.github.io/mcs/sets.html#def-set) and [function](https://morrison-lab.github.io/mcs/functions.html#def-function) notation, see the [Sets](https://morrison-lab.github.io/mcs/sets.html), [Functions](https://morrison-lab.github.io/mcs/functions.html), and [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html) pages.
 
 The [Math for Computer Science notes](https://morrison-lab.github.io/mcs/notation.html) keep a copy of this notation page for discrete mathematics. Two pages have moved there: [Relations](https://morrison-lab.github.io/mcs/relations.html) and [Growth Rates](https://morrison-lab.github.io/mcs/growth-rates.html).
 

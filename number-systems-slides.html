@@ -9,19 +9,16 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.9">
-<title>Math for Data Science – Number Systems</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
-<style>
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
+
+  <title>Math for Data Science – Number Systems</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
@@ -39,101 +36,19 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-      margin-bottom: 0em;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
-<link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-9f3199129f1ac5956c3166fe157a3c4b.css">
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script><script type="text/plain" cookie-consent="tracking">
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-9f3199129f1ac5956c3166fe157a3c4b.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
+
+  <script type="text/plain" cookie-consent="tracking">
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
-  </script><script type="text/javascript" charset="UTF-8">
+  </script>
+  
+  <script type="text/javascript" charset="UTF-8">
   document.addEventListener('DOMContentLoaded', function () {
   cookieconsent.run({
     "notice_banner_type":"simple",
@@ -148,11 +63,13 @@
   "language":"en"
     });
   });
-  </script><link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  </script> 
+    
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -240,7 +157,7 @@
       margin-right: 0; 
     }
   </style>
-<!--
+  <!--
     Colour-theme dropdown for the qwt revealjs format: Light, Off-white,
     Parchment, Dark. Pulled into every slide deck via the `include-in-header`
     entry in the `revealjs:` block of `_quarto-website.yml`. Pairs with
@@ -251,7 +168,8 @@
     "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
     so it carries across the site and the decks. First-time visitors get
     Dark if their system prefers it, and Off-white otherwise.
-  --><style>
+  -->
+  <style>
     #qwt-theme-select {
       position: fixed;
       bottom: 8px;
@@ -280,7 +198,7 @@
     }
     @media print { #qwt-theme-select { display: none; } }
   </style>
-<script>
+  <script>
   (function () {
     "use strict";
     var KEY = "mln-theme";
@@ -344,259 +262,29 @@
       init();
     }
   })();
-  </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+  </script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">Number Systems</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Number Systems</h1>
 
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 11:51:36 (PST)</p>
-</section><section class="slide level2"><div class="proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>Probability and statistics count with the integers and natural numbers and measure with the real numbers. This page defines those number systems. It also defines the words that sort their members: even and odd integers, and rational and irrational real numbers. Finally, it defines divisibility, <a href="#/def-prime">primes</a> and congruence, and the <a href="#/def-factorial">factorial</a> of a <a href="#/def-nonnegative-integers">non-negative integer</a>.</p>
-</div>
-</section><section id="sec-notation-naturals" class="slide level2" data-number="1"><h2>
-<span class="header-section-number">1</span> Natural numbers</h2>
-</section><section class="slide level2"><div id="exr-naturals-below-three" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Which numbers are natural?)</strong></span> List the elements of the set <span class="math inline">\(\mathopen{}\left\{n \in \mathbb{N}: n &lt; 3\right\}\mathclose{}\)</span>. Is your answer the same in every textbook?</p>
-</div>
-</section><section class="slide level2"><div id="sol-naturals-below-three" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span>The answer depends on whether the source counts <span class="math inline">\(0\)</span> as a natural number:</p>
-<ul>
-<li>if <span class="math inline">\(\mathbb{N}\)</span> starts at <span class="math inline">\(0\)</span>, the set is <span class="math inline">\(\mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>;</li>
-<li>if <span class="math inline">\(\mathbb{N}\)</span> starts at <span class="math inline">\(1\)</span>, the set is <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span>.</li>
-</ul>
-<p>Both conventions are in common use, so the answer is not the same in every textbook.</p>
-</div>
-</section><section class="slide level2"><div id="def-integers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Integers)</strong></span> The <strong>integers</strong> <span class="citation" data-cites="wikipedia_integer"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> are the whole numbers, together with their negatives and <span class="math inline">\(0\)</span>:</p>
-<p><span class="math display">\[\mathbb{Z} \stackrel{\text{def}}{=}\mathopen{}\left\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
-<p>An <strong>integer</strong> is an element of <span class="math inline">\(\mathbb{Z}\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="def-positive-integer" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Positive integers)</strong></span> The integers (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) greater than <span class="math inline">\(0\)</span> are the <strong>positive integers</strong>.</p>
-</div>
-</section><section class="slide level2"><div id="def-negative-integer" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Negative integers)</strong></span> The integers (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) less than <span class="math inline">\(0\)</span> are the <strong>negative integers</strong>.</p>
-</div>
-</section><section class="slide level2"><div id="exm-integers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Integers and non-integers)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(-7\)</span>, <span class="math inline">\(0\)</span>, and <span class="math inline">\(12\)</span> are integers.</li>
-<li>
-<span class="math inline">\(\frac{1}{2}\)</span> and <span class="math inline">\(-2.5\)</span> are not integers.</li>
-<li>
-<span class="math inline">\(\frac{6}{3}\)</span> is an integer, because <span class="math inline">\(\frac{6}{3} = 2\)</span>.</li>
-</ul>
-</div>
-</section><section class="slide level2"><div id="def-even-odd" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Even integer)</strong></span> An integer (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(n\)</span> is <strong>even</strong> <span class="citation" data-cites="wikipedia_parity_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> if <span class="math inline">\(n = 2k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="def-odd" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Odd integer)</strong></span> An integer (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(n\)</span> is <strong>odd</strong> <span class="citation" data-cites="wikipedia_parity_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> if <span class="math inline">\(n = 2k + 1\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exm-even-odd" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Even and odd integers)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(6\)</span> is even, because <span class="math inline">\(6 = 2 \cdot 3\)</span>.</li>
-<li>
-<span class="math inline">\(0\)</span> is even, because <span class="math inline">\(0 = 2 \cdot 0\)</span>.</li>
-<li>
-<span class="math inline">\(-3\)</span> is odd, because <span class="math inline">\(-3 = 2 \cdot(-2) + 1\)</span>.</li>
-<li>
-<span class="math inline">\(7\)</span> is odd, because <span class="math inline">\(7 = 2 \cdot 3 + 1\)</span>.</li>
-<li>
-<span class="math inline">\(2.5\)</span> is neither even nor odd, because it is not an integer.</li>
-</ul>
-</div>
-</section><section class="slide level2"><div id="def-natural-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Natural numbers (our convention))</strong></span> In these notes, the <strong>natural numbers</strong> <span class="citation" data-cites="wikipedia_natural_number"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> are the positive integers (<a href="#/def-positive-integer" class="quarto-xref">Definition&nbsp;2</a>):</p>
-<p><span class="math display">\[\mathbb{N}\stackrel{\text{def}}{=}\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
-</div>
-</section><section class="slide level2"><div id="def-nonnegative-integers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Non-negative integers)</strong></span> The <strong>non-negative integers</strong> are the natural numbers (<a href="#/def-natural-numbers" class="quarto-xref">Definition&nbsp;6</a>) together with <span class="math inline">\(0\)</span>:</p>
-<p><span class="math display">\[\mathbb{N}_0 \stackrel{\text{def}}{=}\mathopen{}\left\{0, 1, 2, 3, \ldots\right\}\mathclose{} = \mathbb{N}\cup \mathopen{}\left\{0\right\}\mathclose{}\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exm-natural-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Natural numbers in a data analysis)</strong></span> &nbsp;</p>
-<ul>
-<li>Observation indices start at <span class="math inline">\(1\)</span>, so we write <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
-<li>A count outcome, such as the number of hospital visits in a year, can be <span class="math inline">\(0\)</span>, so the set of values it can take is <span class="math inline">\(\mathbb{N}_0\)</span>, not <span class="math inline">\(\mathbb{N}\)</span>.</li>
-</ul>
-</div>
-</section><section class="slide level2"><div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Other conventions for the natural numbers</strong></p>
-</div>
-<div class="callout-content">
-<p>Other sources may define <span class="math inline">\(\mathbb{N}\)</span> differently, so check each source’s definition before reading its formulas:</p>
-<ul>
-<li>Many sources include <span class="math inline">\(0\)</span> in <span class="math inline">\(\mathbb{N}\)</span>. The international standard ISO 80000-2 defines <span class="math inline">\(\mathbb{N}\)</span> to include <span class="math inline">\(0\)</span>, continuing the earlier standard ISO 31-11 (1978).</li>
-<li>Other sources start <span class="math inline">\(\mathbb{N}\)</span> at <span class="math inline">\(1\)</span>, as these notes do.</li>
-<li>To remove the ambiguity, some sources write <span class="math inline">\(\mathbb{N}_1\)</span> or <span class="math inline">\(\mathbb{Z}^+\)</span> for <span class="math inline">\(\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\)</span>, and <span class="math inline">\(\mathbb{N}_0\)</span> or <span class="math inline">\(\mathbb{Z}^{0+}\)</span> for <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>.</li>
-<li>The words vary too. “Positive integers” (<span class="math inline">\(\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\)</span>) and “non-negative integers” (<span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>) are unambiguous. “Whole numbers” usually includes <span class="math inline">\(0\)</span>, but can also mean all of the integers, negative ones included. “Counting numbers” usually starts at <span class="math inline">\(1\)</span>, but some sources include <span class="math inline">\(0\)</span>.</li>
-<li>Some older texts write <span class="math inline">\(J\)</span> for the natural numbers.</li>
-</ul>
-<p>When a formula’s meaning depends on whether <span class="math inline">\(0\)</span> is included, we write the set out explicitly, for example <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> or <span class="math inline">\(\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>.</p>
-<p>Source: <a href="https://en.wikipedia.org/w/index.php?title=Natural_number&amp;oldid=1375965996">Wikipedia, “Natural number”, “Terminology and notation” and “Zero as natural number”</a>, which cites ISO 80000-2:2019 and the textbooks using each notation.</p>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="def-factorial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Factorial)</strong></span> For a <a href="#/def-nonnegative-integers">non-negative integer</a> <span class="math inline">\(n\)</span>, the <strong>factorial</strong> of <span class="math inline">\(n\)</span> <span class="citation" data-cites="wikipedia_factorial"><a href="#/references" role="doc-biblioref" onclick="">[4]</a></span>, written <span class="math inline">\({{n}!}\)</span>, is <span class="math inline">\(1 \cdot 2 \cdots n\)</span>, the <a href="#/def-natural-numbers">natural numbers</a> from 1 to <span class="math inline">\(n\)</span> multiplied together. For <span class="math inline">\(n = 0\)</span> there is nothing to multiply, and <span class="math inline">\({{0}!} = 1\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exm-factorial" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (Factorials)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\({{3}!} = 1 \cdot 2 \cdot 3 = 6\)</span>.</li>
-<li>
-<span class="math inline">\({{4}!} = 1 \cdot 2 \cdot 3 \cdot 4 = 24\)</span>.</li>
-<li>
-<span class="math inline">\({{0}!} = 1\)</span>, by the <a href="#/def-factorial">definition of the factorial</a>.</li>
-</ul>
-<!-- no-figure: three single values -->
-</div>
-</section><section id="sec-number-systems-divisibility" class="slide level2" data-number="2"><h2>
-<span class="header-section-number">2</span> Divisibility, primes and congruence</h2>
-</section><section class="slide level2"><div id="def-divides" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Divides)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> each be an <a href="#/def-integers">integer</a>. We say that <span class="math inline">\(a\)</span> <strong>divides</strong> <span class="math inline">\(b\)</span>, written <span class="math inline">\(a \mid b\)</span>, if <span class="math inline">\(b = a c\)</span> for some integer <span class="math inline">\(c\)</span>. When <span class="math inline">\(a\)</span> does not divide <span class="math inline">\(b\)</span>, we write <span class="math inline">\(a \nmid b\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exm-divides" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (Divisors and non-divisors)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(3\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(12\)</span>, <span class="math inline">\(3 \mid 12\)</span>, because <span class="math inline">\(12 = 3 \cdot 4\)</span> and <span class="math inline">\(4\)</span> is an <a href="#/def-integers">integer</a>.</li>
-<li>
-<span class="math inline">\(5 \nmid 12\)</span>, because <span class="math inline">\(5 \cdot 2 = 10 &lt; 12 &lt; 15 = 5 \cdot 3\)</span>, so no integer <span class="math inline">\(c\)</span> has <span class="math inline">\(5 c = 12\)</span>.</li>
-<li>Every integer <span class="math inline">\(a\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(0\)</span>, because <span class="math inline">\(0 = a \cdot 0\)</span>.</li>
-</ul>
-<!-- no-figure: three single divisibility facts -->
-</div>
-</section><section class="slide level2"><div id="def-prime" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Prime number)</strong></span> An <a href="#/def-integers">integer</a> <span class="math inline">\(n \ge 2\)</span> is <strong>prime</strong> if no <a href="#/def-positive-integer">positive integer</a> other than <span class="math inline">\(1\)</span> and <span class="math inline">\(n\)</span> <a href="#/def-divides">divides</a> it <span class="citation" data-cites="wikipedia_prime_number"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span>.</p>
-</div>
-</section><section class="slide level2"><div id="exm-prime" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Primes and non-primes)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(7\)</span> is <a href="#/def-prime">prime</a>: none of <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span> and <span class="math inline">\(6\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(7\)</span>, and no <a href="#/def-integers">integer</a> above <span class="math inline">\(7\)</span> does, so its only positive divisors are <span class="math inline">\(1\)</span> and <span class="math inline">\(7\)</span>.</li>
-<li>
-<span class="math inline">\(9\)</span> is not prime, because <span class="math inline">\(3\)</span> divides <span class="math inline">\(9\)</span>.</li>
-<li>
-<span class="math inline">\(1\)</span> is not prime, because the definition requires <span class="math inline">\(n \ge 2\)</span>.</li>
-</ul>
-<!-- no-figure: three single numbers -->
-</div>
-</section><section class="slide level2"><div id="def-congruence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Congruence modulo <span class="math inline">\(n\)</span>)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be <a href="#/def-integers">integers</a>, and let <span class="math inline">\(n\)</span> be a <a href="#/def-positive-integer">positive integer</a>. We say that <span class="math inline">\(a\)</span> is <strong>congruent to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(n\)</span></strong>, written <span class="math inline">\(a \equiv b \pmod{n}\)</span>, if <span class="math inline">\(n\)</span> <a href="#/def-divides">divides</a> <span class="math inline">\(a - b\)</span>, written <span class="math inline">\(n \mid (a - b)\)</span>, <span class="citation" data-cites="wikipedia_modular_arithmetic"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>. When <span class="math inline">\(a\)</span> is not congruent to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(n\)</span>, we write <span class="math inline">\(a \not\equiv b \pmod{n}\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exm-congruence" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Clock arithmetic)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(17\)</span> is <a href="#/def-congruence">congruent to <span class="math inline">\(5\)</span> modulo <span class="math inline">\(12\)</span></a>, <span class="math inline">\(17 \equiv 5 \pmod{12}\)</span>, because <span class="math inline">\(17 - 5 = 12\)</span> and <span class="math inline">\(12 \mid 12\)</span>. On a 12-hour clock, hour 17 is 5 o’clock.</li>
-<li>
-<span class="math inline">\(17 \not\equiv 4 \pmod{12}\)</span>, because <span class="math inline">\(17 - 4 = 13\)</span> and <span class="math inline">\(12 \nmid 13\)</span>.</li>
-</ul>
-<!-- no-figure: two single congruences -->
-</div>
-</section><section id="sec-notation-reals" class="slide level2" data-number="3"><h2>
-<span class="header-section-number">3</span> Rational, real, and irrational numbers</h2>
-</section><section class="slide level2"><div id="def-rational-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Rational numbers)</strong></span> A <strong>rational number</strong> <span class="citation" data-cites="wikipedia_rational_number"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is a number that can be written as a fraction <span class="math inline">\(\frac{a}{b}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(b \ne 0\)</span>. The set of rational numbers is written <span class="math inline">\(\mathbb{Q}\)</span>:</p>
-<p><span class="math display">\[\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\{\frac{a}{b} : a \in \mathbb{Z},\ b \in \mathbb{Z},\ b \ne 0\right\}\mathclose{}\]</span></p>
-</div>
-</section><section class="slide level2"><div id="exm-rational-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Rational numbers)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(\frac{3}{4}\)</span> is rational, with <span class="math inline">\(a = 3\)</span> and <span class="math inline">\(b = 4\)</span>.</li>
-<li>
-<span class="math inline">\(0.75\)</span> is rational, because <span class="math inline">\(0.75 = \frac{3}{4}\)</span>.</li>
-<li>Every integer is rational: for example, <span class="math inline">\(-5 = \frac{-5}{1}\)</span>.</li>
-<li>
-<span class="math inline">\(0.333\ldots\)</span>, with the <span class="math inline">\(3\)</span>s repeating forever, is rational, because <span class="math inline">\(0.333\ldots = \frac{1}{3}\)</span>.</li>
-</ul>
-</div>
-</section><section class="slide level2"><div id="def-real-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Real numbers)</strong></span> A <strong>real number</strong> <span class="citation" data-cites="wikipedia_real_number"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written <span class="math inline">\(\mathbb{R}\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="rem-real-numbers-working-definition" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (A working definition). </span><a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;13</a> is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. <span class="citation" data-cites="rudin1976principles">Rudin <a href="#/references" role="doc-biblioref" onclick="">[9]</a>, Appendix to Chapter 1</span> constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, <span class="math inline">\(0.999\ldots\)</span> and <span class="math inline">\(1.000\ldots\)</span> are the same real number, <span class="math inline">\(1\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exm-real-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Real numbers)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(3\)</span>, <span class="math inline">\(-0.5\)</span>, and <span class="math inline">\(\frac{1}{3} = 0.333\ldots\)</span> are real numbers.</li>
-<li>
-<span class="math inline">\(\pi = 3.14159\ldots\)</span> is a real number.</li>
-<li>Every rational number (<a href="#/def-rational-numbers" class="quarto-xref">Definition&nbsp;12</a>) is a real number, so <span class="math inline">\(\mathbb{N}\subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\)</span>.</li>
-</ul>
-</div>
-</section><section class="slide level2"><div id="def-floor" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Floor)</strong></span> The <strong>floor</strong> <span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span> of a <a href="#/def-real-numbers">real number</a> <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_floor_ceiling"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span> is the largest <a href="#/def-integers">integer</a> that is at most <span class="math inline">\(x\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exm-floor" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (Floors)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(\mathopen{}\left\lfloor 2.7\right\rfloor\mathclose{} = 2\)</span>, by the <a href="#/def-floor">definition of the floor</a>.</li>
-<li>
-<span class="math inline">\(\mathopen{}\left\lfloor 3\right\rfloor\mathclose{} = 3\)</span>, because <span class="math inline">\(3\)</span> is already an <a href="#/def-integers">integer</a>.</li>
-<li>
-<span class="math inline">\(\mathopen{}\left\lfloor-1.5\right\rfloor\mathclose{} = -2\)</span>, because <span class="math inline">\(-2 \le -1.5 &lt; -1\)</span>.</li>
-</ul>
-<p>The <a href="./functions.html#def-graph">graph</a> of <span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span> is a staircase: each step starts at an integer, with a filled dot, and stops before the next integer, at an open dot.</p>
-<div class="cell">
-<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="co"># one step per integer k, from x = k to x = k + 1 at height k</span></span>
-<span id="cb1-2"><a aria-label="2"></a>k <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">:</span><span class="dv">2</span></span>
-<span id="cb1-3"><a aria-label="3"></a>steps <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> k, <span class="at">xend =</span> k <span class="sc">+</span> <span class="dv">1</span>, <span class="at">y =</span> k)</span>
-<span id="cb1-4"><a aria-label="4"></a></span>
-<span id="cb1-5"><a aria-label="5"></a>floor_plot <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(steps) <span class="sc">+</span></span>
-<span id="cb1-6"><a aria-label="6"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_segment</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">xend =</span> xend, <span class="at">y =</span> y, <span class="at">yend =</span> y)) <span class="sc">+</span></span>
-<span id="cb1-7"><a aria-label="7"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y), <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb1-8"><a aria-label="8"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(</span>
-<span id="cb1-9"><a aria-label="9"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> xend, <span class="at">y =</span> y),</span>
-<span id="cb1-10"><a aria-label="10"></a>    <span class="at">size =</span> <span class="dv">2</span>, <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">fill =</span> <span class="st">"white"</span></span>
-<span id="cb1-11"><a aria-label="11"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"floor of x"</span>)</span>
-<span id="cb1-13"><a aria-label="13"></a></span>
-<span id="cb1-14"><a aria-label="14"></a>floor_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output-display">
-<div>
-<figure><p><a href="number-systems_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="number-systems_files/figure-html/unnamed-chunk-1-1.png" alt="The graph of the floor function from -3 to 3. It is a staircase of horizontal steps one unit long. Each step starts with a filled dot at an integer k at height k and ends with an open dot at k + 1." width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="def-irrational-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Irrational numbers)</strong></span> An <strong>irrational number</strong> <span class="citation" data-cites="wikipedia_irrational_number"><a href="#/references" role="doc-biblioref" onclick="">[11]</a></span> is a real number (<a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;13</a>) that is not rational (<a href="#/def-rational-numbers" class="quarto-xref">Definition&nbsp;12</a>).</p>
-</div>
-</section><section class="slide level2 smaller scrollable" id="references"><div id="exm-irrational-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (Irrational numbers)</strong></span> &nbsp;</p>
-<ul>
-<li>
-<span class="math inline">\(\sqrt{2} = 1.41421\ldots\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a> of <span class="math inline">\(2\)</span>, is irrational: no fraction of integers <span class="math inline">\(\frac{a}{b}\)</span> squares to <span class="math inline">\(2\)</span> <span class="citation" data-cites="wikipedia_square_root_of_2"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span>.</li>
-<li>
-<span class="math inline">\(\pi = 3.14159\ldots\)</span> is irrational <span class="citation" data-cites="wikipedia_proof_that_pi_is_irrational"><a href="#/references" role="doc-biblioref" onclick="">[13]</a></span>.</li>
-<li>
-<span class="math inline">\(1.5\)</span> is not irrational, because <span class="math inline">\(1.5 = \frac{3}{2}\)</span> is rational.</li>
-</ul>
-</div>
+  <p class="date">Last modified: 2026-11-05 15:25:17 (PST)</p>
+</section>
+<section class="slide level2">
+
+<meta http-equiv="refresh" content="5; url=https://morrison-lab.github.io/mcs/number-systems.html">
+<script>
+// This page moved to the Math for Computer Science notes (https://github.com/Morrison-Lab/mcs/issues/60).
+// Send the reader, with any #id, to the same page there; the ids did not change.
+location.replace("https://morrison-lab.github.io/mcs/number-systems.html" + location.search + location.hash);
+</script>
+<p>This page moved to <a href="https://morrison-lab.github.io/mcs/number-systems.html">Number Systems</a> in the Math for Computer Science notes.</p>
 
 
 <script>
@@ -671,7 +359,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("load", alignEquationAnchorsWithDefault);
-</script><script>
+</script>
+
+<script>
 (function () {
   var css = [
     "#revealjs-html-link {",
@@ -785,81 +475,33 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
     initRevealJsHtmlLink();
   }
 })();
-</script><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-wikipedia_integer" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Integer — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Integer">https://en.wikipedia.org/wiki/Integer</a>
-</div>
-</div>
-<div id="ref-wikipedia_parity_mathematics" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Parity (mathematics) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Parity_(mathematics)">https://en.wikipedia.org/wiki/Parity_(mathematics)</a>
-</div>
-</div>
-<div id="ref-wikipedia_natural_number" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Natural number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Natural_number">https://en.wikipedia.org/wiki/Natural_number</a>
-</div>
-</div>
-<div id="ref-wikipedia_factorial" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Factorial — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Factorial">https://en.wikipedia.org/wiki/Factorial</a>
-</div>
-</div>
-<div id="ref-wikipedia_prime_number" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Prime number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Prime_number">https://en.wikipedia.org/wiki/Prime_number</a>
-</div>
-</div>
-<div id="ref-wikipedia_modular_arithmetic" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Modular arithmetic — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Modular_arithmetic">https://en.wikipedia.org/wiki/Modular_arithmetic</a>
-</div>
-</div>
-<div id="ref-wikipedia_rational_number" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[7] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Rational number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Rational_number">https://en.wikipedia.org/wiki/Rational_number</a>
-</div>
-</div>
-<div id="ref-wikipedia_real_number" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[8] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Real number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Real_number">https://en.wikipedia.org/wiki/Real_number</a>
-</div>
-</div>
-<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[9] </div>
-<div class="csl-right-inline">W. Rudin, <em>Principles of mathematical analysis</em>, 3rd ed. in International series in pure and applied mathematics. New York: McGraw-Hill, 1976.</div>
-</div>
-<div id="ref-wikipedia_floor_ceiling" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[10] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Floor and ceiling functions — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Floor_and_ceiling_functions">https://en.wikipedia.org/wiki/Floor_and_ceiling_functions</a>
-</div>
-</div>
-<div id="ref-wikipedia_irrational_number" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[11] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Irrational number — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Irrational_number">https://en.wikipedia.org/wiki/Irrational_number</a>
-</div>
-</div>
-<div id="ref-wikipedia_square_root_of_2" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[12] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Square root of 2 — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Square_root_of_2">https://en.wikipedia.org/wiki/Square_root_of_2</a>
-</div>
-</div>
-<div id="ref-wikipedia_proof_that_pi_is_irrational" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[13] </div>
-<div class="csl-right-inline">Wikipedia contributors, <span>“Proof that pi is irrational — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational">https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational</a>
-</div>
-</div>
-</div>
+</script>
+
 </section>
-</div>
+    </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="site_libs/revealjs/plugin/notes/notes.js"></script><script src="site_libs/revealjs/plugin/search/search.js"></script><script src="site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -1050,7 +692,8 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
-    </script><script>
+    </script>
+    <script>
     // Put each folded code cell inside the tab it belongs to.
     // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
     // so an R and a Python tab end up with their folds stacked above the whole figure.
@@ -1094,7 +737,8 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
         panes[index].insertBefore(fold, panes[index].firstChild);
       });
     });
-    </script><script id="quarto-html-after-body" type="application/javascript">
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -1324,38 +968,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           }
         }
       });
-      </script><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-    (function() {
-      let previousOnload = window.onload;
-      window.onload = () => {
-        if (previousOnload) {
-          previousOnload();
-        }
-        lightboxQuarto.on('slide_before_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          const href = trigger.getAttribute('href');
-          if (href !== null) {
-            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-            if (imgEl !== null) {
-              const srcAttr = imgEl.getAttribute("src");
-              if (srcAttr && srcAttr.startsWith("data:")) {
-                slideConfig.href = srcAttr;
-              }
-            }
-          } 
-        });
-      
-        lightboxQuarto.on('slide_after_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(slideNode);
-          }
-        });
-      
-      };
-      
-    })();
-              </script>
-
+      </script>
+    
 
 </body></html>

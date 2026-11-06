@@ -14,13 +14,13 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 # 1 Limits and derivatives
 
 > **NOTE:**
 >
-> **Definition 1 (Limit of a function at a point)** Let $f$ be a [function](functions.llms.md#def-function) defined at every point of an [open interval](sets.llms.md#def-open-interval) around $c$, except possibly at $c$ itself, and let $L$ be a [real number](number-systems.llms.md#def-real-numbers). The **limit** of $f(x)$ as $x$ approaches $c$ is $L$ [\[1\]](#ref-wikipedia_limit_of_a_function), written $\lim_{x \to c} f(x) = L$, if for every $\varepsilon> 0$ there is a $\delta> 0$ such that
+> **Definition 1 (Limit of a function at a point)** Let $f$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) defined at every point of an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $c$, except possibly at $c$ itself, and let $L$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers). The **limit** of $f(x)$ as $x$ approaches $c$ is $L$ [\[1\]](#ref-wikipedia_limit_of_a_function), written $\lim_{x \to c} f(x) = L$, if for every $\varepsilon> 0$ there is a $\delta> 0$ such that
 >
 > $$\mathopen{}\left|f(x) - L\right|\mathclose{} < \varepsilon\quad \text{for every } x \text{ with } 0 < \mathopen{}\left|x - c\right|\mathclose{} < \delta.$$
 >
@@ -221,7 +221,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 13 (Second derivative)** Let $f$ be a real-valued function of one variable whose derivative $f'$ ([Definition 7](#def-derivative)) exists at every point of an [open interval](sets.llms.md#def-open-interval) containing $c$. If $f'$ is differentiable ([Definition 6](#def-differentiable)) at $c$, its derivative there, written $f''(c)$ or $\frac{d ^2 f}{d x^2}$, is the **second derivative** of $f$ at $c$ [\[8\]](#ref-wikipedia_second_derivative).
+> **Definition 13 (Second derivative)** Let $f$ be a real-valued function of one variable whose derivative $f'$ ([Definition 7](#def-derivative)) exists at every point of an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) containing $c$. If $f'$ is differentiable ([Definition 6](#def-differentiable)) at $c$, its derivative there, written $f''(c)$ or $\frac{d ^2 f}{d x^2}$, is the **second derivative** of $f$ at $c$ [\[8\]](#ref-wikipedia_second_derivative).
 
 > **NOTE:**
 >
@@ -260,11 +260,11 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (Power rule)** For every [real number](number-systems.llms.md#def-real-numbers) $q$ and every $x > 0$ [\[9\]](#ref-wikipedia_power_rule), the [derivative](#def-derivative) of the [power](algebra-exponentials.llms.md#def-real-power) $x^q$ is:
+> **Theorem 3 (Power rule)** For every [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $q$ and every $x > 0$ [\[9\]](#ref-wikipedia_power_rule), the [derivative](#def-derivative) of the [power](algebra-exponentials.llms.md#def-real-power) $x^q$ is:
 >
 > $$\frac{\partial}{\partial x}x^q = qx^{q-1}$$
 >
-> When $q$ is a [positive integer](number-systems.llms.md#def-positive-integer), the same [formula](expressions-algorithms.llms.md#def-closed-form-expression) holds for every [real](number-systems.llms.md#def-real-numbers) $x$.
+> When $q$ is a [positive integer](https://morrison-lab.github.io/mcs/number-systems.html#def-positive-integer), the same [formula](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-closed-form-expression) holds for every [real](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$.
 
 > **TIP:**
 >
@@ -411,19 +411,19 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Theorem 5 (Derivative of exponential)** For every [real](number-systems.llms.md#def-real-numbers) $x$, the [derivative](#def-derivative) of the [exponential function](algebra-exponentials.llms.md#def-exponential-function) is:
+> **Theorem 5 (Derivative of exponential)** For every [real](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$, the [derivative](#def-derivative) of the [exponential function](algebra-exponentials.llms.md#def-exponential-function) is:
 >
 > $${\operatorname{exp}'\mathopen{}\left\{x\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
-> **Theorem 6 (Derivative of sine)** For every [real](number-systems.llms.md#def-real-numbers) $x$, the [derivative](#def-derivative) of the [sine](algebra-trigonometry.llms.md#def-sine) [function](functions.llms.md#def-function) is:
+> **Theorem 6 (Derivative of sine)** For every [real](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$, the [derivative](#def-derivative) of the [sine](algebra-trigonometry.llms.md#def-sine) [function](https://morrison-lab.github.io/mcs/functions.html#def-function) is:
 >
 > $$\frac{\partial}{\partial x}\sin x = \cos x$$
 
 > **NOTE:**
 >
-> **Theorem 7 (Derivative of cosine)** For every [real](number-systems.llms.md#def-real-numbers) $x$, the [derivative](#def-derivative) of the [cosine](algebra-trigonometry.llms.md#def-cosine-sine) [function](functions.llms.md#def-function) is:
+> **Theorem 7 (Derivative of cosine)** For every [real](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$, the [derivative](#def-derivative) of the [cosine](algebra-trigonometry.llms.md#def-cosine-sine) [function](https://morrison-lab.github.io/mcs/functions.html#def-function) is:
 >
 > $$\frac{\partial}{\partial x}\cos x = -\sin x$$
 
@@ -552,7 +552,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 > &= \frac{d b}{d c} \frac{d a}{d b}
 > \end{aligned}$$
 >
-> or in Lagrange’s notation ([Definition 7](#def-derivative)), if $g$ is [differentiable at](#def-differentiable) $x$ and $f$ is differentiable at $g(x)$, then for the [composition](functions.llms.md#def-composition) $f \circ g$, with [inner function](functions.llms.md#def-inner-function) $g$ and [outer function](functions.llms.md#def-outer-function) $f$:
+> or in Lagrange’s notation ([Definition 7](#def-derivative)), if $g$ is [differentiable at](#def-differentiable) $x$ and $f$ is differentiable at $g(x)$, then for the [composition](https://morrison-lab.github.io/mcs/functions.html#def-composition) $f \circ g$, with [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $g$ and [outer function](https://morrison-lab.github.io/mcs/functions.html#def-outer-function) $f$:
 >
 > $$(f(g(x)))' = g'(x) f'(g(x))$$
 
@@ -772,7 +772,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 > - the logarithm ${\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}$, where $f(x) > 0$;
 > - the derivatives $f'(x)$, $f''(x)$, and so on, as far as they are informative;
 > - the [logarithmic derivative](#def-logarithmic-derivative) $\frac{f'(x)}{f(x)}$;
-> - the inverse function $f^{-1}$ ([definition](functions.llms.md#def-inverse-function)), which exists on the [image](functions.llms.md#def-image) of $f$ when $f$ is one-to-one, and otherwise only after restricting the domain of $f$;
+> - the [inverse function](https://morrison-lab.github.io/mcs/functions.html#def-inverse-function) $f^{-1}$, which exists on the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $f$ when $f$ is one-to-one, and otherwise only after restricting the domain of $f$;
 > - the complement $1 - f(x)$, which is informative when $f$ takes values in $[0, 1]$, as a probability does;
 > - the reciprocal $\frac{1}{f(x)}$, where $f(x) \neq 0$ (not to be confused with $f^{-1}$);
 > - an antiderivative of $f$, a function $F$ with $F' = f$ ([integration](calculus-integration.llms.md#sec-integration));
@@ -885,7 +885,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 16 (Tangent line)** Let $f$ be differentiable at $c$ ([Definition 6](#def-differentiable)). The **tangent line** to the [graph](functions.llms.md#def-graph) of $f$ at $c$ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
+> **Definition 16 (Tangent line)** Let $f$ be differentiable at $c$ ([Definition 6](#def-differentiable)). The **tangent line** to the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ at $c$ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
 >
 > $$x \mapsto f(c) + f'(c)\,(x - c),$$
 >
@@ -914,7 +914,7 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 
 > **NOTE:**
 >
-> **Definition 17 (Linear approximation (first-order Taylor approximation))** For a [function](functions.llms.md#def-function) $f$ that is [differentiable at](#def-differentiable) $w$, the **linear approximation** of $f$ at $w$ [\[14\]](#ref-wikipedia_linear_approximation) (also called the **first-order Taylor approximation**) is the function of the step $\varepsilon$
+> **Definition 17 (Linear approximation (first-order Taylor approximation, first-order Taylor expansion))** For a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ that is [differentiable at](#def-differentiable) $w$, the **linear approximation** of $f$ at $w$ [\[14\]](#ref-wikipedia_linear_approximation) (also called the **first-order Taylor approximation** or the **first-order Taylor expansion**) is the function of the step $\varepsilon$
 >
 > $$\hat{f}_w(\varepsilon) = f(w) + \varepsilon\,\frac{d }{d w}f(w)$$
 >
@@ -922,7 +922,7 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 
 > **NOTE:**
 >
-> *Remark 2* (The “linear” approximation is affine). The linear approximation $\hat{f}_w$ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step $\varepsilon$: its [slope](algebra-exponentials.llms.md#def-slope) is $\frac{d }{d w}f(w)$ and its [intercept](algebra-exponentials.llms.md#def-intercept) is $f(w)$. It is [linear](algebra-exponentials.llms.md#def-linear-function) in $\varepsilon$ only when $f(w) = 0$. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), section 2.2, treats the [first-order Taylor approximation](#def-linear-approximation) as an affine function for [functions](functions.llms.md#def-function) of several variables as well.
+> *Remark 2* (The “linear” approximation is affine). The linear approximation $\hat{f}_w$ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step $\varepsilon$: its [slope](algebra-exponentials.llms.md#def-slope) is $\frac{d }{d w}f(w)$ and its [intercept](algebra-exponentials.llms.md#def-intercept) is $f(w)$. It is [linear](algebra-exponentials.llms.md#def-linear-function) in $\varepsilon$ only when $f(w) = 0$. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), section 2.2, treats the [first-order Taylor approximation](#def-linear-approximation) as an affine function for [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of several variables as well.
 
 > **NOTE:**
 >
@@ -1033,11 +1033,11 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 
 > **NOTE:**
 >
-> **Exercise 16 (Check the approximation)** Compare the approximation in [Exercise 15](#exr-miller-deriv-tangent-line-approx-approx) with the exact [value](functions.llms.md#def-value) of $f(\pi/4 + 0.01)$.
+> **Exercise 16 (Check the approximation)** Compare the approximation in [Exercise 15](#exr-miller-deriv-tangent-line-approx-approx) with the exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value) of $f(\pi/4 + 0.01)$.
 
 > **NOTE:**
 >
-> *Solution 16*. The exact [value](functions.llms.md#def-value) is:
+> *Solution 16*. The exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value) is:
 >
 > $$f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}{\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{}} \approx 4.171543$$
 >
@@ -1061,7 +1061,7 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 - [Definition 14 (Logarithmic derivative)](#def-logarithmic-derivative)
 - [Definition 15 (Profile of a function)](#def-function-profile)
 - [Definition 16 (Tangent line)](#def-tangent-line)
-- [Definition 17 (Linear approximation (first-order Taylor approximation))](#def-linear-approximation)
+- [Definition 17 (Linear approximation (first-order Taylor approximation, first-order Taylor expansion))](#def-linear-approximation)
 
 Back to top
 

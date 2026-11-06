@@ -362,7 +362,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 11:51:36 (PST)</p>
+  <p class="date">Last modified: 2026-11-05 15:25:17 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -825,7 +825,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section id="linear-and-affine-maps" class="slide level2 scrollable" data-number="7">
 <h2><span class="header-section-number">7</span> Linear and affine maps</h2>
 <div id="def-linear-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Linear map, linear transformation, linear function)</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> <span class="citation" data-cites="wikipedia_linear_map"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it preserves vector addition and scalar multiplication: for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 15 (Linear map, linear transformation, linear function)</strong></span> A <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> <span class="citation" data-cites="wikipedia_linear_map"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it preserves vector addition and scalar multiplication: for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
 <ol type="1">
 <li><span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> (<em>additivity</em>)</li>
 <li><span class="math inline">\(f(c\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\)</span> (<em>homogeneity</em>)</li>
@@ -1135,7 +1135,10 @@ t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphanto
 <section class="slide level2">
 
 <div id="def-affine-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Affine map, affine transformation, affine function)</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is an <strong>affine map</strong> (also called an <strong>affine transformation</strong> or <strong>affine function</strong>) if it is a matrix product followed by a translation (<a href="#/def-translation" class="quarto-xref">Definition&nbsp;18</a>) (a <a href="./functions.html#def-composition">composition</a>, with the matrix product as the inner function): there are an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span> such that</p>
+<p><span class="theorem-title"><strong>Definition 19</strong></span> &nbsp;</p>
+<!-- def-equiv-ok: the chain spells out the map that defines it -->
+<h5 id="affine-map-affine-transformation-affine-function">Affine map, affine transformation, affine function</h5>
+<p>A <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is an <strong>affine map</strong> (also called an <strong>affine transformation</strong> or <strong>affine function</strong>) if it is a matrix product followed by a translation (<a href="#/def-translation" class="quarto-xref">Definition&nbsp;18</a>) (a <a href="https://morrison-lab.github.io/mcs/functions.html#def-composition">composition</a>, with the matrix product as the <a href="https://morrison-lab.github.io/mcs/functions.html#def-inner-function">inner function</a>): there are an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span> such that</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
@@ -1558,7 +1561,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= 58
 \end{aligned}
 \]</span></p>
-<p>Two things are worth noticing. The <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> are not comparable as they stand. The <a href="./linear-algebra-vectors.html#def-weight">weight</a> on BMI, <span class="math inline">\(1.5\)</span>, is <span class="math inline">\(7.5\)</span> times the weight on blood pressure, <span class="math inline">\(0.2\)</span>, but the contribution of BMI, <span class="math inline">\(42\)</span>, is less than twice the contribution of blood pressure, <span class="math inline">\(26\)</span>, because the BMI <a href="./functions.html#def-value">value</a>, <span class="math inline">\(28\)</span>, is much smaller than the blood pressure value, <span class="math inline">\(130\)</span>. So the weight on a feature says nothing on its own about how much that feature contributes to the score. And <span class="math inline">\(b = -30\)</span> changes the score: without it, the score would be <span class="math inline">\(88\)</span> instead of <span class="math inline">\(58\)</span>.</p>
+<p>Two things are worth noticing. The <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> are not comparable as they stand. The <a href="./linear-algebra-vectors.html#def-weight">weight</a> on BMI, <span class="math inline">\(1.5\)</span>, is <span class="math inline">\(7.5\)</span> times the weight on blood pressure, <span class="math inline">\(0.2\)</span>, but the contribution of BMI, <span class="math inline">\(42\)</span>, is less than twice the contribution of blood pressure, <span class="math inline">\(26\)</span>, because the BMI <a href="https://morrison-lab.github.io/mcs/functions.html#def-value">value</a>, <span class="math inline">\(28\)</span>, is much smaller than the blood pressure value, <span class="math inline">\(130\)</span>. So the weight on a feature says nothing on its own about how much that feature contributes to the score. And <span class="math inline">\(b = -30\)</span> changes the score: without it, the score would be <span class="math inline">\(88\)</span> instead of <span class="math inline">\(58\)</span>.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">

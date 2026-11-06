@@ -353,7 +353,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 11:51:36 (PST)</p>
+  <p class="date">Last modified: 2026-11-05 15:25:17 (PST)</p>
 </section><section class="slide level2"><p><span id="vectors"></span></p>
 </section><section class="slide level2 scrollable"><div id="exr-list-as-vector" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Store a data point as one object)</strong></span> A house has a floor area of <span class="math inline">\(120\)</span> square meters, <span class="math inline">\(3\)</span> bedrooms, and an age of <span class="math inline">\(15\)</span> years.</p>
@@ -381,7 +381,7 @@
 </ol>
 </div>
 </section><section class="slide level2"><div id="def-column-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Column vector)</strong></span> A <strong>column vector</strong> <span class="citation" data-cites="wikipedia_row_and_column_vectors"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> of length <span class="math inline">\(p\)</span> is an ordered list of <span class="math inline">\(p\)</span> <a href="./number-systems.html#def-real-numbers">real numbers</a>, written vertically as a <span class="math inline">\(p \times 1\)</span> array:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Column vector)</strong></span> A <strong>column vector</strong> <span class="citation" data-cites="wikipedia_row_and_column_vectors"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> of length <span class="math inline">\(p\)</span> is an ordered list of <span class="math inline">\(p\)</span> <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real numbers</a>, <!-- check-term-links: allow --> written vertically as a <span class="math inline">\(p \times 1\)</span> array:</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}=
 \begin{bmatrix}
@@ -407,19 +407,19 @@ x_{p}
 <p><span class="proof-title"><em>Remark 2</em> (Why the vector mark sits under the symbol). </span>In these notes, the mark that shows a symbol is a vector is a tilde under the letter, as in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. Many books instead use a bold letter or an arrow over the letter. We chose a mark underneath because bold letters are hard to write by hand on a board, and because the space above a letter is already used by the hat that marks an estimated value, as in <span class="math inline">\(\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\)</span>. The <a href="https://morrison-lab.github.io/macros/notation-choices.html#sec-vector-mark">notation choices page</a> gives the full reasons and an example of an estimated vector.</p>
 </div>
 </section><section class="slide level2"><div id="def-real-coordinate-space" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (The set <span class="math inline">\(\mathbb{R}^p\)</span>)</strong></span> For a positive <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(p\)</span>, <span class="math inline">\(\mathbb{R}^p\)</span> is the set of all <a href="#/def-column-vector">column vectors</a> of length <span class="math inline">\(p\)</span> whose entries are <a href="./number-systems.html#def-real-numbers">real numbers</a>.</p>
+<p><span class="theorem-title"><strong>Definition 2 (The set <span class="math inline">\(\mathbb{R}^p\)</span>)</strong></span> For a <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-positive-integer">positive integer</a> <span class="math inline">\(p\)</span>, <span class="math inline">\(\mathbb{R}^p\)</span> is the set of all <a href="#/def-column-vector">column vectors</a> of length <span class="math inline">\(p\)</span> whose entries are <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real numbers</a>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-real-coordinate-space-notation" class="proof remark">
 <p><span class="proof-title"><em>Remark 3</em> (Reading <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>). </span>Writing <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> says, in one symbol, that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a column vector with <span class="math inline">\(p\)</span> real entries. For example, <span class="math inline">\((1, -2, 0.5) \in \mathbb{R}^3\)</span>. The vector <span class="math inline">\((1, 2)\)</span> is not in <span class="math inline">\(\mathbb{R}^3\)</span>, because it has only <span class="math inline">\(2\)</span> entries; it is in <span class="math inline">\(\mathbb{R}^2\)</span>. In <a href="#/exr-list-as-vector" class="quarto-xref">Exercise&nbsp;1</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-scalar" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Scalar)</strong></span> In linear algebra, a <strong>scalar</strong> <span class="citation" data-cites="wikipedia_scalar_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> is a single <a href="./number-systems.html#def-real-numbers">real number</a>, as opposed to a vector or a matrix, which holds several numbers.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Scalar)</strong></span> In linear algebra, a <strong>scalar</strong> <span class="citation" data-cites="wikipedia_scalar_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> is a single <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a>, as opposed to a vector or a matrix, which holds several numbers.</p>
 </div>
 </section><section class="slide level2"><div id="exm-scalar" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Scalars and a vector)</strong></span> The numbers <span class="math inline">\(5\)</span> and <span class="math inline">\(-0.2\)</span> are scalars. The column vector <span class="math inline">\((5, -0.2)\)</span> is not a scalar: it has <span class="math inline">\(2\)</span> entries, so it is in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a>), and each of its <span class="math inline">\(2\)</span> entries is a scalar.</p>
 </div>
 </section><section class="slide level2"><div id="def-real-vector-valued" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Real-valued function, scalar-valued function)</strong></span> A <a href="./functions.html#def-function">function</a> <span class="math inline">\(f : A \to \mathbb{R}\)</span>, whose values are numbers, is <strong>real-valued</strong> (also called <strong>scalar-valued</strong>, since its values are <a href="#/def-scalar">scalars</a>).</p>
+<p><span class="theorem-title"><strong>Definition 4 (Real-valued function, scalar-valued function)</strong></span> A <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f : A \to \mathbb{R}\)</span>, whose values are numbers, is <strong>real-valued</strong> (also called <strong>scalar-valued</strong>, since its values are <a href="#/def-scalar">scalars</a>).</p>
 </div>
 </section><section class="slide level2"><div id="def-vector-valued" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Vector-valued function)</strong></span> A function <span class="math inline">\(f : A \to \mathbb{R}^m\)</span>, whose values are vectors (<a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a>), is <strong>vector-valued</strong>.</p>
@@ -433,7 +433,7 @@ g\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-transpose" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Transpose)</strong></span> The <strong>transpose</strong> of a column vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the row vector with the same <a href="./functions.html#def-sequence">sequence</a> of entries, written horizontally:</p>
+<p><span class="theorem-title"><strong>Definition 6 (Transpose)</strong></span> The <strong>transpose</strong> of a column vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the row vector with the same <a href="https://morrison-lab.github.io/mcs/functions.html#def-sequence">sequence</a> of entries, written horizontally:</p>
 <p><span class="math display">\[
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \equiv \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}' \equiv [x_1,\; x_2,\; \ldots,\; x_p]
 \]</span></p>
@@ -513,7 +513,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <p><span class="theorem-title"><strong>Example 6 (Coefficients of a linear combination of numbers)</strong></span> The linear combination of the numbers <span class="math inline">\(4\)</span> and <span class="math inline">\(5\)</span> with coefficients <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> is <span class="math inline">\(2 \cdot 4 + 3 \cdot 5 = 8 + 15 = 23\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-weighted-sum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Weighted sum)</strong></span> A <strong>weighted sum</strong> of the <a href="./number-systems.html#def-real-numbers">numbers</a> <span class="math inline">\(a_1, \ldots, a_k\)</span> is a <a href="#/def-linear-combination">linear combination</a> of them, with <a href="#/def-lincom-coefficient">coefficients</a> <span class="math inline">\(w_1, \ldots, w_k\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 11 (Weighted sum)</strong></span> A <strong>weighted sum</strong> of the <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">numbers</a> <span class="math inline">\(a_1, \ldots, a_k\)</span> is a <a href="#/def-linear-combination">linear combination</a> of them, with <a href="#/def-lincom-coefficient">coefficients</a> <span class="math inline">\(w_1, \ldots, w_k\)</span>:</p>
 <p><span class="math display">\[w_1 a_1 + \cdots + w_k a_k = \sum_{i=1}^{k} w_i a_i\]</span></p>
 <p>Multiply each <span class="math inline">\(a_i\)</span> by its coefficient <span class="math inline">\(w_i\)</span>, then add.</p>
 </div>
@@ -534,7 +534,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-weighted-average" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Weighted average, weighted mean)</strong></span> A <strong>weighted average</strong> (or <strong>weighted mean</strong>) of the <a href="./number-systems.html#def-real-numbers">numbers</a> <span class="math inline">\(a_1, \ldots, a_k\)</span> is a <a href="#/def-weighted-sum">weighted sum</a> of them whose <a href="#/def-weight">weights</a> <span class="math inline">\(w_1, \ldots, w_k\)</span> are non-negative and add to <span class="math inline">\(1\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 13 (Weighted average, weighted mean)</strong></span> A <strong>weighted average</strong> (or <strong>weighted mean</strong>) of the <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">numbers</a> <span class="math inline">\(a_1, \ldots, a_k\)</span> is a <a href="#/def-weighted-sum">weighted sum</a> of them whose <a href="#/def-weight">weights</a> <span class="math inline">\(w_1, \ldots, w_k\)</span> are non-negative and add to <span class="math inline">\(1\)</span>:</p>
 <p><span class="math display">\[
 \sum_{i=1}^{k} w_i a_i
 \quad\text{with}\quad

@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 # 1 Polynomials
 
@@ -35,7 +35,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Constant function)** A [function](functions.llms.md#def-function) $f : A \to B$ is **constant** if there is some $c \in B$ with $f(x) = c$ for all $x \in A$.
+> **Definition 1 (Constant function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : A \to B$ is **constant** if there is some $c \in B$ with $f(x) = c$ for all $x \in A$.
 
 > **NOTE:**
 >
@@ -46,7 +46,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Polynomial)** A **polynomial** (in one variable $x$) [\[1\]](#ref-wikipedia_polynomial) is a [function](functions.llms.md#def-function) $f : \mathbb{R}\to \mathbb{R}$ that can be written as $$f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$$ for some integer $n \ge 0$ and constants $a_0, a_1, \ldots, a_n \in \mathbb{R}$ with $a_n \ne 0$. The [terms](algebra-sums.llms.md#def-term) of $f$ are $a_n x^n, \ldots, a_1 x, a_0$.
+> **Definition 2 (Polynomial)** A **polynomial** (in one variable $x$) [\[1\]](#ref-wikipedia_polynomial) is a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : \mathbb{R}\to \mathbb{R}$ that can be written as $$f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$$ for some integer $n \ge 0$ and constants $a_0, a_1, \ldots, a_n \in \mathbb{R}$ with $a_n \ne 0$. The [terms](algebra-sums.llms.md#def-term) of $f$ are $a_n x^n, \ldots, a_1 x, a_0$.
 
 > **NOTE:**
 >
@@ -104,7 +104,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Parabola)** A **parabola** [\[3\]](#ref-wikipedia_parabola) is the [graph](functions.llms.md#def-graph) of a quadratic polynomial ([Definition 6](#def-quadratic-polynomial)).
+> **Definition 8 (Parabola)** A **parabola** [\[3\]](#ref-wikipedia_parabola) is the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of a quadratic polynomial ([Definition 6](#def-quadratic-polynomial)).
 
 > **NOTE:**
 >
@@ -112,12 +112,12 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 9 (Monomial (power product))** A **monomial**, also called a **power product** [\[4\]](#ref-wikipedia_monomial), in the variables $x_1, \ldots, x_p$ is an [expression](expressions-algorithms.llms.md#def-expression)
+> **Definition 9 (Monomial (power product))** A **monomial**, also called a **power product** [\[4\]](#ref-wikipedia_monomial), in the variables $x_1, \ldots, x_p$ is an [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression)
 >
 > $$x_1^{a_1} x_2^{a_2} \cdots x_p^{a_p}
 > \tag{1}$$
 >
-> that multiplies [powers](algebra-basics.llms.md#def-power) of those variables, whose [exponents](algebra-basics.llms.md#def-power-exponent) $a_1, \ldots, a_p$ are nonnegative [integers](number-systems.llms.md#def-integers).
+> that multiplies [powers](algebra-basics.llms.md#def-power) of those variables, whose [exponents](algebra-basics.llms.md#def-power-exponent) $a_1, \ldots, a_p$ are nonnegative [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers).
 >
 > Each $a_j = 0$ contributes the factor $x_j^0 = 1$ ([zero exponent](algebra-basics.llms.md#def-power-integer)).
 
@@ -128,7 +128,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 > - $x_1^3 x_4$ is a [monomial](#def-monomial), with [exponents](algebra-basics.llms.md#def-power-exponent) $(a_1, a_2, a_3, a_4) = (3, 0, 0, 1)$.
 > - The [constant](#def-constant-function) $1$ is the monomial whose exponents are all $0$.
 > - $x_1 / x_2 = x_1 x_2^{-1}$ is not a monomial, because the [exponent](algebra-basics.llms.md#def-power-exponent) of $x_2$ is negative.
-> - $\sqrt{x_3} = x_3^{1/2}$ is not a monomial, because its exponent is not an [integer](number-systems.llms.md#def-integers).
+> - $\sqrt{x_3} = x_3^{1/2}$ is not a monomial, because its exponent is not an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers).
 > - $x_1 + x_4$ is not a monomial: it adds two monomials rather than multiplying [powers](algebra-basics.llms.md#def-power).
 
 > **NOTE:**
@@ -148,7 +148,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 11 (Affine function of one variable)** A [function](functions.llms.md#def-function) $f: \mathbb{R}\to \mathbb{R}$ is **affine** [\[5\]](#ref-wikipedia_affine_transformation) if there are numbers $m$ and $b$ such that
+> **Definition 11 (Affine function of one variable)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}\to \mathbb{R}$ is **affine** [\[5\]](#ref-wikipedia_affine_transformation) if there are numbers $m$ and $b$ such that
 >
 > $$f(x) = m x + b \quad \text{for all } x \in \mathbb{R}$$
 
@@ -158,15 +158,15 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 13 (Intercept, y-intercept)** The **intercept** (or **y-intercept**) of a [function](functions.llms.md#def-function) $f$ whose [domain](functions.llms.md#def-domain) contains $0$ is $f(0)$, the height at which the [graph](functions.llms.md#def-graph) of $f$ crosses the vertical axis.
+> **Definition 13 (Intercept, y-intercept)** The **intercept** (or **y-intercept**) of a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ whose [domain](https://morrison-lab.github.io/mcs/functions.html#def-domain) contains $0$ is $f(0)$, the height at which the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ crosses the vertical axis.
 
 > **NOTE:**
 >
-> **Definition 14 (Intercept term)** When a [function](functions.llms.md#def-function) is written as [terms](algebra-sums.llms.md#def-term) added together, its **intercept term** is the [term](algebra-sums.llms.md#def-term) with no factor of the [input](functions.llms.md#def-argument). When every other term has a factor of the input, the intercept ([Definition 13](#def-intercept)) of the function is this term.
+> **Definition 14 (Intercept term)** When a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) is written as [terms](algebra-sums.llms.md#def-term) added together, its **intercept term** is the [term](algebra-sums.llms.md#def-term) with no factor of the [input](https://morrison-lab.github.io/mcs/functions.html#def-argument). When every other term has a factor of the input, the intercept ([Definition 13](#def-intercept)) of the function is this term.
 
 > **NOTE:**
 >
-> **Definition 15 (x-intercept)** An **x-intercept** of a [function](functions.llms.md#def-function) $f$ is an [input](functions.llms.md#def-argument) $x$ with $f(x) = 0$, a point where the [graph](functions.llms.md#def-graph) of $f$ crosses the horizontal axis. A function can have no x-intercept, one, or many.
+> **Definition 15 (x-intercept)** An **x-intercept** of a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ is an [input](https://morrison-lab.github.io/mcs/functions.html#def-argument) $x$ with $f(x) = 0$, a point where the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ crosses the horizontal axis. A function can have no x-intercept, one, or many.
 
 > **NOTE:**
 >
@@ -276,7 +276,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 17 (Limit of a sequence)** A real number $L$ is the **limit** of a [sequence](functions.llms.md#def-sequence) $(a_n)$ of real numbers [\[8\]](#ref-wikipedia_limit_of_a_sequence), written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$, if for every $\varepsilon> 0$ there is a natural number $N$ such that
+> **Definition 17 (Limit of a sequence)** A [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $L$ is the **limit** of a [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(a_n)$ of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) [\[8\]](#ref-wikipedia_limit_of_a_sequence), written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$, if for every $\varepsilon> 0$ there is a natural number $N$ such that
 >
 > $$\mathopen{}\left|a_n - L\right|\mathclose{} < \varepsilon\quad \text{for every } n \ge N.$$
 
@@ -302,13 +302,13 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 20 (Divergence of a sequence to infinity)** A [sequence](functions.llms.md#def-sequence) $(a_n)$ of real numbers **diverges to** $\infty$, written $\lim_{n \to \infty} a_n = \infty$, if for every real number $M$ there is a natural number $N$ such that $a_n > M$ for every $n \ge N$.
+> **Definition 20 (Divergence of a sequence to infinity)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(a_n)$ of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) **diverges to** $\infty$, written $\lim_{n \to \infty} a_n = \infty$, if for every real number $M$ there is a natural number $N$ such that $a_n > M$ for every $n \ge N$.
 
 # 4 Series
 
 > **NOTE:**
 >
-> **Definition 21 (Non-decreasing sequence)** A [sequence](functions.llms.md#def-sequence) $a_1, a_2, \ldots$ of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals) is **non-decreasing** if each term is at least as large as the one before it:
+> **Definition 21 (Non-decreasing sequence)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $a_1, a_2, \ldots$ of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) or of [extended non-negative reals](https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals) is **non-decreasing** if each term is at least as large as the one before it:
 >
 > $$a_n \le a_{n+1} \quad \text{for every } n \in \mathbb{N}$$
 
@@ -330,7 +330,11 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 22 (Partial sum)** Let $a_1, a_2, \ldots$ be a [sequence](functions.llms.md#def-sequence) of real numbers or of [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals). For each $n \in \mathbb{N}$, its $n$th **partial sum** [\[9\]](#ref-wikipedia_series_mathematics) is the [sum](algebra-sums.llms.md#def-summation) of its first $n$ terms:
+> **Definition 22**  
+>
+> #### Partial sum
+>
+> Let $a_1, a_2, \ldots$ be a [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) or of [extended non-negative reals](https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals). For each $n \in \mathbb{N}$, its $n$th **partial sum** [\[9\]](#ref-wikipedia_series_mathematics) is the [sum](algebra-sums.llms.md#def-summation) of its first $n$ terms:
 >
 > $$s_n \stackrel{\text{def}}{=}\sum_{i=1}^na_i = a_1 + \cdots + a_n$$
 
@@ -383,7 +387,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 > && \text{(} a_{n+1} \ge 0 \text{)}
 > \end{aligned}$$
 >
-> If some partial sum $s_N$ is $\infty$, then $s_n = \infty$ for every $n \ge N$, so the limit is $\infty$. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](number-systems.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](#def-convergent-sequence) to a finite number [\[10\]](#ref-wikipedia_monotone_convergence_theorem). If it is not bounded above, then for every number $M$ some $s_N$ exceeds $M$, and so does every later $s_n \ge s_N$; the limit is $\infty$.
+> If some partial sum $s_N$ is $\infty$, then $s_n = \infty$ for every $n \ge N$, so the limit is $\infty$. Otherwise, the [partial sums](#def-partial-sum) form a [non-decreasing sequence](#def-non-decreasing) of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](#def-convergent-sequence) to a finite number [\[10\]](#ref-wikipedia_monotone_convergence_theorem). If it is not bounded above, then for every number $M$ some $s_N$ exceeds $M$, and so does every later $s_n \ge s_N$; the limit is $\infty$.
 
 # 5 Exponentials and Logarithms
 
@@ -393,7 +397,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 >
 > $${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} \stackrel{\text{def}}{=}\lim_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,$$
 >
-> the [limit](#def-sequence-limit) of the [sequence](functions.llms.md#def-sequence) $\mathopen{}\left(1 + \frac{x}{1}\right)\mathclose{}^1, \mathopen{}\left(1 + \frac{x}{2}\right)\mathclose{}^2, \mathopen{}\left(1 + \frac{x}{3}\right)\mathclose{}^3, \ldots$. That limit exists for every real number $x$, and it is positive.
+> the [limit](#def-sequence-limit) of the [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $\mathopen{}\left(1 + \frac{x}{1}\right)\mathclose{}^1, \mathopen{}\left(1 + \frac{x}{2}\right)\mathclose{}^2, \mathopen{}\left(1 + \frac{x}{3}\right)\mathclose{}^3, \ldots$. That limit exists for every real number $x$, and it is positive.
 
 > **NOTE:**
 >
@@ -416,11 +420,11 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Example 16 (Euler’s number is irrational)** $e = 2.71828\ldots$ is an [irrational number](number-systems.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction $\frac{19}{7} = 2.714\ldots$ is close, but $\frac{19}{7} \ne e$ [\[12\]](#ref-wikipedia_e_mathematical_constant).
+> **Example 16 (Euler’s number is irrational)** $e = 2.71828\ldots$ is an [irrational number](https://morrison-lab.github.io/mcs/number-systems.html#def-irrational-numbers), so no fraction equals it exactly. The fraction $\frac{19}{7} = 2.714\ldots$ is close, but $\frac{19}{7} \ne e$ [\[12\]](#ref-wikipedia_e_mathematical_constant).
 
 > **NOTE:**
 >
-> **Definition 26 (Natural logarithm)** For a real number $a > 0$, the **natural logarithm** of $a$, written ${\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}$ [\[13\]](#ref-wikipedia_natural_logarithm), is the real number $y$ with ${\operatorname{exp}\mathopen{}\left\{y\right\}\mathclose{}} = a$. The exponential function takes each positive value at exactly one input, so there is exactly one such $y$, and $\log : (0, \infty) \to \mathbb{R}$ is the [inverse function](functions.llms.md#def-inverse-function) of $\operatorname{exp}$ ([Definition 24](#def-exponential-function)).
+> **Definition 26 (Natural logarithm)** For a real number $a > 0$, the **natural logarithm** of $a$, written ${\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}$ [\[13\]](#ref-wikipedia_natural_logarithm), is the real number $y$ with ${\operatorname{exp}\mathopen{}\left\{y\right\}\mathclose{}} = a$. The exponential function takes each positive value at exactly one input, so there is exactly one such $y$, and $\log : (0, \infty) \to \mathbb{R}$ is the [inverse function](https://morrison-lab.github.io/mcs/functions.html#def-inverse-function) of $\operatorname{exp}$ ([Definition 24](#def-exponential-function)).
 
 > **NOTE:**
 >
@@ -475,7 +479,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 28 (Logarithm)** Let $b$ be a positive [real number](number-systems.llms.md#def-real-numbers) with $b \ne 1$. For every real number $x > 0$, the **logarithm** of $x$ to the [base](algebra-basics.llms.md#def-power-base) $b$ [\[14\]](#ref-wikipedia_logarithm), written $\log_b x$, is the real number $y$ for which the [real power](#def-real-power) $b^y$ is $x$.
+> **Definition 28 (Logarithm)** Let $b$ be a positive [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) with $b \ne 1$. For every real number $x > 0$, the **logarithm** of $x$ to the [base](algebra-basics.llms.md#def-power-base) $b$ [\[14\]](#ref-wikipedia_logarithm), written $\log_b x$, is the real number $y$ for which the [real power](#def-real-power) $b^y$ is $x$.
 
 > **NOTE:**
 >
@@ -484,7 +488,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 > - $\log_2 8 = 3$ by the [definition of the logarithm](#def-logarithm), because $2^3 = 8$.
 > - $\log_{10} 0.01 = -2$, because $10^{-2} = 0.01$.
 >
-> The [graph](functions.llms.md#def-graph) of $\log_2 x$ passes through $(8, 3)$, the first of these two facts.
+> The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $\log_2 x$ passes through $(8, 3)$, the first of these two facts.
 >
 > Show code
 >
@@ -509,7 +513,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 > **Definition 29 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 27](#def-real-power) leave some powers $b^c$ with $b \le 0$ unassigned. We complete them as follows.
 >
 > - For a real number $c > 0$, $0^c \stackrel{\text{def}}{=}0$. For a natural number $c$, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
-> - For $b < 0$, $b^c$ is defined only when $c$ is an [integer](number-systems.llms.md#def-integers), by [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for $b < 0$ and a non-integer $c$, $b^c$ is undefined.
+> - For $b < 0$, $b^c$ is defined only when $c$ is an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), by [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for $b < 0$ and a non-integer $c$, $b^c$ is undefined.
 
 > **NOTE:**
 >
@@ -867,7 +871,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 >
 > ## Python
 >
-> Figure 2: The [graph](functions.llms.md#def-graph) of $g(b, c) = b^2 + c^2$, the surface whose [contour lines](#def-contour-line) are in [Figure 1](#fig-contour-line). The red circles are the contour lines at heights $1$, $4$ and $9$, and the dots are the points $(2, 0)$ and $(0, -2)$ of [Example 26](#exm-contour-line) on the one at height $4$.
+> Figure 2: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $g(b, c) = b^2 + c^2$, the surface whose [contour lines](#def-contour-line) are in [Figure 1](#fig-contour-line). The red circles are the contour lines at heights $1$, $4$ and $9$, and the dots are the points $(2, 0)$ and $(0, -2)$ of [Example 26](#exm-contour-line) on the one at height $4$.
 
 > **NOTE:**
 >
@@ -1162,7 +1166,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 - [Definition 19 (Divergent sequence (diverges))](#def-divergent-sequence)
 - [Definition 20 (Divergence of a sequence to infinity)](#def-diverges-to-infinity)
 - [Definition 21 (Non-decreasing sequence)](#def-non-decreasing)
-- [Definition 22 (Partial sum)](#def-partial-sum)
+- [Definition 22](#def-partial-sum)
 - [Definition 23 (Infinite sum, series)](#def-infinite-sum)
 - [Definition 24 (Exponential function)](#def-exponential-function)
 - [Definition 25 (Euler’s number)](#def-euler-number)

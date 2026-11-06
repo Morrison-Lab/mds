@@ -354,7 +354,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 11:51:36 (PST)</p>
+  <p class="date">Last modified: 2026-11-05 15:25:17 (PST)</p>
 </section><section class="slide level2"><p>(adapted from <span class="citation" data-cites="fieller2018basics">Fieller <a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, <a href="https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&amp;refId=c310b723-786a-4f33-ae56-720a6cccd3a1">Section 7.2</a>)</p>
 <p>This section covers <a href="./calculus-derivatives.html#def-derivative">derivatives</a> of functions of vectors and matrices. Its linear algebra prerequisites, such as vectors, matrices, transposes, dot products, and quadratic forms, are covered in <a href="./linear-algebra.html">Linear Algebra</a>.</p>
 <p>Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> be column vectors of length <span class="math inline">\(p\)</span> (see <a href="./linear-algebra-vectors.html#def-column-vector">column vector</a> and <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a>).</p>
@@ -606,7 +606,7 @@ Table&nbsp;1: The shape of a gradient follows the shape of what it differentiate
 <p><span class="math display">\[
 \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c\right\}\mathclose{},
 \]</span></p>
-<p>the set of points where <span class="math inline">\(f\)</span> takes the value <span class="math inline">\(c\)</span>. It is the <a href="./functions.html#def-preimage">preimage</a> of <span class="math inline">\(\mathopen{}\left\{c\right\}\mathclose{}\)</span> under <span class="math inline">\(f\)</span>, so we write it <span class="math inline">\({{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}}\)</span>. For <span class="math inline">\(p = 2\)</span>, a level set is often a curve in the plane.</p>
+<p>the set of points where <span class="math inline">\(f\)</span> takes the value <span class="math inline">\(c\)</span>. It is the <a href="https://morrison-lab.github.io/mcs/functions.html#def-preimage">preimage</a> of <span class="math inline">\(\mathopen{}\left\{c\right\}\mathclose{}\)</span> under <span class="math inline">\(f\)</span>, so we write it <span class="math inline">\({{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}}\)</span>. For <span class="math inline">\(p = 2\)</span>, a level set is often a curve in the plane.</p>
 </div>
 </section><section class="slide level2"><div id="exm-level-set" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (Level sets of <span class="math inline">\(x_1^2 + x_2^2\)</span>)</strong></span> Let <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2\)</span> for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(x_1, x_2)}^{\top}\)</span>.</p>
@@ -617,7 +617,7 @@ Table&nbsp;1: The shape of a gradient follows the shape of what it differentiate
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-level-curve" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Level curve)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^2 \to \mathbb{R}\)</span> and let <span class="math inline">\(c\)</span> be a <a href="./number-systems.html#def-real-numbers">real number</a>. The <strong>level curve</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the <a href="#/def-level-set">level set</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> when it is a curve in the plane. It is the special case <span class="math inline">\(p = 2\)</span> of a level set. A <a href="./algebra-exponentials.html#def-contour-line">contour line</a> is a level curve drawn on a plot of <span class="math inline">\(f\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 5 (Level curve)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^2 \to \mathbb{R}\)</span> and let <span class="math inline">\(c\)</span> be a <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a>. The <strong>level curve</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the <a href="#/def-level-set">level set</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> when it is a curve in the plane. It is the special case <span class="math inline">\(p = 2\)</span> of a level set. A <a href="./algebra-exponentials.html#def-contour-line">contour line</a> is a level curve drawn on a plot of <span class="math inline">\(f\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-level-curve" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (A level curve of <span class="math inline">\(x_1^2 + x_2^2\)</span>)</strong></span> Let <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2\)</span> for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(x_1, x_2)}^{\top}\)</span>. The level curve at <span class="math inline">\(4\)</span> is the circle of radius <span class="math inline">\(2\)</span> around <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
@@ -863,17 +863,8 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 </figure>
 </div>
 </section><section class="slide level2"><div class="explorer-3d-pair">
-<div id="gradient-explorer-3d">
-<div class="cell">
 <details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb6--1"><a aria-label="-1"></a>viewof gradTurn <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">360</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"turn the view"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-display">
-<div id="ojs-cell-6" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell">
-<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb7--1"><a aria-label="-1"></a><span class="co">// The graph z = f(w1, w2) of the function chosen in @fig-gradient-explorer, drawn in 3-D:</span></span>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb7--1"><a aria-label="-1"></a><span class="co">// The graph z = f(w1, w2) of the function chosen in @fig-gradient-explorer, drawn in 3-D:</span></span>
 <span id="cb7-0"><a aria-label="0"></a><span class="co">// turn the square about the vertical axis, then look down on it from 30 degrees.</span></span>
 <span id="cb7-1"><a aria-label="1"></a>{</span>
 <span id="cb7-2"><a aria-label="2"></a>  <span class="kw">const</span> n <span class="op">=</span> <span class="dv">41</span><span class="op">,</span> lim <span class="op">=</span> <span class="dv">3</span><span class="op">,</span> w <span class="op">=</span> <span class="dv">380</span><span class="op">,</span> h <span class="op">=</span> <span class="dv">320</span><span class="op">,</span> s <span class="op">=</span> <span class="dv">36</span><span class="op">,</span> elev <span class="op">=</span> <span class="dv">30</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> <span class="dv">180</span><span class="op">;</span></span>
@@ -932,13 +923,26 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <span id="cb7-55"><a aria-label="55"></a>  svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"circle"</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"cx"</span><span class="op">,</span> px)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"cy"</span><span class="op">,</span> py)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> <span class="dv">5</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"#222"</span>)<span class="op">;</span></span>
 <span id="cb7-56"><a aria-label="56"></a>  <span class="cf">return</span> svg<span class="op">.</span><span class="fu">node</span>()<span class="op">;</span></span>
 <span id="cb7-57"><a aria-label="57"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-display">
+</details><div id="fig-gradient-explorer-3d" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-gradient-explorer-3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a> of the <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> in the <a href="#/fig-gradient-explorer">gradient explorer</a>, with the same point, <a href="#/def-level-set">level curve</a> and arrows. Each arrow takes one unit step in the plane, and its height gain is the amount <span class="math inline">\(f\)</span> changes along that step.
+</figcaption><div aria-describedby="fig-gradient-explorer-3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="expression">
 
 </div>
 </div>
 </div>
-<p>The <a href="./functions.html#def-graph">graph</a> of the <a href="./functions.html#def-function">function</a> in the <a href="#/fig-gradient-explorer">gradient explorer</a>, with the same point, <a href="#/def-level-set">level curve</a> and arrows. Each arrow takes one unit step in the plane, and its height gain is the amount <span class="math inline">\(f\)</span> changes along that step.</p>
+</div>
+</figure>
 </div>
 </div>
 </section><section class="slide level2 scrollable"><div id="exr-partials-by-hand" class="theorem exercise">

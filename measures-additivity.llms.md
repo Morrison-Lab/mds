@@ -4,17 +4,17 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Finite additivity)** Let $\mathcal{S}$ be a $\sigma$-algebra on a set $S$. A [function](functions.llms.md#def-function) $\mu: \mathcal{S}\to [0, \infty]$, with values in the [extended non-negative reals](sets.llms.md#def-extended-nonneg-reals), is **finitely additive** [\[1\]](#ref-wikipedia_sigma_additive_set_function) if, for every finite collection of [pairwise disjoint](sets.llms.md#def-pairwise-disjoint) [sets](sets.llms.md#def-set) $A_1, \ldots, A_n$ in $\mathcal{S}$, the value of their union is the sum of their values:
+> **Definition 1 (Finite additivity)** Let $\mathcal{S}$ be a $\sigma$-algebra on a set $S$. A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $\mu: \mathcal{S}\to [0, \infty]$, with values in the [extended non-negative reals](https://morrison-lab.github.io/mcs/sets.html#def-extended-nonneg-reals), is **finitely additive** [\[1\]](#ref-wikipedia_sigma_additive_set_function) if, for every finite collection of [pairwise disjoint](https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint) [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $A_1, \ldots, A_n$ in $\mathcal{S}$, the value of their union is the sum of their values:
 >
 > $$\mu(A_1 \cup \cdots \cup A_n) = \sum_{i=1}^n\mu(A_i)$$
 
 > **NOTE:**
 >
-> **Example 1 (Counting elements is finitely additive)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](sets.llms.md#exm-set)), let $\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}$, the number of elements of $A$ ([cardinality](functions.llms.md#def-cardinality)), for each set $A$ in the $\sigma$-algebra of all subsets of $D$ ([Example 1 in Sigma-Algebras](measures-sigma-algebras.llms.md#exm-sigma-algebra)). The sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are pairwise disjoint ([low, middle and high die rolls](sets.llms.md#exm-pairwise-disjoint)), and:
+> **Example 1 (Counting elements is finitely additive)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](https://morrison-lab.github.io/mcs/sets.html#exm-set)), let $\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}$, the number of elements of $A$ ([cardinality](https://morrison-lab.github.io/mcs/functions.html#def-cardinality)), for each set $A$ in the $\sigma$-algebra of all subsets of $D$ ([Example 1 in Sigma-Algebras](measures-sigma-algebras.llms.md#exm-sigma-algebra)). The sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are pairwise disjoint ([low, middle and high die rolls](https://morrison-lab.github.io/mcs/sets.html#exm-pairwise-disjoint)), and:
 >
 > $$\begin{aligned}
 > \mu({\mathopen{}\left\{1, 2\right\}\mathclose{}} \cup {\mathopen{}\left\{5, 6\right\}\mathclose{}})
@@ -51,7 +51,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Countable additivity (**$\sigma$-additivity)) Let $\mathcal{S}$ be a $\sigma$-algebra on a set $S$. A function $\mu: \mathcal{S}\to [0, \infty]$ is **countably additive** [\[1\]](#ref-wikipedia_sigma_additive_set_function) (also called $\sigma$-additive) if, for every sequence of [pairwise disjoint](sets.llms.md#def-pairwise-disjoint) [sets](sets.llms.md#def-set) $A_1, A_2, \ldots$ in $\mathcal{S}$, the value of their union is the sum of their values:
+> **Definition 2 (Countable additivity (**$\sigma$-additivity)) Let $\mathcal{S}$ be a $\sigma$-algebra on a set $S$. A function $\mu: \mathcal{S}\to [0, \infty]$ is **countably additive** [\[1\]](#ref-wikipedia_sigma_additive_set_function) (also called $\sigma$-additive) if, for every sequence of [pairwise disjoint](https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint) [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $A_1, A_2, \ldots$ in $\mathcal{S}$, the value of their union is the sum of their values:
 >
 > $$\mu\mathopen{}\left(\bigcup_{i=1}^{\infty} A_i\right)\mathclose{} = \sum_{i=1}^{\infty} \mu(A_i)$$
 
@@ -95,7 +95,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Example 5 (A countably additive function with** $\mu(\emptyset) = \infty$) For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](sets.llms.md#exm-set)), let $\mu(A) \stackrel{\text{def}}{=}\infty$ for every set $A$ in the $\sigma$-algebra of all subsets of $D$ ([Example 1 in Sigma-Algebras](measures-sigma-algebras.llms.md#exm-sigma-algebra)), including $A = \emptyset$. For any sequence of pairwise disjoint sets $A_1, A_2, \ldots$, the left-hand side of the countable additivity equation is:
+> **Example 5 (A countably additive function with** $\mu(\emptyset) = \infty$) For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](https://morrison-lab.github.io/mcs/sets.html#exm-set)), let $\mu(A) \stackrel{\text{def}}{=}\infty$ for every set $A$ in the $\sigma$-algebra of all subsets of $D$ ([Example 1 in Sigma-Algebras](measures-sigma-algebras.llms.md#exm-sigma-algebra)), including $A = \emptyset$. For any sequence of pairwise disjoint sets $A_1, A_2, \ldots$, the left-hand side of the countable additivity equation is:
 >
 > $$\begin{aligned}
 > \mu\mathopen{}\left(\bigcup_{i=1}^{\infty} A_i\right)\mathclose{}

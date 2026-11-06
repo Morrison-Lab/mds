@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 # 1 Critical points and optimization
 
@@ -16,7 +16,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 >
 > **Example 1 (Flat points, and a point that is not one)**  
 >
-> - $f(w) = w^3$ has $f'(w) = 3w^2$, which is $0$ at $w = 0$, so $0$ is a flat point. Yet $f(0) = 0$ is neither the [minimum](algebra-basics.llms.md#def-minimum) nor the [maximum](algebra-basics.llms.md#def-maximum) of the [values](functions.llms.md#def-value) $f$ takes on any [open interval](sets.llms.md#def-open-interval) around $0$: $f(w) < 0$ for $w < 0$, and $f(w) > 0$ for $w > 0$.
+> - $f(w) = w^3$ has $f'(w) = 3w^2$, which is $0$ at $w = 0$, so $0$ is a flat point. Yet $f(0) = 0$ is neither the [minimum](algebra-basics.llms.md#def-minimum) nor the [maximum](algebra-basics.llms.md#def-maximum) of the [values](functions.llms.md#def-value) $f$ takes on any [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $0$: $f(w) < 0$ for $w < 0$, and $f(w) > 0$ for $w > 0$.
 > - $h(w) = w^2$ has $h'(1) = 2 \ne 0$, so $1$ is not a flat point.
 
 > **NOTE:**
@@ -182,7 +182,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Critical point)** Let $f$ be a function defined on an [open interval](sets.llms.md#def-open-interval) containing $c$. The point $c$ is a **critical point** of $f$ if either $f'(c) = 0$ or $f$ is not [differentiable at](calculus-derivatives.llms.md#def-differentiable) $c$.
+> **Definition 2 (Critical point)** Let $f$ be a [function](functions.llms.md#def-function) defined on an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) containing $c$. The point $c$ is a **critical point** of $f$ if either $f'(c) = 0$ or $f$ is not [differentiable at](calculus-derivatives.llms.md#def-differentiable) $c$.
 
 > **NOTE:**
 >
@@ -340,7 +340,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 >
 > **Theorem 2 (Second derivative test)** Let $c$ be a [flat point](#def-flat-point) of $f$, where the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $f''(c)$ is defined.
 >
-> - If $f''(c) > 0$, then $f(x) > f(c)$ for every $x \ne c$ in some [open interval](sets.llms.md#def-open-interval) around $c$.
+> - If $f''(c) > 0$, then $f(x) > f(c)$ for every $x \ne c$ in some [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $c$.
 > - If $f''(c) < 0$, then $f(x) < f(c)$ for every $x \ne c$ in some open interval around $c$.
 
 > **NOTE:**
@@ -349,7 +349,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 >
 > $$f''(c) = \lim_{x \to c} \frac{f'(x)}{x - c}.$$
 >
-> A [limit](calculus-derivatives.llms.md#def-limit) that is positive forces the [quotient](algebra-sums.llms.md#def-quotient) $f'(x)/(x - c)$ to be positive for $x$ near $c$. So $f'(x)$ has the same sign as $x - c$ on some [open interval](sets.llms.md#def-open-interval) around $c$. Hence $f' < 0$ to the left of $c$ and $f' > 0$ to the right of $c$, so $f$ is decreasing to the left of $c$ and increasing to the right of $c$. Therefore $f(x) > f(c)$ for every $x \ne c$ in that open interval.
+> A [limit](calculus-derivatives.llms.md#def-limit) that is positive forces the [quotient](algebra-sums.llms.md#def-quotient) $f'(x)/(x - c)$ to be positive for $x$ near $c$. So $f'(x)$ has the same sign as $x - c$ on some [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $c$. Hence $f' < 0$ to the left of $c$ and $f' > 0$ to the right of $c$, so $f$ is decreasing to the left of $c$ and increasing to the right of $c$. Therefore $f(x) > f(c)$ for every $x \ne c$ in that open interval.
 >
 > For $f''(c) < 0$, apply the same reasoning to $-f$, since $(-f)''(c) = -f''(c) > 0$. Then $-f(x) > -f(c)$ near $c$, which says $f(x) < f(c)$ near $c$.
 
@@ -441,7 +441,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Inflection point)** An **inflection point** of a [function](functions.llms.md#def-function) $f$ is a point $c$ such that, on some [open interval](sets.llms.md#def-open-interval) around $c$, the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $f''$ is positive on one side of $c$ and negative on the other.
+> **Definition 3 (Inflection point)** An **inflection point** of a [function](functions.llms.md#def-function) $f$ is a point $c$ such that, on some [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $c$, the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $f''$ is positive on one side of $c$ and negative on the other.
 
 > **NOTE:**
 >
@@ -553,7 +553,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 
 > **NOTE:**
 >
-> **Theorem 3 (A minimizer has derivative zero)** Let $g$ be a [real](number-systems.llms.md#def-real-numbers)-valued function on an [open interval](sets.llms.md#def-open-interval) containing $c$, and let $g$ be [differentiable](calculus-derivatives.llms.md#def-differentiable) at $c$. If $c$ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) of $g$, then $g'(c) = 0$. [\[4\]](#ref-wikipedia_fermats_theorem_stationary_points)
+> **Theorem 3 (A minimizer has derivative zero)** Let $g$ be a [real-valued function](linear-algebra-vectors.llms.md#def-real-vector-valued) on an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) containing $c$, and let $g$ be [differentiable](calculus-derivatives.llms.md#def-differentiable) at $c$. If $c$ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) of $g$, then $g'(c) = 0$. [\[4\]](#ref-wikipedia_fermats_theorem_stationary_points)
 
 > **NOTE:**
 >
@@ -885,7 +885,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 9.471535e-12 6.662049e-11
+> #> [1] 1.071498e-11 1.673470e-10
 > #> 
 > #> 
 > #> $zero_vector
@@ -904,7 +904,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >

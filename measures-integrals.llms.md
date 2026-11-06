@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Measurable function)** Let $(S, \mathcal{S})$ be a [measurable space](measures-measure-spaces.llms.md#def-measurable-space). A [function](functions.llms.md#def-function) $f : S \to \mathbb{R}$ is **measurable** (with respect to $\mathcal{S}$) [\[1\]](#ref-wikipedia_measurable_function) if, for every real number $c$, the set of elements where $f$ is at most $c$ is measurable:
+> **Definition 1 (Measurable function)** Let $(S, \mathcal{S})$ be a [measurable space](measures-measure-spaces.llms.md#def-measurable-space). A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : S \to \mathbb{R}$ is **measurable** (with respect to $\mathcal{S}$) [\[1\]](#ref-wikipedia_measurable_function) if, for every real number $c$, the set of elements where $f$ is at most $c$ is measurable:
 >
 > $${\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{}} \in \mathcal{S}$$
 
@@ -27,12 +27,16 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Integral of a non-negative function)** Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space), and let $f : S \to [0, \infty)$ be [measurable](#def-measurable-function). The **integral** of $f$ with respect to $\mu$ is [\[2\]](#ref-wikipedia_lebesgue_integration)
+> **Definition 2**  
+>
+> #### Integral of a non-negative function
+>
+> Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space), and let $f : S \to [0, \infty)$ be [measurable](#def-measurable-function). The **integral** of $f$ with respect to $\mu$ is [\[2\]](#ref-wikipedia_lebesgue_integration)
 >
 > $$\int_S f \, d\mu\stackrel{\text{def}}{=}
 > \sup {\mathopen{}\left\{\sum_{i=1}^n\mathopen{}\left(\inf_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\}\mathclose{}}$$
 >
-> where the [supremum](algebra-sums.llms.md#def-supremum) is over all ways of writing $S$ as the union of finitely many nonempty [pairwise disjoint](sets.llms.md#def-pairwise-disjoint) [sets](sets.llms.md#def-set) $A_1, \ldots, A_n$ in $\mathcal{S}$, and each $\inf_{s \in A_i} f(s)$ is the [infimum](algebra-sums.llms.md#def-infimum) of the values of $f$ on $A_i$. In the sums, $0 \cdot \infty \stackrel{\text{def}}{=}0$, and $x \cdot \infty \stackrel{\text{def}}{=}\infty$ for $x > 0$; the supremum is $\infty$ if some sum is $\infty$. The integral is also written $\int_S f(s) \, d\mu(s)$.
+> where the [supremum](algebra-sums.llms.md#def-supremum) is over all ways of writing $S$ as the union of finitely many nonempty [pairwise disjoint](https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint) [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $A_1, \ldots, A_n$ in $\mathcal{S}$, and each $\inf_{s \in A_i} f(s)$ is the [infimum](algebra-sums.llms.md#def-infimum) of the values of $f$ on $A_i$. In the sums, $0 \cdot \infty \stackrel{\text{def}}{=}0$, and $x \cdot \infty \stackrel{\text{def}}{=}\infty$ for $x > 0$; the supremum is $\infty$ if some sum is $\infty$. The integral is also written $\int_S f(s) \, d\mu(s)$.
 >
 > [\[3, Sec. 15\]](#ref-billingsley1995probability)
 
@@ -74,7 +78,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (A function in terms of its positive and negative parts). For a [function](functions.llms.md#def-function) $f : S \to \mathbb{R}$, with the [positive part](algebra-basics.llms.md#def-positive-negative-parts) and [negative part](algebra-basics.llms.md#def-negative-part), $f = f^{+} - f^{-}$ and $\mathopen{}\left|f\right|\mathclose{} = f^{+} + f^{-}$. ($f^{+}$, $f^{-}$, and $\mathopen{}\left|f\right|\mathclose{}$ are [measurable](#def-measurable-function) when $f$ is [\[3\]](#ref-billingsley1995probability), Theorem 13.3.)
+> *Remark 3* (A function in terms of its positive and negative parts). For a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : S \to \mathbb{R}$, with the [positive part](algebra-basics.llms.md#def-positive-negative-parts) and [negative part](algebra-basics.llms.md#def-negative-part), $f = f^{+} - f^{-}$ and $\mathopen{}\left|f\right|\mathclose{} = f^{+} + f^{-}$. ($f^{+}$, $f^{-}$, and $\mathopen{}\left|f\right|\mathclose{}$ are [measurable](#def-measurable-function) when $f$ is [\[3\]](#ref-billingsley1995probability), Theorem 13.3.)
 
 > **NOTE:**
 >
@@ -167,7 +171,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 >
 > [![Three bar charts side by side, each with the die rolls 1 to 6 on the horizontal axis. The left chart, f, has bars of height minus 2, minus 1, 0, 1, 2 and 3, the first two below the axis. The middle chart, the positive part, has bars of height 0, 0, 0, 1, 2 and 3, which sum to 6. The right chart, the negative part, has bars of height 2, 1, 0, 0, 0 and 0, which sum to 3.](measures-integrals_files/figure-html/positive-negative-parts-python-1.png)](measures-integrals_files/figure-html/positive-negative-parts-python-1.png "Figure 1: Let D be the die rolls of Example 3. The plot shows the function f(x) = x - 3 on D, its positive part, and its negative part. With the counting measure, each integral is the sum of the bar heights, and 6 - 3 = 3 is the integral of f.")
 >
-> Figure 1: Let $D$ be the die rolls of [Example 3](#exm-integral). The plot shows the [function](functions.llms.md#def-function) $f(x) = x - 3$ on $D$, its [positive part](algebra-basics.llms.md#def-positive-negative-parts), and its [negative part](algebra-basics.llms.md#def-negative-part). With the [counting measure](measures-measure-spaces.llms.md#def-counting-measure), each [integral](#def-integral) is the [sum](algebra-sums.llms.md#def-summation) of the bar heights, and $6 - 3 = 3$ is the integral of $f$.
+> Figure 1: Let $D$ be the die rolls of [Example 3](#exm-integral). The plot shows the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f(x) = x - 3$ on $D$, its [positive part](algebra-basics.llms.md#def-positive-negative-parts), and its [negative part](algebra-basics.llms.md#def-negative-part). With the [counting measure](measures-measure-spaces.llms.md#def-counting-measure), each [integral](#def-integral) is the [sum](algebra-sums.llms.md#def-summation) of the bar heights, and $6 - 3 = 3$ is the integral of $f$.
 
 > **NOTE:**
 >
@@ -207,7 +211,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 # Definitions on this page
 
 - [Definition 1 (Measurable function)](#def-measurable-function)
-- [Definition 2 (Integral of a non-negative function)](#def-integral-nonneg)
+- [Definition 2](#def-integral-nonneg)
 - [Definition 3 (Integral of a real-valued function)](#def-integral)
 - [Definition 4 (Absolutely integrable function, integrable function)](#def-absolutely-integrable)
 

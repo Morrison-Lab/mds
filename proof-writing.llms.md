@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -19,7 +19,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 > **Example 1 (Propositions, and a sentence that is not one)**  
 >
 > - “$2 + 3 = 5$” is a proposition, and it is true.
-> - “$7$ is [even](number-systems.llms.md#def-even-odd)” is a proposition, and it is false.
+> - “$7$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)” is a proposition, and it is false.
 > - “$x > 2$” is not a proposition on its own: it is true when $x = 3$ and false when $x = 1$, so it has no truth value until $x$ is given a value.
 
 > **NOTE:**
@@ -35,13 +35,13 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 3 (Domain of discourse, universe of discourse)** The **domain of discourse** (or **universe of discourse**) of a [predicate](#def-predicate) $P(x)$ is the [set](#def-set) of values its variable $x$ may take. A predicate in several variables has a domain of discourse for each variable.
+> **Definition 3 (Domain of discourse, universe of discourse)** The **domain of discourse** (or **universe of discourse**) of a [predicate](#def-predicate) $P(x)$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of values its variable $x$ may take. A predicate in several variables has a domain of discourse for each variable.
 
 > **NOTE:**
 >
 > **Example 3 (The domain changes the truth value)**  
 >
-> Let $P(x)$ be the [predicate](#def-predicate) “$x^2 = 2$”. If its [domain of discourse](#def-domain-of-discourse) is the [real numbers](number-systems.llms.md#def-real-numbers), then $P(x)$ is true for $x = \sqrt{2}$. If its domain of discourse is the [integers](number-systems.llms.md#def-integers), then $P(x)$ is false for every $x$, since the [squares](algebra-basics.llms.md#def-square) of the [integers](number-systems.llms.md#def-integers) are $0, 1, 4, 9, \ldots$, and none of them is $2$.
+> Let $P(x)$ be the [predicate](#def-predicate) “$x^2 = 2$”. If its [domain of discourse](#def-domain-of-discourse) is the [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), then $P(x)$ is true for $x = \sqrt{2}$. If its domain of discourse is the [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), then $P(x)$ is false for every $x$, since the [squares](algebra-basics.llms.md#def-square) of the [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) are $0, 1, 4, 9, \ldots$, and none of them is $2$.
 
 > **NOTE:**
 >
@@ -100,12 +100,12 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 >
 > **Example 8 (“If and only if” with equal and different truth values)** Take $x = 4$.
 >
-> - “$x$ is [even](number-systems.llms.md#def-even-odd) $\Leftrightarrow x > 3$” is true: $4$ is even and $4 > 3$, so both sides are true.
+> - “$x$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd) $\Leftrightarrow x > 3$” is true: $4$ is even and $4 > 3$, so both sides are true.
 > - “$x > 3 \Leftrightarrow x > 5$” is false: $4 > 3$ is true, but $4 > 5$ is false.
 
 > **NOTE:**
 >
-> **Example 9 (Truth values of connectives)** Let $P$ be “$2 + 3 = 5$”, which is true, and let $Q$ be “$7$ is [even](number-systems.llms.md#def-even-odd)”, which is false.
+> **Example 9 (Truth values of connectives)** Let $P$ be “$2 + 3 = 5$”, which is true, and let $Q$ be “$7$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)”, which is false.
 >
 > - $\neg Q$, “$7$ is not even”, is true, because $Q$ is false.
 > - $P \land Q$ is false, because $Q$ is false.
@@ -169,7 +169,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 >
 > **Example 12 (Proving an “if and only if” in two parts)**  
 >
-> Let $n$ be an [integer](number-systems.llms.md#def-integers). By [a biconditional is two conditionals](#thm-biconditional-split), to prove “$n$ is [even](number-systems.llms.md#def-even-odd) [if and only if](#def-iff) $n + 2$ is even”, it is enough to prove both conditionals:
+> Let $n$ be an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers). By [a biconditional is two conditionals](#thm-biconditional-split), to prove “$n$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd) [if and only if](#def-iff) $n + 2$ is even”, it is enough to prove both conditionals:
 >
 > - If $n = 2m$, then $n + 2 = 2(m + 1)$, which is even.
 > - If $n + 2 = 2m$, then $n = 2(m - 1)$, which is even.
@@ -189,10 +189,10 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 >
 > **Example 13 (Three equivalent statements)**  
 >
-> Let $n$ be an [integer](number-systems.llms.md#def-integers), and let:
+> Let $n$ be an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), and let:
 >
-> - $P_1$ be “$n$ is [even](number-systems.llms.md#def-even-odd)”;
-> - $P_2$ be “$n + 1$ is [odd](number-systems.llms.md#def-odd)”;
+> - $P_1$ be “$n$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)”;
+> - $P_2$ be “$n + 1$ is [odd](https://morrison-lab.github.io/mcs/number-systems.html#def-odd)”;
 > - $P_3$ be “$n + 2$ is even”.
 >
 > If $n = 2m$, then $n + 1 = 2m + 1$, so $P_1 \Rightarrow P_2$. If $n + 1 = 2m + 1$, then $n + 2 = 2(m + 1)$, so $P_2 \Rightarrow P_3$. If $n + 2 = 2m$, then $n = 2(m - 1)$, so $P_3 \Rightarrow P_1$. By [a cycle of conditionals](#thm-equivalent-cycle), the three [propositions](#def-proposition) are all true or all false. Three conditionals were enough, where checking each pair both ways would take six.
@@ -297,7 +297,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 >
 > **Example 17 (Removing a double negation)**  
 >
-> Let $P$ be the [proposition](#def-proposition) “$7$ is [odd](number-systems.llms.md#def-odd)”. Then $\neg \neg P$ is “it is not the case that $7$ is not odd”. By [double negation](#thm-double-negation), $\neg \neg P$ says the same thing as $P$: $7$ is odd.
+> Let $P$ be the [proposition](#def-proposition) “$7$ is [odd](https://morrison-lab.github.io/mcs/number-systems.html#def-odd)”. Then $\neg \neg P$ is “it is not the case that $7$ is not odd”. By [double negation](#thm-double-negation), $\neg \neg P$ says the same thing as $P$: $7$ is odd.
 
 > **NOTE:**
 >
@@ -309,7 +309,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Example 18 (A universally quantified proposition)** Let $P(x)$ be the predicate “$x$ is [even](number-systems.llms.md#def-even-odd)”.
+> **Example 18 (A universally quantified proposition)** Let $P(x)$ be the [predicate](#def-predicate) “$x$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)”.
 >
 > - “$\forall x \in \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, P(x)$” is true, because $2$, $4$, and $6$ are all even.
 > - “$\forall x \in \mathopen{}\left\{2, 3, 4\right\}\mathclose{}, P(x)$” is false, because $P(3)$ is false.
@@ -320,14 +320,14 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Example 19 (An existentially quantified proposition)** Let $P(x)$ be the predicate “$x$ is [even](number-systems.llms.md#def-even-odd)”.
+> **Example 19 (An existentially quantified proposition)** Let $P(x)$ be the [predicate](#def-predicate) “$x$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)”.
 >
 > - “$\exists x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)$” is true, because $P(2)$ is true.
 > - “$\exists x \in \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, P(x)$” is false, because none of $1$, $3$, and $5$ is even.
 
 > **NOTE:**
 >
-> **Example 20 (Quantified propositions)** Let $P(x)$ be the predicate “$x > 2$”, for [integers](number-systems.llms.md#def-integers) $x$.
+> **Example 20 (Quantified propositions)** Let $P(x)$ be the [predicate](#def-predicate) “$x > 2$”, for [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) $x$.
 >
 > - “$\exists x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)$” is true, because $P(3)$ is true.
 > - “$\forall x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)$” is false, because $P(1)$ is false.
@@ -335,7 +335,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Theorem 6 (De Morgan’s laws for quantifiers)** For a [set](#def-set) $S$ and a [predicate](#def-predicate) $P(x)$ whose [domain of discourse](#def-domain-of-discourse) is $S$:
+> **Theorem 6 (De Morgan’s laws for quantifiers)** For a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ and a [predicate](#def-predicate) $P(x)$ whose [domain of discourse](#def-domain-of-discourse) is $S$:
 >
 > $$\begin{aligned}
 > \neg (\forall x \in S, P(x)) &\equiv \exists x \in S, \neg P(x) \\
@@ -351,17 +351,17 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> *Remark 1* (Why the two laws share a theorem). The two laws in [De Morgan’s laws for quantifiers](#thm-negate-quantifiers) are one rule seen from each side: negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$ and moves the [negation](#def-not) onto the [predicate](#def-predicate). [De Morgan’s laws for propositions](#thm-de-morgan-logic) pair their two laws the same way, and these laws extend them from two propositions to a whole [set](#def-set) of them.
+> *Remark 1* (Why the two laws share a theorem). The two laws in [De Morgan’s laws for quantifiers](#thm-negate-quantifiers) are one rule seen from each side: negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$ and moves the [negation](#def-not) onto the [predicate](#def-predicate). [De Morgan’s laws for propositions](#thm-de-morgan-logic) pair their two laws the same way, and these laws extend them from two propositions to a whole [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of them.
 
 > **NOTE:**
 >
 > **Example 21 (Negating “every integer is even”)**  
 >
-> Let $S$ be the [integers](number-systems.llms.md#def-integers), and let $P(x)$ be “$x$ is [even](number-systems.llms.md#def-even-odd)”. By the first of [De Morgan’s laws for quantifiers](#thm-negate-quantifiers), $\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)$: the [negation](#def-not) of “every [integer](number-systems.llms.md#def-integers) is even” is “some integer is not even”. By the second law, $\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)$: the negation of “some integer is even” is “no integer is even”.
+> Let $S$ be the [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), and let $P(x)$ be “$x$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)”. By the first of [De Morgan’s laws for quantifiers](#thm-negate-quantifiers), $\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)$: the [negation](#def-not) of “every [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) is even” is “some integer is not even”. By the second law, $\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)$: the negation of “some integer is even” is “no integer is even”.
 
 > **NOTE:**
 >
-> **Definition 17 (Inequality)** An **inequality** is a proposition ([Definition 1](#def-proposition)) or a predicate ([Definition 2](#def-predicate)) that compares two expressions $a$ and $b$ whose values are [real numbers](number-systems.llms.md#def-real-numbers), in one of the forms:
+> **Definition 17 (Inequality)** An **inequality** is a proposition ([Definition 1](#def-proposition)) or a predicate ([Definition 2](#def-predicate)) that compares two expressions $a$ and $b$ whose values are [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), in one of the forms:
 >
 > - $a < b$ (“$a$ is less than $b$”);
 > - $a \le b$ (“$a$ is less than or equal to $b$”);
@@ -383,7 +383,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Example 23 (Entailment, and its failure)** Let $x$ be an [integer](number-systems.llms.md#def-integers).
+> **Example 23 (Entailment, and its failure)** Let $x$ be an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers).
 >
 > - “$x = 2$” entails “$x^2 = 4$”: the only value that makes “$x = 2$” true is $x = 2$, and $2^2 = 4$.
 > - “$x > 3$” and “$x < 5$” together entail “$x = 4$”: $4$ is the only integer greater than $3$ and less than $5$.
@@ -415,7 +415,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 >
 > **Example 24 (A logical argument)**  
 >
-> “If $n$ is [even](number-systems.llms.md#def-even-odd), then $n^2$ is even. $n$ is even. So $n^2$ is even.” is a [logical argument](#def-logical-argument). Its [premises](#def-premise) are “if $n$ is even, then $n^2$ is even” and “$n$ is even”. Its [conclusion](#def-conclusion) is “$n^2$ is even”.
+> “If $n$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd), then $n^2$ is even. $n$ is even. So $n^2$ is even.” is a [logical argument](#def-logical-argument). Its [premises](#def-premise) are “if $n$ is even, then $n^2$ is even” and “$n$ is even”. Its [conclusion](#def-conclusion) is “$n^2$ is even”.
 
 > **NOTE:**
 >
@@ -431,7 +431,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 >
 > $$\frac{P \Rightarrow Q, \quad Q}{P}$$
 >
-> is not a [rule of inference](#def-rule-of-inference). In the row of the [truth table](#def-truth-table) where $P$ is false and $Q$ is true, both [premises](#def-premise) are true, by the definition of [implies](#def-implies), but the [conclusion](#def-conclusion) $P$ is false. For example, “if $n = 2$, then $n$ is [even](number-systems.llms.md#def-even-odd)” and “$n$ is even” are both true for $n = 4$, but “$n = 2$” is false.
+> is not a [rule of inference](#def-rule-of-inference). In the row of the [truth table](#def-truth-table) where $P$ is false and $Q$ is true, both [premises](#def-premise) are true, by the definition of [implies](#def-implies), but the [conclusion](#def-conclusion) $P$ is false. For example, “if $n = 2$, then $n$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)” and “$n$ is even” are both true for $n = 4$, but “$n = 2$” is false.
 
 > **NOTE:**
 >
@@ -516,7 +516,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 27 (The sum of two even integers is even)** Let $a$ and $b$ be even integers ([definition](number-systems.llms.md#def-even-odd)). Then $a = 2j$ and $b = 2k$ for some integers $j$ and $k$, and
+> **Example 27 (The sum of two even integers is even)** Let $a$ and $b$ be even [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) ([definition](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)). Then $a = 2j$ and $b = 2k$ for some integers $j$ and $k$, and
 >
 > $$\begin{aligned}
 > a + b
@@ -527,7 +527,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 > && \text{(distributive law)}
 > \end{aligned}$$
 >
-> The second line uses the [distributive law](algebra-sums.llms.md#def-distributive). Since $j + k$ is an integer, $a + b$ is even ([definition](number-systems.llms.md#def-even-odd)). For example,
+> The second line uses the [distributive law](algebra-sums.llms.md#def-distributive). Since $j + k$ is an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), $a + b$ is even ([definition](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)). For example,
 >
 > $$\begin{aligned}
 > 4 + 10 &= 2 \cdot 2 + 2 \cdot 5 \\
@@ -623,7 +623,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 30 (A proposition that is a result, and one that is not)** “$2 + 3 = 5$” is a proposition ([Definition 1](#def-proposition)) that has a proof, the computation of $2 + 3$, so it is a result. “$7$ is [even](number-systems.llms.md#def-even-odd)” is a proposition that is false, so it has no proof and is not a result.
+> **Example 30 (A proposition that is a result, and one that is not)** “$2 + 3 = 5$” is a proposition ([Definition 1](#def-proposition)) that has a proof, the computation of $2 + 3$, so it is a result. “$7$ is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)” is a proposition that is false, so it has no proof and is not a result.
 
 > **NOTE:**
 >
@@ -675,9 +675,9 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 35 (A disproof)** Claim: every [prime](number-systems.llms.md#def-prime) is [odd](number-systems.llms.md#def-odd).
+> **Example 35 (A disproof)** Claim: every [prime](https://morrison-lab.github.io/mcs/number-systems.html#def-prime) is [odd](https://morrison-lab.github.io/mcs/number-systems.html#def-odd).
 >
-> [Disproof](#def-disproof): the [integer](number-systems.llms.md#def-integers) $2$ is prime, and $2$ is not odd, since $2 = 2k + 1$ would need $k = 1/2$, which is not an integer. So there is a prime that is not odd, which is the [negation](#def-not) of the claim.
+> [Disproof](#def-disproof): the [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) $2$ is prime, and $2$ is not odd, since $2 = 2k + 1$ would need $k = 1/2$, which is not an integer. So there is a prime that is not odd, which is the [negation](#def-not) of the claim.
 >
 > This disproof gives a [counterexample](#def-counterexample), $2$.
 
@@ -691,11 +691,11 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 36 (A constructive proof)** Claim: there are [integers](number-systems.llms.md#def-integers) $m$ and $n$ with $m + n = 1$.
+> **Example 36 (A constructive proof)** Claim: there are [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) $m$ and $n$ with $m + n = 1$.
 >
 > Proof: take $m = 0$ and $n = 1$. Then $m + n = 0 + 1 = 1$.
 >
-> This [proof](#def-proof) is a [constructive proof](#def-constructive-proof), since it names an [integer](number-systems.llms.md#def-integers) for each of the two [existential quantifiers](#def-existential-quantifier).
+> This [proof](#def-proof) is a [constructive proof](#def-constructive-proof), since it names an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) for each of the two [existential quantifiers](#def-existential-quantifier).
 
 > **NOTE:**
 >
@@ -703,9 +703,9 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 37 (A non-constructive proof)** Claim: among any three [integers](number-systems.llms.md#def-integers), there are two that are both [even](number-systems.llms.md#def-even-odd) or both [odd](number-systems.llms.md#def-odd).
+> **Example 37 (A non-constructive proof)** Claim: among any three [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), there are two that are both [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd) or both [odd](https://morrison-lab.github.io/mcs/number-systems.html#def-odd).
 >
-> Proof: each [integer](number-systems.llms.md#def-integers) is even or odd. If at most one of the three integers were even, and at most one were odd, there would be at most two integers in all. So at least two of the three are even, or at least two are odd.
+> Proof: each [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) is even or odd. If at most one of the three integers were even, and at most one were odd, there would be at most two integers in all. So at least two of the three are even, or at least two are odd.
 >
 > This [proof](#def-proof) is a [non-constructive proof](#def-nonconstructive-proof), since it does not say which two of the integers share their parity.
 
@@ -786,7 +786,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](algebra-exponential
 
 > **NOTE:**
 >
-> **Example 43 (No integer is both even and odd)** Suppose, for contradiction, that some integer $n$ is both even and odd ([definition](number-systems.llms.md#def-even-odd)). Then $n = 2j$ and $n = 2k + 1$ for some integers $j$ and $k$, and
+> **Example 43 (No integer is both even and odd)** Suppose, for [contradiction](#def-contradiction), that some [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) $n$ is both [even and odd](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd). Then $n = 2j$ and $n = 2k + 1$ for some integers $j$ and $k$, and
 >
 > $$\begin{aligned}
 > 2j &= 2k + 1
@@ -891,7 +891,7 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 
 > **NOTE:**
 >
-> **Example 45 (The square of an odd integer is odd)** Claim: if $n$ is an [odd](number-systems.llms.md#def-odd) [integer](number-systems.llms.md#def-integers), then $n^2$ is odd.
+> **Example 45 (The square of an odd integer is odd)** Claim: if $n$ is an [odd](https://morrison-lab.github.io/mcs/number-systems.html#def-odd) [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), then $n^2$ is odd.
 >
 > Since $n$ is odd, there is an integer $k$ with $n = 2k + 1$. Then
 >
@@ -907,7 +907,7 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 > && \text{(distributive law, read from right to left)}
 > \end{aligned}$$
 >
-> and $2k^2 + 2k$ is an integer, because adding or multiplying [integers](number-systems.llms.md#def-integers) gives an integer. So $n^2 = 2 \cdot(\text{an integer}) + 1$, which is the definition of odd. For example,
+> and $2k^2 + 2k$ is an integer, because adding or multiplying [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) gives an integer. So $n^2 = 2 \cdot(\text{an integer}) + 1$, which is the definition of odd. For example,
 >
 > $$\begin{aligned}
 > n &= 7 \\
@@ -933,7 +933,7 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 
 > **NOTE:**
 >
-> **Example 46 (If** $x^2 + 3x < 0$, then $x < 0$) Claim: for every [real number](number-systems.llms.md#def-real-numbers) $x$, if $x^2 + 3x < 0$, then $x < 0$.
+> **Example 46 (If** $x^2 + 3x < 0$, then $x < 0$) Claim: for every [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$, if $x^2 + 3x < 0$, then $x < 0$.
 >
 > A [direct proof](#def-direct-proof) would have to start from the [inequality](#def-inequality) $x^2 + 3x < 0$, which says little about $x$ on its own. The contrapositive ([Definition 34](#def-contrapositive)) is “if $x \ge 0$, then $x^2 + 3x \ge 0$”, and its assumption is easier to use.
 >
@@ -957,7 +957,7 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 
 > **NOTE:**
 >
-> **Example 47 (The square of a real number is nonnegative)** Claim: for every [real number](number-systems.llms.md#def-real-numbers) $x$, $x^2 \ge 0$.
+> **Example 47 (The square of a real number is nonnegative)** Claim: for every [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$, $x^2 \ge 0$.
 >
 > Every real number $x$ satisfies $x \ge 0$ or $x < 0$, so these two cases cover every $x$.
 >
@@ -985,11 +985,11 @@ When you read someone else’s proof, you want to be able to follow every step w
 
 # 8 Proof by induction
 
-Many proofs in these notes show that a statement holds for every [natural number](number-systems.llms.md#def-natural-numbers) $n$, or for every integer $n$ from some starting value on. Checking the statement one $n$ at a time would never finish; induction proves it for all of them with two arguments.
+Many proofs in these notes show that a statement holds for every [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $n$, or for every integer $n$ from some starting value on. Checking the statement one $n$ at a time would never finish; induction proves it for all of them with two arguments.
 
 > **NOTE:**
 >
-> **Definition 42 (Proof by induction)** Let $n_0$ be an [integer](number-systems.llms.md#def-integers), and let $P(n)$ be a [predicate](proof-writing.llms.md#def-predicate) about the integers $n \ge n_0$. A **proof by induction** [\[28\]](#ref-wikipedia_mathematical_induction) on $n$ shows that $P(n)$ holds for every integer $n \ge n_0$ by showing two things:
+> **Definition 42 (Proof by induction)** Let $n_0$ be an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), and let $P(n)$ be a [predicate](proof-writing.llms.md#def-predicate) about the integers $n \ge n_0$. A **proof by induction** [\[28\]](#ref-wikipedia_mathematical_induction) on $n$ shows that $P(n)$ holds for every integer $n \ge n_0$ by showing two things:
 >
 > 1.  **Base case:** $P(n_0)$ holds.
 > 2.  **Inductive step:** for every integer $n > n_0$, if $P(n - 1)$ holds, then $P(n)$ holds.
@@ -1091,15 +1091,15 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 >
 > **Definition 44 (First-order logic)** **First-order logic** [\[30\]](#ref-wikipedia_first_order_logic) extends propositional logic ([Definition 43](#def-propositional-logic)) by also allowing:
 >
-> - variables $x, y, \ldots$ that stand for elements of a [set](sets.llms.md#def-set);
+> - variables $x, y, \ldots$ that stand for elements of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set);
 > - [predicates](#def-predicate) of one or more of those variables, such as $P(x)$ or $x < y$;
-> - [functions](functions.llms.md#def-function) of them, such as $x + y$;
+> - [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of them, such as $x + y$;
 > - equality between them;
 > - [quantifiers](#def-quantifier) $\forall$ and $\exists$ over them.
 
 > **NOTE:**
 >
-> **Example 50 (From “for all” to one element)** Let $P(x)$ be a [predicate](#def-predicate) about the elements of a [set](sets.llms.md#def-set) $S$, and let $a \in S$. The [propositions](#def-proposition) $\forall x \in S, P(x)$ and $a \in S$ [logically entail](#def-logical-entailment) $P(a)$: if $P(x)$ is true for every element $x$ of $S$, then it is true for the element $a$. For example, $\forall x \in \mathbb{Z}, x^2 \ge 0$ entails $3^2 \ge 0$. [Propositional logic](#def-propositional-logic) alone cannot express this entailment, because it has no way to refer to the elements of $S$.
+> **Example 50 (From “for all” to one element)** Let $P(x)$ be a [predicate](#def-predicate) about the elements of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$, and let $a \in S$. The [propositions](#def-proposition) $\forall x \in S, P(x)$ and $a \in S$ [logically entail](#def-logical-entailment) $P(a)$: if $P(x)$ is true for every element $x$ of $S$, then it is true for the element $a$. For example, $\forall x \in \mathbb{Z}, x^2 \ge 0$ entails $3^2 \ge 0$. [Propositional logic](#def-propositional-logic) alone cannot express this entailment, because it has no way to refer to the elements of $S$.
 
 > **NOTE:**
 >

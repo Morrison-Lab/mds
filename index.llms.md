@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 # Welcome
 
@@ -17,10 +17,10 @@ These notes collect the mathematics that data science courses assume: mathematic
 The first six topics are the foundations. Apart from a few remarks in Algebra that touch on calculus, they assume no calculus, so a course on discrete math, such as [Math for Computer Science](https://morrison-lab.github.io/mcs/), can build on them directly:
 
 - [Notation](notation.llms.md): common symbols
-- [Number Systems](number-systems.llms.md): the integers, natural numbers, even and odd numbers, and the rational, real, and irrational numbers
+- [Number Systems](https://morrison-lab.github.io/mcs/number-systems.html): the integers, natural numbers, even and odd numbers, and the rational, real, and irrational numbers
 - [Sets and Functions](sets-functions.llms.md), on four pages:
-  - [Sets](sets.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, and the extended non-negative real numbers
-  - [Functions](functions.llms.md): functions with their domains, codomains, and images, sequences, and countable sets
+  - [Sets](https://morrison-lab.github.io/mcs/sets.html): sets, subsets and supersets, the empty set, unions, intersections, and set differences, and the extended non-negative real numbers
+  - [Functions](https://morrison-lab.github.io/mcs/functions.html): functions with their domains, codomains, and images, sequences, and countable sets
   - [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html): expressions, parse trees, and algorithms
   - [Indicator Functions](indicator-functions.llms.md): set and predicate indicators, the Iverson bracket, the Kronecker delta, and their algebraic properties
 - [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
@@ -29,7 +29,7 @@ The first six topics are the foundations. Apart from a few remarks in Algebra th
 
 The remaining topics build on the foundations and on each other:
 
-- [Measures](measures.llms.md): $\sigma$-algebras, [finite](functions.llms.md#def-finite-set) and [countable additivity](measures-additivity.llms.md#def-countable-additivity), measures, and the counting measure
+- [Measures](measures.llms.md): $\sigma$-algebras, [finite](https://morrison-lab.github.io/mcs/functions.html#def-finite-set) and [countable additivity](measures-additivity.llms.md#def-countable-additivity), measures, and the counting measure
 - [Calculus](calculus.llms.md): [derivative](calculus-derivatives.llms.md#def-derivative) rules, [Taylor series](calculus-taylor-series.llms.md#def-taylor-series), [antiderivatives](calculus-integration.llms.md#def-antiderivative), regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
@@ -60,9 +60,6 @@ Each page is a thin wrapper around one or more fragments:
 | Page | Fragment(s) to include |
 |----|----|
 | [Notation](notation.llms.md) | `mds/_notation.qmd` |
-| [Number Systems](number-systems.llms.md) | `mds/_number-systems.qmd` |
-| [Sets](sets.llms.md) | `mds/_sets.qmd` |
-| [Functions](functions.llms.md) | `mds/_functions.qmd` |
 | [Indicator Functions](indicator-functions.llms.md) | `mds/_indicator-functions.qmd` |
 | [Algebra](algebra.llms.md) | `mds/_algebra.qmd` |
 | [Measures](measures.llms.md) | `mds/_measures.qmd` |
@@ -72,7 +69,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Optimization](optimization.llms.md) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.llms.md) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_number-systems.qmd`, `_sets.qmd`, `_functions.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
+`_notation.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
 
 Quarto resolves `@id` cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, `[text](notation.qmd#id)`.
 

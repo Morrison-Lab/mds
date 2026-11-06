@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 11:51:36 (PST)
+Last modified: 2026-11-05 15:25:17 (PST)
 
 > **NOTE:**
 >
@@ -31,7 +31,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Convergence of a sequence of vectors)** A [sequence](functions.llms.md#def-sequence) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots$ in $\mathbb{R}^p$ **converges** to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* \in \mathbb{R}^p$ if the sequence of distances $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{}$ [converges](algebra-exponentials.llms.md#def-convergent-sequence) to $0$. For $p = 1$, $\mathopen{}\left\lVert x^{(t)} - x^*\right\rVert\mathclose{} = \mathopen{}\left|x^{(t)} - x^*\right|\mathclose{}$, and this is the convergence of a sequence of numbers to $x^*$.
+> **Definition 4 (Convergence of a sequence of vectors)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots$ in $\mathbb{R}^p$ **converges** to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* \in \mathbb{R}^p$ if the sequence of distances $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{}$ [converges](algebra-exponentials.llms.md#def-convergent-sequence) to $0$. For $p = 1$, $\mathopen{}\left\lVert x^{(t)} - x^*\right\rVert\mathclose{} = \mathopen{}\left|x^{(t)} - x^*\right|\mathclose{}$, and this is the convergence of a sequence of numbers to $x^*$.
 
 > **NOTE:**
 >
@@ -250,7 +250,7 @@ Last modified: 2026-11-05 11:51:36 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Quadratic convergence)** A [sequence](functions.llms.md#def-sequence) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots$ in $\mathbb{R}^p$ that converges ([Definition 4](#def-vector-sequence-limit)) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ **converges quadratically** [\[4\]](#ref-wikipedia_rate_of_convergence) if there is a constant $C$ with
+> **Definition 8 (Quadratic convergence)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots$ in $\mathbb{R}^p$ that [converges](#def-vector-sequence-limit) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ **converges quadratically** [\[4\]](#ref-wikipedia_rate_of_convergence) if there is a constant $C$ with
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} \le C\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{}^2
 > \qquad \text{for every } t.$$
@@ -307,13 +307,13 @@ Last modified: 2026-11-05 11:51:36 (PST)
 > nc_err_ax = [x - 2 for x in nc_x_ax]
 > fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
 > ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f5f7cd62490>]
+> #> [<matplotlib.lines.Line2D object at 0x7f1992282710>]
 > ax.set_xlabel("iteration t")
 > #> Text(0.5, 0, 'iteration t')
 > ax.set_ylabel("error of the iterate")
 > #> Text(0, 0.5, 'error of the iterate')
 > ax.set_xticks(range(4))
-> #> [<matplotlib.axis.XTick object at 0x7f5f7cd0bed0>, <matplotlib.axis.XTick object at 0x7f5f7cd0b610>, <matplotlib.axis.XTick object at 0x7f5f7cd62c10>, <matplotlib.axis.XTick object at 0x7f5f7cd63390>]
+> #> [<matplotlib.axis.XTick object at 0x7f1992280190>, <matplotlib.axis.XTick object at 0x7f1992423890>, <matplotlib.axis.XTick object at 0x7f1992282e90>, <matplotlib.axis.XTick object at 0x7f1992283610>]
 > plt.show();
 > ```
 >
@@ -373,6 +373,184 @@ Last modified: 2026-11-05 11:51:36 (PST)
 > \end{aligned}$$
 >
 > the minimizer.
+>
+> [Figure 3](#fig-newton-quadratic) shows the step on the [level curves](vector-calculus.llms.md#def-level-set) of $f$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > nq_x1_nq <- seq(-4, 4, length.out = 101)
+> > nq_x2_nq <- seq(-2, 2, length.out = 101)
+> > nq_grid_nq <- tidyr::expand_grid(x1 = nq_x1_nq, x2 = nq_x2_nq)
+> > nq_grid_nq$z <- (nq_grid_nq$x1^2 + 3 * nq_grid_nq$x2^2) / 2
+> > nq_newton_nq <- tibble::tibble(x = 3, y = 1, xend = 0, yend = 0)
+> > nq_grad_nq <- tibble::tibble(x = 3, y = 1, xend = 0.764, yend = -1.236)
+> > nq_start_nq <- tibble::tibble(x1 = 3, x2 = 1)
+> > nq_head_nq <- grid::unit(0.15, "inches")
+> > nq_arrow_nq <- grid::arrow(length = nq_head_nq)
+> > nq_aes_nq <- ggplot2::aes(x1, x2)
+> > nq_z_aes_nq <- ggplot2::aes(z = z)
+> > nq_seg_aes_nq <- ggplot2::aes(x = x, y = y, xend = xend, yend = yend)
+> > nq_grid_nq |>
+> >   ggplot2::ggplot() +
+> >   nq_aes_nq +
+> >   ggplot2::geom_contour(nq_z_aes_nq, colour = "#0072B2", bins = 10) +
+> >   ggplot2::geom_segment(
+> >     nq_seg_aes_nq,
+> >     data = nq_grad_nq,
+> >     colour = "grey50",
+> >     arrow = nq_arrow_nq
+> >   ) +
+> >   ggplot2::geom_segment(
+> >     nq_seg_aes_nq,
+> >     data = nq_newton_nq,
+> >     colour = "#D55E00",
+> >     arrow = nq_arrow_nq
+> >   ) +
+> >   ggplot2::geom_point(data = nq_start_nq, size = 2) +
+> >   ggplot2::coord_fixed() +
+> >   ggplot2::labs(x = "x1", y = "x2")
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > nq_xx_py, nq_yy_py = np.meshgrid(np.linspace(-4, 4, 101),
+> >                                  np.linspace(-2, 2, 101))
+> > nq_z_py = (nq_xx_py**2 + 3 * nq_yy_py**2) / 2
+> > fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
+> > ax.contour(nq_xx_py, nq_yy_py, nq_z_py, levels=10, colors="#0072B2")
+> > #> <matplotlib.contour.QuadContourSet object at 0x7f1992376a50>
+> > ax.annotate("", xy=(0.764, -1.236), xytext=(3, 1),
+> >             arrowprops={"arrowstyle": "->", "color": "grey"})
+> > #> Text(3, 1, '')
+> > ax.annotate("", xy=(0, 0), xytext=(3, 1),
+> >             arrowprops={"arrowstyle": "->", "color": "#D55E00"})
+> > #> Text(3, 1, '')
+> > ax.plot([3], [1], "ko")
+> > #> [<matplotlib.lines.Line2D object at 0x7f19900fc190>]
+> > ax.set_aspect("equal")
+> > ax.set_xlabel("x1")
+> > #> Text(0.5, 0, 'x1')
+> > ax.set_ylabel("x2")
+> > #> Text(0, 0.5, 'x2')
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png)](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png "Figure 3: The level curves of f in Example 8 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
+> >
+> > ## Python
+> >
+> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png)](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png "Figure 3: The level curves of f in Example 8 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
+> >
+> > Figure 3: The [level curves](vector-calculus.llms.md#def-level-set) of $f$ in [Example 8](#exm-newton-quadratic) are ellipses. From the start ${(3, 1)}^{\top}$, the [Newton step](#def-newton-step) (vermilion arrow) goes straight to the [minimizer](algebra-basics.llms.md#def-global-minimizer) at the origin. The negative [gradient](vector-calculus.llms.md#def-vector-derivative) $-{(3, 3)}^{\top}$ (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.
+>
+> [Figure 4](#fig-newton-quadratic-3d) shows the same [function](functions.llms.md#def-function) as a surface.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > nq_x1_sf <- seq(-4, 4, length.out = 61)
+> > nq_x2_sf <- seq(-2, 2, length.out = 61)
+> > nq_grid_sf <- tidyr::expand_grid(x1 = nq_x1_sf, x2 = nq_x2_sf)
+> > nq_value_sf <- (nq_grid_sf$x1^2 + 3 * nq_grid_sf$x2^2) / 2
+> > nq_n2_sf <- length(nq_x2_sf)
+> > nq_z_sf <- matrix(nq_value_sf, nrow = nq_n2_sf)
+> > nq_start_sf <- tibble::tibble(x1 = 3, x2 = 1, z = 6)
+> > nq_min_sf <- tibble::tibble(x1 = 0, x2 = 0, z = 0)
+> > nq_red_sf <- list(color = "#D55E00", size = 5)
+> > nq_black_sf <- list(color = "#000000", size = 5)
+> > nq_stops_sf <- c(0, 1)
+> > nq_cols_sf <- c("#CCE0F0", "#0072B2")
+> > nq_scale_sf <- list(nq_stops_sf, nq_cols_sf)
+> > nq_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> > nq_camera_sf <- list(eye = nq_eye_sf)
+> > nq_xaxis_sf <- list(title = "x1")
+> > nq_yaxis_sf <- list(title = "x2")
+> > nq_zaxis_sf <- list(title = "f(x)")
+> > nq_scene_sf <- list(
+> >   xaxis = nq_xaxis_sf,
+> >   yaxis = nq_yaxis_sf,
+> >   zaxis = nq_zaxis_sf,
+> >   camera = nq_camera_sf
+> > )
+> > nq_legend_sf <- list(orientation = "h")
+> > plotly::plot_ly() |>
+> >   plotly::add_surface(
+> >     x = nq_x1_sf,
+> >     y = nq_x2_sf,
+> >     z = nq_z_sf,
+> >     colorscale = nq_scale_sf,
+> >     showscale = FALSE,
+> >     opacity = 0.8
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = nq_start_sf,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "markers",
+> >     marker = nq_red_sf,
+> >     name = "start"
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = nq_min_sf,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "markers",
+> >     marker = nq_black_sf,
+> >     name = "minimizer"
+> >   ) |>
+> >   plotly::layout(scene = nq_scene_sf, legend = nq_legend_sf)
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > nq_x1_3d, nq_x2_3d = np.meshgrid(np.linspace(-4, 4, 61),
+> >                                  np.linspace(-2, 2, 61))
+> > nq_z_3d = (nq_x1_3d**2 + 3 * nq_x2_3d**2) / 2
+> > fig = plt.figure(figsize=(6, 4.5))
+> > ax = fig.add_subplot(projection="3d")
+> > ax.plot_surface(nq_x1_3d, nq_x2_3d, nq_z_3d, color="#0072B2", alpha=0.6)
+> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7f1990081010>
+> > ax.scatter([3], [1], [6], color="#D55E00", label="start")
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f1990081160>
+> > ax.scatter([0], [0], [0], color="black", label="minimizer")
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f198ff98410>
+> > ax.set_xlabel("x1")
+> > #> Text(0.5, 0, 'x1')
+> > ax.set_ylabel("x2")
+> > #> Text(0.5, 0.5, 'x2')
+> > ax.set_zlabel("f(x)")
+> > #> Text(0.5, 0, 'f(x)')
+> > ax.legend(loc="upper right")
+> > #> <matplotlib.legend.Legend object at 0x7f19900812b0>
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Surface plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The surface is a bowl with its lowest point at the origin, rising more steeply along x2 than along x1. A vermilion point marks the start (3, 1) on the bowl's side and a black point marks the minimizer at the origin.](optimization-newton_files/figure-html/newton-quadratic-3d-python-1.png)](optimization-newton_files/figure-html/newton-quadratic-3d-python-1.png "Figure 4: The graph of f in Example 8 is a bowl whose lowest point is the origin.")
+> >
+> > ## Python
+> >
+> > Figure 4: The [graph](functions.llms.md#def-graph) of $f$ in [Example 8](#exm-newton-quadratic) is a bowl whose lowest point is the origin.
 
 # Definitions on this page
 
