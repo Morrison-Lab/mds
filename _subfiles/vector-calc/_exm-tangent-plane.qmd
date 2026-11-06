@@ -34,4 +34,8 @@
   \ea
   $$
 
+@fig-tangent-plane shows the tangent plane of the second bullet.
+
+{{< include mds/_subfiles/vector-calc/_fig-tangent-plane.qmd >}}
+
 :::
