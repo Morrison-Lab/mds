@@ -91,6 +91,69 @@ cat(
 
 ```{python}
 #| label: quasi-newton-step-3d-python
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| results: asis
+#| fig-alt: >-
+#|   Surface plot of the quadratic function f over first coordinates from
+#|   -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface
+#|   whose lowest point is above the point (0.09, 0.64). Three markers lie on
+#|   the surface. A blue circle at the origin is the starting point, a
+#|   vermilion circle above (0.25, 0.5) is the iterate after one step, and a
+#|   blue square above (0.09, 0.64) is the minimizer, at the bottom of the
+#|   bowl.
+import numpy as np
+import plotly.graph_objects as go
+
+qn_x_3d = np.linspace(-0.4, 0.6, 101)
+qn_y_3d = np.linspace(-0.2, 1, 101)
+qn_xx_3d, qn_yy_3d = np.meshgrid(qn_x_3d, qn_y_3d)
+
+
+def qn_f_3d(x, y):
+    return 0.5 * (4 * x**2 + 2 * x * y + 3 * y**2) - x - 2 * y
+
+
+qn_pts_x_3d = np.array([0, 0.25, 1 / 11])
+qn_pts_y_3d = np.array([0, 0.5, 7 / 11])
+qn_pts_z_3d = qn_f_3d(qn_pts_x_3d, qn_pts_y_3d)
+qn_marks_3d = [
+    ("start", "#0072B2", "circle"),
+    ("after one step", "#D55E00", "circle"),
+    ("minimizer", "#0072B2", "square"),
+]
+fig = go.Figure(data=[
+    go.Surface(
+        x=qn_x_3d,
+        y=qn_y_3d,
+        z=qn_f_3d(qn_xx_3d, qn_yy_3d),
+        colorscale=[[0, "#E5E5E5"], [1, "#808080"]],
+        showscale=False,
+        opacity=0.6,
+        showlegend=False,
+    ),
+])
+for i, (name, color, symbol) in enumerate(qn_marks_3d):
+    fig.add_trace(go.Scatter3d(
+        x=[qn_pts_x_3d[i]], y=[qn_pts_y_3d[i]], z=[qn_pts_z_3d[i]],
+        mode="markers",
+        marker=dict(color=color, size=4, symbol=symbol), name=name));
+fig.update_layout(
+    scene=dict(
+        xaxis_title="first coordinate",
+        yaxis_title="second coordinate",
+        zaxis_title="f(x)",
+        camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+    ),
+    legend=dict(orientation="h"),
+);
+print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+```
+
+```{python}
+#| label: quasi-newton-step-3d-python-static
+#| echo: !expr isFALSE(knitr::is_html_output())
+#| eval: !expr isFALSE(knitr::is_html_output())
 #| fig-alt: >-
 #|   Surface plot of the quadratic function f over first coordinates from
 #|   -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface
