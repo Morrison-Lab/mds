@@ -13,4 +13,8 @@ so the quadratic model has no minimizer
 and @thm-newton-model does not apply:
 the positive definite hypothesis there is needed.
 
+@fig-newton-maximum shows the [cubic](algebra.qmd#def-cubic-polynomial) and its model.
+
+{{< include mds/_subfiles/vector-calc/_fig-newton-maximum.qmd >}}
+
 :::

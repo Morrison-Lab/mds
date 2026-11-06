@@ -1,0 +1,93 @@
+::: {#fig-newton-maximum}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: newton-maximum-r
+#| fig-alt: >-
+#|   Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4
+#|   to -0.5, in blue, with a local maximum at x equal to -2, marked by a
+#|   blue square. A dashed vermilion parabola opening downward is the
+#|   quadratic model at the start -2.5. It touches the cubic at -2.5 and has
+#|   its highest point at -2.05, marked by a vermilion triangle. A vermilion
+#|   circle marks the start -2.5.
+#| fig-height: 4
+#| fig-width: 6
+nx_x_nx <- seq(-4, -0.5, length.out = 301)
+nx_f_nx <- nx_x_nx^3 / 3 - 4 * nx_x_nx
+nx_f0_nx <- (-2.5)^3 / 3 - 4 * (-2.5)
+nx_dx_nx <- nx_x_nx + 2.5
+nx_q_nx <- nx_f0_nx + 2.25 * nx_dx_nx - 2.5 * nx_dx_nx^2
+nx_dstep_nx <- -2.05 + 2.5
+nx_q_step_nx <- nx_f0_nx + 2.25 * nx_dstep_nx - 2.5 * nx_dstep_nx^2
+nx_f_max_nx <- (-2)^3 / 3 - 4 * (-2)
+nx_curve_nx <- tibble::tibble(x = nx_x_nx, y = nx_f_nx)
+nx_model_nx <- tibble::tibble(x = nx_x_nx, y = nx_q_nx)
+nx_start_nx <- tibble::tibble(x = -2.5, y = nx_f0_nx)
+nx_step_nx <- tibble::tibble(x = -2.05, y = nx_q_step_nx)
+nx_max_nx <- tibble::tibble(x = -2, y = nx_f_max_nx)
+nx_aes_nx <- ggplot2::aes(x, y)
+nx_ylim_nx <- c(-2, 6.5)
+nx_curve_nx |>
+  ggplot2::ggplot() +
+  nx_aes_nx +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_line(
+    data = nx_model_nx, colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::geom_point(data = nx_start_nx, colour = "#D55E00", size = 3) +
+  ggplot2::geom_point(
+    data = nx_step_nx, colour = "#D55E00", size = 3, shape = 17
+  ) +
+  ggplot2::geom_point(
+    data = nx_max_nx, colour = "#0072B2", size = 3, shape = 15
+  ) +
+  ggplot2::coord_cartesian(ylim = nx_ylim_nx) +
+  ggplot2::labs(x = "x", y = "value")
+```
+
+### Python
+
+```{python}
+#| label: newton-maximum-python
+#| fig-alt: >-
+#|   Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4
+#|   to -0.5, in blue, with a local maximum at x equal to -2, marked by a
+#|   blue square. A dashed vermilion parabola opening downward is the
+#|   quadratic model at the start -2.5. It touches the cubic at -2.5 and has
+#|   its highest point at -2.05, marked by a vermilion triangle. A vermilion
+#|   circle marks the start -2.5.
+#| fig-height: 4
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+nx_x_py = np.linspace(-4, -0.5, 301)
+nx_f_py = nx_x_py**3 / 3 - 4 * nx_x_py
+nx_f0_py = (-2.5)**3 / 3 - 4 * (-2.5)
+nx_q_py = nx_f0_py + 2.25 * (nx_x_py + 2.5) - 2.5 * (nx_x_py + 2.5)**2
+nx_q_step_py = nx_f0_py + 2.25 * (-2.05 + 2.5) - 2.5 * (-2.05 + 2.5)**2
+nx_f_max_py = (-2)**3 / 3 - 4 * (-2)
+fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
+ax.plot(nx_x_py, nx_f_py, color="#0072B2")
+ax.plot(nx_x_py, nx_q_py, "--", color="#D55E00")
+ax.plot([-2.5], [nx_f0_py], "o", color="#D55E00")
+ax.plot([-2.05], [nx_q_step_py], "^", color="#D55E00")
+ax.plot([-2], [nx_f_max_py], "s", color="#0072B2")
+ax.set_ylim(-2, 6.5)
+ax.set_xlabel("x")
+ax.set_ylabel("value")
+plt.show();
+```
+
+:::
+
+The [cubic](algebra.qmd#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of @exm-newton-maximum is blue,
+and its [quadratic model](#def-newton-step) at the start $-2.5$ is dashed vermilion.
+The model opens downward,
+so its [stationary point](#def-stationary-point) $-2.05$ (triangle) is a highest point and not a lowest one.
+The [iterates](#def-iterate) approach the [local maximum](#def-local-maximizer) at $-2$ (blue marker).
+
+:::
