@@ -68,7 +68,7 @@ plt.show();
 
 :::
 
-The closed half-disk (blue) is the intersection of the [unit ball](vector-calculus.qmd#def-unit-ball) with the half-plane $x_1 \ge 0$ of @exm-convex-intersection.
+The closed half-disk (blue) is the [intersection](https://morrison-lab.github.io/mcs/sets.html#def-intersection) of the [unit ball](vector-calculus.qmd#def-unit-ball) with the [half-plane](#def-half-space) $x_1 \ge 0$ of @exm-convex-intersection.
 The vermilion segment is the edge of the half-plane.
 The half-disk is [convex](optimization-convexity.qmd#def-convex-set),
 as @thm-convex-intersection states.
