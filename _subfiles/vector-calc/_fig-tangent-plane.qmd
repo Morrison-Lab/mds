@@ -14,10 +14,11 @@
 #|   tangent plane 2 x1 + 2 x2 - 2, touches the bowl from below at the
 #|   point (1, 1, 2), which is marked with a black point.
 tp_x_tp <- seq(-1, 3, length.out = 41)
-tp_bowl_fn_tp <- function(a, b) a^2 + b^2
-tp_plane_fn_tp <- function(a, b) 2 * a + 2 * b - 2
-tp_bowl_tp <- outer(tp_x_tp, tp_x_tp, tp_bowl_fn_tp)
-tp_plane_tp <- outer(tp_x_tp, tp_x_tp, tp_plane_fn_tp)
+tp_square_tp <- tp_x_tp^2
+tp_double_tp <- 2 * tp_x_tp
+tp_bowl_tp <- outer(tp_square_tp, tp_square_tp, "+")
+tp_sum_tp <- outer(tp_double_tp, tp_double_tp, "+")
+tp_plane_tp <- tp_sum_tp - 2
 tp_point_tp <- tibble::tibble(x1 = 1, x2 = 1, z = 2)
 tp_black_tp <- list(color = "#000000", size = 5)
 tp_stops_tp <- c(0, 1)
