@@ -1,0 +1,76 @@
+::: {#fig-convex-intersection}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-intersection-r
+#| fig-alt: >-
+#|   A circle of radius 1 centered at the origin, drawn as a grey outline,
+#|   with the right half of the disk, where x1 is at least 0, shaded blue
+#|   and outlined in blue. A vermilion vertical segment along the x2 axis
+#|   from -1 to 1 marks the edge of the half-plane x1 equal to 0.
+#| fig-height: 4
+#| fig-width: 4
+ci_angle_ci <- seq(-pi / 2, pi / 2, length.out = 101)
+ci_half_x1_ci <- cos(ci_angle_ci)
+ci_half_x2_ci <- sin(ci_angle_ci)
+ci_half_ci <- tibble::tibble(x1 = ci_half_x1_ci, x2 = ci_half_x2_ci)
+ci_full_angle_ci <- seq(0, 2 * pi, length.out = 201)
+ci_full_x1_ci <- cos(ci_full_angle_ci)
+ci_full_x2_ci <- sin(ci_full_angle_ci)
+ci_full_ci <- tibble::tibble(x1 = ci_full_x1_ci, x2 = ci_full_x2_ci)
+ci_edge_ci <- tibble::tibble(x1 = 0, x2 = -1, x1_end = 0, x2_end = 1)
+ci_aes_ci <- ggplot2::aes(x1, x2)
+ci_seg_aes_ci <- ggplot2::aes(xend = x1_end, yend = x2_end)
+ci_full_ci |>
+  ggplot2::ggplot() +
+  ci_aes_ci +
+  ggplot2::geom_path(colour = "grey60") +
+  ggplot2::geom_polygon(
+    data = ci_half_ci, fill = "#0072B2", alpha = 0.25, colour = "#0072B2"
+  ) +
+  ggplot2::geom_segment(
+    data = ci_edge_ci, mapping = ci_seg_aes_ci,
+    colour = "#D55E00", linewidth = 1
+  ) +
+  ggplot2::coord_fixed() +
+  ggplot2::labs(x = "x1", y = "x2")
+```
+
+### Python
+
+```{python}
+#| label: convex-intersection-python
+#| fig-alt: >-
+#|   A circle of radius 1 centered at the origin, drawn as a grey outline,
+#|   with the right half of the disk, where x1 is at least 0, shaded blue
+#|   and outlined in blue. A vermilion vertical segment along the x2 axis
+#|   from -1 to 1 marks the edge of the half-plane x1 equal to 0.
+#| fig-height: 4
+#| fig-width: 4
+import matplotlib.pyplot as plt
+import numpy as np
+
+ci_full_py = np.linspace(0, 2 * np.pi, 201)
+ci_half_py = np.linspace(-np.pi / 2, np.pi / 2, 101)
+fig, ax = plt.subplots(figsize=(4, 4), layout="constrained")
+ax.plot(np.cos(ci_full_py), np.sin(ci_full_py), color="grey")
+ax.fill(np.cos(ci_half_py), np.sin(ci_half_py), color="#0072B2", alpha=0.25)
+ax.plot(np.cos(ci_half_py), np.sin(ci_half_py), color="#0072B2")
+ax.plot([0, 0], [-1, 1], color="#D55E00", linewidth=2)
+ax.set_aspect("equal")
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+plt.show();
+```
+
+:::
+
+The closed half-disk (blue) is the [intersection](https://morrison-lab.github.io/mcs/sets.html#def-intersection) of the [unit ball](vector-calculus.qmd#def-unit-ball) with the [half-plane](#def-half-space) $x_1 \ge 0$ of @exm-convex-intersection.
+The vermilion segment is the edge of the half-plane.
+The half-disk is [convex](optimization-convexity.qmd#def-convex-set),
+as @thm-convex-intersection states.
+
+:::
