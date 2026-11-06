@@ -27,12 +27,13 @@ ip_curves_ip <- tibble::tibble(
 ip_origin_fn_ip <- factor(ip_labels_ip, levels = ip_labels_ip)
 ip_origin_ip <- tibble::tibble(x = 0, value = 0, fn = ip_origin_fn_ip)
 ip_aes_ip <- ggplot2::aes(x, value)
+ip_facet_ip <- ggplot2::vars(fn)
 ip_curves_ip |>
   ggplot2::ggplot() +
   ip_aes_ip +
   ggplot2::geom_line(colour = "#0072B2") +
   ggplot2::geom_point(data = ip_origin_ip, colour = "#D55E00", size = 3) +
-  ggplot2::facet_wrap(ggplot2::vars(fn), scales = "free_y") +
+  ggplot2::facet_wrap(ip_facet_ip, scales = "free_y") +
   ggplot2::labs(x = "x", y = "function value")
 ```
 
