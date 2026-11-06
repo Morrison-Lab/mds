@@ -59,7 +59,11 @@ plt.show();
 
 :::
 
-The [ratio](algebra-sums.qmd#def-ratio) $f(x - 2 s x) / f(x) = (1 - 2s)^2$ of @exm-descent-direction (blue) is below 1, so the step decreases $f$, exactly when $0 < s < 1$.
-The step $s = 1.5$ (vermilion) is too long, since its ratio is 4.
+The [ratio](algebra-sums.qmd#def-ratio) $f(x - 2 s x) / f(x) = (1 - 2s)^2$ of @exm-descent-direction (blue)
+is below 1,
+so the step decreases $f$,
+exactly when $0 < s < 1$.
+The step $s = 1.5$ (vermilion) is too long,
+since its ratio is 4.
 
 :::
