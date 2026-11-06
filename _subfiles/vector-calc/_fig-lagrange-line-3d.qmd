@@ -87,6 +87,57 @@ cat(
 
 ```{python}
 #| label: lagrange-line-3d-python
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| results: asis
+#| fig-alt: >-
+#|   Surface plot of x1 squared plus x2 squared over x1 and x2 from -1.6 to
+#|   2, a bowl opening upward with its lowest point at the origin. A blue
+#|   curve on the bowl lies above the straight line 3 x1 plus 4 x2 equals 5,
+#|   running from upper left to lower right. Its lowest point, above (0.6,
+#|   0.8) at height 1, is marked by a vermilion circle. That height is the
+#|   smallest value of x1 squared plus x2 squared on the line.
+import numpy as np
+import plotly.graph_objects as go
+
+ll_x_3d = np.linspace(-1.6, 2, 101)
+ll_line_x1_3d = np.linspace(-0.5, 2, 101)
+ll_line_x2_3d = (5 - 3 * ll_line_x1_3d) / 4
+ll_line_z_3d = ll_line_x1_3d**2 + ll_line_x2_3d**2
+ll_xx_3d, ll_yy_3d = np.meshgrid(ll_x_3d, ll_x_3d)
+fig = go.Figure(data=[
+    go.Surface(
+        x=ll_x_3d,
+        y=ll_x_3d,
+        z=ll_xx_3d**2 + ll_yy_3d**2,
+        colorscale=[[0, "#E5E5E5"], [1, "#808080"]],
+        showscale=False,
+        opacity=0.6,
+        showlegend=False,
+    ),
+    go.Scatter3d(x=ll_line_x1_3d, y=ll_line_x2_3d, z=ll_line_z_3d,
+                 mode="lines", line=dict(color="#0072B2", width=5),
+                 name="constraint"),
+    go.Scatter3d(x=[0.6], y=[0.8], z=[1], mode="markers",
+                 marker=dict(color="#D55E00", size=4, symbol="circle"),
+                 name="minimizer"),
+])
+fig.update_layout(
+    scene=dict(
+        xaxis_title="x1",
+        yaxis_title="x2",
+        zaxis_title="f(x)",
+        camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+    ),
+    legend=dict(orientation="h"),
+);
+print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+```
+
+```{python}
+#| label: lagrange-line-3d-python-static
+#| echo: !expr isFALSE(knitr::is_html_output())
+#| eval: !expr isFALSE(knitr::is_html_output())
 #| fig-alt: >-
 #|   Surface plot of x1 squared plus x2 squared over x1 and x2 from -1.6 to
 #|   2, a bowl opening upward with its lowest point at the origin. A blue
