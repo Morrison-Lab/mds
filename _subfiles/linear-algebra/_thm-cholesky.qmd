@@ -21,7 +21,7 @@ and the columns of $\tp{\matr{L}}$ are linearly independent
 So $\matr{A} = \tp{(\tp{\matr{L}})}\,\tp{\matr{L}}$ (@def-matrix-transpose)
 is positive definite (@thm-pd-gram, part 2).
 
-**Only if, with uniqueness, by [induction](proof-writing.qmd#def-proof-by-induction) on $p$.**
+**Only if, with uniqueness, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $p$.**
 For $p = 1$, $\matr{A} = [a]$ with $a > 0$ (@thm-pd-submatrix),
 and $[c]\,[c] = [a]$ with $c > 0$ holds exactly for $c = \sqrt{a}$.
 For $p > 1$, assume every $(p - 1) \times (p - 1)$ positive definite matrix
@@ -121,72 +121,5 @@ and the right side is the Schur complement of $[a_{11}]$ in $\matr{A}$.
 It is positive definite by @thm-schur-test (with $k = 1$; $\matr{A}_{22}$ is symmetric because $\matr{A}$ is).
 By the induction hypothesis it has exactly one factor $\matr{L}_{22}$ of the required kind.
 So $\matr{L}$ exists and is unique.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-cholesky}
-#### Two Cholesky factors
-
-- $\matr{A} = \begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}$:
-
-  $$
-  \begin{aligned}
-  \ell_{11} &= \sqrt{4} \\
-  &= 2,
-  \end{aligned}
-  $$
-
-  $$
-  \begin{aligned}
-  \ell_{21} &= 2/2 \\
-  &= 1,
-  \end{aligned}
-  $$
-
-  and
-
-  $$
-  \begin{aligned}
-  \ell_{22}^2 &= 5 - 1^2 \\
-  &= 4,
-  \end{aligned}
-  $$
-
-  so $\ell_{22} = 2$:
-  $\matr{L} = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}$, and
-
-  $$
-  \begin{aligned}
-  \matr{L} \tp{\matr{L}} &= \begin{bmatrix} 2 \cd 2 & 2 \cd 1 \\ 1 \cd 2 & 1 \cd 1 + 2 \cd 2 \end{bmatrix} \\
-  &= \matr{A}.
-  \end{aligned}
-  $$
-
-- $\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$:
-  $\ell_{11} = \sqrt{5}$, $\ell_{21} = 4/\sqrt{5}$,
-  and
-
-  $$
-  \begin{aligned}
-  \ell_{22}^2 &= 5 - \tfrac{16}{5} \\
-  &= \tfrac{9}{5},
-  \end{aligned}
-  $$
-
-  the Schur complement of @exm-schur-complement,
-  so $\ell_{22} = \tfrac{3}{\sqrt{5}}$.
-- For $\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ the method breaks down:
-
-  $$
-  \begin{aligned}
-  \ell_{22}^2 &= 1 - 4 \\
-  &= -3
-  \end{aligned}
-  $$
-
-  has no real solution,
-  matching the failure of the Schur complement test (@exm-schur-test).
 
 :::

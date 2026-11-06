@@ -1,0 +1,9 @@
+:::{#exm-det-diagonal}
+#### Determinant of a scaled identity matrix
+
+For a number $c$,
+$c\,\matr{I}_p$ is diagonal with every diagonal entry equal to $c$,
+so $\det(c\,\matr{I}_p) = c^p$.
+In particular, $\det(\matr{I}_p) = 1$.
+
+:::

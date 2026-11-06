@@ -11,7 +11,7 @@ $$f\paren{\sumto{j}{k} c_j \vecf{v}_j} = \sumto{j}{k} c_j f(\vecf{v}_j)$$
 
 ::: proof
 
-By [induction](proof-writing.qmd#def-proof-by-induction) on $k$.
+By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $k$.
 For $k = 1$, the claim $f(c_1 \vecf{v}_1) = c_1 f(\vecf{v}_1)$ is homogeneity.
 
 Suppose the claim holds for $k$ vectors. Then for $k + 1$:

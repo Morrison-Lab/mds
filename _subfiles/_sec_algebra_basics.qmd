@@ -217,3 +217,11 @@ just make sure you execute it correctly.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-local-minimizer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-local-minimizer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-not-local-minimizer.qmd >}}

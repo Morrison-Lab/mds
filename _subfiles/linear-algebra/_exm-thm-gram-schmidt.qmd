@@ -1,0 +1,59 @@
+:::{#exm-thm-gram-schmidt}
+#### Finishing an orthonormal basis of $\reals^3$
+
+Continue @exm-gram-schmidt with $\vecf{a}_3 = (0, 1, 1)$.
+$\vecf{q}_1 \cdot \vecf{a}_3 = \tfrac{1}{\sqrt{2}}$ and
+
+$$
+\begin{aligned}
+\vecf{q}_2 \cdot \vecf{a}_3 &= \tfrac{1}{\sqrt{6}}\,(0 - 1 + 2) \\
+&= \tfrac{1}{\sqrt{6}},
+\end{aligned}
+$$
+
+so
+
+$$
+\ba
+\vecf{q}'_3
+&= (0, 1, 1) - \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}}\,(1, 1, 0) - \tfrac{1}{\sqrt{6}} \cd \tfrac{1}{\sqrt{6}}\,(1, -1, 2)
+&& \text{(orthogonalize)}
+\\
+&= (0, 1, 1) - \tfrac{1}{2}\,(1, 1, 0) - \tfrac{1}{6}\,(1, -1, 2)
+&& \text{(multiply the scalars)}
+\\
+&= \paren{0 - \tfrac{1}{2} - \tfrac{1}{6},\; 1 - \tfrac{1}{2} + \tfrac{1}{6},\; 1 - 0 - \tfrac{2}{6}}
+&& \text{(subtract entrywise)}
+\\
+&= \paren{-\tfrac{2}{3}, \tfrac{2}{3}, \tfrac{2}{3}},
+&& \text{(arithmetic)}
+\ea
+$$
+
+with norm $\sqrt{3 \cd \tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}$,
+so $\vecf{q}_3 = \tfrac{1}{\sqrt{3}}\,(-1, 1, 1)$.
+The process did not stop,
+so by @thm-gram-schmidt
+$\vecf{a}_1, \vecf{a}_2, \vecf{a}_3$ are linearly independent
+and $\vecf{q}_1, \vecf{q}_2, \vecf{q}_3$ is an orthonormal basis of their span.
+That span therefore has dimension $3$ (@def-dimension),
+so it is $\reals^3$ (@thm-subspace-equal-dim, @exm-dimension).
+As a check,
+
+$$
+\begin{aligned}
+\vecf{q}_1 \cdot \vecf{q}_3 &= \tfrac{1}{\sqrt{6}}\,(-1 + 1 + 0) \\
+&= 0
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\vecf{q}_2 \cdot \vecf{q}_3 &= \tfrac{1}{\sqrt{18}}\,(-1 - 1 + 2) \\
+&= 0.
+\end{aligned}
+$$
+
+:::

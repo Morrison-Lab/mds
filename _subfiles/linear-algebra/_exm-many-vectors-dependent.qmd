@@ -1,0 +1,11 @@
+:::{#exm-many-vectors-dependent}
+#### Three vectors in $\reals^2$
+
+@thm-many-vectors-dependent says the three vectors
+$(1, 0)$, $(0, 1)$ and $(1, 1)$ in $\reals^2$ are linearly dependent,
+and indeed $1 \cd (1, 0) + 1 \cd (0, 1) - 1 \cd (1, 1) = (0, 0)$.
+The theorem says nothing about $k \le p$ vectors:
+$(1, 0)$ and $(0, 1)$ are linearly independent,
+while $(1, 2)$ and $(2, 4)$ are not (@exm-linearly-independent).
+
+:::

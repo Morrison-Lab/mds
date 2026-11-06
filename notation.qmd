@@ -39,11 +39,11 @@ format:
 # Further reading {#sec-further-reading}
 
 For the logical symbols and proof conventions used in these notes
-(whose definitions are on the [Proof Writing](proof-writing.qmd#sec-proof-definitions) page):
+(whose definitions are on the [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html#sec-proof-definitions) page):
 
 - @velleman2019prove
   explains how mathematical statements are built from
-  logical connectives ([definition](proof-writing.qmd#def-logical-connective)) and quantifiers ([definition](proof-writing.qmd#def-quantifier)),
+  logical connectives ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-logical-connective)) and quantifiers ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-quantifier)),
   and how to read and write them.
 - @barkerplummer2011language
   covers the same symbols as a formal language,

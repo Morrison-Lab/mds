@@ -36,6 +36,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_exm-convex-local-global.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_thm-convex-local-global.qmd >}}
 
 {{< slidebreak >}}

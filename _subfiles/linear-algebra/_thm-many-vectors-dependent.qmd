@@ -10,7 +10,7 @@ $c_1 \vecf{v}_1 + \cdots + c_k \vecf{v}_k = \vzero_p$.
 
 ::: proof
 
-[Induction](proof-writing.qmd#def-proof-by-induction) on $p$.
+[Induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $p$.
 
 **Base case, $p = 1$.**
 Each $\vecf{v}_i$ is a single number $v_i$, and $k \ge 2$.
@@ -20,7 +20,7 @@ then $c_2 \neq 0$, and $v_2 v_1 - v_1 v_2 = 0$.
 
 **Inductive step.**
 Let $p \ge 2$,
-assume the [theorem](proof-writing.qmd#def-theorem) holds for vectors in $\reals^{p-1}$,
+assume the [theorem](https://morrison-lab.github.io/mcs/proof-writing.html#def-theorem) holds for vectors in $\reals^{p-1}$,
 and take $k > p$ vectors in $\reals^p$.
 Write $v_{i,p}$ for the last entry of $\vecf{v}_i$.
 
@@ -70,19 +70,5 @@ $$
 
 a combination of $\vecf{v}_1, \ldots, \vecf{v}_k$ equal to $\vzero_p$
 whose first $k - 1$ coefficients are not all zero.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-many-vectors-dependent}
-#### Three vectors in $\reals^2$
-
-@thm-many-vectors-dependent says the three vectors
-$(1, 0)$, $(0, 1)$ and $(1, 1)$ in $\reals^2$ are linearly dependent,
-and indeed $1 \cd (1, 0) + 1 \cd (0, 1) - 1 \cd (1, 1) = (0, 0)$.
-The theorem says nothing about $k \le p$ vectors:
-$(1, 0)$ and $(0, 1)$ are linearly independent,
-while $(1, 2)$ and $(2, 4)$ are not (@exm-linearly-independent).
 
 :::

@@ -39,7 +39,7 @@ and $m(x)$ increases with $x^2$.
 So if $\iterpoint{x}{t}$ satisfies the condition,
 then $\abs{\iterpoint{x}{t+1}} > \abs{\iterpoint{x}{t}}$,
 and $\iterpoint{x}{t+1}$ satisfies it too.
-By [induction](proof-writing.qmd#def-proof-by-induction) on $t$,
+By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $t$,
 every [iterate](#def-iterate) satisfies it.
 Since $\abs{\iterpoint{x}{t}}$ increases at every step,
 $\iterpoint{x}{t}^2 \ge \iterpoint{x}{0}^2$,
