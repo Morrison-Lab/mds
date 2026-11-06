@@ -105,8 +105,17 @@ cat(
 #|   downward along the x2 axis. A solid vermilion curve along the x1 axis
 #|   rises away from the origin, a dashed vermilion curve along the x2 axis
 #|   falls away from it, and a point marks the saddle point at the origin.
+import html
 import numpy as np
 import plotly.graph_objects as go
+
+fig_alt = (
+    "Surface plot of f(x) = x1^2 - x2^2 for x1 and x2 from -1 to 1. The surface "
+    "is shaped like a saddle: it curves upward along the x1 axis and downward "
+    "along the x2 axis. A solid vermilion curve along the x1 axis rises away "
+    "from the origin, a dashed vermilion curve along the x2 axis falls away "
+    "from it, and a point marks the saddle point at the origin."
+)
 
 sp_t_3d = np.linspace(-1, 1, 61)
 sp_x1_3d, sp_x2_3d = np.meshgrid(sp_t_3d, sp_t_3d)
@@ -141,7 +150,12 @@ fig.update_layout(
     ),
     legend=dict(orientation="h"),
 );
-print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+print(
+    "```{=html}\n"
+    + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+    + fig.to_html(full_html=False, include_plotlyjs="cdn")
+    + "\n</div>\n```"
+)
 ```
 
 ```{python}

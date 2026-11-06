@@ -135,9 +135,20 @@ cat(
 #|   Hessian, shows x squared minus y squared over the same region, a saddle
 #|   that rises along the x axis and falls along the y axis. The origin, at
 #|   the middle of the saddle, is marked by a vermilion diamond.
+import html
 import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+
+fig_alt = (
+    "Two surface plots side by side. The left plot, titled positive definite "
+    "Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5 "
+    "and y from -1.5 to 1.5, a bowl opening upward whose lowest point, at (1, "
+    "0), is marked by a blue circle. The right plot, titled indefinite "
+    "Hessian, shows x squared minus y squared over the same region, a saddle "
+    "that rises along the x axis and falls along the y axis. The origin, at "
+    "the middle of the saddle, is marked by a vermilion diamond."
+)
 
 so_x_3d = np.linspace(-1.5, 2.5, 101)
 so_y_3d = np.linspace(-1.5, 1.5, 101)
@@ -205,7 +216,12 @@ so_fig_3d.add_trace(
 );
 so_fig_3d.update_layout(scene=so_axes_3d, scene2=so_axes_3d, showlegend=False);
 so_html_3d = so_fig_3d.to_html(full_html=False, include_plotlyjs="cdn")
-print("```{=html}\n" + so_html_3d + "\n```")
+print(
+    "```{=html}\n"
+    + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+    + so_html_3d
+    + "\n</div>\n```"
+)
 ```
 
 ```{python}
