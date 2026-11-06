@@ -101,6 +101,58 @@ cat(
 
 ```{python}
 #| label: contour-line-3d-python
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| results: asis
+#| fig-alt: >-
+#|   Surface plot of g(b, c) = b squared plus c squared for b and c from -3.5
+#|   to 3.5. The surface is a bowl with its lowest point at the origin.
+#|   Red circles of radius 1, 2 and 3 around the vertical axis, at heights
+#|   1, 4 and 9, mark the contour lines. Two dots on the circle at height 4
+#|   mark the points (2, 0) and (0, -2).
+import numpy as np
+import plotly.graph_objects as go
+
+cl_s_3d = np.linspace(-3.5, 3.5, 101)
+cl_b_3d, cl_c_3d = np.meshgrid(cl_s_3d, cl_s_3d)
+cl_g_3d = cl_b_3d**2 + cl_c_3d**2
+cl_angle_3d = np.linspace(0, 2 * np.pi, 101)
+fig = go.Figure(data=[
+    go.Surface(
+        x=cl_s_3d,
+        y=cl_s_3d,
+        z=cl_g_3d,
+        colorscale=[[0, "#CCE0F0"], [1, "#0072B2"]],
+        showscale=False,
+        opacity=0.6,
+        showlegend=False,
+    ),
+])
+for k in [1, 4, 9]:
+    fig.add_trace(go.Scatter3d(
+        x=np.sqrt(k) * np.cos(cl_angle_3d),
+        y=np.sqrt(k) * np.sin(cl_angle_3d),
+        z=np.full_like(cl_angle_3d, k), mode="lines",
+        line=dict(color="#D55E00", width=5), showlegend=False));
+fig.add_trace(go.Scatter3d(
+    x=[2, 0], y=[0, -2], z=[4, 4], mode="markers",
+    marker=dict(color="black", size=4), showlegend=False));
+fig.update_layout(
+    scene=dict(
+        xaxis_title="b",
+        yaxis_title="c",
+        zaxis_title="g(b, c)",
+        camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+    ),
+    showlegend=False,
+);
+print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+```
+
+```{python}
+#| label: contour-line-3d-python-static
+#| echo: !expr isFALSE(knitr::is_html_output())
+#| eval: !expr isFALSE(knitr::is_html_output())
 #| fig-alt: >-
 #|   Surface plot of g(b, c) = b squared plus c squared for b and c from -3.5
 #|   to 3.5. The surface is a bowl with its lowest point at the origin.

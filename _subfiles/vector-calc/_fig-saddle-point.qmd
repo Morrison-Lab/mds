@@ -96,6 +96,58 @@ cat(
 
 ```{python}
 #| label: saddle-point-3d-python
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| results: asis
+#| fig-alt: >-
+#|   Surface plot of f(x) = x1^2 - x2^2 for x1 and x2 from -1 to 1. The
+#|   surface is shaped like a saddle: it curves upward along the x1 axis and
+#|   downward along the x2 axis. A solid vermilion curve along the x1 axis
+#|   rises away from the origin, a dashed vermilion curve along the x2 axis
+#|   falls away from it, and a point marks the saddle point at the origin.
+import numpy as np
+import plotly.graph_objects as go
+
+sp_t_3d = np.linspace(-1, 1, 61)
+sp_x1_3d, sp_x2_3d = np.meshgrid(sp_t_3d, sp_t_3d)
+sp_z_3d = sp_x1_3d**2 - sp_x2_3d**2
+sp_zero_3d = np.zeros_like(sp_t_3d)
+fig = go.Figure(data=[
+    go.Surface(
+        x=sp_t_3d,
+        y=sp_t_3d,
+        z=sp_z_3d,
+        colorscale=[[0, "#CCE0F0"], [1, "#0072B2"]],
+        showscale=False,
+        opacity=0.6,
+        showlegend=False,
+    ),
+    go.Scatter3d(x=sp_t_3d, y=sp_zero_3d, z=sp_t_3d**2, mode="lines",
+                 line=dict(color="#D55E00", width=5),
+                 name="f(t, 0) = t^2"),
+    go.Scatter3d(x=sp_zero_3d, y=sp_t_3d, z=-sp_t_3d**2, mode="lines",
+                 line=dict(color="#D55E00", width=5, dash="dash"),
+                 name="f(0, t) = -t^2"),
+    go.Scatter3d(x=[0], y=[0], z=[0], mode="markers",
+                 marker=dict(color="black", size=4),
+                 name="saddle point"),
+])
+fig.update_layout(
+    scene=dict(
+        xaxis_title="x1",
+        yaxis_title="x2",
+        zaxis_title="f(x)",
+        camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+    ),
+    legend=dict(orientation="h"),
+);
+print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+```
+
+```{python}
+#| label: saddle-point-3d-python-static
+#| echo: !expr isFALSE(knitr::is_html_output())
+#| eval: !expr isFALSE(knitr::is_html_output())
 #| fig-alt: >-
 #|   Surface plot of f(x) = x1^2 - x2^2 for x1 and x2 from -1 to 1. The
 #|   surface is shaped like a saddle: it curves upward along the x1 axis and
