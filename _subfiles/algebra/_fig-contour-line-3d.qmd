@@ -1,6 +1,6 @@
 ```{r}
 #| include: false
-cl_py_packages <- c("numpy", "matplotlib")
+cl_py_packages <- c("numpy", "matplotlib", "plotly")
 reticulate::py_require(cl_py_packages)
 ```
 
