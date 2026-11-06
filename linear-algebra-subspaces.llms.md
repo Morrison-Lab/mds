@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 16:44:18 (PST)
+Last modified: 2026-11-05 18:49:52 (PST)
 
 # 1 Rank
 
@@ -157,7 +157,7 @@ Last modified: 2026-11-05 16:44:18 (PST)
 
 > **NOTE:**
 >
-> **Example 7 (The line in [Example 3](#exm-subspace) is a span)** The line $\mathcal{S} = \mathopen{}\left\{c\,(1, 2) : c \in \mathbb{R}\right\}\mathclose{}$ in [Example 3](#exm-subspace) is $\operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}$, so [Theorem 2](#thm-span-subspace) gives a second [proof](proof-writing.llms.md#def-proof) that it is a subspace. Likewise, the plane $z = 0$ in [Example 6](#exm-span) is a subspace of $\mathbb{R}^3$, because it is $\operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}$.
+> **Example 7 (The line in [Example 3](#exm-subspace) is a span)** The line $\mathcal{S} = \mathopen{}\left\{c\,(1, 2) : c \in \mathbb{R}\right\}\mathclose{}$ in [Example 3](#exm-subspace) is $\operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}$, so [Theorem 2](#thm-span-subspace) gives a second [proof](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof) that it is a [subspace](#def-subspace). Likewise, the plane $z = 0$ in [Example 6](#exm-span) is a subspace of $\mathbb{R}^3$, because it is $\operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}$.
 
 > **NOTE:**
 >
@@ -231,11 +231,11 @@ Last modified: 2026-11-05 16:44:18 (PST)
 
 > **NOTE:**
 >
-> *Proof*. [Induction](proof-writing.llms.md#def-proof-by-induction) on $p$.
+> *Proof*. [Induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $p$.
 >
 > **Base case,** $p = 1$. Each $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i$ is a single number $v_i$, and $k \ge 2$. If $v_1 = 0$, take $c_1 = 1$ and every other $c_i = 0$. Otherwise take $c_1 = v_2$, $c_2 = -v_1$ and every other $c_i = 0$; then $c_2 \neq 0$, and $v_2 v_1 - v_1 v_2 = 0$.
 >
-> **Inductive step.** Let $p \ge 2$, assume the [theorem](proof-writing.llms.md#def-theorem) holds for vectors in $\mathbb{R}^{p-1}$, and take $k > p$ vectors in $\mathbb{R}^p$. Write $v_{i,p}$ for the last entry of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i$.
+> **Inductive step.** Let $p \ge 2$, assume the [theorem](https://morrison-lab.github.io/mcs/proof-writing.html#def-theorem) holds for vectors in $\mathbb{R}^{p-1}$, and take $k > p$ vectors in $\mathbb{R}^p$. Write $v_{i,p}$ for the last entry of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i$.
 >
 > *Case 1: every* $v_{i,p} = 0$. Deleting the last entry gives $k > p - 1$ vectors in $\mathbb{R}^{p-1}$, which by the inductive hypothesis have a combination with coefficients not all zero that equals $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p-1}$. The same coefficients combine the original vectors to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p$, since every last entry is $0$.
 >

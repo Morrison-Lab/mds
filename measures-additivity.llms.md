@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 16:44:18 (PST)
+Last modified: 2026-11-05 18:49:52 (PST)
 
 > **NOTE:**
 >
@@ -79,7 +79,7 @@ Last modified: 2026-11-05 16:44:18 (PST)
 > && \text{(countable additivity)}
 > \end{aligned}$$
 >
-> If $\mu(\emptyset) = c$ for a finite $c > 0$, the right-hand side is $c + c + \cdots = \infty \neq c$, a [contradiction](proof-writing.llms.md#def-proof-by-contradiction). So $\mu(\emptyset)$ is 0 or $\infty$.
+> If $\mu(\emptyset) = c$ for a finite $c > 0$, the right-hand side is $c + c + \cdots = \infty \neq c$, a [contradiction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-contradiction). So $\mu(\emptyset)$ is 0 or $\infty$.
 
 > **NOTE:**
 >
@@ -202,7 +202,7 @@ Last modified: 2026-11-05 16:44:18 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (Finite additivity does not imply countable additivity). [Example 6](#exm-finite-not-countable) shows that the [converse](proof-writing.llms.md#def-converse) of [Theorem 1](#thm-countable-implies-finite) fails, even when $\mu(\emptyset) = 0$: a finitely additive function need not be countably additive [\[1\]](#ref-wikipedia_sigma_additive_set_function). The function $\mu$ in [Example 6](#exm-finite-not-countable) has $\mu(\emptyset) = 0$, because $\emptyset$ is finite.
+> *Remark 3* (Finite additivity does not imply countable additivity). [Example 6](#exm-finite-not-countable) shows that the [converse](https://morrison-lab.github.io/mcs/proof-writing.html#def-converse) of [Theorem 1](#thm-countable-implies-finite) fails, even when $\mu(\emptyset) = 0$: a finitely additive function need not be countably additive [\[1\]](#ref-wikipedia_sigma_additive_set_function). The function $\mu$ in [Example 6](#exm-finite-not-countable) has $\mu(\emptyset) = 0$, because $\emptyset$ is finite.
 
 # Definitions on this page
 

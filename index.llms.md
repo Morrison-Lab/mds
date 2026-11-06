@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 16:44:18 (PST)
+Last modified: 2026-11-05 18:49:52 (PST)
 
 # Welcome
 
@@ -23,8 +23,8 @@ The first six topics are the foundations. Apart from a few remarks in Algebra th
   - [Functions](https://morrison-lab.github.io/mcs/functions.html): functions with their domains, codomains, and images, sequences, and countable sets
   - [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html): expressions, parse trees, and algorithms
   - [Indicator Functions](indicator-functions.llms.md): set and predicate indicators, the Iverson bracket, the Kronecker delta, and their algebraic properties
-- [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
-- [Proof Writing](proof-writing.llms.md): propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.llms.md#def-derivation)
+- [Algebra](algebra.llms.md): equalities and [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), [infimum](algebra-sums.llms.md#def-infimum) and [supremum](algebra-sums.llms.md#def-supremum), percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
+- [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html): propositions, quantifiers, proofs and [derivations](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation), and showing and annotating every step of a [derivation](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation)
 - [Induction and Recursion](https://morrison-lab.github.io/mcs/induction.html) in the Math for Computer Science notes: [recursively defined sequences](https://morrison-lab.github.io/mcs/induction.html#def-recursive-sequence) and [strong induction](https://morrison-lab.github.io/mcs/induction.html#def-strong-induction)
 
 The remaining topics build on the foundations and on each other:
@@ -67,7 +67,6 @@ Each page is a thin wrapper around one or more fragments:
 | [Linear Algebra](linear-algebra.llms.md) | `mds/_subfiles/_sec_linear_algebra.qmd` |
 | [Vector Calculus](vector-calculus.llms.md) | `mds/_subfiles/_sec_vector_calc.qmd` |
 | [Optimization](optimization.llms.md) | `mds/_subfiles/_sec_optimization.qmd` |
-| [Proof Writing](proof-writing.llms.md) | `mds/_proof-writing.qmd` |
 
 `_notation.qmd`, `_indicator-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
 

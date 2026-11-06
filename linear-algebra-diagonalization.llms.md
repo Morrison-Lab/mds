@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 16:44:18 (PST)
+Last modified: 2026-11-05 18:49:52 (PST)
 
 # 1 Similarity and diagonalization
 
@@ -166,7 +166,7 @@ Last modified: 2026-11-05 16:44:18 (PST)
 > && \text{(add entrywise)}
 > \end{aligned}$$
 >
-> **Part 2, by [induction](proof-writing.llms.md#def-proof-by-induction) on** $k$. For $k = 1$ it is the assumption. If $\mathbf{A}^{k-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \lambda^{k-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$, then
+> **Part 2, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on** $k$. For $k = 1$ it is the assumption. If $\mathbf{A}^{k-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \lambda^{k-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$, then
 >
 > $$\begin{aligned}
 > \mathbf{A}^k \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
@@ -464,7 +464,7 @@ Last modified: 2026-11-05 16:44:18 (PST)
 
 > **NOTE:**
 >
-> *Proof*. By [induction](proof-writing.llms.md#def-proof-by-induction) on $k$. For $k = 1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is linearly independent on its own. Suppose the result holds for $k - 1$ eigenvectors, and $\sum_{i=1}^{k} c_i \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Then
+> *Proof*. By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $k$. For $k = 1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is linearly independent on its own. Suppose the result holds for $k - 1$ eigenvectors, and $\sum_{i=1}^{k} c_i \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Then
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}
@@ -592,7 +592,7 @@ Last modified: 2026-11-05 16:44:18 (PST)
 
 > **NOTE:**
 >
-> *Proof*. **Powers of** $\mathbf{\Lambda}$. If $\mathbf{D} = \operatorname{diag}(d_1, \ldots, d_p)$ and $\mathbf{E} = \operatorname{diag}(e_1, \ldots, e_p)$, with entries $d_{il}$ and $e_{lj}$ (so $d_{ii} = d_i$ and $e_{jj} = e_j$), entry $(i, j)$ of $\mathbf{D} \mathbf{E}$ is $\sum_l d_{il}\,e_{lj}$ (1), where $d_{il} = 0$ unless $l = i$ and $e_{lj} = 0$ unless $l = j$. For $i \ne j$ no term survives, so the entry is $0$; for $i = j$ only $l = i$ survives, giving $d_i\,e_i$. So $\mathbf{D} \mathbf{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)$, and [induction](proof-writing.llms.md#def-proof-by-induction) on $k$ gives $\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)$.
+> *Proof*. **Powers of** $\mathbf{\Lambda}$. If $\mathbf{D} = \operatorname{diag}(d_1, \ldots, d_p)$ and $\mathbf{E} = \operatorname{diag}(e_1, \ldots, e_p)$, with entries $d_{il}$ and $e_{lj}$ (so $d_{ii} = d_i$ and $e_{jj} = e_j$), entry $(i, j)$ of $\mathbf{D} \mathbf{E}$ is $\sum_l d_{il}\,e_{lj}$ (1), where $d_{il} = 0$ unless $l = i$ and $e_{lj} = 0$ unless $l = j$. For $i \ne j$ no term survives, so the entry is $0$; for $i = j$ only $l = i$ survives, giving $d_i\,e_i$. So $\mathbf{D} \mathbf{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)$, and [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $k$ gives $\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)$.
 >
 > **Powers of** $\mathbf{A}$, by induction on $k$. $k = 1$ is the assumption. If it holds for $k - 1$,
 >
@@ -1165,7 +1165,7 @@ Last modified: 2026-11-05 16:44:18 (PST)
 >
 > *Proof*. **If.** ${\mathbf{L}}^{\top}$ is upper triangular with positive diagonal ([Definition 3 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)), so ${\mathbf{L}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ ([Theorem 19 in Projections and Linear Systems](linear-algebra-projections.llms.md#thm-back-substitution)), and the columns of ${\mathbf{L}}^{\top}$ are linearly independent ([Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns), [Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)). So $\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\,{\mathbf{L}}^{\top}$ ([Definition 3 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)) is positive definite ([Theorem 10](#thm-pd-gram), part 2).
 >
-> **Only if, with uniqueness, by [induction](proof-writing.llms.md#def-proof-by-induction) on** $p$. For $p = 1$, $\mathbf{A} = [a]$ with $a > 0$ ([Theorem 14](#thm-pd-submatrix)), and $[c]\,[c] = [a]$ with $c > 0$ holds exactly for $c = \sqrt{a}$. For $p > 1$, assume every $(p - 1) \times (p - 1)$ positive definite matrix has exactly one such factor, and split off the first row and column. $\mathbf{A}$ is symmetric, so its first row is the transpose of its first column:
+> **Only if, with uniqueness, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on** $p$. For $p = 1$, $\mathbf{A} = [a]$ with $a > 0$ ([Theorem 14](#thm-pd-submatrix)), and $[c]\,[c] = [a]$ with $c > 0$ holds exactly for $c = \sqrt{a}$. For $p > 1$, assume every $(p - 1) \times (p - 1)$ positive definite matrix has exactly one such factor, and split off the first row and column. $\mathbf{A}$ is symmetric, so its first row is the transpose of its first column:
 >
 > $$\mathbf{A} = \begin{bmatrix} a_{11} & {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top} \\ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} & \mathbf{A}_{22} \end{bmatrix},
 > \qquad

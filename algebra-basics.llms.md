@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 16:44:18 (PST)
+Last modified: 2026-11-05 18:49:52 (PST)
 
 # 1 Equalities
 
@@ -325,7 +325,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> *Proof*. Let $x^* \in A$. By [Definition 16](#def-argmax), $x^*$ is in the [argmax](#def-argmax) of $c\,g$ [if and only if](proof-writing.llms.md#def-iff) $c\,g(a) \le c\,g(x^*)$ for every $a \in A$.
+> *Proof*. Let $x^* \in A$. By [Definition 16](#def-argmax), $x^*$ is in the [argmax](#def-argmax) of $c\,g$ [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $c\,g(a) \le c\,g(x^*)$ for every $a \in A$.
 >
 > Suppose $g(a) \le g(x^*)$. If $g(a) = g(x^*)$, then $c\,g(a) = c\,g(x^*)$. If $g(a) < g(x^*)$, then $c\,g(a) < c\,g(x^*)$ by [Theorem 5](#thm-mult-ineq). Either way, $c\,g(a) \le c\,g(x^*)$.
 >
@@ -417,15 +417,15 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 20 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](functions.llms.md#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ for all $x \in A$ with $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$, where $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}$ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
+> **Definition 20 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ for all $x \in A$ with $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$, where $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}$ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
 
 > **NOTE:**
 >
 > *Remark 6* (Local and global minimizers). For $p = 1$, $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} = \mathopen{}\left|x - x^*\right|\mathclose{}$. For example, with $x^* = 1$ and $\delta= 1$, the condition $\mathopen{}\left|x - 1\right|\mathclose{} < 1$ means $0 < x < 2$.
 >
-> Every global minimizer ([Definition 19](#def-global-minimizer)) is a local minimizer: take any $\delta> 0$. For example, $x^* = 0$ is a global minimizer of $f(x) = x^2$ on $\mathbb{R}$, so it is also a local minimizer.
+> Every [global minimizer](#def-global-minimizer) is a [local minimizer](#def-local-minimizer): take any $\delta> 0$. For example, $x^* = 0$ is a global minimizer of $f(x) = x^2$ on $\mathbb{R}$, so it is also a local minimizer.
 >
-> The [converse](proof-writing.llms.md#def-converse) fails. In [Exercise 4](#exr-local-vs-global-min), $x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\delta= 1$), but not a global one.
+> The [converse](https://morrison-lab.github.io/mcs/proof-writing.html#def-converse) fails. In [Exercise 4](#exr-local-vs-global-min), $x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\delta= 1$), but not a global one.
 
 > **NOTE:**
 >
