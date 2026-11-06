@@ -78,6 +78,56 @@ cat(
 
 ```{python}
 #| label: convex-hessian-3d-python
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| results: asis
+#| fig-alt: >-
+#|   Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2
+#|   from -3 to 3. The surface is a trough that rises steeply toward the
+#|   upper right, where 2 x1 plus x2 is large, and is nearly flat on the
+#|   lower left. A dashed vermilion straight line along the direction (1, -2)
+#|   through the origin lies on the surface, because f is linear there.
+import numpy as np
+import plotly.graph_objects as go
+
+ch_x1_3d = np.linspace(-1, 1, 101)
+ch_x2_3d = np.linspace(-3, 3, 101)
+ch_xx_3d, ch_yy_3d = np.meshgrid(ch_x1_3d, ch_x2_3d)
+ch_z_3d = np.exp(2 * ch_xx_3d + ch_yy_3d) - ch_xx_3d
+ch_line_x1_3d = np.linspace(-1, 1, 21)
+ch_line_x2_3d = -2 * ch_line_x1_3d
+ch_line_z_3d = np.exp(2 * ch_line_x1_3d + ch_line_x2_3d) - ch_line_x1_3d
+fig = go.Figure(data=[
+    go.Surface(
+        x=ch_x1_3d,
+        y=ch_x2_3d,
+        z=ch_z_3d,
+        colorscale=[[0, "#CCE0F0"], [1, "#0072B2"]],
+        showscale=False,
+        opacity=0.6,
+        showlegend=False,
+    ),
+    go.Scatter3d(x=ch_line_x1_3d, y=ch_line_x2_3d, z=ch_line_z_3d,
+                 mode="lines",
+                 line=dict(color="#D55E00", width=5, dash="dash"),
+                 name="f is linear"),
+])
+fig.update_layout(
+    scene=dict(
+        xaxis_title="x1",
+        yaxis_title="x2",
+        zaxis_title="f(x)",
+        camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+    ),
+    legend=dict(orientation="h"),
+);
+print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+```
+
+```{python}
+#| label: convex-hessian-3d-python-static
+#| echo: !expr isFALSE(knitr::is_html_output())
+#| eval: !expr isFALSE(knitr::is_html_output())
 #| fig-alt: >-
 #|   Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2
 #|   from -3 to 3. The surface is a trough that rises steeply toward the

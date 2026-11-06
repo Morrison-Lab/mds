@@ -91,6 +91,62 @@ cat(
 
 ```{python}
 #| label: gd-zigzag-3d-python
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| results: asis
+#| fig-alt: >-
+#|   Surface plot of f of x equal to one half of x1 squared plus 3 x2 squared
+#|   over x1 from -0.5 to 3.5 and x2 from -1 to 1.2, a bowl that is steeper
+#|   along the x2 axis than along the x1 axis. A blue path of line segments
+#|   with circles lies on the bowl. It starts at the point (3, 1), then goes
+#|   to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), alternating between
+#|   the two sides of the valley floor and descending toward the origin,
+#|   which is marked by a vermilion diamond at the bottom of the bowl.
+import numpy as np
+import plotly.graph_objects as go
+
+gz_x1_3d = np.linspace(-0.5, 3.5, 101)
+gz_x2_3d = np.linspace(-1, 1.2, 101)
+gz_xx_3d, gz_yy_3d = np.meshgrid(gz_x1_3d, gz_x2_3d)
+gz_f_3d = 0.5 * (gz_xx_3d**2 + 3 * gz_yy_3d**2)
+gz_path_x1_3d = 3 * 0.5 ** np.arange(4)
+gz_path_x2_3d = np.array([1, -0.5, 0.25, -0.125])
+gz_path_f_3d = 0.5 * (gz_path_x1_3d**2 + 3 * gz_path_x2_3d**2)
+fig = go.Figure(data=[
+    go.Surface(
+        x=gz_x1_3d,
+        y=gz_x2_3d,
+        z=gz_f_3d,
+        colorscale=[[0, "#E5E5E5"], [1, "#808080"]],
+        showscale=False,
+        opacity=0.6,
+        showlegend=False,
+    ),
+    go.Scatter3d(x=gz_path_x1_3d, y=gz_path_x2_3d, z=gz_path_f_3d,
+                 mode="lines+markers",
+                 line=dict(color="#0072B2", width=5),
+                 marker=dict(color="#0072B2", size=4),
+                 name="iterates"),
+    go.Scatter3d(x=[0], y=[0], z=[0], mode="markers",
+                 marker=dict(color="#D55E00", size=4, symbol="diamond"),
+                 name="minimizer"),
+])
+fig.update_layout(
+    scene=dict(
+        xaxis_title="x1",
+        yaxis_title="x2",
+        zaxis_title="f(x)",
+        camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+    ),
+    legend=dict(orientation="h"),
+);
+print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+```
+
+```{python}
+#| label: gd-zigzag-3d-python-static
+#| echo: !expr isFALSE(knitr::is_html_output())
+#| eval: !expr isFALSE(knitr::is_html_output())
 #| fig-alt: >-
 #|   Surface plot of f of x equal to one half of x1 squared plus 3 x2 squared
 #|   over x1 from -0.5 to 3.5 and x2 from -1 to 1.2, a bowl that is steeper
