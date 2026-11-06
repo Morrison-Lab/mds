@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 17:26:45 (PST)
+Last modified: 2026-11-05 18:27:30 (PST)
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:
 
@@ -64,7 +64,7 @@ The vast majority of indicator notations belong to one of two families: set nota
 
 > **NOTE:**
 >
-> **Definition 5 (Predicate notation for indicators)** An indicator ([Definition 1](#def-indicator-function)) is written in **predicate notation** when a proposition or predicate $P$ ([definition](proof-writing.llms.md#def-predicate)) appears as its argument, as in ${\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}$ or ${\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}$.
+> **Definition 5 (Predicate notation for indicators)** An indicator ([Definition 1](#def-indicator-function)) is written in **predicate notation** when a proposition or predicate $P$ ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-predicate)) appears as its [argument](https://morrison-lab.github.io/mcs/functions.html#def-argument), as in ${\mathbb{1}\mathopen{}\left(P\right)\mathclose{}}$ or ${\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}}$.
 
 > **NOTE:**
 >
@@ -92,7 +92,7 @@ In predicate notation, the indicator takes a logical condition, relation, or pro
 - $\mathbb{1}\{x \in A\}$ or $\mathbb{1}\{P\}$
 - $I(x \in A)$ or $I(P)$
 
-Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities ([definition](proof-writing.llms.md#def-inequality)) involving random variables, such as ${\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}}$ (an event occurring before time $t$) or ${\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}}$ (a binary outcome).
+Predicate notation is especially common in applied statistics and survival analysis, where [indicators](#def-indicator-function) frequently depend on [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) involving [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), such as ${\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}}$ (an event occurring before time $t$) or ${\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}}$ (a binary outcome).
 
 ## 1.3 Equivalence between paradigms
 
@@ -222,7 +222,7 @@ Blackboard bold $\mathbb{1}$ is preferred because it avoids all common collision
 
 # 6 Key algebraic properties
 
-Indicator functions translate the logical connectives ([definition](proof-writing.llms.md#def-logical-connective)) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:
+[Indicator functions](#def-indicator-function) translate the logical connectives ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-logical-connective)) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:
 
 > **NOTE:**
 >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 17:26:45 (PST)
+Last modified: 2026-11-05 18:27:30 (PST)
 
 # 1 Inner products
 
@@ -1144,7 +1144,7 @@ Last modified: 2026-11-05 17:26:45 (PST)
 
 > **NOTE:**
 >
-> *Proof*. **Parts 1 and 2, by [induction](proof-writing.llms.md#def-proof-by-induction) on** $i$. Before step $1$, the list of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}$’s is empty, which is orthonormal, and both spans are $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)). Suppose part 1 holds after step $i - 1$, and write
+> *Proof*. **Parts 1 and 2, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on** $i$. Before step $1$, the list of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}$’s is empty, which is orthonormal, and both spans are $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)). Suppose part 1 holds after step $i - 1$, and write
 >
 > $$\begin{aligned}
 > \mathcal{S}_{i-1} &= \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_{i-1}\right\}\mathclose{} \\
@@ -1244,7 +1244,7 @@ Last modified: 2026-11-05 17:26:45 (PST)
 >
 > *Proof*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_r \in \mathcal{S}$ be orthonormal. They are linearly independent ([Theorem 9](#thm-orthonormal-independent)), so they extend to a basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_r, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_{r+1}, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_d$ of $\mathcal{S}$ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)). Run the Gram-Schmidt process on this basis. It is linearly independent, so the process completes, and the output is an orthonormal basis of its span, which is $\mathcal{S}$ ([Theorem 11](#thm-gram-schmidt), part 3).
 >
-> The first $r$ outputs are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_r$ themselves, by [induction](proof-writing.llms.md#def-proof-by-induction) on $i \le r$. Suppose the outputs before step $i$ are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_{i-1}$ (for $i = 1$ there are none, and the sum below is empty). Then
+> The first $r$ outputs are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_r$ themselves, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $i \le r$. Suppose the outputs before step $i$ are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_{i-1}$ (for $i = 1$ there are none, and the sum below is empty). Then
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_i - \sum_{j<i} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_i)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_j \\
@@ -1378,7 +1378,7 @@ Last modified: 2026-11-05 17:26:45 (PST)
 
 > **NOTE:**
 >
-> **Example 29 (A Cauchy sequence of real numbers)** The [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\mathbb{R}$ with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\,y$ form an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), and $\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left|x\right|\mathclose{}$ in it. The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence). Given $\varepsilon> 0$, take $N$ to be any [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) larger than $\frac{1}{\varepsilon}$. [For all](proof-writing.llms.md#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$, so $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{N} < \varepsilon$. For example, with $\varepsilon= 0.01$, take $N = 101$: all $m, n \ge 101$ have $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{101} < 0.01$.
+> **Example 29 (A Cauchy sequence of real numbers)** The [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\mathbb{R}$ with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\,y$ form an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), and $\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left|x\right|\mathclose{}$ in it. The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence). Given $\varepsilon> 0$, take $N$ to be any [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) larger than $\frac{1}{\varepsilon}$. [For all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$, so $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{N} < \varepsilon$. For example, with $\varepsilon= 0.01$, take $N = 101$: all $m, n \ge 101$ have $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{101} < 0.01$.
 
 > **NOTE:**
 >

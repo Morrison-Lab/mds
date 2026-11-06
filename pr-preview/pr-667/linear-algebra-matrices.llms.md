@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 17:26:45 (PST)
+Last modified: 2026-11-05 18:27:30 (PST)
 
 > **NOTE:**
 >
@@ -505,7 +505,7 @@ Last modified: 2026-11-05 17:26:45 (PST)
 
 > **NOTE:**
 >
-> *Proof*. By [induction](proof-writing.llms.md#def-proof-by-induction) on $k$. For $k = 1$, the claim $f(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1) = c_1 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1)$ is homogeneity.
+> *Proof*. By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $k$. For $k = 1$, the claim $f(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1) = c_1 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1)$ is homogeneity.
 >
 > Suppose the claim holds for $k$ vectors. Then for $k + 1$:
 >

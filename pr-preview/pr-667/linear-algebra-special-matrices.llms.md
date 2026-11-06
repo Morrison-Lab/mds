@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 17:26:45 (PST)
+Last modified: 2026-11-05 18:27:30 (PST)
 
 # 1 Special Matrices
 
@@ -1256,7 +1256,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 13* (An equivalent form of the spectral theorem). The proof, by [induction](proof-writing.llms.md#def-proof-by-induction) on $p$, is outside the scope of these notes; see Banerjee and Roy [\[6, Ch. 11\]](#ref-banerjee2014linear), Theorem 11.27, p. 349, which states the result in the equivalent form ${\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}$. The two forms are equivalent because
+> *Remark 13* (An equivalent form of the spectral theorem). The proof, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $p$, is outside the scope of these notes; see Banerjee and Roy [\[6, Ch. 11\]](#ref-banerjee2014linear), Theorem 11.27, p. 349, which states the result in the equivalent form ${\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}$. The two forms are equivalent because
 >
 > $$\begin{aligned}
 > {\mathbf{Q}}^{\top}\mathbf{Q} &= \mathbf{Q}{\mathbf{Q}}^{\top} \\
@@ -2856,7 +2856,7 @@ See also [\[16\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> *Proof*. By [induction](proof-writing.llms.md#def-proof-by-induction) on $p$. For $p = 1$, the matrix is $\begin{bmatrix} d_1 \end{bmatrix}$, and its determinant is $d_1$ by definition.
+> *Proof*. By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $p$. For $p = 1$, the matrix is $\begin{bmatrix} d_1 \end{bmatrix}$, and its determinant is $d_1$ by definition.
 >
 > For $p \ge 2$, suppose the result holds for $(p-1) \times (p-1)$ diagonal matrices, and let $\mathbf{D}$ be $p \times p$ and diagonal. Row 1 of $\mathbf{D}$ is $(d_1, 0, \ldots, 0)$, so only the $j = 1$ term of the definition can be nonzero, and deleting row 1 and column 1 of $\mathbf{D}$ leaves the diagonal matrix with diagonal entries $d_2, \ldots, d_p$:
 >

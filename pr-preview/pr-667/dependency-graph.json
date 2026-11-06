@@ -214,6 +214,66 @@
    "url": "https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers"
   },
   {
+   "id": "mcs/proof-writing#def-iff",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-iff",
+   "kind": "def",
+   "title": "iff",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/proof-writing.html#def-iff"
+  },
+  {
+   "id": "mcs/proof-writing#def-inequality",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-inequality",
+   "kind": "def",
+   "title": "inequality",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality"
+  },
+  {
+   "id": "mcs/proof-writing#def-predicate",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-predicate",
+   "kind": "def",
+   "title": "predicate",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/proof-writing.html#def-predicate"
+  },
+  {
+   "id": "mcs/proof-writing#def-proof-by-contradiction",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-proof-by-contradiction",
+   "kind": "def",
+   "title": "proof by contradiction",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-contradiction"
+  },
+  {
+   "id": "mcs/proof-writing#def-proof-by-induction",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-proof-by-induction",
+   "kind": "def",
+   "title": "proof by induction",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction"
+  },
+  {
+   "id": "mcs/proof-writing#def-theorem",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-theorem",
+   "kind": "def",
+   "title": "theorem",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/proof-writing.html#def-theorem"
+  },
+  {
    "id": "mcs/sets#def-cartesian-product",
    "site": "mcs",
    "page": "sets",
@@ -11954,555 +12014,6 @@
    "external": false
   },
   {
-   "id": "mds/proof-writing#def-and",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-and",
-   "kind": "def",
-   "title": "And",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-conclusion",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-conclusion",
-   "kind": "def",
-   "title": "Conclusion",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-constructive-proof",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-constructive-proof",
-   "kind": "def",
-   "title": "Constructive proof",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-contradiction",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-contradiction",
-   "kind": "def",
-   "title": "Contradiction",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-contrapositive",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-contrapositive",
-   "kind": "def",
-   "title": "Contrapositive",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-converse",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-converse",
-   "kind": "def",
-   "title": "Converse",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-corollary",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-corollary",
-   "kind": "def",
-   "title": "Corollary",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-counterexample",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-counterexample",
-   "kind": "def",
-   "title": "Counterexample",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-derivation",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-derivation",
-   "kind": "def",
-   "title": "Derivation",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-direct-proof",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-direct-proof",
-   "kind": "def",
-   "title": "Direct proof",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-disproof",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-disproof",
-   "kind": "def",
-   "title": "Disproof",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-domain-of-discourse",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-domain-of-discourse",
-   "kind": "def",
-   "title": "Domain of discourse, universe of discourse",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-existential-quantifier",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-existential-quantifier",
-   "kind": "def",
-   "title": "Existential quantifier",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-first-order-logic",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-first-order-logic",
-   "kind": "def",
-   "title": "First-order logic",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-formal-proof",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-formal-proof",
-   "kind": "def",
-   "title": "Formal proof",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-iff",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-iff",
-   "kind": "def",
-   "title": "If and only if",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-implies",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-implies",
-   "kind": "def",
-   "title": "Implies",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-inequality",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-inequality",
-   "kind": "def",
-   "title": "Inequality",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-lemma",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-lemma",
-   "kind": "def",
-   "title": "Lemma",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-logical-argument",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-logical-argument",
-   "kind": "def",
-   "title": "Logical argument",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-logical-connective",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-logical-connective",
-   "kind": "def",
-   "title": "Logical connective",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-logical-entailment",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-logical-entailment",
-   "kind": "def",
-   "title": "Logical entailment, logical consequence, deductive consequence",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-logically-equivalent",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-logically-equivalent",
-   "kind": "def",
-   "title": "Logically equivalent",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-necessary-condition",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-necessary-condition",
-   "kind": "def",
-   "title": "Necessary condition",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-necessary-sufficient",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-necessary-sufficient",
-   "kind": "def",
-   "title": "Necessary and sufficient condition",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-nonconstructive-proof",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-nonconstructive-proof",
-   "kind": "def",
-   "title": "Non-constructive proof",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-not",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-not",
-   "kind": "def",
-   "title": "Not",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-or",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-or",
-   "kind": "def",
-   "title": "Or",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-predicate",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-predicate",
-   "kind": "def",
-   "title": "Predicate",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-premise",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-premise",
-   "kind": "def",
-   "title": "Premise",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-proof",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-proof",
-   "kind": "def",
-   "title": "Proof",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-proof-by-cases",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-proof-by-cases",
-   "kind": "def",
-   "title": "Proof by cases, proof by exhaustion",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-proof-by-contradiction",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-proof-by-contradiction",
-   "kind": "def",
-   "title": "Proof by contradiction",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-proof-by-contrapositive",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-proof-by-contrapositive",
-   "kind": "def",
-   "title": "Proof by contrapositive",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-proof-by-induction",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-proof-by-induction",
-   "kind": "def",
-   "title": "Proof by induction",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-proposition",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-proposition",
-   "kind": "def",
-   "title": "Proposition, statement",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-propositional-logic",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-propositional-logic",
-   "kind": "def",
-   "title": "Propositional logic",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-quantifier",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-quantifier",
-   "kind": "def",
-   "title": "Quantifier",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-result",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-result",
-   "kind": "def",
-   "title": "Result",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-rule-of-inference",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-rule-of-inference",
-   "kind": "def",
-   "title": "Rule of inference",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-sufficient-condition",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-sufficient-condition",
-   "kind": "def",
-   "title": "Sufficient condition",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-tautology",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-tautology",
-   "kind": "def",
-   "title": "Tautology",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-theorem",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-theorem",
-   "kind": "def",
-   "title": "Theorem",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-truth-table",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-truth-table",
-   "kind": "def",
-   "title": "Truth table",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#def-universal-quantifier",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "def-universal-quantifier",
-   "kind": "def",
-   "title": "Universal quantifier",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-addition-rule",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-addition-rule",
-   "kind": "thm",
-   "title": "Addition",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-biconditional-split",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-biconditional-split",
-   "kind": "thm",
-   "title": "A biconditional is two conditionals",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-conjunction-rule",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-conjunction-rule",
-   "kind": "thm",
-   "title": "Conjunction",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-contradiction-works",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-contradiction-works",
-   "kind": "thm",
-   "title": "Why a proof by contradiction works",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-contrapositive",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-contrapositive",
-   "kind": "thm",
-   "title": "A conditional is equivalent to its contrapositive",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-de-morgan-logic",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-de-morgan-logic",
-   "kind": "thm",
-   "title": "De Morgan's laws for propositions",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-derivation-chain",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-derivation-chain",
-   "kind": "thm",
-   "title": "What a derivation shows",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-disjunctive-syllogism",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-disjunctive-syllogism",
-   "kind": "thm",
-   "title": "Disjunctive syllogism",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-double-negation",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-double-negation",
-   "kind": "thm",
-   "title": "Double negation",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-equivalence-iff",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-equivalence-iff",
-   "kind": "thm",
-   "title": "Equivalence is a tautological biconditional",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-equivalent-cycle",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-equivalent-cycle",
-   "kind": "thm",
-   "title": "A cycle of conditionals",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-modus-ponens",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-modus-ponens",
-   "kind": "thm",
-   "title": "Modus ponens",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-modus-tollens",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-modus-tollens",
-   "kind": "thm",
-   "title": "Modus tollens",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-negate-quantifiers",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-negate-quantifiers",
-   "kind": "thm",
-   "title": "De Morgan's laws for quantifiers",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-proof-by-contradiction",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-proof-by-contradiction",
-   "kind": "thm",
-   "title": "A proof by contradiction proves its proposition",
-   "external": false
-  },
-  {
-   "id": "mds/proof-writing#thm-simplification",
-   "site": "mds",
-   "page": "proof-writing",
-   "div": "thm-simplification",
-   "kind": "thm",
-   "title": "Simplification",
-   "external": false
-  },
-  {
    "id": "mds/vector-calculus#cor-chain-qf",
    "site": "mds",
    "page": "vector-calculus",
@@ -13201,6 +12712,10 @@
   ],
   [
    "mds/algebra#def-local-minimizer",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/algebra#def-local-minimizer",
    "mds/linear-algebra#def-euclidean-norm"
   ],
   [
@@ -13654,6 +13169,10 @@
   [
    "mds/algebra-basics#def-identity",
    "mcs/sets#def-set"
+  ],
+  [
+   "mds/algebra-basics#def-local-minimizer",
+   "mcs/functions#def-function"
   ],
   [
    "mds/algebra-basics#def-local-minimizer",
@@ -15177,11 +14696,15 @@
   ],
   [
    "mds/indicator-functions#def-predicate-notation",
-   "mds/indicator-functions#def-indicator-function"
+   "mcs/functions#def-argument"
   ],
   [
    "mds/indicator-functions#def-predicate-notation",
-   "mds/proof-writing#def-predicate"
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mds/indicator-functions#def-predicate-notation",
+   "mds/indicator-functions#def-indicator-function"
   ],
   [
    "mds/indicator-functions#def-set-predicate-notation",
@@ -15293,6 +14816,10 @@
   ],
   [
    "mds/linear-algebra#cor-orthonormal-basis-exists",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#cor-orthonormal-basis-exists",
    "mds/linear-algebra#def-orthonormal-basis"
   ],
   [
@@ -15306,10 +14833,6 @@
   [
    "mds/linear-algebra#cor-orthonormal-basis-exists",
    "mds/linear-algebra#thm-orthonormal-independent"
-  ],
-  [
-   "mds/linear-algebra#cor-orthonormal-basis-exists",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#cor-pd-transpose-product",
@@ -16245,6 +15768,10 @@
   ],
   [
    "mds/linear-algebra#thm-cholesky",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-cholesky",
    "mds/linear-algebra#def-linearly-independent"
   ],
   [
@@ -16290,10 +15817,6 @@
   [
    "mds/linear-algebra#thm-cholesky",
    "mds/linear-algebra#thm-schur-test"
-  ],
-  [
-   "mds/linear-algebra#thm-cholesky",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-closest-point",
@@ -16453,15 +15976,15 @@
   ],
   [
    "mds/linear-algebra#thm-det-diagonal",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-det-diagonal",
    "mds/linear-algebra#def-determinant"
   ],
   [
    "mds/linear-algebra#thm-det-diagonal",
    "mds/linear-algebra#def-diagonal-matrix"
-  ],
-  [
-   "mds/linear-algebra#thm-det-diagonal",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-det-eigenvalues",
@@ -16517,6 +16040,10 @@
   ],
   [
    "mds/linear-algebra#thm-diagonalizable-powers",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-diagonalizable-powers",
    "mds/linear-algebra#def-diagonalizable"
   ],
   [
@@ -16538,10 +16065,6 @@
   [
    "mds/linear-algebra#thm-diagonalizable-powers",
    "mds/linear-algebra#thm-matmul-assoc"
-  ],
-  [
-   "mds/linear-algebra#thm-diagonalizable-powers",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-dim-bound",
@@ -16657,6 +16180,10 @@
   ],
   [
    "mds/linear-algebra#thm-eigen-shift-power",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-eigen-shift-power",
    "mds/linear-algebra#def-eigenvalue"
   ],
   [
@@ -16678,10 +16205,6 @@
   [
    "mds/linear-algebra#thm-eigen-shift-power",
    "mds/linear-algebra#thm-scalar-matmul"
-  ],
-  [
-   "mds/linear-algebra#thm-eigen-shift-power",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-eigen-triangular",
@@ -16737,6 +16260,10 @@
   ],
   [
    "mds/linear-algebra#thm-eigenvectors-independent",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-eigenvectors-independent",
    "mds/linear-algebra#def-linearly-independent"
   ],
   [
@@ -16746,10 +16273,6 @@
   [
    "mds/linear-algebra#thm-eigenvectors-independent",
    "mds/linear-algebra#thm-matvec-linear"
-  ],
-  [
-   "mds/linear-algebra#thm-eigenvectors-independent",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-extend-basis",
@@ -16861,6 +16384,10 @@
   ],
   [
    "mds/linear-algebra#thm-gram-schmidt",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-gram-schmidt",
    "mds/linear-algebra#def-gram-schmidt"
   ],
   [
@@ -16906,10 +16433,6 @@
   [
    "mds/linear-algebra#thm-gram-schmidt",
    "mds/linear-algebra#thm-span-subspace"
-  ],
-  [
-   "mds/linear-algebra#thm-gram-schmidt",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-half-space-dimension",
@@ -17193,11 +16716,11 @@
   ],
   [
    "mds/linear-algebra#thm-linear-map-lincom",
-   "mds/linear-algebra#def-linear-map"
+   "mcs/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra#thm-linear-map-lincom",
-   "mds/proof-writing#def-proof-by-induction"
+   "mds/linear-algebra#def-linear-map"
   ],
   [
    "mds/linear-algebra#thm-linear-map-matrix",
@@ -17245,15 +16768,15 @@
   ],
   [
    "mds/linear-algebra#thm-many-vectors-dependent",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra#thm-many-vectors-dependent",
+   "mcs/proof-writing#def-theorem"
+  ],
+  [
+   "mds/linear-algebra#thm-many-vectors-dependent",
    "mds/linear-algebra#def-linearly-independent"
-  ],
-  [
-   "mds/linear-algebra#thm-many-vectors-dependent",
-   "mds/proof-writing#def-proof-by-induction"
-  ],
-  [
-   "mds/linear-algebra#thm-many-vectors-dependent",
-   "mds/proof-writing#def-theorem"
   ],
   [
    "mds/linear-algebra#thm-matadd-assoc",
@@ -17493,6 +17016,10 @@
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-least-squares",
+   "mcs/proof-writing#def-iff"
+  ],
+  [
+   "mds/linear-algebra#thm-moore-penrose-least-squares",
    "mds/linear-algebra#def-least-squares"
   ],
   [
@@ -17510,10 +17037,6 @@
   [
    "mds/linear-algebra#thm-moore-penrose-least-squares",
    "mds/linear-algebra-inner-products#def-norm"
-  ],
-  [
-   "mds/linear-algebra#thm-moore-penrose-least-squares",
-   "mds/proof-writing#def-iff"
   ],
   [
    "mds/linear-algebra#thm-moore-penrose-minimum-norm",
@@ -18749,6 +18272,10 @@
   ],
   [
    "mds/linear-algebra-diagonalization#thm-cholesky",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-cholesky",
    "mds/linear-algebra-diagonalization#def-schur-complement"
   ],
   [
@@ -18764,10 +18291,6 @@
    "mds/linear-algebra-diagonalization#thm-schur-test"
   ],
   [
-   "mds/linear-algebra-diagonalization#thm-cholesky",
-   "mds/proof-writing#def-proof-by-induction"
-  ],
-  [
    "mds/linear-algebra-diagonalization#thm-diagonalizable",
    "mds/linear-algebra-diagonalization#def-diagonalizable"
   ],
@@ -18777,11 +18300,11 @@
   ],
   [
    "mds/linear-algebra-diagonalization#thm-diagonalizable-powers",
-   "mds/linear-algebra-diagonalization#def-diagonalizable"
+   "mcs/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra-diagonalization#thm-diagonalizable-powers",
-   "mds/proof-writing#def-proof-by-induction"
+   "mds/linear-algebra-diagonalization#def-diagonalizable"
   ],
   [
    "mds/linear-algebra-diagonalization#thm-eigen-idempotent-orthogonal",
@@ -18789,7 +18312,7 @@
   ],
   [
    "mds/linear-algebra-diagonalization#thm-eigen-shift-power",
-   "mds/proof-writing#def-proof-by-induction"
+   "mcs/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra-diagonalization#thm-eigen-triangular",
@@ -18805,11 +18328,11 @@
   ],
   [
    "mds/linear-algebra-diagonalization#thm-eigenvectors-independent",
-   "mds/linear-algebra-diagonalization#thm-eigen-shift-power"
+   "mcs/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra-diagonalization#thm-eigenvectors-independent",
-   "mds/proof-writing#def-proof-by-induction"
+   "mds/linear-algebra-diagonalization#thm-eigen-shift-power"
   ],
   [
    "mds/linear-algebra-diagonalization#thm-pd-gram",
@@ -18957,6 +18480,10 @@
   ],
   [
    "mds/linear-algebra-inner-products#cor-orthonormal-basis-exists",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-orthonormal-basis-exists",
    "mds/linear-algebra-inner-products#def-orthonormal-basis"
   ],
   [
@@ -18966,10 +18493,6 @@
   [
    "mds/linear-algebra-inner-products#cor-orthonormal-basis-exists",
    "mds/linear-algebra-inner-products#thm-orthonormal-independent"
-  ],
-  [
-   "mds/linear-algebra-inner-products#cor-orthonormal-basis-exists",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra-inner-products#cor-pearson-angle",
@@ -19061,6 +18584,10 @@
   ],
   [
    "mds/linear-algebra-inner-products#thm-gram-schmidt",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-gram-schmidt",
    "mds/linear-algebra-inner-products#def-gram-schmidt"
   ],
   [
@@ -19082,10 +18609,6 @@
   [
    "mds/linear-algebra-inner-products#thm-gram-schmidt",
    "mds/linear-algebra-inner-products#thm-orthonormal-independent"
-  ],
-  [
-   "mds/linear-algebra-inner-products#thm-gram-schmidt",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra-inner-products#thm-inner-product-sign",
@@ -19269,11 +18792,11 @@
   ],
   [
    "mds/linear-algebra-matrices#thm-linear-map-lincom",
-   "mds/linear-algebra-matrices#def-linear-map"
+   "mcs/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra-matrices#thm-linear-map-lincom",
-   "mds/proof-writing#def-proof-by-induction"
+   "mds/linear-algebra-matrices#def-linear-map"
   ],
   [
    "mds/linear-algebra-matrices#thm-linear-map-matrix",
@@ -19553,6 +19076,10 @@
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
+   "mcs/proof-writing#def-iff"
+  ],
+  [
+   "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
    "mds/linear-algebra-inner-products#def-inner-product"
   ],
   [
@@ -19566,10 +19093,6 @@
   [
    "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
    "mds/linear-algebra-projections#def-moore-penrose"
-  ],
-  [
-   "mds/linear-algebra-projections#thm-moore-penrose-least-squares",
-   "mds/proof-writing#def-iff"
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-minimum-norm",
@@ -20125,15 +19648,15 @@
   ],
   [
    "mds/linear-algebra-special-matrices#thm-det-diagonal",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-det-diagonal",
    "mds/linear-algebra-special-matrices#def-determinant"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-det-diagonal",
    "mds/linear-algebra-special-matrices#def-diagonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-det-diagonal",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
@@ -20401,15 +19924,15 @@
   ],
   [
    "mds/linear-algebra-subspaces#thm-many-vectors-dependent",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-many-vectors-dependent",
+   "mcs/proof-writing#def-theorem"
+  ],
+  [
+   "mds/linear-algebra-subspaces#thm-many-vectors-dependent",
    "mds/linear-algebra-subspaces#def-linearly-independent"
-  ],
-  [
-   "mds/linear-algebra-subspaces#thm-many-vectors-dependent",
-   "mds/proof-writing#def-proof-by-induction"
-  ],
-  [
-   "mds/linear-algebra-subspaces#thm-many-vectors-dependent",
-   "mds/proof-writing#def-theorem"
   ],
   [
    "mds/linear-algebra-subspaces#thm-span-subspace",
@@ -21001,15 +20524,15 @@
   ],
   [
    "mds/measures#lem-countable-additivity-empty",
+   "mcs/proof-writing#def-proof-by-contradiction"
+  ],
+  [
+   "mds/measures#lem-countable-additivity-empty",
    "mds/measures#def-countable-additivity"
   ],
   [
    "mds/measures#lem-countable-additivity-empty",
    "mds/measures#def-sigma-algebra"
-  ],
-  [
-   "mds/measures#lem-countable-additivity-empty",
-   "mds/proof-writing#def-proof-by-contradiction"
   ],
   [
    "mds/measures#thm-countable-implies-finite",
@@ -21113,11 +20636,11 @@
   ],
   [
    "mds/measures-additivity#lem-countable-additivity-empty",
-   "mds/measures-additivity#def-countable-additivity"
+   "mcs/proof-writing#def-proof-by-contradiction"
   ],
   [
    "mds/measures-additivity#lem-countable-additivity-empty",
-   "mds/proof-writing#def-proof-by-contradiction"
+   "mds/measures-additivity#def-countable-additivity"
   ],
   [
    "mds/measures-additivity#thm-countable-implies-finite",
@@ -21885,6 +21408,10 @@
   ],
   [
    "mds/optimization#prp-double-well-divergence",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/optimization#prp-double-well-divergence",
    "mds/calculus-derivatives#def-derivative"
   ],
   [
@@ -21894,10 +21421,6 @@
   [
    "mds/optimization#prp-double-well-divergence",
    "mds/optimization#def-iterate"
-  ],
-  [
-   "mds/optimization#prp-double-well-divergence",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/optimization#thm-best-constant-step",
@@ -22093,6 +21616,14 @@
   ],
   [
    "mds/optimization#thm-gd-quadratic-error",
+   "mcs/proof-writing#def-inequality"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/optimization#thm-gd-quadratic-error",
    "mds/algebra#def-absolute-value"
   ],
   [
@@ -22130,14 +21661,6 @@
   [
    "mds/optimization#thm-gd-quadratic-error",
    "mds/optimization#thm-newton-quadratic"
-  ],
-  [
-   "mds/optimization#thm-gd-quadratic-error",
-   "mds/proof-writing#def-inequality"
-  ],
-  [
-   "mds/optimization#thm-gd-quadratic-error",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/optimization#thm-gd-quadratic-error",
@@ -22893,15 +22416,15 @@
   ],
   [
    "mds/optimization-gradient-descent#prp-double-well-divergence",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/optimization-gradient-descent#prp-double-well-divergence",
    "mds/calculus-derivatives#def-derivative"
   ],
   [
    "mds/optimization-gradient-descent#prp-double-well-divergence",
    "mds/optimization-gradient-descent#def-gradient-descent"
-  ],
-  [
-   "mds/optimization-gradient-descent#prp-double-well-divergence",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/optimization-gradient-descent#thm-best-constant-step",
@@ -22953,6 +22476,14 @@
   ],
   [
    "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mcs/proof-writing#def-inequality"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
    "mds/algebra#def-absolute-value"
   ],
   [
@@ -22982,14 +22513,6 @@
   [
    "mds/optimization-gradient-descent#thm-gd-quadratic-error",
    "mds/optimization-gradient-descent#def-gradient-descent"
-  ],
-  [
-   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
-   "mds/proof-writing#def-inequality"
-  ],
-  [
-   "mds/optimization-gradient-descent#thm-gd-quadratic-error",
-   "mds/proof-writing#def-proof-by-induction"
   ],
   [
    "mds/optimization-gradient-descent#thm-gd-quadratic-error",
@@ -23130,510 +22653,6 @@
   [
    "mds/optimization-quasi-newton#def-secant-condition",
    "mds/vector-calculus#def-vector-derivative"
-  ],
-  [
-   "mds/proof-writing#def-and",
-   "mds/proof-writing#def-logical-connective"
-  ],
-  [
-   "mds/proof-writing#def-conclusion",
-   "mds/proof-writing#def-logical-argument"
-  ],
-  [
-   "mds/proof-writing#def-conclusion",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-constructive-proof",
-   "mds/proof-writing#def-existential-quantifier"
-  ],
-  [
-   "mds/proof-writing#def-constructive-proof",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-contradiction",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-contradiction",
-   "mds/proof-writing#def-truth-table"
-  ],
-  [
-   "mds/proof-writing#def-contrapositive",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-corollary",
-   "mds/proof-writing#def-result"
-  ],
-  [
-   "mds/proof-writing#def-counterexample",
-   "mds/proof-writing#def-predicate"
-  ],
-  [
-   "mds/proof-writing#def-derivation",
-   "mds/proof-writing#def-inequality"
-  ],
-  [
-   "mds/proof-writing#def-derivation",
-   "mds/proof-writing#def-proof"
-  ],
-  [
-   "mds/proof-writing#def-direct-proof",
-   "mds/proof-writing#def-proof-by-contradiction"
-  ],
-  [
-   "mds/proof-writing#def-direct-proof",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-direct-proof",
-   "mds/proof-writing#def-result"
-  ],
-  [
-   "mds/proof-writing#def-disproof",
-   "mds/proof-writing#def-not"
-  ],
-  [
-   "mds/proof-writing#def-disproof",
-   "mds/proof-writing#def-proof"
-  ],
-  [
-   "mds/proof-writing#def-disproof",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-domain-of-discourse",
-   "mcs/sets#def-set"
-  ],
-  [
-   "mds/proof-writing#def-domain-of-discourse",
-   "mds/proof-writing#def-predicate"
-  ],
-  [
-   "mds/proof-writing#def-existential-quantifier",
-   "mds/proof-writing#def-quantifier"
-  ],
-  [
-   "mds/proof-writing#def-first-order-logic",
-   "mcs/functions#def-function"
-  ],
-  [
-   "mds/proof-writing#def-first-order-logic",
-   "mcs/sets#def-set"
-  ],
-  [
-   "mds/proof-writing#def-first-order-logic",
-   "mds/proof-writing#def-predicate"
-  ],
-  [
-   "mds/proof-writing#def-first-order-logic",
-   "mds/proof-writing#def-propositional-logic"
-  ],
-  [
-   "mds/proof-writing#def-first-order-logic",
-   "mds/proof-writing#def-quantifier"
-  ],
-  [
-   "mds/proof-writing#def-formal-proof",
-   "mds/proof-writing#def-first-order-logic"
-  ],
-  [
-   "mds/proof-writing#def-formal-proof",
-   "mds/proof-writing#def-proof"
-  ],
-  [
-   "mds/proof-writing#def-formal-proof",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-formal-proof",
-   "mds/proof-writing#def-propositional-logic"
-  ],
-  [
-   "mds/proof-writing#def-iff",
-   "mds/proof-writing#def-logical-connective"
-  ],
-  [
-   "mds/proof-writing#def-implies",
-   "mds/proof-writing#def-logical-connective"
-  ],
-  [
-   "mds/proof-writing#def-inequality",
-   "mcs/number-systems#def-real-numbers"
-  ],
-  [
-   "mds/proof-writing#def-inequality",
-   "mds/proof-writing#def-predicate"
-  ],
-  [
-   "mds/proof-writing#def-inequality",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-lemma",
-   "mds/proof-writing#def-result"
-  ],
-  [
-   "mds/proof-writing#def-logical-argument",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-logical-connective",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-logical-entailment",
-   "mds/proof-writing#def-predicate"
-  ],
-  [
-   "mds/proof-writing#def-logical-entailment",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-logically-equivalent",
-   "mds/proof-writing#def-logical-connective"
-  ],
-  [
-   "mds/proof-writing#def-logically-equivalent",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-logically-equivalent",
-   "mds/proof-writing#def-truth-table"
-  ],
-  [
-   "mds/proof-writing#def-necessary-sufficient",
-   "mds/proof-writing#def-converse"
-  ],
-  [
-   "mds/proof-writing#def-necessary-sufficient",
-   "mds/proof-writing#def-necessary-condition"
-  ],
-  [
-   "mds/proof-writing#def-necessary-sufficient",
-   "mds/proof-writing#def-sufficient-condition"
-  ],
-  [
-   "mds/proof-writing#def-nonconstructive-proof",
-   "mds/proof-writing#def-constructive-proof"
-  ],
-  [
-   "mds/proof-writing#def-nonconstructive-proof",
-   "mds/proof-writing#def-proof"
-  ],
-  [
-   "mds/proof-writing#def-nonconstructive-proof",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-not",
-   "mds/proof-writing#def-logical-connective"
-  ],
-  [
-   "mds/proof-writing#def-or",
-   "mds/proof-writing#def-logical-connective"
-  ],
-  [
-   "mds/proof-writing#def-predicate",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-premise",
-   "mds/proof-writing#def-logical-argument"
-  ],
-  [
-   "mds/proof-writing#def-premise",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-proof",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-proof-by-cases",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-proof-by-contrapositive",
-   "mds/proof-writing#def-contrapositive"
-  ],
-  [
-   "mds/proof-writing#def-proof-by-contrapositive",
-   "mds/proof-writing#def-direct-proof"
-  ],
-  [
-   "mds/proof-writing#def-proof-by-contrapositive",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-proof-by-contrapositive",
-   "mds/proof-writing#thm-contrapositive"
-  ],
-  [
-   "mds/proof-writing#def-proof-by-induction",
-   "mcs/number-systems#def-integers"
-  ],
-  [
-   "mds/proof-writing#def-proof-by-induction",
-   "mds/proof-writing#def-predicate"
-  ],
-  [
-   "mds/proof-writing#def-propositional-logic",
-   "mds/proof-writing#def-logical-connective"
-  ],
-  [
-   "mds/proof-writing#def-propositional-logic",
-   "mds/proof-writing#def-logical-entailment"
-  ],
-  [
-   "mds/proof-writing#def-propositional-logic",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-quantifier",
-   "mds/proof-writing#def-predicate"
-  ],
-  [
-   "mds/proof-writing#def-quantifier",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-result",
-   "mds/proof-writing#def-proof"
-  ],
-  [
-   "mds/proof-writing#def-result",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-rule-of-inference",
-   "mds/proof-writing#def-conclusion"
-  ],
-  [
-   "mds/proof-writing#def-rule-of-inference",
-   "mds/proof-writing#def-logical-argument"
-  ],
-  [
-   "mds/proof-writing#def-rule-of-inference",
-   "mds/proof-writing#def-logical-entailment"
-  ],
-  [
-   "mds/proof-writing#def-rule-of-inference",
-   "mds/proof-writing#def-premise"
-  ],
-  [
-   "mds/proof-writing#def-rule-of-inference",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-tautology",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-tautology",
-   "mds/proof-writing#def-truth-table"
-  ],
-  [
-   "mds/proof-writing#def-theorem",
-   "mds/proof-writing#def-result"
-  ],
-  [
-   "mds/proof-writing#def-truth-table",
-   "mds/proof-writing#def-logical-connective"
-  ],
-  [
-   "mds/proof-writing#def-truth-table",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#def-universal-quantifier",
-   "mds/proof-writing#def-quantifier"
-  ],
-  [
-   "mds/proof-writing#thm-addition-rule",
-   "mds/proof-writing#def-conclusion"
-  ],
-  [
-   "mds/proof-writing#thm-addition-rule",
-   "mds/proof-writing#def-or"
-  ],
-  [
-   "mds/proof-writing#thm-addition-rule",
-   "mds/proof-writing#def-premise"
-  ],
-  [
-   "mds/proof-writing#thm-addition-rule",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-addition-rule",
-   "mds/proof-writing#def-rule-of-inference"
-  ],
-  [
-   "mds/proof-writing#thm-biconditional-split",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-conjunction-rule",
-   "mds/proof-writing#def-and"
-  ],
-  [
-   "mds/proof-writing#thm-conjunction-rule",
-   "mds/proof-writing#def-conclusion"
-  ],
-  [
-   "mds/proof-writing#thm-conjunction-rule",
-   "mds/proof-writing#def-premise"
-  ],
-  [
-   "mds/proof-writing#thm-conjunction-rule",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-conjunction-rule",
-   "mds/proof-writing#def-rule-of-inference"
-  ],
-  [
-   "mds/proof-writing#thm-contradiction-works",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-contrapositive",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-de-morgan-logic",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-derivation-chain",
-   "mds/proof-writing#def-derivation"
-  ],
-  [
-   "mds/proof-writing#thm-disjunctive-syllogism",
-   "mds/proof-writing#def-conclusion"
-  ],
-  [
-   "mds/proof-writing#thm-disjunctive-syllogism",
-   "mds/proof-writing#def-not"
-  ],
-  [
-   "mds/proof-writing#thm-disjunctive-syllogism",
-   "mds/proof-writing#def-or"
-  ],
-  [
-   "mds/proof-writing#thm-disjunctive-syllogism",
-   "mds/proof-writing#def-premise"
-  ],
-  [
-   "mds/proof-writing#thm-disjunctive-syllogism",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-disjunctive-syllogism",
-   "mds/proof-writing#def-rule-of-inference"
-  ],
-  [
-   "mds/proof-writing#thm-double-negation",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-equivalence-iff",
-   "mds/proof-writing#def-logically-equivalent"
-  ],
-  [
-   "mds/proof-writing#thm-equivalence-iff",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-equivalence-iff",
-   "mds/proof-writing#def-tautology"
-  ],
-  [
-   "mds/proof-writing#thm-equivalent-cycle",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-modus-ponens",
-   "mds/proof-writing#def-conclusion"
-  ],
-  [
-   "mds/proof-writing#thm-modus-ponens",
-   "mds/proof-writing#def-implies"
-  ],
-  [
-   "mds/proof-writing#thm-modus-ponens",
-   "mds/proof-writing#def-premise"
-  ],
-  [
-   "mds/proof-writing#thm-modus-ponens",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-modus-ponens",
-   "mds/proof-writing#def-rule-of-inference"
-  ],
-  [
-   "mds/proof-writing#thm-modus-tollens",
-   "mds/proof-writing#def-conclusion"
-  ],
-  [
-   "mds/proof-writing#thm-modus-tollens",
-   "mds/proof-writing#def-implies"
-  ],
-  [
-   "mds/proof-writing#thm-modus-tollens",
-   "mds/proof-writing#def-not"
-  ],
-  [
-   "mds/proof-writing#thm-modus-tollens",
-   "mds/proof-writing#def-premise"
-  ],
-  [
-   "mds/proof-writing#thm-modus-tollens",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-modus-tollens",
-   "mds/proof-writing#def-rule-of-inference"
-  ],
-  [
-   "mds/proof-writing#thm-negate-quantifiers",
-   "mcs/sets#def-set"
-  ],
-  [
-   "mds/proof-writing#thm-negate-quantifiers",
-   "mds/proof-writing#def-domain-of-discourse"
-  ],
-  [
-   "mds/proof-writing#thm-negate-quantifiers",
-   "mds/proof-writing#def-predicate"
-  ],
-  [
-   "mds/proof-writing#thm-proof-by-contradiction",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-simplification",
-   "mds/proof-writing#def-and"
-  ],
-  [
-   "mds/proof-writing#thm-simplification",
-   "mds/proof-writing#def-conclusion"
-  ],
-  [
-   "mds/proof-writing#thm-simplification",
-   "mds/proof-writing#def-premise"
-  ],
-  [
-   "mds/proof-writing#thm-simplification",
-   "mds/proof-writing#def-proposition"
-  ],
-  [
-   "mds/proof-writing#thm-simplification",
-   "mds/proof-writing#def-rule-of-inference"
   ],
   [
    "mds/vector-calculus#cor-chain-qf",

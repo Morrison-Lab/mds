@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 17:26:45 (PST)
+Last modified: 2026-11-05 18:27:30 (PST)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 
@@ -12,9 +12,9 @@ Mathematical notation is not standardized. This section states the conventions t
 >
 > | symbol | meaning | LaTeX |
 > |----|----|----|
-> | $\neg$ | [not](proof-writing.llms.md#def-not) | `\neg` |
-> | $\forall$ | [for all](proof-writing.llms.md#def-universal-quantifier) | `\forall` |
-> | $\exists$ | [there exists](proof-writing.llms.md#def-existential-quantifier) | `\exists` |
+> | $\neg$ | [not](https://morrison-lab.github.io/mcs/proof-writing.html#def-not) | `\neg` |
+> | $\forall$ | [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) | `\forall` |
+> | $\exists$ | [there exists](https://morrison-lab.github.io/mcs/proof-writing.html#def-existential-quantifier) | `\exists` |
 > | $\cup$ | union, “or” | `\cup` |
 > | $\cap$ | intersection, “and” | `\cap` |
 > | $\mid$ | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|` |
@@ -25,7 +25,7 @@ Mathematical notation is not standardized. This section states the conventions t
 > | $x^{\top}$ | transpose of $x$ | `x\'` |
 > | $'$ | transpose or [derivative](calculus-derivatives.llms.md#def-derivative)[^1] | `'` |
 > | $\perp\!\!\!\perp$ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
-> | $\therefore$ | [therefore](proof-writing.llms.md#def-logical-entailment), thus | `\therefore` |
+> | $\therefore$ | [therefore](https://morrison-lab.github.io/mcs/proof-writing.html#def-logical-entailment), thus | `\therefore` |
 > | $\eta$ | [linear predictor](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") of a generalized linear model[^2] | `\eta` |
 > | $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ | floor of $x$: largest [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) less than or equal to $x$ | `\lfloor x \rfloor` |
 > | ${\mathopen{}\left\lceil x\right\rceil\mathclose{}}$ | ceiling of $x$: smallest [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) greater than or equal to $x$ | `\lceil x \rceil` |
@@ -64,9 +64,9 @@ It’s worth noting that calculus was formalized in the [1600s](https://en.wikip
 
 # 4 Further reading
 
-For the logical symbols and proof conventions used in these notes (whose definitions are on the [Proof Writing](proof-writing.llms.md#sec-proof-definitions) page):
+For the logical symbols and proof conventions used in these notes (whose definitions are on the [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html#sec-proof-definitions) page):
 
-- Velleman [\[2\]](#ref-velleman2019prove) explains how mathematical statements are built from logical connectives ([definition](proof-writing.llms.md#def-logical-connective)) and quantifiers ([definition](proof-writing.llms.md#def-quantifier)), and how to read and write them.
+- Velleman [\[2\]](#ref-velleman2019prove) explains how mathematical statements are built from logical connectives ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-logical-connective)) and quantifiers ([definition](https://morrison-lab.github.io/mcs/proof-writing.html#def-quantifier)), and how to read and write them.
 - Barker-Plummer et al. [\[3\]](#ref-barkerplummer2011language) covers the same symbols as a formal language, with propositional logic (the logic of connectives) and first-order logic (which adds quantifiers).
 
 For [set](https://morrison-lab.github.io/mcs/sets.html#def-set) and [function](https://morrison-lab.github.io/mcs/functions.html#def-function) notation, see the [Sets](https://morrison-lab.github.io/mcs/sets.html), [Functions](https://morrison-lab.github.io/mcs/functions.html), and [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html) pages.

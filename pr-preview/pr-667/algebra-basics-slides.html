@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 17:26:45 (PST)</p>
+  <p class="date">Last modified: 2026-11-05 18:27:30 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -749,7 +749,7 @@ f(x) &amp;= 5\,(4x - x^2) \\
 <section class="slide level2">
 
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x^* \in A\)</span>. By <a href="#/def-argmax" class="quarto-xref">Definition&nbsp;16</a>, <span class="math inline">\(x^*\)</span> is in the <a href="#/def-argmax">argmax</a> of <span class="math inline">\(c\,g\)</span> <a href="./proof-writing.html#def-iff">if and only if</a> <span class="math inline">\(c\,g(a) \le c\,g(x^*)\)</span> for every <span class="math inline">\(a \in A\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x^* \in A\)</span>. By <a href="#/def-argmax" class="quarto-xref">Definition&nbsp;16</a>, <span class="math inline">\(x^*\)</span> is in the <a href="#/def-argmax">argmax</a> of <span class="math inline">\(c\,g\)</span> <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-iff">if and only if</a> <span class="math inline">\(c\,g(a) \le c\,g(x^*)\)</span> for every <span class="math inline">\(a \in A\)</span>.</p>
 <p>Suppose <span class="math inline">\(g(a) \le g(x^*)\)</span>. If <span class="math inline">\(g(a) = g(x^*)\)</span>, then <span class="math inline">\(c\,g(a) = c\,g(x^*)\)</span>. If <span class="math inline">\(g(a) &lt; g(x^*)\)</span>, then <span class="math inline">\(c\,g(a) &lt; c\,g(x^*)\)</span> by <a href="#/thm-mult-ineq" class="quarto-xref">Theorem&nbsp;5</a>. Either way, <span class="math inline">\(c\,g(a) \le c\,g(x^*)\)</span>.</p>
 <p>Conversely, suppose <span class="math inline">\(c\,g(a) \le c\,g(x^*)\)</span>. Since <span class="math inline">\(1/c &gt; 0\)</span> and <span class="math inline">\((1/c)\,(c\,g) = g\)</span>, the same reasoning applied to the <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(c\,g\)</span> and the multiple <span class="math inline">\(1/c\)</span> gives <span class="math inline">\(g(a) \le g(x^*)\)</span>.</p>
 <p>So <span class="math inline">\(c\,g(a) \le c\,g(x^*)\)</span> for every <span class="math inline">\(a \in A\)</span> if and only if <span class="math inline">\(g(a) \le g(x^*)\)</span> for every <span class="math inline">\(a \in A\)</span>. Hence <span class="math inline">\(x^*\)</span> is in the argmax of <span class="math inline">\(c\,g\)</span> exactly when it is in the argmax of <span class="math inline">\(g\)</span>.</p>
@@ -871,15 +871,15 @@ f(-n) &amp;= -n^3 + 3n \\
 <section class="slide level2">
 
 <div id="def-local-minimizer" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Local minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>local minimizer</strong> of <span class="math inline">\(f\)</span> if there is a number <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span> with <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span>, where <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span> is the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a>.</p>
+<p><span class="theorem-title"><strong>Definition 20 (Local minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>local minimizer</strong> of <span class="math inline">\(f\)</span> if there is a number <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span> with <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span>, where <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span> is the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-local-minimizer" class="proof remark">
 <p><span class="proof-title"><em>Remark 6</em> (Local and global minimizers). </span>For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} = \mathopen{}\left|x - x^*\right|\mathclose{}\)</span>. For example, with <span class="math inline">\(x^* = 1\)</span> and <span class="math inline">\(\delta= 1\)</span>, the condition <span class="math inline">\(\mathopen{}\left|x - 1\right|\mathclose{} &lt; 1\)</span> means <span class="math inline">\(0 &lt; x &lt; 2\)</span>.</p>
-<p>Every global minimizer (<a href="#/def-global-minimizer" class="quarto-xref">Definition&nbsp;19</a>) is a local minimizer: take any <span class="math inline">\(\delta&gt; 0\)</span>. For example, <span class="math inline">\(x^* = 0\)</span> is a global minimizer of <span class="math inline">\(f(x) = x^2\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, so it is also a local minimizer.</p>
-<p>The <a href="./proof-writing.html#def-converse">converse</a> fails. In <a href="#/exr-local-vs-global-min" class="quarto-xref">Exercise&nbsp;4</a>, <span class="math inline">\(x^* = 1\)</span> is a local minimizer of <span class="math inline">\(f(x) = x^3 - 3x\)</span> (take <span class="math inline">\(\delta= 1\)</span>), but not a global one.</p>
+<p>Every <a href="#/def-global-minimizer">global minimizer</a> is a <a href="#/def-local-minimizer">local minimizer</a>: take any <span class="math inline">\(\delta&gt; 0\)</span>. For example, <span class="math inline">\(x^* = 0\)</span> is a global minimizer of <span class="math inline">\(f(x) = x^2\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, so it is also a local minimizer.</p>
+<p>The <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-converse">converse</a> fails. In <a href="#/exr-local-vs-global-min" class="quarto-xref">Exercise&nbsp;4</a>, <span class="math inline">\(x^* = 1\)</span> is a local minimizer of <span class="math inline">\(f(x) = x^3 - 3x\)</span> (take <span class="math inline">\(\delta= 1\)</span>), but not a global one.</p>
 </div>
 </section>
 <section class="slide level2">
