@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 18:49:52 (PST)
+Last modified: 2026-11-05 20:50:36 (PST)
 
 > **NOTE:**
 >
@@ -101,7 +101,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Let $h(s) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}})$. The [inner function](functions.llms.md#def-inner-function) $s \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ has [derivative](vector-calculus.llms.md#def-vector-valued-derivative) $-{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}}^{\top}$, so by the [vector chain rule](vector-calculus.llms.md#thm-chain-vec)
+> *Proof*. Let $h(s) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}})$. The [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $s \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ has [derivative](vector-calculus.llms.md#def-vector-valued-derivative) $-{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}}^{\top}$, so by the [vector chain rule](vector-calculus.llms.md#thm-chain-vec)
 >
 > $$\begin{aligned}
 > h'(s)
@@ -127,6 +127,57 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > **NOTE:**
 >
 > **Example 5 (How short is short enough)** In [Example 1](#exm-gradient-descent), $f(x) = x^2$ at $x \ne 0$ has $g = 2x$, and $f(x - 2 s x) = (1 - 2s)^2 x^2 < x^2$ exactly when $\mathopen{}\left|1 - 2s\right|\mathclose{} < 1$, that is, when $0 < s < 1$. So [Theorem 1](#thm-descent-direction) holds with $\bar{s} = 1$, and the step $s = 1.5$ of that example was too long.
+>
+> [Figure 1](#fig-descent-direction) plots the [ratio](algebra-sums.llms.md#def-ratio) $f(x - 2 s x) / f(x)$ against $s$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > dd_s_dd <- seq(0, 1.6, length.out = 201)
+> > dd_ratio_dd <- (1 - 2 * dd_s_dd)^2
+> > dd_curve_dd <- tibble::tibble(s = dd_s_dd, ratio = dd_ratio_dd)
+> > dd_long_dd <- tibble::tibble(s = 1.5, ratio = 4)
+> > dd_aes_dd <- ggplot2::aes(s, ratio)
+> > dd_dash_dd <- "dashed"
+> > dd_curve_dd |>
+> >   ggplot2::ggplot() +
+> >   dd_aes_dd +
+> >   ggplot2::geom_hline(
+> >     yintercept = 1, linetype = dd_dash_dd, colour = "grey50"
+> >   ) +
+> >   ggplot2::geom_line(colour = "#0072B2") +
+> >   ggplot2::geom_point(data = dd_long_dd, colour = "#D55E00", size = 3) +
+> >   ggplot2::labs(x = "step length s", y = "f(x - 2sx) / f(x)")
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > dd_s_py = np.linspace(0, 1.6, 201)
+> > dd_ratio_py = (1 - 2 * dd_s_py)**2
+> > fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
+> > ax.plot(dd_s_py, dd_ratio_py, color="#0072B2")
+> > ax.axhline(1, linestyle="--", color="grey")
+> > ax.plot([1.5], [4], "o", color="#D55E00")
+> > ax.set_xlabel("step length s")
+> > ax.set_ylabel("f(x - 2sx) / f(x)")
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Plot of the ratio (1 - 2 s) squared against the step length s from 0 to 1.6, a blue parabola that falls from 1 at s equal to 0 to 0 at s equal to 0.5 and rises back to 1 at s equal to 1. A dashed grey horizontal line marks the ratio 1. A vermilion circle at s equal to 1.5, where the ratio is 4, lies above the line.](optimization-gradient-descent_files/figure-html/descent-direction-r-1.png)](optimization-gradient-descent_files/figure-html/descent-direction-r-1.png "Figure 1: The ratio f(x - 2 s x) / f(x) = (1 - 2s)^2 of Example 5 (blue) is below 1, so the step decreases f, exactly when 0 < s < 1. The step s = 1.5 (vermilion) is too long, since its ratio is 4.")
+> >
+> > ## Python
+> >
+> > [![Plot of the ratio (1 - 2 s) squared against the step length s from 0 to 1.6, a blue parabola that falls from 1 at s equal to 0 to 0 at s equal to 0.5 and rises back to 1 at s equal to 1. A dashed grey horizontal line marks the ratio 1. A vermilion circle at s equal to 1.5, where the ratio is 4, lies above the line.](optimization-gradient-descent_files/figure-html/descent-direction-python-1.png)](optimization-gradient-descent_files/figure-html/descent-direction-python-1.png "Figure 1: The ratio f(x - 2 s x) / f(x) = (1 - 2s)^2 of Example 5 (blue) is below 1, so the step decreases f, exactly when 0 < s < 1. The step s = 1.5 (vermilion) is too long, since its ratio is 4.")
+> >
+> > Figure 1: The [ratio](algebra-sums.llms.md#def-ratio) $f(x - 2 s x) / f(x) = (1 - 2s)^2$ of [Example 5](#exm-descent-direction) (blue) is below 1, so the step decreases $f$, exactly when $0 < s < 1$. The step $s = 1.5$ (vermilion) is too long, since its ratio is 4.
 
 > **NOTE:**
 >
@@ -178,7 +229,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > && \text{(the gradient step from } {(b, 1)}^{\top} \text{)}
 > \end{aligned}$$
 >
-> For $b \ne 1$ the same holds at every step, by [induction](proof-writing.llms.md#def-proof-by-induction) (when $b = 1$, $r = 0$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}$ is already the minimizer): if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} = {(c\,b,\ \pm c)}^{\top}$ for a number $c \ne 0$, then $s^*$, which depends only on $x_1^2 = c^2 b^2$ and $x_2^2 = c^2$, is again $\tfrac{2}{1 + b}$ (the factor $c^2$ cancels), and the step multiplies the first entry by $r$ and the second by $-r$. So
+> For $b \ne 1$ the same holds at every step, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) (when $b = 1$, $r = 0$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}$ is already the minimizer): if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} = {(c\,b,\ \pm c)}^{\top}$ for a number $c \ne 0$, then $s^*$, which depends only on $x_1^2 = c^2 b^2$ and $x_2^2 = c^2$, is again $\tfrac{2}{1 + b}$ (the factor $c^2$ cancels), and the step multiplies the first entry by $r$ and the second by $-r$. So
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}
@@ -246,13 +297,13 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > ## R
 >
-> [![Plot over the plane of nested elliptical level curves of f of x equal to one half of x1 squared plus 3 x2 squared, in grey, elongated along the x1 axis. A blue path of line segments with circles starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), crossing the x1 axis at every step and closing in on the origin, which is marked by a vermilion triangle.](optimization-gradient-descent_files/figure-html/gd-zigzag-r-1.png)](optimization-gradient-descent_files/figure-html/gd-zigzag-r-1.png "Figure 1: The first four iterates of gradient descent with exact line search on f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2) from {(3, 1)}^{\top} (Example 6 with b = 3), drawn over the level curves of f. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the minimizer \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (triangle).")
+> [![Plot over the plane of nested elliptical level curves of f of x equal to one half of x1 squared plus 3 x2 squared, in grey, elongated along the x1 axis. A blue path of line segments with circles starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), crossing the x1 axis at every step and closing in on the origin, which is marked by a vermilion triangle.](optimization-gradient-descent_files/figure-html/gd-zigzag-r-3.png)](optimization-gradient-descent_files/figure-html/gd-zigzag-r-3.png "Figure 2: The first four iterates of gradient descent with exact line search on f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2) from {(3, 1)}^{\top} (Example 6 with b = 3), drawn over the level curves of f. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the minimizer \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (triangle).")
 >
 > ## Python
 >
-> [![Plot over the plane of nested elliptical level curves of f of x equal to one half of x1 squared plus 3 x2 squared, in grey, elongated along the x1 axis. A blue path of line segments with circles starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), crossing the x1 axis at every step and closing in on the origin, which is marked by a vermilion triangle.](optimization-gradient-descent_files/figure-html/gd-zigzag-python-1.png)](optimization-gradient-descent_files/figure-html/gd-zigzag-python-1.png "Figure 1: The first four iterates of gradient descent with exact line search on f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2) from {(3, 1)}^{\top} (Example 6 with b = 3), drawn over the level curves of f. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the minimizer \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (triangle).")
+> [![Plot over the plane of nested elliptical level curves of f of x equal to one half of x1 squared plus 3 x2 squared, in grey, elongated along the x1 axis. A blue path of line segments with circles starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), crossing the x1 axis at every step and closing in on the origin, which is marked by a vermilion triangle.](optimization-gradient-descent_files/figure-html/gd-zigzag-python-1.png)](optimization-gradient-descent_files/figure-html/gd-zigzag-python-1.png "Figure 2: The first four iterates of gradient descent with exact line search on f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2) from {(3, 1)}^{\top} (Example 6 with b = 3), drawn over the level curves of f. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the minimizer \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (triangle).")
 >
-> Figure 1: The first four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) with [exact line search](#def-exact-line-search) on $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$ from ${(3, 1)}^{\top}$ ([Example 6](#exm-gd-zigzag) with $b = 3$), drawn over the [level curves](vector-calculus.llms.md#def-level-curve) of $f$. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (triangle).
+> Figure 2: The first four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) with [exact line search](#def-exact-line-search) on $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$ from ${(3, 1)}^{\top}$ ([Example 6](#exm-gd-zigzag) with $b = 3$), drawn over the [level curves](vector-calculus.llms.md#def-level-curve) of $f$. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (triangle).
 
 > **NOTE:**
 >
@@ -323,35 +374,52 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > Show code
 >
 > ``` python
-> import matplotlib.pyplot as plt
 > import numpy as np
+> import plotly.graph_objects as go
 >
-> gz_x1_3d, gz_x2_3d = np.meshgrid(np.linspace(-0.5, 3.5, 101),
->                                  np.linspace(-1, 1.2, 101))
-> gz_f_3d = 0.5 * (gz_x1_3d**2 + 3 * gz_x2_3d**2)
+> gz_x1_3d = np.linspace(-0.5, 3.5, 101)
+> gz_x2_3d = np.linspace(-1, 1.2, 101)
+> gz_xx_3d, gz_yy_3d = np.meshgrid(gz_x1_3d, gz_x2_3d)
+> gz_f_3d = 0.5 * (gz_xx_3d**2 + 3 * gz_yy_3d**2)
 > gz_path_x1_3d = 3 * 0.5 ** np.arange(4)
 > gz_path_x2_3d = np.array([1, -0.5, 0.25, -0.125])
 > gz_path_f_3d = 0.5 * (gz_path_x1_3d**2 + 3 * gz_path_x2_3d**2)
-> fig = plt.figure(figsize=(6, 4.5))
-> ax = fig.add_subplot(projection="3d")
-> ax.plot_surface(gz_x1_3d, gz_x2_3d, gz_f_3d, color="grey", alpha=0.4)
-> ax.plot(gz_path_x1_3d, gz_path_x2_3d, gz_path_f_3d, "o-", color="#0072B2",
->         label="iterates")
-> ax.scatter([0], [0], [0], marker="D", color="#D55E00", s=50, label="minimizer")
-> ax.set_xlabel("x1")
-> ax.set_ylabel("x2")
-> ax.set_zlabel("f(x)")
-> ax.legend(loc="upper right")
-> plt.show();
+> fig = go.Figure(data=[
+>     go.Surface(
+>         x=gz_x1_3d,
+>         y=gz_x2_3d,
+>         z=gz_f_3d,
+>         colorscale=[[0, "#E5E5E5"], [1, "#808080"]],
+>         showscale=False,
+>         opacity=0.6,
+>         showlegend=False,
+>     ),
+>     go.Scatter3d(x=gz_path_x1_3d, y=gz_path_x2_3d, z=gz_path_f_3d,
+>                  mode="lines+markers",
+>                  line=dict(color="#0072B2", width=5),
+>                  marker=dict(color="#0072B2", size=4),
+>                  name="iterates"),
+>     go.Scatter3d(x=[0], y=[0], z=[0], mode="markers",
+>                  marker=dict(color="#D55E00", size=4, symbol="diamond"),
+>                  name="minimizer"),
+> ])
+> fig.update_layout(
+>     scene=dict(
+>         xaxis_title="x1",
+>         yaxis_title="x2",
+>         zaxis_title="f(x)",
+>         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+>     ),
+>     legend=dict(orientation="h"),
+> );
+> print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
 > ```
 >
 > ## R
 >
-> [![Surface plot of f of x equal to one half of x1 squared plus 3 x2 squared over x1 from -0.5 to 3.5 and x2 from -1 to 1.2, a bowl that is steeper along the x2 axis than along the x1 axis. A blue path of line segments with circles lies on the bowl. It starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), alternating between the two sides of the valley floor and descending toward the origin, which is marked by a vermilion diamond at the bottom of the bowl.](optimization-gradient-descent_files/figure-html/gd-zigzag-3d-python-1.png)](optimization-gradient-descent_files/figure-html/gd-zigzag-3d-python-1.png "Figure 2: The graph of f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2), the surface whose level curves are in Figure 1, with the same four iterates of gradient descent lifted onto it. The surface is steeper along the x_2 axis than along the x_1 axis, so each step overshoots the bottom of the valley and the path zigzags down toward the minimizer \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (diamond).")
->
 > ## Python
 >
-> Figure 2: The [graph](functions.llms.md#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 1](#fig-gd-zigzag), with the same four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) lifted onto it. The surface is steeper along the $x_2$ axis than along the $x_1$ axis, so each step overshoots the bottom of the valley and the path zigzags down toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond).
+> Figure 3: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 2](#fig-gd-zigzag), with the same four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) lifted onto it. The surface is steeper along the $x_2$ axis than along the $x_1$ axis, so each step overshoots the bottom of the valley and the path zigzags down toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond).
 
 > **NOTE:**
 >
@@ -416,7 +484,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 
 > **NOTE:**
 >
-> **Example 8 (Stopping a descent on** $f(x) = x^2 + 1$) Let $f(x) = x^2 + 1$. Run [gradient descent](#def-gradient-descent) on $f$ from ${{x}^{(0)}} = 2$ with [step length](#def-gradient-descent) $s= 0.25$, and stop at tolerance $\epsilon = 0.01$. Each step [maps](functions.llms.md#def-function) $x$ to $x - 0.25 \cdot 2x = x/2$:
+> **Example 8 (Stopping a descent on** $f(x) = x^2 + 1$) Let $f(x) = x^2 + 1$. Run [gradient descent](#def-gradient-descent) on $f$ from ${{x}^{(0)}} = 2$ with [step length](#def-gradient-descent) $s= 0.25$, and stop at tolerance $\epsilon = 0.01$. Each step [maps](https://morrison-lab.github.io/mcs/functions.html#def-function) $x$ to $x - 0.25 \cdot 2x = x/2$:
 >
 > ## R
 >
@@ -509,7 +577,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > #> formula:  [4.   1.   0.25 0.   1.  ]
 > ```
 >
-> The [function](functions.llms.md#def-function) is $0$ at $(1, 1)$ and positive everywhere else, because both of its parts are non-negative and vanish together only when $x_1 = 1$ and $x_2 = 1$. So $(1, 1)$ is the [global minimizer](algebra-basics.llms.md#def-global-minimizer). At the starting point the [value](functions.llms.md#def-value) is 24.2, mostly from the first [term](algebra-sums.llms.md#def-term), because $(-1.2, 1)$ is off the curve $x_2 = x_1^2$. On the curve the function is $(1 - x_1)^2$, which varies slowly compared with the steep walls.
+> The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) is $0$ at $(1, 1)$ and positive everywhere else, because both of its parts are non-negative and vanish together only when $x_1 = 1$ and $x_2 = 1$. So $(1, 1)$ is the [global minimizer](algebra-basics.llms.md#def-global-minimizer). At the starting point the [value](https://morrison-lab.github.io/mcs/functions.html#def-value) is 24.2, mostly from the first [term](algebra-sums.llms.md#def-term), because $(-1.2, 1)$ is off the curve $x_2 = x_1^2$. On the curve the function is $(1 - x_1)^2$, which varies slowly compared with the steep walls.
 
 > **NOTE:**
 >
@@ -572,13 +640,13 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > ## R
 >
-> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png "Figure 3: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
+> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-r-1.png "Figure 4: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
 >
 > ## Python
 >
-> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png "Figure 3: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
+> [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png "Figure 4: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
 >
-> Figure 3: [Level curves](vector-calculus.llms.md#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
+> Figure 4: [Level curves](vector-calculus.llms.md#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
 
 > **NOTE:**
 >
@@ -662,11 +730,12 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > Show code
 >
 > ``` python
-> import matplotlib.pyplot as plt
 > import numpy as np
+> import plotly.graph_objects as go
 >
-> rf_x1_3d, rf_x2_3d = np.meshgrid(np.linspace(-2, 2, 101),
->                                  np.linspace(-1, 3, 101))
+> rf_x1_3d = np.linspace(-2, 2, 101)
+> rf_x2_3d = np.linspace(-1, 3, 101)
+> rf_xx_3d, rf_yy_3d = np.meshgrid(rf_x1_3d, rf_x2_3d)
 >
 >
 > def rf_f_3d(x1, x2):
@@ -675,36 +744,52 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > rf_curve_x1_3d = np.linspace(-1.7, 1.7, 200)
 > rf_curve_x2_3d = rf_curve_x1_3d**2
-> fig = plt.figure(figsize=(6, 4.5))
-> ax = fig.add_subplot(projection="3d")
-> ax.plot_surface(rf_x1_3d, rf_x2_3d, rf_f_3d(rf_x1_3d, rf_x2_3d),
->                 color="grey", alpha=0.4)
-> ax.plot(rf_curve_x1_3d, rf_curve_x2_3d,
->         rf_f_3d(rf_curve_x1_3d, rf_curve_x2_3d), "--", color="black")
-> rf_style_3d = {"minimizer": ("#0072B2", "o", (1, 1)),
->                "origin": ("#009E73", "s", (0, 0)),
->                "start": ("#D55E00", "D", (-1.2, 1))}
-> for name, (color, marker, p) in rf_style_3d.items():
->     ax.scatter(p[0], p[1], rf_f_3d(*p), color=color, marker=marker, s=50,
->                label=name)
-> ax.set_xlabel("x1")
-> ax.set_ylabel("x2")
-> ax.set_zlabel("f(x)")
-> ax.legend(loc="upper right")
-> plt.show();
+> rf_points_3d = {
+>     "minimizer": ("#0072B2", "circle", (1, 1)),
+>     "origin": ("#009E73", "square", (0, 0)),
+>     "start": ("#D55E00", "diamond", (-1.2, 1)),
+> }
+> fig = go.Figure(data=[
+>     go.Surface(
+>         x=rf_x1_3d,
+>         y=rf_x2_3d,
+>         z=rf_f_3d(rf_xx_3d, rf_yy_3d),
+>         colorscale=[[0, "#E5E5E5"], [1, "#808080"]],
+>         showscale=False,
+>         opacity=0.6,
+>         showlegend=False,
+>     ),
+>     go.Scatter3d(x=rf_curve_x1_3d, y=rf_curve_x2_3d,
+>                  z=rf_f_3d(rf_curve_x1_3d, rf_curve_x2_3d),
+>                  mode="lines",
+>                  line=dict(color="black", width=3, dash="dash"),
+>                  showlegend=False),
+> ])
+> for name, (color, symbol, p) in rf_points_3d.items():
+>     fig.add_trace(go.Scatter3d(
+>         x=[p[0]], y=[p[1]], z=[rf_f_3d(*p)], mode="markers",
+>         marker=dict(color=color, size=4, symbol=symbol), name=name));
+> fig.update_layout(
+>     scene=dict(
+>         xaxis_title="x1",
+>         yaxis_title="x2",
+>         zaxis_title="f(x)",
+>         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+>     ),
+>     legend=dict(orientation="h"),
+> );
+> print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
 > ```
 >
 > ## R
 >
-> [![Surface plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The surface is a long curved valley with steep walls on both sides, floored by a narrow parabola- shaped channel along the dashed curve x2 equals x1 squared. Three marked points lie on the surface. The minimizer at (1, 1) on the valley floor is a blue circle, the origin on the valley floor is a green square, and the standard starting point (-1.2, 1) is an orange diamond, on the left wall just outside the channel.](optimization-gradient-descent_files/figure-html/rosenbrock-function-3d-python-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-function-3d-python-1.png "Figure 4: The graph of the Rosenbrock function, the surface whose level curves are in Figure 3, with the curve x_2 = x_1^2 (dashed) along the bottom of the valley. The minimizer, the origin and the starting point are marked.")
->
 > ## Python
 >
-> Figure 4: The [graph](functions.llms.md#def-graph) of the [Rosenbrock function](#def-rosenbrock-function), the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 3](#fig-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the bottom of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
+> Figure 5: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [Rosenbrock function](#def-rosenbrock-function), the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 4](#fig-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the bottom of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
 
 > **NOTE:**
 >
-> **Definition 9 (Basin of attraction)** For given [step lengths](#def-gradient-descent), the **basin of attraction** of a [local minimizer](algebra-basics.llms.md#def-local-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ under [gradient descent](#def-gradient-descent) is the [set](sets.llms.md#def-set) of starting points ${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}$ from which the [iterates](optimization-newton.llms.md#def-iterate) [converge](optimization-newton.llms.md#def-vector-sequence-limit) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ [\[4\]](#ref-wikipedia_attractor).
+> **Definition 9 (Basin of attraction)** For given [step lengths](#def-gradient-descent), the **basin of attraction** of a [local minimizer](algebra-basics.llms.md#def-local-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ under [gradient descent](#def-gradient-descent) is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of starting points ${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}$ from which the [iterates](optimization-newton.llms.md#def-iterate) [converge](optimization-newton.llms.md#def-vector-sequence-limit) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ [\[4\]](#ref-wikipedia_attractor).
 
 > **NOTE:**
 >
@@ -825,7 +910,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7ff676d3d590>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea490>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -837,30 +922,30 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7ff676d3d6d0>]
-> #> [<matplotlib.lines.Line2D object at 0x7ff676d3d810>]
-> #> [<matplotlib.lines.Line2D object at 0x7ff676d3d950>]
-> #> [<matplotlib.lines.Line2D object at 0x7ff676d3da90>]
-> #> [<matplotlib.lines.Line2D object at 0x7ff676d3dbd0>]
-> #> [<matplotlib.lines.Line2D object at 0x7ff676d3dd10>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea5d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea710>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea850>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea990>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d401eaad0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d401eac10>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7ff676d3de50>
+> #> <matplotlib.legend.Legend object at 0x7f4d401ead50>
 > plt.show()
 > ```
 >
 > ## R
 >
-> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png "Figure 5: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
+> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-r-1.png "Figure 6: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
 > ## Python
 >
-> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png "Figure 5: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
+> [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png "Figure 6: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
-> Figure 5: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](functions.llms.md#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-critical-points.llms.md#def-local-maximizer) at $0$.
+> Figure 6: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-critical-points.llms.md#def-local-maximizer) at $0$.
 
 > **NOTE:**
 >
@@ -883,7 +968,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > && \text{(factor out } -{{x}^{(t)}} \text{)}
 > \end{aligned}$$
 >
-> Write $m(x) \stackrel{\text{def}}{=}4sx^2 - 4s- 1$. Then $\mathopen{}\left|{{x}^{(t+1)}}\right|\mathclose{} = \mathopen{}\left|{{x}^{(t)}}\right|\mathclose{}\, m({{x}^{(t)}})$ whenever $m({{x}^{(t)}}) \ge 0$. Now $m(x) > 1$ exactly when $x^2 > 1 + 1 / (2s)$, and $m(x)$ increases with $x^2$. So if ${{x}^{(t)}}$ satisfies the condition, then $\mathopen{}\left|{{x}^{(t+1)}}\right|\mathclose{} > \mathopen{}\left|{{x}^{(t)}}\right|\mathclose{}$, and ${{x}^{(t+1)}}$ satisfies it too. By [induction](proof-writing.llms.md#def-proof-by-induction) on $t$, every [iterate](optimization-newton.llms.md#def-iterate) satisfies it. Since $\mathopen{}\left|{{x}^{(t)}}\right|\mathclose{}$ increases at every step, ${{x}^{(t)}}^2 \ge {{x}^{(0)}}^2$, and so $m({{x}^{(t)}}) \ge m({{x}^{(0)}}) > 1$. Hence $\mathopen{}\left|{{x}^{(t)}}\right|\mathclose{} \ge m({{x}^{(0)}})^t \mathopen{}\left|{{x}^{(0)}}\right|\mathclose{}$, which tends to $\infty$.
+> Write $m(x) \stackrel{\text{def}}{=}4sx^2 - 4s- 1$. Then $\mathopen{}\left|{{x}^{(t+1)}}\right|\mathclose{} = \mathopen{}\left|{{x}^{(t)}}\right|\mathclose{}\, m({{x}^{(t)}})$ whenever $m({{x}^{(t)}}) \ge 0$. Now $m(x) > 1$ exactly when $x^2 > 1 + 1 / (2s)$, and $m(x)$ increases with $x^2$. So if ${{x}^{(t)}}$ satisfies the condition, then $\mathopen{}\left|{{x}^{(t+1)}}\right|\mathclose{} > \mathopen{}\left|{{x}^{(t)}}\right|\mathclose{}$, and ${{x}^{(t+1)}}$ satisfies it too. By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $t$, every [iterate](optimization-newton.llms.md#def-iterate) satisfies it. Since $\mathopen{}\left|{{x}^{(t)}}\right|\mathclose{}$ increases at every step, ${{x}^{(t)}}^2 \ge {{x}^{(0)}}^2$, and so $m({{x}^{(t)}}) \ge m({{x}^{(0)}}) > 1$. Hence $\mathopen{}\left|{{x}^{(t)}}\right|\mathclose{} \ge m({{x}^{(0)}})^t \mathopen{}\left|{{x}^{(0)}}\right|\mathclose{}$, which tends to $\infty$.
 
 > **NOTE:**
 >
@@ -897,11 +982,80 @@ Last modified: 2026-11-05 18:49:52 (PST)
 
 > **NOTE:**
 >
-> **Example 11 (Divergent starts on the double-well function for three step lengths)** For $f(x) = x^4 - 2x^2$, [Proposition 1](#prp-double-well-divergence) says that [gradient descent](#def-gradient-descent) [diverges to](algebra-exponentials.llms.md#def-diverges-to-infinity) $\infty$ from every start with $\mathopen{}\left|{{x}^{(0)}}\right|\mathclose{}$ above $\sqrt{1 + 1 / (2s)}$. This [bound](sets.llms.md#def-bound) is $7.14$ for $s= 0.01$, $3.32$ for $s= 0.05$, and $2.45$ for $s= 0.1$. The [derivative](calculus-derivatives.llms.md#def-derivative) $4x^3 - 4x$ is unbounded, as is the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $12x^2 - 4$, so the step $s\frac{\partial}{\partial x} f(x)$ grows without bound with $x$, and a far start overshoots. By [Proposition 1](#prp-double-well-divergence), every fixed [step length](#def-gradient-descent) fails to [converge](optimization-newton.llms.md#def-vector-sequence-limit) from some starts. A larger step length lowers the bound, so more starts are guaranteed to diverge. By [Corollary 1](#cor-double-well-basin-bound), each [basin of attraction](#def-basin-of-attraction) lies within the same [bounded](algebra-sums.llms.md#def-bounded) [interval](sets.llms.md#def-interval), which narrows as $s$ grows. In the earlier [basin example](#exm-basin-of-attraction), $s= 0.05$, and the start $4$ lies above the bound $3.32$, which is why its [iterates](optimization-newton.llms.md#def-iterate) grow.
+> **Example 11 (Divergent starts on the double-well function for three step lengths)** For $f(x) = x^4 - 2x^2$, [Proposition 1](#prp-double-well-divergence) says that [gradient descent](#def-gradient-descent) [diverges to](algebra-exponentials.llms.md#def-diverges-to-infinity) $\infty$ from every start with $\mathopen{}\left|{{x}^{(0)}}\right|\mathclose{}$ above $\sqrt{1 + 1 / (2s)}$. This [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) is $7.14$ for $s= 0.01$, $3.32$ for $s= 0.05$, and $2.45$ for $s= 0.1$. The [derivative](calculus-derivatives.llms.md#def-derivative) $4x^3 - 4x$ is unbounded, as is the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $12x^2 - 4$, so the step $s\frac{\partial}{\partial x} f(x)$ grows without bound with $x$, and a far start overshoots. By [Proposition 1](#prp-double-well-divergence), every fixed [step length](#def-gradient-descent) fails to [converge](optimization-newton.llms.md#def-vector-sequence-limit) from some starts. A larger step length lowers the bound, so more starts are guaranteed to diverge. By [Corollary 1](#cor-double-well-basin-bound), each [basin of attraction](#def-basin-of-attraction) lies within the same [bounded](algebra-sums.llms.md#def-bounded) [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval), which narrows as $s$ grows. In the earlier [basin example](#exm-basin-of-attraction), $s= 0.05$, and the start $4$ lies above the bound $3.32$, which is why its [iterates](optimization-newton.llms.md#def-iterate) grow. [Figure 7](#fig-double-well-divergence) shows the three bounds.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > dwf_step_fg <- c(0.01, 0.05, 0.1)
+> > dwf_cut_fg <- sqrt(1 + 1 / (2 * dwf_step_fg))
+> > dwf_level_fg <- factor(dwf_step_fg)
+> > dwf_bars_fg <- tibble::tibble(step = dwf_level_fg, cut = dwf_cut_fg)
+> > dwf_aes_fg <- ggplot2::aes(y = step)
+> > dwf_mid_fg <- ggplot2::aes(x = -cut, xend = cut, yend = step)
+> > dwf_left_fg <- ggplot2::aes(x = -8, xend = -cut, yend = step)
+> > dwf_right_fg <- ggplot2::aes(x = cut, xend = 8, yend = step)
+> > dwf_bars_fg |>
+> >   ggplot2::ggplot() +
+> >   dwf_aes_fg +
+> >   ggplot2::geom_segment(dwf_mid_fg, colour = "#0072B2", linewidth = 4) +
+> >   ggplot2::geom_segment(dwf_left_fg, colour = "#D55E00", linewidth = 4) +
+> >   ggplot2::geom_segment(dwf_right_fg, colour = "#D55E00", linewidth = 4) +
+> >   ggplot2::geom_vline(xintercept = 4, linetype = "dotted") +
+> >   ggplot2::labs(x = "starting point", y = "step length")
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > dwf_step_py = [0.01, 0.05, 0.1]
+> > fig, ax = plt.subplots(figsize=(6, 3), layout="constrained")
+> > for dwf_i_py, dwf_s_py in enumerate(dwf_step_py):
+> >     dwf_cut_py = np.sqrt(1 + 1 / (2 * dwf_s_py))
+> >     ax.plot([-dwf_cut_py, dwf_cut_py], [dwf_i_py] * 2, color="#0072B2",
+> >             lw=8, solid_capstyle="butt")
+> >     ax.plot([-8, -dwf_cut_py], [dwf_i_py] * 2, color="#D55E00", lw=8,
+> >             solid_capstyle="butt")
+> >     ax.plot([dwf_cut_py, 8], [dwf_i_py] * 2, color="#D55E00", lw=8,
+> >             solid_capstyle="butt")
+> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072990>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072ad0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072c10>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072d50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072e90>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072fd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f4d40073110>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f4d40073250>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f4d40073390>]
+> > ax.axvline(4, linestyle=":", color="black")
+> > #> <matplotlib.lines.Line2D object at 0x7f4d400734d0>
+> > ax.set_yticks(range(3), [str(s) for s in dwf_step_py])
+> > #> [<matplotlib.axis.YTick object at 0x7f4d40070e10>, <matplotlib.axis.YTick object at 0x7f4d40073750>, <matplotlib.axis.YTick object at 0x7f4d40073ed0>]
+> > ax.set_xlabel("starting point")
+> > #> Text(0.5, 0, 'starting point')
+> > ax.set_ylabel("step length")
+> > #> Text(0, 0.5, 'step length')
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Three horizontal bars on a number line from -8 to 8, one for each step length 0.01, 0.05 and 0.1. Each bar has a blue middle part, where the result gives no guarantee, and vermilion end parts beyond plus and minus the bound, where divergence is guaranteed. The bound is about 7.1 for 0.01, 3.3 for 0.05 and 2.5 for 0.1, so the vermilion parts grow as the step length grows. A vertical dotted line at 4 lies in the vermilion part for 0.05 and 0.1 and in the blue part for 0.01.](optimization-gradient-descent_files/figure-html/double-well-divergence-fig-r-1.png)](optimization-gradient-descent_files/figure-html/double-well-divergence-fig-r-1.png "Figure 7: For each step length, the vermilion parts mark the starting points x with \mathopen{}\left|x\right|\mathclose{} > \sqrt{1 + 1 / (2s)}, from which Proposition 1 guarantees divergence; the blue part is the rest, where it gives no guarantee. The dotted line is the start 4 of the earlier basin example.")
+> >
+> > ## Python
+> >
+> > [![Three horizontal bars on a number line from -8 to 8, one for each step length 0.01, 0.05 and 0.1. Each bar has a blue middle part, where the result gives no guarantee, and vermilion end parts beyond plus and minus the bound, where divergence is guaranteed. The bound is about 7.1 for 0.01, 3.3 for 0.05 and 2.5 for 0.1, so the vermilion parts grow as the step length grows. A vertical dotted line at 4 lies in the vermilion part for 0.05 and 0.1 and in the blue part for 0.01.](optimization-gradient-descent_files/figure-html/double-well-divergence-fig-python-1.png)](optimization-gradient-descent_files/figure-html/double-well-divergence-fig-python-1.png "Figure 7: For each step length, the vermilion parts mark the starting points x with \mathopen{}\left|x\right|\mathclose{} > \sqrt{1 + 1 / (2s)}, from which Proposition 1 guarantees divergence; the blue part is the rest, where it gives no guarantee. The dotted line is the start 4 of the earlier basin example.")
+> >
+> > Figure 7: For each [step length](#def-gradient-descent), the vermilion parts mark the starting points $x$ with $\mathopen{}\left|x\right|\mathclose{} > \sqrt{1 + 1 / (2s)}$, from which [Proposition 1](#prp-double-well-divergence) guarantees divergence; the blue part is the rest, where it gives no guarantee. The dotted line is the start $4$ of the earlier [basin example](#exm-basin-of-attraction).
 
 > **NOTE:**
 >
-> **Definition 10 (Plateau)** Let $f : \mathbb{R}^p \to \mathbb{R}$ be a [function](functions.llms.md#def-function) with a [gradient](vector-calculus.llms.md#def-vector-derivative) at every point of a region, and let $\epsilon > 0$ be a tolerance. The region is a **plateau** of $f$ if the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the gradient satisfies
+> **Definition 10 (Plateau)** Let $f : \mathbb{R}^p \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) with a [gradient](vector-calculus.llms.md#def-vector-derivative) at every point of a region, and let $\epsilon > 0$ be a tolerance. The region is a **plateau** of $f$ if the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the gradient satisfies
 >
 > $$0 < \mathopen{}\left\lVert\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right\rVert\mathclose{} < \epsilon$$
 >
@@ -950,10 +1104,10 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7ff676ce1a90>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d4002efd0>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7ff676ce20d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d4002c050>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -964,13 +1118,13 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > ## R
 >
-> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png "Figure 6: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-r-1.png "Figure 8: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
 > ## Python
 >
-> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png "Figure 6: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
+> [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png "Figure 8: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
-> Figure 6: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](functions.llms.md#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-critical-points.llms.md#def-stationary-point).
+> Figure 8: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-critical-points.llms.md#def-stationary-point).
 
 > **NOTE:**
 >
@@ -1030,7 +1184,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > && \text{(collect the terms in } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} \text{)}
 > \end{aligned}$$
 >
-> By [induction](proof-writing.llms.md#def-proof-by-induction) on $t$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} = (\mathbf{I}_p - s\,\mathbf{S})^t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(0)}$. By the [spectral theorem](linear-algebra-special-matrices.llms.md#thm-spectral), write $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$. Then $\mathbf{I}_p - s\,\mathbf{S} = \mathbf{Q}(\mathbf{I}_p - s\,\mathbf{\Lambda}){\mathbf{Q}}^{\top}$ because $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, and the $t$th [power](linear-algebra-special-matrices.llms.md#def-matrix-power) cancels each inner ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$, so
+> By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $t$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} = (\mathbf{I}_p - s\,\mathbf{S})^t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(0)}$. By the [spectral theorem](linear-algebra-special-matrices.llms.md#thm-spectral), write $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$. Then $\mathbf{I}_p - s\,\mathbf{S} = \mathbf{Q}(\mathbf{I}_p - s\,\mathbf{\Lambda}){\mathbf{Q}}^{\top}$ because $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, and the $t$th [power](linear-algebra-special-matrices.llms.md#def-matrix-power) cancels each inner ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$, so
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)}\right\rVert\mathclose{}
@@ -1047,7 +1201,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > && \text{(orthogonal matrices preserve length)}
 > \end{aligned}$$
 >
-> The length-preserving steps apply [orthogonal matrices preserve length](linear-algebra-special-matrices.llms.md#thm-orthogonal-norm). The [inequality](proof-writing.llms.md#def-inequality) holds because $\mathbf{I}_p - s\,\mathbf{\Lambda}$ is diagonal, so its $t$th power multiplies coordinate $i$ by $(1 - s\,\lambda_i)^t$, whose [absolute value](algebra-basics.llms.md#def-absolute-value) is at most $\rho(s)^t$.
+> The length-preserving steps apply [orthogonal matrices preserve length](linear-algebra-special-matrices.llms.md#thm-orthogonal-norm). The [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds because $\mathbf{I}_p - s\,\mathbf{\Lambda}$ is diagonal, so its $t$th power multiplies coordinate $i$ by $(1 - s\,\lambda_i)^t$, whose [absolute value](algebra-basics.llms.md#def-absolute-value) is at most $\rho(s)^t$.
 
 > **NOTE:**
 >
@@ -1055,7 +1209,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > $$\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}}\right\rVert\mathclose{} \le 0.75^t\,\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}\right\rVert\mathclose{}.$$
 >
-> Along the [eigenvector](linear-algebra-special-matrices.llms.md#def-eigenvector) for $\lambda= 3$ the [error](optimization-newton.llms.md#def-iterate-error) shrinks fast, and along the eigenvector for $\lambda= 1$ it shrinks slowly; the [bound](sets.llms.md#def-bound) follows the slower one.
+> Along the [eigenvector](linear-algebra-special-matrices.llms.md#def-eigenvector) for $\lambda= 3$ the [error](optimization-newton.llms.md#def-iterate-error) shrinks fast, and along the eigenvector for $\lambda= 1$ it shrinks slowly; the [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) follows the slower one.
 
 > **NOTE:**
 >
@@ -1077,7 +1231,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > $$\rho(s) = {\max\mathopen{}\left(1 - s\,\lambda_{\min},\ s\,\lambda_{\max} - 1\right)\mathclose{}}.$$
 >
-> The first [expression](expressions-algorithms.llms.md#def-expression) is strictly decreasing in $s$, and the second is strictly increasing, and they coincide when
+> The first [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) is strictly decreasing in $s$, and the second is strictly increasing, and they coincide when
 >
 > $$\begin{aligned}
 > 1 - s\,\lambda_{\min} &= s\,\lambda_{\max} - 1
@@ -1090,7 +1244,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > && \text{(divide)}
 > \end{aligned}$$
 >
-> For $s< s^*$, $\rho(s)$ is at least the decreasing expression, which exceeds its [value](functions.llms.md#def-value) at $s^*$. For $s> s^*$, $\rho(s)$ is at least the increasing expression, which exceeds its value at $s^*$. So $s^*$ is the [minimizer](algebra-basics.llms.md#def-global-minimizer), and
+> For $s< s^*$, $\rho(s)$ is at least the decreasing expression, which exceeds its [value](https://morrison-lab.github.io/mcs/functions.html#def-value) at $s^*$. For $s> s^*$, $\rho(s)$ is at least the increasing expression, which exceeds its value at $s^*$. So $s^*$ is the [minimizer](algebra-basics.llms.md#def-global-minimizer), and
 >
 > $$\begin{aligned}
 > \rho(s^*)
@@ -1138,11 +1292,11 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7ff66e95d1d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f4d3fe3efd0>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7ff66e95d310>
+> #> <matplotlib.lines.Line2D object at 0x7f4d3fe3f110>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7ff66e95d450>
+> #> <matplotlib.lines.Line2D object at 0x7f4d3fe3f250>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -1152,13 +1306,13 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > ## R
 >
-> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png "Figure 7: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-r-1.png "Figure 9: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
 >
 > ## Python
 >
-> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png "Figure 7: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
+> [![Plot of the error factor against the step length, from 0 to 1. A solid blue curve falls in a straight line from 1 at a step length of 0 to a sharp minimum of 0.5 at a step length of 0.5, then rises in a straight line, crossing 1 at a step length of 0.667 and reaching 2 at a step length of 1. A dotted horizontal line marks 1. A dashed vermilion vertical line marks 0.5.](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png)](optimization-gradient-descent_files/figure-html/best-constant-step-plot-python-1.png "Figure 9: The factor \rho(s) of Example 16 against the step length s (solid). The best step length (dashed) is where the curve is lowest, and the bound on the error shrinks only where the curve is below 1 (dotted).")
 >
-> Figure 7: The factor $\rho(s)$ of [Example 16](#exm-best-constant-step) against the [step length](#def-gradient-descent) $s$ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](sets.llms.md#def-bound) on the [error](optimization-newton.llms.md#def-iterate-error) shrinks only where the curve is below $1$ (dotted).
+> Figure 9: The factor $\rho(s)$ of [Example 16](#exm-best-constant-step) against the [step length](#def-gradient-descent) $s$ (solid). The best step length (dashed) is where the curve is lowest, and the [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) on the [error](optimization-newton.llms.md#def-iterate-error) shrinks only where the curve is below $1$ (dotted).
 
 > **NOTE:**
 >
@@ -1166,7 +1320,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 
 > **NOTE:**
 >
-> *Solution 1*. $\rho(s) < 1$ says that $\mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{} < 1$ for every $i$, which is $-1 < 1 - s\,\lambda_i < 1$. The right [inequality](proof-writing.llms.md#def-inequality) holds for every $s> 0$ because $\lambda_i > 0$. The left inequality is $s\,\lambda_i < 2$, that is, $s< 2 / \lambda_i$. These $p$ [inequalities](proof-writing.llms.md#def-inequality), one for each [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue), all hold exactly when the inequality for the largest eigenvalue holds, since it is the most restrictive:
+> *Solution 1*. $\rho(s) < 1$ says that $\mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{} < 1$ for every $i$, which is $-1 < 1 - s\,\lambda_i < 1$. The right [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds for every $s> 0$ because $\lambda_i > 0$. The left inequality is $s\,\lambda_i < 2$, that is, $s< 2 / \lambda_i$. These $p$ [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), one for each [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue), all hold exactly when the inequality for the largest eigenvalue holds, since it is the most restrictive:
 >
 > $$0 < s< \frac{2}{\lambda_{\max}}.$$
 
@@ -1198,7 +1352,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 
 > **NOTE:**
 >
-> *Solution 4*. From [Solution 3](#sol-best-step-factor), $\rho(s^*) = 0.8$. Taking logarithms, $\rho(s^*)^t \le 0.1$ becomes $t \ln \rho(s^*) \le \ln 0.1$. Here $\ln \rho(s^*) < 0$, so dividing by it flips the [inequality](proof-writing.llms.md#def-inequality): $t \ge \ln 0.1 / \ln \rho(s^*) \approx 10.32$. The smallest such $t$ is $11$.
+> *Solution 4*. From [Solution 3](#sol-best-step-factor), $\rho(s^*) = 0.8$. Taking logarithms, $\rho(s^*)^t \le 0.1$ becomes $t \ln \rho(s^*) \le \ln 0.1$. Here $\ln \rho(s^*) < 0$, so dividing by it flips the [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality): $t \ge \ln 0.1 / \ln \rho(s^*) \approx 10.32$. The smallest such $t$ is $11$.
 
 > **NOTE:**
 >

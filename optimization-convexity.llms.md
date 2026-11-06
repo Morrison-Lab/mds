@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 18:49:52 (PST)
+Last modified: 2026-11-05 20:50:36 (PST)
 
 > **NOTE:**
 >
@@ -122,6 +122,68 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > **NOTE:**
 >
 > **Example 4 (Intersecting a ball with a half-plane)** The closed [unit ball](vector-calculus.llms.md#def-unit-ball) in $\mathbb{R}^2$ is [convex](optimization-convexity.llms.md#def-convex-set) ([Example 1](#exm-convex-set)), and so is the half-plane ([Definition 2](#def-half-space)) $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 \ge 0\right\}\mathclose{}$: if $x_1 \ge 0$ and $y_1 \ge 0$, then $t x_1 + (1 - t) y_1 \ge 0$ for $t \in [0, 1]$. By [Theorem 1](#thm-convex-intersection), the closed half-disk $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \le 1,\ x_1 \ge 0\right\}\mathclose{}$ is convex. A union need not be convex: $\mathopen{}\left\{x \in \mathbb{R}: x \le -1\right\}\mathclose{}$ and $\mathopen{}\left\{x \in \mathbb{R}: x \ge 1\right\}\mathclose{}$ are convex, but their union is the set of [Example 2](#exm-not-convex-set).
+>
+> [Figure 2](#fig-convex-intersection) shows the half-disk.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > ci_angle_ci <- seq(-pi / 2, pi / 2, length.out = 101)
+> > ci_half_x1_ci <- cos(ci_angle_ci)
+> > ci_half_x2_ci <- sin(ci_angle_ci)
+> > ci_half_ci <- tibble::tibble(x1 = ci_half_x1_ci, x2 = ci_half_x2_ci)
+> > ci_full_angle_ci <- seq(0, 2 * pi, length.out = 201)
+> > ci_full_x1_ci <- cos(ci_full_angle_ci)
+> > ci_full_x2_ci <- sin(ci_full_angle_ci)
+> > ci_full_ci <- tibble::tibble(x1 = ci_full_x1_ci, x2 = ci_full_x2_ci)
+> > ci_edge_ci <- tibble::tibble(x1 = 0, x2 = -1, x1_end = 0, x2_end = 1)
+> > ci_aes_ci <- ggplot2::aes(x1, x2)
+> > ci_seg_aes_ci <- ggplot2::aes(xend = x1_end, yend = x2_end)
+> > ci_full_ci |>
+> >   ggplot2::ggplot() +
+> >   ci_aes_ci +
+> >   ggplot2::geom_path(colour = "grey60") +
+> >   ggplot2::geom_polygon(
+> >     data = ci_half_ci, fill = "#0072B2", alpha = 0.25, colour = "#0072B2"
+> >   ) +
+> >   ggplot2::geom_segment(
+> >     data = ci_edge_ci, mapping = ci_seg_aes_ci,
+> >     colour = "#D55E00", linewidth = 1
+> >   ) +
+> >   ggplot2::coord_fixed() +
+> >   ggplot2::labs(x = "x1", y = "x2")
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > ci_full_py = np.linspace(0, 2 * np.pi, 201)
+> > ci_half_py = np.linspace(-np.pi / 2, np.pi / 2, 101)
+> > fig, ax = plt.subplots(figsize=(4, 4), layout="constrained")
+> > ax.plot(np.cos(ci_full_py), np.sin(ci_full_py), color="grey")
+> > ax.fill(np.cos(ci_half_py), np.sin(ci_half_py), color="#0072B2", alpha=0.25)
+> > ax.plot(np.cos(ci_half_py), np.sin(ci_half_py), color="#0072B2")
+> > ax.plot([0, 0], [-1, 1], color="#D55E00", linewidth=2)
+> > ax.set_aspect("equal")
+> > ax.set_xlabel("x1")
+> > ax.set_ylabel("x2")
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![A circle of radius 1 centered at the origin, drawn as a grey outline, with the right half of the disk, where x1 is at least 0, shaded blue and outlined in blue. A vermilion vertical segment along the x2 axis from -1 to 1 marks the edge of the half-plane x1 equal to 0.](optimization-convexity_files/figure-html/convex-intersection-r-3.png)](optimization-convexity_files/figure-html/convex-intersection-r-3.png "Figure 2: The closed half-disk (blue) is the intersection of the unit ball with the half-plane x_1 \ge 0 of Example 4. The vermilion segment is the edge of the half-plane. The half-disk is convex, as Theorem 1 states.")
+> >
+> > ## Python
+> >
+> > [![A circle of radius 1 centered at the origin, drawn as a grey outline, with the right half of the disk, where x1 is at least 0, shaded blue and outlined in blue. A vermilion vertical segment along the x2 axis from -1 to 1 marks the edge of the half-plane x1 equal to 0.](optimization-convexity_files/figure-html/convex-intersection-python-1.png)](optimization-convexity_files/figure-html/convex-intersection-python-1.png "Figure 2: The closed half-disk (blue) is the intersection of the unit ball with the half-plane x_1 \ge 0 of Example 4. The vermilion segment is the edge of the half-plane. The half-disk is convex, as Theorem 1 states.")
+> >
+> > Figure 2: The closed half-disk (blue) is the [intersection](https://morrison-lab.github.io/mcs/sets.html#def-intersection) of the [unit ball](vector-calculus.llms.md#def-unit-ball) with the [half-plane](#def-half-space) $x_1 \ge 0$ of [Example 4](#exm-convex-intersection). The vermilion segment is the edge of the half-plane. The half-disk is [convex](optimization-convexity.llms.md#def-convex-set), as [Theorem 1](#thm-convex-intersection) states.
 
 > **NOTE:**
 >
@@ -278,13 +340,13 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > ## R
 >
-> [![Two panels over x. Left: the lines x and x squared in thin grey and their pointwise maximum in blue, a curve that is convex. Right: the curve g of x, the smaller of x squared and x minus 2 squared, in blue, a double dip with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above that segment.](optimization-convexity_files/figure-html/convex-max-r-3.png)](optimization-convexity_files/figure-html/convex-max-r-3.png "Figure 2: The functions of Example 6. The maximum of the two convex functions on the left is again one. The minimum on the right is not: g(1) = 1 is above \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0, the height of the segment.")
+> [![Two panels over x. Left: the lines x and x squared in thin grey and their pointwise maximum in blue, a curve that is convex. Right: the curve g of x, the smaller of x squared and x minus 2 squared, in blue, a double dip with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above that segment.](optimization-convexity_files/figure-html/convex-max-r-3.png)](optimization-convexity_files/figure-html/convex-max-r-3.png "Figure 3: The functions of Example 6. The maximum of the two convex functions on the left is again one. The minimum on the right is not: g(1) = 1 is above \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0, the height of the segment.")
 >
 > ## Python
 >
-> [![Two panels over x. Left: the lines x and x squared in thin grey and their pointwise maximum in blue, a curve that is convex. Right: the curve g of x, the smaller of x squared and x minus 2 squared, in blue, a double dip with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above that segment.](optimization-convexity_files/figure-html/convex-max-python-1.png)](optimization-convexity_files/figure-html/convex-max-python-1.png "Figure 2: The functions of Example 6. The maximum of the two convex functions on the left is again one. The minimum on the right is not: g(1) = 1 is above \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0, the height of the segment.")
+> [![Two panels over x. Left: the lines x and x squared in thin grey and their pointwise maximum in blue, a curve that is convex. Right: the curve g of x, the smaller of x squared and x minus 2 squared, in blue, a double dip with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above that segment.](optimization-convexity_files/figure-html/convex-max-python-1.png)](optimization-convexity_files/figure-html/convex-max-python-1.png "Figure 3: The functions of Example 6. The maximum of the two convex functions on the left is again one. The minimum on the right is not: g(1) = 1 is above \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0, the height of the segment.")
 >
-> Figure 2: The [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 6](#exm-convex-max). The [maximum](algebra-basics.llms.md#def-maximum) of the two [convex functions](algebra-sums.llms.md#def-convex-function) on the left is again one. The [minimum](algebra-basics.llms.md#def-minimum) on the right is not: $g(1) = 1$ is above $\tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$, the height of the segment.
+> Figure 3: The [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 6](#exm-convex-max). The [maximum](algebra-basics.llms.md#def-maximum) of the two [convex functions](algebra-sums.llms.md#def-convex-function) on the left is again one. The [minimum](algebra-basics.llms.md#def-minimum) on the right is not: $g(1) = 1$ is above $\tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$, the height of the segment.
 
 > **NOTE:**
 >
@@ -350,13 +412,13 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > ## R
 >
-> [![Plot of the parabola s equals x squared for x from -2 to 2. The region on and above the parabola is shaded light blue. A vermilion filled circle at (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below the parabola, outside it.](optimization-convexity_files/figure-html/epigraph-r-3.png)](optimization-convexity_files/figure-html/epigraph-r-3.png "Figure 3: The epigraph of f(x) = x^2 (Example 7): the shaded points on or above the parabola. (1, 2) is in it, and (2, 1) is not.")
+> [![Plot of the parabola s equals x squared for x from -2 to 2. The region on and above the parabola is shaded light blue. A vermilion filled circle at (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below the parabola, outside it.](optimization-convexity_files/figure-html/epigraph-r-3.png)](optimization-convexity_files/figure-html/epigraph-r-3.png "Figure 4: The epigraph of f(x) = x^2 (Example 7): the shaded points on or above the parabola. (1, 2) is in it, and (2, 1) is not.")
 >
 > ## Python
 >
-> [![Plot of the parabola s equals x squared for x from -2 to 2. The region on and above the parabola is shaded light blue. A vermilion filled circle at (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below the parabola, outside it.](optimization-convexity_files/figure-html/epigraph-python-1.png)](optimization-convexity_files/figure-html/epigraph-python-1.png "Figure 3: The epigraph of f(x) = x^2 (Example 7): the shaded points on or above the parabola. (1, 2) is in it, and (2, 1) is not.")
+> [![Plot of the parabola s equals x squared for x from -2 to 2. The region on and above the parabola is shaded light blue. A vermilion filled circle at (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below the parabola, outside it.](optimization-convexity_files/figure-html/epigraph-python-1.png)](optimization-convexity_files/figure-html/epigraph-python-1.png "Figure 4: The epigraph of f(x) = x^2 (Example 7): the shaded points on or above the parabola. (1, 2) is in it, and (2, 1) is not.")
 >
-> Figure 3: The [epigraph](#def-epigraph) of $f(x) = x^2$ ([Example 7](#exm-def-epigraph)): the shaded points on or above the [parabola](algebra-exponentials.llms.md#def-parabola). $(1, 2)$ is in it, and $(2, 1)$ is not.
+> Figure 4: The [epigraph](#def-epigraph) of $f(x) = x^2$ ([Example 7](#exm-def-epigraph)): the shaded points on or above the [parabola](algebra-exponentials.llms.md#def-parabola). $(1, 2)$ is in it, and $(2, 1)$ is not.
 
 > **NOTE:**
 >
@@ -429,6 +491,98 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >   &= 2 x_1 + 2 x_2 - 2.
 >   && \text{(} 2 - 2 - 2 = -2 \text{)}
 >   \end{aligned}$$
+>
+> [Figure 5](#fig-tangent-plane) shows the tangent plane of the second bullet.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > tp_x_tp <- seq(-1, 3, length.out = 41)
+> > tp_square_tp <- tp_x_tp^2
+> > tp_double_tp <- 2 * tp_x_tp
+> > tp_bowl_tp <- outer(tp_square_tp, tp_square_tp, "+")
+> > tp_sum_tp <- outer(tp_double_tp, tp_double_tp, "+")
+> > tp_plane_tp <- tp_sum_tp - 2
+> > tp_point_tp <- tibble::tibble(x1 = 1, x2 = 1, z = 2)
+> > tp_black_tp <- list(color = "#000000", size = 5)
+> > tp_stops_tp <- c(0, 1)
+> > tp_blue_cols_tp <- c("#CCE0F0", "#0072B2")
+> > tp_red_cols_tp <- c("#D55E00", "#D55E00")
+> > tp_blue_tp <- list(tp_stops_tp, tp_blue_cols_tp)
+> > tp_red_tp <- list(tp_stops_tp, tp_red_cols_tp)
+> > tp_eye_tp <- list(x = 1.6, y = -1.6, z = 0.9)
+> > tp_camera_tp <- list(eye = tp_eye_tp)
+> > tp_xaxis_tp <- list(title = "x1")
+> > tp_yaxis_tp <- list(title = "x2")
+> > tp_zaxis_tp <- list(title = "f(x)")
+> > tp_scene_tp <- list(
+> >   xaxis = tp_xaxis_tp,
+> >   yaxis = tp_yaxis_tp,
+> >   zaxis = tp_zaxis_tp,
+> >   camera = tp_camera_tp
+> > )
+> > tp_legend_tp <- list(orientation = "h")
+> > plotly::plot_ly() |>
+> >   plotly::add_surface(
+> >     x = tp_x_tp,
+> >     y = tp_x_tp,
+> >     z = tp_bowl_tp,
+> >     colorscale = tp_blue_tp,
+> >     showscale = FALSE,
+> >     opacity = 0.8
+> >   ) |>
+> >   plotly::add_surface(
+> >     x = tp_x_tp,
+> >     y = tp_x_tp,
+> >     z = tp_plane_tp,
+> >     colorscale = tp_red_tp,
+> >     showscale = FALSE,
+> >     opacity = 0.5
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = tp_point_tp,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "markers",
+> >     marker = tp_black_tp,
+> >     name = "point of tangency"
+> >   ) |>
+> >   plotly::layout(scene = tp_scene_tp, legend = tp_legend_tp)
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > tp_x1_py, tp_x2_py = np.meshgrid(np.linspace(-1, 3, 41),
+> >                                  np.linspace(-1, 3, 41))
+> > tp_bowl_py = tp_x1_py**2 + tp_x2_py**2
+> > tp_plane_py = 2 * tp_x1_py + 2 * tp_x2_py - 2
+> > fig = plt.figure(figsize=(6, 4.5))
+> > ax = fig.add_subplot(projection="3d")
+> > ax.plot_surface(tp_x1_py, tp_x2_py, tp_bowl_py, color="#0072B2", alpha=0.6)
+> > ax.plot_surface(tp_x1_py, tp_x2_py, tp_plane_py, color="#D55E00", alpha=0.4)
+> > ax.scatter([1], [1], [2], color="black", label="point of tangency")
+> > ax.set_xlabel("x1")
+> > ax.set_ylabel("x2")
+> > ax.set_zlabel("f(x)")
+> > ax.legend(loc="upper right")
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Surface plot of f(x) = x1^2 + x2^2 for x1 and x2 from -1 to 3, a bowl with its lowest point at the origin. A flat vermilion plane, the tangent plane 2 x1 + 2 x2 - 2, touches the bowl from below at the point (1, 1, 2), which is marked with a black point.](optimization-convexity_files/figure-html/tangent-plane-python-1.png)](optimization-convexity_files/figure-html/tangent-plane-python-1.png "Figure 5: The tangent plane (vermilion) of the bowl f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 of Example 9 touches it at {(1, 1)}^{\top} and lies below it.")
+> >
+> > ## Python
+> >
+> > Figure 5: The [tangent plane](#def-tangent-plane) (vermilion) of the bowl $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$ of [Example 9](#exm-tangent-plane) touches it at ${(1, 1)}^{\top}$ and lies below it.
 
 > **NOTE:**
 >
@@ -560,13 +714,13 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > ## R
 >
-> [![Plot of the parabola f of x equals x squared for x from -1 to 3, in blue, and the straight line s equals 2 x minus 1 in dashed vermilion. The line touches the parabola at the point (1, 1), marked by a vermilion circle, and lies below the parabola everywhere else.](optimization-convexity_files/figure-html/tangent-line-r-3.png)](optimization-convexity_files/figure-html/tangent-line-r-3.png "Figure 4: The tangent line s = 2x - 1 of f(x) = x^2 at y = 1 (Example 9). It touches the graph at (1, 1) and lies below it everywhere else, as in Example 10.")
+> [![Plot of the parabola f of x equals x squared for x from -1 to 3, in blue, and the straight line s equals 2 x minus 1 in dashed vermilion. The line touches the parabola at the point (1, 1), marked by a vermilion circle, and lies below the parabola everywhere else.](optimization-convexity_files/figure-html/tangent-line-r-3.png)](optimization-convexity_files/figure-html/tangent-line-r-3.png "Figure 6: The tangent line s = 2x - 1 of f(x) = x^2 at y = 1 (Example 9). It touches the graph at (1, 1) and lies below it everywhere else, as in Example 10.")
 >
 > ## Python
 >
-> [![Plot of the parabola f of x equals x squared for x from -1 to 3, in blue, and the straight line s equals 2 x minus 1 in dashed vermilion. The line touches the parabola at the point (1, 1), marked by a vermilion circle, and lies below the parabola everywhere else.](optimization-convexity_files/figure-html/tangent-line-python-1.png)](optimization-convexity_files/figure-html/tangent-line-python-1.png "Figure 4: The tangent line s = 2x - 1 of f(x) = x^2 at y = 1 (Example 9). It touches the graph at (1, 1) and lies below it everywhere else, as in Example 10.")
+> [![Plot of the parabola f of x equals x squared for x from -1 to 3, in blue, and the straight line s equals 2 x minus 1 in dashed vermilion. The line touches the parabola at the point (1, 1), marked by a vermilion circle, and lies below the parabola everywhere else.](optimization-convexity_files/figure-html/tangent-line-python-1.png)](optimization-convexity_files/figure-html/tangent-line-python-1.png "Figure 6: The tangent line s = 2x - 1 of f(x) = x^2 at y = 1 (Example 9). It touches the graph at (1, 1) and lies below it everywhere else, as in Example 10.")
 >
-> Figure 4: The [tangent line](calculus-derivatives.llms.md#def-tangent-line) $s = 2x - 1$ of $f(x) = x^2$ at $y = 1$ ([Example 9](#exm-tangent-plane)). It touches the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $(1, 1)$ and lies below it everywhere else, as in [Example 10](#exm-convex-first-order).
+> Figure 6: The [tangent line](calculus-derivatives.llms.md#def-tangent-line) $s = 2x - 1$ of $f(x) = x^2$ at $y = 1$ ([Example 9](#exm-tangent-plane)). It touches the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $(1, 1)$ and lies below it everywhere else, as in [Example 10](#exm-convex-first-order).
 
 > **NOTE:**
 >
@@ -659,13 +813,13 @@ Last modified: 2026-11-05 18:49:52 (PST)
 >
 > ## R
 >
-> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png)](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png "Figure 5: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
+> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png)](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png "Figure 7: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
 >
 > ## Python
 >
-> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png "Figure 5: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
+> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png "Figure 7: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
 >
-> Figure 5: [Level curves](vector-calculus.llms.md#def-level-set) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 11](#exm-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the function is [linear](algebra-exponentials.llms.md#def-linear-function), so the function is [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
+> Figure 7: [Level curves](vector-calculus.llms.md#def-level-set) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 11](#exm-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the function is [linear](algebra-exponentials.llms.md#def-linear-function), so the function is [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
 
 > **NOTE:**
 >
@@ -725,34 +879,48 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > Show code
 >
 > ``` python
-> import matplotlib.pyplot as plt
 > import numpy as np
+> import plotly.graph_objects as go
 >
-> ch_x1_3d, ch_x2_3d = np.meshgrid(np.linspace(-1, 1, 101),
->                                  np.linspace(-3, 3, 101))
-> ch_z_3d = np.exp(2 * ch_x1_3d + ch_x2_3d) - ch_x1_3d
+> ch_x1_3d = np.linspace(-1, 1, 101)
+> ch_x2_3d = np.linspace(-3, 3, 101)
+> ch_xx_3d, ch_yy_3d = np.meshgrid(ch_x1_3d, ch_x2_3d)
+> ch_z_3d = np.exp(2 * ch_xx_3d + ch_yy_3d) - ch_xx_3d
 > ch_line_x1_3d = np.linspace(-1, 1, 21)
 > ch_line_x2_3d = -2 * ch_line_x1_3d
 > ch_line_z_3d = np.exp(2 * ch_line_x1_3d + ch_line_x2_3d) - ch_line_x1_3d
-> fig = plt.figure(figsize=(6, 4.5))
-> ax = fig.add_subplot(projection="3d")
-> ax.plot_surface(ch_x1_3d, ch_x2_3d, ch_z_3d, color="#0072B2", alpha=0.6)
-> ax.plot(ch_line_x1_3d, ch_line_x2_3d, ch_line_z_3d, "--", color="#D55E00",
->         label="f is linear")
-> ax.set_xlabel("x1")
-> ax.set_ylabel("x2")
-> ax.set_zlabel("f(x)")
-> ax.legend(loc="upper right")
-> plt.show();
+> fig = go.Figure(data=[
+>     go.Surface(
+>         x=ch_x1_3d,
+>         y=ch_x2_3d,
+>         z=ch_z_3d,
+>         colorscale=[[0, "#CCE0F0"], [1, "#0072B2"]],
+>         showscale=False,
+>         opacity=0.6,
+>         showlegend=False,
+>     ),
+>     go.Scatter3d(x=ch_line_x1_3d, y=ch_line_x2_3d, z=ch_line_z_3d,
+>                  mode="lines",
+>                  line=dict(color="#D55E00", width=5, dash="dash"),
+>                  name="f is linear"),
+> ])
+> fig.update_layout(
+>     scene=dict(
+>         xaxis_title="x1",
+>         yaxis_title="x2",
+>         zaxis_title="f(x)",
+>         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+>     ),
+>     legend=dict(orientation="h"),
+> );
+> print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
 > ```
 >
 > ## R
 >
-> [![Surface plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The surface is a trough that rises steeply toward the upper right, where 2 x1 plus x2 is large, and is nearly flat on the lower left. A dashed vermilion straight line along the direction (1, -2) through the origin lies on the surface, because f is linear there.](optimization-convexity_files/figure-html/convex-hessian-3d-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-3d-python-1.png "Figure 6: The graph of the third function in Example 11, the surface whose level curves are in Figure 5. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the surface is a straight line, so the function is linear there. The function is therefore convex but not strictly convex.")
->
 > ## Python
 >
-> Figure 6: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 11](#exm-convex-hessian), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 5](#fig-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the surface is a straight line, so the function is [linear](algebra-exponentials.llms.md#def-linear-function) there. The function is therefore [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
+> Figure 8: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 11](#exm-convex-hessian), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 7](#fig-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the surface is a straight line, so the function is [linear](algebra-exponentials.llms.md#def-linear-function) there. The function is therefore [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
 
 > **NOTE:**
 >

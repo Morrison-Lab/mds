@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 18:49:52 (PST)
+Last modified: 2026-11-05 20:50:36 (PST)
 
 > **NOTE:**
 >
@@ -63,7 +63,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > - $f : \mathbb{R}^p \to \mathbb{R}$: an [objective function](#def-objective-function);
 > - $F \subseteq \mathbb{R}^p$: a [feasible set](#def-feasible-set).
 >
-> An **optimization algorithm** [\[3\]](#ref-wikipedia_mathematical_optimization) is a step-by-step procedure that [maps](functions.llms.md#def-function) the pair $(f, F)$ to a feasible point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^\dagger$:
+> An **optimization algorithm** [\[3\]](#ref-wikipedia_mathematical_optimization) is a step-by-step procedure that [maps](https://morrison-lab.github.io/mcs/functions.html#def-function) the pair $(f, F)$ to a feasible point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^\dagger$:
 >
 > $$(f, F) \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^\dagger \in F.
 > \tag{1}$$
@@ -72,7 +72,7 @@ Last modified: 2026-11-05 18:49:52 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (Exhaustive search over a finite feasible set)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$, with the [feasible set](#def-feasible-set) the three points $\mathopen{}\left\{{(1, 0.5)}^{\top}, {(3, -1)}^{\top}, {(-1, 2)}^{\top}\right\}\mathclose{}$ of the line of [Example 1](#exm-feasible-set). The procedure “evaluate $f$ at every feasible point; return the point with the smallest [value](functions.llms.md#def-value)” is an [optimization algorithm](#def-optimization-algorithm). Computing $f$ at each point gives
+> **Example 3 (Exhaustive search over a finite feasible set)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$, with the [feasible set](#def-feasible-set) the three points $\mathopen{}\left\{{(1, 0.5)}^{\top}, {(3, -1)}^{\top}, {(-1, 2)}^{\top}\right\}\mathclose{}$ of the line of [Example 1](#exm-feasible-set). The procedure “evaluate $f$ at every feasible point; return the point with the smallest [value](https://morrison-lab.github.io/mcs/functions.html#def-value)” is an [optimization algorithm](#def-optimization-algorithm). Computing $f$ at each point gives
 >
 > $$\begin{aligned}
 > f(1, 0.5) &= 1 + 0.25 = 1.25, \\
@@ -463,36 +463,48 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 > Show code
 >
 > ``` python
-> import matplotlib.pyplot as plt
 > import numpy as np
+> import plotly.graph_objects as go
 >
-> ll_x1_3d, ll_x2_3d = np.meshgrid(np.linspace(-1.6, 2, 101),
->                                  np.linspace(-1.6, 2, 101))
+> ll_x_3d = np.linspace(-1.6, 2, 101)
 > ll_line_x1_3d = np.linspace(-0.5, 2, 101)
 > ll_line_x2_3d = (5 - 3 * ll_line_x1_3d) / 4
 > ll_line_z_3d = ll_line_x1_3d**2 + ll_line_x2_3d**2
-> fig = plt.figure(figsize=(6, 4.5))
-> ax = fig.add_subplot(projection="3d")
-> ax.plot_surface(ll_x1_3d, ll_x2_3d, ll_x1_3d**2 + ll_x2_3d**2,
->                 color="grey", alpha=0.4)
-> ax.plot(ll_line_x1_3d, ll_line_x2_3d, ll_line_z_3d, color="#0072B2",
->         label="constraint")
-> ax.scatter([0.6], [0.8], [1], marker="o", color="#D55E00", s=50,
->            label="minimizer")
-> ax.set_xlabel("x1")
-> ax.set_ylabel("x2")
-> ax.set_zlabel("f(x)")
-> ax.legend(loc="upper right")
-> plt.show();
+> ll_xx_3d, ll_yy_3d = np.meshgrid(ll_x_3d, ll_x_3d)
+> fig = go.Figure(data=[
+>     go.Surface(
+>         x=ll_x_3d,
+>         y=ll_x_3d,
+>         z=ll_xx_3d**2 + ll_yy_3d**2,
+>         colorscale=[[0, "#E5E5E5"], [1, "#808080"]],
+>         showscale=False,
+>         opacity=0.6,
+>         showlegend=False,
+>     ),
+>     go.Scatter3d(x=ll_line_x1_3d, y=ll_line_x2_3d, z=ll_line_z_3d,
+>                  mode="lines", line=dict(color="#0072B2", width=5),
+>                  name="constraint"),
+>     go.Scatter3d(x=[0.6], y=[0.8], z=[1], mode="markers",
+>                  marker=dict(color="#D55E00", size=4, symbol="circle"),
+>                  name="minimizer"),
+> ])
+> fig.update_layout(
+>     scene=dict(
+>         xaxis_title="x1",
+>         yaxis_title="x2",
+>         zaxis_title="f(x)",
+>         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+>     ),
+>     legend=dict(orientation="h"),
+> );
+> print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
 > ```
 >
 > ## R
 >
-> [![Surface plot of x1 squared plus x2 squared over x1 and x2 from -1.6 to 2, a bowl opening upward with its lowest point at the origin. A blue curve on the bowl lies above the straight line 3 x1 plus 4 x2 equals 5, running from upper left to lower right. Its lowest point, above (0.6, 0.8) at height 1, is marked by a vermilion circle. That height is the smallest value of x1 squared plus x2 squared on the line.](optimization-constrained_files/figure-html/lagrange-line-3d-python-1.png)](optimization-constrained_files/figure-html/lagrange-line-3d-python-1.png "Figure 2: The graph of the objective x_1^2 + x_2^2, the surface whose level curves (circles) are in Figure 1, with the constraint line 3 x_1 + 4 x_2 = 5 lifted onto it. Along the constraint the objective is lowest above the minimizer {(0.6, 0.8)}^{\top} (Example 5), where the line touches the circle c = 1.")
->
 > ## Python
 >
-> Figure 2: The [graph](functions.llms.md#def-graph) of the [objective](#def-objective-function) $x_1^2 + x_2^2$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) (circles) are in [Figure 1](#fig-lagrange-line), with the constraint line $3 x_1 + 4 x_2 = 5$ lifted onto it. Along the constraint the objective is lowest above the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 5](#exm-qp-equality)), where the line touches the circle $c = 1$.
+> Figure 2: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [objective](#def-objective-function) $x_1^2 + x_2^2$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) (circles) are in [Figure 1](#fig-lagrange-line), with the constraint line $3 x_1 + 4 x_2 = 5$ lifted onto it. Along the constraint the objective is lowest above the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 5](#exm-qp-equality)), where the line touches the circle $c = 1$.
 
 > **NOTE:**
 >
@@ -544,13 +556,13 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 >
 > ## R
 >
-> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-3.png "Figure 3: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
+> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png "Figure 3: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
 >
 > ## Python
 >
 > [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png "Figure 3: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
 >
-> Figure 3: The first case of [Example 6](#exm-qp-equality-fails): with $\mathbf{S} = \operatorname{diag}(1, -1)$, which is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), the [value](functions.llms.md#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$ falls without [bound](sets.llms.md#def-bound) as $\mathopen{}\left|x_2\right|\mathclose{}$ grows, so this problem has no [minimizer](algebra-basics.llms.md#def-global-minimizer).
+> Figure 3: The first case of [Example 6](#exm-qp-equality-fails): with $\mathbf{S} = \operatorname{diag}(1, -1)$, which is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), the [value](https://morrison-lab.github.io/mcs/functions.html#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$ falls without [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) as $\mathopen{}\left|x_2\right|\mathclose{}$ grows, so this problem has no [minimizer](algebra-basics.llms.md#def-global-minimizer).
 
 > **NOTE:**
 >

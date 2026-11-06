@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 18:49:52 (PST)
+Last modified: 2026-11-05 20:50:36 (PST)
 
 > **NOTE:**
 >
@@ -232,8 +232,8 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > Show code
 >
 > ``` python
-> import matplotlib.pyplot as plt
 > import numpy as np
+> import plotly.graph_objects as go
 >
 > qn_x_3d = np.linspace(-0.4, 0.6, 101)
 > qn_y_3d = np.linspace(-0.2, 1, 101)
@@ -247,30 +247,44 @@ Last modified: 2026-11-05 18:49:52 (PST)
 > qn_pts_x_3d = np.array([0, 0.25, 1 / 11])
 > qn_pts_y_3d = np.array([0, 0.5, 7 / 11])
 > qn_pts_z_3d = qn_f_3d(qn_pts_x_3d, qn_pts_y_3d)
-> fig = plt.figure(figsize=(6, 4.5))
-> ax = fig.add_subplot(projection="3d")
-> ax.plot_surface(qn_xx_3d, qn_yy_3d, qn_f_3d(qn_xx_3d, qn_yy_3d),
->                 color="grey", alpha=0.4)
-> ax.scatter(qn_pts_x_3d[0], qn_pts_y_3d[0], qn_pts_z_3d[0], marker="o",
->            color="#0072B2", s=50, label="start")
-> ax.scatter(qn_pts_x_3d[1], qn_pts_y_3d[1], qn_pts_z_3d[1], marker="o",
->            color="#D55E00", s=50, label="after one step")
-> ax.scatter(qn_pts_x_3d[2], qn_pts_y_3d[2], qn_pts_z_3d[2], marker="s",
->            color="#0072B2", s=50, label="minimizer")
-> ax.set_xlabel("first coordinate")
-> ax.set_ylabel("second coordinate")
-> ax.set_zlabel("f(x)")
-> ax.legend(loc="upper right")
-> plt.show();
+> qn_marks_3d = [
+>     ("start", "#0072B2", "circle"),
+>     ("after one step", "#D55E00", "circle"),
+>     ("minimizer", "#0072B2", "square"),
+> ]
+> fig = go.Figure(data=[
+>     go.Surface(
+>         x=qn_x_3d,
+>         y=qn_y_3d,
+>         z=qn_f_3d(qn_xx_3d, qn_yy_3d),
+>         colorscale=[[0, "#E5E5E5"], [1, "#808080"]],
+>         showscale=False,
+>         opacity=0.6,
+>         showlegend=False,
+>     ),
+> ])
+> for i, (name, color, symbol) in enumerate(qn_marks_3d):
+>     fig.add_trace(go.Scatter3d(
+>         x=[qn_pts_x_3d[i]], y=[qn_pts_y_3d[i]], z=[qn_pts_z_3d[i]],
+>         mode="markers",
+>         marker=dict(color=color, size=4, symbol=symbol), name=name));
+> fig.update_layout(
+>     scene=dict(
+>         xaxis_title="first coordinate",
+>         yaxis_title="second coordinate",
+>         zaxis_title="f(x)",
+>         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+>     ),
+>     legend=dict(orientation="h"),
+> );
+> print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
 > ```
 >
 > ## R
 >
-> [![Surface plot of the quadratic function f over first coordinates from -0.4 to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface whose lowest point is above the point (0.09, 0.64). Three markers lie on the surface. A blue circle at the origin is the starting point, a vermilion circle above (0.25, 0.5) is the iterate after one step, and a blue square above (0.09, 0.64) is the minimizer, at the bottom of the bowl.](optimization-quasi-newton_files/figure-html/quasi-newton-step-3d-python-1.png)](optimization-quasi-newton_files/figure-html/quasi-newton-step-3d-python-1.png "Figure 2: The graph of the quadratic function f from Example 2, the surface whose level curves are in Figure 1. The start \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (blue circle), the point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} reached after one steepest-descent step (vermilion circle), and the minimizer (blue square) at the bottom of the bowl are marked on the surface. ")
->
 > ## Python
 >
-> Figure 2: The [graph](functions.llms.md#def-graph) of the [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial) $f$ from [Example 2](#exm-quasi-newton-step), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 1](#fig-quasi-newton-step). The start $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (blue circle), the point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}$ reached after one [steepest-descent](optimization-gradient-descent.llms.md#def-gradient-descent) step (vermilion circle), and the [minimizer](algebra-basics.llms.md#def-global-minimizer) (blue square) at the bottom of the bowl are marked on the surface.
+> Figure 2: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial) $f$ from [Example 2](#exm-quasi-newton-step), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 1](#fig-quasi-newton-step). The start $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (blue circle), the point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}$ reached after one [steepest-descent](optimization-gradient-descent.llms.md#def-gradient-descent) step (vermilion circle), and the [minimizer](algebra-basics.llms.md#def-global-minimizer) (blue square) at the bottom of the bowl are marked on the surface.
 
 > **NOTE:**
 >
