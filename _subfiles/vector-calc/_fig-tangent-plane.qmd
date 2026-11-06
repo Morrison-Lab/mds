@@ -14,14 +14,17 @@
 #|   tangent plane 2 x1 + 2 x2 - 2, touches the bowl from below at the
 #|   point (1, 1, 2), which is marked with a black point.
 tp_x_tp <- seq(-1, 3, length.out = 41)
-tp_xx_tp <- outer(tp_x_tp, rep(1, 41))
-tp_yy_tp <- outer(rep(1, 41), tp_x_tp)
-tp_bowl_tp <- tp_xx_tp^2 + tp_yy_tp^2
-tp_plane_tp <- 2 * tp_xx_tp + 2 * tp_yy_tp - 2
+tp_bowl_fn_tp <- function(a, b) a^2 + b^2
+tp_plane_fn_tp <- function(a, b) 2 * a + 2 * b - 2
+tp_bowl_tp <- outer(tp_x_tp, tp_x_tp, tp_bowl_fn_tp)
+tp_plane_tp <- outer(tp_x_tp, tp_x_tp, tp_plane_fn_tp)
 tp_point_tp <- tibble::tibble(x1 = 1, x2 = 1, z = 2)
 tp_black_tp <- list(color = "#000000", size = 5)
-tp_blue_tp <- list(c(0, 1), c("#CCE0F0", "#0072B2"))
-tp_red_tp <- list(c(0, 1), c("#D55E00", "#D55E00"))
+tp_stops_tp <- c(0, 1)
+tp_blue_cols_tp <- c("#CCE0F0", "#0072B2")
+tp_red_cols_tp <- c("#D55E00", "#D55E00")
+tp_blue_tp <- list(tp_stops_tp, tp_blue_cols_tp)
+tp_red_tp <- list(tp_stops_tp, tp_red_cols_tp)
 tp_eye_tp <- list(x = 1.6, y = -1.6, z = 0.9)
 tp_camera_tp <- list(eye = tp_eye_tp)
 tp_xaxis_tp <- list(title = "x1")
@@ -38,7 +41,7 @@ plotly::plot_ly() |>
   plotly::add_surface(
     x = tp_x_tp,
     y = tp_x_tp,
-    z = t(tp_bowl_tp),
+    z = tp_bowl_tp,
     colorscale = tp_blue_tp,
     showscale = FALSE,
     opacity = 0.8
@@ -46,7 +49,7 @@ plotly::plot_ly() |>
   plotly::add_surface(
     x = tp_x_tp,
     y = tp_x_tp,
-    z = t(tp_plane_tp),
+    z = tp_plane_tp,
     colorscale = tp_red_tp,
     showscale = FALSE,
     opacity = 0.5
