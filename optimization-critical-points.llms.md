@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-05 15:25:17 (PST)
+Last modified: 2026-11-05 16:44:18 (PST)
 
 # 1 Critical points and optimization
 
@@ -16,7 +16,7 @@ Last modified: 2026-11-05 15:25:17 (PST)
 >
 > **Example 1 (Flat points, and a point that is not one)**  
 >
-> - $f(w) = w^3$ has $f'(w) = 3w^2$, which is $0$ at $w = 0$, so $0$ is a flat point. Yet $f(0) = 0$ is neither the [minimum](algebra-basics.llms.md#def-minimum) nor the [maximum](algebra-basics.llms.md#def-maximum) of the [values](functions.llms.md#def-value) $f$ takes on any [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $0$: $f(w) < 0$ for $w < 0$, and $f(w) > 0$ for $w > 0$.
+> - $f(w) = w^3$ has $f'(w) = 3w^2$, which is $0$ at $w = 0$, so $0$ is a flat point. Yet $f(0) = 0$ is neither the [minimum](algebra-basics.llms.md#def-minimum) nor the [maximum](algebra-basics.llms.md#def-maximum) of the [values](https://morrison-lab.github.io/mcs/functions.html#def-value) $f$ takes on any [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $0$: $f(w) < 0$ for $w < 0$, and $f(w) > 0$ for $w > 0$.
 > - $h(w) = w^2$ has $h'(1) = 2 \ne 0$, so $1$ is not a flat point.
 
 > **NOTE:**
@@ -76,17 +76,17 @@ Last modified: 2026-11-05 15:25:17 (PST)
 >
 > ## R
 >
-> [![Two panels. Left: the curve w cubed for w from -2 to 2, rising from -8 to 8 and flattening at the origin, where a vermilion filled circle marks the flat point. Right: the curve w squared on the same range, a parabola with its lowest point at the origin and an open vermilion circle at w of 1, where the slope is 2 and the point is not flat.](optimization-critical-points_files/figure-html/flat-point-r-1.png)](optimization-critical-points_files/figure-html/flat-point-r-1.png "Figure 1: These are the functions of Example 1. The slope of f(w) = w^3 is 0 at w = 0, so 0 is a flat point, yet f keeps rising through it. The slope of h(w) = w^2 at w = 1 is 2, so 1 is not a flat point.")
+> [![Two panels. Left: the curve w cubed for w from -2 to 2, rising from -8 to 8 and flattening at the origin, where a vermilion filled circle marks the flat point. Right: the curve w squared on the same range, a parabola with its lowest point at the origin and an open vermilion circle at w of 1, where the slope is 2 and the point is not flat.](optimization-critical-points_files/figure-html/flat-point-r-1.png)](optimization-critical-points_files/figure-html/flat-point-r-1.png "Figure 1: These are the functions of Example 1.  The slope of f(w) = w^3 is 0 at w = 0, so 0 is a flat point, yet f keeps rising through it. The slope of h(w) = w^2 at w = 1 is 2, so 1 is not a flat point.")
 >
 > ## Python
 >
-> [![Two panels. Left: the curve w cubed for w from -2 to 2, rising from -8 to 8 and flattening at the origin, where a vermilion filled circle marks the flat point. Right: the curve w squared on the same range, a parabola with its lowest point at the origin and an open vermilion circle at w of 1, where the slope is 2 and the point is not flat.](optimization-critical-points_files/figure-html/flat-point-python-1.png)](optimization-critical-points_files/figure-html/flat-point-python-1.png "Figure 1: These are the functions of Example 1. The slope of f(w) = w^3 is 0 at w = 0, so 0 is a flat point, yet f keeps rising through it. The slope of h(w) = w^2 at w = 1 is 2, so 1 is not a flat point.")
+> [![Two panels. Left: the curve w cubed for w from -2 to 2, rising from -8 to 8 and flattening at the origin, where a vermilion filled circle marks the flat point. Right: the curve w squared on the same range, a parabola with its lowest point at the origin and an open vermilion circle at w of 1, where the slope is 2 and the point is not flat.](optimization-critical-points_files/figure-html/flat-point-python-1.png)](optimization-critical-points_files/figure-html/flat-point-python-1.png "Figure 1: These are the functions of Example 1.  The slope of f(w) = w^3 is 0 at w = 0, so 0 is a flat point, yet f keeps rising through it. The slope of h(w) = w^2 at w = 1 is 2, so 1 is not a flat point.")
 >
-> Figure 1: These are the [functions](functions.llms.md#def-function) of [Example 1](#exm-flat-point). The [slope](algebra-exponentials.llms.md#def-slope) of $f(w) = w^3$ is $0$ at $w = 0$, so $0$ is a [flat point](#def-flat-point), yet $f$ keeps rising through it. The slope of $h(w) = w^2$ at $w = 1$ is $2$, so $1$ is not a flat point.
+> Figure 1: These are the [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 1](#exm-flat-point). The [slope](algebra-exponentials.llms.md#def-slope) of $f(w) = w^3$ is $0$ at $w = 0$, so $0$ is a [flat point](#def-flat-point), yet $f$ keeps rising through it. The slope of $h(w) = w^2$ at $w = 1$ is $2$, so $1$ is not a flat point.
 
 > **NOTE:**
 >
-> **Exercise 1 (Differentiate a quadratic)** A [flat point](#def-flat-point) of a [function](functions.llms.md#def-function) is where its [derivative](calculus-derivatives.llms.md#def-derivative) is zero. The next exercises use the [parabola](algebra-exponentials.llms.md#def-parabola) $f(w) = w^2 - 4w + 7$ to find where $f$ is flat and to compare a [linear approximation](calculus-derivatives.llms.md#eq-linear-approx) with the exact [value](functions.llms.md#def-value).
+> **Exercise 1 (Differentiate a quadratic)** A [flat point](#def-flat-point) of a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) is where its [derivative](calculus-derivatives.llms.md#def-derivative) is zero. The next exercises use the [parabola](algebra-exponentials.llms.md#def-parabola) $f(w) = w^2 - 4w + 7$ to find where $f$ is flat and to compare a [linear approximation](calculus-derivatives.llms.md#eq-linear-approx) with the exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value).
 >
 > Differentiate $f$.
 
@@ -117,7 +117,7 @@ Last modified: 2026-11-05 15:25:17 (PST)
 > &= 3.
 > \end{aligned}$$
 >
-> This is the [minimum](algebra-basics.llms.md#def-minimum) of the [values](functions.llms.md#def-value) of $f$. Completing the square, $f(w) = (w - 2)^2 + 3$, since
+> This value is the [minimum](algebra-basics.llms.md#def-minimum) of the [values](https://morrison-lab.github.io/mcs/functions.html#def-value) of $f$. Completing the square, $f(w) = (w - 2)^2 + 3$, since
 >
 > $$\begin{aligned}
 > (w - 2)^2 + 3 &= w^2 - 4w + 4 + 3 \\
@@ -151,11 +151,11 @@ Last modified: 2026-11-05 15:25:17 (PST)
 
 > **NOTE:**
 >
-> **Exercise 6 (Exact value)** In the setting of [Exercise 1](#exr-flat-point), find the exact [value](functions.llms.md#def-value) of $f(1.01)$.
+> **Exercise 6 (Exact value)** In the setting of [Exercise 1](#exr-flat-point), find the exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value) of $f(1.01)$.
 
 > **NOTE:**
 >
-> *Solution 6*. The exact [value](functions.llms.md#def-value) is
+> *Solution 6*. The exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value) is
 >
 > $$\begin{aligned}
 > f(1.01)
@@ -168,11 +168,11 @@ Last modified: 2026-11-05 15:25:17 (PST)
 
 > **NOTE:**
 >
-> **Exercise 7 (Check the prediction)** Compare the prediction in [Exercise 5](#exr-flat-point-predict) with the exact [value](functions.llms.md#def-value) of $f(1.01)$ from [Exercise 6](#exr-flat-point-exact).
+> **Exercise 7 (Check the prediction)** Compare the prediction in [Exercise 5](#exr-flat-point-predict) with the exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value) of $f(1.01)$ from [Exercise 6](#exr-flat-point-exact).
 
 > **NOTE:**
 >
-> *Solution 7*. The prediction $3.98$ ([Solution 5](#sol-flat-point-predict)) and the exact [value](functions.llms.md#def-value) $3.9801$ ([Solution 6](#sol-flat-point-exact)) differ by $0.0001$, which is $\varepsilon^2$. For this $f$, the difference between $f(w + \varepsilon)$ and its [linear approximation](calculus-derivatives.llms.md#def-linear-approximation) is, at any $w$, exactly
+> *Solution 7*. The prediction $3.98$ ([Solution 5](#sol-flat-point-predict)) and the exact [value](https://morrison-lab.github.io/mcs/functions.html#def-value) $3.9801$ ([Solution 6](#sol-flat-point-exact)) differ by $0.0001$, which is $\varepsilon^2$. For this $f$, the difference between $f(w + \varepsilon)$ and its [linear approximation](calculus-derivatives.llms.md#def-linear-approximation) is, at any $w$, exactly
 >
 > $$f(w + \varepsilon) - [f(w) + f'(w)\,\varepsilon] = \varepsilon^2,$$
 >
@@ -182,7 +182,7 @@ Last modified: 2026-11-05 15:25:17 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Critical point)** Let $f$ be a [function](functions.llms.md#def-function) defined on an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) containing $c$. The point $c$ is a **critical point** of $f$ if either $f'(c) = 0$ or $f$ is not [differentiable at](calculus-derivatives.llms.md#def-differentiable) $c$.
+> **Definition 2 (Critical point)** Let $f$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) defined on an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) containing $c$. The point $c$ is a **critical point** of $f$ if either $f'(c) = 0$ or $f$ is not [differentiable at](calculus-derivatives.llms.md#def-differentiable) $c$.
 
 > **NOTE:**
 >
@@ -254,13 +254,13 @@ Last modified: 2026-11-05 15:25:17 (PST)
 >
 > ## R
 >
-> [![Three panels over w from -2 to 2. Left: the absolute value of w, a V shape with a sharp corner at the origin marked by a vermilion triangle. Middle: w cubed, rising and flat at the origin, marked by a vermilion circle. Right: w squared, a parabola with its lowest point at the origin marked by a vermilion circle.](optimization-critical-points_files/figure-html/critical-point-r-3.png)](optimization-critical-points_files/figure-html/critical-point-r-3.png "Figure 2: These are the functions of Example 2, with the critical point 0 marked on each. The corner of \mathopen{}\left|w\right|\mathclose{} at 0 is a critical point that is not a flat point (triangle). w^3 and w^2 are flat at 0 (circles).")
+> [![Three panels over w from -2 to 2. Left: the absolute value of w, a V shape with a sharp corner at the origin marked by a vermilion triangle. Middle: w cubed, rising and flat at the origin, marked by a vermilion circle. Right: w squared, a parabola with its lowest point at the origin marked by a vermilion circle.](optimization-critical-points_files/figure-html/critical-point-r-3.png)](optimization-critical-points_files/figure-html/critical-point-r-3.png "Figure 2: These are the functions of Example 2,  with the critical point 0 marked on each. The corner of \mathopen{}\left|w\right|\mathclose{} at 0 is a critical point that is not a flat point (triangle). w^3 and w^2 are flat at 0 (circles).")
 >
 > ## Python
 >
-> [![Three panels over w from -2 to 2. Left: the absolute value of w, a V shape with a sharp corner at the origin marked by a vermilion triangle. Middle: w cubed, rising and flat at the origin, marked by a vermilion circle. Right: w squared, a parabola with its lowest point at the origin marked by a vermilion circle.](optimization-critical-points_files/figure-html/critical-point-python-1.png)](optimization-critical-points_files/figure-html/critical-point-python-1.png "Figure 2: These are the functions of Example 2, with the critical point 0 marked on each. The corner of \mathopen{}\left|w\right|\mathclose{} at 0 is a critical point that is not a flat point (triangle). w^3 and w^2 are flat at 0 (circles).")
+> [![Three panels over w from -2 to 2. Left: the absolute value of w, a V shape with a sharp corner at the origin marked by a vermilion triangle. Middle: w cubed, rising and flat at the origin, marked by a vermilion circle. Right: w squared, a parabola with its lowest point at the origin marked by a vermilion circle.](optimization-critical-points_files/figure-html/critical-point-python-1.png)](optimization-critical-points_files/figure-html/critical-point-python-1.png "Figure 2: These are the functions of Example 2,  with the critical point 0 marked on each. The corner of \mathopen{}\left|w\right|\mathclose{} at 0 is a critical point that is not a flat point (triangle). w^3 and w^2 are flat at 0 (circles).")
 >
-> Figure 2: These are the [functions](functions.llms.md#def-function) of [Example 2](#exm-critical-point), with the [critical point](#def-critical-point) $0$ marked on each. The corner of $\mathopen{}\left|w\right|\mathclose{}$ at $0$ is a critical point that is not a [flat point](#def-flat-point) (triangle). $w^3$ and $w^2$ are flat at $0$ (circles).
+> Figure 2: These are the [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 2](#exm-critical-point), with the [critical point](#def-critical-point) $0$ marked on each. The corner of $\mathopen{}\left|w\right|\mathclose{}$ at $0$ is a critical point that is not a [flat point](#def-flat-point) (triangle). $w^3$ and $w^2$ are flat at $0$ (circles).
 
 > **NOTE:**
 >
@@ -355,7 +355,7 @@ Last modified: 2026-11-05 15:25:17 (PST)
 
 > **NOTE:**
 >
-> **Example 4 (Second derivative test for powers of** $x$) The [function](functions.llms.md#def-function) $f(x) = x^2$ has the [flat point](#def-flat-point) $c = 0$ and [second derivative](calculus-derivatives.llms.md#def-second-derivative) $f''(0) = 2 > 0$, so $0$ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) by [Theorem 2](#thm-second-derivative-test).
+> **Example 4 (Second derivative test for powers of** $x$) The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f(x) = x^2$ has the [flat point](#def-flat-point) $c = 0$ and [second derivative](calculus-derivatives.llms.md#def-second-derivative) $f''(0) = 2 > 0$, so $0$ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) by [Theorem 2](#thm-second-derivative-test).
 
 > **NOTE:**
 >
@@ -437,15 +437,15 @@ Last modified: 2026-11-05 15:25:17 (PST)
 > >
 > > [![Three side-by-side plots of a function on x from -1 to 1, each with a vermilion circle at the origin. The first, x to the fourth, is a blue U-shaped curve with its lowest point at the origin. The second, minus x to the fourth, is an upside-down U with its highest point at the origin. The third, x cubed, rises steadily from lower left to upper right, flattening at the origin without turning.](optimization-critical-points_files/figure-html/second-derivative-test-zero-python-1.png)](optimization-critical-points_files/figure-html/second-derivative-test-zero-python-1.png "Figure 4: This figure shows the functions x^4, -x^4 and x^3 of Example 5. All three have a flat point at x = 0 (circles) where the second derivative is 0: a local minimizer, a local maximizer, and neither.")
 > >
-> > Figure 4: This figure shows the [functions](functions.llms.md#def-function) $x^4$, $-x^4$ and $x^3$ of [Example 5](#exm-second-derivative-test-zero). All three have a [flat point](#def-flat-point) at $x = 0$ (circles) where the [second derivative](calculus-derivatives.llms.md#def-second-derivative) is $0$: a [local minimizer](algebra-basics.llms.md#def-local-minimizer), a [local maximizer](#def-local-maximizer), and neither.
+> > Figure 4: This figure shows the [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) $x^4$, $-x^4$ and $x^3$ of [Example 5](#exm-second-derivative-test-zero). All three have a [flat point](#def-flat-point) at $x = 0$ (circles) where the [second derivative](calculus-derivatives.llms.md#def-second-derivative) is $0$: a [local minimizer](algebra-basics.llms.md#def-local-minimizer), a [local maximizer](#def-local-maximizer), and neither.
 
 > **NOTE:**
 >
-> **Definition 3 (Inflection point)** An **inflection point** of a [function](functions.llms.md#def-function) $f$ is a point $c$ such that, on some [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $c$, the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $f''$ is positive on one side of $c$ and negative on the other.
+> **Definition 3 (Inflection point)** An **inflection point** of a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ is a point $c$ such that, on some [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) around $c$, the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $f''$ is positive on one side of $c$ and negative on the other.
 
 > **NOTE:**
 >
-> *Remark 2* (Inflection points change the curvature). At an [inflection point](#def-inflection-point), the [graph](functions.llms.md#def-graph) changes between curving up and curving down.
+> *Remark 2* (Inflection points change the curvature). At an [inflection point](#def-inflection-point), the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) changes between curving up and curving down.
 
 > **NOTE:**
 >
@@ -662,7 +662,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >
 > [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-python-1.png "Figure 5: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
 >
-> Figure 5: [Level curves](vector-calculus.llms.md#def-level-curve) of the [function](functions.llms.md#def-function) of [Example 8](#exm-stationary-point). The [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). At the origin (triangle) the gradient is ${(-2, 0)}^{\top}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> Figure 5: [Level curves](vector-calculus.llms.md#def-level-curve) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 8](#exm-stationary-point). The [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). At the origin (triangle) the gradient is ${(-2, 0)}^{\top}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
@@ -755,7 +755,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >
 > ## Python
 >
-> Figure 6: The [graph](functions.llms.md#def-graph) of the [function](functions.llms.md#def-function) of [Example 8](#exm-stationary-point), the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 5](#fig-stationary-point). The surface is flat, with [gradient](vector-calculus.llms.md#def-vector-derivative) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, only at the bottom of the bowl above the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). Above the origin (diamond) the surface descends toward the stationary point.
+> Figure 6: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 8](#exm-stationary-point), the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 5](#fig-stationary-point). The surface is flat, with [gradient](vector-calculus.llms.md#def-vector-derivative) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, only at the bottom of the bowl above the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). Above the origin (diamond) the surface descends toward the stationary point.
 
 > **NOTE:**
 >
@@ -885,7 +885,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 1.071498e-11 1.673470e-10
+> #> [1] 9.471535e-12 6.662049e-11
 > #> 
 > #> 
 > #> $zero_vector
@@ -904,7 +904,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
@@ -944,7 +944,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 
 > **NOTE:**
 >
-> *Proof*. Let $g(t) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})$ for $t \in \mathbb{R}$, the values of $f$ along the line through $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$ in the direction $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$. The [inner function](functions.llms.md#def-inner-function) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}(t) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$ has entries $y_j = z_j + t h_j$, so $\frac{\partial}{\partial t} y_j = h_j$, and its [derivative](vector-calculus.llms.md#def-vector-valued-derivative) is the $1 \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top}$. By the [vector chain rule](vector-calculus.llms.md#thm-chain-vec) applied with the [argument](functions.llms.md#def-argument) $t$, the inner function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}(t) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$, and the [outer function](functions.llms.md#def-outer-function) $f$,
+> *Proof*. Let $g(t) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})$ for $t \in \mathbb{R}$, the values of $f$ along the line through $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$ in the direction $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$. The [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}(t) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$ has entries $y_j = z_j + t h_j$, so $\frac{\partial}{\partial t} y_j = h_j$, and its [derivative](vector-calculus.llms.md#def-vector-valued-derivative) is the $1 \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top}$. By the [vector chain rule](vector-calculus.llms.md#thm-chain-vec) applied with the [argument](https://morrison-lab.github.io/mcs/functions.html#def-argument) $t$, the inner function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}(t) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$, and the [outer function](https://morrison-lab.github.io/mcs/functions.html#def-outer-function) $f$,
 >
 > $$\begin{aligned}
 > g'(t)
@@ -1258,7 +1258,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 >
 > [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-python-1.png)](optimization-critical-points_files/figure-html/second-order-condition-python-1.png "Figure 7: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
 >
-> Figure 7: [Level curves](vector-calculus.llms.md#def-level-set) of the two [functions](functions.llms.md#def-function) in [Example 16](#exm-second-order-condition). At the [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ of $x_1^2 + x_2^2 - 2 x_1$ (blue circle), the [Hessian](vector-calculus.llms.md#def-hessian) is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). The level curves close around a [strict local minimizer](#def-strict-local-minimizer). At the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of $x_1^2 - x_2^2$ (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, $x_1^2 - x_2^2$ rises, and along the second it falls. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
+> Figure 7: [Level curves](vector-calculus.llms.md#def-level-set) of the two [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 16](#exm-second-order-condition). At the [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ of $x_1^2 + x_2^2 - 2 x_1$ (blue circle), the [Hessian](vector-calculus.llms.md#def-hessian) is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). The level curves close around a [strict local minimizer](#def-strict-local-minimizer). At the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of $x_1^2 - x_2^2$ (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, $x_1^2 - x_2^2$ rises, and along the second it falls. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
 
 > **NOTE:**
 >
@@ -1362,38 +1362,84 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > Show code
 >
 > ``` python
-> import matplotlib.pyplot as plt
 > import numpy as np
+> import plotly.graph_objects as go
+> from plotly.subplots import make_subplots
 >
 > so_x_3d = np.linspace(-1.5, 2.5, 101)
 > so_y_3d = np.linspace(-1.5, 1.5, 101)
 > so_xx_3d, so_yy_3d = np.meshgrid(so_x_3d, so_y_3d)
 > so_bowl_3d = so_xx_3d**2 + so_yy_3d**2 - 2 * so_xx_3d
 > so_saddle_3d = so_xx_3d**2 - so_yy_3d**2
-> fig = plt.figure(figsize=(7, 3.5))
-> ax_bowl = fig.add_subplot(1, 2, 1, projection="3d")
-> ax_bowl.plot_surface(so_xx_3d, so_yy_3d, so_bowl_3d, color="#0072B2", alpha=0.6)
-> ax_bowl.scatter([1], [0], [-1], marker="o", color="#0072B2", s=50)
-> ax_bowl.set_title("positive definite Hessian")
-> ax_saddle = fig.add_subplot(1, 2, 2, projection="3d")
-> ax_saddle.plot_surface(so_xx_3d, so_yy_3d, so_saddle_3d, color="#0072B2",
->                        alpha=0.6)
-> ax_saddle.scatter([0], [0], [0], marker="D", color="#D55E00", s=50)
-> ax_saddle.set_title("indefinite Hessian")
-> for ax in (ax_bowl, ax_saddle):
->     ax.set_xlabel("x")
->     ax.set_ylabel("y")
->     ax.set_zlabel("f")
-> plt.show();
+> so_scale_3d = [[0, "#CCE0F0"], [1, "#0072B2"]]
+> so_axes_3d = dict(
+>     xaxis_title="x",
+>     yaxis_title="y",
+>     zaxis_title="f",
+>     camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+> )
+> so_fig_3d = make_subplots(
+>     rows=1,
+>     cols=2,
+>     specs=[[{"type": "scene"}, {"type": "scene"}]],
+>     subplot_titles=("positive definite Hessian", "indefinite Hessian"),
+> )
+> so_fig_3d.add_trace(
+>     go.Surface(
+>         x=so_x_3d,
+>         y=so_y_3d,
+>         z=so_bowl_3d,
+>         colorscale=so_scale_3d,
+>         showscale=False,
+>         opacity=0.8,
+>     ),
+>     row=1,
+>     col=1,
+> );
+> so_fig_3d.add_trace(
+>     go.Surface(
+>         x=so_x_3d,
+>         y=so_y_3d,
+>         z=so_saddle_3d,
+>         colorscale=so_scale_3d,
+>         showscale=False,
+>         opacity=0.8,
+>     ),
+>     row=1,
+>     col=2,
+> );
+> so_fig_3d.add_trace(
+>     go.Scatter3d(
+>         x=[1],
+>         y=[0],
+>         z=[-1],
+>         mode="markers",
+>         marker=dict(color="#0072B2", size=4, symbol="circle"),
+>     ),
+>     row=1,
+>     col=1,
+> );
+> so_fig_3d.add_trace(
+>     go.Scatter3d(
+>         x=[0],
+>         y=[0],
+>         z=[0],
+>         mode="markers",
+>         marker=dict(color="#D55E00", size=4, symbol="diamond"),
+>     ),
+>     row=1,
+>     col=2,
+> );
+> so_fig_3d.update_layout(scene=so_axes_3d, scene2=so_axes_3d, showlegend=False);
+> so_html_3d = so_fig_3d.to_html(full_html=False, include_plotlyjs="cdn")
+> print("```{=html}\n" + so_html_3d + "\n```")
 > ```
 >
 > ## R
 >
-> [![Two surface plots side by side. The left plot, titled positive definite Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5 and y from -1.5 to 1.5, a bowl opening upward whose lowest point, at (1, 0), is marked by a blue circle. The right plot, titled indefinite Hessian, shows x squared minus y squared over the same region, a saddle that rises along the x axis and falls along the y axis. The origin, at the middle of the saddle, is marked by a vermilion diamond.](optimization-critical-points_files/figure-html/second-order-condition-3d-python-1.png)](optimization-critical-points_files/figure-html/second-order-condition-3d-python-1.png "Figure 8: The graphs of the two functions in Example 16, the surfaces whose level curves are in Figure 7. The surface of x_1^2 + x_2^2 - 2 x_1 is a bowl, and its stationary point {(1, 0)}^{\top} (circle) is the bottom, a strict local minimizer. The surface of x_1^2 - x_2^2 is a saddle: it rises along the first coordinate axis and falls along the second, so the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (diamond) is not a local minimizer.")
->
 > ## Python
 >
-> Figure 8: The [graphs](functions.llms.md#def-graph) of the two [functions](functions.llms.md#def-function) in [Example 16](#exm-second-order-condition), the surfaces whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 7](#fig-second-order-condition). The surface of $x_1^2 + x_2^2 - 2 x_1$ is a bowl, and its [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ (circle) is the bottom, a [strict local minimizer](#def-strict-local-minimizer). The surface of $x_1^2 - x_2^2$ is a saddle: it rises along the first coordinate axis and falls along the second, so the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond) is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
+> Figure 8: The [graphs](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the two [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 16](#exm-second-order-condition), the surfaces whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 7](#fig-second-order-condition). The surface of $x_1^2 + x_2^2 - 2 x_1$ is a bowl, and its [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ (circle) is the bottom, a [strict local minimizer](#def-strict-local-minimizer). The surface of $x_1^2 - x_2^2$ is a saddle: it rises along the first coordinate axis and falls along the second, so the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond) is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
 
 > **NOTE:**
 >
@@ -1442,7 +1488,13 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 
 > **NOTE:**
 >
-> **Example 19 (A saddle point)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$. Its gradient is ${(2 x_1,\ -2 x_2)}^{\top}$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ only at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ is a stationary point. For every $t \ne 0$,
+> **Example 19 (A saddle point)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is
+>
+> $$\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathopen{}\left(2 x_1,\ -2 x_2\right)\mathclose{}}^{\top}.$$
+>
+> At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, the gradient is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ is a stationary point.
+>
+> For every $t \ne 0$,
 >
 > $$\begin{aligned}
 > f(t, 0)
@@ -1572,7 +1624,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > >
 > > ## Python
 > >
-> > Figure 9: The [graph](functions.llms.md#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$. Along the $x_1$ axis (solid curve) the surface rises away from the origin, and along the $x_2$ axis (dashed curve) it falls away, so the origin is neither the lowest nor the highest point nearby.
+> > Figure 9: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$. Along the $x_1$ axis (solid curve) the surface rises away from the origin, and along the $x_2$ axis (dashed curve) it falls away, so the origin is neither the lowest nor the highest point nearby.
 
 # Definitions on this page
 
