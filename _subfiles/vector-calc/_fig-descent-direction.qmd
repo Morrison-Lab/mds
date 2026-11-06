@@ -1,0 +1,69 @@
+::: {#fig-descent-direction}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: descent-direction-r
+#| fig-alt: >-
+#|   Plot of the ratio (1 - 2 s) squared against the step length s from 0 to
+#|   1.6, a blue parabola that falls from 1 at s equal to 0 to 0 at s equal
+#|   to 0.5 and rises back to 1 at s equal to 1. A dashed grey horizontal
+#|   line marks the ratio 1. A vermilion circle at s equal to 1.5, where the
+#|   ratio is 4, lies above the line.
+#| fig-height: 3.5
+#| fig-width: 6
+dd_s_dd <- seq(0, 1.6, length.out = 201)
+dd_ratio_dd <- (1 - 2 * dd_s_dd)^2
+dd_curve_dd <- tibble::tibble(s = dd_s_dd, ratio = dd_ratio_dd)
+dd_long_dd <- tibble::tibble(s = 1.5, ratio = 4)
+dd_aes_dd <- ggplot2::aes(s, ratio)
+dd_dash_dd <- "dashed"
+dd_curve_dd |>
+  ggplot2::ggplot() +
+  dd_aes_dd +
+  ggplot2::geom_hline(
+    yintercept = 1, linetype = dd_dash_dd, colour = "grey50"
+  ) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(data = dd_long_dd, colour = "#D55E00", size = 3) +
+  ggplot2::labs(x = "step length s", y = "f(x - 2sx) / f(x)")
+```
+
+### Python
+
+```{python}
+#| label: descent-direction-python
+#| fig-alt: >-
+#|   Plot of the ratio (1 - 2 s) squared against the step length s from 0 to
+#|   1.6, a blue parabola that falls from 1 at s equal to 0 to 0 at s equal
+#|   to 0.5 and rises back to 1 at s equal to 1. A dashed grey horizontal
+#|   line marks the ratio 1. A vermilion circle at s equal to 1.5, where the
+#|   ratio is 4, lies above the line.
+#| fig-height: 3.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+dd_s_py = np.linspace(0, 1.6, 201)
+dd_ratio_py = (1 - 2 * dd_s_py)**2
+fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
+ax.plot(dd_s_py, dd_ratio_py, color="#0072B2")
+ax.axhline(1, linestyle="--", color="grey")
+ax.plot([1.5], [4], "o", color="#D55E00")
+ax.set_xlabel("step length s")
+ax.set_ylabel("f(x - 2sx) / f(x)")
+plt.show();
+```
+
+:::
+
+The [ratio](algebra-sums.qmd#def-ratio) $f(x - 2 s x) / f(x) = (1 - 2s)^2$ of @exm-descent-direction (blue)
+is below 1,
+so the step decreases $f$,
+exactly when $0 < s < 1$.
+The step $s = 1.5$ (vermilion) is too long,
+since its ratio is 4.
+
+:::
