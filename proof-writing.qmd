@@ -2,12 +2,6 @@
 title: "Proof Writing"
 format:
   html: default
-  revealjs:
-    output-file: proof-writing-slides.html
-  pdf:
-    output-file: proof-writing-handout.pdf
-  docx:
-    output-file: proof-writing.docx
 ---
 
 ```{=html}
