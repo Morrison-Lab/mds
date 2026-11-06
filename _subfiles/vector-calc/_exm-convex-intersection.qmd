@@ -9,4 +9,8 @@ A union need not be convex:
 $\cb{x \in \reals : x \le -1}$ and $\cb{x \in \reals : x \ge 1}$ are convex,
 but their union is the set of @exm-not-convex-set.
 
+@fig-convex-intersection shows the half-disk.
+
+{{< include mds/_subfiles/vector-calc/_fig-convex-intersection.qmd >}}
+
 :::
