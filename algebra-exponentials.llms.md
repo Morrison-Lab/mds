@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 01:54:55 (PST)
+Last modified: 2026-11-06 15:40:58 (PST)
 
 # 1 Polynomials
 
@@ -444,7 +444,7 @@ Last modified: 2026-11-06 01:54:55 (PST)
 >
 > $$a^b \stackrel{\text{def}}{=}{\operatorname{exp}\mathopen{}\left\{b \cdot{\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}\right\}\mathclose{}}.$$
 >
-> When $b$ is an integer, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer).
+> When $b$ is an integer, this agrees with [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 8 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer).
 
 > **NOTE:**
 >
@@ -457,9 +457,9 @@ Last modified: 2026-11-06 01:54:55 (PST)
 >   &= 8
 >   \end{aligned}$$
 >
->   from [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
+>   from [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
 >
-> - $2^{1/2} = {\operatorname{exp}\mathopen{}\left\{\frac{1}{2} \cdot{\operatorname{log}\mathopen{}\left\{2\right\}\mathclose{}}\right\}\mathclose{}} \approx {\operatorname{exp}\mathopen{}\left\{0.34657\right\}\mathclose{}} \approx 1.41421$, which is $\sqrt{2}$ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
+> - $2^{1/2} = {\operatorname{exp}\mathopen{}\left\{\frac{1}{2} \cdot{\operatorname{log}\mathopen{}\left\{2\right\}\mathclose{}}\right\}\mathclose{}} \approx {\operatorname{exp}\mathopen{}\left\{0.34657\right\}\mathclose{}} \approx 1.41421$, which is $\sqrt{2}$ ([Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 >
 > - For every real $x$, with base $e$ ([Definition 25](#def-euler-number)):
 >
@@ -510,16 +510,16 @@ Last modified: 2026-11-06 01:54:55 (PST)
 
 > **NOTE:**
 >
-> **Definition 29 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 27](#def-real-power) leave some powers $b^c$ with $b \le 0$ unassigned. We complete them as follows.
+> **Definition 29 (Real powers of zero and of negative numbers)** [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 8 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 27](#def-real-power) leave some powers $b^c$ with $b \le 0$ unassigned. We complete them as follows.
 >
-> - For a real number $c > 0$, $0^c \stackrel{\text{def}}{=}0$. For a natural number $c$, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
-> - For $b < 0$, $b^c$ is defined only when $c$ is an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), by [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for $b < 0$ and a non-integer $c$, $b^c$ is undefined.
+> - For a real number $c > 0$, $0^c \stackrel{\text{def}}{=}0$. For a natural number $c$, this agrees with [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
+> - For $b < 0$, $b^c$ is defined only when $c$ is an [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), by [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 8 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for $b < 0$ and a non-integer $c$, $b^c$ is undefined.
 
 > **NOTE:**
 >
 > **Example 20 (Powers of zero and of negative numbers)**  
 >
-> - $0^{1/2} = 0$, which agrees with $\sqrt{0} = 0$ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
+> - $0^{1/2} = 0$, which agrees with $\sqrt{0} = 0$ ([Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 > - $(-8)^2 = 64$ and $(-8)^{-1} = -\tfrac{1}{8}$ are defined, since the exponents are integers.
 > - $(-8)^{1/3}$ is undefined, even though $(-2)^3 = -8$. R follows the same convention: `(-8)^(1/3)` is `NaN`.
 

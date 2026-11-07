@@ -144,16 +144,6 @@
    "url": "https://morrison-lab.github.io/mcs/functions.html#def-preimage"
   },
   {
-   "id": "mcs/functions#def-relation",
-   "site": "mcs",
-   "page": "functions",
-   "div": "def-relation",
-   "kind": "def",
-   "title": "relation",
-   "external": true,
-   "url": "https://morrison-lab.github.io/mcs/functions.html#def-relation"
-  },
-  {
    "id": "mcs/functions#def-sequence",
    "site": "mcs",
    "page": "functions",
@@ -1304,15 +1294,6 @@
    "external": false
   },
   {
-   "id": "mds/algebra#def-transitive",
-   "site": "mds",
-   "page": "algebra",
-   "div": "def-transitive",
-   "kind": "def",
-   "title": "Transitive relation",
-   "external": false
-  },
-  {
    "id": "mds/algebra#def-unit-circle",
    "site": "mds",
    "page": "algebra",
@@ -1886,15 +1867,6 @@
    "div": "def-strict-inequality",
    "kind": "def",
    "title": "Strict inequalities",
-   "external": false
-  },
-  {
-   "id": "mds/algebra-basics#def-transitive",
-   "site": "mds",
-   "page": "algebra-basics",
-   "div": "def-transitive",
-   "kind": "def",
-   "title": "Transitive relation",
    "external": false
   },
   {
@@ -12983,14 +12955,6 @@
    "mds/algebra#def-bounded-above"
   ],
   [
-   "mds/algebra#def-transitive",
-   "mcs/functions#def-relation"
-  ],
-  [
-   "mds/algebra#def-transitive",
-   "mcs/sets#def-set"
-  ],
-  [
    "mds/algebra#def-upper-limit",
    "mds/algebra#def-summation"
   ],
@@ -13123,10 +13087,6 @@
    "mds/algebra#def-unit-circle"
   ],
   [
-   "mds/algebra#thm-equal-trans",
-   "mds/algebra#def-transitive"
-  ],
-  [
    "mds/algebra#thm-exp-sum",
    "mds/algebra#def-term"
   ],
@@ -13235,20 +13195,8 @@
    "mcs/number-systems#def-real-numbers"
   ],
   [
-   "mds/algebra-basics#def-transitive",
-   "mcs/functions#def-relation"
-  ],
-  [
-   "mds/algebra-basics#def-transitive",
-   "mcs/sets#def-set"
-  ],
-  [
    "mds/algebra-basics#thm-argmax-positive-multiple",
    "mcs/functions#def-function"
-  ],
-  [
-   "mds/algebra-basics#thm-equal-trans",
-   "mds/algebra-basics#def-transitive"
   ],
   [
    "mds/algebra-complex#def-complex-conjugate",
