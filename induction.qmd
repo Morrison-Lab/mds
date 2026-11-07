@@ -1,13 +1,8 @@
 ---
 title: "Induction and Recursion"
+redirect-stub: true
 format:
   html: default
-  revealjs:
-    output-file: induction-slides.html
-  pdf:
-    output-file: induction-handout.pdf
-  docx:
-    output-file: induction.docx
 ---
 
 ```{=html}
