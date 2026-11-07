@@ -1,0 +1,9 @@
+:::{#def-notational-shorthand}
+#### Notational shorthand
+
+A **notational shorthand** is a way of writing an [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression)
+that leaves part of the expression out,
+such as the set a sum runs over or the limits of an integral,
+and relies on the reader to supply the missing part from context.
+
+:::

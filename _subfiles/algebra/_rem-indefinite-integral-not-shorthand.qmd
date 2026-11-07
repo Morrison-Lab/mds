@@ -1,0 +1,12 @@
+:::{#rem-indefinite-integral-not-shorthand}
+#### $\int f(x)\,dx$ has two readings
+
+In calculus,
+$\int f(x)\,dx$ with no limits is not a shorthand:
+it is the [indefinite integral](calculus.qmd#def-indefinite-integral) of $f$,
+a family of functions rather than a number.
+Some sources, especially in probability,
+also write $\int f(x)\,dx$ for the number $\int_{-\infty}^{\infty} f(x)\,dx$.
+Writing the limits out tells the reader which of the two is meant.
+
+:::
