@@ -12779,6 +12779,10 @@
    "mds/algebra#def-strict-inequality"
   ],
   [
+   "mds/algebra#def-notational-shorthand",
+   "mcs/expressions-algorithms#def-expression"
+  ],
+  [
    "mds/algebra#def-numerator",
    "mds/algebra#def-fraction"
   ],
@@ -13613,6 +13617,10 @@
   [
    "mds/algebra-sums#def-lower-upper-limits",
    "mds/calculus#def-riemann-integral"
+  ],
+  [
+   "mds/algebra-sums#def-notational-shorthand",
+   "mcs/expressions-algorithms#def-expression"
   ],
   [
    "mds/algebra-sums#def-numerator",

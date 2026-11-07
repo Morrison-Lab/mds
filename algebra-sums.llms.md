@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 17:03:21 (PST)
+Last modified: 2026-11-06 18:41:15 (PST)
 
 # 1 Convex functions
 
@@ -913,7 +913,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 36 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.
+> **Definition 36 (Notational shorthand)** A **notational shorthand** is a way of writing an [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.
 
 > **NOTE:**
 >
@@ -930,11 +930,11 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 38 (Range of a variable)** The **range** of a variable $x$, written $\mathcal{R}(x)$, is the set of values that $x$ can take.
+> **Definition 38 (Range of a variable)** The **range** of a variable $x$, written $\mathcal{R}(x)$, is the [set](https://morrison-lab.github.io/mcs/chapters/sets.html#def-set) of values that $x$ can take.
 
-For example, if $x$ is the number of heads in two tosses of a coin, then $\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}$. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$ (defined in the Morrison Lab’s probability notes) is a [function](functions.llms.md#def-function), and the set of values $X$ can take, $\mathcal{R}(X)$, is the [image](functions.llms.md#def-image) of $X$. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Range](functions.llms.md#def-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; $\mathcal{R}(x)$ is a set, not that difference.
+For example, if $x$ is the number of heads in two tosses of a coin, then $\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}$. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$ (defined in the Morrison Lab’s probability notes) is a [function](https://morrison-lab.github.io/mcs/functions.html#def-function), and the set of values $X$ can take, $\mathcal{R}(X)$, is the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $X$. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Range](https://morrison-lab.github.io/mcs/functions.html#def-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; $\mathcal{R}(x)$ is a set, not that difference.
 
-[Table 1](#tbl-notational-shorthands) lists shorthands you may encounter in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, $x_1, \ldots, x_n$ and $a_1, \ldots, a_n$ are $n$ numbers, $b_{ij}$ is the entry in row $i$ and column $j$ of an $m \times n$ array, $k$ is an integer with $1 \le k \le n$, $f$ is a [function](functions.llms.md#def-function) from $\mathbb{R}$ to $\mathbb{R}$, and, in the first row, $\mathcal{R}(x)$ is a finite set.
+[Table 1](#tbl-notational-shorthands) lists shorthands you may encounter in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, $x_1, \ldots, x_n$ and $a_1, \ldots, a_n$ are $n$ numbers, $b_{ij}$ is the entry in row $i$ and column $j$ of an $m \times n$ array, $k$ is an integer with $1 \le k \le n$, $f$ is a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) from $\mathbb{R}$ to $\mathbb{R}$, and, in the first row, $\mathcal{R}(x)$ is a finite set.
 
 > **NOTE:**
 >
