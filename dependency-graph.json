@@ -22756,6 +22756,10 @@
   ],
   [
    "mds/vector-calculus#thm-continuous-several",
+   "mcs/functions#def-composition"
+  ],
+  [
+   "mds/vector-calculus#thm-continuous-several",
    "mds/calculus#def-continuous"
   ],
   [
