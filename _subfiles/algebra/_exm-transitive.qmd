@@ -5,4 +5,6 @@
 - $\ne$ is not transitive:
   $1 \ne 2$ and $2 \ne 1$, but $1 \ne 1$ is false.
 
+<!-- no-figure: the example checks two relations on three numbers -->
+
 :::

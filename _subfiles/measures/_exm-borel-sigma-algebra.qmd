@@ -10,4 +10,6 @@
 - The [complement](https://morrison-lab.github.io/mcs/sets.html#def-complement) $\reals \setminus [0, 1]$ is a Borel set,
   because $\borel$ contains the complement of each of its sets.
 
+<!-- no-figure: the example lists sets and why each is Borel -->
+
 :::

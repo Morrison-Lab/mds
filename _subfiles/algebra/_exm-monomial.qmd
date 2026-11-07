@@ -13,4 +13,6 @@ Take the four variables $x_1, x_2, x_3, x_4$.
 - $x_1 + x_4$ is not a monomial:
   it adds two monomials rather than multiplying [powers](algebra-basics.qmd#def-power).
 
+<!-- no-figure: the example sorts five expressions by their exponents -->
+
 :::
