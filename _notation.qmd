@@ -33,7 +33,7 @@ which define those terms.
 
 [eta]: https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation"
 
-[^3]: depending on whether it is applied to a matrix or a function;
+[^3]: depending on whether it is applied to a [matrix](linear-algebra-matrices.qmd#def-matrix) or a [function](https://morrison-lab.github.io/mcs/functions.html#def-function);
     see @rem-prime-overloaded for the other readings
 
 [^4]: A generalized linear model (GLM) is a regression model

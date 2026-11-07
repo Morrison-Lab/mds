@@ -10,11 +10,11 @@ apply the operation that the context makes most salient.
 
 The common readings are:
 
-- **Derivative.**
-  For a function $f$, $f'$ is the [derivative](calculus-derivatives.qmd#def-lagrange-notation) of $f$,
-  and $f''$ is its second derivative.
-- **Transpose.**
-  For a vector or matrix $\mX$, $\mX'$ is the [transpose](linear-algebra-vectors.qmd#def-transpose) of $\mX$.
+- **[Derivative](calculus-derivatives.qmd#def-lagrange-notation).**
+  For a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$, $f'$ is the derivative of $f$,
+  and $f''$ is its [second derivative](calculus-derivatives.qmd#def-second-derivative).
+- **[Transpose](linear-algebra-vectors.qmd#def-transpose).**
+  For a vector or [matrix](linear-algebra-matrices.qmd#def-matrix) $\mX$, $\mX'$ is the transpose of $\mX$.
 - **Another value.**
   For a quantity $x$, $x'$ is a second value of the same kind,
   as in a threshold $\thresh'$ that is compared with a threshold $\thresh$.
