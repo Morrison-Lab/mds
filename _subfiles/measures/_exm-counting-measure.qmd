@@ -15,4 +15,6 @@ $$
 \end{aligned}
 $$
 
+<!-- no-figure: the example is two set sizes and one sum -->
+
 :::
