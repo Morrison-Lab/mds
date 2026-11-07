@@ -2,6 +2,6 @@
 #### Range of a variable
 
 The **range** of a variable $x$, written $\rangef{x}$,
-is the set of values that $x$ can take.
+is the [set](https://morrison-lab.github.io/mcs/chapters/sets.html#def-set) of values that $x$ can take.
 
 :::
