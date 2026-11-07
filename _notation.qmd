@@ -33,7 +33,8 @@ which define those terms.
 
 [eta]: https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation"
 
-[^3]: depending on whether it is applied to a matrix or a function
+[^3]: depending on whether it is applied to a matrix or a function;
+    see @rem-prime-overloaded for the other readings
 
 [^4]: A generalized linear model (GLM) is a regression model
     in which a chosen function $g$, the link function,
@@ -55,6 +56,10 @@ shows the details.
 These notes also use shorthand macros,
 such as `\floor{x}` for $\floor{x}$,
 defined in the `latex-macros` submodule's `macros.qmd`.
+
+# The prime symbol {#sec-prime-symbol}
+
+{{< include mds/_subfiles/notation/_rem-prime-overloaded.qmd >}}
 
 # Subscripts and parentheses {#sec-subscripts-parentheses}
 

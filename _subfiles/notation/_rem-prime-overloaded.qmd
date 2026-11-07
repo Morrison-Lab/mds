@@ -1,0 +1,30 @@
+::: {#rem-prime-overloaded}
+
+#### The prime is overloaded
+
+A prime attached to a symbol has no single meaning.
+Sources use it for several different operations,
+and the symbol itself does not say which one.
+Read $x'$ as "do the thing":
+apply the operation that the context makes most salient.
+
+The common readings are:
+
+- **Derivative.**
+  For a function $f$, $f'$ is the [derivative](calculus-derivatives.qmd#def-lagrange-notation) of $f$,
+  and $f''$ is its second derivative.
+- **Transpose.**
+  For a vector or matrix $\mX$, $\mX'$ is the [transpose](linear-algebra-vectors.qmd#def-transpose) of $\mX$.
+- **Another value.**
+  For a quantity $x$, $x'$ is a second value of the same kind,
+  as in a threshold $\thresh'$ that is compared with a threshold $\thresh$.
+
+The type of the symbol usually decides.
+A function has a derivative, a matrix has a transpose, and a number has neither,
+so a primed number is a second number.
+When the type does not decide, the surrounding sentence does.
+
+These notes mostly write the transpose as $\tp{\mX}$, with a superscript $\top$,
+so that a prime next to a vector or matrix rarely competes with a derivative.
+
+:::
