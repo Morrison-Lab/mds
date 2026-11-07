@@ -294,7 +294,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-06 15:41:41 (PST)</p>
+  <p class="date">Last modified: 2026-11-06 17:29:37 (PST)</p>
 </section>
 <section class="slide level2 scrollable">
 
@@ -431,7 +431,7 @@ Table&nbsp;1: Notation used in this book
 </figure>
 </div>
 <p>The links for conditioning, random variables, expectation, and independence go to the Morrison Lab’s probability notes, which define those terms.</p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>depending on whether it is applied to a matrix or a function</p></li><li id="fn2"><p>A generalized linear model (GLM) is a regression model in which a chosen function <span class="math inline">\(g\)</span>, the link function, of the population mean <span class="math inline">\(\mu\)</span> of the outcome equals the linear predictor <span class="math inline">\(\eta = x^{\top} \beta\)</span>, a <a href="./linear-algebra-vectors.html#def-linear-combination">linear combination</a> of the predictor values <span class="math inline">\(x\)</span> with coefficients <span class="math inline">\(\beta\)</span>: <span class="math inline">\(g(\mu) = \eta\)</span>.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>depending on whether it is applied to a <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> or a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a>; see <a href="#/rem-prime-overloaded" class="quarto-xref">Remark&nbsp;1</a> for the other readings</p></li><li id="fn2"><p>A generalized linear model (GLM) is a regression model in which a chosen function <span class="math inline">\(g\)</span>, the link function, of the population mean <span class="math inline">\(\mu\)</span> of the outcome equals the linear predictor <span class="math inline">\(\eta = x^{\top} \beta\)</span>, a <a href="./linear-algebra-vectors.html#def-linear-combination">linear combination</a> of the predictor values <span class="math inline">\(x\)</span> with coefficients <span class="math inline">\(\beta\)</span>: <span class="math inline">\(g(\mu) = \eta\)</span>.</p></li></ol></aside></section>
 <section id="sec-writing-math-quarto" class="slide level2" data-number="1">
 <h2><span class="header-section-number">1</span> Writing math in Quarto</h2>
 </section>
@@ -439,13 +439,30 @@ Table&nbsp;1: Notation used in this book
 
 <p>The third column of <a href="#/tbl-notation-collected" class="quarto-xref">Table&nbsp;1</a> gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in <code>$x^2$</code>, and displayed equations between double dollar signs, as in <code>$$x^2$$</code>. The <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">equations section of Quarto’s Markdown guide</a> shows the details. These notes also use shorthand macros, such as <code>\floor{x}</code> for <span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span>, defined in the <code>latex-macros</code> submodule’s <code>macros.qmd</code>.</p>
 </section>
-<section id="sec-subscripts-parentheses" class="slide level2" data-number="2">
-<h2><span class="header-section-number">2</span> Subscripts and parentheses</h2>
+<section id="sec-prime-symbol" class="slide level2" data-number="2">
+<h2><span class="header-section-number">2</span> The prime symbol</h2>
+</section>
+<section class="slide level2">
+
+<div id="rem-prime-overloaded" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (The prime is overloaded). </span>A prime attached to a symbol has no single meaning. Sources use it for several different operations, and the symbol itself does not say which one. Read <span class="math inline">\(x'\)</span> as “do the thing”: <!-- check-avoided-words: allow --> apply the operation that the context makes most salient.</p>
+<p>The common readings are:</p>
+<ul>
+<li><strong><a href="./calculus-derivatives.html#def-lagrange-notation">Derivative</a>.</strong> For a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f\)</span>, <span class="math inline">\(f'\)</span> is the derivative of <span class="math inline">\(f\)</span>, and <span class="math inline">\(f''\)</span> is its <a href="./calculus-derivatives.html#def-second-derivative">second derivative</a>.</li>
+<li><strong><a href="./linear-algebra-vectors.html#def-transpose">Transpose</a>.</strong> For a vector or <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{X}\)</span>, <span class="math inline">\(\mathbf{X}'\)</span> is the transpose of <span class="math inline">\(\mathbf{X}\)</span>.</li>
+<li><strong>Another value.</strong> For a quantity <span class="math inline">\(x\)</span>, <span class="math inline">\(x'\)</span> is a second value of the same kind, as in a threshold <span class="math inline">\(\theta'\)</span> that is compared with a threshold <span class="math inline">\(\theta\)</span>.</li>
+</ul>
+<p>The type of the symbol usually decides. A function has a derivative, a matrix has a transpose, and a number has neither, so a primed number is a second number. When the type does not decide, the surrounding sentence does.</p>
+<p>These notes mostly write the transpose as <span class="math inline">\({\mathbf{X}}^{\top}\)</span>, with a superscript <span class="math inline">\(\top\)</span>, so that a prime next to a vector or matrix rarely competes with a derivative.</p>
+</div>
+</section>
+<section id="sec-subscripts-parentheses" class="slide level2" data-number="3">
+<h2><span class="header-section-number">3</span> Subscripts and parentheses</h2>
 </section>
 <section class="slide level2">
 
 <div id="rem-subscript-parentheses-convention" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Our convention for subscripts and parentheses). </span>Subscripts and parentheses both attach extra information to a symbol, and sources divide the work between them differently. These notes follow two rules of thumb:</p>
+<p><span class="proof-title"><em>Remark 2</em> (Our convention for subscripts and parentheses). </span>Subscripts and parentheses both attach extra information to a symbol, and sources divide the work between them differently. These notes follow two rules of thumb:</p>
 <ul>
 <li>A subscript names which member of an <a href="https://morrison-lab.github.io/mcs/sets.html#def-indexed-family">indexed family</a> we mean. <!-- check-term-links: allow --> It holds an index, such as the <span class="math inline">\(i\)</span> in <span class="math inline">\(x_i\)</span>, or a parameter that picks one <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> or distribution out of the family, such as the <span class="math inline">\(\theta\)</span> in <span class="math inline">\(f_\theta\)</span>.</li>
 <li>Parentheses hold the input a function is evaluated at, as in <span class="math inline">\(f(x)\)</span>.</li>
@@ -463,16 +480,16 @@ Table&nbsp;1: Notation used in this book
 <p><span class="theorem-title"><strong>Example 1 (Reading <span class="math inline">\(X_t(\omega)\)</span>)</strong></span> Let <span class="math inline">\(X_t\)</span> be the position of a particle at time <span class="math inline">\(t \ge 0\)</span>. Then <span class="math inline">\(X_3\)</span> is the random position at time 3, and <span class="math inline">\(X_3(\omega)\)</span> is its value when the experiment’s <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome">outcome</a> is <span class="math inline">\(\omega\)</span>. Holding <span class="math inline">\(\omega\)</span> fixed and letting <span class="math inline">\(t\)</span> vary gives the particle’s whole path for that outcome. A source that writes <span class="math inline">\(X(t, \omega)\)</span> means the same thing, with both arguments in parentheses.</p>
 </div>
 </section>
-<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="slide level2" data-number="3">
-<h2><span class="header-section-number">3</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
+<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="slide level2" data-number="4">
+<h2><span class="header-section-number">4</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
 </section>
 <section class="slide level2">
 
 <p>In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.</p>
 <p>It’s worth noting that calculus was formalized in the <a href="https://en.wikipedia.org/wiki/Leibniz%27s_notation">1600s</a>, elementary algebra was formalized around <a href="https://en.wikipedia.org/wiki/Al-Jabr">820</a>, and arithmetic <a href="https://en.wikipedia.org/wiki/Arithmetic#History">even earlier</a>. And calculus still has <a href="https://en.wikipedia.org/wiki/Notation_for_differentiation">several competing notation systems</a>. In contrast, the field of statistics only emerged in the <a href="https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics">late 1800s and early 1900s</a>, so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 <span class="citation" data-cites="nelder1972generalized"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>, which is very recent in terms of the <a href="https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions">pace of scientific development</a>.</p>
 </section>
-<section id="sec-further-reading" class="slide level2" data-number="4">
-<h2><span class="header-section-number">4</span> Further reading</h2>
+<section id="sec-further-reading" class="slide level2" data-number="5">
+<h2><span class="header-section-number">5</span> Further reading</h2>
 </section>
 <section class="slide level2">
 

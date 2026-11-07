@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 15:41:41 (PST)
+Last modified: 2026-11-06 17:29:37 (PST)
 
 > **NOTE:**
 >
@@ -935,7 +935,7 @@ Last modified: 2026-11-06 15:41:41 (PST)
 > })
 > ```
 >
-> Figure 1: The [graph](functions.llms.md#def-graph) of $f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b$, in three dimensions and from above.
+> Figure 1: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b$, drawn as a surface in $\mathbb{R}^3$ and as seen from above.
 
 > **NOTE:**
 >
