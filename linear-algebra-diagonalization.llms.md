@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 20:21:54 (PST)
+Last modified: 2026-11-07 02:32:23 (PST)
 
 # 1 Similarity and diagonalization
 
