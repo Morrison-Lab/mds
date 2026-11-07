@@ -5,7 +5,7 @@
 A prime attached to a symbol has no single meaning.
 Sources use it for several different operations,
 and the symbol itself does not say which one.
-Read $x'$ as "do the thing":
+Read $x'$ as "do the thing": <!-- check-avoided-words: allow -->
 apply the operation that the context makes most salient.
 
 The common readings are:
