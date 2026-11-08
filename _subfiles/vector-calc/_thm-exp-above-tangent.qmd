@@ -11,7 +11,7 @@ with equality exactly when $x = 0$.
 
 ::: proof
 
-Let $g(x) \eqdef \expf{x} - 1 - x$.
+Let $g(x) = \expf{x} - 1 - x$.
 The [exponential function](algebra.qmd#def-exponential-function) has [second derivative](calculus-derivatives.qmd#def-second-derivative) $\expf{x} > 0$ at every $x$,
 so it is [convex](algebra.qmd#def-convex-function) by @thm-convex-hessian.
 The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $g$ differs from it by a [linear function](algebra.qmd#def-linear-function),
