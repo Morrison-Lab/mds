@@ -1,7 +1,7 @@
 :::{#thm-exp-above-tangent}
 #### The exponential function lies above its tangent line at zero
 
-For every real $x$,
+For every [real](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$,
 
 $$\expf{x} \ge 1 + x,$$
 
@@ -12,10 +12,10 @@ with equality exactly when $x = 0$.
 ::: proof
 
 Let $g(x) \eqdef \expf{x} - 1 - x$.
-The [exponential function](algebra.qmd#def-exponential-function) has second [derivative](calculus.qmd#def-second-derivative) $\expf{x} > 0$ at every $x$,
+The [exponential function](algebra.qmd#def-exponential-function) has [second derivative](calculus-derivatives.qmd#def-second-derivative) $\expf{x} > 0$ at every $x$,
 so it is [convex](algebra.qmd#def-convex-function) by @thm-convex-hessian,
-and so is $g$, which differs from it by a linear function.
-Its derivative is $g'(x) = \expf{x} - 1$,
+and so is $g$, which differs from it by a [linear function](algebra.qmd#def-linear-function).
+The [derivative](calculus-derivatives.qmd#def-derivative) of $g$ is $g'(x) = \expf{x} - 1$,
 which is $0$ at $x = 0$.
 By @cor-convex-stationary, $0$ is a [global minimizer](algebra.qmd#def-global-minimizer) of $g$,
 and $g(0) = 0$,
@@ -23,7 +23,7 @@ so $g(x) \ge 0$ for every $x$.
 
 Suppose $g(x) = 0$ for some $x$.
 Then $x$ is also a global minimizer of $g$,
-and so a local minimizer,
+and so a [local minimizer](algebra.qmd#def-local-minimizer),
 and [Fermat's theorem](optimization-critical-points.qmd#thm-fermat) gives $g'(x) = \expf{x} - 1 = 0$.
 Then $\expf{x} = 1 = \expf{0}$, which gives $x = 0$ because the exponential function is injective.
 
