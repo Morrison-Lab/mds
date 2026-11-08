@@ -1,0 +1,22 @@
+:::{#cor-log-below-tangent}
+#### The natural logarithm lies below its tangent line at one
+
+For every $t > 0$,
+
+$$\logf{t} \le t - 1,$$
+
+with equality exactly when $t = 1$.
+
+:::
+
+::: proof
+
+Put $x = \logf{t}$,
+so that $\expf{x} = t$ by the [inverse relation of the logarithm and the exponential](algebra.qmd#thm-exp-log-inverse).
+By @thm-exp-above-tangent, $t = \expf{x} \ge 1 + x = 1 + \logf{t}$,
+which is $\logf{t} \le t - 1$.
+Equality holds exactly when $x = 0$,
+that is, when $\logf{t} = 0$,
+that is, when $t = 1$.
+
+:::

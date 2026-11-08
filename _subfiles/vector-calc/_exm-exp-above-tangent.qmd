@@ -1,0 +1,13 @@
+:::{#exm-exp-above-tangent}
+#### Two values of the bounds
+
+<!-- no-figure: the example is two numbers -->
+
+At $x = 1$, $\expf{1} = \euler \approx 2.718$,
+which is at least $1 + 1 = 2$.
+At $t = 2$, $\logf{2} \approx 0.693$,
+which is at most $2 - 1 = 1$.
+Neither is an equality,
+because $x \ne 0$ and $t \ne 1$.
+
+:::
