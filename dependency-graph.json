@@ -10564,6 +10564,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#cor-log-below-tangent",
+   "site": "mds",
+   "page": "optimization",
+   "div": "cor-log-below-tangent",
+   "kind": "cor",
+   "title": "The natural logarithm lies below its tangent line at one",
+   "external": false
+  },
+  {
    "id": "mds/optimization#cor-qp-sensitivity",
    "site": "mds",
    "page": "optimization",
@@ -11167,6 +11176,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#thm-exp-above-tangent",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-exp-above-tangent",
+   "kind": "thm",
+   "title": "The exponential function lies above its tangent line at zero",
+   "external": false
+  },
+  {
    "id": "mds/optimization#thm-fermat",
    "site": "mds",
    "page": "optimization",
@@ -11374,6 +11392,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization-convexity#cor-log-below-tangent",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "cor-log-below-tangent",
+   "kind": "cor",
+   "title": "The natural logarithm lies below its tangent line at one",
+   "external": false
+  },
+  {
    "id": "mds/optimization-convexity#def-concave",
    "site": "mds",
    "page": "optimization-convexity",
@@ -11488,6 +11515,15 @@
    "div": "thm-epigraph",
    "kind": "thm",
    "title": "Convexity through the epigraph",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-exp-above-tangent",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-exp-above-tangent",
+   "kind": "thm",
+   "title": "The exponential function lies above its tangent line at zero",
    "external": false
   },
   {
@@ -20979,6 +21015,14 @@
    "mds/optimization#prp-double-well-divergence"
   ],
   [
+   "mds/optimization#cor-log-below-tangent",
+   "mds/algebra#thm-exp-log-inverse"
+  ],
+  [
+   "mds/optimization#cor-log-below-tangent",
+   "mds/optimization#thm-exp-above-tangent"
+  ],
+  [
    "mds/optimization#cor-qp-sensitivity",
    "mds/optimization#def-sensitivity"
   ],
@@ -21527,6 +21571,54 @@
    "mds/optimization#def-epigraph"
   ],
   [
+   "mds/optimization#thm-exp-above-tangent",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-convex-function"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-exponential-function"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-linear-function"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-local-minimizer"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/calculus-derivatives#def-second-derivative"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/optimization#cor-convex-stationary"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/optimization#thm-convex-hessian"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/optimization-critical-points#thm-fermat"
+  ],
+  [
    "mds/optimization#thm-fermat",
    "mcs/sets#def-open-interval"
   ],
@@ -21911,6 +22003,14 @@
    "mds/optimization-convexity#thm-convex-first-order"
   ],
   [
+   "mds/optimization-convexity#cor-log-below-tangent",
+   "mds/algebra#thm-exp-log-inverse"
+  ],
+  [
+   "mds/optimization-convexity#cor-log-below-tangent",
+   "mds/optimization-convexity#thm-exp-above-tangent"
+  ],
+  [
    "mds/optimization-convexity#def-concave",
    "mds/algebra#def-convex-function"
   ],
@@ -22025,6 +22125,54 @@
   [
    "mds/optimization-convexity#thm-epigraph",
    "mds/optimization-convexity#def-epigraph"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-exponential-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-linear-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-local-minimizer"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/calculus-derivatives#def-second-derivative"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/optimization-convexity#cor-convex-stationary"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/optimization-convexity#thm-convex-hessian"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/optimization-critical-points#thm-fermat"
   ],
   [
    "mds/optimization-critical-points#def-critical-point",

@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-07 22:35:38 (PST)
+Last modified: 2026-11-08 03:04:24 (PST)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -1939,7 +1939,7 @@ See also the [Linear Algebra and Vector Calculus further reading](#sec-additiona
 
 \[1\]
 
-N. Fieller, *Basics of matrix algebra for statistics with R*. Chapman; Hall/CRC, 2016. doi: [10.1201/9781315370200](https://doi.org/10.1201/9781315370200).
+N. Fieller, *Basics of matrix algebra for statistics with R*. Chapman and Hall/CRC, 2016. doi: [10.1201/9781315370200](https://doi.org/10.1201/9781315370200).
 
 \[2\]
 
