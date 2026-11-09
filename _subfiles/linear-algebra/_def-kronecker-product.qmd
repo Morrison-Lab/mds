@@ -1,0 +1,20 @@
+:::{#def-kronecker-product}
+#### Kronecker product
+
+The **Kronecker product**
+of an $m \times n$ [matrix](linear-algebra.qmd#def-matrix) $\matr{A}$
+and a $p \times q$ matrix $\matr{B}$
+is the $mp \times nq$ [block matrix](linear-algebra.qmd#def-block-matrix)
+whose block in row $i$ and column $j$ is $a_{ij} \matr{B}$,
+where $a_{ij}$ is the $(i, j)$ entry of $\matr{A}$:
+
+$$
+\matr{A} \otimes \matr{B}
+= \begin{bmatrix}
+a_{11} \matr{B} & \cdots & a_{1n} \matr{B} \\
+\vdots & \ddots & \vdots \\
+a_{m1} \matr{B} & \cdots & a_{mn} \matr{B}
+\end{bmatrix}.
+$$
+
+:::

@@ -1,0 +1,30 @@
+:::{#exm-kronecker-product}
+#### A Kronecker product
+
+For $\matr{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$
+and $\matr{B} = \begin{bmatrix} 0 & 1 \end{bmatrix}$:
+
+$$
+\begin{aligned}
+\matr{A} \otimes \matr{B}
+&= \begin{bmatrix}
+1 \cd \matr{B} & 2 \cd \matr{B} \\
+3 \cd \matr{B} & 4 \cd \matr{B}
+\end{bmatrix}
+&& \text{(definition of the Kronecker product)} \\
+&= \begin{bmatrix}
+0 & 1 & 0 & 2 \\
+0 & 3 & 0 & 4
+\end{bmatrix}
+&& \text{(multiply each entry of } \matr{A} \text{ by } \matr{B} \text{)}
+\end{aligned}
+$$
+
+The result is $2 \times 4$:
+$\matr{A}$ is $2 \times 2$
+and $\matr{B}$ is $1 \times 2$,
+so $\matr{A} \otimes \matr{B}$ is $(2 \cd 1) \times (2 \cd 2)$.
+
+<!-- no-figure: the example multiplies out one small block matrix -->
+
+:::
