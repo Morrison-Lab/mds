@@ -34,6 +34,22 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_thm-trans-ineq.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-trans-ineq.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-trans-non-strict-ineq.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-trans-non-strict-ineq.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_thm-add-ineq.qmd >}}
 
 {{< slidebreak >}}

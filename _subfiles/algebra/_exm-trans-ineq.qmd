@@ -1,0 +1,8 @@
+:::{#exm-trans-ineq}
+#### Chaining strict inequalities
+
+Since $1 < 2$ and $2 < 5$, it follows that $1 < 5$.
+
+<!-- no-figure: the example chains two inequalities on three numbers -->
+
+:::
