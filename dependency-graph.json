@@ -5029,6 +5029,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-kronecker-product",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-kronecker-product",
+   "kind": "def",
+   "title": "Kronecker product",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-leading-block",
    "site": "mds",
    "page": "linear-algebra",
@@ -7663,6 +7672,15 @@
    "div": "def-inner-product-space",
    "kind": "def",
    "title": "Inner product space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#def-kronecker-product",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-kronecker-product",
+   "kind": "def",
+   "title": "Kronecker product",
    "external": false
   },
   {
@@ -15287,6 +15305,14 @@
    "mds/linear-algebra#def-identity-matrix"
   ],
   [
+   "mds/linear-algebra#def-kronecker-product",
+   "mds/linear-algebra#def-block-matrix"
+  ],
+  [
+   "mds/linear-algebra#def-kronecker-product",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
    "mds/linear-algebra#def-leading-block",
    "mds/linear-algebra#def-block-matrix"
   ],
@@ -18597,6 +18623,14 @@
   [
    "mds/linear-algebra-inner-products#def-inner-product-space",
    "mds/linear-algebra-inner-products#def-inner-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-kronecker-product",
+   "mds/linear-algebra#def-block-matrix"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-kronecker-product",
+   "mds/linear-algebra#def-matrix"
   ],
   [
    "mds/linear-algebra-inner-products#def-orthogonal-inner-product",
@@ -23072,6 +23106,10 @@
   [
    "mds/linear-algebra#cor-sample-covariance-singular",
    "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#def-kronecker-product",
+   "mds/linear-algebra#def-block-matrix"
   ],
   [
    "mds/linear-algebra#thm-cross-product-sum-outer",

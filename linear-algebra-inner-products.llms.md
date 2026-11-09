@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 11:54:33 (PST)
+Last modified: 2026-11-09 12:55:39 (PST)
 
 # 1 Inner products
 
@@ -1366,11 +1366,44 @@ Last modified: 2026-11-09 11:54:33 (PST)
 >
 > **Example 28 (The rank of an outer product)** In [Example 27](#exm-outer-product), the second column $(5, 10, 15)$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ is $\frac{5}{4}$ times the first column $(4, 8, 12)$, because the columns are $v_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 4\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $v_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 5\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$. So the two columns are not linearly independent, and the $3 \times 2$ matrix has rank $1$.
 
-# 5 Hilbert spaces
+# 5 Kronecker product
 
 > **NOTE:**
 >
-> **Definition 13 (Cauchy sequence)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ of vectors in a [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is a **Cauchy sequence** [\[15\]](#ref-wikipedia_cauchy_sequence) if for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ such that
+> **Definition 13 (Kronecker product)** The **Kronecker product** of an $m \times n$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ and a $p \times q$ matrix $\mathbf{B}$ is the $mp \times nq$ [block matrix](linear-algebra-diagonalization.llms.md#def-block-matrix) whose block in row $i$ and column $j$ is $a_{ij} \mathbf{B}$, where $a_{ij}$ is the $(i, j)$ entry of $\mathbf{A}$:
+>
+> $$\mathbf{A} \otimes \mathbf{B}
+> = \begin{bmatrix}
+> a_{11} \mathbf{B} & \cdots & a_{1n} \mathbf{B} \\
+> \vdots & \ddots & \vdots \\
+> a_{m1} \mathbf{B} & \cdots & a_{mn} \mathbf{B}
+> \end{bmatrix}.$$
+
+> **NOTE:**
+>
+> **Example 29 (A Kronecker product)** For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 0 & 1 \end{bmatrix}$:
+>
+> $$\begin{aligned}
+> \mathbf{A} \otimes \mathbf{B}
+> &= \begin{bmatrix}
+> 1 \cdot\mathbf{B} & 2 \cdot\mathbf{B} \\
+> 3 \cdot\mathbf{B} & 4 \cdot\mathbf{B}
+> \end{bmatrix}
+> && \text{(definition of the Kronecker product)} \\
+> &= \begin{bmatrix}
+> 0 & 1 & 0 & 2 \\
+> 0 & 3 & 0 & 4
+> \end{bmatrix}
+> && \text{(multiply each entry of } \mathbf{A} \text{ by } \mathbf{B} \text{)}
+> \end{aligned}$$
+>
+> The result is $2 \times 4$: $\mathbf{A}$ is $2 \times 2$ and $\mathbf{B}$ is $1 \times 2$, so $\mathbf{A} \otimes \mathbf{B}$ is $(2 \cdot 1) \times (2 \cdot 2)$.
+
+# 6 Hilbert spaces
+
+> **NOTE:**
+>
+> **Definition 14 (Cauchy sequence)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ of vectors in a [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is a **Cauchy sequence** [\[15\]](#ref-wikipedia_cauchy_sequence) if for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ such that
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{} < \varepsilon\quad \text{for all } m, n \ge N,$$
 >
@@ -1378,25 +1411,25 @@ Last modified: 2026-11-09 11:54:33 (PST)
 
 > **NOTE:**
 >
-> **Example 29 (A Cauchy sequence of real numbers)** The [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\mathbb{R}$ with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\,y$ form an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), and $\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left|x\right|\mathclose{}$ in it. The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence). Given $\varepsilon> 0$, take $N$ to be any [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) larger than $\frac{1}{\varepsilon}$. [For all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$, so $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{N} < \varepsilon$. For example, with $\varepsilon= 0.01$, take $N = 101$: all $m, n \ge 101$ have $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{101} < 0.01$.
+> **Example 30 (A Cauchy sequence of real numbers)** The [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\mathbb{R}$ with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\,y$ form an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), and $\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left|x\right|\mathclose{}$ in it. The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence). Given $\varepsilon> 0$, take $N$ to be any [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) larger than $\frac{1}{\varepsilon}$. [For all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$, so $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{N} < \varepsilon$. For example, with $\varepsilon= 0.01$, take $N = 101$: all $m, n \ge 101$ have $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{101} < 0.01$.
 
 > **NOTE:**
 >
-> **Definition 14 (Complete inner product space)** A [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is **complete** [\[16\]](#ref-wikipedia_complete_metric_space) if for every [Cauchy sequence](#def-cauchy-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ in $V$ there is a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ such that for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ with
+> **Definition 15 (Complete inner product space)** A [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is **complete** [\[16\]](#ref-wikipedia_complete_metric_space) if for every [Cauchy sequence](#def-cauchy-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ in $V$ there is a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ such that for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ with
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} < \varepsilon\quad \text{for every } n \ge N.$$
 
 > **NOTE:**
 >
-> **Example 30 (Polynomials are not complete)** Let $V$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [polynomials](algebra-exponentials.llms.md#def-polynomial) on $[0, 1]$, with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\,g(t)\,dt$. The [partial sums](algebra-exponentials.llms.md#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$, because they [converge](algebra-exponentials.llms.md#def-convergent-sequence) uniformly on $[0, 1]$ to $\text{e}^{t}$. The only candidate for a [limit](algebra-exponentials.llms.md#def-sequence-limit) is $\text{e}^{t}$, which is not a [polynomial](algebra-exponentials.llms.md#def-polynomial), so no polynomial $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ satisfies the condition of [Definition 14](#def-complete-inner-product-space), and $V$ is not [complete](#def-complete-inner-product-space).
+> **Example 31 (Polynomials are not complete)** Let $V$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [polynomials](algebra-exponentials.llms.md#def-polynomial) on $[0, 1]$, with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\,g(t)\,dt$. The [partial sums](algebra-exponentials.llms.md#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$, because they [converge](algebra-exponentials.llms.md#def-convergent-sequence) uniformly on $[0, 1]$ to $\text{e}^{t}$. The only candidate for a [limit](algebra-exponentials.llms.md#def-sequence-limit) is $\text{e}^{t}$, which is not a [polynomial](algebra-exponentials.llms.md#def-polynomial), so no polynomial $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ satisfies the condition of [Definition 15](#def-complete-inner-product-space), and $V$ is not [complete](#def-complete-inner-product-space).
 
 > **NOTE:**
 >
-> **Definition 15 (Hilbert space)** A **Hilbert space** [\[17\]](#ref-wikipedia_hilbert_space) is a [complete](#def-complete-inner-product-space) [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) [\[3, Sec. 16.8\]](#ref-banerjee2014linear), Definition 16.8, p. 547.
+> **Definition 16 (Hilbert space)** A **Hilbert space** [\[17\]](#ref-wikipedia_hilbert_space) is a [complete](#def-complete-inner-product-space) [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) [\[3, Sec. 16.8\]](#ref-banerjee2014linear), Definition 16.8, p. 547.
 
 > **NOTE:**
 >
-> **Example 31 (Real coordinate space is a Hilbert space)** The Euclidean [space](linear-algebra-vectors.llms.md#def-real-coordinate-space) $\mathbb{R}^2$ with the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ([Example 2](#exm-inner-product-space)) is a [Hilbert space](#def-hilbert-space). Let $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (x_{n,1}, x_{n,2})$ be a [Cauchy sequence](#def-cauchy-sequence) in it. Each coordinate [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) is a Cauchy sequence of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), because $\mathopen{}\left|x_{m,j} - x_{n,j}\right|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{}$ for $j = 1, 2$. Each coordinate sequence then [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $y_j$, because every Cauchy sequence of real numbers converges [\[16\]](#ref-wikipedia_complete_metric_space), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, y_2)$ satisfies the condition of [Definition 14](#def-complete-inner-product-space). For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (\frac{1}{n}, 1 + \frac{1}{n})$ is a Cauchy sequence with [limit](algebra-exponentials.llms.md#def-sequence-limit) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)$.
+> **Example 32 (Real coordinate space is a Hilbert space)** The Euclidean [space](linear-algebra-vectors.llms.md#def-real-coordinate-space) $\mathbb{R}^2$ with the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ([Example 2](#exm-inner-product-space)) is a [Hilbert space](#def-hilbert-space). Let $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (x_{n,1}, x_{n,2})$ be a [Cauchy sequence](#def-cauchy-sequence) in it. Each coordinate [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) is a Cauchy sequence of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), because $\mathopen{}\left|x_{m,j} - x_{n,j}\right|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{}$ for $j = 1, 2$. Each coordinate sequence then [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $y_j$, because every Cauchy sequence of real numbers converges [\[16\]](#ref-wikipedia_complete_metric_space), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, y_2)$ satisfies the condition of [Definition 15](#def-complete-inner-product-space). For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (\frac{1}{n}, 1 + \frac{1}{n})$ is a Cauchy sequence with [limit](algebra-exponentials.llms.md#def-sequence-limit) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)$.
 
 # Definitions on this page
 
@@ -1412,9 +1445,10 @@ Last modified: 2026-11-09 11:54:33 (PST)
 - [Definition 10 (Orthonormal basis)](#def-orthonormal-basis)
 - [Definition 11 (Gram-Schmidt process)](#def-gram-schmidt)
 - [Definition 12 (Outer product)](#def-outer-product)
-- [Definition 13 (Cauchy sequence)](#def-cauchy-sequence)
-- [Definition 14 (Complete inner product space)](#def-complete-inner-product-space)
-- [Definition 15 (Hilbert space)](#def-hilbert-space)
+- [Definition 13 (Kronecker product)](#def-kronecker-product)
+- [Definition 14 (Cauchy sequence)](#def-cauchy-sequence)
+- [Definition 15 (Complete inner product space)](#def-complete-inner-product-space)
+- [Definition 16 (Hilbert space)](#def-hilbert-space)
 
 Back to top
 
