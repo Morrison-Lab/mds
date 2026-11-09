@@ -26,7 +26,7 @@ f(\vcoef) = \norm{\vy - \mX\vcoef}^2,
 $$
 
 a scalar-valued function of the $2 \times 1$ vector $\vcoef$.
-Its gradient is
+Its [gradient](vector-calculus.qmd#def-vector-derivative) is
 
 $$
 \gradf{f}(\vcoef) = -2\,\tp{\mX}(\vy - \mX\vcoef).

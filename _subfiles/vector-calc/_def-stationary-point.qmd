@@ -18,7 +18,7 @@ is a **stationary point** of $f$.
 #### A stationary point, and a point that is not one
 
 Let $f(\vx) = x_1^2 + x_2^2 - 2 x_1$.
-Its gradient is
+Its [gradient](vector-calculus.qmd#def-vector-derivative) is
 
 $$
 \gradf{f}(\vx) = \tp{(2 x_1 - 2,\ 2 x_2)},
