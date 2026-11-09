@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 11:08:46 (PST)
+Last modified: 2026-11-09 11:54:33 (PST)
 
 # 1 Equalities
 
@@ -59,19 +59,35 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 3 (Adding to both sides of an inequality)** If $a<b$, then $a+c < b+c$
+> **Theorem 3 (Strict inequalities are transitive)** If $a < b$ and $b < c$, then $a < c$. That is, $<$ is a [transitive](https://morrison-lab.github.io/mcs/chapters/relations.html#def-transitive) relation.
 
 > **NOTE:**
 >
-> **Theorem 4 (Negating both sides of an inequality)** If $a < b$, then: $-a > -b$
+> **Example 4 (Chaining strict inequalities)** Since $1 < 2$ and $2 < 5$, it follows that $1 < 5$.
 
 > **NOTE:**
 >
-> **Theorem 5 (Multiplying both sides of an inequality by a positive number)** If $a < b$ and $c > 0$, then $ca < cb$.
+> **Theorem 4 (Non-strict inequalities are transitive)** If $a \le b$ and $b \le c$, then $a \le c$. That is, $\le$ is a [transitive](https://morrison-lab.github.io/mcs/chapters/relations.html#def-transitive) relation.
 
 > **NOTE:**
 >
-> **Theorem 6 (Negation is multiplication by** $-1$) $$-a = (-1)*a$$
+> **Example 5 (Chaining non-strict inequalities)** Since $3 \le 3$ and $3 \le 4$, it follows that $3 \le 4$.
+
+> **NOTE:**
+>
+> **Theorem 5 (Adding to both sides of an inequality)** If $a<b$, then $a+c < b+c$
+
+> **NOTE:**
+>
+> **Theorem 6 (Negating both sides of an inequality)** If $a < b$, then: $-a > -b$
+
+> **NOTE:**
+>
+> **Theorem 7 (Multiplying both sides of an inequality by a positive number)** If $a < b$ and $c > 0$, then $ca < cb$.
+
+> **NOTE:**
+>
+> **Theorem 8 (Negation is multiplication by** $-1$) $$-a = (-1)*a$$
 
 # 3 Powers, square roots, and absolute values
 
@@ -95,7 +111,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 4 (Powers)**  
+> **Example 6 (Powers)**  
 >
 > - $$\begin{aligned}
 >   2^3 &= 2 \cdot 2 \cdot 2 \\
@@ -142,7 +158,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 5 (Square roots)**  
+> **Example 7 (Square roots)**  
 >
 > - $\sqrt{9} = 3$. Although $(-3)^2 = 9$ too, $-3$ is negative, so $\sqrt{9}$ is not $-3$.
 > - $\sqrt{0} = 0$.
@@ -160,7 +176,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 6 (Absolute values)**  
+> **Example 8 (Absolute values)**  
 >
 > - $\mathopen{}\left|2.5\right|\mathclose{} = 2.5$, because $2.5 \ge 0$.
 >
@@ -201,7 +217,7 @@ The word “percent” comes from the Latin “per centum”; “centum” is La
 
 > **NOTE:**
 >
-> **Example 7 (Ten percent is one tenth)** Contrary to what you may have learned previously, the equality $10\% = 0.1$ is true and correct, just as $10 \text{kg} = 10,000 \text{g}$ is true and correct:
+> **Example 9 (Ten percent is one tenth)** Contrary to what you may have learned previously, the equality $10\% = 0.1$ is true and correct, just as $10 \text{kg} = 10,000 \text{g}$ is true and correct:
 >
 > $$\begin{aligned}
 > 10\% &= \frac{10}{100}
@@ -249,7 +265,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 8 (A maximum, and a set without one)**  
+> **Example 10 (A maximum, and a set without one)**  
 >
 > - $\max \mathopen{}\left\{-2, 5, 0\right\}\mathclose{} = 5$: $5$ is in the set, and $-2 \le 5$, $5 \le 5$, $0 \le 5$.
 > - The interval $[0, 1)$ has no maximum. For any $a \in [0, 1)$, the number $\tfrac{a + 1}{2}$ is also in $[0, 1)$, and it is larger than $a$, since $\tfrac{a + 1}{2} > a$ exactly when $a < 1$. So no element of $[0, 1)$ is at least as large as every element.
@@ -278,10 +294,10 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 9 (An argmax with two points, and an empty one)**  
+> **Example 11 (An argmax with two points, and an empty one)**  
 >
 > - Let $g(x) = x^2$ on $A = \mathopen{}\left\{-2, 0, 1, 2\right\}\mathclose{}$. The values are $g(-2) = 4$, $g(0) = 0$, $g(1) = 1$ and $g(2) = 4$, so the largest value is $4$ and $\arg \max_{x \in A} g(x) = \mathopen{}\left\{-2, 2\right\}\mathclose{}$. This argmax has two elements, so it is not written as a single $\hat{x}$.
-> - Let $f(x) = x$ on $[0, 1)$. As in [Example 8](#exm-maximum), for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value, so no input attains a largest value, and $\arg \max_{x \in [0, 1)} f(x)$ is the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set).
+> - Let $f(x) = x$ on $[0, 1)$. As in [Example 10](#exm-maximum), for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value, so no input attains a largest value, and $\arg \max_{x \in [0, 1)} f(x)$ is the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set).
 
 > **NOTE:**
 >
@@ -315,7 +331,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Theorem 7 (A positive multiple has the same argmax)** Let $g : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) and let $c > 0$. Then
+> **Theorem 9 (A positive multiple has the same argmax)** Let $g : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) and let $c > 0$. Then
 >
 > $$\arg \max_{x \in A} c\,g(x) = \arg \max_{x \in A} g(x).$$
 
@@ -323,7 +339,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 >
 > *Proof*. Let $x^* \in A$. By [Definition 15](#def-argmax), $x^*$ is in the [argmax](#def-argmax) of $c\,g$ [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $c\,g(a) \le c\,g(x^*)$ for every $a \in A$.
 >
-> Suppose $g(a) \le g(x^*)$. If $g(a) = g(x^*)$, then $c\,g(a) = c\,g(x^*)$. If $g(a) < g(x^*)$, then $c\,g(a) < c\,g(x^*)$ by [Theorem 5](#thm-mult-ineq). Either way, $c\,g(a) \le c\,g(x^*)$.
+> Suppose $g(a) \le g(x^*)$. If $g(a) = g(x^*)$, then $c\,g(a) = c\,g(x^*)$. If $g(a) < g(x^*)$, then $c\,g(a) < c\,g(x^*)$ by [Theorem 7](#thm-mult-ineq). Either way, $c\,g(a) \le c\,g(x^*)$.
 >
 > Conversely, suppose $c\,g(a) \le c\,g(x^*)$. Since $1/c > 0$ and $(1/c)\,(c\,g) = g$, the same reasoning applied to the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
 >
@@ -331,7 +347,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 10 (A quadratic and its positive multiple)** With $g(x) = x(4 - x)$ of [Exercise 2](#exr-argmax-quadratic) and $f = 5\,g$ of [Exercise 3](#exr-argmax-scaled-quadratic), [Theorem 7](#thm-argmax-positive-multiple) (with $c = 5$) gives $\arg \max_{x \in [0, 4]} f(x) = \arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, the same [argmax](#def-argmax) as the exercises found. The largest [values](https://morrison-lab.github.io/mcs/functions.html#def-value) differ, $f(2) = 20$ and $g(2) = 4$, so only the argmax is unchanged by the multiple.
+> **Example 12 (A quadratic and its positive multiple)** With $g(x) = x(4 - x)$ of [Exercise 2](#exr-argmax-quadratic) and $f = 5\,g$ of [Exercise 3](#exr-argmax-scaled-quadratic), [Theorem 9](#thm-argmax-positive-multiple) (with $c = 5$) gives $\arg \max_{x \in [0, 4]} f(x) = \arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, the same [argmax](#def-argmax) as the exercises found. The largest [values](https://morrison-lab.github.io/mcs/functions.html#def-value) differ, $f(2) = 20$ and $g(2) = 4$, so only the argmax is unchanged by the multiple.
 
 > **NOTE:**
 >
@@ -341,7 +357,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 11 (The positive part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [positive part](#def-positive-negative-parts) is $f^{+}(x) = \max\mathopen{}\left\{x, 0\right\}\mathclose{}$. At $x = 3$, $f^{+}(3) = \max\mathopen{}\left\{3, 0\right\}\mathclose{} = 3$, and at $x = -2$, $f^{+}(-2) = \max\mathopen{}\left\{-2, 0\right\}\mathclose{} = 0$.
+> **Example 13 (The positive part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [positive part](#def-positive-negative-parts) is $f^{+}(x) = \max\mathopen{}\left\{x, 0\right\}\mathclose{}$. At $x = 3$, $f^{+}(3) = \max\mathopen{}\left\{3, 0\right\}\mathclose{} = 3$, and at $x = -2$, $f^{+}(-2) = \max\mathopen{}\left\{-2, 0\right\}\mathclose{} = 0$.
 
 > **NOTE:**
 >
@@ -351,7 +367,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 12 (The negative part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [negative part](#def-negative-part) is $f^{-}(x) = \max\mathopen{}\left\{-x, 0\right\}\mathclose{}$. At $x = 3$, $f^{-}(3) = \max\mathopen{}\left\{-3, 0\right\}\mathclose{} = 0$, and at $x = -2$, $f^{-}(-2) = \max\mathopen{}\left\{2, 0\right\}\mathclose{} = 2$.
+> **Example 14 (The negative part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [negative part](#def-negative-part) is $f^{-}(x) = \max\mathopen{}\left\{-x, 0\right\}\mathclose{}$. At $x = 3$, $f^{-}(3) = \max\mathopen{}\left\{-3, 0\right\}\mathclose{} = 0$, and at $x = -2$, $f^{-}(-2) = \max\mathopen{}\left\{2, 0\right\}\mathclose{} = 2$.
 
 # 6 Global and local minimizers
 
@@ -425,7 +441,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 13 (A point that is not a local minimizer)** For $f(x) = x^3 - 3x$, the point $x = -1$ is not a local minimizer. For any $t$,
+> **Example 15 (A point that is not a local minimizer)** For $f(x) = x^3 - 3x$, the point $x = -1$ is not a local minimizer. For any $t$,
 >
 > $$\begin{aligned}
 > f(-1 + t)

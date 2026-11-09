@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 11:08:46 (PST)
+Last modified: 2026-11-09 11:54:33 (PST)
 
 # 1 Taylor polynomials and series
 

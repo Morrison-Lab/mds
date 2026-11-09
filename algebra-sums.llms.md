@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 11:08:46 (PST)
+Last modified: 2026-11-09 11:54:33 (PST)
 
 # 1 Convex functions
 
@@ -207,7 +207,7 @@ Last modified: 2026-11-09 11:08:46 (PST)
 
 > **NOTE:**
 >
-> *Proof*. The first statement is the least-upper-bound property of $\mathbb{R}$ [\[7\]](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8. For the second, let $-A = \mathopen{}\left\{-a : a \in A\right\}\mathclose{}$. Negating both sides of an inequality reverses it ([Theorem 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#thm-neg-ineq)), so $\ell$ is a lower bound of $A$ exactly when $-\ell$ is an upper bound of $-A$. The set $-A$ is nonempty and bounded above, so by the first statement its upper bounds have a minimum $u$, and then $-u$ is the largest lower bound of $A$.
+> *Proof*. The first statement is the least-upper-bound property of $\mathbb{R}$ [\[7\]](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8. For the second, let $-A = \mathopen{}\left\{-a : a \in A\right\}\mathclose{}$. Negating both sides of an inequality reverses it ([Theorem 6 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#thm-neg-ineq)), so $\ell$ is a lower bound of $A$ exactly when $-\ell$ is an upper bound of $-A$. The set $-A$ is nonempty and bounded above, so by the first statement its upper bounds have a minimum $u$, and then $-u$ is the largest lower bound of $A$.
 
 > **NOTE:**
 >

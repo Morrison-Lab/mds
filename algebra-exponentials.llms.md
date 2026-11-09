@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 11:08:46 (PST)
+Last modified: 2026-11-09 11:54:33 (PST)
 
 # 1 Polynomials
 
@@ -223,7 +223,7 @@ Last modified: 2026-11-09 11:08:46 (PST)
 > \\&= m x_2 - m x_1
 > && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)}
 > \\&= m x_2 + m (-x_1)
-> && (-(m x_1) = m (-x_1) \text{, by }\href{algebra-basics.qmd#thm-negative-one}{\text{Theorem~6 in Equalities, Inequalities and Minimizers}}\text{ and }\href{algebra-sums.qmd#thm-prod-assoc}{\text{Theorem~9 in Convexity, Infimum and Sums}}\text{)}
+> && (-(m x_1) = m (-x_1) \text{, by }\href{algebra-basics.qmd#thm-negative-one}{\text{Theorem~8 in Equalities, Inequalities and Minimizers}}\text{ and }\href{algebra-sums.qmd#thm-prod-assoc}{\text{Theorem~9 in Convexity, Infimum and Sums}}\text{)}
 > \\&= m (x_2 + (-x_1))
 > && \text{(}\href{algebra-sums.qmd#thm-mult-distr}{\text{Theorem~11 in Convexity, Infimum and Sums}}\text{, read right to left)}
 > \\&= m (x_2 - x_1)

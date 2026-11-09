@@ -1699,6 +1699,24 @@
    "external": false
   },
   {
+   "id": "mds/algebra#thm-trans-ineq",
+   "site": "mds",
+   "page": "algebra",
+   "div": "thm-trans-ineq",
+   "kind": "thm",
+   "title": "Strict inequalities are transitive",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#thm-trans-non-strict-ineq",
+   "site": "mds",
+   "page": "algebra",
+   "div": "thm-trans-non-strict-ineq",
+   "kind": "thm",
+   "title": "Non-strict inequalities are transitive",
+   "external": false
+  },
+  {
    "id": "mds/algebra-basics#def-absolute-value",
    "site": "mds",
    "page": "algebra-basics",
@@ -1930,6 +1948,24 @@
    "div": "thm-substitution",
    "kind": "thm",
    "title": "Substituting equivalent expressions",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-basics#thm-trans-ineq",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "thm-trans-ineq",
+   "kind": "thm",
+   "title": "Strict inequalities are transitive",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-basics#thm-trans-non-strict-ineq",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "thm-trans-non-strict-ineq",
+   "kind": "thm",
+   "title": "Non-strict inequalities are transitive",
    "external": false
   },
   {
