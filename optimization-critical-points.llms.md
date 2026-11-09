@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-08 09:57:36 (PST)
+Last modified: 2026-11-09 11:08:46 (PST)
 
 # 1 Critical points and optimization
 
@@ -450,6 +450,65 @@ Last modified: 2026-11-08 09:57:36 (PST)
 > **NOTE:**
 >
 > **Example 6 (An inflection point of** $x^3$) For $f(x) = x^3$, the [second derivative](calculus-derivatives.llms.md#def-second-derivative) is $f''(x) = 6x$, which is negative for $x < 0$ and positive for $x > 0$. So $0$ is an [inflection point](#def-inflection-point) of $f$.
+>
+> [Figure 5](#fig-inflection-point) shows $f$ and $f''$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > ip_x_ip <- seq(-1, 1, length.out = 201)
+> > ip_labels_ip <- c("f(x) = x^3", "f''(x) = 6x")
+> > ip_values_ip <- c(ip_x_ip^3, 6 * ip_x_ip)
+> > ip_n_ip <- length(ip_x_ip)
+> > ip_fn_ip <- rep(ip_labels_ip, each = ip_n_ip)
+> > ip_fn_ip <- factor(ip_fn_ip, levels = ip_labels_ip)
+> > ip_x_rep_ip <- rep(ip_x_ip, 2)
+> > ip_curves_ip <- tibble::tibble(
+> >   x = ip_x_rep_ip, value = ip_values_ip, fn = ip_fn_ip
+> > )
+> > ip_origin_fn_ip <- factor(ip_labels_ip, levels = ip_labels_ip)
+> > ip_origin_ip <- tibble::tibble(x = 0, value = 0, fn = ip_origin_fn_ip)
+> > ip_aes_ip <- ggplot2::aes(x, value)
+> > ip_facet_ip <- ggplot2::vars(fn)
+> > ip_curves_ip |>
+> >   ggplot2::ggplot() +
+> >   ip_aes_ip +
+> >   ggplot2::geom_line(colour = "#0072B2") +
+> >   ggplot2::geom_point(data = ip_origin_ip, colour = "#D55E00", size = 3) +
+> >   ggplot2::facet_wrap(ip_facet_ip, scales = "free_y") +
+> >   ggplot2::labs(x = "x", y = "function value")
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > ip_x_py = np.linspace(-1, 1, 201)
+> > fig, axes = plt.subplots(1, 2, figsize=(6, 3), layout="constrained")
+> > axes[0].plot(ip_x_py, ip_x_py**3, color="#0072B2")
+> > axes[0].plot([0], [0], "o", color="#D55E00")
+> > axes[0].set_title("f(x) = x^3")
+> > axes[1].plot(ip_x_py, 6 * ip_x_py, color="#0072B2")
+> > axes[1].plot([0], [0], "o", color="#D55E00")
+> > axes[1].set_title("f''(x) = 6x")
+> > for ax in axes:
+> >     ax.set_xlabel("x")
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Two side-by-side plots on x from -1 to 1, each with a vermilion circle at the origin. The first, f of x equals x cubed, is a blue curve that bends downward for negative x and upward for positive x. The second, the second derivative 6 x, is a blue straight line that crosses zero at the origin, negative to its left and positive to its right.](optimization-critical-points_files/figure-html/inflection-point-r-3.png)](optimization-critical-points_files/figure-html/inflection-point-r-3.png "Figure 5: The second derivative 6x of f(x) = x^3 in Example 6 changes sign at 0, from negative to positive. So the curve f changes from bending downward to bending upward at the inflection point 0.")
+> >
+> > ## Python
+> >
+> > [![Two side-by-side plots on x from -1 to 1, each with a vermilion circle at the origin. The first, f of x equals x cubed, is a blue curve that bends downward for negative x and upward for positive x. The second, the second derivative 6 x, is a blue straight line that crosses zero at the origin, negative to its left and positive to its right.](optimization-critical-points_files/figure-html/inflection-point-python-1.png)](optimization-critical-points_files/figure-html/inflection-point-python-1.png "Figure 5: The second derivative 6x of f(x) = x^3 in Example 6 changes sign at 0, from negative to positive. So the curve f changes from bending downward to bending upward at the inflection point 0.")
+> >
+> > Figure 5: The [second derivative](calculus-derivatives.llms.md#def-second-derivative) $6x$ of $f(x) = x^3$ in [Example 6](#exm-inflection-point) changes sign at $0$, from negative to positive. So the curve $f$ changes from bending downward to bending upward at the [inflection point](#def-inflection-point) $0$.
 
 > **NOTE:**
 >
@@ -539,7 +598,7 @@ Last modified: 2026-11-08 09:57:36 (PST)
 
 > **NOTE:**
 >
-> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou [\[3\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](proof-writing.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$. The source calls points with zero gradient critical points; here they are stationary points, because [Definition 2](#def-critical-point) gives “critical point” a wider meaning. The source states these results for differentiable functions without saying how smooth; here the first-order results assume continuous first partial derivatives, and the second-order results continuous second partial derivatives. These parts of the source are not part of this section:
+> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou [\[3\]](#ref-zhou2024optim), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$. The source calls points with zero gradient critical points; here they are stationary points, because [Definition 2](#def-critical-point) gives “critical point” a wider meaning. The source states these results for differentiable functions without saying how smooth; here the first-order results assume continuous first partial derivatives, and the second-order results continuous second partial derivatives. These parts of the source are not part of this section:
 >
 > - its remark that maximizing $f$ is minimizing $-f$, and its classification of constraints
 > - its figure of local, strict local and global minima
@@ -574,7 +633,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >   &= 0.
 >   \end{aligned}$$
 >
-> - The [converse](proof-writing.llms.md#def-converse) fails: $g(x) = x^3$ has
+> - The [converse](https://morrison-lab.github.io/mcs/proof-writing.html#def-converse) fails: $g(x) = x^3$ has
 >
 >   $$\begin{aligned}
 >   g'(0) &= 3 \cdot 0^2 \\
@@ -603,7 +662,11 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 
 > **NOTE:**
 >
-> **Example 8 (A stationary point, and a point that is not one)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$. Its gradient is ${(2 x_1 - 2,\ 2 x_2)}^{\top}$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ exactly when $x_1 = 1$ and $x_2 = 0$. So ${(1, 0)}^{\top}$ is its only stationary point, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not one: the gradient there is ${(-2, 0)}^{\top}$.
+> **Example 8 (A stationary point, and a point that is not one)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is
+>
+> $$\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {(2 x_1 - 2,\ 2 x_2)}^{\top},$$
+>
+> which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ exactly when $x_1 = 1$ and $x_2 = 0$. So ${(1, 0)}^{\top}$ is its only stationary point, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not one: $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}) = {(-2, 0)}^{\top}$.
 
 > **NOTE:**
 >
@@ -656,13 +719,13 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >
 > ## R
 >
-> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-r-3.png)](optimization-critical-points_files/figure-html/stationary-point-r-3.png "Figure 5: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
+> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-r-3.png)](optimization-critical-points_files/figure-html/stationary-point-r-3.png "Figure 6: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is \nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
 >
 > ## Python
 >
-> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-python-1.png "Figure 5: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
+> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-python-1.png "Figure 6: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is \nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
 >
-> Figure 5: [Level curves](vector-calculus.llms.md#def-level-curve) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 8](#exm-stationary-point). The [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). At the origin (triangle) the gradient is ${(-2, 0)}^{\top}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> Figure 6: [Level curves](vector-calculus.llms.md#def-level-curve) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 8](#exm-stationary-point). The [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). At the origin (triangle) the gradient is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = {(-2, 0)}^{\top}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
@@ -727,35 +790,61 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > Show code
 >
 > ``` python
-> import matplotlib.pyplot as plt
+> import html
 > import numpy as np
+> import plotly.graph_objects as go
+>
+> fig_alt = (
+>     "Surface plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 "
+>     "and x2 from -2 to 2, a bowl-shaped surface opening upward. The lowest "
+>     "point of the bowl, at (1, 0) and height -1, is marked by a vermilion "
+>     "circle and is the stationary point. A vermilion diamond marks the point of "
+>     "the surface above the origin, at height 0, where the surface is not flat."
+> )
 >
 > sp_x1_3d = np.linspace(-1, 3, 101)
 > sp_x2_3d = np.linspace(-2, 2, 101)
 > sp_x1_grid_3d, sp_x2_grid_3d = np.meshgrid(sp_x1_3d, sp_x2_3d)
 > sp_value_3d = sp_x1_grid_3d**2 + sp_x2_grid_3d**2 - 2 * sp_x1_grid_3d
-> fig = plt.figure(figsize=(6, 4.5))
-> ax = fig.add_subplot(projection="3d")
-> ax.plot_surface(sp_x1_grid_3d, sp_x2_grid_3d, sp_value_3d,
->                 color="#0072B2", alpha=0.6)
-> ax.scatter([1], [0], [-1], marker="o", color="#D55E00", s=50,
->            label="stationary point")
-> ax.scatter([0], [0], [0], marker="D", color="#D55E00", s=50,
->            label="not stationary")
-> ax.set_xlabel("x1")
-> ax.set_ylabel("x2")
-> ax.set_zlabel("f(x)")
-> ax.legend(loc="upper right")
-> plt.show();
+> fig = go.Figure(data=[
+>     go.Surface(
+>         x=sp_x1_3d,
+>         y=sp_x2_3d,
+>         z=sp_value_3d,
+>         colorscale=[[0, "#CCE0F0"], [1, "#0072B2"]],
+>         showscale=False,
+>         opacity=0.6,
+>         showlegend=False,
+>     ),
+>     go.Scatter3d(x=[1], y=[0], z=[-1], mode="markers",
+>                  marker=dict(color="#D55E00", size=4, symbol="circle"),
+>                  name="stationary point"),
+>     go.Scatter3d(x=[0], y=[0], z=[0], mode="markers",
+>                  marker=dict(color="#D55E00", size=4, symbol="diamond"),
+>                  name="not stationary"),
+> ])
+> fig.update_layout(
+>     scene=dict(
+>         xaxis_title="x1",
+>         yaxis_title="x2",
+>         zaxis_title="f(x)",
+>         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+>     ),
+>     legend=dict(orientation="h"),
+> );
+> print(
+>     "```{=html}\n"
+>     + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+>     + fig.to_html(full_html=False, include_plotlyjs="cdn")
+>     + "\n</div>\n```"
+> )
 > ```
 >
 > ## R
 >
-> [![Surface plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2, a bowl-shaped surface opening upward. The lowest point of the bowl, at (1, 0) and height -1, is marked by a vermilion circle and is the stationary point. A vermilion diamond marks the point of the surface above the origin, at height 0, where the surface is not flat.](optimization-critical-points_files/figure-html/stationary-point-3d-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-3d-python-1.png "Figure 6: The graph of the function of Example 8, the surface whose level curves are in Figure 5. The surface is flat, with gradient \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}, only at the bottom of the bowl above the center (1, 0) of the circles, the stationary point (circle). Above the origin (diamond) the surface descends toward the stationary point.")
->
 > ## Python
 >
-> Figure 6: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 8](#exm-stationary-point), the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 5](#fig-stationary-point). The surface is flat, with [gradient](vector-calculus.llms.md#def-vector-derivative) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, only at the bottom of the bowl above the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). Above the origin (diamond) the surface descends toward the stationary point.
+> Figure 7: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 8](#exm-stationary-point), the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 6](#fig-stationary-point). The surface is flat, with [gradient](vector-calculus.llms.md#def-vector-derivative) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, only at the bottom of the bowl above the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). Above the origin (diamond) the surface descends toward the stationary point.
 
 > **NOTE:**
 >
@@ -804,7 +893,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >   &= f(1, 0).
 >   \end{aligned}$$
 >
-> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ of the [Hessian example](vector-calculus.llms.md#exm-hessian), the second entry of the gradient is $e^{2x_1 + x_2} > 0$, so $f$ has no stationary point, and so no local minimizer.
+> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ of the [Hessian example](vector-calculus.llms.md#exm-hessian), the second entry of $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is $e^{2x_1 + x_2} > 0$, so $f$ has no stationary point, and so no local minimizer.
 >
 > - The converse fails: $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$ has gradient ${(2 x_1,\ -2 x_2)}^{\top}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is a stationary point, but
 >
@@ -824,7 +913,11 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}^2,$$
 >
-> a scalar-valued function of the $2 \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$. Its gradient is $-2\,{\mathbf{X}}^{\top}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})$. By [Theorem 4](#thm-first-order-condition), a minimizer of $f$ must make this gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is the equation ${\mathbf{X}}^{\top}\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {\mathbf{X}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The code below solves that equation and evaluates the gradient at the solution and at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> a scalar-valued function of the $2 \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is
+>
+> $$\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = -2\,{\mathbf{X}}^{\top}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}).$$
+>
+> By [Theorem 4](#thm-first-order-condition), a minimizer of $f$ must make this gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is the equation ${\mathbf{X}}^{\top}\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {\mathbf{X}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The code below solves that equation and evaluates the gradient at the solution and at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 >
 > ## Python
 >
@@ -991,7 +1084,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 
 > **NOTE:**
 >
-> **Example 12 (For a quadratic form the expansion is exact)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is $2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([quadratic form gradient](vector-calculus.llms.md#cor-quadratic-form-symmetric)) and its [Hessian](vector-calculus.llms.md#def-hessian) is $2 \mathbf{S}$ at every point ([quadratic form Hessian](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever $\tau$ is, [Theorem 6](#thm-taylor-mv) reads
+> **Example 12 (For a quadratic form the expansion is exact)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([quadratic form gradient](vector-calculus.llms.md#cor-quadratic-form-symmetric)) and its [Hessian](vector-calculus.llms.md#def-hessian) is $2 \mathbf{S}$ at every point ([quadratic form Hessian](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever $\tau$ is, [Theorem 6](#thm-taylor-mv) reads
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})
@@ -1252,13 +1345,13 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 >
 > ## R
 >
-> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-r-1.png)](optimization-critical-points_files/figure-html/second-order-condition-r-1.png "Figure 7: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
+> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-r-1.png)](optimization-critical-points_files/figure-html/second-order-condition-r-1.png "Figure 8: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
 >
 > ## Python
 >
-> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-python-1.png)](optimization-critical-points_files/figure-html/second-order-condition-python-1.png "Figure 7: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
+> [![Two contour plots side by side. In the left plot, titled positive definite Hessian, the level curves of x squared plus y squared minus 2x are circles around the point (1, 0), marked by a blue circle, which is the lowest point. In the right plot, titled indefinite Hessian, the level curves of x squared minus y squared are hyperbolas that cross at the origin, marked by a vermilion triangle. Values rise to the left and right of the origin and fall above and below it.](optimization-critical-points_files/figure-html/second-order-condition-python-1.png)](optimization-critical-points_files/figure-html/second-order-condition-python-1.png "Figure 8: Level curves of the two functions in Example 16. At the stationary point {(1, 0)}^{\top} of x_1^2 + x_2^2 - 2 x_1 (blue circle), the Hessian is positive definite. The level curves close around a strict local minimizer. At the stationary point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} of x_1^2 - x_2^2 (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, x_1^2 - x_2^2 rises, and along the second it falls. So \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} is not a local minimizer.")
 >
-> Figure 7: [Level curves](vector-calculus.llms.md#def-level-set) of the two [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 16](#exm-second-order-condition). At the [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ of $x_1^2 + x_2^2 - 2 x_1$ (blue circle), the [Hessian](vector-calculus.llms.md#def-hessian) is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). The level curves close around a [strict local minimizer](#def-strict-local-minimizer). At the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of $x_1^2 - x_2^2$ (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, $x_1^2 - x_2^2$ rises, and along the second it falls. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
+> Figure 8: [Level curves](vector-calculus.llms.md#def-level-set) of the two [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 16](#exm-second-order-condition). At the [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ of $x_1^2 + x_2^2 - 2 x_1$ (blue circle), the [Hessian](vector-calculus.llms.md#def-hessian) is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). The level curves close around a [strict local minimizer](#def-strict-local-minimizer). At the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of $x_1^2 - x_2^2$ (vermilion triangle), the Hessian is not positive definite. Along the first coordinate axis, $x_1^2 - x_2^2$ rises, and along the second it falls. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
 
 > **NOTE:**
 >
@@ -1362,9 +1455,20 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > Show code
 >
 > ``` python
+> import html
 > import numpy as np
 > import plotly.graph_objects as go
 > from plotly.subplots import make_subplots
+>
+> fig_alt = (
+>     "Two surface plots side by side. The left plot, titled positive definite "
+>     "Hessian, shows x squared plus y squared minus 2x over x from -1.5 to 2.5 "
+>     "and y from -1.5 to 1.5, a bowl opening upward whose lowest point, at (1, "
+>     "0), is marked by a blue circle. The right plot, titled indefinite "
+>     "Hessian, shows x squared minus y squared over the same region, a saddle "
+>     "that rises along the x axis and falls along the y axis. The origin, at "
+>     "the middle of the saddle, is marked by a vermilion diamond."
+> )
 >
 > so_x_3d = np.linspace(-1.5, 2.5, 101)
 > so_y_3d = np.linspace(-1.5, 1.5, 101)
@@ -1432,14 +1536,19 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > );
 > so_fig_3d.update_layout(scene=so_axes_3d, scene2=so_axes_3d, showlegend=False);
 > so_html_3d = so_fig_3d.to_html(full_html=False, include_plotlyjs="cdn")
-> print("```{=html}\n" + so_html_3d + "\n```")
+> print(
+>     "```{=html}\n"
+>     + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+>     + so_html_3d
+>     + "\n</div>\n```"
+> )
 > ```
 >
 > ## R
 >
 > ## Python
 >
-> Figure 8: The [graphs](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the two [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 16](#exm-second-order-condition), the surfaces whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 7](#fig-second-order-condition). The surface of $x_1^2 + x_2^2 - 2 x_1$ is a bowl, and its [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ (circle) is the bottom, a [strict local minimizer](#def-strict-local-minimizer). The surface of $x_1^2 - x_2^2$ is a saddle: it rises along the first coordinate axis and falls along the second, so the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond) is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
+> Figure 9: The [graphs](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the two [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 16](#exm-second-order-condition), the surfaces whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 8](#fig-second-order-condition). The surface of $x_1^2 + x_2^2 - 2 x_1$ is a bowl, and its [stationary point](#def-stationary-point) ${(1, 0)}^{\top}$ (circle) is the bottom, a [strict local minimizer](#def-strict-local-minimizer). The surface of $x_1^2 - x_2^2$ is a saddle: it rises along the first coordinate axis and falls along the second, so the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond) is not a [local minimizer](algebra-basics.llms.md#def-local-minimizer).
 
 > **NOTE:**
 >
@@ -1518,7 +1627,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > && \text{(substitute)}
 > \end{aligned}$$
 >
-> So every ball around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ contains a point with a larger value of $f$ and a point with a smaller one. Hence $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ is neither a local minimizer nor a local maximizer, and it is a saddle point. [Figure 9](#fig-saddle-point) shows the surface: the curve $t \mapsto f(t, 0)$ rises from the origin along the $x_1$ axis, and the curve $t \mapsto f(0, t)$ falls from the origin along the $x_2$ axis.
+> So every ball around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ contains a point with a larger value of $f$ and a point with a smaller one. Hence $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ is neither a local minimizer nor a local maximizer, and it is a saddle point. [Figure 10](#fig-saddle-point) shows the surface: the curve $t \mapsto f(t, 0)$ rises from the origin along the $x_1$ axis, and the curve $t \mapsto f(0, t)$ falls from the origin along the $x_2$ axis.
 >
 > > **NOTE:**
 > >
@@ -1596,35 +1705,64 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > > Show code
 > >
 > > ``` python
-> > import matplotlib.pyplot as plt
+> > import html
 > > import numpy as np
+> > import plotly.graph_objects as go
+> >
+> > fig_alt = (
+> >     "Surface plot of f(x) = x1^2 - x2^2 for x1 and x2 from -1 to 1. The surface "
+> >     "is shaped like a saddle: it curves upward along the x1 axis and downward "
+> >     "along the x2 axis. A solid vermilion curve along the x1 axis rises away "
+> >     "from the origin, a dashed vermilion curve along the x2 axis falls away "
+> >     "from it, and a point marks the saddle point at the origin."
+> > )
 > >
 > > sp_t_3d = np.linspace(-1, 1, 61)
 > > sp_x1_3d, sp_x2_3d = np.meshgrid(sp_t_3d, sp_t_3d)
 > > sp_z_3d = sp_x1_3d**2 - sp_x2_3d**2
 > > sp_zero_3d = np.zeros_like(sp_t_3d)
-> > fig = plt.figure(figsize=(6, 4.5))
-> > ax = fig.add_subplot(projection="3d")
-> > ax.plot_surface(sp_x1_3d, sp_x2_3d, sp_z_3d, color="#0072B2", alpha=0.6)
-> > ax.plot(sp_t_3d, sp_zero_3d, sp_t_3d**2, color="#D55E00",
-> >         label="f(t, 0) = t^2")
-> > ax.plot(sp_zero_3d, sp_t_3d, -sp_t_3d**2, "--", color="#D55E00",
-> >         label="f(0, t) = -t^2")
-> > ax.scatter([0], [0], [0], color="black", label="saddle point")
-> > ax.set_xlabel("x1")
-> > ax.set_ylabel("x2")
-> > ax.set_zlabel("f(x)")
-> > ax.legend(loc="upper right")
-> > plt.show();
+> > fig = go.Figure(data=[
+> >     go.Surface(
+> >         x=sp_t_3d,
+> >         y=sp_t_3d,
+> >         z=sp_z_3d,
+> >         colorscale=[[0, "#CCE0F0"], [1, "#0072B2"]],
+> >         showscale=False,
+> >         opacity=0.6,
+> >         showlegend=False,
+> >     ),
+> >     go.Scatter3d(x=sp_t_3d, y=sp_zero_3d, z=sp_t_3d**2, mode="lines",
+> >                  line=dict(color="#D55E00", width=5),
+> >                  name="f(t, 0) = t^2"),
+> >     go.Scatter3d(x=sp_zero_3d, y=sp_t_3d, z=-sp_t_3d**2, mode="lines",
+> >                  line=dict(color="#D55E00", width=5, dash="dash"),
+> >                  name="f(0, t) = -t^2"),
+> >     go.Scatter3d(x=[0], y=[0], z=[0], mode="markers",
+> >                  marker=dict(color="black", size=4),
+> >                  name="saddle point"),
+> > ])
+> > fig.update_layout(
+> >     scene=dict(
+> >         xaxis_title="x1",
+> >         yaxis_title="x2",
+> >         zaxis_title="f(x)",
+> >         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+> >     ),
+> >     legend=dict(orientation="h"),
+> > );
+> > print(
+> >     "```{=html}\n"
+> >     + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+> >     + fig.to_html(full_html=False, include_plotlyjs="cdn")
+> >     + "\n</div>\n```"
+> > )
 > > ```
 > >
 > > ## R
 > >
-> > [![Surface plot of f(x) = x1^2 - x2^2 for x1 and x2 from -1 to 1. The surface is shaped like a saddle: it curves upward along the x1 axis and downward along the x2 axis. A solid vermilion curve along the x1 axis rises away from the origin, a dashed vermilion curve along the x2 axis falls away from it, and a point marks the saddle point at the origin.](optimization-critical-points_files/figure-html/saddle-point-3d-python-1.png)](optimization-critical-points_files/figure-html/saddle-point-3d-python-1.png "Figure 9: The graph of f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2. Along the x_1 axis (solid curve) the surface rises away from the origin, and along the x_2 axis (dashed curve) it falls away, so the origin is neither the lowest nor the highest point nearby.")
-> >
 > > ## Python
 > >
-> > Figure 9: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$. Along the $x_1$ axis (solid curve) the surface rises away from the origin, and along the $x_2$ axis (dashed curve) it falls away, so the origin is neither the lowest nor the highest point nearby.
+> > Figure 10: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$. Along the $x_1$ axis (solid curve) the surface rises away from the origin, and along the $x_2$ axis (dashed curve) it falls away, so the origin is neither the lowest nor the highest point nearby.
 
 # Definitions on this page
 
