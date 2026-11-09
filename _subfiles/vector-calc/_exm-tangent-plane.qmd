@@ -18,7 +18,7 @@
   $$
 
 - For $f(\vx) = x_1^2 + x_2^2$ at $\vy = \tp{(1, 1)}$,
-  $f(\vy) = 2$ and the gradient is $\tp{(2 y_1,\ 2 y_2)} = \tp{(2, 2)}$, so the tangent plane is
+  $f(\vy) = 2$ and the gradient is $\gradf{f}(\vy) = \tp{(2 y_1,\ 2 y_2)} = \tp{(2, 2)}$, so the tangent plane is
 
   $$
   \ba
