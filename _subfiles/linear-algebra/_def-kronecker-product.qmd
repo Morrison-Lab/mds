@@ -2,9 +2,9 @@
 #### Kronecker product
 
 The **Kronecker product**
-of an $m \times n$ matrix $\matr{A}$
+of an $m \times n$ [matrix](linear-algebra.qmd#def-matrix) $\matr{A}$
 and a $p \times q$ matrix $\matr{B}$
-is the $mp \times nq$ block matrix
+is the $mp \times nq$ [block matrix](linear-algebra.qmd#def-block-matrix)
 
 $$
 \matr{A} \otimes \matr{B}
