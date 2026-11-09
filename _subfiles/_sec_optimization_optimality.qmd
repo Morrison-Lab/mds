@@ -18,6 +18,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-stationary-point.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_fig-stationary-point.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_fig-stationary-point-3d.qmd >}}

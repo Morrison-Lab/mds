@@ -11,22 +11,3 @@ $$
 is a **stationary point** of $f$.
 
 :::
-
-{{< slidebreak >}}
-
-:::{#exm-stationary-point}
-#### A stationary point, and a point that is not one
-
-Let $f(\vx) = x_1^2 + x_2^2 - 2 x_1$.
-Its [gradient](vector-calculus.qmd#def-vector-derivative) is
-
-$$
-\gradf{f}(\vx) = \tp{(2 x_1 - 2,\ 2 x_2)},
-$$
-
-which is $\vzero_{2 \times 1}$ exactly when $x_1 = 1$ and $x_2 = 0$.
-So $\tp{(1, 0)}$ is its only stationary point,
-and $\vzero$ is not one:
-$\gradf{f}(\vzero_{2 \times 1}) = \tp{(-2, 0)}$.
-
-:::
