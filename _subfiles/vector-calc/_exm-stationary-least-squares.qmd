@@ -26,7 +26,12 @@ f(\vcoef) = \norm{\vy - \mX\vcoef}^2,
 $$
 
 a scalar-valued function of the $2 \times 1$ vector $\vcoef$.
-Its gradient is $-2\,\tp{\mX}(\vy - \mX\vcoef)$.
+Its [gradient](vector-calculus.qmd#def-vector-derivative) is
+
+$$
+\gradf{f}(\vcoef) = -2\,\tp{\mX}(\vy - \mX\vcoef).
+$$
+
 By @thm-first-order-condition, a minimizer of $f$ must make this gradient
 $\vzero$, which is the equation $\tp{\mX}\mX\vcoef = \tp{\mX}\vy$.
 The code below solves that equation and evaluates the gradient at
