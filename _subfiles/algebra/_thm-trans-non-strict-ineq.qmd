@@ -1,0 +1,7 @@
+:::{#thm-trans-non-strict-ineq}
+#### Non-strict inequalities are transitive
+
+If $a \le b$ and $b \le c$, then $a \le c$.
+That is, $\le$ is a [transitive](https://morrison-lab.github.io/mcs/chapters/relations.html#def-transitive) relation.
+
+:::
