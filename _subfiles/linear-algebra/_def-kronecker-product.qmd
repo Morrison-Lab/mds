@@ -1,0 +1,18 @@
+:::{#def-kronecker-product}
+#### Kronecker product
+
+The **Kronecker product**
+of an $m \times n$ matrix $\matr{A}$
+and a $p \times q$ matrix $\matr{B}$
+is the $mp \times nq$ block matrix
+
+$$
+\matr{A} \otimes \matr{B}
+= \begin{bmatrix}
+\matr{A}_{11} \matr{B} & \cdots & \matr{A}_{1n} \matr{B} \\
+\vdots & \ddots & \vdots \\
+\matr{A}_{m1} \matr{B} & \cdots & \matr{A}_{mn} \matr{B}
+\end{bmatrix}.
+$$
+
+:::

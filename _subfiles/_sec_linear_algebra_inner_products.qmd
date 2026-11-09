@@ -166,6 +166,14 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-outer-product-rank.qmd >}}
 
+# Kronecker product
+
+{{< include mds/_subfiles/linear-algebra/_def-kronecker-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-kronecker-product.qmd >}}
+
 # Hilbert spaces {#sec-hilbert-spaces}
 
 {{< include mds/_subfiles/linear-algebra/_def-cauchy-sequence.qmd >}}
