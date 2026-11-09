@@ -166,7 +166,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-outer-product-rank.qmd >}}
 
-# Kronecker product
+# Kronecker product {#sec-kronecker-product}
 
 {{< include mds/_subfiles/linear-algebra/_def-kronecker-product.qmd >}}
 

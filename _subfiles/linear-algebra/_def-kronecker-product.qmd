@@ -5,6 +5,8 @@ The **Kronecker product**
 of an $m \times n$ [matrix](linear-algebra.qmd#def-matrix) $\matr{A}$
 and a $p \times q$ matrix $\matr{B}$
 is the $mp \times nq$ [block matrix](linear-algebra.qmd#def-block-matrix)
+whose block in row $i$ and column $j$ is $\matr{A}_{ij} \matr{B}$,
+where $\matr{A}_{ij}$ is the $(i, j)$ entry of $\matr{A}$:
 
 $$
 \matr{A} \otimes \matr{B}

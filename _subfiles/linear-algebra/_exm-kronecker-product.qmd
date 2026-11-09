@@ -21,7 +21,8 @@ $$
 $$
 
 The result is $2 \times 4$:
-$\matr{A}$ is $2 \times 2$ and $\matr{B}$ is $1 \times 2$,
+$\matr{A}$ is $2 \times 2$
+and $\matr{B}$ is $1 \times 2$,
 so $\matr{A} \otimes \matr{B}$ is $(2 \cd 1) \times (2 \cd 2)$.
 
 <!-- no-figure: the example multiplies out one small block matrix -->
