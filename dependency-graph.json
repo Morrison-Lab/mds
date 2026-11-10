@@ -5173,6 +5173,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-matrix-column",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-matrix-column",
+   "kind": "def",
+   "title": "Column of a matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-matrix-condition-number",
    "site": "mds",
    "page": "linear-algebra",
@@ -5242,6 +5251,15 @@
    "div": "def-matrix-power",
    "kind": "def",
    "title": "Matrix power",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-matrix-row",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-matrix-row",
+   "kind": "def",
+   "title": "Row of a matrix",
    "external": false
   },
   {
@@ -6451,6 +6469,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-matrix-column-of-rows",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-matrix-column-of-rows",
+   "kind": "thm",
+   "title": "A matrix is a column of its rows",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-matrix-induced-inner-product",
    "site": "mds",
    "page": "linear-algebra",
@@ -6475,6 +6502,15 @@
    "div": "thm-matrix-map-linear",
    "kind": "thm",
    "title": "Multiplying by a matrix is a linear map",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#thm-matrix-row-of-columns",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-matrix-row-of-columns",
+   "kind": "thm",
+   "title": "A matrix is a row of its columns",
    "external": false
   },
   {
@@ -7981,6 +8017,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-matrices#def-matrix-column",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "def-matrix-column",
+   "kind": "def",
+   "title": "Column of a matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-matrices#def-matrix-mult",
    "site": "mds",
    "page": "linear-algebra-matrices",
@@ -7996,6 +8041,15 @@
    "div": "def-matrix-of-linear-map",
    "kind": "def",
    "title": "Matrix of a linear map",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrices#def-matrix-row",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "def-matrix-row",
+   "kind": "def",
+   "title": "Row of a matrix",
    "external": false
   },
   {
@@ -8206,12 +8260,30 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-matrices#thm-matrix-column-of-rows",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "thm-matrix-column-of-rows",
+   "kind": "thm",
+   "title": "A matrix is a column of its rows",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "site": "mds",
    "page": "linear-algebra-matrices",
    "div": "thm-matrix-map-linear",
    "kind": "thm",
    "title": "Multiplying by a matrix is a linear map",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrices#thm-matrix-row-of-columns",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "thm-matrix-row-of-columns",
+   "kind": "thm",
+   "title": "A matrix is a row of its columns",
    "external": false
   },
   {
@@ -15371,6 +15443,14 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
+   "mds/linear-algebra#def-matrix-column",
+   "mds/linear-algebra#def-column-vector"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-column",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
    "mds/linear-algebra#def-matrix-condition-number",
    "mds/algebra-sums#def-ratio"
   ],
@@ -15405,6 +15485,10 @@
   [
    "mds/linear-algebra#def-matrix-order",
    "mds/linear-algebra#def-square-matrix"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-row",
+   "mds/linear-algebra#def-matrix"
   ],
   [
    "mds/linear-algebra#def-mean",
@@ -16907,6 +16991,18 @@
    "mds/linear-algebra#thm-matmul-distrib"
   ],
   [
+   "mds/linear-algebra#thm-matrix-column-of-rows",
+   "mds/linear-algebra#def-column-vector"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-column-of-rows",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-column-of-rows",
+   "mds/linear-algebra#def-matrix-row"
+  ],
+  [
    "mds/linear-algebra#thm-matrix-induced-inner-product",
    "mds/linear-algebra#def-indicator-vector"
   ],
@@ -16949,6 +17045,14 @@
   [
    "mds/linear-algebra#thm-matrix-map-linear",
    "mds/linear-algebra#def-vector-addition"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-row-of-columns",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-row-of-columns",
+   "mds/linear-algebra#def-matrix-column"
   ],
   [
    "mds/linear-algebra#thm-matvec-columns",
@@ -18859,8 +18963,16 @@
    "mds/linear-algebra-matrices#def-linear-map"
   ],
   [
+   "mds/linear-algebra-matrices#def-matrix-column",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra-matrices#def-matrix-of-linear-map",
    "mds/linear-algebra-matrices#thm-linear-map-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-matrix-row",
+   "mds/linear-algebra-matrices#def-matrix"
   ],
   [
    "mds/linear-algebra-matrices#def-normal-vector",
@@ -18967,6 +19079,14 @@
    "mds/linear-algebra-matrices#thm-matmul-distrib"
   ],
   [
+   "mds/linear-algebra-matrices#thm-matrix-column-of-rows",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-column-of-rows",
+   "mds/linear-algebra-matrices#def-matrix-row"
+  ],
+  [
    "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "mds/algebra#thm-mult-distr"
   ],
@@ -18993,6 +19113,14 @@
   [
    "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "mds/linear-algebra-matrices#def-scalar-mult"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-row-of-columns",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-row-of-columns",
+   "mds/linear-algebra-matrices#def-matrix-column"
   ],
   [
    "mds/linear-algebra-matrices#thm-scalar-transpose",
