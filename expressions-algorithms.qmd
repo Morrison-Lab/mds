@@ -1,13 +1,8 @@
 ---
 title: "Expressions and Algorithms"
+redirect-stub: true
 format:
   html: default
-  revealjs:
-    output-file: expressions-algorithms-slides.html
-  pdf:
-    output-file: expressions-algorithms-handout.pdf
-  docx:
-    output-file: expressions-algorithms.docx
 ---
 
 ```{=html}

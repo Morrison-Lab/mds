@@ -2,10 +2,6 @@
 
 {{< include mds/_subfiles/algebra/_note-elementary-algebra-prereq.qmd >}}
 
-{{< include mds/_subfiles/algebra/_def-transitive.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/algebra/_exm-transitive.qmd >}}
 
 {{< slidebreak >}}
@@ -35,6 +31,22 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_exm-strict-inequality.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-trans-ineq.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-trans-ineq.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-trans-non-strict-ineq.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-trans-non-strict-ineq.qmd >}}
 
 {{< slidebreak >}}
 

@@ -1,0 +1,24 @@
+::: {.callout-note}
+#### These notes write the full form
+
+In these notes,
+we avoid notational shorthands in permanent writing
+and write the full form of each expression,
+even where a shorthand would be shorter.
+A reader who supplies the missing part of a shorthand
+from a different context than the writer intended
+reads a different expression than the one the writer meant.
+Handwritten board work is often less complete,
+but it should still write out ranges and limits where it can.
+
+We make one exception:
+writing two factors side by side means multiplying them,
+as in $2x$ for $2 \cd x$ and $ab$ for $a \cd b$.
+We still write the multiplication sign
+when the side-by-side form could be misread:
+
+- $2 \cd 3$, not $23$, which reads as twenty-three;
+- $a \cd (b + c)$ when $a$ could be a function,
+  since $a(b + c)$ could mean $a$ evaluated at $b + c$.
+
+:::

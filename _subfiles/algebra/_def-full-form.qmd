@@ -1,0 +1,7 @@
+:::{#def-full-form}
+#### Full form
+
+The **full form** of a notational shorthand (@def-notational-shorthand)
+is the expression with every part written out.
+
+:::

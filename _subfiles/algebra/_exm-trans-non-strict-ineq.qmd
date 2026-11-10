@@ -1,0 +1,8 @@
+:::{#exm-trans-non-strict-ineq}
+#### Chaining non-strict inequalities
+
+Since $3 \le 3$ and $3 \le 4$, it follows that $3 \le 4$.
+
+<!-- no-figure: the example chains two inequalities on three numbers -->
+
+:::

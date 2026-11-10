@@ -1,13 +1,8 @@
 ---
 title: "Sets and Functions"
+redirect-stub: true
 format:
   html: default
-  revealjs:
-    output-file: sets-functions-slides.html
-  pdf:
-    output-file: sets-functions-handout.pdf
-  docx:
-    output-file: sets-functions.docx
 ---
 
 ```{=html}

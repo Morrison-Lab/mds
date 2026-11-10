@@ -1,0 +1,7 @@
+:::{#thm-trans-ineq}
+#### Strict inequalities are transitive
+
+If $a < b$ and $b < c$, then $a < c$.
+That is, $<$ is a [transitive](https://morrison-lab.github.io/mcs/chapters/relations.html#def-transitive) relation.
+
+:::

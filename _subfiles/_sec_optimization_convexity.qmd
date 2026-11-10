@@ -105,3 +105,15 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_cor-convex-stationary.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-exp-above-tangent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_cor-log-below-tangent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-exp-above-tangent.qmd >}}

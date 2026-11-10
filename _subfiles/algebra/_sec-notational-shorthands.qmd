@@ -10,74 +10,31 @@
 
 {{< slidebreak >}}
 
-:::{#def-notational-shorthand}
-#### Notational shorthand
-
-A **notational shorthand** is a way of writing an expression
-that leaves part of the expression out,
-such as the set a sum runs over or the limits of an integral,
-and relies on the reader to supply the missing part from context.
-
-:::
+{{< include mds/_subfiles/algebra/_def-notational-shorthand.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#def-full-form}
-#### Full form
-
-The **full form** of a notational shorthand (@def-notational-shorthand)
-is the expression with every part written out.
-
-:::
+{{< include mds/_subfiles/algebra/_def-full-form.qmd >}}
 
 {{< slidebreak >}}
 
-::: {.callout-note}
-#### These notes write the full form
-
-In these notes,
-we avoid notational shorthands in permanent writing
-and write the full form of each expression,
-even where a shorthand would be shorter.
-A reader who supplies the missing part of a shorthand
-from a different context than the writer intended
-reads a different expression than the one the writer meant.
-Handwritten board work is often less complete,
-but it should still write out ranges and limits where it can.
-
-We make one exception:
-writing two factors side by side means multiplying them,
-as in $2x$ for $2 \cd x$ and $ab$ for $a \cd b$.
-We still write the multiplication sign
-when the side-by-side form could be misread:
-
-- $2 \cd 3$, not $23$, which reads as twenty-three;
-- $a \cd (b + c)$ when $a$ could be a function,
-  since $a(b + c)$ could mean $a$ evaluated at $b + c$.
-
-:::
+{{< include mds/_subfiles/algebra/_note-full-form-in-these-notes.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#def-range-of-variable}
-#### Range of a variable
-
-The **range** of a variable $x$, written $\rangef{x}$,
-is the set of values that $x$ can take.
-
-:::
+{{< include mds/_subfiles/algebra/_def-range-of-variable.qmd >}}
 
 For example,
 if $x$ is the number of heads in two tosses of a coin,
 then $\rangef{x} = \cb{0, 1, 2}$.
 A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$
 (defined in the Morrison Lab's probability notes)
-is a [function](functions.qmd#def-function),
+is a [function](https://morrison-lab.github.io/mcs/functions.html#def-function),
 and the set of values $X$ can take, $\rangef{X}$,
-is the [image](functions.qmd#def-image) of $X$.
+is the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $X$.
 These notes use "range" only for variables:
 for a function, "range" can mean either the image or the codomain
-([Range](functions.qmd#def-range)).
+([Range](https://morrison-lab.github.io/mcs/functions.html#def-range)).
 In statistics, "the range" of a dataset can also mean
 its largest value minus its smallest value;
 $\rangef{x}$ is a set, not that difference.
@@ -91,7 +48,7 @@ In the table,
 $\dsn{x}$ and $\dsn{a}$ are $n$ numbers,
 $b_{ij}$ is the entry in row $i$ and column $j$ of an $m \times n$ array,
 $k$ is an integer with $1 \le k \le n$,
-$f$ is a [function](functions.qmd#def-function)
+$f$ is a [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
 from $\reals$ to $\reals$,
 and, in the first row, $\rangef{x}$ is a finite set.
 
@@ -113,37 +70,8 @@ and, in the first row, $\rangef{x}$ is a finite set.
 
 {{< slidebreak >}}
 
-:::{#rem-indefinite-integral-not-shorthand}
-#### $\int f(x)\,dx$ has two readings
-
-In calculus,
-$\int f(x)\,dx$ with no limits is not a shorthand:
-it is the [indefinite integral](calculus.qmd#def-indefinite-integral) of $f$,
-a family of functions rather than a number.
-Some sources, especially in probability,
-also write $\int f(x)\,dx$ for the number $\int_{-\infty}^{\infty} f(x)\,dx$.
-Writing the limits out tells the reader which of the two is meant.
-
-:::
+{{< include mds/_subfiles/algebra/_rem-indefinite-integral-not-shorthand.qmd >}}
 
 {{< slidebreak >}}
 
-:::{#exm-expand-index-shorthand}
-#### Writing out an index shorthand
-
-Let $n = 3$ and $(x_1, x_2, x_3) = (2, 5, 1)$.
-A source that writes $\sum_{i} x_i$ means $\sumto{i}{3} x_i$:
-
-$$
-\ba
-\sumto{i}{3} x_i
-&= x_1 + x_2 + x_3
-&& \text{(definition of summation notation)} \\
-&= 2 + 5 + 1
-&& \text{(substitute the values)} \\
-&= 8
-&& \text{(add)}
-\ea
-$$
-
-:::
+{{< include mds/_subfiles/algebra/_exm-expand-index-shorthand.qmd >}}

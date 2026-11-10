@@ -1,0 +1,12 @@
+:::{#def-matrix-column}
+#### Column of a matrix
+
+The $j$th **column** of an $m \times n$ [matrix](#def-matrix) $\matr{A}$
+is the [column vector](#def-column-vector) of the entries in column $j$:
+
+$$
+\matr{A}_{:,j} =
+\begin{bmatrix} a_{1j} \\ a_{2j} \\ \vdots \\ a_{mj} \end{bmatrix}.
+$$
+
+:::

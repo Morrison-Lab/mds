@@ -113,7 +113,7 @@ plt.show();
 
 :::
 
-The [graph](functions.qmd#def-graph) of $f$ in @exm-newton-quadratic is a bowl
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ in @exm-newton-quadratic is a bowl
 whose lowest point is the origin.
 
 :::

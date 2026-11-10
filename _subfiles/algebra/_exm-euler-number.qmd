@@ -8,4 +8,6 @@ The fraction $\frac{19}{7} = 2.714\ldots$ is close,
 but $\frac{19}{7} \ne e$
 [@wikipedia_e_mathematical_constant].
 
+<!-- no-figure: the example compares two decimal expansions -->
+
 :::
