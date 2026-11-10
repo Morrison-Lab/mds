@@ -6,7 +6,8 @@ be as in @thm-block-quadratic,
 with $\matr{X}$ [positive definite](#def-positive-definite).
 Then $\matr{X}$ is [invertible](#def-invertible-matrix),
 and with the [Schur complement](#def-schur-complement) $\matr{S}$ of $\matr{A}$,
-the last $m$ columns of its [inverse](#def-matrix-inverse) are
+its [inverse](#def-matrix-inverse) is the following,
+where $\matr{P}$ is the block of the first $k$ rows and columns of $\matr{X}^{-1}$:
 
 $$
 \matr{X}^{-1}
@@ -15,8 +16,6 @@ $$
 -\matr{S}^{-1} \tp{\matr{B}} \matr{A}^{-1} & \matr{S}^{-1}
 \end{bmatrix},
 $$
-
-where $\matr{P}$ is the block of the first $k$ rows and columns of $\matr{X}^{-1}$.
 
 :::
 
@@ -60,7 +59,8 @@ $$
 So $\matr{T}\matr{S} = \matr{I}_m$,
 and $\matr{Q}\matr{S} = -\matr{A}^{-1}\matr{B}$.
 Multiplying both equations on the right by $\matr{S}^{-1}$ gives
-$\matr{T} = \matr{S}^{-1}$ and $\matr{Q} = -\matr{A}^{-1}\matr{B}\matr{S}^{-1}$.
+$\matr{T} = \matr{S}^{-1}$,
+and $\matr{Q} = -\matr{A}^{-1}\matr{B}\matr{S}^{-1}$.
 $\matr{X}^{-1}$ is [symmetric](#def-symmetric-matrix),
 by [the inverse of a symmetric matrix is symmetric](#cor-inverse-symmetric),
 so $\matr{R} = \tp{\matr{Q}} = -\matr{S}^{-1}\tp{\matr{B}}\matr{A}^{-1}$,
