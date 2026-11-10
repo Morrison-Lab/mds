@@ -4,8 +4,8 @@
 <!-- no-figure: one 2 x 2 inverse checked entry by entry; nothing to plot -->
 
 Let $\matr{X} = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$ with $\matr{A} = [5]$,
-whose Schur complement is $\matr{S} = [\tfrac{9}{5}]$ (@exm-schur-complement).
-It is positive definite (@exm-schur-test), so by @thm-block-inverse:
+whose [Schur complement](#def-schur-complement) is $\matr{S} = [\tfrac{9}{5}]$ (@exm-schur-complement).
+It is [positive definite](#def-positive-definite) (@exm-schur-test), so by @thm-block-inverse:
 
 $$
 \begin{aligned}
