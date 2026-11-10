@@ -20,6 +20,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-inner-product-other-sources.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_exm-dot-product-inner-product.qmd >}}
 
 {{< slidebreak >}}
