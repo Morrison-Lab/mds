@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-10 06:59:06 (PST)
+Last modified: 2026-11-10 10:08:17 (PST)
 
 # 1 Design Matrix
 
@@ -261,7 +261,7 @@ Last modified: 2026-11-10 06:59:06 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (Projecting with an orthonormal basis)** Let $\mathcal{S}$ be a subspace of $\mathbb{R}^p$ with $\dim(\mathcal{S}) = r \ge 1$, and let $\mathbf{Q}$ be the $p \times r$ matrix whose columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_r$ are an orthonormal basis of $\mathcal{S}$ ([Definition 10 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-orthonormal-basis), [Corollary 4 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-orthonormal-basis-exists)). Then for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$, $\mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the orthogonal projection of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ onto $\mathcal{S}$, and $\mathbf{Q} {\mathbf{Q}}^{\top}$ is an orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
+> **Theorem 4 (Projecting with an orthonormal basis)** Let $\mathcal{S}$ be a subspace of $\mathbb{R}^p$ with $\dim(\mathcal{S}) = r \ge 1$, and let $\mathbf{Q}$ be the $p \times r$ matrix whose columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_r$ are an orthonormal basis of $\mathcal{S}$ ([Definition 14 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-orthonormal-basis), [Corollary 4 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-orthonormal-basis-exists)). Then for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$, $\mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the orthogonal projection of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ onto $\mathcal{S}$, and $\mathbf{Q} {\mathbf{Q}}^{\top}$ is an orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
 
 > **NOTE:**
 >
@@ -1627,7 +1627,7 @@ Last modified: 2026-11-10 06:59:06 (PST)
 
 > **NOTE:**
 >
-> *Proof*. The $n$ columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n$ of $\mathbf{A}$ are linearly independent ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), so the Gram-Schmidt process ([Definition 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-gram-schmidt)) runs all $n$ steps and gives orthonormal $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_n$ ([Theorem 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt), parts 1 and 3); let $\mathbf{Q}$ have these columns. At step $i$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, and rearranging the orthogonalize step,
+> *Proof*. The $n$ columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n$ of $\mathbf{A}$ are linearly independent ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), so the Gram-Schmidt process ([Definition 15 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-gram-schmidt)) runs all $n$ steps and gives orthonormal $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_n$ ([Theorem 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt), parts 1 and 3); let $\mathbf{Q}$ have these columns. At step $i$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, and rearranging the orthogonalize step,
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i

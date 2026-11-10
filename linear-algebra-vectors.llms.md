@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-10 06:59:06 (PST)
+Last modified: 2026-11-10 10:08:17 (PST)
 
 > **NOTE:**
 >
@@ -228,7 +228,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Remark 4* (The dot product is a linear combination). The dot product $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is a linear combination ([Definition 9](#def-linear-combination)) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, with coefficients $x_1, \ldots, x_p$. In [Example 5](#exm-dot-product), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6$ is the linear combination of $4$, $5$, and $6$ with coefficients $1$, $2$, and $3$.
 >
-> The dot product is also the standard *inner product* on $\mathbb{R}^p$; “inner product” is the general notion ([Definition 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product), later in these notes), of which the dot product is one example.
+> The dot product is also the standard *inner product* on $\mathbb{R}^p$; “inner product” is the general notion ([Definition 5 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product), later in these notes), of which the dot product is one example.
 
 > **NOTE:**
 >

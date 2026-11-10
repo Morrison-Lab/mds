@@ -264,6 +264,16 @@
    "url": "https://morrison-lab.github.io/mcs/proof-writing.html#def-theorem"
   },
   {
+   "id": "mcs/proof-writing#def-universal-quantifier",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-universal-quantifier",
+   "kind": "def",
+   "title": "universal quantifier",
+   "external": true,
+   "url": "https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier"
+  },
+  {
    "id": "mcs/sets#def-cartesian-product",
    "site": "mcs",
    "page": "sets",
@@ -5011,12 +5021,48 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-inner-product-definiteness",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-inner-product-definiteness",
+   "kind": "def",
+   "title": "Definiteness",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-inner-product-linearity",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-inner-product-linearity",
+   "kind": "def",
+   "title": "Linearity in the first slot",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-inner-product-positivity",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-inner-product-positivity",
+   "kind": "def",
+   "title": "Positivity",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-inner-product-space",
    "site": "mds",
    "page": "linear-algebra",
    "div": "def-inner-product-space",
    "kind": "def",
    "title": "Inner product space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-inner-product-symmetry",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-inner-product-symmetry",
+   "kind": "def",
+   "title": "Symmetry",
    "external": false
   },
   {
@@ -7720,12 +7766,48 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#def-inner-product-definiteness",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-inner-product-definiteness",
+   "kind": "def",
+   "title": "Definiteness",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#def-inner-product-linearity",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-inner-product-linearity",
+   "kind": "def",
+   "title": "Linearity in the first slot",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#def-inner-product-positivity",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-inner-product-positivity",
+   "kind": "def",
+   "title": "Positivity",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#def-inner-product-space",
    "site": "mds",
    "page": "linear-algebra-inner-products",
    "div": "def-inner-product-space",
    "kind": "def",
    "title": "Inner product space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#def-inner-product-symmetry",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-inner-product-symmetry",
+   "kind": "def",
+   "title": "Symmetry",
    "external": false
   },
   {
@@ -15383,12 +15465,64 @@
    "mds/linear-algebra#def-vector-p-norm"
   ],
   [
+   "mds/linear-algebra#def-inner-product",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product",
+   "mds/linear-algebra#def-inner-product-definiteness"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product",
+   "mds/linear-algebra#def-inner-product-linearity"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product",
+   "mds/linear-algebra#def-inner-product-positivity"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product",
+   "mds/linear-algebra#def-inner-product-symmetry"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product-definiteness",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product-definiteness",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product-linearity",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product-linearity",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product-positivity",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product-positivity",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
    "mds/linear-algebra#def-inner-product-space",
    "mds/linear-algebra#def-inner-product"
   ],
   [
    "mds/linear-algebra#def-inner-product-space",
    "mds/linear-algebra#def-real-coordinate-space"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product-symmetry",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra#def-inner-product-symmetry",
+   "mcs/proof-writing#def-universal-quantifier"
   ],
   [
    "mds/linear-algebra#def-invertible-matrix",
@@ -18791,8 +18925,60 @@
    "mds/linear-algebra-inner-products#def-vector-p-norm"
   ],
   [
+   "mds/linear-algebra-inner-products#def-inner-product",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product",
+   "mds/linear-algebra-inner-products#def-inner-product-definiteness"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product",
+   "mds/linear-algebra-inner-products#def-inner-product-linearity"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product",
+   "mds/linear-algebra-inner-products#def-inner-product-positivity"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product",
+   "mds/linear-algebra-inner-products#def-inner-product-symmetry"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product-definiteness",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product-definiteness",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product-linearity",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product-linearity",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product-positivity",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product-positivity",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
    "mds/linear-algebra-inner-products#def-inner-product-space",
    "mds/linear-algebra-inner-products#def-inner-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product-symmetry",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-inner-product-symmetry",
+   "mcs/proof-writing#def-universal-quantifier"
   ],
   [
    "mds/linear-algebra-inner-products#def-kronecker-product",
