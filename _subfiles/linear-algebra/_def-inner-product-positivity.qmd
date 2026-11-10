@@ -1,0 +1,14 @@
+:::{#def-inner-product-positivity}
+#### Positivity
+
+A function $\iprod{\cdot}{\cdot}$
+that assigns a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) to each ordered pair of vectors in $\reals^p$
+has **positivity** if
+
+$$
+\iprod{\vx}{\vx} \ge 0
+$$
+
+[for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\vx \in \reals^p$.
+
+:::

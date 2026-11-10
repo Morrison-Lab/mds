@@ -1,0 +1,14 @@
+:::{#def-inner-product-symmetry}
+#### Symmetry
+
+A function $\iprod{\cdot}{\cdot}$
+that assigns a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) to each ordered pair of vectors in $\reals^p$
+has **symmetry** if
+
+$$
+\iprod{\vx}{\vy} = \iprod{\vy}{\vx}
+$$
+
+[for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\vx, \vy \in \reals^p$.
+
+:::
