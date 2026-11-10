@@ -1,7 +1,8 @@
 :::{#exm-additive-function}
 #### An additive function, and one that is not
 
-- $f(x) = 2x$ on $\reals$ is [additive](#def-additive-function). For $x, y \in \reals$:
+- $f(x) = 2x$ on $\reals$ is [additive](#def-additive-function).
+  For $x, y \in \reals$:
 
   $$
   \begin{aligned}
