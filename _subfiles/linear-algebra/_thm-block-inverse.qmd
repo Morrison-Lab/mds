@@ -16,13 +16,14 @@ $$
 \end{bmatrix},
 $$
 
-where $\matr{P}$ holds the first $k$ rows and columns of $\matr{X}^{-1}$.
+where $\matr{P}$ is the block of the first $k$ rows and columns of $\matr{X}^{-1}$.
 
 :::
 
 ::: proof
 
-[$\matr{X}$ is invertible](#thm-pd-inverse), because it is [positive definite](#def-positive-definite).
+[$\matr{X}$ is invertible](#thm-pd-inverse),
+because it is [positive definite](#def-positive-definite).
 By the [Schur complement test](#thm-schur-test), $\matr{A}$ and $\matr{S}$ are positive definite as well,
 and [so both are invertible](#thm-pd-inverse).
 Let $\matr{W} = \begin{bmatrix} -\matr{A}^{-1}\matr{B} \\ \matr{I}_m \end{bmatrix}$.
@@ -56,7 +57,8 @@ $$
 = \begin{bmatrix} \matr{Q}\matr{S} \\ \matr{T}\matr{S} \end{bmatrix}.
 $$
 
-So $\matr{T}\matr{S} = \matr{I}_m$ and $\matr{Q}\matr{S} = -\matr{A}^{-1}\matr{B}$.
+So $\matr{T}\matr{S} = \matr{I}_m$,
+and $\matr{Q}\matr{S} = -\matr{A}^{-1}\matr{B}$.
 Multiplying both equations on the right by $\matr{S}^{-1}$ gives
 $\matr{T} = \matr{S}^{-1}$ and $\matr{Q} = -\matr{A}^{-1}\matr{B}\matr{S}^{-1}$.
 $\matr{X}^{-1}$ is [symmetric](#def-symmetric-matrix),
