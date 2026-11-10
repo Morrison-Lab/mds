@@ -228,6 +228,16 @@ cookieconsent.run({
 })();
 </script>
 <style>
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-cnj.callout {
   border-left-color: #558B2F;
 }
@@ -247,36 +257,6 @@ div.callout-fig.callout-style-default .callout-header {
 div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -298,16 +278,6 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -317,6 +287,16 @@ div.callout-def.callout-style-default .callout-header {
 div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -328,15 +308,15 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-tbl.callout {
-  border-left-color: #757575;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -347,6 +327,26 @@ div.callout-remark.callout-style-default .callout-header {
 div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-tbl.callout {
+  border-left-color: #757575;
+}
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -1123,7 +1123,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-09 12:55:39 (PST)</p>
+      <p class="date">Last modified: 2026-11-09 20:59:27 (PST)</p>
     </div>
   </div>
   
@@ -3277,14 +3277,21 @@ a &amp;= c \\
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Lem</span><a href="#thm-cholesky" class="quarto-xref">Theorem&nbsp;17</a> (Cholesky factorization)
+<span class="screen-reader-only">Lem</span><a href="#thm-block-inverse" class="quarto-xref">Theorem&nbsp;17</a> (The inverse of a positive definite block matrix)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-71" class="callout-71-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<div id="thm-cholesky" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 17 (Cholesky factorization)</strong></span> A <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is positive definite (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\)</span> for some lower triangular <span class="math inline">\(\mathbf{L}\)</span> (<a href="./linear-algebra-projections.html#def-lower-triangular-matrix">Definition&nbsp;8 in Projections and Linear Systems</a>) with positive diagonal entries. For a positive definite <span class="math inline">\(\mathbf{A}\)</span> that <span class="math inline">\(\mathbf{L}\)</span> is unique; it is the <strong>Cholesky factor</strong> <span class="citation" data-cites="wikipedia_cholesky_decomposition"><a href="#ref-wikipedia_cholesky_decomposition" role="doc-biblioref">[8]</a></span> of <span class="math inline">\(\mathbf{A}\)</span>.</p>
+<div id="thm-block-inverse" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 17 (The inverse of a positive definite block matrix)</strong></span> Let <span class="math inline">\(\mathbf{X} = \begin{bmatrix} \mathbf{A} &amp; \mathbf{B} \\ {\mathbf{B}}^{\top} &amp; \mathbf{C} \end{bmatrix}\)</span> be as in <a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;15</a>, with <span class="math inline">\(\mathbf{X}\)</span> <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>. Then <span class="math inline">\(\mathbf{X}\)</span> is <a href="./linear-algebra-special-matrices.html#def-invertible-matrix">invertible</a>, and with the <a href="#def-schur-complement">Schur complement</a> <span class="math inline">\(\mathbf{S}\)</span> of <span class="math inline">\(\mathbf{A}\)</span>, its <a href="./linear-algebra-special-matrices.html#def-matrix-inverse">inverse</a> is the following, where <span class="math inline">\(\mathbf{P}\)</span> is the block of the first <span class="math inline">\(k\)</span> rows and columns of <span class="math inline">\(\mathbf{X}^{-1}\)</span>:</p>
+<p><span class="math display">\[
+\mathbf{X}^{-1}
+= \begin{bmatrix}
+\mathbf{P} &amp; -\mathbf{A}^{-1} \mathbf{B} \mathbf{S}^{-1} \\
+-\mathbf{S}^{-1} {\mathbf{B}}^{\top} \mathbf{A}^{-1} &amp; \mathbf{S}^{-1}
+\end{bmatrix},
+\]</span></p>
 </div>
 </div>
 </div>
@@ -3300,6 +3307,104 @@ a &amp;= c \\
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-72" class="callout-72-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><a href="./linear-algebra-special-matrices.html#thm-pd-inverse"><span class="math inline">\(\mathbf{X}\)</span> is invertible</a>, because it is <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a>. By the <a href="#thm-schur-test">Schur complement test</a>, <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{S}\)</span> are positive definite as well, and <a href="./linear-algebra-special-matrices.html#thm-pd-inverse">so both are invertible</a>. Let <span class="math inline">\(\mathbf{W} = \begin{bmatrix} -\mathbf{A}^{-1}\mathbf{B} \\ \mathbf{I}_m \end{bmatrix}\)</span>. Each entry of <span class="math inline">\(\mathbf{X}\mathbf{W}\)</span> adds one group of <span class="math inline">\(k\)</span> summands to one group of <span class="math inline">\(m\)</span> summands, so <span class="math inline">\(\mathbf{X}\mathbf{W}\)</span> can be computed one block row at a time:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{X}\mathbf{W}
+&amp;= \begin{bmatrix}
+-\mathbf{A}\mathbf{A}^{-1}\mathbf{B} + \mathbf{B} \\
+-{\mathbf{B}}^{\top}\mathbf{A}^{-1}\mathbf{B} + \mathbf{C}
+\end{bmatrix}
+&amp;&amp; \text{(one block row at a time)} \\
+&amp;= \begin{bmatrix} -\mathbf{I}_k\mathbf{B} + \mathbf{B} \\ \mathbf{S} \end{bmatrix}
+&amp;&amp; \text{(} \mathbf{A}\mathbf{A}^{-1} = \mathbf{I}_k \text{, and definition of } \mathbf{S} \text{)} \\
+&amp;= \begin{bmatrix} \mathbf{0} \\ \mathbf{S} \end{bmatrix}
+&amp;&amp; \text{(} \mathbf{I}_k\mathbf{B} = \mathbf{B} \text{)}
+\end{aligned}
+\]</span></p>
+<p>Multiplying both sides on the left by <span class="math inline">\(\mathbf{X}^{-1}\)</span> gives <span class="math inline">\(\mathbf{W}\)</span> on the left, since <span class="math inline">\(\mathbf{X}^{-1}\mathbf{X} = \mathbf{I}_{k+m}\)</span>. Cut <span class="math inline">\(\mathbf{X}^{-1}\)</span> into the four pieces <span class="math inline">\(\mathbf{P}\)</span>, <span class="math inline">\(\mathbf{Q}\)</span>, <span class="math inline">\(\mathbf{R}\)</span> and <span class="math inline">\(\mathbf{T}\)</span>, with <span class="math inline">\(\mathbf{Q}\)</span> and <span class="math inline">\(\mathbf{T}\)</span> in the last <span class="math inline">\(m\)</span> columns. Then the right side is <span class="math inline">\(\mathbf{X}^{-1}\begin{bmatrix} \mathbf{0} \\ \mathbf{S} \end{bmatrix}\)</span>, and the last <span class="math inline">\(m\)</span> columns of <span class="math inline">\(\mathbf{X}^{-1}\)</span> multiply <span class="math inline">\(\mathbf{S}\)</span>:</p>
+<p><span class="math display">\[
+\begin{bmatrix} -\mathbf{A}^{-1}\mathbf{B} \\ \mathbf{I}_m \end{bmatrix}
+= \begin{bmatrix} \mathbf{Q}\mathbf{S} \\ \mathbf{T}\mathbf{S} \end{bmatrix}.
+\]</span></p>
+<p>So <span class="math inline">\(\mathbf{T}\mathbf{S} = \mathbf{I}_m\)</span>, and <span class="math inline">\(\mathbf{Q}\mathbf{S} = -\mathbf{A}^{-1}\mathbf{B}\)</span>. Multiplying both equations on the right by <span class="math inline">\(\mathbf{S}^{-1}\)</span> gives <span class="math inline">\(\mathbf{T} = \mathbf{S}^{-1}\)</span>, and <span class="math inline">\(\mathbf{Q} = -\mathbf{A}^{-1}\mathbf{B}\mathbf{S}^{-1}\)</span>. <span class="math inline">\(\mathbf{X}^{-1}\)</span> is <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a>, by <a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">the inverse of a symmetric matrix is symmetric</a>, so <span class="math inline">\(\mathbf{R} = {\mathbf{Q}}^{\top} = -\mathbf{S}^{-1}{\mathbf{B}}^{\top}\mathbf{A}^{-1}\)</span>, using <span class="math inline">\({(\mathbf{S}^{-1})}^{\top} = \mathbf{S}^{-1}\)</span> and <span class="math inline">\({(\mathbf{A}^{-1})}^{\top} = \mathbf{A}^{-1}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-exm callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-73-contents" aria-controls="callout-73" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-block-inverse" class="quarto-xref">Example&nbsp;25</a> (The bottom-right entry of the inverse of a <span class="math inline">\(2 \times 2\)</span> matrix)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-73" class="callout-73-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exm-block-inverse" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25 (The bottom-right entry of the inverse of a <span class="math inline">\(2 \times 2\)</span> matrix)</strong></span> &nbsp;</p>
+<!-- no-figure: one 2 x 2 inverse checked entry by entry; nothing to plot -->
+<p>Let <span class="math inline">\(\mathbf{X} = \begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}\)</span> with <span class="math inline">\(\mathbf{A} = [5]\)</span>, whose <a href="#def-schur-complement">Schur complement</a> is <span class="math inline">\(\mathbf{S} = [\tfrac{9}{5}]\)</span> (<a href="#exm-schur-complement" class="quarto-xref">Example&nbsp;23</a>). It is <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a> (<a href="#exm-schur-test" class="quarto-xref">Example&nbsp;24</a>), so by <a href="#thm-block-inverse" class="quarto-xref">Theorem&nbsp;17</a>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{T}
+&amp;= \mathbf{S}^{-1} \\
+&amp;= [\tfrac{5}{9}].
+\end{aligned}
+\]</span></p>
+<p>Directly, <span class="math inline">\(\mathbf{X}^{-1} = \tfrac{1}{9}\begin{bmatrix} 5 &amp; -4 \\ -4 &amp; 5 \end{bmatrix}\)</span>, because</p>
+<p><span class="math display">\[
+\begin{aligned}
+\begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix} \cdot \tfrac{1}{9}\begin{bmatrix} 5 &amp; -4 \\ -4 &amp; 5 \end{bmatrix}
+&amp;= \tfrac{1}{9}\begin{bmatrix} 25 - 16 &amp; -20 + 20 \\ 20 - 20 &amp; -16 + 25 \end{bmatrix} \\
+&amp;= \mathbf{I}_2,
+\end{aligned}
+\]</span></p>
+<p>and its bottom-right entry is <span class="math inline">\(\tfrac{5}{9}\)</span>. The top-right entry is <span class="math inline">\(-\mathbf{A}^{-1}\mathbf{B}\mathbf{S}^{-1}\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+-\tfrac{1}{5} \cdot 4 \cdot \tfrac{5}{9}
+&amp;= -\tfrac{4}{9}.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-lem callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-74-contents" aria-controls="callout-74" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-cholesky" class="quarto-xref">Theorem&nbsp;18</a> (Cholesky factorization)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-74" class="callout-74-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="thm-cholesky" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 18 (Cholesky factorization)</strong></span> A <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is positive definite (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;22 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\)</span> for some lower triangular <span class="math inline">\(\mathbf{L}\)</span> (<a href="./linear-algebra-projections.html#def-lower-triangular-matrix">Definition&nbsp;8 in Projections and Linear Systems</a>) with positive diagonal entries. For a positive definite <span class="math inline">\(\mathbf{A}\)</span> that <span class="math inline">\(\mathbf{L}\)</span> is unique; it is the <strong>Cholesky factor</strong> <span class="citation" data-cites="wikipedia_cholesky_decomposition"><a href="#ref-wikipedia_cholesky_decomposition" role="doc-biblioref">[8]</a></span> of <span class="math inline">\(\mathbf{A}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-75-contents" aria-controls="callout-75" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-75" class="callout-75-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\({\mathbf{L}}^{\top}\)</span> is upper triangular with positive diagonal (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>), so <span class="math inline">\({\mathbf{L}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> (<a href="./linear-algebra-projections.html#thm-back-substitution">Theorem&nbsp;19 in Projections and Linear Systems</a>), and the columns of <span class="math inline">\({\mathbf{L}}^{\top}\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#thm-matvec-columns">Theorem&nbsp;3 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>). So <span class="math inline">\(\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\,{\mathbf{L}}^{\top}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>) is positive definite (<a href="#thm-pd-gram" class="quarto-xref">Theorem&nbsp;10</a>, part 2).</p>
@@ -3369,19 +3474,19 @@ a &amp;= c \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-73-contents" aria-controls="callout-73" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-76-contents" aria-controls="callout-76" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-cholesky" class="quarto-xref">Example&nbsp;25</a> (Two Cholesky factors)
+<span class="screen-reader-only">Exm</span><a href="#exm-cholesky" class="quarto-xref">Example&nbsp;26</a> (Two Cholesky factors)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-73" class="callout-73-contents callout-collapse collapse show">
+<div id="callout-76" class="callout-76-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-cholesky" class="theorem example">
-<p><span class="theorem-title"><strong>Example 25 (Two Cholesky factors)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 26 (Two Cholesky factors)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(\mathbf{A} = \begin{bmatrix} 4 &amp; 2 \\ 2 &amp; 5 \end{bmatrix}\)</span>:</p>
 <p><span class="math display">\[

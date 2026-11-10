@@ -5866,6 +5866,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-block-inverse",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-block-inverse",
+   "kind": "thm",
+   "title": "The inverse of a positive definite block matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-block-quadratic",
    "site": "mds",
    "page": "linear-algebra",
@@ -7249,6 +7258,15 @@
    "div": "def-similar",
    "kind": "def",
    "title": "Similar matrices",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-diagonalization#thm-block-inverse",
+   "site": "mds",
+   "page": "linear-algebra-diagonalization",
+   "div": "thm-block-inverse",
+   "kind": "thm",
+   "title": "The inverse of a positive definite block matrix",
    "external": false
   },
   {
@@ -15733,6 +15751,42 @@
    "mds/linear-algebra#def-span"
   ],
   [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#cor-inverse-symmetric"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-invertible-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-schur-complement"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#thm-block-quadratic"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#thm-pd-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#thm-schur-test"
+  ],
+  [
    "mds/linear-algebra#thm-block-quadratic",
    "mds/linear-algebra#cor-inverse-symmetric"
   ],
@@ -18319,6 +18373,18 @@
   [
    "mds/linear-algebra-diagonalization#def-schur-complement",
    "mds/linear-algebra-diagonalization#thm-block-quadratic"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-block-inverse",
+   "mds/linear-algebra-diagonalization#def-schur-complement"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-block-inverse",
+   "mds/linear-algebra-diagonalization#thm-block-quadratic"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-block-inverse",
+   "mds/linear-algebra-diagonalization#thm-schur-test"
   ],
   [
    "mds/linear-algebra-diagonalization#thm-block-quadratic",

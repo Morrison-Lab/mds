@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 12:55:39 (PST)
+Last modified: 2026-11-09 20:59:27 (PST)
 
 # 1 Similarity and diagonalization
 
@@ -1159,7 +1159,68 @@ Last modified: 2026-11-09 12:55:39 (PST)
 
 > **NOTE:**
 >
-> **Theorem 17 (Cholesky factorization)** A $p \times p$ matrix $\mathbf{A}$ is positive definite ([Definition 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}$ for some lower triangular $\mathbf{L}$ ([Definition 8 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-lower-triangular-matrix)) with positive diagonal entries. For a positive definite $\mathbf{A}$ that $\mathbf{L}$ is unique; it is the **Cholesky factor** [\[8\]](#ref-wikipedia_cholesky_decomposition) of $\mathbf{A}$.
+> **Theorem 17 (The inverse of a positive definite block matrix)** Let $\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}$ be as in [Theorem 15](#thm-block-quadratic), with $\mathbf{X}$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). Then $\mathbf{X}$ is [invertible](linear-algebra-special-matrices.llms.md#def-invertible-matrix), and with the [Schur complement](#def-schur-complement) $\mathbf{S}$ of $\mathbf{A}$, its [inverse](linear-algebra-special-matrices.llms.md#def-matrix-inverse) is the following, where $\mathbf{P}$ is the block of the first $k$ rows and columns of $\mathbf{X}^{-1}$:
+>
+> $$\mathbf{X}^{-1}
+> = \begin{bmatrix}
+> \mathbf{P} & -\mathbf{A}^{-1} \mathbf{B} \mathbf{S}^{-1} \\
+> -\mathbf{S}^{-1} {\mathbf{B}}^{\top} \mathbf{A}^{-1} & \mathbf{S}^{-1}
+> \end{bmatrix},$$
+
+> **NOTE:**
+>
+> *Proof*. $\mathbf{X}$ is invertible, because it is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). By the [Schur complement test](#thm-schur-test), $\mathbf{A}$ and $\mathbf{S}$ are positive definite as well, and [so both are invertible](linear-algebra-special-matrices.llms.md#thm-pd-inverse). Let $\mathbf{W} = \begin{bmatrix} -\mathbf{A}^{-1}\mathbf{B} \\ \mathbf{I}_m \end{bmatrix}$. Each entry of $\mathbf{X}\mathbf{W}$ adds one group of $k$ summands to one group of $m$ summands, so $\mathbf{X}\mathbf{W}$ can be computed one block row at a time:
+>
+> $$\begin{aligned}
+> \mathbf{X}\mathbf{W}
+> &= \begin{bmatrix}
+> -\mathbf{A}\mathbf{A}^{-1}\mathbf{B} + \mathbf{B} \\
+> -{\mathbf{B}}^{\top}\mathbf{A}^{-1}\mathbf{B} + \mathbf{C}
+> \end{bmatrix}
+> && \text{(one block row at a time)} \\
+> &= \begin{bmatrix} -\mathbf{I}_k\mathbf{B} + \mathbf{B} \\ \mathbf{S} \end{bmatrix}
+> && \text{(} \mathbf{A}\mathbf{A}^{-1} = \mathbf{I}_k \text{, and definition of } \mathbf{S} \text{)} \\
+> &= \begin{bmatrix} \mathbf{0} \\ \mathbf{S} \end{bmatrix}
+> && \text{(} \mathbf{I}_k\mathbf{B} = \mathbf{B} \text{)}
+> \end{aligned}$$
+>
+> Multiplying both sides on the left by $\mathbf{X}^{-1}$ gives $\mathbf{W}$ on the left, since $\mathbf{X}^{-1}\mathbf{X} = \mathbf{I}_{k+m}$. Cut $\mathbf{X}^{-1}$ into the four pieces $\mathbf{P}$, $\mathbf{Q}$, $\mathbf{R}$ and $\mathbf{T}$, with $\mathbf{Q}$ and $\mathbf{T}$ in the last $m$ columns. Then the right side is $\mathbf{X}^{-1}\begin{bmatrix} \mathbf{0} \\ \mathbf{S} \end{bmatrix}$, and the last $m$ columns of $\mathbf{X}^{-1}$ multiply $\mathbf{S}$:
+>
+> $$\begin{bmatrix} -\mathbf{A}^{-1}\mathbf{B} \\ \mathbf{I}_m \end{bmatrix}
+> = \begin{bmatrix} \mathbf{Q}\mathbf{S} \\ \mathbf{T}\mathbf{S} \end{bmatrix}.$$
+>
+> So $\mathbf{T}\mathbf{S} = \mathbf{I}_m$, and $\mathbf{Q}\mathbf{S} = -\mathbf{A}^{-1}\mathbf{B}$. Multiplying both equations on the right by $\mathbf{S}^{-1}$ gives $\mathbf{T} = \mathbf{S}^{-1}$, and $\mathbf{Q} = -\mathbf{A}^{-1}\mathbf{B}\mathbf{S}^{-1}$. $\mathbf{X}^{-1}$ is [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix), by [the inverse of a symmetric matrix is symmetric](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric), so $\mathbf{R} = {\mathbf{Q}}^{\top} = -\mathbf{S}^{-1}{\mathbf{B}}^{\top}\mathbf{A}^{-1}$, using ${(\mathbf{S}^{-1})}^{\top} = \mathbf{S}^{-1}$ and ${(\mathbf{A}^{-1})}^{\top} = \mathbf{A}^{-1}$.
+
+> **NOTE:**
+>
+> **Example 25 (The bottom-right entry of the inverse of a** $2 \times 2$ matrix)  
+>
+> Let $\mathbf{X} = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$ with $\mathbf{A} = [5]$, whose [Schur complement](#def-schur-complement) is $\mathbf{S} = [\tfrac{9}{5}]$ ([Example 23](#exm-schur-complement)). It is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) ([Example 24](#exm-schur-test)), so by [Theorem 17](#thm-block-inverse):
+>
+> $$\begin{aligned}
+> \mathbf{T}
+> &= \mathbf{S}^{-1} \\
+> &= [\tfrac{5}{9}].
+> \end{aligned}$$
+>
+> Directly, $\mathbf{X}^{-1} = \tfrac{1}{9}\begin{bmatrix} 5 & -4 \\ -4 & 5 \end{bmatrix}$, because
+>
+> $$\begin{aligned}
+> \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix} \cdot \tfrac{1}{9}\begin{bmatrix} 5 & -4 \\ -4 & 5 \end{bmatrix}
+> &= \tfrac{1}{9}\begin{bmatrix} 25 - 16 & -20 + 20 \\ 20 - 20 & -16 + 25 \end{bmatrix} \\
+> &= \mathbf{I}_2,
+> \end{aligned}$$
+>
+> and its bottom-right entry is $\tfrac{5}{9}$. The top-right entry is $-\mathbf{A}^{-1}\mathbf{B}\mathbf{S}^{-1}$:
+>
+> $$\begin{aligned}
+> -\tfrac{1}{5} \cdot 4 \cdot \tfrac{5}{9}
+> &= -\tfrac{4}{9}.
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Theorem 18 (Cholesky factorization)** A $p \times p$ matrix $\mathbf{A}$ is positive definite ([Definition 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}$ for some lower triangular $\mathbf{L}$ ([Definition 8 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-lower-triangular-matrix)) with positive diagonal entries. For a positive definite $\mathbf{A}$ that $\mathbf{L}$ is unique; it is the **Cholesky factor** [\[8\]](#ref-wikipedia_cholesky_decomposition) of $\mathbf{A}$.
 
 > **NOTE:**
 >
@@ -1230,7 +1291,7 @@ Last modified: 2026-11-09 12:55:39 (PST)
 
 > **NOTE:**
 >
-> **Example 25 (Two Cholesky factors)**  
+> **Example 26 (Two Cholesky factors)**  
 >
 > - $\mathbf{A} = \begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}$:
 >
