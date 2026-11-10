@@ -22,9 +22,9 @@ where $\matr{P}$ holds the first $k$ rows and columns of $\matr{X}^{-1}$.
 
 ::: proof
 
-$\matr{X}$ is [invertible](#def-invertible-matrix) (@thm-pd-inverse).
-$\matr{A}$ and $\matr{S}$ are [positive definite](#def-positive-definite) (@thm-schur-test),
-so both are invertible (@thm-pd-inverse).
+[$\matr{X}$ is invertible](#thm-pd-inverse), because it is [positive definite](#def-positive-definite).
+By the [Schur complement test](#thm-schur-test), $\matr{A}$ and $\matr{S}$ are positive definite as well,
+and [so both are invertible](#thm-pd-inverse).
 Let $\matr{W} = \begin{bmatrix} -\matr{A}^{-1}\matr{B} \\ \matr{I}_m \end{bmatrix}$.
 Each entry of $\matr{X}\matr{W}$ adds one group of $k$ summands to one group of $m$ summands,
 so $\matr{X}\matr{W}$ can be computed one block row at a time:
@@ -59,7 +59,8 @@ $$
 So $\matr{T}\matr{S} = \matr{I}_m$ and $\matr{Q}\matr{S} = -\matr{A}^{-1}\matr{B}$.
 Multiplying both equations on the right by $\matr{S}^{-1}$ gives
 $\matr{T} = \matr{S}^{-1}$ and $\matr{Q} = -\matr{A}^{-1}\matr{B}\matr{S}^{-1}$.
-$\matr{X}^{-1}$ is [symmetric](#def-symmetric-matrix) (@cor-inverse-symmetric),
+$\matr{X}^{-1}$ is [symmetric](#def-symmetric-matrix),
+by [the inverse of a symmetric matrix is symmetric](#cor-inverse-symmetric),
 so $\matr{R} = \tp{\matr{Q}} = -\matr{S}^{-1}\tp{\matr{B}}\matr{A}^{-1}$,
 using $\tp{(\matr{S}^{-1})} = \matr{S}^{-1}$ and $\tp{(\matr{A}^{-1})} = \matr{A}^{-1}$.
 
