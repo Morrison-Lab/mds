@@ -43,7 +43,8 @@ gz_scene_sf <- list(
   xaxis = gz_xaxis_sf,
   yaxis = gz_yaxis_sf,
   zaxis = gz_zaxis_sf,
-  camera = gz_camera_sf
+  camera = gz_camera_sf,
+  aspectmode = "cube"
 )
 gz_legend_sf <- list(orientation = "h")
 plotly::plot_ly() |>
@@ -148,6 +149,7 @@ fig.update_layout(
         yaxis_title="x2",
         zaxis_title="f(x)",
         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+        aspectmode="cube",
     ),
     legend=dict(orientation="h"),
 );
