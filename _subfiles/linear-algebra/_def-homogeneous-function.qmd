@@ -1,0 +1,11 @@
+:::{#def-homogeneous-function}
+#### Homogeneous function
+
+A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \reals^p \to \reals^m$ is **homogeneous**
+[@wikipedia_linear_map]
+if it preserves scalar multiplication:
+for all $\vx \in \reals^p$ and $c \in \reals$,
+
+$$f(c\vx) = c f(\vx)$$
+
+:::
