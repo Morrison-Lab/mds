@@ -1,0 +1,34 @@
+:::{#exm-homogeneous-function}
+#### Homogeneous functions, and one that is not
+
+- $f(x) = 2x$ on $\reals$ is [homogeneous](#def-homogeneous-function). For $x, c \in \reals$:
+
+  $$
+  \begin{aligned}
+  f(c x) &= 2 c x \\
+  &= c (2x) \\
+  &= c f(x)
+  \end{aligned}
+  $$
+
+- $h(x) = x^2$ on $\reals$ is not homogeneous,
+  since $h(2 \cd 1) = 4$ but $2\,h(1) = 2$.
+
+- $k(\vx) = \paren{x_1^3 + x_2^3}^{1/3}$ on $\reals^2$, with the real cube root, is homogeneous but not [additive](#def-additive-function).
+  For $\vx \in \reals^2$ and $c \in \reals$:
+
+  $$
+  \begin{aligned}
+  k(c \vx) &= \paren{c^3 x_1^3 + c^3 x_2^3}^{1/3} \\
+  &= \paren{c^3 \paren{x_1^3 + x_2^3}}^{1/3} \\
+  &= c \paren{x_1^3 + x_2^3}^{1/3} \\
+  &= c\, k(\vx)
+  \end{aligned}
+  $$
+
+  but $k((1, 0) + (0, 1)) = k((1, 1)) = 2^{1/3}$,
+  while $k((1, 0)) + k((0, 1)) = 2$.
+
+<!-- no-figure: the example checks an algebraic identity; it has no data or fitted model to plot -->
+
+:::
