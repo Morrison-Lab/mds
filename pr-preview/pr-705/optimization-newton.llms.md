@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 23:38:40 (PST)
+Last modified: 2026-11-10 01:08:38 (PST)
 
 > **NOTE:**
 >
@@ -307,13 +307,13 @@ Last modified: 2026-11-09 23:38:40 (PST)
 > nc_err_ax = [x - 2 for x in nc_x_ax]
 > fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
 > ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f644cad6350>]
+> #> [<matplotlib.lines.Line2D object at 0x7fb13c24a350>]
 > ax.set_xlabel("iteration t")
 > #> Text(0.5, 0, 'iteration t')
 > ax.set_ylabel("error of the iterate")
 > #> Text(0, 0.5, 'error of the iterate')
 > ax.set_xticks(range(4))
-> #> [<matplotlib.axis.XTick object at 0x7f644cc37d90>, <matplotlib.axis.XTick object at 0x7f644cc374d0>, <matplotlib.axis.XTick object at 0x7f644cad6ad0>, <matplotlib.axis.XTick object at 0x7f644cad7250>]
+> #> [<matplotlib.axis.XTick object at 0x7fb13c3f7d90>, <matplotlib.axis.XTick object at 0x7fb13c3f74d0>, <matplotlib.axis.XTick object at 0x7fb13c24aad0>, <matplotlib.axis.XTick object at 0x7fb13c24b250>]
 > plt.show();
 > ```
 >
@@ -385,15 +385,15 @@ Last modified: 2026-11-09 23:38:40 (PST)
 > > nx_f_max_py = (-2)**3 / 3 - 4 * (-2)
 > > fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
 > > ax.plot(nx_x_py, nx_f_py, color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7f644a757250>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fb139f2f250>]
 > > ax.plot(nx_x_py, nx_q_py, "--", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f644a757390>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fb139f2f390>]
 > > ax.plot([-2.5], [nx_f0_py], "o", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f644a7574d0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fb139f2f4d0>]
 > > ax.plot([-2.05], [nx_q_step_py], "^", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f644a757610>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fb139f2f610>]
 > > ax.plot([-2], [nx_f_max_py], "s", color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7f644a757750>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fb139f2f750>]
 > > ax.set_ylim(-2, 6.5)
 > > #> (-2.0, 6.5)
 > > ax.set_xlabel("x")
@@ -507,7 +507,7 @@ Last modified: 2026-11-09 23:38:40 (PST)
 > > nq_z_py = (nq_xx_py**2 + 3 * nq_yy_py**2) / 2
 > > fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
 > > ax.contour(nq_xx_py, nq_yy_py, nq_z_py, levels=10, colors="#0072B2")
-> > #> <matplotlib.contour.QuadContourSet object at 0x7f64605bdd30>
+> > #> <matplotlib.contour.QuadContourSet object at 0x7fb1500b5d30>
 > > ax.annotate("", xy=(0.764, -1.236), xytext=(3, 1),
 > >             arrowprops={"arrowstyle": "->", "color": "grey"})
 > > #> Text(3, 1, '')
@@ -515,7 +515,7 @@ Last modified: 2026-11-09 23:38:40 (PST)
 > >             arrowprops={"arrowstyle": "->", "color": "#D55E00"})
 > > #> Text(3, 1, '')
 > > ax.plot([3], [1], "ko")
-> > #> [<matplotlib.lines.Line2D object at 0x7f644a7cbc50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fb139f93c50>]
 > > ax.set_aspect("equal")
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
@@ -610,11 +610,11 @@ Last modified: 2026-11-09 23:38:40 (PST)
 > > fig = plt.figure(figsize=(6, 4.5))
 > > ax = fig.add_subplot(projection="3d")
 > > ax.plot_surface(nq_x1_3d, nq_x2_3d, nq_z_3d, color="#0072B2", alpha=0.6)
-> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7f644cb8f8c0>
+> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7fb13c3d38c0>
 > > ax.scatter([3], [1], [6], color="#D55E00", label="start")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f644cb8fa10>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7fb13c3d3a10>
 > > ax.scatter([0], [0], [0], color="black", label="minimizer")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f644a520050>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7fb139ef8050>
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
 > > ax.set_ylabel("x2")
@@ -622,7 +622,7 @@ Last modified: 2026-11-09 23:38:40 (PST)
 > > ax.set_zlabel("f(x)")
 > > #> Text(0.5, 0, 'f(x)')
 > > ax.legend(loc="upper right")
-> > #> <matplotlib.legend.Legend object at 0x7f644cb8fb60>
+> > #> <matplotlib.legend.Legend object at 0x7fb13c3d3b60>
 > > plt.show();
 > > ```
 > >
