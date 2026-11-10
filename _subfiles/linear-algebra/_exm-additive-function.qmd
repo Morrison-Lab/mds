@@ -1,0 +1,20 @@
+:::{#exm-additive-function}
+#### An additive function, and one that is not
+
+- $f(x) = 2x$ on $\reals$ is [additive](#def-additive-function).
+  For $x, y \in \reals$:
+
+  $$
+  \begin{aligned}
+  f(x + y) &= 2(x + y) \\
+  &= 2x + 2y \\
+  &= f(x) + f(y)
+  \end{aligned}
+  $$
+
+- $g(x) = x + 1$ on $\reals$ is not additive,
+  since $g(0 + 0) = 1$ but $g(0) + g(0) = 2$.
+
+<!-- no-figure: the example checks an algebraic identity; it has no data or fitted model to plot -->
+
+:::

@@ -122,6 +122,22 @@
 
 ## Linear and affine maps
 
+{{< include mds/_subfiles/linear-algebra/_def-additive-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-additive-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-homogeneous-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-homogeneous-function.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-linear-map.qmd >}}
 
 {{< slidebreak >}}

@@ -4,10 +4,6 @@
 A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \reals^p \to \reals^m$ is a **linear map**
 [@wikipedia_linear_map]
 (also called a **linear transformation** or **linear function**)
-if it preserves vector addition and scalar multiplication:
-for all $\vx, \vy \in \reals^p$ and $c \in \reals$,
-
-1. $f(\vx + \vy) = f(\vx) + f(\vy)$ (*additivity*)
-2. $f(c\vx) = c f(\vx)$ (*homogeneity*)
+if it is both [additive](#def-additive-function) and [homogeneous](#def-homogeneous-function).
 
 :::

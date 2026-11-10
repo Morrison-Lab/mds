@@ -1,0 +1,11 @@
+:::{#def-additive-function}
+#### Additive function
+
+A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \reals^p \to \reals^m$ is **additive**
+[@wikipedia_linear_map]
+if it preserves [vector addition](linear-algebra-vectors.qmd#def-vector-addition):
+[for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\vx, \vy \in \reals^p$,
+
+$$f(\vx + \vy) = f(\vx) + f(\vy)$$
+
+:::
