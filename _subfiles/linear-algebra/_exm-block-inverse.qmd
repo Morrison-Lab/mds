@@ -1,0 +1,39 @@
+:::{#exm-block-inverse}
+#### The bottom-right entry of the inverse of a $2 \times 2$ matrix
+
+<!-- no-figure: one 2 x 2 inverse checked entry by entry; nothing to plot -->
+
+Let $\matr{X} = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$ with $\matr{A} = [5]$,
+whose Schur complement is $\matr{S} = [\tfrac{9}{5}]$ (@exm-schur-complement).
+It is positive definite (@exm-schur-test), so by @thm-block-inverse:
+
+$$
+\begin{aligned}
+\matr{T}
+&= \matr{S}^{-1} \\
+&= [\tfrac{5}{9}].
+\end{aligned}
+$$
+
+Directly, $\matr{X}^{-1} = \tfrac{1}{9}\begin{bmatrix} 5 & -4 \\ -4 & 5 \end{bmatrix}$,
+because
+
+$$
+\begin{aligned}
+\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix} \cdot \tfrac{1}{9}\begin{bmatrix} 5 & -4 \\ -4 & 5 \end{bmatrix}
+&= \tfrac{1}{9}\begin{bmatrix} 25 - 16 & -20 + 20 \\ 20 - 20 & -16 + 25 \end{bmatrix} \\
+&= \matr{I}_2,
+\end{aligned}
+$$
+
+and its bottom-right entry is $\tfrac{5}{9}$.
+The top-right entry is $-\matr{A}^{-1}\matr{B}\matr{S}^{-1}$:
+
+$$
+\begin{aligned}
+-\tfrac{1}{5} \cdot 4 \cdot \tfrac{5}{9}
+&= -\tfrac{4}{9}.
+\end{aligned}
+$$
+
+:::

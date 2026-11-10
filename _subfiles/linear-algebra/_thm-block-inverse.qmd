@@ -1,0 +1,59 @@
+:::{#thm-block-inverse}
+#### The inverse of a positive definite block matrix
+
+Let $\matr{X} = \begin{bmatrix} \matr{A} & \matr{B} \\ \tp{\matr{B}} & \matr{C} \end{bmatrix}$
+be as in @thm-block-quadratic, with $\matr{X}$ positive definite (@def-positive-definite).
+Then $\matr{X}$ is invertible, and with the Schur complement $\matr{S}$ of $\matr{A}$ (@def-schur-complement),
+the bottom blocks of its inverse are
+
+$$
+\matr{X}^{-1}
+= \begin{bmatrix}
+\matr{P} & -\matr{A}^{-1} \matr{B} \matr{S}^{-1} \\
+-\matr{S}^{-1} \tp{\matr{B}} \matr{A}^{-1} & \matr{S}^{-1}
+\end{bmatrix},
+$$
+
+where $\matr{P}$ is the top-left block of $\matr{X}^{-1}$.
+
+:::
+
+::: proof
+
+$\matr{X}$ is invertible (@thm-pd-inverse).
+$\matr{A}$ and $\matr{S}$ are positive definite (@thm-schur-test), so both are invertible (@thm-pd-inverse).
+Let $\matr{W} = \begin{bmatrix} -\matr{A}^{-1}\matr{B} \\ \matr{I}_m \end{bmatrix}$.
+Multiplying $\matr{X}$ by $\matr{W}$ block by block (each entry of the product is a sum over the first $k$ terms plus a sum over the last $m$ terms):
+
+$$
+\begin{aligned}
+\matr{X}\matr{W}
+&= \begin{bmatrix}
+-\matr{A}\matr{A}^{-1}\matr{B} + \matr{B} \\
+-\tp{\matr{B}}\matr{A}^{-1}\matr{B} + \matr{C}
+\end{bmatrix}
+&& \text{(block multiplication)} \\
+&= \begin{bmatrix} -\matr{I}_k\matr{B} + \matr{B} \\ \matr{S} \end{bmatrix}
+&& \text{(} \matr{A}\matr{A}^{-1} = \matr{I}_k \text{, and definition of } \matr{S} \text{)} \\
+&= \begin{bmatrix} \matr{0} \\ \matr{S} \end{bmatrix}
+&& \text{(} \matr{I}_k\matr{B} = \matr{B} \text{)}
+\end{aligned}
+$$
+
+Multiplying both sides on the left by $\matr{X}^{-1}$ gives $\matr{W}$ on the left,
+since $\matr{X}^{-1}\matr{X} = \matr{I}_{k+m}$.
+Write the right side with $\matr{X}^{-1}$ cut into blocks $\matr{P}$, $\matr{Q}$, $\matr{R}$ and $\matr{T}$,
+with $\matr{Q}$ and $\matr{T}$ the blocks in the last $m$ columns:
+
+$$
+\begin{bmatrix} -\matr{A}^{-1}\matr{B} \\ \matr{I}_m \end{bmatrix}
+= \begin{bmatrix} \matr{Q}\matr{S} \\ \matr{T}\matr{S} \end{bmatrix}.
+$$
+
+So $\matr{T}\matr{S} = \matr{I}_m$ and $\matr{Q}\matr{S} = -\matr{A}^{-1}\matr{B}$.
+Multiplying both equations on the right by $\matr{S}^{-1}$ gives
+$\matr{T} = \matr{S}^{-1}$ and $\matr{Q} = -\matr{A}^{-1}\matr{B}\matr{S}^{-1}$.
+$\matr{X}^{-1}$ is symmetric (@cor-inverse-symmetric), so $\matr{R} = \tp{\matr{Q}} = -\matr{S}^{-1}\tp{\matr{B}}\matr{A}^{-1}$,
+using $\tp{(\matr{S}^{-1})} = \matr{S}^{-1}$ and $\tp{(\matr{A}^{-1})} = \matr{A}^{-1}$.
+
+:::
