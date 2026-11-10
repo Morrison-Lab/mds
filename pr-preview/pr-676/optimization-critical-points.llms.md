@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 10:54:40 (PST)
+Last modified: 2026-11-09 22:59:36 (PST)
 
 # 1 Critical points and optimization
 
@@ -662,7 +662,11 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 
 > **NOTE:**
 >
-> **Example 8 (A stationary point, and a point that is not one)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$. Its gradient is ${(2 x_1 - 2,\ 2 x_2)}^{\top}$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ exactly when $x_1 = 1$ and $x_2 = 0$. So ${(1, 0)}^{\top}$ is its only stationary point, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not one: the gradient there is ${(-2, 0)}^{\top}$.
+> **Example 8 (A stationary point, and a point that is not one)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is
+>
+> $$\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {(2 x_1 - 2,\ 2 x_2)}^{\top},$$
+>
+> which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ exactly when $x_1 = 1$ and $x_2 = 0$. So ${(1, 0)}^{\top}$ is its only stationary point, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not one: $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}) = {(-2, 0)}^{\top}$.
 
 > **NOTE:**
 >
@@ -715,13 +719,13 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >
 > ## R
 >
-> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-r-3.png)](optimization-critical-points_files/figure-html/stationary-point-r-3.png "Figure 6: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
+> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-r-3.png)](optimization-critical-points_files/figure-html/stationary-point-r-3.png "Figure 6: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is \nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
 >
 > ## Python
 >
-> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-python-1.png "Figure 6: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
+> [![Contour plot of x1 squared plus x2 squared minus 2 x1 over x1 from -1 to 3 and x2 from -2 to 2. The level curves are nested blue circles centered at the point (1, 0), which is marked by a vermilion circle and is the stationary point. A vermilion triangle marks the origin, which is not stationary.](optimization-critical-points_files/figure-html/stationary-point-python-1.png)](optimization-critical-points_files/figure-html/stationary-point-python-1.png "Figure 6: Level curves of the function of Example 8. The gradient is \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} only at the center (1, 0) of the circles, the stationary point (circle). At the origin (triangle) the gradient is \nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = {(-2, 0)}^{\top}, which is not \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
 >
-> Figure 6: [Level curves](vector-calculus.llms.md#def-level-curve) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 8](#exm-stationary-point). The [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). At the origin (triangle) the gradient is ${(-2, 0)}^{\top}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> Figure 6: [Level curves](vector-calculus.llms.md#def-level-curve) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 8](#exm-stationary-point). The [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only at the center $(1, 0)$ of the circles, the [stationary point](#def-stationary-point) (circle). At the origin (triangle) the gradient is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = {(-2, 0)}^{\top}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
@@ -889,7 +893,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >   &= f(1, 0).
 >   \end{aligned}$$
 >
-> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ of the [Hessian example](vector-calculus.llms.md#exm-hessian), the second entry of the gradient is $e^{2x_1 + x_2} > 0$, so $f$ has no stationary point, and so no local minimizer.
+> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ of the [Hessian example](vector-calculus.llms.md#exm-hessian), the second entry of $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is $e^{2x_1 + x_2} > 0$, so $f$ has no stationary point, and so no local minimizer.
 >
 > - The converse fails: $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 - x_2^2$ has gradient ${(2 x_1,\ -2 x_2)}^{\top}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is a stationary point, but
 >
@@ -909,7 +913,11 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}^2,$$
 >
-> a scalar-valued function of the $2 \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$. Its gradient is $-2\,{\mathbf{X}}^{\top}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})$. By [Theorem 4](#thm-first-order-condition), a minimizer of $f$ must make this gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is the equation ${\mathbf{X}}^{\top}\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {\mathbf{X}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The code below solves that equation and evaluates the gradient at the solution and at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> a scalar-valued function of the $2 \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is
+>
+> $$\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = -2\,{\mathbf{X}}^{\top}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}).$$
+>
+> By [Theorem 4](#thm-first-order-condition), a minimizer of $f$ must make this gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is the equation ${\mathbf{X}}^{\top}\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {\mathbf{X}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The code below solves that equation and evaluates the gradient at the solution and at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 >
 > ## Python
 >
@@ -970,7 +978,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 1.071498e-11 1.673470e-10
+> #> [1] 9.471535e-12 6.662049e-11
 > #> 
 > #> 
 > #> $zero_vector
@@ -989,7 +997,7 @@ A local minimizer of a differentiable function on an open interval is a flat poi
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 4](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
@@ -1076,7 +1084,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 
 > **NOTE:**
 >
-> **Example 12 (For a quadratic form the expansion is exact)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is $2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([quadratic form gradient](vector-calculus.llms.md#cor-quadratic-form-symmetric)) and its [Hessian](vector-calculus.llms.md#def-hessian) is $2 \mathbf{S}$ at every point ([quadratic form Hessian](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever $\tau$ is, [Theorem 6](#thm-taylor-mv) reads
+> **Example 12 (For a quadratic form the expansion is exact)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. Its [gradient](vector-calculus.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([quadratic form gradient](vector-calculus.llms.md#cor-quadratic-form-symmetric)) and its [Hessian](vector-calculus.llms.md#def-hessian) is $2 \mathbf{S}$ at every point ([quadratic form Hessian](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever $\tau$ is, [Theorem 6](#thm-taylor-mv) reads
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 10:54:40 (PST)
+Last modified: 2026-11-09 22:59:36 (PST)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 
@@ -39,11 +39,27 @@ The links for conditioning, random variables, expectation, and independence go t
 
 The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in `$x^2$`, and displayed equations between double dollar signs, as in `$$x^2$$`. The [equations section of Quarto’s Markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#equations) shows the details. These notes also use shorthand macros, such as `\floor{x}` for $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$, defined in the `latex-macros` submodule’s `macros.qmd`.
 
-# 2 Subscripts and parentheses
+# 2 The prime symbol
 
 > **NOTE:**
 >
-> *Remark 1* (Our convention for subscripts and parentheses). Subscripts and parentheses both attach extra information to a symbol, and sources divide the work between them differently. These notes follow two rules of thumb:
+> *Remark 1* (The prime is overloaded). A prime attached to a symbol has no single meaning. Sources use it for several different operations, and the symbol itself does not say which one. Read $x'$ as “do the thing”: apply the operation that the context makes most salient.
+>
+> The common readings are:
+>
+> - **[Derivative](calculus-derivatives.llms.md#def-lagrange-notation).** For a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$, $f'$ is the derivative of $f$, and $f''$ is its [second derivative](calculus-derivatives.llms.md#def-second-derivative).
+> - **[Transpose](linear-algebra-vectors.llms.md#def-transpose).** For a vector or [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{X}$, $\mathbf{X}'$ is the transpose of $\mathbf{X}$.
+> - **Another value.** For a quantity $x$, $x'$ is a second value of the same kind, as in a threshold $\theta'$ that is compared with a threshold $\theta$.
+>
+> The type of the symbol usually decides. A function has a derivative, a matrix has a transpose, and a number has neither, so a primed number is a second number. When the type does not decide, the surrounding sentence does.
+>
+> These notes mostly write the transpose as ${\mathbf{X}}^{\top}$, with a superscript $\top$, so that a prime next to a vector or matrix rarely competes with a derivative.
+
+# 3 Subscripts and parentheses
+
+> **NOTE:**
+>
+> *Remark 2* (Our convention for subscripts and parentheses). Subscripts and parentheses both attach extra information to a symbol, and sources divide the work between them differently. These notes follow two rules of thumb:
 >
 > - A subscript names which member of an [indexed family](https://morrison-lab.github.io/mcs/sets.html#def-indexed-family) we mean. It holds an index, such as the $i$ in $x_i$, or a parameter that picks one [function](https://morrison-lab.github.io/mcs/functions.html#def-function) or distribution out of the family, such as the $\theta$ in $f_\theta$.
 > - Parentheses hold the input a function is evaluated at, as in $f(x)$.
@@ -56,13 +72,13 @@ The [Notation Across Sources page](https://morrison-lab.github.io/macros/notatio
 >
 > **Example 1 (Reading** $X_t(\omega)$) Let $X_t$ be the position of a particle at time $t \ge 0$. Then $X_3$ is the random position at time 3, and $X_3(\omega)$ is its value when the experiment’s [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) is $\omega$. Holding $\omega$ fixed and letting $t$ vary gives the particle’s whole path for that outcome. A source that writes $X(t, \omega)$ means the same thing, with both arguments in parentheses.
 
-# 3 Why is notation in probability and statistics so inconsistent and disorganized?
+# 4 Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.
 
 It’s worth noting that calculus was formalized in the [1600s](https://en.wikipedia.org/wiki/Leibniz%27s_notation), elementary algebra was formalized around [820](https://en.wikipedia.org/wiki/Al-Jabr), and arithmetic [even earlier](https://en.wikipedia.org/wiki/Arithmetic#History). And calculus still has [several competing notation systems](https://en.wikipedia.org/wiki/Notation_for_differentiation). In contrast, the field of statistics only emerged in the [late 1800s and early 1900s](https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics), so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 [\[1\]](#ref-nelder1972generalized), which is very recent in terms of the [pace of scientific development](https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions).
 
-# 4 Further reading
+# 5 Further reading
 
 For the logical symbols and proof conventions used in these notes (whose definitions are on the [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html#sec-proof-definitions) page):
 
@@ -91,6 +107,6 @@ Back to top
 
 ## Footnotes
 
-[^1]: depending on whether it is applied to a matrix or a function
+[^1]: depending on whether it is applied to a [matrix](linear-algebra-matrices.llms.md#def-matrix) or a [function](https://morrison-lab.github.io/mcs/functions.html#def-function); see [Remark 1](#rem-prime-overloaded) for the other readings
 
 [^2]: A generalized linear model (GLM) is a regression model in which a chosen function $g$, the link function, of the population mean $\mu$ of the outcome equals the linear predictor $\eta = x^{\top} \beta$, a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of the predictor values $x$ with coefficients $\beta$: $g(\mu) = \eta$.

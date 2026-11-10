@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 10:54:40 (PST)
+Last modified: 2026-11-09 22:59:36 (PST)
 
 # 1 Convex functions
 
@@ -121,7 +121,7 @@ Last modified: 2026-11-06 10:54:40 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Let $x^*$ be a local minimizer of $f$, so there is a $\delta> 0$ with $f(x^*) \le f(x)$ whenever $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$ ([Definition 20 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose $x^*$ is not a global minimizer ([Definition 19 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some $y \in \mathbb{R}^p$ has $f(y) < f(x^*)$, and in particular $y \ne x^*$.
+> *Proof*. Let $x^*$ be a local minimizer of $f$, so there is a $\delta> 0$ with $f(x^*) \le f(x)$ whenever $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$ ([Definition 19 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose $x^*$ is not a global minimizer ([Definition 18 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some $y \in \mathbb{R}^p$ has $f(y) < f(x^*)$, and in particular $y \ne x^*$.
 >
 > Let $t = \min{\mathopen{}\left\{\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{}}\right\}\mathclose{}}$, so $t \in (0, 1)$, and let $z = t y + (1 - t) x^*$. Then $z - x^* = t (y - x^*)$, so $\mathopen{}\left\lVert z - x^*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{} \le \delta/ 2 < \delta$.
 >
@@ -207,7 +207,7 @@ Last modified: 2026-11-06 10:54:40 (PST)
 
 > **NOTE:**
 >
-> *Proof*. The first statement is the least-upper-bound property of $\mathbb{R}$ [\[7\]](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8. For the second, let $-A = \mathopen{}\left\{-a : a \in A\right\}\mathclose{}$. Negating both sides of an inequality reverses it ([Theorem 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#thm-neg-ineq)), so $\ell$ is a lower bound of $A$ exactly when $-\ell$ is an upper bound of $-A$. The set $-A$ is nonempty and bounded above, so by the first statement its upper bounds have a minimum $u$, and then $-u$ is the largest lower bound of $A$.
+> *Proof*. The first statement is the least-upper-bound property of $\mathbb{R}$ [\[7\]](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8. For the second, let $-A = \mathopen{}\left\{-a : a \in A\right\}\mathclose{}$. Negating both sides of an inequality reverses it ([Theorem 6 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#thm-neg-ineq)), so $\ell$ is a lower bound of $A$ exactly when $-\ell$ is an upper bound of $-A$. The set $-A$ is nonempty and bounded above, so by the first statement its upper bounds have a minimum $u$, and then $-u$ is the largest lower bound of $A$.
 
 > **NOTE:**
 >
@@ -913,7 +913,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 36 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.
+> **Definition 36 (Notational shorthand)** A **notational shorthand** is a way of writing an [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.
 
 > **NOTE:**
 >
@@ -930,11 +930,11 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 38 (Range of a variable)** The **range** of a variable $x$, written $\mathcal{R}(x)$, is the set of values that $x$ can take.
+> **Definition 38 (Range of a variable)** The **range** of a variable $x$, written $\mathcal{R}(x)$, is the [set](https://morrison-lab.github.io/mcs/chapters/sets.html#def-set) of values that $x$ can take.
 
-For example, if $x$ is the number of heads in two tosses of a coin, then $\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}$. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$ (defined in the Morrison Lab’s probability notes) is a [function](functions.llms.md#def-function), and the set of values $X$ can take, $\mathcal{R}(X)$, is the [image](functions.llms.md#def-image) of $X$. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Range](functions.llms.md#def-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; $\mathcal{R}(x)$ is a set, not that difference.
+For example, if $x$ is the number of heads in two tosses of a coin, then $\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}$. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$ (defined in the Morrison Lab’s probability notes) is a [function](https://morrison-lab.github.io/mcs/functions.html#def-function), and the set of values $X$ can take, $\mathcal{R}(X)$, is the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $X$. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Range](https://morrison-lab.github.io/mcs/functions.html#def-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; $\mathcal{R}(x)$ is a set, not that difference.
 
-[Table 1](#tbl-notational-shorthands) lists shorthands you may encounter in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, $x_1, \ldots, x_n$ and $a_1, \ldots, a_n$ are $n$ numbers, $b_{ij}$ is the entry in row $i$ and column $j$ of an $m \times n$ array, $k$ is an integer with $1 \le k \le n$, $f$ is a [function](functions.llms.md#def-function) from $\mathbb{R}$ to $\mathbb{R}$, and, in the first row, $\mathcal{R}(x)$ is a finite set.
+[Table 1](#tbl-notational-shorthands) lists shorthands you may encounter in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, $x_1, \ldots, x_n$ and $a_1, \ldots, a_n$ are $n$ numbers, $b_{ij}$ is the entry in row $i$ and column $j$ of an $m \times n$ array, $k$ is an integer with $1 \le k \le n$, $f$ is a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) from $\mathbb{R}$ to $\mathbb{R}$, and, in the first row, $\mathcal{R}(x)$ is a finite set.
 
 > **NOTE:**
 >

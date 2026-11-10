@@ -285,6 +285,14 @@
   </script>
 </head>
 <body class="quarto-light">
+<!-- gha-preview-page-banner:start -->
+<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
+    <p style="margin: 0;">
+        <strong>📝 Preview:</strong> This is a new page added in this pull request.
+    </p>
+</div>
+<!-- gha-preview-page-banner:end -->
+
   <div class="reveal">
     <div class="slides">
 
@@ -294,7 +302,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-06 10:54:40 (PST)</p>
+  <p class="date">Last modified: 2026-11-09 22:59:36 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -462,7 +470,7 @@ The [proof](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof) is 
 <section class="slide level2">
 
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x^*\)</span> be a local minimizer of <span class="math inline">\(f\)</span>, so there is a <span class="math inline">\(\delta&gt; 0\)</span> with <span class="math inline">\(f(x^*) \le f(x)\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span> (<a href="./algebra-basics.html#def-local-minimizer">Definition&nbsp;20 in Equalities, Inequalities and Minimizers</a>). Suppose <span class="math inline">\(x^*\)</span> is not a global minimizer (<a href="./algebra-basics.html#def-global-minimizer">Definition&nbsp;19 in Equalities, Inequalities and Minimizers</a>). Then some <span class="math inline">\(y \in \mathbb{R}^p\)</span> has <span class="math inline">\(f(y) &lt; f(x^*)\)</span>, and in particular <span class="math inline">\(y \ne x^*\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x^*\)</span> be a local minimizer of <span class="math inline">\(f\)</span>, so there is a <span class="math inline">\(\delta&gt; 0\)</span> with <span class="math inline">\(f(x^*) \le f(x)\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span> (<a href="./algebra-basics.html#def-local-minimizer">Definition&nbsp;19 in Equalities, Inequalities and Minimizers</a>). Suppose <span class="math inline">\(x^*\)</span> is not a global minimizer (<a href="./algebra-basics.html#def-global-minimizer">Definition&nbsp;18 in Equalities, Inequalities and Minimizers</a>). Then some <span class="math inline">\(y \in \mathbb{R}^p\)</span> has <span class="math inline">\(f(y) &lt; f(x^*)\)</span>, and in particular <span class="math inline">\(y \ne x^*\)</span>.</p>
 <p>Let <span class="math inline">\(t = \min{\mathopen{}\left\{\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{}}\right\}\mathclose{}}\)</span>, so <span class="math inline">\(t \in (0, 1)\)</span>, and let <span class="math inline">\(z = t y + (1 - t) x^*\)</span>. Then <span class="math inline">\(z - x^* = t (y - x^*)\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert z - x^*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{} \le \delta/ 2 &lt; \delta\)</span>.</p>
 <p>By convexity, <span class="math display">\[
 f(z) \le t f(y) + (1 - t) f(x^*) &lt; t f(x^*) + (1 - t) f(x^*) = f(x^*),
@@ -587,7 +595,7 @@ w_1 &amp;= w_2 \\
 </ul>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>The first statement is the least-upper-bound property of <span class="math inline">\(\mathbb{R}\)</span> <span class="citation" data-cites="rudin1976principles"><a href="#/references" role="doc-biblioref" onclick="">[7]</a>, Definition 1.8, p.&nbsp;4, and Theorem 1.19, p.&nbsp;8</span>. For the second, let <span class="math inline">\(-A = \mathopen{}\left\{-a : a \in A\right\}\mathclose{}\)</span>. Negating both sides of an inequality reverses it (<a href="./algebra-basics.html#thm-neg-ineq">Theorem&nbsp;4 in Equalities, Inequalities and Minimizers</a>), so <span class="math inline">\(\ell\)</span> is a lower bound of <span class="math inline">\(A\)</span> exactly when <span class="math inline">\(-\ell\)</span> is an upper bound of <span class="math inline">\(-A\)</span>. The set <span class="math inline">\(-A\)</span> is nonempty and bounded above, so by the first statement its upper bounds have a minimum <span class="math inline">\(u\)</span>, and then <span class="math inline">\(-u\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>The first statement is the least-upper-bound property of <span class="math inline">\(\mathbb{R}\)</span> <span class="citation" data-cites="rudin1976principles"><a href="#/references" role="doc-biblioref" onclick="">[7]</a>, Definition 1.8, p.&nbsp;4, and Theorem 1.19, p.&nbsp;8</span>. For the second, let <span class="math inline">\(-A = \mathopen{}\left\{-a : a \in A\right\}\mathclose{}\)</span>. Negating both sides of an inequality reverses it (<a href="./algebra-basics.html#thm-neg-ineq">Theorem&nbsp;6 in Equalities, Inequalities and Minimizers</a>), so <span class="math inline">\(\ell\)</span> is a lower bound of <span class="math inline">\(A\)</span> exactly when <span class="math inline">\(-\ell\)</span> is an upper bound of <span class="math inline">\(-A\)</span>. The set <span class="math inline">\(-A\)</span> is nonempty and bounded above, so by the first statement its upper bounds have a minimum <span class="math inline">\(u\)</span>, and then <span class="math inline">\(-u\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1530,7 +1538,7 @@ f(-1) + f(2) + f(5)
 <section class="slide level2">
 
 <div id="def-notational-shorthand" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 36 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.</p>
+<p><span class="theorem-title"><strong>Definition 36 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an <a href="https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression">expression</a> that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1563,13 +1571,13 @@ f(-1) + f(2) + f(5)
 <section class="slide level2">
 
 <div id="def-range-of-variable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 38 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
+<p><span class="theorem-title"><strong>Definition 38 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the <a href="https://morrison-lab.github.io/mcs/chapters/sets.html#def-set">set</a> of values that <span class="math inline">\(x\)</span> can take.</p>
 </div>
-<p>For example, if <span class="math inline">\(x\)</span> is the number of heads in two tosses of a coin, then <span class="math inline">\(\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>. A <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(X\)</span> (defined in the Morrison Lab’s probability notes) is a <a href="./functions.html#def-function">function</a>, and the set of values <span class="math inline">\(X\)</span> can take, <span class="math inline">\(\mathcal{R}(X)\)</span>, is the <a href="./functions.html#def-image">image</a> of <span class="math inline">\(X\)</span>. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain (<a href="./functions.html#def-range">Range</a>). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; <span class="math inline">\(\mathcal{R}(x)\)</span> is a set, not that difference.</p>
+<p>For example, if <span class="math inline">\(x\)</span> is the number of heads in two tosses of a coin, then <span class="math inline">\(\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>. A <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(X\)</span> (defined in the Morrison Lab’s probability notes) is a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a>, and the set of values <span class="math inline">\(X\)</span> can take, <span class="math inline">\(\mathcal{R}(X)\)</span>, is the <a href="https://morrison-lab.github.io/mcs/functions.html#def-image">image</a> of <span class="math inline">\(X\)</span>. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain (<a href="https://morrison-lab.github.io/mcs/functions.html#def-range">Range</a>). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; <span class="math inline">\(\mathcal{R}(x)\)</span> is a set, not that difference.</p>
 </section>
 <section class="slide level2">
 
-<p><a href="#/tbl-notational-shorthands" class="quarto-xref">Table&nbsp;1</a> lists shorthands you may encounter in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, <span class="math inline">\(x_1, \ldots, x_n\)</span> and <span class="math inline">\(a_1, \ldots, a_n\)</span> are <span class="math inline">\(n\)</span> numbers, <span class="math inline">\(b_{ij}\)</span> is the entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> of an <span class="math inline">\(m \times n\)</span> array, <span class="math inline">\(k\)</span> is an integer with <span class="math inline">\(1 \le k \le n\)</span>, <span class="math inline">\(f\)</span> is a <a href="./functions.html#def-function">function</a> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, and, in the first row, <span class="math inline">\(\mathcal{R}(x)\)</span> is a finite set.</p>
+<p><a href="#/tbl-notational-shorthands" class="quarto-xref">Table&nbsp;1</a> lists shorthands you may encounter in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, <span class="math inline">\(x_1, \ldots, x_n\)</span> and <span class="math inline">\(a_1, \ldots, a_n\)</span> are <span class="math inline">\(n\)</span> numbers, <span class="math inline">\(b_{ij}\)</span> is the entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> of an <span class="math inline">\(m \times n\)</span> array, <span class="math inline">\(k\)</span> is an integer with <span class="math inline">\(1 \le k \le n\)</span>, <span class="math inline">\(f\)</span> is a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, and, in the first row, <span class="math inline">\(\mathcal{R}(x)\)</span> is a finite set.</p>
 <div id="tbl-notational-shorthands" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notational-shorthands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 10:54:40 (PST)
+Last modified: 2026-11-09 22:59:36 (PST)
 
 # 1 Equalities
 
@@ -12,18 +12,14 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 1 (Transitive relation)** Let $\sim$ be a [relation](https://morrison-lab.github.io/mcs/functions.html#def-relation) on a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$. The relation $\sim$ is **transitive** [\[1\]](#ref-wikipedia_transitive_relation) if, for all $a, b, c \in S$, $a \sim b$ and $b \sim c$ together imply $a \sim c$.
-
-> **NOTE:**
->
 > **Example 1 (A transitive relation and one that is not)**  
 >
-> - $\le$ is transitive: for example, $1 \le 2$ and $2 \le 5$, and indeed $1 \le 5$.
+> - $\le$ is [transitive](https://morrison-lab.github.io/mcs/chapters/relations.html#def-transitive): for example, $1 \le 2$ and $2 \le 5$, and indeed $1 \le 5$.
 > - $\ne$ is not transitive: $1 \ne 2$ and $2 \ne 1$, but $1 \ne 1$ is false.
 
 > **NOTE:**
 >
-> **Theorem 1 (Equalities are transitive)** If $a=b$ and $b=c$, then $a=c$. That is, $=$ is a [transitive](#def-transitive) relation.
+> **Theorem 1 (Equalities are transitive)** If $a=b$ and $b=c$, then $a=c$. That is, $=$ is a [transitive](https://morrison-lab.github.io/mcs/chapters/relations.html#def-transitive) relation.
 
 > **NOTE:**
 >
@@ -31,7 +27,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 2 (Identity)** An **identity** [\[2\]](#ref-wikipedia_identity_mathematics) is an equation between two expressions that holds for every value of its variables in a stated [set](https://morrison-lab.github.io/mcs/sets.html#def-set), such as the [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
+> **Definition 1 (Identity)** An **identity** [\[1\]](#ref-wikipedia_identity_mathematics) is an equation between two expressions that holds for every value of its variables in a stated [set](https://morrison-lab.github.io/mcs/sets.html#def-set), such as the [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
 
 > **NOTE:**
 >
@@ -44,11 +40,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 3 (Strict inequalities)** For [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a$ and $b$, $a < b$ (“$a$ is less than $b$”) and $a > b$ (“$a$ is greater than $b$”) are **strict inequalities** [\[3\]](#ref-wikipedia_inequality_mathematics).
+> **Definition 2 (Strict inequalities)** For [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a$ and $b$, $a < b$ (“$a$ is less than $b$”) and $a > b$ (“$a$ is greater than $b$”) are **strict inequalities** [\[2\]](#ref-wikipedia_inequality_mathematics).
 
 > **NOTE:**
 >
-> **Definition 4 (Non-strict inequalities)** For [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a$ and $b$, the **non-strict inequalities** also allow equality, unlike the strict inequalities ([Definition 3](#def-strict-inequality)):
+> **Definition 3 (Non-strict inequalities)** For [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a$ and $b$, the **non-strict inequalities** also allow equality, unlike the strict inequalities ([Definition 2](#def-strict-inequality)):
 >
 > - $a \le b$ means $a < b$ or $a = b$;
 > - $a \ge b$ means $a > b$ or $a = b$.
@@ -63,43 +59,59 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 3 (Adding to both sides of an inequality)** If $a<b$, then $a+c < b+c$
+> **Theorem 3 (Strict inequalities are transitive)** If $a < b$ and $b < c$, then $a < c$. That is, $<$ is a [transitive](https://morrison-lab.github.io/mcs/chapters/relations.html#def-transitive) relation.
 
 > **NOTE:**
 >
-> **Theorem 4 (Negating both sides of an inequality)** If $a < b$, then: $-a > -b$
+> **Example 4 (Chaining strict inequalities)** Since $1 < 2$ and $2 < 5$, it follows that $1 < 5$.
 
 > **NOTE:**
 >
-> **Theorem 5 (Multiplying both sides of an inequality by a positive number)** If $a < b$ and $c > 0$, then $ca < cb$.
+> **Theorem 4 (Non-strict inequalities are transitive)** If $a \le b$ and $b \le c$, then $a \le c$. That is, $\le$ is a [transitive](https://morrison-lab.github.io/mcs/chapters/relations.html#def-transitive) relation.
 
 > **NOTE:**
 >
-> **Theorem 6 (Negation is multiplication by** $-1$) $$-a = (-1)*a$$
+> **Example 5 (Chaining non-strict inequalities)** Since $3 \le 3$ and $3 \le 4$, it follows that $3 \le 4$.
+
+> **NOTE:**
+>
+> **Theorem 5 (Adding to both sides of an inequality)** If $a<b$, then $a+c < b+c$
+
+> **NOTE:**
+>
+> **Theorem 6 (Negating both sides of an inequality)** If $a < b$, then: $-a > -b$
+
+> **NOTE:**
+>
+> **Theorem 7 (Multiplying both sides of an inequality by a positive number)** If $a < b$ and $c > 0$, then $ca < cb$.
+
+> **NOTE:**
+>
+> **Theorem 8 (Negation is multiplication by** $-1$) $$-a = (-1)*a$$
 
 # 3 Powers, square roots, and absolute values
 
 > **NOTE:**
 >
-> **Definition 5 (Power)** Let $a$ be a real number and $n$ a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers). The $n$th **power** of $a$ is the product of $n$ copies of $a$ [\[4\]](#ref-wikipedia_exponentiation):
+> **Definition 4 (Power)** Let $a$ be a real number and $n$ a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers). The $n$th **power** of $a$ is the product of $n$ copies of $a$ [\[3\]](#ref-wikipedia_exponentiation):
 >
 > $$a^n \stackrel{\text{def}}{=}\underbrace{a \cdot a \cdot\cdots \cdot a}_{n \text{ factors}}$$
 
 > **NOTE:**
 >
-> **Definition 6 (Base of a power)** In $a^n$ ([Definition 5](#def-power)), $a$ is the **base**.
+> **Definition 5 (Base of a power)** In $a^n$ ([Definition 4](#def-power)), $a$ is the **base**.
 
 > **NOTE:**
 >
-> **Definition 7 (Exponent of a power)** In $a^n$ ([Definition 5](#def-power)), $n$ is the **exponent**.
+> **Definition 6 (Exponent of a power)** In $a^n$ ([Definition 4](#def-power)), $n$ is the **exponent**.
 
 > **NOTE:**
 >
-> **Definition 8 (Square)** The second power $a^2$ ([Definition 5](#def-power)) is the **square** of $a$.
+> **Definition 7 (Square)** The second power $a^2$ ([Definition 4](#def-power)) is the **square** of $a$.
 
 > **NOTE:**
 >
-> **Example 4 (Powers)**  
+> **Example 6 (Powers)**  
 >
 > - $$\begin{aligned}
 >   2^3 &= 2 \cdot 2 \cdot 2 \\
@@ -131,7 +143,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 9 (Powers with exponent zero or a negative integer)** For the [exponent](#def-power-exponent) $0$ and negative [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) [exponents](#def-power-exponent):
+> **Definition 8 (Powers with exponent zero or a negative integer)** For the [exponent](#def-power-exponent) $0$ and negative [integer](https://morrison-lab.github.io/mcs/number-systems.html#def-integers) [exponents](#def-power-exponent):
 >
 > - $a^0 \stackrel{\text{def}}{=}1$, including $0^0 = 1$ by convention;
 > - $a^{-n} \stackrel{\text{def}}{=}\frac{1}{a^n}$, when $a \ne 0$.
@@ -142,11 +154,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 10 (Square root)** For a real number $a \ge 0$, the **square root** of $a$, written $\sqrt{a}$ [\[5\]](#ref-wikipedia_square_root), is the non-negative real number whose square ([Definition 5](#def-power)) is $a$.
+> **Definition 9 (Square root)** For a real number $a \ge 0$, the **square root** of $a$, written $\sqrt{a}$ [\[4\]](#ref-wikipedia_square_root), is the non-negative real number whose square ([Definition 4](#def-power)) is $a$.
 
 > **NOTE:**
 >
-> **Example 5 (Square roots)**  
+> **Example 7 (Square roots)**  
 >
 > - $\sqrt{9} = 3$. Although $(-3)^2 = 9$ too, $-3$ is negative, so $\sqrt{9}$ is not $-3$.
 > - $\sqrt{0} = 0$.
@@ -155,7 +167,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 11 (Absolute value of a real number)** The **absolute value** of a real number $a$ [\[6\]](#ref-wikipedia_absolute_value) is
+> **Definition 10 (Absolute value of a real number)** The **absolute value** of a real number $a$ [\[5\]](#ref-wikipedia_absolute_value) is
 >
 > $$\mathopen{}\left|a\right|\mathclose{} \stackrel{\text{def}}{=}\begin{cases}
 > a, & a \ge 0 \\
@@ -164,7 +176,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 6 (Absolute values)**  
+> **Example 8 (Absolute values)**  
 >
 > - $\mathopen{}\left|2.5\right|\mathclose{} = 2.5$, because $2.5 \ge 0$.
 >
@@ -183,7 +195,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >   &= \sqrt{(-3)^2}:
 >   \end{aligned}$$
 >
->   for every real $a$, $\mathopen{}\left|a\right|\mathclose{} = \sqrt{a^2}$ ([Definition 10](#def-square-root)).
+>   for every real $a$, $\mathopen{}\left|a\right|\mathclose{} = \sqrt{a^2}$ ([Definition 9](#def-square-root)).
 >
 > - $\mathopen{}\left|x - 1\right|\mathclose{} < 1$ says that $x$ is less than $1$ away from $1$, that is, $0 < x < 2$.
 
@@ -193,11 +205,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 # 4 Percent
 
-The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” [\[7\]](#ref-wikipedia_percentage).
+The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” [\[6\]](#ref-wikipedia_percentage).
 
 > **NOTE:**
 >
-> **Definition 12 (Percent)** For a real number $x$, “$x$ **percent**”, written $x\%$, means $x / 100$ [\[7\]](#ref-wikipedia_percentage):
+> **Definition 11 (Percent)** For a real number $x$, “$x$ **percent**”, written $x\%$, means $x / 100$ [\[6\]](#ref-wikipedia_percentage):
 >
 > $$x\% \stackrel{\text{def}}{=}\frac{x}{100}$$
 >
@@ -205,7 +217,7 @@ The word “percent” comes from the Latin “per centum”; “centum” is La
 
 > **NOTE:**
 >
-> **Example 7 (Ten percent is one tenth)** Contrary to what you may have learned previously, the equality $10\% = 0.1$ is true and correct, just as $10 \text{kg} = 10,000 \text{g}$ is true and correct:
+> **Example 9 (Ten percent is one tenth)** Contrary to what you may have learned previously, the equality $10\% = 0.1$ is true and correct, just as $10 \text{kg} = 10,000 \text{g}$ is true and correct:
 >
 > $$\begin{aligned}
 > 10\% &= \frac{10}{100}
@@ -241,7 +253,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 13 (Minimum)** Let $A \subseteq \mathbb{R}$. A number $m$ is the **minimum** of $A$ [\[8\]](#ref-wikipedia_maxima_and_minima), written $\min A$, if $m \in A$ and $m \le a$ for all $a \in A$.
+> **Definition 12 (Minimum)** Let $A \subseteq \mathbb{R}$. A number $m$ is the **minimum** of $A$ [\[7\]](#ref-wikipedia_maxima_and_minima), written $\min A$, if $m \in A$ and $m \le a$ for all $a \in A$.
 
 > **NOTE:**
 >
@@ -249,18 +261,18 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 14 (Maximum)** Let $A \subseteq \mathbb{R}$. A number $M$ is the **maximum** of $A$ [\[8\]](#ref-wikipedia_maxima_and_minima), written $\max A$, if $M \in A$ and $a \le M$ for all $a \in A$.
+> **Definition 13 (Maximum)** Let $A \subseteq \mathbb{R}$. A number $M$ is the **maximum** of $A$ [\[7\]](#ref-wikipedia_maxima_and_minima), written $\max A$, if $M \in A$ and $a \le M$ for all $a \in A$.
 
 > **NOTE:**
 >
-> **Example 8 (A maximum, and a set without one)**  
+> **Example 10 (A maximum, and a set without one)**  
 >
 > - $\max \mathopen{}\left\{-2, 5, 0\right\}\mathclose{} = 5$: $5$ is in the set, and $-2 \le 5$, $5 \le 5$, $0 \le 5$.
 > - The interval $[0, 1)$ has no maximum. For any $a \in [0, 1)$, the number $\tfrac{a + 1}{2}$ is also in $[0, 1)$, and it is larger than $a$, since $\tfrac{a + 1}{2} > a$ exactly when $a < 1$. So no element of $[0, 1)$ is at least as large as every element.
 
 > **NOTE:**
 >
-> **Definition 15 (Argmin)** Let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **argmin** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its smallest value:
+> **Definition 14 (Argmin)** Let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **argmin** of $f$ over $A$ [\[8\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its smallest value:
 >
 > $$\arg \min_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(x) \le f(a)\right\}\mathclose{}$$
 >
@@ -268,13 +280,13 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> *Remark 4* (Smallest value versus where it occurs). The smallest value itself is $\min f(A)$, the minimum ([Definition 13](#def-minimum)) of the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $f$, and the argmin is where that value is attained. For example, let $f(x) = x^2$ on $A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}$. The image is $f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}$, so the smallest value is $\min f(A) = 0$, and $\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}$.
+> *Remark 4* (Smallest value versus where it occurs). The smallest value itself is $\min f(A)$, the minimum ([Definition 12](#def-minimum)) of the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $f$, and the argmin is where that value is attained. For example, let $f(x) = x^2$ on $A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}$. The image is $f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}$, so the smallest value is $\min f(A) = 0$, and $\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}$.
 >
 > The argmin is empty when $f$ has no smallest value, for example $f(x) = x$ on $(0, 1]$.
 
 > **NOTE:**
 >
-> **Definition 16 (Argmax)** Let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **argmax** of $f$ over $A$ [\[9\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its largest value:
+> **Definition 15 (Argmax)** Let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **argmax** of $f$ over $A$ [\[8\]](#ref-wikipedia_arg_max) is the set of inputs where $f$ takes its largest value:
 >
 > $$\arg \max_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(a) \le f(x)\right\}\mathclose{}$$
 >
@@ -282,10 +294,10 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 9 (An argmax with two points, and an empty one)**  
+> **Example 11 (An argmax with two points, and an empty one)**  
 >
 > - Let $g(x) = x^2$ on $A = \mathopen{}\left\{-2, 0, 1, 2\right\}\mathclose{}$. The values are $g(-2) = 4$, $g(0) = 0$, $g(1) = 1$ and $g(2) = 4$, so the largest value is $4$ and $\arg \max_{x \in A} g(x) = \mathopen{}\left\{-2, 2\right\}\mathclose{}$. This argmax has two elements, so it is not written as a single $\hat{x}$.
-> - Let $f(x) = x$ on $[0, 1)$. As in [Example 8](#exm-maximum), for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value, so no input attains a largest value, and $\arg \max_{x \in [0, 1)} f(x)$ is the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set).
+> - Let $f(x) = x$ on $[0, 1)$. As in [Example 10](#exm-maximum), for every input $x$ the input $\tfrac{x + 1}{2}$ has a larger value, so no input attains a largest value, and $\arg \max_{x \in [0, 1)} f(x)$ is the [empty set](https://morrison-lab.github.io/mcs/sets.html#def-empty-set).
 
 > **NOTE:**
 >
@@ -319,15 +331,15 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Theorem 7 (A positive multiple has the same argmax)** Let $g : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) and let $c > 0$. Then
+> **Theorem 9 (A positive multiple has the same argmax)** Let $g : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) and let $c > 0$. Then
 >
 > $$\arg \max_{x \in A} c\,g(x) = \arg \max_{x \in A} g(x).$$
 
 > **NOTE:**
 >
-> *Proof*. Let $x^* \in A$. By [Definition 16](#def-argmax), $x^*$ is in the [argmax](#def-argmax) of $c\,g$ [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $c\,g(a) \le c\,g(x^*)$ for every $a \in A$.
+> *Proof*. Let $x^* \in A$. By [Definition 15](#def-argmax), $x^*$ is in the [argmax](#def-argmax) of $c\,g$ [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $c\,g(a) \le c\,g(x^*)$ for every $a \in A$.
 >
-> Suppose $g(a) \le g(x^*)$. If $g(a) = g(x^*)$, then $c\,g(a) = c\,g(x^*)$. If $g(a) < g(x^*)$, then $c\,g(a) < c\,g(x^*)$ by [Theorem 5](#thm-mult-ineq). Either way, $c\,g(a) \le c\,g(x^*)$.
+> Suppose $g(a) \le g(x^*)$. If $g(a) = g(x^*)$, then $c\,g(a) = c\,g(x^*)$. If $g(a) < g(x^*)$, then $c\,g(a) < c\,g(x^*)$ by [Theorem 7](#thm-mult-ineq). Either way, $c\,g(a) \le c\,g(x^*)$.
 >
 > Conversely, suppose $c\,g(a) \le c\,g(x^*)$. Since $1/c > 0$ and $(1/c)\,(c\,g) = g$, the same reasoning applied to the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $c\,g$ and the multiple $1/c$ gives $g(a) \le g(x^*)$.
 >
@@ -335,27 +347,27 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 10 (A quadratic and its positive multiple)** With $g(x) = x(4 - x)$ of [Exercise 2](#exr-argmax-quadratic) and $f = 5\,g$ of [Exercise 3](#exr-argmax-scaled-quadratic), [Theorem 7](#thm-argmax-positive-multiple) (with $c = 5$) gives $\arg \max_{x \in [0, 4]} f(x) = \arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, the same [argmax](#def-argmax) as the exercises found. The largest [values](https://morrison-lab.github.io/mcs/functions.html#def-value) differ, $f(2) = 20$ and $g(2) = 4$, so only the argmax is unchanged by the multiple.
+> **Example 12 (A quadratic and its positive multiple)** With $g(x) = x(4 - x)$ of [Exercise 2](#exr-argmax-quadratic) and $f = 5\,g$ of [Exercise 3](#exr-argmax-scaled-quadratic), [Theorem 9](#thm-argmax-positive-multiple) (with $c = 5$) gives $\arg \max_{x \in [0, 4]} f(x) = \arg \max_{x \in [0, 4]} g(x) = \mathopen{}\left\{2\right\}\mathclose{}$, the same [argmax](#def-argmax) as the exercises found. The largest [values](https://morrison-lab.github.io/mcs/functions.html#def-value) differ, $f(2) = 20$ and $g(2) = 4$, so only the argmax is unchanged by the multiple.
 
 > **NOTE:**
 >
-> **Definition 17 (Positive part of a function)** Let $S$ be a [set](https://morrison-lab.github.io/mcs/sets.html#def-set), and let $f : S \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **positive part** of $f$ is the non-negative function
+> **Definition 16 (Positive part of a function)** Let $S$ be a [set](https://morrison-lab.github.io/mcs/sets.html#def-set), and let $f : S \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). The **positive part** of $f$ is the non-negative function
 >
 > $$f^{+}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f(s), 0\right\}\mathclose{}.$$
 
 > **NOTE:**
 >
-> **Example 11 (The positive part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [positive part](#def-positive-negative-parts) is $f^{+}(x) = \max\mathopen{}\left\{x, 0\right\}\mathclose{}$. At $x = 3$, $f^{+}(3) = \max\mathopen{}\left\{3, 0\right\}\mathclose{} = 3$, and at $x = -2$, $f^{+}(-2) = \max\mathopen{}\left\{-2, 0\right\}\mathclose{} = 0$.
+> **Example 13 (The positive part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [positive part](#def-positive-negative-parts) is $f^{+}(x) = \max\mathopen{}\left\{x, 0\right\}\mathclose{}$. At $x = 3$, $f^{+}(3) = \max\mathopen{}\left\{3, 0\right\}\mathclose{} = 3$, and at $x = -2$, $f^{+}(-2) = \max\mathopen{}\left\{-2, 0\right\}\mathclose{} = 0$.
 
 > **NOTE:**
 >
-> **Definition 18 (Negative part of a function)** For $f$ as in [Definition 17](#def-positive-negative-parts), the **negative part** of $f$ is the non-negative [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
+> **Definition 17 (Negative part of a function)** For $f$ as in [Definition 16](#def-positive-negative-parts), the **negative part** of $f$ is the non-negative [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
 >
 > $$f^{-}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mathclose{}.$$
 
 > **NOTE:**
 >
-> **Example 12 (The negative part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [negative part](#def-negative-part) is $f^{-}(x) = \max\mathopen{}\left\{-x, 0\right\}\mathclose{}$. At $x = 3$, $f^{-}(3) = \max\mathopen{}\left\{-3, 0\right\}\mathclose{} = 0$, and at $x = -2$, $f^{-}(-2) = \max\mathopen{}\left\{2, 0\right\}\mathclose{} = 2$.
+> **Example 14 (The negative part of the identity function)** For $f(x) = x$ on $\mathbb{R}$, the [negative part](#def-negative-part) is $f^{-}(x) = \max\mathopen{}\left\{-x, 0\right\}\mathclose{}$. At $x = 3$, $f^{-}(3) = \max\mathopen{}\left\{-3, 0\right\}\mathclose{} = 0$, and at $x = -2$, $f^{-}(-2) = \max\mathopen{}\left\{2, 0\right\}\mathclose{} = 2$.
 
 # 6 Global and local minimizers
 
@@ -409,15 +421,15 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 19 (Global minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **global minimizer** of $f$ over $A$ if $f(x^*) \le f(x)$ for all $x \in A$.
+> **Definition 18 (Global minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **global minimizer** of $f$ over $A$ if $f(x^*) \le f(x)$ for all $x \in A$.
 
 > **NOTE:**
 >
-> *Remark 5* (Global minimizers form the argmin). The global minimizers of $f$ are exactly the elements of $\arg \min_{x \in A} f(x)$ ([Definition 15](#def-argmin)). A function can have more than one global minimizer. For example, $f(x) = (x^2 - 1)^2$ on $\mathbb{R}$ satisfies $f(x) \ge 0$ for every $x$, and $f(x) = 0$ exactly when $x = -1$ or $x = 1$, so its global minimizers are $-1$ and $1$, and $\arg \min_{x \in \mathbb{R}} f(x) = \mathopen{}\left\{-1, 1\right\}\mathclose{}$.
+> *Remark 5* (Global minimizers form the argmin). The global minimizers of $f$ are exactly the elements of $\arg \min_{x \in A} f(x)$ ([Definition 14](#def-argmin)). A function can have more than one global minimizer. For example, $f(x) = (x^2 - 1)^2$ on $\mathbb{R}$ satisfies $f(x) \ge 0$ for every $x$, and $f(x) = 0$ exactly when $x = -1$ or $x = 1$, so its global minimizers are $-1$ and $1$, and $\arg \min_{x \in \mathbb{R}} f(x) = \mathopen{}\left\{-1, 1\right\}\mathclose{}$.
 
 > **NOTE:**
 >
-> **Definition 20 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ for all $x \in A$ with $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$, where $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}$ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
+> **Definition 19 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ for all $x \in A$ with $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$, where $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}$ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
 
 > **NOTE:**
 >
@@ -429,7 +441,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Example 13 (A point that is not a local minimizer)** For $f(x) = x^3 - 3x$, the point $x = -1$ is not a local minimizer. For any $t$,
+> **Example 15 (A point that is not a local minimizer)** For $f(x) = x^3 - 3x$, the point $x = -1$ is not a local minimizer. For any $t$,
 >
 > $$\begin{aligned}
 > f(-1 + t)
@@ -462,26 +474,25 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 # Definitions on this page
 
-- [Definition 1 (Transitive relation)](#def-transitive)
-- [Definition 2 (Identity)](#def-identity)
-- [Definition 3 (Strict inequalities)](#def-strict-inequality)
-- [Definition 4 (Non-strict inequalities)](#def-non-strict-inequality)
-- [Definition 5 (Power)](#def-power)
-- [Definition 6 (Base of a power)](#def-power-base)
-- [Definition 7 (Exponent of a power)](#def-power-exponent)
-- [Definition 8 (Square)](#def-square)
-- [Definition 9 (Powers with exponent zero or a negative integer)](#def-power-integer)
-- [Definition 10 (Square root)](#def-square-root)
-- [Definition 11 (Absolute value of a real number)](#def-absolute-value)
-- [Definition 12 (Percent)](#def-percent)
-- [Definition 13 (Minimum)](#def-minimum)
-- [Definition 14 (Maximum)](#def-maximum)
-- [Definition 15 (Argmin)](#def-argmin)
-- [Definition 16 (Argmax)](#def-argmax)
-- [Definition 17 (Positive part of a function)](#def-positive-negative-parts)
-- [Definition 18 (Negative part of a function)](#def-negative-part)
-- [Definition 19 (Global minimizer)](#def-global-minimizer)
-- [Definition 20 (Local minimizer)](#def-local-minimizer)
+- [Definition 1 (Identity)](#def-identity)
+- [Definition 2 (Strict inequalities)](#def-strict-inequality)
+- [Definition 3 (Non-strict inequalities)](#def-non-strict-inequality)
+- [Definition 4 (Power)](#def-power)
+- [Definition 5 (Base of a power)](#def-power-base)
+- [Definition 6 (Exponent of a power)](#def-power-exponent)
+- [Definition 7 (Square)](#def-square)
+- [Definition 8 (Powers with exponent zero or a negative integer)](#def-power-integer)
+- [Definition 9 (Square root)](#def-square-root)
+- [Definition 10 (Absolute value of a real number)](#def-absolute-value)
+- [Definition 11 (Percent)](#def-percent)
+- [Definition 12 (Minimum)](#def-minimum)
+- [Definition 13 (Maximum)](#def-maximum)
+- [Definition 14 (Argmin)](#def-argmin)
+- [Definition 15 (Argmax)](#def-argmax)
+- [Definition 16 (Positive part of a function)](#def-positive-negative-parts)
+- [Definition 17 (Negative part of a function)](#def-negative-part)
+- [Definition 18 (Global minimizer)](#def-global-minimizer)
+- [Definition 19 (Local minimizer)](#def-local-minimizer)
 
 Back to top
 
@@ -489,36 +500,32 @@ Back to top
 
 \[1\]
 
-Wikipedia contributors, “Transitive relation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Transitive_relation>
+Wikipedia contributors, “Identity (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Identity_(mathematics)>
 
 \[2\]
 
-Wikipedia contributors, “Identity (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Identity_(mathematics)>
+Wikipedia contributors, “Inequality (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Inequality_(mathematics)>
 
 \[3\]
 
-Wikipedia contributors, “Inequality (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Inequality_(mathematics)>
+Wikipedia contributors, “Exponentiation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Exponentiation>
 
 \[4\]
 
-Wikipedia contributors, “Exponentiation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Exponentiation>
+Wikipedia contributors, “Square root — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Square_root>
 
 \[5\]
 
-Wikipedia contributors, “Square root — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Square_root>
+Wikipedia contributors, “Absolute value — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Absolute_value>
 
 \[6\]
 
-Wikipedia contributors, “Absolute value — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Absolute_value>
+Wikipedia contributors, “Percentage — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Percentage>
 
 \[7\]
 
-Wikipedia contributors, “Percentage — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Percentage>
-
-\[8\]
-
 Wikipedia contributors, “Maxima and minima — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Maxima_and_minima>
 
-\[9\]
+\[8\]
 
 Wikipedia contributors, “Arg max — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Arg_max>

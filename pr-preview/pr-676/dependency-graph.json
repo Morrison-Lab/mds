@@ -144,16 +144,6 @@
    "url": "https://morrison-lab.github.io/mcs/functions.html#def-preimage"
   },
   {
-   "id": "mcs/functions#def-relation",
-   "site": "mcs",
-   "page": "functions",
-   "div": "def-relation",
-   "kind": "def",
-   "title": "relation",
-   "external": true,
-   "url": "https://morrison-lab.github.io/mcs/functions.html#def-relation"
-  },
-  {
    "id": "mcs/functions#def-sequence",
    "site": "mcs",
    "page": "functions",
@@ -1304,15 +1294,6 @@
    "external": false
   },
   {
-   "id": "mds/algebra#def-transitive",
-   "site": "mds",
-   "page": "algebra",
-   "div": "def-transitive",
-   "kind": "def",
-   "title": "Transitive relation",
-   "external": false
-  },
-  {
    "id": "mds/algebra#def-unit-circle",
    "site": "mds",
    "page": "algebra",
@@ -1718,6 +1699,24 @@
    "external": false
   },
   {
+   "id": "mds/algebra#thm-trans-ineq",
+   "site": "mds",
+   "page": "algebra",
+   "div": "thm-trans-ineq",
+   "kind": "thm",
+   "title": "Strict inequalities are transitive",
+   "external": false
+  },
+  {
+   "id": "mds/algebra#thm-trans-non-strict-ineq",
+   "site": "mds",
+   "page": "algebra",
+   "div": "thm-trans-non-strict-ineq",
+   "kind": "thm",
+   "title": "Non-strict inequalities are transitive",
+   "external": false
+  },
+  {
    "id": "mds/algebra-basics#def-absolute-value",
    "site": "mds",
    "page": "algebra-basics",
@@ -1889,15 +1888,6 @@
    "external": false
   },
   {
-   "id": "mds/algebra-basics#def-transitive",
-   "site": "mds",
-   "page": "algebra-basics",
-   "div": "def-transitive",
-   "kind": "def",
-   "title": "Transitive relation",
-   "external": false
-  },
-  {
    "id": "mds/algebra-basics#thm-add-ineq",
    "site": "mds",
    "page": "algebra-basics",
@@ -1958,6 +1948,24 @@
    "div": "thm-substitution",
    "kind": "thm",
    "title": "Substituting equivalent expressions",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-basics#thm-trans-ineq",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "thm-trans-ineq",
+   "kind": "thm",
+   "title": "Strict inequalities are transitive",
+   "external": false
+  },
+  {
+   "id": "mds/algebra-basics#thm-trans-non-strict-ineq",
+   "site": "mds",
+   "page": "algebra-basics",
+   "div": "thm-trans-non-strict-ineq",
+   "kind": "thm",
+   "title": "Non-strict inequalities are transitive",
    "external": false
   },
   {
@@ -5021,6 +5029,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-kronecker-product",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-kronecker-product",
+   "kind": "def",
+   "title": "Kronecker product",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-leading-block",
    "site": "mds",
    "page": "linear-algebra",
@@ -5156,6 +5173,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-matrix-column",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-matrix-column",
+   "kind": "def",
+   "title": "Column of a matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-matrix-condition-number",
    "site": "mds",
    "page": "linear-algebra",
@@ -5225,6 +5251,15 @@
    "div": "def-matrix-power",
    "kind": "def",
    "title": "Matrix power",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-matrix-row",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-matrix-row",
+   "kind": "def",
+   "title": "Row of a matrix",
    "external": false
   },
   {
@@ -5849,6 +5884,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-block-inverse",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-block-inverse",
+   "kind": "thm",
+   "title": "The inverse of a positive definite block matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-block-quadratic",
    "site": "mds",
    "page": "linear-algebra",
@@ -6425,6 +6469,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#thm-matrix-column-of-rows",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-matrix-column-of-rows",
+   "kind": "thm",
+   "title": "A matrix is a column of its rows",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#thm-matrix-induced-inner-product",
    "site": "mds",
    "page": "linear-algebra",
@@ -6449,6 +6502,15 @@
    "div": "thm-matrix-map-linear",
    "kind": "thm",
    "title": "Multiplying by a matrix is a linear map",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#thm-matrix-row-of-columns",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "thm-matrix-row-of-columns",
+   "kind": "thm",
+   "title": "A matrix is a row of its columns",
    "external": false
   },
   {
@@ -7235,6 +7297,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-diagonalization#thm-block-inverse",
+   "site": "mds",
+   "page": "linear-algebra-diagonalization",
+   "div": "thm-block-inverse",
+   "kind": "thm",
+   "title": "The inverse of a positive definite block matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-diagonalization#thm-block-quadratic",
    "site": "mds",
    "page": "linear-algebra-diagonalization",
@@ -7658,6 +7729,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#def-kronecker-product",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-kronecker-product",
+   "kind": "def",
+   "title": "Kronecker product",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#def-norm",
    "site": "mds",
    "page": "linear-algebra-inner-products",
@@ -7937,6 +8017,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-matrices#def-matrix-column",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "def-matrix-column",
+   "kind": "def",
+   "title": "Column of a matrix",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-matrices#def-matrix-mult",
    "site": "mds",
    "page": "linear-algebra-matrices",
@@ -7952,6 +8041,15 @@
    "div": "def-matrix-of-linear-map",
    "kind": "def",
    "title": "Matrix of a linear map",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrices#def-matrix-row",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "def-matrix-row",
+   "kind": "def",
+   "title": "Row of a matrix",
    "external": false
   },
   {
@@ -8162,12 +8260,30 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-matrices#thm-matrix-column-of-rows",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "thm-matrix-column-of-rows",
+   "kind": "thm",
+   "title": "A matrix is a column of its rows",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "site": "mds",
    "page": "linear-algebra-matrices",
    "div": "thm-matrix-map-linear",
    "kind": "thm",
    "title": "Multiplying by a matrix is a linear map",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrices#thm-matrix-row-of-columns",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "thm-matrix-row-of-columns",
+   "kind": "thm",
+   "title": "A matrix is a row of its columns",
    "external": false
   },
   {
@@ -10592,6 +10708,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#cor-log-below-tangent",
+   "site": "mds",
+   "page": "optimization",
+   "div": "cor-log-below-tangent",
+   "kind": "cor",
+   "title": "The natural logarithm lies below its tangent line at one",
+   "external": false
+  },
+  {
    "id": "mds/optimization#cor-qp-sensitivity",
    "site": "mds",
    "page": "optimization",
@@ -11195,6 +11320,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#thm-exp-above-tangent",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-exp-above-tangent",
+   "kind": "thm",
+   "title": "The exponential function lies above its tangent line at zero",
+   "external": false
+  },
+  {
    "id": "mds/optimization#thm-fermat",
    "site": "mds",
    "page": "optimization",
@@ -11402,6 +11536,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization-convexity#cor-log-below-tangent",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "cor-log-below-tangent",
+   "kind": "cor",
+   "title": "The natural logarithm lies below its tangent line at one",
+   "external": false
+  },
+  {
    "id": "mds/optimization-convexity#def-concave",
    "site": "mds",
    "page": "optimization-convexity",
@@ -11516,6 +11659,15 @@
    "div": "thm-epigraph",
    "kind": "thm",
    "title": "Convexity through the epigraph",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-exp-above-tangent",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-exp-above-tangent",
+   "kind": "thm",
+   "title": "The exponential function lies above its tangent line at zero",
    "external": false
   },
   {
@@ -12807,6 +12959,10 @@
    "mds/algebra#def-strict-inequality"
   ],
   [
+   "mds/algebra#def-notational-shorthand",
+   "mcs/expressions-algorithms#def-expression"
+  ],
+  [
    "mds/algebra#def-numerator",
    "mds/algebra#def-fraction"
   ],
@@ -12983,14 +13139,6 @@
    "mds/algebra#def-bounded-above"
   ],
   [
-   "mds/algebra#def-transitive",
-   "mcs/functions#def-relation"
-  ],
-  [
-   "mds/algebra#def-transitive",
-   "mcs/sets#def-set"
-  ],
-  [
    "mds/algebra#def-upper-limit",
    "mds/algebra#def-summation"
   ],
@@ -13123,10 +13271,6 @@
    "mds/algebra#def-unit-circle"
   ],
   [
-   "mds/algebra#thm-equal-trans",
-   "mds/algebra#def-transitive"
-  ],
-  [
    "mds/algebra#thm-exp-sum",
    "mds/algebra#def-term"
   ],
@@ -13235,20 +13379,8 @@
    "mcs/number-systems#def-real-numbers"
   ],
   [
-   "mds/algebra-basics#def-transitive",
-   "mcs/functions#def-relation"
-  ],
-  [
-   "mds/algebra-basics#def-transitive",
-   "mcs/sets#def-set"
-  ],
-  [
    "mds/algebra-basics#thm-argmax-positive-multiple",
    "mcs/functions#def-function"
-  ],
-  [
-   "mds/algebra-basics#thm-equal-trans",
-   "mds/algebra-basics#def-transitive"
   ],
   [
    "mds/algebra-complex#def-complex-conjugate",
@@ -13665,6 +13797,10 @@
   [
    "mds/algebra-sums#def-lower-upper-limits",
    "mds/calculus#def-riemann-integral"
+  ],
+  [
+   "mds/algebra-sums#def-notational-shorthand",
+   "mcs/expressions-algorithms#def-expression"
   ],
   [
    "mds/algebra-sums#def-numerator",
@@ -15259,6 +15395,14 @@
    "mds/linear-algebra#def-identity-matrix"
   ],
   [
+   "mds/linear-algebra#def-kronecker-product",
+   "mds/linear-algebra#def-block-matrix"
+  ],
+  [
+   "mds/linear-algebra#def-kronecker-product",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
    "mds/linear-algebra#def-leading-block",
    "mds/linear-algebra#def-block-matrix"
   ],
@@ -15299,6 +15443,14 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
+   "mds/linear-algebra#def-matrix-column",
+   "mds/linear-algebra#def-column-vector"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-column",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
    "mds/linear-algebra#def-matrix-condition-number",
    "mds/algebra-sums#def-ratio"
   ],
@@ -15333,6 +15485,10 @@
   [
    "mds/linear-algebra#def-matrix-order",
    "mds/linear-algebra#def-square-matrix"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-row",
+   "mds/linear-algebra#def-matrix"
   ],
   [
    "mds/linear-algebra#def-mean",
@@ -15677,6 +15833,42 @@
   [
    "mds/linear-algebra#thm-basis-unique",
    "mds/linear-algebra#def-span"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#cor-inverse-symmetric"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-invertible-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-matrix-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-schur-complement"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#thm-block-quadratic"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#thm-pd-inverse"
+  ],
+  [
+   "mds/linear-algebra#thm-block-inverse",
+   "mds/linear-algebra#thm-schur-test"
   ],
   [
    "mds/linear-algebra#thm-block-quadratic",
@@ -16799,6 +16991,18 @@
    "mds/linear-algebra#thm-matmul-distrib"
   ],
   [
+   "mds/linear-algebra#thm-matrix-column-of-rows",
+   "mds/linear-algebra#def-column-vector"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-column-of-rows",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-column-of-rows",
+   "mds/linear-algebra#def-matrix-row"
+  ],
+  [
    "mds/linear-algebra#thm-matrix-induced-inner-product",
    "mds/linear-algebra#def-indicator-vector"
   ],
@@ -16841,6 +17045,14 @@
   [
    "mds/linear-algebra#thm-matrix-map-linear",
    "mds/linear-algebra#def-vector-addition"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-row-of-columns",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
+   "mds/linear-algebra#thm-matrix-row-of-columns",
+   "mds/linear-algebra#def-matrix-column"
   ],
   [
    "mds/linear-algebra#thm-matvec-columns",
@@ -18267,6 +18479,18 @@
    "mds/linear-algebra-diagonalization#thm-block-quadratic"
   ],
   [
+   "mds/linear-algebra-diagonalization#thm-block-inverse",
+   "mds/linear-algebra-diagonalization#def-schur-complement"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-block-inverse",
+   "mds/linear-algebra-diagonalization#thm-block-quadratic"
+  ],
+  [
+   "mds/linear-algebra-diagonalization#thm-block-inverse",
+   "mds/linear-algebra-diagonalization#thm-schur-test"
+  ],
+  [
    "mds/linear-algebra-diagonalization#thm-block-quadratic",
    "mds/linear-algebra-diagonalization#def-block-matrix"
   ],
@@ -18571,6 +18795,14 @@
    "mds/linear-algebra-inner-products#def-inner-product"
   ],
   [
+   "mds/linear-algebra-inner-products#def-kronecker-product",
+   "mds/linear-algebra#def-block-matrix"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-kronecker-product",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
    "mds/linear-algebra-inner-products#def-orthogonal-inner-product",
    "mds/linear-algebra-inner-products#def-inner-product-space"
   ],
@@ -18731,8 +18963,16 @@
    "mds/linear-algebra-matrices#def-linear-map"
   ],
   [
+   "mds/linear-algebra-matrices#def-matrix-column",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra-matrices#def-matrix-of-linear-map",
    "mds/linear-algebra-matrices#thm-linear-map-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-matrix-row",
+   "mds/linear-algebra-matrices#def-matrix"
   ],
   [
    "mds/linear-algebra-matrices#def-normal-vector",
@@ -18839,6 +19079,14 @@
    "mds/linear-algebra-matrices#thm-matmul-distrib"
   ],
   [
+   "mds/linear-algebra-matrices#thm-matrix-column-of-rows",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-column-of-rows",
+   "mds/linear-algebra-matrices#def-matrix-row"
+  ],
+  [
    "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "mds/algebra#thm-mult-distr"
   ],
@@ -18865,6 +19113,14 @@
   [
    "mds/linear-algebra-matrices#thm-matrix-map-linear",
    "mds/linear-algebra-matrices#def-scalar-mult"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-row-of-columns",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#thm-matrix-row-of-columns",
+   "mds/linear-algebra-matrices#def-matrix-column"
   ],
   [
    "mds/linear-algebra-matrices#thm-scalar-transpose",
@@ -21023,6 +21279,14 @@
    "mds/optimization#prp-double-well-divergence"
   ],
   [
+   "mds/optimization#cor-log-below-tangent",
+   "mds/algebra#thm-exp-log-inverse"
+  ],
+  [
+   "mds/optimization#cor-log-below-tangent",
+   "mds/optimization#thm-exp-above-tangent"
+  ],
+  [
    "mds/optimization#cor-qp-sensitivity",
    "mds/optimization#def-sensitivity"
   ],
@@ -21571,6 +21835,54 @@
    "mds/optimization#def-epigraph"
   ],
   [
+   "mds/optimization#thm-exp-above-tangent",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-convex-function"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-exponential-function"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-linear-function"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/algebra#def-local-minimizer"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/calculus-derivatives#def-second-derivative"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/optimization#cor-convex-stationary"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/optimization#thm-convex-hessian"
+  ],
+  [
+   "mds/optimization#thm-exp-above-tangent",
+   "mds/optimization-critical-points#thm-fermat"
+  ],
+  [
    "mds/optimization#thm-fermat",
    "mcs/sets#def-open-interval"
   ],
@@ -21955,6 +22267,14 @@
    "mds/optimization-convexity#thm-convex-first-order"
   ],
   [
+   "mds/optimization-convexity#cor-log-below-tangent",
+   "mds/algebra#thm-exp-log-inverse"
+  ],
+  [
+   "mds/optimization-convexity#cor-log-below-tangent",
+   "mds/optimization-convexity#thm-exp-above-tangent"
+  ],
+  [
    "mds/optimization-convexity#def-concave",
    "mds/algebra#def-convex-function"
   ],
@@ -22069,6 +22389,54 @@
   [
    "mds/optimization-convexity#thm-epigraph",
    "mds/optimization-convexity#def-epigraph"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-exponential-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-global-minimizer"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-linear-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/algebra#def-local-minimizer"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/calculus-derivatives#def-second-derivative"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/optimization-convexity#cor-convex-stationary"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/optimization-convexity#thm-convex-hessian"
+  ],
+  [
+   "mds/optimization-convexity#thm-exp-above-tangent",
+   "mds/optimization-critical-points#thm-fermat"
   ],
   [
    "mds/optimization-critical-points#def-critical-point",
@@ -22808,6 +23176,10 @@
   ],
   [
    "mds/vector-calculus#thm-continuous-several",
+   "mcs/functions#def-composition"
+  ],
+  [
+   "mds/vector-calculus#thm-continuous-several",
    "mds/calculus#def-continuous"
   ],
   [
@@ -22928,6 +23300,10 @@
   [
    "mds/linear-algebra#cor-sample-covariance-singular",
    "mds/linear-algebra#thm-invertible-rank"
+  ],
+  [
+   "mds/linear-algebra#def-kronecker-product",
+   "mds/linear-algebra#def-block-matrix"
   ],
   [
    "mds/linear-algebra#thm-cross-product-sum-outer",

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 10:54:40 (PST)
+Last modified: 2026-11-09 22:59:36 (PST)
 
 The linear algebra notes are split across these pages:
 
@@ -78,7 +78,7 @@ K. Lange, *Numerical analysis for statisticians*, 2nd ed. in Statistics and comp
 
 \[7\]
 
-N. Fieller, *Basics of matrix algebra for statistics with R*. Chapman; Hall/CRC, 2016. doi: [10.1201/9781315370200](https://doi.org/10.1201/9781315370200).
+N. Fieller, *Basics of matrix algebra for statistics with R*. Chapman and Hall/CRC, 2016. doi: [10.1201/9781315370200](https://doi.org/10.1201/9781315370200).
 
 \[8\]
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 10:54:40 (PST)
+Last modified: 2026-11-09 22:59:36 (PST)
 
 > **NOTE:**
 >
@@ -478,7 +478,7 @@ Last modified: 2026-11-06 10:54:40 (PST)
 >   && \text{(} 1 - 2 = -1 \text{)}
 >   \end{aligned}$$
 >
-> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= {(1, 1)}^{\top}$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 2$ and the gradient is ${(2 y_1,\ 2 y_2)}^{\top} = {(2, 2)}^{\top}$, so the tangent plane is
+> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= {(1, 1)}^{\top}$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 2$ and the [gradient](vector-calculus.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = {(2 y_1,\ 2 y_2)}^{\top} = {(2, 2)}^{\top}$, so the [tangent plane](#def-tangent-plane) is
 >
 >   $$\begin{aligned}
 >   s
@@ -1030,6 +1030,38 @@ Last modified: 2026-11-06 10:54:40 (PST)
 > - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ is convex by [Theorem 5](#thm-convex-hessian), since its Hessian is $2 \mathbf{I}_2$ ([Example 16 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-second-order-condition)), so its stationary point ${(1, 0)}^{\top}$ ([Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-stationary-point)) is a global minimizer, as completing the square showed in [Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition).
 > - Without convexity, a stationary point need not be a minimizer at all: $x_1^2 - x_2^2$ has the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is not a minimizer ([Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
 > - The corollary says nothing about whether a minimizer exists: $e^{2x_1 + x_2} - x_1$ is convex ([Example 11](#exm-convex-hessian)) but has no stationary point, and so no local minimizer ([Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
+
+> **NOTE:**
+>
+> **Theorem 7 (The exponential function lies above its tangent line at zero)** For every [real](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$,
+>
+> $${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} \ge 1 + x,$$
+>
+> with equality exactly when $x = 0$.
+
+> **NOTE:**
+>
+> *Proof*. Let $g(x) = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} - 1 - x$. The [exponential function](algebra-exponentials.llms.md#def-exponential-function) has [second derivative](calculus-derivatives.llms.md#def-second-derivative) ${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} > 0$ at every $x$, so it is [convex](algebra-sums.llms.md#def-convex-function) by [Theorem 5](#thm-convex-hessian). The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $g$ differs from it by a [linear function](algebra-exponentials.llms.md#def-linear-function), so $g$ is convex too. The [derivative](calculus-derivatives.llms.md#def-derivative) of $g$ is $\frac{d g(x)}{d x} = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} - 1$, which is $0$ at $x = 0$. By [Corollary 1](#cor-convex-stationary), $0$ is a [global minimizer](algebra-basics.llms.md#def-global-minimizer) of $g$, and $g(0) = 0$, so $g(x) \ge 0$ for every $x$.
+>
+> Suppose $g(x) = 0$ for some $x$. Then $x$ is also a global minimizer of $g$, and so a [local minimizer](algebra-basics.llms.md#def-local-minimizer). [Fermat’s theorem](optimization-critical-points.llms.md#thm-fermat) gives $\frac{d g(x)}{d x} = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} - 1 = 0$. Then ${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} = 1 = {\operatorname{exp}\mathopen{}\left\{0\right\}\mathclose{}}$, which gives $x = 0$ because the exponential function is injective.
+
+> **NOTE:**
+>
+> **Corollary 2 (The natural logarithm lies below its tangent line at one)** For every $t > 0$,
+>
+> $${\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}} \le t - 1,$$
+>
+> with equality exactly when $t = 1$.
+
+> **NOTE:**
+>
+> *Proof*. Put $x = {\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}}$, so that ${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} = t$ by the [inverse relation of the logarithm and the exponential](algebra-exponentials.llms.md#thm-exp-log-inverse). By [Theorem 7](#thm-exp-above-tangent), $t = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} \ge 1 + x = 1 + {\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}}$, which is ${\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}} \le t - 1$. Equality holds exactly when $x = 0$, that is, when ${\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}} = 0$, that is, when $t = 1$.
+
+> **NOTE:**
+>
+> **Example 14 (Two values of the bounds)**  
+>
+> At $x = 1$, ${\operatorname{exp}\mathopen{}\left\{1\right\}\mathclose{}} = \text{e}\approx 2.718$, which is at least $1 + 1 = 2$. At $t = 2$, ${\operatorname{log}\mathopen{}\left\{2\right\}\mathclose{}} \approx 0.693$, which is at most $2 - 1 = 1$. Neither is an equality, because $x \ne 0$ and $t \ne 1$.
 
 # Definitions on this page
 
