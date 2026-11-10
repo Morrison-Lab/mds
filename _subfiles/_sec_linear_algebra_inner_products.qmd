@@ -1,5 +1,21 @@
 # Inner products {#sec-inner-products}
 
+{{< include mds/_subfiles/linear-algebra/_def-inner-product-positivity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-inner-product-definiteness.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-inner-product-linearity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-inner-product-symmetry.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-inner-product.qmd >}}
 
 {{< slidebreak >}}

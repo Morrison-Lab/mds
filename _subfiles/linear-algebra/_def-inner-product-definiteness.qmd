@@ -1,0 +1,16 @@
+:::{#def-inner-product-definiteness}
+#### Definiteness
+
+A function $\iprod{\cdot}{\cdot}$
+that assigns a real number to each ordered pair of vectors in $\reals^p$
+has **definiteness** if
+
+$$
+\iprod{\vx}{\vx} = 0
+\quad\text{if and only if}\quad
+\vx = \vzero_{p \times 1}
+$$
+
+for all $\vx \in \reals^p$.
+
+:::

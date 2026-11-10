@@ -3,17 +3,14 @@
 
 An **inner product**
 [@wikipedia_inner_product_space]
-on $\reals^p$ is a function
-that assigns to each ordered pair of vectors $\vx, \vy \in \reals^p$
-a real number $\iprod{\vx}{\vy}$,
-and that has the following four properties
-for all $\vx, \vy, \vecf{z} \in \reals^p$ and all real numbers $a, b$:
+on $\reals^p$ is a function $\iprod{\cdot}{\cdot}$
+that assigns a real number to each ordered pair of vectors in $\reals^p$
+and that has the following four properties:
 
-- **positivity**: $\iprod{\vx}{\vx} \ge 0$;
-- **definiteness**: $\iprod{\vx}{\vx} = 0$ if and only if $\vx = \vzero_{p \times 1}$;
-- **linearity in the first slot**:
-  $\iprod{a\,\vx + b\,\vy}{\vecf{z}} = a\,\iprod{\vx}{\vecf{z}} + b\,\iprod{\vy}{\vecf{z}}$;
-- **symmetry**: $\iprod{\vx}{\vy} = \iprod{\vy}{\vx}$.
+- [positivity](#def-inner-product-positivity);
+- [definiteness](#def-inner-product-definiteness);
+- [linearity in the first slot](#def-inner-product-linearity);
+- [symmetry](#def-inner-product-symmetry).
 
 :::
 

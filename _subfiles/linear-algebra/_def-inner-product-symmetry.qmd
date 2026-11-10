@@ -1,0 +1,14 @@
+:::{#def-inner-product-symmetry}
+#### Symmetry
+
+A function $\iprod{\cdot}{\cdot}$
+that assigns a real number to each ordered pair of vectors in $\reals^p$
+has **symmetry** if
+
+$$
+\iprod{\vx}{\vy} = \iprod{\vy}{\vx}
+$$
+
+for all $\vx, \vy \in \reals^p$.
+
+:::

@@ -1,0 +1,14 @@
+:::{#def-inner-product-linearity}
+#### Linearity in the first slot
+
+A function $\iprod{\cdot}{\cdot}$
+that assigns a real number to each ordered pair of vectors in $\reals^p$
+has **linearity in the first slot** if
+
+$$
+\iprod{a\,\vx + b\,\vy}{\vecf{z}} = a\,\iprod{\vx}{\vecf{z}} + b\,\iprod{\vy}{\vecf{z}}
+$$
+
+for all $\vx, \vy, \vecf{z} \in \reals^p$ and all real numbers $a, b$.
+
+:::

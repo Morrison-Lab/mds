@@ -1,0 +1,14 @@
+:::{#def-inner-product-positivity}
+#### Positivity
+
+A function $\iprod{\cdot}{\cdot}$
+that assigns a real number to each ordered pair of vectors in $\reals^p$
+has **positivity** if
+
+$$
+\iprod{\vx}{\vx} \ge 0
+$$
+
+for all $\vx \in \reals^p$.
+
+:::
