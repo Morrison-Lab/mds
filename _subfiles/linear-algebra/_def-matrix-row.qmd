@@ -1,0 +1,23 @@
+:::{#def-matrix-row}
+#### Row of a matrix
+
+The $i$th **row** of an $m \times n$ [matrix](#def-matrix) $\matr{A}$
+is the $1 \times n$ row vector of the entries in row $i$:
+
+$$
+\matr{A}_{i,:} = \begin{bmatrix} a_{i1} & a_{i2} & \cdots & a_{in} \end{bmatrix}.
+$$
+
+Stacking the $m$ rows gives back the matrix,
+so $\matr{A}$ is a column of row vectors:
+
+$$
+\matr{A} =
+\begin{bmatrix}
+\matr{A}_{1,:} \\
+\vdots \\
+\matr{A}_{m,:}
+\end{bmatrix}.
+$$
+
+:::
