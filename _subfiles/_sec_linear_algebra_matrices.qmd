@@ -18,6 +18,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-matrix-column-of-rows.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-matrix-row-of-columns.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-tensor.qmd >}}
 
 ## Matrix transpose {#sec-matrix-transpose}

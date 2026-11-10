@@ -1,0 +1,14 @@
+:::{#thm-matrix-row-of-columns}
+#### A matrix is a row of its columns
+
+An $m \times n$ matrix $\matr{A}$ is the row vector whose entries
+are its [columns](#def-matrix-column):
+
+$$
+\matr{A} =
+\begin{bmatrix}
+\matr{A}_{:,1} & \cdots & \matr{A}_{:,n}
+\end{bmatrix}.
+$$
+
+:::

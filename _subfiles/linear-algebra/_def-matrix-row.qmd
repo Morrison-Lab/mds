@@ -8,16 +8,4 @@ $$
 \matr{A}_{i,:} = \begin{bmatrix} a_{i1} & a_{i2} & \cdots & a_{in} \end{bmatrix}.
 $$
 
-Stacking the $m$ rows gives back the matrix,
-so $\matr{A}$ is a column of row vectors:
-
-$$
-\matr{A} =
-\begin{bmatrix}
-\matr{A}_{1,:} \\
-\vdots \\
-\matr{A}_{m,:}
-\end{bmatrix}.
-$$
-
 :::
