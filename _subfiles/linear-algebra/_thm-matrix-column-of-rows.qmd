@@ -1,7 +1,7 @@
 :::{#thm-matrix-column-of-rows}
 #### A matrix is a column of its rows
 
-An $m \times n$ matrix $\matr{A}$ is the column vector whose entries
+An $m \times n$ [matrix](#def-matrix) $\matr{A}$ is the [column vector](#def-column-vector) whose entries
 are its [rows](#def-matrix-row):
 
 $$
