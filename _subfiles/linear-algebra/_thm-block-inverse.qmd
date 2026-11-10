@@ -16,14 +16,14 @@ $$
 \end{bmatrix},
 $$
 
-where $\matr{P}$ is the leading $k \times k$ part of $\matr{X}^{-1}$.
+where $\matr{P}$ holds the first $k$ rows and columns of $\matr{X}^{-1}$.
 
 :::
 
 ::: proof
 
-$\matr{X}$ is invertible (@thm-pd-inverse).
-$\matr{A}$ and $\matr{S}$ are positive definite (@thm-schur-test),
+$\matr{X}$ is [invertible](#def-invertible-matrix) (@thm-pd-inverse).
+$\matr{A}$ and $\matr{S}$ are [positive definite](#def-positive-definite) (@thm-schur-test),
 so both are invertible (@thm-pd-inverse).
 Let $\matr{W} = \begin{bmatrix} -\matr{A}^{-1}\matr{B} \\ \matr{I}_m \end{bmatrix}$.
 Each entry of $\matr{X}\matr{W}$ adds one group of $k$ summands to one group of $m$ summands,
