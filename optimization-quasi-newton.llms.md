@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 > **NOTE:**
 >
@@ -232,8 +232,18 @@ Last modified: 2026-11-09 22:04:30 (PST)
 > Show code
 >
 > ``` python
+> import html
 > import numpy as np
 > import plotly.graph_objects as go
+>
+> fig_alt = (
+>     "Surface plot of the quadratic function f over first coordinates from -0.4 "
+>     "to 0.6 and second coordinates from -0.2 to 1, a bowl-shaped surface whose "
+>     "lowest point is above the point (0.09, 0.64). Three markers lie on the "
+>     "surface. A blue circle at the origin is the starting point, a vermilion "
+>     "circle above (0.25, 0.5) is the iterate after one step, and a blue square "
+>     "above (0.09, 0.64) is the minimizer, at the bottom of the bowl."
+> )
 >
 > qn_x_3d = np.linspace(-0.4, 0.6, 101)
 > qn_y_3d = np.linspace(-0.2, 1, 101)
@@ -277,7 +287,12 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >     ),
 >     legend=dict(orientation="h"),
 > );
-> print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+> print(
+>     "```{=html}\n"
+>     + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+>     + fig.to_html(full_html=False, include_plotlyjs="cdn")
+>     + "\n</div>\n```"
+> )
 > ```
 >
 > ## R

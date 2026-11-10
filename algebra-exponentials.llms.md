@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 # 1 Polynomials
 
@@ -844,30 +844,60 @@ Last modified: 2026-11-09 22:04:30 (PST)
 > Show code
 >
 > ``` python
-> import matplotlib.pyplot as plt
+> import html
 > import numpy as np
+> import plotly.graph_objects as go
 >
-> cl_b_3d, cl_c_3d = np.meshgrid(np.linspace(-3.5, 3.5, 101),
->                                np.linspace(-3.5, 3.5, 101))
+> fig_alt = (
+>     "Surface plot of g(b, c) = b squared plus c squared for b and c from -3.5 "
+>     "to 3.5. The surface is a bowl with its lowest point at the origin. Red "
+>     "circles of radius 1, 2 and 3 around the vertical axis, at heights 1, 4 and "
+>     "9, mark the contour lines. Two dots on the circle at height 4 mark the "
+>     "points (2, 0) and (0, -2)."
+> )
+>
+> cl_s_3d = np.linspace(-3.5, 3.5, 101)
+> cl_b_3d, cl_c_3d = np.meshgrid(cl_s_3d, cl_s_3d)
 > cl_g_3d = cl_b_3d**2 + cl_c_3d**2
 > cl_angle_3d = np.linspace(0, 2 * np.pi, 101)
-> fig = plt.figure(figsize=(6, 4.5))
-> ax = fig.add_subplot(projection="3d")
-> ax.plot_surface(cl_b_3d, cl_c_3d, cl_g_3d, color="#0072B2", alpha=0.6)
+> fig = go.Figure(data=[
+>     go.Surface(
+>         x=cl_s_3d,
+>         y=cl_s_3d,
+>         z=cl_g_3d,
+>         colorscale=[[0, "#CCE0F0"], [1, "#0072B2"]],
+>         showscale=False,
+>         opacity=0.6,
+>         showlegend=False,
+>     ),
+> ])
 > for k in [1, 4, 9]:
->     ax.plot(np.sqrt(k) * np.cos(cl_angle_3d),
->             np.sqrt(k) * np.sin(cl_angle_3d),
->             k, color="#D55E00", linewidth=2)
-> ax.scatter([2, 0], [0, -2], [4, 4], color="black")
-> ax.set_xlabel("b")
-> ax.set_ylabel("c")
-> ax.set_zlabel("g(b, c)")
-> plt.show();
+>     fig.add_trace(go.Scatter3d(
+>         x=np.sqrt(k) * np.cos(cl_angle_3d),
+>         y=np.sqrt(k) * np.sin(cl_angle_3d),
+>         z=np.full_like(cl_angle_3d, k), mode="lines",
+>         line=dict(color="#D55E00", width=5), showlegend=False));
+> fig.add_trace(go.Scatter3d(
+>     x=[2, 0], y=[0, -2], z=[4, 4], mode="markers",
+>     marker=dict(color="black", size=4), showlegend=False));
+> fig.update_layout(
+>     scene=dict(
+>         xaxis_title="b",
+>         yaxis_title="c",
+>         zaxis_title="g(b, c)",
+>         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+>     ),
+>     showlegend=False,
+> );
+> print(
+>     "```{=html}\n"
+>     + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+>     + fig.to_html(full_html=False, include_plotlyjs="cdn")
+>     + "\n</div>\n```"
+> )
 > ```
 >
 > ## R
->
-> [![Surface plot of g(b, c) = b squared plus c squared for b and c from -3.5 to 3.5. The surface is a bowl with its lowest point at the origin. Red circles of radius 1, 2 and 3 around the vertical axis, at heights 1, 4 and 9, mark the contour lines. Two dots on the circle at height 4 mark the points (2, 0) and (0, -2).](algebra-exponentials_files/figure-html/contour-line-3d-python-1.png)](algebra-exponentials_files/figure-html/contour-line-3d-python-1.png "Figure 2: The graph of g(b, c) = b^2 + c^2, the surface whose contour lines are in Figure 1. The red circles are the contour lines at heights 1, 4 and 9, and the dots are the points (2, 0) and (0, -2) of Example 26 on the one at height 4.")
 >
 > ## Python
 >

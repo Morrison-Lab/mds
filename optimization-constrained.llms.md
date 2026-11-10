@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 > **NOTE:**
 >
@@ -82,7 +82,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >
 > so it returns ${(1, 0.5)}^{\top}$, a [minimizer of](#def-minimizer-over-feasible-set) $f$ over this feasible set.
 
-Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ positive definite, and the constraints ([Definition 2](#def-constraints)) are $m$ linear equations ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, where $\mathbf{A}$ is a $p \times m$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$. The only stationary point of the objective alone ([Definition 4 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#def-stationary-point)) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ (its gradient is $\mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and $\mathbf{S}$ is invertible), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the minimizer over the feasible set ([Definition 1](#def-feasible-set)) is then found among the stationary points of a new function of the extended set of unknowns.
+Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), and the constraints ([Definition 2](#def-constraints)) are $m$ linear equations ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, where $\mathbf{A}$ is a $p \times m$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$. The only stationary point of the objective alone ([Definition 4 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#def-stationary-point)) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ (its [gradient](vector-calculus.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and $\mathbf{S}$ is [invertible](linear-algebra-special-matrices.llms.md#def-invertible-matrix)), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the minimizer over the feasible set ([Definition 1](#def-feasible-set)) is then found among the stationary points of a new function of the extended set of unknowns.
 
 > **NOTE:**
 >
@@ -463,8 +463,18 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 > Show code
 >
 > ``` python
+> import html
 > import numpy as np
 > import plotly.graph_objects as go
+>
+> fig_alt = (
+>     "Surface plot of x1 squared plus x2 squared over x1 and x2 from -1.6 to 2, "
+>     "a bowl opening upward with its lowest point at the origin. A blue curve on "
+>     "the bowl lies above the straight line 3 x1 plus 4 x2 equals 5, running "
+>     "from upper left to lower right. Its lowest point, above (0.6, 0.8) at "
+>     "height 1, is marked by a vermilion circle. That height is the smallest "
+>     "value of x1 squared plus x2 squared on the line."
+> )
 >
 > ll_x_3d = np.linspace(-1.6, 2, 101)
 > ll_line_x1_3d = np.linspace(-0.5, 2, 101)
@@ -497,7 +507,12 @@ Here the objective ([Definition 3](#def-objective-function)) is a quadratic $\t
 >     ),
 >     legend=dict(orientation="h"),
 > );
-> print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+> print(
+>     "```{=html}\n"
+>     + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+>     + fig.to_html(full_html=False, include_plotlyjs="cdn")
+>     + "\n</div>\n```"
+> )
 > ```
 >
 > ## R

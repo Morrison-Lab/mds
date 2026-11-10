@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 > **NOTE:**
 >
@@ -374,8 +374,19 @@ Last modified: 2026-11-09 22:04:30 (PST)
 > Show code
 >
 > ``` python
+> import html
 > import numpy as np
 > import plotly.graph_objects as go
+>
+> fig_alt = (
+>     "Surface plot of f of x equal to one half of x1 squared plus 3 x2 squared "
+>     "over x1 from -0.5 to 3.5 and x2 from -1 to 1.2, a bowl that is steeper "
+>     "along the x2 axis than along the x1 axis. A blue path of line segments "
+>     "with circles lies on the bowl. It starts at the point (3, 1), then goes to "
+>     "(1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), alternating between the "
+>     "two sides of the valley floor and descending toward the origin, which is "
+>     "marked by a vermilion diamond at the bottom of the bowl."
+> )
 >
 > gz_x1_3d = np.linspace(-0.5, 3.5, 101)
 > gz_x2_3d = np.linspace(-1, 1.2, 101)
@@ -412,7 +423,12 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >     ),
 >     legend=dict(orientation="h"),
 > );
-> print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+> print(
+>     "```{=html}\n"
+>     + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+>     + fig.to_html(full_html=False, include_plotlyjs="cdn")
+>     + "\n</div>\n```"
+> )
 > ```
 >
 > ## R
@@ -730,8 +746,20 @@ Last modified: 2026-11-09 22:04:30 (PST)
 > Show code
 >
 > ``` python
+> import html
 > import numpy as np
 > import plotly.graph_objects as go
+>
+> fig_alt = (
+>     "Surface plot of the Rosenbrock function over first coordinates from -2 to "
+>     "2 and second coordinates from -1 to 3. The surface is a long curved valley "
+>     "with steep walls on both sides, floored by a narrow parabola-shaped "
+>     "channel along the dashed curve x2 equals x1 squared. Three marked points "
+>     "lie on the surface. The minimizer at (1, 1) on the valley floor is a blue "
+>     "circle, the origin on the valley floor is a green square, and the standard "
+>     "starting point (-1.2, 1) is an orange diamond, on the left wall just "
+>     "outside the channel."
+> )
 >
 > rf_x1_3d = np.linspace(-2, 2, 101)
 > rf_x2_3d = np.linspace(-1, 3, 101)
@@ -778,7 +806,12 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >     ),
 >     legend=dict(orientation="h"),
 > );
-> print("```{=html}\n" + fig.to_html(full_html=False, include_plotlyjs="cdn") + "\n```")
+> print(
+>     "```{=html}\n"
+>     + f'<div role="img" aria-label="{html.escape(fig_alt)}">\n'
+>     + fig.to_html(full_html=False, include_plotlyjs="cdn")
+>     + "\n</div>\n```"
+> )
 > ```
 >
 > ## R
@@ -910,7 +943,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea490>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e728f6490>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -922,18 +955,18 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea5d0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea710>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea850>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4d401ea990>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4d401eaad0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f4d401eac10>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e728f65d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e728f6710>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e728f6850>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e728f6990>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e728f6ad0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e728f6c10>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f4d401ead50>
+> #> <matplotlib.legend.Legend object at 0x7f6e728f6d50>
 > plt.show()
 > ```
 >
@@ -1023,19 +1056,19 @@ Last modified: 2026-11-09 22:04:30 (PST)
 > >             solid_capstyle="butt")
 > >     ax.plot([dwf_cut_py, 8], [dwf_i_py] * 2, color="#D55E00", lw=8,
 > >             solid_capstyle="butt")
-> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072990>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072ad0>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072c10>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072d50>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072e90>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f4d40072fd0>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f4d40073110>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f4d40073250>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f4d40073390>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f6e72776990>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f6e72776ad0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f6e72776c10>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f6e72776d50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f6e72776e90>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f6e72776fd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f6e72777110>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f6e72777250>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f6e72777390>]
 > > ax.axvline(4, linestyle=":", color="black")
-> > #> <matplotlib.lines.Line2D object at 0x7f4d400734d0>
+> > #> <matplotlib.lines.Line2D object at 0x7f6e727774d0>
 > > ax.set_yticks(range(3), [str(s) for s in dwf_step_py])
-> > #> [<matplotlib.axis.YTick object at 0x7f4d40070e10>, <matplotlib.axis.YTick object at 0x7f4d40073750>, <matplotlib.axis.YTick object at 0x7f4d40073ed0>]
+> > #> [<matplotlib.axis.YTick object at 0x7f6e72774e10>, <matplotlib.axis.YTick object at 0x7f6e72777750>, <matplotlib.axis.YTick object at 0x7f6e72777ed0>]
 > > ax.set_xlabel("starting point")
 > > #> Text(0.5, 0, 'starting point')
 > > ax.set_ylabel("step length")
@@ -1104,10 +1137,10 @@ Last modified: 2026-11-09 22:04:30 (PST)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f4d4002efd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e72736fd0>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7f4d4002c050>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e72734050>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -1292,11 +1325,11 @@ Last modified: 2026-11-09 22:04:30 (PST)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f4d3fe3efd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f6e72546fd0>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7f4d3fe3f110>
+> #> <matplotlib.lines.Line2D object at 0x7f6e72547110>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7f4d3fe3f250>
+> #> <matplotlib.lines.Line2D object at 0x7f6e72547250>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")

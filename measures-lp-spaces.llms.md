@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (**$L^p$ norm ($p$-norm of a function)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). For any [real number](number-systems.llms.md#def-real-numbers) $p \ge 1$, the $L^p$ norm of a [measurable function](measures-integrals.llms.md#def-measurable-function) $f : S \to \mathbb{R}$ is:
+> **Definition 1 (**$L^p$ norm ($p$-norm of a function)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). For any [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $p \ge 1$, the $L^p$ norm of a [measurable function](measures-integrals.llms.md#def-measurable-function) $f : S \to \mathbb{R}$ is:
 >
 > $$\mathopen{}\left\lVert f\right\rVert\mathclose{}_p \stackrel{\text{def}}{=}\mathopen{}\left(\int_S \mathopen{}\left|f\right|\mathclose{}^p \, d\mu\right)\mathclose{}^{1/p}.$$
 
@@ -82,11 +82,11 @@ Last modified: 2026-11-09 22:04:30 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (**$\mathcal{L}^p$ space ($\mathcal{L}^p(S, \mathcal{S}, \mu)$)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). Let $p \ge 1$ be a [real number](number-systems.llms.md#def-real-numbers). The $\mathcal{L}^p$ space $\mathcal{L}^p(S, \mathcal{S}, \mu)$ is the [set](sets.llms.md#def-set) of all [measurable functions](measures-integrals.llms.md#def-measurable-function) $f : S \to \mathbb{R}$ whose $L^p$ norm is less than $\infty$: $\mathopen{}\left\lVert f\right\rVert\mathclose{}_p < \infty$.
+> **Definition 2 (**$\mathcal{L}^p$ space ($\mathcal{L}^p(S, \mathcal{S}, \mu)$)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). Let $p \ge 1$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers). The $\mathcal{L}^p$ space $\mathcal{L}^p(S, \mathcal{S}, \mu)$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of all [measurable functions](measures-integrals.llms.md#def-measurable-function) $f : S \to \mathbb{R}$ whose $L^p$ norm is less than $\infty$: $\mathopen{}\left\lVert f\right\rVert\mathclose{}_p < \infty$.
 
 > **NOTE:**
 >
-> **Example 2 (An** $L^1$ function not in $L^2$) Consider the [interval](sets.llms.md#def-interval) $(0, 1)$ with the Borel $\sigma$-algebra ([Definition 3 in Sigma-Algebras](measures-sigma-algebras.llms.md#def-borel-sigma-algebra)) and Lebesgue measure $\mu$ ([Definition 6 in Measures and Probability Measures](measures-measure-spaces.llms.md#def-lebesgue-measure)). Define $f : (0, 1) \to \mathbb{R}$ by $f(x) = x^{-1/2}$.
+> **Example 2 (An** $L^1$ function not in $L^2$) Consider the [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval) $(0, 1)$ with the [Borel](measures-sigma-algebras.llms.md#def-borel-sigma-algebra) $\sigma$-algebra and [Lebesgue measure](measures-measure-spaces.llms.md#def-lebesgue-measure) $\mu$. Define $f : (0, 1) \to \mathbb{R}$ by $f(x) = x^{-1/2}$.
 >
 > 1.  For $p = 1$: $$\begin{aligned}
 >     \mathopen{}\left\lVert f\right\rVert\mathclose{}_1
@@ -106,7 +106,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >     &= \infty.
 >     \end{aligned}$$ So $\mathopen{}\left\lVert f\right\rVert\mathclose{}_2 = \infty$, so $f \notin \mathcal{L}^2((0, 1), \mu)$.
 >
-> This shows that $\mathcal{L}^2 \subset \mathcal{L}^1$ on [sets](sets.llms.md#def-set) of [finite measure](measures-measure-spaces.llms.md#def-finite-measure): a larger $p$ imposes stricter requirements near singularities.
+> This example shows that $\mathcal{L}^2 \subset \mathcal{L}^1$ on [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) of [finite measure](measures-measure-spaces.llms.md#def-finite-measure): a larger $p$ imposes stricter requirements near singularities.
 
 > **NOTE:**
 >
@@ -156,13 +156,13 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >     ax.set_title(title)
 >     ax.set_xlabel("x")
 >     ax.set_ylim(0, 10)
-> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f9ccdf59a90>
-> #> [<matplotlib.lines.Line2D object at 0x7f9ccdf59bd0>]
+> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f5fd4ebda90>
+> #> [<matplotlib.lines.Line2D object at 0x7f5fd4ebdbd0>]
 > #> Text(0.5, 1.0, 'p = 1: area = 2')
 > #> Text(0.5, 0, 'x')
 > #> (0.0, 10.0)
-> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f9ccdf59d10>
-> #> [<matplotlib.lines.Line2D object at 0x7f9ccdf59e50>]
+> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f5fd4ebdd10>
+> #> [<matplotlib.lines.Line2D object at 0x7f5fd4ebde50>]
 > #> Text(0.5, 1.0, 'p = 2: area = infinity')
 > #> Text(0.5, 0, 'x')
 > #> (0.0, 10.0)
@@ -182,19 +182,19 @@ Last modified: 2026-11-09 22:04:30 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Equal almost everywhere (**$f = g$ $\mu$-a.e.)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). Let $f, g : S \to \mathbb{R}$ be [measurable](measures-integrals.llms.md#def-measurable-function). The [functions](functions.llms.md#def-function) $f$ and $g$ are **equal almost everywhere**, written $f = g$ $\mu$-a.e., if $f(s) = g(s)$ holds [almost everywhere](measures-measure-spaces.llms.md#def-almost-everywhere).
+> **Definition 3 (Equal almost everywhere (**$f = g$ $\mu$-a.e.)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). Let $f, g : S \to \mathbb{R}$ be [measurable](measures-integrals.llms.md#def-measurable-function). The [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ and $g$ are **equal almost everywhere**, written $f = g$ $\mu$-a.e., if $f(s) = g(s)$ holds [almost everywhere](measures-measure-spaces.llms.md#def-almost-everywhere).
 
 > **NOTE:**
 >
-> **Example 3 (A function that differs from** $0$ at one point) Let $S = \mathbb{R}$ with the [Lebesgue measure](measures-measure-spaces.llms.md#def-lebesgue-measure) $\mu$. Let $f(s) = 1$ if $s = 0$, and $f(s) = 0$ otherwise. The [set](sets.llms.md#def-set) ${\mathopen{}\left\{s : f(s) \neq 0\right\}\mathclose{}} = {\mathopen{}\left\{0\right\}\mathclose{}}$ has [measure zero](measures-measure-spaces.llms.md#def-measure-zero), so $f = 0$ [almost everywhere](measures-measure-spaces.llms.md#def-almost-everywhere) by [Definition 3](#def-equal-almost-everywhere).
+> **Example 3 (A function that differs from** $0$ at one point) Let $S = \mathbb{R}$ with the [Lebesgue measure](measures-measure-spaces.llms.md#def-lebesgue-measure) $\mu$. Let $f(s) = 1$ if $s = 0$, and $f(s) = 0$ otherwise. The [set](https://morrison-lab.github.io/mcs/sets.html#def-set) ${\mathopen{}\left\{s : f(s) \neq 0\right\}\mathclose{}} = {\mathopen{}\left\{0\right\}\mathclose{}}$ has [measure zero](measures-measure-spaces.llms.md#def-measure-zero), so $f = 0$ [almost everywhere](measures-measure-spaces.llms.md#def-almost-everywhere) by [Definition 3](#def-equal-almost-everywhere).
 
 > **NOTE:**
 >
-> **Definition 4 (**$L^p$ space ($L^p(S, \mathcal{S}, \mu)$, $L^p(\mu)$)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). Let $p \ge 1$ be a [real number](number-systems.llms.md#def-real-numbers). For each $f$ in the $\mathcal{L}^p$ space, let $[f]$ be the [set](sets.llms.md#def-set) of all [functions](functions.llms.md#def-function) in $\mathcal{L}^p(S, \mathcal{S}, \mu)$ that are [equal almost everywhere](#def-equal-almost-everywhere) to $f$. The $L^p$ space $L^p(S, \mathcal{S}, \mu)$ (or simply $L^p(\mu)$) is the [set](sets.llms.md#def-set) of all such [sets](sets.llms.md#def-set) $[f]$, with the [norm](linear-algebra-inner-products.llms.md#def-norm) $\mathopen{}\left\lVert[f]\right\rVert\mathclose{}_p \stackrel{\text{def}}{=}\mathopen{}\left\lVert f\right\rVert\mathclose{}_p$ ($L^p$ norm).
+> **Definition 4 (**$L^p$ space ($L^p(S, \mathcal{S}, \mu)$, $L^p(\mu)$)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). Let $p \ge 1$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers). For each $f$ in the $\mathcal{L}^p$ space, let $[f]$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of all [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in $\mathcal{L}^p(S, \mathcal{S}, \mu)$ that are [equal almost everywhere](#def-equal-almost-everywhere) to $f$. The $L^p$ space $L^p(S, \mathcal{S}, \mu)$ (or simply $L^p(\mu)$) is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of all such [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $[f]$, with the [norm](linear-algebra-inner-products.llms.md#def-norm) $\mathopen{}\left\lVert[f]\right\rVert\mathclose{}_p \stackrel{\text{def}}{=}\mathopen{}\left\lVert f\right\rVert\mathclose{}_p$ ($L^p$ norm).
 
 > **NOTE:**
 >
-> **Example 4 (The zero element of** $L^p$) Let $f$ be the [function](functions.llms.md#def-function) in [Example 3](#exm-equal-almost-everywhere), which is $1$ at $s = 0$ and $0$ elsewhere. Then $f = 0$ [almost everywhere](measures-measure-spaces.llms.md#def-almost-everywhere), so $[f] = [0]$. Also $\mathopen{}\left\lVert f\right\rVert\mathclose{}_p = 0$ although $f \neq 0$, so $\mathopen{}\left\lVert f\right\rVert\mathclose{}_p = 0$ can hold for a nonzero element of $\mathcal{L}^p$; on $L^p(\mu)$, $\mathopen{}\left\lVert[f]\right\rVert\mathclose{}_p = 0$ only for $[f] = [0]$, as a [norm](linear-algebra-inner-products.llms.md#def-norm) requires.
+> **Example 4 (The zero element of** $L^p$) Let $f$ be the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 3](#exm-equal-almost-everywhere), which is $1$ at $s = 0$ and $0$ elsewhere. Then $f = 0$ [almost everywhere](measures-measure-spaces.llms.md#def-almost-everywhere), so $[f] = [0]$. Also $\mathopen{}\left\lVert f\right\rVert\mathclose{}_p = 0$ although $f \neq 0$, so $\mathopen{}\left\lVert f\right\rVert\mathclose{}_p = 0$ can hold for a nonzero element of $\mathcal{L}^p$; on $L^p(\mu)$, $\mathopen{}\left\lVert[f]\right\rVert\mathclose{}_p = 0$ only for $[f] = [0]$, as a [norm](linear-algebra-inner-products.llms.md#def-norm) requires.
 
 > **NOTE:**
 >
@@ -204,7 +204,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 
 > **NOTE:**
 >
-> **Example 5 (The essential supremum norm ignores a null set)** Let $S = [0, 1]$ with the [Lebesgue measure](measures-measure-spaces.llms.md#def-lebesgue-measure) $\mu$. Let $f(s) = 5$ if $s = 0$ and $f(s) = s$ otherwise. Then $\sup_s \mathopen{}\left|f(s)\right|\mathclose{} = 5$. For $C \ge 1$, the [set](sets.llms.md#def-set) ${\mathopen{}\left\{s : \mathopen{}\left|f(s)\right|\mathclose{} > C\right\}\mathclose{}}$ is empty or ${\mathopen{}\left\{0\right\}\mathclose{}}$, so it has [measure zero](measures-measure-spaces.llms.md#def-measure-zero), and for $C < 1$ it has positive [measure](measures-measure-spaces.llms.md#def-measure). By [Definition 5](#def-essential-supremum-norm), $\mathopen{}\left\lVert f\right\rVert\mathclose{}_\infty = 1$.
+> **Example 5 (The essential supremum norm ignores a null set)** Let $S = [0, 1]$ with the [Lebesgue measure](measures-measure-spaces.llms.md#def-lebesgue-measure) $\mu$. Let $f(s) = 5$ if $s = 0$ and $f(s) = s$ otherwise. Then $\sup_s \mathopen{}\left|f(s)\right|\mathclose{} = 5$. For $C \ge 1$, the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) ${\mathopen{}\left\{s : \mathopen{}\left|f(s)\right|\mathclose{} > C\right\}\mathclose{}}$ is empty or ${\mathopen{}\left\{0\right\}\mathclose{}}$, so it has [measure zero](measures-measure-spaces.llms.md#def-measure-zero), and for $C < 1$ it has positive [measure](measures-measure-spaces.llms.md#def-measure). By [Definition 5](#def-essential-supremum-norm), $\mathopen{}\left\lVert f\right\rVert\mathclose{}_\infty = 1$.
 
 > **NOTE:**
 >
@@ -249,23 +249,23 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >
 > [![Plot of a function on x from 0 to 1. A solid blue diagonal line rises from an open circle at the origin to the point 1 at x of 1. A single vermilion filled point sits far above, at the value 5 at x of 0. A dashed horizontal line at height 1 marks the essential supremum.](measures-lp-spaces_files/figure-html/essential-supremum-norm-python-1.png)](measures-lp-spaces_files/figure-html/essential-supremum-norm-python-1.png "Figure 3: The function in Example 5: f(s) = s except f(0) = 5. The supremum is 5, reached only at the single point s = 0, which has measure zero, so the essential supremum norm is the dashed height 1.")
 >
-> Figure 3: The [function](functions.llms.md#def-function) in [Example 5](#exm-essential-supremum-norm): $f(s) = s$ except $f(0) = 5$. The [supremum](algebra-sums.llms.md#def-supremum) is $5$, reached only at the single point $s = 0$, which has [measure zero](measures-measure-spaces.llms.md#def-measure-zero), so the [essential supremum norm](#def-essential-supremum-norm) is the dashed height $1$.
+> Figure 3: The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 5](#exm-essential-supremum-norm): $f(s) = s$ except $f(0) = 5$. The [supremum](algebra-sums.llms.md#def-supremum) is $5$, reached only at the single point $s = 0$, which has [measure zero](measures-measure-spaces.llms.md#def-measure-zero), so the [essential supremum norm](#def-essential-supremum-norm) is the dashed height $1$.
 
 > **NOTE:**
 >
-> **Definition 6 (**$\mathcal{L}^\infty$ space ($\mathcal{L}^\infty(S, \mathcal{S}, \mu)$)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). The $\mathcal{L}^\infty$ space $\mathcal{L}^\infty(S, \mathcal{S}, \mu)$ is the [set](sets.llms.md#def-set) of all [measurable functions](measures-integrals.llms.md#def-measurable-function) $f : S \to \mathbb{R}$ whose [essential supremum norm](#def-essential-supremum-norm) is less than $\infty$: $\mathopen{}\left\lVert f\right\rVert\mathclose{}_\infty < \infty$.
+> **Definition 6 (**$\mathcal{L}^\infty$ space ($\mathcal{L}^\infty(S, \mathcal{S}, \mu)$)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). The $\mathcal{L}^\infty$ space $\mathcal{L}^\infty(S, \mathcal{S}, \mu)$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of all [measurable functions](measures-integrals.llms.md#def-measurable-function) $f : S \to \mathbb{R}$ whose [essential supremum norm](#def-essential-supremum-norm) is less than $\infty$: $\mathopen{}\left\lVert f\right\rVert\mathclose{}_\infty < \infty$.
 
 > **NOTE:**
 >
-> **Example 6 (Bounded and unbounded functions)** Let $S = (0, 1)$ with the [Lebesgue measure](measures-measure-spaces.llms.md#def-lebesgue-measure) $\mu$. The [function](functions.llms.md#def-function) $f(s) = s$ has $\mathopen{}\left\lVert f\right\rVert\mathclose{}_\infty = 1 < \infty$, so $f \in \mathcal{L}^\infty(S, \mathcal{S}, \mu)$ by [Definition 6](#def-linf-function-space). The function $g(s) = 1/s$ exceeds every $C$ on the [set](sets.llms.md#def-set) $(0, 1/C)$ of positive [measure](measures-measure-spaces.llms.md#def-measure), so $\mathopen{}\left\lVert g\right\rVert\mathclose{}_\infty = \infty$ and $g \notin \mathcal{L}^\infty(S, \mathcal{S}, \mu)$.
+> **Example 6 (Bounded and unbounded functions)** Let $S = (0, 1)$ with the [Lebesgue measure](measures-measure-spaces.llms.md#def-lebesgue-measure) $\mu$. The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f(s) = s$ has $\mathopen{}\left\lVert f\right\rVert\mathclose{}_\infty = 1 < \infty$, so $f \in \mathcal{L}^\infty(S, \mathcal{S}, \mu)$ by [Definition 6](#def-linf-function-space). The function $g(s) = 1/s$ exceeds every $C$ on the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $(0, 1/C)$ of positive [measure](measures-measure-spaces.llms.md#def-measure), so $\mathopen{}\left\lVert g\right\rVert\mathclose{}_\infty = \infty$ and $g \notin \mathcal{L}^\infty(S, \mathcal{S}, \mu)$.
 
 > **NOTE:**
 >
-> **Definition 7 (**$L^\infty$ space ($L^\infty(S, \mathcal{S}, \mu)$, $L^\infty(\mu)$)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). For each $f$ in the $\mathcal{L}^\infty$ space, let $[f]$ be the [set](sets.llms.md#def-set) of all [functions](functions.llms.md#def-function) in $\mathcal{L}^\infty(S, \mathcal{S}, \mu)$ that are [equal almost everywhere](#def-equal-almost-everywhere) to $f$. The $L^\infty$ space $L^\infty(S, \mathcal{S}, \mu)$ (or simply $L^\infty(\mu)$) is the [set](sets.llms.md#def-set) of all such [sets](sets.llms.md#def-set) $[f]$, with the [norm](linear-algebra-inner-products.llms.md#def-norm) $\mathopen{}\left\lVert[f]\right\rVert\mathclose{}_\infty \stackrel{\text{def}}{=}\mathopen{}\left\lVert f\right\rVert\mathclose{}_\infty$ ([essential supremum norm](#def-essential-supremum-norm)).
+> **Definition 7 (**$L^\infty$ space ($L^\infty(S, \mathcal{S}, \mu)$, $L^\infty(\mu)$)) Let $(S, \mathcal{S}, \mu)$ be a [measure space](measures-measure-spaces.llms.md#def-measure-space). For each $f$ in the $\mathcal{L}^\infty$ space, let $[f]$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of all [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in $\mathcal{L}^\infty(S, \mathcal{S}, \mu)$ that are [equal almost everywhere](#def-equal-almost-everywhere) to $f$. The $L^\infty$ space $L^\infty(S, \mathcal{S}, \mu)$ (or simply $L^\infty(\mu)$) is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of all such [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $[f]$, with the [norm](linear-algebra-inner-products.llms.md#def-norm) $\mathopen{}\left\lVert[f]\right\rVert\mathclose{}_\infty \stackrel{\text{def}}{=}\mathopen{}\left\lVert f\right\rVert\mathclose{}_\infty$ ([essential supremum norm](#def-essential-supremum-norm)).
 
 > **NOTE:**
 >
-> **Example 7 (Bounded functions equal almost everywhere)** Let $f$ be the [function](functions.llms.md#def-function) in [Example 5](#exm-essential-supremum-norm) and $h(s) = s$ on $[0, 1]$. Then $f = h$ almost everywhere ([Definition 3](#def-equal-almost-everywhere)), so $[f] = [h]$ in $L^\infty(\mu)$, and $\mathopen{}\left\lVert[f]\right\rVert\mathclose{}_\infty = \mathopen{}\left\lVert h\right\rVert\mathclose{}_\infty = 1$.
+> **Example 7 (Bounded functions equal almost everywhere)** Let $f$ be the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 5](#exm-essential-supremum-norm) and $h(s) = s$ on $[0, 1]$. Then $f = h$ almost everywhere ([Definition 3](#def-equal-almost-everywhere)), so $[f] = [h]$ in $L^\infty(\mu)$, and $\mathopen{}\left\lVert[f]\right\rVert\mathclose{}_\infty = \mathopen{}\left\lVert h\right\rVert\mathclose{}_\infty = 1$.
 
 > **NOTE:**
 >

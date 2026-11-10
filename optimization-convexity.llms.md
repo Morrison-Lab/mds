@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 > **NOTE:**
 >
@@ -478,7 +478,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >   && \text{(} 1 - 2 = -1 \text{)}
 >   \end{aligned}$$
 >
-> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= {(1, 1)}^{\top}$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 2$ and the gradient is ${(2 y_1,\ 2 y_2)}^{\top} = {(2, 2)}^{\top}$, so the tangent plane is
+> - For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= {(1, 1)}^{\top}$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 2$ and the [gradient](vector-calculus.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = {(2 y_1,\ 2 y_2)}^{\top} = {(2, 2)}^{\top}$, so the [tangent plane](#def-tangent-plane) is
 >
 >   $$\begin{aligned}
 >   s

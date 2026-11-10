@@ -4,13 +4,17 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 # 1 Design Matrix
 
 > **NOTE:**
 >
-> **Definition 1 (Design matrix, model matrix)** In a regression model with $n$ observations and $p$ predictors, the **design matrix** [\[1\]](#ref-wikipedia_design_matrix) (or **model matrix**) $\mathbf{X}$ is the $n \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) whose $i$-th row ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i}^{\top}$ holds, for observation $i$, the $p$ entries the model uses. These can be covariates, a $1$ for the [intercept](algebra-exponentials.llms.md#def-intercept), $0/1$ columns for categories, or [functions](functions.llms.md#def-function) of covariates, such as $x^2$. For a straight-line fit, for example, the design matrix has a first column of 1s, which allows the intercept to be estimated [\[1\]](#ref-wikipedia_design_matrix), [\[2, Sec. 2.4\]](#ref-dobson4e). In symbols,
+> **Definition 1**  
+>
+> #### Design matrix, model matrix
+>
+> In a regression model with $n$ observations and $p$ predictors, the **design matrix** [\[1\]](#ref-wikipedia_design_matrix) (or **model matrix**) $\mathbf{X}$ is the $n \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) whose $i$-th row ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i}^{\top}$ holds, for observation $i$, the $p$ entries the model uses. These can be covariates, a $1$ for the [intercept](algebra-exponentials.llms.md#def-intercept), $0/1$ columns for categories, or [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of covariates, such as $x^2$. For a straight-line fit, for example, the design matrix has a first column of 1s, which allows the intercept to be estimated [\[1\]](#ref-wikipedia_design_matrix), [\[2, Sec. 2.4\]](#ref-dobson4e). In symbols,
 >
 > $$\begin{aligned}
 > \mathbf{X}
@@ -1887,7 +1891,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 
 > **NOTE:**
 >
-> **Theorem 23 (The Moore-Penrose inverse gives a least squares solution)** Let $\mathbf{A}$ be $m \times n$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$. Then $\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is a least squares solution ([Definition 10](#def-least-squares)) of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Moreover, a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$ is a least squares solution [if and only if](proof-writing.llms.md#def-iff)
+> **Theorem 23 (The Moore-Penrose inverse gives a least squares solution)** Let $\mathbf{A}$ be $m \times n$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$. Then $\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is a [least squares solution](#def-least-squares) of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$ is a least squares solution [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff)
 >
 > $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{A}\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}.$$
 
@@ -1934,7 +1938,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
 > = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{P}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathbf{A}(\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right\rVert\mathclose{}^2.$$
 >
-> The first summand does not involve $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and the second is nonnegative, with a zero at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. So $\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ minimizes $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}$, and the smallest [norm](linear-algebra-inner-products.llms.md#def-norm) is $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{P}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\right\rVert\mathclose{}$. A vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ attains that norm [if and only if](proof-writing.llms.md#def-iff) $\mathbf{A}(\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{A}\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
+> The first summand does not involve $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and the second is nonnegative, with a zero at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. So $\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ minimizes $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}$, and the smallest [norm](linear-algebra-inner-products.llms.md#def-norm) is $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{P}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\right\rVert\mathclose{}$. A vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ attains that norm [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $\mathbf{A}(\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{A}\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
 
 > **NOTE:**
 >
@@ -1996,7 +2000,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >
 > **Example 34 (A rank-deficient least squares problem)** Let $\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (2, 3)$. By [Example 14](#exm-moore-penrose), $\mathbf{A}^+ = \mathbf{A}$, so $\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (2, 0)$ and $\mathbf{A}\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (2, 0)$.
 >
-> By [Theorem 23](#thm-moore-penrose-least-squares), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, x_2)$ is a least squares solution ([Definition 10](#def-least-squares)) [if and only if](proof-writing.llms.md#def-iff) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, 0) = (2, 0)$, that is, $x_1 = 2$ with $x_2$ arbitrary. Each of them leaves the same residual $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (0, 3)$, of [norm](linear-algebra-inner-products.llms.md#def-norm) $3$.
+> By [Theorem 23](#thm-moore-penrose-least-squares), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, x_2)$ is a [least squares solution](#def-least-squares) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, 0) = (2, 0)$, that is, $x_1 = 2$ with $x_2$ arbitrary. Each of them leaves the same residual $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (0, 3)$, of [norm](linear-algebra-inner-products.llms.md#def-norm) $3$.
 >
 > For each such $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$,
 >
@@ -2072,7 +2076,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 
 # Definitions on this page
 
-- [Definition 1 (Design matrix, model matrix)](#def-design-matrix)
+- [Definition 1](#def-design-matrix)
 - [Definition 2 (Hat matrix)](#def-hat-matrix)
 - [Definition 3 (Orthogonal projection onto a subspace)](#def-orthogonal-projection)
 - [Definition 4 (Generalized inverse)](#def-generalized-inverse)

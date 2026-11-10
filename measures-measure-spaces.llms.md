@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 # 1 Measures
 
@@ -38,7 +38,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 
 > **NOTE:**
 >
-> **Example 2 (Counting measure on the non-negative integers)** For the counting measure $\mu$ on the [non-negative integers](number-systems.llms.md#def-nonnegative-integers) ${\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}}$, $\mu({\mathopen{}\left\{0, 1, 2\right\}\mathclose{}}) = 3$, and the set of even numbers has $\mu({\mathopen{}\left\{0, 2, 4, \ldots\right\}\mathclose{}}) = \infty$. The even numbers are the union of the pairwise disjoint sets ${\mathopen{}\left\{0\right\}\mathclose{}}, {\mathopen{}\left\{2\right\}\mathclose{}}, {\mathopen{}\left\{4\right\}\mathclose{}}, \ldots$, and countable additivity agrees:
+> **Example 2 (Counting measure on the non-negative integers)** For the [counting measure](#def-counting-measure) $\mu$ on the [non-negative integers](https://morrison-lab.github.io/mcs/number-systems.html#def-nonnegative-integers) ${\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}}$, $\mu({\mathopen{}\left\{0, 1, 2\right\}\mathclose{}}) = 3$, and the set of even numbers has $\mu({\mathopen{}\left\{0, 2, 4, \ldots\right\}\mathclose{}}) = \infty$. The even numbers are the union of the pairwise disjoint sets ${\mathopen{}\left\{0\right\}\mathclose{}}, {\mathopen{}\left\{2\right\}\mathclose{}}, {\mathopen{}\left\{4\right\}\mathclose{}}, \ldots$, and countable additivity agrees:
 >
 > $$\begin{aligned}
 > \sum_{k=0}^{\infty} \mu({\mathopen{}\left\{2k\right\}\mathclose{}}) &= 1 + 1 + \cdots \\
@@ -194,7 +194,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 >
 > [![Plot of a function for x from minus 3 to 3. A blue parabola, x squared, opens upward with its lowest value 0 at x of 0. At each of the integers minus 3 to 3, the parabola has an open circle, and a vermilion filled point sits below the axis at the value minus 1.](measures-measure-spaces_files/figure-html/almost-everywhere-python-1.png)](measures-measure-spaces_files/figure-html/almost-everywhere-python-1.png "Figure 1: The plot shows the function g of Example 7 on [-3, 3]. It is x^2 except at the integers, where it is -1. It falls below the dashed line g = 0 only at those points, which together have measure zero, so g \ge 0 almost everywhere.")
 >
-> Figure 1: The plot shows the [function](functions.llms.md#def-function) $g$ of [Example 7](#exm-almost-everywhere) on $[-3, 3]$. It is $x^2$ except at the [integers](number-systems.llms.md#def-integers), where it is $-1$. It falls below the dashed line $g = 0$ only at those points, which together have [measure zero](#def-measure-zero), so $g \ge 0$ [almost everywhere](#def-almost-everywhere).
+> Figure 1: The plot shows the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $g$ of [Example 7](#exm-almost-everywhere) on $[-3, 3]$. It is $x^2$ except at the [integers](https://morrison-lab.github.io/mcs/number-systems.html#def-integers), where it is $-1$. It falls below the dashed line $g = 0$ only at those points, which together have [measure zero](#def-measure-zero), so $g \ge 0$ [almost everywhere](#def-almost-everywhere).
 
 > **NOTE:**
 >
@@ -279,7 +279,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (Mutually exclusive events). In [probability](#def-probability-measure), [pairwise disjoint](https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint) [events](#def-probability-measure) are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](number-systems.llms.md#def-even-odd)”, ${\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$, and “the roll is odd”, ${\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}$, are mutually exclusive: no roll is both even and odd.
+> *Remark 3* (Mutually exclusive events). In [probability](#def-probability-measure), [pairwise disjoint](https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint) [events](#def-probability-measure) are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](https://morrison-lab.github.io/mcs/number-systems.html#def-even-odd)”, ${\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$, and “the roll is odd”, ${\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}$, are mutually exclusive: no roll is both even and odd.
 
 # Definitions on this page
 

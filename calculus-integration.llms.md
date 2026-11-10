@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 # 1 Integration
 
@@ -145,7 +145,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 3 (Differentiable on an interval)** A function $f$ is **differentiable on** an interval if it is differentiable ([Definition 6 in Derivatives](calculus-derivatives.llms.md#def-differentiable)) at every point of the interval other than its [endpoints](sets.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 12 in Derivatives](calculus-derivatives.llms.md#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
+> **Definition 3 (Differentiable on an interval)** A function $f$ is **differentiable on** an interval if it is differentiable ([Definition 6 in Derivatives](calculus-derivatives.llms.md#def-differentiable)) at every point of the interval other than its [endpoints](https://morrison-lab.github.io/mcs/sets.html#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 12 in Derivatives](calculus-derivatives.llms.md#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
 >
 > [\[2, Sec. 2.1\]](#ref-larsonCalc11e), p. 100
 
@@ -249,7 +249,11 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 8 (Partition of an interval)** A **partition** $\mathcal{P}$ of a closed interval $[a, b]$ [\[5\]](#ref-wikipedia_partition_of_an_interval) is a finite list of points
+> **Definition 8**  
+>
+> #### Partition of an interval
+>
+> A **partition** $\mathcal{P}$ of a closed interval $[a, b]$ [\[5\]](#ref-wikipedia_partition_of_an_interval) is a finite list of points
 >
 > $$\begin{aligned}
 > a
@@ -384,7 +388,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> *Remark 1* (Riemann integrable functions and Riemann integrals). A bounded function $f$ is Riemann integrable on $[a, b]$ exactly when its Riemann integral $\int_a^b f(x)\,dx$ ([Definition 12](#def-riemann-integral)) exists; the integral is the common limit of the sums. For example, let $g(x) = 1$ when $x$ is [rational](number-systems.llms.md#def-rational-numbers) and $g(x) = 0$ when $x$ is [irrational](number-systems.llms.md#def-irrational-numbers), on $[0, 1]$. Every subinterval contains both rational and irrational points. Choosing every sample point rational gives $\sum_{i=1}^n1 \cdot\Delta x_i = 1$ for every partition, because the widths $\Delta x_i$ add up to the length $1 - 0 = 1$ of $[0, 1]$, and choosing every sample point irrational gives $\sum_{i=1}^n0 \cdot\Delta x_i = 0$. The two limits differ, so $g$ is not Riemann integrable on $[0, 1]$, and $\int_0^1 g(x)\,dx$ does not exist.
+> *Remark 1* (Riemann integrable functions and Riemann integrals). A bounded function $f$ is Riemann integrable on $[a, b]$ exactly when its Riemann integral $\int_a^b f(x)\,dx$ ([Definition 12](#def-riemann-integral)) exists; the integral is the common limit of the sums. For example, let $g(x) = 1$ when $x$ is [rational](https://morrison-lab.github.io/mcs/number-systems.html#def-rational-numbers) and $g(x) = 0$ when $x$ is [irrational](https://morrison-lab.github.io/mcs/number-systems.html#def-irrational-numbers), on $[0, 1]$. Every subinterval contains both rational and irrational points. Choosing every sample point rational gives $\sum_{i=1}^n1 \cdot\Delta x_i = 1$ for every partition, because the widths $\Delta x_i$ add up to the length $1 - 0 = 1$ of $[0, 1]$, and choosing every sample point irrational gives $\sum_{i=1}^n0 \cdot\Delta x_i = 0$. The two limits differ, so $g$ is not Riemann integrable on $[0, 1]$, and $\int_0^1 g(x)\,dx$ does not exist.
 
 > **NOTE:**
 >
@@ -415,7 +419,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > - [The Method of Exhaustion](https://www.youtube.com/watch?v=h0gPomI3h8o&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Numeric Integration with Python](https://www.youtube.com/watch?v=f4nfLIkNv0A&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-Before stating the Fundamental Theorem of Calculus, we record two prerequisite results. The usual statement of the Fundamental Theorem of Calculus assumes that the integrand $f$ is continuous on $[a, b]$; continuity is [sufficient](proof-writing.llms.md#def-sufficient-condition) there, though not necessary. The two results are “differentiability implies continuity”, which says where continuity comes from, and “continuity implies integrability”, which says what continuity gives us.
+Before stating the Fundamental Theorem of Calculus, we record two prerequisite results. The usual statement of the Fundamental Theorem of Calculus assumes that the integrand $f$ is continuous on $[a, b]$; [continuity](#def-continuous) is [sufficient](https://morrison-lab.github.io/mcs/proof-writing.html#def-sufficient-condition) there, though not necessary. The two results are “differentiability implies continuity”, which says where continuity comes from, and “continuity implies integrability”, which says what continuity gives us.
 
 > **NOTE:**
 >
@@ -459,7 +463,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > but it is not differentiable at $x = 0$: its left-hand derivative there is $-1$ and its right-hand derivative is $+1$ ([Example 6 in Derivatives](calculus-derivatives.llms.md#exm-one-sided-derivative)).
 >
-> This [counterexample](proof-writing.llms.md#def-counterexample) shows that the [converse](proof-writing.llms.md#def-converse) of [Theorem 2](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 2](#fig-abs-value).
+> This [counterexample](https://morrison-lab.github.io/mcs/proof-writing.html#def-counterexample) shows that the [converse](https://morrison-lab.github.io/mcs/proof-writing.html#def-converse) of [Theorem 2](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 2](#fig-abs-value).
 >
 > > **NOTE:**
 > >
@@ -1294,7 +1298,7 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$; continuity i
 - [Definition 5 (Discontinuous function)](#def-discontinuous)
 - [Definition 6 (Jump discontinuity)](#def-jump-discontinuity)
 - [Definition 7 (Continuous on a closed interval)](#def-continuous-on)
-- [Definition 8 (Partition of an interval)](#def-partition)
+- [Definition 8](#def-partition)
 - [Definition 9 (Mesh of a partition)](#def-mesh)
 - [Definition 10 (Sample point)](#def-sample-point)
 - [Definition 11 (Riemann sum)](#def-riemann-sum)

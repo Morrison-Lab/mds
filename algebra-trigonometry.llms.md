@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 > **NOTE:**
 >
@@ -178,7 +178,7 @@ Last modified: 2026-11-09 22:04:30 (PST)
 
 > **NOTE:**
 >
-> **Definition 7 (Arccosine)** The **arccosine** $\arccos : [-1, 1] \to [0, \pi]$ is the [function](functions.llms.md#def-function) that sends each [cosine](#def-cosine-sine), $c \in [-1, 1]$, to the one [real number](number-systems.llms.md#def-real-numbers) $\theta\in [0, \pi]$ whose cosine is $c$. By [Theorem 2](#thm-cosine-bijection), there is just one such $\theta$.
+> **Definition 7 (Arccosine)** The **arccosine** $\arccos : [-1, 1] \to [0, \pi]$ is the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that sends each [cosine](#def-cosine-sine), $c \in [-1, 1]$, to the one [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\theta\in [0, \pi]$ whose cosine is $c$. By [Theorem 2](#thm-cosine-bijection), there is just one such $\theta$.
 
 > **NOTE:**
 >

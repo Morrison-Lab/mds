@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 22:04:30 (PST)
+Last modified: 2026-11-10 00:06:44 (PST)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -1663,7 +1663,7 @@ See Felippa [\[12\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 > **Theorem 16 (Continuity in one variable, and sums, multiples and compositions)**  
 >
 > 1.  For $p = q = 1$, a function $f$ is continuous at $x$ in the sense of [Definition 22](#def-continuous-several) exactly when $\lim_{y \to x} f(y) = f(x)$ ([limit](calculus-derivatives.llms.md#def-limit)), which is the usual [continuity](calculus-integration.llms.md#def-continuous) at $x$.
-> 2.  If $f : \mathbb{R}^p \to \mathbb{R}^q$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $g : \mathbb{R}^q \to \mathbb{R}^r$ is continuous at $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$, then the [composition](functions.llms.md#def-composition) $g \circ f$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
+> 2.  If $f : \mathbb{R}^p \to \mathbb{R}^q$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $g : \mathbb{R}^q \to \mathbb{R}^r$ is continuous at $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$, then the [composition](https://morrison-lab.github.io/mcs/functions.html#def-composition) $g \circ f$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
 > 3.  If $f, g : \mathbb{R}^p \to \mathbb{R}$ are continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f + g$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
 > 4.  If $f : \mathbb{R}^p \to \mathbb{R}$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $c \in \mathbb{R}$, then $c f$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
 >
