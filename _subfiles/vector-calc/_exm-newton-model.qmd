@@ -24,4 +24,6 @@ $$
 
 (@exm-newton-method).
 
+<!-- no-figure: the model and its minimizer are graphed in the figure included right after this example -->
+
 :::
