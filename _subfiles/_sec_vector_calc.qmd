@@ -48,6 +48,18 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-linear-approximation-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-linear-approximation-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_rem-linear-approximation-vector.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-direction.qmd >}}
 
 {{< slidebreak >}}
