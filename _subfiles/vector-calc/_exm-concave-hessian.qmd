@@ -1,0 +1,29 @@
+:::{#exm-concave-hessian}
+#### A strictly concave quadratic function
+
+Let $f(\vx) = 1 - x_1^2 - x_2^2$ for $\vx = \tp{(x_1, x_2)}$.
+Its [Hessian](vector-calculus.qmd#def-hessian) is $\matr{H}_f(\vx) = -2 \matr{I}_2$ at every $\vx$,
+so $-\matr{H}_f(\vx) = 2 \matr{I}_2$.
+For every $\vecf{v} \ne \vzero$,
+
+$$
+\ba
+\tp{\vecf{v}} \paren{2 \matr{I}_2} \vecf{v}
+&= 2 \tp{\vecf{v}} \vecf{v}
+&& \text{(} \matr{I}_2 \vecf{v} = \vecf{v} \text{)}
+\\
+&= 2 \norm{\vecf{v}}^2
+&& \text{(} \tp{\vecf{v}} \vecf{v} = \norm{\vecf{v}}^2 \text{)}
+\\
+&> 0,
+&& \text{(} \vecf{v} \ne \vzero \text{)}
+\ea
+$$
+
+so $-\matr{H}_f(\vx)$ is [positive definite](linear-algebra-special-matrices.qmd#def-positive-definite),
+and $f$ is [strictly concave](#def-strictly-concave) by part 2 of @thm-concave-hessian.
+@fig-concave-hessian shows the dome that its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) forms.
+
+{{< include mds/_subfiles/vector-calc/_fig-concave-hessian.qmd >}}
+
+:::
