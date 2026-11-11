@@ -11024,6 +11024,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-gradient-linear-approximation",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-gradient-linear-approximation",
+   "kind": "def",
+   "title": "Linear approximation of the gradient",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-half-space",
    "site": "mds",
    "page": "optimization",
@@ -11339,6 +11348,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#lem-gradient-linear-approximation",
+   "site": "mds",
+   "page": "optimization",
+   "div": "lem-gradient-linear-approximation",
+   "kind": "lem",
+   "title": "The linear approximation of the gradient uses the Hessian",
+   "external": false
+  },
+  {
    "id": "mds/optimization#lem-qf-eigen-bound",
    "site": "mds",
    "page": "optimization",
@@ -11480,6 +11498,15 @@
    "div": "thm-gd-quadratic-error",
    "kind": "thm",
    "title": "A bound on the error of gradient descent on a quadratic",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#thm-newton-linearized-gradient",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-newton-linearized-gradient",
+   "kind": "thm",
+   "title": "The Newton step is the root of the linear approximation of the gradient",
    "external": false
   },
   {
@@ -12158,6 +12185,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization-newton#def-gradient-linear-approximation",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "def-gradient-linear-approximation",
+   "kind": "def",
+   "title": "Linear approximation of the gradient",
+   "external": false
+  },
+  {
    "id": "mds/optimization-newton#def-iterate",
    "site": "mds",
    "page": "optimization-newton",
@@ -12227,6 +12263,24 @@
    "div": "def-vector-sequence-limit",
    "kind": "def",
    "title": "Convergence of a sequence of vectors",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#lem-gradient-linear-approximation",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "lem-gradient-linear-approximation",
+   "kind": "lem",
+   "title": "The linear approximation of the gradient uses the Hessian",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-newton#thm-newton-linearized-gradient",
+   "site": "mds",
+   "page": "optimization-newton",
+   "div": "thm-newton-linearized-gradient",
+   "kind": "thm",
+   "title": "The Newton step is the root of the linear approximation of the gradient",
    "external": false
   },
   {
@@ -21697,6 +21751,26 @@
    "mds/vector-calculus#def-partial-derivative"
   ],
   [
+   "mds/optimization#def-gradient-linear-approximation",
+   "mcs/functions#def-graph"
+  ],
+  [
+   "mds/optimization#def-gradient-linear-approximation",
+   "mds/linear-algebra-vectors#def-vector-valued"
+  ],
+  [
+   "mds/optimization#def-gradient-linear-approximation",
+   "mds/optimization#def-newton-method"
+  ],
+  [
+   "mds/optimization#def-gradient-linear-approximation",
+   "mds/optimization#def-tangent-plane"
+  ],
+  [
+   "mds/optimization#def-gradient-linear-approximation",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
    "mds/optimization#def-inflection-point",
    "mcs/functions#def-function"
   ],
@@ -21919,6 +21993,42 @@
   [
    "mds/optimization#def-vector-sequence-limit",
    "mds/algebra#def-convergent-sequence"
+  ],
+  [
+   "mds/optimization#lem-gradient-linear-approximation",
+   "mds/optimization#def-gradient-linear-approximation"
+  ],
+  [
+   "mds/optimization#lem-gradient-linear-approximation",
+   "mds/optimization#def-quadratic-model"
+  ],
+  [
+   "mds/optimization#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-ball"
+  ],
+  [
+   "mds/optimization#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-continuous-several"
+  ],
+  [
+   "mds/optimization#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-hessian"
+  ],
+  [
+   "mds/optimization#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-second-partial-derivative"
+  ],
+  [
+   "mds/optimization#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/optimization#lem-gradient-linear-approximation",
+   "mds/vector-calculus#thm-hessian-symmetric"
   ],
   [
    "mds/optimization#lem-qf-eigen-bound",
@@ -22263,6 +22373,26 @@
   [
    "mds/optimization#thm-gd-quadratic-error",
    "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization#thm-newton-linearized-gradient",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/optimization#thm-newton-linearized-gradient",
+   "mds/optimization#def-gradient-linear-approximation"
+  ],
+  [
+   "mds/optimization#thm-newton-linearized-gradient",
+   "mds/optimization#def-newton-step"
+  ],
+  [
+   "mds/optimization#thm-newton-linearized-gradient",
+   "mds/optimization#lem-gradient-linear-approximation"
+  ],
+  [
+   "mds/optimization#thm-newton-linearized-gradient",
+   "mds/vector-calculus#def-hessian"
   ],
   [
    "mds/optimization#thm-newton-model",
@@ -23173,6 +23303,22 @@
    "mds/vector-calculus#def-vector-derivative"
   ],
   [
+   "mds/optimization-newton#def-gradient-linear-approximation",
+   "mcs/functions#def-graph"
+  ],
+  [
+   "mds/optimization-newton#def-gradient-linear-approximation",
+   "mds/linear-algebra-vectors#def-vector-valued"
+  ],
+  [
+   "mds/optimization-newton#def-gradient-linear-approximation",
+   "mds/optimization-newton#def-newton-method"
+  ],
+  [
+   "mds/optimization-newton#def-gradient-linear-approximation",
+   "mds/vector-calculus#def-partial-derivative"
+  ],
+  [
    "mds/optimization-newton#def-iterate",
    "mds/optimization-newton#def-iterative-method"
   ],
@@ -23207,6 +23353,62 @@
   [
    "mds/optimization-newton#def-vector-sequence-limit",
    "mds/algebra#def-convergent-sequence"
+  ],
+  [
+   "mds/optimization-newton#lem-gradient-linear-approximation",
+   "mds/optimization-newton#def-gradient-linear-approximation"
+  ],
+  [
+   "mds/optimization-newton#lem-gradient-linear-approximation",
+   "mds/optimization-newton#def-quadratic-model"
+  ],
+  [
+   "mds/optimization-newton#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-ball"
+  ],
+  [
+   "mds/optimization-newton#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-continuous-several"
+  ],
+  [
+   "mds/optimization-newton#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-hessian"
+  ],
+  [
+   "mds/optimization-newton#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-second-partial-derivative"
+  ],
+  [
+   "mds/optimization-newton#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization-newton#lem-gradient-linear-approximation",
+   "mds/vector-calculus#def-vector-valued-derivative"
+  ],
+  [
+   "mds/optimization-newton#lem-gradient-linear-approximation",
+   "mds/vector-calculus#thm-hessian-symmetric"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-linearized-gradient",
+   "mds/linear-algebra-special-matrices#def-matrix-inverse"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-linearized-gradient",
+   "mds/optimization-newton#def-gradient-linear-approximation"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-linearized-gradient",
+   "mds/optimization-newton#def-newton-step"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-linearized-gradient",
+   "mds/optimization-newton#lem-gradient-linear-approximation"
+  ],
+  [
+   "mds/optimization-newton#thm-newton-linearized-gradient",
+   "mds/vector-calculus#def-hessian"
   ],
   [
    "mds/optimization-newton#thm-newton-model",
