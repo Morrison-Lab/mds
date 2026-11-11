@@ -133,9 +133,8 @@ for example `{{</* include mds/_notation.qmd */>}}`.
 This site includes its own fragments the same way,
 through a `mds` symlink that points at the repository root.
 
-Each page's content is in one or more fragments.
-The five topic pages (Algebra, Measures, Calculus, Linear Algebra, and Optimization)
-only list their sub-pages, but a host page can still include their fragments:
+Each page's content is in one or more fragments, which a host page can include,
+even where this site's own page only lists its sub-pages:
 
 | Page | Fragment(s) to include |
 |------|------------------------|
