@@ -1,0 +1,20 @@
+:::{#sol-linear-system-check}
+
+Yes.
+The [matrix-vector product](#def-matvec-mult) is
+
+$$
+\ba
+\matr{A}\vx
+&= \begin{bmatrix} 3 \cd 2 + 1 \cd (-1) \\ 1 \cd 2 + (-2) \cd (-1) \end{bmatrix}
+&& \text{(@def-matvec-mult)}
+\\
+&= \begin{bmatrix} 5 \\ 4 \end{bmatrix},
+&& \text{(multiply and add)}
+\ea
+$$
+
+which equals $\vecf{b}$,
+so $\vx$ is a [solution of the system](#def-linear-system).
+
+:::

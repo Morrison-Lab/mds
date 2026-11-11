@@ -1,0 +1,26 @@
+:::{#exr-linear-system-check}
+#### Checking whether a vector solves a linear system
+
+Checking whether a vector solves a [linear system](#def-linear-system) takes only one [matrix-vector product](#def-matvec-mult),
+which is much less work than solving the system.
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 3 & 1 \\ 1 & -2 \end{bmatrix},
+\qquad
+\vecf{b} = \begin{bmatrix} 5 \\ 4 \end{bmatrix},
+\qquad
+\vx = \begin{bmatrix} 2 \\ -1 \end{bmatrix}.
+$$
+
+Is $\vx$ a [solution of $\matr{A}\vx = \vecf{b}$](#def-linear-system)?
+
+::: {.callout-tip}
+#### Hint
+
+Compute $\matr{A}\vx$ with @def-matvec-mult and compare it with $\vecf{b}$,
+as in @exm-linear-system.
+
+:::
+
+:::

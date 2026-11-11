@@ -1,0 +1,21 @@
+:::{#exr-identity-matrix-shape}
+#### Whether a non-square matrix can be an identity matrix
+
+An [identity matrix](#def-identity-matrix) has ones on its [main diagonal](#def-main-diagonal) and zeros elsewhere,
+and a [matrix](#def-matrix) that is not [square](#def-square-matrix) can have that pattern too.
+Let
+
+$$
+\matr{J} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}.
+$$
+
+Is $\matr{J}$ an identity matrix?
+
+::: {.callout-tip}
+#### Hint
+
+Compare the shape of $\matr{J}$ with the shape of $\matr{I}_p$ in @def-identity-matrix.
+
+:::
+
+:::
