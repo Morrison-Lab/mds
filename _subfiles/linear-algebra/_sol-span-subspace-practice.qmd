@@ -1,0 +1,14 @@
+:::{#sol-span-subspace-practice}
+
+Yes.
+For every $a, b \in \reals$,
+
+$$
+\sbmat{a + b \\ a - b \\ 2a} = a \sbmat{1 \\ 1 \\ 2} + b \sbmat{1 \\ -1 \\ 0},
+$$
+
+so $\mathcal{S} = \operatorname{span}\cb{\tp{(1, 1, 2)}, \tp{(1, -1, 0)}}$.
+By @thm-span-subspace,
+$\mathcal{S}$ is a [subspace](#def-subspace) of $\reals^3$.
+
+:::
