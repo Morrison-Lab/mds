@@ -8,7 +8,8 @@
 #|   Surface plot of f(beta) = 3 beta1 + 5 beta2^2 for beta1 from 0 to 2
 #|   and beta2 from 1 to 3, a sheet that rises steeply in beta2 and gently
 #|   in beta1. A flat vermilion plane, the linear approximation
-#|   23 + 3 (beta1 - 1) + 20 (beta2 - 2), passes through the point (1, 2, 23), which is marked with a black point.
+#|   23 + 3 (beta1 - 1) + 20 (beta2 - 2), passes through the point
+#|   (1, 2, 23), which is marked with a black point.
 #|   The plane touches the sheet along the line beta2 = 2 and lies below it
 #|   everywhere else.
 la_c1_la <- seq(0, 2, length.out = 41)
