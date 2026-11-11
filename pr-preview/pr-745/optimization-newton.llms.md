@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 03:00:37 (PST)
+Last modified: 2026-11-11 10:05:26 (PST)
 
 > **NOTE:**
 >
@@ -651,7 +651,7 @@ Last modified: 2026-11-11 03:00:37 (PST)
 > && \text{(cancel)}
 > \end{aligned}$$
 >
-> The gradient at $\mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ is $\mathbf{S} \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, and $f$ is strictly convex ([Theorem 5 in Convexity in Several Variables](optimization-convexity.llms.md#thm-convex-hessian), part 2), so $\mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ is a global minimizer ([Corollary 1 in Convexity in Several Variables](optimization-convexity.llms.md#cor-convex-stationary)). It is the only one: a strictly convex function has at most one global minimizer, since the midpoint of two distinct global minimizers, which have equal values, would have a strictly smaller value ([Definition 4 in Convexity in Several Variables](optimization-convexity.llms.md#def-strictly-convex) with $t = \tfrac{1}{2}$).
+> The gradient at $\mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ is $\mathbf{S} \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, and $f$ is strictly convex ([Theorem 6 in Convexity in Several Variables](optimization-convexity.llms.md#thm-convex-hessian), part 2), so $\mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ is a global minimizer ([Corollary 2 in Convexity in Several Variables](optimization-convexity.llms.md#cor-convex-stationary)). It is the only one: a strictly convex function has at most one global minimizer, since the midpoint of two distinct global minimizers, which have equal values, would have a strictly smaller value ([Definition 4 in Convexity in Several Variables](optimization-convexity.llms.md#def-strictly-convex) with $t = \tfrac{1}{2}$).
 
 > **NOTE:**
 >
