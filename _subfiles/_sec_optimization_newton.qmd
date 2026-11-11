@@ -22,6 +22,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-quadratic-model.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_rem-quadratic-model-taylor.qmd >}}
 
 {{< slidebreak >}}
