@@ -1,0 +1,21 @@
+:::{#exr-tensor-entries-practice}
+#### Counting the entries of a batch of photos
+
+Software for neural networks often stores a batch of color photos as one [tensor](#def-tensor),
+with one index for the photo, two for the pixel's position, and one for the color channel,
+so the number of entries is the number of stored values.
+Let $\mathcal{B}$ be the order-4 tensor for a batch of $10$ color photos of $32 \times 32$ pixels,
+with $n_1 = 10$, $n_2 = 32$, $n_3 = 32$ and $n_4 = 3$.
+
+How many entries does $\mathcal{B}$ have?
+
+::: {.callout-tip}
+#### Hint
+
+Each index $i_r$ in @def-tensor takes $n_r$ values,
+and each choice of all four indices picks one entry,
+as in @exm-tensor.
+
+:::
+
+:::

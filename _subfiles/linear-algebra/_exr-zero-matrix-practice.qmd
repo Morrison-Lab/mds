@@ -1,0 +1,23 @@
+:::{#exr-zero-matrix-practice}
+#### Naming a zero matrix
+
+A [zero matrix](#def-zero-matrix) carries its shape in its subscript,
+because, as @exm-zero-matrix shows,
+[zero matrices](#def-zero-matrix) of different shapes are different [matrices](#def-matrix).
+Let
+
+$$
+\matr{Z} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}.
+$$
+
+Find $m$ and $n$ such that $\matr{Z} = \matr{0}_{m \times n}$.
+
+::: {.callout-tip}
+#### Hint
+
+Count the [row](#def-matrix-row)s and [column](#def-matrix-column)s of $\matr{Z}$,
+as in @exr-matrix-size-practice.
+
+:::
+
+:::
