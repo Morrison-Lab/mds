@@ -2,7 +2,8 @@
 #### The quadratic model and Taylor's theorem
 
 When the second partial derivatives of $f$ are continuous,
-@thm-taylor-mv says that $f(\vx + \stepvec)$ equals the [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) for $\quadmodelf{\stepvec}$ in @def-quadratic-model
+@thm-taylor-mv says that $f(\vx + \stepvec)$ equals the [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) for $\quadmodelf{\stepvec}$
+in @def-quadratic-model
 with the Hessian evaluated at a point between $\vx$ and $\vx + \stepvec$.
 
 :::
