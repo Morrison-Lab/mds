@@ -1,16 +1,9 @@
 ---
 title: "Calculus"
+html-only: true
 format:
   html: default
-  revealjs:
-    output-file: calculus-slides.html
-  pdf:
-    output-file: calculus-handout.pdf
-  docx:
-    output-file: calculus.docx
 ---
-
-::: {.content-visible when-format="html"}
 
 The calculus notes are split across these pages:
 
@@ -30,14 +23,6 @@ The calculus notes are split across these pages:
 
 A link to a section, theorem or definition on this page from before the split
 goes on to the page that now holds it.
-
-:::
-
-::: {.content-visible unless-format="html"}
-
-{{< include mds/_subfiles/_sec_calculus.qmd >}}
-
-:::
 
 # Further reading {#sec-additional-resources}
 

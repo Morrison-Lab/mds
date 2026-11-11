@@ -1,16 +1,9 @@
 ---
 title: "Linear Algebra"
+html-only: true
 format:
   html: default
-  revealjs:
-    output-file: linear-algebra-slides.html
-  pdf:
-    output-file: linear-algebra-handout.pdf
-  docx:
-    output-file: linear-algebra.docx
 ---
-
-::: {.content-visible when-format="html"}
 
 The linear algebra notes are split across these pages:
 
@@ -42,14 +35,6 @@ The linear algebra notes are split across these pages:
 
 A link to a section, theorem or definition on this page from before the split
 goes on to the page that now holds it.
-
-:::
-
-::: {.content-visible unless-format="html"}
-
-{{< include mds/_subfiles/_sec_linear_algebra.qmd >}}
-
-:::
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix-analysis.qmd >}}
 
