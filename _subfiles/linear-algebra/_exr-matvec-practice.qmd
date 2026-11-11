@@ -1,0 +1,26 @@
+:::{#exr-matvec-practice}
+#### A matrix-vector product with more columns than rows
+
+A [matrix-vector product](#def-matvec-mult) $\matr{A}\vx$ computes one [weighted sum](linear-algebra-vectors.qmd#def-weighted-sum) of the entries of $\vx$ for each [row of $\matr{A}$](#def-matrix-row),
+which is how a linear model computes a fitted value for each observation at once.
+The [matrix](#def-matrix) $\matr{A}$ below has more [column](#def-matrix-column)s than [row](#def-matrix-row)s,
+so $\matr{A}\vx$ is shorter than $\vx$.
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix},
+\qquad
+\vx = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}.
+$$
+
+Compute $\matr{A}\vx$.
+
+::: {.callout-tip}
+#### Hint
+
+Entry $i$ of $\matr{A}\vx$ is the [dot product](linear-algebra-vectors.qmd#def-dot-product) of the $i$th [row of $\matr{A}$](#def-matrix-row) with $\vx$,
+as in @rem-matvec-row-dot-products.
+
+:::
+
+:::

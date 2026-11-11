@@ -1,0 +1,24 @@
+:::{#exr-scalar-mult-practice}
+#### Multiplying a matrix by a negative factor
+
+A [scalar multiple](#def-scalar-mult) rescales every entry of a [matrix](#def-matrix) by the same factor,
+as when a table of measurements changes units.
+A negative factor flips the sign of every entry,
+and a factor between $-1$ and $1$ shrinks every entry toward $0$.
+Let
+
+$$
+\matr{C} = \begin{bmatrix} 4 & -2 \\ 0 & 6 \end{bmatrix}.
+$$
+
+Compute $-\frac{1}{2} \matr{C}$.
+
+::: {.callout-tip}
+#### Hint
+
+Multiply each entry by $-\frac{1}{2}$,
+as in @exm-scalar-mult.
+
+:::
+
+:::
