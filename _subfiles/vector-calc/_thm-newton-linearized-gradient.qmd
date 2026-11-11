@@ -32,7 +32,7 @@ $$
 \ea
 $$ {#eq-newton-linearized-gradient-solve}
 
-Each line implies the next and, because $\matr{H}$ is invertible, the one before,
+Each line implies the next and, because $\matr{H}$ is [invertible](linear-algebra-special-matrices.qmd#def-matrix-inverse), the one before,
 so $\stepvec = -\matr{H}^{-1} \vecf{g}$ is the only solution.
 
 :::

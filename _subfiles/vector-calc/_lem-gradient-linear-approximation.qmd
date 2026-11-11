@@ -1,8 +1,8 @@
 :::{#lem-gradient-linear-approximation}
 #### The linear approximation of the gradient uses the Hessian
 
-Let $f$, $\vx$, the gradient $\vecf{g}$ and the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}$ be as in the [quadratic model](#def-quadratic-model),
-and let the second partial derivatives of $f$ be [continuous](vector-calculus.qmd#def-continuous-several) on an [open ball](vector-calculus.qmd#def-ball) around $\vx$.
+Let $f$, $\vx$, the [gradient](vector-calculus.qmd#def-vector-derivative) $\vecf{g}$ and the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}$ be as in the [quadratic model](#def-quadratic-model),
+and let the [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative) of $f$ be [continuous at](vector-calculus.qmd#def-continuous-several) every point of an [open ball](vector-calculus.qmd#def-ball) around $\vx$.
 Then the [linear approximation of the gradient](#def-gradient-linear-approximation) of $f$ at $\vx$ is the gradient plus the Hessian times the step:
 
 $$
@@ -39,6 +39,6 @@ $$
 $$ {#eq-gradient-linear-approximation-entry}
 
 The third line uses the [symmetry of the Hessian](vector-calculus.qmd#thm-hessian-symmetric),
-which holds because the second partial derivatives are continuous near $\vx$.
+whose hypothesis the lemma assumes.
 
 :::
