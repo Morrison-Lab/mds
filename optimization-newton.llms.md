@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-10 21:23:06 (PST)
+Last modified: 2026-11-10 22:20:55 (PST)
 
 > **NOTE:**
 >
@@ -96,7 +96,7 @@ Last modified: 2026-11-10 21:23:06 (PST)
 >
 > **Definition 7 (Quadratic model, second-order Taylor polynomial)** Let $f$ be as in [Definition 5](#def-newton-method) and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ be a point, with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ and $\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$. The **quadratic model** of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the function of a step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\in \mathbb{R}^p$
 >
-> $$q(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}} + \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}},$$
+> $${q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}} \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}} + \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}},$$
 >
 > also called the **second-order Taylor polynomial** of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
 
@@ -116,15 +116,15 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > &= [5],
 > \end{aligned}$$
 >
-> so $q(\delta) = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$. For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point, the model at any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ equals $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ exactly ([Example 12 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-taylor-mv) with $\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}$).
+> so ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$. For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point, the model at any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ equals $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ exactly ([Example 12 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-taylor-mv) with $\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}$).
 
 > **NOTE:**
 >
-> *Remark 1* (The quadratic model and Taylor’s theorem). When the second partial derivatives of $f$ are continuous, [Theorem 6 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-taylor-mv) says that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ equals the expression for $q(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ in [Definition 7](#def-quadratic-model) with the Hessian evaluated at a point between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$.
+> *Remark 1* (The quadratic model and Taylor’s theorem). When the second partial derivatives of $f$ are continuous, [Theorem 6 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-taylor-mv) says that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ equals the [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) for ${q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}$ in [Definition 7](#def-quadratic-model) with the Hessian evaluated at a point between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$.
 
 > **NOTE:**
 >
-> **Theorem 1 (The Newton step minimizes the quadratic model)** Let $q$ be the quadratic model of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Definition 7](#def-quadratic-model)), with $\mathbf{H} = \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). Its unique minimizer is the Newton step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$.
+> **Theorem 1 (The Newton step minimizes the quadratic model)** Let $q$ be the [quadratic model](#def-quadratic-model) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, with $\mathbf{H} = \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). Its unique minimizer is the Newton step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$.
 
 > **NOTE:**
 >
@@ -142,9 +142,9 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*{}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*$ in the same way, using ${\mathbf{H}}^{\top} = \mathbf{H}$. Then
 >
 > $$\begin{aligned}
-> q(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}})
+> {q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\right)\mathclose{}}
 > &= f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}) +\tfrac{1}{2}\,{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}})}^{\top} \mathbf{H} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}})
-> && \text{(definition of } q \text{)}
+> && \text{(definition of } q\text{)}
 > \\
 > &= f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}
 > + \tfrac{1}{2} \mathopen{}\left({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*{}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*{}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}\right)\mathclose{}
@@ -157,15 +157,15 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > &= f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*{}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* + \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}
 > && \text{(cancel } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \text{)}
 > \\
-> &= q(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*) + \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}},
-> && \text{(definition of } q \text{)}
+> &= {q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*\right)\mathclose{}} + \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}},
+> && \text{(definition of } q\text{)}
 > \end{aligned}$$
 >
-> which is greater than $q(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*)$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, since $\mathbf{H}$ is positive definite.
+> which is greater than ${q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*\right)\mathclose{}}$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, since $\mathbf{H}$ is positive definite.
 
 > **NOTE:**
 >
-> **Example 4 (The Newton step at** $x = 2.5$) For the model $q(\delta) = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$ of [Example 3](#exm-quadratic-model), $H = [5]$ is positive definite, so by [Theorem 1](#thm-newton-model) its minimizer is
+> **Example 4 (The Newton step at** $x = 2.5$) For the model ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$ of [Example 3](#exm-quadratic-model), $H = [5]$ is positive definite, so by [Theorem 1](#thm-newton-model) its minimizer is
 >
 > $$\begin{aligned}
 > \delta^* &= -H^{-1} g \\
@@ -250,9 +250,9 @@ Last modified: 2026-11-10 21:23:06 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Linear approximation of the gradient)** Let $f$ be as in [Newton’s method](#def-newton-method) and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ be a point. The **linear approximation of the gradient** of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the $p \times 1$ [vector-valued function](linear-algebra-vectors.llms.md#def-vector-valued) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\ell}}\vphantom{\ell}}$ of a step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\in \mathbb{R}^p$ whose $j$th entry, for $j = 1, \ldots, p$, is the function whose [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) is the [tangent plane](optimization-convexity.llms.md#def-tangent-plane) to the graph of the [partial derivative](vector-calculus.llms.md#def-partial-derivative) $\frac{\partial}{\partial x_j} f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, evaluated at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$:
+> **Definition 8 (Linear approximation of the gradient)** Let $f$ be as in [Newton’s method](#def-newton-method) and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ be a point. The **linear approximation of the gradient** of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the $p \times 1$ [vector-valued function](linear-algebra-vectors.llms.md#def-vector-valued) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}$ of a step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\in \mathbb{R}^p$ whose $j$th entry, for $j = 1, \ldots, p$, is the function whose [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) is the [tangent plane](optimization-convexity.llms.md#def-tangent-plane) to the graph of the [partial derivative](vector-calculus.llms.md#def-partial-derivative) $\frac{\partial}{\partial x_j} f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, evaluated at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$:
 >
-> $$\mathopen{}\left[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\ell}}\vphantom{\ell}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})\right]\mathclose{}_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}\right)\mathclose{}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}.
+> $$\mathopen{}\left[{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}\right]\mathclose{}_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}\right)\mathclose{}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}.
 > \tag{1}$$
 
 > **NOTE:**
@@ -357,7 +357,7 @@ Last modified: 2026-11-10 21:23:06 (PST)
 >
 > **Lemma 1 (The linear approximation of the gradient uses the Hessian)** Let $f$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, the [gradient](vector-calculus.llms.md#def-vector-derivative) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ and the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}$ be as in the [quadratic model](#def-quadratic-model), and let the [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) of $f$ be [continuous at](vector-calculus.llms.md#def-continuous-several) every point of an [open ball](vector-calculus.llms.md#def-ball) around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Then the [linear approximation of the gradient](#def-gradient-linear-approximation) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the gradient plus the Hessian times the step:
 >
-> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\ell}}\vphantom{\ell}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} + \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}.
+> $${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} + \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}.
 > \tag{4}$$
 
 > **NOTE:**
@@ -365,7 +365,7 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > *Proof*. For each $i$ and $j$, the $i$th entry of $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}$ is $\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}$, which is $\mathopen{}\left[\mathbf{H}\right]\mathclose{}_{ij}$ by the definitions of the [Hessian](vector-calculus.llms.md#def-hessian) and of the [derivative of a vector-valued function](vector-calculus.llms.md#def-vector-valued-derivative). So, for each $j$,
 >
 > $$\begin{aligned}
-> \mathopen{}\left[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\ell}}\vphantom{\ell}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})\right]\mathclose{}_j
+> \mathopen{}\left[{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}\right]\mathclose{}_j
 > &= \frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \sum_{i=1}^{p} \mathopen{}\left[\mathbf{H}\right]\mathclose{}_{ij}\,\delta_i
 > && \text{(}\href{#eq-gradient-linear-approximation}{\text{Equation~1}}\text{, as a sum)}
 > \\
@@ -390,7 +390,7 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > **Example 7 (A gradient that equals its linear approximation)** For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, the second function of [Example 3](#exm-quadratic-model), the [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} = {(x_1,\ 3 x_2)}^{\top}$, and the [Hessian](vector-calculus.llms.md#def-hessian) is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point. By [Lemma 1](#lem-gradient-linear-approximation), the [linear approximation of the gradient](#def-gradient-linear-approximation) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is
 >
 > $$\begin{aligned}
-> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\ell}}\vphantom{\ell}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})
+> {{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}
 > &= \begin{bmatrix} x_1 \\ 3 x_2 \end{bmatrix} + \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix} \begin{bmatrix} \delta_1 \\ \delta_2 \end{bmatrix}
 > && \text{(}\href{#eq-gradient-linear-approximation-hessian}{\text{Equation~4}}\text{)}
 > \\
@@ -411,14 +411,14 @@ Last modified: 2026-11-10 21:23:06 (PST)
 >
 > **Theorem 2 (The Newton step is the root of the linear approximation of the gradient)** Let $f$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ and the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}$ be as in [Lemma 1](#lem-gradient-linear-approximation), with $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). The only step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$ at which the [linear approximation of the gradient](#def-gradient-linear-approximation) is zero is the [Newton step](#def-newton-step):
 >
-> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\ell}}\vphantom{\ell}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}
+> $${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}
 > \iff
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}= -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}.
 > \tag{7}$$
 
 > **NOTE:**
 >
-> *Proof*. By [Lemma 1](#lem-gradient-linear-approximation), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\ell}}\vphantom{\ell}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ exactly when
+> *Proof*. By [Lemma 1](#lem-gradient-linear-approximation), ${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ exactly when
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1} &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} + \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}
@@ -515,13 +515,13 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > nc_err_ax = [x - 2 for x in nc_x_ax]
 > fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
 > ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7fa9b58960d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f3d10ace0d0>]
 > ax.set_xlabel("iteration t")
 > #> Text(0.5, 0, 'iteration t')
 > ax.set_ylabel("error of the iterate")
 > #> Text(0, 0.5, 'error of the iterate')
 > ax.set_xticks(range(4))
-> #> [<matplotlib.axis.XTick object at 0x7fa9b58cc410>, <matplotlib.axis.XTick object at 0x7fa9b5895f90>, <matplotlib.axis.XTick object at 0x7fa9b5896710>, <matplotlib.axis.XTick object at 0x7fa9b5896e90>]
+> #> [<matplotlib.axis.XTick object at 0x7f3d10aabb10>, <matplotlib.axis.XTick object at 0x7f3d10ace210>, <matplotlib.axis.XTick object at 0x7f3d10ace990>, <matplotlib.axis.XTick object at 0x7f3d10acf110>]
 > plt.show();
 > ```
 >
@@ -537,7 +537,7 @@ Last modified: 2026-11-10 21:23:06 (PST)
 
 > **NOTE:**
 >
-> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a stationary point of $-f$, whose second derivative there is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian $f''(x) = 2x$ is negative along the way, so the quadratic model has no minimizer (with $H < 0$, $q(\delta) = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ decreases without bound) and [Theorem 1](#thm-newton-model) does not apply: the positive definite hypothesis there is needed.
+> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a stationary point of $-f$, whose second derivative there is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian $f''(x) = 2x$ is negative along the way, so the quadratic model has no minimizer (with $H < 0$, ${q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ tends to $-\infty$ as $\mathopen{}\left|\delta\right|\mathclose{} \to \infty$) and [Theorem 1](#thm-newton-model) does not apply: the positive definite hypothesis there is needed.
 >
 > [Figure 4](#fig-newton-maximum) shows the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) and its model.
 >
@@ -593,15 +593,15 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > > nx_f_max_py = (-2)**3 / 3 - 4 * (-2)
 > > fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
 > > ax.plot(nx_x_py, nx_f_py, color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f8cd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f3d10bfb750>]
 > > ax.plot(nx_x_py, nx_q_py, "--", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f8e10>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f3d10bfb4d0>]
 > > ax.plot([-2.5], [nx_f0_py], "o", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f8f50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f3d10bfb390>]
 > > ax.plot([-2.05], [nx_q_step_py], "^", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f9090>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f3d10bfa210>]
 > > ax.plot([-2], [nx_f_max_py], "s", color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f91d0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f3d10bfbb10>]
 > > ax.set_ylim(-2, 6.5)
 > > #> (-2.0, 6.5)
 > > ax.set_xlabel("x")
@@ -715,7 +715,7 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > > nq_z_py = (nq_xx_py**2 + 3 * nq_yy_py**2) / 2
 > > fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
 > > ax.contour(nq_xx_py, nq_yy_py, nq_z_py, levels=10, colors="#0072B2")
-> > #> <matplotlib.contour.QuadContourSet object at 0x7fa9d01b1e80>
+> > #> <matplotlib.contour.QuadContourSet object at 0x7f3d241b9d30>
 > > ax.annotate("", xy=(0.764, -1.236), xytext=(3, 1),
 > >             arrowprops={"arrowstyle": "->", "color": "grey"})
 > > #> Text(3, 1, '')
@@ -723,7 +723,7 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > >             arrowprops={"arrowstyle": "->", "color": "#D55E00"})
 > > #> Text(3, 1, '')
 > > ax.plot([3], [1], "ko")
-> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34b1950>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f3d0e6a2710>]
 > > ax.set_aspect("equal")
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
@@ -818,11 +818,11 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > > fig = plt.figure(figsize=(6, 4.5))
 > > ax = fig.add_subplot(projection="3d")
 > > ax.plot_surface(nq_x1_3d, nq_x2_3d, nq_z_3d, color="#0072B2", alpha=0.6)
-> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7fa9b5b82120>
+> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7f3d10bd74d0>
 > > ax.scatter([3], [1], [6], color="#D55E00", label="start")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7fa9b5b81e80>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f3d10bd7620>
 > > ax.scatter([0], [0], [0], color="black", label="minimizer")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7fa9b3365e50>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f3d0e49ac10>
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
 > > ax.set_ylabel("x2")
@@ -830,7 +830,7 @@ Last modified: 2026-11-10 21:23:06 (PST)
 > > ax.set_zlabel("f(x)")
 > > #> Text(0.5, 0, 'f(x)')
 > > ax.legend(loc="upper right")
-> > #> <matplotlib.legend.Legend object at 0x7fa9b5b81fd0>
+> > #> <matplotlib.legend.Legend object at 0x7f3d10bd7770>
 > > plt.show();
 > > ```
 > >
