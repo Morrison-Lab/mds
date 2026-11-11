@@ -54,6 +54,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-gradient-linear-approximation-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-newton-linearized-gradient.qmd >}}
 
 {{< slidebreak >}}

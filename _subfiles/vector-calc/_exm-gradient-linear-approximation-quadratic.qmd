@@ -1,0 +1,31 @@
+:::{#exm-gradient-linear-approximation-quadratic}
+#### A gradient that equals its linear approximation
+
+For $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$,
+the [gradient](vector-calculus.qmd#def-vector-derivative) is $\vecf{g} = \tp{(x_1,\ 3 x_2)}$ and the [Hessian](vector-calculus.qmd#def-hessian) is $\sbmat{ 1 & 0 \\ 0 & 3 }$ at every point (@exm-quadratic-model).
+By @lem-gradient-linear-approximation,
+the [linear approximation of the gradient](#def-gradient-linear-approximation) at $\vx$ is
+
+$$
+\ba
+\vecf{\ell}(\stepvec)
+&= \sbmat{ x_1 \\ 3 x_2 } + \sbmat{ 1 & 0 \\ 0 & 3 } \sbmat{ \step_1 \\ \step_2 }
+&& \text{(@eq-gradient-linear-approximation-hessian)}
+\\
+&= \sbmat{ x_1 \\ 3 x_2 } + \sbmat{ \step_1 \\ 3 \step_2 }
+&& \text{(matrix-vector product)}
+\\
+&= \sbmat{ x_1 + \step_1 \\ 3 x_2 + 3 \step_2 }
+&& \text{(vector addition)}
+\\
+&= \sbmat{ x_1 + \step_1 \\ 3 (x_2 + \step_2) },
+&& \text{(factor out } 3 \text{)}
+\ea
+$$ {#eq-gradient-linear-approximation-quadratic}
+
+which is the gradient of $f$ at $\vx + \stepvec$:
+the gradient of this $f$ is linear, so [its linear approximation](#def-gradient-linear-approximation) is exact.
+
+<!-- no-figure: the approximation equals the gradient exactly, so a graph would show one surface twice -->
+
+:::
