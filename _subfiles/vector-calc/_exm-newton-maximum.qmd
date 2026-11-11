@@ -8,10 +8,11 @@ whose [second derivative](calculus-derivatives.qmd#def-second-derivative) at $-2
 so it is a strict local minimizer of $-f$ (@thm-second-order-condition),
 that is, $f$ is strictly larger at $-2$ than at all nearby points.
 Newton's method looks only for a stationary point,
-and in this example the [Hessian](vector-calculus.qmd#def-hessian) $f''(x) = 2x$ is negative at every [iterate](#def-iterate),
-so the quadratic model has no minimizer
-(with $H < 0$, $\quadmodelf{\step} = f + g\,\step + \tfrac{1}{2} H \step^2$ tends to $-\infty$ as $\abs{\step} \to \infty$)
-and @thm-newton-model does not apply,
+and in this example the [Hessian](vector-calculus.qmd#def-hessian) $f''(x) = 2x$ is negative at every [iterate](#def-iterate).
+With $H < 0$, the [quadratic model](#def-quadratic-model) $\quadmodelf{\step} = f + g\,\step + \tfrac{1}{2} H \step^2$
+tends to $-\infty$ as $\abs{\step} \to \infty$,
+so it has no minimizer.
+@thm-newton-model does not apply,
 because it requires a [positive definite](linear-algebra.qmd#def-positive-definite) Hessian.
 
 @fig-newton-maximum shows the [cubic](algebra.qmd#def-cubic-polynomial) and its model.
