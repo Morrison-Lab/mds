@@ -10,7 +10,7 @@ the [linear approximation of the gradient](#def-gradient-linear-approximation) a
 
 $$
 \ba
-\vecf{\ell}(\stepvec)
+\lingradf{\stepvec}
 &= \sbmat{ x_1 \\ 3 x_2 } + \sbmat{ 1 & 0 \\ 0 & 3 } \sbmat{ \step_1 \\ \step_2 }
 && \text{(@eq-gradient-linear-approximation-hessian)}
 \\

@@ -1,7 +1,7 @@
 :::{#thm-newton-model}
 #### The Newton step minimizes the quadratic model
 
-Let $q$ be the quadratic model of $f$ at $\vx$ (@def-quadratic-model),
+Let $\quadmodel$ be the quadratic model of $f$ at $\vx$ (@def-quadratic-model),
 with $\matr{H} = \matr{H}_f(\vx)$ [positive definite](linear-algebra.qmd#def-positive-definite).
 Its unique minimizer is the Newton step $\stepvec^* = -\matr{H}^{-1} \vecf{g}$.
 
@@ -29,9 +29,9 @@ and $\tp{\stepvec^*{}} \matr{H} \vecf{d} = \tp{\vecf{d}} \matr{H} \stepvec^*$ in
 
 $$
 \ba
-q(\stepvec^* + \vecf{d})
+\quadmodelf{\stepvec^* + \vecf{d}}
 &= f(\vx) + \dprod{\vecf{g}}{(\stepvec^* + \vecf{d})} +\tfrac{1}{2}\,\tp{(\stepvec^* + \vecf{d})} \matr{H} (\stepvec^* + \vecf{d})
-&& \text{(definition of } q \text{)}
+&& \text{(definition of } \quadmodel \text{)}
 \\
 &= f(\vx) + \dprod{\vecf{g}}{\stepvec^*} + \dprod{\vecf{g}}{\vecf{d}}
 + \tfrac{1}{2} \paren{\tp{\stepvec^*{}} \matr{H} \stepvec^* + \tp{\stepvec^*{}} \matr{H} \vecf{d} + \tp{\vecf{d}} \matr{H} \stepvec^* + \tp{\vecf{d}} \matr{H} \vecf{d}}
@@ -44,11 +44,11 @@ q(\stepvec^* + \vecf{d})
 &= f(\vx) + \dprod{\vecf{g}}{\stepvec^*} + \tfrac{1}{2}\,\tp{\stepvec^*{}} \matr{H} \stepvec^* + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d}
 && \text{(cancel } \dprod{\vecf{g}}{\vecf{d}} \text{)}
 \\
-&= q(\stepvec^*) + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d},
-&& \text{(definition of } q \text{)}
+&= \quadmodelf{\stepvec^*} + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d},
+&& \text{(definition of } \quadmodel \text{)}
 \ea
 $$
 
-which is greater than $q(\stepvec^*)$ for every $\vecf{d} \ne \vzero_{p \times 1}$, since $\matr{H}$ is positive definite.
+which is greater than $\quadmodelf{\stepvec^*}$ for every $\vecf{d} \ne \vzero_{p \times 1}$, since $\matr{H}$ is positive definite.
 
 :::
