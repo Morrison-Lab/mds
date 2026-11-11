@@ -1,5 +1,5 @@
 :::{#exr-zero-matrix-practice}
-#### Naming a zero matrix
+#### Whether a matrix of zeros is a given zero matrix
 
 A [zero matrix](#def-zero-matrix) carries its shape in its subscript,
 because, as @exm-zero-matrix shows,
@@ -7,16 +7,15 @@ because, as @exm-zero-matrix shows,
 Let
 
 $$
-\matr{Z} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}.
+\matr{Z} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix}.
 $$
 
-Find $m$ and $n$ such that $\matr{Z} = \matr{0}_{m \times n}$.
+Is $\matr{Z} = \matr{0}_{2 \times 3}$?
 
 ::: {.callout-tip}
 #### Hint
 
-Count the [row](#def-matrix-row)s and [column](#def-matrix-column)s of $\matr{Z}$,
-as in @exr-matrix-size-practice.
+Compare the shapes of the two [matrices](#def-matrix), using @def-matrix-equality.
 
 :::
 

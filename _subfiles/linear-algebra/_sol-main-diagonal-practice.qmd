@@ -1,7 +1,10 @@
 :::{#sol-main-diagonal-practice}
 
-$\matr{E}$ is $2 \times 4$, so $k = 2$,
+Write $e_{ij}$ for the entry of $\matr{E}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$.
+$\matr{E}$ is $4 \times 2$, so $m = 4$, $n = 2$ and $k = 2$,
 and the [main diagonal](#def-main-diagonal) of $\matr{E}$ is the list $e_{11}, e_{22}$,
 that is, $7, 3$.
+The list stops at $e_{22}$
+because $\matr{E}$ has no third column, so it has no entry $e_{33}$.
 
 :::
