@@ -1,7 +1,8 @@
 :::{#def-level-set}
 #### Level set
 
-Let $f : \reals^p \to \reals$ and let $c$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
+Let $f : \reals^p \to \reals$,
+and let $c$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
 The **level set**
 [@wikipedia_level_set]
 of $f$ at $c$ is the [preimage](https://morrison-lab.github.io/mcs/functions.html#def-preimage) of the single value $c$ under $f$:

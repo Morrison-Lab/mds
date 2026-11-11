@@ -1,8 +1,10 @@
 :::{#thm-level-set-points}
 #### A level set is the set of points where the function takes the value
 
-Let $f : \reals^p \to \reals$ and let $c$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
-The [level set](#def-level-set) of $f$ at $c$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points where $f$ takes the value $c$:
+Let $f : \reals^p \to \reals$,
+and let $c$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
+The [level set](#def-level-set) of $f$ at $c$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points
+where $f$ takes the value $c$:
 
 $$
 \levelsetof{c}{f} = \cb{\vx \in \reals^p : f(\vx) = c}.
