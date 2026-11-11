@@ -10,7 +10,7 @@ Prove @thm-matadd-commutative.
 ::: {.callout-tip}
 #### Hint
 
-Two $m \times n$ [matrices](#def-matrix) are equal when their $(i, j)$ entries agree for every $i$ and $j$.
+Two $m \times n$ [matrices](#def-matrix) are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$.
 Express the $(i, j)$ entry of each side with @def-matrix-addition.
 
 :::
