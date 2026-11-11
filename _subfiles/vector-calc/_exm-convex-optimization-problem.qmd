@@ -31,7 +31,8 @@ so $f$ is [convex](algebra-sums.qmd#def-convex-function) by part 1 of @thm-conve
   is not a [convex problem](#def-convex-optimization-problem),
   because its [feasible set](optimization-constrained.qmd#def-feasible-set), the [unit circle](algebra-trigonometry.qmd#def-unit-circle) $C$, is not a [convex set](#def-convex-set):
   $\tp{(1, 0)}$ and $\tp{(-1, 0)}$ are in $C$,
-  but with $t = \tfrac{1}{2}$ the point $\vzero$ is not, since $0^2 + 0^2 = 0 \ne 1$.
+  but with $t = \tfrac{1}{2}$ the point $\vzero$ is not,
+  since $0^2 + 0^2 = 0 \ne 1$.
 
 @fig-convex-optimization-problem shows both feasible sets.
 
