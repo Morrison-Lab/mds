@@ -1,0 +1,27 @@
+:::{#exr-transpose-product-practice}
+#### Transposing a product without reversing the order
+
+@thm-transpose-product says that the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) reverses the order of the factors.
+A common slip keeps the original order instead,
+writing $\tp{\matr{A}}\tp{\matr{B}}$ for $\tp{(\matr{A}\matr{B})}$.
+For two [square matrices](#def-square-matrix) of the same size both products are defined,
+so the shapes do not catch the slip.
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}.
+$$
+
+Does $\tp{\matr{A}}\tp{\matr{B}}$ equal $\tp{(\matr{A}\matr{B})}$ for these $\matr{A}$ and $\matr{B}$?
+
+::: {.callout-tip}
+#### Hint
+
+Compute $\matr{A}\matr{B}$ with @def-matrix-mult and take its [transpose](#def-matrix-transpose),
+then compute $\tp{\matr{A}}\tp{\matr{B}}$ and compare the two entry by entry.
+
+:::
+
+:::

@@ -1,0 +1,51 @@
+:::{#sol-transpose-product-practice}
+
+No: the two [matrices](#def-matrix) differ,
+so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+
+The [product](#def-matrix-mult) $\matr{A}\matr{B}$ and its transpose are
+
+$$
+\ba
+\matr{A}\matr{B}
+&= \begin{bmatrix}
+1 \cd 1 + 2 \cd 1 & 1 \cd 0 + 2 \cd 1 \\
+0 \cd 1 + 1 \cd 1 & 0 \cd 0 + 1 \cd 1
+\end{bmatrix}
+&& \text{(@def-matrix-mult)}
+\\
+&= \begin{bmatrix} 3 & 2 \\ 1 & 1 \end{bmatrix},
+&& \text{(multiply and add)}
+\ea
+$$
+
+so $\tp{(\matr{A}\matr{B})} = \begin{bmatrix} 3 & 1 \\ 2 & 1 \end{bmatrix}$.
+
+The transposes are
+$\tp{\matr{A}} = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}$
+and
+$\tp{\matr{B}} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$,
+so
+
+$$
+\ba
+\tp{\matr{A}}\tp{\matr{B}}
+&= \begin{bmatrix}
+1 \cd 1 + 0 \cd 0 & 1 \cd 1 + 0 \cd 1 \\
+2 \cd 1 + 1 \cd 0 & 2 \cd 1 + 1 \cd 1
+\end{bmatrix}
+&& \text{(@def-matrix-mult)}
+\\
+&= \begin{bmatrix} 1 & 1 \\ 2 & 3 \end{bmatrix}.
+&& \text{(multiply and add)}
+\ea
+$$
+
+Entry $(1, 1)$ is $3$ in $\tp{(\matr{A}\matr{B})}$ and $1$ in $\tp{\matr{A}}\tp{\matr{B}}$.
+In the reversed order, as @thm-transpose-product says,
+$\tp{\matr{B}}\tp{\matr{A}}
+= \begin{bmatrix} 1 \cd 1 + 1 \cd 2 & 1 \cd 0 + 1 \cd 1 \\ 0 \cd 1 + 1 \cd 2 & 0 \cd 0 + 1 \cd 1 \end{bmatrix}
+= \begin{bmatrix} 3 & 1 \\ 2 & 1 \end{bmatrix}$,
+which matches $\tp{(\matr{A}\matr{B})}$.
+
+:::
