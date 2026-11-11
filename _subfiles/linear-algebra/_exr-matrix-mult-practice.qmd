@@ -19,9 +19,10 @@ Find $\matr{A}\matr{B}$.
 ::: {.callout-tip}
 #### Hint
 
-$\matr{A}$ is $2 \times 3$ and $\matr{B}$ is $3 \times 2$,
-so by @def-matrix-mult $\matr{A}\matr{B}$ is $2 \times 2$,
-and its entry $c_{ij}$ is $a_{i1} b_{1j} + a_{i2} b_{2j} + a_{i3} b_{3j}$.
+$\matr{A}$ is $2 \times 3$,
+and $\matr{B}$ is $3 \times 2$.
+By @def-matrix-mult, $\matr{A}\matr{B}$ is therefore $2 \times 2$.
+Its entry $c_{ij}$ is $a_{i1} b_{1j} + a_{i2} b_{2j} + a_{i3} b_{3j}$.
 
 :::
 
