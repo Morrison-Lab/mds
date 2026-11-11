@@ -6,6 +6,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-matrix-addition-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-matrix-addition-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-matadd-commutative.qmd >}}
 
 {{< slidebreak >}}

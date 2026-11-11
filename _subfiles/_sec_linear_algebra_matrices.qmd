@@ -16,6 +16,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-matrix-column-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-matrix-column-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-matrix-column-of-rows.qmd >}}
 
 {{< slidebreak >}}
