@@ -2,6 +2,8 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_vectors.qmd >}}
 
+# Matrices
+
 {{< include mds/_subfiles/_sec_linear_algebra_matrices.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_subspaces.qmd >}}

@@ -1,0 +1,15 @@
+{{< include mds/_subfiles/linear-algebra/_def-square-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-main-diagonal.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-identity-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-identity-matrix-kronecker-delta.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-identity.qmd >}}
