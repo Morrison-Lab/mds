@@ -1,0 +1,10 @@
+:::{#def-convex-optimization-problem}
+#### Convex optimization problem, convex problem
+
+A [minimization problem](optimization-constrained.qmd#def-minimization-problem)
+whose [objective function](optimization-constrained.qmd#def-objective-function) is [convex](algebra-sums.qmd#def-convex-function)
+and whose [feasible set](optimization-constrained.qmd#def-feasible-set) is a [convex set](#def-convex-set)
+is a **convex optimization problem** (or **convex problem**)
+[@wikipedia_convex_optimization].
+
+:::
