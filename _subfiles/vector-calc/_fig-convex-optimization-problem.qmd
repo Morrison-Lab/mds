@@ -1,0 +1,102 @@
+::: {#fig-convex-optimization-problem}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-optimization-problem-r
+#| fig-alt: >-
+#|   Two feasible sets in the plane. A blue line, 3 x1 + 4 x2 = 5, holds two
+#|   blue points, (-1, 2) and (1, 0.5), and the segment between them lies on
+#|   the line. A vermilion unit circle holds two vermilion points, (1, 0) and
+#|   (-1, 0); the dashed segment between them crosses the inside of the
+#|   circle, through an open circle at the origin, which is not on the circle.
+#| fig-height: 4.5
+#| fig-width: 4.5
+cop_x1_fc <- seq(-1.5, 2.5, length.out = 2)
+cop_x2_fc <- (5 - 3 * cop_x1_fc) / 4
+cop_line_fc <- tibble::tibble(x1 = cop_x1_fc, x2 = cop_x2_fc)
+cop_angle_fc <- seq(0, 2 * pi, length.out = 201)
+cop_cos_fc <- cos(cop_angle_fc)
+cop_sin_fc <- sin(cop_angle_fc)
+cop_circle_fc <- tibble::tibble(x1 = cop_cos_fc, x2 = cop_sin_fc)
+cop_line_pts_x1_fc <- c(-1, 1)
+cop_line_pts_x2_fc <- c(2, 0.5)
+cop_line_pts_fc <- tibble::tibble(
+  x1 = cop_line_pts_x1_fc,
+  x2 = cop_line_pts_x2_fc
+)
+cop_circle_pts_x1_fc <- c(-1, 1)
+cop_circle_pts_x2_fc <- c(0, 0)
+cop_circle_pts_fc <- tibble::tibble(
+  x1 = cop_circle_pts_x1_fc,
+  x2 = cop_circle_pts_x2_fc
+)
+cop_origin_fc <- tibble::tibble(x1 = 0, x2 = 0)
+cop_aes_fc <- ggplot2::aes(x = x1, y = x2)
+ggplot2::ggplot() +
+  ggplot2::geom_line(
+    data = cop_line_fc, mapping = cop_aes_fc, colour = "#0072B2"
+  ) +
+  ggplot2::geom_point(
+    data = cop_line_pts_fc, mapping = cop_aes_fc,
+    colour = "#0072B2", size = 3
+  ) +
+  ggplot2::geom_path(
+    data = cop_circle_fc, mapping = cop_aes_fc, colour = "#D55E00"
+  ) +
+  ggplot2::geom_line(
+    data = cop_circle_pts_fc, mapping = cop_aes_fc,
+    colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::geom_point(
+    data = cop_circle_pts_fc, mapping = cop_aes_fc,
+    colour = "#D55E00", size = 3
+  ) +
+  ggplot2::geom_point(
+    data = cop_origin_fc, mapping = cop_aes_fc,
+    colour = "#D55E00", shape = 21, fill = "white", size = 3
+  ) +
+  ggplot2::coord_fixed() +
+  ggplot2::labs(x = "x1", y = "x2")
+```
+
+### Python
+
+```{python}
+#| label: convex-optimization-problem-python
+#| fig-alt: >-
+#|   Two feasible sets in the plane. A blue line, 3 x1 + 4 x2 = 5, holds two
+#|   blue points, (-1, 2) and (1, 0.5), and the segment between them lies on
+#|   the line. A vermilion unit circle holds two vermilion points, (1, 0) and
+#|   (-1, 0); the dashed segment between them crosses the inside of the
+#|   circle, through an open circle at the origin, which is not on the circle.
+#| fig-height: 4.5
+#| fig-width: 4.5
+import matplotlib.pyplot as plt
+import numpy as np
+
+cop_x1_fc = np.array([-1.5, 2.5])
+cop_angle_fc = np.linspace(0, 2 * np.pi, 201)
+fig, ax = plt.subplots(figsize=(4.5, 4.5), layout="constrained")
+ax.plot(cop_x1_fc, (5 - 3 * cop_x1_fc) / 4, color="#0072B2");
+ax.plot([-1, 1], [2, 0.5], "o", color="#0072B2", markersize=8);
+ax.plot(np.cos(cop_angle_fc), np.sin(cop_angle_fc), color="#D55E00");
+ax.plot([-1, 1], [0, 0], "o--", color="#D55E00", markersize=8);
+ax.plot(0, 0, "o", color="#D55E00", markerfacecolor="white", markersize=8);
+ax.set_aspect("equal");
+ax.set_xlabel("x1");
+ax.set_ylabel("x2");
+plt.show();
+```
+
+:::
+
+The two [feasible sets](optimization-constrained.qmd#def-feasible-set) of @exm-convex-optimization-problem.
+The segment between two points of the line stays on the line,
+so minimizing over the line is a [convex problem](#def-convex-optimization-problem).
+The segment between two points of the circle leaves it, through $\vzero$,
+so minimizing over the circle is not.
+
+:::
