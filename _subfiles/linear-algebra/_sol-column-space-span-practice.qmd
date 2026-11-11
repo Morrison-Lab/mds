@@ -1,0 +1,10 @@
+:::{#sol-column-space-span-practice}
+
+By @thm-column-space-span,
+$\mathcal{C}(\matr{A}) = \operatorname{span}\cb{(1, 0), (0, 1), (1, 1)}$.
+Every $(b_1, b_2) \in \reals^2$ equals $b_1\,(1, 0) + b_2\,(0, 1) + 0\,(1, 1)$,
+so it is in that [span](linear-algebra-subspaces.qmd#def-span).
+The [column space](#def-column-space) also lies inside $\reals^2$,
+so $\mathcal{C}(\matr{A}) = \reals^2$.
+
+:::

@@ -1,0 +1,22 @@
+:::{#exr-cross-product-matrix-practice}
+#### Computing a cross-product matrix
+
+In R, `crossprod(A, B)` computes the [cross-product matrix](#def-cross-product-matrix) $\tprod{\matr{A}}{\matr{B}}$.
+Let
+
+$$
+\matr{A} = \sbmat{1 & 0 \\ 1 & 1},
+\qquad
+\matr{B} = \sbmat{2 \\ 3}.
+$$
+
+Compute $\tprod{\matr{A}}{\matr{B}}$.
+
+::: {.callout-tip}
+#### Hint
+
+Entry $i$ is the [dot product](linear-algebra-vectors.qmd#def-dot-product) of column $i$ of $\matr{A}$ with $(2, 3)$.
+
+:::
+
+:::

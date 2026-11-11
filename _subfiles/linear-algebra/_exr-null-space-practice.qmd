@@ -1,0 +1,21 @@
+:::{#exr-null-space-practice}
+#### Finding a null space
+
+The [null space](#def-null-space) of a [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$
+holds every $\vecf{x}$ with $\matr{A}\vecf{x} = \vzero$.
+Let
+
+$$
+\matr{A} = \sbmat{1 & 2 & 0 \\ 0 & 0 & 1}.
+$$
+
+Find $\mathcal{N}(\matr{A})$ as a [span](linear-algebra-subspaces.qmd#def-span).
+
+::: {.callout-tip}
+#### Hint
+
+Write out the two entries of $\matr{A}\vecf{x}$ and make each equal to $0$.
+
+:::
+
+:::
