@@ -3,7 +3,7 @@
 
 The [sum](algebra-sums.qmd#def-summation) of the [diagonal entries](#def-diagonal-entry) of a [square matrix](#def-square-matrix)
 summarizes that [matrix](#def-matrix) in one number,
-and it appears in many later results.
+called its [trace](linear-algebra-special-matrices.qmd#def-trace).
 Let
 
 $$
@@ -15,8 +15,7 @@ Find the sum of the diagonal entries of $\matr{F}$.
 ::: {.callout-tip}
 #### Hint
 
-A $3 \times 3$ [matrix](#def-matrix) $\matr{F}$ has [diagonal entries](#def-diagonal-entry) $f_{11}$, $f_{22}$ and $f_{33}$,
-as in @exm-main-diagonal.
+Find the [main diagonal](#def-main-diagonal) of $\matr{F}$ first.
 
 :::
 
