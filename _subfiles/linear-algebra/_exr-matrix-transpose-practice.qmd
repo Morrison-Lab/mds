@@ -2,7 +2,7 @@
 #### Transposing a $3 \times 2$ matrix
 
 The [transpose](#def-matrix-transpose) turns the [row](#def-matrix-row)s of a [matrix](#def-matrix) into [column](#def-matrix-column)s,
-which lets a [product](#def-matrix-mult) such as $\tp{\matr{X}}\matr{X}$ combine the columns of $\matr{X}$ with each other.
+just as the [transpose of a vector](linear-algebra-vectors.qmd#def-transpose) turns a column into a row.
 Let
 
 $$

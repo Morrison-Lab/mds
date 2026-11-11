@@ -15,7 +15,7 @@ Find $\matr{A}_{:,2}$, the second [column of $\matr{A}$](#def-matrix-column).
 ::: {.callout-tip}
 #### Hint
 
-A [column of a matrix](#def-matrix-column) lists the entries $a_{1j}, \ldots, a_{mj}$ from top to bottom,
+The $j$th [column of an $m \times n$ matrix](#def-matrix-column) lists the entries $a_{1j}, \ldots, a_{mj}$ from top to bottom,
 as in @exm-matrix-rows-columns.
 
 :::

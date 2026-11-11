@@ -1,6 +1,7 @@
 :::{#sol-matrix-addition-practice}
 
-Both [matrices](#def-matrix) are $2 \times 2$, so the [matrix sum](#def-matrix-addition) is defined:
+Both [matrices](#def-matrix) are $2 \times 2$,
+so the [matrix sum](#def-matrix-addition) is defined:
 
 $$
 \ba
