@@ -1,19 +1,24 @@
 :::{#exr-matmul-product-of-sums-practice}
-#### Expanding a product of two matrix sums
+#### Comparing $(\matr{A} + \matr{B})(\matr{A} + \matr{B})$ with the rule for numbers
 
-When a [product](#def-matrix-mult) of two [matrix sums](#def-matrix-addition) is expanded,
-each of the four terms keeps its factors in their original order,
-as @thm-matmul-product-of-sums notes,
-because a product of two [matrices](#def-matrix) can change when its factors swap.
-Let $\matr{A}$, $\matr{B}$ and $\matr{C}$ be $k \times k$ matrices.
+For numbers, $(a + b)^2 = a^2 + 2ab + b^2$.
+@thm-matmul-product-of-sums expands a [product](#def-matrix-mult) of two [matrix sums](#def-matrix-addition) into four terms instead,
+because $\matr{A}\matr{B}$ and $\matr{B}\matr{A}$ can differ.
+Let
 
-Find the four terms in the expansion of $(\matr{A} + \matr{B})(\matr{A} + \matr{C})$.
+$$
+\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}.
+$$
+
+Is $(\matr{A} + \matr{B})(\matr{A} + \matr{B})$ [equal](#def-matrix-equality) to $\matr{A}\matr{A} + 2\matr{A}\matr{B} + \matr{B}\matr{B}$?
 
 ::: {.callout-tip}
 #### Hint
 
-Apply @thm-matmul-product-of-sums with $\matr{A} + \matr{B}$ as its left factor
-and $\matr{A} + \matr{C}$ as its right factor.
+Compute $\matr{A} + \matr{B}$ and its [product](#def-matrix-mult) with itself,
+then compute $\matr{A}\matr{A}$, $\matr{A}\matr{B}$ and $\matr{B}\matr{B}$ with @def-matrix-mult.
 
 :::
 
