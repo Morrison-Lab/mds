@@ -78,7 +78,7 @@ plt.show();
 
 :::
 
-The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [strictly concave function](#def-strictly-concave) $f(\vx) = 1 - x_1^2 - x_2^2$ of @exm-concave-hessian,
-a dome with its highest point at $\vzero$.
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [strictly concave function](#def-strictly-concave) $f(\vx) = 1 - x_1^2 - x_2^2$ of @exm-concave-hessian
+is a dome with its highest point at $\vzero$.
 
 :::
