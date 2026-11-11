@@ -2,7 +2,7 @@
 #### Multiplying a matrix by a negative factor
 
 A [scalar multiple](#def-scalar-mult) rescales every entry of a [matrix](#def-matrix) by the same factor,
-as when a table of measurements changes units.
+as when a table of distances is converted from meters to centimeters.
 A negative factor flips the sign of every entry,
 and a factor between $-1$ and $1$ shrinks every entry toward $0$.
 Let
