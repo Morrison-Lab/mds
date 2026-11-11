@@ -1,0 +1,46 @@
+::: {#fig-level-set}
+
+```{r}
+#| label: level-set-r
+#| fig-alt: >-
+#|   The plane with axes x1 and x2 from -1.5 to 1.5. A blue circle of radius 1
+#|   around the origin is the level set at 1, and a blue point at the origin is
+#|   the level set at 0. A vermilion circle marks the point (0.6, 0.8), which
+#|   lies on the circle, and a vermilion triangle marks the point (1, 1), which
+#|   lies outside it.
+#| fig-height: 4
+#| fig-width: 5
+ls_angle_ls <- seq(0, 2 * pi, length.out = 201)
+ls_x1_ls <- cos(ls_angle_ls)
+ls_x2_ls <- sin(ls_angle_ls)
+ls_circle_ls <- tibble::tibble(x1 = ls_x1_ls, x2 = ls_x2_ls)
+ls_origin_ls <- tibble::tibble(x1 = 0, x2 = 0)
+ls_kinds_ls <- c("on the level set at 1", "not on it")
+ls_points_ls <- tibble::tibble(
+  x1 = c(0.6, 1),
+  x2 = c(0.8, 1),
+  kind = ls_kinds_ls
+)
+ls_aes_ls <- ggplot2::aes(x1, x2)
+ls_points_aes_ls <- ggplot2::aes(shape = kind)
+ls_shapes_ls <- c("on the level set at 1" = 16, "not on it" = 17)
+ls_limits_ls <- c(-1.5, 1.5)
+ggplot2::ggplot(ls_circle_ls, ls_aes_ls) +
+  ggplot2::geom_path(colour = "#0072B2") +
+  ggplot2::geom_point(data = ls_origin_ls, colour = "#0072B2", size = 2) +
+  ggplot2::geom_point(
+    data = ls_points_ls, mapping = ls_points_aes_ls,
+    colour = "#D55E00", size = 3
+  ) +
+  ggplot2::scale_shape_manual(values = ls_shapes_ls) +
+  ggplot2::coord_equal(xlim = ls_limits_ls, ylim = ls_limits_ls) +
+  ggplot2::labs(shape = NULL) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(legend.position = "bottom")
+```
+
+The [level sets](#def-level-set) $\levelsetof{1}{f}$ (blue circle) and $\levelsetof{0}{f}$ (blue point at $\vzero$)
+of $f(\vx) = x_1^2 + x_2^2$,
+with the points $\tp{(0.6, 0.8)}$ (circle) and $\tp{(1, 1)}$ (triangle).
+
+:::
