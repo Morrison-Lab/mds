@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 10:35:49 (PST)
+Last modified: 2026-11-11 14:32:00 (PST)
 
 > **NOTE:**
 >
@@ -311,6 +311,32 @@ Last modified: 2026-11-11 10:35:49 (PST)
 > &= \begin{bmatrix} 3 & -6 \\ 0 & 12 \end{bmatrix}.
 > \end{aligned}$$
 
+> **NOTE:**
+>
+> **Exercise 7 (Multiplying a matrix by a negative factor)** A [scalar multiple](#def-scalar-mult) rescales every entry of a [matrix](#def-matrix) by the same factor, as when a table of distances is converted from meters to centimeters. A negative factor flips the sign of every entry, and a factor between $-1$ and $1$ shrinks every entry toward $0$. Let
+>
+> $$\mathbf{C} = \begin{bmatrix} 4 & -2 \\ 0 & 6 \end{bmatrix}.$$
+>
+> Compute $-\frac{1}{2} \mathbf{C}$.
+>
+> > **TIP:**
+> >
+> > Multiply each entry by $-\frac{1}{2}$, as in [Example 6](#exm-scalar-mult).
+
+> **NOTE:**
+>
+> *Solution 7*. $$\begin{aligned}
+> -\frac{1}{2} \mathbf{C}
+> &= \begin{bmatrix}
+> -\frac{1}{2} \cdot 4 & -\frac{1}{2} \cdot(-2) \\
+> -\frac{1}{2} \cdot 0 & -\frac{1}{2} \cdot 6
+> \end{bmatrix}
+> && \text{(}\href{#def-scalar-mult}{\text{Definition~8}}\text{)}
+> \\
+> &= \begin{bmatrix} -2 & 1 \\ 0 & -3 \end{bmatrix}.
+> && \text{(multiply)}
+> \end{aligned}$$
+
 # 4 Matrix multiplication
 
 > **NOTE:**
@@ -432,7 +458,7 @@ Last modified: 2026-11-11 10:35:49 (PST)
 
 > **NOTE:**
 >
-> **Exercise 7 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
+> **Exercise 8 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
 >
 > 1.  $\mathbf{A}\mathbf{B}$
 > 2.  $\mathbf{B}\mathbf{A}$
@@ -442,7 +468,7 @@ Last modified: 2026-11-11 10:35:49 (PST)
 
 > **NOTE:**
 >
-> *Solution 7*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
+> *Solution 8*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
 >
 > 1.  $\mathbf{A}\mathbf{B}$: $(4 \times 3)(3 \times 2)$. The inner pair is $3$ and $3$, so it is defined, and the result is $4 \times 2$.
 > 2.  $\mathbf{B}\mathbf{A}$: $(3 \times 2)(4 \times 3)$. The inner pair is $2$ and $4$, which do not match, so it is **not defined**. Matrix multiplication is not commutative, and this is the blunt form of that: swapping the order can leave an expression that means nothing.
@@ -517,6 +543,38 @@ Last modified: 2026-11-11 10:35:49 (PST)
 >
 > $$\mathbf{I}_m\,\mathbf{A} = \mathbf{A}$$
 
+> **NOTE:**
+>
+> **Exercise 9 (Multiplying by an identity matrix)** [Theorem 10](#thm-identity) says that an [identity matrix](#def-identity-matrix) of the right size leaves a [matrix](#def-matrix) unchanged under [matrix multiplication](#def-matrix-mult), just as multiplying a number by $1$ leaves it unchanged. Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}.$$
+>
+> Compute $\mathbf{I}_2 \mathbf{A}$ entry by entry, from the definition of matrix multiplication.
+>
+> > **TIP:**
+> >
+> > Entry $(i, j)$ of $\mathbf{I}_2 \mathbf{A}$ is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of the $i$th [row of](#def-matrix-row) $\mathbf{I}_2$ with the $j$th [column of](#def-matrix-column) $\mathbf{A}$, as in [Example 7](#exm-dot-product-matmul).
+
+> **NOTE:**
+>
+> *Solution 9*. $\mathbf{I}_2$ is $2 \times 2$ and $\mathbf{A}$ is $2 \times 3$, so the [product](#def-matrix-mult) is defined and is $2 \times 3$. The first [row of](#def-matrix-row) $\mathbf{I}_2$ is $\begin{bmatrix} 1 & 0 \end{bmatrix}$ and the second is $\begin{bmatrix} 0 & 1 \end{bmatrix}$, so by [Definition 9](#def-matrix-mult)
+>
+> $$\begin{aligned}
+> \mathbf{I}_2 \mathbf{A}
+> &= \begin{bmatrix}
+> 1 \cdot 2 + 0 \cdot 5 & 1 \cdot 0 + 0 \cdot 3 & 1 \cdot(-1) + 0 \cdot 4 \\
+> 0 \cdot 2 + 1 \cdot 5 & 0 \cdot 0 + 1 \cdot 3 & 0 \cdot(-1) + 1 \cdot 4
+> \end{bmatrix}
+> && \text{(}\href{#def-matrix-mult}{\text{Definition~9}}\text{)}
+> \\
+> &= \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= \mathbf{A}.
+> \end{aligned}$$
+>
+> Each row of $\mathbf{I}_2$ has a single $1$, so entry $(i, j)$ of the product picks out entry $(i, j)$ of $\mathbf{A}$, as [Theorem 10](#thm-identity) says.
+
 # 6 Matrix-vector multiplication
 
 > **NOTE:**
@@ -536,6 +594,39 @@ Last modified: 2026-11-11 10:35:49 (PST)
 > \begin{bmatrix} 1 \cdot 1 + 2 \cdot(-1) \\ 3 \cdot 1 + 4 \cdot(-1) \end{bmatrix} \\
 > &=
 > \begin{bmatrix} -1 \\ -1 \end{bmatrix}.
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Exercise 10 (A matrix-vector product with more columns than rows)** A [matrix-vector product](#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ computes one [weighted sum](linear-algebra-vectors.llms.md#def-weighted-sum) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for each [row of](#def-matrix-row) $\mathbf{A}$, so one multiplication computes several weighted sums at once. The [matrix](#def-matrix) $\mathbf{A}$ below has more [column](#def-matrix-column)s than [row](#def-matrix-row)s, so $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is shorter than $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}.$$
+>
+> Compute $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
+>
+> > **TIP:**
+> >
+> > Entry $i$ of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of the $i$th [row of](#def-matrix-row) $\mathbf{A}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, as in [Remark 4](#rem-matvec-row-dot-products).
+
+> **NOTE:**
+>
+> *Solution 10*. $\mathbf{A}$ is $2 \times 3$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $3 \times 1$, so the [matrix-vector product](#def-matvec-mult) is defined and is $2 \times 1$:
+>
+> $$\begin{aligned}
+> \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+> &= \begin{bmatrix}
+> 2 \cdot 1 + 0 \cdot 2 + (-1) \cdot 3 \\
+> 5 \cdot 1 + 3 \cdot 2 + 4 \cdot 3
+> \end{bmatrix}
+> && \text{(}\href{#def-matvec-mult}{\text{Definition~15}}\text{)}
+> \\
+> &= \begin{bmatrix} 2 + 0 - 3 \\ 5 + 6 + 12 \end{bmatrix}
+> && \text{(multiply)}
+> \\
+> &= \begin{bmatrix} -1 \\ 23 \end{bmatrix}.
+> && \text{(add)}
 > \end{aligned}$$
 
 > **NOTE:**
@@ -1158,7 +1249,7 @@ Last modified: 2026-11-11 10:35:49 (PST)
 
 > **NOTE:**
 >
-> **Exercise 8 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+> **Exercise 11 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
 >
 > | symbol | meaning                 | units    |
 > |--------|-------------------------|----------|
@@ -1174,7 +1265,7 @@ Last modified: 2026-11-11 10:35:49 (PST)
 
 > **NOTE:**
 >
-> *Solution 8*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
+> *Solution 11*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 > \qquad b = -30$$
@@ -1183,11 +1274,11 @@ Last modified: 2026-11-11 10:35:49 (PST)
 
 > **NOTE:**
 >
-> **Exercise 9 (Score a patient)** Give the score from the rule in [Exercise 8](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+> **Exercise 12 (Score a patient)** Give the score from the rule in [Exercise 11](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
 
 > **NOTE:**
 >
-> *Solution 9*. For the patient,
+> *Solution 12*. For the patient,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 >
@@ -1208,7 +1299,7 @@ Last modified: 2026-11-11 10:35:49 (PST)
 
 > **NOTE:**
 >
-> **Exercise 10 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 23](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 19](#def-linear-map)).
+> **Exercise 13 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 23](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 19](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -1218,7 +1309,7 @@ Last modified: 2026-11-11 10:35:49 (PST)
 
 > **NOTE:**
 >
-> *Solution 10*.
+> *Solution 13*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
