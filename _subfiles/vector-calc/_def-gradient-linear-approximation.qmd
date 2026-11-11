@@ -3,9 +3,9 @@
 
 Let $f$ be as in [Newton's method](#def-newton-method) and let $\vx$ be a point.
 The **linear approximation of the gradient** of $f$ at $\vx$
-is the $p \times 1$ vector-valued function $\vecf{\ell}$ of a step $\stepvec \in \reals^p$
+is the $p \times 1$ [vector-valued function](linear-algebra-vectors.qmd#def-vector-valued) $\vecf{\ell}$ of a step $\stepvec \in \reals^p$
 whose $j$th entry, for $j = 1, \ldots, p$,
-is the function whose graph is the [tangent plane](#def-tangent-plane) to the graph of the [partial derivative](vector-calculus.qmd#def-partial-derivative) $\deriv{x_j} f$ at $\vx$,
+is the function whose [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) is the [tangent plane](#def-tangent-plane) to the graph of the [partial derivative](vector-calculus.qmd#def-partial-derivative) $\deriv{x_j} f$ at $\vx$,
 evaluated at $\vx + \stepvec$:
 
 $$

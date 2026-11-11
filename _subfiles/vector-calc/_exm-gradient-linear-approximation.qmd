@@ -2,7 +2,7 @@
 #### The linear approximation of the derivative of a cubic at $x = -2.5$
 
 For $f(x) = \tfrac{1}{3} x^3 - 4x$, with $f'(x) = x^2 - 4$ and $f''(x) = 2x$ (@exm-newton-method),
-$p = 1$, so the [linear approximation of the gradient](#def-gradient-linear-approximation) at $x = -2.5$ is the tangent line to $f'$ there:
+$p = 1$, so the [linear approximation of the gradient](#def-gradient-linear-approximation) at $x = -2.5$ is the [tangent line](calculus-derivatives.qmd#def-tangent-line) to $f'$ there:
 
 $$
 \ba
@@ -18,7 +18,7 @@ $$
 \ea
 $$ {#eq-gradient-linear-approximation-cubic}
 
-@fig-gradient-linear-approximation graphs $f'$ and $\ell$.
+@fig-gradient-linear-approximation shows $f'$ and $\ell$.
 
 {{< include mds/_subfiles/vector-calc/_fig-gradient-linear-approximation.qmd >}}
 

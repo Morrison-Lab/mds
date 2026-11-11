@@ -1,7 +1,7 @@
 :::{#exm-newton-linearized-gradient}
 #### The Newton step at $x = -2.5$ as a root
 
-At $x = -2.5$, the [linear approximation of the gradient](#def-gradient-linear-approximation) of the cubic $f(x) = \tfrac{1}{3} x^3 - 4x$
+At $x = -2.5$, the [linear approximation of the gradient](#def-gradient-linear-approximation) of the [cubic](algebra.qmd#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$
 is $\ell(\step) = 2.25 - 5 \step$ (@exm-gradient-linear-approximation).
 Setting it to $0$,
 
@@ -18,8 +18,8 @@ $$
 \ea
 $$ {#eq-newton-linearized-gradient-cubic}
 
-so the next iterate is $-2.5 + 0.45 = -2.05$,
-the point where the tangent line in @fig-gradient-linear-approximation crosses $0$.
+so the next [iterate](#def-iterate) is $-2.5 + 0.45 = -2.05$,
+the point where the [tangent line](calculus-derivatives.qmd#def-tangent-line) in @fig-gradient-linear-approximation crosses $0$.
 The [Newton's method](#def-newton-method) iteration $x^{(t+1)} = \tfrac{1}{2} \paren{x^{(t)} + 4 / x^{(t)}}$ of @exm-newton-method gives the same iterate.
 Here $H = [-5]$ is not [positive definite](linear-algebra-special-matrices.qmd#def-positive-definite),
 so @thm-newton-model does not describe this step,

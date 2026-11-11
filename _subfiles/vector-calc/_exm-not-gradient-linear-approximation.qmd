@@ -1,8 +1,8 @@
 :::{#exm-not-gradient-linear-approximation}
 #### The tangent line to $f$ is not the linear approximation of the gradient
 
-For the cubic $f(x) = \tfrac{1}{3} x^3 - 4x$ at $x = -2.5$ (@exm-gradient-linear-approximation),
-the tangent line to $f$ itself is
+For the [cubic](algebra.qmd#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ at $x = -2.5$ (@exm-gradient-linear-approximation),
+the [tangent line](calculus-derivatives.qmd#def-tangent-line) to $f$ itself is
 
 $$
 \ba
