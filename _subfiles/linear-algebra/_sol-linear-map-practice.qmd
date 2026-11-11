@@ -1,0 +1,35 @@
+:::{#sol-linear-map-practice}
+
+Yes.
+For any $\vx, \vy \in \reals^2$,
+$f$ is [additive](#def-additive-function):
+
+$$
+\ba
+f(\vx + \vy)
+&= 3 (x_1 + y_1) - (x_2 + y_2)
+&& \text{(@def-vector-addition)}
+\\&= (3 x_1 - x_2) + (3 y_1 - y_2)
+&& \text{(rearranging the terms)}
+\\&= f(\vx) + f(\vy).
+\ea
+$$
+
+For any $\vx \in \reals^2$ and $c \in \reals$,
+$f$ is [homogeneous](#def-homogeneous-function):
+
+$$
+\ba
+f(c \vx)
+&= 3 c x_1 - c x_2
+&& \text{(@def-scalar-mult)}
+\\&= c (3 x_1 - x_2)
+&& \text{(factoring out } c \text{)}
+\\&= c f(\vx).
+\ea
+$$
+
+Since $f$ is both,
+it is a [linear map](#def-linear-map).
+
+:::

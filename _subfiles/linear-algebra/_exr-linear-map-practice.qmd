@@ -1,0 +1,19 @@
+:::{#exr-linear-map-practice}
+#### Testing whether a difference of scaled measurements is a linear map
+
+A score that scales two measurements and takes their difference,
+such as $3 x_1 - x_2$,
+is a common building block of a model.
+Let $f: \reals^2 \to \reals$ be $f(\vx) = 3 x_1 - x_2$.
+
+Is $f$ a [linear map](#def-linear-map)?
+
+::: {.callout-tip}
+#### Hint
+
+Check the two conditions in @def-linear-map one at a time,
+for any $\vx, \vy \in \reals^2$ and $c \in \reals$.
+
+:::
+
+:::
