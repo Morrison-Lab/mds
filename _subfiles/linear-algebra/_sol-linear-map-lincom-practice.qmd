@@ -1,0 +1,17 @@
+:::{#sol-linear-map-lincom-practice}
+
+$$
+\ba
+f(3 \vecf{v}_1 - 2 \vecf{v}_2)
+&= 3 f(\vecf{v}_1) - 2 f(\vecf{v}_2)
+&& \text{(@thm-linear-map-lincom)}
+\\&= 3 \begin{bmatrix} 1 \\ 2 \end{bmatrix} - 2 \begin{bmatrix} 0 \\ -1 \end{bmatrix}
+&& \text{(the given values)}
+\\&= \begin{bmatrix} 3 \\ 6 \end{bmatrix} - \begin{bmatrix} 0 \\ -2 \end{bmatrix}
+&& \text{(@def-scalar-mult)}
+\\&= \begin{bmatrix} 3 \\ 8 \end{bmatrix}
+&& \text{(subtracting entry by entry)}
+\ea
+$$
+
+:::
