@@ -27,9 +27,13 @@ Then the [convex hull](#def-convex-hull) of $S$ is $T$: $\operatorname{conv}(S) 
   $$
 
   So $T$ is convex, by @thm-convex-intersection applied twice.
-  $T$ contains $S$, so every point of $\operatorname{conv}(S)$ is in $T$.
+  $T$ contains $S$,
+  so every point of $\operatorname{conv}(S)$ is in $T$.
 - $T \subseteq \operatorname{conv}(S)$.
-  Let $K$ be a [convex set](#def-convex-set) containing $S$, let $\vx \in T$, and let $s = x_1 + x_2$, so $0 \le s \le 1$.
+  Let $K$ be a [convex set](#def-convex-set) containing $S$,
+  let $\vx \in T$,
+  and let $s = x_1 + x_2$,
+  so $0 \le s \le 1$.
   If $s = 0$, then $\vx = \vzero \in K$.
   Otherwise $\vecf{p} = \vx / s$ has $p_1 + p_2 = 1$ with $p_1, p_2 \ge 0$,
   so $\vecf{p} = p_1 \vecf{e}_1 + (1 - p_1) \vecf{e}_2$ is in $K$, by convexity with $t = p_1$.
