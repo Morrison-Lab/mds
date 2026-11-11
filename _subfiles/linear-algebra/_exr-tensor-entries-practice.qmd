@@ -3,7 +3,8 @@
 
 Software for neural networks often stores a batch of color photos as one [tensor](#def-tensor),
 with one index for the photo, two for the pixel's position, and one for the color channel,
-so the number of entries is the number of stored values.
+and the software stores one number per entry,
+so the count of entries determines how much memory the batch needs.
 Let $\mathcal{B}$ be the order-4 tensor for a batch of $10$ color photos of $32 \times 32$ pixels,
 with $n_1 = 10$, $n_2 = 32$, $n_3 = 32$ and $n_4 = 3$.
 
