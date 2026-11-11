@@ -6,7 +6,7 @@ and let the [second partial derivatives](vector-calculus.qmd#def-second-partial-
 Then the [linear approximation of the gradient](#def-gradient-linear-approximation) of $f$ at $\vx$ is the gradient plus the Hessian times the step:
 
 $$
-\vecf{\ell}(\stepvec) = \vecf{g} + \matr{H} \stepvec.
+\lingradf{\stepvec} = \vecf{g} + \matr{H} \stepvec.
 $$ {#eq-gradient-linear-approximation-hessian}
 
 :::
@@ -20,7 +20,7 @@ So, for each $j$,
 
 $$
 \ba
-\sb{\vecf{\ell}(\stepvec)}_j
+\sb{\lingradf{\stepvec}}_j
 &= \deriv{x_j} f(\vx) + \sum_{i=1}^{p} \sb{\matr{H}}_{ij}\,\step_i
 && \text{(@eq-gradient-linear-approximation, as a sum)}
 \\
