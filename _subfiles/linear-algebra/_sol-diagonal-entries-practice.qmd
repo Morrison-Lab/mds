@@ -1,0 +1,11 @@
+:::{#sol-diagonal-entries-practice}
+
+$\matr{F}$ is $3 \times 3$,
+so its [diagonal entries](#def-diagonal-entry) are $f_{11} = 2$, $f_{22} = -3$ and $f_{33} = 6$,
+and adding them gives
+
+$$
+f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
+$$
+
+:::

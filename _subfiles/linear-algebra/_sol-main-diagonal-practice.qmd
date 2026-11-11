@@ -1,0 +1,7 @@
+:::{#sol-main-diagonal-practice}
+
+$\matr{E}$ is $2 \times 4$, so $k = 2$,
+and the [main diagonal](#def-main-diagonal) of $\matr{E}$ is the list $e_{11}, e_{22}$,
+that is, $7, 3$.
+
+:::

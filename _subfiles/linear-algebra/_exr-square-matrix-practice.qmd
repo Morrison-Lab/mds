@@ -1,0 +1,20 @@
+:::{#exr-square-matrix-practice}
+#### Whether a data matrix times its transpose is square
+
+Many statistical methods start from an $n \times p$ data [matrix](#def-matrix) $\matr{X}$,
+with one [row](#def-matrix-row) per observation,
+and form the [product](#def-matrix-mult) $\tp{\matr{X}}\matr{X}$ of its [transpose](#def-matrix-transpose) with itself.
+Whether that product is [square](#def-square-matrix) matters,
+because several later results apply only to [square matrices](#def-square-matrix).
+
+Is $\tp{\matr{X}}\matr{X}$ square?
+
+::: {.callout-tip}
+#### Hint
+
+Find the shape of $\tp{\matr{X}}$ from @def-matrix-transpose,
+then the shape of the [product](#def-matrix-mult) from @def-matrix-mult.
+
+:::
+
+:::
