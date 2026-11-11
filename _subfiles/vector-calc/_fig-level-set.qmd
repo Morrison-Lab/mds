@@ -16,16 +16,19 @@ ls_x2_ls <- sin(ls_angle_ls)
 ls_circle_ls <- tibble::tibble(x1 = ls_x1_ls, x2 = ls_x2_ls)
 ls_origin_ls <- tibble::tibble(x1 = 0, x2 = 0)
 ls_kinds_ls <- c("on the level set at 1", "not on it")
+ls_points_x1_ls <- c(0.6, 1)
+ls_points_x2_ls <- c(0.8, 1)
 ls_points_ls <- tibble::tibble(
-  x1 = c(0.6, 1),
-  x2 = c(0.8, 1),
+  x1 = ls_points_x1_ls,
+  x2 = ls_points_x2_ls,
   kind = ls_kinds_ls
 )
-ls_aes_ls <- ggplot2::aes(x1, x2)
 ls_points_aes_ls <- ggplot2::aes(shape = kind)
 ls_shapes_ls <- c("on the level set at 1" = 16, "not on it" = 17)
 ls_limits_ls <- c(-1.5, 1.5)
-ggplot2::ggplot(ls_circle_ls, ls_aes_ls) +
+ls_circle_ls |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x1, y = x2) +
   ggplot2::geom_path(colour = "#0072B2") +
   ggplot2::geom_point(data = ls_origin_ls, colour = "#0072B2", size = 2) +
   ggplot2::geom_point(
