@@ -1,0 +1,18 @@
+:::{#exr-matadd-commutative-proof}
+#### Proving that matrix addition is commutative
+
+@thm-matadd-commutative lets two [matrices](#def-matrix) be added in either order,
+just as two numbers can be
+([sums are symmetric](algebra-sums.qmd#thm-sum-symmetric)).
+
+Prove @thm-matadd-commutative.
+
+::: {.callout-tip}
+#### Hint
+
+Two $m \times n$ [matrices](#def-matrix) are equal when their $(i, j)$ entries agree for every $i$ and $j$.
+Express the $(i, j)$ entry of each side with @def-matrix-addition.
+
+:::
+
+:::

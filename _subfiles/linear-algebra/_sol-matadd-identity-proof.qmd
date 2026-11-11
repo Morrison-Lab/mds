@@ -1,0 +1,23 @@
+:::{#sol-matadd-identity-proof}
+
+Both sides are $m \times n$ [matrices](#def-matrix),
+so they are equal when their $(i, j)$ entries agree for every $i$ and $j$.
+For each $i$ and $j$,
+
+$$
+\ba
+(\matr{A} + \matr{0}_{m \times n})_{ij}
+&= a_{ij} + (\matr{0}_{m \times n})_{ij}
+&& \text{(@def-matrix-addition)}
+\\
+&= a_{ij} + 0
+&& \text{(@def-zero-matrix)}
+\\
+&= a_{ij}.
+&& \text{(adding } 0 \text{ to a number leaves it unchanged)}
+\ea
+$$
+
+So $\matr{A} + \matr{0}_{m \times n} = \matr{A}$.
+
+:::

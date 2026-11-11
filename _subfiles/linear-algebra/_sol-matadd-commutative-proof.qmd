@@ -1,0 +1,24 @@
+:::{#sol-matadd-commutative-proof}
+
+Both sides are $m \times n$ [matrices](#def-matrix),
+so they are equal when their $(i, j)$ entries agree for every $i$ and $j$.
+For each $i$ and $j$,
+
+$$
+\ba
+(\matr{A} + \matr{B})_{ij}
+&= a_{ij} + b_{ij}
+&& \text{(@def-matrix-addition)}
+\\
+&= b_{ij} + a_{ij}
+&& \text{(sums of numbers are symmetric)}
+\\
+&= (\matr{B} + \matr{A})_{ij},
+&& \text{(@def-matrix-addition)}
+\ea
+$$
+
+where the middle step uses [the symmetry of sums of numbers](algebra-sums.qmd#thm-sum-symmetric).
+So $\matr{A} + \matr{B} = \matr{B} + \matr{A}$.
+
+:::
