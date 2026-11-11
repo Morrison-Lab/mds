@@ -1,0 +1,43 @@
+{{< include mds/_subfiles/linear-algebra/_def-orthogonal-vectors.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-orthogonal-vectors.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-euclidean-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-unit-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-euclidean-distance.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-euclidean-distance.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-euclidean-distance.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-distance-from-origin.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-orthonormal-vectors.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-orthonormal-vectors.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-inner-product.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-video-linear-function-basics.qmd >}}

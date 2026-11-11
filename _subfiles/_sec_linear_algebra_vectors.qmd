@@ -1,5 +1,3 @@
-# Vectors
-
 ```{r}
 #| include: false
 reticulate::py_require("numpy")
@@ -63,88 +61,8 @@ reticulate::py_require("numpy")
 
 ## Special vectors
 
-{{< include mds/_subfiles/linear-algebra/_def-zero-vector.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_note-def-zero-vector.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-mean.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_rem-mean-sample-mean.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-ones-vector.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-sum-of-elements.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_thm-sum-dot-ones.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-indicator-vector.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_note-def-indicator-vector.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_thm-indicator-selection.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_proof-thm-indicator-selection.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_thm-standard-basis-expansion.qmd >}}
+{{< include mds/_subfiles/_sec_linear_algebra_vectors_special.qmd >}}
 
 ## Orthogonality
 
-{{< include mds/_subfiles/linear-algebra/_def-orthogonal-vectors.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_note-def-orthogonal-vectors.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-euclidean-norm.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-unit-vector.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-euclidean-distance.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-euclidean-distance.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-euclidean-distance.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_rem-distance-from-origin.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-orthonormal-vectors.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_note-def-orthonormal-vectors.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-inner-product.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-inner-product.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_note-video-linear-function-basics.qmd >}}
+{{< include mds/_subfiles/_sec_linear_algebra_vectors_orthogonality.qmd >}}
