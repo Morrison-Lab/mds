@@ -124,6 +124,18 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_cor-convex-iff-hessian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-concave-hessian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-concave-hessian.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_cor-convex-stationary.qmd >}}
 
 {{< slidebreak >}}
