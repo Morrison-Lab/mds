@@ -1,0 +1,7 @@
+:::{#rem-level-set-curve}
+#### Level sets in the plane
+
+For $p = 2$, a [level set](#def-level-set) is often a curve in the plane,
+such as the circle $\levelsetof{1}{f}$ in @exm-level-set.
+
+:::

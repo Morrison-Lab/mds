@@ -1,0 +1,8 @@
+:::{#def-convex-at}
+#### Function convex at a point
+
+Let $f : \reals^p \to \reals$ and let $\vx_0 \in \reals^p$.
+$f$ is **convex at** $\vx_0$ if there is an $r > 0$
+such that $f$ is [convex on](#def-convex-on) the [open ball](vector-calculus.qmd#def-ball) of radius $r$ around $\vx_0$.
+
+:::

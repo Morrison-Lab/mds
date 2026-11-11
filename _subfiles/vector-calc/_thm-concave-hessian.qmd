@@ -1,0 +1,25 @@
+:::{#thm-concave-hessian}
+#### Second-derivative test for concavity
+
+Let $f : \reals^p \to \reals$ have first and [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative)
+that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$.
+
+1. $f$ is [concave](#def-concave) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff)
+   $-\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite) for every $\vx \in \reals^p$.
+2. If $-\matr{H}_f(\vx)$ is [positive definite](linear-algebra-special-matrices.qmd#def-positive-definite) for every $\vx \in \reals^p$,
+   then $f$ is [strictly concave](#def-strictly-concave).
+
+:::
+
+::: proof
+
+Its negative $-f$ has the [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative) $-\deriv{x_j}\deriv{x_k} f$,
+which are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$,
+so its [Hessian](vector-calculus.qmd#def-hessian) is $\matr{H}_{-f}(\vx) = -\matr{H}_f(\vx)$.
+
+1. By @def-concave, $f$ is [concave](#def-concave) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-f$ is [convex](algebra-sums.qmd#def-convex-function).
+   By @cor-convex-iff-hessian applied to $-f$, that holds [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite) for every $\vx$.
+2. Part 2 of @thm-convex-hessian, applied to $-f$, makes $-f$ [strictly convex](#def-strictly-convex),
+   so $f$ is [strictly concave](#def-strictly-concave) by @def-strictly-concave.
+
+:::
