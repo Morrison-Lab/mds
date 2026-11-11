@@ -1,0 +1,11 @@
+:::{#sol-scalar-mult-practice}
+
+By @def-scalar-mult,
+
+$$
+100\matr{A}
+= \sbmat{100 \cd 1.5 & 100 \cd 0.2 \\ 100 \cd 0.75 & 100 \cd 2}
+= \sbmat{150 & 20 \\ 75 & 200}.
+$$
+
+:::

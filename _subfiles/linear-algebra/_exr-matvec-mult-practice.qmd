@@ -1,0 +1,23 @@
+:::{#exr-matvec-mult-practice}
+#### Computing a matrix-vector product entry by entry
+
+Each entry of a [matrix-vector product](#def-matvec-mult) $\matr{A}\vx$
+combines one [row of $\matr{A}$](#def-matrix-row) with $\vx$.
+Let
+
+$$
+\matr{A} = \sbmat{2 & 0 & -1 \\ 1 & 3 & 4},
+\qquad
+\vx = \sbmat{1 \\ 2 \\ -1}.
+$$
+
+Find $\matr{A}\vx$.
+
+::: {.callout-tip}
+#### Hint
+
+Use @def-matvec-mult with $m = 2$ and $p = 3$.
+
+:::
+
+:::

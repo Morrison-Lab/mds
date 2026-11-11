@@ -1,0 +1,25 @@
+:::{#exr-scalar-mult-practice}
+#### Converting a matrix of measurements from metres to centimetres
+
+Converting measurements from metres to centimetres multiplies each one by $100$,
+so converting every entry of a [matrix](#def-matrix) that holds them is a [scalar multiplication](#def-scalar-mult).
+Let
+
+$$
+\matr{A} = \sbmat{1.5 & 0.2 \\ 0.75 & 2}
+$$
+
+hold measurements in metres.
+
+Find $100\matr{A}$,
+the same measurements in centimetres.
+
+::: {.callout-tip}
+#### Hint
+
+By @def-scalar-mult,
+multiply each entry of $\matr{A}$ by $100$.
+
+:::
+
+:::

@@ -1,0 +1,21 @@
+:::{#exr-identity-practice}
+#### Removing identity matrices from both sides of a product
+
+Simplifying algebra with [matrices](#def-matrix) often leaves an [identity matrix](#def-identity-matrix) in a [product](#def-matrix-mult),
+and @thm-identity removes it.
+Let
+
+$$
+\matr{A} = \sbmat{2 & -1 & 0 \\ 5 & 3 & 1}.
+$$
+
+Find $\matr{I}_2\,\matr{A}\,\matr{I}_3$.
+
+::: {.callout-tip}
+#### Hint
+
+Use @thm-identity once for each [identity matrix](#def-identity-matrix).
+
+:::
+
+:::
