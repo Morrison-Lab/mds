@@ -1,0 +1,84 @@
+::: {#fig-concave-hessian}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: concave-hessian-r
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| fig-alt: >-
+#|   Surface plot of f(x) = 1 - x1^2 - x2^2 for x1 and x2 from -1.5 to 1.5,
+#|   a dome with its highest point, height 1, at the origin, falling off
+#|   equally in every direction.
+cc_x_cc <- seq(-1.5, 1.5, length.out = 41)
+cc_square_cc <- cc_x_cc^2
+cc_sum_cc <- outer(cc_square_cc, cc_square_cc, "+")
+cc_dome_cc <- 1 - cc_sum_cc
+cc_stops_cc <- c(0, 1)
+cc_blue_cols_cc <- c("#CCE0F0", "#0072B2")
+cc_blue_cc <- list(cc_stops_cc, cc_blue_cols_cc)
+cc_eye_cc <- list(x = 1.6, y = -1.6, z = 0.9)
+cc_camera_cc <- list(eye = cc_eye_cc)
+cc_xaxis_cc <- list(title = "x1")
+cc_yaxis_cc <- list(title = "x2")
+cc_zaxis_cc <- list(title = "f(x)")
+cc_scene_cc <- list(
+  xaxis = cc_xaxis_cc,
+  yaxis = cc_yaxis_cc,
+  zaxis = cc_zaxis_cc,
+  camera = cc_camera_cc
+)
+plotly::plot_ly() |>
+  plotly::add_surface(
+    x = cc_x_cc,
+    y = cc_x_cc,
+    z = cc_dome_cc,
+    colorscale = cc_blue_cc,
+    showscale = FALSE
+  ) |>
+  plotly::layout(scene = cc_scene_cc)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
+```
+
+### Python
+
+```{python}
+#| label: concave-hessian-python
+#| fig-alt: >-
+#|   Surface plot of f(x) = 1 - x1^2 - x2^2 for x1 and x2 from -1.5 to 1.5,
+#|   a dome with its highest point, height 1, at the origin, falling off
+#|   equally in every direction.
+#| fig-height: 4.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+cc_x1_py, cc_x2_py = np.meshgrid(np.linspace(-1.5, 1.5, 41),
+                                 np.linspace(-1.5, 1.5, 41))
+cc_dome_py = 1 - cc_x1_py**2 - cc_x2_py**2
+fig = plt.figure(figsize=(6, 4.5))
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(cc_x1_py, cc_x2_py, cc_dome_py, color="#0072B2", alpha=0.7)
+ax.set_xlabel("x1")
+ax.set_ylabel("x2")
+ax.set_zlabel("f(x)")
+plt.show();
+```
+
+:::
+
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [strictly concave function](#def-strictly-concave) $f(\vx) = 1 - x_1^2 - x_2^2$ of @exm-concave-hessian,
+a dome with its highest point at $\vzero$.
+
+:::
