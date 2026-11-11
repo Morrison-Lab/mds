@@ -85,9 +85,11 @@ plt.show();
 :::
 
 The [cubic](algebra.qmd#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of @exm-newton-maximum is blue,
-and its [quadratic model](#def-newton-step) at the start $-2.5$ is dashed vermilion.
+and its [quadratic model](#def-quadratic-model) at the start $-2.5$ is dashed vermilion.
 The model opens downward,
-so its [stationary point](#def-stationary-point) $-2.05$ (triangle) is a highest point and not a lowest one.
+so its [stationary point](#def-stationary-point) $-2.05$ (triangle) is the point
+where the model is largest,
+and the [Newton step](#def-newton-step) moves uphill.
 The [iterates](#def-iterate) approach the [local maximum](#def-local-maximizer) at $-2$ (blue marker).
 
 :::
