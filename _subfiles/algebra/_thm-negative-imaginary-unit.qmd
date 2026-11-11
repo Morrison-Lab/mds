@@ -5,8 +5,6 @@ $$(-i)^2 = -1.$$
 
 :::
 
-::: {.content-hidden when-format="revealjs"}
-
 {{< slidebreak >}}
 
 ::: proof
@@ -24,7 +22,5 @@ $$
 && \text{(multiply)}
 \ea
 $$
-
-:::
 
 :::

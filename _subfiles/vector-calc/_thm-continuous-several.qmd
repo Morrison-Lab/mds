@@ -14,8 +14,6 @@ the conclusion holds at every point of that set.
 
 :::
 
-::: {.content-hidden when-format="revealjs"}
-
 {{< slidebreak >}}
 
 ::: proof
@@ -79,7 +77,5 @@ $$
 && \text{(} \abs{c} < \abs{c} + 1 \text{)}
 \ea
 $$
-
-:::
 
 :::

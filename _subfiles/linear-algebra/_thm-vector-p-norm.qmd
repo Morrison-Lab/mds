@@ -11,8 +11,6 @@ Let $\vx = (x_1, \ldots, x_p) \in \reals^p$.
 
 :::
 
-::: {.content-hidden when-format="revealjs"}
-
 {{< slidebreak >}}
 
 ::: proof
@@ -113,7 +111,5 @@ $$
 $$
 
 and taking the maximum over $i$ on the left gives $\norm{\vx + \vy}_\infty \le \norm{\vx}_\infty + \norm{\vy}_\infty$.
-
-:::
 
 :::

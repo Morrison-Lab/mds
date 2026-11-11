@@ -5,8 +5,6 @@ If $c$ is a flat point of $f$ (@def-flat-point), then $c$ is a critical point of
 
 :::
 
-::: {.content-hidden when-format="revealjs"}
-
 {{< slidebreak >}}
 
 ::: proof
@@ -14,7 +12,5 @@ If $c$ is a flat point of $f$ (@def-flat-point), then $c$ is a critical point of
 A flat point $c$ has $f$ differentiable at $c$ and $f'(c) = 0$.
 The condition "$f'(c) = 0$" is the first alternative in @def-critical-point,
 so $c$ is a critical point.
-
-:::
 
 :::
