@@ -68,7 +68,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_thm-level-set-points.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_exm-level-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_rem-level-set-curve.qmd >}}
 
 {{< slidebreak >}}
 
