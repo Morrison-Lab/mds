@@ -1,0 +1,16 @@
+:::{#sol-matrix-addition-practice}
+
+Both [matrices](#def-matrix) are $2 \times 2$, so the [matrix sum](#def-matrix-addition) is defined:
+
+$$
+\ba
+\matr{A} + \matr{B}
+&= \begin{bmatrix} 1 + 3 & -1 + 2 \\ 2 + (-2) & 0 + 5 \end{bmatrix}
+&& \text{(add entry by entry)}
+\\
+&= \begin{bmatrix} 4 & 1 \\ 0 & 5 \end{bmatrix}.
+&& \text{(add)}
+\ea
+$$
+
+:::
