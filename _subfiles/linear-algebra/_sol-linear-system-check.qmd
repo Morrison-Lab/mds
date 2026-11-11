@@ -14,7 +14,7 @@ $$
 \ea
 $$
 
-which equals $\vecf{b}$,
+which matches $\vecf{b}$ entry by entry,
 so $\vx$ is a [solution of the system](#def-linear-system).
 
 :::
