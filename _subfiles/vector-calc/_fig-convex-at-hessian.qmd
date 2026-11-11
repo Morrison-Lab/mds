@@ -1,0 +1,67 @@
+::: {#fig-convex-at-hessian}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-at-hessian-r
+#| fig-alt: >-
+#|   The graph of f(x) = x^3 for x from -1.2 to 1.2, flat at the origin.
+#|   A dashed vermilion chord joins (-1, -1) and (0.5, 0.125) and passes
+#|   through (0, -0.25), below the graph's value 0 at x = 0.
+#| fig-height: 3.5
+#| fig-width: 6
+ch_x_ch <- seq(-1.2, 1.2, length.out = 241)
+ch_graph_ch <- tibble::tibble(x = ch_x_ch, f = ch_x_ch^3)
+ch_ends_ch <- c(-1, 0.5)
+ch_chord_ch <- tibble::tibble(x = ch_ends_ch, f = ch_ends_ch^3)
+ch_mid_x_ch <- c(0, 0)
+ch_mid_f_ch <- c(-0.25, 0)
+ch_mid_ch <- tibble::tibble(x = ch_mid_x_ch, f = ch_mid_f_ch)
+ch_mid_cols_ch <- c("#D55E00", "#0072B2")
+ch_graph_ch |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x, y = f) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_line(
+    data = ch_chord_ch, colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::geom_point(data = ch_chord_ch, colour = "#D55E00", size = 2) +
+  ggplot2::geom_point(data = ch_mid_ch, colour = ch_mid_cols_ch, size = 2) +
+  ggplot2::labs(x = "x", y = "f(x)") +
+  ggplot2::theme_minimal()
+```
+
+### Python
+
+```{python}
+#| label: convex-at-hessian-python
+#| fig-alt: >-
+#|   The graph of f(x) = x^3 for x from -1.2 to 1.2, flat at the origin.
+#|   A dashed vermilion chord joins (-1, -1) and (0.5, 0.125) and passes
+#|   through (0, -0.25), below the graph's value 0 at x = 0.
+#| fig-height: 3.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+ch_x_py = np.linspace(-1.2, 1.2, 241)
+ch_ends_py = np.array([-1, 0.5])
+fig, ax = plt.subplots(figsize=(6, 3.5))
+ax.plot(ch_x_py, ch_x_py**3, color="#0072B2")
+ax.plot(ch_ends_py, ch_ends_py**3, "--o", color="#D55E00", markersize=4)
+ax.plot([0], [-0.25], "o", color="#D55E00", markersize=4)
+ax.plot([0], [0], "o", color="#0072B2", markersize=4)
+ax.set_xlabel("x")
+ax.set_ylabel("f(x)")
+plt.show();
+```
+
+:::
+
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(x) = x^3$ from @exm-convex-at-hessian, with $\smallconst = 1$.
+The dashed [chord](algebra-sums.qmd#def-chord) from $-1$ to $\tfrac{1}{2}$ is at $-\tfrac{1}{4}$ above $x = 0$, below $f(0) = 0$,
+although $f''(0) = 0$.
+
+:::

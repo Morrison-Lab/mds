@@ -1,0 +1,38 @@
+:::{#exm-convex-at-hessian}
+#### Using the Hessian condition, and where it stops
+
+- For $f(\vx) = x_1^2 - x_2^2$, the [Hessian](vector-calculus.qmd#def-hessian) is $\matr{H}_f(\vx) = \diag(2, -2)$ at every $\vx$,
+  and $\vecf{v} = \tp{(0, 1)}$ gives $\tp{\vecf{v}}\, \matr{H}_f(\vx)\, \vecf{v} = -2 < 0$,
+  so $\matr{H}_f(\vx)$ is not [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite).
+  By @thm-convex-at-hessian, $f$ is not [convex at](#def-convex-at) any point.
+- For $f(x) = x^3$, the [second derivative](calculus-derivatives.qmd#def-second-derivative) $f''(0) = 0$ is nonnegative,
+  so the conclusion of @thm-convex-at-hessian holds at $0$,
+  but $f$ is not convex at $0$.
+  Take any $r > 0$ and let $\smallconst = \tfrac{1}{2} r$.
+  With $x = -\smallconst$, $y = \tfrac{1}{2} \smallconst$ and $t = \tfrac{1}{3}$,
+  both points are in the [open ball](vector-calculus.qmd#def-ball) of radius $r$ around $0$,
+  and $t x + (1 - t) y = -\tfrac{1}{3} \smallconst + \tfrac{1}{3} \smallconst = 0$, where $f(0) = 0$.
+  The [chord](algebra-sums.qmd#def-chord) is lower:
+
+  $$
+  \ba
+  \tfrac{1}{3} f(-\smallconst) + \tfrac{2}{3} f\paren{\tfrac{1}{2} \smallconst}
+  &= -\tfrac{1}{3} \smallconst^3 + \tfrac{2}{3} \cdot \tfrac{1}{8} \smallconst^3
+  && \text{(substitute)}
+  \\
+  &= -\tfrac{1}{4} \smallconst^3
+  && \text{(} -\tfrac{4}{12} + \tfrac{1}{12} = -\tfrac{3}{12} \text{)}
+  \\
+  &< 0.
+  && \text{(} \smallconst > 0 \text{)}
+  \ea
+  $$
+
+  So the [converse](https://morrison-lab.github.io/mcs/proof-writing.html#def-converse) of @thm-convex-at-hessian is false:
+  a positive semidefinite Hessian at a point does not make $f$ [convex at](#def-convex-at) that point.
+
+@fig-convex-at-hessian draws the chord for $x^3$.
+
+{{< include mds/_subfiles/vector-calc/_fig-convex-at-hessian.qmd >}}
+
+:::
