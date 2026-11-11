@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-10 20:00:58 (PST)
+Last modified: 2026-11-10 21:23:06 (PST)
 
 > **NOTE:**
 >
@@ -387,12 +387,34 @@ Last modified: 2026-11-10 20:00:58 (PST)
 
 > **NOTE:**
 >
+> **Example 7 (A gradient that equals its linear approximation)** For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, the second function of [Example 3](#exm-quadratic-model), the [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} = {(x_1,\ 3 x_2)}^{\top}$, and the [Hessian](vector-calculus.llms.md#def-hessian) is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point. By [Lemma 1](#lem-gradient-linear-approximation), the [linear approximation of the gradient](#def-gradient-linear-approximation) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is
+>
+> $$\begin{aligned}
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\ell}}\vphantom{\ell}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})
+> &= \begin{bmatrix} x_1 \\ 3 x_2 \end{bmatrix} + \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix} \begin{bmatrix} \delta_1 \\ \delta_2 \end{bmatrix}
+> && \text{(}\href{#eq-gradient-linear-approximation-hessian}{\text{Equation~4}}\text{)}
+> \\
+> &= \begin{bmatrix} x_1 \\ 3 x_2 \end{bmatrix} + \begin{bmatrix} \delta_1 \\ 3 \delta_2 \end{bmatrix}
+> && \text{(matrix-vector product)}
+> \\
+> &= \begin{bmatrix} x_1 + \delta_1 \\ 3 x_2 + 3 \delta_2 \end{bmatrix}
+> && \text{(vector addition)}
+> \\
+> &= \begin{bmatrix} x_1 + \delta_1 \\ 3 (x_2 + \delta_2) \end{bmatrix},
+> && \text{(factor out } 3 \text{)}
+> \end{aligned}
+> \tag{6}$$
+>
+> which is the gradient of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$: the gradient of this $f$ is linear, so [its linear approximation](#def-gradient-linear-approximation) is exact.
+
+> **NOTE:**
+>
 > **Theorem 2 (The Newton step is the root of the linear approximation of the gradient)** Let $f$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ and the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}$ be as in [Lemma 1](#lem-gradient-linear-approximation), with $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). The only step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$ at which the [linear approximation of the gradient](#def-gradient-linear-approximation) is zero is the [Newton step](#def-newton-step):
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\ell}}\vphantom{\ell}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}
 > \iff
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}= -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}.
-> \tag{6}$$
+> \tag{7}$$
 
 > **NOTE:**
 >
@@ -408,13 +430,13 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}.
 > && \text{(multiply both sides by } \mathbf{H}^{-1} \text{ on the left)}
 > \end{aligned}
-> \tag{7}$$
+> \tag{8}$$
 >
 > Each line implies the next and, because $\mathbf{H}$ is [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse), the one before, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}= -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ is the only solution.
 
 > **NOTE:**
 >
-> **Example 7 (The Newton step at** $x = -2.5$ as a root) At $x = -2.5$, the [linear approximation of the gradient](#def-gradient-linear-approximation) of the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ is $\ell(\delta) = 2.25 - 5 \delta$ ([Example 5](#exm-gradient-linear-approximation)). Setting it to $0$,
+> **Example 8 (The Newton step at** $x = -2.5$ as a root) At $x = -2.5$, the [linear approximation of the gradient](#def-gradient-linear-approximation) of the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ is $\ell(\delta) = 2.25 - 5 \delta$ ([Example 5](#exm-gradient-linear-approximation)). Setting it to $0$,
 >
 > $$\begin{aligned}
 > 0 &= 2.25 - 5 \delta
@@ -426,7 +448,7 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > \delta&= 0.45,
 > && \text{(divide both sides by } 5 \text{)}
 > \end{aligned}
-> \tag{8}$$
+> \tag{9}$$
 >
 > so the next [iterate](#def-iterate) is $-2.5 + 0.45 = -2.05$, the point where the [tangent line](calculus-derivatives.llms.md#def-tangent-line) in [Figure 2](#fig-gradient-linear-approximation) crosses $0$. The [Newton’s method](#def-newton-method) iteration $x^{(t+1)} = \tfrac{1}{2} \mathopen{}\left(x^{(t)} + 4 / x^{(t)}\right)\mathclose{}$ of [Example 2](#exm-newton-method) gives the same iterate. Here $H = [-5]$ is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), so [Theorem 1](#thm-newton-model) does not describe this step, but [Theorem 2](#thm-newton-linearized-gradient) does.
 
@@ -443,11 +465,11 @@ Last modified: 2026-11-10 20:00:58 (PST)
 
 > **NOTE:**
 >
-> **Example 8 (Halving the error is not quadratic convergence)** $x^{(t)} = 2^{-t}$ converges to $0$, but it does not converge quadratically: the bound would need $2^{-(t+1)} \le C\,(2^{-t})^2 = C\,2^{-2t}$, that is, $2^{t - 1} \le C$, which fails once $t > 1 + \log_2 C$. Each step only halves the error.
+> **Example 9 (Halving the error is not quadratic convergence)** $x^{(t)} = 2^{-t}$ converges to $0$, but it does not converge quadratically: the bound would need $2^{-(t+1)} \le C\,(2^{-t})^2 = C\,2^{-2t}$, that is, $2^{t - 1} \le C$, which fails once $t > 1 + \log_2 C$. Each step only halves the error.
 
 > **NOTE:**
 >
-> **Example 9 (The error squares at each step)** For the iteration $x^{(t+1)} = \tfrac{1}{2} (x^{(t)} + 4 / x^{(t)})$ of [Example 2](#exm-newton-method),
+> **Example 10 (The error squares at each step)** For the iteration $x^{(t+1)} = \tfrac{1}{2} (x^{(t)} + 4 / x^{(t)})$ of [Example 2](#exm-newton-method),
 >
 > $$\begin{aligned}
 > x^{(t+1)} - 2
@@ -493,29 +515,29 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > nc_err_ax = [x - 2 for x in nc_x_ax]
 > fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
 > ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f1ace4960d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7fa9b58960d0>]
 > ax.set_xlabel("iteration t")
 > #> Text(0.5, 0, 'iteration t')
 > ax.set_ylabel("error of the iterate")
 > #> Text(0, 0.5, 'error of the iterate')
 > ax.set_xticks(range(4))
-> #> [<matplotlib.axis.XTick object at 0x7f1ace4d0410>, <matplotlib.axis.XTick object at 0x7f1ace495f90>, <matplotlib.axis.XTick object at 0x7f1ace496710>, <matplotlib.axis.XTick object at 0x7f1ace496e90>]
+> #> [<matplotlib.axis.XTick object at 0x7fa9b58cc410>, <matplotlib.axis.XTick object at 0x7fa9b5895f90>, <matplotlib.axis.XTick object at 0x7fa9b5896710>, <matplotlib.axis.XTick object at 0x7fa9b5896e90>]
 > plt.show();
 > ```
 >
 > ## R
 >
-> [![Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last.](optimization-newton_files/figure-html/newton-convergence-fig-r-3.png)](optimization-newton_files/figure-html/newton-convergence-fig-r-3.png "Figure 3: The error x^{(t)} - 2 of Example 9 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence.")
+> [![Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last.](optimization-newton_files/figure-html/newton-convergence-fig-r-3.png)](optimization-newton_files/figure-html/newton-convergence-fig-r-3.png "Figure 3: The error x^{(t)} - 2 of Example 10 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence.")
 >
 > ## Python
 >
-> [![Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last.](optimization-newton_files/figure-html/newton-convergence-fig-python-1.png)](optimization-newton_files/figure-html/newton-convergence-fig-python-1.png "Figure 3: The error x^{(t)} - 2 of Example 9 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence.")
+> [![Line graph with the iteration number 0 to 3 on the horizontal axis and the error of the Newton iterate on a logarithmic vertical axis. Four blue points fall from 0.5 at iteration 0 to 0.05, then about 0.0006, then about 0.0000001, each drop larger than the last.](optimization-newton_files/figure-html/newton-convergence-fig-python-1.png)](optimization-newton_files/figure-html/newton-convergence-fig-python-1.png "Figure 3: The error x^{(t)} - 2 of Example 10 on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is quadratic convergence.")
 >
-> Figure 3: The [error](#def-iterate-error) $x^{(t)} - 2$ of [Example 9](#exm-newton-convergence) on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is [quadratic convergence](#def-quadratic-convergence).
+> Figure 3: The [error](#def-iterate-error) $x^{(t)} - 2$ of [Example 10](#exm-newton-convergence) on a logarithmic scale. Each drop is steeper than the one before, because the error is roughly squared at every step, which is [quadratic convergence](#def-quadratic-convergence).
 
 > **NOTE:**
 >
-> **Example 10 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a stationary point of $-f$, whose second derivative there is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian $f''(x) = 2x$ is negative along the way, so the quadratic model has no minimizer (with $H < 0$, $q(\delta) = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ decreases without bound) and [Theorem 1](#thm-newton-model) does not apply: the positive definite hypothesis there is needed.
+> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a stationary point of $-f$, whose second derivative there is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian $f''(x) = 2x$ is negative along the way, so the quadratic model has no minimizer (with $H < 0$, $q(\delta) = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ decreases without bound) and [Theorem 1](#thm-newton-model) does not apply: the positive definite hypothesis there is needed.
 >
 > [Figure 4](#fig-newton-maximum) shows the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) and its model.
 >
@@ -571,15 +593,15 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > > nx_f_max_py = (-2)**3 / 3 - 4 * (-2)
 > > fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
 > > ax.plot(nx_x_py, nx_f_py, color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7f1acc0f8cd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f8cd0>]
 > > ax.plot(nx_x_py, nx_q_py, "--", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f1acc0f8e10>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f8e10>]
 > > ax.plot([-2.5], [nx_f0_py], "o", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f1acc0f8f50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f8f50>]
 > > ax.plot([-2.05], [nx_q_step_py], "^", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f1acc0f9090>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f9090>]
 > > ax.plot([-2], [nx_f_max_py], "s", color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7f1acc0f91d0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34f91d0>]
 > > ax.set_ylim(-2, 6.5)
 > > #> (-2.0, 6.5)
 > > ax.set_xlabel("x")
@@ -591,13 +613,13 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > >
 > > ## R
 > >
-> > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic model at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-r-3.png)](optimization-newton_files/figure-html/newton-maximum-r-3.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 10 is blue, and its quadratic model at the start -2.5 is dashed vermilion. The model opens downward, so its stationary point -2.05 (triangle) is a highest point and not a lowest one. The iterates approach the local maximum at -2 (blue marker).")
+> > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic model at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-r-3.png)](optimization-newton_files/figure-html/newton-maximum-r-3.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 11 is blue, and its quadratic model at the start -2.5 is dashed vermilion. The model opens downward, so its stationary point -2.05 (triangle) is a highest point and not a lowest one. The iterates approach the local maximum at -2 (blue marker).")
 > >
 > > ## Python
 > >
-> > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic model at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-python-1.png)](optimization-newton_files/figure-html/newton-maximum-python-1.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 10 is blue, and its quadratic model at the start -2.5 is dashed vermilion. The model opens downward, so its stationary point -2.05 (triangle) is a highest point and not a lowest one. The iterates approach the local maximum at -2 (blue marker).")
+> > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic model at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-python-1.png)](optimization-newton_files/figure-html/newton-maximum-python-1.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 11 is blue, and its quadratic model at the start -2.5 is dashed vermilion. The model opens downward, so its stationary point -2.05 (triangle) is a highest point and not a lowest one. The iterates approach the local maximum at -2 (blue marker).")
 > >
-> > Figure 4: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of [Example 10](#exm-newton-maximum) is blue, and its [quadratic model](#def-newton-step) at the start $-2.5$ is dashed vermilion. The model opens downward, so its [stationary point](optimization-critical-points.llms.md#def-stationary-point) $-2.05$ (triangle) is a highest point and not a lowest one. The [iterates](#def-iterate) approach the [local maximum](optimization-critical-points.llms.md#def-local-maximizer) at $-2$ (blue marker).
+> > Figure 4: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of [Example 11](#exm-newton-maximum) is blue, and its [quadratic model](#def-newton-step) at the start $-2.5$ is dashed vermilion. The model opens downward, so its [stationary point](optimization-critical-points.llms.md#def-stationary-point) $-2.05$ (triangle) is a highest point and not a lowest one. The [iterates](#def-iterate) approach the [local maximum](optimization-critical-points.llms.md#def-local-maximizer) at $-2$ (blue marker).
 
 > **NOTE:**
 >
@@ -633,7 +655,7 @@ Last modified: 2026-11-10 20:00:58 (PST)
 
 > **NOTE:**
 >
-> **Example 11 (One step to the minimizer)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, so $\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. From $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = {(3, 1)}^{\top}$ the [gradient](vector-calculus.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}) = \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = {(3, 3)}^{\top}$, and $\mathbf{S}^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1/3 \end{bmatrix}$, so the Newton step is $-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}$ and
+> **Example 12 (One step to the minimizer)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, so $\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. From $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = {(3, 1)}^{\top}$ the [gradient](vector-calculus.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}) = \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = {(3, 3)}^{\top}$, and $\mathbf{S}^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1/3 \end{bmatrix}$, so the Newton step is $-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}$ and
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} &= {(3, 1)}^{\top} - {(3, 1)}^{\top} \\
@@ -693,7 +715,7 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > > nq_z_py = (nq_xx_py**2 + 3 * nq_yy_py**2) / 2
 > > fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
 > > ax.contour(nq_xx_py, nq_yy_py, nq_z_py, levels=10, colors="#0072B2")
-> > #> <matplotlib.contour.QuadContourSet object at 0x7f1ae21b1e80>
+> > #> <matplotlib.contour.QuadContourSet object at 0x7fa9d01b1e80>
 > > ax.annotate("", xy=(0.764, -1.236), xytext=(3, 1),
 > >             arrowprops={"arrowstyle": "->", "color": "grey"})
 > > #> Text(3, 1, '')
@@ -701,7 +723,7 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > >             arrowprops={"arrowstyle": "->", "color": "#D55E00"})
 > > #> Text(3, 1, '')
 > > ax.plot([3], [1], "ko")
-> > #> [<matplotlib.lines.Line2D object at 0x7f1acc0ad950>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fa9b34b1950>]
 > > ax.set_aspect("equal")
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
@@ -712,13 +734,13 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > >
 > > ## R
 > >
-> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png)](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png "Figure 5: The level curves of f in Example 11 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
+> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png)](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png "Figure 5: The level curves of f in Example 12 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
 > >
 > > ## Python
 > >
-> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png)](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png "Figure 5: The level curves of f in Example 11 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
+> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png)](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png "Figure 5: The level curves of f in Example 12 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
 > >
-> > Figure 5: The [level curves](vector-calculus.llms.md#def-level-set) of $f$ in [Example 11](#exm-newton-quadratic) are ellipses. From the start ${(3, 1)}^{\top}$, the [Newton step](#def-newton-step) (vermilion arrow) goes straight to the [minimizer](algebra-basics.llms.md#def-global-minimizer) at the origin. The negative [gradient](vector-calculus.llms.md#def-vector-derivative) $-{(3, 3)}^{\top}$ (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.
+> > Figure 5: The [level curves](vector-calculus.llms.md#def-level-set) of $f$ in [Example 12](#exm-newton-quadratic) are ellipses. From the start ${(3, 1)}^{\top}$, the [Newton step](#def-newton-step) (vermilion arrow) goes straight to the [minimizer](algebra-basics.llms.md#def-global-minimizer) at the origin. The negative [gradient](vector-calculus.llms.md#def-vector-derivative) $-{(3, 3)}^{\top}$ (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.
 >
 > [Figure 6](#fig-newton-quadratic-3d) shows the same [function](https://morrison-lab.github.io/mcs/functions.html#def-function) as a surface.
 >
@@ -796,11 +818,11 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > > fig = plt.figure(figsize=(6, 4.5))
 > > ax = fig.add_subplot(projection="3d")
 > > ax.plot_surface(nq_x1_3d, nq_x2_3d, nq_z_3d, color="#0072B2", alpha=0.6)
-> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7f1ace78e120>
+> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7fa9b5b82120>
 > > ax.scatter([3], [1], [6], color="#D55E00", label="start")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f1ace78de80>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7fa9b5b81e80>
 > > ax.scatter([0], [0], [0], color="black", label="minimizer")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f1acbf61e50>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7fa9b3365e50>
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
 > > ax.set_ylabel("x2")
@@ -808,17 +830,17 @@ Last modified: 2026-11-10 20:00:58 (PST)
 > > ax.set_zlabel("f(x)")
 > > #> Text(0.5, 0, 'f(x)')
 > > ax.legend(loc="upper right")
-> > #> <matplotlib.legend.Legend object at 0x7f1ace78dfd0>
+> > #> <matplotlib.legend.Legend object at 0x7fa9b5b81fd0>
 > > plt.show();
 > > ```
 > >
 > > ## R
 > >
-> > [![Surface plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The surface is a bowl with its lowest point at the origin, rising more steeply along x2 than along x1. A vermilion point marks the start (3, 1) on the bowl's side and a black point marks the minimizer at the origin.](optimization-newton_files/figure-html/newton-quadratic-3d-python-1.png)](optimization-newton_files/figure-html/newton-quadratic-3d-python-1.png "Figure 6: The graph of f in Example 11 is a bowl whose lowest point is the origin.")
+> > [![Surface plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The surface is a bowl with its lowest point at the origin, rising more steeply along x2 than along x1. A vermilion point marks the start (3, 1) on the bowl's side and a black point marks the minimizer at the origin.](optimization-newton_files/figure-html/newton-quadratic-3d-python-1.png)](optimization-newton_files/figure-html/newton-quadratic-3d-python-1.png "Figure 6: The graph of f in Example 12 is a bowl whose lowest point is the origin.")
 > >
 > > ## Python
 > >
-> > Figure 6: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ in [Example 11](#exm-newton-quadratic) is a bowl whose lowest point is the origin.
+> > Figure 6: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ in [Example 12](#exm-newton-quadratic) is a bowl whose lowest point is the origin.
 
 # Definitions on this page
 
