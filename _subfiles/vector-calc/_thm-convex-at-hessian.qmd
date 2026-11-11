@@ -1,0 +1,32 @@
+:::{#thm-convex-at-hessian}
+#### A function convex at a point has a positive semidefinite Hessian there
+
+Let $f : \reals^p \to \reals$ have first and [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative)
+that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$,
+and let $\vx_0 \in \reals^p$.
+If $f$ is [convex at](#def-convex-at) $\vx_0$,
+then the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}_f(\vx_0)$ is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite).
+
+:::
+
+::: proof
+
+Let $r > 0$ be a radius
+for which $f$ is [convex on](#def-convex-on) the [open ball](vector-calculus.qmd#def-ball) $B$ of radius $r$ around $\vx_0$,
+and fix $\vecf{v} \in \reals^p$ with $\vecf{v} \ne \vzero$.
+For $0 < h < r / \norm{\vecf{v}}$,
+the points $\vx_0 + h \vecf{v}$ and $\vx_0 - h \vecf{v}$ are in $B$,
+and $\vx_0$ is their midpoint,
+so convexity on $B$ gives
+
+$$
+f(\vx_0) \le \tfrac{1}{2} f(\vx_0 + h \vecf{v}) + \tfrac{1}{2} f(\vx_0 - h \vecf{v}).
+$$
+
+The proof of @thm-convex-hessian-converse uses convexity only through this midpoint [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality),
+and only for $h$ near $0$.
+That proof, with $\vx = \vx_0$ and $h < r / \norm{\vecf{v}}$,
+gives $\tp{\vecf{v}}\,\matr{H}_f(\vx_0)\,\vecf{v} \ge 0$.
+For $\vecf{v} = \vzero$, the [quadratic form](linear-algebra-special-matrices.qmd#def-quadratic-form) is $0$.
+
+:::
