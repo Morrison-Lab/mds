@@ -1,0 +1,95 @@
+::: {#fig-convex-hull}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-hull-r
+#| fig-alt: >-
+#|   A light blue filled triangle with blue corners at (0, 0), (1, 0) and
+#|   (0, 1). A vermilion point p at (0.4, 0.6) sits on the edge from (1, 0)
+#|   to (0, 1). A dashed vermilion segment runs from the origin to p, passing
+#|   through a second vermilion point x at (0.2, 0.3), halfway along it.
+#| fig-height: 4
+#| fig-width: 4
+ch_corner_x1_fc <- c(0, 1, 0)
+ch_corner_x2_fc <- c(0, 0, 1)
+ch_corners_fc <- tibble::tibble(x1 = ch_corner_x1_fc, x2 = ch_corner_x2_fc)
+ch_path_x1_fc <- c(0, 0.2, 0.4)
+ch_path_x2_fc <- c(0, 0.3, 0.6)
+ch_path_fc <- tibble::tibble(x1 = ch_path_x1_fc, x2 = ch_path_x2_fc)
+ch_marks_x1_fc <- c(0.2, 0.4)
+ch_marks_x2_fc <- c(0.3, 0.6)
+ch_marks_label_fc <- c("x", "p")
+ch_marks_fc <- tibble::tibble(
+  x1 = ch_marks_x1_fc,
+  x2 = ch_marks_x2_fc,
+  label = ch_marks_label_fc
+)
+ch_aes_fc <- ggplot2::aes(x = x1, y = x2)
+ch_label_aes_fc <- ggplot2::aes(x = x1, y = x2, label = label)
+ggplot2::ggplot() +
+  ggplot2::geom_polygon(
+    data = ch_corners_fc, mapping = ch_aes_fc,
+    fill = "#0072B2", alpha = 0.15, colour = "#0072B2"
+  ) +
+  ggplot2::geom_point(
+    data = ch_corners_fc, mapping = ch_aes_fc,
+    colour = "#0072B2", size = 3
+  ) +
+  ggplot2::geom_line(
+    data = ch_path_fc, mapping = ch_aes_fc,
+    colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::geom_point(
+    data = ch_marks_fc, mapping = ch_aes_fc,
+    colour = "#D55E00", size = 3
+  ) +
+  ggplot2::geom_text(
+    data = ch_marks_fc, mapping = ch_label_aes_fc,
+    colour = "#D55E00", nudge_x = 0.07
+  ) +
+  ggplot2::coord_fixed() +
+  ggplot2::labs(x = "x1", y = "x2")
+```
+
+### Python
+
+```{python}
+#| label: convex-hull-python
+#| fig-alt: >-
+#|   A light blue filled triangle with blue corners at (0, 0), (1, 0) and
+#|   (0, 1). A vermilion point p at (0.4, 0.6) sits on the edge from (1, 0)
+#|   to (0, 1). A dashed vermilion segment runs from the origin to p, passing
+#|   through a second vermilion point x at (0.2, 0.3), halfway along it.
+#| fig-height: 4
+#| fig-width: 4
+import matplotlib.pyplot as plt
+
+ch_x1_fc = [0, 1, 0]
+ch_x2_fc = [0, 0, 1]
+fig, ax = plt.subplots(figsize=(4, 4), layout="constrained")
+ax.fill(ch_x1_fc, ch_x2_fc, color="#0072B2", alpha=0.15);
+ax.plot(ch_x1_fc + [0], ch_x2_fc + [0], "o-", color="#0072B2", markersize=8);
+ax.plot([0, 0.4], [0, 0.6], "--", color="#D55E00");
+ax.plot([0.2, 0.4], [0.3, 0.6], "o", color="#D55E00", markersize=8);
+ax.annotate("x", (0.2, 0.3), xytext=(6, 0), textcoords="offset points",
+            color="#D55E00");
+ax.annotate("p", (0.4, 0.6), xytext=(6, 0), textcoords="offset points",
+            color="#D55E00");
+ax.set_aspect("equal");
+ax.set_xlabel("x1");
+ax.set_ylabel("x2");
+plt.show();
+```
+
+:::
+
+The [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ of @exm-convex-hull, the three blue corners,
+and its [convex hull](#def-convex-hull), the shaded triangle $T$.
+For the point $\vx = \tp{(0.2, 0.3)}$, with $s = 0.5$,
+the point $\vecf{p} = \tp{(0.4, 0.6)}$ lies on the segment between $\vecf{e}_1$ and $\vecf{e}_2$,
+and $\vx$ lies on the segment between $\vzero$ and $\vecf{p}$.
+
+:::
