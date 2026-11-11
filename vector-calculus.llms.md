@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 09:22:04 (PST)
+Last modified: 2026-11-11 10:23:18 (PST)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -374,19 +374,86 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 
 > **NOTE:**
 >
-> **Definition 5 (Level set)** Let $f : \mathbb{R}^p \to \mathbb{R}$ and let $c$ be a real number. The **level set** [\[7\]](#ref-wikipedia_level_set) of $f$ at $c$ is
+> **Definition 5 (Level set)** Let $f : \mathbb{R}^p \to \mathbb{R}$, and let $c$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers). The **level set** [\[7\]](#ref-wikipedia_level_set) of $f$ at $c$ is the [preimage](https://morrison-lab.github.io/mcs/functions.html#def-preimage) of the single value $c$ under $f$:
 >
-> $$\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c\right\}\mathclose{},$$
->
-> the set of points where $f$ takes the value $c$. It is the [preimage](https://morrison-lab.github.io/mcs/functions.html#def-preimage) of $\mathopen{}\left\{c\right\}\mathclose{}$ under $f$, so we write it ${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}}$. For $p = 2$, a level set is often a curve in the plane.
+> $${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}} \stackrel{\text{def}}{=}{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}.$$
 
 > **NOTE:**
 >
-> **Example 5 (Level sets of** $x_1^2 + x_2^2$) Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$ for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(x_1, x_2)}^{\top}$.
+> **Theorem 2 (A level set is the set of points where the function takes the value)** Let $f : \mathbb{R}^p \to \mathbb{R}$, and let $c$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers). The [level set](#def-level-set) of $f$ at $c$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points where $f$ takes the value $c$:
 >
-> - The level set at $1$ is the circle of radius $1$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. For example, ${(0.6, 0.8)}^{\top}$ is on it, since $0.36 + 0.64 = 1$, and ${(1, 1)}^{\top}$ is not, since $1 + 1 = 2$.
-> - The level set at $0$ is the single point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
-> - The level set at $-1$ is empty, since $x_1^2 + x_2^2 \ge 0$.
+> $${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c\right\}\mathclose{}.$$
+
+> **NOTE:**
+>
+> *Proof*. Unfold the [preimage](https://morrison-lab.github.io/mcs/functions.html#def-preimage):
+>
+> $$\begin{aligned}
+> {{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}}
+> &= {{f}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}
+> && \text{(}\href{#def-level-set}{\text{Definition~5}}\text{)}
+> \\
+> &= \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \in \mathopen{}\left\{c\right\}\mathclose{}\right\}\mathclose{}
+> && \text{(definition of the preimage)}
+> \\
+> &= \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c\right\}\mathclose{}.
+> && \text{(} \mathopen{}\left\{c\right\}\mathclose{} \text{ has the one element } c \text{)}
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Example 5 (Level sets of** $x_1^2 + x_2^2$) Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$ for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(x_1, x_2)}^{\top}$. By [Theorem 2](#thm-level-set-points), each [level set](#def-level-set) of $f$ holds the points where $f$ takes that value:
+>
+> - The level set ${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{1\right\}\mathclose{}\right)\mathclose{}}}$ is the circle of radius $1$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. For example, ${(0.6, 0.8)}^{\top}$ is on it, since $0.36 + 0.64 = 1$, and ${(1, 1)}^{\top}$ is not, since $1 + 1 = 2$.
+> - The level set ${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{0\right\}\mathclose{}\right)\mathclose{}}}$ is the single point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> - The level set ${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{-1\right\}\mathclose{}\right)\mathclose{}}}$ is empty, since $x_1^2 + x_2^2 \ge 0$.
+>
+> [Figure 2](#fig-level-set) draws the first two.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > ls_angle_ls <- seq(0, 2 * pi, length.out = 201)
+> > ls_x1_ls <- cos(ls_angle_ls)
+> > ls_x2_ls <- sin(ls_angle_ls)
+> > ls_circle_ls <- tibble::tibble(x1 = ls_x1_ls, x2 = ls_x2_ls)
+> > ls_origin_ls <- tibble::tibble(x1 = 0, x2 = 0)
+> > ls_kinds_ls <- c("on the level set at 1", "not on it")
+> > ls_points_x1_ls <- c(0.6, 1)
+> > ls_points_x2_ls <- c(0.8, 1)
+> > ls_points_ls <- tibble::tibble(
+> >   x1 = ls_points_x1_ls,
+> >   x2 = ls_points_x2_ls,
+> >   kind = ls_kinds_ls
+> > )
+> > ls_points_aes_ls <- ggplot2::aes(shape = kind)
+> > ls_shapes_ls <- c("on the level set at 1" = 16, "not on it" = 17)
+> > ls_limits_ls <- c(-1.5, 1.5)
+> > ls_circle_ls |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x1, y = x2) +
+> >   ggplot2::geom_path(colour = "#0072B2") +
+> >   ggplot2::geom_point(data = ls_origin_ls, colour = "#0072B2", size = 2) +
+> >   ggplot2::geom_point(
+> >     data = ls_points_ls, mapping = ls_points_aes_ls,
+> >     colour = "#D55E00", size = 3
+> >   ) +
+> >   ggplot2::scale_shape_manual(values = ls_shapes_ls) +
+> >   ggplot2::coord_equal(xlim = ls_limits_ls, ylim = ls_limits_ls) +
+> >   ggplot2::labs(shape = NULL) +
+> >   ggplot2::theme_minimal() +
+> >   ggplot2::theme(legend.position = "bottom")
+> > ```
+> >
+> > [![The plane with axes x1 and x2 from -1.5 to 1.5. A blue circle of radius 1 around the origin is the level set at 1, and a blue point at the origin is the level set at 0. A vermilion circle marks the point (0.6, 0.8), which lies on the circle, and a vermilion triangle marks the point (1, 1), which lies outside it.](vector-calculus_files/figure-html/level-set-r-1.png)](vector-calculus_files/figure-html/level-set-r-1.png "Figure 2: The level sets {{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{1\right\}\mathclose{}\right)\mathclose{}}} (blue circle) and {{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{0\right\}\mathclose{}\right)\mathclose{}}} (blue point at \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) of f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2, with the points {(0.6, 0.8)}^{\top} (circle) and {(1, 1)}^{\top} (triangle).")
+> >
+> > Figure 2: The [level sets](#def-level-set) ${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{1\right\}\mathclose{}\right)\mathclose{}}}$ (blue circle) and ${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{0\right\}\mathclose{}\right)\mathclose{}}}$ (blue point at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$, with the points ${(0.6, 0.8)}^{\top}$ (circle) and ${(1, 1)}^{\top}$ (triangle).
+
+> **NOTE:**
+>
+> *Remark 2* (Level sets in the plane). For $p = 2$, a [level set](#def-level-set) is often a curve in the plane, such as the circle ${{{f}^{-1}\mathopen{}\left(\mathopen{}\left\{1\right\}\mathclose{}\right)\mathclose{}}}$ in [Example 5](#exm-level-set).
 
 > **NOTE:**
 >
@@ -398,7 +465,7 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 
 > **NOTE:**
 >
-> **Theorem 2 (Level sets of a linear function)** Let ${h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \beta_{0}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Every [level set](#def-level-set) ${{{h}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}}$ is a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, parallel to the level set ${{{h}^{-1}\mathopen{}\left(\mathopen{}\left\{0\right\}\mathclose{}\right)\mathclose{}}}$. Its [dimension](linear-algebra-subspaces.llms.md#def-dimension) is $p - 1$: a point for $p = 1$, a line for $p = 2$, and a two-dimensional plane for $p = 3$.
+> **Theorem 3 (Level sets of a linear function)** Let ${h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \beta_{0}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Every [level set](#def-level-set) ${{{h}^{-1}\mathopen{}\left(\mathopen{}\left\{c\right\}\mathclose{}\right)\mathclose{}}}$ is a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, parallel to the level set ${{{h}^{-1}\mathopen{}\left(\mathopen{}\left\{0\right\}\mathclose{}\right)\mathclose{}}}$. Its [dimension](linear-algebra-subspaces.llms.md#def-dimension) is $p - 1$: a point for $p = 1$, a line for $p = 2$, and a two-dimensional plane for $p = 3$.
 
 > **NOTE:**
 >
@@ -418,7 +485,7 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 
 > **NOTE:**
 >
-> **Theorem 3 (Stepping along the normal vector)** Let ${h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \beta_{0}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. For every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ and $t \in \mathbb{R}$,
+> **Theorem 4 (Stepping along the normal vector)** Let ${h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \beta_{0}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. For every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ and $t \in \mathbb{R}$,
 >
 > $${h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ t\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right)\mathclose{}} = {h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} + t{\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}}^2.$$
 >
@@ -441,7 +508,7 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 
 > **NOTE:**
 >
-> **Theorem 4 (The normal vector is the steepest direction)** Let ${h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \beta_{0}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Among [unit vectors](linear-algebra-vectors.llms.md#def-unit-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ ($\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} = 1$), the change ${h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ t\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right)\mathclose{}} - {h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}$ with $t > 0$ is largest for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}/ \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}$.
+> **Theorem 5 (The normal vector is the steepest direction)** Let ${h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \beta_{0}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Among [unit vectors](linear-algebra-vectors.llms.md#def-unit-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ ($\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} = 1$), the change ${h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ t\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right)\mathclose{}} - {h\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}$ with $t > 0$ is largest for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}/ \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}$.
 
 > **NOTE:**
 >
@@ -480,7 +547,7 @@ gradPhi = gradDeg(Math.atan2(gradG[1], gradG[0]))
 gradRate = (deg) => gradG[0] * Math.cos(deg * Math.PI / 180) + gradG[1] * Math.sin(deg * Math.PI / 180)
 ```
 
-Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: it is largest along the red arrow, zero along the black level curve ([Definition 5](#def-level-set)), and most negative pointing straight back. Then look for a point where the red arrow shrinks to nothing.
+Turn the blue arrow in [Figure 3](#fig-gradient-explorer) and watch the rate: it is largest along the red arrow, zero along the black level curve ([Definition 5](#def-level-set)), and most negative pointing straight back. Then look for a point where the red arrow shrinks to nothing.
 
 > **NOTE:**
 >
@@ -556,7 +623,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 > })
 > ```
 >
-> Figure 2: A gradient explorer: the red arrow points along the gradient at the chosen point, and the blue arrow along the chosen step direction ([Definition 4](#def-direction)).
+> Figure 3: A gradient explorer: the red arrow points along the gradient at the chosen point, and the blue arrow along the chosen step direction ([Definition 4](#def-direction)).
 
 > **NOTE:**
 >
@@ -630,7 +697,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 > }
 > ```
 >
-> Figure 3: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in the [gradient explorer](#fig-gradient-explorer), with the same point, [level curve](#def-level-set) and arrows. Each arrow takes one unit step in the plane, and its height gain is the amount $f$ changes along that step.
+> Figure 4: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in the [gradient explorer](#fig-gradient-explorer), with the same point, [level curve](#def-level-set) and arrows. Each arrow takes one unit step in the plane, and its height gain is the amount $f$ changes along that step.
 
 > **NOTE:**
 >
@@ -693,11 +760,11 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 2* (Other notation for the row-vector derivative). Some sources write the same row vector as $\frac{\partial}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})$, with the operator on the left, read as each operator $\frac{\partial}{\partial \beta_{i}}$ applied to $f$ rather than as a matrix product (see [Remark 3](#rem-row-derivative-shape)).
+> *Remark 3* (Other notation for the row-vector derivative). Some sources write the same row vector as $\frac{\partial}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})$, with the operator on the left, read as each operator $\frac{\partial}{\partial \beta_{i}}$ applied to $f$ rather than as a matrix product (see [Remark 4](#rem-row-derivative-shape)).
 
 > **NOTE:**
 >
-> *Remark 3* (Which side the operator goes on). Read $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}$ as a $p \times 1$ column vector of operators with entries $\frac{\partial}{\partial \beta_{1}}, \ldots, \frac{\partial}{\partial \beta_{p}}$, and $\frac{\partial}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top}}$ as the $1 \times p$ row vector of operators with the same entries. Writing either one next to $f$ can be read in two ways:
+> *Remark 4* (Which side the operator goes on). Read $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}$ as a $p \times 1$ column vector of operators with entries $\frac{\partial}{\partial \beta_{1}}, \ldots, \frac{\partial}{\partial \beta_{p}}$, and $\frac{\partial}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top}}$ as the $1 \times p$ row vector of operators with the same entries. Writing either one next to $f$ can be read in two ways:
 >
 > - **As a matrix product,** with $f$ a $1 \times 1$ matrix, under the shape rule of [matrix multiplication](linear-algebra-matrices.llms.md#def-matrix-mult). The column-vector operator works on the left: $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} f$ is $(p \times 1)(1 \times 1)$, a $p \times 1$ column vector ([Definition 2](#def-vector-derivative)). The row-vector operator does not: $\frac{\partial}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top}} f$ is $(1 \times p)(1 \times 1)$, whose inner dimensions $p$ and $1$ do not match when $p > 1$. For the shape rule to give the $1 \times p$ row vector, the operator would have to go on the right of $f$, as in $(1 \times 1)(1 \times p)$, which changes its meaning (see below).
 > - **As a scalar multiple,** with $f$ a scalar, the way $c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is read in [scalar multiplication](linear-algebra-matrices.llms.md#def-scalar-mult), which has no shape rule: each entry of the operator vector is applied to $f$. Then both $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} f$ and $\frac{\partial}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top}} f$ work with the operator on the left.
@@ -711,7 +778,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 5 (Row and column derivatives are transposes)** $$\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top}} = {\mathopen{}\left(\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\right)\mathclose{}}^{\top} \tag{3}$$
+> **Theorem 6 (Row and column derivatives are transposes)** $$\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top}} = {\mathopen{}\left(\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\right)\mathclose{}}^{\top} \tag{3}$$
 >
 > $$\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} = {\mathopen{}\left(\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top}}\right)\mathclose{}}^{\top} \tag{4}$$
 
@@ -799,7 +866,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 4* (Numerator layout). Some sources use the numerator layout ([Definition 11](#def-numerator-layout)) throughout, so that their derivative of a vector-valued function is the Jacobian matrix, the transpose of the derivative used in these notes. In numerator layout, the derivative of a scalar-valued function is a row vector: the row-vector derivative ([Definition 7](#def-row-vector-derivative)). Check a source’s layout before combining its formulas with these.
+> *Remark 5* (Numerator layout). Some sources use the numerator layout ([Definition 11](#def-numerator-layout)) throughout, so that their derivative of a vector-valued function is the Jacobian matrix, the transpose of the derivative used in these notes. In numerator layout, the derivative of a scalar-valued function is a row vector: the row-vector derivative ([Definition 7](#def-row-vector-derivative)). Check a source’s layout before combining its formulas with these.
 
 > **NOTE:**
 >
@@ -870,7 +937,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 6 (Derivative of a dot product)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
+> **Theorem 7 (Derivative of a dot product)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
 >
 > $$\begin{aligned}
 > \underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}_{p \times 1}
@@ -903,7 +970,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Example 15 (Derivative of a dot product)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(3, 5)}^{\top}$ (constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$; see [Example 13](#exm-constant-wrt-vector)) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {(\beta_{1}, \beta_{2})}^{\top}$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= 3\beta_{1} + 5\beta_{2}$, and by [Theorem 6](#thm-deriv-lincom):
+> **Example 15 (Derivative of a dot product)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(3, 5)}^{\top}$ (constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$; see [Example 13](#exm-constant-wrt-vector)) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {(\beta_{1}, \beta_{2})}^{\top}$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= 3\beta_{1} + 5\beta_{2}$, and by [Theorem 7](#thm-deriv-lincom):
 >
 > $$\begin{aligned}
 > \underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}_{2 \times 1}
@@ -926,7 +993,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 7 (Product rule for dot-products)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ are differentiable $p \times 1$ vector functions of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then:
+> **Theorem 8 (Product rule for dot-products)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ are differentiable $p \times 1$ vector functions of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then:
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}_{p \times 1}} \underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}_{p \times 1} \cdot \underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}_{p \times 1}
@@ -956,7 +1023,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Example 16 (Example of the dot-product rule)** Apply [Theorem 7](#thm-deriv-dot-product) with the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {(\beta_{1}, \beta_{2})}^{\top}$ in the role of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = {(\beta_{1}, \beta_{1}\beta_{2})}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = {(\beta_{2}, \beta_{1})}^{\top}$. Then:
+> **Example 16 (Example of the dot-product rule)** Apply [Theorem 8](#thm-deriv-dot-product) with the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {(\beta_{1}, \beta_{2})}^{\top}$ in the role of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = {(\beta_{1}, \beta_{1}\beta_{2})}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = {(\beta_{2}, \beta_{1})}^{\top}$. Then:
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
@@ -972,7 +1039,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 > &= \begin{pmatrix} \beta_{2} + 2\beta_{1}\beta_{2} \\ \beta_{1} + \beta_{1}^2 \end{pmatrix}
 > \end{aligned}$$
 >
-> By the product rule ([Theorem 7](#thm-deriv-dot-product)), using $\underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}^{\top}}_{2 \times 2}
+> By the product rule ([Theorem 8](#thm-deriv-dot-product)), using $\underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}^{\top}}_{2 \times 2}
 > = \begin{pmatrix}1 & \beta_{2} \\ 0 & \beta_{1}\end{pmatrix}$ and $\underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}}_{2 \times 2}
 > = \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}$:
 >
@@ -998,7 +1065,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 8 (Derivative of a linear map)** If $\mathbf{A}$ is an $m \times p$ matrix that is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
+> **Theorem 9 (Derivative of a linear map)** If $\mathbf{A}$ is an $m \times p$ matrix that is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
 >
 > $$\underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} (\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}_{p \times m} =
 > \underbrace{{\mathbf{A}}^{\top}}_{p \times m}$$
@@ -1017,7 +1084,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Example 17 (Derivative of a linear map)** Let $\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}$ ($1 \times 2$) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {(\beta_{1}, \beta_{2})}^{\top}$. Then $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= 2\beta_{1} + 3\beta_{2}$, and by [Theorem 8](#thm-deriv-linear-map):
+> **Example 17 (Derivative of a linear map)** Let $\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}$ ($1 \times 2$) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {(\beta_{1}, \beta_{2})}^{\top}$. Then $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= 2\beta_{1} + 3\beta_{2}$, and by [Theorem 9](#thm-deriv-linear-map):
 >
 > $$\begin{aligned}
 > \underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}_{2 \times 1}
@@ -1028,7 +1095,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 9 (Vector-derivative of a matrix-vector product)** If $\mathbf{A}$ is an $m \times q$ matrix that is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})$ is a $q \times 1$ vector that depends on the $p \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
+> **Theorem 10 (Vector-derivative of a matrix-vector product)** If $\mathbf{A}$ is an $m \times q$ matrix that is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})$ is a $q \times 1$ vector that depends on the $p \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
 >
 > $$\underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} (\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})}_{p \times m} =
 > \underbrace{\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right)\mathclose{}}_{p \times q}
@@ -1049,7 +1116,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Example 18 (Vector-derivative of a matrix-vector product)** Let $\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}$ ($1 \times 2$, constant) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = {(\beta_{1}^2, \beta_{2}^2)}^{\top}$. Then $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 2\beta_{1}^2 + 3\beta_{2}^2$. By [Theorem 9](#thm-deriv-matrix-vector):
+> **Example 18 (Vector-derivative of a matrix-vector product)** Let $\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}$ ($1 \times 2$, constant) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = {(\beta_{1}^2, \beta_{2}^2)}^{\top}$. Then $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 2\beta_{1}^2 + 3\beta_{2}^2$. By [Theorem 10](#thm-deriv-matrix-vector):
 >
 > $$\begin{aligned}
 > \underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})}_{2 \times 1}
@@ -1063,7 +1130,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 5* (The derivative of a linear map as a special case). This result generalizes [Theorem 8](#thm-deriv-linear-map), which is the special case $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ (so that $q = p$, $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathbf{I}_p$, and $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} (\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = \mathbf{I}_p {\mathbf{A}}^{\top}$, which is ${\mathbf{A}}^{\top}$). For example, [Example 17](#exm-deriv-linear-map) is the case $\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}$ and
+> *Remark 6* (The derivative of a linear map as a special case). This result generalizes [Theorem 9](#thm-deriv-linear-map), which is the special case $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ (so that $q = p$, $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathbf{I}_p$, and $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} (\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = \mathbf{I}_p {\mathbf{A}}^{\top}$, which is ${\mathbf{A}}^{\top}$). For example, [Example 17](#exm-deriv-linear-map) is the case $\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}$ and
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\\
@@ -1074,7 +1141,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 10 (Vector-derivative of a product of matrices)** If $\mathbf{A}$ ($k \times m$) and $\mathbf{B}$ ($m \times q$) are constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})$ is a $q \times 1$ vector that depends on the $p \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
+> **Theorem 11 (Vector-derivative of a product of matrices)** If $\mathbf{A}$ ($k \times m$) and $\mathbf{B}$ ($m \times q$) are constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})$ is a $q \times 1$ vector that depends on the $p \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
 >
 > $$\underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} (\mathbf{A} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})}_{p \times k} =
 > \underbrace{\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right)\mathclose{}}_{p \times q}
@@ -1083,7 +1150,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Proof*. Apply [Theorem 9](#thm-deriv-matrix-vector) with the constant $k \times q$ matrix $\mathbf{A}\mathbf{B}$, then use the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product):
+> *Proof*. Apply [Theorem 10](#thm-deriv-matrix-vector) with the constant $k \times q$ matrix $\mathbf{A}\mathbf{B}$, then use the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product):
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} (\mathbf{A} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})
@@ -1122,7 +1189,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Proof*. **Using [Theorem 6](#thm-deriv-lincom):**
+> *Proof*. **Using [Theorem 7](#thm-deriv-lincom):**
 >
 > Since ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ (see [dot product](linear-algebra-vectors.llms.md#def-dot-product)), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$:
 >
@@ -1132,13 +1199,13 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 > \end{aligned}$$
 >
-> by [Theorem 6](#thm-deriv-lincom).
+> by [Theorem 7](#thm-deriv-lincom).
 
 > **NOTE:**
 >
-> *Proof*. **Using [Theorem 9](#thm-deriv-matrix-vector):**
+> *Proof*. **Using [Theorem 10](#thm-deriv-matrix-vector):**
 >
-> Since $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, $\mathbf{A} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ is a constant $1 \times p$ matrix. Applying [Theorem 9](#thm-deriv-matrix-vector) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ (so $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathbf{I}$):
+> Since $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, $\mathbf{A} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ is a constant $1 \times p$ matrix. Applying [Theorem 10](#thm-deriv-matrix-vector) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ (so $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathbf{I}$):
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})
@@ -1160,11 +1227,11 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 6* (The coefficient gets transposed). This vector derivative formula looks a lot like non-vector calculus, except that you have to transpose the coefficient: in scalar calculus $\frac{\partial}{\partial x}(cx) = c$, but here the coefficient ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ (a row vector) becomes $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ (a column vector) in the result. For example, with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(2, -1)}^{\top}$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= 2\beta_{1} - \beta_{2}$, whose vector derivative is the column vector ${(2, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, not the row vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = (2, -1)$.
+> *Remark 7* (The coefficient gets transposed). This vector derivative formula looks a lot like non-vector calculus, except that you have to transpose the coefficient: in scalar calculus $\frac{\partial}{\partial x}(cx) = c$, but here the coefficient ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ (a row vector) becomes $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ (a column vector) in the result. For example, with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(2, -1)}^{\top}$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= 2\beta_{1} - \beta_{2}$, whose vector derivative is the column vector ${(2, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, not the row vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = (2, -1)$.
 
 > **NOTE:**
 >
-> **Theorem 11 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form)), if $\mathbf{S}$ is a $p \times p$ matrix that is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
+> **Theorem 12 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form)), if $\mathbf{S}$ is a $p \times p$ matrix that is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, then:
 >
 > $$\underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} ({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}_{p \times 1} = \underbrace{(\mathbf{S} + {\mathbf{S}}^{\top}) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}_{p \times 1}.$$
 
@@ -1186,17 +1253,17 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Corollary 2 (Derivative of a quadratic form with a symmetric matrix)** If, in addition, $\mathbf{S}$ is symmetric (and, as in [Theorem 11](#thm-quadratic-form), $p \times p$ and constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$), then
+> **Corollary 2 (Derivative of a quadratic form with a symmetric matrix)** If, in addition, $\mathbf{S}$ is symmetric (and, as in [Theorem 12](#thm-quadratic-form), $p \times p$ and constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$), then
 >
 > $$\underbrace{\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} ({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}})}_{p \times 1} = \underbrace{2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}_{p \times 1}.$$
 
 > **NOTE:**
 >
-> *Proof*. If $\mathbf{S} = {\mathbf{S}}^{\top}$, then $\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}$, so [Theorem 11](#thm-quadratic-form) gives $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = 2\mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$.
+> *Proof*. If $\mathbf{S} = {\mathbf{S}}^{\top}$, then $\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}$, so [Theorem 12](#thm-quadratic-form) gives $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = 2\mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$.
 
 > **NOTE:**
 >
-> *Remark 7* (Like the derivative of $cx^2$). This operation is like taking the derivative of $cx^2$ with respect to $x$ in non-vector calculus: $\frac{\partial}{\partial x} (cx^2) = 2cx$, and [Corollary 2](#cor-quadratic-form-symmetric) says $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} ({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = 2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$. For example, with $p = 1$, $\mathbf{S} = (3)$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= (\beta_{1})$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} = 3\beta_{1}^2$, and its derivative is $6\beta_{1} = 2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$.
+> *Remark 8* (Like the derivative of $cx^2$). This operation is like taking the derivative of $cx^2$ with respect to $x$ in non-vector calculus: $\frac{\partial}{\partial x} (cx^2) = 2cx$, and [Corollary 2](#cor-quadratic-form-symmetric) says $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} ({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = 2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$. For example, with $p = 1$, $\mathbf{S} = (3)$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= (\beta_{1})$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} = 3\beta_{1}^2$, and its derivative is $6\beta_{1} = 2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$.
 
 > **NOTE:**
 >
@@ -1216,7 +1283,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 >
 > Both methods agree.
 >
-> For a matrix that is not symmetric, such as $\mathbf{S} = \begin{pmatrix} 1 & 2 \\ 0 & 3 \end{pmatrix}$, [Theorem 11](#thm-quadratic-form) gives
+> For a matrix that is not symmetric, such as $\mathbf{S} = \begin{pmatrix} 1 & 2 \\ 0 & 3 \end{pmatrix}$, [Theorem 12](#thm-quadratic-form) gives
 >
 > $$\begin{aligned}
 > (\mathbf{S} + {\mathbf{S}}^{\top}) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}
@@ -1246,7 +1313,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 8* (Like the derivative of $x^2$). This vector derivative is like taking the derivative of $x^2$: in scalar calculus $\frac{\partial}{\partial x} x^2 = 2x$, and [Corollary 3](#cor-deriv-normsq) says $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = 2\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$. For example, with $p = 1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= (\beta_{1})$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} = \beta_{1}^2$, and its derivative is $2\beta_{1} = 2\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$.
+> *Remark 9* (Like the derivative of $x^2$). This vector derivative is like taking the derivative of $x^2$: in scalar calculus $\frac{\partial}{\partial x} x^2 = 2x$, and [Corollary 3](#cor-deriv-normsq) says $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = 2\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$. For example, with $p = 1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= (\beta_{1})$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} = \beta_{1}^2$, and its derivative is $2\beta_{1} = 2\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$.
 
 > **NOTE:**
 >
@@ -1282,7 +1349,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 9* (Least squares solutions minimize the residual sum of squares). A [least squares solution](linear-algebra-projections.llms.md#def-least-squares) of $\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ makes $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}$ as small as possible, and so makes the residual sum of squares ([Definition 15](#def-residual-sum-of-squares)) as small as possible too.
+> *Remark 10* (Least squares solutions minimize the residual sum of squares). A [least squares solution](linear-algebra-projections.llms.md#def-least-squares) of $\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ makes $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}$ as small as possible, and so makes the residual sum of squares ([Definition 15](#def-residual-sum-of-squares)) as small as possible too.
 
 > **NOTE:**
 >
@@ -1308,7 +1375,7 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 12 (Vector chain rule)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ be a $p \times 1$ vector, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ be a $q \times 1$ vector-valued function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and let $z = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ be a scalar-valued function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ and $f$ have continuous partial derivatives. Then $z = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}))$, as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, satisfies
+> **Theorem 13 (Vector chain rule)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ be a $p \times 1$ vector, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ be a $q \times 1$ vector-valued function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and let $z = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ be a scalar-valued function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ and $f$ have continuous partial derivatives. Then $z = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}))$, as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, satisfies
 >
 > $$\underbrace{\frac{\partial z}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}_{p \times 1}
 > = \underbrace{\frac{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}_{p \times q}
@@ -1318,9 +1385,9 @@ Turn the blue arrow in [Figure 2](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 10* (The order of the factors matters). The vector chain rule ([Theorem 12](#thm-chain-vec)) is like the univariate [chain rule](calculus-derivatives.llms.md#thm-chain-rule), but the order matters now: $\frac{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ is $p \times q$ and $\frac{\partial z}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}$ is $q \times 1$, so the product $\frac{\partial z}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}} \frac{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ in the other order is not even defined unless $p = 1$.
+> *Remark 11* (The order of the factors matters). The vector chain rule ([Theorem 13](#thm-chain-vec)) is like the univariate [chain rule](calculus-derivatives.llms.md#thm-chain-rule), but the order matters now: $\frac{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ is $p \times q$ and $\frac{\partial z}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}$ is $q \times 1$, so the product $\frac{\partial z}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}} \frac{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ in the other order is not even defined unless $p = 1$.
 >
-> The version presented here is for the gradient ([Definition 2](#def-vector-derivative)), a column vector. The total derivative ([Definition 7](#def-row-vector-derivative)), a row vector, is the transpose of the gradient ([Theorem 5](#thm-row-deriv-tp-col-deriv)), and transposing both sides gives ${\mathopen{}\left(\frac{\partial z}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\right)\mathclose{}}^{\top}$, with the factors in the reverse order; there ${\mathopen{}\left(\frac{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\right)\mathclose{}}^{\top}$ is the Jacobian matrix of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Definition 10](#def-jacobian-matrix)).
+> The version presented here is for the gradient ([Definition 2](#def-vector-derivative)), a column vector. The total derivative ([Definition 7](#def-row-vector-derivative)), a row vector, is the transpose of the gradient ([Theorem 6](#thm-row-deriv-tp-col-deriv)), and transposing both sides gives ${\mathopen{}\left(\frac{\partial z}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\right)\mathclose{}}^{\top}$, with the factors in the reverse order; there ${\mathopen{}\left(\frac{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\right)\mathclose{}}^{\top}$ is the Jacobian matrix of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Definition 10](#def-jacobian-matrix)).
 
 > **NOTE:**
 >
@@ -1390,7 +1457,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> *Proof*. Apply [Theorem 12](#thm-chain-vec) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}$, $q = n$, and
+> *Proof*. Apply [Theorem 13](#thm-chain-vec) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}$, $q = n$, and
 >
 > $$\begin{aligned}
 > z &= f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}) \\
@@ -1411,7 +1478,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Example 25 (Derivative of the residual sum of squares)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ ($n \times 1$) and $\mathbf{X}$ ($n \times p$) be constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ be the residual vector ([Definition 13](#def-residual)). By [Theorem 8](#thm-deriv-linear-map), $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = {\mathbf{X}}^{\top}$, and $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathbf{0}_{p \times n}$ because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is constant, so $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}= -{\mathbf{X}}^{\top}$ ($p \times n$). By [Corollary 4](#cor-chain-qf):
+> **Example 25 (Derivative of the residual sum of squares)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ ($n \times 1$) and $\mathbf{X}$ ($n \times p$) be constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ be the residual vector ([Definition 13](#def-residual)). By [Theorem 9](#thm-deriv-linear-map), $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}) = {\mathbf{X}}^{\top}$, and $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathbf{0}_{p \times n}$ because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is constant, so $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}= -{\mathbf{X}}^{\top}$ ($p \times n$). By [Corollary 4](#cor-chain-qf):
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\varepsilon}}\vphantom{\varepsilon}}\right)\mathclose{}
@@ -1454,7 +1521,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 13 (Matrix derivative of the trace of a matrix product)** If $\mathbf{A}$ ($r \times m$) and $\mathbf{B}$ ($n \times r$) are constant with respect to the $m \times n$ matrix $\mathbf{X}$, then:
+> **Theorem 14 (Matrix derivative of the trace of a matrix product)** If $\mathbf{A}$ ($r \times m$) and $\mathbf{B}$ ($n \times r$) are constant with respect to the $m \times n$ matrix $\mathbf{X}$, then:
 >
 > $$\underbrace{\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})}_{m \times n} =
 > \underbrace{{\mathbf{A}}^{\top}}_{m \times r}
@@ -1481,7 +1548,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> *Remark 11* (Why the theorem uses the trace). The trace makes $\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})$ a scalar, so its matrix derivative ([Definition 16](#def-matrix-derivative)) is again an $m \times n$ matrix. The matrix product $\mathbf{A} \mathbf{X} \mathbf{B}$ itself (without the trace) is an $r \times r$ matrix, and each of its $r^2$ entries has a partial derivative with respect to each of the $m n$ entries of $\mathbf{X}$. Those $r^2 m n$ partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar $\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})$.
+> *Remark 12* (Why the theorem uses the trace). The trace makes $\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})$ a scalar, so its matrix derivative ([Definition 16](#def-matrix-derivative)) is again an $m \times n$ matrix. The matrix product $\mathbf{A} \mathbf{X} \mathbf{B}$ itself (without the trace) is an $r \times r$ matrix, and each of its $r^2$ entries has a partial derivative with respect to each of the $m n$ entries of $\mathbf{X}$. Those $r^2 m n$ partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar $\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})$.
 >
 > For example, with
 >
@@ -1542,7 +1609,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 14 (Gradient of an entrywise inner product with a fixed matrix)** Let $A$ be a fixed $m \times n$ matrix, and for $W \in \mathbb{R}^{m \times n}$ define
+> **Theorem 15 (Gradient of an entrywise inner product with a fixed matrix)** Let $A$ be a fixed $m \times n$ matrix, and for $W \in \mathbb{R}^{m \times n}$ define
 >
 > $$g(W) = \sum_{i=1}^{m} \sum_{j=1}^{n} W_{ij} A_{ij}$$
 >
@@ -1664,7 +1731,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 15 (Other ways to write the Hessian, and its entries)** Let $f$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ be as in [Definition 22](#def-hessian).
+> **Theorem 16 (Other ways to write the Hessian, and its entries)** Let $f$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ be as in [Definition 22](#def-hessian).
 >
 > 1.  The Hessian can be written with the row-vector derivative ([Definition 7](#def-row-vector-derivative)) of $f$:
 >
@@ -1682,7 +1749,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** By [Theorem 5](#thm-row-deriv-tp-col-deriv), the transposed gradient ${\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}$ equals the row-vector derivative $\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}}$. Substituting it into [Equation 5](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the shape rule of matrix multiplication ([Remark 3](#rem-row-derivative-shape)): the $p \times 1$ column-vector operator $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ stands on the left of a $1 \times p$ row vector, giving a $p \times p$ matrix.
+> *Proof*. **Part 1.** By [Theorem 6](#thm-row-deriv-tp-col-deriv), the transposed gradient ${\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}$ equals the row-vector derivative $\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}}$. Substituting it into [Equation 5](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the shape rule of matrix multiplication ([Remark 4](#rem-row-derivative-shape)): the $p \times 1$ column-vector operator $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ stands on the left of a $1 \times p$ row vector, giving a $p \times p$ matrix.
 >
 > **Part 2.** Let $y_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ be entry $j$ of the gradient. By [Definition 8](#def-vector-valued-derivative), the $(i, j)$ entry of the derivative of the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, \ldots, y_p)$ with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is
 >
@@ -1777,7 +1844,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 16 (Continuity in one variable, and sums, multiples and compositions)**  
+> **Theorem 17 (Continuity in one variable, and sums, multiples and compositions)**  
 >
 > 1.  For $p = q = 1$, a function $f$ is continuous at $x$ in the sense of [Definition 23](#def-continuous-several) exactly when $\lim_{y \to x} f(y) = f(x)$ ([limit](calculus-derivatives.llms.md#def-limit)), which is the usual [continuity](calculus-integration.llms.md#def-continuous) at $x$.
 > 2.  If $f : \mathbb{R}^p \to \mathbb{R}^q$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $g : \mathbb{R}^q \to \mathbb{R}^r$ is continuous at $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$, then the [composition](https://morrison-lab.github.io/mcs/functions.html#def-composition) $g \circ f$ is continuous at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
@@ -1827,7 +1894,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Example 34 (Choosing** $\delta$ for a sum, a multiple and a composition) Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1$ and $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_2$ on $\mathbb{R}^2$, and $h(t) = 3t$ on $\mathbb{R}$. Since $\mathopen{}\left|y_i - x_i\right|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}$, the functions $f$ and $g$ are continuous with $\delta= \varepsilon$, and $h$ is continuous with $\delta= \varepsilon/ 3$, because $\mathopen{}\left|h(s) - h(t)\right|\mathclose{} = 3\,\mathopen{}\left|s - t\right|\mathclose{}$. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$ and $\varepsilon= 0.1$. The proof of [Theorem 16](#thm-continuous-several) gives these values of $\delta$:
+> **Example 34 (Choosing** $\delta$ for a sum, a multiple and a composition) Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1$ and $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_2$ on $\mathbb{R}^2$, and $h(t) = 3t$ on $\mathbb{R}$. Since $\mathopen{}\left|y_i - x_i\right|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}$, the functions $f$ and $g$ are continuous with $\delta= \varepsilon$, and $h$ is continuous with $\delta= \varepsilon/ 3$, because $\mathopen{}\left|h(s) - h(t)\right|\mathclose{} = 3\,\mathopen{}\left|s - t\right|\mathclose{}$. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$ and $\varepsilon= 0.1$. The proof of [Theorem 17](#thm-continuous-several) gives these values of $\delta$:
 >
 > - for $f + g$ (part 3), $\delta= \min\mathopen{}\left\{\varepsilon/ 2, \varepsilon/ 2\right\}\mathclose{}$;
 > - for $3 f$ (part 4), $\delta= \varepsilon/ (3 + 1)$;
@@ -1866,7 +1933,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 > data.frame(delta = deltas, largest_change = largest_change, eps = eps)
 > ```
 >
-> For 3 of the 3 functions, the largest change among the 10000 points is below $\varepsilon= 0.1$, as [Theorem 16](#thm-continuous-several) guarantees.
+> For 3 of the 3 functions, the largest change among the 10000 points is below $\varepsilon= 0.1$, as [Theorem 17](#thm-continuous-several) guarantees.
 
 > **NOTE:**
 >
@@ -1927,7 +1994,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 17 (Symmetry of the Hessian)** If the second partial derivatives of $f$ exist and are continuous ([Definition 23](#def-continuous-several)) on an open ball around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Definition 17](#def-ball)), then $\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}$ for all $i, j$ [\[16\]](#ref-wikipedia_symmetry_of_second_derivatives), so $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ ([Definition 22](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
+> **Theorem 18 (Symmetry of the Hessian)** If the second partial derivatives of $f$ exist and are continuous ([Definition 23](#def-continuous-several)) on an open ball around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Definition 17](#def-ball)), then $\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}$ for all $i, j$ [\[16\]](#ref-wikipedia_symmetry_of_second_derivatives), so $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ ([Definition 22](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
 
 The proof applies the one-variable mean value theorem twice, which these notes do not develop; see [\[17\]](#ref-rudin1976principles), Theorem 9.41, which is stated for two variables: apply it to $f$ as a function of $x_i$ and $x_j$, with the other coordinates held fixed.
 
@@ -1972,11 +2039,11 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 > &= 1:
 > \end{aligned}$$
 >
-> the Hessian at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not symmetric. By [Theorem 17](#thm-hessian-symmetric), then, the second partial derivatives of this $f$ cannot all be continuous near $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> the Hessian at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not symmetric. By [Theorem 18](#thm-hessian-symmetric), then, the second partial derivatives of this $f$ cannot all be continuous near $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
-> **Theorem 18 (Hessian of a quadratic form)** If $\mathbf{S}$ is a symmetric $p \times p$ matrix that is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 2 \mathbf{S}$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
+> **Theorem 19 (Hessian of a quadratic form)** If $\mathbf{S}$ is a symmetric $p \times p$ matrix that is constant with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 2 \mathbf{S}$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
 
 > **NOTE:**
 >
@@ -1989,10 +2056,10 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 > && \text{(}\href{#cor-quadratic-form-symmetric}{\text{Corollary~2}}\text{)}
 > \\
 > &= \mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}\,{(2 \mathbf{S})}^{\top}
-> && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~9}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\text{; } \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} {(2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}^{\top} = \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} (2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~8}}\text{)}
+> && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~10}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\text{; } \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} {(2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}^{\top} = \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} (2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~8}}\text{)}
 > \\
 > &= \mathbf{I}_p\,{(2 \mathbf{S})}^{\top}
-> && \text{(} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{I}_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~5}}\text{)}
+> && \text{(} \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{I}_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~6}}\text{)}
 > \\
 > &= 2 \mathbf{S}.
 > && \text{(} \mathbf{S} \text{ is symmetric)}
@@ -2000,7 +2067,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 > **NOTE:**
 >
-> **Example 38 (The Hessian of a** $2 \times 2$ quadratic form) For $\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}$ as in [Example 21](#exm-deriv-quadratic-form), [Theorem 18](#thm-hessian-quadratic) gives $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}$. Directly, the gradient found there, with $\beta_{i}$ renamed $x_i$, is ${(6 x_1 + 2 x_2,\ 2 x_1 + 4 x_2)}^{\top}$, and differentiating its entries by $x_1$ and by $x_2$ ([Definition 22](#def-hessian)) gives
+> **Example 38 (The Hessian of a** $2 \times 2$ quadratic form) For $\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}$ as in [Example 21](#exm-deriv-quadratic-form), [Theorem 19](#thm-hessian-quadratic) gives $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}$. Directly, the gradient found there, with $\beta_{i}$ renamed $x_i$, is ${(6 x_1 + 2 x_2,\ 2 x_1 + 4 x_2)}^{\top}$, and differentiating its entries by $x_1$ and by $x_2$ ([Definition 22](#def-hessian)) gives
 >
 > $$\begin{aligned}
 > \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
