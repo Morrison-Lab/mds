@@ -1,0 +1,22 @@
+:::{#exr-identity-product-practice}
+#### Multiplying by an identity matrix
+
+@thm-identity says that an [identity matrix](#def-identity-matrix) of the right size leaves a [matrix](#def-matrix) unchanged under [matrix multiplication](#def-matrix-mult),
+just as multiplying a number by $1$ leaves it unchanged.
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}.
+$$
+
+Compute $\matr{I}_2 \matr{A}$ entry by entry, from the definition of matrix multiplication.
+
+::: {.callout-tip}
+#### Hint
+
+Entry $(i, j)$ of $\matr{I}_2 \matr{A}$ is the [dot product](linear-algebra-vectors.qmd#def-dot-product) of the $i$th [row of $\matr{I}_2$](#def-matrix-row) with the $j$th [column of $\matr{A}$](#def-matrix-column),
+as in @exm-dot-product-matmul.
+
+:::
+
+:::
