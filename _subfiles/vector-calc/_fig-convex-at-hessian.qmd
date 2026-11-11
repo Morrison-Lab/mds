@@ -61,7 +61,8 @@ plt.show();
 :::
 
 The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(x) = x^3$ from @exm-convex-at-hessian, with $\smallconst = 1$.
-The dashed [chord](algebra-sums.qmd#def-chord) from $-1$ to $\tfrac{1}{2}$ is at $-\tfrac{1}{4}$ above $x = 0$, below $f(0) = 0$,
+Above $x = 0$, the dashed [chord](algebra-sums.qmd#def-chord) from $-1$ to $\tfrac{1}{2}$ is at height $-\tfrac{1}{4}$,
+which is below $f(0) = 0$,
 although $f''(0) = 0$.
 
 :::

@@ -11,7 +11,8 @@ then the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}_f(\vx_0)$ is [posi
 
 ::: proof
 
-Let $r > 0$ be a radius for which $f$ is [convex on](#def-convex-on) the [open ball](vector-calculus.qmd#def-ball) $B$ of radius $r$ around $\vx_0$,
+Let $r > 0$ be a radius
+for which $f$ is [convex on](#def-convex-on) the [open ball](vector-calculus.qmd#def-ball) $B$ of radius $r$ around $\vx_0$,
 and fix $\vecf{v} \in \reals^p$ with $\vecf{v} \ne \vzero$.
 For $0 < h < r / \norm{\vecf{v}}$,
 the points $\vx_0 + h \vecf{v}$ and $\vx_0 - h \vecf{v}$ are in $B$,
