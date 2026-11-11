@@ -1,0 +1,23 @@
+:::{#exr-transpose-product-practice}
+#### Testing whether a transpose keeps the order of a product
+
+A common slip in least-squares algebra
+is to take the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) without reversing the order of its factors.
+Let
+
+$$
+\matr{A} = \sbmat{1 & 2 \\ 0 & 1},
+\qquad
+\matr{B} = \sbmat{1 & 0 \\ 3 & 1}.
+$$
+
+Is $\tp{(\matr{A}\matr{B})}$ [equal](#def-matrix-equality) to $\tp{\matr{A}}\,\tp{\matr{B}}$?
+
+::: {.callout-tip}
+#### Hint
+
+Compute both sides with @def-matrix-mult and @def-matrix-transpose.
+
+:::
+
+:::
