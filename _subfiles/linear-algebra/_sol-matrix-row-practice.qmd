@@ -1,6 +1,7 @@
 :::{#sol-matrix-row-practice}
 
-$\matr{D}$ has $n = 3$ [column](#def-matrix-column)s,
+Write $d_{ij}$ for the entry of $\matr{D}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$.
+$\matr{D}$ has $n = 3$ columns,
 so its third [row](#def-matrix-row) holds the three entries $d_{31}$, $d_{32}$ and $d_{33}$:
 
 $$

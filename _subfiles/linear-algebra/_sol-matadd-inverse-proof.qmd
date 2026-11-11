@@ -1,7 +1,7 @@
 :::{#sol-matadd-inverse-proof}
 
 Both sides are $m \times n$ [matrices](#def-matrix),
-so they are equal when their $(i, j)$ entries agree for every $i$ and $j$.
+so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$.
 For each $i$ and $j$,
 
 $$
