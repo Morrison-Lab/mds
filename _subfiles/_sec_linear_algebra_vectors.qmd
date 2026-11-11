@@ -19,6 +19,14 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-column-vector-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-column-vector-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-real-coordinate-space.qmd >}}
 
 {{< slidebreak >}}
@@ -27,11 +35,27 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-real-coordinate-space-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-real-coordinate-space-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-scalar.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_exm-scalar.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-scalar-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-scalar-practice.qmd >}}
 
 {{< slidebreak >}}
 
@@ -47,13 +71,45 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-real-valued-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-real-valued-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-vector-valued-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-vector-valued-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-transpose.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-transpose.qmd >}}
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-transpose-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-transpose-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-vector-addition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-vector-addition-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-vector-addition-practice.qmd >}}
 
 {{< slidebreak >}}
 

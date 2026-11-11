@@ -1,0 +1,22 @@
+:::{#exr-real-valued-practice}
+#### Testing whether a price prediction is real-valued
+
+A model predicts a house's price from three of its features,
+stored in $\vx \in \reals^3$,
+with the [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
+
+$$
+f(\vx) = 2 x_1 + 5 x_2 - x_3.
+$$
+
+Is $f$ [real-valued](#def-real-vector-valued)?
+
+::: {.callout-tip}
+#### Hint
+
+Evaluate $f$ at one point,
+and count the numbers in the result.
+
+:::
+
+:::
