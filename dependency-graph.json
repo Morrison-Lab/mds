@@ -12473,6 +12473,15 @@
    "external": false
   },
   {
+   "id": "mds/vector-calculus#def-linear-approximation-vector",
+   "site": "mds",
+   "page": "vector-calculus",
+   "div": "def-linear-approximation-vector",
+   "kind": "def",
+   "title": "Linear approximation of a function of a vector, first-order Taylor approximation of a function of a vector",
+   "external": false
+  },
+  {
    "id": "mds/vector-calculus#def-matrix-derivative",
    "site": "mds",
    "page": "vector-calculus",
@@ -23593,6 +23602,10 @@
   [
    "mds/vector-calculus#def-level-set",
    "mcs/functions#def-preimage"
+  ],
+  [
+   "mds/vector-calculus#def-linear-approximation-vector",
+   "mds/vector-calculus#def-vector-derivative"
   ],
   [
    "mds/vector-calculus#def-matrix-derivative",
