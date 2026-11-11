@@ -1,5 +1,5 @@
 :::{#exr-rank-practice}
-#### Finding the rank of a matrix whose third column is a total
+#### Finding the rank of a $3 \times 3$ matrix
 
 The [rank](#def-rank) of a data [matrix](linear-algebra-matrices.qmd#def-matrix) counts how many of its [columns](linear-algebra-matrices.qmd#def-matrix-column) carry new information.
 Let
@@ -8,7 +8,7 @@ $$
 \matr{A} = \sbmat{1 & 0 & 1 \\ 0 & 1 & 1 \\ 2 & 1 & 3}.
 $$
 
-Find $\operatorname{rank}(\matr{A})$.
+Find $\rankf{\matr{A}}$.
 
 ::: {.callout-tip}
 #### Hint
