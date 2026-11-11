@@ -1,11 +1,14 @@
 :::{#exm-convex-hull}
 #### The convex hull of three points is a triangle
 
-Let $S = \cb{\vzero, \vecf{e}_1, \vecf{e}_2} \subseteq \reals^2$, with $\vecf{e}_1 = \tp{(1, 0)}$ and $\vecf{e}_2 = \tp{(0, 1)}$,
-and let $T = \cb{\vx \in \reals^2 : x_1 \ge 0,\ x_2 \ge 0,\ x_1 + x_2 \le 1}$, the filled triangle with corners $\vzero$, $\vecf{e}_1$ and $\vecf{e}_2$.
-Then the [convex hull](#def-convex-hull) of $S$ is $T$: $\operatorname{conv}(S) = T$.
+Let $S = \cb{\vzero, \vecf{e}_1, \vecf{e}_2} \subseteq \reals^2$,
+with $\vecf{e}_1 = \tp{(1, 0)}$ and $\vecf{e}_2 = \tp{(0, 1)}$,
+and let $T = \cb{\vx \in \reals^2 : x_1 \ge 0,\ x_2 \ge 0,\ x_1 + x_2 \le 1}$,
+the filled triangle with corners $\vzero$, $\vecf{e}_1$ and $\vecf{e}_2$.
+Then $\operatorname{conv}(S) = T$:
+the [convex hull](#def-convex-hull) of $S$ is $T$.
 
-- $\operatorname{conv}(S) \subseteq T$.
+- **Inclusion $\operatorname{conv}(S) \subseteq T$.**
   $T$ is the [intersection](https://morrison-lab.github.io/mcs/sets.html#def-indexed-intersection) of three [half-planes](#def-half-space),
   with $\vecf{a} = \tp{(1, 0)}$, $\tp{(0, 1)}$ and $\tp{(-1, -1)}$,
   and $c = 0$, $0$ and $-1$.
@@ -26,18 +29,22 @@ Then the [convex hull](#def-convex-hull) of $S$ is $T$: $\operatorname{conv}(S) 
   \ea
   $$
 
-  So $T$ is convex, by @thm-convex-intersection applied twice.
+  So $T$ is convex,
+  by @thm-convex-intersection applied twice.
   $T$ contains $S$,
   so every point of $\operatorname{conv}(S)$ is in $T$.
-- $T \subseteq \operatorname{conv}(S)$.
+- **Inclusion $T \subseteq \operatorname{conv}(S)$.**
   Let $K$ be a [convex set](#def-convex-set) containing $S$,
   let $\vx \in T$,
   and let $s = x_1 + x_2$,
   so $0 \le s \le 1$.
-  If $s = 0$, then $\vx = \vzero \in K$.
+  If $s = 0$,
+  then $\vx = \vzero \in K$.
   Otherwise $\vecf{p} = \vx / s$ has $p_1 + p_2 = 1$ with $p_1, p_2 \ge 0$,
-  so $\vecf{p} = p_1 \vecf{e}_1 + (1 - p_1) \vecf{e}_2$ is in $K$, by convexity with $t = p_1$.
-  Then $\vx = s \vecf{p} + (1 - s) \vzero$ is in $K$, by convexity with $t = s$.
+  so $\vecf{p} = p_1 \vecf{e}_1 + (1 - p_1) \vecf{e}_2$ is in $K$,
+  by convexity with $t = p_1$.
+  Then $\vx = s \vecf{p} + (1 - s) \vzero$ is in $K$,
+  by convexity with $t = s$.
   So $\vx$ is in every convex set containing $S$.
 
 @fig-convex-hull shows $S$, $T$ and the two steps for one point of $T$.

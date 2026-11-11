@@ -86,10 +86,10 @@ plt.show();
 
 :::
 
-The [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ of @exm-convex-hull, the three blue corners,
-and its [convex hull](#def-convex-hull), the shaded triangle $T$.
-For the point $\vx = \tp{(0.2, 0.3)}$, with $s = 0.5$,
-the point $\vecf{p} = \tp{(0.4, 0.6)}$ lies on the segment between $\vecf{e}_1$ and $\vecf{e}_2$,
+The three blue corners are the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ of @exm-convex-hull.
+The shaded triangle $T$ is its [convex hull](#def-convex-hull).
+The point $\vx = \tp{(0.2, 0.3)}$ has $s = 0.5$.
+The point $\vecf{p} = \tp{(0.4, 0.6)}$ lies on the segment between $\vecf{e}_1$ and $\vecf{e}_2$,
 and $\vx$ lies on the segment between $\vzero$ and $\vecf{p}$.
 
 :::
