@@ -1,0 +1,25 @@
+:::{#exr-matrix-mult-practice}
+#### Computing the product of a $2 \times 3$ and a $3 \times 2$ matrix
+
+The [product](#def-matrix-mult) of two [matrices](#def-matrix) is defined only when the first has as many [column](#def-matrix-column)s as the second has [row](#def-matrix-row)s,
+and each entry of the product combines one [row of the first factor](#def-matrix-row) with one [column of the second](#def-matrix-column).
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 0 & 2 \\ -1 & 3 & 1 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 2 & 1 \\ 0 & -1 \\ 1 & 4 \end{bmatrix}.
+$$
+
+Find $\matr{A}\matr{B}$.
+
+::: {.callout-tip}
+#### Hint
+
+$\matr{A}$ is $2 \times 3$ and $\matr{B}$ is $3 \times 2$,
+so by @def-matrix-mult $\matr{A}\matr{B}$ is $2 \times 2$,
+and its entry $c_{ij}$ is $a_{i1} b_{1j} + a_{i2} b_{2j} + a_{i3} b_{3j}$.
+
+:::
+
+:::

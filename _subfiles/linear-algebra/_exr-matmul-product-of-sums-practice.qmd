@@ -1,0 +1,20 @@
+:::{#exr-matmul-product-of-sums-practice}
+#### Expanding a product of two matrix sums
+
+When a [product](#def-matrix-mult) of two [matrix sums](#def-matrix-addition) is expanded,
+each of the four terms keeps its factors in their original order,
+as @thm-matmul-product-of-sums notes,
+because a product of two [matrices](#def-matrix) can change when its factors swap.
+Let $\matr{A}$, $\matr{B}$ and $\matr{C}$ be $k \times k$ matrices.
+
+Find the four terms in the expansion of $(\matr{A} + \matr{B})(\matr{A} + \matr{C})$.
+
+::: {.callout-tip}
+#### Hint
+
+Apply @thm-matmul-product-of-sums with $\matr{A} + \matr{B}$ as its left factor
+and $\matr{A} + \matr{C}$ as its right factor.
+
+:::
+
+:::

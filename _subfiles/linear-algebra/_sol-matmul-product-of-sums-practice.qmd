@@ -1,0 +1,20 @@
+:::{#sol-matmul-product-of-sums-practice}
+
+All three [matrices](#def-matrix) are $k \times k$,
+so @thm-matmul-product-of-sums applies with $m = n = k$,
+with $\matr{A}$ in place of its $\matr{C}$ and $\matr{C}$ in place of its $\matr{D}$:
+
+$$
+\ba
+(\matr{A} + \matr{B})(\matr{A} + \matr{C})
+&= \matr{A}\matr{A} + \matr{A}\matr{C} + \matr{B}\matr{A} + \matr{B}\matr{C}.
+&& \text{(@thm-matmul-product-of-sums)}
+\ea
+$$
+
+The third term is $\matr{B}\matr{A}$, with $\matr{B}$ on the left,
+because $\matr{B}$ comes from the left factor $\matr{A} + \matr{B}$;
+it is in general a different matrix from $\matr{A}\matr{B}$,
+as @exm-matmul-product-of-sums shows.
+
+:::
