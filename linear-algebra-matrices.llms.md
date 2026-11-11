@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-10 15:49:52 (PST)
+Last modified: 2026-11-10 16:35:15 (PST)
 
 > **NOTE:**
 >
@@ -431,14 +431,62 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Definition 17 (Linear map, linear transformation, linear function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map** [\[12\]](#ref-wikipedia_linear_map) (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ and $c \in \mathbb{R}$,
+> **Definition 17 (Additive function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is **additive** [\[12\]](#ref-wikipedia_linear_map) if it preserves [vector addition](linear-algebra-vectors.llms.md#def-vector-addition): [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$,
 >
-> 1.  $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ (*additivity*)
-> 2.  $f(c\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ (*homogeneity*)
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$$
 
 > **NOTE:**
 >
-> **Example 13 (A linear map, and two functions that are not)**  
+> **Example 13 (An additive function, and one that is not)**  
+>
+> - $f(x) = 2x$ on $\mathbb{R}$ is [additive](#def-additive-function). For $x, y \in \mathbb{R}$:
+>
+>   $$\begin{aligned}
+>   f(x + y) &= 2(x + y) \\
+>   &= 2x + 2y \\
+>   &= f(x) + f(y)
+>   \end{aligned}$$
+>
+> - $g(x) = x + 1$ on $\mathbb{R}$ is not additive, since $g(0 + 0) = 1$ but $g(0) + g(0) = 2$.
+
+> **NOTE:**
+>
+> **Definition 18 (Homogeneous function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is **homogeneous** [\[12\]](#ref-wikipedia_linear_map) if it preserves [scalar multiplication](#def-scalar-mult): [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ and $c \in \mathbb{R}$,
+>
+> $$f(c\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = c f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$$
+
+> **NOTE:**
+>
+> **Example 14 (Homogeneous functions, and one that is not)**  
+>
+> - $f(x) = 2x$ on $\mathbb{R}$ is [homogeneous](#def-homogeneous-function). For $x, c \in \mathbb{R}$:
+>
+>   $$\begin{aligned}
+>   f(c x) &= 2 c x \\
+>   &= c (2x) \\
+>   &= c f(x)
+>   \end{aligned}$$
+>
+> - $h(x) = x^2$ on $\mathbb{R}$ is not homogeneous, since $h(2 \cdot 1) = 4$ but $2\,h(1) = 2$.
+>
+> - $k(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathopen{}\left(x_1^3 + x_2^3\right)\mathclose{}^{1/3}$ on $\mathbb{R}^2$ is homogeneous but not [additive](#def-additive-function). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2$ and $c \in \mathbb{R}$:
+>
+>   $$\begin{aligned}
+>   k(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) &= \mathopen{}\left(c^3 x_1^3 + c^3 x_2^3\right)\mathclose{}^{1/3} \\
+>   &= \mathopen{}\left(c^3 \mathopen{}\left(x_1^3 + x_2^3\right)\mathclose{}\right)\mathclose{}^{1/3} \\
+>   &= c \mathopen{}\left(x_1^3 + x_2^3\right)\mathclose{}^{1/3} \\
+>   &= c\, k(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
+>   \end{aligned}$$
+>
+>   but $k((1, 0) + (0, 1)) = k((1, 1)) = 2^{1/3}$, while $k((1, 0)) + k((0, 1)) = 2$.
+
+> **NOTE:**
+>
+> **Definition 19 (Linear map, linear transformation, linear function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map** [\[12\]](#ref-wikipedia_linear_map) (also called a **linear transformation** or **linear function**) if it is both [additive](#def-additive-function) and [homogeneous](#def-homogeneous-function).
+
+> **NOTE:**
+>
+> **Example 15 (A linear map, and two functions that are not)**  
 >
 > - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)$ on $\mathbb{R}^2$ is linear. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^2$ and $c \in \mathbb{R}$:
 >
@@ -460,15 +508,15 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Definition 18 (Linear operator)** A **linear operator** on $\mathbb{R}^p$ is a linear map ([Definition 17](#def-linear-map)) from $\mathbb{R}^p$ to itself, that is, a linear map $f : \mathbb{R}^p \to \mathbb{R}^p$ whose input and output have the same length. Some authors use “operator” more loosely, for any linear map.
+> **Definition 20 (Linear operator)** A **linear operator** on $\mathbb{R}^p$ is a linear map ([Definition 19](#def-linear-map)) from $\mathbb{R}^p$ to itself, that is, a linear map $f : \mathbb{R}^p \to \mathbb{R}^p$ whose input and output have the same length. Some authors use “operator” more loosely, for any linear map.
 
 > **NOTE:**
 >
-> **Example 14 (A linear operator, and a linear map that is not one)** The map $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)$ from [Example 13](#exm-linear-map) sends $\mathbb{R}^2$ to $\mathbb{R}^2$, so it is a linear operator on $\mathbb{R}^2$. The linear map $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 + x_2$ sends $\mathbb{R}^2$ to $\mathbb{R}$, so it is linear but not an operator: its outputs have length $1$, not $2$.
+> **Example 16 (A linear operator, and a linear map that is not one)** The map $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)$ from [Example 15](#exm-linear-map) sends $\mathbb{R}^2$ to $\mathbb{R}^2$, so it is a linear operator on $\mathbb{R}^2$. The linear map $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 + x_2$ sends $\mathbb{R}^2$ to $\mathbb{R}$, so it is linear but not an operator: its outputs have length $1$, not $2$.
 
 > **NOTE:**
 >
-> **Theorem 11 (A linear map sends zero to zero)** If $f: \mathbb{R}^p \to \mathbb{R}^m$ is a linear map ([Definition 17](#def-linear-map)), then $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> **Theorem 11 (A linear map sends zero to zero)** If $f: \mathbb{R}^p \to \mathbb{R}^m$ is a linear map ([Definition 19](#def-linear-map)), then $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
@@ -486,13 +534,13 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Example 15 (Ruling out linearity at zero)** In [Example 13](#exm-linear-map), $g(x) = x + 1$ has $g(0) = 1 \neq 0$, so by [Theorem 11](#thm-linear-map-zero) it is not linear, without checking additivity or homogeneity.
+> **Example 17 (Ruling out linearity at zero)** In [Example 15](#exm-linear-map), $g(x) = x + 1$ has $g(0) = 1 \neq 0$, so by [Theorem 11](#thm-linear-map-zero) it is not linear, without checking additivity or homogeneity.
 >
 > Sending $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is necessary but not sufficient: $h(x) = x^2$ in the same example has $h(0) = 0$ and is still not linear.
 
 > **NOTE:**
 >
-> **Theorem 12 (Multiplying by a matrix is a linear map)** For any $m \times p$ matrix $\mathbf{A}$, the function $f: \mathbb{R}^p \to \mathbb{R}^m$ defined by $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a linear map ([Definition 17](#def-linear-map)).
+> **Theorem 12 (Multiplying by a matrix is a linear map)** For any $m \times p$ matrix $\mathbf{A}$, the function $f: \mathbb{R}^p \to \mathbb{R}^m$ defined by $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a linear map ([Definition 19](#def-linear-map)).
 
 > **NOTE:**
 >
@@ -536,7 +584,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Theorem 13 (A linear map preserves linear combinations)** If $f: \mathbb{R}^p \to \mathbb{R}^m$ is a linear map ([Definition 17](#def-linear-map)), then for any vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k \in \mathbb{R}^p$ and any coefficients $c_1, \ldots, c_k \in \mathbb{R}$:
+> **Theorem 13 (A linear map preserves linear combinations)** If $f: \mathbb{R}^p \to \mathbb{R}^m$ is a linear map ([Definition 19](#def-linear-map)), then for any vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k \in \mathbb{R}^p$ and any coefficients $c_1, \ldots, c_k \in \mathbb{R}$:
 >
 > $$f\mathopen{}\left(\sum_{j=1}^{k} c_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_j\right)\mathclose{} = \sum_{j=1}^{k} c_j f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_j)$$
 
@@ -562,7 +610,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Theorem 14 (Every linear map is multiplication by a matrix)** If $f: \mathbb{R}^p \to \mathbb{R}^m$ is a linear map ([Definition 17](#def-linear-map)), then there is exactly one $m \times p$ matrix $\mathbf{A}$ such that
+> **Theorem 14 (Every linear map is multiplication by a matrix)** If $f: \mathbb{R}^p \to \mathbb{R}^m$ is a linear map ([Definition 19](#def-linear-map)), then there is exactly one $m \times p$ matrix $\mathbf{A}$ such that
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\quad \text{for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$$
 >
@@ -621,21 +669,21 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Definition 19 (Matrix of a linear map)** The **matrix of** a linear map $f: \mathbb{R}^p \to \mathbb{R}^m$ is the unique $m \times p$ matrix $\mathbf{A}$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Theorem 14](#thm-linear-map-matrix)). Its column $j$ is $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$.
+> **Definition 21 (Matrix of a linear map)** The **matrix of** a linear map $f: \mathbb{R}^p \to \mathbb{R}^m$ is the unique $m \times p$ matrix $\mathbf{A}$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Theorem 14](#thm-linear-map-matrix)). Its column $j$ is $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$.
 
 > **NOTE:**
 >
-> **Example 16 (Finding the matrix of a linear map)** For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)$ from [Example 13](#exm-linear-map), the values of $f$ at the indicator vectors are
+> **Example 18 (Finding the matrix of a linear map)** For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)$ from [Example 15](#exm-linear-map), the values of $f$ at the indicator vectors are
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) = f\mathopen{}\left(\begin{bmatrix}1 \\ 0\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 1 \\ 1 + 0\end{bmatrix} = \begin{bmatrix}2 \\ 1\end{bmatrix},
 > \qquad
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2) = f\mathopen{}\left(\begin{bmatrix}0 \\ 1\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 0 \\ 0 + 1\end{bmatrix} = \begin{bmatrix}0 \\ 1\end{bmatrix}$$
 >
-> and these are the columns of the matrix of $f$ ([Definition 19](#def-matrix-of-linear-map)): $\mathbf{A} = \begin{bmatrix}2 & 0 \\ 1 & 1\end{bmatrix}$.
+> and these are the columns of the matrix of $f$ ([Definition 21](#def-matrix-of-linear-map)): $\mathbf{A} = \begin{bmatrix}2 & 0 \\ 1 & 1\end{bmatrix}$.
 
 > **NOTE:**
 >
-> **Corollary 1 (Linear functions from vectors to numbers)** A function $f: \mathbb{R}^p \to \mathbb{R}$ is linear ([Definition 17](#def-linear-map)) if and only if there is a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$ such that
+> **Corollary 1 (Linear functions from vectors to numbers)** A function $f: \mathbb{R}^p \to \mathbb{R}$ is linear ([Definition 19](#def-linear-map)) if and only if there is a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$ such that
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \quad \text{for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$$
 >
@@ -664,7 +712,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Example 17 (A linear function from** $\mathbb{R}^2$ to $\mathbb{R}$) $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 + 5 x_2$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, 5)}^{\top}$, so it is linear by [Corollary 1](#cor-linear-scalar). The entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ are the values at the indicator vectors:
+> **Example 19 (A linear function from** $\mathbb{R}^2$ to $\mathbb{R}$) $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 + 5 x_2$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, 5)}^{\top}$, so it is linear by [Corollary 1](#cor-linear-scalar). The entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ are the values at the indicator vectors:
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) &= 3 \cdot 1 + 5 \cdot 0 \\
@@ -684,18 +732,18 @@ Last modified: 2026-11-10 15:49:52 (PST)
 >
 > Two chapters of the [*Essence of linear algebra*](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) series by 3Blue1Brown show the results above geometrically:
 >
-> - [Linear transformations and matrices](https://www.youtube.com/watch?v=kYB8IZa5AuE) (Chapter 3) shows why a linear map is fixed by where it sends the indicator vectors, which become the columns of its matrix ([Definition 19](#def-matrix-of-linear-map)).
+> - [Linear transformations and matrices](https://www.youtube.com/watch?v=kYB8IZa5AuE) (Chapter 3) shows why a linear map is fixed by where it sends the indicator vectors, which become the columns of its matrix ([Definition 21](#def-matrix-of-linear-map)).
 > - [Dot products and duality](https://www.youtube.com/watch?v=LyGKycYT2v0) (Chapter 9) shows why every linear map from $\mathbb{R}^p$ to $\mathbb{R}$ is a dot product with a fixed vector ([Corollary 1](#cor-linear-scalar)).
 
 > **NOTE:**
 >
-> **Definition 20 (Translation)** For a fixed vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, the **translation** [\[13\]](#ref-wikipedia_translation_geometry) by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is the function $t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} : \mathbb{R}^m \to \mathbb{R}^m$ defined by
+> **Definition 22 (Translation)** For a fixed vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, the **translation** [\[13\]](#ref-wikipedia_translation_geometry) by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is the function $t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} : \mathbb{R}^m \to \mathbb{R}^m$ defined by
 >
 > $$t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$$
 
 > **NOTE:**
 >
-> **Example 18 (Translating two points)** The translation by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, -2)}^{\top}$ sends
+> **Example 20 (Translating two points)** The translation by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, -2)}^{\top}$ sends
 >
 > $$t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}\mathopen{}\left(\begin{bmatrix}0 \\ 0\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}0 + 1 \\ 0 + (-2)\end{bmatrix} = \begin{bmatrix}1 \\ -2\end{bmatrix},
 > \qquad
@@ -709,11 +757,11 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Definition 21**  
+> **Definition 23**  
 >
 > #### Affine map, affine transformation, affine function
 >
-> A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 20](#def-translation)) (a [composition](https://morrison-lab.github.io/mcs/functions.html#def-composition), with the matrix product as the [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function)): there are an $m \times p$ matrix $\mathbf{A}$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$ such that
+> A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 22](#def-translation)) (a [composition](https://morrison-lab.github.io/mcs/functions.html#def-composition), with the matrix product as the [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function)): there are an $m \times p$ matrix $\mathbf{A}$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$ such that
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
@@ -723,7 +771,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Definition 22 (Offset of an affine map, intercept, bias)** In [Definition 21](#def-affine-map), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is called the **offset** of $f$ (statistics also calls it the **intercept**, and machine learning the **bias**).
+> **Definition 24 (Offset of an affine map, intercept, bias)** In [Definition 23](#def-affine-map), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is called the **offset** of $f$ (statistics also calls it the **intercept**, and machine learning the **bias**).
 
 > **NOTE:**
 >
@@ -733,7 +781,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Definition 23 (Augmented vector)** The **augmented vector** of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ is the vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} \in \mathbb{R}^{p+1}$ formed by placing a $1$ above the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$:
+> **Definition 25 (Augmented vector)** The **augmented vector** of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ is the vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} \in \mathbb{R}^{p+1}$ formed by placing a $1$ above the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$:
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}
@@ -743,7 +791,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Example 19 (An affine function as a dot product with an augmented vector)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(2, 5)}^{\top}$, the augmented vector is ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = {(1, 2, 5)}^{\top}$. With $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, -1)}^{\top}$ and $b = 4$, the affine function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ ([Equation 1](#eq-linear-scalar)) equals the dot product of ${(b, w_1, w_2)}^{\top} = {(4, 3, -1)}^{\top}$ with ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}$:
+> **Example 21 (An affine function as a dot product with an augmented vector)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(2, 5)}^{\top}$, the augmented vector is ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = {(1, 2, 5)}^{\top}$. With $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, -1)}^{\top}$ and $b = 4$, the affine function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ ([Equation 1](#eq-linear-scalar)) equals the dot product of ${(b, w_1, w_2)}^{\top} = {(4, 3, -1)}^{\top}$ with ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}$:
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b
@@ -756,7 +804,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Theorem 15 (An affine map sends zero to its offset)** An affine map $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ ([Definition 21](#def-affine-map)) satisfies $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
+> **Theorem 15 (An affine map sends zero to its offset)** An affine map $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ ([Definition 23](#def-affine-map)) satisfies $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
 
 > **NOTE:**
 >
@@ -777,7 +825,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}})
 > &= \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
-> && \text{(}\href{#def-affine-map}{\text{Definition~21}}\text{)}
+> && \text{(}\href{#def-affine-map}{\text{Definition~23}}\text{)}
 > \\&= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
 > && (\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}})
 > \\&= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
@@ -786,7 +834,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Theorem 16 (An affine map is linear exactly when its offset is zero)** An affine map $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ ([Definition 21](#def-affine-map)) is linear ([Definition 17](#def-linear-map)) if and only if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> **Theorem 16 (An affine map is linear exactly when its offset is zero)** An affine map $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ ([Definition 23](#def-affine-map)) is linear ([Definition 19](#def-linear-map)) if and only if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
@@ -801,11 +849,11 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Example 20 (Two affine maps with the same matrix)** Let $\mathbf{A} = \begin{bmatrix}2 & 0 \\ 1 & 1\end{bmatrix}$, the matrix of the linear map in [Example 13](#exm-linear-map). $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has offset $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so it is linear. $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}1 \\ 0\end{bmatrix}$ has offset $\begin{bmatrix}1 \\ 0\end{bmatrix} \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so by [Theorem 16](#thm-affine-linear-iff) it is not linear: indeed $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \begin{bmatrix}1 \\ 0\end{bmatrix}$, not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> **Example 22 (Two affine maps with the same matrix)** Let $\mathbf{A} = \begin{bmatrix}2 & 0 \\ 1 & 1\end{bmatrix}$, the matrix of the linear map in [Example 15](#exm-linear-map). $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has offset $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so it is linear. $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}1 \\ 0\end{bmatrix}$ has offset $\begin{bmatrix}1 \\ 0\end{bmatrix} \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so by [Theorem 16](#thm-affine-linear-iff) it is not linear: indeed $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \begin{bmatrix}1 \\ 0\end{bmatrix}$, not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
-> **Corollary 2 (Every linear map is affine)** Every linear map $f : \mathbb{R}^p \to \mathbb{R}^m$ ([Definition 17](#def-linear-map)) is an affine map ([Definition 21](#def-affine-map)) with offset $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> **Corollary 2 (Every linear map is affine)** Every linear map $f : \mathbb{R}^p \to \mathbb{R}^m$ ([Definition 19](#def-linear-map)) is an affine map ([Definition 23](#def-affine-map)) with offset $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
@@ -816,11 +864,11 @@ Last modified: 2026-11-10 15:49:52 (PST)
 > &= \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}},
 > \end{aligned}$$
 >
-> which is [Definition 21](#def-affine-map) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> which is [Definition 23](#def-affine-map) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
-> **Theorem 17 (An affine map determines its matrix and offset)** If $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}'$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ ([Definition 21](#def-affine-map)), then $\mathbf{A}' = \mathbf{A}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}' = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
+> **Theorem 17 (An affine map determines its matrix and offset)** If $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}'$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ ([Definition 23](#def-affine-map)), then $\mathbf{A}' = \mathbf{A}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}' = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
 
 > **NOTE:**
 >
@@ -838,22 +886,22 @@ Last modified: 2026-11-10 15:49:52 (PST)
 > &= \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 > \end{aligned}$$
 >
-> for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, so $\mathbf{A}$ and $\mathbf{A}'$ are both matrices ([Definition 19](#def-matrix-of-linear-map)) of the linear map $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ (linear by [Theorem 12](#thm-matrix-map-linear)), and the uniqueness in [Theorem 14](#thm-linear-map-matrix) gives $\mathbf{A}' = \mathbf{A}$.
+> for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, so $\mathbf{A}$ and $\mathbf{A}'$ are both matrices ([Definition 21](#def-matrix-of-linear-map)) of the linear map $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ (linear by [Theorem 12](#thm-matrix-map-linear)), and the uniqueness in [Theorem 14](#thm-linear-map-matrix) gives $\mathbf{A}' = \mathbf{A}$.
 
 > **NOTE:**
 >
-> *Remark 7* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 17](#def-linear-map), so by [Theorem 16](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-exponentials.llms.md#def-affine-function) $a x + b$ versus [linear](algebra-exponentials.llms.md#def-linear-function) $a x$ on the algebra page. (The algebra page writes these as $m x + b$ and $m x$; here $m$ already names the number of outputs.)
+> *Remark 7* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 19](#def-linear-map), so by [Theorem 16](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-exponentials.llms.md#def-affine-function) $a x + b$ versus [linear](algebra-exponentials.llms.md#def-linear-function) $a x$ on the algebra page. (The algebra page writes these as $m x + b$ and $m x$; here $m$ already names the number of outputs.)
 >
-> Machine learning and statistics often call any function of the form [Equation 1](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset $b$ the bias (machine learning) or the intercept (statistics), as [Definition 21](#def-affine-map) notes. A model with an intercept is affine in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ but linear in its coefficients $(b, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})$, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: $w_1 x + w_2 x^2 + b$ is not affine in $x$, but it is linear in $(b, w_1, w_2)$. Separately, the affine function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ is a linear function of the augmented vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}$ ([Definition 23](#def-augmented-vector)), with $b$ as the coefficient on its first entry.
+> Machine learning and statistics often call any function of the form [Equation 1](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset $b$ the bias (machine learning) or the intercept (statistics), as [Definition 23](#def-affine-map) notes. A model with an intercept is affine in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ but linear in its coefficients $(b, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})$, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: $w_1 x + w_2 x^2 + b$ is not affine in $x$, but it is linear in $(b, w_1, w_2)$. Separately, the affine function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ is a linear function of the augmented vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}$ ([Definition 25](#def-augmented-vector)), with $b$ as the coefficient on its first entry.
 
 > **TIP:**
 >
-> - Zhou [\[14\]](#ref-zhou2024matrix), sections 6 (“Linear functions and operators”; see [Definition 18](#def-linear-operator)) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as [Theorem 14](#thm-linear-map-matrix), and that every affine function has the form $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. It defines “affine” differently, by $f(\alpha\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \beta\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ whenever $\alpha+ \beta= 1$, and shows that this condition holds exactly for the maps $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, so the two definitions agree.
+> - Zhou [\[14\]](#ref-zhou2024matrix), sections 6 (“Linear functions and operators”; see [Definition 20](#def-linear-operator)) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as [Theorem 14](#thm-linear-map-matrix), and that every affine function has the form $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. It defines “affine” differently, by $f(\alpha\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \beta\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \alpha f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + \beta f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ whenever $\alpha+ \beta= 1$, and shows that this condition holds exactly for the maps $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, so the two definitions agree.
 > - Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the [first-order Taylor approximation](calculus-derivatives.llms.md#def-linear-approximation) as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.
 
 > **NOTE:**
 >
-> **Definition 24 (Hyperplane)** A **hyperplane** [\[16\]](#ref-wikipedia_hyperplane) in $\mathbb{R}^p$ is the set of points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ satisfying
+> **Definition 26 (Hyperplane)** A **hyperplane** [\[16\]](#ref-wikipedia_hyperplane) in $\mathbb{R}^p$ is the set of points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ satisfying
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0$$
 >
@@ -861,11 +909,11 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Definition 25 (Normal vector of a hyperplane)** In [Definition 24](#def-hyperplane), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is a **normal vector** [\[17\]](#ref-wikipedia_normal_geometry) of the hyperplane.
+> **Definition 27 (Normal vector of a hyperplane)** In [Definition 26](#def-hyperplane), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is a **normal vector** [\[17\]](#ref-wikipedia_normal_geometry) of the hyperplane.
 
 > **NOTE:**
 >
-> **Example 21 (A line in** $\mathbb{R}^2$, and why the normal vector must be nonzero)  
+> **Example 23 (A line in** $\mathbb{R}^2$, and why the normal vector must be nonzero)  
 >
 > - With $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1)$ and $b = -1$, the hyperplane in $\mathbb{R}^2$ is the line $x_1 + x_2 - 1 = 0$. The point $(1, 0)$ is on it, since $1 + 0 - 1 = 0$; the point $(1, 1)$ is not, since $1 + 1 - 1 = 1 > 0$, so it lies in the half-space where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b > 0$.
 > - With $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, the equation reads $b = 0$: if $b \ne 0$ no point satisfies it, and if $b = 0$ every point does, so the set is empty or all of $\mathbb{R}^2$, not a line. That degenerate case is why the definition requires $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
@@ -1026,7 +1074,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Exercise 4 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 21](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 17](#def-linear-map)).
+> **Exercise 4 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 23](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 19](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -1153,7 +1201,7 @@ Last modified: 2026-11-10 15:49:52 (PST)
 
 > **NOTE:**
 >
-> **Example 22 (Two ways to write the same number)** Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (3, -1)$ and $\mathbf{M} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$. Then $\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, -3)$, so
+> **Example 24 (Two ways to write the same number)** Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (3, -1)$ and $\mathbf{M} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$. Then $\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, -3)$, so
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 1 \cdot 1 + 2 \cdot (-3) = -5.$$
 >
@@ -1181,15 +1229,17 @@ Last modified: 2026-11-10 15:49:52 (PST)
 - [Definition 14 (Identity matrix)](#def-identity-matrix)
 - [Definition 15 (Matrix-vector multiplication)](#def-matvec-mult)
 - [Definition 16 (Linear system, system of linear equations)](#def-linear-system)
-- [Definition 17 (Linear map, linear transformation, linear function)](#def-linear-map)
-- [Definition 18 (Linear operator)](#def-linear-operator)
-- [Definition 19 (Matrix of a linear map)](#def-matrix-of-linear-map)
-- [Definition 20 (Translation)](#def-translation)
-- [Definition 21](#def-affine-map)
-- [Definition 22 (Offset of an affine map, intercept, bias)](#def-affine-offset)
-- [Definition 23 (Augmented vector)](#def-augmented-vector)
-- [Definition 24 (Hyperplane)](#def-hyperplane)
-- [Definition 25 (Normal vector of a hyperplane)](#def-normal-vector)
+- [Definition 17 (Additive function)](#def-additive-function)
+- [Definition 18 (Homogeneous function)](#def-homogeneous-function)
+- [Definition 19 (Linear map, linear transformation, linear function)](#def-linear-map)
+- [Definition 20 (Linear operator)](#def-linear-operator)
+- [Definition 21 (Matrix of a linear map)](#def-matrix-of-linear-map)
+- [Definition 22 (Translation)](#def-translation)
+- [Definition 23](#def-affine-map)
+- [Definition 24 (Offset of an affine map, intercept, bias)](#def-affine-offset)
+- [Definition 25 (Augmented vector)](#def-augmented-vector)
+- [Definition 26 (Hyperplane)](#def-hyperplane)
+- [Definition 27 (Normal vector of a hyperplane)](#def-normal-vector)
 
 Back to top
 

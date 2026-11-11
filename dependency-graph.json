@@ -4517,6 +4517,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-additive-function",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-additive-function",
+   "kind": "def",
+   "title": "Additive function",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-affine-map",
    "site": "mds",
    "page": "linear-algebra",
@@ -4955,6 +4964,15 @@
    "div": "def-hilbert-space",
    "kind": "def",
    "title": "Hilbert space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra#def-homogeneous-function",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-homogeneous-function",
+   "kind": "def",
+   "title": "Homogeneous function",
    "external": false
   },
   {
@@ -7991,6 +8009,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-matrices#def-additive-function",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "def-additive-function",
+   "kind": "def",
+   "title": "Additive function",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-matrices#def-affine-map",
    "site": "mds",
    "page": "linear-algebra-matrices",
@@ -8024,6 +8051,15 @@
    "div": "def-diagonal-entry",
    "kind": "def",
    "title": "Diagonal entry",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrices#def-homogeneous-function",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "def-homogeneous-function",
+   "kind": "def",
+   "title": "Homogeneous function",
    "external": false
   },
   {
@@ -15201,6 +15237,18 @@
    "mds/linear-algebra#thm-subspace-equal-dim"
   ],
   [
+   "mds/linear-algebra#def-additive-function",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra#def-additive-function",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra#def-additive-function",
+   "mds/linear-algebra-vectors#def-vector-addition"
+  ],
+  [
    "mds/linear-algebra#def-affine-map",
    "mcs/functions#def-composition"
   ],
@@ -15445,6 +15493,18 @@
    "mds/linear-algebra-inner-products#def-inner-product-space"
   ],
   [
+   "mds/linear-algebra#def-homogeneous-function",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra#def-homogeneous-function",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra#def-homogeneous-function",
+   "mds/linear-algebra#def-scalar-mult"
+  ],
+  [
    "mds/linear-algebra#def-identity-matrix",
    "mds/linear-algebra#def-main-diagonal"
   ],
@@ -15551,6 +15611,14 @@
   [
    "mds/linear-algebra#def-linear-map",
    "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra#def-linear-map",
+   "mds/linear-algebra#def-additive-function"
+  ],
+  [
+   "mds/linear-algebra#def-linear-map",
+   "mds/linear-algebra#def-homogeneous-function"
   ],
   [
    "mds/linear-algebra#def-linear-operator",
@@ -19113,6 +19181,18 @@
    "mds/linear-algebra-matrices#thm-matrix-map-linear"
   ],
   [
+   "mds/linear-algebra-matrices#def-additive-function",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-additive-function",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-additive-function",
+   "mds/linear-algebra-vectors#def-vector-addition"
+  ],
+  [
    "mds/linear-algebra-matrices#def-affine-map",
    "mcs/functions#def-composition"
   ],
@@ -19137,12 +19217,32 @@
    "mds/linear-algebra-matrices#def-main-diagonal"
   ],
   [
+   "mds/linear-algebra-matrices#def-homogeneous-function",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-homogeneous-function",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-homogeneous-function",
+   "mds/linear-algebra-matrices#def-scalar-mult"
+  ],
+  [
    "mds/linear-algebra-matrices#def-identity-matrix",
    "mds/linear-algebra-matrices#def-main-diagonal"
   ],
   [
    "mds/linear-algebra-matrices#def-linear-map",
    "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-linear-map",
+   "mds/linear-algebra-matrices#def-additive-function"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-linear-map",
+   "mds/linear-algebra-matrices#def-homogeneous-function"
   ],
   [
    "mds/linear-algebra-matrices#def-linear-operator",
