@@ -34,6 +34,26 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_thm-open-ball-convex.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-convex-on.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-convex-on.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-convex-at.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-convex-at.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-convex-max.qmd >}}
 
 {{< slidebreak >}}
