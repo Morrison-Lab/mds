@@ -1,7 +1,7 @@
 :::{#thm-newton-model}
 #### The Newton step minimizes the quadratic model
 
-Let $\quadmodel$ be the quadratic model of $f$ at $\vx$ (@def-quadratic-model),
+Let $\quadmodel$ be the [quadratic model](#def-quadratic-model) of $f$ at $\vx$,
 with $\matr{H} = \matr{H}_f(\vx)$ [positive definite](linear-algebra.qmd#def-positive-definite).
 Its unique minimizer is the Newton step $\stepvec^* = -\matr{H}^{-1} \vecf{g}$.
 
