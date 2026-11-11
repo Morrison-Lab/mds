@@ -18,7 +18,8 @@ Is $\vx$ a [solution of $\matr{A}\vx = \vecf{b}$](#def-linear-system)?
 ::: {.callout-tip}
 #### Hint
 
-Compute $\matr{A}\vx$ with @def-matvec-mult and compare it with $\vecf{b}$,
+Compute $\matr{A}\vx$ with @def-matvec-mult.
+Then compare it with $\vecf{b}$,
 as in @exm-linear-system.
 
 :::

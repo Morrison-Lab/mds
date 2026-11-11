@@ -1,9 +1,12 @@
 :::{#sol-identity-matrix-shape}
 
 No.
-Every [identity matrix](#def-identity-matrix) $\matr{I}_p$ is $p \times p$, so it is [square](#def-square-matrix).
-$\matr{J}$ is $2 \times 3$, which is not square,
-so $\matr{J}$ is not an identity matrix,
-even though its [main diagonal](#def-main-diagonal) holds ones and its other entries are zeros.
+Every [identity matrix](#def-identity-matrix) $\matr{I}_p$ is $p \times p$,
+so it is [square](#def-square-matrix).
+$\matr{J}$ is $2 \times 3$,
+so it is not square.
+Therefore $\matr{J}$ is not an identity matrix,
+even though its [main diagonal](#def-main-diagonal) holds ones
+and its other entries are zeros.
 
 :::
