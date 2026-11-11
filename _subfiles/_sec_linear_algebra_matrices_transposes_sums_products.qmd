@@ -14,7 +14,6 @@
 
 {{< include mds/_subfiles/linear-algebra/_sol-transpose-product-practice.qmd >}}
 
-
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-scalar-transpose.qmd >}}

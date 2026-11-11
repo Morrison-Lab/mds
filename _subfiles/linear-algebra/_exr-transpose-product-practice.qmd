@@ -1,11 +1,12 @@
 :::{#exr-transpose-product-practice}
-#### Transposing a product without reversing the order
+#### The order of the factors in a transposed square product
 
-@thm-transpose-product says that the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) reverses the order of the factors.
-A common slip keeps the original order instead,
-writing $\tp{\matr{A}}\tp{\matr{B}}$ for $\tp{(\matr{A}\matr{B})}$.
-For two [square matrices](#def-square-matrix) of the same size both products are defined,
-so the shapes do not catch the slip.
+@rem-transpose-product-order shows that,
+for factors that are not [square](#def-square-matrix),
+keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product.
+For two [square matrices](#def-square-matrix) of the same size,
+both $\tp{\matr{A}}\tp{\matr{B}}$ and $\tp{\matr{B}}\tp{\matr{A}}$ are defined,
+so the shapes alone cannot settle which order gives $\tp{(\matr{A}\matr{B})}$.
 Let
 
 $$
