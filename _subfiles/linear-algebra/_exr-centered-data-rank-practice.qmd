@@ -1,0 +1,18 @@
+:::{#exr-centered-data-rank-practice}
+#### Finding how large the rank of centered data can be
+
+Centering a data [matrix](linear-algebra-matrices.qmd#def-matrix) subtracts the [mean](linear-algebra-vectors.qmd#def-mean) row from every row,
+and @thm-centered-data-rank shows how large the [rank](linear-algebra-subspaces.qmd#def-rank) of the result can be.
+Suppose that $\mX$ holds $3$ observations of $4$ features, as a $3 \times 4$ matrix,
+and $\mX_c$ is its centered version.
+
+Find the number that, by @thm-centered-data-rank, $\rankf{\mX_c}$ cannot exceed.
+
+::: {.callout-tip}
+#### Hint
+
+Compare the number from @thm-centered-data-rank with the one from @cor-rank-bound.
+
+:::
+
+:::

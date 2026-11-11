@@ -1,0 +1,18 @@
+:::{#exr-affine-subspace-practice}
+#### Writing a line as an affine subspace
+
+A line such as $y = 2x + 3$ in $\reals^2$ misses the origin,
+so it is not a [subspace](linear-algebra-subspaces.qmd#def-subspace),
+but it is an [affine subspace](#def-affine-subspace).
+Let $\mathcal{T} = \cb{(x, 2x + 3) : x \in \reals}$.
+
+Find a vector $\vecf{x}_0$ and a subspace $\mathcal{S}$ with $\mathcal{T} = \cb{\vecf{x}_0 + \vecf{s} : \vecf{s} \in \mathcal{S}}$.
+
+::: {.callout-tip}
+#### Hint
+
+Take $\vecf{x}_0$ to be the point of $\mathcal{T}$ with $x = 0$, and see what is left of $(x, 2x + 3)$ once you subtract it.
+
+:::
+
+:::

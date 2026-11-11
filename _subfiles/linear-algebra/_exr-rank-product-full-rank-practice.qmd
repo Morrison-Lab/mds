@@ -1,0 +1,23 @@
+:::{#exr-rank-product-full-rank-practice}
+#### Finding the rank of a product with a full-column-rank factor
+
+@cor-rank-product-full-rank says that a left factor with [full column rank](linear-algebra-subspaces.qmd#def-full-column-rank)
+keeps the [rank](linear-algebra-subspaces.qmd#def-rank) of the right factor.
+Let
+
+$$
+\matr{A} = \sbmat{1 & 0 \\ 0 & 1 \\ 1 & 1},
+\qquad
+\matr{B} = \sbmat{1 & 2 \\ 2 & 4}.
+$$
+
+Find $\rankf{\matr{A}\matr{B}}$ without multiplying.
+
+::: {.callout-tip}
+#### Hint
+
+Check that $\matr{A}$ has [full column rank](linear-algebra-subspaces.qmd#def-full-column-rank), and find $\rankf{\matr{B}}$.
+
+:::
+
+:::

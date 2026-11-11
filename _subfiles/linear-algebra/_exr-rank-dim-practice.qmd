@@ -1,0 +1,21 @@
+:::{#exr-rank-dim-practice}
+#### Finding a rank from the column space
+
+@thm-rank-dim reads the [rank](linear-algebra-subspaces.qmd#def-rank) of a [matrix](linear-algebra-matrices.qmd#def-matrix)
+off the [dimension](linear-algebra-subspaces.qmd#def-dimension) of its [column space](#def-column-space).
+Let
+
+$$
+\matr{A} = \sbmat{1 & 2 \\ 2 & 4 \\ 3 & 6}.
+$$
+
+Find $\rankf{\matr{A}}$ by finding $\dim\paren{\mathcal{C}(\matr{A})}$.
+
+::: {.callout-tip}
+#### Hint
+
+In $\matr{A}$, the second column is a multiple of the first.
+
+:::
+
+:::

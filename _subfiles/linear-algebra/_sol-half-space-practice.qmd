@@ -1,0 +1,6 @@
+:::{#sol-half-space-practice}
+
+At $(0, 0)$, $\dprod{\vec{w}}{\vx} + b = 0 + 0 - 1 = -1 < 0$,
+so $(0, 0)$ is in the [open half-space](#def-half-space) $\mathcal{H}^-$.
+
+:::

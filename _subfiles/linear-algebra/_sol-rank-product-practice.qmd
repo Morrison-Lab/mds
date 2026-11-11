@@ -1,0 +1,9 @@
+:::{#sol-rank-product-practice}
+
+[Columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column) are $(1, 0)$ and $\vzero_2$,
+so its [column space](#def-column-space) is $\operatorname{span}\cb{(1, 0)}$,
+and @thm-rank-dim gives $\rankf{\matr{A}} = 1$.
+By @thm-rank-product, $\rankf{\matr{A}\matr{B}} \le 1$.
+Indeed, $\matr{A}\matr{B} = \sbmat{2 & 3 \\ 0 & 0}$, which has [rank](linear-algebra-subspaces.qmd#def-rank) $1$.
+
+:::

@@ -1,0 +1,21 @@
+:::{#exr-rank-product-right-practice}
+#### Finding how large the rank of a product can be from its right factor
+
+@thm-rank-product-right shows how large the [rank](linear-algebra-subspaces.qmd#def-rank) of a [matrix product](linear-algebra-matrices.qmd#def-matrix-mult)
+can be, given the rank of its right factor.
+Let $\matr{A}$ be any $3 \times 2$ [matrix](linear-algebra-matrices.qmd#def-matrix), and let
+
+$$
+\matr{B} = \sbmat{1 & 1 \\ 1 & 1}.
+$$
+
+Find the number that, by @thm-rank-product-right, $\rankf{\matr{A}\matr{B}}$ cannot exceed, whatever $\matr{A}$ is.
+
+::: {.callout-tip}
+#### Hint
+
+Find $\rankf{\matr{B}}$ first.
+
+:::
+
+:::

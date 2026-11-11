@@ -1,0 +1,14 @@
+:::{#sol-affine-subspace-practice}
+
+Take $\vecf{x}_0 = (0, 3)$,
+and let $\mathcal{S} = \operatorname{span}\cb{(1, 2)}$ be the [span](linear-algebra-subspaces.qmd#def-span) of $(1, 2)$.
+For any $c \in \reals$,
+
+$$
+(0, 3) + c\,(1, 2) = (c, 2c + 3),
+$$
+
+so every $c \in \reals$ gives a point $(c, 2c + 3)$ of $\mathcal{T}$,
+and every point of $\mathcal{T}$ arises this way.
+
+:::
