@@ -1,0 +1,13 @@
+:::{#rem-newton-root-vs-model}
+#### Two ways to read the Newton step
+
+@thm-newton-model reads the [Newton step](#def-newton-step) as the [minimizer](algebra.qmd#def-global-minimizer) of the [quadratic model](#def-quadratic-model),
+which needs the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}$ to be [positive definite](linear-algebra-special-matrices.qmd#def-positive-definite).
+@thm-newton-linearized-gradient reads it as the root of the [linear approximation of the gradient](#def-gradient-linear-approximation),
+which needs only $\matr{H}$ [invertible](linear-algebra-special-matrices.qmd#def-matrix-inverse).
+[Newton's method](#def-newton-method) solves $\deriv{\vx} f(\vx) = \vzero_{p \times 1}$
+by replacing the [gradient](vector-calculus.qmd#def-vector-derivative) with [its linear approximation](#def-gradient-linear-approximation) at each [iterate](#def-iterate),
+so it looks for a [stationary point](#def-stationary-point) of any kind,
+not only a minimizer.
+
+:::

@@ -1,0 +1,25 @@
+:::{#exm-not-gradient-linear-approximation}
+#### The tangent line to $f$ is not the linear approximation of the gradient
+
+For the [cubic](algebra.qmd#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ at $x = -2.5$ (@exm-gradient-linear-approximation),
+the [tangent line](calculus-derivatives.qmd#def-tangent-line) to $f$ itself is
+
+$$
+\ba
+f(-2.5) + f'(-2.5)\,\step
+&= \paren{\tfrac{1}{3} (-2.5)^3 - 4 (-2.5)} + \paren{(-2.5)^2 - 4} \step
+&& \text{(substitute } f \text{ and } f' \text{)}
+\\
+&= \tfrac{115}{24} + 2.25\,\step.
+&& \text{(arithmetic)}
+\ea
+$$ {#eq-not-gradient-linear-approximation}
+
+It is not the [linear approximation of the gradient](#def-gradient-linear-approximation):
+it approximates $f$, not $f'$.
+Its root, $\step = -\tfrac{115}{54}$, is a step toward a zero of $f$,
+not toward a [stationary point](#def-stationary-point) of $f$.
+
+<!-- no-figure: a graph of the tangent line to f would not show the contrast, which is between the function approximated (f, not f') and not in the shape of the line -->
+
+:::

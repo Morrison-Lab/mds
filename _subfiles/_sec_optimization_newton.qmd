@@ -38,6 +38,34 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-gradient-linear-approximation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-gradient-linear-approximation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-not-gradient-linear-approximation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_lem-gradient-linear-approximation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-newton-linearized-gradient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-newton-linearized-gradient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_rem-newton-root-vs-model.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-quadratic-convergence.qmd >}}
 
 {{< slidebreak >}}

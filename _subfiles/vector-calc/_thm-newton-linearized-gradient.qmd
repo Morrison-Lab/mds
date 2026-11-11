@@ -1,0 +1,38 @@
+:::{#thm-newton-linearized-gradient}
+#### The Newton step is the root of the linear approximation of the gradient
+
+Let $f$, $\vx$, $\vecf{g}$ and the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}$ be as in @lem-gradient-linear-approximation,
+with $\matr{H}$ [invertible](linear-algebra-special-matrices.qmd#def-matrix-inverse).
+The only step $\stepvec$ at which the [linear approximation of the gradient](#def-gradient-linear-approximation) is zero
+is the [Newton step](#def-newton-step):
+
+$$
+\vecf{\ell}(\stepvec) = \vzero_{p \times 1}
+\iff
+\stepvec = -\matr{H}^{-1} \vecf{g}.
+$$ {#eq-newton-linearized-gradient}
+
+:::
+
+::: proof
+
+By @lem-gradient-linear-approximation,
+$\vecf{\ell}(\stepvec) = \vzero_{p \times 1}$ exactly when
+
+$$
+\ba
+\vzero_{p \times 1} &= \vecf{g} + \matr{H} \stepvec
+&& \text{(@eq-gradient-linear-approximation-hessian)}
+\\
+-\vecf{g} &= \matr{H} \stepvec
+&& \text{(subtract } \vecf{g} \text{ from both sides)}
+\\
+-\matr{H}^{-1} \vecf{g} &= \stepvec.
+&& \text{(multiply both sides by } \matr{H}^{-1} \text{ on the left)}
+\ea
+$$ {#eq-newton-linearized-gradient-solve}
+
+Each line implies the next and, because $\matr{H}$ is [invertible](linear-algebra-special-matrices.qmd#def-matrix-inverse), the one before,
+so $\stepvec = -\matr{H}^{-1} \vecf{g}$ is the only solution.
+
+:::

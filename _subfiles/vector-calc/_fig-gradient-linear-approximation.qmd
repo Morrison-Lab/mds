@@ -1,0 +1,81 @@
+::: {#fig-gradient-linear-approximation}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: gradient-linear-approximation-r
+#| fig-alt: >-
+#|   The derivative x squared minus 4 for x from minus 3 to minus 1.5 (blue),
+#|   its tangent line at minus 2.5 (dashed vermilion, with a circle at the
+#|   point of tangency, height 2.25) and a horizontal line at 0. The tangent
+#|   line crosses 0 at minus 2.05 (vermilion triangle), near the root minus 2
+#|   of the derivative (blue square).
+#| fig-height: 4
+#| fig-width: 6
+gla_x <- seq(-3, -1.5, length.out = 301)
+gla_deriv <- gla_x^2 - 4
+gla_line <- 2.25 - 5 * (gla_x + 2.5)
+gla_curve <- tibble::tibble(x = gla_x, y = gla_deriv)
+gla_tangent <- tibble::tibble(x = gla_x, y = gla_line)
+gla_start <- tibble::tibble(x = -2.5, y = 2.25)
+gla_step <- tibble::tibble(x = -2.05, y = 0)
+gla_root <- tibble::tibble(x = -2, y = 0)
+gla_ylim <- c(-2, 5)
+gla_curve |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x, y = y) +
+  ggplot2::geom_hline(yintercept = 0) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_line(
+    data = gla_tangent, colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::geom_point(data = gla_start, colour = "#D55E00", size = 3) +
+  ggplot2::geom_point(
+    data = gla_step, colour = "#D55E00", size = 3, shape = 17
+  ) +
+  ggplot2::geom_point(
+    data = gla_root, colour = "#0072B2", size = 3, shape = 15
+  ) +
+  ggplot2::coord_cartesian(ylim = gla_ylim) +
+  ggplot2::labs(x = "x", y = "derivative")
+```
+
+### Python
+
+```{python}
+#| label: gradient-linear-approximation-python
+#| fig-alt: >-
+#|   The derivative x squared minus 4 for x from minus 3 to minus 1.5 (blue),
+#|   its tangent line at minus 2.5 (dashed vermilion, with a circle at the
+#|   point of tangency, height 2.25) and a horizontal line at 0. The tangent
+#|   line crosses 0 at minus 2.05 (vermilion triangle), near the root minus 2
+#|   of the derivative (blue square).
+#| fig-height: 4
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+gla_x = np.linspace(-3, -1.5, 301)
+fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
+ax.axhline(0, color="black", linewidth=0.8);
+ax.plot(gla_x, gla_x**2 - 4, color="#0072B2");
+ax.plot(gla_x, 2.25 - 5 * (gla_x + 2.5), "--", color="#D55E00");
+ax.plot(-2.5, 2.25, "o", color="#D55E00", markersize=8);
+ax.plot(-2.05, 0, "^", color="#D55E00", markersize=8);
+ax.plot(-2, 0, "s", color="#0072B2", markersize=8);
+ax.set_ylim(-2, 5);
+ax.set_xlabel("x");
+ax.set_ylabel("derivative");
+plt.show();
+```
+
+:::
+
+The [derivative](calculus-derivatives.qmd#def-derivative) $f'(x) = x^2 - 4$ of the [cubic](algebra.qmd#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ (blue)
+and [its linear approximation](#def-gradient-linear-approximation) at $x = -2.5$ (dashed, @eq-gradient-linear-approximation-cubic).
+The [tangent line](calculus-derivatives.qmd#def-tangent-line) crosses $0$ at $-2.05$ (triangle marker), the next Newton [iterate](#def-iterate),
+near the root $-2$ of $f'$ (square marker). <!-- check-term-links: allow: "square" names the marker shape, not the algebraic term -->
+
+:::

@@ -1,0 +1,44 @@
+:::{#lem-gradient-linear-approximation}
+#### The linear approximation of the gradient uses the Hessian
+
+Let $f$, $\vx$, the [gradient](vector-calculus.qmd#def-vector-derivative) $\vecf{g}$ and the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}$ be as in the [quadratic model](#def-quadratic-model),
+and let the [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative) of $f$ be [continuous at](vector-calculus.qmd#def-continuous-several) every point of an [open ball](vector-calculus.qmd#def-ball) around $\vx$.
+Then the [linear approximation of the gradient](#def-gradient-linear-approximation) of $f$ at $\vx$ is the gradient plus the Hessian times the step:
+
+$$
+\vecf{\ell}(\stepvec) = \vecf{g} + \matr{H} \stepvec.
+$$ {#eq-gradient-linear-approximation-hessian}
+
+:::
+
+::: proof
+
+For each $i$ and $j$,
+the $i$th entry of $\deriv{\vx} \paren{\deriv{x_j} f(\vx)}$ is $\deriv{x_i} \paren{\deriv{x_j} f(\vx)}$,
+which is $\sb{\matr{H}}_{ij}$ by the definitions of the [Hessian](vector-calculus.qmd#def-hessian) and of the [derivative of a vector-valued function](vector-calculus.qmd#def-vector-valued-derivative).
+So, for each $j$,
+
+$$
+\ba
+\sb{\vecf{\ell}(\stepvec)}_j
+&= \deriv{x_j} f(\vx) + \sum_{i=1}^{p} \sb{\matr{H}}_{ij}\,\step_i
+&& \text{(@eq-gradient-linear-approximation, as a sum)}
+\\
+&= \sb{\vecf{g}}_j + \sum_{i=1}^{p} \sb{\matr{H}}_{ij}\,\step_i
+&& \text{(definition of } \vecf{g} \text{)}
+\\
+&= \sb{\vecf{g}}_j + \sum_{i=1}^{p} \sb{\matr{H}}_{ji}\,\step_i
+&& \text{(} \matr{H} \text{ is symmetric)}
+\\
+&= \sb{\vecf{g}}_j + \sb{\matr{H} \stepvec}_j
+&& \text{(matrix-vector product)}
+\\
+&= \sb{\vecf{g} + \matr{H} \stepvec}_j.
+&& \text{(vector addition)}
+\ea
+$$ {#eq-gradient-linear-approximation-entry}
+
+The third line uses the [symmetry of the Hessian](vector-calculus.qmd#thm-hessian-symmetric),
+whose hypothesis the lemma assumes.
+
+:::
