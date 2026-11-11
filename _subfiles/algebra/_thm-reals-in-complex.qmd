@@ -8,9 +8,9 @@ so $\reals$ is a subset of $\bbC$.
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

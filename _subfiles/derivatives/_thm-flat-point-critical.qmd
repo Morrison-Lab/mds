@@ -5,9 +5,9 @@ If $c$ is a flat point of $f$ (@def-flat-point), then $c$ is a critical point of
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

@@ -5,9 +5,9 @@ $$(-i)^2 = -1.$$
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

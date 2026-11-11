@@ -6,9 +6,9 @@ then $\matr{G}$ is a generalized inverse of $\matr{A}$ (@def-generalized-inverse
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

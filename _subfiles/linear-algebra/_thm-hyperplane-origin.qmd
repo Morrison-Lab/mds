@@ -12,9 +12,9 @@ Let $\mathcal{H} = \cb{\vx \in \reals^p : \dprod{\vec{w}}{\vx} + b = 0}$ be a hy
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

@@ -11,9 +11,9 @@ Let $\vx = (x_1, \ldots, x_p) \in \reals^p$.
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 
