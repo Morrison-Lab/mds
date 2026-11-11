@@ -1,8 +1,9 @@
 :::{#sol-zero-matrix-practice}
 
 No.
-$\matr{Z}$ has three [row](#def-matrix-row)s and two [column](#def-matrix-column)s, so it is $3 \times 2$,
-while $\matr{0}_{2 \times 3}$ is $2 \times 3$.
+$\matr{Z}$ has three [row](#def-matrix-row)s and two [column](#def-matrix-column)s,
+so it is $3 \times 2$.
+But $\matr{0}_{2 \times 3}$ is $2 \times 3$.
 Two [matrices](#def-matrix) of different shapes are not [equal](#def-matrix-equality),
 even when every entry of both is $0$.
 Instead, $\matr{Z}$ is the [zero matrix](#def-zero-matrix) $\matr{0}_{3 \times 2}$.
