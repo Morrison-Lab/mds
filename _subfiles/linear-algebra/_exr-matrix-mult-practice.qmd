@@ -1,8 +1,11 @@
 :::{#exr-matrix-mult-practice}
 #### Computing the product of a $2 \times 3$ and a $3 \times 2$ matrix
 
-The [product](#def-matrix-mult) of two [matrices](#def-matrix) is defined only when the first has as many [column](#def-matrix-column)s as the second has [row](#def-matrix-row)s,
-and each entry of the product combines one [row of the first factor](#def-matrix-row) with one [column of the second](#def-matrix-column).
+The [product](#def-matrix-mult) of two [matrices](#def-matrix) is defined
+only when the first has as many [column](#def-matrix-column)s
+as the second has [row](#def-matrix-row)s.
+Each entry of the product combines one [row of the first factor](#def-matrix-row)
+with one [column of the second](#def-matrix-column).
 Let
 
 $$
