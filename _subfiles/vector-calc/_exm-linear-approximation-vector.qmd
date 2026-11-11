@@ -48,9 +48,12 @@ f(\vcoef + \stepvec)
 \ea
 $$
 
-The approximation misses by $0.05$, which is $5 \step_2^2$,
+The approximation misses by $0.05$,
+which is $5 \step_2^2$,
 the second-order term of $f$ that the approximation leaves out.
-That term is never negative and is zero only when $\step_2 = 0$,
+That term is never negative,
+and is zero
+only when $\step_2 = 0$,
 so the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the approximation in @fig-linear-approximation-vector
 is a plane that touches the graph of $f$ along the line $\coef{2} = 2$
 and lies below it everywhere else.
