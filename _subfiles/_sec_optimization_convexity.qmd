@@ -30,6 +30,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-convex-hull.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-convex-hull.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-strictly-convex.qmd >}}
 
 {{< slidebreak >}}
