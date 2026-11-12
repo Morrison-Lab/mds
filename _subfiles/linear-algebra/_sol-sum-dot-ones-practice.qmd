@@ -1,9 +1,0 @@
-:::{#sol-sum-dot-ones-practice}
-
-By @thm-sum-dot-ones,
-
-$$
-\v1 \cdot \vx = \sumof{\vx} = 4 + (-2) + 7 + 1 = 10.
-$$
-
-:::
