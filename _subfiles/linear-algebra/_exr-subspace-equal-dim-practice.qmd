@@ -1,7 +1,7 @@
 :::{#exr-subspace-equal-dim-practice}
 #### Showing that a span of two vectors is all of $\reals^2$
 
-@thm-subspace-equal-dim shows that two [subspaces](#def-subspace) are equal
+@thm-subspace-equal-dim shows that two [subspaces](#def-subspace) coincide
 by comparing [dimensions](#def-dimension) instead of checking every vector.
 Let
 
@@ -9,7 +9,7 @@ $$
 \mathcal{T} = \operatorname{span}\cb{\tp{(1, 2)},\ \tp{(3, 1)}}.
 $$
 
-Is $\mathcal{T}$ equal to $\reals^2$?
+Is $\mathcal{T}$ all of $\reals^2$?
 
 ::: {.callout-tip}
 #### Hint

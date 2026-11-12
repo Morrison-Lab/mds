@@ -10,7 +10,7 @@ So they form a [basis](#def-basis) of $\mathcal{T}$,
 and $\dim(\mathcal{T}) = 2$.
 The [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector) $\vecf{e}_1, \vecf{e}_2$ form a basis of $\reals^2$,
 so $\dim(\reals^2) = 2$.
-Since $\mathcal{T} \subseteq \reals^2$ and the [dimensions](#def-dimension) are equal,
+Since $\mathcal{T} \subseteq \reals^2$ and the [dimensions](#def-dimension) agree,
 @thm-subspace-equal-dim gives $\mathcal{T} = \reals^2$.
 
 :::
