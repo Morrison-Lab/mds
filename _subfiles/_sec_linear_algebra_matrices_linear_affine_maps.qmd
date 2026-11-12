@@ -250,6 +250,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-normal-vector-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-normal-vector-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_fig-tilt-a-plane.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-tilt-a-plane-pdf.qmd >}}
