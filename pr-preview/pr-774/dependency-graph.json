@@ -5255,6 +5255,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-matrix-equality",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-matrix-equality",
+   "kind": "def",
+   "title": "Equal matrices",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-matrix-induced-inner-product",
    "site": "mds",
    "page": "linear-algebra",
@@ -8144,6 +8153,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-matrices#def-matrix-equality",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "def-matrix-equality",
+   "kind": "def",
+   "title": "Equal matrices",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-matrices#def-matrix-mult",
    "site": "mds",
    "page": "linear-algebra-matrices",
@@ -10808,6 +10826,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#cor-convex-iff-hessian",
+   "site": "mds",
+   "page": "optimization",
+   "div": "cor-convex-iff-hessian",
+   "kind": "cor",
+   "title": "Convex if and only if the Hessian is positive semidefinite",
+   "external": false
+  },
+  {
    "id": "mds/optimization#cor-convex-stationary",
    "site": "mds",
    "page": "optimization",
@@ -10913,6 +10940,42 @@
    "div": "def-constraints",
    "kind": "def",
    "title": "Constraints",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-convex-at",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-convex-at",
+   "kind": "def",
+   "title": "Function convex at a point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-convex-hull",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-convex-hull",
+   "kind": "def",
+   "title": "Convex hull, convex envelope",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-convex-on",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-convex-on",
+   "kind": "def",
+   "title": "Convex function on a set",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#def-convex-optimization-problem",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-convex-optimization-problem",
+   "kind": "def",
+   "title": "Convex optimization problem, convex problem",
    "external": false
   },
   {
@@ -11236,7 +11299,7 @@
    "page": "optimization",
    "div": "def-quadratic-model",
    "kind": "def",
-   "title": "Quadratic model, second-order Taylor polynomial",
+   "title": "Quadratic approximation, quadratic model, second-order Taylor polynomial",
    "external": false
   },
   {
@@ -11393,6 +11456,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#thm-concave-hessian",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-concave-hessian",
+   "kind": "thm",
+   "title": "Second-derivative test for concavity",
+   "external": false
+  },
+  {
    "id": "mds/optimization#thm-convex-first-order",
    "site": "mds",
    "page": "optimization",
@@ -11515,7 +11587,7 @@
    "page": "optimization",
    "div": "thm-newton-model",
    "kind": "thm",
-   "title": "The Newton step minimizes the quadratic model",
+   "title": "The Newton step minimizes the quadratic approximation",
    "external": false
   },
   {
@@ -11525,6 +11597,15 @@
    "div": "thm-newton-quadratic",
    "kind": "thm",
    "title": "Newton's method minimizes a quadratic in one step",
+   "external": false
+  },
+  {
+   "id": "mds/optimization#thm-open-ball-convex",
+   "site": "mds",
+   "page": "optimization",
+   "div": "thm-open-ball-convex",
+   "kind": "thm",
+   "title": "An open ball is convex",
    "external": false
   },
   {
@@ -11672,6 +11753,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization-convexity#cor-convex-iff-hessian",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "cor-convex-iff-hessian",
+   "kind": "cor",
+   "title": "Convex if and only if the Hessian is positive semidefinite",
+   "external": false
+  },
+  {
    "id": "mds/optimization-convexity#cor-convex-stationary",
    "site": "mds",
    "page": "optimization-convexity",
@@ -11696,6 +11786,42 @@
    "div": "def-concave",
    "kind": "def",
    "title": "Concave function",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-convex-at",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-convex-at",
+   "kind": "def",
+   "title": "Function convex at a point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-convex-hull",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-convex-hull",
+   "kind": "def",
+   "title": "Convex hull, convex envelope",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-convex-on",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-convex-on",
+   "kind": "def",
+   "title": "Convex function on a set",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-convex-optimization-problem",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-convex-optimization-problem",
+   "kind": "def",
+   "title": "Convex optimization problem, convex problem",
    "external": false
   },
   {
@@ -11750,6 +11876,15 @@
    "div": "def-tangent-plane",
    "kind": "def",
    "title": "Tangent plane",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-concave-hessian",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-concave-hessian",
+   "kind": "thm",
+   "title": "Second-derivative test for concavity",
    "external": false
   },
   {
@@ -11813,6 +11948,15 @@
    "div": "thm-exp-above-tangent",
    "kind": "thm",
    "title": "The exponential function lies above its tangent line at zero",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#thm-open-ball-convex",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "thm-open-ball-convex",
+   "kind": "thm",
+   "title": "An open ball is convex",
    "external": false
   },
   {
@@ -12253,7 +12397,7 @@
    "page": "optimization-newton",
    "div": "def-quadratic-model",
    "kind": "def",
-   "title": "Quadratic model, second-order Taylor polynomial",
+   "title": "Quadratic approximation, quadratic model, second-order Taylor polynomial",
    "external": false
   },
   {
@@ -12289,7 +12433,7 @@
    "page": "optimization-newton",
    "div": "thm-newton-model",
    "kind": "thm",
-   "title": "The Newton step minimizes the quadratic model",
+   "title": "The Newton step minimizes the quadratic approximation",
    "external": false
   },
   {
@@ -12470,6 +12614,15 @@
    "div": "def-level-set",
    "kind": "def",
    "title": "Level set",
+   "external": false
+  },
+  {
+   "id": "mds/vector-calculus#def-linear-approximation-vector",
+   "site": "mds",
+   "page": "vector-calculus",
+   "div": "def-linear-approximation-vector",
+   "kind": "def",
+   "title": "Linear approximation of a function of a vector, first-order Taylor approximation of a function of a vector",
    "external": false
   },
   {
@@ -12686,6 +12839,15 @@
    "div": "thm-hessian-symmetric",
    "kind": "thm",
    "title": "Symmetry of the Hessian",
+   "external": false
+  },
+  {
+   "id": "mds/vector-calculus#thm-level-set-points",
+   "site": "mds",
+   "page": "vector-calculus",
+   "div": "thm-level-set-points",
+   "kind": "thm",
+   "title": "A level set is the set of points where the function takes the value",
    "external": false
   },
   {
@@ -15729,6 +15891,10 @@
   [
    "mds/linear-algebra#def-matrix-condition-number",
    "mds/linear-algebra-subspaces#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra#def-matrix-equality",
+   "mds/linear-algebra#def-matrix"
   ],
   [
    "mds/linear-algebra#def-matrix-induced-inner-product",
@@ -19307,6 +19473,10 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
+   "mds/linear-algebra-matrices#def-matrix-equality",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra-matrices#def-matrix-of-linear-map",
    "mds/linear-algebra-matrices#thm-linear-map-matrix"
   ],
@@ -21579,6 +21749,38 @@
    "mds/measures-sigma-algebras#def-sigma-algebra"
   ],
   [
+   "mds/optimization#cor-convex-iff-hessian",
+   "mcs/proof-writing#def-iff"
+  ],
+  [
+   "mds/optimization#cor-convex-iff-hessian",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization#cor-convex-iff-hessian",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization#cor-convex-iff-hessian",
+   "mds/optimization#thm-convex-hessian"
+  ],
+  [
+   "mds/optimization#cor-convex-iff-hessian",
+   "mds/optimization#thm-convex-hessian-converse"
+  ],
+  [
+   "mds/optimization#cor-convex-iff-hessian",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization#cor-convex-iff-hessian",
+   "mds/vector-calculus#def-hessian"
+  ],
+  [
+   "mds/optimization#cor-convex-iff-hessian",
+   "mds/vector-calculus#def-second-partial-derivative"
+  ],
+  [
    "mds/optimization#cor-convex-stationary",
    "mds/algebra#def-global-minimizer"
   ],
@@ -21693,6 +21895,50 @@
   [
    "mds/optimization#def-constraints",
    "mds/optimization#def-feasible-set"
+  ],
+  [
+   "mds/optimization#def-convex-at",
+   "mds/optimization#def-convex-on"
+  ],
+  [
+   "mds/optimization#def-convex-at",
+   "mds/vector-calculus#def-ball"
+  ],
+  [
+   "mds/optimization#def-convex-hull",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/optimization#def-convex-hull",
+   "mds/optimization#def-convex-set"
+  ],
+  [
+   "mds/optimization#def-convex-on",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/optimization#def-convex-on",
+   "mds/optimization#def-convex-set"
+  ],
+  [
+   "mds/optimization#def-convex-optimization-problem",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization#def-convex-optimization-problem",
+   "mds/optimization#def-convex-set"
+  ],
+  [
+   "mds/optimization#def-convex-optimization-problem",
+   "mds/optimization-constrained#def-feasible-set"
+  ],
+  [
+   "mds/optimization#def-convex-optimization-problem",
+   "mds/optimization-constrained#def-minimization-problem"
+  ],
+  [
+   "mds/optimization#def-convex-optimization-problem",
+   "mds/optimization-constrained#def-objective-function"
   ],
   [
    "mds/optimization#def-cosine-decay",
@@ -22111,6 +22357,54 @@
    "mds/optimization#thm-gd-quadratic-error"
   ],
   [
+   "mds/optimization#thm-concave-hessian",
+   "mcs/proof-writing#def-iff"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/linear-algebra-special-matrices#def-positive-definite"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/optimization#cor-convex-iff-hessian"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/optimization#def-concave"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/optimization#def-strictly-concave"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/optimization#def-strictly-convex"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/optimization#thm-convex-hessian"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/vector-calculus#def-hessian"
+  ],
+  [
+   "mds/optimization#thm-concave-hessian",
+   "mds/vector-calculus#def-second-partial-derivative"
+  ],
+  [
    "mds/optimization#thm-convex-first-order",
    "mcs/functions#def-inner-function"
   ],
@@ -22455,6 +22749,22 @@
    "mds/vector-calculus#thm-hessian-quadratic"
   ],
   [
+   "mds/optimization#thm-open-ball-convex",
+   "mds/linear-algebra-inner-products#thm-norm-properties"
+  ],
+  [
+   "mds/optimization#thm-open-ball-convex",
+   "mds/linear-algebra-inner-products#thm-triangle-inequality"
+  ],
+  [
+   "mds/optimization#thm-open-ball-convex",
+   "mds/optimization#def-convex-set"
+  ],
+  [
+   "mds/optimization#thm-open-ball-convex",
+   "mds/vector-calculus#def-ball"
+  ],
+  [
    "mds/optimization#thm-qp-equality",
    "mds/linear-algebra#cor-inverse-symmetric"
   ],
@@ -22675,6 +22985,38 @@
    "mds/linear-algebra#thm-transpose-product"
   ],
   [
+   "mds/optimization-convexity#cor-convex-iff-hessian",
+   "mcs/proof-writing#def-iff"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-iff-hessian",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-iff-hessian",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-iff-hessian",
+   "mds/optimization-convexity#thm-convex-hessian"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-iff-hessian",
+   "mds/optimization-convexity#thm-convex-hessian-converse"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-iff-hessian",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-iff-hessian",
+   "mds/vector-calculus#def-hessian"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-iff-hessian",
+   "mds/vector-calculus#def-second-partial-derivative"
+  ],
+  [
    "mds/optimization-convexity#cor-convex-stationary",
    "mds/algebra#def-global-minimizer"
   ],
@@ -22695,6 +23037,50 @@
    "mds/algebra#def-convex-function"
   ],
   [
+   "mds/optimization-convexity#def-convex-at",
+   "mds/optimization-convexity#def-convex-on"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-at",
+   "mds/vector-calculus#def-ball"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-hull",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-hull",
+   "mds/optimization-convexity#def-convex-set"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-on",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-on",
+   "mds/optimization-convexity#def-convex-set"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-optimization-problem",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-optimization-problem",
+   "mds/optimization-constrained#def-feasible-set"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-optimization-problem",
+   "mds/optimization-constrained#def-minimization-problem"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-optimization-problem",
+   "mds/optimization-constrained#def-objective-function"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-optimization-problem",
+   "mds/optimization-convexity#def-convex-set"
+  ],
+  [
    "mds/optimization-convexity#def-epigraph",
    "mcs/functions#def-graph"
   ],
@@ -22713,6 +23099,54 @@
   [
    "mds/optimization-convexity#def-tangent-plane",
    "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mcs/proof-writing#def-iff"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/algebra-sums#def-convex-function"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/linear-algebra-special-matrices#def-positive-definite"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/optimization-convexity#cor-convex-iff-hessian"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/optimization-convexity#def-concave"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/optimization-convexity#def-strictly-concave"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/optimization-convexity#def-strictly-convex"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/optimization-convexity#thm-convex-hessian"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/vector-calculus#def-continuous-on"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/vector-calculus#def-hessian"
+  ],
+  [
+   "mds/optimization-convexity#thm-concave-hessian",
+   "mds/vector-calculus#def-second-partial-derivative"
   ],
   [
    "mds/optimization-convexity#thm-convex-first-order",
@@ -22853,6 +23287,22 @@
   [
    "mds/optimization-convexity#thm-exp-above-tangent",
    "mds/optimization-critical-points#thm-fermat"
+  ],
+  [
+   "mds/optimization-convexity#thm-open-ball-convex",
+   "mds/linear-algebra-inner-products#thm-norm-properties"
+  ],
+  [
+   "mds/optimization-convexity#thm-open-ball-convex",
+   "mds/linear-algebra-inner-products#thm-triangle-inequality"
+  ],
+  [
+   "mds/optimization-convexity#thm-open-ball-convex",
+   "mds/optimization-convexity#def-convex-set"
+  ],
+  [
+   "mds/optimization-convexity#thm-open-ball-convex",
+   "mds/vector-calculus#def-ball"
   ],
   [
    "mds/optimization-critical-points#def-critical-point",
@@ -23595,6 +24045,14 @@
    "mcs/functions#def-preimage"
   ],
   [
+   "mds/vector-calculus#def-level-set",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/vector-calculus#def-linear-approximation-vector",
+   "mds/vector-calculus#def-vector-derivative"
+  ],
+  [
    "mds/vector-calculus#def-matrix-derivative",
    "mds/vector-calculus#def-vector-derivative"
   ],
@@ -23733,6 +24191,22 @@
   [
    "mds/vector-calculus#thm-hessian-symmetric",
    "mds/vector-calculus#def-hessian"
+  ],
+  [
+   "mds/vector-calculus#thm-level-set-points",
+   "mcs/functions#def-preimage"
+  ],
+  [
+   "mds/vector-calculus#thm-level-set-points",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/vector-calculus#thm-level-set-points",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/vector-calculus#thm-level-set-points",
+   "mds/vector-calculus#def-level-set"
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",

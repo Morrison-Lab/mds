@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 02:19:53 (PST)
+Last modified: 2026-11-12 12:56:35 (PST)
 
 # 1 Column space and null space
 
@@ -45,7 +45,7 @@ Last modified: 2026-11-12 02:19:53 (PST)
 > &= (x_1 - 2x_2 - 2x_3)\,(1, 3)
 > \end{aligned}$$
 >
-> ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). The number $x_1 - 2x_2 - 2x_3$ can be any real number (take $x_2 = 0$ and $x_3 = 0$), so $\mathcal{C}(\mathbf{A}) = \mathopen{}\left\{c\,(1, 3) : c \in \mathbb{R}\right\}\mathclose{}$, a line in $\mathbb{R}^2$. The vector $(1, 0)$ is not in $\mathcal{C}(\mathbf{A})$: $c\,(1, 3)$ has second entry $3c$, which is $0$ only if $c = 0$, and then the first entry is $0$, not $1$.
+> ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). The number $x_1 - 2x_2 - 2x_3$ can be any real number (take $x_2 = 0$ and $x_3 = 0$), so $\mathcal{C}(\mathbf{A}) = \mathopen{}\left\{c\,(1, 3) : c \in \mathbb{R}\right\}\mathclose{}$, a line in $\mathbb{R}^2$. The vector $(1, 0)$ is not in $\mathcal{C}(\mathbf{A})$: $c\,(1, 3)$ has second entry $3c$, which is $0$ only if $c = 0$, and then the first entry is $0$, not $1$.
 
 > **NOTE:**
 >
@@ -232,13 +232,13 @@ Last modified: 2026-11-12 02:19:53 (PST)
 > $$\begin{aligned}
 > \mathopen{}\left(\mathbf{A}\,(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}})\right)\mathclose{}_i
 > &= a_{i1} (c u_1) + \cdots + a_{in} (c u_n)
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= c\,(a_{i1} u_1 + \cdots + a_{in} u_n)
 > && \text{(factor } c \text{ out of each term)}
 > \\
 > &= c\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}})_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= c \cdot 0
 > && \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \text{ is in the null space)}
@@ -459,13 +459,13 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > {\mathbf{A}}^{\top} \mathbf{A}
 > &= \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix}
 > \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 > \\
 > &= \begin{bmatrix}
 > 1 \cdot 1 + 1 \cdot 1 + 0 \cdot 0 & 1 \cdot 0 + 1 \cdot 1 + 0 \cdot 1 \\
 > 0 \cdot 1 + 1 \cdot 1 + 1 \cdot 0 & 0 \cdot 0 + 1 \cdot 1 + 1 \cdot 1
 > \end{bmatrix}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
 > \\
 > &= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}.
 > && \text{(multiply and add)}
@@ -521,7 +521,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > $$\begin{aligned}
 > \mathopen{}\left({\mathbf{A}}^{\top} \mathbf{B}\right)\mathclose{}_{jk}
 > &= \sum_{i=1}^{m} \mathopen{}\left(\mathbf{A}\right)\mathclose{}_{ij} \mathopen{}\left(\mathbf{B}\right)\mathclose{}_{ik}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_i\right)\mathclose{}_j \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}_i\right)\mathclose{}_k
 > && \text{(entries of the rows)}
@@ -628,7 +628,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
 > \\
 > &= (\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \cdot (\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
-> && \text{(}\href{linear-algebra-matrices.qmd#exm-dot-product-matmul}{\text{Example~7 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#exm-dot-product-matmul}{\text{Example~8 in Matrices}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2.
 > && \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)}
@@ -1197,7 +1197,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 >
 > $$\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{S}\right\}\mathclose{}$$
 >
-> for some vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathbb{R}^p$ and some subspace $\mathcal{S}$ of $\mathbb{R}^p$ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)): the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $\mathcal{S}$ under the translation by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-translation)).
+> for some vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathbb{R}^p$ and some subspace $\mathcal{S}$ of $\mathbb{R}^p$ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)): the [image](https://morrison-lab.github.io/mcs/functions.html#def-image) of $\mathcal{S}$ under the translation by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ ([Definition 23 in Matrices](linear-algebra-matrices.llms.md#def-translation)).
 
 > **NOTE:**
 >
@@ -1206,7 +1206,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > $$\begin{aligned}
 > (0, 1) + c\,(1, 0)
 > &= (0 + c,\; 1 + 0)
-> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
 > \\
 > &= (c, 1),
 > && \text{(add)}
@@ -1234,7 +1234,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Theorem 13 (A hyperplane is a translated subspace of dimension** $p - 1$) Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$ be nonzero, let $b \in \mathbb{R}$, let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b = 0\right\}\mathclose{}$ be the hyperplane with normal vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and offset $b$ ([Definition 26 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and let $\mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= 0\right\}\mathclose{}$ be the hyperplane with the same normal vector and offset $0$.
+> **Theorem 13 (A hyperplane is a translated subspace of dimension** $p - 1$) Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$ be nonzero, let $b \in \mathbb{R}$, let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b = 0\right\}\mathclose{}$ be the hyperplane with normal vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and offset $b$ ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and let $\mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= 0\right\}\mathclose{}$ be the hyperplane with the same normal vector and offset $0$.
 >
 > 1.  $\mathcal{H}_0$ is a subspace of $\mathbb{R}^p$ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)) of dimension $p - 1$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)).
 > 2.  $\mathcal{H}$ is not empty, and for any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}$, $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\right\}\mathclose{}$, so $\mathcal{H}$ is an affine subspace ([Definition 8](#def-affine-subspace)).
@@ -1242,7 +1242,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> *Proof*. Here $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}$ is a $1 \times p$ matrix, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Example 7 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)).
+> *Proof*. Here $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}$ is a $1 \times p$ matrix, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Example 8 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)).
 >
 > **Part 1.** $\mathcal{H}_0$ is the null space $\mathcal{N}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top})$ ([Definition 3](#def-null-space)), so it is a subspace ([Theorem 2](#thm-null-space-subspace)). The $p$ columns of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}$ are the numbers $w_1, \ldots, w_p$. Some $w_j \ne 0$, because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, and that column on its own is linearly independent ($c\,w_j = 0$ forces $c = 0$), so $\operatorname{rank}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}) \ge 1$ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)); and $\operatorname{rank}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}) \le \min\mathopen{}\left\{1, p\right\}\mathclose{} = 1$ ([Corollary 1](#cor-rank-bound)). So
 >
@@ -1346,7 +1346,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Theorem 14 (Where a hyperplane passes, and its shape in** $\mathbb{R}^2$ and $\mathbb{R}^3$) Let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\right\}\mathclose{}$ be a hyperplane ([Definition 26 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)).
+> **Theorem 14 (Where a hyperplane passes, and its shape in** $\mathbb{R}^2$ and $\mathbb{R}^3$) Let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\right\}\mathclose{}$ be a hyperplane ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)).
 >
 > 1.  $\mathcal{H}$ contains the origin $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ exactly when $b = 0$.
 > 2.  If $p = 2$, then $\mathcal{H}$ is a line: $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathbb{R}^2$ and some nonzero $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathbb{R}^2$.
@@ -1375,7 +1375,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Example 23 (A line in** $\mathbb{R}^2$ and a plane in $\mathbb{R}^3$, checked on a grid of points) In $\mathbb{R}^2$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1)$ and $b = -1$, the line of [Example 23 in Matrices](linear-algebra-matrices.llms.md#exm-hyperplane). The point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = -\frac{b}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is on it, and the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (-w_2, w_1)$ is nonzero with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 0$, so it spans the subspace $\mathcal{H}_0$ of [Theorem 13](#thm-hyperplane-subspace). In $\mathbb{R}^3$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$, the plane of [Example 22](#exm-hyperplane-subspace), with the independent vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = (1, -1, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = (0, 1, -1)$ in $\mathcal{H}_0$. The code evaluates $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ at the origin and at points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$.
+> **Example 23 (A line in** $\mathbb{R}^2$ and a plane in $\mathbb{R}^3$, checked on a grid of points) In $\mathbb{R}^2$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1)$ and $b = -1$, the line of [Example 24 in Matrices](linear-algebra-matrices.llms.md#exm-hyperplane). The point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = -\frac{b}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is on it, and the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (-w_2, w_1)$ is nonzero with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 0$, so it spans the subspace $\mathcal{H}_0$ of [Theorem 13](#thm-hyperplane-subspace). In $\mathbb{R}^3$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$, the plane of [Example 22](#exm-hyperplane-subspace), with the independent vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = (1, -1, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = (0, 1, -1)$ in $\mathcal{H}_0$. The code evaluates $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ at the origin and at points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$.
 >
 > ``` downlit
 > level <- function(w, b, x) sum(w * x) + b
@@ -1502,7 +1502,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Definition 9 (Open half-space)** Let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\right\}\mathclose{}$ be a hyperplane ([Definition 26 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** [\[7\]](#ref-wikipedia_half_space_geometry) of $\mathcal{H}$ are
+> **Definition 9 (Open half-space)** Let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\right\}\mathclose{}$ be a hyperplane ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** [\[7\]](#ref-wikipedia_half_space_geometry) of $\mathcal{H}$ are
 >
 > $$\mathcal{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b > 0\right\}\mathclose{}
 > \quad \text{and} \quad
@@ -1519,7 +1519,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Example 25 (Half-spaces of a line in the plane)** Let $\mathcal{H}$ be the line in $\mathbb{R}^2$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 2)$ and $b = -2$ ([Definition 26 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\}\mathclose{}$. Evaluate $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ at three points ([Definition 9](#def-half-space)):
+> **Example 25 (Half-spaces of a line in the plane)** Let $\mathcal{H}$ be the line in $\mathbb{R}^2$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 2)$ and $b = -2$ ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: x_1 + 2 x_2 - 2 = 0\right\}\mathclose{}$. Evaluate $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ at three points ([Definition 9](#def-half-space)):
 >
 > - At $(0, 0)$ it equals $0 + 0 - 2 = -2 < 0$, so $(0, 0) \in \mathcal{H}^-$.
 > - At $(2, 0)$ it equals $2 + 0 - 2 = 0$, so $(2, 0) \in \mathcal{H}$.
@@ -1600,7 +1600,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Example 26 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)$ be the petal length and petal width of one flower. A logistic regression of the species on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ gives a coefficient vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and an intercept $b$. The line $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0$ is a hyperplane in $\mathbb{R}^2$ ([Definition 26 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 9](#def-half-space)). [Figure 2](#fig-half-space-iris) shows the line and the flowers.
+> **Example 26 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)$ be the petal length and petal width of one flower. A logistic regression of the species on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ gives a coefficient vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and an intercept $b$. The line $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0$ is a hyperplane in $\mathbb{R}^2$ ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 9](#def-half-space)). [Figure 2](#fig-half-space-iris) shows the line and the flowers.
 >
 > Show code
 >
