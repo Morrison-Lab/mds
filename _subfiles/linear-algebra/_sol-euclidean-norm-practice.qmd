@@ -1,0 +1,9 @@
+:::{#sol-euclidean-norm-practice}
+
+By @def-euclidean-norm,
+
+$$
+\norm{\vx} = \sqrt{1^2 + 2^2 + 2^2 + 4^2} = \sqrt{25} = 5.
+$$
+
+:::
