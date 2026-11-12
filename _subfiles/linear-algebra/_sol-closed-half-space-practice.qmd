@@ -1,0 +1,8 @@
+:::{#sol-closed-half-space-practice}
+
+At $(2, 1)$, $\dprod{\vec{w}}{\vx} + b = 4 - 1 - 3 = 0$,
+so $(2, 1) \in \mathcal{H}$.
+It is therefore in the [closed half-space](#def-closed-half-space) $\mathcal{H}^+ \cup \mathcal{H}$,
+though not in the [open half-space](#def-half-space) $\mathcal{H}^+$.
+
+:::
